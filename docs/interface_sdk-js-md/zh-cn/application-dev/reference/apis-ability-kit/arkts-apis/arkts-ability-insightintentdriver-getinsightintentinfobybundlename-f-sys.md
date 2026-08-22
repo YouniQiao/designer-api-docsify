@@ -47,3 +47,28 @@ function getInsightIntentInfoByBundleName(bundleName: string, intentFlags: int):
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service fails to communicate with the dependency module. |
 
+**示例**
+
+```TypeScript
+import { insightIntentDriver } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+async function getInfosByBundleName() {
+  try {
+    let bundleName = "com.example.intent"; // 开发者需自行修改为实际包名
+    insightIntentDriver.getInsightIntentInfoByBundleName(bundleName,
+      insightIntentDriver.GetInsightIntentFlag.GET_FULL_INSIGHT_INTENT |
+      insightIntentDriver.GetInsightIntentFlag.GET_ENTITY_INFO).then((data) => {
+      hilog.info(0x0000, 'testTag', 'getInsightIntentInfoByBundleName return %{public}s', data);
+    }).catch((error: Error) => {
+      let err = error as BusinessError;
+      hilog.info(0x0000, 'testTag', 'getInsightIntentInfoByBundleName errCode: %{public}d', err.code);
+      hilog.info(0x0000, 'testTag', 'getInsightIntentInfoByBundleName errMessage: %{public}s', err.message);
+    });
+  } catch (error) {
+    hilog.error(0x0000, 'testTag', 'getInsightIntentInfoByBundleName error caught %{public}s', error);
+  }
+}
+```
+

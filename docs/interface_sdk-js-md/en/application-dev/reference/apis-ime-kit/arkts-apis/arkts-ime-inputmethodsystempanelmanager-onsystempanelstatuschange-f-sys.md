@@ -28,7 +28,7 @@ function onSystemPanelStatusChange(callback: Callback<SystemPanelStatus>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SystemPanelStatus](arkts-ime-inputmethodsystempanelmanager-systempanelstatus-i-sys.md)&gt; | Yes | Callback function, which is triggered when the system panel state changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SystemPanelStatus](arkts-ime-inputmethodsystempanelmanager-systempanelstatus-i-sys.md)&gt; | Yes | Callback function, which is triggered when the system panel state changes. |
 
 **Error codes:**
 

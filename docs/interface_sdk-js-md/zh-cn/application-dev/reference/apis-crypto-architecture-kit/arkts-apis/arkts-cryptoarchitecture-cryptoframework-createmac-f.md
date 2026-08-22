@@ -60,6 +60,23 @@ try {
 }
 ```
 
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // Set algName based on the algorithm supported.
+  let spec: cryptoFramework.HmacSpec = {
+    algName: 'HMAC',
+    mdName: 'SHA256',
+  };
+  let mac = cryptoFramework.createMac(spec);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`sync failed: errCode: ${error.code}, errMsg: ${error.message}`);
+}
+```
+
 
 ## createMac
 
@@ -102,20 +119,5 @@ function createMac(macSpec: MacSpec): Mac
 
 **示例**
 
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // Set algName based on the algorithm supported.
-  let spec: cryptoFramework.HmacSpec = {
-    algName: 'HMAC',
-    mdName: 'SHA256',
-  };
-  let mac = cryptoFramework.createMac(spec);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`sync failed: errCode: ${error.code}, errMsg: ${error.message}`);
-}
-```
+参见 [createMac](#createmac)
 

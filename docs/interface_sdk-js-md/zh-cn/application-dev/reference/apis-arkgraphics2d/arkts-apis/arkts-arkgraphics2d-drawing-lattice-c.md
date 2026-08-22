@@ -61,6 +61,52 @@ static createImageLattice(xDivs: Array<number>, yDivs: Array<number>, fXCount: n
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context: DrawContext) {
+    let xDivs: Array<number> = [1, 2, 4];
+    let yDivs: Array<number> = [1, 2, 4];
+    let lattice = drawing.Lattice.createImageLattice(xDivs, yDivs, 3, 3); // 划分(3+1)*(3+1)的网格，下图蓝色填充矩形为固定网格
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    let xDivs : Array<int> = [1, 2, 4];
+    let yDivs : Array<int> = [1, 2, 4];
+    let lattice = drawing.Lattice.createImageLattice(xDivs, yDivs, 3, 3); // 划分(3+1)*(3+1)的网格，下图蓝色填充矩形为固定网格
+  }
+}
+```
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context: DrawContext) {
+    let xDivs: Array<number> = [1, 2, 4];
+    let yDivs: Array<number> = [1, 2, 4];
+    let colorArray: Array<number> = [0xffffffff, 0x44444444, 0x99999999, 0xffffffff, 0x44444444, 0x99999999, 0xffffffff, 0x44444444, 0x99999999, 0x44444444, 0x99999999, 0xffffffff, 0x44444444, 0x99999999, 0xffffffff, 0x44444444];
+    let lattice = drawing.Lattice.createImageLattice(xDivs, yDivs, 3, 3, null, null, colorArray);
+  }
+}
+```
+
 ## createImageLattice
 
 ```TypeScript
@@ -99,6 +145,10 @@ static createImageLattice(xDivs: Array<int>, yDivs: Array<int>, fXCount: int, fY
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+参见 [createImageLattice](#createimagelattice)
 
 ## createImageLattice
 
@@ -139,6 +189,10 @@ static createImageLattice(xDivs: Array<number>, yDivs: Array<number>, fXCount: n
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**示例**
+
+参见 [createImageLattice](#createimagelattice)
+
 ## createImageLatticeWithArrayInt
 
 ```TypeScript
@@ -177,4 +231,22 @@ static createImageLatticeWithArrayInt(xDivs: Array<int>, yDivs: Array<int>, fXCo
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    let xDivs : Array<int> = [1, 2, 4];
+    let yDivs : Array<int> = [1, 2, 4];
+    let colorArray: Array<int> = [(0xffffffff).toInt(), (0x44444444).toInt(), (0x99999999).toInt(), (0xffffffff).toInt(), (0x44444444).toInt(), (0x99999999).toInt(), (0xffffffff).toInt(), (0x44444444).toInt(), (0x99999999).toInt(), (0x44444444).toInt(), (0x99999999).toInt(), (0xffffffff).toInt(), (0x44444444).toInt(), (0x99999999).toInt(), (0xffffffff).toInt(), (0x44444444).toInt()];
+    let lattice = drawing.Lattice.createImageLatticeWithArrayInt(xDivs, yDivs, 3, 3,null,null,colorArray);
+  }
+}
+```
 

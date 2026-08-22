@@ -49,6 +49,40 @@ Obtains the video stabilization mode in use.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getActiveVideoStabilizationMode(captureSession: camera.CaptureSession): camera.VideoStabilizationMode | undefined {
+  let vsMode: camera.VideoStabilizationMode | undefined = undefined;
+  try {
+    vsMode = captureSession.getActiveVideoStabilizationMode();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getActiveVideoStabilizationMode call failed. error code: ${err.code}`);
+  }
+  return vsMode;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getActiveVideoStabilizationMode(videoSession: camera.VideoSession): camera.VideoStabilizationMode | undefined {
+  let vsMode: camera.VideoStabilizationMode | undefined = undefined;
+  try {
+    vsMode = videoSession.getActiveVideoStabilizationMode();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getActiveVideoStabilizationMode call failed. error code: ${err.code}`);
+  }
+  return vsMode;
+}
+```
+
 ## setVideoStabilizationMode
 
 ```TypeScript
@@ -76,4 +110,34 @@ Sets a video stabilization mode. Before the setting, call [isVideoStabilizationM
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setVideoStabilizationMode(captureSession: camera.CaptureSession): void {
+  try {
+    captureSession.setVideoStabilizationMode(camera.VideoStabilizationMode.OFF);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The setVideoStabilizationMode call failed. error code: ${err.code}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setVideoStabilizationMode(videoSession: camera.VideoSession): void {
+  try {
+    videoSession.setVideoStabilizationMode(camera.VideoStabilizationMode.OFF);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The setVideoStabilizationMode call failed. error code: ${err.code}`);
+  }
+}
+```
 

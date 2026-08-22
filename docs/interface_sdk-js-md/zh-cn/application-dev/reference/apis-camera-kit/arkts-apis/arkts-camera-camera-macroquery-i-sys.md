@@ -47,3 +47,12 @@ isMacroSupported(): boolean
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11 - 18 |
 
+**示例**
+
+```TypeScript
+function isMacroSupported(photoSession: camera.PhotoSession): boolean {
+  let isSupported: boolean = photoSession.isMacroSupported();
+  return isSupported;
+}
+```
+

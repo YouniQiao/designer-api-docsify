@@ -54,3 +54,9 @@ Creates a temporary directory. This API returns the result synchronously.
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+let res = fs.mkdtempSync(pathDir + "/XXXXXX");
+```
+

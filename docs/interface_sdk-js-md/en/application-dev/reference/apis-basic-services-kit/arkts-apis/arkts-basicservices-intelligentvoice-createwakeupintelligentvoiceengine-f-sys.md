@@ -29,7 +29,7 @@ Obtains an [WakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-w
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | descriptor | [WakeupIntelligentVoiceEngineDescriptor](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceenginedescriptor-i-sys.md) | Yes | descriptor indicates wakeup intelligent voice engine descriptor. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[WakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceengine-i-sys.md)&gt; | Yes | the callback used to return the WakeupIntelligentVoiceEngine instance. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[WakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceengine-i-sys.md)&gt; | Yes | the callback used to return the WakeupIntelligentVoiceEngine instance. |
 
 **Error codes:**
 
@@ -58,6 +58,22 @@ intelligentVoice.createWakeupIntelligentVoiceEngine(wakeupEngineDescriptor, (err
     console.info(`Succeeded in creating wakeupIntelligentVoice engine.`);
     wakeupIntelligentVoiceEngine = data;
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wakeupEngineDescriptor: intelligentVoice.WakeupIntelligentVoiceEngineDescriptor = {
+  needReconfirm: true,
+  wakeupPhrase: 'Xiaohua Xiaohua',
+}
+let wakeupIntelligentVoiceEngine: intelligentVoice.WakeupIntelligentVoiceEngine | null = null;
+intelligentVoice.createWakeupIntelligentVoiceEngine(wakeupEngineDescriptor).then((data: intelligentVoice.WakeupIntelligentVoiceEngine) => {
+  wakeupIntelligentVoiceEngine = data;
+  console.info(`Succeeded in creating wakeupIntelligentVoice engine.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create wakeupIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
 });
 ```
 
@@ -104,19 +120,5 @@ Obtains an [WakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-w
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wakeupEngineDescriptor: intelligentVoice.WakeupIntelligentVoiceEngineDescriptor = {
-  needReconfirm: true,
-  wakeupPhrase: 'Xiaohua Xiaohua',
-}
-let wakeupIntelligentVoiceEngine: intelligentVoice.WakeupIntelligentVoiceEngine | null = null;
-intelligentVoice.createWakeupIntelligentVoiceEngine(wakeupEngineDescriptor).then((data: intelligentVoice.WakeupIntelligentVoiceEngine) => {
-  wakeupIntelligentVoiceEngine = data;
-  console.info(`Succeeded in creating wakeupIntelligentVoice engine.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create wakeupIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
-});
-```
+See [createWakeupIntelligentVoiceEngine](#createwakeupintelligentvoiceengine)
 

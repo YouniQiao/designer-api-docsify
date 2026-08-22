@@ -20,3 +20,7 @@ Callback with the selected text after the text selection content changes.
 | --- | --- | --- | --- |
 | selectionText | string | Yes | the selected text after the text selection content changes. |
 
+**Examples**
+
+For details about the complete sample code, see [onTextSelectionChange](./arkts-basic-components-web-events.md#ontextselectionchange23).
+

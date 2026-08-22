@@ -1,6 +1,6 @@
 # @ohos.app.ability.ConfigurationConstant
 
-The ConfigurationConstant module provides preset enumerated values related to [Configuration](arkts-ability-appabilityconfiguration-configuration-i.md) operations.
+The ConfigurationConstant module provides preset enumerated values related to [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) operations.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { ConfigurationConstant } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [ColorMode](arkts-ability-configurationconstant-colormode-e.md) | Enumerates the dark/light color modes, which are used in the [Configuration.colorMode](arkts-ability-appabilityconfiguration-configuration-i.md) field. You can use these predefined enumerated values to set or obtain the dark/light color mode of the system or application. |
-| [Direction](arkts-ability-configurationconstant-direction-e.md) | Enumerates the screen directions, which are used in the [Configuration.direction](arkts-ability-appabilityconfiguration-configuration-i.md) field. You can use these predefined enumerated values to set or obtain the screen direction of the system or application. |
-| [ScreenDensity](arkts-ability-configurationconstant-screendensity-e.md) | Enumerates the pixel densities of the screen, which are used in the [Configuration.screenDensity](arkts-ability-appabilityconfiguration-configuration-i.md) field. You can use these predefined enumerated values to set or obtain the pixel density of the screen. |
+| [ColorMode](arkts-ability-configurationconstant-colormode-e.md) | Enumerates the dark/light color modes, which are used in the [Configuration.colorMode](arkts-ability-app-ability-configuration-configuration-i.md) field. You can use these predefined enumerated values to set or obtain the dark/light color mode of the system or application. |
+| [Direction](arkts-ability-configurationconstant-direction-e.md) | Enumerates the screen directions, which are used in the [Configuration.direction](arkts-ability-app-ability-configuration-configuration-i.md) field. You can use these predefined enumerated values to set or obtain the screen direction of the system or application. |
+| [ScreenDensity](arkts-ability-configurationconstant-screendensity-e.md) | Enumerates the pixel densities of the screen, which are used in the [Configuration.screenDensity](arkts-ability-app-ability-configuration-configuration-i.md) field. You can use these predefined enumerated values to set or obtain the pixel density of the screen. |
 

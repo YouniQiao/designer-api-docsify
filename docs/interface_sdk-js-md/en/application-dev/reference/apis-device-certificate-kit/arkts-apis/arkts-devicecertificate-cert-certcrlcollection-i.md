@@ -16,6 +16,201 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
+## selectCerts
+
+```TypeScript
+selectCerts(param: X509CertMatchParameters): Promise<Array<X509Cert>>
+```
+
+Selects certificates that match the specified parameters. This API uses a promise to return the result.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters): Promise<Array<X509Cert>>--><!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters): Promise<Array<X509Cert>>-End-->
+
+**System capability:** SystemCapability.Security.Cert
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| param | [X509CertMatchParameters](arkts-devicecertificate-cert-x509certmatchparameters-i.md) | Yes | Parameters used to match the certificates. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;X509Cert&gt;&gt; | Promise used to return the matched certificates. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+
+**Examples**
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Convert the string into a Uint8Array.
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+async function createX509Cert(): Promise<cert.X509Cert> {
+  let certData = '-----BEGIN CERTIFICATE-----\n' +
+    'MIIBHTCBwwICA+gwCgYIKoZIzj0EAwIwGjEYMBYGA1UEAwwPRXhhbXBsZSBSb290\n' +
+    'IENBMB4XDTIzMDkwNTAyNDgyMloXDTI2MDUzMTAyNDgyMlowGjEYMBYGA1UEAwwP\n' +
+    'RXhhbXBsZSBSb290IENBMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHjG74yMI\n' +
+    'ueO7z3T+dyuEIrhxTg2fqgeNB3SGfsIXlsiUfLTatUsU0i/sePnrKglj2H8Abbx9\n' +
+    'PK0tsW/VgqwDIDAKBggqhkjOPQQDAgNJADBGAiEApVZno/Z7WyDc/muRN1y57uaY\n' +
+    'Mjrgnvp/AMdE8qmFiDwCIQCrIYdHVO1awaPgcdALZY+uLQi6mEs/oMJLUcmaag3E\n' +
+    'Qw==\n' +
+    '-----END CERTIFICATE-----\n';
+
+  let encodingBlob: cert.EncodingBlob = {
+    data: stringToUint8Array(certData),
+    // Assign a value based on the encodingData format. FORMAT_PEM and FORMAT_DER are supported.
+    encodingFormat: cert.EncodingFormat.FORMAT_PEM
+  };
+
+  let x509Cert: cert.X509Cert = {} as cert.X509Cert;
+  try {
+    x509Cert = await cert.createX509Cert(encodingBlob);
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`createX509Cert failed, errCode: ${e.code}, errMsg: ${e.message}`);
+  }
+  return x509Cert;
+}
+
+async function selectCerts() {
+  const x509Cert = await createX509Cert();
+  const collection = cert.createCertCRLCollection([x509Cert]);
+
+  try {
+    const param: cert.X509CertMatchParameters = {
+      x509Cert,
+      validDate: '20231121074700Z',
+      issuer: new Uint8Array([0x30, 0x1a, 0x31, 0x18, 0x30, 0x16, 0x06, 0x03, 0x55, 0x04, 0x03, 0x0C, 0x0F, 0x45, 0x78, 0x61, 0x6D, 0x70, 0x6C, 0x65, 0x20, 0x52, 0x6F, 0x6F, 0x74, 0x20, 0x43, 0x41]),
+      subject: new Uint8Array([0x30, 0x1a, 0x31, 0x18, 0x30, 0x16, 0x06, 0x03, 0x55, 0x04, 0x03, 0x0C, 0x0F, 0x45, 0x78, 0x61, 0x6D, 0x70, 0x6C, 0x65, 0x20, 0x52, 0x6F, 0x6F, 0x74, 0x20, 0x43, 0x41]),
+      publicKeyAlgID: '1.2.840.10045.2.1'
+    };
+    const certs = await collection.selectCerts(param);
+    console.info('call selectCerts result: success.');
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`call selectCerts failed, errCode: ${e.code}, errMsg: ${e.message}`);
+  }
+}
+```
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Convert the string into a Uint8Array.
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+async function createX509Cert(): Promise<cert.X509Cert> {
+  let certData = '-----BEGIN CERTIFICATE-----\n' +
+    'MIIBHTCBwwICA+gwCgYIKoZIzj0EAwIwGjEYMBYGA1UEAwwPRXhhbXBsZSBSb290\n' +
+    'IENBMB4XDTIzMDkwNTAyNDgyMloXDTI2MDUzMTAyNDgyMlowGjEYMBYGA1UEAwwP\n' +
+    'RXhhbXBsZSBSb290IENBMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHjG74yMI\n' +
+    'ueO7z3T+dyuEIrhxTg2fqgeNB3SGfsIXlsiUfLTatUsU0i/sePnrKglj2H8Abbx9\n' +
+    'PK0tsW/VgqwDIDAKBggqhkjOPQQDAgNJADBGAiEApVZno/Z7WyDc/muRN1y57uaY\n' +
+    'Mjrgnvp/AMdE8qmFiDwCIQCrIYdHVO1awaPgcdALZY+uLQi6mEs/oMJLUcmaag3E\n' +
+    'Qw==\n' +
+    '-----END CERTIFICATE-----\n';
+
+  let encodingBlob: cert.EncodingBlob = {
+    data: stringToUint8Array(certData),
+    // Assign a value based on the encodingData format. FORMAT_PEM and FORMAT_DER are supported.
+    encodingFormat: cert.EncodingFormat.FORMAT_PEM
+  };
+
+  let x509Cert: cert.X509Cert = {} as cert.X509Cert;
+  try {
+    x509Cert = await cert.createX509Cert(encodingBlob);
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`createX509Cert failed, errCode: ${e.code}, errMsg: ${e.message}`);
+  }
+  return x509Cert;
+}
+
+async function selectCerts() {
+  const x509Cert = await createX509Cert();
+  const collection = cert.createCertCRLCollection([x509Cert]);
+  // Set the value to match your case.
+  const param: cert.X509CertMatchParameters = {
+    x509Cert,
+    validDate: '20231121074700Z',
+    issuer: new Uint8Array([0x30, 0x1a, 0x31, 0x18, 0x30, 0x16, 0x06, 0x03, 0x55, 0x04, 0x03, 0x0C, 0x0F, 0x45, 0x78, 0x61, 0x6D, 0x70, 0x6C, 0x65, 0x20, 0x52, 0x6F, 0x6F, 0x74, 0x20, 0x43, 0x41]),
+    subject: new Uint8Array([0x30, 0x1a, 0x31, 0x18, 0x30, 0x16, 0x06, 0x03, 0x55, 0x04, 0x03, 0x0C, 0x0F, 0x45, 0x78, 0x61, 0x6D, 0x70, 0x6C, 0x65, 0x20, 0x52, 0x6F, 0x6F, 0x74, 0x20, 0x43, 0x41]),
+    publicKeyAlgID: '1.2.840.10045.2.1'
+  };
+  collection.selectCerts(param, (err, certs) => {
+    if (err) {
+      console.error(`selectCerts failed, errCode: ${err.code}, errMsg: ${err.message}`);
+    } else {
+      console.info('selectCerts result: success.');
+    }
+  });
+}
+```
+
+## selectCerts
+
+```TypeScript
+selectCerts(param: X509CertMatchParameters, callback: AsyncCallback<Array<X509Cert>>): void
+```
+
+Selects certificates that match the specified parameters. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters, callback: AsyncCallback<Array<X509Cert>>): void--><!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters, callback: AsyncCallback<Array<X509Cert>>): void-End-->
+
+**System capability:** SystemCapability.Security.Cert
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| param | [X509CertMatchParameters](arkts-devicecertificate-cert-x509certmatchparameters-i.md) | Yes | Parameters used to match the certificates. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;X509Cert&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the matched certificates obtained. Otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+
+**Examples**
+
+See [selectCerts](#selectcerts)
+
 ## selectCRLs
 
 ```TypeScript
@@ -151,39 +346,6 @@ async function selectCRLs() {
 }
 ```
 
-## selectCRLs
-
-```TypeScript
-selectCRLs(param: X509CRLMatchParameters, callback: AsyncCallback<Array<X509CRL>>): void
-```
-
-Selects CRLs that match the specified parameters. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CertCRLCollection-selectCRLs(param: X509CRLMatchParameters, callback: AsyncCallback<Array<X509CRL>>): void--><!--Device-CertCRLCollection-selectCRLs(param: X509CRLMatchParameters, callback: AsyncCallback<Array<X509CRL>>): void-End-->
-
-**System capability:** SystemCapability.Security.Cert
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| param | [X509CRLMatchParameters](arkts-devicecertificate-cert-x509crlmatchparameters-i.md) | Yes | Parameters used to match the CRLs. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[X509CRL](arkts-devicecertificate-cert-x509crl-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the matched CRLs obtained. Otherwise, **err** is an error object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
-
-**Examples**
-
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -281,19 +443,19 @@ async function selectCRLs() {
 }
 ```
 
-## selectCerts
+## selectCRLs
 
 ```TypeScript
-selectCerts(param: X509CertMatchParameters): Promise<Array<X509Cert>>
+selectCRLs(param: X509CRLMatchParameters, callback: AsyncCallback<Array<X509CRL>>): void
 ```
 
-Selects certificates that match the specified parameters. This API uses a promise to return the result.
+Selects CRLs that match the specified parameters. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters): Promise<Array<X509Cert>>--><!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters): Promise<Array<X509Cert>>-End-->
+<!--Device-CertCRLCollection-selectCRLs(param: X509CRLMatchParameters, callback: AsyncCallback<Array<X509CRL>>): void--><!--Device-CertCRLCollection-selectCRLs(param: X509CRLMatchParameters, callback: AsyncCallback<Array<X509CRL>>): void-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -301,13 +463,8 @@ Selects certificates that match the specified parameters. This API uses a promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [X509CertMatchParameters](arkts-devicecertificate-cert-x509certmatchparameters-i.md) | Yes | Parameters used to match the certificates. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;X509Cert&gt;&gt; | Promise used to return the matched certificates. |
+| param | [X509CRLMatchParameters](arkts-devicecertificate-cert-x509crlmatchparameters-i.md) | Yes | Parameters used to match the CRLs. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[X509CRL](arkts-devicecertificate-cert-x509crl-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the matched CRLs obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -319,158 +476,5 @@ Selects certificates that match the specified parameters. This API uses a promis
 
 **Examples**
 
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Convert the string into a Uint8Array.
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-async function createX509Cert(): Promise<cert.X509Cert> {
-  let certData = '-----BEGIN CERTIFICATE-----\n' +
-    'MIIBHTCBwwICA+gwCgYIKoZIzj0EAwIwGjEYMBYGA1UEAwwPRXhhbXBsZSBSb290\n' +
-    'IENBMB4XDTIzMDkwNTAyNDgyMloXDTI2MDUzMTAyNDgyMlowGjEYMBYGA1UEAwwP\n' +
-    'RXhhbXBsZSBSb290IENBMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHjG74yMI\n' +
-    'ueO7z3T+dyuEIrhxTg2fqgeNB3SGfsIXlsiUfLTatUsU0i/sePnrKglj2H8Abbx9\n' +
-    'PK0tsW/VgqwDIDAKBggqhkjOPQQDAgNJADBGAiEApVZno/Z7WyDc/muRN1y57uaY\n' +
-    'Mjrgnvp/AMdE8qmFiDwCIQCrIYdHVO1awaPgcdALZY+uLQi6mEs/oMJLUcmaag3E\n' +
-    'Qw==\n' +
-    '-----END CERTIFICATE-----\n';
-
-  let encodingBlob: cert.EncodingBlob = {
-    data: stringToUint8Array(certData),
-    // Assign a value based on the encodingData format. FORMAT_PEM and FORMAT_DER are supported.
-    encodingFormat: cert.EncodingFormat.FORMAT_PEM
-  };
-
-  let x509Cert: cert.X509Cert = {} as cert.X509Cert;
-  try {
-    x509Cert = await cert.createX509Cert(encodingBlob);
-  } catch (err) {
-    let e: BusinessError = err as BusinessError;
-    console.error(`createX509Cert failed, errCode: ${e.code}, errMsg: ${e.message}`);
-  }
-  return x509Cert;
-}
-
-async function selectCerts() {
-  const x509Cert = await createX509Cert();
-  const collection = cert.createCertCRLCollection([x509Cert]);
-
-  try {
-    const param: cert.X509CertMatchParameters = {
-      x509Cert,
-      validDate: '20231121074700Z',
-      issuer: new Uint8Array([0x30, 0x1a, 0x31, 0x18, 0x30, 0x16, 0x06, 0x03, 0x55, 0x04, 0x03, 0x0C, 0x0F, 0x45, 0x78, 0x61, 0x6D, 0x70, 0x6C, 0x65, 0x20, 0x52, 0x6F, 0x6F, 0x74, 0x20, 0x43, 0x41]),
-      subject: new Uint8Array([0x30, 0x1a, 0x31, 0x18, 0x30, 0x16, 0x06, 0x03, 0x55, 0x04, 0x03, 0x0C, 0x0F, 0x45, 0x78, 0x61, 0x6D, 0x70, 0x6C, 0x65, 0x20, 0x52, 0x6F, 0x6F, 0x74, 0x20, 0x43, 0x41]),
-      publicKeyAlgID: '1.2.840.10045.2.1'
-    };
-    const certs = await collection.selectCerts(param);
-    console.info('call selectCerts result: success.');
-  } catch (err) {
-    let e: BusinessError = err as BusinessError;
-    console.error(`call selectCerts failed, errCode: ${e.code}, errMsg: ${e.message}`);
-  }
-}
-```
-
-## selectCerts
-
-```TypeScript
-selectCerts(param: X509CertMatchParameters, callback: AsyncCallback<Array<X509Cert>>): void
-```
-
-Selects certificates that match the specified parameters. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters, callback: AsyncCallback<Array<X509Cert>>): void--><!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters, callback: AsyncCallback<Array<X509Cert>>): void-End-->
-
-**System capability:** SystemCapability.Security.Cert
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| param | [X509CertMatchParameters](arkts-devicecertificate-cert-x509certmatchparameters-i.md) | Yes | Parameters used to match the certificates. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;X509Cert&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the matched certificates obtained. Otherwise, **err** is an error object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
-
-**Examples**
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Convert the string into a Uint8Array.
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-async function createX509Cert(): Promise<cert.X509Cert> {
-  let certData = '-----BEGIN CERTIFICATE-----\n' +
-    'MIIBHTCBwwICA+gwCgYIKoZIzj0EAwIwGjEYMBYGA1UEAwwPRXhhbXBsZSBSb290\n' +
-    'IENBMB4XDTIzMDkwNTAyNDgyMloXDTI2MDUzMTAyNDgyMlowGjEYMBYGA1UEAwwP\n' +
-    'RXhhbXBsZSBSb290IENBMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHjG74yMI\n' +
-    'ueO7z3T+dyuEIrhxTg2fqgeNB3SGfsIXlsiUfLTatUsU0i/sePnrKglj2H8Abbx9\n' +
-    'PK0tsW/VgqwDIDAKBggqhkjOPQQDAgNJADBGAiEApVZno/Z7WyDc/muRN1y57uaY\n' +
-    'Mjrgnvp/AMdE8qmFiDwCIQCrIYdHVO1awaPgcdALZY+uLQi6mEs/oMJLUcmaag3E\n' +
-    'Qw==\n' +
-    '-----END CERTIFICATE-----\n';
-
-  let encodingBlob: cert.EncodingBlob = {
-    data: stringToUint8Array(certData),
-    // Assign a value based on the encodingData format. FORMAT_PEM and FORMAT_DER are supported.
-    encodingFormat: cert.EncodingFormat.FORMAT_PEM
-  };
-
-  let x509Cert: cert.X509Cert = {} as cert.X509Cert;
-  try {
-    x509Cert = await cert.createX509Cert(encodingBlob);
-  } catch (err) {
-    let e: BusinessError = err as BusinessError;
-    console.error(`createX509Cert failed, errCode: ${e.code}, errMsg: ${e.message}`);
-  }
-  return x509Cert;
-}
-
-async function selectCerts() {
-  const x509Cert = await createX509Cert();
-  const collection = cert.createCertCRLCollection([x509Cert]);
-  // Set the value to match your case.
-  const param: cert.X509CertMatchParameters = {
-    x509Cert,
-    validDate: '20231121074700Z',
-    issuer: new Uint8Array([0x30, 0x1a, 0x31, 0x18, 0x30, 0x16, 0x06, 0x03, 0x55, 0x04, 0x03, 0x0C, 0x0F, 0x45, 0x78, 0x61, 0x6D, 0x70, 0x6C, 0x65, 0x20, 0x52, 0x6F, 0x6F, 0x74, 0x20, 0x43, 0x41]),
-    subject: new Uint8Array([0x30, 0x1a, 0x31, 0x18, 0x30, 0x16, 0x06, 0x03, 0x55, 0x04, 0x03, 0x0C, 0x0F, 0x45, 0x78, 0x61, 0x6D, 0x70, 0x6C, 0x65, 0x20, 0x52, 0x6F, 0x6F, 0x74, 0x20, 0x43, 0x41]),
-    publicKeyAlgID: '1.2.840.10045.2.1'
-  };
-  collection.selectCerts(param, (err, certs) => {
-    if (err) {
-      console.error(`selectCerts failed, errCode: ${err.code}, errMsg: ${err.message}`);
-    } else {
-      console.info('selectCerts result: success.');
-    }
-  });
-}
-```
+See [selectCRLs](#selectcrls)
 

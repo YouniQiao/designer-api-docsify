@@ -31,7 +31,7 @@ getForegroundApplications.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppStateData](arkts-ability-appstatedata-c.md)&gt;&gt; | Yes | Return all application information currently in the foreground in the form of callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppStateData](arkts-ability-appstatedata-c.md)&gt;&gt; | Yes | Return all application information currently in the foreground in the form of callback. |
 
 **Examples**
 
@@ -45,6 +45,19 @@ appManager.getForegroundApplications((err, data) => {
     console.info(`GetForegroundApplications success, data: ${JSON.stringify(data)}.`);
   }
 });
+```
+
+```TypeScript
+import appManager from '@ohos.application.appManager';
+import { BusinessError } from '@ohos.base';
+
+appManager.getForegroundApplications()
+  .then((data) => {
+    console.info(`GetForegroundApplications success, data: ${JSON.stringify(data)}.`);
+  })
+  .catch((err: BusinessError) => {
+    console.error(`GetForegroundApplications failed, error code: ${err.code}, error msg: ${err.message}.`);
+  });
 ```
 
 
@@ -78,16 +91,5 @@ getForegroundApplications.
 
 **Examples**
 
-```TypeScript
-import appManager from '@ohos.application.appManager';
-import { BusinessError } from '@ohos.base';
-
-appManager.getForegroundApplications()
-  .then((data) => {
-    console.info(`GetForegroundApplications success, data: ${JSON.stringify(data)}.`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`GetForegroundApplications failed, error code: ${err.code}, error msg: ${err.message}.`);
-  });
-```
+See [getForegroundApplications](#getforegroundapplications)
 

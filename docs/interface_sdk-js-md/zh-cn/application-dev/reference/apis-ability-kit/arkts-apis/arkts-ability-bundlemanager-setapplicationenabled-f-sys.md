@@ -50,6 +50,71 @@ function setApplicationEnabled(bundleName: string, appIndex: int, isEnabled: boo
 
 **示例**
 
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName = "com.ohos.myapplication";
+
+try {
+  bundleManager.setApplicationEnabled(bundleName, false, err => {
+    if (err) {
+      hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', err.message);
+    } else {
+      hilog.info(0x0000, 'testTag', 'setApplicationEnabled successfully.');
+    }
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', message);
+}
+```
+
+ArkTS-Dyn示例:
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName = "com.ohos.myapplication";
+
+try {
+  bundleManager.setApplicationEnabled(bundleName, false).then(() => {
+    hilog.info(0x0000, "testTag", "setApplicationEnabled successfully.");
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', message);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+// 开发者需根据实际工程更新bundleName。
+let bundleName = "com.ohos.myapplication";
+
+try {
+  bundleManager.setApplicationEnabled(bundleName, false).then(() => {
+    hilog.info(0x0000, "testTag", "setApplicationEnabled successfully.");
+  }).catch((err: Error) => {
+    hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', (err as BusinessError).message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', message);
+}
+```
+
 ArkTS-Dyn示例:
 
 ```TypeScript
@@ -87,6 +152,31 @@ try {
   }).catch((err: Error) => {
     hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', (err as BusinessError).message);
   });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', message);
+}
+```
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+// 需要替换为要设置的应用Bundle名称、应用索引、是否启用应用和禁用应用时是否退出应用进程
+let bundleName = 'com.example.myapplication';
+let appIndex = 0;
+let isEnabled = true;
+let killProcess = false;
+
+try {
+  bundleManager.setApplicationEnabled(bundleName, appIndex, isEnabled, killProcess)
+    .then(() => {
+      hilog.info(0x0000, 'testTag', 'setApplicationEnabled successfully');
+    })
+    .catch((err: Error) => {
+      hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', err.message);
+    });
 } catch (err) {
   let message = (err as BusinessError).message;
   hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', message);
@@ -140,30 +230,7 @@ function setApplicationEnabled(bundleName: string, appIndex: int, isEnabled: boo
 
 **示例**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-// 需要替换为要设置的应用Bundle名称、应用索引、是否启用应用和禁用应用时是否退出应用进程
-let bundleName = 'com.example.myapplication';
-let appIndex = 0;
-let isEnabled = true;
-let killProcess = false;
-
-try {
-  bundleManager.setApplicationEnabled(bundleName, appIndex, isEnabled, killProcess)
-    .then(() => {
-      hilog.info(0x0000, 'testTag', 'setApplicationEnabled successfully');
-    })
-    .catch((err: Error) => {
-      hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', err.message);
-    });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', message);
-}
-```
+参见 [setApplicationEnabled](#setapplicationenabled)
 
 
 ## setApplicationEnabled
@@ -203,26 +270,7 @@ function setApplicationEnabled(bundleName: string, isEnabled: boolean, callback:
 
 **示例**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = "com.ohos.myapplication";
-
-try {
-  bundleManager.setApplicationEnabled(bundleName, false, err => {
-    if (err) {
-      hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', err.message);
-    } else {
-      hilog.info(0x0000, 'testTag', 'setApplicationEnabled successfully.');
-    }
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', message);
-}
-```
+参见 [setApplicationEnabled](#setapplicationenabled)
 
 
 ## setApplicationEnabled
@@ -267,47 +315,5 @@ function setApplicationEnabled(bundleName: string, isEnabled: boolean): Promise<
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = "com.ohos.myapplication";
-
-try {
-  bundleManager.setApplicationEnabled(bundleName, false).then(() => {
-    hilog.info(0x0000, "testTag", "setApplicationEnabled successfully.");
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-// 开发者需根据实际工程更新bundleName。
-let bundleName = "com.ohos.myapplication";
-
-try {
-  bundleManager.setApplicationEnabled(bundleName, false).then(() => {
-    hilog.info(0x0000, "testTag", "setApplicationEnabled successfully.");
-  }).catch((err: Error) => {
-    hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', (err as BusinessError).message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', message);
-}
-```
+参见 [setApplicationEnabled](#setapplicationenabled)
 

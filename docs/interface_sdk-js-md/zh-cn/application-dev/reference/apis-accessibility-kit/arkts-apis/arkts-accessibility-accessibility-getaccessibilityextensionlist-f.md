@@ -91,41 +91,6 @@ accessibility.getAccessibilityExtensionList(abilityType, abilityState).then((dat
 });
 ```
 
-
-## getAccessibilityExtensionList
-
-```TypeScript
-function getAccessibilityExtensionList(abilityType: AbilityType, stateType: AbilityState, callback: AsyncCallback<Array<AccessibilityAbilityInfo>>): void
-```
-
-查询辅助应用列表。使用callback异步回调。
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-accessibility-function getAccessibilityExtensionList(abilityType: AbilityType, stateType: AbilityState, callback: AsyncCallback<Array<AccessibilityAbilityInfo>>): void--><!--Device-accessibility-function getAccessibilityExtensionList(abilityType: AbilityType, stateType: AbilityState, callback: AsyncCallback<Array<AccessibilityAbilityInfo>>): void-End-->
-
-**系统能力：** SystemCapability.BarrierFree.Accessibility.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| abilityType | AbilityType | 是 | 辅助应用的类型。 |
-| stateType | AbilityState | 是 | 辅助应用的状态。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessibilityAbilityInfo](arkts-accessibility-accessibility-accessibilityabilityinfo-i.md)&gt;&gt; | 是 | 回调函数。当查询辅助应用列表成功，err为undefined，data为辅助应用信息列表；否 则为错误对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
 查询所有已安装的辅助应用ArkTS-Dyn示例。
 
 ```TypeScript
@@ -207,4 +172,41 @@ accessibility.getAccessibilityExtensionList(abilityType, abilityState,(err: Busi
   console.info(`succeeded in getting accessibility extension list, ${JSON.stringify(data)}`);
 });
 ```
+
+
+## getAccessibilityExtensionList
+
+```TypeScript
+function getAccessibilityExtensionList(abilityType: AbilityType, stateType: AbilityState, callback: AsyncCallback<Array<AccessibilityAbilityInfo>>): void
+```
+
+查询辅助应用列表。使用callback异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-accessibility-function getAccessibilityExtensionList(abilityType: AbilityType, stateType: AbilityState, callback: AsyncCallback<Array<AccessibilityAbilityInfo>>): void--><!--Device-accessibility-function getAccessibilityExtensionList(abilityType: AbilityType, stateType: AbilityState, callback: AsyncCallback<Array<AccessibilityAbilityInfo>>): void-End-->
+
+**系统能力：** SystemCapability.BarrierFree.Accessibility.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| abilityType | AbilityType | 是 | 辅助应用的类型。 |
+| stateType | AbilityState | 是 | 辅助应用的状态。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessibilityAbilityInfo](arkts-accessibility-accessibility-accessibilityabilityinfo-i.md)&gt;&gt; | 是 | 回调函数。当查询辅助应用列表成功，err为undefined，data为辅助应用信息列表；否 则为错误对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+参见 [getAccessibilityExtensionList](#getaccessibilityextensionlist)
 

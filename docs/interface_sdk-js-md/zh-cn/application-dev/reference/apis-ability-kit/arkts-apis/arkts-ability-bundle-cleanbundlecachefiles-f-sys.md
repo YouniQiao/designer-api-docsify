@@ -50,6 +50,35 @@ function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>
 | bundleName | string | 是 | 指示要清除其缓存数据的应用Bundle名称。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
+**示例**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleName: string = "com.example.myapplication";
+
+bundle.cleanBundleCacheFiles(bundleName, err => {
+  if (err) {
+    console.error('cleanBundleCacheFiles failed.');
+  } else {
+    console.info('cleanBundleCacheFiles successfully.');
+  }
+});
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleName: string = "com.example.myapplication";
+
+bundle.cleanBundleCacheFiles(bundleName).then(() => {
+  console.info('cleanBundleCacheFiles successfully.');
+}).catch((error: BusinessError) => {
+  console.error('cleanBundleCacheFiles failed.');
+});
+```
+
 
 ## cleanBundleCacheFiles
 
@@ -84,4 +113,8 @@ function cleanBundleCacheFiles(bundleName: string): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [cleanBundleCacheFiles](#cleanbundlecachefiles)
 

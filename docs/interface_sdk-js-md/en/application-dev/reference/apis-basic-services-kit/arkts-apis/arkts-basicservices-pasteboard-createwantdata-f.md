@@ -28,7 +28,7 @@ Creates a **PasteData** object of the Want type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Want content. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want content. |
 
 **Return value:**
 

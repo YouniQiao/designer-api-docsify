@@ -34,7 +34,61 @@ Obtains the DND time. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DoNotDisturbDate&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let getDoNotDisturbDateCallback = (err: Base.BusinessError, data: Notification.DoNotDisturbDate) => {
+  if (err) {
+    console.info("getDoNotDisturbDate failed " + JSON.stringify(err));
+  } else {
+    console.info("getDoNotDisturbDate success");
+  }
+}
+
+Notification.getDoNotDisturbDate(getDoNotDisturbDateCallback);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+Notification.getDoNotDisturbDate().then((data: Notification.DoNotDisturbDate) => {
+  console.info("getDoNotDisturbDate success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`getDoNotDisturbDate failed, code is ${err}`);
+});
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+let getDoNotDisturbDateCallback = (err: Base.BusinessError, data: Notification.DoNotDisturbDate) => {
+  if (err) {
+    console.info("getDoNotDisturbDate failed " + JSON.stringify(err));
+  } else {
+    console.info("getDoNotDisturbDate success");
+  }
+}
+
+let userId: number = 1;
+
+Notification.getDoNotDisturbDate(userId, getDoNotDisturbDateCallback);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+let userId: number = 1;
+
+Notification.getDoNotDisturbDate(userId).then((data: Notification.DoNotDisturbDate) => {
+  console.info("getDoNotDisturbDate success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`getDoNotDisturbDate failed, code is ${err}`);
+});
+```
 
 
 ## getDoNotDisturbDate
@@ -65,6 +119,10 @@ Obtains the DND time. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;DoNotDisturbDate&gt; | Promise used to return the result. |
 
+**Examples**
+
+See [getDoNotDisturbDate](#getdonotdisturbdate)
+
 
 ## getDoNotDisturbDate
 
@@ -93,7 +151,11 @@ Obtains the DND time of a specified user. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DoNotDisturbDate&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+See [getDoNotDisturbDate](#getdonotdisturbdate)
 
 
 ## getDoNotDisturbDate
@@ -129,4 +191,8 @@ Obtains the DND time of a specified user. This API uses a promise to return the 
 | Type | Description |
 | --- | --- |
 | Promise&lt;DoNotDisturbDate&gt; | Promise used to return the result. |
+
+**Examples**
+
+See [getDoNotDisturbDate](#getdonotdisturbdate)
 

@@ -104,6 +104,54 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formBindingData, formProvider } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288'; // 表示卡片formId，根据实际formId调整
+let param: Record<string, string> = {
+  'temperature': '22c',
+  'time': '22:00'
+}
+let obj: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
+try {
+  formProvider.updateForm(formId, obj).then(() => {
+    console.info(`formProvider updateForm success`);
+  }).catch((error: BusinessError) => {
+    console.error(`promise error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { formBindingData, formProvider } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288'; // 表示卡片formId，根据实际formId调整
+let param: Record<string, string> = {
+  'temperature': '22c',
+  'time': '22:00'
+}
+let obj: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
+try {
+  formProvider.updateForm(formId, obj).then(() => {
+    console.info(`formProvider updateForm success`);
+  }).catch((error) => {
+    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
 
 ## updateForm
 
@@ -153,51 +201,5 @@ function updateForm(formId: string, formBindingData: formBindingData.FormBinding
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formBindingData, formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288'; // 表示卡片formId，根据实际formId调整
-let param: Record<string, string> = {
-  'temperature': '22c',
-  'time': '22:00'
-}
-let obj: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
-try {
-  formProvider.updateForm(formId, obj).then(() => {
-    console.info(`formProvider updateForm success`);
-  }).catch((error: BusinessError) => {
-    console.error(`promise error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-
-import { formBindingData, formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288'; // 表示卡片formId，根据实际formId调整
-let param: Record<string, string> = {
-  'temperature': '22c',
-  'time': '22:00'
-}
-let obj: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
-try {
-  formProvider.updateForm(formId, obj).then(() => {
-    console.info(`formProvider updateForm success`);
-  }).catch((error) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [updateForm](#updateform)
 

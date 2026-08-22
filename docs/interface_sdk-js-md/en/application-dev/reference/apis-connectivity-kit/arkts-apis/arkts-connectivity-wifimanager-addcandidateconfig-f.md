@@ -67,6 +67,23 @@ import { wifiManager } from '@kit.ConnectivityKit';
   }
 ```
 
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+  try {
+    let config:wifiManager.WifiDeviceConfig = {
+      ssid : "****",
+      preSharedKey : "****",
+      securityType : 0
+    }
+    wifiManager.addCandidateConfig(config,(error,result) => {
+      console.info("result:" + JSON.stringify(result));
+    });  
+  }catch(error){
+    console.error("failed:" + JSON.stringify(error));
+  }
+```
+
 
 ## addCandidateConfig
 
@@ -91,7 +108,7 @@ Add a specified candidate hotspot configuration and returns the networkId. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | WifiDeviceConfig | Yes | candidate config. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Indicates call back of addCandidateConfig. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Indicates call back of addCandidateConfig. |
 
 **Error codes:**
 
@@ -104,20 +121,5 @@ Add a specified candidate hotspot configuration and returns the networkId. This 
 
 **Examples**
 
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-  try {
-    let config:wifiManager.WifiDeviceConfig = {
-      ssid : "****",
-      preSharedKey : "****",
-      securityType : 0
-    }
-    wifiManager.addCandidateConfig(config,(error,result) => {
-      console.info("result:" + JSON.stringify(result));
-    });  
-  }catch(error){
-    console.error("failed:" + JSON.stringify(error));
-  }
-```
+See [addCandidateConfig](#addcandidateconfig)
 

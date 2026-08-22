@@ -30,7 +30,7 @@ Registers a listener for the mouse cursor position of a device.
 | --- | --- | --- | --- |
 | type | 'cooperateMouse' | Yes | Event type, which is **'cooperateMouse'**. |
 | networkId | string | Yes | Descriptor of the target device. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MouseLocation](arkts-distributedservice-cooperate-mouselocation-i-sys.md)&gt; | Yes | Callback used to return the mouse cursor position of the device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MouseLocation](arkts-distributedservice-cooperate-mouselocation-i-sys.md)&gt; | Yes | Callback used to return the mouse cursor position of the device. |
 
 **Error codes:**
 

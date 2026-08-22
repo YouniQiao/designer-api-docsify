@@ -28,7 +28,7 @@ Queries all device administrator applications of the current user. This API uses
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)&gt;&gt; | Promise that contains all activated device administrator applications. |
+| Promise&lt;Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt;&gt; | Promise that contains all activated device administrator applications. |
 
 **Error codes:**
 

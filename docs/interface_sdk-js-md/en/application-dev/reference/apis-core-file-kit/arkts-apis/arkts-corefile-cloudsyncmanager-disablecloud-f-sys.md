@@ -57,6 +57,19 @@ cloudSyncManager.disableCloud(accountId).then(() => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountId: string = "testAccount";
+cloudSyncManager.disableCloud(accountId, (err: BusinessError) => {
+  if (err) {
+    console.error("disableCloud failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("disableCloud successfully");
+  }
+});
+```
+
 
 ## disableCloud
 
@@ -81,7 +94,7 @@ Disables device-cloud sync. This API uses an asynchronous callback to return the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountId | string | Yes | Account ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result of disabling device-cloud sync. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result of disabling device-cloud sync. |
 
 **Error codes:**
 
@@ -93,16 +106,5 @@ Disables device-cloud sync. This API uses an asynchronous callback to return the
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-cloudSyncManager.disableCloud(accountId, (err: BusinessError) => {
-  if (err) {
-    console.error("disableCloud failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("disableCloud successfully");
-  }
-});
-```
+See [disableCloud](#disablecloud)
 

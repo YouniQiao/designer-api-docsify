@@ -57,6 +57,16 @@ call.holdCall(1, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.holdCall(1).then(() => {
+    console.info(`holdCall success.`);
+}).catch((err: BusinessError) => {
+    console.error(`holdCall fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## holdCall
 
@@ -102,13 +112,5 @@ function holdCall(callId: int): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.holdCall(1).then(() => {
-    console.info(`holdCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`holdCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [holdCall](#holdcall)
 

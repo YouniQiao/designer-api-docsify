@@ -186,6 +186,39 @@ export default {
 };
 ```
 
+```TypeScript
+/* 以生成ECC密钥为例 */
+import { huks } from '@kit.UniversalKeystoreKit';
+
+let keyAlias = 'keyAlias';
+let properties: Array<huks.HuksParam> = [
+  {
+    tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
+    value: huks.HuksKeyAlg.HUKS_ALG_ECC
+  },
+  {
+    tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
+    value: huks.HuksKeySize.HUKS_ECC_KEY_SIZE_256
+  },
+  {
+    tag: huks.HuksTag.HUKS_TAG_PURPOSE,
+    value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_SIGN | huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_VERIFY
+  },
+  {
+    tag: huks.HuksTag.HUKS_TAG_DIGEST,
+    value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256
+  },
+];
+let options: huks.HuksOptions = {
+  properties: properties
+};
+/* 生成密钥 */
+huks.generateKeyItem(keyAlias, options)
+  .then((data) => {
+    console.info(`promise: generateKeyItem success`);
+  });
+```
+
 
 ## generateKeyItem
 
@@ -250,36 +283,5 @@ function generateKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 
 **示例**
 
-```TypeScript
-/* 以生成ECC密钥为例 */
-import { huks } from '@kit.UniversalKeystoreKit';
-
-let keyAlias = 'keyAlias';
-let properties: Array<huks.HuksParam> = [
-  {
-    tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
-    value: huks.HuksKeyAlg.HUKS_ALG_ECC
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
-    value: huks.HuksKeySize.HUKS_ECC_KEY_SIZE_256
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_PURPOSE,
-    value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_SIGN | huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_VERIFY
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_DIGEST,
-    value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256
-  },
-];
-let options: huks.HuksOptions = {
-  properties: properties
-};
-/* 生成密钥 */
-huks.generateKeyItem(keyAlias, options)
-  .then((data) => {
-    console.info(`promise: generateKeyItem success`);
-  });
-```
+参见 [generateKeyItem](#generatekeyitem)
 

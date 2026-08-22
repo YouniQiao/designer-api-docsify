@@ -20,5 +20,5 @@ The change callback of the date style counter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | [CounterV2DateData](../../apis-arkui/arkts-apis/arkts-arkui-arkuiadvancedcounterv2-counterv2datedata-c.md) | Yes | date |
+| date | [CounterV2DateData](arkts-arkui-advanced-counterv2-counterv2datedata-c.md) | Yes | date |
 

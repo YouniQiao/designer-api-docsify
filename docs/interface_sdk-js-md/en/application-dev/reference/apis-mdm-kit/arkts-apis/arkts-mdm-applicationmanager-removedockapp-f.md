@@ -33,7 +33,7 @@ Removes an application from the shortcut bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleName | string | Yes | Bundle name of the application. |
 | abilityName | string | Yes | Ability name of the application. |
 

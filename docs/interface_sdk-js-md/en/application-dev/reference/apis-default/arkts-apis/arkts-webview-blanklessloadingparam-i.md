@@ -27,7 +27,7 @@ Callback for the blankless frame interpolation, which is used to return the blan
 
 Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BlanklessFrameInterpolationInfo](arkts-webview-blanklessframeinterpolationinfo-i.md)&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BlanklessFrameInterpolationInfo](arkts-webview-blanklessframeinterpolationinfo-i.md)&gt;
 
 **Since:** 23
 

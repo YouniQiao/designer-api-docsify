@@ -12,5 +12,5 @@ import { NotificationSubscriberExtensionContext } from '@kit.NotificationKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [NotificationSubscriberExtensionContext](arkts-notification-applicationnotificationsubscriberextensioncontext-notificationsubscriberextensioncontext-c.md) | NotificationSubscriberExtensionContext模块提供通知订阅者扩展能力。 |
+| [NotificationSubscriberExtensionContext](arkts-notification-application-notificationsubscriberextensioncontext-notificationsubscriberextensioncontext-c.md) | NotificationSubscriberExtensionContext模块提供通知订阅者扩展能力。 |
 

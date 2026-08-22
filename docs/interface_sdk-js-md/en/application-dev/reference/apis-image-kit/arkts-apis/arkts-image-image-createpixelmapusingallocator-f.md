@@ -59,3 +59,27 @@ async function CreatePixelMapUseAllocator() {
 }
 ```
 
+```TypeScript
+async function CreatePixelMapUsingAllocator(context : Context) {
+  // "test.jpg" is only an example. Replace it with the actual one in use. Otherwise, the imageSource instance fails to be created, and subsequent operations cannot be performed.
+  let filePath: string = context.filesDir + "/test.jpg";
+  let imageSource = image.createImageSource(filePath);
+  let decodingOptions: image.DecodingOptions = {
+    editable: true,
+    desiredSize: { width: 3072, height: 4096 },
+    rotate: 10,
+    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
+    desiredRegion: { size: { width: 3072, height: 4096 }, x: 0, y: 0 },
+    // If both desiredSize and desiredRegion are passed to the decoding API, you must also include cropAndScaleStrategy to determine whether to crop or scale first. CROP_FIRST is recommended.
+    cropAndScaleStrategy: image.CropAndScaleStrategy.CROP_FIRST,
+    index: 0
+  };
+  let pixelmap = imageSource.createPixelMapUsingAllocator(decodingOptions, image.AllocatorType.AUTO);
+  if (pixelmap != undefined) {
+    console.info('Succeeded in creating pixelMap object.');
+  } else {
+    console.error('Failed to create pixelMap.');
+  }
+}
+```
+

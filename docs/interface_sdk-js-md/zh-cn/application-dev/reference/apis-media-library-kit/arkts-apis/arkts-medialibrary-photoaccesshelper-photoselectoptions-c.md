@@ -260,3 +260,14 @@ subWindowName?: string
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+**示例**
+
+```TypeScript
+async function photoPicker() {
+    let picker = new photoAccessHelper.PhotoViewPicker();
+    let option = new photoAccessHelper.PhotoSelectOptions();
+    option.userId = 101;
+    picker.select(option);
+  }
+```
+

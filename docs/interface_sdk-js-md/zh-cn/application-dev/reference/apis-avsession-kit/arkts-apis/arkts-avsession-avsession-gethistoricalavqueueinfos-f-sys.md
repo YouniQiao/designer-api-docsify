@@ -44,6 +44,12 @@ function getHistoricalAVQueueInfos(maxSize: int, maxAppSize: int, callback: Asyn
 **示例**
 
 ```TypeScript
+avSession.getHistoricalAVQueueInfos(3, 5).then((avQueueInfos: avSession.AVQueueInfo[]) => {
+  console.info(`Succeeded in getting historical AV queue infos, length: ${avQueueInfos.length}`);
+});
+```
+
+```TypeScript
 avSession.getHistoricalAVQueueInfos(3, 5, (avQueueInfos: avSession.AVQueueInfo[]) => { 
     console.info(`Succeeded in getting historical AV queue infos, length: ${avQueueInfos.length}`); 
 });
@@ -90,9 +96,5 @@ function getHistoricalAVQueueInfos(maxSize: int, maxAppSize: int): Promise<Array
 
 **示例**
 
-```TypeScript
-avSession.getHistoricalAVQueueInfos(3, 5).then((avQueueInfos: avSession.AVQueueInfo[]) => {
-  console.info(`Succeeded in getting historical AV queue infos, length: ${avQueueInfos.length}`);
-});
-```
+参见 [getHistoricalAVQueueInfos](#gethistoricalavqueueinfos)
 

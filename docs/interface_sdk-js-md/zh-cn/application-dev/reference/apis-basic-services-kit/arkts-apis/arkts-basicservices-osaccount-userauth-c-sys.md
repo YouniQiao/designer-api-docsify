@@ -129,6 +129,210 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userAuth = new osAccount.UserAuth();
+let challenge: Uint8Array = new Uint8Array([0]);
+let authType: osAccount.AuthType = osAccount.AuthType.PIN;
+let authTrustLevel: osAccount.AuthTrustLevel = osAccount.AuthTrustLevel.ATL1;
+let options: osAccount.AuthOptions = {
+  accountId: 100
+};
+try {
+  userAuth.auth(challenge, authType, authTrustLevel, options, {
+    onResult: (result: number, extraInfo: osAccount.AuthResult) => {
+      console.info('auth result = ' + result);
+      console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userAuth = new osAccount.UserAuth();
+let challenge: Uint8Array = new Uint8Array([0]);
+let authType: osAccount.AuthType = osAccount.AuthType.PIN;
+let authTrustLevel: osAccount.AuthTrustLevel = osAccount.AuthTrustLevel.ATL1;
+let options: osAccount.AuthOptions = {
+  accountId: 100
+};
+try {
+  userAuth.auth(challenge, authType, authTrustLevel, options, {
+    onResult: (result: int, extraInfo: osAccount.AuthResult) => {
+      console.info('auth result = ' + result);
+      console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
+    }
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { AsyncCallback } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let plugin: osAccount.DomainPlugin = {
+  auth: (domainAccountInfo: osAccount.DomainAccountInfo, credential: Uint8Array,
+        callback: osAccount.IUserAuthCallback) => {
+    // 模拟认证
+    // 通知认证结果
+    let result: osAccount.AuthResult = {
+      token: new Uint8Array([0]),
+      remainTimes: 5,
+      freezingTime: 0
+    };
+    callback.onResult(0, result);
+  },
+  authWithPopup: (domainAccountInfo: osAccount.DomainAccountInfo,
+                  callback: osAccount.IUserAuthCallback) => {},
+  authWithToken: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
+                  callback: osAccount.IUserAuthCallback) => {},
+  getAccountInfo: (options: osAccount.GetDomainAccountInfoPluginOptions,
+                  callback: AsyncCallback<osAccount.DomainAccountInfo>) => {},
+  getAuthStatusInfo: (domainAccountInfo: osAccount.DomainAccountInfo,
+                    callback: AsyncCallback<osAccount.AuthStatusInfo>) => {},
+  bindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, localId: number,
+                callback: AsyncCallback<void>) => {},
+  unbindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, callback: AsyncCallback<void>) => {},
+  isAccountTokenValid: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
+                        callback: AsyncCallback<boolean>) => {},
+  getAccessToken: (options: osAccount.GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>) => {}
+}
+osAccount.DomainAccountManager.registerPlugin(plugin);
+let userAuth = new osAccount.UserAuth();
+let challenge: Uint8Array = new Uint8Array([0]);
+let authType: osAccount.AuthType = osAccount.AuthType.DOMAIN;
+let authTrustLevel: osAccount.AuthTrustLevel = osAccount.AuthTrustLevel.ATL1;
+try {
+  userAuth.auth(challenge, authType, authTrustLevel, {
+    onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
+        console.info('auth resultCode = ' + resultCode);
+        console.info('auth authResult = ' + JSON.stringify(authResult));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+let credential = new Uint8Array([0])
+try {
+  osAccount.DomainAccountManager.auth(domainAccountInfo, credential, {
+    onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
+      console.info('auth resultCode = ' + resultCode);
+      console.info('auth authResult = ' + JSON.stringify(authResult));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+let credential = new Uint8Array([0])
+try {
+  osAccount.DomainAccountManager.auth(domainAccountInfo, credential, {
+    onResult: (resultCode: int, authResult: osAccount.AuthResult) => {
+      console.info('auth resultCode = ' + resultCode);
+      console.info('auth authResult = ' + JSON.stringify(authResult));
+    }
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+let credential = new Uint8Array([0])
+try {
+  let serverParams: Record<string, Object> = {
+    "uri": "test.example.com",
+    "port": 100
+  }
+  let authOptions: osAccount.DomainAccountAuthOptions = {
+    serverParams: serverParams
+  }
+  osAccount.DomainAccountManager.auth(domainAccountInfo, credential, authOptions, {
+    onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
+      console.info('auth resultCode = ' + resultCode);
+      console.info('auth authResult = ' + JSON.stringify(authResult));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS--Sta示例：
+
+```TypeScript
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+let credential = new Uint8Array([0])
+try {
+  let serverParams: Record<string, RecordData> = {
+    "uri": "test.example.com",
+    "port": 100
+  }
+  let authOptions: osAccount.DomainAccountAuthOptions = {
+    serverParams: serverParams
+  }
+  osAccount.DomainAccountManager.auth(domainAccountInfo, credential, authOptions, {
+    onResult: (resultCode: int, authResult: osAccount.AuthResult) => {
+      console.info('auth resultCode = ' + resultCode);
+      console.info('auth authResult = ' + JSON.stringify(authResult));
+    }
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## auth
 
 ```TypeScript
@@ -199,57 +403,7 @@ auth(
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userAuth = new osAccount.UserAuth();
-let challenge: Uint8Array = new Uint8Array([0]);
-let authType: osAccount.AuthType = osAccount.AuthType.PIN;
-let authTrustLevel: osAccount.AuthTrustLevel = osAccount.AuthTrustLevel.ATL1;
-let options: osAccount.AuthOptions = {
-  accountId: 100
-};
-try {
-  userAuth.auth(challenge, authType, authTrustLevel, options, {
-    onResult: (result: number, extraInfo: osAccount.AuthResult) => {
-      console.info('auth result = ' + result);
-      console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userAuth = new osAccount.UserAuth();
-let challenge: Uint8Array = new Uint8Array([0]);
-let authType: osAccount.AuthType = osAccount.AuthType.PIN;
-let authTrustLevel: osAccount.AuthTrustLevel = osAccount.AuthTrustLevel.ATL1;
-let options: osAccount.AuthOptions = {
-  accountId: 100
-};
-try {
-  userAuth.auth(challenge, authType, authTrustLevel, options, {
-    onResult: (result: int, extraInfo: osAccount.AuthResult) => {
-      console.info('auth result = ' + result);
-      console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
-    }
-  });
-} catch (e: Error) {
-  const err = e as BusinessError;
-  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [auth](#auth)
 
 ## authUser
 
@@ -479,6 +633,14 @@ constructor()
 let userAuth = new osAccount.UserAuth();
 ```
 
+```TypeScript
+let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
+```
+
+```TypeScript
+let userIDM = new osAccount.UserIdentityManager();
+```
+
 ## getAvailableStatus
 
 ```TypeScript
@@ -657,49 +819,6 @@ try {
 }
 ```
 
-## getProperty
-
-```TypeScript
-getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>
-```
-
-基于指定的请求信息获取属性。使用Promise异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
-
-<!--Device-UserAuth-getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>--><!--Device-UserAuth-getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>-End-->
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| request | [GetPropertyRequest](arkts-basicservices-osaccount-getpropertyrequest-i-sys.md) | 是 | 请求信息，包括认证类型和属性类型列表。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[ExecutorProperty](arkts-basicservices-osaccount-executorproperty-i-sys.md)&gt; | Promise对象，返回执行器属性信息。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid request. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found.<br>**适用版本：** 12+ |
-| 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -756,6 +875,51 @@ try {
   console.error(`getProperty exception = code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+## getProperty
+
+```TypeScript
+getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>
+```
+
+基于指定的请求信息获取属性。使用Promise异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
+
+<!--Device-UserAuth-getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>--><!--Device-UserAuth-getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| request | [GetPropertyRequest](arkts-basicservices-osaccount-getpropertyrequest-i-sys.md) | 是 | 请求信息，包括认证类型和属性类型列表。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[ExecutorProperty](arkts-basicservices-osaccount-executorproperty-i-sys.md)&gt; | Promise对象，返回执行器属性信息。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid request. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found.<br>**适用版本：** 12+ |
+| 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
+
+**示例**
+
+参见 [getProperty](#getproperty)
 
 ## getPropertyByCredentialId
 
@@ -1119,48 +1283,6 @@ try {
 }
 ```
 
-## setProperty
-
-```TypeScript
-setProperty(request: SetPropertyRequest): Promise<void>
-```
-
-设置可用于初始化算法的属性。使用Promise异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
-
-<!--Device-UserAuth-setProperty(request: SetPropertyRequest): Promise<void>--><!--Device-UserAuth-setProperty(request: SetPropertyRequest): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| request | [SetPropertyRequest](arkts-basicservices-osaccount-setpropertyrequest-i-sys.md) | 是 | 请求信息，包括身份验证类型和要设置的密钥值。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid request. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -1209,4 +1331,48 @@ try {
   console.error(`setProperty exception = code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+## setProperty
+
+```TypeScript
+setProperty(request: SetPropertyRequest): Promise<void>
+```
+
+设置可用于初始化算法的属性。使用Promise异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
+
+<!--Device-UserAuth-setProperty(request: SetPropertyRequest): Promise<void>--><!--Device-UserAuth-setProperty(request: SetPropertyRequest): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| request | [SetPropertyRequest](arkts-basicservices-osaccount-setpropertyrequest-i-sys.md) | 是 | 请求信息，包括身份验证类型和要设置的密钥值。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid request. |
+
+**示例**
+
+参见 [setProperty](#setproperty)
 

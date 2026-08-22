@@ -58,6 +58,69 @@ declare function symlink(target: string, srcPath: string): Promise<void>
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let srcFile = pathDir + "/test.txt";
+let dstFile = pathDir + "/test";
+fileIo.symlink(srcFile, dstFile).then(() => {
+  console.info(`Succeeded in creating symbolic link.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create symbolic link. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let srcFile = pathDir + "/test.txt";
+let dstFile = pathDir + "/test";
+fileIo.symlink(srcFile, dstFile).then(() => {
+  console.info(`Succeeded in creating symbolic link.`);
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to create symbolic link. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let srcFile = pathDir + "/test.txt";
+let dstFile = pathDir + "/test";
+fileIo.symlink(srcFile, dstFile, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to create symbolic link. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in creating symbolic link.`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let srcFile = pathDir + "/test.txt";
+let dstFile = pathDir + "/test";
+fileIo.symlink(srcFile, dstFile, (err: BusinessError<void> | null) => {
+  if (err) {
+    console.error(`Failed to create symbolic link. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in creating symbolic link.`);
+  }
+});
+```
+
 
 ## symlink
 
@@ -103,4 +166,8 @@ declare function symlink(target: string, srcPath: string, callback: AsyncCallbac
 | 13900030 | File name too long |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**示例**
+
+参见 [symlink](#symlink)
 

@@ -33,6 +33,32 @@ Obtains the ability running information. This API uses a promise to return the r
 | --- | --- |
 | Promise&lt;Array&lt;[AbilityRunningInfo](arkts-ability-abilityrunninginfo-i.md)&gt;&gt; | Promise used to return the ability running information. |
 
+**Examples**
+
+```TypeScript
+import abilityManager from '@ohos.application.abilityManager';
+import { BusinessError } from '@ohos.base';
+
+abilityManager.getAbilityRunningInfos((error: BusinessError, data) => {
+  if (error) {
+    console.error(`GetAbilityRunningInfos failed, error code: ${error.code}, error msg: ${error.message}.`);
+    return;
+  }
+  console.info(`GetAbilityRunningInfos success, data: ${JSON.stringify(data)}.`);
+});
+```
+
+```TypeScript
+import abilityManager from '@ohos.application.abilityManager';
+import { BusinessError } from '@ohos.base';
+
+abilityManager.getAbilityRunningInfos().then((data) => {
+  console.info(`getAbilityRunningInfos success, data: ${JSON.stringify(data)}`);
+}).catch((error: BusinessError) => {
+  console.error(`getAbilityRunningInfos error code : ${error.code}, error msg: ${error.message}.`);
+});
+```
+
 
 ## getAbilityRunningInfos
 
@@ -60,5 +86,9 @@ Obtains the ability running information. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AbilityRunningInfo](arkts-ability-abilityrunninginfo-i.md)&gt;&gt; | Yes | Callback used to return the ability running information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AbilityRunningInfo](arkts-ability-abilityrunninginfo-i.md)&gt;&gt; | Yes | Callback used to return the ability running information. |
+
+**Examples**
+
+See [getAbilityRunningInfos](#getabilityrunninginfos)
 

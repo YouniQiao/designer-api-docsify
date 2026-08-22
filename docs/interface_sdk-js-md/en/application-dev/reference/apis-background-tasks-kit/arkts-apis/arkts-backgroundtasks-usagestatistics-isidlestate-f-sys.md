@@ -29,7 +29,7 @@ Checks whether the application with a specified bundle name is in the idle state
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Indicates the bundle name of the application to query. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates the application is idle in a particular period, and **false** indicates otherwise. The time range of the particular period is defined by the system, which may be hours or days. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates the application is idle in a particular period, and **false** indicates otherwise. The time range of the particular period is defined by the system, which may be hours or days. |
 
 **Error codes:**
 
@@ -56,6 +56,16 @@ usageStatistics.isIdleState("com.ohos.camera", (err: BusinessError, res: boolean
   } else {
     console.info('BUNDLE_ACTIVE isIdleState callback succeeded, result: ' + JSON.stringify(res));
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+usageStatistics.isIdleState("com.ohos.camera").then((res: boolean) => {
+  console.info('BUNDLE_ACTIVE isIdleState promise succeeded, result: ' + JSON.stringify(res));
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE isIdleState promise failed. code is: ' + err.code + ',message is: ' + err.message);
 });
 ```
 
@@ -106,13 +116,5 @@ Checks whether the application with a specified bundle name is in the idle state
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-usageStatistics.isIdleState("com.ohos.camera").then((res: boolean) => {
-  console.info('BUNDLE_ACTIVE isIdleState promise succeeded, result: ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE isIdleState promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
+See [isIdleState](#isidlestate)
 

@@ -71,3 +71,7 @@ function fatal(domain: int, tag: string, format: string, ...args: RecordData[]):
 | format | string | 是 | 格式字符串，用于日志的格式化输出。格式字符串中可以设置多个参数，参数需要包含参数类型、隐私标识。<br/>隐私标识分为{public}和{private}，缺省为{ private}。标识{public}的内容明文输出，标识{private}的内容以&lt;private&gt;过滤回显。 |
 | args | [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)[] | 是 | 与格式字符串format对应的可变长度参数列表。参数数目、参数类型必须与格式字符串中的标识一一对应。 |
 
+**示例**
+
+参见 [fatal](#fatal)
+

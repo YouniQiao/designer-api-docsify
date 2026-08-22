@@ -32,5 +32,5 @@ Build function of Chip.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ChipOptions](../../apis-default/arkts-apis/arkts-arkuiadvancedchip-chipoptions-i.md) | Yes | Parameters of the chip. |
+| options | [ChipOptions](../../apis-default/arkts-apis/arkts-arkui-advanced-chip-chipoptions-i.md) | Yes | Parameters of the chip. |
 

@@ -64,6 +64,21 @@ sim.delIccDiallingNumbers(0, sim.ContactType.GENERAL_CONTACT, diallingNumbersInf
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+let diallingNumbersInfo: sim.DiallingNumbersInfo = {
+    alphaTag: "alpha",
+    number: "138xxxxxxxx"
+};
+sim.delIccDiallingNumbers(0, sim.ContactType.GENERAL_CONTACT, diallingNumbersInfo).then(() => {
+    console.info(`delIccDiallingNumbers success.`);
+}).catch((err: BusinessError) => {
+    console.error(`delIccDiallingNumbers failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## delIccDiallingNumbers
 
@@ -113,18 +128,5 @@ Delete dialing number information on SIM card.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let diallingNumbersInfo: sim.DiallingNumbersInfo = {
-    alphaTag: "alpha",
-    number: "138xxxxxxxx"
-};
-sim.delIccDiallingNumbers(0, sim.ContactType.GENERAL_CONTACT, diallingNumbersInfo).then(() => {
-    console.info(`delIccDiallingNumbers success.`);
-}).catch((err: BusinessError) => {
-    console.error(`delIccDiallingNumbers failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [delIccDiallingNumbers](#deliccdiallingnumbers)
 

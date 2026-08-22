@@ -86,85 +86,6 @@ Gets session functions.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
-## offEffectSuggestionChange
-
-```TypeScript
-offEffectSuggestionChange(callback?: AsyncCallback<EffectSuggestionType>): void
-```
-
-Unsubscribes from effect suggestion event callback.
-
-**Since:** 23
-
-<!--Device-PhotoSession-offEffectSuggestionChange(callback?: AsyncCallback<EffectSuggestionType>): void--><!--Device-PhotoSession-offEffectSuggestionChange(callback?: AsyncCallback<EffectSuggestionType>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | No | Callback used to return the result. |
-
-## offFeatureDetection
-
-```TypeScript
-offFeatureDetection(featureType: SceneFeatureType, callback?: AsyncCallback<SceneFeatureDetectionResult>): void
-```
-
-Unsubscribes from feature detection result.
-
-**Since:** 23
-
-<!--Device-PhotoSession-offFeatureDetection(featureType: SceneFeatureType, callback?: AsyncCallback<SceneFeatureDetectionResult>): void--><!--Device-PhotoSession-offFeatureDetection(featureType: SceneFeatureType, callback?: AsyncCallback<SceneFeatureDetectionResult>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| featureType | [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md) | Yes | Feature type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md)&gt; | No | Callback used to get the detection result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-
-## offLcdFlashStatus
-
-```TypeScript
-offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void
-```
-
-Unsubscribes from lcd flash status.
-
-**Since:** 23
-
-<!--Device-PhotoSession-offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void--><!--Device-PhotoSession-offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | No | Callback used to get the lcd flash status. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-
 ## off('effectSuggestionChange')
 
 ```TypeScript
@@ -186,7 +107,7 @@ Unsubscribes from effect suggestion event callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'effectSuggestionChange' | Yes | Event type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | No | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | No | Callback used to return the result. |
 
 ## off('featureDetection')
 
@@ -210,7 +131,7 @@ Unsubscribe from camera feature detection status change events.
 | --- | --- | --- | --- |
 | type | 'featureDetection' | Yes | Event type. The value is fixed at **'featureDetection'**. The event can be listened for when a session is created. |
 | featureType | [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md) | Yes | Scene feature type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('featureDetection')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('featureDetection')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
@@ -247,7 +168,7 @@ Unsubscribes from LCD flash status change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'lcdFlashStatus' | Yes | Event type. The value is fixed at **'lcdFlashStatus'**. The event can be listened for when a session is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('lcdFlashStatus')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('lcdFlashStatus')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
@@ -286,7 +207,7 @@ Unsubscribes from macro state change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'macroStatusChanged' | Yes | Event type. The value is fixed at **'macroStatusChanged'**. The event can be listened for when a session is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 **Error codes:**
 
@@ -294,17 +215,17 @@ Unsubscribes from macro state change events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 11 - 19 |
 
-## onEffectSuggestionChange
+## offEffectSuggestionChange
 
 ```TypeScript
-onEffectSuggestionChange(callback: AsyncCallback<EffectSuggestionType>): void
+offEffectSuggestionChange(callback?: AsyncCallback<EffectSuggestionType>): void
 ```
 
-Subscribes to effect suggestion event callback.
+Unsubscribes from effect suggestion event callback.
 
 **Since:** 23
 
-<!--Device-PhotoSession-onEffectSuggestionChange(callback: AsyncCallback<EffectSuggestionType>): void--><!--Device-PhotoSession-onEffectSuggestionChange(callback: AsyncCallback<EffectSuggestionType>): void-End-->
+<!--Device-PhotoSession-offEffectSuggestionChange(callback?: AsyncCallback<EffectSuggestionType>): void--><!--Device-PhotoSession-offEffectSuggestionChange(callback?: AsyncCallback<EffectSuggestionType>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -314,19 +235,19 @@ Subscribes to effect suggestion event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | No | Callback used to return the result. |
 
-## onFeatureDetection
+## offFeatureDetection
 
 ```TypeScript
-onFeatureDetection(featureType: SceneFeatureType, callback: AsyncCallback<SceneFeatureDetectionResult>): void
+offFeatureDetection(featureType: SceneFeatureType, callback?: AsyncCallback<SceneFeatureDetectionResult>): void
 ```
 
-Subscribes to feature detection results.
+Unsubscribes from feature detection result.
 
 **Since:** 23
 
-<!--Device-PhotoSession-onFeatureDetection(featureType: SceneFeatureType, callback: AsyncCallback<SceneFeatureDetectionResult>): void--><!--Device-PhotoSession-onFeatureDetection(featureType: SceneFeatureType, callback: AsyncCallback<SceneFeatureDetectionResult>): void-End-->
+<!--Device-PhotoSession-offFeatureDetection(featureType: SceneFeatureType, callback?: AsyncCallback<SceneFeatureDetectionResult>): void--><!--Device-PhotoSession-offFeatureDetection(featureType: SceneFeatureType, callback?: AsyncCallback<SceneFeatureDetectionResult>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -337,7 +258,7 @@ Subscribes to feature detection results.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | featureType | [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md) | Yes | Feature type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md)&gt; | Yes | Callback used to get the detection result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md)&gt; | No | Callback used to get the detection result. |
 
 **Error codes:**
 
@@ -345,17 +266,17 @@ Subscribes to feature detection results.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## onLcdFlashStatus
+## offLcdFlashStatus
 
 ```TypeScript
-onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void
+offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void
 ```
 
-Subscribes to lcd flash status.
+Unsubscribes from lcd flash status.
 
 **Since:** 23
 
-<!--Device-PhotoSession-onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void--><!--Device-PhotoSession-onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void-End-->
+<!--Device-PhotoSession-offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void--><!--Device-PhotoSession-offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -365,7 +286,7 @@ Subscribes to lcd flash status.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | Yes | Callback used to get the lcd flash status. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | No | Callback used to get the lcd flash status. |
 
 **Error codes:**
 
@@ -394,7 +315,7 @@ Subscribes to effect suggestion event callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'effectSuggestionChange' | Yes | Event type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | Yes | Callback used to return the result. |
 
 ## on('featureDetection')
 
@@ -418,7 +339,7 @@ Subscribe to scene feature detection status change events. This API uses an asyn
 | --- | --- | --- | --- |
 | type | 'featureDetection' | Yes | Event type. The value is fixed at **'featureDetection'**. The event can be listened for when a photo session is created. |
 | featureType | [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md) | Yes | Scene feature type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md)&gt; | Yes | Callback used to return the status of the scene feature detection. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md)&gt; | Yes | Callback used to return the status of the scene feature detection. |
 
 **Error codes:**
 
@@ -466,7 +387,7 @@ Subscribes to LCD flash status change events. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'lcdFlashStatus' | Yes | Event type. The value is fixed at **'lcdFlashStatus'**. The event can be listened for when a session is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | Yes | Callback used to return the LCD flash status change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | Yes | Callback used to return the LCD flash status change. |
 
 **Error codes:**
 
@@ -516,11 +437,90 @@ Subscribes to macro state change events. This API uses an asynchronous callback 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'macroStatusChanged' | Yes | Event type. The value is fixed at **'macroStatusChanged'**. The event can be listened for when a session is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the macro state. **true** if enabled, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the macro state. **true** if enabled, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 11 - 19 |
+
+## onEffectSuggestionChange
+
+```TypeScript
+onEffectSuggestionChange(callback: AsyncCallback<EffectSuggestionType>): void
+```
+
+Subscribes to effect suggestion event callback.
+
+**Since:** 23
+
+<!--Device-PhotoSession-onEffectSuggestionChange(callback: AsyncCallback<EffectSuggestionType>): void--><!--Device-PhotoSession-onEffectSuggestionChange(callback: AsyncCallback<EffectSuggestionType>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | Yes | Callback used to return the result. |
+
+## onFeatureDetection
+
+```TypeScript
+onFeatureDetection(featureType: SceneFeatureType, callback: AsyncCallback<SceneFeatureDetectionResult>): void
+```
+
+Subscribes to feature detection results.
+
+**Since:** 23
+
+<!--Device-PhotoSession-onFeatureDetection(featureType: SceneFeatureType, callback: AsyncCallback<SceneFeatureDetectionResult>): void--><!--Device-PhotoSession-onFeatureDetection(featureType: SceneFeatureType, callback: AsyncCallback<SceneFeatureDetectionResult>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| featureType | [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md) | Yes | Feature type. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md)&gt; | Yes | Callback used to get the detection result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+## onLcdFlashStatus
+
+```TypeScript
+onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void
+```
+
+Subscribes to lcd flash status.
+
+**Since:** 23
+
+<!--Device-PhotoSession-onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void--><!--Device-PhotoSession-onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | Yes | Callback used to get the lcd flash status. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 

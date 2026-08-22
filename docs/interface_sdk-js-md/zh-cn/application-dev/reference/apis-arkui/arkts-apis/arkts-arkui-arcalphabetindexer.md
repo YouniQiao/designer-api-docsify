@@ -12,20 +12,20 @@ import { ArcAlphabetIndexer, ArcAlphabetIndexerAttribute } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkuiarcalphabetindexer-arcalphabetindexerattribute-c.md) | 除支持通用属性外，还支持以下属性： |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | 除支持通用属性外，还支持以下属性： |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerInitInfo](arkts-arkui-arkuiarcalphabetindexer-arcalphabetindexerinitinfo-i.md) | 定义弧形字母索引条的初始化参数。 |
-| [ArcAlphabetIndexerInterface](arkts-arkui-arkuiarcalphabetindexer-arcalphabetindexerinterface-i.md) | 弧形索引条是一种弧形排列、可按字母顺序快速定位的组件，可与容器组件联动，按逻辑结构快速定位至容器显示区域，适用于手表等圆形屏幕设备。 |
+| [ArcAlphabetIndexerInitInfo](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) | 定义弧形字母索引条的初始化参数。 |
+| [ArcAlphabetIndexerInterface](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerinterface-i.md) | 弧形索引条是一种弧形排列、可按字母顺序快速定位的组件，可与容器组件联动，按逻辑结构快速定位至容器显示区域，适用于手表等圆形屏幕设备。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [OnSelectCallback](arkts-arkui-onselectcallback-t.md) | 定义[onSelect](arkts-arkui-arkuiarcalphabetindexer-arcalphabetindexerattribute-c.md#onselect)中使用的回调类型。 |
+| [OnSelectCallback](arkts-arkui-onselectcallback-t.md) | 定义[onSelect](../../apis-default/arkts-apis/arkts-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md#onselect)中使用的回调类型。 |
 
 ### 常量
 

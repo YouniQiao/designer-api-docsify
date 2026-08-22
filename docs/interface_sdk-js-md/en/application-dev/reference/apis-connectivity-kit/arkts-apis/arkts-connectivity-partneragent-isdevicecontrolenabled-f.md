@@ -14,7 +14,7 @@ function isDeviceControlEnabled(deviceAddress: PartnerDeviceAddress): boolean
 
 Checks whether device control is enabled.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 

@@ -27,7 +27,7 @@ Disconnects this ability from a specific ServiceAbility. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | connection | number | Yes | ID of the ServiceAbility to disconnect. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the disconnection is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the disconnection is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -55,6 +55,36 @@ let connId = particleAbility.connectAbility(
 
 particleAbility.disconnectAbility(connId, (err) => {
   console.error(`particleAbilityTest disconnectAbility err: ${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { particleAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let connId = particleAbility.connectAbility(
+  {
+    bundleName: 'com.ix.ServiceAbility',
+    abilityName: 'ServiceAbilityA',
+  },
+  {
+    onConnect: (element, remote) => {
+      console.info(`ConnectAbility onConnect remote is proxy: ${(remote instanceof rpc.RemoteProxy)}`);
+    },
+    onDisconnect: (element) => {
+      console.info(`ConnectAbility onDisconnect element.deviceId: ${element.deviceId}`);
+    },
+    onFailed: (code) => {
+      console.error(`particleAbilityTest ConnectAbility onFailed errCode: ${code}`);
+    },
+  },
+);
+
+particleAbility.disconnectAbility(connId).then(() => {
+  console.info('disconnectAbility success');
+}).catch((error: BusinessError) => {
+  console.error(`particleAbilityTest result errCode : ${error.code}`);
 });
 ```
 
@@ -89,33 +119,5 @@ Disconnects this ability from a specific ServiceAbility. This API uses a promise
 
 **Examples**
 
-```TypeScript
-import { particleAbility } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let connId = particleAbility.connectAbility(
-  {
-    bundleName: 'com.ix.ServiceAbility',
-    abilityName: 'ServiceAbilityA',
-  },
-  {
-    onConnect: (element, remote) => {
-      console.info(`ConnectAbility onConnect remote is proxy: ${(remote instanceof rpc.RemoteProxy)}`);
-    },
-    onDisconnect: (element) => {
-      console.info(`ConnectAbility onDisconnect element.deviceId: ${element.deviceId}`);
-    },
-    onFailed: (code) => {
-      console.error(`particleAbilityTest ConnectAbility onFailed errCode: ${code}`);
-    },
-  },
-);
-
-particleAbility.disconnectAbility(connId).then(() => {
-  console.info('disconnectAbility success');
-}).catch((error: BusinessError) => {
-  console.error(`particleAbilityTest result errCode : ${error.code}`);
-});
-```
+See [disconnectAbility](#disconnectability)
 

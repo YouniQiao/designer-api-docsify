@@ -22,3 +22,7 @@ Defines the callback for successful ability launches.
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the launched ability or system operation.  The ability component name is in the format of '[bundleName]#[moduleName]#[abilityName]'. |
 
+**Examples**
+
+See OnRequestFailureFn.
+

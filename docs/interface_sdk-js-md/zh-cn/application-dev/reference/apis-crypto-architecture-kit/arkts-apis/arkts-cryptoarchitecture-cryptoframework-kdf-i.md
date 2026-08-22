@@ -149,47 +149,6 @@ function TestGenerateSecret() {
 }
 ```
 
-## generateSecret
-
-```TypeScript
-generateSecret(params: KdfSpec): Promise<DataBlob>
-```
-
-基于传入的密钥派生参数进行密钥派生。使用Promise异步回调。
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Kdf-generateSecret(params: KdfSpec): Promise<DataBlob>--><!--Device-Kdf-generateSecret(params: KdfSpec): Promise<DataBlob>-End-->
-
-**系统能力：** 
-- API版本12+：SystemCapability.Security.CryptoFramework.Kdf
-- API版本11：SystemCapability.Security.CryptoFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| params | [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md) | 是 | 设置密钥派生函数的参数。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;DataBlob&gt; | Promise对象，返回派生的密钥。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes: <br>1. Invalid key length in the params; <br>2. Invalid info length in the params; <br>3. Invalid keySize in the params.<br>**适用版本：** 22+ |
-
-**示例**
-
 PBKDF2算法
 
 ```TypeScript
@@ -284,6 +243,49 @@ async function TestGenerateSecret() {
 }
 ```
 
+## generateSecret
+
+```TypeScript
+generateSecret(params: KdfSpec): Promise<DataBlob>
+```
+
+基于传入的密钥派生参数进行密钥派生。使用Promise异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Kdf-generateSecret(params: KdfSpec): Promise<DataBlob>--><!--Device-Kdf-generateSecret(params: KdfSpec): Promise<DataBlob>-End-->
+
+**系统能力：** 
+- API版本12+：SystemCapability.Security.CryptoFramework.Kdf
+- API版本11：SystemCapability.Security.CryptoFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| params | [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md) | 是 | 设置密钥派生函数的参数。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;DataBlob&gt; | Promise对象，返回派生的密钥。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes: <br>1. Invalid key length in the params; <br>2. Invalid info length in the params; <br>3. Invalid keySize in the params.<br>**适用版本：** 22+ |
+
+**示例**
+
+参见 [generateSecret](#generatesecret)
+
 ## generateSecretSync
 
 ```TypeScript
@@ -325,6 +327,96 @@ generateSecretSync(params: KdfSpec): DataBlob
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes: <br>1. Invalid key length in the params; <br>2. Invalid info length in the params; <br>3. Invalid keySize in the params.<br>**适用版本：** 22+ |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+async function testGenerateSecret() {
+  let eccGen = cryptoFramework.createAsyKeyGenerator('ECC256');
+  let globalKeyPair = await eccGen.generateKeyPair();
+  let keyAgreement = cryptoFramework.createKeyAgreement('ECC256');
+  keyAgreement.generateSecret(globalKeyPair.priKey, globalKeyPair.pubKey, (err, secret) => {
+    if (err) {
+      console.error(`keyAgreement failed, errCode: ${err.code}, errMsg: ${err.message}`);
+      return;
+    }
+    console.info('keyAgreement output = ' + secret.data);
+  });
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+async function testGenerateSecret() {
+  let eccGen = cryptoFramework.createAsyKeyGenerator('ECC256');
+  let globalKeyPair = await eccGen.generateKeyPair();
+  let keyAgreement = cryptoFramework.createKeyAgreement('ECC256');
+  keyAgreement.generateSecret(globalKeyPair.priKey, globalKeyPair.pubKey, (err, secret) => {
+    if (err) {
+      console.error("keyAgreement error.");
+    }
+    if (secret != undefined) {
+      console.info('keyAgreement output is ' + secret.data);
+    }
+  });
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function testGenerateSecret() {
+  let eccGen = cryptoFramework.createAsyKeyGenerator('ECC256');
+  let globalKeyPair = await eccGen.generateKeyPair();
+  let keyAgreement = cryptoFramework.createKeyAgreement('ECC256');
+  let keyAgreementPromise = keyAgreement.generateSecret(globalKeyPair.priKey, globalKeyPair.pubKey);
+  keyAgreementPromise.then(secret => {
+    console.info('keyAgreement output = ' + secret.data);
+  }).catch((error: BusinessError) => {
+    console.error(`keyAgreement failed: errCode: ${error.code}, errMsg: ${error.message}`);
+  });
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@ohos.base';
+
+async function testGenerateSecret() {
+  try {
+    let eccGen = cryptoFramework.createAsyKeyGenerator('ECC256');
+    let globalKeyPair = await eccGen.generateKeyPair();
+    let keyAgreement = cryptoFramework.createKeyAgreement('ECC256');
+    let keyAgreementPromise = await keyAgreement.generateSecret(globalKeyPair.priKey, globalKeyPair.pubKey);
+    console.info('keyAgreement output is ' + keyAgreementPromise.data);
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`keyAgreement error, ${e.code}, ${e.message}`);
+  }
+}
+```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+async function testGenerateSecretSync() {
+  let eccGen = cryptoFramework.createAsyKeyGenerator('ECC256');
+  let globalKeyPair = await eccGen.generateKeyPair();
+  let keyAgreement = cryptoFramework.createKeyAgreement('ECC256');
+  let secret = keyAgreement.generateSecretSync(globalKeyPair.priKey, globalKeyPair.pubKey);
+  console.info('[Sync]keyAgreement output = ' + secret.data);
+}
+```
 
 PBKDF2算法
 

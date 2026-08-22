@@ -41,5 +41,5 @@ Material的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [MaterialOptions](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-materialoptions-i-sys.md) | 否 | 系统材质配置选项，包括材质类型。<br/>默认值：{type:MaterialType.NONE} |
+| options | [MaterialOptions](arkts-uimaterial-materialoptions-i-sys.md) | 否 | 系统材质配置选项，包括材质类型。<br/>默认值：{type:MaterialType.NONE} |
 

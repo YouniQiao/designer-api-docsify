@@ -53,6 +53,46 @@ call.makeCall("138xxxxxxxx", (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// 从API15开始支持tel格式电话号码，如："tel:13xxxx"
+call.makeCall("138xxxxxxxx").then(() => {
+    console.info(`makeCall success`);
+}).catch((err: BusinessError) => {
+    console.error(`makeCall fail, promise: 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
+});
+```
+
+```TypeScript
+import { call } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 设置是否隐藏拨号界面
+let makeOptions: call.MakeCallOptions = {
+  isHideDialScreen: true
+};
+
+call.makeCall("138xxxxxxxx", makeOptions).then(() => {
+    console.info(`makeCall success`);
+}).catch((err: BusinessError) => {
+    console.error(`makeCall fail, promise: 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
+});
+```
+
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// 获取context
+let context = this.getUIContext().getHostContext() as Context;
+// 从API15开始支持tel格式电话号码，如："tel:13xxxx"
+call.makeCall(context, "138xxxxxxxx").then(() => {
+    console.info(`makeCall success`);
+}).catch((err: BusinessError) => {
+    console.error(`makeCall fail, promise: 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
+});
+```
+
 
 ## makeCall
 
@@ -94,15 +134,7 @@ function makeCall(phoneNumber: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// 从API15开始支持tel格式电话号码，如："tel:13xxxx"
-call.makeCall("138xxxxxxxx").then(() => {
-    console.info(`makeCall success`);
-}).catch((err: BusinessError) => {
-    console.error(`makeCall fail, promise: 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-});
-```
+参见 [makeCall](#makecall)
 
 
 ## makeCall
@@ -145,21 +177,7 @@ function makeCall(phoneNumber: string, options?: MakeCallOptions): Promise<void>
 
 **示例**
 
-```TypeScript
-import { call } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 设置是否隐藏拨号界面
-let makeOptions: call.MakeCallOptions = {
-  isHideDialScreen: true
-};
-
-call.makeCall("138xxxxxxxx", makeOptions).then(() => {
-    console.info(`makeCall success`);
-}).catch((err: BusinessError) => {
-    console.error(`makeCall fail, promise: 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-});
-```
+参见 [makeCall](#makecall)
 
 
 ## makeCall
@@ -201,17 +219,5 @@ function makeCall(context: Context, phoneNumber: string): Promise<void>
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// 获取context
-let context = this.getUIContext().getHostContext() as Context;
-// 从API15开始支持tel格式电话号码，如："tel:13xxxx"
-call.makeCall(context, "138xxxxxxxx").then(() => {
-    console.info(`makeCall success`);
-}).catch((err: BusinessError) => {
-    console.error(`makeCall fail, promise: 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-});
-```
+参见 [makeCall](#makecall)
 

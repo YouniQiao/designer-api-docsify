@@ -34,6 +34,32 @@ import { socket } from '@kit.NetworkKit';
 let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
 ```
 
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tcpconnectoptions: socket.TCPConnectOptions = {
+  address: netAddress,
+  timeout: 6000
+}
+
+tcp.connect(tcpconnectoptions, (err: BusinessError) => {
+  if (err) {
+    console.error('connect fail');
+    return;
+  }
+  console.info('connect success');
+
+  // Ensure that a TCPSocket connection has been established before upgrading it to a TLSSocket connection.
+  let tls: socket.TLSSocket = socket.constructTLSSocketInstance(tcp);
+})
+```
+
 
 ## constructTLSSocketInstance
 
@@ -78,29 +104,5 @@ Upgrades a **TCPSocket** connection to a **TLSSocket** connection.
 
 **Examples**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tcpconnectoptions: socket.TCPConnectOptions = {
-  address: netAddress,
-  timeout: 6000
-}
-
-tcp.connect(tcpconnectoptions, (err: BusinessError) => {
-  if (err) {
-    console.error('connect fail');
-    return;
-  }
-  console.info('connect success');
-
-  // Ensure that a TCPSocket connection has been established before upgrading it to a TLSSocket connection.
-  let tls: socket.TLSSocket = socket.constructTLSSocketInstance(tcp);
-})
-```
+See [constructTLSSocketInstance](#constructtlssocketinstance)
 

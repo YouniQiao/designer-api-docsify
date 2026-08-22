@@ -86,6 +86,38 @@ Sets the list of windows to be hidden in the picker. The setting takes effect th
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let excludedWindows: Array<number> = [101, 102, 103];
+
+// Initialize avScreenCaptureRecorder.
+let avScreenCaptureRecorder: media.AVScreenCaptureRecorder | undefined;
+media.createAVScreenCaptureRecorder().then((captureRecorder: media.AVScreenCaptureRecorder) => {
+  if (captureRecorder != null) {
+    avScreenCaptureRecorder = captureRecorder;
+    console.info('Succeeded in creating avScreenCaptureRecorder');
+  } else {
+    console.error('Failed to create avScreenCaptureRecorder');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`createAVScreenCaptureRecorder catchCallback, error message:${error.message}`);
+});
+
+// Other processes.
+
+// Call the excludePickerWindows method.
+if (avScreenCaptureRecorder != undefined) {
+  avScreenCaptureRecorder.excludePickerWindows(excludedWindows).then(() => {
+    console.info('Succeeded in excluding picker windows.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to exclude picker windows. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
+
 ## init
 
 ```TypeScript
@@ -120,45 +152,45 @@ Initializes screen capture and sets screen capture parameters. This API uses a p
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
-## offError
+**Examples**
 
 ```TypeScript
-offError(callback?: ErrorCallback): void
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+import { media } from '@kit.MediaKit';
+
+// Initialize avScreenCaptureRecorder.
+let avScreenCaptureRecorder: media.AVScreenCaptureRecorder | undefined;
+media.createAVScreenCaptureRecorder().then((captureRecorder: media.AVScreenCaptureRecorder) => {
+  if (captureRecorder != null) {
+    avScreenCaptureRecorder = captureRecorder;
+    console.info('Succeeded in creating avScreenCaptureRecorder');
+  } else {
+    console.error('Failed to create avScreenCaptureRecorder');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`createAVScreenCaptureRecorder catchCallback, error message:${error.message}`);
+});
+
+// Create a file.
+let filesDir = '/data/storage/el2/base/haps';
+let file = fs.openSync(filesDir + '/screenCapture.mp4', fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
+
+let avCaptureConfig: media.AVScreenCaptureRecordConfig = {
+    fd: file.fd, // Before passing in an FD to this parameter, the file (generally an MP4 file) must be created by the caller and granted with the write permissions.
+    frameWidth: 640,
+    frameHeight: 480
+    // Add other parameters.
+};
+
+if (avScreenCaptureRecorder != undefined) {
+  avScreenCaptureRecorder.init(avCaptureConfig).then(() => {
+    console.info('Succeeded in initializing avScreenCaptureRecorder');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to init avScreenCaptureRecorder. Code: ${err.code}, message: ${err.message}`);
+  });
+}
 ```
-
-Unsubscribes from AVScreenCaptureRecorder errors. You can specify a callback to cancel the specified subscription.
-
-**Since:** 23
-
-<!--Device-AVScreenCaptureRecorder-offError(callback?: ErrorCallback): void--><!--Device-AVScreenCaptureRecorder-offError(callback?: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used for unsubscription. If this parameter is not specified, the last subscription is canceled. |
-
-## offStateChange
-
-```TypeScript
-offStateChange(callback?: Callback<AVScreenCaptureStateCode>): void
-```
-
-Unsubscribes from screen capture state changes. You can specify a callback to cancel the specified subscription.
-
-**Since:** 23
-
-<!--Device-AVScreenCaptureRecorder-offStateChange(callback?: Callback<AVScreenCaptureStateCode>): void--><!--Device-AVScreenCaptureRecorder-offStateChange(callback?: Callback<AVScreenCaptureStateCode>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md)&gt; | No | Callback used for unsubscription. AVScreenCaptureStateCode indicates the new state. If this parameter is not specified, the last subscription is canceled. |
 
 ## off('error')
 
@@ -179,7 +211,7 @@ Unsubscribes from AVScreenCaptureRecorder errors. You can specify a callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type, which is **'error'** in this case. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used for unsubscription. If this parameter is not specified, the last subscription is canceled. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used for unsubscription. If this parameter is not specified, the last subscription is canceled. |
 
 ## off('stateChange')
 
@@ -200,19 +232,19 @@ Unsubscribes from screen capture state changes. You can specify a callback to ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type, which is **'stateChange'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md)&gt; | No | Callback used for unsubscription. [AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md) indicates the new state. If this parameter is not specified, the last subscription is canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md)&gt; | No | Callback used for unsubscription. [AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md) indicates the new state. If this parameter is not specified, the last subscription is canceled. |
 
-## onError
+## offError
 
 ```TypeScript
-onError(callback: ErrorCallback): void
+offError(callback?: ErrorCallback): void
 ```
 
-Subscribes to AVScreenCaptureRecorder errors. You can handle the errors based on the application logic. An application can subscribe to only one AVScreenCaptureRecorder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
+Unsubscribes from AVScreenCaptureRecorder errors. You can specify a callback to cancel the specified subscription.
 
 **Since:** 23
 
-<!--Device-AVScreenCaptureRecorder-onError(callback: ErrorCallback): void--><!--Device-AVScreenCaptureRecorder-onError(callback: ErrorCallback): void-End-->
+<!--Device-AVScreenCaptureRecorder-offError(callback?: ErrorCallback): void--><!--Device-AVScreenCaptureRecorder-offError(callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -220,27 +252,19 @@ Subscribes to AVScreenCaptureRecorder errors. You can handle the errors based on
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback invoked when the event is triggered. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used for unsubscription. If this parameter is not specified, the last subscription is canceled. |
 
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
-| [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by ErrorCallback. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by ErrorCallback. |
-
-## onStateChange
+## offStateChange
 
 ```TypeScript
-onStateChange(callback: Callback<AVScreenCaptureStateCode>): void
+offStateChange(callback?: Callback<AVScreenCaptureStateCode>): void
 ```
 
-Subscribes to screen capture state changes. An application can subscribe to only one screen capture state change event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
+Unsubscribes from screen capture state changes. You can specify a callback to cancel the specified subscription.
 
 **Since:** 23
 
-<!--Device-AVScreenCaptureRecorder-onStateChange(callback: Callback<AVScreenCaptureStateCode>): void--><!--Device-AVScreenCaptureRecorder-onStateChange(callback: Callback<AVScreenCaptureStateCode>): void-End-->
+<!--Device-AVScreenCaptureRecorder-offStateChange(callback?: Callback<AVScreenCaptureStateCode>): void--><!--Device-AVScreenCaptureRecorder-offStateChange(callback?: Callback<AVScreenCaptureStateCode>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -248,7 +272,7 @@ Subscribes to screen capture state changes. An application can subscribe to only
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md)&gt; | Yes | Callback invoked when the event is triggered. AVScreenCaptureStateCode indicates the new state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md)&gt; | No | Callback used for unsubscription. AVScreenCaptureStateCode indicates the new state. If this parameter is not specified, the last subscription is canceled. |
 
 ## on('error')
 
@@ -269,7 +293,7 @@ Subscribes to AVScreenCaptureRecorder errors. You can handle the errors based on
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type, which is **'error'** in this case. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback invoked when the event is triggered. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback invoked when the event is triggered. |
 
 **Error codes:**
 
@@ -298,7 +322,55 @@ Subscribes to screen capture state changes. An application can subscribe to only
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type, which is **'stateChange'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md)&gt; | Yes | Callback invoked when the event is triggered. [AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md) indicates the new state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md)&gt; | Yes | Callback invoked when the event is triggered. [AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md) indicates the new state. |
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to AVScreenCaptureRecorder errors. You can handle the errors based on the application logic. An application can subscribe to only one AVScreenCaptureRecorder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
+
+**Since:** 23
+
+<!--Device-AVScreenCaptureRecorder-onError(callback: ErrorCallback): void--><!--Device-AVScreenCaptureRecorder-onError(callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback invoked when the event is triggered. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
+| [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by ErrorCallback. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by ErrorCallback. |
+
+## onStateChange
+
+```TypeScript
+onStateChange(callback: Callback<AVScreenCaptureStateCode>): void
+```
+
+Subscribes to screen capture state changes. An application can subscribe to only one screen capture state change event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
+
+**Since:** 23
+
+<!--Device-AVScreenCaptureRecorder-onStateChange(callback: Callback<AVScreenCaptureStateCode>): void--><!--Device-AVScreenCaptureRecorder-onStateChange(callback: Callback<AVScreenCaptureStateCode>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md)&gt; | Yes | Callback invoked when the event is triggered. AVScreenCaptureStateCode indicates the new state. |
 
 ## pauseRecording
 
@@ -365,6 +437,36 @@ Displays the Picker once more after the screen capture starts, allowing for dyna
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Initialize avScreenCaptureRecorder.
+let avScreenCaptureRecorder: media.AVScreenCaptureRecorder | undefined;
+media.createAVScreenCaptureRecorder().then((captureRecorder: media.AVScreenCaptureRecorder) => {
+  if (captureRecorder != null) {
+    avScreenCaptureRecorder = captureRecorder;
+    console.info('Succeeded in creating avScreenCaptureRecorder');
+  } else {
+    console.error('Failed to create avScreenCaptureRecorder');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`createAVScreenCaptureRecorder catchCallback, error message:${error.message}`);
+});
+
+// Other processes.
+
+// Call the presentPicker method.
+if (avScreenCaptureRecorder != undefined) {
+  avScreenCaptureRecorder.presentPicker().then(() => {
+    console.info('Succeeded in presenting picker avScreenCaptureRecorder.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to present picker avScreenCaptureRecorder. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
+
 ## release
 
 ```TypeScript
@@ -391,6 +493,241 @@ Releases this AVScreenCaptureRecorder instance. This API uses a promise to retur
 | --- | --- |
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// asyncallback.
+videoRecorder.release((err: BusinessError) => {
+  if (err == null) {
+    console.info('release videorecorder success');
+  } else {
+    console.error('release videorecorder failed and error is ' + err.message);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// promise.
+videoRecorder.release().then(() => {
+  console.info('release videorecorder success');
+}).catch((err: BusinessError) => {
+  console.error('release videorecorder failed and catch error is ' + err.message);
+});
+```
+
+```TypeScript
+audioPlayer.release();
+audioPlayer = undefined;
+```
+
+```TypeScript
+audioRecorder.on('release', () => {    // Set the 'release' event callback.
+  console.info('audio recorder release called');
+});
+audioRecorder.release();
+audioRecorder = undefined;
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+let avImageGenerator: media.AVImageGenerator | undefined = undefined;
+
+// Release the resources.
+media.createAVImageGenerator((err: BusinessError, generator: media.AVImageGenerator) => {
+  if (generator != null) {
+    avImageGenerator = generator;
+    console.info(`Succeeded in creating AVImageGenerator`);
+    avImageGenerator.release((error: BusinessError) => {
+      if (error) {
+        console.error(`Failed to release, err = ${JSON.stringify(error)}`);
+        return;
+      }
+      console.info(`Succeeded in releasing`);
+    });
+  } else {
+    console.error(`Failed to create AVImageGenerator, error message:${err.message}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+let avImageGenerator: media.AVImageGenerator | undefined = undefined;
+
+// Release the resources.
+media.createAVImageGenerator((err: BusinessError, generator: media.AVImageGenerator) => {
+  if (generator != null) {
+    avImageGenerator = generator;
+    console.info(`Succeeded in creating AVImageGenerator`);
+    avImageGenerator.release().then(() => {
+      console.info(`Succeeded in releasing.`);
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to release, error message:${error.message}`);
+    });
+  } else {
+    console.error(`Failed to create AVImageGenerator, error message:${err.message}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+async function test() {
+  // Create an AVMetadataExtractor instance.
+  let avMetadataExtractor: media.AVMetadataExtractor = await media.createAVMetadataExtractor();
+  avMetadataExtractor.release((error: BusinessError) => {
+    if (error) {
+      console.error(`Failed to release, err = ${JSON.stringify(error)}`);
+      return;
+    }
+    console.info(`Succeeded in releasing.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+async function test() {
+  // Create an AVMetadataExtractor instance.
+  let avMetadataExtractor: media.AVMetadataExtractor = await media.createAVMetadataExtractor();
+  avMetadataExtractor.release().then(() => {
+    console.info(`Succeeded in releasing.`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release, error message:${error.message}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach a state other than released before proceeding.
+  avPlayer.release((err: BusinessError) => {
+    if (err) {
+      console.error('Failed to release,error message is :' + err.message);
+    } else {
+      console.info('Succeeded in releasing');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach a state other than released before proceeding.
+  avPlayer.release().then(() => {
+    console.info('Succeeded in releasing');
+  }, (err: BusinessError) => {
+    console.error('Failed to release,error message is :' + err.message);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avRecorder.release((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to release AVRecorder and error is: Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Succeeded in releasing AVRecorder');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avRecorder.release().then(() => {
+  console.info('Succeeded in releasing AVRecorder');
+}).catch((err: Error) => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to release AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Initialize avScreenCaptureRecorder.
+let avScreenCaptureRecorder: media.AVScreenCaptureRecorder | undefined;
+media.createAVScreenCaptureRecorder().then((captureRecorder: media.AVScreenCaptureRecorder) => {
+  if (captureRecorder != null) {
+    avScreenCaptureRecorder = captureRecorder;
+    console.info('Succeeded in creating avScreenCaptureRecorder');
+  } else {
+    console.error('Failed to create avScreenCaptureRecorder');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`createAVScreenCaptureRecorder catchCallback, error message:${error.message}`);
+});
+
+// Other processes.
+
+// Call the release method.
+if (avScreenCaptureRecorder != undefined) {
+  avScreenCaptureRecorder.release().then(() => {
+    console.info('Succeeded in releasing avScreenCaptureRecorder');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to release avScreenCaptureRecorder. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+async function test() {
+  // Create an AVTranscoder instance.
+  let avTranscoder = await media.createAVTranscoder();
+  avTranscoder.release().then(() => {
+    console.info('release AVTranscoder success');
+  }).catch((err: BusinessError) => {
+    console.error('release AVTranscoder failed and catch error is ' + err.message);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.release((err: BusinessError) => {
+  if (err) {
+    console.error('Failed to release!');
+  } else {
+    console.info('Succeeded in releasing!');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.release().then(() => {
+  console.info('Succeeded in releasing');
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error:${error}`);
+});
+```
 
 ## resumeRecording
 
@@ -490,6 +827,36 @@ Enables or disables the microphone. This API uses a promise to return the result
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Initialize avScreenCaptureRecorder.
+let avScreenCaptureRecorder: media.AVScreenCaptureRecorder | undefined;
+media.createAVScreenCaptureRecorder().then((captureRecorder: media.AVScreenCaptureRecorder) => {
+  if (captureRecorder != null) {
+    avScreenCaptureRecorder = captureRecorder;
+    console.info('Succeeded in creating avScreenCaptureRecorder');
+  } else {
+    console.error('Failed to create avScreenCaptureRecorder');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`createAVScreenCaptureRecorder catchCallback, error message:${error.message}`);
+});
+
+// Other processes.
+
+// Call the setMicEnabled method.
+if (avScreenCaptureRecorder != undefined) {
+  avScreenCaptureRecorder.setMicEnabled(true).then(() => {
+    console.info('Succeeded in setting microphone enabled.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set microphone enabled. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
+
 ## setPickerMode
 
 ```TypeScript
@@ -523,6 +890,36 @@ Sets the display mode of the picker. The setting takes effect the next time the 
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Initialize avScreenCaptureRecorder.
+let avScreenCaptureRecorder: media.AVScreenCaptureRecorder | undefined;
+media.createAVScreenCaptureRecorder().then((captureRecorder: media.AVScreenCaptureRecorder) => {
+  if (captureRecorder != null) {
+    avScreenCaptureRecorder = captureRecorder;
+    console.info('Succeeded in creating avScreenCaptureRecorder');
+  } else {
+    console.error('Failed to create avScreenCaptureRecorder');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`createAVScreenCaptureRecorder catchCallback, error message:${error.message}`);
+});
+
+// Other processes.
+
+// Call the setPickerMode method.
+if (avScreenCaptureRecorder != undefined) {
+  avScreenCaptureRecorder.setPickerMode(media.PickerMode.WINDOW_ONLY).then(() => {
+    console.info('Succeeded in setting picker mode.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set picker mode. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
 
 ## skipPrivacyMode
 
@@ -559,6 +956,37 @@ For example, if a user enters a password in this application during screen captu
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Initialize avScreenCaptureRecorder.
+let avScreenCaptureRecorder: media.AVScreenCaptureRecorder | undefined;
+media.createAVScreenCaptureRecorder().then((captureRecorder: media.AVScreenCaptureRecorder) => {
+  if (captureRecorder != null) {
+    avScreenCaptureRecorder = captureRecorder;
+    console.info('Succeeded in creating avScreenCaptureRecorder');
+  } else {
+    console.error('Failed to create avScreenCaptureRecorder');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`createAVScreenCaptureRecorder catchCallback, error message:${error.message}`);
+});
+
+// Other processes.
+
+// Call the skipPrivacyMode method.
+if (avScreenCaptureRecorder != undefined) {
+  let windowIDs = [];
+  avScreenCaptureRecorder.skipPrivacyMode(windowIDs).then(() => {
+    console.info('Succeeded in skipping privacy mode');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to skip privacy mode. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
+
 ## startRecording
 
 ```TypeScript
@@ -586,6 +1014,36 @@ Starts screen recording. Before using this API, you must call [init](#init). Thi
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Initialize avScreenCaptureRecorder.
+let avScreenCaptureRecorder: media.AVScreenCaptureRecorder | undefined;
+media.createAVScreenCaptureRecorder().then((captureRecorder: media.AVScreenCaptureRecorder) => {
+  if (captureRecorder != null) {
+    avScreenCaptureRecorder = captureRecorder;
+    console.info('Succeeded in creating avScreenCaptureRecorder');
+  } else {
+    console.error('Failed to create avScreenCaptureRecorder');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`createAVScreenCaptureRecorder catchCallback, error message:${error.message}`);
+});
+
+// Other processes.
+
+// Call the startRecording method.
+if (avScreenCaptureRecorder != undefined) {
+  avScreenCaptureRecorder.startRecording().then(() => {
+    console.info('Succeeded in starting avScreenCaptureRecorder');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to start avScreenCaptureRecorder. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
+
 ## stopRecording
 
 ```TypeScript
@@ -612,4 +1070,34 @@ Stops screen recording. This API uses a promise to return the result.
 | --- | --- |
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Initialize avScreenCaptureRecorder.
+let avScreenCaptureRecorder: media.AVScreenCaptureRecorder | undefined;
+media.createAVScreenCaptureRecorder().then((captureRecorder: media.AVScreenCaptureRecorder) => {
+  if (captureRecorder != null) {
+    avScreenCaptureRecorder = captureRecorder;
+    console.info('Succeeded in creating avScreenCaptureRecorder');
+  } else {
+    console.error('Failed to create avScreenCaptureRecorder');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`createAVScreenCaptureRecorder catchCallback, error message:${error.message}`);
+});
+
+// Other processes.
+
+// Call the stopRecording method.
+if (avScreenCaptureRecorder != undefined) {
+  avScreenCaptureRecorder.stopRecording().then(() => {
+    console.info('Succeeded in stopping avScreenCaptureRecorder');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to stop avScreenCaptureRecorder. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
 

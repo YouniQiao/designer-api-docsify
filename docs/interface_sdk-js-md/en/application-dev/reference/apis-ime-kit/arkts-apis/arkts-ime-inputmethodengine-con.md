@@ -294,20 +294,6 @@ const OPTION_MULTI_LINE: int
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
-## OPTION_NONE
-
-```TypeScript
-const OPTION_NONE: int
-```
-
-@brief No input attribute is specified.
-
-**Since:** 23
-
-<!--Device-inputMethodEngine-const OPTION_NONE: int--><!--Device-inputMethodEngine-const OPTION_NONE: int-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
 ## OPTION_NO_FULLSCREEN
 
 ```TypeScript
@@ -319,6 +305,20 @@ const OPTION_NO_FULLSCREEN: int
 **Since:** 23
 
 <!--Device-inputMethodEngine-const OPTION_NO_FULLSCREEN: int--><!--Device-inputMethodEngine-const OPTION_NO_FULLSCREEN: int-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+## OPTION_NONE
+
+```TypeScript
+const OPTION_NONE: int
+```
+
+@brief No input attribute is specified.
+
+**Since:** 23
+
+<!--Device-inputMethodEngine-const OPTION_NONE: int--><!--Device-inputMethodEngine-const OPTION_NONE: int-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 

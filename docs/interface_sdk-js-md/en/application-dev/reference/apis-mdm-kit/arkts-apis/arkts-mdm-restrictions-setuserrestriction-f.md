@@ -32,7 +32,7 @@ Sets restrictions on user behaviors.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | settingsItem | string | Yes | Behavior name. Only the following values are supported. If other values are passed, an error will be reported. <br>- **setApn**: APN configuration, currently supported only on smartphones and tablets. <br>- **powerLongPress**: capability to open the power menu by long-pressing the power button. Currently, only smartphones and tablets are supported. <br>- **setEthernetIp**: Ethernet IP address configuration, currently supported only on PCs/2-in-1 devices. <br>- **setDeviceName**: device name configuration, currently supported only on PCs/2-in-1 devices, smartphones, and tablets. When it is disabled, the device name cannot be modified in the following settings: **About**, **Bluetooth**, and **More connectivity options**    > **NearLink** on PCs/2-in-1 devices, and **About**, **Bluetooth**, and **Personal hotspot** on smartphones and tablets. <br>- **setBiometricsAndScreenLock**: screen lock password configuration, currently supported only on PCs/2-in- 1 devices, smartphones, and tablets. |
 | restricted | boolean | Yes | Whether to disable the action. The value **true** means to disable the action, and **false** means the opposite. |
 
@@ -88,7 +88,7 @@ Restricts users from modifying specified device setting items.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | settingsItem | [SettingsForDevice](arkts-mdm-restrictions-settingsfordevice-e.md) | Yes | Device setting items to be restricted from modification. |
 | restricted | boolean | Yes | The value **true** means to disable the action, and **false** means the opposite. |
 
@@ -100,4 +100,8 @@ Restricts users from modifying specified device setting items.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+
+**Examples**
+
+See [setUserRestriction](#setuserrestriction)
 

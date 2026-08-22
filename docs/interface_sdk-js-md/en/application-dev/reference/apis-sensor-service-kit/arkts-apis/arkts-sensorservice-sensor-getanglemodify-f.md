@@ -31,7 +31,7 @@ Obtains the angle change between two rotation matrices. This API uses an asynchr
 | --- | --- | --- | --- |
 | currentRotationMatrix | Array&lt;number&gt; | Yes | Current rotation matrix. |
 | preRotationMatrix | Array&lt;number&gt; | Yes | The other rotation matrix. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the angle change around the z, x, and y axes, in degrees. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the angle change around the z, x, and y axes, in degrees. |
 
 **Examples**
 
@@ -48,6 +48,22 @@ sensor.getAngleModify([1, 0, 0, 0, 1, 0, 0, 0, 1], [1, 0, 0, 0, 0.87, -0.50, 0, 
   for (let i = 0; i < data.length; i++) {
     console.info("data[" + i + "]: " + data[i]);
   }
+})
+```
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const promise = sensor.getAngleModify([1, 0, 0, 0, 1, 0, 0, 0, 1], [1, 0, 0, 0, 0.87, -0.50, 0, 0.50, 0.87]);
+promise.then((data: Array<number>) => {
+  console.info('Succeeded in getting AngleModify_promise.');
+  for (let i = 0; i < data.length; i++) {
+    console.info("Succeeded in getting data[" + i + "]: " + data[i]);
+  }
+}).catch((reason: BusinessError) => {
+  let e: BusinessError = reason as BusinessError;
+  console.info("Succeeded in getting promise::catch", e);
 })
 ```
 
@@ -85,19 +101,5 @@ Obtains the angle change between two rotation matrices. This API uses a promise 
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const promise = sensor.getAngleModify([1, 0, 0, 0, 1, 0, 0, 0, 1], [1, 0, 0, 0, 0.87, -0.50, 0, 0.50, 0.87]);
-promise.then((data: Array<number>) => {
-  console.info('Succeeded in getting AngleModify_promise.');
-  for (let i = 0; i < data.length; i++) {
-    console.info("Succeeded in getting data[" + i + "]: " + data[i]);
-  }
-}).catch((reason: BusinessError) => {
-  let e: BusinessError = reason as BusinessError;
-  console.info("Succeeded in getting promise::catch", e);
-})
-```
+See [getAngleModify](#getanglemodify)
 

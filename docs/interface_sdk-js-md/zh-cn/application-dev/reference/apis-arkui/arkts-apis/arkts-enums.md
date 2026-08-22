@@ -26,8 +26,8 @@
 | [CheckBoxShape](arkts-arkui-checkboxshape-e.md) | common enum of the checkbox shape |
 | [ClickEffectLevel](arkts-arkui-clickeffectlevel-e.md) | 定义点击效果的级别及对应动效参数。 |
 | [Color](arkts-arkui-color-e.md) | common enum of color |
-| [ColorSpace](arkts-arkui-colorspace-e.md) | 定义了颜色空间的类型，用于指定颜色显示的模式。 |
 | [ColoringStrategy](arkts-arkui-coloringstrategy-e.md) | 智能取色枚举类型。 |
+| [ColorSpace](arkts-arkui-colorspace-e.md) | 定义了颜色空间的类型，用于指定颜色显示的模式。 |
 | [CompetitionStrategy](arkts-arkui-competitionstrategy-e.md) | 定义分发的事件是否为竞争手势，竞争场景手势原始节点和目标节点只有一个节点会响应手势，非竞争场景可以同时响应。 |
 | [CopyOptions](arkts-arkui-copyoptions-e.md) | Indicates the share option. |
 | [CrownAction](arkts-arkui-crownaction-e.md) | 旋转表冠动作。 |
@@ -121,8 +121,8 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ColorSpace](arkts-arkui-colorspace-e-sys.md) | 定义了颜色空间的类型，用于指定颜色显示的模式。 |
 | [ColoringStrategy](arkts-arkui-coloringstrategy-e-sys.md) | 智能取色枚举类型。 |
+| [ColorSpace](arkts-arkui-colorspace-e-sys.md) | 定义了颜色空间的类型，用于指定颜色显示的模式。 |
 | [EdgeLightPosition](arkts-arkui-edgelightposition-e-sys.md) | 边缘流光位置。 |
 | [IlluminatedType](arkts-arkui-illuminatedtype-e-sys.md) | 被照亮的类型枚举。 |
 <!--DelEnd-->

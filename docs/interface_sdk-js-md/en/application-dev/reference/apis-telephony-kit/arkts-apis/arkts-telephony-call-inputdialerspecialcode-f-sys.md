@@ -29,7 +29,7 @@ Performs a secret code broadcast. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | inputCode | string | Yes | Secret code, for example, *#*#2846579#*#* (project menu). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -54,6 +54,17 @@ call.inputDialerSpecialCode('*#*#2846579#*#*', (err: BusinessError) => {
         console.info(`inputDialerSpecialCode success`);
     }
 });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    call.inputDialerSpecialCode('*#*#2846579#*#*');
+    console.info(`inputDialerSpecialCode success`);
+} catch (error) {
+    console.error(`inputDialerSpecialCode fail, promise: err->${JSON.stringify(error)}`);
+}
 ```
 
 
@@ -100,14 +111,5 @@ Performs a secret code broadcast. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    call.inputDialerSpecialCode('*#*#2846579#*#*');
-    console.info(`inputDialerSpecialCode success`);
-} catch (error) {
-    console.error(`inputDialerSpecialCode fail, promise: err->${JSON.stringify(error)}`);
-}
-```
+See [inputDialerSpecialCode](#inputdialerspecialcode)
 

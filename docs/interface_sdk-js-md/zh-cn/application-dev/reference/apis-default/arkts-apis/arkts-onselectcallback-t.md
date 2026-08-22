@@ -4,7 +4,7 @@
 export declare type OnSelectCallback = (index: int) => void
 ```
 
-定义[onSelect](../../apis-arkui/arkts-apis/arkts-arkui-arkuiarcalphabetindexer-arcalphabetindexerattribute-c.md#onselect)中使用的回调类型。
+定义[onSelect](arkts-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md#onselect)中使用的回调类型。
 
 **起始版本：** 26.0.0
 

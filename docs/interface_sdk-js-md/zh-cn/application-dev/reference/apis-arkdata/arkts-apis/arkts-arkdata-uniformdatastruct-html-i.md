@@ -114,3 +114,26 @@ uriAuthorizationPolicies?: Array<int>
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+**示例**
+
+```TypeScript
+import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
+
+let htmlObjDetails: Record<string, string> = {
+  'attr1': 'value1',
+  'attr2': 'value2'
+};
+let htmlObj: uniformDataStruct.HTML = {
+  uniformDataType: 'general.html',
+  htmlContent: '<div><p>标题</p></div>',
+  plainContent: 'this is plainContent',
+  details: htmlObjDetails,
+  // 从API 26.0.0版本开始，支持uri授权策略
+  uriAuthorizationPolicies: [
+    unifiedDataChannel.UriPermission.WRITE
+  ]
+};
+console.info('htmlObj.uniformDataType: ' + htmlObj.uniformDataType);
+let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.HTML, htmlObj);
+```
+

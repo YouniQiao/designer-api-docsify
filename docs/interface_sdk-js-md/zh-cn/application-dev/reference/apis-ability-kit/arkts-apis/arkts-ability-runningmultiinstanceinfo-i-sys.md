@@ -64,3 +64,23 @@ uid: int
 
 **系统接口：** 此接口为系统接口。
 
+**示例**
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let bundleName = 'ohos.samples.etsclock';
+  appManager.getRunningMultiAppInfo(bundleName).then((info: appManager.RunningMultiAppInfo) => {
+    console.info(`getRunningMultiAppInfo success`);
+  }).catch((error: Error) => {
+    let err = error as BusinessError;
+    console.error(`getRunningMultiAppInfo error, code: ${err.code}, msg:${err.message}`);
+  })
+} catch (error) {
+  let err = error as BusinessError;
+  console.error(`getRunningMultiAppInfo error, code: ${err.code}, msg:${err.message}`);
+}
+```
+

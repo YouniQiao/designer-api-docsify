@@ -43,3 +43,65 @@ function getAttribute(portId: int): Readonly<SerialAttribute>
 | [31400003](../errorcode-usb.md#31400003-端口号不存在) |  |
 | [31400005](../errorcode-usb.md#31400005-设备未打开) |  |
 
+**示例**
+
+以下示例代码只是调用getAttribute接口的必要流程，需要放入具体的方法中执行。实际调用时，设备开发者需要遵循设备相关协议进行调用。
+
+```TypeScript
+import serialManager from '@ohos.usbManager.serial';
+import { BusinessError } from '@ohos.base';
+
+// 获取串口列表
+async function getAttributeExample() {
+  let portList: serialManager.SerialPort[] = serialManager.getPortList();
+  console.info('usbSerial portList: ' + JSON.stringify(portList));
+  if (portList === undefined || portList.length === 0) {
+    console.error('usbSerial portList is empty');
+    return;
+  }
+  let portId: int = portList[0].portId;
+
+  // 检测设备是否可被应用访问
+  if (!serialManager.hasSerialRight(portId)) {
+    let result = await serialManager.requestSerialRight(portId);
+    if (!result) {
+      // 没有访问设备的权限且用户不授权则退出
+      console.error('user is not granted the operation permission');
+    } else {
+      console.info('grant permission successfully');
+    }
+  }
+
+  // 打开设备
+  try {
+    serialManager.open(portId);
+    console.info('open usbSerial success, portId: ' + portId);
+  } catch (error) {
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to open usbSerial. Code: ${err.code}, message: ${err.message}`);
+  }
+
+  // 获取串口配置
+  try {
+    let attribute: serialManager.SerialAttribute = serialManager.getAttribute(portId);
+    if (attribute === undefined) {
+      console.error('getAttribute usbSerial error, attribute is undefined');
+    } else {
+      console.info('getAttribute usbSerial success, attribute: ' + JSON.stringify(attribute));
+    }
+  } catch (error) {
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to get attribute. Code: ${err.code}, message: ${err.message}`);
+  }
+
+    // 关闭串口
+  try {
+    serialManager.close(portId);
+    console.info('close usbSerial success, portId: ' + portId);
+  } catch (error) {
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to close usbSerial. Code: ${err.code}, message: ${err.message}`);
+  }
+}
+```
+

@@ -1,6 +1,6 @@
 # CollaborateResult
 
-Enumerates the collaboration request results. You can use it in multi-device collaboration scenarios to specify whether the target application accepts the collaboration request from the caller application. You can use it in [onCollaborate()](arkts-ability-appabilityuiability-uiability-c.md#oncollaborate) of the UIAbility.
+Enumerates the collaboration request results. You can use it in multi-device collaboration scenarios to specify whether the target application accepts the collaboration request from the caller application. You can use it in [onCollaborate()](arkts-ability-app-ability-uiability-uiability-c.md#oncollaborate) of the UIAbility.
 
 **Since:** 23
 
@@ -39,4 +39,16 @@ Rejects the collaboration request.
 <!--Device-CollaborateResult-REJECT = 1--><!--Device-CollaborateResult-REJECT = 1-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onCollaborate(wantParam: Record<string, Object>) {
+    return AbilityConstant.CollaborateResult.ACCEPT;
+  }
+}
+```
 

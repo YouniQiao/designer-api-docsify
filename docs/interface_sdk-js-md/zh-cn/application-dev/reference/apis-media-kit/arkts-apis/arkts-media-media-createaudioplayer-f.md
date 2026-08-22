@@ -33,7 +33,7 @@ function createAudioPlayer(): AudioPlayer
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioPlayer](arkts-media-multimediamedia-audioplayer-i.md) | 返回AudioPlayer类实例，失败时返回null。可用于音频播放、暂停、停止等操作。 |
+| [AudioPlayer](arkts-media-multimedia-media-audioplayer-i.md) | 返回AudioPlayer类实例，失败时返回null。可用于音频播放、暂停、停止等操作。 |
 
 **示例**
 

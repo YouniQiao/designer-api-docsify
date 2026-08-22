@@ -14,7 +14,7 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function fdopenStreamSync(fd: number, mode: string): Stream
 ```
 
-Opens a stream based on an FD. This API returns the result synchronously. To close the stream, use **close()** of [Stream](arkts-corefile-filefs-stream-i.md).
+Opens a stream based on an FD. This API returns the result synchronously. To close the stream, use **close()** of [Stream](arkts-corefile-file-fs-stream-i.md).
 
 **Since:** 9
 
@@ -35,7 +35,7 @@ Opens a stream based on an FD. This API returns the result synchronously. To clo
 
 | Type | Description |
 | --- | --- |
-| [Stream](arkts-corefile-filefs-stream-i.md) | File stream. |
+| [Stream](arkts-corefile-file-fs-stream-i.md) | File stream. |
 
 **Error codes:**
 
@@ -68,4 +68,13 @@ Opens a stream based on an FD. This API returns the result synchronously. To clo
 | 13900038 | Value too large for defined data type |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fs.openSync(filePath, fs.OpenMode.READ_ONLY | fs.OpenMode.CREATE);
+let stream = fs.fdopenStreamSync(file.fd, "r+");
+stream.closeSync();
+```
 

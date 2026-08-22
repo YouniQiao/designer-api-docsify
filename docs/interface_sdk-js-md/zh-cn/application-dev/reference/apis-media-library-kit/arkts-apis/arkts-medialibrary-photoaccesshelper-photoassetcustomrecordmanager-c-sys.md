@@ -229,6 +229,10 @@ static getCustomRecordManagerInstance(context: Context): PhotoAssetCustomRecordM
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
 | [23800107](../errorcode-medialibrary.md#23800107-context为空或者无效) | Context is invalid |
 
+**示例**
+
+参见 [getCustomRecordManagerInstance](#getcustomrecordmanagerinstance)
+
 ## getCustomRecords
 
 ```TypeScript

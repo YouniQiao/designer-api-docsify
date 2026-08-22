@@ -500,6 +500,24 @@ The chroma blur radius.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## colorimetricReference
+
+```TypeScript
+readonly colorimetricReference?: int
+```
+
+The colorimetric reference.
+
+**Type:** int
+
+**Since:** 24
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngMetadata-readonly colorimetricReference?: int--><!--Device-DngMetadata-readonly colorimetricReference?: int-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.Core
+
 ## colorMatrix1
 
 ```TypeScript
@@ -533,24 +551,6 @@ A transformation matrix under the second calibration illuminant.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly colorMatrix2?: double[]--><!--Device-DngMetadata-readonly colorMatrix2?: double[]-End-->
-
-**System capability:** SystemCapability.Multimedia.Image.Core
-
-## colorimetricReference
-
-```TypeScript
-readonly colorimetricReference?: int
-```
-
-The colorimetric reference.
-
-**Type:** int
-
-**Since:** 24
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DngMetadata-readonly colorimetricReference?: int--><!--Device-DngMetadata-readonly colorimetricReference?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -806,24 +806,6 @@ Information about the lens.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
-## linearResponseLimit
-
-```TypeScript
-readonly linearResponseLimit?: double
-```
-
-The linear response limit.
-
-**Type:** double
-
-**Since:** 24
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DngMetadata-readonly linearResponseLimit?: double--><!--Device-DngMetadata-readonly linearResponseLimit?: double-End-->
-
-**System capability:** SystemCapability.Multimedia.Image.Core
-
 ## linearizationTable
 
 ```TypeScript
@@ -839,6 +821,24 @@ The linearization table.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DngMetadata-readonly linearizationTable?: int[]--><!--Device-DngMetadata-readonly linearizationTable?: int[]-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.Core
+
+## linearResponseLimit
+
+```TypeScript
+readonly linearResponseLimit?: double
+```
+
+The linear response limit.
+
+**Type:** double
+
+**Since:** 24
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngMetadata-readonly linearResponseLimit?: double--><!--Device-DngMetadata-readonly linearResponseLimit?: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

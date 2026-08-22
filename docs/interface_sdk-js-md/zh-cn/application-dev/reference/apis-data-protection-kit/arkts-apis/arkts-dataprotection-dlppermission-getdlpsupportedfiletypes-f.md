@@ -47,6 +47,18 @@ dlpPermission.getDLPSupportedFileTypes().then((fileTypes) => { // 获取支持DL
 });
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+dlpPermission.getDLPSupportedFileTypes((err, fileTypes) => {
+  if (err) {
+    console.error(`Failed to get DLP supported file types. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('fileTypes', JSON.stringify(fileTypes));
+  }
+}); // 获取支持DLP的文件类型。
+```
+
 
 ## getDLPSupportedFileTypes
 
@@ -80,15 +92,5 @@ function getDLPSupportedFileTypes(callback: AsyncCallback<Array<string>>): void
 
 **示例**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.getDLPSupportedFileTypes((err, fileTypes) => {
-  if (err) {
-    console.error(`Failed to get DLP supported file types. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('fileTypes', JSON.stringify(fileTypes));
-  }
-}); // 获取支持DLP的文件类型。
-```
+参见 [getDLPSupportedFileTypes](#getdlpsupportedfiletypes)
 

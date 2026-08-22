@@ -95,6 +95,18 @@ Adds an external subtitle to a video based on the FD. Currently, the external su
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Return by promise. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 
+**Examples**
+
+```TypeScript
+import { common } from '@kit.AbilityKit'
+
+let avPlayer = await media.createAVPlayer();
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let fileDescriptor = await context.resourceManager.getRawFd('xxx.srt');
+
+avPlayer.addSubtitleFromFd(fileDescriptor.fd, fileDescriptor.offset, fileDescriptor.length);
+```
+
 ## addSubtitleFromUrl
 
 ```TypeScript
@@ -129,6 +141,16 @@ Adds an external subtitle to a video based on the URL. Currently, the external s
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Return by promise. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
+
+**Examples**
+
+```TypeScript
+async function test(){
+  let fdUrl:string = 'http://xxx.xxx.xxx/xx/index.srt';
+  let avPlayer: media.AVPlayer = await media.createAVPlayer();
+  avPlayer.addSubtitleFromUrl(fdUrl);
+}
+```
 
 ## advanceToMediaSource
 
@@ -294,6 +316,32 @@ Deselects the specified track when the AVPlayer plays multimedia resources with 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Return by promise. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let avPlayer: media.AVPlayer = await media.createAVPlayer();
+let audioTrackIndex: Object = 0;
+avPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
+  if (arrList != null) {
+    for (let i = 0; i < arrList.length; i++) {
+      if (i != 0) {
+        // Obtain the audio track list.
+        audioTrackIndex = arrList[i][media.MediaDescriptionKey.MD_KEY_TRACK_INDEX];
+      }
+    }
+  } else {
+    console.error(`Failed to get TrackDescription, error:${error}`);
+  }
+});
+
+// Select an audio track.
+avPlayer.selectTrack(parseInt(audioTrackIndex.toString()));
+// Deselect the audio track and restore to the default audio track.
+avPlayer.deselectTrack(parseInt(audioTrackIndex.toString()));
+```
+
 ## getCurrentMediaSource
 
 ```TypeScript
@@ -353,6 +401,24 @@ Obtains the current playback time. This API can be called only when the AVPlayer
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized state before proceeding.
+  avPlayer.play().then(() => {
+    console.info('Succeeded in playing');
+    let currentPresentation: number = avPlayer.getCurrentPresentationTimestamp();
+    console.info(`AVPlayer getCurrentPresentationTimestamp== ${currentPresentation}`);
+  }, (err: BusinessError) => {
+    console.error('Failed to prepare,error message is :' + err.message);
+  });
+}
+```
 
 ## getCurrentTrack
 
@@ -441,6 +507,23 @@ Obtains the media key system information of the media asset that is being played
 | --- | --- |
 | Array&lt;drm.MediaKeySystemInfo&gt; | Array of MediaKeySystemInfo objects, each of which contains the **uuid** and **pssh** properties. If the return value is undefined, the mediaKeySystemInfoUpdate event is not triggered. |
 
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the mediaKeySystemInfoUpdate event to successfully trigger before proceeding.
+  const infos = avPlayer.getMediaKeySystemInfos();
+  console.info('GetMediaKeySystemInfos count: ' + infos.length);
+  for (let i = 0; i < infos.length; i++) {
+    console.info('GetMediaKeySystemInfos uuid: ' + infos[i]["uuid"]);
+    console.info('GetMediaKeySystemInfos pssh: ' + infos[i]["pssh"]);
+  }
+}
+```
+
 ## getMediaSources
 
 ```TypeScript
@@ -491,6 +574,31 @@ Obtains the playback information. This API can be called only when the AVPlayer 
 | --- | --- |
 | Promise&lt;PlaybackInfo&gt; | Promise used to return **PlaybackInfo**. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let avPlayer: media.AVPlayer | undefined;
+let playbackInfo: media.PlaybackInfo | undefined;
+media.createAVPlayer(async (err: BusinessError, player: media.AVPlayer) => {
+  if (player != null) {
+    avPlayer = player;
+    console.info(`Succeeded in creating AVPlayer`);
+    if (avPlayer) {
+      try {
+        playbackInfo = await avPlayer.getPlaybackInfo();
+        console.info(`AVPlayer getPlaybackInfo = ${JSON.stringify(playbackInfo)}`); // Print PlaybackInfo.
+      } catch (error) {
+        console.error(`error = ${error}`);
+      }
+    }
+  } else {
+    console.error(`Failed to create AVPlayer, error message:${err.message}`);
+  }
+});
+```
+
 ## getPlaybackPosition
 
 ```TypeScript
@@ -519,6 +627,24 @@ Obtains the current playback position. This API can be called only when the AVPl
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized state before proceeding.
+  avPlayer.prepare().then(() => {
+    console.info('Succeeded in preparing');
+    let playbackPosition: number = avPlayer.getPlaybackPosition();
+    console.info(`AVPlayer getPlaybackPosition== ${playbackPosition}`);
+  }, (err: BusinessError) => {
+    console.error('Failed to prepare,error message is :' + err.message);
+  });
+}
+```
+
 ## getPlaybackRate
 
 ```TypeScript
@@ -539,6 +665,17 @@ Obtains the playback speed of an AVPlayer. This API uses a promise to return the
 | --- | --- |
 | Promise&lt;double&gt; | Promise object, which returns the playback speed. |
 
+**Examples**
+
+```TypeScript
+async function test(){
+  let avPlayer = await media.createAVPlayer();
+  avPlayer.getPlaybackRate().then((rate: number) => {
+    console.info('Succeeded getPlaybackRate' + rate);
+  });
+}
+```
+
 ## getPlaybackStatisticMetrics
 
 ```TypeScript
@@ -558,6 +695,31 @@ Obtains the statistic metrics of the current player. This API can be called when
 | Type | Description |
 | --- | --- |
 | Promise&lt;[PlaybackMetrics](arkts-media-media-playbackmetrics-t.md)&gt; | Promise used to return the playback metrics of the current AVPlayer. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let avPlayer: media.AVPlayer | undefined;
+let playbackMetrics: media.PlaybackMetrics | undefined;
+media.createAVPlayer(async (err: BusinessError, player: media.AVPlayer) => {
+  if (player != null) {
+    avPlayer = player;
+    console.info(`Succeeded in creating AVPlayer`);
+    if (avPlayer) {
+      try {
+        playbackMetrics = await avPlayer.getPlaybackStatisticMetrics();
+        console.info(`AVPlayer getPlaybackStatisticMetrics = ${JSON.stringify(playbackMetrics)}`); // Print the value of playbackMetrics.
+      } catch (error) {
+        console.error(`error = ${error}`);
+      }
+    }
+  } else {
+    console.error(`Failed to create AVPlayer, error message:${err.message}`);
+  }
+});
+```
 
 ## getSeekableTimeRanges
 
@@ -616,6 +778,22 @@ Obtains the indexes of the selected audio or video tracks. This API can be calle
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, or paused state before proceeding.
+  avPlayer.getSelectedTracks().then((arrList: Array<number>) => {
+    console.info('Succeeded in getting SelectedTracks');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to get SelectedTracks, error:${error}`);
+  });
+}
+```
+
 ## getTrackDescription
 
 ```TypeScript
@@ -636,13 +814,93 @@ Obtains the audio and video track information. This API can be called only when 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the MediaDescription array obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the MediaDescription array obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
+  if (arrList != null) {
+    console.info('Succeeded in getting TrackDescription');
+  } else {
+    console.error(`Failed to get TrackDescription, error:${error}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioPlayer.getTrackDescription().then((arrList: Array<media.MediaDescription>) => {
+  console.info('Succeeded in getting TrackDescription');
+}).catch((error: BusinessError) => {
+  console.error(`Failed to get TrackDescription, error:${error}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, or paused state before proceeding.
+  avPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
+    if ((arrList) != null) {
+      console.info('Succeeded in doing getTrackDescription');
+    } else {
+      console.error(`Failed to do getTrackDescription, error:${error}`);
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, or paused state before proceeding.
+  avPlayer.getTrackDescription().then((arrList: Array<media.MediaDescription>) => {
+    console.info('Succeeded in getting TrackDescription');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to get TrackDescription, error:${error}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
+  if ((arrList) != null) {
+    console.info('Succeeded in getting TrackDescription');
+  } else {
+    console.error(`Failed to get TrackDescription, error:${error}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.getTrackDescription().then((arrList: Array<media.MediaDescription>) => {
+  if (arrList != null) {
+    console.info('Succeeded in getting TrackDescription');
+  } else {
+    console.error('Failed to get TrackDescription');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error:${error}`);
+});
+```
 
 ## getTrackDescription
 
@@ -671,6 +929,10 @@ Obtains the audio and video track information. This API can be called only when 
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
+
+**Examples**
+
+See [getTrackDescription](#gettrackdescription)
 
 ## getTrackSelectionFilter
 
@@ -722,540 +984,15 @@ Checks whether the media source supports [seek](#seek) in SEEK_CONTINUOUS mode (
 | --- | --- |
 | boolean | Check result for the support of the seek operation in **SEEK_CONTINUOUS** mode. **true** to support, **false** otherwise. |
 
-## offAmplitudeUpdate
+**Examples**
 
 ```TypeScript
-offAmplitudeUpdate(callback?: Callback<Array<double>>): void
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, paused, or completed state before proceeding.
+  let isSupported = avPlayer.isSeekContinuousSupported();
+}
 ```
-
-Unsubscribes from update events of the maximum amplitude. The event is triggered when the amplitude changes.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offAmplitudeUpdate(callback?: Callback<Array<double>>): void--><!--Device-AVPlayer-offAmplitudeUpdate(callback?: Callback<Array<double>>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;double&gt;&gt; | No | Callback that has been registered to listen for amplitude updates. |
-
-## offAudioInterrupt
-
-```TypeScript
-offAudioInterrupt(callback?: Callback<audio.InterruptEvent>): void
-```
-
-Unregister listens for audio interrupt event, refer to [InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md)
-
-**Since:** 23
-
-<!--Device-AVPlayer-offAudioInterrupt(callback?: Callback<audio.InterruptEvent>): void--><!--Device-AVPlayer-offAudioInterrupt(callback?: Callback<audio.InterruptEvent>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;audio.InterruptEvent&gt; | No | Callback used to listen for the playback event return audio interrupt info. |
-
-## offAudioOutputDeviceChangeWithInfo
-
-```TypeScript
-offAudioOutputDeviceChangeWithInfo(callback?: Callback<audio.AudioStreamDeviceChangeInfo>): void
-```
-
-Unsubscribes from audio stream output device changes and reasons. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offAudioOutputDeviceChangeWithInfo(callback?: Callback<audio.AudioStreamDeviceChangeInfo>): void--><!--Device-AVPlayer-offAudioOutputDeviceChangeWithInfo(callback?: Callback<audio.AudioStreamDeviceChangeInfo>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;audio.AudioStreamDeviceChangeInfo&gt; | No | Callback used to return the output device descriptor of the current audio stream and the change reason. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
-
-## offAvailableBitrates
-
-```TypeScript
-offAvailableBitrates(callback?: Callback<Array<int>>): void
-```
-
-Unregister listens for available bitrate list collect completed events for HLS protocol stream playback. This event will be reported after the prepare called.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offAvailableBitrates(callback?: Callback<Array<int>>): void--><!--Device-AVPlayer-offAvailableBitrates(callback?: Callback<Array<int>>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;int&gt;&gt; | No | Callback used to listen for the playback event return available bitrate list. |
-
-## offBitrateDone
-
-```TypeScript
-offBitrateDone(callback?: Callback<int>): void
-```
-
-Unsubscribes from the event that checks whether the bit rate is successfully set.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offBitrateDone(callback?: Callback<int>): void--><!--Device-AVPlayer-offBitrateDone(callback?: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback invoked when the event is triggered. It reports the effective bit rate. |
-
-## offBufferingUpdate
-
-```TypeScript
-offBufferingUpdate(callback?: OnBufferingUpdateHandler): void
-```
-
-Unsubscribes from audio and video buffer changes.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offBufferingUpdate(callback?: OnBufferingUpdateHandler): void--><!--Device-AVPlayer-offBufferingUpdate(callback?: OnBufferingUpdateHandler): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [OnBufferingUpdateHandler](arkts-media-media-onbufferingupdatehandler-t.md) | No | Callback invoked when the event is triggered, and return BufferingInfoType and the value. |
-
-## offDurationUpdate
-
-```TypeScript
-offDurationUpdate(callback?: Callback<int>): void
-```
-
-Unsubscribes from media asset duration changes.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offDurationUpdate(callback?: Callback<int>): void--><!--Device-AVPlayer-offDurationUpdate(callback?: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to return the resource duration. |
-
-## offEndOfStream
-
-```TypeScript
-offEndOfStream(callback?: Callback<void>): void
-```
-
-Unregister listens for media playback endOfStream event.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offEndOfStream(callback?: Callback<void>): void--><!--Device-AVPlayer-offEndOfStream(callback?: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to listen for the playback end of stream. |
-
-## offError
-
-```TypeScript
-offError(callback?: ErrorCallback): void
-```
-
-Unsubscribes from AVPlayer errors.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offError(callback?: ErrorCallback): void--><!--Device-AVPlayer-offError(callback?: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the error code ID and error message. |
-
-## offMediaKeySystemInfoUpdate
-
-```TypeScript
-offMediaKeySystemInfoUpdate(callback?: Callback<Array<drm.MediaKeySystemInfo>>): void
-```
-
-Unregister listens for mediaKeySystemInfoUpdate events.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offMediaKeySystemInfoUpdate(callback?: Callback<Array<drm.MediaKeySystemInfo>>): void--><!--Device-AVPlayer-offMediaKeySystemInfoUpdate(callback?: Callback<Array<drm.MediaKeySystemInfo>>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;drm.MediaKeySystemInfo&gt;&gt; | No | Callback for event. |
-
-## offMetricsEvent
-
-```TypeScript
-offMetricsEvent(callback?: Callback<Array<AVMetricsEvent>>): void
-```
-
-Unsubscribes from metric events during playback.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offMetricsEvent(callback?: Callback<Array<AVMetricsEvent>>): void--><!--Device-AVPlayer-offMetricsEvent(callback?: Callback<Array<AVMetricsEvent>>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVMetricsEvent](arkts-media-media-avmetricsevent-i.md)&gt;&gt; | No | Callback invoked for metric events. This API uses an asynchronous callback to return the result. |
-
-## offPlaybackContentChanged
-
-```TypeScript
-offPlaybackContentChanged(callback?: Callback<string>):void
-```
-
-Unregisters listener to detect when changes occur in the playback content.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-AVPlayer-offPlaybackContentChanged(callback?: Callback<string>):void--><!--Device-AVPlayer-offPlaybackContentChanged(callback?: Callback<string>):void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Callback invoked when the event is triggered. <br>Default value:If this parameter is not specified, all callback functions for the event are unsubscribed. |
-
-## offPlaybackRateDone
-
-```TypeScript
-offPlaybackRateDone(callback?: OnPlaybackRateDone): void
-```
-
-Unregister listens for media playbackRateDone event.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offPlaybackRateDone(callback?: OnPlaybackRateDone): void--><!--Device-AVPlayer-offPlaybackRateDone(callback?: OnPlaybackRateDone): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [OnPlaybackRateDone](arkts-media-media-onplaybackratedone-t.md) | No | Callback used to listen for the playbackRateDone event. |
-
-## offSeekDone
-
-```TypeScript
-offSeekDone(callback?: Callback<int>): void
-```
-
-Unsubscribes from the event that checks whether the seek operation takes effect.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offSeekDone(callback?: Callback<int>): void--><!--Device-AVPlayer-offSeekDone(callback?: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback invoked when the event is triggered. It reports the time position requested by the user. For video playback, SeekMode may cause the actual position to be different from that requested by the user. The exact position can be obtained from the currentTime attribute. The time in this callback only means that the requested seek operation is complete. |
-
-## offSeiMessageReceived
-
-```TypeScript
-offSeiMessageReceived(payloadTypes?: Array<int>, callback?: OnSeiMessageHandle): void
-```
-
-Unsubscribes from the events indicating that an SEI message is received. The event is triggered when an SEI message is received.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offSeiMessageReceived(payloadTypes?: Array<int>, callback?: OnSeiMessageHandle): void--><!--Device-AVPlayer-offSeiMessageReceived(payloadTypes?: Array<int>, callback?: OnSeiMessageHandle): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| payloadTypes | Array&lt;int&gt; | No | The payload types of the SEI message. Null means unsubscribe all payload types. |
-| callback | [OnSeiMessageHandle](arkts-media-media-onseimessagehandle-t.md) | No | Callback used to listen for SEI message events and receive the subscribed-to payload types. |
-
-## offSpeedDone
-
-```TypeScript
-offSpeedDone(callback?: Callback<int>): void
-```
-
-Unsubscribes from the event that checks whether the playback speed is successfully set.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offSpeedDone(callback?: Callback<int>): void--><!--Device-AVPlayer-offSpeedDone(callback?: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to return the result. When the call of setSpeed is successful, the effective speed mode is reported. For details, see PlaybackSpeed. |
-
-## offStartRenderFrame
-
-```TypeScript
-offStartRenderFrame(callback?: Callback<void>): void
-```
-
-Unregister listens for start render video frame events.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offStartRenderFrame(callback?: Callback<void>): void--><!--Device-AVPlayer-offStartRenderFrame(callback?: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to listen for the playback event return . |
-
-## offStateChange
-
-```TypeScript
-offStateChange(callback?: OnAVPlayerStateChangeHandle): void
-```
-
-Unregister listens for media playback stateChange event.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offStateChange(callback?: OnAVPlayerStateChangeHandle): void--><!--Device-AVPlayer-offStateChange(callback?: OnAVPlayerStateChangeHandle): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [OnAVPlayerStateChangeHandle](arkts-media-media-onavplayerstatechangehandle-t.md) | No | Callback invoked when the event is triggered. |
-
-## offSubtitleUpdate
-
-```TypeScript
-offSubtitleUpdate(callback?: Callback<SubtitleInfo>): void
-```
-
-Unsubscribes from subtitle update events.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offSubtitleUpdate(callback?: Callback<SubtitleInfo>): void--><!--Device-AVPlayer-offSubtitleUpdate(callback?: Callback<SubtitleInfo>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SubtitleInfo](arkts-media-media-subtitleinfo-i.md)&gt; | No | Callback that has been registered to listen for subtitle update events. |
-
-## offSuperResolutionChanged
-
-```TypeScript
-offSuperResolutionChanged(callback?: OnSuperResolutionChanged): void
-```
-
-Unsubscribes from the event indicating that super resolution is enabled or disabled. The event is triggered when super resolution is enabled or disabled.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offSuperResolutionChanged(callback?: OnSuperResolutionChanged): void--><!--Device-AVPlayer-offSuperResolutionChanged(callback?: OnSuperResolutionChanged): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [OnSuperResolutionChanged](arkts-media-media-onsuperresolutionchanged-t.md) | No | Callback used to listen for the super-resolution changed event. |
-
-## offTimeUpdate
-
-```TypeScript
-offTimeUpdate(callback?: Callback<int>): void
-```
-
-Unsubscribes from playback position changes.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offTimeUpdate(callback?: Callback<int>): void--><!--Device-AVPlayer-offTimeUpdate(callback?: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to return the current time. |
-
-## offTimedMetaData
-
-```TypeScript
-offTimedMetaData(callback?: Callback<AVTimedMetaData>): void
-```
-
-Unregister listener to detect time-based metadata, Currently, only the #EXT-X-DATERANGE data of HLS and the Event Streams information of DASH are supported.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-AVPlayer-offTimedMetaData(callback?: Callback<AVTimedMetaData>): void--><!--Device-AVPlayer-offTimedMetaData(callback?: Callback<AVTimedMetaData>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVTimedMetaData](arkts-media-media-avtimedmetadata-i.md)&gt; | No | Callback invoked when the event is triggered. <br>Default value:If this parameter is not specified, all callback functions for the event are unsubscribed. |
-
-## offTrackChange
-
-```TypeScript
-offTrackChange(callback?: OnTrackChangeHandler): void
-```
-
-Unsubscribes from track change events. The event is triggered when the track changes.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offTrackChange(callback?: OnTrackChangeHandler): void--><!--Device-AVPlayer-offTrackChange(callback?: OnTrackChangeHandler): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [OnTrackChangeHandler](arkts-media-media-ontrackchangehandler-t.md) | No | Callback that has been registered to listen for track changes. |
-
-## offTrackInfoUpdate
-
-```TypeScript
-offTrackInfoUpdate(callback?: Callback<Array<MediaDescription>>): void
-```
-
-Unsubscribes from track information update events. The event is triggered when the track information is updated.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offTrackInfoUpdate(callback?: Callback<Array<MediaDescription>>): void--><!--Device-AVPlayer-offTrackInfoUpdate(callback?: Callback<Array<MediaDescription>>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | No | Callback that has been registered to listen for track information updates. |
-
-## offVideoSizeChange
-
-```TypeScript
-offVideoSizeChange(callback?: OnVideoSizeChangeHandler): void
-```
-
-Unsubscribes from video size changes.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offVideoSizeChange(callback?: OnVideoSizeChangeHandler): void--><!--Device-AVPlayer-offVideoSizeChange(callback?: OnVideoSizeChangeHandler): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [OnVideoSizeChangeHandler](arkts-media-media-onvideosizechangehandler-t.md) | No | Callback invoked when the event is triggered. |
-
-## offVolumeChange
-
-```TypeScript
-offVolumeChange(callback?: Callback<double>): void
-```
-
-Unsubscribes from the event that checks whether the volume is successfully set.
-
-**Since:** 23
-
-<!--Device-AVPlayer-offVolumeChange(callback?: Callback<double>): void--><!--Device-AVPlayer-offVolumeChange(callback?: Callback<double>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;double&gt; | No | Callback invoked when the event is triggered. It reports the effective volume. |
 
 ## off('amplitudeUpdate')
 
@@ -1276,7 +1013,7 @@ Unsubscribes from update events of the maximum amplitude.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'amplitudeUpdate' | Yes | Event type, which is **'amplitudeUpdate'** in this case. The event is triggered when the amplitude changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;double&gt;&gt; | No | Callback that has been registered to listen for amplitude updates. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **amplitudeUpdate** event will be unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | No | Callback that has been registered to listen for amplitude updates. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **amplitudeUpdate** event will be unregistered. |
 
 ## off('audioInterrupt')
 
@@ -1299,7 +1036,7 @@ Unsubscribes from the audio interruption event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | Yes | Event type, which is **'audioInterrupt'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;audio.InterruptEvent&gt; | No | Callback invoked when the event is triggered. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **audioInterrupt** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | No | Callback invoked when the event is triggered. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **audioInterrupt** event will be unregistered.<br>**Since:** 12 |
 
 ## off('audioOutputDeviceChangeWithInfo')
 
@@ -1322,7 +1059,7 @@ Unsubscribes from audio stream output device changes and reasons. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioOutputDeviceChangeWithInfo' | Yes | Event type, which is **'audioOutputDeviceChangeWithInfo'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;audio.AudioStreamDeviceChangeInfo&gt; | No | Callback used to return the output device descriptor of the current audio stream and the change reason. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **audioOutputDeviceChangeWithInfo** event will be unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.AudioStreamDeviceChangeInfo&gt; | No | Callback used to return the output device descriptor of the current audio stream and the change reason. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **audioOutputDeviceChangeWithInfo** event will be unregistered. |
 
 **Error codes:**
 
@@ -1351,7 +1088,7 @@ Unsubscribes from available bitrates of HLS/DASH streams. This event is reported
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'availableBitrates' | Yes | Event type, which is **'availableBitrates'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;int&gt;&gt; | No | Callback invoked when the event is triggered. It returns an array that holds the available bitrates. If the array length is 0, no bitrate can be set. If this parameter is specified , only the specified callback is unregistered. Otherwise, all callbacks associated with the **availableBitrates** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;int&gt;&gt; | No | Callback invoked when the event is triggered. It returns an array that holds the available bitrates. If the array length is 0, no bitrate can be set. If this parameter is specified , only the specified callback is unregistered. Otherwise, all callbacks associated with the **availableBitrates** event will be unregistered.<br>**Since:** 12 |
 
 ## off('bitrateDone')
 
@@ -1374,7 +1111,7 @@ Unsubscribes from the event that checks whether the bitrate is successfully set.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bitrateDone' | Yes | Event type, which is **'bitrateDone'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback invoked when the event is triggered. It reports the effective bitrate. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **bitrateDone** event will be unregistered.<br>**Since:** 19 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback invoked when the event is triggered. It reports the effective bitrate. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **bitrateDone** event will be unregistered.<br>**Since:** 19 |
 
 ## off('bufferingUpdate')
 
@@ -1420,7 +1157,7 @@ Unsubscribes from media asset duration changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'durationUpdate' | Yes | Event type, which is **'durationUpdate'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to return the resource duration. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **durationUpdate** event will be unregistered.<br>**Since:** 19 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to return the resource duration. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **durationUpdate** event will be unregistered.<br>**Since:** 19 |
 
 ## off('endOfStream')
 
@@ -1443,7 +1180,7 @@ Unsubscribes from the event that indicates the end of the stream being played.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'endOfStream' | Yes | Event type, which is **'endOfStream'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback invoked when the event is triggered. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **endOfStream** event will be unregistered.<br>**Since:** 19 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback invoked when the event is triggered. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **endOfStream** event will be unregistered.<br>**Since:** 19 |
 
 ## off('error')
 
@@ -1466,7 +1203,7 @@ Unsubscribes from AVPlayer errors.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type, which is **'error'** in this case. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the error code ID and error message. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **error** event will be unregistered.<br>**Since:** 12 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the error code ID and error message. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **error** event will be unregistered.<br>**Since:** 12 |
 
 ## off('mediaKeySystemInfoUpdate')
 
@@ -1489,7 +1226,7 @@ Unsubscribes from media key system information changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'mediaKeySystemInfoUpdate' | Yes | Event type, which is **'mediaKeySystemInfoUpdate'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;drm.MediaKeySystemInfo&gt;&gt; | No | Callback invoked when the event is triggered. It reports a **MediaKeySystemInfo** array. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **mediaKeySystemInfoUpdate** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;drm.MediaKeySystemInfo&gt;&gt; | No | Callback invoked when the event is triggered. It reports a **MediaKeySystemInfo** array. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **mediaKeySystemInfoUpdate** event will be unregistered.<br>**Since:** 12 |
 
 ## off('playbackRateDone')
 
@@ -1535,7 +1272,7 @@ Unsubscribes from the event that checks whether the seek operation takes effect.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'seekDone' | Yes | Event type, which is **'seekDone'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback invoked when the event is triggered. It reports the time position requested by the user.<br>For video playback, [SeekMode](arkts-media-media-seekmode-e.md) may cause the actual position to be different from that requested by the user. The exact position can be obtained from the **currentTime** property. The time in this callback only means that the requested seek operation is complete. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **seekDone** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback invoked when the event is triggered. It reports the time position requested by the user.<br>For video playback, [SeekMode](arkts-media-media-seekmode-e.md) may cause the actual position to be different from that requested by the user. The exact position can be obtained from the **currentTime** property. The time in this callback only means that the requested seek operation is complete. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **seekDone** event will be unregistered.<br>**Since:** 12 |
 
 ## off('seiMessageReceived')
 
@@ -1582,7 +1319,7 @@ Unsubscribes from the event that checks whether the playback speed is successful
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'speedDone' | Yes | Event type, which is **'speedDone'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to return the result. When the call of **setSpeed** is successful, the effective speed mode is reported. For details, see [PlaybackSpeed](arkts-media-media-playbackspeed-e.md). If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **speedDone** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to return the result. When the call of **setSpeed** is successful, the effective speed mode is reported. For details, see [PlaybackSpeed](arkts-media-media-playbackspeed-e.md). If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **speedDone** event will be unregistered.<br>**Since:** 12 |
 
 ## off('startRenderFrame')
 
@@ -1605,7 +1342,7 @@ Unsubscribes from the event that indicates rendering starts for the first frame.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'startRenderFrame' | Yes | Event type, which is **'startRenderFrame'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback invoked when the event is triggered. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **startRenderFrame** event will be unregistered.<br>**Since:** 19 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback invoked when the event is triggered. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **startRenderFrame** event will be unregistered.<br>**Since:** 19 |
 
 ## off('stateChange')
 
@@ -1651,7 +1388,7 @@ Unsubscribes from subtitle update events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'subtitleUpdate' | Yes | Event type, which is **'subtitleUpdate'** in this case. The event is triggered when the external subtitle is updated. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SubtitleInfo](arkts-media-media-subtitleinfo-i.md)&gt; | No | Callback that has been registered to listen for subtitle update events. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **subtitleUpdate** event will be unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SubtitleInfo](arkts-media-media-subtitleinfo-i.md)&gt; | No | Callback that has been registered to listen for subtitle update events. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **subtitleUpdate** event will be unregistered. |
 
 ## off('superResolutionChanged')
 
@@ -1697,7 +1434,7 @@ Unsubscribes from playback position changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'timeUpdate' | Yes | Event type, which is **'timeUpdate'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to return the current time. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **timeUpdate** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to return the current time. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **timeUpdate** event will be unregistered.<br>**Since:** 12 |
 
 ## off('trackChange')
 
@@ -1743,7 +1480,7 @@ Unsubscribes from track information update events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'trackInfoUpdate' | Yes | Event type, which is **'trackInfoUpdate'** in this case. The event is triggered when the track information is updated. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | No | Callback that has been registered to listen for track information updates. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **trackInfoUpdate** event will be unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | No | Callback that has been registered to listen for track information updates. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **trackInfoUpdate** event will be unregistered. |
 
 ## off('videoSizeChange')
 
@@ -1789,19 +1526,19 @@ Unsubscribes from the event that checks whether the volume is successfully set.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'volumeChange' | Yes | Event type, which is **'volumeChange'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;double&gt; | No | Callback invoked when the event is triggered. It reports the effective volume. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **volumeChange** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;double&gt; | No | Callback invoked when the event is triggered. It reports the effective volume. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **volumeChange** event will be unregistered.<br>**Since:** 12 |
 
-## onAmplitudeUpdate
+## offAmplitudeUpdate
 
 ```TypeScript
-onAmplitudeUpdate(callback: Callback<Array<double>>): void
+offAmplitudeUpdate(callback?: Callback<Array<double>>): void
 ```
 
-Subscribes to update events of the maximum audio level value, which is periodically reported when audio resources are played. The event is triggered when the amplitude changes.
+Unsubscribes from update events of the maximum amplitude. The event is triggered when the amplitude changes.
 
 **Since:** 23
 
-<!--Device-AVPlayer-onAmplitudeUpdate(callback: Callback<Array<double>>): void--><!--Device-AVPlayer-onAmplitudeUpdate(callback: Callback<Array<double>>): void-End-->
+<!--Device-AVPlayer-offAmplitudeUpdate(callback?: Callback<Array<double>>): void--><!--Device-AVPlayer-offAmplitudeUpdate(callback?: Callback<Array<double>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -1809,19 +1546,19 @@ Subscribes to update events of the maximum audio level value, which is periodica
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | No | Callback that has been registered to listen for amplitude updates. |
 
-## onAudioInterrupt
+## offAudioInterrupt
 
 ```TypeScript
-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void
+offAudioInterrupt(callback?: Callback<audio.InterruptEvent>): void
 ```
 
-Register listens for audio interrupt event, refer to [InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md). The application needs to perform corresponding processing based on different audio interruption events. For details, see Handling Audio Interruption Events.
+Unregister listens for audio interrupt event, refer to [InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md)
 
 **Since:** 23
 
-<!--Device-AVPlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void--><!--Device-AVPlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void-End-->
+<!--Device-AVPlayer-offAudioInterrupt(callback?: Callback<audio.InterruptEvent>): void--><!--Device-AVPlayer-offAudioInterrupt(callback?: Callback<audio.InterruptEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -1829,21 +1566,19 @@ Register listens for audio interrupt event, refer to [InterruptEvent](../../apis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;audio.InterruptEvent&gt; | Yes | Callback used to listen for the playback event return audio interrupt info. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | No | Callback used to listen for the playback event return audio interrupt info. |
 
-## onAudioOutputDeviceChangeWithInfo
+## offAudioOutputDeviceChangeWithInfo
 
 ```TypeScript
-onAudioOutputDeviceChangeWithInfo(callback: Callback<audio.AudioStreamDeviceChangeInfo>): void
+offAudioOutputDeviceChangeWithInfo(callback?: Callback<audio.AudioStreamDeviceChangeInfo>): void
 ```
 
-Subscribes to audio stream output device changes and reasons. This API uses an asynchronous callback to return the result.
-
-When subscribing to this event, you are advised to implement the player behavior when the device is connected or disconnected by referring to Responding to Audio Output Device Changes.
+Unsubscribes from audio stream output device changes and reasons. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
-<!--Device-AVPlayer-onAudioOutputDeviceChangeWithInfo(callback: Callback<audio.AudioStreamDeviceChangeInfo>): void--><!--Device-AVPlayer-onAudioOutputDeviceChangeWithInfo(callback: Callback<audio.AudioStreamDeviceChangeInfo>): void-End-->
+<!--Device-AVPlayer-offAudioOutputDeviceChangeWithInfo(callback?: Callback<audio.AudioStreamDeviceChangeInfo>): void--><!--Device-AVPlayer-offAudioOutputDeviceChangeWithInfo(callback?: Callback<audio.AudioStreamDeviceChangeInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -1851,7 +1586,7 @@ When subscribing to this event, you are advised to implement the player behavior
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;audio.AudioStreamDeviceChangeInfo&gt; | Yes | Callback used to listen device change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.AudioStreamDeviceChangeInfo&gt; | No | Callback used to return the output device descriptor of the current audio stream and the change reason. |
 
 **Error codes:**
 
@@ -1859,17 +1594,17 @@ When subscribing to this event, you are advised to implement the player behavior
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 
-## onAvailableBitrates
+## offAvailableBitrates
 
 ```TypeScript
-onAvailableBitrates(callback: Callback<Array<int>>): void
+offAvailableBitrates(callback?: Callback<Array<int>>): void
 ```
 
-Register listens for available bitrate list collect completed events for HLS protocol stream playback. This event will be reported after the prepare called.
+Unregister listens for available bitrate list collect completed events for HLS protocol stream playback. This event will be reported after the prepare called.
 
 **Since:** 23
 
-<!--Device-AVPlayer-onAvailableBitrates(callback: Callback<Array<int>>): void--><!--Device-AVPlayer-onAvailableBitrates(callback: Callback<Array<int>>): void-End-->
+<!--Device-AVPlayer-offAvailableBitrates(callback?: Callback<Array<int>>): void--><!--Device-AVPlayer-offAvailableBitrates(callback?: Callback<Array<int>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -1877,19 +1612,19 @@ Register listens for available bitrate list collect completed events for HLS pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback used to listen for the playback event return available bitrate list. It returns an array that holds the available bit rates. If the array length is 0, no bit rate can be set. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;int&gt;&gt; | No | Callback used to listen for the playback event return available bitrate list. |
 
-## onBitrateDone
+## offBitrateDone
 
 ```TypeScript
-onBitrateDone(callback: Callback<int>): void
+offBitrateDone(callback?: Callback<int>): void
 ```
 
-Subscribes to the event to check whether the bit rate is successfully set.
+Unsubscribes from the event that checks whether the bit rate is successfully set.
 
 **Since:** 23
 
-<!--Device-AVPlayer-onBitrateDone(callback: Callback<int>): void--><!--Device-AVPlayer-onBitrateDone(callback: Callback<int>): void-End-->
+<!--Device-AVPlayer-offBitrateDone(callback?: Callback<int>): void--><!--Device-AVPlayer-offBitrateDone(callback?: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -1897,19 +1632,19 @@ Subscribes to the event to check whether the bit rate is successfully set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. It reports the effective bit rate. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback invoked when the event is triggered. It reports the effective bit rate. |
 
-## onBufferingUpdate
+## offBufferingUpdate
 
 ```TypeScript
-onBufferingUpdate(callback: OnBufferingUpdateHandler): void
+offBufferingUpdate(callback?: OnBufferingUpdateHandler): void
 ```
 
-Subscribes to audio and video buffer changes. This subscription is supported only in network playback scenarios.
+Unsubscribes from audio and video buffer changes.
 
 **Since:** 23
 
-<!--Device-AVPlayer-onBufferingUpdate(callback: OnBufferingUpdateHandler): void--><!--Device-AVPlayer-onBufferingUpdate(callback: OnBufferingUpdateHandler): void-End-->
+<!--Device-AVPlayer-offBufferingUpdate(callback?: OnBufferingUpdateHandler): void--><!--Device-AVPlayer-offBufferingUpdate(callback?: OnBufferingUpdateHandler): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -1917,19 +1652,19 @@ Subscribes to audio and video buffer changes. This subscription is supported onl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnBufferingUpdateHandler](arkts-media-media-onbufferingupdatehandler-t.md) | Yes | Callback invoked when the event is triggered, and return BufferingInfoType and the value. |
+| callback | [OnBufferingUpdateHandler](arkts-media-media-onbufferingupdatehandler-t.md) | No | Callback invoked when the event is triggered, and return BufferingInfoType and the value. |
 
-## onDurationUpdate
+## offDurationUpdate
 
 ```TypeScript
-onDurationUpdate(callback: Callback<int>): void
+offDurationUpdate(callback?: Callback<int>): void
 ```
 
-Subscribes to media asset duration changes. It is used to refresh the length of the progress bar. By default, this event is reported once in the prepared state. However, it can be repeatedly reported for special streams that trigger duration changes. The **'durationUpdate'** event is not supported in live mode.
+Unsubscribes from media asset duration changes.
 
 **Since:** 23
 
-<!--Device-AVPlayer-onDurationUpdate(callback: Callback<int>): void--><!--Device-AVPlayer-onDurationUpdate(callback: Callback<int>): void-End-->
+<!--Device-AVPlayer-offDurationUpdate(callback?: Callback<int>): void--><!--Device-AVPlayer-offDurationUpdate(callback?: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -1937,19 +1672,19 @@ Subscribes to media asset duration changes. It is used to refresh the length of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the resource duration. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to return the resource duration. |
 
-## onEndOfStream
+## offEndOfStream
 
 ```TypeScript
-onEndOfStream(callback: Callback<void>): void
+offEndOfStream(callback?: Callback<void>): void
 ```
 
-Subscribes to the event that indicates the end of the stream being played. If loop = true is set, the AVPlayer seeks to the beginning of the stream and plays the stream again. If loop is not set, the completed state is reported through the stateChange event.
+Unregister listens for media playback endOfStream event.
 
 **Since:** 23
 
-<!--Device-AVPlayer-onEndOfStream(callback: Callback<void>): void--><!--Device-AVPlayer-onEndOfStream(callback: Callback<void>): void-End-->
+<!--Device-AVPlayer-offEndOfStream(callback?: Callback<void>): void--><!--Device-AVPlayer-offEndOfStream(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -1957,19 +1692,19 @@ Subscribes to the event that indicates the end of the stream being played. If lo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to listen for the playback end of stream. |
 
-## onError
+## offError
 
 ```TypeScript
-onError(callback: ErrorCallback): void
+offError(callback?: ErrorCallback): void
 ```
 
-Register listens for playback error events.
+Unsubscribes from AVPlayer errors.
 
 **Since:** 23
 
-<!--Device-AVPlayer-onError(callback: ErrorCallback): void--><!--Device-AVPlayer-onError(callback: ErrorCallback): void-End-->
+<!--Device-AVPlayer-offError(callback?: ErrorCallback): void--><!--Device-AVPlayer-offError(callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -1977,45 +1712,19 @@ Register listens for playback error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the playback error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the error code ID and error message. |
 
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
-| [5400104](../errorcode-media.md#5400104-operation-timeout) | Time out. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. |
-| [5410002](../errorcode-media.md#5410002-seek-in-seek_continuous-mode-is-not-supported) | Seek continuous unsupported. |
-| [5411001](../errorcode-media.md#5411001-failed-to-parse-or-connect-to-the-server-address) | IO can not find host. |
-| [5411002](../errorcode-media.md#5411002-network-connection-timeout) | IO connection timeout. |
-| [5411003](../errorcode-media.md#5411003-data-or-link-exception-caused-by-network-exceptions) | IO network abnormal. |
-| [5411004](../errorcode-media.md#5411004-network-disabled) | IO network unavailable. |
-| [5411005](../errorcode-media.md#5411005-access-denied) | IO no permission. |
-| [5411006](../errorcode-media.md#5411006-client-request-parameter-is-incorrect-or-exceeds-the-processing-capability) | IO request denied. |
-| [5411007](../errorcode-media.md#5411007-no-resource-available) | IO resource not found. |
-| [5411008](../errorcode-media.md#5411008-server-fails-to-verify-the-client-certificate) | IO SSL client cert needed. |
-| [5411009](../errorcode-media.md#5411009-ssl-connection-failed) | IO SSL connect fail. |
-| [5411010](../errorcode-media.md#5411010-client-fails-to-verify-the-server-certificate) | IO SSL server cert untrusted. |
-| [5411011](../errorcode-media.md#5411011-unsupported-request-due-to-network-protocol-errors) | IO unsupported request. |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
-
-## onMediaKeySystemInfoUpdate
+## offMediaKeySystemInfoUpdate
 
 ```TypeScript
-onMediaKeySystemInfoUpdate( callback: Callback<Array<drm.MediaKeySystemInfo>>): void
+offMediaKeySystemInfoUpdate(callback?: Callback<Array<drm.MediaKeySystemInfo>>): void
 ```
 
-Register listens for mediaKeySystemInfoUpdate events.
+Unregister listens for mediaKeySystemInfoUpdate events.
 
 **Since:** 23
 
-<!--Device-AVPlayer-onMediaKeySystemInfoUpdate( callback: Callback<Array<drm.MediaKeySystemInfo>>): void--><!--Device-AVPlayer-onMediaKeySystemInfoUpdate( callback: Callback<Array<drm.MediaKeySystemInfo>>): void-End-->
+<!--Device-AVPlayer-offMediaKeySystemInfoUpdate(callback?: Callback<Array<drm.MediaKeySystemInfo>>): void--><!--Device-AVPlayer-offMediaKeySystemInfoUpdate(callback?: Callback<Array<drm.MediaKeySystemInfo>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -2023,19 +1732,19 @@ Register listens for mediaKeySystemInfoUpdate events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;drm.MediaKeySystemInfo&gt;&gt; | Yes | Callback invoked when the event is triggered. It reports a **MediaKeySystemInfo** array. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;drm.MediaKeySystemInfo&gt;&gt; | No | Callback for event. |
 
-## onMetricsEvent
+## offMetricsEvent
 
 ```TypeScript
-onMetricsEvent(callback: Callback<Array<AVMetricsEvent>>): void
+offMetricsEvent(callback?: Callback<Array<AVMetricsEvent>>): void
 ```
 
-Subscribes to metric events during playback.
+Unsubscribes from metric events during playback.
 
 **Since:** 23
 
-<!--Device-AVPlayer-onMetricsEvent(callback: Callback<Array<AVMetricsEvent>>): void--><!--Device-AVPlayer-onMetricsEvent(callback: Callback<Array<AVMetricsEvent>>): void-End-->
+<!--Device-AVPlayer-offMetricsEvent(callback?: Callback<Array<AVMetricsEvent>>): void--><!--Device-AVPlayer-offMetricsEvent(callback?: Callback<Array<AVMetricsEvent>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -2043,15 +1752,24 @@ Subscribes to metric events during playback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVMetricsEvent](arkts-media-media-avmetricsevent-i.md)&gt;&gt; | Yes | Callback invoked for metric events. This API uses an asynchronous callback to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMetricsEvent](arkts-media-media-avmetricsevent-i.md)&gt;&gt; | No | Callback invoked for metric events. This API uses an asynchronous callback to return the result. |
 
-## onPlaybackContentChanged
+**Examples**
 
 ```TypeScript
-onPlaybackContentChanged(callback: Callback<string>):void
+async function test(){
+  let avPlayer = await media.createAVPlayer();
+  avPlayer.offMetricsEvent();
+}
 ```
 
-Registers a listener to detect when the playback content has changed. The value carried in the callback function is the ID of the media source that is being played in the playlist.
+## offPlaybackContentChanged
+
+```TypeScript
+offPlaybackContentChanged(callback?: Callback<string>):void
+```
+
+Unregisters listener to detect when changes occur in the playback content.
 
 **Since:** 26.0.0
 
@@ -2059,7 +1777,7 @@ Registers a listener to detect when the playback content has changed. The value 
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-AVPlayer-onPlaybackContentChanged(callback: Callback<string>):void--><!--Device-AVPlayer-onPlaybackContentChanged(callback: Callback<string>):void-End-->
+<!--Device-AVPlayer-offPlaybackContentChanged(callback?: Callback<string>):void--><!--Device-AVPlayer-offPlaybackContentChanged(callback?: Callback<string>):void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -2067,19 +1785,19 @@ Registers a listener to detect when the playback content has changed. The value 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback invoked when the event is triggered. <br>Default value:If this parameter is not specified, all callback functions for the event are unsubscribed. |
 
-## onPlaybackRateDone
+## offPlaybackRateDone
 
 ```TypeScript
-onPlaybackRateDone(callback: OnPlaybackRateDone): void
+offPlaybackRateDone(callback?: OnPlaybackRateDone): void
 ```
 
-Register listens for media playbackRateDone event.
+Unregister listens for media playbackRateDone event.
 
 **Since:** 23
 
-<!--Device-AVPlayer-onPlaybackRateDone(callback: OnPlaybackRateDone): void--><!--Device-AVPlayer-onPlaybackRateDone(callback: OnPlaybackRateDone): void-End-->
+<!--Device-AVPlayer-offPlaybackRateDone(callback?: OnPlaybackRateDone): void--><!--Device-AVPlayer-offPlaybackRateDone(callback?: OnPlaybackRateDone): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -2087,19 +1805,19 @@ Register listens for media playbackRateDone event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnPlaybackRateDone](arkts-media-media-onplaybackratedone-t.md) | Yes | Callback used to listen for the playbackRateDone event. |
+| callback | [OnPlaybackRateDone](arkts-media-media-onplaybackratedone-t.md) | No | Callback used to listen for the playbackRateDone event. |
 
-## onSeekDone
+## offSeekDone
 
 ```TypeScript
-onSeekDone(callback: Callback<int>): void
+offSeekDone(callback?: Callback<int>): void
 ```
 
-Subscribes to the event to check whether the seek operation takes effect.
+Unsubscribes from the event that checks whether the seek operation takes effect.
 
 **Since:** 23
 
-<!--Device-AVPlayer-onSeekDone(callback: Callback<int>): void--><!--Device-AVPlayer-onSeekDone(callback: Callback<int>): void-End-->
+<!--Device-AVPlayer-offSeekDone(callback?: Callback<int>): void--><!--Device-AVPlayer-offSeekDone(callback?: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -2107,19 +1825,19 @@ Subscribes to the event to check whether the seek operation takes effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. It reports the time position requested by the user. For video playback, SeekMode may cause the actual position to be different from that requested by the user.The exact position can be obtained from the currentTime attribute. The time in this callback only means that the requested seek operation is complete. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback invoked when the event is triggered. It reports the time position requested by the user. For video playback, SeekMode may cause the actual position to be different from that requested by the user. The exact position can be obtained from the currentTime attribute. The time in this callback only means that the requested seek operation is complete. |
 
-## onSeiMessageReceived
+## offSeiMessageReceived
 
 ```TypeScript
-onSeiMessageReceived(payloadTypes: Array<int>, callback: OnSeiMessageHandle): void
+offSeiMessageReceived(payloadTypes?: Array<int>, callback?: OnSeiMessageHandle): void
 ```
 
-Subscribes to events indicating that a Supplemental Enhancement Information (SEI) message is received. This applies only to HTTP-FLV live streaming and is triggered when SEI messages are present in the video stream. You must initiate the subscription before calling prepare. If you initiate multiple subscriptions to this event, the last subscription is applied.
+Unsubscribes from the events indicating that an SEI message is received. The event is triggered when an SEI message is received.
 
 **Since:** 23
 
-<!--Device-AVPlayer-onSeiMessageReceived(payloadTypes: Array<int>, callback: OnSeiMessageHandle): void--><!--Device-AVPlayer-onSeiMessageReceived(payloadTypes: Array<int>, callback: OnSeiMessageHandle): void-End-->
+<!--Device-AVPlayer-offSeiMessageReceived(payloadTypes?: Array<int>, callback?: OnSeiMessageHandle): void--><!--Device-AVPlayer-offSeiMessageReceived(payloadTypes?: Array<int>, callback?: OnSeiMessageHandle): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -2127,20 +1845,20 @@ Subscribes to events indicating that a Supplemental Enhancement Information (SEI
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| payloadTypes | Array&lt;int&gt; | Yes | Array of subscribed-to payload types of SEI messages. Currently, only payloadType = 5 is supported. |
-| callback | [OnSeiMessageHandle](arkts-media-media-onseimessagehandle-t.md) | Yes | Callback used to listen for SEI message events and receive the subscribed-to payload types. |
+| payloadTypes | Array&lt;int&gt; | No | The payload types of the SEI message. Null means unsubscribe all payload types. |
+| callback | [OnSeiMessageHandle](arkts-media-media-onseimessagehandle-t.md) | No | Callback used to listen for SEI message events and receive the subscribed-to payload types. |
 
-## onSpeedDone
+## offSpeedDone
 
 ```TypeScript
-onSpeedDone(callback: Callback<int>): void
+offSpeedDone(callback?: Callback<int>): void
 ```
 
-Subscribes to the event to check whether the playback speed is successfully set.
+Unsubscribes from the event that checks whether the playback speed is successfully set.
 
 **Since:** 23
 
-<!--Device-AVPlayer-onSpeedDone(callback: Callback<int>): void--><!--Device-AVPlayer-onSpeedDone(callback: Callback<int>): void-End-->
+<!--Device-AVPlayer-offSpeedDone(callback?: Callback<int>): void--><!--Device-AVPlayer-offSpeedDone(callback?: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -2148,19 +1866,19 @@ Subscribes to the event to check whether the playback speed is successfully set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the result. When the call of setSpeed is successful, the effective speed mode is reported. For details, see PlaybackSpeed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to return the result. When the call of setSpeed is successful, the effective speed mode is reported. For details, see PlaybackSpeed. |
 
-## onStartRenderFrame
+## offStartRenderFrame
 
 ```TypeScript
-onStartRenderFrame(callback: Callback<void>): void
+offStartRenderFrame(callback?: Callback<void>): void
 ```
 
-Subscribes to the event that indicates rendering starts for the first frame. This subscription is supported only in video playback scenarios. This event only means that the playback service sends the first frame to the display module. The actual rendering effect depends on the rendering performance of the display service.
+Unregister listens for start render video frame events.
 
 **Since:** 23
 
-<!--Device-AVPlayer-onStartRenderFrame(callback: Callback<void>): void--><!--Device-AVPlayer-onStartRenderFrame(callback: Callback<void>): void-End-->
+<!--Device-AVPlayer-offStartRenderFrame(callback?: Callback<void>): void--><!--Device-AVPlayer-offStartRenderFrame(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -2168,19 +1886,19 @@ Subscribes to the event that indicates rendering starts for the first frame. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to listen for the playback event return . |
 
-## onStateChange
+## offStateChange
 
 ```TypeScript
-onStateChange(callback: OnAVPlayerStateChangeHandle): void
+offStateChange(callback?: OnAVPlayerStateChangeHandle): void
 ```
 
-Register listens for media playback stateChange event. This event can be triggered by both user operations and the system.
+Unregister listens for media playback stateChange event.
 
 **Since:** 23
 
-<!--Device-AVPlayer-onStateChange(callback: OnAVPlayerStateChangeHandle): void--><!--Device-AVPlayer-onStateChange(callback: OnAVPlayerStateChangeHandle): void-End-->
+<!--Device-AVPlayer-offStateChange(callback?: OnAVPlayerStateChangeHandle): void--><!--Device-AVPlayer-offStateChange(callback?: OnAVPlayerStateChangeHandle): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -2188,19 +1906,19 @@ Register listens for media playback stateChange event. This event can be trigger
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnAVPlayerStateChangeHandle](arkts-media-media-onavplayerstatechangehandle-t.md) | Yes | Callback invoked when the event is triggered. |
+| callback | [OnAVPlayerStateChangeHandle](arkts-media-media-onavplayerstatechangehandle-t.md) | No | Callback invoked when the event is triggered. |
 
-## onSubtitleUpdate
+## offSubtitleUpdate
 
 ```TypeScript
-onSubtitleUpdate(callback: Callback<SubtitleInfo>): void
+offSubtitleUpdate(callback?: Callback<SubtitleInfo>): void
 ```
 
-Subscribes to subtitle update events. When external subtitles exist, the system notifies the application through the subscribed-to callback. An application can subscribe to only one subtitle update event. When the application initiates multiple subscriptions to this event, the last subscription is applied. The event is triggered when the external subtitle is updated.
+Unsubscribes from subtitle update events.
 
 **Since:** 23
 
-<!--Device-AVPlayer-onSubtitleUpdate(callback: Callback<SubtitleInfo>): void--><!--Device-AVPlayer-onSubtitleUpdate(callback: Callback<SubtitleInfo>): void-End-->
+<!--Device-AVPlayer-offSubtitleUpdate(callback?: Callback<SubtitleInfo>): void--><!--Device-AVPlayer-offSubtitleUpdate(callback?: Callback<SubtitleInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -2208,19 +1926,19 @@ Subscribes to subtitle update events. When external subtitles exist, the system 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SubtitleInfo](arkts-media-media-subtitleinfo-i.md)&gt; | Yes | Callback invoked when the subtitle is updated. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SubtitleInfo](arkts-media-media-subtitleinfo-i.md)&gt; | No | Callback that has been registered to listen for subtitle update events. |
 
-## onSuperResolutionChanged
+## offSuperResolutionChanged
 
 ```TypeScript
-onSuperResolutionChanged(callback: OnSuperResolutionChanged): void
+offSuperResolutionChanged(callback?: OnSuperResolutionChanged): void
 ```
 
-Subscribes to the event indicating that super resolution is enabled or disabled. The event is triggered when super resolution is enabled or disabled.
+Unsubscribes from the event indicating that super resolution is enabled or disabled. The event is triggered when super resolution is enabled or disabled.
 
 **Since:** 23
 
-<!--Device-AVPlayer-onSuperResolutionChanged(callback: OnSuperResolutionChanged): void--><!--Device-AVPlayer-onSuperResolutionChanged(callback: OnSuperResolutionChanged): void-End-->
+<!--Device-AVPlayer-offSuperResolutionChanged(callback?: OnSuperResolutionChanged): void--><!--Device-AVPlayer-offSuperResolutionChanged(callback?: OnSuperResolutionChanged): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -2228,35 +1946,15 @@ Subscribes to the event indicating that super resolution is enabled or disabled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnSuperResolutionChanged](arkts-media-media-onsuperresolutionchanged-t.md) | Yes | Callback used to listen for the super-resolution changed event. |
+| callback | [OnSuperResolutionChanged](arkts-media-media-onsuperresolutionchanged-t.md) | No | Callback used to listen for the super-resolution changed event. |
 
-## onTimeUpdate
-
-```TypeScript
-onTimeUpdate(callback: Callback<int>): void
-```
-
-Subscribes to playback position changes. It is used to refresh the current position of the progress bar. By default, this event is reported every 100 ms. However, it is reported immediately upon a successful seek operation.
-
-**Since:** 23
-
-<!--Device-AVPlayer-onTimeUpdate(callback: Callback<int>): void--><!--Device-AVPlayer-onTimeUpdate(callback: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the current time. |
-
-## onTimedMetaData
+## offTimedMetaData
 
 ```TypeScript
-onTimedMetaData(callback: Callback<AVTimedMetaData>): void
+offTimedMetaData(callback?: Callback<AVTimedMetaData>): void
 ```
 
-Register listener to detect time-based metadata, Currently, only the #EXT-X-DATERANGE data of HLS and the Event Streams information of DASH are supported.
+Unregister listener to detect time-based metadata, Currently, only the #EXT-X-DATERANGE data of HLS and the Event Streams information of DASH are supported.
 
 **Since:** 26.0.0
 
@@ -2264,7 +1962,7 @@ Register listener to detect time-based metadata, Currently, only the #EXT-X-DATE
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-AVPlayer-onTimedMetaData(callback: Callback<AVTimedMetaData>): void--><!--Device-AVPlayer-onTimedMetaData(callback: Callback<AVTimedMetaData>): void-End-->
+<!--Device-AVPlayer-offTimedMetaData(callback?: Callback<AVTimedMetaData>): void--><!--Device-AVPlayer-offTimedMetaData(callback?: Callback<AVTimedMetaData>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -2272,19 +1970,19 @@ Register listener to detect time-based metadata, Currently, only the #EXT-X-DATE
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVTimedMetaData](arkts-media-media-avtimedmetadata-i.md)&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVTimedMetaData](arkts-media-media-avtimedmetadata-i.md)&gt; | No | Callback invoked when the event is triggered. <br>Default value:If this parameter is not specified, all callback functions for the event are unsubscribed. |
 
-## onTrackChange
+## offTimeUpdate
 
 ```TypeScript
-onTrackChange(callback: OnTrackChangeHandler): void
+offTimeUpdate(callback?: Callback<int>): void
 ```
 
-Subscribes to track change events. When the track changes, the system notifies the application through the subscribed-to callback. An application can subscribe to only one track change event. When the application initiates multiple subscriptions to this event, the last subscription is applied. The event is triggered when the track changes.
+Unsubscribes from playback position changes.
 
 **Since:** 23
 
-<!--Device-AVPlayer-onTrackChange(callback: OnTrackChangeHandler): void--><!--Device-AVPlayer-onTrackChange(callback: OnTrackChangeHandler): void-End-->
+<!--Device-AVPlayer-offTimeUpdate(callback?: Callback<int>): void--><!--Device-AVPlayer-offTimeUpdate(callback?: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -2292,19 +1990,19 @@ Subscribes to track change events. When the track changes, the system notifies t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnTrackChangeHandler](arkts-media-media-ontrackchangehandler-t.md) | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to return the current time. |
 
-## onTrackInfoUpdate
+## offTrackChange
 
 ```TypeScript
-onTrackInfoUpdate(callback: Callback<Array<MediaDescription>>): void
+offTrackChange(callback?: OnTrackChangeHandler): void
 ```
 
-Subscribes to track information update events. When the track information is updated, the system notifies the application through the subscribed-to callback. An application can subscribe to only one track change event. When the application initiates multiple subscriptions to this event, the last subscription is applied. The event is triggered when the track information is updated.
+Unsubscribes from track change events. The event is triggered when the track changes.
 
 **Since:** 23
 
-<!--Device-AVPlayer-onTrackInfoUpdate(callback: Callback<Array<MediaDescription>>): void--><!--Device-AVPlayer-onTrackInfoUpdate(callback: Callback<Array<MediaDescription>>): void-End-->
+<!--Device-AVPlayer-offTrackChange(callback?: OnTrackChangeHandler): void--><!--Device-AVPlayer-offTrackChange(callback?: OnTrackChangeHandler): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -2312,19 +2010,19 @@ Subscribes to track information update events. When the track information is upd
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [OnTrackChangeHandler](arkts-media-media-ontrackchangehandler-t.md) | No | Callback that has been registered to listen for track changes. |
 
-## onVideoSizeChange
+## offTrackInfoUpdate
 
 ```TypeScript
-onVideoSizeChange(callback: OnVideoSizeChangeHandler): void
+offTrackInfoUpdate(callback?: Callback<Array<MediaDescription>>): void
 ```
 
-Subscribes to video size (width and height) changes. This subscription is supported only in video playback scenarios. By default, this event is reported only once in the prepared state. However, it is also reported upon resolution changes in the case of HLS streams.
+Unsubscribes from track information update events. The event is triggered when the track information is updated.
 
 **Since:** 23
 
-<!--Device-AVPlayer-onVideoSizeChange(callback: OnVideoSizeChangeHandler): void--><!--Device-AVPlayer-onVideoSizeChange(callback: OnVideoSizeChangeHandler): void-End-->
+<!--Device-AVPlayer-offTrackInfoUpdate(callback?: Callback<Array<MediaDescription>>): void--><!--Device-AVPlayer-offTrackInfoUpdate(callback?: Callback<Array<MediaDescription>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -2332,19 +2030,19 @@ Subscribes to video size (width and height) changes. This subscription is suppor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnVideoSizeChangeHandler](arkts-media-media-onvideosizechangehandler-t.md) | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | No | Callback that has been registered to listen for track information updates. |
 
-## onVolumeChange
+## offVideoSizeChange
 
 ```TypeScript
-onVolumeChange(callback: Callback<double>): void
+offVideoSizeChange(callback?: OnVideoSizeChangeHandler): void
 ```
 
-Subscribes to the event to check whether the volume is successfully set.
+Unsubscribes from video size changes.
 
 **Since:** 23
 
-<!--Device-AVPlayer-onVolumeChange(callback: Callback<double>): void--><!--Device-AVPlayer-onVolumeChange(callback: Callback<double>): void-End-->
+<!--Device-AVPlayer-offVideoSizeChange(callback?: OnVideoSizeChangeHandler): void--><!--Device-AVPlayer-offVideoSizeChange(callback?: OnVideoSizeChangeHandler): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -2352,7 +2050,27 @@ Subscribes to the event to check whether the volume is successfully set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;double&gt; | Yes | Callback invoked when the event is triggered. It reports the effective volume. |
+| callback | [OnVideoSizeChangeHandler](arkts-media-media-onvideosizechangehandler-t.md) | No | Callback invoked when the event is triggered. |
+
+## offVolumeChange
+
+```TypeScript
+offVolumeChange(callback?: Callback<double>): void
+```
+
+Unsubscribes from the event that checks whether the volume is successfully set.
+
+**Since:** 23
+
+<!--Device-AVPlayer-offVolumeChange(callback?: Callback<double>): void--><!--Device-AVPlayer-offVolumeChange(callback?: Callback<double>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;double&gt; | No | Callback invoked when the event is triggered. It reports the effective volume. |
 
 ## on('amplitudeUpdate')
 
@@ -2373,7 +2091,7 @@ Subscribes to update events of the maximum audio level value, which is periodica
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'amplitudeUpdate' | Yes | Event type, which is **'amplitudeUpdate'** in this case. The event is triggered when the amplitude changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback invoked when the event is triggered. |
 
 ## on('audioInterrupt')
 
@@ -2396,7 +2114,7 @@ Subscribes to the audio interruption event. When multiple audio and video assets
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | Yes | Event type, which is **'audioInterrupt'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;audio.InterruptEvent&gt; | Yes | Callback invoked when the event is triggered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | Yes | Callback invoked when the event is triggered.<br>**Since:** 12 |
 
 ## on('audioOutputDeviceChangeWithInfo')
 
@@ -2421,7 +2139,7 @@ When subscribing to this event, you are advised to implement the player behavior
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioOutputDeviceChangeWithInfo' | Yes | Event type, which is **'audioOutputDeviceChangeWithInfo'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;audio.AudioStreamDeviceChangeInfo&gt; | Yes | Callback used to return the output device descriptor of the current audio stream and the change reason. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.AudioStreamDeviceChangeInfo&gt; | Yes | Callback used to return the output device descriptor of the current audio stream and the change reason. |
 
 **Error codes:**
 
@@ -2450,7 +2168,7 @@ Subscribes to available bitrates of HLS/DASH streams. This event is reported onl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'availableBitrates' | Yes | Event type, which is **'availableBitrates'** in this case. This event is triggered once after the AVPlayer switches to the prepared state. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback invoked when the event is triggered. It returns an array that holds the available bitrates. If the array length is 0, no bitrate can be set.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback invoked when the event is triggered. It returns an array that holds the available bitrates. If the array length is 0, no bitrate can be set.<br>**Since:** 12 |
 
 ## on('bitrateDone')
 
@@ -2473,7 +2191,7 @@ Subscribes to the event to check whether the bitrate is successfully set.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bitrateDone' | Yes | Event type, which is **'bitrateDone'** in this case. This event is triggered each time **setBitrate()** is called. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. It reports the effective bitrate. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. It reports the effective bitrate. |
 
 ## on('bufferingUpdate')
 
@@ -2523,7 +2241,7 @@ Subscribes to media asset duration changes. It is used to refresh the length of 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'durationUpdate' | Yes | Event type, which is **'durationUpdate'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the resource duration. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the resource duration. |
 
 ## on('endOfStream')
 
@@ -2546,7 +2264,7 @@ Subscribes to the event that indicates the end of the stream being played. If **
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'endOfStream' | Yes | Event type, which is **'endOfStream'** in this case. This event is triggered when the AVPlayer finishes playing the media asset. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
 
 ## on('error')
 
@@ -2569,7 +2287,7 @@ Subscribes to [AVPlayer](arkts-multimedia-media.md) errors. This event is used o
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type, which is **'error'** in this case. This event can be triggered by both user operations and the system. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return the error code ID and error message. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the error code ID and error message. |
 
 **Error codes:**
 
@@ -2619,7 +2337,7 @@ Subscribes to media key system information changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'mediaKeySystemInfoUpdate' | Yes | Event type, which is **'mediaKeySystemInfoUpdate'** in this case. This event is triggered when the copyright protection information of the media asset being played changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;drm.MediaKeySystemInfo&gt;&gt; | Yes | Callback invoked when the event is triggered. It reports a **MediaKeySystemInfo** array.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;drm.MediaKeySystemInfo&gt;&gt; | Yes | Callback invoked when the event is triggered. It reports a **MediaKeySystemInfo** array.<br>**Since:** 12 |
 
 ## on('playbackRateDone')
 
@@ -2665,7 +2383,7 @@ Subscribes to the event to check whether the seek operation takes effect.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'seekDone' | Yes | Event type, which is **'seekDone'** in this case. This event is triggered each time **seek()** is called, except in SEEK_CONTINUOUS mode. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. It reports the time position requested by the user.<br>For video playback, [SeekMode](arkts-media-media-seekmode-e.md) may cause the actual position to be different from that requested by the user. The exact position can be obtained from the **currentTime** property. The time in this callback only means that the requested seek operation is complete. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. It reports the time position requested by the user.<br>For video playback, [SeekMode](arkts-media-media-seekmode-e.md) may cause the actual position to be different from that requested by the user. The exact position can be obtained from the **currentTime** property. The time in this callback only means that the requested seek operation is complete. |
 
 ## on('seiMessageReceived')
 
@@ -2712,7 +2430,7 @@ Subscribes to the event to check whether the playback speed is successfully set.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'speedDone' | Yes | Event type, which is **'speedDone'** in this case. This event is triggered each time **setSpeed()** is called. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the result. When the call of **setSpeed** is successful, the effective speed mode is reported. For details, see [PlaybackSpeed](arkts-media-media-playbackspeed-e.md). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the result. When the call of **setSpeed** is successful, the effective speed mode is reported. For details, see [PlaybackSpeed](arkts-media-media-playbackspeed-e.md). |
 
 ## on('startRenderFrame')
 
@@ -2735,7 +2453,7 @@ Subscribes to the event that indicates rendering starts for the first frame. Thi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'startRenderFrame' | Yes | Event type, which is **'startRenderFrame'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
 
 ## on('stateChange')
 
@@ -2781,7 +2499,7 @@ Subscribes to subtitle update events. When external subtitles exist, the system 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'subtitleUpdate' | Yes | Event type, which is **'subtitleUpdate'** in this case. The event is triggered when the external subtitle is updated. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SubtitleInfo](arkts-media-media-subtitleinfo-i.md)&gt; | Yes | Callback invoked when the subtitle is updated. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SubtitleInfo](arkts-media-media-subtitleinfo-i.md)&gt; | Yes | Callback invoked when the subtitle is updated. |
 
 ## on('superResolutionChanged')
 
@@ -2836,7 +2554,7 @@ Subscribes to playback position changes. It is used to refresh the current posit
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'timeUpdate' | Yes | Event type, which is **'timeUpdate'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the current time. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the current time. |
 
 ## on('trackChange')
 
@@ -2882,7 +2600,7 @@ Subscribes to track information update events. When the track information is upd
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'trackInfoUpdate' | Yes | Event type, which is **'trackInfoUpdate'** in this case. The event is triggered when the track information is updated. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes | Callback invoked when the event is triggered. |
 
 ## on('videoSizeChange')
 
@@ -2928,7 +2646,587 @@ Subscribes to the event to check whether the volume is successfully set.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'volumeChange' | Yes | Event type, which is **'volumeChange'** in this case. This event is triggered each time **setVolume()** is called. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;double&gt; | Yes | Callback invoked when the event is triggered. It reports the effective volume. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;double&gt; | Yes | Callback invoked when the event is triggered. It reports the effective volume. |
+
+## onAmplitudeUpdate
+
+```TypeScript
+onAmplitudeUpdate(callback: Callback<Array<double>>): void
+```
+
+Subscribes to update events of the maximum audio level value, which is periodically reported when audio resources are played. The event is triggered when the amplitude changes.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onAmplitudeUpdate(callback: Callback<Array<double>>): void--><!--Device-AVPlayer-onAmplitudeUpdate(callback: Callback<Array<double>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback invoked when the event is triggered. |
+
+## onAudioInterrupt
+
+```TypeScript
+onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void
+```
+
+Register listens for audio interrupt event, refer to [InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md). The application needs to perform corresponding processing based on different audio interruption events. For details, see Handling Audio Interruption Events.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void--><!--Device-AVPlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | Yes | Callback used to listen for the playback event return audio interrupt info. |
+
+## onAudioOutputDeviceChangeWithInfo
+
+```TypeScript
+onAudioOutputDeviceChangeWithInfo(callback: Callback<audio.AudioStreamDeviceChangeInfo>): void
+```
+
+Subscribes to audio stream output device changes and reasons. This API uses an asynchronous callback to return the result.
+
+When subscribing to this event, you are advised to implement the player behavior when the device is connected or disconnected by referring to Responding to Audio Output Device Changes.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onAudioOutputDeviceChangeWithInfo(callback: Callback<audio.AudioStreamDeviceChangeInfo>): void--><!--Device-AVPlayer-onAudioOutputDeviceChangeWithInfo(callback: Callback<audio.AudioStreamDeviceChangeInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.AudioStreamDeviceChangeInfo&gt; | Yes | Callback used to listen device change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+
+## onAvailableBitrates
+
+```TypeScript
+onAvailableBitrates(callback: Callback<Array<int>>): void
+```
+
+Register listens for available bitrate list collect completed events for HLS protocol stream playback. This event will be reported after the prepare called.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onAvailableBitrates(callback: Callback<Array<int>>): void--><!--Device-AVPlayer-onAvailableBitrates(callback: Callback<Array<int>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback used to listen for the playback event return available bitrate list. It returns an array that holds the available bit rates. If the array length is 0, no bit rate can be set. |
+
+## onBitrateDone
+
+```TypeScript
+onBitrateDone(callback: Callback<int>): void
+```
+
+Subscribes to the event to check whether the bit rate is successfully set.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onBitrateDone(callback: Callback<int>): void--><!--Device-AVPlayer-onBitrateDone(callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. It reports the effective bit rate. |
+
+## onBufferingUpdate
+
+```TypeScript
+onBufferingUpdate(callback: OnBufferingUpdateHandler): void
+```
+
+Subscribes to audio and video buffer changes. This subscription is supported only in network playback scenarios.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onBufferingUpdate(callback: OnBufferingUpdateHandler): void--><!--Device-AVPlayer-onBufferingUpdate(callback: OnBufferingUpdateHandler): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnBufferingUpdateHandler](arkts-media-media-onbufferingupdatehandler-t.md) | Yes | Callback invoked when the event is triggered, and return BufferingInfoType and the value. |
+
+## onDurationUpdate
+
+```TypeScript
+onDurationUpdate(callback: Callback<int>): void
+```
+
+Subscribes to media asset duration changes. It is used to refresh the length of the progress bar. By default, this event is reported once in the prepared state. However, it can be repeatedly reported for special streams that trigger duration changes. The **'durationUpdate'** event is not supported in live mode.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onDurationUpdate(callback: Callback<int>): void--><!--Device-AVPlayer-onDurationUpdate(callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the resource duration. |
+
+## onEndOfStream
+
+```TypeScript
+onEndOfStream(callback: Callback<void>): void
+```
+
+Subscribes to the event that indicates the end of the stream being played. If loop = true is set, the AVPlayer seeks to the beginning of the stream and plays the stream again. If loop is not set, the completed state is reported through the stateChange event.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onEndOfStream(callback: Callback<void>): void--><!--Device-AVPlayer-onEndOfStream(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Register listens for playback error events.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onError(callback: ErrorCallback): void--><!--Device-AVPlayer-onError(callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the playback error event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [5400104](../errorcode-media.md#5400104-operation-timeout) | Time out. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. |
+| [5410002](../errorcode-media.md#5410002-seek-in-seek_continuous-mode-is-not-supported) | Seek continuous unsupported. |
+| [5411001](../errorcode-media.md#5411001-failed-to-parse-or-connect-to-the-server-address) | IO can not find host. |
+| [5411002](../errorcode-media.md#5411002-network-connection-timeout) | IO connection timeout. |
+| [5411003](../errorcode-media.md#5411003-data-or-link-exception-caused-by-network-exceptions) | IO network abnormal. |
+| [5411004](../errorcode-media.md#5411004-network-disabled) | IO network unavailable. |
+| [5411005](../errorcode-media.md#5411005-access-denied) | IO no permission. |
+| [5411006](../errorcode-media.md#5411006-client-request-parameter-is-incorrect-or-exceeds-the-processing-capability) | IO request denied. |
+| [5411007](../errorcode-media.md#5411007-no-resource-available) | IO resource not found. |
+| [5411008](../errorcode-media.md#5411008-server-fails-to-verify-the-client-certificate) | IO SSL client cert needed. |
+| [5411009](../errorcode-media.md#5411009-ssl-connection-failed) | IO SSL connect fail. |
+| [5411010](../errorcode-media.md#5411010-client-fails-to-verify-the-server-certificate) | IO SSL server cert untrusted. |
+| [5411011](../errorcode-media.md#5411011-unsupported-request-due-to-network-protocol-errors) | IO unsupported request. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
+
+## onMediaKeySystemInfoUpdate
+
+```TypeScript
+onMediaKeySystemInfoUpdate( callback: Callback<Array<drm.MediaKeySystemInfo>>): void
+```
+
+Register listens for mediaKeySystemInfoUpdate events.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onMediaKeySystemInfoUpdate( callback: Callback<Array<drm.MediaKeySystemInfo>>): void--><!--Device-AVPlayer-onMediaKeySystemInfoUpdate( callback: Callback<Array<drm.MediaKeySystemInfo>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;drm.MediaKeySystemInfo&gt;&gt; | Yes | Callback invoked when the event is triggered. It reports a **MediaKeySystemInfo** array. |
+
+## onMetricsEvent
+
+```TypeScript
+onMetricsEvent(callback: Callback<Array<AVMetricsEvent>>): void
+```
+
+Subscribes to metric events during playback.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onMetricsEvent(callback: Callback<Array<AVMetricsEvent>>): void--><!--Device-AVPlayer-onMetricsEvent(callback: Callback<Array<AVMetricsEvent>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMetricsEvent](arkts-media-media-avmetricsevent-i.md)&gt;&gt; | Yes | Callback invoked for metric events. This API uses an asynchronous callback to return the result. |
+
+**Examples**
+
+```TypeScript
+async function test(){
+  let avPlayer = await media.createAVPlayer();
+  avPlayer.onMetricsEvent((info: Array<media.AVMetricsEvent>) => {
+    if (info) {
+      for (let i = 0; i < info.length; i++) {
+        console.info('metrics info: index=' + i + ' info=' + JSON.stringify(info));
+      }
+    } else {
+      console.info('metrics info is null');
+    }
+  });
+}
+```
+
+## onPlaybackContentChanged
+
+```TypeScript
+onPlaybackContentChanged(callback: Callback<string>):void
+```
+
+Registers a listener to detect when the playback content has changed. The value carried in the callback function is the ID of the media source that is being played in the playlist.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AVPlayer-onPlaybackContentChanged(callback: Callback<string>):void--><!--Device-AVPlayer-onPlaybackContentChanged(callback: Callback<string>):void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback invoked when the event is triggered. |
+
+## onPlaybackRateDone
+
+```TypeScript
+onPlaybackRateDone(callback: OnPlaybackRateDone): void
+```
+
+Register listens for media playbackRateDone event.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onPlaybackRateDone(callback: OnPlaybackRateDone): void--><!--Device-AVPlayer-onPlaybackRateDone(callback: OnPlaybackRateDone): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnPlaybackRateDone](arkts-media-media-onplaybackratedone-t.md) | Yes | Callback used to listen for the playbackRateDone event. |
+
+## onSeekDone
+
+```TypeScript
+onSeekDone(callback: Callback<int>): void
+```
+
+Subscribes to the event to check whether the seek operation takes effect.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onSeekDone(callback: Callback<int>): void--><!--Device-AVPlayer-onSeekDone(callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. It reports the time position requested by the user. For video playback, SeekMode may cause the actual position to be different from that requested by the user.The exact position can be obtained from the currentTime attribute. The time in this callback only means that the requested seek operation is complete. |
+
+## onSeiMessageReceived
+
+```TypeScript
+onSeiMessageReceived(payloadTypes: Array<int>, callback: OnSeiMessageHandle): void
+```
+
+Subscribes to events indicating that a Supplemental Enhancement Information (SEI) message is received. This applies only to HTTP-FLV live streaming and is triggered when SEI messages are present in the video stream. You must initiate the subscription before calling prepare. If you initiate multiple subscriptions to this event, the last subscription is applied.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onSeiMessageReceived(payloadTypes: Array<int>, callback: OnSeiMessageHandle): void--><!--Device-AVPlayer-onSeiMessageReceived(payloadTypes: Array<int>, callback: OnSeiMessageHandle): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| payloadTypes | Array&lt;int&gt; | Yes | Array of subscribed-to payload types of SEI messages. Currently, only payloadType = 5 is supported. |
+| callback | [OnSeiMessageHandle](arkts-media-media-onseimessagehandle-t.md) | Yes | Callback used to listen for SEI message events and receive the subscribed-to payload types. |
+
+## onSpeedDone
+
+```TypeScript
+onSpeedDone(callback: Callback<int>): void
+```
+
+Subscribes to the event to check whether the playback speed is successfully set.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onSpeedDone(callback: Callback<int>): void--><!--Device-AVPlayer-onSpeedDone(callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the result. When the call of setSpeed is successful, the effective speed mode is reported. For details, see PlaybackSpeed. |
+
+## onStartRenderFrame
+
+```TypeScript
+onStartRenderFrame(callback: Callback<void>): void
+```
+
+Subscribes to the event that indicates rendering starts for the first frame. This subscription is supported only in video playback scenarios. This event only means that the playback service sends the first frame to the display module. The actual rendering effect depends on the rendering performance of the display service.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onStartRenderFrame(callback: Callback<void>): void--><!--Device-AVPlayer-onStartRenderFrame(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
+
+## onStateChange
+
+```TypeScript
+onStateChange(callback: OnAVPlayerStateChangeHandle): void
+```
+
+Register listens for media playback stateChange event. This event can be triggered by both user operations and the system.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onStateChange(callback: OnAVPlayerStateChangeHandle): void--><!--Device-AVPlayer-onStateChange(callback: OnAVPlayerStateChangeHandle): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnAVPlayerStateChangeHandle](arkts-media-media-onavplayerstatechangehandle-t.md) | Yes | Callback invoked when the event is triggered. |
+
+## onSubtitleUpdate
+
+```TypeScript
+onSubtitleUpdate(callback: Callback<SubtitleInfo>): void
+```
+
+Subscribes to subtitle update events. When external subtitles exist, the system notifies the application through the subscribed-to callback. An application can subscribe to only one subtitle update event. When the application initiates multiple subscriptions to this event, the last subscription is applied. The event is triggered when the external subtitle is updated.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onSubtitleUpdate(callback: Callback<SubtitleInfo>): void--><!--Device-AVPlayer-onSubtitleUpdate(callback: Callback<SubtitleInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SubtitleInfo](arkts-media-media-subtitleinfo-i.md)&gt; | Yes | Callback invoked when the subtitle is updated. |
+
+## onSuperResolutionChanged
+
+```TypeScript
+onSuperResolutionChanged(callback: OnSuperResolutionChanged): void
+```
+
+Subscribes to the event indicating that super resolution is enabled or disabled. The event is triggered when super resolution is enabled or disabled.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onSuperResolutionChanged(callback: OnSuperResolutionChanged): void--><!--Device-AVPlayer-onSuperResolutionChanged(callback: OnSuperResolutionChanged): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnSuperResolutionChanged](arkts-media-media-onsuperresolutionchanged-t.md) | Yes | Callback used to listen for the super-resolution changed event. |
+
+## onTimedMetaData
+
+```TypeScript
+onTimedMetaData(callback: Callback<AVTimedMetaData>): void
+```
+
+Register listener to detect time-based metadata, Currently, only the #EXT-X-DATERANGE data of HLS and the Event Streams information of DASH are supported.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AVPlayer-onTimedMetaData(callback: Callback<AVTimedMetaData>): void--><!--Device-AVPlayer-onTimedMetaData(callback: Callback<AVTimedMetaData>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVTimedMetaData](arkts-media-media-avtimedmetadata-i.md)&gt; | Yes | Callback invoked when the event is triggered. |
+
+## onTimeUpdate
+
+```TypeScript
+onTimeUpdate(callback: Callback<int>): void
+```
+
+Subscribes to playback position changes. It is used to refresh the current position of the progress bar. By default, this event is reported every 100 ms. However, it is reported immediately upon a successful seek operation.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onTimeUpdate(callback: Callback<int>): void--><!--Device-AVPlayer-onTimeUpdate(callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the current time. |
+
+## onTrackChange
+
+```TypeScript
+onTrackChange(callback: OnTrackChangeHandler): void
+```
+
+Subscribes to track change events. When the track changes, the system notifies the application through the subscribed-to callback. An application can subscribe to only one track change event. When the application initiates multiple subscriptions to this event, the last subscription is applied. The event is triggered when the track changes.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onTrackChange(callback: OnTrackChangeHandler): void--><!--Device-AVPlayer-onTrackChange(callback: OnTrackChangeHandler): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnTrackChangeHandler](arkts-media-media-ontrackchangehandler-t.md) | Yes | Callback invoked when the event is triggered. |
+
+## onTrackInfoUpdate
+
+```TypeScript
+onTrackInfoUpdate(callback: Callback<Array<MediaDescription>>): void
+```
+
+Subscribes to track information update events. When the track information is updated, the system notifies the application through the subscribed-to callback. An application can subscribe to only one track change event. When the application initiates multiple subscriptions to this event, the last subscription is applied. The event is triggered when the track information is updated.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onTrackInfoUpdate(callback: Callback<Array<MediaDescription>>): void--><!--Device-AVPlayer-onTrackInfoUpdate(callback: Callback<Array<MediaDescription>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes | Callback invoked when the event is triggered. |
+
+## onVideoSizeChange
+
+```TypeScript
+onVideoSizeChange(callback: OnVideoSizeChangeHandler): void
+```
+
+Subscribes to video size (width and height) changes. This subscription is supported only in video playback scenarios. By default, this event is reported only once in the prepared state. However, it is also reported upon resolution changes in the case of HLS streams.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onVideoSizeChange(callback: OnVideoSizeChangeHandler): void--><!--Device-AVPlayer-onVideoSizeChange(callback: OnVideoSizeChangeHandler): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnVideoSizeChangeHandler](arkts-media-media-onvideosizechangehandler-t.md) | Yes | Callback invoked when the event is triggered. |
+
+## onVolumeChange
+
+```TypeScript
+onVolumeChange(callback: Callback<double>): void
+```
+
+Subscribes to the event to check whether the volume is successfully set.
+
+**Since:** 23
+
+<!--Device-AVPlayer-onVolumeChange(callback: Callback<double>): void--><!--Device-AVPlayer-onVolumeChange(callback: Callback<double>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;double&gt; | Yes | Callback invoked when the event is triggered. It reports the effective volume. |
 
 ## pause
 
@@ -2950,13 +3248,143 @@ Pauses audio and video playback. This API can be called only when the AVPlayer i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// asyncallback.
+videoRecorder.pause((err: BusinessError) => {
+  if (err == null) {
+    console.info('pause videorecorder success');
+  } else {
+    console.error('pause videorecorder failed and error is ' + err.message);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// promise.
+videoRecorder.pause().then(() => {
+  console.info('pause videorecorder success');
+}).catch((err: BusinessError) => {
+  console.error('pause videorecorder failed and catch error is ' + err.message);
+});
+```
+
+```TypeScript
+audioPlayer.on('pause', () => {    // Set the 'pause' event callback.
+  console.info('audio pause called');
+});
+audioPlayer.pause();
+```
+
+```TypeScript
+audioRecorder.on('pause', () => {    // Set the 'pause' event callback.
+  console.info('audio recorder pause called');
+});
+audioRecorder.pause();
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the playing state before proceeding.
+  avPlayer.pause((err: BusinessError) => {
+    if (err) {
+      console.error('Failed to pause,error message is :' + err.message);
+    } else {
+      console.info('Succeeded in pausing');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the playing state before proceeding.
+  avPlayer.pause().then(() => {
+    console.info('Succeeded in pausing');
+  }, (err: BusinessError) => {
+    console.error('Failed to pause,error message is :' + err.message);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avRecorder.pause((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to pause AVRecorder and error is: Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Succeeded in pausing');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avRecorder.pause().then(() => {
+  console.info('Succeeded in pausing');
+}).catch((err: Error) => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to pause AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+async function test() {
+  // Create an AVTranscoder instance.
+  let avTranscoder = await media.createAVTranscoder();
+  avTranscoder.pause().then(() => {
+    console.info('pause AVTranscoder success');
+  }).catch((err: BusinessError) => {
+    console.error('pause AVTranscoder failed and catch error is ' + err.message);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.pause((err: BusinessError) => {
+  if (err) {
+    console.error('Failed to pause!');
+  } else {
+    console.info('Succeeded in pausing!');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.pause().then(() => {
+  console.info('Succeeded in pausing');
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error:${error}`);
+});
+```
 
 ## pause
 
@@ -2986,6 +3414,10 @@ Pauses audio and video playback. This API can be called only when the AVPlayer i
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 
+**Examples**
+
+See [pause](#pause)
+
 ## play
 
 ```TypeScript
@@ -3006,13 +3438,74 @@ Starts to play an audio and video asset. This API can be called only when the AV
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+
+**Examples**
+
+```TypeScript
+audioPlayer.on('play', () => {    // Set the 'play' event callback.
+  console.info('audio play called');
+});
+audioPlayer.play();
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, paused, or completed state before proceeding.
+  avPlayer.play((err: BusinessError) => {
+    if (err) {
+      console.error('Failed to play,error message is :' + err.message);
+    } else {
+      console.info('Succeeded in playing');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, paused, or completed state before proceeding.
+  avPlayer.play().then(() => {
+    console.info('Succeeded in playing');
+  }, (err: BusinessError) => {
+    console.error('Failed to play,error message is :' + err.message);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.play((err: BusinessError) => {
+  if (err) {
+    console.error('Failed to play!');
+  } else {
+    console.info('Succeeded in playing!');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.play().then(() => {
+  console.info('Succeeded in playing');
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error:${error}`);
+});
+```
 
 ## play
 
@@ -3042,6 +3535,10 @@ Starts to play an audio and video asset. This API can be called only when the AV
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 
+**Examples**
+
+See [play](#play)
+
 ## prepare
 
 ```TypeScript
@@ -3062,7 +3559,7 @@ Prepares for audio and video playback. This API can be called only when the AVPl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -3070,6 +3567,243 @@ Prepares for audio and video playback. This API can be called only when the AVPl
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Return by callback. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Configure the parameters based on those supported by the hardware device.
+let videoProfile: media.VideoRecorderProfile = {
+  audioBitrate : 48000,
+  audioChannels : 2,
+  audioCodec : media.CodecMimeType.AUDIO_AAC,
+  audioSampleRate : 48000,
+  fileFormat : media.ContainerFormatType.CFT_MPEG_4,
+  videoBitrate : 2000000,
+  videoCodec : media.CodecMimeType.VIDEO_AVC,
+  videoFrameWidth : 640,
+  videoFrameHeight : 480,
+  videoFrameRate : 30
+}
+
+let videoConfig: media.VideoRecorderConfig = {
+  audioSourceType : media.AudioSourceType.AUDIO_SOURCE_TYPE_MIC,
+  videoSourceType : media.VideoSourceType.VIDEO_SOURCE_TYPE_SURFACE_YUV,
+  profile : videoProfile,
+  url : 'fd://xx', // The file must be created by the caller and granted with proper permissions.
+  rotation : 0,
+  location : { latitude : 30, longitude : 130 }
+}
+
+// asyncallback.
+videoRecorder.prepare(videoConfig, (err: BusinessError) => {
+  if (err == null) {
+    console.info('prepare success');
+  } else {
+    console.error('prepare failed and error is ' + err.message);
+  }
+})
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Configure the parameters based on those supported by the hardware device.
+let videoProfile: media.VideoRecorderProfile = {
+  audioBitrate : 48000,
+  audioChannels : 2,
+  audioCodec : media.CodecMimeType.AUDIO_AAC,
+  audioSampleRate : 48000,
+  fileFormat : media.ContainerFormatType.CFT_MPEG_4,
+  videoBitrate : 2000000,
+  videoCodec : media.CodecMimeType.VIDEO_AVC,
+  videoFrameWidth : 640,
+  videoFrameHeight : 480,
+  videoFrameRate : 30
+}
+
+let videoConfig: media.VideoRecorderConfig = {
+  audioSourceType : media.AudioSourceType.AUDIO_SOURCE_TYPE_MIC,
+  videoSourceType : media.VideoSourceType.VIDEO_SOURCE_TYPE_SURFACE_YUV,
+  profile : videoProfile,
+  url : 'fd://xx', // The file must be created by the caller and granted with proper permissions.
+  rotation : 0,
+  location : { latitude : 30, longitude : 130 }
+}
+
+// promise.
+videoRecorder.prepare(videoConfig).then(() => {
+  console.info('prepare success');
+}).catch((err: BusinessError) => {
+  console.error('prepare failed and catch error is ' + err.message);
+});
+```
+
+```TypeScript
+let audioRecorderConfig: media.AudioRecorderConfig = {
+  audioEncoder : media.AudioEncoder.AAC_LC,
+  audioEncodeBitRate : 64000,
+  audioSampleRate : 44100,
+  numberOfChannels : 2,
+  format : media.AudioOutputFormat.AAC_ADTS,
+  uri : 'fd://1',       // The file must be created by the caller and granted with proper permissions.
+  location : { latitude : 30, longitude : 130},
+};
+audioRecorder.on('prepare', () => {    // Set the 'prepare' event callback.
+  console.info('prepare called');
+});
+audioRecorder.prepare(audioRecorderConfig);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized state before proceeding.
+  avPlayer.prepare((err: BusinessError) => {
+    if (err) {
+      console.error('Failed to prepare,error message is :' + err.message);
+    } else {
+      console.info('Succeeded in preparing');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized state before proceeding.
+  avPlayer.prepare().then(() => {
+    console.info('Succeeded in preparing');
+  }, (err: BusinessError) => {
+    console.error('Failed to prepare,error message is :' + err.message);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Configure the parameters based on those supported by the hardware device.
+let avRecorderProfile: media.AVRecorderProfile = {
+  audioBitrate : 48000,
+  audioChannels : 2,
+  audioCodec : media.CodecMimeType.AUDIO_AAC,
+  audioSampleRate : 48000,
+  fileFormat : media.ContainerFormatType.CFT_MPEG_4,
+  videoBitrate : 2000000,
+  videoCodec : media.CodecMimeType.VIDEO_AVC,
+  videoFrameWidth : 640,
+  videoFrameHeight : 480,
+  videoFrameRate : 30
+};
+let videoMetaData: media.AVMetadata = {
+  videoOrientation: '0' // The value can be 0, 90, 180, or 270. If any other value is used, prepare() reports an error.
+};
+let avRecorderConfig: media.AVRecorderConfig = {
+  audioSourceType : media.AudioSourceType.AUDIO_SOURCE_TYPE_MIC,
+  videoSourceType : media.VideoSourceType.VIDEO_SOURCE_TYPE_SURFACE_YUV,
+  profile : avRecorderProfile,
+  url : 'fd://', // Before passing an FD to this parameter, the file must be created by the caller and granted with the read and write permissions. Example value: fd://45.
+  metadata: videoMetaData,
+  location : { latitude : 30, longitude : 130 }
+};
+
+avRecorder.prepare(avRecorderConfig, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to prepare and error is: Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Succeeded in preparing');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Configure the parameters based on those supported by the hardware device.
+let avRecorderProfile: media.AVRecorderProfile = {
+  audioBitrate : 48000,
+  audioChannels : 2,
+  audioCodec : media.CodecMimeType.AUDIO_AAC,
+  audioSampleRate : 48000,
+  fileFormat : media.ContainerFormatType.CFT_MPEG_4,
+  videoBitrate : 2000000,
+  videoCodec : media.CodecMimeType.VIDEO_AVC,
+  videoFrameWidth : 640,
+  videoFrameHeight : 480,
+  videoFrameRate : 30
+};
+let videoMetaData: media.AVMetadata = {
+  videoOrientation: '0' // The value can be 0, 90, 180, or 270. If any other value is used, prepare() reports an error.
+};
+let avRecorderConfig: media.AVRecorderConfig = {
+  audioSourceType : media.AudioSourceType.AUDIO_SOURCE_TYPE_MIC,
+  videoSourceType : media.VideoSourceType.VIDEO_SOURCE_TYPE_SURFACE_YUV,
+  profile : avRecorderProfile,
+  url : 'fd://',  // Before passing an FD to this parameter, the file must be created by the caller and granted with the read and write permissions. Example value: fd://45.
+  metadata : videoMetaData,
+  location : { latitude : 30, longitude : 130 }
+};
+
+avRecorder.prepare(avRecorderConfig).then(() => {
+  console.info('Succeeded in preparing');
+}).catch((err: Error) => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to prepare and error is: Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+async function test() {
+  // Create an AVTranscoder instance.
+  let avTranscoder = await media.createAVTranscoder();
+  // Configure the parameters based on those supported by the hardware device.
+  let avTranscoderConfig: media.AVTranscoderConfig = {
+    audioBitrate : 200000,
+    audioCodec : media.CodecMimeType.AUDIO_AAC,
+    fileFormat : media.ContainerFormatType.CFT_MPEG_4,
+    videoBitrate : 3000000,
+    videoCodec : media.CodecMimeType.VIDEO_AVC,
+  };
+
+  avTranscoder.prepare(avTranscoderConfig).then(() => {
+    console.info('prepare success');
+  }).catch((err: BusinessError) => {
+    console.error('prepare failed and catch error is ' + err.message);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.prepare((err: BusinessError) => {
+  if (err) {
+    console.error('Failed to prepare!');
+  } else {
+    console.info('Succeeded in preparing!');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.prepare().then(() => {
+  console.info('Succeeded in preparing');
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error:${error}`);
+});
+```
 
 ## prepare
 
@@ -3102,6 +3836,10 @@ If your application frequently switches between short videos, you can create mul
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Return by promise. |
 
+**Examples**
+
+See [prepare](#prepare)
+
 ## release
 
 ```TypeScript
@@ -3122,13 +3860,248 @@ Releases the playback resources. This API can be called when the AVPlayer is in 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// asyncallback.
+videoRecorder.release((err: BusinessError) => {
+  if (err == null) {
+    console.info('release videorecorder success');
+  } else {
+    console.error('release videorecorder failed and error is ' + err.message);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// promise.
+videoRecorder.release().then(() => {
+  console.info('release videorecorder success');
+}).catch((err: BusinessError) => {
+  console.error('release videorecorder failed and catch error is ' + err.message);
+});
+```
+
+```TypeScript
+audioPlayer.release();
+audioPlayer = undefined;
+```
+
+```TypeScript
+audioRecorder.on('release', () => {    // Set the 'release' event callback.
+  console.info('audio recorder release called');
+});
+audioRecorder.release();
+audioRecorder = undefined;
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+let avImageGenerator: media.AVImageGenerator | undefined = undefined;
+
+// Release the resources.
+media.createAVImageGenerator((err: BusinessError, generator: media.AVImageGenerator) => {
+  if (generator != null) {
+    avImageGenerator = generator;
+    console.info(`Succeeded in creating AVImageGenerator`);
+    avImageGenerator.release((error: BusinessError) => {
+      if (error) {
+        console.error(`Failed to release, err = ${JSON.stringify(error)}`);
+        return;
+      }
+      console.info(`Succeeded in releasing`);
+    });
+  } else {
+    console.error(`Failed to create AVImageGenerator, error message:${err.message}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+let avImageGenerator: media.AVImageGenerator | undefined = undefined;
+
+// Release the resources.
+media.createAVImageGenerator((err: BusinessError, generator: media.AVImageGenerator) => {
+  if (generator != null) {
+    avImageGenerator = generator;
+    console.info(`Succeeded in creating AVImageGenerator`);
+    avImageGenerator.release().then(() => {
+      console.info(`Succeeded in releasing.`);
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to release, error message:${error.message}`);
+    });
+  } else {
+    console.error(`Failed to create AVImageGenerator, error message:${err.message}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+async function test() {
+  // Create an AVMetadataExtractor instance.
+  let avMetadataExtractor: media.AVMetadataExtractor = await media.createAVMetadataExtractor();
+  avMetadataExtractor.release((error: BusinessError) => {
+    if (error) {
+      console.error(`Failed to release, err = ${JSON.stringify(error)}`);
+      return;
+    }
+    console.info(`Succeeded in releasing.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+async function test() {
+  // Create an AVMetadataExtractor instance.
+  let avMetadataExtractor: media.AVMetadataExtractor = await media.createAVMetadataExtractor();
+  avMetadataExtractor.release().then(() => {
+    console.info(`Succeeded in releasing.`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release, error message:${error.message}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach a state other than released before proceeding.
+  avPlayer.release((err: BusinessError) => {
+    if (err) {
+      console.error('Failed to release,error message is :' + err.message);
+    } else {
+      console.info('Succeeded in releasing');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach a state other than released before proceeding.
+  avPlayer.release().then(() => {
+    console.info('Succeeded in releasing');
+  }, (err: BusinessError) => {
+    console.error('Failed to release,error message is :' + err.message);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avRecorder.release((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to release AVRecorder and error is: Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Succeeded in releasing AVRecorder');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avRecorder.release().then(() => {
+  console.info('Succeeded in releasing AVRecorder');
+}).catch((err: Error) => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to release AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Initialize avScreenCaptureRecorder.
+let avScreenCaptureRecorder: media.AVScreenCaptureRecorder | undefined;
+media.createAVScreenCaptureRecorder().then((captureRecorder: media.AVScreenCaptureRecorder) => {
+  if (captureRecorder != null) {
+    avScreenCaptureRecorder = captureRecorder;
+    console.info('Succeeded in creating avScreenCaptureRecorder');
+  } else {
+    console.error('Failed to create avScreenCaptureRecorder');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`createAVScreenCaptureRecorder catchCallback, error message:${error.message}`);
+});
+
+// Other processes.
+
+// Call the release method.
+if (avScreenCaptureRecorder != undefined) {
+  avScreenCaptureRecorder.release().then(() => {
+    console.info('Succeeded in releasing avScreenCaptureRecorder');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to release avScreenCaptureRecorder. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+async function test() {
+  // Create an AVTranscoder instance.
+  let avTranscoder = await media.createAVTranscoder();
+  avTranscoder.release().then(() => {
+    console.info('release AVTranscoder success');
+  }).catch((err: BusinessError) => {
+    console.error('release AVTranscoder failed and catch error is ' + err.message);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.release((err: BusinessError) => {
+  if (err) {
+    console.error('Failed to release!');
+  } else {
+    console.info('Succeeded in releasing!');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.release().then(() => {
+  console.info('Succeeded in releasing');
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error:${error}`);
+});
+```
 
 ## release
 
@@ -3157,6 +4130,10 @@ Releases the playback resources. This API can be called when the AVPlayer is in 
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
+
+**Examples**
+
+See [release](#release)
 
 ## removePlaybackMediaSource
 
@@ -3215,13 +4192,128 @@ Resets audio and video playback. This API can be called only when the AVPlayer i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// asyncallback.
+videoRecorder.reset((err: BusinessError) => {
+  if (err == null) {
+    console.info('reset videorecorder success');
+  } else {
+    console.error('reset videorecorder failed and error is ' + err.message);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// promise.
+videoRecorder.reset().then(() => {
+  console.info('reset videorecorder success');
+}).catch((err: BusinessError) => {
+  console.error('reset videorecorder failed and catch error is ' + err.message);
+});
+```
+
+```TypeScript
+audioPlayer.on('reset', () => {    // Set the 'reset' event callback.
+  console.info('audio reset called');
+});
+audioPlayer.reset();
+```
+
+```TypeScript
+audioRecorder.on('reset', () => {    // Set the 'reset' event callback.
+  console.info('audio recorder reset called');
+});
+audioRecorder.reset();
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized, prepared, playing, paused, completed, stopped, or error state before proceeding.
+  avPlayer.reset((err: BusinessError) => {
+    if (err) {
+      console.error('Failed to reset,error message is :' + err.message);
+    } else {
+      console.info('Succeeded in resetting');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized, prepared, playing, paused, completed, stopped, or error state before proceeding.
+  avPlayer.reset().then(() => {
+    console.info('Succeeded in resetting');
+  }, (err: BusinessError) => {
+    console.error('Failed to reset,error message is :' + err.message);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avRecorder.reset((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to reset AVRecorder and error is: Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Succeeded in resetting AVRecorder');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avRecorder.reset().then(() => {
+  console.info('Succeeded in resetting AVRecorder');
+}).catch((err: Error) => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to reset AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.reset((err: BusinessError) => {
+  if (err) {
+    console.error('Failed to reset!');
+  } else {
+    console.info('Succeeded in resetting!');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.reset().then(() => {
+  console.info('Succeeded in resetting');
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error:${error}`);
+});
+```
 
 ## reset
 
@@ -3251,6 +4343,10 @@ Resets audio and video playback. This API can be called only when the AVPlayer i
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 
+**Examples**
+
+See [reset](#reset)
+
 ## seek
 
 ```TypeScript
@@ -3279,6 +4375,116 @@ Seeks to the specified playback position. This API can be called only when the A
 | --- | --- | --- | --- |
 | timeMs | int | Yes | Position to seek to, in ms. The value range is [0, [duration](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md)].<br>When the seek mode is [SEEK_CONTINUOUS](arkts-media-media-seekmode-e.md), you can set this parameter to **-1** to end the **SEEK_CONTINUOUS** mode. |
 | mode | SeekMode | No | Seek mode based on the video I frame. The default value is **SEEK_PREV_SYNC**. **Set this parameter only for video playback. |
+
+**Examples**
+
+```TypeScript
+audioPlayer.on('timeUpdate', (seekDoneTime: number) => {    // Set the 'timeUpdate' event callback.
+  if (seekDoneTime == null) {
+    console.error('Failed to seek');
+    return;
+  }
+  console.info('Succeeded in seek. seekDoneTime: ' + seekDoneTime);
+});
+audioPlayer.seek(30000); // Seek to 30000 ms.
+```
+
+```TypeScript
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  let seekTime: number = 1000;
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, paused, or completed state before proceeding.
+  avPlayer.seek(seekTime, media.SeekMode.SEEK_PREV_SYNC);
+}
+```
+
+```TypeScript
+async function  test(){
+  // Use SEEK_CONTINUOUS with the onChange callback of the Slider. When slideMode is Moving, it triggers continuous seeking during the drag.
+  let avPlayer = await media.createAVPlayer();
+  let slideMovingTime: number = 2000;
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, paused, or completed state before proceeding.
+  avPlayer.seek(slideMovingTime, media.SeekMode.SEEK_CONTINUOUS);
+
+  // To end the seek when slideMode is End, call seek(-1, media.SeekMode.SEEK_CONTINUOUS).
+  avPlayer.seek(-1, media.SeekMode.SEEK_CONTINUOUS);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let videoPlayer: media.VideoPlayer;
+media.createVideoPlayer((error: BusinessError, video: media.VideoPlayer) => {
+  if (video != null) {
+    videoPlayer = video;
+    console.info('Succeeded in creating VideoPlayer');
+  } else {
+    console.error(`Failed to create VideoPlayer, error:${error}`);
+  }
+});
+
+let seekTime: number = 5000;
+videoPlayer.seek(seekTime, (err: BusinessError, result: number) => {
+  if (err) {
+    console.error('Failed to do seek!');
+  } else {
+    console.info('Succeeded in doing seek!');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let videoPlayer: media.VideoPlayer | null = null;
+media.createVideoPlayer((error: BusinessError, video: media.VideoPlayer) => {
+  if (video != null) {
+    videoPlayer = video;
+    console.info('Succeeded in creating VideoPlayer');
+  } else {
+    console.error(`Failed to create VideoPlayer, error:${error}`);
+  }
+});
+let seekTime: number = 5000;
+if (videoPlayer) {
+  (videoPlayer as media.VideoPlayer).seek(seekTime, media.SeekMode.SEEK_NEXT_SYNC, (err: BusinessError, result: number) => {
+    if (err) {
+      console.error('Failed to do seek!');
+    } else {
+      console.info('Succeeded in doing seek!');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let videoPlayer: media.VideoPlayer | null = null;
+media.createVideoPlayer((error: BusinessError, video: media.VideoPlayer) => {
+  if (video != null) {
+    videoPlayer = video;
+    console.info('Succeeded in creating VideoPlayer');
+  } else {
+    console.error(`Failed to create VideoPlayer, error:${error}`);
+  }
+});
+let seekTime: number = 5000;
+if (videoPlayer) {
+  (videoPlayer as media.VideoPlayer).seek(seekTime).then((seekDoneTime: number) => { // seekDoneTime indicates the position after the seek operation is complete.
+    console.info('Succeeded in doing seek');
+  }).catch((error: BusinessError) => {
+    console.error(`video catchCallback, error:${error}`);
+  });
+
+  (videoPlayer as media.VideoPlayer).seek(seekTime, media.SeekMode.SEEK_NEXT_SYNC).then((seekDoneTime: number) => {
+    console.info('Succeeded in doing seek');
+  }).catch((error: BusinessError) => {
+    console.error(`video catchCallback, error:${error}`);
+  });
+}
+```
 
 ## seekToDefaultPosition
 
@@ -3340,6 +4546,32 @@ Selects a track when the AVPlayer plays multimedia resources with multiple audio
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Return by promise. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer: media.AVPlayer = await media.createAVPlayer();
+  let audioTrackIndex: Object = 0;
+  avPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
+    if (arrList != null) {
+      for (let i = 0; i < arrList.length; i++) {
+        if (i != 0) {
+          // Obtain the audio track list.
+          audioTrackIndex = arrList[i][media.MediaDescriptionKey.MD_KEY_TRACK_INDEX];
+        }
+      }
+    } else {
+      console.error(`Failed to get TrackDescription, error:${error}`);
+    }
+  });
+
+  // Select an audio track.
+  avPlayer.selectTrack(parseInt(audioTrackIndex.toString()));
+}
+```
+
 ## setBitrate
 
 ```TypeScript
@@ -3361,6 +4593,17 @@ Sets the bitrate for the streaming media. This API is valid only for HLS/DASH st
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bitrate | int | Yes | Bitrate to set. You can obtain the available bitrates of the current HLS/DASH stream by subscribing to the [availableBitrates](#onmediakeysysteminfoupdate) event. If the bitrate to set is not in the list of the available bitrates, the AVPlayer selects from the list the bitrate that is closed to the bitrate to set. If the length of the available bitrate list obtained through the event is 0, no bitrate can be set and the **bitrateDone** callback will not be triggered. |
+
+**Examples**
+
+```TypeScript
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  let bitrate: number = 96000;
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, paused, or completed state before proceeding.
+  avPlayer.setBitrate(bitrate);
+}
+```
 
 ## setDecryptionConfig
 
@@ -3390,6 +4633,27 @@ Sets the decryption configuration. When receiving an [on('mediaKeySystemInfoUpda
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
+
+**Examples**
+
+For details about the DRM module, see [@ohos.multimedia.drm](../apis-drm-kit/arkts-apis-drm.md).
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Create a media key system.
+  let keySystem:drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+  // Create a media key session.
+  let keySession:drm.MediaKeySession = keySystem.createMediaKeySession(drm.ContentProtectionLevel.CONTENT_PROTECTION_LEVEL_SW_CRYPTO);
+  // Generate a media key request and set the response to the media key request.
+  // Flag indicating whether a secure video channel is used.
+  let secureVideoPath:boolean = false;
+  // Set the decryption configuration.
+  avPlayer.setDecryptionConfig(keySession, secureVideoPath);
+}
+```
 
 ## setLoudnessGain
 
@@ -3426,6 +4690,23 @@ Sets the loudness gain of the AVPlayer. After this API is called, the loudness g
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+async function test(){
+  let avPlayer = await media.createAVPlayer();
+
+  let loudnessGain: number = 1.0;
+  avPlayer.audioRendererInfo = {
+    usage: audio.StreamUsage.STREAM_USAGE_MOVIE,
+    rendererFlags: 0
+  }
+  avPlayer.setLoudnessGain(loudnessGain);
+}
+```
 
 ## setMediaMuted
 
@@ -3465,6 +4746,23 @@ This API can be called only when the AVPlayer is in the prepared, playing, pause
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Return by promise. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized state before proceeding.
+  avPlayer.prepare().then(() => {
+    console.info('Succeeded in preparing');
+    avPlayer.setMediaMuted(media.MediaType.MEDIA_TYPE_AUD, true);
+  }, (err: BusinessError) => {
+    console.error('Failed to prepare,error message is :' + err.message);
+  });
+}
+```
+
 ## setMediaSource
 
 ```TypeScript
@@ -3500,6 +4798,25 @@ Sets a source of streaming media that can be pre-downloaded, downloads the media
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
+
+**Examples**
+
+```TypeScript
+async function test(){
+  let player = await media.createAVPlayer();
+  let headers: Record<string, string> = {"User-Agent" : "User-Agent-Value"};
+  let mediaSource : media.MediaSource = media.createMediaSourceWithUrl("http://xxx",  headers);
+  let playStrategy : media.PlaybackStrategy = {
+    preferredWidth: 1,
+    preferredHeight: 2,
+    preferredBufferDuration: 3,
+    preferredHdr: false,
+    preferredBufferDurationForPlaying: 1,
+    thresholdForAutoQuickPlay: 5
+  };
+  player.setMediaSource(mediaSource, playStrategy);
+}
+```
 
 ## setPlaybackRange
 
@@ -3538,6 +4855,21 @@ Sets the playback range and seeks to the start position of the range based on th
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Return by promise. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  avPlayer.setPlaybackRange(0, 6000, media.SeekMode.SEEK_CLOSEST).then(() => {
+    console.info('Succeeded setPlaybackRange');
+  }).catch((err: BusinessError) => {
+    console.error('Failed to setPlaybackRange' + err.message);
+  });
+}
+```
+
 ## setPlaybackRate
 
 ```TypeScript
@@ -3570,6 +4902,16 @@ Set playback rate. Sets the playback rate. This API can be called only when the 
 | --- | --- |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | The parameter check failed, parameter value out of range. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed, if invalid state or live stream. |
+
+**Examples**
+
+```TypeScript
+async function test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, paused, or completed state before proceeding.
+  avPlayer.setPlaybackRate(2.0);
+}
+```
 
 ## setPlaybackStrategy
 
@@ -3606,6 +4948,27 @@ Sets a playback strategy. This API can be called only when the AVPlayer is in th
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 
+**Examples**
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+
+let player = await media.createAVPlayer();
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let fileDescriptor = await context.resourceManager.getRawFd('xxx.mp4');
+player.fdSrc = fileDescriptor
+let playStrategy : media.PlaybackStrategy = {
+  preferredWidth: 1,
+  preferredHeight: 2,
+  preferredBufferDuration: 3,
+  preferredHdr: false,
+  mutedMediaType: media.MediaType.MEDIA_TYPE_AUD,
+  preferredBufferDurationForPlaying: 1,
+  thresholdForAutoQuickPlay: 5
+};
+player.setPlaybackStrategy(playStrategy);
+```
+
 ## setSpeed
 
 ```TypeScript
@@ -3631,6 +4994,62 @@ Sets the playback speed. This API can be called only when the AVPlayer is in the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | speed | PlaybackSpeed | Yes | Playback speed to set. |
+
+**Examples**
+
+```TypeScript
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, paused, or completed state before proceeding.
+  avPlayer.setSpeed(media.PlaybackSpeed.SPEED_FORWARD_2_00_X);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let videoPlayer: media.VideoPlayer | null = null;
+media.createVideoPlayer((error: BusinessError, video: media.VideoPlayer) => {
+  if (video != null) {
+    videoPlayer = video;
+    console.info('Succeeded in creating VideoPlayer');
+  } else {
+    console.error(`Failed to create VideoPlayer, error:${error}`);
+  }
+});
+let speed = media.PlaybackSpeed.SPEED_FORWARD_2_00_X;
+if (videoPlayer) {
+  (videoPlayer as media.VideoPlayer).setSpeed(speed, (err: BusinessError, result: number) => {
+    if (err) {
+      console.error('Failed to set Speed!');
+    } else {
+      console.info('Succeeded in setting Speed!');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let videoPlayer: media.VideoPlayer | null = null;
+media.createVideoPlayer((error: BusinessError, video: media.VideoPlayer) => {
+  if (video != null) {
+    videoPlayer = video;
+    console.info('Succeeded in creating VideoPlayer');
+  } else {
+    console.error(`Failed to create VideoPlayer, error:${error}`);
+  }
+});
+let speed = media.PlaybackSpeed.SPEED_FORWARD_2_00_X;
+if (videoPlayer) {
+  (videoPlayer as media.VideoPlayer).setSpeed(speed).then((result: number) => {
+    console.info('Succeeded in setting Speed');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to set Speed, error:${error}`);// todo:: error.
+  });
+}
+```
 
 ## setSuperResolution
 
@@ -3669,6 +5088,16 @@ Before calling [prepare()](#prepare), enable super resolution by using [Playback
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5410003](../errorcode-media.md#5410003-super-resolution-is-not-supported) | Super-resolution not supported. Return by promise. |
 | [5410004](../errorcode-media.md#5410004-super-resolution-is-not-enabled) | Missing enable super-resolution feature in [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md). Return by promise. |
+
+**Examples**
+
+```TypeScript
+async function test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized, prepared, playing, paused, completed, or stopped state before proceeding.
+  avPlayer.setSuperResolution(true);
+}
+```
 
 ## setTrackSelectionFilter
 
@@ -3746,6 +5175,16 @@ Before calling [prepare()](#prepare), enable super resolution by using [Playback
 | [5410003](../errorcode-media.md#5410003-super-resolution-is-not-supported) | Super-resolution not supported. Return by promise. |
 | [5410004](../errorcode-media.md#5410004-super-resolution-is-not-enabled) | Missing enable super-resolution feature in [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md). Return by promise. |
 
+**Examples**
+
+```TypeScript
+async function test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized, prepared, playing, paused, completed, or stopped state before proceeding.
+  avPlayer.setVideoWindowSize(1920, 1080);
+}
+```
+
 ## setVolume
 
 ```TypeScript
@@ -3768,6 +5207,47 @@ Sets the playback volume. This API can be called only when the AVPlayer is in th
 | --- | --- | --- | --- |
 | volume | double | Yes | Relative volume. The value ranges from 0.00 to 1.00. The value **1.00** indicates the maximum volume (100%). |
 
+**Examples**
+
+```TypeScript
+audioPlayer.on('volumeChange', () => {    // Set the 'volumeChange' event callback.
+  console.info('audio volumeChange called');
+});
+audioPlayer.setVolume(1);    // Set the volume to 100%.
+```
+
+```TypeScript
+async function test(){
+  let avPlayer = await media.createAVPlayer();
+  let volume: number = 1.0;
+  avPlayer.setVolume(volume);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let vol: number = 0.5;
+videoPlayer.setVolume(vol, (err: BusinessError) => {
+  if (err) {
+    console.error('Failed to set Volume!');
+  } else {
+    console.info('Succeeded in setting Volume!');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let vol: number = 0.5;
+videoPlayer.setVolume(vol).then(() => {
+  console.info('Succeeded in setting Volume');
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error:${error}`);
+});
+```
+
 ## stop
 
 ```TypeScript
@@ -3788,13 +5268,128 @@ Stops audio and video playback. This API can be called only when the AVPlayer is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// asyncallback.
+videoRecorder.stop((err: BusinessError) => {
+  if (err == null) {
+    console.info('stop videorecorder success');
+  } else {
+    console.error('stop videorecorder failed and error is ' + err.message);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// promise.
+videoRecorder.stop().then(() => {
+  console.info('stop videorecorder success');
+}).catch((err: BusinessError) => {
+  console.error('stop videorecorder failed and catch error is ' + err.message);
+});
+```
+
+```TypeScript
+audioPlayer.on('stop', () => {    // Set the 'stop' event callback.
+  console.info('audio stop called');
+});
+audioPlayer.stop();
+```
+
+```TypeScript
+audioRecorder.on('stop', () => {    // Set the 'stop' event callback.
+  console.info('audio recorder stop called');
+});
+audioRecorder.stop();
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, paused, or completed state before proceeding.
+  avPlayer.stop((err: BusinessError) => {
+    if (err) {
+      console.error('Failed to stop,error message is :' + err.message);
+    } else {
+      console.info('Succeeded in stopping');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, paused, or completed state before proceeding.
+  avPlayer.stop().then(() => {
+    console.info('Succeeded in stopping');
+  }, (err: BusinessError) => {
+    console.error('Failed to stop,error message is :' + err.message);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avRecorder.stop((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to stop AVRecorder and error is: Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Succeeded in stopping AVRecorder');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avRecorder.stop().then(() => {
+  console.info('Succeeded in stopping AVRecorder');
+}).catch((err: Error) => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to stop AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.stop((err: BusinessError) => {
+  if (err) {
+    console.error('Failed to stop!');
+  } else {
+    console.info('Succeeded in stopping!');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.stop().then(() => {
+  console.info('Succeeded in stopping');
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error:${error}`);
+});
+```
 
 ## stop
 
@@ -3823,6 +5418,10 @@ Stops audio and video playback. This API can be called only when the AVPlayer is
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
+
+**Examples**
+
+See [stop](#stop)
 
 ## audioEffectMode
 

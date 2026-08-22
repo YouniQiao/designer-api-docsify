@@ -35,6 +35,28 @@ Obtains the hotspot information that scanned.
 | --- | --- |
 | Promise&lt;Array&lt;WifiScanInfo&gt;&gt; | Returns information about scanned Wi-Fi hotspot if any. |
 
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+wifi.getScanInfos().then(result => {
+    let len = result.length;
+    console.info("wifi received scan info: " + len);
+    for (let i = 0; i < len; ++i) {
+        console.info("ssid: " + result[i].ssid);
+        console.info("bssid: " + result[i].bssid);
+        console.info("capabilities: " + result[i].capabilities);
+        console.info("securityType: " + result[i].securityType);
+        console.info("rssi: " + result[i].rssi);
+        console.info("band: " + result[i].band);
+        console.info("frequency: " + result[i].frequency);
+        console.info("channelWidth: " + result[i].channelWidth);
+        console.info("timestamp: " + result[i].timestamp);
+    }
+});
+```
+
 
 ## getScanInfos
 
@@ -60,27 +82,9 @@ Obtains the hotspot information that scanned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;WifiScanInfo&gt;&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;WifiScanInfo&gt;&gt; | Yes |  |
 
 **Examples**
 
-```TypeScript
-import wifi from '@ohos.wifi';
-
-wifi.getScanInfos().then(result => {
-    let len = result.length;
-    console.info("wifi received scan info: " + len);
-    for (let i = 0; i < len; ++i) {
-        console.info("ssid: " + result[i].ssid);
-        console.info("bssid: " + result[i].bssid);
-        console.info("capabilities: " + result[i].capabilities);
-        console.info("securityType: " + result[i].securityType);
-        console.info("rssi: " + result[i].rssi);
-        console.info("band: " + result[i].band);
-        console.info("frequency: " + result[i].frequency);
-        console.info("channelWidth: " + result[i].channelWidth);
-        console.info("timestamp: " + result[i].timestamp);
-    }
-});
-```
+See [getScanInfos](#getscaninfos)
 

@@ -40,6 +40,17 @@ function isOpenAccessibility(callback: AsyncCallback<boolean>): void
 import { accessibility } from '@kit.AccessibilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+accessibility.isOpenAccessibility().then((data: boolean) => {
+  console.info(`success data:isOpenAccessibility : ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to isOpenAccessibility. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
 accessibility.isOpenAccessibility((err: BusinessError, data: boolean) => {
   if (err) {
     console.error(`Failed to isOpenAccessibility. Code:${err.code}, message:${err.message}`);
@@ -76,14 +87,5 @@ function isOpenAccessibility(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-accessibility.isOpenAccessibility().then((data: boolean) => {
-  console.info(`success data:isOpenAccessibility : ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to isOpenAccessibility. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [isOpenAccessibility](#isopenaccessibility)
 

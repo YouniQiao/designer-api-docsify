@@ -35,7 +35,7 @@ Obtains the **ReaderIterator** result.
 
 | Type | Description |
 | --- | --- |
-| [ReaderIteratorResult](arkts-filefs-readeriteratorresult-i.md) | ReaderIteratorResult** object obtained. |
+| [ReaderIteratorResult](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-readeriteratorresult-i.md) | ReaderIteratorResult** object obtained. |
 
 **Error codes:**
 

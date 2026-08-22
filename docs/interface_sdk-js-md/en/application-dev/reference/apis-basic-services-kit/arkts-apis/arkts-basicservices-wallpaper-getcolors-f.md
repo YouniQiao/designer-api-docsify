@@ -27,7 +27,7 @@ Obtains the wallpaper colors for the wallpaper of the specified type. Returns rg
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[RgbaColor](arkts-basicservices-wallpaper-rgbacolor-i.md)&gt;&gt; | Yes | the callback of getColors. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[RgbaColor](arkts-basicservices-wallpaper-rgbacolor-i.md)&gt;&gt; | Yes | the callback of getColors. |
 
 **Examples**
 
@@ -40,6 +40,16 @@ wallpaper.getColors(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessEr
         return;
     }
     console.info(`success to getColors: ${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+wallpaper.getColors(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: Array<wallpaper.RgbaColor>) => {
+    console.info(`success to getColors: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`failed to getColors because: ${JSON.stringify(error)}`);
 });
 ```
 
@@ -74,13 +84,5 @@ Obtains the wallpaper colors for the wallpaper of the specified type. Returns rg
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-wallpaper.getColors(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: Array<wallpaper.RgbaColor>) => {
-    console.info(`success to getColors: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`failed to getColors because: ${JSON.stringify(error)}`);
-});
-```
+See [getColors](#getcolors)
 

@@ -1,6 +1,6 @@
 # MemoryLevel
 
-Enumerates the memory levels of the entire device. You can use it in [onMemoryLevel()](arkts-ability-appabilityability-ability-c.md#onmemorylevel) of the UIAbility to complete different operations.
+Enumerates the memory levels of the entire device. You can use it in [onMemoryLevel()](arkts-ability-app-ability-ability-ability-c.md#onmemorylevel) of the UIAbility to complete different operations.
 
 > **NOTE：**
 > 
@@ -144,4 +144,18 @@ The process is in the background and the available memory of the entire device i
 <!--Device-MemoryLevel-MEMORY_LEVEL_BACKGROUND_CRITICAL = 6--><!--Device-MemoryLevel-MEMORY_LEVEL_BACKGROUND_CRITICAL = 6-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onMemoryLevel(level: AbilityConstant.MemoryLevel) {
+    if (level === AbilityConstant.MemoryLevel.MEMORY_LEVEL_CRITICAL) {
+      console.info('The memory of device is critical, please release some memory.');
+    }
+  }
+}
+```
 

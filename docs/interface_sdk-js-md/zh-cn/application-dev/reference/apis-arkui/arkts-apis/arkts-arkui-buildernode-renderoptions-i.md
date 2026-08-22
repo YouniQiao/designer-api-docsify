@@ -18,7 +18,7 @@ selfIdealSize?: Size
 
 默认值：{ width: 0, height: 0 }
 
-**类型：** [Size](../../apis-default/arkts-apis/arkts-graphics-size-i.md)
+**类型：** [Size](arkts-arkui-graphics-size-i.md)
 
 **起始版本：** 11
 
@@ -64,7 +64,7 @@ type?: NodeRenderType
 
 默认值：NodeRenderType.RENDER_TYPE_DISPLAY
 
-**类型：** [NodeRenderType](arkts-arkui-buildernode-noderendertype-e.md)
+**类型：** [NodeRenderType](../../apis-default/arkts-apis/arkts-buildernode-noderendertype-e.md)
 
 **起始版本：** 11
 

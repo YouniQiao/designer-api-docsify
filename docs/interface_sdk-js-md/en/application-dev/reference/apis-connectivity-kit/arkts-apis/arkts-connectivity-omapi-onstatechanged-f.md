@@ -27,7 +27,7 @@ Call this API to register a callback after you use [omapi.newSEService](arkts-co
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChanged' | Yes | Event type. It has a fixed value of **stateChanged**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ServiceState](arkts-connectivity-omapi-servicestate-e.md)&gt; | Yes | Callback used to return the SE service state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceState](arkts-connectivity-omapi-servicestate-e.md)&gt; | Yes | Callback used to return the SE service state. |
 
 **Error codes:**
 

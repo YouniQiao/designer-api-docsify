@@ -46,6 +46,14 @@ try {
 }
 ```
 
+```TypeScript
+try {
+    brightness.setValue(128, true);
+} catch(err) {
+    console.error('set brightness failed, err: ' + err);
+}
+```
+
 
 ## setValue
 
@@ -80,11 +88,5 @@ Sets the screen brightness. This API is used for continuous brightness adjustmen
 
 **Examples**
 
-```TypeScript
-try {
-    brightness.setValue(128, true);
-} catch(err) {
-    console.error('set brightness failed, err: ' + err);
-}
-```
+See [setValue](#setvalue)
 

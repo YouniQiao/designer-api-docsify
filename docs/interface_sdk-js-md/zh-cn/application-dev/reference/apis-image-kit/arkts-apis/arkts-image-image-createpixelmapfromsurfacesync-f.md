@@ -74,6 +74,35 @@ function createPixelMapFromSurfaceSync(surfaceId: string) {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function createPixelMapFromSurfaceSync(surfaceId: string) {
+  try {
+    let pixelMap: image.PixelMap = image.createPixelMapFromSurfaceSync(surfaceId);
+    console.info('Succeeded in creating the PixelMap from Surface.');
+  } catch (e) {
+    const err = e as BusinessError;
+    console.error(`Failed to create the PixelMap from Surface. Code: ${err.code}, message: ${err.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+function createPixelMapFromSurfaceSync(surfaceId: string) {
+  try {
+    let pixelMap: image.PixelMap = image.createPixelMapFromSurfaceSync(surfaceId);
+    console.info('Succeeded in creating the PixelMap from Surface.');
+  } catch (err) {
+    console.error(`Failed to create the PixelMap from Surface. Code: ${err.code}, message: ${err.message}`);
+  }
+}
+```
+
 
 ## createPixelMapFromSurfaceSync
 
@@ -111,32 +140,5 @@ Creates a PixelMap object from surface id.
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function createPixelMapFromSurfaceSync(surfaceId: string) {
-  try {
-    let pixelMap: image.PixelMap = image.createPixelMapFromSurfaceSync(surfaceId);
-    console.info('Succeeded in creating the PixelMap from Surface.');
-  } catch (e) {
-    const err = e as BusinessError;
-    console.error(`Failed to create the PixelMap from Surface. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function createPixelMapFromSurfaceSync(surfaceId: string) {
-  try {
-    let pixelMap: image.PixelMap = image.createPixelMapFromSurfaceSync(surfaceId);
-    console.info('Succeeded in creating the PixelMap from Surface.');
-  } catch (err) {
-    console.error(`Failed to create the PixelMap from Surface. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```
+参见 [createPixelMapFromSurfaceSync](#createpixelmapfromsurfacesync)
 

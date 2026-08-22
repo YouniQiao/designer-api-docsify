@@ -28,7 +28,7 @@ Request enable location
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the location switch status. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the location switch status. |
 
 **Examples**
 
@@ -41,6 +41,13 @@ geolocation.requestEnableLocation((err, data) => {
     if (data) {
         console.info('requestEnableLocation: data=' + JSON.stringify(data));
     }
+});
+```
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.requestEnableLocation().then((result) => {
+    console.info('promise, requestEnableLocation: ' + JSON.stringify(result));
 });
 ```
 
@@ -71,10 +78,5 @@ Request enable location
 
 **Examples**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.requestEnableLocation().then((result) => {
-    console.info('promise, requestEnableLocation: ' + JSON.stringify(result));
-});
-```
+See [requestEnableLocation](#requestenablelocation)
 

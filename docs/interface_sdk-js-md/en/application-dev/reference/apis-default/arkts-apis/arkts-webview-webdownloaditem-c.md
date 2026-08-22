@@ -221,6 +221,35 @@ Get the original url of the web download.
 | --- | --- |
 | string | Returns the original url of the download. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getOrgUrl')
+        .onClick(() => {
+          try {
+            let url = this.controller.getOriginalUrl();
+            console.info("original url: " + url);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## getPercentComplete
 
 ```TypeScript
@@ -376,6 +405,35 @@ Get url of the web download request.
 | Type | Description |
 | --- | --- |
 | string | Returns the url. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getUrl')
+        .onClick(() => {
+          try {
+            let url = this.controller.getUrl();
+            console.info("url: " + url);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## pause
 

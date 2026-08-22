@@ -1,6 +1,6 @@
 # MemoryLevel
 
-整机可用内存级别，该类型为枚举，可配合UIAbility的[onMemoryLevel()](arkts-ability-appabilityability-ability-c.md#onmemorylevel)方法根据level执行不同内 存级别的相应操作。
+整机可用内存级别，该类型为枚举，可配合UIAbility的[onMemoryLevel()](arkts-ability-app-ability-ability-ability-c.md#onmemorylevel)方法根据level执行不同内 存级别的相应操作。
 
 > **说明：**
 > 
@@ -146,4 +146,18 @@ MEMORY_LEVEL_BACKGROUND_CRITICAL = 6
 <!--Device-MemoryLevel-MEMORY_LEVEL_BACKGROUND_CRITICAL = 6--><!--Device-MemoryLevel-MEMORY_LEVEL_BACKGROUND_CRITICAL = 6-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**示例**
+
+```TypeScript
+import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onMemoryLevel(level: AbilityConstant.MemoryLevel) {
+    if (level === AbilityConstant.MemoryLevel.MEMORY_LEVEL_CRITICAL) {
+      console.info('The memory of device is critical, please release some memory.');
+    }
+  }
+}
+```
 

@@ -71,6 +71,31 @@ workScheduler.getWorkStatus(50, (error: BusinessError<void> | null, res: workSch
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { workScheduler } from '@kit.BackgroundTasksKit';
+
+workScheduler.getWorkStatus(50).then((res: workScheduler.WorkInfo) => {
+  console.info(`workschedulerLog getWorkStatus success, ${JSON.stringify(res)}`);
+}).catch((error: BusinessError) => {
+  console.error(`workschedulerLog getWorkStatus failed. code is ${error.code} message is ${error.message}`);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { workScheduler } from '@kit.BackgroundTasksKit';
+
+workScheduler.getWorkStatus(50).then((res: workScheduler.WorkInfo) => {
+  console.info(`workschedulerLog getWorkStatus success, ${JSON.stringify(res)}`);
+}).catch((error) => {
+  console.error(`workschedulerLog getWorkStatus failed. code is ${error.code} message is ${error.message}`);
+})
+```
+
 
 ## getWorkStatus
 
@@ -112,28 +137,5 @@ function getWorkStatus(workId: int): Promise<WorkInfo>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { workScheduler } from '@kit.BackgroundTasksKit';
-
-workScheduler.getWorkStatus(50).then((res: workScheduler.WorkInfo) => {
-  console.info(`workschedulerLog getWorkStatus success, ${JSON.stringify(res)}`);
-}).catch((error: BusinessError) => {
-  console.error(`workschedulerLog getWorkStatus failed. code is ${error.code} message is ${error.message}`);
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { workScheduler } from '@kit.BackgroundTasksKit';
-
-workScheduler.getWorkStatus(50).then((res: workScheduler.WorkInfo) => {
-  console.info(`workschedulerLog getWorkStatus success, ${JSON.stringify(res)}`);
-}).catch((error) => {
-  console.error(`workschedulerLog getWorkStatus failed. code is ${error.code} message is ${error.message}`);
-})
-```
+参见 [getWorkStatus](#getworkstatus)
 

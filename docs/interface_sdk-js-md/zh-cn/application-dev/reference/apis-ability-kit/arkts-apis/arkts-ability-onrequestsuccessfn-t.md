@@ -22,3 +22,7 @@ export type OnRequestSuccessFn = (name: string) => void
 | --- | --- | --- | --- |
 | name | string | 是 | 被拉起Ability组件或系统操作的名称。  Ability组件名称采用'[bundleName]#[moduleName]#[abilityName]'格式拼接。 |
 
+**示例**
+
+参见OnRequestFailureFn。
+

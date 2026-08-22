@@ -35,6 +35,28 @@ declare function fstat(fd: number): Promise<Stat>
 | --- | --- |
 | Promise&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | Promise对象。返回表示文件状态的具体信息。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+fileio.fstat(fd).then((stat: fileio.Stat) => {
+  console.info("fstat succeed, the size of file is " + stat.size);
+}).catch((err: BusinessError) => {
+  console.error("fstat failed with error:" + err);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+fileio.fstat(fd, (err: BusinessError) => {
+  // do something
+});
+```
+
 
 ## fstat
 
@@ -60,4 +82,8 @@ declare function fstat(fd: number, callback: AsyncCallback<Stat>): void
 | --- | --- | --- | --- |
 | fd | number | 是 | 待获取文件状态的文件描述符。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | 是 | 异步获取文件状态信息之后的回调。 |
+
+**示例**
+
+参见 [fstat](#fstat)
 

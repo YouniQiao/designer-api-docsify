@@ -28,7 +28,7 @@ function getDisallowedBluetoothProtocols(admin: Want, accountId: number): Array<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | accountId | number | 是 | 用户ID，取值范围：大于等于0。 <br> accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
 
 **返回值：**
@@ -68,6 +68,30 @@ try {
 }
 ```
 
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { bluetoothManager } from '@kit.MDMKit';
+
+// 创建企业设备管理扩展组件
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// 定义用户ID
+let accountId: number = 100;
+
+try {
+  // 获取指定用户指定传输策略下已禁用的蓝牙协议列表
+  let result: Array<bluetoothManager.Protocol> = bluetoothManager.getDisallowedBluetoothProtocols(wantTemp, accountId,
+    bluetoothManager.TransferPolicy.RECEIVE_SEND);
+  console.info(`Succeeded in getting disallowed bluetooth protocols, result : ${JSON.stringify(result)}`);
+} catch (err) {
+  console.error(`Failed to get disallowed bluetooth protocols. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## getDisallowedBluetoothProtocols
 
@@ -96,7 +120,7 @@ function getDisallowedBluetoothProtocols(admin: Want | null, accountId: number, 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | accountId | number | 是 | 用户ID，取值范围：大于等于0。 <br> accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
 | policy | [TransferPolicy](arkts-mdm-bluetoothmanager-transferpolicy-e.md) | 是 | 传输策略。 |
 
@@ -117,27 +141,5 @@ function getDisallowedBluetoothProtocols(admin: Want | null, accountId: number, 
 
 **示例**
 
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { bluetoothManager } from '@kit.MDMKit';
-
-// 创建企业设备管理扩展组件
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 定义用户ID
-let accountId: number = 100;
-
-try {
-  // 获取指定用户指定传输策略下已禁用的蓝牙协议列表
-  let result: Array<bluetoothManager.Protocol> = bluetoothManager.getDisallowedBluetoothProtocols(wantTemp, accountId,
-    bluetoothManager.TransferPolicy.RECEIVE_SEND);
-  console.info(`Succeeded in getting disallowed bluetooth protocols, result : ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get disallowed bluetooth protocols. Code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getDisallowedBluetoothProtocols](#getdisallowedbluetoothprotocols)
 

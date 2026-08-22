@@ -222,7 +222,7 @@ Infer model
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | inputs | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[]&gt; | Yes | the callback of MSTensor array. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[]&gt; | Yes | the callback of MSTensor array. |
 
 **Examples**
 
@@ -247,6 +247,34 @@ globalContext.getApplicationContext()
       let output = new Float32Array(mindSporeLiteTensor[0].getData());
       for (let i = 0; i < output.length; i++) {
         console.info('MS_LITE_LOG: ' + output[i].toString());
+      }
+    })
+  })
+  .catch((error: BusinessError) => {
+    console.error("getRawFileContent promise error is " + error);
+  });
+```
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { UIContext } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let inputName = 'input_data.bin';
+let globalContext = new UIContext().getHostContext() as common.UIAbilityContext;
+globalContext.getApplicationContext()
+  .resourceManager
+  .getRawFileContent(inputName)
+  .then(async (buffer: Uint8Array) => {
+    let inputBuffer = buffer.buffer;
+    let modelFile = '/path/to/xxx.ms';
+    let mindSporeLiteModel: mindSporeLite.Model = await mindSporeLite.loadModelFromFile(modelFile);
+    let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
+    modelInputs[0].setData(inputBuffer);
+    mindSporeLiteModel.predict(modelInputs).then((mindSporeLiteTensor: mindSporeLite.MSTensor[]) => {
+      let output = new Float32Array(mindSporeLiteTensor[0].getData());
+      for (let i = 0; i < output.length; i++) {
+        console.info(output[i].toString());
       }
     })
   })
@@ -285,33 +313,7 @@ Infer model
 
 **Examples**
 
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { UIContext } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let inputName = 'input_data.bin';
-let globalContext = new UIContext().getHostContext() as common.UIAbilityContext;
-globalContext.getApplicationContext()
-  .resourceManager
-  .getRawFileContent(inputName)
-  .then(async (buffer: Uint8Array) => {
-    let inputBuffer = buffer.buffer;
-    let modelFile = '/path/to/xxx.ms';
-    let mindSporeLiteModel: mindSporeLite.Model = await mindSporeLite.loadModelFromFile(modelFile);
-    let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
-    modelInputs[0].setData(inputBuffer);
-    mindSporeLiteModel.predict(modelInputs).then((mindSporeLiteTensor: mindSporeLite.MSTensor[]) => {
-      let output = new Float32Array(mindSporeLiteTensor[0].getData());
-      for (let i = 0; i < output.length; i++) {
-        console.info(output[i].toString());
-      }
-    })
-  })
-  .catch((error: BusinessError) => {
-    console.error("getRawFileContent promise error is " + error);
-  });
-```
+See [predict](#predict)
 
 ## resize
 

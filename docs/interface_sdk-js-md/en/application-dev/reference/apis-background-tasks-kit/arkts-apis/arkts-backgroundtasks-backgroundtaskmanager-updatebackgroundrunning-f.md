@@ -85,55 +85,6 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-
-## updateBackgroundRunning
-
-```TypeScript
-function updateBackgroundRunning(context: Context, request: ContinuousTaskRequest): Promise<ContinuousTaskNotification>
-```
-
-Updates a continuous task. This API uses a promise to return the result. After a continuous task is successfully updated, there will be a notification message without prompt tone.
-
-The following restrictions apply when updating a continuous task:
-
-1. This API can only update continuous tasks requested via [startBackgroundRunning(context: Context, request: ContinuousTaskRequest): Promise&lt;ContinuousTaskNotification&gt;](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md). 2. If the main type and subtype of the background tasks are the same, only the wants information (such as **abilityName**) in **ContinuousTaskRequest.wantAgent** can be updated. If the types are different, the update fails. 3. If the continuous task to be updated or the specified update type contains the data transmission type, a failure message is returned.
-
-**Since:** 24
-
-**Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-backgroundTaskManager-function updateBackgroundRunning(context: Context, request: ContinuousTaskRequest): Promise<ContinuousTaskNotification>--><!--Device-backgroundTaskManager-function updateBackgroundRunning(context: Context, request: ContinuousTaskRequest): Promise<ContinuousTaskNotification>-End-->
-
-**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | Context | Yes | Application context. <br>For details about the application context of the FA model, see Context.<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md).<br> Note: Continuous tasks can be requested only by the UIAbility in the stage model and the ServiceAbility in the FA model. |
-| request | [ContinuousTaskRequest](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md) | Yes | Continuous task request information, including the ID of the continuous task to be updated. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[ContinuousTaskNotification](arkts-backgroundtasks-backgroundtaskmanager-continuoustasknotification-i.md)&gt; | Promise used to return the updated continuous task notification information, including the continuous task ID. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [9800001](../errorcode-backgroundTaskMgr.md#9800001-memory-operation-failure) | Memory operation failed. |
-| [9800004](../errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
-| [9800005](../errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
-| [9800006](../errorcode-backgroundTaskMgr.md#9800006-notification-verification-failure-for-a-continuous-task) | Notification verification failed for a continuous task. |
-| [9800007](../errorcode-backgroundTaskMgr.md#9800007-continuous-task-storage-failure) | Continuous task storage failed. |
-
-**Examples**
-
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -189,4 +140,55 @@ export default class EntryAbility extends UIAbility {
   }
 };
 ```
+
+
+## updateBackgroundRunning
+
+```TypeScript
+function updateBackgroundRunning(context: Context, request: ContinuousTaskRequest): Promise<ContinuousTaskNotification>
+```
+
+Updates a continuous task. This API uses a promise to return the result. After a continuous task is successfully updated, there will be a notification message without prompt tone.
+
+The following restrictions apply when updating a continuous task:
+
+1. This API can only update continuous tasks requested via [startBackgroundRunning(context: Context, request: ContinuousTaskRequest): Promise&lt;ContinuousTaskNotification&gt;](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md). 2. If the main type and subtype of the background tasks are the same, only the wants information (such as **abilityName**) in **ContinuousTaskRequest.wantAgent** can be updated. If the types are different, the update fails. 3. If the continuous task to be updated or the specified update type contains the data transmission type, a failure message is returned.
+
+**Since:** 24
+
+**Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-backgroundTaskManager-function updateBackgroundRunning(context: Context, request: ContinuousTaskRequest): Promise<ContinuousTaskNotification>--><!--Device-backgroundTaskManager-function updateBackgroundRunning(context: Context, request: ContinuousTaskRequest): Promise<ContinuousTaskNotification>-End-->
+
+**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | Context | Yes | Application context. <br>For details about the application context of the FA model, see Context.<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md).<br> Note: Continuous tasks can be requested only by the UIAbility in the stage model and the ServiceAbility in the FA model. |
+| request | [ContinuousTaskRequest](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md) | Yes | Continuous task request information, including the ID of the continuous task to be updated. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ContinuousTaskNotification](arkts-backgroundtasks-backgroundtaskmanager-continuoustasknotification-i.md)&gt; | Promise used to return the updated continuous task notification information, including the continuous task ID. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [9800001](../errorcode-backgroundTaskMgr.md#9800001-memory-operation-failure) | Memory operation failed. |
+| [9800004](../errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
+| [9800005](../errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| [9800006](../errorcode-backgroundTaskMgr.md#9800006-notification-verification-failure-for-a-continuous-task) | Notification verification failed for a continuous task. |
+| [9800007](../errorcode-backgroundTaskMgr.md#9800007-continuous-task-storage-failure) | Continuous task storage failed. |
+
+**Examples**
+
+See [updateBackgroundRunning](#updatebackgroundrunning)
 

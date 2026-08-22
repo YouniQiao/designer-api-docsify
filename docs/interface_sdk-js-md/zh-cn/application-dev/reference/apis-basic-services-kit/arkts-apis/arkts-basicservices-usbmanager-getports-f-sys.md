@@ -33,3 +33,10 @@ function getPorts(): Array<USBPort>
 | --- | --- |
 | Array&lt;USBPort&gt; | USB端口描述信息列表。 |
 
+**示例**
+
+```TypeScript
+// 获取所有USB端口描述信息
+let ret: Array<usbManager.USBPort> = usbManager.getPorts();
+```
+

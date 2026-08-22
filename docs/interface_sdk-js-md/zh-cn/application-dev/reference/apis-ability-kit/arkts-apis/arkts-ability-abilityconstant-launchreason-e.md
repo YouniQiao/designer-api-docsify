@@ -1,6 +1,6 @@
 # LaunchReason
 
-Ability启动原因，该类型为枚举，可配合UIAbility的[onCreate(want, launchParam)](arkts-ability-appabilityuiability-uiability-c.md#oncreate) 方法根据launchParam.launchReason的不同类型执行相应操作。
+Ability启动原因，该类型为枚举，可配合UIAbility的[onCreate(want, launchParam)](arkts-ability-app-ability-uiability-uiability-c.md#oncreate) 方法根据launchParam.launchReason的不同类型执行相应操作。
 
 **起始版本：** 23
 
@@ -185,4 +185,18 @@ PRELOAD = 11
 <!--Device-LaunchReason-PRELOAD = 11--><!--Device-LaunchReason-PRELOAD = 11-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**示例**
+
+```TypeScript
+import { UIAbility, Want, AbilityConstant } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    if (launchParam.launchReason === AbilityConstant.LaunchReason.START_ABILITY) {
+      console.info('The ability has been started by the way of startAbility.');
+    }
+  }
+}
+```
 

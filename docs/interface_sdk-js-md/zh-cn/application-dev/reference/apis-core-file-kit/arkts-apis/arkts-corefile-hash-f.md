@@ -59,6 +59,18 @@ hash.hash(filePath, "sha256").then((str: string) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + "/test.txt";
+hash.hash(filePath, "sha256", (err: BusinessError, str: string) => {
+  if (err) {
+    console.error("Failed to calculate file hash. Code: " + err.code + ", message: " + err.message);
+  } else {
+    console.info("Succeeded in calculating file hash: " + str);
+  }
+});
+```
+
 
 ## hash
 
@@ -97,15 +109,5 @@ function hash(path: string, algorithm: string, callback: AsyncCallback<string>):
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + "/test.txt";
-hash.hash(filePath, "sha256", (err: BusinessError, str: string) => {
-  if (err) {
-    console.error("Failed to calculate file hash. Code: " + err.code + ", message: " + err.message);
-  } else {
-    console.info("Succeeded in calculating file hash: " + str);
-  }
-});
-```
+参见 [hash](#hash)
 

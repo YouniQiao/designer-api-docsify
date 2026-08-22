@@ -51,3 +51,11 @@ function getSystemInputMethodConfigAbility(userId?: int): ElementName
 | 12800024 | the specified user is not in the foreground. |
 | 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
+**Examples**
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+
+let inputMethodConfig: bundleManager.ElementName = inputMethod.getSystemInputMethodConfigAbility();
+```
+

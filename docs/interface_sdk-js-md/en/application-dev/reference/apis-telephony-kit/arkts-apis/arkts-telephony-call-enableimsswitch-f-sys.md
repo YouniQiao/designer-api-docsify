@@ -29,7 +29,7 @@ Enables the IMS service. This API uses an asynchronous callback to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -54,6 +54,16 @@ call.enableImsSwitch(0, (err: BusinessError) => {
     } else {
         console.info(`enableImsSwitch success.`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.enableImsSwitch(0).then(() => {
+    console.info(`enableImsSwitch success.`);
+}).catch((err: BusinessError) => {
+    console.error(`enableImsSwitch fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -102,13 +112,5 @@ Enables the IMS service. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.enableImsSwitch(0).then(() => {
-    console.info(`enableImsSwitch success.`);
-}).catch((err: BusinessError) => {
-    console.error(`enableImsSwitch fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [enableImsSwitch](#enableimsswitch)
 

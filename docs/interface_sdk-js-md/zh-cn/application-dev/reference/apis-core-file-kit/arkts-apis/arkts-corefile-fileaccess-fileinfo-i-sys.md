@@ -46,7 +46,7 @@ listFile(filter?: Filter): FileIterator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-default/arkts-apis/arkts-filefs-filter-i.md) | 否 | Indicates the filter of file. |
+| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | 否 | Indicates the filter of file. |
 
 **返回值：**
 
@@ -125,6 +125,36 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// rootInfo 从getRoots()获取
+// let filter = {suffix : [".txt", ".jpg", ".xlsx"]};
+let rootInfo: Array<fileAccess.FileInfo> = [];
+let fileInfos: Array<fileAccess.FileInfo> = [];
+let isDone: boolean = false;
+try {
+  for (let i = 0; i < rootInfo.length; ++i) {
+    let fileIterator = rootInfo[i].listFile();
+    // 含过滤器实现的listFile
+    // let fileIterator = rootInfo.listFile(filter);
+    if (!fileIterator) {
+      console.error("listFile interface returns an undefined object");
+    }
+    while (!isDone) {
+      let result = fileIterator.next();
+      console.info("next result = " + JSON.stringify(result));
+      isDone = result.done;
+      if (!isDone) {
+        fileInfos.push(result.value);
+      }
+    }
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("listFile failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## scanFile
 
 ```TypeScript
@@ -151,7 +181,7 @@ scanFile(filter?: Filter): FileIterator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-default/arkts-apis/arkts-filefs-filter-i.md) | 否 | Indicates the filter of file. |
+| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | 否 | Indicates the filter of file. |
 
 **返回值：**
 
@@ -221,6 +251,36 @@ try {
       isDone = result.done;
       if (!isDone) {
         subfileInfos.push(result.value);
+      }
+    }
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("scanFile failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// rootInfo 从 getRoots()获取
+// let filter = {suffix : [".txt", ".jpg", ".xlsx"]};
+let rootInfo: Array<fileAccess.FileInfo> = [];
+let fileInfos: Array<fileAccess.FileInfo> = [];
+let isDone: boolean = false;
+try {
+  for (let i = 0; i < rootInfo.length; ++i) {
+    let fileIterator = rootInfo[i].scanFile();
+    // 含过滤器实现的scanFile
+    // let fileIterator = rootInfo.scanFile(filter);
+    if (!fileIterator) {
+      console.error("scanFile interface returns undefined object");
+    }
+    while (!isDone) {
+      let result = fileIterator.next();
+      console.info("next result = " + JSON.stringify(result));
+      isDone = result.done;
+      if (!isDone) {
+        fileInfos.push(result.value);
       }
     }
   }

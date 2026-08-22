@@ -29,7 +29,7 @@ Obtains the historical data traffic of the specified application. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uidInfo | [UidInfo](arkts-network-statistics-uidinfo-i-sys.md) | Yes | Application information. For details, see [UidInfo](arkts-network-statistics-uidinfo-i-sys.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined** and **statsInfo** is the historical traffic statistics of the application. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined** and **statsInfo** is the historical traffic statistics of the application. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -82,6 +82,26 @@ statistics.getTrafficStatsByUid(
 );
 ```
 
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+let uidInfo: statistics.UidInfo = {
+  uid: 20010037,
+  ifaceInfo: {
+    iface: '',
+    startTime: 1,
+    endTime: 3,
+  }
+}
+
+statistics.getTrafficStatsByUid(uidInfo).then((statsInfo: statistics.NetStatsInfo) => {
+  console.info("getTrafficStatsByUid bytes of received = " + JSON.stringify(statsInfo.rxBytes));
+  console.info("getTrafficStatsByUid bytes of sent = " + JSON.stringify(statsInfo.txBytes));
+  console.info("getTrafficStatsByUid packets of received = " + JSON.stringify(statsInfo.rxPackets));
+  console.info("getTrafficStatsByUid packets of sent = " + JSON.stringify(statsInfo.txPackets));
+})
+```
+
 
 ## getTrafficStatsByUid
 
@@ -127,23 +147,5 @@ Obtains the historical data traffic of the specified application. This API uses 
 
 **Examples**
 
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-let uidInfo: statistics.UidInfo = {
-  uid: 20010037,
-  ifaceInfo: {
-    iface: '',
-    startTime: 1,
-    endTime: 3,
-  }
-}
-
-statistics.getTrafficStatsByUid(uidInfo).then((statsInfo: statistics.NetStatsInfo) => {
-  console.info("getTrafficStatsByUid bytes of received = " + JSON.stringify(statsInfo.rxBytes));
-  console.info("getTrafficStatsByUid bytes of sent = " + JSON.stringify(statsInfo.txBytes));
-  console.info("getTrafficStatsByUid packets of received = " + JSON.stringify(statsInfo.rxPackets));
-  console.info("getTrafficStatsByUid packets of sent = " + JSON.stringify(statsInfo.txPackets));
-})
-```
+See [getTrafficStatsByUid](#gettrafficstatsbyuid)
 

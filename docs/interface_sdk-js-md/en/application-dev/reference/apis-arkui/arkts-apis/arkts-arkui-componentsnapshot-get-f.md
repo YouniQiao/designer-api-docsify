@@ -16,8 +16,8 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 
 > **NOTE：**
 > 
-> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkuiuicontext-uicontext-c.md#getcomponentsnapshot)
-> API in [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) to obtain the [ComponentSnapshot](arkts-arkui-arkuiuicontext-componentsnapshot-c.md)
+> - Since API version 12, you can use the [getComponentSnapshot](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)
+> API in [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [ComponentSnapshot](../../apis-default/arkts-apis/arkts-arkui-uicontext-componentsnapshot-c.md)
 > object associated with the current UI context.
 > 
 > - The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
@@ -42,7 +42,7 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | ID of the target component. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. |
 | options | [SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | No | Custom settings of the snapshot.<br>**Since:** 12 |
 
 **Error codes:**
@@ -95,6 +95,46 @@ struct SnapshotExample {
 }
 ```
 
+```TypeScript
+import { componentSnapshot } from '@kit.ArkUI';
+import { image } from '@kit.ImageKit';
+
+@Entry
+@Component
+struct SnapshotExample {
+  @State pixmap: image.PixelMap | undefined = undefined
+
+  build() {
+    Column() {
+      Row() {
+        Image(this.pixmap).width(200).height(200).border({ color: Color.Black, width: 2 }).margin(5)
+        // Replace $r('app.media.img') with the image resource file you use.
+        Image($r('app.media.img'))
+          .autoResize(true)
+          .width(200)
+          .height(200)
+          .margin(5)
+          .id("root")
+      }
+
+      Button("click to generate UI snapshot")
+        .onClick(() => {
+          // You are advised to use this.getUIContext().getComponentSnapshot().get().
+          componentSnapshot.get("root", { scale: 2, waitUntilRenderFinished: true })
+            .then((pixmap: image.PixelMap) => {
+              this.pixmap = pixmap
+            }).catch((err: Error) => {
+            console.error(`error:${err}`)
+          })
+        }).margin(10)
+    }
+    .width('100%')
+    .height('100%')
+    .alignItems(HorizontalAlign.Center)
+  }
+}
+```
+
 
 ## get
 
@@ -106,8 +146,8 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 
 > **NOTE：**
 > 
-> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkuiuicontext-uicontext-c.md#getcomponentsnapshot)
-> API in [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) to obtain the [ComponentSnapshot](arkts-arkui-arkuiuicontext-componentsnapshot-c.md)
+> - Since API version 12, you can use the [getComponentSnapshot](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)
+> API in [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [ComponentSnapshot](../../apis-default/arkts-apis/arkts-arkui-uicontext-componentsnapshot-c.md)
 > object associated with the current UI context.
 > 
 > - The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
@@ -149,43 +189,5 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 
 **Examples**
 
-```TypeScript
-import { componentSnapshot } from '@kit.ArkUI';
-import { image } from '@kit.ImageKit';
-
-@Entry
-@Component
-struct SnapshotExample {
-  @State pixmap: image.PixelMap | undefined = undefined
-
-  build() {
-    Column() {
-      Row() {
-        Image(this.pixmap).width(200).height(200).border({ color: Color.Black, width: 2 }).margin(5)
-        // Replace $r('app.media.img') with the image resource file you use.
-        Image($r('app.media.img'))
-          .autoResize(true)
-          .width(200)
-          .height(200)
-          .margin(5)
-          .id("root")
-      }
-
-      Button("click to generate UI snapshot")
-        .onClick(() => {
-          // You are advised to use this.getUIContext().getComponentSnapshot().get().
-          componentSnapshot.get("root", { scale: 2, waitUntilRenderFinished: true })
-            .then((pixmap: image.PixelMap) => {
-              this.pixmap = pixmap
-            }).catch((err: Error) => {
-            console.error(`error:${err}`)
-          })
-        }).margin(10)
-    }
-    .width('100%')
-    .height('100%')
-    .alignItems(HorizontalAlign.Center)
-  }
-}
-```
+See [get](#get)
 

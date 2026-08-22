@@ -18,19 +18,19 @@ import { AtomicServiceTabs, TabBarOptions, TabBarPosition, TabContentBuilder, On
 
 | 名称 | 说明 |
 | --- | --- |
-| [TabBarOptions(Provides an advanced struct of tabs for atomic services)](arkts-arkui-atomicserviceatomicservicetabs-tabbaroptions-c.md) | 页签选项。 |
+| [TabBarOptions(Provides an advanced struct of tabs for atomic services)](arkts-arkui-atomicservice-atomicservicetabs-tabbaroptions-c.md) | 页签选项。 |
 
 ### 结构体
 
 | 名称 | 说明 |
 | --- | --- |
-| [AtomicServiceTabs(Provides an advanced struct of tabs for atomic services)](arkts-arkui-atomicserviceatomicservicetabs-atomicservicetabs-s.md) | AtomicServiceTabs高级组件，对Tabs组件中不需要暴露给用户进行自定义的属性进行简化，限制最多显示5个页签，固定页签的样式、位置和大小。 |
+| [AtomicServiceTabs(Provides an advanced struct of tabs for atomic services)](arkts-arkui-atomicservice-atomicservicetabs-atomicservicetabs-s.md) | AtomicServiceTabs高级组件，对Tabs组件中不需要暴露给用户进行自定义的属性进行简化，限制最多显示5个页签，固定页签的样式、位置和大小。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [TabBarPosition(Provides an advanced struct of tabs for atomic services)](arkts-arkui-atomicserviceatomicservicetabs-tabbarposition-e.md) | 设置页签栏位置，默认值为TabBarPosition.BOTTOM。 |
+| [TabBarPosition(Provides an advanced struct of tabs for atomic services)](arkts-arkui-atomicservice-atomicservicetabs-tabbarposition-e.md) | 设置页签栏位置，默认值为TabBarPosition.BOTTOM。 |
 
 ### 类型
 

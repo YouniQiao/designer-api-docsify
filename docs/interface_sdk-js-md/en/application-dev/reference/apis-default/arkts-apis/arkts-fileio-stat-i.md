@@ -338,7 +338,7 @@ readonly location: LocationType
 
 File location, which indicates whether the file is stored in a local device or in the cloud.
 
-**Type:** [LocationType](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-locationtype-e.md)
+**Type:** [LocationType](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-locationtype-e.md)
 
 **Since:** 23
 

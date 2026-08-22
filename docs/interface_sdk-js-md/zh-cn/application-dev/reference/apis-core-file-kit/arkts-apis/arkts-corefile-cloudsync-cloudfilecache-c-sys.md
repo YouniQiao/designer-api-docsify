@@ -119,6 +119,30 @@ A constructor used to create a CloudFileCache object.
 **示例**
 
 ```TypeScript
+let fileSync = new cloudSync.FileSync()
+```
+
+```TypeScript
+let fileCache = new cloudSync.CloudFileCache();
+```
+
+```TypeScript
+let fileVersion = new cloudSync.FileVersion();
+```
+
+```TypeScript
+let gallerySync = new cloudSync.GallerySync()
+```
+
+```TypeScript
+let download = new cloudSync.Download()
+```
+
+```TypeScript
+let fileSync = new cloudSync.FileSync("com.ohos.demo")
+```
+
+```TypeScript
 let fileCache = new cloudSync.CloudFileCache("com.ohos.demo");
 ```
 

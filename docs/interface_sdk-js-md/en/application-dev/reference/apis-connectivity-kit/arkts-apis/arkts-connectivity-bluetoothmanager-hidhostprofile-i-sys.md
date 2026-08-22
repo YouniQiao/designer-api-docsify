@@ -63,6 +63,48 @@ Connect to device with hid host. On API 10 and above, the permission required by
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+try {
+    let a2dpSrc: bluetoothManager.A2dpSourceProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_A2DP_SOURCE) as bluetoothManager.A2dpSourceProfile;
+    a2dpSrc.connect('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+try {
+    let hfpAg: bluetoothManager.HandsFreeAudioGatewayProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_HANDS_FREE_AUDIO_GATEWAY) as bluetoothManager.HandsFreeAudioGatewayProfile;
+    hfpAg.connect('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+try {
+    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+    device.connect();
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let hidHostProfile: bluetoothManager.HidHostProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_HID_HOST) as bluetoothManager.HidHostProfile;
+    hidHostProfile.connect('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
 ## disconnect
 
 ```TypeScript
@@ -105,4 +147,56 @@ Disconnect to device with hid host. On API 10 and above, the permission required
 | 2900003 | Bluetooth disabled. |
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+try {
+    let a2dpSrc: bluetoothManager.A2dpSourceProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_A2DP_SOURCE) as bluetoothManager.A2dpSourceProfile;
+    a2dpSrc.disconnect('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+try {
+    let hfpAg: bluetoothManager.HandsFreeAudioGatewayProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_HANDS_FREE_AUDIO_GATEWAY) as bluetoothManager.HandsFreeAudioGatewayProfile;
+    hfpAg.disconnect('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+try {
+    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+    device.disconnect();
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let hidHostProfile: bluetoothManager.HidHostProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_HID_HOST) as bluetoothManager.HidHostProfile;
+    hidHostProfile.disconnect('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let panProfile: bluetoothManager.PanProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_PAN_NETWORK) as bluetoothManager.PanProfile;
+    panProfile.disconnect('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
 

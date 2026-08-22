@@ -29,7 +29,7 @@ Splits an SMS message into multiple segments. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | string | Yes | SMS message content. The value cannot be null. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -52,6 +52,19 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let content: string = "long message";
 sms.splitMessage(content, (err: BusinessError, data: string[]) => {
       console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let content: string = "long message";
+let promise = sms.splitMessage(content);
+promise.then((data: string[]) => {
+    console.info(`splitMessage success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`splitMessage failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -100,16 +113,5 @@ Splits an SMS message into multiple segments. This API uses a promise to return 
 
 **Examples**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let content: string = "long message";
-let promise = sms.splitMessage(content);
-promise.then((data: string[]) => {
-    console.info(`splitMessage success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`splitMessage failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [splitMessage](#splitmessage)
 

@@ -16,3 +16,17 @@ Called when this ability breaks the last link, notifying the provider that the p
 
 **系统能力：** SystemCapability.Ability.Form
 
+**示例**
+
+```TypeScript
+'use static'
+
+import { FormExtensionAbility } from '@kit.FormKit';
+
+export default class MyFormExtensionAbility extends FormExtensionAbility {
+  onStopFn() {
+    console.info(`FormExtensionAbility onStop`);
+  }
+}
+```
+

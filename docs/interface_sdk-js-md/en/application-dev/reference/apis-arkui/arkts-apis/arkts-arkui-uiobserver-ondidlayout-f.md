@@ -29,8 +29,8 @@ Listens for layout completion status in each frame.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'didLayout' | Yes | Event type. The value **'didLayout'** indicates whether the layout has been completed. |
-| context | [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | Context information, which is used to specify the target page scope. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| context | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | Context information, which is used to specify the target page scope. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 

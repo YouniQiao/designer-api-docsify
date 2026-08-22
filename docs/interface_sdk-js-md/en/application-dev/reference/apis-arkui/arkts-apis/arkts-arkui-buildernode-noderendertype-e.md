@@ -52,7 +52,7 @@ Enumerates the node rendering types.
 > TimePicker, custom components decorated with
 > [@Component](../../../ui/state-management/arkts-create-custom-components.md#component),
 > NodeContainer, and FrameNode and
-> [RenderNode](arkts-arkui-rendernode-c.md) mounted to
+> [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) mounted to
 > NodeContainer.
 > 
 > - For details, see

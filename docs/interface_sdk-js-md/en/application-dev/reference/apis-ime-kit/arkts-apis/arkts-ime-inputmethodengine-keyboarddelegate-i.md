@@ -14,146 +14,6 @@
 import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
-## offCursorContextChange
-
-```TypeScript
-offCursorContextChange(callback?: CursorContextChangeCallback): void
-```
-
-@brief Unsubscribe cursor context change.
-
-**Since:** 23
-
-<!--Device-KeyboardDelegate-offCursorContextChange(callback?: CursorContextChangeCallback): void--><!--Device-KeyboardDelegate-offCursorContextChange(callback?: CursorContextChangeCallback): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [CursorContextChangeCallback](arkts-ime-inputmethodengine-cursorcontextchangecallback-t.md) | No | optional, the callback called when cursor information changes. |
-
-## offEditorAttributeChanged
-
-```TypeScript
-offEditorAttributeChanged(callback?: Callback<EditorAttribute>): void
-```
-
-@brief Unsubscribe input text attribute change.
-
-**Since:** 23
-
-<!--Device-KeyboardDelegate-offEditorAttributeChanged(callback?: Callback<EditorAttribute>): void--><!--Device-KeyboardDelegate-offEditorAttributeChanged(callback?: Callback<EditorAttribute>): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | No | optional, the callback called when editor's attribute changes. |
-
-## offKeyDown
-
-```TypeScript
-offKeyDown(callback?: KeyEventCallback): void
-```
-
-@brief Unsubscribe key down event
-
-**Since:** 23
-
-<!--Device-KeyboardDelegate-offKeyDown(callback?: KeyEventCallback): void--><!--Device-KeyboardDelegate-offKeyDown(callback?: KeyEventCallback): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | No | optional, the callback called when a key down event occurs. |
-
-## offKeyEvent
-
-```TypeScript
-offKeyEvent(callback?: InputKeyEventCallback): void
-```
-
-@brief Unsubscribe key event.
-
-**Since:** 23
-
-<!--Device-KeyboardDelegate-offKeyEvent(callback?: InputKeyEventCallback): void--><!--Device-KeyboardDelegate-offKeyEvent(callback?: InputKeyEventCallback): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [InputKeyEventCallback](arkts-ime-inputmethodengine-inputkeyeventcallback-t.md) | No | optional, the callback called when a key event event occurs. |
-
-## offKeyUp
-
-```TypeScript
-offKeyUp(callback?: KeyEventCallback): void
-```
-
-@brief Unsubscribe key up event
-
-**Since:** 23
-
-<!--Device-KeyboardDelegate-offKeyUp(callback?: KeyEventCallback): void--><!--Device-KeyboardDelegate-offKeyUp(callback?: KeyEventCallback): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | No | optional, the callback called when a key up event occurs. |
-
-## offSelectionChange
-
-```TypeScript
-offSelectionChange(callback?: SelectionChangeCallback): void
-```
-
-@brief Unsubscribe selection change.
-
-**Since:** 23
-
-<!--Device-KeyboardDelegate-offSelectionChange(callback?: SelectionChangeCallback): void--><!--Device-KeyboardDelegate-offSelectionChange(callback?: SelectionChangeCallback): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [SelectionChangeCallback](arkts-ime-inputmethodengine-selectionchangecallback-t.md) | No | optional, the callback called when the text selection changes. |
-
-## offTextChange
-
-```TypeScript
-offTextChange(callback?: Callback<string>): void
-```
-
-@brief Unsubscribe text change.
-
-**Since:** 23
-
-<!--Device-KeyboardDelegate-offTextChange(callback?: Callback<string>): void--><!--Device-KeyboardDelegate-offTextChange(callback?: Callback<string>): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | optional, the callback called when the text changes. |
-
 ## off('cursorContextChange')
 
 ```TypeScript
@@ -364,17 +224,17 @@ inputMethodEngine.getKeyboardDelegate().off('textChange', (text: string) => {
 });
 ```
 
-## onCursorContextChange
+## offCursorContextChange
 
 ```TypeScript
-onCursorContextChange(callback: CursorContextChangeCallback): void
+offCursorContextChange(callback?: CursorContextChangeCallback): void
 ```
 
-@brief Subscribe cursor context change.
+@brief Unsubscribe cursor context change.
 
 **Since:** 23
 
-<!--Device-KeyboardDelegate-onCursorContextChange(callback: CursorContextChangeCallback): void--><!--Device-KeyboardDelegate-onCursorContextChange(callback: CursorContextChangeCallback): void-End-->
+<!--Device-KeyboardDelegate-offCursorContextChange(callback?: CursorContextChangeCallback): void--><!--Device-KeyboardDelegate-offCursorContextChange(callback?: CursorContextChangeCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -382,19 +242,19 @@ onCursorContextChange(callback: CursorContextChangeCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [CursorContextChangeCallback](arkts-ime-inputmethodengine-cursorcontextchangecallback-t.md) | Yes | the callback called when cursor information changes. |
+| callback | [CursorContextChangeCallback](arkts-ime-inputmethodengine-cursorcontextchangecallback-t.md) | No | optional, the callback called when cursor information changes. |
 
-## onEditorAttributeChanged
+## offEditorAttributeChanged
 
 ```TypeScript
-onEditorAttributeChanged(callback: Callback<EditorAttribute>): void
+offEditorAttributeChanged(callback?: Callback<EditorAttribute>): void
 ```
 
-@brief Subscribe input text attribute change.
+@brief Unsubscribe input text attribute change.
 
 **Since:** 23
 
-<!--Device-KeyboardDelegate-onEditorAttributeChanged(callback: Callback<EditorAttribute>): void--><!--Device-KeyboardDelegate-onEditorAttributeChanged(callback: Callback<EditorAttribute>): void-End-->
+<!--Device-KeyboardDelegate-offEditorAttributeChanged(callback?: Callback<EditorAttribute>): void--><!--Device-KeyboardDelegate-offEditorAttributeChanged(callback?: Callback<EditorAttribute>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -402,19 +262,19 @@ onEditorAttributeChanged(callback: Callback<EditorAttribute>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | Yes | the callback called when editor's attribute changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | No | optional, the callback called when editor's attribute changes. |
 
-## onKeyDown
+## offKeyDown
 
 ```TypeScript
-onKeyDown(callback: KeyEventCallback): void
+offKeyDown(callback?: KeyEventCallback): void
 ```
 
-@brief Subscribe key down event
+@brief Unsubscribe key down event
 
 **Since:** 23
 
-<!--Device-KeyboardDelegate-onKeyDown(callback: KeyEventCallback): void--><!--Device-KeyboardDelegate-onKeyDown(callback: KeyEventCallback): void-End-->
+<!--Device-KeyboardDelegate-offKeyDown(callback?: KeyEventCallback): void--><!--Device-KeyboardDelegate-offKeyDown(callback?: KeyEventCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -422,19 +282,19 @@ onKeyDown(callback: KeyEventCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | Yes | the callback called when a key down event occurs. If the key is processed by event subscriber, callback should be return true, else return false. |
+| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | No | optional, the callback called when a key down event occurs. |
 
-## onKeyEvent
+## offKeyEvent
 
 ```TypeScript
-onKeyEvent(callback: InputKeyEventCallback): void
+offKeyEvent(callback?: InputKeyEventCallback): void
 ```
 
-@brief Subscribe key event.
+@brief Unsubscribe key event.
 
 **Since:** 23
 
-<!--Device-KeyboardDelegate-onKeyEvent(callback: InputKeyEventCallback): void--><!--Device-KeyboardDelegate-onKeyEvent(callback: InputKeyEventCallback): void-End-->
+<!--Device-KeyboardDelegate-offKeyEvent(callback?: InputKeyEventCallback): void--><!--Device-KeyboardDelegate-offKeyEvent(callback?: InputKeyEventCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -442,19 +302,19 @@ onKeyEvent(callback: InputKeyEventCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [InputKeyEventCallback](arkts-ime-inputmethodengine-inputkeyeventcallback-t.md) | Yes | the callback called when a key event event occurs. If the key is processed by event subscriber, callback should be return true, else return false. |
+| callback | [InputKeyEventCallback](arkts-ime-inputmethodengine-inputkeyeventcallback-t.md) | No | optional, the callback called when a key event event occurs. |
 
-## onKeyUp
+## offKeyUp
 
 ```TypeScript
-onKeyUp(callback: KeyEventCallback): void
+offKeyUp(callback?: KeyEventCallback): void
 ```
 
-@brief Subscribe key up event
+@brief Unsubscribe key up event
 
 **Since:** 23
 
-<!--Device-KeyboardDelegate-onKeyUp(callback: KeyEventCallback): void--><!--Device-KeyboardDelegate-onKeyUp(callback: KeyEventCallback): void-End-->
+<!--Device-KeyboardDelegate-offKeyUp(callback?: KeyEventCallback): void--><!--Device-KeyboardDelegate-offKeyUp(callback?: KeyEventCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -462,19 +322,19 @@ onKeyUp(callback: KeyEventCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | Yes | the callback called when a key up event occurs. If the key is processed by event subscriber, callback should be return true, else return false. |
+| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | No | optional, the callback called when a key up event occurs. |
 
-## onSelectionChange
+## offSelectionChange
 
 ```TypeScript
-onSelectionChange(callback: SelectionChangeCallback): void
+offSelectionChange(callback?: SelectionChangeCallback): void
 ```
 
-@brief Subscribe selection change.
+@brief Unsubscribe selection change.
 
 **Since:** 23
 
-<!--Device-KeyboardDelegate-onSelectionChange(callback: SelectionChangeCallback): void--><!--Device-KeyboardDelegate-onSelectionChange(callback: SelectionChangeCallback): void-End-->
+<!--Device-KeyboardDelegate-offSelectionChange(callback?: SelectionChangeCallback): void--><!--Device-KeyboardDelegate-offSelectionChange(callback?: SelectionChangeCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -482,19 +342,19 @@ onSelectionChange(callback: SelectionChangeCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [SelectionChangeCallback](arkts-ime-inputmethodengine-selectionchangecallback-t.md) | Yes | the callback called when the text selection changes. |
+| callback | [SelectionChangeCallback](arkts-ime-inputmethodengine-selectionchangecallback-t.md) | No | optional, the callback called when the text selection changes. |
 
-## onTextChange
+## offTextChange
 
 ```TypeScript
-onTextChange(callback: Callback<string>): void
+offTextChange(callback?: Callback<string>): void
 ```
 
-@brief Subscribe text change.
+@brief Unsubscribe text change.
 
 **Since:** 23
 
-<!--Device-KeyboardDelegate-onTextChange(callback: Callback<string>): void--><!--Device-KeyboardDelegate-onTextChange(callback: Callback<string>): void-End-->
+<!--Device-KeyboardDelegate-offTextChange(callback?: Callback<string>): void--><!--Device-KeyboardDelegate-offTextChange(callback?: Callback<string>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -502,7 +362,7 @@ onTextChange(callback: Callback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | the callback called when the text changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | optional, the callback called when the text changes. |
 
 ## on('cursorContextChange')
 
@@ -620,7 +480,7 @@ on(type: 'keyEvent', callback: (event: InputKeyEvent) => boolean): void
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyEvent' | Yes | Event type, which is **'keyEvent'**. |
-| callback | (event: InputKeyEvent) =&gt; boolean | Yes | Callback used to return the result. The input parameter is the key event information and the return value is of the Boolean type. <br>- Input parameter: [InputKeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeyevent-keyevent-i.md). <br>- If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
+| callback | (event: InputKeyEvent) =&gt; boolean | Yes | Callback used to return the result. The input parameter is the key event information and the return value is of the Boolean type. <br>- Input parameter: [InputKeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md). <br>- If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
 
 **Examples**
 
@@ -725,4 +585,144 @@ inputMethodEngine.getKeyboardDelegate().on('textChange', (text: string) => {
   console.info('inputMethodEngine textChange. text:' + text);
 });
 ```
+
+## onCursorContextChange
+
+```TypeScript
+onCursorContextChange(callback: CursorContextChangeCallback): void
+```
+
+@brief Subscribe cursor context change.
+
+**Since:** 23
+
+<!--Device-KeyboardDelegate-onCursorContextChange(callback: CursorContextChangeCallback): void--><!--Device-KeyboardDelegate-onCursorContextChange(callback: CursorContextChangeCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [CursorContextChangeCallback](arkts-ime-inputmethodengine-cursorcontextchangecallback-t.md) | Yes | the callback called when cursor information changes. |
+
+## onEditorAttributeChanged
+
+```TypeScript
+onEditorAttributeChanged(callback: Callback<EditorAttribute>): void
+```
+
+@brief Subscribe input text attribute change.
+
+**Since:** 23
+
+<!--Device-KeyboardDelegate-onEditorAttributeChanged(callback: Callback<EditorAttribute>): void--><!--Device-KeyboardDelegate-onEditorAttributeChanged(callback: Callback<EditorAttribute>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | Yes | the callback called when editor's attribute changes. |
+
+## onKeyDown
+
+```TypeScript
+onKeyDown(callback: KeyEventCallback): void
+```
+
+@brief Subscribe key down event
+
+**Since:** 23
+
+<!--Device-KeyboardDelegate-onKeyDown(callback: KeyEventCallback): void--><!--Device-KeyboardDelegate-onKeyDown(callback: KeyEventCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | Yes | the callback called when a key down event occurs. If the key is processed by event subscriber, callback should be return true, else return false. |
+
+## onKeyEvent
+
+```TypeScript
+onKeyEvent(callback: InputKeyEventCallback): void
+```
+
+@brief Subscribe key event.
+
+**Since:** 23
+
+<!--Device-KeyboardDelegate-onKeyEvent(callback: InputKeyEventCallback): void--><!--Device-KeyboardDelegate-onKeyEvent(callback: InputKeyEventCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [InputKeyEventCallback](arkts-ime-inputmethodengine-inputkeyeventcallback-t.md) | Yes | the callback called when a key event event occurs. If the key is processed by event subscriber, callback should be return true, else return false. |
+
+## onKeyUp
+
+```TypeScript
+onKeyUp(callback: KeyEventCallback): void
+```
+
+@brief Subscribe key up event
+
+**Since:** 23
+
+<!--Device-KeyboardDelegate-onKeyUp(callback: KeyEventCallback): void--><!--Device-KeyboardDelegate-onKeyUp(callback: KeyEventCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | Yes | the callback called when a key up event occurs. If the key is processed by event subscriber, callback should be return true, else return false. |
+
+## onSelectionChange
+
+```TypeScript
+onSelectionChange(callback: SelectionChangeCallback): void
+```
+
+@brief Subscribe selection change.
+
+**Since:** 23
+
+<!--Device-KeyboardDelegate-onSelectionChange(callback: SelectionChangeCallback): void--><!--Device-KeyboardDelegate-onSelectionChange(callback: SelectionChangeCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [SelectionChangeCallback](arkts-ime-inputmethodengine-selectionchangecallback-t.md) | Yes | the callback called when the text selection changes. |
+
+## onTextChange
+
+```TypeScript
+onTextChange(callback: Callback<string>): void
+```
+
+@brief Subscribe text change.
+
+**Since:** 23
+
+<!--Device-KeyboardDelegate-onTextChange(callback: Callback<string>): void--><!--Device-KeyboardDelegate-onTextChange(callback: Callback<string>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | the callback called when the text changes. |
 

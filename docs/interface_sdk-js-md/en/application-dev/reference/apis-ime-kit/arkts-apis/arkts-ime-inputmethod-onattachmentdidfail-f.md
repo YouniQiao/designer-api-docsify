@@ -29,7 +29,7 @@ function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AttachFailureReason](arkts-ime-inputmethod-attachfailurereason-e.md)&gt; | Yes | Callback used to return the reason for attachment failure. This callback is only invoked when the attachment failure is triggered by the registrant's process. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AttachFailureReason](arkts-ime-inputmethod-attachfailurereason-e.md)&gt; | Yes | Callback used to return the reason for attachment failure. This callback is only invoked when the attachment failure is triggered by the registrant's process. |
 
 **Examples**
 

@@ -29,7 +29,7 @@ Export contact data to a vcf file.
 | context | Context | Yes | Indicates the context of application or capability. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Execute statement. |
 | options | [VCardBuilderOptions](arkts-telephony-vcard-vcardbuilderoptions-i.md) | Yes | Encoding and version. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Represents the address of the generated vcf file. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Represents the address of the generated vcf file. |
 
 **Error codes:**
 
@@ -59,6 +59,49 @@ class EntryAbility extends UIAbility {
             charset: "UTF-8"
         };
         vcard.exportVCard(this.context, predicates, options, (err: BusinessError, data: string) => {
+            console.error(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+        });
+    }
+}
+```
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { vcard } from '@kit.TelephonyKit';
+import { dataSharePredicates } from '@kit.ArkData';
+
+class EntryAbility extends UIAbility {
+    onWindowStageCreate(windowStage: window.WindowStage) {
+        let predicates = new dataSharePredicates.DataSharePredicates();
+        predicates.equalTo("NAME", "Rose");
+        let options: vcard.VCardBuilderOptions = {
+            cardType: vcard.VCardType.VERSION_21,
+            charset: "UTF-8"
+        };
+        vcard.exportVCard(this.context, predicates, options).then(() => {
+            console.info(`exportVCard success.`);
+        }).catch((err: BusinessError) => {
+            console.error(`exportVCard failed, promise: err->${JSON.stringify(err)}`);
+        });
+    }
+}
+```
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { vcard } from '@kit.TelephonyKit';
+import { dataSharePredicates } from '@kit.ArkData';
+
+class EntryAbility extends UIAbility {
+    onWindowStageCreate(windowStage: window.WindowStage) {
+        let predicates = new dataSharePredicates.DataSharePredicates();
+        predicates.equalTo("NAME", "Rose");
+
+        vcard.exportVCard(this.context, predicates, (err: BusinessError, data: string) => {
             console.error(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
         });
     }
@@ -108,29 +151,7 @@ Export contact data to a vcf file.
 
 **Examples**
 
-```TypeScript
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { vcard } from '@kit.TelephonyKit';
-import { dataSharePredicates } from '@kit.ArkData';
-
-class EntryAbility extends UIAbility {
-    onWindowStageCreate(windowStage: window.WindowStage) {
-        let predicates = new dataSharePredicates.DataSharePredicates();
-        predicates.equalTo("NAME", "Rose");
-        let options: vcard.VCardBuilderOptions = {
-            cardType: vcard.VCardType.VERSION_21,
-            charset: "UTF-8"
-        };
-        vcard.exportVCard(this.context, predicates, options).then(() => {
-            console.info(`exportVCard success.`);
-        }).catch((err: BusinessError) => {
-            console.error(`exportVCard failed, promise: err->${JSON.stringify(err)}`);
-        });
-    }
-}
-```
+See [exportVCard](#exportvcard)
 
 
 ## exportVCard
@@ -155,7 +176,7 @@ Export contact data to a vcf file.
 | --- | --- | --- | --- |
 | context | Context | Yes | Indicates the context of application or capability. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Execute statement. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Represents the address of the generated vcf file. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Represents the address of the generated vcf file. |
 
 **Error codes:**
 
@@ -169,22 +190,5 @@ Export contact data to a vcf file.
 
 **Examples**
 
-```TypeScript
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { vcard } from '@kit.TelephonyKit';
-import { dataSharePredicates } from '@kit.ArkData';
-
-class EntryAbility extends UIAbility {
-    onWindowStageCreate(windowStage: window.WindowStage) {
-        let predicates = new dataSharePredicates.DataSharePredicates();
-        predicates.equalTo("NAME", "Rose");
-
-        vcard.exportVCard(this.context, predicates, (err: BusinessError, data: string) => {
-            console.error(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-        });
-    }
-}
-```
+See [exportVCard](#exportvcard)
 

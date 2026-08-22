@@ -969,6 +969,60 @@ function release(pixelMap: sendableImage.PixelMap) {
 }
 ```
 
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(context : Context) {
+  const path: string = context.cacheDir + "/test.jpg";
+  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(path);
+  sendableImageSourceObj.release().then(() => {
+    console.info('Succeeded in releasing the image source instance.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the image source instance. code ${error.code}, message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+async function Release() {
+  let size: image.Size = {
+    height: 8192,
+    width: 8
+  }
+  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
+  let img = await receiver.readNextImage();
+  img.release().then(() => {
+    console.info('Succeeded in releasing an image.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release an image. Code: ${error.code}, message: ${error.message}.`);
+  })
+}
+```
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+async function Release() {
+  let size: image.Size = {
+    height: 8192,
+    width: 8
+  }
+  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
+  receiver.release().then(() => {
+    console.info('Succeeded in releasing an image receiver.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release an image receiver. Code: ${error.code}, message: ${error.message}.`);
+  })
+}
+```
+
 ## rotate
 
 ```TypeScript

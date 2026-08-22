@@ -61,6 +61,13 @@ constructor(
 | subscribeMe | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 否 | 订阅者，用于接收属性变化通知；不传入则不建立订阅关系。 |
 | info | string | 否 | 变量信息，用于标识该订阅关系；不传入时默认为undefined。 |
 
+**示例**
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+```
+
 ## createOneWaySync
 
 ```TypeScript

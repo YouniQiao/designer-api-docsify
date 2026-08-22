@@ -43,10 +43,10 @@ The appManager module provides APIs for application management. For example, you
 | [getForegroundApplications](arkts-ability-appmanager-getforegroundapplications-depr-f-sys.md#getforegroundapplications) | getForegroundApplications. |
 | [getProcessRunningInformation](arkts-ability-appmanager-getprocessrunninginformation-depr-f-sys.md#getprocessrunninginformation) | Obtains information about the running processes. This API uses a promise to return the result. |
 | [getProcessRunningInformation](arkts-ability-appmanager-getprocessrunninginformation-depr-f-sys.md#getprocessrunninginformation) | Obtains information about the running processes. This API uses an asynchronous callback to return the result. |
-| [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-depr-f-sys.md#killprocesswithaccount) | Kill process with account. |
-| [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-depr-f-sys.md#killprocesswithaccount) | Kill process with account. |
 | [killProcessesByBundleName](arkts-ability-appmanager-killprocessesbybundlename-depr-f-sys.md#killprocessesbybundlename) | Kill processes by bundle name |
 | [killProcessesByBundleName](arkts-ability-appmanager-killprocessesbybundlename-depr-f-sys.md#killprocessesbybundlename) | Kill processes by bundle name |
+| [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-depr-f-sys.md#killprocesswithaccount) | Kill process with account. |
+| [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-depr-f-sys.md#killprocesswithaccount) | Kill process with account. |
 | [registerApplicationStateObserver](arkts-ability-appmanager-registerapplicationstateobserver-depr-f-sys.md#registerapplicationstateobserver) | Register application state observer. |
 | [unregisterApplicationStateObserver](arkts-ability-appmanager-unregisterapplicationstateobserver-depr-f-sys.md#unregisterapplicationstateobserver) | Unregister application state observer. |
 | [unregisterApplicationStateObserver](arkts-ability-appmanager-unregisterapplicationstateobserver-depr-f-sys.md#unregisterapplicationstateobserver) | Unregister application state observer. |

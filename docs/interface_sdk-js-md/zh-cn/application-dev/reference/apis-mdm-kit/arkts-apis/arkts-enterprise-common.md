@@ -36,11 +36,11 @@ import { common } from '@kit.MDMKit';
 | --- | --- |
 | [ManagedPolicy](arkts-mdm-common-managedpolicy-e.md) | 企业设备管控策略。 |
 | [Result](arkts-mdm-common-result-e.md) | 应用安装结果码。 |
-| [StartupScene](arkts-mdm-common-startupscene-e.md) | 开机向导完成场景。端侧系统在首次切换子用户完成（仅限PC）、OTA升级完成、首次开机完成开机向导时会通过 [onStartupGuideCompleted](../../apis-default/arkts-apis/arkts-enterpriseenterpriseadminextensionability-enterpriseadminextensionability-c.md#onstartupguidecompleted) 回调接口通知设备管理应用。 |
+| [StartupScene](arkts-mdm-common-startupscene-e.md) | 开机向导完成场景。端侧系统在首次切换子用户完成（仅限PC）、OTA升级完成、首次开机完成开机向导时会通过 [onStartupGuideCompleted](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onstartupguidecompleted) 回调接口通知设备管理应用。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [EnterpriseAdminExtensionContext](arkts-mdm-common-enterpriseadminextensioncontext-t.md) | EnterpriseAdminExtensionContext是 [EnterpriseAdminExtensionAbility](../../apis-default/arkts-apis/arkts-enterpriseenterpriseadminextensionability-enterpriseadminextensionability-c.md) 的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。 |
+| [EnterpriseAdminExtensionContext](arkts-mdm-common-enterpriseadminextensioncontext-t.md) | EnterpriseAdminExtensionContext是 [EnterpriseAdminExtensionAbility](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md) 的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。 |
 

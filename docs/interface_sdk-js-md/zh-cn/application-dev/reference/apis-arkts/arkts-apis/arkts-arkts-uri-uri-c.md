@@ -597,6 +597,10 @@ getQueryValue(key: string): string | null
 | --- | --- |
 | string \| null | 返回解码后的值，如果未找到对应的值则返回 null 对象。 |
 
+**示例**
+
+参见 [getQueryValue](#getqueryvalue)
+
 ## getQueryValues
 
 ```TypeScript

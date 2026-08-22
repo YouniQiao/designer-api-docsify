@@ -29,7 +29,7 @@ Obtains the device direction based on the rotation matrix. This API uses an asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | rotationMatrix | Array&lt;number&gt; | Yes | Rotation matrix. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the rotation angle around the z, x, and y axes, in degrees. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the rotation angle around the z, x, and y axes, in degrees. |
 
 **Examples**
 
@@ -46,6 +46,21 @@ sensor.getDirection([1, 0, 0, 0, 1, 0, 0, 0, 1], (err: BusinessError, data: Arra
   for (let i = 1; i < data.length; i++) {
     console.info("Succeeded in getting sensor_getDirection_callback" + data[i]);
   }
+})
+```
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const promise = sensor.getDirection([1, 0, 0, 0, 1, 0, 0, 0, 1]);
+promise.then((data: Array<number>) => {
+  console.info('Succeeded in getting sensor_getAltitude_Promise', data);
+  for (let i = 1; i < data.length; i++) {
+    console.info("Succeeded in getting sensor_getDirection_promise" + data[i]);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get promise.`);
 })
 ```
 
@@ -82,18 +97,5 @@ Obtains the device direction based on the rotation matrix. This API uses a promi
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const promise = sensor.getDirection([1, 0, 0, 0, 1, 0, 0, 0, 1]);
-promise.then((data: Array<number>) => {
-  console.info('Succeeded in getting sensor_getAltitude_Promise', data);
-  for (let i = 1; i < data.length; i++) {
-    console.info("Succeeded in getting sensor_getDirection_promise" + data[i]);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get promise.`);
-})
-```
+See [getDirection](#getdirection)
 

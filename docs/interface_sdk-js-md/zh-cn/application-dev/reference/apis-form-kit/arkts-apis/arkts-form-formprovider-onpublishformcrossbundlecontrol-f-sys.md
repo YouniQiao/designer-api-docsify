@@ -40,3 +40,38 @@ function onPublishFormCrossBundleControl(callback: formInfo.PublishFormCrossBund
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formProvider, formInfo } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formProvider.onPublishFormCrossBundleControl((info: formInfo.PublishFormCrossBundleInfo) => {
+    return true;
+  });
+  console.info(`onPublishFormCrossBundleControl success`);
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formProvider, formInfo } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formProvider.onPublishFormCrossBundleControl((info) => {
+    return true;
+  });
+  console.info(`onPublishFormCrossBundleControl success`);
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+

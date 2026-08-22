@@ -36,7 +36,7 @@ The child window created uses an [immersive layout](../../../windowmanager/windo
 | --- | --- | --- | --- |
 | id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md). |
 | type | WindowType | Yes | Window type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the child window created. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the child window created. |
 
 **Examples**
 
@@ -52,6 +52,48 @@ window.create('test', window.WindowType.TYPE_APP, (err: BusinessError, data) => 
   }
   windowClass = data;
   console.info('Succeeded in creating the subWindow. Data: ' + JSON.stringify(data));
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let windowClass: window.Window | undefined = undefined;
+let promise = window.create('test', window.WindowType.TYPE_APP);
+promise.then((data) => {
+  windowClass = data;
+  console.info('Succeeded in creating the subWindow. Data: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create the subWindow. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let windowClass: window.Window | undefined = undefined;
+window.create(globalThis.getContext(), 'test', window.WindowType.TYPE_SYSTEM_ALERT, (err: BusinessError, data) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to create the window. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  windowClass = data;
+  console.info('Succeeded in creating the window. Data: ' + JSON.stringify(data));
+  windowClass.resetSize(500, 1000);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let windowClass: window.Window | undefined = undefined;
+let promise = window.create(globalThis.getContext(), 'test', window.WindowType.TYPE_SYSTEM_ALERT);
+promise.then((data) => {
+  windowClass = data;
+  console.info('Succeeded in creating the window. Data:' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create the Window. Cause code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -93,18 +135,7 @@ The child window created uses an [immersive layout](../../../windowmanager/windo
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowClass: window.Window | undefined = undefined;
-let promise = window.create('test', window.WindowType.TYPE_APP);
-promise.then((data) => {
-  windowClass = data;
-  console.info('Succeeded in creating the subWindow. Data: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create the subWindow. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
+See [create](#create)
 
 
 ## create
@@ -141,18 +172,7 @@ Creates a system window. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowClass: window.Window | undefined = undefined;
-let promise = window.create(globalThis.getContext(), 'test', window.WindowType.TYPE_SYSTEM_ALERT);
-promise.then((data) => {
-  windowClass = data;
-  console.info('Succeeded in creating the window. Data:' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create the Window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
+See [create](#create)
 
 
 ## create
@@ -180,23 +200,9 @@ Creates a system window. This API uses an asynchronous callback to return the re
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
 | id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md). |
 | type | WindowType | Yes | Window type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the child window created. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the child window created. |
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowClass: window.Window | undefined = undefined;
-window.create(globalThis.getContext(), 'test', window.WindowType.TYPE_SYSTEM_ALERT, (err: BusinessError, data) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to create the window. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  windowClass = data;
-  console.info('Succeeded in creating the window. Data: ' + JSON.stringify(data));
-  windowClass.resetSize(500, 1000);
-});
-```
+See [create](#create)
 

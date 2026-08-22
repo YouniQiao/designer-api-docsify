@@ -29,7 +29,7 @@ Obtains the historical data traffic of the specified NIC. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ifaceInfo | [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) | Yes | NIC information. For details, see [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined** and **statsInfo** is the historical traffic statistics of the NIC. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined** and **statsInfo** is the historical traffic statistics of the NIC. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -53,6 +53,32 @@ let iFaceInfo: statistics.IfaceInfo | null = null;
 if (iFaceInfo) {
   statistics.getTrafficStatsByIface(iFaceInfo as statistics.IfaceInfo, (error: BusinessError, statsInfo: statistics.NetStatsInfo) => {
     console.error(JSON.stringify(error));
+    console.info(
+      "getTrafficStatsByIface bytes of received = " +
+      JSON.stringify(statsInfo.rxBytes)
+    );
+    console.info(
+      "getTrafficStatsByIface bytes of sent = " +
+      JSON.stringify(statsInfo.txBytes)
+    );
+    console.info(
+      "getTrafficStatsByIface packets of received = " +
+      JSON.stringify(statsInfo.rxPackets)
+    );
+    console.info(
+      "getTrafficStatsByIface packets of sent = " +
+      JSON.stringify(statsInfo.txPackets)
+    );
+  });
+}
+```
+
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+let iFaceInfo: statistics.IfaceInfo | null = null;
+if (iFaceInfo) {
+  statistics.getTrafficStatsByIface(iFaceInfo as statistics.IfaceInfo).then((statsInfo: statistics.NetStatsInfo) => {
     console.info(
       "getTrafficStatsByIface bytes of received = " +
       JSON.stringify(statsInfo.rxBytes)
@@ -120,29 +146,5 @@ Obtains the historical data traffic of the specified NIC. This API uses a promis
 
 **Examples**
 
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-let iFaceInfo: statistics.IfaceInfo | null = null;
-if (iFaceInfo) {
-  statistics.getTrafficStatsByIface(iFaceInfo as statistics.IfaceInfo).then((statsInfo: statistics.NetStatsInfo) => {
-    console.info(
-      "getTrafficStatsByIface bytes of received = " +
-      JSON.stringify(statsInfo.rxBytes)
-    );
-    console.info(
-      "getTrafficStatsByIface bytes of sent = " +
-      JSON.stringify(statsInfo.txBytes)
-    );
-    console.info(
-      "getTrafficStatsByIface packets of received = " +
-      JSON.stringify(statsInfo.rxPackets)
-    );
-    console.info(
-      "getTrafficStatsByIface packets of sent = " +
-      JSON.stringify(statsInfo.txPackets)
-    );
-  });
-}
-```
+See [getTrafficStatsByIface](#gettrafficstatsbyiface)
 

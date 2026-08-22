@@ -28,3 +28,22 @@ Called when the system shares the form.
 | --- | --- |
 | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | Returns the wantParams object. |
 
+**示例**
+
+```TypeScript
+'use static'
+
+import { FormExtensionAbility } from '@kit.FormKit';
+
+export default class MyFormExtensionAbility extends FormExtensionAbility {
+  onShareFormFn(formId: string) {
+    console.info(`FormExtensionAbility onShareForm, formId: ${formId}`);
+    let wantParams: Record<string, Object> = {
+      'temperature': '20',
+      'time': '2022-8-8 09:59',
+    };
+    return wantParams;
+  }
+}
+```
+

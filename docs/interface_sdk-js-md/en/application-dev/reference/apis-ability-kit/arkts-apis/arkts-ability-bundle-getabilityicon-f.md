@@ -49,7 +49,39 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | abilityName | string | Yes | Ability name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md). |
+
+**Examples**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleName: string = "com.example.myapplication";
+let abilityName: string = "EntryAbility";
+
+bundle.getAbilityIcon(bundleName, abilityName)
+  .then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleName: string = "com.example.myapplication";
+let abilityName: string = "EntryAbility";
+
+bundle.getAbilityIcon(bundleName, abilityName, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+```
 
 
 ## getAbilityIcon
@@ -86,4 +118,8 @@ No permission is required for obtaining the caller's own information.
 | Type | Description |
 | --- | --- |
 | Promise&lt;image.PixelMap&gt; | Returns the PixelMap object representing the icon of the specified ability. |
+
+**Examples**
+
+See [getAbilityIcon](#getabilityicon)
 

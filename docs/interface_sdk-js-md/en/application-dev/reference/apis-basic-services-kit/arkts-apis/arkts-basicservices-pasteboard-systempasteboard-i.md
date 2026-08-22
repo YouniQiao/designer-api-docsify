@@ -36,7 +36,7 @@ Clears the system pasteboard. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -54,6 +54,17 @@ systemPasteboard.clear((err, data) => {
         return;
     }
     console.info('Succeeded in clearing the PasteData.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.clear().then((data) => {
+    console.info('Succeeded in clearing the PasteData.');
+}).catch((err: BusinessError) => {
+    console.error(`Failed to clear the PasteData. Cause: ${err.message}`);
 });
 ```
 
@@ -83,16 +94,7 @@ Clears the system pasteboard. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.clear().then((data) => {
-    console.info('Succeeded in clearing the PasteData.');
-}).catch((err: BusinessError) => {
-    console.error(`Failed to clear the PasteData. Cause: ${err.message}`);
-});
-```
+See [clear](#clear)
 
 ## clearData
 
@@ -114,7 +116,7 @@ Clears the system pasteboard. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -132,6 +134,17 @@ systemPasteboard.clearData((err, data) => {
         return;
     }
     console.info('Succeeded in clearing the pasteboard.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.clearData().then((data: void) => {
+    console.info('Succeeded in clearing the pasteboard.');
+}).catch((err: BusinessError) => {
+    console.error(`Failed to clear the pasteboard. Cause: ${err.message}`);
 });
 ```
 
@@ -159,16 +172,7 @@ Clears the system pasteboard. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.clearData().then((data: void) => {
-    console.info('Succeeded in clearing the pasteboard.');
-}).catch((err: BusinessError) => {
-    console.error(`Failed to clear the pasteboard. Cause: ${err.message}`);
-});
-```
+See [clearData](#cleardata)
 
 ## clearDataSync
 
@@ -318,7 +322,7 @@ Obtains a **PasteData** object from the pasteboard. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -333,6 +337,27 @@ Obtains a **PasteData** object from the pasteboard. This API uses an asynchronou
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let html = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";
+let record: pasteboard.PasteDataRecord = pasteboard.createRecord(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
+record.addEntry(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
+record.addEntry(pasteboard.MIMETYPE_TEXT_HTML, html);
+record.getData(pasteboard.MIMETYPE_TEXT_PLAIN).then((value: pasteboard.ValueType) => {
+    let textPlainContent = value as string;
+    console.info('Success to get text/plain value. value is: ' + textPlainContent);
+}).catch((err: BusinessError) => {
+    console.error('Failed to get text/plain value. Cause: ' + err.message);
+});
+record.getData(pasteboard.MIMETYPE_TEXT_URI).then((value: pasteboard.ValueType) => {
+    let uri = value as string;
+    console.info('Success to get text/uri value. value is: ' + uri);
+}).catch((err: BusinessError) => {
+    console.error('Failed to get text/uri value. Cause: ' + err.message);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
 systemPasteboard.getData((err: BusinessError, pasteData: pasteboard.PasteData) => {
     if (err) {
@@ -340,6 +365,17 @@ systemPasteboard.getData((err: BusinessError, pasteData: pasteboard.PasteData) =
         return;
     }
     let text: string = pasteData.getPrimaryText();
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
+    let text: string = pasteData.getPrimaryText();
+}).catch((err: BusinessError) => {
+    console.error('Failed to get PasteData. Cause: ' + err.message);
 });
 ```
 
@@ -377,16 +413,7 @@ Obtains a **PasteData** object from the pasteboard. This API uses a promise to r
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
-    let text: string = pasteData.getPrimaryText();
-}).catch((err: BusinessError) => {
-    console.error('Failed to get PasteData. Cause: ' + err.message);
-});
-```
+See [getData](#getdata)
 
 ## getDataSource
 
@@ -581,6 +608,11 @@ Obtains the types of PasteData in the system pasteboard. This API uses a promise
 **Examples**
 
 ```TypeScript
+let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
+let types: string[] = pasteData.getMimeTypes();
+```
+
+```TypeScript
 import { pasteboard, BusinessError } from '@kit.BasicServicesKit'
 
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
@@ -613,7 +645,7 @@ Obtains a **PasteData** object from the pasteboard. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -633,6 +665,17 @@ systemPasteboard.getPasteData((err: BusinessError, pasteData: pasteboard.PasteDa
         return;
     }
     let text: string = pasteData.getPrimaryText();
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.getPasteData().then((pasteData: pasteboard.PasteData) => {
+    let text: string = pasteData.getPrimaryText();
+}).catch((err: BusinessError) => {
+    console.error('Failed to get PasteData. Cause: ' + err.message);
 });
 ```
 
@@ -662,16 +705,7 @@ Obtains a **PasteData** object from the pasteboard. This API uses a promise to r
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.getPasteData().then((pasteData: pasteboard.PasteData) => {
-    let text: string = pasteData.getPrimaryText();
-}).catch((err: BusinessError) => {
-    console.error('Failed to get PasteData. Cause: ' + err.message);
-});
-```
+See [getPasteData](#getpastedata)
 
 ## getUnifiedData
 
@@ -789,7 +823,7 @@ Checks whether the system pasteboard contains data. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. Returns **true** if the system pasteboard contains data; returns **false** otherwise. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. Returns **true** if the system pasteboard contains data; returns **false** otherwise. |
 
 **Error codes:**
 
@@ -809,6 +843,17 @@ systemPasteboard.hasData((err: BusinessError, data: boolean) => {
         return;
     }
     console.info(`Succeeded in checking the PasteData. Data: ${data}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.hasData().then((data: boolean) => {
+    console.info(`Succeeded in checking the PasteData. Data: ${data}`);
+}).catch((err: BusinessError) => {
+    console.error(`Failed to check the PasteData. Cause: ${err.message}`);
 });
 ```
 
@@ -836,16 +881,7 @@ Checks whether the system pasteboard contains data. This API uses a promise to r
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.hasData().then((data: boolean) => {
-    console.info(`Succeeded in checking the PasteData. Data: ${data}`);
-}).catch((err: BusinessError) => {
-    console.error(`Failed to check the PasteData. Cause: ${err.message}`);
-});
-```
+See [hasData](#hasdata)
 
 ## hasDataSync
 
@@ -956,7 +992,7 @@ Checks whether the system pasteboard contains data. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. Returns **true** if the system pasteboard contains data; returns **false** otherwise. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. Returns **true** if the system pasteboard contains data; returns **false** otherwise. |
 
 **Error codes:**
 
@@ -976,6 +1012,17 @@ systemPasteboard.hasPasteData((err: BusinessError, data: boolean) => {
         return;
     }
     console.info(`Succeeded in checking the PasteData. Data: ${data}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.hasPasteData().then((data: boolean) => {
+    console.info(`Succeeded in checking the PasteData. Data: ${data}`);
+}).catch((err: BusinessError) => {
+    console.error(`Failed to check the PasteData. Cause: ${err.message}`);
 });
 ```
 
@@ -1005,16 +1052,7 @@ Checks whether the system pasteboard contains data. This API uses a promise to r
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.hasPasteData().then((data: boolean) => {
-    console.info(`Succeeded in checking the PasteData. Data: ${data}`);
-}).catch((err: BusinessError) => {
-    console.error(`Failed to check the PasteData. Cause: ${err.message}`);
-});
-```
+See [hasPasteData](#haspastedata)
 
 ## hasRemoteData
 
@@ -1087,6 +1125,43 @@ try {
 };
 ```
 
+## off('update')
+
+```TypeScript
+off(type: 'update', callback?: () => void): void
+```
+
+Unsubscribes the content change event of the system pasteboard.
+
+**Since:** 7
+
+<!--Device-SystemPasteboard-off(type: 'update', callback?: () => void): void--><!--Device-SystemPasteboard-off(type: 'update', callback?: () => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Pasteboard
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'update' | Yes | Event type. The value **'update'** indicates changes in the pasteboard content. |
+| callback | () =&gt; void | No | the callback to remove. If this parameter is not filled in, it indicates that all callbacks for this application will be cleared. Otherwise, it indicates that the specified callback will be cleared. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+
+**Examples**
+
+```TypeScript
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+let listener = () => {
+    console.info('The system pasteboard has changed.');
+};
+systemPasteboard.off('update', listener);
+```
+
 ## offRemoteUpdate
 
 ```TypeScript
@@ -1137,17 +1212,17 @@ Remove a callback invoked when pasteboard content changes.
 | --- | --- | --- | --- |
 | callback | [UpdateCallback](arkts-basicservices-pasteboard-updatecallback-t.md) | No | the callback to remove. If this parameter is not filled in, it indicates that all callbacks for this application will be cleared. Otherwise, it indicates that the specified callback will be cleared. <br>Default value: Clear all callbacks of this application. |
 
-## off('update')
+## on('update')
 
 ```TypeScript
-off(type: 'update', callback?: () => void): void
+on(type: 'update', callback: () => void): void
 ```
 
-Unsubscribes the content change event of the system pasteboard.
+Subscribes the content change event of the system pasteboard.
 
 **Since:** 7
 
-<!--Device-SystemPasteboard-off(type: 'update', callback?: () => void): void--><!--Device-SystemPasteboard-off(type: 'update', callback?: () => void): void-End-->
+<!--Device-SystemPasteboard-on(type: 'update', callback: () => void): void--><!--Device-SystemPasteboard-on(type: 'update', callback: () => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -1156,7 +1231,7 @@ Unsubscribes the content change event of the system pasteboard.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'update' | Yes | Event type. The value **'update'** indicates changes in the pasteboard content. |
-| callback | () =&gt; void | No | the callback to remove. If this parameter is not filled in, it indicates that all callbacks for this application will be cleared. Otherwise, it indicates that the specified callback will be cleared. |
+| callback | () =&gt; void | Yes | Callback invoked when the pasteboard content changes. |
 
 **Error codes:**
 
@@ -1171,7 +1246,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 let listener = () => {
     console.info('The system pasteboard has changed.');
 };
-systemPasteboard.off('update', listener);
+systemPasteboard.on('update', listener);
 ```
 
 ## onRemoteUpdate
@@ -1224,43 +1299,6 @@ Add a callback invoked when pasteboard content changes.
 | --- | --- | --- | --- |
 | callback | [UpdateCallback](arkts-basicservices-pasteboard-updatecallback-t.md) | Yes | the callback to add. |
 
-## on('update')
-
-```TypeScript
-on(type: 'update', callback: () => void): void
-```
-
-Subscribes the content change event of the system pasteboard.
-
-**Since:** 7
-
-<!--Device-SystemPasteboard-on(type: 'update', callback: () => void): void--><!--Device-SystemPasteboard-on(type: 'update', callback: () => void): void-End-->
-
-**System capability:** SystemCapability.MiscServices.Pasteboard
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'update' | Yes | Event type. The value **'update'** indicates changes in the pasteboard content. |
-| callback | () =&gt; void | Yes | Callback invoked when the pasteboard content changes. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-
-**Examples**
-
-```TypeScript
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-let listener = () => {
-    console.info('The system pasteboard has changed.');
-};
-systemPasteboard.on('update', listener);
-```
-
 ## setData
 
 ```TypeScript
@@ -1282,7 +1320,7 @@ Writes a **PasteData** object to the pasteboard. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | Yes | PasteData** object. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1303,6 +1341,18 @@ systemPasteboard.setData(pasteData, (err, data) => {
         return;
     }
     console.info('Succeeded in setting PasteData.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'content');
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.setData(pasteData).then((data: void) => {
+    console.info('Succeeded in setting PasteData.');
+}).catch((err: BusinessError) => {
+    console.error('Failed to set PasteData. Cause: ' + err.message);
 });
 ```
 
@@ -1344,17 +1394,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'content');
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.setData(pasteData).then((data: void) => {
-    console.info('Succeeded in setting PasteData.');
-}).catch((err: BusinessError) => {
-    console.error('Failed to set PasteData. Cause: ' + err.message);
-});
-```
+See [setData](#setdata)
 
 ## setDataSync
 
@@ -1421,7 +1461,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | Yes | PasteData** object. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1440,6 +1480,18 @@ systemPasteboard.setPasteData(pasteData, (err, data) => {
         return;
     }
     console.info('Succeeded in setting PasteData.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('content');
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.setPasteData(pasteData).then((data: void) => {
+    console.info('Succeeded in setting PasteData.');
+}).catch((err: BusinessError) => {
+    console.error('Failed to set PasteData. Cause: ' + err.message);
 });
 ```
 
@@ -1475,17 +1527,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('content');
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.setPasteData(pasteData).then((data: void) => {
-    console.info('Succeeded in setting PasteData.');
-}).catch((err: BusinessError) => {
-    console.error('Failed to set PasteData. Cause: ' + err.message);
-});
-```
+See [setPasteData](#setpastedata)
 
 ## setUnifiedData
 

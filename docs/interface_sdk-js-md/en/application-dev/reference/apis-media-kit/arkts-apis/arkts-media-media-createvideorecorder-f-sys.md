@@ -26,7 +26,7 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[VideoRecorder](arkts-media-media-videorecorder-i-sys.md)&gt; | Yes | used to return AudioPlayer instance if the operation is successful; returns null otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoRecorder](arkts-media-media-videorecorder-i-sys.md)&gt; | Yes | used to return AudioPlayer instance if the operation is successful; returns null otherwise. |
 
 **Error codes:**
 
@@ -51,6 +51,22 @@ media.createVideoRecorder((error: BusinessError, video: media.VideoRecorder) => 
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let videoRecorder: media.VideoRecorder;
+media.createVideoRecorder().then((video: media.VideoRecorder) => {
+  if (video != null) {
+    videoRecorder = video;
+    console.info('video createVideoRecorder success');
+  } else {
+    console.error('video createVideoRecorder fail');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error message:${error.message}`);
+});
+```
+
 
 ## createVideoRecorder
 
@@ -72,7 +88,7 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[VideoRecorder](arkts-media-media-videorecorder-i-sys.md) \| undefined&gt; | Yes | used to return AudioPlayer instance if the operation is successful; returns undefined otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoRecorder](arkts-media-media-videorecorder-i-sys.md) \| undefined&gt; | Yes | used to return AudioPlayer instance if the operation is successful; returns undefined otherwise. |
 
 **Error codes:**
 
@@ -80,6 +96,10 @@ The maintenance of this interface has been stopped since version api 9. Please u
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
+
+**Examples**
+
+See [createVideoRecorder](#createvideorecorder)
 
 
 ## createVideoRecorder
@@ -113,21 +133,7 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let videoRecorder: media.VideoRecorder;
-media.createVideoRecorder().then((video: media.VideoRecorder) => {
-  if (video != null) {
-    videoRecorder = video;
-    console.info('video createVideoRecorder success');
-  } else {
-    console.error('video createVideoRecorder fail');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`video catchCallback, error message:${error.message}`);
-});
-```
+See [createVideoRecorder](#createvideorecorder)
 
 
 ## createVideoRecorder
@@ -158,4 +164,8 @@ The maintenance of this interface has been stopped since version api 9. Please u
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+
+**Examples**
+
+See [createVideoRecorder](#createvideorecorder)
 

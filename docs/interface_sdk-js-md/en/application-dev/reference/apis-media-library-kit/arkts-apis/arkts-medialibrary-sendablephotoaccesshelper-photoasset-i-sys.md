@@ -55,6 +55,36 @@ Obtains analysis data. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
+**Examples**
+
+For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-file-sendablephotoaccesshelper.md).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { common } from '@kit.AbilityKit';
+
+async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
+  try {
+    console.info('getAnalysisDataDemo')
+    let fetchOptions: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: new dataSharePredicates.DataSharePredicates()
+    }
+    let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> =
+      await phAccessHelper.getAssets(fetchOptions);
+    let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    if (photoAsset != undefined) {
+      let analysisData: string = await photoAsset.getAnalysisData(
+        photoAccessHelper.AnalysisType.ANALYSIS_OCR);
+      console.info('get ocr result: ' + JSON.stringify(analysisData));
+    }
+    fetchResult.close();
+  } catch (err) {
+    console.error(`getAnalysisDataDemofailed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
 ## requestSource
 
 ```TypeScript

@@ -28,7 +28,7 @@ function getInstalledBundleList(admin: Want, accountId: number): Promise<Array<B
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | accountId | number | 是 | 用户ID，取值范围：大于等于0。 <br> accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。*@ohos.account.osAccount** to obtain the user ID. |
 
 **返回值：**
@@ -66,6 +66,27 @@ bundleManager.getInstalledBundleList(wantTemp, accountId).then((result) => {
 });
 ```
 
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleManager } from '@kit.MDMKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// 需根据实际情况进行替换
+let accountId: number = 100;
+let bundleInfoGetFlag: number = bundleManager.BundleInfoGetFlag.WITH_APPLICATION_INFO
+  | bundleManager.BundleInfoGetFlag.WITH_SIGNATURE_INFO;
+bundleManager.getInstalledBundleList(wantTemp, accountId, bundleInfoGetFlag).then((result) => {
+  console.info('Succeeded in getting installed bundle list.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get installed bundle list. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## getInstalledBundleList
 
@@ -89,7 +110,7 @@ function getInstalledBundleList(admin: Want, accountId: int, bundleInfoGetFlag: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | accountId | int | 是 | 用户ID，取值范围：大于等于0。 <br> accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。*@ohos.account.osAccount** to obtain the user ID. |
 | bundleInfoGetFlag | int | 是 | 指定返回的BundleInfo所包含的信息。 |
 
@@ -109,24 +130,5 @@ function getInstalledBundleList(admin: Want, accountId: int, bundleInfoGetFlag: 
 
 **示例**
 
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let accountId: number = 100;
-let bundleInfoGetFlag: number = bundleManager.BundleInfoGetFlag.WITH_APPLICATION_INFO
-  | bundleManager.BundleInfoGetFlag.WITH_SIGNATURE_INFO;
-bundleManager.getInstalledBundleList(wantTemp, accountId, bundleInfoGetFlag).then((result) => {
-  console.info('Succeeded in getting installed bundle list.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get installed bundle list. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [getInstalledBundleList](#getinstalledbundlelist)
 

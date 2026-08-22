@@ -45,3 +45,36 @@ function setPublishFormResult(formId: string, result: formInfo.PublishFormResult
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 | [16501001](../errorcode-form.md#16501001-卡片id不存在) | The ID of the form to be operated does not exist. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formHost, formInfo } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let formId: string = '12400633174999288';
+  let res: formInfo.PublishFormResult = { code: formInfo.PublishFormErrorCode.SUCCESS, message: '' };
+  formHost.setPublishFormResult(formId, res);
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formHost, formInfo } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let formId: string = '12400633174999288';
+  let res: formInfo.PublishFormResult = {code: formInfo.PublishFormErrorCode.SUCCESS, message: ''};
+  formHost.setPublishFormResult(formId, res);
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+

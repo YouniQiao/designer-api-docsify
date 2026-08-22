@@ -68,6 +68,101 @@ dataProxyHandle.delete(urisToDelete, config).then((results: dataShare.DataProxyR
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).delete(uri, da, (err: BusinessError, data: number) => {
+      if (err !== undefined) {
+        console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info("delete succeed, data : " + data);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to delete. Code: ${code}, message: ${message}`);
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = ("datashare:///com.samples.datasharetest.DataShare");
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).delete(uri, da, (err: BusinessError | null, data: int | undefined) => {
+      if (err?.message) {
+        console.error(`Failed to delete. Code: ${err?.code}, message: ${err?.message}`);
+        return;
+      }
+      if (data != undefined) {
+        console.info("delete succeed, data : " + data);
+      }
+    });
+  }
+} catch (err: BusinessError) {
+  console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
+};
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).delete(uri, da).then((data: number) => {
+      console.info("delete succeed, data : " + data);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to delete. Code: ${code}, message: ${message}`);
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = ("datashare:///com.samples.datasharetest.DataShare");
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    let data: int = await (dataShareHelper as dataShare.DataShareHelper).delete(uri, da);
+    console.info("delete succeed, data : " + data);
+  }
+} catch (err: BusinessError) {
+  console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
+};
+```
+
 ## deleteMyPublishedData
 
 ```TypeScript
@@ -209,70 +304,6 @@ getValues(uri: string, config: DataProxyConfig): Promise<ValueType[]>
 | [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
 | [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) | No permission to access the data specified by the URI. |
 
-## offDataChange
-
-```TypeScript
-offDataChange(
-      uris: string[],
-      config: DataProxyConfig,
-      callback?: Callback<DataProxyChangeInfo[]>
-    ): DataProxyResult[]
-```
-
-Deregisters observers to observe proxy data change specified by the given URIs.
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DataProxyHandle-offDataChange(      uris: string[],      config: DataProxyConfig,      callback?: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-offDataChange(      uris: string[],      config: DataProxyConfig,      callback?: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uris | string[] | 是 | Indicates the uris of the data to operate. |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | Indicates the configuration of the data proxy operation. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 否 | The callback function when data changes. |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] | : The operation result. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
-
-**示例**
-
-```TypeScript
-const urisToUnWatch: string[] =
-  ['datashareproxy://com.example.app1/config1', 'datashareproxy://com.example.app1/config2',];
-const config: dataShare.DataProxyConfig = {
-  type: dataShare.DataProxyType.SHARED_CONFIG,
-};
-const callback = (err: BusinessError<void>, changes: dataShare.DataProxyChangeInfo[]): void => {
-  if (err) {
-    console.error('err:', err);
-  } else {
-    changes.forEach((change) => {
-      console.info(`Change Type: ${change.type}, URI: ${change.uri}, Value: ${change.value}`);
-    });
-  }
-};
-const results: dataShare.DataProxyResult[] = dataProxyHandle.offDataChange(, urisToUnWatch, config, callback);
-results.forEach((result) => {
-  console.info(`URI: ${result.uri}, Result: ${result.result}`);
-});
-```
-
 ## off_dataChange
 
 ```TypeScript
@@ -339,23 +370,23 @@ results.forEach((result) => {
 });
 ```
 
-## onDataChange
+## offDataChange
 
 ```TypeScript
-onDataChange(
+offDataChange(
       uris: string[],
       config: DataProxyConfig,
-      callback: Callback<DataProxyChangeInfo[]>
+      callback?: Callback<DataProxyChangeInfo[]>
     ): DataProxyResult[]
 ```
 
-Registers observers to observe proxy data change specified by the given URIs.
+Deregisters observers to observe proxy data change specified by the given URIs.
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DataProxyHandle-onDataChange(      uris: string[],      config: DataProxyConfig,      callback: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-onDataChange(      uris: string[],      config: DataProxyConfig,      callback: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
+<!--Device-DataProxyHandle-offDataChange(      uris: string[],      config: DataProxyConfig,      callback?: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-offDataChange(      uris: string[],      config: DataProxyConfig,      callback?: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -365,7 +396,7 @@ Registers observers to observe proxy data change specified by the given URIs.
 | --- | --- | --- | --- |
 | uris | string[] | 是 | Indicates the uris of the data to operate. |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | Indicates the configuration of the data proxy operation. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 是 | The callback function when data changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 否 | The callback function when data changes. |
 
 **返回值：**
 
@@ -383,7 +414,7 @@ Registers observers to observe proxy data change specified by the given URIs.
 **示例**
 
 ```TypeScript
-const urisToWatch: string[] =
+const urisToUnWatch: string[] =
   ['datashareproxy://com.example.app1/config1', 'datashareproxy://com.example.app1/config2',];
 const config: dataShare.DataProxyConfig = {
   type: dataShare.DataProxyType.SHARED_CONFIG,
@@ -397,10 +428,32 @@ const callback = (err: BusinessError<void>, changes: dataShare.DataProxyChangeIn
     });
   }
 };
-const results: dataShare.DataProxyResult[] = dataProxyHandle.onDataChange(urisToWatch, config, callback);
+const results: dataShare.DataProxyResult[] = dataProxyHandle.offDataChange(, urisToUnWatch, config, callback);
 results.forEach((result) => {
   console.info(`URI: ${result.uri}, Result: ${result.result}`);
 });
+```
+
+```TypeScript
+let callback: () => void = (): void => {
+  console.info("**** Observer on callback ****");
+}
+let uri = ("datashare:///com.samples.datasharetest.DataShare");
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).onDataChange(uri, callback);
+  (dataShareHelper as dataShare.DataShareHelper).offDataChange(uri, callback);
+}
+```
+
+```TypeScript
+let uri = ("datashare:///com.acts.datasharetest");
+export function callback(ChangeInfo:dataShare.ChangeInfo) {
+    console.info(' **** Observer callback **** ChangeInfo:' + JSON.stringify(ChangeInfo));
+}
+if (dataShareHelper !== undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).onDataChange(dataShare.SubscriptionType.SUBSCRIPTION_TYPE_EXACT_URI, uri, callback);
+  (dataShareHelper as dataShare.DataShareHelper).offDataChange(dataShare.SubscriptionType.SUBSCRIPTION_TYPE_EXACT_URI, uri, callback);
+}
 ```
 
 ## on_dataChange
@@ -471,6 +524,90 @@ results.forEach((result) => {
 });
 ```
 
+## onDataChange
+
+```TypeScript
+onDataChange(
+      uris: string[],
+      config: DataProxyConfig,
+      callback: Callback<DataProxyChangeInfo[]>
+    ): DataProxyResult[]
+```
+
+Registers observers to observe proxy data change specified by the given URIs.
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataProxyHandle-onDataChange(      uris: string[],      config: DataProxyConfig,      callback: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-onDataChange(      uris: string[],      config: DataProxyConfig,      callback: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uris | string[] | 是 | Indicates the uris of the data to operate. |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | Indicates the configuration of the data proxy operation. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 是 | The callback function when data changes. |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] | : The operation result. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+
+**示例**
+
+```TypeScript
+const urisToWatch: string[] =
+  ['datashareproxy://com.example.app1/config1', 'datashareproxy://com.example.app1/config2',];
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+const callback = (err: BusinessError<void>, changes: dataShare.DataProxyChangeInfo[]): void => {
+  if (err) {
+    console.error('err:', err);
+  } else {
+    changes.forEach((change) => {
+      console.info(`Change Type: ${change.type}, URI: ${change.uri}, Value: ${change.value}`);
+    });
+  }
+};
+const results: dataShare.DataProxyResult[] = dataProxyHandle.onDataChange(urisToWatch, config, callback);
+results.forEach((result) => {
+  console.info(`URI: ${result.uri}, Result: ${result.result}`);
+});
+```
+
+```TypeScript
+let onCallback: () => void = (): void => {
+  console.info("**** Observer on callback ****");
+}
+let uri = ("datashare:///com.samples.datasharetest.DataShare");
+if (dataShareHelper !== undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).onDataChange(uri, onCallback);
+}
+```
+
+```TypeScript
+let uri = ("datashare:///com.acts.datasharetest");
+export function callback(ChangeInfo:dataShare.ChangeInfo) {
+    console.info(' **** Observer callback **** ChangeInfo:' + JSON.stringify(ChangeInfo));
+}
+if (dataShareHelper !== undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).onDataChange(dataShare.SubscriptionType.SUBSCRIPTION_TYPE_EXACT_URI, uri, callback);
+}
+```
+
 ## publish
 
 ```TypeScript
@@ -529,6 +666,50 @@ dataProxyHandle.publish(newConfigData, config).then((results: dataShare.DataProx
 }).catch((error: BusinessError) => {
   console.error(`Failed to publish config. code: ${error.code}, message: ${error.message}`);
 });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let arrayBuffer = new ArrayBuffer(1);
+let version = 1;
+let dataArray : Array<dataShare.PublishedItem> = [{key:"key2", subscriberId:"11", data:arrayBuffer}];
+let publishCallback: (err: BusinessError, result: Array<dataShare.OperationResult>) => void = (err: BusinessError, result: Array<dataShare.OperationResult>): void => {
+  console.info("publishCallback " + JSON.stringify(result));
+}
+try {
+  console.info("dataArray length is:", dataArray.length);
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest", version, publishCallback);
+  }
+} catch (e) {
+  console.error(`Failed to publish. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let publishCallback: (err: BusinessError, result: Array<dataShare.OperationResult>) => void = (err: BusinessError, result: Array<dataShare.OperationResult>): void => {
+  console.info("publishCallback " + JSON.stringify(result));
+}
+let dataArray : Array<dataShare.PublishedItem> = [
+  {key:"city", subscriberId:"11", data:"xian"},
+  {key:"datashareproxy://com.acts.ohos.data.datasharetest/appInfo", subscriberId:"11", data:"appinfo is just a test app"},
+  {key:"empty", subscriberId:"11", data:"nobody sub"}];
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest", publishCallback);
+}
+```
+
+```TypeScript
+let dataArray: Array<dataShare.PublishedItem> = [
+  {key:"city", subscriberId:"11", data:"xian"},
+  {key:"datashareproxy://com.acts.ohos.data.datasharetest/appInfo", subscriberId:"11", data:"appinfo is just a test app"},
+  {key:"empty", subscriberId:"11", data:"nobody sub"}];
+if (dataShareHelper != undefined) {
+  let result: Promise<Array<dataShare.OperationResult>> = (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest");
+}
 ```
 
 ## putValue

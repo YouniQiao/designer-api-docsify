@@ -27,7 +27,7 @@ Obtains data of the heart rate sensor once.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.HEART_RATE | Yes | Sensor type. The value is fixed at **SensorId.HEART_RATE**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;HeartRateResponse&gt; | Yes | Callback used to report the sensor data, which is a **HeartRateResponse** object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HeartRateResponse&gt; | Yes | Callback used to report the sensor data, which is a **HeartRateResponse** object. |
 
 **Error codes:**
 

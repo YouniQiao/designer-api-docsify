@@ -63,6 +63,14 @@ connection.hasDefaultNet((error: BusinessError|null, data: boolean|undefined) =>
 });
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.hasDefaultNet().then((data: boolean) => {
+  console.info("Succeeded to get data: " + JSON.stringify(data));
+});
+```
+
 
 ## hasDefaultNet
 
@@ -96,11 +104,5 @@ function hasDefaultNet(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.hasDefaultNet().then((data: boolean) => {
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-});
-```
+参见 [hasDefaultNet](#hasdefaultnet)
 

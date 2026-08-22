@@ -1,6 +1,6 @@
 # BuilderNode
 
-class BuilderNode\&lt;T = undefined&gt; BuilderNode支持通过无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)生成组件树，并持有组件树的根节点。不支持定义为状态变量。 BuilderNode中持有的FrameNode仅用于将该BuilderNode作为子节点挂载到其他FrameNode上。对BuilderNode持有的FrameNode进行属性设置与子节点操作可能会产生未定义行为，因此不建议通过 BuilderNode的[getFrameNode](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-c.md#getframenode)方法和FrameNode的 [getRenderNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getrendernode)方法获取RenderNode，并通过[RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md)的接 口对其进行属性设置与子节点操作。
+class BuilderNode\&lt;T = undefined&gt; BuilderNode支持通过无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)生成组件树，并持有组件树的根节点。不支持定义为状态变量。 BuilderNode中持有的FrameNode仅用于将该BuilderNode作为子节点挂载到其他FrameNode上。对BuilderNode持有的FrameNode进行属性设置与子节点操作可能会产生未定义行为，因此不建议通过 BuilderNode的[getFrameNode](#getframenode)方法和FrameNode的 [getRenderNode](arkts-framenode-c.md#getrendernode)方法获取RenderNode，并通过[RenderNode](arkts-rendernode-c.md)的接 口对其进行属性设置与子节点操作。
 
 **起始版本：** 23
 
@@ -106,7 +106,7 @@ build(builder: WrappedBuilder<CustomBuilderT<T>>, arg: T, options: BuildOptions)
 | --- | --- | --- | --- |
 | builder | WrappedBuilder&lt;CustomBuilderT&lt;T&gt;&gt; | 是 | 用于构建对应节点树的无状态UI方法 @Builder（ArkTS-Sta）封装的WrappedBuilder对象。 |
 | arg | T | 是 | builder的入参。 |
-| options | [BuildOptions](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-buildoptions-i.md) | 是 | 该值无效，默认支持@Builder参数不一致，且行为与@Builder的行为保持一致。 |
+| options | [BuildOptions](arkts-buildernode-buildoptions-i.md) | 是 | 该值无效，默认支持@Builder参数不一致，且行为与@Builder的行为保持一致。 |
 
 ## constructor
 
@@ -130,8 +130,8 @@ constructor(uiContext: UIContext, options?: RenderOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkuiuicontext-uicontext-c.md) | 是 | UI上下文，获取方式可参考 UIContext获取方法。 |
-| options | [RenderOptions](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-renderoptions-i.md) | 否 | BuilderNode的构造可选参数。<br/>默认值：undefined |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | UI上下文，获取方式可参考 UIContext获取方法。 |
+| options | [RenderOptions](arkts-buildernode-renderoptions-i.md) | 否 | BuilderNode的构造可选参数。<br/>默认值：undefined |
 
 ## dispose
 
@@ -179,7 +179,7 @@ getFrameNode(): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) \| null | Returns a FrameNode inside the BuilderNode, or null if not contained. |
+| [FrameNode](arkts-framenode-c.md) \| null | Returns a FrameNode inside the BuilderNode, or null if not contained. |
 
 ## inheritFreezeOptions
 
@@ -280,7 +280,7 @@ offsetA为builderNode相对于父组件的偏移，offsetB为命中位置相对�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [InputEventType](../../apis-arkui/arkts-apis/arkts-arkui-inputeventtype-t.md) | 是 | 用于透传的输入事件。 |
+| event | [InputEventType](arkts-inputeventtype-t.md) | 是 | 用于透传的输入事件。 |
 
 **返回值：**
 
@@ -330,7 +330,7 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [InputEventType](../../apis-arkui/arkts-apis/arkts-arkui-inputeventtype-t.md) | 是 | 用于事件分发的输入事件。 |
+| event | [InputEventType](arkts-inputeventtype-t.md) | 是 | 用于事件分发的输入事件。 |
 | competitionStrategy | CompetitionStrategy | 否 | The competition strategy. |
 
 **返回值：**
@@ -349,7 +349,7 @@ postTouchEvent(event: TouchEvent): boolean
 
 postTouchEvent是从组件树的中间节点往下分发，需要变换到父组件坐标系才能分发成功，参考下图。
 
-OffsetA为buildNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getpositiontoparent)获取。 OffsetB为point点相对于buildNode的偏移量，可以通过 [TouchEvent](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明) 获取。OffsetC为 OffsetA与OffsetB的和，是传给postTouchEvent的最终结果。
+OffsetA为buildNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](arkts-framenode-c.md#getpositiontoparent)获取。 OffsetB为point点相对于buildNode的偏移量，可以通过 [TouchEvent](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明) 获取。OffsetC为 OffsetA与OffsetB的和，是传给postTouchEvent的最终结果。
 
 
 
@@ -455,7 +455,7 @@ update(arg: T): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arg | T | 是 | 用于更新BuilderNode的参数，和[build](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-c.md)调用时传入的参数类型一致。 |
+| arg | T | 是 | 用于更新BuilderNode的参数，和[build](#buildernode)调用时传入的参数类型一致。 |
 
 ## updateConfiguration
 
@@ -463,7 +463,7 @@ update(arg: T): void
 updateConfiguration(): void
 ```
 
-传递系统环境变化事件，触发节点的全量更新。系统环境变化的相关信息请参见 [@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityconfiguration-configuration-i.md)。
+传递系统环境变化事件，触发节点的全量更新。系统环境变化的相关信息请参见 [@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md)。
 
 > **说明：**
 > 

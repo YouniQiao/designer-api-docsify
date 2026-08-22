@@ -36,7 +36,7 @@ didFail(code: WebNetErrorList): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | [WebNetErrorList](arkts-arkweb-webneterrorlist-webneterrorlist-e.md) | 是 | 网络错误码，用于标识请求失败的原因。 |
+| code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 是 | 网络错误码，用于标识请求失败的原因。 |
 
 **错误码：**
 
@@ -45,13 +45,164 @@ didFail(code: WebNetErrorList): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
 
+**示例**
+
+示例请参考[OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview, WebNetErrorList } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  schemeHandler: webview.WebSchemeHandler = new webview.WebSchemeHandler();
+
+  build() {
+    Column() {
+      Web({ src: 'https://www.example.com', controller: this.controller })
+        .onControllerAttached(() => {
+          try {
+            this.schemeHandler.onRequestStart((request: webview.WebSchemeHandlerRequest, resourceHandler: webview.WebResourceHandler) => {
+              console.info('[schemeHandler] onRequestStart');
+              try {
+                console.info('[schemeHandler] onRequestStart url:' + request.getRequestUrl());
+                console.info('[schemeHandler] onRequestStart method:' + request.getRequestMethod());
+                console.info('[schemeHandler] onRequestStart referrer:' + request.getReferrer());
+                console.info('[schemeHandler] onRequestStart isMainFrame:' + request.isMainFrame());
+                console.info('[schemeHandler] onRequestStart hasGesture:' + request.hasGesture());
+                console.info('[schemeHandler] onRequestStart header size:' + request.getHeader().length);
+                console.info('[schemeHandler] onRequestStart resource type:' + request.getRequestResourceType());
+                console.info('[schemeHandler] onRequestStart frame url:' + request.getFrameUrl());
+                let header = request.getHeader();
+                for (let i = 0; i < header.length; i++) {
+                  console.info('[schemeHandler] onRequestStart header:' + header[i].headerKey + ' ' + header[i].headerValue);
+                }
+                let stream = request.getHttpBodyStream();
+                if (stream) {
+                  console.info('[schemeHandler] onRequestStart has http body stream');
+                } else {
+                  console.info('[schemeHandler] onRequestStart has no http body stream');
+                }
+              } catch (error) {
+                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+              }
+
+              if (request.getRequestUrl().endsWith('example.com')) {
+                return false;
+              }
+
+              try {
+                // 直接调用didFail(WebNetErrorList.ERR_FAILED, true)，若此前未调用didReceiveResponse，系统将自动生成响应头，网络错误码为-104（对应ERR_CONNECTION_FAILED）
+                resourceHandler.didFail(WebNetErrorList.ERR_FAILED, true);
+              } catch (error) {
+                // 当error.code为17100101(The errorCode is either ARKWEB_NET_OK or outside the range of error codes in WebNetErrorList)
+                // 且didFail(code: WebNetErrorList, completeIfNoResponse: boolean)的code值不为null时，接口会继续调用不会中断。
+                console.error(`[schemeHandler] ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+              }
+              return true;
+            })
+
+            this.schemeHandler.onRequestStop((request: webview.WebSchemeHandlerRequest) => {
+              console.info('[schemeHandler] onRequestStop');
+            });
+
+            this.controller.setWebSchemeHandler('https', this.schemeHandler);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+        .javaScriptAccess(true)
+        .domStorageAccess(true)
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { Entry, Column, Component, Web } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+import { WebNetErrorList } from '@ohos.web.netErrorList';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  schemeHandler: webview.WebSchemeHandler = new webview.WebSchemeHandler();
+
+  build() {
+    Column() {
+      Web({ src: 'https://www.example.com', controller: this.controller })
+        .onControllerAttached(() => {
+          try {
+            this.schemeHandler.onRequestStart((request: webview.WebSchemeHandlerRequest, resourceHandler: webview.WebResourceHandler) => {
+              console.info("[schemeHandler] onRequestStart");
+              try {
+                console.info("[schemeHandler] onRequestStart url:" + request.getRequestUrl());
+                console.info("[schemeHandler] onRequestStart method:" + request.getRequestMethod());
+                console.info("[schemeHandler] onRequestStart referrer:" + request.getReferrer());
+                console.info("[schemeHandler] onRequestStart isMainFrame:" + request.isMainFrame());
+                console.info("[schemeHandler] onRequestStart hasGesture:" + request.hasGesture());
+                console.info("[schemeHandler] onRequestStart header size:" + request.getHeader().length);
+                console.info("[schemeHandler] onRequestStart resource type:" + request.getRequestResourceType());
+                console.info("[schemeHandler] onRequestStart frame url:" + request.getFrameUrl());
+                let header = request.getHeader();
+                for (let i = 0; i < header.length; i++) {
+                  console.info("[schemeHandler] onRequestStart header:" + header[i].headerKey + " " + header[i].headerValue);
+                }
+                let stream = request.getHttpBodyStream();
+                if (stream) {
+                  console.info("[schemeHandler] onRequestStart has http body stream");
+                } else {
+                  console.info("[schemeHandler] onRequestStart has no http body stream");
+                }
+              } catch (error) {
+                console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+              }
+
+              if (request.getRequestUrl().endsWith("example.com")) {
+                return false;
+              }
+
+              try {
+                resourceHandler.didFail(WebNetErrorList.ERR_FAILED, true);
+              } catch (error) {
+                console.error(`[schemeHandler] ErrorCode: ${error.code},  Message: ${error.message}`);
+              }
+              return true;
+            })
+
+            this.schemeHandler.onRequestStop((request: webview.WebSchemeHandlerRequest) => {
+              console.info("[schemeHandler] onRequestStop");
+            });
+
+            this.controller.setWebSchemeHandler('https', this.schemeHandler);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+        .javaScriptAccess(true)
+        .domStorageAccess(true)
+    }
+  }
+}
+```
+
 ## didFail
 
 ```TypeScript
 didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void
 ```
 
-通知ArkWeb内核，被拦截请求将返回失败。若completeIfNoResponse为false，调用前需调用 [didReceiveResponse](#didreceiveresponse)传入响应头。若completeIfNoResponse为true，且调用前未调用 [didReceiveResponse](#didreceiveresponse)，则自动生成一个响应头，网络错误码为-104，详情参见 [WebNetErrorList](arkts-arkweb-webneterrorlist-webneterrorlist-e.md)。
+通知ArkWeb内核，被拦截请求将返回失败。若completeIfNoResponse为false，调用前需调用 [didReceiveResponse](#didreceiveresponse)传入响应头。若completeIfNoResponse为true，且调用前未调用 [didReceiveResponse](#didreceiveresponse)，则自动生成一个响应头，网络错误码为-104，详情参见 [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md)。
 
 **起始版本：** 20
 
@@ -63,7 +214,7 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | [WebNetErrorList](arkts-arkweb-webneterrorlist-webneterrorlist-e.md) | 是 | 网络错误码，用于标识请求失败的原因。 |
+| code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 是 | 网络错误码，用于标识请求失败的原因。 |
 | completeIfNoResponse | boolean | 是 | 是否在未调用 [didReceiveResponse](#didreceiveresponse)时自动完成此次网络请求；值为true时自动生成响应头（网络错误码为-10 4）并完成请求，值为false时等待应用调用[didReceiveResponse](#didreceiveresponse)。 |
 
 **错误码：**
@@ -72,6 +223,10 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void
 | --- | --- |
 | [17100101](../errorcode-webview.md#17100101-使用了错误的网络错误码) | The errorCode is either ARKWEB_NET_OK or outside the range of error codes in WebNetErrorList. |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
+
+**示例**
+
+参见 [didFail](#didfail)
 
 ## didFail
 
@@ -91,7 +246,7 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: n
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | [WebNetErrorList](arkts-arkweb-webneterrorlist-webneterrorlist-e.md) | 是 | 网络错误码。 |
+| code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 是 | 网络错误码。 |
 | completeIfNoResponse | boolean | 是 | 值为true时，若之前未调用过[didReceiveResponse](#didreceiveresponse)， 则会自动生成一个response以完成此次网络请求，网络错误码为-104；值为false时，若之前未调用过[didReceiveResponse](#didreceiveresponse)， 将等待应用调用[didReceiveResponse](#didreceiveresponse)并传入response，不会直接完成此次网络请求。 |
 | customErrorCode | number | 是 | 该请求的自定义错误码，会通过onErrorReceive事件直接传递给应用。 详情参考WebResourceError.getCustomErrorCode。 |
 
@@ -100,6 +255,10 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: n
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
+
+**示例**
+
+参见 [didFail](#didfail)
 
 ## didFinish
 
@@ -122,6 +281,10 @@ didFinish(): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
+
+**示例**
+
+示例请参考[OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
 
 ## didReceiveResponse
 
@@ -152,6 +315,10 @@ didReceiveResponse(response: WebSchemeHandlerResponse): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
 
+**示例**
+
+示例请参考[OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
+
 ## didReceiveResponseBody
 
 ```TypeScript
@@ -180,4 +347,8 @@ didReceiveResponseBody(data: ArrayBuffer): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
+
+**示例**
+
+示例请参考[OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
 

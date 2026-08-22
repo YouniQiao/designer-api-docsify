@@ -79,3 +79,7 @@ onRequestStop(callback: Callback<WebSchemeHandlerRequest>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Invalid input parameter. |
 
+**示例**
+
+完整示例代码参考[onRequestStart](#onrequeststart)。
+

@@ -40,23 +40,23 @@ import { emitter } from '@kit.BasicServicesKit';
 | [emit_string](arkts-basicservices-emitter-emitstring-f.md#emit_string) | 发送指定优先级事件。 |
 | [emit_string](arkts-basicservices-emitter-emitstring-f.md#emit_string) | 发送指定优先级事件。 |
 | [getListenerCount](arkts-basicservices-emitter-getlistenercount-f.md) | 获取指定事件的订阅数。 |
-| [offEventData](arkts-basicservices-emitter-offeventdata-f.md) | 取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用 [onEventData](arkts-basicservices-emitter-oneventdata-f.md)或 [onceEventData](arkts-basicservices-emitter-onceeventdata-f.md)接口订阅callback时，该接口才生效。 |
-| [offGenericEventData](arkts-basicservices-emitter-offgenericeventdata-f.md) | 取消订阅当前Emitter类实例的事件。仅当已使用 onGenericEventData或 onceGenericEventData接口订阅了事件ID为eventId且回调处理函数为callback的事件时，该接口才生效。 |
 | [off_long](arkts-basicservices-emitter-offlong-f.md#off_long) | 取消事件ID为eventId的所有订阅。 |
 | [off_long](arkts-basicservices-emitter-offlong-f.md#off_long) | 取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用[on](arkts-basicservices-emitter-oninnerevent-f.md#on_innerevent)或 once接口订阅callback时，该接口才生效。 |
 | [off_string](arkts-basicservices-emitter-offstring-f.md#off_string) | 取消事件ID为eventId的所有订阅。 |
 | [off_string](arkts-basicservices-emitter-offstring-f.md#off_string) | 取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用[on](arkts-basicservices-emitter-oninnerevent-f.md#on_innerevent)或 once接口订阅callback时，该接口才生效。 |
 | [off_string](arkts-basicservices-emitter-offstring-f.md#off_string) | 取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用 on或 once接口订阅callback时，该接口才生效。 |
-| [onEventData](arkts-basicservices-emitter-oneventdata-f.md) | 持续订阅指定的事件，并在接收到该事件时，使用callback异步回调。 |
-| [onGenericEventData](arkts-basicservices-emitter-ongenericeventdata-f.md) | 持续订阅指定的事件，并在接收到该事件时，使用callback异步回调。 |
+| [offEventData](arkts-basicservices-emitter-offeventdata-f.md) | 取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用 [onEventData](arkts-basicservices-emitter-oneventdata-f.md)或 [onceEventData](arkts-basicservices-emitter-onceeventdata-f.md)接口订阅callback时，该接口才生效。 |
+| [offGenericEventData](arkts-basicservices-emitter-offgenericeventdata-f.md) | 取消订阅当前Emitter类实例的事件。仅当已使用 onGenericEventData或 onceGenericEventData接口订阅了事件ID为eventId且回调处理函数为callback的事件时，该接口才生效。 |
 | [on_InnerEvent](arkts-basicservices-emitter-oninnerevent-f.md#on_innerevent) | 持续订阅指定的事件，并在接收到该事件时，执行对应的回调处理函数。 |
 | [on_string](arkts-basicservices-emitter-onstring-f.md#on_string) | 持续订阅指定的事件，并在接收到该事件时，执行对应的回调处理函数。 |
 | [on_string](arkts-basicservices-emitter-onstring-f.md#on_string) | 持续订阅指定的事件，并在接收到该事件时，执行对应的回调处理函数。 |
-| [onceEventData](arkts-basicservices-emitter-onceeventdata-f.md) | 单次订阅指定的事件，在接收到该事件且执行完对应的回调函数后，自动取消订阅。 |
-| [onceGenericEventData](arkts-basicservices-emitter-oncegenericeventdata-f.md) | 单次订阅当前Emitter类实例指定的事件，在接收到该事件且执行完相应的回调函数后，自动取消订阅。使用callback异步回调。 |
 | [once_InnerEvent](arkts-basicservices-emitter-onceinnerevent-f.md#once_innerevent) | 单次订阅指定的事件，在接收到该事件且执行完对应的回调处理函数后，自动取消订阅。 |
 | [once_string](arkts-basicservices-emitter-oncestring-f.md#once_string) | 单次订阅指定的事件，在接收到该事件且执行完对应的回调处理函数后，自动取消订阅。 |
 | [once_string](arkts-basicservices-emitter-oncestring-f.md#once_string) | 单次订阅指定的事件，在接收到该事件且执行完对应的回调处理函数后，自动取消订阅。 |
+| [onceEventData](arkts-basicservices-emitter-onceeventdata-f.md) | 单次订阅指定的事件，在接收到该事件且执行完对应的回调函数后，自动取消订阅。 |
+| [onceGenericEventData](arkts-basicservices-emitter-oncegenericeventdata-f.md) | 单次订阅当前Emitter类实例指定的事件，在接收到该事件且执行完相应的回调函数后，自动取消订阅。使用callback异步回调。 |
+| [onEventData](arkts-basicservices-emitter-oneventdata-f.md) | 持续订阅指定的事件，并在接收到该事件时，使用callback异步回调。 |
+| [onGenericEventData](arkts-basicservices-emitter-ongenericeventdata-f.md) | 持续订阅指定的事件，并在接收到该事件时，使用callback异步回调。 |
 
 ### 类
 

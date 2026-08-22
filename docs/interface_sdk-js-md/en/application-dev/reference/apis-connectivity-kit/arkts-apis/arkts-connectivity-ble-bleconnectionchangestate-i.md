@@ -44,11 +44,11 @@ Reason of the disconnection of the gatt connection.
 
 **Type:** [GattDisconnectReason](arkts-connectivity-ble-gattdisconnectreason-e.md)
 
-**Since:** 26.0.0
+**Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-BLEConnectionChangeState-reason?: GattDisconnectReason--><!--Device-BLEConnectionChangeState-reason?: GattDisconnectReason-End-->
 

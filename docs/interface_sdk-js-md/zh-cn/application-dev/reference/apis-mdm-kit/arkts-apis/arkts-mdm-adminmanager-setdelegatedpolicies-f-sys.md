@@ -46,6 +46,27 @@ function setDelegatedPolicies(bundleName: string, accountId: number, policies: A
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let admin: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// 需根据实际情况进行替换
+let policies: Array<string> = ["disabled_hdc"];
+
+try {
+  // 参数需根据实际情况进行替换
+  adminManager.setDelegatedPolicies(admin, "com.example.enterprise.xxx", policies);
+  console.info('Succeeded in setting delegated policies.');
+} catch (err) {
+  console.error(`Failed to set delegated policies. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
 import { common, Want } from '@kit.AbilityKit';
 
 // 需根据实际情况进行替换

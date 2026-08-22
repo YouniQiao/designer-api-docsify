@@ -6,7 +6,7 @@ type BluetoothAddress = common.BluetoothAddress
 
 Bluetooth device address.
 
-**Since:** 26.0.0
+**Since:** 21
 
 **Model restriction:** This API can be used only in the stage model.
 

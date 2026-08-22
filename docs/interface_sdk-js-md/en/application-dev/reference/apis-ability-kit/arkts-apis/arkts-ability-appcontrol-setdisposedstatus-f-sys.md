@@ -29,8 +29,8 @@ Sets the disposed status for an application. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appId | string | Yes | ID of the target application.<br> **appId** is the unique identifier of an application and is determined by the bundle name and signature information of the application. For details about how to obtain **appId**, see How do I obtain appId from application information . |
-| disposedWant | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Disposal intent of the application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| disposedWant | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Disposal intent of the application. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -43,6 +43,28 @@ Sets the disposed status for an application. This API uses an asynchronous callb
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) | The specified app ID is empty string. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want } from '@kit.AbilityKit';
+import { appControl } from '@kit.AbilityKit';
+
+let appId = "com.example.myapplication_xxxxx";
+let want: Want = { bundleName: 'com.example.myapplication' };
+
+try {
+  appControl.setDisposedStatus(appId, want)
+    .then(() => {
+      console.info('setDisposedStatus success');
+    }).catch((error: BusinessError) => {
+    let message = (error as BusinessError).message;
+    console.error('setDisposedStatus failed ' + message);
+  });
+} catch (error) {
+  let message = (error as BusinessError).message;
+  console.error('setDisposedStatus failed ' + message);
+}
+```
 
 ```TypeScript
 import { appControl } from '@kit.AbilityKit';
@@ -91,7 +113,7 @@ Sets the disposed status for an application. This API uses a promise to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appId | string | Yes | ID of the target application.<br> **appId** is the unique identifier of an application and is determined by the bundle name and signature information of the application. For details about how to obtain **appId**, see How do I obtain appId from application information . |
-| disposedWant | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Disposal intent of the application. |
+| disposedWant | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Disposal intent of the application. |
 
 **Return value:**
 
@@ -111,25 +133,5 @@ Sets the disposed status for an application. This API uses a promise to return t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-import { appControl } from '@kit.AbilityKit';
-
-let appId = "com.example.myapplication_xxxxx";
-let want: Want = { bundleName: 'com.example.myapplication' };
-
-try {
-  appControl.setDisposedStatus(appId, want)
-    .then(() => {
-      console.info('setDisposedStatus success');
-    }).catch((error: BusinessError) => {
-    let message = (error as BusinessError).message;
-    console.error('setDisposedStatus failed ' + message);
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('setDisposedStatus failed ' + message);
-}
-```
+See [setDisposedStatus](#setdisposedstatus)
 

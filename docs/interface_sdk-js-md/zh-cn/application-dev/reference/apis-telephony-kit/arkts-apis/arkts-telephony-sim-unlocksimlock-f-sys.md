@@ -61,6 +61,21 @@ sim.unlockSimLock(0, persoLockInfo, (err: BusinessError, data: sim.LockStatusRes
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+let persoLockInfo: sim.PersoLockInfo = {
+    lockType: sim.PersoLockType.PN_PIN_LOCK,
+    password: "1234"
+};
+sim.unlockSimLock(0, persoLockInfo).then((data: sim.LockStatusResponse) => {
+    console.info(`unlockSimLock success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`unlockSimLock failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## unlockSimLock
 
@@ -109,18 +124,5 @@ Unlock SIM card.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let persoLockInfo: sim.PersoLockInfo = {
-    lockType: sim.PersoLockType.PN_PIN_LOCK,
-    password: "1234"
-};
-sim.unlockSimLock(0, persoLockInfo).then((data: sim.LockStatusResponse) => {
-    console.info(`unlockSimLock success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`unlockSimLock failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [unlockSimLock](#unlocksimlock)
 

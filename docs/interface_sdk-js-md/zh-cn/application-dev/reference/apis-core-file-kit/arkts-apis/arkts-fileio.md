@@ -85,10 +85,10 @@
 | [open](arkts-corefile-fileio-open-f.md) | 打开文件，使用callback异步回调。 |
 | [open](arkts-corefile-fileio-open-f.md) | 打开文件，使用callback异步回调。 |
 | [open](arkts-corefile-fileio-open-f.md) | 打开文件，使用callback异步回调。 |
-| [openSync](arkts-corefile-fileio-opensync-f.md) | 以同步方法打开文件。 |
 | [opendir](arkts-corefile-fileio-opendir-f.md) | 打开文件目录，使用Promise异步回调。 |
 | [opendir](arkts-corefile-fileio-opendir-f.md) | 打开文件目录，使用callback异步回调。 |
 | [opendirSync](arkts-corefile-fileio-opendirsync-f.md) | 以同步方法打开文件目录。 |
+| [openSync](arkts-corefile-fileio-opensync-f.md) | 以同步方法打开文件。 |
 | [read](arkts-corefile-fileio-read-f.md) | 从文件读取数据，使用Promise异步回调。 |
 | [read](arkts-corefile-fileio-read-f.md) | 从文件读取数据，使用callback异步回调。 |
 | [read](arkts-corefile-fileio-read-f.md) | 从文件读取数据，使用callback异步回调。 |

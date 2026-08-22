@@ -95,70 +95,21 @@ try {
 }
 ```
 
-## offAuthTip
-
 ```TypeScript
-offAuthTip(callback?: AuthTipCallback): void
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
+let authType = userAuth.UserAuthType.FACE;
+let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
+
+try {
+  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
+  auth.cancel();
+  console.info('cancel auth success');
+} catch (error) {
+  console.error(`cancel auth failed, error = ${error}`);
+}
 ```
-
-Unsubscribes from the event for intermediate authentication status.
-
-> **NOTE：**
-
-> The [UserAuthInstance](#userauthinstance) instance used to invoke this API must be the one used
-> to subscribe to the event.
-
-**Since:** 23
-
-<!--Device-UserAuthInstance-offAuthTip(callback?: AuthTipCallback): void--><!--Device-UserAuthInstance-offAuthTip(callback?: AuthTipCallback): void-End-->
-
-**System capability:** SystemCapability.UserIAM.UserAuth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | No | Indicates the listener. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
-
-## offResult
-
-```TypeScript
-offResult(callback?: IAuthCallback): void
-```
-
-Unsubscribes from the user authentication result.
-
-> **NOTE：**
-
-> The [UserAuthInstance](#userauthinstance) instance used to invoke this API must be the one used
-> to subscribe to the event.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The UserAuthInstance instance used to invoke this API must be the one used to subscribe to the event. </p>
-
-**Since:** 23
-
-<!--Device-UserAuthInstance-offResult(callback?: IAuthCallback): void--><!--Device-UserAuthInstance-offResult(callback?: IAuthCallback): void-End-->
-
-**System capability:** SystemCapability.UserIAM.UserAuth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | No | Callback to unregister. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## off('authTip')
 
@@ -315,17 +266,22 @@ try {
 }
 ```
 
-## onAuthTip
+## offAuthTip
 
 ```TypeScript
-onAuthTip(callback: AuthTipCallback): void
+offAuthTip(callback?: AuthTipCallback): void
 ```
 
-Turn on authentication tip event listening.
+Unsubscribes from the event for intermediate authentication status.
+
+> **NOTE：**
+
+> The [UserAuthInstance](#userauthinstance) instance used to invoke this API must be the one used
+> to subscribe to the event.
 
 **Since:** 23
 
-<!--Device-UserAuthInstance-onAuthTip(callback: AuthTipCallback): void--><!--Device-UserAuthInstance-onAuthTip(callback: AuthTipCallback): void-End-->
+<!--Device-UserAuthInstance-offAuthTip(callback?: AuthTipCallback): void--><!--Device-UserAuthInstance-offAuthTip(callback?: AuthTipCallback): void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -333,7 +289,7 @@ Turn on authentication tip event listening.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | Yes | Indicates the listener. |
+| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | No | Indicates the listener. |
 
 **Error codes:**
 
@@ -341,17 +297,24 @@ Turn on authentication tip event listening.
 | --- | --- |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
-## onResult
+## offResult
 
 ```TypeScript
-onResult(callback: IAuthCallback): void
+offResult(callback?: IAuthCallback): void
 ```
 
-Subscribes to the user authentication result. This API is used to obtain the final identity authentication result after the user completes identity authentication interaction with the authentication component. Before the authentication component disappears, the authentication failure attempts are not returned through this API. To perceive each authentication failure, use the [on('authTip')](#onauthtip) API for subscription.
+Unsubscribes from the user authentication result.
+
+> **NOTE：**
+
+> The [UserAuthInstance](#userauthinstance) instance used to invoke this API must be the one used
+> to subscribe to the event.
+
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The UserAuthInstance instance used to invoke this API must be the one used to subscribe to the event. </p>
 
 **Since:** 23
 
-<!--Device-UserAuthInstance-onResult(callback: IAuthCallback): void--><!--Device-UserAuthInstance-onResult(callback: IAuthCallback): void-End-->
+<!--Device-UserAuthInstance-offResult(callback?: IAuthCallback): void--><!--Device-UserAuthInstance-offResult(callback?: IAuthCallback): void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -359,7 +322,7 @@ Subscribes to the user authentication result. This API is used to obtain the fin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | Yes | Callback used to return the user authentication result. |
+| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | No | Callback to unregister. |
 
 **Error codes:**
 
@@ -490,6 +453,83 @@ Subscribes to the user authentication result. This API is used to obtain the fin
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
+## onAuthTip
+
+```TypeScript
+onAuthTip(callback: AuthTipCallback): void
+```
+
+Turn on authentication tip event listening.
+
+**Since:** 23
+
+<!--Device-UserAuthInstance-onAuthTip(callback: AuthTipCallback): void--><!--Device-UserAuthInstance-onAuthTip(callback: AuthTipCallback): void-End-->
+
+**System capability:** SystemCapability.UserIAM.UserAuth.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | Yes | Indicates the listener. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+
+## onResult
+
+```TypeScript
+onResult(callback: IAuthCallback): void
+```
+
+Subscribes to the user authentication result. This API is used to obtain the final identity authentication result after the user completes identity authentication interaction with the authentication component. Before the authentication component disappears, the authentication failure attempts are not returned through this API. To perceive each authentication failure, use the [on('authTip')](#onauthtip) API for subscription.
+
+**Since:** 23
+
+<!--Device-UserAuthInstance-onResult(callback: IAuthCallback): void--><!--Device-UserAuthInstance-onResult(callback: IAuthCallback): void-End-->
+
+**System capability:** SystemCapability.UserIAM.UserAuth.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | Yes | Callback used to return the user authentication result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+
+**Examples**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let auth = new userAuth.UserAuth();
+let challenge = new Uint8Array([]);
+auth.auth(challenge, userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1, {
+  onResult: (result, extraInfo) => {
+    try {
+      console.info(`auth onResult result = ${result}`);
+      console.info(`auth onResult extraInfo = ${JSON.stringify(extraInfo)}`);
+      if (result == userAuth.ResultCode.SUCCESS) {
+        // Add the logic to be executed when the authentication is successful.
+      }  else {
+        // Add the logic to be executed when the authentication fails.
+      }
+    } catch (error) {
+      console.error(`auth onResult error = ${error}`);
+    }
+  }
+});
+```
+
 ## start
 
 ```TypeScript
@@ -570,6 +610,22 @@ try {
 } catch (error) {
   const err: BusinessError = error as BusinessError;
   console.error(`auth catch error. Code is ${err?.code}, message is ${err?.message}`);
+}
+```
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
+let authType = userAuth.UserAuthType.FACE;
+let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
+
+try {
+  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
+  auth.start();
+  console.info('authV9 start auth success');
+} catch (error) {
+  console.error(`authV9 start auth failed, error = ${error}`);
 }
 ```
 

@@ -42,3 +42,8 @@ Obtains the value of an environment variable.
 let pres = process.getEnvironmentVar("PATH");
 ```
 
+```TypeScript
+let pro = new process.ProcessManager();
+let pres = pro.getEnvironmentVar("PATH");
+```
+

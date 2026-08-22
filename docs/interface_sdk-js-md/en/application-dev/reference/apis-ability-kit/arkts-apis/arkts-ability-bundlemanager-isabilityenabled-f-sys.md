@@ -65,6 +65,72 @@ try {
     hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
     let info = abilitiesInfo[0];
 
+    bundleManager.isAbilityEnabled(info, (err, data) => {
+      if (err) {
+        hilog.error(0x0000, 'testTag', 'isAbilityEnabled failed: %{public}s', err.message);
+      } else {
+        hilog.info(0x0000, 'testTag', 'isAbilityEnabled successfully: %{public}s', JSON.stringify(data));
+      }
+    });
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
+}
+```
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { Want } from '@kit.AbilityKit';
+
+let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT;
+let userId = 100;
+let want: Want = {
+  bundleName: "com.example.myapplication",
+  abilityName: "EntryAbility"
+};
+
+try {
+  bundleManager.queryAbilityInfo(want, abilityFlags, userId).then((abilitiesInfo) => {
+    hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
+    let info = abilitiesInfo[0];
+
+    bundleManager.isAbilityEnabled(info).then((data) => {
+      hilog.info(0x0000, 'testTag', 'isAbilityEnabled successfully. Data: %{public}s', JSON.stringify(data));
+    }).catch((err: BusinessError) => {
+      hilog.error(0x0000, 'testTag', 'isAbilityEnabled failed. Cause: %{public}s', err.message);
+    });
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
+}
+```
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { Want } from '@kit.AbilityKit';
+
+let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT;
+let userId = 100;
+let want: Want = {
+  bundleName: "com.example.myapplication",
+  abilityName: "EntryAbility"
+};
+
+try {
+  bundleManager.queryAbilityInfo(want, abilityFlags, userId).then((abilitiesInfo) => {
+    hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
+    let info = abilitiesInfo[0];
+
     bundleManager.isAbilityEnabled(info, 1).then((data) => {
       hilog.info(0x0000, 'testTag', 'isAbilityEnabled successfully. Data: %{public}s', JSON.stringify(data));
     }).catch((err: BusinessError) => {
@@ -101,7 +167,7 @@ Checks whether an ability is enabled. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | AbilityInfo | Yes | Information about the target ability. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. **true** if enabled, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. **true** if enabled, **false** otherwise. |
 
 **Error codes:**
 
@@ -114,39 +180,7 @@ Checks whether an ability is enabled. This API uses an asynchronous callback to 
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { Want } from '@kit.AbilityKit';
-
-let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT;
-let userId = 100;
-let want: Want = {
-  bundleName: "com.example.myapplication",
-  abilityName: "EntryAbility"
-};
-
-try {
-  bundleManager.queryAbilityInfo(want, abilityFlags, userId).then((abilitiesInfo) => {
-    hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
-    let info = abilitiesInfo[0];
-
-    bundleManager.isAbilityEnabled(info, (err, data) => {
-      if (err) {
-        hilog.error(0x0000, 'testTag', 'isAbilityEnabled failed: %{public}s', err.message);
-      } else {
-        hilog.info(0x0000, 'testTag', 'isAbilityEnabled successfully: %{public}s', JSON.stringify(data));
-      }
-    });
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
-}
-```
+See [isAbilityEnabled](#isabilityenabled)
 
 
 ## isAbilityEnabled
@@ -188,35 +222,5 @@ Checks whether an ability is enabled. This API uses a promise to return the resu
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { Want } from '@kit.AbilityKit';
-
-let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT;
-let userId = 100;
-let want: Want = {
-  bundleName: "com.example.myapplication",
-  abilityName: "EntryAbility"
-};
-
-try {
-  bundleManager.queryAbilityInfo(want, abilityFlags, userId).then((abilitiesInfo) => {
-    hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
-    let info = abilitiesInfo[0];
-
-    bundleManager.isAbilityEnabled(info).then((data) => {
-      hilog.info(0x0000, 'testTag', 'isAbilityEnabled successfully. Data: %{public}s', JSON.stringify(data));
-    }).catch((err: BusinessError) => {
-      hilog.error(0x0000, 'testTag', 'isAbilityEnabled failed. Cause: %{public}s', err.message);
-    });
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
-}
-```
+See [isAbilityEnabled](#isabilityenabled)
 

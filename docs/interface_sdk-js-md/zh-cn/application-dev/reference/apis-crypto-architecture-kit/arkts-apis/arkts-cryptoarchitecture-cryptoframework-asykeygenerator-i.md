@@ -51,42 +51,110 @@ convertKey(pubKey: DataBlob, priKey: DataBlob, callback: AsyncCallback<KeyPair>)
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
 
-## convertKey
+**示例**
+
+ArkTS-Dyn示例：
 
 ```TypeScript
-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCallback<KeyPair>): void
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+function genKeyMaterialBlob(): cryptoFramework.DataBlob {
+  let arr = [
+    0xba, 0x3d, 0xc2, 0x71, 0x21, 0x1e, 0x30, 0x56,
+    0xad, 0x47, 0xfc, 0x5a, 0x46, 0x39, 0xee, 0x7c,
+    0xba, 0x3b, 0xc2, 0x71, 0xab, 0xa0, 0x30, 0x72]; // keyLen = 192 (24 bytes)
+  let keyMaterial = new Uint8Array(arr);
+  return { data: keyMaterial };
+}
+
+function testConvertKey() {
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
+  let keyMaterialBlob = genKeyMaterialBlob();
+  symKeyGenerator.convertKey(keyMaterialBlob, (err, symKey) => {
+    console.info('Convert symKey result: success, algName: ' + symKey.algName);
+  });
+}
 ```
 
-获取指定数据生成非对称密钥。使用callback异步回调。
+ArkTS-Sta示例：
 
-**起始版本：** 23
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+function genKeyMaterialBlob(): cryptoFramework.DataBlob {
+  let arr = [
+    0xba, 0x3d, 0xc2, 0x71, 0x21, 0x1e, 0x30, 0x56,
+    0xad, 0x47, 0xfc, 0x5a, 0x46, 0x39, 0xee, 0x7c,
+    0xba, 0x3b, 0xc2, 0x71, 0xab, 0xa0, 0x30, 0x72]; // keyLen = 192 (24 bytes)
+  let keyMaterial = new Uint8Array(arr);
+  return { data: keyMaterial };
+}
 
-<!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCallback<KeyPair>): void--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCallback<KeyPair>): void-End-->
+function testConvertKey() {
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
+  let keyMaterialBlob = genKeyMaterialBlob();
+  symKeyGenerator.convertKey(keyMaterialBlob, (err, symKey) => {
+    if (symKey != undefined) {
+      console.info('Convert symKey success, algName: ' + symKey.algName);
+    }
+  });
+}
+```
 
-**系统能力：** 
-- API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API版本10-11：SystemCapability.Security.CryptoFramework
+ArkTS-Dyn示例：
 
-**参数：**
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pubKey | DataBlob \| null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增 加支持null。 |
-| priKey | DataBlob \| null | 是 | 指定的私钥材料。如果私钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增 加支持null。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则 为错误对象。 |
+function genKeyMaterialBlob(): cryptoFramework.DataBlob {
+  let arr = [
+    0xba, 0x3d, 0xc2, 0x71, 0x21, 0x1e, 0x30, 0x56,
+    0xad, 0x47, 0xfc, 0x5a, 0x46, 0x39, 0xee, 0x7c,
+    0xba, 0x3b, 0xc2, 0x71, 0xab, 0xa0, 0x30, 0x72]; // keyLen = 192 (24 bytes)
+  let keyMaterial = new Uint8Array(arr);
+  return { data: keyMaterial };
+}
 
-**错误码：**
+function testConvertKey() {
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
+  let keyMaterialBlob = genKeyMaterialBlob();
+  symKeyGenerator.convertKey(keyMaterialBlob)
+    .then(symKey => {
+      console.info('Convert symKey result: success, algName: ' + symKey.algName);
+    }).catch((error: BusinessError) => {
+      console.error(`Convert symKey failed, ${error.code}, ${error.message}`);
+    });
+}
+```
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
+ArkTS-Sta示例：
 
-**示例**
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@ohos.base';
+
+function genKeyMaterialBlob(): cryptoFramework.DataBlob {
+  let arr = [
+    0xba, 0x3d, 0xc2, 0x71, 0x21, 0x1e, 0x30, 0x56,
+    0xad, 0x47, 0xfc, 0x5a, 0x46, 0x39, 0xee, 0x7c,
+    0xba, 0x3b, 0xc2, 0x71, 0xab, 0xa0, 0x30, 0x72]; // keyLen = 192 (24 bytes)
+  let keyMaterial = new Uint8Array(arr);
+  return { data: keyMaterial };
+}
+
+async function testConvertKey() {
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
+  let keyMaterialBlob = genKeyMaterialBlob();
+  try {
+    let symKey = await symKeyGenerator.convertKey(keyMaterialBlob);
+    console.info('Convert symKey success, algName：' + symKey.algName);
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`Convert symKey failed, ${e.code}, ${e.message}`);
+  }
+}
+```
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -110,88 +178,6 @@ asyKeyGenerator.convertKey(pubKeyBlob, priKeyBlob, (err, keyPair) => {
   console.info('convertKey result: success.');
 });
 ```
-
-## convertKey
-
-```TypeScript
-convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>
-```
-
-将非对称密钥数据转换为密钥对对象。使用Promise异步回调。
-
-**起始版本：** 9
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>-End-->
-
-**系统能力：** 
-- API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API版本9-11：SystemCapability.Security.CryptoFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pubKey | DataBlob | 是 | 公钥材料。 |
-| priKey | DataBlob | 是 | 私钥材料。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Promise对象，返回非对称密钥KeyPair。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
-
-## convertKey
-
-```TypeScript
-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>
-```
-
-获取指定数据生成非对称密钥。使用Promise异步回调。
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>-End-->
-
-**系统能力：** 
-- API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API版本10-11：SystemCapability.Security.CryptoFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pubKey | DataBlob \| null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增 加支持null。 |
-| priKey | DataBlob \| null | 是 | 指定的私钥材料。如果私钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增 加支持null。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Promise对象，返回非对称密钥KeyPair。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
-
-**示例**
 
 ArkTS-Dyn示例：
 
@@ -246,6 +232,133 @@ async function TestConvertKey() {
 }
 ```
 
+## convertKey
+
+```TypeScript
+convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCallback<KeyPair>): void
+```
+
+获取指定数据生成非对称密钥。使用callback异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCallback<KeyPair>): void--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCallback<KeyPair>): void-End-->
+
+**系统能力：** 
+- API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
+- API版本10-11：SystemCapability.Security.CryptoFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pubKey | DataBlob \| null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增 加支持null。 |
+| priKey | DataBlob \| null | 是 | 指定的私钥材料。如果私钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增 加支持null。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则 为错误对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
+
+**示例**
+
+参见 [convertKey](#convertkey)
+
+## convertKey
+
+```TypeScript
+convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>
+```
+
+将非对称密钥数据转换为密钥对对象。使用Promise异步回调。
+
+**起始版本：** 9
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>-End-->
+
+**系统能力：** 
+- API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
+- API版本9-11：SystemCapability.Security.CryptoFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pubKey | DataBlob | 是 | 公钥材料。 |
+| priKey | DataBlob | 是 | 私钥材料。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Promise对象，返回非对称密钥KeyPair。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
+
+**示例**
+
+参见 [convertKey](#convertkey)
+
+## convertKey
+
+```TypeScript
+convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>
+```
+
+获取指定数据生成非对称密钥。使用Promise异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>-End-->
+
+**系统能力：** 
+- API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
+- API版本10-11：SystemCapability.Security.CryptoFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pubKey | DataBlob \| null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增 加支持null。 |
+| priKey | DataBlob \| null | 是 | 指定的私钥材料。如果私钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增 加支持null。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Promise对象，返回非对称密钥KeyPair。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
+
+**示例**
+
+参见 [convertKey](#convertkey)
+
 ## convertKeySync
 
 ```TypeScript
@@ -287,6 +400,23 @@ convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
 
 **示例**
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function testConvertKeySync() {
+  // 对称密钥长度为64字节，512比特。
+  let keyMessage = '87654321abcdefgh87654321abcdefgh87654321abcdefgh87654321abcdefgh';
+  let keyBlob: cryptoFramework.DataBlob = {
+    data : new Uint8Array(buffer.from(keyMessage, 'utf-8').buffer)
+  }
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('HMAC');
+  let key = symKeyGenerator.convertKeySync(keyBlob);
+  let encodedKey = key.getEncoded();
+  console.info('key encoded data: ' + encodedKey.data);
+}
+```
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -443,56 +573,6 @@ async function TestConvertPemKeyByPromise() {
 }
 ```
 
-## convertPemKey
-
-```TypeScript
-convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>
-```
-
-获取指定数据生成非对称密钥。支持加密的私钥，同步传入私钥口令解密私钥。使用Promise异步回调。
-
-> **说明：**
-> 
-> 1. 使用convertPemKey()将外部字符串转换为Crypto框架定义的非对称密钥对象时，公钥需满足ASN.1语法、X.509规范和PEM编码格式，私钥需
-> 满足ASN.1语法、PKCS#8规范和PEM编码格式。
-> 2. 在convertPemKey()中，可以只传入pubKey或priKey中的一个，也可以两个都传入。如果只传入其中一个，返回的KeyPair实例中只包含从传
-> 入数据转换而来的密钥。
-> 3. 使用convertPemKey将外部字符串转换为Crypto框架定义的非对称密钥对象时，系统不会校验生成的密钥对象规格是否与为非对称密钥生成器指
-> 定的密钥规格相同。
-> 4. 如果传入了password参数，可用于解密加密的私钥。
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>-End-->
-
-**系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pubKey | string \| null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。 |
-| priKey | string \| null | 是 | 指定的私钥材料。如果私钥不需要转换，请传入null。<br>**说明：**公钥和私钥材料不能同时为null 或空字符串。 |
-| password | string | 是 | 指定口令，用于解密私钥。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Promise对象，返回非对称密钥KeyPair。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -565,6 +645,58 @@ async function TestConvertPemKeyByPromise() {
   }
 }
 ```
+
+## convertPemKey
+
+```TypeScript
+convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>
+```
+
+获取指定数据生成非对称密钥。支持加密的私钥，同步传入私钥口令解密私钥。使用Promise异步回调。
+
+> **说明：**
+> 
+> 1. 使用convertPemKey()将外部字符串转换为Crypto框架定义的非对称密钥对象时，公钥需满足ASN.1语法、X.509规范和PEM编码格式，私钥需
+> 满足ASN.1语法、PKCS#8规范和PEM编码格式。
+> 2. 在convertPemKey()中，可以只传入pubKey或priKey中的一个，也可以两个都传入。如果只传入其中一个，返回的KeyPair实例中只包含从传
+> 入数据转换而来的密钥。
+> 3. 使用convertPemKey将外部字符串转换为Crypto框架定义的非对称密钥对象时，系统不会校验生成的密钥对象规格是否与为非对称密钥生成器指
+> 定的密钥规格相同。
+> 4. 如果传入了password参数，可用于解密加密的私钥。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pubKey | string \| null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。 |
+| priKey | string \| null | 是 | 指定的私钥材料。如果私钥不需要转换，请传入null。<br>**说明：**公钥和私钥材料不能同时为null 或空字符串。 |
+| password | string | 是 | 指定口令，用于解密私钥。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Promise对象，返回非对称密钥KeyPair。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+
+**示例**
+
+参见 [convertPemKey](#convertpemkey)
 
 ## convertPemKeySync
 
@@ -654,6 +786,43 @@ function TestConvertPemKeyBySync() {
 }
 ```
 
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+let priKeyPkcs1EncodingStr: string =
+  '-----BEGIN RSA PRIVATE KEY-----\n'
+    + 'Proc-Type: 4,ENCRYPTED\n'
+    + 'DEK-Info: AES-128-CBC,815A066131BF05CF87CE610A59CC69AE\n\n'
+    + '7Jd0vmOmYGFZ2yRY8fqRl3+6rQlFtNcMILvcb5KWHDSrxA0ULmJE7CW0DSRikHoA\n'
+    + 't0KgafhYXeQXh0dRy9lvVRAFSLHCLJVjchx90V7ZSivBFEq7+iTozVp4AlbgYsJP\n'
+    + 'vx/1sfZD2WAcyMJ7IDmJyft7xnpVSXsyWGTT4f3eaHJIh1dqjwrso7ucAW0FK6rp\n'
+    + '/TONyOoXNfXtRbVtxNyCWBxt4HCSclDZFvS9y8fz9ZwmCUV7jei/YdzyQI2wnE13\n'
+    + 'W8cKlpzRFL6BWi8XPrUtAw5MWeHBAPUgPWMfcmiaeyi5BJFhQCrHLi+Gj4EEJvp7\n'
+    + 'mP5cbnQAx6+paV5z9m71SKrI/WSc4ixsYYdVmlL/qwAK9YliFfoPl030YJWW6rFf\n'
+    + 'T7J9BUlHGUJ0RB2lURNNLakM+UZRkeE9TByzCzgTxuQtyv5Lwsh2mAk3ia5x0kUO\n'
+    + 'LHg3Eoabhdh+YZA5hHaxnpF7VjspB78E0F9Btq+A41rSJ6zDOdToHey4MJ2nxdey\n'
+    + 'Z3bi81TZ6Fp4IuROrvZ2B/Xl3uNKR7n+AHRKnaAO87ywzyltvjwSh2y3xhJueiRs\n'
+    + 'BiYkyL3/fnocD3pexTdN6h3JgQGgO5GV8zw/NrxA85mw8o9im0HreuFObmNj36T9\n'
+    + 'k5N+R/QIXW83cIQOLaWK1ThYcluytf0tDRiMoKqULiaA6HvDMigExLxuhCtnoF8I\n'
+    + 'iOLN1cPdEVQjzwDHLqXP2DbWW1z9iRepLZlEm1hLRLEmOrTGKezYupVv306SSa6J\n'
+    + 'OA55lAeXMbyjFaYCr54HWrpt4NwNBX1efMUURc+1LcHpzFrBTTLbfjIyq6as49pH\n'
+    + '-----END RSA PRIVATE KEY-----\n'
+
+function TestConvertPemKeyBySync() {
+  let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('RSA1024');
+  try {
+    let keyPairData = asyKeyGenerator.convertPemKeySync(null, priKeyPkcs1EncodingStr, '123456');
+    if (keyPairData != null) {
+      console.info('[Sync]: convert pem key pair result: success.');
+    } else {
+      console.error('[Sync]: convert pem key pair result: fail.');
+    }
+  } catch (e) {
+    console.error(`Sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
+  }
+}
+```
+
 ## convertPemKeySync
 
 ```TypeScript
@@ -701,42 +870,7 @@ convertPemKeySync(pubKey: string | null, priKey: string | null, password: string
 
 **示例**
 
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let priKeyPkcs1EncodingStr: string =
-  '-----BEGIN RSA PRIVATE KEY-----\n'
-    + 'Proc-Type: 4,ENCRYPTED\n'
-    + 'DEK-Info: AES-128-CBC,815A066131BF05CF87CE610A59CC69AE\n\n'
-    + '7Jd0vmOmYGFZ2yRY8fqRl3+6rQlFtNcMILvcb5KWHDSrxA0ULmJE7CW0DSRikHoA\n'
-    + 't0KgafhYXeQXh0dRy9lvVRAFSLHCLJVjchx90V7ZSivBFEq7+iTozVp4AlbgYsJP\n'
-    + 'vx/1sfZD2WAcyMJ7IDmJyft7xnpVSXsyWGTT4f3eaHJIh1dqjwrso7ucAW0FK6rp\n'
-    + '/TONyOoXNfXtRbVtxNyCWBxt4HCSclDZFvS9y8fz9ZwmCUV7jei/YdzyQI2wnE13\n'
-    + 'W8cKlpzRFL6BWi8XPrUtAw5MWeHBAPUgPWMfcmiaeyi5BJFhQCrHLi+Gj4EEJvp7\n'
-    + 'mP5cbnQAx6+paV5z9m71SKrI/WSc4ixsYYdVmlL/qwAK9YliFfoPl030YJWW6rFf\n'
-    + 'T7J9BUlHGUJ0RB2lURNNLakM+UZRkeE9TByzCzgTxuQtyv5Lwsh2mAk3ia5x0kUO\n'
-    + 'LHg3Eoabhdh+YZA5hHaxnpF7VjspB78E0F9Btq+A41rSJ6zDOdToHey4MJ2nxdey\n'
-    + 'Z3bi81TZ6Fp4IuROrvZ2B/Xl3uNKR7n+AHRKnaAO87ywzyltvjwSh2y3xhJueiRs\n'
-    + 'BiYkyL3/fnocD3pexTdN6h3JgQGgO5GV8zw/NrxA85mw8o9im0HreuFObmNj36T9\n'
-    + 'k5N+R/QIXW83cIQOLaWK1ThYcluytf0tDRiMoKqULiaA6HvDMigExLxuhCtnoF8I\n'
-    + 'iOLN1cPdEVQjzwDHLqXP2DbWW1z9iRepLZlEm1hLRLEmOrTGKezYupVv306SSa6J\n'
-    + 'OA55lAeXMbyjFaYCr54HWrpt4NwNBX1efMUURc+1LcHpzFrBTTLbfjIyq6as49pH\n'
-    + '-----END RSA PRIVATE KEY-----\n'
-
-function TestConvertPemKeyBySync() {
-  let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('RSA1024');
-  try {
-    let keyPairData = asyKeyGenerator.convertPemKeySync(null, priKeyPkcs1EncodingStr, '123456');
-    if (keyPairData != null) {
-      console.info('[Sync]: convert pem key pair result: success.');
-    } else {
-      console.error('[Sync]: convert pem key pair result: fail.');
-    }
-  } catch (e) {
-    console.error(`Sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
-  }
-}
-```
+参见 [convertPemKeySync](#convertpemkeysync)
 
 ## generateKeyPair
 
@@ -785,6 +919,168 @@ asyKeyGenerator.generateKeyPair((err, keyPair) => {
 })
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
+let keyGenPromise = asyKeyGenerator.generateKeyPair();
+keyGenPromise.then(keyPair => {
+  console.info('generateKeyPair result: success.');
+}).catch((error: BusinessError) => {
+  console.error(`generateKeyPair failed, ${error.code}, ${error.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@ohos.base';
+
+async function TestGenerateKeyPair() {
+  let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
+  try {
+    let keyGenPromise = await asyKeyGenerator.generateKeyPair();
+    console.info('generateKeyPair result: success.');
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`generateKeyPair failed, ${e.code}, ${e.message}`);
+  }
+}
+```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+// 配置DSA1024公钥和私钥中包含的公共参数。
+function genDsa1024CommonSpecBigE() {
+  let dsaCommonSpec: cryptoFramework.DSACommonParamsSpec = {
+    algName: 'DSA',
+    specType: cryptoFramework.AsyKeySpecType.COMMON_PARAMS_SPEC,
+    p: BigInt('0xed1501551b8ab3547f6355ffdc2913856ddeca198833dbd04f020e5f25e47c50e0b3894f7690a0d2ea5ed3a7be25c54292a698e1f086eb3a97deb4dbf04fcad2dafd94a9f35c3ae338ab35477e16981ded6a5b13d5ff20bf55f1b262303ad3a80af71aa6aa2354d20e9c82647664bdb6b333b7bea0a5f49d55ca40bc312a1729'),
+    q: BigInt('0xd23304044019d5d382cfeabf351636c7ab219694ac845051f60b047b'),
+    g: BigInt('0x2cc266d8bd33c3009bd67f285a257ba74f0c3a7e12b722864632a0ac3f2c17c91c2f3f67eb2d57071ef47aaa8f8e17a21ad2c1072ee1ce281362aad01dcbcd3876455cd17e1dd55d4ed36fa011db40f0bbb8cba01d066f392b5eaa9404bfcb775f2196a6bc20eeec3db32d54e94d87ecdb7a0310a5a017c5cdb8ac78597778bd'),
+  }
+  return dsaCommonSpec;
+}
+
+// 设置DSA1024密钥对中包含的全参数。
+function genDsa1024KeyPairSpecBigE() {
+  let dsaCommonSpec = genDsa1024CommonSpecBigE();
+  let dsaKeyPairSpec: cryptoFramework.DSAKeyPairSpec = {
+    algName: 'DSA',
+    specType: cryptoFramework.AsyKeySpecType.KEY_PAIR_SPEC,
+    params: dsaCommonSpec,
+    sk: BigInt('0xa2dd2adb2d11392c2541930f61f1165c370aabd2d78d00342e0a2fd9'),
+    pk: BigInt('0xae6b5d5042e758f3fc9a02d009d896df115811a75b5f7b382d8526270dbb3c029403fafb8573ba4ef0314ea86f09d01e82a14d1ebb67b0c331f41049bd6b1842658b0592e706a5e4d20c14b67977e17df7bdd464cce14b5f13bae6607760fcdf394e0b73ac70aaf141fa4dafd736bd0364b1d6e6c0d7683a5de6b9221e7f2d6b'),
+  }
+  return dsaKeyPairSpec;
+}
+
+function testGenerateKeyPair() {
+  let asyKeyPairSpec = genDsa1024KeyPairSpecBigE(); // JS输入必须是大端格式的正数。
+  let asyKeyGeneratorBySpec = cryptoFramework.createAsyKeyGeneratorBySpec(asyKeyPairSpec);
+  asyKeyGeneratorBySpec.generateKeyPair((err, keyPair) => {
+    if (err) {
+      console.error(`generateKeyPair failed, errCode: ${err.code}, errMsg: ${err.message}`);
+      return;
+    }
+    console.info('generateKeyPair result: success.');
+  })
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 配置DSA1024公钥和私钥中包含的公共参数。
+function genDsa1024CommonSpecBigE() {
+  let dsaCommonSpec: cryptoFramework.DSACommonParamsSpec = {
+    algName: 'DSA',
+    specType: cryptoFramework.AsyKeySpecType.COMMON_PARAMS_SPEC,
+    p: BigInt('0xed1501551b8ab3547f6355ffdc2913856ddeca198833dbd04f020e5f25e47c50e0b3894f7690a0d2ea5ed3a7be25c54292a698e1f086eb3a97deb4dbf04fcad2dafd94a9f35c3ae338ab35477e16981ded6a5b13d5ff20bf55f1b262303ad3a80af71aa6aa2354d20e9c82647664bdb6b333b7bea0a5f49d55ca40bc312a1729'),
+    q: BigInt('0xd23304044019d5d382cfeabf351636c7ab219694ac845051f60b047b'),
+    g: BigInt('0x2cc266d8bd33c3009bd67f285a257ba74f0c3a7e12b722864632a0ac3f2c17c91c2f3f67eb2d57071ef47aaa8f8e17a21ad2c1072ee1ce281362aad01dcbcd3876455cd17e1dd55d4ed36fa011db40f0bbb8cba01d066f392b5eaa9404bfcb775f2196a6bc20eeec3db32d54e94d87ecdb7a0310a5a017c5cdb8ac78597778bd'),
+  }
+  return dsaCommonSpec;
+}
+
+// 设置DSA1024密钥对中包含的全参数。
+function genDsa1024KeyPairSpecBigE() {
+  let dsaCommonSpec = genDsa1024CommonSpecBigE();
+  let dsaKeyPairSpec: cryptoFramework.DSAKeyPairSpec = {
+    algName: 'DSA',
+    specType: cryptoFramework.AsyKeySpecType.KEY_PAIR_SPEC,
+    params: dsaCommonSpec,
+    sk: BigInt('0xa2dd2adb2d11392c2541930f61f1165c370aabd2d78d00342e0a2fd9'),
+    pk: BigInt('0xae6b5d5042e758f3fc9a02d009d896df115811a75b5f7b382d8526270dbb3c029403fafb8573ba4ef0314ea86f09d01e82a14d1ebb67b0c331f41049bd6b1842658b0592e706a5e4d20c14b67977e17df7bdd464cce14b5f13bae6607760fcdf394e0b73ac70aaf141fa4dafd736bd0364b1d6e6c0d7683a5de6b9221e7f2d6b'),
+  }
+  return dsaKeyPairSpec;
+}
+
+function testGenerateKeyPair() {
+  let asyKeyPairSpec = genDsa1024KeyPairSpecBigE(); // JS输入必须是大端格式的正数。
+  let asyKeyGeneratorBySpec = cryptoFramework.createAsyKeyGeneratorBySpec(asyKeyPairSpec);
+  let keyGenPromise = asyKeyGeneratorBySpec.generateKeyPair();
+  keyGenPromise.then(keyPair => {
+    console.info('generateKeyPair result: success.');
+  }).catch((error: BusinessError) => {
+    console.error(`generateKeyPair failed: errCode: ${error.code}, errMsg: ${error.message}`);
+  });
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@ohos.base';
+
+// 配置DSA1024公钥和私钥中包含的公共参数。
+function genDsa1024CommonSpecBigE() {
+  let dsaCommonSpec: cryptoFramework.DSACommonParamsSpec = {
+    algName: "DSA",
+    specType: cryptoFramework.AsyKeySpecType.COMMON_PARAMS_SPEC,
+    p: BigInt("166484678330980230918288017058118750588936475825075636160948086324584506253050733641653846374072496744751373749513800668308592471875927510262190610484075661191955336781308738545148462904698011665231210784009585531833742255763058353244797364068379260289632671394123437886363152901206340520347078776281501407017"),
+    q: BigInt("22136567887935188521122291396237495404238014904987508308073618539643"),
+    g: BigInt("31431106800686660210719504187936474649951169233459600933271043344986900452096905678402332127191280905097978014715716847063988554957190923585487931844988906222454145404829468544959657389200810483171610136624344260441375546451841847753251202124107818741854127006757173424804029343596388967724568105310582438077"),
+  }
+  return dsaCommonSpec;
+}
+
+// 设置DSA1024密钥对中包含的全参数。
+function genDsa1024KeyPairSpecBigE() {
+  let dsaCommonSpec = genDsa1024CommonSpecBigE();
+  let dsaKeyPairSpec: cryptoFramework.DSAKeyPairSpec = {
+    algName: "DSA",
+    specType: cryptoFramework.AsyKeySpecType.KEY_PAIR_SPEC,
+    params: dsaCommonSpec,
+    sk: BigInt("17151574244286446262852711552260633032889574813459849237631670562777"),
+    pk: BigInt("122481462760261281537933930327074654922520342706632667362863059195007078325664832084167283707829801130185756952585086523755112278127045105337478944738740971392867045662092290058737805402824260644308348496645265005145482163276902936269594425436610316947077436440924891874036982298199295240775886921373610618219"),
+  }
+  return dsaKeyPairSpec;
+}
+
+async function testGenerateKeyPair()
+{
+  let asyKeyPairSpec = genDsa1024KeyPairSpecBigE(); // JS输入必须是大端格式的正数。
+  let asyKeyGeneratorBySpec = cryptoFramework.createAsyKeyGeneratorBySpec(asyKeyPairSpec);
+  try {
+    let keyPair = await asyKeyGeneratorBySpec.generateKeyPair();
+    console.info('generateKeyPair result: success.');
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`generateKeyPair failed, ${e.code}, ${e.message}`);
+  }
+}
+```
+
 ## generateKeyPair
 
 ```TypeScript
@@ -819,38 +1115,7 @@ generateKeyPair(): Promise<KeyPair>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
-let keyGenPromise = asyKeyGenerator.generateKeyPair();
-keyGenPromise.then(keyPair => {
-  console.info('generateKeyPair result: success.');
-}).catch((error: BusinessError) => {
-  console.error(`generateKeyPair failed, ${error.code}, ${error.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@ohos.base';
-
-async function TestGenerateKeyPair() {
-  let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
-  try {
-    let keyGenPromise = await asyKeyGenerator.generateKeyPair();
-    console.info('generateKeyPair result: success.');
-  } catch (err) {
-    let e: BusinessError = err as BusinessError;
-    console.error(`generateKeyPair failed, ${e.code}, ${e.message}`);
-  }
-}
-```
+参见 [generateKeyPair](#generatekeypair)
 
 ## generateKeyPairSync
 
@@ -899,6 +1164,52 @@ try {
   }
 } catch (e) {
   console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
+}
+```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 配置DSA1024公钥和私钥中包含的公共参数。
+function genDsa1024CommonSpecBigE() {
+  let dsaCommonSpec: cryptoFramework.DSACommonParamsSpec = {
+    algName: 'DSA',
+    specType: cryptoFramework.AsyKeySpecType.COMMON_PARAMS_SPEC,
+    p: BigInt('0xed1501551b8ab3547f6355ffdc2913856ddeca198833dbd04f020e5f25e47c50e0b3894f7690a0d2ea5ed3a7be25c54292a698e1f086eb3a97deb4dbf04fcad2dafd94a9f35c3ae338ab35477e16981ded6a5b13d5ff20bf55f1b262303ad3a80af71aa6aa2354d20e9c82647664bdb6b333b7bea0a5f49d55ca40bc312a1729'),
+    q: BigInt('0xd23304044019d5d382cfeabf351636c7ab219694ac845051f60b047b'),
+    g: BigInt('0x2cc266d8bd33c3009bd67f285a257ba74f0c3a7e12b722864632a0ac3f2c17c91c2f3f67eb2d57071ef47aaa8f8e17a21ad2c1072ee1ce281362aad01dcbcd3876455cd17e1dd55d4ed36fa011db40f0bbb8cba01d066f392b5eaa9404bfcb775f2196a6bc20eeec3db32d54e94d87ecdb7a0310a5a017c5cdb8ac78597778bd'),
+  }
+  return dsaCommonSpec;
+}
+
+// 设置DSA1024密钥对中包含的全参数。
+function genDsa1024KeyPairSpecBigE() {
+  let dsaCommonSpec = genDsa1024CommonSpecBigE();
+  let dsaKeyPairSpec: cryptoFramework.DSAKeyPairSpec = {
+    algName: 'DSA',
+    specType: cryptoFramework.AsyKeySpecType.KEY_PAIR_SPEC,
+    params: dsaCommonSpec,
+    sk: BigInt('0xa2dd2adb2d11392c2541930f61f1165c370aabd2d78d00342e0a2fd9'),
+    pk: BigInt('0xae6b5d5042e758f3fc9a02d009d896df115811a75b5f7b382d8526270dbb3c029403fafb8573ba4ef0314ea86f09d01e82a14d1ebb67b0c331f41049bd6b1842658b0592e706a5e4d20c14b67977e17df7bdd464cce14b5f13bae6607760fcdf394e0b73ac70aaf141fa4dafd736bd0364b1d6e6c0d7683a5de6b9221e7f2d6b'),
+  }
+  return dsaKeyPairSpec;
+}
+
+function testGenerateKeyPairSync() {
+  let asyKeyPairSpec = genDsa1024KeyPairSpecBigE(); // JS输入必须是大端格式的正数。
+  let asyKeyGeneratorBySpec = cryptoFramework.createAsyKeyGeneratorBySpec(asyKeyPairSpec);
+  try {
+    let keyPairData = asyKeyGeneratorBySpec.generateKeyPairSync();
+    if (keyPairData != null) {
+      console.info('[Sync]: key pair result: success.');
+    } else {
+      console.error('[Sync]: get key pair result: fail.');
+    }
+  } catch (error) {
+    let e: BusinessError = error as BusinessError;
+    console.error(`sync failed: errCode: ${error.code}, errMsg: ${error.message}`);
+  }
 }
 ```
 

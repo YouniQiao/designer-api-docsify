@@ -35,6 +35,78 @@ function isSystemReady(callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formHost.isSystemReady((error: BusinessError) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formHost.isSystemReady((error) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    }
+  });
+} catch(error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formHost.isSystemReady().then(() => {
+    console.info('formHost isSystemReady success');
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formHost.isSystemReady().then(() => {
+    console.info('formHost isSystemReady success');
+  }).catch((error) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch(error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
 
 ## isSystemReady
 
@@ -63,4 +135,8 @@ function isSystemReady(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
+
+**示例**
+
+参见 [isSystemReady](#issystemready)
 

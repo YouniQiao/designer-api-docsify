@@ -87,3 +87,7 @@ A maximum of 2 **AVTranscoder** instances can be created.
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 
+**Examples**
+
+See [createAVTranscoder](#createavtranscoder)
+

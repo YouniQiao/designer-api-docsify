@@ -63,6 +63,18 @@ privacyManager.setPermissionUsedRecordToggleStatus(true).then(() => {
 });
 ```
 
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
+privacyManager.setPermissionUsedRecordToggleStatus(true, subProfileId).then(() => {
+  console.info('setPermissionUsedRecordToggleStatus success');
+}).catch((err: BusinessError): void => {
+  console.error(`setPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## setPermissionUsedRecordToggleStatus
 
@@ -113,15 +125,5 @@ status为true时，[addPermissionUsedRecord](arkts-ability-privacymanager-addper
 
 **示例**
 
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
-privacyManager.setPermissionUsedRecordToggleStatus(true, subProfileId).then(() => {
-  console.info('setPermissionUsedRecordToggleStatus success');
-}).catch((err: BusinessError): void => {
-  console.error(`setPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [setPermissionUsedRecordToggleStatus](#setpermissionusedrecordtogglestatus)
 

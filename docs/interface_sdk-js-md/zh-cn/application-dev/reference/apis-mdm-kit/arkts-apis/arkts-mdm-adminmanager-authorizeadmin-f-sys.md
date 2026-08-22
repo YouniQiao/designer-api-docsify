@@ -30,7 +30,7 @@ function authorizeAdmin(admin: Want, bundleName: string, callback: AsyncCallback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 被授予管理员权限应用的包名。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err为null，否则为错误对象。 |
 
@@ -68,6 +68,25 @@ adminManager.authorizeAdmin(wantTemp, bundleName, (err) => {
 });
 ```
 
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// 需根据实际情况进行替换
+let bundleName: string = "com.example.application";
+
+adminManager.authorizeAdmin(wantTemp, bundleName).then(() => {
+}).catch((err: BusinessError) => {
+  console.error(`Failed to authorize permission to the application. Code: ${err.code}, message: ${err.message}`);
+})
+```
+
 
 ## authorizeAdmin
 
@@ -93,7 +112,7 @@ function authorizeAdmin(admin: Want, bundleName: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 被授予管理员权限应用的包名。 |
 
 **返回值：**
@@ -115,22 +134,5 @@ function authorizeAdmin(admin: Want, bundleName: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let bundleName: string = "com.example.application";
-
-adminManager.authorizeAdmin(wantTemp, bundleName).then(() => {
-}).catch((err: BusinessError) => {
-  console.error(`Failed to authorize permission to the application. Code: ${err.code}, message: ${err.message}`);
-})
-```
+参见 [authorizeAdmin](#authorizeadmin)
 

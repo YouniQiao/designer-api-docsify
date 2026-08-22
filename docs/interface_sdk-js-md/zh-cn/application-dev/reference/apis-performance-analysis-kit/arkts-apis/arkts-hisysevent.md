@@ -42,8 +42,8 @@ import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 | [QueryArg](arkts-performanceanalysis-hisysevent-queryarg-i-sys.md) | 系统事件查询参数对象接口。 |
 | [QueryRule](arkts-performanceanalysis-hisysevent-queryrule-i-sys.md) | 系统事件查询规则对象接口。 |
 | [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md) | 系统事件信息对象接口。 |
-| [WatchRule](arkts-performanceanalysis-hisysevent-watchrule-i-sys.md) | 系统事件订阅规则对象接口。 |
 | [Watcher](arkts-performanceanalysis-hisysevent-watcher-i-sys.md) | 系统事件订阅者对象接口。 |
+| [WatchRule](arkts-performanceanalysis-hisysevent-watchrule-i-sys.md) | 系统事件订阅规则对象接口。 |
 <!--DelEnd-->
 
 <!--Del-->

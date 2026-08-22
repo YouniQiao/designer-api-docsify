@@ -2,7 +2,7 @@
 
 Enum for the type of Bluetooth address.
 
-**Since:** 26.0.0
+**Since:** 21
 
 <!--Device-common-export enum BluetoothAddressType--><!--Device-common-export enum BluetoothAddressType-End-->
 
@@ -16,7 +16,7 @@ VIRTUAL = 1
 
 virtual address.
 
-**Since:** 26.0.0
+**Since:** 21
 
 <!--Device-BluetoothAddressType-VIRTUAL = 1--><!--Device-BluetoothAddressType-VIRTUAL = 1-End-->
 
@@ -30,7 +30,7 @@ REAL = 2
 
 real address.
 
-**Since:** 26.0.0
+**Since:** 21
 
 <!--Device-BluetoothAddressType-REAL = 2--><!--Device-BluetoothAddressType-REAL = 2-End-->
 

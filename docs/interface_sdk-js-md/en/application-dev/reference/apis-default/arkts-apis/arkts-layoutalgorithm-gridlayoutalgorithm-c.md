@@ -4,7 +4,7 @@ Defines the grid layout algorithm.
 
 @implements LayoutAlgorithm
 
-**Inheritance/Implementation:** GridLayoutAlgorithm implements [LayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-i.md)
+**Inheritance/Implementation:** GridLayoutAlgorithm implements [LayoutAlgorithm](arkts-layoutalgorithm-i.md)
 
 **Since:** 24
 
@@ -36,7 +36,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [GridLayoutAlgorithmOptions](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | No | set properties of grid layout algorithm. |
+| option | [GridLayoutAlgorithmOptions](arkts-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | No | set properties of grid layout algorithm. |
 
 ## columnsGap
 

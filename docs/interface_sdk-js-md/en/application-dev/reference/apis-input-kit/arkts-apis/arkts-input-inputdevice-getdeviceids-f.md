@@ -34,7 +34,7 @@ Obtains the IDs of all input devices. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**, and **data** is the ID list of all input devices. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**, and **data** is the ID list of all input devices. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -56,6 +56,28 @@ struct Index {
             }
             console.info(`Device id list: ${JSON.stringify(ids)}`);
           });
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          inputDevice.getDeviceIds().then((ids: Array<number>) => {
+            console.info(`Device id list: ${JSON.stringify(ids)}`);
+          }).catch((error: BusinessError) => {
+            console.error(`Failed to get device id list, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          })
         })
     }
   }
@@ -94,25 +116,5 @@ Obtains the IDs of all input devices. This API uses a promise to return the resu
 
 **Examples**
 
-```TypeScript
-import { inputDevice } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          inputDevice.getDeviceIds().then((ids: Array<number>) => {
-            console.info(`Device id list: ${JSON.stringify(ids)}`);
-          }).catch((error: BusinessError) => {
-            console.error(`Failed to get device id list, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          })
-        })
-    }
-  }
-}
-```
+See [getDeviceIds](#getdeviceids)
 

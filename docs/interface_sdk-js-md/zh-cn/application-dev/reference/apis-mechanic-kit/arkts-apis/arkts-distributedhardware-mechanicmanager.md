@@ -26,14 +26,14 @@ import { mechanicManager } from '@kit.MechanicKit';
 | [getCameraTrackingEnabled](arkts-mechanic-mechanicmanager-getcameratrackingenabled-f.md) | 获取相机跟踪状态 |
 | [getCameraTrackingLayout](arkts-mechanic-mechanicmanager-getcameratrackinglayout-f.md) | 获取当前摄像头跟踪布局 |
 | [isControlSupported](arkts-mechanic-mechanicmanager-iscontrolsupported-f.md) | 判断当前设备是否支持某类设备的具身控制 |
-| [offAttachStateChange](arkts-mechanic-mechanicmanager-offattachstatechange-f.md) | Unsubscribes from device attachment state change events. |
-| [offTrackingStateChange](arkts-mechanic-mechanicmanager-offtrackingstatechange-f.md) | 设置相机跟踪布局 |
 | [off_attachStateChange](arkts-mechanic-mechanicmanager-offattachstatechange-f.md) | Unsubscribes from device attachment state change events. |
 | [off_trackingStateChange](arkts-mechanic-mechanicmanager-offtrackingstatechange-f.md) | 设置相机跟踪布局 |
-| [onAttachStateChange](arkts-mechanic-mechanicmanager-onattachstatechange-f.md) | Subscribes to device attachment state change events. |
-| [onTrackingStateChange](arkts-mechanic-mechanicmanager-ontrackingstatechange-f.md) | Subscribes to tracking events. |
+| [offAttachStateChange](arkts-mechanic-mechanicmanager-offattachstatechange-f.md) | Unsubscribes from device attachment state change events. |
+| [offTrackingStateChange](arkts-mechanic-mechanicmanager-offtrackingstatechange-f.md) | 设置相机跟踪布局 |
 | [on_attachStateChange](arkts-mechanic-mechanicmanager-onattachstatechange-f.md) | Subscribes to device attachment state change events. |
 | [on_trackingStateChange](arkts-mechanic-mechanicmanager-ontrackingstatechange-f.md) | Subscribes to tracking events. |
+| [onAttachStateChange](arkts-mechanic-mechanicmanager-onattachstatechange-f.md) | Subscribes to device attachment state change events. |
+| [onTrackingStateChange](arkts-mechanic-mechanicmanager-ontrackingstatechange-f.md) | Subscribes to tracking events. |
 | [setCameraTrackingEnabled](arkts-mechanic-mechanicmanager-setcameratrackingenabled-f.md) | 启用或禁用摄像机跟踪 |
 
 <!--Del-->
@@ -52,10 +52,10 @@ import { mechanicManager } from '@kit.MechanicKit';
 | [isSupportAction](arkts-mechanic-mechanicmanager-issupportaction-f-sys.md) | 判断是否支持某个动作 |
 | [move](arkts-mechanic-mechanicmanager-move-f-sys.md) | 以特定参数移动一个具身设备 |
 | [moveBySpeed](arkts-mechanic-mechanicmanager-movebyspeed-f-sys.md) | 以特定速度移动一个具身设备 |
-| [offRotationAxesStatusChange](arkts-mechanic-mechanicmanager-offrotationaxesstatuschange-f-sys.md) | Unregister a listener for axis state changes. |
 | [off_rotationAxesStatusChange](arkts-mechanic-mechanicmanager-offrotationaxesstatuschange-f-sys.md) | Unregister a listener for axis state changes. |
-| [onRotationAxesStatusChange](arkts-mechanic-mechanicmanager-onrotationaxesstatuschange-f-sys.md) | Register a listener for axis state changes. The status of the rotation axis changes dynamically, which needs to be monitored. |
+| [offRotationAxesStatusChange](arkts-mechanic-mechanicmanager-offrotationaxesstatuschange-f-sys.md) | Unregister a listener for axis state changes. |
 | [on_rotationAxesStatusChange](arkts-mechanic-mechanicmanager-onrotationaxesstatuschange-f-sys.md) | Register a listener for axis state changes. The status of the rotation axis changes dynamically, which needs to be monitored. |
+| [onRotationAxesStatusChange](arkts-mechanic-mechanicmanager-onrotationaxesstatuschange-f-sys.md) | Register a listener for axis state changes. The status of the rotation axis changes dynamically, which needs to be monitored. |
 | [rotate](arkts-mechanic-mechanicmanager-rotate-f-sys.md) | 将机械设备旋转到相对角度 |
 | [rotateBySpeed](arkts-mechanic-mechanicmanager-rotatebyspeed-f-sys.md) | 以指定的速度旋转机械设备 |
 | [rotateToEulerAngles](arkts-mechanic-mechanicmanager-rotatetoeulerangles-f-sys.md) | 将机械设备旋转到绝对角度 |

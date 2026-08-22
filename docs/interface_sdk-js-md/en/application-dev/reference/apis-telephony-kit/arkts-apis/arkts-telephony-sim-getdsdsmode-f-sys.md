@@ -28,7 +28,7 @@ Obtains the value of dsds mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DsdsMode](arkts-telephony-sim-dsdsmode-e-sys.md)&gt; | Yes | Indicates the callback for getting one of the following dsds mode states: &lt;ul&gt; &lt;li&gt;{@code DsdsMode#DSDS_MODE_V2} &lt;li&gt;{@code DsdsMode#DSDS_MODE_V3} &lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_TDM} &lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_DSDA} &lt;/ul&gt; |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DsdsMode](arkts-telephony-sim-dsdsmode-e-sys.md)&gt; | Yes | Indicates the callback for getting one of the following dsds mode states: &lt;ul&gt; &lt;li&gt;{@code DsdsMode#DSDS_MODE_V2} &lt;li&gt;{@code DsdsMode#DSDS_MODE_V3} &lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_TDM} &lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_DSDA} &lt;/ul&gt; |
 
 **Error codes:**
 
@@ -53,6 +53,18 @@ sim.getDsdsMode((err: BusinessError, data: sim.DsdsMode) => {
     } else {
         console.info(`getDsdsMode success, callback: data->${JSON.stringify(data)}`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+let promise = sim.getDsdsMode();
+promise.then((data: sim.DsdsMode) => {
+    console.info(`getDsdsMode success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getDsdsMode failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -94,15 +106,5 @@ Obtains the value of dsds mode.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let promise = sim.getDsdsMode();
-promise.then((data: sim.DsdsMode) => {
-    console.info(`getDsdsMode success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getDsdsMode failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getDsdsMode](#getdsdsmode)
 

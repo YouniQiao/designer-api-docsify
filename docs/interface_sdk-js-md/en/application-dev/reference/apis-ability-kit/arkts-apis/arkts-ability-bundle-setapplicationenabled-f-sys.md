@@ -49,7 +49,36 @@ Sets whether to enable an application. This API uses an asynchronous callback to
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | isEnable | boolean | Yes | Whether to enable the application. **true** to enable, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleName: string = "com.example.myapplication";
+
+bundle.setApplicationEnabled(bundleName, false, err => {
+  if (err) {
+    console.error('setApplicationEnabled failed.');
+  } else {
+    console.info('setApplicationEnabled successfully.');
+  }
+});
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleName: string = "com.example.myapplication";
+
+bundle.setApplicationEnabled(bundleName, false).then(() => {
+  console.info('setApplicationEnabled successfully.');
+}).catch((error: BusinessError) => {
+  console.error('setApplicationEnabled failed.');
+});
+```
 
 
 ## setApplicationEnabled
@@ -86,4 +115,8 @@ Sets whether to enable an application. This API uses a promise to return the res
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+See [setApplicationEnabled](#setapplicationenabled)
 

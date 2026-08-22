@@ -89,3 +89,7 @@ Creates a MediaKeySystem instance.
 | [24700103](../errorcode-drm.md#24700103-mediakeysystem数量达到极限) | Meet max MediaKeySystem num limit. |
 | [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
 
+**示例**
+
+参见 [createMediaKeySystem](#createmediakeysystem)
+

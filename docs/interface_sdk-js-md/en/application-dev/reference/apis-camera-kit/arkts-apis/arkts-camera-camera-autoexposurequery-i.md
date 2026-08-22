@@ -46,6 +46,40 @@ Obtains the exposure compensation values of the camera device.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getExposureBiasRange(photoSession: camera.PhotoSession): Array<number> {
+  let biasRangeArray: Array<number> = [];
+  try {
+    biasRangeArray = photoSession.getExposureBiasRange();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getExposureBiasRange call failed. error code: ${err.code}`);
+  }
+  return biasRangeArray;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getExposureBiasRange(captureSession: camera.CaptureSession): Array<number> {
+  let biasRangeArray: Array<number> = [];
+  try {
+    biasRangeArray = captureSession.getExposureBiasRange();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getExposureBiasRange call failed. error code: ${err.code}`);
+  }
+  return biasRangeArray;
+}
+```
+
 ## isExposureModeSupported
 
 ```TypeScript
@@ -79,4 +113,38 @@ Checks whether an exposure mode is supported.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isExposureModeSupported(photoSession: camera.PhotoSession): boolean {
+  let isSupported: boolean = false;
+  try {
+    isSupported = photoSession.isExposureModeSupported(camera.ExposureMode.EXPOSURE_MODE_LOCKED);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The isExposureModeSupported call failed. error code: ${err.code}`);
+  }
+  return isSupported;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isExposureModeSupported(captureSession: camera.CaptureSession): boolean {
+  let isSupported: boolean = false;
+  try {
+    isSupported = captureSession.isExposureModeSupported(camera.ExposureMode.EXPOSURE_MODE_LOCKED);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The isExposureModeSupported call failed. error code: ${err.code}`);
+  }
+  return isSupported;
+}
+```
 

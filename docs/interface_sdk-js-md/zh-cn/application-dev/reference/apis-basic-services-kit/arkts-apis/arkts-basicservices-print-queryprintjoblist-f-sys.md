@@ -52,6 +52,17 @@ print.queryPrintJobList((err: BusinessError, printJobs : print.PrintJob[]) => {
 })
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+
+print.queryPrintJobList().then((printJobs : print.PrintJob[]) => {
+    console.info('queryPrintJobList success, data : ' + JSON.stringify(printJobs));
+}).catch((error: BusinessError) => {
+    console.error('queryPrintJobList failed, error : ' + JSON.stringify(error));
+})
+```
+
 
 ## queryPrintJobList
 
@@ -86,14 +97,5 @@ function queryPrintJobList(): Promise<Array<PrintJob>>
 
 **示例**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-print.queryPrintJobList().then((printJobs : print.PrintJob[]) => {
-    console.info('queryPrintJobList success, data : ' + JSON.stringify(printJobs));
-}).catch((error: BusinessError) => {
-    console.error('queryPrintJobList failed, error : ' + JSON.stringify(error));
-})
-```
+参见 [queryPrintJobList](#queryprintjoblist)
 

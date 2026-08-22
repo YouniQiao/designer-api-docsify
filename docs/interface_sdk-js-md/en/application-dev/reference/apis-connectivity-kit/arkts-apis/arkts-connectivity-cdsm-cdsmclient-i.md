@@ -72,7 +72,7 @@ Unsubscribes from the CDSM information change event. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | No | Callback used to return the CDSM information. <br>If this parameter is specified, the current callback is unregistered. If this parameter is not specified, all callbacks used to listen for CDSM information change events are unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | No | Callback used to return the CDSM information. <br>If this parameter is specified, the current callback is unregistered. If this parameter is not specified, all callbacks used to listen for CDSM information change events are unregistered. |
 
 ## onCdsmInfoChange
 
@@ -96,5 +96,5 @@ The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | Yes | Callback used to return the CDSM information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | Yes | Callback used to return the CDSM information. |
 

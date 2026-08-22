@@ -28,5 +28,5 @@ Build function of Chip.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ChipOptions](arkts-arkuiadvancedchip-chipoptions-i.md) | Yes | chip option. |
+| options | [ChipOptions](arkts-arkui-advanced-chip-chipoptions-i.md) | Yes | chip option. |
 

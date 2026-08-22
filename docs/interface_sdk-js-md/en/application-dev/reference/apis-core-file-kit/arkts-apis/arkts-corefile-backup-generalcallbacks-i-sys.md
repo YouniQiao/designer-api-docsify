@@ -58,6 +58,17 @@ Callback called when the backup_sa service return result information. The first 
 | 13900020 | Invalid argument |
 | 13900025 | No space left on device |
 
+**Examples**
+
+```TypeScript
+import { backup } from '@kit.CoreFileKit';
+
+onProcess: (bundleName: string, process: string) => {
+  console.info('onProcess bundleName : ' + bundleName);
+  console.info('onProcess processInfo : ' + process);
+}
+```
+
 ## onResultReport
 
 ```TypeScript
@@ -95,6 +106,17 @@ Callback called when the backup service return result information. The first ret
 | 13900025 | No space left on device |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+import { backup } from '@kit.CoreFileKit';
+
+onResultReport: (bundleName: string, result: string) => {
+  console.info('onResultReport bundleName : ' + bundleName);
+  console.info('onResultReport result : ' + result);
+}
+```
+
 ## onAllBundlesEnd
 
 ```TypeScript
@@ -103,7 +125,7 @@ onAllBundlesEnd: AsyncCallback<undefined>
 
 Callback called when the all the bundles to backup/restore are done or aborted unexpectedly.
 
-**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;undefined&gt;
+**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;undefined&gt;
 
 **Since:** 23
 
@@ -121,7 +143,7 @@ onBackupServiceDied: Callback<undefined>
 
 Callback called when the backup service dies unexpectedly.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;undefined&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;undefined&gt;
 
 **Since:** 23
 
@@ -157,7 +179,7 @@ onBundleBegin: AsyncCallback<string, BundlePara>
 
 Callback called when a backup/restore procedure for an bundle is started. The first return string parameter indicates the name of the bundle. The second return string parameter indicates that when BusinessError errors occur, the callback data is the name of the bundle.
 
-**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string, [BundlePara](arkts-corefile-backup-bundlepara-t-sys.md)&gt;
+**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, [BundlePara](arkts-corefile-backup-bundlepara-t-sys.md)&gt;
 
 **Since:** 23
 
@@ -177,7 +199,7 @@ onBundleEnd: AsyncCallback<string, BundlePara>
 
 Callback called when a backup/restore procedure for an bundle ends successfully or gets aborted unexpectedly. The first return string parameter indicates the name of the bundle. The second return string parameter indicates that when BusinessError errors occur, the callback data is the name of the bundle.
 
-**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string, [BundlePara](arkts-corefile-backup-bundlepara-t-sys.md)&gt;
+**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, [BundlePara](arkts-corefile-backup-bundlepara-t-sys.md)&gt;
 
 **Since:** 23
 
@@ -197,7 +219,7 @@ onFileReady: AsyncCallback<File>
 
 Callback called when the backup service tries to send files to the client. The File argument indicates a file to send to the client. The returned file is owned by the backup service and will be cleaned by the service once the file is closed.
 
-**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;File&gt;
+**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;File&gt;
 
 **Since:** 23
 
@@ -235,7 +257,7 @@ onMigrateResult?: AsyncCallback<string, void | string>
 
 Callback called when the migrate result is reported. The first return string parameter indicates the name of the bundle. The second return string parameter indicates that when BusinessError errors occur, the callback data is the name of the bundle.
 
-**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string, void \| string&gt;
+**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
 
 **Since:** 26.0.0
 

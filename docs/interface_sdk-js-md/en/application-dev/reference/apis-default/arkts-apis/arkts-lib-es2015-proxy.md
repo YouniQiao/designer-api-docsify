@@ -11,6 +11,6 @@
 
 | Name | Description |
 | --- | --- |
-| [ProxyConstructor](arkts-libes2015proxy-proxyconstructor-i.md) |  |
-| [ProxyHandler](arkts-libes2015proxy-proxyhandler-i.md) |  |
+| [ProxyConstructor](arkts-lib-es2015-proxy-proxyconstructor-i.md) |  |
+| [ProxyHandler](arkts-lib-es2015-proxy-proxyhandler-i.md) |  |
 

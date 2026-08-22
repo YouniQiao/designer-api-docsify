@@ -28,7 +28,7 @@ Checks whether the data traffic over the current default network is metered. For
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the data traffic over the current network is metered, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the data traffic over the current network is metered, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -47,6 +47,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 connection.isDefaultNetMetered((error: BusinessError, data: boolean) => {
   console.error(JSON.stringify(error));
+  console.info('data: ' + data);
+});
+```
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.isDefaultNetMetered().then((data: boolean) => {
   console.info('data: ' + data);
 });
 ```
@@ -86,11 +94,5 @@ Checks whether the data traffic over the current default network is metered. For
 
 **Examples**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.isDefaultNetMetered().then((data: boolean) => {
-  console.info('data: ' + data);
-});
-```
+See [isDefaultNetMetered](#isdefaultnetmetered)
 

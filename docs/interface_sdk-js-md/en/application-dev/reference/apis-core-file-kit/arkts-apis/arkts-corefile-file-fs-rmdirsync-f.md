@@ -51,3 +51,10 @@ Removes a directory and all its subdirectories and files synchronously.
 | 13900032 | Directory not empty |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+let dirPath = pathDir + "/testDir";
+fs.rmdirSync(dirPath);
+```
+

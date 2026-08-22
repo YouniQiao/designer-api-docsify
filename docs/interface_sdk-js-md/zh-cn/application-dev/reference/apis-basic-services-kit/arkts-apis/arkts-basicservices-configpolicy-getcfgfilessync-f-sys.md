@@ -42,3 +42,51 @@ function getCfgFilesSync(relPath: string, followMode?: FollowXMode, extra?: stri
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3.Parameter verification failed. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      let relpath: string = 'etc/config.xml';
+      let extra: string = 'etc/carrier/${telephony.sim.opkey0}';
+      let result: Array<string> = configPolicy.getCfgFilesSync(relpath, configPolicy.FollowXMode.USER_DEFINED, extra);
+      console.info('result is ' + result);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error('error: ' + code + ', ' + message);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      let relpath: string = 'etc/config.xml';
+      let extra: string = 'etc/carrier/${telephony.sim.opkey0}';
+      let result: Array<string> = configPolicy.getCfgFilesSync(relpath, configPolicy.FollowXMode.USER_DEFINED, extra);
+      console.info('result is ' + result);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error('error: ' + code + ', ' + message);
+    }
+  }
+}
+```
+

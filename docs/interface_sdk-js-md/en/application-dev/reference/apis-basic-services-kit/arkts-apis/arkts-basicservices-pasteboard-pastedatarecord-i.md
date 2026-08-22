@@ -72,7 +72,7 @@ Forcibly converts the content in a **PasteData** object to text. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -92,6 +92,17 @@ record.convertToText((err: BusinessError, data: string) => {
         return;
     }
     console.info(`Succeeded in converting to text. Data: ${data}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let record: pasteboard.PasteDataRecord = pasteboard.createUriRecord('dataability:///com.example.myapplication1/user.txt');
+record.convertToText().then((data: string) => {
+    console.info(`Succeeded in converting to text. Data: ${data}`);
+}).catch((err: BusinessError) => {
+    console.error(`Failed to convert to text. Cause: ${err.message}`);
 });
 ```
 
@@ -121,16 +132,7 @@ Forcibly converts the content in a **PasteData** object to text. This API uses a
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let record: pasteboard.PasteDataRecord = pasteboard.createUriRecord('dataability:///com.example.myapplication1/user.txt');
-record.convertToText().then((data: string) => {
-    console.info(`Succeeded in converting to text. Data: ${data}`);
-}).catch((err: BusinessError) => {
-    console.error(`Failed to convert to text. Cause: ${err.message}`);
-});
-```
+See [convertToText](#converttotext)
 
 ## getData
 
@@ -184,6 +186,30 @@ record.getData(pasteboard.MIMETYPE_TEXT_URI).then((value: pasteboard.ValueType) 
     console.info('Success to get text/uri value. value is: ' + uri);
 }).catch((err: BusinessError) => {
     console.error('Failed to get text/uri value. Cause: ' + err.message);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.getData((err: BusinessError, pasteData: pasteboard.PasteData) => {
+    if (err) {
+        console.error('Failed to get PasteData. Cause: ' + err.message);
+        return;
+    }
+    let text: string = pasteData.getPrimaryText();
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
+    let text: string = pasteData.getPrimaryText();
+}).catch((err: BusinessError) => {
+    console.error('Failed to get PasteData. Cause: ' + err.message);
 });
 ```
 
@@ -381,7 +407,7 @@ want: Want
 
 Want content. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addentry).
 
-**Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)
+**Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 23
 

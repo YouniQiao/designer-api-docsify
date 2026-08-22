@@ -43,3 +43,18 @@ declare function readTextSync(
 | --- | --- |
 | string | 返回读取文件的内容。 |
 
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+class Option {
+  length: number = 4096;
+  position: number = 0;
+  encoding: string = 'utf-8';
+}
+let option = new Option();
+option.position = 1;
+option.length = 3;
+let str = fileio.readTextSync(filePath, option);
+```
+

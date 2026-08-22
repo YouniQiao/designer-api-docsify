@@ -31,7 +31,7 @@ If no child window exists or the child window is not displayed by calling [showW
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the top window obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the top window obtained. |
 
 **Error codes:**
 
@@ -86,6 +86,47 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.loadContent('pages/Index', (err: BusinessError) => {
+      if (err.code) {
+        console.error(`Failed to load content for main window. Cause code: ${err.code}, message: ${err.message}`);
+      }
+      windowStage.createSubWindow('TestSubWindow').then((subWindow) => {
+        let storage: LocalStorage = new LocalStorage();
+        subWindow.loadContent('pages/Index', storage, (err: BusinessError) => {
+          if (err.code) {
+            console.error(`Failed to load content for sub window. Cause code: ${err.code}, message: ${err.message}`);
+          }
+          subWindow.showWindow().then(() => {
+            try {
+              window.getLastWindow(this.context).then((topWindow) => {
+                windowClass = topWindow;
+                console.info(`Succeeded in obtaining the top window. Window id: ${topWindow.getWindowProperties().id}`);
+              }).catch((err: BusinessError) => {
+                console.error(`Failed to obtain the top window. Cause code: ${err.code}, message: ${err.message}`);
+              });
+            } catch (exception) {
+              console.error(`Failed to obtain the top window. Cause code: ${exception.code}, message: ${exception.message}`);
+            }
+          });
+        });
+      });
+    });
+  }
+  //...
+}
+```
+
 
 ## getLastWindow
 
@@ -127,44 +168,5 @@ If no child window exists or the child window is not displayed by calling [showW
 
 **Examples**
 
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.loadContent('pages/Index', (err: BusinessError) => {
-      if (err.code) {
-        console.error(`Failed to load content for main window. Cause code: ${err.code}, message: ${err.message}`);
-      }
-      windowStage.createSubWindow('TestSubWindow').then((subWindow) => {
-        let storage: LocalStorage = new LocalStorage();
-        subWindow.loadContent('pages/Index', storage, (err: BusinessError) => {
-          if (err.code) {
-            console.error(`Failed to load content for sub window. Cause code: ${err.code}, message: ${err.message}`);
-          }
-          subWindow.showWindow().then(() => {
-            try {
-              window.getLastWindow(this.context).then((topWindow) => {
-                windowClass = topWindow;
-                console.info(`Succeeded in obtaining the top window. Window id: ${topWindow.getWindowProperties().id}`);
-              }).catch((err: BusinessError) => {
-                console.error(`Failed to obtain the top window. Cause code: ${err.code}, message: ${err.message}`);
-              });
-            } catch (exception) {
-              console.error(`Failed to obtain the top window. Cause code: ${exception.code}, message: ${exception.message}`);
-            }
-          });
-        });
-      });
-    });
-  }
-  //...
-}
-```
+See [getLastWindow](#getlastwindow)
 

@@ -1486,7 +1486,7 @@ clipShape(value: CircleShape | EllipseShape | PathShape | RectShape | undefined)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CircleShape](arkts-arkuishape-circleshape-c.md) \| [EllipseShape](arkts-arkuishape-ellipseshape-c.md) \| [PathShape](arkts-arkuishape-pathshape-c.md) \| [RectShape](arkts-arkuishape-rectshape-c.md) \| undefined | Yes |  |
+| value | [CircleShape](arkts-arkui-shape-circleshape-c.md) \| [EllipseShape](arkts-arkui-shape-ellipseshape-c.md) \| [PathShape](arkts-arkui-shape-pathshape-c.md) \| [RectShape](arkts-arkui-shape-rectshape-c.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -1714,6 +1714,28 @@ doubleSided(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
+## draggable
+
+```TypeScript
+draggable(value: boolean | undefined): this
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Sta since version -1.
+
+<!--Device-CommonMethod-draggable(value: boolean | undefined): this--><!--Device-CommonMethod-draggable(value: boolean | undefined): this-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean \| undefined | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
 ## dragPreview
 
 ```TypeScript
@@ -1755,28 +1777,6 @@ dragPreviewOptions(value: DragPreviewOptions | undefined, options?: DragInteract
 | --- | --- | --- | --- |
 | value | [DragPreviewOptions](arkts-common-dragpreviewoptions-i.md) \| undefined | Yes |  |
 | options | [DragInteractionOptions](arkts-common-draginteractionoptions-i.md) | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-## draggable
-
-```TypeScript
-draggable(value: boolean | undefined): this
-```
-
-**Since:** -1
-
-**ArkTS mode:** ArkTS-Sta since version -1.
-
-<!--Device-CommonMethod-draggable(value: boolean | undefined): this--><!--Device-CommonMethod-draggable(value: boolean | undefined): this-End-->
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | boolean \| undefined | Yes |  |
 
 **Return value:**
 
@@ -1981,6 +1981,28 @@ flexShrink(value: double | undefined): this
 
 | Type | Description |
 | --- | --- |
+## focusable
+
+```TypeScript
+focusable(value: boolean | undefined): this
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Sta since version -1.
+
+<!--Device-CommonMethod-focusable(value: boolean | undefined): this--><!--Device-CommonMethod-focusable(value: boolean | undefined): this-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean \| undefined | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
 ## focusBox
 
 ```TypeScript
@@ -2067,28 +2089,6 @@ focusScopePriority(scopeId: string | undefined, priority?: FocusPriority): this
 | --- | --- | --- | --- |
 | scopeId | string \| undefined | Yes |  |
 | priority | [FocusPriority](../../apis-arkui/arkts-apis/arkts-arkui-focuspriority-e.md) | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-## focusable
-
-```TypeScript
-focusable(value: boolean | undefined): this
-```
-
-**Since:** -1
-
-**ArkTS mode:** ArkTS-Sta since version -1.
-
-<!--Device-CommonMethod-focusable(value: boolean | undefined): this--><!--Device-CommonMethod-focusable(value: boolean | undefined): this-End-->
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | boolean \| undefined | Yes |  |
 
 **Return value:**
 
@@ -2734,7 +2734,7 @@ maskShape(value: CircleShape | EllipseShape | PathShape | RectShape | undefined)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CircleShape](arkts-arkuishape-circleshape-c.md) \| [EllipseShape](arkts-arkuishape-ellipseshape-c.md) \| [PathShape](arkts-arkuishape-pathshape-c.md) \| [RectShape](arkts-arkuishape-rectshape-c.md) \| undefined | Yes |  |
+| value | [CircleShape](arkts-arkui-shape-circleshape-c.md) \| [EllipseShape](arkts-arkui-shape-ellipseshape-c.md) \| [PathShape](arkts-arkui-shape-pathshape-c.md) \| [RectShape](arkts-arkui-shape-rectshape-c.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -4063,7 +4063,7 @@ overlay(value: string | CustomBuilder | ComponentContent<Object> | undefined, op
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| [CustomBuilder](arkts-custombuilder-t.md) \| [ComponentContent](../../apis-arkui/arkts-apis/arkts-arkui-componentcontent-c.md)&lt;Object&gt; \| undefined | Yes |  |
+| value | string \| [CustomBuilder](arkts-custombuilder-t.md) \| [ComponentContent](arkts-componentcontent-c.md)&lt;Object&gt; \| undefined | Yes |  |
 | options | [OverlayOptions](arkts-common-overlayoptions-i.md) | No |  |
 
 **Return value:**

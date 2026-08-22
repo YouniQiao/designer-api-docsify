@@ -86,24 +86,6 @@ static readonly EVENT_OTHER: 2
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
-## INVALID_LABEL_ID
-
-```TypeScript
-static readonly INVALID_LABEL_ID: -1
-```
-
-无效事件类型，默认值为-1。
-
-**类型：** -1
-
-**起始版本：** 7
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Event-static readonly INVALID_LABEL_ID: -1--><!--Device-Event-static readonly INVALID_LABEL_ID: -1-End-->
-
-**系统能力：** SystemCapability.Applications.ContactsData
-
 ## eventDate
 
 ```TypeScript
@@ -119,6 +101,24 @@ eventDate: string
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Event-eventDate: string--><!--Device-Event-eventDate: string-End-->
+
+**系统能力：** SystemCapability.Applications.ContactsData
+
+## INVALID_LABEL_ID
+
+```TypeScript
+static readonly INVALID_LABEL_ID: -1
+```
+
+无效事件类型，默认值为-1。
+
+**类型：** -1
+
+**起始版本：** 7
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Event-static readonly INVALID_LABEL_ID: -1--><!--Device-Event-static readonly INVALID_LABEL_ID: -1-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -157,4 +157,21 @@ labelName?: string
 <!--Device-Event-labelName?: string--><!--Device-Event-labelName?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
+
+**示例**
+
+使用JSON格式创建数据。
+
+```TypeScript
+let event: contact.Event = {
+    eventDate: '2000-01-01'
+};
+```
+
+或使用new一个Event对象的方式创建数据。
+
+```TypeScript
+let event = new contact.Event();
+event.eventDate = '2000-01-01';
+```
 

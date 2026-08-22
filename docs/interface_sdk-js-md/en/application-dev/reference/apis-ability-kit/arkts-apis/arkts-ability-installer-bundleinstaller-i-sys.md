@@ -224,6 +224,39 @@ try {
 }
 ```
 
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'com.ohos.camera';
+let index = 1;
+let userId = 100;
+let key = 'ohos.bms.param.verifyUninstallRule';
+let value = 'false';
+let item: installer.Parameters = {key, value};
+let destroyAppCloneOpt: installer.DestroyAppCloneParam = {
+    userId: userId,
+    parameters: [item]
+};
+
+
+try {
+    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
+        data.destroyAppClone(bundleName, index, destroyAppCloneOpt)
+            .then(() => {
+                console.info('destroyAppClone successfully.');
+        }).catch((error: BusinessError) => {
+            console.error('destroyAppClone failed:' + error.message);
+        });
+    }).catch((error: BusinessError) => {
+        console.error('getBundleInstaller failed. Cause: ' + error.message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed. Cause: ' + message);
+}
+```
+
 ## destroyAppClone
 
 ```TypeScript
@@ -270,38 +303,7 @@ Destroys an application clone. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.ohos.camera';
-let index = 1;
-let userId = 100;
-let key = 'ohos.bms.param.verifyUninstallRule';
-let value = 'false';
-let item: installer.Parameters = {key, value};
-let destroyAppCloneOpt: installer.DestroyAppCloneParam = {
-    userId: userId,
-    parameters: [item]
-};
-
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.destroyAppClone(bundleName, index, destroyAppCloneOpt)
-            .then(() => {
-                console.info('destroyAppClone successfully.');
-        }).catch((error: BusinessError) => {
-            console.error('destroyAppClone failed:' + error.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
+See [destroyAppClone](#destroyappclone)
 
 ## destroyAppClone
 
@@ -346,6 +348,10 @@ Destroy clone instance for an application.
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
 | [17700062](../errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked. |
 
+**Examples**
+
+See [destroyAppClone](#destroyappclone)
+
 ## install
 
 ```TypeScript
@@ -380,7 +386,7 @@ Installs an application. This API uses an asynchronous callback to return the re
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
 | installParam | InstallParam | Yes | Parameters required for the installation. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -446,6 +452,58 @@ try {
 }
 ```
 
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
+
+try {
+    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
+        data.install(hapFilePaths, (err: BusinessError) => {
+            if (err) {
+                console.error('install failed:' + err.message);
+            } else {
+                console.info('install successfully.');
+            }
+        });
+    }).catch((error: BusinessError) => {
+        console.error('getBundleInstaller failed. Cause: ' + error.message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed. Cause: ' + message);
+}
+```
+
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
+let installParam: installer.InstallParam = {
+    userId: 100,
+    isKeepData: false,
+    installFlag: 1,
+};
+
+try {
+    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
+        data.install(hapFilePaths, installParam)
+            .then((data: void) => {
+                console.info('install successfully: ' + JSON.stringify(data));
+        }).catch((error: BusinessError) => {
+            console.error('install failed:' + error.message);
+        });
+    }).catch((error: BusinessError) => {
+        console.error('getBundleInstaller failed. Cause: ' + error.message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed. Cause: ' + message);
+}
+```
+
 ## install
 
 ```TypeScript
@@ -479,7 +537,7 @@ Installs an application. This API uses an asynchronous callback to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -515,29 +573,7 @@ Installs an application. This API uses an asynchronous callback to return the re
 
 **Examples**
 
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.install(hapFilePaths, (err: BusinessError) => {
-            if (err) {
-                console.error('install failed:' + err.message);
-            } else {
-                console.info('install successfully.');
-            }
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
+See [install](#install)
 
 ## install
 
@@ -615,33 +651,7 @@ Installs an application. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.install(hapFilePaths, installParam)
-            .then((data: void) => {
-                console.info('install successfully: ' + JSON.stringify(data));
-        }).catch((error: BusinessError) => {
-            console.error('install failed:' + error.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
+See [install](#install)
 
 ## installPlugin
 
@@ -826,7 +836,7 @@ Rolls back an application to the initial installation state. This API uses an as
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
 | installParam | InstallParam | Yes | Parameters required for the installation. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -871,44 +881,6 @@ try {
 }
 ```
 
-## recover
-
-```TypeScript
-recover(bundleName: string, callback: AsyncCallback<void>): void
-```
-
-Rolls back an application to the initial installation state. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.RECOVER_BUNDLE
-
-<!--Device-BundleInstaller-recover(bundleName: string, callback: AsyncCallback<void>): void--><!--Device-BundleInstaller-recover(bundleName: string, callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bundleName | string | Yes | Name of the target bundle. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.RECOVER_BUNDLE'. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same <br>bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
-| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited <br>from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
-
-**Examples**
-
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -932,6 +904,74 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'com.ohos.demo';
+let installParam: installer.InstallParam = {
+    userId: 100,
+    isKeepData: false,
+    installFlag: 1,
+};
+
+try {
+    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
+        data.recover(bundleName, installParam)
+            .then((data: void) => {
+                console.info('recover successfully: ' + JSON.stringify(data));
+        }).catch((error: BusinessError) => {
+            console.error('recover failed:' + error.message);
+        });
+    }).catch((error: BusinessError) => {
+        console.error('getBundleInstaller failed. Cause: ' + error.message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed. Cause: ' + message);
+}
+```
+
+## recover
+
+```TypeScript
+recover(bundleName: string, callback: AsyncCallback<void>): void
+```
+
+Rolls back an application to the initial installation state. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.RECOVER_BUNDLE
+
+<!--Device-BundleInstaller-recover(bundleName: string, callback: AsyncCallback<void>): void--><!--Device-BundleInstaller-recover(bundleName: string, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Name of the target bundle. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.RECOVER_BUNDLE'. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same <br>bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
+| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited <br>from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
+
+**Examples**
+
+See [recover](#recover)
 
 ## recover
 
@@ -978,33 +1018,7 @@ Rolls back an application to the initial installation state. This API uses a pro
 
 **Examples**
 
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.ohos.demo';
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.recover(bundleName, installParam)
-            .then((data: void) => {
-                console.info('recover successfully: ' + JSON.stringify(data));
-        }).catch((error: BusinessError) => {
-            console.error('recover failed:' + error.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
+See [recover](#recover)
 
 ## removeExtResource
 
@@ -1096,7 +1110,7 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
 | installParam | InstallParam | Yes | Parameters required for the installation. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1145,47 +1159,6 @@ try {
 }
 ```
 
-## uninstall
-
-```TypeScript
-uninstall(bundleName: string, callback: AsyncCallback<void>): void
-```
-
-Uninstalls an application. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
-
-<!--Device-BundleInstaller-uninstall(bundleName: string, callback: AsyncCallback<void>): void--><!--Device-BundleInstaller-uninstall(bundleName: string, callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bundleName | string | Yes | Name of the target bundle. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
-| [17700020](../errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
-| [17700040](../errorcode-bundle.md#17700040-failure-in-uninstalling-an-inter-application-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
-| [17700045](../errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
-| [17700067](../errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 12 and later |
-| [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
-
-**Examples**
-
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1209,6 +1182,129 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'com.ohos.demo';
+let installParam: installer.InstallParam = {
+    userId: 100,
+    isKeepData: false,
+    installFlag: 1,
+};
+
+try {
+    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
+        data.uninstall(bundleName, installParam)
+            .then((data: void) => {
+                console.info('uninstall successfully: ' + JSON.stringify(data));
+        }).catch((error: BusinessError) => {
+            console.error('uninstall failed:' + error.message);
+        });
+    }).catch((error: BusinessError) => {
+        console.error('getBundleInstaller failed. Cause: ' + error.message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed. Cause: ' + message);
+}
+```
+
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uninstallParam: installer.UninstallParam = {
+    bundleName: "com.ohos.demo",
+};
+
+try {
+    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
+        data.uninstall(uninstallParam, (err: BusinessError) => {
+            if (err) {
+                console.error('uninstall failed:' + err.message);
+            } else {
+                console.info('uninstall successfully.');
+            }
+        });
+    }).catch((error: BusinessError) => {
+        console.error('getBundleInstaller failed. Cause: ' + error.message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed. Cause: ' + message);
+}
+```
+
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uninstallParam: installer.UninstallParam = {
+    bundleName: "com.ohos.demo",
+};
+
+try {
+    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
+        data.uninstall(uninstallParam, (err: BusinessError) => {
+            if (err) {
+                console.error('uninstall failed:' + err.message);
+            } else {
+                console.info('uninstall successfully.');
+            }
+        });
+    }).catch((error: BusinessError) => {
+        console.error('getBundleInstaller failed. Cause: ' + error.message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed. Cause: ' + message);
+}
+```
+
+## uninstall
+
+```TypeScript
+uninstall(bundleName: string, callback: AsyncCallback<void>): void
+```
+
+Uninstalls an application. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
+
+<!--Device-BundleInstaller-uninstall(bundleName: string, callback: AsyncCallback<void>): void--><!--Device-BundleInstaller-uninstall(bundleName: string, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Name of the target bundle. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [17700020](../errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
+| [17700040](../errorcode-bundle.md#17700040-failure-in-uninstalling-an-inter-application-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
+| [17700045](../errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
+| [17700067](../errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 12 and later |
+| [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
+
+**Examples**
+
+See [uninstall](#uninstall)
 
 ## uninstall
 
@@ -1259,33 +1355,7 @@ Uninstalls an application. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.ohos.demo';
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.uninstall(bundleName, installParam)
-            .then((data: void) => {
-                console.info('uninstall successfully: ' + JSON.stringify(data));
-        }).catch((error: BusinessError) => {
-            console.error('uninstall failed:' + error.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
+See [uninstall](#uninstall)
 
 ## uninstall
 
@@ -1310,7 +1380,7 @@ Uninstalls a shared package. This API uses an asynchronous callback to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uninstallParam | [UninstallParam](arkts-ability-installer-uninstallparam-i-sys.md) | Yes | Parameters required for the uninstall. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1325,31 +1395,7 @@ Uninstalls a shared package. This API uses an asynchronous callback to return th
 
 **Examples**
 
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uninstallParam: installer.UninstallParam = {
-    bundleName: "com.ohos.demo",
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.uninstall(uninstallParam, (err: BusinessError) => {
-            if (err) {
-                console.error('uninstall failed:' + err.message);
-            } else {
-                console.info('uninstall successfully.');
-            }
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
+See [uninstall](#uninstall)
 
 ## uninstall
 
@@ -1394,31 +1440,7 @@ Uninstalls a shared package. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uninstallParam: installer.UninstallParam = {
-    bundleName: "com.ohos.demo",
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.uninstall(uninstallParam, (err: BusinessError) => {
-            if (err) {
-                console.error('uninstall failed:' + err.message);
-            } else {
-                console.info('uninstall successfully.');
-            }
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
+See [uninstall](#uninstall)
 
 ## uninstallNewPreinstalledApps
 
@@ -1628,7 +1650,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
 | installParam | InstallParam | Yes | Parameters required for the installation. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1687,6 +1709,58 @@ try {
 }
 ```
 
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
+
+try {
+    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
+        data.updateBundleForSelf(hapFilePaths, (err: BusinessError) => {
+            if (err) {
+                console.error('updateBundleForSelf failed:' + err.message);
+            } else {
+                console.info('updateBundleForSelf successfully.');
+            }
+        });
+    }).catch((error: BusinessError) => {
+        console.error('getBundleInstaller failed. Cause: ' + error.message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed. Cause: ' + message);
+}
+```
+
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
+let installParam: installer.InstallParam = {
+    userId: 100,
+    isKeepData: false,
+    installFlag: 1,
+};
+
+try {
+    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
+        data.updateBundleForSelf(hapFilePaths, installParam)
+            .then((data: void) => {
+                console.info('updateBundleForSelf successfully: ' + JSON.stringify(data));
+        }).catch((error: BusinessError) => {
+            console.error('updateBundleForSelf failed:' + error.message);
+        });
+    }).catch((error: BusinessError) => {
+        console.error('getBundleInstaller failed. Cause: ' + error.message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed. Cause: ' + message);
+}
+```
+
 ## updateBundleForSelf
 
 ```TypeScript
@@ -1710,7 +1784,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1739,29 +1813,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 
 **Examples**
 
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.updateBundleForSelf(hapFilePaths, (err: BusinessError) => {
-            if (err) {
-                console.error('updateBundleForSelf failed:' + err.message);
-            } else {
-                console.info('updateBundleForSelf successfully.');
-            }
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
+See [updateBundleForSelf](#updatebundleforself)
 
 ## updateBundleForSelf
 
@@ -1822,31 +1874,5 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 
 **Examples**
 
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.updateBundleForSelf(hapFilePaths, installParam)
-            .then((data: void) => {
-                console.info('updateBundleForSelf successfully: ' + JSON.stringify(data));
-        }).catch((error: BusinessError) => {
-            console.error('updateBundleForSelf failed:' + error.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
+See [updateBundleForSelf](#updatebundleforself)
 

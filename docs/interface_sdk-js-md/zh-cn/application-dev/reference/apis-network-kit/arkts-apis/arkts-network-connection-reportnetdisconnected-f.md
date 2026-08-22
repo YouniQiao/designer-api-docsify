@@ -60,6 +60,16 @@ connection.getDefaultNet((error: BusinessError, netHandle: connection.NetHandle)
 });
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  connection.reportNetDisconnected(netHandle).then( () => {
+    console.info(`Succeeded to report`);
+  });
+});
+```
+
 
 ## reportNetDisconnected
 
@@ -101,13 +111,5 @@ function reportNetDisconnected(netHandle: NetHandle): Promise<void>
 
 **示例**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  connection.reportNetDisconnected(netHandle).then( () => {
-    console.info(`Succeeded to report`);
-  });
-});
-```
+参见 [reportNetDisconnected](#reportnetdisconnected)
 

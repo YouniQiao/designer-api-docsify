@@ -28,7 +28,7 @@ Obtains the domain account policy. This API is applicable to enterprise manageme
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | domainAccountInfo | osAccount.DomainAccountInfo | Yes | Domain account information. <br>If all the internal attributes of **domainAccountInfo** are empty, the global domain account policy is queried. <br>If the internal attribute of **domainAccountInfo** is not empty, the specified domain account policy is queried. <br>**Note:** To query a specified domain account policy, the **serverConfigId** parameter in **DomainAccountInfo** is mandatory. |
 
 **Return value:**

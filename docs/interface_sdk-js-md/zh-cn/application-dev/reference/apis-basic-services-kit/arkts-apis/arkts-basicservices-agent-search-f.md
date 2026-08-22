@@ -50,6 +50,40 @@ request.agent.search((err: BusinessError<void> | null, data: Array<string> | und
 });
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filter: request.agent.Filter = {
+  action: request.agent.Action.UPLOAD,
+  mode: request.agent.Mode.BACKGROUND
+}
+request.agent.search(filter, (err: BusinessError<void> | null, data: Array<string> | undefined) => {
+  if (err) {
+    console.error(`Failed to search a upload task, Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in searching a upload task. `);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filter: request.agent.Filter = {
+  action: request.agent.Action.UPLOAD,
+  mode: request.agent.Mode.BACKGROUND
+}
+request.agent.search(filter).then((data: Array<string>) => {
+  console.info(`Succeeded in searching a upload task. `);
+}).catch((err: Error) => {
+  console.error(`Failed to search a upload task, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## search
 
@@ -81,23 +115,7 @@ function search(filter: Filter, callback: AsyncCallback<Array<string>>): void
 
 **示例**
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filter: request.agent.Filter = {
-  action: request.agent.Action.UPLOAD,
-  mode: request.agent.Mode.BACKGROUND
-}
-request.agent.search(filter, (err: BusinessError<void> | null, data: Array<string> | undefined) => {
-  if (err) {
-    console.error(`Failed to search a upload task, Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in searching a upload task. `);
-});
-```
+参见 [search](#search)
 
 
 ## search
@@ -135,19 +153,5 @@ function search(filter?: Filter): Promise<Array<string>>
 
 **示例**
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filter: request.agent.Filter = {
-  action: request.agent.Action.UPLOAD,
-  mode: request.agent.Mode.BACKGROUND
-}
-request.agent.search(filter).then((data: Array<string>) => {
-  console.info(`Succeeded in searching a upload task. `);
-}).catch((err: Error) => {
-  console.error(`Failed to search a upload task, Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [search](#search)
 

@@ -49,3 +49,24 @@ Obtains the onscreen content when a window is displayed on the screen.
 | [34000004](../errorcode-onScreen.md#34000004-page-not-ready) | The page is not ready. |
 | [34000006](../errorcode-onScreen.md#34000006-request-timeout) | The request timed out. |
 
+**Examples**
+
+```TypeScript
+import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: onScreen.ContentOptions = {
+   contentUnderstand: true,
+   pageLink: true
+};
+try {
+   onScreen.getPageContent(options).then((pageContent: onScreen.PageContent) => {
+      console.info("get page content succeed, bundleName = " + pageContent.bundleName);
+   }).catch((err: BusinessError) => {
+      console.error("get page content failed, errCode = " + err.code);
+   });
+} catch (err) {
+   console.error('get page content failed, errCode = ' + err.code);
+}
+```
+

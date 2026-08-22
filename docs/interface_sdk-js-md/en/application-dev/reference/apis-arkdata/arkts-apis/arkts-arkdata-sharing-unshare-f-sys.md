@@ -32,7 +32,7 @@ Unshares data based on the specified shared resource ID and participants. This A
 | --- | --- | --- | --- |
 | sharingResource | string | Yes | Shared resource ID. |
 | participants | Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt; | Yes | Participants of the share. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Result&lt;Array&lt;Result&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;Array&lt;Result&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -43,6 +43,30 @@ Unshares data based on the specified shared resource ID and participants. This A
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let participants = new Array<cloudData.sharing.Participant>();
+participants.push({
+  identity: '000000000',
+  role: cloudData.sharing.Role.ROLE_INVITER,
+  state: cloudData.sharing.State.STATE_UNKNOWN,
+  privilege: {
+    writable: true,
+    readable: true,
+    creatable: false,
+    deletable: false,
+    shareable: false
+  },
+  attachInfo: ''
+})
+cloudData.sharing.unshare('sharing_resource_test', participants).then((result) => {
+  console.info(`unshare succeeded, result: ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`unshare failed, code is ${err.code},message is ${err.message}`);
+})
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -113,27 +137,5 @@ Unshares data based on the specified shared resource ID and participants. This A
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let participants = new Array<cloudData.sharing.Participant>();
-participants.push({
-  identity: '000000000',
-  role: cloudData.sharing.Role.ROLE_INVITER,
-  state: cloudData.sharing.State.STATE_UNKNOWN,
-  privilege: {
-    writable: true,
-    readable: true,
-    creatable: false,
-    deletable: false,
-    shareable: false
-  },
-  attachInfo: ''
-})
-cloudData.sharing.unshare('sharing_resource_test', participants).then((result) => {
-  console.info(`unshare succeeded, result: ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`unshare failed, code is ${err.code},message is ${err.message}`);
-})
-```
+See [unshare](#unshare)
 

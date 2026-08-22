@@ -42,6 +42,14 @@ Creates an ImageReceiver instance by specifying the image width, height, format,
 **Examples**
 
 ```TypeScript
+let size: image.Size = {
+  height: 8192,
+  width: 8192
+}
+let receiver: image.ImageReceiver = image.createImageReceiver(size, image.ImageFormat.JPEG, 8);
+```
+
+```TypeScript
 let receiver: image.ImageReceiver = image.createImageReceiver(8192, 8192, image.ImageFormat.JPEG, 8);
 ```
 
@@ -82,13 +90,7 @@ Creates an ImageReceiver instance by specifying the image size, format, and capa
 
 **Examples**
 
-```TypeScript
-let size: image.Size = {
-  height: 8192,
-  width: 8192
-}
-let receiver: image.ImageReceiver = image.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-```
+See [createImageReceiver](#createimagereceiver)
 
 
 ## createImageReceiver
@@ -118,6 +120,10 @@ Creates an ImageReceiver instance.
 | Type | Description |
 | --- | --- |
 | ImageReceiver \| undefined | Returns the ImageReceiver instance if the operation is successful; returns undefined otherwise. |
+
+**Examples**
+
+See [createImageReceiver](#createimagereceiver)
 
 
 ## createImageReceiver
@@ -153,4 +159,8 @@ Creates an ImageReceiver instance.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7900201](../errorcode-image.md#7900201-invalid-parameter) | Invalid parameter. |
+
+**Examples**
+
+See [createImageReceiver](#createimagereceiver)
 

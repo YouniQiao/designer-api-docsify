@@ -45,7 +45,7 @@ In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | firewallRule | [FirewallRule](arkts-mdm-networkmanager-firewallrule-i.md) | Yes | Firewall rule to add. |
 
 **Error codes:**

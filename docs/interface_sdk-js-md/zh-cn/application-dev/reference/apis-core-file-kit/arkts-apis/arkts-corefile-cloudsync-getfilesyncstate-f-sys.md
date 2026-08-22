@@ -80,6 +80,75 @@ cloudSync.getFileSyncState(uris).then((syncStates: Array<cloudSync.FileSyncState
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uris: Array<string> = ["file://uri"];
+cloudSync.getFileSyncState(uris, (err: BusinessError, syncStates: Array<cloudSync.FileSyncState>) => {
+  if (err) {
+    console.error(`get file sync state with error message: ${err.message}, error code: ${err.code}`);
+  } else {
+    for(let i = 0, len = syncStates.length; i < len; i++){
+      console.info("get file sync state successfully" + syncStates[i]);
+  }
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uris: Array<string> = ["file://uri"];
+cloudSync.getFileSyncState(uris, (err: BusinessError<void> | null, syncStates: Array<cloudSync.FileSyncState> | undefined): void => {
+  if (err && err.code) {
+    console.error("get file sync state with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    if (syncStates == undefined) {
+      console.error("get file sync state successfully, but syncStates is undefined.");
+      return;
+    }
+    for(let i = 0, len = syncStates.length; i < len; i++){
+      console.info("get file sync state successfully" + syncStates[i]);
+    }
+  }
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let path = "/data/storage/el2/cloud/1.txt";
+let uri = fileUri.getUriFromPath(path);
+try {
+  let state = cloudSync.getFileSyncState(uri);
+} catch (err) {
+  let error:BusinessError = err as BusinessError;
+  console.error("getFileSyncStatefailed with error: " + JSON.stringify(error));
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let path: string = "/data/storage/el2/cloud/1.txt";
+let uri: string = fileUri.getUriFromPath(path);
+try {
+  let state = cloudSync.getFileSyncState(uri);
+} catch (err) {
+  console.error("getFileSyncStatefailed with error: " + JSON.stringify(err));
+}
+```
+
 
 ## getFileSyncState
 
@@ -119,43 +188,7 @@ function getFileSyncState(uri: Array<string>, callback: AsyncCallback<Array<File
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uris: Array<string> = ["file://uri"];
-cloudSync.getFileSyncState(uris, (err: BusinessError, syncStates: Array<cloudSync.FileSyncState>) => {
-  if (err) {
-    console.error(`get file sync state with error message: ${err.message}, error code: ${err.code}`);
-  } else {
-    for(let i = 0, len = syncStates.length; i < len; i++){
-      console.info("get file sync state successfully" + syncStates[i]);
-  }
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uris: Array<string> = ["file://uri"];
-cloudSync.getFileSyncState(uris, (err: BusinessError<void> | null, syncStates: Array<cloudSync.FileSyncState> | undefined): void => {
-  if (err && err.code) {
-    console.error("get file sync state with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    if (syncStates == undefined) {
-      console.error("get file sync state successfully, but syncStates is undefined.");
-      return;
-    }
-    for(let i = 0, len = syncStates.length; i < len; i++){
-      console.info("get file sync state successfully" + syncStates[i]);
-    }
-  }
-});
-```
+参见 [getFileSyncState](#getfilesyncstate)
 
 
 ## getFileSyncState
@@ -202,34 +235,5 @@ function getFileSyncState(uri: string): FileSyncState
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let path = "/data/storage/el2/cloud/1.txt";
-let uri = fileUri.getUriFromPath(path);
-try {
-  let state = cloudSync.getFileSyncState(uri);
-} catch (err) {
-  let error:BusinessError = err as BusinessError;
-  console.error("getFileSyncStatefailed with error: " + JSON.stringify(error));
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let path: string = "/data/storage/el2/cloud/1.txt";
-let uri: string = fileUri.getUriFromPath(path);
-try {
-  let state = cloudSync.getFileSyncState(uri);
-} catch (err) {
-  console.error("getFileSyncStatefailed with error: " + JSON.stringify(err));
-}
-```
+参见 [getFileSyncState](#getfilesyncstate)
 

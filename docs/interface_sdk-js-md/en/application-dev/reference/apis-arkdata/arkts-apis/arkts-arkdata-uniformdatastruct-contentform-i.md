@@ -140,3 +140,22 @@ Uniform data type, which has a fixed value of **general.content-form**.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+**Examples**
+
+```TypeScript
+import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
+let thumbDataU8Array = new Uint8Array([1, 2, 3, 4, 5]);
+let appIconU8Array = new Uint8Array([6, 7, 8, 9, 10]);
+let contentForm : uniformDataStruct.ContentForm = {
+  uniformDataType : 'general.content-form',
+  title : 'MyTitle',
+  thumbData : thumbDataU8Array,
+  description : 'MyDescription',
+  appName : 'MyAppName',
+  linkUri : 'MyLinkUri',
+  appIcon : appIconU8Array
+}
+console.info('contentForm.uniformDataType: ' + contentForm.uniformDataType);
+let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.CONTENT_FORM, contentForm);
+```
+

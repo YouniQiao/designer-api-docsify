@@ -52,3 +52,29 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 emitter.onceGenericEventData("eventId", callback);
 ```
 
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  if (eventData?.data instanceof Sample) {
+    const sampleData = eventData.data as Sample;
+    sampleData.printCount();
+  }
+}
+
+emitter1.onceGenericEventData("eventId", callback);
+```
+

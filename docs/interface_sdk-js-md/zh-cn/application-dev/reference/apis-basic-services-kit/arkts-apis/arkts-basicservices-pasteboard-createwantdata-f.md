@@ -28,7 +28,7 @@ function createWantData(want: Want): PasteData
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | Want内容。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Want内容。 |
 
 **返回值：**
 

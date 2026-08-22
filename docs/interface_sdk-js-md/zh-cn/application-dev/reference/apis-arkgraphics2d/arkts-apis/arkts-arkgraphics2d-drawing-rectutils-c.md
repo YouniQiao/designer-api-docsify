@@ -52,6 +52,27 @@ static centerX(rect: common2D.Rect): double
 | --- | --- |
 | double | 返回矩形中心的x轴坐标。单位为物理像素px。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(20, 30, 30, 40);
+let x = drawing.RectUtils.centerX(rect);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(20.0, 30.0, 30.0, 40.0);
+if (rect == undefined) {
+    return;
+}
+let x = drawing.RectUtils.centerX(rect);
+```
+
 ## centerY
 
 ```TypeScript
@@ -77,6 +98,27 @@ static centerY(rect: common2D.Rect): double
 | 类型 | 说明 |
 | --- | --- |
 | double | 返回矩形中心的y轴坐标。单位为物理像素px。 |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(20, 30, 30, 40);
+let y = drawing.RectUtils.centerY(rect);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(20.0, 30.0, 30.0, 40.0);
+if (rect == undefined) {
+    return;
+}
+let x = drawing.RectUtils.centerY(rect);
+```
 
 ## contains
 
@@ -104,6 +146,83 @@ static contains(rect: common2D.Rect, other: common2D.Rect): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 返回矩形是否完全包含另一个矩形的结果。true表示other在rect内部或者两者相等；false表示other矩形不完全在rect内部（即存在部分区域在rect外部），或者rect、 other任一为空矩形。左边界和上边界属于矩形内部，右边界和下边界不属于矩形内部。 |
+
+**示例**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+const path = new drawing.Path();
+let rect : common2D.Rect = {left: 50, top: 50, right: 250, bottom: 250};
+path.addRect(rect, drawing.PathDirection.CLOCKWISE);
+console.info("test contains: " + path.contains(0.0, 0.0));
+console.info("test contains: " + path.contains(60.0, 60.0));
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(10, 10, 20, 20);
+let rect2 = drawing.RectUtils.makeLtrb(0, 0, 40, 40);
+let isContains = drawing.RectUtils.contains(rect2, rect);
+console.info('isContains: ', isContains);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(10.0, 10.0, 20.0, 20.0);
+let rect2 = drawing.RectUtils.makeLtrb(0.0, 0.0, 40.0, 40.0);
+if (rect == undefined || rect2 == undefined) {
+    return;
+}
+let isContains = drawing.RectUtils.contains(rect2, rect);
+console.info('isContains: ', isContains);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(0, 0, 100, 100);
+let isContains = drawing.RectUtils.contains(rect, 10, 20, 30, 40);
+console.info('isContains: ', isContains);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(0.0, 0.0, 100.0, 100.0);
+if (rect == undefined) {
+    return;
+}
+let isContains = drawing.RectUtils.contains(rect, 10.0, 20.0, 30.0, 40.0);
+console.info('isContains :', isContains);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(0, 0, 100, 100);
+let isContains = drawing.RectUtils.contains(rect, 10, 20);
+console.info('isContains: ', isContains);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(0.0, 0.0, 100.0, 100.0);
+if (rect == undefined) {
+    return;
+}
+let isContains = drawing.RectUtils.contains(rect, 10.0, 20.0);
+console.info('isContains: ', isContains);
+```
 
 ## contains
 
@@ -135,6 +254,10 @@ static contains(rect: common2D.Rect, left: double, top: double, right: double, b
 | --- | --- |
 | boolean | 返回矩形是否完全包含由左上右下坐标组成的矩形的结果。true表示由left、top、right、bottom组成的矩形完全在rect矩形内部，或两个矩形完全相等。false表示该矩形不 完全在rect内部（即存在部分区域在rect外部），或者rect、该矩形任一为空矩形。 |
 
+**示例**
+
+参见 [contains](#contains)
+
 ## contains
 
 ```TypeScript
@@ -163,6 +286,10 @@ static contains(rect: common2D.Rect, x: double, y: double): boolean
 | --- | --- |
 | boolean | 返回矩形是否完全包含x、y组成的点的结果。true表示矩形完全包含x、y组成的点，false表示矩形不完全包含x、y组成的点。左边界和上边界属于矩形内部，右边界和下边界不属于矩形内部。 空的矩形不包含任何点。 |
 
+**示例**
+
+参见 [contains](#contains)
+
 ## getHeight
 
 ```TypeScript
@@ -188,6 +315,57 @@ static getHeight(rect: common2D.Rect): double
 | 类型 | 说明 |
 | --- | --- |
 | double | 返回矩形的高。如果矩形的上边界大于下边界，获取的高度为负值，上边界小于下边界则为正值。单位为物理像素px。 |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let height = canvas.getHeight();
+    console.info('get canvas height:' + height);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let height = canvas.getHeight();
+    console.info('get canvas height:' + height);
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(10, 10, 20, 20);
+let height = drawing.RectUtils.getHeight(rect);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(10.0, 10.0, 20.0, 20.0);
+if (rect == undefined) {
+    return;
+}
+let height = drawing.RectUtils.getHeight(rect);
+```
 
 ## getWidth
 
@@ -215,6 +393,66 @@ static getWidth(rect: common2D.Rect): double
 | --- | --- |
 | double | 返回矩形的宽。如果矩形的左边界大于右边界，获取的宽度为负值，左边界小于右边界则为正值。单位为物理像素px。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let width = canvas.getWidth();
+    console.info('get canvas width:' + width);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let width = canvas.getWidth();
+    console.info('get canvas width:' + width);
+  }
+}
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+let width = pen.getWidth();
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(10, 10, 20, 20);
+let width = drawing.RectUtils.getWidth(rect);
+console.info('width:', width);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(10.0, 10.0, 20.0, 20.0);
+if (rect == undefined) {
+    return;
+}
+let width = drawing.RectUtils.getWidth(rect);
+console.info('width:', width);
+```
+
 ## inset
 
 ```TypeScript
@@ -238,6 +476,35 @@ static inset(rect: common2D.Rect, left: double, top: double, right: double, bott
 | top | double | 是 | 添加到矩形上边界的值（矩形左上角y轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
 | right | double | 是 | 添加到矩形右边界的值（矩形右下角x轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
 | bottom | double | 是 | 添加到矩形下边界的值（矩形右下角y轴坐标），该参数为浮点数。0表示不进行任何运算，正数表示进行相加运算，负数表示相减运算。单位为物理像素px。 |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(10, 10, 20, 20);
+drawing.RectUtils.inset(rect, 10, -20, 30, 60);
+console.info('rect.left: ', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(10.0, 10.0, 20.0, 20.0);
+if (rect == undefined) {
+    return;
+}
+drawing.RectUtils.inset(rect, 10.0, -20.0, 30.0, 60.0);
+console.info('rect.left:', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
 
 ## intersect
 
@@ -266,6 +533,39 @@ static intersect(rect: common2D.Rect, other: common2D.Rect): boolean
 | --- | --- |
 | boolean | 返回两个矩形是否相交。true表示两矩形相交，false表示两矩形不相交，或仅边重叠、点相交。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(0, 0, 20, 20);
+let rect2 = drawing.RectUtils.makeLtrb(10, 10, 40, 40);
+let isIntersect = drawing.RectUtils.intersect(rect, rect2);
+console.info('isIntersect: ', isIntersect);
+console.info('rect.left: ', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(0.0, 0.0, 20.0, 20.0);
+let rect2 = drawing.RectUtils.makeLtrb(10.0, 10.0, 40.0, 40.0);
+if (rect == undefined || rect2 == undefined) {
+    return;
+}
+let isIntersect = drawing.RectUtils.intersect(rect, rect2);
+console.info('isIntersect :', isIntersect);
+console.info('rect.left:', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
+
 ## isEmpty
 
 ```TypeScript
@@ -291,6 +591,70 @@ static isEmpty(rect: common2D.Rect): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 返回矩形是否为空的结果。true表示矩形为空，false表示矩形不为空。 |
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+let path = new drawing.Path();
+path.moveTo(10.0, 10.0);
+path.lineTo(20.0, 20.0);
+let isEmpty = path.isEmpty();
+console.info('isEmpty:', isEmpty);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeEmpty();
+let isEmpty = drawing.RectUtils.isEmpty(rect);
+console.info('isEmpty:', isEmpty);
+let rect2 = drawing.RectUtils.makeLtrb(0, 0, 20, 20);
+isEmpty = drawing.RectUtils.isEmpty(rect2);
+console.info('isEmpty:', isEmpty);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeEmpty();
+if (rect == undefined) {
+    return;
+}
+let isEmpty = drawing.RectUtils.isEmpty(rect);
+console.info('isEmpty :', isEmpty);
+let rect2 = drawing.RectUtils.makeLtrb(0.0, 0.0, 20.0, 20.0);
+if (rect2 == undefined) {
+    return;
+}
+isEmpty = drawing.RectUtils.isEmpty(rect2);
+console.info('isEmpty :', isEmpty);
+```
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
+    pen.setStrokeWidth(10);
+    canvas.attachPen(pen);
+    let region = new drawing.Region();
+    let flag: boolean = region.isEmpty();
+    console.info('flag: ', flag);
+    region.setRect(100, 100, 400, 400);
+    flag = region.isEmpty();
+    console.info('flag: ', flag);
+    canvas.drawRegion(region);
+    canvas.detachPen();
+  }
+}
+```
 
 ## isEqual
 
@@ -319,6 +683,115 @@ static isEqual(rect: common2D.Rect, other: common2D.Rect): boolean
 | --- | --- |
 | boolean | 返回两个矩形是否相等的结果。true表示两个矩形相等，false表示两个矩形不相等。 |
 
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let matrix1 = new drawing.Matrix();
+matrix1.setMatrix([2, 1, 3, 1, 2, 1, 3, 1, 2]);
+let matrix2 = new drawing.Matrix();
+matrix2.setMatrix([-2, 1, 3, 1, 0, -1, 3, -1, 2]);
+if (matrix1.isEqual(matrix2)) {
+  console.info("matrix1 and matrix2 are equal.");
+} else {
+  console.info("matrix1 and matrix2 are not equal.");
+}
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path: drawing.Path = new drawing.Path();
+path.moveTo(0, 0);
+path.lineTo(100, 100);
+let other: drawing.Path = new drawing.Path();
+other.moveTo(0, 0);
+other.lineTo(100, 100);
+if (path.isEqual(other)) {
+  console.info('isEqual return true');
+} else {
+  console.info('isEqual return false');
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(10, 20, 20, 30);
+let rect2 = drawing.RectUtils.makeEmpty();
+let isEqual = drawing.RectUtils.isEqual(rect, rect2);
+console.info('isEqual:', isEqual);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(10.0, 20.0, 20.0, 30.0);
+let rect2 = drawing.RectUtils.makeEmpty();
+if (rect == undefined || rect2 == undefined) {
+    return;
+}
+let isEqual = drawing.RectUtils.isEqual(rect, rect2);
+console.info('isEqual :', isEqual);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
+    pen.setStrokeWidth(10);
+    canvas.attachPen(pen);
+    let region = new drawing.Region();
+    let other = new drawing.Region();
+    region.setRect(100, 100, 400, 400);
+    other.setRect(150, 150, 250 ,250);
+    let flag: boolean = false;
+    flag = region.isEqual(other);
+    console.info('flag: ', flag);
+    canvas.drawRegion(region);
+    canvas.drawRegion(other);
+    canvas.detachPen();
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import drawing from "@ohos.graphics.drawing";
+import common2D from "@ohos.graphics.common2D";
+import { RenderNode, DrawContext } from '@ohos.arkui.node';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
+    pen.setStrokeWidth(10);
+    canvas.attachPen(pen);
+    let region = new drawing.Region();
+    let other = new drawing.Region();
+    region.setRect(100, 100, 400, 400);
+    other.setRect(150, 150, 250 ,250);
+    let flag: boolean = false;
+    flag = region.isEqual(other);
+    console.info('flag: ', flag);
+    canvas.drawRegion(region);
+    canvas.drawRegion(other);
+    canvas.detachPen();
+  }
+}
+```
+
 ## isIntersect
 
 ```TypeScript
@@ -346,6 +819,31 @@ static isIntersect(rect: common2D.Rect, other: common2D.Rect): boolean
 | --- | --- |
 | boolean | 返回两个矩形是否有交集的结果。true表示两个矩形有交集，false表示两个矩形没有交集。两矩形仅边重叠或点相交返回false。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(0, 0, 20, 20);
+let rect2 = drawing.RectUtils.makeLtrb(10, 10, 40, 40);
+let isIntersect = drawing.RectUtils.isIntersect(rect, rect2);
+console.info('isIntersect:', isIntersect);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(0.0, 0.0, 20.0, 20.0);
+let rect2 = drawing.RectUtils.makeLtrb(10.0, 10.0, 40.0, 40.0);
+if (rect == undefined || rect2 == undefined) {
+    return;
+}
+let isIntersect = drawing.RectUtils.isIntersect(rect, rect2);
+console.info('isIntersect :', isIntersect);
+```
+
 ## makeCopy
 
 ```TypeScript
@@ -371,6 +869,35 @@ static makeCopy(src: common2D.Rect): common2D.Rect
 | 类型 | 说明 |
 | --- | --- |
 | common2D.Rect | 创建的新矩形。 |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(10, 10, 20, 20);
+let rect2 = drawing.RectUtils.makeCopy(rect);
+console.info('rect2.left: ', rect2.left);
+console.info('rect2.top: ', rect2.top);
+console.info('rect2.right: ', rect2.right);
+console.info('rect2.bottom: ', rect2.bottom);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(10.0, 10.0, 20.0, 20.0);
+if (rect == undefined) {
+    return;
+}
+let rect2 = drawing.RectUtils.makeCopy(rect);
+console.info('rect2.left:', rect2?.left);
+console.info('rect2.top: ', rect2?.top);
+console.info('rect2.right: ', rect2?.right);
+console.info('rect2.bottom: ', rect2?.bottom);
+```
 
 ## makeCopy
 
@@ -398,6 +925,10 @@ static makeCopy(src: common2D.Rect): common2D.Rect | undefined
 | --- | --- |
 | common2D.Rect \| undefined | 创建的新矩形。 |
 
+**示例**
+
+参见 [makeCopy](#makecopy)
+
 ## makeEmpty
 
 ```TypeScript
@@ -418,6 +949,14 @@ static makeEmpty(): common2D.Rect
 | --- | --- |
 | common2D.Rect | 创建的矩形对象。 |
 
+**示例**
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeEmpty();
+```
+
 ## makeEmpty
 
 ```TypeScript
@@ -437,6 +976,10 @@ static makeEmpty(): common2D.Rect | undefined
 | 类型 | 说明 |
 | --- | --- |
 | common2D.Rect \| undefined | 创建的矩形对象。 |
+
+**示例**
+
+参见 [makeEmpty](#makeempty)
 
 ## makeLtrb
 
@@ -467,6 +1010,14 @@ static makeLtrb(left: number, top: number, right: number, bottom: number): commo
 | --- | --- |
 | common2D.Rect | 创建的矩形。 |
 
+**示例**
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeLtrb(10.0, 10.0, 20.0, 20.0);
+```
+
 ## makeLtrb
 
 ```TypeScript
@@ -496,6 +1047,10 @@ static makeLtrb(left: double, top: double, right: double, bottom: double): commo
 | --- | --- |
 | common2D.Rect \| undefined | 创建的矩形。 |
 
+**示例**
+
+参见 [makeLtrb](#makeltrb)
+
 ## offset
 
 ```TypeScript
@@ -517,6 +1072,71 @@ static offset(rect: common2D.Rect, dx: double, dy: double): void
 | rect | common2D.Rect | 是 | 发生平移的矩形区域。 |
 | dx | double | 是 | 水平方向平移的距离，该参数为浮点数。0表示不平移，负数表示向左平移，正数表示向右平移。单位为物理像素px。 |
 | dy | double | 是 | 竖直方向平移的距离，该参数为浮点数。0表示不平移，负数表示向上平移，正数表示向下平移。单位为物理像素px。 |
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const path = new drawing.Path();
+path.moveTo(200, 200);
+path.lineTo(300, 300);
+const dstPath = path.offset(200, 200);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(0, 0, 20, 20);
+drawing.RectUtils.offset(rect, 10, 20);
+console.info('rect.left: ', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(0.0, 0.0, 20.0, 20.0);
+if (rect == undefined) {
+    return;
+}
+drawing.RectUtils.offset(rect, 10, 20);
+console.info('rect.left:', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
+    pen.setStrokeWidth(10.0);
+    canvas.attachPen(pen);
+    let region = new drawing.Region();
+    region.setRect(100, 100, 400, 400);
+    region.offset(10, 20);
+    canvas.drawPoint(200.0, 200.0);
+    canvas.drawRegion(region);
+    canvas.detachPen();
+  }
+}
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let roundRect : drawing.RoundRect = new drawing.RoundRect({ left: 0, top: 0, right: 300, bottom: 300 }, 50, 50);
+roundRect.offset(100, 100);
+```
 
 ## offsetTo
 
@@ -540,6 +1160,35 @@ static offsetTo(rect: common2D.Rect, newLeft: double, newTop: double): void
 | newLeft | double | 是 | 要平移到的对应位置的x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
 | newTop | double | 是 | 要平移到的对应位置的y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(20, 20, 40, 40);
+drawing.RectUtils.offsetTo(rect, 10, 20);
+console.info('rect.left: ', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(20.0, 20.0, 40.0, 40.0);
+if (rect == undefined) {
+    return;
+}
+drawing.RectUtils.offsetTo(rect, 10.0, 20.0);
+console.info('rect.left:', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
+
 ## setEmpty
 
 ```TypeScript
@@ -559,6 +1208,52 @@ static setEmpty(rect: common2D.Rect): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 用于设置为空的矩形对象。 |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(10, 20, 20, 30);
+drawing.RectUtils.setEmpty(rect);
+console.info('rect.left: ', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(10.0, 20.0, 20.0, 30.0);
+if (rect == undefined) {
+    return;
+}
+drawing.RectUtils.setEmpty(rect)
+console.info('rect.left:', rect?.left);
+console.info('rect.top: ', rect?.top);
+console.info('rect.right: ', rect?.right);
+console.info('rect.bottom: ', rect?.bottom);
+```
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    let region = new drawing.Region();
+    region.setRect(100, 100, 200, 200);
+    let isEmpty = region.isEmpty();
+    console.info("isEmpty :" + isEmpty);
+    region.setEmpty();
+    isEmpty = region.isEmpty();
+    console.info("isEmpty :" + isEmpty);
+  }
+}
+```
 
 ## setLtrb
 
@@ -584,6 +1279,35 @@ static setLtrb(rect: common2D.Rect, left: double, top: double, right: double, bo
 | right | double | 是 | 矩形的右下角x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
 | bottom | double | 是 | 矩形的右下角y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeEmpty();
+drawing.RectUtils.setLtrb(rect, 10, 20, 30, 60);
+console.info('rect.left: ', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeEmpty();
+if (rect == undefined) {
+    return;
+}
+drawing.RectUtils.setLtrb(rect, 10.0, 20.0, 30.0, 60.0);
+console.info('rect.left:', rect?.left);
+console.info('rect.top: ', rect?.top);
+console.info('rect.right: ', rect?.right);
+console.info('rect.bottom: ', rect?.bottom);
+```
+
 ## setRect
 
 ```TypeScript
@@ -604,6 +1328,84 @@ static setRect(rect: common2D.Rect, other: common2D.Rect): void
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 需要被赋值的原矩形对象。 |
 | other | common2D.Rect | 是 | 用于赋值的矩形。 |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(10, 20, 30, 40);
+let rect2 = drawing.RectUtils.makeEmpty();
+drawing.RectUtils.setRect(rect2, rect);
+console.info('rect2.left: ', rect2.left);
+console.info('rect2.top: ', rect2.top);
+console.info('rect2.right: ', rect2.right);
+console.info('rect2.bottom: ', rect2.bottom);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(10.0, 20.0, 30.0, 40.0);
+let rect2 = drawing.RectUtils.makeEmpty();
+if (rect == undefined || rect2 == undefined) {
+    return;
+}
+drawing.RectUtils.setRect(rect2, rect);
+console.info('rect2.left:', rect2.left);
+console.info('rect2.top: ', rect2.top);
+console.info('rect2.right: ', rect2.right);
+console.info('rect2.bottom: ', rect2.bottom);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
+    pen.setStrokeWidth(10);
+    canvas.attachPen(pen);
+    let region = new drawing.Region();
+    let flag: boolean = false;
+    flag = region.setRect(50, 50, 300, 300);
+    console.info("region setRect : " + flag);
+    canvas.drawRegion(region);
+    canvas.detachPen();
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@ohos.arkui.node';
+import drawing from "@ohos.graphics.drawing";
+import common2D from "@ohos.graphics.common2D";
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
+    pen.setStrokeWidth(10.0);
+    canvas.attachPen(pen);
+    let region = new drawing.Region();
+    let flag: boolean = false;
+    flag = region.setRect(50, 50, 300, 300);
+    console.info("region setRect : " + flag);
+    canvas.drawRegion(region);
+    canvas.detachPen();
+  }
+}
+```
 
 ## sort
 
@@ -627,6 +1429,35 @@ static sort(rect: common2D.Rect): void
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 待进行边界排序的矩形对象。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(20, 40, 30, 30);
+drawing.RectUtils.sort(rect);
+console.info('rect.left: ', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(20.0, 40.0, 30.0, 30.0);
+if (rect == undefined) {
+    return;
+}
+drawing.RectUtils.sort(rect);
+console.info('rect.left:', rect?.left);
+console.info('rect.top: ', rect?.top);
+console.info('rect.right: ', rect?.right);
+console.info('rect.bottom: ', rect?.bottom);
+```
+
 ## union
 
 ```TypeScript
@@ -647,4 +1478,35 @@ static union(rect: common2D.Rect, other: common2D.Rect): void
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 用于计算并集的原矩形。 |
 | other | common2D.Rect | 是 | 用于计算并集的另一个矩形。 |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(0, 0, 20, 20);
+let rect2 = drawing.RectUtils.makeLtrb(10, 10, 40, 40);
+drawing.RectUtils.union(rect, rect2);
+console.info('rect.left: ', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(0.0, 0.0, 20.0, 20.0);
+let rect2 = drawing.RectUtils.makeLtrb(10.0, 10.0, 40.0, 40.0);
+if (rect == undefined || rect2 == undefined) {
+    return;
+}
+drawing.RectUtils.union(rect, rect2);
+console.info('rect.left:', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
 

@@ -46,3 +46,26 @@ function getAllInsightIntentInfo(intentFlags: int): Promise<Array<InsightIntentI
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service fails to communicate with the dependency module. |
 
+**示例**
+
+```TypeScript
+import { insightIntentDriver } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+async function getInfos() {
+  try {
+    insightIntentDriver.getAllInsightIntentInfo(insightIntentDriver.GetInsightIntentFlag.GET_FULL_INSIGHT_INTENT |
+    insightIntentDriver.GetInsightIntentFlag.GET_ENTITY_INFO).then((data) => {
+      hilog.info(0x0000, 'testTag', 'getAllInsightIntentInfo return %{public}s', data);
+    }).catch((error: Error) => {
+      let err = error as BusinessError;
+      hilog.info(0x0000, 'testTag', 'getAllInsightIntentInfo errCode: %{public}d', err.code);
+      hilog.info(0x0000, 'testTag', 'getAllInsightIntentInfo errMessage: %{public}s', err.message);
+    });
+  } catch (error) {
+    hilog.error(0x0000, 'testTag', 'getAllInsightIntentInfo error caught %{public}s', error);
+  }
+}
+```
+

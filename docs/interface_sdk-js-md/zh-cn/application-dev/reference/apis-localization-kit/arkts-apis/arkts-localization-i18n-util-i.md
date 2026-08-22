@@ -50,3 +50,14 @@ unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string,
 | --- | --- |
 | string | 按照toUnit的单位格式化后，得到的字符串。 |
 
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let fromUnit: i18n.UnitInfo = { unit: 'cup', measureSystem: 'US' };
+let toUnit: i18n.UnitInfo = { unit: 'liter', measureSystem: 'SI' };
+let convertResult: string =
+  i18n.I18NUtil.unitConvert(fromUnit, toUnit, 1000, 'en-US', 'long'); // convertResult = '236.588 liters'
+```
+

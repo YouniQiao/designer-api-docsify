@@ -14,7 +14,7 @@ function isConnected(clientSocket: int): boolean
 
 Check whether the current socket connection has been established.
 
-**Since:** 26.0.0
+**Since:** 22
 
 <!--Device-socket-function isConnected(clientSocket: int): boolean--><!--Device-socket-function isConnected(clientSocket: int): boolean-End-->
 

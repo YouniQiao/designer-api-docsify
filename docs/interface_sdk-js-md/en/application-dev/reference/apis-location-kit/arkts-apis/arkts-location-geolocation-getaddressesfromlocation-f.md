@@ -31,7 +31,7 @@ Obtain address info from location
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | request | ReverseGeoCodeRequest | Yes | Indicates the reverse geocode query parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the address info. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the address info. |
 
 **Examples**
 
@@ -45,6 +45,14 @@ geolocation.getAddressesFromLocation(reverseGeocodeRequest, (err, data) => {
     if (data) {
         console.info('getAddressesFromLocation: data=' + JSON.stringify(data));
     }
+});
+```
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+let reverseGeocodeRequest:geolocation.ReverseGeoCodeRequest = {"latitude": 31.12, "longitude": 121.11, "maxItems": 1};
+geolocation.getAddressesFromLocation(reverseGeocodeRequest).then((data) => {
+    console.info('getAddressesFromLocation: ' + JSON.stringify(data));
 });
 ```
 
@@ -83,11 +91,5 @@ Obtain address info from location
 
 **Examples**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-let reverseGeocodeRequest:geolocation.ReverseGeoCodeRequest = {"latitude": 31.12, "longitude": 121.11, "maxItems": 1};
-geolocation.getAddressesFromLocation(reverseGeocodeRequest).then((data) => {
-    console.info('getAddressesFromLocation: ' + JSON.stringify(data));
-});
-```
+See [getAddressesFromLocation](#getaddressesfromlocation)
 

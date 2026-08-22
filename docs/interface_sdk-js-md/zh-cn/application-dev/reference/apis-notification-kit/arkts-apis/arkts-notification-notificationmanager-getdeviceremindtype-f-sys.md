@@ -76,6 +76,31 @@ let getDeviceRemindTypeCallback = (err: BusinessError | null, data: notification
 notificationManager.getDeviceRemindType(getDeviceRemindTypeCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.getDeviceRemindType().then((data: notificationManager.DeviceRemindType) => {
+    console.info(`getDeviceRemindType success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getDeviceRemindType failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.getDeviceRemindType().then((data: notificationManager.DeviceRemindType) => {
+    console.info(`getDeviceRemindType success, data: ${JSON.stringify(data)}`);
+}).catch((err: Error): void => {
+    let error: BusinessError = err as BusinessError;
+    console.error(`getDeviceRemindType failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## getDeviceRemindType
 
@@ -116,28 +141,5 @@ function getDeviceRemindType(): Promise<DeviceRemindType>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getDeviceRemindType().then((data: notificationManager.DeviceRemindType) => {
-    console.info(`getDeviceRemindType success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getDeviceRemindType failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getDeviceRemindType().then((data: notificationManager.DeviceRemindType) => {
-    console.info(`getDeviceRemindType success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`getDeviceRemindType failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [getDeviceRemindType](#getdeviceremindtype)
 

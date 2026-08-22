@@ -37,6 +37,14 @@ aboutToBeDeleted(owningView?: IPropertySubscriber): void
 | --- | --- | --- | --- |
 | owningView | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 否 | 所在自定义组件；不传入则不指定关联的自定义组件。 |
 
+**示例**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let link = AppStorage.setAndLink('PropB', 49); // PropA -> 47, PropB -> 49
+link.aboutToBeDeleted();
+```
+
 ## id
 
 ```TypeScript

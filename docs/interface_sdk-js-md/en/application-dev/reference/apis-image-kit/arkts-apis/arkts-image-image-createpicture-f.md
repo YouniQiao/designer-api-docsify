@@ -60,3 +60,17 @@ async function CreatePicture(context: Context) {
 }
 ```
 
+```TypeScript
+async function CreatePicture(imageSourceObj : image.ImageSource) {
+  let options: image.DecodingOptionsForPicture = {
+    desiredAuxiliaryPictures: [image.AuxiliaryPictureType.GAINMAP] // GAINMAP indicates the type of the auxiliary picture to be decoded.
+  };
+  let pictureObj: image.Picture = await imageSourceObj.createPicture(options);
+  if (pictureObj != null) {
+    console.info('Create picture succeeded');
+  } else {
+    console.error('Create picture failed');
+  }
+}
+```
+

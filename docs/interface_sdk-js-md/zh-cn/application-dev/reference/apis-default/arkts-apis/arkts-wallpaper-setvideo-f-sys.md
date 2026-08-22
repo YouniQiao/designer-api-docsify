@@ -59,6 +59,22 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wallpaperPath = '/data/storage/el2/base/haps/entry/files/test.mp4';
+try {
+    wallpaper.setVideo(wallpaperPath, wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
+        console.info(`success to setVideo.`);
+    }).catch((error: BusinessError) => {
+        console.error(`Failed to setVideo. Code: ${error.code}, Message: ${error.message}`);
+    });
+} catch (error) {
+    let err = error as BusinessError;
+    console.error(`Failed to setVideo. Code: ${err.code}, Message: ${err.message}`);
+}
+```
+
 
 ## setVideo
 
@@ -101,19 +117,5 @@ function setVideo(source: string, wallpaperType: WallpaperType): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wallpaperPath = '/data/storage/el2/base/haps/entry/files/test.mp4';
-try {
-    wallpaper.setVideo(wallpaperPath, wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
-        console.info(`success to setVideo.`);
-    }).catch((error: BusinessError) => {
-        console.error(`Failed to setVideo. Code: ${error.code}, Message: ${error.message}`);
-    });
-} catch (error) {
-    let err = error as BusinessError;
-    console.error(`Failed to setVideo. Code: ${err.code}, Message: ${err.message}`);
-}
-```
+参见 [setVideo](#setvideo)
 

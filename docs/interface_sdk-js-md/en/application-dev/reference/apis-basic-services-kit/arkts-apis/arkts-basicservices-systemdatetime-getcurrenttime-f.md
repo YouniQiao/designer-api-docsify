@@ -29,7 +29,7 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isNano | boolean | Yes | Whether the time to return is in nanoseconds.<br>- **true**: The result is in nanoseconds.<br>- **false**: The result is in milliseconds. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the time elapsed since the Unix epoch. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the time elapsed since the Unix epoch. |
 
 **Error codes:**
 
@@ -49,6 +49,38 @@ try {
       return;
     }
     console.info(`Succeeded in getting currentTime : ${time}`);
+  });
+} catch(e) {
+  let error = e as BusinessError;
+  console.error(`Failed to get currentTime. message: ${error.message}, code: ${error.code}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemDateTime.getCurrentTime((error: BusinessError, time: number) => {
+    if (error) {
+      console.error(`Failed to get currentTime. message: ${error.message}, code: ${error.code}`);
+      return;
+    }
+    console.info(`Succeeded in getting currentTime : ${time}`);
+  });
+} catch(e) {
+  let error = e as BusinessError;
+  console.error(`Failed to get currentTime. message: ${error.message}, code: ${error.code}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemDateTime.getCurrentTime().then((time: number) => {
+    console.info(`Succeeded in getting currentTime : ${time}`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to get currentTime. message: ${error.message}, code: ${error.code}`);
   });
 } catch(e) {
   let error = e as BusinessError;
@@ -79,7 +111,7 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the time elapsed since the Unix epoch, in milliseconds. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the time elapsed since the Unix epoch, in milliseconds. |
 
 **Error codes:**
 
@@ -89,22 +121,7 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.getCurrentTime((error: BusinessError, time: number) => {
-    if (error) {
-      console.error(`Failed to get currentTime. message: ${error.message}, code: ${error.code}`);
-      return;
-    }
-    console.info(`Succeeded in getting currentTime : ${time}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.error(`Failed to get currentTime. message: ${error.message}, code: ${error.code}`);
-}
-```
+See [getCurrentTime](#getcurrenttime)
 
 
 ## getCurrentTime
@@ -145,18 +162,5 @@ Obtains the time elapsed since the Unix epoch. This API uses a promise to return
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.getCurrentTime().then((time: number) => {
-    console.info(`Succeeded in getting currentTime : ${time}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get currentTime. message: ${error.message}, code: ${error.code}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.error(`Failed to get currentTime. message: ${error.message}, code: ${error.code}`);
-}
-```
+See [getCurrentTime](#getcurrenttime)
 

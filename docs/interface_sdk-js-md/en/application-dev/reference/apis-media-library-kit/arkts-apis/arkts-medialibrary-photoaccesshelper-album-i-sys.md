@@ -48,7 +48,7 @@ Deletes image or video assets from the trash. Before the operation, ensure that 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | assets | Array&lt;PhotoAsset&gt; | Yes | Array of the image or video assets to delete. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -61,6 +61,65 @@ Deletes image or video assets from the trash. Before the operation, ensure that 
 | 14000011 | System inner fail |
 
 **Examples**
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('deleteAssetDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    if (asset === undefined) {
+      console.error('asset not exist');
+      return;
+    }
+    phAccessHelper.deleteAssets([asset.uri], (err) => {
+      if (err === undefined) {
+        console.info('deleteAssets successfully');
+      } else {
+        console.error(`deleteAssets failed with error: ${err.code}, ${err.message}`);
+      }
+    });
+  } catch (err) {
+    console.error(`fetch failed, error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('deleteDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    if (asset === undefined) {
+      console.error('asset not exist');
+      return;
+    }
+    await phAccessHelper.deleteAssets([asset.uri]);
+    console.info('deleteAssets successfully');
+  } catch (err) {
+    console.error(`deleteAssets failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -88,6 +147,117 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     });
   } catch (err) {
     console.error(`deleteAssetsDemoCallback failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    console.info('deleteAssetsDemoPromise');
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.SYSTEM, photoAccessHelper.AlbumSubtype.TRASH);
+    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOption);
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    album.deleteAssets([asset]).then(() => {
+      console.info('album deleteAssets successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`album deleteAssets failed with error: ${err.code}, ${err.message}`);
+    });
+  } catch (err) {
+    console.error(`deleteAssetsDemoPromise failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('deleteAssetsPermanentlyDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.SYSTEM, photoAccessHelper.AlbumSubtype.TRASH);
+    if (albumFetchResult === undefined) {
+      console.error('albumFetchResult is undefined');
+      return;
+    }
+    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOptions);
+    if (fetchResult === undefined) {
+      console.error('fetchResult is undefined');
+      return;
+    }
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+
+    let albumChangeRequest: photoAccessHelper.MediaAlbumChangeRequest = new photoAccessHelper.MediaAlbumChangeRequest(album);
+    albumChangeRequest.deleteAssets([asset]);
+    await phAccessHelper.applyChanges(albumChangeRequest);
+    console.info('succeed to deleteAssets permanently');
+  } catch (err) {
+    console.error(`deleteAssetsPermanentlyDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  console.info('deleteAssetsDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let photoAssetList: Array<photoAccessHelper.PhotoAsset> = await fetchResult.getAllObjects();
+    await photoAccessHelper.MediaAssetChangeRequest.deleteAssets(context, photoAssetList);
+    console.info('deleteAssets successfully');
+  } catch (err) {
+    console.error(`deleteAssetsDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  console.info('deleteAssetsDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    await photoAccessHelper.MediaAssetChangeRequest.deleteAssets(context, [asset.uri]);
+    console.info('deleteAssets successfully');
+  } catch (err) {
+    console.error(`deleteAssetsDemo failed with error: ${err.code}, ${err.message}`);
   }
 }
 ```
@@ -143,34 +313,7 @@ Deletes image or video assets from the trash. Before the operation, ensure that 
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('deleteAssetsDemoPromise');
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOption: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.SYSTEM, photoAccessHelper.AlbumSubtype.TRASH);
-    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOption);
-    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    album.deleteAssets([asset]).then(() => {
-      console.info('album deleteAssets successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`album deleteAssets failed with error: ${err.code}, ${err.message}`);
-    });
-  } catch (err) {
-    console.error(`deleteAssetsDemoPromise failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+See [deleteAssets](#deleteassets)
 
 ## getAttribute
 
@@ -443,7 +586,7 @@ Recovers image or video assets from the trash. Before the operation, ensure that
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | assets | Array&lt;PhotoAsset&gt; | Yes | Array of the image or video assets to recover. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -483,6 +626,63 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     });
   } catch (err) {
     console.error(`recoverAssetsDemoCallback failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    console.info('recoverAssetsDemoPromise');
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.SYSTEM, photoAccessHelper.AlbumSubtype.TRASH);
+    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOption);
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    album.recoverAssets([asset]).then(() => {
+      console.info('album recoverAssets successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`album recoverAssets failed with error: ${err.code}, ${err.message}`);
+    });
+  } catch (err) {
+    console.error(`recoverAssetsDemoPromise failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('recoverAssetsDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.SYSTEM, photoAccessHelper.AlbumSubtype.TRASH);
+    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOptions);
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+
+    let albumChangeRequest: photoAccessHelper.MediaAlbumChangeRequest = new photoAccessHelper.MediaAlbumChangeRequest(album);
+    albumChangeRequest.recoverAssets([asset]);
+    await phAccessHelper.applyChanges(albumChangeRequest);
+    console.info('recoverAssets successfully');
+  } catch (err) {
+    console.error(`recoverAssetsDemo failed with error: ${err.code}, ${err.message}`);
   }
 }
 ```
@@ -533,34 +733,7 @@ Recovers image or video assets from the trash. Before the operation, ensure that
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('recoverAssetsDemoPromise');
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOption: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.SYSTEM, photoAccessHelper.AlbumSubtype.TRASH);
-    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOption);
-    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    album.recoverAssets([asset]).then(() => {
-      console.info('album recoverAssets successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`album recoverAssets failed with error: ${err.code}, ${err.message}`);
-    });
-  } catch (err) {
-    console.error(`recoverAssetsDemoPromise failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+See [recoverAssets](#recoverassets)
 
 ## setCoverUri
 
@@ -589,7 +762,7 @@ Sets the cover of the user album. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file to be set as the album cover. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -629,6 +802,41 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     });
   } catch (err) {
     console.error(`setCoverUriDemoCallback failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('setCoverUriDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC);
+    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
+    if (albums === undefined) {
+      console.error('getHiddenAlbumsViewCallback albums is undefined');
+      return;
+    }
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOptions);
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    if (asset === undefined) {
+      console.error('asset is undefined');
+      return;
+    }
+    let albumChangeRequest: photoAccessHelper.MediaAlbumChangeRequest = new photoAccessHelper.MediaAlbumChangeRequest(album);
+    albumChangeRequest.setCoverUri(asset.uri);
+    await phAccessHelper.applyChanges(albumChangeRequest);
+    console.info('setCoverUri successfully');
+  } catch (err) {
+    console.error(`setCoverUriDemo failed with error: ${err.code}, ${err.message}`);
   }
 }
 ```
@@ -676,6 +884,10 @@ Sets the cover of the user album. This API uses a promise to return the result.
 | 13900012 | Permission denied |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+**Examples**
+
+See [setCoverUri](#setcoveruri)
 
 ## dateAdded
 

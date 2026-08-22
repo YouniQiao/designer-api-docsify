@@ -51,6 +51,35 @@ function setApplicationEnabled(bundleName: string, isEnable: boolean, callback: 
 | isEnable | boolean | 是 | 指定是否启用应用程序。true表示启用，false表示禁用。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
+**示例**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleName: string = "com.example.myapplication";
+
+bundle.setApplicationEnabled(bundleName, false, err => {
+  if (err) {
+    console.error('setApplicationEnabled failed.');
+  } else {
+    console.info('setApplicationEnabled successfully.');
+  }
+});
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleName: string = "com.example.myapplication";
+
+bundle.setApplicationEnabled(bundleName, false).then(() => {
+  console.info('setApplicationEnabled successfully.');
+}).catch((error: BusinessError) => {
+  console.error('setApplicationEnabled failed.');
+});
+```
+
 
 ## setApplicationEnabled
 
@@ -86,4 +115,8 @@ function setApplicationEnabled(bundleName: string, isEnable: boolean): Promise<v
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [setApplicationEnabled](#setapplicationenabled)
 

@@ -47,3 +47,15 @@ Sets the role types supported by a specified port, which can be **powerRole** (f
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  <br>1.Mandatory parameters are left unspecified.  <br>2.Incorrect parameter types. |
 
+**Examples**
+
+```TypeScript
+import {BusinessError} from '@kit.BasicServicesKit';
+let portId: number = 1;
+usbManager.setPortRoles(portId, usbManager.PowerRoleType.SOURCE, usbManager.DataRoleType.HOST).then(() => {
+    console.info('usb setPortRoles successfully.');
+}).catch((err: BusinessError) => {
+    console.error('usb setPortRoles failed: ' + err.code + ' message: ' + err.message);
+});
+```
+

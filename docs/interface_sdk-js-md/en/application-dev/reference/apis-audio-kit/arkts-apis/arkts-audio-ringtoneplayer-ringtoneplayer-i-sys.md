@@ -31,7 +31,7 @@ Sets ringtone parameters. This API uses an asynchronous callback to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [RingtoneOptions](arkts-audio-ringtoneplayer-ringtoneoptions-i-sys.md) | Yes | Ringtone parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -50,6 +50,22 @@ systemRingtonePlayer.configure(ringtoneOptions, (err: BusinessError) => {
     return;
   }
   console.info(`Callback invoked to indicate a successful setting of ringtone options.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class RingtoneOptions {
+  volume: number = 0;
+  loop: boolean = false;
+}
+let ringtoneOptions: RingtoneOptions = {volume: 0.5, loop: true};
+
+systemRingtonePlayer.configure(ringtoneOptions).then(() => {
+  console.info(`Promise returned to indicate a successful setting of ringtone options.`);
+}).catch ((err: BusinessError) => {
+  console.error(`Failed to configure ringtone options. ${err}`);
 });
 ```
 
@@ -83,21 +99,7 @@ Sets ringtone parameters. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RingtoneOptions {
-  volume: number = 0;
-  loop: boolean = false;
-}
-let ringtoneOptions: RingtoneOptions = {volume: 0.5, loop: true};
-
-systemRingtonePlayer.configure(ringtoneOptions).then(() => {
-  console.info(`Promise returned to indicate a successful setting of ringtone options.`);
-}).catch ((err: BusinessError) => {
-  console.error(`Failed to configure ringtone options. ${err}`);
-});
-```
+See [configure](#configure)
 
 ## getAudioRendererInfo
 
@@ -119,7 +121,7 @@ Obtains the information about the audio renderer used by the ringtone. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;audio.AudioRendererInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the renderer information obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;audio.AudioRendererInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the renderer information obtained; otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -136,6 +138,20 @@ systemRingtonePlayer.getAudioRendererInfo((err: BusinessError, value: audio.Audi
   }
   console.info(`Callback invoked to indicate the value of the ringtone AudioRendererInfo is obtained.`);
   audioRendererInfo = value;
+});
+```
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let audioRendererInfo: audio.AudioRendererInfo | undefined = undefined;
+
+systemRingtonePlayer.getAudioRendererInfo().then((value: audio.AudioRendererInfo) => {
+  console.info(`Promise returned to indicate that the value of the ringtone AudioRendererInfo is obtained ${value}.`);
+  audioRendererInfo = value;
+}).catch ((err: BusinessError) => {
+  console.error(`Failed to get the ringtone AudioRendererInfo ${err}`);
 });
 ```
 
@@ -163,19 +179,7 @@ Obtains the information about the audio renderer used by the ringtone. This API 
 
 **Examples**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let audioRendererInfo: audio.AudioRendererInfo | undefined = undefined;
-
-systemRingtonePlayer.getAudioRendererInfo().then((value: audio.AudioRendererInfo) => {
-  console.info(`Promise returned to indicate that the value of the ringtone AudioRendererInfo is obtained ${value}.`);
-  audioRendererInfo = value;
-}).catch ((err: BusinessError) => {
-  console.error(`Failed to get the ringtone AudioRendererInfo ${err}`);
-});
-```
+See [getAudioRendererInfo](#getaudiorendererinfo)
 
 ## getTitle
 
@@ -197,7 +201,7 @@ Obtains the title of the ringtone. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the title obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the title obtained; otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -210,6 +214,16 @@ systemRingtonePlayer.getTitle((err: BusinessError, value: string) => {
     return;
   }
   console.info(`Callback invoked to indicate the value of the system ringtone title is obtained ${value}.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemRingtonePlayer.getTitle().then((value: string) => {
+  console.info(`Promise returned to indicate that the value of the system ringtone title is obtained ${value}.`);
+}).catch ((err: BusinessError) => {
+  console.error(`Failed to get the system ringtone title ${err}`);
 });
 ```
 
@@ -237,37 +251,7 @@ Obtains the title of the ringtone. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemRingtonePlayer.getTitle().then((value: string) => {
-  console.info(`Promise returned to indicate that the value of the system ringtone title is obtained ${value}.`);
-}).catch ((err: BusinessError) => {
-  console.error(`Failed to get the system ringtone title ${err}`);
-});
-```
-
-## offAudioInterrupt
-
-```TypeScript
-offAudioInterrupt(): void
-```
-
-Unsubscribes to audio interrupt events.
-
-**Since:** 23
-
-<!--Device-RingtonePlayer-offAudioInterrupt(): void--><!--Device-RingtonePlayer-offAudioInterrupt(): void-End-->
-
-**System capability:** SystemCapability.Multimedia.SystemSound.Core
-
-**System API:** This is a system API.
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+See [getTitle](#gettitle)
 
 ## off('audioInterrupt')
 
@@ -304,34 +288,27 @@ Unsubscribes from the audio interruption event.
 systemRingtonePlayer.off('audioInterrupt');
 ```
 
-## onAudioInterrupt
+## offAudioInterrupt
 
 ```TypeScript
-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void
+offAudioInterrupt(): void
 ```
 
-Listens for audio interrupt events. This method uses a callback to get interrupt events. The interrupt event is triggered when audio playback is interrupted.
+Unsubscribes to audio interrupt events.
 
 **Since:** 23
 
-<!--Device-RingtonePlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void--><!--Device-RingtonePlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void-End-->
+<!--Device-RingtonePlayer-offAudioInterrupt(): void--><!--Device-RingtonePlayer-offAudioInterrupt(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;audio.InterruptEvent&gt; | Yes | Callback used to listen for interrupt callback. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## on('audioInterrupt')
 
@@ -354,7 +331,7 @@ Subscribes to the audio interruption event, which is triggered when the audio fo
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;audio.InterruptEvent&gt; | Yes | Callback used to return the event information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | Yes | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -413,6 +390,35 @@ systemRingtonePlayer.on('audioInterrupt', async(interruptEvent: audio.InterruptE
 });
 ```
 
+## onAudioInterrupt
+
+```TypeScript
+onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void
+```
+
+Listens for audio interrupt events. This method uses a callback to get interrupt events. The interrupt event is triggered when audio playback is interrupted.
+
+**Since:** 23
+
+<!--Device-RingtonePlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void--><!--Device-RingtonePlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.SystemSound.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | Yes | Callback used to listen for interrupt callback. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
 ## release
 
 ```TypeScript
@@ -433,7 +439,7 @@ Releases the ringtone player. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -446,6 +452,16 @@ systemRingtonePlayer.release((err: BusinessError) => {
     return;
   }
   console.info(`Callback invoked to indicate a successful releasing of ringtone player.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemRingtonePlayer.release().then(() => {
+  console.info(`Promise returned to indicate a successful releasing of ringtone player.`);
+}).catch ((err: BusinessError) => {
+  console.error(`Failed to release ringtone player. ${err}`);
 });
 ```
 
@@ -473,15 +489,7 @@ Releases the ringtone player. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemRingtonePlayer.release().then(() => {
-  console.info(`Promise returned to indicate a successful releasing of ringtone player.`);
-}).catch ((err: BusinessError) => {
-  console.error(`Failed to release ringtone player. ${err}`);
-});
-```
+See [release](#release)
 
 ## start
 
@@ -503,7 +511,7 @@ Starts playing the ringtone. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -516,6 +524,16 @@ systemRingtonePlayer.start((err: BusinessError) => {
     return;
   }
   console.info(`Callback invoked to indicate a successful starting of ringtone.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemRingtonePlayer.start().then(() => {
+  console.info(`Promise returned to indicate a successful starting of ringtone.`);
+}).catch ((err: BusinessError) => {
+  console.error(`Failed to start playing ringtone. ${err}`);
 });
 ```
 
@@ -543,15 +561,7 @@ Starts playing the ringtone. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemRingtonePlayer.start().then(() => {
-  console.info(`Promise returned to indicate a successful starting of ringtone.`);
-}).catch ((err: BusinessError) => {
-  console.error(`Failed to start playing ringtone. ${err}`);
-});
-```
+See [start](#start)
 
 ## stop
 
@@ -573,7 +583,7 @@ Stops playing the ringtone. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -586,6 +596,16 @@ systemRingtonePlayer.stop((err: BusinessError) => {
     return;
   }
   console.info(`Callback invoked to indicate a successful stopping of ringtone.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemRingtonePlayer.stop().then(() => {
+  console.info(`Promise returned to indicate a successful stopping of ringtone.`);
+}).catch ((err: BusinessError) => {
+  console.error(`Failed to stop playing ringtone. ${err}`);
 });
 ```
 
@@ -613,15 +633,7 @@ Stops playing the ringtone. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemRingtonePlayer.stop().then(() => {
-  console.info(`Promise returned to indicate a successful stopping of ringtone.`);
-}).catch ((err: BusinessError) => {
-  console.error(`Failed to stop playing ringtone. ${err}`);
-});
-```
+See [stop](#stop)
 
 ## state
 

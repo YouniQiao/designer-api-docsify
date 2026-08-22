@@ -30,7 +30,33 @@ Obtains the number of active notifications of this application. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let getActiveNotificationCountCallback = (err: Base.BusinessError, data: number) => {
+  if (err) {
+    console.info("getActiveNotificationCount failed " + JSON.stringify(err));
+  } else {
+    console.info("getActiveNotificationCount success");
+  }
+}
+
+Notification.getActiveNotificationCount(getActiveNotificationCountCallback);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+Notification.getActiveNotificationCount().then((data: number) => {
+  console.info("getActiveNotificationCount success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`getAllActiveNotifications failed, code is ${err}`);
+});
+```
 
 
 ## getActiveNotificationCount
@@ -56,4 +82,8 @@ Obtains the number of active notifications of this application. This API uses a 
 | Type | Description |
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the result. |
+
+**Examples**
+
+See [getActiveNotificationCount](#getactivenotificationcount)
 

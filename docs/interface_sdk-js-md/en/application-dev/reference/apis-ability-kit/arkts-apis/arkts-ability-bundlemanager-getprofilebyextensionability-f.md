@@ -29,7 +29,7 @@ Obtains the JSON string array of the current application's configuration file ba
 | moduleName | string | Yes | Module name. |
 | extensionAbilityName | string | Yes | Name of the ExtensionAbility component. |
 | metadataName | string | Yes | Metadata name of the ExtensionAbility component, that is, **name** of the **metadata** tag under [extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities) in the **module.json5** file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the information is successfully obtained, **err** is **null** and **data** is **Array&lt;string&gt;**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the information is successfully obtained, **err** is **null** and **data** is **Array&lt;string&gt;**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -62,6 +62,38 @@ try {
 } catch (err) {
   let message = (err as BusinessError).message;
   hilog.error(0x0000, 'testTag', 'getProfileByExtensionAbility failed: %{public}s', message);
+}
+```
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let moduleName = 'entry';
+let extensionAbilityName = 'com.example.myapplication.extension';
+let metadataName = 'ability_metadata';
+
+try {
+  bundleManager.getProfileByExtensionAbility(moduleName, extensionAbilityName).then((data) => {
+    hilog.info(0x0000, 'testTag', 'getProfileByExtensionAbility successfully. Data: %{public}s', JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'getProfileByExtensionAbility failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getProfileByExtensionAbility failed. Cause: %{public}s', message);
+}
+
+try {
+  bundleManager.getProfileByExtensionAbility(moduleName, extensionAbilityName, metadataName).then((data) => {
+    hilog.info(0x0000, 'testTag', 'getProfileByExtensionAbility successfully. Data: %{public}s', JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'getProfileByExtensionAbility failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getProfileByExtensionAbility failed. Cause: %{public}s', message);
 }
 ```
 
@@ -107,35 +139,5 @@ Obtains the JSON string array of the current application's configuration file ba
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let moduleName = 'entry';
-let extensionAbilityName = 'com.example.myapplication.extension';
-let metadataName = 'ability_metadata';
-
-try {
-  bundleManager.getProfileByExtensionAbility(moduleName, extensionAbilityName).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getProfileByExtensionAbility successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getProfileByExtensionAbility failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getProfileByExtensionAbility failed. Cause: %{public}s', message);
-}
-
-try {
-  bundleManager.getProfileByExtensionAbility(moduleName, extensionAbilityName, metadataName).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getProfileByExtensionAbility successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getProfileByExtensionAbility failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getProfileByExtensionAbility failed. Cause: %{public}s', message);
-}
-```
+See [getProfileByExtensionAbility](#getprofilebyextensionability)
 

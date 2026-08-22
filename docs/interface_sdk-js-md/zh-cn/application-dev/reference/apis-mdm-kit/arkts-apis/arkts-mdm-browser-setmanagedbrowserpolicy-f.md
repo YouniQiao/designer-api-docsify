@@ -32,7 +32,7 @@ function setManagedBrowserPolicy(admin: Want, bundleName: string, policyName: st
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 应用包名，用于指定浏览器，表示应用的唯一标识。 |
 | policyName | string | 是 | 浏览器策略名，由接口调用方和指定浏览器约定。 |
 | policyValue | string | 是 | 浏览器策略值。当此值为空字符串时，表示取消浏览器策略名对应浏览器子策略。 |

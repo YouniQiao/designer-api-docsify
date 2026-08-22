@@ -51,3 +51,10 @@ declare function rmdirSync(path: string): void
 | 13900032 | Directory not empty |
 | 13900042 | Unknown error |
 
+**示例**
+
+```TypeScript
+let dirPath = pathDir + "/testDir";
+fileIo.rmdirSync(dirPath);
+```
+

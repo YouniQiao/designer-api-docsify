@@ -103,49 +103,6 @@ export default class EntryAbility extends UIExtensionAbility {
 }
 ```
 
-## createSubWindowWithOptions
-
-```TypeScript
-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,
-        followCreatorLifecycle: boolean): Promise<window.Window>
-```
-
-Create subwindow.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIExtensionHostWindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,        followCreatorLifecycle: boolean): Promise<window.Window>--><!--Device-UIExtensionHostWindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,        followCreatorLifecycle: boolean): Promise<window.Window>-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the subwindow. |
-| subWindowConfig | window.SubWindowOptions | Yes | Configuration parameters for creating the subwindow. |
-| followCreatorLifecycle | boolean | Yes | Whether the lifecycle of the subwindow follows creator of subwindow. If true, when the creator goes to background, the subwindow will also go to background, when the creator returns to foreground, the subwindow will also return to foreground. If false, the subwindow will not change when the creator goes to background or returns to foreground. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;window.Window&gt; | Promise used to return the subwindow. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible causes: 1. The window is not created or destroyed. 2. Internal task error. 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
-| 1300035 | Creating a subwindow is not allowed in the current context. Possible cause: 1. An AgentUIExtensionAbility cannot create a subwindow. |
-
-**Examples**
-
 ```TypeScript
 // ExtensionProvider.ts
 import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
@@ -190,6 +147,51 @@ export default class EntryAbility extends UIExtensionAbility {
   }
 }
 ```
+
+## createSubWindowWithOptions
+
+```TypeScript
+createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,
+        followCreatorLifecycle: boolean): Promise<window.Window>
+```
+
+Create subwindow.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionHostWindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,        followCreatorLifecycle: boolean): Promise<window.Window>--><!--Device-UIExtensionHostWindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,        followCreatorLifecycle: boolean): Promise<window.Window>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the subwindow. |
+| subWindowConfig | window.SubWindowOptions | Yes | Configuration parameters for creating the subwindow. |
+| followCreatorLifecycle | boolean | Yes | Whether the lifecycle of the subwindow follows creator of subwindow. If true, when the creator goes to background, the subwindow will also go to background, when the creator returns to foreground, the subwindow will also return to foreground. If false, the subwindow will not change when the creator goes to background or returns to foreground. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;window.Window&gt; | Promise used to return the subwindow. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible causes: 1. The window is not created or destroyed. 2. Internal task error. 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
+| 1300035 | Creating a subwindow is not allowed in the current context. Possible cause: 1. An AgentUIExtensionAbility cannot create a subwindow. |
+
+**Examples**
+
+See [createSubWindowWithOptions](#createsubwindowwithoptions)
 
 ## getWindowAvoidArea
 
@@ -397,66 +399,6 @@ export default class EntryAbility extends UIExtensionAbility {
 }
 ```
 
-## offAvoidAreaChange
-
-```TypeScript
-offAvoidAreaChange(callback?: Callback<uiExtension.AvoidAreaInfo>): void
-```
-
-Unregister the callback of avoidAreaChange
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIExtensionHostWindowProxy-offAvoidAreaChange(callback?: Callback<uiExtension.AvoidAreaInfo>): void--><!--Device-UIExtensionHostWindowProxy-offAvoidAreaChange(callback?: Callback<uiExtension.AvoidAreaInfo>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;uiExtension.AvoidAreaInfo&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
-
-## offWindowSizeChange
-
-```TypeScript
-offWindowSizeChange(callback?: Callback<window.Size>): void
-```
-
-Unsubscribes from the component (EmbeddedComponent or UIExtensionComponent) size change event.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIExtensionHostWindowProxy-offWindowSizeChange(callback?: Callback<window.Size>): void--><!--Device-UIExtensionHostWindowProxy-offWindowSizeChange(callback?: Callback<window.Size>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;window.Size&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
-
 ## off('avoidAreaChange')
 
 ```TypeScript
@@ -480,7 +422,7 @@ Unsubscribes from events of system avoidance area changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'avoidAreaChange' | Yes | Event type. The value is fixed at **'avoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | No |  |
 
 **Error codes:**
 
@@ -527,7 +469,7 @@ Unsubscribes from size change events of the component (**EmbeddedComponent** or 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'windowSizeChange' | Yes | Event type. The value is fixed at **'windowSizeChange'**, indicating the component (**EmbeddedComponent** or **UIExtensionComponent**) size change events. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;window.Size&gt; | No | Callback used to return the size of the current component ( **EmbeddedComponent** or **UIExtensionComponent**). If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | No | Callback used to return the size of the current component ( **EmbeddedComponent** or **UIExtensionComponent**). If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
@@ -551,19 +493,19 @@ export default class EntryAbility extends UIExtensionAbility {
 }
 ```
 
-## onAvoidAreaChange
+## offAvoidAreaChange
 
 ```TypeScript
-onAvoidAreaChange(callback: Callback<uiExtension.AvoidAreaInfo>): void
+offAvoidAreaChange(callback?: Callback<uiExtension.AvoidAreaInfo>): void
 ```
 
-Register the callback of avoidAreaChange
+Unregister the callback of avoidAreaChange
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIExtensionHostWindowProxy-onAvoidAreaChange(callback: Callback<uiExtension.AvoidAreaInfo>): void--><!--Device-UIExtensionHostWindowProxy-onAvoidAreaChange(callback: Callback<uiExtension.AvoidAreaInfo>): void-End-->
+<!--Device-UIExtensionHostWindowProxy-offAvoidAreaChange(callback?: Callback<uiExtension.AvoidAreaInfo>): void--><!--Device-UIExtensionHostWindowProxy-offAvoidAreaChange(callback?: Callback<uiExtension.AvoidAreaInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -573,27 +515,27 @@ Register the callback of avoidAreaChange
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;uiExtension.AvoidAreaInfo&gt; | Yes | Callback used to return the area. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;uiExtension.AvoidAreaInfo&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
 
-## onWindowSizeChange
+## offWindowSizeChange
 
 ```TypeScript
-onWindowSizeChange(callback: Callback<window.Size>): void
+offWindowSizeChange(callback?: Callback<window.Size>): void
 ```
 
-Subscribes to the component (EmbeddedComponent or UIExtensionComponent) size change event.
+Unsubscribes from the component (EmbeddedComponent or UIExtensionComponent) size change event.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIExtensionHostWindowProxy-onWindowSizeChange(callback: Callback<window.Size>): void--><!--Device-UIExtensionHostWindowProxy-onWindowSizeChange(callback: Callback<window.Size>): void-End-->
+<!--Device-UIExtensionHostWindowProxy-offWindowSizeChange(callback?: Callback<window.Size>): void--><!--Device-UIExtensionHostWindowProxy-offWindowSizeChange(callback?: Callback<window.Size>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -603,13 +545,13 @@ Subscribes to the component (EmbeddedComponent or UIExtensionComponent) size cha
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;window.Size&gt; | Yes | Callback used to return the window size. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
 
 ## on('avoidAreaChange')
 
@@ -634,7 +576,7 @@ Subscribes to events of system avoidance area changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'avoidAreaChange' | Yes | Event type. The value is fixed at **'avoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | Yes |  |
 
 **Error codes:**
 
@@ -683,7 +625,7 @@ Subscribes to size change events of the component (**EmbeddedComponent** or **UI
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'windowSizeChange' | Yes | Event type. The value is fixed at **'windowSizeChange'**, indicating the component (**EmbeddedComponent** or **UIExtensionComponent**) size change events. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;window.Size&gt; | Yes | Callback function that receives the current component size as the input parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | Yes | Callback function that receives the current component size as the input parameter. |
 
 **Error codes:**
 
@@ -708,6 +650,66 @@ export default class EntryAbility extends UIExtensionAbility {
   }
 }
 ```
+
+## onAvoidAreaChange
+
+```TypeScript
+onAvoidAreaChange(callback: Callback<uiExtension.AvoidAreaInfo>): void
+```
+
+Register the callback of avoidAreaChange
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionHostWindowProxy-onAvoidAreaChange(callback: Callback<uiExtension.AvoidAreaInfo>): void--><!--Device-UIExtensionHostWindowProxy-onAvoidAreaChange(callback: Callback<uiExtension.AvoidAreaInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;uiExtension.AvoidAreaInfo&gt; | Yes | Callback used to return the area. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
+
+## onWindowSizeChange
+
+```TypeScript
+onWindowSizeChange(callback: Callback<window.Size>): void
+```
+
+Subscribes to the component (EmbeddedComponent or UIExtensionComponent) size change event.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionHostWindowProxy-onWindowSizeChange(callback: Callback<window.Size>): void--><!--Device-UIExtensionHostWindowProxy-onWindowSizeChange(callback: Callback<window.Size>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | Yes | Callback used to return the window size. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
 ## setWaterMarkFlag
 
@@ -789,7 +791,7 @@ properties: UIExtensionHostWindowProxyProperties
 
 Information about the host application window and the **UIExtensionComponent**.
 
-Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiextensionability-uiextensionability-c.md#onsessioncreate). Instead, when possible, obtain the value after receiving the [on('windowSizeChange')](#onavoidareachange) callback.
+Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate). Instead, when possible, obtain the value after receiving the [on('windowSizeChange')](#onavoidareachange) callback.
 
 **Type:** [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhost-uiextensionhostwindowproxyproperties-i-sys.md)
 

@@ -38,7 +38,7 @@ This API can be properly called on devices other than wearables. If it is called
 | bundle | BundleOption | Yes | Bundle information of the application. |
 | type | SlotType | Yes | Notification slot type. |
 | enable | boolean | Yes | Whether to enable the notification slot type. The value **true** means to enable the notification slot type, and **false** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -72,6 +72,39 @@ notificationManager.setNotificationEnableSlot(
     notificationManager.SlotType.SOCIAL_COMMUNICATION,
     true,
     setNotificationEnableSlotCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let setNotificationEnableSlotCallback = (err: BusinessError): void => {
+    if (err) {
+        console.error(`setNotificationEnableSlot failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+        console.info("setNotificationEnableSlot success");
+    }
+};
+
+notificationManager.setNotificationEnableSlot(
+    { bundle: "ohos.samples.notification", },
+    notificationManager.SlotType.SOCIAL_COMMUNICATION,
+    true,
+    false,
+    setNotificationEnableSlotCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// setNotificationEnableSlot
+notificationManager.setNotificationEnableSlot(
+    { bundle: "ohos.samples.notification", },
+    notificationManager.SlotType.SOCIAL_COMMUNICATION,
+    true).then(() => {
+        console.info("setNotificationEnableSlot success");
+    }).catch((err: BusinessError) => {
+        console.error(`setNotificationEnableSlot failed, code is ${err.code}, message is ${err.message}`);
+    });
 ```
 
 
@@ -109,7 +142,7 @@ This API can be properly called on devices other than wearables. If it is called
 | type | SlotType | Yes | Notification slot type. |
 | enable | boolean | Yes | Whether to enable the notification slot type. The value **true** means to enable the notification slot type, and **false** means the opposite. |
 | isForceControl | boolean | Yes | Whether the slot is affected by the notification authorization. The value **true** means the slot is affected, and **false** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -124,6 +157,10 @@ This API can be properly called on devices other than wearables. If it is called
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
+
+**Examples**
+
+See [setNotificationEnableSlot](#setnotificationenableslot)
 
 
 ## setNotificationEnableSlot
@@ -177,17 +214,5 @@ This API can be properly called on devices other than wearables. If it is called
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// setNotificationEnableSlot
-notificationManager.setNotificationEnableSlot(
-    { bundle: "ohos.samples.notification", },
-    notificationManager.SlotType.SOCIAL_COMMUNICATION,
-    true).then(() => {
-        console.info("setNotificationEnableSlot success");
-    }).catch((err: BusinessError) => {
-        console.error(`setNotificationEnableSlot failed, code is ${err.code}, message is ${err.message}`);
-    });
-```
+See [setNotificationEnableSlot](#setnotificationenableslot)
 

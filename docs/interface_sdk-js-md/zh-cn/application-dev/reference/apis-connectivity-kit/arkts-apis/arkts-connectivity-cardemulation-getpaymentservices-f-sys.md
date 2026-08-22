@@ -40,3 +40,14 @@ function getPaymentServices(): AbilityInfo[]
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
+**示例**
+
+```TypeScript
+import { cardEmulation } from '@kit.ConnectivityKit';
+
+let paymentServices = cardEmulation.getPaymentServices();
+if (paymentServices == undefined || paymentServices.length == 0) {
+  console.error('paymentServices is null.');
+}
+```
+

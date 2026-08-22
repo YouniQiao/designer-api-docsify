@@ -64,6 +64,19 @@ import { wifiManager } from '@kit.ConnectivityKit';
   }
 ```
 
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+  try {
+    let networkId = 0;
+    wifiManager.removeCandidateConfig(networkId,(error,result) => {
+    console.info("result:" + JSON.stringify(result));
+    });  
+  }catch(error){
+    console.error("failed:" + JSON.stringify(error));
+  }
+```
+
 
 ## removeCandidateConfig
 
@@ -88,7 +101,7 @@ Remove a specified candidate hotspot configuration, only the configuration which
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | networkId | int | Yes | Network ID which will be removed. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Indicates call back of removeCandidateConfig. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Indicates call back of removeCandidateConfig. |
 
 **Error codes:**
 
@@ -102,16 +115,5 @@ Remove a specified candidate hotspot configuration, only the configuration which
 
 **Examples**
 
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-  try {
-    let networkId = 0;
-    wifiManager.removeCandidateConfig(networkId,(error,result) => {
-    console.info("result:" + JSON.stringify(result));
-    });  
-  }catch(error){
-    console.error("failed:" + JSON.stringify(error));
-  }
-```
+See [removeCandidateConfig](#removecandidateconfig)
 

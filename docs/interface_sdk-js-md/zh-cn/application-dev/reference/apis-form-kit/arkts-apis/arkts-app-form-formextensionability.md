@@ -12,14 +12,14 @@ import { FormExtensionAbility } from '@kit.FormKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [FormExtensionAbility](arkts-form-appformformextensionability-formextensionability-c.md) | Widget extension class. It provides APIs to notify the widget provider that a widget is being created or the widget visibility status is being changed. |
+| [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md) | Widget extension class. It provides APIs to notify the widget provider that a widget is being created or the widget visibility status is being changed. |
 
 <!--Del-->
 ### 类（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [FormExtensionAbility](arkts-form-appformformextensionability-formextensionability-c-sys.md) | Widget extension class. It provides APIs to notify the widget provider that a widget is being created or the widget visibility status is being changed. |
+| [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c-sys.md) | Widget extension class. It provides APIs to notify the widget provider that a widget is being created or the widget visibility status is being changed. |
 <!--DelEnd-->
 
 ### 类型

@@ -29,7 +29,7 @@ Removes a wallpaper of the specified type and restores the default one.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of restore. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of restore. |
 
 **Error codes:**
 
@@ -50,6 +50,16 @@ wallpaper.restore(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessErro
         return;
     }
     console.info(`success to restore.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+ 
+wallpaper.restore(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
+    console.info(`success to restore.`);
+  }).catch((error: BusinessError) => {
+    console.error(`failed to restore. Code: ${error.code}, Message: ${error.message}`);
 });
 ```
 
@@ -94,13 +104,5 @@ Removes a wallpaper of the specified type and restores the default one.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
- 
-wallpaper.restore(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
-    console.info(`success to restore.`);
-  }).catch((error: BusinessError) => {
-    console.error(`failed to restore. Code: ${error.code}, Message: ${error.message}`);
-});
-```
+See [restore](#restore)
 

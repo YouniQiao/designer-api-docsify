@@ -28,7 +28,7 @@ You can use this method to cancel listening to the event of formOverflow.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;formInfo.OverflowRequest&gt; | No | The callback of formOverflow. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.OverflowRequest&gt; | No | The callback of formOverflow. |
 
 **Error codes:**
 

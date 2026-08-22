@@ -44,6 +44,56 @@ console.info(buf.toString('hex'));
 // 输出结果：627566666572
 ```
 
+```TypeScript
+import { buffer, JSON } from '@kit.ArkTS';
+
+let ab = new ArrayBuffer(10);
+let buf = buffer.from(ab, 0, 2);
+console.info(JSON.stringify(buf)); // {"type":"Buffer","data":[0,0]}
+```
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let ab = new ArrayBuffer(10);
+let buf = buffer.from(ab, 0, 2);
+console.info(JSON.stringify(buf)); // {"type":"Buffer","data":[0,0]}
+```
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+// 以Buffer对象类型进行创建新的Buffer对象
+let buf1 = buffer.from('buffer');
+let buf2 = buffer.from(buf1);
+
+// 以Uint8Array对象类型进行创建Buffer对象，保持对象间内存共享
+let uint8Array = new Uint8Array(10);
+let buf3 = buffer.from(uint8Array);
+buf3.fill(1);
+console.info("uint8Array:", uint8Array);
+// 输出结果：1,1,1,1,1,1,1,1,1,1
+```
+
+```TypeScript
+import { buffer, JSON } from '@kit.ArkTS';
+
+let buf = buffer.from(new String('this is a test'), 'utf8', 14);
+console.info(JSON.stringify(buf)); // {"type":"Buffer","data":[116,104,105,115,32,105,115,32,97,32,116,101,115,116]}
+```
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.from('this is a test');
+let buf2 = buffer.from('7468697320697320612074c3a97374', 'hex');
+
+console.info(buf1.toString());
+// 输出结果：this is a test
+console.info(buf2.toString());
+// 输出结果：this is a tést
+```
+
 
 ## from
 
@@ -83,13 +133,7 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 
 **示例**
 
-```TypeScript
-import { buffer, JSON } from '@kit.ArkTS';
-
-let ab = new ArrayBuffer(10);
-let buf = buffer.from(ab, 0, 2);
-console.info(JSON.stringify(buf)); // {"type":"Buffer","data":[0,0]}
-```
+参见 [from](#from)
 
 
 ## from
@@ -130,13 +174,7 @@ function from(arrayBuffer: ArrayBuffer, byteOffset?: int, length?: int): Buffer
 
 **示例**
 
-```TypeScript
-import { buffer } from '@kit.ArkTS';
-
-let ab = new ArrayBuffer(10);
-let buf = buffer.from(ab, 0, 2);
-console.info(JSON.stringify(buf)); // {"type":"Buffer","data":[0,0]}
-```
+参见 [from](#from)
 
 
 ## from
@@ -169,20 +207,7 @@ function from(buffer: Buffer | Uint8Array): Buffer
 
 **示例**
 
-```TypeScript
-import { buffer } from '@kit.ArkTS';
-
-// 以Buffer对象类型进行创建新的Buffer对象
-let buf1 = buffer.from('buffer');
-let buf2 = buffer.from(buf1);
-
-// 以Uint8Array对象类型进行创建Buffer对象，保持对象间内存共享
-let uint8Array = new Uint8Array(10);
-let buf3 = buffer.from(uint8Array);
-buf3.fill(1);
-console.info("uint8Array:", uint8Array);
-// 输出结果：1,1,1,1,1,1,1,1,1,1
-```
+参见 [from](#from)
 
 
 ## from
@@ -217,12 +242,7 @@ function from(object: Object, offsetOrEncoding: int | string, length: int): Buff
 
 **示例**
 
-```TypeScript
-import { buffer, JSON } from '@kit.ArkTS';
-
-let buf = buffer.from(new String('this is a test'), 'utf8', 14);
-console.info(JSON.stringify(buf)); // {"type":"Buffer","data":[116,104,105,115,32,105,115,32,97,32,116,101,115,116]}
-```
+参见 [from](#from)
 
 
 ## from
@@ -256,15 +276,5 @@ function from(string: String, encoding?: BufferEncoding): Buffer
 
 **示例**
 
-```TypeScript
-import { buffer } from '@kit.ArkTS';
-
-let buf1 = buffer.from('this is a test');
-let buf2 = buffer.from('7468697320697320612074c3a97374', 'hex');
-
-console.info(buf1.toString());
-// 输出结果：this is a test
-console.info(buf2.toString());
-// 输出结果：this is a tést
-```
+参见 [from](#from)
 

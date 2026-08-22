@@ -271,7 +271,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | --- | --- |
 | [ProgressListener](arkts-medialibrary-photoaccesshelper-progresslistener-t-sys.md) | 表示复制操作进度的监听类型。 |
 | [ResultListener](arkts-medialibrary-photoaccesshelper-resultlistener-t-sys.md) | 表示复制操作结果的监听类型。 |
-| [ValueType](arkts-medialibrary-photoaccesshelper-valuetype-t-sys.md) | 用于表示允许的数据字段类型，接口参数的具体类型根据其功能而定。 |
 | [ValuesBucket](arkts-medialibrary-photoaccesshelper-valuesbucket-t-sys.md) | 用于存储键值对的类型。 |
+| [ValueType](arkts-medialibrary-photoaccesshelper-valuetype-t-sys.md) | 用于表示允许的数据字段类型，接口参数的具体类型根据其功能而定。 |
 <!--DelEnd-->
 

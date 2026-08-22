@@ -30,7 +30,7 @@ Query dialing number information on SIM card.
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 | type | [ContactType](arkts-telephony-sim-contacttype-e-sys.md) | Yes | Indicates contact type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[DiallingNumbersInfo](arkts-telephony-sim-diallingnumbersinfo-i-sys.md)&gt;&gt; | Yes | Indicates the callback for getting the dialing number information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[DiallingNumbersInfo](arkts-telephony-sim-diallingnumbersinfo-i-sys.md)&gt;&gt; | Yes | Indicates the callback for getting the dialing number information. |
 
 **Error codes:**
 
@@ -54,6 +54,17 @@ import { sim } from '@kit.TelephonyKit';
 
 sim.queryIccDiallingNumbers(0, 1, (err: BusinessError, data: Array<sim.DiallingNumbersInfo>) => {
     console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.queryIccDiallingNumbers(0, 1).then((data:  Array<sim.DiallingNumbersInfo>) => {
+    console.info(`queryIccDiallingNumbers success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`queryIccDiallingNumbers failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -105,14 +116,5 @@ Query dialing number information on SIM card.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.queryIccDiallingNumbers(0, 1).then((data:  Array<sim.DiallingNumbersInfo>) => {
-    console.info(`queryIccDiallingNumbers success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`queryIccDiallingNumbers failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [queryIccDiallingNumbers](#queryiccdiallingnumbers)
 

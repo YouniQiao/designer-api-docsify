@@ -91,6 +91,23 @@ Obtains the PIP window information. This API uses a promise to return the result
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible causes: <br>1.The PiP controller has been destroyed. <br>2.The PiP window is not created or has been destroyed. |
 
+**Examples**
+
+```TypeScript
+let pipWindowInfo: PiPWindow.PiPWindowInfo | undefined = undefined;
+try {
+  let promise : Promise<PiPWindow.PiPWindowInfo> = this.pipController.getPiPWindowInfo();
+  promise.then((data) => {
+    pipWindowInfo = data;
+    console.info('Success in get pip window info. Info: ' + JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get pip window info. Cause code: ${err.code}, message: ${err.message}`);
+  });
+} catch (exception) {
+  console.error(`Failed to get pip window info. Cause code: ${exception.code}, message: ${exception.message}`);
+}
+```
+
 ## isPiPActive
 
 ```TypeScript
@@ -136,107 +153,6 @@ try {
 }
 ```
 
-## offActiveStatusChange
-
-```TypeScript
-offActiveStatusChange(callback?: Callback<boolean>): void
-```
-
-Unregister picture-in-picture active status change listener
-
-**Since:** 26.0.0
-
-<!--Device-PiPController-offActiveStatusChange(callback?: Callback<boolean>): void--><!--Device-PiPController-offActiveStatusChange(callback?: Callback<boolean>): void-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Used to handle {'activeStatusChange'} command. If not provided, all callbacks for the given event type will be removed. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. function offActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. |
-
-## offControlEvent
-
-```TypeScript
-offControlEvent(callback?: Callback<ControlEventParam>): void
-```
-
-Unregister picture-in-picture control event listener
-
-**Since:** 26.0.0
-
-<!--Device-PiPController-offControlEvent(callback?: Callback<ControlEventParam>): void--><!--Device-PiPController-offControlEvent(callback?: Callback<ControlEventParam>): void-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | No | Used to handle {'controlEvent'} command. If not provided, all callbacks for the given event type will be removed. |
-
-## offControlPanelActionEvent
-
-```TypeScript
-offControlPanelActionEvent(): void
-```
-
-Unregister picture-in-picture lifecycle event listener
-
-**Since:** 26.0.0
-
-<!--Device-PiPController-offControlPanelActionEvent(): void--><!--Device-PiPController-offControlPanelActionEvent(): void-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-## offPipWindowSizeChange
-
-```TypeScript
-offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void
-```
-
-Unregister picture-in-picture window size change event listener
-
-**Since:** 26.0.0
-
-<!--Device-PiPController-offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void--><!--Device-PiPController-offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | No | Callback used to return the picture-in-picture window size. If not provided, all callbacks for the given event type will be removed. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
-
-## offStateChange
-
-```TypeScript
-offStateChange(): void
-```
-
-Unregister picture-in-picture lifecycle state change listener.
-
-**Since:** 26.0.0
-
-<!--Device-PiPController-offStateChange(): void--><!--Device-PiPController-offStateChange(): void-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
 ## off('activeStatusChange')
 
 ```TypeScript
@@ -258,7 +174,7 @@ Unsubscribes from PiP window active status change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'activeStatusChange' | Yes | Event type. The value is fixed at **'activeStatusChange'**, indicating that the PiP window active status changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | PiP window active status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | PiP window active status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Examples**
 
@@ -290,7 +206,7 @@ Unsubscribes from PiP action events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'controlEvent' | Yes | Event type. The value is fixed at **'controlEvent'**, indicating the action event of the PiP controller. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | No | Describes the action event callback of the PiP controller. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | No | Describes the action event callback of the PiP controller. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Examples**
 
@@ -350,7 +266,7 @@ Unsubscribes from the PiP window size change event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pipWindowSizeChange' | Yes | Event type. The value is fixed at **'pipWindowSizeChange'**, indicating that the PiP window size changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | No | Callback used to return the size of the current PiP window. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | No | Callback used to return the size of the current PiP window. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
@@ -410,17 +326,17 @@ Unsubscribes from PiP state events.
 this.pipController.off('stateChange');
 ```
 
-## onActiveStatusChange
+## offActiveStatusChange
 
 ```TypeScript
-onActiveStatusChange(callback: Callback<boolean>): void
+offActiveStatusChange(callback?: Callback<boolean>): void
 ```
 
-Register picture-in-picture active status change listener.
+Unregister picture-in-picture active status change listener
 
 **Since:** 26.0.0
 
-<!--Device-PiPController-onActiveStatusChange(callback: Callback<boolean>): void--><!--Device-PiPController-onActiveStatusChange(callback: Callback<boolean>): void-End-->
+<!--Device-PiPController-offActiveStatusChange(callback?: Callback<boolean>): void--><!--Device-PiPController-offActiveStatusChange(callback?: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -428,26 +344,26 @@ Register picture-in-picture active status change listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Used to handle {'activeStatusChange'} command. True indicates that the pip is onscreen, and vice verse. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Used to handle {'activeStatusChange'} command. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. function onActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. function offActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
 | [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. |
 
-## onControlEvent
+## offControlEvent
 
 ```TypeScript
-onControlEvent(callback: Callback<ControlEventParam>): void
+offControlEvent(callback?: Callback<ControlEventParam>): void
 ```
 
-Register picture-in-picture control event listener.
+Unregister picture-in-picture control event listener
 
 **Since:** 26.0.0
 
-<!--Device-PiPController-onControlEvent(callback: Callback<ControlEventParam>): void--><!--Device-PiPController-onControlEvent(callback: Callback<ControlEventParam>): void-End-->
+<!--Device-PiPController-offControlEvent(callback?: Callback<ControlEventParam>): void--><!--Device-PiPController-offControlEvent(callback?: Callback<ControlEventParam>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -455,19 +371,33 @@ Register picture-in-picture control event listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | Yes | Used to handle {'controlEvent'} command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | No | Used to handle {'controlEvent'} command. If not provided, all callbacks for the given event type will be removed. |
 
-## onControlPanelActionEvent
+## offControlPanelActionEvent
 
 ```TypeScript
-onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void
+offControlPanelActionEvent(): void
 ```
 
-Register picture-in-picture control panel action event listener.
+Unregister picture-in-picture lifecycle event listener
 
 **Since:** 26.0.0
 
-<!--Device-PiPController-onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void--><!--Device-PiPController-onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void-End-->
+<!--Device-PiPController-offControlPanelActionEvent(): void--><!--Device-PiPController-offControlPanelActionEvent(): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+## offPipWindowSizeChange
+
+```TypeScript
+offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void
+```
+
+Unregister picture-in-picture window size change event listener
+
+**Since:** 26.0.0
+
+<!--Device-PiPController-offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void--><!--Device-PiPController-offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -475,54 +405,27 @@ Register picture-in-picture control panel action event listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ControlPanelActionEventCallback](arkts-arkui-pipwindow-controlpanelactioneventcallback-t.md) | Yes | Used to handle {'controlPanelActionEvent'} command. |
-
-## onPipWindowSizeChange
-
-```TypeScript
-onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void
-```
-
-Register picture-in-picture window size change event listener
-
-**Since:** 26.0.0
-
-<!--Device-PiPController-onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void--><!--Device-PiPController-onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | Yes | Callback used to return the picture-in-picture window size. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | No | Callback used to return the picture-in-picture window size. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: <br>The PiP controller has been destroyed. |
 
-## onStateChange
+## offStateChange
 
 ```TypeScript
-onStateChange(callback: StateChangeCallback): void
+offStateChange(): void
 ```
 
-Register picture-in-picture control state change listener.
+Unregister picture-in-picture lifecycle state change listener.
 
 **Since:** 26.0.0
 
-<!--Device-PiPController-onStateChange(callback: StateChangeCallback): void--><!--Device-PiPController-onStateChange(callback: StateChangeCallback): void-End-->
+<!--Device-PiPController-offStateChange(): void--><!--Device-PiPController-offStateChange(): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [StateChangeCallback](arkts-arkui-pipwindow-statechangecallback-t.md) | Yes | Used to handle {'stateChange'} command |
 
 ## on('activeStatusChange')
 
@@ -545,7 +448,7 @@ Subscribes to PiP window active status change events. To avoid potential memory 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'activeStatusChange' | Yes | Event type. The value is fixed at **'activeStatusChange'**, indicating that the PiP window active status changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | PiP window active status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | PiP window active status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). |
 
 **Examples**
 
@@ -577,7 +480,7 @@ Subscribes to PiP action events. To avoid potential memory leaks, you are advise
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'controlEvent' | Yes | Event type. The value is fixed at **'controlEvent'**, indicating the action event of the PiP controller. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | Yes | Action event callback of the PiP controller. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | Yes | Action event callback of the PiP controller. |
 
 **Examples**
 
@@ -685,7 +588,7 @@ Subscribes to PiP window size change events. To avoid potential memory leaks, yo
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pipWindowSizeChange' | Yes | Event type. The value is fixed at **'pipWindowSizeChange'**, indicating that the PiP window size changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | Yes | Callback used to return the size of the current PiP window. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | Yes | Callback used to return the size of the current PiP window. |
 
 **Error codes:**
 
@@ -760,6 +663,120 @@ this.pipController.on('stateChange', (state: PiPWindow.PiPState, reason: string)
   console.info('stateChange:' + curState + ' reason:' + reason);
 });
 ```
+
+## onActiveStatusChange
+
+```TypeScript
+onActiveStatusChange(callback: Callback<boolean>): void
+```
+
+Register picture-in-picture active status change listener.
+
+**Since:** 26.0.0
+
+<!--Device-PiPController-onActiveStatusChange(callback: Callback<boolean>): void--><!--Device-PiPController-onActiveStatusChange(callback: Callback<boolean>): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Used to handle {'activeStatusChange'} command. True indicates that the pip is onscreen, and vice verse. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. function onActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. |
+
+## onControlEvent
+
+```TypeScript
+onControlEvent(callback: Callback<ControlEventParam>): void
+```
+
+Register picture-in-picture control event listener.
+
+**Since:** 26.0.0
+
+<!--Device-PiPController-onControlEvent(callback: Callback<ControlEventParam>): void--><!--Device-PiPController-onControlEvent(callback: Callback<ControlEventParam>): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | Yes | Used to handle {'controlEvent'} command. |
+
+## onControlPanelActionEvent
+
+```TypeScript
+onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void
+```
+
+Register picture-in-picture control panel action event listener.
+
+**Since:** 26.0.0
+
+<!--Device-PiPController-onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void--><!--Device-PiPController-onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ControlPanelActionEventCallback](arkts-arkui-pipwindow-controlpanelactioneventcallback-t.md) | Yes | Used to handle {'controlPanelActionEvent'} command. |
+
+## onPipWindowSizeChange
+
+```TypeScript
+onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void
+```
+
+Register picture-in-picture window size change event listener
+
+**Since:** 26.0.0
+
+<!--Device-PiPController-onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void--><!--Device-PiPController-onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | Yes | Callback used to return the picture-in-picture window size. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: <br>The PiP controller has been destroyed. |
+
+## onStateChange
+
+```TypeScript
+onStateChange(callback: StateChangeCallback): void
+```
+
+Register picture-in-picture control state change listener.
+
+**Since:** 26.0.0
+
+<!--Device-PiPController-onStateChange(callback: StateChangeCallback): void--><!--Device-PiPController-onStateChange(callback: StateChangeCallback): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [StateChangeCallback](arkts-arkui-pipwindow-statechangecallback-t.md) | Yes | Used to handle {'stateChange'} command |
 
 ## setAutoStartEnabled
 

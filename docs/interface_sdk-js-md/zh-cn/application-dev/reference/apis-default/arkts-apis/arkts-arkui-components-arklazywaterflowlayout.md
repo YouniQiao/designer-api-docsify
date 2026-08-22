@@ -18,6 +18,6 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [LazyVWaterFlowLayoutAttribute](arkts-arkuicomponentsarklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) | LazyV WaterFlowLayout属性 |
-| [LazyWaterFlowLayoutAttribute](arkts-arkuicomponentsarklazywaterflowlayout-lazywaterflowlayoutattribute-i.md) | 懒加载瀑布流布局属性 |
+| [LazyVWaterFlowLayoutAttribute](arkts-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) | LazyV WaterFlowLayout属性 |
+| [LazyWaterFlowLayoutAttribute](arkts-arkui-components-arklazywaterflowlayout-lazywaterflowlayoutattribute-i.md) | 懒加载瀑布流布局属性 |
 

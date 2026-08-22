@@ -42,7 +42,7 @@ Generates a message digest. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the message digest obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the message digest obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -65,6 +65,19 @@ function mdByCallback() {
       console.info('[Callback]: MD len: ' + md.getMdLength());
     });
   });
+}
+```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+async function mdByPromise() {
+  let md = cryptoFramework.createMd('SHA256');
+  await md.update({ data: new Uint8Array(buffer.from('mdTestMessage', 'utf-8').buffer) });
+  let mdOutput = await md.digest();
+  console.info('[Promise]: MD result: ' + mdOutput.data);
+  console.info('[Promise]: MD len: ' + md.getMdLength());
 }
 ```
 
@@ -103,18 +116,7 @@ Generates a message digest. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-async function mdByPromise() {
-  let md = cryptoFramework.createMd('SHA256');
-  await md.update({ data: new Uint8Array(buffer.from('mdTestMessage', 'utf-8').buffer) });
-  let mdOutput = await md.digest();
-  console.info('[Promise]: MD result: ' + mdOutput.data);
-  console.info('[Promise]: MD len: ' + md.getMdLength());
-}
-```
+See [digest](#digest)
 
 ## digestSync
 
@@ -242,7 +244,7 @@ Updates the message digest status. This API uses an asynchronous callback to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | input | DataBlob | Yes | Data to pass in. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

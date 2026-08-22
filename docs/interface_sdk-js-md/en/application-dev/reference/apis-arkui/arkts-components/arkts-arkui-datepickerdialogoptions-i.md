@@ -161,6 +161,30 @@ Options for customizing the background effect.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## cancelButtonStyle
+
+```TypeScript
+cancelButtonStyle?: PickerDialogButtonStyle
+```
+
+Style of the cancel button.
+
+**NOTE：**
+
+1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**. If both are set to **true**, the **primary** field will remain at the default value of **false**. 2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition, even if the button style is set to ROUNDED_RECTANGLE, the displayed effect is still a capsule button (Capsule).
+
+**Type:** PickerDialogButtonStyle
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DatePickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle--><!--Device-DatePickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## canLoop
 
 ```TypeScript
@@ -188,30 +212,6 @@ Default value: **true**
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-DatePickerDialogOptions-canLoop?: boolean--><!--Device-DatePickerDialogOptions-canLoop?: boolean-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## cancelButtonStyle
-
-```TypeScript
-cancelButtonStyle?: PickerDialogButtonStyle
-```
-
-Style of the cancel button.
-
-**NOTE：**
-
-1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**. If both are set to **true**, the **primary** field will remain at the default value of **false**. 2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition, even if the button style is set to ROUNDED_RECTANGLE, the displayed effect is still a capsule button (Capsule).
-
-**Type:** PickerDialogButtonStyle
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DatePickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle--><!--Device-DatePickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -29,7 +29,7 @@ Get the international mobile subscriber ID.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Indicates the callback for getting the international mobile subscriber ID. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Indicates the callback for getting the international mobile subscriber ID. |
 
 **Error codes:**
 
@@ -52,6 +52,17 @@ import { sim } from '@kit.TelephonyKit';
 
 sim.getIMSI(0, (err: BusinessError, data: string) => {
     console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.getIMSI(0).then((data: string) => {
+    console.info(`getIMSI success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getIMSI failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -101,14 +112,5 @@ Get the international mobile subscriber ID.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getIMSI(0).then((data: string) => {
-    console.info(`getIMSI success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getIMSI failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getIMSI](#getimsi)
 

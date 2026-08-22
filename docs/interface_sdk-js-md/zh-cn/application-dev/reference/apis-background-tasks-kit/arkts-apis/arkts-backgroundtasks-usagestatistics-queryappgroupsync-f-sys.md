@@ -53,6 +53,12 @@ import { usageStatistics } from '@kit.BackgroundTasksKit';
 let priorityGroup: number = usageStatistics.queryAppGroupSync();
 ```
 
+```TypeScript
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+
+let priorityGroup: number = usageStatistics.queryAppGroupSync('com.ohos.camera');
+```
+
 
 ## queryAppGroupSync
 
@@ -102,9 +108,5 @@ function queryAppGroupSync(bundleName: string): int
 
 **示例**
 
-```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-let priorityGroup: number = usageStatistics.queryAppGroupSync('com.ohos.camera');
-```
+参见 [queryAppGroupSync](#queryappgroupsync)
 

@@ -27,7 +27,7 @@ Obtains the ID of the wallpaper of the specified type. Returns an integer greate
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | the callback of getId. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | the callback of getId. |
 
 **Examples**
 
@@ -40,6 +40,16 @@ wallpaper.getId(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessError,
         return;
     }
     console.info(`success to getId: ${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+wallpaper.getId(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: Number) => {
+    console.info(`success to getId: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`failed to getId because: ${JSON.stringify(error)}`);
 });
 ```
 
@@ -74,13 +84,5 @@ Obtains the ID of the wallpaper of the specified type. Returns an integer greate
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-wallpaper.getId(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: Number) => {
-    console.info(`success to getId: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`failed to getId because: ${JSON.stringify(error)}`);
-});
-```
+See [getId](#getid)
 

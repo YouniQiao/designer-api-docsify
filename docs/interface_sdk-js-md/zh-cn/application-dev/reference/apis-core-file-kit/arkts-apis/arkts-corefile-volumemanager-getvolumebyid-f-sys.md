@@ -42,6 +42,68 @@ function getVolumeById(volumeId: string, callback: AsyncCallback<Volume>): void
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// volumeId可通过getAllVolumes()接口获取
+let volumeId: string = "";
+volumeManager.getVolumeById(volumeId).then((volume: volumeManager.Volume) => {
+  console.info("getVolumeById successfully:" + JSON.stringify(volume));
+}).catch((error: BusinessError) => {
+  console.error(`Failed to getVolumeById. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// volumeId可通过getAllVolumes()接口获取
+let volumeId: string = "";
+volumeManager.getVolumeById(volumeId).then((volume: volumeManager.Volume) => {
+  console.info("getVolumeById successfully:" + JSON.stringify(volume));
+}).catch((error: BusinessError): void => {
+  console.error(`Failed to getVolumeById. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// volumeId可通过getAllVolumes()接口获取
+let volumeId: string = "";
+volumeManager.getVolumeById(volumeId, (error: BusinessError, volume: volumeManager.Volume) => {
+  if (error) {
+    console.error(`getVolumeById failed, code is: ${error.code}, message is: ${error.message}`);
+    return;
+  }
+  // 获取到卷设备信息
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// volumeId可通过getAllVolumes()接口获取
+let volumeId: string = "";
+volumeManager.getVolumeById(volumeId, (error: BusinessError | null, volume: volumeManager.Volume | undefined) => {
+  if (error) {
+    console.error(`getVolumeById failed, code is: ${error.code}, message is: ${error.message}`);
+    return;
+  }
+  // 获取到卷设备信息
+});
+```
+
 
 ## getVolumeById
 
@@ -83,4 +145,8 @@ function getVolumeById(volumeId: string): Promise<Volume>
 | 13600001 | IPC error. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
+
+**示例**
+
+参见 [getVolumeById](#getvolumebyid)
 

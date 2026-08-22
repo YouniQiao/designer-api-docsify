@@ -52,7 +52,45 @@ function queryAppGroup(callback: AsyncCallback<int>): void
 import { BusinessError } from '@kit.BasicServicesKit';
 import { usageStatistics } from '@kit.BackgroundTasksKit';
 
+usageStatistics.queryAppGroup().then((res: number) => {
+  console.info('BUNDLE_ACTIVE queryAppGroup promise succeeded. result: ' + JSON.stringify(res));
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE queryAppGroup promise failed. code is: ' + err.code + ',message is: ' + err.message);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+
 usageStatistics.queryAppGroup((err: BusinessError, res: number) => {
+  if(err) {
+    console.error('BUNDLE_ACTIVE queryAppGroup callback failed. code is: ' + err.code + ',message is: ' + err.message);
+  } else {
+    console.info('BUNDLE_ACTIVE queryAppGroup callback succeeded. result: ' + JSON.stringify(res));
+  }
+});
+```
+
+```TypeScript
+// 有bundleName的promise
+import { BusinessError } from '@kit.BasicServicesKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+
+let bundleName: string = 'com.ohos.camera';
+usageStatistics.queryAppGroup(bundleName).then((res: number) => {
+  console.info('BUNDLE_ACTIVE queryAppGroup promise succeeded. result: ' + JSON.stringify(res));
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE queryAppGroup promise failed. code is: ' + err.code + ',message is: ' + err.message);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+
+let bundleName: string = 'com.ohos.camera';
+usageStatistics.queryAppGroup(bundleName, (err: BusinessError, res: number) => {
   if(err) {
     console.error('BUNDLE_ACTIVE queryAppGroup callback failed. code is: ' + err.code + ',message is: ' + err.message);
   } else {
@@ -103,16 +141,7 @@ function queryAppGroup(): Promise<int>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-usageStatistics.queryAppGroup().then((res: number) => {
-  console.info('BUNDLE_ACTIVE queryAppGroup promise succeeded. result: ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryAppGroup promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
+参见 [queryAppGroup](#queryappgroup)
 
 
 ## queryAppGroup
@@ -158,19 +187,7 @@ function queryAppGroup(bundleName: string, callback: AsyncCallback<int>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-let bundleName: string = 'com.ohos.camera';
-usageStatistics.queryAppGroup(bundleName, (err: BusinessError, res: number) => {
-  if(err) {
-    console.error('BUNDLE_ACTIVE queryAppGroup callback failed. code is: ' + err.code + ',message is: ' + err.message);
-  } else {
-    console.info('BUNDLE_ACTIVE queryAppGroup callback succeeded. result: ' + JSON.stringify(res));
-  }
-});
-```
+参见 [queryAppGroup](#queryappgroup)
 
 
 ## queryAppGroup
@@ -221,16 +238,5 @@ function queryAppGroup(bundleName: string): Promise<int>
 
 **示例**
 
-```TypeScript
-// 有bundleName的promise
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-let bundleName: string = 'com.ohos.camera';
-usageStatistics.queryAppGroup(bundleName).then((res: number) => {
-  console.info('BUNDLE_ACTIVE queryAppGroup promise succeeded. result: ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryAppGroup promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
+参见 [queryAppGroup](#queryappgroup)
 

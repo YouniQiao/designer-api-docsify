@@ -48,6 +48,23 @@ Obtains the range of white balance values in manual white balance mode.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 19 |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getWhiteBalanceRange(session: camera.PhotoSession | camera.VideoSession): Array<number> {
+  let range: Array<number> = [];
+  try {
+    range = session.getWhiteBalanceRange();
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The getWhiteBalanceRange call failed. error code: ${err.code}`);
+  }
+  return range;
+}
+```
+
 ## isWhiteBalanceGainsSupported
 
 ```TypeScript
@@ -116,4 +133,22 @@ Checks whether a white balance mode is supported.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 19 |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isWhiteBalanceModeSupported(session: camera.PhotoSession | camera.VideoSession): boolean {
+  let status: boolean = false;
+  try {
+  let mode: camera.WhiteBalanceMode = camera.WhiteBalanceMode.DAYLIGHT;
+    status = session.isWhiteBalanceModeSupported(mode);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The isWhiteBalanceModeSupported call failed. error code: ${err.code}`);
+  }
+  return status;
+}
+```
 

@@ -57,6 +57,19 @@ print.updatePrinterState(printerId, state, (err: BusinessError) => {
 })
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+
+let printerId : string = '1212';
+let state : print.PrinterState = print.PrinterState.PRINTER_CONNECTED;
+print.updatePrinterState(printerId, state).then(() => {
+    console.info('update printer state success');
+}).catch((error: BusinessError) => {
+    console.error('update printer state error : ' + JSON.stringify(error));
+})
+```
+
 
 ## updatePrinterState
 
@@ -99,16 +112,5 @@ function updatePrinterState(printerId: string, state: PrinterState): Promise<voi
 
 **示例**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let printerId : string = '1212';
-let state : print.PrinterState = print.PrinterState.PRINTER_CONNECTED;
-print.updatePrinterState(printerId, state).then(() => {
-    console.info('update printer state success');
-}).catch((error: BusinessError) => {
-    console.error('update printer state error : ' + JSON.stringify(error));
-})
-```
+参见 [updatePrinterState](#updateprinterstate)
 

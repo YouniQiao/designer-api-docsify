@@ -46,6 +46,45 @@ Obtain a Json file that describes local capabilities.
 import { BusinessError } from '@kit.BasicServicesKit';
 import { fileIo as fs, backup } from '@kit.CoreFileKit';
 
+try {
+  backup.getLocalCapabilities((err: BusinessError, fileData: backup.FileData) => {
+    if (err) {
+      console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('getLocalCapabilities success');
+    console.info('fileData info:' + fileData.fd);
+    fs.closeSync(fileData.fd);
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+The capability file can be obtained by using fileIo.stat of the @ohos.file.fs module. The following is an example of the capability file.
+
+```TypeScript
+{
+ "backupVersion" : "16.0",
+ "bundleInfos" :[{
+   "allToBackup" : true,
+   "extensionName" : "BackupExtensionAbility",
+   "name" : "com.example.hiworld",
+   "needToInstall" : false,
+   "spaceOccupied" : 0,
+   "versionCode" : 1000000,
+   "versionName" : "1.0.0"
+   }],
+ "deviceType" : "default",
+ "systemFullName" : "OpenHarmony-4.0.0.0"
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo as fs, backup } from '@kit.CoreFileKit';
+
 async function getLocalCapabilities() {
   try {
     let fileData = await backup.getLocalCapabilities();
@@ -65,6 +104,402 @@ The capability file can be obtained by using fileIo.stat of the @ohos.file.fs mo
 {
  "backupVersion" : "16.0",
  "bundleInfos" :[{
+   "allToBackup" : true,
+   "extensionName" : "BackupExtensionAbility",
+   "name" : "com.example.hiworld",
+   "needToInstall" : false,
+   "spaceOccupied" : 0,
+   "versionCode" : 1000000,
+   "versionName" : "1.0.0"
+   }],
+ "deviceType" : "default",
+ "systemFullName" : "OpenHarmony-4.0.0.0"
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo as fs, backup } from '@kit.CoreFileKit';
+
+async function getLocalCapabilities() {
+  try {
+    let backupApps: backup.IncrementalBackupTime[] = [{
+      bundleName: "com.example.hiworld",
+      lastIncrementalTime: 1700107870 // Time of the last incremental backup.
+    }];
+    let fileData = await backup.getLocalCapabilities(backupApps);
+    console.info('getLocalCapabilities success');
+    console.info('fileData info:' + fileData.fd);
+    fs.closeSync(fileData.fd);
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo as fs, backup } from '@kit.CoreFileKit';
+
+interface test { // Parse the capability file.
+  bundleInfos: [];
+  deviceType: string;
+  systemFullName: string;
+}
+
+interface BundleInfo { // Obtain the local capability information of an application.
+  name: string;
+  appIndex: number;
+  versionCode: number;
+  versionName: string;
+  spaceOccupied: number;
+  allToBackup: boolean;
+  increSpaceOccupied?: number;
+  fullBackupOnly: boolean;
+  extensionName: string;
+  restoreDeps: string;
+  supportScene: string;
+  extraInfo: object;
+}
+
+let generalCallbacks: backup.GeneralCallbacks = { // Define general callbacks to be used in the backup or restore process.
+  onFileReady: (err: BusinessError, file: backup.File) => {
+    if (err) {
+      console.error(`onFileReady failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('onFileReady success');
+    fs.closeSync(file.fd);
+  },
+  onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
+    if (err) {
+      console.error(`onBundleBegin failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('onBundleBegin success');
+  },
+  onBundleEnd: (err: BusinessError<string|void>, bundleName: string) => {
+    if (err) {
+      console.error(`onBundleEnd failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('onBundleEnd success');
+  },
+  onAllBundlesEnd: (err: BusinessError) => {
+    if (err) {
+      console.error(`onAllBundlesEnd failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('onAllBundlesEnd success');
+  },
+  onBackupServiceDied: () => {
+    console.info('service died');
+  },
+  onResultReport: (bundleName: string, result: string) => {
+    console.info(`onResultReport success, bundleName: ${bundleName}, result: ${result}`);
+  },
+  onProcess: (bundleName: string, process: string) => {
+    console.info(`onProcess success, bundleName: ${bundleName}, process: ${process}`);
+  }
+};
+async function getLocalCapabilitiesTest() {
+  let sessionBackup = new backup.SessionBackup(generalCallbacks); // Create a backup process.
+  let basePath = '/data/storage/el2/base/backup'; 
+  let path = basePath + '/localCapabilities.json'; // Local path for storing capability files.
+  try {
+    let fileData = await sessionBackup.getLocalCapabilities(); // Obtain the local capability file.
+    if (fileData) {
+      console.info('getLocalCapabilities success');
+      console.info('fileData info:' + fileData.fd);
+      if (!fs.accessSync(basePath)) {
+        fs.mkdirSync(basePath);
+        console.info('create success' + basePath);
+      }
+      fs.copyFileSync(fileData.fd, path); // Save the obtained local capability file to the local host.
+      fs.closeSync(fileData.fd);
+    }
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
+  }
+  let data = fs.readTextSync(path, 'utf8'); // Obtain information from the local capability file.
+  try {
+    const jsonsObj: test | null = JSON.parse(data); // Parse the local capability file and print some information.
+    if (jsonsObj) {
+      const infos:BundleInfo [] = jsonsObj.bundleInfos;
+      for (let i = 0; i < infos.length; i++) {
+        console.info('name: ' + infos[i].name);
+        console.info('appIndex: ' + infos[i].appIndex);
+        console.info('allToBackup: ' + infos[i].allToBackup);
+      }
+      const systemFullName: string = jsonsObj.systemFullName;
+      console.info('systemFullName: ' + systemFullName);
+      const deviceType: string = jsonsObj.deviceType;
+      console.info('deviceType: ' + deviceType);
+    }
+  } catch (error) {
+    console.error(`parse failed. message: ${error.message}`);
+  }
+}
+```
+
+The capability file can be obtained by using fileIo.stat of the @ohos.file.fs module. The following is an example of the capability file.
+
+```TypeScript
+{
+ "backupVersion" : "16.0",
+ "bundleInfos" :[{
+   "allToBackup" : true,
+   "extensionName" : "BackupExtensionAbility",
+   "name" : "com.example.hiworld",
+   "needToInstall" : false,
+   "spaceOccupied" : 0,
+   "versionCode" : 1000000,
+   "versionName" : "1.0.0"
+   }],
+ "deviceType" : "default",
+ "systemFullName" : "OpenHarmony-4.0.0.0"
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo as fs, backup } from '@kit.CoreFileKit';
+
+interface test { // Parse the capability file.
+  bundleInfos: [];
+  deviceType: string;
+  systemFullName: string;
+}
+
+interface BundleInfo { // Obtain the local capability information of an application.
+  name: string;
+  appIndex: number;
+  versionCode: number;
+  versionName: string;
+  spaceOccupied: number;
+  allToBackup: boolean;
+  increSpaceOccupied?: number;
+  fullBackupOnly: boolean;
+  extensionName: string;
+  restoreDeps: string;
+  supportScene: string;
+  extraInfo: object;
+}
+
+let generalCallbacks: backup.GeneralCallbacks = { // Define general callbacks to be used in the backup or restore process.
+  onFileReady: (err: BusinessError, file: backup.File) => {
+    if (err) {
+      console.error(`onFileReady failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('onFileReady success');
+    fs.closeSync(file.fd);
+  },
+  onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
+    if (err) {
+      console.error(`onBundleBegin failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('onBundleBegin success');
+  },
+  onBundleEnd: (err: BusinessError<string|void>, bundleName: string) => {
+    if (err) {
+      console.error(`onBundleEnd failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('onBundleEnd success');
+  },
+  onAllBundlesEnd: (err: BusinessError) => {
+    if (err) {
+      console.error(`onAllBundlesEnd failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('onAllBundlesEnd success');
+  },
+  onBackupServiceDied: () => {
+    console.info('service died');
+  },
+  onResultReport: (bundleName: string, result: string) => {
+    console.info(`onResultReport success, bundleName: ${bundleName}, result: ${result}`);
+  },
+  onProcess: (bundleName: string, process: string) => {
+    console.info(`onProcess success, bundleName: ${bundleName}, process: ${process}`);
+  }
+};
+async function getLocalCapabilitiesTest() {
+  let sessionRestore = new backup.SessionRestore(generalCallbacks); // Create a restore process.
+  let basePath = '/data/storage/el2/base/backup';
+  let path = basePath + '/localCapabilities.json'; // Local path for storing capability files.
+  try {
+    let fileData = await sessionRestore.getLocalCapabilities(); // Obtain the local capability file.
+    if (fileData) {
+      console.info('getLocalCapabilities success');
+      console.info('fileData info:' + fileData.fd);
+      if (!fs.accessSync(basePath)) {
+        fs.mkdirSync(basePath);
+        console.info('create success' + basePath);
+      }
+      fs.copyFileSync(fileData.fd, path); // Save the obtained local capability file to the local host.
+      fs.closeSync(fileData.fd);
+    }
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`getLocalCapabilities failed with code: ${err.code}, message: ${err.message}`);
+  }
+  let data = fs.readTextSync(path, 'utf8'); // Obtain information from the local capability file.
+  try {
+    const jsonsObj: test | null = JSON.parse(data); // Parse the local capability file and print some information.
+    if (jsonsObj) {
+      const infos:BundleInfo [] = jsonsObj.bundleInfos;
+      for (let i = 0; i < infos.length; i++) {
+        console.info('name: ' + infos[i].name);
+        console.info('appIndex: ' + infos[i].appIndex);
+        console.info('allToBackup: ' + infos[i].allToBackup);
+      }
+      const systemFullName: string = jsonsObj.systemFullName;
+      console.info('systemFullName: ' + systemFullName);
+      const deviceType: string = jsonsObj.deviceType;
+      console.info('deviceType: ' + deviceType);
+    }
+  } catch (error) {
+    console.error(`parse failed with code: ${error.code}, message: ${error.message}`);
+  }
+}
+```
+
+The capability file can be obtained by using fileIo.stat of the @ohos.file.fs module. The following is an example of the capability file.
+
+```TypeScript
+{
+ "backupVersion" : "16.0",
+ "bundleInfos" :[{
+   "allToBackup" : true,
+   "extensionName" : "BackupExtensionAbility",
+   "name" : "com.example.hiworld",
+   "needToInstall" : false,
+   "spaceOccupied" : 0,
+   "versionCode" : 1000000,
+   "versionName" : "1.0.0"
+   }],
+ "deviceType" : "default",
+ "systemFullName" : "OpenHarmony-4.0.0.0"
+}
+```
+
+```TypeScript
+import { fileIo as fs, backup} from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+interface test { // Parse the capability file.
+  bundleInfos: [];
+  deviceType: string;
+  systemFullName: string;
+}
+
+interface BundleInfo { // Obtain the local capability information of an application.
+  name: string;
+  appIndex: number;
+  versionCode: number;
+  versionName: string;
+  spaceOccupied: number;
+  allToBackup: boolean;
+  increSpaceOccupied?: number;
+  fullBackupOnly: boolean;
+  extensionName: string;
+  restoreDeps: string;
+  supportScene: string;
+  extraInfo: object;
+}
+
+let generalCallbacks: backup.GeneralCallbacks = { // Define general callbacks to be used in the backup or restore process.
+  onFileReady: (err: BusinessError, file: backup.File) => {
+    if (err) {
+      console.error(`onFileReady failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('onFileReady success');
+    fs.closeSync(file.fd);
+  },
+  onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
+    if (err) {
+      console.error(`onBundleBegin failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('onBundleBegin success');
+  },
+  onBundleEnd: (err: BusinessError<string|void>, bundleName: string) => {
+    if (err) {
+      console.error(`onBundleEnd failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('onBundleEnd success');
+  },
+  onAllBundlesEnd: (err: BusinessError) => {
+    if (err) {
+      console.error(`onAllBundlesEnd failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('onAllBundlesEnd success');
+  },
+  onBackupServiceDied: () => {
+    console.info('service died');
+  },
+  onResultReport: (bundleName: string, result: string) => {
+    console.info(`onResultReport success, bundleName: ${bundleName}, result: ${result}`);
+  },
+  onProcess: (bundleName: string, process: string) => {
+    console.info(`onProcess success, bundleName: ${bundleName}, process: ${process}`);
+  }
+};
+async function getLocalCapabilitiesTest() {
+  let incrementalBackupSession = new backup.IncrementalBackupSession(generalCallbacks); // Create a session for an incremental backup.
+  let basePath = '/data/storage/el2/base/backup';
+  let path = basePath + '/localCapabilities.json'; // Local path for storing capability files.
+  try {
+    let fileData = await incrementalBackupSession.getLocalCapabilities(); // Obtain the local capability file.
+    if (fileData) {
+      console.info('getLocalCapabilities success');
+      console.info('fileData info:' + fileData.fd);
+      if (!fs.accessSync(basePath)) {
+        fs.mkdirSync(basePath);
+        console.info('create success' + basePath);
+      }
+      fs.copyFileSync(fileData.fd, path); // Save the obtained local capability file to the local host.
+      fs.closeSync(fileData.fd);
+    }
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
+  }
+  let data = fs.readTextSync(path, 'utf8'); // Obtain information from the local capability file.
+  try {
+    const jsonsObj: test | null = JSON.parse(data); // Parse the local capability file and print some information.
+    if (jsonsObj) {
+      const infos:BundleInfo [] = jsonsObj.bundleInfos;
+      for (let i = 0; i < infos.length; i++) {
+        console.info('name: ' + infos[i].name);
+        console.info('appIndex: ' + infos[i].appIndex);
+        console.info('allToBackup: ' + infos[i].allToBackup);
+      }
+      const systemFullName: string = jsonsObj.systemFullName;
+      console.info('systemFullName: ' + systemFullName);
+      const deviceType: string = jsonsObj.deviceType;
+      console.info('deviceType: ' + deviceType);
+    }
+  } catch (error) {
+    console.error(`parse failed. Code: ${error.code}, message: ${error.message}`);
+  }
+}
+```
+
+The capability file can be obtained by using fileIo.stat of the @ohos.file.fs module. The following is an example of the capability file.
+
+```TypeScript
+{
+ "backupVersion" : "16.0",
+ "bundleInfos" : [{
    "allToBackup" : true,
    "extensionName" : "BackupExtensionAbility",
    "name" : "com.example.hiworld",
@@ -101,7 +536,7 @@ Obtain a Json file that describes local capabilities.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | Yes | A callback method, the argument FileData will holding all the local capabilities. The returned file is a temporal file that will be deleted automatically when closed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | Yes | A callback method, the argument FileData will holding all the local capabilities. The returned file is a temporal file that will be deleted automatically when closed. |
 
 **Error codes:**
 
@@ -115,44 +550,7 @@ Obtain a Json file that describes local capabilities.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs, backup } from '@kit.CoreFileKit';
-
-try {
-  backup.getLocalCapabilities((err: BusinessError, fileData: backup.FileData) => {
-    if (err) {
-      console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('getLocalCapabilities success');
-    console.info('fileData info:' + fileData.fd);
-    fs.closeSync(fileData.fd);
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-The capability file can be obtained by using fileIo.stat of the @ohos.file.fs module. The following is an example of the capability file.
-
-```TypeScript
-{
- "backupVersion" : "16.0",
- "bundleInfos" :[{
-   "allToBackup" : true,
-   "extensionName" : "BackupExtensionAbility",
-   "name" : "com.example.hiworld",
-   "needToInstall" : false,
-   "spaceOccupied" : 0,
-   "versionCode" : 1000000,
-   "versionName" : "1.0.0"
-   }],
- "deviceType" : "default",
- "systemFullName" : "OpenHarmony-4.0.0.0"
-}
-```
+See [getLocalCapabilities](#getlocalcapabilities)
 
 
 ## getLocalCapabilities
@@ -200,24 +598,5 @@ Obtain a json file that describes local capabilities.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs, backup } from '@kit.CoreFileKit';
-
-async function getLocalCapabilities() {
-  try {
-    let backupApps: backup.IncrementalBackupTime[] = [{
-      bundleName: "com.example.hiworld",
-      lastIncrementalTime: 1700107870 // Time of the last incremental backup.
-    }];
-    let fileData = await backup.getLocalCapabilities(backupApps);
-    console.info('getLocalCapabilities success');
-    console.info('fileData info:' + fileData.fd);
-    fs.closeSync(fileData.fd);
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```
+See [getLocalCapabilities](#getlocalcapabilities)
 

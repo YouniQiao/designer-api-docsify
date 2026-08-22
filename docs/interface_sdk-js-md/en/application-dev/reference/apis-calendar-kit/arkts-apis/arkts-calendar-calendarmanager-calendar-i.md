@@ -68,6 +68,32 @@ const event: calendarManager.Event = {
   startTime: date.getTime(),
   endTime: date.getTime() + 60 * 60 * 1000
 };
+calendarMgr?.getCalendar().then((data: calendarManager.Calendar) => {
+  console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
+  calendar = data;
+  calendar.addEvent(event, (err: BusinessError, data: number): void => {
+    if (err) {
+      console.error(`Failed to addEvent. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info(`Succeeded in adding event, id -> ${data}`);
+    }
+  });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { calendarMgr } from '../entryability/EntryAbility';
+
+let calendar : calendarManager.Calendar | undefined = undefined;
+const date = new Date();
+const event: calendarManager.Event = {
+  type: calendarManager.EventType.NORMAL,
+  startTime: date.getTime(),
+  endTime: date.getTime() + 60 * 60 * 1000
+};
 calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => {
   if (err) {
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
@@ -108,7 +134,7 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | Event | Yes | Event object. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the event ID. The event ID is the unique identifier of an event and is the auto-increment primary key of the database. If the value is less than 0, the event creation fails; if the value is greater than 0, the event creation succeeds. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the event ID. The event ID is the unique identifier of an event and is the auto-increment primary key of the database. If the value is less than 0, the event creation fails; if the value is greater than 0, the event creation succeeds. |
 
 **Error codes:**
 
@@ -119,31 +145,7 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { calendarMgr } from '../entryability/EntryAbility';
-
-let calendar : calendarManager.Calendar | undefined = undefined;
-const date = new Date();
-const event: calendarManager.Event = {
-  type: calendarManager.EventType.NORMAL,
-  startTime: date.getTime(),
-  endTime: date.getTime() + 60 * 60 * 1000
-};
-calendarMgr?.getCalendar().then((data: calendarManager.Calendar) => {
-  console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
-  calendar = data;
-  calendar.addEvent(event, (err: BusinessError, data: number): void => {
-    if (err) {
-      console.error(`Failed to addEvent. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info(`Succeeded in adding event, id -> ${data}`);
-    }
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [addEvent](#addevent)
 
 ## addEvents
 
@@ -208,6 +210,41 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
   } else {
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
     calendar = data;
+    calendar.addEvents(events, (err: BusinessError) => {
+      if (err) {
+        console.error(`Failed to add events. Code: ${err.code}, message: ${err.message}`);
+      } else {
+        console.info("Succeeded in adding events");
+      }
+    });
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { calendarMgr } from '../entryability/EntryAbility';
+
+let calendar : calendarManager.Calendar | undefined = undefined;
+const date = new Date();
+const events: calendarManager.Event[] = [
+  {
+    type: calendarManager.EventType.NORMAL,
+    startTime: date.getTime(),
+    endTime: date.getTime() + 60 * 60 * 1000
+  },
+  {
+    type: calendarManager.EventType.NORMAL,
+    startTime: date.getTime(),
+    endTime: date.getTime() + 60 * 60 * 1000
+  }
+];
+calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => {
+  if (err) {
+    console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
+    calendar = data;
     calendar.addEvents(events).then(() => {
       console.info("Succeeded in adding events");
     }).catch((err: BusinessError) => {
@@ -240,7 +277,7 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | events | Event[] | Yes | Array of Event objects. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -251,40 +288,7 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { calendarMgr } from '../entryability/EntryAbility';
-
-let calendar : calendarManager.Calendar | undefined = undefined;
-const date = new Date();
-const events: calendarManager.Event[] = [
-  {
-    type: calendarManager.EventType.NORMAL,
-    startTime: date.getTime(),
-    endTime: date.getTime() + 60 * 60 * 1000
-  },
-  {
-    type: calendarManager.EventType.NORMAL,
-    startTime: date.getTime(),
-    endTime: date.getTime() + 60 * 60 * 1000
-  }
-];
-calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => {
-  if (err) {
-    console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
-    calendar = data;
-    calendar.addEvents(events, (err: BusinessError) => {
-      if (err) {
-        console.error(`Failed to add events. Code: ${err.code}, message: ${err.message}`);
-      } else {
-        console.info("Succeeded in adding events");
-      }
-    });
-  }
-});
-```
+See [addEvents](#addevents)
 
 ## deleteEvent
 
@@ -313,6 +317,41 @@ Deletes an event with the specified ID. This API uses a promise to return the re
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { calendarMgr } from '../entryability/EntryAbility';
+
+let calendar : calendarManager.Calendar | undefined = undefined;
+let id: number = 0;
+const date = new Date();
+const event: calendarManager.Event = {
+  type: calendarManager.EventType.NORMAL,
+  startTime: date.getTime(),
+  endTime: date.getTime() + 60 * 60 * 1000
+};
+calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calendar) => {
+  if (err) {
+    console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
+    calendar = data;
+    calendar.addEvent(event).then((data: number) => {
+      console.info(`Succeeded in adding event, id -> ${data}`);
+      id = data;
+      calendar?.deleteEvent(id, (err: BusinessError) => {
+        if (err) {
+          console.error(`Failed to delete event. Code: ${err.code}, message: ${err.message}`);
+        } else {
+          console.info(`Succeeded in deleting event`);
+        }
+      });
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -368,44 +407,11 @@ Deletes an event with the specified ID. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | number | Yes | Event ID, which is the unique identifier of an event. If the input event ID is an integer, the event is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { calendarMgr } from '../entryability/EntryAbility';
-
-let calendar : calendarManager.Calendar | undefined = undefined;
-let id: number = 0;
-const date = new Date();
-const event: calendarManager.Event = {
-  type: calendarManager.EventType.NORMAL,
-  startTime: date.getTime(),
-  endTime: date.getTime() + 60 * 60 * 1000
-};
-calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calendar) => {
-  if (err) {
-    console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
-    calendar = data;
-    calendar.addEvent(event).then((data: number) => {
-      console.info(`Succeeded in adding event, id -> ${data}`);
-      id = data;
-      calendar?.deleteEvent(id, (err: BusinessError) => {
-        if (err) {
-          console.error(`Failed to delete event. Code: ${err.code}, message: ${err.message}`);
-        } else {
-          console.info(`Succeeded in deleting event`);
-        }
-      });
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
-    });
-  }
-});
-```
+See [deleteEvent](#deleteevent)
 
 ## deleteEvents
 
@@ -434,6 +440,53 @@ Deletes a batch of events with the specified IDs. This API uses a promise to ret
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { calendarMgr } from '../entryability/EntryAbility';
+
+let calendar : calendarManager.Calendar | undefined = undefined;
+let id1: number = 0;
+let id2: number = 0;
+const date = new Date();
+const event1: calendarManager.Event = {
+  type: calendarManager.EventType.NORMAL,
+  startTime: date.getTime(),
+  endTime: date.getTime() + 60 * 60 * 1000
+};
+const event2: calendarManager.Event = {
+  type: calendarManager.EventType.IMPORTANT,
+  startTime: date.getTime(),
+  endTime: date.getTime() + 60 * 60 * 1000
+};
+calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calendar) => {
+  if (err) {
+    console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
+    calendar = data;
+    await calendar.addEvent(event1).then((data: number) => {
+      console.info(`Succeeded in adding event, id -> ${data}`);
+      id1 = data;
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
+    });
+    await calendar.addEvent(event2).then((data: number) => {
+      console.info(`Succeeded in adding event, id -> ${data}`);
+      id2 = data;
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
+    });
+    calendar.deleteEvents([id1, id2], (err: BusinessError) => {
+      if (err) {
+        console.error(`Failed to delete events. Code: ${err.code}, message: ${err.message}`);
+      } else {
+        console.info("Succeeded in deleting events");
+      }
+    });
+  }
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -501,56 +554,11 @@ Deletes a batch of events with the specified IDs. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ids | number[] | Yes | Array of event IDs. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { calendarMgr } from '../entryability/EntryAbility';
-
-let calendar : calendarManager.Calendar | undefined = undefined;
-let id1: number = 0;
-let id2: number = 0;
-const date = new Date();
-const event1: calendarManager.Event = {
-  type: calendarManager.EventType.NORMAL,
-  startTime: date.getTime(),
-  endTime: date.getTime() + 60 * 60 * 1000
-};
-const event2: calendarManager.Event = {
-  type: calendarManager.EventType.IMPORTANT,
-  startTime: date.getTime(),
-  endTime: date.getTime() + 60 * 60 * 1000
-};
-calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calendar) => {
-  if (err) {
-    console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
-    calendar = data;
-    await calendar.addEvent(event1).then((data: number) => {
-      console.info(`Succeeded in adding event, id -> ${data}`);
-      id1 = data;
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
-    });
-    await calendar.addEvent(event2).then((data: number) => {
-      console.info(`Succeeded in adding event, id -> ${data}`);
-      id2 = data;
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
-    });
-    calendar.deleteEvents([id1, id2], (err: BusinessError) => {
-      if (err) {
-        console.error(`Failed to delete events. Code: ${err.code}, message: ${err.message}`);
-      } else {
-        console.info("Succeeded in deleting events");
-      }
-    });
-  }
-});
-```
+See [deleteEvents](#deleteevents)
 
 ## getAccount
 
@@ -675,6 +683,74 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { calendarMgr } from '../entryability/EntryAbility';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
+calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => {
+  if (err) {
+    console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting calendar data -> ${JSON.stringify(data)}`);
+    calendar = data;
+    calendar.getEvents((err: BusinessError, data: calendarManager.Event[]) => {
+      if (err) {
+        console.error(`Failed to get events. Code: ${err.code}, message: ${err.message}`);
+      } else {
+        console.info(`Succeeded in getting events, data -> ${JSON.stringify(data)}`);
+      }
+    });
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { calendarMgr } from '../entryability/EntryAbility';
+
+let calendar : calendarManager.Calendar | undefined = undefined;
+let id1: number = 0;
+let id2: number = 0;
+const date = new Date();
+const event1: calendarManager.Event = {
+  type: calendarManager.EventType.NORMAL,
+  startTime: date.getTime(),
+  endTime: date.getTime() + 60 * 60 * 1000
+};
+const event2: calendarManager.Event = {
+  type: calendarManager.EventType.IMPORTANT,
+  startTime: date.getTime(),
+  endTime: date.getTime() + 60 * 60 * 1000
+};
+calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calendar) => {
+  if (err) {
+    console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
+    calendar = data;
+    await calendar.addEvent(event1).then((data: number) => {
+      console.info(`Succeeded in adding event, id -> ${data}`);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
+    });
+    await calendar.addEvent(event2).then((data: number) => {
+      console.info(`Succeeded in adding event, id -> ${data}`);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
+    });
+    const filter = calendarManager.EventFilter.filterById([id1, id2]);
+    calendar.getEvents(filter, ['title', 'type', 'startTime', 'endTime'], (err: BusinessError, data: calendarManager.Event[]) => {
+      if (err) {
+        console.error(`Failed to get events. Code: ${err.code}, message: ${err.message}`);
+      } else {
+        console.info(`Succeeded in getting events, data -> ${JSON.stringify(data)}`);
+      }
+    });
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { calendarMgr } from '../entryability/EntryAbility';
+
+let calendar : calendarManager.Calendar | undefined = undefined;
 const date = new Date();
 const event: calendarManager.Event = {
   title: 'MyEvent',
@@ -728,7 +804,7 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 | --- | --- | --- | --- |
 | eventFilter | [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | Yes | Filter criteria. |
 | eventKey | (keyof Event)[] | Yes | Filter field. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Event[]&gt; | Yes | Callback used to return an array of events. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Event[]&gt; | Yes | Callback used to return an array of events. |
 
 **Error codes:**
 
@@ -739,51 +815,7 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { calendarMgr } from '../entryability/EntryAbility';
-
-let calendar : calendarManager.Calendar | undefined = undefined;
-let id1: number = 0;
-let id2: number = 0;
-const date = new Date();
-const event1: calendarManager.Event = {
-  type: calendarManager.EventType.NORMAL,
-  startTime: date.getTime(),
-  endTime: date.getTime() + 60 * 60 * 1000
-};
-const event2: calendarManager.Event = {
-  type: calendarManager.EventType.IMPORTANT,
-  startTime: date.getTime(),
-  endTime: date.getTime() + 60 * 60 * 1000
-};
-calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calendar) => {
-  if (err) {
-    console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
-    calendar = data;
-    await calendar.addEvent(event1).then((data: number) => {
-      console.info(`Succeeded in adding event, id -> ${data}`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
-    });
-    await calendar.addEvent(event2).then((data: number) => {
-      console.info(`Succeeded in adding event, id -> ${data}`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
-    });
-    const filter = calendarManager.EventFilter.filterById([id1, id2]);
-    calendar.getEvents(filter, ['title', 'type', 'startTime', 'endTime'], (err: BusinessError, data: calendarManager.Event[]) => {
-      if (err) {
-        console.error(`Failed to get events. Code: ${err.code}, message: ${err.message}`);
-      } else {
-        console.info(`Succeeded in getting events, data -> ${JSON.stringify(data)}`);
-      }
-    });
-  }
-});
-```
+See [getEvents](#getevents)
 
 ## getEvents
 
@@ -809,7 +841,7 @@ For versions earlier than API version 20, the default fields to be obtained incl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Event[]&gt; | Yes | Callback used to return an array of events. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Event[]&gt; | Yes | Callback used to return an array of events. |
 
 **Error codes:**
 
@@ -820,27 +852,7 @@ For versions earlier than API version 20, the default fields to be obtained incl
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { calendarMgr } from '../entryability/EntryAbility';
-
-let calendar : calendarManager.Calendar | undefined = undefined;
-calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => {
-  if (err) {
-    console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting calendar data -> ${JSON.stringify(data)}`);
-    calendar = data;
-    calendar.getEvents((err: BusinessError, data: calendarManager.Event[]) => {
-      if (err) {
-        console.error(`Failed to get events. Code: ${err.code}, message: ${err.message}`);
-      } else {
-        console.info(`Succeeded in getting events, data -> ${JSON.stringify(data)}`);
-      }
-    });
-  }
-});
-```
+See [getEvents](#getevents)
 
 ## openEventEditPage
 
@@ -1007,6 +1019,32 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
   } else {
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
     calendar = data;
+    calendar.setConfig(config, (err: BusinessError) => {
+      if (err) {
+        console.error(`Failed to set config. Code: ${err.code}, message: ${err.message}`);
+      } else {
+        console.info(`Succeeded in setting config, config -> ${JSON.stringify(config)}`);
+      }
+    });
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { calendarMgr } from '../entryability/EntryAbility';
+
+let calendar : calendarManager.Calendar | undefined = undefined;
+const config: calendarManager.CalendarConfig = {
+  enableReminder: true,
+  color: '#aabbcc'
+};
+calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => {
+  if (err) {
+    console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
+    calendar = data;
     calendar.setConfig(config).then(() => {
       console.info(`Succeeded in setting config, data->${JSON.stringify(config)}`);
     }).catch((err: BusinessError) => {
@@ -1035,7 +1073,7 @@ Sets the calendar configuration information. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | [CalendarConfig](arkts-calendar-calendarmanager-calendarconfig-i.md) | Yes | Calendar configuration information. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1045,31 +1083,7 @@ Sets the calendar configuration information. This API uses an asynchronous callb
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { calendarMgr } from '../entryability/EntryAbility';
-
-let calendar : calendarManager.Calendar | undefined = undefined;
-const config: calendarManager.CalendarConfig = {
-  enableReminder: true,
-  color: '#aabbcc'
-};
-calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => {
-  if (err) {
-    console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
-    calendar = data;
-    calendar.setConfig(config, (err: BusinessError) => {
-      if (err) {
-        console.error(`Failed to set config. Code: ${err.code}, message: ${err.message}`);
-      } else {
-        console.info(`Succeeded in setting config, config -> ${JSON.stringify(config)}`);
-      }
-    });
-  }
-});
-```
+See [setConfig](#setconfig)
 
 ## updateEvent
 
@@ -1125,6 +1139,43 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
     }).catch((err: BusinessError) => {
       console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
     });
+    calendar.updateEvent(oriEvent, (err: BusinessError) => {
+      if (err) {
+        console.error(`Failed to update event. Code: ${err.code}, message: ${err.message}`);
+      } else {
+        console.info("Succeeded in updating event");
+      }
+    });
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { calendarMgr } from '../entryability/EntryAbility';
+
+let calendar : calendarManager.Calendar | undefined = undefined;
+const date = new Date();
+const oriEvent: calendarManager.Event = {
+  title: 'update',
+  type: calendarManager.EventType.NORMAL,
+  description: 'updateEventTest',
+  startTime: date.getTime(),
+  endTime: date.getTime() + 60 * 60 * 1000
+};
+calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calendar) => {
+  if (err) {
+    console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
+    calendar = data;
+    await calendar.addEvent(oriEvent).then((data: number) => {
+      console.info(`Succeeded in adding event, id -> ${data}`);
+      oriEvent.id = data;
+      oriEvent.title = 'newUpdate';
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
+    });
     calendar.updateEvent(oriEvent).then(() => {
       console.info(`Succeeded in updating event`);
     }).catch((err: BusinessError) => {
@@ -1153,46 +1204,11 @@ Updates an event. The ID of the updated event must be specified in Event. If not
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | Event | Yes | Event object. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of updateEvent. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of updateEvent. |
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { calendarMgr } from '../entryability/EntryAbility';
-
-let calendar : calendarManager.Calendar | undefined = undefined;
-const date = new Date();
-const oriEvent: calendarManager.Event = {
-  title: 'update',
-  type: calendarManager.EventType.NORMAL,
-  description: 'updateEventTest',
-  startTime: date.getTime(),
-  endTime: date.getTime() + 60 * 60 * 1000
-};
-calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calendar) => {
-  if (err) {
-    console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
-    calendar = data;
-    await calendar.addEvent(oriEvent).then((data: number) => {
-      console.info(`Succeeded in adding event, id -> ${data}`);
-      oriEvent.id = data;
-      oriEvent.title = 'newUpdate';
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
-    });
-    calendar.updateEvent(oriEvent, (err: BusinessError) => {
-      if (err) {
-        console.error(`Failed to update event. Code: ${err.code}, message: ${err.message}`);
-      } else {
-        console.info("Succeeded in updating event");
-      }
-    });
-  }
-});
-```
+See [updateEvent](#updateevent)
 
 ## id
 

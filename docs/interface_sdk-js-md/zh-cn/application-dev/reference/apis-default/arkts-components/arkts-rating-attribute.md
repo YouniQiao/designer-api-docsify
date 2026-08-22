@@ -76,28 +76,6 @@ onChange(callback: OnRatingChangeCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-## starStyle
-
-```TypeScript
-starStyle(options: StarStyleOptions | undefined): this
-```
-
-**起始版本：** -1
-
-**ArkTS模式：** ArkTS-Sta起始版本为-1。
-
-<!--Device-RatingAttribute-starStyle(options: StarStyleOptions | undefined): this--><!--Device-RatingAttribute-starStyle(options: StarStyleOptions | undefined): this-End-->
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [StarStyleOptions](arkts-rating-starstyleoptions-i.md) \| undefined | 是 |  |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
 ## stars
 
 ```TypeScript
@@ -115,6 +93,28 @@ stars(value: int | undefined): this
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | int \| undefined | 是 |  |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+## starStyle
+
+```TypeScript
+starStyle(options: StarStyleOptions | undefined): this
+```
+
+**起始版本：** -1
+
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
+
+<!--Device-RatingAttribute-starStyle(options: StarStyleOptions | undefined): this--><!--Device-RatingAttribute-starStyle(options: StarStyleOptions | undefined): this-End-->
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [StarStyleOptions](arkts-rating-starstyleoptions-i.md) \| undefined | 是 |  |
 
 **返回值：**
 

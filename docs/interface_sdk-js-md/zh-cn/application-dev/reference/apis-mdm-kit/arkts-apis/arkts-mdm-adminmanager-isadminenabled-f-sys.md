@@ -28,7 +28,7 @@ function isAdminEnabled(admin: Want, callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，当接口调用成功，err为null，data为boolean值，true表示当前用户下指定的设备管理应用被激活，false表示当前用 户下指定的设备管理应用未激活，否则err为错误对象。 |
 
 **错误码：**
@@ -59,6 +59,45 @@ adminManager.isAdminEnabled(wantTemp, (err, result) => {
 });
 ```
 
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// 参数需根据实际情况进行替换
+adminManager.isAdminEnabled(wantTemp, 100, (err, result) => {
+  if (err) {
+    console.error(`Failed to query admin is enabled. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying admin is enabled or not, result : ${result}`);
+});
+```
+
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// 参数需根据实际情况进行替换
+adminManager.isAdminEnabled(wantTemp, 100).then((result) => {
+  console.info(`Succeeded in querying admin is enabled or not, result : ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query admin is enabled or not. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## isAdminEnabled
 
@@ -82,7 +121,7 @@ function isAdminEnabled(admin: Want, userId: number, callback: AsyncCallback<boo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | userId | number | 是 | 用户ID，指定具体用户，取值范围：大于等于0。 <br> 默认值：当前用户。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，当接口调用成功，err为null，data为boolean值，true表示当前用户下指定的设备管理应用被激活，false表示当前用 户下指定的设备管理应用未激活，否则err为错误对象。 |
 
@@ -95,25 +134,7 @@ function isAdminEnabled(admin: Want, userId: number, callback: AsyncCallback<boo
 
 **示例**
 
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 参数需根据实际情况进行替换
-adminManager.isAdminEnabled(wantTemp, 100, (err, result) => {
-  if (err) {
-    console.error(`Failed to query admin is enabled. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying admin is enabled or not, result : ${result}`);
-});
-```
+参见 [isAdminEnabled](#isadminenabled)
 
 
 ## isAdminEnabled
@@ -138,7 +159,7 @@ function isAdminEnabled(admin: Want, userId?: number): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | userId | number | 否 | 用户ID，取值范围：大于等于0。 <br> - 调用接口时，若传入userId，表示指定用户。 <br> - 调用接口时，若未传入userId，表示当前用户。 |
 
 **返回值：**
@@ -156,22 +177,5 @@ function isAdminEnabled(admin: Want, userId?: number): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 参数需根据实际情况进行替换
-adminManager.isAdminEnabled(wantTemp, 100).then((result) => {
-  console.info(`Succeeded in querying admin is enabled or not, result : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query admin is enabled or not. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [isAdminEnabled](#isadminenabled)
 

@@ -375,37 +375,6 @@ Query the device operating system type by device network ID.
 | [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
 | 11600110 | Invalid network ID. |
 
-## offReplyResult
-
-```TypeScript
-offReplyResult(callback?: Callback<ReplyResult>): void
-```
-
-Unregister uiStateChange, this interface can only be used by devicemanager ui.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
-
-<!--Device-DeviceManager-offReplyResult(callback?: Callback<ReplyResult>): void--><!--Device-DeviceManager-offReplyResult(callback?: Callback<ReplyResult>): void-End-->
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | No | Indicates the devicemanager ui state to unregister. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-
 ## off('replyResult')
 
 ```TypeScript
@@ -429,7 +398,7 @@ Unsubscribes from the reply to the UI operation result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'replyResult' | Yes | Event type, which has a fixed value of **replyResult**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ param: string; }&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | No |  |
 
 **Error codes:**
 
@@ -454,19 +423,19 @@ try {
 }
 ```
 
-## onReplyResult
+## offReplyResult
 
 ```TypeScript
-onReplyResult(callback: Callback<ReplyResult>): void
+offReplyResult(callback?: Callback<ReplyResult>): void
 ```
 
-Register a callback from deviceManager service so that the devicemanager ui can be notified when uiStateChanges.
+Unregister uiStateChange, this interface can only be used by devicemanager ui.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
-<!--Device-DeviceManager-onReplyResult(callback: Callback<ReplyResult>): void--><!--Device-DeviceManager-onReplyResult(callback: Callback<ReplyResult>): void-End-->
+<!--Device-DeviceManager-offReplyResult(callback?: Callback<ReplyResult>): void--><!--Device-DeviceManager-offReplyResult(callback?: Callback<ReplyResult>): void-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -476,7 +445,7 @@ Register a callback from deviceManager service so that the devicemanager ui can 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | Yes | Indicates the devicemanager ui state to register. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | No | Indicates the devicemanager ui state to unregister. |
 
 **Error codes:**
 
@@ -508,7 +477,7 @@ Subscribes to the reply to the UI operation result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'replyResult' | Yes | Event type, which has a fixed value of **replyResult**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ param: string; }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | Yes |  |
 
 **Error codes:**
 
@@ -545,6 +514,37 @@ try {
   console.error('replyResult errCode:' + e.code + ',errMessage:' + e.message);
 }
 ```
+
+## onReplyResult
+
+```TypeScript
+onReplyResult(callback: Callback<ReplyResult>): void
+```
+
+Register a callback from deviceManager service so that the devicemanager ui can be notified when uiStateChanges.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-onReplyResult(callback: Callback<ReplyResult>): void--><!--Device-DeviceManager-onReplyResult(callback: Callback<ReplyResult>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | Yes | Indicates the devicemanager ui state to register. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## putDeviceProfileInfoList
 

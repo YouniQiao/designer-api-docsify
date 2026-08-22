@@ -36,6 +36,28 @@ Creates a symbolic link based on the file path. This API uses a promise to retur
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let srcFile = pathDir + "/test.txt";
+let dstFile = pathDir + '/test';
+fileio.symlink(srcFile, dstFile).then(() => {
+  console.info("symlink succeed");
+}).catch((err: BusinessError) => {
+  console.error("symlink failed with error:" + err);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let srcFile = pathDir + "/test.txt";
+let dstFile = pathDir + '/test';
+fileio.symlink(srcFile, dstFile, (err: BusinessError) => {
+  // Do something.
+});
+```
+
 
 ## symlink
 
@@ -61,5 +83,9 @@ Creates a symbolic link based on the file path. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | target | string | Yes | Application sandbox path of the target file. |
 | srcPath | string | Yes | Application sandbox path of the symbolic link. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked when the symbolic link is created asynchronously. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the symbolic link is created asynchronously. |
+
+**Examples**
+
+See [symlink](#symlink)
 

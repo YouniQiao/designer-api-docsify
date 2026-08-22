@@ -32,6 +32,32 @@ function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt;&gt; | 是 | 以callback形式返回获取此应用程序的所有通知通道的结果。 |
 
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+// getSlots回调
+function getSlotsCallback(err: Base.BusinessError) {
+  if (err) {
+    console.error("getSlots failed " + JSON.stringify(err));
+  } else {
+    console.info("getSlots success");
+  }
+}
+Notification.getSlots(getSlotsCallback);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+Notification.getSlots().then((data) => {
+  console.info("getSlots success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`getSlots failed, code is ${err}`);
+});
+```
+
 
 ## getSlots
 
@@ -56,4 +82,8 @@ function getSlots(): Promise<Array<NotificationSlot>>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt;&gt; | 以Promise形式返回获取此应用程序的所有通知通道的结果。 |
+
+**示例**
+
+参见 [getSlots](#getslots)
 

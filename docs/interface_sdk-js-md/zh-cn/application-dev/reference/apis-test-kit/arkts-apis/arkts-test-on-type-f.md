@@ -33,6 +33,29 @@ Specifies the type of the target Component.
 | --- | --- |
 | [On](arkts-test-uitest-on-c.md) | this { |
 
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.type('Button'); // 使用静态构造器ON创建On对象，指定目标控件的控件类型属性。
+```
+
+```TypeScript
+// xxx.test.ets
+import { On, ON, MatchPattern } from '@kit.TestKit';
+
+let on: On = ON.type('Button', MatchPattern.EQUALS); // 使用静态构造器ON创建On对象，指定目标控件的控件类型属性。
+```
+
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+let by: By = BY.type('Button'); // 使用静态构造器BY创建by对象，指定目标控件的控件类型属性。
+```
+
 
 ## type
 
@@ -60,4 +83,8 @@ Specifies the type of the target Component.
 | 类型 | 说明 |
 | --- | --- |
 | [On](arkts-test-uitest-on-c.md) | this { |
+
+**示例**
+
+参见 [type](#type)
 

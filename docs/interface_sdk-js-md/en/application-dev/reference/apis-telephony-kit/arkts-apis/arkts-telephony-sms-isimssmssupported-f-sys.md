@@ -27,7 +27,7 @@ Checks whether SMS is supported on IMS. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | SIM card slot ID. <br>- **0**: card slot 1 <br>- **1**: card slot 2 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Whether SMS is supported on IMS. The default value is **false**. <br>- **true**: yes <br>- **false**: no |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Whether SMS is supported on IMS. The default value is **false**. <br>- **true**: yes <br>- **false**: no |
 
 **Error codes:**
 
@@ -49,6 +49,19 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let slotId: number = 0;
 sms.isImsSmsSupported(slotId, (err: BusinessError, data: boolean) => {
       console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+let promise = sms.isImsSmsSupported(slotId);
+promise.then((data: boolean) => {
+    console.info(`isImsSmsSupported success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isImsSmsSupported failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -94,16 +107,5 @@ Checks whether SMS is supported on IMS. This API uses a promise to return the re
 
 **Examples**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let promise = sms.isImsSmsSupported(slotId);
-promise.then((data: boolean) => {
-    console.info(`isImsSmsSupported success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isImsSmsSupported failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [isImsSmsSupported](#isimssmssupported)
 

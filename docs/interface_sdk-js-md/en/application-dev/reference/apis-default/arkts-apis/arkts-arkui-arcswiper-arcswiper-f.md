@@ -31,14 +31,14 @@ Defines ArcSwiper Component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | [ArcSwiperController](arkts-arkuiarcswiper-arcswipercontroller-c.md) | No | ArcSwiper constructor options |
+| controller | [ArcSwiperController](arkts-arkui-arcswiper-arcswipercontroller-c.md) | No | ArcSwiper constructor options |
 | content_ | CustomBuilder | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkuiarcswiper-arcswiperattribute-i.md) |  |
+| [ArcSwiperAttribute](arkts-arkui-arcswiper-arcswiperattribute-i.md) |  |
 
 
 ## ArcSwiper
@@ -67,12 +67,12 @@ Defines ArcSwiper Component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | CustomBuilderT&lt;[ArcSwiperAttribute](arkts-arkuiarcswiper-arcswiperattribute-i.md)&gt; | Yes | arcSwiper attribute instance |
+| style_ | CustomBuilderT&lt;[ArcSwiperAttribute](arkts-arkui-arcswiper-arcswiperattribute-i.md)&gt; | Yes | arcSwiper attribute instance |
 | content_ | CustomBuilder | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkuiarcswiper-arcswiperattribute-i.md) |  |
+| [ArcSwiperAttribute](arkts-arkui-arcswiper-arcswiperattribute-i.md) |  |
 

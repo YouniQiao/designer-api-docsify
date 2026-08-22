@@ -29,3 +29,11 @@ Changes the file owner based on a file path and changes the owner of the symboli
 | uid | number | Yes | New UID. |
 | gid | number | Yes | New GID. |
 
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let stat = fileio.statSync(filePath);
+fileio.lchownSync(filePath, stat.uid, stat.gid);
+```
+

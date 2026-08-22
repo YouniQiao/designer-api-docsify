@@ -19,5 +19,5 @@ Triggered when an atomic service is launched.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appId | string | Yes | App ID for the atomic service. |
-| options | [AtomicServiceOptions](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityatomicserviceoptions-atomicserviceoptions-c.md) | No | Parameters for launching the atomic service. |
+| options | [AtomicServiceOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-atomicserviceoptions-atomicserviceoptions-c.md) | No | Parameters for launching the atomic service. |
 

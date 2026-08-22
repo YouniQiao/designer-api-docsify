@@ -1,6 +1,6 @@
 # UIAbilityContext
 
-UIAbilityContext provides the context environment for a [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) that needs to store its status. It inherits from Context and provides UIAbility-related configuration and APIs for operating UIAbility and ServiceExtensionAbility components. For example, you can use the APIs to start a UIAbility, terminate a UIAbility to which the UIAbilityContext belongs, and start, terminate, connect to, or disconnect from a ServiceExtensionAbility.
+UIAbilityContext provides the context environment for a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) that needs to store its status. It inherits from Context and provides UIAbility-related configuration and APIs for operating UIAbility and ServiceExtensionAbility components. For example, you can use the APIs to start a UIAbility, terminate a UIAbility to which the UIAbilityContext belongs, and start, terminate, connect to, or disconnect from a ServiceExtensionAbility.
 
 **Inheritance/Implementation:** UIAbilityContext extends Context
 
@@ -59,14 +59,14 @@ Returns the startup result to the caller of [startAbilityForResult](#startabilit
 connectAppServiceExtensionAbility(want: Want, callback: ConnectOptions): long
 ```
 
-Connects this UIAbility to an [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md) . It enables communication with the AppServiceExtensionAbility via a proxy, allowing access to the capabilities exposed by the AppServiceExtensionAbility. It can be called only on the main thread. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.
+Connects this UIAbility to an [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) . It enables communication with the AppServiceExtensionAbility via a proxy, allowing access to the capabilities exposed by the AppServiceExtensionAbility. It can be called only on the main thread. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.
 
 > **NOTE：**
 > 
 > If the
-> [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md)
+> [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md)
 > instance is not started, the caller of this API must be the application to which the
-> [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md)
+> [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md)
 > instance belongs or an application in the application list supported by the AppServiceExtensionAbility instance
 > (configured in the **appIdentifierAllowList** property of
 > [extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities)).
@@ -83,7 +83,7 @@ Connects this UIAbility to an [AppServiceExtensionAbility](arkts-ability-appabil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information for connecting to the [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md) . |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for connecting to the [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) . |
 | callback | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | Yes | Callback used to return the information indicating that the connection is successful, failed, or interrupted. |
 
 **Return value:**
@@ -173,7 +173,7 @@ Connects this UIAbility to a [ServiceExtensionAbility](../../../application-mode
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information for connecting to the ServiceExtensionAbility. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for connecting to the ServiceExtensionAbility. |
 | options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | Yes | Callback used to return the information indicating that the connection is successful , failed, or interrupted. |
 
 **Return value:**
@@ -269,7 +269,7 @@ Connects to a UIServiceExtensionAbility. This API uses a promise to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Mandatory information for connecting to the UIServiceExtensionAbility. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Mandatory information for connecting to the UIServiceExtensionAbility. |
 | callback | [UIServiceExtensionConnectCallback](arkts-ability-uiserviceextensionconnectcallback-i.md) | Yes | Callback for connecting to the UIServiceExtensionAbility. |
 
 **Return value:**
@@ -367,7 +367,7 @@ struct UIServiceExtensionAbility {
 disconnectAppServiceExtensionAbility(connection: long): Promise<void>
 ```
 
-Disconnects from an [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md) . It can be called only on the main thread. This API uses a promise to return the result. Once the connection is terminated, you are advised to set the remote object returned when the connection is established to null, so as to prevent communication using the remote object that may become invalid. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned. **System capability**: SystemCapability.Ability.AbilityRuntime.Core
+Disconnects from an [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) . It can be called only on the main thread. This API uses a promise to return the result. Once the connection is terminated, you are advised to set the remote object returned when the connection is established to null, so as to prevent communication using the remote object that may become invalid. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned. **System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since:** 23
 
@@ -451,7 +451,7 @@ Disconnects from a [ServiceExtensionAbility](../../../application-models/extensi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | connection | long | Yes | ID of the connected ServiceExtensionAbility, that is, **connectionId** returned by [connectServiceExtensionAbility](#connectserviceextensionability). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -462,6 +462,37 @@ Disconnects from a [ServiceExtensionAbility](../../../application-models/extensi
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 **Examples**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    // connection is the return value of connectServiceExtensionAbility.
+    let connection = 1;
+    let commRemote: rpc.IRemoteObject | null;
+
+    try {
+      this.context.disconnectServiceExtensionAbility(connection).then(() => {
+        commRemote = null;
+        // Carry out normal service processing.
+        console.info('disconnectServiceExtensionAbility succeed');
+      }).catch((err: BusinessError) => {
+        // Process service logic errors.
+        console.error(`disconnectServiceExtensionAbility failed, code is ${err.code}, message is ${err.message}`);
+      });
+    } catch (err) {
+      commRemote = null;
+      // Process input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`disconnectServiceExtensionAbility failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -534,36 +565,7 @@ Disconnects from a [ServiceExtensionAbility](../../../application-models/extensi
 
 **Examples**
 
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    // connection is the return value of connectServiceExtensionAbility.
-    let connection = 1;
-    let commRemote: rpc.IRemoteObject | null;
-
-    try {
-      this.context.disconnectServiceExtensionAbility(connection).then(() => {
-        commRemote = null;
-        // Carry out normal service processing.
-        console.info('disconnectServiceExtensionAbility succeed');
-      }).catch((err: BusinessError) => {
-        // Process service logic errors.
-        console.error(`disconnectServiceExtensionAbility failed, code is ${err.code}, message is ${err.message}`);
-      });
-    } catch (err) {
-      commRemote = null;
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`disconnectServiceExtensionAbility failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+See [disconnectServiceExtensionAbility](#disconnectserviceextensionability)
 
 ## disconnectUIServiceExtensionAbility
 
@@ -911,7 +913,7 @@ Opens an atomic service in an independent window. This API uses a promise to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appId | string | Yes | Unique ID of the application, which is allocated by the cloud. |
-| options | [AtomicServiceOptions](arkts-ability-appabilityatomicserviceoptions-atomicserviceoptions-c.md) | No | Parameter carried in the request for starting the atomic service. |
+| options | [AtomicServiceOptions](arkts-ability-app-ability-atomicserviceoptions-atomicserviceoptions-c.md) | No | Parameter carried in the request for starting the atomic service. |
 
 **Return value:**
 
@@ -997,8 +999,8 @@ Starts a UIAbility by using <!--RP2-->[App Linking](../../../application-models/
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | link | string | Yes | URL to open, which must be in the standard format. |
-| options | [OpenLinkOptions](arkts-ability-appabilityopenlinkoptions-openlinkoptions-i.md) | No | Options of the URL. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | No | Callback used to return the result. |
+| options | [OpenLinkOptions](arkts-ability-app-ability-openlinkoptions-openlinkoptions-i.md) | No | Options of the URL. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | No | Callback used to return the result. |
 
 **Return value:**
 
@@ -1100,7 +1102,7 @@ Called when the window content associated with the UIAbility finishes drawing. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -1170,8 +1172,8 @@ Starts a ServiceExtensionAbility that supports modal dialog boxes. After the Ser
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information for starting the ServiceExtensionAbility. |
-| result | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;dialogRequest.RequestResult&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0** and **data** the result of the request for a modal dialog box. Otherwise, **err** contains the corresponding error code and error information. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for starting the ServiceExtensionAbility. |
+| result | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;dialogRequest.RequestResult&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0** and **data** the result of the request for a modal dialog box. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -1229,6 +1231,37 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility, Want, dialogRequest } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'AuthAccountServiceExtension'
+    };
+
+    try {
+      this.context.requestDialogService(want)
+        .then((result: dialogRequest.RequestResult) => {
+          // Carry out normal service processing.
+          console.info(`requestDialogService succeed, result = ${JSON.stringify(result)}`);
+        })
+        .catch((err: BusinessError) => {
+          // Process service logic errors.
+          console.error(`requestDialogService failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // Process input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`requestDialogService failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
 ## requestDialogService
 
 ```TypeScript
@@ -1254,7 +1287,7 @@ Starts a ServiceExtensionAbility that supports modal dialog boxes. After the Ser
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information for starting the ServiceExtensionAbility. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for starting the ServiceExtensionAbility. |
 
 **Return value:**
 
@@ -1286,36 +1319,7 @@ Starts a ServiceExtensionAbility that supports modal dialog boxes. After the Ser
 
 **Examples**
 
-```TypeScript
-import { UIAbility, Want, dialogRequest } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'AuthAccountServiceExtension'
-    };
-
-    try {
-      this.context.requestDialogService(want)
-        .then((result: dialogRequest.RequestResult) => {
-          // Carry out normal service processing.
-          console.info(`requestDialogService succeed, result = ${JSON.stringify(result)}`);
-        })
-        .catch((err: BusinessError) => {
-          // Process service logic errors.
-          console.error(`requestDialogService failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`requestDialogService failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+See [requestDialogService](#requestdialogservice)
 
 ## restartApp
 
@@ -1353,7 +1357,7 @@ Called by a focused UIAbility to restart its own process and launch a specified 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the UIAbility to start. The bundle name and ability name are verified. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the UIAbility to start. The bundle name and ability name are verified. |
 
 **Return value:**
 
@@ -1622,7 +1626,7 @@ Sets the dark/light color mode for this UIAbility. Before calling this API, ensu
 > - Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility
 > has been loaded (using the
 > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the
-> [onWindowStageCreate()](arkts-ability-appabilityuiability-uiability-c.md#onwindowstagecreate) lifecycle).
+> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
 > 
 > - After this API is called, a new resource manager object is created. If a resource manager was previously cached
 > , it should be updated accordingly.
@@ -1700,7 +1704,7 @@ Sets the mission continuation state of this UIAbility. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | state | AbilityConstant.ContinueState | Yes | Mission continuation state. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -1720,6 +1724,21 @@ export default class EntryAbility extends UIAbility {
   onForeground() {
     this.context.setMissionContinueState(AbilityConstant.ContinueState.INACTIVE, (result: BusinessError) => {
       console.info(`setMissionContinueState: ${JSON.stringify(result)}`);
+    });
+  }
+}
+```
+
+```TypeScript
+import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    this.context.setMissionContinueState(AbilityConstant.ContinueState.INACTIVE).then(() => {
+      console.info('success');
+    }).catch((err: BusinessError) => {
+      console.error(`setMissionContinueState failed, code is ${err.code}, message is ${err.message}`);
     });
   }
 }
@@ -1765,20 +1784,7 @@ Sets the mission continuation state of this UIAbility. This API uses a promise t
 
 **Examples**
 
-```TypeScript
-import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    this.context.setMissionContinueState(AbilityConstant.ContinueState.INACTIVE).then(() => {
-      console.info('success');
-    }).catch((err: BusinessError) => {
-      console.error(`setMissionContinueState failed, code is ${err.code}, message is ${err.message}`);
-    });
-  }
-}
-```
+See [setMissionContinueState](#setmissioncontinuestate)
 
 ## setMissionLabel
 
@@ -1803,7 +1809,7 @@ Sets a mission label for this UIAbility on the multitasking screen. This API use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | label | string | Yes | Mission label. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -1823,6 +1829,23 @@ export default class EntryAbility extends UIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
     this.context.setMissionLabel('test', (result: BusinessError) => {
       console.info(`setMissionLabel: ${JSON.stringify(result)}`);
+    });
+  }
+}
+```
+
+```TypeScript
+import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    this.context.setMissionLabel('test').then(() => {
+      console.info('success');
+    }).catch((err: BusinessError) => {
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`setMissionLabel failed, code is ${code}, message is ${message}`);
     });
   }
 }
@@ -1868,22 +1891,7 @@ Sets a mission label for this UIAbility on the multitasking screen. This API use
 
 **Examples**
 
-```TypeScript
-import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    this.context.setMissionLabel('test').then(() => {
-      console.info('success');
-    }).catch((err: BusinessError) => {
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`setMissionLabel failed, code is ${code}, message is ${message}`);
-    });
-  }
-}
-```
+See [setMissionLabel](#setmissionlabel)
 
 ## setMissionWindowIcon
 
@@ -1973,11 +1981,11 @@ export default class EntryAbility extends UIAbility {
 setOnNewWantSkipScenarios(scenarios: int): Promise<void>
 ```
 
-Sets whether to trigger the [onNewWant](arkts-ability-appabilityuiability-uiability-c.md#onnewwant) lifecycle callback when a UIAbility is started in a specific scenario. It can be called only on the main thread. This API uses a promise to return the result.
+Sets whether to trigger the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant) lifecycle callback when a UIAbility is started in a specific scenario. It can be called only on the main thread. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> This API is usually used within the [onCreate](arkts-ability-appabilityuiability-uiability-c.md#oncreate) lifecycle
+> This API is usually used within the [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate) lifecycle
 > callback. You are advised to include all the enumerated values of
 > [Scenarios](arkts-ability-contextconstant-scenarios-e.md) when specifying the **scenarios**
 > parameter. For details, see the sample code below.
@@ -2221,8 +2229,8 @@ Starts a UIAbility. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Mandatory information for starting the UIAbility. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0** and **message** is an empty string. Otherwise, **err** contains the corresponding error code and error information. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Mandatory information for starting the UIAbility. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0** and **message** is an empty string. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -2289,6 +2297,75 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    let options: StartOptions = {
+      displayId: 0
+    };
+
+    try {
+      this.context.startAbility(want, options, (err: BusinessError) => {
+        if (err.code) {
+          // Process service logic errors.
+          console.error(`startAbility failed, code is ${err.code}, message is ${err.message}`);
+          return;
+        }
+        // Carry out normal service processing.
+        console.info('startAbility succeed');
+      });
+    } catch (err) {
+      // Process input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startAbility failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
+```TypeScript
+import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    let options: StartOptions = {
+      displayId: 0
+    };
+
+    try {
+      this.context.startAbility(want, options)
+        .then(() => {
+          // Carry out normal service processing.
+          console.info('startAbility succeed');
+        })
+        .catch((err: BusinessError) => {
+          // Process service logic errors.
+          console.error(`startAbility failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // Process input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startAbility failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
 ## startAbility
 
 ```TypeScript
@@ -2316,9 +2393,9 @@ Starts a UIAbility. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Mandatory information for starting the UIAbility. |
-| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | Yes | Parameters used for starting the UIAbility. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0** and **message** is an empty string. Otherwise, **err** contains the corresponding error code and error information. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Mandatory information for starting the UIAbility. |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the UIAbility. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0** and **message** is an empty string. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -2358,40 +2435,7 @@ Starts a UIAbility. This API uses an asynchronous callback to return the result.
 
 **Examples**
 
-```TypeScript
-import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let options: StartOptions = {
-      displayId: 0
-    };
-
-    try {
-      this.context.startAbility(want, options, (err: BusinessError) => {
-        if (err.code) {
-          // Process service logic errors.
-          console.error(`startAbility failed, code is ${err.code}, message is ${err.message}`);
-          return;
-        }
-        // Carry out normal service processing.
-        console.info('startAbility succeed');
-      });
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startAbility failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+See [startAbility](#startability)
 
 ## startAbility
 
@@ -2420,8 +2464,8 @@ Starts a UIAbility. This API uses a promise to return the result. It can be call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Mandatory information for starting the UIAbility. |
-| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | No | Parameters used for starting the UIAbility. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Mandatory information for starting the UIAbility. |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used for starting the UIAbility. |
 
 **Return value:**
 
@@ -2467,39 +2511,7 @@ Starts a UIAbility. This API uses a promise to return the result. It can be call
 
 **Examples**
 
-```TypeScript
-import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let options: StartOptions = {
-      displayId: 0
-    };
-
-    try {
-      this.context.startAbility(want, options)
-        .then(() => {
-          // Carry out normal service processing.
-          console.info('startAbility succeed');
-        })
-        .catch((err: BusinessError) => {
-          // Process service logic errors.
-          console.error(`startAbility failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startAbility failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+See [startAbility](#startability)
 
 ## startAbilityByCall
 
@@ -2507,7 +2519,7 @@ export default class EntryAbility extends UIAbility {
 startAbilityByCall(want: Want): Promise<Caller>
 ```
 
-Obtains a [Caller](arkts-ability-appabilityuiability-caller-i.md) object for communicating with a [Callee](arkts-ability-appabilityuiability-callee-i.md) object. If the specified UIAbility is not started, the UIAbility will be started in the foreground or background. This API uses a promise to return the result. It can be called only on the main thread. This API cannot be used to start the UIAbility with the launch type set to [specified](../../../application-models/uiability-launch-type.md#specified).
+Obtains a [Caller](arkts-ability-app-ability-uiability-caller-i.md) object for communicating with a [Callee](arkts-ability-app-ability-uiability-callee-i.md) object. If the specified UIAbility is not started, the UIAbility will be started in the foreground or background. This API uses a promise to return the result. It can be called only on the main thread. This API cannot be used to start the UIAbility with the launch type set to [specified](../../../application-models/uiability-launch-type.md#specified).
 
 > **NOTE：**
 > 
@@ -2546,13 +2558,13 @@ Obtains a [Caller](arkts-ability-appabilityuiability-caller-i.md) object for com
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Information about the UIAbility to start, including the ability name, module name, bundle name, device ID, and parameters (optional). If **'ohos.aafwk.param.callAbilityToForeground'** in **parameters** is set to **true**, the UIAbility is brought to the foreground. Otherwise, the UIAbility is brought to the background. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Information about the UIAbility to start, including the ability name, module name, bundle name, device ID, and parameters (optional). If **'ohos.aafwk.param.callAbilityToForeground'** in **parameters** is set to **true**, the UIAbility is brought to the foreground. Otherwise, the UIAbility is brought to the background. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Caller](arkts-ability-appabilityuiability-caller-i.md)&gt; | Promise used to return the Caller object. |
+| Promise&lt;[Caller](arkts-ability-app-ability-uiability-caller-i.md)&gt; | Promise used to return the Caller object. |
 
 **Error codes:**
 
@@ -2713,7 +2725,7 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
     abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void
 ```
 
-Implicitly starts a given type of [UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md). This API uses an asynchronous callback to return the result. It can be called only in the main thread and by applications running in the foreground.
+Implicitly starts a given type of [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md). This API uses an asynchronous callback to return the result. It can be called only in the main thread and by applications running in the foreground.
 
 **Since:** 11
 
@@ -2732,7 +2744,7 @@ Implicitly starts a given type of [UIExtensionAbility](arkts-ability-appabilityu
 | type | string | Yes | Type of the UIExtensionAbility to start. For details, see [Starting an Application of the Specified Type](../../../application-models/start-intent-panel.md#matching-rules). |
 | wantParam | Record&lt;string, Object&gt; | Yes | Extended parameter. |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Callback used to return the detailed error information if the startup fails. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2776,6 +2788,33 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility, common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let wantParam: Record<string, Object> = {
+      'time': '2023-10-23 20:45'
+    };
+    let abilityStartCallback: common.AbilityStartCallback = {
+      onError: (code: number, name: string, message: string) => {
+        console.info(`code:` + code + `name:` + name + `message:` + message);
+      },
+      onResult: (abilityResult: common.AbilityResult) => {
+        console.info(`resultCode:` + abilityResult.resultCode + `bundleName:` + abilityResult.want?.bundleName);
+      }
+    };
+
+    this.context.startAbilityByType("photoEditor", wantParam, abilityStartCallback).then(() => {
+      console.info(`startAbilityByType success`);
+    }).catch((err: BusinessError) => {
+      console.error(`startAbilityByType fail, err: ${JSON.stringify(err)}`);
+    });
+  }
+}
+```
+
 ## startAbilityByType
 
 ```TypeScript
@@ -2783,7 +2822,7 @@ startAbilityByType(type: string, wantParam: Record<string, RecordData>,
     abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void
 ```
 
-Implicitly starts a given type of [UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md). This API uses an asynchronous callback to return the result. It can be called only in the main thread and by applications running in the foreground.
+Implicitly starts a given type of [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md). This API uses an asynchronous callback to return the result. It can be called only in the main thread and by applications running in the foreground.
 
 **Since:** 23
 
@@ -2800,13 +2839,17 @@ Implicitly starts a given type of [UIExtensionAbility](arkts-ability-appabilityu
 | type | string | Yes | Type of the UIExtensionAbility to start. For details, see [Starting an Application of the Specified Type](../../../application-models/start-intent-panel.md#matching-rules) . |
 | wantParam | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Extended parameter. |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Callback used to return the detailed error information if the startup fails. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+
+**Examples**
+
+See [startAbilityByType](#startabilitybytype)
 
 ## startAbilityByType
 
@@ -2815,7 +2858,7 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-Implicitly starts a given type of [UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md). This API uses a promise to return the result. It can be called only in the main thread and by applications running in the foreground.
+Implicitly starts a given type of [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md). This API uses a promise to return the result. It can be called only in the main thread and by applications running in the foreground.
 
 **Since:** 11
 
@@ -2855,32 +2898,7 @@ Implicitly starts a given type of [UIExtensionAbility](arkts-ability-appabilityu
 
 **Examples**
 
-```TypeScript
-import { UIAbility, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let wantParam: Record<string, Object> = {
-      'time': '2023-10-23 20:45'
-    };
-    let abilityStartCallback: common.AbilityStartCallback = {
-      onError: (code: number, name: string, message: string) => {
-        console.info(`code:` + code + `name:` + name + `message:` + message);
-      },
-      onResult: (abilityResult: common.AbilityResult) => {
-        console.info(`resultCode:` + abilityResult.resultCode + `bundleName:` + abilityResult.want?.bundleName);
-      }
-    };
-
-    this.context.startAbilityByType("photoEditor", wantParam, abilityStartCallback).then(() => {
-      console.info(`startAbilityByType success`);
-    }).catch((err: BusinessError) => {
-      console.error(`startAbilityByType fail, err: ${JSON.stringify(err)}`);
-    });
-  }
-}
-```
+See [startAbilityByType](#startabilitybytype)
 
 ## startAbilityByType
 
@@ -2889,7 +2907,7 @@ startAbilityByType(type: string, wantParam: Record<string, RecordData>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-Implicitly starts a given type of [UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md). This API uses a promise to return the result. It can be called only in the main thread and by applications running in the foreground.
+Implicitly starts a given type of [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md). This API uses a promise to return the result. It can be called only in the main thread and by applications running in the foreground.
 
 **Since:** 23
 
@@ -2918,6 +2936,10 @@ Implicitly starts a given type of [UIExtensionAbility](arkts-ability-appabilityu
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+
+**Examples**
+
+See [startAbilityByType](#startabilitybytype)
 
 ## startAbilityForResult
 
@@ -2948,8 +2970,8 @@ Starts a UIAbility and returns the exit result of the launched UIAbility via a c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Mandatory information for starting the UIAbility. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0** and **data** is the result code and data when the UIAbility exits. Otherwise, **err** contains the corresponding error code and error information. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Mandatory information for starting the UIAbility. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0** and **data** is the result code and data when the UIAbility exits. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -3017,73 +3039,6 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## startAbilityForResult
-
-```TypeScript
-startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): void
-```
-
-Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses an asynchronous callback to return the result. It can be called only on the main thread. The following situations may be possible for a started UIAbility:
-
-- Normally, you can call [terminateSelfWithResult](#terminateselfwithresult) to terminate the UIAbility and return the result to the caller. - If an exception occurs, for example, the UIAbility is killed, an exception result, in which **resultCode** is **- 1**, is returned to the caller. - If the UIAbility is in [singleton mode](../../../application-models/uiability-launch-type.md#singleton) and this UIAbility is started multiple times by different applications calling this API, when the UIAbility calls [terminateSelfWithResult](#terminateselfwithresult) to terminate itself, it will only return the normal result to the last caller. All other callers will receive an exception result with **resultCode** set to **-1**.
-
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-UIAbilityContext-startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): void--><!--Device-UIAbilityContext-startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): void-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Mandatory information for starting the UIAbility. |
-| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | Yes | Parameters used for starting the UIAbility. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0** and **data** is the result code and data when the UIAbility exits. Otherwise, **err** contains the corresponding error code and error information. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type.<br>**Applicable version:** 9 and later |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
-| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
-| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
-| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden.<br>**Applicable version:** 9 and later |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface.<br>**Applicable version:** 10 and later |
-| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled.<br>**Applicable version:** 10 and later |
-| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM.<br>**Applicable version:** 10 and later |
-| [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-third-party-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found.<br>**Applicable version:** 12 and later |
-| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid.<br>**Applicable version:** 12 and later |
-| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) | App clone is not supported.<br>**Applicable version:** 14 and later |
-| [16000072](../errorcode-ability.md#16000072-multi-app-mode-is-not-supported) | App clone or multi-instance is not supported.<br>**Applicable version:** 14 and later |
-| [16000076](../errorcode-ability.md#16000076-app_instance_key-does-not-exist) | The app instance key is invalid.<br>**Applicable version:** 14 and later |
-| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) | The number of app instances reaches the limit.<br>**Applicable version:** 14 and later |
-| [16000078](../errorcode-ability.md#16000078-multi-instance-mode-is-not-supported) | The multi-instance is not supported.<br>**Applicable version:** 14 and later |
-| [16000079](../errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified.<br>**Applicable version:** 14 and later |
-| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) | Creating a new instance is not supported.<br>**Applicable version:** 14 and later |
-
-**Examples**
-
 ```TypeScript
 import { UIAbility, Want, common, StartOptions } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3119,6 +3074,109 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility, Want, common, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    let options: StartOptions = {
+      displayId: 0
+    };
+
+    try {
+      this.context.startAbilityForResult(want, options)
+        .then((result: common.AbilityResult) => {
+          // Carry out normal service processing.
+          console.info('startAbilityForResult succeed');
+        })
+        .catch((err: BusinessError) => {
+          // Process service logic errors.
+          console.error(`startAbilityForResult failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // Process input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startAbilityForResult failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
+## startAbilityForResult
+
+```TypeScript
+startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): void
+```
+
+Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses an asynchronous callback to return the result. It can be called only on the main thread. The following situations may be possible for a started UIAbility:
+
+- Normally, you can call [terminateSelfWithResult](#terminateselfwithresult) to terminate the UIAbility and return the result to the caller. - If an exception occurs, for example, the UIAbility is killed, an exception result, in which **resultCode** is **- 1**, is returned to the caller. - If the UIAbility is in [singleton mode](../../../application-models/uiability-launch-type.md#singleton) and this UIAbility is started multiple times by different applications calling this API, when the UIAbility calls [terminateSelfWithResult](#terminateselfwithresult) to terminate itself, it will only return the normal result to the last caller. All other callers will receive an exception result with **resultCode** set to **-1**.
+
+> **NOTE：**
+> 
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-UIAbilityContext-startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): void--><!--Device-UIAbilityContext-startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): void-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Mandatory information for starting the UIAbility. |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the UIAbility. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0** and **data** is the result code and data when the UIAbility exits. Otherwise, **err** contains the corresponding error code and error information. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type.<br>**Applicable version:** 9 and later |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden.<br>**Applicable version:** 9 and later |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface.<br>**Applicable version:** 10 and later |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled.<br>**Applicable version:** 10 and later |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM.<br>**Applicable version:** 10 and later |
+| [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-third-party-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found.<br>**Applicable version:** 12 and later |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid.<br>**Applicable version:** 12 and later |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) | App clone is not supported.<br>**Applicable version:** 14 and later |
+| [16000072](../errorcode-ability.md#16000072-multi-app-mode-is-not-supported) | App clone or multi-instance is not supported.<br>**Applicable version:** 14 and later |
+| [16000076](../errorcode-ability.md#16000076-app_instance_key-does-not-exist) | The app instance key is invalid.<br>**Applicable version:** 14 and later |
+| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) | The number of app instances reaches the limit.<br>**Applicable version:** 14 and later |
+| [16000078](../errorcode-ability.md#16000078-multi-instance-mode-is-not-supported) | The multi-instance is not supported.<br>**Applicable version:** 14 and later |
+| [16000079](../errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified.<br>**Applicable version:** 14 and later |
+| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) | Creating a new instance is not supported.<br>**Applicable version:** 14 and later |
+
+**Examples**
+
+See [startAbilityForResult](#startabilityforresult)
+
 ## startAbilityForResult
 
 ```TypeScript
@@ -3148,8 +3206,8 @@ Starts a UIAbility and returns the exit result of the launched UIAbility via a c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Mandatory information for starting the UIAbility. |
-| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | No | Parameters used for starting the UIAbility. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Mandatory information for starting the UIAbility. |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used for starting the UIAbility. |
 
 **Return value:**
 
@@ -3191,39 +3249,7 @@ Starts a UIAbility and returns the exit result of the launched UIAbility via a c
 
 **Examples**
 
-```TypeScript
-import { UIAbility, Want, common, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let options: StartOptions = {
-      displayId: 0
-    };
-
-    try {
-      this.context.startAbilityForResult(want, options)
-        .then((result: common.AbilityResult) => {
-          // Carry out normal service processing.
-          console.info('startAbilityForResult succeed');
-        })
-        .catch((err: BusinessError) => {
-          // Process service logic errors.
-          console.error(`startAbilityForResult failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startAbilityForResult failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+See [startAbilityForResult](#startabilityforresult)
 
 ## startAppServiceExtensionAbility
 
@@ -3231,12 +3257,12 @@ export default class EntryAbility extends UIAbility {
 startAppServiceExtensionAbility(want: Want): Promise<void>
 ```
 
-Starts an [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md) instance. This API uses a promise to return the result. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.
+Starts an [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) instance. This API uses a promise to return the result. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.
 
 > **NOTE：**
 > 
 > The caller of this API must be the application to which the
-> [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md)
+> [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md)
 > instance belongs or an application in the application list supported by the AppServiceExtensionAbility instance
 > (configured in the **appIdentifierAllowList** property of
 > [extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities)).
@@ -3253,7 +3279,7 @@ Starts an [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information for starting the [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md) . |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for starting the [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) . |
 
 **Return value:**
 
@@ -3364,7 +3390,7 @@ Launch the application's own UIAbility in the child process. If the launchMode o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Indicates the ability to start. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the ability to start. |
 | specifiedFlag | string | Yes | If the launchType of target UIAbility is specified, you can set specifiedFlag by this param, and system will not call onAcceptWant. |
 
 **Return value:**
@@ -3419,9 +3445,9 @@ Starts the application's own UIAbility within the current process. This API can 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Mandatory information for starting the UIAbility. Only explicit startup is supported. [Implicit startup](../../../application-models/explicit-implicit-want-mappings.md# matching-rules-of-implicit-want) is not supported. |
-| specifiedFlag | string | Yes | ID of the UIAbility. This ID must not duplicate that of any already running UIAbility instance; otherwise, an error is returned.<br>**NOTE：**<br>When this API is used to start a UIAbility instance in [specified](../../../application-models/uiability-launch-type.md#specified) mode, the [onAcceptWant](arkts-ability-appabilityabilitystage-abilitystage-c.md#onacceptwant) callback is not triggered. |
-| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | No | Parameters used for starting the UIAbility. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Mandatory information for starting the UIAbility. Only explicit startup is supported. [Implicit startup](../../../application-models/explicit-implicit-want-mappings.md# matching-rules-of-implicit-want) is not supported. |
+| specifiedFlag | string | Yes | ID of the UIAbility. This ID must not duplicate that of any already running UIAbility instance; otherwise, an error is returned.<br>**NOTE：**<br>When this API is used to start a UIAbility instance in [specified](../../../application-models/uiability-launch-type.md#specified) mode, the [onAcceptWant](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onacceptwant) callback is not triggered. |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used for starting the UIAbility. |
 
 **Return value:**
 
@@ -3505,7 +3531,7 @@ Starts a UIServiceExtensionAbility. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Mandatory information for starting the UIServiceExtensionAbility. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Mandatory information for starting the UIServiceExtensionAbility. |
 
 **Return value:**
 
@@ -3576,12 +3602,12 @@ struct Index {
 stopAppServiceExtensionAbility(want: Want): Promise<void>
 ```
 
-Stops an [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md) instance. This API uses a promise to return the result. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.
+Stops an [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) instance. This API uses a promise to return the result. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.
 
 > **NOTE：**
 > 
 > The caller of this API must be the application to which the
-> [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md)
+> [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md)
 > instance belongs or an application in the application list supported by the AppServiceExtensionAbility instance
 > (configured in the **appIdentifierAllowList** property of
 > [extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities)).
@@ -3598,7 +3624,7 @@ Stops an [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information for stoping the [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md) . |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for stoping the [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) . |
 
 **Return value:**
 
@@ -3681,7 +3707,7 @@ Terminates this UIAbility. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -3715,6 +3741,50 @@ export default class EntryAbility extends UIAbility {
         // Carry out normal service processing.
         console.info('terminateSelf succeed');
       });
+    } catch (err) {
+      // Capture the synchronization parameter error.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`terminateSelf failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
+(Optional) To remove the mission from the task center (that is, not to retain the snapshot in the recent tasks list) when terminating the UIAbility, set the removeMissionAfterTerminate field to true in the [module.json5](../../../quick-start/module-configuration-file.md) file.
+
+```TypeScript
+{
+  "module": {
+    // ...
+    "abilities": [
+      {
+        // ...
+        "removeMissionAfterTerminate": true
+      }
+    ]
+  }
+}
+```
+
+The following is an example of calling terminateSelf to terminate a UIAbility. By default, the application retains the snapshot in the recent tasks list.
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    try {
+      this.context.terminateSelf()
+        .then(() => {
+          // Carry out normal service processing.
+          console.info('terminateSelf succeed');
+        })
+        .catch((err: BusinessError) => {
+          // Process service logic errors.
+          console.error(`terminateSelf failed, code is ${err.code}, message is ${err.message}`);
+        });
     } catch (err) {
       // Capture the synchronization parameter error.
       let code = (err as BusinessError).code;
@@ -3783,49 +3853,7 @@ Terminates this UIAbility. This API uses a promise to return the result. It can 
 
 **Examples**
 
-The following is an example of calling terminateSelf to terminate a UIAbility. By default, the application retains the snapshot in the recent tasks list.
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    try {
-      this.context.terminateSelf()
-        .then(() => {
-          // Carry out normal service processing.
-          console.info('terminateSelf succeed');
-        })
-        .catch((err: BusinessError) => {
-          // Process service logic errors.
-          console.error(`terminateSelf failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // Capture the synchronization parameter error.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`terminateSelf failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
-
-(Optional) To remove the mission from the task center (that is, not to retain the snapshot in the recent tasks list) when terminating the UIAbility, set the removeMissionAfterTerminate field to true in the [module.json5](../../../quick-start/module-configuration-file.md) file.
-
-```TypeScript
-{
-  "module": {
-    // ...
-    "abilities": [
-      {
-        // ...
-        "removeMissionAfterTerminate": true
-      }
-    ]
-  }
-}
-```
+See [terminateSelf](#terminateself)
 
 ## terminateSelfWithResult
 
@@ -3855,7 +3883,7 @@ Terminates this UIAbility. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | Information returned to the caller. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -3898,6 +3926,43 @@ export default class EntryAbility extends UIAbility {
         // Carry out normal service processing.
         console.info('terminateSelfWithResult succeed');
       });
+    } catch (err) {
+      // Process input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`terminateSelfWithResult failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
+```TypeScript
+import { UIAbility, Want, common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    let resultCode = 100;
+    // AbilityResult information returned to the caller.
+    let abilityResult: common.AbilityResult = {
+      want,
+      resultCode
+    };
+
+    try {
+      this.context.terminateSelfWithResult(abilityResult)
+        .then(() => {
+          // Carry out normal service processing.
+          console.info('terminateSelfWithResult succeed');
+        })
+        .catch((err: BusinessError) => {
+          // Process service logic errors.
+          console.error(`terminateSelfWithResult failed, code is ${err.code}, message is ${err.message}`);
+        });
     } catch (err) {
       // Process input parameter errors.
       let code = (err as BusinessError).code;
@@ -3957,42 +4022,7 @@ Terminates this UIAbility. This API uses a promise to return the result. It can 
 
 **Examples**
 
-```TypeScript
-import { UIAbility, Want, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let resultCode = 100;
-    // AbilityResult information returned to the caller.
-    let abilityResult: common.AbilityResult = {
-      want,
-      resultCode
-    };
-
-    try {
-      this.context.terminateSelfWithResult(abilityResult)
-        .then(() => {
-          // Carry out normal service processing.
-          console.info('terminateSelfWithResult succeed');
-        })
-        .catch((err: BusinessError) => {
-          // Process service logic errors.
-          console.error(`terminateSelfWithResult failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`terminateSelfWithResult failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+See [terminateSelfWithResult](#terminateselfwithresult)
 
 ## abilityInfo
 
@@ -4022,7 +4052,7 @@ config: Configuration
 
 Environment variables for the application runtime, such as language and color mode.
 
-**Type:** [Configuration](arkts-ability-appabilityconfiguration-configuration-i.md)
+**Type:** [Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
 
 **Since:** 23
 

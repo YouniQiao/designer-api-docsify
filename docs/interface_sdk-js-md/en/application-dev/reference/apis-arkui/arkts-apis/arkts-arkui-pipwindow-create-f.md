@@ -144,45 +144,6 @@ struct Index {
 }
 ```
 
-
-## create
-
-```TypeScript
-function create(config: PiPConfiguration, contentNode: typeNode.XComponent): Promise<PiPController>
-```
-
-Creates a PiP controller. This API uses **typeNode** to add a custom UI node for PiP. This API uses a promise to return the result.
-
-**Since:** 26.0.0
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-PiPWindow-function create(config: PiPConfiguration, contentNode: typeNode.XComponent): Promise<PiPController>--><!--Device-PiPWindow-function create(config: PiPConfiguration, contentNode: typeNode.XComponent): Promise<PiPController>-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| config | [PiPConfiguration](arkts-arkui-pipwindow-pipconfiguration-i.md) | Yes | Options for creating the PiP controller. This parameter cannot be empty, and **context** that is used to construct this parameter cannot be empty. When constructing this parameter, **templateType** (if specified) must be a value defined in [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md), and **controlGroups** (if specified) must match the value of **templateType**. For details, see [PiPControlGroup](arkts-arkui-pipwindow-pipcontrolgroup-t.md). |
-| contentNode | typeNode.XComponent | Yes | Content to be rendered in the PiP window. The parameter value cannot be empty. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[PiPController](arkts-arkui-pipwindow-pipcontroller-i.md)&gt; | Promise used to return the PiP controller. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
-
-**Examples**
-
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { PiPWindow, typeNode, UIContext } from '@kit.ArkUI';
@@ -230,4 +191,45 @@ struct Index {
     }
 }
 ```
+
+
+## create
+
+```TypeScript
+function create(config: PiPConfiguration, contentNode: typeNode.XComponent): Promise<PiPController>
+```
+
+Creates a PiP controller. This API uses **typeNode** to add a custom UI node for PiP. This API uses a promise to return the result.
+
+**Since:** 26.0.0
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-PiPWindow-function create(config: PiPConfiguration, contentNode: typeNode.XComponent): Promise<PiPController>--><!--Device-PiPWindow-function create(config: PiPConfiguration, contentNode: typeNode.XComponent): Promise<PiPController>-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | [PiPConfiguration](arkts-arkui-pipwindow-pipconfiguration-i.md) | Yes | Options for creating the PiP controller. This parameter cannot be empty, and **context** that is used to construct this parameter cannot be empty. When constructing this parameter, **templateType** (if specified) must be a value defined in [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md), and **controlGroups** (if specified) must match the value of **templateType**. For details, see [PiPControlGroup](arkts-arkui-pipwindow-pipcontrolgroup-t.md). |
+| contentNode | typeNode.XComponent | Yes | Content to be rendered in the PiP window. The parameter value cannot be empty. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[PiPController](arkts-arkui-pipwindow-pipcontroller-i.md)&gt; | Promise used to return the PiP controller. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+
+**Examples**
+
+See [create](#create)
 

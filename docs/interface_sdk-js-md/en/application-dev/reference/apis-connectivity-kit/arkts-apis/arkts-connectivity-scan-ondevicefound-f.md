@@ -28,7 +28,7 @@ The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScanResults](arkts-connectivity-scan-scanresults-i.md)[]&gt; | Yes | Callback used to return a **ScanResults** object. By default, a random address is returned for the scanning result. If the app has the system permission **ohos.permission.GET_NEARLINK_PEER_MAC**, the actual device address is returned. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScanResults](arkts-connectivity-scan-scanresults-i.md)[]&gt; | Yes | Callback used to return a **ScanResults** object. By default, a random address is returned for the scanning result. If the app has the system permission **ohos.permission.GET_NEARLINK_PEER_MAC**, the actual device address is returned. |
 
 **Error codes:**
 

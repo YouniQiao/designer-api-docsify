@@ -47,6 +47,16 @@ constructor(scriptURL: string, options?: WorkerOptions)
 
 **示例**
 
+以下示例展示了在Stage模型的entry模块Index.ets文件中加载Worker线程文件的方法，使用Library加载Worker线程文件的场景参考[文件路径注意事项](../../../arkts-utils/worker-introduction.md#文件路径注意事项)。
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+// worker文件所在路径："entry/src/main/ets/workers/worker.ets"
+const workerInstance = new worker.ThreadWorker('entry/ets/workers/worker.ets', {name: "WorkerThread"});
+```
+
 此处以在Stage模型的entry模块Index.ets文件中加载Worker线程文件为例，使用Library加载Worker线程文件的场景参考[文件路径注意事项](../../../arkts-utils/worker-introduction.md#文件路径注意事项)。
 
 ```TypeScript
@@ -195,6 +205,135 @@ postMessage(message: Object, transfer: ArrayBuffer[]): void
 **示例**
 
 ```TypeScript
+// Worker.ets
+import { worker, MessageEvents, ErrorEvent } from '@kit.ArkTS';
+
+// 创建worker线程中与宿主线程通信的对象
+const workerPort = worker.workerPort;
+
+// worker线程接收宿主线程信息
+workerPort.onmessage = (e: MessageEvents): void => {
+  // data：宿主线程发送的信息
+  let data: ArrayBuffer = e.data;
+  // 往收到的buffer里写入数据
+  const view = new Int8Array(data).fill(3);
+  // worker线程向宿主线程发送信息
+  workerPort.postMessage(view);
+}
+
+// worker线程发生error的回调
+workerPort.onerror = (err: ErrorEvent) => {
+  console.error("worker.ets onerror" + err.message);
+}
+```
+
+```TypeScript
+// Index.ets
+import { worker, MessageEvents, ErrorEvent } from '@kit.ArkTS';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'Hello World';
+
+  build() {
+    Row() {
+      Column() {
+        Text(this.message)
+          .fontSize(50)
+          .fontWeight(FontWeight.Bold)
+          .onClick(() => {
+            // 宿主线程中创建Worker对象
+            const workerInstance = new worker.ThreadWorker("entry/ets/workers/Worker.ets");
+            // 宿主线程向worker线程传递信息
+            const buffer = new ArrayBuffer(8);
+            workerInstance.postMessage(buffer, [buffer]);
+
+            // 此时buffer的所有权转移到了worker线程，在宿主线程中不可用
+            // const view = new Int8Array(buffer).fill(3);
+
+            // 宿主线程接收worker线程信息
+            workerInstance.onmessage = (e: MessageEvents): void => {
+              // data：worker线程发送的信息
+              let data: Int8Array = e.data;
+              console.info("main thread data is  " + data);
+              // 销毁Worker对象
+              workerInstance.terminate();
+            }
+            // 在调用terminate后，执行onexit
+            workerInstance.onexit = (code) => {
+              console.info("main thread terminate");
+            }
+            // 监听Worker错误
+            workerInstance.onAllErrors = (err: ErrorEvent) => {
+              console.error("main error message " + err.message);
+            }
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+  }
+}
+```
+
+```TypeScript
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+workerInstance.postMessage("hello world");
+
+let buffer = new ArrayBuffer(8);
+
+// 填入options参数，buffer的所有权会转移到Worker线程，在宿主线程中将不可用
+workerInstance.postMessage(buffer, {transfer: [buffer]});
+```
+
+```TypeScript
+// Index.ets
+import { worker, MessageEvents } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+workerInstance.postMessage("hello world");
+workerInstance.onmessage = (e: MessageEvents): void => {
+  console.info("receive data from worker.ets");
+}
+```
+
+```TypeScript
+// worker.ets
+import { worker, MessageEvents } from '@kit.ArkTS';
+
+const workerPort = worker.workerPort;
+workerPort.onmessage = (e: MessageEvents): void => {
+  let buffer = new ArrayBuffer(8);
+  workerPort.postMessage(buffer, [buffer]);
+}
+```
+
+```TypeScript
+// Index.ets
+import { worker, MessageEvents } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+workerInstance.postMessage("hello world");
+workerInstance.onmessage = (e: MessageEvents): void => {
+    console.info("receive data from worker.ets");
+}
+```
+
+```TypeScript
+// worker.ets
+import { worker, MessageEvents } from '@kit.ArkTS';
+
+const workerPort = worker.workerPort;
+workerPort.onmessage = (e: MessageEvents): void => {
+    workerPort.postMessage("receive data from main thread");
+}
+```
+
+```TypeScript
 // Index.ets
 import { worker } from '@kit.ArkTS';
 
@@ -202,6 +341,64 @@ const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
 
 let buffer = new ArrayBuffer(8);
 workerInstance.postMessage(buffer, [buffer]);
+```
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+
+workerInstance.postMessage("hello world");
+
+let buffer = new ArrayBuffer(8);
+workerInstance.postMessage(buffer, [buffer]);
+```
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+workerInstance.postMessage("hello world");
+workerInstance.onmessage = (e: MessageEvents): void => {
+    // let data = e.data;
+    console.info("receive data from worker.ets");
+}
+```
+
+```TypeScript
+// worker.ets
+import { DedicatedWorkerGlobalScope, worker } from '@kit.ArkTS';
+
+const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
+
+workerPort.onmessage = (): void => {
+    // let data = e.data;
+    let buffer = new ArrayBuffer(5)
+    workerPort.postMessage(buffer, [buffer]);
+}
+```
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+workerInstance.postMessage("hello world");
+workerInstance.onmessage = (): void => {
+    console.info("receive data from worker.ets");
+}
+```
+
+```TypeScript
+// worker.ets
+import { ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
+
+const parentPort = worker.parentPort;
+parentPort.onmessage = (e: MessageEvents) => {
+  parentPort.postMessage("receive data from main thread");
+}
 ```
 
 ## postMessage
@@ -231,17 +428,7 @@ postMessage(message: Object, options?: PostMessageOptions): void
 
 **示例**
 
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
-
-workerInstance.postMessage("hello world");
-
-let buffer = new ArrayBuffer(8);
-workerInstance.postMessage(buffer, [buffer]);
-```
+参见 [postMessage](#postmessage)
 
 ## terminate
 
@@ -262,6 +449,14 @@ terminate(): void
 **系统能力：** SystemCapability.Utils.Lang
 
 **示例**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+workerInstance.terminate();
+```
 
 ```TypeScript
 // Index.ets

@@ -1,6 +1,6 @@
 # AbilityMonitor
 
-本模块提供监听指定[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)生命周期状态变化的能力。开发者可以将AbilityMonitor作为 [abilityDelegator.addAbilityMonitor](arkts-ability-abilitydelegator-i.md#addabilitymonitor) 的入参来注册监听。
+本模块提供监听指定[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)生命周期状态变化的能力。开发者可以将AbilityMonitor作为 [abilityDelegator.addAbilityMonitor](arkts-ability-abilitydelegator-i.md#addabilitymonitor) 的入参来注册监听。
 
 **起始版本：** 23
 
@@ -169,4 +169,29 @@ onWindowStageRestore?: (ability: UIAbility) => void
 <!--Device-AbilityMonitor-onWindowStageRestore?: (ability: UIAbility) => void--><!--Device-AbilityMonitor-onWindowStageRestore?: (ability: UIAbility) => void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**示例**
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function onAbilityCreateCallback(data: UIAbility) {
+  console.info(`onAbilityCreateCallback, data: ${JSON.stringify(data)}`);
+}
+
+let monitor: abilityDelegatorRegistry.AbilityMonitor = {
+  abilityName: 'abilityname',
+  moduleName: 'moduleName',
+  onAbilityCreate: onAbilityCreateCallback
+}
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.addAbilityMonitor(monitor, (err: BusinessError<void> | null) => {
+  if (err) {
+    console.error(`Failed to add ability monitor. Code: ${error.code}, message: ${error.message}`);
+  }
+})
+```
 

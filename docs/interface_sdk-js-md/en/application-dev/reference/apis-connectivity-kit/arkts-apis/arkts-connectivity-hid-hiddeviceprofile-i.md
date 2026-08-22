@@ -4,7 +4,7 @@ Manager HID device profile.
 
 **Inheritance/Implementation:** HidDeviceProfile extends [BaseProfile](arkts-connectivity-hid-baseprofile-t.md)
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-hid-interface HidDeviceProfile--><!--Device-hid-interface HidDeviceProfile-End-->
 
@@ -24,7 +24,7 @@ connect(deviceId: BluetoothAddress): void
 
 Initiate an HID connection to a remote HID host device.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -68,6 +68,16 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let hidHostProfile = hid.createHidHostProfile();
+    hidHostProfile.connect('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## disconnect
 
 ```TypeScript
@@ -76,7 +86,7 @@ disconnect(): void
 
 Disconnect the HID connection with the remote device.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -107,6 +117,16 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let hidHostProfile = hid.createHidHostProfile();
+    hidHostProfile.disconnect('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## offGetReport
 
 ```TypeScript
@@ -115,7 +135,7 @@ offGetReport(callback?: Callback<GetReportData>): void
 
 Unsubscribe from the event that a GET_REPORT message is received from the peer device.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -129,7 +149,7 @@ Unsubscribe from the event that a GET_REPORT message is received from the peer d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[GetReportData](arkts-connectivity-hid-getreportdata-i.md)&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GetReportData](arkts-connectivity-hid-getreportdata-i.md)&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -161,7 +181,7 @@ offInterruptDataReceived(callback?: Callback<InterruptData>): void
 
 Unsubscribe from the event reported when InterruptData is received from the remote.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -175,7 +195,7 @@ Unsubscribe from the event reported when InterruptData is received from the remo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InterruptData](arkts-connectivity-hid-interruptdata-i.md)&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptData](arkts-connectivity-hid-interruptdata-i.md)&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -207,7 +227,7 @@ offSetProtocol(callback?: Callback<ProtocolData>): void
 
 Unsubscribe from the event that a SET_PROTOCOL message is received from the peer device.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -221,7 +241,7 @@ Unsubscribe from the event that a SET_PROTOCOL message is received from the peer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ProtocolData](arkts-connectivity-hid-protocoldata-i.md)&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProtocolData](arkts-connectivity-hid-protocoldata-i.md)&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -253,7 +273,7 @@ offSetReport(callback?: Callback<SetReportData>): void
 
 Unsubscribe from the event that a SET_REPORT message is received from the peer device.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -267,7 +287,7 @@ Unsubscribe from the event that a SET_REPORT message is received from the peer d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SetReportData](arkts-connectivity-hid-setreportdata-i.md)&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SetReportData](arkts-connectivity-hid-setreportdata-i.md)&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -299,7 +319,7 @@ offVirtualCableUnplug(callback?: Callback<void>): void
 
 Unsubscribe from the event reported when virtual Cable is removed.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -313,7 +333,7 @@ Unsubscribe from the event reported when virtual Cable is removed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -345,7 +365,7 @@ onGetReport(callback: Callback<GetReportData>): void
 
 Subscribe to the event reported when GET_REPORT message is received from the remote.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -359,7 +379,7 @@ Subscribe to the event reported when GET_REPORT message is received from the rem
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[GetReportData](arkts-connectivity-hid-getreportdata-i.md)&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GetReportData](arkts-connectivity-hid-getreportdata-i.md)&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -390,7 +410,7 @@ onInterruptDataReceived(callback: Callback<InterruptData>): void
 
 Subscribe to the event reported when InterruptData is received from the remote.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -404,7 +424,7 @@ Subscribe to the event reported when InterruptData is received from the remote.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InterruptData](arkts-connectivity-hid-interruptdata-i.md)&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptData](arkts-connectivity-hid-interruptdata-i.md)&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -435,7 +455,7 @@ onSetProtocol(callback: Callback<ProtocolData>): void
 
 Subscribe to the event reported when SET_PROTOCOL message is received from the remote.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -449,7 +469,7 @@ Subscribe to the event reported when SET_PROTOCOL message is received from the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ProtocolData](arkts-connectivity-hid-protocoldata-i.md)&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProtocolData](arkts-connectivity-hid-protocoldata-i.md)&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -480,7 +500,7 @@ onSetReport(callback: Callback<SetReportData>): void
 
 Subscribe to the event reported when SET_REPORT message is received from the remote.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -494,7 +514,7 @@ Subscribe to the event reported when SET_REPORT message is received from the rem
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SetReportData](arkts-connectivity-hid-setreportdata-i.md)&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SetReportData](arkts-connectivity-hid-setreportdata-i.md)&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -525,7 +545,7 @@ onVirtualCableUnplug(callback: Callback<void>): void
 
 Subscribe to the event reported when virtual Cable is removed.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -539,7 +559,7 @@ Subscribe to the event reported when virtual Cable is removed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -570,7 +590,7 @@ registerHidDevice(sdp: HidDeviceSdp, inQos: HidDeviceQos, outQos: HidDeviceQos, 
 
 Application registers the HID Device capability. The application will only successfully call this API when it's in the foreground. If the application that has registered the HID Device capability is switched to the background, the system automatically cancels the HID Device capability registration. The application can listen to the appStatusChange callback to detect the status change.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -587,7 +607,7 @@ Application registers the HID Device capability. The application will only succe
 | sdp | [HidDeviceSdp](arkts-connectivity-hid-hiddevicesdp-i.md) | Yes | Describe the hid device capability fields of this endpoint being queried. |
 | inQos | [HidDeviceQos](arkts-connectivity-hid-hiddeviceqos-i.md) | Yes | Describe the In Quality of Service (QoS) settings for the Bluetooth HID device application. |
 | outQos | [HidDeviceQos](arkts-connectivity-hid-hiddeviceqos-i.md) | Yes | Describe the Out Quality of Service (QoS) settings for the Bluetooth HID device application. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback for HID device registration status changes, {@code true} indicates register success or {@code false} otherwise. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback for HID device registration status changes, {@code true} indicates register success or {@code false} otherwise. |
 
 **Error codes:**
 
@@ -659,7 +679,7 @@ replyReport(type: ReportType, id: int, reportData: Uint8Array): void
 
 Reply report to a remote HID host device.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -710,7 +730,7 @@ reportError(error: ErrorReason): void
 
 Report error to a remote HID host device.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -757,7 +777,7 @@ sendReport(id: int, reportData: Uint8Array): void
 
 Send report to a remote HID host device.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -806,7 +826,7 @@ unregisterHidDevice(): void
 
 Application unregisters the HID Device capability.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 

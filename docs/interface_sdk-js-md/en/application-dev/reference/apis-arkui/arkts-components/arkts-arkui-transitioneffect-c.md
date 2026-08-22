@@ -140,6 +140,17 @@ Constructs a **TransitionEffect** object.
 | type | [Type](../../apis-default/arkts-apis/arkts-util-type-e.md) | Yes | Transition type. |
 | effect | [Effect](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-effect-i.md) | Yes | Transition parameter. |
 
+**Examples**
+
+```TypeScript
+@Builder
+function MyBuilder(value: string, size: number) {
+  Text(value)
+    .fontSize(size)
+}
+let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(MyBuilder);
+```
+
 ## move
 
 ```TypeScript

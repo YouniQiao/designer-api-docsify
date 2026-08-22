@@ -95,6 +95,13 @@ try {
 }
 ```
 
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let countryName: string = i18n.getDisplayCountry('zh-CN', 'en-GB', true); // countryName = 'China'
+countryName = i18n.getDisplayCountry('zh-CN', 'en-GB'); // countryName = 'China'
+```
+
 ## getDisplayLanguage
 
 ```TypeScript
@@ -147,6 +154,13 @@ try {
 }
 ```
 
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let languageName: string = i18n.getDisplayLanguage('zh', 'en-GB', true); // languageName = 'Chinese'
+languageName = i18n.getDisplayLanguage('zh', 'en-GB'); // languageName = 'Chinese'
+```
+
 ## getFirstDayOfWeek
 
 ```TypeScript
@@ -175,6 +189,13 @@ static getFirstDayOfWeek(): WeekDay
 import { i18n } from '@kit.LocalizationKit';
 
 let firstDayOfWeek: i18n.WeekDay = i18n.System.getFirstDayOfWeek();
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let calendar = i18n.getCalendar('en-US', 'gregory');
+let firstDayOfWeek = calendar.getFirstDayOfWeek(); // firstDayOfWeek = 1
 ```
 
 ## getFirstPreferredLanguage
@@ -207,6 +228,12 @@ import { i18n } from '@kit.LocalizationKit';
 let firstPreferredLanguage: string = i18n.System.getFirstPreferredLanguage();
 ```
 
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let firstPreferredLanguage: string = i18n.getFirstPreferredLanguage();
+```
+
 ## getPreferredLanguageList
 
 ```TypeScript
@@ -235,6 +262,12 @@ static getPreferredLanguageList(): Array<string>
 import { i18n } from '@kit.LocalizationKit';
 
 let preferredLanguageList: Array<string> = i18n.System.getPreferredLanguageList();
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let preferredLanguageList: Array<string> = i18n.getPreferredLanguageList();
 ```
 
 ## getSimplifiedLanguage
@@ -371,6 +404,12 @@ import { i18n } from '@kit.LocalizationKit';
 let systemLanguage: string = i18n.System.getSystemLanguage(); // 如果系统语言为简体中文，systemLanguage = 'zh-Hans'
 ```
 
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let systemLanguage: string = i18n.getSystemLanguage();
+```
+
 ## getSystemLanguages
 
 ```TypeScript
@@ -438,6 +477,12 @@ import { i18n } from '@kit.LocalizationKit';
 let systemLocale: string = i18n.System.getSystemLocale(); // 如果系统语言为简体中文、地区为中国，systemLocale = 'zh-Hans-CN'
 ```
 
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let locale: string = i18n.getSystemLocale();
+```
+
 ## getSystemLocaleInstance
 
 ```TypeScript
@@ -496,6 +541,12 @@ static getSystemRegion(): string
 import { i18n } from '@kit.LocalizationKit';
 
 let systemRegion: string = i18n.System.getSystemRegion(); // 如果系统地区为中国，systemRegion = 'CN'
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let region: string = i18n.getSystemRegion();
 ```
 
 ## getTemperatureName
@@ -637,6 +688,12 @@ static is24HourClock(): boolean
 import { i18n } from '@kit.LocalizationKit';
 
 let is24HourClock: boolean = i18n.System.is24HourClock(); // 如果系统时制是24小时制，is24HourClock = true
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let is24HourClock: boolean = i18n.is24HourClock();
 ```
 
 ## isSuggested

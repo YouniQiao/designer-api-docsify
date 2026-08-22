@@ -76,6 +76,37 @@ try {
 }
 ```
 
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+  let config:wifi.WifiDeviceConfig = {
+    ssid : "****",
+    bssid:  "****",
+    preSharedKey: "****",
+    isHiddenSsid: false,
+    securityType: 0,
+    creatorUid: 0,
+    disableReason: 0,
+    netId: 0,
+    randomMacType: 0,
+    randomMacAddr:  "****",
+    ipType: 0,
+    staticIp: {
+      ipAddress: 0,
+      gateway: 0,
+      dnsServers: [],
+      domains: []
+    }
+  }
+  wifi.removeUntrustedConfig(config,(error,result) => {
+  console.info("result:" + JSON.stringify(result));
+  });  
+}catch(error){
+  console.error("failed:" + JSON.stringify(error));
+}
+```
+
 
 ## removeUntrustedConfig
 
@@ -108,34 +139,5 @@ function removeUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback
 
 **示例**
 
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-  let config:wifi.WifiDeviceConfig = {
-    ssid : "****",
-    bssid:  "****",
-    preSharedKey: "****",
-    isHiddenSsid: false,
-    securityType: 0,
-    creatorUid: 0,
-    disableReason: 0,
-    netId: 0,
-    randomMacType: 0,
-    randomMacAddr:  "****",
-    ipType: 0,
-    staticIp: {
-      ipAddress: 0,
-      gateway: 0,
-      dnsServers: [],
-      domains: []
-    }
-  }
-  wifi.removeUntrustedConfig(config,(error,result) => {
-  console.info("result:" + JSON.stringify(result));
-  });  
-}catch(error){
-  console.error("failed:" + JSON.stringify(error));
-}
-```
+参见 [removeUntrustedConfig](#removeuntrustedconfig)
 

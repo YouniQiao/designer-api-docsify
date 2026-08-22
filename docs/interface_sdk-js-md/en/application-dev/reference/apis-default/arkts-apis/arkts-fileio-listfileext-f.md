@@ -33,7 +33,7 @@ You can configure the **recursion** parameter in **options** to recursively list
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| options | [ListFileExtOptions](arkts-filefs-listfileextoptions-i.md) | No | Options for listing files. The default value is empty, indicating no recursive listing of files or file filtering and no limit on the number of files to be listed. |
+| options | [ListFileExtOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-listfileextoptions-i.md) | No | Options for listing files. The default value is empty, indicating no recursive listing of files or file filtering and no limit on the number of files to be listed. |
 
 **Return value:**
 

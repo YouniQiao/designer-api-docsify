@@ -64,8 +64,8 @@ Defines the namespace of focus controller.
 | [BackgroundImageOptions](arkts-common-backgroundimageoptions-i.md) | Define the options for background image. |
 | [BackgroundOptions](arkts-common-backgroundoptions-i.md) | Defines background options. |
 | [BaseEvent](arkts-common-baseevent-i.md) | Defines the base event. |
-| [BindOptions](arkts-common-bindoptions-i.md) | Overlay module options |
 | [Bindable](arkts-common-bindable-i.md) | Defines a bindable property |
+| [BindOptions](arkts-common-bindoptions-i.md) | Overlay module options |
 | [BlurOptions](arkts-common-bluroptions-i.md) | Defines the options of blur |
 | [BlurStyleOptions](arkts-common-blurstyleoptions-i.md) | Defines the options of blurStyle |
 | [BorderImageOption](arkts-common-borderimageoption-i.md) | Border image option |
@@ -151,8 +151,8 @@ Defines the namespace of focus controller.
 | [PopupStateChangeParam](arkts-common-popupstatechangeparam-i.md) | Popup state change param |
 | [PreviewConfiguration](arkts-common-previewconfiguration-i.md) | Defines the drag preview configuration. |
 | [RadialGradientOptions](arkts-common-radialgradientoptions-i.md) | Defines the options of radial gradient. |
-| [RectResult](arkts-common-rectresult-i.md) | Describe the position, width, and height of a component. |
 | [Rectangle](arkts-common-rectangle-i.md) | The data type used to describe a rectangular area. |
+| [RectResult](arkts-common-rectresult-i.md) | Describe the position, width, and height of a component. |
 | [ResponseRegion](arkts-common-responseregion-i.md) | Defines the response region interface. |
 | [ReuseOptions](arkts-common-reuseoptions-i.md) | Defining the reusable configuration parameters. |
 | [RotateAngleOptions](arkts-common-rotateangleoptions-i.md) | The rotation parameters containing multi-axis angle information. |
@@ -161,6 +161,7 @@ Defines the namespace of focus controller.
 | [ScrollableCommonMethod](arkts-common-scrollablecommonmethod-i.md) | CommonScrollableMethod |
 | [SelectionOptions](arkts-common-selectionoptions-i.md) | Defines the selection options. |
 | [ShadowOptions](arkts-common-shadowoptions-i.md) | Define the options of shadow |
+| [sharedTransitionOptions](arkts-common-sharedtransitionoptions-i.md) | Defines the shard transition function params. |
 | [SheetDismiss](arkts-common-sheetdismiss-i.md) | Component sheet dismiss |
 | [SheetOptions](arkts-common-sheetoptions-i.md) | Component sheet options |
 | [SheetTitleOptions](arkts-common-sheettitleoptions-i.md) | Component sheet title options |
@@ -182,7 +183,6 @@ Defines the namespace of focus controller.
 | [UIScrollableCommonEvent](arkts-common-uiscrollablecommonevent-i.md) | Defines a UIScrollableCommonEvent which is used to set event to target component. |
 | [VerticalAlignParam](arkts-common-verticalalignparam-i.md) | Defines the align rule options of relative container. |
 | [VisibleAreaEventOptions](arkts-common-visibleareaeventoptions-i.md) | Defines the options about VisibleAreaEvent. |
-| [sharedTransitionOptions](arkts-common-sharedtransitionoptions-i.md) | Defines the shard transition function params. |
 
 <!--Del-->
 ### Interfaces(System API)
@@ -225,9 +225,9 @@ Defines the namespace of focus controller.
 | [ContentClipMode](arkts-common-contentclipmode-e.md) | Enum of scrollable containers' content clip mode. |
 | [DismissReason](arkts-common-dismissreason-e.md) | Dismiss reason type. |
 | [DragBehavior](arkts-common-dragbehavior-e.md) | Enum for Drag Behavior. |
+| [DraggingSizeChangeEffect](arkts-common-draggingsizechangeeffect-e.md) | Define drag start animation effect from drag preview to the handle drag image |
 | [DragPreviewMode](arkts-common-dragpreviewmode-e.md) | Defines the drag preview mode. |
 | [DragResult](arkts-common-dragresult-e.md) | Enum for Drag Result. |
-| [DraggingSizeChangeEffect](arkts-common-draggingsizechangeeffect-e.md) | Define drag start animation effect from drag preview to the handle drag image |
 | [EffectEdge](arkts-common-effectedge-e.md) | Enumerates the effective edge of the edge effect. |
 | [EffectType](arkts-common-effecttype-e.md) | Enum of using the effects template mode. |
 | [FinishCallbackType](arkts-common-finishcallbacktype-e.md) | Enum for FinishCallbackType. |

@@ -52,6 +52,23 @@ Obtains the current white balance value.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 19 |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getWhiteBalance(session: camera.PhotoSession | camera.VideoSession): number {
+  let whiteBalance: number = 0;
+  try {
+    whiteBalance = session.getWhiteBalance();
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The getWhiteBalance call failed. error code: ${err.code}`);
+  }
+  return whiteBalance;
+}
+```
+
 ## getWhiteBalanceGains
 
 ```TypeScript
@@ -114,6 +131,23 @@ Obtains the white balance mode in use.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 19 |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getWhiteBalanceMode(session: camera.PhotoSession | camera.VideoSession): camera.WhiteBalanceMode | undefined {
+  let whiteBalanceMode: camera.WhiteBalanceMode | undefined = undefined;
+  try {
+    whiteBalanceMode = session.getWhiteBalanceMode();
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The getWhiteBalanceMode call failed. error code: ${err.code}`);
+  }
+  return whiteBalanceMode;
+}
+```
+
 ## setWhiteBalance
 
 ```TypeScript
@@ -145,6 +179,22 @@ Sets a white balance value. Before the setting, run [getWhiteBalanceRange](arkts
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 19 |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setWhiteBalance(session: camera.PhotoSession | camera.VideoSession): void {
+  try {
+    let whiteBalance: number = 1000;
+    session.setWhiteBalance(whiteBalance);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The setWhiteBalance call failed. error code: ${err.code}`);
+  }
+}
+```
 
 ## setWhiteBalanceGains
 
@@ -208,4 +258,19 @@ Sets a white balance mode. Before the setting, run [isWhiteBalanceModeSupported]
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 19 |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setWhiteBalanceMode(session: camera.PhotoSession | camera.VideoSession): void {
+  try {
+    session.setWhiteBalanceMode(camera.WhiteBalanceMode.DAYLIGHT);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The setWhiteBalanceMode call failed. error code: ${err.code}`);
+  }
+}
+```
 

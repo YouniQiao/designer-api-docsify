@@ -37,6 +37,19 @@ Notifies the player of the current request status. After pushing all the data fo
 | uuid | long | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md). |
 | state | [LoadingRequestError](arkts-media-media-loadingrequesterror-e.md) | Yes | Request status. |
 
+**Examples**
+
+```TypeScript
+import { HashMap } from '@kit.ArkTS';
+
+let requests: HashMap<number, media.MediaSourceLoadingRequest> = new HashMap();
+let uuid = 1;
+
+let request = requests.get(uuid);
+let loadingError = media.LoadingRequestError.LOADING_ERROR_SUCCESS;
+request?.finishLoading(uuid, loadingError);
+```
+
 ## respondData
 
 ```TypeScript
@@ -67,6 +80,19 @@ Sends data to the player.
 | --- | --- |
 | number | Number of bytes received by the server. <br>- A return value less than 0 indicates failure. <br>- A return value of -2 indicates that the player no longer needs the current data, and the client should stop the current read process. <br>- A return value of -3 indicates that the player's buffer is full, and the client should wait for the next read. |
 
+**Examples**
+
+```TypeScript
+import { HashMap } from '@kit.ArkTS';
+let requests: HashMap<number, media.MediaSourceLoadingRequest> = new HashMap();
+let uuid = 1;
+
+let request = requests.get(uuid);
+let offset = 0; // Offset of the current media data relative to the start of the resource.
+let buf = new ArrayBuffer(0); // Data defined by the application and pushed to the player.
+let num = request?.respondData(uuid, offset, buf);
+```
+
 ## respondData
 
 ```TypeScript
@@ -95,6 +121,10 @@ The interface for application used to send requested data to AVPlayer.
 | --- | --- |
 | int \| undefined | accept bytes for current read. The value less than zero means failed. -2, means player need current data any more, the client should stop current read process. -3, means player buffer is full, the client should wait for next read. |
 
+**Examples**
+
+See [respondData](#responddata)
+
 ## respondHeader
 
 ```TypeScript
@@ -118,6 +148,27 @@ Sends response header information to the player. This API must be called before 
 | uuid | long | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md). |
 | header | Record&lt;string, string&gt; | No | Header information in the HTTP response. The application can intersect the header fields with the fields supported by the underlying layer for parsing or directly pass in all corresponding header information.<br> - The following fields need to be parsed by the underlying player: Transfer-Encoding, Location, Content-Type, Content-Range, Content-Encode, Accept-Ranges, and content-length. |
 | redirectUrl | string | No | Redirect URL in the HTTP response. |
+
+**Examples**
+
+```TypeScript
+import { HashMap } from '@kit.ArkTS';
+let requests: HashMap<number, media.MediaSourceLoadingRequest> = new HashMap();
+let uuid = 1;
+
+// The application fills this in as needed.
+let header:Record<string, string> = {
+  'Transfer-Encoding':'xxx',
+  'Location' : 'xxx',
+  'Content-Type' : 'xxx',
+  'Content-Range' : 'xxx',
+  'Content-Encode' : 'xxx',
+  'Accept-Ranges' : 'xxx',
+  'content-length' : 'xxx'
+};
+let request = requests.get(uuid);
+request?.respondHeader(uuid, header);
+```
 
 ## header
 

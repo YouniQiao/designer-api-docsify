@@ -50,6 +50,76 @@ getItemAtIndex(index: number): HistoryItem
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State icon: image.PixelMap | undefined = undefined;
+
+  build() {
+    Column() {
+      Button('getBackForwardEntries')
+        .onClick(() => {
+          try {
+            let list = this.controller.getBackForwardEntries();
+            let historyItem = list.getItemAtIndex(list.currentIndex);
+            console.info("HistoryItem: " + JSON.stringify(historyItem));
+            this.icon = historyItem.icon;
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  @State icon: image.PixelMap | undefined = undefined;
+
+  build() {
+    Column() {
+      Button('getBackForwardEntries')
+        .onClick(() => {
+          try {
+            let list = this.controller.getBackForwardEntries();
+            let historyItem = list.getItemAtIndex(list.currentIndex);
+            console.info("HistoryItem: " + JSON.stringify(historyItem));
+            this.icon = historyItem.icon;
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## currentIndex
 
 ```TypeScript

@@ -85,6 +85,47 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
+  console.info(`Consume callback: ${JSON.stringify(data)}`);
+}
+let subscriber: notificationSubscribe.NotificationSubscriber = {
+  onConsume: onConsumeCallback
+};
+let subscribeInfo: notificationSubscribe.NotificationSubscribeInfo = {
+  bundleNames: ['bundleName1', 'bundleName2'],
+}
+notificationSubscribe.subscribeNotification(subscriber, subscribeInfo).then(() => {
+  console.info('subscribeNotification success');
+}).catch((err: BusinessError) => {
+  console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
+  console.info(`Consume callback: ${JSON.stringify(data)}`);
+}
+let subscriber: notificationSubscribe.NotificationSubscriber = {
+  onConsume: onConsumeCallback
+};
+let subscribeInfo: notificationSubscribe.NotificationSubscribeInfo = {
+  bundleNames: ['bundleName1', 'bundleName2'],
+}
+notificationSubscribe.subscribeNotification(subscriber, subscribeInfo).then(() => {
+  console.info('subscribeNotification success');
+}).catch((err: Error) => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`subscribeNotification failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## subscribeNotification
 
@@ -131,44 +172,5 @@ function subscribeNotification(subscriber: NotificationSubscriber, info: Notific
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
-  console.info(`Consume callback: ${JSON.stringify(data)}`);
-}
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onConsume: onConsumeCallback
-};
-let subscribeInfo: notificationSubscribe.NotificationSubscribeInfo = {
-  bundleNames: ['bundleName1', 'bundleName2'],
-}
-notificationSubscribe.subscribeNotification(subscriber, subscribeInfo).then(() => {
-  console.info('subscribeNotification success');
-}).catch((err: BusinessError) => {
-  console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
-  console.info(`Consume callback: ${JSON.stringify(data)}`);
-}
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onConsume: onConsumeCallback
-};
-let subscribeInfo: notificationSubscribe.NotificationSubscribeInfo = {
-  bundleNames: ['bundleName1', 'bundleName2'],
-}
-notificationSubscribe.subscribeNotification(subscriber, subscribeInfo).then(() => {
-  console.info('subscribeNotification success');
-}).catch((err: Error) => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`subscribeNotification failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [subscribeNotification](#subscribenotification)
 

@@ -11,5 +11,5 @@
 
 | Name | Description |
 | --- | --- |
-| [SymbolConstructor](arkts-libes2015symbol-symbolconstructor-i.md) |  |
+| [SymbolConstructor](arkts-lib-es2015-symbol-symbolconstructor-i.md) |  |
 

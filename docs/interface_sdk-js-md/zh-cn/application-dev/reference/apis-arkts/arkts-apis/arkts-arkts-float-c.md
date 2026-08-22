@@ -1233,6 +1233,18 @@ public static EPSILON: float = Float.DELTA
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## f
+
+```TypeScript
+f
+```
+
+**起始版本：** -1
+
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
+
+<!--Device-Float-f--><!--Device-Float-f-End-->
+
 ## MAX_SAFE_INTEGER
 
 ```TypeScript
@@ -1293,26 +1305,6 @@ public static MIN_VALUE: float = 1.4e-45
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## NEGATIVE_INFINITY
-
-```TypeScript
-public static NEGATIVE_INFINITY: float = Double.toFloat(-1.0 / 0.0)
-```
-
-表示IEEE-754规范中的-Infinity值。
-
-**类型：** float
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Float-public static NEGATIVE_INFINITY: float = Double.toFloat(-1.0 / 0.0)--><!--Device-Float-public static NEGATIVE_INFINITY: float = Double.toFloat(-1.0 / 0.0)-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
 ## NaN
 
 ```TypeScript
@@ -1330,6 +1322,26 @@ public static NaN: float = Double.toFloat(0.0 / 0.0)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Float-public static NaN: float = Double.toFloat(0.0 / 0.0)--><!--Device-Float-public static NaN: float = Double.toFloat(0.0 / 0.0)-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## NEGATIVE_INFINITY
+
+```TypeScript
+public static NEGATIVE_INFINITY: float = Double.toFloat(-1.0 / 0.0)
+```
+
+表示IEEE-754规范中的-Infinity值。
+
+**类型：** float
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Float-public static NEGATIVE_INFINITY: float = Double.toFloat(-1.0 / 0.0)--><!--Device-Float-public static NEGATIVE_INFINITY: float = Double.toFloat(-1.0 / 0.0)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1372,16 +1384,4 @@ public static PRECISION: byte = 24
 <!--Device-Float-public static PRECISION: byte = 24--><!--Device-Float-public static PRECISION: byte = 24-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
-
-## f
-
-```TypeScript
-f
-```
-
-**起始版本：** -1
-
-**ArkTS模式：** ArkTS-Sta起始版本为-1。
-
-<!--Device-Float-f--><!--Device-Float-f-End-->
 

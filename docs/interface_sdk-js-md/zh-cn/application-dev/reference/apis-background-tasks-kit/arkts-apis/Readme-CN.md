@@ -1,8 +1,5 @@
 # ArkTS API<!--arkts-backgroundtaskskit-->
 
-- [@ohos.WorkSchedulerExtensionAbility](arkts-workschedulerextensionability.md)
-  - [WorkSchedulerExtensionAbility](arkts-backgroundtasks-workschedulerextensionability-c.md)
-  - [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-t.md)
 - [@ohos.backgroundTaskManager](arkts-backgroundtaskmanager.md)
   - [cancelSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-cancelsuspenddelay-depr-f.md)
   - [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-depr-f.md)
@@ -261,6 +258,9 @@
   - [StorageRequest](arkts-backgroundtasks-workscheduler-storagerequest-e.md)
   <!--Del-->
   - [常量(系统接口)](arkts-backgroundtasks-workscheduler-con-sys.md)<!--DelEnd-->
+- [@ohos.WorkSchedulerExtensionAbility](arkts-workschedulerextensionability.md)
+  - [WorkSchedulerExtensionAbility](arkts-backgroundtasks-workschedulerextensionability-c.md)
+  - [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-t.md)
 - application<!--arkts-backgroundtaskskit-application-->
   - [WorkSchedulerExtensionContext](arkts-workschedulerextensioncontext.md)
     <!--Del-->

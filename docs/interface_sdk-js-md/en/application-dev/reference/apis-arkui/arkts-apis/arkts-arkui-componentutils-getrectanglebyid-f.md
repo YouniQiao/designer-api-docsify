@@ -17,8 +17,8 @@ Obtains a **ComponentInfo** object based on the component ID and synchronously r
 > **NOTE：**
 > 
 > - Since API version 10, you can use the
-> [getComponentUtils](arkts-arkui-arkuiuicontext-uicontext-c.md#getcomponentutils) API in
-> [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) to obtain the [ComponentUtils](arkts-arkui-arkuiuicontext-uicontext-c.md) object
+> [getComponentUtils](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getcomponentutils) API in
+> [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [ComponentUtils](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object
 > associated with the current UI context. This API provides access to component coordinates and size information
 > after the target component completes layout. It is recommended that you invoke this API within
 > [layout completion callbacks](../../apis-default/arkts-apis/arkts-arkui-inspector.md). Note that dynamically created components

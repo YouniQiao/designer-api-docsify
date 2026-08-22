@@ -32,7 +32,7 @@ declare function dup(fd: number): File
 
 | 类型 | 说明 |
 | --- | --- |
-| [File](arkts-corefile-filefs-file-i.md) | 打开的File对象。 |
+| [File](arkts-corefile-file-fs-file-i.md) | 打开的File对象。 |
 
 **错误码：**
 
@@ -45,4 +45,30 @@ declare function dup(fd: number): File
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
 | 13900042 | Unknown error |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file1 = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+let fd: number = file1.fd;
+let file2 = fileIo.dup(fd);
+console.info(`Succeeded in getting file name of the file2 is ${file2.name}`);
+fileIo.closeSync(file1);
+fileIo.closeSync(file2);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file1 = fileIo.openSync(filePath,fileIo.OpenMode.READ_WRITE);
+let fd: int = file1.fd;
+let file2 = fileIo.dup(fd);
+console.info(`Succeeded in getting file name of the file2 is ${file2.name}`);
+fileIo.closeSync(file1);
+fileIo.closeSync(file2);
+```
 

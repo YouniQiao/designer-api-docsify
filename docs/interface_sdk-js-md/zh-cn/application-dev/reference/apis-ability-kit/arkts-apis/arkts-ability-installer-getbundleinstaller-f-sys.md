@@ -79,37 +79,6 @@ try {
 }
 ```
 
-
-## getBundleInstaller
-
-```TypeScript
-function getBundleInstaller(): Promise<BundleInstaller>
-```
-
-获取BundleInstaller对象。使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-installer-function getBundleInstaller(): Promise<BundleInstaller>--><!--Device-installer-function getBundleInstaller(): Promise<BundleInstaller>-End-->
-
-**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
-
-**系统接口：** 此接口为系统接口。
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;BundleInstaller&gt; | BundleInstaller object. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-**示例**
-
 ArkTS-Dyn示例:
 
 ```TypeScript
@@ -147,4 +116,37 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+
+## getBundleInstaller
+
+```TypeScript
+function getBundleInstaller(): Promise<BundleInstaller>
+```
+
+获取BundleInstaller对象。使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-installer-function getBundleInstaller(): Promise<BundleInstaller>--><!--Device-installer-function getBundleInstaller(): Promise<BundleInstaller>-End-->
+
+**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;BundleInstaller&gt; | BundleInstaller object. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+**示例**
+
+参见 [getBundleInstaller](#getbundleinstaller)
 

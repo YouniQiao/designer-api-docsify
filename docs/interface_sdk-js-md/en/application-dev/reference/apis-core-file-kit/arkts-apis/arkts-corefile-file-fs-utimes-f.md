@@ -40,3 +40,13 @@ Changes the time when the file was last modified.
 | 13900027 | Read-only file system |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fs.openSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
+fs.writeSync(file.fd, 'test data');
+fs.closeSync(file);
+fs.utimes(filePath, new Date().getTime());
+```
+

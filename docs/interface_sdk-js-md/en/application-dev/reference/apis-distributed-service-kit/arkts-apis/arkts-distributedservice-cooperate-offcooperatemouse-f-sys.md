@@ -30,7 +30,7 @@ Unregisters the listener for the mouse cursor position of a device.
 | --- | --- | --- | --- |
 | type | 'cooperateMouse' | Yes | Event type, which is **'cooperateMouse'**. |
 | networkId | string | Yes | Descriptor of the target device. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MouseLocation](arkts-distributedservice-cooperate-mouselocation-i-sys.md)&gt; | No | Callback to be unregistered. If this parameter is not specified, all callbacks registered by the current application will be unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MouseLocation](arkts-distributedservice-cooperate-mouselocation-i-sys.md)&gt; | No | Callback to be unregistered. If this parameter is not specified, all callbacks registered by the current application will be unregistered. |
 
 **Error codes:**
 

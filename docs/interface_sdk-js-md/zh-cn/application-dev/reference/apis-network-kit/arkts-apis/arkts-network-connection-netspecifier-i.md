@@ -50,3 +50,57 @@ netCapabilities: NetCapabilities
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let config: wifiManager.WifiDeviceConfig = {
+  ssid: "TEST",
+  preSharedKey: "**********",
+  securityType: wifiManager.WifiSecurityType.WIFI_SEC_TYPE_PSK
+};
+// 通过wifiManager.addCandidateConfig获取注册WLAN的networkId。
+wifiManager.addCandidateConfig(config,(error,networkId) => {
+ let netConnectionWlan = connection.createNetConnection({
+   netCapabilities: {
+     bearerTypes: [connection.NetBearType.BEARER_WIFI]
+   },
+   bearerPrivateIdentifier: `${networkId}`
+ });
+ netConnectionWlan.register((error: BusinessError) => {
+   console.error(`Failed to get register.Code:${error.code}, message:${error.message}`);
+ });
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let config: wifiManager.WifiDeviceConfig = {
+  ssid: "TEST",
+  preSharedKey: "**********",
+  securityType: wifiManager.WifiSecurityType.WIFI_SEC_TYPE_PSK
+};
+// 通过wifiManager.addCandidateConfig获取注册WLAN的networkId。
+wifiManager.addCandidateConfig(config,(error,networkId) => {
+  let netConnectionWlan = connection.createNetConnection({
+    netCapabilities: {
+      bearerTypes: [connection.NetBearType.BEARER_WIFI]
+    },
+    bearerPrivateIdentifier: `${networkId}`
+  });
+  netConnectionWlan.register((error: BusinessError|null) => {
+    console.error(`Failed to get register.Code:${error.code}, message:${error.message}`);
+  });
+});
+```
+

@@ -146,6 +146,51 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let account: string = 'test_id';
+let bundleName: string = 'test_bundleName';
+try {
+  cloudData.Config.changeAppCloudSwitch(account, bundleName, true).then(() => {
+    console.info('Succeeded in changing App cloud switch');
+  }).catch((err) => {
+    console.error(`Failed to change App cloud switch. Code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let account: string = 'test_id';
+let bundleName: string = 'test_bundleName';
+let config: cloudData.SwitchConfig = {
+  dbInfo: {
+    'test_storeName1': {
+      enable: true,
+      tableInfo: {
+        'test_tableName1': true,
+        'test_tableName2': false
+      }
+    }
+  }
+}
+try {
+  cloudData.Config.changeAppCloudSwitch(account, bundleName, true, config).then(() => {
+    console.info('Succeeded in changing App cloud switch');
+  }).catch((err) => {
+    console.error(`Failed to change App cloud switch. Code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## changeAppCloudSwitch
 
 ```TypeScript
@@ -189,22 +234,7 @@ static changeAppCloudSwitch(accountId: string, bundleName: string, status: boole
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = 'test_id';
-let bundleName: string = 'test_bundleName';
-try {
-  cloudData.Config.changeAppCloudSwitch(account, bundleName, true).then(() => {
-    console.info('Succeeded in changing App cloud switch');
-  }).catch((err) => {
-    console.error(`Failed to change App cloud switch. Code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [changeAppCloudSwitch](#changeappcloudswitch)
 
 ## changeAppCloudSwitch
 
@@ -256,33 +286,7 @@ static changeAppCloudSwitch(
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = 'test_id';
-let bundleName: string = 'test_bundleName';
-let config: cloudData.SwitchConfig = {
-  dbInfo: {
-    'test_storeName1': {
-      enable: true,
-      tableInfo: {
-        'test_tableName1': true,
-        'test_tableName2': false
-      }
-    }
-  }
-}
-try {
-  cloudData.Config.changeAppCloudSwitch(account, bundleName, true, config).then(() => {
-    console.info('Succeeded in changing App cloud switch');
-  }).catch((err) => {
-    console.error(`Failed to change App cloud switch. Code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [changeAppCloudSwitch](#changeappcloudswitch)
 
 ## clear
 
@@ -348,6 +352,60 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let account: string = "test_id";
+type dataType = Record<string, cloudData.ClearAction>;
+let appActions: dataType = {
+  'test_bundleName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
+  'test_bundleName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO
+};
+try {
+  cloudData.Config.clear(account, appActions).then(() => {
+    console.info('Succeeding in clearing cloud data');
+  }).catch((err) => {
+    console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let account: string = "test_id";
+let appActions: Record<string, cloudData.ClearAction> = {
+  'test_bundleName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
+  'test_bundleName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO,
+  'test_bundleName3': cloudData.ClearAction.CLEAR_CLOUD_NONE,
+};
+let config: Record<string, cloudData.ClearConfig> = {
+  'test_bundleName': {
+    dbInfo: {
+      'test_storeName': {
+        action: cloudData.ClearAction.CLEAR_CLOUD_INFO,
+        tableInfo: {
+          'test_tableName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
+          'test_tableName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO,
+        }
+      }
+    }
+  }
+}
+try {
+  cloudData.Config.clear(account, appActions, config).then(() => {
+    console.info('Succeeding in clearing cloud data');
+  }).catch((err) => {
+    console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+```
+
 ## clear
 
 ```TypeScript
@@ -390,26 +448,7 @@ static clear(accountId: string, appActions: Record<string, ClearAction>): Promis
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = "test_id";
-type dataType = Record<string, cloudData.ClearAction>;
-let appActions: dataType = {
-  'test_bundleName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
-  'test_bundleName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO
-};
-try {
-  cloudData.Config.clear(account, appActions).then(() => {
-    console.info('Succeeding in clearing cloud data');
-  }).catch((err) => {
-    console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [clear](#clear)
 
 ## clear
 
@@ -459,38 +498,7 @@ static clear(
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = "test_id";
-let appActions: Record<string, cloudData.ClearAction> = {
-  'test_bundleName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
-  'test_bundleName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO,
-  'test_bundleName3': cloudData.ClearAction.CLEAR_CLOUD_NONE,
-};
-let config: Record<string, cloudData.ClearConfig> = {
-  'test_bundleName': {
-    dbInfo: {
-      'test_storeName': {
-        action: cloudData.ClearAction.CLEAR_CLOUD_INFO,
-        tableInfo: {
-          'test_tableName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
-          'test_tableName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO,
-        }
-      }
-    }
-  }
-}
-try {
-  cloudData.Config.clear(account, appActions, config).then(() => {
-    console.info('Succeeding in clearing cloud data');
-  }).catch((err) => {
-    console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-```
+参见 [clear](#clear)
 
 ## cloudSync
 
@@ -692,6 +700,22 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let account: string = 'test_id';
+try {
+  cloudData.Config.disableCloud(account).then(() => {
+    console.info('Succeeded in disabling cloud');
+  }).catch((err) => {
+    console.error(`Failed to disableCloud. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## disableCloud
 
 ```TypeScript
@@ -733,21 +757,7 @@ static disableCloud(accountId: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = 'test_id';
-try {
-  cloudData.Config.disableCloud(account).then(() => {
-    console.info('Succeeded in disabling cloud');
-  }).catch((err) => {
-    console.error(`Failed to disableCloud. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [disableCloud](#disablecloud)
 
 ## enableCloud
 
@@ -809,6 +819,23 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let account: string = 'test_id';
+let switches: Record<string, boolean> = { 'test_bundleName1': true, 'test_bundleName2': false };
+try {
+  cloudData.Config.enableCloud(account, switches).then(() => {
+    console.info('Succeeded in enabling cloud');
+  }).catch((err) => {
+    console.error(`Failed to enable.Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## enableCloud
 
 ```TypeScript
@@ -851,22 +878,7 @@ static enableCloud(accountId: string, switches: Record<string, boolean>): Promis
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = 'test_id';
-let switches: Record<string, boolean> = { 'test_bundleName1': true, 'test_bundleName2': false };
-try {
-  cloudData.Config.enableCloud(account, switches).then(() => {
-    console.info('Succeeded in enabling cloud');
-  }).catch((err) => {
-    console.error(`Failed to enable.Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [enableCloud](#enablecloud)
 
 ## notifyDataChange
 
@@ -909,6 +921,111 @@ static notifyDataChange(extInfo: ExtraData, userId?: int): Promise<void>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 **示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let account: string = 'test_id';
+let bundleName: string = 'test_bundleName';
+try {
+  cloudData.Config.notifyDataChange(account, bundleName, (err: BusinessError|null) => {
+    if (err === undefined) {
+      console.info('Succeeded in notifying the change of data');
+    } else {
+      console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
+    }
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let account: string = 'test_id';
+let bundleName: string = 'test_bundleName';
+try {
+  cloudData.Config.notifyDataChange(account, bundleName).then(() => {
+    console.info('Succeeded in notifying the change of data');
+  }).catch((err) => {
+    console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let eventId: string = "cloud_data_change";
+let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
+try {
+  cloudData.Config.notifyDataChange({
+    eventId: eventId, extraData: extraData
+  }, (err: BusinessError|null) => {
+    if (err === undefined) {
+      console.info('Succeeded in notifying the change of data');
+    } else {
+      console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
+    }
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let eventId: string = "cloud_data_change";
+let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
+let userId: number = 100;
+try {
+  cloudData.Config.notifyDataChange({
+    eventId: eventId, extraData: extraData
+  }, userId, (err: BusinessError|null) => {
+    if (err === undefined) {
+      console.info('Succeeded in notifying the change of data');
+    } else {
+      console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
+    }
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTs-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@ohos.base;
+
+let eventId: string = "cloud_data_change";
+let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
+let userId: int = 100;
+try {
+  cloudData.Config.notifyDataChange({
+    eventId: eventId, extraData: extraData
+  }, userId, (err: BusinessError|null, data) => {
+    if (err === undefined || null) {
+      console.info('Succeeded in notifying the change of data');
+    } else {
+      console.error(`Failed to notify the change of data. Code: ${err?.code}, message: ${err?.message}`);
+    }
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ArkTS-Dyn示例:
 
@@ -990,26 +1107,7 @@ static notifyDataChange(extInfo: ExtraData, callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let eventId: string = "cloud_data_change";
-let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
-try {
-  cloudData.Config.notifyDataChange({
-    eventId: eventId, extraData: extraData
-  }, (err: BusinessError|null) => {
-    if (err === undefined) {
-      console.info('Succeeded in notifying the change of data');
-    } else {
-      console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
-    }
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [notifyDataChange](#notifydatachange)
 
 ## notifyDataChange
 
@@ -1048,53 +1146,7 @@ static notifyDataChange(extInfo: ExtraData, userId: int, callback: AsyncCallback
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let eventId: string = "cloud_data_change";
-let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
-let userId: number = 100;
-try {
-  cloudData.Config.notifyDataChange({
-    eventId: eventId, extraData: extraData
-  }, userId, (err: BusinessError|null) => {
-    if (err === undefined) {
-      console.info('Succeeded in notifying the change of data');
-    } else {
-      console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
-    }
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTs-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@ohos.base;
-
-let eventId: string = "cloud_data_change";
-let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
-let userId: int = 100;
-try {
-  cloudData.Config.notifyDataChange({
-    eventId: eventId, extraData: extraData
-  }, userId, (err: BusinessError|null, data) => {
-    if (err === undefined || null) {
-      console.info('Succeeded in notifying the change of data');
-    } else {
-      console.error(`Failed to notify the change of data. Code: ${err?.code}, message: ${err?.message}`);
-    }
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [notifyDataChange](#notifydatachange)
 
 ## notifyDataChange
 
@@ -1138,22 +1190,7 @@ static notifyDataChange(accountId: string, bundleName: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = 'test_id';
-let bundleName: string = 'test_bundleName';
-try {
-  cloudData.Config.notifyDataChange(account, bundleName).then(() => {
-    console.info('Succeeded in notifying the change of data');
-  }).catch((err) => {
-    console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [notifyDataChange](#notifydatachange)
 
 ## notifyDataChange
 
@@ -1192,24 +1229,7 @@ static notifyDataChange(accountId: string, bundleName: string, callback: AsyncCa
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = 'test_id';
-let bundleName: string = 'test_bundleName';
-try {
-  cloudData.Config.notifyDataChange(account, bundleName, (err: BusinessError|null) => {
-    if (err === undefined) {
-      console.info('Succeeded in notifying the change of data');
-    } else {
-      console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
-    }
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [notifyDataChange](#notifydatachange)
 
 ## offSyncInfoChanged
 

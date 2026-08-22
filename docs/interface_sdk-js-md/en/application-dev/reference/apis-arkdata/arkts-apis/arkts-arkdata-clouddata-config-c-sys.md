@@ -91,7 +91,7 @@ Changes the device-cloud synergy setting for an application. This API uses an as
 | accountId | string | Yes | ID of the cloud account. |
 | bundleName | string | Yes | Bundle name of the application. |
 | status | boolean | Yes | New device-cloud synergy setting. The value **true** means to enable device-cloud synergy; the value **false** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -116,6 +116,51 @@ try {
     } else {
       console.error(`Failed to change App cloud switch. Code: ${err.code}, message: ${err.message}`);
     }
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let account: string = 'test_id';
+let bundleName: string = 'test_bundleName';
+try {
+  cloudData.Config.changeAppCloudSwitch(account, bundleName, true).then(() => {
+    console.info('Succeeded in changing App cloud switch');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to change App cloud switch. Code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let account: string = 'test_id';
+let bundleName: string = 'test_bundleName';
+let config: cloudData.SwitchConfig = {
+  dbInfo: {
+    'test_storeName1': {
+      enable: true,
+      tableInfo: {
+        'test_tableName1': true,
+        'test_tableName2': false
+      }
+    }
+  }
+}
+try {
+  cloudData.Config.changeAppCloudSwitch(account, bundleName, true, config).then(() => {
+    console.info('Succeeded in changing App cloud switch');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to change App cloud switch. Code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   let error = e as BusinessError;
@@ -166,22 +211,7 @@ Changes the device-cloud synergy setting for an application. This API uses a pro
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = 'test_id';
-let bundleName: string = 'test_bundleName';
-try {
-  cloudData.Config.changeAppCloudSwitch(account, bundleName, true).then(() => {
-    console.info('Succeeded in changing App cloud switch');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to change App cloud switch. Code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [changeAppCloudSwitch](#changeappcloudswitch)
 
 ## changeAppCloudSwitch
 
@@ -233,33 +263,7 @@ Changes the device-cloud synergy setting for an application. This API uses a pro
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = 'test_id';
-let bundleName: string = 'test_bundleName';
-let config: cloudData.SwitchConfig = {
-  dbInfo: {
-    'test_storeName1': {
-      enable: true,
-      tableInfo: {
-        'test_tableName1': true,
-        'test_tableName2': false
-      }
-    }
-  }
-}
-try {
-  cloudData.Config.changeAppCloudSwitch(account, bundleName, true, config).then(() => {
-    console.info('Succeeded in changing App cloud switch');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to change App cloud switch. Code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [changeAppCloudSwitch](#changeappcloudswitch)
 
 ## clear
 
@@ -289,7 +293,7 @@ Clears the cloud data locally. This API uses an asynchronous callback to return 
 | --- | --- | --- | --- |
 | accountId | string | Yes | ID of the cloud account. |
 | appActions | Record&lt;string, [ClearAction](arkts-arkdata-clouddata-clearaction-e-sys.md)&gt; | Yes | Information about the application whose data is to be cleared and the operation to perform.<br>**Since:** 11 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -318,6 +322,61 @@ try {
     } else {
       console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
     }
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let account: string = "test_id";
+type dataType = Record<string, cloudData.ClearAction>;
+let appActions: dataType = {
+  'test_bundleName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
+  'test_bundleName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO
+};
+try {
+  cloudData.Config.clear(account, appActions).then(() => {
+    console.info('Succeeding in clearing cloud data');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let account: string = "test_id";
+let appActions: Record<string, cloudData.ClearAction> = {
+  'test_bundleName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
+  'test_bundleName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO,
+  'test_bundleName3': cloudData.ClearAction.CLEAR_CLOUD_NONE,
+};
+let config: Record<stringm, cloudData.ClearConfig> = {
+  'test_bundleName': {
+    dbInfo: {
+      'test_storeName': {
+        action: cloudData.ClearAction.CLEAR_CLOUD_INFO,
+        tableInfo: {
+          'test_tableName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
+          'test_tableName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO,
+        }
+      }
+    }
+  }
+}
+try {
+  cloudData.Config.clear(account, appActions, config).then(() => {
+    console.info('Succeeding in clearing cloud data');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (e) {
   let error = e as BusinessError;
@@ -367,26 +426,7 @@ Clears the cloud data locally. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = "test_id";
-type dataType = Record<string, cloudData.ClearAction>;
-let appActions: dataType = {
-  'test_bundleName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
-  'test_bundleName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO
-};
-try {
-  cloudData.Config.clear(account, appActions).then(() => {
-    console.info('Succeeding in clearing cloud data');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [clear](#clear)
 
 ## clear
 
@@ -436,39 +476,7 @@ Clears the cloud data locally. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = "test_id";
-let appActions: Record<string, cloudData.ClearAction> = {
-  'test_bundleName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
-  'test_bundleName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO,
-  'test_bundleName3': cloudData.ClearAction.CLEAR_CLOUD_NONE,
-};
-let config: Record<stringm, cloudData.ClearConfig> = {
-  'test_bundleName': {
-    dbInfo: {
-      'test_storeName': {
-        action: cloudData.ClearAction.CLEAR_CLOUD_INFO,
-        tableInfo: {
-          'test_tableName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
-          'test_tableName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO,
-        }
-      }
-    }
-  }
-}
-try {
-  cloudData.Config.clear(account, appActions, config).then(() => {
-    console.info('Succeeding in clearing cloud data');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [clear](#clear)
 
 ## cloudSync
 
@@ -500,7 +508,7 @@ Synchronizes data of a specified application on the device to the cloud. This AP
 | bundleName | string | Yes | Name of the application to sync. |
 | storeId | string | Yes | Name of the database to sync. |
 | mode | relationalStore.SyncMode | Yes | Device-cloud sync mode. |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;relationalStore.ProgressDetails&gt; | Yes | Callback used to return the sync progress. |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;relationalStore.ProgressDetails&gt; | Yes | Callback used to return the sync progress. |
 
 **Return value:**
 
@@ -567,7 +575,7 @@ Sync data to cloud. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | bundleInfo | BundleInfo | Yes | BundleInfo configuration. <br>the instance object of [BundleInfo](arkts-arkdata-clouddata-bundleinfo-i-sys.md) |
 | config | relationalStore.CloudSyncConfig | Yes | Indicates cloud sync configuration. <br>the instance object of [CloudSyncConfig](arkts-arkdata-relationalstore-cloudsyncconfig-i.md) |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;relationalStore.ProgressDetails&gt; | Yes | Callback used to return the sync progress. |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;relationalStore.ProgressDetails&gt; | Yes | Callback used to return the sync progress. |
 
 **Return value:**
 
@@ -607,7 +615,7 @@ Disables device-cloud synergy. This API uses an asynchronous callback to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountId | string | Yes | ID of the cloud account. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -631,6 +639,22 @@ try {
     } else {
       console.error(`Failed to disableCloud. Code: ${err.code}, message: ${err.message}`);
     }
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let account: string = 'test_id';
+try {
+  cloudData.Config.disableCloud(account).then(() => {
+    console.info('Succeeded in disabling cloud');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to disableCloud. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (e) {
   let error = e as BusinessError;
@@ -679,21 +703,7 @@ Disables device-cloud synergy. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = 'test_id';
-try {
-  cloudData.Config.disableCloud(account).then(() => {
-    console.info('Succeeded in disabling cloud');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to disableCloud. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [disableCloud](#disablecloud)
 
 ## enableCloud
 
@@ -723,7 +733,7 @@ Enables device-cloud synergy. This API uses an asynchronous callback to return t
 | --- | --- | --- | --- |
 | accountId | string | Yes | ID of the cloud account. |
 | switches | Record&lt;string, boolean&gt; | Yes | Device-cloud synergy settings for applications. The value **true** means to enable device-cloud synergy; the value **false** means the opposite.<br>**Since:** 11 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -748,6 +758,23 @@ try {
     } else {
       console.error(`Failed to enable.Code: ${err.code}, message: ${err.message}`);
     }
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let account: string = 'test_id';
+let switches: Record<string, boolean> = { 'test_bundleName1': true, 'test_bundleName2': false };
+try {
+  cloudData.Config.enableCloud(account, switches).then(() => {
+    console.info('Succeeded in enabling cloud');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to enable.Code: ${err.code}, message: ${err.message}`);
   });
 } catch (e) {
   let error = e as BusinessError;
@@ -797,22 +824,7 @@ Enables device-cloud synergy. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = 'test_id';
-let switches: Record<string, boolean> = { 'test_bundleName1': true, 'test_bundleName2': false };
-try {
-  cloudData.Config.enableCloud(account, switches).then(() => {
-    console.info('Succeeded in enabling cloud');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to enable.Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [enableCloud](#enablecloud)
 
 ## notifyDataChange
 
@@ -859,6 +871,85 @@ Notifies the data changes in the cloud. This API uses a promise to return the re
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let account: string = 'test_id';
+let bundleName: string = 'test_bundleName';
+try {
+  cloudData.Config.notifyDataChange(account, bundleName, (err: BusinessError) => {
+    if (err === undefined) {
+      console.info('Succeeded in notifying the change of data');
+    } else {
+      console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
+    }
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let account: string = 'test_id';
+let bundleName: string = 'test_bundleName';
+try {
+  cloudData.Config.notifyDataChange(account, bundleName).then(() => {
+    console.info('Succeeded in notifying the change of data');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let eventId: string = "cloud_data_change";
+let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
+try {
+  cloudData.Config.notifyDataChange({
+    eventId: eventId, extraData: extraData
+  }, (err: BusinessError) => {
+    if (err === undefined) {
+      console.info('Succeeded in notifying the change of data');
+    } else {
+      console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
+    }
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let eventId: string = "cloud_data_change";
+let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
+let userId: number = 100;
+try {
+  cloudData.Config.notifyDataChange({
+    eventId: eventId, extraData: extraData
+  }, userId, (err: BusinessError) => {
+    if (err === undefined) {
+      console.info('Succeeded in notifying the change of data');
+    } else {
+      console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
+    }
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let eventId: string = "cloud_data_change";
 let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
 let userId: number = 100;
@@ -899,7 +990,7 @@ Notifies the data changes in the cloud with the specified information, such as t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | extInfo | ExtraData | Yes | Transparently transmitted data, including information about the application that has data changes. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -912,26 +1003,7 @@ Notifies the data changes in the cloud with the specified information, such as t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let eventId: string = "cloud_data_change";
-let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
-try {
-  cloudData.Config.notifyDataChange({
-    eventId: eventId, extraData: extraData
-  }, (err: BusinessError) => {
-    if (err === undefined) {
-      console.info('Succeeded in notifying the change of data');
-    } else {
-      console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
-    }
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [notifyDataChange](#notifydatachange)
 
 ## notifyDataChange
 
@@ -957,7 +1029,7 @@ Notifies the data changes of a user in the cloud. This API uses an asynchronous 
 | --- | --- | --- | --- |
 | extInfo | ExtraData | Yes | Transparently transmitted data, including information about the application that has data changes. |
 | userId | int | Yes | User ID in the system. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -970,27 +1042,7 @@ Notifies the data changes of a user in the cloud. This API uses an asynchronous 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let eventId: string = "cloud_data_change";
-let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
-let userId: number = 100;
-try {
-  cloudData.Config.notifyDataChange({
-    eventId: eventId, extraData: extraData
-  }, userId, (err: BusinessError) => {
-    if (err === undefined) {
-      console.info('Succeeded in notifying the change of data');
-    } else {
-      console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
-    }
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [notifyDataChange](#notifydatachange)
 
 ## notifyDataChange
 
@@ -1034,22 +1086,7 @@ Notifies the data changes in the cloud. This API uses a promise to return the re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = 'test_id';
-let bundleName: string = 'test_bundleName';
-try {
-  cloudData.Config.notifyDataChange(account, bundleName).then(() => {
-    console.info('Succeeded in notifying the change of data');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [notifyDataChange](#notifydatachange)
 
 ## notifyDataChange
 
@@ -1075,7 +1112,7 @@ Notifies the data changes in the cloud. This API uses an asynchronous callback t
 | --- | --- | --- | --- |
 | accountId | string | Yes | ID of the cloud account. |
 | bundleName | string | Yes | Bundle name of the application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1088,24 +1125,7 @@ Notifies the data changes in the cloud. This API uses an asynchronous callback t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = 'test_id';
-let bundleName: string = 'test_bundleName';
-try {
-  cloudData.Config.notifyDataChange(account, bundleName, (err: BusinessError) => {
-    if (err === undefined) {
-      console.info('Succeeded in notifying the change of data');
-    } else {
-      console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
-    }
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [notifyDataChange](#notifydatachange)
 
 ## offSyncInfoChanged
 
@@ -1135,7 +1155,7 @@ Remove specified observer of specified type from the database.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleInfos | Array&lt;BundleInfo&gt; | Yes | BundleInfo configuration array. |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Record&lt;string, [SyncInfo](arkts-arkdata-clouddata-syncinfo-i-sys.md)&gt;&gt;&gt; | No | Optional progress callback. |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Record&lt;string, [SyncInfo](arkts-arkdata-clouddata-syncinfo-i-sys.md)&gt;&gt;&gt; | No | Optional progress callback. |
 
 **Error codes:**
 
@@ -1174,7 +1194,7 @@ Subscribes to changes in the sync information of a specified application.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleInfos | Array&lt;BundleInfo&gt; | Yes | BundleInfo configuration array. |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Record&lt;string, [SyncInfo](arkts-arkdata-clouddata-syncinfo-i-sys.md)&gt;&gt;&gt; | Yes | progress. |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Record&lt;string, [SyncInfo](arkts-arkdata-clouddata-syncinfo-i-sys.md)&gt;&gt;&gt; | Yes | progress. |
 
 **Error codes:**
 

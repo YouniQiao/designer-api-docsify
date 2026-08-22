@@ -24,7 +24,7 @@ Identity Resolving Key of BLE peripheral device. [irk](#irk) needs to be used wi
 
 **Type:** Uint8Array
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -57,6 +57,20 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  cooperate.unprepare().then(() => {
+    console.info(`Keyboard mouse crossing unprepare success.`);
+  }, (error: BusinessError) => {
+    console.error(`Keyboard mouse crossing unprepare failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+  });
+} catch (error) {
+  console.error(`Keyboard mouse crossing unprepare failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+}
+```
+
 
 ## unprepare
 
@@ -93,17 +107,5 @@ function unprepare(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  cooperate.unprepare().then(() => {
-    console.info(`Keyboard mouse crossing unprepare success.`);
-  }, (error: BusinessError) => {
-    console.error(`Keyboard mouse crossing unprepare failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Keyboard mouse crossing unprepare failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
+参见 [unprepare](#unprepare)
 

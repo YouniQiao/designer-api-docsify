@@ -2,7 +2,7 @@
 
 The enum of gatt disconnection reasons.
 
-**Since:** 26.0.0
+**Since:** 20
 
 <!--Device-ble-enum GattDisconnectReason--><!--Device-ble-enum GattDisconnectReason-End-->
 
@@ -16,11 +16,11 @@ CONN_TIMEOUT = 1
 
 Disconnection due to timeout.
 
-**Since:** 26.0.0
+**Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-GattDisconnectReason-CONN_TIMEOUT = 1--><!--Device-GattDisconnectReason-CONN_TIMEOUT = 1-End-->
 
@@ -34,11 +34,11 @@ CONN_TERMINATE_PEER_USER = 2
 
 The connection is disconnected due to the peer.
 
-**Since:** 26.0.0
+**Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-GattDisconnectReason-CONN_TERMINATE_PEER_USER = 2--><!--Device-GattDisconnectReason-CONN_TERMINATE_PEER_USER = 2-End-->
 
@@ -52,11 +52,11 @@ CONN_TERMINATE_LOCAL_HOST = 3
 
 The connection is disconnected due to the local host.
 
-**Since:** 26.0.0
+**Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-GattDisconnectReason-CONN_TERMINATE_LOCAL_HOST = 3--><!--Device-GattDisconnectReason-CONN_TERMINATE_LOCAL_HOST = 3-End-->
 
@@ -70,11 +70,11 @@ CONN_UNKNOWN = 4
 
 Disconnection due to unknown reason.
 
-**Since:** 26.0.0
+**Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-GattDisconnectReason-CONN_UNKNOWN = 4--><!--Device-GattDisconnectReason-CONN_UNKNOWN = 4-End-->
 

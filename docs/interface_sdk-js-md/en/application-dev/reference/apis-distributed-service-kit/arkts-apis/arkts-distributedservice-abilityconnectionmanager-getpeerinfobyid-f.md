@@ -86,3 +86,7 @@ Get the application information in the ability connection session
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
+**Examples**
+
+See [getPeerInfoById](#getpeerinfobyid)
+

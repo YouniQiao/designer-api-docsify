@@ -28,9 +28,19 @@ The priority defined in a priority group restricts the resource usage of an appl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | the callback of queryAppUsagePriorityGroup. Returns the app group of the calling application. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | the callback of queryAppUsagePriorityGroup. Returns the app group of the calling application. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+bundleState.queryAppUsagePriorityGroup().then((res: number) => {
+  console.info('BUNDLE_ACTIVE QueryPackageGroup promise succeeded. result: ' + JSON.stringify(res));
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE QueryPackageGroup promise failed. because: ' + err.code);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -71,13 +81,5 @@ The priority defined in a priority group restricts the resource usage of an appl
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-bundleState.queryAppUsagePriorityGroup().then((res: number) => {
-  console.info('BUNDLE_ACTIVE QueryPackageGroup promise succeeded. result: ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE QueryPackageGroup promise failed. because: ' + err.code);
-});
-```
+See [queryAppUsagePriorityGroup](#queryappusageprioritygroup)
 

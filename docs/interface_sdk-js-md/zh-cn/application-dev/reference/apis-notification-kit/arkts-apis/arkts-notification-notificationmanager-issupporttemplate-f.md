@@ -70,6 +70,33 @@ let isSupportTemplateCallback = (err: BusinessError | null , data: boolean | und
 notificationManager.isSupportTemplate(templateName, isSupportTemplateCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let templateName: string = 'downloadTemplate';
+notificationManager.isSupportTemplate(templateName).then((data: boolean) => {
+  console.info(`isSupportTemplate success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`isSupportTemplate failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let templateName: string = 'downloadTemplate';
+notificationManager.isSupportTemplate(templateName).then((data: boolean) => {
+  console.info(`isSupportTemplate success, data: ${JSON.stringify(data)}`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`isSupportTemplate failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## isSupportTemplate
 
@@ -108,30 +135,5 @@ function isSupportTemplate(templateName: string): Promise<boolean>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let templateName: string = 'downloadTemplate';
-notificationManager.isSupportTemplate(templateName).then((data: boolean) => {
-  console.info(`isSupportTemplate success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`isSupportTemplate failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let templateName: string = 'downloadTemplate';
-notificationManager.isSupportTemplate(templateName).then((data: boolean) => {
-  console.info(`isSupportTemplate success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`isSupportTemplate failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [isSupportTemplate](#issupporttemplate)
 

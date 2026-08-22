@@ -124,45 +124,39 @@ constructor()
 **示例**
 
 ```TypeScript
-let unifiedRecord = new unifiedDataChannel.UnifiedRecord();
+let unifiedData = new unifiedDataChannel.UnifiedData();
 ```
 
-## constructor
+ArkTS-Dyn示例：
 
 ```TypeScript
-constructor(type: string, value: ValueType)
+import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+let plainText : uniformDataStruct.PlainText = {
+  uniformDataType: 'general.plain-text',
+  textContent : 'This is a plain text example',
+  abstract : 'This is abstract'
+};
+let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
+let unifiedData = new unifiedDataChannel.UnifiedData(text);
 ```
 
-用于创建指定类型和值的数据记录。调用成功后，返回包含指定类型和值的UnifiedRecord对象。
+ArkTS-Sta示例：
 
-当参数value为[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)类型时，参数type必须对应为 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)中 OPENHARMONY_PIXEL_MAP的值；
+```TypeScript
+import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
 
-当参数value为[Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)类型时，参数type必须对应为 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)中OPENHARMONY_WANT的 值。
+let plainText: uniformDataStruct.PlainText = {
+  uniformDataType: 'general.plain-text',
+  textContent: 'This is a plain text example',
+  textAbstract: 'This is a text abstract'
+}
+let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
+let unifiedData = new unifiedDataChannel.UnifiedData(text);
+```
 
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-UnifiedRecord-constructor(type: string, value: ValueType)--><!--Device-UnifiedRecord-constructor(type: string, value: ValueType)-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | string | 是 | 要创建的数据记录的类型，用于标识数据记录的具体类型。取值见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)，如 'general.plain-text'、'general.hyperlink'等。 |
-| value | ValueType | 是 | 要创建的数据记录的值。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3.Parameter verification failed. |
-
-**示例**
+```TypeScript
+let unifiedRecord = new unifiedDataChannel.UnifiedRecord();
+```
 
 ArkTS-Dyn示例：
 
@@ -234,6 +228,45 @@ let pixelMap: uniformDataStruct.PixelMap = {
 let pixelMapRecord =
   new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.OPENHARMONY_PIXEL_MAP, pixelMap);
 ```
+
+## constructor
+
+```TypeScript
+constructor(type: string, value: ValueType)
+```
+
+用于创建指定类型和值的数据记录。调用成功后，返回包含指定类型和值的UnifiedRecord对象。
+
+当参数value为[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)类型时，参数type必须对应为 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)中 OPENHARMONY_PIXEL_MAP的值；
+
+当参数value为[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)类型时，参数type必须对应为 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)中OPENHARMONY_WANT的 值。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnifiedRecord-constructor(type: string, value: ValueType)--><!--Device-UnifiedRecord-constructor(type: string, value: ValueType)-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | string | 是 | 要创建的数据记录的类型，用于标识数据记录的具体类型。取值见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)，如 'general.plain-text'、'general.hyperlink'等。 |
+| value | ValueType | 是 | 要创建的数据记录的值。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3.Parameter verification failed. |
+
+**示例**
+
+参见 [constructor](#constructor)
 
 ## getEntries
 
@@ -590,6 +623,54 @@ getTypes(): Array<string>
 | Array&lt;string&gt; | [UniformDataType]{ |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+
+let plainText: uniformDataStruct.PlainText = {
+  uniformDataType: 'general.plain-text',
+  textContent: 'This is a plain text example',
+  abstract: 'This is abstract'
+};
+let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
+let unifiedData = new unifiedDataChannel.UnifiedData(text);
+
+let hyperlink: uniformDataStruct.Hyperlink = {
+  uniformDataType: 'general.hyperlink',
+  url: 'www.XXX.com',
+  description: 'This is the description of the hyperlink'
+};
+let link = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.HYPERLINK, hyperlink);
+unifiedData.addRecord(link);
+
+let types = unifiedData.getTypes();
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+
+let plainText: uniformDataStruct.PlainText = {
+  uniformDataType: 'general.plain-text',
+  textContent: 'This is a plain text example',
+  textAbstract: 'This is a text abstract'
+}
+let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
+let unifiedData = new unifiedDataChannel.UnifiedData(text);
+
+let hyperlink: uniformDataStruct.Hyperlink = {
+  uniformDataType: 'general.hyperlink',
+  url: 'www.XXX.com',
+  description: 'This is the description of the hyperlink'
+}
+let link = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.HYPERLINK, hyperlink);
+unifiedData.addRecord(link);
+
+let types = unifiedData.getTypes();
+```
 
 ArkTS-Dyn示例：
 

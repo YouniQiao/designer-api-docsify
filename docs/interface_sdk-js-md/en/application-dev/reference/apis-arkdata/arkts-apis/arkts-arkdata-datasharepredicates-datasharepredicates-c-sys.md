@@ -16,44 +16,6 @@ Provides APIs for setting different **DataSharePredicates** objects. This type i
 import { dataSharePredicates } from '@kit.ArkData';
 ```
 
-## beginWrap
-
-```TypeScript
-beginWrap(): DataSharePredicates
-```
-
-Adds a left parenthesis to this **DataSharePredicates**. This API is similar to "(" in an SQL statement and must be used with the right parenthesis.
-
-Currently, only RDB store supports this predicate.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataSharePredicates-beginWrap(): DataSharePredicates--><!--Device-DataSharePredicates-beginWrap(): DataSharePredicates-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
-
-**System API:** This is a system API.
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object with a left parenthesis. |
-
-**Examples**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.equalTo("NAME", "lisi")
-    .beginWrap()
-    .equalTo("AGE", 18)
-    .or()
-    .equalTo("SALARY", 200.5)
-    .endWrap();
-```
-
 ## beginsWith
 
 ```TypeScript
@@ -92,6 +54,44 @@ Currently, only RDB store supports this predicate.
 ```TypeScript
 let predicates = new dataSharePredicates.DataSharePredicates();
 predicates.beginsWith("NAME", "os");
+```
+
+## beginWrap
+
+```TypeScript
+beginWrap(): DataSharePredicates
+```
+
+Adds a left parenthesis to this **DataSharePredicates**. This API is similar to "(" in an SQL statement and must be used with the right parenthesis.
+
+Currently, only RDB store supports this predicate.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataSharePredicates-beginWrap(): DataSharePredicates--><!--Device-DataSharePredicates-beginWrap(): DataSharePredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object with a left parenthesis. |
+
+**Examples**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.equalTo("NAME", "lisi")
+    .beginWrap()
+    .equalTo("AGE", 18)
+    .or()
+    .equalTo("SALARY", 200.5)
+    .endWrap();
 ```
 
 ## between
@@ -208,44 +208,6 @@ let predicates = new dataSharePredicates.DataSharePredicates();
 predicates.equalTo("NAME", "Rose").distinct();
 ```
 
-## endWrap
-
-```TypeScript
-endWrap(): DataSharePredicates
-```
-
-Adds a right parenthesis to this **DataSharePredicates**. This API is similar to ")" in an SQL statement and must be used with the left parenthesis.
-
-Currently, only RDB store supports this predicate.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataSharePredicates-endWrap(): DataSharePredicates--><!--Device-DataSharePredicates-endWrap(): DataSharePredicates-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
-
-**System API:** This is a system API.
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object with a right parenthesis. |
-
-**Examples**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.equalTo("NAME", "lisi")
-    .beginWrap()
-    .equalTo("AGE", 18)
-    .or()
-    .equalTo("SALARY", 200.5)
-    .endWrap();
-```
-
 ## endsWith
 
 ```TypeScript
@@ -284,6 +246,44 @@ Currently, only RDB store supports this predicate.
 ```TypeScript
 let predicates = new dataSharePredicates.DataSharePredicates();
 predicates.endsWith("NAME", "os");
+```
+
+## endWrap
+
+```TypeScript
+endWrap(): DataSharePredicates
+```
+
+Adds a right parenthesis to this **DataSharePredicates**. This API is similar to ")" in an SQL statement and must be used with the left parenthesis.
+
+Currently, only RDB store supports this predicate.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataSharePredicates-endWrap(): DataSharePredicates--><!--Device-DataSharePredicates-endWrap(): DataSharePredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object with a right parenthesis. |
+
+**Examples**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.equalTo("NAME", "lisi")
+    .beginWrap()
+    .equalTo("AGE", 18)
+    .or()
+    .equalTo("SALARY", 200.5)
+    .endWrap();
 ```
 
 ## glob
@@ -445,45 +445,6 @@ let predicates = new dataSharePredicates.DataSharePredicates();
 predicates.groupBy(["AGE", "NAME"]);
 ```
 
-## inKeys
-
-```TypeScript
-inKeys(keys: Array<string>): DataSharePredicates
-```
-
-Creates a **DataSharePredicates** object to match the data whose keys are within the given range.
-
-Currently, only the KVDB supports this **DataSharePredicates** object.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataSharePredicates-inKeys(keys: Array<string>): DataSharePredicates--><!--Device-DataSharePredicates-inKeys(keys: Array<string>): DataSharePredicates-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | Yes | Array of the keys to match. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
-
-**Examples**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.inKeys(["Lisa", "Rose"]);
-```
-
 ## indexedBy
 
 ```TypeScript
@@ -521,6 +482,45 @@ Currently, only RDB store supports this predicate.
 ```TypeScript
 let predicates = new dataSharePredicates.DataSharePredicates();
 predicates.indexedBy("SALARY_INDEX");
+```
+
+## inKeys
+
+```TypeScript
+inKeys(keys: Array<string>): DataSharePredicates
+```
+
+Creates a **DataSharePredicates** object to match the data whose keys are within the given range.
+
+Currently, only the KVDB supports this **DataSharePredicates** object.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataSharePredicates-inKeys(keys: Array<string>): DataSharePredicates--><!--Device-DataSharePredicates-inKeys(keys: Array<string>): DataSharePredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| keys | Array&lt;string&gt; | Yes | Array of the keys to match. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.inKeys(["Lisa", "Rose"]);
 ```
 
 ## isNotNull

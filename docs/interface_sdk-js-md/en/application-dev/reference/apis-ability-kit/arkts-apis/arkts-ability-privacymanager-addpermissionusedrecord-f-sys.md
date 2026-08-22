@@ -88,6 +88,20 @@ privacyManager.addPermissionUsedRecord(tokenID, 'ohos.permission.READ_AUDIO', 1,
 });
 ```
 
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tokenID: number = 0; // You can use getApplicationInfo to obtain accessTokenId.
+privacyManager.addPermissionUsedRecord(tokenID, 'ohos.permission.READ_AUDIO', 1, 0, (err: BusinessError, data: void) => {
+  if (err) {
+    console.error(`addPermissionUsedRecord fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('addPermissionUsedRecord success');
+  }
+});
+```
+
 
 ## addPermissionUsedRecord
 
@@ -125,7 +139,7 @@ The permission usage record is controlled by the toggle status set by [setPermis
 | permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be recorded. Passing an invalid value returns error code 12100001. <br>Value constraint: The permission name length cannot exceed 256 characters. |
 | successCount | int | Yes | Number of successful accesses. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: The value must be a non-negative integer. |
 | failCount | int | Yes | Number of failed accesses. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: The value must be a non-negative integer. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -143,17 +157,5 @@ The permission usage record is controlled by the toggle status set by [setPermis
 
 **Examples**
 
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tokenID: number = 0; // You can use getApplicationInfo to obtain accessTokenId.
-privacyManager.addPermissionUsedRecord(tokenID, 'ohos.permission.READ_AUDIO', 1, 0, (err: BusinessError, data: void) => {
-  if (err) {
-    console.error(`addPermissionUsedRecord fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('addPermissionUsedRecord success');
-  }
-});
-```
+See [addPermissionUsedRecord](#addpermissionusedrecord)
 

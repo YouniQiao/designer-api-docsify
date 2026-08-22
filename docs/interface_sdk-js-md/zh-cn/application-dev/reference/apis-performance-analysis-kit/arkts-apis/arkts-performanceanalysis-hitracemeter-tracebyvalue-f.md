@@ -53,6 +53,28 @@ hiTraceMeter.traceByValue("myTestCount", traceCount);  // 当myTestCount发生�
 // 业务流程......
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;
+let traceCount: number = 3;
+hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);
+traceCount = 4;
+hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);
+// 业务流程......
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;
+let traceCount: long = 3;
+hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);
+traceCount = 4;
+hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);
+// 业务流程......
+```
+
 
 ## traceByValue
 
@@ -80,25 +102,5 @@ function traceByValue(level: HiTraceOutputLevel, name: string, count: long): voi
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;
-let traceCount: number = 3;
-hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);
-traceCount = 4;
-hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);
-// 业务流程......
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;
-let traceCount: long = 3;
-hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);
-traceCount = 4;
-hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);
-// 业务流程......
-```
+参见 [traceByValue](#tracebyvalue)
 

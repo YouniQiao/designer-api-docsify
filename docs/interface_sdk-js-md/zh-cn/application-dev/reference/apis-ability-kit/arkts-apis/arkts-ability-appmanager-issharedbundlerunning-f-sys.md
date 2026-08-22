@@ -63,6 +63,21 @@ appManager.isSharedBundleRunning(bundleName, versionCode).then((data) => {
 })
 ```
 
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+
+const bundleName = 'this is a bundleName';
+const versionCode = 1;
+
+appManager.isSharedBundleRunning(bundleName, versionCode, (err, data) => {
+  if (err) {
+    console.error(`err: ${JSON.stringify(err)}`);
+  } else {
+    console.info(`The shared bundle running is: ${JSON.stringify(data)}`);
+  }
+})
+```
+
 
 ## isSharedBundleRunning
 
@@ -101,18 +116,5 @@ function isSharedBundleRunning(bundleName: string, versionCode: long, callback: 
 
 **示例**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-
-const bundleName = 'this is a bundleName';
-const versionCode = 1;
-
-appManager.isSharedBundleRunning(bundleName, versionCode, (err, data) => {
-  if (err) {
-    console.error(`err: ${JSON.stringify(err)}`);
-  } else {
-    console.info(`The shared bundle running is: ${JSON.stringify(data)}`);
-  }
-})
-```
+参见 [isSharedBundleRunning](#issharedbundlerunning)
 

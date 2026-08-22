@@ -25,7 +25,7 @@ Obtains data of the barometer sensor once.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.BAROMETER | Yes | Sensor type. The value is fixed at **SensorId.BAROMETER**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BarometerResponse&gt; | Yes | Callback used to report the sensor data, which is a **BarometerResponse** object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BarometerResponse&gt; | Yes | Callback used to report the sensor data, which is a **BarometerResponse** object. |
 
 **Error codes:**
 

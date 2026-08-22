@@ -74,53 +74,53 @@
     - [StateChangeReason](arkts-media-media-statechangereason-e.md)
   - [createAVDownloaderManager](arkts-media-multimedia-media-createavdownloadermanager-f.md)
   - [createMediaSourceWithDirectory](arkts-media-multimedia-media-createmediasourcewithdirectory-f.md)
-  - [AudioPlayer](arkts-media-multimediamedia-audioplayer-i.md)
-  - [AudioRecorder](arkts-media-multimediamedia-audiorecorder-i.md)
-  - [AudioRecorderConfig](arkts-media-multimediamedia-audiorecorderconfig-i.md)
-  - [AVDataSrcDescriptor](arkts-media-multimediamedia-avdatasrcdescriptor-i.md)
-  - [AVDownloaderManager](arkts-media-multimediamedia-avdownloadermanager-i.md)
-  - [AVFileDescriptor](arkts-media-multimediamedia-avfiledescriptor-i.md)
-  - [AVRecorder](arkts-media-multimediamedia-avrecorder-i.md)
+  - [AudioPlayer](arkts-media-multimedia-media-audioplayer-i.md)
+  - [AudioRecorder](arkts-media-multimedia-media-audiorecorder-i.md)
+  - [AudioRecorderConfig](arkts-media-multimedia-media-audiorecorderconfig-i.md)
+  - [AVDataSrcDescriptor](arkts-media-multimedia-media-avdatasrcdescriptor-i.md)
+  - [AVDownloaderManager](arkts-media-multimedia-media-avdownloadermanager-i.md)
+  - [AVFileDescriptor](arkts-media-multimedia-media-avfiledescriptor-i.md)
+  - [AVRecorder](arkts-media-multimedia-media-avrecorder-i.md)
   <!--Del-->
-  - [AVRecorder(系统接口)](arkts-media-multimediamedia-avrecorder-i-sys.md)<!--DelEnd-->
-  - [AVRecorderConfig](arkts-media-multimediamedia-avrecorderconfig-i.md)
+  - [AVRecorder(系统接口)](arkts-media-multimedia-media-avrecorder-i-sys.md)<!--DelEnd-->
+  - [AVRecorderConfig](arkts-media-multimedia-media-avrecorderconfig-i.md)
   <!--Del-->
-  - [AVRecorderConfig(系统接口)](arkts-media-multimediamedia-avrecorderconfig-i-sys.md)<!--DelEnd-->
-  - [AVRecorderProfile](arkts-media-multimediamedia-avrecorderprofile-i.md)
+  - [AVRecorderConfig(系统接口)](arkts-media-multimedia-media-avrecorderconfig-i-sys.md)<!--DelEnd-->
+  - [AVRecorderProfile](arkts-media-multimedia-media-avrecorderprofile-i.md)
   <!--Del-->
-  - [AVRecorderProfile(系统接口)](arkts-media-multimediamedia-avrecorderprofile-i-sys.md)<!--DelEnd-->
-  - [AVScreenCaptureRecordConfig](arkts-media-multimediamedia-avscreencapturerecordconfig-i.md)
-  - [AVScreenCaptureRecorder](arkts-media-multimediamedia-avscreencapturerecorder-i.md)
-  - [AVScreenCaptureStrategy](arkts-media-multimediamedia-avscreencapturestrategy-i.md)
+  - [AVRecorderProfile(系统接口)](arkts-media-multimedia-media-avrecorderprofile-i-sys.md)<!--DelEnd-->
+  - [AVScreenCaptureRecordConfig](arkts-media-multimedia-media-avscreencapturerecordconfig-i.md)
+  - [AVScreenCaptureRecorder](arkts-media-multimedia-media-avscreencapturerecorder-i.md)
+  - [AVScreenCaptureStrategy](arkts-media-multimedia-media-avscreencapturestrategy-i.md)
   <!--Del-->
-  - [AVScreenCaptureStrategy(系统接口)](arkts-media-multimediamedia-avscreencapturestrategy-i-sys.md)<!--DelEnd-->
-  - [AVTranscoder](arkts-media-multimediamedia-avtranscoder-i.md)
-  - [AVTranscoderConfig](arkts-media-multimediamedia-avtranscoderconfig-i.md)
-  - [EncoderInfo](arkts-media-multimediamedia-encoderinfo-i.md)
-  - [Location](arkts-media-multimediamedia-location-i.md)
-  - [MediaDescription](arkts-media-multimediamedia-mediadescription-i.md)
-  - [MediaSource](arkts-media-multimediamedia-mediasource-i.md)
-  - [MediaSourceLoader](arkts-media-multimediamedia-mediasourceloader-i.md)
-  - [MediaSourceLoadingRequest](arkts-media-multimediamedia-mediasourceloadingrequest-i.md)
-  - [MediaStream](arkts-media-multimediamedia-mediastream-i.md)
-  - [PlaybackInfo](arkts-media-multimediamedia-playbackinfo-i.md)
-  - [PlaybackStrategy](arkts-media-multimediamedia-playbackstrategy-i.md)
+  - [AVScreenCaptureStrategy(系统接口)](arkts-media-multimedia-media-avscreencapturestrategy-i-sys.md)<!--DelEnd-->
+  - [AVTranscoder](arkts-media-multimedia-media-avtranscoder-i.md)
+  - [AVTranscoderConfig](arkts-media-multimedia-media-avtranscoderconfig-i.md)
+  - [EncoderInfo](arkts-media-multimedia-media-encoderinfo-i.md)
+  - [Location](arkts-media-multimedia-media-location-i.md)
+  - [MediaDescription](arkts-media-multimedia-media-mediadescription-i.md)
+  - [MediaSource](arkts-media-multimedia-media-mediasource-i.md)
+  - [MediaSourceLoader](arkts-media-multimedia-media-mediasourceloader-i.md)
+  - [MediaSourceLoadingRequest](arkts-media-multimedia-media-mediasourceloadingrequest-i.md)
+  - [MediaStream](arkts-media-multimedia-media-mediastream-i.md)
+  - [PlaybackInfo](arkts-media-multimedia-media-playbackinfo-i.md)
+  - [PlaybackStrategy](arkts-media-multimedia-media-playbackstrategy-i.md)
   <!--Del-->
-  - [PlaybackStrategy(系统接口)](arkts-media-multimediamedia-playbackstrategy-i-sys.md)<!--DelEnd-->
-  - [Range](arkts-media-multimediamedia-range-i.md)
+  - [PlaybackStrategy(系统接口)](arkts-media-multimedia-media-playbackstrategy-i-sys.md)<!--DelEnd-->
+  - [Range](arkts-media-multimedia-media-range-i.md)
   <!--Del-->
-  - [ScreenCaptureMonitor(系统接口)](arkts-media-multimediamedia-screencapturemonitor-i-sys.md)<!--DelEnd-->
-  - [SubtitleInfo](arkts-media-multimediamedia-subtitleinfo-i.md)
-  - [VideoPlayer](arkts-media-multimediamedia-videoplayer-i.md)
+  - [ScreenCaptureMonitor(系统接口)](arkts-media-multimedia-media-screencapturemonitor-i-sys.md)<!--DelEnd-->
+  - [SubtitleInfo](arkts-media-multimedia-media-subtitleinfo-i.md)
+  - [VideoPlayer](arkts-media-multimedia-media-videoplayer-i.md)
   <!--Del-->
-  - [VideoRecorder(系统接口)](arkts-media-multimediamedia-videorecorder-i-sys.md)<!--DelEnd-->
+  - [VideoRecorder(系统接口)](arkts-media-multimedia-media-videorecorder-i-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [VideoRecorderConfig(系统接口)](arkts-media-multimediamedia-videorecorderconfig-i-sys.md)<!--DelEnd-->
+  - [VideoRecorderConfig(系统接口)](arkts-media-multimedia-media-videorecorderconfig-i-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [VideoRecorderProfile(系统接口)](arkts-media-multimediamedia-videorecorderprofile-i-sys.md)<!--DelEnd-->
+  - [VideoRecorderProfile(系统接口)](arkts-media-multimedia-media-videorecorderprofile-i-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [WatermarkConfig(系统接口)](arkts-media-multimediamedia-watermarkconfig-i-sys.md)<!--DelEnd-->
-  - [WatermarkConfiguration](arkts-media-multimediamedia-watermarkconfiguration-i.md)
+  - [WatermarkConfig(系统接口)](arkts-media-multimedia-media-watermarkconfig-i-sys.md)<!--DelEnd-->
+  - [WatermarkConfiguration](arkts-media-multimedia-media-watermarkconfiguration-i.md)
   - [AudioState](arkts-media-audiostate-t.md)
   - [AVDownloadTaskState](arkts-media-avdownloadtaskstate-t.md)
   - [AVRecorderState](arkts-media-avrecorderstate-t.md)
@@ -136,35 +136,35 @@
   - [VideoPlayState](arkts-media-videoplaystate-t.md)
   <!--Del-->
   - [VideoRecordState(系统接口)](arkts-media-videorecordstate-t-sys.md)<!--DelEnd-->
-  - [AacProfile](arkts-media-multimediamedia-aacprofile-e.md)
-  - [AudioEncoder](arkts-media-multimediamedia-audioencoder-e.md)
-  - [AudioOutputFormat](arkts-media-multimediamedia-audiooutputformat-e.md)
-  - [AudioSourceType](arkts-media-multimediamedia-audiosourcetype-e.md)
-  - [AVMimeTypes](arkts-media-multimediamedia-avmimetypes-e.md)
-  - [AVScreenCaptureFillMode](arkts-media-multimediamedia-avscreencapturefillmode-e.md)
-  - [AVScreenCaptureRecordPreset](arkts-media-multimediamedia-avscreencapturerecordpreset-e.md)
-  - [AVScreenCaptureStateCode](arkts-media-multimediamedia-avscreencapturestatecode-e.md)
-  - [BufferingInfoType](arkts-media-multimediamedia-bufferinginfotype-e.md)
-  - [CodecMimeType](arkts-media-multimediamedia-codecmimetype-e.md)
-  - [ContainerFormatType](arkts-media-multimediamedia-containerformattype-e.md)
-  - [FileGenerationMode](arkts-media-multimediamedia-filegenerationmode-e.md)
-  - [LoadingRequestError](arkts-media-multimediamedia-loadingrequesterror-e.md)
-  - [MediaDescriptionKey](arkts-media-multimediamedia-mediadescriptionkey-e.md)
-  - [MediaErrorCode](arkts-media-multimediamedia-mediaerrorcode-e.md)
-  - [MediaType](arkts-media-multimediamedia-mediatype-e.md)
+  - [AacProfile](arkts-media-multimedia-media-aacprofile-e.md)
+  - [AudioEncoder](arkts-media-multimedia-media-audioencoder-e.md)
+  - [AudioOutputFormat](arkts-media-multimedia-media-audiooutputformat-e.md)
+  - [AudioSourceType](arkts-media-multimedia-media-audiosourcetype-e.md)
+  - [AVMimeTypes](arkts-media-multimedia-media-avmimetypes-e.md)
+  - [AVScreenCaptureFillMode](arkts-media-multimedia-media-avscreencapturefillmode-e.md)
+  - [AVScreenCaptureRecordPreset](arkts-media-multimedia-media-avscreencapturerecordpreset-e.md)
+  - [AVScreenCaptureStateCode](arkts-media-multimedia-media-avscreencapturestatecode-e.md)
+  - [BufferingInfoType](arkts-media-multimedia-media-bufferinginfotype-e.md)
+  - [CodecMimeType](arkts-media-multimedia-media-codecmimetype-e.md)
+  - [ContainerFormatType](arkts-media-multimedia-media-containerformattype-e.md)
+  - [FileGenerationMode](arkts-media-multimedia-media-filegenerationmode-e.md)
+  - [LoadingRequestError](arkts-media-multimedia-media-loadingrequesterror-e.md)
+  - [MediaDescriptionKey](arkts-media-multimedia-media-mediadescriptionkey-e.md)
+  - [MediaErrorCode](arkts-media-multimedia-media-mediaerrorcode-e.md)
+  - [MediaType](arkts-media-multimedia-media-mediatype-e.md)
   <!--Del-->
-  - [MetaSourceType(系统接口)](arkts-media-multimediamedia-metasourcetype-e-sys.md)<!--DelEnd-->
-  - [PickerMode](arkts-media-multimediamedia-pickermode-e.md)
-  - [PlaybackInfoKey](arkts-media-multimediamedia-playbackinfokey-e.md)
-  - [PlaybackMetricsKey](arkts-media-multimediamedia-playbackmetricskey-e.md)
-  - [PlaybackSpeed](arkts-media-multimediamedia-playbackspeed-e.md)
-  - [PlaylistLoopMode](arkts-media-multimediamedia-playlistloopmode-e.md)
+  - [MetaSourceType(系统接口)](arkts-media-multimedia-media-metasourcetype-e-sys.md)<!--DelEnd-->
+  - [PickerMode](arkts-media-multimedia-media-pickermode-e.md)
+  - [PlaybackInfoKey](arkts-media-multimedia-media-playbackinfokey-e.md)
+  - [PlaybackMetricsKey](arkts-media-multimedia-media-playbackmetricskey-e.md)
+  - [PlaybackSpeed](arkts-media-multimedia-media-playbackspeed-e.md)
+  - [PlaylistLoopMode](arkts-media-multimedia-media-playlistloopmode-e.md)
   <!--Del-->
-  - [ScreenCaptureEvent(系统接口)](arkts-media-multimediamedia-screencaptureevent-e-sys.md)<!--DelEnd-->
-  - [SeekMode](arkts-media-multimediamedia-seekmode-e.md)
-  - [SwitchMode](arkts-media-multimediamedia-switchmode-e.md)
-  - [VideoScaleType](arkts-media-multimediamedia-videoscaletype-e.md)
-  - [VideoSourceType](arkts-media-multimediamedia-videosourcetype-e.md)
+  - [ScreenCaptureEvent(系统接口)](arkts-media-multimedia-media-screencaptureevent-e-sys.md)<!--DelEnd-->
+  - [SeekMode](arkts-media-multimedia-media-seekmode-e.md)
+  - [SwitchMode](arkts-media-multimedia-media-switchmode-e.md)
+  - [VideoScaleType](arkts-media-multimedia-media-videoscaletype-e.md)
+  - [VideoSourceType](arkts-media-multimedia-media-videosourcetype-e.md)
 - multimedia<!--arkts-mediakit-multimedia-->
   - [soundPool](arkts-soundpool.md)
     - [ErrorInfo](arkts-media-soundpool-errorinfo-i.md)

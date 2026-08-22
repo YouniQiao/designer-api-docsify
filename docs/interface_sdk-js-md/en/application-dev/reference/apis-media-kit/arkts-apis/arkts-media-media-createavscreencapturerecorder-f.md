@@ -77,3 +77,7 @@ Creates an **AVScreenCaptureRecorder** instance. This API uses a promise to retu
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 
+**Examples**
+
+See [createAVScreenCaptureRecorder](#createavscreencapturerecorder)
+

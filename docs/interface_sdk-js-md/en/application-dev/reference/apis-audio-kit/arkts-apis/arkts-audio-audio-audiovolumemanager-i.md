@@ -43,6 +43,16 @@ Obtains the volume of the application. (The volume range is 0 to 100.) This API 
 | --- | --- |
 | Promise&lt;int&gt; | Promise used to return the application volume. |
 
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+audioVolumeManager.getAppVolumePercentage().then((value: number) => {
+  console.info(`app volume is ${value}.`);
+});
+```
+
 ## getMaxVolumeByStream
 
 ```TypeScript
@@ -76,6 +86,22 @@ Obtains the maximum volume of a specified audio stream.
 | Error Code ID | Error Message |
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Obtain the maximum volume of a specified audio stream.
+import { BusinessError } from '@kit.BasicServicesKit';
+import { audio } from '@kit.AudioKit'
+
+try {
+  let volume : number = audio.getAudioManager().getVolumeManager().getMaxVolumeByStream(audio.StreamUsage.STREAM_USAGE_MUSIC);
+  console.info(`Obtains the maximum volume allowed for a stream success.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtains the maximum volume allowed for a stream, error: ${error}`);
+}
+```
 
 ## getMinVolumeByStream
 
@@ -111,6 +137,22 @@ Obtains the minimum volume of a specified audio stream.
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+// Obtain the minimum volume of a specified audio stream.
+import { BusinessError } from '@kit.BasicServicesKit';
+import { audio } from '@kit.AudioKit'
+
+try {
+  let volume : number = audio.getAudioManager().getVolumeManager().getMinVolumeByStream(audio.StreamUsage.STREAM_USAGE_MUSIC);
+  console.info(`Obtains the minimum volume allowed for a stream success.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtains the minimum volume allowed for a stream, error: ${error}`);
+}
+```
+
 ## getVolumeByStream
 
 ```TypeScript
@@ -145,6 +187,22 @@ Obtains the volume of a specified audio stream.
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+// Obtain the volume of a specified audio stream.
+import { BusinessError } from '@kit.BasicServicesKit';
+import { audio } from '@kit.AudioKit'
+
+try {
+  let volume : number = audio.getAudioManager().getVolumeManager().getVolumeByStream(audio.StreamUsage.STREAM_USAGE_MUSIC);
+  console.info(`Obtains the volume of a stream success.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtains the volume of a stream, error: ${error}`);
+}
+```
+
 ## getVolumeGroupManager
 
 ```TypeScript
@@ -164,7 +222,36 @@ Obtains a VolumeGroupManager instance. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | groupId | int | Yes | Volume group ID. The default value is **DEFAULT_VOLUME_GROUP_ID**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the VolumeGroupManager instance obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the VolumeGroupManager instance obtained; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let groupId: number = audio.DEFAULT_VOLUME_GROUP_ID;
+
+audioVolumeManager.getVolumeGroupManager(groupId, (err: BusinessError, value: audio.AudioVolumeGroupManager) => {
+  if (err) {
+    console.error(`Failed to getVolumeGroupManager. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in doing getVolumeGroupManager.');
+});
+```
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let groupId: number = audio.DEFAULT_VOLUME_GROUP_ID;
+
+audioVolumeManager.getVolumeGroupManager(groupId).then((audioVolumeGroupManager: audio.AudioVolumeGroupManager) => {
+  console.info('Succeeded in doing getVolumeGroupManager.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getVolumeGroupManager. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getVolumeGroupManager
 
@@ -191,6 +278,10 @@ Obtains a VolumeGroupManager instance. This API uses a promise to return the res
 | Type | Description |
 | --- | --- |
 | Promise&lt;[AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i.md)&gt; | Promise used to return the VolumeGroupManager instance. |
+
+**Examples**
+
+See [getVolumeGroupManager](#getvolumegroupmanager)
 
 ## getVolumeGroupManagerSync
 
@@ -227,6 +318,20 @@ Obtains a VolumeGroupManager instance. This API returns the result synchronously
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let audioVolumeGroupManager: audio.AudioVolumeGroupManager = audioVolumeManager.getVolumeGroupManagerSync(audio.DEFAULT_VOLUME_GROUP_ID);
+  console.info(`Get audioVolumeGroupManager success.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get audioVolumeGroupManager, error: ${error}`);
+}
+```
+
 ## getVolumeInUnitOfDbByStream
 
 ```TypeScript
@@ -261,6 +366,23 @@ Obtains the volume (in dB) calculated by the system based on the audio stream, v
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+// Obtain the volume (in dB) calculated by the system based on the audio stream, volume level, and device type.
+import { BusinessError } from '@kit.BasicServicesKit';
+import { audio } from '@kit.AudioKit'
+
+try {
+  let volumeInDb : number = audio.getAudioManager().getVolumeManager().getVolumeInUnitOfDbByStream(audio.StreamUsage.STREAM_USAGE_MUSIC, 5, audio.DeviceType.SPEAKER);
+  console.info(`Gets the volume db value that system calculate by volume stream, volume level and device type.
+ success.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to gets the volume db value that system calculate by volume stream, volume level and device type., error: ${error}`);
+}
+```
+
 ## isSystemMutedForStream
 
 ```TypeScript
@@ -293,51 +415,21 @@ Checks whether a specified audio stream is muted.
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## offAppVolumeChange
+**Examples**
 
 ```TypeScript
-offAppVolumeChange(callback?: Callback<VolumeEvent>): void
+// Check whether a specified audio stream is muted.
+import { BusinessError } from '@kit.BasicServicesKit';
+import { audio } from '@kit.AudioKit'
+
+try {
+  let isMuted : boolean = audio.getAudioManager().getVolumeManager().isSystemMutedForStream(audio.StreamUsage.STREAM_USAGE_MUSIC);
+  console.info(`Checks whether the system is muted based on the stream success.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to checks whether the system is muted based on the stream, error: ${error}`);
+}
 ```
-
-Unsubscribes to the app volume change events..
-
-**Since:** 23
-
-<!--Device-AudioVolumeManager-offAppVolumeChange(callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-offAppVolumeChange(callback?: Callback<VolumeEvent>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Volume
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to obtain the invoking volume change event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-## offStreamVolumeChange
-
-```TypeScript
-offStreamVolumeChange(callback?: Callback<StreamVolumeEvent>): void
-```
-
-Unsubscribes to the stream volume change events.
-
-**Since:** 23
-
-<!--Device-AudioVolumeManager-offStreamVolumeChange(callback?: Callback<StreamVolumeEvent>): void--><!--Device-AudioVolumeManager-offStreamVolumeChange(callback?: Callback<StreamVolumeEvent>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Volume
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | No | Callback used to obtain the invoking volume change event. If there is no callback parameter, all callbacks will be unregistered. |
 
 ## off('appVolumeChange')
 
@@ -358,7 +450,7 @@ Unsubscribes from the application-level volume change event of the application. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'appVolumeChange' | Yes | Event type. The event **'appVolumeChange'** is triggered when the application -level volume is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to return the changed volume. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to return the changed volume. |
 
 **Error codes:**
 
@@ -385,7 +477,7 @@ Unsubscribes from the system audio volume change event, which is triggered when 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'streamVolumeChange' | Yes | Event type. The event **'volumeChange'** is triggered when the system volume is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | No | Callback used to return the changed volume. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | No | Callback used to return the changed volume. |
 
 ## off('volumeChange')
 
@@ -410,7 +502,7 @@ Unsubscribes from the system volume change event. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'volumeChange' | Yes | Event type. The event **'volumeChange'** is triggered when the system volume is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to return the changed volume. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to return the changed volume. |
 
 **Error codes:**
 
@@ -419,17 +511,17 @@ Unsubscribes from the system volume change event. This API uses an asynchronous 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters missing; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onAppVolumeChange
+## offAppVolumeChange
 
 ```TypeScript
-onAppVolumeChange(callback: Callback<VolumeEvent>): void
+offAppVolumeChange(callback?: Callback<VolumeEvent>): void
 ```
 
-Listens for app volume change events. The app volume may changed by your called [setAppVolumePercentage](#setappvolumepercentage) or other system settings.
+Unsubscribes to the app volume change events..
 
 **Since:** 23
 
-<!--Device-AudioVolumeManager-onAppVolumeChange(callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onAppVolumeChange(callback: Callback<VolumeEvent>): void-End-->
+<!--Device-AudioVolumeManager-offAppVolumeChange(callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-offAppVolumeChange(callback?: Callback<VolumeEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -437,7 +529,7 @@ Listens for app volume change events. The app volume may changed by your called 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the app volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to obtain the invoking volume change event. |
 
 **Error codes:**
 
@@ -445,17 +537,17 @@ Listens for app volume change events. The app volume may changed by your called 
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onStreamVolumeChange
+## offStreamVolumeChange
 
 ```TypeScript
-onStreamVolumeChange(streamUsage: StreamUsage, callback: Callback<StreamVolumeEvent>): void
+offStreamVolumeChange(callback?: Callback<StreamVolumeEvent>): void
 ```
 
-Listens for stream volume change events. This method uses a callback to get volume change events.
+Unsubscribes to the stream volume change events.
 
 **Since:** 23
 
-<!--Device-AudioVolumeManager-onStreamVolumeChange(streamUsage: StreamUsage, callback: Callback<StreamVolumeEvent>): void--><!--Device-AudioVolumeManager-onStreamVolumeChange(streamUsage: StreamUsage, callback: Callback<StreamVolumeEvent>): void-End-->
+<!--Device-AudioVolumeManager-offStreamVolumeChange(callback?: Callback<StreamVolumeEvent>): void--><!--Device-AudioVolumeManager-offStreamVolumeChange(callback?: Callback<StreamVolumeEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -463,14 +555,7 @@ Listens for stream volume change events. This method uses a callback to get volu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | StreamUsage to be listened. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | Yes | Callback used to get the stream volume change event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | No | Callback used to obtain the invoking volume change event. If there is no callback parameter, all callbacks will be unregistered. |
 
 ## on('appVolumeChange')
 
@@ -491,7 +576,7 @@ Subscribes to the application-level volume change event of the application (trig
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'appVolumeChange' | Yes | Event type. The event **'appVolumeChange'** is triggered when the application -level volume is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to return the changed volume. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to return the changed volume. |
 
 **Error codes:**
 
@@ -519,7 +604,7 @@ Subscribes to the system audio volume change event, which is triggered when the 
 | --- | --- | --- | --- |
 | type | 'streamVolumeChange' | Yes | Event type. The event **'streamVolumeChange'** is triggered when the system audio volume is changed. |
 | streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | Audio stream usage. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | Yes | Callback used to return the changed volume. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | Yes | Callback used to return the changed volume. |
 
 **Error codes:**
 
@@ -550,13 +635,66 @@ Subscribes to the system volume change event, which is triggered when the system
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'volumeChange' | Yes | Event type. The event **'volumeChange'** is triggered when the system volume is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to return the changed volume. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to return the changed volume. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onAppVolumeChange
+
+```TypeScript
+onAppVolumeChange(callback: Callback<VolumeEvent>): void
+```
+
+Listens for app volume change events. The app volume may changed by your called [setAppVolumePercentage](#setappvolumepercentage) or other system settings.
+
+**Since:** 23
+
+<!--Device-AudioVolumeManager-onAppVolumeChange(callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onAppVolumeChange(callback: Callback<VolumeEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the app volume change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onStreamVolumeChange
+
+```TypeScript
+onStreamVolumeChange(streamUsage: StreamUsage, callback: Callback<StreamVolumeEvent>): void
+```
+
+Listens for stream volume change events. This method uses a callback to get volume change events.
+
+**Since:** 23
+
+<!--Device-AudioVolumeManager-onStreamVolumeChange(streamUsage: StreamUsage, callback: Callback<StreamVolumeEvent>): void--><!--Device-AudioVolumeManager-onStreamVolumeChange(streamUsage: StreamUsage, callback: Callback<StreamVolumeEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | StreamUsage to be listened. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | Yes | Callback used to get the stream volume change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## setAppVolumePercentage
@@ -593,4 +731,14 @@ Sets the volume (within a range of 0 to 100) for the application. This API uses 
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Crash or blocking occurs in system process. |
+
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+audioVolumeManager.setAppVolumePercentage(20).then(() => {
+  console.info(`set app volume success.`);
+});
+```
 

@@ -31,7 +31,35 @@ Removes a notification slot of a specified type. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotType | SlotType | Yes | Type of the notification slot, which can be used for social communication, service information, content consultation, and other purposes. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+// removeSlot callback
+let removeSlotCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.info("removeSlot failed " + JSON.stringify(err));
+  } else {
+    console.info("removeSlot success");
+  }
+}
+let slotType: Notification.SlotType = Notification.SlotType.SOCIAL_COMMUNICATION;
+Notification.removeSlot(slotType, removeSlotCallback);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+let slotType: Notification.SlotType = Notification.SlotType.SOCIAL_COMMUNICATION;
+Notification.removeSlot(slotType).then(() => {
+  console.info("removeSlot success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`removeSlot failed, code is ${err}`);
+});
+```
 
 
 ## removeSlot
@@ -63,4 +91,8 @@ Removes a notification slot of a specified type. This API uses a promise to retu
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+See [removeSlot](#removeslot)
 

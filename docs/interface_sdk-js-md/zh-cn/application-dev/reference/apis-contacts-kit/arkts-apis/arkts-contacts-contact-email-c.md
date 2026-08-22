@@ -32,6 +32,42 @@ static readonly CUSTOM_LABEL: 0
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
+## displayName
+
+```TypeScript
+displayName?: string
+```
+
+邮箱的显示名称。
+
+**类型：** string
+
+**起始版本：** 7
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Email-displayName?: string--><!--Device-Email-displayName?: string-End-->
+
+**系统能力：** SystemCapability.Applications.ContactsData
+
+## email
+
+```TypeScript
+email: string
+```
+
+联系人的邮箱地址。
+
+**类型：** string
+
+**起始版本：** 7
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Email-email: string--><!--Device-Email-email: string-End-->
+
+**系统能力：** SystemCapability.Applications.ContactsData
+
 ## EMAIL_HOME
 
 ```TypeScript
@@ -104,42 +140,6 @@ static readonly INVALID_LABEL_ID: -1
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
-## displayName
-
-```TypeScript
-displayName?: string
-```
-
-邮箱的显示名称。
-
-**类型：** string
-
-**起始版本：** 7
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Email-displayName?: string--><!--Device-Email-displayName?: string-End-->
-
-**系统能力：** SystemCapability.Applications.ContactsData
-
-## email
-
-```TypeScript
-email: string
-```
-
-联系人的邮箱地址。
-
-**类型：** string
-
-**起始版本：** 7
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Email-email: string--><!--Device-Email-email: string-End-->
-
-**系统能力：** SystemCapability.Applications.ContactsData
-
 ## labelId
 
 ```TypeScript
@@ -175,4 +175,24 @@ labelName?: string
 <!--Device-Email-labelName?: string--><!--Device-Email-labelName?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
+
+**示例**
+
+使用JSON格式创建数据。
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let email: contact.Email = {
+    email: 'xxx@email.com',
+    displayName: 'displayName'
+}
+```
+
+或使用new一个Email对象的方式创建数据。
+
+```TypeScript
+let email = new contact.Email();
+email.email = 'xxx@email.com';
+```
 

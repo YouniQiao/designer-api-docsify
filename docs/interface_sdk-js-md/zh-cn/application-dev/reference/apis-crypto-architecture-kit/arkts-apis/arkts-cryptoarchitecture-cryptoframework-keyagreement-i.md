@@ -51,6 +51,199 @@ generateSecret(priKey: PriKey, pubKey: PubKey, callback: AsyncCallback<DataBlob>
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 
+**示例**
+
+PBKDF2算法
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+let spec: cryptoFramework.PBKDF2Spec = {
+  algName: 'PBKDF2',
+  password: '123456',
+  salt: new Uint8Array(16),
+  iterations: 10000,
+  keySize: 32
+};
+let kdf = cryptoFramework.createKdf('PBKDF2|SHA256');
+kdf.generateSecret(spec, (err, secret) => {
+  if (err) {
+    console.error(`key derivation failed, errCode: ${err.code}, errMsg: ${err.message}`);
+    return;
+  }
+  console.info('key derivation output = ' + secret.data);
+});
+```
+
+HKDF算法
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+let spec: cryptoFramework.HKDFSpec = {
+  algName: 'HKDF',
+  key: '123456',
+  salt: new Uint8Array(16),
+  info: new Uint8Array(16),
+  keySize: 32
+};
+let kdf = cryptoFramework.createKdf('HKDF|SHA256|EXTRACT_AND_EXPAND');
+kdf.generateSecret(spec, (err, secret) => {
+  if (err) {
+    console.error(`key derivation failed, errCode: ${err.code}, errMsg: ${err.message}`);
+    return;
+  }
+  console.info('key derivation output = ' + secret.data);
+});
+```
+
+PBKDF2算法
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@ohos.base';
+
+function TestGenerateSecret() {
+  let spec: cryptoFramework.PBKDF2Spec = {
+    algName: 'PBKDF2',
+    password: '123456',
+    salt: new Uint8Array(16),
+    iterations: 10000,
+    keySize: 32
+  };
+  let kdf = cryptoFramework.createKdf('PBKDF2|SHA256');
+  kdf.generateSecret(spec, (err, secret) => {
+    if (err) {
+      console.error("generateSecret error.");
+      return;
+    }
+    if (secret != undefined) {
+      console.info('generateSecret output is ' + secret.data);
+    }
+  });
+}
+```
+
+HKDF算法
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+function TestGenerateSecret() {
+  let spec: cryptoFramework.HKDFSpec = {
+    algName: 'HKDF',
+    key: '123456',
+    salt: new Uint8Array(16),
+    info: new Uint8Array(16),
+    keySize: 32
+  };
+  let kdf = cryptoFramework.createKdf('HKDF|SHA256|EXTRACT_AND_EXPAND');
+  kdf.generateSecret(spec, (err, secret) => {
+    if (err) {
+      console.error("generateSecret error.");
+      return;
+    }
+    if (secret != undefined) {
+      console.info('generateSecret output is ' + secret.data);
+    }
+  });
+}
+```
+
+PBKDF2算法
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let spec: cryptoFramework.PBKDF2Spec = {
+  algName: 'PBKDF2',
+  password: '123456',
+  salt: new Uint8Array(16),
+  iterations: 10000,
+  keySize: 32
+};
+let kdf = cryptoFramework.createKdf('PBKDF2|SHA256');
+let kdfPromise = kdf.generateSecret(spec);
+kdfPromise.then(secret => {
+  console.info('key derivation output = ' + secret.data);
+}).catch((error: BusinessError) => {
+  console.error(`key derivation failed: errCode: ${error.code}, errMsg: ${error.message}`);
+});
+```
+
+HKDF算法
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let spec: cryptoFramework.HKDFSpec = {
+  algName: 'HKDF',
+  key: '123456',
+  salt: new Uint8Array(16),
+  info: new Uint8Array(16),
+  keySize: 32
+};
+let kdf = cryptoFramework.createKdf('HKDF|SHA256|EXTRACT_AND_EXPAND');
+let kdfPromise = kdf.generateSecret(spec);
+kdfPromise.then(secret => {
+  console.info('key derivation output = ' + secret.data);
+}).catch((error: BusinessError) => {
+  console.error(`key derivation failed: errCode: ${error.code}, errMsg: ${error.message}`);
+});
+```
+
+PBKDF2算法
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@ohos.base';
+
+async function TestGenerateSecret() {
+  let spec: cryptoFramework.PBKDF2Spec = {
+    algName: 'PBKDF2',
+    password: '123456',
+    salt: new Uint8Array(16),
+    iterations: 10000,
+    keySize: 32
+  };
+  try {
+    let kdf = cryptoFramework.createKdf('PBKDF2|SHA256');
+    let kdfPromise = await kdf.generateSecret(spec);
+    console.info('generateSecret output = ' + kdfPromise.data);
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error("TestGenerateSecret failed, " + e.message);
+  }
+}
+```
+
+HKDF算法
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@ohos.base';
+
+async function TestGenerateSecret() {
+  let spec: cryptoFramework.HKDFSpec = {
+    algName: 'HKDF',
+    key: '123456',
+    salt: new Uint8Array(16),
+    info: new Uint8Array(16),
+    keySize: 32
+  };
+  try {
+    let kdf = cryptoFramework.createKdf('HKDF|SHA256|EXTRACT_AND_EXPAND');
+    let kdfPromise = await kdf.generateSecret(spec);
+    console.info('generateSecret output = ' + kdfPromise.data);
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error("TestGenerateSecret failed, " + e.message);
+  }
+}
+```
+
 ## generateSecret
 
 ```TypeScript
@@ -90,6 +283,10 @@ generateSecret(priKey: PriKey, pubKey: PubKey): Promise<DataBlob>
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+
+**示例**
+
+参见 [generateSecret](#generatesecret)
 
 ## generateSecretSync
 
@@ -221,6 +418,40 @@ async function testGenerateSecretSync() {
   let secret = keyAgreement.generateSecretSync(globalKeyPair.priKey, globalKeyPair.pubKey);
   console.info('[Sync]keyAgreement output = ' + secret.data);
 }
+```
+
+PBKDF2算法
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+let spec: cryptoFramework.PBKDF2Spec = {
+  algName: 'PBKDF2',
+  password: '123456',
+  salt: new Uint8Array(16),
+  iterations: 10000,
+  keySize: 32
+};
+let kdf = cryptoFramework.createKdf('PBKDF2|SHA256');
+let secret = kdf.generateSecretSync(spec);
+console.info('[Sync]key derivation output = ' + secret.data);
+```
+
+HKDF算法
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+let spec: cryptoFramework.HKDFSpec = {
+  algName: 'HKDF',
+  key: '123456',
+  salt: new Uint8Array(16),
+  info: new Uint8Array(16),
+  keySize: 32
+};
+let kdf = cryptoFramework.createKdf('HKDF|SHA256|EXTRACT_AND_EXPAND');
+let secret = kdf.generateSecretSync(spec);
+console.info('[Sync]key derivation output = ' + secret.data);
 ```
 
 ## algName

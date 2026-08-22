@@ -50,6 +50,47 @@ addAccountImplicitly(
 | options | { [key: string]: any } | 是 | 鉴权所需要的可选项。 |
 | callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+
+  onResultCallback(code: number, result: Record<string, Object>): void {
+    console.info('resultCode: ' + code);
+    console.info('result: ' + JSON.stringify(result));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(() => {
+      console.info('startAbility successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    appAccountManager.addAccountImplicitly('com.example.accountjsdemo', 'getSocialData', {}, {
+      onResult: this.onResultCallback,
+      onRequestRedirected: this.onRequestRedirectedCallback
+    });
+  }
+
+  build() {}
+}
+```
+
 ## auth
 
 ```TypeScript
@@ -73,6 +114,205 @@ auth(name: string, authType: string, options: Record<string, Object>, callback: 
 | options | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | 是 | 鉴权所需要的可选项。 |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+
+  onResultCallback(code: number, authResult?: appAccount.AuthResult): void {
+    console.info('resultCode: ' + code);
+    console.info('authResult: ' + JSON.stringify(authResult));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(() => {
+      console.info('startAbility successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    try {
+      appAccountManager.auth('LiSi', 'com.example.accountjsdemo', 'getSocialData', {
+        onResult: this.onResultCallback,
+        onRequestRedirected: this.onRequestRedirectedCallback
+      });
+    } catch (e) {
+      const err = e as BusinessError;
+      console.error(`auth exception: code is ${err.code}, message is ${err.message}`);
+    }
+  }
+  build() {}
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+
+
+@Entry
+@Component
+struct Index {
+  context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+
+  onResultCallback(code: int, authResult?: appAccount.AuthResult): void {
+    console.info('resultCode: ' + code);
+    console.info('authResult: ' + JSON.stringify(authResult));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(():void => {
+      console.info('startAbility successfully');
+    }).catch((e:Error):void => {
+      const err = e as BusinessError;
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    try {
+      appAccountManager.auth('LiSi', 'com.example.accountjsdemo', 'getSocialData', {
+        onResult: this.onResultCallback,
+        onRequestRedirected: this.onRequestRedirectedCallback
+      });
+    } catch (e: Error) {
+      const err = e as BusinessError;
+      console.error(`auth exception: code is ${err.code}, message is ${err.message}`);
+    }
+  }
+  build() {}
+}
+```
+
+```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+
+  onResultCallback(code: number, authResult?: appAccount.AuthResult): void {
+    console.info('resultCode: ' + code);
+    console.info('authResult: ' + JSON.stringify(authResult));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(() => {
+      console.info('startAbility successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    let options: Record<string, Object> = {
+      'password': 'xxxx',
+    };
+    try {
+      appAccountManager.auth('LiSi', 'com.example.accountjsdemo', 'getSocialData', options, {
+        onResult: this.onResultCallback,
+        onRequestRedirected: this.onRequestRedirectedCallback
+      });
+    } catch (e) {
+      const err = e as BusinessError;
+      console.error(`auth exception: code is ${err.code}, message is ${err.message}`);
+    }
+  }
+
+  build() {}
+}
+```
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+import { RecordData } from '@ohos.base';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+
+
+@Entry
+@Component
+struct Index {
+  context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+
+  onResultCallback(code: int, authResult?: appAccount.AuthResult): void {
+    console.info('resultCode: ' + code);
+    console.info('authResult: ' + JSON.stringify(authResult));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(():void => {
+      console.info('startAbility successfully');
+    }).catch((e:Error):void => {
+      const err = e as BusinessError;
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    let options: Record<string, RecordData> = {
+      'password': 'xxxx',
+    };
+    const authCallback: appAccount.AuthCallback = {
+      onResult: this.onResultCallback,
+      onRequestRedirected: this.onRequestRedirectedCallback
+    };
+    try {
+      appAccountManager.auth('LiSi', 'com.example.accountjsdemo', 'getSocialData', options, authCallback);
+    } catch (e: Error) {
+      const err = e as BusinessError;
+      console.error(`auth exception: code is ${err.code}, message is ${err.message}`);
+    }
+  }
+  build() {}
+}
+```
+
 ## auth
 
 ```TypeScript
@@ -95,6 +335,10 @@ auth(name: string, authType: string, options: Record<string, RecordData>, callba
 | authType | string | 是 | 应用账号的鉴权类型。自定义数据，最大长度为1024个字符。 |
 | options | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt; | 是 | 鉴权所需要的可选项。 |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
+
+**示例**
+
+参见 [auth](#auth)
 
 ## authenticate
 
@@ -134,6 +378,47 @@ authenticate(
 | options | { [key: string]: any } | 是 | 鉴权所需要的可选项。 |
 | callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+
+  onResultCallback(code: number, result: Record<string, Object>): void {
+    console.info('resultCode: ' + code);
+    console.info('result: ' + JSON.stringify(result));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(() => {
+      console.info('startAbility successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    appAccountManager.authenticate('LiSi', 'com.example.accountjsdemo', 'getSocialData', {}, {
+      onResult: this.onResultCallback,
+      onRequestRedirected: this.onRequestRedirectedCallback
+    });
+  }
+
+  build() {}
+}
+```
+
 ## checkAccountLabels
 
 ```TypeScript
@@ -157,6 +442,95 @@ checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback):
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let labels = ['student'];
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.checkAccountLabels('zhangsan', 'com.example.accountjsdemo', labels,
+    (err: BusinessError, hasAllLabels: boolean) => {
+      if (err) {
+        console.error(`checkAccountLabels failed, code is ${err.code}, message is ${err.message}`);
+      } else {
+        console.info('checkAccountLabels successfully, hasAllLabels: ' + hasAllLabels);
+      }
+    });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkAccountLabels exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let labels = ['student'];
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.checkAccountLabels('zhangsan', 'com.example.accountjsdemo', labels,
+    (err: BusinessError | null, hasAllLabels: boolean | undefined) => {
+      if (err) {
+        console.error(`checkAccountLabels failed, code is ${err.code}, message is ${err.message}`);
+      } else {
+        console.info('checkAccountLabels successfully, hasAllLabels: ' + hasAllLabels);
+      }
+    });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`checkAccountLabels exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let labels = ['student'];
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.checkAccountLabels('zhangsan', 'com.example.accountjsdemo', labels).then((
+    hasAllLabels: boolean) => {
+    console.info('checkAccountLabels successfully: ' + hasAllLabels);
+  }).catch((err: BusinessError) => {
+    console.error(`checkAccountLabels failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkAccountLabels exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let labels = ['student'];
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.checkAccountLabels('zhangsan', 'com.example.accountjsdemo', labels).then((
+    hasAllLabels: boolean) => {
+    console.info('checkAccountLabels successfully: ' + hasAllLabels);
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`checkAccountLabels failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`checkAccountLabels exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 接口需组合使用，请查看[getRemoteObject](#getremoteobject)中的示例。
 
@@ -205,6 +579,205 @@ createAccountImplicitly(options: CreateAccountImplicitlyOptions, callback: AuthC
 | --- | --- | --- | --- |
 | options | [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) | 是 | 隐式创建账号的选项。 |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调对象，用于返回创建结果。 |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+
+  onResultCallback(code: number, result?: appAccount.AuthResult): void {
+    console.info('resultCode: ' + code);
+    console.info('result: ' + JSON.stringify(result));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(() => {
+      console.info('startAbility successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    try {
+      appAccountManager.createAccountImplicitly('com.example.accountjsdemo', {
+        onResult: this.onResultCallback,
+        onRequestRedirected: this.onRequestRedirectedCallback
+      });
+    } catch (e) {
+      const err = e as BusinessError;
+      console.error(`createAccountImplicitly exception: code is ${err.code}, message is ${err.message}`);
+    }
+  }
+  build() {}
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+
+@Entry
+@Component
+struct Index {
+  context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+  onResultCallback(code: int, result?: appAccount.AuthResult): void {
+    console.info('resultCode: ' + code);
+    console.info('result: ' + JSON.stringify(result));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(():void => {
+      console.info('startAbility successfully');
+    }).catch((e: Error):void => {
+      const err = e as BusinessError;
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    try {
+      appAccountManager.createAccountImplicitly('com.example.accountjsdemo', {
+        onResult: this.onResultCallback,
+        onRequestRedirected: this.onRequestRedirectedCallback
+      });
+    } catch (e: Error) {
+      const err = e as BusinessError;
+      console.error(`createAccountImplicitly exception: code is ${err.code}, message is ${err.message}`);
+    }
+  }
+  build() {}
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+
+  onResultCallback(code: number, result?: appAccount.AuthResult): void {
+    console.info('resultCode: ' + code);
+    console.info('result: ' + JSON.stringify(result));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(() => {
+      console.info('startAbility successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    let options: appAccount.CreateAccountImplicitlyOptions = {
+      authType: 'getSocialData',
+      requiredLabels: [ 'student' ]
+    };
+    try {
+      appAccountManager.createAccountImplicitly('com.example.accountjsdemo', options, {
+        onResult: this.onResultCallback,
+        onRequestRedirected: this.onRequestRedirectedCallback
+      });
+    } catch (e) {
+      const err = e as BusinessError;
+      console.error(`createAccountImplicitly exception: code is ${err.code}, message is ${err.message}`);
+    }
+  }
+  build() {}
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+
+@Entry
+@Component
+struct Index {
+  context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+
+  onResultCallback(code: int, result?: appAccount.AuthResult): void {
+    console.info('resultCode: ' + code);
+    console.info('result: ' + JSON.stringify(result));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(():void => {
+      console.info('startAbility successfully');
+    }).catch((e:Error):void => {
+      const err = e as BusinessError;
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    let options: appAccount.CreateAccountImplicitlyOptions = {
+      authType: 'getSocialData',
+      requiredLabels: [ 'student' ]
+    };
+    try {
+      appAccountManager.createAccountImplicitly('com.example.accountjsdemo', options, {
+        onResult: this.onResultCallback,
+        onRequestRedirected: this.onRequestRedirectedCallback
+      });
+    } catch (e: Error) {
+      const err = e as BusinessError;
+      console.error(`createAccountImplicitly exception: code is ${err.code}, message is ${err.message}`);
+    }
+  }
+  build() {}
+}
+```
 
 ## getRemoteObject
 
@@ -437,6 +1010,111 @@ verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthC
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.verifyCredential('zhangsan', 'com.example.accountjsdemo', {
+    onResult: (resultCode: number, result?: appAccount.AuthResult) => {
+      console.info('verifyCredential onResult, resultCode: ' + JSON.stringify(resultCode));
+      console.info('verifyCredential onResult, result: ' + JSON.stringify(result));
+    },
+    onRequestRedirected: (request: Want) => {
+      console.info('verifyCredential onRequestRedirected, request: ' + JSON.stringify(request));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`verifyCredential err: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { Want } from '@kit.AbilityKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+const authCallback: appAccount.AuthCallback = {
+  onResult: (resultCode: int, result?: appAccount.AuthResult) => {
+    console.info('verifyCredential onResult, resultCode: ' + JSON.stringify(resultCode));
+    console.info('verifyCredential onResult, result: ' + JSON.stringify(result));
+  },
+  onRequestRedirected: (request: Want) => {
+    console.info('verifyCredential onRequestRedirected, request: ' + JSON.stringify(request));
+  }
+}
+try {
+  appAccountManager.verifyCredential('zhangsan', 'com.example.accountjsdemo', authCallback);
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`verifyCredential err: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+let options: appAccount.VerifyCredentialOptions = {
+  credentialType: 'pin',
+  credential: '123456'
+};
+try {
+  appAccountManager.verifyCredential('zhangsan', 'com.example.accountjsdemo', options, {
+    onResult: (resultCode: number, result?: appAccount.AuthResult) => {
+      console.info('verifyCredential onResult, resultCode: ' + JSON.stringify(resultCode));
+      console.info('verifyCredential onResult, result: ' + JSON.stringify(result));
+    },
+    onRequestRedirected: (request: Want) => {
+      console.info('verifyCredential onRequestRedirected, request: ' + JSON.stringify(request));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`verifyCredential err: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { Want } from '@kit.AbilityKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+let options: appAccount.VerifyCredentialOptions = {
+  credentialType: 'pin',
+  credential: '123456'
+};
+const authCallback: appAccount.AuthCallback = {
+  onResult: (resultCode: int, result?: appAccount.AuthResult) => {
+    console.info('verifyCredential onResult, resultCode: ' + JSON.stringify(resultCode));
+    console.info('verifyCredential onResult, result: ' + JSON.stringify(result));
+  },
+  onRequestRedirected: (request: Want) => {
+    console.info('verifyCredential onRequestRedirected, request: ' + JSON.stringify(request));
+  }
+}
+
+try {
+  appAccountManager.verifyCredential('zhangsan', 'com.example.accountjsdemo', options, authCallback);
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`verifyCredential err: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 接口需组合使用，请查看[getRemoteObject](#getremoteobject)中的示例。
 

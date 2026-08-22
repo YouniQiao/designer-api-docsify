@@ -12,5 +12,5 @@ type PlaybackMetrics = Record<PlaybackMetricsKey, Object>
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
-**属性类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;[PlaybackMetricsKey](arkts-media-multimediamedia-playbackmetricskey-e.md), Object&gt;
+**属性类型：** [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;[PlaybackMetricsKey](arkts-media-multimedia-media-playbackmetricskey-e.md), Object&gt;
 

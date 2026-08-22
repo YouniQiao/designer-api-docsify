@@ -25,7 +25,7 @@ Checks whether this application is the default application of a system-defined a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the target application. It must be set to a value defined by [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md) or [UniformDataType](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null** and **data** is a Boolean value (**true** if the application is the default application, **false** otherwise). If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is a Boolean value (**true** if the application is the default application, **false** otherwise). If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -35,6 +35,18 @@ Checks whether this application is the default application of a system-defined a
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 **Examples**
+
+```TypeScript
+import { defaultAppManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+defaultAppManager.isDefaultApplication(defaultAppManager.ApplicationType.BROWSER)
+  .then((data) => {
+    console.info('Operation successful. IsDefaultApplication ? ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+  console.error('Operation failed. Cause: ' + JSON.stringify(error));
+});
+```
 
 ```TypeScript
 import { defaultAppManager } from '@kit.AbilityKit';
@@ -85,15 +97,5 @@ Checks whether this application is the default application of a system-defined a
 
 **Examples**
 
-```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-defaultAppManager.isDefaultApplication(defaultAppManager.ApplicationType.BROWSER)
-  .then((data) => {
-    console.info('Operation successful. IsDefaultApplication ? ' + JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-  console.error('Operation failed. Cause: ' + JSON.stringify(error));
-});
-```
+See [isDefaultApplication](#isdefaultapplication)
 

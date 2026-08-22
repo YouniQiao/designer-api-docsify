@@ -38,6 +38,112 @@ function publish(request: NotificationRequest, userId: number, callback: AsyncCa
 | userId | number | 是 | 用户ID。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 被指定的回调方法。 |
 
+**示例**
+
+```TypeScript
+import NotificationManager from '@ohos.notificationManager';
+import Base from '@ohos.base';
+
+// publish回调
+let publishCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.error(`publish failed, code is ${err}`);
+  } else {
+    console.info("publish success");
+  }
+}
+// 通知Request对象
+let notificationRequest: NotificationManager.NotificationRequest = {
+  id: 1,
+  content: {
+    contentType: Notification.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
+    normal: {
+      title: "test_title",
+      text: "test_text",
+      additionalText: "test_additionalText"
+    }
+  }
+};
+Notification.publish(notificationRequest, publishCallback);
+```
+
+```TypeScript
+import NotificationManager from '@ohos.notificationManager';
+import Base from '@ohos.base';
+
+// 通知Request对象
+let notificationRequest: NotificationManager.NotificationRequest = {
+  id: 1,
+  content: {
+    contentType: Notification.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
+    normal: {
+      title: "test_title",
+      text: "test_text",
+      additionalText: "test_additionalText"
+    }
+  }
+};
+Notification.publish(notificationRequest).then(() => {
+  console.info("publish success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`publish failed, code is ${err}`);
+});
+```
+
+```TypeScript
+import NotificationManager from '@ohos.notificationManager';
+import Base from '@ohos.base';
+
+// publish回调
+let publishCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.error(`publish failed, code is ${err.code}`);
+  } else {
+    console.info("publish success");
+  }
+}
+// 用户ID
+let userId: number = 1;
+// 通知Request对象
+let notificationRequest: NotificationManager.NotificationRequest = {
+  id: 1,
+  content: {
+    contentType: Notification.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
+    normal: {
+      title: "test_title",
+      text: "test_text",
+      additionalText: "test_additionalText"
+    }
+  }
+};
+Notification.publish(notificationRequest, userId, publishCallback);
+```
+
+```TypeScript
+import NotificationManager from '@ohos.notificationManager';
+import Base from '@ohos.base';
+
+let notificationRequest: NotificationManager.NotificationRequest = {
+  id: 1,
+  content: {
+    contentType: Notification.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
+    normal: {
+      title: "test_title",
+      text: "test_text",
+      additionalText: "test_additionalText"
+    }
+  }
+};
+
+let userId: number = 1;
+
+Notification.publish(notificationRequest, userId).then(() => {
+  console.info("publish success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`publish failed, code is ${err}`);
+});
+```
+
 
 ## publish
 
@@ -73,4 +179,8 @@ function publish(request: NotificationRequest, userId: number): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [publish](#publish)
 

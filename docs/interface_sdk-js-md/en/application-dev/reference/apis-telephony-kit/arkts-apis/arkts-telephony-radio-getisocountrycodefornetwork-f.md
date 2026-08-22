@@ -25,7 +25,7 @@ Obtains the ISO-defined country code of the country where the registered network
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Indicates the callback for getting the country code defined in ISO 3166-2; returns an empty string if the device is not registered with any network. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Indicates the callback for getting the country code defined in ISO 3166-2; returns an empty string if the device is not registered with any network. |
 
 **Error codes:**
 
@@ -49,6 +49,17 @@ radio.getISOCountryCodeForNetwork(slotId, (err: BusinessError, data: string) => 
         return;
     }
     console.info(`getISOCountryCodeForNetwork success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.getISOCountryCodeForNetwork(slotId).then((data: string) => {
+    console.info(`getISOCountryCodeForNetwork success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getISOCountryCodeForNetwork failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -91,14 +102,5 @@ Obtains the ISO-defined country code of the country where the registered network
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getISOCountryCodeForNetwork(slotId).then((data: string) => {
-    console.info(`getISOCountryCodeForNetwork success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getISOCountryCodeForNetwork failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getISOCountryCodeForNetwork](#getisocountrycodefornetwork)
 

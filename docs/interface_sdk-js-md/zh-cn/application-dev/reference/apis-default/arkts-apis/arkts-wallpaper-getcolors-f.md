@@ -42,6 +42,16 @@ wallpaper.getColors(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessEr
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+wallpaper.getColors(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: Array<wallpaper.RgbaColor>) => {
+    console.info(`success to getColors: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to getColors. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
 
 ## getColors
 
@@ -73,13 +83,5 @@ function getColors(wallpaperType: WallpaperType): Promise<Array<RgbaColor>>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-wallpaper.getColors(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: Array<wallpaper.RgbaColor>) => {
-    console.info(`success to getColors: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to getColors. Code: ${error.code}, message: ${error.message}`);
-});
-```
+参见 [getColors](#getcolors)
 

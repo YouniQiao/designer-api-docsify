@@ -24,3 +24,17 @@ This callback function is implemented by applications to release related resourc
 | --- | --- | --- | --- |
 | uuid | long | Yes | ID for the resource handle. |
 
+**Examples**
+
+```TypeScript
+import { HashMap } from '@kit.ArkTS';
+
+let requests: HashMap<number, media.MediaSourceLoadingRequest> = new HashMap();
+
+let sourceCloseCallback: media.SourceCloseCallback = (uuid: number) => {
+  console.info(`Closing resource with handle ${uuid}`);
+  // Clear resources related to the current UUID.
+  requests.remove(uuid);
+};
+```
+

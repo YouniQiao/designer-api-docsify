@@ -57,6 +57,23 @@ try {
 }
 ```
 
+```TypeScript
+import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
+
+let testMissionId = 2;
+try {
+  // 获取任务快照
+  missionManager.getMissionSnapShot('', testMissionId).then((data) => {
+    console.info(`getMissionSnapShot successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`getMissionSnapShot failed. Cause: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`getMissionSnapShot failed. Cause: ${error.message}`);
+}
+```
+
 
 ## getMissionSnapShot
 
@@ -95,20 +112,5 @@ function getMissionSnapShot(deviceId: string, missionId: number): Promise<Missio
 
 **示例**
 
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-let testMissionId = 2;
-try {
-  // 获取任务快照
-  missionManager.getMissionSnapShot('', testMissionId).then((data) => {
-    console.info(`getMissionSnapShot successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`getMissionSnapShot failed. Cause: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`getMissionSnapShot failed. Cause: ${error.message}`);
-}
-```
+参见 [getMissionSnapShot](#getmissionsnapshot)
 

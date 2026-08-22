@@ -24,7 +24,7 @@ touchEvent: TouchEvent
 
 Touch event.
 
-**Type:** [TouchEvent](arkts-input-multimodalinputtouchevent-touchevent-i.md)
+**Type:** [TouchEvent](arkts-input-multimodalinput-touchevent-touchevent-i.md)
 
 **Since:** 23
 

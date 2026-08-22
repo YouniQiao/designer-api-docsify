@@ -36,6 +36,27 @@ Renames a file. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let srcFile = pathDir + "/test.txt";
+let dstFile = pathDir + '/new.txt';
+fileio.rename(srcFile, dstFile).then(() => {
+  console.info("rename succeed");
+}).catch((err: BusinessError) => {
+  console.error("rename failed with error:" + err);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let srcFile = pathDir + "/test.txt";
+let dstFile = pathDir + '/new.txt';
+fileio.rename(srcFile, dstFile, (err: BusinessError) => {
+});
+```
+
 
 ## rename
 
@@ -61,5 +82,9 @@ Renames a file. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | oldPath | string | Yes | Application sandbox path of the file to rename. |
 | newPath | string | Yes | Application sandbox path of the file renamed. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked when the file is asynchronously renamed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file is asynchronously renamed. |
+
+**Examples**
+
+See [rename](#rename)
 

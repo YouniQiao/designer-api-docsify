@@ -111,6 +111,27 @@ Compresses the source buffer into the destination buffer. This API uses a promis
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 | [17800007](../../apis-ability-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
 
+**Examples**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+let str = 'hello world! Hello, world!';
+const enc = util.TextEncoder.create('utf-8');
+const u8 = enc.encodeInto(str);
+const arrayBufferIn = u8.buffer.slice(u8.byteOffset, u8.byteOffset + u8.byteLength);
+
+let arrayBufferOut = new ArrayBuffer(100);
+let zip = zlib.createZipSync();
+
+zip.compress2(arrayBufferOut, arrayBufferIn, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
+  console.info('compress2 success');
+}).catch((errData: BusinessError) => {
+  console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+})
+```
+
 ## compressBound
 
 ```TypeScript
@@ -1265,6 +1286,10 @@ Get ZStream.
 | --- | --- |
 | Promise&lt;[ZStream](arkts-basicservices-zlib-zstream-i.md) \| undefined&gt; | Return the required ZStream for compression or decompression. |
 
+**Examples**
+
+See [getZStream](#getzstream)
+
 ## inflate
 
 ```TypeScript
@@ -1569,6 +1594,10 @@ Does a raw inflate with a single call using a call-back interface for input and 
 | Error Code ID | Error Message |
 | --- | --- |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Examples**
+
+See [inflateBack](#inflateback)
 
 ## inflateBackEnd
 

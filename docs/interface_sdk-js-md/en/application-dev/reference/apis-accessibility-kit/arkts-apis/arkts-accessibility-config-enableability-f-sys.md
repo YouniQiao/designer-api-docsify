@@ -49,6 +49,38 @@ Compared with [config.enableAbilityWithCallback](arkts-accessibility-config-enab
 | [9300001](../errorcode-accessibility.md#9300001-invalid-bundle-name-or-ability-name) | Invalid bundle name or ability name. |
 | [9300002](../errorcode-accessibility.md#9300002-target-ability-already-enabled) | Target ability already enabled. |
 
+**Examples**
+
+```TypeScript
+import { accessibility, config } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let name: string = 'com.ohos.example/axExtension';
+let capability: accessibility.Capability[] = ['retrieve'];
+
+config.enableAbility(name, capability).then(() => {
+  console.info(`Succeeded  in enable ability, name is ${name}, capability is ${capability}`);
+}).catch((err: BusinessError) => {
+  console.error(`failed to enable ability, Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { accessibility, config } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let name: string = 'com.ohos.example/axExtension';
+let capability: accessibility.Capability[] = ['retrieve'];
+
+config.enableAbility(name, capability, (err: BusinessError) => {
+  if (err) {
+    console.error(`failed to enable ability, Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in enable ability, name is ${name}, capability is ${capability}`); 
+});
+```
+
 
 ## enableAbility
 
@@ -80,7 +112,7 @@ Compared with [config.enableAbilityWithCallback](arkts-accessibility-config-enab
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the accessibility extension app, in the format of 'bundleName/abilityName'. |
 | capability | Array&lt;accessibility.Capability&gt; | Yes | Capability attribute of the accessibility extension app. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the accessibility extension is enabled successfully, **err** is undefined; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the accessibility extension is enabled successfully, **err** is undefined; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -91,4 +123,8 @@ Compared with [config.enableAbilityWithCallback](arkts-accessibility-config-enab
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300001](../errorcode-accessibility.md#9300001-invalid-bundle-name-or-ability-name) | Invalid bundle name or ability name. |
 | [9300002](../errorcode-accessibility.md#9300002-target-ability-already-enabled) | Target ability already enabled. |
+
+**Examples**
+
+See [enableAbility](#enableability)
 

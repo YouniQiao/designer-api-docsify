@@ -30,7 +30,7 @@ Send envelope command to SIM card.
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 | cmd | string | Yes | Indicates sending command. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of sendEnvelopeCmd. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of sendEnvelopeCmd. |
 
 **Error codes:**
 
@@ -53,6 +53,17 @@ import { sim } from '@kit.TelephonyKit';
 
 sim.sendEnvelopeCmd(0, "ls", (err: BusinessError) => {
     console.info(`callback: err->${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.sendEnvelopeCmd(0, "ls").then(() => {
+    console.info(`sendEnvelopeCmd success.`);
+}).catch((err: BusinessError) => {
+    console.error(`sendEnvelopeCmd failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -103,14 +114,5 @@ Send envelope command to SIM card.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.sendEnvelopeCmd(0, "ls").then(() => {
-    console.info(`sendEnvelopeCmd success.`);
-}).catch((err: BusinessError) => {
-    console.error(`sendEnvelopeCmd failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [sendEnvelopeCmd](#sendenvelopecmd)
 

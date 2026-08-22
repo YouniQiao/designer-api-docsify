@@ -49,10 +49,62 @@ function rejectCall(callId: int, options: RejectMessageOptions, callback: AsyncC
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+call.rejectCall((err: BusinessError) => {
+    if (err) {
+        console.error(`rejectCall fail, 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
+    } else {
+        console.info(`rejectCall success.`);
+    }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.rejectCall(1, (err: BusinessError) => {
+    if (err) {
+        console.error(`rejectCall fail, err->${JSON.stringify(err)}`);
+    } else {
+        console.info(`rejectCall success.`);
+    }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let rejectMessageOptions : call.RejectMessageOptions = {
     messageContent: "拦截陌生号码"
 }
 call.rejectCall(1, rejectMessageOptions, (err: BusinessError) => {
+    if (err) {
+        console.error(`rejectCall fail, err->${JSON.stringify(err)}`);
+    } else {
+        console.info(`rejectCall success.`);
+    }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rejectMessageOptions: call.RejectMessageOptions = {
+    messageContent: "拦截陌生号码"
+}
+call.rejectCall(1, rejectMessageOptions).then(() => {
+    console.info(`rejectCall success.`);
+}).catch((err: BusinessError) => {
+    console.error(`rejectCall fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rejectMessageOptions: call.RejectMessageOptions = {
+    messageContent: "拦截陌生号码"
+}
+call.rejectCall(rejectMessageOptions, (err: BusinessError) => {
     if (err) {
         console.error(`rejectCall fail, err->${JSON.stringify(err)}`);
     } else {
@@ -107,18 +159,7 @@ function rejectCall(callId?: int, options?: RejectMessageOptions): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let rejectMessageOptions: call.RejectMessageOptions = {
-    messageContent: "拦截陌生号码"
-}
-call.rejectCall(1, rejectMessageOptions).then(() => {
-    console.info(`rejectCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`rejectCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [rejectCall](#rejectcall)
 
 
 ## rejectCall
@@ -160,17 +201,7 @@ function rejectCall(callId: int, callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.rejectCall(1, (err: BusinessError) => {
-    if (err) {
-        console.error(`rejectCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`rejectCall success.`);
-    }
-});
-```
+参见 [rejectCall](#rejectcall)
 
 
 ## rejectCall
@@ -211,17 +242,7 @@ function rejectCall(callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.rejectCall((err: BusinessError) => {
-    if (err) {
-        console.error(`rejectCall fail, 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-    } else {
-        console.info(`rejectCall success.`);
-    }
-});
-```
+参见 [rejectCall](#rejectcall)
 
 
 ## rejectCall
@@ -263,18 +284,5 @@ function rejectCall(options: RejectMessageOptions, callback: AsyncCallback<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let rejectMessageOptions: call.RejectMessageOptions = {
-    messageContent: "拦截陌生号码"
-}
-call.rejectCall(rejectMessageOptions, (err: BusinessError) => {
-    if (err) {
-        console.error(`rejectCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`rejectCall success.`);
-    }
-});
-```
+参见 [rejectCall](#rejectcall)
 

@@ -33,6 +33,16 @@ function getTotalBytes(path: string, callback: AsyncCallback<number>): void
 **示例**
 
 ```TypeScript
+import { BusinessError } from '@ohos.base';
+let path = "/dev";
+statfs.getTotalBytes(path).then((number: number) => {
+  console.info("getTotalBytes promise successfully:" + number);
+}).catch((err: BusinessError) => {
+  console.error("getTotalBytes failed with error:" + JSON.stringify(err));
+});
+```
+
+```TypeScript
 import common from '@ohos.app.ability.common';
 import { BusinessError } from '@ohos.base';
 let context = getContext(this) as common.UIAbilityContext;
@@ -79,13 +89,5 @@ function getTotalBytes(path: string): Promise<number>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let path = "/dev";
-statfs.getTotalBytes(path).then((number: number) => {
-  console.info("getTotalBytes promise successfully:" + number);
-}).catch((err: BusinessError) => {
-  console.error("getTotalBytes failed with error:" + JSON.stringify(err));
-});
-```
+参见 [getTotalBytes](#gettotalbytes)
 

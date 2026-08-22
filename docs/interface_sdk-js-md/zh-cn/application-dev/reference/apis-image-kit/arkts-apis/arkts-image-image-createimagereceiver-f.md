@@ -47,6 +47,46 @@ function createImageReceiver(width: number, height: number, format: number, capa
 
 **示例**
 
+ArkTS-Dyn示例:
+
+```TypeScript
+let size: image.Size = {
+  height: 8192,
+  width: 8192
+}
+let receiver: image.ImageReceiver = image.createImageReceiver(size, image.ImageFormat.JPEG, 8);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let size: image.Size = {
+  height: 8192,
+  width: 8192
+}
+let receiver: image.ImageReceiver = image.createImageReceiver(size, image.ImageFormat.JPEG, 8);
+```
+
+ArkTS-Dyn示例:
+
+```TypeScript
+let options: image.ImageReceiverOptions = {
+  size: { width: 480, height: 480 },
+  capacity: 3
+}
+let receiver: image.ImageReceiver | undefined = image.createImageReceiver(options);
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+let options: image.ImageReceiverOptions = {
+  size: { width: 480, height: 480 },
+  capacity: 3
+};
+let receiver: image.ImageReceiver = image.createImageReceiver(options)!;
+```
+
 ```TypeScript
 let receiver: image.ImageReceiver = image.createImageReceiver(8192, 8192, image.ImageFormat.JPEG, 8);
 ```
@@ -90,25 +130,7 @@ function createImageReceiver(size: Size, format: ImageFormat, capacity: int): Im
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-let size: image.Size = {
-  height: 8192,
-  width: 8192
-}
-let receiver: image.ImageReceiver = image.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let size: image.Size = {
-  height: 8192,
-  width: 8192
-}
-let receiver: image.ImageReceiver = image.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-```
+参见 [createImageReceiver](#createimagereceiver)
 
 
 ## createImageReceiver
@@ -138,6 +160,10 @@ Creates an ImageReceiver instance.
 | 类型 | 说明 |
 | --- | --- |
 | ImageReceiver \| undefined | Returns the ImageReceiver instance if the operation is successful; returns undefined otherwise. |
+
+**示例**
+
+参见 [createImageReceiver](#createimagereceiver)
 
 
 ## createImageReceiver
@@ -178,23 +204,5 @@ function createImageReceiver(options?: ImageReceiverOptions): ImageReceiver | un
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-let options: image.ImageReceiverOptions = {
-  size: { width: 480, height: 480 },
-  capacity: 3
-}
-let receiver: image.ImageReceiver | undefined = image.createImageReceiver(options);
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-let options: image.ImageReceiverOptions = {
-  size: { width: 480, height: 480 },
-  capacity: 3
-};
-let receiver: image.ImageReceiver = image.createImageReceiver(options)!;
-```
+参见 [createImageReceiver](#createimagereceiver)
 

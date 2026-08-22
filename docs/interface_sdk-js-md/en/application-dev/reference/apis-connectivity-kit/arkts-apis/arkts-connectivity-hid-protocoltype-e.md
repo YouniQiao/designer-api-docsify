@@ -2,7 +2,7 @@
 
 Describe the protocol type.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-hid-enum ProtocolType--><!--Device-hid-enum ProtocolType-End-->
 
@@ -16,7 +16,7 @@ PROTOCOL_BOOT_MODE = 0
 
 Protocol type boot mode.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +32,7 @@ PROTOCOL_REPORT_MODE = 1
 
 Protocol type report mode.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 

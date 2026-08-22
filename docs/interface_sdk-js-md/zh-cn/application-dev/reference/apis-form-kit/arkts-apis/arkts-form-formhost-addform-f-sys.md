@@ -32,7 +32,7 @@ You can use this method to create a theme form.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | Indicates want of the form. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Indicates want of the form. |
 
 **返回值：**
 
@@ -50,4 +50,69 @@ You can use this method to create a theme form.
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formHost, formInfo } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let want: Want = {
+    'bundleName': 'com.huawei.hmsapp.thememanager',
+    'abilityName': 'ThemeFaCardUIExtAbility',
+    'parameters': {
+      'ohos.extra.param.key.form_dimension': 4,
+      'ohos.extra.param.key.form_is_theme': true,
+      'ohos.extra.param.key.form_location': 0,
+      'ohos.extra.param.key.module_name': 'entry',
+      'ohos.extra.param.key.form_name': 'widget',
+      'themeFormId': '0',
+      'themeId': '2181824853'
+    }
+  };
+  formHost.addForm(want).then((data: formInfo.RunningFormInfo) => {
+    console.info(`formHost addForm, formId: ${data.formId}`);
+  }).catch((error: BusinessError) => {
+    console.error(`formHost addForm error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formInfo, formHost } from '@kit.FormKit';
+import { BusinessError, RecordData } from '@kit.BasicServicesKit';
+import { Want } from '@kit.AbilityKit';
+
+try {
+  let wantParams: Record<String, RecordData> = {
+    'ohos.extra.param.key.form_dimension': 4,
+    'ohos.extra.param.key.form_is_theme': true,
+    'ohos.extra.param.key.form_location': 0,
+    'ohos.extra.param.key.module_name': 'entry',
+    'ohos.extra.param.key.form_name': 'widget',
+    'themeFormId': '0',
+    'themeId': '2181824853'
+  };
+  let want: Want = {
+    'bundleName': 'com.huawei.hmsapp.thememanager',
+    'abilityName': 'ThemeFaCardUIExtAbility',
+    'parameters': wantParams
+  }
+  formHost.addForm(want).then((data: formInfo.RunningFormInfo) => {
+    console.info(`formHost addForm, formId: ${data.formId}`);
+  }).catch((error) => {
+    console.error(`formHost addForm error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, ${error.code}, message: ${error.message}`);
+}
+```
 

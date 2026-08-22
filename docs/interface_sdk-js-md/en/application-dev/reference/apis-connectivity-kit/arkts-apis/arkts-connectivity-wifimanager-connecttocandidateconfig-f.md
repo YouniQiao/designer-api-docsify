@@ -99,3 +99,7 @@ Connect to the specified candidate hotspot using connect settings.
 | [2501006](../errorcode-wifi.md#2501006-connection-request-rejected) | The user refused the action. |
 | [2501007](../errorcode-wifi.md#2501007-parameter-verification-failed) | Parameter validation failed. |
 
+**Examples**
+
+See [connectToCandidateConfig](#connecttocandidateconfig)
+

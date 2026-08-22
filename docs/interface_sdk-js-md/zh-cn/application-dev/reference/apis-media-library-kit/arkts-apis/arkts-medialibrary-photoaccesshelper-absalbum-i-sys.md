@@ -53,6 +53,30 @@ getSharedPhotoAssets(options: FetchOptions): Array<SharedPhotoAsset>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
+**示例**
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData'
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+
+  try {
+    console.info('getSharedPhotoAssets test start');
+    phAccessHelper.getSharedPhotoAssets(fetchOptions);
+    console.info('getSharedPhotoAssets test end');
+  } catch (err) {
+    console.error(`getSharedPhotoAssets failed, error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
 ## coverUriSource
 
 ```TypeScript

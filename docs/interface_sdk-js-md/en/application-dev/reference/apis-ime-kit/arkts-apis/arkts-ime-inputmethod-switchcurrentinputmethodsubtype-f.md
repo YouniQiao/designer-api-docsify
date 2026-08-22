@@ -46,7 +46,7 @@ function switchCurrentInputMethodSubtype(target: InputMethodSubtype, callback: A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | Yes | Target input method subtype. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -83,6 +83,31 @@ inputMethod.switchCurrentInputMethodSubtype({
   } else {
     console.error('Failed to switchCurrentInputMethodSubtype');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let extra: Record<string, string> = {}
+inputMethod.switchCurrentInputMethodSubtype({
+  id: "ServiceExtAbility",
+  label: "",
+  name: "com.example.keyboard",
+  mode: "upper",
+  locale: "",
+  language: "",
+  icon: "",
+  iconId: 0,
+  extra: extra
+}).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in switching currentInputMethodSubtype.');
+  } else {
+    console.error('Failed to switchCurrentInputMethodSubtype.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to switchCurrentInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -140,28 +165,5 @@ function switchCurrentInputMethodSubtype(target: InputMethodSubtype): Promise<bo
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let extra: Record<string, string> = {}
-inputMethod.switchCurrentInputMethodSubtype({
-  id: "ServiceExtAbility",
-  label: "",
-  name: "com.example.keyboard",
-  mode: "upper",
-  locale: "",
-  language: "",
-  icon: "",
-  iconId: 0,
-  extra: extra
-}).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in switching currentInputMethodSubtype.');
-  } else {
-    console.error('Failed to switchCurrentInputMethodSubtype.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to switchCurrentInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [switchCurrentInputMethodSubtype](#switchcurrentinputmethodsubtype)
 

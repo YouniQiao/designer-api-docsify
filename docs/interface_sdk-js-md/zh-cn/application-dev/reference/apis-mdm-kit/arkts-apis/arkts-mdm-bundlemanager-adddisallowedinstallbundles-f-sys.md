@@ -34,7 +34,7 @@ function addDisallowedInstallBundles(admin: Want, appIds: Array<string>, callbac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | appIds | Array&lt;string&gt; | 是 | 应用ID数组。<br/>**说明：** 从API version 21版本开始，支持传入应用的 [appId](../../../quick-start/common-problem-of-application.md#什么是appid)和 [appIdentifier](../../../quick-start/common-problem-of-application.md#什么是appidentifier)，推荐使用 [appIdentifier](../../../quick-start/common-problem-of-application.md#什么是appidentifier)。API version 20及之前版本，仅支 持[appId](../../../quick-start/common-problem-of-application.md#什么是appid)。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为null，否则为错误对象。 |
 
@@ -71,6 +71,47 @@ bundleManager.addDisallowedInstallBundles(wantTemp, appIds, (err) => {
 });
 ```
 
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// 需根据实际情况进行替换
+let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
+
+bundleManager.addDisallowedInstallBundles(wantTemp, appIds, 100, (err) => {
+  if (err) {
+    console.error(`Failed to add disallowed install bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in adding disallowed install bundles');
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// 需根据实际情况进行替换
+let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
+
+bundleManager.addDisallowedInstallBundles(wantTemp, appIds, 100).then(() => {
+  console.info('Succeeded in adding disallowed install bundles');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to add disallowed install bundles. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## addDisallowedInstallBundles
 
@@ -100,7 +141,7 @@ function addDisallowedInstallBundles(admin: Want, appIds: Array<string>, userId:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | appIds | Array&lt;string&gt; | 是 | 应用ID数组。<br/>**说明：** 从API version 21版本开始，支持传入应用的 [appId](../../../quick-start/common-problem-of-application.md#什么是appid)和 [appIdentifier](../../../quick-start/common-problem-of-application.md#什么是appidentifier)，推荐使用 [appIdentifier](../../../quick-start/common-problem-of-application.md#什么是appidentifier)。API version 20及之前版本，仅支 持[appId](../../../quick-start/common-problem-of-application.md#什么是appid)。 |
 | userId | number | 是 | 用户ID，指定具体用户。取值范围：大于等于0。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err为null，否则为错误对象。 |
@@ -117,26 +158,7 @@ function addDisallowedInstallBundles(admin: Want, appIds: Array<string>, userId:
 
 **示例**
 
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-bundleManager.addDisallowedInstallBundles(wantTemp, appIds, 100, (err) => {
-  if (err) {
-    console.error(`Failed to add disallowed install bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in adding disallowed install bundles');
-});
-```
+参见 [addDisallowedInstallBundles](#adddisallowedinstallbundles)
 
 
 ## addDisallowedInstallBundles
@@ -167,7 +189,7 @@ function addDisallowedInstallBundles(admin: Want, appIds: Array<string>, userId?
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | appIds | Array&lt;string&gt; | 是 | 应用ID数组。<br/>**说明：** 从API version 21版本开始，支持传入应用的 [appId](../../../quick-start/common-problem-of-application.md#什么是appid)和 [appIdentifier](../../../quick-start/common-problem-of-application.md#什么是appidentifier)，推荐使用 [appIdentifier](../../../quick-start/common-problem-of-application.md#什么是appidentifier)。API version 20及之前版本，仅支 持[appId](../../../quick-start/common-problem-of-application.md#什么是appid)。 |
 | userId | number | 否 | 用户ID，取值范围：大于等于0。 <br> - 调用接口时，若传入userId，表示指定用户。 <br> - 调用接口时，若未传入userId，表示当前用户。 |
 
@@ -189,23 +211,5 @@ function addDisallowedInstallBundles(admin: Want, appIds: Array<string>, userId?
 
 **示例**
 
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-bundleManager.addDisallowedInstallBundles(wantTemp, appIds, 100).then(() => {
-  console.info('Succeeded in adding disallowed install bundles');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to add disallowed install bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [addDisallowedInstallBundles](#adddisallowedinstallbundles)
 

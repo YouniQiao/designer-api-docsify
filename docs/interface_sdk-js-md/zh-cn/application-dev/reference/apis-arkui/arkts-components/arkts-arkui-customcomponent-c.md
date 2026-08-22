@@ -48,6 +48,192 @@ aboutToReuse?(params: Record<string, Object | undefined | null>): void
 | --- | --- | --- | --- |
 | params | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object \| undefined \| null&gt; | 是 | 自定义组件的构造参数。其中key为复用时外部传入的组件成员变量名，value为复用时外部传入的对应参数 值。<br>**起始版本：** 20 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+export class Message {
+  value: string | undefined;
+
+  constructor(value: string) {
+    this.value = value;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  @State isShown: boolean = true;
+
+  build() {
+    Column() {
+      // 点击Button切换isShown，控制Child从组件树移除或重新加入
+      Button('Hello World')
+        .fontSize(50)
+        .fontWeight(FontWeight.Bold)
+        .onClick(() => {
+          this.isShown = !this.isShown;
+        })
+      if (this.isShown) {
+        Child({ message: new Message('Child') })
+      }
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+
+@Reusable
+@Component
+struct Child {
+  @State message: Message = new Message('AboutToReuse');
+
+  aboutToReuse(params: Record<string, ESObject>) {
+    console.info('Reuse Child');
+    this.message = params.message as Message;
+  }
+
+  build() {
+    Column() {
+      Text(this.message.value)
+        .fontSize(20)
+    }
+    .borderWidth(2)
+    .height(100)
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+import { Entry, Column, Button, Component, Reusable, ClickEvent, Text, ReuseObject } from "@ohos.arkui.component"
+import { State } from "@ohos.arkui.stateManagement"
+import hilog from '@ohos.hilog'
+
+export class Message {
+  value: string | undefined;
+
+  constructor(value: string) {
+    this.value = value
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  @State isSwitch: boolean = true
+
+  build() {
+    Column() {
+      Button('Hello World')
+        .fontSize(50)
+        .onClick(() => {
+          this.isSwitch = !this.isSwitch
+        })
+      if (this.isSwitch) {
+        Child({ message: new Message('Child1') })
+      } else {
+        Child({ message: new Message('Child2') })
+      }
+    }
+    .height("100%")
+    .width('100%')
+  }
+}
+
+@Reusable
+@Component
+struct Child {
+  @State message: Message = new Message('AboutToReuse');
+
+  aboutToReuse(params: ReuseObject) {
+    if (params.has('message')) {
+      this.message = params['message'] as Message
+    }
+  }
+
+  build() {
+    Column() {
+      Text(this.message.value)
+        .fontSize(20)
+    }
+    .borderWidth(2)
+    .height(100)
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+@Entry
+@ComponentV2
+struct Index {
+  @Local condition: boolean = true;
+  build() {
+    Column() {
+      Button('回收/复用')
+        .onClick(() => {
+          this.condition = !this.condition;
+        }) // 点击切换回收/复用状态
+      if (this.condition) {
+        ReusableV2Component()
+      }
+    }
+  }
+}
+@ReusableV2
+@ComponentV2
+struct ReusableV2Component {
+  @Local message: string = 'Hello World';
+  aboutToReuse() {
+    console.info('ReusableV2Component aboutToReuse'); // 复用时被调用
+  }
+  build() {
+    Column() {
+      Text(this.message)
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { Entry, Column, Button, ComponentV2, ReusableV2, Text, Local } from '@kit.ArkUI';
+@Entry
+@ComponentV2
+struct Index {
+  @Local condition: boolean = true;
+  build() {
+    Column() {
+      Button('回收/复用').onClick(()=>{this.condition=!this.condition;}) // 点击切换回收/复用状态
+      if (this.condition) {
+        ReusableV2Component()
+      }
+    }
+  }
+}
+@ReusableV2
+@ComponentV2
+struct ReusableV2Component {
+  @Local message: string = 'Hello World';
+  aboutToReuse() {
+    console.info('ReusableV2Component aboutToReuse'); // 复用时被调用
+  }
+  build() {
+    Column() {
+      Text(this.message)
+    }
+  }
+}
+```
+
 ## onLayout
 
 ```TypeScript

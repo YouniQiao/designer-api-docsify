@@ -14,7 +14,7 @@
 
 | Name | Description |
 | --- | --- |
-| [Equivalent](arkts-arkui-equivalent-t.md) | Determine whether two values are equal. |
 | [__memo_context_type](arkts-arkui-memocontexttype-t.md) | Define StateContext alias. |
 | [__memo_id_type](arkts-arkui-memoidtype-t.md) | Define int alias. |
+| [Equivalent](arkts-arkui-equivalent-t.md) | Determine whether two values are equal. |
 

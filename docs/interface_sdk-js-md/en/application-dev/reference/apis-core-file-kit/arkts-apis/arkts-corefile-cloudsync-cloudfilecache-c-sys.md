@@ -98,6 +98,24 @@ A constructor used to create a CloudFileCache object.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 
+**Examples**
+
+```TypeScript
+let fileSync = new cloudSync.FileSync()
+```
+
+```TypeScript
+let gallerySync = new cloudSync.GallerySync()
+```
+
+```TypeScript
+let download = new cloudSync.Download()
+```
+
+```TypeScript
+let fileSync = new cloudSync.FileSync("com.ohos.demo")
+```
+
 ## getDownloadList
 
 ```TypeScript

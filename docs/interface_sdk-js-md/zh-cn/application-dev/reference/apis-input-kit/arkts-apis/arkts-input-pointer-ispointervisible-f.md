@@ -97,29 +97,6 @@ struct Index {
 }
 ```
 
-
-## isPointerVisible
-
-```TypeScript
-function isPointerVisible(): Promise<boolean>
-```
-
-获取鼠标光标显示状态，使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-pointer-function isPointerVisible(): Promise<boolean>--><!--Device-pointer-function isPointerVisible(): Promise<boolean>-End-->
-
-**系统能力：** SystemCapability.MultimodalInput.Input.Pointer
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示鼠标光标为显示状态；返回false表示鼠标光标为隐藏状态。 |
-
-**示例**
-
 ArkTS-Dyn示例:
 
 ```TypeScript
@@ -178,4 +155,29 @@ struct Index {
   }
 }
 ```
+
+
+## isPointerVisible
+
+```TypeScript
+function isPointerVisible(): Promise<boolean>
+```
+
+获取鼠标光标显示状态，使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-pointer-function isPointerVisible(): Promise<boolean>--><!--Device-pointer-function isPointerVisible(): Promise<boolean>-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Pointer
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示鼠标光标为显示状态；返回false表示鼠标光标为隐藏状态。 |
+
+**示例**
+
+参见 [isPointerVisible](#ispointervisible)
 

@@ -26,7 +26,7 @@ Checks whether the screen is currently locked.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | the callback of isScreenLocked. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of isScreenLocked. |
 
 **Examples**
 
@@ -39,6 +39,16 @@ screenLock.isScreenLocked((err: BusinessError, data: Boolean)=>{
     return;    
   }
   console.info(`Succeeded in Obtaining whether the screen is locked. result: ${data}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+screenLock.isScreenLocked().then((data: Boolean) => {
+  console.info(`Succeeded in Obtaining whether the screen is locked. result: ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain whether the screen is locked, Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -67,13 +77,5 @@ Checks whether the screen is currently locked.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-screenLock.isScreenLocked().then((data: Boolean) => {
-  console.info(`Succeeded in Obtaining whether the screen is locked. result: ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain whether the screen is locked, Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [isScreenLocked](#isscreenlocked)
 

@@ -25,7 +25,7 @@ Obtains the network search mode of the SIM card in a specified slot.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NetworkSelectionMode](arkts-telephony-radio-networkselectionmode-e.md)&gt; | Yes | Indicates the callback for getting the network search mode of the SIM card. Available values are as follows: &lt;ul&gt; &lt;li&gt;[NETWORK_SELECTION_UNKNOWN](arkts-telephony-radio-networkselectionmode-e.md#network_selection_unknown) &lt;li&gt;[NETWORK_SELECTION_AUTOMATIC](arkts-telephony-radio-networkselectionmode-e.md#network_selection_automatic) &lt;li&gt;[NETWORK_SELECTION_MANUAL](arkts-telephony-radio-networkselectionmode-e.md#network_selection_manual) &lt;ul&gt; |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetworkSelectionMode](arkts-telephony-radio-networkselectionmode-e.md)&gt; | Yes | Indicates the callback for getting the network search mode of the SIM card. Available values are as follows: &lt;ul&gt; &lt;li&gt;[NETWORK_SELECTION_UNKNOWN](arkts-telephony-radio-networkselectionmode-e.md#network_selection_unknown) &lt;li&gt;[NETWORK_SELECTION_AUTOMATIC](arkts-telephony-radio-networkselectionmode-e.md#network_selection_automatic) &lt;li&gt;[NETWORK_SELECTION_MANUAL](arkts-telephony-radio-networkselectionmode-e.md#network_selection_manual) &lt;ul&gt; |
 
 **Error codes:**
 
@@ -49,6 +49,17 @@ radio.getNetworkSelectionMode(slotId, (err: BusinessError, data: radio.NetworkSe
         return;
     }
     console.info(`getNetworkSelectionMode success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.getNetworkSelectionMode(slotId).then((data: radio.NetworkSelectionMode) => {
+    console.info(`getNetworkSelectionMode success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getNetworkSelectionMode failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -91,14 +102,5 @@ Obtains the network search mode of the SIM card in a specified slot.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getNetworkSelectionMode(slotId).then((data: radio.NetworkSelectionMode) => {
-    console.info(`getNetworkSelectionMode success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getNetworkSelectionMode failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getNetworkSelectionMode](#getnetworkselectionmode)
 

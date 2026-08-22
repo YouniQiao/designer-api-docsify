@@ -232,3 +232,23 @@ Animation configuration when showing window
 
 **System API:** This is a system API.
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let windowClass: window.Window | undefined = undefined;
+let config: window.Configuration = {
+  name: "systemTypeWindow",
+  windowType: window.WindowType.TYPE_PANEL, // Select a system window type as required.
+  ctx: this.context
+};
+let promise = window.createWindow(config);
+promise.then((data) => {
+  windowClass = data;
+  console.info('Succeeded in creating the window. Data:' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create the Window. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+

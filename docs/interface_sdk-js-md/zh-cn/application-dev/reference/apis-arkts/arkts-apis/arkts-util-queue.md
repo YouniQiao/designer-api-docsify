@@ -13,7 +13,7 @@ import { QueueForEachCb } from '@kit.ArkTS';
 
 | 名称 | 说明 |
 | --- | --- |
-| [Queue](arkts-arkts-utilqueue-queue-c.md) | Queue遵循先进先出原则：在尾部增加元素，在头部删除元素。Queue基于循环队列的数据结构实现。 |
+| [Queue](arkts-arkts-util-queue-queue-c.md) | Queue遵循先进先出原则：在尾部增加元素，在头部删除元素。Queue基于循环队列的数据结构实现。 |
 
 ### 类型
 

@@ -72,6 +72,33 @@ let groupName: string = 'GroupName';
 notificationManager.cancelGroup(groupName, cancelGroupCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let groupName: string = 'GroupName';
+notificationManager.cancelGroup(groupName).then(() => {
+  console.info(`Succeeded in canceling group.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to cancel group. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let groupName: string = 'GroupName';
+notificationManager.cancelGroup(groupName).then(() => {
+  console.info(`Succeeded in canceling group.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to cancel group. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## cancelGroup
 
@@ -112,30 +139,5 @@ function cancelGroup(groupName: string): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let groupName: string = 'GroupName';
-notificationManager.cancelGroup(groupName).then(() => {
-  console.info(`Succeeded in canceling group.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to cancel group. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let groupName: string = 'GroupName';
-notificationManager.cancelGroup(groupName).then(() => {
-  console.info(`Succeeded in canceling group.`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to cancel group. Code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [cancelGroup](#cancelgroup)
 

@@ -1,6 +1,6 @@
 # FormExtensionContext
 
-FormExtensionContext模块是[FormExtensionAbility](arkts-form-appformformextensionability-formextensionability-c.md)的上下文环境，继承自 [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。
+FormExtensionContext模块是[FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md)的上下文环境，继承自 [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。
 
 FormExtensionContext模块提供FormExtensionAbility具有的接口和能力。
 
@@ -34,7 +34,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | Want类型参数，传入需要启动的ability的信息，如Ability名称，Bundle名称等。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Want类型参数，传入需要启动的ability的信息，如Ability名称，Bundle名称等。 |
 | options | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-connectoptions-i.md) | 是 | ConnectOptions类型的回调函数，返回服务连接成功、断开或连接失败后的信息。 |
 
 **返回值：**
@@ -263,46 +263,6 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 }
 ```
 
-## disconnectServiceExtensionAbility
-
-```TypeScript
-disconnectServiceExtensionAbility(connection: long): Promise<void>
-```
-
-将一个Ability与绑定的服务类型的Ability解绑，断开连接之后需要将连接成功时返回的remote对象置空(Promise形式返回结果)。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-FormExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>--><!--Device-FormExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Ability.Form
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| connection | long | 是 | 在 [connectServiceExtensionAbility](#connectserviceextensionability)中返回的number。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -378,6 +338,48 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 }
 ```
 
+## disconnectServiceExtensionAbility
+
+```TypeScript
+disconnectServiceExtensionAbility(connection: long): Promise<void>
+```
+
+将一个Ability与绑定的服务类型的Ability解绑，断开连接之后需要将连接成功时返回的remote对象置空(Promise形式返回结果)。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FormExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>--><!--Device-FormExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.Form
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| connection | long | 是 | 在 [connectServiceExtensionAbility](#connectserviceextensionability)中返回的number。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
+
+**示例**
+
+参见 [disconnectServiceExtensionAbility](#disconnectserviceextensionability)
+
 ## startAbility
 
 ```TypeScript
@@ -400,7 +402,7 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 包含bundleName，abilityName以及用户自定义参数用于拉起Ability。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 包含bundleName，abilityName以及用户自定义参数用于拉起Ability。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当拉起一个应用的Ability成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -478,49 +480,6 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 }
 ```
 
-## startAbility
-
-```TypeScript
-startAbility(want: Want): Promise<void>
-```
-
-拉起一个应用的Ability。使用Promise异步回调。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-FormExtensionContext-startAbility(want: Want): Promise<void>--><!--Device-FormExtensionContext-startAbility(want: Want): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Ability.Form
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 包含bundleName，abilityName以及用户自定义参数用于拉起Ability。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16500050](../errorcode-form.md#16500050-进程间通信失败) | An IPC connection error happened. |
-| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
-| 16500101 | The application is not a system application.<br>**适用版本：** 9 - 11 |
-| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -578,4 +537,49 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
   }
 }
 ```
+
+## startAbility
+
+```TypeScript
+startAbility(want: Want): Promise<void>
+```
+
+拉起一个应用的Ability。使用Promise异步回调。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FormExtensionContext-startAbility(want: Want): Promise<void>--><!--Device-FormExtensionContext-startAbility(want: Want): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.Form
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 包含bundleName，abilityName以及用户自定义参数用于拉起Ability。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16500050](../errorcode-form.md#16500050-进程间通信失败) | An IPC connection error happened. |
+| [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
+| 16500101 | The application is not a system application.<br>**适用版本：** 9 - 11 |
+| [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+
+**示例**
+
+参见 [startAbility](#startability)
 

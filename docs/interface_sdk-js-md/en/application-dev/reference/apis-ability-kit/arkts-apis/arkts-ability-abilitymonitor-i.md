@@ -1,6 +1,6 @@
 # AbilityMonitor
 
-The module provides the capability of listening for lifecycle state changes of a specified [UIAbility](arkts-ability-appabilityuiability-uiability-c.md). You can use AbilityMonitor as an input parameter of [abilityDelegator.addAbilityMonitor](arkts-ability-abilitydelegator-i.md#addabilitymonitor) to register a listener.
+The module provides the capability of listening for lifecycle state changes of a specified [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md). You can use AbilityMonitor as an input parameter of [abilityDelegator.addAbilityMonitor](arkts-ability-abilitydelegator-i.md#addabilitymonitor) to register a listener.
 
 **Since:** 23
 
@@ -169,4 +169,29 @@ Callback invoked when the page stack is restored for the target UIAbility during
 <!--Device-AbilityMonitor-onWindowStageRestore?: (ability: UIAbility) => void--><!--Device-AbilityMonitor-onWindowStageRestore?: (ability: UIAbility) => void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function onAbilityCreateCallback(data: UIAbility) {
+  console.info(`onAbilityCreateCallback, data: ${JSON.stringify(data)}`);
+}
+
+let monitor: abilityDelegatorRegistry.AbilityMonitor = {
+  abilityName: 'abilityname',
+  moduleName: "moduleName",
+  onAbilityCreate: onAbilityCreateCallback
+}
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.addAbilityMonitor(monitor, (error: BusinessError) => {
+  if (error) {
+    console.error(`addAbilityMonitor fail, error: ${JSON.stringify(error)}`);
+  }
+});
+```
 

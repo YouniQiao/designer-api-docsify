@@ -60,6 +60,29 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          // 获取输入设备ID列表
+          inputDevice.getDeviceIds().then((ids: Array<number>) => {
+            console.info(`Succeeded in getting device id list: ${JSON.stringify(ids)}.`);
+          }).catch((error: BusinessError) => {
+            console.error(`Failed to get device id list, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          })
+        })
+    }
+  }
+}
+```
+
 
 ## getDeviceIds
 
@@ -89,26 +112,5 @@ function getDeviceIds(): Promise<Array<number>>
 
 **示例**
 
-```TypeScript
-import { inputDevice } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          // 获取输入设备ID列表
-          inputDevice.getDeviceIds().then((ids: Array<number>) => {
-            console.info(`Succeeded in getting device id list: ${JSON.stringify(ids)}.`);
-          }).catch((error: BusinessError) => {
-            console.error(`Failed to get device id list, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          })
-        })
-    }
-  }
-}
-```
+参见 [getDeviceIds](#getdeviceids)
 

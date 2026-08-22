@@ -42,3 +42,20 @@ Obtains the path of the configuration file with the highest priority based on th
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3.Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let relpath: string = 'etc/config.xml';
+  let extra: string = 'etc/carrier/${telephony.sim.opkey0}';
+  let result: string = configPolicy.getOneCfgFileSync(relpath, configPolicy.FollowXMode.USER_DEFINED, extra);
+  console.info('result is ' + result);
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error('error:' + code + ', ' + message);
+}
+```
+

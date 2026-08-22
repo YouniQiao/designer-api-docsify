@@ -27,8 +27,8 @@
 | [CaretStyle](arkts-arkui-caretstyle-i.md) | Defines the cursor style. |
 | [DecorationStyleResult](arkts-arkui-decorationstyleresult-i.md) | Provides the text decoration information returned by the backend. |
 | [DeleteValue](arkts-arkui-deletevalue-i.md) | Provides an interface for deleting value from text. |
-| [EditMenuOptions](arkts-arkui-editmenuoptions-i.md) | EditMenuOptions |
 | [EditableTextChangeValue](arkts-arkui-editabletextchangevalue-i.md) | Provides detailed information of text changes, including preview text. |
+| [EditMenuOptions](arkts-arkui-editmenuoptions-i.md) | EditMenuOptions |
 | [FontConfigs](arkts-arkui-fontconfigs-i.md) | Defines font configurations. |
 | [FontSettingOptions](arkts-arkui-fontsettingoptions-i.md) | Defines font setting options. |
 | [FontWeightConfigs](arkts-arkui-fontweightconfigs-i.md) | Defines font weight configurations. When the configuration object (including an empty object **{}**) is passed, the default values are used for properties that are not explicitly set. When **null** or **undefined** is passed, default values are not applied, and the font weight behavior is consistent with that of the parent component text. |
@@ -41,8 +41,8 @@
 | [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) | Describes the position and affinity of a glyph. |
 | [PreviewText](arkts-arkui-previewtext-i.md) | Preview text. |
 | [SelectedDragPreviewStyle](arkts-arkui-selecteddragpreviewstyle-i.md) | Defines the drag preview style for selected text. |
-| [StyledStringChangeValue](arkts-arkui-styledstringchangevalue-i.md) | Describes the text changes of the styled string. |
 | [StyledStringChangedListener](arkts-arkui-styledstringchangedlistener-i.md) | Defines the listener for changes of the styled string text content. |
+| [StyledStringChangeValue](arkts-arkui-styledstringchangevalue-i.md) | Describes the text changes of the styled string. |
 | [StyledStringController](arkts-arkui-styledstringcontroller-i.md) | Defines a styled string controller. |
 | [TextBaseController](arkts-arkui-textbasecontroller-i.md) | Defines a text selection controller. |
 | [TextChangeOptions](arkts-arkui-textchangeoptions-i.md) | Provides information about the text before and after a change, including the selection ranges. |

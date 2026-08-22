@@ -99,55 +99,6 @@ async function ExampleFunction() {
 }
 ```
 
-
-## openDLPFile
-
-```TypeScript
-function openDLPFile(ciphertextFd: number, appId: string, callback: AsyncCallback<DLPFile>): void
-```
-
-Opens a DLP file. This API uses an asynchronous callback to return the result. After the API is successfully called, the **DLPFile** object is returned, which can be used to manage the permissions on the DLP file and perform related operations. After using the **DLPFile** object, call **closeDLPFile** to close the object to prevent resource leakage.
-
-**Since:** 11
-
-**Required permissions:** ohos.permission.ACCESS_DLP_FILE
-
-<!--Device-dlpPermission-function openDLPFile(ciphertextFd: number, appId: string, callback: AsyncCallback<DLPFile>): void--><!--Device-dlpPermission-function openDLPFile(ciphertextFd: number, appId: string, callback: AsyncCallback<DLPFile>): void-End-->
-
-**System capability:** SystemCapability.Security.DataLossPrevention
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| ciphertextFd | number | Yes | FD of the encrypted file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
-| appId | string | Yes | ID of the caller. The value contains 8 to 1024 bytes. If the value is out of range, error code 401 is thrown. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md)&gt; | Yes | Callback used to receive the result of opening a DLP file. The callback parameters include **err** and **res**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. **res** is a **DLPFile** object that represents the DLP file opened. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
-| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
-| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
-| [19100005](../errorcode-dlp.md#19100005-credential-authentication-server-error) | Credential authentication server error. |
-| [19100008](../errorcode-dlp.md#19100008-non-dlp-file) | The file is not a DLP file. |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-| [19100018](../errorcode-dlp.md#19100018-application-unauthorized) | The application is not authorized. |
-| [19100019](../errorcode-dlp.md#19100019-dlp-file-has-expired) | The DLP file has expired. |
-| [19100020](../errorcode-dlp.md#19100020-network-disconnected) | No network connection. |
-
-**Examples**
-
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
@@ -187,4 +138,55 @@ try {
   }
 }
 ```
+
+
+## openDLPFile
+
+```TypeScript
+function openDLPFile(ciphertextFd: number, appId: string, callback: AsyncCallback<DLPFile>): void
+```
+
+Opens a DLP file. This API uses an asynchronous callback to return the result. After the API is successfully called, the **DLPFile** object is returned, which can be used to manage the permissions on the DLP file and perform related operations. After using the **DLPFile** object, call **closeDLPFile** to close the object to prevent resource leakage.
+
+**Since:** 11
+
+**Required permissions:** ohos.permission.ACCESS_DLP_FILE
+
+<!--Device-dlpPermission-function openDLPFile(ciphertextFd: number, appId: string, callback: AsyncCallback<DLPFile>): void--><!--Device-dlpPermission-function openDLPFile(ciphertextFd: number, appId: string, callback: AsyncCallback<DLPFile>): void-End-->
+
+**System capability:** SystemCapability.Security.DataLossPrevention
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ciphertextFd | number | Yes | FD of the encrypted file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
+| appId | string | Yes | ID of the caller. The value contains 8 to 1024 bytes. If the value is out of range, error code 401 is thrown. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md)&gt; | Yes | Callback used to receive the result of opening a DLP file. The callback parameters include **err** and **res**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. **res** is a **DLPFile** object that represents the DLP file opened. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
+| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
+| [19100005](../errorcode-dlp.md#19100005-credential-authentication-server-error) | Credential authentication server error. |
+| [19100008](../errorcode-dlp.md#19100008-non-dlp-file) | The file is not a DLP file. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [19100018](../errorcode-dlp.md#19100018-application-unauthorized) | The application is not authorized. |
+| [19100019](../errorcode-dlp.md#19100019-dlp-file-has-expired) | The DLP file has expired. |
+| [19100020](../errorcode-dlp.md#19100020-network-disconnected) | No network connection. |
+
+**Examples**
+
+See [openDLPFile](#opendlpfile)
 

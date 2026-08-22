@@ -55,6 +55,90 @@ Adds an interceptor to the HTTP client.
 | 2300802 | Duplicated interceptor type in the chain. |
 | [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
 
+**Examples**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+// Create an authentication interceptor.
+class AuthInterceptor implements http.HttpInterceptor {
+  interceptorType: http.InterceptorType = http.InterceptorType.INITIAL_REQUEST;
+
+  async interceptorHandle(reqContext: http.HttpRequestContext, rspContext: http.HttpResponse): Promise<http.ChainContinue> {
+    // Add the authentication header in the initial request phase.
+    reqContext.header['Authorization'] = 'Bearer token';
+    console.info('Interceptor: Added authorization header');
+    return true; // Continue to process the interceptor chain.
+  }
+}
+
+class LoggingInterceptor implements http.HttpInterceptor {
+  interceptorType: http.InterceptorType = http.InterceptorType.FINAL_RESPONSE;
+
+  async interceptorHandle(reqContext: http.HttpRequestContext, rspContext: http.HttpResponse): Promise<http.ChainContinue> {
+    // Record logs in the final response phase.
+    console.info(`LoggingInterceptor: Request to ${reqContext.url} completed with status ${rspContext.responseCode}`);
+    return true; // Continue to process the interceptor chain.
+  }
+}
+
+// Create an interceptor chain and apply the interceptor chain to the request.
+let interceptorChain = new http.HttpInterceptorChain();
+let authInterceptor = new AuthInterceptor();
+let loggingInterceptor = new LoggingInterceptor();
+
+// Add the interceptor to the chain.
+try {
+  let success = interceptorChain.addChain([authInterceptor, loggingInterceptor]);
+  if (!success) {
+    console.error('Failed to add interceptor chain');
+  }
+} catch (e) {
+  console.error(`Interceptor chain add failed: code=${e.code}, message=${e.message}`);
+}
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+// Create an authentication interceptor.
+class AuthInterceptor implements http.HttpInterceptor {
+  interceptorType: http.InterceptorType = http.InterceptorType.INITIAL_REQUEST;
+
+  async interceptorHandle(reqContext: http.HttpRequestContext, rspContext: http.HttpResponse): Promise<http.ChainContinue> {
+    // Add the authentication header in the initial request phase.
+    reqContext.header['Authorization'] = 'Bearer token';
+    console.info('Interceptor: Added authorization header');
+    return true; // Continue to process the interceptor chain.
+  }
+}
+
+class LoggingInterceptor implements http.HttpInterceptor {
+  interceptorType: http.InterceptorType = http.InterceptorType.FINAL_RESPONSE;
+
+  async interceptorHandle(reqContext: http.HttpRequestContext, rspContext: http.HttpResponse): Promise<http.ChainContinue> {
+    // Record logs in the final response phase.
+    console.info(`LoggingInterceptor: Request to ${reqContext.url} completed with status ${rspContext.responseCode}`);
+    return true; // Continue to process the interceptor chain.
+  }
+}
+
+// Create an interceptor chain and apply the interceptor chain to the request.
+let interceptorChain = new http.HttpInterceptorChain();
+let authInterceptor = new AuthInterceptor();
+let loggingInterceptor = new LoggingInterceptor();
+
+// Add the interceptor to the chain.
+try {
+  let success = interceptorChain.addChain([authInterceptor, loggingInterceptor]);
+  if (!success) {
+    console.error('Failed to add interceptor chain');
+  }
+} catch (e) {
+  console.error(`Interceptor chain add failed: code=${e.code}, message=${e.message}`);
+}
+```
+
 ## apply
 
 ```TypeScript
@@ -105,6 +189,134 @@ Adds an interceptor chain to the target HTTP request. Each HTTP request instance
 | 2300801 | Parameter type not supported by the interceptor. |
 | [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
 
+**Examples**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+// Create an authentication interceptor.
+class AuthInterceptor implements http.HttpInterceptor {
+  interceptorType: http.InterceptorType = http.InterceptorType.INITIAL_REQUEST;
+
+  async interceptorHandle(reqContext: http.HttpRequestContext, rspContext: http.HttpResponse): Promise<http.ChainContinue> {
+    // Add the authentication header in the initial request phase.
+    reqContext.header['Authorization'] = 'Bearer token';
+    console.info('Interceptor: Added authorization header');
+    return true; // Continue to process the interceptor chain.
+  }
+}
+
+class LoggingInterceptor implements http.HttpInterceptor {
+  interceptorType: http.InterceptorType = http.InterceptorType.FINAL_RESPONSE;
+
+  async interceptorHandle(reqContext: http.HttpRequestContext, rspContext: http.HttpResponse): Promise<http.ChainContinue> {
+    // Record logs in the final response phase.
+    console.info(`LoggingInterceptor: Request to ${reqContext.url} completed with status ${rspContext.responseCode}`);
+    return true; // Continue to process the interceptor chain.
+  }
+}
+
+// Create an interceptor chain.
+let interceptorChain = new http.HttpInterceptorChain();
+let authInterceptor = new AuthInterceptor();
+let loggingInterceptor = new LoggingInterceptor();
+
+// Create an HTTP request.
+let httpRequest = http.createHttp();
+
+try {
+  // Add the interceptor to the chain.
+  let success = interceptorChain.addChain([authInterceptor, loggingInterceptor]);
+  if (!success) {
+    console.error('Failed to add interceptor chain');
+  }
+
+  // Apply the interceptor chain to the HTTP request.
+  let applySuccess = interceptorChain.apply(httpRequest);
+  if (!applySuccess) {
+    console.error('Failed to apply interceptor chain');
+  }
+} catch (e) {
+  console.error(`Interceptor chain add failed: code=${e.code}, message=${e.message}`);
+}
+
+// Initiate an HTTP request. If interception is required, the request can be initiated only through the request API.
+httpRequest.request("EXAMPLE_URL", {
+  method: http.RequestMethod.GET,
+  header: { 'Content-Type': 'application/json' }
+}, (err: Error, data: http.HttpResponse) => {
+  if (!err) {
+    console.info('Request completed with response code: ' + data.responseCode);
+  } else {
+    console.error('Request failed: ' + JSON.stringify(err));
+  }
+  httpRequest.destroy();
+});
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+// Create an authentication interceptor.
+class AuthInterceptor implements http.HttpInterceptor {
+  interceptorType: http.InterceptorType = http.InterceptorType.INITIAL_REQUEST;
+
+  async interceptorHandle(reqContext: http.HttpRequestContext, rspContext: http.HttpResponse): Promise<http.ChainContinue> {
+    // Add the authentication header in the initial request phase.
+    reqContext.header['Authorization'] = 'Bearer token';
+    console.info('Interceptor: Added authorization header');
+    return true; // Continue to process the interceptor chain.
+  }
+}
+
+class LoggingInterceptor implements http.HttpInterceptor {
+  interceptorType: http.InterceptorType = http.InterceptorType.FINAL_RESPONSE;
+
+  async interceptorHandle(reqContext: http.HttpRequestContext, rspContext: http.HttpResponse): Promise<http.ChainContinue> {
+    // Record logs in the final response phase.
+    console.info(`LoggingInterceptor: Request to ${reqContext.url} completed with status ${rspContext.responseCode}`);
+    return true; // Continue to process the interceptor chain.
+  }
+}
+
+// Create an interceptor chain.
+let interceptorChain = new http.HttpInterceptorChain();
+let authInterceptor = new AuthInterceptor();
+let loggingInterceptor = new LoggingInterceptor();
+
+// Create an HTTP request.
+let httpRequest = http.createHttp();
+
+try {
+  // Add the interceptor to the chain.
+  let success = interceptorChain.addChain([authInterceptor, loggingInterceptor]);
+  if (!success) {
+    console.error('Failed to add interceptor chain');
+  }
+
+  // Apply the interceptor chain to the HTTP request.
+  let applySuccess = interceptorChain.apply(httpRequest);
+  if (!applySuccess) {
+    console.error('Failed to apply interceptor chain');
+  }
+} catch (e) {
+  console.error(`Interceptor chain add failed: code=${e.code}, message=${e.message}`);
+}
+
+// Initiate an HTTP request. If interception is required, the request can be initiated only through the request API.
+httpRequest.request("EXAMPLE_URL", {
+  method: http.RequestMethod.GET,
+  header: { 'Content-Type': 'application/json' }
+}, (err: Error, data: http.HttpResponse) => {
+  if (!err) {
+    console.info('Request completed with response code: ' + data.responseCode);
+  } else {
+    console.error('Request failed: ' + JSON.stringify(err));
+  }
+  httpRequest.destroy();
+});
+```
+
 ## getChain
 
 ```TypeScript
@@ -126,4 +338,88 @@ Obtains all interceptor instances in the current interceptor chain.
 | Type | Description |
 | --- | --- |
 | [HttpInterceptor](arkts-network-http-httpinterceptor-i.md)[] | Returns all interceptor instances added by the [addChain]{ |
+
+**Examples**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+// Create a custom interceptor.
+class CustomInterceptor implements http.HttpInterceptor {
+  interceptorType: http.InterceptorType = http.InterceptorType.INITIAL_REQUEST;
+
+  async interceptorHandle(reqContext: http.HttpRequestContext, rspContext: http.HttpResponse): Promise<http.ChainContinue> {
+    // Add the authentication header in the initial request phase.
+    reqContext.header['Authorization'] = 'Bearer token';
+    console.info('Interceptor: Added authorization header');
+    return true; // Continue to process the interceptor chain.
+  }
+}
+
+// Create an interceptor chain and apply the interceptor chain to the request.
+let interceptorChain = new http.HttpInterceptorChain();
+let customInterceptor = new CustomInterceptor();
+
+// Add the interceptor to the chain.
+try {
+  let success = interceptorChain.addChain([customInterceptor]);
+  if (!success) {
+    console.error('Failed to add interceptor chain');
+  }
+} catch (e) {
+  console.error(`Interceptor chain add failed: code=${e.code}, message=${e.message}`);
+}
+
+// Obtain all interceptors in the current interceptor chain.
+let chain = interceptorChain.getChain();
+console.info(`Current interceptor chain has ${chain.length} interceptors`);
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+// Create a custom interceptor.
+class CustomInterceptor implements http.HttpInterceptor {
+  interceptorType: http.InterceptorType = http.InterceptorType.INITIAL_REQUEST;
+
+  async interceptorHandle(reqContext: http.HttpRequestContext, rspContext: http.HttpResponse): Promise<http.ChainContinue> {
+    // Add the authentication header in the initial request phase.
+    reqContext.header['Authorization'] = 'Bearer token';
+    console.info('Interceptor: Added authorization header');
+    return true; // Continue to process the interceptor chain.
+  }
+}
+
+// Create an interceptor chain and apply the interceptor chain to the request.
+let interceptorChain = new http.HttpInterceptorChain();
+let customInterceptor = new CustomInterceptor();
+
+// Add the interceptor to the chain.
+try {
+  let success = interceptorChain.addChain([customInterceptor]);
+  if (!success) {
+    console.error('Failed to add interceptor chain');
+  }
+} catch (e) {
+  console.error(`Interceptor chain add failed: code=${e.code}, message=${e.message}`);
+}
+
+// Obtain all interceptors in the current interceptor chain.
+let chain = interceptorChain.getChain();
+console.info(`Current interceptor chain has ${chain.length} interceptors`);
+```
+
+**Examples**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let interceptorChain = new http.HttpInterceptorChain();
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let interceptorChain = new http.HttpInterceptorChain();
+```
 

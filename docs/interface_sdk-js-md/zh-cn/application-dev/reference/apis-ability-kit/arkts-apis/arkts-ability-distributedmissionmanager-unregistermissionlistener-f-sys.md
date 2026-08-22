@@ -86,6 +86,40 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { distributedMissionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  distributedMissionManager.unRegisterMissionListener({deviceId: ""}).then(() => {
+    console.info('unRegisterMissionListener finished successfully');
+  }).catch((error: BusinessError) => {
+      console.error(`unRegisterMissionListener failed. Code: ${error.code}, message: ${error.message}`);
+  })
+} catch (error) {
+    console.error('unRegisterMissionListener failed, cause: ' + JSON.stringify(error));
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import distributedMissionManager from '@ohos.distributedMissionManager';
+import { BusinessError } from '@ohos.base';
+let deviceId: distributedMissionManager.MissionDeviceInfo = { deviceId: "" }
+try {
+  distributedMissionManager.unRegisterMissionListener(deviceId).then(() => {
+    console.info('unRegisterMissionListener finished successfully');
+  }).catch((error) => {
+    console.error(`unRegisterMissionListener failed. Code: ${error.code}, message: ${error.message}`);
+  })
+} catch (error) {
+  console.error('unRegisterMissionListener failed, cause: ' + JSON.stringify(error));
+}
+```
+
 
 ## unRegisterMissionListener
 
@@ -128,37 +162,5 @@ function unRegisterMissionListener(parameter: MissionDeviceInfo): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  distributedMissionManager.unRegisterMissionListener({deviceId: ""}).then(() => {
-    console.info('unRegisterMissionListener finished successfully');
-  }).catch((error: BusinessError) => {
-      console.error(`unRegisterMissionListener failed. Code: ${error.code}, message: ${error.message}`);
-  })
-} catch (error) {
-    console.error('unRegisterMissionListener failed, cause: ' + JSON.stringify(error));
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import distributedMissionManager from '@ohos.distributedMissionManager';
-import { BusinessError } from '@ohos.base';
-let deviceId: distributedMissionManager.MissionDeviceInfo = { deviceId: "" }
-try {
-  distributedMissionManager.unRegisterMissionListener(deviceId).then(() => {
-    console.info('unRegisterMissionListener finished successfully');
-  }).catch((error) => {
-    console.error(`unRegisterMissionListener failed. Code: ${error.code}, message: ${error.message}`);
-  })
-} catch (error) {
-  console.error('unRegisterMissionListener failed, cause: ' + JSON.stringify(error));
-}
-```
+参见 [unRegisterMissionListener](#unregistermissionlistener)
 

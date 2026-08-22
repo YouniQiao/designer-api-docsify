@@ -20,3 +20,7 @@ The callback when web engine detects current page is blank or nearly blank.
 | --- | --- | --- | --- |
 | event | [BlankScreenDetectionEventInfo](arkts-web-blankscreendetectioneventinfo-i.md) | Yes | the detection event info. |
 
+**Examples**
+
+For details about the sample code, see [onDetectedBlankScreen](./arkts-basic-components-web-events.md#ondetectedblankscreen22).
+

@@ -29,7 +29,7 @@ Unmounts a volume. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volumeId | string | Yes | Volume ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked when the specified volume is unmounted. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the specified volume is unmounted. |
 
 **Error codes:**
 
@@ -44,6 +44,26 @@ Unmounts a volume. This API uses an asynchronous callback to return the result.
 | 13600005 | Incorrect volume state. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let volumeId: string = "";
+volumeManager.unmount(volumeId).then(() => {
+  // Do something.
+}).catch((error: BusinessError) => {
+  console.error("mount failed");
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let volumeId: string = "";
+volumeManager.unmount(volumeId, (error: BusinessError) => {
+  // Do something.
+});
+```
 
 
 ## unmount
@@ -89,4 +109,8 @@ Unmounts a volume. This API uses a promise to return the result.
 | 13600005 | Incorrect volume state. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
+
+**Examples**
+
+See [unmount](#unmount)
 

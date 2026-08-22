@@ -29,7 +29,7 @@ Obtains the system time zone. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the system time zone. For details, see Supported System Time Zones . |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the system time zone. For details, see Supported System Time Zones . |
 
 **Error codes:**
 
@@ -49,6 +49,21 @@ try {
       return;
     }
     console.info(`Succeeded in getting timezone : ${data}`);
+  });
+} catch(e) {
+  let error = e as BusinessError;
+  console.info(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemTime.getTimezone().then((data: string) => {
+    console.info(`Succeeded in getting timezone: ${data}`);
+  }).catch((error: BusinessError) => {
+    console.info(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
   });
 } catch(e) {
   let error = e as BusinessError;
@@ -89,18 +104,5 @@ Obtains the system time zone. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemTime.getTimezone().then((data: string) => {
-    console.info(`Succeeded in getting timezone: ${data}`);
-  }).catch((error: BusinessError) => {
-    console.info(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.info(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
-}
-```
+See [getTimezone](#gettimezone)
 

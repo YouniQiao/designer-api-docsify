@@ -29,7 +29,7 @@ Clears the router proxy set for widgets. This API uses an asynchronous callback 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | Yes | Array of widget IDs. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the router proxy is cleared, **error** is **undefined**; otherwise, an exception is thrown. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the router proxy is cleared, **error** is **undefined**; otherwise, an exception is thrown. |
 
 **Error codes:**
 
@@ -42,6 +42,40 @@ Clears the router proxy set for widgets. This API uses an asynchronous callback 
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
+
+**Examples**
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let formIds: string[] = ['12400633174999288'];
+  formHost.clearRouterProxy(formIds, (err: BusinessError) => {
+    if (err) {
+      console.error(`formHost clear router proxy error, code: ${err.code}, message: ${err.message}`);
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let formIds: string[] = ['12400633174999288'];
+  formHost.clearRouterProxy(formIds).then(() => {
+    console.info('formHost clear router proxy success');
+  }).catch((err: BusinessError) => {
+    console.error(`formHost clear router proxy error, code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
 
 
 ## clearRouterProxy
@@ -85,4 +119,8 @@ Clears the router proxy set for widgets. This API uses a promise to return the r
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
+
+**Examples**
+
+See [clearRouterProxy](#clearrouterproxy)
 

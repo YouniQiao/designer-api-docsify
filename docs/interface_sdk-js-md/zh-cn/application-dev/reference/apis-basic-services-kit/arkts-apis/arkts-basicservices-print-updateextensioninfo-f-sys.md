@@ -55,6 +55,18 @@ print.updateExtensionInfo(info, (err: BusinessError) => {
 })
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+
+let info : string = 'WIFI_INACTIVE';
+print.updateExtensionInfo(info).then(() => {
+    console.info('update print job state success');
+}).catch((error: BusinessError) => {
+    console.error('update print job state error : ' + JSON.stringify(error));
+})
+```
+
 
 ## updateExtensionInfo
 
@@ -96,15 +108,5 @@ function updateExtensionInfo(info: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let info : string = 'WIFI_INACTIVE';
-print.updateExtensionInfo(info).then(() => {
-    console.info('update print job state success');
-}).catch((error: BusinessError) => {
-    console.error('update print job state error : ' + JSON.stringify(error));
-})
-```
+参见 [updateExtensionInfo](#updateextensioninfo)
 

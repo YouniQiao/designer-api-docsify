@@ -46,3 +46,29 @@ details?: Record<string, string>
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+let text = new unifiedDataChannel.Text();
+text.details = {
+  title: 'MyTitle',
+  content: 'This is content'
+};
+let unifiedData = new unifiedDataChannel.UnifiedData(text);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let text = new unifiedDataChannel.Text();
+let textDetails: Record<string, string> = {
+  "title": 'MyTitle',
+  "content": 'This is content'
+};
+text.details = textDetails;
+console.info(`textDetails: ${JSON.stringify(text.details)}`);
+let unifiedData = new unifiedDataChannel.UnifiedData(text);
+```
+

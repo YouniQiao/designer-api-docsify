@@ -38,6 +38,55 @@ function setOverlayEnabled(moduleName:string, isEnabled: boolean, callback: Asyn
 
 **示例**
 
+ArkTS-Dyn示例:
+
+```TypeScript
+import { overlay } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let moduleName = "feature";
+let isEnabled = false;
+
+try {
+  overlay.setOverlayEnabled(moduleName, isEnabled)
+    .then(() => {
+      console.info('setOverlayEnabled success');
+    }).catch((err: BusinessError) => {
+      console.error('setOverlayEnabled failed due to err code: ' + err.code + ' ' + 'message:' + err.message);
+    });
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error('setOverlayEnabled failed due to err code: ' + code + ' ' + 'message:' + message);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { overlay } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+ 
+// 开发者需根据实际工程更新moduleName。
+let moduleName = "feature";
+let isEnabled = false;
+
+try {
+  overlay.setOverlayEnabled(moduleName, isEnabled)
+    .then(() => {
+      console.info('setOverlayEnabled success');
+    }).catch((err: Error) => {
+      console.error('setOverlayEnabled failed due to err code: ' + (err as BusinessError).code + ' ' + 'message:' + (err as BusinessError).message);
+    });
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error('setOverlayEnabled failed due to err code: ' + code + ' ' + 'message:' + message);
+}
+```
+
 ```TypeScript
 import { overlay } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -98,52 +147,5 @@ function setOverlayEnabled(moduleName:string, isEnabled: boolean): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { overlay } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let moduleName = "feature";
-let isEnabled = false;
-
-try {
-  overlay.setOverlayEnabled(moduleName, isEnabled)
-    .then(() => {
-      console.info('setOverlayEnabled success');
-    }).catch((err: BusinessError) => {
-      console.error('setOverlayEnabled failed due to err code: ' + err.code + ' ' + 'message:' + err.message);
-    });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error('setOverlayEnabled failed due to err code: ' + code + ' ' + 'message:' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { overlay } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
- 
-// 开发者需根据实际工程更新moduleName。
-let moduleName = "feature";
-let isEnabled = false;
-
-try {
-  overlay.setOverlayEnabled(moduleName, isEnabled)
-    .then(() => {
-      console.info('setOverlayEnabled success');
-    }).catch((err: Error) => {
-      console.error('setOverlayEnabled failed due to err code: ' + (err as BusinessError).code + ' ' + 'message:' + (err as BusinessError).message);
-    });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error('setOverlayEnabled failed due to err code: ' + code + ' ' + 'message:' + message);
-}
-```
+参见 [setOverlayEnabled](#setoverlayenabled)
 

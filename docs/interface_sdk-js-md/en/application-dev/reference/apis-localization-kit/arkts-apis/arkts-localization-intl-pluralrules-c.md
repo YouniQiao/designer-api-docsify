@@ -43,8 +43,95 @@ Creates a **PluralRules** object to obtain the singular-plural type of numbers.
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
 
+// The current system locale is used by the default constructor.
+let locale = new intl.Locale();
+// Return the current system locale ID.
+let localeID = locale.toString();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a zh-CN locale object.
+let locale = new intl.Locale('zh-CN');
+let localeID = locale.toString(); // localeID = 'zh-CN'
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a DateTimeFormat object using the current system locale ID.
+let formatter: intl.DateTimeFormat = new intl.DateTimeFormat();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a DateTimeFormat object with locale ID being zh-CN, dateStyle being full, and timeStyle being medium.
+let formatter: intl.DateTimeFormat = new intl.DateTimeFormat('zh-CN', { dateStyle: 'full', timeStyle: 'medium' });
+
+// Create a DateTimeFormat object with a locale ID array. The locale ID ban is invalid and therefore locale ID zh is used.
+formatter = new intl.DateTimeFormat(['ban', 'zh'], { dateStyle: 'full', timeStyle: 'medium' });
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a NumberFormat object using the current system locale ID.
+let formatter: intl.NumberFormat = new intl.NumberFormat();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a NumberFormat object with locale ID being en-GB, style being decimal, and notation being scientific.
+let formatter: intl.NumberFormat = new intl.NumberFormat('en-GB', { style: 'decimal', notation: 'scientific' });
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a Collator object using the current system locale ID.
+let collator = new intl.Collator();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a Collator object with the locale ID being zh-CN, localeMatcher being lookup, and usage being sort.
+let collator = new intl.Collator('zh-CN', {localeMatcher: 'lookup', usage: 'sort'});
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
 // Create a PluralRules object using the current system locale ID.
 let pluralRules = new intl.PluralRules();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a PluralRules object with the locale ID being zh-CN, localeMatcher being lookup, and type being cardinal.
+let pluralRules: intl.PluralRules = new intl.PluralRules('zh-CN', { localeMatcher: 'lookup', type: 'cardinal' });
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a RelativeTimeFormat object using the current system locale ID.
+let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// Create a RelativeTimeFormat object with the locale ID being zh-CN, localeMatcher being lookup, and style being long.
+let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat('zh-CN', {
+  localeMatcher: 'lookup',
+  numeric: 'always',
+  style: 'long'
+});
 ```
 
 ## constructor
@@ -76,12 +163,7 @@ Creates a **PluralRules** object to obtain the singular-plural type of numbers.
 
 **Examples**
 
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a PluralRules object with the locale ID being zh-CN, localeMatcher being lookup, and type being cardinal.
-let pluralRules: intl.PluralRules = new intl.PluralRules('zh-CN', { localeMatcher: 'lookup', type: 'cardinal' });
-```
+See [constructor](#constructor)
 
 ## select
 

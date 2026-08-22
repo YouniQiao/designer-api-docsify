@@ -63,6 +63,48 @@ try {
 }
 ```
 
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+
+let token: number = -1;
+try {
+  continuationManager.startContinuationDeviceManager(
+    token,
+    {
+      deviceType: ["00E"]
+    },
+    (err) => {
+      if (err.code != 0) {
+        console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
+        return;
+      }
+      console.info('startContinuationDeviceManager finished. ');
+  });
+} catch (err) {
+  console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
+}
+```
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let token: number = -1;
+try {
+  continuationManager.startContinuationDeviceManager(
+    token,
+    {
+      deviceType: ["00E"]
+    }).then(() => {
+      console.info('startContinuationDeviceManager finished. ');
+    }).catch((err: BusinessError) => {
+      console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
+    });
+} catch (err) {
+  console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
+}
+```
+
 
 ## startContinuationDeviceManager
 
@@ -109,27 +151,7 @@ function startContinuationDeviceManager(
 
 **示例**
 
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = -1;
-try {
-  continuationManager.startContinuationDeviceManager(
-    token,
-    {
-      deviceType: ["00E"]
-    },
-    (err) => {
-      if (err.code != 0) {
-        console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
-        return;
-      }
-      console.info('startContinuationDeviceManager finished. ');
-  });
-} catch (err) {
-  console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
-}
-```
+参见 [startContinuationDeviceManager](#startcontinuationdevicemanager)
 
 
 ## startContinuationDeviceManager
@@ -178,23 +200,5 @@ function startContinuationDeviceManager(token: number, options?: ContinuationExt
 
 **示例**
 
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = -1;
-try {
-  continuationManager.startContinuationDeviceManager(
-    token,
-    {
-      deviceType: ["00E"]
-    }).then(() => {
-      console.info('startContinuationDeviceManager finished. ');
-    }).catch((err: BusinessError) => {
-      console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
-    });
-} catch (err) {
-  console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
-}
-```
+参见 [startContinuationDeviceManager](#startcontinuationdevicemanager)
 

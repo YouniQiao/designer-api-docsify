@@ -56,6 +56,21 @@ adminManager.isSuperAdmin(bundleName, (err, result) => {
 });
 ```
 
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 需根据实际情况进行替换
+let bundleName: string = 'com.example.myapplication';
+
+adminManager.isSuperAdmin(bundleName).then((result) => {
+  console.info(`Succeeded in querying admin is super admin or not, result : ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query admin is super admin or not. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## isSuperAdmin
 
@@ -96,18 +111,5 @@ function isSuperAdmin(bundleName: String): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 需根据实际情况进行替换
-let bundleName: string = 'com.example.myapplication';
-
-adminManager.isSuperAdmin(bundleName).then((result) => {
-  console.info(`Succeeded in querying admin is super admin or not, result : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query admin is super admin or not. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [isSuperAdmin](#issuperadmin)
 

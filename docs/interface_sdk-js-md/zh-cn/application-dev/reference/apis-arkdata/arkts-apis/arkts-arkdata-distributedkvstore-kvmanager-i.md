@@ -128,44 +128,6 @@ try {
 }
 ```
 
-## closeKVStore
-
-```TypeScript
-closeKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
-```
-
-通过storeId的值关闭指定的分布式键值数据库，如果使用kvConfig参数，关闭的是指定路径下的分布式键值数据库，使用Promise异步回调。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-KVManager-closeKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>--><!--Device-KVManager-closeKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| appId | string | 是 | 应用的BundleName，不可为空且长度范围为1-256字节。 |
-| storeId | string | 是 | 要关闭的数据库唯一标识符，长度范围为1-[MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，且只能包含字母 数字或下划线_。 |
-| kvConfig | Options | 否 | 要关闭的数据库的配置信息，默认为空。<br>**起始版本：** 24 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -243,6 +205,46 @@ try {
   console.error(`Failed to close KVStore. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+## closeKVStore
+
+```TypeScript
+closeKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
+```
+
+通过storeId的值关闭指定的分布式键值数据库，如果使用kvConfig参数，关闭的是指定路径下的分布式键值数据库，使用Promise异步回调。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KVManager-closeKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>--><!--Device-KVManager-closeKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| appId | string | 是 | 应用的BundleName，不可为空且长度范围为1-256字节。 |
+| storeId | string | 是 | 要关闭的数据库唯一标识符，长度范围为1-[MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，且只能包含字母 数字或下划线_。 |
+| kvConfig | Options | 否 | 要关闭的数据库的配置信息，默认为空。<br>**起始版本：** 24 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. |
+
+**示例**
+
+参见 [closeKVStore](#closekvstore)
 
 ## deleteKVStore
 
@@ -360,45 +362,6 @@ try {
 }
 ```
 
-## deleteKVStore
-
-```TypeScript
-deleteKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
-```
-
-通过storeId的值删除指定的分布式键值数据库，如果使用kvConfig参数，删除的是指定路径下的分布式键值数据库，使用Promise异步回调。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-KVManager-deleteKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>--><!--Device-KVManager-deleteKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| appId | string | 是 | 应用的BundleName，不可为空且长度范围为1-256字节。 |
-| storeId | string | 是 | 要删除的数据库唯一标识符，长度范围为1-[MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，且只能包含字母 数字或下划线_。 |
-| kvConfig | Options | 否 | 要删除的数据库的配置信息，默认为空。<br>**起始版本：** 24 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. |
-| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -477,6 +440,47 @@ try {
 }
 ```
 
+## deleteKVStore
+
+```TypeScript
+deleteKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
+```
+
+通过storeId的值删除指定的分布式键值数据库，如果使用kvConfig参数，删除的是指定路径下的分布式键值数据库，使用Promise异步回调。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KVManager-deleteKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>--><!--Device-KVManager-deleteKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| appId | string | 是 | 应用的BundleName，不可为空且长度范围为1-256字节。 |
+| storeId | string | 是 | 要删除的数据库唯一标识符，长度范围为1-[MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，且只能包含字母 数字或下划线_。 |
+| kvConfig | Options | 否 | 要删除的数据库的配置信息，默认为空。<br>**起始版本：** 24 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. |
+| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. |
+
+**示例**
+
+参见 [deleteKVStore](#deletekvstore)
+
 ## getAllKVStoreId
 
 ```TypeScript
@@ -551,42 +555,6 @@ try {
 }
 ```
 
-## getAllKVStoreId
-
-```TypeScript
-getAllKVStoreId(appId: string): Promise<string[]>
-```
-
-获取所有通过 getKVStore 方法创建的且没有调用 [deleteKVStore](#deletekvstore) 方法删除的分布式键值数据库的storeId，使用Promise异步回调。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-KVManager-getAllKVStoreId(appId: string): Promise<string[]>--><!--Device-KVManager-getAllKVStoreId(appId: string): Promise<string[]>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| appId | string | 是 | 应用的BundleName，不可为空且长度范围为1-256字节。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string[]&gt; | Promise对象。返回所有创建的分布式键值数据库的storeId。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -625,6 +593,44 @@ try {
   console.error(`Failed to get AllKVStoreId. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+## getAllKVStoreId
+
+```TypeScript
+getAllKVStoreId(appId: string): Promise<string[]>
+```
+
+获取所有通过 getKVStore 方法创建的且没有调用 [deleteKVStore](#deletekvstore) 方法删除的分布式键值数据库的storeId，使用Promise异步回调。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KVManager-getAllKVStoreId(appId: string): Promise<string[]>--><!--Device-KVManager-getAllKVStoreId(appId: string): Promise<string[]>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| appId | string | 是 | 应用的BundleName，不可为空且长度范围为1-256字节。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;string[]&gt; | Promise对象。返回所有创建的分布式键值数据库的storeId。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. |
+
+**示例**
+
+参见 [getAllKVStoreId](#getallkvstoreid)
 
 ## getKVStore
 
@@ -731,50 +737,6 @@ if (kvStore !== null) {
 }
 ```
 
-## getKVStore
-
-```TypeScript
-getKVStore<T>(storeId: string, options: Options): Promise<T>
-```
-
-指定options和storeId，创建并获取分布式键值数据库，使用Promise回调。获取数据库后，在使用完毕时需调用 [closeKVStore](#closekvstore) 关闭数据库释放资源。
-
-> **注意：**
-> 
-> 获取已有的分布式键值数据库时，如果数据库文件无法打开（如文件头损坏），将触发自动重建逻辑，并返回新创建的分布式键值数据库实例。建议对重要且无法重新生成的数据使用备份恢复功能，防止数据丢失。备份恢复的使用方法详见
-> [数据库备份与恢复](../../../database/data-backup-and-restore.md)。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-KVManager-getKVStore<T>(storeId: string, options: Options): Promise<T>--><!--Device-KVManager-getKVStore<T>(storeId: string, options: Options): Promise<T>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| storeId | string | 是 | 数据库唯一标识符，长度范围为1-[MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，且只能包含字母数字或下 划线_。 |
-| options | Options | 是 | 创建分布式键值实例的配置信息。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;T&gt; | Promise对象。返回创建的分布式键值数据库实例（根据kvStoreType的不同，可以创建SingleKVStore实例和DeviceKVStore实例）。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
-| [15100002](../errorcode-distributedKVStore.md#15100002-打开已有数据库时参数配置发生变化) | Open existed database with changed options. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -833,44 +795,51 @@ try {
 }
 ```
 
-## offDistributedDataServiceDie
+## getKVStore
 
 ```TypeScript
-offDistributedDataServiceDie(deathCallback?: Callback<void>): void
+getKVStore<T>(storeId: string, options: Options): Promise<T>
 ```
 
-取消订阅服务状态变更通知。必须先调用onDistributedDataServiceDie订阅后，才能调用offDistributedDataServiceDie取消订阅。 参数中的deathCallback必须是已经订阅过的deathCallback，否则会取消订阅失败。
+指定options和storeId，创建并获取分布式键值数据库，使用Promise回调。获取数据库后，在使用完毕时需调用 [closeKVStore](#closekvstore) 关闭数据库释放资源。
+
+> **注意：**
+> 
+> 获取已有的分布式键值数据库时，如果数据库文件无法打开（如文件头损坏），将触发自动重建逻辑，并返回新创建的分布式键值数据库实例。建议对重要且无法重新生成的数据使用备份恢复功能，防止数据丢失。备份恢复的使用方法详见
+> [数据库备份与恢复](../../../database/data-backup-and-restore.md)。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-KVManager-offDistributedDataServiceDie(deathCallback?: Callback<void>): void--><!--Device-KVManager-offDistributedDataServiceDie(deathCallback?: Callback<void>): void-End-->
+<!--Device-KVManager-getKVStore<T>(storeId: string, options: Options): Promise<T>--><!--Device-KVManager-getKVStore<T>(storeId: string, options: Options): Promise<T>-End-->
 
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。如果该参数不填，那么会将之前订阅过的所有的deathCallback取消订阅。 |
+| storeId | string | 是 | 数据库唯一标识符，长度范围为1-[MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，且只能包含字母数字或下 划线_。 |
+| options | Options | 是 | 创建分布式键值实例的配置信息。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;T&gt; | Promise对象。返回创建的分布式键值数据库实例（根据kvStoreType的不同，可以创建SingleKVStore实例和DeviceKVStore实例）。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
+| [15100002](../errorcode-distributedKVStore.md#15100002-打开已有数据库时参数配置发生变化) | Open existed database with changed options. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  console.info('KVManagerOff');
-  const deathCallback = () => {
-    console.info('death callback call');
-  }
-  kvManager.offDistributedDataServiceDie( deathCallback);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [getKVStore](#getkvstore)
 
 ## off_distributedDataServiceDie
 
@@ -916,19 +885,19 @@ try {
 }
 ```
 
-## onDistributedDataServiceDie
+## offDistributedDataServiceDie
 
 ```TypeScript
-onDistributedDataServiceDie(deathCallback: Callback<void>): void
+offDistributedDataServiceDie(deathCallback?: Callback<void>): void
 ```
 
-订阅服务终止事件。如果服务终止，需要重新调用onDataChange和onSyncComplete注册数据变更通知和端端同步完成事件回调通知，并且端端同步操作会返回失败。 调用onDistributedDataServiceDie订阅后，在不需要监听时必须调用offDistributedDataServiceDie取消订阅
+取消订阅服务状态变更通知。必须先调用onDistributedDataServiceDie订阅后，才能调用offDistributedDataServiceDie取消订阅。 参数中的deathCallback必须是已经订阅过的deathCallback，否则会取消订阅失败。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-KVManager-onDistributedDataServiceDie(deathCallback: Callback<void>): void--><!--Device-KVManager-onDistributedDataServiceDie(deathCallback: Callback<void>): void-End-->
+<!--Device-KVManager-offDistributedDataServiceDie(deathCallback?: Callback<void>): void--><!--Device-KVManager-offDistributedDataServiceDie(deathCallback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -936,7 +905,7 @@ onDistributedDataServiceDie(deathCallback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。订阅成功，err为undefined，否则为错误对象。 |
+| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。如果该参数不填，那么会将之前订阅过的所有的deathCallback取消订阅。 |
 
 **示例**
 
@@ -944,14 +913,14 @@ onDistributedDataServiceDie(deathCallback: Callback<void>): void
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-    console.info('KVManagerOn');
-    const deathCallback = () => {
-        console.info('death callback call');
-    }
-    kvManager.onDistributedDataServiceDie(deathCallback);
+  console.info('KVManagerOff');
+  const deathCallback = () => {
+    console.info('death callback call');
+  }
+  kvManager.offDistributedDataServiceDie( deathCallback);
 } catch (err) {
-    let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -996,6 +965,45 @@ try {
 } catch (err) {
   let error = err as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+## onDistributedDataServiceDie
+
+```TypeScript
+onDistributedDataServiceDie(deathCallback: Callback<void>): void
+```
+
+订阅服务终止事件。如果服务终止，需要重新调用onDataChange和onSyncComplete注册数据变更通知和端端同步完成事件回调通知，并且端端同步操作会返回失败。 调用onDistributedDataServiceDie订阅后，在不需要监听时必须调用offDistributedDataServiceDie取消订阅
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KVManager-onDistributedDataServiceDie(deathCallback: Callback<void>): void--><!--Device-KVManager-onDistributedDataServiceDie(deathCallback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。订阅成功，err为undefined，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    console.info('KVManagerOn');
+    const deathCallback = () => {
+        console.info('death callback call');
+    }
+    kvManager.onDistributedDataServiceDie(deathCallback);
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

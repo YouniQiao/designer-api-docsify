@@ -29,7 +29,7 @@ Register a callback to retrieve an avsession cast controller. This function can 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sessionId | string | Yes | Specifies the sessionId to get controller. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md)&gt; | Yes | async callback for the AVCastController. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md)&gt; | Yes | async callback for the AVCastController. |
 
 **Error codes:**
 
@@ -42,6 +42,32 @@ Register a callback to retrieve an avsession cast controller. This function can 
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | session does not exist |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let aVCastController: avSession.AVCastController;
+currentAVSession.getAVCastController().then((avcontroller: avSession.AVCastController) => {
+  aVCastController = avcontroller;
+  console.info('getAVCastController : SUCCESS');
+}).catch((err: BusinessError) => {
+  console.error(`getAVCastController BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let aVCastController: avSession.AVCastController;
+currentAVSession.getAVCastController((err: BusinessError, avcontroller: avSession.AVCastController) => {
+  if (err) {
+    console.error(`getAVCastController BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    aVCastController = avcontroller;
+    console.info('getAVCastController : SUCCESS');
+  }
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -78,6 +104,39 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+
+  build() {
+    Column() {
+      Text(this.message)
+        .onClick(() => {
+          let currentAVSession: avSession.AVSession | undefined = undefined;
+          let tag = "createNewSession";
+          let context = this.getUIContext().getHostContext() as Context;
+          let sessionId: string = ""; // Used as an input parameter of subsequent functions.
+
+          let aVCastController: avSession.AVCastController;
+          avSession.getAVCastController(sessionId).then((avcontroller: avSession.AVCastController) => {
+            aVCastController = avcontroller;
+            console.info('getAVCastController : SUCCESS');
+          }).catch((err: BusinessError) => {
+            console.error(`getAVCastController BusinessError: code: ${err.code}, message: ${err.message}`);
+          });
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 
 ## getAVCastController
 
@@ -102,7 +161,7 @@ Register a callback to retrieve an avsession cast controller. This function can 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sessionId | string | Yes | Specifies the sessionId to get controller. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md) \| undefined&gt; | Yes | async callback for the AVCastController. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md) \| undefined&gt; | Yes | async callback for the AVCastController. |
 
 **Error codes:**
 
@@ -112,6 +171,10 @@ Register a callback to retrieve an avsession cast controller. This function can 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | session does not exist |
+
+**Examples**
+
+See [getAVCastController](#getavcastcontroller)
 
 
 ## getAVCastController
@@ -156,38 +219,7 @@ Get the current session's remote controller client. If the avsession is not unde
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello world';
-
-  build() {
-    Column() {
-      Text(this.message)
-        .onClick(() => {
-          let currentAVSession: avSession.AVSession | undefined = undefined;
-          let tag = "createNewSession";
-          let context = this.getUIContext().getHostContext() as Context;
-          let sessionId: string = ""; // Used as an input parameter of subsequent functions.
-
-          let aVCastController: avSession.AVCastController;
-          avSession.getAVCastController(sessionId).then((avcontroller: avSession.AVCastController) => {
-            aVCastController = avcontroller;
-            console.info('getAVCastController : SUCCESS');
-          }).catch((err: BusinessError) => {
-            console.error(`getAVCastController BusinessError: code: ${err.code}, message: ${err.message}`);
-          });
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
+See [getAVCastController](#getavcastcontroller)
 
 
 ## getAVCastController
@@ -228,4 +260,8 @@ Get the current session's remote controller client. If the avsession is not unde
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | server exception |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | session does not exist |
+
+**Examples**
+
+See [getAVCastController](#getavcastcontroller)
 

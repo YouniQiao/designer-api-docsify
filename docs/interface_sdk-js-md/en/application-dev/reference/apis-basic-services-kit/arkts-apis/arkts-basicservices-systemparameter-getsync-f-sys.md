@@ -39,3 +39,14 @@ Obtains a value of the specified key.
 | --- | --- |
 | string | Value of the system parameter. <br> If the specified key exists, the set value is returned. <br> If the specified key does not exist and **def** is set to a valid value, the set value is returned. If the specified key does not exist and **def** is set to an invalid value (such as **undefined**) or is not set, an empty string is returned. |
 
+**Examples**
+
+```TypeScript
+try {
+    let info: string = systemparameter.getSync("const.ohos.apiversion");
+    console.info(JSON.stringify(info));
+} catch(e) {
+    console.error("getSync unexpected error: " + e);
+}
+```
+

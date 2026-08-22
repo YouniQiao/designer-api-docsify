@@ -29,7 +29,7 @@ Obtains the network access policy for the application specified by a given UID. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | int | Yes | Unique app ID, which is a positive integer within the int32_t range. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the policy result is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the policy result is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -51,6 +51,19 @@ policy.getPolicyByUid(11111, (error: BusinessError, data: policy.NetUidPolicy) =
   console.error(JSON.stringify(error));
   console.info(JSON.stringify(data));
 });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .getPolicyByUid(11111)
+  .then((data: policy.NetUidPolicy) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
 ```
 
 
@@ -97,16 +110,5 @@ Obtains the network access policy by app UID. This API uses a promise to return 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .getPolicyByUid(11111)
-  .then((data: policy.NetUidPolicy) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+See [getPolicyByUid](#getpolicybyuid)
 

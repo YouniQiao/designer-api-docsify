@@ -90,6 +90,45 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { logLibrary } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let logFiles = logLibrary.list('FAULTLOG');
+  if (logFiles.length > 0) {
+    logLibrary.move('FAULTLOG', logFiles[0].name, 'dir1/dir2', (error, moveResult) => {
+      if (error) {
+        console.error(`Failed to move log file. Code: ${error.code}, message: ${error.message}`);
+      } else {
+        // move success.
+      }
+    });
+  }
+} catch (error) {
+    console.error(`Failed to call logLibrary API. Code: ${error?.code}, message: ${error?.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { logLibrary } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let logObj = logLibrary.list('FAULTLOG');
+  if (logObj.length > 0) {
+    logLibrary.move('FAULTLOG', logObj[0].name, 'dir1/dir2', (err: BusinessError | null) => {
+      // move结果
+    });
+  }
+} catch (err: BusinessError) {
+  console.error(`error code: ${err?.code}, error msg: ${err?.message}`);
+}
+```
+
 
 ## move
 
@@ -129,42 +168,5 @@ function move(logType: string, logName: string, dest: string, callback: AsyncCal
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { logLibrary } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let logFiles = logLibrary.list('FAULTLOG');
-  if (logFiles.length > 0) {
-    logLibrary.move('FAULTLOG', logFiles[0].name, 'dir1/dir2', (error, moveResult) => {
-      if (error) {
-        console.error(`Failed to move log file. Code: ${error.code}, message: ${error.message}`);
-      } else {
-        // move success.
-      }
-    });
-  }
-} catch (error) {
-    console.error(`Failed to call logLibrary API. Code: ${error?.code}, message: ${error?.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { logLibrary } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let logObj = logLibrary.list('FAULTLOG');
-  if (logObj.length > 0) {
-    logLibrary.move('FAULTLOG', logObj[0].name, 'dir1/dir2', (err: BusinessError | null) => {
-      // move结果
-    });
-  }
-} catch (err: BusinessError) {
-  console.error(`error code: ${err?.code}, error msg: ${err?.message}`);
-}
-```
+参见 [move](#move)
 

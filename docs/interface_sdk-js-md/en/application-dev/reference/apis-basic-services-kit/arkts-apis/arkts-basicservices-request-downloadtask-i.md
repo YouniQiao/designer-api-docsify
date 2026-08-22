@@ -40,7 +40,7 @@ Deletes the download task. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -49,6 +49,46 @@ Deletes the download task. This API uses an asynchronous callback to return the 
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 **Examples**
+
+```TypeScript
+uploadTask.delete().then((result: boolean) => {
+  console.info('Succeeded in deleting the upload task.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to delete the upload task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+uploadTask.delete((err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to delete the upload task. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in deleting the upload task.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    data.delete().then((result: boolean) => {
+      console.info('Succeeded in removing the download task.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -110,27 +150,7 @@ Deletes the download task. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    data.delete().then((result: boolean) => {
-      console.info('Succeeded in removing the download task.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
+See [delete](#delete)
 
 ## getTaskInfo
 
@@ -157,7 +177,7 @@ Obtains the information about this download task. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;DownloadInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadInfo** object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadInfo** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -166,6 +186,29 @@ Obtains the information about this download task. This API uses an asynchronous 
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.getTaskInfo().then((downloadInfo: request.DownloadInfo) => {
+      console.info('Succeeded in querying the download task')
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to query the download task. Code: ${err.code}, message: ${err.message}`)
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -227,28 +270,7 @@ Obtains the information about this download task. This API uses a promise to ret
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    downloadTask.getTaskInfo().then((downloadInfo: request.DownloadInfo) => {
-      console.info('Succeeded in querying the download task')
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to query the download task. Code: ${err.code}, message: ${err.message}`)
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
+See [getTaskInfo](#gettaskinfo)
 
 ## getTaskMimeType
 
@@ -275,7 +297,7 @@ Obtains the MIME type (that is, media type of resources in HTTP) of a download t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the **MimeType** object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the **MimeType** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -284,6 +306,29 @@ Obtains the MIME type (that is, media type of resources in HTTP) of a download t
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.getTaskMimeType().then((data: string) => {
+      console.info('Succeeded in querying the download MimeType');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to query the download MimeType. Code: ${err.code}, message: ${err.message}`)
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -345,128 +390,7 @@ Obtains the MIME type (that is, media type of resources in HTTP) of a download t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    downloadTask.getTaskMimeType().then((data: string) => {
-      console.info('Succeeded in querying the download MimeType');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to query the download MimeType. Code: ${err.code}, message: ${err.message}`)
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## offComplete
-
-```TypeScript
-offComplete(callback?: DownloadCompleteCallback): void
-```
-
-Called when the current download session complete.
-
-**Since:** 23
-
-<!--Device-DownloadTask-offComplete(callback?: DownloadCompleteCallback): void--><!--Device-DownloadTask-offComplete(callback?: DownloadCompleteCallback): void-End-->
-
-**System capability:** SystemCapability.MiscServices.Download
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [DownloadCompleteCallback](arkts-basicservices-request-downloadcompletecallback-t.md) | No | The callback function for the download complete event. |
-
-## offFail
-
-```TypeScript
-offFail(callback?: DownloadFailCallback): void
-```
-
-Called when the current download session fails.
-
-**Since:** 23
-
-<!--Device-DownloadTask-offFail(callback?: DownloadFailCallback): void--><!--Device-DownloadTask-offFail(callback?: DownloadFailCallback): void-End-->
-
-**System capability:** SystemCapability.MiscServices.Download
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [DownloadFailCallback](arkts-basicservices-request-downloadfailcallback-t.md) | No | The callback function for the download fail event. |
-
-## offPause
-
-```TypeScript
-offPause(callback?: DownloadPauseCallback): void
-```
-
-Called when the current download session pause.
-
-**Since:** 23
-
-<!--Device-DownloadTask-offPause(callback?: DownloadPauseCallback): void--><!--Device-DownloadTask-offPause(callback?: DownloadPauseCallback): void-End-->
-
-**System capability:** SystemCapability.MiscServices.Download
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [DownloadPauseCallback](arkts-basicservices-request-downloadpausecallback-t.md) | No | The callback function for the download pause event. |
-
-## offProgress
-
-```TypeScript
-offProgress(callback?: DownloadProgressCallback): void
-```
-
-Called when the current download session is in process.
-
-**Since:** 23
-
-<!--Device-DownloadTask-offProgress(callback?: DownloadProgressCallback): void--><!--Device-DownloadTask-offProgress(callback?: DownloadProgressCallback): void-End-->
-
-**System capability:** SystemCapability.MiscServices.Download
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [DownloadProgressCallback](arkts-basicservices-request-downloadprogresscallback-t.md) | No | The callback function for the download progress event. |
-
-## offRemove
-
-```TypeScript
-offRemove(callback?: DownloadRemoveCallback): void
-```
-
-Called when the current download session remove.
-
-**Since:** 23
-
-<!--Device-DownloadTask-offRemove(callback?: DownloadRemoveCallback): void--><!--Device-DownloadTask-offRemove(callback?: DownloadRemoveCallback): void-End-->
-
-**System capability:** SystemCapability.MiscServices.Download
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [DownloadRemoveCallback](arkts-basicservices-request-downloadremovecallback-t.md) | No | The callback function for the download remove event. |
+See [getTaskMimeType](#gettaskmimetype)
 
 ## off('complete' | 'pause' | 'remove')
 
@@ -733,17 +657,17 @@ Unsubscribes from download events.
 
 See off_complete
 
-## onComplete
+## offComplete
 
 ```TypeScript
-onComplete(callback: DownloadCompleteCallback): void
+offComplete(callback?: DownloadCompleteCallback): void
 ```
 
 Called when the current download session complete.
 
 **Since:** 23
 
-<!--Device-DownloadTask-onComplete(callback: DownloadCompleteCallback): void--><!--Device-DownloadTask-onComplete(callback: DownloadCompleteCallback): void-End-->
+<!--Device-DownloadTask-offComplete(callback?: DownloadCompleteCallback): void--><!--Device-DownloadTask-offComplete(callback?: DownloadCompleteCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -751,19 +675,19 @@ Called when the current download session complete.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [DownloadCompleteCallback](arkts-basicservices-request-downloadcompletecallback-t.md) | Yes | The callback function for the download complete event. |
+| callback | [DownloadCompleteCallback](arkts-basicservices-request-downloadcompletecallback-t.md) | No | The callback function for the download complete event. |
 
-## onFail
+## offFail
 
 ```TypeScript
-onFail(callback: DownloadFailCallback): void
+offFail(callback?: DownloadFailCallback): void
 ```
 
 Called when the current download session fails.
 
 **Since:** 23
 
-<!--Device-DownloadTask-onFail(callback: DownloadFailCallback): void--><!--Device-DownloadTask-onFail(callback: DownloadFailCallback): void-End-->
+<!--Device-DownloadTask-offFail(callback?: DownloadFailCallback): void--><!--Device-DownloadTask-offFail(callback?: DownloadFailCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -771,19 +695,19 @@ Called when the current download session fails.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [DownloadFailCallback](arkts-basicservices-request-downloadfailcallback-t.md) | Yes | The callback function for the download fail event. |
+| callback | [DownloadFailCallback](arkts-basicservices-request-downloadfailcallback-t.md) | No | The callback function for the download fail event. |
 
-## onPause
+## offPause
 
 ```TypeScript
-onPause(callback: DownloadPauseCallback): void
+offPause(callback?: DownloadPauseCallback): void
 ```
 
 Called when the current download session pause.
 
 **Since:** 23
 
-<!--Device-DownloadTask-onPause(callback: DownloadPauseCallback): void--><!--Device-DownloadTask-onPause(callback: DownloadPauseCallback): void-End-->
+<!--Device-DownloadTask-offPause(callback?: DownloadPauseCallback): void--><!--Device-DownloadTask-offPause(callback?: DownloadPauseCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -791,19 +715,19 @@ Called when the current download session pause.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [DownloadPauseCallback](arkts-basicservices-request-downloadpausecallback-t.md) | Yes | The callback function for the download pause event. |
+| callback | [DownloadPauseCallback](arkts-basicservices-request-downloadpausecallback-t.md) | No | The callback function for the download pause event. |
 
-## onProgress
+## offProgress
 
 ```TypeScript
-onProgress(callback: DownloadProgressCallback): void
+offProgress(callback?: DownloadProgressCallback): void
 ```
 
 Called when the current download session is in process.
 
 **Since:** 23
 
-<!--Device-DownloadTask-onProgress(callback: DownloadProgressCallback): void--><!--Device-DownloadTask-onProgress(callback: DownloadProgressCallback): void-End-->
+<!--Device-DownloadTask-offProgress(callback?: DownloadProgressCallback): void--><!--Device-DownloadTask-offProgress(callback?: DownloadProgressCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -811,19 +735,19 @@ Called when the current download session is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [DownloadProgressCallback](arkts-basicservices-request-downloadprogresscallback-t.md) | Yes | The callback function for the download progress event. |
+| callback | [DownloadProgressCallback](arkts-basicservices-request-downloadprogresscallback-t.md) | No | The callback function for the download progress event. |
 
-## onRemove
+## offRemove
 
 ```TypeScript
-onRemove(callback: DownloadRemoveCallback): void
+offRemove(callback?: DownloadRemoveCallback): void
 ```
 
 Called when the current download session remove.
 
 **Since:** 23
 
-<!--Device-DownloadTask-onRemove(callback: DownloadRemoveCallback): void--><!--Device-DownloadTask-onRemove(callback: DownloadRemoveCallback): void-End-->
+<!--Device-DownloadTask-offRemove(callback?: DownloadRemoveCallback): void--><!--Device-DownloadTask-offRemove(callback?: DownloadRemoveCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -831,7 +755,7 @@ Called when the current download session remove.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [DownloadRemoveCallback](arkts-basicservices-request-downloadremovecallback-t.md) | Yes | The callback function for the download remove event. |
+| callback | [DownloadRemoveCallback](arkts-basicservices-request-downloadremovecallback-t.md) | No | The callback function for the download remove event. |
 
 ## on('complete' | 'pause' | 'remove')
 
@@ -1063,6 +987,106 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 
 See on_complete
 
+## onComplete
+
+```TypeScript
+onComplete(callback: DownloadCompleteCallback): void
+```
+
+Called when the current download session complete.
+
+**Since:** 23
+
+<!--Device-DownloadTask-onComplete(callback: DownloadCompleteCallback): void--><!--Device-DownloadTask-onComplete(callback: DownloadCompleteCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [DownloadCompleteCallback](arkts-basicservices-request-downloadcompletecallback-t.md) | Yes | The callback function for the download complete event. |
+
+## onFail
+
+```TypeScript
+onFail(callback: DownloadFailCallback): void
+```
+
+Called when the current download session fails.
+
+**Since:** 23
+
+<!--Device-DownloadTask-onFail(callback: DownloadFailCallback): void--><!--Device-DownloadTask-onFail(callback: DownloadFailCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [DownloadFailCallback](arkts-basicservices-request-downloadfailcallback-t.md) | Yes | The callback function for the download fail event. |
+
+## onPause
+
+```TypeScript
+onPause(callback: DownloadPauseCallback): void
+```
+
+Called when the current download session pause.
+
+**Since:** 23
+
+<!--Device-DownloadTask-onPause(callback: DownloadPauseCallback): void--><!--Device-DownloadTask-onPause(callback: DownloadPauseCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [DownloadPauseCallback](arkts-basicservices-request-downloadpausecallback-t.md) | Yes | The callback function for the download pause event. |
+
+## onProgress
+
+```TypeScript
+onProgress(callback: DownloadProgressCallback): void
+```
+
+Called when the current download session is in process.
+
+**Since:** 23
+
+<!--Device-DownloadTask-onProgress(callback: DownloadProgressCallback): void--><!--Device-DownloadTask-onProgress(callback: DownloadProgressCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [DownloadProgressCallback](arkts-basicservices-request-downloadprogresscallback-t.md) | Yes | The callback function for the download progress event. |
+
+## onRemove
+
+```TypeScript
+onRemove(callback: DownloadRemoveCallback): void
+```
+
+Called when the current download session remove.
+
+**Since:** 23
+
+<!--Device-DownloadTask-onRemove(callback: DownloadRemoveCallback): void--><!--Device-DownloadTask-onRemove(callback: DownloadRemoveCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [DownloadRemoveCallback](arkts-basicservices-request-downloadremovecallback-t.md) | Yes | The callback function for the download remove event. |
+
 ## pause
 
 ```TypeScript
@@ -1087,7 +1111,7 @@ Pauses this download task. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1098,12 +1122,112 @@ Pauses this download task. This API uses an asynchronous callback to return the 
 **Examples**
 
 ```TypeScript
+downloadTask.pause().then(() => {    
+  console.info('Succeeded in pausing the download task.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
 downloadTask.pause((err: BusinessError) => {
   if(err) {
     console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
     return;
   }
   console.info('Succeeded in pausing the download task.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
+  title: 'taskPauseTest',
+  description: 'Sample code for pause the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(),1000)
+  })
+  task.pause((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to pause the download task, Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info(`Succeeded in pausing a download task. `);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
+  title: 'taskPauseTest',
+  description: 'Sample code for pause the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(),1000)
+  })
+  task.pause().then(() => {
+    console.info(`Succeeded in pausing a download task. `);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to pause the download task, Code: ${err.code}, message: ${err.message}`);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -1141,13 +1265,7 @@ Pauses this download task. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-downloadTask.pause().then(() => {    
-  console.info('Succeeded in pausing the download task.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [pause](#pause)
 
 ## query
 
@@ -1173,7 +1291,7 @@ Queries this download task. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;DownloadInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadInfo** object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadInfo** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1182,6 +1300,14 @@ Queries this download task. This API uses an asynchronous callback to return the
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 **Examples**
+
+```TypeScript
+downloadTask.query().then((downloadInfo) => {    
+  console.info('Succeeded in querying the download task.')
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query the download task. Code: ${err.code}, message: ${err.message}`)
+});
+```
 
 ```TypeScript
 downloadTask.query((err: BusinessError, downloadInfo: request.DownloadInfo)=>{
@@ -1227,13 +1353,7 @@ Queries this download task. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-downloadTask.query().then((downloadInfo) => {    
-  console.info('Succeeded in querying the download task.')
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query the download task. Code: ${err.code}, message: ${err.message}`)
-});
-```
+See [query](#query)
 
 ## queryMimeType
 
@@ -1259,7 +1379,7 @@ Queries the MIME type of this download task. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the **MimeType** object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the **MimeType** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1268,6 +1388,14 @@ Queries the MIME type of this download task. This API uses an asynchronous callb
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 **Examples**
+
+```TypeScript
+downloadTask.queryMimeType().then((data: string) => {    
+  console.info('Succeeded in querying the download MimeType.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query the download MimeType. Code: ${err.code}, message: ${err.message}`)
+});
+```
 
 ```TypeScript
 downloadTask.queryMimeType((err: BusinessError, data: string)=>{
@@ -1313,13 +1441,7 @@ Queries the MIME type of this download task. This API uses a promise to return t
 
 **Examples**
 
-```TypeScript
-downloadTask.queryMimeType().then((data: string) => {    
-  console.info('Succeeded in querying the download MimeType.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query the download MimeType. Code: ${err.code}, message: ${err.message}`)
-});
-```
+See [queryMimeType](#querymimetype)
 
 ## remove
 
@@ -1345,7 +1467,7 @@ Deletes the download task. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -1354,6 +1476,34 @@ Deletes the download task. This API uses an asynchronous callback to return the 
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 **Examples**
+
+```TypeScript
+uploadTask.remove().then((result: boolean) => {
+  console.info('Succeeded in removing the upload task.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to remove the upload task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+uploadTask.remove((err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to remove the upload task. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in removing the upload task.');
+  }
+});
+```
+
+```TypeScript
+downloadTask.remove().then((result) => {
+  console.info('Succeeded in removing the download task.');
+}).catch ((err: BusinessError) => {
+  console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ```TypeScript
 downloadTask.remove((err, result)=>{
@@ -1399,13 +1549,7 @@ Deletes the download task. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-downloadTask.remove().then((result) => {
-  console.info('Succeeded in removing the download task.');
-}).catch ((err: BusinessError) => {
-  console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [remove](#remove)
 
 ## restore
 
@@ -1432,7 +1576,7 @@ Restores the download task. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -1441,6 +1585,29 @@ Restores the download task. This API uses an asynchronous callback to return the
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.restore().then((result: boolean) => {
+      console.info('Succeeded in resuming the download task.')
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1502,28 +1669,7 @@ Restores the download task. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    downloadTask.restore().then((result: boolean) => {
-      console.info('Succeeded in resuming the download task.')
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
+See [restore](#restore)
 
 ## resume
 
@@ -1549,7 +1695,7 @@ Restores the download task. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1560,12 +1706,122 @@ Restores the download task. This API uses an asynchronous callback to return the
 **Examples**
 
 ```TypeScript
+downloadTask.resume().then(() => {
+  console.info('Succeeded in resuming the download task.')
+}).catch((err: BusinessError) => {
+  console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
 downloadTask.resume((err: BusinessError) => {
   if (err) {
     console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
     return;
   }
   console.info('Succeeded in resuming the download task.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
+  title: 'taskResumeTest',
+  description: 'Sample code for resume the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(),1000)
+  })
+  task.pause();
+  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(),1000)
+  })
+  task.resume((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to resume the download task, Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info(`Succeeded in resuming a download task. `);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
+  title: 'taskResumeTest',
+  description: 'Sample code for resume the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(),1000)
+  })
+  task.pause();
+  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(),1000)
+  })
+  task.resume().then(() => {
+    console.info(`Succeeded in resuming a download task. `);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to resume the download task, Code: ${err.code}, message: ${err.message}`);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -1603,13 +1859,7 @@ Restores the download task. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-downloadTask.resume().then(() => {
-  console.info('Succeeded in resuming the download task.')
-}).catch((err: BusinessError) => {
-  console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [resume](#resume)
 
 ## suspend
 
@@ -1636,7 +1886,7 @@ Suspends this download task. You can use [restore](#restore) to restore the down
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -1645,6 +1895,29 @@ Suspends this download task. You can use [restore](#restore) to restore the down
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.suspend().then((result: boolean) => {
+      console.info('Succeeded in pausing the download task.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1706,26 +1979,5 @@ Suspends this download task. You can use [restore](#restore) to restore the down
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    downloadTask.suspend().then((result: boolean) => {
-      console.info('Succeeded in pausing the download task.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
+See [suspend](#suspend)
 

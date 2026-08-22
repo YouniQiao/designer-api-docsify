@@ -52,6 +52,25 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { usageStatistics } from '@kit.BackgroundTasksKit';
 
 function onBundleGroupChanged(res: usageStatistics.AppGroupCallbackInfo) {
+  console.info('BUNDLE_ACTIVE registerAppGroupCallBack RegisterGroupCallBack callback success.');
+  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result appOldGroup is : ' + res.appOldGroup);
+  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result appNewGroup is : ' + res.appNewGroup);
+  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result changeReason is : ' + res.changeReason);
+  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result userId is : ' + res.userId);
+  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result bundleName is : ' + res.bundleName);
+};
+usageStatistics.registerAppGroupCallBack(onBundleGroupChanged).then( () => {
+  console.info('BUNDLE_ACTIVE registerAppGroupCallBack promise succeeded.');
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE registerAppGroupCallBack promise failed. code is: ' + err.code + ',message is: ' + err.message);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+
+function onBundleGroupChanged(res: usageStatistics.AppGroupCallbackInfo) {
   console.info('BUNDLE_ACTIVE onBundleGroupChanged RegisterGroupCallBack callback success.');
   console.info('BUNDLE_ACTIVE registerAppGroupCallBack result appOldGroup is : ' + res.appOldGroup);
   console.info('BUNDLE_ACTIVE registerAppGroupCallBack result appNewGroup is : ' + res.appNewGroup);
@@ -115,22 +134,5 @@ function registerAppGroupCallBack(groupCallback: Callback<AppGroupCallbackInfo>)
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-function onBundleGroupChanged(res: usageStatistics.AppGroupCallbackInfo) {
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack RegisterGroupCallBack callback success.');
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result appOldGroup is : ' + res.appOldGroup);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result appNewGroup is : ' + res.appNewGroup);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result changeReason is : ' + res.changeReason);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result userId is : ' + res.userId);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result bundleName is : ' + res.bundleName);
-};
-usageStatistics.registerAppGroupCallBack(onBundleGroupChanged).then( () => {
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack promise succeeded.');
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE registerAppGroupCallBack promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
+参见 [registerAppGroupCallBack](#registerappgroupcallback)
 

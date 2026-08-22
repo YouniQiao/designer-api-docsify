@@ -50,3 +50,18 @@ let index: number = 0;
 let success: boolean = i18n.addPreferredLanguage(language, index);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+// 将语言zh-CN添加到系统偏好语言列表中
+let language = 'zh-CN';
+let index = 0;
+try {
+  i18n.System.addPreferredLanguage(language, index); // 将zh-CN添加到系统偏好语言列表的第1位
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.addPreferredLanguage failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+

@@ -42,6 +42,26 @@ Queries specified task details. Creates a group based on GroupConfig
 | [13400003](../errorcode-request.md#13400003-服务异常) | Task service ability error. |
 | [21900006](../errorcode-request.md#21900006-操作不存在的任务错误) | Task removed or not found. |
 
+**示例**
+
+```TypeScript
+downloadTask.query().then((downloadInfo) => {    
+  console.info('Succeeded in querying the download task.')
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query the download task. Code: ${err.code}, message: ${err.message}`)
+});
+```
+
+```TypeScript
+downloadTask.query((err: BusinessError, downloadInfo: request.DownloadInfo)=>{
+  if(err) {
+    console.error(`Failed to query the download mimeType. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Succeeded in querying the download task.');
+  }
+});
+```
+
 
 ## query
 
@@ -82,4 +102,8 @@ Queries specified task details.
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. |
 | [13400003](../errorcode-request.md#13400003-服务异常) | Task service ability error. |
 | [21900006](../errorcode-request.md#21900006-操作不存在的任务错误) | Task removed or not found. |
+
+**示例**
+
+参见 [query](#query)
 

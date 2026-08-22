@@ -52,6 +52,42 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
   let uuid: string = volumes[0].uuid;
+  storageStatistics.getFreeSizeOfVolume(uuid).then((freeSize: number) => {
+    console.info("getFreeSizeOfVolume successfully:" + number);
+  }).catch((err: BusinessError) => {
+    console.error(`getFreeSizeOfVolume failed with err, code is: ${err.code}, message is: ${err.message}`);
+  });
+}).catch((err: BusinessError) => {
+  console.error(`getAllVolumes failed with err, code is: ${err.code}, message is: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { volumeManager } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
+  let uuid: string = volumes[0].uuid;
+  storageStatistics.getFreeSizeOfVolume(uuid).then((freeSize: long) => {
+    console.info("getFreeSizeOfVolume successfully:" + freeSize);
+  }).catch((err: BusinessError): void => {
+    console.error(`getFreeSizeOfVolume failed with err, code is: ${err.code}, message is: ${err.message}`);
+  });
+}).catch((err: BusinessError): void => {
+  console.error(`getAllVolumes failed with err, code is: ${err.code}, message is: ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { volumeManager } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
+  let uuid: string = volumes[0].uuid;
   storageStatistics.getFreeSizeOfVolume(uuid, (error: BusinessError, freeSize: number) => {
     if (error) {
       console.error(`getFreeSizeOfVolume failed with err, code is: ${error.code}, message is: ${error.message}`);
@@ -130,39 +166,5 @@ function getFreeSizeOfVolume(volumeUuid: string): Promise<long>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
-  let uuid: string = volumes[0].uuid;
-  storageStatistics.getFreeSizeOfVolume(uuid).then((freeSize: number) => {
-    console.info("getFreeSizeOfVolume successfully:" + number);
-  }).catch((err: BusinessError) => {
-    console.error(`getFreeSizeOfVolume failed with err, code is: ${err.code}, message is: ${err.message}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`getAllVolumes failed with err, code is: ${err.code}, message is: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
-  let uuid: string = volumes[0].uuid;
-  storageStatistics.getFreeSizeOfVolume(uuid).then((freeSize: long) => {
-    console.info("getFreeSizeOfVolume successfully:" + freeSize);
-  }).catch((err: BusinessError): void => {
-    console.error(`getFreeSizeOfVolume failed with err, code is: ${err.code}, message is: ${err.message}`);
-  });
-}).catch((err: BusinessError): void => {
-  console.error(`getAllVolumes failed with err, code is: ${err.code}, message is: ${err.message}`);
-});
-```
+参见 [getFreeSizeOfVolume](#getfreesizeofvolume)
 

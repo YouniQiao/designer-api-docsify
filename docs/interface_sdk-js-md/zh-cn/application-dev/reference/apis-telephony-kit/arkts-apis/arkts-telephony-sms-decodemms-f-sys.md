@@ -57,6 +57,27 @@ sms.decodeMms(mmsPdu, (err: BusinessError, data: sms.MmsInformation) => {
 });
 ```
 
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mmsFilePathName: string = "filename";
+let promise = sms.decodeMms(mmsFilePathName);
+promise.then((data: sms.MmsInformation) => {
+    console.info(`decodeMms success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`decodeMms failed, promise: err->${JSON.stringify(err)}`);
+});
+
+const mmsPdu: Array<number> = [0x8c, 0x80, 0x98, 0x31, 0x00, 0x8d, 0x92, 0x89, 0x09, 0x80, 0x07, 0xea, 0x31, 0x30, 0x30, 0x38, 0x36, 0x00, 0x97, 0x07, 0xea, 0x31, 0x30, 0x30,0x31, 0x30, 0x00, 0x84, 0x74, 0x79, 0x70, 0x65, 0x00, 0x00];
+let promiseArr = sms.decodeMms(mmsPdu);
+promiseArr.then((data: sms.MmsInformation) => {
+    console.info(`decodeMms success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`decodeMms failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## decodeMms
 
@@ -99,24 +120,5 @@ function decodeMms(mmsFilePathName: string | Array<int>): Promise<MmsInformation
 
 **示例**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let mmsFilePathName: string = "filename";
-let promise = sms.decodeMms(mmsFilePathName);
-promise.then((data: sms.MmsInformation) => {
-    console.info(`decodeMms success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`decodeMms failed, promise: err->${JSON.stringify(err)}`);
-});
-
-const mmsPdu: Array<number> = [0x8c, 0x80, 0x98, 0x31, 0x00, 0x8d, 0x92, 0x89, 0x09, 0x80, 0x07, 0xea, 0x31, 0x30, 0x30, 0x38, 0x36, 0x00, 0x97, 0x07, 0xea, 0x31, 0x30, 0x30,0x31, 0x30, 0x00, 0x84, 0x74, 0x79, 0x70, 0x65, 0x00, 0x00];
-let promiseArr = sms.decodeMms(mmsPdu);
-promiseArr.then((data: sms.MmsInformation) => {
-    console.info(`decodeMms success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`decodeMms failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [decodeMms](#decodemms)
 

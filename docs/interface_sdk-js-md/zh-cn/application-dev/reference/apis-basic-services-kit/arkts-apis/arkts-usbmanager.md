@@ -72,16 +72,16 @@ import { serialManager } from '@kit.BasicServicesKit';
 | [getDeviceFunctions](arkts-basicservices-usbmanager-getdevicefunctions-f-sys.md) | Obtains the numeric mask combination for the current USB function list in Device mode. |
 | [getFunctionsFromString](arkts-basicservices-usbmanager-getfunctionsfromstring-f-sys.md) | 在设备模式下，将字符串形式的USB功能列表转换为数字掩码。适用于需要将配置文件或用户输入的字符串形式USB功能列表转换为系统内部使用的数字掩码的场景，以便后续调用setDeviceFunctions等接口设置USB功能。 |
 | [getPortList](arkts-basicservices-usbmanager-getportlist-f-sys.md) | 获取所有物理USB端口描述信息。适用于需要枚举USB端口、进行端口管理、设备连接诊断、或查询端口配置信息的场景。开发者模式关闭时，如果没有设备接入，接口返回`undefined`，注意需要对接口返回值做判空处理。 |
-| [getPortSupportModes](arkts-basicservices-usbmanager-getportsupportmodes-f-sys.md) | 获取指定的端口支持的模式列表的组合掩码。适用于系统应用需要查询USB-C端口能力判断是否支持特定模式（如UFP、DFP或DRP模式）的场景。开发者模式关闭时，如果没有设备接入，接口返回undefined，注意需要对接口返回值做判空 处理。详细枚举值参见[PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md)。 |
 | [getPorts](arkts-basicservices-usbmanager-getports-f-sys.md) | 获取所有物理USB端口描述信息。适用于需要枚举USB端口、进行端口管理、设备连接诊断、或查询端口配置信息的场景。开发者模式关闭时，如果没有设备接入，接口返回`undefined`，注意需要对接口返回值做判空处理。 |
+| [getPortSupportModes](arkts-basicservices-usbmanager-getportsupportmodes-f-sys.md) | 获取指定的端口支持的模式列表的组合掩码。适用于系统应用需要查询USB-C端口能力判断是否支持特定模式（如UFP、DFP或DRP模式）的场景。开发者模式关闭时，如果没有设备接入，接口返回undefined，注意需要对接口返回值做判空 处理。详细枚举值参见[PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md)。 |
 | [getStringFromFunctions](arkts-basicservices-usbmanager-getstringfromfunctions-f-sys.md) | 在设备模式下，将数字掩码形式的USB功能列表转换为字符串。适用于需要将当前USB功能状态以字符串形式显示或保存的场景，如在日志中记录当前功能配置、在UI界面展示当前功能等。 |
 | [getStringFromFunctions](arkts-basicservices-usbmanager-getstringfromfunctions-f-sys.md) | Converts the numeric mask combination of a given USB function list to a string descriptor. |
 | [getSupportedModes](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md) | 获取指定的端口支持的模式列表的组合掩码。适用于系统应用需要查询USB-C端口能力判断是否支持特定模式（如UFP、DFP或DRP模式）的场景。返回值为PortModeType的组合掩码，可通过位运算判断端口是否支持特定模式。 PortModeType包括：NONE（0，无模式）、UFP（1，上行端口模式，dataRole为DEVICE）、DFP（2，下行端口模式，dataRole为HOST）、DRP（3，双角色模式，可在UFP和DFP间切换）、 NUM_MODES（4，当前不支持）。开发者可根据返回值判断端口是否支持所需的电源角色和数据传输角色组合。 |
 | [setCurrentFunctions](arkts-basicservices-usbmanager-setcurrentfunctions-f-sys.md) | 在设备模式下，设置当前的USB功能列表。使用Promise异步回调。调用成功后，设备的USB功能将切换为指定的功能列表。适用于系统应用需要动态切换设备USB功能、配置设备工作模式的场景。 |
 | [setDeviceFunctions](arkts-basicservices-usbmanager-setdevicefunctions-f-sys.md) | 在设备模式下，设置当前的USB功能列表。使用Promise异步回调。调用成功后，设备的USB功能将切换为指定的功能列表。部分USB功能可能不被当前设备支持，设置前建议先查询设备支持的功能列表。开发者模式关闭时，如果没有设备接入，操 作可能会失败，调用失败时抛出异常。功能切换会触发USB设备的重新枚举，已连接的主机可能需要重新识别设备。多个功能可通过位运算组合设置，但某些功能可能互斥或存在优先级，具体约束请参考设备规格。功能设置失败可能由于设备不支持、权限不足 或系统限制，详见错误码说明。 |
 | [setDeviceFunctions](arkts-basicservices-usbmanager-setdevicefunctions-f-sys.md) | Sets the current USB function list in Device mode. |
-| [setPortRoleTypes](arkts-basicservices-usbmanager-setportroletypes-f-sys.md) | 设置指定端口当前的角色类型，包含电源角色、数据传输角色。使用Promise异步回调。调用成功后端口的电源角色和数据传输角色将切换为指定的角色。适用于系统应用需要动态切换USB端口角色的场景。开发者模式关闭时，如果没有设备接入，操作 可能会失败，调用失败时抛出异常。角色约束详情参见[USBPortStatus](arkts-basicservices-usbmanager-usbportstatus-i-sys.md)。 |
 | [setPortRoles](arkts-basicservices-usbmanager-setportroles-f-sys.md) | 设置指定端口当前的角色模式，包含电源角色、数据传输角色。使用Promise异步回调。调用成功后端口角色将切换为指定的角色。适用于系统应用需要动态切换USB端口角色的场景。开发者模式关闭时，如果没有设备接入，操作可能会失败，调用失败 时抛出异常。 |
+| [setPortRoleTypes](arkts-basicservices-usbmanager-setportroletypes-f-sys.md) | 设置指定端口当前的角色类型，包含电源角色、数据传输角色。使用Promise异步回调。调用成功后端口的电源角色和数据传输角色将切换为指定的角色。适用于系统应用需要动态切换USB端口角色的场景。开发者模式关闭时，如果没有设备接入，操作 可能会失败，调用失败时抛出异常。角色约束详情参见[USBPortStatus](arkts-basicservices-usbmanager-usbportstatus-i-sys.md)。 |
 | [usbFunctionsFromString](arkts-basicservices-usbmanager-usbfunctionsfromstring-f-sys.md) | 在设备模式下，将字符串形式的USB功能列表转换为数字掩码。适用于需要将配置文件或用户输入的字符串形式USB功能列表转换为系统内部使用的数字掩码的场景，以便后续调用setDeviceFunctions等接口设置USB功能。 |
 | [usbFunctionsToString](arkts-basicservices-usbmanager-usbfunctionstostring-f-sys.md) | 在设备模式下，将数字掩码形式的USB功能列表转换为字符串。适用于需要将当前USB功能状态以字符串形式显示或保存的场景，如在日志中记录当前功能配置、在UI界面展示当前功能等。 |
 <!--DelEnd-->
@@ -95,12 +95,12 @@ import { serialManager } from '@kit.BasicServicesKit';
 | [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) | USB配件句柄，包含配件文件描述符，用于通过CoreFileKit提供的read/write接口和配件进行通信。 |
 | [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md) | USB配置，一个[USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md)中可以含有多个配置。 |
 | [USBControlParams](arkts-basicservices-usbmanager-usbcontrolparams-i.md) | 控制传输参数。 |
+| [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | USB数据传输参数对象，包含USB数据传输所需的所有参数，用于usbSubmitTransfer和usbCancelTransfer接口发起传输请求。 |
 | [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) | USB设备信息。 |
 | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | USB设备连接通道，用于确定总线地址和设备地址。 |
 | [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md) | 控制传输参数。 |
 | [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md) | USB端点，用于主机与设备之间数据传输的通信端点。通过[USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md)获取。 |
 | [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md) | 一个[USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md)中可以含有多个USBInterface，每个USBInterface提供一个功能。 |
-| [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | USB数据传输参数对象，包含USB数据传输所需的所有参数，用于usbSubmitTransfer和usbCancelTransfer接口发起传输请求。 |
 | [UsbIsoPacketDescriptor](arkts-basicservices-usbmanager-usbisopacketdescriptor-i.md) | 实时传输模式回调返回的分包信息。 |
 
 <!--Del-->
@@ -117,9 +117,9 @@ import { serialManager } from '@kit.BasicServicesKit';
 | 名称 | 说明 |
 | --- | --- |
 | [USBControlRequestType](arkts-basicservices-usbmanager-usbcontrolrequesttype-e.md) | 控制请求类型，用于指定具体的USB控制请求命令（如获取描述符、设置地址等）。 |
+| [UsbEndpointTransferType](arkts-basicservices-usbmanager-usbendpointtransfertype-e.md) | USB传输类型。 |
 | [USBRequestDirection](arkts-basicservices-usbmanager-usbrequestdirection-e.md) | 请求方向。 |
 | [USBRequestTargetType](arkts-basicservices-usbmanager-usbrequesttargettype-e.md) | 请求目标类型。 |
-| [UsbEndpointTransferType](arkts-basicservices-usbmanager-usbendpointtransfertype-e.md) | USB传输类型。 |
 | [UsbTransferFlags](arkts-basicservices-usbmanager-usbtransferflags-e.md) | USB传输标志。 |
 | [UsbTransferStatus](arkts-basicservices-usbmanager-usbtransferstatus-e.md) | 数据处理完成后通过回调返回的状态码。 |
 

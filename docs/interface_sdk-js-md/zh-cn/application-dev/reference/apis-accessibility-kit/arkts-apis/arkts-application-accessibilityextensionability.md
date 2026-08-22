@@ -13,28 +13,28 @@ import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExten
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessibilityExtensionAbility](arkts-accessibility-applicationaccessibilityextensionability-accessibilityextensionability-c.md) | AccessibilityExtensionAbility基于ExtensionAbility框架，提供无障碍扩展业务的能力，包括连接无障碍服务、断开无障碍服务、处理无障碍事件和处理无障碍按键事件等。 |
+| [AccessibilityExtensionAbility](arkts-accessibility-application-accessibilityextensionability-accessibilityextensionability-c.md) | AccessibilityExtensionAbility基于ExtensionAbility框架，提供无障碍扩展业务的能力，包括连接无障碍服务、断开无障碍服务、处理无障碍事件和处理无障碍按键事件等。 |
 
 <!--Del-->
 ### 类（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessibilityExtensionAbility](arkts-accessibility-applicationaccessibilityextensionability-accessibilityextensionability-c-sys.md) | AccessibilityExtensionAbility基于ExtensionAbility框架，提供无障碍扩展业务的能力，包括连接无障碍服务、断开无障碍服务、处理无障碍事件和处理无障碍按键事件等。 |
+| [AccessibilityExtensionAbility](arkts-accessibility-application-accessibilityextensionability-accessibilityextensionability-c-sys.md) | AccessibilityExtensionAbility基于ExtensionAbility框架，提供无障碍扩展业务的能力，包括连接无障碍服务、断开无障碍服务、处理无障碍事件和处理无障碍按键事件等。 |
 <!--DelEnd-->
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessibilityEvent](arkts-accessibility-applicationaccessibilityextensionability-accessibilityevent-i.md) | 无障碍事件信息。无障碍事件由系统无障碍服务在用户操作或界面变化时生成，通过eventType标识事件类别（包括无障碍事件类型、窗口变化类型、触摸浏览事件类型、手势事件类型、页面更新类型），辅助功能扩展可通过 onAccessibilityEvent回调接收并处理这些事件。 |
+| [AccessibilityEvent](arkts-accessibility-application-accessibilityextensionability-accessibilityevent-i.md) | 无障碍事件信息。无障碍事件由系统无障碍服务在用户操作或界面变化时生成，通过eventType标识事件类别（包括无障碍事件类型、窗口变化类型、触摸浏览事件类型、手势事件类型、页面更新类型），辅助功能扩展可通过 onAccessibilityEvent回调接收并处理这些事件。 |
 
 <!--Del-->
 ### 接口（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessibilityEventInfo](arkts-accessibility-applicationaccessibilityextensionability-accessibilityeventinfo-i-sys.md) | 无障碍事件信息。 |
+| [AccessibilityEventInfo](arkts-accessibility-application-accessibilityextensionability-accessibilityeventinfo-i-sys.md) | 无障碍事件信息。 |
 <!--DelEnd-->
 
 ### 类型

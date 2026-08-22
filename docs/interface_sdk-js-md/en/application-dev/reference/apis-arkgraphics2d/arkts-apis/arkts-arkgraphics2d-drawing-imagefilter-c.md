@@ -57,6 +57,20 @@ Creates a filter by blending two existing filters in a certain way.
 | --- | --- |
 | [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let dx = 15.0;
+let dy = 10.0;
+let offsetFilter1 = drawing.ImageFilter.createOffsetImageFilter(dx, dy, null);
+let x = 15.0;
+let y = 30.0;
+let offsetFilter2 = drawing.ImageFilter.createOffsetImageFilter(x, y, null);
+let blendImageFilter = drawing.ImageFilter.createBlendImageFilter(drawing.BlendMode.SRC_IN, offsetFilter1, offsetFilter2);
+```
+
 ## createBlendImageFilter
 
 ```TypeScript
@@ -90,6 +104,10 @@ Makes an ImageFilter object that applies the blend to the input.
 | Error Code ID | Error Message |
 | --- | --- |
 | [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+
+**Examples**
+
+See [createBlendImageFilter](#createblendimagefilter)
 
 ## createBlurImageFilter
 
@@ -127,6 +145,14 @@ Creates an image filter with a given blur effect.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let imgFilter = drawing.ImageFilter.createBlurImageFilter(5, 10, drawing.TileMode.CLAMP);
+```
+
 ## createBlurImageFilter
 
 ```TypeScript
@@ -163,6 +189,10 @@ Creates an image filter with a given blur effect.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**Examples**
+
+See [createBlurImageFilter](#createblurimagefilter)
+
 ## createComposeImageFilter
 
 ```TypeScript
@@ -190,6 +220,25 @@ Cascades two image filters to create a new image filter. The first filter's outp
 | --- | --- |
 | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | Image filter created. |
 
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let blurSigmaX = 10.0;
+let blurSigmaY = 10.0;
+let blurFilter = drawing.ImageFilter.createBlurImageFilter(blurSigmaX, blurSigmaY, drawing.TileMode.CLAMP, null);
+let colorMatrix:Array<number> = [
+  0, 0, 0, 0, 0,
+  0, 1, 0, 0, 0,
+  0, 0, 1, 0, 0,
+  0, 0, 0, 1, 0
+];
+let redRemovalFilter = drawing.ColorFilter.createMatrixColorFilter(colorMatrix);
+let colorFilter = drawing.ImageFilter.createFromColorFilter(redRemovalFilter, null);
+let composedImageFilter = drawing.ImageFilter.createComposeImageFilter(colorFilter, blurFilter);
+```
+
 ## createComposeImageFilter
 
 ```TypeScript
@@ -216,6 +265,10 @@ Makes an ImageFilter object that combines the "inner" and "outer" filters, allow
 | Type | Description |
 | --- | --- |
 | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | ImageFilter object. |
+
+**Examples**
+
+See [createComposeImageFilter](#createcomposeimagefilter)
 
 ## createFromColorFilter
 
@@ -250,6 +303,16 @@ Creates an image filter object with a given color filter effect.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let imgFilter = drawing.ImageFilter.createBlurImageFilter(5, 10, drawing.TileMode.CLAMP);
+let colorFilter = drawing.ColorFilter.createSRGBGammaToLinear();
+let imgFilter1 = drawing.ImageFilter.createFromColorFilter(colorFilter, imgFilter);
+```
+
 ## createFromColorFilter
 
 ```TypeScript
@@ -283,6 +346,10 @@ Creates an image filter object with a given color filter effect.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 
+**Examples**
+
+See [createFromColorFilter](#createfromcolorfilter)
+
 ## createFromImage
 
 ```TypeScript
@@ -310,6 +377,54 @@ Creates an image filter from a given image. You are advised not to use the funct
 | Type | Description |
 | --- | --- |
 | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | Image filter created. |
+
+**Examples**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { image } from '@kit.ImageKit';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context: DrawContext) {
+    const width = 1000;
+    const height = 1000;
+    const bufferSize = width * height * 4;
+    const color: ArrayBuffer = new ArrayBuffer(bufferSize);
+
+    const colorData = new Uint8Array(color);
+    for (let i = 0; i < colorData.length; i += 4) {
+      colorData[i] = 255;
+      colorData[i+1] = 156;
+      colorData[i+2] = 0;
+      colorData[i+3] = 255;
+    }
+
+    let opts: image.InitializationOptions = {
+      editable: true,
+      pixelFormat: 3,
+      size: { height, width }
+    }
+
+    let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
+    let srcRect: common2D.Rect = {
+      left: 10,
+      top: 10,
+      right: 80,
+      bottom: 80
+    };
+    let dstRect: common2D.Rect = {
+      left: 200,
+      top: 200,
+      right: 400,
+      bottom: 400
+    };
+    if (pixelMap != null) {
+      let filter = drawing.ImageFilter.createFromImage(pixelMap, srcRect, dstRect);
+    }
+  }
+}
+```
 
 ## createFromImage
 
@@ -339,6 +454,10 @@ Makes an ImageFilter object that applies the bitmap to the input.
 | --- | --- |
 | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | ImageFilter object. |
 
+**Examples**
+
+See [createFromImage](#createfromimage)
+
 ## createFromShaderEffect
 
 ```TypeScript
@@ -365,6 +484,15 @@ Creates an **ImageFilter** object based on a shader.
 | --- | --- |
 | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | Image filter created. |
 
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let shaderEffect = drawing.ShaderEffect.createColorShader(0xFF00FF00);
+let renderEffect = drawing.ImageFilter.createFromShaderEffect(shaderEffect);
+```
+
 ## createFromShaderEffect
 
 ```TypeScript
@@ -390,6 +518,10 @@ Makes an ImageFilter object that renders the contents of the input Shader.
 | Type | Description |
 | --- | --- |
 | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | ImageFilter object. |
+
+**Examples**
+
+See [createFromShaderEffect](#createfromshadereffect)
 
 ## createOffsetImageFilter
 
@@ -419,6 +551,16 @@ Creates an offset filter to translate the input filter based on the specified ve
 | --- | --- |
 | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | Image filter created. |
 
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let dx = 15.0;
+let dy = 10.0;
+let offsetFilter = drawing.ImageFilter.createOffsetImageFilter(dx, dy, null);
+```
+
 ## createOffsetImageFilter
 
 ```TypeScript
@@ -446,4 +588,8 @@ Makes an ImageFilter object that instance with the provided x and y offset.
 | Type | Description |
 | --- | --- |
 | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | ImageFilter object. |
+
+**Examples**
+
+See [createOffsetImageFilter](#createoffsetimagefilter)
 

@@ -26,7 +26,7 @@ Obtains the execution result of a startup task or .so file preloading task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTask | string | Yes | Name of the [StartupTask](arkts-ability-appappstartupstartuptask-startuptask-c.md) or name of the .so file to be preloaded. |
+| startupTask | string | Yes | Name of the [StartupTask](../../apis-default/arkts-apis/arkts-app-appstartup-startuptask-startuptask-c.md) or name of the .so file to be preloaded. |
 
 **Return value:**
 
@@ -106,4 +106,8 @@ Obtains specific startup task result.
 | Type | Description |
 | --- | --- |
 | Any | The result of specific startup task. |
+
+**Examples**
+
+See [getStartupTaskResult](#getstartuptaskresult)
 

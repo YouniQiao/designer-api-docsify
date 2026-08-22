@@ -40,7 +40,7 @@ Obtains information about the audio effect mode in use. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | Audio stream usage. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioEffectInfoArray](arkts-audio-audio-audioeffectinfoarray-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the information about the audio effect mode obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioEffectInfoArray](arkts-audio-audio-audioeffectinfoarray-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the information about the audio effect mode obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -48,6 +48,30 @@ Obtains information about the audio effect mode in use. This API uses an asynchr
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioStreamManager.getAudioEffectInfoArray(audio.StreamUsage.STREAM_USAGE_MUSIC, (err: BusinessError, audioEffectInfoArray: audio.AudioEffectInfoArray) => {
+  if (err) {
+    console.error(`Failed to get audio effect info array. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting effect info array, AudioEffectInfoArray: ${JSON.stringify(audioEffectInfoArray)}.`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioStreamManager.getAudioEffectInfoArray(audio.StreamUsage.STREAM_USAGE_MUSIC).then((audioEffectInfoArray: audio.AudioEffectInfoArray) => {
+  console.info(`Succeeded in getting effect info array, AudioEffectInfoArray: ${JSON.stringify(audioEffectInfoArray)}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get audio effect info array. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getAudioEffectInfoArray
 
@@ -82,6 +106,10 @@ Obtains information about the audio effect mode in use. This API uses a promise 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
 
+**Examples**
+
+See [getAudioEffectInfoArray](#getaudioeffectinfoarray)
+
 ## getAudioEffectInfoArraySync
 
 ```TypeScript
@@ -115,6 +143,20 @@ Obtains information about the audio effect mode in use. This API returns the res
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let audioEffectInfoArray = audioStreamManager.getAudioEffectInfoArraySync(audio.StreamUsage.STREAM_USAGE_MUSIC);
+  console.info(`Succeeded in getting effect info array, AudioEffectInfoArray: ${JSON.stringify(audioEffectInfoArray)}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get audio effect info array. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getCurrentAudioCapturerInfoArray
 
 ```TypeScript
@@ -138,7 +180,31 @@ Obtains the information about this audio capturer. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio capturer information obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio capturer information obtained; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioStreamManager.getCurrentAudioCapturerInfoArray((err: BusinessError, audioCapturerChangeInfoArray: audio.AudioCapturerChangeInfoArray) => {
+  if (err) {
+    console.error(`Failed to get current audio capturer info array. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting current audio capturer info array, AudioCapturerChangeInfoArray: ${JSON.stringify(audioCapturerChangeInfoArray)}.`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioStreamManager.getCurrentAudioCapturerInfoArray().then((audioCapturerChangeInfoArray: audio.AudioCapturerChangeInfoArray) => {
+  console.info(`Succeeded in getting current audio capturer info array, AudioCapturerChangeInfoArray: ${JSON.stringify(audioCapturerChangeInfoArray)}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get current audio capturer info array. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getCurrentAudioCapturerInfoArray
 
@@ -165,6 +231,10 @@ Obtains the information about this audio capturer. This API uses a promise to re
 | --- | --- |
 | Promise&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | Promise used to return the audio capturer information. |
 
+**Examples**
+
+See [getCurrentAudioCapturerInfoArray](#getcurrentaudiocapturerinfoarray)
+
 ## getCurrentAudioCapturerInfoArraySync
 
 ```TypeScript
@@ -190,6 +260,20 @@ Obtains the information about this audio capturer. This API returns the result s
 | --- | --- |
 | [AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md) | Audio capturer information. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let audioCapturerChangeInfoArray = audioStreamManager.getCurrentAudioCapturerInfoArraySync();
+  console.info(`Succeeded in getting current audio capturer info array, AudioCapturerChangeInfoArray: ${JSON.stringify(audioCapturerChangeInfoArray)}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get current audio capturer info array. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getCurrentAudioRendererInfoArray
 
 ```TypeScript
@@ -213,7 +297,31 @@ Obtains the information about this audio renderer. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio renderer information obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio renderer information obtained; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioStreamManager.getCurrentAudioRendererInfoArray((err: BusinessError, audioRendererChangeInfoArray: audio.AudioRendererChangeInfoArray) => {
+  if (err) {
+    console.error(`Failed to get current audio renderer info array. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting current audio renderer info array, AudioRendererChangeInfoArray: ${JSON.stringify(audioRendererChangeInfoArray)}.`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioStreamManager.getCurrentAudioRendererInfoArray().then((audioRendererChangeInfoArray: audio.AudioRendererChangeInfoArray) => {
+  console.info(`Succeeded in getting current audio renderer info array, AudioRendererChangeInfoArray: ${JSON.stringify(audioRendererChangeInfoArray)}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get current audio renderer info array. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getCurrentAudioRendererInfoArray
 
@@ -240,6 +348,10 @@ Obtains the information about this audio renderer. This API uses a promise to re
 | --- | --- |
 | Promise&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | Promise used to return the audio renderer information. |
 
+**Examples**
+
+See [getCurrentAudioRendererInfoArray](#getcurrentaudiorendererinfoarray)
+
 ## getCurrentAudioRendererInfoArraySync
 
 ```TypeScript
@@ -264,6 +376,20 @@ Obtains the information about this audio renderer. This API returns the result s
 | Type | Description |
 | --- | --- |
 | [AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md) | Audio renderer information. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let audioRendererChangeInfoArray: audio.AudioRendererChangeInfoArray = audioStreamManager.getCurrentAudioRendererInfoArraySync();
+  console.info(`Succeeded in getting current audio renderer info array, AudioRendererChangeInfoArray: ${JSON.stringify(audioRendererChangeInfoArray)}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get current audio renderer info array. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## isAcousticEchoCancelerSupported
 
@@ -297,6 +423,20 @@ Checks whether the specified audio source type supports echo cancellation.
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let isAcousticEchoCancelerSupported = audioStreamManager.isAcousticEchoCancelerSupported(audio.SourceType.SOURCE_TYPE_LIVE);
+  console.info(`Succeeded in using isAcousticEchoCancelerSupported function, IsAcousticEchoCancelerSupported: ${isAcousticEchoCancelerSupported}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to use isAcousticEchoCancelerSupported function. code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## isActive
 
 ```TypeScript
@@ -320,7 +460,45 @@ Checks whether a stream is active. This API uses an asynchronous callback to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio stream types. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the stream is active or **false** if not active; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the stream is active or **false** if not active; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.isActive(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: boolean) => {
+  if (err) {
+    console.error(`Failed to obtain the active status of the stream. ${err}`);
+    return;
+  }
+  console.info(`Callback invoked to indicate that the active status of the stream is obtained ${value}.`);
+});
+```
+
+```TypeScript
+audioManager.isActive(audio.AudioVolumeType.MEDIA).then((value: boolean) => {
+  console.info(`Promise returned to indicate that the active status of the stream is obtained ${value}.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioStreamManager.isActive(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: boolean) => {
+if (err) {
+  console.error(`Failed to obtain the active status of the stream. ${err}`);
+  return;
+}
+  console.info(`Callback invoked to indicate that the active status of the stream is obtained ${value}.`);
+});
+```
+
+```TypeScript
+audioStreamManager.isActive(audio.AudioVolumeType.MEDIA).then((value: boolean) => {
+  console.info(`Promise returned to indicate that the active status of the stream is obtained ${value}.`);
+});
+```
 
 ## isActive
 
@@ -351,6 +529,10 @@ Checks whether a stream is active. This API uses a promise to return the result.
 | Type | Description |
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the stream is active. **true** if active, **false** otherwise. |
+
+**Examples**
+
+See [isActive](#isactive)
 
 ## isActiveSync
 
@@ -389,6 +571,20 @@ Checks whether a stream is active. This API returns the result synchronously.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let value: boolean = audioStreamManager.isActiveSync(audio.AudioVolumeType.MEDIA);
+  console.info(`Indicate that the active status of the stream is obtained ${value}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain the active status of the stream ${error}.`);
+}
+```
+
 ## isAudioLoopbackSupported
 
 ```TypeScript
@@ -420,6 +616,20 @@ Checks whether the current system supports the specified audio loopback mode.
 | Error Code ID | Error Message |
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let isAudioLoopbackSupported = audioStreamManager.isAudioLoopbackSupported(audio.AudioLoopbackMode.HARDWARE);
+  console.info(`Succeeded in using isAudioLoopbackSupported function, IsAudioLoopbackSupported: ${isAudioLoopbackSupported}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to use isAudioLoopbackSupported function. code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## isDirectPlaybackSupported
 
@@ -540,6 +750,20 @@ Checks whether the intelligent noise reduction feature is enabled for the audio 
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let isSupport = audioStreamManager.isIntelligentNoiseReductionEnabledForCurrentDevice(audio.SourceType.SOURCE_TYPE_LIVE);
+  console.info(`SourceType: ${audio.SourceType.SOURCE_TYPE_LIVE} intelligent noise reduction enabled is: ${isSupport}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`isIntelligentNoiseReductionEnabledForCurrentDevice ERROR: ${error}`);
+}
+```
+
 ## isMultichannelPlaybackSupported
 
 ```TypeScript
@@ -630,6 +854,44 @@ Checks whether recording can be started based on the audio source type in the au
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let audioStreamInfo: audio.AudioStreamInfo = {
+  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000,
+  channels: audio.AudioChannel.CHANNEL_2,
+  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE,
+  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW
+};
+
+let audioCapturerInfo: audio.AudioCapturerInfo = {
+  source: audio.SourceType.SOURCE_TYPE_MIC,
+  capturerFlags: 0
+};
+
+let audioCapturerOptions: audio.AudioCapturerOptions = {
+  streamInfo: audioStreamInfo,
+  capturerInfo: audioCapturerInfo
+};
+
+audio.createAudioCapturer(audioCapturerOptions, (err: BusinessError, audioCapturer: audio.AudioCapturer) => {
+  if (err) {
+    console.error(`Failed to create AudioCapturer. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Succeeded in creating AudioCapturer.');
+    try {
+      let isRecordingAvailable = audioStreamManager.isRecordingAvailable(audioCapturerInfo);
+      console.info(`Succeeded in using isRecordingAvailable function, IsRecordingAvailable: ${isRecordingAvailable}.`);
+    } catch (err) {
+      let error = err as BusinessError;
+      console.error(`Failed to use isRecordingAvailable function. code: ${error.code}, message: ${error.message}`);
+    }
+  }
+});
+```
+
 ## isStreamActive
 
 ```TypeScript
@@ -662,57 +924,19 @@ Checks whether a stream is active. This API returns the result synchronously.
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## offAudioCapturerChange
+**Examples**
 
 ```TypeScript
-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let isStreamActive = audioStreamManager.isStreamActive(audio.StreamUsage.STREAM_USAGE_MUSIC);
+  console.info(`Succeeded in using isStreamActive function, IsStreamActive: ${isStreamActive}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to use isStreamActive function. code: ${error.code}, message: ${error.message}`);
+}
 ```
-
-Unsubscribes to audio capturer change events.
-
-**Since:** 23
-
-<!--Device-AudioStreamManager-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Capturer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | No | Callback invoked for the audio capturer change event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-## offAudioRendererChange
-
-```TypeScript
-offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void
-```
-
-Unsubscribes to audio renderer change events.
-
-**Since:** 23
-
-<!--Device-AudioStreamManager-offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Renderer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | No | Callback invoked for the audio renderer change event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## off('audioCapturerChange')
 
@@ -738,7 +962,7 @@ Unsubscribes from the audio capturer change event. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | Yes | Event type. The event **'audioCapturerChange'** is triggered when the audio capturer is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | No | Callback used to return the audio capturer information.<br>**Since:** 18 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | No | Callback used to return the audio capturer information.<br>**Since:** 18 |
 
 **Error codes:**
 
@@ -770,7 +994,7 @@ Unsubscribes from the audio renderer change event. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioRendererChange' | Yes | Event type. The event **'audioRendererChange'** is triggered when the audio playback stream status or device is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | No | Callback used to return the audio renderer information.<br>**Since:** 18 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | No | Callback used to return the audio renderer information.<br>**Since:** 18 |
 
 **Error codes:**
 
@@ -778,17 +1002,17 @@ Unsubscribes from the audio renderer change event. This API uses an asynchronous
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onAudioCapturerChange
+## offAudioCapturerChange
 
 ```TypeScript
-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void
+offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void
 ```
 
-Listens for audio capturer change events. When there is any audio capturer change, registered clients will receive the callback.
+Unsubscribes to audio capturer change events.
 
 **Since:** 23
 
-<!--Device-AudioStreamManager-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void-End-->
+<!--Device-AudioStreamManager-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -796,7 +1020,7 @@ Listens for audio capturer change events. When there is any audio capturer chang
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | Yes | Callback invoked for the audio capturer change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | No | Callback invoked for the audio capturer change event. |
 
 **Error codes:**
 
@@ -804,17 +1028,17 @@ Listens for audio capturer change events. When there is any audio capturer chang
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onAudioRendererChange
+## offAudioRendererChange
 
 ```TypeScript
-onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void
+offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void
 ```
 
-Listens for audio renderer change events. When there is any audio renderer change, registered clients will receive the callback.
+Unsubscribes to audio renderer change events.
 
 **Since:** 23
 
-<!--Device-AudioStreamManager-onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void-End-->
+<!--Device-AudioStreamManager-offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -822,7 +1046,7 @@ Listens for audio renderer change events. When there is any audio renderer chang
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | Yes | Callback invoked for the audio renderer change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | No | Callback invoked for the audio renderer change event. |
 
 **Error codes:**
 
@@ -854,7 +1078,7 @@ Subscribes to the audio capturer change event, which is triggered when the audio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | Yes | Event type. The event **'audioCapturerChange'** is triggered when the audio recording stream status or device is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | Yes | Callback used to return the audio capturer information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | Yes | Callback used to return the audio capturer information. |
 
 **Error codes:**
 
@@ -887,12 +1111,64 @@ Subscribes to the audio renderer change event, which is triggered when the audio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioRendererChange' | Yes | Event type. The event **'audioRendererChange'** is triggered when the audio playback stream status or device is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | Yes | Callback used to return the audio renderer information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | Yes | Callback used to return the audio renderer information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onAudioCapturerChange
+
+```TypeScript
+onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void
+```
+
+Listens for audio capturer change events. When there is any audio capturer change, registered clients will receive the callback.
+
+**Since:** 23
+
+<!--Device-AudioStreamManager-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | Yes | Callback invoked for the audio capturer change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onAudioRendererChange
+
+```TypeScript
+onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void
+```
+
+Listens for audio renderer change events. When there is any audio renderer change, registered clients will receive the callback.
+
+**Since:** 23
+
+<!--Device-AudioStreamManager-onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | Yes | Callback invoked for the audio renderer change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 

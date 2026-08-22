@@ -48,6 +48,14 @@ getType(ch: string): string
 | --- | --- |
 | string | 输入字符的一般类别值。 |
 
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let unicodeType: string = i18n.Unicode.getType('a'); // unicodeType = 'U_LOWERCASE_LETTER'
+```
+
 ## isDigit
 
 ```TypeScript
@@ -77,6 +85,14 @@ isDigit(ch: string): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | true表示输入的字符是数字，false表示输入的字符不是数字。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isDigit: boolean = i18n.Unicode.isDigit('1'); // isDigit = true
+```
 
 ## isIdeograph
 
@@ -108,6 +124,14 @@ isIdeograph(ch: string): boolean
 | --- | --- |
 | boolean | true表示输入的字符是表意文字，false表示输入的字符不是表意文字。 |
 
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isIdeograph: boolean = i18n.Unicode.isIdeograph('a'); // isIdeograph = false
+```
+
 ## isLetter
 
 ```TypeScript
@@ -137,6 +161,14 @@ isLetter(ch: string): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | true表示输入的字符是字母，false表示输入的字符不是字母。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isLetter: boolean = i18n.Unicode.isLetter('a'); // isLetter = true
+```
 
 ## isLowerCase
 
@@ -168,6 +200,14 @@ isLowerCase(ch: string): boolean
 | --- | --- |
 | boolean | true表示输入的字符是小写字母，false表示输入的字符不是小写字母。 |
 
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isLowercase: boolean = i18n.Unicode.isLowerCase('a'); // isLowercase = true
+```
+
 ## isRTL
 
 ```TypeScript
@@ -197,6 +237,21 @@ isRTL(ch: string): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | true表示输入的字符是从右到左语言的字符，false表示输入的字符不是从右到左语言的字符。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isZhRTL: boolean = i18n.isRTL('zh-CN'); // 中文不是镜像语言，返回false
+let isArRTL: boolean = i18n.isRTL('ar-EG'); // 阿语是镜像语言，返回true
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isRtl: boolean = i18n.Unicode.isRTL('a'); // isRtl = false
+```
 
 ## isSpaceChar
 
@@ -228,6 +283,14 @@ isSpaceChar(ch: string): boolean
 | --- | --- |
 | boolean | true表示输入的字符是空格符，false表示输入的字符不是空格符。 |
 
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isSpacechar: boolean = i18n.Unicode.isSpaceChar('a'); // isSpacechar = false
+```
+
 ## isUpperCase
 
 ```TypeScript
@@ -258,6 +321,14 @@ isUpperCase(ch: string): boolean
 | --- | --- |
 | boolean | true表示输入的字符是大写字母，false表示输入的字符不是大写字母。 |
 
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isUppercase: boolean = i18n.Unicode.isUpperCase('a'); // isUppercase = false
+```
+
 ## isWhitespace
 
 ```TypeScript
@@ -287,4 +358,12 @@ isWhitespace(ch: string): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | true表示输入的字符是空白符，false表示输入的字符不是空白符。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isWhitespace: boolean = i18n.Unicode.isWhitespace('a'); // isWhitespace = false
+```
 

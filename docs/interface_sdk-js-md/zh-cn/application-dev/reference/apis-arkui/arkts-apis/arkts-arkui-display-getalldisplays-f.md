@@ -69,6 +69,37 @@ display.getAllDisplays((err: BusinessError | null, data: Array<display.Display> 
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let displayClass: Array<display.Display> = [];
+let promise: Promise<Array<display.Display>> = display.getAllDisplays();
+promise.then((data: Array<display.Display>) => {
+  displayClass = data;
+  console.info(`Succeeded in obtaining all the display objects. Data:  ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain all the display objects. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { display } from '@kit.ArkUI';
+
+let displayClass: Array<display.Display> =[];
+let promise: Promise<Array<display.Display>> = display.getAllDisplays();
+promise.then((data: Array<display.Display>) => {
+  displayClass = data;
+  console.info(`Succeeded in obtaining all the display objects. Data:  ${JSON.stringify(data)}`);
+}).catch((err: Error) => {
+  console.error(`Failed to obtain all the display objects. Code: ${err?.code}, message: ${err?.message}`);
+});
+```
+
 
 ## getAllDisplays
 
@@ -100,34 +131,5 @@ function getAllDisplays(): Promise<Array<Display>>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let displayClass: Array<display.Display> = [];
-let promise: Promise<Array<display.Display>> = display.getAllDisplays();
-promise.then((data: Array<display.Display>) => {
-  displayClass = data;
-  console.info(`Succeeded in obtaining all the display objects. Data:  ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain all the display objects. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { display } from '@kit.ArkUI';
-
-let displayClass: Array<display.Display> =[];
-let promise: Promise<Array<display.Display>> = display.getAllDisplays();
-promise.then((data: Array<display.Display>) => {
-  displayClass = data;
-  console.info(`Succeeded in obtaining all the display objects. Data:  ${JSON.stringify(data)}`);
-}).catch((err: Error) => {
-  console.error(`Failed to obtain all the display objects. Code: ${err?.code}, message: ${err?.message}`);
-});
-```
+参见 [getAllDisplays](#getalldisplays)
 

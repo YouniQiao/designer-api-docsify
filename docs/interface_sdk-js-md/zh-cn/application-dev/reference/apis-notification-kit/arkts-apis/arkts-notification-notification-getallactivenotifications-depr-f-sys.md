@@ -36,6 +36,34 @@ function getAllActiveNotifications(callback: AsyncCallback<Array<NotificationReq
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)&gt;&gt; | 是 | 获取活动通知回调函数。 |
 
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+import NotificationManager from '@ohos.notificationManager';
+
+function getAllActiveNotificationsCallback(err: Base.BusinessError, data: NotificationManager.NotificationRequest[]) {
+  if (err) {
+    console.error("getAllActiveNotifications failed " + JSON.stringify(err));
+  } else {
+    console.info("getAllActiveNotifications success");
+  }
+}
+
+Notification.getAllActiveNotifications(getAllActiveNotificationsCallback);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+import NotificationManager from '@ohos.notificationManager';
+
+Notification.getAllActiveNotifications().then((data: NotificationManager.NotificationRequest[]) => {
+  console.info("getAllActiveNotifications success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`getAllActiveNotifications failed, code is ${err}`);
+});
+```
+
 
 ## getAllActiveNotifications
 
@@ -64,4 +92,8 @@ function getAllActiveNotifications(): Promise<Array<NotificationRequest>>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)&gt;&gt; | 以Promise形式返回获取活动通知。 |
+
+**示例**
+
+参见 [getAllActiveNotifications](#getallactivenotifications)
 

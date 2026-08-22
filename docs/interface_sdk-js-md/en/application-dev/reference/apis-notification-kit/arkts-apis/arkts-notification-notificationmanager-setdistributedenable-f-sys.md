@@ -33,7 +33,7 @@ Sets whether to enable distributed notification on this device. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Whether to enable distributed notification. The value **true** means to enable distributed notification, and **false** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -62,6 +62,17 @@ let setDistributedEnableCallback = (err: BusinessError): void => {
 };
 let enable: boolean = true;
 notificationManager.setDistributedEnable(enable, setDistributedEnableCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let enable: boolean = true;
+notificationManager.setDistributedEnable(enable).then(() => {
+    console.info("setDistributedEnable success");
+}).catch((err: BusinessError) => {
+    console.error(`setDistributedEnable failed, code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -114,14 +125,5 @@ Sets whether to enable distributed notification on this device. This API uses a 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let enable: boolean = true;
-notificationManager.setDistributedEnable(enable).then(() => {
-    console.info("setDistributedEnable success");
-}).catch((err: BusinessError) => {
-    console.error(`setDistributedEnable failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [setDistributedEnable](#setdistributedenable)
 

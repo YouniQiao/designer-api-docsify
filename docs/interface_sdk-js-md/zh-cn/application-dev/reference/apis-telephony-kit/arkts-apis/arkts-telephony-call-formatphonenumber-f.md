@@ -45,6 +45,18 @@ function formatPhoneNumber(phoneNumber: string, options: NumberFormatOptions, ca
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+call.formatPhoneNumber("138xxxxxxxx", (err: BusinessError, data: string) => {
+    if (err) {
+        console.error(`formatPhoneNumber fail, 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
+    } else {
+        console.info(`formatPhoneNumber success, data->${JSON.stringify(data)}`);
+    }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let options: call.NumberFormatOptions = {
     countryCode: "CN"
 };
@@ -54,6 +66,19 @@ call.formatPhoneNumber("138xxxxxxxx", options, (err: BusinessError, data: string
     } else {
         console.info(`formatPhoneNumber success, data->${JSON.stringify(data)}`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: call.NumberFormatOptions = {
+    countryCode: "CN"
+};
+call.formatPhoneNumber("138xxxxxxxx", options).then((data: string) => {
+    console.info(`formatPhoneNumber success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`formatPhoneNumber fail, promise: 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
 });
 ```
 
@@ -99,18 +124,7 @@ function formatPhoneNumber(phoneNumber: string, options?: NumberFormatOptions): 
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: call.NumberFormatOptions = {
-    countryCode: "CN"
-};
-call.formatPhoneNumber("138xxxxxxxx", options).then((data: string) => {
-    console.info(`formatPhoneNumber success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`formatPhoneNumber fail, promise: 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-});
-```
+参见 [formatPhoneNumber](#formatphonenumber)
 
 
 ## formatPhoneNumber
@@ -148,15 +162,5 @@ function formatPhoneNumber(phoneNumber: string, callback: AsyncCallback<string>)
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.formatPhoneNumber("138xxxxxxxx", (err: BusinessError, data: string) => {
-    if (err) {
-        console.error(`formatPhoneNumber fail, 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-    } else {
-        console.info(`formatPhoneNumber success, data->${JSON.stringify(data)}`);
-    }
-});
-```
+参见 [formatPhoneNumber](#formatphonenumber)
 

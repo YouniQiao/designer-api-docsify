@@ -44,6 +44,52 @@ function setApplicationAutoStartup(info: AutoStartupInfo, callback: AsyncCallbac
 | [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Failed to connect to the system service. |
 
+**示例**
+
+```TypeScript
+import { autoStartupManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 设置应用组件开机自启动
+  autoStartupManager.setApplicationAutoStartup({
+    bundleName: 'com.example.autostartupapp',
+    abilityName: 'EntryAbility'
+  }, (err: BusinessError) => {
+    if (err) {
+      console.error(`setApplicationAutoStartup failed, err code: ${err.code}, err msg: ${err.message}.`);
+      return;
+    }
+    console.info(`setApplicationAutoStartup success.`);
+  });
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let msg = (err as BusinessError).message;
+  console.error(`setApplicationAutoStartup failed, err code: ${code}, err msg: ${msg}.`);
+}
+```
+
+```TypeScript
+import { autoStartupManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 设置应用组件开机自启动
+  autoStartupManager.setApplicationAutoStartup({
+    bundleName: 'com.example.autostartupapp',
+    abilityName: 'EntryAbility'
+  }).then((data: void) => {
+    console.info(`setApplicationAutoStartup success.`);
+  }).catch((err: BusinessError) => {
+    console.error(`setApplicationAutoStartup failed, err code: ${err.code}, err msg: ${err.message}.`);
+  });
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let msg = (err as BusinessError).message;
+  console.error(`setApplicationAutoStartup failed, err code: ${code}, err msg: ${msg}.`);
+}
+```
+
 
 ## setApplicationAutoStartup
 
@@ -87,4 +133,8 @@ function setApplicationAutoStartup(info: AutoStartupInfo): Promise<void>
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
 | [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Failed to connect to the system service. |
+
+**示例**
+
+参见 [setApplicationAutoStartup](#setapplicationautostartup)
 

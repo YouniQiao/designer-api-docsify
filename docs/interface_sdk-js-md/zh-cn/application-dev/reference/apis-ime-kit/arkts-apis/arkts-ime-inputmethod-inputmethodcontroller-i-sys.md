@@ -72,6 +72,58 @@ hideSoftKeyboard(displayId: long): Promise<void>
 
 **示例**
 
+ArkTs-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().hideSoftKeyboard((err: BusinessError) => {
+  if (!err) {
+    console.info('Succeeded in hiding softKeyboard.');
+  } else {
+    console.error(`Failed to hide softKeyboard, code: ${err.code}, message: ${err.message}`);
+  }
+})
+```
+
+ArkTs-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethodController.hideSoftKeyboard((err?: BusinessError) => {
+  if (!err) {
+    console.info('Succeeded in hiding softKeyboard.');
+  } else {
+    console.error(`Failed to hideSoftKeyboard, code: ${err.code}, message: ${err.message}`);
+  }
+})
+```
+
+ArkTs-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().hideSoftKeyboard().then(() => {
+  console.info('Succeeded in hiding softKeyboard.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to hide softKeyboard, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTs-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethodController.hideSoftKeyboard().then(() => {
+  console.info('Succeeded in hiding softKeyboard.');
+}).catch((err: BusinessError): void=> {
+  console.error(`Failed to hideSoftKeyboard, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ArkTS-Dyn示例:
 
 ```TypeScript
@@ -145,6 +197,58 @@ showSoftKeyboard(displayId: long): Promise<void>
 | [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 **示例**
+
+ArkTs-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().showSoftKeyboard((err: BusinessError) => {
+  if (!err) {
+    console.info('Succeeded in showing softKeyboard.');
+  } else {
+    console.error(`Failed to show softKeyboard, ${err.code}, message: ${err.message}`);
+  }
+});
+```
+
+ArkTs-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethodController.showSoftKeyboard((err?: BusinessError) => {
+  if (!err) {
+    console.info('Succeeded in showing softKeyboard.');
+  } else {
+    console.error(`Failed to showSoftKeyboard, code: ${err.code}, message: ${err.message}`);
+  }
+})
+```
+
+ArkTs-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().showSoftKeyboard().then(() => {
+  console.info('Succeeded in showing softKeyboard.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to show softKeyboard, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTs-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethodController.showSoftKeyboard().then(() => {
+  console.info('Succeeded in showing softKeyboard.');
+}).catch((err: BusinessError): void=> {
+  console.error(`Failed to showSoftKeyboard, code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ArkTS-Dyn示例:
 

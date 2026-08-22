@@ -12,7 +12,7 @@ import { formProvider } from '@kit.FormKit';
 function reloadForms(context: UIAbilityContext, moduleName: string, abilityName: string, formName: string): Promise<int>
 ```
 
-Reloads widgets. For widgets with the same **moduleName**, **abilityName**, and **formName** of the current application, each widget has a different widget ID after being added to the home screen for multiple times. Widget providers can use this API to batch update widgets that have different IDs but share the same **moduleName**, **abilityName**, and **formName**. Invoked in the main process of the application, this API notifies the FormExtension process to perform batch updates. It can only be called within a [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiability-uiability-c.md) and uses a promise to return the result.
+Reloads widgets. For widgets with the same **moduleName**, **abilityName**, and **formName** of the current application, each widget has a different widget ID after being added to the home screen for multiple times. Widget providers can use this API to batch update widgets that have different IDs but share the same **moduleName**, **abilityName**, and **formName**. Invoked in the main process of the application, this API notifies the FormExtension process to perform batch updates. It can only be called within a [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md) and uses a promise to return the result.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ Reloads widgets. For widgets with the same **moduleName**, **abilityName**, and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) | Yes | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiability-uiability-c.md) context, which is used for verification. |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) | Yes | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md) context, which is used for verification. |
 | moduleName | string | Yes | Module name of the widget. |
 | abilityName | string | Yes | Ability name of the widget. |
 | formName | string | Yes | Name of the widget configured in [form_config.json](../../../form/arkts-ui-widget-configuration.md#fields-in-configuration-file). |

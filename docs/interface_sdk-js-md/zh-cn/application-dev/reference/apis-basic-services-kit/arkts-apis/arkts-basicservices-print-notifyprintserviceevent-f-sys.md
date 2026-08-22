@@ -58,6 +58,19 @@ print.notifyPrintServiceEvent(event).then(() => {
 })
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+
+let event : print.ApplicationEvent = print.ApplicationEvent.APPLICATION_CREATED;
+let jobId : string = '1';
+print.notifyPrintServiceEvent(event, jobId).then(() => {
+    console.info('notifyPrintServiceEvent success');
+}).catch((error: BusinessError) => {
+    console.error('notifyPrintServiceEvent error : ' + JSON.stringify(error));
+})
+```
+
 
 ## notifyPrintServiceEvent
 
@@ -100,16 +113,5 @@ function notifyPrintServiceEvent(event: ApplicationEvent, jobId: string): Promis
 
 **示例**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let event : print.ApplicationEvent = print.ApplicationEvent.APPLICATION_CREATED;
-let jobId : string = '1';
-print.notifyPrintServiceEvent(event, jobId).then(() => {
-    console.info('notifyPrintServiceEvent success');
-}).catch((error: BusinessError) => {
-    console.error('notifyPrintServiceEvent error : ' + JSON.stringify(error));
-})
-```
+参见 [notifyPrintServiceEvent](#notifyprintserviceevent)
 

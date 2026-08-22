@@ -28,7 +28,7 @@ function getLocationPolicy(admin: Want): LocationPolicy
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 
 **返回值：**
 
@@ -65,6 +65,18 @@ try {
 }
 ```
 
+```TypeScript
+import { locationManager } from '@kit.MDMKit';
+
+try {
+  // 参数需根据实际情况进行替换
+  let result: locationManager.LocationPolicy = locationManager.getLocationPolicy(null);
+  console.info(`Succeeded in getting location policy. policy: ${result}`);
+} catch(err) {
+  console.error(`Failed to get location policy. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## getLocationPolicy
 
@@ -88,7 +100,7 @@ function getLocationPolicy(admin: Want | null): LocationPolicy
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
 
 **返回值：**
 
@@ -107,15 +119,5 @@ function getLocationPolicy(admin: Want | null): LocationPolicy
 
 **示例**
 
-```TypeScript
-import { locationManager } from '@kit.MDMKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  let result: locationManager.LocationPolicy = locationManager.getLocationPolicy(null);
-  console.info(`Succeeded in getting location policy. policy: ${result}`);
-} catch(err) {
-  console.error(`Failed to get location policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [getLocationPolicy](#getlocationpolicy)
 

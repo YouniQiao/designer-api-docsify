@@ -49,6 +49,17 @@ try {
 }
 ```
 
+```TypeScript
+import { display } from '@kit.ArkUI';
+
+try {
+  let mode: display.FoldDisplayMode = display.FoldDisplayMode.FOLD_DISPLAY_MODE_MAIN;
+  display.setFoldDisplayMode(mode, 'backSelfie');
+} catch (exception) {
+  console.error(`Failed to change the fold display mode. Code: ${exception}`);
+}
+```
+
 
 ## setFoldDisplayMode
 
@@ -82,14 +93,5 @@ Sets the display mode of the foldable device, with the reason for the change spe
 
 **Examples**
 
-```TypeScript
-import { display } from '@kit.ArkUI';
-
-try {
-  let mode: display.FoldDisplayMode = display.FoldDisplayMode.FOLD_DISPLAY_MODE_MAIN;
-  display.setFoldDisplayMode(mode, 'backSelfie');
-} catch (exception) {
-  console.error(`Failed to change the fold display mode. Code: ${exception}`);
-}
-```
+See [setFoldDisplayMode](#setfolddisplaymode)
 

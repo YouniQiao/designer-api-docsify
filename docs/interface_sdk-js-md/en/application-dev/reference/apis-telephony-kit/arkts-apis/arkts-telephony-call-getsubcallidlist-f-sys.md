@@ -27,7 +27,7 @@ Obtains the list of subcall IDs. This API uses an asynchronous callback to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | int | Yes | Call ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -51,6 +51,16 @@ call.getSubCallIdList(1, (err: BusinessError, data: Array<string>) => {
     } else {
         console.info(`getSubCallIdList success, data->${JSON.stringify(data)}`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.getSubCallIdList(1).then((data: Array<string>) => {
+    console.info(`getSubCallIdList success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSubCallIdList fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -96,13 +106,5 @@ Obtains the list of subcall IDs. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.getSubCallIdList(1).then((data: Array<string>) => {
-    console.info(`getSubCallIdList success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSubCallIdList fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getSubCallIdList](#getsubcallidlist)
 

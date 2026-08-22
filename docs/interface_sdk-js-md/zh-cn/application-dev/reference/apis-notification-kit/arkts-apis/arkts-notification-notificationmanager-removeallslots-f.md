@@ -77,6 +77,31 @@ let removeAllSlotsCallback = (err: BusinessError | null): void => {
 notificationManager.removeAllSlots(removeAllSlotsCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.removeAllSlots().then(() => {
+  console.info(`Succeeded in removing all slots.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to remove all slots. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.removeAllSlots().then(() => {
+  console.info(`Succeeded in removing all slots.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to remove all slots. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## removeAllSlots
 
@@ -118,28 +143,5 @@ removeSlot 删除指定类型的通知渠道。
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.removeAllSlots().then(() => {
-  console.info(`Succeeded in removing all slots.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove all slots. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.removeAllSlots().then(() => {
-  console.info(`Succeeded in removing all slots.`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to remove all slots. Code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [removeAllSlots](#removeallslots)
 

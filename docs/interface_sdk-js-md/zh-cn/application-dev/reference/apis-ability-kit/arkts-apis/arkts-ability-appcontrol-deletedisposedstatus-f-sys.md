@@ -50,6 +50,52 @@ import { appControl } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let appId = "com.example.myapplication_xxxxx";
+
+try {
+  appControl.deleteDisposedStatus(appId)
+    .then(() => {
+      console.info('deleteDisposedStatus success');
+    }).catch((error: BusinessError) => {
+      let message = (error as BusinessError).message;
+      console.error('deleteDisposedStatus failed ' + message);
+  });
+} catch (error) {
+  let message = (error as BusinessError).message;
+  console.error('deleteDisposedStatus failed ' + message);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { appControl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+// 开发者需根据实际工程更新appId。
+let appId = "com.example.myapplication_xxxxx";
+
+try {
+  appControl.deleteDisposedStatus(appId)
+    .then(() => {
+      console.info('deleteDisposedStatus success');
+    }).catch((error: Error) => {
+      let message = (error as BusinessError).message;
+      console.error('deleteDisposedStatus failed ' + message);
+  });
+} catch (error) {
+  let message = (error as BusinessError).message;
+  console.error('deleteDisposedStatus failed ' + message);
+}
+```
+
+ArkTS-Dyn示例:
+
+```TypeScript
+import { appControl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appId = "com.example.myapplication_xxxxx";
 try {
   appControl.deleteDisposedStatus(appId, (error: BusinessError, data) => {
     if (error) {
@@ -130,49 +176,5 @@ function deleteDisposedStatus(appId: string): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appId = "com.example.myapplication_xxxxx";
-
-try {
-  appControl.deleteDisposedStatus(appId)
-    .then(() => {
-      console.info('deleteDisposedStatus success');
-    }).catch((error: BusinessError) => {
-      let message = (error as BusinessError).message;
-      console.error('deleteDisposedStatus failed ' + message);
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('deleteDisposedStatus failed ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新appId。
-let appId = "com.example.myapplication_xxxxx";
-
-try {
-  appControl.deleteDisposedStatus(appId)
-    .then(() => {
-      console.info('deleteDisposedStatus success');
-    }).catch((error: Error) => {
-      let message = (error as BusinessError).message;
-      console.error('deleteDisposedStatus failed ' + message);
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('deleteDisposedStatus failed ' + message);
-}
-```
+参见 [deleteDisposedStatus](#deletedisposedstatus)
 

@@ -20,3 +20,22 @@ Represents the folder data. It is a child class of [File](arkts-arkdata-unifiedd
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
+**Examples**
+
+```TypeScript
+import { unifiedDataChannel } from '@kit.ArkData';
+import { fileUri } from '@kit.CoreFileKit'
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let context = this.context;
+    let pathDir = context.filesDir;
+    let folder = new unifiedDataChannel.Folder();
+    let filePath = pathDir + '/folder';
+    folder.folderUri = fileUri.getUriFromPath(filePath);
+  }
+}
+```
+

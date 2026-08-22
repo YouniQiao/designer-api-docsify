@@ -29,7 +29,7 @@ Unsubscribes from channel state events. This is applicable to scenarios where th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | channelId | int | Yes | Channel ID obtained when opening a proxy channel. Value range: 1 to 2147483647. Using an invalid or closed channelId returns error code 32390004, and exceeding the value range returns error code 32 390006. The channelId takes effect only when the proxy channel is available and becomes unavailable after the channel is closed or disconnected. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ChannelStateInfo](arkts-distributedservice-proxychannelmanager-channelstateinfo-i.md)&gt; | No | Registered callback. Default behavior: if this parameter is not passed, all channel state event subscriptions are unsubscribed. The callback passed must be the one last registered through the **on** method to unsubscribe from that callback; passing any other callback will not take effect. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChannelStateInfo](arkts-distributedservice-proxychannelmanager-channelstateinfo-i.md)&gt; | No | Registered callback. Default behavior: if this parameter is not passed, all channel state event subscriptions are unsubscribed. The callback passed must be the one last registered through the **on** method to unsubscribe from that callback; passing any other callback will not take effect. |
 
 **Error codes:**
 

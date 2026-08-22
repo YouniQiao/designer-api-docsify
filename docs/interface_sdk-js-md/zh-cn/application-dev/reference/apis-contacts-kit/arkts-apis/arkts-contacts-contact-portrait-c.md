@@ -63,3 +63,25 @@ uri格式联系人头像。
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
+**示例**
+
+使用JSON格式创建数据。
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+import { image } from '@kit.ImageKit';
+
+async function SetPortraitUri(uri: string) {
+  let portrait: contact.Portrait = {
+    uri: uri
+  };
+}
+
+async function SetPortraitPixelMap(photo: image.PixelMap) {
+  let portrait: contact.Portrait = {
+    uri: '',
+    photo: photo
+  };
+}
+```
+

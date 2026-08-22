@@ -27,7 +27,7 @@ Checks whether the radio service is enabled.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Returns {@code true} If the radio service is enabled. Returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Returns {@code true} If the radio service is enabled. Returns {@code false} otherwise. |
 
 **Error codes:**
 
@@ -45,6 +45,18 @@ Checks whether the radio service is enabled.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+radio.isRadioOn((err: BusinessError, data: boolean) => {
+    if (err) {
+        console.error(`isRadioOn failed, callback: err->${JSON.stringify(err)}`);
+        return;
+    }
+    console.info(`isRadioOn success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let slotId: number = 0;
 radio.isRadioOn(slotId, (err: BusinessError, data: boolean) => {
     if (err) {
@@ -52,6 +64,17 @@ radio.isRadioOn(slotId, (err: BusinessError, data: boolean) => {
         return;
     }
     console.info(`isRadioOn success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.isRadioOn(slotId).then((data: boolean) => {
+    console.info(`isRadioOn success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isRadioOn failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -97,16 +120,7 @@ Checks whether the radio service is enabled.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.isRadioOn(slotId).then((data: boolean) => {
-    console.info(`isRadioOn success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isRadioOn failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [isRadioOn](#isradioon)
 
 
 ## isRadioOn
@@ -129,7 +143,7 @@ Checks whether the radio service is enabled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Returns {@code true} If the radio service is enabled. Returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Returns {@code true} If the radio service is enabled. Returns {@code false} otherwise. |
 
 **Error codes:**
 
@@ -144,15 +158,5 @@ Checks whether the radio service is enabled.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.isRadioOn((err: BusinessError, data: boolean) => {
-    if (err) {
-        console.error(`isRadioOn failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`isRadioOn success, callback: data->${JSON.stringify(data)}`);
-});
-```
+See [isRadioOn](#isradioon)
 

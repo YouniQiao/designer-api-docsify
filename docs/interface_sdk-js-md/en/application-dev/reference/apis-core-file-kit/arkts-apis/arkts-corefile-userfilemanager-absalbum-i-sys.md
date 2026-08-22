@@ -47,13 +47,173 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | FetchOptions | Yes | Retrieval options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FetchResult&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt;&gt; | Yes | Callback used to return the image and video assets obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt;&gt; | Yes | Callback used to return the image and video assets obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | if type options is not FetchOptions |
+
+**Examples**
+
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('getPhotoAssets');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+
+  mgr.getPhotoAssets(fetchOptions, async (err, fetchResult) => {
+    if (fetchResult != undefined) {
+      console.info('fetchResult success');
+      let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+      if (fileAsset != undefined) {
+        console.info('fileAsset.displayName : ' + fileAsset.displayName);
+      }
+    } else {
+      console.error('fetchResult fail' + err);
+    }
+  });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('getPhotoAssets');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOptions);
+    if (fetchResult != undefined) {
+      console.info('fetchResult success');
+      let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+      if (fileAsset != undefined) {
+        console.info('fileAsset.displayName :' + fileAsset.displayName);
+      }
+    }
+  } catch (err) {
+    console.error('getPhotoAssets failed, message = ', err);
+  }
+}
+```
+
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('albumGetFileAssetsDemoCallback');
+
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let albumFetchOptions: userFileManager.AlbumFetchOptions = {
+    predicates: predicates
+  };
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let albumList: userFileManager.FetchResult<userFileManager.Album> = await mgr.getPhotoAlbums(albumFetchOptions);
+  let album: userFileManager.Album = await albumList.getFirstObject();
+  album.getPhotoAssets(fetchOption, (err, albumFetchResult) => {
+    if (albumFetchResult != undefined) {
+      console.info('album getPhotoAssets successfully, getCount: ' + albumFetchResult.getCount());
+    } else {
+      console.error('album getPhotoAssets failed with error: ' + err);
+    }
+  });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('albumGetFileAssetsDemoPromise');
+
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let albumFetchOptions: userFileManager.AlbumFetchOptions = {
+    predicates: predicates
+  };
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  const albumList: userFileManager.FetchResult<userFileManager.Album> = await mgr.getPhotoAlbums(albumFetchOptions);
+  const album: userFileManager.Album = await albumList.getFirstObject();
+  album.getPhotoAssets(fetchOption).then((albumFetchResult) => {
+    console.info('album getFileAssets successfully, getCount: ' + albumFetchResult.getCount());
+  }).catch((err: BusinessError) => {
+    console.error('album getFileAssets failed with error: ' + err);
+  });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('privateAlbumGetFileAssetsDemoCallback');
+  let albumList: userFileManager.FetchResult<userFileManager.PrivateAlbum> = await mgr.getPrivateAlbum(userFileManager.PrivateAlbumType.TYPE_TRASH);
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  const trashAlbum: userFileManager.PrivateAlbum = await albumList.getFirstObject();
+  if (trashAlbum === undefined) {
+    console.error('trashAlbum is undefined');
+    return;
+  }
+  trashAlbum.getPhotoAssets(fetchOption, (err, fetchResult) => {
+    if (fetchResult != undefined) {
+      let count = fetchResult.getCount();
+      console.info('fetchResult.count = ', count);
+    } else {
+      console.error('getFileAssets failed, message = ', err);
+    }
+  });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('privateAlbumGetFileAssetsDemoPromise');
+  let albumList: userFileManager.FetchResult<userFileManager.PrivateAlbum> = await mgr.getPrivateAlbum(userFileManager.PrivateAlbumType.TYPE_TRASH);
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  const trashAlbum: userFileManager.PrivateAlbum = await albumList.getFirstObject();
+  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await trashAlbum.getPhotoAssets(fetchOption);
+  let count = fetchResult.getCount();
+  console.info('fetchResult.count = ', count);
+}
+```
 
 ## getPhotoAssets
 
@@ -94,6 +254,10 @@ Obtains image and video assets. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | if type options is not FetchOptions |
+
+**Examples**
+
+See [getPhotoAssets](#getphotoassets)
 
 ## albumName
 

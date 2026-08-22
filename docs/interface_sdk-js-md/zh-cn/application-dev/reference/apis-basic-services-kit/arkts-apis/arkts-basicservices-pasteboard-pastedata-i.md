@@ -79,6 +79,12 @@ pasteData.addRecord(textRecord);
 pasteData.addRecord(htmlRecord);
 ```
 
+```TypeScript
+let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
+let dataXml = new ArrayBuffer(256);
+pasteData.addRecord('app/xml', dataXml);
+```
+
 ## addRecord
 
 ```TypeScript
@@ -111,11 +117,7 @@ addRecord(mimeType: string, value: ValueType): void
 
 **示例**
 
-```TypeScript
-let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
-let dataXml = new ArrayBuffer(256);
-pasteData.addRecord('app/xml', dataXml);
-```
+参见 [addRecord](#addrecord)
 
 ## addTextRecord
 
@@ -201,7 +203,7 @@ addWantRecord(want: Want): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | Want对象内容。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Want对象内容。 |
 
 **示例**
 
@@ -243,6 +245,17 @@ getMimeTypes(): Array<string>
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
 let types: string[] = pasteData.getMimeTypes();
+```
+
+```TypeScript
+import { pasteboard, BusinessError } from '@kit.BasicServicesKit'
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.getMimeTypes().then((data: Array<string>) => {
+    console.info('Succeeded in getting mimeTypes. mimeTypes: ' + data.sort().join(','));
+}).catch((err: BusinessError) => {
+    console.error('Failed to get mimeTypes. Cause:' + err.message);
+});
 ```
 
 ## getPrimaryHtml
@@ -463,7 +476,7 @@ getPrimaryWant(): Want
 
 | 类型 | 说明 |
 | --- | --- |
-| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Want对象内容。剪贴板内容对象中没有Want内容时，默认返回为undefined。 |
+| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Want对象内容。剪贴板内容对象中没有Want内容时，默认返回为undefined。 |
 
 **示例**
 

@@ -52,11 +52,11 @@ ON_BATCH = 3
 
 The type of advertisement packet reported in batch mode.
 
-**Since:** 26.0.0
+**Since:** 19
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-ScanReportType-ON_BATCH = 3--><!--Device-ScanReportType-ON_BATCH = 3-End-->
 

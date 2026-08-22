@@ -55,6 +55,83 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('fetchResultCloseDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+    fetchResult.close();
+    console.info('close succeed.');
+  } catch (err) {
+    console.error(`close fail. error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('closeDemo');
+  try {
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    let fd: number = await photoAsset.open('rw');
+    console.info('file fd', fd);
+    photoAsset.close(fd, (err) => {
+      if (err === undefined) {
+        console.info('asset close succeed.');
+      } else {
+        console.error(`close failed, error: ${err.code}, ${err.message}`);
+      }
+    });
+  } catch (err) {
+    console.error(`close failed, error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('closeDemo');
+  try {
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    let fd = await asset.open('rw');
+    console.info('file fd', fd);
+    await asset.close(fd);
+    console.info('asset close succeed.');
+  } catch (err) {
+    console.error(`close failed, error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
 ## getRow
 
 ```TypeScript

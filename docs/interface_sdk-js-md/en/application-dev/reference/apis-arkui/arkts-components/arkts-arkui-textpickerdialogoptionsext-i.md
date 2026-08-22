@@ -139,6 +139,26 @@ Defines the textPickerDialog's background effect with options
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## cancelButtonStyle
+
+```TypeScript
+cancelButtonStyle?: PickerDialogButtonStyle
+```
+
+Style of cancel button.
+
+**Type:** PickerDialogButtonStyle
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextPickerDialogOptionsExt-cancelButtonStyle?: PickerDialogButtonStyle--><!--Device-TextPickerDialogOptionsExt-cancelButtonStyle?: PickerDialogButtonStyle-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## canLoop
 
 ```TypeScript
@@ -160,26 +180,6 @@ Default Value: true
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-TextPickerDialogOptionsExt-canLoop?: boolean--><!--Device-TextPickerDialogOptionsExt-canLoop?: boolean-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## cancelButtonStyle
-
-```TypeScript
-cancelButtonStyle?: PickerDialogButtonStyle
-```
-
-Style of cancel button.
-
-**Type:** PickerDialogButtonStyle
-
-**Since:** 20
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-TextPickerDialogOptionsExt-cancelButtonStyle?: PickerDialogButtonStyle--><!--Device-TextPickerDialogOptionsExt-cancelButtonStyle?: PickerDialogButtonStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

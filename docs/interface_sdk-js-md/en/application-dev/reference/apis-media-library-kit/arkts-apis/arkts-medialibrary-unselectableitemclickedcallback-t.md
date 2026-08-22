@@ -20,5 +20,5 @@ The callback of onUnselectableItemInfo event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unselectableItemInfo | [UnselectableItemInfo](arkts-medialibrary-filephotopickercomponent-unselectableiteminfo-c.md) | Yes |  |
+| unselectableItemInfo | [UnselectableItemInfo](arkts-medialibrary-file-photopickercomponent-unselectableiteminfo-c.md) | Yes |  |
 

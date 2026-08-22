@@ -2,7 +2,7 @@
 
 Describe the context of GATT responses.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-ble-interface GattRspContext--><!--Device-ble-interface GattRspContext-End-->
 
@@ -26,7 +26,7 @@ Timestamp of when Bluetooth received the response command.
 
 **Type:** long
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 

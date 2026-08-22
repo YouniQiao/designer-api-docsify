@@ -26,7 +26,7 @@ Obtains the touchpad pinch switch state. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **state** indicates whether the touchpad pinch switch is enabled (**true** indicates yes and **false** indicates no; default value: **true**). Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **state** indicates whether the touchpad pinch switch is enabled (**true** indicates yes and **false** indicates no; default value: **true**). Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -56,6 +56,32 @@ struct Index {
                 console.info(`getTouchpadPinchSwitch success, state: ${JSON.stringify(state)}`);
               }
             });
+          } catch (error) {
+            console.error(`getTouchpadPinchSwitch failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            pointer.getTouchpadPinchSwitch().then((state: boolean) => {
+              console.info(`getTouchpadPinchSwitch success, state: ${JSON.stringify(state)}`);
+            }).catch((error: BusinessError) => {
+              console.error(`Get touchpad pinch switch failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            })
           } catch (error) {
             console.error(`getTouchpadPinchSwitch failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
@@ -97,29 +123,5 @@ Obtains the touchpad pinch switch state. This API uses a promise to return the r
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.getTouchpadPinchSwitch().then((state: boolean) => {
-              console.info(`getTouchpadPinchSwitch success, state: ${JSON.stringify(state)}`);
-            }).catch((error: BusinessError) => {
-              console.error(`Get touchpad pinch switch failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`getTouchpadPinchSwitch failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
+See [getTouchpadPinchSwitch](#gettouchpadpinchswitch)
 

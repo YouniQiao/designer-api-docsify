@@ -63,6 +63,21 @@ call.setCallTransfer(0, callTransferInfo, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let callTransferInfo: call.CallTransferInfo = {
+    transferNum: "111",
+    type: call.CallTransferType.TRANSFER_TYPE_BUSY,
+    settingType: call.CallTransferSettingType.CALL_TRANSFER_ENABLE
+}
+call.setCallTransfer(0, callTransferInfo).then(() => {
+    console.info(`setCallTransfer success.`);
+}).catch((err: BusinessError) => {
+    console.error(`setCallTransfer fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## setCallTransfer
 
@@ -109,18 +124,5 @@ function setCallTransfer(slotId: int, info: CallTransferInfo): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let callTransferInfo: call.CallTransferInfo = {
-    transferNum: "111",
-    type: call.CallTransferType.TRANSFER_TYPE_BUSY,
-    settingType: call.CallTransferSettingType.CALL_TRANSFER_ENABLE
-}
-call.setCallTransfer(0, callTransferInfo).then(() => {
-    console.info(`setCallTransfer success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setCallTransfer fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [setCallTransfer](#setcalltransfer)
 

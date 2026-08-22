@@ -10,7 +10,7 @@ export declare const ArcScrollBar: ArcScrollBarInterface
 
 > **说明：**
 > 
-> - 未设置宽高时，ArcScrollBar采用父组件[LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md)中的maxSize作为尺寸。若父组件存在可滚动组件，如
+> - 未设置宽高时，ArcScrollBar采用父组件[LayoutConstraint](../../apis-default/arkts-apis/arkts-framenode-layoutconstraint-i.md)中的maxSize作为尺寸。若父组件存在可滚动组件，如
 > ArcList、List、
 > Grid、Scroll、
 > WaterFlow，建议设置ArcScrollBar宽高，否则尺寸可能为无穷大。

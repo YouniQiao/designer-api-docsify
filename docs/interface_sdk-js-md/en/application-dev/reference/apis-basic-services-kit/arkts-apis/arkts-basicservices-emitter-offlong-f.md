@@ -61,7 +61,7 @@ After this API is used to unsubscribe from an event, the event that has been pub
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | long | Yes | Event ID. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to unregister, which must be the same as the callback used during registration. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to unregister, which must be the same as the callback used during registration. |
 
 **Examples**
 

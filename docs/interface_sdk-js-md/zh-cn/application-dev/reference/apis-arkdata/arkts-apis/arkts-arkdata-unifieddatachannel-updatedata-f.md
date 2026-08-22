@@ -145,46 +145,6 @@ try {
 }
 ```
 
-
-## updateData
-
-```TypeScript
-function updateData(options: Options, data: UnifiedData): Promise<void>
-```
-
-更新已写入UDMF的公共数据通路的数据，使用Promise异步回调。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-unifiedDataChannel-function updateData(options: Options, data: UnifiedData): Promise<void>--><!--Device-unifiedDataChannel-function updateData(options: Options, data: UnifiedData): Promise<void>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | Options | 是 | 配置项参数，参数中key字段必填，不填时会返回401错误码；intention参数仅支持DATA_HUB；其他字段是否填写均不影响接口的使用。 |
-| data | UnifiedData | 是 | 目标数据。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -282,4 +242,46 @@ try {
   console.error(' error: ' + JSON.stringify(error));
 }
 ```
+
+
+## updateData
+
+```TypeScript
+function updateData(options: Options, data: UnifiedData): Promise<void>
+```
+
+更新已写入UDMF的公共数据通路的数据，使用Promise异步回调。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-unifiedDataChannel-function updateData(options: Options, data: UnifiedData): Promise<void>--><!--Device-unifiedDataChannel-function updateData(options: Options, data: UnifiedData): Promise<void>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | Options | 是 | 配置项参数，参数中key字段必填，不填时会返回401错误码；intention参数仅支持DATA_HUB；其他字段是否填写均不影响接口的使用。 |
+| data | UnifiedData | 是 | 目标数据。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
+
+**示例**
+
+参见 [updateData](#updatedata)
 

@@ -55,6 +55,17 @@ sim.activateSim(0, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.activateSim(0).then(() => {
+    console.info(`activateSim success.`);
+}).catch((err: BusinessError) => {
+    console.error(`activateSim failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## activateSim
 
@@ -101,14 +112,5 @@ Activate the SIM card in the specified slot.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.activateSim(0).then(() => {
-    console.info(`activateSim success.`);
-}).catch((err: BusinessError) => {
-    console.error(`activateSim failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [activateSim](#activatesim)
 

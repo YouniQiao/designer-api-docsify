@@ -35,8 +35,8 @@
 | [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md) | 定义一个适合WaterFlow、Grid、List和Swiper组件的响应式item布局。 |
 | [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md) | Defines the localized border radius property. |
 | [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md) | Defines the localized border color property. |
-| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md) | Defines the localized border width property. |
 | [LocalizedEdges](arkts-arkui-localizededges-i.md) | Defines the LocalizedEdges. |
+| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md) | Defines the localized border width property. |
 | [LocalizedPadding](arkts-arkui-localizedpadding-i.md) | Defines the localized padding property. |
 | [LocalizedPosition](arkts-arkui-localizedposition-i.md) | Defines the LocalizedPosition. |
 | [MarkStyle](arkts-arkui-markstyle-i.md) | Define the style of checkbox mark. |
@@ -61,22 +61,22 @@
 | [EdgeWidth](arkts-arkui-edgewidth-t.md) | Defines the border width property. |
 | [EdgeWidths](arkts-arkui-edgewidths-t.md) | Defines the border width property. |
 | [FP](arkts-arkui-fp-t.md) | 定义长度属性，单位为fp。 |
-| [LPX](arkts-arkui-lpx-t.md) | 定义长度属性，单位为lpx。 |
 | [Length](arkts-arkui-length-t.md) | 定义包含字符串、数字和资源单位的长度属性。 |
 | [LengthConstrain](arkts-arkui-lengthconstrain-t.md) | Defines the length constrain property. |
 | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Defines LengthMetrics. |
 | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | Defines length metrics unit. |
 | [LocalizedMargin](arkts-arkui-localizedmargin-t.md) | Defines the localized margin property. |
+| [LPX](arkts-arkui-lpx-t.md) | 定义长度属性，单位为lpx。 |
 | [Margin](arkts-arkui-margin-t.md) | Defines the margin property. |
 | [Offset](arkts-arkui-offset-t.md) | Defines the offset property. |
 | [OutlineRadiuses](arkts-arkui-outlineradiuses-t.md) | Defines the outline radius property. |
-| [PX](arkts-arkui-px-t.md) | 定义长度属性，单位为像素（px）。 |
 | [Padding](arkts-arkui-padding-t.md) | Defines the padding property. |
 | [Percentage](arkts-arkui-percentage-t.md) | 定义长度属性，单位为百分比。 |
+| [PX](arkts-arkui-px-t.md) | 定义长度属性，单位为像素（px）。 |
 | [Resource](arkts-arkui-resource-t.md) | Defines the data type of the interface restriction. |
 | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Defines the color which can use resource. |
 | [ResourceStr](arkts-arkui-resourcestr-t.md) | Defines the string which can use resource. |
 | [ResponsiveFillType](arkts-arkui-responsivefilltype-t.md) | 定义一个响应式item填充模式，可以在WaterFlow、Grid、List和Swiper组件中使用。 |
-| [VP](arkts-arkui-vp-t.md) | 定义长度属性，可以是数字或以 vp 为单位的数字。 |
 | [VoidCallback](arkts-arkui-voidcallback-t.md) | 定义VoidCallback。 |
+| [VP](arkts-arkui-vp-t.md) | 定义长度属性，可以是数字或以 vp 为单位的数字。 |
 

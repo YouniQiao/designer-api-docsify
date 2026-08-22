@@ -194,24 +194,6 @@ PNG modification time.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
-## sRGBIntent
-
-```TypeScript
-readonly sRGBIntent?: int
-```
-
-PNG sRGB rendering intent. The value should be an integer.
-
-**Type:** int
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PngMetadata-readonly sRGBIntent?: int--><!--Device-PngMetadata-readonly sRGBIntent?: int-End-->
-
-**System capability:** SystemCapability.Multimedia.Image.Core
-
 ## software
 
 ```TypeScript
@@ -227,6 +209,24 @@ PNG software.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PngMetadata-readonly software?: string--><!--Device-PngMetadata-readonly software?: string-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.Core
+
+## sRGBIntent
+
+```TypeScript
+readonly sRGBIntent?: int
+```
+
+PNG sRGB rendering intent. The value should be an integer.
+
+**Type:** int
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PngMetadata-readonly sRGBIntent?: int--><!--Device-PngMetadata-readonly sRGBIntent?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

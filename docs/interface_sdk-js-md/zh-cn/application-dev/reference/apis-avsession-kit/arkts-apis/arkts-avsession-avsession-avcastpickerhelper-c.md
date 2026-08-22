@@ -28,7 +28,7 @@ import { avSession } from '@kit.AVSessionKit';
 constructor(context: Context)
 ```
 
-创建AVCastPickerHelper对象，获取context请参考[getHostContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#gethostcontext)。
+创建AVCastPickerHelper对象，获取context请参考[getHostContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#gethostcontext)。
 
 **起始版本：** 23
 
@@ -43,6 +43,64 @@ constructor(context: Context)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用上下文（仅支持[UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md)）。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+
+**示例**
+
+```TypeScript
+import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+
+  build() {
+    Row() {
+      Column() {
+        Text(this.message)
+          .fontSize(40)
+          .fontWeight(FontWeight.Bold)
+          .onClick(() => {
+            let context = this.getUIContext().getHostContext() as Context;
+            let avCastPicker = new avSession.AVCastPickerHelper(context);
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## off('pickerStateChange')
+
+```TypeScript
+off(type: 'pickerStateChange', callback?: Callback<AVCastPickerState>) : void
+```
+
+取消半模态窗口变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 14
+
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastPickerHelper-off(type: 'pickerStateChange', callback?: Callback<AVCastPickerState>) : void--><!--Device-AVCastPickerHelper-off(type: 'pickerStateChange', callback?: Callback<AVCastPickerState>) : void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'pickerStateChange' | 是 | 取消对应的监听事件，支持事件`'pickerStateChange'`。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | 否 | 回调函数，参数state是变化后的半模态窗口状态。 <br>当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -69,7 +127,7 @@ Unregister picker state change callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimediaavcastpickerparam-avcastpickerstate-e.md)&gt; | 否 | The callback used to handle picker state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | 否 | The callback used to handle picker state changed event. |
 
 **错误码：**
 
@@ -77,19 +135,32 @@ Unregister picker state change callback.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
-## off('pickerStateChange')
+**示例**
 
 ```TypeScript
-off(type: 'pickerStateChange', callback?: Callback<AVCastPickerState>) : void
+import { common } from '@kit.AbilityKit';
+
+async function onPickerStateChange(context: common.Context) {
+  let avCastPicker = new avSession.AVCastPickerHelper(context);
+  avCastPicker.offPickerStateChange();
+}
 ```
 
-取消半模态窗口变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+## on('pickerStateChange')
+
+```TypeScript
+on(type: 'pickerStateChange', callback: Callback<AVCastPickerState>) : void
+```
+
+设置半模态窗口变化的监听事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 14
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AVCastPickerHelper-off(type: 'pickerStateChange', callback?: Callback<AVCastPickerState>) : void--><!--Device-AVCastPickerHelper-off(type: 'pickerStateChange', callback?: Callback<AVCastPickerState>) : void-End-->
+<!--Device-AVCastPickerHelper-on(type: 'pickerStateChange', callback: Callback<AVCastPickerState>) : void--><!--Device-AVCastPickerHelper-on(type: 'pickerStateChange', callback: Callback<AVCastPickerState>) : void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -97,8 +168,8 @@ off(type: 'pickerStateChange', callback?: Callback<AVCastPickerState>) : void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'pickerStateChange' | 是 | 取消对应的监听事件，支持事件`'pickerStateChange'`。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimediaavcastpickerparam-avcastpickerstate-e.md)&gt; | 否 | 回调函数，参数state是变化后的半模态窗口状态。 <br>当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'pickerStateChange' | 是 | 事件回调类型，支持事件`'pickerStateChange'`：当半模态窗口变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | 是 | 回调函数，参数state是变化后的半模态窗口状态。 |
 
 **错误码：**
 
@@ -125,7 +196,7 @@ Register picker state change callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimediaavcastpickerparam-avcastpickerstate-e.md)&gt; | 是 | The callback used to handle picker state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | 是 | The callback used to handle picker state changed event. |
 
 **错误码：**
 
@@ -133,37 +204,19 @@ Register picker state change callback.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
-## on('pickerStateChange')
+**示例**
 
 ```TypeScript
-on(type: 'pickerStateChange', callback: Callback<AVCastPickerState>) : void
+import { common } from '@kit.AbilityKit';
+import { AVCastPickerState } from '@kit.AVSessionKit';
+
+async function onPickerStateChange(context: common.Context) {
+  let avCastPicker = new avSession.AVCastPickerHelper(context);
+  avCastPicker.onPickerStateChange((state: AVCastPickerState) => {
+    console.info(`picker state change : ${state}`);
+  });
+}
 ```
-
-设置半模态窗口变化的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 14
-
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastPickerHelper-on(type: 'pickerStateChange', callback: Callback<AVCastPickerState>) : void--><!--Device-AVCastPickerHelper-on(type: 'pickerStateChange', callback: Callback<AVCastPickerState>) : void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'pickerStateChange' | 是 | 事件回调类型，支持事件`'pickerStateChange'`：当半模态窗口变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimediaavcastpickerparam-avcastpickerstate-e.md)&gt; | 是 | 回调函数，参数state是变化后的半模态窗口状态。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
 ## resetCommunicationDevice
 
@@ -186,6 +239,32 @@ resetCommunicationDevice(): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**示例**
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { avSession } from '@kit.AVSessionKit';
+
+async function avCastPicker(context: common.Context) {
+  let avCastPicker = new avSession.AVCastPickerHelper(context);
+  avCastPicker.resetCommunicationDevice().then(() => {
+    console.info('Succeeded in resetting communication device.');
+  });
+}
+```
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { avSession } from '@kit.AVSessionKit';
+
+async function avCastPicker(context: common.Context) {
+  let avCastPicker = new avSession.AVCastPickerHelper(context);
+  avCastPicker.resetCommunicationDevice().then(() => {
+    console.info('resetCommunicationDevice successfully');
+  });
+}
+```
 
 ## select
 
@@ -220,4 +299,29 @@ select(options?: AVCastPickerOptions): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { avSession } from '@kit.AVSessionKit';
+
+class MyPage {
+  private avCastPicker: avSession.AVCastPickerHelper;
+
+  constructor(context: common.Context) {
+    this.avCastPicker = new avSession.AVCastPickerHelper(context);
+  }
+
+  async selectCastDevice() {
+    const avCastPickerOptions: avSession.AVCastPickerOptions = {
+      sessionType: 'video',
+    };
+
+this.avCastPicker.select(avCastPickerOptions).then(() => {
+  console.info('Succeeded in selecting.');
+});
+  }
+}
+```
 

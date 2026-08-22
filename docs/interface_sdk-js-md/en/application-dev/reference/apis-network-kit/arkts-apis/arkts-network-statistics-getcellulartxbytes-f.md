@@ -29,7 +29,7 @@ Obtains the total uplink traffic (in bytes) of the NIC corresponding to the curr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. If the traffic data is successfully obtained, **error** is **undefined**; otherwise, it is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. If the traffic data is successfully obtained, **error** is **undefined**; otherwise, it is an error object. |
 
 **Error codes:**
 
@@ -49,6 +49,14 @@ import { statistics } from '@kit.NetworkKit';
 
 statistics.getCellularTxBytes((error: BusinessError, stats: number) => {
   console.error(JSON.stringify(error));
+  console.info(JSON.stringify(stats));
+});
+```
+
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+statistics.getCellularTxBytes().then((stats: number) => {
   console.info(JSON.stringify(stats));
 });
 ```
@@ -91,11 +99,5 @@ Obtains the total uplink traffic (in bytes) of the NIC corresponding to the curr
 
 **Examples**
 
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-statistics.getCellularTxBytes().then((stats: number) => {
-  console.info(JSON.stringify(stats));
-});
-```
+See [getCellularTxBytes](#getcellulartxbytes)
 

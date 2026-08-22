@@ -108,6 +108,30 @@ const APP_LAUNCH: string
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
+## appFreezeWarning
+
+```TypeScript
+const appFreezeWarning: string
+```
+
+应用冻屏告警事件。系统事件名称常量。
+
+26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-event-const appFreezeWarning: string--><!--Device-event-const appFreezeWarning: string-End-->
+
+**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
+
 ## AUDIO_JANK_FRAME
 
 ```TypeScript
@@ -285,30 +309,6 @@ const USER_LOGOUT: string
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-event-const USER_LOGOUT: string--><!--Device-event-const USER_LOGOUT: string-End-->
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
-## appFreezeWarning
-
-```TypeScript
-const appFreezeWarning: string
-```
-
-应用冻屏告警事件。系统事件名称常量。
-
-26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-event-const appFreezeWarning: string--><!--Device-event-const appFreezeWarning: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 

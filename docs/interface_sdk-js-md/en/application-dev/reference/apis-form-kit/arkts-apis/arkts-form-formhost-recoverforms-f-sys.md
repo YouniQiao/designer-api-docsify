@@ -49,6 +49,40 @@ Recovers recycled widgets and updates their status to non-recyclable, or updates
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
+**Examples**
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let formIds: string[] = ['12400633174999288'];
+  formHost.recoverForms(formIds, (err: BusinessError) => {
+    if (err) {
+      console.error(`recoverForms error, code: ${err.code}, message: ${err.message}`);
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let formIds: string[] = ['12400633174999288'];
+  formHost.recoverForms(formIds).then(() => {
+    console.info('recover forms success');
+  }).catch((err: BusinessError) => {
+    console.error(`formHost recover forms error, code: ${err.code}, message: ${err.message}`);
+  });
+} catch (e) {
+  console.error(`catch error, code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 ## recoverForms
 
@@ -75,7 +109,7 @@ Recovers widgets. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | Yes | Array of widget IDs. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the widgets are recovered, **error** is **undefined**; otherwise, an exception is thrown. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the widgets are recovered, **error** is **undefined**; otherwise, an exception is thrown. |
 
 **Error codes:**
 
@@ -87,4 +121,8 @@ Recovers widgets. This API uses an asynchronous callback to return the result.
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+
+**Examples**
+
+See [recoverForms](#recoverforms)
 

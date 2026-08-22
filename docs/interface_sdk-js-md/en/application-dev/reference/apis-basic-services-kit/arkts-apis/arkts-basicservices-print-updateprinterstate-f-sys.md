@@ -30,7 +30,7 @@ Updates the printer state. This API uses an asynchronous callback to return the 
 | --- | --- | --- | --- |
 | printerId | string | Yes | Printer ID. |
 | state | [PrinterState](arkts-basicservices-print-printerstate-e.md) | Yes | Printer state. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -54,6 +54,19 @@ print.updatePrinterState(printerId, state, (err: BusinessError) => {
     } else {
         console.info('updatePrinterState success');
     }
+})
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let printerId : string = '1212';
+let state : print.PrinterState = print.PrinterState.PRINTER_CONNECTED;
+print.updatePrinterState(printerId, state).then(() => {
+    console.info('update printer state success');
+}).catch((error: BusinessError) => {
+    console.error('update printer state error : ' + JSON.stringify(error));
 })
 ```
 
@@ -99,16 +112,5 @@ Updates the printer state. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let printerId : string = '1212';
-let state : print.PrinterState = print.PrinterState.PRINTER_CONNECTED;
-print.updatePrinterState(printerId, state).then(() => {
-    console.info('update printer state success');
-}).catch((error: BusinessError) => {
-    console.error('update printer state error : ' + JSON.stringify(error));
-})
-```
+See [updatePrinterState](#updateprinterstate)
 

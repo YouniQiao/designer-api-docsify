@@ -57,7 +57,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | uiContext used to create the ReactiveBuilderNode |
+| uiContext | [UIContext](arkts-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the ReactiveBuilderNode |
 | options | [RenderOptions](arkts-buildernode-renderoptions-i.md) | No | Render options of the ReactiveBuilderNode |
 
 ## dispose
@@ -118,7 +118,7 @@ Get the FrameNode in ReactiveBuilderNode.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-framenode-c.md) \| null | Returns a FrameNode inside the ReactiveBuilderNode, or null if not contained. |
+| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) \| null | Returns a FrameNode inside the ReactiveBuilderNode, or null if not contained. |
 
 ## isDisposed
 

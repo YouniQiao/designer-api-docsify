@@ -77,6 +77,38 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let deviceDescriptor = "networkId";
+try {
+  cooperate.getCooperateSwitchState(deviceDescriptor).then((data: boolean) => {
+    console.info(`Get the status success, data: ${JSON.stringify(data)}`);
+  }, (error: BusinessError) => {
+    console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+  });
+} catch (error) {
+  console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let deviceDescriptor: string = "networkId";
+try {
+  cooperate.getCooperateSwitchState(deviceDescriptor).then((data: boolean): void => {
+    console.info(`Get the status success, data: ${JSON.stringify(data)}`);
+  }, (error: Error): void => {
+    console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+  });
+} catch (error) {
+  console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+}
+```
+
 
 ## getCooperateSwitchState
 
@@ -118,35 +150,5 @@ function getCooperateSwitchState(networkId: string): Promise<boolean>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor = "networkId";
-try {
-  cooperate.getCooperateSwitchState(deviceDescriptor).then((data: boolean) => {
-    console.info(`Get the status success, data: ${JSON.stringify(data)}`);
-  }, (error: BusinessError) => {
-    console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let deviceDescriptor: string = "networkId";
-try {
-  cooperate.getCooperateSwitchState(deviceDescriptor).then((data: boolean): void => {
-    console.info(`Get the status success, data: ${JSON.stringify(data)}`);
-  }, (error: Error): void => {
-    console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
+参见 [getCooperateSwitchState](#getcooperateswitchstate)
 

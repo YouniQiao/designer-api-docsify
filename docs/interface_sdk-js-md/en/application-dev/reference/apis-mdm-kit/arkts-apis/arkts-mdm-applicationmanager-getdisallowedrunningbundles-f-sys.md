@@ -34,8 +34,8 @@ Obtains applications that are not allowed to run by the current user. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to obtain the applications that are not allowed to run. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. <br>Note: For API version 20 and earlier versions, the return value is the **appId** list. In API version 21 and later versions, the return value is the **appId** or **appIdentifier** list. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to obtain the applications that are not allowed to run. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. <br>Note: For API version 20 and earlier versions, the return value is the **appId** list. In API version 21 and later versions, the return value is the **appId** or **appIdentifier** list. |
 
 **Error codes:**
 
@@ -68,6 +68,43 @@ applicationManager.getDisallowedRunningBundles(wantTemp, (err, result) => {
 });
 ```
 
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+applicationManager.getDisallowedRunningBundles(wantTemp, 100, (err, result) => {
+  if (err) {
+    console.error(`Failed to get disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting disallowed running bundles, result : ${JSON.stringify(result)}`);
+});
+```
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+applicationManager.getDisallowedRunningBundles(wantTemp, 100).then((result) => {
+  console.info(`Succeeded in getting disallowed running bundles, result : ${JSON.stringify(result)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## getDisallowedRunningBundles
 
@@ -97,9 +134,9 @@ Obtains an application from the applications that are not allowed to run by the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | userId | number | Yes | User ID, which must be greater than or equal to 0. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to obtain the applications that are not allowed to run. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. <br>Note: For API version 20 and earlier versions, the return value is the **appId** list. In API version 21 and later versions, the return value is the **appId** or **appIdentifier** list. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to obtain the applications that are not allowed to run. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. <br>Note: For API version 20 and earlier versions, the return value is the **appId** list. In API version 21 and later versions, the return value is the **appId** or **appIdentifier** list. |
 
 **Error codes:**
 
@@ -113,24 +150,7 @@ Obtains an application from the applications that are not allowed to run by the 
 
 **Examples**
 
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-applicationManager.getDisallowedRunningBundles(wantTemp, 100, (err, result) => {
-  if (err) {
-    console.error(`Failed to get disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting disallowed running bundles, result : ${JSON.stringify(result)}`);
-});
-```
+See [getDisallowedRunningBundles](#getdisallowedrunningbundles)
 
 
 ## getDisallowedRunningBundles
@@ -161,7 +181,7 @@ Obtains applications that are not allowed to run under the current user or a spe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | userId | number | No | User ID, which must be greater than or equal to 0. <br> - If **userId** is passed in, the applications cannot be run by the specified user. <br> - If **userId** is not passed in, the applications cannot be run by the current user. |
 
 **Return value:**
@@ -182,21 +202,5 @@ Obtains applications that are not allowed to run under the current user or a spe
 
 **Examples**
 
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-applicationManager.getDisallowedRunningBundles(wantTemp, 100).then((result) => {
-  console.info(`Succeeded in getting disallowed running bundles, result : ${JSON.stringify(result)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getDisallowedRunningBundles](#getdisallowedrunningbundles)
 

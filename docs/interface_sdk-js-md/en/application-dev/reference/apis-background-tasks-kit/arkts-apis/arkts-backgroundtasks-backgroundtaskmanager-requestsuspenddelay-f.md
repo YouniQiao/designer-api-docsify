@@ -30,7 +30,7 @@ Requests a transient task.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reason | string | Yes | Reason for requesting the transient task. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to notify the application that the transient task is about to time out. Generally, the callback is invoked 6 seconds before the timeout. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to notify the application that the transient task is about to time out. Generally, the callback is invoked 6 seconds before the timeout. |
 
 **Return value:**
 

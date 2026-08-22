@@ -48,6 +48,19 @@ reminderAgent.addNotificationSlot(mySlot, (err: BusinessError, data: void) => {
 });
 ```
 
+```TypeScript
+import notification from '@ohos.notification';
+import reminderAgent from '@ohos.reminderAgent';
+import { NotificationSlot } from './notification/notificationSlot';
+
+let mySlot:NotificationSlot = {
+  type: notification.SlotType.SOCIAL_COMMUNICATION
+}
+reminderAgent.addNotificationSlot(mySlot).then(() => {
+  console.info("addNotificationSlot promise");
+});
+```
+
 
 ## addNotificationSlot
 
@@ -81,16 +94,5 @@ function addNotificationSlot(slot: NotificationSlot): Promise<void>
 
 **示例**
 
-```TypeScript
-import notification from '@ohos.notification';
-import reminderAgent from '@ohos.reminderAgent';
-import { NotificationSlot } from './notification/notificationSlot';
-
-let mySlot:NotificationSlot = {
-  type: notification.SlotType.SOCIAL_COMMUNICATION
-}
-reminderAgent.addNotificationSlot(mySlot).then(() => {
-  console.info("addNotificationSlot promise");
-});
-```
+参见 [addNotificationSlot](#addnotificationslot)
 

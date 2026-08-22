@@ -12,7 +12,7 @@ import { abilityManager } from '@kit.AbilityKit';
 function acquireShareData(missionId: int, callback: AsyncCallback<Record<string, Object>>): void
 ```
 
-Called by a system dialog box to obtain shared data, which is set by the target UIAbility through [onShare](arkts-ability-appabilityuiability-uiability-c.md#onshare). This API uses an asynchronous callback to return the result.
+Called by a system dialog box to obtain shared data, which is set by the target UIAbility through [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare). This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -27,7 +27,7 @@ Called by a system dialog box to obtain shared data, which is set by the target 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | missionId | int | Yes | Mission ID on the target application. The maximum value is 2&lt;sup&gt;31&lt;/sup&gt;-1. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the shared data obtained. Otherwise, **err** is an error object. You can perform error handling or other custom processing.<br>**Since:** 11 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the shared data obtained. Otherwise, **err** is an error object. You can perform error handling or other custom processing.<br>**Since:** 11 |
 
 **Error codes:**
 
@@ -36,6 +36,44 @@ Called by a system dialog box to obtain shared data, which is set by the target 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+
+**Examples**
+
+```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  abilityManager.acquireShareData(1, (err: BusinessError, wantParam: Record<string, Object>) => {
+    if (err) {
+      console.error(`acquireShareData fail, err: ${JSON.stringify(err)}`);
+    } else {
+      console.info(`acquireShareData success, data: ${JSON.stringify(wantParam)}`);
+    }
+  });
+} catch (paramError) {
+  let code: number = (paramError as BusinessError).code;
+  let message: string = (paramError as BusinessError).message;
+  console.error(`error.code: ${code}, error.message: ${message}`);
+}
+```
+
+```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  abilityManager.acquireShareData(1).then((wantParam: Record<string, Object>) => {
+    console.info(`acquireShareData success, data: ${JSON.stringify(wantParam)}`);
+  }).catch((err: BusinessError) => {
+    console.error(`acquireShareData fail, err: ${JSON.stringify(err)}`);
+  });
+} catch (paramError) {
+  let code: number = (paramError as BusinessError).code;
+  let message: string = (paramError as BusinessError).message;
+  console.error(`error.code: ${code}, error.message: ${message}`);
+}
+```
 
 
 ## acquireShareData
@@ -59,7 +97,7 @@ Acquire the shared data from target ability.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | missionId | int | Yes | The missionId of target ability. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt; | Yes | The callback is used to return the params of sharing data and result code. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt; | Yes | The callback is used to return the params of sharing data and result code. |
 
 **Error codes:**
 
@@ -68,6 +106,10 @@ Acquire the shared data from target ability.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system service failed. |
 
+**Examples**
+
+See [acquireShareData](#acquiresharedata)
+
 
 ## acquireShareData
 
@@ -75,7 +117,7 @@ Acquire the shared data from target ability.
 function acquireShareData(missionId: int): Promise<Record<string, Object>>
 ```
 
-Called by a system dialog box to obtain shared data, which is set by the target UIAbility through [onShare](arkts-ability-appabilityuiability-uiability-c.md#onshare). This API uses a promise to return the result.
+Called by a system dialog box to obtain shared data, which is set by the target UIAbility through [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare). This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -105,6 +147,10 @@ Called by a system dialog box to obtain shared data, which is set by the target 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+
+**Examples**
+
+See [acquireShareData](#acquiresharedata)
 
 
 ## acquireShareData
@@ -141,4 +187,8 @@ Acquire the shared data from target ability.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system server failed. |
+
+**Examples**
+
+See [acquireShareData](#acquiresharedata)
 

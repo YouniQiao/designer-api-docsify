@@ -63,6 +63,26 @@ print.addPrinters([printerInfo], (err: BusinessError) => {
 })
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+
+let printerInfo : print.PrinterInfo = {
+    printerId : '3232',
+    printerName : 'hhhhh',
+    printerState : 0,
+    printerIcon : 12,
+    description : 'str',
+    capability : undefined,
+    options : 'opt'
+};
+print.addPrinters([printerInfo]).then(() => {
+    console.info('add printers success.');
+}).catch((error: BusinessError) => {
+    console.error('add printers error : ' + JSON.stringify(error));
+})
+```
+
 
 ## addPrinters
 
@@ -104,23 +124,5 @@ function addPrinters(printers: Array<PrinterInfo>): Promise<void>
 
 **示例**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let printerInfo : print.PrinterInfo = {
-    printerId : '3232',
-    printerName : 'hhhhh',
-    printerState : 0,
-    printerIcon : 12,
-    description : 'str',
-    capability : undefined,
-    options : 'opt'
-};
-print.addPrinters([printerInfo]).then(() => {
-    console.info('add printers success.');
-}).catch((error: BusinessError) => {
-    console.error('add printers error : ' + JSON.stringify(error));
-})
-```
+参见 [addPrinters](#addprinters)
 

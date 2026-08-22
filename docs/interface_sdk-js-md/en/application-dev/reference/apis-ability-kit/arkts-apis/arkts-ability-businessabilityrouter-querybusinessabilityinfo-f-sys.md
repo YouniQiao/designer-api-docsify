@@ -32,7 +32,7 @@ Query the business ability info of by the given filter. ohos.permission.GET_BUND
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filter | [BusinessAbilityFilter](arkts-ability-businessabilityrouter-businessabilityfilter-i-sys.md) | Yes | Indicates the filter containing the business ability info to be queried. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;BusinessAbilityInfo&gt;&gt; | Yes | The callback of querying business ability info result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BusinessAbilityInfo&gt;&gt; | Yes | The callback of querying business ability info result. |
 
 **Error codes:**
 
@@ -57,6 +57,25 @@ try {
       return;
     }
     console.info('queryBusinessAbilityInfo success');
+  });
+} catch (error) {
+  let message = (error as BusinessError).message;
+  console.error('queryBusinessAbilityInfo failed ' + message);
+}
+```
+
+```TypeScript
+import { businessAbilityRouter } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filter: businessAbilityRouter.BusinessAbilityFilter = { businessType: businessAbilityRouter.BusinessType.SHARE };
+
+try {
+  businessAbilityRouter.queryBusinessAbilityInfo(filter)
+    .then(() => {
+      console.info('queryBusinessAbilityInfo success');
+    }).catch((error: BusinessError) => {
+    console.error('queryBusinessAbilityInfo failed ' + error.message);
   });
 } catch (error) {
   let message = (error as BusinessError).message;
@@ -105,22 +124,5 @@ Query the business ability info of by the given filter. ohos.permission.GET_BUND
 
 **Examples**
 
-```TypeScript
-import { businessAbilityRouter } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filter: businessAbilityRouter.BusinessAbilityFilter = { businessType: businessAbilityRouter.BusinessType.SHARE };
-
-try {
-  businessAbilityRouter.queryBusinessAbilityInfo(filter)
-    .then(() => {
-      console.info('queryBusinessAbilityInfo success');
-    }).catch((error: BusinessError) => {
-    console.error('queryBusinessAbilityInfo failed ' + error.message);
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('queryBusinessAbilityInfo failed ' + message);
-}
-```
+See [queryBusinessAbilityInfo](#querybusinessabilityinfo)
 

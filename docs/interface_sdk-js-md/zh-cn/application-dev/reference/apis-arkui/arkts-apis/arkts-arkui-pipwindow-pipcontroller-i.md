@@ -153,151 +153,6 @@ try {
 }
 ```
 
-## offActiveStatusChange
-
-```TypeScript
-offActiveStatusChange(callback?: Callback<boolean>): void
-```
-
-关闭画中画窗口隐藏状态变化事件的监听。
-
-**起始版本：** 26.0.0
-
-<!--Device-PiPController-offActiveStatusChange(callback?: Callback<boolean>): void--><!--Device-PiPController-offActiveStatusChange(callback?: Callback<boolean>): void-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 如果未传入参数，解除画中画窗口隐藏状态变化事件的所有回调。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. function offActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. |
-
-## offControlEvent
-
-```TypeScript
-offControlEvent(callback?: Callback<ControlEventParam>): void
-```
-
-关闭画中画控制面板控件动作事件的监听。
-
-**起始版本：** 26.0.0
-
-<!--Device-PiPController-offControlEvent(callback?: Callback<ControlEventParam>): void--><!--Device-PiPController-offControlEvent(callback?: Callback<ControlEventParam>): void-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除画中画控制面板控件动作事件的所有回调。 |
-
-**示例**
-
-```TypeScript
-let callbackFunc = (event: PiPWindow.ControlEventParam) => {
-  console.info(`receive control event: ${event.controlType}, ${event.status}`);
-}
-this.pipController.offControlEvent(callbackFunc);
-```
-
-## offControlPanelActionEvent
-
-```TypeScript
-offControlPanelActionEvent(): void
-```
-
-关闭画中画控制面板控件动作事件的监听。推荐使用[offControlEvent](#offcontrolevent)来关闭画中画控制面板控件动作事件的监听。
-
-**起始版本：** 26.0.0
-
-<!--Device-PiPController-offControlPanelActionEvent(): void--><!--Device-PiPController-offControlPanelActionEvent(): void-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**示例**
-
-```TypeScript
-this.pipController.offControlPanelActionEvent();
-```
-
-## offPipWindowSizeChange
-
-```TypeScript
-offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void
-```
-
-关闭画中画窗口尺寸变化事件的监听。
-
-**起始版本：** 26.0.0
-
-<!--Device-PiPController-offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void--><!--Device-PiPController-offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 否 | 回调函数。返回当前画中画窗口的尺寸。 如果传入参数，则关闭该监听。如果未传入参数，解除窗口尺寸变化事件的所有回调。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-
-**示例**
-
-```TypeScript
-const callback = (size: PiPWindow.PiPWindowSize) => {
-  // ...
-}
-try {
-  // 通过on接口开启监听
-  this.pipController.onPipWindowSizeChange(callback);
-} catch (exception) {
-  console.error(`Failed to enable the listener for pip window size changes. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-
-try {
-  // 关闭指定callback的监听
-  this.pipController.offPipWindowSizeChange(callback);
-  // 如果通过on开启多个callback进行监听，同时关闭所有监听：
-  this.pipController.offPipWindowSizeChange();
-} catch (exception) {
-  console.error(`Failed to disable the listener for pip window size changes. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-## offStateChange
-
-```TypeScript
-offStateChange(): void
-```
-
-关闭画中画生命周期状态变化的监听。
-
-**起始版本：** 26.0.0
-
-<!--Device-PiPController-offStateChange(): void--><!--Device-PiPController-offStateChange(): void-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**示例**
-
-```TypeScript
-this.pipController.offStateChange();
-```
-
 ## off('activeStatusChange')
 
 ```TypeScript
@@ -470,17 +325,17 @@ off(type: 'stateChange'): void
 this.pipController.off('stateChange');
 ```
 
-## onActiveStatusChange
+## offActiveStatusChange
 
 ```TypeScript
-onActiveStatusChange(callback: Callback<boolean>): void
+offActiveStatusChange(callback?: Callback<boolean>): void
 ```
 
-开启画中画窗口隐藏状态变化事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。
+关闭画中画窗口隐藏状态变化事件的监听。
 
 **起始版本：** 26.0.0
 
-<!--Device-PiPController-onActiveStatusChange(callback: Callback<boolean>): void--><!--Device-PiPController-onActiveStatusChange(callback: Callback<boolean>): void-End-->
+<!--Device-PiPController-offActiveStatusChange(callback?: Callback<boolean>): void--><!--Device-PiPController-offActiveStatusChange(callback?: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -488,14 +343,14 @@ onActiveStatusChange(callback: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 <br>画中画显示状态变化回调函数 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 如果未传入参数，解除画中画窗口隐藏状态变化事件的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. function onActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. function offActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
+| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. |
 
 **示例**
 
@@ -503,20 +358,20 @@ onActiveStatusChange(callback: Callback<boolean>): void
 let callback = (activeStatus: boolean) => {
   console.info(`pip window is visible: ${activeStatus}`);
 }
-this.pipController.onActiveStatusChange(callback);
+this.pipController.offActiveStatusChange(callback);
 ```
 
-## onControlEvent
+## offControlEvent
 
 ```TypeScript
-onControlEvent(callback: Callback<ControlEventParam>): void
+offControlEvent(callback?: Callback<ControlEventParam>): void
 ```
 
-开启画中画控制面板控件动作事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。
+关闭画中画控制面板控件动作事件的监听。
 
 **起始版本：** 26.0.0
 
-<!--Device-PiPController-onControlEvent(callback: Callback<ControlEventParam>): void--><!--Device-PiPController-onControlEvent(callback: Callback<ControlEventParam>): void-End-->
+<!--Device-PiPController-offControlEvent(callback?: Callback<ControlEventParam>): void--><!--Device-PiPController-offControlEvent(callback?: Callback<ControlEventParam>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -524,101 +379,48 @@ onControlEvent(callback: Callback<ControlEventParam>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除画中画控制面板控件动作事件的所有回调。 |
 
 **示例**
 
 ```TypeScript
-this.pipController.onControlEvent((control) => {
-  switch (control.controlType) {
-    case PiPWindow.PiPControlType.VIDEO_PLAY_PAUSE:
-      if (control.status === PiPWindow.PiPControlStatus.PAUSE) {
-        // 停止视频
-      } else if (control.status === PiPWindow.PiPControlStatus.PLAY) {
-        // 播放视频
-      }
-      break;
-    case PiPWindow.PiPControlType.VIDEO_NEXT:
-      // 切换到下一个视频
-      break;
-    case PiPWindow.PiPControlType.VIDEO_PREVIOUS:
-      // 切换到上一个视频
-      break;
-    case PiPWindow.PiPControlType.FAST_FORWARD:
-      // 视频进度快进
-      break;
-    case PiPWindow.PiPControlType.FAST_BACKWARD:
-      // 视频进度后退
-      break;
-    default:
-      break;
-  }
-  console.info('registerControlEventCallback, controlType:' + control.controlType + ', status' + control.status);
-});
+let callbackFunc = (event: PiPWindow.ControlEventParam) => {
+  console.info(`receive control event: ${event.controlType}, ${event.status}`);
+}
+this.pipController.offControlEvent(callbackFunc);
 ```
 
-## onControlPanelActionEvent
+## offControlPanelActionEvent
 
 ```TypeScript
-onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void
+offControlPanelActionEvent(): void
 ```
 
-开启画中画控制面板控件动作事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。推荐使用[onControlEvent](#oncontrolevent)来开启画中画控制面板控件动作事件的监听。
+关闭画中画控制面板控件动作事件的监听。推荐使用[offControlEvent](#offcontrolevent)来关闭画中画控制面板控件动作事件的监听。
 
 **起始版本：** 26.0.0
 
-<!--Device-PiPController-onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void--><!--Device-PiPController-onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void-End-->
+<!--Device-PiPController-offControlPanelActionEvent(): void--><!--Device-PiPController-offControlPanelActionEvent(): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [ControlPanelActionEventCallback](arkts-arkui-pipwindow-controlpanelactioneventcallback-t.md) | 是 | Used to handle {'controlPanelActionEvent'} command. |
 
 **示例**
 
 ```TypeScript
-this.pipController.onControlPanelActionEvent((event: PiPWindow.PiPActionEventType, status?: int) => {
-  switch (event) {
-    case 'playbackStateChanged':
-      if (status === 0) {
-        // 停止视频
-      } else if (status === 1) {
-        // 播放视频
-      }
-      break;
-    case 'nextVideo':
-      // 切换到下一个视频
-      break;
-    case 'previousVideo':
-      // 切换到上一个视频
-      break;
-    case 'fastForward':
-      // 视频进度快进
-      break;
-    case 'fastBackward':
-      // 视频进度后退
-      break;
-    default:
-      break;
-  }
-  console.info('registerActionEventCallback, event:' + event);
-});
+this.pipController.offControlPanelActionEvent();
 ```
 
-## onPipWindowSizeChange
+## offPipWindowSizeChange
 
 ```TypeScript
-onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void
+offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void
 ```
 
-开启画中画窗口尺寸变化事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。
+关闭画中画窗口尺寸变化事件的监听。
 
 **起始版本：** 26.0.0
 
-<!--Device-PiPController-onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void--><!--Device-PiPController-onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void-End-->
+<!--Device-PiPController-offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void--><!--Device-PiPController-offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -626,76 +428,55 @@ onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 是 | 回调函数。返回当前画中画窗口的尺寸。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 否 | 回调函数。返回当前画中画窗口的尺寸。 如果传入参数，则关闭该监听。如果未传入参数，解除窗口尺寸变化事件的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
 
 **示例**
 
 ```TypeScript
+const callback = (size: PiPWindow.PiPWindowSize) => {
+  // ...
+}
 try {
-  this.pipController.onPipWindowSizeChange((size: PiPWindow.PiPWindowSize) => {
-    console.info('Succeeded in enabling the listener for pip window size changes. size: ' + JSON.stringify(size));
-  });
+  // 通过on接口开启监听
+  this.pipController.onPipWindowSizeChange(callback);
 } catch (exception) {
   console.error(`Failed to enable the listener for pip window size changes. Cause code: ${exception.code}, message: ${exception.message}`);
 }
+
+try {
+  // 关闭指定callback的监听
+  this.pipController.offPipWindowSizeChange(callback);
+  // 如果通过on开启多个callback进行监听，同时关闭所有监听：
+  this.pipController.offPipWindowSizeChange();
+} catch (exception) {
+  console.error(`Failed to disable the listener for pip window size changes. Cause code: ${exception.code}, message: ${exception.message}`);
+}
 ```
 
-## onStateChange
+## offStateChange
 
 ```TypeScript
-onStateChange(callback: StateChangeCallback): void
+offStateChange(): void
 ```
 
-开启画中画生命周期状态变化的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。
+关闭画中画生命周期状态变化的监听。
 
 **起始版本：** 26.0.0
 
-<!--Device-PiPController-onStateChange(callback: StateChangeCallback): void--><!--Device-PiPController-onStateChange(callback: StateChangeCallback): void-End-->
+<!--Device-PiPController-offStateChange(): void--><!--Device-PiPController-offStateChange(): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [StateChangeCallback](arkts-arkui-pipwindow-statechangecallback-t.md) | 是 | 描述画中画生命周期状态变化回调。 |
 
 **示例**
 
 ```TypeScript
-this.pipController.onStateChange((state: PiPWindow.PiPState, reason: string) => {
-  let curState: string = '';
-  switch (state) {
-    case PiPWindow.PiPState.ABOUT_TO_START:
-      curState = 'ABOUT_TO_START';
-      break;
-    case PiPWindow.PiPState.STARTED:
-      curState = 'STARTED';
-      break;
-    case PiPWindow.PiPState.ABOUT_TO_STOP:
-      curState = 'ABOUT_TO_STOP';
-      break;
-    case PiPWindow.PiPState.STOPPED:
-      curState = 'STOPPED';
-      break;
-    case PiPWindow.PiPState.ABOUT_TO_RESTORE:
-      curState = 'ABOUT_TO_RESTORE';
-      break;
-    case PiPWindow.PiPState.ERROR:
-      curState = 'ERROR';
-      break;
-    default:
-      break;
-  }
-  console.info('stateChange:' + curState + ' reason:' + reason);
-});
+this.pipController.offStateChange();
 ```
 
 ## on('activeStatusChange')
@@ -907,6 +688,234 @@ on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): vo
 
 ```TypeScript
 this.pipController.on('stateChange', (state: PiPWindow.PiPState, reason: string) => {
+  let curState: string = '';
+  switch (state) {
+    case PiPWindow.PiPState.ABOUT_TO_START:
+      curState = 'ABOUT_TO_START';
+      break;
+    case PiPWindow.PiPState.STARTED:
+      curState = 'STARTED';
+      break;
+    case PiPWindow.PiPState.ABOUT_TO_STOP:
+      curState = 'ABOUT_TO_STOP';
+      break;
+    case PiPWindow.PiPState.STOPPED:
+      curState = 'STOPPED';
+      break;
+    case PiPWindow.PiPState.ABOUT_TO_RESTORE:
+      curState = 'ABOUT_TO_RESTORE';
+      break;
+    case PiPWindow.PiPState.ERROR:
+      curState = 'ERROR';
+      break;
+    default:
+      break;
+  }
+  console.info('stateChange:' + curState + ' reason:' + reason);
+});
+```
+
+## onActiveStatusChange
+
+```TypeScript
+onActiveStatusChange(callback: Callback<boolean>): void
+```
+
+开启画中画窗口隐藏状态变化事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。
+
+**起始版本：** 26.0.0
+
+<!--Device-PiPController-onActiveStatusChange(callback: Callback<boolean>): void--><!--Device-PiPController-onActiveStatusChange(callback: Callback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 <br>画中画显示状态变化回调函数 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. function onActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
+| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
+
+**示例**
+
+```TypeScript
+let callback = (activeStatus: boolean) => {
+  console.info(`pip window is visible: ${activeStatus}`);
+}
+this.pipController.onActiveStatusChange(callback);
+```
+
+## onControlEvent
+
+```TypeScript
+onControlEvent(callback: Callback<ControlEventParam>): void
+```
+
+开启画中画控制面板控件动作事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。
+
+**起始版本：** 26.0.0
+
+<!--Device-PiPController-onControlEvent(callback: Callback<ControlEventParam>): void--><!--Device-PiPController-onControlEvent(callback: Callback<ControlEventParam>): void-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
+
+**示例**
+
+```TypeScript
+this.pipController.onControlEvent((control) => {
+  switch (control.controlType) {
+    case PiPWindow.PiPControlType.VIDEO_PLAY_PAUSE:
+      if (control.status === PiPWindow.PiPControlStatus.PAUSE) {
+        // 停止视频
+      } else if (control.status === PiPWindow.PiPControlStatus.PLAY) {
+        // 播放视频
+      }
+      break;
+    case PiPWindow.PiPControlType.VIDEO_NEXT:
+      // 切换到下一个视频
+      break;
+    case PiPWindow.PiPControlType.VIDEO_PREVIOUS:
+      // 切换到上一个视频
+      break;
+    case PiPWindow.PiPControlType.FAST_FORWARD:
+      // 视频进度快进
+      break;
+    case PiPWindow.PiPControlType.FAST_BACKWARD:
+      // 视频进度后退
+      break;
+    default:
+      break;
+  }
+  console.info('registerControlEventCallback, controlType:' + control.controlType + ', status' + control.status);
+});
+```
+
+## onControlPanelActionEvent
+
+```TypeScript
+onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void
+```
+
+开启画中画控制面板控件动作事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。推荐使用[onControlEvent](#oncontrolevent)来开启画中画控制面板控件动作事件的监听。
+
+**起始版本：** 26.0.0
+
+<!--Device-PiPController-onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void--><!--Device-PiPController-onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ControlPanelActionEventCallback](arkts-arkui-pipwindow-controlpanelactioneventcallback-t.md) | 是 | Used to handle {'controlPanelActionEvent'} command. |
+
+**示例**
+
+```TypeScript
+this.pipController.onControlPanelActionEvent((event: PiPWindow.PiPActionEventType, status?: int) => {
+  switch (event) {
+    case 'playbackStateChanged':
+      if (status === 0) {
+        // 停止视频
+      } else if (status === 1) {
+        // 播放视频
+      }
+      break;
+    case 'nextVideo':
+      // 切换到下一个视频
+      break;
+    case 'previousVideo':
+      // 切换到上一个视频
+      break;
+    case 'fastForward':
+      // 视频进度快进
+      break;
+    case 'fastBackward':
+      // 视频进度后退
+      break;
+    default:
+      break;
+  }
+  console.info('registerActionEventCallback, event:' + event);
+});
+```
+
+## onPipWindowSizeChange
+
+```TypeScript
+onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void
+```
+
+开启画中画窗口尺寸变化事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。
+
+**起始版本：** 26.0.0
+
+<!--Device-PiPController-onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void--><!--Device-PiPController-onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 是 | 回调函数。返回当前画中画窗口的尺寸。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
+
+**示例**
+
+```TypeScript
+try {
+  this.pipController.onPipWindowSizeChange((size: PiPWindow.PiPWindowSize) => {
+    console.info('Succeeded in enabling the listener for pip window size changes. size: ' + JSON.stringify(size));
+  });
+} catch (exception) {
+  console.error(`Failed to enable the listener for pip window size changes. Cause code: ${exception.code}, message: ${exception.message}`);
+}
+```
+
+## onStateChange
+
+```TypeScript
+onStateChange(callback: StateChangeCallback): void
+```
+
+开启画中画生命周期状态变化的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。
+
+**起始版本：** 26.0.0
+
+<!--Device-PiPController-onStateChange(callback: StateChangeCallback): void--><!--Device-PiPController-onStateChange(callback: StateChangeCallback): void-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [StateChangeCallback](arkts-arkui-pipwindow-statechangecallback-t.md) | 是 | 描述画中画生命周期状态变化回调。 |
+
+**示例**
+
+```TypeScript
+this.pipController.onStateChange((state: PiPWindow.PiPState, reason: string) => {
   let curState: string = '';
   switch (state) {
     case PiPWindow.PiPState.ABOUT_TO_START:

@@ -2,7 +2,7 @@
 
 Describes the codec frame length.
 
-**Since:** 26.0.0
+**Since:** 19
 
 <!--Device-a2dp-enum CodecFrameLength--><!--Device-a2dp-enum CodecFrameLength-End-->
 
@@ -16,7 +16,7 @@ CODEC_FRAME_LENGTH_5MS = 0
 
 Codec frame length 5ms.
 
-**Since:** 26.0.0
+**Since:** 19
 
 <!--Device-CodecFrameLength-CODEC_FRAME_LENGTH_5MS = 0--><!--Device-CodecFrameLength-CODEC_FRAME_LENGTH_5MS = 0-End-->
 
@@ -30,7 +30,7 @@ CODEC_FRAME_LENGTH_10MS = 1
 
 Codec frame length 10ms.
 
-**Since:** 26.0.0
+**Since:** 19
 
 <!--Device-CodecFrameLength-CODEC_FRAME_LENGTH_10MS = 1--><!--Device-CodecFrameLength-CODEC_FRAME_LENGTH_10MS = 1-End-->
 

@@ -36,3 +36,11 @@ Plaintext without HTML tags. This parameter is optional. The default value is an
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+**Examples**
+
+```TypeScript
+let html = new unifiedDataChannel.HTML();
+html.htmlContent = '<div><p>Title</p></div>';
+html.plainContent = 'This is plainContent';
+```
+

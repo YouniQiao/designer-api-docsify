@@ -29,7 +29,7 @@ Checks whether the call forwarding time can be set. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the call forwarding time can be set, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the call forwarding time can be set, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -55,6 +55,17 @@ call.canSetCallTransferTime(slotId, (err: BusinessError, data: boolean) => {
     } else {
         console.info(`canSetCallTransferTime success, data->${JSON.stringify(data)}`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+call.canSetCallTransferTime(slotId).then((data: boolean) => {
+    console.info(`canSetCallTransferTime success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`canSetCallTransferTime fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -103,14 +114,5 @@ Checks whether the call forwarding time can be set. This API uses a promise to r
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-call.canSetCallTransferTime(slotId).then((data: boolean) => {
-    console.info(`canSetCallTransferTime success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`canSetCallTransferTime fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [canSetCallTransferTime](#cansetcalltransfertime)
 

@@ -29,7 +29,7 @@ Get the free size of volume.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volumeUuid | string | Yes | The uuid of the volume |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | callback <br>Unit: Byte. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | callback <br>Unit: Byte. |
 
 **Error codes:**
 
@@ -43,6 +43,26 @@ Get the free size of volume.
 | 13900042 | Unknown error. |
 
 **Examples**
+
+```TypeScript
+import { volumeManager } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
+  if (volumes == null || volumes.length <= 0) {
+    console.error("volumes is null or length is invalid");
+    return;
+  }
+  let uuid: string = volumes[0].uuid;
+  storageStatistics.getFreeSizeOfVolume(uuid).then((number: number) => {
+    console.info("getFreeSizeOfVolume successfully:" + number);
+  }).catch((err: BusinessError) => {
+    console.error("getFreeSizeOfVolume failed with error:" + JSON.stringify(err));
+  });
+}).catch((err: BusinessError) => {
+  console.error("getAllVolumes failed with error:" + JSON.stringify(err));
+});
+```
 
 ```TypeScript
 import { volumeManager } from '@kit.CoreFileKit';
@@ -111,23 +131,5 @@ Get the free size of volume.
 
 **Examples**
 
-```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
-  if (volumes == null || volumes.length <= 0) {
-    console.error("volumes is null or length is invalid");
-    return;
-  }
-  let uuid: string = volumes[0].uuid;
-  storageStatistics.getFreeSizeOfVolume(uuid).then((number: number) => {
-    console.info("getFreeSizeOfVolume successfully:" + number);
-  }).catch((err: BusinessError) => {
-    console.error("getFreeSizeOfVolume failed with error:" + JSON.stringify(err));
-  });
-}).catch((err: BusinessError) => {
-  console.error("getAllVolumes failed with error:" + JSON.stringify(err));
-});
-```
+See [getFreeSizeOfVolume](#getfreesizeofvolume)
 

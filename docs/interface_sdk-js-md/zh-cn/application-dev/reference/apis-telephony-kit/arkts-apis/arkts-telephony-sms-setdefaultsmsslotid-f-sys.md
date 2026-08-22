@@ -55,6 +55,17 @@ sms.setDefaultSmsSlotId(0, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sms.setDefaultSmsSlotId(0).then(() => {
+    console.info(`setDefaultSmsSlotId success.`);
+}).catch((err: BusinessError) => {
+    console.error(`setDefaultSmsSlotId failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## setDefaultSmsSlotId
 
@@ -101,14 +112,5 @@ function setDefaultSmsSlotId(slotId: int): Promise<void>
 
 **示例**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sms.setDefaultSmsSlotId(0).then(() => {
-    console.info(`setDefaultSmsSlotId success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setDefaultSmsSlotId failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [setDefaultSmsSlotId](#setdefaultsmsslotid)
 

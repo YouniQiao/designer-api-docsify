@@ -34,9 +34,9 @@ Configures Wi-Fi for the current device to connect to a specified network. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | profile | [WifiProfile](arkts-mdm-wifimanager-wifiprofile-i.md) | Yes | Wi-Fi configuration information. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -75,6 +75,30 @@ wifiManager.setWifiProfile(wantTemp, profile, (err) => {
 });
 ```
 
+```TypeScript
+import { wifiManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+let profile: wifiManager.WifiProfile = {
+  // Replace with actual values.
+  'ssid': 'name',
+  'preSharedKey': 'passwd',
+  'securityType': wifiManager.WifiSecurityType.WIFI_SEC_TYPE_PSK
+};
+
+wifiManager.setWifiProfile(wantTemp, profile).then(() => {
+  console.info('Succeeded in setting wifi profile');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set wifi profile. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## setWifiProfile
 
@@ -104,7 +128,7 @@ Configures Wi-Fi for the current device to connect to a specified network. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | profile | [WifiProfile](arkts-mdm-wifimanager-wifiprofile-i.md) | Yes | Wi-Fi configuration information. |
 
 **Return value:**
@@ -125,27 +149,5 @@ Configures Wi-Fi for the current device to connect to a specified network. This 
 
 **Examples**
 
-```TypeScript
-import { wifiManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let profile: wifiManager.WifiProfile = {
-  // Replace with actual values.
-  'ssid': 'name',
-  'preSharedKey': 'passwd',
-  'securityType': wifiManager.WifiSecurityType.WIFI_SEC_TYPE_PSK
-};
-
-wifiManager.setWifiProfile(wantTemp, profile).then(() => {
-  console.info('Succeeded in setting wifi profile');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set wifi profile. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [setWifiProfile](#setwifiprofile)
 

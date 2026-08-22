@@ -20,10 +20,10 @@ import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 
 | Name | Description |
 | --- | --- |
-| [offOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-offoperationsubmitmetadata-f.md) | Unsubscribes from system events that are used to obtain the encoded metadata. |
 | [off_operationSubmitMetadata](arkts-multimodalawareness-metadatabinding-offoperationsubmitmetadata-f.md) | Unsubscribes from system events that are used to obtain the encoded metadata. The respective callback will be unregistered. |
-| [onOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-onoperationsubmitmetadata-f.md) | Subscribes to a system event to obtain the encoded metadata. |
+| [offOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-offoperationsubmitmetadata-f.md) | Unsubscribes from system events that are used to obtain the encoded metadata. |
 | [on_operationSubmitMetadata](arkts-multimodalawareness-metadatabinding-onoperationsubmitmetadata-f.md) | Subscribes to a system event to obtain the encoded metadata. The application needs to register a callback to return the encoded metadata when the registered system event occurs. |
+| [onOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-onoperationsubmitmetadata-f.md) | Subscribes to a system event to obtain the encoded metadata. |
 | [submitMetadata](arkts-multimodalawareness-metadatabinding-submitmetadata-f.md) | Transfers the metadata to be encoded to the MSDP. The MSDP determines whether to transfer the metadata to the system application or service that calls the encoding API. |
 
 <!--Del-->

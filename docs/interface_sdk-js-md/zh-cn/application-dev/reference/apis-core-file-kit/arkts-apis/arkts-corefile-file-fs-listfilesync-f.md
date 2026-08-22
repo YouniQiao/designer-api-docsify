@@ -34,7 +34,7 @@ declare function listFileSync(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 目录的应用沙箱路径。 |
-| options | [ListFileOptions](../../apis-default/arkts-apis/arkts-filefs-listfileoptions-i.md) | 否 | 文件过滤选项。默认不进行过滤。<br>**起始版本：** 11 |
+| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | 否 | 文件过滤选项。默认不进行过滤。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -51,4 +51,25 @@ declare function listFileSync(
 | 13900011 | Out of memory |
 | 13900018 | Not a directory |
 | 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+import { Filter, ListFileOptions} from '@kit.CoreFileKit';
+
+let listFileOption: ListFileOptions = {
+  recursion: false,
+  listNum: 0,
+  filter: {
+    suffix: [".png", ".jpg", ".jpeg"],
+    displayName: ["*abc", "efg*"],
+    fileSizeOver: 1024
+  }
+};
+let filenames = fileIo.listFileSync(pathDir, listFileOption);
+console.info(`Succeeded in listing file.`);
+for (let i = 0; i < filenames.length; i++) {
+  console.info(`Succeeded in listing file, file name: ${filenames[i]}`);
+}
+```
 

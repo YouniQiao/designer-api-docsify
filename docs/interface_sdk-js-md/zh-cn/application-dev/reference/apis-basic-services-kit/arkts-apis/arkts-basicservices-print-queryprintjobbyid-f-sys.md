@@ -55,6 +55,18 @@ print.queryPrintJobById(jobId, (err: BusinessError, printJob : print.PrintJob) =
 })
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+
+let jobId : string = '1';
+print.queryPrintJobById(jobId).then((printJob : print.PrintJob) => {
+    console.info('queryPrintJobById data : ' + JSON.stringify(printJob));
+}).catch((error: BusinessError) => {
+    console.error('queryPrintJobById error : ' + JSON.stringify(error));
+})
+```
+
 
 ## queryPrintJobById
 
@@ -96,15 +108,5 @@ function queryPrintJobById(jobId: string): Promise<PrintJob>
 
 **示例**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let jobId : string = '1';
-print.queryPrintJobById(jobId).then((printJob : print.PrintJob) => {
-    console.info('queryPrintJobById data : ' + JSON.stringify(printJob));
-}).catch((error: BusinessError) => {
-    console.error('queryPrintJobById error : ' + JSON.stringify(error));
-})
-```
+参见 [queryPrintJobById](#queryprintjobbyid)
 

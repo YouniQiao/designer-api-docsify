@@ -28,7 +28,7 @@ Minimize the window target with animation.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | windowTarget | WindowAnimationTarget | Yes | The window target to be minimized. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md)&gt; | Yes | Returns the animation finished callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md)&gt; | Yes | Returns the animation finished callback. |
 
 **Examples**
 
@@ -94,37 +94,6 @@ windowAnimationManager.minimizeWindowWithAnimation(target, (err: BusinessError, 
 });
 ```
 
-
-## minimizeWindowWithAnimation
-
-```TypeScript
-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promise<WindowAnimationFinishedCallback>
-```
-
-Minimize the window target with animation.
-
-**Since:** 23
-
-<!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promise<WindowAnimationFinishedCallback>--><!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promise<WindowAnimationFinishedCallback>-End-->
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| windowTarget | WindowAnimationTarget | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md)&gt; | Promise used to return the animation finished callback. |
-
-**Examples**
-
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -175,4 +144,37 @@ promise.then((data: windowAnimationManager.WindowAnimationFinishedCallback) => {
     return;
 });
 ```
+
+
+## minimizeWindowWithAnimation
+
+```TypeScript
+function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promise<WindowAnimationFinishedCallback>
+```
+
+Minimize the window target with animation.
+
+**Since:** 23
+
+<!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promise<WindowAnimationFinishedCallback>--><!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promise<WindowAnimationFinishedCallback>-End-->
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| windowTarget | WindowAnimationTarget | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md)&gt; | Promise used to return the animation finished callback. |
+
+**Examples**
+
+See [minimizeWindowWithAnimation](#minimizewindowwithanimation)
 

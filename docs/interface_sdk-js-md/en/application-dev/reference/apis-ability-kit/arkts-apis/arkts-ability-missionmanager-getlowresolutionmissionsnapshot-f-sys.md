@@ -34,7 +34,7 @@ Obtains the low-resolution snapshot of a given mission. This API uses an asynchr
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
 | missionId | int | Yes | Mission ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;MissionSnapshot&gt; | Yes | Callback used to return the snapshot information obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;MissionSnapshot&gt; | Yes | Callback used to return the snapshot information obtained. |
 
 **Error codes:**
 
@@ -64,6 +64,24 @@ try {
 } catch (error) {
   let err: BusinessError = error as BusinessError;
   console.error(`getLowResolutionMissionSnapShot failed: ${err.message}`);
+}
+```
+
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let testMissionId = 2;
+
+try {
+  missionManager.getLowResolutionMissionSnapShot('', testMissionId).then((data: missionManager.MissionSnapshot) => {
+    console.info(`getLowResolutionMissionSnapShot successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`getLowResolutionMissionSnapShot failed. Cause: ${error.message}`);
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`getLowResolutionMissionSnapShot failed. Cause: ${err.message}`);
 }
 ```
 
@@ -109,21 +127,5 @@ Obtains the low-resolution snapshot of a given mission. This API uses a promise 
 
 **Examples**
 
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let testMissionId = 2;
-
-try {
-  missionManager.getLowResolutionMissionSnapShot('', testMissionId).then((data: missionManager.MissionSnapshot) => {
-    console.info(`getLowResolutionMissionSnapShot successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`getLowResolutionMissionSnapShot failed. Cause: ${error.message}`);
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`getLowResolutionMissionSnapShot failed. Cause: ${err.message}`);
-}
-```
+See [getLowResolutionMissionSnapShot](#getlowresolutionmissionsnapshot)
 

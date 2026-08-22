@@ -50,6 +50,35 @@ Allows the specified origin to use the geolocation APIs. It is used to pre-autho
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  origin: string = "file:///";
+
+  build() {
+    Column() {
+      Button('allowGeolocation')
+        .onClick(() => {
+          try {
+            webview.GeolocationPermissions.allowGeolocation(this.origin);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## deleteAllGeolocation
 
 ```TypeScript
@@ -71,6 +100,34 @@ Clears the geolocation permission status of all origins. It is used to revoke ge
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | incognito | boolean | No | The value **true** indicates clearing the geolocation permission status of all origins in Privacy Mode, and **false** indicates clearing the geolocation permission status of all origins in Normal Mode. <br>Default value: **false**. <br>The value **false** is used when null or undefined is input.<br>**Since:** 11 |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('deleteAllGeolocation')
+        .onClick(() => {
+          try {
+            webview.GeolocationPermissions.deleteAllGeolocation();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## deleteGeolocation
 
@@ -101,6 +158,35 @@ Clears the geolocation permission status of the specified origin. It is used to 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  origin: string = "file:///";
+
+  build() {
+    Column() {
+      Button('deleteGeolocation')
+        .onClick(() => {
+          try {
+            webview.GeolocationPermissions.deleteGeolocation(this.origin);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## getAccessibleGeolocation
 
@@ -138,6 +224,73 @@ Obtains the geolocation permission status of the specified origin. This API uses
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  origin: string = "file:///";
+
+  build() {
+    Column() {
+      Button('getAccessibleGeolocation')
+        .onClick(() => {
+          try {
+            webview.GeolocationPermissions.getAccessibleGeolocation(this.origin, (error, result) => {
+              if (error) {
+                console.error(`getAccessibleGeolocationAsync error, ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+                return;
+              }
+              console.info('getAccessibleGeolocationAsync result: ' + result);
+            });
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  origin: string = "file:///";
+
+  build() {
+    Column() {
+      Button('getAccessibleGeolocation')
+        .onClick(() => {
+          try {
+            webview.GeolocationPermissions.getAccessibleGeolocation(this.origin)
+              .then(result => {
+                console.info('getAccessibleGeolocationPromise result: ' + result);
+              }).catch((error: BusinessError) => {
+              console.error(`getAccessibleGeolocationPromise error, ErrorCode: ${error.code},  Message: ${error.message}`);
+            });
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## getAccessibleGeolocation
 
 ```TypeScript
@@ -159,7 +312,7 @@ Obtains the geolocation permission status of the specified origin. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | origin | string | Yes | String of the specified origin. <br>The origin format must comply with the format defined in RFC 6454. An exception is thrown when a non- conforming input string is input. Error code: 17100011. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the geolocation permission status of the specified origin. <br>If the operation is successful, the value **true** means that the geolocation permission is granted, and **false** means the opposite. <br>If the operation fails, the geolocation permission status of the specified origin is not found. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the geolocation permission status of the specified origin. <br>If the operation is successful, the value **true** means that the geolocation permission is granted, and **false** means the opposite. <br>If the operation fails, the geolocation permission status of the specified origin is not found. |
 | incognito | boolean | No | The value **true** indicates to get the geolocation permission status of the specified origin in privacy mode, and **false** indicates to get it in normal mode. <br>Default value: **false**. <br>Throws an exception error with error code 401 when null or undefined is input.<br>**Since:** 11 |
 
 **Error codes:**
@@ -168,6 +321,10 @@ Obtains the geolocation permission status of the specified origin. This API uses
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
+
+**Examples**
+
+See [getAccessibleGeolocation](#getaccessiblegeolocation)
 
 ## getStoredGeolocation
 
@@ -203,6 +360,73 @@ Obtains the geolocation permission status of all origins. This API uses a promis
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getStoredGeolocation')
+        .onClick(() => {
+          try {
+            webview.GeolocationPermissions.getStoredGeolocation((error, origins) => {
+              if (error) {
+                console.error(`getStoredGeolocationAsync error, ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+                return;
+              }
+              let origins_str: string = origins.join();
+              console.info('getStoredGeolocationAsync origins: ' + origins_str);
+            });
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getStoredGeolocation')
+        .onClick(() => {
+          try {
+            webview.GeolocationPermissions.getStoredGeolocation()
+              .then(origins => {
+                let origins_str: string = origins.join();
+                console.info('getStoredGeolocationPromise origins: ' + origins_str);
+              }).catch((error: BusinessError) => {
+              console.error(`getStoredGeolocationPromise error, ErrorCode: ${error.code},  Message: ${error.message}`);
+            });
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## getStoredGeolocation
 
 ```TypeScript
@@ -223,7 +447,7 @@ Obtains the geolocation permission status of all origins. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return all origin information of stored geolocation permission statuses. The callback parameters include: error (error object, which is null when retrieval is successful) and origins (array of origin strings with stored geolocation permissions, where each element is an origin string that complies with the format defined in RFC 6454). When retrieval fails, error is the error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return all origin information of stored geolocation permission statuses. The callback parameters include: error (error object, which is null when retrieval is successful) and origins (array of origin strings with stored geolocation permissions, where each element is an origin string that complies with the format defined in RFC 6454). When retrieval fails, error is the error object. |
 | incognito | boolean | No | Whether to obtain all origin information of stored geolocation permission statuses in privacy mode. The value **true** indicates privacy mode, and **false** indicates normal mode. <br>Default value: **false**. <br>Throws an exception error code 401 when null or undefined is passed in.<br>**Since:** 11 |
 
 **Error codes:**
@@ -231,4 +455,8 @@ Obtains the geolocation permission status of all origins. This API uses an async
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
+
+**Examples**
+
+See [getStoredGeolocation](#getstoredgeolocation)
 

@@ -73,6 +73,23 @@ function getBeauty(portraitPhotoSession: camera.PortraitPhotoSession): number {
 }
 ```
 
+```TypeScript
+function getBeauty(captureSession: camera.CaptureSession): number {
+  const invalidValue: number = -1;
+  let beautyTypes: Array<camera.BeautyType> = captureSession.getSupportedBeautyTypes();
+  if (beautyTypes === undefined || beautyTypes.length <= 0) {
+    return invalidValue;
+  }
+  let beautyLevels: Array<number> = captureSession.getSupportedBeautyRange(beautyTypes[0]);
+  if (beautyLevels === undefined || beautyLevels.length <= 0) {
+    return invalidValue;
+  }
+  captureSession.setBeauty(beautyTypes[0], beautyLevels[0]);
+  let beautyLevel: number = captureSession.getBeauty(beautyTypes[0]);
+  return beautyLevel;
+}
+```
+
 ## setBeauty
 
 ```TypeScript
@@ -116,6 +133,20 @@ function setBeauty(portraitPhotoSession: camera.PortraitPhotoSession): void {
     return;
   }
   portraitPhotoSession.setBeauty(beautyTypes[0], beautyLevels[0]);
+}
+```
+
+```TypeScript
+function setBeauty(captureSession: camera.CaptureSession): void {
+  let beautyTypes: Array<camera.BeautyType> = captureSession.getSupportedBeautyTypes();
+  if (beautyTypes === undefined || beautyTypes.length <= 0) {
+    return;
+  }
+  let beautyLevels: Array<number> = captureSession.getSupportedBeautyRange(beautyTypes[0]);
+  if (beautyLevels === undefined || beautyLevels.length <= 0) {
+    return;
+  }
+  captureSession.setBeauty(beautyTypes[0], beautyLevels[0]);
 }
 ```
 

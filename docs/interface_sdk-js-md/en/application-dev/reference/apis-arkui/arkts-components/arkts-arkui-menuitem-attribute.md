@@ -133,28 +133,6 @@ Triggered when the selection status of the menu item is changed manually.
 | --- | --- | --- | --- |
 | callback | (selected: boolean) =&gt; void | Yes | Invoked when the selected status changes.<br>**true**: selected; **false**: unselected. |
 
-## selectIcon
-
-```TypeScript
-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier)
-```
-
-Sets whether to display the selected icon when the menu item is selected.
-
-**Since:** 9
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-MenuItemAttribute-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier): MenuItemAttribute--><!--Device-MenuItemAttribute-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier): MenuItemAttribute-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | boolean \| ResourceStr \| SymbolGlyphModifier | Yes | Whether to display the selected icon when the menu item is selected.<br>**true**: Display the default check mark icon. **false**: Hide the selected state icon.&lt;br &gt;**ResourceStr**: Display the specified custom icon resource.<br>**SymbolGlyphModifier**: Display the specified HMSymbol icon.<br>Default value: **false**.<br>**Since:** 12 |
-
 ## selected
 
 ```TypeScript
@@ -180,6 +158,28 @@ Since API version 18, this parameter supports two-way binding through [!!](../..
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether the menu item is selected.<br>**true**: The menu item is selected. **false**: The menu item is not selected.<br>Default value: **false**. |
+
+## selectIcon
+
+```TypeScript
+selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier)
+```
+
+Sets whether to display the selected icon when the menu item is selected.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-MenuItemAttribute-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier): MenuItemAttribute--><!--Device-MenuItemAttribute-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier): MenuItemAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean \| ResourceStr \| SymbolGlyphModifier | Yes | Whether to display the selected icon when the menu item is selected.<br>**true**: Display the default check mark icon. **false**: Hide the selected state icon.&lt;br &gt;**ResourceStr**: Display the specified custom icon resource.<br>**SymbolGlyphModifier**: Display the specified HMSymbol icon.<br>Default value: **false**.<br>**Since:** 12 |
 
 ## subMenuBuilder
 

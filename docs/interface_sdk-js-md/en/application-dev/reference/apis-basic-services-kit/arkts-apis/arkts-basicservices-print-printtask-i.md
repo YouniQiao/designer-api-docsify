@@ -14,122 +14,6 @@ Implements event listeners for print jobs.
 import { print } from '@kit.BasicServicesKit';
 ```
 
-## offBlock
-
-```TypeScript
-offBlock(callback?: Callback<void>): void
-```
-
-Unregister event callback when the current print task is in process.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.PRINT
-
-<!--Device-PrintTask-offBlock(callback?: Callback<void>): void--><!--Device-PrintTask-offBlock(callback?: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Print.PrintFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | The callback function for print task change event |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-
-## offCancel
-
-```TypeScript
-offCancel(callback?: Callback<void>): void
-```
-
-Unregister event callback when the current print task is in process.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.PRINT
-
-<!--Device-PrintTask-offCancel(callback?: Callback<void>): void--><!--Device-PrintTask-offCancel(callback?: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Print.PrintFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | The callback function for print task change event |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-
-## offFail
-
-```TypeScript
-offFail(callback?: Callback<void>): void
-```
-
-Unregister event callback when the current print task is in process.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.PRINT
-
-<!--Device-PrintTask-offFail(callback?: Callback<void>): void--><!--Device-PrintTask-offFail(callback?: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Print.PrintFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | The callback function for print task change event |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-
-## offSucceed
-
-```TypeScript
-offSucceed(callback?: Callback<void>): void
-```
-
-Unregister event callback when the current print task is in process.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.PRINT
-
-<!--Device-PrintTask-offSucceed(callback?: Callback<void>): void--><!--Device-PrintTask-offSucceed(callback?: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Print.PrintFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | The callback function for print task change event |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-
 ## off('block')
 
 ```TypeScript
@@ -151,7 +35,7 @@ Unsubscribes from the block events of a print job. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'block' | Yes | Listening type.<br>The value is fixed at **'block'**.<br>It means that the print job is blocked. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to unsubscribe from the block events of a specified print job. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to unsubscribe from the block events of a specified print job. |
 
 **Error codes:**
 
@@ -216,7 +100,7 @@ Unsubscribes from the cancellation events of a print job. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cancel' | Yes | Listening type.<br>The value is fixed at **'cancel'**.<br>It means that the print job is canceled. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to unsubscribe from the cancellation events of a specified print job. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to unsubscribe from the cancellation events of a specified print job. |
 
 **Error codes:**
 
@@ -281,7 +165,7 @@ Unsubscribes from the failure events of a print job. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fail' | Yes | Listening type.<br>The value is fixed at **'fail'**.<br>It means that the print job is failed. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to unsubscribe from the failure events of a specified print job. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to unsubscribe from the failure events of a specified print job. |
 
 **Error codes:**
 
@@ -346,7 +230,7 @@ Unsubscribes from the success events of a print job. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'succeed' | Yes | Listening type.<br>The value is fixed at **'succeed'**.<br>It means that the print job is successful. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to unsubscribe from the success events of a specified print job. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to unsubscribe from the success events of a specified print job. |
 
 **Error codes:**
 
@@ -390,19 +274,19 @@ struct Index {
 }
 ```
 
-## onBlock
+## offBlock
 
 ```TypeScript
-onBlock(callback: Callback<void>): void
+offBlock(callback?: Callback<void>): void
 ```
 
-Register event callback when the current print task is in process.
+Unregister event callback when the current print task is in process.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.PRINT
 
-<!--Device-PrintTask-onBlock(callback: Callback<void>): void--><!--Device-PrintTask-onBlock(callback: Callback<void>): void-End-->
+<!--Device-PrintTask-offBlock(callback?: Callback<void>): void--><!--Device-PrintTask-offBlock(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -410,7 +294,7 @@ Register event callback when the current print task is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | The callback function for print task change event |
 
 **Error codes:**
 
@@ -419,19 +303,19 @@ Register event callback when the current print task is in process.
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## onCancel
+## offCancel
 
 ```TypeScript
-onCancel(callback: Callback<void>): void
+offCancel(callback?: Callback<void>): void
 ```
 
-Register event callback when the current print task is in process.
+Unregister event callback when the current print task is in process.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.PRINT
 
-<!--Device-PrintTask-onCancel(callback: Callback<void>): void--><!--Device-PrintTask-onCancel(callback: Callback<void>): void-End-->
+<!--Device-PrintTask-offCancel(callback?: Callback<void>): void--><!--Device-PrintTask-offCancel(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -439,7 +323,7 @@ Register event callback when the current print task is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | The callback function for print task change event |
 
 **Error codes:**
 
@@ -448,19 +332,19 @@ Register event callback when the current print task is in process.
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## onFail
+## offFail
 
 ```TypeScript
-onFail(callback: Callback<void>): void
+offFail(callback?: Callback<void>): void
 ```
 
-Register event callback when the current print task is in process.
+Unregister event callback when the current print task is in process.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.PRINT
 
-<!--Device-PrintTask-onFail(callback: Callback<void>): void--><!--Device-PrintTask-onFail(callback: Callback<void>): void-End-->
+<!--Device-PrintTask-offFail(callback?: Callback<void>): void--><!--Device-PrintTask-offFail(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -468,7 +352,7 @@ Register event callback when the current print task is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | The callback function for print task change event |
 
 **Error codes:**
 
@@ -477,19 +361,19 @@ Register event callback when the current print task is in process.
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
-## onSucceed
+## offSucceed
 
 ```TypeScript
-onSucceed(callback: Callback<void>): void
+offSucceed(callback?: Callback<void>): void
 ```
 
-Register event callback when the current print task is in process.
+Unregister event callback when the current print task is in process.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.PRINT
 
-<!--Device-PrintTask-onSucceed(callback: Callback<void>): void--><!--Device-PrintTask-onSucceed(callback: Callback<void>): void-End-->
+<!--Device-PrintTask-offSucceed(callback?: Callback<void>): void--><!--Device-PrintTask-offSucceed(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -497,7 +381,7 @@ Register event callback when the current print task is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | The callback function for print task change event |
 
 **Error codes:**
 
@@ -527,7 +411,7 @@ Subscribes to the block events of a print job. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'block' | Yes | Listening type.<br>The value is fixed at **'block'**.<br>It means that the print job is blocked. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to notify the caller that the print job is blocked. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to notify the caller that the print job is blocked. |
 
 **Error codes:**
 
@@ -592,7 +476,7 @@ Subscribes to the cancellation events of a print job. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cancel' | Yes | Listening type.<br>The value is fixed at **'cancel'**.<br>It means that the print job is canceled. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to notify the caller that the print job is canceled. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to notify the caller that the print job is canceled. |
 
 **Error codes:**
 
@@ -657,7 +541,7 @@ Subscribes to the failure events of a print job. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fail' | Yes | Listening type.<br>The value is fixed at **'fail'**.<br>It means that the print job is failed. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to notify the caller that the print job is failed. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to notify the caller that the print job is failed. |
 
 **Error codes:**
 
@@ -722,7 +606,7 @@ Subscribes to the success events of a print job. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'succeed' | Yes | Listening type.<br>The value is fixed at **'succeed'**.<br>It means that the print job is successful. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to notify the caller that the print job is successful. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to notify the caller that the print job is successful. |
 
 **Error codes:**
 
@@ -765,4 +649,120 @@ struct Index {
     }
 }
 ```
+
+## onBlock
+
+```TypeScript
+onBlock(callback: Callback<void>): void
+```
+
+Register event callback when the current print task is in process.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.PRINT
+
+<!--Device-PrintTask-onBlock(callback: Callback<void>): void--><!--Device-PrintTask-onBlock(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | The callback function for print task change event |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+
+## onCancel
+
+```TypeScript
+onCancel(callback: Callback<void>): void
+```
+
+Register event callback when the current print task is in process.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.PRINT
+
+<!--Device-PrintTask-onCancel(callback: Callback<void>): void--><!--Device-PrintTask-onCancel(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | The callback function for print task change event |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+
+## onFail
+
+```TypeScript
+onFail(callback: Callback<void>): void
+```
+
+Register event callback when the current print task is in process.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.PRINT
+
+<!--Device-PrintTask-onFail(callback: Callback<void>): void--><!--Device-PrintTask-onFail(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | The callback function for print task change event |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+
+## onSucceed
+
+```TypeScript
+onSucceed(callback: Callback<void>): void
+```
+
+Register event callback when the current print task is in process.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.PRINT
+
+<!--Device-PrintTask-onSucceed(callback: Callback<void>): void--><!--Device-PrintTask-onSucceed(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | The callback function for print task change event |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 

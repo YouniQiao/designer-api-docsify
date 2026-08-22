@@ -14,7 +14,7 @@ function createHidDeviceProfile(): HidDeviceProfile
 
 Creates the instance of HID device profile.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 

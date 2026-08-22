@@ -30,7 +30,7 @@ Verifies an .abc file. This API uses an asynchronous callback to return the resu
 | --- | --- | --- | --- |
 | abcPaths | Array&lt;string&gt; | Yes | Path of the .abc file. |
 | deleteOriginalFiles | boolean | Yes | Whether to delete the .abc file. **true** to delete, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -61,6 +61,25 @@ try {
 } catch (err) {
   let message = (err as BusinessError).message;
   hilog.error(0x0000, 'testTag', 'verifyAbc failed: %{public}s', message);
+}
+```
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let abcPaths: Array<string> = ['/data/storage/el2/base/a.abc'];
+
+try {
+  bundleManager.verifyAbc(abcPaths, true).then((data) => {
+    hilog.info(0x0000, 'testTag', 'verifyAbc successfully');
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'verifyAbc failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'verifyAbc failed. Cause: %{public}s', message);
 }
 ```
 
@@ -107,22 +126,5 @@ Verifies an .abc file. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let abcPaths: Array<string> = ['/data/storage/el2/base/a.abc'];
-
-try {
-  bundleManager.verifyAbc(abcPaths, true).then((data) => {
-    hilog.info(0x0000, 'testTag', 'verifyAbc successfully');
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'verifyAbc failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'verifyAbc failed. Cause: %{public}s', message);
-}
-```
+See [verifyAbc](#verifyabc)
 

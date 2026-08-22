@@ -498,51 +498,6 @@ try {
 }
 ```
 
-## offReplyResult
-
-```TypeScript
-offReplyResult(callback?: Callback<ReplyResult>): void
-```
-
-取消回复UI操作结果回调。使用callback异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.ACCESS_SERVICE_DM
-
-<!--Device-DeviceManager-offReplyResult(callback?: Callback<ReplyResult>): void--><!--Device-DeviceManager-offReplyResult(callback?: Callback<ReplyResult>): void-End-->
-
-**系统能力：** SystemCapability.DistributedHardware.DeviceManager
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | 否 | 指示要取消注册的设备管理器 UI 状态，返回UI状态。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.offReplyResult();
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error(`offReplyResult errCode: ${e.code}, errMessage: ${e.message}`);
-}
-```
-
 ## off('replyResult')
 
 ```TypeScript
@@ -590,19 +545,19 @@ try {
 }
 ```
 
-## onReplyResult
+## offReplyResult
 
 ```TypeScript
-onReplyResult(callback: Callback<ReplyResult>): void
+offReplyResult(callback?: Callback<ReplyResult>): void
 ```
 
-回复UI操作结果回调。使用callback异步回调。
+取消回复UI操作结果回调。使用callback异步回调。
 
 **起始版本：** 23
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
-<!--Device-DeviceManager-onReplyResult(callback: Callback<ReplyResult>): void--><!--Device-DeviceManager-onReplyResult(callback: Callback<ReplyResult>): void-End-->
+<!--Device-DeviceManager-offReplyResult(callback?: Callback<ReplyResult>): void--><!--Device-DeviceManager-offReplyResult(callback?: Callback<ReplyResult>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -612,7 +567,7 @@ onReplyResult(callback: Callback<ReplyResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | 是 | 指示要注册的设备管理器 UI 状态回调，返回UI状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | 否 | 指示要取消注册的设备管理器 UI 状态，返回UI状态。 |
 
 **错误码：**
 
@@ -628,12 +583,10 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.onReplyResult((data: distributedDeviceManager.ReplyResult) => {
-    console.info('onReplyResult executed, data: ' + JSON.stringify(data));
-  });
+  dmInstance.offReplyResult();
 } catch (err) {
   let e: BusinessError = err as BusinessError;
-  console.error(`onReplyResult errCode: ${e.code}, errMessage: ${e.message}`);
+  console.error(`offReplyResult errCode: ${e.code}, errMessage: ${e.message}`);
 }
 ```
 
@@ -694,6 +647,53 @@ try {
 } catch (err) {
   let e: BusinessError = err as BusinessError;
   console.error(`replyResult errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
+
+## onReplyResult
+
+```TypeScript
+onReplyResult(callback: Callback<ReplyResult>): void
+```
+
+回复UI操作结果回调。使用callback异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-onReplyResult(callback: Callback<ReplyResult>): void--><!--Device-DeviceManager-onReplyResult(callback: Callback<ReplyResult>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | 是 | 指示要注册的设备管理器 UI 状态回调，返回UI状态。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.onReplyResult((data: distributedDeviceManager.ReplyResult) => {
+    console.info('onReplyResult executed, data: ' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`onReplyResult errCode: ${e.code}, errMessage: ${e.message}`);
 }
 ```
 

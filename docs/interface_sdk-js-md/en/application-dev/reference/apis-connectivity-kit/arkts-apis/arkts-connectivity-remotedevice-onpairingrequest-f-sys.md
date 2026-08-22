@@ -30,7 +30,7 @@ This event is accessible only to system applications that granted the ohos.permi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PairingRequestParam](arkts-connectivity-remotedevice-pairingrequestparam-i.md)&gt; | Yes | Callback used to listen for the pairing request event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PairingRequestParam](arkts-connectivity-remotedevice-pairingrequestparam-i.md)&gt; | Yes | Callback used to listen for the pairing request event. |
 
 **Error codes:**
 

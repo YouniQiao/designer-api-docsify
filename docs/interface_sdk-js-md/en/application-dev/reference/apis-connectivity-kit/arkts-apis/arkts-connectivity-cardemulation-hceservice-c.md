@@ -14,37 +14,6 @@ Provides APIs for implementing HCE, including receiving Application Protocol Dat
 import { cardEmulation } from '@kit.ConnectivityKit';
 ```
 
-## offHceCmd
-
-```TypeScript
-offHceCmd(callback?: AsyncCallback<int[]>): void
-```
-
-Unsubscribe the event to receive the APDU data.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.NFC_CARD_EMULATION
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-HceService-offHceCmd(callback?: AsyncCallback<int[]>): void--><!--Device-HceService-offHceCmd(callback?: AsyncCallback<int[]>): void-End-->
-
-**System capability:** SystemCapability.Communication.NFC.CardEmulation
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | No | The callback used to listen for the event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-
 ## off('hceCmd')
 
 ```TypeScript
@@ -68,7 +37,7 @@ Unsubscribes from events indicating receiving of APDUs from the peer card reader
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hceCmd' | Yes | Event type. It has a fixed value of **hceCmd**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | No | Event callback. Each number is represented in hexadecimal notation, with values ranging from 0x00 to 0xFF. If this parameter is not set, this API unregisters the callback for the specified **type**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | No | Event callback. Each number is represented in hexadecimal notation, with values ranging from 0x00 to 0xFF. If this parameter is not set, this API unregisters the callback for the specified **type**. |
 
 **Error codes:**
 
@@ -113,13 +82,13 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## onHceCmd
+## offHceCmd
 
 ```TypeScript
-onHceCmd(callback: AsyncCallback<int[]>): void
+offHceCmd(callback?: AsyncCallback<int[]>): void
 ```
 
-register HCE event to receive the APDU data.
+Unsubscribe the event to receive the APDU data.
 
 **Since:** 23
 
@@ -127,7 +96,7 @@ register HCE event to receive the APDU data.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-HceService-onHceCmd(callback: AsyncCallback<int[]>): void--><!--Device-HceService-onHceCmd(callback: AsyncCallback<int[]>): void-End-->
+<!--Device-HceService-offHceCmd(callback?: AsyncCallback<int[]>): void--><!--Device-HceService-offHceCmd(callback?: AsyncCallback<int[]>): void-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
@@ -135,14 +104,13 @@ register HCE event to receive the APDU data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | Yes | Callback used to listen to HCE data that local device received. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | No | The callback used to listen for the event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## on('hceCmd')
@@ -168,7 +136,7 @@ Subscribes to events indicating receiving of APDUs from the peer card reader. Th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hceCmd' | Yes | Event type. It has a fixed value of **hceCmd**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | Yes | Event callback used to return the data array that complies with the APDU. Each number is represented in hexadecimal notation, with values ranging from 0x00 to 0xFF. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | Yes | Event callback used to return the data array that complies with the APDU. Each number is represented in hexadecimal notation, with values ranging from 0x00 to 0xFF. |
 
 **Error codes:**
 
@@ -252,6 +220,38 @@ export default {
   // Implement other lifecycle functions as demanded.
 }
 ```
+
+## onHceCmd
+
+```TypeScript
+onHceCmd(callback: AsyncCallback<int[]>): void
+```
+
+register HCE event to receive the APDU data.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.NFC_CARD_EMULATION
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HceService-onHceCmd(callback: AsyncCallback<int[]>): void--><!--Device-HceService-onHceCmd(callback: AsyncCallback<int[]>): void-End-->
+
+**System capability:** SystemCapability.Communication.NFC.CardEmulation
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | Yes | Callback used to listen to HCE data that local device received. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## sendResponse
 
@@ -502,42 +502,6 @@ hceService.transmit(responseData).then(() => {
 console.info("transmit Promise end.");
 ```
 
-## transmit
-
-```TypeScript
-transmit(response: int[], callback: AsyncCallback<void>): void
-```
-
-Sends APDU data to the peer card reader. The application can call this API only after receiving an APDU sent by the card reader via [on](#onhcecmd). This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.NFC_CARD_EMULATION
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-HceService-transmit(response: int[], callback: AsyncCallback<void>): void--><!--Device-HceService-transmit(response: int[], callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Communication.NFC.CardEmulation
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| response | int[] | Yes | Response APDU sent to the peer card reader. The value consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
-
-**Examples**
-
 ```TypeScript
 // Applicable to devices other than lite wearables
 import { cardEmulation } from '@kit.ConnectivityKit';
@@ -575,4 +539,42 @@ hceService.transmit(responseData, () => {
 });
 console.info("transmit Promise end.");
 ```
+
+## transmit
+
+```TypeScript
+transmit(response: int[], callback: AsyncCallback<void>): void
+```
+
+Sends APDU data to the peer card reader. The application can call this API only after receiving an APDU sent by the card reader via [on](#onhcecmd). This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.NFC_CARD_EMULATION
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HceService-transmit(response: int[], callback: AsyncCallback<void>): void--><!--Device-HceService-transmit(response: int[], callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.NFC.CardEmulation
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| response | int[] | Yes | Response APDU sent to the peer card reader. The value consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
+
+**Examples**
+
+See [transmit](#transmit)
 

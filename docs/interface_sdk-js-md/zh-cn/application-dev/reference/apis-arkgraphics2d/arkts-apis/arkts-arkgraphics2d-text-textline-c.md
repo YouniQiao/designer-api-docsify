@@ -163,6 +163,10 @@ createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string)
 | --- | --- |
 | [TextLine](arkts-arkgraphics2d-text-textline-c.md) \| undefined | 截断的文本行对象。 |
 
+**示例**
+
+参见 [createTruncatedLine](#createtruncatedline)
+
 ## enumerateCaretOffsets
 
 ```TypeScript
@@ -268,6 +272,10 @@ getGlyphCount(): int
 let glyphCount = lines[0].getGlyphCount();
 ```
 
+```TypeScript
+let glyphs = runs[0].getGlyphCount();
+```
+
 ## getGlyphRuns
 
 ```TypeScript
@@ -332,6 +340,10 @@ getImageBounds(): common2D.Rect
 
 ```TypeScript
 let imageBounds = lines[0].getImageBounds();
+```
+
+```TypeScript
+let bounds = runs[0].getImageBounds();
 ```
 
 ## getOffsetForStringIndex
@@ -499,6 +511,10 @@ let bounds = lines[0].getTypographicBounds();
 console.info('textLine ascent:' + bounds.ascent + ', descent:' + bounds.descent + ', leading:' + bounds.leading + ', width:' + bounds.width);
 ```
 
+```TypeScript
+let typographicBounds = runs[0].getTypographicBounds();
+```
+
 ## paint
 
 ```TypeScript
@@ -524,6 +540,14 @@ paint(canvas: drawing.Canvas, x: double, y: double): void
 | y | double | 是 | 绘制的左上角位置的纵坐标，浮点数，单位为物理像素px。 |
 
 **示例**
+
+```TypeScript
+const color: ArrayBuffer = new ArrayBuffer(160000);
+let opts: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 200, width: 200 } }
+let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
+let canvas = new drawing.Canvas(pixelMap);
+paragraph.paint(canvas, 0, 0);
+```
 
 ArkTS-Dyn示例：
 
@@ -584,6 +608,93 @@ function textFunc(pixelmap?: image.PixelMap) {
     let paragraph = paragraphBuilder.build();
     let lines = paragraph.getTextLines();
     lines[0].paint(canvas, 0, 0);
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  @State pixelmap?: image.PixelMap = undefined;
+  fun: (pixelmap?: image.PixelMap) => void = textFunc;
+  build() {
+    Column() {
+      Image(this.pixelmap).width(200).height(200);
+      Button("Click").onClick((e: ClickEvent) => {
+        if (this.pixelmap == undefined) {
+          const color: ArrayBuffer = new ArrayBuffer(160000);
+          let opts: image.InitializationOptions =
+            { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 200, width: 200 } }
+          this.pixelmap = image.createPixelMapSync(color, opts);
+        }
+        this.fun(this.pixelmap);
+      })
+    }
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D'
+import { text } from '@kit.ArkGraphics2D'
+import { common2D } from '@kit.ArkGraphics2D'
+import { image } from '@kit.ImageKit'
+
+function textFunc(pixelmap: PixelMap) {
+  let canvas = new drawing.Canvas(pixelmap);
+  runs[0].paint(canvas, 0, 0);
+}
+
+@Entry
+@Component
+struct Index {
+  @State pixelmap?: PixelMap = undefined;
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Image(this.pixelmap).width(200).height(200);
+      Button().onClick(() => {
+        if (this.pixelmap == undefined) {
+          const color: ArrayBuffer = new ArrayBuffer(160000);
+          let opts: image.InitializationOptions =
+            { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 200, width: 200 } }
+          this.pixelmap = image.createPixelMapSync(color, opts);
+        }
+        this.fun(this.pixelmap);
+      })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component, Column, Button, Image, ClickEvent} from '@ohos.arkui.component'
+import { State } from '@ohos.arkui.stateManagement'
+import { drawing } from '@kit.ArkGraphics2D'
+import { text } from "@kit.ArkGraphics2D"
+import { image } from '@kit.ImageKit';
+
+function textFunc(pixelmap?: image.PixelMap) {
+  if (pixelmap) {
+    let canvas = new drawing.Canvas(pixelmap);
+    let textStyle: text.TextStyle = {
+      color: { alpha: 255, red: 255, green: 0, blue: 0 },
+      fontSize: 33,
+    };
+    let paragraphStyle: text.ParagraphStyle = {
+      textStyle: textStyle,
+      align: text.TextAlign.END,
+    };
+    let fontCollection = new text.FontCollection();
+    let paragraphBuilder = new text.ParagraphBuilder(paragraphStyle, fontCollection);
+    paragraphBuilder.addText("Hello World");
+    let paragraph = paragraphBuilder.build();
+    let lines = paragraph.getTextLines();
+    let runs = lines[0].getGlyphRuns();
+    runs[0].paint(canvas, 0, 0);
   }
 }
 

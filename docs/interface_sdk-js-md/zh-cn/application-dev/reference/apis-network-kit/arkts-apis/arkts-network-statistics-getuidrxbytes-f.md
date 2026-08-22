@@ -71,6 +71,26 @@ statistics.getUidRxBytes(20010038, (error: BusinessError|null, stats: long|undef
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+statistics.getUidRxBytes(20010038).then((stats: number) => {
+  console.info(JSON.stringify(stats));
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+statistics.getUidRxBytes(20010038).then((stats: long) => {
+  console.info(JSON.stringify(stats));
+});
+```
+
 
 ## getUidRxBytes
 
@@ -118,23 +138,5 @@ function getUidRxBytes(uid: int): Promise<long>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-statistics.getUidRxBytes(20010038).then((stats: number) => {
-  console.info(JSON.stringify(stats));
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-statistics.getUidRxBytes(20010038).then((stats: long) => {
-  console.info(JSON.stringify(stats));
-});
-```
+参见 [getUidRxBytes](#getuidrxbytes)
 

@@ -158,24 +158,6 @@ Yahoo, the default value is **2**.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
-## INVALID_LABEL_ID
-
-```TypeScript
-static readonly INVALID_LABEL_ID: -2
-```
-
-Invalid instant message type, the default value is **-2**.
-
-**Type:** -2
-
-**Since:** 7
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ImAddress-static readonly INVALID_LABEL_ID: -2--><!--Device-ImAddress-static readonly INVALID_LABEL_ID: -2-End-->
-
-**System capability:** SystemCapability.Applications.ContactsData
-
 ## imAddress
 
 ```TypeScript
@@ -191,6 +173,24 @@ IM address.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ImAddress-imAddress: string--><!--Device-ImAddress-imAddress: string-End-->
+
+**System capability:** SystemCapability.Applications.ContactsData
+
+## INVALID_LABEL_ID
+
+```TypeScript
+static readonly INVALID_LABEL_ID: -2
+```
+
+Invalid instant message type, the default value is **-2**.
+
+**Type:** -2
+
+**Since:** 7
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ImAddress-static readonly INVALID_LABEL_ID: -2--><!--Device-ImAddress-static readonly INVALID_LABEL_ID: -2-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 

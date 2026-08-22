@@ -51,3 +51,19 @@ Sets an extended attribute of a file or directory. This API uses a promise to re
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let attrKey = "user.comment";
+let attrValue = "Test file.";
+
+fs.setxattr(filePath, attrKey, attrValue).then(() => {
+  console.info("Set extended attribute successfully.");
+}).catch((err: BusinessError) => {
+  console.error("Failed to set extended attribute with error message: " + err.message + ", error code: " + err.code);
+});
+```
+

@@ -50,3 +50,7 @@ location: double
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+**示例**
+
+alignment为CENTER，location为200，文本为"12/t345"：
+

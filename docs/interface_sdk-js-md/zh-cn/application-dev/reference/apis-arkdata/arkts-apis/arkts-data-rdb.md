@@ -61,6 +61,6 @@
 | 名称 | 说明 |
 | --- | --- |
 | [ResultSet](arkts-arkdata-rdb-resultset-t.md) | 配置RdbPredicates以匹配数据字段为ValueType且value超出给定范围的指定字段。该方法等同于SQL语句中的"NOT BETWEEN"。 |
-| [ValueType](arkts-arkdata-rdb-valuetype-t.md) | 用于表示允许的数据字段类型。 |
 | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 用于存储键值对的类型。 |
+| [ValueType](arkts-arkdata-rdb-valuetype-t.md) | 用于表示允许的数据字段类型。 |
 

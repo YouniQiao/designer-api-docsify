@@ -84,3 +84,11 @@ Names of the test case executors.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+**Examples**
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+let args: abilityDelegatorRegistry.AbilityDelegatorArgs = abilityDelegatorRegistry.getArguments();
+```
+

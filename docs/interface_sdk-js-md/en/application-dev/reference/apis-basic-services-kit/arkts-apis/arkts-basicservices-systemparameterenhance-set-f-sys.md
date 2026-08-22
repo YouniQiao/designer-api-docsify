@@ -28,7 +28,7 @@ Sets a value of the specified key. This API uses an asynchronous callback to ret
 | --- | --- | --- | --- |
 | key | string | Yes | Target key. The value can contain a maximum of 128 bytes. Only letters, digits, periods (.), hyphens (-), at signs (@), colons (:), and underscores (_) are allowed. |
 | value | string | Yes | Value to set. The value can contain a maximum of 96 bytes (including the end character). |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -51,6 +51,21 @@ try {
     } else {
         console.error("set test.parameter.key value err:" + err.code)
     }});
+} catch(e) {
+    console.error("set unexpected error: " + e);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let p: Promise<void>  = systemParameterEnhance.set("test.parameter.key", "testValue");
+    p.then((value: void) => {
+        console.info("set test.parameter.key success: " + value);
+    }).catch((err: BusinessError) => {
+        console.error(" set test.parameter.key error: " + err.code);
+    });
 } catch(e) {
     console.error("set unexpected error: " + e);
 }
@@ -97,18 +112,5 @@ Sets a value of the specified key. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let p: Promise<void>  = systemParameterEnhance.set("test.parameter.key", "testValue");
-    p.then((value: void) => {
-        console.info("set test.parameter.key success: " + value);
-    }).catch((err: BusinessError) => {
-        console.error(" set test.parameter.key error: " + err.code);
-    });
-} catch(e) {
-    console.error("set unexpected error: " + e);
-}
-```
+See [set](#set)
 

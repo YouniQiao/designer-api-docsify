@@ -41,6 +41,13 @@ static getAvailableIDs(): string[]
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
 
+// ids = ['America/Adak', 'America/Anchorage', 'America/Bogota', 'America/Denver', 'America/Los_Angeles', 'America/Montevideo', 'America/Santiago', 'America/Sao_Paulo', 'Asia/Ashgabat', 'Asia/Hovd', 'Asia/Jerusalem', 'Asia/Magadan', 'Asia/Omsk', 'Asia/Shanghai', 'Asia/Tokyo', 'Asia/Yerevan', 'Atlantic/Cape_Verde', 'Australia/Lord_Howe', 'Europe/Dublin', 'Europe/London', 'Europe/Moscow', 'Pacific/Auckland', 'Pacific/Easter', 'Pacific/Pago-Pago']
+let ids: Array<string> = i18n.TimeZone.getAvailableIDs();
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
 // 共支持742个ID。每一个ID由使用中划线分割的两部分组成，格式为 source-destination。例如ids = ['Han-Latin','Latin-ASCII', 'Amharic-Latin/BGN','Accents-Any', ...]，Han-Latin表示汉语转为译拉丁文，Amharic-Latin表示阿姆哈拉语转为拉丁文。
 // 更多使用信息可以参考ISO-15924。
 let ids: string[] = i18n.Transliterator.getAvailableIDs();
@@ -79,7 +86,25 @@ static getInstance(id: string): Transliterator
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
 
+let indexUtil: i18n.IndexUtil = i18n.getInstance('zh-CN');
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
 let transliterator: i18n.Transliterator = i18n.Transliterator.getInstance('Any-Latn');
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let normalizer: i18n.Normalizer = i18n.Normalizer.getInstance(i18n.NormalizerMode.NFC);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call Normalizer.getInstance failed, error code: ${err.code}, message: ${err.message}.`);
+}
 ```
 
 ## transform

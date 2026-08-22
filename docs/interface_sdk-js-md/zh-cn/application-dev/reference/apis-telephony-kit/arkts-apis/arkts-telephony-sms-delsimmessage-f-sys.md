@@ -57,6 +57,20 @@ sms.delSimMessage(slotId, msgIndex, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+let msgIndex: number = 1;
+let promise = sms.delSimMessage(slotId, msgIndex);
+promise.then(() => {
+    console.info(`delSimMessage success.`);
+}).catch((err: BusinessError) => {
+    console.error(`delSimMessage failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## delSimMessage
 
@@ -103,17 +117,5 @@ function delSimMessage(slotId: int, msgIndex: int): Promise<void>
 
 **示例**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let msgIndex: number = 1;
-let promise = sms.delSimMessage(slotId, msgIndex);
-promise.then(() => {
-    console.info(`delSimMessage success.`);
-}).catch((err: BusinessError) => {
-    console.error(`delSimMessage failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [delSimMessage](#delsimmessage)
 

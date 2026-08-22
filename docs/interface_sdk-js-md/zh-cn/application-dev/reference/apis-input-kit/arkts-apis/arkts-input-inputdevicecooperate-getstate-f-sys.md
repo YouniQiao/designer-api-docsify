@@ -71,6 +71,29 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { inputDeviceCooperate } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          let deviceDescriptor = 'descriptor';
+          inputDeviceCooperate.getState(deviceDescriptor).then((data: object) => {
+            console.info(`Succeeded in getting the status, data: ${JSON.stringify(data)}.`);
+          }).catch((error: BusinessError) => {
+            console.error(`Failed to get the status, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          });
+        })
+    }
+  }
+}
+```
+
 
 ## getState
 
@@ -113,26 +136,5 @@ function getState(deviceDescriptor: string): Promise<{ state: boolean }>
 
 **示例**
 
-```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          let deviceDescriptor = 'descriptor';
-          inputDeviceCooperate.getState(deviceDescriptor).then((data: object) => {
-            console.info(`Succeeded in getting the status, data: ${JSON.stringify(data)}.`);
-          }).catch((error: BusinessError) => {
-            console.error(`Failed to get the status, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          });
-        })
-    }
-  }
-}
-```
+参见 [getState](#getstate)
 

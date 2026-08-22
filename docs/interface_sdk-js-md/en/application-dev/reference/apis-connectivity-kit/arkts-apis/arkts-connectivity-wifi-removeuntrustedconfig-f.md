@@ -76,38 +76,6 @@ try {
 }
 ```
 
-
-## removeUntrustedConfig
-
-```TypeScript
-function removeUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<boolean>): void
-```
-
-Removes a specified untrusted hotspot configuration.
-
-<p>This method removes one configuration at a time.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [removeCandidateConfig](arkts-connectivity-wifimanager-removecandidateconfig-f.md)
-
-**Required permissions:** ohos.permission.SET_WIFI_INFO
-
-<!--Device-wifi-function removeUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<boolean>): void--><!--Device-wifi-function removeUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<boolean>): void-End-->
-
-**System capability:** SystemCapability.Communication.WiFi.STA
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes |  |
-
-**Examples**
-
 ```TypeScript
 import wifi from '@ohos.wifi';
 
@@ -138,4 +106,38 @@ try {
 	console.error("failed:" + JSON.stringify(error));
 }
 ```
+
+
+## removeUntrustedConfig
+
+```TypeScript
+function removeUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<boolean>): void
+```
+
+Removes a specified untrusted hotspot configuration.
+
+<p>This method removes one configuration at a time.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [removeCandidateConfig](arkts-connectivity-wifimanager-removecandidateconfig-f.md)
+
+**Required permissions:** ohos.permission.SET_WIFI_INFO
+
+<!--Device-wifi-function removeUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<boolean>): void--><!--Device-wifi-function removeUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<boolean>): void-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.STA
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |  |
+
+**Examples**
+
+See [removeUntrustedConfig](#removeuntrustedconfig)
 

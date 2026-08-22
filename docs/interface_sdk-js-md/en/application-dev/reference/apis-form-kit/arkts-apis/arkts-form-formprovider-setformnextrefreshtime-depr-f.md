@@ -29,7 +29,7 @@ Sets the next refresh time for a widget. This API uses an asynchronous callback 
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
 | minute | number | Yes | Time for the next refresh. The value must be greater than or equal to 5, in minutes. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -42,6 +42,18 @@ formProvider.setFormNextRefreshTime(formId, 5, (error: BusinessError) => {
   if (error.code) {
     console.error(`formProvider setFormNextRefreshTime, errorCode: ${error.code}, errorMessage: ${error.message}`);
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { formProvider } from '@kit.FormKit';
+// Use an existing widget ID (formId).
+let formId: string = '12400633174999288';
+formProvider.setFormNextRefreshTime(formId, 5).then(() => {
+  console.info('formProvider setFormNextRefreshTime success');
+}).catch((error: BusinessError) => {
+  console.error(`formProvider setFormNextRefreshTime, errorCode: ${error.code}, errorMessage: ${error.message}`);
 });
 ```
 
@@ -79,15 +91,5 @@ Sets the next refresh time for a widget. This API uses a promise to return the r
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { formProvider } from '@kit.FormKit';
-// Use an existing widget ID (formId).
-let formId: string = '12400633174999288';
-formProvider.setFormNextRefreshTime(formId, 5).then(() => {
-  console.info('formProvider setFormNextRefreshTime success');
-}).catch((error: BusinessError) => {
-  console.error(`formProvider setFormNextRefreshTime, errorCode: ${error.code}, errorMessage: ${error.message}`);
-});
-```
+See [setFormNextRefreshTime](#setformnextrefreshtime)
 

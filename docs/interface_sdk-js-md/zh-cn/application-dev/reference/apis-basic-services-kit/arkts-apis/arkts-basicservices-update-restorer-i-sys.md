@@ -153,6 +153,20 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  let restorer = update.getRestorer();
+  restorer.factoryReset().then(() => {
+    console.info(`factoryReset success`);
+  }).catch((err: BusinessError) => {
+    console.error(`factoryReset error ${JSON.stringify(err)}`);
+  });
+} catch(error) {
+  console.error(`Fail to get restorer: ${error}`);
+}
+```
+
 ## factoryReset
 
 ```TypeScript
@@ -198,19 +212,7 @@ factoryReset(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  let restorer = update.getRestorer();
-  restorer.factoryReset().then(() => {
-    console.info(`factoryReset success`);
-  }).catch((err: BusinessError) => {
-    console.error(`factoryReset error ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get restorer: ${error}`);
-}
-```
+参见 [factoryReset](#factoryreset)
 
 ## forceFactoryReset
 

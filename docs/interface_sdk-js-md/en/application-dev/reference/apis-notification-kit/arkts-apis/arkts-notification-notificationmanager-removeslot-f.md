@@ -35,7 +35,7 @@ removeAllSlots removes all notification
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotType | SlotType | Yes | Notification slot type, such as social communication, service reminder, and content consultation. The created slot type must be passed in; otherwise, the deletion operation is invalid. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -61,6 +61,17 @@ let removeSlotCallback = (err: BusinessError): void => {
 }
 let slotType: notificationManager.SlotType = notificationManager.SlotType.SOCIAL_COMMUNICATION;
 notificationManager.removeSlot(slotType, removeSlotCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotType: notificationManager.SlotType = notificationManager.SlotType.SOCIAL_COMMUNICATION;
+notificationManager.removeSlot(slotType).then(() => {
+  console.info(`Succeeded in removing slot.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to remove slot. Code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -111,14 +122,5 @@ removeAllSlots removes all notification
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotType: notificationManager.SlotType = notificationManager.SlotType.SOCIAL_COMMUNICATION;
-notificationManager.removeSlot(slotType).then(() => {
-  console.info(`Succeeded in removing slot.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove slot. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [removeSlot](#removeslot)
 

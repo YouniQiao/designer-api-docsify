@@ -14,3 +14,27 @@ Get live form status info callback
 
 **系统接口：** 此接口为系统接口。
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formInfo } from '@kit.FormKit';
+
+let GetLiveFormStatusCallback: formInfo.GetLiveFormStatusCallback = (): Record<string, string> => {
+  return { '1256444': 'ACTIVE' };
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { formInfo } from '@kit.FormKit';
+
+let GetLiveFormStatusCallback: formInfo.GetLiveFormStatusCallback = (): Record<string, string> => {
+  return { '1256444': 'ACTIVE' };
+};
+```
+

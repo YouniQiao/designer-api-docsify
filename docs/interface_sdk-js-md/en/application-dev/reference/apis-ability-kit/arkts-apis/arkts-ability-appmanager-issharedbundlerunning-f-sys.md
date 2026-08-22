@@ -62,6 +62,21 @@ appManager.isSharedBundleRunning(bundleName, versionCode).then((data) => {
 });
 ```
 
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+
+const bundleName = "this is a bundleName";
+const versionCode = 1;
+
+appManager.isSharedBundleRunning(bundleName, versionCode, (err, data) => {
+  if (err) {
+    console.error(`err: ${JSON.stringify(err)}`);
+  } else {
+    console.info(`The shared bundle running is: ${JSON.stringify(data)}`);
+  }
+});
+```
+
 
 ## isSharedBundleRunning
 
@@ -87,7 +102,7 @@ Checks whether the shared library is in use. This API uses an asynchronous callb
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the shared library. |
 | versionCode | long | Yes | Version number of the shared library. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if the shared library is in use, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if the shared library is in use, **false** otherwise. |
 
 **Error codes:**
 
@@ -100,18 +115,5 @@ Checks whether the shared library is in use. This API uses an asynchronous callb
 
 **Examples**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-
-const bundleName = "this is a bundleName";
-const versionCode = 1;
-
-appManager.isSharedBundleRunning(bundleName, versionCode, (err, data) => {
-  if (err) {
-    console.error(`err: ${JSON.stringify(err)}`);
-  } else {
-    console.info(`The shared bundle running is: ${JSON.stringify(data)}`);
-  }
-});
-```
+See [isSharedBundleRunning](#issharedbundlerunning)
 

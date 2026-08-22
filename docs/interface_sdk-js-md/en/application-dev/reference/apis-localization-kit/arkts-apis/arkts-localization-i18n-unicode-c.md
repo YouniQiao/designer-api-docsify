@@ -257,6 +257,13 @@ Checks whether the input character is of the right to left (RTL) language.
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
 
+let isZhRTL: boolean = i18n.isRTL('zh-CN'); // Since Chinese is not written from right to left, false is returned.
+let isArRTL: boolean = i18n.isRTL('ar-EG'); // Since Arabic is written from right to left, true is returned.
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
 let isRtl: boolean = i18n.Unicode.isRTL('a'); // isRtl = false
 ```
 

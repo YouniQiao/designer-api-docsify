@@ -218,99 +218,6 @@ try {
 }
 ```
 
-## offConnectResult
-
-```TypeScript
-offConnectResult(callback?: Callback<ConnectResult>): void
-```
-
-Unregisters the listener for **connectResult** events.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Connection-offConnectResult(callback?: Callback<ConnectResult>): void--><!--Device-Connection-offConnectResult(callback?: Callback<ConnectResult>): void-End-->
-
-**System capability:** SystemCapability.DistributedSched.AppCollaboration
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ConnectResult&gt; | No | Registered callback. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
-
-## offDataReceived
-
-```TypeScript
-offDataReceived(callback?: Callback<ArrayBuffer>): void
-```
-
-Unregisters the listener for **dataReceived** events.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Connection-offDataReceived(callback?: Callback<ArrayBuffer>): void--><!--Device-Connection-offDataReceived(callback?: Callback<ArrayBuffer>): void-End-->
-
-**System capability:** SystemCapability.DistributedSched.AppCollaboration
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | No | Registered callback. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
-
-## offDisconnected
-
-```TypeScript
-offDisconnected(callback?: Callback<int>): void
-```
-
-Unregisters the listener for **disconnected** events. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Connection-offDisconnected(callback?: Callback<int>): void--><!--Device-Connection-offDisconnected(callback?: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.DistributedSched.AppCollaboration
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Registered callback, where **int** indicates the returned error code. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
-
 ## off('connectResult')
 
 ```TypeScript
@@ -334,7 +241,7 @@ Unregisters the listener for **connectResult** events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectResult' | Yes | Event type, which is **connectResult**. This event is triggered when `connect()` is called. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ConnectResult&gt; | No | Registered callback. The callback last registered using **on** needs to be passed to unregister the callback. The default effect is the same as the passing behavior. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | No | Registered callback. The callback last registered using **on** needs to be passed to unregister the callback. The default effect is the same as the passing behavior. |
 
 **Error codes:**
 
@@ -392,7 +299,7 @@ Unregisters the listener for **dataReceived** events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataReceived' | Yes | Event type, which is **dataReceived**. This event is triggered when data is received. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | No | Callback used to receive data from the peer device. The callback parameter **data** is the received data, which is of the ArrayBuffer type. The callback last registered using **on** needs to be passed to unregister the callback. The default effect is the same as the passing behavior. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | Callback used to receive data from the peer device. The callback parameter **data** is the received data, which is of the ArrayBuffer type. The callback last registered using **on** needs to be passed to unregister the callback. The default effect is the same as the passing behavior. |
 
 **Error codes:**
 
@@ -451,7 +358,7 @@ Unregisters the listener for **disconnected** events. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'disconnected' | Yes | Event type, which is **disconnected**. This event is triggered when the connection is passively terminated or an exception occurs. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | No | Registered callback, where **number** indicates the returned error code. This event is triggered when the connection is passively terminated or an exception occurs. The callback last registered using **on** needs to be passed to unregister the callback. The default effect is the same as the passing behavior. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Registered callback, where **number** indicates the returned error code. This event is triggered when the connection is passively terminated or an exception occurs. The callback last registered using **on** needs to be passed to unregister the callback. The default effect is the same as the passing behavior. |
 
 **Error codes:**
 
@@ -486,13 +393,13 @@ try {
 }
 ```
 
-## onConnectResult
+## offConnectResult
 
 ```TypeScript
-onConnectResult(callback: Callback<ConnectResult>): void
+offConnectResult(callback?: Callback<ConnectResult>): void
 ```
 
-Registers a listener for **connectResult** events. This API uses an asynchronous callback to return the result.
+Unregisters the listener for **connectResult** events.
 
 **Since:** 23
 
@@ -500,7 +407,7 @@ Registers a listener for **connectResult** events. This API uses an asynchronous
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Connection-onConnectResult(callback: Callback<ConnectResult>): void--><!--Device-Connection-onConnectResult(callback: Callback<ConnectResult>): void-End-->
+<!--Device-Connection-offConnectResult(callback?: Callback<ConnectResult>): void--><!--Device-Connection-offConnectResult(callback?: Callback<ConnectResult>): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -508,7 +415,7 @@ Registers a listener for **connectResult** events. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ConnectResult&gt; | Yes | Registered callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | No | Registered callback. |
 
 **Error codes:**
 
@@ -517,13 +424,13 @@ Registers a listener for **connectResult** events. This API uses an asynchronous
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
-## onDataReceived
+## offDataReceived
 
 ```TypeScript
-onDataReceived(callback: Callback<ArrayBuffer>): void
+offDataReceived(callback?: Callback<ArrayBuffer>): void
 ```
 
-Registers a listener for the **dataReceived** events. This API uses an asynchronous callback to return the result.
+Unregisters the listener for **dataReceived** events.
 
 **Since:** 23
 
@@ -531,7 +438,7 @@ Registers a listener for the **dataReceived** events. This API uses an asynchron
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Connection-onDataReceived(callback: Callback<ArrayBuffer>): void--><!--Device-Connection-onDataReceived(callback: Callback<ArrayBuffer>): void-End-->
+<!--Device-Connection-offDataReceived(callback?: Callback<ArrayBuffer>): void--><!--Device-Connection-offDataReceived(callback?: Callback<ArrayBuffer>): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -539,7 +446,7 @@ Registers a listener for the **dataReceived** events. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | Yes | Registered callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | Registered callback. |
 
 **Error codes:**
 
@@ -548,13 +455,13 @@ Registers a listener for the **dataReceived** events. This API uses an asynchron
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
-## onDisconnected
+## offDisconnected
 
 ```TypeScript
-onDisconnected(callback: Callback<int>): void
+offDisconnected(callback?: Callback<int>): void
 ```
 
-Registers a listener for **disconnected** events. This API uses an asynchronous callback to return the result.
+Unregisters the listener for **disconnected** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -562,7 +469,7 @@ Registers a listener for **disconnected** events. This API uses an asynchronous 
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Connection-onDisconnected(callback: Callback<int>): void--><!--Device-Connection-onDisconnected(callback: Callback<int>): void-End-->
+<!--Device-Connection-offDisconnected(callback?: Callback<int>): void--><!--Device-Connection-offDisconnected(callback?: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -570,7 +477,7 @@ Registers a listener for **disconnected** events. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Registered callback, where **int** indicates the returned error code. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Registered callback, where **int** indicates the returned error code. |
 
 **Error codes:**
 
@@ -602,7 +509,7 @@ Registers a listener for **connectResult** events. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectResult' | Yes | Event type, which is **connectResult**. This event is triggered when `connect()` is called. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ConnectResult&gt; | Yes | Registered callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | Yes | Registered callback. |
 
 **Error codes:**
 
@@ -660,7 +567,7 @@ Registers a listener for the **dataReceived** events. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataReceived' | Yes | Event type, which is **dataReceived**. This event is triggered when data is received. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | Yes | Callback used to receive data from the peer device. The callback parameter **data** is the received data, which is of the **ArrayBuffer** type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to receive data from the peer device. The callback parameter **data** is the received data, which is of the **ArrayBuffer** type. |
 
 **Error codes:**
 
@@ -717,7 +624,7 @@ Registers a listener for **disconnected** events. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'disconnected' | Yes | Event type, which is **disconnected**. This event is triggered when the connection is passively terminated or an exception occurs. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | Registered callback, where **number** indicates the returned error code. This event is triggered when the connection is passively terminated or an exception occurs. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Registered callback, where **number** indicates the returned error code. This event is triggered when the connection is passively terminated or an exception occurs. |
 
 **Error codes:**
 
@@ -748,6 +655,99 @@ try {
   (err as BusinessError).message);
 }
 ```
+
+## onConnectResult
+
+```TypeScript
+onConnectResult(callback: Callback<ConnectResult>): void
+```
+
+Registers a listener for **connectResult** events. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Connection-onConnectResult(callback: Callback<ConnectResult>): void--><!--Device-Connection-onConnectResult(callback: Callback<ConnectResult>): void-End-->
+
+**System capability:** SystemCapability.DistributedSched.AppCollaboration
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | Yes | Registered callback. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
+
+## onDataReceived
+
+```TypeScript
+onDataReceived(callback: Callback<ArrayBuffer>): void
+```
+
+Registers a listener for the **dataReceived** events. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Connection-onDataReceived(callback: Callback<ArrayBuffer>): void--><!--Device-Connection-onDataReceived(callback: Callback<ArrayBuffer>): void-End-->
+
+**System capability:** SystemCapability.DistributedSched.AppCollaboration
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes | Registered callback. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
+
+## onDisconnected
+
+```TypeScript
+onDisconnected(callback: Callback<int>): void
+```
+
+Registers a listener for **disconnected** events. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Connection-onDisconnected(callback: Callback<int>): void--><!--Device-Connection-onDisconnected(callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.DistributedSched.AppCollaboration
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Registered callback, where **int** indicates the returned error code. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 ## sendData
 

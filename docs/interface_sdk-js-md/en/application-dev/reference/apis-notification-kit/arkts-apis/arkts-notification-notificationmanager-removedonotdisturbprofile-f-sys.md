@@ -67,6 +67,23 @@ notificationManager.removeDoNotDisturbProfile(templates).then(() => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userId : number = 100;
+let templates: Array<notificationManager.DoNotDisturbProfile> = [
+  {
+    id: 3,
+    name: 'working mode'
+  }
+]
+notificationManager.removeDoNotDisturbProfile(templates, userId).then(() => {
+  console.info("removeDoNotDisturbProfile success.");
+}).catch((err: BusinessError) => {
+  console.error(`removeDoNotDisturbProfile failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## removeDoNotDisturbProfile
 
@@ -116,20 +133,5 @@ Deletes the Do Not Disturb profile of a specified user. This API uses a promise 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId : number = 100;
-let templates: Array<notificationManager.DoNotDisturbProfile> = [
-  {
-    id: 3,
-    name: 'working mode'
-  }
-]
-notificationManager.removeDoNotDisturbProfile(templates, userId).then(() => {
-  console.info("removeDoNotDisturbProfile success.");
-}).catch((err: BusinessError) => {
-  console.error(`removeDoNotDisturbProfile failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [removeDoNotDisturbProfile](#removedonotdisturbprofile)
 

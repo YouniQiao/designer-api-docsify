@@ -43,6 +43,10 @@ exit(code: number): void
 **示例**
 
 ```TypeScript
+process.exit(0);
+```
+
+```TypeScript
 let processManager = new process.ProcessManager();
 processManager.exit(0);
 ```
@@ -76,6 +80,10 @@ getEnvironmentVar(name: string): string
 | string | 返回指定环境变量名对应的值。如果环境变量不存在，返回undefined。 |
 
 **示例**
+
+```TypeScript
+let pres = process.getEnvironmentVar("PATH");
+```
 
 ```TypeScript
 // 创建ProcessManager实例
@@ -113,6 +121,11 @@ getSystemConfig(name: number): number
 | number | 返回系统配置信息。如果配置不存在，返回 -1。 |
 
 **示例**
+
+```TypeScript
+let _SC_ARG_MAX = 0;
+let pres = process.getSystemConfig(_SC_ARG_MAX);
+```
 
 ```TypeScript
 // 创建ProcessManager实例
@@ -154,6 +167,11 @@ getThreadPriority(v: number): number
 **示例**
 
 ```TypeScript
+let tid = process.tid;
+let pres = process.getThreadPriority(tid);
+```
+
+```TypeScript
 // 创建ProcessManager实例
 let processManager = new process.ProcessManager();
 // 获取当前线程tid
@@ -193,6 +211,10 @@ getUidForName(v: string): number
 **示例**
 
 ```TypeScript
+let pres = process.getUidForName("tool");
+```
+
+```TypeScript
 // 创建ProcessManager实例
 let processManager = new process.ProcessManager();
 // 根据用户名获取uid
@@ -228,6 +250,12 @@ isAppUid(v: number): boolean
 | boolean | 返回判断结果。如果是应用程序的 uid 则返回 true； 否则返回 false。 |
 
 **示例**
+
+```TypeScript
+// uid通过process.uid获取
+let pres = process.uid;
+let result = process.isAppUid(pres);
+```
 
 ```TypeScript
 // 创建ProcessManager实例
@@ -269,6 +297,11 @@ kill(signal: number, pid: number): boolean
 | boolean | 信号是否发送成功。如果信号发送成功则返回true，否则返回false。 |
 
 **示例**
+
+```TypeScript
+let pid = process.pid;
+let result = process.kill(28, pid);
+```
 
 ```TypeScript
 // 创建ProcessManager实例

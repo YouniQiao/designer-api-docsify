@@ -28,3 +28,22 @@ Called when the system acquire the form data.
 | --- | --- |
 | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt; | Returns the wantParams object. |
 
+**示例**
+
+```TypeScript
+'use static'
+
+import { FormExtensionAbility } from '@kit.FormKit';
+
+export default class MyFormExtensionAbility extends FormExtensionAbility {
+  onAcquireFormDataFn(formId: string) {
+    console.info(`FormExtensionAbility onAcquireFormData, formId: ${formId}`);
+    let wantParams: Record<string, Object> = {
+      'temperature': '20',
+      'time': '2022-8-8 09:59',
+    };
+    return wantParams;
+  }
+}
+```
+

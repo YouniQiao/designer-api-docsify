@@ -34,7 +34,7 @@ Binds joint assets. Currently, only the binding between an asset in a distribute
 | --- | --- | --- | --- |
 | assetKey | string | Yes | Key of the joint asset in the distributed data object. |
 | bindInfo | [BindInfo](arkts-arkdata-distributeddataobject-bindinfo-i.md) | Yes | Information about the joint asset in the RDB store, including the RDB store name, table name, primary key, column name, and asset name in the RDB store. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -98,42 +98,6 @@ class EntryAbility extends UIAbility {
 }
 ```
 
-## bindAssetStore
-
-```TypeScript
-bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>
-```
-
-Binds joint assets. Currently, only the binding between an asset in a distributed data object and an asset in an RDB store is supported. This API uses a promise to return the result.
-
-**Since:** 23
-
-<!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>--><!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| assetKey | string | Yes | Key of the joint asset in the distributed data object. |
-| bindInfo | [BindInfo](arkts-arkdata-distributeddataobject-bindinfo-i.md) | Yes | Information about the joint asset in the RDB store, including the RDB store name, table name, primary key, column name, and asset name in the RDB store. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-
-**Examples**
-
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
 import { window } from '@kit.ArkUI';
@@ -186,17 +150,17 @@ class EntryAbility extends UIAbility {
 }
 ```
 
-## offChange
+## bindAssetStore
 
 ```TypeScript
-offChange(callback?: DataObserver): void
+bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>
 ```
 
-Off watch of change.
+Binds joint assets. Currently, only the binding between an asset in a distributed data object and an asset in an RDB store is supported. This API uses a promise to return the result.
 
 **Since:** 23
 
-<!--Device-DataObject-offChange(callback?: DataObserver): void--><!--Device-DataObject-offChange(callback?: DataObserver): void-End-->
+<!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>--><!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -204,47 +168,25 @@ Off watch of change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | No | The observer of object data changed, if not null, off the callback, if undefined, off all callbacks. |
+| assetKey | string | Yes | Key of the joint asset in the distributed data object. |
+| bindInfo | [BindInfo](arkts-arkdata-distributeddataobject-bindinfo-i.md) | Yes | Information about the joint asset in the RDB store, including the RDB store name, table name, primary key, column name, and asset name in the RDB store. |
 
-## offProgressChanged
+**Return value:**
 
-```TypeScript
-offProgressChanged(callback?: ProgressObserver): void
-```
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
-Unsubscribes from the asset sync progress.
+**Error codes:**
 
-**Since:** 23
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-<!--Device-DataObject-offProgressChanged(callback?: ProgressObserver): void--><!--Device-DataObject-offProgressChanged(callback?: ProgressObserver): void-End-->
+**Examples**
 
-**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | No | Observer to be unregistered. If this parameter is not set, all observers will be unregistered. |
-
-## offStatus
-
-```TypeScript
-offStatus(callback?: StatusObserver): void
-```
-
-Off watch of status.
-
-**Since:** 23
-
-<!--Device-DataObject-offStatus(callback?: StatusObserver): void--><!--Device-DataObject-offStatus(callback?: StatusObserver): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | No | The observer of object status changed, if not null, off the callback, if undefined, off all callbacks. |
+See [bindAssetStore](#bindassetstore)
 
 ## off('change')
 
@@ -478,17 +420,17 @@ try {
 }
 ```
 
-## onChange
+## offChange
 
 ```TypeScript
-onChange(callback: DataObserver): void
+offChange(callback?: DataObserver): void
 ```
 
-On watch of change.
+Off watch of change.
 
 **Since:** 23
 
-<!--Device-DataObject-onChange(callback: DataObserver): void--><!--Device-DataObject-onChange(callback: DataObserver): void-End-->
+<!--Device-DataObject-offChange(callback?: DataObserver): void--><!--Device-DataObject-offChange(callback?: DataObserver): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -496,19 +438,19 @@ On watch of change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | Yes | The observer of object data changed. |
+| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | No | The observer of object data changed, if not null, off the callback, if undefined, off all callbacks. |
 
-## onProgressChanged
+## offProgressChanged
 
 ```TypeScript
-onProgressChanged(callback: ProgressObserver): void
+offProgressChanged(callback?: ProgressObserver): void
 ```
 
-Subscribes to the asset sync progress.
+Unsubscribes from the asset sync progress.
 
 **Since:** 23
 
-<!--Device-DataObject-onProgressChanged(callback: ProgressObserver): void--><!--Device-DataObject-onProgressChanged(callback: ProgressObserver): void-End-->
+<!--Device-DataObject-offProgressChanged(callback?: ProgressObserver): void--><!--Device-DataObject-offProgressChanged(callback?: ProgressObserver): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -516,21 +458,19 @@ Subscribes to the asset sync progress.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | Yes | Observer to be registered. |
+| callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | No | Observer to be unregistered. If this parameter is not set, all observers will be unregistered. |
 
-## onStatus
+## offStatus
 
 ```TypeScript
-onStatus(callback: StatusObserver): void
+offStatus(callback?: StatusObserver): void
 ```
 
-On watch of status.
+Off watch of status.
 
 **Since:** 23
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataObject-onStatus(callback: StatusObserver): void--><!--Device-DataObject-onStatus(callback: StatusObserver): void-End-->
+<!--Device-DataObject-offStatus(callback?: StatusObserver): void--><!--Device-DataObject-offStatus(callback?: StatusObserver): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -538,7 +478,7 @@ On watch of status.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | Yes | The observer of object status changed. |
+| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | No | The observer of object status changed, if not null, off the callback, if undefined, off all callbacks. |
 
 ## on('change')
 
@@ -726,6 +666,68 @@ try {
 }
 ```
 
+## onChange
+
+```TypeScript
+onChange(callback: DataObserver): void
+```
+
+On watch of change.
+
+**Since:** 23
+
+<!--Device-DataObject-onChange(callback: DataObserver): void--><!--Device-DataObject-onChange(callback: DataObserver): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | Yes | The observer of object data changed. |
+
+## onProgressChanged
+
+```TypeScript
+onProgressChanged(callback: ProgressObserver): void
+```
+
+Subscribes to the asset sync progress.
+
+**Since:** 23
+
+<!--Device-DataObject-onProgressChanged(callback: ProgressObserver): void--><!--Device-DataObject-onProgressChanged(callback: ProgressObserver): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | Yes | Observer to be registered. |
+
+## onStatus
+
+```TypeScript
+onStatus(callback: StatusObserver): void
+```
+
+On watch of status.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataObject-onStatus(callback: StatusObserver): void--><!--Device-DataObject-onStatus(callback: StatusObserver): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | Yes | The observer of object status changed. |
+
 ## revokeSave
 
 ```TypeScript
@@ -744,7 +746,7 @@ Revokes the data of this distributed data object saved. This API uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RevokeSaveSuccessResponse](arkts-arkdata-distributeddataobject-revokesavesuccessresponse-i.md)&gt; | Yes | Callback used to return RevokeSaveSuccessResponse, which contains the session ID. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RevokeSaveSuccessResponse](arkts-arkdata-distributeddataobject-revokesavesuccessresponse-i.md)&gt; | Yes | Callback used to return RevokeSaveSuccessResponse, which contains the session ID. |
 
 **Error codes:**
 
@@ -781,6 +783,28 @@ g_object.revokeSave((err: BusinessError, result: distributedDataObject.RevokeSav
 });
 ```
 
+```TypeScript
+g_object.setSessionId("123456");
+// Save data for persistence. 
+g_object.save("local").then((result: distributedDataObject.SaveSuccessResponse) => {
+    console.info("save callback");
+    console.info("save sessionId " + result.sessionId);
+    console.info("save version " + result.version);
+    console.info("save deviceId " + result.deviceId);
+}).catch((err: BusinessError) => {
+    console.error("save failed, error code = " + err.code);
+    console.error("save failed, error message: " + err.message);
+});
+// Delete the persistence data.
+g_object.revokeSave().then((result: distributedDataObject.RevokeSaveSuccessResponse) => {
+    console.info("revokeSave callback");
+    console.info("sessionId" + result.sessionId);
+}).catch((err: BusinessError)=> {
+    console.error("revokeSave failed, error code = " + err.code);
+    console.error("revokeSave failed, error message = " + err.message);
+});
+```
+
 ## revokeSave
 
 ```TypeScript
@@ -809,27 +833,7 @@ Revokes the data of this distributed data object saved. This API uses a promise 
 
 **Examples**
 
-```TypeScript
-g_object.setSessionId("123456");
-// Save data for persistence. 
-g_object.save("local").then((result: distributedDataObject.SaveSuccessResponse) => {
-    console.info("save callback");
-    console.info("save sessionId " + result.sessionId);
-    console.info("save version " + result.version);
-    console.info("save deviceId " + result.deviceId);
-}).catch((err: BusinessError) => {
-    console.error("save failed, error code = " + err.code);
-    console.error("save failed, error message: " + err.message);
-});
-// Delete the persistence data.
-g_object.revokeSave().then((result: distributedDataObject.RevokeSaveSuccessResponse) => {
-    console.info("revokeSave callback");
-    console.info("sessionId" + result.sessionId);
-}).catch((err: BusinessError)=> {
-    console.error("revokeSave failed, error code = " + err.code);
-    console.error("revokeSave failed, error message = " + err.message);
-});
-```
+See [revokeSave](#revokesave)
 
 ## save
 
@@ -850,7 +854,7 @@ Saves a distributed data object. This API uses an asynchronous callback to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | ID of the device where the data is stored. The value local indicates a local device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SaveSuccessResponse](arkts-arkdata-distributeddataobject-savesuccessresponse-i.md)&gt; | Yes | Callback used to return SaveSuccessResponse, which contains information such as session ID, version, and device ID. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SaveSuccessResponse](arkts-arkdata-distributeddataobject-savesuccessresponse-i.md)&gt; | Yes | Callback used to return SaveSuccessResponse, which contains information such as session ID, version, and device ID. |
 
 **Error codes:**
 
@@ -873,6 +877,19 @@ g_object.save("local", (err: BusinessError, result:distributedDataObject.SaveSuc
     console.info("save sessionId: " + result.sessionId);
     console.info("save version: " + result.version);
     console.info("save deviceId:  " + result.deviceId);
+});
+```
+
+```TypeScript
+g_object.setSessionId("123456");
+g_object.save("local").then((callbackInfo: distributedDataObject.SaveSuccessResponse) => {
+    console.info("save callback");
+    console.info("save sessionId " + callbackInfo.sessionId);
+    console.info("save version " + callbackInfo.version);
+    console.info("save deviceId " + callbackInfo.deviceId);
+}).catch((err: BusinessError) => {
+    console.error("save failed, error code = " + err.code);
+    console.error("save failed, error message: " + err.message);
 });
 ```
 
@@ -911,18 +928,7 @@ Saves a distributed data object. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-g_object.setSessionId("123456");
-g_object.save("local").then((callbackInfo: distributedDataObject.SaveSuccessResponse) => {
-    console.info("save callback");
-    console.info("save sessionId " + callbackInfo.sessionId);
-    console.info("save version " + callbackInfo.version);
-    console.info("save deviceId " + callbackInfo.deviceId);
-}).catch((err: BusinessError) => {
-    console.error("save failed, error code = " + err.code);
-    console.error("save failed, error message: " + err.message);
-});
-```
+See [save](#save)
 
 ## setAsset
 
@@ -1101,7 +1107,7 @@ Sets a session ID. This API uses an asynchronous callback to return the result. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sessionId | string | Yes | ID of a distributed data object on a trusted network. The value can contain only letters, digits, and underscores (_), and cannot exceed 128 characters. If this parameter is set to "" or null, the distributed data object exits the network. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Asynchronous callback invoked when the session ID is successfully set. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Asynchronous callback invoked when the session ID is successfully set. |
 
 **Error codes:**
 
@@ -1122,6 +1128,53 @@ g_object.setSessionId(distributedDataObject.genSessionId(), ()=>{
 g_object.setSessionId("", ()=>{
     console.info("leave all session");
 });
+```
+
+```TypeScript
+// Add g_object to the distributed network.
+g_object.setSessionId(distributedDataObject.genSessionId(), ()=>{
+    console.info("join session");
+});
+// Exit the distributed network.
+g_object.setSessionId(() => {
+    console.info("leave all session.");
+});
+```
+
+```TypeScript
+// Add g_object to the distributed network.
+g_object.setSessionId(distributedDataObject.genSessionId()).then (()=>{
+    console.info("join session.");
+    }).catch((error: BusinessError)=>{
+        console.error("error:" + error.code + error.message);
+});
+// Exit the distributed network.
+g_object.setSessionId().then (()=>{
+    console.info("leave all session.");
+    }).catch((error: BusinessError)=>{
+        console.error("error:" + error.code + error.message);
+});
+```
+
+```TypeScript
+class SourceObject {
+    name: string
+    age: number
+    isVis: boolean
+
+    constructor(name: string, age: number, isVis: boolean) {
+        this.name = name
+        this.age = age
+        this.isVis = isVis
+    }
+}
+
+let source: SourceObject = new SourceObject("jack", 18, false);
+let g_object: distributedDataObject.DistributedObject = distributedDataObject.createDistributedObject(source);
+// Add g_object to the distributed network.
+g_object.setSessionId(distributedDataObject.genSessionId());
+// Remove g_object from the distributed network.
+g_object.setSessionId("");
 ```
 
 ## setSessionId
@@ -1145,7 +1198,7 @@ Exits all sessions. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked when the distributed data object exits all sessions. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the distributed data object exits all sessions. |
 
 **Error codes:**
 
@@ -1157,16 +1210,7 @@ Exits all sessions. This API uses an asynchronous callback to return the result.
 
 **Examples**
 
-```TypeScript
-// Add g_object to the distributed network.
-g_object.setSessionId(distributedDataObject.genSessionId(), ()=>{
-    console.info("join session");
-});
-// Exit the distributed network.
-g_object.setSessionId(() => {
-    console.info("leave all session.");
-});
-```
+See [setSessionId](#setsessionid)
 
 ## setSessionId
 
@@ -1206,18 +1250,5 @@ Sets a session ID or exits the distributed network. This API uses a promise to r
 
 **Examples**
 
-```TypeScript
-// Add g_object to the distributed network.
-g_object.setSessionId(distributedDataObject.genSessionId()).then (()=>{
-    console.info("join session.");
-    }).catch((error: BusinessError)=>{
-        console.error("error:" + error.code + error.message);
-});
-// Exit the distributed network.
-g_object.setSessionId().then (()=>{
-    console.info("leave all session.");
-    }).catch((error: BusinessError)=>{
-        console.error("error:" + error.code + error.message);
-});
-```
+See [setSessionId](#setsessionid)
 

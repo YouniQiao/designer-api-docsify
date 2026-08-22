@@ -18,6 +18,6 @@ import { AddFormMenuItem, FormMenuItemStyle, AddFormOptions } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [AddFormOptions](arkts-arkui-arkuiadvancedformmenu-addformoptions-i.md) | Defines the add form options. |
-| [FormMenuItemStyle](arkts-arkui-arkuiadvancedformmenu-formmenuitemstyle-i.md) | Defines the form menu item style. |
+| [AddFormOptions](arkts-arkui-arkui-advanced-formmenu-addformoptions-i.md) | Defines the add form options. |
+| [FormMenuItemStyle](arkts-arkui-arkui-advanced-formmenu-formmenuitemstyle-i.md) | Defines the form menu item style. |
 

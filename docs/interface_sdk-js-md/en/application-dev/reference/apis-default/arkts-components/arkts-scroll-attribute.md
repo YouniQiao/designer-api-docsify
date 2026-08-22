@@ -431,6 +431,28 @@ onZoomStop(event: VoidCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
+## scrollable
+
+```TypeScript
+scrollable(value: ScrollDirection | undefined): this
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Sta since version -1.
+
+<!--Device-ScrollAttribute-scrollable(value: ScrollDirection | undefined): this--><!--Device-ScrollAttribute-scrollable(value: ScrollDirection | undefined): this-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ScrollDirection](arkts-scroll-scrolldirection-e.md) \| undefined | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
 ## scrollBar
 
 ```TypeScript
@@ -536,28 +558,6 @@ scrollSnap(value: ScrollSnapOptions | undefined): this
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [ScrollSnapOptions](arkts-scroll-scrollsnapoptions-i.md) \| undefined | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-## scrollable
-
-```TypeScript
-scrollable(value: ScrollDirection | undefined): this
-```
-
-**Since:** -1
-
-**ArkTS mode:** ArkTS-Sta since version -1.
-
-<!--Device-ScrollAttribute-scrollable(value: ScrollDirection | undefined): this--><!--Device-ScrollAttribute-scrollable(value: ScrollDirection | undefined): this-End-->
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [ScrollDirection](arkts-scroll-scrolldirection-e.md) \| undefined | Yes |  |
 
 **Return value:**
 

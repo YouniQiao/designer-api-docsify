@@ -24,8 +24,8 @@ import { contact } from '@kit.ContactsKit';
 | [addContact](arkts-contacts-contact-addcontact-f.md) | Adds a contact. This API uses an asynchronous callback to return the result. |
 | [addContact](arkts-contacts-contact-addcontact-f.md) | Adds a contact. This API uses a promise to return the result. |
 | [addContact](arkts-contacts-contact-addcontact-f.md) | Adds a contact. This API uses a promise to return the result. |
-| [addContactViaUI](arkts-contacts-contact-addcontactviaui-f.md) | Calls the API for adding a contact to open the UI. This API uses a promise to return the result. |
 | [addContacts](arkts-contacts-contact-addcontacts-f.md) | Adds contacts in batches. This API uses a promise to return the result. |
+| [addContactViaUI](arkts-contacts-contact-addcontactviaui-f.md) | Calls the API for adding a contact to open the UI. This API uses a promise to return the result. |
 | [deleteContact](arkts-contacts-contact-deletecontact-f.md) | Deletes a contact. This API uses an asynchronous callback to return the result. |
 | [deleteContact](arkts-contacts-contact-deletecontact-f.md) | Deletes a contact. This API uses an asynchronous callback to return the result. |
 | [deleteContact](arkts-contacts-contact-deletecontact-f.md) | Deletes a contact. This API uses a promise to return the result. |
@@ -51,7 +51,6 @@ import { contact } from '@kit.ContactsKit';
 | [queryContact](arkts-contacts-contact-querycontact-f.md) | Queries a contact based on the specified key, holder, and attributes. This API uses an asynchronous callback to return the result. |
 | [queryContact](arkts-contacts-contact-querycontact-f.md) | Queries a contact based on the specified key, holder, and attributes. This API uses a promise to return the result. |
 | [queryContact](arkts-contacts-contact-querycontact-f.md) | Queries a contact based on the specified key, holder, and attributes. This API uses a promise to return the result. |
-| [queryContactSyncInfo](arkts-contacts-contact-querycontactsyncinfo-f.md) | Queries information about ongoing contact synchronization for the calling application. |
 | [queryContacts](arkts-contacts-contact-querycontacts-f.md) | Queries all contacts. This API uses an asynchronous callback to return the result. |
 | [queryContacts](arkts-contacts-contact-querycontacts-f.md) | Queries all contacts. This API uses an asynchronous callback to return the result. |
 | [queryContacts](arkts-contacts-contact-querycontacts-f.md) | Queries all contacts based on the specified holder. This API uses an asynchronous callback to return the result. |
@@ -83,6 +82,7 @@ import { contact } from '@kit.ContactsKit';
 | [queryContactsByPhoneNumber](arkts-contacts-contact-querycontactsbyphonenumber-f.md) | Queries a contact based on the specified phone number, holder, and attributes. This API uses a promise to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-contact-querycontact-f.md) to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task. |
 | [queryContactsByPhoneNumber](arkts-contacts-contact-querycontactsbyphonenumber-f.md) | Queries a contact based on the specified phone number, holder, and attributes. This API uses a promise to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-contact-querycontact-f.md) to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task. |
 | [queryContactsCount](arkts-contacts-contact-querycontactscount-f.md) | Queries the number of all contacts. This API uses a promise to return the result. |
+| [queryContactSyncInfo](arkts-contacts-contact-querycontactsyncinfo-f.md) | Queries information about ongoing contact synchronization for the calling application. |
 | [queryGroups](arkts-contacts-contact-querygroups-f.md) | Queries all groups of a contact. This API uses an asynchronous callback to return the result. |
 | [queryGroups](arkts-contacts-contact-querygroups-f.md) | Queries all groups of a contact. This API uses an asynchronous callback to return the result. |
 | [queryGroups](arkts-contacts-contact-querygroups-f.md) | Queries all groups of a contact based on the specified holder. This API uses an asynchronous callback to return the result. |

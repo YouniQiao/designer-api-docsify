@@ -55,6 +55,47 @@ sensor.createRotationMatrix([0.20046076, 0.21907, 0.73978853, 0.60376877],
 })
 ```
 
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const promise = sensor.createRotationMatrix([0.20046076, 0.21907, 0.73978853, 0.60376877]);
+promise.then((data: Array<number>) => {
+  console.info('Succeeded in getting createRotationMatrix_promise');
+  for (let i = 0; i < data.length; i++) {
+    console.info('data[' + i + ']: ' + data[i]);
+  }
+}).catch((reason: BusinessError) => {
+  console.info('Succeeded in getting promise::catch', reason);
+})
+```
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sensor.createRotationMatrix([-0.27775216, 0.5351276, 9.788099], [210.87253, -78.6096, -111.44444], 
+                            (err: BusinessError, data: sensor.RotationMatrixResponse) => {
+  if (err) {
+    console.error(`Failed to get create rotationMatrix. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(JSON.stringify(data));
+})
+```
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const promise = sensor.createRotationMatrix([-0.27775216, 0.5351276, 9.788099], [210.87253, -78.6096, -111.44444]);
+promise.then((data: sensor.RotationMatrixResponse) => {
+  console.info(JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get promise.`);
+})
+```
+
 
 ## createRotationMatrix
 
@@ -93,20 +134,7 @@ function createRotationMatrix(rotationVector: Array<number>): Promise<Array<numb
 
 **示例**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const promise = sensor.createRotationMatrix([0.20046076, 0.21907, 0.73978853, 0.60376877]);
-promise.then((data: Array<number>) => {
-  console.info('Succeeded in getting createRotationMatrix_promise');
-  for (let i = 0; i < data.length; i++) {
-    console.info('data[' + i + ']: ' + data[i]);
-  }
-}).catch((reason: BusinessError) => {
-  console.info('Succeeded in getting promise::catch', reason);
-})
-```
+参见 [createRotationMatrix](#createrotationmatrix)
 
 
 ## createRotationMatrix
@@ -143,19 +171,7 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 
 **示例**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sensor.createRotationMatrix([-0.27775216, 0.5351276, 9.788099], [210.87253, -78.6096, -111.44444], 
-                            (err: BusinessError, data: sensor.RotationMatrixResponse) => {
-  if (err) {
-    console.error(`Failed to get create rotationMatrix. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(JSON.stringify(data));
-})
-```
+参见 [createRotationMatrix](#createrotationmatrix)
 
 
 ## createRotationMatrix
@@ -193,4 +209,8 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;[RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md)&gt; | 使用异步方式返回旋转矩阵。 |
+
+**示例**
+
+参见 [createRotationMatrix](#createrotationmatrix)
 

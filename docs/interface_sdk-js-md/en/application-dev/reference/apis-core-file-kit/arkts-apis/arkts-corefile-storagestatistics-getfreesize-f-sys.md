@@ -29,7 +29,7 @@ Obtains the available space (in bytes) of the built-in storage. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the available space of the built-in storage obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the available space of the built-in storage obtained. |
 
 **Error codes:**
 
@@ -42,6 +42,15 @@ Obtains the available space (in bytes) of the built-in storage. This API uses an
 | 13900042 | Unknown error. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+storageStatistics.getFreeSize().then((number: number) => {
+  console.info("getFreeSize successfully:" + JSON.stringify(number));
+}).catch((err: BusinessError) => {
+  console.error("getFreeSize failed with error:" + JSON.stringify(err));
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -92,12 +101,5 @@ Obtains the available space (in bytes) of the built-in storage. This API uses a 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-storageStatistics.getFreeSize().then((number: number) => {
-  console.info("getFreeSize successfully:" + JSON.stringify(number));
-}).catch((err: BusinessError) => {
-  console.error("getFreeSize failed with error:" + JSON.stringify(err));
-});
-```
+See [getFreeSize](#getfreesize)
 

@@ -30,7 +30,7 @@ Obtains the altitude at which the device is located based on the sea-level atmos
 | --- | --- | --- | --- |
 | seaPressure | number | Yes | Sea-level atmospheric pressure, in hPa. |
 | currentPressure | number | Yes | Atmospheric pressure at the altitude where the device is located, in hPa. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the altitude, in meters. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the altitude, in meters. |
 
 **Examples**
 
@@ -45,6 +45,18 @@ sensor.getAltitude(0, 200, (err: BusinessError, data: number) => {
   }
   console.info("Succeeded in getting getAltitude interface get data: " + data);
 });
+```
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const promise = sensor.getAltitude(0, 200);
+promise.then((data: number) => {
+  console.info('Succeeded in getting sensor_getAltitude_Promise success', data);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to operate.`);
+})
 ```
 
 
@@ -81,15 +93,5 @@ Obtains the altitude at which the device is located based on the sea-level atmos
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const promise = sensor.getAltitude(0, 200);
-promise.then((data: number) => {
-  console.info('Succeeded in getting sensor_getAltitude_Promise success', data);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to operate.`);
-})
-```
+See [getAltitude](#getaltitude)
 

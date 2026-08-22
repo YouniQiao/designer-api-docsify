@@ -38,7 +38,7 @@ theme?: CustomTheme
 
 Custom Theme.
 
-**Type:** [CustomTheme](../../apis-default/arkts-apis/arkts-arkuitheme-customtheme-i.md)
+**Type:** [CustomTheme](../../apis-default/arkts-apis/arkts-arkui-theme-customtheme-i.md)
 
 **Since:** 23
 

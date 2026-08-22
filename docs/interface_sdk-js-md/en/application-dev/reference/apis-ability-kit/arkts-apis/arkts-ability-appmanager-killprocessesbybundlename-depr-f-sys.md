@@ -45,6 +45,23 @@ Kill processes by bundle name
 import appManager from '@ohos.application.appManager';
 import { BusinessError } from '@ohos.base';
 
+let bundleName = 'bundleName';
+
+function killProcessesByBundleNameCallback(err: BusinessError, data: void) {
+  if (err) {
+    console.error(`KillProcessesByBundleNameCallback failed, error code: ${err.code}, error msg: ${err.message}.`);
+  } else {
+    console.info(`KillProcessesByBundleNameCallback success, data: ${JSON.stringify(data)}.`);
+  }
+}
+
+appManager.killProcessesByBundleName(bundleName, killProcessesByBundleNameCallback);
+```
+
+```TypeScript
+import appManager from '@ohos.application.appManager';
+import { BusinessError } from '@ohos.base';
+
 let bundleName = 'com.example.myapplication';
 appManager.killProcessesByBundleName(bundleName)
   .then((data) => {
@@ -83,24 +100,9 @@ Kill processes by bundle name
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | bundle name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | cut off the callback function of the account process. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | cut off the callback function of the account process. |
 
 **Examples**
 
-```TypeScript
-import appManager from '@ohos.application.appManager';
-import { BusinessError } from '@ohos.base';
-
-let bundleName = 'bundleName';
-
-function killProcessesByBundleNameCallback(err: BusinessError, data: void) {
-  if (err) {
-    console.error(`KillProcessesByBundleNameCallback failed, error code: ${err.code}, error msg: ${err.message}.`);
-  } else {
-    console.info(`KillProcessesByBundleNameCallback success, data: ${JSON.stringify(data)}.`);
-  }
-}
-
-appManager.killProcessesByBundleName(bundleName, killProcessesByBundleNameCallback);
-```
+See [killProcessesByBundleName](#killprocessesbybundlename)
 

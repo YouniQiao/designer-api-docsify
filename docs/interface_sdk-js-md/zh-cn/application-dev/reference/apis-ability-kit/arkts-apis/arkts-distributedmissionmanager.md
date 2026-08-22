@@ -29,10 +29,10 @@ import { distributedMissionManager } from '@kit.AbilityKit';
 | [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md) | 通过指定任务ID（missionId）的方式进行迁移任务。使用promise异步回调。 |
 | [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md) | 通过指定包名（bundleName）的方式进行迁移任务。使用callback异步回调。 |
 | [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md) | 通过指定包名（bundleName）的方式进行迁移任务。使用Promise异步回调。 |
-| [offContinueStateChange](arkts-ability-distributedmissionmanager-offcontinuestatechange-f-sys.md) | Continue mission |
 | [off_continueStateChange](arkts-ability-distributedmissionmanager-offcontinuestatechange-f-sys.md) | 取消当前任务流转的状态监听。 |
-| [onContinueStateChange](arkts-ability-distributedmissionmanager-oncontinuestatechange-f-sys.md) | Register continuable info listener to ams. |
+| [offContinueStateChange](arkts-ability-distributedmissionmanager-offcontinuestatechange-f-sys.md) | Continue mission |
 | [on_continueStateChange](arkts-ability-distributedmissionmanager-oncontinuestatechange-f-sys.md) | 注册当前任务流转状态的监听。 |
+| [onContinueStateChange](arkts-ability-distributedmissionmanager-oncontinuestatechange-f-sys.md) | Register continuable info listener to ams. |
 | [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md) | 注册任务状态监听。使用callback异步回调。 |
 | [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md) | 注册任务状态监听。使用promise异步回调。 |
 | [startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md) | 开始同步远端设备的任务列表。使用callback异步回调。 |

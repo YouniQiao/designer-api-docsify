@@ -102,6 +102,22 @@ Specifies whether contact metadata synchronization is enabled.
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
+## DEBUG_APP_PACKAGE
+
+```TypeScript
+const DEBUG_APP_PACKAGE: string
+```
+
+Indicates the bundle name of the application to debug.
+
+**Since:** 23
+
+**Deprecated since:** 21
+
+<!--Device-general-const DEBUG_APP_PACKAGE: string--><!--Device-general-const DEBUG_APP_PACKAGE: string-End-->
+
+**System capability:** SystemCapability.Applications.Settings.Core
+
 ## DEBUGGER_WAITING
 
 ```TypeScript
@@ -117,22 +133,6 @@ Specifies whether the device waits for the debugger when starting an application
 **Deprecated since:** 21
 
 <!--Device-general-const DEBUGGER_WAITING: string--><!--Device-general-const DEBUGGER_WAITING: string-End-->
-
-**System capability:** SystemCapability.Applications.Settings.Core
-
-## DEBUG_APP_PACKAGE
-
-```TypeScript
-const DEBUG_APP_PACKAGE: string
-```
-
-Indicates the bundle name of the application to debug.
-
-**Since:** 23
-
-**Deprecated since:** 21
-
-<!--Device-general-const DEBUG_APP_PACKAGE: string--><!--Device-general-const DEBUG_APP_PACKAGE: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 

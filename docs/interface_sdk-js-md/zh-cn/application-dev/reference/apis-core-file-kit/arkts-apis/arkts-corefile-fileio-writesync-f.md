@@ -46,3 +46,27 @@ declare function writeSync(
 | --- | --- |
 | number | 实际写入的长度，单位为Byte。 |
 
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath, 0o100 | 0o2, 0o666);
+let num = fileio.writeSync(fd, "hello, world");
+```
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let ss = fileio.createStreamSync(filePath,"r+");
+class Option {
+  offset: number = 0;
+  length: number = 4096;
+  position: number = 0;
+  encoding: string = 'utf-8';
+}
+let option = new Option();
+option.offset = 1;
+option.length = 5;
+option.position = 5;
+let num = ss.writeSync("hello, world", option);
+```
+

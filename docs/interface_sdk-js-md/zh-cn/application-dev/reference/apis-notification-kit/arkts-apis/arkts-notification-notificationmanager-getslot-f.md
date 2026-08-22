@@ -85,6 +85,33 @@ let slotType: notificationManager.SlotType = notificationManager.SlotType.SOCIAL
 notificationManager.getSlot(slotType, getSlotCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotType: notificationManager.SlotType = notificationManager.SlotType.SOCIAL_COMMUNICATION;
+notificationManager.getSlot(slotType).then((data: notificationManager.NotificationSlot) => {
+  console.info(`Succeeded in getting slot, data is ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get slot. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotType: notificationManager.SlotType = notificationManager.SlotType.SOCIAL_COMMUNICATION;
+notificationManager.getSlot(slotType).then((data: notificationManager.NotificationSlot | null) => {
+    console.info(`Succeeded in getting slot, data is ${JSON.stringify(data)}`);
+  }).catch((err: Error): void => {
+    let error: BusinessError = err as BusinessError;
+    console.error(`Failed to get slot. Code is ${error.code}, message is ${error.message}`);
+  });
+```
+
 
 ## getSlot
 
@@ -125,6 +152,10 @@ removeAllSlots 删除所有通知渠道。
 | [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+
+**示例**
+
+参见 [getSlot](#getslot)
 
 
 ## getSlot
@@ -174,32 +205,7 @@ removeAllSlots 删除所有通知渠道。
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotType: notificationManager.SlotType = notificationManager.SlotType.SOCIAL_COMMUNICATION;
-notificationManager.getSlot(slotType).then((data: notificationManager.NotificationSlot) => {
-  console.info(`Succeeded in getting slot, data is ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get slot. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotType: notificationManager.SlotType = notificationManager.SlotType.SOCIAL_COMMUNICATION;
-notificationManager.getSlot(slotType).then((data: notificationManager.NotificationSlot | null) => {
-    console.info(`Succeeded in getting slot, data is ${JSON.stringify(data)}`);
-  }).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`Failed to get slot. Code is ${error.code}, message is ${error.message}`);
-  });
-```
+参见 [getSlot](#getslot)
 
 
 ## getSlot
@@ -246,4 +252,8 @@ removeAllSlots 删除所有通知渠道。
 | [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+
+**示例**
+
+参见 [getSlot](#getslot)
 

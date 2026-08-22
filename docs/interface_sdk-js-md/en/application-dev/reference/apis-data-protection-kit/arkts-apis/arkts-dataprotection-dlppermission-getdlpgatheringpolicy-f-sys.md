@@ -58,6 +58,23 @@ async function ExampleFunction() {
 }
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  dlpPermission.getDLPGatheringPolicy((err, res) => {
+    if (err !== undefined) {
+      console.error('getDLPGatheringPolicy error,', err.code, err.message);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+  }); // Obtain the sandbox gathering policy.
+} catch (err) {
+  console.error('getDLPGatheringPolicy error,', (err as BusinessError).code, (err as BusinessError).message);
+}
+```
+
 
 ## getDLPGatheringPolicy
 
@@ -83,7 +100,7 @@ This API is used to obtain the DLP sandbox gathering policy of the current syste
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[GatheringPolicyType](arkts-dataprotection-dlppermission-gatheringpolicytype-e-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[GatheringPolicyType](arkts-dataprotection-dlppermission-gatheringpolicytype-e-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -98,20 +115,5 @@ This API is used to obtain the DLP sandbox gathering policy of the current syste
 
 **Examples**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  dlpPermission.getDLPGatheringPolicy((err, res) => {
-    if (err !== undefined) {
-      console.error('getDLPGatheringPolicy error,', err.code, err.message);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-  }); // Obtain the sandbox gathering policy.
-} catch (err) {
-  console.error('getDLPGatheringPolicy error,', (err as BusinessError).code, (err as BusinessError).message);
-}
-```
+See [getDLPGatheringPolicy](#getdlpgatheringpolicy)
 

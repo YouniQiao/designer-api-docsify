@@ -90,6 +90,45 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
+    return;
+  }
+  connection.getNetCapabilities(netHandle).then((data: connection.NetCapabilities) => {
+    console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
+  })
+}).catch((error: BusinessError) => {
+    console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
+    return 0;
+  }
+  connection.getNetCapabilities(netHandle).then((data: connection.NetCapabilities) => {
+    console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
+  })
+}).catch((error: Error) => {
+  let businessError = error as BusinessError;
+  console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
+});
+```
+
 
 ## getNetCapabilities
 
@@ -133,42 +172,5 @@ function getNetCapabilities(netHandle: NetHandle): Promise<NetCapabilities>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  if (netHandle.netId == 0) {
-    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
-    return;
-  }
-  connection.getNetCapabilities(netHandle).then((data: connection.NetCapabilities) => {
-    console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
-  })
-}).catch((error: BusinessError) => {
-    console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  if (netHandle.netId == 0) {
-    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
-    return 0;
-  }
-  connection.getNetCapabilities(netHandle).then((data: connection.NetCapabilities) => {
-    console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
-  })
-}).catch((error: Error) => {
-  let businessError = error as BusinessError;
-  console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
-});
-```
+参见 [getNetCapabilities](#getnetcapabilities)
 

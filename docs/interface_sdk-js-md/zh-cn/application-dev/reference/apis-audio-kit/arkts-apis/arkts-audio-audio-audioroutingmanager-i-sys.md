@@ -297,6 +297,60 @@ async function selectOutputDeviceByFilter(){
 }
 ```
 
+## off('preferredOutputDeviceChangeByFilter')
+
+```TypeScript
+off(type: 'preferredOutputDeviceChangeByFilter', callback?: Callback<AudioDeviceDescriptors>): void
+```
+
+Unsubscribes to preferred output device change events.
+
+**起始版本：** 21
+
+<!--Device-AudioRoutingManager-off(type: 'preferredOutputDeviceChangeByFilter', callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-off(type: 'preferredOutputDeviceChangeByFilter', callback?: Callback<AudioDeviceDescriptors>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Device
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'preferredOutputDeviceChangeByFilter' | 是 | Type of the event to listen for. Only the preferredOutputDeviceChangeByFilter event is supported. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | Callback used in subscribe. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
+
+**示例**
+
+```TypeScript
+// 取消该事件的所有监听。
+audioRoutingManager.off('preferredOutputDeviceChangeByFilter');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let preferredOutputDeviceChangeByFilterCallback = (audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
+  console.info(`Succeeded in using on or off function, AudioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+};
+let outputAudioRendererFilter: audio.AudioRendererFilter = {
+  uid : 20010041,
+  rendererInfo : {
+    usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
+    rendererFlags : 0
+  },
+  rendererId : 0
+};
+
+audioRoutingManager.on('preferredOutputDeviceChangeByFilter', outputAudioRendererFilter, preferredOutputDeviceChangeByFilterCallback);
+
+audioRoutingManager.off('preferredOutputDeviceChangeByFilter', preferredOutputDeviceChangeByFilterCallback);
+```
+
 ## offPreferredInputDeviceChangeByFilter
 
 ```TypeScript
@@ -404,17 +458,17 @@ audioRoutingManager.onPreferredOutputDeviceChangeByFilter(outputAudioRendererFil
 audioRoutingManager.offPreferredOutputDeviceChangeByFilter(preferredOutputDeviceChangeByFilterCallback);
 ```
 
-## off('preferredOutputDeviceChangeByFilter')
+## on('preferredOutputDeviceChangeByFilter')
 
 ```TypeScript
-off(type: 'preferredOutputDeviceChangeByFilter', callback?: Callback<AudioDeviceDescriptors>): void
+on(type: 'preferredOutputDeviceChangeByFilter', filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void
 ```
 
-Unsubscribes to preferred output device change events.
+Subscribes to preferred output device change events. When preferred device for target audio renderer filter changes, registered clients will receive the callback.
 
 **起始版本：** 21
 
-<!--Device-AudioRoutingManager-off(type: 'preferredOutputDeviceChangeByFilter', callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-off(type: 'preferredOutputDeviceChangeByFilter', callback?: Callback<AudioDeviceDescriptors>): void-End-->
+<!--Device-AudioRoutingManager-on(type: 'preferredOutputDeviceChangeByFilter', filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-on(type: 'preferredOutputDeviceChangeByFilter', filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -425,25 +479,20 @@ Unsubscribes to preferred output device change events.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'preferredOutputDeviceChangeByFilter' | 是 | Type of the event to listen for. Only the preferredOutputDeviceChangeByFilter event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | Callback used in subscribe. |
+| filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | 是 | Filter for AudioRenderer. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | Callback used to obtain the changed preferred devices information. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 **示例**
 
 ```TypeScript
-// 取消该事件的所有监听。
-audioRoutingManager.off('preferredOutputDeviceChangeByFilter');
-
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let preferredOutputDeviceChangeByFilterCallback = (audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
-  console.info(`Succeeded in using on or off function, AudioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
-};
 let outputAudioRendererFilter: audio.AudioRendererFilter = {
   uid : 20010041,
   rendererInfo : {
@@ -452,10 +501,9 @@ let outputAudioRendererFilter: audio.AudioRendererFilter = {
   },
   rendererId : 0
 };
-
-audioRoutingManager.on('preferredOutputDeviceChangeByFilter', outputAudioRendererFilter, preferredOutputDeviceChangeByFilterCallback);
-
-audioRoutingManager.off('preferredOutputDeviceChangeByFilter', preferredOutputDeviceChangeByFilterCallback);
+audioRoutingManager.on('preferredOutputDeviceChangeByFilter', outputAudioRendererFilter, (audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
+  console.info(`Succeeded in using on function, AudioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+});
 ```
 
 ## onPreferredInputDeviceChangeByFilter
@@ -550,54 +598,6 @@ let outputAudioRendererFilter: audio.AudioRendererFilter = {
 };
 audioRoutingManager.onPreferredOutputDeviceChangeByFilter(outputAudioRendererFilter, (audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
   console.info(`Succeeded in using onPreferredOutputDeviceChangeByFilter function, AudioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
-});
-```
-
-## on('preferredOutputDeviceChangeByFilter')
-
-```TypeScript
-on(type: 'preferredOutputDeviceChangeByFilter', filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void
-```
-
-Subscribes to preferred output device change events. When preferred device for target audio renderer filter changes, registered clients will receive the callback.
-
-**起始版本：** 21
-
-<!--Device-AudioRoutingManager-on(type: 'preferredOutputDeviceChangeByFilter', filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-on(type: 'preferredOutputDeviceChangeByFilter', filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Device
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'preferredOutputDeviceChangeByFilter' | 是 | Type of the event to listen for. Only the preferredOutputDeviceChangeByFilter event is supported. |
-| filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | 是 | Filter for AudioRenderer. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | Callback used to obtain the changed preferred devices information. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
-
-**示例**
-
-```TypeScript
-let outputAudioRendererFilter: audio.AudioRendererFilter = {
-  uid : 20010041,
-  rendererInfo : {
-    usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
-    rendererFlags : 0
-  },
-  rendererId : 0
-};
-audioRoutingManager.on('preferredOutputDeviceChangeByFilter', outputAudioRendererFilter, (audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
-  console.info(`Succeeded in using on function, AudioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
 });
 ```
 
@@ -715,6 +715,34 @@ async function selectInputDevice(){
 }
 ```
 
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let inputAudioDeviceDescriptor: audio.AudioDeviceDescriptors = [{
+  deviceRole : audio.DeviceRole.INPUT_DEVICE,
+  deviceType : audio.DeviceType.MIC,
+  id : 1,
+  name : "",
+  address : "",
+  sampleRates : [44100],
+  channelCounts : [2],
+  channelMasks : [0],
+  networkId : audio.LOCAL_NETWORK_ID,
+  interruptGroupId : 1,
+  volumeGroupId : 1,
+  displayName : "",
+}];
+
+async function getRoutingManager(){
+  audioRoutingManager.selectInputDevice(inputAudioDeviceDescriptor).then(() => {
+    console.info('Select input devices result promise: SUCCESS');
+  }).catch((err: BusinessError) => {
+    console.error(`Result ERROR: ${err}`);
+  });
+}
+```
+
 ## selectInputDevice
 
 ```TypeScript
@@ -745,33 +773,7 @@ Select the input device. This method uses a promise to return the result.
 
 **示例**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let inputAudioDeviceDescriptor: audio.AudioDeviceDescriptors = [{
-  deviceRole : audio.DeviceRole.INPUT_DEVICE,
-  deviceType : audio.DeviceType.MIC,
-  id : 1,
-  name : "",
-  address : "",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : "",
-}];
-
-async function getRoutingManager(){
-  audioRoutingManager.selectInputDevice(inputAudioDeviceDescriptor).then(() => {
-    console.info('Select input devices result promise: SUCCESS');
-  }).catch((err: BusinessError) => {
-    console.error(`Result ERROR: ${err}`);
-  });
-}
-```
+参见 [selectInputDevice](#selectinputdevice)
 
 ## selectInputDeviceByFilter
 
@@ -903,6 +905,34 @@ async function selectOutputDevice(){
 }
 ```
 
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let outputAudioDeviceDescriptor: audio.AudioDeviceDescriptors = [{
+  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
+  deviceType : audio.DeviceType.SPEAKER,
+  id : 1,
+  name : "",
+  address : "",
+  sampleRates : [44100],
+  channelCounts : [2],
+  channelMasks : [0],
+  networkId : audio.LOCAL_NETWORK_ID,
+  interruptGroupId : 1,
+  volumeGroupId : 1,
+  displayName : "",
+}];
+
+async function selectOutputDevice(){
+  audioRoutingManager.selectOutputDevice(outputAudioDeviceDescriptor).then(() => {
+    console.info('Select output devices result promise: SUCCESS');
+  }).catch((err: BusinessError) => {
+    console.error(`Result ERROR: ${err}`);
+  });
+}
+```
+
 ## selectOutputDevice
 
 ```TypeScript
@@ -933,33 +963,7 @@ Select the output device. This method uses a promise to return the result.
 
 **示例**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let outputAudioDeviceDescriptor: audio.AudioDeviceDescriptors = [{
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.SPEAKER,
-  id : 1,
-  name : "",
-  address : "",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : "",
-}];
-
-async function selectOutputDevice(){
-  audioRoutingManager.selectOutputDevice(outputAudioDeviceDescriptor).then(() => {
-    console.info('Select output devices result promise: SUCCESS');
-  }).catch((err: BusinessError) => {
-    console.error(`Result ERROR: ${err}`);
-  });
-}
-```
+参见 [selectOutputDevice](#selectoutputdevice)
 
 ## selectOutputDeviceByFilter
 
@@ -1025,37 +1029,6 @@ async function selectOutputDeviceByFilter(){
 }
 ```
 
-## selectOutputDeviceByFilter
-
-```TypeScript
-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors): Promise<void>
-```
-
-Select the output device with desired AudioRenderer. This method uses a promise to return the result.
-
-**起始版本：** 23
-
-<!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Device
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | 是 | Filter for AudioRenderer. |
-| outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 是 | Audio device description |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
-
-**示例**
-
 ```TypeScript
 import { audio } from '@kit.AudioKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1092,6 +1065,73 @@ async function selectOutputDeviceByFilter(){
   })
 }
 ```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let outputAudioRendererFilter: audio.AudioRendererFilter = {
+  uid : 20010041,
+  rendererInfo : {
+    usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
+    rendererFlags : 0
+  },
+  rendererId : 0
+};
+
+let outputAudioDeviceDescriptor: audio.AudioDeviceDescriptors = [{
+  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
+  deviceType : audio.DeviceType.SPEAKER,
+  id : 1,
+  name : "",
+  address : "",
+  sampleRates : [44100],
+  channelCounts : [2],
+  channelMasks : [0],
+  networkId : audio.LOCAL_NETWORK_ID,
+  interruptGroupId : 1,
+  volumeGroupId : 1,
+  displayName : "",
+}];
+
+audioRoutingManager.selectOutputDeviceByFilter(outputAudioRendererFilter, outputAudioDeviceDescriptor, audio.AudioDevcieSelectStrategy.SELECT_STRATEGY_INDEPENDENT).then(() => {
+  console.info('Succeeded in selecting output device by filter.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to select output device by filter. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## selectOutputDeviceByFilter
+
+```TypeScript
+selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors): Promise<void>
+```
+
+Select the output device with desired AudioRenderer. This method uses a promise to return the result.
+
+**起始版本：** 23
+
+<!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Device
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | 是 | Filter for AudioRenderer. |
+| outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 是 | Audio device description |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise used to return the result. |
+
+**示例**
+
+参见 [selectOutputDeviceByFilter](#selectoutputdevicebyfilter)
 
 ## selectOutputDeviceByFilter
 
@@ -1133,39 +1173,7 @@ Select the output device with desired AudioRenderer. This method uses a promise 
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let outputAudioRendererFilter: audio.AudioRendererFilter = {
-  uid : 20010041,
-  rendererInfo : {
-    usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
-    rendererFlags : 0
-  },
-  rendererId : 0
-};
-
-let outputAudioDeviceDescriptor: audio.AudioDeviceDescriptors = [{
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.SPEAKER,
-  id : 1,
-  name : "",
-  address : "",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : "",
-}];
-
-audioRoutingManager.selectOutputDeviceByFilter(outputAudioRendererFilter, outputAudioDeviceDescriptor, audio.AudioDevcieSelectStrategy.SELECT_STRATEGY_INDEPENDENT).then(() => {
-  console.info('Succeeded in selecting output device by filter.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to select output device by filter. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [selectOutputDeviceByFilter](#selectoutputdevicebyfilter)
 
 ## unexcludeOutputDevices
 
@@ -1239,6 +1247,21 @@ async function unexcludeOutputDevices(){
 }
 ```
 
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let usage: audio.DeviceUsage.MEDIA_OUTPUT_DEVICES;
+
+async function unexcludeOutputDevices(){
+  audioRoutingManager.unexcludeOutputDevices(usage).then(() => {
+    console.info('Unexclude Output Devices result promise: SUCCESS');
+  }).catch((err: BusinessError) => {
+    console.error(`Result ERROR: ${err}`);
+  });
+}
+```
+
 ## unexcludeOutputDevices
 
 ```TypeScript
@@ -1280,18 +1303,5 @@ Unexclude output devices. This function will unexclude all output devices belong
 
 **示例**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let usage: audio.DeviceUsage.MEDIA_OUTPUT_DEVICES;
-
-async function unexcludeOutputDevices(){
-  audioRoutingManager.unexcludeOutputDevices(usage).then(() => {
-    console.info('Unexclude Output Devices result promise: SUCCESS');
-  }).catch((err: BusinessError) => {
-    console.error(`Result ERROR: ${err}`);
-  });
-}
-```
+参见 [unexcludeOutputDevices](#unexcludeoutputdevices)
 

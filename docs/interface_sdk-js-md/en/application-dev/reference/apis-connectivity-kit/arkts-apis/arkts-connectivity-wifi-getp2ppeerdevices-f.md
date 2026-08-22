@@ -35,6 +35,24 @@ Obtains the information about the found devices.
 | --- | --- |
 | Promise&lt;WifiP2pDevice[]&gt; | Returns the found devices list. |
 
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+wifi.getP2pPeerDevices((err, data:wifi.WifiP2pDevice) => {
+   if (err) {
+       console.error("get P2P peer devices error");
+       return;
+   }
+	console.info("get P2P peer devices: " + JSON.stringify(data));
+});
+
+wifi.getP2pPeerDevices().then(data => {
+	console.info("get P2P peer devices: " + JSON.stringify(data));
+});
+```
+
 
 ## getP2pPeerDevices
 
@@ -60,23 +78,9 @@ Obtains the information about the found devices.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;WifiP2pDevice[]&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pDevice[]&gt; | Yes |  |
 
 **Examples**
 
-```TypeScript
-import wifi from '@ohos.wifi';
-
-wifi.getP2pPeerDevices((err, data:wifi.WifiP2pDevice) => {
-   if (err) {
-       console.error("get P2P peer devices error");
-       return;
-   }
-	console.info("get P2P peer devices: " + JSON.stringify(data));
-});
-
-wifi.getP2pPeerDevices().then(data => {
-	console.info("get P2P peer devices: " + JSON.stringify(data));
-});
-```
+See [getP2pPeerDevices](#getp2ppeerdevices)
 

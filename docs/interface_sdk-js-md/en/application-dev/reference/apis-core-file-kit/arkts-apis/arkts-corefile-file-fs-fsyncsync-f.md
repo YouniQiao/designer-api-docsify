@@ -40,3 +40,12 @@ Synchronizes the cached data of a file to storage. This API returns the result s
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fs.openSync(filePath);
+fs.fsyncSync(file.fd);
+fs.closeSync(file);
+```
+

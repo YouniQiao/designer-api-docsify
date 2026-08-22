@@ -73,6 +73,105 @@ aboutToRecycle Method and it is migrated from class CustomComponent.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+import { ComponentInit, ComponentDisappear, UIUtils, CustomComponentLifecycleObserver, CustomComponentLifecycle } from '@kit.ArkUI';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+export class Message {
+  value: string | undefined;
+  constructor(value: string) {
+    this.value = value;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  @State switch: boolean = true;
+
+  build() {
+    Column() {
+      Button('Hello')
+        .fontSize(30)
+        .fontWeight(FontWeight.Bold)
+        .onClick(() => {
+          this.switch = !this.switch;
+        })
+      if (this.switch) {
+        // If only one reusable component is used, reuseId is optional.
+        Child({ message: new Message('Child') })
+          .reuseId('Child')
+      }
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+
+@Reusable
+@Component
+struct Child {
+  @State message: Message = new Message('AboutToReuse');
+  @State label: string = 'HelloWorld';
+  @ComponentInit
+  myInit(): void {
+    registerObserver(UIUtils.getLifecycle(this));
+  }
+  @ComponentDisappear
+  myDisappear(): void {
+    unRegisterObserver(UIUtils.getLifecycle(this));
+  }
+  build() {
+    Column() {
+      Text(this.message.value)
+        .fontSize(30)
+    }
+  }
+}
+
+export class MyObserver implements CustomComponentLifecycleObserver {
+  // Override the lifecycle events in CustomComponentLifecycleObserver. CustomComponentLifecycleObserver cannot listen to the aboutToInit event of the parent component.
+  aboutToAppear() {
+    hilog.info(0x0000, 'testTag', 'MyObserver aboutToAppear');
+  }
+  onDidBuild() {
+    hilog.info(0x0000, 'testTag', 'MyObserver onDidBuild');
+  }
+  aboutToAttach() {
+    hilog.info(0x0000, 'testTag', 'MyObserver aboutToAttach');
+  }
+  aboutToDetach() {
+    hilog.info(0x0000, 'testTag', 'MyObserver aboutToDetach');
+  }
+  aboutToReuse(param?: ESObject) {
+    // The value of param is not undefined in the reuse callback of the V1 component and is undefined in the reuse callback of the V2 component.
+    hilog.info(0x0000, 'testTag', 'MyObserver aboutToReuse');
+  }
+  aboutToRecycle() {
+    hilog.info(0x0000, 'testTag', 'MyObserver aboutToRecycle');
+  }
+  // Unregister the listener in the aboutToDelete function of the parent component. As a result, the aboutToDisappear event of the parent component cannot be listened to.
+  aboutToDisappear() {
+    hilog.info(0x0000, 'testTag', 'MyObserver aboutToDisappear');
+  }
+}
+
+// Create the Observer object.
+const observer = new MyObserver();
+
+export function registerObserver(lifeCycle: CustomComponentLifecycle) {
+  // Register the listener with lifeCycle.
+  lifeCycle.addObserver(observer);
+}
+
+export function unRegisterObserver(lifeCycle: CustomComponentLifecycle) {
+  // Unregister the listener from lifeCycle.
+  lifeCycle.removeObserver(observer);
+}
+```
+
 ## build
 
 ```TypeScript
@@ -114,6 +213,72 @@ The dialog controller of the custom component.
 | Type | Description |
 | --- | --- |
 | [PromptActionDialogController](arkts-arkui-promptactiondialogcontroller-t.md) \| undefined | The controller of dialog, or undefined if it is not available |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { ComponentContent } from '@kit.ArkUI';
+
+class Params {
+  text: string = "";
+  constructor(text: string) {
+    this.text = text;
+  }
+}
+
+@ComponentV2
+struct MyComponent {
+  build() {
+    Column() {
+      Button('Close Dialog')
+        .onClick(() => {
+          let ctrl: PromptActionDialogController = this.getDialogController();
+          if (ctrl != undefined) {
+            ctrl.close();
+          }
+        })
+    }
+  }
+}
+
+@Builder
+function buildText(params: Params) {
+  Column() {
+    Text(params.text)
+      .fontSize(50)
+      .fontWeight(FontWeight.Bold)
+      .margin({ bottom: 36 })
+    MyComponent()
+  }.backgroundColor('#FFF0F0F0')
+}
+
+@Entry
+@ComponentV2
+struct Index {
+  @Local message: string = "hello";
+
+  build() {
+    Row() {
+      Column({ space: 10 }) {
+        Button('click me')
+          .fontSize(20)
+          .onClick(() => {
+            let ctx = this.getUIContext();
+            let promptAction = ctx.getPromptAction();
+            promptAction.openCustomDialog(new ComponentContent(ctx, wrapBuilder(buildText), new Params(this.message)))
+              .catch((err: BusinessError) => {
+                console.error("openCustomDialog error: " + err.code + " " + err.message);
+              })
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## getUIContext
 
@@ -162,6 +327,22 @@ Get uniqueId of the custom component and it is migrated from class CustomCompone
 | Type | Description |
 | --- | --- |
 | number | The uniqueId of the custom component. |
+
+**Examples**
+
+```TypeScript
+@Entry
+@Component
+struct MyComponent {
+  aboutToAppear() {
+    let uniqueId: number = this.getUniqueId();
+  }
+
+  build() {
+    // ...
+  }
+}
+```
 
 ## onBackPress
 
@@ -225,6 +406,54 @@ onFormRecover Method, this is only for ArkTS form, it is migrated from class Cus
 | --- | --- | --- | --- |
 | statusData | string | Yes | indicate status data of ArkTS form UI, which is acquired by calling onFormRecycle, it is used to recover form |
 
+**Examples**
+
+```TypeScript
+@Entry
+@Component
+struct WidgetCard {
+  readonly title: string = 'Hello World';
+  readonly actionType: string = 'router';
+  readonly abilityName: string = 'EntryAbility';
+  readonly message: string = 'add detail';
+  readonly fullWidthPercent: string = '100%';
+  readonly fullHeightPercent: string = '100%';
+
+  onFormRecycle(): string {
+    let formId: string = "1859635745"
+    console.info("card is recycled, formID: " + formId);
+    return formId;
+  }
+
+  onFormRecover(statusData: string): void {
+    console.info("card has been restored, formID: " + statusData);
+  }
+
+  build() {
+    Row() {
+      Column() {
+        Text(this.title)
+          .fontSize($r('app.float.font_size'))
+          .fontWeight(FontWeight.Medium)
+          .fontColor($r('sys.color.font'))
+      }
+      .width(this.fullWidthPercent)
+    }
+    .height(this.fullHeightPercent)
+    .backgroundColor($r('sys.color.comp_background_primary'))
+    .onClick(() => {
+      postCardAction(this, {
+        action: this.actionType,
+        abilityName: this.abilityName,
+        params: {
+          message: this.message
+        }
+      });
+    })
+  }
+}
+```
+
 ## onFormRecycle
 
 ```TypeScript
@@ -250,6 +479,54 @@ onFormRecycle Method, this is only for ArkTS form, if form was marked recyclable
 | Type | Description |
 | --- | --- |
 | string | status data of ArkTS form UI, this data will be passed in when recover form later |
+
+**Examples**
+
+```TypeScript
+@Entry
+@Component
+struct WidgetCard {
+  readonly title: string = 'Hello World';
+  readonly actionType: string = 'router';
+  readonly abilityName: string = 'EntryAbility';
+  readonly message: string = 'add detail';
+  readonly fullWidthPercent: string = '100%';
+  readonly fullHeightPercent: string = '100%';
+
+  onFormRecycle(): string {
+    let formId: string = "1859635745"
+    console.info("card is recycled, formID: " + formId);
+    return formId;
+  }
+
+  onFormRecover(statusData: string): void {
+    console.info("card has been restored, formID: " + statusData);
+  }
+
+  build() {
+    Row() {
+      Column() {
+        Text(this.title)
+          .fontSize($r('app.float.font_size'))
+          .fontWeight(FontWeight.Medium)
+          .fontColor($r('sys.color.font'))
+      }
+      .width(this.fullWidthPercent)
+    }
+    .height(this.fullHeightPercent)
+    .backgroundColor($r('sys.color.comp_background_primary'))
+    .onClick(() => {
+      postCardAction(this, {
+        action: this.actionType,
+        abilityName: this.abilityName,
+        params: {
+          message: this.message
+        }
+      });
+    })
+  }
+}
+```
 
 ## onMeasureSize
 
@@ -372,6 +649,10 @@ Invoked when the custom component needs to determine the positions of its child 
 | children | Array&lt;[Layoutable](arkts-arkui-layoutable-i.md)&gt; | Yes | Array containing layout information for all child components after measurement. |
 | constraint | ConstraintSizeOptions | Yes | Layout constraints applied to the component. |
 
+**Examples**
+
+See the [example for customizing a layout](#example).
+
 ## onWillApplyTheme
 
 ```TypeScript
@@ -443,6 +724,138 @@ Queries the **NavDestination** information of this custom component. This API ha
 | --- | --- |
 | [NavDestinationInfo](arkts-arkui-navdestinationinfo-t.md) \| undefined | NavDestinationInfo** instance obtained. |
 
+**Examples**
+
+```TypeScript
+import { uiObserver } from '@kit.ArkUI';
+
+@Component
+export struct NavDestinationExample {
+  build() {
+    NavDestination() {
+      MyComponent()
+    }
+  }
+}
+
+@Component
+struct MyComponent {
+  navDesInfo: uiObserver.NavDestinationInfo | undefined
+
+  aboutToAppear() {
+    // this refers to the custom node MyComponent and searches for the nearest parent node of the NavDestination type from this node upwards.
+    this.navDesInfo = this.queryNavDestinationInfo();
+    console.info('get navDestinationInfo: ' + JSON.stringify(this.navDesInfo));
+  }
+
+  build() {
+    // ...
+  }
+}
+```
+
+```TypeScript
+// Index.ets
+@Entry
+@Component
+struct NavigationExample {
+  pageInfo: NavPathStack = new NavPathStack();
+
+  build() {
+    Navigation(this.pageInfo) {
+      Column() {
+        Button('pageOne', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfo.pushPath({ name: 'pageOne' }); // Push the navigation destination page specified by name to the navigation stack.
+          })
+      }
+    }.title('NavIndex')
+  }
+}
+```
+
+```TypeScript
+// PageOne.ets
+import { uiObserver } from '@kit.ArkUI';
+
+@Builder
+export function PageOneBuilder() {
+  PageOneComponent()
+}
+
+@Component
+export struct PageOneComponent {
+  navDesInfo: uiObserver.NavDestinationInfo | undefined;
+  @State text: string = '';
+  build() {
+    NavDestination() {
+      Column() {
+        Button('Search Inward')
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            // Search inward for the NavDestination information for PageOne.
+            this.navDesInfo = this.queryNavDestinationInfo(true);
+            this.text = JSON.stringify(this.navDesInfo?.name).toString();
+          })
+        Text('The NavDestination component found inward is:' + this.text)
+          .width('80%')
+          .height(50)
+          .margin(50)
+          .fontSize(20)
+        MyComponent()
+      }.width('100%').height('100%')
+    }
+    .title('pageOne')
+  }
+}
+
+@Component
+struct MyComponent {
+  navDesInfo: uiObserver.NavDestinationInfo | undefined;
+  @State text: string = '';
+
+  build() {
+    Column() {
+      Button('Search Outward')
+        .width('80%')
+        .height(40)
+        .margin(20)
+        .onClick(() => {
+          // Search outward for the NavDestination information for PageOne.
+          this.navDesInfo = this.queryNavDestinationInfo(false);
+          this.text = JSON.stringify(this.navDesInfo?.name).toString();
+        })
+      Text('The NavDestination component found outward is:' + this.text)
+        .width('80%')
+        .height(50)
+        .margin(50)
+        .fontSize(20)
+    }
+  }
+}
+```
+
+```TypeScript
+//route_map.json
+{
+  "routerMap": [
+    {
+      "name": "pageOne",
+      "pageSourceFile": "src/main/ets/pages/PageOne.ets",
+      "buildFunction": "PageOneBuilder",
+      "data": {
+        "description": "this is pageOne"
+      }
+    }
+  ]
+}
+```
+
 ## queryNavDestinationInfo
 
 ```TypeScript
@@ -473,6 +886,10 @@ Queries the information of the nearest **NavDestination** component (a navigatio
 | --- | --- |
 | [NavDestinationInfo](arkts-arkui-navdestinationinfo-t.md) \| undefined | NavDestinationInfo** instance obtained. |
 
+**Examples**
+
+See [queryNavDestinationInfo](#querynavdestinationinfo)
+
 ## queryNavigationInfo
 
 ```TypeScript
@@ -497,6 +914,46 @@ Queries the **Navigation** information of this custom component.
 | --- | --- |
 | [NavigationInfo](arkts-arkui-navigationinfo-t.md) \| undefined | NavigationInfo** instance obtained. |
 
+**Examples**
+
+```TypeScript
+// index.ets
+import { uiObserver } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct MainPage {
+  pathStack: NavPathStack = new NavPathStack();
+
+  build() {
+    Navigation(this.pathStack) {
+      // ...
+    }.id("NavigationId")
+  }
+}
+
+
+@Component
+export struct PageOne {
+  pathStack: NavPathStack = new NavPathStack();
+
+  aboutToAppear() {
+    // this refers to the custom node PageOne and searches for the nearest parent node of the Navigation type from this node upwards.
+    let navigationInfo: uiObserver.NavigationInfo | undefined = this.queryNavigationInfo();
+    console.info('get navigationInfo: ' + JSON.stringify(navigationInfo));
+    if (navigationInfo !== undefined) {
+      this.pathStack = navigationInfo.pathStack;
+    }
+  }
+
+  build() {
+    NavDestination() {
+      // ...
+    }.title('PageOne')
+  }
+}
+```
+
 ## queryRouterPageInfo
 
 ```TypeScript
@@ -520,4 +977,22 @@ Obtains a **RouterPageInfo** instance.
 | Type | Description |
 | --- | --- |
 | [RouterPageInfo](arkts-arkui-routerpageinfo-t.md) \| undefined | RouterPageInfo** instance obtained. |
+
+**Examples**
+
+```TypeScript
+import { uiObserver } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct MyComponent {
+  aboutToAppear() {
+    let info: uiObserver.RouterPageInfo | undefined = this.queryRouterPageInfo();
+  }
+
+  build() {
+    // ...
+  }
+}
+```
 

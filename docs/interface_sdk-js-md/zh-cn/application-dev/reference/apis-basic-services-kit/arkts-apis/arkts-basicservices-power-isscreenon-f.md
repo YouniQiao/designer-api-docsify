@@ -42,6 +42,16 @@ power.isScreenOn((err: Error, data: boolean) => {
 })
 ```
 
+```TypeScript
+power.isScreenOn()
+.then((data: boolean) => {
+    console.info('screen on status is ' + data);
+})
+.catch((err: Error) => {
+    console.error('check screen status failed, err: ' + err);
+})
+```
+
 
 ## isScreenOn
 
@@ -69,13 +79,5 @@ function isScreenOn(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-power.isScreenOn()
-.then((data: boolean) => {
-    console.info('screen on status is ' + data);
-})
-.catch((err: Error) => {
-    console.error('check screen status failed, err: ' + err);
-})
-```
+参见 [isScreenOn](#isscreenon)
 

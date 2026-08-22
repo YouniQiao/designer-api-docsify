@@ -46,6 +46,20 @@ Called when an ad request fails.
 import { advertising } from '@kit.AdsKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
+const adLoaderListener: advertising.AdLoadListener = {
+  onAdLoadFailure: (errorCode: number, errorMsg: string) => {
+    hilog.error(0x0000, 'testTag', `Failed to load ad. Code is ${errorCode}, message is ${errorMsg}`);
+  },
+  onAdLoadSuccess: (ads: Array<advertising.Advertisement>) => {
+    hilog.info(0x0000, 'testTag', 'Succeeded in loading ad');
+  }
+}
+```
+
+```TypeScript
+import { advertising } from '@kit.AdsKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
 const multiSlotsAdLoadListener: advertising.MultiSlotsAdLoadListener = {
   onAdLoadFailure: (errorCode: number, errorMsg: string) => {
     hilog.error(0x0000, 'testTag', `Failed to load ad. Code is ${errorCode}, message is ${errorMsg}`);
@@ -79,6 +93,20 @@ Called when a request for loading multiple ads is successful.
 | adsMap | Map&lt;string, Array&lt;Advertisement&gt;&gt; | Yes | Ad data, which is a mapping set that uses ad slot IDs as keys to store the requested ad content. |
 
 **Examples**
+
+```TypeScript
+import { advertising } from '@kit.AdsKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const adLoaderListener: advertising.AdLoadListener = {
+  onAdLoadFailure: (errorCode: number, errorMsg: string) => {
+    hilog.error(0x0000, 'testTag', `Failed to load ad. Code is ${errorCode}, message is ${errorMsg}`);
+  },
+  onAdLoadSuccess: (ads: Array<advertising.Advertisement>) => {
+    hilog.info(0x0000, 'testTag', 'Succeeded in loading ad');
+  }
+}
+```
 
 ```TypeScript
 import { advertising } from '@kit.AdsKit';

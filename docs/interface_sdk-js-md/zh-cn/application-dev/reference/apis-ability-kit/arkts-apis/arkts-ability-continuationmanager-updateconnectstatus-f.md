@@ -56,6 +56,21 @@ continuationManager.updateConnectStatus(token, deviceId, continuationManager.Dev
 });
 ```
 
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let token: number = 1;
+let deviceId: string = "test deviceId";
+continuationManager.updateConnectStatus(token, deviceId, continuationManager.DeviceConnectState.CONNECTED)
+  .then(() => {
+    console.info('updateConnectStatus finished. ');
+  })
+  .catch((err: BusinessError) => {
+    console.error('updateConnectStatus failed, cause: ' + JSON.stringify(err));
+});
+```
+
 
 ## updateConnectStatus
 
@@ -93,18 +108,5 @@ function updateConnectStatus(token: number, deviceId: string, status: DeviceConn
 
 **示例**
 
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = 1;
-let deviceId: string = "test deviceId";
-continuationManager.updateConnectStatus(token, deviceId, continuationManager.DeviceConnectState.CONNECTED)
-  .then(() => {
-    console.info('updateConnectStatus finished. ');
-  })
-  .catch((err: BusinessError) => {
-    console.error('updateConnectStatus failed, cause: ' + JSON.stringify(err));
-});
-```
+参见 [updateConnectStatus](#updateconnectstatus)
 

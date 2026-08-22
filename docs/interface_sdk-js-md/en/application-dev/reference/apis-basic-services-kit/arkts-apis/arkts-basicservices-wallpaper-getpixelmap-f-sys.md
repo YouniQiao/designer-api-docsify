@@ -31,7 +31,7 @@ Obtains the default pixel map of a wallpaper of the specified type. Returns the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | the callback of getPixelMap. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | the callback of getPixelMap. |
 
 **Examples**
 
@@ -45,6 +45,17 @@ wallpaper.getPixelMap(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: Business
     return;
   }
   console.info(`success to getPixelMap : ${JSON.stringify(data.getImageInfoSync())}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+wallpaper.getPixelMap(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: image.PixelMap) => {
+  console.info(`success to getPixelMap : ${JSON.stringify(data.getImageInfoSync())}`);
+}).catch((error: BusinessError) => {
+  console.error(`failed to getPixelMap. Code: ${error.code}, Message: ${error.message}`);
 });
 ```
 
@@ -83,14 +94,5 @@ Obtains the default pixel map of a wallpaper of the specified type. Returns the 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-wallpaper.getPixelMap(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: image.PixelMap) => {
-  console.info(`success to getPixelMap : ${JSON.stringify(data.getImageInfoSync())}`);
-}).catch((error: BusinessError) => {
-  console.error(`failed to getPixelMap. Code: ${error.code}, Message: ${error.message}`);
-});
-```
+See [getPixelMap](#getpixelmap)
 

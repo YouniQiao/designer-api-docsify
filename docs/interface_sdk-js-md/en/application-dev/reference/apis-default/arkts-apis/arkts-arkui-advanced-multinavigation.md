@@ -11,19 +11,19 @@
 
 | Name | Description |
 | --- | --- |
-| [MultiNavPathStack](arkts-arkuiadvancedmultinavigation-multinavpathstack-c.md) | MultiNavPathStack is used for storing pages when shown as split mode. |
+| [MultiNavPathStack](arkts-arkui-advanced-multinavigation-multinavpathstack-c.md) | MultiNavPathStack is used for storing pages when shown as split mode. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [MultiNavigation](arkts-arkuiadvancedmultinavigation-multinavigation-s.md) | Declaration struct MultiNavigation. |
+| [MultiNavigation](arkts-arkui-advanced-multinavigation-multinavigation-s.md) | Declaration struct MultiNavigation. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [SplitPolicy](arkts-arkuiadvancedmultinavigation-splitpolicy-e.md) | Splitpolicy indicates the policy of pages pushed to the stack. |
+| [SplitPolicy](arkts-arkui-advanced-multinavigation-splitpolicy-e.md) | Splitpolicy indicates the policy of pages pushed to the stack. |
 
 ### Types
 

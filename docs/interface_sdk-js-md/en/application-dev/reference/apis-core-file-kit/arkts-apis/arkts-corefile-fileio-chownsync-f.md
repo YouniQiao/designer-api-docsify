@@ -29,3 +29,11 @@ Changes the file owner based on its path. This API returns the result synchronou
 | uid | number | Yes | New UID. |
 | gid | number | Yes | New GID. |
 
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let stat = fileio.statSync(filePath)
+fileio.chownSync(filePath, stat.uid, stat.gid);
+```
+

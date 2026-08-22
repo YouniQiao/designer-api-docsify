@@ -58,6 +58,16 @@ call.getCallRestrictionStatus(0, 1, (err: BusinessError, data: call.RestrictionS
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.getCallRestrictionStatus(0, 1).then((data: call.RestrictionStatus) => {
+    console.info(`getCallRestrictionStatus success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getCallRestrictionStatus fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getCallRestrictionStatus
 
@@ -104,13 +114,5 @@ function getCallRestrictionStatus(slotId: int, type: CallRestrictionType): Promi
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.getCallRestrictionStatus(0, 1).then((data: call.RestrictionStatus) => {
-    console.info(`getCallRestrictionStatus success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getCallRestrictionStatus fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [getCallRestrictionStatus](#getcallrestrictionstatus)
 

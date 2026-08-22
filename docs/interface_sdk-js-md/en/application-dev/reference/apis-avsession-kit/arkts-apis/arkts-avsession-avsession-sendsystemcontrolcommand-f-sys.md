@@ -29,7 +29,7 @@ Send system control command.The system automatically selects the recipient.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | Yes | The command to be sent. See [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -67,6 +67,32 @@ avSession.sendSystemControlCommand(avcommand, (err) => {
   } else {
     console.info('sendSystemControlCommand successfully');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let cmd : avSession.AVControlCommandType = 'play';
+// let cmd : avSession.AVControlCommandType = 'pause';
+// let cmd : avSession.AVControlCommandType = 'stop';
+// let cmd : avSession.AVControlCommandType = 'playNext';
+// let cmd : avSession.AVControlCommandType = 'playPrevious';
+// let cmd : avSession.AVControlCommandType = 'fastForward';
+// let cmd : avSession.AVControlCommandType = 'rewind';
+let avcommand: avSession.AVControlCommand = {command:cmd};
+// let cmd : avSession.AVControlCommandType = 'seek';
+// let avcommand = {command:cmd, parameter:10};
+// let cmd : avSession.AVControlCommandType = 'setSpeed';
+// let avcommand = {command:cmd, parameter:2.6};
+// let cmd : avSession.AVControlCommandType = 'setLoopMode';
+// let avcommand = {command:cmd, parameter:avSession.LoopMode.LOOP_MODE_SINGLE};
+// let cmd : avSession.AVControlCommandType = 'toggleFavorite';
+// let avcommand = {command:cmd, parameter:"false"};
+avSession.sendSystemControlCommand(avcommand).then(() => {
+  console.info('SendSystemControlCommand successfully');
+}).catch((err: BusinessError) => {
+  console.error(`SendSystemControlCommand BusinessError: code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -114,29 +140,5 @@ Send system control command.The system automatically selects the recipient.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let cmd : avSession.AVControlCommandType = 'play';
-// let cmd : avSession.AVControlCommandType = 'pause';
-// let cmd : avSession.AVControlCommandType = 'stop';
-// let cmd : avSession.AVControlCommandType = 'playNext';
-// let cmd : avSession.AVControlCommandType = 'playPrevious';
-// let cmd : avSession.AVControlCommandType = 'fastForward';
-// let cmd : avSession.AVControlCommandType = 'rewind';
-let avcommand: avSession.AVControlCommand = {command:cmd};
-// let cmd : avSession.AVControlCommandType = 'seek';
-// let avcommand = {command:cmd, parameter:10};
-// let cmd : avSession.AVControlCommandType = 'setSpeed';
-// let avcommand = {command:cmd, parameter:2.6};
-// let cmd : avSession.AVControlCommandType = 'setLoopMode';
-// let avcommand = {command:cmd, parameter:avSession.LoopMode.LOOP_MODE_SINGLE};
-// let cmd : avSession.AVControlCommandType = 'toggleFavorite';
-// let avcommand = {command:cmd, parameter:"false"};
-avSession.sendSystemControlCommand(avcommand).then(() => {
-  console.info('SendSystemControlCommand successfully');
-}).catch((err: BusinessError) => {
-  console.error(`SendSystemControlCommand BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
+See [sendSystemControlCommand](#sendsystemcontrolcommand)
 

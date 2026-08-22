@@ -38,3 +38,8 @@ Exercise caution when using this API. After this API is called, the application 
 process.exit(0);
 ```
 
+```TypeScript
+let pro = new process.ProcessManager();
+pro.exit(0);
+```
+

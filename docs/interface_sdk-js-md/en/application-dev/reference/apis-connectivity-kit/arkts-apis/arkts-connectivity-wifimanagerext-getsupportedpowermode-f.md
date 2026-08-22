@@ -36,6 +36,20 @@ Obtains the supported power Mode.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [2701000](../errorcode-wifi.md#2701000-ap-extension-module-error) | Operation failed. |
 
+**Examples**
+
+```TypeScript
+import { wifiManagerExt } from '@kit.ConnectivityKit';
+
+wifiManagerExt.getSupportedPowerMode((err, data: wifiManagerExt.PowerMode[]) => {
+    if (err) {
+        console.error("get supported power mode info error: ", err);
+        return;
+    }
+    console.info("get supported power mode info: " + JSON.stringify(data));
+});
+```
+
 
 ## getSupportedPowerMode
 
@@ -57,7 +71,7 @@ Obtains the supported power Mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)&gt;&gt; | Yes | the callback of model. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)&gt;&gt; | Yes | the callback of model. |
 
 **Error codes:**
 
@@ -69,15 +83,5 @@ Obtains the supported power Mode.
 
 **Examples**
 
-```TypeScript
-import { wifiManagerExt } from '@kit.ConnectivityKit';
-
-wifiManagerExt.getSupportedPowerMode((err, data: wifiManagerExt.PowerMode[]) => {
-    if (err) {
-        console.error("get supported power mode info error: ", err);
-        return;
-    }
-    console.info("get supported power mode info: " + JSON.stringify(data));
-});
-```
+See [getSupportedPowerMode](#getsupportedpowermode)
 

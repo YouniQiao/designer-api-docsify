@@ -33,7 +33,7 @@ function uninstall(admin: Want, bundleName: string, userId?: number, isKeepData?
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 应用程序包名。 |
 | userId | number | 否 | 用户ID，取值范围：大于等于0。 <br> - 调用接口时，若传入userId，表示指定用户。 <br> - 调用接口时，若未传入userId，表示当前用户。 |
 | isKeepData | boolean | 否 | 是否保留包数据，true表示保留，false表示不保留。 |
@@ -71,6 +71,82 @@ bundleManager.uninstall(wantTemp, 'bundleName', 100, true).then(() => {
   console.info('Succeeded in uninstalling bundles.');
 }).catch((err: BusinessError) => {
   console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+bundleManager.uninstall(wantTemp, 'bundleName', (err) => {
+  if (err) {
+    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in uninstalling bundles');
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+bundleManager.uninstall(wantTemp, 'bundleName', 100, (err) => {
+  if (err) {
+    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in uninstalling bundles');
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+bundleManager.uninstall(wantTemp, 'bundleName', true, (err) => {
+  if (err) {
+    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in uninstalling bundles');
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+bundleManager.uninstall(wantTemp, 'bundleName', 100, true, (err) => {
+  if (err) {
+    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in uninstalling bundles');
 });
 ```
 

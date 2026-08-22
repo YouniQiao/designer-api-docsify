@@ -24,7 +24,7 @@ Obtains the storage space (in bytes) of this application. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[BundleStats](arkts-corefile-storagestatistics-bundlestats-i.md)&gt; | Yes | Callback used to return the application space obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleStats](arkts-corefile-storagestatistics-bundlestats-i.md)&gt; | Yes | Callback used to return the application space obtained. |
 
 **Error codes:**
 
@@ -35,6 +35,15 @@ Obtains the storage space (in bytes) of this application. This API uses an async
 | 13900042 | Unknown error. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+storageStatistics.getCurrentBundleStats().then((BundleStats: storageStatistics.BundleStats) => {
+  console.info("getCurrentBundleStats successfully:" + JSON.stringify(BundleStats));
+}).catch((err: BusinessError) => {
+  console.error("getCurrentBundleStats failed with error:"+ JSON.stringify(err));
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -79,12 +88,5 @@ Obtains the storage space (in bytes) of this application. This API uses a promis
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-storageStatistics.getCurrentBundleStats().then((BundleStats: storageStatistics.BundleStats) => {
-  console.info("getCurrentBundleStats successfully:" + JSON.stringify(BundleStats));
-}).catch((err: BusinessError) => {
-  console.error("getCurrentBundleStats failed with error:"+ JSON.stringify(err));
-});
-```
+See [getCurrentBundleStats](#getcurrentbundlestats)
 

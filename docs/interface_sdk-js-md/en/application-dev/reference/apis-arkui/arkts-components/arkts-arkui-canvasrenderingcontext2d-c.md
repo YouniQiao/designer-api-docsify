@@ -63,6 +63,47 @@ Constructs a canvas object, which supports configuration of parameters for the *
 | --- | --- | --- | --- |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **CanvasRenderingContext2D** object. For details, see [RenderingContextSettings](#renderingcontextsettings). <br>If the value is **undefined** or **null**, the default value of [RenderingContextSettings](#renderingcontextsettings) is used. |
 
+**Examples**
+
+The following example shows how to specify the unit mode during the creation of a CanvasRenderingContext2D object. The default unit mode is LengthMetricsUnit.DEFAULT, which corresponds to the default unit vp. Once set, this unit mode cannot be changed dynamically. For details, see LengthMetricsUnit.
+
+```TypeScript
+// xxx.ets
+import { LengthMetricsUnit } from '@kit.ArkUI'
+
+@Entry
+@Component
+struct LengthMetricsUnitDemo {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private contextPX: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings, LengthMetricsUnit.PX);
+  private contextVP: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.contextPX)
+        .width('100%')
+        .height(150)
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.contextPX.fillRect(10,10,100,100)
+          this.contextPX.clearRect(10,10,50,50)
+        })
+
+      Canvas(this.contextVP)
+        .width('100%')
+        .height(150)
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.contextVP.fillRect(10,10,100,100)
+          this.contextVP.clearRect(10,10,50,50)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 ## constructor
 
 ```TypeScript
@@ -89,6 +130,10 @@ Creates a **CanvasRenderingContext2D** object, allowing for initial configuratio
 | --- | --- | --- | --- |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **CanvasRenderingContext2D** object. For details, see [RenderingContextSettings](#renderingcontextsettings). <br>If the value is **undefined** or **null**, the default value of [RenderingContextSettings](#renderingcontextsettings) is used. |
 | unit | LengthMetricsUnit | No | Unit mode of the **CanvasRenderingContext2D** object. The value cannot be dynamically changed once set. <br>Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value. <br>Default value: **DEFAULT**. |
+
+**Examples**
+
+See [constructor](#constructor)
 
 ## getContext2DFromDrawingContext
 
@@ -135,6 +180,34 @@ Obtains a **CanvasRenderingContext2D** object from a **DrawingRenderingContext**
 | Error Code ID | Error Message |
 | --- | --- |
 | [103702](../errorcode-canvas.md#103702-drawing-context-is-not-bound-to-any-canvas-component) | The drawingContext is not bound to a canvas component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { LengthMetricsUnit } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct CanvasExample {
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas({ unit: LengthMetricsUnit.DEFAULT })
+        .onReady((drawingContext?: DrawingRenderingContext) => {
+          if (!drawingContext) {
+            return
+          }
+          let context2D: CanvasRenderingContext2D =
+            CanvasRenderingContext2D.getContext2DFromDrawingContext(drawingContext, { antialias: true })
+          context2D.fillStyle = 'rgb(39,135,217)'
+          context2D.fillRect(10, 30, 100, 100)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## off('onAttach')
 
@@ -365,6 +438,71 @@ Stops AI image analysis. The content displayed by the AI image analyzer will be 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct ImageAnalyzerExample {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true)
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
+  private config: ImageAnalyzerConfig = {
+    types: [ImageAnalyzerType.SUBJECT, ImageAnalyzerType.TEXT]
+  }
+  // Replace 'common/images/example.png' with the image resource file you use.
+  private img = new ImageBitmap('common/images/example.png')
+  private aiController: ImageAnalyzerController = new ImageAnalyzerController()
+  private options: ImageAIOptions = {
+    types: [ImageAnalyzerType.SUBJECT, ImageAnalyzerType.TEXT],
+    aiController: this.aiController
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Button('start')
+        .width(100)
+        .height(50)
+        .margin(5)
+        .onClick(() => {
+          this.context.startImageAnalyzer(this.config)
+            .then(() => {
+              console.info("analysis complete")
+            })
+            .catch((error: BusinessError) => {
+              console.info("error code: " + error.code)
+            })
+        })
+      Button('stop')
+        .width(100)
+        .height(50)
+        .margin(5)
+        .onClick(() => {
+          this.context.stopImageAnalyzer()
+        })
+      Button('getTypes')
+        .width(100)
+        .height(50)
+        .margin(5)
+        .onClick(() => {
+          this.aiController.getImageAnalyzerSupportTypes()
+        })
+      Canvas(this.context, this.options)
+        .width(200)
+        .height(200)
+        .enableAnalyzer(true)
+        .onReady(() => {
+          this.context.drawImage(this.img, 0, 0, 200, 200)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 ## toDataURL
 
 ```TypeScript
@@ -395,6 +533,65 @@ Creates a data URL that contains a representation of an image. This API involves
 | Type | Description |
 | --- | --- |
 | string | Image URL. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct CanvasExample {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true)
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
+  @State toDataURL: string = ""
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width(100)
+        .height(100)
+        .onReady(() =>{
+          this.context.fillStyle = "#00ff00"
+          this.context.fillRect(0,0,100,100)
+          this.toDataURL = this.context.toDataURL("image/png", 0.92)
+        })
+      Text(this.toDataURL)
+    }
+    .width('100%')
+    .height('100%')
+    .backgroundColor('#ffff00')
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct ToDataURL {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private offCanvas: OffscreenCanvas = new OffscreenCanvas(100, 100);
+  @State dataURL: string = "";
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width(100)
+        .height(100)
+        .onReady(() => {
+          let offContext = this.offCanvas.getContext("2d", this.settings)
+          offContext.fillRect(0,0,100,100)
+          this.dataURL = offContext.toDataURL()
+        })
+      Text(this.dataURL)
+    }
+    .width('100%')
+    .height('100%')
+    .backgroundColor('#ffff00')
+  }
+}
+```
 
 ## canvas
 

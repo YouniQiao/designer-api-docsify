@@ -33,3 +33,12 @@ Specifies the bundleName of the application which the window that the target Com
 | --- | --- |
 | [On](arkts-test-uitest-on-c.md) | this { |
 
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.inWindow('com.uitestScene.acts'); // 使用静态构造器ON创建On对象，指定目标控件位于给出的应用窗口内。
+```
+

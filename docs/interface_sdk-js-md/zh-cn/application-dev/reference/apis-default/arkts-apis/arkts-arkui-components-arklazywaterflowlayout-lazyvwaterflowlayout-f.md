@@ -36,7 +36,7 @@ export declare function LazyVWaterFlowLayout (
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyVWaterFlowLayoutAttribute](arkts-arkuicomponentsarklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) |  |
+| [LazyVWaterFlowLayoutAttribute](arkts-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) |  |
 
 
 ## LazyVWaterFlowLayout
@@ -65,12 +65,12 @@ export declare function LazyVWaterFlowLayout(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | CustomBuilderT&lt;[LazyVWaterFlowLayoutAttribute](arkts-arkuicomponentsarklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md)&gt; | 是 | The style to create a LazyVWaterFlowLayout. |
+| style_ | CustomBuilderT&lt;[LazyVWaterFlowLayoutAttribute](arkts-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md)&gt; | 是 | The style to create a LazyVWaterFlowLayout. |
 | content_ | CustomBuilder | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyVWaterFlowLayoutAttribute](arkts-arkuicomponentsarklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) | LazyVWaterFlowLayout的属性。 |
+| [LazyVWaterFlowLayoutAttribute](arkts-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) | LazyVWaterFlowLayout的属性。 |
 

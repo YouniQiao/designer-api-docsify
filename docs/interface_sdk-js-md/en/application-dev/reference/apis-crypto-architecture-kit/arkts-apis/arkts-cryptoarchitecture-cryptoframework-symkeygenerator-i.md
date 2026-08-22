@@ -47,7 +47,7 @@ If no hash algorithm is specified when the symmetric key generator is created (f
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | DataBlob | Yes | Data to convert. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the symmetric key obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the symmetric key obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -78,6 +78,77 @@ function testConvertKey() {
     console.info('Convert symKey result: success, algName: ' + symKey.algName);
   });
 }
+```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function genKeyMaterialBlob(): cryptoFramework.DataBlob {
+  let arr = [
+    0xba, 0x3d, 0xc2, 0x71, 0x21, 0x1e, 0x30, 0x56,
+    0xad, 0x47, 0xfc, 0x5a, 0x46, 0x39, 0xee, 0x7c,
+    0xba, 0x3b, 0xc2, 0x71, 0xab, 0xa0, 0x30, 0x72]; // keyLen = 192 (24 bytes)
+  let keyMaterial = new Uint8Array(arr);
+  return { data: keyMaterial };
+}
+
+function testConvertKey() {
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
+  let keyMaterialBlob = genKeyMaterialBlob();
+  symKeyGenerator.convertKey(keyMaterialBlob)
+    .then(symKey => {
+      console.info('Convert symKey result: success, algName: ' + symKey.algName);
+    }).catch((error: BusinessError) => {
+      console.error(`Convert symKey failed, ${error.code}, ${error.message}`);
+    });
+}
+```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+let pubKeyArray =
+  new Uint8Array([48, 89, 48, 19, 6, 7, 42, 134, 72, 206, 61, 2, 1, 6, 8, 42, 134, 72, 206, 61, 3, 1, 7, 3, 66, 0, 4,
+    83, 96, 142, 9, 86, 214, 126, 106, 247, 233, 92, 125, 4, 128, 138, 105, 246, 162, 215, 71, 81, 58, 202, 121, 26,
+    105, 211, 55, 130, 45, 236, 143, 55, 16, 248, 75, 167, 160, 167, 106, 2, 152, 243, 44, 68, 66, 0, 167, 99, 92, 235,
+    215, 159, 239, 28, 106, 124, 171, 34, 145, 124, 174, 57, 92]);
+let priKeyArray =
+  new Uint8Array([48, 49, 2, 1, 1, 4, 32, 115, 56, 137, 35, 207, 0, 60, 191, 90, 61, 136, 105, 210, 16, 27, 4, 171, 57,
+    10, 61, 123, 40, 189, 28, 34, 207, 236, 22, 45, 223, 10, 189, 160, 10, 6, 8, 42, 134, 72, 206, 61, 3, 1, 7]);
+let pubKeyBlob: cryptoFramework.DataBlob = { data: pubKeyArray }; // Binary data of the public key.
+let priKeyBlob: cryptoFramework.DataBlob = { data: priKeyArray }; // Binary data of the private key.
+let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
+asyKeyGenerator.convertKey(pubKeyBlob, priKeyBlob, (err, keyPair) => {
+  if (err) {
+    console.error('convertKey result: fail.');
+    return;
+  }
+  console.info('convertKey result: success.');
+});
+```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let pubKeyArray =
+  new Uint8Array([48, 89, 48, 19, 6, 7, 42, 134, 72, 206, 61, 2, 1, 6, 8, 42, 134, 72, 206, 61, 3, 1, 7, 3, 66, 0, 4,
+    83, 96, 142, 9, 86, 214, 126, 106, 247, 233, 92, 125, 4, 128, 138, 105, 246, 162, 215, 71, 81, 58, 202, 121, 26,
+    105, 211, 55, 130, 45, 236, 143, 55, 16, 248, 75, 167, 160, 167, 106, 2, 152, 243, 44, 68, 66, 0, 167, 99, 92, 235,
+    215, 159, 239, 28, 106, 124, 171, 34, 145, 124, 174, 57, 92]);
+let priKeyArray =
+  new Uint8Array([48, 49, 2, 1, 1, 4, 32, 115, 56, 137, 35, 207, 0, 60, 191, 90, 61, 136, 105, 210, 16, 27, 4, 171, 57,
+    10, 61, 123, 40, 189, 28, 34, 207, 236, 22, 45, 223, 10, 189, 160, 10, 6, 8, 42, 134, 72, 206, 61, 3, 1, 7]);
+let pubKeyBlob: cryptoFramework.DataBlob = { data: pubKeyArray }; // Binary data of the public key.
+let priKeyBlob: cryptoFramework.DataBlob = { data: priKeyArray }; // Binary data of the private key.
+let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
+let keyGenPromise = asyKeyGenerator.convertKey(pubKeyBlob, priKeyBlob);
+keyGenPromise.then(keyPair => {
+  console.info('convertKey result: success.');
+}).catch((error: BusinessError) => {
+  console.error(`convertKey failed, errCode: ${error.code}, errMsg: ${error.message}`);
+});
 ```
 
 ## convertKey
@@ -120,30 +191,7 @@ Converts specified data into a symmetric key. This API uses a promise to return 
 
 **Examples**
 
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function genKeyMaterialBlob(): cryptoFramework.DataBlob {
-  let arr = [
-    0xba, 0x3d, 0xc2, 0x71, 0x21, 0x1e, 0x30, 0x56,
-    0xad, 0x47, 0xfc, 0x5a, 0x46, 0x39, 0xee, 0x7c,
-    0xba, 0x3b, 0xc2, 0x71, 0xab, 0xa0, 0x30, 0x72]; // keyLen = 192 (24 bytes)
-  let keyMaterial = new Uint8Array(arr);
-  return { data: keyMaterial };
-}
-
-function testConvertKey() {
-  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
-  let keyMaterialBlob = genKeyMaterialBlob();
-  symKeyGenerator.convertKey(keyMaterialBlob)
-    .then(symKey => {
-      console.info('Convert symKey result: success, algName: ' + symKey.algName);
-    }).catch((error: BusinessError) => {
-      console.error(`Convert symKey failed, ${error.code}, ${error.message}`);
-    });
-}
-```
+See [convertKey](#convertkey)
 
 ## convertKeySync
 
@@ -210,6 +258,32 @@ function testConvertKeySync() {
 }
 ```
 
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+let pubKeyArray =
+  new Uint8Array([48, 89, 48, 19, 6, 7, 42, 134, 72, 206, 61, 2, 1, 6, 8, 42, 134, 72, 206, 61, 3, 1, 7, 3, 66, 0, 4,
+    83, 96, 142, 9, 86, 214, 126, 106, 247, 233, 92, 125, 4, 128, 138, 105, 246, 162, 215, 71, 81, 58, 202, 121, 26,
+    105, 211, 55, 130, 45, 236, 143, 55, 16, 248, 75, 167, 160, 167, 106, 2, 152, 243, 44, 68, 66, 0, 167, 99, 92, 235,
+    215, 159, 239, 28, 106, 124, 171, 34, 145, 124, 174, 57, 92]);
+let priKeyArray =
+  new Uint8Array([48, 49, 2, 1, 1, 4, 32, 115, 56, 137, 35, 207, 0, 60, 191, 90, 61, 136, 105, 210, 16, 27, 4, 171, 57,
+    10, 61, 123, 40, 189, 28, 34, 207, 236, 22, 45, 223, 10, 189, 160, 10, 6, 8, 42, 134, 72, 206, 61, 3, 1, 7]);
+let pubKeyBlob: cryptoFramework.DataBlob = { data: pubKeyArray }; // Binary data of the public key.
+let priKeyBlob: cryptoFramework.DataBlob = { data: priKeyArray }; // Binary data of the private key.
+let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
+try {
+  let keyPairData = asyKeyGenerator.convertKeySync(pubKeyBlob, priKeyBlob);
+  if (keyPairData != null) {
+    console.info('[Sync]: key pair result: success.');
+  } else {
+    console.error('[Sync]: convert key pair result: fail.');
+  }
+} catch (e) {
+  console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
+}
+```
+
 ## generateSymKey
 
 ```TypeScript
@@ -240,7 +314,7 @@ Generates a random key using this symmetric key generator. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the symmetric key obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the symmetric key obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -258,6 +332,19 @@ let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
   symKeyGenerator.generateSymKey((err, symKey) => {
     console.info('Generate symKey result: success, algName: ' + symKey.algName);
   });
+```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  symKeyGenerator.generateSymKey()
+    .then(symKey => {
+      console.info('Generate symKey result: success, algName: ' + symKey.algName);
+    }).catch((error: BusinessError) => {
+      console.error(`Generate symKey failed, ${error.code}, ${error.message}`);
+    });
 ```
 
 ## generateSymKey
@@ -293,18 +380,7 @@ Generates a random key using this symmetric key generator. This API uses a promi
 
 **Examples**
 
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
-  symKeyGenerator.generateSymKey()
-    .then(symKey => {
-      console.info('Generate symKey result: success, algName: ' + symKey.algName);
-    }).catch((error: BusinessError) => {
-      console.error(`Generate symKey failed, ${error.code}, ${error.message}`);
-    });
-```
+See [generateSymKey](#generatesymkey)
 
 ## generateSymKeySync
 

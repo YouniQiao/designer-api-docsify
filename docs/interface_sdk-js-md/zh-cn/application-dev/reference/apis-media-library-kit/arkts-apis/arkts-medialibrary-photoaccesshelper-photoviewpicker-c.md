@@ -60,6 +60,72 @@ select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>
 | 13900042 | Unknown error |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scene parameters validate failed, possible causes: <br>1. An illegal enumeration value was passed to PhotoSelectOptions.globalMovingPhotoState. Only MOVING_PHOTO_ENABLED and MOVING_PHOTO_DISABLED are supported for configuration; <br>2. An illegal enumeration value was passed to PhotoSelectOptions.assetCompatibleAbility.<br>**适用版本：** 12+ |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example01(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    let photoSelectOptions = new photoAccessHelper.PhotoSelectOptions();
+    photoSelectOptions.MIMEType = photoAccessHelper.PhotoViewMIMETypes.IMAGE_TYPE;
+    photoSelectOptions.maxSelectNumber = 5;
+    let photoPicker = new photoAccessHelper.PhotoViewPicker();
+    photoPicker.select(photoSelectOptions).then((photoSelectResult: photoAccessHelper.PhotoSelectResult) => {
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    }).catch((err: BusinessError) => {
+      console.error(`PhotoViewPicker.select failed with err: ${err.code}, ${err.message}`);
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example02(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    let photoSelectOptions = new photoAccessHelper.PhotoSelectOptions();
+    photoSelectOptions.MIMEType = photoAccessHelper.PhotoViewMIMETypes.IMAGE_TYPE;
+    photoSelectOptions.maxSelectNumber = 5;
+    let photoPicker = new photoAccessHelper.PhotoViewPicker();
+    photoPicker.select(photoSelectOptions, (err: BusinessError, photoSelectResult: photoAccessHelper.PhotoSelectResult) => {
+      if (err) {
+        console.error(`PhotoViewPicker.select failed with err: ${err.code}, ${err.message}`);
+        return;
+      }
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example03(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    let photoPicker = new photoAccessHelper.PhotoViewPicker();
+    photoPicker.select((err: BusinessError, photoSelectResult: photoAccessHelper.PhotoSelectResult) => {
+      if (err) {
+        console.error(`PhotoViewPicker.select failed with err: ${err.code}, ${err.message}`);
+        return;
+      }
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err: ${err.code}, ${err.message}`);
+  }
+}
+```
+
 ## select
 
 ```TypeScript
@@ -97,6 +163,10 @@ select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): 
 | 13900042 | Unknown error |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scene parameters validate failed, possible causes: <br>1. An illegal enumeration value was passed to PhotoSelectOptions.globalMovingPhotoState. Only MOVING_PHOTO_ENABLED and MOVING_PHOTO_DISABLED are supported for configuration;<br>**适用版本：** 12+ |
 
+**示例**
+
+参见 [select](#select)
+
 ## select
 
 ```TypeScript
@@ -131,4 +201,8 @@ select(callback: AsyncCallback<PhotoSelectResult>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 13900042 | Unknown error |
+
+**示例**
+
+参见 [select](#select)
 

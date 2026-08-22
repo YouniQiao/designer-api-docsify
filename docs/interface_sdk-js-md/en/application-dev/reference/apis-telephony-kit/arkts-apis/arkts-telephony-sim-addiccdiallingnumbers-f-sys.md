@@ -31,7 +31,7 @@ Add dialing number information to SIM card.
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 | type | [ContactType](arkts-telephony-sim-contacttype-e-sys.md) | Yes | Indicates contact type. |
 | diallingNumbers | [DiallingNumbersInfo](arkts-telephony-sim-diallingnumbersinfo-i-sys.md) | Yes | Indicates dialing number information. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of addIccDiallingNumbers. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of addIccDiallingNumbers. |
 
 **Error codes:**
 
@@ -60,6 +60,21 @@ let diallingNumbersInfo: sim.DiallingNumbersInfo = {
 };
 sim.addIccDiallingNumbers(0, sim.ContactType.GENERAL_CONTACT, diallingNumbersInfo, (err: BusinessError) => {
     console.info(`callback: err->${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+let diallingNumbersInfo: sim.DiallingNumbersInfo = {
+    alphaTag: "alpha",
+    number: "138xxxxxxxx"
+};
+sim.addIccDiallingNumbers(0, sim.ContactType.GENERAL_CONTACT, diallingNumbersInfo).then(() => {
+    console.info(`addIccDiallingNumbers success.`);
+}).catch((err: BusinessError) => {
+    console.error(`addIccDiallingNumbers failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -112,18 +127,5 @@ Add dialing number information to SIM card.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let diallingNumbersInfo: sim.DiallingNumbersInfo = {
-    alphaTag: "alpha",
-    number: "138xxxxxxxx"
-};
-sim.addIccDiallingNumbers(0, sim.ContactType.GENERAL_CONTACT, diallingNumbersInfo).then(() => {
-    console.info(`addIccDiallingNumbers success.`);
-}).catch((err: BusinessError) => {
-    console.error(`addIccDiallingNumbers failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [addIccDiallingNumbers](#addiccdiallingnumbers)
 

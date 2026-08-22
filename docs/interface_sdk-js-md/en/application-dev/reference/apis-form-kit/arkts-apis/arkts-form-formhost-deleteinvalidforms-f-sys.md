@@ -29,7 +29,7 @@ Deletes invalid widgets from the list. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | Yes | List of valid widget IDs. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the invalid widgets are deleted, **error** is undefined and **data** is the number of widgets deleted; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the invalid widgets are deleted, **error** is undefined and **data** is the number of widgets deleted; otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -41,6 +41,40 @@ Deletes invalid widgets from the list. This API uses an asynchronous callback to
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+
+**Examples**
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+
+try {
+  let formIds: string[] = new Array('12400633174999288', '12400633174999289');
+  formHost.deleteInvalidForms(formIds, (error: BusinessError, data: number) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      console.info(`formHost deleteInvalidForms, data: ${data}`);
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+
+try {
+  let formIds: string[] = new Array('12400633174999288', '12400633174999289');
+  formHost.deleteInvalidForms(formIds).then((data: number) => {
+    console.info(`formHost deleteInvalidForms, data: ${data}`);
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
 
 
 ## deleteInvalidForms
@@ -83,4 +117,8 @@ Deletes invalid widgets from the list. This API uses a promise to return the res
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+
+**Examples**
+
+See [deleteInvalidForms](#deleteinvalidforms)
 

@@ -84,6 +84,39 @@ let groupName: string = 'GroupName';
 notificationManager.removeGroupByBundle(bundleOption, groupName, removeGroupByBundleCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleOption: notificationManager.BundleOption = { bundle: 'Bundle' };
+let groupName: string = 'GroupName';
+
+notificationManager.removeGroupByBundle(bundleOption, groupName).then(() => {
+    console.info('removeGroupByBundle success');
+}).catch((err: BusinessError) => {
+    console.error(`removeGroupByBundle failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 需根据实际情况进行替换
+let bundleOption: notificationManager.BundleOption = { bundle: 'bundleName1' };
+// 需根据实际情况进行替换
+let groupName: string = 'GroupName';
+
+notificationManager.removeGroupByBundle(bundleOption, groupName).then(() => {
+    console.info('removeGroupByBundle success');
+}).catch((err: Error): void => {
+    let error: BusinessError = err as BusinessError;
+    console.error(`removeGroupByBundle failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## removeGroupByBundle
 
@@ -130,36 +163,5 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string): Promise<v
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleOption: notificationManager.BundleOption = { bundle: 'Bundle' };
-let groupName: string = 'GroupName';
-
-notificationManager.removeGroupByBundle(bundleOption, groupName).then(() => {
-    console.info('removeGroupByBundle success');
-}).catch((err: BusinessError) => {
-    console.error(`removeGroupByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 需根据实际情况进行替换
-let bundleOption: notificationManager.BundleOption = { bundle: 'bundleName1' };
-// 需根据实际情况进行替换
-let groupName: string = 'GroupName';
-
-notificationManager.removeGroupByBundle(bundleOption, groupName).then(() => {
-    console.info('removeGroupByBundle success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`removeGroupByBundle failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [removeGroupByBundle](#removegroupbybundle)
 

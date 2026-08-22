@@ -37,6 +37,50 @@ function addSlots(slots: Array<NotificationSlot>, callback: AsyncCallback<void>)
 | slots | Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt; | 是 | 要创建的通知通道对象数组。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示被指定的回调方法。 |
 
+**示例**
+
+```TypeScript
+import NotificationManager from '@ohos.notificationManager';
+import Base from '@ohos.base';
+
+// addSlots回调
+let addSlotsCallBack = (err: Base.BusinessError) => {
+  if (err) {
+    console.error("addSlots failed " + JSON.stringify(err));
+  } else {
+    console.info("addSlots success");
+  }
+}
+// 通知slot对象
+let notificationSlot: NotificationManager.NotificationSlot = {
+  type: Notification.SlotType.SOCIAL_COMMUNICATION
+};
+// 通知slot array 对象
+let notificationSlotArray: NotificationManager.NotificationSlot[] = new Array();
+notificationSlotArray[0] = notificationSlot;
+
+Notification.addSlots(notificationSlotArray, addSlotsCallBack);
+```
+
+```TypeScript
+import NotificationManager from '@ohos.notificationManager';
+import Base from '@ohos.base';
+
+// 通知slot对象
+let notificationSlot: NotificationManager.NotificationSlot = {
+  type: Notification.SlotType.SOCIAL_COMMUNICATION
+};
+// 通知slot array 对象
+let notificationSlotArray: NotificationManager.NotificationSlot[] = new Array();
+notificationSlotArray[0] = notificationSlot;
+
+Notification.addSlots(notificationSlotArray).then(() => {
+  console.info("addSlots success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`addSlot failed, code is ${err}`);
+});
+```
+
 
 ## addSlots
 
@@ -71,4 +115,8 @@ function addSlots(slots: Array<NotificationSlot>): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [addSlots](#addslots)
 

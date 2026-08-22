@@ -29,7 +29,7 @@ Obtains the quick fix information of the application. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ApplicationQuickFixInfo](arkts-ability-quickfixmanager-applicationquickfixinfo-i-sys.md)&gt; | Yes | Callback used to return the quick fix information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ApplicationQuickFixInfo](arkts-ability-quickfixmanager-applicationquickfixinfo-i-sys.md)&gt; | Yes | Callback used to return the quick fix information. |
 
 **Error codes:**
 
@@ -55,6 +55,22 @@ try {
     } else {
       console.info(`getApplicationQuickFixInfo success: ${data}`);
     }
+  });
+} catch (paramError) {
+  console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+}
+```
+
+```TypeScript
+import { quickFixManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let bundleName = 'bundleName';
+  quickFixManager.getApplicationQuickFixInfo(bundleName).then((data) => {
+    console.info(`getApplicationQuickFixInfo success: ${data}`);
+  }).catch((error: BusinessError) => {
+    console.error(`getApplicationQuickFixInfo err: ${error}`);
   });
 } catch (paramError) {
   console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
@@ -104,19 +120,5 @@ Obtains the quick fix information of the application. This API uses a promise to
 
 **Examples**
 
-```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let bundleName = 'bundleName';
-  quickFixManager.getApplicationQuickFixInfo(bundleName).then((data) => {
-    console.info(`getApplicationQuickFixInfo success: ${data}`);
-  }).catch((error: BusinessError) => {
-    console.error(`getApplicationQuickFixInfo err: ${error}`);
-  });
-} catch (paramError) {
-  console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-}
-```
+See [getApplicationQuickFixInfo](#getapplicationquickfixinfo)
 

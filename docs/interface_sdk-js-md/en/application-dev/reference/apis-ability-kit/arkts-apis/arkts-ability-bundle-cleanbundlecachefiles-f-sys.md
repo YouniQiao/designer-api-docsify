@@ -48,7 +48,36 @@ Clears the cache data of an application. This API uses an asynchronous callback 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleName: string = "com.example.myapplication";
+
+bundle.cleanBundleCacheFiles(bundleName, err => {
+  if (err) {
+    console.error('cleanBundleCacheFiles failed.');
+  } else {
+    console.info('cleanBundleCacheFiles successfully.');
+  }
+});
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleName: string = "com.example.myapplication";
+
+bundle.cleanBundleCacheFiles(bundleName).then(() => {
+  console.info('cleanBundleCacheFiles successfully.');
+}).catch((error: BusinessError) => {
+  console.error('cleanBundleCacheFiles failed.');
+});
+```
 
 
 ## cleanBundleCacheFiles
@@ -84,4 +113,8 @@ Clears the cache data of an application. This API uses a promise to return the r
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+See [cleanBundleCacheFiles](#cleanbundlecachefiles)
 

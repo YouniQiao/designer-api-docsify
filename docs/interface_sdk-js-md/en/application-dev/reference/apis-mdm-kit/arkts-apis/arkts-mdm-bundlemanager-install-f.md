@@ -35,7 +35,7 @@ This API can be used to install only applications of the **enterprise_mdm** (MDM
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | hapFilePaths | Array&lt;string&gt; | Yes | Applications to install. The app bundle must be stored in the path that the app has the permission to access, such as the app sandbox path. For details about the mapping between the app sandbox path and the actual physical path, see [Mappings Between App Sandbox Paths and Physical Paths](../../../file-management/app-sandbox-directory.md#mappings-between-application-sandbox-paths-and-physical-paths). |
 | installParam | InstallParam | No | Application installation parameters. |
 
@@ -104,6 +104,52 @@ bundleManager.install(wantTemp, hapFilePaths, installParam).then(() => {
   console.info('Succeeded in installing bundles.');
 }).catch((err: BusinessError) => {
   console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
+
+bundleManager.install(wantTemp, hapFilePaths, (err) => {
+  if (err) {
+    console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in installing bundles');
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
+let installParam: bundleManager.InstallParam = {
+  userId: 100,
+  installFlag: 1,
+};
+
+bundleManager.install(wantTemp, hapFilePaths, installParam, (err) => {
+  if (err) {
+    console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in installing bundles');
 });
 ```
 

@@ -25,7 +25,7 @@ Checks whether your application (the caller) has been granted the operator permi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Indicates the callback of hasOperatorPrivileges. Returns {@code true} if your application has been granted the operator permissions; returns {@code false} otherwise. If no SIM card is inserted or the SIM card is deactivated will be return {@code false}. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback of hasOperatorPrivileges. Returns {@code true} if your application has been granted the operator permissions; returns {@code false} otherwise. If no SIM card is inserted or the SIM card is deactivated will be return {@code false}. |
 
 **Error codes:**
 
@@ -45,6 +45,17 @@ import { sim } from '@kit.TelephonyKit';
 
 sim.hasOperatorPrivileges(0, (err: BusinessError, data: boolean) => {
     console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.hasOperatorPrivileges(0).then((data: boolean) => {
+    console.info(`hasOperatorPrivileges success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`hasOperatorPrivileges failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -87,14 +98,5 @@ Checks whether your application (the caller) has been granted the operator permi
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.hasOperatorPrivileges(0).then((data: boolean) => {
-    console.info(`hasOperatorPrivileges success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`hasOperatorPrivileges failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [hasOperatorPrivileges](#hasoperatorprivileges)
 

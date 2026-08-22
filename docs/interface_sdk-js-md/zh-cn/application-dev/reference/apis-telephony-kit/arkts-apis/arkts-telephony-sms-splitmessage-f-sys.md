@@ -55,6 +55,19 @@ sms.splitMessage(content, (err: BusinessError, data: string[]) => {
 });
 ```
 
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let content: string = "long message";
+let promise = sms.splitMessage(content);
+promise.then((data: string[]) => {
+    console.info(`splitMessage success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`splitMessage failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## splitMessage
 
@@ -100,16 +113,5 @@ function splitMessage(content: string): Promise<Array<string>>
 
 **示例**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let content: string = "long message";
-let promise = sms.splitMessage(content);
-promise.then((data: string[]) => {
-    console.info(`splitMessage success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`splitMessage failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [splitMessage](#splitmessage)
 

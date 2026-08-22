@@ -55,6 +55,36 @@ getAnalysisData(analysisType: photoAccessHelper.AnalysisType): Promise<string>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
+**示例**
+
+phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-file-sendablephotoaccesshelper.md)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { common } from '@kit.AbilityKit';
+
+async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
+  try {
+    console.info('getAnalysisDataDemo')
+    let fetchOptions: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: new dataSharePredicates.DataSharePredicates()
+    }
+    let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> =
+      await phAccessHelper.getAssets(fetchOptions);
+    let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    if (photoAsset != undefined) {
+      let analysisData: string = await photoAsset.getAnalysisData(
+        photoAccessHelper.AnalysisType.ANALYSIS_OCR);
+      console.info('get ocr result: ' + JSON.stringify(analysisData));
+    }
+    fetchResult.close();
+  } catch (err) {
+    console.error(`getAnalysisDataDemofailed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
 ## requestSource
 
 ```TypeScript

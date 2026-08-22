@@ -55,6 +55,36 @@ static createBlurMaskFilter(blurType: BlurType, sigma: number): MaskFilter
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let maskFilter = drawing.MaskFilter.createBlurMaskFilter(drawing.BlurType.OUTER, 10.0);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let maskFilter = drawing.MaskFilter.createBlurMaskFilter(drawing.BlurType.OUTER, 10.0);
+  }
+}
+```
+
 ## createBlurMaskFilter
 
 ```TypeScript
@@ -87,4 +117,8 @@ static createBlurMaskFilter(blurType: BlurType, sigma: double): MaskFilter | und
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+参见 [createBlurMaskFilter](#createblurmaskfilter)
 

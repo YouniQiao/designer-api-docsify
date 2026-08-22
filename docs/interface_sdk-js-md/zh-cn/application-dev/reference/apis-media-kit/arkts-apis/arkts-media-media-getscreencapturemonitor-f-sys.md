@@ -26,7 +26,7 @@ Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return t
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[ScreenCaptureMonitor](arkts-media-multimediamedia-screencapturemonitor-i-sys.md)&gt; | Promise used to return the result. The instance can be used to query and monitor the status of the system screen recorder. <br>If the operation is successful, a **ScreenCaptureMonitor** instance is returned; otherwise, **null** is returned. |
+| Promise&lt;[ScreenCaptureMonitor](arkts-media-multimedia-media-screencapturemonitor-i-sys.md)&gt; | Promise used to return the result. The instance can be used to query and monitor the status of the system screen recorder. <br>If the operation is successful, a **ScreenCaptureMonitor** instance is returned; otherwise, **null** is returned. |
 
 **错误码：**
 
@@ -67,7 +67,7 @@ Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return t
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[ScreenCaptureMonitor](arkts-media-multimediamedia-screencapturemonitor-i-sys.md) \| undefined&gt; | Promise used to return the result. The instance can be used to query and monitor the status of the system screen recorder. <br>If the operation is successful, a **ScreenCaptureMonitor** instance is returned; otherwise, **null** is returned. |
+| Promise&lt;[ScreenCaptureMonitor](arkts-media-multimedia-media-screencapturemonitor-i-sys.md) \| undefined&gt; | Promise used to return the result. The instance can be used to query and monitor the status of the system screen recorder. <br>If the operation is successful, a **ScreenCaptureMonitor** instance is returned; otherwise, **null** is returned. |
 
 **错误码：**
 
@@ -75,4 +75,8 @@ Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return t
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 | [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+
+**示例**
+
+参见 [getScreenCaptureMonitor](#getscreencapturemonitor)
 

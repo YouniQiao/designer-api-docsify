@@ -30,7 +30,7 @@ Cancels the reminder with the specified ID. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reminderId | number | Yes | ID of the reminder. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -39,6 +39,12 @@ import { BusinessError } from '@ohos.base';
 
 reminderAgent.cancelReminder(1, (err: BusinessError, data: void) => {
   console.info("cancelReminder callback");
+});
+```
+
+```TypeScript
+reminderAgent.cancelReminder(1).then(() => {
+    console.info("cancelReminder promise");
 });
 ```
 
@@ -75,9 +81,5 @@ Cancels the reminder with the specified ID. This API uses a promise to return th
 
 **Examples**
 
-```TypeScript
-reminderAgent.cancelReminder(1).then(() => {
-    console.info("cancelReminder promise");
-});
-```
+See [cancelReminder](#cancelreminder)
 

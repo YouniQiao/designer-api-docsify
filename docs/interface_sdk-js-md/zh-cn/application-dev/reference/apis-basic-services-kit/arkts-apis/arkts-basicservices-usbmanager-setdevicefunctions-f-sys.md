@@ -48,6 +48,20 @@ function setDeviceFunctions(funcs: FunctionType): Promise<void>
 | [14400002](../errorcode-usb.md#14400002-hdc功能被禁用) | Permission denied. The HDC is disabled by the system. |
 | [14400006](../errorcode-usb.md#14400006-不支持的usb设备侧功能) | Unsupported operation. The function is not supported. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// 设置USB功能类型为HDC
+let funcs: int = usbManager.FunctionType.HDC;
+// 异步设置设备功能
+usbManager.setDeviceFunctions(funcs).then(() => {
+    console.info('usb setDeviceFunctions successfully.');
+}).catch((err : BusinessError) => {
+    console.error(`usb setDeviceFunctions failed. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## setDeviceFunctions
 
@@ -88,4 +102,8 @@ Sets the current USB function list in Device mode.
 | [14400002](../errorcode-usb.md#14400002-hdc功能被禁用) | Permission denied. The HDC is disabled by the system. |
 | [14400006](../errorcode-usb.md#14400006-不支持的usb设备侧功能) | Unsupported operation. The function is not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) |  |
+
+**示例**
+
+参见 [setDeviceFunctions](#setdevicefunctions)
 

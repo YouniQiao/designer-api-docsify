@@ -28,7 +28,7 @@ Removes missed call notifications. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -52,6 +52,16 @@ call.removeMissedIncomingCallNotification((err: BusinessError) => {
     } else {
         console.info(`removeMissedIncomingCallNotification success`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.removeMissedIncomingCallNotification().then(() => {
+    console.info(`removeMissedIncomingCallNotification success`);
+}).catch((err: BusinessError) => {
+    console.error(`removeMissedIncomingCallNotification failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -92,13 +102,5 @@ Removes missed call notifications. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.removeMissedIncomingCallNotification().then(() => {
-    console.info(`removeMissedIncomingCallNotification success`);
-}).catch((err: BusinessError) => {
-    console.error(`removeMissedIncomingCallNotification failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [removeMissedIncomingCallNotification](#removemissedincomingcallnotification)
 

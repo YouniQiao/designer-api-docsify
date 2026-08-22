@@ -29,7 +29,7 @@ Adds an array of notification slots. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slots | Array&lt;NotificationSlot&gt; | Yes | Notification slots to add. The number of elements in the array ranges from 0 to 5. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -65,6 +65,24 @@ let notificationSlotArray: notificationManager.NotificationSlot[] = new Array();
 notificationSlotArray[0] = notificationSlot;
 
 notificationManager.addSlots(notificationSlotArray, addSlotsCallBack);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// NotificationSlot object
+let notificationSlot: notificationManager.NotificationSlot = {
+    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
+};
+// NotificationSlotArray object
+let notificationSlotArray: notificationManager.NotificationSlot[] = new Array();
+notificationSlotArray[0] = notificationSlot;
+
+notificationManager.addSlots(notificationSlotArray).then(() => {
+    console.info("addSlots success");
+}).catch((err: BusinessError) => {
+    console.error(`addSlots failed, code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -112,21 +130,5 @@ Adds an array of notification slots. This API uses a promise to return the resul
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// NotificationSlot object
-let notificationSlot: notificationManager.NotificationSlot = {
-    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-};
-// NotificationSlotArray object
-let notificationSlotArray: notificationManager.NotificationSlot[] = new Array();
-notificationSlotArray[0] = notificationSlot;
-
-notificationManager.addSlots(notificationSlotArray).then(() => {
-    console.info("addSlots success");
-}).catch((err: BusinessError) => {
-    console.error(`addSlots failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [addSlots](#addslots)
 

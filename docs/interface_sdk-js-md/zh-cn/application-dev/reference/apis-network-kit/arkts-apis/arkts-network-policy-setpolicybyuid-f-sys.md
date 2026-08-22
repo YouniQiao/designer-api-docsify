@@ -53,6 +53,19 @@ policy.setPolicyByUid(11111, policy.NetUidPolicy.NET_POLICY_NONE, (error: Busine
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .setPolicyByUid(11111, policy.NetUidPolicy.NET_POLICY_NONE)
+  .then(() => {
+    console.info('setPolicyByUid success');
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
+
 
 ## setPolicyByUid
 
@@ -98,16 +111,5 @@ function setPolicyByUid(uid: int, policy: NetUidPolicy): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .setPolicyByUid(11111, policy.NetUidPolicy.NET_POLICY_NONE)
-  .then(() => {
-    console.info('setPolicyByUid success');
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+参见 [setPolicyByUid](#setpolicybyuid)
 

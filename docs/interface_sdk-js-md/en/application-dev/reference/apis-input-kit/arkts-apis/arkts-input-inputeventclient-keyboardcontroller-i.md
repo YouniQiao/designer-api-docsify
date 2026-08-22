@@ -38,7 +38,7 @@ Presses a key. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | [KeyCode](arkts-input-multimodalinputkeycode-keycode-e.md) | Yes | Key code of the key to be pressed. |
+| keyCode | [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md) | Yes | Key code of the key to be pressed. |
 
 **Return value:**
 
@@ -76,7 +76,7 @@ Releases a key. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | [KeyCode](arkts-input-multimodalinputkeycode-keycode-e.md) | Yes | Key code of the key to be released. |
+| keyCode | [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md) | Yes | Key code of the key to be released. |
 
 **Return value:**
 

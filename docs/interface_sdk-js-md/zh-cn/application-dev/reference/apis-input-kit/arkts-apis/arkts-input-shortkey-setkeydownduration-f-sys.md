@@ -38,6 +38,130 @@ function setKeyDownDuration(businessKey: string, delay: int, callback: AsyncCall
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**示例**
+
+ArkTS-Dyn示例:
+
+```TypeScript
+import { shortKey } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // 设置延迟拉起时间500ms
+            shortKey.setKeyDownDuration('businessId', 500, (error: BusinessError) => {
+              if (error) {
+                console.error(`Failed to set key down duration, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                return;
+              }
+              console.info(`Succeeded in setting key down duration.`);
+            });
+          } catch (error) {
+            console.error(`Failed to set key down duration, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        });
+    }
+  }
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { shortKey } from '@kit.InputKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // 设置延迟拉起时间500ms
+            shortKey.setKeyDownDuration("businessId", 500, (error: BusinessError<void> | null, data: undefined) => {
+              if (error) {
+                console.error(`Failed to set key down duration, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                return;
+              }
+              console.info(`Succeeded in setting key down duration.`);
+            });
+          } catch (error) {
+            console.error(`Failed to set key down duration, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { shortKey } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // 设置延迟拉起时间500ms
+            shortKey.setKeyDownDuration('businessId', 500).then(() => {
+              console.info(`Succeeded in setting key down duration.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to set key down duration, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to set key down duration, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { shortKey } from '@kit.InputKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // 设置延迟拉起时间500ms
+            shortKey.setKeyDownDuration("businessId", 500).then(() => {
+              console.info(`Succeeded in setting key down duration.`);
+            }).catch((error) => {
+              console.error(`Failed to set key down, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to set key down duration, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## setKeyDownDuration
 
@@ -74,4 +198,8 @@ function setKeyDownDuration(businessKey: string, delay: int): Promise<void>
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+参见 [setKeyDownDuration](#setkeydownduration)
 

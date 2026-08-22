@@ -1,6 +1,6 @@
 # PrepareTermination
 
-应用准备关闭时返回的动作，该类型为枚举。需要配合[AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md)的 [onPrepareTermination](arkts-ability-appabilityabilitystage-abilitystage-c.md#onpreparetermination)或者 [onPrepareTerminationAsync](arkts-ability-appabilityabilitystage-abilitystage-c.md#onprepareterminationasync)方法使用。
+应用准备关闭时返回的动作，该类型为枚举。需要配合[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)的 [onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onpreparetermination)或者 [onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync)方法使用。
 
 **起始版本：** 23
 
@@ -43,4 +43,17 @@ CANCEL = 1
 <!--Device-PrepareTermination-CANCEL = 1--><!--Device-PrepareTermination-CANCEL = 1-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, AbilityStage } from '@kit.AbilityKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  onPrepareTermination(): AbilityConstant.PrepareTermination {
+    console.info('MyAbilityStage.onPrepareTermination is called');
+    return AbilityConstant.PrepareTermination.CANCEL;
+  }
+}
+```
 

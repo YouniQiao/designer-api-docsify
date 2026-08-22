@@ -33,7 +33,7 @@ Obtains the total uplink traffic (in bytes) of the specified application from th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | int | Yes | Application UID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. If the application's real-time uplink traffic is successfully obtained, **error** is **undefined** and **stats** is the obtained application uplink traffic (in bytes). Otherwise, it is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. If the application's real-time uplink traffic is successfully obtained, **error** is **undefined** and **stats** is the obtained application uplink traffic (in bytes). Otherwise, it is an error object. |
 
 **Error codes:**
 
@@ -54,6 +54,14 @@ import { statistics } from '@kit.NetworkKit';
 
 statistics.getUidTxBytes(20010038, (error: BusinessError, stats: number) => {
   console.error(JSON.stringify(error));
+  console.info(JSON.stringify(stats));
+});
+```
+
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+statistics.getUidTxBytes(20010038).then((stats: number) => {
   console.info(JSON.stringify(stats));
 });
 ```
@@ -106,11 +114,5 @@ Obtains the total uplink traffic of the specified application from the last star
 
 **Examples**
 
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-statistics.getUidTxBytes(20010038).then((stats: number) => {
-  console.info(JSON.stringify(stats));
-});
-```
+See [getUidTxBytes](#getuidtxbytes)
 

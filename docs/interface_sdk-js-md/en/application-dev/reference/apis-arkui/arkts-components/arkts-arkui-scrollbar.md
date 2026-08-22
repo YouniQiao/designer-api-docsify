@@ -1,7 +1,7 @@
 # ScrollBar
 
 The **ScrollBar** component is designed to be used together with scrollable components such as ArcList, List, Grid, Scroll, and WaterFlow.
-> **NOTE** > > - This component is supported since API version 8. Updates will be marked with a superscript to indicate their > earliest API version. > > - If the size of the main axis direction is not set for **ScrollBar**, the **maxSize** value in the > [layout constraints](../../apis-default/arkts-apis/arkts-framenode-layoutconstraint-i.md) of the parent component is used. If the parent component of > the **ScrollBar** component contains a scrollable component, such as ArcList, > List, Grid, Scroll, or WaterFlow, you are advised > to set the size in the main axis direction of the **ScrollBar**; otherwise, the size in the main axis direction of > **ScrollBar** may become infinite.
+> **NOTE** > > - This component is supported since API version 8. Updates will be marked with a superscript to indicate their > earliest API version. > > - If the size of the main axis direction is not set for **ScrollBar**, the **maxSize** value in the > [layout constraints](../arkts-apis/arkts-arkui-framenode-layoutconstraint-i.md) of the parent component is used. If the parent component of > the **ScrollBar** component contains a scrollable component, such as ArcList, > List, Grid, Scroll, or WaterFlow, you are advised > to set the size in the main axis direction of the **ScrollBar**; otherwise, the size in the main axis direction of > **ScrollBar** may become infinite.
 
 ## Child Components
 

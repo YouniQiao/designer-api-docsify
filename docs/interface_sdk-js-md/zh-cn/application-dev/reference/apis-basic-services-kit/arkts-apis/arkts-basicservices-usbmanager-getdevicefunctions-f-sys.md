@@ -39,6 +39,13 @@ function getDeviceFunctions(): FunctionType
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Normal application do not have permission to use system api. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
+**示例**
+
+```TypeScript
+// 获取当前USB功能的数字掩码
+let ret: int = usbManager.getDeviceFunctions();
+```
+
 
 ## getDeviceFunctions
 
@@ -72,4 +79,8 @@ Obtains the numeric mask combination for the current USB function list in Device
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) |  |
 | [14400004](../errorcode-usb.md#14400004-服务异常) |  |
+
+**示例**
+
+参见 [getDeviceFunctions](#getdevicefunctions)
 

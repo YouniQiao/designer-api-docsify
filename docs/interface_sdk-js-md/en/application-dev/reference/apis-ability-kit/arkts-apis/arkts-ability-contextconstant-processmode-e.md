@@ -1,6 +1,6 @@
 # ProcessMode
 
-Enumerates the process modes of the UIAbility after it is started. As a property of [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md), **ProcessMode** takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability) and is used to specify the process mode of the target UIAbility. This value takes effect only on 2-in-1 devices and tablets. If it is used on other devices, error code 801 is returned.
+Enumerates the process modes of the UIAbility after it is started. As a property of [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md), **ProcessMode** takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability) and is used to specify the process mode of the target UIAbility. This value takes effect only on 2-in-1 devices and tablets. If it is used on other devices, error code 801 is returned.
 
 **Since:** 23
 
@@ -67,4 +67,42 @@ In this mode, the target UIAbility and caller must be in the same application, a
 <!--Device-ProcessMode-ATTACH_TO_STATUS_BAR_ITEM = 3--><!--Device-ProcessMode-ATTACH_TO_STATUS_BAR_ITEM = 3-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+import { UIAbility, Want, StartOptions, contextConstant } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'MainAbility2'
+    };
+    let options: StartOptions = {
+      processMode: contextConstant.ProcessMode.NEW_PROCESS_ATTACH_TO_STATUS_BAR_ITEM,
+      startupVisibility: contextConstant.StartupVisibility.STARTUP_HIDE
+    };
+
+    try {
+      this.context.startAbility(want, options, (err: BusinessError) => {
+        if (err.code) {
+          // Process service logic errors.
+          console.error(`startAbility failed, code is ${err.code}, message is ${err.message}`);
+          return;
+        }
+        // Carry out normal service processing.
+        console.info('startAbility succeed');
+      });
+    } catch (err) {
+      // Process input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startAbility failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
 

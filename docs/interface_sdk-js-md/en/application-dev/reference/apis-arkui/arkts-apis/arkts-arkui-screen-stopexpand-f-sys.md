@@ -30,7 +30,7 @@ Stops extended mode. This API uses an asynchronous callback to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | expandScreen | Array&lt;long&gt; | Yes | IDs of the extended screens. Each ID is an integer. The size of the **expandScreen** array cannot exceed 1000. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If extended mode is stopped, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If extended mode is stopped, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -53,6 +53,17 @@ screen.stopExpand(expandScreenIds, (err: BusinessError) => {
     return;
   }
   console.info('Succeeded in stopping expand screens.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let expandScreenIds: Array<number> = [1, 2, 3];
+screen.stopExpand(expandScreenIds).then(() => {
+  console.info('Succeeded in stopping expand screens.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to stop expand screens. Code:${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -97,14 +108,5 @@ Stops extended mode. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let expandScreenIds: Array<number> = [1, 2, 3];
-screen.stopExpand(expandScreenIds).then(() => {
-  console.info('Succeeded in stopping expand screens.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to stop expand screens. Code:${err.code}, message is ${err.message}`);
-});
-```
+See [stopExpand](#stopexpand)
 

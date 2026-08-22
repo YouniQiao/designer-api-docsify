@@ -48,6 +48,12 @@ Sets the gesture event consumption result.
 | --- | --- | --- | --- |
 | result | boolean | 是 | Whether to consume the gesture event. {@code true} Indicates the consumption of the gesture event. {@code false} Indicates the non-consumption of the gesture event. Default value: true. |
 
+**示例**
+
+触摸事件示例代码参考[onNativeEmbedGestureEvent](./arkts-basic-components-web-events.md#onnativeembedgestureevent11)。
+
+触摸事件示例代码参考[onNativeEmbedGestureEvent](./arkts-basic-components-web-events.md#onnativeembedgestureevent11)。
+
 ## setGestureEventResult
 
 ```TypeScript
@@ -71,6 +77,10 @@ Sets the gesture event consumption result.
 | result | boolean | 是 | Whether to consume the gesture event. {@code true} Indicates the consumption of the gesture event. {@code false} Indicates the non-consumption of the gesture event. Default value: true. |
 | stopPropagation | boolean | 是 | Whether to stop propagation. This parameter is valid only when result is set to true. {@code true} Indicates stops the propagation of events farther along. {@code false} Indicates the propagation of events farther along. Default value: true. |
 
+**示例**
+
+参见 [setGestureEventResult](#setgestureeventresult)
+
 ## setMouseEventResult
 
 ```TypeScript
@@ -93,4 +103,8 @@ Sets the mouse event consumption result.
 | --- | --- | --- | --- |
 | result | boolean | 是 | Whether to consume the mouse event. {@code true} Indicates the consumption of the mouse event. {@code false} Indicates the non-consumption of the mouse event. Default value: true. |
 | stopPropagation | boolean | 否 | Whether to stop propagation. This parameter is valid only when result is set to true. {@code true} Indicates stops the propagation of events farther along. {@code false} Indicates the propagation of events farther along. Default value: true. |
+
+**示例**
+
+鼠标事件示例代码参考[onNativeEmbedMouseEvent](./arkts-basic-components-web-events.md#onnativeembedmouseevent20)。
 

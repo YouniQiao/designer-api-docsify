@@ -18,6 +18,6 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ArcScrollBarAttribute](arkts-arkuiarcscrollbar-arcscrollbarattribute-i.md) | 弧形滚动条属性。 |
-| [ArcScrollBarOptions](arkts-arkuiarcscrollbar-arcscrollbaroptions-i.md) | ArcScrollBar的构造函数参数。 |
+| [ArcScrollBarAttribute](arkts-arkui-arcscrollbar-arcscrollbarattribute-i.md) | 弧形滚动条属性。 |
+| [ArcScrollBarOptions](arkts-arkui-arcscrollbar-arcscrollbaroptions-i.md) | ArcScrollBar的构造函数参数。 |
 

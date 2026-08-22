@@ -59,122 +59,6 @@ try {
 }
 ```
 
-## offConnectionAccepted
-
-```TypeScript
-offConnectionAccepted(callback?: Callback<Connection>): void
-```
-
-Unregisters the callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Server-offConnectionAccepted(callback?: Callback<Connection>): void--><!--Device-Server-offConnectionAccepted(callback?: Callback<Connection>): void-End-->
-
-**系统能力：** SystemCapability.DistributedSched.AppCollaboration
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 否 | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md) object. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [32390206](../errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
-
-**示例**
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let name: string = "demo";
-  hilog.info(0x0000, TAG, 'start server name = ' + name);
-  // 使用服务名构造Server
-  let server: linkEnhance.Server = linkEnhance.createServer(name);
-  server.onConnectionAccepted((connection: linkEnhance.Connection): void => {
-    hilog.info(0x0000, TAG, 'accept new connection');
-  });
-  // 取消订阅服务接收
-  server.offConnectionAccepted((connection: linkEnhance.Connection): void => {
-    hilog.info(0x0000, TAG, 'accept new connection');
-  });
-} catch (err) {
-  hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
-
-## offServerStopped
-
-```TypeScript
-offServerStopped(callback?: Callback<int>): void
-```
-
-Unregisters the callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Server-offServerStopped(callback?: Callback<int>): void--><!--Device-Server-offServerStopped(callback?: Callback<int>): void-End-->
-
-**系统能力：** SystemCapability.DistributedSched.AppCollaboration
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | Registered callback, where **int** indicates the returned error code. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [32390206](../errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
-
-**示例**
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let name: string = "demo";
-  hilog.info(0x0000, TAG, 'start server name = ' + name);
-  // 使用服务名构造Server
-  let server: linkEnhance.Server = linkEnhance.createServer(name);
-  server.onServerStopped((reason: int): void => {
-    hilog.info(0x0000, TAG, 'serverStopped, reason= ' + reason);
-  });
-  // 取消订阅服务停止
-  server.offServerStopped((reason: int): void => {
-    hilog.info(0x0000, TAG, 'serverStopped, reason= ' + reason);
-  });
-} catch (err) {
-  hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
-
 ## off('connectionAccepted')
 
 ```TypeScript
@@ -293,13 +177,13 @@ try {
 }
 ```
 
-## onConnectionAccepted
+## offConnectionAccepted
 
 ```TypeScript
-onConnectionAccepted(callback: Callback<Connection>): void
+offConnectionAccepted(callback?: Callback<Connection>): void
 ```
 
-Registers a callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
+Unregisters the callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 23
 
@@ -307,7 +191,7 @@ Registers a callback listener for **connectionAccepted** events. This API uses a
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Server-onConnectionAccepted(callback: Callback<Connection>): void--><!--Device-Server-onConnectionAccepted(callback: Callback<Connection>): void-End-->
+<!--Device-Server-offConnectionAccepted(callback?: Callback<Connection>): void--><!--Device-Server-offConnectionAccepted(callback?: Callback<Connection>): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -315,7 +199,7 @@ Registers a callback listener for **connectionAccepted** events. This API uses a
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 是 | Callback used to listen for the server is connected event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 否 | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md) object. |
 
 **错误码：**
 
@@ -338,26 +222,26 @@ try {
   hilog.info(0x0000, TAG, 'start server name = ' + name);
   // 使用服务名构造Server
   let server: linkEnhance.Server = linkEnhance.createServer(name);
-
-  // 订阅服务接收事件
   server.onConnectionAccepted((connection: linkEnhance.Connection): void => {
-    hilog.info(0x0000, TAG, 'serverOnCallback = ' + JSON.stringify(connection));
+    hilog.info(0x0000, TAG, 'accept new connection');
   });
-  // 启动服务
-  server.start();
+  // 取消订阅服务接收
+  server.offConnectionAccepted((connection: linkEnhance.Connection): void => {
+    hilog.info(0x0000, TAG, 'accept new connection');
+  });
 } catch (err) {
   hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
   (err as BusinessError).message);
 }
 ```
 
-## onServerStopped
+## offServerStopped
 
 ```TypeScript
-onServerStopped(callback: Callback<int>): void
+offServerStopped(callback?: Callback<int>): void
 ```
 
-Registers a callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
+Unregisters the callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 23
 
@@ -365,7 +249,7 @@ Registers a callback listener for **serverStopped** events. This API uses an asy
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Server-onServerStopped(callback: Callback<int>): void--><!--Device-Server-onServerStopped(callback: Callback<int>): void-End-->
+<!--Device-Server-offServerStopped(callback?: Callback<int>): void--><!--Device-Server-offServerStopped(callback?: Callback<int>): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -373,7 +257,7 @@ Registers a callback listener for **serverStopped** events. This API uses an asy
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | Registered callback, where **int** indicates the returned error code. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | Registered callback, where **int** indicates the returned error code. |
 
 **错误码：**
 
@@ -396,13 +280,13 @@ try {
   hilog.info(0x0000, TAG, 'start server name = ' + name);
   // 使用服务名构造Server
   let server: linkEnhance.Server = linkEnhance.createServer(name);
-
-  // 订阅服务停止
   server.onServerStopped((reason: int): void => {
     hilog.info(0x0000, TAG, 'serverStopped, reason= ' + reason);
   });
-  // 启动服务
-  server.start();
+  // 取消订阅服务停止
+  server.offServerStopped((reason: int): void => {
+    hilog.info(0x0000, TAG, 'serverStopped, reason= ' + reason);
+  });
 } catch (err) {
   hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
   (err as BusinessError).message);
@@ -517,6 +401,122 @@ try {
 
   // 订阅服务停止
   server.on('serverStopped', (reason: number): void => {
+    hilog.info(0x0000, TAG, 'serverStopped, reason= ' + reason);
+  });
+  // 启动服务
+  server.start();
+} catch (err) {
+  hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
+
+## onConnectionAccepted
+
+```TypeScript
+onConnectionAccepted(callback: Callback<Connection>): void
+```
+
+Registers a callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Server-onConnectionAccepted(callback: Callback<Connection>): void--><!--Device-Server-onConnectionAccepted(callback: Callback<Connection>): void-End-->
+
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 是 | Callback used to listen for the server is connected event. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+
+**示例**
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let name: string = "demo";
+  hilog.info(0x0000, TAG, 'start server name = ' + name);
+  // 使用服务名构造Server
+  let server: linkEnhance.Server = linkEnhance.createServer(name);
+
+  // 订阅服务接收事件
+  server.onConnectionAccepted((connection: linkEnhance.Connection): void => {
+    hilog.info(0x0000, TAG, 'serverOnCallback = ' + JSON.stringify(connection));
+  });
+  // 启动服务
+  server.start();
+} catch (err) {
+  hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
+
+## onServerStopped
+
+```TypeScript
+onServerStopped(callback: Callback<int>): void
+```
+
+Registers a callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Server-onServerStopped(callback: Callback<int>): void--><!--Device-Server-onServerStopped(callback: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | Registered callback, where **int** indicates the returned error code. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+
+**示例**
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let name: string = "demo";
+  hilog.info(0x0000, TAG, 'start server name = ' + name);
+  // 使用服务名构造Server
+  let server: linkEnhance.Server = linkEnhance.createServer(name);
+
+  // 订阅服务停止
+  server.onServerStopped((reason: int): void => {
     hilog.info(0x0000, TAG, 'serverStopped, reason= ' + reason);
   });
   // 启动服务

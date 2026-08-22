@@ -552,6 +552,32 @@ function tagSessionDemo() {
 }
 ```
 
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
+// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
+
+function tagSessionDemo() {
+    // Connect the tag if it has not been connected.
+    if (!tag.getIsoDep(tagInfo).isTagConnected()) {
+        if (!tag.getIsoDep(tagInfo).connectTag()) {
+            console.error("tagSession connectTag failed.");
+            return;
+        }
+    }
+
+    let cmdData = [0x01, 0x02, 0x03, 0x04]; // Set command data correctly.
+    tag.getIsoDep(tagInfo).sendData(cmdData, (err, response)=> {
+        if (err) {
+            console.error("tagSession sendData AsyncCallback err: " + err);
+        } else {
+            console.info("tagSession sendData AsyncCallback response: " + response);
+        }
+    });
+}
+```
+
 ## sendData
 
 ```TypeScript
@@ -582,35 +608,11 @@ Sends data to the tag. This API uses an asynchronous callback to return the resu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | number[] | Yes | Data to send. The data consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number[]&gt; | Yes | Callback used to return the response from the tag. The response consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | Yes | Callback used to return the response from the tag. The response consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
 
 **Examples**
 
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
-// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
-
-function tagSessionDemo() {
-    // Connect the tag if it has not been connected.
-    if (!tag.getIsoDep(tagInfo).isTagConnected()) {
-        if (!tag.getIsoDep(tagInfo).connectTag()) {
-            console.error("tagSession connectTag failed.");
-            return;
-        }
-    }
-
-    let cmdData = [0x01, 0x02, 0x03, 0x04]; // Set command data correctly.
-    tag.getIsoDep(tagInfo).sendData(cmdData, (err, response)=> {
-        if (err) {
-            console.error("tagSession sendData AsyncCallback err: " + err);
-        } else {
-            console.info("tagSession sendData AsyncCallback response: " + response);
-        }
-    });
-}
-```
+See [sendData](#senddata)
 
 ## setSendDataTimeout
 
@@ -786,43 +788,6 @@ function tagSessionDemo() {
 }
 ```
 
-## transmit
-
-```TypeScript
-transmit(data: int[], callback: AsyncCallback<int[]>): void
-```
-
-Sends data to the tag. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.NFC_TAG
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TagSession-transmit(data: int[], callback: AsyncCallback<int[]>): void--><!--Device-TagSession-transmit(data: int[], callback: AsyncCallback<int[]>): void-End-->
-
-**System capability:** SystemCapability.Communication.NFC.Tag
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | int[] | Yes | Data to send. The data consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | Yes | Callback used to return the response from the tag. The response consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
 
@@ -855,4 +820,43 @@ function tagSessionDemo() {
     }
 }
 ```
+
+## transmit
+
+```TypeScript
+transmit(data: int[], callback: AsyncCallback<int[]>): void
+```
+
+Sends data to the tag. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.NFC_TAG
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TagSession-transmit(data: int[], callback: AsyncCallback<int[]>): void--><!--Device-TagSession-transmit(data: int[], callback: AsyncCallback<int[]>): void-End-->
+
+**System capability:** SystemCapability.Communication.NFC.Tag
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | int[] | Yes | Data to send. The data consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | Yes | Callback used to return the response from the tag. The response consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+See [transmit](#transmit)
 

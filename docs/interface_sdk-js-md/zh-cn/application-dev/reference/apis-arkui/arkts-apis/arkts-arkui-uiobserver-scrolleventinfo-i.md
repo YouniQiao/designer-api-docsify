@@ -84,7 +84,7 @@ scrollEvent: ScrollEventType
 
 Changed ScrollEvent type.
 
-**类型：** [ScrollEventType](arkts-arkui-uiobserver-scrolleventtype-e.md)
+**类型：** [ScrollEventType](../../apis-default/arkts-apis/arkts-uiobserver-scrolleventtype-e.md)
 
 **起始版本：** 12
 

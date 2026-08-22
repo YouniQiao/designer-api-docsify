@@ -27,13 +27,13 @@ declare function readLines(filePath: string, options?: Options): Promise<ReaderI
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | filePath | string | 是 | 文件的应用沙箱路径。 |
-| options | [Options](../../apis-default/arkts-apis/arkts-filefs-options-i.md) | 否 | 可选项。支持以下选项：<br/>- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'，仅支持'utf-8' 。 |
+| options | [Options](arkts-corefile-file-fs-options-i.md) | 否 | 可选项。支持以下选项：<br/>- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'，仅支持'utf-8' 。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[ReaderIterator](arkts-corefile-filefs-readeriterator-i.md)&gt; | Promise对象。返回文件读取迭代器。 |
+| Promise&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | Promise对象。返回文件读取迭代器。 |
 
 **错误码：**
 
@@ -52,6 +52,123 @@ declare function readLines(filePath: string, options?: Options): Promise<ReaderI
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**适用版本：** 12+ |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Options } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let options: Options = {
+  encoding: 'utf-8'
+};
+fileIo.readLines(filePath, options).then((readerIterator: fileIo.ReaderIterator) => {
+  for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
+    console.info(`Succeeded in reading lines, content: ${it.value}`);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to read lines. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Options } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let options: Options = {
+  encoding: 'utf-8'
+};
+fileIo.readLines(filePath, options).then((readerIterator:fileIo.ReaderIterator) => {
+  for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
+    console.info(`Succeeded in reading lines, content: ${it.value}`);
+  }
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to read lines. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+fileIo.readLines(filePath, (err: BusinessError, readerIterator: fileIo.ReaderIterator) => {
+  if (err) {
+    console.error(`Failed to read lines. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
+      console.info(`Succeeded in reading lines, content: ${it.value}`);
+    }
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+fileIo.readLines(filePath, (err: BusinessError<void> | null, readerIterator:fileIo.ReaderIterator | undefined) => {
+  if (err) {
+    console.error(`Failed to read lines. Code: ${err.code}, message: ${err.message}`);
+  } else if (readerIterator) {
+    for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
+      console.info(`Succeeded in reading lines, content: ${it.value}`);
+    }
+  }
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Options } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let options: Options = {
+  encoding: 'utf-8'
+};
+fileIo.readLines(filePath, options, (err: BusinessError, readerIterator: fileIo.ReaderIterator) => {
+  if (err) {
+    console.error(`Failed to read lines. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
+      console.info(`Succeeded in reading lines, content: ${it.value}`);
+    }
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Options } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let options: Options = {
+  encoding: 'utf-8'
+};
+fileIo.readLines(filePath, options, (err: BusinessError<void> | null, readerIterator:fileIo.ReaderIterator | undefined) => {
+  if (err) {
+    console.error(`Failed to read lines. Code: ${err.code}, message: ${err.message}`);
+  } else if (readerIterator) {
+    for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
+      console.info(`Succeeded in reading lines, content: ${it.value}`);
+    }
+  }
+});
+```
 
 
 ## readLines
@@ -73,7 +190,7 @@ declare function readLines(filePath: string, callback: AsyncCallback<ReaderItera
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | filePath | string | 是 | 文件的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReaderIterator](arkts-corefile-filefs-readeriterator-i.md)&gt; | 是 | 回调函数，返回文件读取迭代器。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | 是 | 回调函数，返回文件读取迭代器。 |
 
 **错误码：**
 
@@ -91,6 +208,10 @@ declare function readLines(filePath: string, callback: AsyncCallback<ReaderItera
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**示例**
+
+参见 [readLines](#readlines)
 
 
 ## readLines
@@ -112,8 +233,8 @@ declare function readLines(filePath: string, options: Options, callback: AsyncCa
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | filePath | string | 是 | 文件的应用沙箱路径。 |
-| options | [Options](../../apis-default/arkts-apis/arkts-filefs-options-i.md) | 是 | 可选项。支持以下选项：<br/>- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'，仅支持'utf-8'。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReaderIterator](arkts-corefile-filefs-readeriterator-i.md)&gt; | 是 | 回调函数，返回文件读取迭代器。 |
+| options | [Options](arkts-corefile-file-fs-options-i.md) | 是 | 可选项。支持以下选项：<br/>- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'，仅支持'utf-8'。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | 是 | 回调函数，返回文件读取迭代器。 |
 
 **错误码：**
 
@@ -131,4 +252,8 @@ declare function readLines(filePath: string, options: Options, callback: AsyncCa
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**示例**
+
+参见 [readLines](#readlines)
 

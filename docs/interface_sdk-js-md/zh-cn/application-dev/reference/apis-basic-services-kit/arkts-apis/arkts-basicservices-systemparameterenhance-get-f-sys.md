@@ -56,6 +56,37 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemParameterEnhance.get('const.ohos.apiversion', 'default', (err: BusinessError, data: string) => {
+    if (err) {
+      console.error(`Failed to get const.ohos.apiversion value. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info(`get const.ohos.apiversion value success: ${data}`);
+    }
+  });
+} catch (e) {
+  console.error('get unexpected error: ' + e);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let promise: Promise<string> = systemParameterEnhance.get('const.ohos.apiversion');
+  promise.then((value: string) => {
+    console.info('get const.ohos.apiversion success: ' + value);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get const.ohos.apiversion. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (e) {
+  console.error('get unexpected error: ' + e);
+}
+```
+
 
 ## get
 
@@ -92,21 +123,7 @@ function get(key: string, def: string, callback: AsyncCallback<string>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemParameterEnhance.get('const.ohos.apiversion', 'default', (err: BusinessError, data: string) => {
-    if (err) {
-      console.error(`Failed to get const.ohos.apiversion value. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info(`get const.ohos.apiversion value success: ${data}`);
-    }
-  });
-} catch (e) {
-  console.error('get unexpected error: ' + e);
-}
-```
+参见 [get](#get)
 
 
 ## get
@@ -149,18 +166,5 @@ function get(key: string, def?: string): Promise<string>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise: Promise<string> = systemParameterEnhance.get('const.ohos.apiversion');
-  promise.then((value: string) => {
-    console.info('get const.ohos.apiversion success: ' + value);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get const.ohos.apiversion. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  console.error('get unexpected error: ' + e);
-}
-```
+参见 [get](#get)
 

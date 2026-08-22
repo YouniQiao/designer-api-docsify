@@ -36,7 +36,7 @@ Deregisters the listener that watches for async data receiver callback being reg
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SecurityUIExtensionProxy](arkts-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | No | Callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityUIExtensionProxy](arkts-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | No | Callback of the listened event. |
 
 ## offSyncReceiverRegister
 
@@ -62,7 +62,7 @@ Deregisters the listener that watches for sync data receiver callback being regi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SecurityUIExtensionProxy](arkts-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | No | Callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityUIExtensionProxy](arkts-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | No | Callback of the listened event. |
 
 ## onAsyncReceiverRegister
 
@@ -88,7 +88,7 @@ Register the listener that watches for async data receiver callback being regist
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SecurityUIExtensionProxy](arkts-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | Yes | Callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityUIExtensionProxy](arkts-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | Yes | Callback of the listened event. |
 
 ## onSyncReceiverRegister
 
@@ -114,7 +114,7 @@ Register the listener that watches for sync data receiver callback being registe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SecurityUIExtensionProxy](arkts-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | Yes | Callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityUIExtensionProxy](arkts-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | Yes | Callback of the listened event. |
 
 ## send
 

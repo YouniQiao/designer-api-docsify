@@ -104,3 +104,57 @@ uriAuthorizationPolicies?: Array<int>
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
+
+let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+let fileUriDetails: Record<string, number | string | Uint8Array> = {
+  'fileUriKey1': 123,
+  'fileUriKey2': 'fileUriValue',
+  'fileUriKey3': u8Array
+};
+let fileUri: uniformDataStruct.FileUri = {
+  uniformDataType: 'general.file-uri',
+  oriUri: 'www.xx.com',
+  fileType: 'general.image',
+  details: fileUriDetails,
+  // 从API 26.0.0版本开始，支持uri授权策略
+  uriAuthorizationPolicies: [
+    unifiedDataChannel.UriPermission.WRITE
+  ]
+};
+console.info('fileUri.uniformDataType: ' + fileUri.uniformDataType);
+// 当使用FileUri类型的标准化数据结构构造record时，推荐入参中的type值设为uniformTypeDescriptor.UniformDataType.FILE_URI
+let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.FILE_URI, fileUri);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
+
+let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+let fileUriDetails: Record<string, int | long | double | string | Uint8Array> = {
+  'fileUriKey1': 123,
+  'fileUriKey2': 'fileUriValue',
+  'fileUriKey3': u8Array
+};
+let fileUri: uniformDataStruct.FileUri = {
+  uniformDataType: 'general.file-uri',
+  oriUri: 'www.xx.com',
+  fileType: 'general.image',
+  details: fileUriDetails,
+  // 从API 26.0.0版本开始，支持uri授权策略
+  uriAuthorizationPolicies: [
+    unifiedDataChannel.UriPermission.WRITE
+  ]
+};
+console.info('fileUri.uniformDataType: ' + fileUri.uniformDataType);
+// 当使用FileUri类型的标准化数据结构构造record时，推荐入参中的type值设为uniformTypeDescriptor.UniformDataType.FILE_URI
+let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.FILE_URI, fileUri);
+```
+

@@ -32,7 +32,7 @@ declare function readText(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | filePath | string | 是 | 文件的应用沙箱路径。 |
-| options | [ReadTextOptions](../../apis-default/arkts-apis/arkts-filefs-readtextoptions-i.md) | 否 | 支持如下选项：<br/>- offset，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读取。<br/>- length ，number类型，表示期望读取数据的长度，单位为Byte。可选，默认文件长度。<br/>- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'，仅支持'utf-8' 。<br>**起始版本：** 11 |
+| options | [ReadTextOptions](arkts-corefile-file-fs-readtextoptions-i.md) | 否 | 支持如下选项：<br/>- offset，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读取。<br/>- length ，number类型，表示期望读取数据的长度，单位为Byte。可选，默认文件长度。<br/>- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'，仅支持'utf-8' 。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -58,6 +58,112 @@ declare function readText(
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**适用版本：** 12+ |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+fileIo.readText(filePath).then((str: string) => {
+  console.info(`Succeeded in reading text, text is: ${str}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to read text. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+fileIo.readText(filePath).then((str: string) => {
+  console.info(`Succeeded in reading text, text is: ${str}`);
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
+   console.error(`Failed to read text. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+
+fileIo.readText(filePath, (err: BusinessError, str: string) => {
+  if (err) {
+    console.error(`Failed to read text. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in reading text, text is: ${str}`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+
+fileIo.readText(filePath, (err: BusinessError<void> | null, str: string | undefined) => {
+  if (err) {
+    console.error(`Failed to read text. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in reading text, text is: ${str}`);
+  }
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { ReadTextOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let stat = fileIo.statSync(filePath);
+let readTextOption: ReadTextOptions = {
+    offset: 1,
+    length: stat.size,
+    encoding: 'utf-8'
+};
+fileIo.readText(filePath, readTextOption, (err: BusinessError, str: string) => {
+  if (err) {
+    console.error(`Failed to read text. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in reading text, text is: ${str}`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { ReadTextOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let readTextOption: ReadTextOptions = {
+    offset: 1,
+    length: 0,
+    encoding: 'utf-8'
+};
+let stat = fileIo.statSync(filePath);
+readTextOption.length = stat.size;
+fileIo.readText(filePath, readTextOption, (err: BusinessError<void> | null, str: string | undefined) => {
+  if (err) {
+    console.error(`Failed to read text. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in reading text, text is: ${str}`);
+  }
+});
+```
 
 
 ## readText
@@ -101,6 +207,10 @@ declare function readText(filePath: string, callback: AsyncCallback<string>): vo
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**示例**
+
+参见 [readText](#readtext)
+
 
 ## readText
 
@@ -127,7 +237,7 @@ declare function readText(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | filePath | string | 是 | 文件的应用沙箱路径。 |
-| options | [ReadTextOptions](../../apis-default/arkts-apis/arkts-filefs-readtextoptions-i.md) | 是 | 支持如下选项：<br/>- offset，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读取。<br/>- length ，number类型，表示期望读取数据的长度，单位为Byte。可选，默认文件长度。<br/>- encoding，string类型，表示数据的编码方式，默认'utf-8'，仅支持'utf-8'。<br>**起始版本：** 11 |
+| options | [ReadTextOptions](arkts-corefile-file-fs-readtextoptions-i.md) | 是 | 支持如下选项：<br/>- offset，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读取。<br/>- length ，number类型，表示期望读取数据的长度，单位为Byte。可选，默认文件长度。<br/>- encoding，string类型，表示数据的编码方式，默认'utf-8'，仅支持'utf-8'。<br>**起始版本：** 11 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回读取文件的内容。 |
 
 **错误码：**
@@ -147,4 +257,8 @@ declare function readText(
 | 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**示例**
+
+参见 [readText](#readtext)
 

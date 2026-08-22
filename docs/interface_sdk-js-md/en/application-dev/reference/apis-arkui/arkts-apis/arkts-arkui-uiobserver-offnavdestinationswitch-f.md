@@ -33,8 +33,8 @@ Unsubscribes from **Navigation** component page switching events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'navDestinationSwitch' | Yes | Event type. Set to **'navDestinationSwitch'** for **Navigation** component page switching events. |
-| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | Context information, which is used to specify the target scope for page switching events. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NavDestinationSwitchInfo](../../apis-default/arkts-apis/arkts-uiobserver-navdestinationswitchinfo-i.md)&gt; | No | Target listener to unregister. |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | Context information, which is used to specify the target scope for page switching events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavDestinationSwitchInfo](../../apis-default/arkts-apis/arkts-uiobserver-navdestinationswitchinfo-i.md)&gt; | No | Target listener to unregister. |
 
 
 ## off('navDestinationSwitch')
@@ -65,7 +65,7 @@ Unsubscribes from **Navigation** component page switching events. Compared with 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'navDestinationSwitch' | Yes | Event type. Set to **'navDestinationSwitch'** for **Navigation** component page switching events. |
-| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | Context information, which is used to specify the target scope for page switching events. |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | Context information, which is used to specify the target scope for page switching events. |
 | observerOptions | [NavDestinationSwitchObserverOptions](../../apis-default/arkts-apis/arkts-uiobserver-navdestinationswitchobserveroptions-i.md) | Yes | Observer configuration options. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NavDestinationSwitchInfo](../../apis-default/arkts-apis/arkts-uiobserver-navdestinationswitchinfo-i.md)&gt; | No | Target listener to unregister. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavDestinationSwitchInfo](../../apis-default/arkts-apis/arkts-uiobserver-navdestinationswitchinfo-i.md)&gt; | No | Target listener to unregister. |
 

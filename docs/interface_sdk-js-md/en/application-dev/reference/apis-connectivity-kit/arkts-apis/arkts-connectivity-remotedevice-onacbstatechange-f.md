@@ -28,7 +28,7 @@ The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AcbStateParam](arkts-connectivity-remotedevice-acbstateparam-i.md)&gt; | Yes | Callback used to return the result of the logical link connection status change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AcbStateParam](arkts-connectivity-remotedevice-acbstateparam-i.md)&gt; | Yes | Callback used to return the result of the logical link connection status change event. |
 
 **Error codes:**
 

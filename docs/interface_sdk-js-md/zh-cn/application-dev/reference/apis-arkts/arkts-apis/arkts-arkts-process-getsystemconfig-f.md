@@ -43,3 +43,12 @@ let _SC_ARG_MAX = 0;
 let pres = process.getSystemConfig(_SC_ARG_MAX);
 ```
 
+```TypeScript
+// 创建ProcessManager实例
+let processManager = new process.ProcessManager();
+// 定义系统配置参数
+let _SC_ARG_MAX = 0;
+// 获取系统配置信息
+let pres = processManager.getSystemConfig(_SC_ARG_MAX);
+```
+

@@ -16,34 +16,6 @@ A class that provides APIs to query and monitor the system screen recorder statu
 import { media } from '@kit.MediaKit';
 ```
 
-## offSystemScreenRecorder
-
-```TypeScript
-offSystemScreenRecorder(callback?: Callback<ScreenCaptureEvent>): void
-```
-
-Unsubscribes from state change events of the system screen recorder. This event is triggered when the state of the system screen recorder changes.
-
-**Since:** 23
-
-<!--Device-ScreenCaptureMonitor-offSystemScreenRecorder(callback?: Callback<ScreenCaptureEvent>): void--><!--Device-ScreenCaptureMonitor-offSystemScreenRecorder(callback?: Callback<ScreenCaptureEvent>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | No | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. If this parameter is not specified, the last subscription event is canceled. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-
 ## off('systemScreenRecorder')
 
 ```TypeScript
@@ -65,7 +37,7 @@ Unsubscribes from state change events of the system screen recorder.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'systemScreenRecorder' | Yes | Event type, which is **'systemScreenRecorder'** in this case. This event is triggered when the state of the system screen recorder changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | No | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. If this parameter is not specified, the last subscription event is canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | No | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. If this parameter is not specified, the last subscription event is canceled. |
 
 **Error codes:**
 
@@ -79,17 +51,17 @@ Unsubscribes from state change events of the system screen recorder.
 screenCaptureMonitor.off('systemScreenRecorder');
 ```
 
-## onSystemScreenRecorder
+## offSystemScreenRecorder
 
 ```TypeScript
-onSystemScreenRecorder(callback: Callback<ScreenCaptureEvent>): void
+offSystemScreenRecorder(callback?: Callback<ScreenCaptureEvent>): void
 ```
 
-Subscribes to state change events of the system screen recorder. From the ScreenCaptureEvent event reported, you can determine whether the system screen recorder is working. This event is triggered when the state of the system screen recorder changes.
+Unsubscribes from state change events of the system screen recorder. This event is triggered when the state of the system screen recorder changes.
 
 **Since:** 23
 
-<!--Device-ScreenCaptureMonitor-onSystemScreenRecorder(callback: Callback<ScreenCaptureEvent>): void--><!--Device-ScreenCaptureMonitor-onSystemScreenRecorder(callback: Callback<ScreenCaptureEvent>): void-End-->
+<!--Device-ScreenCaptureMonitor-offSystemScreenRecorder(callback?: Callback<ScreenCaptureEvent>): void--><!--Device-ScreenCaptureMonitor-offSystemScreenRecorder(callback?: Callback<ScreenCaptureEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -99,7 +71,7 @@ Subscribes to state change events of the system screen recorder. From the Screen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | Yes | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | No | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. If this parameter is not specified, the last subscription event is canceled. |
 
 **Error codes:**
 
@@ -128,7 +100,7 @@ Subscribes to state change events of the system screen recorder. From the Screen
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'systemScreenRecorder' | Yes | Event type, which is **'systemScreenRecorder'** in this case. This event is triggered when the state of the system screen recorder changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | Yes | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | Yes | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. |
 
 **Error codes:**
 
@@ -145,6 +117,34 @@ screenCaptureMonitor.on('systemScreenRecorder', (event: media.ScreenCaptureEvent
   console.info(`system ScreenRecorder event: ${event}`);
 })
 ```
+
+## onSystemScreenRecorder
+
+```TypeScript
+onSystemScreenRecorder(callback: Callback<ScreenCaptureEvent>): void
+```
+
+Subscribes to state change events of the system screen recorder. From the ScreenCaptureEvent event reported, you can determine whether the system screen recorder is working. This event is triggered when the state of the system screen recorder changes.
+
+**Since:** 23
+
+<!--Device-ScreenCaptureMonitor-onSystemScreenRecorder(callback: Callback<ScreenCaptureEvent>): void--><!--Device-ScreenCaptureMonitor-onSystemScreenRecorder(callback: Callback<ScreenCaptureEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | Yes | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## isSystemScreenRecorderWorking
 

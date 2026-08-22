@@ -194,6 +194,17 @@ getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLevel): numb
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
 
+try {
+  userAuth.getAvailableStatus(userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL3);
+  console.info('current auth trust level is supported');
+} catch (error) {
+  console.error(`Failed to check auth trust level. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
 let auth = new userAuth.UserAuth();
 let checkCode = auth.getAvailableStatus(userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1);
 if (checkCode == userAuth.ResultCode.SUCCESS) {

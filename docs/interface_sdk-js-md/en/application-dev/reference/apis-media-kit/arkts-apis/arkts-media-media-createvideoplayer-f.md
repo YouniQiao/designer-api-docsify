@@ -28,7 +28,7 @@ Creates a **VideoPlayer** instance. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[VideoPlayer](arkts-media-media-videoplayer-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the VideoPlayer instance created; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoPlayer](arkts-media-media-videoplayer-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the VideoPlayer instance created; otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -43,6 +43,22 @@ media.createVideoPlayer((error: BusinessError, video: media.VideoPlayer) => {
   } else {
     console.error(`Failed to create VideoPlayer, error:${error}`);
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let videoPlayer: media.VideoPlayer;
+media.createVideoPlayer().then((video: media.VideoPlayer) => {
+  if (video) {
+    videoPlayer = video;
+    console.info('Succeeded in creating VideoPlayer');
+  } else {
+    console.error('Failed to create VideoPlayer');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`Failed to create VideoPlayer, error:${error}`);
 });
 ```
 
@@ -73,19 +89,5 @@ Creates a VideoPlayer instance. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let videoPlayer: media.VideoPlayer;
-media.createVideoPlayer().then((video: media.VideoPlayer) => {
-  if (video) {
-    videoPlayer = video;
-    console.info('Succeeded in creating VideoPlayer');
-  } else {
-    console.error('Failed to create VideoPlayer');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`Failed to create VideoPlayer, error:${error}`);
-});
-```
+See [createVideoPlayer](#createvideoplayer)
 

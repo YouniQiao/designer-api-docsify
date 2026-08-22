@@ -41,9 +41,41 @@ deleteBackward(length: number, callback: AsyncCallback<boolean>): void
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | length | number | Yes | Text length, which cannot be less than 0. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.deleteBackward(length, (err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in deleting backward.');
+  } else {
+    console.error(`Failed to deleteBackward.`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.deleteBackward(length).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in deleting backward.');
+  } else {
+    console.error('Failed to deleteBackward.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -59,6 +91,21 @@ textInputClient.deleteBackward(length, (err: BusinessError, result: boolean) => 
   } else {
     console.error('Failed to deleteBackward.');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+textInputClient.deleteBackward(length).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in deleting backward.');
+  } else {
+    console.error('Failed to deleteBackward.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -94,20 +141,7 @@ deleteBackward(length: number): Promise<boolean>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.deleteBackward(length).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in deleting backward.');
-  } else {
-    console.error('Failed to deleteBackward.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [deleteBackward](#deletebackward)
 
 ## deleteForward
 
@@ -132,9 +166,41 @@ deleteForward(length: number, callback: AsyncCallback<boolean>): void
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | length | number | Yes | Text length, which cannot be less than 0. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in deleting forward.');
+  } else {
+    console.error(`Failed to deleteForward.`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.deleteForward(length).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in deleting forward.');
+  } else {
+    console.error('Failed to delete Forward.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -150,6 +216,21 @@ textInputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
   } else {
     console.error('Failed to deleteForward.');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+textInputClient.deleteForward(length).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in deleting forward.');
+  } else {
+    console.error('Failed to delete forward.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -185,20 +266,7 @@ deleteForward(length: number): Promise<boolean>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.deleteForward(length).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in deleting forward.');
-  } else {
-    console.error('Failed to delete forward.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [deleteForward](#deleteforward)
 
 ## getBackward
 
@@ -223,9 +291,33 @@ getBackward(length: number, callback: AsyncCallback<string>): void
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | length | number | Yes | Text length, which cannot be less than 0. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the obtained text. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the obtained text. Otherwise, **err** is an error object. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.getBackward(length, (err: BusinessError, text: string) => {
+  if (err) {
+    console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting backward, text: ' + text);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.getBackward(length).then((text: string) => {
+  console.info('Succeeded in getting backward, text: ' + text);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -237,6 +329,17 @@ textInputClient.getBackward(length, (err: BusinessError, text: string) => {
     return;
   }
   console.info('Succeeded in getting backward, text: ' + text);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+textInputClient.getBackward(length).then((text: string) => {
+  console.info(`'Succeeded in getting backward: ${text}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -272,16 +375,7 @@ getBackward(length: number): Promise<string>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.getBackward(length).then((text: string) => {
-  console.info(`'Succeeded in getting backward: ${text}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getBackward](#getbackward)
 
 ## getEditorAttribute
 
@@ -305,9 +399,33 @@ getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the attribute of the edit box. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the attribute of the edit box. Otherwise, **err** is an error object. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputClient.getEditorAttribute((err: BusinessError, editorAttribute: inputMethodEngine.EditorAttribute) => {
+  if (err) {
+    console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`editorAttribute.inputPattern:  ${editorAttribute.inputPattern}`);
+  console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.EditorAttribute) => {
+  console.info(`editorAttribute.inputPattern:  ${editorAttribute.inputPattern}`);
+  console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -321,6 +439,17 @@ textInputClient.getEditorAttribute((err: BusinessError,
   }
   console.info(`editorAttribute.inputPattern: ${editorAttribute.inputPattern}`);
   console.info(`editorAttribute.enterKeyType: ${editorAttribute.enterKeyType}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+textInputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.EditorAttribute) => {
+  console.info(`editorAttribute.inputPattern: ${editorAttribute.inputPattern}`);
+  console.info(`editorAttribute.enterKeyType: ${editorAttribute.enterKeyType}}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -350,16 +479,7 @@ getEditorAttribute(): Promise<EditorAttribute>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-textInputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.EditorAttribute) => {
-  console.info(`editorAttribute.inputPattern: ${editorAttribute.inputPattern}`);
-  console.info(`editorAttribute.enterKeyType: ${editorAttribute.enterKeyType}}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getEditorAttribute](#geteditorattribute)
 
 ## getForward
 
@@ -384,9 +504,33 @@ getForward(length: number, callback: AsyncCallback<string>): void
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | length | number | Yes | Text length, which cannot be less than 0. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the obtained text. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the obtained text. Otherwise, **err** is an error object. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.getForward(length, (err: BusinessError, text: string) => {
+  if (err) {
+    console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting forward, text: ' + text);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.getForward(length).then((text: string) => {
+  console.info('Succeeded in getting forward, text: ' + text);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -398,6 +542,17 @@ textInputClient.getForward(length, (err: BusinessError, text: string) => {
     return;
   }
   console.info('Succeeded in getting forward, text: ' + text);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+textInputClient.getForward(length).then((text: string) => {
+  console.info('Succeeded in getting forward, text: ' + text);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -433,16 +588,7 @@ getForward(length: number): Promise<string>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.getForward(length).then((text: string) => {
-  console.info('Succeeded in getting forward, text: ' + text);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getForward](#getforward)
 
 ## insertText
 
@@ -467,9 +613,40 @@ insertText(text: string, callback: AsyncCallback<boolean>): void
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Text to insert. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+
+inputClient.insertText('test', (err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in inserting text.');
+  } else {
+    console.error('Failed to insertText.');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputClient.insertText('test').then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in inserting text.');
+  } else {
+    console.error('Failed to insertText.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -484,6 +661,20 @@ textInputClient.insertText('test', (err: BusinessError, result: boolean) => {
   } else {
     console.error('Failed to insertText.');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+textInputClient.insertText('test').then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in inserting text.');
+  } else {
+    console.error('Failed to insertText.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -519,19 +710,7 @@ insertText(text: string): Promise<boolean>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-textInputClient.insertText('test').then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in inserting text.');
-  } else {
-    console.error('Failed to insertText.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [insertText](#inserttext)
 
 ## sendKeyFunction
 
@@ -556,9 +735,42 @@ sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | action | number | Yes | Action of the function key. <br>- **0**: invalid key. <br>- **1**: confirm key (Enter key). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let action: number = 1;
+
+inputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in sending key function.');
+  } else {
+    console.error('Failed to sendKeyFunction.');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let action: number = 1;
+inputClient.sendKeyFunction(action).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in sending key function.');
+  } else {
+    console.error('Failed to sendKeyFunction.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -574,6 +786,21 @@ textInputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) =>
   } else {
     console.error('Failed to sendKeyFunction.');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let action: number = 1;
+textInputClient.sendKeyFunction(action).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in sending key function.');
+  } else {
+    console.error('Failed to sendKeyFunction.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to sendKeyFunction:. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -609,18 +836,5 @@ sendKeyFunction(action: number): Promise<boolean>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let action: number = 1;
-textInputClient.sendKeyFunction(action).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in sending key function.');
-  } else {
-    console.error('Failed to sendKeyFunction.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to sendKeyFunction:. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [sendKeyFunction](#sendkeyfunction)
 

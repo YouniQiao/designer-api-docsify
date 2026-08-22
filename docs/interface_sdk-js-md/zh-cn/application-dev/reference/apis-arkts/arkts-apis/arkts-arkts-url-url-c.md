@@ -41,6 +41,41 @@ URL的构造函数。与parseURL方法功能相同，但parseURL为静态工厂�
 
 **示例**
 
+ArkTS-Dyn示例：
+
+```TypeScript
+// 通过string[][]方式构造URLParams对象：
+let objectParams = new url.URLParams([ ['user1', 'abc1'], ['query2', 'first2'], ['query3', 'second3'] ]);
+// 通过Record<string, string>方式构造URLParams对象：
+let objectParams1 = new url.URLParams({'fod' : '1' , 'bard' : '2'});
+// 通过string方式构造URLParams对象：
+let objectParams2 = new url.URLParams('?fod=1&bard=2');
+// 通过url对象的search属性构造URLParams对象：
+let urlObject = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
+let objectParams3 = new url.URLParams(urlObject.search);
+// 通过url对象的params属性获取URLParams对象：
+let secondUrlObj = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
+let objectParams4 = secondUrlObj.params;
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// 通过string[][]方式构造URLParams对象：
+let objectParams = new url.URLParams([ ['user1', 'abc1'], ['query2', 'first2'], ['query3', 'second3'] ]);
+// 通过Record<string, string>方式构造URLParams对象：
+let record: Record<string, string> = { "fod": '1', "bard": '2' }
+let objectParams1 = new url.URLParams(record);
+// 通过string方式构造URLParams对象：
+let objectParams2 = new url.URLParams('?fod=1&bard=2');
+// 通过url对象的search属性构造URLParams对象：
+let urlObject = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
+let objectParams3 = new url.URLParams(urlObject.search);
+// 通过url对象的params属性获取URLParams对象：
+let urlObject1 = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
+let objectParams4 = urlObject1.params;
+```
+
 ```TypeScript
 let baseUrl = 'https://username:password@host:8080';
 let rootPathUrl = new url.URL("/", baseUrl); // Output 'https://username:password@host:8080/';
@@ -54,6 +89,18 @@ new url.URL('/path/path1', ''); // Raises a TypeError exception as '' is not a v
 new url.URL('/path/path1'); // Raises a TypeError exception as '/path/path1' is not a valid URL
 new url.URL('https://www.example.com', ); // Output https://www.example.com/
 new url.URL('https://www.example.com', absoluteUrl); // Output https://www.example.com/
+```
+
+```TypeScript
+let a = new url.URL();
+```
+
+```TypeScript
+let objectParams = new url.URLSearchParams([ ['user1', 'abc1'], ['query2', 'first2'], ['query3', 'second3'] ]);
+let objectParams1 = new url.URLSearchParams({"fod" : '1' , "bard" : '2'});
+let objectParams2 = new url.URLSearchParams('?fod=1&bard=2');
+let urlObject = new url.URL('https://developer.mozilla.org/?fod=1&bard=2');
+let params = new url.URLSearchParams(urlObject.search);
 ```
 
 ## constructor
@@ -74,9 +121,7 @@ URL的无参构造函数，不建议直接调用。请使用parseURL方法创建
 
 **示例**
 
-```TypeScript
-let a = new url.URL();
-```
+参见 [constructor](#constructor)
 
 ## parseURL
 
@@ -192,8 +237,26 @@ toString(): string
 **示例**
 
 ```TypeScript
+// 解析URL字符串
+let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
+// 构造URLParams对象
+let params = new url.URLParams(urlObject.search.slice(1));
+// 追加参数
+params.append('fod', '3');
+// 将参数序列化为字符串
+console.info(params.toString()); // Output 'fod=1&bard=2&fod=3'
+```
+
+```TypeScript
 const urlObject = url.URL.parseURL('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
 let result = urlObject.toString(); // Output 'https://username:password@host:8080/directory/file?query=pppppp#qwer=da'
+```
+
+```TypeScript
+let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
+let params = new url.URLSearchParams(urlObject.search.slice(1));
+params.append('fod', '3');
+console.info(params.toString()); // Output 'fod=1&bard=2&fod=3'
 ```
 
 ## hash

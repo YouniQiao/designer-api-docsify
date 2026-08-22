@@ -65,45 +65,6 @@ function createPremultipliedPixelMap() {
 }
 ```
 
-
-## createPremultipliedPixelMap
-
-```TypeScript
-function createPremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void>
-```
-
-Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha format.
-
-**起始版本：** 23
-
-<!--Device-image-function createPremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void>--><!--Device-image-function createPremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Multimedia.Image.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| src | PixelMap | 是 | The source pixelMap. |
-| dst | PixelMap | 是 | The destination pixelmap. |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980246](../errorcode-image.md#62980246-读取pixelmap失败) | Failed to read the pixelMap. |
-| [62980248](../errorcode-image.md#62980248-pixelmap不允许修改) | Pixelmap not allow modify. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -153,4 +114,45 @@ function createPremultipliedPixelMap() {
   });
 }
 ```
+
+
+## createPremultipliedPixelMap
+
+```TypeScript
+function createPremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void>
+```
+
+Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha format.
+
+**起始版本：** 23
+
+<!--Device-image-function createPremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void>--><!--Device-image-function createPremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| src | PixelMap | 是 | The source pixelMap. |
+| dst | PixelMap | 是 | The destination pixelmap. |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980246](../errorcode-image.md#62980246-读取pixelmap失败) | Failed to read the pixelMap. |
+| [62980248](../errorcode-image.md#62980248-pixelmap不允许修改) | Pixelmap not allow modify. |
+
+**示例**
+
+参见 [createPremultipliedPixelMap](#createpremultipliedpixelmap)
 

@@ -51,6 +51,17 @@ wallpaper.getPixelMap(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: Business
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+wallpaper.getPixelMap(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: image.PixelMap) => {
+  console.info(`success to getPixelMap : ${JSON.stringify(data.getImageInfoSync())}`);
+}).catch((error: BusinessError) => {
+  console.error(`Failed to getPixelMap. Code: ${error.code}, Message: ${error.message}`);
+});
+```
+
 
 ## getPixelMap
 
@@ -90,14 +101,5 @@ function getPixelMap(wallpaperType: WallpaperType): Promise<image.PixelMap>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-wallpaper.getPixelMap(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: image.PixelMap) => {
-  console.info(`success to getPixelMap : ${JSON.stringify(data.getImageInfoSync())}`);
-}).catch((error: BusinessError) => {
-  console.error(`Failed to getPixelMap. Code: ${error.code}, Message: ${error.message}`);
-});
-```
+参见 [getPixelMap](#getpixelmap)
 

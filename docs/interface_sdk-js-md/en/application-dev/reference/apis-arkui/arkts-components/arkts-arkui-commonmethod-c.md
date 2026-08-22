@@ -2630,6 +2630,10 @@ Since API version 23, dynamic configuration via [attributeModifier](#attributemo
 | --- | --- |
 | T | Current component. |
 
+**Examples**
+
+For details, see [Example 10: Setting Component Weights in a Chain](ts-container-relativecontainer.md#example-10-setting-component-weights-in-a-chain).
+
 ## clickEffect
 
 ```TypeScript
@@ -2804,7 +2808,7 @@ Clips this component according to the specified shape (which may include positio
 > Path shapes do not support setting width and height attributes. For details about the supported attributes, see
 > the specific shape documentation.
 > 
-> The [fill](../../apis-default/arkts-apis/arkts-arkuishape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape**
+> The [fill](../../apis-default/arkts-apis/arkts-arkui-shape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape**
 > API.
 
 **Since:** 12
@@ -2847,7 +2851,7 @@ Clips this component according to the specified shape (which may include positio
 > Path shapes do not support setting width and height attributes. For details about the supported attributes, see
 > the specific shape documentation.
 > 
-> The [fill](../../apis-default/arkts-apis/arkts-arkuishape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape**
+> The [fill](../../apis-default/arkts-apis/arkts-arkui-shape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape**
 > API.
 
 **Since:** 18
@@ -3224,6 +3228,36 @@ Sets whether to component is double-sided.
 | --- | --- |
 | T |  |
 
+## draggable
+
+```TypeScript
+draggable(value: boolean): T
+```
+
+Sets whether the component is draggable. By default, the component is not draggable.
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CommonMethod-draggable(value: boolean): T--><!--Device-CommonMethod-draggable(value: boolean): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether the component is draggable. <br>**true**: The component is draggable.<br> **false**: The component is not draggable. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T | Current component. |
+
 ## dragPreview
 
 ```TypeScript
@@ -3317,36 +3351,6 @@ Sets the preview image processing mode, badge count, and interaction behavior du
 | --- | --- | --- | --- |
 | value | [DragPreviewOptions](arkts-arkui-dragpreviewoptions-i.md) | Yes | Preview image processing mode and badge count during dragging. |
 | options | [DragInteractionOptions](arkts-arkui-draginteractionoptions-i.md) | No | Interaction behavior for the floating preview image.<br>Default value: empty<br>**Since:** 12 |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| T | Current component. |
-
-## draggable
-
-```TypeScript
-draggable(value: boolean): T
-```
-
-Sets whether the component is draggable. By default, the component is not draggable.
-
-**Since:** 10
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-CommonMethod-draggable(value: boolean): T--><!--Device-CommonMethod-draggable(value: boolean): T-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | boolean | Yes | Whether the component is draggable. <br>**true**: The component is draggable.<br> **false**: The component is not draggable. |
 
 **Return value:**
 
@@ -3610,6 +3614,34 @@ When [getInspectorByKey](../../../reference/apis-arkui/arkui-ts/ts-universal-att
 | --- | --- |
 | T | Current component. |
 
+## focusable
+
+```TypeScript
+focusable(value: boolean): T
+```
+
+Sets whether the component is focusable.
+
+**Since:** 8
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CommonMethod-focusable(value: boolean): T--><!--Device-CommonMethod-focusable(value: boolean): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether the component is focusable.<br>**true**: The component is focusable.<br> **false**: The component is not focusable.<br>**NOTE：**<br>Components that have default interaction logic, such as [Button](arkts-arkui-mouseevent-i.md#button) and TextInput, are focusable by default. Other components, such as Text and Image, are not focusable by default. Only focusable components can trigger a focus event. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T | Current component. |
+
 ## focusBox
 
 ```TypeScript
@@ -3761,34 +3793,6 @@ Set the focus priority of component in a specific focus scope.
 | Type | Description |
 | --- | --- |
 | T |  |
-
-## focusable
-
-```TypeScript
-focusable(value: boolean): T
-```
-
-Sets whether the component is focusable.
-
-**Since:** 8
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-CommonMethod-focusable(value: boolean): T--><!--Device-CommonMethod-focusable(value: boolean): T-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | boolean | Yes | Whether the component is focusable.<br>**true**: The component is focusable.<br> **false**: The component is not focusable.<br>**NOTE：**<br>Components that have default interaction logic, such as [Button](arkts-arkui-mouseevent-i.md#button) and TextInput, are focusable by default. Other components, such as Text and Image, are not focusable by default. Only focusable components can trigger a focus event. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| T | Current component. |
 
 ## foregroundBlurStyle
 
@@ -6801,7 +6805,7 @@ Triggered when the component size changes due to layout updates.
 > executed. If the **onSizeChange** callback is triggered synchronously during the pre-animation layout phase, the
 > changes made in this callback will be processed as part of the animation, along with the changes in the animation
 > closure. To avoid this issue, you can use [setTimeout](../arkts-apis/arkts-arkui-global-settimeout-f.md) or
-> [postFrameCallback](../arkts-apis/arkts-arkui-arkuiuicontext-uicontext-c.md#postframecallback) (with a 0 ms delay) inside
+> [postFrameCallback](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#postframecallback) (with a 0 ms delay) inside
 > **onSizeChange** to defer the UI processing logic to asynchronous execution.
 
 **Since:** 12
@@ -6968,7 +6972,7 @@ Called when the visible area of the component changes. For details about the dev
 > 
 > - The following calculation scenarios are not supported: clipping by sibling nodes, clipping by siblings of any
 > ancestor node, window-level occlusion, and component rotation. Examples include layouts using
-> [Stack](../../apis-default/arkts-apis/arkts-libes5-error-i.md#stack), [z-order control](#zindex), and
+> [Stack](../../apis-default/arkts-apis/arkts-lib-es5-error-i.md#stack), [z-order control](#zindex), and
 > [rotate](#rotate) transformations.
 > 
 > - It does not support visibility change calculations for nodes that are not in the component tree. For example,

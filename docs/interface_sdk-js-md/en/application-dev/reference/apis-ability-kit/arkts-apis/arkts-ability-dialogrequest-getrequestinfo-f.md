@@ -31,7 +31,7 @@ Obtains the request information from Want.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want passed in the request for a modal dialog box. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want passed in the request for a modal dialog box. |
 
 **Return value:**
 

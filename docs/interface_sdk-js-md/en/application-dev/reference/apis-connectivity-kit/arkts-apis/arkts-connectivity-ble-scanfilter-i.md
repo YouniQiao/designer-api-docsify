@@ -24,7 +24,7 @@ The address object of a BLE peripheral device, including the address type.
 
 **Type:** BluetoothAddress
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -142,11 +142,11 @@ RSSI threshold for filtering advertising that pass through.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ScanFilter-rssiThreshold?: int--><!--Device-ScanFilter-rssiThreshold?: int-End-->
 

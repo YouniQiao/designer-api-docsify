@@ -20,3 +20,14 @@ type OnBackupSizeReport = (reportInfo: string) => void
 | --- | --- | --- | --- |
 | reportInfo | string | 是 | 框架扫描到的应用待备份数据量信息，为JSON格式字符串。 |
 
+**示例**
+
+```TypeScript
+import { backup } from '@kit.CoreFileKit';
+
+onBackupSizeReport: (OnBackupSizeReport: backup.OnBackupSizeReport) => {
+  console.info('dataSizeCallback success');
+  console.info('dataSizeCallback report : ' + OnBackupSizeReport);
+}
+```
+

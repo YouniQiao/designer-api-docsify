@@ -88,44 +88,6 @@ function nfcTechDemo() {
 }
 ```
 
-## authenticateSector
-
-```TypeScript
-authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean, callback: AsyncCallback<void>): void
-```
-
-Authenticates a sector using a key. The sector can be accessed only after the authentication is successful. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.NFC_TAG
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-MifareClassicTag-authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean, callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Communication.NFC.Tag
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sectorIndex | int | Yes | Index of the sector to authenticate. The sector indexes start from **0**. |
-| key | int[] | Yes | Key (6 bytes) used for sector authentication. |
-| isKeyA | boolean | Yes | Whether the key is key A. The value **true** indicates key A, and **false** indicates key B. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -156,6 +118,46 @@ function nfcTechDemo() {
     }
 }
 ```
+
+## authenticateSector
+
+```TypeScript
+authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean, callback: AsyncCallback<void>): void
+```
+
+Authenticates a sector using a key. The sector can be accessed only after the authentication is successful. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.NFC_TAG
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MifareClassicTag-authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.NFC.Tag
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sectorIndex | int | Yes | Index of the sector to authenticate. The sector indexes start from **0**. |
+| key | int[] | Yes | Key (6 bytes) used for sector authentication. |
+| isKeyA | boolean | Yes | Whether the key is key A. The value **true** indicates key A, and **false** indicates key B. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+See [authenticateSector](#authenticatesector)
 
 ## decrementBlock
 
@@ -228,43 +230,6 @@ function nfcTechDemo() {
 }
 ```
 
-## decrementBlock
-
-```TypeScript
-decrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void
-```
-
-Decrements a block with the specified value. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.NFC_TAG
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-MifareClassicTag-decrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-decrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Communication.NFC.Tag
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| blockIndex | int | Yes | Index of the block to increment. The block indexes start from **0**. |
-| value | int | Yes | Block data to decrement. The value cannot be a negative number. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -296,6 +261,45 @@ function nfcTechDemo() {
     }
 }
 ```
+
+## decrementBlock
+
+```TypeScript
+decrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void
+```
+
+Decrements a block with the specified value. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.NFC_TAG
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MifareClassicTag-decrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-decrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.NFC.Tag
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| blockIndex | int | Yes | Index of the block to increment. The block indexes start from **0**. |
+| value | int | Yes | Block data to decrement. The value cannot be a negative number. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+See [decrementBlock](#decrementblock)
 
 ## getBlockCountInSector
 
@@ -538,6 +542,24 @@ Obtains the type of this MIFARE Classic tag.
 | --- | --- |
 | tag.MifareClassicType | Type of the MIFARE Classic tag obtained. |
 
+**Examples**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain the correct MIFARE Classic tag by using the tag.TagInfo API in @ohos.nfc.tag.
+let getType : tag.MifareClassicType = mifareClassic.getType();
+console.info("mifareClassic getType: " + getType);
+```
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain the correct MIFARE Ultralight tag by using the tag.TagInfo API in @ohos.nfc.tag.
+let getType : tag.MifareUltralightType = mifareClassic.getType();
+console.info("mifareUltralight getType: " + getType);
+```
+
 ## incrementBlock
 
 ```TypeScript
@@ -609,43 +631,6 @@ function nfcTechDemo() {
 }
 ```
 
-## incrementBlock
-
-```TypeScript
-incrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void
-```
-
-Increments a block with the specified value and saves the result in a buffer for internal transmission. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.NFC_TAG
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-MifareClassicTag-incrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-incrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Communication.NFC.Tag
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| blockIndex | int | Yes | Index of the block to increment. The block indexes start from **0**. |
-| value | int | Yes | Block data to increment. The value cannot be a negative number. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -676,6 +661,45 @@ function nfcTechDemo() {
     }
 }
 ```
+
+## incrementBlock
+
+```TypeScript
+incrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void
+```
+
+Increments a block with the specified value and saves the result in a buffer for internal transmission. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.NFC_TAG
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MifareClassicTag-incrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-incrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.NFC.Tag
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| blockIndex | int | Yes | Index of the block to increment. The block indexes start from **0**. |
+| value | int | Yes | Block data to increment. The value cannot be a negative number. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+See [incrementBlock](#incrementblock)
 
 ## isEmulatedTag
 
@@ -779,42 +803,6 @@ function nfcTechDemo() {
 }
 ```
 
-## readSingleBlock
-
-```TypeScript
-readSingleBlock(blockIndex: int, callback: AsyncCallback<int[]>): void
-```
-
-Reads a block (16 bytes) on this tag. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.NFC_TAG
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-MifareClassicTag-readSingleBlock(blockIndex: int, callback: AsyncCallback<int[]>): void--><!--Device-MifareClassicTag-readSingleBlock(blockIndex: int, callback: AsyncCallback<int[]>): void-End-->
-
-**System capability:** SystemCapability.Communication.NFC.Tag
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| blockIndex | int | Yes | Index of the block to read. The block indexes start from **0**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | Yes | Callback used to return the block data read. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -844,6 +832,44 @@ function nfcTechDemo() {
     }
 }
 ```
+
+## readSingleBlock
+
+```TypeScript
+readSingleBlock(blockIndex: int, callback: AsyncCallback<int[]>): void
+```
+
+Reads a block (16 bytes) on this tag. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.NFC_TAG
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MifareClassicTag-readSingleBlock(blockIndex: int, callback: AsyncCallback<int[]>): void--><!--Device-MifareClassicTag-readSingleBlock(blockIndex: int, callback: AsyncCallback<int[]>): void-End-->
+
+**System capability:** SystemCapability.Communication.NFC.Tag
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| blockIndex | int | Yes | Index of the block to read. The block indexes start from **0**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | Yes | Callback used to return the block data read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+See [readSingleBlock](#readsingleblock)
 
 ## restoreFromBlock
 
@@ -914,42 +940,6 @@ function nfcTechDemo() {
 }
 ```
 
-## restoreFromBlock
-
-```TypeScript
-restoreFromBlock(blockIndex: int, callback: AsyncCallback<void>): void
-```
-
-Restores data in the temporary register from a block. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.NFC_TAG
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-MifareClassicTag-restoreFromBlock(blockIndex: int, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-restoreFromBlock(blockIndex: int, callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Communication.NFC.Tag
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| blockIndex | int | Yes | Index of the destination block. The value starts form **0**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -979,6 +969,44 @@ function nfcTechDemo() {
     }
 }
 ```
+
+## restoreFromBlock
+
+```TypeScript
+restoreFromBlock(blockIndex: int, callback: AsyncCallback<void>): void
+```
+
+Restores data in the temporary register from a block. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.NFC_TAG
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MifareClassicTag-restoreFromBlock(blockIndex: int, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-restoreFromBlock(blockIndex: int, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.NFC.Tag
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| blockIndex | int | Yes | Index of the destination block. The value starts form **0**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+See [restoreFromBlock](#restorefromblock)
 
 ## transferToBlock
 
@@ -1049,42 +1077,6 @@ function nfcTechDemo() {
 }
 ```
 
-## transferToBlock
-
-```TypeScript
-transferToBlock(blockIndex: int, callback: AsyncCallback<void>): void
-```
-
-Transfers data from the temporary register to a block. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.NFC_TAG
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-MifareClassicTag-transferToBlock(blockIndex: int, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-transferToBlock(blockIndex: int, callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Communication.NFC.Tag
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| blockIndex | int | Yes | Index of the destination block. The value starts form **0**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1114,6 +1106,44 @@ function nfcTechDemo() {
     }
 }
 ```
+
+## transferToBlock
+
+```TypeScript
+transferToBlock(blockIndex: int, callback: AsyncCallback<void>): void
+```
+
+Transfers data from the temporary register to a block. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.NFC_TAG
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MifareClassicTag-transferToBlock(blockIndex: int, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-transferToBlock(blockIndex: int, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.NFC.Tag
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| blockIndex | int | Yes | Index of the destination block. The value starts form **0**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+See [transferToBlock](#transfertoblock)
 
 ## writeSingleBlock
 
@@ -1187,43 +1217,6 @@ function nfcTechDemo() {
 }
 ```
 
-## writeSingleBlock
-
-```TypeScript
-writeSingleBlock(blockIndex: int, data: int[], callback: AsyncCallback<void>): void
-```
-
-Writes data to a block on this tag. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.NFC_TAG
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-MifareClassicTag-writeSingleBlock(blockIndex: int, data: int[], callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-writeSingleBlock(blockIndex: int, data: int[], callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Communication.NFC.Tag
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| blockIndex | int | Yes | Index of the block to write. The block indexes start from **0**. |
-| data | int[] | Yes | 16-byte data to write. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1255,4 +1248,43 @@ function nfcTechDemo() {
     }
 }
 ```
+
+## writeSingleBlock
+
+```TypeScript
+writeSingleBlock(blockIndex: int, data: int[], callback: AsyncCallback<void>): void
+```
+
+Writes data to a block on this tag. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.NFC_TAG
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MifareClassicTag-writeSingleBlock(blockIndex: int, data: int[], callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-writeSingleBlock(blockIndex: int, data: int[], callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.NFC.Tag
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| blockIndex | int | Yes | Index of the block to write. The block indexes start from **0**. |
+| data | int[] | Yes | 16-byte data to write. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+See [writeSingleBlock](#writesingleblock)
 

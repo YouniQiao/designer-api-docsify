@@ -263,6 +263,46 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
+let osAccountLocalId: number = 100;
+try {
+  subProfileManager.getOsAccountForegroundSubProfileId(osAccountLocalId).then((subProfileId: number) => {
+    console.info('getOsAccountForegroundSubProfileId successfully, subProfileId: ' + subProfileId);
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountForegroundSubProfileId failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountForegroundSubProfileId exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
+let osAccountLocalId: int = 100;
+try {
+  subProfileManager.getOsAccountForegroundSubProfileId(osAccountLocalId).then((subProfileId: int) => {
+    console.info('getOsAccountForegroundSubProfileId successfully, subProfileId: ' + subProfileId);
+  }).catch((err: Error) => {
+    console.error(`getOsAccountForegroundSubProfileId failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountForegroundSubProfileId exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## getOsAccountForegroundSubProfileId
 
 ```TypeScript
@@ -304,45 +344,7 @@ getOsAccountForegroundSubProfileId(osAccountLocalId: int): Promise<int>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let osAccountLocalId: number = 100;
-try {
-  subProfileManager.getOsAccountForegroundSubProfileId(osAccountLocalId).then((subProfileId: number) => {
-    console.info('getOsAccountForegroundSubProfileId successfully, subProfileId: ' + subProfileId);
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountForegroundSubProfileId failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountForegroundSubProfileId exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let osAccountLocalId: int = 100;
-try {
-  subProfileManager.getOsAccountForegroundSubProfileId(osAccountLocalId).then((subProfileId: int) => {
-    console.info('getOsAccountForegroundSubProfileId successfully, subProfileId: ' + subProfileId);
-  }).catch((err: Error) => {
-    console.error(`getOsAccountForegroundSubProfileId failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountForegroundSubProfileId exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getOsAccountForegroundSubProfileId](#getosaccountforegroundsubprofileid)
 
 ## getOsAccountLocalIdForSubProfile
 
@@ -507,6 +509,48 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
+let osAccountLocalId: number = 100;
+let subProfileId: number = 100001;
+try {
+  subProfileManager.getOsAccountSubProfile(osAccountLocalId, subProfileId).then((subProfile: osAccount.OsAccountSubProfile) => {
+    console.info('getOsAccountSubProfile successfully, subProfile: ' + JSON.stringify(subProfile));
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
+let osAccountLocalId: int = 100;
+let subProfileId: int = 100001;
+try {
+  subProfileManager.getOsAccountSubProfile(osAccountLocalId, subProfileId).then((subProfile: osAccount.OsAccountSubProfile) => {
+    console.info('getOsAccountSubProfile successfully, subProfile: ' + JSON.stringify(subProfile));
+  }).catch((err: Error) => {
+    console.error(`getOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## getOsAccountSubProfile
 
 ```TypeScript
@@ -551,47 +595,7 @@ getOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<OsAcco
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let osAccountLocalId: number = 100;
-let subProfileId: number = 100001;
-try {
-  subProfileManager.getOsAccountSubProfile(osAccountLocalId, subProfileId).then((subProfile: osAccount.OsAccountSubProfile) => {
-    console.info('getOsAccountSubProfile successfully, subProfile: ' + JSON.stringify(subProfile));
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let osAccountLocalId: int = 100;
-let subProfileId: int = 100001;
-try {
-  subProfileManager.getOsAccountSubProfile(osAccountLocalId, subProfileId).then((subProfile: osAccount.OsAccountSubProfile) => {
-    console.info('getOsAccountSubProfile successfully, subProfile: ' + JSON.stringify(subProfile));
-  }).catch((err: Error) => {
-    console.error(`getOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getOsAccountSubProfile](#getosaccountsubprofile)
 
 ## getOsAccountSubProfileIds
 
@@ -667,6 +671,46 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
+let osAccountLocalId: number = 100;
+try {
+  subProfileManager.getOsAccountSubProfileIds(osAccountLocalId).then((subProfileIds: number[]) => {
+    console.info('getOsAccountSubProfileIds successfully, subProfileIds: ' + JSON.stringify(subProfileIds));
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountSubProfileIds failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountSubProfileIds exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
+let osAccountLocalId: int = 100;
+try {
+  subProfileManager.getOsAccountSubProfileIds(osAccountLocalId).then((subProfileIds: int[]) => {
+    console.info('getOsAccountSubProfileIds successfully, subProfileIds: ' + JSON.stringify(subProfileIds));
+  }).catch((err: Error) => {
+    console.error(`getOsAccountSubProfileIds failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountSubProfileIds exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## getOsAccountSubProfileIds
 
 ```TypeScript
@@ -710,45 +754,7 @@ getOsAccountSubProfileIds(osAccountLocalId: int): Promise<int[]>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let osAccountLocalId: number = 100;
-try {
-  subProfileManager.getOsAccountSubProfileIds(osAccountLocalId).then((subProfileIds: number[]) => {
-    console.info('getOsAccountSubProfileIds successfully, subProfileIds: ' + JSON.stringify(subProfileIds));
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountSubProfileIds failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountSubProfileIds exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let osAccountLocalId: int = 100;
-try {
-  subProfileManager.getOsAccountSubProfileIds(osAccountLocalId).then((subProfileIds: int[]) => {
-    console.info('getOsAccountSubProfileIds successfully, subProfileIds: ' + JSON.stringify(subProfileIds));
-  }).catch((err: Error) => {
-    console.error(`getOsAccountSubProfileIds failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountSubProfileIds exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getOsAccountSubProfileIds](#getosaccountsubprofileids)
 
 ## offOsAccountSubProfileEvent
 

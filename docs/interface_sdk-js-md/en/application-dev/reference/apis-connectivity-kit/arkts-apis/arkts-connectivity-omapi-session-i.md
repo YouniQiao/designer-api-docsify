@@ -52,6 +52,20 @@ try {
 }
 ```
 
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seChannel : omapi.Channel;
+
+// Initialize seChannel before using it.
+try {
+    seChannel.close();
+} catch (exception) {
+    hilog.error(0x0000, 'testTag', 'close exception %{public}s', JSON.stringify(exception));
+}
+```
+
 ## closeChannels
 
 ```TypeScript
@@ -235,6 +249,21 @@ try {
 }
 ```
 
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seChannel : omapi.Channel;
+
+// Initialize seChannel before using it.
+try {
+    let isClosed = seChannel.isClosed();
+    hilog.info(0x0000, 'testTag', 'isClosed = %{public}s', JSON.stringify(isClosed));
+} catch (exception) {
+    hilog.error(0x0000, 'testTag', 'isClosed exception %{public}s', JSON.stringify(exception));
+}
+```
+
 ## openBasicChannel
 
 ```TypeScript
@@ -301,40 +330,6 @@ function secureElementDemo() {
 }
 ```
 
-## openBasicChannel
-
-```TypeScript
-openBasicChannel(aid: number[], callback: AsyncCallback<Channel>): void
-```
-
-Opens a basic channel, as defined in ISO/IEC 7816-4. If the SE cannot provide the basic channel or the application does not have the permission to access the SE, null is returned. This API uses an asynchronous callback to return the result.
-
-**Since:** 10
-
-<!--Device-Session-openBasicChannel(aid: number[], callback: AsyncCallback<Channel>): void--><!--Device-Session-openBasicChannel(aid: number[], callback: AsyncCallback<Channel>): void-End-->
-
-**System capability:** SystemCapability.Communication.SecureElement
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| aid | number[] | Yes | AID of the Applet to be selected on this channel as a byte array, or an empty array if no Applet is to be selected. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | Callback used to return the basic channel instance obtained. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
-| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) | NoSuchElementError, the AID on the SE is not available or cannot be selected. |
-| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
-| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
-
-**Examples**
-
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { omapi } from '@kit.ConnectivityKit';
@@ -363,6 +358,100 @@ function secureElementDemo() {
     }
 }
 ```
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seSession : omapi.Session;
+let seChannel : omapi.Channel;
+let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
+let p2 : number = 0x00;
+
+// Initialize seSession before using it.
+function secureElementDemo() {
+    try {
+        // Set the AID of the application selected on the channel.
+        seSession.openBasicChannel(aidArray, p2).then((data) => {
+            seChannel = data;
+        }).catch((error : BusinessError)=> {
+            hilog.error(0x0000, 'testTag', 'openBasicChannel error %{public}s', JSON.stringify(error));
+        });
+    } catch (exception) {
+        hilog.error(0x0000, 'testTag', 'openBasicChannel exception %{public}s', JSON.stringify(exception));
+    }
+    if (seChannel == undefined) {
+        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
+        return;
+    }
+}
+```
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seSession : omapi.Session;
+let seChannel : omapi.Channel;
+let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
+let p2 : number = 0x00;
+
+// Initialize seSession before using it.
+function secureElementDemo() {
+    try {
+        // Set the AID of the application selected on the channel.
+        seSession.openBasicChannel(aidArray, p2, (error, data) => {
+            if (error) {
+                hilog.error(0x0000, 'testTag', 'openBasicChannel error %{public}s', JSON.stringify(error));
+            } else {
+                seChannel = data;
+            }
+        });
+    } catch (exception) {
+        hilog.error(0x0000, 'testTag', 'openBasicChannel exception %{public}s', JSON.stringify(exception));
+    }
+    if (seChannel == undefined) {
+        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
+        return;
+    }
+}
+```
+
+## openBasicChannel
+
+```TypeScript
+openBasicChannel(aid: number[], callback: AsyncCallback<Channel>): void
+```
+
+Opens a basic channel, as defined in ISO/IEC 7816-4. If the SE cannot provide the basic channel or the application does not have the permission to access the SE, null is returned. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+<!--Device-Session-openBasicChannel(aid: number[], callback: AsyncCallback<Channel>): void--><!--Device-Session-openBasicChannel(aid: number[], callback: AsyncCallback<Channel>): void-End-->
+
+**System capability:** SystemCapability.Communication.SecureElement
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| aid | number[] | Yes | AID of the Applet to be selected on this channel as a byte array, or an empty array if no Applet is to be selected. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | Callback used to return the basic channel instance obtained. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
+| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) | NoSuchElementError, the AID on the SE is not available or cannot be selected. |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
+
+**Examples**
+
+See [openBasicChannel](#openbasicchannel)
 
 ## openBasicChannel
 
@@ -404,33 +493,7 @@ Opens a basic channel, as defined in ISO/IEC 7816-4. If the SE cannot provide th
 
 **Examples**
 
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-let seChannel : omapi.Channel;
-let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
-let p2 : number = 0x00;
-
-// Initialize seSession before using it.
-function secureElementDemo() {
-    try {
-        // Set the AID of the application selected on the channel.
-        seSession.openBasicChannel(aidArray, p2).then((data) => {
-            seChannel = data;
-        }).catch((error : BusinessError)=> {
-            hilog.error(0x0000, 'testTag', 'openBasicChannel error %{public}s', JSON.stringify(error));
-        });
-    } catch (exception) {
-        hilog.error(0x0000, 'testTag', 'openBasicChannel exception %{public}s', JSON.stringify(exception));
-    }
-    if (seChannel == undefined) {
-        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
-        return;
-    }
-}
-```
+See [openBasicChannel](#openbasicchannel)
 
 ## openBasicChannel
 
@@ -452,7 +515,7 @@ Opens a basic channel, as defined in ISO/IEC 7816-4. If the SE cannot provide th
 | --- | --- | --- | --- |
 | aid | number[] | Yes | AID of the Applet to be selected on this channel as a byte array, or an empty array if no Applet is to be selected. |
 | p2 | number | Yes | P2 parameter of the **SELECT APDU** command executed on this channel. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | Callback used to return the basic channel instance obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | Callback used to return the basic channel instance obtained. |
 
 **Error codes:**
 
@@ -467,35 +530,7 @@ Opens a basic channel, as defined in ISO/IEC 7816-4. If the SE cannot provide th
 
 **Examples**
 
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-let seChannel : omapi.Channel;
-let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
-let p2 : number = 0x00;
-
-// Initialize seSession before using it.
-function secureElementDemo() {
-    try {
-        // Set the AID of the application selected on the channel.
-        seSession.openBasicChannel(aidArray, p2, (error, data) => {
-            if (error) {
-                hilog.error(0x0000, 'testTag', 'openBasicChannel error %{public}s', JSON.stringify(error));
-            } else {
-                seChannel = data;
-            }
-        });
-    } catch (exception) {
-        hilog.error(0x0000, 'testTag', 'openBasicChannel exception %{public}s', JSON.stringify(exception));
-    }
-    if (seChannel == undefined) {
-        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
-        return;
-    }
-}
-```
+See [openBasicChannel](#openbasicchannel)
 
 ## openLogicalChannel
 
@@ -563,40 +598,6 @@ function secureElementDemo() {
 }
 ```
 
-## openLogicalChannel
-
-```TypeScript
-openLogicalChannel(aid: number[], callback: AsyncCallback<Channel>): void
-```
-
-Opens a logical channel, as defined in ISO/IEC 7816-4. If the SE cannot provide the logical channel or the application does not have the permission to access the SE, null is returned. This API uses an asynchronous callback to return the result.
-
-**Since:** 10
-
-<!--Device-Session-openLogicalChannel(aid: number[], callback: AsyncCallback<Channel>): void--><!--Device-Session-openLogicalChannel(aid: number[], callback: AsyncCallback<Channel>): void-End-->
-
-**System capability:** SystemCapability.Communication.SecureElement
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| aid | number[] | Yes | AID of the Applet to be selected on this channel as a byte array, or an empty array if no Applet is to be selected. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | Callback used to return the logical channel instance obtained. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
-| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) | NoSuchElementError, the AID on the SE is not available or cannot be selected or a logical channel is already open to a non-multi-selectable applet. |
-| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
-| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
-
-**Examples**
-
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { omapi } from '@kit.ConnectivityKit';
@@ -625,6 +626,100 @@ function secureElementDemo() {
     }
 }
 ```
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seSession : omapi.Session;
+let seChannel : omapi.Channel;
+let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
+let p2 : number = 0x00;
+
+// Initialize seSession before using it.
+function secureElementDemo() {
+    try {
+        // Set the AID of the application selected on the channel.
+        seSession.openLogicalChannel(aidArray, p2).then((data) => {
+            seChannel = data;
+        }).catch((error : BusinessError)=> {
+            hilog.error(0x0000, 'testTag', 'openLogicalChannel error %{public}s', JSON.stringify(error));
+        });
+    } catch (exception) {
+        hilog.error(0x0000, 'testTag', 'openLogicalChannel exception %{public}s', JSON.stringify(exception));
+    }
+    if (seChannel == undefined) {
+        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
+        return;
+    }
+}
+```
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seSession : omapi.Session;
+let seChannel : omapi.Channel;
+let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
+let p2 : number = 0x00;
+
+// Initialize seSession before using it.
+function secureElementDemo() {
+    try {
+    // Set the AID of the application selected on the channel.
+        seSession.openLogicalChannel(aidArray, p2, (error, data) => {
+            if (error) {
+                hilog.error(0x0000, 'testTag', 'openLogicalChannel error %{public}s', JSON.stringify(error));
+            } else {
+                seChannel = data;
+            }
+        });
+    } catch (exception) {
+        hilog.error(0x0000, 'testTag', 'openLogicalChannel exception %{public}s', JSON.stringify(exception));
+    }
+    if (seChannel == undefined) {
+        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
+        return;
+    }
+}
+```
+
+## openLogicalChannel
+
+```TypeScript
+openLogicalChannel(aid: number[], callback: AsyncCallback<Channel>): void
+```
+
+Opens a logical channel, as defined in ISO/IEC 7816-4. If the SE cannot provide the logical channel or the application does not have the permission to access the SE, null is returned. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+<!--Device-Session-openLogicalChannel(aid: number[], callback: AsyncCallback<Channel>): void--><!--Device-Session-openLogicalChannel(aid: number[], callback: AsyncCallback<Channel>): void-End-->
+
+**System capability:** SystemCapability.Communication.SecureElement
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| aid | number[] | Yes | AID of the Applet to be selected on this channel as a byte array, or an empty array if no Applet is to be selected. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | Callback used to return the logical channel instance obtained. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
+| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) | NoSuchElementError, the AID on the SE is not available or cannot be selected or a logical channel is already open to a non-multi-selectable applet. |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
+
+**Examples**
+
+See [openLogicalChannel](#openlogicalchannel)
 
 ## openLogicalChannel
 
@@ -666,33 +761,7 @@ Opens a logical channel, as defined in ISO/IEC 7816-4. If the SE cannot provide 
 
 **Examples**
 
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-let seChannel : omapi.Channel;
-let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
-let p2 : number = 0x00;
-
-// Initialize seSession before using it.
-function secureElementDemo() {
-    try {
-        // Set the AID of the application selected on the channel.
-        seSession.openLogicalChannel(aidArray, p2).then((data) => {
-            seChannel = data;
-        }).catch((error : BusinessError)=> {
-            hilog.error(0x0000, 'testTag', 'openLogicalChannel error %{public}s', JSON.stringify(error));
-        });
-    } catch (exception) {
-        hilog.error(0x0000, 'testTag', 'openLogicalChannel exception %{public}s', JSON.stringify(exception));
-    }
-    if (seChannel == undefined) {
-        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
-        return;
-    }
-}
-```
+See [openLogicalChannel](#openlogicalchannel)
 
 ## openLogicalChannel
 
@@ -714,7 +783,7 @@ Opens a logical channel, as defined in ISO/IEC 7816-4. If the SE cannot provide 
 | --- | --- | --- | --- |
 | aid | number[] | Yes | AID of the Applet to be selected on this channel as a byte array, or an empty array if no Applet is to be selected. |
 | p2 | number | Yes | P2 parameter of the **SELECT APDU** command executed on this channel. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | Callback used to return the logical channel instance obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | Callback used to return the logical channel instance obtained. |
 
 **Error codes:**
 
@@ -729,33 +798,5 @@ Opens a logical channel, as defined in ISO/IEC 7816-4. If the SE cannot provide 
 
 **Examples**
 
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-let seChannel : omapi.Channel;
-let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
-let p2 : number = 0x00;
-
-// Initialize seSession before using it.
-function secureElementDemo() {
-    try {
-    // Set the AID of the application selected on the channel.
-        seSession.openLogicalChannel(aidArray, p2, (error, data) => {
-            if (error) {
-                hilog.error(0x0000, 'testTag', 'openLogicalChannel error %{public}s', JSON.stringify(error));
-            } else {
-                seChannel = data;
-            }
-        });
-    } catch (exception) {
-        hilog.error(0x0000, 'testTag', 'openLogicalChannel exception %{public}s', JSON.stringify(exception));
-    }
-    if (seChannel == undefined) {
-        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
-        return;
-    }
-}
-```
+See [openLogicalChannel](#openlogicalchannel)
 

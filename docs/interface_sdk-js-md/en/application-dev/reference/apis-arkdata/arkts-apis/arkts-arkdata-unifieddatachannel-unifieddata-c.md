@@ -98,6 +98,10 @@ Defines a constructor used to create a **UnifiedData** object with a data record
 **Examples**
 
 ```TypeScript
+let unifiedData = new unifiedDataChannel.UnifiedData();
+```
+
+```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
 let plainText : uniformDataStruct.PlainText = {
   uniformDataType: 'general.plain-text',
@@ -106,6 +110,37 @@ let plainText : uniformDataStruct.PlainText = {
 }
 let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
 let unifiedData = new unifiedDataChannel.UnifiedData(text);
+```
+
+```TypeScript
+let unifiedRecord = new unifiedDataChannel.UnifiedRecord();
+```
+
+```TypeScript
+import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+import { image } from '@kit.ImageKit';
+
+let hyperlink : uniformDataStruct.Hyperlink = {
+  uniformDataType:'general.hyperlink',
+  url : 'www.XXX.com',
+  description : 'This is the description of the hyperlink'
+}
+let hyperlinkRecord = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.HYPERLINK, hyperlink);
+
+let plainText : uniformDataStruct.PlainText = {
+  uniformDataType: 'general.plain-text',
+  textContent : 'This is a plain text example',
+  abstract : 'This is abstract'
+}
+let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
+
+let arrayBuffer = new ArrayBuffer(4 * 200 * 200);
+let opt : image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 }, alphaType: 3 };
+let pixelMap : uniformDataStruct.PixelMap = {
+  uniformDataType : 'openharmony.pixel-map',
+  pixelMap : image.createPixelMapSync(arrayBuffer, opt)
+}
+let pixelMapRecord = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.OPENHARMONY_PIXEL_MAP, pixelMap);
 ```
 
 ## constructor
@@ -128,9 +163,7 @@ Defines a constructor used to create a **UnifiedData** object.
 
 **Examples**
 
-```TypeScript
-let unifiedData = new unifiedDataChannel.UnifiedData();
-```
+See [constructor](#constructor)
 
 ## getRecords
 
@@ -237,6 +270,48 @@ let link = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDat
 unifiedData.addRecord(link);
 
 let types = unifiedData.getTypes();
+```
+
+```TypeScript
+import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+
+let fileUriDetails : Record<string, string> = {
+  'attr1': 'value1',
+  'attr2': 'value2'
+}
+let fileUri : uniformDataStruct.FileUri = {
+  uniformDataType : 'general.file-uri',
+  oriUri : 'file://data/image/1.png',
+  fileType : 'general.image',
+  details : fileUriDetails
+}
+let formDetails : Record<string, string> = {
+  'attr1': 'value1',
+  'attr2': 'value2'
+}
+let form : uniformDataStruct.Form = {
+  uniformDataType : 'openharmony.form',
+  formId : 1,
+  formName : 'form',
+  bundleName : 'com.xx.app',
+  abilityName : 'ability',
+  module : 'module',
+  details : formDetails
+}
+
+let unifiedData = new unifiedDataChannel.UnifiedData();
+let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.OPENHARMONY_FORM, form);
+record.addEntry(uniformTypeDescriptor.UniformDataType.FILE_URI, fileUri);
+unifiedData.addRecord(record);
+
+let records = unifiedData.getRecords();
+for (let i = 0; i < records.length; i++) {
+  let unifiedDataRecord = records[i] as unifiedDataChannel.UnifiedRecord;
+  let types : Array<string> = unifiedDataRecord.getTypes();
+  if (types.includes(uniformTypeDescriptor.UniformDataType.OPENHARMONY_FORM)) {
+    console.info(`Types include: ${uniformTypeDescriptor.UniformDataType.OPENHARMONY_FORM}`);
+  }
+}
 ```
 
 ## hasType

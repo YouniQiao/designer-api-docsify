@@ -66,7 +66,7 @@ completionHandler?: CompletionHandlerForAbilityStartCallback
 
 Callback invoked when the ability of a specified type is started.
 
-**Type:** [CompletionHandlerForAbilityStartCallback](arkts-ability-appabilitycompletionhandlerforabilitystartcallback-completionhandlerforabilitystartcallback-c.md)
+**Type:** [CompletionHandlerForAbilityStartCallback](arkts-ability-app-ability-completionhandlerforabilitystartcallback-completionhandlerforabilitystartcallback-c.md)
 
 **Since:** 21
 

@@ -36,7 +36,7 @@ Provides grant uri permission for app
 | uri | string | Yes | uri |
 | bundleName | string | Yes | bundleName |
 | flag | wantConstant.Flags | Yes | wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION or wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |  |
 
 **Error codes:**
 
@@ -68,6 +68,51 @@ try {
 } catch (err) {
   let error: BusinessError = err as BusinessError;
   console.error("grantUriPermission failed with error:" + JSON.stringify(error));
+}
+```
+
+```TypeScript
+import { wantConstant } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri: string =
+  'file://docs/storage/Users/currentUser/Document/1.txt'; // You are advised to use the system API fileUri.getUriFromPath("Sandbox path") to generate a URI.;
+let bundleName: string = 'com.demo.test';
+try {
+  fileShare.grantUriPermission(uri, bundleName, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION |
+    wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION).then(() => {
+    console.info("grantUriPermission success!");
+  }).catch((error: BusinessError) => {
+    console.error("grantUriPermission failed with error:" + JSON.stringify(error));
+  });
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("grantUriPermission failed with error:" + JSON.stringify(error));
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileShare } from '@kit.CoreFileKit';
+
+async function grantUriPermissionExample() {
+  try {
+    let uri = "file://docs/storage/Users/currentUser/Documents/1.txt";
+    let policyInfo: fileShare.PolicyInfo = {
+      uri: uri,
+      operationMode: fileShare.OperationMode.CREATE_MODE | fileShare.OperationMode.READ_MODE,
+    };
+    let policies: Array<fileShare.PolicyInfo> = [policyInfo];
+
+    fileShare.grantUriPermission(policies, "com.example.myapplicationtest", 0).then(() => {
+    }).catch((err: BusinessError<Array<fileShare.PolicyErrorResult>>) => {
+      console.error("grantUriPermission failed. Code: " +
+      err.code + ", message: " + err.message);
+    });
+  }
+  catch (error) {
+    console.info('grantUriPermission error, Code: ' + error.code + ', message: ' + error.message);
+  }
 }
 ```
 
@@ -115,25 +160,7 @@ Provides grant uri permission for app
 
 **Examples**
 
-```TypeScript
-import { wantConstant } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri: string =
-  'file://docs/storage/Users/currentUser/Document/1.txt'; // You are advised to use the system API fileUri.getUriFromPath("Sandbox path") to generate a URI.;
-let bundleName: string = 'com.demo.test';
-try {
-  fileShare.grantUriPermission(uri, bundleName, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION |
-    wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION).then(() => {
-    console.info("grantUriPermission success!");
-  }).catch((error: BusinessError) => {
-    console.error("grantUriPermission failed with error:" + JSON.stringify(error));
-  });
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("grantUriPermission failed with error:" + JSON.stringify(error));
-}
-```
+See [grantUriPermission](#granturipermission)
 
 
 ## grantUriPermission
@@ -180,28 +207,5 @@ Grant URI permissions for an application.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileShare } from '@kit.CoreFileKit';
-
-async function grantUriPermissionExample() {
-  try {
-    let uri = "file://docs/storage/Users/currentUser/Documents/1.txt";
-    let policyInfo: fileShare.PolicyInfo = {
-      uri: uri,
-      operationMode: fileShare.OperationMode.CREATE_MODE | fileShare.OperationMode.READ_MODE,
-    };
-    let policies: Array<fileShare.PolicyInfo> = [policyInfo];
-
-    fileShare.grantUriPermission(policies, "com.example.myapplicationtest", 0).then(() => {
-    }).catch((err: BusinessError<Array<fileShare.PolicyErrorResult>>) => {
-      console.error("grantUriPermission failed. Code: " +
-      err.code + ", message: " + err.message);
-    });
-  }
-  catch (error) {
-    console.info('grantUriPermission error, Code: ' + error.code + ', message: ' + error.message);
-  }
-}
-```
+See [grantUriPermission](#granturipermission)
 

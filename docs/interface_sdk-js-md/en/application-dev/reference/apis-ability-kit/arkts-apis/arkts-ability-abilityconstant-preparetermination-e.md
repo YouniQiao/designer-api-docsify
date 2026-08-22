@@ -1,6 +1,6 @@
 # PrepareTermination
 
-Enumerates the actions triggered when an application is closed by the user. You can use it in [onPrepareTermination](arkts-ability-appabilityabilitystage-abilitystage-c.md#onpreparetermination) or [onPrepareTerminationAsync](arkts-ability-appabilityabilitystage-abilitystage-c.md#onprepareterminationasync) of [AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md).
+Enumerates the actions triggered when an application is closed by the user. You can use it in [onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onpreparetermination) or [onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync) of [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md).
 
 **Since:** 23
 
@@ -43,4 +43,17 @@ Cancels the termination action.
 <!--Device-PrepareTermination-CANCEL = 1--><!--Device-PrepareTermination-CANCEL = 1-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+import { AbilityConstant, AbilityStage } from '@kit.AbilityKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  onPrepareTermination(): AbilityConstant.PrepareTermination {
+    console.info('MyAbilityStage.onPrepareTermination is called');
+    return AbilityConstant.PrepareTermination.CANCEL;
+  }
+}
+```
 

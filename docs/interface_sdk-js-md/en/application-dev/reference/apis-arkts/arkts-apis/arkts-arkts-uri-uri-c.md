@@ -595,6 +595,10 @@ Obtains the first value of a given key from the query component of this URI. If 
 | --- | --- |
 | string \| null | Return decoded value, If no corresponding value is found return a null object. |
 
+**Examples**
+
+See [getQueryValue](#getqueryvalue)
+
 ## getQueryValues
 
 ```TypeScript

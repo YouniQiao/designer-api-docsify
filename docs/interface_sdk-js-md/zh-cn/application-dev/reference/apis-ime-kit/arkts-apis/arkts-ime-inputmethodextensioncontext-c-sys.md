@@ -87,7 +87,7 @@ connectAbility(want: Want, options: ConnectOptions): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 用于指定目标ServiceExtensionAbility的Want类型信息。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 用于指定目标ServiceExtensionAbility的Want类型信息。 |
 | options | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-connectoptions-i.md) | 是 | 连接回调，用于返回连接成功、中断或失败的信息。 |
 
 **返回值：**
@@ -138,7 +138,7 @@ connectAbilityWithAccount(want: Want, accountId: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 用于指定目标ServiceExtensionAbility的Want类型信息。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 用于指定目标ServiceExtensionAbility的Want类型信息。 |
 | accountId | number | 是 | 目标系统账户的ID。 |
 
 **返回值：**
@@ -194,7 +194,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 用于指定目标ServiceExtensionAbility的Want类型信息。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 用于指定目标ServiceExtensionAbility的Want类型信息。 |
 | options | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-connectoptions-i.md) | 是 | 连接回调，用于返回连接成功、中断或失败的信息。. |
 
 **返回值：**
@@ -400,7 +400,7 @@ startAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 用于指定目标应用的Want类型信息。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 用于指定目标应用的Want类型信息。 |
 | accountId | number | 是 | 目标系统账户的ID。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当拉起目标应用成功时，err为undefined，否则为错误对象。 |
 
@@ -453,7 +453,7 @@ startAbilityWithAccount(want: Want, accountId: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 用于指定目标应用的Want类型信息。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 用于指定目标应用的Want类型信息。 |
 | accountId | number | 是 | 目标系统账户的ID。 |
 
 **返回值：**

@@ -65,3 +65,65 @@ Set a delegate used to receive the progress of the download triggered from WebDo
 | --- | --- | --- | --- |
 | delegate | [WebDownloadDelegate](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaddelegate-c.md) | 是 | Delegate used for download triggered from WebDownloadManager. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+

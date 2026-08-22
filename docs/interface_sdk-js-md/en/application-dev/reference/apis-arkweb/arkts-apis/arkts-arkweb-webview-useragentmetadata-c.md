@@ -36,6 +36,10 @@ Obtains the architecture type of the platform. If the corresponding [setArchitec
 | --- | --- |
 | string | Platform architecture type. |
 
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+
 ## getBitness
 
 ```TypeScript
@@ -57,6 +61,10 @@ Obtains the bitness type of the platform. If the corresponding [setBitness](../.
 | Type | Description |
 | --- | --- |
 | string | Bitness type of the platform. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## getBrandVersionList
 
@@ -80,6 +88,10 @@ Obtains the brand and version information list. If the corresponding [setBrandVe
 | --- | --- |
 | Array&lt;[UserAgentBrandVersion](../../apis-default/arkts-apis/arkts-webview-useragentbrandversion-c.md)&gt; | Brand and version information list. |
 
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+
 ## getFormFactors
 
 ```TypeScript
@@ -101,6 +113,10 @@ Obtains the device form factor information, such as phone and tablet. If the cor
 | Type | Description |
 | --- | --- |
 | Array&lt;[UserAgentFormFactor](../../apis-default/arkts-apis/arkts-webview-useragentformfactor-e.md)&gt; | Device form information. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## getFullVersion
 
@@ -124,6 +140,12 @@ Obtains the full version number. If the corresponding [setFullVersion](../../api
 | --- | --- |
 | string | Full version number. |
 
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+
 ## getMobile
 
 ```TypeScript
@@ -145,6 +167,10 @@ Obtains whether the device is a mobile device. If the corresponding [setMobile](
 | Type | Description |
 | --- | --- |
 | boolean | Whether the device is a mobile device. **true** means yes; **false** otherwise. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## getModel
 
@@ -168,6 +194,10 @@ Obtains the device model. If the corresponding [setModel](../../apis-default/ark
 | --- | --- |
 | string | Device model. |
 
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+
 ## getPlatform
 
 ```TypeScript
@@ -189,6 +219,10 @@ Obtains the operating system name. If the corresponding [setPlatform](../../apis
 | Type | Description |
 | --- | --- |
 | string | OS name. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## getPlatformVersion
 
@@ -212,6 +246,10 @@ Obtains the operating system version number. If the corresponding [setPlatformVe
 | --- | --- |
 | string | OS version. |
 
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+
 ## getWow64
 
 ```TypeScript
@@ -233,6 +271,10 @@ Obtains whether the binary file is running in 32-bit mode on 64-bit Windows. If 
 | Type | Description |
 | --- | --- |
 | boolean | Whether the binary file runs in 32-bit mode on a 64-bit Windows. **true** means yes; **false** otherwise. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## setArchitecture
 
@@ -256,6 +298,10 @@ Sets the architecture type of the platform.
 | --- | --- | --- | --- |
 | arch | string | Yes | Sec-CH-UA-Arch** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
 
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+
 ## setBitness
 
 ```TypeScript
@@ -277,6 +323,10 @@ Sets the bitness type of the platform.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bitness | string | Yes | Corresponds to the Sec-CH-UA-Bitness request header. If empty, the default value of ArkWeb is used. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## setBrandVersionList
 
@@ -300,6 +350,10 @@ Sets the brand and version information.
 | --- | --- | --- | --- |
 | brandVersionList | Array&lt;[UserAgentBrandVersion](../../apis-default/arkts-apis/arkts-webview-useragentbrandversion-c.md)&gt; | Yes | Sec-CH-UA-Full-Version-List** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
 
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+
 ## setFormFactors
 
 ```TypeScript
@@ -321,6 +375,10 @@ Sets the device form, such as the mobile phone or tablet.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formFactors | Array&lt;[UserAgentFormFactor](../../apis-default/arkts-apis/arkts-webview-useragentformfactor-e.md)&gt; | Yes | Sec-CH-UA-Form-Factor** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## setFullVersion
 
@@ -344,6 +402,12 @@ Sets the full version number.
 | --- | --- | --- | --- |
 | fullVersion | string | Yes | Sec-CH-UA-Full-Version** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
 
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+
 ## setMobile
 
 ```TypeScript
@@ -365,6 +429,10 @@ Sets whether the device is a mobile device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isMobile | boolean | Yes | Whether the device is a mobile device. Corresponds to the Sec-CH-UA-Mobile request header. The value true means the device is a mobile device, and false means the opposite. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## setModel
 
@@ -388,6 +456,10 @@ Sets the device model.
 | --- | --- | --- | --- |
 | model | string | Yes | Value of the Sec-CH-UA-Model request header. If empty, the default value of ArkWeb is used. |
 
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+
 ## setPlatform
 
 ```TypeScript
@@ -409,6 +481,10 @@ Sets the OS name.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | platform | string | Yes | Sec-CH-UA-Platform** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## setPlatformVersion
 
@@ -432,6 +508,10 @@ Sets the OS version.
 | --- | --- | --- | --- |
 | platformVersion | string | Yes | Sec-CH-UA-Platform-Version** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
 
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+
 ## setWow64
 
 ```TypeScript
@@ -453,4 +533,8 @@ Sets whether the binary file runs in 32-bit mode on a 64-bit Windows.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isWow64 | boolean | Yes | Corresponds to the Sec-CH-UA-WoW64 request header. Whether the binary file is running in 32-bit mode on 64-bit Windows. The value **true** means yes, and **false** means no. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 

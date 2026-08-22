@@ -504,6 +504,28 @@ Called when zooming has stopped.
 | --- | --- | --- | --- |
 | event | VoidCallback | Yes | Zoom stop callback. |
 
+## scrollable
+
+```TypeScript
+scrollable(value: ScrollDirection)
+```
+
+Sets the scrolling direction. The scroll offset is reset when this value is changed.
+
+**Since:** 7
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScrollAttribute-scrollable(value: ScrollDirection): ScrollAttribute--><!--Device-ScrollAttribute-scrollable(value: ScrollDirection): ScrollAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ScrollDirection](arkts-arkui-scrolldirection-e.md) | Yes | Scrolling direction.<br>Default value: &lt;em&gt;ScrollDirection.Vertical&lt;/em&gt; |
+
 ## scrollBar
 
 ```TypeScript
@@ -641,28 +663,6 @@ Sets the scroll snapping mode. During the snap animation, the scroll operation s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [ScrollSnapOptions](arkts-arkui-scrollsnapoptions-i.md) | Yes | Scroll snapping mode. |
-
-## scrollable
-
-```TypeScript
-scrollable(value: ScrollDirection)
-```
-
-Sets the scrolling direction. The scroll offset is reset when this value is changed.
-
-**Since:** 7
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ScrollAttribute-scrollable(value: ScrollDirection): ScrollAttribute--><!--Device-ScrollAttribute-scrollable(value: ScrollDirection): ScrollAttribute-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [ScrollDirection](arkts-arkui-scrolldirection-e.md) | Yes | Scrolling direction.<br>Default value: &lt;em&gt;ScrollDirection.Vertical&lt;/em&gt; |
 
 ## zoomScale
 

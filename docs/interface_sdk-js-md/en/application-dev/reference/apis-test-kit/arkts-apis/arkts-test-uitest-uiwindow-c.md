@@ -133,6 +133,17 @@ Obtains the bounds information of a window. This API uses a promise to return th
 
 ```TypeScript
 // xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  let rect = await button.getBounds();
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
@@ -214,6 +225,17 @@ Obtains the ID of the display to which a window belongs. This API uses a promise
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('TextInput'));
+  let displayId = await button.getDisplayId();
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -429,12 +451,42 @@ Checks whether a window is focused. This API uses a promise to return the result
 
 ```TypeScript
 // xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  if (await button.isFocused()) {
+    console.info('This button is focused');
+  } else {
+    console.info('This button is not focused');
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
   let window: UiWindow = await driver.findWindow({ actived: true });
   let focused = await window.isFocused();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  if (await button.isFocused()) {
+    console.info('This button is focused');
+  } else {
+    console.info('This button is not focused');
+  }
 }
 ```
 

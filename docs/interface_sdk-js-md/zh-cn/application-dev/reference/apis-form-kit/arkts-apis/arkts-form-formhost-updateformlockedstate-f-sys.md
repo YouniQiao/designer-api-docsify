@@ -51,3 +51,42 @@ function updateFormLockedState(formId: string, isLocked: boolean): Promise<void>
 | [16501001](../errorcode-form.md#16501001-卡片id不存在) | The ID of the form to be operated does not exist. |
 | [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288';
+let isLocked: boolean = true;
+
+try {
+  formHost.updateFormLockedState(formId, isLocked).then(() => {
+    console.info(`formHost updateFormLockedState success`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288';
+let isLocked: boolean = true;
+
+try {
+  formHost.updateFormLockedState(formId, isLocked).then(() => {
+    console.info(`formHost updateFormLockedState success`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+

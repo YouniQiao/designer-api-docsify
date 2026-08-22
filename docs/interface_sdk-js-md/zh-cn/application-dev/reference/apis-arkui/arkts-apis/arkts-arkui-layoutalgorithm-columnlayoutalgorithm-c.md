@@ -139,7 +139,7 @@ constructor(option?: ColumnLayoutAlgorithmOptions)
 
 装饰器类型：@Trace
 
-**类型：** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 24
 

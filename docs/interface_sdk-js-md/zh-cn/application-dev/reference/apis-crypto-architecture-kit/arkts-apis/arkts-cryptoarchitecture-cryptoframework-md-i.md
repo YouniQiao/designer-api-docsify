@@ -89,41 +89,6 @@ function mdByCallback() {
 }
 ```
 
-## digest
-
-```TypeScript
-digest(): Promise<DataBlob>
-```
-
-生成消息摘要。使用Promise异步回调。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Md-digest(): Promise<DataBlob>--><!--Device-Md-digest(): Promise<DataBlob>-End-->
-
-**系统能力：** 
-- API版本12+：SystemCapability.Security.CryptoFramework.MessageDigest
-- API版本9-11：SystemCapability.Security.CryptoFramework
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;DataBlob&gt; | Promise对象，返回摘要计算结果。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-
-**示例**
-
 ArkTS示例：
 
 ```TypeScript
@@ -222,6 +187,43 @@ export default {
     }
 };
 ```
+
+## digest
+
+```TypeScript
+digest(): Promise<DataBlob>
+```
+
+生成消息摘要。使用Promise异步回调。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Md-digest(): Promise<DataBlob>--><!--Device-Md-digest(): Promise<DataBlob>-End-->
+
+**系统能力：** 
+- API版本12+：SystemCapability.Security.CryptoFramework.MessageDigest
+- API版本9-11：SystemCapability.Security.CryptoFramework
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;DataBlob&gt; | Promise对象，返回摘要计算结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+
+**示例**
+
+参见 [digest](#digest)
 
 ## digestSync
 

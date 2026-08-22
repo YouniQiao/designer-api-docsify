@@ -43,7 +43,7 @@ imageAIOptions?: ImageAIOptions
 unit?: LengthMetricsUnit
 ```
 
-用于描述Canvas绘制时所采用的单位模式，不同单位模式会影响绘制时的坐标和尺寸计算方式，具体说明见 [LengthMetricsUnit](../../apis-default/arkts-apis/arkts-graphics-lengthmetricsunit-e.md)。
+用于描述Canvas绘制时所采用的单位模式，不同单位模式会影响绘制时的坐标和尺寸计算方式，具体说明见 [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md)。
 
 仅可在创建Canvas时设置，后续不可修改。
 

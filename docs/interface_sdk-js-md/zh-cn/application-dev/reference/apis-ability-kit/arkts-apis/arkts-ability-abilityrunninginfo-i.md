@@ -116,3 +116,31 @@ uid: int
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+**示例**
+
+```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 获取Ability运行信息
+  abilityManager.getAbilityRunningInfos()
+    .then((data: abilityManager.AbilityRunningInfo[]) => {
+      for (let i = 0; i < data.length; i++) {
+        let abilityInfo = data[i];
+        console.info(`getAbilityRunningInfos success, data: ${JSON.stringify(abilityInfo)}`);
+      }
+    })
+    .catch((err: Error) => {
+      let code = (err as BusinessError).code;
+      let msg = (err as BusinessError).message;
+      console.error(`getAbilityRunningInfos fail, error code: ${code}, error msg: ${msg}`);
+    });
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let msg = (err as BusinessError).message;
+  // 处理获取Ability运行信息失败的情况
+  console.error(`getAbilityRunningInfos fail, error code: ${code}, error msg: ${msg}`);
+}
+```
+

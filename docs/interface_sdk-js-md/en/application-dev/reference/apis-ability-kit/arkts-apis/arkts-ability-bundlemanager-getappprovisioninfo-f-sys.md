@@ -31,7 +31,7 @@ No permission is required for obtaining the caller's own information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;AppProvisionInfo&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the provision profile. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AppProvisionInfo&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the provision profile. |
 
 **Error codes:**
 
@@ -65,6 +65,59 @@ try {
 }
 ```
 
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName = "com.ohos.myapplication";
+let userId = 100;
+
+try {
+  bundleManager.getAppProvisionInfo(bundleName, userId, (err, data) => {
+    if (err) {
+      hilog.error(0x0000, 'testTag', 'getAppProvisionInfo failed: %{public}s', err.message);
+    } else {
+      hilog.info(0x0000, 'testTag', 'getAppProvisionInfo successfully: %{public}s', JSON.stringify(data));
+    }
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getAppProvisionInfo failed: %{public}s', message);
+}
+```
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName = "com.ohos.myapplication";
+let userId = 100;
+
+try {
+  bundleManager.getAppProvisionInfo(bundleName).then((data) => {
+    hilog.info(0x0000, 'testTag', 'getAppProvisionInfo successfully. Data: %{public}s', JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'getAppProvisionInfo failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getAppProvisionInfo failed. Cause: %{public}s', message);
+}
+
+try {
+  bundleManager.getAppProvisionInfo(bundleName, userId).then((data) => {
+    hilog.info(0x0000, 'testTag', 'getAppProvisionInfo successfully. Data: %{public}s', JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'getAppProvisionInfo failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getAppProvisionInfo failed. Cause: %{public}s', message);
+}
+```
+
 
 ## getAppProvisionInfo
 
@@ -92,7 +145,7 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;AppProvisionInfo&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the provision profile. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AppProvisionInfo&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the provision profile. |
 
 **Error codes:**
 
@@ -106,27 +159,7 @@ No permission is required for obtaining the caller's own information.
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = "com.ohos.myapplication";
-let userId = 100;
-
-try {
-  bundleManager.getAppProvisionInfo(bundleName, userId, (err, data) => {
-    if (err) {
-      hilog.error(0x0000, 'testTag', 'getAppProvisionInfo failed: %{public}s', err.message);
-    } else {
-      hilog.info(0x0000, 'testTag', 'getAppProvisionInfo successfully: %{public}s', JSON.stringify(data));
-    }
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAppProvisionInfo failed: %{public}s', message);
-}
-```
+See [getAppProvisionInfo](#getappprovisioninfo)
 
 
 ## getAppProvisionInfo
@@ -174,34 +207,5 @@ No permission is required for obtaining the caller's own information.
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = "com.ohos.myapplication";
-let userId = 100;
-
-try {
-  bundleManager.getAppProvisionInfo(bundleName).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getAppProvisionInfo successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getAppProvisionInfo failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAppProvisionInfo failed. Cause: %{public}s', message);
-}
-
-try {
-  bundleManager.getAppProvisionInfo(bundleName, userId).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getAppProvisionInfo successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getAppProvisionInfo failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAppProvisionInfo failed. Cause: %{public}s', message);
-}
-```
+See [getAppProvisionInfo](#getappprovisioninfo)
 

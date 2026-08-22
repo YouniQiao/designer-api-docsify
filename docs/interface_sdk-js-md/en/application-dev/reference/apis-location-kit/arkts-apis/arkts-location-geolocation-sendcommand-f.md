@@ -31,7 +31,7 @@ Send extended commands to location subsystem.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | command | LocationCommand | Yes | Indicates the extended Command Message Body. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the send command result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the send command result. |
 
 **Examples**
 
@@ -45,6 +45,14 @@ geolocation.sendCommand(requestInfo, (err, result) => {
     if (result) {
         console.info('sendCommand: result=' + JSON.stringify(result));
     }
+});
+```
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+let requestInfo:geolocation.LocationCommand = {'scenario': 0x301, 'command': "command_1"};
+geolocation.sendCommand(requestInfo).then((result) => {
+    console.info('promise, sendCommand: ' + JSON.stringify(result));
 });
 ```
 
@@ -83,11 +91,5 @@ Send extended commands to location subsystem.
 
 **Examples**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-let requestInfo:geolocation.LocationCommand = {'scenario': 0x301, 'command': "command_1"};
-geolocation.sendCommand(requestInfo).then((result) => {
-    console.info('promise, sendCommand: ' + JSON.stringify(result));
-});
-```
+See [sendCommand](#sendcommand)
 

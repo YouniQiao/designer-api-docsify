@@ -5,7 +5,7 @@
 > **说明：**
 > 
 > 直接使用componentSnapshot可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用getUIContext()获取
-> [UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)实例，并使用[getComponentSnapshot](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#getcomponentsnapshot)
+> [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)实例，并使用[getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)
 > 获取绑定实例的componentSnapshot。
 
 **起始版本：** 23

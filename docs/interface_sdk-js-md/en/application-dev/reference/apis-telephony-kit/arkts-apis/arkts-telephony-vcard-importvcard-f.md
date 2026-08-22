@@ -29,7 +29,7 @@ Import contacts from the specified vcf file.
 | context | Context | Yes | Indicates the context of application or capability. |
 | filePath | string | Yes | Vcf file path. |
 | accountId | int | Yes | Contact account ID. When the app chooses to import the vcf file into a contact account, it needs to pass in the accountId. If the accountId is not passed, a new contact account will be added by default. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of the function. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of the function. |
 
 **Error codes:**
 
@@ -54,6 +54,41 @@ class EntryAbility extends UIAbility {
         let filePath: string = "/data/storage/vcf/contacts.vcf";
         let accountId: number = 0;
         vcard.importVCard(this.context, filePath, accountId, (err: BusinessError) => {
+            console.error(`callback: err->${JSON.stringify(err)}`);
+        });
+    }
+}
+```
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { vcard } from '@kit.TelephonyKit';
+
+class EntryAbility extends UIAbility {
+    onWindowStageCreate(windowStage: window.WindowStage) {
+        let filePath: string = "/data/storage/vcf/contacts.vcf";
+        let accountId: number = 0;
+        vcard.importVCard(this.context, filePath, accountId).then(() => {
+            console.info(`importVCard success.`);
+        }).catch((err: BusinessError) => {
+            console.error(`importVCard failed, promise: err->${JSON.stringify(err)}`);
+        });
+    }
+}
+```
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { vcard } from '@kit.TelephonyKit';
+
+class EntryAbility extends UIAbility {
+    onWindowStageCreate(windowStage: window.WindowStage) {
+        let filePath: string = "/data/storage/vcf/contacts.vcf";
+        vcard.importVCard(this.context, filePath, (err: BusinessError) => {
             console.error(`callback: err->${JSON.stringify(err)}`);
         });
     }
@@ -103,24 +138,7 @@ Import contacts from the specified vcf file.
 
 **Examples**
 
-```TypeScript
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { vcard } from '@kit.TelephonyKit';
-
-class EntryAbility extends UIAbility {
-    onWindowStageCreate(windowStage: window.WindowStage) {
-        let filePath: string = "/data/storage/vcf/contacts.vcf";
-        let accountId: number = 0;
-        vcard.importVCard(this.context, filePath, accountId).then(() => {
-            console.info(`importVCard success.`);
-        }).catch((err: BusinessError) => {
-            console.error(`importVCard failed, promise: err->${JSON.stringify(err)}`);
-        });
-    }
-}
-```
+See [importVCard](#importvcard)
 
 
 ## importVCard
@@ -145,7 +163,7 @@ Import contacts from the specified vcf file.
 | --- | --- | --- | --- |
 | context | Context | Yes | Indicates the context of application or capability. |
 | filePath | string | Yes | Vcf file path. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of the function. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of the function. |
 
 **Error codes:**
 
@@ -159,19 +177,5 @@ Import contacts from the specified vcf file.
 
 **Examples**
 
-```TypeScript
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { vcard } from '@kit.TelephonyKit';
-
-class EntryAbility extends UIAbility {
-    onWindowStageCreate(windowStage: window.WindowStage) {
-        let filePath: string = "/data/storage/vcf/contacts.vcf";
-        vcard.importVCard(this.context, filePath, (err: BusinessError) => {
-            console.error(`callback: err->${JSON.stringify(err)}`);
-        });
-    }
-}
-```
+See [importVCard](#importvcard)
 

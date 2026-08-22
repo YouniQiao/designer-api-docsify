@@ -40,6 +40,32 @@ bounds(): common2D.Rect
 | --- | --- |
 | common2D.Rect | 文字边界框的矩形区域。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+const font = new drawing.Font();
+font.setSize(20);
+const textBlob = drawing.TextBlob.makeFromString("drawing", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+let bounds = textBlob.bounds();
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+const font = new drawing.Font();
+font.setSize(20.0);
+const textBlob = drawing.TextBlob.makeFromString("drawing", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+if (textBlob != undefined) {
+  let bounds = textBlob!.bounds();
+}
+```
+
 ## bounds
 
 ```TypeScript
@@ -59,6 +85,10 @@ bounds(): common2D.Rect | undefined
 | 类型 | 说明 |
 | --- | --- |
 | common2D.Rect \| undefined | 文字边界框的矩形区域。创建失败时返回undefined。 |
+
+**示例**
+
+参见 [bounds](#bounds)
 
 ## makeFromPosText
 
@@ -95,6 +125,57 @@ static makeFromPosText(text: string, len: number, points: common2D.Point[], font
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let text : string = 'makeFromPosText';
+    let font : drawing.Font = new drawing.Font();
+    font.setSize(100);
+    let length = font.countText(text);
+    let points : common2D.Point[] = [];
+    for (let i = 0; i !== length; ++i) {
+      points.push({ x: i * 35, y: i * 35 });
+    }
+    let textblob : drawing.TextBlob = drawing.TextBlob.makeFromPosText(text, points.length, points, font);
+    canvas.drawTextBlob(textblob, 100, 100);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context: DrawContext) {
+    const canvas = context.canvas;
+    let text: string = 'makeFromPosText';
+    let font: drawing.Font = new drawing.Font();
+    font.setSize(100);
+    let length = font.countText(text);
+    let points: common2D.Point[] = [];
+    for (let i = 0; i !== length; ++i) {
+      points.push({ x: i * 35.0, y: i * 35.0 });
+    }
+    let textblob = drawing.TextBlob.makeFromPosText(text, points.length, points, font);
+    if (textblob == undefined) {
+      return;
+    }
+    canvas.drawTextBlob(textblob, 100.0, 100.0);
+  }
+}
+```
+
 ## makeFromPosText
 
 ```TypeScript
@@ -130,6 +211,10 @@ static makeFromPosText(text: string, len: int, points: common2D.Point[], font: F
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 
+**示例**
+
+参见 [makeFromPosText](#makefrompostext)
+
 ## makeFromRunBuffer
 
 ```TypeScript
@@ -163,6 +248,72 @@ static makeFromRunBuffer(pos: Array<TextBlobRunBuffer>, font: Font, bounds?: com
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const font = new drawing.Font();
+    font.setSize(20);
+    let runBuffer : Array<drawing.TextBlobRunBuffer> = [
+      { glyph: 65, positionX: 0, positionY: 0 },
+      { glyph: 227, positionX: 14.9, positionY: 0 },
+      { glyph: 283, positionX: 25.84, positionY: 0 },
+      { glyph: 283, positionX: 30.62, positionY: 0 },
+      { glyph: 299, positionX: 35.4, positionY: 0 }
+    ];
+    const textBlob = drawing.TextBlob.makeFromRunBuffer(runBuffer, font, null);
+    const brush = new drawing.Brush();
+    brush.setColor({alpha: 255, red: 255, green: 0, blue: 0});
+    canvas.attachBrush(brush);
+    canvas.drawTextBlob(textBlob, 20, 20);
+    canvas.detachBrush();
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context: DrawContext) {
+    const canvas = context.canvas;
+    const font = new drawing.Font();
+    font.setSize(20);
+    let runBuffer: Array<drawing.TextBlobRunBuffer> = [
+      { glyph: 65, positionX: 0.0, positionY: 0.0 },
+      { glyph: 227, positionX: 14.9, positionY: 0.0 },
+      { glyph: 283, positionX: 25.84, positionY: 0.0 },
+      { glyph: 283, positionX: 30.62, positionY: 0.0 },
+      { glyph: 299, positionX: 35.4, positionY: 0.0 }
+    ];
+    const textBlob = drawing.TextBlob.makeFromRunBuffer(runBuffer, font);
+    if (textBlob == undefined) {
+      return;
+    }
+    const brush = new drawing.Brush();
+    brush.setColor({
+      alpha: 255,
+      red: 255,
+      green: 0,
+      blue: 0
+    });
+    canvas.attachBrush(brush);
+    canvas.drawTextBlob(textBlob, 20.0, 20.0);
+    canvas.detachBrush();
+  }
+}
+```
 
 ## makeFromRunBuffer
 
@@ -198,6 +349,10 @@ static makeFromRunBuffer(pos: Array<TextBlobRunBuffer>, font: Font, bounds?: com
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 
+**示例**
+
+参见 [makeFromRunBuffer](#makefromrunbuffer)
+
 ## makeFromString
 
 ```TypeScript
@@ -231,6 +386,53 @@ static makeFromString(text: string, font: Font, encoding?: TextEncoding): TextBl
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const brush = new drawing.Brush();
+    brush.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
+    const font = new drawing.Font();
+    font.setSize(20);
+    const textBlob = drawing.TextBlob.makeFromString("drawing", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    canvas.attachBrush(brush);
+    canvas.drawTextBlob(textBlob, 20, 20);
+    canvas.detachBrush();
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const brush = new drawing.Brush();
+    brush.setColor({alpha: 255, red: 255, green: 0, blue: 0});
+    const font = new drawing.Font();
+    font.setSize(20.0);
+    const textBlob = drawing.TextBlob.makeFromString("drawing", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    if (textBlob == undefined) {
+      return;
+    }
+    canvas.attachBrush(brush);
+    canvas.drawTextBlob(textBlob, 20.0, 20.0);
+    canvas.detachBrush();
+  }
+}
+```
 
 ## makeFromString
 
@@ -266,6 +468,10 @@ static makeFromString(text: string, font: Font, encoding?: TextEncoding): TextBl
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 
+**示例**
+
+参见 [makeFromString](#makefromstring)
+
 ## uniqueID
 
 ```TypeScript
@@ -285,4 +491,34 @@ uniqueID(): long
 | 类型 | 说明 |
 | --- | --- |
 | long | 返回TextBlob对象的唯一的非零标识符。 |
+
+**示例**
+
+ArkTS-Dyn:
+
+```TypeScript
+import { drawing } from "@kit.ArkGraphics2D";
+
+let text : string = 'TextBlobUniqueId';
+let font : drawing.Font = new drawing.Font();
+font.setSize(100);
+let textBlob = drawing.TextBlob.makeFromString(text, font, 0);
+let id = textBlob.uniqueID();
+console.info('uniqueID---------------' + id);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing } from "@kit.ArkGraphics2D";
+
+let text: string = 'TextBlobUniqueId';
+let font: drawing.Font = new drawing.Font();
+font.setSize(100);
+let textBlob = drawing.TextBlob.makeFromString(text, font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+if (textBlob != undefined) {
+  let id = textBlob!.uniqueID();
+  console.info("uniqueID---------------" + id);
+}
+```
 

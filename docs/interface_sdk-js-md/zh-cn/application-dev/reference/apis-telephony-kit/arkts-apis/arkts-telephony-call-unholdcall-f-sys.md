@@ -57,6 +57,16 @@ call.unHoldCall(1, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.unHoldCall(1).then(() => {
+    console.info(`unHoldCall success.`);
+}).catch((err: BusinessError) => {
+    console.error(`unHoldCall fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## unHoldCall
 
@@ -102,13 +112,5 @@ function unHoldCall(callId: int): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.unHoldCall(1).then(() => {
-    console.info(`unHoldCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`unHoldCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [unHoldCall](#unholdcall)
 

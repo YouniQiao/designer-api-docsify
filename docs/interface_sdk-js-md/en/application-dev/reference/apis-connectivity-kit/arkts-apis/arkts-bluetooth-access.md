@@ -31,10 +31,10 @@ import { access } from '@kit.ConnectivityKit';
 | [getState](arkts-connectivity-access-getstate-f.md) | Obtains the Bluetooth status of a device. |
 | [isBluetoothSupported](arkts-connectivity-access-isbluetoothsupported-f.md) | Check whether Bluetooth is available. |
 | [isValidRandomDeviceId](arkts-connectivity-access-isvalidrandomdeviceid-f.md) | Determine whether the randomized device address application can still be used. |
-| [offStateChange](arkts-connectivity-access-offstatechange-f.md) | Unsubscribe the event reported when the Bluetooth state changes. |
 | [off_stateChange](arkts-connectivity-access-offstatechange-f.md) | Unsubscribe the event reported when the Bluetooth state changes. |
-| [onStateChange](arkts-connectivity-access-onstatechange-f.md) | Subscribe the event reported when the Bluetooth state changes. |
+| [offStateChange](arkts-connectivity-access-offstatechange-f.md) | Unsubscribe the event reported when the Bluetooth state changes. |
 | [on_stateChange](arkts-connectivity-access-onstatechange-f.md) | Subscribe the event reported when the Bluetooth state changes. |
+| [onStateChange](arkts-connectivity-access-onstatechange-f.md) | Subscribe the event reported when the Bluetooth state changes. |
 
 <!--Del-->
 ### Functions(System API)

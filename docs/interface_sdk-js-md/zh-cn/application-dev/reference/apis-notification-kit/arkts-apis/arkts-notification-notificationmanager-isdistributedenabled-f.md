@@ -73,6 +73,82 @@ let isDistributedEnabledCallback = (err: BusinessError | null, data: boolean | u
 notificationManager.isDistributedEnabled(isDistributedEnabledCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.isDistributedEnabled().then((data: boolean) => {
+  console.info(`isDistributedEnabled success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`isDistributedEnabled failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.isDistributedEnabled().then((data: boolean) => {
+  console.info(`isDistributedEnabled success, data: ${JSON.stringify(data)}`);
+}).catch((err: Error): void  => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`isDistributedEnabled failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+  }
+
+  onForeground(): void {
+    try {
+      let deviceType: string = 'wearable';
+      notificationManager.isDistributedEnabled(deviceType).then((data: boolean) => {
+        console.info('isDistributedEnabled succeeded, result = ' + data);
+      }).catch((err: BusinessError) => {
+        console.error(`isDistributedEnabled failed. Code is ${err.code}, message is ${err.message}`);
+      });
+    } catch (err) {
+      console.error(`isDistributedEnabled failed. Code is ${err.code}, message is ${err.message}`);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+  }
+
+  onForeground(): void {
+    try {
+      let deviceType: string = 'wearable';
+      notificationManager.isDistributedEnabled(deviceType).then((data: boolean) => {
+        console.info('isDistributedEnabled succeeded, result = ' + data);
+      }).catch((err: Error) => {
+        let error: BusinessError = err as BusinessError;
+        console.error(`isDistributedEnabled failed. Code is ${error.code}, message is ${error.message}`);
+      });
+    } catch (err) {
+      console.error(`isDistributedEnabled failed. Code is ${err.code}, message is ${err.message}`);
+    }
+  }
+}
+```
+
 
 ## isDistributedEnabled
 
@@ -110,28 +186,5 @@ function isDistributedEnabled(): Promise<boolean>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.isDistributedEnabled().then((data: boolean) => {
-  console.info(`isDistributedEnabled success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`isDistributedEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.isDistributedEnabled().then((data: boolean) => {
-  console.info(`isDistributedEnabled success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void  => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`isDistributedEnabled failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [isDistributedEnabled](#isdistributedenabled)
 

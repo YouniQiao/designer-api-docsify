@@ -245,8 +245,8 @@
   - [AudioHapticType](arkts-audio-audiohaptic-audiohaptictype-e.md)
   - [AudioLatencyMode](arkts-audio-audiohaptic-audiolatencymode-e.md)
 - [@ohos.multimedia.avVolumePanel](arkts-multimedia-avvolumepanel.md)
-  - [AVVolumePanelParameter](arkts-audio-multimediaavvolumepanel-avvolumepanelparameter-c.md)
-  - [AVVolumePanel](arkts-audio-multimediaavvolumepanel-avvolumepanel-s.md)
+  - [AVVolumePanelParameter](arkts-audio-multimedia-avvolumepanel-avvolumepanelparameter-c.md)
+  - [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
 - [@ohos.multimedia.systemSoundManager](arkts-multimedia-systemsoundmanager.md)
   <!--Del-->
   - [createCustomizedToneAttrs(系统接口)](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f-sys.md)<!--DelEnd-->
@@ -294,14 +294,14 @@
   <!--Del-->
   - [常量(系统接口)](arkts-audio-systemsoundmanager-con-sys.md)<!--DelEnd-->
 - multimedia<!--arkts-audiokit-multimedia-->
-  - [SystemSoundPlayer](arkts-systemsoundplayer.md)
-    - [SystemSoundPlayer](arkts-audio-systemsoundplayer-i.md)
   <!--Del-->
   - [ringtonePlayer](arkts-ringtoneplayer.md)<!--DelEnd-->
     <!--Del-->
     - [RingtoneOptions(系统接口)](arkts-audio-ringtoneplayer-ringtoneoptions-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [RingtonePlayer(系统接口)](arkts-audio-ringtoneplayer-ringtoneplayer-i-sys.md)<!--DelEnd-->
+  - [SystemSoundPlayer](arkts-systemsoundplayer.md)
+    - [SystemSoundPlayer](arkts-audio-systemsoundplayer-i.md)
   <!--Del-->
   - [systemTonePlayer](arkts-systemtoneplayer.md)<!--DelEnd-->
     <!--Del-->

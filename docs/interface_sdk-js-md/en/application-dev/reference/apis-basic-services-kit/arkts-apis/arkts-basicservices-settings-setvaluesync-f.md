@@ -46,6 +46,26 @@ Set settingsdata value(synchronous method)
 **Examples**
 
 ```TypeScript
+import { settings } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Update the value of SCREEN_BRIGHTNESS_STATUS. (As this data item exists in the database, the setValueSync API will update its value.)
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let ret = settings.setValueSync(context, settings.display.SCREEN_BRIGHTNESS_STATUS, '100');
+```
+
+```TypeScript
+import { settings } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Update the value of SCREEN_BRIGHTNESS_STATUS. (As this data item exists in the database, the setValueSync API will update its value.)
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let ret = settings.setValueSync(context, settings.display.SCREEN_BRIGHTNESS_STATUS, '100', settings.domainName.DEVICE_SHARED);
+```
+
+```TypeScript
 import featureAbility from '@ohos.ability.featureAbility';
 
 // Update the value of SCREEN_BRIGHTNESS_STATUS. (As this data item exists in the database, the setValueSync API will update its value.)
@@ -89,15 +109,7 @@ Set settingsdata value(synchronous method)
 
 **Examples**
 
-```TypeScript
-import { settings } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Update the value of SCREEN_BRIGHTNESS_STATUS. (As this data item exists in the database, the setValueSync API will update its value.)
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let ret = settings.setValueSync(context, settings.display.SCREEN_BRIGHTNESS_STATUS, '100');
-```
+See [setValueSync](#setvaluesync)
 
 
 ## setValueSync
@@ -141,13 +153,5 @@ Set settingsdata value(synchronous method). [DEVICE_SHARED, USER_PROPERTY] domai
 
 **Examples**
 
-```TypeScript
-import { settings } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Update the value of SCREEN_BRIGHTNESS_STATUS. (As this data item exists in the database, the setValueSync API will update its value.)
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let ret = settings.setValueSync(context, settings.display.SCREEN_BRIGHTNESS_STATUS, '100', settings.domainName.DEVICE_SHARED);
-```
+See [setValueSync](#setvaluesync)
 

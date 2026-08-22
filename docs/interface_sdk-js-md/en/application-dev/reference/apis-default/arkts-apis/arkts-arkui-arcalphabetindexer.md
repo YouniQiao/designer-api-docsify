@@ -18,8 +18,8 @@
 
 | Name | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkuiarcalphabetindexer-arcalphabetindexerattribute-i.md) | Defines the arc alphabet index bar attribute functions. |
-| [ArcAlphabetIndexerInitInfo](arkts-arkuiarcalphabetindexer-arcalphabetindexerinitinfo-i.md) | Define the initialization parameters of the arc alphabet index bar |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) | Defines the arc alphabet index bar attribute functions. |
+| [ArcAlphabetIndexerInitInfo](arkts-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) | Define the initialization parameters of the arc alphabet index bar |
 
 ### Types
 

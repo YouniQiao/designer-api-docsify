@@ -40,6 +40,30 @@ getFamilyName(): string
 | --- | --- |
 | string | 返回字体的族名，表示当前Typeface对象对应的字体设计名称。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const font = new drawing.Font();
+let typeface = font.getTypeface();
+let familyName = typeface.getFamilyName();
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const font = new drawing.Font();
+let typeface = font.getTypeface();
+if (typeface != undefined) {
+  let familyName = typeface!.getFamilyName();
+}
+```
+
 ## getFamilyName
 
 ```TypeScript
@@ -59,6 +83,10 @@ getFamilyName(): string | undefined
 | 类型 | 说明 |
 | --- | --- |
 | string \| undefined | 返回字体的族名，表示当前Typeface对象对应的字体设计名称。创建失败时返回undefined。 |
+
+**示例**
+
+参见 [getFamilyName](#getfamilyname)
 
 ## isBold
 
@@ -80,6 +108,16 @@ isBold(): boolean
 | --- | --- |
 | boolean | 返回当前字体是否加粗。true表示字体加粗，false表示字体未加粗。 |
 
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const font = new drawing.Font();
+let typeface = font.getTypeface();
+let result = typeface?.isBold();
+```
+
 ## isItalic
 
 ```TypeScript
@@ -99,6 +137,16 @@ isItalic(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 返回当前字体是否为斜体。true表示字体为斜体，false表示字体非斜体。 |
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const font = new drawing.Font();
+let typeface = font.getTypeface();
+let result = typeface?.isItalic();
+```
 
 ## makeFromCurrent
 
@@ -126,6 +174,60 @@ makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface
 | --- | --- |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回基于当前字体结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class TextRenderNode extends RenderNode {
+  async draw(context: DrawContext) {
+    const canvas = context.canvas;
+    let typeArguments = new drawing.TypefaceArguments();
+    typeArguments.addVariation("wght", 100);
+    const myTypeFace = drawing.Typeface.makeFromFile("/system/fonts/HarmonyOS_Sans_SC.ttf");
+    const typeFace1 = myTypeFace.makeFromCurrent(typeArguments);
+    let font = new drawing.Font();
+    font.setTypeface(typeFace1);
+    const textBlob = drawing.TextBlob.makeFromString("Hello World", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    canvas.drawTextBlob(textBlob, 60, 100);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import drawing from "@ohos.graphics.drawing";
+import common2D from "@ohos.graphics.common2D";
+import { RenderNode, DrawContext } from '@ohos.arkui.node';
+
+class TextRenderNode extends RenderNode {
+  async draw(context: DrawContext) {
+    const canvas = context.canvas;
+    let typeArguments = new drawing.TypefaceArguments();
+    typeArguments.addVariation("wght", 100);
+    const myTypeFace = drawing.Typeface.makeFromFile("/system/fonts/HarmonyOS_Sans_SC.ttf");
+    if (myTypeFace == undefined) {
+      return;
+    }
+    const typeFace1 = myTypeFace.makeFromCurrent(typeArguments);
+    let font = new drawing.Font();
+    if (typeFace1 == undefined) {
+      return;
+    }
+    font.setTypeface(typeFace1);
+    const textBlob = drawing.TextBlob.makeFromString("Hello World", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    if (textBlob == undefined) {
+      return;
+    }
+    canvas.drawTextBlob(textBlob, 60, 100);
+  }
+}
+```
+
 ## makeFromCurrent
 
 ```TypeScript
@@ -151,6 +253,10 @@ makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface | undefined
 | 类型 | 说明 |
 | --- | --- |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | 返回基于当前字体结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
+
+**示例**
+
+参见 [makeFromCurrent](#makefromcurrent)
 
 ## makeFromFile
 
@@ -186,6 +292,52 @@ static makeFromFile(filePath: string): Typeface
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class TextRenderNode extends RenderNode {
+  async draw(context: DrawContext) {
+    const canvas = context.canvas;
+    let font = new drawing.Font();
+    let str = "/system/fonts/HarmonyOS_Sans_Italic.ttf";
+    const mytypeface = drawing.Typeface.makeFromFile(str);
+    font.setTypeface(mytypeface);
+    const textBlob = drawing.TextBlob.makeFromString("Hello World", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    canvas.drawTextBlob(textBlob, 60, 100);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@ohos.arkui.node';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class TextRenderNode extends RenderNode {
+  draw(context: DrawContext) {
+    const canvas = context.canvas;
+    let font = new drawing.Font();
+    let str = "/system/fonts/HarmonyOS_Sans_Italic.ttf";
+    const mytypeface = drawing.Typeface.makeFromFile(str);
+    if (mytypeface == undefined) {
+      return;
+    }
+    font.setTypeface(mytypeface);
+    const textBlob = drawing.TextBlob.makeFromString("Hello World", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    if (textBlob == undefined) {
+      return;
+    }
+    canvas.drawTextBlob(textBlob, 60.0, 100.0);
+  }
+}
+```
+
 ## makeFromFile
 
 ```TypeScript
@@ -218,6 +370,10 @@ static makeFromFile(filePath: string): Typeface | undefined
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 
+**示例**
+
+参见 [makeFromFile](#makefromfile)
+
 ## makeFromFileWithArguments
 
 ```TypeScript
@@ -247,6 +403,54 @@ static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceAr
 | --- | --- |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回从指定字体文件加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { RenderNode, DrawContext, $rawfile } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class TextRenderNode extends RenderNode {
+  async draw(context: DrawContext) {
+    const canvas = context.canvas;
+    let font = new drawing.Font();
+    let str = "/system/fonts/HarmonyOS_Sans_Italic.ttf";
+    let typeFaceArgument = new drawing.TypefaceArguments();
+    const myTypeFace = drawing.Typeface.makeFromFileWithArguments(str, typeFaceArgument);
+    font.setTypeface(myTypeFace);
+    const textBlob = drawing.TextBlob.makeFromString("Hello World", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    canvas.drawTextBlob(textBlob, 60, 100);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RenderNode, DrawContext, $rawfile } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class TextRenderNode extends RenderNode {
+  async draw(context: DrawContext) {
+    const canvas = context.canvas;
+    let font = new drawing.Font();
+    let str = "/system/fonts/HarmonyOS_Sans_Italic.ttf";
+    let typeFaceArgument = new drawing.TypefaceArguments();
+    const myTypeFace = drawing.Typeface.makeFromFileWithArguments(str, typeFaceArgument);
+    if (myTypeFace == undefined) {
+        return;
+    }
+    font.setTypeface(myTypeFace);
+    const textBlob = drawing.TextBlob.makeFromString("Hello World", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    if (textBlob == undefined) {
+      return;
+    }
+    canvas.drawTextBlob(textBlob, 60.0, 100.0);
+  }
+}
+```
+
 ## makeFromFileWithArguments
 
 ```TypeScript
@@ -273,6 +477,10 @@ static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceAr
 | 类型 | 说明 |
 | --- | --- |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | 返回从指定字体文件加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
+
+**示例**
+
+参见 [makeFromFileWithArguments](#makefromfilewitharguments)
 
 ## makeFromRawFile
 
@@ -302,6 +510,50 @@ static makeFromRawFile(rawfile: Resource): Typeface
 | --- | --- |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回从rawfile资源加载的字体对象（异常情况下会返回空指针）。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class TextRenderNode extends RenderNode {
+  async draw(context: DrawContext) {
+    const canvas = context.canvas;
+    let font = new drawing.Font();
+    const myTypeFace = drawing.Typeface.makeFromRawFile($rawfile('HarmonyOS_Sans_Bold.ttf'));
+    font.setTypeface(myTypeFace);
+    const textBlob = drawing.TextBlob.makeFromString("Hello World", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    canvas.drawTextBlob(textBlob, 60, 100);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RenderNode, DrawContext, $rawfile } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class TextRenderNode extends RenderNode {
+  draw(context: DrawContext) {
+    const canvas = context.canvas;
+    let font = new drawing.Font();
+    const myTypeFace = drawing.Typeface.makeFromRawFile($rawfile('HarmonyOS_Sans_Bold.ttf'));
+    if (myTypeFace == undefined) {
+      return;
+    }
+    font.setTypeface(myTypeFace);
+    const textBlob = drawing.TextBlob.makeFromString("Hello World", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    if (textBlob == undefined) {
+      return;
+    }
+    canvas.drawTextBlob(textBlob, 60, 100);
+  }
+}
+```
+
 ## makeFromRawFile
 
 ```TypeScript
@@ -327,6 +579,10 @@ static makeFromRawFile(rawfile: Resource): Typeface | undefined
 | 类型 | 说明 |
 | --- | --- |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | 返回从rawfile资源加载的字体对象（异常情况下会返回空指针）。 |
+
+**示例**
+
+参见 [makeFromRawFile](#makefromrawfile)
 
 ## makeFromRawFileWithArguments
 
@@ -357,6 +613,54 @@ static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: Typefa
 | --- | --- |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回从rawfile资源加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class TextRenderNode extends RenderNode {
+  async draw(context: DrawContext) {
+    const canvas = context.canvas;
+    let font = new drawing.Font();
+    let typeFaceArgument = new drawing.TypefaceArguments();
+    const myTypeFace = drawing.Typeface.makeFromRawFileWithArguments($rawfile('HarmonyOS_Sans_Bold.ttf'), typeFaceArgument);
+    font.setTypeface(myTypeFace);
+    const textBlob = drawing.TextBlob.makeFromString("Hello World", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    canvas.drawTextBlob(textBlob, 60, 100);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import drawing from "@ohos.graphics.drawing";
+import common2D from "@ohos.graphics.common2D";
+import { $r, $rawfile, Color, ResourceColor } from '@ohos.arkui.component';
+import { RenderNode, DrawContext } from '@ohos.arkui.node';
+
+class TextRenderNode extends RenderNode {
+  async draw(context: DrawContext) {
+    const canvas = context.canvas;
+    let font = new drawing.Font();
+    let typeFaceArgument = new drawing.TypefaceArguments();
+    const myTypeFace = drawing.Typeface.makeFromRawFileWithArguments($rawfile('HarmonyOS_Sans_SC.ttf'), typeFaceArgument);
+    if (myTypeFace == undefined) {
+      return;
+    }
+    font.setTypeface(myTypeFace);
+    const textBlob = drawing.TextBlob.makeFromString("Hello World", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    if (textBlob == undefined) {
+      return;
+    }
+    canvas.drawTextBlob(textBlob, 60, 100);
+  }
+}
+```
+
 ## makeFromRawFileWithArguments
 
 ```TypeScript
@@ -383,4 +687,8 @@ static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: Typefa
 | 类型 | 说明 |
 | --- | --- |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | 返回从rawfile资源加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
+
+**示例**
+
+参见 [makeFromRawFileWithArguments](#makefromrawfilewitharguments)
 

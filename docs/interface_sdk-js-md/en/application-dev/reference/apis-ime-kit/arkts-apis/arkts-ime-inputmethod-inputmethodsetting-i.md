@@ -41,7 +41,7 @@ displayOptionalInputMethod(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -55,6 +55,16 @@ inputMethod.getSetting().displayOptionalInputMethod((err: BusinessError) => {
   }
   console.info('Succeeded in displaying optionalInputMethod.');
 });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().displayOptionalInputMethod().then(() => {
+  console.info('Succeeded in displaying optionalInputMethod.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to displayOptionalInputMethod, code: ${err.code}, message: ${err.message}`);
+})
 ```
 
 ## displayOptionalInputMethod
@@ -83,15 +93,7 @@ displayOptionalInputMethod(): Promise<void>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getSetting().displayOptionalInputMethod().then(() => {
-  console.info('Succeeded in displaying optionalInputMethod.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to displayOptionalInputMethod, code: ${err.code}, message: ${err.message}`);
-})
-```
+See [displayOptionalInputMethod](#displayoptionalinputmethod)
 
 ## enableInputMethod
 
@@ -176,7 +178,7 @@ getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Yes | Callback used to return a list of all input methods. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Yes | Callback used to return a list of all input methods. |
 
 **Error codes:**
 
@@ -197,6 +199,16 @@ inputMethod.getSetting().getAllInputMethods((err: BusinessError, data: Array<inp
   }
   console.info('Succeeded in getting all inputMethods.');
 });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().getAllInputMethods().then((data: Array<inputMethod.InputMethodProperty>) => {
+  console.info('Succeeded in getting all inputMethods.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getAllInputMethods, code: ${err.code}, message: ${err.message}`);
+})
 ```
 
 ## getAllInputMethods
@@ -228,15 +240,7 @@ getAllInputMethods(): Promise<Array<InputMethodProperty>>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getSetting().getAllInputMethods().then((data: Array<inputMethod.InputMethodProperty>) => {
-  console.info('Succeeded in getting all inputMethods.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getAllInputMethods, code: ${err.code}, message: ${err.message}`);
-})
-```
+See [getAllInputMethods](#getallinputmethods)
 
 ## getAllInputMethodsSync
 
@@ -308,45 +312,6 @@ getCursorInfo(userId?: int): CursorInfo
 | 12800024 | the specified user is not in the foreground. |
 | 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
-## getInputMethodState
-
-```TypeScript
-getInputMethodState(): Promise<EnabledState>
-```
-
-@brief Obtains the input method state. This API uses a promise to return the result.
-
-**Since:** 23
-
-<!--Device-InputMethodSetting-getInputMethodState(): Promise<EnabledState>--><!--Device-InputMethodSetting-getInputMethodState(): Promise<EnabledState>-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[EnabledState](arkts-ime-inputmethod-enabledstate-e.md)&gt; | Promise used to return the result. **EnabledState.DISABLED** indicates that the input method is disabled, **EnabledState.BASIC_MODE** indicates that the input method is in basic mode, and **EnabledState.FULL_EXPERIENCE_MODE** indicates that the input method is in full experience mode. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-not-an-input-method) | not an input method application. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getSetting().getInputMethodState().then((status: inputMethod.EnabledState) => {
-  console.info(`Succeeded in getInputMethodState, status: ${status}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getInputMethodState, code: ${err.code}, message: ${err.message}`);
-})
-```
-
 ## getInputMethods
 
 ```TypeScript
@@ -375,7 +340,7 @@ getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProper
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Whether to return a list of activated input methods. The value **true** means to return a list of activated input methods, and **false** means to return a list of deactivated input methods. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Yes | Callback used to return a list of activated or deactivated input methods. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Yes | Callback used to return a list of activated or deactivated input methods. |
 
 **Error codes:**
 
@@ -397,6 +362,16 @@ inputMethod.getSetting().getInputMethods(true, (err: BusinessError, data: Array<
   }
   console.info('Succeeded in getting inputMethods.');
 });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().getInputMethods(true).then((data: Array<inputMethod.InputMethodProperty>) => {
+  console.info('Succeeded in getting inputMethods.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getInputMethods, code: ${err.code}, message: ${err.message}`);
+})
 ```
 
 ## getInputMethods
@@ -444,15 +419,7 @@ getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getSetting().getInputMethods(true).then((data: Array<inputMethod.InputMethodProperty>) => {
-  console.info('Succeeded in getting inputMethods.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getInputMethods, code: ${err.code}, message: ${err.message}`);
-})
-```
+See [getInputMethods](#getinputmethods)
 
 ## getInputMethodsSync
 
@@ -503,6 +470,45 @@ getInputMethodsSync(enable: boolean): Array<InputMethodProperty>
 let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getInputMethodsSync(true);
 ```
 
+## getInputMethodState
+
+```TypeScript
+getInputMethodState(): Promise<EnabledState>
+```
+
+@brief Obtains the input method state. This API uses a promise to return the result.
+
+**Since:** 23
+
+<!--Device-InputMethodSetting-getInputMethodState(): Promise<EnabledState>--><!--Device-InputMethodSetting-getInputMethodState(): Promise<EnabledState>-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[EnabledState](arkts-ime-inputmethod-enabledstate-e.md)&gt; | Promise used to return the result. **EnabledState.DISABLED** indicates that the input method is disabled, **EnabledState.BASIC_MODE** indicates that the input method is in basic mode, and **EnabledState.FULL_EXPERIENCE_MODE** indicates that the input method is in full experience mode. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [12800004](../errorcode-inputmethod-framework.md#12800004-not-an-input-method) | not an input method application. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().getInputMethodState().then((status: inputMethod.EnabledState) => {
+  console.info(`Succeeded in getInputMethodState, status: ${status}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getInputMethodState, code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ## listCurrentInputMethodSubtype
 
 ```TypeScript
@@ -521,7 +527,7 @@ listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Yes | Callback used to return all subtypes of the current input method. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Yes | Callback used to return all subtypes of the current input method. |
 
 **Error codes:**
 
@@ -544,6 +550,19 @@ inputMethodSetting.listCurrentInputMethodSubtype((err: BusinessError, data: Arra
   }
   console.info('Succeeded in listing currentInputMethodSubtype.');
 });
+```
+
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
+
+inputMethodSetting.listCurrentInputMethodSubtype().then((data: Array<InputMethodSubtype>) => {
+  console.info('Succeeded in listing currentInputMethodSubtype.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to listCurrentInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
+})
 ```
 
 ## listCurrentInputMethodSubtype
@@ -575,18 +594,7 @@ listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>
 
 **Examples**
 
-```TypeScript
-import { InputMethodSubtype } from '@kit.IMEKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
-
-inputMethodSetting.listCurrentInputMethodSubtype().then((data: Array<InputMethodSubtype>) => {
-  console.info('Succeeded in listing currentInputMethodSubtype.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to listCurrentInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
-})
-```
+See [listCurrentInputMethodSubtype](#listcurrentinputmethodsubtype)
 
 ## listInputMethod
 
@@ -610,7 +618,7 @@ listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Yes | Callback used to return the list of installed input methods. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Yes | Callback used to return the list of installed input methods. |
 
 **Examples**
 
@@ -624,6 +632,16 @@ inputMethod.getSetting().listInputMethod((err: BusinessError, data: Array<inputM
   }
   console.info('Succeeded in listing inputMethod.');
 });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().listInputMethod().then((data: Array<inputMethod.InputMethodProperty>) => {
+  console.info('Succeeded in listing inputMethod.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to listInputMethod, code: ${err.code}, message: ${err.message}`);
+})
 ```
 
 ## listInputMethod
@@ -652,15 +670,7 @@ listInputMethod(): Promise<Array<InputMethodProperty>>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getSetting().listInputMethod().then((data: Array<inputMethod.InputMethodProperty>) => {
-  console.info('Succeeded in listing inputMethod.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to listInputMethod, code: ${err.code}, message: ${err.message}`);
-})
-```
+See [listInputMethod](#listinputmethod)
 
 ## listInputMethodSubtype
 
@@ -684,7 +694,7 @@ listInputMethodSubtype(
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | Input method. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Yes | Callback used to return all subtypes of the specified input method. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Yes | Callback used to return all subtypes of the specified input method. |
 
 **Error codes:**
 
@@ -716,6 +726,25 @@ inputMethodSetting.listInputMethodSubtype(inputMethodProperty,
     }
     console.info('Succeeded in listing inputMethodSubtype.');
   });
+```
+
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let inputMethodProperty: inputMethod.InputMethodProperty = {
+  name: 'com.example.keyboard',
+  id: 'propertyId',
+  packageName: 'com.example.keyboard',
+  methodId: 'propertyId',
+}
+let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
+
+inputMethodSetting.listInputMethodSubtype(inputMethodProperty).then((data: Array<InputMethodSubtype>) => {
+  console.info('Succeeded in listing inputMethodSubtype.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to listInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
+})
 ```
 
 ## listInputMethodSubtype
@@ -754,44 +783,7 @@ listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<
 
 **Examples**
 
-```TypeScript
-import { InputMethodSubtype } from '@kit.IMEKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let inputMethodProperty: inputMethod.InputMethodProperty = {
-  name: 'com.example.keyboard',
-  id: 'propertyId',
-  packageName: 'com.example.keyboard',
-  methodId: 'propertyId',
-}
-let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
-
-inputMethodSetting.listInputMethodSubtype(inputMethodProperty).then((data: Array<InputMethodSubtype>) => {
-  console.info('Succeeded in listing inputMethodSubtype.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to listInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
-})
-```
-
-## offImeChange
-
-```TypeScript
-offImeChange(callback?: ImeChangeCallback): void
-```
-
-@brief Unsubscribe input method or subtype change.
-
-**Since:** 23
-
-<!--Device-InputMethodSetting-offImeChange(callback?: ImeChangeCallback): void--><!--Device-InputMethodSetting-offImeChange(callback?: ImeChangeCallback): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ImeChangeCallback](arkts-ime-inputmethod-imechangecallback-t.md) | No | the callback called when the current input method changes, when subscriber unsubscribes all callback functions, this parameter can be left blank. |
+See [listInputMethodSubtype](#listinputmethodsubtype)
 
 ## off('imeChange')
 
@@ -823,17 +815,17 @@ off(
 inputMethod.getSetting().off('imeChange');
 ```
 
-## onImeChange
+## offImeChange
 
 ```TypeScript
-onImeChange(callback: ImeChangeCallback): void
+offImeChange(callback?: ImeChangeCallback): void
 ```
 
-@brief Subscribe input method or subtype change.
+@brief Unsubscribe input method or subtype change.
 
 **Since:** 23
 
-<!--Device-InputMethodSetting-onImeChange(callback: ImeChangeCallback): void--><!--Device-InputMethodSetting-onImeChange(callback: ImeChangeCallback): void-End-->
+<!--Device-InputMethodSetting-offImeChange(callback?: ImeChangeCallback): void--><!--Device-InputMethodSetting-offImeChange(callback?: ImeChangeCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -841,7 +833,7 @@ onImeChange(callback: ImeChangeCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ImeChangeCallback](arkts-ime-inputmethod-imechangecallback-t.md) | Yes | the callback called when the current input method changes. |
+| callback | [ImeChangeCallback](arkts-ime-inputmethod-imechangecallback-t.md) | No | the callback called when the current input method changes, when subscriber unsubscribes all callback functions, this parameter can be left blank. |
 
 ## on('imeChange')
 
@@ -879,6 +871,26 @@ inputMethod.getSetting()
   });
 ```
 
+## onImeChange
+
+```TypeScript
+onImeChange(callback: ImeChangeCallback): void
+```
+
+@brief Subscribe input method or subtype change.
+
+**Since:** 23
+
+<!--Device-InputMethodSetting-onImeChange(callback: ImeChangeCallback): void--><!--Device-InputMethodSetting-onImeChange(callback: ImeChangeCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ImeChangeCallback](arkts-ime-inputmethod-imechangecallback-t.md) | Yes | the callback called when the current input method changes. |
+
 ## showOptionalInputMethods
 
 ```TypeScript
@@ -901,7 +913,7 @@ showOptionalInputMethods(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -925,6 +937,20 @@ inputMethod.getSetting().showOptionalInputMethods((err: BusinessError, result: b
     console.error(`Failed to showOptionalInputMethods.`);
   }
 });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().showOptionalInputMethods().then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in showing optionalInputMethods.');
+  } else {
+    console.error(`Failed to showOptionalInputMethods.`);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to showOptionalInputMethods, code: ${err.code}, message: ${err.message}`);
+})
 ```
 
 ## showOptionalInputMethods
@@ -959,17 +985,5 @@ showOptionalInputMethods(): Promise<boolean>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getSetting().showOptionalInputMethods().then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in showing optionalInputMethods.');
-  } else {
-    console.error(`Failed to showOptionalInputMethods.`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to showOptionalInputMethods, code: ${err.code}, message: ${err.message}`);
-})
-```
+See [showOptionalInputMethods](#showoptionalinputmethods)
 

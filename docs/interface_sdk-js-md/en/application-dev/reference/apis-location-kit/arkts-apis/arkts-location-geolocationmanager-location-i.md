@@ -32,24 +32,6 @@ Indicates location accuracy, in meters.
 
 **System capability:** SystemCapability.Location.Location.Core
 
-## additionSize
-
-```TypeScript
-additionSize?: int
-```
-
-Indicates the amount of additional descriptive information.
-
-**Type:** int
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Location-additionSize?: int--><!--Device-Location-additionSize?: int-End-->
-
-**System capability:** SystemCapability.Location.Location.Core
-
 ## additions
 
 ```TypeScript
@@ -65,6 +47,24 @@ Indicates additional information.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Location-additions?: Array<string>--><!--Device-Location-additions?: Array<string>-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+
+## additionSize
+
+```TypeScript
+additionSize?: int
+```
+
+Indicates the amount of additional descriptive information.
+
+**Type:** int
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Location-additionSize?: int--><!--Device-Location-additionSize?: int-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 

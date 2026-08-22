@@ -36,7 +36,7 @@ Checks whether this display contains an immersive window. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if the display contains an immersive window, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if the display contains an immersive window, **false** otherwise. |
 
 **Error codes:**
 
@@ -63,6 +63,20 @@ displayClass.hasImmersiveWindow((err: BusinessError, data) => {
     }
     console.info(`Succeeded in checking whether there is immersive window. data: ${data}`);
 });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { display } from '@kit.ArkUI';
+
+let displayClass: display.Display | null = null;
+displayClass = display.getDefaultDisplaySync();
+let promise = displayClass.hasImmersiveWindow();
+promise.then((data) => {
+  console.info(`Succeeded in checking whether there is immersive window. data: ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to check whether there is immersive window. Code: ${err.code} , message: ${err.message}`);
+})
 ```
 
 ## hasImmersiveWindow
@@ -98,17 +112,5 @@ Checks whether this display contains an immersive window. This API uses a promis
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { display } from '@kit.ArkUI';
-
-let displayClass: display.Display | null = null;
-displayClass = display.getDefaultDisplaySync();
-let promise = displayClass.hasImmersiveWindow();
-promise.then((data) => {
-  console.info(`Succeeded in checking whether there is immersive window. data: ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to check whether there is immersive window. Code: ${err.code} , message: ${err.message}`);
-})
-```
+See [hasImmersiveWindow](#hasimmersivewindow)
 

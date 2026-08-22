@@ -120,7 +120,7 @@ readonly extraConfig?: InputMethodExtraConfig
 
 @brief 输入法扩展信息。
 
-**类型：** [InputMethodExtraConfig](arkts-ime-inputmethodextraconfig-inputmethodextraconfig-i.md)
+**类型：** [InputMethodExtraConfig](arkts-ime-inputmethod-extraconfig-inputmethodextraconfig-i.md)
 
 **起始版本：** 23
 

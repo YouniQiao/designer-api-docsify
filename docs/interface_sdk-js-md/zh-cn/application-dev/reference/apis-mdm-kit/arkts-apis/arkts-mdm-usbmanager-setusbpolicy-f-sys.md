@@ -34,7 +34,7 @@ function setUsbPolicy(admin: Want, usbPolicy: UsbPolicy, callback: AsyncCallback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | usbPolicy | [UsbPolicy](arkts-mdm-usbmanager-usbpolicy-e.md) | 是 | USB读写策略（此接口只支持READ_WRITE和READ_ONLY）。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为null，否则为错误对象。 |
 
@@ -70,6 +70,25 @@ usbManager.setUsbPolicy(wantTemp, policy, (err) => {
 })
 ```
 
+```TypeScript
+import { usbManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+let policy: usbManager.UsbPolicy = usbManager.UsbPolicy.READ_WRITE;
+
+usbManager.setUsbPolicy(wantTemp, policy).then(() => {
+  console.info('Succeeded in setting usb policy');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set usb policy. Code is ${err.code}, message is ${err.message}`);
+})
+```
+
 
 ## setUsbPolicy
 
@@ -99,7 +118,7 @@ function setUsbPolicy(admin: Want, usbPolicy: UsbPolicy): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | usbPolicy | [UsbPolicy](arkts-mdm-usbmanager-usbpolicy-e.md) | 是 | USB读写策略（此接口只支持READ_WRITE和READ_ONLY）。 |
 
 **返回值：**
@@ -120,22 +139,5 @@ function setUsbPolicy(admin: Want, usbPolicy: UsbPolicy): Promise<void>
 
 **示例**
 
-```TypeScript
-import { usbManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let policy: usbManager.UsbPolicy = usbManager.UsbPolicy.READ_WRITE;
-
-usbManager.setUsbPolicy(wantTemp, policy).then(() => {
-  console.info('Succeeded in setting usb policy');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set usb policy. Code is ${err.code}, message is ${err.message}`);
-})
-```
+参见 [setUsbPolicy](#setusbpolicy)
 

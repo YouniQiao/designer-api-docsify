@@ -1,6 +1,6 @@
 # EnterpriseAdminExtensionContext
 
-*EnterpriseAdminExtensionContext** is the context of [EnterpriseAdminExtensionAbility](arkts-mdm-enterpriseenterpriseadminextensionability-enterpriseadminextensionability-c.md) and inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
+*EnterpriseAdminExtensionContext** is the context of [EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md) and inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
 
 When an **EnterpriseAdminExtensionAbility** component is instantiated, the system automatically creates the corresponding **EnterpriseAdminExtensionContext**. You can use this **EnterpriseAdminExtensionContext** to obtain the sandbox path of the app and start other components. This context can only be used within the current **EnterpriseAdminExtensionAbility** and cannot be transferred to other components.
 
@@ -25,7 +25,7 @@ When an **EnterpriseAdminExtensionAbility** component is instantiated, the syste
 startAbilityByAdmin(admin: Want, want: Want): Promise<void>
 ```
 
-Directly starts another component within the [EnterpriseAdminExtensionAbility](arkts-mdm-enterpriseenterpriseadminextensionability-enterpriseadminextensionability-c.md) component (without pop-up prompts on the page). Currently, [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiability-uiability-c.md) and [AppServiceExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md) are supported. This API uses a promise to return the result.
+Directly starts another component within the [EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md) component (without pop-up prompts on the page). Currently, [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md) and [AppServiceExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) are supported. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
@@ -52,8 +52,8 @@ Directly starts another component within the [EnterpriseAdminExtensionAbility](a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of **EnterpriseAdminExtensionAbility** and the app bundle name. |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Mandatory information for starting a component. The **Want** must contain the ability name of the component to be started and the bundle name of the app where the component is located. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of **EnterpriseAdminExtensionAbility** and the app bundle name. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Mandatory information for starting a component. The **Want** must contain the ability name of the component to be started and the bundle name of the app where the component is located. |
 
 **Return value:**
 

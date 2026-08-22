@@ -34,6 +34,30 @@ function castTempForm(formId: string, callback: AsyncCallback<void>): void
 | formId | string | 是 | 卡片标识。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当将指定的临时卡片转换为普通卡片成功，error为undefined，否则为错误对象。 |
 
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let formId: string = '12400633174999288';
+formHost.castTempForm(formId, (error: Base.BusinessError) => {
+  if (error.code) {
+    console.error(`formHost castTempForm, error: ${JSON.stringify(error)}`);
+  }
+});
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+let formId: string = '12400633174999288';
+formHost.castTempForm(formId).then(() => {
+  console.info('formHost castTempForm success');
+}).catch((error: Base.BusinessError) => {
+  console.error(`formHost castTempForm, error: ${JSON.stringify(error)}`);
+});
+```
+
 
 ## castTempForm
 
@@ -68,4 +92,8 @@ function castTempForm(formId: string): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [castTempForm](#casttempform)
 

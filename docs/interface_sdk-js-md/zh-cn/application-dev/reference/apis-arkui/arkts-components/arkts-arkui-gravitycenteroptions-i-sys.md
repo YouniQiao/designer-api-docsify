@@ -55,3 +55,7 @@ gravityIntensity?: double
 
 **系统接口：** 此接口为系统接口。
 
+**示例**
+
+示例请参考[UnionEffectContainer示例](ts-container-unioneffectcomponent-sys.md#示例)。
+

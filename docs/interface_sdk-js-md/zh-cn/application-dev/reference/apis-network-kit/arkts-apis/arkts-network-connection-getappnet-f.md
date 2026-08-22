@@ -66,6 +66,33 @@ connection.getAppNet((error: BusinessError|null, data: connection.NetHandle|unde
 })
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.getAppNet().then((data: connection.NetHandle) => {
+  console.info("Succeeded to get data: " + JSON.stringify(data));
+}).catch((error: BusinessError) => {
+  console.error(`Failed to get request. Code:${error.code}, message:${error.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.getAppNet().then((data: connection.NetHandle) => {
+  console.info("Succeeded to get data: " + JSON.stringify(data));
+}).catch((error: Error) => {
+  let businessError = error as BusinessError;
+  console.error(`Failed to get request. Code:${error.code}, message:${error.message}`);
+});
+```
+
 
 ## getAppNet
 
@@ -96,30 +123,5 @@ function getAppNet(): Promise<NetHandle>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getAppNet().then((data: connection.NetHandle) => {
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-}).catch((error: BusinessError) => {
-  console.error(`Failed to get request. Code:${error.code}, message:${error.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getAppNet().then((data: connection.NetHandle) => {
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-}).catch((error: Error) => {
-  let businessError = error as BusinessError;
-  console.error(`Failed to get request. Code:${error.code}, message:${error.message}`);
-});
-```
+参见 [getAppNet](#getappnet)
 

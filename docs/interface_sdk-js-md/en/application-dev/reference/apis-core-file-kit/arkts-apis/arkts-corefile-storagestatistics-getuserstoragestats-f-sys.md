@@ -51,6 +51,41 @@ storageStatistics.getUserStorageStats().then((storageStats: storageStatistics.St
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+storageStatistics.getUserStorageStats((error: BusinessError, storageStats: storageStatistics.StorageStats) => {
+  if (error) {
+    console.error("getUserStorageStats failed with error:" + JSON.stringify(error));
+  } else {
+    // Do something.
+    console.info("getUserStorageStats successfully:" + JSON.stringify(storageStats));
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let userId: number = 100;
+storageStatistics.getUserStorageStats(userId).then((storageStats: storageStatistics.StorageStats) => {
+  console.info("getUserStorageStats successfully:" + JSON.stringify(storageStats));
+}).catch((err: BusinessError) => {
+  console.error("getUserStorageStats failed with error:" + JSON.stringify(err));
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let userId: number = 100;
+storageStatistics.getUserStorageStats(userId, (error: BusinessError, storageStats: storageStatistics.StorageStats) => {
+  if (error) {
+    console.error("getUserStorageStats failed with error:" + JSON.stringify(error));
+  } else {
+    // Do something.
+    console.info("getUserStorageStats successfully:" + JSON.stringify(storageStats));
+  }
+});
+```
+
 
 ## getUserStorageStats
 
@@ -74,7 +109,7 @@ Obtains the storage statistics of this user, in bytes. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[StorageStats](arkts-corefile-storagestatistics-storagestats-i-sys.md)&gt; | Yes | Callback used to return the storage statistics obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[StorageStats](arkts-corefile-storagestatistics-storagestats-i-sys.md)&gt; | Yes | Callback used to return the storage statistics obtained. |
 
 **Error codes:**
 
@@ -88,17 +123,7 @@ Obtains the storage statistics of this user, in bytes. This API uses an asynchro
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-storageStatistics.getUserStorageStats((error: BusinessError, storageStats: storageStatistics.StorageStats) => {
-  if (error) {
-    console.error("getUserStorageStats failed with error:" + JSON.stringify(error));
-  } else {
-    // Do something.
-    console.info("getUserStorageStats successfully:" + JSON.stringify(storageStats));
-  }
-});
-```
+See [getUserStorageStats](#getuserstoragestats)
 
 
 ## getUserStorageStats
@@ -144,15 +169,7 @@ Obtains the storage statistics of the specified user, in bytes. This API uses a 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let userId: number = 100;
-storageStatistics.getUserStorageStats(userId).then((storageStats: storageStatistics.StorageStats) => {
-  console.info("getUserStorageStats successfully:" + JSON.stringify(storageStats));
-}).catch((err: BusinessError) => {
-  console.error("getUserStorageStats failed with error:" + JSON.stringify(err));
-});
-```
+See [getUserStorageStats](#getuserstoragestats)
 
 
 ## getUserStorageStats
@@ -178,7 +195,7 @@ Obtains the storage statistics of the specified user, in bytes. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | long | Yes | User ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[StorageStats](arkts-corefile-storagestatistics-storagestats-i-sys.md)&gt; | Yes | Callback used to return the storage statistics obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[StorageStats](arkts-corefile-storagestatistics-storagestats-i-sys.md)&gt; | Yes | Callback used to return the storage statistics obtained. |
 
 **Error codes:**
 
@@ -193,16 +210,5 @@ Obtains the storage statistics of the specified user, in bytes. This API uses an
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let userId: number = 100;
-storageStatistics.getUserStorageStats(userId, (error: BusinessError, storageStats: storageStatistics.StorageStats) => {
-  if (error) {
-    console.error("getUserStorageStats failed with error:" + JSON.stringify(error));
-  } else {
-    // Do something.
-    console.info("getUserStorageStats successfully:" + JSON.stringify(storageStats));
-  }
-});
-```
+See [getUserStorageStats](#getuserstoragestats)
 

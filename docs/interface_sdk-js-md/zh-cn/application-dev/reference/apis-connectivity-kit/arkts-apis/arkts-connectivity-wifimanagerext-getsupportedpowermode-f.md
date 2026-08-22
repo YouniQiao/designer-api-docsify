@@ -36,6 +36,20 @@ function getSupportedPowerMode(): Promise<Array<PowerMode>>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [2701000](../errorcode-wifi.md#2701000-ap扩展模块异常) | Operation failed. |
 
+**示例**
+
+```TypeScript
+import { wifiManagerExt } from '@kit.ConnectivityKit';
+
+wifiManagerExt.getSupportedPowerMode((err, data: wifiManagerExt.PowerMode[]) => {
+    if (err) {
+        console.error("get supported power mode info error: ", err);
+        return;
+    }
+    console.info("get supported power mode info: " + JSON.stringify(data));
+});
+```
+
 
 ## getSupportedPowerMode
 
@@ -69,15 +83,5 @@ function getSupportedPowerMode(callback: AsyncCallback<Array<PowerMode>>): void
 
 **示例**
 
-```TypeScript
-import { wifiManagerExt } from '@kit.ConnectivityKit';
-
-wifiManagerExt.getSupportedPowerMode((err, data: wifiManagerExt.PowerMode[]) => {
-    if (err) {
-        console.error("get supported power mode info error: ", err);
-        return;
-    }
-    console.info("get supported power mode info: " + JSON.stringify(data));
-});
-```
+参见 [getSupportedPowerMode](#getsupportedpowermode)
 

@@ -92,6 +92,48 @@ let notificationSlot: notificationManager.NotificationSlot = {
 notificationManager.setSlotByBundle(bundle, notificationSlot, setSlotByBundleCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+    bundle: 'bundleName1',
+};
+
+let notificationSlot: notificationManager.NotificationSlot = {
+    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
+};
+
+notificationManager.setSlotByBundle(bundle, notificationSlot).then(() => {
+    console.info('setSlotByBundle success');
+}).catch((err: BusinessError) => {
+    console.error(`setSlotByBundle failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+    // 需根据实际情况进行替换
+    bundle: 'bundleName1',
+};
+
+let notificationSlot: notificationManager.NotificationSlot = {
+    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
+};
+
+notificationManager.setSlotByBundle(bundle, notificationSlot).then(() => {
+    console.info('setSlotByBundle success');
+}).catch((err: Error): void => {
+    let error: BusinessError = err as BusinessError;
+    console.error(`setSlotByBundle failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## setSlotByBundle
 
@@ -141,45 +183,5 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName1',
-};
-
-let notificationSlot: notificationManager.NotificationSlot = {
-    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-};
-
-notificationManager.setSlotByBundle(bundle, notificationSlot).then(() => {
-    console.info('setSlotByBundle success');
-}).catch((err: BusinessError) => {
-    console.error(`setSlotByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-};
-
-let notificationSlot: notificationManager.NotificationSlot = {
-    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-};
-
-notificationManager.setSlotByBundle(bundle, notificationSlot).then(() => {
-    console.info('setSlotByBundle success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`setSlotByBundle failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [setSlotByBundle](#setslotbybundle)
 

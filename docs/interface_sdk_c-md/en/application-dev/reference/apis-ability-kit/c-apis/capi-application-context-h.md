@@ -37,6 +37,7 @@ The file declares the APIs related to the application-level context.
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_StartSelfUIAbilityWithPidResult(AbilityBase_Want *want, AbilityRuntime_StartOptions *options, int32_t *targetPid)](#oh_abilityruntime_startselfuiabilitywithpidresult) | Starts the UIAbility of the current application using **StartOptions** and obtains the process ID of thetarget UIAbility. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ApplicationContextGetLogFileDir(char* buffer, const int32_t bufferSize, int32_t* writeLength)](#oh_abilityruntime_applicationcontextgetlogfiledir) | Obtains the application-level log file directory of the application. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ApplicationContextNotifyPageChanged(const char* targetPageName, int32_t targetPageNameLength, int32_t windowId)](#oh_abilityruntime_applicationcontextnotifypagechanged) | This API can be called only from third-party frameworks. Each time a third-party framework switches pages, itnotifies the system of the target page information (including the target page path, the length of the target pagepath, and the window ID corresponding to the target page). The system can adjust or recover the page according toproduct policies. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_AcquireUIAbilityChildProcessInfos(OH_AbilityRuntime_ChildProcessInfosHandle* infos, uint32_t* count)](#oh_abilityruntime_acquireuiabilitychildprocessinfos) | Acquires UIAbility child process infos of the current application.Includes child processes created via startAbility with ProcessMode.NEW_PROCESS_ATTACH_TO_PARENT. |
 
 ## Function description
 
@@ -533,5 +534,30 @@ This API can be called only from third-party frameworks. Each time a third-party
 | Type | Description |
 | -- | -- |
 | [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | One of the following execution results:       ABILITY_RUNTIME_ERROR_CODE_NO_ERROR: The operation is successful.       ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID:       The input parameter targetPageName is empty orthe windowId is invalid.       ABILITY_RUNTIME_ERROR_CODE_INTERNAL: An internal error occurs. |
+
+### OH_AbilityRuntime_AcquireUIAbilityChildProcessInfos()
+
+```c
+AbilityRuntime_ErrorCode OH_AbilityRuntime_AcquireUIAbilityChildProcessInfos(OH_AbilityRuntime_ChildProcessInfosHandle* infos, uint32_t* count)
+```
+
+**Description**
+
+Acquires UIAbility child process infos of the current application.Includes child processes created via startAbility with ProcessMode.NEW_PROCESS_ATTACH_TO_PARENT.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| OH_AbilityRuntime_ChildProcessInfosHandle* infos | [out] Pointer to child process info collection. It must not be NULL.When no child processes exist, the dereferenced value of the pointer **infos** is set to nullptr. |
+| uint32_t* count | [out] Pointer to the number of child processes. It must not be NULL. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul>       <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the call is successful.</li>       <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the arguments provided are invalid.</li>       <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if an internal error occurs,       such as connect system service failed.</li>       </ul> |
 
 

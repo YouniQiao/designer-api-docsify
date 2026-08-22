@@ -69,6 +69,22 @@ try {
 }
 ```
 
+```TypeScript
+import { logLibrary } from '@kit.PerformanceAnalysisKit';
+
+try {
+    logLibrary.copy('HILOG', 'hiapplogcat-1.zip', 'dir1', (error, val) => {
+        if (val === undefined) {
+            // copy failed.
+        } else {
+            // copy success.
+        }
+    });
+} catch (error) {
+    console.error(`error code: ${error?.code}, error msg: ${error?.message}`);
+}
+```
+
 
 ## copy
 
@@ -95,7 +111,7 @@ Copies log files of the specified type to the target application directory. This
 | logType | string | Yes | Log type, for example, **HILOG**, **FAULTLOG**, **BETACLUB**, or **REMOTELOG**. |
 | logName | string | Yes | Log file name. |
 | dest | string | Yes | Target directory. Enter the relative path of the directory. If this parameter is specified, log files will be saved to the **hiview/dest** folder in the application cache path, that is, **../cache/hiview/dest**. You can enter a multi-level directory. <br>If you leave this parameter empty, log files will be saved to the root directory, that is, the **hiview** folder in the application cache path. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to process the received return value. The value **0** indicates that the operation is successful, and any other value indicates that the operation has failed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to process the received return value. The value **0** indicates that the operation is successful, and any other value indicates that the operation has failed. |
 
 **Error codes:**
 
@@ -108,19 +124,5 @@ Copies log files of the specified type to the target application directory. This
 
 **Examples**
 
-```TypeScript
-import { logLibrary } from '@kit.PerformanceAnalysisKit';
-
-try {
-    logLibrary.copy('HILOG', 'hiapplogcat-1.zip', 'dir1', (error, val) => {
-        if (val === undefined) {
-            // copy failed.
-        } else {
-            // copy success.
-        }
-    });
-} catch (error) {
-    console.error(`error code: ${error?.code}, error msg: ${error?.message}`);
-}
-```
+See [copy](#copy)
 

@@ -36,6 +36,25 @@ constructor()
 let writableStream = new stream.Writable();
 ```
 
+```TypeScript
+let readableStream = new stream.Readable();
+```
+
+```TypeScript
+let option : stream.ReadableOptions = {
+  encoding : "utf-8"
+};
+let readableStream = new stream.Readable(option);
+```
+
+```TypeScript
+let duplex = new stream.Duplex();
+```
+
+```TypeScript
+let transformStream = new stream.Transform();
+```
+
 ## cork
 
 ```TypeScript
@@ -96,6 +115,12 @@ let result = writableStream.cork();
 console.info("Writable cork result", result); // 期望结果: Writable cork result true
 ```
 
+```TypeScript
+let duplexStream = new stream.Duplex();
+let result = duplexStream.cork();
+console.info("duplexStream cork result", result); // duplexStream cork result true
+```
+
 ## doInitialize
 
 ```TypeScript
@@ -133,6 +158,42 @@ class MyWritable extends stream.Writable {
 }
 
 new MyWritable();
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+class MyReadable extends stream.Readable {
+  doInitialize(callback: Function) {
+    super.doInitialize(callback);
+    console.info("Readable doInitialize"); // Readable doInitialize
+  }
+
+  doRead(size: number) {
+  }
+}
+
+let myReadable = new MyReadable();
+myReadable.on("data", () => {
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class MyReadable extends stream.Readable {
+  doInitialize(callback: Function) {
+    super.doInitialize(callback);
+    console.info("Readable doInitialize"); // 期望结果: Readable doInitialize
+  }
+
+  doRead(size: int) {
+  }
+}
+
+let myReadable = new MyReadable();
+myReadable.on("data", () => {
+});
 ```
 
 ## doWrite
@@ -195,6 +256,48 @@ class TestWritable extends stream.Writable {
 
 let writableStream = new TestWritable();
 writableStream.write("data", "utf8");
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("duplexStream chunk is", chunk); // duplexStream chunk is data
+    callback();
+  }
+}
+
+let duplexStream = new TestDuplex();
+duplexStream.write("data", "utf8");
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("duplexStream chunk is", chunk); // 期望结果: duplexStream chunk is data
+    callback.unsafeCall();
+  }
+}
+
+let duplexStream = new TestDuplex();
+duplexStream.write("data", "utf8");
 ```
 
 ## doWritev
@@ -266,6 +369,64 @@ writableStream.write("data1", "utf8");
 writableStream.write("data2", "utf8");
 writableStream.uncork();
 writableStream.end();
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback();
+  }
+
+  doWritev(chunks: string[] | Uint8Array[], callback: Function) {
+    console.info("duplexStream chunk", chunks[0]); // duplexStream chunk data1
+    callback();
+  }
+}
+
+let duplexStream = new TestDuplex();
+duplexStream.cork();
+duplexStream.write("data1", "utf8");
+duplexStream.write("data2", "utf8");
+duplexStream.uncork();
+duplexStream.end();
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback.unsafeCall();
+  }
+
+  doWritev(chunks: string[] | Uint8Array[], callback: Function) {
+    console.info("duplexStream chunk", (chunks as string[])[0]); // 期望结果: duplexStream chunk data1
+    callback.unsafeCall();
+  }
+}
+
+let duplexStream = new TestDuplex();
+duplexStream.cork();
+duplexStream.write("data1", "utf8");
+duplexStream.write("data2", "utf8");
+duplexStream.uncork();
+duplexStream.end();
 ```
 
 ## end
@@ -349,6 +510,52 @@ let writableStream = new TestWritable();
 writableStream.write("test", "utf8");
 writableStream.end("finish", "utf8", () => {
   console.info("Writable is end"); // 期望结果: Writable is end
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("Duplex chunk is", chunk); // Duplex chunk is test
+    callback();
+  }
+}
+
+let duplexStream = new TestDuplex();
+duplexStream.end("test", "utf8", () => {
+  console.info("Duplex is end"); // Duplex is end
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("Duplex chunk is", chunk); // 期望结果: Duplex chunk is test
+    callback.unsafeCall();
+  }
+}
+
+let duplexStream = new TestDuplex();
+duplexStream.end("test", "utf8", () => {
+  console.info("Duplex is end"); // 期望结果: Duplex is end
 });
 ```
 
@@ -612,6 +819,48 @@ let result = writableStream.setDefaultEncoding("utf8");
 console.info("Writable is result", result); // 期望结果: Writable is result true
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback();
+  }
+}
+
+let duplexStream = new TestDuplex();
+let result = duplexStream.setDefaultEncoding("utf8");
+console.info("duplexStream is result", result); // duplexStream is result true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback.unsafeCall();
+  }
+}
+
+let duplexStream = new TestDuplex();
+let result = duplexStream.setDefaultEncoding("utf8");
+console.info("duplexStream is result", result); // 期望结果: duplexStream is result true
+```
+
 ## uncork
 
 ```TypeScript
@@ -682,6 +931,58 @@ writableStream.on("finish", () => {
   console.info("all Data is End"); // 期望结果: all Data is End
 });
 writableStream.end();
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+let dataWritten = "";
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    dataWritten += chunk;
+    callback();
+  }
+}
+
+let duplexStream = new TestDuplex();
+duplexStream.cork();
+duplexStream.write("a");
+duplexStream.write("b");
+duplexStream.uncork();
+console.info("Duplex test uncork", dataWritten); // Duplex test uncork ab
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let dataWritten = "";
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    dataWritten += chunk;
+    callback.unsafeCall();
+  }
+}
+
+let duplexStream = new TestDuplex();
+duplexStream.cork();
+duplexStream.write("a");
+duplexStream.write("b");
+duplexStream.uncork();
+console.info("Duplex test uncork", dataWritten); // 期望结果: Duplex test uncork
 ```
 
 ## write
@@ -758,5 +1059,49 @@ class TestWritable extends stream.Writable {
 
 let writableStream = new TestWritable();
 writableStream.write("test", "utf8");
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("duplexStream chunk is", chunk); // duplexStream chunk is test
+    callback();
+  }
+}
+
+let duplexStream = new TestDuplex();
+let result = duplexStream.write("test", "utf8");
+console.info("duplexStream result", result); // duplexStream result true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("duplexStream chunk is", chunk); // 期望结果: duplexStream chunk is test
+    callback.unsafeCall();
+  }
+}
+
+let duplexStream = new TestDuplex();
+let result = duplexStream.write("test", "utf8");
+console.info("duplexStream result", result); // 期望结果: duplexStream result true
 ```
 

@@ -51,6 +51,7 @@ Declares the APIs used to create a native child process and establish an IPC cha
 | [Ability_NativeChildProcess_ErrCode OH_Ability_UnregisterNativeChildProcessExitCallback(OH_Ability_OnNativeChildProcessExit onProcessExit)](#oh_ability_unregisternativechildprocessexitcallback) | - | Unregisters the callback used to listen for child process exit. |
 | [Ability_NativeChildProcess_ErrCode OH_Ability_KillChildProcess(int32_t pid)](#oh_ability_killchildprocess) | - | Terminates a child process created by the current process. |
 | [bool OH_Ability_IsNativeChildProcessSupported()](#oh_ability_isnativechildprocesssupported) | - | Check whether the caller is allowed to use native process capabilities. |
+| [Ability_NativeChildProcess_ErrCode OH_Ability_AcquireChildProcessInfos(OH_AbilityRuntime_ChildProcessInfosHandle* infos, uint32_t* count)](#oh_ability_acquirechildprocessinfos) | - | Acquires child process infos of the current application.Includes child processes created via:- OH_Ability_CreateNativeChildProcess / OH_Ability_CreateNativeChildProcessWithConfigs- OH_Ability_StartNativeChildProcess / OH_Ability_StartNativeChildProcessWithConfigs- childProcessManager.startChildProcess (non-SELF_FORK mode)- childProcessManager.startArkChildProcess- childProcessManager.startNativeChildProcess |
 
 ## Enum type description
 
@@ -237,7 +238,7 @@ Defines a callback function for notifying the child process startup result.
 | Parameter | Description |
 | -- | -- |
 | int errCode | Error code returned by the callback function.[NCP_NO_ERROR](capi-native-child-process-h.md#ability_nativechildprocess_errcode): The child process is created successfully.[NCP_ERR_LIB_LOADING_FAILED](capi-native-child-process-h.md#ability_nativechildprocess_errcode): Loading the dynamic library file fails or the necessary export function isnot implemented in the dynamic library.[NCP_ERR_CONNECTION_FAILED](capi-native-child-process-h.md#ability_nativechildprocess_errcode): The **OnConnect** method implemented in the dynamic library does not returna valid IPC stub pointer.For details, see [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode). |
-| [OHIPCRemoteProxy](../IPCKit/capi-ohipcparcel-ohipcremoteproxy.md) \*remoteProxy | Pointer to the IPC object of the child process. If an exception occurs, the value may be nullptr.The object must be released by calling {@link OH_IPCRemoteProxy_Destroy} when it is no longer needed. |
+| OHIPCRemoteProxy \*remoteProxy | Pointer to the IPC object of the child process. If an exception occurs, the value may be nullptr.The object must be released by calling {@link OH_IPCRemoteProxy_Destroy} when it is no longer needed. |
 
 **Reference**:
 
@@ -491,5 +492,30 @@ Check whether the caller is allowed to use native process capabilities.
 | Type | Description |
 | -- | -- |
 | bool | true if the caller is allowed to create native child processes, false otherwise. |
+
+### OH_Ability_AcquireChildProcessInfos()
+
+```c
+Ability_NativeChildProcess_ErrCode OH_Ability_AcquireChildProcessInfos(OH_AbilityRuntime_ChildProcessInfosHandle* infos, uint32_t* count)
+```
+
+**Description**
+
+Acquires child process infos of the current application.Includes child processes created via:- OH_Ability_CreateNativeChildProcess / OH_Ability_CreateNativeChildProcessWithConfigs- OH_Ability_StartNativeChildProcess / OH_Ability_StartNativeChildProcessWithConfigs- childProcessManager.startChildProcess (non-SELF_FORK mode)- childProcessManager.startArkChildProcess- childProcessManager.startNativeChildProcess
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| OH_AbilityRuntime_ChildProcessInfosHandle* infos | [out] Pointer to child process info collection. It must not be NULL.When no child processes exist, the dereferenced value of the pointer **infos** is set to nullptr. |
+| uint32_t* count | [out] Pointer to the number of child processes. It must not be NULL. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode) | <ul>       <li>[NCP_NO_ERROR](capi-native-child-process-h.md#ability_nativechildprocess_errcode) if the operation is successful.</li>       <li>[NCP_ERR_INVALID_PARAM](capi-native-child-process-h.md#ability_nativechildprocess_errcode) if infos or count is nullptr.</li>       <li>[NCP_ERR_INTERNAL](capi-native-child-process-h.md#ability_nativechildprocess_errcode) if an internal error occurs, such as connect system service failed.</li>       </ul> |
 
 

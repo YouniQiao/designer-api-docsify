@@ -58,6 +58,18 @@ appManager.getRunningProcessInformation().then((data) => {
 });
 ```
 
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+
+appManager.getRunningProcessInformation((err, data) => {
+  if (err) {
+    console.error(`getRunningProcessInformation fail, err: ${JSON.stringify(err)}`);
+  } else {
+    console.info(`The running process information is: ${JSON.stringify(data)}`);
+  }
+});
+```
+
 
 ## getRunningProcessInformation
 
@@ -90,7 +102,7 @@ Obtains information about the running processes of the current application. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;ProcessInformation&gt;&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the information about the running processes. Otherwise, **err** is an error object. You can perform error handling or other custom processing. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ProcessInformation&gt;&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the information about the running processes. Otherwise, **err** is an error object. You can perform error handling or other custom processing. |
 
 **Error codes:**
 
@@ -101,15 +113,5 @@ Obtains information about the running processes of the current application. This
 
 **Examples**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-
-appManager.getRunningProcessInformation((err, data) => {
-  if (err) {
-    console.error(`getRunningProcessInformation fail, err: ${JSON.stringify(err)}`);
-  } else {
-    console.info(`The running process information is: ${JSON.stringify(data)}`);
-  }
-});
-```
+See [getRunningProcessInformation](#getrunningprocessinformation)
 

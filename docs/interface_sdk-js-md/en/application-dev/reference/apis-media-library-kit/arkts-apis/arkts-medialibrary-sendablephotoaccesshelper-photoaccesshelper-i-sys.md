@@ -67,6 +67,28 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 
 **Examples**
 
+For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
+
+```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
+
+async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
+  console.info('createAssetDemo');
+  try {
+    let photoType: sendablePhotoAccessHelper.PhotoType = sendablePhotoAccessHelper.PhotoType.IMAGE;
+    let extension: string = 'jpg';
+    let options: photoAccessHelper.CreateOptions = {
+      title: 'testPhoto'
+    }
+    let uri: string = await phAccessHelper.createAsset(photoType, extension, options);
+    console.info('createAsset uri' + uri);
+    console.info('createAsset successfully');
+  } catch (err) {
+    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
 For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-file-sendablephotoaccesshelper.md).
 
 ```TypeScript
@@ -75,6 +97,25 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
   try {
     let testFileName: string = 'testFile' + Date.now() + '.jpg';
     let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName);
+    console.info('createAsset file displayName' + photoAsset.displayName);
+    console.info('createAsset successfully');
+  } catch (err) {
+    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-file-sendablephotoaccesshelper.md).
+
+```TypeScript
+async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
+  console.info('createAssetDemo');
+  try {
+    let testFileName:string = 'testFile' + Date.now() + '.jpg';
+    let createOption: photoAccessHelper.PhotoCreateOptions = {
+      subtype: photoAccessHelper.PhotoSubtype.DEFAULT
+    }
+    let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName, createOption);
     console.info('createAsset file displayName' + photoAsset.displayName);
     console.info('createAsset successfully');
   } catch (err) {
@@ -135,24 +176,7 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-file-sendablephotoaccesshelper.md).
-
-```TypeScript
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  try {
-    let testFileName:string = 'testFile' + Date.now() + '.jpg';
-    let createOption: photoAccessHelper.PhotoCreateOptions = {
-      subtype: photoAccessHelper.PhotoSubtype.DEFAULT
-    }
-    let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName, createOption);
-    console.info('createAsset file displayName' + photoAsset.displayName);
-    console.info('createAsset successfully');
-  } catch (err) {
-    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-  }
-}
-```
+See [createAsset](#createasset)
 
 ## getHiddenAlbums
 
@@ -196,6 +220,62 @@ Obtains hidden albums based on the specified display mode and retrieval options.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
+
+**Examples**
+
+For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-file-sendablephotoaccesshelper.md).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain the preset hidden album.
+async function getSysHiddenAlbum(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
+  console.info('getSysHiddenAlbumDemo');
+  phAccessHelper.getHiddenAlbums(photoAccessHelper.HiddenPhotosDisplayMode.ASSETS_MODE)
+    .then( async (fetchResult) => {
+      if (fetchResult === undefined) {
+        console.error('getSysHiddenAlbumPromise fetchResult is undefined');
+        return;
+      }
+      let hiddenAlbum: sendablePhotoAccessHelper.Album = await fetchResult.getFirstObject();
+      console.info('getAlbumsPromise successfully, albumUri: ' + hiddenAlbum.albumUri);
+      fetchResult.close();
+    }).catch((err: BusinessError) => {
+      console.error(`getSysHiddenAlbumPromise failed with err: ${err.code}, ${err.message}`);
+    });
+}
+
+// Obtain the hidden albums displayed by album, that is, the albums with hidden files. Such albums do not include the preset hidden album and the albums in the trash.
+async function getHiddenAlbumsView(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
+  console.info('getHiddenAlbumsViewDemo');
+  phAccessHelper.getHiddenAlbums(photoAccessHelper.HiddenPhotosDisplayMode.ALBUMS_MODE).then( async (fetchResult) => {
+    if (fetchResult === undefined) {
+      console.error('getHiddenAlbumsViewPromise fetchResult is undefined');
+      return;
+    }
+    let albums: Array<sendablePhotoAccessHelper.Album> = await fetchResult.getAllObjects();
+    console.info('getHiddenAlbumsViewPromise successfully, albums size: ' + albums.length);
+
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    for (let i = 0; i < albums.length; i++) {
+      // Obtain hidden files in the album.
+      albums[i].getAssets(fetchOption).then((assetFetchResult) => {
+        console.info('album get hidden assets successfully, getCount: ' + assetFetchResult.getCount());
+      }).catch((err: BusinessError) => {
+        console.error(`album get hidden assets failed with error: ${err.code}, ${err.message}`);
+      });
+    }
+    fetchResult.close();
+  }).catch((err: BusinessError) => {
+    console.error(`getHiddenAlbumsViewPromise failed with err: ${err.code}, ${err.message}`);
+  });
+}
+```
 
 ## getPhotoAssets
 

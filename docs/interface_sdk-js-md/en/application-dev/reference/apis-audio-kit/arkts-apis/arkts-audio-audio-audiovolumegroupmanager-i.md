@@ -55,6 +55,27 @@ Obtains the maximum amplitude (in the range [0, 1]) of the audio stream for an i
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by promise. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let capturerInfo: audio.AudioCapturerInfo = {
+  source: audio.SourceType.SOURCE_TYPE_MIC, // Audio source type: microphone. Set this parameter based on the service scenario.
+  capturerFlags: 0 // AudioCapturer flag.
+};
+
+audio.getAudioManager().getRoutingManager().getPreferredInputDeviceForCapturerInfo(capturerInfo).then((data) => {
+  audioVolumeGroupManager.getMaxAmplitudeForInputDevice(data[0]).then((value) => {
+    console.info(`Succeeded in getting maxAmplitude for input device. Amplitude: ${value}.`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get maxAmplitude for input device. Code: ${err.code}, message: ${err.message}`);
+  })
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get preferred input device for capturer info. Code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ## getMaxAmplitudeForOutputDevice
 
 ```TypeScript
@@ -89,6 +110,27 @@ Obtains the maximum amplitude (in the range [0, 1]) of the audio stream for an o
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by promise. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rendererInfo: audio.AudioRendererInfo = {
+  usage: audio.StreamUsage.STREAM_USAGE_MUSIC, // Audio stream usage type: music. Set this parameter based on the service scenario.
+  rendererFlags: 0 // AudioRenderer flag.
+};
+
+audio.getAudioManager().getRoutingManager().getPreferOutputDeviceForRendererInfo(rendererInfo).then((data) => {
+  audioVolumeGroupManager.getMaxAmplitudeForOutputDevice(data[0]).then((value) => {
+    console.info(`Succeeded in getting maxAmplitude for input device. Amplitude: ${value}.`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get maxAmplitude for input device. Code: ${err.code}, message: ${err.message}`);
+  })
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get preferred input device for capturer info. Code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ## getMaxVolume
 
 ```TypeScript
@@ -112,7 +154,45 @@ Obtains the maximum volume level of a stream. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the maximum stream volume level obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the maximum stream volume level obtained; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getMaxVolume(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: number) => {
+  if (err) {
+    console.error(`Failed to obtain the maximum volume. ${err}`);
+    return;
+  }
+  console.info(`Callback invoked to indicate that the maximum volume is obtained. ${value}`);
+});
+```
+
+```TypeScript
+audioManager.getMaxVolume(audio.AudioVolumeType.MEDIA).then((data: number) => {
+  console.info('Promised returned to indicate that the maximum volume is obtained.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioVolumeGroupManager.getMaxVolume(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: number) => {
+  if (err) {
+    console.error(`Failed to get maxVolume. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting maxVolume. Volume: ${value}.`);
+});
+```
+
+```TypeScript
+audioVolumeGroupManager.getMaxVolume(audio.AudioVolumeType.MEDIA).then((value: number) => {
+  console.info(`Succeeded in getting maxVolume. Volume: ${value}.`);
+});
+```
 
 ## getMaxVolume
 
@@ -143,6 +223,10 @@ Obtains the maximum volume level of a stream. This API uses a promise to return 
 | Type | Description |
 | --- | --- |
 | Promise&lt;int&gt; | Promise used to return the maximum volume level. |
+
+**Examples**
+
+See [getMaxVolume](#getmaxvolume)
 
 ## getMaxVolumeSync
 
@@ -181,6 +265,20 @@ Obtains the maximum volume level of a stream. This API returns the result synchr
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let value: number = audioVolumeGroupManager.getMaxVolumeSync(audio.AudioVolumeType.MEDIA);
+  console.info(`Succeeded in getting maxVolume. Volume: ${value}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get maxVolume. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getMinVolume
 
 ```TypeScript
@@ -204,7 +302,45 @@ Obtains the minimum volume level of a stream. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the minimum stream volume level obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the minimum stream volume level obtained; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getMinVolume(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: number) => {
+  if (err) {
+    console.error(`Failed to obtain the minimum volume. ${err}`);
+    return;
+  }
+  console.info(`Callback invoked to indicate that the minimum volume is obtained. ${value}`);
+});
+```
+
+```TypeScript
+audioManager.getMinVolume(audio.AudioVolumeType.MEDIA).then((value: number) => {
+  console.info(`Promised returned to indicate that the minimum volume is obtained. ${value}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioVolumeGroupManager.getMinVolume(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: number) => {
+  if (err) {
+    console.error(`Failed to get minVolume. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting minVolume. Volume: ${value}.`);
+});
+```
+
+```TypeScript
+audioVolumeGroupManager.getMinVolume(audio.AudioVolumeType.MEDIA).then((value: number) => {
+  console.info(`Succeeded in getting minVolume. Volume: ${value}.`);
+});
+```
 
 ## getMinVolume
 
@@ -235,6 +371,10 @@ Obtains the minimum volume level of a stream. This API uses a promise to return 
 | Type | Description |
 | --- | --- |
 | Promise&lt;int&gt; | Promise used to return the minimum volume level. |
+
+**Examples**
+
+See [getMinVolume](#getminvolume)
 
 ## getMinVolumeSync
 
@@ -273,6 +413,20 @@ Obtains the minimum volume level of a stream. This API returns the result synchr
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let value: number = audioVolumeGroupManager.getMinVolumeSync(audio.AudioVolumeType.MEDIA);
+  console.info(`Succeeded in getting minVolume. Volume: ${value}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get minVolume. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getRingerMode
 
 ```TypeScript
@@ -291,7 +445,49 @@ Obtains the ringer mode. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the ringer mode obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the ringer mode obtained; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getRingerMode((err: BusinessError, value: audio.AudioRingMode) => {
+  if (err) {
+    console.error(`Failed to obtain the ringer mode. ${err}`);
+    return;
+  }
+  console.info(`Callback invoked to indicate that the ringer mode is obtained ${value}.`);
+});
+```
+
+```TypeScript
+audioManager.getRingerMode().then((value: audio.AudioRingMode) => {
+  console.info(`Promise returned to indicate that the ringer mode is obtained ${value}.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioVolumeGroupManager.getRingerMode((err: BusinessError, value: audio.AudioRingMode) => {
+  if (err) {
+    console.error(`Failed to get ringerMode. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting ringerMode. AudioRingMode: ${value}.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioVolumeGroupManager.getRingerMode().then((value: audio.AudioRingMode) => {
+  console.info(`Succeeded in getting ringerMode. AudioRingMode: ${value}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get ringerMode. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getRingerMode
 
@@ -313,6 +509,10 @@ Obtains the ringer mode. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | Promise used to return the ringer mode. |
 
+**Examples**
+
+See [getRingerMode](#getringermode)
+
 ## getRingerModeSync
 
 ```TypeScript
@@ -332,6 +532,20 @@ Obtains the ringer mode. This API returns the result synchronously.
 | Type | Description |
 | --- | --- |
 | [AudioRingMode](arkts-audio-audio-audioringmode-e.md) | Ringer mode. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let value: audio.AudioRingMode = audioVolumeGroupManager.getRingerModeSync();
+  console.info(`Succeeded in getting ringerMode. AudioRingMode: ${value}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get ringerMode. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## getSystemVolumeInDb
 
@@ -358,7 +572,7 @@ Obtains the volume gain. This API uses an asynchronous callback to return the re
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
 | volumeLevel | int | Yes | Volume level. |
 | device | DeviceType | Yes | Device type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;double&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the volume gain obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the volume gain obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -367,6 +581,30 @@ Obtains the volume gain. This API uses an asynchronous callback to return the re
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by callback. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioVolumeGroupManager.getSystemVolumeInDb(audio.AudioVolumeType.MEDIA, 3, audio.DeviceType.SPEAKER, (err: BusinessError, value: number) => {
+  if (err) {
+    console.error(`Failed to get system volume in db. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting system volume in db. DB: ${value}.`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioVolumeGroupManager.getSystemVolumeInDb(audio.AudioVolumeType.MEDIA, 3, audio.DeviceType.SPEAKER).then((value: number) => {
+  console.info(`Succeeded in getting system volume in db. DB: ${value}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get system volume in db. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getSystemVolumeInDb
 
@@ -408,6 +646,10 @@ Obtains the volume gain. This API uses a promise to return the result.
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by promise. |
 
+**Examples**
+
+See [getSystemVolumeInDb](#getsystemvolumeindb)
+
 ## getSystemVolumeInDbSync
 
 ```TypeScript
@@ -447,6 +689,20 @@ Obtains the volume gain. This API returns the result synchronously.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let value: number = audioVolumeGroupManager.getSystemVolumeInDbSync(audio.AudioVolumeType.MEDIA, 3, audio.DeviceType.SPEAKER);
+  console.info(`Succeeded in getting system volume in db. DB: ${value}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get system volume in db. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getVolume
 
 ```TypeScript
@@ -470,7 +726,57 @@ Obtains the volume level of a stream. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream volume level obtained; otherwise, **err** is an error object. The volume range of a specified stream can be obtained by calling [getMinVolume](#getminvolume) and [getMaxVolume](#getmaxvolume) . |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream volume level obtained; otherwise, **err** is an error object. The volume range of a specified stream can be obtained by calling [getMinVolume](#getminvolume) and [getMaxVolume](#getmaxvolume) . |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getVolume(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: number) => {
+  if (err) {
+    console.error(`Failed to obtain the volume. ${err}`);
+    return;
+  }
+  console.info('Callback invoked to indicate that the volume is obtained.');
+});
+```
+
+```TypeScript
+audioManager.getVolume(audio.AudioVolumeType.MEDIA).then((value: number) => {
+  console.info(`Promise returned to indicate that the volume is obtained ${value} .`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let value: number = audioRenderer.getVolume();
+  console.info(`Indicate that the volume is obtained ${value}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain the volume, error ${error}.`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioVolumeGroupManager.getVolume(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: number) => {
+  if (err) {
+    console.error(`Failed to get volume. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting volume. Volume: ${value}.`);
+});
+```
+
+```TypeScript
+audioVolumeGroupManager.getVolume(audio.AudioVolumeType.MEDIA).then((value: number) => {
+  console.info(`Succeeded in getting volume. Volume: ${value}.`);
+});
+```
 
 ## getVolume
 
@@ -501,6 +807,10 @@ Obtains the volume level of a stream. This API uses a promise to return the resu
 | Type | Description |
 | --- | --- |
 | Promise&lt;int&gt; | Promise used to return the stream volume level. The volume range of a specified stream can be obtained by calling [getMinVolume]{ |
+
+**Examples**
+
+See [getVolume](#getvolume)
 
 ## getVolumeSync
 
@@ -539,6 +849,20 @@ Obtains the volume level of a stream. This API returns the result synchronously.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let value: number = audioVolumeGroupManager.getVolumeSync(audio.AudioVolumeType.MEDIA);
+  console.info(`Succeeded in getting volume. Volume: ${value}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get volume. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## isMicrophoneMute
 
 ```TypeScript
@@ -557,7 +881,49 @@ Checks whether the microphone is muted. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the microphone is muted or **false** if not muted; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the microphone is muted or **false** if not muted; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.isMicrophoneMute((err: BusinessError, value: boolean) => {
+  if (err) {
+    console.error(`Failed to obtain the mute status of the microphone. ${err}`);
+    return;
+  }
+  console.info(`Callback invoked to indicate that the mute status of the microphone is obtained ${value}.`);
+});
+```
+
+```TypeScript
+audioManager.isMicrophoneMute().then((value: boolean) => {
+  console.info(`Promise returned to indicate that the mute status of the microphone is obtained ${value}.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioVolumeGroupManager.isMicrophoneMute((err: BusinessError, value: boolean) => {
+  if (err) {
+    console.error(`Failed to use isMicrophoneMute function. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in using isMicrophoneMute function. MuteState: ${value}.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioVolumeGroupManager.isMicrophoneMute().then((value: boolean) => {
+  console.info(`Succeeded in using isMicrophoneMute function. MuteState: ${value}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to use isMicrophoneMute function. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## isMicrophoneMute
 
@@ -579,6 +945,10 @@ Checks whether the microphone is muted. This API uses a promise to return the re
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the microphone is muted. **true** if muted, **false** otherwise. |
 
+**Examples**
+
+See [isMicrophoneMute](#ismicrophonemute)
+
 ## isMicrophoneMuteSync
 
 ```TypeScript
@@ -598,6 +968,20 @@ Checks whether the microphone is muted. This API returns the result synchronousl
 | Type | Description |
 | --- | --- |
 | boolean | Check result for whether the microphone is muted. **true** if muted, **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let value: boolean = audioVolumeGroupManager.isMicrophoneMuteSync();
+  console.info(`Succeeded in using isMicrophoneMuteSync function. MuteState: ${value}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to use isMicrophoneMuteSync function. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## isMute
 
@@ -622,7 +1006,45 @@ Checks whether a stream is muted. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the stream is muted or **false** if not muted; otherwise , **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the stream is muted or **false** if not muted; otherwise , **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.isMute(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: boolean) => {
+  if (err) {
+    console.error(`Failed to obtain the mute status. ${err}`);
+    return;
+  }
+  console.info(`Callback invoked to indicate that the mute status of the stream is obtained. ${value}`);
+});
+```
+
+```TypeScript
+audioManager.isMute(audio.AudioVolumeType.MEDIA).then((value: boolean) => {
+  console.info(`Promise returned to indicate that the mute status of the stream is obtained ${value}.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioVolumeGroupManager.isMute(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: boolean) => {
+  if (err) {
+    console.error(`Failed to use isMute function. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in using isMute function. MuteState: ${value}.`);
+});
+```
+
+```TypeScript
+audioVolumeGroupManager.isMute(audio.AudioVolumeType.MEDIA).then((value: boolean) => {
+  console.info(`Succeeded in using isMute function. MuteState: ${value}.`);
+});
+```
 
 ## isMute
 
@@ -653,6 +1075,10 @@ Checks whether a stream is muted. This API uses a promise to return the result.
 | Type | Description |
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the stream is muted. **true** if muted, **false** otherwise. |
+
+**Examples**
+
+See [isMute](#ismute)
 
 ## isMuteSync
 
@@ -691,6 +1117,20 @@ Checks whether a stream is muted. This API returns the result synchronously.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let value: boolean = audioVolumeGroupManager.isMuteSync(audio.AudioVolumeType.MEDIA);
+  console.info(`Succeeded in using isMuteSync function. MuteState: ${value}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to use isMuteSync function. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## isVolumeUnadjustable
 
 ```TypeScript
@@ -711,57 +1151,12 @@ Checks whether the fixed volume mode is enabled. When the fixed volume mode is e
 | --- | --- |
 | boolean | Check result for whether the fixed volume mode is enabled. **true** if enabled, **false** otherwise. |
 
-## offMicStateChange
+**Examples**
 
 ```TypeScript
-offMicStateChange(callback?: Callback<MicStateChangeEvent>): void
+let volumeAdjustSwitch: boolean = audioVolumeGroupManager.isVolumeUnadjustable();
+console.info(`Succeeded in using isVolumeUnadjustable function. VolumeUnadjustable: ${volumeAdjustSwitch}.`);
 ```
-
-Unsubscribes to the microphone state change events.
-
-**Since:** 23
-
-<!--Device-AudioVolumeGroupManager-offMicStateChange(callback?: Callback<MicStateChangeEvent>): void--><!--Device-AudioVolumeGroupManager-offMicStateChange(callback?: Callback<MicStateChangeEvent>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Volume
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | No | Callback used to get the system microphone state change event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-## offRingerModeChange
-
-```TypeScript
-offRingerModeChange(callback?: Callback<AudioRingMode>): void
-```
-
-Unsubscribes to the ringer mode state change events.
-
-**Since:** 23
-
-<!--Device-AudioVolumeGroupManager-offRingerModeChange(callback?: Callback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-offRingerModeChange(callback?: Callback<AudioRingMode>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Volume
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | No | Callback used to get the updated ringer mode. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## off('micStateChange')
 
@@ -782,7 +1177,7 @@ Unsubscribes from the microphone state change event. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'micStateChange' | Yes | Event type. The event **'micStateChange'** is triggered when the microphone state is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | No | Callback used to return the changed microphone state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | No | Callback used to return the changed microphone state. |
 
 **Error codes:**
 
@@ -810,7 +1205,7 @@ Unsubscribes from the ringer mode change event. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'ringerModeChange' | Yes | Event type. The event **'ringerModeChange'** is triggered when the ringer mode is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | No | Callback used to return the changed ringer mode. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | No | Callback used to return the changed ringer mode. |
 
 **Error codes:**
 
@@ -818,17 +1213,17 @@ Unsubscribes from the ringer mode change event. This API uses an asynchronous ca
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onMicStateChange
+## offMicStateChange
 
 ```TypeScript
-onMicStateChange(callback: Callback<MicStateChangeEvent>): void
+offMicStateChange(callback?: Callback<MicStateChangeEvent>): void
 ```
 
-Listens for system microphone state change events. This method uses a callback to get microphone change events.
+Unsubscribes to the microphone state change events.
 
 **Since:** 23
 
-<!--Device-AudioVolumeGroupManager-onMicStateChange(callback: Callback<MicStateChangeEvent>): void--><!--Device-AudioVolumeGroupManager-onMicStateChange(callback: Callback<MicStateChangeEvent>): void-End-->
+<!--Device-AudioVolumeGroupManager-offMicStateChange(callback?: Callback<MicStateChangeEvent>): void--><!--Device-AudioVolumeGroupManager-offMicStateChange(callback?: Callback<MicStateChangeEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -836,7 +1231,7 @@ Listens for system microphone state change events. This method uses a callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | Yes | Callback used to get the system microphone state change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | No | Callback used to get the system microphone state change event. |
 
 **Error codes:**
 
@@ -844,17 +1239,17 @@ Listens for system microphone state change events. This method uses a callback t
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onRingerModeChange
+## offRingerModeChange
 
 ```TypeScript
-onRingerModeChange(callback: Callback<AudioRingMode>): void
+offRingerModeChange(callback?: Callback<AudioRingMode>): void
 ```
 
-Listens for ringer mode change events. This method uses a callback to get ringer mode changes.
+Unsubscribes to the ringer mode state change events.
 
 **Since:** 23
 
-<!--Device-AudioVolumeGroupManager-onRingerModeChange(callback: Callback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-onRingerModeChange(callback: Callback<AudioRingMode>): void-End-->
+<!--Device-AudioVolumeGroupManager-offRingerModeChange(callback?: Callback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-offRingerModeChange(callback?: Callback<AudioRingMode>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -862,7 +1257,7 @@ Listens for ringer mode change events. This method uses a callback to get ringer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | Yes | Callback used to get the updated ringer mode. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | No | Callback used to get the updated ringer mode. |
 
 **Error codes:**
 
@@ -891,7 +1286,7 @@ Currently, when multiple AudioManager instances are used in a single process, on
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'micStateChange' | Yes | Event type. The event **'micStateChange'** is triggered when the microphone state is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | Yes | Callback used to return the changed microphone state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | Yes | Callback used to return the changed microphone state. |
 
 **Error codes:**
 
@@ -919,13 +1314,65 @@ Subscribes to the ringer mode change event, which is triggered when the [AudioRi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'ringerModeChange' | Yes | Event type. The event **'ringerModeChange'** is triggered when the ringer mode is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | Yes | Callback used to return the changed ringer mode. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | Yes | Callback used to return the changed ringer mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onMicStateChange
+
+```TypeScript
+onMicStateChange(callback: Callback<MicStateChangeEvent>): void
+```
+
+Listens for system microphone state change events. This method uses a callback to get microphone change events.
+
+**Since:** 23
+
+<!--Device-AudioVolumeGroupManager-onMicStateChange(callback: Callback<MicStateChangeEvent>): void--><!--Device-AudioVolumeGroupManager-onMicStateChange(callback: Callback<MicStateChangeEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | Yes | Callback used to get the system microphone state change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onRingerModeChange
+
+```TypeScript
+onRingerModeChange(callback: Callback<AudioRingMode>): void
+```
+
+Listens for ringer mode change events. This method uses a callback to get ringer mode changes.
+
+**Since:** 23
+
+<!--Device-AudioVolumeGroupManager-onRingerModeChange(callback: Callback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-onRingerModeChange(callback: Callback<AudioRingMode>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | Yes | Callback used to get the updated ringer mode. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## setMicrophoneMute
@@ -951,7 +1398,45 @@ Mutes or unmutes the microphone. This method uses an asynchronous callback to re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mute | boolean | Yes | Mute status to set. The value true means to mute the microphone, and false means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.setMicrophoneMute(true, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to mute the microphone. ${err}`);
+    return;
+  }
+  console.info('Callback invoked to indicate that the microphone is muted.');
+});
+```
+
+```TypeScript
+audioManager.setMicrophoneMute(true).then(() => {
+  console.info('Promise returned to indicate that the microphone is muted.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioVolumeGroupManager.setMicrophoneMute(true, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set microphone mute. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting microphone mute.');
+});
+```
+
+```TypeScript
+audioVolumeGroupManager.setMicrophoneMute(true).then(() => {
+  console.info('Succeeded in setting microphone mute.');
+});
+```
 
 ## setMicrophoneMute
 
@@ -982,4 +1467,8 @@ Mutes or unmutes the microphone. This method uses a promise to return the result
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
+
+**Examples**
+
+See [setMicrophoneMute](#setmicrophonemute)
 

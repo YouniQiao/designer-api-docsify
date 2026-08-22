@@ -47,3 +47,12 @@ Checks whether macro photography is supported in the current state. This API mus
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 11 - 18 |
 
+**Examples**
+
+```TypeScript
+function isMacroSupported(photoSession: camera.PhotoSession): boolean {
+  let isSupported: boolean = photoSession.isMacroSupported();
+  return isSupported;
+}
+```
+

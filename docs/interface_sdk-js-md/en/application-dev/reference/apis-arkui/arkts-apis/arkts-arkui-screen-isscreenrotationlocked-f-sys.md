@@ -27,7 +27,7 @@ Checks whether auto rotate is locked. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If **true** is returned, auto rotate is locked. If **false** is returned, auto rotate is unlocked. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If **true** is returned, auto rotate is locked. If **false** is returned, auto rotate is unlocked. |
 
 **Error codes:**
 
@@ -36,6 +36,16 @@ Checks whether auto rotate is locked. This API uses an asynchronous callback to 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+screen.isScreenRotationLocked().then((isLocked: boolean) => {
+  console.info(`Succeeded in getting the screen rotation lock status. isLocked: ${isLocked}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get the screen rotation lock status. Code:${err.code}, message is ${err.message}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -81,13 +91,5 @@ Checks whether auto rotate is locked. This API uses a promise to return the resu
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-screen.isScreenRotationLocked().then((isLocked: boolean) => {
-  console.info(`Succeeded in getting the screen rotation lock status. isLocked: ${isLocked}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get the screen rotation lock status. Code:${err.code}, message is ${err.message}`);
-});
-```
+See [isScreenRotationLocked](#isscreenrotationlocked)
 

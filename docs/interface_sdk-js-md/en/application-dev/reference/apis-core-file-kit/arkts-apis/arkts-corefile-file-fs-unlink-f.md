@@ -56,6 +56,30 @@ Removes a file. This API uses a promise to return the result.
 | 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + "/test.txt";
+fs.unlink(filePath).then(() => {
+  console.info("remove file succeed");
+}).catch((err: BusinessError) => {
+  console.error("remove file failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + "/test.txt";
+fs.unlink(filePath, (err: BusinessError) => {
+  if (err) {
+    console.error("remove file failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("remove file succeed");
+  }
+});
+```
+
 
 ## unlink
 
@@ -78,7 +102,7 @@ Removes a file. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked immediately after the file is removed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked immediately after the file is removed. |
 
 **Error codes:**
 
@@ -99,4 +123,8 @@ Removes a file. This API uses an asynchronous callback to return the result.
 | 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [unlink](#unlink)
 

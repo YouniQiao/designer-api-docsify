@@ -70,6 +70,16 @@ assertComponentExist(by: By): Promise<void>
 
 ```TypeScript
 // xxx.test.ets
+import { Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.assertComponentExist(ON.text('next page'));
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { UiDriver, BY } from '@kit.TestKit';
 
 async function demo() {
@@ -117,6 +127,40 @@ UiDriver对象采取如下操作：在目标坐标点单击。使用Promise异�
 
 ```TypeScript
 // xxx.test.ets
+import { Driver, ON, Component } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    await button.click();
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.click(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  await button.click();
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { UiDriver } from '@kit.TestKit';
 
 async function demo() {
@@ -154,6 +198,24 @@ static create(): UiDriver
 | [UiDriver](arkts-test-uitest-uidriver-c.md) | 返回构造的UiDriver对象。 |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { PointerMatrix } from '@kit.TestKit';
+
+async function demo() {
+  let pointerMatrix: PointerMatrix = PointerMatrix.create(2, 3);
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -199,6 +261,16 @@ UiDriver对象在给定的时间内延时。使用Promise异步回调。
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.delayMs(1000);
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -249,6 +321,40 @@ UiDriver对象采取如下操作：在目标坐标点双击。使用Promise异�
 
 ```TypeScript
 // xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    await button.doubleClick();
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.doubleClick(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  await button.doubleClick();
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { UiDriver } from '@kit.TestKit';
 
 async function demo() {
@@ -295,6 +401,26 @@ findComponent(by: By): Promise<UiComponent>
 
 ```TypeScript
 // xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.text('next page'));
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.findComponent(ON.text('next page'));
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
@@ -338,6 +464,26 @@ findComponents(by: By): Promise<Array<UiComponent>>
 | Promise&lt;Array&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt;&gt; | Promise对象，返回控件对象的列表。 |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let buttonList: Array<Component> | null = await driver.findComponents(ON.text('next page'));
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let buttonList: Array<Component> | null = await driver.findComponents(ON.text('next page'));
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -388,6 +534,40 @@ UiDriver对象采取如下操作：在目标坐标点长按下鼠标左键。使
 
 ```TypeScript
 // xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    await button.longClick();
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.longClick(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  await button.longClick();
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { UiDriver } from '@kit.TestKit';
 
 async function demo() {
@@ -425,6 +605,26 @@ UiDriver对象进行点击BACK键的操作。使用Promise异步回调。
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.pressBack();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.pressBack(0);
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -471,6 +671,26 @@ UiDriver对象采取如下操作：捕获当前屏幕，并保存为PNG格式的
 | Promise&lt;boolean&gt; | Promise对象，返回截图操作是否成功完成。true：成功完成，false：未成功完成。 |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.screenCap('/data/storage/el2/base/cache/1.png');
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.screenCap('/data/storage/el2/base/cache/1.png', 0);
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -523,6 +743,16 @@ UiDriver对象采取如下操作：从给出的起始坐标点滑向给出的目
 
 ```TypeScript
 // xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.swipe(100, 100, 200, 200, 600);
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { UiDriver } from '@kit.TestKit';
 
 async function demo() {
@@ -557,7 +787,7 @@ UiDriver对象采取如下操作：通过key值找到对应键并点击。使用
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyCode | number | 是 | 指定的key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md)。 |
+| keyCode | number | 是 | 指定的key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
 
 **返回值：**
 
@@ -566,6 +796,28 @@ UiDriver对象采取如下操作：通过key值找到对应键并点击。使用
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+import { KeyCode } from '@kit.InputKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.triggerKey(KeyCode.KEYCODE_BACK); // 返回键。
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+import { KeyCode } from '@kit.InputKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.triggerKey(KeyCode.KEYCODE_BACK, 0); // 返回键。
+}
+```
 
 ```TypeScript
 // xxx.test.ets

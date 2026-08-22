@@ -54,3 +54,14 @@ To use it as a parameter of [PhotoViewPicker.select](arkts-medialibrary-photoacc
 
 **System API:** This is a system API.
 
+**Examples**
+
+```TypeScript
+async function photoPicker() {
+    let picker = new photoAccessHelper.PhotoViewPicker();
+    let option = new photoAccessHelper.PhotoSelectOptions();
+    option.userId = 101;
+    picker.select(option);
+  }
+```
+

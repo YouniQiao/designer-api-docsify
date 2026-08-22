@@ -63,6 +63,16 @@ runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SC
 });
 ```
 
+```TypeScript
+runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL)
+.then((lock: runningLock.RunningLock) => {
+    console.info('created running lock: ' + lock);
+})
+.catch((err: Error) => {
+    console.error('create running lock failed, err: ' + err);
+});
+```
+
 
 ## create
 
@@ -102,13 +112,5 @@ function create(name: string, type: RunningLockType): Promise<RunningLock>
 
 **示例**
 
-```TypeScript
-runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL)
-.then((lock: runningLock.RunningLock) => {
-    console.info('created running lock: ' + lock);
-})
-.catch((err: Error) => {
-    console.error('create running lock failed, err: ' + err);
-});
-```
+参见 [create](#create)
 

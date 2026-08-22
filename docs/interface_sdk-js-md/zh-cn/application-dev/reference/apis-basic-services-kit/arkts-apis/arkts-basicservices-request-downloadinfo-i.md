@@ -31,6 +31,22 @@ description: string
 
 **系统能力：** SystemCapability.MiscServices.Download
 
+## downloadedBytes
+
+```TypeScript
+downloadedBytes: long
+```
+
+实时下载大小，单位为字节（B）。
+
+**类型：** long
+
+**起始版本：** 23
+
+<!--Device-DownloadInfo-downloadedBytes: long--><!--Device-DownloadInfo-downloadedBytes: long-End-->
+
+**系统能力：** SystemCapability.MiscServices.Download
+
 ## downloadId
 
 ```TypeScript
@@ -76,22 +92,6 @@ downloadTotalBytes: long
 **起始版本：** 23
 
 <!--Device-DownloadInfo-downloadTotalBytes: long--><!--Device-DownloadInfo-downloadTotalBytes: long-End-->
-
-**系统能力：** SystemCapability.MiscServices.Download
-
-## downloadedBytes
-
-```TypeScript
-downloadedBytes: long
-```
-
-实时下载大小，单位为字节（B）。
-
-**类型：** long
-
-**起始版本：** 23
-
-<!--Device-DownloadInfo-downloadedBytes: long--><!--Device-DownloadInfo-downloadedBytes: long-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 

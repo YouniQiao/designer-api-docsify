@@ -34,7 +34,7 @@ declare function stat(file: string | number): Promise<Stat>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[Stat](arkts-corefile-filefs-stat-i.md)&gt; | Promise对象。返回文件或目录的具体信息。 |
+| Promise&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | Promise对象。返回文件或目录的具体信息。 |
 
 **错误码：**
 
@@ -53,6 +53,63 @@ declare function stat(file: string | number): Promise<Stat>
 | 13900033 | Too many symbolic links encountered |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+fileIo.stat(filePath).then((stat: fileIo.Stat) => {
+  console.info(`Succeeded in getting file info, the size of file is ${stat.size}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get file info. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+fileIo.stat(filePath).then((stat:fileIo.Stat) => {
+console.info(`Succeeded in getting file info, the size of file is ${stat.size}`);
+}).catch((error: Error) => {
+let err: BusinessError = error as BusinessError;
+console.error(`Failed to get file info. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+fileIo.stat(pathDir, (err: BusinessError, stat: fileIo.Stat) => {
+if (err) {
+  console.error(`Failed to get file info. Code: ${err.code}, message: ${err.message}`);
+} else {
+  console.info(`Succeeded in getting file info, the size of file is ${stat.size}`);
+}
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+fileIo.stat(pathDir, (err: BusinessError | null, stat:fileIo.Stat | undefined) => {
+if (err) {
+  console.error(`Failed to get file info. Code: ${err.code}, message: ${err.message}`);
+} else {
+  console.info(`Succeeded in getting file info, the size of file is ${stat.size}`);
+}
+});
+```
 
 
 ## stat
@@ -76,7 +133,7 @@ declare function stat(file: string | number, callback: AsyncCallback<Stat>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | file | string \| number | 是 | 文件或目录的应用沙箱路径path、URI或已打开的文件描述符fd。<br>**说明：**从API version 22开始，支持传入URI。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-filefs-stat-i.md)&gt; | 是 | 异步获取文件或目录的信息之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | 是 | 异步获取文件或目录的信息之后的回调。 |
 
 **错误码：**
 
@@ -95,4 +152,8 @@ declare function stat(file: string | number, callback: AsyncCallback<Stat>): voi
 | 13900033 | Too many symbolic links encountered |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
+
+**示例**
+
+参见 [stat](#stat)
 

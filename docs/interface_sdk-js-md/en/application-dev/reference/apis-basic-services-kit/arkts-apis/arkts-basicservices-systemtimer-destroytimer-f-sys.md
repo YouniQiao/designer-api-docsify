@@ -27,7 +27,7 @@ Destroys a timer. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | timer | long | Yes | ID of the timer. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -58,6 +58,35 @@ try {
         return;
       }
     console.info(`Succeeded in destroying the timer.`);
+    });
+    console.info(`Succeeded in creating a timer. timerId: ${timerId}`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to create timer. message: ${error.message}, code: ${error.code}`);
+  });
+} catch(e) {
+  let error = e as BusinessError;
+  console.error(`Failed to create timer. message: ${error.message}, code: ${error.code}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: systemTimer.TimerOptions = {
+  type: systemTimer.TIMER_TYPE_REALTIME,
+  repeat:false
+}
+let triggerTime: number = new Date().getTime();
+triggerTime += 3000;
+
+try {
+  systemTimer.createTimer(options).then((timerId: number) => {
+    systemTimer.startTimer(timerId, triggerTime);
+    systemTimer.stopTimer(timerId);
+    systemTimer.destroyTimer(timerId).then(() => {
+      console.info(`Succeeded in destroying the timer.`);
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to destroy timer. message: ${error.message}, code: ${error.code}`);
     });
     console.info(`Succeeded in creating a timer. timerId: ${timerId}`);
   }).catch((error: BusinessError) => {
@@ -107,32 +136,5 @@ Destroys a timer. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: systemTimer.TimerOptions = {
-  type: systemTimer.TIMER_TYPE_REALTIME,
-  repeat:false
-}
-let triggerTime: number = new Date().getTime();
-triggerTime += 3000;
-
-try {
-  systemTimer.createTimer(options).then((timerId: number) => {
-    systemTimer.startTimer(timerId, triggerTime);
-    systemTimer.stopTimer(timerId);
-    systemTimer.destroyTimer(timerId).then(() => {
-      console.info(`Succeeded in destroying the timer.`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to destroy timer. message: ${error.message}, code: ${error.code}`);
-    });
-    console.info(`Succeeded in creating a timer. timerId: ${timerId}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to create timer. message: ${error.message}, code: ${error.code}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.error(`Failed to create timer. message: ${error.message}, code: ${error.code}`);
-}
-```
+See [destroyTimer](#destroytimer)
 

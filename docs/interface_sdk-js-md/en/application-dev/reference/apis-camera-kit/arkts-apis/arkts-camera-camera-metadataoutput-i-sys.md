@@ -50,6 +50,22 @@ Adds the types of metadata objects to be detected.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function addMetadataObjectTypes(metadataOutput: camera.MetadataOutput, types: Array<camera.MetadataObjectType>): void {
+  try {
+    metadataOutput.addMetadataObjectTypes(types);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`addMetadataObjectTypes error. error code: ${err.code}`);
+  }
+}
+```
+
 ## removeMetadataObjectTypes
 
 ```TypeScript
@@ -82,4 +98,20 @@ Removes the types of metadata objects to be detected.
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function removeMetadataObjectTypes(metadataOutput: camera.MetadataOutput, types: Array<camera.MetadataObjectType>): void {
+  try {
+    metadataOutput.removeMetadataObjectTypes(types);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`removeMetadataObjectTypes error. error code: ${err.code}`);
+  }
+}
+```
 

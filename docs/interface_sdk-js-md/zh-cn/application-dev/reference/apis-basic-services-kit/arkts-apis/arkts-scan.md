@@ -31,14 +31,14 @@ import { scan } from '@kit.BasicServicesKit';
 | [getScannerCurrentSetting](arkts-basicservices-scan-getscannercurrentsetting-f.md) | 获取当前扫描仪设置。使用Promise异步回调。 |
 | [getScannerParameter](arkts-basicservices-scan-getscannerparameter-f.md) | 获取扫描仪参数。使用Promise异步回调。 |
 | [init](arkts-basicservices-scan-init-f.md) | 初始化扫描服务。使用Promise异步回调。 |
-| [offScanDeviceFound](arkts-basicservices-scan-offscandevicefound-f.md) | Unregister event callback for scanner device found. |
-| [offScanDeviceSync](arkts-basicservices-scan-offscandevicesync-f.md) | Unregister event callback for scanner device sync. |
 | [off_scanDeviceFound](arkts-basicservices-scan-offscandevicefound-f.md) | 取消注册扫描仪设备发现事件回调。使用callback异步回调。 |
 | [off_scanDeviceSync](arkts-basicservices-scan-offscandevicesync-f.md) | 取消注册扫描仪设备同步事件回调。使用callback异步回调。 |
-| [onScanDeviceFound](arkts-basicservices-scan-onscandevicefound-f.md) | Register event callback for scanner device found. |
-| [onScanDeviceSync](arkts-basicservices-scan-onscandevicesync-f.md) | Register event callback for scanner device sync. |
+| [offScanDeviceFound](arkts-basicservices-scan-offscandevicefound-f.md) | Unregister event callback for scanner device found. |
+| [offScanDeviceSync](arkts-basicservices-scan-offscandevicesync-f.md) | Unregister event callback for scanner device sync. |
 | [on_scanDeviceFound](arkts-basicservices-scan-onscandevicefound-f.md) | 注册扫描仪设备发现事件回调。使用callback异步回调。 |
 | [on_scanDeviceSync](arkts-basicservices-scan-onscandevicesync-f.md) | 注册扫描仪设备同步事件回调。使用callback异步回调。 |
+| [onScanDeviceFound](arkts-basicservices-scan-onscandevicefound-f.md) | Register event callback for scanner device found. |
+| [onScanDeviceSync](arkts-basicservices-scan-onscandevicesync-f.md) | Register event callback for scanner device sync. |
 | [openScanner](arkts-basicservices-scan-openscanner-f.md) | 打开扫描仪。使用Promise异步回调。 |
 | [setScanAutoOption](arkts-basicservices-scan-setscanautooption-f.md) | 设置扫描选项为自动模式。使用Promise异步回调。 |
 | [setScannerParameter](arkts-basicservices-scan-setscannerparameter-f.md) | 设置扫描仪参数。使用Promise异步回调。 |
@@ -53,14 +53,14 @@ import { scan } from '@kit.BasicServicesKit';
 | [addScanner](arkts-basicservices-scan-addscanner-f-sys.md) | 添加扫描仪（系统API）。使用Promise异步回调。 |
 | [deleteScanner](arkts-basicservices-scan-deletescanner-f-sys.md) | 删除扫描仪（系统API）。使用Promise异步回调。 |
 | [getAddedScanners](arkts-basicservices-scan-getaddedscanners-f-sys.md) | 获取已添加的扫描仪（系统API）。使用Promise异步回调。 |
-| [offScanDeviceAdd](arkts-basicservices-scan-offscandeviceadd-f-sys.md) | Unregister event callback for scanner device add (system API). |
-| [offScanDeviceDel](arkts-basicservices-scan-offscandevicedel-f-sys.md) | Unregister event callback for scanner device delete (system API). |
 | [off_scanDeviceAdd](arkts-basicservices-scan-offscandeviceadd-f-sys.md) | 取消注册扫描仪设备添加事件回调（系统API）。使用callback异步回调。 |
 | [off_scanDeviceDel](arkts-basicservices-scan-offscandevicedel-f-sys.md) | 取消注册扫描仪设备删除事件回调（系统API）。使用callback异步回调。 |
-| [onScanDeviceAdd](arkts-basicservices-scan-onscandeviceadd-f-sys.md) | Register event callback for scanner device add (system API). |
-| [onScanDeviceDel](arkts-basicservices-scan-onscandevicedel-f-sys.md) | Register event callback for scanner device delete (system API). |
+| [offScanDeviceAdd](arkts-basicservices-scan-offscandeviceadd-f-sys.md) | Unregister event callback for scanner device add (system API). |
+| [offScanDeviceDel](arkts-basicservices-scan-offscandevicedel-f-sys.md) | Unregister event callback for scanner device delete (system API). |
 | [on_scanDeviceAdd](arkts-basicservices-scan-onscandeviceadd-f-sys.md) | 注册扫描仪设备添加事件回调（系统API）。使用callback异步回调。 |
 | [on_scanDeviceDel](arkts-basicservices-scan-onscandevicedel-f-sys.md) | 注册扫描仪设备删除事件回调（系统API）。使用callback异步回调。 |
+| [onScanDeviceAdd](arkts-basicservices-scan-onscandeviceadd-f-sys.md) | Register event callback for scanner device add (system API). |
+| [onScanDeviceDel](arkts-basicservices-scan-onscandevicedel-f-sys.md) | Register event callback for scanner device delete (system API). |
 <!--DelEnd-->
 
 ### 接口

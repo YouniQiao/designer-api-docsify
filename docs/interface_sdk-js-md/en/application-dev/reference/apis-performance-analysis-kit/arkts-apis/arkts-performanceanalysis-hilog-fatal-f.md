@@ -71,3 +71,7 @@ Prints FATAL logs.
 | format | string | Yes | Format string used to output logs in a specified format. It can contain several elements , where the parameter type and privacy identifier are mandatory.<br>Parameters labeled **{public}** are public data and are displayed in plaintext; parameters labeled **{private}** (default value) are private data and are filtered by **&lt;private&gt;**. |
 | args | [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)[] | Yes | Variable-length parameter list corresponding to the format string. The number and type of parameters must map to the identifier in the format string. |
 
+**Examples**
+
+See [fatal](#fatal)
+

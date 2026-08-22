@@ -14,3 +14,11 @@ Defines a rectangle. For details, see [Rect](arkts-accessibility-accessibilityex
 
 **Property type:** _Rect
 
+**Examples**
+
+```TypeScript
+import { Rect } from '@kit.AccessibilityKit';
+
+let rect: Rect;
+```
+

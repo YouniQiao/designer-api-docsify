@@ -68,42 +68,6 @@ Work address, the default value is **2**.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
-## CUSTOM_LABEL
-
-```TypeScript
-static readonly CUSTOM_LABEL: 0
-```
-
-Custom postal address type, the default value is **0**.
-
-**Type:** 0
-
-**Since:** 7
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PostalAddress-static readonly CUSTOM_LABEL: 0--><!--Device-PostalAddress-static readonly CUSTOM_LABEL: 0-End-->
-
-**System capability:** SystemCapability.Applications.ContactsData
-
-## INVALID_LABEL_ID
-
-```TypeScript
-static readonly INVALID_LABEL_ID: -1
-```
-
-Invalid address type, the default value is **-1**.
-
-**Type:** -1
-
-**Since:** 7
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PostalAddress-static readonly INVALID_LABEL_ID: -1--><!--Device-PostalAddress-static readonly INVALID_LABEL_ID: -1-End-->
-
-**System capability:** SystemCapability.Applications.ContactsData
-
 ## city
 
 ```TypeScript
@@ -137,6 +101,42 @@ Country/Region where the contact is located.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PostalAddress-country?: string--><!--Device-PostalAddress-country?: string-End-->
+
+**System capability:** SystemCapability.Applications.ContactsData
+
+## CUSTOM_LABEL
+
+```TypeScript
+static readonly CUSTOM_LABEL: 0
+```
+
+Custom postal address type, the default value is **0**.
+
+**Type:** 0
+
+**Since:** 7
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PostalAddress-static readonly CUSTOM_LABEL: 0--><!--Device-PostalAddress-static readonly CUSTOM_LABEL: 0-End-->
+
+**System capability:** SystemCapability.Applications.ContactsData
+
+## INVALID_LABEL_ID
+
+```TypeScript
+static readonly INVALID_LABEL_ID: -1
+```
+
+Invalid address type, the default value is **-1**.
+
+**Type:** -1
+
+**Since:** 7
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PostalAddress-static readonly INVALID_LABEL_ID: -1--><!--Device-PostalAddress-static readonly INVALID_LABEL_ID: -1-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 

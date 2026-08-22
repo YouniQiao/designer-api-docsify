@@ -28,7 +28,7 @@ Queries state data of the current bundle within a specified period.
 | --- | --- | --- | --- |
 | begin | long | Yes | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
 | end | long | Yes | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[BundleEvents](arkts-backgroundtasks-usagestatistics-bundleevents-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the [BundleEvents](arkts-backgroundtasks-usagestatistics-bundleevents-i-sys.md) object Array containing the state data of the current bundle. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleEvents](arkts-backgroundtasks-usagestatistics-bundleevents-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the [BundleEvents](arkts-backgroundtasks-usagestatistics-bundleevents-i-sys.md) object Array containing the state data of the current bundle. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -59,6 +59,20 @@ usageStatistics.queryCurrentBundleEvents(0, 20000000000000, (err: BusinessError,
       console.info('BUNDLE_ACTIVE queryCurrentBundleEvents callback result ' + JSON.stringify(res[i]));
     }
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+usageStatistics.queryCurrentBundleEvents(0, 20000000000000).then((res: Array<usageStatistics.BundleEvents>) => {
+  console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise success.');
+  for (let i = 0; i < res.length; i++) {
+    console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise number : ' + (i + 1));
+    console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise result ' + JSON.stringify(res[i]));
+  }
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE queryCurrentBundleEvents promise failed. code is: ' + err.code + ',message is: ' + err.message);
 });
 ```
 
@@ -108,19 +122,7 @@ Queries state data of the current bundle within a specified period.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-usageStatistics.queryCurrentBundleEvents(0, 20000000000000).then((res: Array<usageStatistics.BundleEvents>) => {
-  console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise success.');
-  for (let i = 0; i < res.length; i++) {
-    console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise number : ' + (i + 1));
-    console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise result ' + JSON.stringify(res[i]));
-  }
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryCurrentBundleEvents promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
+See [queryCurrentBundleEvents](#querycurrentbundleevents)
 
 
 ## queryCurrentBundleEvents
@@ -167,4 +169,8 @@ Queries state data of the current bundle within a specified period.
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) | Failed to get the application information. |
 | [10000007](../errorcode-DeviceUsageStatistics.md#10000007-time-operation-failure) | Failed to get the system time. |
 | [10000008](../errorcode-DeviceUsageStatistics.md#10000008-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameters types; 3. Parameter verification failed. |
+
+**Examples**
+
+See [queryCurrentBundleEvents](#querycurrentbundleevents)
 

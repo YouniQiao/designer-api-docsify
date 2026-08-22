@@ -10,6 +10,55 @@ The IfAttribute.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## applyAttributesFinish
+
+```TypeScript
+applyAttributesFinish(): void
+```
+
+Notify If has finished setting up its attributes.
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta since version 26.1.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-IfAttribute-applyAttributesFinish(): void--><!--Device-IfAttribute-applyAttributesFinish(): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## debugLine
+
+```TypeScript
+debugLine(sourceLine: string, moduleName?: string): this
+```
+
+Set the component's source code redirection information.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-IfAttribute-debugLine(sourceLine: string, moduleName?: string): this--><!--Device-IfAttribute-debugLine(sourceLine: string, moduleName?: string): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sourceLine | string | Yes | the source code line. |
+| moduleName | string | No | module to which the component belongs. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this |  |
+
 ## Else
 
 ```TypeScript
@@ -63,55 +112,6 @@ Defines 'ElseIf' branch.
 | --- | --- | --- | --- |
 | condition | boolean | Yes | condition of the branch. |
 | content_ | [CustomBuilder](../arkts-apis/arkts-custombuilder-t.md) | Yes | code for the branch |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| this |  |
-
-## applyAttributesFinish
-
-```TypeScript
-applyAttributesFinish(): void
-```
-
-Notify If has finished setting up its attributes.
-
-**Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Sta since version 26.1.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-IfAttribute-applyAttributesFinish(): void--><!--Device-IfAttribute-applyAttributesFinish(): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## debugLine
-
-```TypeScript
-debugLine(sourceLine: string, moduleName?: string): this
-```
-
-Set the component's source code redirection information.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-IfAttribute-debugLine(sourceLine: string, moduleName?: string): this--><!--Device-IfAttribute-debugLine(sourceLine: string, moduleName?: string): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceLine | string | Yes | the source code line. |
-| moduleName | string | No | module to which the component belongs. |
 
 **Return value:**
 

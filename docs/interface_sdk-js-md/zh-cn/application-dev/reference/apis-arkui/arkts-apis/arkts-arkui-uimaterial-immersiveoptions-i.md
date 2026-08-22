@@ -110,7 +110,7 @@ lightEffect?: LightEffectOptions | null
 
 默认值：undefined，不设置光感交互反馈效果。
 
-**类型：** [LightEffectOptions](arkts-arkui-uimaterial-lighteffectoptions-i.md) \| null
+**类型：** [LightEffectOptions](../../apis-default/arkts-apis/arkts-uimaterial-lighteffectoptions-i.md) \| null
 
 **起始版本：** 26.0.0
 
@@ -160,7 +160,7 @@ style?: ImmersiveStyle
 
 默认值：ImmersiveStyle.REGULAR
 
-**类型：** [ImmersiveStyle](arkts-arkui-uimaterial-immersivestyle-e.md)
+**类型：** [ImmersiveStyle](../../apis-default/arkts-apis/arkts-uimaterial-immersivestyle-e.md)
 
 **默认值：** uiMaterial.ImmersiveStyle.REGULAR
 

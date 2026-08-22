@@ -56,70 +56,6 @@ static EnvProp<S>(key: string, value: S): boolean
 Environment.EnvProp('accessibilityEnabled', 'default');
 ```
 
-## EnvProps
-
-```TypeScript
-static EnvProps(
-    props: {
-      key: string;
-      defaultValue: any;
-    }[],
-  ): void
-```
-
-和[EnvProp](#envprop)功能类似，不同点在于参数为数组，可以一次性初始化多个数据。在没有调用EnvProps的情况下，直接使用AppStorage读取环境变量，将无法获取到对应的环 境变量值。建议在应用启动时调用，将系统环境变量批量存入[AppStorage](../../../ui/state-management/arkts-appstorage.md)中。
-
-**起始版本：** 7
-
-**废弃版本：** 10
-
-**替代接口：** [envProps](#envprops)
-
-<!--Device-Environment-static EnvProps(    props: {      key: string;      defaultValue: any;    }[],  ): void--><!--Device-Environment-static EnvProps(    props: {      key: string;      defaultValue: any;    }[],  ): void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| props | {       key: string;       defaultValue: any;     }[] | 是 |  |
-
-## Keys
-
-```TypeScript
-static Keys(): Array<string>
-```
-
-返回环境变量的属性key的数组。
-
-**起始版本：** 7
-
-**废弃版本：** 10
-
-**替代接口：** [keys](#keys)
-
-<!--Device-Environment-static Keys(): Array<string>--><!--Device-Environment-static Keys(): Array<string>-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;string&gt; | 返回环境变量的属性key的数组。 |
-
-**示例**
-
-```TypeScript
-Environment.EnvProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
-  key: 'languageCode',
-  defaultValue: 'en'
-}, { key: 'prop', defaultValue: 'hhhh' }]);
-
-let keys: Array<string> = Environment.Keys(); // keys 包含 accessibilityEnabled、languageCode、prop
-```
-
 ## envProp
 
 ```TypeScript
@@ -155,6 +91,44 @@ static envProp<S>(key: string, value: S): boolean
 
 envProp具体使用，详见[从UI中访问Environment参数](../../../ui/state-management/arkts-environment.md#从ui中访问environment参数)。
 
+## EnvProps
+
+```TypeScript
+static EnvProps(
+    props: {
+      key: string;
+      defaultValue: any;
+    }[],
+  ): void
+```
+
+和[EnvProp](#envprop)功能类似，不同点在于参数为数组，可以一次性初始化多个数据。在没有调用EnvProps的情况下，直接使用AppStorage读取环境变量，将无法获取到对应的环 境变量值。建议在应用启动时调用，将系统环境变量批量存入[AppStorage](../../../ui/state-management/arkts-appstorage.md)中。
+
+**起始版本：** 7
+
+**废弃版本：** 10
+
+**替代接口：** [envProps](#envprops)
+
+<!--Device-Environment-static EnvProps(    props: {      key: string;      defaultValue: any;    }[],  ): void--><!--Device-Environment-static EnvProps(    props: {      key: string;      defaultValue: any;    }[],  ): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| props | {       key: string;       defaultValue: any;     }[] | 是 |  |
+
+**示例**
+
+```TypeScript
+Environment.EnvProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+```
+
 ## envProps
 
 ```TypeScript
@@ -186,6 +160,50 @@ Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, 
 }, { key: 'prop', defaultValue: 'hhhh' }]);
 ```
 
+## Keys
+
+```TypeScript
+static Keys(): Array<string>
+```
+
+返回环境变量的属性key的数组。
+
+**起始版本：** 7
+
+**废弃版本：** 10
+
+**替代接口：** [keys](#keys)
+
+<!--Device-Environment-static Keys(): Array<string>--><!--Device-Environment-static Keys(): Array<string>-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;string&gt; | 返回环境变量的属性key的数组。 |
+
+**示例**
+
+```TypeScript
+AppStorage.SetOrCreate('PropB', 48);
+let keys: IterableIterator<string> = AppStorage.Keys();
+```
+
+```TypeScript
+let keys: Array<string> = PersistentStorage.Keys();
+```
+
+```TypeScript
+Environment.EnvProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+
+let keys: Array<string> = Environment.Keys(); // keys 包含 accessibilityEnabled、languageCode、prop
+```
+
 ## keys
 
 ```TypeScript
@@ -209,6 +227,21 @@ static keys(): Array<string>
 | Array&lt;string&gt; | 返回环境变量的属性key的数组。 |
 
 **示例**
+
+```TypeScript
+AppStorage.setOrCreate('PropB', 48);
+let keys: IterableIterator<string> = AppStorage.keys();
+```
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+let keys: IterableIterator<string> = storage.keys();
+```
+
+```TypeScript
+let keys: Array<string> = PersistentStorage.keys();
+```
 
 ```TypeScript
 Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {

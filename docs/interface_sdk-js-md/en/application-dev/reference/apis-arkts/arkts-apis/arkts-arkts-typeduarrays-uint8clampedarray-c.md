@@ -2299,26 +2299,6 @@ Returns a new Uint8ClampedArray with the element at the given index replaced by 
 | --- | --- |
 | [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | a new Uint8ClampedArray with the element at index replaced. |
 
-## BYTES_PER_ELEMENT
-
-```TypeScript
-public static readonly BYTES_PER_ELEMENT: int = 1
-```
-
-Number of bytes occupied by each element
-
-**Type:** int
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint8ClampedArray-public static readonly BYTES_PER_ELEMENT: int = 1--><!--Device-Uint8ClampedArray-public static readonly BYTES_PER_ELEMENT: int = 1-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
 ## buffer
 
 ```TypeScript
@@ -2336,6 +2316,26 @@ Underlying Buffer.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Uint8ClampedArray-public readonly buffer: ArrayBuffer--><!--Device-Uint8ClampedArray-public readonly buffer: ArrayBuffer-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## BYTES_PER_ELEMENT
+
+```TypeScript
+public static readonly BYTES_PER_ELEMENT: int = 1
+```
+
+Number of bytes occupied by each element
+
+**Type:** int
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Uint8ClampedArray-public static readonly BYTES_PER_ELEMENT: int = 1--><!--Device-Uint8ClampedArray-public static readonly BYTES_PER_ELEMENT: int = 1-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

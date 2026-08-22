@@ -30,7 +30,7 @@ Updates the data in the UDMF public data channel. This API uses an asynchronous 
 | --- | --- | --- | --- |
 | options | Options | Yes | Configuration for the data update operation. The **key** field is mandatory. If it is not specified, error code 401 will be returned. Only the DATA_HUB channel of the **intention** parameter is supported. The settings of other parameters do not affect the use of this API. |
 | data | UnifiedData | Yes | Data to update. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the data is updated successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the data is updated successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -89,46 +89,6 @@ try {
 }
 ```
 
-
-## updateData
-
-```TypeScript
-function updateData(options: Options, data: UnifiedData): Promise<void>
-```
-
-Updates the data in the UDMF public data channel. This API uses a promise to return the result.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-unifiedDataChannel-function updateData(options: Options, data: UnifiedData): Promise<void>--><!--Device-unifiedDataChannel-function updateData(options: Options, data: UnifiedData): Promise<void>-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | Options | Yes | Configuration for the data update operation. The **key** field is mandatory. If it is not specified, error code 401 will be returned. Only the DATA_HUB channel of the **intention** parameter is supported. The settings of other parameters do not affect the use of this API. |
-| data | UnifiedData | Yes | Data to update. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
-
-**Examples**
-
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -175,4 +135,46 @@ try {
   console.error(`Insert data throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 ```
+
+
+## updateData
+
+```TypeScript
+function updateData(options: Options, data: UnifiedData): Promise<void>
+```
+
+Updates the data in the UDMF public data channel. This API uses a promise to return the result.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-unifiedDataChannel-function updateData(options: Options, data: UnifiedData): Promise<void>--><!--Device-unifiedDataChannel-function updateData(options: Options, data: UnifiedData): Promise<void>-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | Options | Yes | Configuration for the data update operation. The **key** field is mandatory. If it is not specified, error code 401 will be returned. Only the DATA_HUB channel of the **intention** parameter is supported. The settings of other parameters do not affect the use of this API. |
+| data | UnifiedData | Yes | Data to update. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
+
+**Examples**
+
+See [updateData](#updatedata)
 

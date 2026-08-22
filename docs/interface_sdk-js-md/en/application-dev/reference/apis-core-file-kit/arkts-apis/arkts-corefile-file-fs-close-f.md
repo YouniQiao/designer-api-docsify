@@ -28,7 +28,7 @@ Closes a file or directory. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | number \| [File](arkts-corefile-filefs-file-i.md) | Yes | File** object or FD of the file to close. Once closed, the **File** object or FD cannot be used for read or write operations. |
+| file | number \| [File](arkts-corefile-file-fs-file-i.md) | Yes | File** object or FD of the file to close. Once closed, the **File** object or FD cannot be used for read or write operations. |
 
 **Return value:**
 
@@ -46,6 +46,74 @@ Closes a file or directory. This API uses a promise to return the result.
 | 13900025 | No space left on device |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + "/test.txt";
+let file = fs.openSync(filePath);
+fs.close(file).then(() => {
+  console.info("close file succeed");
+}).catch((err: BusinessError) => {
+  console.error("close file failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + "/test.txt";
+let file = fs.openSync(filePath);
+fs.close(file, (err: BusinessError) => {
+  if (err) {
+    console.error("close file failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("close file succeed");
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + "/test.txt";
+let stream = fs.createStreamSync(filePath, "r+");
+stream.close().then(() => {
+  console.info("close fileStream succeed");
+}).catch((err: BusinessError) => {
+  console.error("close fileStream  failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + "/test.txt";
+let stream = fs.createStreamSync(filePath, "r+");
+stream.close((err: BusinessError) => {
+  if (err) {
+    console.error("close stream failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("close stream succeed");
+  }
+});
+```
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let randomAccessFile = fs.createRandomAccessFileSync(filePath, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
+randomAccessFile.close();
+```
+
+```TypeScript
+const filePath = pathDir + "/test.txt";
+const rs = fs.createReadStream(filePath);
+rs.close();
+```
+
+```TypeScript
+const filePath = pathDir + "/test.txt";
+const ws = fs.createWriteStream(filePath);
+ws.close();
+```
 
 
 ## close
@@ -68,8 +136,8 @@ Closes a file or directory. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | number \| [File](arkts-corefile-filefs-file-i.md) | Yes | File** object or FD of the file to close. Once closed, the **File** object or FD cannot be used for read or write operations. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| file | number \| [File](arkts-corefile-file-fs-file-i.md) | Yes | File** object or FD of the file to close. Once closed, the **File** object or FD cannot be used for read or write operations. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -81,4 +149,8 @@ Closes a file or directory. This API uses an asynchronous callback to return the
 | 13900025 | No space left on device |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [close](#close)
 

@@ -32,9 +32,20 @@ Checks whether touch guide mode is enabled. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the touch browsing mode is enabled, and **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the touch browsing mode is enabled, and **false** indicates the opposite. |
 
 **Examples**
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+accessibility.isOpenTouchGuide().then((data: boolean) => {
+  console.info(`success data:isOpenTouchGuide : ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`failed to  isOpenTouchGuide, Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -76,14 +87,5 @@ Checks whether touch guide mode is enabled. This API uses a promise to return th
 
 **Examples**
 
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-accessibility.isOpenTouchGuide().then((data: boolean) => {
-  console.info(`success data:isOpenTouchGuide : ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`failed to  isOpenTouchGuide, Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [isOpenTouchGuide](#isopentouchguide)
 

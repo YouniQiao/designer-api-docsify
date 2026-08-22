@@ -48,6 +48,17 @@ Add an empty element.
 ```TypeScript
 import { util } from '@kit.ArkTS';
 
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer);
+thatSer.addEmptyElement("d");
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <d/>
+```
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
 let serializer = new xml.XmlDynamicSerializer('utf-8');
 serializer.addEmptyElement("d");
 let arrayBuffer = serializer.getOutput();
@@ -87,7 +98,21 @@ A parameterized constructor used to create a new XmlDynamicSerializer instance. 
 **Examples**
 
 ```TypeScript
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer, "utf-8");
+```
+
+```TypeScript
 let serializer = new xml.XmlDynamicSerializer('utf-8');
+```
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let strXml = '<title>Happy</title>'
+let textEncoder = new util.TextEncoder();
+let uint8Array = textEncoder.encodeInto(strXml);
+let that = new xml.XmlPullParser(uint8Array.buffer as object as ArrayBuffer, 'UTF-8');
 ```
 
 ## endElement
@@ -114,6 +139,20 @@ Writes end tag of the element.
 | [10200065](../errorcode-utils.md#10200065-mismatched-element-start-and-end-tags) | There is no match between the startElement and the endElement. |
 
 **Examples**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer);
+thatSer.startElement("note");
+thatSer.setText("Happy");
+thatSer.endElement();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result);
+// <note>Happy</note>
+```
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -197,6 +236,19 @@ Write an attribute to xml element.
 | [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 **Examples**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer);
+thatSer.startElement("note");
+thatSer.setAttributes("importance", "high");
+thatSer.endElement();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <note importance="high"/>
+```
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -287,6 +339,17 @@ Writes the comment to xml.
 ```TypeScript
 import { util } from '@kit.ArkTS';
 
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer);
+thatSer.setComment("Hello, World!");
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <!--Hello, World!-->
+```
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
 let serializer = new xml.XmlDynamicSerializer('utf-8');
 serializer.setComment("Hello, World!");
 let arrayBuffer = serializer.getOutput();
@@ -319,6 +382,18 @@ Writes xml declaration with encoding. For example: &lt;?xml version="1.0" encodi
 | [10200063](../errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) | Illegal position for xml. |
 
 **Examples**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer);
+thatSer.setDeclaration();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result);
+// <?xml version="1.0" encoding="utf-8"?>
+```
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -365,6 +440,17 @@ Writes the DOCTYPE.
 ```TypeScript
 import { util } from '@kit.ArkTS';
 
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer);
+thatSer.setDocType('root SYSTEM "http://www.test.org/test.dtd"');
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <!DOCTYPE root SYSTEM "http://www.test.org/test.dtd">
+```
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
 let serializer = new xml.XmlDynamicSerializer('utf-8');
 serializer.setDocType('root SYSTEM "http://www.test.org/test.dtd"');
 let arrayBuffer = serializer.getOutput();
@@ -404,6 +490,20 @@ Writes the namespace of the current element tag.
 | [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 **Examples**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer);
+thatSer.setNamespace("h", "http://www.w3.org/TR/html4/");
+thatSer.startElement("note");
+thatSer.endElement();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result);
+// <h:note xmlns:h="http://www.w3.org/TR/html4/"/>
+```
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
@@ -452,6 +552,20 @@ Writes the text to xml element.
 ```TypeScript
 import { util } from '@kit.ArkTS';
 
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer);
+thatSer.startElement("note");
+thatSer.setAttributes("importance", "high");
+thatSer.setText("Happy");
+thatSer.endElement();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <note importance="high">Happy</note>
+```
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
 let serializer = new xml.XmlDynamicSerializer('utf-8');
 serializer.startElement("note");
 serializer.setAttributes("importance", "high");
@@ -493,6 +607,20 @@ Writes a element start tag with the given name.
 | [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 **Examples**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer);
+thatSer.startElement("note");
+thatSer.setText("Happy");
+thatSer.endElement();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result);
+// <note>Happy</note>
+```
 
 ```TypeScript
 import { util } from '@kit.ArkTS';

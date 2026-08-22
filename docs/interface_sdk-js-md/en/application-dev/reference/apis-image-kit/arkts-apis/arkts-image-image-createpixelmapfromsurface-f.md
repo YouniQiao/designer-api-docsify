@@ -56,6 +56,18 @@ async function CreatePixelMapFromSurface(surfaceId: string) {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function CreatePixelMapFromSurface(surfaceId: string) {
+  image.createPixelMapFromSurface(surfaceId).then(() => {
+    console.info('Succeeded in creating pixelmap from Surface');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to create pixelmap. code is ${error.code}, message is ${error.message}`);
+  });
+}
+```
+
 
 ## createPixelMapFromSurface
 
@@ -93,15 +105,5 @@ Creates a PixelMap object from surface id.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreatePixelMapFromSurface(surfaceId: string) {
-  image.createPixelMapFromSurface(surfaceId).then(() => {
-    console.info('Succeeded in creating pixelmap from Surface');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to create pixelmap. code is ${error.code}, message is ${error.message}`);
-  });
-}
-```
+See [createPixelMapFromSurface](#createpixelmapfromsurface)
 

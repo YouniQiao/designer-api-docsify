@@ -53,6 +53,31 @@ static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): Color
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+const color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
+let colorFilter = drawing.ColorFilter.createBlendModeColorFilter(color, drawing.BlendMode.SRC);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let colorFilter = drawing.ColorFilter.createBlendModeColorFilter(0xffff0000, drawing.BlendMode.SRC);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let colorFilter = drawing.ColorFilter.createBlendModeColorFilter((0xffff0000).toInt(), drawing.BlendMode.SRC);
+```
+
 ## createBlendModeColorFilter
 
 ```TypeScript
@@ -85,6 +110,10 @@ static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): Color
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+参见 [createBlendModeColorFilter](#createblendmodecolorfilter)
 
 ## createBlendModeColorFilter
 
@@ -119,6 +148,10 @@ static createBlendModeColorFilter(color: common2D.Color | number, mode: BlendMod
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**示例**
+
+参见 [createBlendModeColorFilter](#createblendmodecolorfilter)
+
 ## createBlendModeColorFilter
 
 ```TypeScript
@@ -151,6 +184,10 @@ static createBlendModeColorFilter(color: common2D.Color | int, mode: BlendMode):
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+参见 [createBlendModeColorFilter](#createblendmodecolorfilter)
 
 ## createComposeColorFilter
 
@@ -185,6 +222,17 @@ static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFi
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 
+**示例**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+const color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
+let colorFilter1 = drawing.ColorFilter.createBlendModeColorFilter(color, drawing.BlendMode.SRC);
+let colorFilter2 = drawing.ColorFilter.createBlendModeColorFilter(color, drawing.BlendMode.DST);
+let colorFilter = drawing.ColorFilter.createComposeColorFilter(colorFilter1!, colorFilter2!);
+```
+
 ## createComposeColorFilter
 
 ```TypeScript
@@ -218,6 +266,10 @@ static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFi
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 
+**示例**
+
+参见 [createComposeColorFilter](#createcomposecolorfilter)
+
 ## createLightingColorFilter
 
 ```TypeScript
@@ -244,6 +296,15 @@ static createLightingColorFilter(mutColor: common2D.Color | number, addColor: co
 | 类型 | 说明 |
 | --- | --- |
 | ColorFilter | 返回创建的光照颜色滤波器。 |
+
+**示例**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+let mulColor : common2D.Color = { alpha: 0, red: 0, green: 0, blue: 20 };
+let addColor : common2D.Color = { alpha: 0, red: 0, green: 0, blue: 125 };
+let colorFilter = drawing.ColorFilter.createLightingColorFilter(mulColor, addColor);
+```
 
 ## createLightingColorFilter
 
@@ -272,6 +333,10 @@ static createLightingColorFilter(mutColor: common2D.Color | int, addColor: commo
 | --- | --- |
 | ColorFilter \| undefined | 返回创建的光照颜色滤波器。创建失败时返回undefined。 |
 
+**示例**
+
+参见 [createLightingColorFilter](#createlightingcolorfilter)
+
 ## createLinearToSRGBGamma
 
 ```TypeScript
@@ -291,6 +356,14 @@ static createLinearToSRGBGamma(): ColorFilter
 | 类型 | 说明 |
 | --- | --- |
 | ColorFilter | 返回创建的颜色滤波器。 |
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let colorFilter = drawing.ColorFilter.createLinearToSRGBGamma();
+```
 
 ## createLinearToSRGBGamma
 
@@ -312,6 +385,10 @@ static createLinearToSRGBGamma(): ColorFilter | undefined
 | --- | --- |
 | ColorFilter \| undefined | 返回创建的颜色滤波器。创建失败时返回undefined。 |
 
+**示例**
+
+参见 [createLinearToSRGBGamma](#createlineartosrgbgamma)
+
 ## createLumaColorFilter
 
 ```TypeScript
@@ -332,6 +409,14 @@ static createLumaColorFilter(): ColorFilter
 | --- | --- |
 | ColorFilter | 返回创建的颜色滤波器。 |
 
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let colorFilter = drawing.ColorFilter.createLumaColorFilter();
+```
+
 ## createLumaColorFilter
 
 ```TypeScript
@@ -351,6 +436,10 @@ static createLumaColorFilter(): ColorFilter | undefined
 | 类型 | 说明 |
 | --- | --- |
 | ColorFilter \| undefined | 返回创建的颜色滤波器。创建失败时返回undefined。 |
+
+**示例**
+
+参见 [createLumaColorFilter](#createlumacolorfilter)
 
 ## createMatrixColorFilter
 
@@ -384,6 +473,36 @@ static createMatrixColorFilter(matrix: Array<double>): ColorFilter
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let matrix: Array<number> = [
+  1, 0, 0, 0, 0,
+  0, 1, 0, 0, 0,
+  0, 0, 100, 0, 0,
+  0, 0, 0, 1, 0
+];
+let colorFilter = drawing.ColorFilter.createMatrixColorFilter(matrix);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let matrix: Array<double> = [
+  1, 0, 0, 0, 0,
+  0, 1, 0, 0, 0,
+  0, 0, 100, 0, 0,
+  0, 0, 0, 1, 0
+];
+let colorFilter = drawing.ColorFilter.createMatrixColorFilter(matrix);
+```
+
 ## createMatrixColorFilter
 
 ```TypeScript
@@ -416,6 +535,10 @@ static createMatrixColorFilter(matrix: Array<double>): ColorFilter | undefined
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**示例**
+
+参见 [createMatrixColorFilter](#creatematrixcolorfilter)
+
 ## createSRGBGammaToLinear
 
 ```TypeScript
@@ -436,6 +559,14 @@ static createSRGBGammaToLinear(): ColorFilter
 | --- | --- |
 | ColorFilter | 返回创建的颜色滤波器。 |
 
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let colorFilter = drawing.ColorFilter.createSRGBGammaToLinear();
+```
+
 ## createSRGBGammaToLinear
 
 ```TypeScript
@@ -455,4 +586,8 @@ static createSRGBGammaToLinear(): ColorFilter | undefined
 | 类型 | 说明 |
 | --- | --- |
 | ColorFilter \| undefined | 返回创建的颜色滤波器。创建失败时返回undefined。 |
+
+**示例**
+
+参见 [createSRGBGammaToLinear](#createsrgbgammatolinear)
 

@@ -81,6 +81,41 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let promise = window.setGestureNavigationEnabled(true);
+  promise.then(() => {
+    console.info('Succeeded in setting gesture navigation enabled.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set gesture navigation enabled. Cause code: ${err.code}, message: ${err.message}`);
+  });
+} catch (exception) {
+  console.error(`Failed to set gesture navigation enabled. Cause code: ${exception.code}, message: ${exception.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let promise = window.setGestureNavigationEnabled(true);
+  promise.then(() => {
+    console.info('Succeeded in setting gesture navigation enabled.');
+  }).catch((err: Error) => {
+    console.error(`Failed to set gesture navigation enabled. Cause code: ${err.code}, message: ${err.message}`);
+  });
+} catch (exception) {
+  let error = exception as BusinessError;
+  console.error(`Failed to set gesture navigation enabled. Cause code: ${error.code}, message: ${error.message}`);
+}
+```
+
 
 ## setGestureNavigationEnabled
 
@@ -121,38 +156,5 @@ function setGestureNavigationEnabled(enable: boolean): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = window.setGestureNavigationEnabled(true);
-  promise.then(() => {
-    console.info('Succeeded in setting gesture navigation enabled.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set gesture navigation enabled. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set gesture navigation enabled. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = window.setGestureNavigationEnabled(true);
-  promise.then(() => {
-    console.info('Succeeded in setting gesture navigation enabled.');
-  }).catch((err: Error) => {
-    console.error(`Failed to set gesture navigation enabled. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to set gesture navigation enabled. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [setGestureNavigationEnabled](#setgesturenavigationenabled)
 

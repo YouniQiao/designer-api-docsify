@@ -40,12 +40,57 @@ constructor(buffer: ArrayBuffer | DataView, encoding?: string)
 **示例**
 
 ```TypeScript
+let arrayBuffer = new ArrayBuffer(2048);
+let xmlSerializer = new xml.XmlSerializer(arrayBuffer, "utf-8");
+```
+
+```TypeScript
+let serializer = new xml.XmlDynamicSerializer('utf-8');
+```
+
+```TypeScript
 import { util } from '@kit.ArkTS';
 
 let strXml = '<title>Happy</title>'
 let textEncoder = new util.TextEncoder();
 let uint8Array = textEncoder.encodeInto(strXml);
 let xmlParser = new xml.XmlPullParser(uint8Array.buffer as object as ArrayBuffer, 'UTF-8');
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { xml, stream } from '@kit.ArkTS';
+
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+}
+
+let readableStream = new TestReadable();
+let saxParser = new xml.XmlSAXParser(readableStream, 'utf-8');
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { xml, stream } from '@kit.ArkTS';
+
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+  }
+}
+
+let readableStream = new TestReadable();
+let saxParser = new xml.XmlSAXParser(readableStream, 'utf-8');
 ```
 
 ## parse
@@ -104,6 +149,74 @@ that.parse(options);
 // Happy
 // title
 // note
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { xml, stream } from '@kit.ArkTS';
+
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: number) {
+  }
+}
+
+let readableStream = new TestReadable();
+let saxParser = new xml.XmlSAXParser(readableStream);
+
+let handler: xml.XmlSAXHandler = {
+  startDocument: () => {
+  },
+  endDocument: () => {
+  },
+  startElement: (elementName: string, namespaceURI: string | undefined, qName: string | undefined,
+    attributes: Map<string, string>) => {
+  },
+  endElement: (elementName: string, namespaceURI: string | undefined, qName: string | undefined) => {
+  },
+  characters: (content: string) => {
+  }
+};
+
+saxParser.parse(handler);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { xml, stream } from '@kit.ArkTS';
+
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+  }
+}
+
+let readableStream = new TestReadable();
+let saxParser = new xml.XmlSAXParser(readableStream);
+
+let handler: xml.XmlSAXHandler = {
+  startDocument: () => {
+  },
+  endDocument: () => {
+  },
+  startElement: (elementName: string, namespaceURI: string | undefined, qName: string | undefined,
+    attributes: Map<string, string>) => {
+  },
+  endElement: (elementName: string, namespaceURI: string | undefined, qName: string | undefined) => {
+  },
+  characters: (content: string) => {
+  }
+};
+
+saxParser.parse(handler);
 ```
 
 ## parseXml

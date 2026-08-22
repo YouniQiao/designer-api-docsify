@@ -29,7 +29,7 @@ Obtains the data flow type of the cellular network (corresponding to the uplink 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataFlowType&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataFlowType&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -49,6 +49,17 @@ data.getCellularDataFlowType((err: BusinessError, contextData: data.DataFlowType
     } else {
         console.info(`getCellularDataFlowType success`);
     }
+});
+```
+
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+data.getCellularDataFlowType().then((contextData: data.DataFlowType) => {
+    console.info(`getCellularDataFlowType success, contextData: ${contextData}`);
+}).catch((err: BusinessError) => {
+    console.error(`getCellularDataFlowType fail. code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -86,14 +97,5 @@ Obtains the data flow type of the cellular network (corresponding to the uplink 
 
 **Examples**
 
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.getCellularDataFlowType().then((contextData: data.DataFlowType) => {
-    console.info(`getCellularDataFlowType success, contextData: ${contextData}`);
-}).catch((err: BusinessError) => {
-    console.error(`getCellularDataFlowType fail. code: ${err.code}, message: ${err.message}`);
-});
-```
+See [getCellularDataFlowType](#getcellulardataflowtype)
 

@@ -35,6 +35,28 @@ function getScanInfos(): Promise<Array<WifiScanInfo>>
 | --- | --- |
 | Promise&lt;Array&lt;WifiScanInfo&gt;&gt; | 返回扫描到的热点列表。 |
 
+**示例**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+wifi.getScanInfos().then(result => {
+    let len = result.length;
+    console.info("wifi received scan info: " + len);
+    for (let i = 0; i < len; ++i) {
+        console.info("ssid: " + result[i].ssid);
+        console.info("bssid: " + result[i].bssid);
+        console.info("capabilities: " + result[i].capabilities);
+        console.info("securityType: " + result[i].securityType);
+        console.info("rssi: " + result[i].rssi);
+        console.info("band: " + result[i].band);
+        console.info("frequency: " + result[i].frequency);
+        console.info("channelWidth: " + result[i].channelWidth);
+        console.info("timestamp: " + result[i].timestamp);
+    }
+});
+```
+
 
 ## getScanInfos
 
@@ -64,23 +86,5 @@ function getScanInfos(callback: AsyncCallback<Array<WifiScanInfo>>): void
 
 **示例**
 
-```TypeScript
-import wifi from '@ohos.wifi';
-
-wifi.getScanInfos().then(result => {
-    let len = result.length;
-    console.info("wifi received scan info: " + len);
-    for (let i = 0; i < len; ++i) {
-        console.info("ssid: " + result[i].ssid);
-        console.info("bssid: " + result[i].bssid);
-        console.info("capabilities: " + result[i].capabilities);
-        console.info("securityType: " + result[i].securityType);
-        console.info("rssi: " + result[i].rssi);
-        console.info("band: " + result[i].band);
-        console.info("frequency: " + result[i].frequency);
-        console.info("channelWidth: " + result[i].channelWidth);
-        console.info("timestamp: " + result[i].timestamp);
-    }
-});
-```
+参见 [getScanInfos](#getscaninfos)
 

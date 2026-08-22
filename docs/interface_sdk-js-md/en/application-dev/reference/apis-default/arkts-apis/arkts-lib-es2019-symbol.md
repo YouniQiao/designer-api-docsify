@@ -11,5 +11,5 @@
 
 | Name | Description |
 | --- | --- |
-| [Symbol](arkts-libes2019symbol-symbol-i.md) |  |
+| [Symbol](arkts-lib-es2019-symbol-symbol-i.md) |  |
 

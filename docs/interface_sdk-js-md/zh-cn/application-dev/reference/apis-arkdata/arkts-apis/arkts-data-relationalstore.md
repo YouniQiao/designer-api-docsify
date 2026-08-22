@@ -143,6 +143,6 @@ import { relationalStore } from '@kit.ArkData';
 | [RowData](arkts-arkdata-relationalstore-rowdata-t.md) | 用于表示数据库表中的某一行数据。 |
 | [RowsData](arkts-arkdata-relationalstore-rowsdata-t.md) | 用于表示数据库表中的多行数据。 |
 | [UTCTime](arkts-arkdata-relationalstore-utctime-t.md) | 用于表示UTC时间的数据类型。 |
-| [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) | 用于表示允许的数据字段类型，接口参数具体类型根据其功能而定。 |
 | [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md) | 用于存储键值对的类型。不支持Sendable跨线程传递。 |
+| [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) | 用于表示允许的数据字段类型，接口参数具体类型根据其功能而定。 |
 

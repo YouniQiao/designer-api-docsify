@@ -562,7 +562,7 @@ showInSubWindow?: boolean
 systemMaterial?: SystemUiMaterial
 ```
 
-设置弹窗的系统材质。 <br/>**说明：** <br/>- 默认值：[ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md)的style为 ImmersiveStyle.ULTRA_THICK的[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)对象。 设置undefined时与默认值保持一致。 <br/>- 不同的材质具有不同的效果，该接口影响 背景色[backgroundColor](../arkui-ts/ts-universal-attributes-background.md#backgroundcolor)、 背景模糊[backgroundBlurStyle](../arkui-ts/ts-universal-attributes-background.md#backgroundblurstyle9)、 背景效果[backgroundEffect](../arkui-ts/ts-universal-attributes-background.md#backgroundeffect11)、 边框颜色[borderColor](../arkui-ts/ts-universal-attributes-border.md#bordercolor)、 边框宽度[borderWidth](../arkui-ts/ts-universal-attributes-border.md#borderwidth)、 阴影[shadow](../arkui-ts/ts-universal-attributes-image-effect.md#shadow)，不建议与上述接口一起使用。
+设置弹窗的系统材质。 <br/>**说明：** <br/>- 默认值：[ImmersiveOptions](../../apis-default/arkts-apis/arkts-uimaterial-immersiveoptions-i.md)的style为 ImmersiveStyle.ULTRA_THICK的[ImmersiveMaterial](../../apis-default/arkts-apis/arkts-uimaterial-immersivematerial-c.md)对象。 设置undefined时与默认值保持一致。 <br/>- 不同的材质具有不同的效果，该接口影响 背景色[backgroundColor](../arkui-ts/ts-universal-attributes-background.md#backgroundcolor)、 背景模糊[backgroundBlurStyle](../arkui-ts/ts-universal-attributes-background.md#backgroundblurstyle9)、 背景效果[backgroundEffect](../arkui-ts/ts-universal-attributes-background.md#backgroundeffect11)、 边框颜色[borderColor](../arkui-ts/ts-universal-attributes-border.md#bordercolor)、 边框宽度[borderWidth](../arkui-ts/ts-universal-attributes-border.md#borderwidth)、 阴影[shadow](../arkui-ts/ts-universal-attributes-image-effect.md#shadow)，不建议与上述接口一起使用。
 
 **类型：** SystemUiMaterial
 

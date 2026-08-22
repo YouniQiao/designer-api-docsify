@@ -82,6 +82,16 @@ for (let pair of iter) {
 // edg, bap
 ```
 
+```TypeScript
+const paramsObject = new url.URLSearchParams('fod=bay&edg=bap');
+let pairs = paramsObject[Symbol.iterator]();
+for (let pair of pairs) {
+  console.info(pair[0] + ', ' + pair[1]);
+}
+// fod, bay
+// edg, bap
+```
+
 ## append
 
 ```TypeScript
@@ -113,6 +123,12 @@ let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
 // 构造URLParams对象
 let paramsObject = new url.URLParams(urlObject.search.slice(1));
 // 追加键值对
+paramsObject.append('fod', '3');
+```
+
+```TypeScript
+let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
+let paramsObject = new url.URLSearchParams(urlObject.search.slice(1));
 paramsObject.append('fod', '3');
 ```
 
@@ -177,6 +193,33 @@ let urlObject1 = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2')
 let objectParams4 = urlObject1.params;
 ```
 
+```TypeScript
+let baseUrl = 'https://username:password@host:8080';
+let rootPathUrl = new url.URL("/", baseUrl); // Output 'https://username:password@host:8080/';
+let absoluteUrl = new url.URL(baseUrl); // Output 'https://username:password@host:8080/';
+new url.URL('path/path1', absoluteUrl); // Output 'https://username:password@host:8080/path/path1';
+let relativePathUrl = new url.URL('/path/path1', absoluteUrl);  // Output 'https://username:password@host:8080/path/path1'; 
+new url.URL('/path/path1', relativePathUrl); // Output 'https://username:password@host:8080/path/path1';
+new url.URL('/path/path1', rootPathUrl); // Output 'https://username:password@host:8080/path/path1';
+new url.URL('/path/path1', "https://www.exampleUrl/fr-FR/toot"); // Output https://www.exampleUrl/path/path1
+new url.URL('/path/path1', ''); // Raises a TypeError exception as '' is not a valid URL
+new url.URL('/path/path1'); // Raises a TypeError exception as '/path/path1' is not a valid URL
+new url.URL('https://www.example.com', ); // Output https://www.example.com/
+new url.URL('https://www.example.com', absoluteUrl); // Output https://www.example.com/
+```
+
+```TypeScript
+let a = new url.URL();
+```
+
+```TypeScript
+let objectParams = new url.URLSearchParams([ ['user1', 'abc1'], ['query2', 'first2'], ['query3', 'second3'] ]);
+let objectParams1 = new url.URLSearchParams({"fod" : '1' , "bard" : '2'});
+let objectParams2 = new url.URLSearchParams('?fod=1&bard=2');
+let urlObject = new url.URL('https://developer.mozilla.org/?fod=1&bard=2');
+let params = new url.URLSearchParams(urlObject.search);
+```
+
 ## constructor
 
 ```TypeScript
@@ -198,6 +241,10 @@ constructor(init?: [string, string][] | Record<string, string> | string | URLPar
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | init | [string, string][] \| [Record](arkts-arkts-map-record-c.md)&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | 否 | init init |
+
+**示例**
+
+参见 [constructor](#constructor)
 
 ## delete
 
@@ -229,6 +276,12 @@ let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
 // 构造URLParams对象
 let paramsObject = new url.URLParams(urlObject.search.slice(1));
 // 删除指定名称的键值对
+paramsObject.delete('fod');
+```
+
+```TypeScript
+let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
+let paramsObject = new url.URLSearchParams(urlObject.search.slice(1));
 paramsObject.delete('fod');
 ```
 
@@ -288,6 +341,16 @@ for (let pair of params.entries()) {
 console.info(arr[1]); // value1
 ```
 
+```TypeScript
+let searchParamsObject = new url.URLSearchParams("keyName1=valueName1&keyName2=valueName2");
+let iter = searchParamsObject.entries();
+for (let pair of iter) {
+  console.info(pair[0]+ ', '+ pair[1]);
+}
+// keyName1, valueName1
+// keyName2, valueName2
+```
+
 ## forEach
 
 ```TypeScript
@@ -322,6 +385,27 @@ myURLObject.params.forEach((value, name, searchParams) => {
 });
 ```
 
+```TypeScript
+let params = new url.URLParams("key1=value1&key2=value2")
+let arr = new Array<string>();
+let i = 0;
+let urlCB: url.UrlCbFn = (value: string, key: string, searchParams:url.URLParams) => {
+  arr.push(value + " " + key + " " + (params == searchParams));
+  i++
+}
+
+params.forEach(urlCB);
+
+console.info(arr[0]); // value1 key1 true
+```
+
+```TypeScript
+const myURLObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
+myURLObject.searchParams.forEach((value, name, searchParams) => {
+    console.info(name, value, myURLObject.searchParams === searchParams);
+});
+```
+
 ## forEach
 
 ```TypeScript
@@ -346,19 +430,7 @@ forEach(callbackFn: UrlCbFn): void
 
 **示例**
 
-```TypeScript
-let params = new url.URLParams("key1=value1&key2=value2")
-let arr = new Array<string>();
-let i = 0;
-let urlCB: url.UrlCbFn = (value: string, key: string, searchParams:url.URLParams) => {
-  arr.push(value + " " + key + " " + (params == searchParams));
-  i++
-}
-
-params.forEach(urlCB);
-
-console.info(arr[0]); // value1 key1 true
-```
+参见 [forEach](#foreach)
 
 ## get
 
@@ -397,6 +469,13 @@ let age = paramsObject.get('age'); // is the string "18"
 let absentValue = paramsObject.get('abc'); // undefined
 ```
 
+```TypeScript
+let paramsObject = new url.URLSearchParams('name=Jonathan&age=18');
+let name = paramsObject.get("name"); // is the string "Jonathan"
+let age = paramsObject.get("age"); // is the string '18'
+let getObj = paramsObject.get("abc"); // undefined
+```
+
 ## get
 
 ```TypeScript
@@ -428,6 +507,10 @@ get(name: string): string | undefined
 | 类型 | 说明 |
 | --- | --- |
 | string \| undefined | 返回按名称找到的第一个值。 如果未找到值，则返回undefined。 |
+
+**示例**
+
+参见 [get](#get)
 
 ## getAll
 
@@ -466,6 +549,13 @@ let params = new url.URLParams(urlObject.search.slice(1));
 params.append('fod', '3'); // 追加第二个fod参数值
 // 获取指定名称fod的所有值
 console.info(params.getAll('fod').toString()); // Output ["1","3"]
+```
+
+```TypeScript
+let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
+let params = new url.URLSearchParams(urlObject.search.slice(1));
+params.append('fod', '3'); // Add a second value for the fod parameter.
+console.info(params.getAll('fod').toString()) // Output ["1","3"].
 ```
 
 ## has
@@ -507,6 +597,12 @@ let paramsObject = new url.URLParams(urlObject.search.slice(1));
 let result = paramsObject.has('bard');
 ```
 
+```TypeScript
+let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
+let paramsObject = new url.URLSearchParams(urlObject.search.slice(1));
+paramsObject.has('bard') === true;
+```
+
 ## keys
 
 ```TypeScript
@@ -537,6 +633,16 @@ let paramsObject = new url.URLParams("key1=value1&key2=value2");
 // 获取所有键名的迭代器
 let keys = paramsObject.keys();
 // 遍历输出键名
+for (let key of keys) {
+  console.info(key);
+}
+// key1
+// key2
+```
+
+```TypeScript
+let searchParamsObject = new url.URLSearchParams("key1=value1&key2=value2");
+let keys = searchParamsObject.keys();
 for (let key of keys) {
   console.info(key);
 }
@@ -577,6 +683,12 @@ let paramsObject = new url.URLParams(urlObject.search.slice(1));
 paramsObject.set('baz', '3'); // Add a third parameter.
 ```
 
+```TypeScript
+let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
+let paramsObject = new url.URLSearchParams(urlObject.search.slice(1));
+paramsObject.set('baz', '3'); // Add a third parameter.
+```
+
 ## sort
 
 ```TypeScript
@@ -599,6 +711,12 @@ sort(): void
 let paramsObject = new url.URLParams("c=3&a=9&b=4&d=2"); // Create a test URLParams object
 paramsObject.sort(); // Sort the key/value pairs
 console.info(paramsObject.toString()); // Display the sorted query string // Output a=9&b=4&c=3&d=2
+```
+
+```TypeScript
+let searchParamsObject = new url.URLSearchParams("c=3&a=9&b=4&d=2"); // Create a test URLSearchParams object
+searchParamsObject.sort(); // Sort the key/value pairs
+console.info(searchParamsObject.toString()); // Display the sorted query string // Output a=9&b=4&c=3&d=2
 ```
 
 ## toString
@@ -636,6 +754,18 @@ params.append('fod', '3');
 console.info(params.toString()); // Output 'fod=1&bard=2&fod=3'
 ```
 
+```TypeScript
+const urlObject = url.URL.parseURL('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
+let result = urlObject.toString(); // Output 'https://username:password@host:8080/directory/file?query=pppppp#qwer=da'
+```
+
+```TypeScript
+let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
+let params = new url.URLSearchParams(urlObject.search.slice(1));
+params.append('fod', '3');
+console.info(params.toString()); // Output 'fod=1&bard=2&fod=3'
+```
+
 ## values
 
 ```TypeScript
@@ -666,6 +796,16 @@ let paramsObject = new url.URLParams("key1=value1&key2=value2");
 // 获取所有值的迭代器
 let values = paramsObject.values();
 // 遍历输出值
+for (let value of values) {
+  console.info(value);
+}
+// value1
+// value2
+```
+
+```TypeScript
+let searchParams = new url.URLSearchParams("key1=value1&key2=value2");
+let values = searchParams.values();
 for (let value of values) {
   console.info(value);
 }

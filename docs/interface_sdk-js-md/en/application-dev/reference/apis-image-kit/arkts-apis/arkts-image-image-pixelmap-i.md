@@ -33,7 +33,7 @@ Performs color space conversion (CSC) on the image pixel color based on a given 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | targetColorSpace | colorSpaceManager.ColorSpaceManager | Yes | Target color space. SRGB, DCI_P3, DISPLAY_P3, and ADOBE_RGB_1998 are supported. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -43,6 +43,52 @@ Performs color space conversion (CSC) on the image pixel color based on a given 
 | [62980104](../errorcode-image.md#62980104-image-initialization-error) | Failed to initialize the internal object. |
 | [62980108](../errorcode-image.md#62980108-image-color-conversion-error) | Failed to convert the color space. |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+
+**Examples**
+
+```TypeScript
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function ApplyColorSpace(pixelMap:image.PixelMap) {
+  let colorSpaceName = colorSpaceManager.ColorSpace.SRGB; // The colorSpaceManager.ColorSpace object is supported only on 2-in-1 devices/PCs.
+  let targetColorSpace: colorSpaceManager.ColorSpaceManager = colorSpaceManager.create(colorSpaceName);
+  if (pixelMap != undefined) {
+    try {
+      pixelMap.applyColorSpace(targetColorSpace, (error: BusinessError) => {
+        if (error) {
+          console.error(`ApplyColorSpace failed. code is ${error.code}, message is ${error.message}`);
+          return;
+        } else {
+          console.info("Succeeded ApplyColorSpace.");
+        }
+      });
+    } catch (error) {
+      console.error(`Failed to apply color space for pixelmap object, error code is ${error}`);
+      return;
+    }
+    console.info('Succeeded in applying color space for pixelmap object.');
+  }
+}
+```
+
+```TypeScript
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function ApplyColorSpace(pixelMap:image.PixelMap) {
+  let colorSpaceName = colorSpaceManager.ColorSpace.SRGB; // The colorSpaceManager.ColorSpace object is supported only on 2-in-1 devices/PCs.
+  let targetColorSpace: colorSpaceManager.ColorSpaceManager = colorSpaceManager.create(colorSpaceName);
+  if (pixelMap != undefined) {
+      pixelMap.applyColorSpace(targetColorSpace).then(() => {
+      console.info('Succeeded in applying color space for pixelmap object.');
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to apply color space for pixelmap object, error code is ${error}`);
+      return;
+    });
+  }
+}
+```
 
 ## applyColorSpace
 
@@ -78,6 +124,10 @@ Performs Color Space Converters (CSC) on the image pixel color based on a given 
 | [62980104](../errorcode-image.md#62980104-image-initialization-error) | Failed to initialize the internal object. |
 | [62980108](../errorcode-image.md#62980108-image-color-conversion-error) | Failed to convert the color space. |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+
+**Examples**
+
+See [applyColorSpace](#applycolorspace)
 
 ## applyCrop
 
@@ -521,6 +571,133 @@ Copies this PixelMap object. This API uses a promise to return the result.
 | [62980104](../errorcode-image.md#62980104-image-initialization-error) | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
 | [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Clone(context: Context) {
+  const resourceMgr = context.resourceManager;
+  const rawFile = await resourceMgr.getRawFileContent("exif.jpg"); // An image containing Exif metadata is required.
+  let ops: image.SourceOptions = {
+    sourceDensity: 98,
+  }
+  let imageSource: image.ImageSource = image.createImageSource(rawFile.buffer as ArrayBuffer, ops);
+  let commodityPixelMap: image.PixelMap = await imageSource.createPixelMap();
+  let pictureObj: image.Picture = image.createPicture(commodityPixelMap);
+  let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
+  let metaData: image.Metadata | null = await pictureObj.getMetadata(metadataType);
+  if (metaData != null) {
+    let new_metadata: image.Metadata = await metaData.clone();
+    new_metadata.getProperties(["ImageWidth"]).then((data1) => {
+      console.info(`Clone new_metadata and get Properties: ${data1}`);
+    }).catch((err: BusinessError) => {
+      console.error(`Clone new_metadata failed, error : ${err}`);
+    });
+  } else {
+    console.error('Metadata is null.');
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
+  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function exifMetadataClone(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
+  if (metaData != undefined && metaData.exifMetadata != undefined) {
+    let new_metadata = await metaData.exifMetadata.clone();
+    new_metadata.getProperties(["ImageWidth"]).then((data1) => {
+      console.info(`Clone new_metadata and get Properties: ${data1}`);
+    }).catch((err: BusinessError) => {
+      console.error(`Clone new_metadata failed, error : ${err}`);
+    });
+  } else {
+    console.error('Metadata is null.');
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
+  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function makerNoteHuaweiClone(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
+  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
+    let new_metadata = await metaData.makerNoteHuaweiMetadata.clone();
+    new_metadata.getProperties(["HwMnoteIsXmageSupported"]).then((data1) => {
+      console.info(`Clone new_metadata and get Properties: ${data1}`);
+    }).catch((err: BusinessError) => {
+      console.error(`Clone new_metadata failed, error : ${err}`);
+    });
+  } else {
+    console.error('Metadata is null.');
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/heifs.heic';  // An image containing HeifsMetadata is required.
+  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function heifsMetadataClone(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
+  if (metaData != undefined && metaData.heifsMetadata != undefined) {
+    let new_metadata = await metaData.heifsMetadata.clone();
+    new_metadata.getProperties(["HeifsDelayTime"]).then((data1) => {
+      console.info(`Clone new_metadata and get Properties: ${data1}`);
+    }).catch((err: BusinessError) => {
+      console.error(`Clone new_metadata failed, error : ${err}`);
+    });
+  } else {
+    console.error('Metadata is null.');
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Clone(pixelMap:image.PixelMap) {
+  if (pixelMap != undefined) {
+    pixelMap.clone().then((clonePixelMap: image.PixelMap) => {
+      console.info('Succeeded clone pixelmap.');
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to clone pixelmap. code is ${error.code}, message is ${error.message}`);
+    })
+  }
+}
+```
+
 ## cloneSync
 
 ```TypeScript
@@ -550,6 +727,23 @@ Copies this PixelMap object. This API returns the result synchronously.
 | [62980103](../errorcode-image.md#62980103-unsupported-image-type) | Image YUV And ASTC types are not supported. |
 | [62980104](../errorcode-image.md#62980104-image-initialization-error) | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
 | [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function CloneSync(pixelMap: image.PixelMap) {
+  if (pixelMap != undefined) {
+    try {
+      let clonedPixelMap:image.PixelMap = pixelMap.cloneSync();
+    } catch(e) {
+      let error = e as BusinessError;
+      console.error(`clone pixelmap error. code is ${error.code}, message is ${error.message}`);
+    }
+  }
+}
+```
 
 ## convertPixelFormat
 
@@ -587,6 +781,26 @@ The method is used for the transformation of the image formats. Pixel data will 
 | [62980276](../errorcode-image.md#62980276-unsupported-image-conversion-target-type) | The type to be converted is an unsupported target pixel format. |
 | [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the pixelmap. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function ConvertPixelFormat(pixelMap: image.PixelMap) {
+  if (pixelMap != undefined) {
+    // Set the target pixel format to NV12.
+    let targetPixelFormat = image.PixelMapFormat.NV12;
+    pixelMap.convertPixelFormat(targetPixelFormat).then(() => {
+      // The pixelMap is converted to the NV12 format.
+      console.info('PixelMapFormat convert Succeeded');
+    }).catch((error: BusinessError) => {
+      // The pixelMap fails to be converted to the NV12 format.
+      console.error(`PixelMapFormat convert Failed. code is ${error.code}, message is ${error.message}`);
+    })
+  }
+}
+```
+
 ## createAlphaPixelmap
 
 ```TypeScript
@@ -613,6 +827,39 @@ Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extra
 | --- | --- |
 | Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function CreateAlphaPixelmap(pixelMap:image.PixelMap) {
+  if (pixelMap != undefined) {
+    pixelMap.createAlphaPixelmap().then((alphaPixelMap: image.PixelMap) => {
+      console.info('Succeeded in creating alpha pixelmap.');
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to create alpha pixelmap. code is ${error.code}, message is ${error.message}`);
+    })
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function CreateAlphaPixelmap(pixelMap:image.PixelMap) {
+  if (pixelMap != undefined) {
+    pixelMap.createAlphaPixelmap((err: BusinessError, alphaPixelMap: image.PixelMap) => {
+      if (alphaPixelMap == undefined) {
+        console.error(`Failed to obtain new pixel map. code is ${err.code}, message is ${err.message}`);
+        return;
+      } else {
+        console.info('Succeeded in obtaining new pixel map.');
+      }
+    })
+  }
+}
+```
+
 ## createAlphaPixelmap
 
 ```TypeScript
@@ -637,7 +884,11 @@ Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PixelMap&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
+
+**Examples**
+
+See [createAlphaPixelmap](#createalphapixelmap)
 
 ## createAlphaPixelmapSync
 
@@ -669,6 +920,18 @@ Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMapSync](#e
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+
+**Examples**
+
+```TypeScript
+function CreateAlphaPixelmapSync(pixelMap:image.PixelMap) {
+  if (pixelMap != undefined) {
+    let pixelmap : image.PixelMap = pixelMap.createAlphaPixelmapSync();
+    return pixelmap;
+  }
+  return undefined;
+}
+```
 
 ## createCroppedAndScaledPixelMap
 
@@ -708,6 +971,30 @@ Creates an image that has been cropped and resized based on the specified croppi
 | [7600205](../errorcode-image.md#7600205-unsupported-format) | Unsupported memory format or pixel format. |
 | [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function DemoCreateCroppedAndScaledPixelMap(pixelMap: PixelMap) {
+  const imageInfo = pixelMap.getImageInfoSync();
+  const region: image.Region = {
+    size: { width: imageInfo.size.width / 2, height: imageInfo.size.height / 2 },
+    x: imageInfo.size.width / 4,
+    y: imageInfo.size.height / 4
+  };
+  const scaleX: number = 2.0;
+  const scaleY: number = 2.0;
+  pixelMap.createCroppedAndScaledPixelMap(region, scaleX, scaleY, image.AntiAliasingLevel.HIGH)
+    .then((croppedAndScaled: PixelMap) => {
+      console.info('PixelMap crop and scale succeeded.');
+    })
+    .catch((error: BusinessError) => {
+      console.error(`PixelMap crop and scale failed. Error code: ${error.code}, message: ${error.message}`);
+    });
+}
+```
+
 ## createCroppedAndScaledPixelMapSync
 
 ```TypeScript
@@ -746,6 +1033,29 @@ Creates an image that has been cropped and resized based on the specified croppi
 | [7600205](../errorcode-image.md#7600205-unsupported-format) | Unsupported memory format or pixel format. |
 | [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function DemoCreateCroppedAndScaledPixelMapSync(pixelMap: PixelMap) {
+  const imageInfo = pixelMap.getImageInfoSync();
+  const region: image.Region = {
+    size: { width: imageInfo.size.width / 2, height: imageInfo.size.height / 2 },
+    x: imageInfo.size.width / 4,
+    y: imageInfo.size.height / 4
+  };
+  const scaleX: number = 2.0;
+  const scaleY: number = 2.0;
+  try {
+    const croppedAndScaled = pixelMap.createCroppedAndScaledPixelMapSync(region, scaleX, scaleY, image.AntiAliasingLevel.HIGH);
+  } catch (e) {
+    const error = e as BusinessError;
+    console.error(`PixelMap crop and scale failed. Error code: ${error.code}, message: ${error.message}`);
+  }
+}
+```
+
 ## createScaledPixelMap
 
 ```TypeScript
@@ -780,6 +1090,24 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function CreateScaledPixelMap(pixelMap:image.PixelMap) {
+  let scaleX: number = 2.0;
+  let scaleY: number = 1.0;
+  if (pixelMap != undefined) {
+      pixelMap.createScaledPixelMap(scaleX, scaleY, image.AntiAliasingLevel.LOW).then((scaledPixelMap: image.PixelMap) => {
+      console.info('Succeeded in creating scaledPixelMap.');
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to create scaledPixelMap. Error code is ${error.code}, error message is ${error.message}`);
+    })
+  }
+}
+```
 
 ## createScaledPixelMapSync
 
@@ -816,6 +1144,18 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
+**Examples**
+
+```TypeScript
+function CreateScaledPixelMapSync(pixelMap:image.PixelMap) {
+  let scaleX: number = 2.0;
+  let scaleY: number = 1.0;
+  if (pixelMap != undefined) {
+    let scaledPixelMap = pixelMap.createScaledPixelMapSync(scaleX, scaleY, image.AntiAliasingLevel.LOW);
+  }
+}
+```
+
 ## crop
 
 ```TypeScript
@@ -841,7 +1181,43 @@ Starting from API 26.0.0, it is recommended to use [applyCrop](#applycrop) inste
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | region | Region | Yes | Size of the image after cropping. The value cannot exceed the width or height of the image. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Crop(pixelMap:image.PixelMap) {
+  let region: image.Region = { x: 0, y: 0, size: { height: 100, width: 100 } };
+  if (pixelMap != undefined) {
+    pixelMap.crop(region, (err: BusinessError) => {
+      if (err) {
+        console.error(`Failed to crop pixelmap. code is ${err.code}, message is ${err.message}`);
+        return;
+      } else {
+        console.info("Succeeded in cropping pixelmap.");
+      }
+    })
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Crop(pixelMap:image.PixelMap) {
+  let region: image.Region = { x: 0, y: 0, size: { height: 100, width: 100 } };
+  if (pixelMap != undefined) {
+    pixelMap.crop(region).then(() => {
+      console.info('Succeeded in cropping pixelmap.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to crop pixelmap. code is ${err.code}, message is ${err.message}`);
+
+    });
+  }
+}
+```
 
 ## crop
 
@@ -875,6 +1251,10 @@ Starting from API 26.0.0, it is recommended to use [applyCrop](#applycrop) inste
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+See [crop](#crop)
+
 ## cropSync
 
 ```TypeScript
@@ -905,6 +1285,19 @@ Starting from API 26.0.0, it is recommended to use [applyCropSync](#applycropsyn
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function CropSync(pixelMap:image.PixelMap) {
+  let region : image.Region = { x: 0, y: 0, size: { height: 100, width: 100 } };
+  if (pixelMap != undefined) {
+    pixelMap.cropSync(region);
+  }
+}
+```
 
 ## extractAlphaPixelMap
 
@@ -1004,7 +1397,44 @@ Starting from API 26.0.0, it is recommended to use [applyFlip](#applyflip) inste
 | --- | --- | --- | --- |
 | horizontal | boolean | Yes | Whether to flip the image horizontally. **true** to flip the image horizontally, **false** otherwise. |
 | vertical | boolean | Yes | Whether to flip the image vertically. **true** to flip the image vertically, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Flip(pixelMap:image.PixelMap) {
+  let horizontal: boolean = true;
+  let vertical: boolean = false;
+  if (pixelMap != undefined) {
+    pixelMap.flip(horizontal, vertical, (err: BusinessError) => {
+      if (err) {
+        console.error(`Failed to flip pixelmap. code is ${err.code}, message is ${err.message}`);
+        return;
+      } else {
+        console.info("Succeeded in flipping pixelmap.");
+      }
+    })
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Flip(pixelMap:image.PixelMap) {
+  let horizontal: boolean = true;
+  let vertical: boolean = false;
+  if (pixelMap != undefined) {
+    pixelMap.flip(horizontal, vertical).then(() => {
+      console.info('Succeeded in flipping pixelmap.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to flip pixelmap. code is ${err.code}, message is ${err.message}`);
+    })
+  }
+}
+```
 
 ## flip
 
@@ -1039,6 +1469,10 @@ Starting from API 26.0.0, it is recommended to use [applyFlip](#applyflip) inste
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+See [flip](#flip)
+
 ## flipSync
 
 ```TypeScript
@@ -1071,6 +1505,20 @@ Starting from API 26.0.0, it is recommended to use [applyFlipSync](#applyflipsyn
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function FlipSync(pixelMap:image.PixelMap) {
+  let horizontal : boolean = true;
+  let vertical : boolean = false;
+  if (pixelMap != undefined) {
+    pixelMap.flipSync(horizontal, vertical);
+  }
+}
+```
+
 ## getBytesNumberPerRow
 
 ```TypeScript
@@ -1094,6 +1542,14 @@ Obtains the number of bytes per row of this image. Unit: bytes.
 | Type | Description |
 | --- | --- |
 | int | Number of bytes per row. |
+
+**Examples**
+
+```TypeScript
+function GetBytesNumberPerRow(pixelMap: image.PixelMap) {
+  let rowCount: number = pixelMap.getBytesNumberPerRow();
+}
+```
 
 ## getColorSpace
 
@@ -1123,6 +1579,18 @@ Obtains the color space of this image.
 | [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function GetColorSpace(pixelMap:image.PixelMap) {
+  if (pixelMap != undefined) {
+    let csm = pixelMap.getColorSpace();
+  }
+}
+```
+
 ## getDensity
 
 ```TypeScript
@@ -1146,6 +1614,14 @@ Obtains the pixel density of this image. Unit: ppi (pixels/inch)
 | Type | Description |
 | --- | --- |
 | int | Pixel density, in ppi. |
+
+**Examples**
+
+```TypeScript
+function GetDensity(pixelMap: image.PixelMap) {
+  let getDensity: number = pixelMap.getDensity();
+}
+```
 
 ## getImageInfo
 
@@ -1171,6 +1647,82 @@ Obtains the image information of a PixelMap. This API uses a promise to return t
 | --- | --- |
 | Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Promise used to return the image information. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function GetImageInfo(imageSourceObj : image.ImageSource) {
+  imageSourceObj.getImageInfo(0, (error: BusinessError, imageInfo: image.ImageInfo) => {
+    if (error) {
+      console.error(`Failed to obtain the image information.code is ${error.code}, message is ${error.message}`);
+    } else {
+      console.info('Succeeded in obtaining the image information.');
+    }
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function GetImageInfo(imageSourceObj : image.ImageSource) {
+  imageSourceObj.getImageInfo((err: BusinessError, imageInfo: image.ImageInfo) => {
+    if (err) {
+      console.error(`Failed to obtain the image information.code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('Succeeded in obtaining the image information.');
+    }
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function GetImageInfo(imageSourceObj : image.ImageSource) {
+  imageSourceObj.getImageInfo(0)
+    .then((imageInfo: image.ImageInfo) => {
+      console.info('Succeeded in obtaining the image information.');
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to obtain the image information.code is ${error.code}, message is ${error.message}`);
+    })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function GetImageInfo(pixelMap: image.PixelMap) {
+  if (pixelMap != undefined) {
+    pixelMap.getImageInfo().then((imageInfo: image.ImageInfo) => {
+      if (imageInfo != undefined) {
+        console.info(`Succeeded in obtaining the image pixel map information ${imageInfo.size.height}`);
+      }
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to obtain the image pixel map information. code is ${error.code}, message is ${error.message}`);
+    })
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function GetImageInfoSync(pixelMap : image.PixelMap){
+  if (pixelMap != undefined) {
+    pixelMap.getImageInfo((error: BusinessError, imageInfo: image.ImageInfo) => {
+      if (error) {
+        console.error(`Failed to obtain the image pixel map information. code is ${error.code}, message is ${error.message}`);
+        return;
+      } else {
+        console.info(`Succeeded in obtaining the image pixel map information ${imageInfo.size.height}`);
+      }
+    })
+  }
+}
+```
+
 ## getImageInfo
 
 ```TypeScript
@@ -1193,7 +1745,11 @@ Obtains the image information. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
+
+**Examples**
+
+See [getImageInfo](#getimageinfo)
 
 ## getImageInfoSync
 
@@ -1224,6 +1780,34 @@ Obtains the image information. This API returns the result synchronously.
 | Error Code ID | Error Message |
 | --- | --- |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+
+**Examples**
+
+```TypeScript
+function GetImageInfoSync(context : Context) {
+  // "test.jpg" is only an example. Replace it with the actual one in use. Otherwise, the imageSource instance fails to be created, and subsequent operations cannot be performed.
+  let filePath: string = context.filesDir + "/test.jpg";
+  let imageSource = image.createImageSource(filePath);
+  let imageInfo = imageSource.getImageInfoSync(0);
+  if (imageInfo == undefined) {
+    console.error('Failed to obtain the image information.');
+  } else {
+    console.info('Succeeded in obtaining the image information.');
+    console.info('imageInfo.size.height:' + imageInfo.size.height);
+    console.info('imageInfo.size.width:' + imageInfo.size.width);
+  }
+}
+```
+
+```TypeScript
+function GetImageInfoSync(pixelMap:image.PixelMap) {
+  if (pixelMap != undefined) {
+    let imageInfo : image.ImageInfo = pixelMap.getImageInfoSync();
+    return imageInfo;
+  }
+  return undefined;
+}
+```
 
 ## getMetadata
 
@@ -1260,6 +1844,74 @@ Obtains the value of the metadata with a given key in this PixelMap.
 | [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
 | [62980302](../errorcode-image.md#62980302-memory-copy-failed) | Memory copy failed. Possibly caused by invalid metadata value. |
 
+**Examples**
+
+```TypeScript
+async function GetAuxPictureObjMetadata(auxPictureObj: image.AuxiliaryPicture) {
+  if (auxPictureObj != null) {
+    let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
+    let auxPictureObjMetaData: image.Metadata | null = await auxPictureObj.getMetadata(metadataType);
+    if (auxPictureObjMetaData != null) {
+      console.info('Get AuxPictureObj Metadata success' );
+    } else {
+      console.error('Get AuxPictureObj Metadata failed');
+    }
+  } else {
+    console.error('Get AuxPictureObj is null.');
+  }
+}
+```
+
+```TypeScript
+async function GetMetadata(img : image.Image) {
+  try {
+    let staticMetadata = img.getMetadata(image.HdrMetadataKey.HDR_STATIC_METADATA);
+    console.info(`getMetadata:${staticMetadata}`);
+  } catch (err) {
+    console.error('getMetadata failed' + err);
+  }
+}
+```
+
+```TypeScript
+async function GetPictureObjMetadataProperties(pictureObj : image.Picture) {
+  if (pictureObj != null) {
+    let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
+    let pictureObjMetaData: image.Metadata = await pictureObj.getMetadata(metadataType);
+    if (pictureObjMetaData != null) {
+      console.info('get picture metadata success');
+    } else {
+      console.error('get picture metadata is failed');
+    }
+  } else {
+    console.error(" pictureObj is null");
+  }
+}
+```
+
+```TypeScript
+async function GetMetadata(context: Context) {
+  // Replace app.media.startIcon with a local HDR image.
+  let img = context.resourceManager.getMediaContentSync($r('app.media.startIcon').id);
+  let imageSource = image.createImageSource(img.buffer.slice(0));
+  let decodingOptions: image.DecodingOptions = {
+    desiredDynamicRange: image.DecodingDynamicRange.AUTO
+  };
+  let pixelmap = imageSource.createPixelMapSync(decodingOptions);
+  if (pixelmap != undefined) {
+    console.info('Succeeded in creating pixelMap object.');
+    try {
+      let staticMetadata = pixelmap.getMetadata(image.HdrMetadataKey.HDR_STATIC_METADATA);
+      console.info(`getMetadata:${staticMetadata}`);
+    } catch (e) {
+      console.error('pixelmap create failed' + e);
+    }
+  } else {
+    console.error('Failed to create pixelMap.');
+  }
+}
+```
+
 ## getPixelBytesNumber
 
 ```TypeScript
@@ -1283,6 +1935,14 @@ Obtains the total number of bytes of this image. Unit: bytes.
 | Type | Description |
 | --- | --- |
 | int | Total number of bytes. |
+
+**Examples**
+
+```TypeScript
+function GetPixelBytesNumber(pixelMap: image.PixelMap) {
+  let pixelBytesNumber: number = pixelMap.getPixelBytesNumber();
+}
+```
 
 ## getUniqueId
 
@@ -1310,6 +1970,14 @@ Obtains the unique ID of this PixelMap.
 | --- | --- |
 | [7600201](../errorcode-image.md#7600201-unsupported-operation) | The PixelMap has been released. |
 
+**Examples**
+
+```TypeScript
+function DemoGetUniqueId(pixelMap: PixelMap) {
+  const uniqueId: number = pixelMap.getUniqueId();
+}
+```
+
 ## isReleased
 
 ```TypeScript
@@ -1334,6 +2002,16 @@ Checks whether this PixelMap object is released. If released, any attempt to acc
 | Type | Description |
 | --- | --- |
 | boolean | Check result for whether the PixelMap object is released. **true** if released; **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+async function DemoIsReleased(pixelMap: PixelMap) { // Unreleased PixelMap.
+  pixelMap.isReleased(); // Return false.
+  await pixelMap.release();
+  pixelMap.isReleased(); // Return true.
+}
+```
 
 ## marshalling
 
@@ -1362,6 +2040,107 @@ Marshals this PixelMap object and writes it to a MessageSequence object.
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 | [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { rpc } from '@kit.IPCKit';
+
+class MySequence implements rpc.Parcelable {
+  picture: image.Picture | null = null;
+  constructor(conPicture: image.Picture) {
+    this.picture = conPicture;
+  }
+  marshalling(messageSequence: rpc.MessageSequence) {
+    if(this.picture != null) {
+      this.picture.marshalling(messageSequence);
+      console.info('Marshalling success !');
+      return true;
+    } else {
+      console.error('Marshalling failed !');
+      return false;
+    }
+  }
+  unmarshalling(messageSequence : rpc.MessageSequence) {
+    this.picture = image.createPictureFromParcel(messageSequence);
+    this.picture.getMainPixelmap().getImageInfo().then((imageInfo : image.ImageInfo) => {
+      console.info(`Unmarshalling to get mainPixelmap information height:${imageInfo.size.height} width:${imageInfo.size.width}`);
+    }).catch((error: BusinessError) => {
+      console.error(`Unmarshalling failed error.code: ${error.code} ,error.message: ${error.message}`);
+    });
+    return true;
+  }
+}
+
+async function Marshalling_UnMarshalling(pictureObj : image.Picture) {
+  if (pictureObj != null) {
+    let parcelable: MySequence = new MySequence(pictureObj);
+    let data: rpc.MessageSequence = rpc.MessageSequence.create();
+    // Implement serialization.
+    data.writeParcelable(parcelable);
+    let ret: MySequence = new MySequence(pictureObj);
+    // Implement deserialization.
+    data.readParcelable(ret);
+  } else {
+    console.error('PictureObj is null');
+  }
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+
+class MySequence implements rpc.Parcelable {
+  pixel_map: image.PixelMap;
+  constructor(conPixelMap : image.PixelMap) {
+    this.pixel_map = conPixelMap;
+  }
+  marshalling(messageSequence : rpc.MessageSequence) {
+    this.pixel_map.marshalling(messageSequence);
+    console.info('marshalling');
+    return true;
+  }
+  unmarshalling(messageSequence : rpc.MessageSequence) {
+    image.createPixelMap(new ArrayBuffer(96), {size: { height:4, width: 6}}).then((pixelParcel: image.PixelMap) => {
+      pixelParcel.unmarshalling(messageSequence).then(async (pixelMap: image.PixelMap) => {
+        this.pixel_map = pixelMap;
+        pixelMap.getImageInfo().then((imageInfo: image.ImageInfo) => {
+          console.info(`unmarshalling information h: ${imageInfo.size.height} w: ${imageInfo.size.width}`);
+        })
+      })
+    });
+    return true;
+  }
+}
+async function Marshalling() {
+  const color: ArrayBuffer = new ArrayBuffer(96);
+  let bufferArr: Uint8Array = new Uint8Array(color);
+  for (let i = 0; i < bufferArr.length; i++) {
+    bufferArr[i] = 0x80;
+  }
+  let opts: image.InitializationOptions = {
+    editable: true,
+    pixelFormat: image.PixelMapFormat.BGRA_8888,
+    size: { height: 4, width: 6 },
+    alphaType: image.AlphaType.UNPREMUL
+  }
+  let pixelMap: image.PixelMap | undefined = undefined;
+  await image.createPixelMap(color, opts).then((srcPixelMap: image.PixelMap) => {
+    pixelMap = srcPixelMap;
+  })
+  if (pixelMap != undefined) {
+    // Implement serialization.
+    let parcelable: MySequence = new MySequence(pixelMap);
+    let data: rpc.MessageSequence = rpc.MessageSequence.create();
+    data.writeParcelable(parcelable);
+
+    // Implement deserialization to obtain data through the RPC.
+    let ret: MySequence = new MySequence(pixelMap);
+    data.readParcelable(ret);
+  }
+}
+```
+
 ## opacity
 
 ```TypeScript
@@ -1387,7 +2166,42 @@ Starting from API 26.0.0, it is recommended to use [setOpacity](#setopacity) ins
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | rate | double | Yes | Opacity rate. The value range is (0,1]. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Opacity(pixelMap:image.PixelMap) {
+  let rate: number = 0.5;
+  if (pixelMap != undefined) {
+    pixelMap.opacity(rate, (err: BusinessError) => {
+      if (err) {
+        console.error(`Failed to set opacity. code is ${err.code}, message is ${err.message}`);
+        return;
+      } else {
+        console.info("Succeeded in setting opacity.");
+      }
+    })
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Opacity(pixelMap:image.PixelMap) {
+  let rate: number = 0.5;
+  if (pixelMap != undefined) {
+    pixelMap.opacity(rate).then(() => {
+      console.info('Succeeded in setting opacity.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to set opacity. code is ${err.code}, message is ${err.message}`);
+    })
+  }
+}
+```
 
 ## opacity
 
@@ -1421,6 +2235,10 @@ Starting from API 26.0.0, it is recommended to use [setOpacity](#setopacity) ins
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+See [opacity](#opacity)
+
 ## opacitySync
 
 ```TypeScript
@@ -1451,6 +2269,17 @@ Starting from API 26.0.0, it is recommended to use [setOpacitySync](#setopacitys
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+
+**Examples**
+
+```TypeScript
+function OpacitySync(pixelMap:image.PixelMap) {
+  let rate : number = 0.5;
+  if (pixelMap != undefined) {
+    pixelMap.opacitySync(rate);
+  }
+}
+```
 
 ## readAllPixelsToBuffer
 
@@ -1562,6 +2391,90 @@ Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readpixel
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function ReadPixelsRGBA(pixelMap : image.PixelMap) {
+  const area: image.PositionArea = {
+    pixels: new ArrayBuffer(8), // 8 is the size of the PixelMap buffer to create. The value is calculated as follows: height * width * 4.
+    offset: 0,
+    stride: 8,
+    region: { size: { height: 1, width: 2 }, x: 0, y: 0 }
+  };
+  if (pixelMap != undefined) {
+    pixelMap.readPixels(area).then(() => {
+      console.info('Succeeded in reading the image data in the area.'); // Called if the condition is met.
+      console.info('RGBA data is ', new Uint8Array(area.pixels));
+    }).catch((error: BusinessError) => {
+      console.error("Failed to read the image data in the area. code is ", error);// Called if the condition is not met.
+    })
+  }
+}
+
+async function ReadPixelsYUV(pixelMap : image.PixelMap) {
+  const area: image.PositionArea = {
+    pixels: new ArrayBuffer(6),  // 6 is the size of the PixelMap buffer to create. The value is calculated as follows: height * width * 1.5.
+    offset: 0,
+    stride: 8,
+    region: { size: { height: 2, width: 2 }, x: 0, y: 0 }
+  };
+  if (pixelMap != undefined) {
+    pixelMap.readPixels(area).then(() => {
+      console.info('Succeeded in reading the image data in the area.'); // Called if the condition is met.
+      console.info('YUV data is ', new Uint8Array(area.pixels));
+    }).catch((error: BusinessError) => {
+      console.error("Failed to read the image data in the area. code is ", error);// Called if the condition is not met.
+    })
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function ReadPixelsRGBA(pixelMap : image.PixelMap) {
+  const area: image.PositionArea = {
+    pixels: new ArrayBuffer(8), // 8 is the size of the PixelMap buffer to create. The value is calculated as follows: height * width * 4.
+    offset: 0,
+    stride: 8,
+    region: { size: { height: 1, width: 2 }, x: 0, y: 0 }
+  };
+  if (pixelMap != undefined) {
+    pixelMap.readPixels(area, (error: BusinessError) => {
+      if (error) {
+        console.error("Failed to read pixelmap from the specified area. code is ", error);
+        return;
+      } else {
+        console.info('Succeeded in reading pixelmap from the specified area.');
+        console.info('RGBA data is ', new Uint8Array(area.pixels));
+      }
+    })
+  }
+}
+
+async function ReadPixelsYUV(pixelMap : image.PixelMap) {
+  const area: image.PositionArea = {
+    pixels: new ArrayBuffer(6),  // 6 is the size of the PixelMap buffer to create. The value is calculated as follows: height * width * 1.5.
+    offset: 0,
+    stride: 8,
+    region: { size: { height: 2, width: 2 }, x: 0, y: 0 }
+  };
+  if (pixelMap != undefined) {
+    pixelMap.readPixels(area, (error: BusinessError) => {
+      if (error) {
+        console.error("Failed to read pixelmap from the specified area. code is ", error);
+        return;
+      } else {
+        console.info('Succeeded in reading pixelmap from the specified area.');
+        console.info('YUV data is ', new Uint8Array(area.pixels));
+      }
+    })
+  }
+}
+```
+
 ## readPixels
 
 ```TypeScript
@@ -1587,7 +2500,11 @@ Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readpixel
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | area | [PositionArea](arkts-image-image-positionarea-i.md) | Yes | Area from which the pixels will be read. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+See [readPixels](#readpixels)
 
 ## readPixelsSync
 
@@ -1619,6 +2536,22 @@ Starting from API 26.0.0, it is recommended to use [readPixelsToAreaSync](#readp
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+
+**Examples**
+
+```TypeScript
+function ReadPixelsSync(pixelMap : image.PixelMap) {
+  const area : image.PositionArea = {
+    pixels: new ArrayBuffer(8),
+    offset: 0,
+    stride: 8,
+    region: { size: { height: 1, width: 2 }, x: 0, y: 0 }
+  };
+  if (pixelMap != undefined) {
+    pixelMap.readPixelsSync(area);
+  }
+}
+```
 
 ## readPixelsToArea
 
@@ -1730,6 +2663,66 @@ Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#read
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function ReadPixelsToBuffer(context: Context) {
+  const resourceMgr = context.resourceManager;
+  const rawFile = await resourceMgr.getRawFileContent("hdr.jpg"); // An HDR-compatible image is required.
+  let ops: image.SourceOptions = {
+    sourceDensity: 98,
+  }
+  let imageSource: image.ImageSource = image.createImageSource(rawFile.buffer as ArrayBuffer, ops);
+  let commodityPixelMap: image.PixelMap = await imageSource.createPixelMap();
+  let pictureObj: image.Picture = image.createPicture(commodityPixelMap);
+  let auxPictureObj: image.AuxiliaryPicture | null = pictureObj.getAuxiliaryPicture(image.AuxiliaryPictureType.GAINMAP);
+  if(auxPictureObj != null) {
+    await auxPictureObj.readPixelsToBuffer().then((pixelsBuffer: ArrayBuffer) => {
+      console.info('Read pixels to buffer success.' );
+    }).catch((error: BusinessError) => {
+      console.error(`Read pixels to buffer failed error.code: ${error.code}, error.message: ${error.message}`);
+    });
+  } else {
+    console.error('AuxPictureObj is null.');
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function ReadPixelsToBuffer(pixelMap : image.PixelMap) {
+  const readBuffer: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
+  if (pixelMap != undefined) {
+    pixelMap.readPixelsToBuffer(readBuffer).then(() => {
+      console.info('Succeeded in reading image pixel data.'); // Called if the condition is met.
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to read image pixel data. code is ${error.code}, message is ${error.message}`); // Called if no condition is met.
+    })
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function ReadPixelsToBuffer(pixelMap : image.PixelMap) {
+  const readBuffer: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
+  if (pixelMap != undefined) {
+    pixelMap.readPixelsToBuffer(readBuffer, (error: BusinessError, res: void) => {
+      if(error) {
+        console.error(`Failed to read image pixel data. code is ${error.code}, message is ${error.message}`); // Called if no condition is met.
+        return;
+      } else {
+        console.info('Succeeded in reading image pixel data.'); // Called if the condition is met.
+      }
+    })
+  }
+}
+```
+
 ## readPixelsToBuffer
 
 ```TypeScript
@@ -1755,7 +2748,11 @@ Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#read
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dst | ArrayBuffer | Yes | Buffer to which the pixels will be written. The buffer size is obtained by calling [getPixelBytesNumber](#getpixelbytesnumber). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+See [readPixelsToBuffer](#readpixelstobuffer)
 
 ## readPixelsToBufferSync
 
@@ -1790,6 +2787,18 @@ Starting from API 26.0.0, it is recommended to use [readAllPixelsToBufferSync](#
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
+**Examples**
+
+```TypeScript
+function ReadPixelsToBufferSync(pixelMap : image.PixelMap) {
+  const bufferSize = pixelMap.getPixelBytesNumber();
+  const readBuffer = new ArrayBuffer(bufferSize);
+  if (pixelMap != undefined) {
+    pixelMap.readPixelsToBufferSync(readBuffer);
+  }
+}
+```
+
 ## release
 
 ```TypeScript
@@ -1817,7 +2826,204 @@ Releases this PixelMap instance. After the release, any attempt to access the in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+async function Release(auxPictureObj: image.AuxiliaryPicture) {
+  let funcName = "Release";
+  if (auxPictureObj != null) {
+    auxPictureObj.release();
+    if (auxPictureObj.getType() == null) {
+      console.info(funcName, 'Success !');
+    } else {
+      console.error(funcName, 'Failed !');
+    }
+  } else {
+    console.error('PictureObj is null');
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(img : image.Image) {
+  img.release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release the image instance.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in releasing the image instance.');
+    }
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(img : image.Image) {
+  img.release().then(() => {
+    console.info('Succeeded in releasing the image instance.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the image instance.code ${error.code},message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(creator : image.ImageCreator) {
+  creator.release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release the creator.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in releasing creator.');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(creator : image.ImageCreator) {
+  creator.release().then(() => {
+    console.info('Succeeded in releasing creator.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the creator.code ${error.code},message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release() {
+  const imagePackerObj: image.ImagePacker = image.createImagePacker();
+  imagePackerObj.release((err: BusinessError)=>{
+    if (err) {
+      console.error(`Failed to release image packaging.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in releasing image packaging.');
+    }
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release() {
+  const imagePackerObj: image.ImagePacker = image.createImagePacker();
+  imagePackerObj.release().then(() => {
+    console.info('Succeeded in releasing image packaging.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release image packaging.code ${error.code},message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(receiver : image.ImageReceiver) {
+  receiver.release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release the receiver.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in releasing the receiver.');
+    }
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(receiver : image.ImageReceiver) {
+  receiver.release().then(() => {
+    console.info('Succeeded in releasing the receiver.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the receiver.code ${error.code},message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(imageSourceObj : image.ImageSource) {
+  imageSourceObj.release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release the image source instance.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in releasing the image source instance.');
+    }
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(imageSourceObj : image.ImageSource) {
+  imageSourceObj.release().then(() => {
+    console.info('Succeeded in releasing the image source instance.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the image source instance.code ${error.code},message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+async function Release(pictureObj : image.Picture) {
+  let funcName = "Release";
+  if (pictureObj != null) {
+    pictureObj.release();
+    if (pictureObj.getMainPixelmap() == null) {
+      console.info(funcName, 'Success !');
+    } else {
+      console.error(funcName, 'Failed !');
+    }
+  } else {
+    console.error('PictureObj is null');
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(pixelMap:image.PixelMap) {
+  if (pixelMap != undefined) {
+    await pixelMap.release().then(() => {
+      console.info('Succeeded in releasing pixelmap object.');
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to release pixelmap object. code is ${error.code}, message is ${error.message}`);
+    })
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(pixelMap:image.PixelMap) {
+  if (pixelMap != undefined) {
+    pixelMap.release((err: BusinessError) => {
+      if (err) {
+        console.error(`Failed to release pixelmap object. code is ${err.code}, message is ${err.message}`);
+        return;
+      } else {
+        console.info('Succeeded in releasing pixelmap object.');
+      }
+    })
+  }
+}
+```
 
 ## release
 
@@ -1848,6 +3054,10 @@ Releases this PixelMap instance. After the release, any attempt to access the in
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+See [release](#release)
+
 ## rotate
 
 ```TypeScript
@@ -1873,7 +3083,42 @@ Starting from API 26.0.0, it is recommended to use [applyRotate](#applyrotate) i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | angle | double | Yes | Angle to rotate. Unit: degrees. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Rotate(pixelMap:image.PixelMap) {
+  let angle: number = 90.0;
+  if (pixelMap != undefined) {
+    pixelMap.rotate(angle, (err: BusinessError) => {
+      if (err) {
+        console.error(`Failed to rotate pixelmap. code is ${err.code}, message is ${err.message}`);
+        return;
+      } else {
+        console.info("Succeeded in rotating pixelmap.");
+      }
+    })
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Rotate(pixelMap:image.PixelMap) {
+  let angle: number = 90.0;
+  if (pixelMap != undefined) {
+    pixelMap.rotate(angle).then(() => {
+      console.info('Succeeded in rotating pixelmap.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to rotate pixelmap. code is ${err.code}, message is ${err.message}`);
+    })
+  }
+}
+```
 
 ## rotate
 
@@ -1907,6 +3152,10 @@ Starting from API 26.0.0, it is recommended to use [applyRotate](#applyrotate) i
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+See [rotate](#rotate)
+
 ## rotateSync
 
 ```TypeScript
@@ -1938,6 +3187,17 @@ Starting from API 26.0.0, it is recommended to use [applyRotateSync](#applyrotat
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
+**Examples**
+
+```TypeScript
+function RotateSync(pixelMap: image.PixelMap) {
+  let angle : number = 90.0;
+  if (pixelMap != undefined) {
+    pixelMap.rotateSync(angle);
+  }
+}
+```
+
 ## scale
 
 ```TypeScript
@@ -1964,7 +3224,60 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) ins
 | --- | --- | --- | --- |
 | x | double | Yes | Scale factor of the width. |
 | y | double | Yes | Scale factor of the height. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Scale(pixelMap:image.PixelMap) {
+  let scaleX: number = 2.0;
+  let scaleY: number = 1.0;
+  if (pixelMap != undefined) {
+    pixelMap.scale(scaleX, scaleY, (err: BusinessError) => {
+      if (err) {
+        console.error(`Failed to scale pixelmap. code is ${err.code}, message is ${err.message}`);
+        return;
+      } else {
+        console.info("Succeeded in scaling pixelmap.");
+      }
+    })
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Scale(pixelMap:image.PixelMap) {
+  let scaleX: number = 2.0;
+  let scaleY: number = 1.0;
+  if (pixelMap != undefined) {
+    pixelMap.scale(scaleX, scaleY).then(() => {
+      console.info('Succeeded in scaling pixelmap.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to scale pixelmap. code is ${err.code}, message is ${err.message}`);
+    })
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function ScaleSync(pixelMap:image.PixelMap) {
+  let scaleX: number = 2.0;
+  let scaleY: number = 1.0;
+  if (pixelMap != undefined) {
+    pixelMap.scale(scaleX, scaleY, image.AntiAliasingLevel.LOW).then(() => {
+      console.info('Succeeded in scaling pixelmap.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to scale pixelmap. code is ${err.code}, message is ${err.message}`);
+    })
+  }
+}
+```
 
 ## scale
 
@@ -1998,6 +3311,10 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) ins
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+See [scale](#scale)
 
 ## scale
 
@@ -2040,6 +3357,10 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) ins
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
+**Examples**
+
+See [scale](#scale)
+
 ## scaleSync
 
 ```TypeScript
@@ -2071,6 +3392,28 @@ Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyscales
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+
+**Examples**
+
+```TypeScript
+function ScaleSync(pixelMap: image.PixelMap) {
+  let scaleX: number = 2.0;
+  let scaleY: number = 1.0;
+  if (pixelMap != undefined) {
+    pixelMap.scaleSync(scaleX, scaleY);
+  }
+}
+```
+
+```TypeScript
+function ScaleSync(pixelMap: image.PixelMap) {
+  let scaleX: number = 2.0;
+  let scaleY: number = 1.0;
+  if (pixelMap != undefined) {
+    pixelMap.scaleSync(scaleX, scaleY, image.AntiAliasingLevel.LOW);
+  }
+}
+```
 
 ## scaleSync
 
@@ -2105,6 +3448,10 @@ Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyscales
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
+**Examples**
+
+See [scaleSync](#scalesync)
+
 ## setColorSpace
 
 ```TypeScript
@@ -2134,6 +3481,20 @@ This method is only used to set the colorspace property of pixelmap, while all p
 | [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | If the image parameter invalid. |
 
+**Examples**
+
+```TypeScript
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
+
+function SetColorSpace(pixelMap:image.PixelMap) {
+  let colorSpaceName = colorSpaceManager.ColorSpace.SRGB; // The colorSpaceManager.ColorSpace object is supported only on 2-in-1 devices/PCs.
+  let csm: colorSpaceManager.ColorSpaceManager = colorSpaceManager.create(colorSpaceName);
+  if (pixelMap != undefined) {
+    pixelMap.setColorSpace(csm);
+  }
+}
+```
+
 ## setMemoryNameSync
 
 ```TypeScript
@@ -2161,6 +3522,23 @@ Sets a memory name for this PixelMap.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The length of the input parameter is too long. 2.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource unavailable. |
 | [62980286](../errorcode-image.md#62980286-failed-to-set-a-memory-identifier-for-a-pixelmap) | Memory format not supported. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function SetMemoryNameSync(pixelMap:image.PixelMap) {
+  if (pixelMap != undefined) {
+    try {
+      pixelMap.setMemoryNameSync("PixelMapName Test");
+    } catch(e) {
+      let error = e as BusinessError;
+      console.error(`setMemoryNameSync error. code is ${error.code}, message is ${error.message}`);
+    }
+  }
+}
+```
 
 ## setMetadata
 
@@ -2197,6 +3575,97 @@ Sets the value for the metadata with a given key in this PixelMap. This API uses
 | [501](../errorcode-image.md#501-api-call-failed) | Resource unavailable. |
 | [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
 | [62980302](../errorcode-image.md#62980302-memory-copy-failed) | Memory copy failed. Possibly caused by invalid metadata value. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function SetAuxPictureObjMetadata(exifContext: Context, auxPictureObj: image.AuxiliaryPicture) {
+  const exifResourceMgr = exifContext.resourceManager;
+  const exifRawFile = await exifResourceMgr.getRawFileContent("exif.jpg"); // An image containing Exif metadata is required.
+  let exifOps: image.SourceOptions = {
+    sourceDensity: 98,
+  }
+  let exifImageSource: image.ImageSource = image.createImageSource(exifRawFile.buffer as ArrayBuffer, exifOps);
+  let exifCommodityPixelMap: image.PixelMap = await exifImageSource.createPixelMap();
+  let exifPictureObj: image.Picture = image.createPicture(exifCommodityPixelMap);
+  if (exifPictureObj != null) {
+    console.info('Create picture succeeded');
+  } else {
+    console.error('Create picture failed');
+  }
+
+  if (auxPictureObj != null) {
+    let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
+    let exifMetaData: image.Metadata = await exifPictureObj.getMetadata(metadataType);
+    auxPictureObj.setMetadata(metadataType, exifMetaData).then(() => {
+      console.info('Set metadata success');
+    }).catch((error: BusinessError) => {
+      console.error(`Set metadata failed.error.code: ${error.code}, error.message: ${error.message}`);
+    });
+  } else {
+    console.error('AuxPictureObjMetaData is null');
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function SetPictureObjMetadata(exifContext: Context) {
+  const exifResourceMgr = exifContext.resourceManager;
+  const exifRawFile = await exifResourceMgr.getRawFileContent("exif.jpg"); // An image containing Exif metadata is required.
+  let exifOps: image.SourceOptions = {
+    sourceDensity: 98,
+  }
+  let exifImageSource: image.ImageSource = image.createImageSource(exifRawFile.buffer as ArrayBuffer, exifOps);
+  let exifCommodityPixelMap: image.PixelMap = await exifImageSource.createPixelMap();
+  let exifPictureObj: image.Picture = image.createPicture(exifCommodityPixelMap);
+  if (exifPictureObj != null) {
+    console.info('Create picture succeeded');
+  } else {
+    console.error('Create picture failed');
+  }
+
+  if (exifPictureObj != null) {
+    let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
+    let exifMetaData: image.Metadata = await exifPictureObj.getMetadata(metadataType);
+    exifPictureObj.setMetadata(metadataType, exifMetaData).then(() => {
+      console.info('Set metadata success');
+    }).catch((error: BusinessError) => {
+      console.error('Failed to set metadata. error.code: ' +JSON.stringify(error.code) + ' ,error.message:' + JSON.stringify(error.message));
+    });
+  } else {
+    console.error('exifPictureOb is null');
+  }
+}
+```
+
+For details about how to create a PixelMap with DMA_ALLOC memory, see [Default Memory Allocation Mode](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/image-allocator-type#default-memory-allocation-method).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import {image} from '@kit.ImageKit';
+
+function SetMetadata(pixelMap: image.PixelMap) { // The input parameter pixelMap must be of the DMA_ALLOC memory type. For details about how to create a PixelMap with DMA_ALLOC memory, see the preceding link.
+  let staticMetadata: image.HdrStaticMetadata = {
+    displayPrimariesX: [1.1, 1.1, 1.1],
+    displayPrimariesY: [1.2, 1.2, 1.2],
+    whitePointX: 1.1,
+    whitePointY: 1.2,
+    maxLuminance: 2.1,
+    minLuminance: 1.0,
+    maxContentLightLevel: 2.1,
+    maxFrameAverageLightLevel: 2.1,
+  };
+  pixelMap.setMetadata(image.HdrMetadataKey.HDR_STATIC_METADATA, staticMetadata).then(() => {
+    console.info('Succeeded in setting pixelMap metadata.');
+  }).catch((error: BusinessError) => {
+    console.error("Failed to set the metadata.code ", error);
+  })
+}
+```
 
 ## setOpacity
 
@@ -2304,6 +3773,55 @@ Sets whether to detach from the original thread when this PixelMap is transmitte
 | --- | --- |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
 
+**Examples**
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { taskpool } from '@kit.ArkTS';
+
+@Concurrent
+// Child thread method.
+async function loadPixelMap(rawFileDescriptor: number): Promise<PixelMap> {
+  // Create an ImageSource instance.
+  const imageSource = image.createImageSource(rawFileDescriptor);
+  // Create a pixelMap.
+  const pixelMap = imageSource.createPixelMapSync();
+  // Release the ImageSource instance.
+  imageSource.release();
+  // Disconnect the reference of the original thread after the cross-thread transfer of the pixelMap is complete.
+  pixelMap.setTransferDetached(true);
+  // Return the pixelMap to the main thread.
+  return pixelMap;
+}
+
+@Entry
+@Component
+struct Demo {
+  @State pixelMap: PixelMap | undefined = undefined;
+  // Main thread method.
+  private loadImageFromThread(): void {
+    let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+    const resourceMgr = context.resourceManager;
+    // 'example.jpg' is only an example. Replace it with the actual one in use. Otherwise, the imageSource instance fails to be created, and subsequent operations cannot be performed.
+    resourceMgr.getRawFd('example.jpg').then(rawFileDescriptor => {
+      taskpool.execute(loadPixelMap, rawFileDescriptor).then(pixelMap => {
+        if (pixelMap) {
+          this.pixelMap = pixelMap as PixelMap;
+          console.info('Succeeded in creating pixelMap.');
+          // The main thread releases the pixelMap. Because setTransferDetached has been called when the child thread returns pixelMap, the pixelMap can be released immediately.
+          this.pixelMap.release();
+        } else {
+          console.error('Failed to create pixelMap.');
+        }
+      });
+    });
+  }
+  build() {
+    // ...
+  }
+}
+```
+
 ## toSdr
 
 ```TypeScript
@@ -2329,6 +3847,33 @@ Convert pixelmap to standard dynamic range.
 | Error Code ID | Error Message |
 | --- | --- |
 | [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid image operation. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function ToSdr(context: Context) {
+  // Replace app.media.startIcon with a local HDR image.
+  let img = context.resourceManager.getMediaContentSync($r('app.media.startIcon').id);
+  let imageSource = image.createImageSource(img.buffer.slice(0));
+  let decodingOptions: image.DecodingOptions = {
+    desiredDynamicRange: image.DecodingDynamicRange.AUTO
+  };
+  let pixelmap = imageSource.createPixelMapSync(decodingOptions);
+  if (pixelmap != undefined) {
+    console.info('Succeeded in creating pixelMap object.');
+    pixelmap.toSdr().then(() => {
+      let imageInfo = pixelmap.getImageInfoSync();
+      console.info("after toSdr ,imageInfo isHdr:" + imageInfo.isHdr);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to set sdr. code is ${err.code}, message is ${err.message}`);
+    });
+  } else {
+    console.error('Failed to create pixelMap.');
+  }
+}
+```
 
 ## translate
 
@@ -2356,7 +3901,44 @@ Starting from API 26.0.0, it is recommended to use [applyTranslate](#applytransl
 | --- | --- | --- | --- |
 | x | double | Yes | X coordinate to translate, in px. |
 | y | double | Yes | Y coordinate to translate, in px. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Translate(pixelMap:image.PixelMap) {
+  let translateX: number = 50.0;
+  let translateY: number = 10.0;
+  if (pixelMap != undefined) {
+    pixelMap.translate(translateX, translateY, (err: BusinessError) => {
+      if (err) {
+        console.error(`Failed to translate pixelmap. code is ${err.code}, message is ${err.message}`);
+        return;
+      } else {
+        console.info("Succeeded in translating pixelmap.");
+      }
+    })
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Translate(pixelMap:image.PixelMap) {
+  let translateX: number = 50.0;
+  let translateY: number = 10.0;
+  if (pixelMap != undefined) {
+    pixelMap.translate(translateX, translateY).then(() => {
+      console.info('Succeeded in translating pixelmap.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to translate pixelmap. code is ${err.code}, message is ${err.message}`);
+    })
+  }
+}
+```
 
 ## translate
 
@@ -2391,6 +3973,10 @@ Starting from API 26.0.0, it is recommended to use [applyTranslate](#applytransl
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+See [translate](#translate)
+
 ## translateSync
 
 ```TypeScript
@@ -2422,6 +4008,18 @@ Starting from API 26.0.0, it is recommended to use [applyTranslateSync](#applytr
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+
+**Examples**
+
+```TypeScript
+function TranslateSync(pixelMap:image.PixelMap) {
+  let translateX : number = 50.0;
+  let translateY : number = 10.0;
+  if (pixelMap != undefined) {
+    pixelMap.translateSync(translateX, translateY);
+  }
+}
+```
 
 ## unmarshalling
 
@@ -2456,6 +4054,62 @@ Unmarshals a MessageSequence object to obtain a PixelMap object. To create a Pix
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
 | [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
 | [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+
+class MySequence implements rpc.Parcelable {
+  pixel_map: image.PixelMap;
+  constructor(conPixelMap: image.PixelMap) {
+    this.pixel_map = conPixelMap;
+  }
+  marshalling(messageSequence: rpc.MessageSequence) {
+    this.pixel_map.marshalling(messageSequence);
+    console.info('marshalling');
+    return true;
+  }
+  unmarshalling(messageSequence: rpc.MessageSequence) {
+    image.createPixelMap(new ArrayBuffer(96), {size: { height:4, width: 6}}).then((pixelParcel : image.PixelMap) => {
+      pixelParcel.unmarshalling(messageSequence).then(async (pixelMap : image.PixelMap) => {
+        this.pixel_map = pixelMap;
+        pixelMap.getImageInfo().then((imageInfo : image.ImageInfo) => {
+          console.info(`unmarshalling information h: ${imageInfo.size.height} w: ${imageInfo.size.width}`);
+        })
+      })
+    });
+    return true;
+  }
+}
+async function Unmarshalling() {
+  const color: ArrayBuffer = new ArrayBuffer(96);
+  let bufferArr: Uint8Array = new Uint8Array(color);
+  for (let i = 0; i < bufferArr.length; i++) {
+    bufferArr[i] = 0x80;
+  }
+  let opts: image.InitializationOptions = {
+    editable: true,
+    pixelFormat: image.PixelMapFormat.BGRA_8888,
+    size: { height: 4, width: 6 },
+    alphaType: image.AlphaType.UNPREMUL
+  }
+  let pixelMap: image.PixelMap | undefined = undefined;
+  await image.createPixelMap(color, opts).then((srcPixelMap : image.PixelMap) => {
+    pixelMap = srcPixelMap;
+  })
+  if (pixelMap != undefined) {
+    // Implement serialization.
+    let parcelable: MySequence = new MySequence(pixelMap);
+    let data : rpc.MessageSequence = rpc.MessageSequence.create();
+    data.writeParcelable(parcelable);
+
+    // Implement deserialization to obtain data through the RPC.
+    let ret : MySequence = new MySequence(pixelMap);
+    data.readParcelable(ret);
+  }
+}
+```
 
 ## writeAllPixelsFromBuffer
 
@@ -2569,6 +4223,49 @@ Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#w
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function WriteBufferToPixels(pixelMap:image.PixelMap) {
+  const color: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
+  let bufferArr: Uint8Array = new Uint8Array(color);
+  for (let i = 0; i < bufferArr.length; i++) {
+    bufferArr[i] = i + 1;
+  }
+  if (pixelMap != undefined) {
+    pixelMap.writeBufferToPixels(color).then(() => {
+      console.info("Succeeded in writing data from a buffer to a PixelMap.");
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to write data from a buffer to a PixelMap. code is ${error.code}, message is ${error.message}`);
+    })
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function WriteBufferToPixels(pixelMap:image.PixelMap) {
+  const color: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
+  let bufferArr: Uint8Array = new Uint8Array(color);
+  for (let i = 0; i < bufferArr.length; i++) {
+    bufferArr[i] = i + 1;
+  }
+  if (pixelMap != undefined) {
+    pixelMap.writeBufferToPixels(color, (error: BusinessError) => {
+      if (error) {
+        console.error(`Failed to write data from a buffer to a PixelMap. code is ${error.code}, message is ${error.message}`);
+        return;
+      } else {
+        console.info("Succeeded in writing data from a buffer to a PixelMap.");
+      }
+    })
+  }
+}
+```
+
 ## writeBufferToPixels
 
 ```TypeScript
@@ -2594,7 +4291,11 @@ Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#w
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | ArrayBuffer | Yes | Buffer from which the pixels are read. The buffer size is obtained by calling [getPixelBytesNumber](#getpixelbytesnumber). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the pixels in the buffer are successfully written to the PixelMap, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the pixels in the buffer are successfully written to the PixelMap, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+See [writeBufferToPixels](#writebuffertopixels)
 
 ## writeBufferToPixelsSync
 
@@ -2626,6 +4327,21 @@ Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBufferSync
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+
+**Examples**
+
+```TypeScript
+function WriteBufferToPixelsSync(pixelMap:image.PixelMap) {
+  const color: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
+  let bufferArr : Uint8Array = new Uint8Array(color);
+  for (let i = 0; i < bufferArr.length; i++) {
+    bufferArr[i] = i + 1;
+  }
+  if (pixelMap != undefined) {
+    pixelMap.writeBufferToPixelsSync(color);
+  }
+}
+```
 
 ## writePixels
 
@@ -2659,6 +4375,100 @@ Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writep
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function WritePixelsRGBA(pixelMap:image.PixelMap) {
+  const area: image.PositionArea = {
+    pixels: new ArrayBuffer(8), // 8 is the size of the PixelMap buffer to create. The value is calculated as follows: height * width * 4.
+    offset: 0,
+    stride: 8,
+    region: { size: { height: 1, width: 2 }, x: 0, y: 0 }
+  };
+  let bufferArr: Uint8Array = new Uint8Array(area.pixels);
+  for (let i = 0; i < bufferArr.length; i++) {
+    bufferArr[i] = i + 1;
+  }
+  if (pixelMap != undefined) {
+    pixelMap.writePixels(area).then(() => {
+      console.info('Succeeded in writing pixelmap into the specified area.');
+    }).catch((error: BusinessError) => {
+      console.error("Failed to write pixelmap into the specified area. code is ", error);
+    })
+  }
+}
+
+async function WritePixelsYUV(pixelMap:image.PixelMap) {
+  const area: image.PositionArea = {
+    pixels: new ArrayBuffer(6),  // 6 is the size of the PixelMap buffer to create. The value is calculated as follows: height * width * 1.5.
+    offset: 0,
+    stride: 8, // This variable is not used by writePixels when the PixelMap is in YUV format.
+    region: { size: { height: 2, width: 2 }, x: 0, y: 0 }
+  };
+  let bufferArr: Uint8Array = new Uint8Array(area.pixels);
+  for (let i = 0; i < bufferArr.length; i++) {
+    bufferArr[i] = i + 1;
+  }
+  if (pixelMap != undefined) {
+    pixelMap.writePixels(area).then(() => {
+      console.info('Succeeded in writing pixelmap into the specified area.');
+    }).catch((error: BusinessError) => {
+      console.error("Failed to write pixelmap into the specified area. code is ", error);
+    })
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function WritePixelsRGBA(pixelMap:image.PixelMap) {
+  const area: image.PositionArea = { pixels: new ArrayBuffer(8), // 8 is the size of the PixelMap buffer to create. The value is calculated as follows: height * width * 4.
+    offset: 0,
+    stride: 8,
+    region: { size: { height: 1, width: 2 }, x: 0, y: 0 }
+  };
+  let bufferArr: Uint8Array = new Uint8Array(area.pixels);
+  for (let i = 0; i < bufferArr.length; i++) {
+    bufferArr[i] = i + 1;
+  }
+  if (pixelMap != undefined) {
+    pixelMap.writePixels(area, (error : BusinessError) => {
+      if (error) {
+        console.error("Failed to write pixelmap into the specified area. code is ", error);
+        return;
+      } else {
+        console.info('Succeeded in writing pixelmap into the specified area.');
+      }
+    })
+  }
+}
+
+async function WritePixelsYUV(pixelMap:image.PixelMap) {
+  const area: image.PositionArea = { pixels: new ArrayBuffer(6), // 6 is the size of the PixelMap buffer to create. The value is calculated as follows: height * width * 1.5.
+    offset: 0,
+    stride: 8, // This variable is not used by writePixels when the PixelMap is in YUV format.
+    region: { size: { height: 2, width: 2 }, x: 0, y: 0 }
+  };
+  let bufferArr: Uint8Array = new Uint8Array(area.pixels);
+  for (let i = 0; i < bufferArr.length; i++) {
+    bufferArr[i] = i + 1;
+  }
+  if (pixelMap != undefined) {
+    pixelMap.writePixels(area, (error : BusinessError) => {
+      if (error) {
+        console.error("Failed to write pixelmap into the specified area. code is ", error);
+        return;
+      } else {
+        console.info('Succeeded in writing pixelmap into the specified area.');
+      }
+    })
+  }
+}
+```
+
 ## writePixels
 
 ```TypeScript
@@ -2684,7 +4494,11 @@ Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writep
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | area | [PositionArea](arkts-image-image-positionarea-i.md) | Yes | Area to which the pixels will be written. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+See [writePixels](#writepixels)
 
 ## writePixelsFromArea
 
@@ -2798,6 +4612,26 @@ Starting from API 26.0.0, it is recommended to use [writePixelsFromAreaSync](#wr
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | Resource Unavailable. |
+
+**Examples**
+
+```TypeScript
+function WritePixelsSync(pixelMap:image.PixelMap) {
+  const area: image.PositionArea = {
+    pixels: new ArrayBuffer(8),
+    offset: 0,
+    stride: 8,
+    region: { size: { height: 1, width: 2 }, x: 0, y: 0 }
+  };
+  let bufferArr: Uint8Array = new Uint8Array(area.pixels);
+  for (let i = 0; i < bufferArr.length; i++) {
+    bufferArr[i] = i + 1;
+  }
+  if (pixelMap != undefined) {
+    pixelMap.writePixelsSync(area);
+  }
+}
+```
 
 ## isEditable
 

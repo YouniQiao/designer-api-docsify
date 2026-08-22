@@ -57,6 +57,95 @@ ArkTS-Dyn示例：
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// cancel回调
+let cancelCallback = (err: BusinessError): void => {
+  if (err) {
+    console.error(`Failed to cancel notification. Code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info(`Succeeded in canceling notification.`);
+  } 
+}
+notificationManager.cancel(0, 'label', cancelCallback);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// cancel回调
+let cancelCallback = (err: BusinessError | null): void => {
+  if (err) {
+    console.error(`Failed to cancel notification. Code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info(`Succeeded in canceling notification.`);
+  } 
+}
+notificationManager.cancel(0, 'label', cancelCallback);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.cancel(0).then(() => {
+  console.info(`Succeeded in canceling notification.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to cancel notification. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.cancel(0).then(() => {
+  console.info(`Succeeded in canceling notification.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to cancel notification. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// cancel回调
+let cancelCallback = (err: BusinessError): void => {
+  if (err) {
+    console.error(`Failed to cancel notification. Code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info(`Succeeded in canceling notification.`);
+  }
+}
+notificationManager.cancel(0, cancelCallback);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// cancel回调
+let cancelCallback = (err: BusinessError | null): void => {
+  if (err) {
+    console.error(`Failed to cancel notification. Code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info(`Succeeded in canceling notification.`);
+  }
+}
+notificationManager.cancel(0, cancelCallback);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let bundle: notificationManager.BundleOption = {
   bundle: 'bundleName'
 };

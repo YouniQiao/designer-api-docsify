@@ -14,7 +14,7 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function connectDfs(networkId: string, listeners: DfsListeners): Promise<void>
 ```
 
-Triggers connection. If the peer device is abnormal, [onStatus](arkts-corefile-filefs-dfslisteners-i.md#onstatus) in **DfsListeners** will be called to notify the application.
+Triggers connection. If the peer device is abnormal, [onStatus](arkts-corefile-file-fs-dfslisteners-i.md#onstatus) in **DfsListeners** will be called to notify the application.
 
 **Since:** 12
 
@@ -29,7 +29,7 @@ Triggers connection. If the peer device is abnormal, [onStatus](arkts-corefile-f
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | networkId | string | Yes | Network ID of the device. The device network ID can be obtained from [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md) using the related [distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md) API. |
-| listeners | [DfsListeners](arkts-corefile-filefs-dfslisteners-i.md) | Yes | Listeners for distributed file system status. |
+| listeners | [DfsListeners](arkts-corefile-file-fs-dfslisteners-i.md) | Yes | Listeners for distributed file system status. |
 
 **Return value:**
 
@@ -45,4 +45,28 @@ Triggers connection. If the peer device is abnormal, [onStatus](arkts-corefile-f
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed.Possible causes: 1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | 13900045 | Connection failed. |
 | 13900046 | Software caused connection abort. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+let dmInstance = distributedDeviceManager.createDeviceManager("com.example.filesync");
+let deviceInfoList: Array<distributedDeviceManager.DeviceBasicInfo> = dmInstance.getAvailableDeviceListSync();
+if (deviceInfoList && deviceInfoList.length > 0) {
+  console.info(`Success to get available device list`);
+  let networkId = deviceInfoList[0].networkId;
+  let listeners: fs.DfsListeners = {
+    onStatus(networkId, status) {
+      console.info('onStatus');
+    }
+  };
+  fs.connectDfs(networkId, listeners).then(() => {
+    console.info("Success to connectDfs");
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to connectDfs. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
 

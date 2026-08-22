@@ -41,6 +41,16 @@ wallpaper.isOperationAllowed((error: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+wallpaper.isOperationAllowed().then((data: boolean) => {
+    console.info(`success to isOperationAllowed: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to isOperationAllowed. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
 
 ## isOperationAllowed
 
@@ -66,13 +76,5 @@ function isOperationAllowed(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-wallpaper.isOperationAllowed().then((data: boolean) => {
-    console.info(`success to isOperationAllowed: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to isOperationAllowed. Code: ${error.code}, message: ${error.message}`);
-});
-```
+参见 [isOperationAllowed](#isoperationallowed)
 

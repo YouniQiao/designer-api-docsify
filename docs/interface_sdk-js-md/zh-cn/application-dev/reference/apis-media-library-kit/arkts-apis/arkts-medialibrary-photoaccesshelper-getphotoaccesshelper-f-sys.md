@@ -70,6 +70,26 @@ struct Index {
 }
 ```
 
+```TypeScript
+// 此处获取的phAccessHelper实例为全局对象，后续使用到phAccessHelper的地方默认为使用此处获取的对象，如未添加此段代码报phAccessHelper未定义的错误请自行添加。
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+import { common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Button("example").onClick(async () => {
+        let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+        let phAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
+      }).width('100%')
+    }
+    .height('90%')
+  }
+}
+```
+
 
 ## getPhotoAccessHelper
 
@@ -111,4 +131,8 @@ function getPhotoAccessHelper(context: Context, userId: int): PhotoAccessHelper 
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scene parameters validate failed, possible causes: <br>1. userId is invalid. |
+
+**示例**
+
+参见 [getPhotoAccessHelper](#getphotoaccesshelper)
 

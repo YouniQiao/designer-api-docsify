@@ -93,6 +93,37 @@ async function ExampleFunction() {
 ExampleFunction();
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+
+let dlpUri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt';
+let file: number | undefined = undefined;
+let dlp: number | undefined = undefined;
+
+file = fileIo.openSync(uri).fd;
+dlp = fileIo.openSync(dlpUri).fd;
+let dlpProperty: dlpPermission.DLPProperty = {
+  ownerAccount: 'zhangsan',
+  ownerAccountType: dlpPermission.AccountType.DOMAIN_ACCOUNT,
+  authUserList: [],
+  contactAccount: 'zhangsan',
+  offlineAccess: true,
+  ownerAccountID: 'xxxxxxx',
+  everyoneAccessList: []
+};
+dlpPermission.generateDLPFile(file, dlp, dlpProperty, (err, res) => { // 生成DLP文件。
+  if (err) {
+    console.error(`Failed to generate DLPFile. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('res', JSON.stringify(res));
+  }
+  fileIo.closeSync(file);
+  fileIo.closeSync(dlp);
+});
+```
+
 
 ## generateDLPFile
 
@@ -140,34 +171,5 @@ DLP管理应用调用该接口，将明文文件加密生成权限受控文件�
 
 **示例**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-let dlpUri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt';
-let file: number | undefined = undefined;
-let dlp: number | undefined = undefined;
-
-file = fileIo.openSync(uri).fd;
-dlp = fileIo.openSync(dlpUri).fd;
-let dlpProperty: dlpPermission.DLPProperty = {
-  ownerAccount: 'zhangsan',
-  ownerAccountType: dlpPermission.AccountType.DOMAIN_ACCOUNT,
-  authUserList: [],
-  contactAccount: 'zhangsan',
-  offlineAccess: true,
-  ownerAccountID: 'xxxxxxx',
-  everyoneAccessList: []
-};
-dlpPermission.generateDLPFile(file, dlp, dlpProperty, (err, res) => { // 生成DLP文件。
-  if (err) {
-    console.error(`Failed to generate DLPFile. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('res', JSON.stringify(res));
-  }
-  fileIo.closeSync(file);
-  fileIo.closeSync(dlp);
-});
-```
+参见 [generateDLPFile](#generatedlpfile)
 

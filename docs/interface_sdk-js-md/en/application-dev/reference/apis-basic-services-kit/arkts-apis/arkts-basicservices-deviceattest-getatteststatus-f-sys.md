@@ -26,7 +26,7 @@ Obtains the AttestResultInfo object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AttestResultInfo](arkts-basicservices-deviceattest-attestresultinfo-i-sys.md)&gt; | Yes | Indicates the callback containing the AttestResultInfo object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AttestResultInfo](arkts-basicservices-deviceattest-attestresultinfo-i-sys.md)&gt; | Yes | Indicates the callback containing the AttestResultInfo object. |
 
 **Error codes:**
 
@@ -54,6 +54,27 @@ try {
         " reserver:" + value.softwareResultDetail[4]);
     }
     })
+} catch (error) {
+    let code: number = (error as BusinessError).code;
+    let message: string = (error as BusinessError).message;
+    console.error("error code:" + code + " message:" + message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    deviceAttest.getAttestStatus().then((value: deviceAttest.AttestResultInfo) => {
+    console.info("auth:" + value.authResult + " software:" + value.softwareResult + " ticket:" + value.ticket);
+    console.info("versionIdResult:" + value.softwareResultDetail[0],
+        " patchLevelResult:" + value.softwareResultDetail[1],
+        " rootHashResult:" + value.softwareResultDetail[2],
+        " PCIDResult:" + value.softwareResultDetail[3],
+        " reserver:" + value.softwareResultDetail[4]);
+    }).catch((error: BusinessError) => {
+        console.error("error code:" + error.code + " message:" + error.message);
+    });
 } catch (error) {
     let code: number = (error as BusinessError).code;
     let message: string = (error as BusinessError).message;
@@ -94,24 +115,5 @@ Obtains the AttestResultInfo object.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    deviceAttest.getAttestStatus().then((value: deviceAttest.AttestResultInfo) => {
-    console.info("auth:" + value.authResult + " software:" + value.softwareResult + " ticket:" + value.ticket);
-    console.info("versionIdResult:" + value.softwareResultDetail[0],
-        " patchLevelResult:" + value.softwareResultDetail[1],
-        " rootHashResult:" + value.softwareResultDetail[2],
-        " PCIDResult:" + value.softwareResultDetail[3],
-        " reserver:" + value.softwareResultDetail[4]);
-    }).catch((error: BusinessError) => {
-        console.error("error code:" + error.code + " message:" + error.message);
-    });
-} catch (error) {
-    let code: number = (error as BusinessError).code;
-    let message: string = (error as BusinessError).message;
-    console.error("error code:" + code + " message:" + message);
-}
-```
+See [getAttestStatus](#getatteststatus)
 

@@ -12,12 +12,12 @@ import { TabTitleBar, TabTitleBarMenuItem, TabTitleBarTabItem } from '@kit.ArkUI
 
 | Name | Description |
 | --- | --- |
-| [TabTitleBarMenuItem](arkts-arkui-arkuiadvancedtabtitlebar-tabtitlebarmenuitem-c.md) | Declaration of the menu item on the right side. |
-| [TabTitleBarTabItem](arkts-arkui-arkuiadvancedtabtitlebar-tabtitlebartabitem-c.md) | Declaration of the tab item. |
+| [TabTitleBarMenuItem](arkts-arkui-arkui-advanced-tabtitlebar-tabtitlebarmenuitem-c.md) | Declaration of the menu item on the right side. |
+| [TabTitleBarTabItem](arkts-arkui-arkui-advanced-tabtitlebar-tabtitlebartabitem-c.md) | Declaration of the tab item. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [TabTitleBar](arkts-arkui-arkuiadvancedtabtitlebar-tabtitlebar-s.md) | The **TabTitleBar** component is a tab title bar used to switch between tabs pages. It is applicable only to level-1 pages. |
+| [TabTitleBar](arkts-arkui-arkui-advanced-tabtitlebar-tabtitlebar-s.md) | The **TabTitleBar** component is a tab title bar used to switch between tabs pages. It is applicable only to level-1 pages. |
 

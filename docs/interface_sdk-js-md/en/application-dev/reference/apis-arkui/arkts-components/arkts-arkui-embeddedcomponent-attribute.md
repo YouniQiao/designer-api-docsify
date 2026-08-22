@@ -69,7 +69,7 @@ Called when an error occurs during the running of the started EmbeddedUIExtensio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | import('../api/@ohos.base').ErrorCallback | Yes | Callback used to return the error information of the [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md) type. The error information can be obtained and processed based on the **code**, **name**, and **message** parameters. |
+| callback | import('../api/@ohos.base').ErrorCallback | Yes | Callback used to return the error information of the [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md) type. The error information can be obtained and processed based on the **code**, **name**, and **message** parameters. |
 
 ## onTerminated
 
@@ -77,7 +77,7 @@ Called when an error occurs during the running of the started EmbeddedUIExtensio
 onTerminated(callback: import('../api/@ohos.base').Callback<TerminationInfo>)
 ```
 
-Triggered when the the launched EmbeddedUIExtensionAbility exits normally by calling [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiextensioncontentsession-uiextensioncontentsession-c.md#terminateselfwithresult) or [terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiextensioncontentsession-uiextensioncontentsession-c.md#terminateself).
+Triggered when the the launched EmbeddedUIExtensionAbility exits normally by calling [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#terminateselfwithresult) or [terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#terminateself).
 
 > **NOTE：**
 > 

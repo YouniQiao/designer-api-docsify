@@ -55,6 +55,22 @@ let audioDevices: audio.AudioDeviceDescriptors | undefined = undefined;
 audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((data) => {
   audioDevices = data;
   console.info('Promise returned to indicate that the device list is obtained.');
+  if (audioDevices !== undefined) {
+    avSession.castAudio('all', audioDevices as audio.AudioDeviceDescriptors).then(() => {
+      console.info('Succeeded in casting audio.');
+    });
+  }
+});
+```
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+let audioManager = audio.getAudioManager();
+let audioRoutingManager = audioManager.getRoutingManager();
+let audioDevices: audio.AudioDeviceDescriptors | undefined = undefined;
+audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((data) => {
+  audioDevices = data;
+  console.info('Promise returned to indicate that the device list is obtained.');
 });
 
 if (audioDevices !== undefined) {
@@ -111,19 +127,5 @@ function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.Audi
 
 **示例**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-let audioManager = audio.getAudioManager();
-let audioRoutingManager = audioManager.getRoutingManager();
-let audioDevices: audio.AudioDeviceDescriptors | undefined = undefined;
-audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((data) => {
-  audioDevices = data;
-  console.info('Promise returned to indicate that the device list is obtained.');
-  if (audioDevices !== undefined) {
-    avSession.castAudio('all', audioDevices as audio.AudioDeviceDescriptors).then(() => {
-      console.info('Succeeded in casting audio.');
-    });
-  }
-});
-```
+参见 [castAudio](#castaudio)
 

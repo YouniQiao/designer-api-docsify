@@ -111,36 +111,6 @@ static getSystemMeasurements(): Map<string, string>
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## getSystemNumberPatterns
-
-```TypeScript
-static getSystemNumberPatterns(): Map<string, string>
-```
-
-获取系统支持的数字格式及示例。数字格式指数字中的千分符和小数分隔符的格式。
-
-**起始版本：** 23
-
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-System-static getSystemNumberPatterns(): Map<string, string>--><!--Device-System-static getSystemNumberPatterns(): Map<string, string>-End-->
-
-**系统能力：** SystemCapability.Global.I18n
-
-**系统接口：** 此接口为系统接口。
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Map&lt;string, string&gt; | 系统支持的数字格式及示例。 其中Map的key表示数字格式，是千分符和小数分隔符的unicode编码，value表示数字格式对应的示例。支持的范围和系统语言地区相关。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
 ## getSystemNumberingSystems
 
 ```TypeScript
@@ -164,6 +134,36 @@ static getSystemNumberingSystems(): Map<string, string>
 | 类型 | 说明 |
 | --- | --- |
 | Map&lt;string, string&gt; | 系统支持的数字系统及示例。其中Map的key为表示数字系统的字符串，value为表示数字系统对应的示例。 支持的范围和系统语言相关。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## getSystemNumberPatterns
+
+```TypeScript
+static getSystemNumberPatterns(): Map<string, string>
+```
+
+获取系统支持的数字格式及示例。数字格式指数字中的千分符和小数分隔符的格式。
+
+**起始版本：** 23
+
+**ArkTS模式：** ArkTS-Sta起始版本为23。
+
+<!--Device-System-static getSystemNumberPatterns(): Map<string, string>--><!--Device-System-static getSystemNumberPatterns(): Map<string, string>-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Map&lt;string, string&gt; | 系统支持的数字格式及示例。 其中Map的key表示数字格式，是千分符和小数分隔符的unicode编码，value表示数字格式对应的示例。支持的范围和系统语言地区相关。 |
 
 **错误码：**
 
@@ -261,36 +261,6 @@ static getUsingMeasurement(): string
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## getUsingNumberPattern
-
-```TypeScript
-static getUsingNumberPattern(): string
-```
-
-获取系统当前使用的数字格式。
-
-**起始版本：** 23
-
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-<!--Device-System-static getUsingNumberPattern(): string--><!--Device-System-static getUsingNumberPattern(): string-End-->
-
-**系统能力：** SystemCapability.Global.I18n
-
-**系统接口：** 此接口为系统接口。
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| string | 系统当前使用的数字格式。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
 ## getUsingNumberingSystem
 
 ```TypeScript
@@ -314,6 +284,36 @@ static getUsingNumberingSystem(): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 系统支持的数字系统。支持的范围可以通过getSystemNumberingSystems获取。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## getUsingNumberPattern
+
+```TypeScript
+static getUsingNumberPattern(): string
+```
+
+获取系统当前使用的数字格式。
+
+**起始版本：** 23
+
+**ArkTS模式：** ArkTS-Sta起始版本为23。
+
+<!--Device-System-static getUsingNumberPattern(): string--><!--Device-System-static getUsingNumberPattern(): string-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| string | 系统当前使用的数字格式。 |
 
 **错误码：**
 
@@ -558,40 +558,6 @@ static setSystemMeasurement(identifier: string): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [8900001](../../apis-localization-kit/errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## setSystemNumberPattern
-
-```TypeScript
-static setSystemNumberPattern(pattern: string): void
-```
-
-设置系统的数字格式。
-
-**起始版本：** 23
-
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-**需要权限：** ohos.permission.UPDATE_CONFIGURATION
-
-<!--Device-System-static setSystemNumberPattern(pattern: string): void--><!--Device-System-static setSystemNumberPattern(pattern: string): void-End-->
-
-**系统能力：** SystemCapability.Global.I18n
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pattern | string | 是 | 系统支持的数字格式。支持的范围可以通过getSystemNumberPatterns获取。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [8900001](../../apis-localization-kit/errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
-
 ## setSystemNumberingSystem
 
 ```TypeScript
@@ -617,6 +583,40 @@ static setSystemNumberingSystem(identifier: string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | identifier | string | 是 | 系统支持的数字系统。支持的范围可以通过getSystemNumberingSystems获取。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [8900001](../../apis-localization-kit/errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+## setSystemNumberPattern
+
+```TypeScript
+static setSystemNumberPattern(pattern: string): void
+```
+
+设置系统的数字格式。
+
+**起始版本：** 23
+
+**ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**需要权限：** ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-System-static setSystemNumberPattern(pattern: string): void--><!--Device-System-static setSystemNumberPattern(pattern: string): void-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pattern | string | 是 | 系统支持的数字格式。支持的范围可以通过getSystemNumberPatterns获取。 |
 
 **错误码：**
 

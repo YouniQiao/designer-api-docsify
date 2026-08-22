@@ -27,7 +27,7 @@ Sets the number of mouse scroll lines. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | rows | int | Yes | Number of mouse scroll lines. The value ranges from 1 to 100. The default value is **3**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -57,6 +57,32 @@ struct Index {
               }
               console.info(`setMouseScrollRows success`);
             });
+          } catch (error) {
+            console.error(`setMouseScrollRows failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            pointer.setMouseScrollRows(20).then(() => {
+              console.info(`setMouseScrollRows success`);
+            }).catch((error: BusinessError) => {
+              console.error(`Set mouse scroll rows failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            })
           } catch (error) {
             console.error(`setMouseScrollRows failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
@@ -104,29 +130,5 @@ Sets the number of mouse scroll lines. This API uses a promise to return the res
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.setMouseScrollRows(20).then(() => {
-              console.info(`setMouseScrollRows success`);
-            }).catch((error: BusinessError) => {
-              console.error(`Set mouse scroll rows failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`setMouseScrollRows failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
+See [setMouseScrollRows](#setmousescrollrows)
 

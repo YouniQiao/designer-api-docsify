@@ -89,7 +89,7 @@ fontColor(value: Array<ResourceColor>)
 fontColor(value: Array<ResourceColor | ColorMetrics> | undefined)
 ```
 
-设置SymbolGlyph组件的字体颜色，相比[fontColor](#fontcolor)接口，本接口支持传入 [ColorMetrics](../../apis-default/arkts-apis/arkts-graphics-colormetrics-c.md)类型参数。
+设置SymbolGlyph组件的字体颜色，相比[fontColor](#fontcolor)接口，本接口支持传入 [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md)类型参数。
 
 > **说明：**
 > 

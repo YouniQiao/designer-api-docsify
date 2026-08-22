@@ -50,6 +50,24 @@ getRAWCaptureZoomRatioRange(): Array<double>
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getRAWCaptureZoomRatioRange(photoSession: camera.PhotoSession): Array<number> {
+  let zoomRatioRange: Array<number> = [];
+  try {
+    zoomRatioRange = photoSession.getRAWCaptureZoomRatioRange();
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The getRAWCaptureZoomRatioRange call failed. error code: ${err.code}`);
+  }
+  return zoomRatioRange;
+}
+```
+
 ## getZoomRatioRange
 
 ```TypeScript
@@ -77,4 +95,38 @@ getZoomRatioRange(): Array<double>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getZoomRatioRange(captureSession: camera.CaptureSession): Array<number> {
+  let zoomRatioRange: Array<number> = [];
+  try {
+    zoomRatioRange = captureSession.getZoomRatioRange();
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The getZoomRatioRange call failed. error code: ${err.code}`);
+  }
+  return zoomRatioRange;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getZoomRatioRange(photoSession: camera.PhotoSession): Array<number> {
+  let zoomRatioRange: Array<number> = [];
+  try {
+    zoomRatioRange = photoSession.getZoomRatioRange();
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The getZoomRatioRange call failed. error code: ${err.code}`);
+  }
+  return zoomRatioRange;
+}
+```
 

@@ -25,8 +25,6 @@ import { image } from '@kit.ImageKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md) | 通过缓冲区以增量的方式创建ImageSource实例，IncrementalSource不支持读写Exif信息。 |
-| [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md) | 通过缓冲区以增量的方式创建ImageSource实例，IncrementalSource不支持读写Exif信息。 |
 | [createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md) | 通过ArrayBuffer图片数据、辅助图尺寸、辅助图类型创建AuxiliaryPicture实例。该接口仅支持传入BGRA的连续像素数据，会创建出RGBA的辅助图。 |
 | [createAuxiliaryPictureUsingAllocator](arkts-image-image-createauxiliarypictureusingallocator-f.md) | 使用指定的内存类型，根据辅助图信息和像素数据创建辅助图对象。 |
 | [createEmptyPixelMap](arkts-image-image-createemptypixelmap-f.md) | Creates an empty PixelMap. |
@@ -51,7 +49,9 @@ import { image } from '@kit.ImageKit';
 | [createImageSource](arkts-image-image-createimagesource-f.md) | Creates an ImageSource instance based on the buffer. |
 | [createImageSource](arkts-image-image-createimagesource-f.md) | 通过图像资源文件的RawFileDescriptor创建ImageSource实例。 |
 | [createImageSource](arkts-image-image-createimagesource-f.md) | Creates an ImageSource instance based on the raw file descriptor. |
+| [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md) | 通过缓冲区以增量的方式创建ImageSource实例，IncrementalSource不支持读写Exif信息。 |
 | [createIncrementalSource](arkts-image-image-createincrementalsource-f.md) | Creates an ImageSource instance based on the buffer in incremental. |
+| [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md) | 通过缓冲区以增量的方式创建ImageSource实例，IncrementalSource不支持读写Exif信息。 |
 | [createIncrementalSource](arkts-image-image-createincrementalsource-f.md) | Creates an ImageSource instance based on the buffer in incremental. |
 | [createPicture](arkts-image-image-createpicture-f.md) | 通过主图的PixelMap创建一个Picture对象。 |
 | [createPictureFromParcel](arkts-image-image-createpicturefromparcel-f.md) | 从MessageSequence中获取Picture。 |
@@ -188,8 +188,8 @@ import { image } from '@kit.ImageKit';
 | [ScaleMode](arkts-image-image-scalemode-e.md) | 表示图像的缩放模式的枚举。 |
 | [TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md) | 表示TIFF图片信息的枚举。 |
 | [WebPPropertyKey](arkts-image-image-webppropertykey-e.md) | 表示WebP图片信息的枚举。 |
-| [XMPTagType](arkts-image-image-xmptagtype-e.md) | 表示XMP标签类型的枚举。 |
 | [XmageColorMode](arkts-image-image-xmagecolormode-e.md) | 表示XMAGE颜色模式类型的枚举。 |
+| [XMPTagType](arkts-image-image-xmptagtype-e.md) | 表示XMP标签类型的枚举。 |
 
 <!--Del-->
 ### 枚举（系统接口）

@@ -29,7 +29,7 @@ Restores all the policies (cellular network, background network, firewall, and a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | simId | string | Yes | SIM card ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -50,6 +50,19 @@ import { BusinessError } from '@kit.BasicServicesKit';
 policy.resetPolicies('1', (error: BusinessError) => {
   console.error(JSON.stringify(error));
 });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .resetPolicies('1')
+  .then(() => {
+    console.info('resetPolicies success');
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
 ```
 
 
@@ -96,16 +109,5 @@ Resets the cellular network, background network policy, firewall policy, and app
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .resetPolicies('1')
-  .then(() => {
-    console.info('resetPolicies success');
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+See [resetPolicies](#resetpolicies)
 

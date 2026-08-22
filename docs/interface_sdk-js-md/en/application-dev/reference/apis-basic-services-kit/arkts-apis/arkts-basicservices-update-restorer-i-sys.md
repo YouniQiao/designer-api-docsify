@@ -109,7 +109,7 @@ The process is as follows: Verify the permission to call APIs. Clear data in the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the factory reset result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the factory reset result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -125,6 +125,16 @@ The process is as follows: Verify the permission to call APIs. Clear data in the
 ```TypeScript
 restorer.factoryReset((err) => {
   console.info(`factoryReset error ${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+restorer.factoryReset().then(() => {
+  console.info(`factoryReset success`);
+}).catch((err: BusinessError) => {
+  console.error(`factoryReset error ${JSON.stringify(err)}`);
 });
 ```
 
@@ -173,15 +183,7 @@ The process is as follows: Verify the permission to call APIs. Clear data in the
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-restorer.factoryReset().then(() => {
-  console.info(`factoryReset success`);
-}).catch((err: BusinessError) => {
-  console.error(`factoryReset error ${JSON.stringify(err)}`);
-});
-```
+See [factoryReset](#factoryreset)
 
 ## forceFactoryReset
 

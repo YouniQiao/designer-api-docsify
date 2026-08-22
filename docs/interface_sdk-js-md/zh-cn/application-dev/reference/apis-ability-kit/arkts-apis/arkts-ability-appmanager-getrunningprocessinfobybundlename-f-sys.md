@@ -63,6 +63,70 @@ try {
 }
 ```
 
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'bundleName';
+
+try {
+  appManager.getRunningProcessInfoByBundleName(bundleName).then((data) => {
+    console.info('getRunningProcessInfoByBundleName success.');
+  }).catch((e: Error) => {
+    let err = e as BusinessError;
+    console.error(`getRunningProcessInfoByBundleName fail, err: ${err.code} ${err.message}`);
+  });
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`[appManager] error: ${code}, ${message}`);
+}
+```
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = "bundleName";
+let userId = 0;
+function getRunningProcessInfoByBundleNameCallback(err: BusinessError | null, data: Array<appManager.ProcessInformation>|undefined) {
+  if (err) {
+    console.error(`getRunningProcessInfoByBundleNameCallback fail, err: ${JSON.stringify(err)}`);
+  } else {
+    console.info('getRunningProcessInfoByBundleNameCallback success.');
+  }
+}
+
+try {
+  appManager.getRunningProcessInfoByBundleName(bundleName, userId, getRunningProcessInfoByBundleNameCallback);
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`[appManager] error: ${code}, ${message}`);
+}
+```
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'bundleName';
+let userId = 0;
+
+try {
+  appManager.getRunningProcessInfoByBundleName(bundleName, userId).then((data) => {
+    console.info('getRunningProcessInfoByBundleName success.');
+  }).catch((e: Error) => {
+    let err = e as BusinessError;
+    console.error(`getRunningProcessInfoByBundleName fail, err: ${err.code} ${err.message}`);
+  });
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`[appManager] error: ${code}, ${message}`);
+}
+```
+
 
 ## getRunningProcessInfoByBundleName
 
@@ -98,28 +162,7 @@ function getRunningProcessInfoByBundleName(bundleName: string, userId: int, call
 
 **示例**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = "bundleName";
-let userId = 0;
-function getRunningProcessInfoByBundleNameCallback(err: BusinessError | null, data: Array<appManager.ProcessInformation>|undefined) {
-  if (err) {
-    console.error(`getRunningProcessInfoByBundleNameCallback fail, err: ${JSON.stringify(err)}`);
-  } else {
-    console.info('getRunningProcessInfoByBundleNameCallback success.');
-  }
-}
-
-try {
-  appManager.getRunningProcessInfoByBundleName(bundleName, userId, getRunningProcessInfoByBundleNameCallback);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
+参见 [getRunningProcessInfoByBundleName](#getrunningprocessinfobybundlename)
 
 
 ## getRunningProcessInfoByBundleName
@@ -160,25 +203,7 @@ function getRunningProcessInfoByBundleName(bundleName: string): Promise<Array<Pr
 
 **示例**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'bundleName';
-
-try {
-  appManager.getRunningProcessInfoByBundleName(bundleName).then((data) => {
-    console.info('getRunningProcessInfoByBundleName success.');
-  }).catch((e: Error) => {
-    let err = e as BusinessError;
-    console.error(`getRunningProcessInfoByBundleName fail, err: ${err.code} ${err.message}`);
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
+参见 [getRunningProcessInfoByBundleName](#getrunningprocessinfobybundlename)
 
 
 ## getRunningProcessInfoByBundleName
@@ -220,24 +245,5 @@ function getRunningProcessInfoByBundleName(bundleName: string, userId: int): Pro
 
 **示例**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'bundleName';
-let userId = 0;
-
-try {
-  appManager.getRunningProcessInfoByBundleName(bundleName, userId).then((data) => {
-    console.info('getRunningProcessInfoByBundleName success.');
-  }).catch((e: Error) => {
-    let err = e as BusinessError;
-    console.error(`getRunningProcessInfoByBundleName fail, err: ${err.code} ${err.message}`);
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
+参见 [getRunningProcessInfoByBundleName](#getrunningprocessinfobybundlename)
 

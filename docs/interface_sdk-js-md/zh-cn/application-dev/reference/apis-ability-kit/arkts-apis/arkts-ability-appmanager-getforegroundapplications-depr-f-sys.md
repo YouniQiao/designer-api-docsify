@@ -47,6 +47,19 @@ appManager.getForegroundApplications((err, data) => {
 });
 ```
 
+```TypeScript
+import appManager from '@ohos.application.appManager';
+import { BusinessError } from '@ohos.base';
+
+appManager.getForegroundApplications()
+  .then((data) => {
+    console.info(`GetForegroundApplications success, data: ${JSON.stringify(data)}.`);
+  })
+  .catch((err: BusinessError) => {
+    console.error(`GetForegroundApplications failed, error code: ${err.code}, error msg: ${err.message}.`);
+  });
+```
+
 
 ## getForegroundApplications
 
@@ -78,16 +91,5 @@ function getForegroundApplications(): Promise<Array<AppStateData>>
 
 **示例**
 
-```TypeScript
-import appManager from '@ohos.application.appManager';
-import { BusinessError } from '@ohos.base';
-
-appManager.getForegroundApplications()
-  .then((data) => {
-    console.info(`GetForegroundApplications success, data: ${JSON.stringify(data)}.`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`GetForegroundApplications failed, error code: ${err.code}, error msg: ${err.message}.`);
-  });
-```
+参见 [getForegroundApplications](#getforegroundapplications)
 

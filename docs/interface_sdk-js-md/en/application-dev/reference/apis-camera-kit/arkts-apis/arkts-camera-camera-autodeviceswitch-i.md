@@ -56,3 +56,18 @@ Enables or disables automatic camera switch. You can use [isAutoDeviceSwitchSupp
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameters verification failed.<br>**Applicable version:** 19 and later |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function enableAutoDeviceSwitch(session: camera.PhotoSession, isEnable: boolean): void {
+  try {
+    session.enableAutoDeviceSwitch(isEnable);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The enableAutoDeviceSwitch call failed, error code: ${err.code}, error message: ${err.message}`);
+  }
+}
+```
+

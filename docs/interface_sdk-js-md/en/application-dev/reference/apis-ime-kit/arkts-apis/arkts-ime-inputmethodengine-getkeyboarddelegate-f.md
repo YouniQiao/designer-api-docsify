@@ -53,3 +53,7 @@ function getKeyboardDelegate(): KeyboardDelegate | null
 | --- | --- |
 | [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) \| null | the object of KeyboardDelegate. |
 
+**Examples**
+
+See [getKeyboardDelegate](#getkeyboarddelegate)
+

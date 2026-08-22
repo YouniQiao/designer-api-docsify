@@ -35,6 +35,26 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 | --- | --- |
 | Promise&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | Promise that returns the symbolic link information obtained. For details, see **stat**. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "/test.txt";
+fileio.lstat(filePath).then((stat: fileio.Stat) => {
+  console.info("get link status succeed, the size of file is" + stat.size);
+}).catch((err: BusinessError) => {
+  console.error("get link status failed with error:" + err);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "/test.txt";
+fileio.lstat(filePath, (err: BusinessError, stat: fileio.Stat) => {
+  // Do something.
+});
+```
+
 
 ## lstat
 
@@ -59,5 +79,9 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the target file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | Yes | Callback used to return the symbolic link information obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | Yes | Callback used to return the symbolic link information obtained. |
+
+**Examples**
+
+See [lstat](#lstat)
 

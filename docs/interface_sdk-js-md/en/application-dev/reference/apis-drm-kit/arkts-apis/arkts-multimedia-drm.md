@@ -24,8 +24,8 @@ import { drm } from '@kit.DrmKit';
 | --- | --- |
 | [createMediaKeySystem(Defines the DRM capability.)](arkts-drm-drm-createmediakeysystem-f.md) | Creates a MediaKeySystem instance. |
 | [createMediaKeySystem(Defines the DRM capability.)](arkts-drm-drm-createmediakeysystem-f.md) | Creates a MediaKeySystem instance. |
-| [getMediaKeySystemUuid(Defines the DRM capability.)](arkts-drm-drm-getmediakeysystemuuid-f.md) | Obtains the UUID of the DRM content protection system supported by the specified DRM solution. |
 | [getMediaKeySystems(Defines the DRM capability.)](arkts-drm-drm-getmediakeysystems-f.md) | Obtains the list of plugins supported by the device. |
+| [getMediaKeySystemUuid(Defines the DRM capability.)](arkts-drm-drm-getmediakeysystemuuid-f.md) | Obtains the UUID of the DRM content protection system supported by the specified DRM solution. |
 | [isMediaKeySystemSupported(Defines the DRM capability.)](arkts-drm-drm-ismediakeysystemsupported-f.md) | Checks whether the device supports the combination of the DRM solution, MIME type, and content protection level. |
 | [isMediaKeySystemSupported(Defines the DRM capability.)](arkts-drm-drm-ismediakeysystemsupported-f.md) | Checks whether the device supports the combination of the DRM solution and MIME type. |
 | [isMediaKeySystemSupported(Defines the DRM capability.)](arkts-drm-drm-ismediakeysystemsupported-f.md) | Checks whether the device supports the specified DRM solution. |

@@ -25,7 +25,7 @@ Obtains the IDs of all input devices. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**, and **data** is the ID list of all input devices (the ID is the unique identifier of an input device). Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**, and **data** is the ID list of all input devices (the ID is the unique identifier of an input device). Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -63,29 +63,6 @@ struct Index {
 }
 ```
 
-
-## getDeviceList
-
-```TypeScript
-function getDeviceList(): Promise<Array<int>>
-```
-
-Obtains the IDs of all input devices. This API uses a promise to return the result.
-
-**Since:** 23
-
-<!--Device-inputDevice-function getDeviceList(): Promise<Array<int>>--><!--Device-inputDevice-function getDeviceList(): Promise<Array<int>>-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.InputDevice
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the IDs of all input devices. The ID is the unique ID of an input device. |
-
-**Examples**
-
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -111,4 +88,29 @@ struct Index {
   }
 }
 ```
+
+
+## getDeviceList
+
+```TypeScript
+function getDeviceList(): Promise<Array<int>>
+```
+
+Obtains the IDs of all input devices. This API uses a promise to return the result.
+
+**Since:** 23
+
+<!--Device-inputDevice-function getDeviceList(): Promise<Array<int>>--><!--Device-inputDevice-function getDeviceList(): Promise<Array<int>>-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.InputDevice
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the IDs of all input devices. The ID is the unique ID of an input device. |
+
+**Examples**
+
+See [getDeviceList](#getdevicelist)
 

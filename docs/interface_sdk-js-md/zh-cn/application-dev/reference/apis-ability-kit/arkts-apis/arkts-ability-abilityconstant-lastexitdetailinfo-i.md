@@ -214,3 +214,30 @@ Ability上次退出所在应用的UID。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+**示例**
+
+```TypeScript
+import { UIAbility, Want, AbilityConstant } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    const detailInfo = launchParam?.lastExitDetailInfo;
+
+    if (detailInfo) {
+      console.info(
+        'pid: ' + detailInfo.pid +
+          '\n processName: ' + detailInfo.processName +
+          '\n uid: ' + detailInfo.uid +
+          '\n exitSubReason: ' + detailInfo.exitSubReason +
+          '\n exitMsg: ' + detailInfo.exitMsg +
+          '\n rss: ' + detailInfo.rss +
+          '\n pss: ' + detailInfo.pss +
+          '\n timestamp: ' + detailInfo.timestamp +
+          '\n timestamp: ' + detailInfo.processState +
+          '\n timestamp: ' + detailInfo.killReason
+      );
+    }
+  }
+}
+```
+

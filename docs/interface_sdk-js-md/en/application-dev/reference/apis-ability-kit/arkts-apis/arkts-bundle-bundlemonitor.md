@@ -25,14 +25,14 @@ import { bundleMonitor } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
+| [off_BundleChangedEvent](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#off_bundlechangedevent) | Unregister to monitor the installation status |
 | [offAdd](arkts-ability-bundlemonitor-offadd-f-sys.md) | Unregister installation listener. |
 | [offRemove](arkts-ability-bundlemonitor-offremove-f-sys.md) | Unregister uninstallation listener. |
 | [offUpdate](arkts-ability-bundlemonitor-offupdate-f-sys.md) | Unregister update listener. |
-| [off_BundleChangedEvent](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#off_bundlechangedevent) | Unregister to monitor the installation status |
+| [on_BundleChangedEvent](arkts-ability-bundlemonitor-onbundlechangedevent-f-sys.md#on_bundlechangedevent) | Register to monitor the installation status |
 | [onAdd](arkts-ability-bundlemonitor-onadd-f-sys.md) | Register installation listener. |
 | [onRemove](arkts-ability-bundlemonitor-onremove-f-sys.md) | Register uninstallation listener. |
 | [onUpdate](arkts-ability-bundlemonitor-onupdate-f-sys.md) | Register update listener. |
-| [on_BundleChangedEvent](arkts-ability-bundlemonitor-onbundlechangedevent-f-sys.md#on_bundlechangedevent) | Register to monitor the installation status |
 <!--DelEnd-->
 
 <!--Del-->

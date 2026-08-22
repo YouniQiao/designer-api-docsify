@@ -245,7 +245,7 @@ registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallb
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| abilityLifecycleCallback | [AbilityLifecycleCallback](arkts-ability-appabilityabilitylifecyclecallback-abilitylifecyclecallback-c.md) | 是 | UIAbility生命周期变化时触发的回调方法。 |
+| abilityLifecycleCallback | [AbilityLifecycleCallback](arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md) | 是 | UIAbility生命周期变化时触发的回调方法。 |
 
 **返回值：**
 
@@ -281,7 +281,7 @@ registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| environmentCallback | [EnvironmentCallback](../../apis-default/arkts-apis/arkts-appabilityenvironmentcallback-environmentcallback-i.md) | 是 | 系统环境变化时触发的回调方法。 |
+| environmentCallback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | 是 | 系统环境变化时触发的回调方法。 |
 
 **返回值：**
 

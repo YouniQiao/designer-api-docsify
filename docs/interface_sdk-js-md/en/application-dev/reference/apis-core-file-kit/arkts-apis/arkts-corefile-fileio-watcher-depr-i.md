@@ -6,7 +6,7 @@ Listens for file change. You can call the **Watcher.stop()** method synchronousl
 
 **Deprecated since:** 10
 
-**Substitutes:** [Watcher](../../apis-default/arkts-apis/arkts-watcher-t.md)
+**Substitutes:** [Watcher](arkts-corefile-file-fs-watcher-i.md)
 
 <!--Device-unnamed-declare interface Watcher--><!--Device-unnamed-declare interface Watcher-End-->
 
@@ -29,7 +29,7 @@ Stops the **watcher** instance. This API uses a promise to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [stop](arkts-corefile-filefs-watcher-i.md#stop)
+**Substitutes:** [stop](arkts-corefile-file-fs-watcher-i.md#stop)
 
 <!--Device-Watcher-stop(): Promise<void>--><!--Device-Watcher-stop(): Promise<void>-End-->
 
@@ -53,6 +53,16 @@ watcher.stop().then(() => {
 });
 ```
 
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let watcher = fileio.createWatcher(filePath, 1, (err: BusinessError, event: number) => {
+  console.info("event: " + event + "errmsg: " + JSON.stringify(err));
+});
+watcher.stop(() => {
+  console.info("close watcher succeed");
+})
+```
+
 ## stop
 
 ```TypeScript
@@ -65,7 +75,7 @@ Stops the **watcher** instance. This API uses an asynchronous callback to return
 
 **Deprecated since:** 10
 
-**Substitutes:** [stop](arkts-corefile-filefs-watcher-i.md#stop)
+**Substitutes:** [stop](arkts-corefile-file-fs-watcher-i.md#stop)
 
 <!--Device-Watcher-stop(callback: AsyncCallback<void>): void--><!--Device-Watcher-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -75,17 +85,9 @@ Stops the **watcher** instance. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked when **watcher** is stopped asynchronously. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when **watcher** is stopped asynchronously. |
 
 **Examples**
 
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let watcher = fileio.createWatcher(filePath, 1, (err: BusinessError, event: number) => {
-  console.info("event: " + event + "errmsg: " + JSON.stringify(err));
-});
-watcher.stop(() => {
-  console.info("close watcher succeed");
-})
-```
+See [stop](#stop)
 

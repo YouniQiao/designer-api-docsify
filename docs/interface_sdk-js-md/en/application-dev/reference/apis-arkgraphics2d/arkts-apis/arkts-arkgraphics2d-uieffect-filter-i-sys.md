@@ -169,6 +169,42 @@ struct ColorGradientExample {
 }
 ```
 
+```TypeScript
+import { common2D, uiEffect } from "@kit.ArkGraphics2D"
+
+@Entry
+@Component
+struct ColorGradientExample {
+  build() {
+    Stack() {
+      Stack() {}
+      .visualEffect(uiEffect.createEffect()
+        .colorGradient(
+          [
+            {red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0},
+            {red: 0.0, green: 1.0, blue: 0.0, alpha: 1.0},
+            {red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0},
+            {red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0},
+          ],
+          [
+            {x: 0.1, y: 0.1},
+            {x: 0.1, y: 0.9},
+            {x: 0.9, y: 0.1},
+            {x: 0.9, y: 0.9},
+          ],
+          [12.4, 7.8, 7.8, 10.0],
+          uiEffect.Mask.createRippleMask({x: 0.5, y: 0.5}, 0.2, 0.1)
+        )
+      )
+      .width("1024px")
+      .height("1024px")
+    }
+    .width("100%")
+    .height("100%")
+  }
+}
+```
+
 ## contentLight
 
 ```TypeScript
@@ -642,6 +678,49 @@ Adds a dispersion effect controlled by a displacement map to the component conte
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+**Examples**
+
+```TypeScript
+import {image} from '@kit.ImageKit'
+import {common2D, uiEffect} from '@kit.ArkGraphics2D'
+import {common} from '@kit.AbilityKit'
+
+@Entry
+@Component
+struct MaskDispersion {
+  @State pixelMap_: PixelMap | null = null
+  @State src: common2D.Rect = { left: 0, top: 0, right: 1.0, bottom: 1.0 }
+  @State dst: common2D.Rect = { left: 0, top: 0, right: 1.0, bottom: 1.0 }
+  @State fillColor: uiEffect.Color = { red: 0, green: 0, blue: 0, alpha: 0 }
+
+  onPageShow(): void {
+    let context = this.getUIContext().getHostContext() as common.UIAbilityContext
+    context.resourceManager.getMediaByName("mask_alpha").then(val => {
+      let buffer = val.buffer.slice(0, val.buffer.byteLength)
+      let imageSource = image.createImageSource(buffer);
+      imageSource.createPixelMap().then(pixelMap => {
+        this.pixelMap_ = pixelMap
+      })
+    })
+  }
+  
+  build() {
+    Stack() {
+      Image($rawfile('test.png'))
+      Row()  
+        .width("100%")
+        .height("100%")
+        .backgroundFilter(uiEffect.createFilter().maskDispersion(
+          uiEffect.Mask.createPixelMapMask(this.pixelMap_, this.src, this.dst, this.fillColor),
+          1.0,
+          [0.5, -0.5],
+          [0.0, 0.0],
+          [-0.5, 0.5]))
+    }
+  }
+}
+```
+
 ## maskTransition
 
 ```TypeScript
@@ -794,6 +873,28 @@ Adds a radius linear gradient blur effect to the component content.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+import { uiEffect } from "@kit.ArkGraphics2D"
+
+@Entry
+@Component
+struct RadiusGradientBlurExample {
+  @State blurRadiusExample: number = 64
+  @State linearGradientBlurOptionsExample: LinearGradientBlurOptions =
+    {fractionStops: [[0.0, 0.0], [1.0, 1.0]], direction: GradientDirection.Bottom}
+
+  build() {
+    Column() {
+      Image($rawfile('test.png'))
+        .compositingFilter(uiEffect.createFilter().radiusGradientBlur(this.blurRadiusExample,
+          this.linearGradientBlurOptionsExample))
+    }
+  }
+}
+```
 
 ## variableRadiusBlur
 

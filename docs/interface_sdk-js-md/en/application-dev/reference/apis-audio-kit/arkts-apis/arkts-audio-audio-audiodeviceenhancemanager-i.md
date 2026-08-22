@@ -72,6 +72,66 @@ Selects the input device for your application. This setting applies to all recor
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, for example, the selected device does not exist. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio service error occurs, such as the service died. |
 
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let inputAudioDeviceDescriptor: audio.AudioDeviceDescriptors = [{
+  deviceRole : audio.DeviceRole.INPUT_DEVICE,
+  deviceType : audio.DeviceType.MIC,
+  id : 1,
+  name : "",
+  address : "",
+  sampleRates : [44100],
+  channelCounts : [2],
+  channelMasks : [0],
+  networkId : audio.LOCAL_NETWORK_ID,
+  interruptGroupId : 1,
+  volumeGroupId : 1,
+  displayName : "",
+}];
+
+async function selectInputDevice(){
+  audioRoutingManager.selectInputDevice(inputAudioDeviceDescriptor, (err: BusinessError) => {
+    if (err) {
+      console.error(`Result ERROR: ${err}`);
+    } else {
+      console.info('Select input devices result callback: SUCCESS');
+    }
+  });
+}
+```
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let inputAudioDeviceDescriptor: audio.AudioDeviceDescriptors = [{
+  deviceRole : audio.DeviceRole.INPUT_DEVICE,
+  deviceType : audio.DeviceType.MIC,
+  id : 1,
+  name : "",
+  address : "",
+  sampleRates : [44100],
+  channelCounts : [2],
+  channelMasks : [0],
+  networkId : audio.LOCAL_NETWORK_ID,
+  interruptGroupId : 1,
+  volumeGroupId : 1,
+  displayName : "",
+}];
+
+async function getRoutingManager(){
+  audioRoutingManager.selectInputDevice(inputAudioDeviceDescriptor).then(() => {
+    console.info('Select input devices result promise: SUCCESS');
+  }).catch((err: BusinessError) => {
+    console.error(`Result ERROR: ${err}`);
+  });
+}
+```
+
 ## selectInputDeviceForAudioCapturer
 
 ```TypeScript
@@ -142,6 +202,65 @@ Selects the output device for your application. This setting applies to all play
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, for example, the selected device does not exist. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio service error occurs, such as the service died. |
+
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let outputAudioDeviceDescriptor: audio.AudioDeviceDescriptors = [{
+  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
+  deviceType : audio.DeviceType.SPEAKER,
+  id : 1,
+  name : "",
+  address : "",
+  sampleRates : [44100],
+  channelCounts : [2],
+  channelMasks : [0],
+  networkId : audio.LOCAL_NETWORK_ID,
+  interruptGroupId : 1,
+  volumeGroupId : 1,
+  displayName : "",
+}];
+
+async function selectOutputDevice(){
+  audioRoutingManager.selectOutputDevice(outputAudioDeviceDescriptor, (err: BusinessError) => {
+    if (err) {
+      console.error(`Result ERROR: ${err}`);
+    } else {
+      console.info('Select output devices result callback: SUCCESS'); }
+  });
+}
+```
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let outputAudioDeviceDescriptor: audio.AudioDeviceDescriptors = [{
+  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
+  deviceType : audio.DeviceType.SPEAKER,
+  id : 1,
+  name : "",
+  address : "",
+  sampleRates : [44100],
+  channelCounts : [2],
+  channelMasks : [0],
+  networkId : audio.LOCAL_NETWORK_ID,
+  interruptGroupId : 1,
+  volumeGroupId : 1,
+  displayName : "",
+}];
+
+async function selectOutputDevice(){
+  audioRoutingManager.selectOutputDevice(outputAudioDeviceDescriptor).then(() => {
+    console.info('Select output devices result promise: SUCCESS');
+  }).catch((err: BusinessError) => {
+    console.error(`Result ERROR: ${err}`);
+  });
+}
+```
 
 ## selectOutputDeviceForAudioRenderer
 

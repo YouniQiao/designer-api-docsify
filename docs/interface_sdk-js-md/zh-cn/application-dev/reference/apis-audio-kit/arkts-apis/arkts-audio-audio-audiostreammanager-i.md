@@ -49,6 +49,30 @@ getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectI
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by callback. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioStreamManager.getAudioEffectInfoArray(audio.StreamUsage.STREAM_USAGE_MUSIC, (err: BusinessError, audioEffectInfoArray: audio.AudioEffectInfoArray) => {
+  if (err) {
+    console.error(`Failed to obtain the audio effect info array. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in obtaining the audio effect info array, audioEffectInfoArray: ${JSON.stringify(audioEffectInfoArray)}.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioStreamManager.getAudioEffectInfoArray(audio.StreamUsage.STREAM_USAGE_MUSIC).then((audioEffectInfoArray: audio.AudioEffectInfoArray) => {
+  console.info(`Succeeded in obtaining the audio effect info array, audioEffectInfoArray: ${JSON.stringify(audioEffectInfoArray)}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain the audio effect info array. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## getAudioEffectInfoArray
 
 ```TypeScript
@@ -81,6 +105,10 @@ getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by promise. |
+
+**示例**
+
+参见 [getAudioEffectInfoArray](#getaudioeffectinfoarray)
 
 ## getAudioEffectInfoArraySync
 
@@ -115,6 +143,20 @@ getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let audioEffectInfoArray = audioStreamManager.getAudioEffectInfoArraySync(audio.StreamUsage.STREAM_USAGE_MUSIC);
+  console.info(`Succeeded in obtaining the audio effect info array, audioEffectInfoArray: ${JSON.stringify(audioEffectInfoArray)}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain the audio effect info array. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getCurrentAudioCapturerInfoArray
 
 ```TypeScript
@@ -138,6 +180,30 @@ getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 是 | 回调函数。当获取当前音频采集器的信息成功，err为undefined，data为获取到的当前音 频采集器的信息；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioStreamManager.getCurrentAudioCapturerInfoArray((err: BusinessError, audioCapturerChangeInfoArray: audio.AudioCapturerChangeInfoArray) => {
+  if (err) {
+    console.error(`Failed to obtain current audio capturer info array. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in obtaining current audio capturer info array, audioCapturerChangeInfoArray: ${JSON.stringify(audioCapturerChangeInfoArray)}.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioStreamManager.getCurrentAudioCapturerInfoArray().then((audioCapturerChangeInfoArray: audio.AudioCapturerChangeInfoArray) => {
+  console.info(`Succeeded in obtaining current audio capturer info array, audioCapturerChangeInfoArray: ${JSON.stringify(audioCapturerChangeInfoArray)}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain current audio capturer info array. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getCurrentAudioCapturerInfoArray
 
@@ -163,6 +229,10 @@ getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>
 | --- | --- |
 | Promise&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | Promise对象，返回当前音频采集器信息。 |
 
+**示例**
+
+参见 [getCurrentAudioCapturerInfoArray](#getcurrentaudiocapturerinfoarray)
+
 ## getCurrentAudioCapturerInfoArraySync
 
 ```TypeScript
@@ -186,6 +256,20 @@ getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray
 | 类型 | 说明 |
 | --- | --- |
 | [AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md) | 返回当前音频采集器信息。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let audioCapturerChangeInfoArray = audioStreamManager.getCurrentAudioCapturerInfoArraySync();
+  console.info(`Succeeded in obtaining current audio capturer info array, audioCapturerChangeInfoArray: ${JSON.stringify(audioCapturerChangeInfoArray)}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain current audio capturer info array. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## getCurrentAudioRendererInfoArray
 
@@ -211,6 +295,30 @@ getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfo
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 | 回调函数。当获取当前音频渲染器的信息成功，err为undefined，data为获取到的当前音 频渲染器的信息；否则为错误对象。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioStreamManager.getCurrentAudioRendererInfoArray((err: BusinessError, audioRendererChangeInfoArray: audio.AudioRendererChangeInfoArray) => {
+  if (err) {
+    console.error(`Failed to obtain current audio renderer info array. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in obtaining current audio renderer info array, audioRendererChangeInfoArray: ${JSON.stringify(audioRendererChangeInfoArray)}.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioStreamManager.getCurrentAudioRendererInfoArray().then((audioRendererChangeInfoArray: audio.AudioRendererChangeInfoArray) => {
+  console.info(`Succeeded in obtaining current audio renderer info array, audioRendererChangeInfoArray: ${JSON.stringify(audioRendererChangeInfoArray)}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain current audio renderer info array. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## getCurrentAudioRendererInfoArray
 
 ```TypeScript
@@ -235,6 +343,10 @@ getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>
 | --- | --- |
 | Promise&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | Promise对象，返回当前音频渲染器信息。 |
 
+**示例**
+
+参见 [getCurrentAudioRendererInfoArray](#getcurrentaudiorendererinfoarray)
+
 ## getCurrentAudioRendererInfoArraySync
 
 ```TypeScript
@@ -258,6 +370,20 @@ getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray
 | 类型 | 说明 |
 | --- | --- |
 | [AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md) | 返回当前音频渲染器信息。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let audioRendererChangeInfoArray: audio.AudioRendererChangeInfoArray = audioStreamManager.getCurrentAudioRendererInfoArraySync();
+  console.info(`Succeeded in obtaining current audio renderer info array, audioRendererChangeInfoArray: ${JSON.stringify(audioRendererChangeInfoArray)}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain current audio renderer info array. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## isAcousticEchoCancelerSupported
 
@@ -291,6 +417,20 @@ isAcousticEchoCancelerSupported(sourceType: SourceType): boolean
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let isAcousticEchoCancelerSupported = audioStreamManager.isAcousticEchoCancelerSupported(audio.SourceType.SOURCE_TYPE_LIVE);
+  console.info(`Succeeded in checking whether acoustic echo canceler is supported, isAcousticEchoCancelerSupported: ${isAcousticEchoCancelerSupported}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to check whether acoustic echo canceler is supported. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## isActive
 
 ```TypeScript
@@ -315,6 +455,52 @@ isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频流类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取指定音频流活跃状态成功，err为undefined，data为true表示活跃，false表示不活跃；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.isActive(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: boolean) => {
+  if (err) {
+    console.error(`Failed to check whether the stream is active. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in checking whether the stream is active, isActive: ${value}.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.isActive(audio.AudioVolumeType.MEDIA).then((value: boolean) => {
+  console.info(`Succeeded in checking whether the stream is active, isActive: ${value}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to check whether the stream is active. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioStreamManager.isActive(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: boolean) => {
+  if (err) {
+    console.error(`Failed to check whether the stream is active. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in checking whether the stream is active, isActive: ${value}.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioStreamManager.isActive(audio.AudioVolumeType.MEDIA).then((value: boolean) => {
+  console.info(`Succeeded in checking whether the stream is active, isActive: ${value}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to check whether the stream is active. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## isActive
 
@@ -345,6 +531,10 @@ isActive(volumeType: AudioVolumeType): Promise<boolean>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise对象。返回true表示流状态为活跃；返回false表示流状态不活跃。 |
+
+**示例**
+
+参见 [isActive](#isactive)
 
 ## isActiveSync
 
@@ -383,6 +573,20 @@ isActiveSync(volumeType: AudioVolumeType): boolean
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let value: boolean = audioStreamManager.isActiveSync(audio.AudioVolumeType.MEDIA);
+  console.info(`Succeeded in checking whether the stream is active, isActive: ${value}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to check whether the stream is active. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## isAudioLoopbackSupported
 
 ```TypeScript
@@ -415,6 +619,20 @@ isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let isAudioLoopbackSupported = audioStreamManager.isAudioLoopbackSupported(audio.AudioLoopbackMode.HARDWARE);
+  console.info(`Succeeded in checking whether audio loopback is supported, isAudioLoopbackSupported: ${isAudioLoopbackSupported}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to check whether audio loopback is supported. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## isDirectPlaybackSupported
 
 ```TypeScript
@@ -443,6 +661,28 @@ isDirectPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): bool
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 是否支持直通播放。true表示支持，false表示不支持。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let streamInfo: audio.AudioStreamInfo = {
+  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000,
+  channels: audio.AudioChannel.CHANNEL_2,
+  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE,
+  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW,
+  channelLayout: audio.AudioChannelLayout.CH_LAYOUT_STEREO
+};
+
+try {
+  let isSupported = audioStreamManager.isDirectPlaybackSupported(streamInfo, audio.StreamUsage.STREAM_USAGE_MUSIC);
+  console.info(`Succeeded in checking whether direct playback is supported, isDirectPlaybackSupported: ${isSupported}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to check whether direct playback is supported. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## isFastPlaybackSupported
 
@@ -473,6 +713,28 @@ isFastPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolea
 | --- | --- |
 | boolean | 是否支持低时延播放。true表示支持，false表示不支持。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let streamInfo: audio.AudioStreamInfo = {
+  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000,
+  channels: audio.AudioChannel.CHANNEL_2,
+  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE,
+  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW,
+  channelLayout: audio.AudioChannelLayout.CH_LAYOUT_STEREO
+};
+
+try {
+  let isSupported = audioStreamManager.isFastPlaybackSupported(streamInfo, audio.StreamUsage.STREAM_USAGE_MUSIC);
+  console.info(`Succeeded in checking whether fast playback is supported, isFastPlaybackSupported: ${isSupported}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to check whether fast playback is supported. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## isFastRecordingSupported
 
 ```TypeScript
@@ -501,6 +763,28 @@ isFastRecordingSupported(streamInfo: AudioStreamInfo, source: SourceType): boole
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 是否支持低时延录制。true表示支持，false表示不支持。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let streamInfo: audio.AudioStreamInfo = {
+  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000,
+  channels: audio.AudioChannel.CHANNEL_2,
+  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE,
+  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW,
+  channelLayout: audio.AudioChannelLayout.CH_LAYOUT_STEREO
+};
+
+try {
+  let isSupported = audioStreamManager.isFastRecordingSupported(streamInfo, audio.SourceType.SOURCE_TYPE_MIC);
+  console.info(`Succeeded in checking whether fast recording is supported, isFastRecordingSupported: ${isSupported}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to check whether fast recording is supported. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## isIntelligentNoiseReductionEnabledForCurrentDevice
 
@@ -534,6 +818,20 @@ isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): bool
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let isSupport = audioStreamManager.isIntelligentNoiseReductionEnabledForCurrentDevice(audio.SourceType.SOURCE_TYPE_LIVE);
+  console.info(`Succeeded in checking whether intelligent noise reduction is enabled for the current device, isIntelligentNoiseReductionEnabled: ${isSupport}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to check whether intelligent noise reduction is enabled for the current device. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## isMultichannelPlaybackSupported
 
 ```TypeScript
@@ -563,6 +861,28 @@ isMultichannelPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage)
 | --- | --- |
 | boolean | 是否支持多声道播放。true表示支持，false表示不支持。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let streamInfo: audio.AudioStreamInfo = {
+  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000,
+  channels: audio.AudioChannel.CHANNEL_3,
+  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE,
+  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW,
+  channelLayout: audio.AudioChannelLayout.CH_LAYOUT_2POINT1
+};
+
+try {
+  let isSupported = audioStreamManager.isMultichannelPlaybackSupported(streamInfo, audio.StreamUsage.STREAM_USAGE_MUSIC);
+  console.info(`Succeeded in checking whether multichannel playback is supported, isMultichannelPlaybackSupported: ${isSupported}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to check whether multichannel playback is supported. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## isOffloadPlaybackSupported
 
 ```TypeScript
@@ -591,6 +911,28 @@ isOffloadPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boo
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 是否支持低功耗通路播放。true表示支持，false表示不支持。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let streamInfo: audio.AudioStreamInfo = {
+  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000,
+  channels: audio.AudioChannel.CHANNEL_2,
+  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE,
+  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW,
+  channelLayout: audio.AudioChannelLayout.CH_LAYOUT_STEREO
+};
+
+try {
+  let isSupported = audioStreamManager.isOffloadPlaybackSupported(streamInfo, audio.StreamUsage.STREAM_USAGE_MUSIC);
+  console.info(`Succeeded in checking whether offload playback is supported, isOffloadPlaybackSupported: ${isSupported}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to check whether offload playback is supported. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## isRecordingAvailable
 
@@ -624,6 +966,44 @@ isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let audioStreamInfo: audio.AudioStreamInfo = {
+  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000,
+  channels: audio.AudioChannel.CHANNEL_2,
+  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE,
+  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW
+};
+
+let audioCapturerInfo: audio.AudioCapturerInfo = {
+  source: audio.SourceType.SOURCE_TYPE_MIC,
+  capturerFlags: 0
+};
+
+let audioCapturerOptions: audio.AudioCapturerOptions = {
+  streamInfo: audioStreamInfo,
+  capturerInfo: audioCapturerInfo
+};
+
+audio.createAudioCapturer(audioCapturerOptions, (err: BusinessError, audioCapturer: audio.AudioCapturer) => {
+  if (err) {
+    console.error(`Failed to create AudioCapturer. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in creating AudioCapturer.');
+  try {
+    let isRecordingAvailable = audioStreamManager.isRecordingAvailable(audioCapturerInfo);
+    console.info(`Succeeded in checking whether recording is available, isRecordingAvailable: ${isRecordingAvailable}.`);
+  } catch (err) {
+    let error = err as BusinessError;
+    console.error(`Failed to check whether recording is available. Code: ${error.code}, message: ${error.message}`);
+  }
+});
+```
+
 ## isStreamActive
 
 ```TypeScript
@@ -656,57 +1036,19 @@ isStreamActive(streamUsage: StreamUsage): boolean
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## offAudioCapturerChange
+**示例**
 
 ```TypeScript
-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let isStreamActive = audioStreamManager.isStreamActive(audio.StreamUsage.STREAM_USAGE_MUSIC);
+  console.info(`Succeeded in checking whether the stream is active, isStreamActive: ${isStreamActive}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to check whether the stream is active. Code: ${error.code}, message: ${error.message}`);
+}
 ```
-
-Unsubscribes to audio capturer change events.
-
-**起始版本：** 23
-
-<!--Device-AudioStreamManager-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Capturer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 否 | Callback invoked for the audio capturer change event. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-## offAudioRendererChange
-
-```TypeScript
-offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void
-```
-
-Unsubscribes to audio renderer change events.
-
-**起始版本：** 23
-
-<!--Device-AudioStreamManager-offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Renderer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 否 | Callback invoked for the audio renderer change event. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## off('audioCapturerChange')
 
@@ -770,17 +1112,17 @@ off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArra
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## onAudioCapturerChange
+## offAudioCapturerChange
 
 ```TypeScript
-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void
+offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void
 ```
 
-Listens for audio capturer change events. When there is any audio capturer change, registered clients will receive the callback.
+Unsubscribes to audio capturer change events.
 
 **起始版本：** 23
 
-<!--Device-AudioStreamManager-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void-End-->
+<!--Device-AudioStreamManager-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -788,7 +1130,7 @@ Listens for audio capturer change events. When there is any audio capturer chang
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 是 | Callback invoked for the audio capturer change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 否 | Callback invoked for the audio capturer change event. |
 
 **错误码：**
 
@@ -796,17 +1138,43 @@ Listens for audio capturer change events. When there is any audio capturer chang
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## onAudioRendererChange
+**示例**
 
 ```TypeScript
-onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void
+// 取消该事件的所有监听。
+audioCapturer.offAudioCapturerChange();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let audioCapturerChangeCallback = (capturerChangeInfo: audio.AudioCapturerChangeInfo) => {
+  console.info(`Succeeded in using on or off function, AudioCapturerChangeInfo: ${capturerChangeInfo}.`);
+};
+
+audioCapturer.onAudioCapturerChange(audioCapturerChangeCallback);
+
+audioCapturer.offAudioCapturerChange(audioCapturerChangeCallback);
 ```
 
-Listens for audio renderer change events. When there is any audio renderer change, registered clients will receive the callback.
+```TypeScript
+let audioCapturerChangeCallback = (audioCapturerChangeInfoArray: audio.AudioCapturerChangeInfoArray) => {
+  console.info(`Audio capturer changed, audioCapturerChangeInfoArray: ${JSON.stringify(audioCapturerChangeInfoArray)}.`);
+};
+
+audioStreamManager.onAudioCapturerChange(audioCapturerChangeCallback);
+
+audioStreamManager.offAudioCapturerChange(audioCapturerChangeCallback);
+```
+
+## offAudioRendererChange
+
+```TypeScript
+offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void
+```
+
+Unsubscribes to audio renderer change events.
 
 **起始版本：** 23
 
-<!--Device-AudioStreamManager-onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void-End-->
+<!--Device-AudioStreamManager-offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -814,13 +1182,25 @@ Listens for audio renderer change events. When there is any audio renderer chang
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 | Callback invoked for the audio renderer change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 否 | Callback invoked for the audio renderer change event. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+let audioRendererChangeCallback = (audioRendererChangeInfoArray: audio.AudioRendererChangeInfoArray) => {
+  console.info(`Audio renderer changed, audioRendererChangeInfoArray: ${JSON.stringify(audioRendererChangeInfoArray)}.`);
+};
+
+audioStreamManager.onAudioRendererChange(audioRendererChangeCallback);
+
+audioStreamManager.offAudioRendererChange(audioRendererChangeCallback);
+```
 
 ## on('audioCapturerChange')
 
@@ -885,4 +1265,78 @@ on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+## onAudioCapturerChange
+
+```TypeScript
+onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void
+```
+
+Listens for audio capturer change events. When there is any audio capturer change, registered clients will receive the callback.
+
+**起始版本：** 23
+
+<!--Device-AudioStreamManager-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 是 | Callback invoked for the audio capturer change event. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+audioCapturer.onAudioCapturerChange((capturerChangeInfo: audio.AudioCapturerChangeInfo) => {
+  console.info(`Succeeded in using on function, AudioCapturerChangeInfo: ${capturerChangeInfo}.`);
+});
+```
+
+```TypeScript
+audioStreamManager.onAudioCapturerChange((audioCapturerChangeInfoArray: audio.AudioCapturerChangeInfoArray) => {
+  console.info(`Audio capturer changed, audioCapturerChangeInfoArray: ${JSON.stringify(audioCapturerChangeInfoArray)}.`);
+});
+```
+
+## onAudioRendererChange
+
+```TypeScript
+onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void
+```
+
+Listens for audio renderer change events. When there is any audio renderer change, registered clients will receive the callback.
+
+**起始版本：** 23
+
+<!--Device-AudioStreamManager-onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Renderer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 | Callback invoked for the audio renderer change event. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+audioStreamManager.onAudioRendererChange((audioRendererChangeInfoArray: audio.AudioRendererChangeInfoArray) => {
+  console.info(`Audio renderer changed, audioRendererChangeInfoArray: ${JSON.stringify(audioRendererChangeInfoArray)}.`);
+});
+```
 

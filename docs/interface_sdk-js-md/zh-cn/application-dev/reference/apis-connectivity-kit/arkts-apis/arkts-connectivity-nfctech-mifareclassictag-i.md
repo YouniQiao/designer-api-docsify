@@ -88,6 +88,37 @@ function nfcTechDemo() {
 }
 ```
 
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
+
+function nfcTechDemo() {
+    // 如果没有连接Tag，请先连接
+    if (!mifareClassic.isTagConnected()) {
+        if (!mifareClassic.connectTag()) {
+            console.error("mifareClassic connectTag failed.");
+            return;
+        }
+    }
+
+    try {
+        let sectorIndex = 1; // 将其更改为正确的 index
+        let key = [0x01, 0x02, 0x03, 0x04, 0x05, 0x06]  // 必须是6个字节，将其更改为正确的key
+        mifareClassic.authenticateSector(sectorIndex, key, true, (err : BusinessError)=> {
+            if (err) {
+                console.error(`mifareClassic authenticateSector AsyncCallback errCode: ${err.code}, message: ${err.message}`);
+            } else {
+                console.info("mifareClassic authenticateSector AsyncCallback success.");
+            }
+        });
+    } catch (businessError) {
+        console.error(`mifareClassic authenticateSector AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
+    }
+}
+```
+
 ## authenticateSector
 
 ```TypeScript
@@ -126,36 +157,7 @@ authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean, callback: Asyn
 
 **示例**
 
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!mifareClassic.isTagConnected()) {
-        if (!mifareClassic.connectTag()) {
-            console.error("mifareClassic connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        let sectorIndex = 1; // 将其更改为正确的 index
-        let key = [0x01, 0x02, 0x03, 0x04, 0x05, 0x06]  // 必须是6个字节，将其更改为正确的key
-        mifareClassic.authenticateSector(sectorIndex, key, true, (err : BusinessError)=> {
-            if (err) {
-                console.error(`mifareClassic authenticateSector AsyncCallback errCode: ${err.code}, message: ${err.message}`);
-            } else {
-                console.info("mifareClassic authenticateSector AsyncCallback success.");
-            }
-        });
-    } catch (businessError) {
-        console.error(`mifareClassic authenticateSector AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
+参见 [authenticateSector](#authenticatesector)
 
 ## decrementBlock
 
@@ -228,6 +230,38 @@ function nfcTechDemo() {
 }
 ```
 
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
+
+function nfcTechDemo() {
+    // 如果没有连接Tag，请先连接
+    if (!mifareClassic.isTagConnected()) {
+        if (!mifareClassic.connectTag()) {
+            console.error("mifareClassic connectTag failed.");
+            return;
+        }
+    }
+
+    try {
+        let blockIndex = 1; // 将其更改为正确的 index
+        let value = 0x20; // 将其更改为正确的数据
+        mifareClassic.decrementBlock(blockIndex, value, (err : BusinessError)=> {
+            if (err) {
+                console.error("mifareClassic decrementBlock AsyncCallback errCode:" + 
+                  "${err.code}, message: ${err.message}");
+            } else {
+                console.info("mifareClassic decrementBlock AsyncCallback success.");
+            }
+        });
+    } catch (businessError) {
+        console.error(`mifareClassic decrementBlock AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
+    }
+}
+```
+
 ## decrementBlock
 
 ```TypeScript
@@ -265,37 +299,7 @@ decrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!mifareClassic.isTagConnected()) {
-        if (!mifareClassic.connectTag()) {
-            console.error("mifareClassic connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        let blockIndex = 1; // 将其更改为正确的 index
-        let value = 0x20; // 将其更改为正确的数据
-        mifareClassic.decrementBlock(blockIndex, value, (err : BusinessError)=> {
-            if (err) {
-                console.error("mifareClassic decrementBlock AsyncCallback errCode:" + 
-                  "${err.code}, message: ${err.message}");
-            } else {
-                console.info("mifareClassic decrementBlock AsyncCallback success.");
-            }
-        });
-    } catch (businessError) {
-        console.error(`mifareClassic decrementBlock AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
+参见 [decrementBlock](#decrementblock)
 
 ## getBlockCountInSector
 
@@ -538,6 +542,24 @@ getType(): tag.MifareClassicType
 | --- | --- |
 | tag.MifareClassicType | MifareClassic标签的类型。 |
 
+**示例**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
+let getType : tag.MifareClassicType = mifareClassic.getType();
+console.info("mifareClassic getType: " + getType);
+```
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareUltralight
+let getType : tag.MifareUltralightType = mifareUltralight.getType();
+console.info("mifareUltralight getType: " + getType);
+```
+
 ## incrementBlock
 
 ```TypeScript
@@ -609,6 +631,37 @@ function nfcTechDemo() {
 }
 ```
 
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
+
+function nfcTechDemo() {
+    // 如果没有连接Tag，请先连接
+    if (!mifareClassic.isTagConnected()) {
+        if (!mifareClassic.connectTag()) {
+            console.error("mifareClassic connectTag failed.");
+            return;
+        }
+    }
+
+    try {
+        let blockIndex = 1; // 将其更改为正确的 index
+        let value = 0x20; // 将其更改为正确的数据
+        mifareClassic.incrementBlock(blockIndex, value, (err : BusinessError)=> {
+            if (err) {
+                console.error(`mifareClassic incrementBlock AsyncCallback err Code: ${err.code}, message: ${err.message}`);
+            } else {
+                console.info("mifareClassic incrementBlock AsyncCallback success.");
+            }
+        });
+    } catch (businessError) {
+        console.error(`mifareClassic incrementBlock AsyncCallback catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
+    }
+}
+```
+
 ## incrementBlock
 
 ```TypeScript
@@ -646,36 +699,7 @@ incrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!mifareClassic.isTagConnected()) {
-        if (!mifareClassic.connectTag()) {
-            console.error("mifareClassic connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        let blockIndex = 1; // 将其更改为正确的 index
-        let value = 0x20; // 将其更改为正确的数据
-        mifareClassic.incrementBlock(blockIndex, value, (err : BusinessError)=> {
-            if (err) {
-                console.error(`mifareClassic incrementBlock AsyncCallback err Code: ${err.code}, message: ${err.message}`);
-            } else {
-                console.info("mifareClassic incrementBlock AsyncCallback success.");
-            }
-        });
-    } catch (businessError) {
-        console.error(`mifareClassic incrementBlock AsyncCallback catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
+参见 [incrementBlock](#incrementblock)
 
 ## isEmulatedTag
 
@@ -779,6 +803,36 @@ function nfcTechDemo() {
 }
 ```
 
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
+
+function nfcTechDemo() {
+    // 如果没有连接Tag，请先连接
+    if (!mifareClassic.isTagConnected()) {
+        if (!mifareClassic.connectTag()) {
+            console.error("mifareClassic connectTag failed.");
+            return;
+        }
+    }
+
+    try {
+        let blockIndex = 1;  // 将其更改为正确的 index
+        mifareClassic.readSingleBlock(blockIndex, (err : BusinessError, data : number[])=> {
+            if (err) {
+                console.error("mifareClassic readSingleBlock AsyncCallback err: " + err);
+            } else {
+                console.info("mifareClassic readSingleBlock AsyncCallback data: " + data);
+            }
+        });
+    } catch (businessError) {
+        console.error(`mifareClassic readSingleBlock AsyncCallback catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
+    }
+}
+```
+
 ## readSingleBlock
 
 ```TypeScript
@@ -815,35 +869,7 @@ readSingleBlock(blockIndex: int, callback: AsyncCallback<int[]>): void
 
 **示例**
 
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!mifareClassic.isTagConnected()) {
-        if (!mifareClassic.connectTag()) {
-            console.error("mifareClassic connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        let blockIndex = 1;  // 将其更改为正确的 index
-        mifareClassic.readSingleBlock(blockIndex, (err : BusinessError, data : number[])=> {
-            if (err) {
-                console.error("mifareClassic readSingleBlock AsyncCallback err: " + err);
-            } else {
-                console.info("mifareClassic readSingleBlock AsyncCallback data: " + data);
-            }
-        });
-    } catch (businessError) {
-        console.error(`mifareClassic readSingleBlock AsyncCallback catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
+参见 [readSingleBlock](#readsingleblock)
 
 ## restoreFromBlock
 
@@ -914,6 +940,36 @@ function nfcTechDemo() {
 }
 ```
 
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
+
+function nfcTechDemo() {
+    // 如果没有连接Tag，请先连接
+    if (!mifareClassic.isTagConnected()) {
+        if (!mifareClassic.connectTag()) {
+            console.error("mifareClassic connectTag failed.");
+            return;
+        }
+    }
+
+    try {
+        let blockIndex = 1; // 将其更改为正确的 index
+        mifareClassic.restoreFromBlock(blockIndex, (err : BusinessError)=> {
+            if (err) {
+                console.error(`mifareClassic restoreFromBlock AsyncCallback err Code: ${err.code}, message: ${err.message}`);
+            } else {
+                console.info("mifareClassic restoreFromBlock AsyncCallback success.");
+            }
+        });
+    } catch (businessError) {
+        console.error(`mifareClassic restoreFromBlock AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
+    }
+}
+```
+
 ## restoreFromBlock
 
 ```TypeScript
@@ -950,35 +1006,7 @@ restoreFromBlock(blockIndex: int, callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!mifareClassic.isTagConnected()) {
-        if (!mifareClassic.connectTag()) {
-            console.error("mifareClassic connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        let blockIndex = 1; // 将其更改为正确的 index
-        mifareClassic.restoreFromBlock(blockIndex, (err : BusinessError)=> {
-            if (err) {
-                console.error(`mifareClassic restoreFromBlock AsyncCallback err Code: ${err.code}, message: ${err.message}`);
-            } else {
-                console.info("mifareClassic restoreFromBlock AsyncCallback success.");
-            }
-        });
-    } catch (businessError) {
-        console.error(`mifareClassic restoreFromBlock AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
+参见 [restoreFromBlock](#restorefromblock)
 
 ## transferToBlock
 
@@ -1049,6 +1077,36 @@ function nfcTechDemo() {
 }
 ```
 
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
+
+function nfcTechDemo() {
+    // 如果没有连接Tag，请先连接
+    if (!mifareClassic.isTagConnected()) {
+        if (!mifareClassic.connectTag()) {
+            console.error("mifareClassic connectTag failed.");
+            return;
+        }
+    }
+
+    try {
+        let blockIndex = 1; // 将其更改为正确的 index
+        mifareClassic.transferToBlock(blockIndex, (err : BusinessError)=> {
+            if (err) {
+                console.error(`mifareClassic transferToBlock AsyncCallback errCode: ${err.code}, message: ${err.message}`);
+            } else {
+                console.info("mifareClassic transferToBlock AsyncCallback success.");
+            }
+        });
+    } catch (businessError) {
+        console.error(`mifareClassic transferToBlock AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
+    }
+}
+```
+
 ## transferToBlock
 
 ```TypeScript
@@ -1085,35 +1143,7 @@ transferToBlock(blockIndex: int, callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!mifareClassic.isTagConnected()) {
-        if (!mifareClassic.connectTag()) {
-            console.error("mifareClassic connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        let blockIndex = 1; // 将其更改为正确的 index
-        mifareClassic.transferToBlock(blockIndex, (err : BusinessError)=> {
-            if (err) {
-                console.error(`mifareClassic transferToBlock AsyncCallback errCode: ${err.code}, message: ${err.message}`);
-            } else {
-                console.info("mifareClassic transferToBlock AsyncCallback success.");
-            }
-        });
-    } catch (businessError) {
-        console.error(`mifareClassic transferToBlock AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
+参见 [transferToBlock](#transfertoblock)
 
 ## writeSingleBlock
 
@@ -1187,6 +1217,38 @@ function nfcTechDemo() {
 }
 ```
 
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
+
+function nfcTechDemo() {
+    // 如果没有连接Tag，请先连接
+    if (!mifareClassic.isTagConnected()) {
+        if (!mifareClassic.connectTag()) {
+            console.error("mifareClassic connectTag failed.");
+            return;
+        }
+    }
+
+    try {
+        let blockIndex = 1; // 将其更改为正确的 index
+        let rawData = [0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A,
+            0x0B, 0x0C, 0x0D, 0x0E, 0x0F, 0x10]; // 必须是16个字节，将其更改为正确的data
+        mifareClassic.writeSingleBlock(blockIndex, rawData, (err : BusinessError)=> {
+            if (err) {
+                console.error(`mifareClassic writeSingleBlock AsyncCallback err Code: ${err.code}, message: ${err.message}`);
+            } else {
+                console.info("mifareClassic writeSingleBlock AsyncCallback success.");
+            }
+        });
+    } catch (businessError) {
+        console.error(`mifareClassic writeSingleBlock AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
+    }
+}
+```
+
 ## writeSingleBlock
 
 ```TypeScript
@@ -1224,35 +1286,5 @@ writeSingleBlock(blockIndex: int, data: int[], callback: AsyncCallback<void>): v
 
 **示例**
 
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!mifareClassic.isTagConnected()) {
-        if (!mifareClassic.connectTag()) {
-            console.error("mifareClassic connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        let blockIndex = 1; // 将其更改为正确的 index
-        let rawData = [0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A,
-            0x0B, 0x0C, 0x0D, 0x0E, 0x0F, 0x10]; // 必须是16个字节，将其更改为正确的data
-        mifareClassic.writeSingleBlock(blockIndex, rawData, (err : BusinessError)=> {
-            if (err) {
-                console.error(`mifareClassic writeSingleBlock AsyncCallback err Code: ${err.code}, message: ${err.message}`);
-            } else {
-                console.info("mifareClassic writeSingleBlock AsyncCallback success.");
-            }
-        });
-    } catch (businessError) {
-        console.error(`mifareClassic writeSingleBlock AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
+参见 [writeSingleBlock](#writesingleblock)
 

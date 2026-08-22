@@ -45,6 +45,72 @@ function format(volumeId: string, fsType: string, callback: AsyncCallback<void>)
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// volumeId可通过getAllVolumes()接口获取
+let volumeId: string = "";
+let fsType: string = "";
+volumeManager.format(volumeId, fsType).then(() => {
+  console.info("format successfully");
+}).catch((error: BusinessError) => {
+  console.error(`Failed to format. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// volumeId可通过getAllVolumes()接口获取
+let volumeId: string = "";
+let fsType: string = "";
+volumeManager.format(volumeId, fsType).then(() => {
+  console.info("format successfully");
+}).catch((error: BusinessError): void => {
+  console.error(`Failed to format. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// volumeId可通过getAllVolumes()接口获取
+let volumeId: string = "";
+let fsType: string = "";
+volumeManager.format(volumeId, fsType, (error: BusinessError) => {
+  if (error) {
+    console.error(`format failed, code is: ${error.code}, message is: ${error.message}`);
+    return;
+  }
+  // 对指定卷设备格式化成功的回调
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// volumeId可通过getAllVolumes()接口获取
+let volumeId: string = "";
+let fsType: string = "";
+volumeManager.format(volumeId, fsType, (error: BusinessError | null) => {
+  if (error) {
+    console.error(`format failed, code is: ${error.code}, message is: ${error.message}`);
+    return;
+  }
+  // 对指定卷设备格式化成功的回调
+});
+```
+
 
 ## format
 
@@ -89,4 +155,8 @@ function format(volumeId: string, fsType: string): Promise<void>
 | 13600005 | Incorrect volume state. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
+
+**示例**
+
+参见 [format](#format)
 

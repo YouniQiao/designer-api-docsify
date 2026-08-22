@@ -72,6 +72,36 @@ cloudSyncManager.disableCloud(accountId).then<void>((): void => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountId: string = "testAccount";
+cloudSyncManager.disableCloud(accountId, (err: BusinessError) => {
+  if (err) {
+    console.error(`disableCloud failed with error message: ${err.message}, error code: ${err.code}`);
+  } else {
+    console.info("disableCloud successfully");
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountId: string = "testAccount";
+cloudSyncManager.disableCloud(accountId, (err: BusinessError<void> | null): void => {
+  if (err && err.code) {
+    console.error("disableCloud failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("disableCloud successfully");
+  }
+});
+```
+
 
 ## disableCloud
 
@@ -108,33 +138,5 @@ function disableCloud(accountId: string, callback: AsyncCallback<void>): void
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-cloudSyncManager.disableCloud(accountId, (err: BusinessError) => {
-  if (err) {
-    console.error(`disableCloud failed with error message: ${err.message}, error code: ${err.code}`);
-  } else {
-    console.info("disableCloud successfully");
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-cloudSyncManager.disableCloud(accountId, (err: BusinessError<void> | null): void => {
-  if (err && err.code) {
-    console.error("disableCloud failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("disableCloud successfully");
-  }
-});
-```
+参见 [disableCloud](#disablecloud)
 

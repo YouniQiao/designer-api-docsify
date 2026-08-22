@@ -58,70 +58,6 @@ It is incorrect to use AppStorage to read environment variables without calling 
 Environment.EnvProp('accessibilityEnabled', 'default');
 ```
 
-## EnvProps
-
-```TypeScript
-static EnvProps(
-    props: {
-      key: string;
-      defaultValue: any;
-    }[],
-  ): void
-```
-
-Works in a way similar to the [EnvProp](#envprop) API, with the difference that it allows for initialization of multiple attributes in batches. It is recommended that this API be called during application startup to store system environment variables to [AppStorage](../../../ui/state-management/arkts-appstorage.md) in batches.
-
-**Since:** 7
-
-**Deprecated since:** 10
-
-**Substitutes:** [envProps](#envprops)
-
-<!--Device-Environment-static EnvProps(    props: {      key: string;      defaultValue: any;    }[],  ): void--><!--Device-Environment-static EnvProps(    props: {      key: string;      defaultValue: any;    }[],  ): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| props | {       key: string;       defaultValue: any;     }[] | Yes |  |
-
-## Keys
-
-```TypeScript
-static Keys(): Array<string>
-```
-
-Returns the property key array of environment variables.
-
-**Since:** 7
-
-**Deprecated since:** 10
-
-**Substitutes:** [keys](#keys)
-
-<!--Device-Environment-static Keys(): Array<string>--><!--Device-Environment-static Keys(): Array<string>-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Array&lt;string&gt; | Property key array of environment variables. |
-
-**Examples**
-
-```TypeScript
-Environment.EnvProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
-  key: 'languageCode',
-  defaultValue: 'en'
-}, { key: 'prop', defaultValue: 'hhhh' }]);
-
-let keys: Array<string> = Environment.Keys(); // keys contains accessibilityEnabled, languageCode, and prop.
-```
-
 ## envProp
 
 ```TypeScript
@@ -159,6 +95,44 @@ It is incorrect to use AppStorage to read environment variables without calling 
 
 For details about how to use envProp, see [Accessing Environment Parameters from the UI](../../../ui/state-management/arkts-environment.md#accessing-environment-parameters-from-the-ui).
 
+## EnvProps
+
+```TypeScript
+static EnvProps(
+    props: {
+      key: string;
+      defaultValue: any;
+    }[],
+  ): void
+```
+
+Works in a way similar to the [EnvProp](#envprop) API, with the difference that it allows for initialization of multiple attributes in batches. It is recommended that this API be called during application startup to store system environment variables to [AppStorage](../../../ui/state-management/arkts-appstorage.md) in batches.
+
+**Since:** 7
+
+**Deprecated since:** 10
+
+**Substitutes:** [envProps](#envprops)
+
+<!--Device-Environment-static EnvProps(    props: {      key: string;      defaultValue: any;    }[],  ): void--><!--Device-Environment-static EnvProps(    props: {      key: string;      defaultValue: any;    }[],  ): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| props | {       key: string;       defaultValue: any;     }[] | Yes |  |
+
+**Examples**
+
+```TypeScript
+Environment.EnvProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+```
+
 ## envProps
 
 ```TypeScript
@@ -190,6 +164,50 @@ Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, 
 }, { key: 'prop', defaultValue: 'hhhh' }]);
 ```
 
+## Keys
+
+```TypeScript
+static Keys(): Array<string>
+```
+
+Returns the property key array of environment variables.
+
+**Since:** 7
+
+**Deprecated since:** 10
+
+**Substitutes:** [keys](#keys)
+
+<!--Device-Environment-static Keys(): Array<string>--><!--Device-Environment-static Keys(): Array<string>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Array&lt;string&gt; | Property key array of environment variables. |
+
+**Examples**
+
+```TypeScript
+AppStorage.SetOrCreate('PropB', 48);
+let keys: IterableIterator<string> = AppStorage.Keys();
+```
+
+```TypeScript
+let keys: Array<string> = PersistentStorage.Keys();
+```
+
+```TypeScript
+Environment.EnvProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+
+let keys: Array<string> = Environment.Keys(); // keys contains accessibilityEnabled, languageCode, and prop.
+```
+
 ## keys
 
 ```TypeScript
@@ -213,6 +231,21 @@ Returns the property key array of environment variables.
 | Array&lt;string&gt; | Property key array of environment variables. |
 
 **Examples**
+
+```TypeScript
+AppStorage.setOrCreate('PropB', 48);
+let keys: IterableIterator<string> = AppStorage.keys();
+```
+
+```TypeScript
+let para: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(para);
+let keys: IterableIterator<string> = storage.keys();
+```
+
+```TypeScript
+let keys: Array<string> = PersistentStorage.keys();
+```
 
 ```TypeScript
 Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {

@@ -14,7 +14,7 @@ function sppListen(name: string, options: SppOptions, callback: AsyncCallback<in
 
 Creates a Bluetooth server listening socket.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -28,7 +28,7 @@ Creates a Bluetooth server listening socket.
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the service name. |
 | options | [SppOptions](arkts-connectivity-socket-sppoptions-i.md) | Yes | Indicates the listen parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return a server socket ID. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return a server socket ID. |
 
 **Error codes:**
 

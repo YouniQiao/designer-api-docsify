@@ -63,6 +63,26 @@ print.updatePrinters([printerInfo], (err: BusinessError) => {
 })
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+
+let printerInfo : print.PrinterInfo = {
+    printerId : '3232',
+    printerName : 'hhhhh',
+    printerState : 0,
+    printerIcon : 12,
+    description : 'str',
+    capability : undefined,
+    options : 'opt'
+};
+print.updatePrinters([printerInfo]).then(() => {
+    console.info('update printers success');
+}).catch((error: BusinessError) => {
+    console.error('update printers error : ' + JSON.stringify(error));
+})
+```
+
 
 ## updatePrinters
 
@@ -104,23 +124,5 @@ function updatePrinters(printers: Array<PrinterInfo>): Promise<void>
 
 **示例**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let printerInfo : print.PrinterInfo = {
-    printerId : '3232',
-    printerName : 'hhhhh',
-    printerState : 0,
-    printerIcon : 12,
-    description : 'str',
-    capability : undefined,
-    options : 'opt'
-};
-print.updatePrinters([printerInfo]).then(() => {
-    console.info('update printers success');
-}).catch((error: BusinessError) => {
-    console.error('update printers error : ' + JSON.stringify(error));
-})
-```
+参见 [updatePrinters](#updateprinters)
 

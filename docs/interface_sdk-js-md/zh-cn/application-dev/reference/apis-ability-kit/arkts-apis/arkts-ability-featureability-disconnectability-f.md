@@ -63,6 +63,37 @@ featureAbility.disconnectAbility(connectId, (error) => {
 });
 ```
 
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let connectId = featureAbility.connectAbility(
+  {
+    bundleName: 'com.ix.ServiceAbility',
+    abilityName: 'com.ix.ServiceAbility.ServiceAbilityA',
+  },
+  {
+    onConnect: (element, remote) => {
+      console.info(`ConnectAbility onConnect remote is proxy: ${(remote instanceof rpc.RemoteProxy)}`);
+    },
+    onDisconnect: (element) => {
+      console.info(`ConnectAbility onDisconnect element.deviceId : ${element.deviceId}`);
+    },
+    onFailed: (code) => {
+      console.error(`featureAbilityTest ConnectAbility onFailed errCode : ${code}`);
+    },
+  },
+);
+
+// 断开与ServiceAbility的连接
+featureAbility.disconnectAbility(connectId).then(() => {
+  console.info('disconnectAbility success');
+}).catch((error: BusinessError)=>{
+  console.error(`featureAbilityTest result errCode : ${error.code}`);
+});
+```
+
 
 ## disconnectAbility
 
@@ -94,34 +125,5 @@ function disconnectAbility(connection: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let connectId = featureAbility.connectAbility(
-  {
-    bundleName: 'com.ix.ServiceAbility',
-    abilityName: 'com.ix.ServiceAbility.ServiceAbilityA',
-  },
-  {
-    onConnect: (element, remote) => {
-      console.info(`ConnectAbility onConnect remote is proxy: ${(remote instanceof rpc.RemoteProxy)}`);
-    },
-    onDisconnect: (element) => {
-      console.info(`ConnectAbility onDisconnect element.deviceId : ${element.deviceId}`);
-    },
-    onFailed: (code) => {
-      console.error(`featureAbilityTest ConnectAbility onFailed errCode : ${code}`);
-    },
-  },
-);
-
-// 断开与ServiceAbility的连接
-featureAbility.disconnectAbility(connectId).then(() => {
-  console.info('disconnectAbility success');
-}).catch((error: BusinessError)=>{
-  console.error(`featureAbilityTest result errCode : ${error.code}`);
-});
-```
+参见 [disconnectAbility](#disconnectability)
 

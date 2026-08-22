@@ -232,3 +232,11 @@ ATTR_WEBSITE = 13
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
+**示例**
+
+通过JSON格式创建数据。
+
+```TypeScript
+let attributes = [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE];
+```
+

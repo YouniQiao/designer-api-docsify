@@ -71,6 +71,25 @@ huks.hasKeyItem(keyAlias, emptyOptions, (error, data) => {
 });
 ```
 
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* 此处options选择emptyOptions来传空 */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+
+/* 判断密钥是否存在 */
+huks.hasKeyItem(keyAlias, emptyOptions).then((data) => {
+  if (data) {
+    console.info(`keyAlias:${keyAlias} is existed!`);
+  } else {
+    console.info(`find key failed!`);
+  }
+});
+```
+
 
 ## hasKeyItem
 
@@ -118,22 +137,5 @@ function hasKeyItem(keyAlias: string, options: HuksOptions): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions来传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-/* 判断密钥是否存在 */
-huks.hasKeyItem(keyAlias, emptyOptions).then((data) => {
-  if (data) {
-    console.info(`keyAlias:${keyAlias} is existed!`);
-  } else {
-    console.info(`find key failed!`);
-  }
-});
-```
+参见 [hasKeyItem](#haskeyitem)
 

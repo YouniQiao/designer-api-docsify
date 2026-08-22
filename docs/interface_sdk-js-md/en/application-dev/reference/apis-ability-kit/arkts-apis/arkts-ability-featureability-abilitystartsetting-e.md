@@ -58,3 +58,11 @@ Display device ID.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
+**Examples**
+
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+
+featureAbility.AbilityStartSetting.BOUNDS_KEY
+```
+

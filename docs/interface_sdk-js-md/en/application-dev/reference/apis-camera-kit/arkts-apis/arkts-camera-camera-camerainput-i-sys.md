@@ -113,7 +113,7 @@ Unsubscribes from **CameraInput** occlusion events. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cameraOcclusionDetection' | Yes | Event type. The value is fixed at **'cameraOcclusionDetection'**. The event can be listened for when a **CameraInput** instance is created. It is triggered when the occlusion status of the camera lens changes, and the occlusion status is returned. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 **Error codes:**
 
@@ -148,7 +148,7 @@ Subscribes to **CameraInput** occlusion events. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cameraOcclusionDetection' | Yes | Event type. The value is fixed at **'cameraOcclusionDetection'**. The event can be listened for when a **CameraInput** instance is created. It is triggered when the occlusion status of the camera lens changes, and the occlusion status is returned. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | Yes | Callback used to return the occlusion status. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | Yes | Callback used to return the occlusion status. |
 
 **Error codes:**
 

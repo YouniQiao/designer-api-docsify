@@ -28,7 +28,7 @@ Confirms the invitation based on the sharing invitation code and obtains the sha
 | --- | --- | --- | --- |
 | invitationCode | string | Yes | Invitation code of the share. |
 | state | State | Yes | Confirmation state. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Result&lt;string&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;string&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -39,6 +39,18 @@ Confirms the invitation based on the sharing invitation code and obtains the sha
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let shareResource: string | undefined;
+cloudData.sharing.confirmInvitation('sharing_invitation_code_test', cloudData.sharing.State.STATE_ACCEPTED).then((result: cloudData.sharing.Result<string>) => {
+  console.info(`confirm invitation succeeded, result: ${result}`);
+  shareResource = result.value;
+}).catch((err: BusinessError) => {
+  console.error(`confirm invitation failed, code is ${err.code},message is ${err.message}`);
+})
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -94,15 +106,5 @@ Confirms the invitation based on the sharing invitation code and obtains the sha
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let shareResource: string | undefined;
-cloudData.sharing.confirmInvitation('sharing_invitation_code_test', cloudData.sharing.State.STATE_ACCEPTED).then((result: cloudData.sharing.Result<string>) => {
-  console.info(`confirm invitation succeeded, result: ${result}`);
-  shareResource = result.value;
-}).catch((err: BusinessError) => {
-  console.error(`confirm invitation failed, code is ${err.code},message is ${err.message}`);
-})
-```
+See [confirmInvitation](#confirminvitation)
 

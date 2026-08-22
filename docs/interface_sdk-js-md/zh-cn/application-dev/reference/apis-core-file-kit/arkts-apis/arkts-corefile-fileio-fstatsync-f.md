@@ -35,3 +35,11 @@ declare function fstatSync(fd: number): Stat
 | --- | --- |
 | [Stat](arkts-corefile-fileio-stat-depr-i.md) | 表示文件状态的具体信息。 |
 
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+let stat = fileio.fstatSync(fd);
+```
+

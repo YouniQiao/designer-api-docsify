@@ -56,6 +56,16 @@ call.muteRinger((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.muteRinger().then(() => {
+    console.info(`muteRinger success.`);
+}).catch((err: BusinessError) => {
+    console.error(`muteRinger fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## muteRinger
 
@@ -93,13 +103,5 @@ function muteRinger(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.muteRinger().then(() => {
-    console.info(`muteRinger success.`);
-}).catch((err: BusinessError) => {
-    console.error(`muteRinger fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [muteRinger](#muteringer)
 

@@ -66,29 +66,6 @@ try {
 }
 ```
 
-
-## getTimezone
-
-```TypeScript
-function getTimezone(): Promise<string>
-```
-
-获取系统时区，使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-systemDateTime-function getTimezone(): Promise<string>--><!--Device-systemDateTime-function getTimezone(): Promise<string>-End-->
-
-**系统能力：** SystemCapability.MiscServices.Time
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回系统时区。具体可见 支持的系统时区。 |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -122,4 +99,29 @@ try {
   console.error(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
 }
 ```
+
+
+## getTimezone
+
+```TypeScript
+function getTimezone(): Promise<string>
+```
+
+获取系统时区，使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-systemDateTime-function getTimezone(): Promise<string>--><!--Device-systemDateTime-function getTimezone(): Promise<string>-End-->
+
+**系统能力：** SystemCapability.MiscServices.Time
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;string&gt; | Promise对象，返回系统时区。具体可见 支持的系统时区。 |
+
+**示例**
+
+参见 [getTimezone](#gettimezone)
 

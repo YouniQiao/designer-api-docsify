@@ -12,7 +12,7 @@ import { WithEnv, WithEnvAttribute} from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [WithEnvAttribute(定义WithEnv组件，允许为子组件设置环境属性。)](arkts-arkui-arkuiwithenv-withenvattribute-c.md) | 定义WithEnv组件的属性功能。 |
+| [WithEnvAttribute(定义WithEnv组件，允许为子组件设置环境属性。)](arkts-arkui-arkui-withenv-withenvattribute-c.md) | 定义WithEnv组件的属性功能。 |
 
 ### 类型
 

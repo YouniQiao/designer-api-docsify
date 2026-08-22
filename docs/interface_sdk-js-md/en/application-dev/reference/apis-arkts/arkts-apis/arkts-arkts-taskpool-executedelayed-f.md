@@ -67,6 +67,24 @@ taskpool.executeDelayed(1000, task).then(() => { // 1000: delayTime is 1000ms
 })
 ```
 
+```TypeScript
+// import BusinessError
+import { BusinessError } from '@kit.BasicServicesKit'
+
+@Concurrent
+function printArgs(args: number): string {
+    console.info("printArgs: " + args);
+    return "success";
+}
+
+let task: taskpool.Task = new taskpool.GenericsTask<[number], string>(printArgs, 100); // 100: test number
+taskpool.executeDelayed<[number], string>(1000, task).then((res: string) => { // 1000: delayTime is 1000ms
+  console.info("taskpool execute success");
+}).catch((e: BusinessError) => {
+  console.error(`taskpool execute: Code: ${e.code}, message: ${e.message}`);
+})
+```
+
 
 ## executeDelayed
 
@@ -108,21 +126,5 @@ Executes the generic task with a delay without verifying the parameter type and 
 
 **Examples**
 
-```TypeScript
-// import BusinessError
-import { BusinessError } from '@kit.BasicServicesKit'
-
-@Concurrent
-function printArgs(args: number): string {
-    console.info("printArgs: " + args);
-    return "success";
-}
-
-let task: taskpool.Task = new taskpool.GenericsTask<[number], string>(printArgs, 100); // 100: test number
-taskpool.executeDelayed<[number], string>(1000, task).then((res: string) => { // 1000: delayTime is 1000ms
-  console.info("taskpool execute success");
-}).catch((e: BusinessError) => {
-  console.error(`taskpool execute: Code: ${e.code}, message: ${e.message}`);
-})
-```
+See [executeDelayed](#executedelayed)
 

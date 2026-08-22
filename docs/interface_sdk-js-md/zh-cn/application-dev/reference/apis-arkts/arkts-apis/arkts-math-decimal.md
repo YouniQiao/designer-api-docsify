@@ -12,13 +12,13 @@ import { Decimal } from '@kit.ArkTS';
 
 | 名称 | 说明 |
 | --- | --- |
-| [Decimal(定义ArkTS的Decimal类型。Decimal支持任意精度的十进制运算。)](arkts-arkts-mathdecimal-decimal-c.md) | 任意精度的Decimal类型。 |
+| [Decimal(定义ArkTS的Decimal类型。Decimal支持任意精度的十进制运算。)](arkts-arkts-math-decimal-decimal-c.md) | 任意精度的Decimal类型。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [DecimalConfig(定义ArkTS的Decimal类型。Decimal支持任意精度的十进制运算。)](arkts-arkts-mathdecimal-decimalconfig-i.md) | 提供Decimal的配置属性，可使用Decimal.set方法进行配置。 |
+| [DecimalConfig(定义ArkTS的Decimal类型。Decimal支持任意精度的十进制运算。)](arkts-arkts-math-decimal-decimalconfig-i.md) | 提供Decimal的配置属性，可使用Decimal.set方法进行配置。 |
 
 ### 类型
 

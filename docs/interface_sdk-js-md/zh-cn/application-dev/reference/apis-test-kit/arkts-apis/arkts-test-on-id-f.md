@@ -33,6 +33,29 @@ Specifies the id of the target Component.
 | --- | --- |
 | [On](arkts-test-uitest-on-c.md) | this { |
 
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.id('123'); // 使用静态构造器ON创建On对象，指定目标控件的id属性。
+```
+
+```TypeScript
+// xxx.test.ets
+import { MatchPattern, On, ON } from '@kit.TestKit';
+
+let on: On = ON.id('id', MatchPattern.REG_EXP_ICASE); // 忽略大小写匹配控件的id属性值。
+```
+
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+let by: By = BY.id(123); // 使用静态构造器BY创建by对象，指定目标控件的id属性。
+```
+
 
 ## id
 
@@ -60,4 +83,8 @@ Specifies the id of the target Component.
 | 类型 | 说明 |
 | --- | --- |
 | [On](arkts-test-uitest-on-c.md) | this { |
+
+**示例**
+
+参见 [id](#id)
 

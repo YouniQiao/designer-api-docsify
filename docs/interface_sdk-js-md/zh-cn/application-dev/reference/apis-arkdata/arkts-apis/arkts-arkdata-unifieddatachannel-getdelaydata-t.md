@@ -28,3 +28,54 @@ type GetDelayData = (type: string) => UnifiedData
 | --- | --- |
 | UnifiedData | 当延迟回调触发时，返回包含相应类型数据的UnifiedData对象，可用于跨应用数据共享和传输。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+
+let getDelayData: unifiedDataChannel.GetDelayData = ((type: string) => {
+  if (type == uniformTypeDescriptor.UniformDataType.PLAIN_TEXT) {
+    let plainTextDetails: Record<string, string> = {
+      'attr1': 'value1',
+      'attr2': 'value2'
+    };
+    let plainText: uniformDataStruct.PlainText = {
+      uniformDataType: 'general.plain-text',
+      textContent: 'This is a plain text example',
+      abstract: 'This is abstract',
+      details: plainTextDetails
+    };
+    let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
+    let textData = new unifiedDataChannel.UnifiedData(text);
+    return textData;
+  }
+  return new unifiedDataChannel.UnifiedData();
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+
+let getDelayData: unifiedDataChannel.GetDelayData = ((type: string) => {
+  if (type == 'general.plain-text') {
+    let plainTextDetails: Record<string, string> = {
+      'attr1': 'value1',
+      'attr2': 'value2'
+    }
+    let plainText: uniformDataStruct.PlainText = {
+      uniformDataType: 'general.plain-text',
+      textContent: 'This is a plain text example',
+      textAbstract: 'This is a text abstract',
+      details: plainTextDetails
+    }
+    let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
+    return new unifiedDataChannel.UnifiedData(text);
+  }
+  return new unifiedDataChannel.UnifiedData();
+});
+```
+

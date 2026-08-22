@@ -59,6 +59,23 @@ try {
 }
 ```
 
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  missionManager.clearAllMissions().then((data) => {
+    console.info(`clearAllMissions successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((error: Error) => {
+    let err: BusinessError = error as BusinessError;
+    console.error(`clearAllMissions failed. Code: ${err.code}, message: ${err.message}.`);
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`clearAllMissions failed. Code: ${err.code}, message: ${err.message}.`);
+}
+```
+
 
 ## clearAllMissions
 
@@ -93,20 +110,5 @@ function clearAllMissions(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  missionManager.clearAllMissions().then((data) => {
-    console.info(`clearAllMissions successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: Error) => {
-    let err: BusinessError = error as BusinessError;
-    console.error(`clearAllMissions failed. Code: ${err.code}, message: ${err.message}.`);
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`clearAllMissions failed. Code: ${err.code}, message: ${err.message}.`);
-}
-```
+参见 [clearAllMissions](#clearallmissions)
 

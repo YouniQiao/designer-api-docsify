@@ -41,6 +41,16 @@ wallpaper.getMinHeight((error: BusinessError, data: number) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+wallpaper.getMinHeight().then((data: number) => {
+    console.info(`success to getMinHeight: ${JSON.stringify(data)}`);
+}).catch((error: BusinessError) => {
+    console.error(`Failed to getMinHeight. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
 
 ## getMinHeight
 
@@ -66,13 +76,5 @@ function getMinHeight(): Promise<number>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-wallpaper.getMinHeight().then((data: number) => {
-    console.info(`success to getMinHeight: ${JSON.stringify(data)}`);
-}).catch((error: BusinessError) => {
-    console.error(`Failed to getMinHeight. Code: ${error.code}, message: ${error.message}`);
-});
-```
+参见 [getMinHeight](#getminheight)
 

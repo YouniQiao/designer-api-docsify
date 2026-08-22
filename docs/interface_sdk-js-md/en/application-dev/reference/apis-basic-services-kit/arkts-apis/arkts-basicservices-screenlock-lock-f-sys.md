@@ -28,7 +28,7 @@ Lock the screen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | the callback of lock. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of lock. |
 
 **Error codes:**
 
@@ -50,6 +50,16 @@ screenLock.lock((err: BusinessError, data: Boolean) => {
     return;
   }
   console.info(`Succeeded in locking the screen. result: ${data}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+screenLock.lock().then((data: Boolean) => {
+  console.info(`Succeeded in locking the screen. result: ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to lock the screen, Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -88,13 +98,5 @@ Lock the screen.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-screenLock.lock().then((data: Boolean) => {
-  console.info(`Succeeded in locking the screen. result: ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to lock the screen, Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [lock](#lock)
 

@@ -46,6 +46,17 @@ observer.onSignalInfoChange((data: Array<radio.SignalInformation>) => {
 });
 ```
 
+```TypeScript
+import { radio } from '@kit.TelephonyKit';
+
+let options: observer.ObserverOptions = {
+    slotId: 0
+}
+observer.onSignalInfoChange(options, (data: Array<radio.SignalInformation>) => {
+    console.info(`onSignalInfoChange, data->${JSON.stringify(data)}`);
+});
+```
+
 
 ## onSignalInfoChange
 
@@ -80,14 +91,5 @@ Callback when the signal strength corresponding to a monitored {@code slotId} is
 
 **示例**
 
-```TypeScript
-import { radio } from '@kit.TelephonyKit';
-
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.onSignalInfoChange(options, (data: Array<radio.SignalInformation>) => {
-    console.info(`onSignalInfoChange, data->${JSON.stringify(data)}`);
-});
-```
+参见 [onSignalInfoChange](#onsignalinfochange)
 

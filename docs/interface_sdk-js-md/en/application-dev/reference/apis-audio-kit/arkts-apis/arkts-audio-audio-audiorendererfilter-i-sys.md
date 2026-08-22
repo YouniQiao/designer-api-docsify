@@ -71,3 +71,18 @@ Application uid.
 
 **System API:** This is a system API.
 
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let outputAudioRendererFilter: audio.AudioRendererFilter = {
+  uid : 20010041,
+  rendererInfo : {
+    usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
+    rendererFlags : 0
+  },
+  rendererId : 0
+};
+```
+

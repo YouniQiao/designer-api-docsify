@@ -26,7 +26,7 @@ Unsubscribe continuous location error changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocationError](arkts-location-geolocationmanager-locationerror-e.md)&gt; | No | Indicates the callback for reporting the continuous location error. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocationError](arkts-location-geolocationmanager-locationerror-e.md)&gt; | No | Indicates the callback for reporting the continuous location error. |
 
 **Error codes:**
 

@@ -57,6 +57,18 @@ sim.setShowName(0, name, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+let name: string = "ShowName";
+sim.setShowName(0, name).then(() => {
+    console.info(`setShowName success.`);
+}).catch((err: BusinessError) => {
+    console.error(`setShowName failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## setShowName
 
@@ -104,15 +116,5 @@ Set the SIM card display name of the specified card slot.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let name: string = "ShowName";
-sim.setShowName(0, name).then(() => {
-    console.info(`setShowName success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setShowName failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [setShowName](#setshowname)
 

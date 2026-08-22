@@ -58,173 +58,37 @@ canPreconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): boo
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
-## offAutoDeviceSwitchStatusChange
+**示例**
 
 ```TypeScript
-offAutoDeviceSwitchStatusChange(callback?: AsyncCallback<AutoDeviceSwitchStatus>): void
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function testCanPreconfig(photoSession: camera.PhotoSession, preconfigType: camera.PreconfigType,
+  preconfigRatio: camera.PreconfigRatio): void {
+  try {
+    let result = photoSession.canPreconfig(preconfigType, preconfigRatio);
+    console.info(`canPreconfig ${preconfigType} ${preconfigRatio} result is : ${result}`);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The canPreconfig call failed. error code: ${err.code}`);
+  }
+}
 ```
-
-Unsubscribes to auto device switch status event callback.
-
-**起始版本：** 23
-
-<!--Device-PhotoSession-offAutoDeviceSwitchStatusChange(callback?: AsyncCallback<AutoDeviceSwitchStatus>): void--><!--Device-PhotoSession-offAutoDeviceSwitchStatusChange(callback?: AsyncCallback<AutoDeviceSwitchStatus>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md)&gt; | 否 | Callback used to return the result. |
-
-## offError
 
 ```TypeScript
-offError(callback?: ErrorCallback): void
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function testCanPreconfig(videoSession: camera.VideoSession, preconfigType: camera.PreconfigType,
+  preconfigRatio: camera.PreconfigRatio): void {
+  try {
+    let result = videoSession.canPreconfig(preconfigType, preconfigRatio);
+    console.info(`canPreconfig ${preconfigType} ${preconfigRatio} result is : ${result}`);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The canPreconfig call failed. error code: ${err.code}`);
+  }
+}
 ```
-
-Unsubscribes from error events.
-
-**起始版本：** 23
-
-<!--Device-PhotoSession-offError(callback?: ErrorCallback): void--><!--Device-PhotoSession-offError(callback?: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to get the capture session errors. |
-
-## offExposureInfoChange
-
-```TypeScript
-offExposureInfoChange(callback?: Callback<ExposureInfo>): void
-```
-
-取消订阅曝光信息变化事件回调。如果订阅了曝光信息，请在释放相机前取消订阅。使用callback异步回调。
-
-**起始版本：** 24
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PhotoSession-offExposureInfoChange(callback?: Callback<ExposureInfo>): void--><!--Device-PhotoSession-offExposureInfoChange(callback?: Callback<ExposureInfo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
-
-## offFocusStateChange
-
-```TypeScript
-offFocusStateChange(callback?: AsyncCallback<FocusState>): void
-```
-
-Unsubscribes from focus state change event callback.
-
-**起始版本：** 23
-
-<!--Device-PhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void--><!--Device-PhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 | Callback used to get the focus state change. |
-
-## offIsoInfoChange
-
-```TypeScript
-offIsoInfoChange(callback?: Callback<IsoInfo>): void
-```
-
-取消订阅ISO信息变化事件回调。
-
-**起始版本：** 24
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PhotoSession-offIsoInfoChange(callback?: Callback<IsoInfo>): void--><!--Device-PhotoSession-offIsoInfoChange(callback?: Callback<IsoInfo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
-
-## offMacroStatusChanged
-
-```TypeScript
-offMacroStatusChanged(callback?: AsyncCallback<boolean>): void
-```
-
-Unsubscribes camera macro status event callback.
-
-**起始版本：** 23
-
-<!--Device-PhotoSession-offMacroStatusChanged(callback?: AsyncCallback<boolean>): void--><!--Device-PhotoSession-offMacroStatusChanged(callback?: AsyncCallback<boolean>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 否 | Callback used to return macro detection result, true indicating macro scene is detected and can be enabled, false indicating no macro scene is detected, and macro should be disabled. |
-
-## offSmoothZoomInfoAvailable
-
-```TypeScript
-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void
-```
-
-Unsubscribes from zoom info event callback.
-
-**起始版本：** 23
-
-<!--Device-PhotoSession-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PhotoSession-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 否 | Callback used to get the zoom info. |
-
-## offSystemPressureLevelChange
-
-```TypeScript
-offSystemPressureLevelChange(callback?: AsyncCallback<SystemPressureLevel>): void
-```
-
-Unsubscribes to system pressure level event callback.
-
-**起始版本：** 23
-
-<!--Device-PhotoSession-offSystemPressureLevelChange(callback?: AsyncCallback<SystemPressureLevel>): void--><!--Device-PhotoSession-offSystemPressureLevelChange(callback?: AsyncCallback<SystemPressureLevel>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | 否 | Callback used to return the result. |
 
 ## off('autoDeviceSwitchStatusChange')
 
@@ -341,17 +205,17 @@ off(type: 'systemPressureLevelChange', callback?: AsyncCallback<SystemPressureLe
 | type | 'systemPressureLevelChange' | 是 | 注销监听事件，固定为'systemPressureLevelChange'，session创建成功可触发此事件。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback (callback对象不可是匿名函数)，否则参数默认为空， 取消所有callback。 |
 
-## onAutoDeviceSwitchStatusChange
+## offAutoDeviceSwitchStatusChange
 
 ```TypeScript
-onAutoDeviceSwitchStatusChange(callback: AsyncCallback<AutoDeviceSwitchStatus>): void
+offAutoDeviceSwitchStatusChange(callback?: AsyncCallback<AutoDeviceSwitchStatus>): void
 ```
 
-Subscribes to auto device switch status event callback.
+Unsubscribes to auto device switch status event callback.
 
 **起始版本：** 23
 
-<!--Device-PhotoSession-onAutoDeviceSwitchStatusChange(callback: AsyncCallback<AutoDeviceSwitchStatus>): void--><!--Device-PhotoSession-onAutoDeviceSwitchStatusChange(callback: AsyncCallback<AutoDeviceSwitchStatus>): void-End-->
+<!--Device-PhotoSession-offAutoDeviceSwitchStatusChange(callback?: AsyncCallback<AutoDeviceSwitchStatus>): void--><!--Device-PhotoSession-offAutoDeviceSwitchStatusChange(callback?: AsyncCallback<AutoDeviceSwitchStatus>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -359,19 +223,19 @@ Subscribes to auto device switch status event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md)&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md)&gt; | 否 | Callback used to return the result. |
 
-## onError
+## offError
 
 ```TypeScript
-onError(callback: ErrorCallback): void
+offError(callback?: ErrorCallback): void
 ```
 
-Subscribes to error events.
+Unsubscribes from error events.
 
 **起始版本：** 23
 
-<!--Device-PhotoSession-onError(callback: ErrorCallback): void--><!--Device-PhotoSession-onError(callback: ErrorCallback): void-End-->
+<!--Device-PhotoSession-offError(callback?: ErrorCallback): void--><!--Device-PhotoSession-offError(callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -379,15 +243,29 @@ Subscribes to error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to get the capture session errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to get the capture session errors. |
 
-## onExposureInfoChange
+**示例**
 
 ```TypeScript
-onExposureInfoChange(callback: Callback<ExposureInfo>): void
+function unregisterCameraInputError(cameraInput: camera.CameraInput, camera: camera.CameraDevice): void {
+   cameraInput.offError(camera);
+}
 ```
 
-订阅曝光信息变化事件回调。曝光参数更改后，系统将返回更新后的曝光信息。使用callback异步回调。
+```TypeScript
+function unregisterMetadataOutputError(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.offError();
+}
+```
+
+## offExposureInfoChange
+
+```TypeScript
+offExposureInfoChange(callback?: Callback<ExposureInfo>): void
+```
+
+取消订阅曝光信息变化事件回调。如果订阅了曝光信息，请在释放相机前取消订阅。使用callback异步回调。
 
 **起始版本：** 24
 
@@ -395,7 +273,7 @@ onExposureInfoChange(callback: Callback<ExposureInfo>): void
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
-<!--Device-PhotoSession-onExposureInfoChange(callback: Callback<ExposureInfo>): void--><!--Device-PhotoSession-onExposureInfoChange(callback: Callback<ExposureInfo>): void-End-->
+<!--Device-PhotoSession-offExposureInfoChange(callback?: Callback<ExposureInfo>): void--><!--Device-PhotoSession-offExposureInfoChange(callback?: Callback<ExposureInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -403,19 +281,33 @@ onExposureInfoChange(callback: Callback<ExposureInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | 是 | 回调函数，用于获取曝光值变化信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
-## onFocusStateChange
+**示例**
 
 ```TypeScript
-onFocusStateChange(callback: AsyncCallback<FocusState>): void
+function offExposureInfoChange(photoSession: camera.PhotoSession): void {
+  photoSession.offExposureInfoChange();
+}
 ```
 
-Subscribes focus state change event callback.
+```TypeScript
+function offExposureInfoChange(videoSession: camera.VideoSession): void {
+  videoSession.offExposureInfoChange();
+}
+```
+
+## offFocusStateChange
+
+```TypeScript
+offFocusStateChange(callback?: AsyncCallback<FocusState>): void
+```
+
+Unsubscribes from focus state change event callback.
 
 **起始版本：** 23
 
-<!--Device-PhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void--><!--Device-PhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void-End-->
+<!--Device-PhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void--><!--Device-PhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -423,15 +315,15 @@ Subscribes focus state change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 | Callback used to get the focus state change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 | Callback used to get the focus state change. |
 
-## onIsoInfoChange
+## offIsoInfoChange
 
 ```TypeScript
-onIsoInfoChange(callback: Callback<IsoInfo>): void
+offIsoInfoChange(callback?: Callback<IsoInfo>): void
 ```
 
-订阅ISO信息变化事件回调。
+取消订阅ISO信息变化事件回调。
 
 **起始版本：** 24
 
@@ -439,7 +331,7 @@ onIsoInfoChange(callback: Callback<IsoInfo>): void
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
-<!--Device-PhotoSession-onIsoInfoChange(callback: Callback<IsoInfo>): void--><!--Device-PhotoSession-onIsoInfoChange(callback: Callback<IsoInfo>): void-End-->
+<!--Device-PhotoSession-offIsoInfoChange(callback?: Callback<IsoInfo>): void--><!--Device-PhotoSession-offIsoInfoChange(callback?: Callback<IsoInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -447,19 +339,41 @@ onIsoInfoChange(callback: Callback<IsoInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | 是 | 回调函数，用于获取ISO信息变化信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
-## onMacroStatusChanged
+**示例**
 
 ```TypeScript
-onMacroStatusChanged(callback: AsyncCallback<boolean>): void
+function offIsoInfoChange(photoSession: camera.PhotoSession): void {
+  photoSession.offIsoInfoChange();
+}
 ```
 
-Subscribes camera macro status event callback.
+```TypeScript
+function callback(isoInfo: camera.IsoInfo): void {
+  console.info(`Iso : ${isoInfo}`);
+}
+
+function unregisterIsoInfoChanged(videoSession: camera.VideoSession): void {
+  videoSession.offIsoInfoChange(callback);
+}
+
+function unregisterAllIsoInfoChanged(videoSession: camera.VideoSession): void {
+  videoSession.offIsoInfoChange();
+}
+```
+
+## offMacroStatusChanged
+
+```TypeScript
+offMacroStatusChanged(callback?: AsyncCallback<boolean>): void
+```
+
+Unsubscribes camera macro status event callback.
 
 **起始版本：** 23
 
-<!--Device-PhotoSession-onMacroStatusChanged(callback: AsyncCallback<boolean>): void--><!--Device-PhotoSession-onMacroStatusChanged(callback: AsyncCallback<boolean>): void-End-->
+<!--Device-PhotoSession-offMacroStatusChanged(callback?: AsyncCallback<boolean>): void--><!--Device-PhotoSession-offMacroStatusChanged(callback?: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -467,19 +381,19 @@ Subscribes camera macro status event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Callback used to return macro detection result, true indicating macro scene is detected and can be enabled, false indicating no macro scene is detected, and macro should be disabled. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 否 | Callback used to return macro detection result, true indicating macro scene is detected and can be enabled, false indicating no macro scene is detected, and macro should be disabled. |
 
-## onSmoothZoomInfoAvailable
+## offSmoothZoomInfoAvailable
 
 ```TypeScript
-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void
+offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void
 ```
 
-Subscribes zoom info event callback.
+Unsubscribes from zoom info event callback.
 
 **起始版本：** 23
 
-<!--Device-PhotoSession-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PhotoSession-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void-End-->
+<!--Device-PhotoSession-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PhotoSession-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -487,19 +401,19 @@ Subscribes zoom info event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 是 | Callback used to get the zoom info. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 否 | Callback used to get the zoom info. |
 
-## onSystemPressureLevelChange
+## offSystemPressureLevelChange
 
 ```TypeScript
-onSystemPressureLevelChange(callback: AsyncCallback<SystemPressureLevel>): void
+offSystemPressureLevelChange(callback?: AsyncCallback<SystemPressureLevel>): void
 ```
 
-Subscribes to system pressure level event callback.
+Unsubscribes to system pressure level event callback.
 
 **起始版本：** 23
 
-<!--Device-PhotoSession-onSystemPressureLevelChange(callback: AsyncCallback<SystemPressureLevel>): void--><!--Device-PhotoSession-onSystemPressureLevelChange(callback: AsyncCallback<SystemPressureLevel>): void-End-->
+<!--Device-PhotoSession-offSystemPressureLevelChange(callback?: AsyncCallback<SystemPressureLevel>): void--><!--Device-PhotoSession-offSystemPressureLevelChange(callback?: AsyncCallback<SystemPressureLevel>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -507,7 +421,7 @@ Subscribes to system pressure level event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | 否 | Callback used to return the result. |
 
 ## on('autoDeviceSwitchStatusChange')
 
@@ -644,6 +558,238 @@ on(type: 'systemPressureLevelChange', callback: AsyncCallback<SystemPressureLeve
 | type | 'systemPressureLevelChange' | 是 | 监听事件，固定为'systemPressureLevelChange'，session创建成功可监听。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | 是 | 回调函数，用于获取当前系统压力状态. |
 
+## onAutoDeviceSwitchStatusChange
+
+```TypeScript
+onAutoDeviceSwitchStatusChange(callback: AsyncCallback<AutoDeviceSwitchStatus>): void
+```
+
+Subscribes to auto device switch status event callback.
+
+**起始版本：** 23
+
+<!--Device-PhotoSession-onAutoDeviceSwitchStatusChange(callback: AsyncCallback<AutoDeviceSwitchStatus>): void--><!--Device-PhotoSession-onAutoDeviceSwitchStatusChange(callback: AsyncCallback<AutoDeviceSwitchStatus>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md)&gt; | 是 | Callback used to return the result. |
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to error events.
+
+**起始版本：** 23
+
+<!--Device-PhotoSession-onError(callback: ErrorCallback): void--><!--Device-PhotoSession-onError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to get the capture session errors. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(err: BusinessError): void {
+  console.error(`Camera input error code: ${err.code}`);
+}
+
+function registerCameraInputError(cameraInput: camera.CameraInput, camera: camera.CameraDevice): void {
+   cameraInput.onError(camera, callback);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(metadataOutputError: BusinessError): void {
+  console.error(`Metadata output error code: ${metadataOutputError.code}`);
+}
+
+function registerMetadataOutputError(metadataOutput: camera.MetadataOutput): void {
+   metadataOutput.onError(callback);
+}
+```
+
+## onExposureInfoChange
+
+```TypeScript
+onExposureInfoChange(callback: Callback<ExposureInfo>): void
+```
+
+订阅曝光信息变化事件回调。曝光参数更改后，系统将返回更新后的曝光信息。使用callback异步回调。
+
+**起始版本：** 24
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhotoSession-onExposureInfoChange(callback: Callback<ExposureInfo>): void--><!--Device-PhotoSession-onExposureInfoChange(callback: Callback<ExposureInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | 是 | 回调函数，用于获取曝光值变化信息。 |
+
+**示例**
+
+```TypeScript
+function onExposureInfoChange(photoSession: camera.PhotoSession): void {
+  photoSession.onExposureInfoChange((exposureInfo: camera.ExposureInfo) => {
+    console.info(`Exposure info changed, exposureTime: ${exposureInfo.exposureTime}`);
+  });
+}
+```
+
+```TypeScript
+function onExposureInfoChange(videoSession: camera.VideoSession): void {
+  videoSession.onExposureInfoChange((exposureInfo: camera.ExposureInfo) => {
+    console.info(`Exposure info changed, exposureTime: ${exposureInfo.exposureTime}`);
+  });
+}
+```
+
+## onFocusStateChange
+
+```TypeScript
+onFocusStateChange(callback: AsyncCallback<FocusState>): void
+```
+
+Subscribes focus state change event callback.
+
+**起始版本：** 23
+
+<!--Device-PhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void--><!--Device-PhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 | Callback used to get the focus state change. |
+
+## onIsoInfoChange
+
+```TypeScript
+onIsoInfoChange(callback: Callback<IsoInfo>): void
+```
+
+订阅ISO信息变化事件回调。
+
+**起始版本：** 24
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhotoSession-onIsoInfoChange(callback: Callback<IsoInfo>): void--><!--Device-PhotoSession-onIsoInfoChange(callback: Callback<IsoInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | 是 | 回调函数，用于获取ISO信息变化信息。 |
+
+**示例**
+
+```TypeScript
+function onIsoInfoChange(photoSession: camera.PhotoSession): void {
+  photoSession.onIsoInfoChange((isoInfo: camera.IsoInfo) => {
+    console.info(`ISO info changed, iso: ${isoInfo.iso}`);
+  });
+}
+```
+
+```TypeScript
+function callback(isoInfo: camera.IsoInfo): void {
+  console.info(`Iso : ${isoInfo}`);
+}
+
+function registerIsoInfoChanged(videoSession: camera.VideoSession): void {
+  videoSession.onIsoInfoChange(callback);
+}
+```
+
+## onMacroStatusChanged
+
+```TypeScript
+onMacroStatusChanged(callback: AsyncCallback<boolean>): void
+```
+
+Subscribes camera macro status event callback.
+
+**起始版本：** 23
+
+<!--Device-PhotoSession-onMacroStatusChanged(callback: AsyncCallback<boolean>): void--><!--Device-PhotoSession-onMacroStatusChanged(callback: AsyncCallback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Callback used to return macro detection result, true indicating macro scene is detected and can be enabled, false indicating no macro scene is detected, and macro should be disabled. |
+
+## onSmoothZoomInfoAvailable
+
+```TypeScript
+onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void
+```
+
+Subscribes zoom info event callback.
+
+**起始版本：** 23
+
+<!--Device-PhotoSession-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PhotoSession-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 是 | Callback used to get the zoom info. |
+
+## onSystemPressureLevelChange
+
+```TypeScript
+onSystemPressureLevelChange(callback: AsyncCallback<SystemPressureLevel>): void
+```
+
+Subscribes to system pressure level event callback.
+
+**起始版本：** 23
+
+<!--Device-PhotoSession-onSystemPressureLevelChange(callback: AsyncCallback<SystemPressureLevel>): void--><!--Device-PhotoSession-onSystemPressureLevelChange(callback: AsyncCallback<SystemPressureLevel>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | 是 | Callback used to return the result. |
+
 ## preconfig
 
 ```TypeScript
@@ -672,4 +818,36 @@ preconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function testPreconfig(photoSession: camera.PhotoSession, preconfigType: camera.PreconfigType,
+  preconfigRatio: camera.PreconfigRatio): void {
+  try {
+    photoSession.preconfig(preconfigType, preconfigRatio);
+    console.info(`preconfig success preconfigType: ${preconfigType}, preconfigRatio: ${preconfigRatio}`);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The preconfig call failed. error code: ${err.code}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function testPreconfig(videoSession: camera.VideoSession, preconfigType: camera.PreconfigType,
+  preconfigRatio: camera.PreconfigRatio): void {
+  try {
+    videoSession.preconfig(preconfigType, preconfigRatio);
+    console.info(`preconfig ${preconfigType} ${preconfigRatio} success`);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The preconfig call failed. error code: ${err.code}`);
+  }
+}
+```
 

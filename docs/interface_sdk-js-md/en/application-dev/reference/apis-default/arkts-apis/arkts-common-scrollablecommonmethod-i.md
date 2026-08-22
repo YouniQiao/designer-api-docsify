@@ -74,7 +74,7 @@ clipContent(clip: ContentClipMode | RectShape | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| clip | [ContentClipMode](arkts-common-contentclipmode-e.md) \| [RectShape](arkts-arkuishape-rectshape-c.md) \| undefined | Yes |  |
+| clip | [ContentClipMode](arkts-common-contentclipmode-e.md) \| [RectShape](arkts-arkui-shape-rectshape-c.md) \| undefined | Yes |  |
 
 **Return value:**
 

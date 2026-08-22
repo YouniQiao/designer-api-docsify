@@ -111,6 +111,10 @@ Creates a new Blob object containing a concatenation of the given sources.
 | sources | [ArrayUnionType](arkts-arkts-buffer-arrayuniontype-t.md) | Yes | The sources to store within the Blob |
 | options | [BlobOptions](arkts-arkts-buffer-bloboptions-i.md) | No | Blob options {endings: string, type: string} endings: One of either 'transparent' or 'native'. type: The Blob content-type |
 
+**Examples**
+
+See [constructor](#constructor)
+
 ## slice
 
 ```TypeScript

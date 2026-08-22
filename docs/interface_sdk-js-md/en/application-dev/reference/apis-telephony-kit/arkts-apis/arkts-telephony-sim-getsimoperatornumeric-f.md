@@ -27,7 +27,7 @@ Obtains the home PLMN number of the SIM card in a specified slot.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Indicates the callback for getting the PLMN number; returns an empty string if no SIM card is inserted. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Indicates the callback for getting the PLMN number; returns an empty string if no SIM card is inserted. |
 
 **Error codes:**
 
@@ -48,6 +48,17 @@ import { sim } from '@kit.TelephonyKit';
 
 sim.getSimOperatorNumeric(0, (err: BusinessError, data: string) => {
     console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.getSimOperatorNumeric(0).then((data: string) => {
+    console.info(`getSimOperatorNumeric success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSimOperatorNumeric failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -93,14 +104,5 @@ Obtains the home PLMN number of the SIM card in a specified slot.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getSimOperatorNumeric(0).then((data: string) => {
-    console.info(`getSimOperatorNumeric success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSimOperatorNumeric failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getSimOperatorNumeric](#getsimoperatornumeric)
 

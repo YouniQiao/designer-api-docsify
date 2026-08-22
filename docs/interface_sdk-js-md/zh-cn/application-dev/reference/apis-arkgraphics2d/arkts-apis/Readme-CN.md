@@ -198,4 +198,4 @@
     <!--Del-->
     - [WaterRippleMode(系统接口)](arkts-arkgraphics2d-uieffect-waterripplemode-e-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [BrightnessBlenderParam(系统接口)](arkts-arkgraphics2d-graphicsuieffect-brightnessblenderparam-i-sys.md)<!--DelEnd-->
+  - [BrightnessBlenderParam(系统接口)](arkts-arkgraphics2d-graphics-uieffect-brightnessblenderparam-i-sys.md)<!--DelEnd-->

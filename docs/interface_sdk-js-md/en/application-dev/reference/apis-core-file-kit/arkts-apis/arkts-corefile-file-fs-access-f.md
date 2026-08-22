@@ -31,7 +31,7 @@ If the read, write, or read and write permission verification fails, the error c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file or directory. |
-| mode | [AccessModeType](arkts-corefile-filefs-accessmodetype-e.md) | No | Permission on the file or directory to check. If this parameter is left blank, the system checks whether the file exists.<br>**Since:** 12 |
+| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | No | Permission on the file or directory to check. If this parameter is left blank, the system checks whether the file exists.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -56,6 +56,52 @@ If the read, write, or read and write permission verification fails, the error c
 | 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + "/test.txt";
+fs.access(filePath).then((res: boolean) => {
+  if (res) {
+    console.info("file exists");
+  } else {
+    console.info("file not exists");
+  }
+}).catch((err: BusinessError) => {
+  console.error("access failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + "/test.txt";
+fs.access(filePath, fs.AccessModeType.EXIST, fs.AccessFlagType.LOCAL).then((res: boolean) => {
+  if (res) {
+    console.info("file exists");
+  } else {
+    console.info("file not exists");
+  }
+}).catch((err: BusinessError) => {
+  console.error("access failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + "/test.txt";
+fs.access(filePath, (err: BusinessError, res: boolean) => {
+  if (err) {
+    console.error("access failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    if (res) {
+      console.info("file exists");
+    } else {
+      console.info("file not exists");
+    }
+  }
+});
+```
+
 
 ## access
 
@@ -78,7 +124,7 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file or directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the file exists; the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the file exists; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -96,6 +142,10 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 | 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [access](#access)
 
 
 ## access
@@ -119,8 +169,8 @@ If the read, write, or read and write permission verification fails, the error c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file or directory. |
-| mode | [AccessModeType](arkts-corefile-filefs-accessmodetype-e.md) | Yes | Permission on the file or directory to check. |
-| flag | [AccessFlagType](arkts-corefile-filefs-accessflagtype-e.md) | Yes | Position of the file or directory to check. |
+| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | Yes | Permission on the file or directory to check. |
+| flag | [AccessFlagType](arkts-corefile-file-fs-accessflagtype-e.md) | Yes | Position of the file or directory to check. |
 
 **Return value:**
 
@@ -142,4 +192,8 @@ If the read, write, or read and write permission verification fails, the error c
 | 13900023 | Text file busy |
 | 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
+
+**Examples**
+
+See [access](#access)
 

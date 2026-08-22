@@ -77,6 +77,31 @@ let cancelAllCallback = (err: BusinessError | null): void => {
 notificationManager.cancelAll(cancelAllCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.cancelAll().then(() => {
+  console.info(`Succeeded in canceling all notification.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to cancel all notification. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.cancelAll().then(() => {
+  console.info(`Succeeded in canceling all notification.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to cancel all notification. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## cancelAll
 
@@ -116,28 +141,5 @@ cancel 根据指定的通知ID取消已发布的通知。
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.cancelAll().then(() => {
-  console.info(`Succeeded in canceling all notification.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to cancel all notification. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.cancelAll().then(() => {
-  console.info(`Succeeded in canceling all notification.`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to cancel all notification. Code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [cancelAll](#cancelall)
 

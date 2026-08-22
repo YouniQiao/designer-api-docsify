@@ -2,7 +2,7 @@
 
 Describe the subclass.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-hid-enum Subclass--><!--Device-hid-enum Subclass-End-->
 
@@ -16,7 +16,7 @@ SUBCLASS_UNCATEGORIZED = 0
 
 Uncategorized subclass.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +32,7 @@ SUBCLASS_JOYSTICK = 1
 
 Joystick subclass.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +48,7 @@ SUBCLASS_GAMEPAD = 2
 
 Gamepad subclass.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,7 +64,7 @@ SUBCLASS_REMOTE_CONTROL = 3
 
 Remote control subclass.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,7 +80,7 @@ SUBCLASS_SENSING_DEVICE = 4
 
 Sensing device subclass.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,7 +96,7 @@ SUBCLASS_DIGITIZER_TABLET = 5
 
 digitizer tablet subclass.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,7 +112,7 @@ SUBCLASS_CARD_READER = 6
 
 Card reader subclass.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,7 +128,7 @@ SUBCLASS_KEYBOARD = 64
 
 Keyboard subclass.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,7 +144,7 @@ SUBCLASS_MOUSE = 128
 
 Mouse subclass.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -160,7 +160,7 @@ SUBCLASS_COMBO = 192
 
 Combo subclass.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -25,7 +25,7 @@ Obtains the SIM card label.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | SIM card slot ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SimLabel](arkts-telephony-sim-simlabel-i.md)&gt; | Yes | Callback used to return the SIM card label. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SimLabel](arkts-telephony-sim-simlabel-i.md)&gt; | Yes | Callback used to return the SIM card label. |
 
 **Error codes:**
 
@@ -44,6 +44,17 @@ import { sim } from '@kit.TelephonyKit';
 
 sim.getSimLabel(0, (err: BusinessError, data: sim.SimLabel) => {
   console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.getSimLabel(0).then((data: sim.SimLabel) => {
+  console.info(`getSimLabel success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`getSimState failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -85,14 +96,5 @@ Obtains the SIM card label.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getSimLabel(0).then((data: sim.SimLabel) => {
-  console.info(`getSimLabel success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`getSimState failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getSimLabel](#getsimlabel)
 

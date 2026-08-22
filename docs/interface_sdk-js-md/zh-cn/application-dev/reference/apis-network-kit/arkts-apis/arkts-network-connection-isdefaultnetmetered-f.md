@@ -63,6 +63,14 @@ connection.isDefaultNetMetered((error: BusinessError|null, data: boolean|undefin
 });
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.isDefaultNetMetered().then((data: boolean) => {
+  console.info("Succeeded to get data: " + JSON.stringify(data));
+});
+```
+
 
 ## isDefaultNetMetered
 
@@ -96,11 +104,5 @@ function isDefaultNetMetered(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.isDefaultNetMetered().then((data: boolean) => {
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-});
-```
+参见 [isDefaultNetMetered](#isdefaultnetmetered)
 

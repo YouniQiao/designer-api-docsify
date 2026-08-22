@@ -41,6 +41,44 @@ getAudioStreamId(callback: AsyncCallback<long>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。当获取音频流id成功，err为undefined，data为获取到的音频流id；否则为错误对象。 |
 
+**示例**
+
+```TypeScript
+audioCapturer.getAudioStreamId((err, streamId) => {
+  if (err) {
+    console.error(`Failed to get audio stream id. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting audio stream id. AudioStreamId: ${streamId}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getAudioStreamId().then((streamId) => {
+  console.info(`Succeeded in getting audio stream id. AudioStreamId: ${streamId}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get audio stream id. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+audioRenderer.getAudioStreamId((err, streamId) => {
+  console.info(`Renderer GetStreamId: ${streamId}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.getAudioStreamId().then((streamId) => {
+  console.info(`Renderer getAudioStreamId: ${streamId}`);
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
+
 ## getAudioStreamId
 
 ```TypeScript
@@ -60,6 +98,10 @@ getAudioStreamId(): Promise<long>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;long&gt; | Promise对象，返回音频流id。 |
+
+**示例**
+
+参见 [getAudioStreamId](#getaudiostreamid)
 
 ## getAudioStreamIdSync
 
@@ -81,6 +123,32 @@ getAudioStreamIdSync(): long
 | --- | --- |
 | long | 返回音频流id。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let streamId = audioCapturer.getAudioStreamIdSync();
+  console.info(`Succeeded in getting audio stream id. AudioStreamId: ${streamId}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get audio stream id. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let streamId = audioRenderer.getAudioStreamIdSync();
+  console.info(`Renderer getAudioStreamIdSync: ${streamId}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error}`);
+}
+```
+
 ## getAudioTime
 
 ```TypeScript
@@ -100,6 +168,44 @@ getAudioTime(callback: AsyncCallback<long>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。当获取时间戳成功，err为undefined，data为获取到的时间戳；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+audioCapturer.getAudioTime((err, timestamp) => {
+  if (err) {
+    console.error(`Failed to get audio time. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting audio time. Timestamp: ${timestamp}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getAudioTime().then((timestamp) => {
+  console.info(`Succeeded in getting audio time. Timestamp: ${timestamp}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get audio time. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+audioRenderer.getAudioTime((err, timestamp) => {
+  console.info(`Current timestamp: ${timestamp}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.getAudioTime().then((timestamp) => {
+  console.info(`Current timestamp: ${timestamp}`);
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
 
 ## getAudioTime
 
@@ -121,25 +227,9 @@ getAudioTime(): Promise<long>
 | --- | --- |
 | Promise&lt;long&gt; | Promise对象，返回时间戳（从1970年1月1日开始）。 <br>单位为纳秒。 |
 
-## getAudioTimeSync
+**示例**
 
-```TypeScript
-getAudioTimeSync(): long
-```
-
-获取当前录制位置的时间戳（从1970年1月1日开始），单位为纳秒。同步返回结果。
-
-**起始版本：** 23
-
-<!--Device-AudioCapturer-getAudioTimeSync(): long--><!--Device-AudioCapturer-getAudioTimeSync(): long-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Capturer
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| long | 返回时间戳。 |
+参见 [getAudioTime](#getaudiotime)
 
 ## getAudioTimestampInfo
 
@@ -169,6 +259,28 @@ getAudioTimestampInfo(): Promise<AudioTimestampInfo>
 | --- | --- |
 | [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permit at current state. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getAudioTimestampInfo().then((audioTimestampInfo: audio.AudioTimestampInfo) => {
+  console.info(`Current timestamp: ${audioTimestampInfo.timestamp}`);
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.getAudioTimestampInfo().then((audioTimestampInfo: audio.AudioTimestampInfo) => {
+  console.info(`Current timestamp: ${audioTimestampInfo.timestamp}`);
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
+
 ## getAudioTimestampInfoSync
 
 ```TypeScript
@@ -195,6 +307,78 @@ getAudioTimestampInfoSync(): AudioTimestampInfo
 | --- | --- |
 | [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permit at current state. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let audioTimestampInfo: audio.AudioTimestampInfo = audioCapturer.getAudioTimestampInfoSync();
+  console.info(`Current timestamp: ${audioTimestampInfo.timestamp}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let audioTimestampInfo: audio.AudioTimestampInfo = audioRenderer.getAudioTimestampInfoSync();
+  console.info(`Current timestamp: ${audioTimestampInfo.timestamp}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error}`);
+}
+```
+
+## getAudioTimeSync
+
+```TypeScript
+getAudioTimeSync(): long
+```
+
+获取当前录制位置的时间戳（从1970年1月1日开始），单位为纳秒。同步返回结果。
+
+**起始版本：** 23
+
+<!--Device-AudioCapturer-getAudioTimeSync(): long--><!--Device-AudioCapturer-getAudioTimeSync(): long-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| long | 返回时间戳。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let timestamp = audioCapturer.getAudioTimeSync();
+  console.info(`Succeeded in getting audio time. Timestamp: ${timestamp}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get audio time. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let timestamp = audioRenderer.getAudioTimeSync();
+  console.info(`Current timestamp: ${timestamp}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error}`);
+}
+```
+
 ## getBufferSize
 
 ```TypeScript
@@ -214,6 +398,54 @@ getBufferSize(callback: AsyncCallback<long>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。当获取采集器合理的最小缓冲区大小成功，err为undefined，data为获取到的采集器合理的最小缓冲区大小；否则为错误对象。 <br>单位为字节。 |
+
+**示例**
+
+```TypeScript
+audioCapturer.getBufferSize((err, bufferSize) => {
+  if (err) {
+    console.error(`Failed to get buffer size. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting buffer size, BufferSize: ${bufferSize}.`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getBufferSize().then((bufferSize) => {
+  console.info(`Succeeded in getting buffer size, BufferSize: ${bufferSize}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get buffer size. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+let bufferSize;
+
+audioRenderer.getBufferSize((err, data) => {
+  if (err) {
+    console.error('getBufferSize error');
+  } else {
+    console.info(`AudioFrameworkRenderLog: getBufferSize: SUCCESS ${data}`);
+    bufferSize = data;
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bufferSize;
+
+audioRenderer.getBufferSize().then((data) => {
+  console.info(`AudioFrameworkRenderLog: getBufferSize: SUCCESS ${data}`);
+  bufferSize = data;
+}).catch((err: BusinessError) => {
+  console.error(`AudioFrameworkRenderLog: getBufferSize: ERROR: ${err}`);
+});
+```
 
 ## getBufferSize
 
@@ -235,6 +467,10 @@ getBufferSize(): Promise<long>
 | --- | --- |
 | Promise&lt;long&gt; | Promise对象，返回缓冲区大小。 <br>单位为字节。 |
 
+**示例**
+
+参见 [getBufferSize](#getbuffersize)
+
 ## getBufferSizeSync
 
 ```TypeScript
@@ -254,6 +490,34 @@ getBufferSizeSync(): long
 | 类型 | 说明 |
 | --- | --- |
 | long | 返回缓冲区大小，单位为字节。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let bufferSize = audioCapturer.getBufferSizeSync();
+  console.info(`Succeeded in getting buffer size, BufferSize: ${bufferSize}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get buffer size. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bufferSize = 0;
+
+try {
+  bufferSize = audioRenderer.getBufferSizeSync();
+  console.info(`AudioFrameworkRenderLog: getBufferSize: SUCCESS ${bufferSize}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`AudioFrameworkRenderLog: getBufferSize: ERROR: ${error}`);
+}
+```
 
 ## getCapturerInfo
 
@@ -275,6 +539,39 @@ getCapturerInfo(callback: AsyncCallback<AudioCapturerInfo>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)&gt; | 是 | 回调函数。当获取音频采集器信息成功，err为undefined，data为获取到的音频采集器信息；否则为错误对象。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getCapturerInfo((err: BusinessError, capturerInfo: audio.AudioCapturerInfo) => {
+  if (err) {
+    console.error('Failed to get capture info');
+  } else {
+    console.info('Capturer getCapturerInfo:');
+    console.info(`Capturer source: ${capturerInfo.source}`);
+    console.info(`Capturer flags: ${capturerInfo.capturerFlags}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getCapturerInfo().then((audioParamsGet: audio.AudioCapturerInfo) => {
+  if (audioParamsGet != undefined) {
+    console.info('AudioFrameworkRecLog: Capturer CapturerInfo:');
+    console.info(`AudioFrameworkRecLog: Capturer SourceType: ${audioParamsGet.source}`);
+    console.info(`AudioFrameworkRecLog: Capturer capturerFlags: ${audioParamsGet.capturerFlags}`);
+  } else {
+    console.info(`AudioFrameworkRecLog: audioParamsGet is : ${audioParamsGet}`);
+    console.info('AudioFrameworkRecLog: audioParams getCapturerInfo are incorrect');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`AudioFrameworkRecLog: CapturerInfo :ERROR: ${err}`);
+})
+```
+
 ## getCapturerInfo
 
 ```TypeScript
@@ -294,6 +591,10 @@ getCapturerInfo(): Promise<AudioCapturerInfo>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;[AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)&gt; | Promise对象，返回音频采集器信息。 |
+
+**示例**
+
+参见 [getCapturerInfo](#getcapturerinfo)
 
 ## getCapturerInfoSync
 
@@ -315,6 +616,21 @@ getCapturerInfoSync(): AudioCapturerInfo
 | --- | --- |
 | [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md) | 返回音频采集器信息。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let audioParamsGet: audio.AudioCapturerInfo = audioCapturer.getCapturerInfoSync();
+  console.info(`AudioFrameworkRecLog: Capturer SourceType: ${audioParamsGet.source}`);
+  console.info(`AudioFrameworkRecLog: Capturer capturerFlags: ${audioParamsGet.capturerFlags}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`AudioFrameworkRecLog: CapturerInfo :ERROR: ${error}`);
+}
+```
+
 ## getCurrentAudioCapturerChangeInfo
 
 ```TypeScript
@@ -335,6 +651,26 @@ getCurrentAudioCapturerChangeInfo(): AudioCapturerChangeInfo
 | --- | --- |
 | [AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md) | 同步接口，返回描述音频采集器更改信息。 |
 
+**示例**
+
+```TypeScript
+let info: audio.AudioCapturerChangeInfo = audioCapturer.getCurrentAudioCapturerChangeInfo();
+console.info(`Info streamId: ${info.streamId}`);
+console.info(`Info source: ${info.capturerInfo.source}`);
+console.info(`Info capturerFlags: ${info.capturerInfo.capturerFlags}`);
+console.info(`Info muted: ${info.muted}`);
+console.info(`Info type: ${info.deviceDescriptors[0].deviceType}`);
+console.info(`Info role: ${info.deviceDescriptors[0].deviceRole}`);
+console.info(`Info name: ${info.deviceDescriptors[0].name}`);
+console.info(`Info address: ${info.deviceDescriptors[0].address}`);
+console.info(`Info samplerates: ${info.deviceDescriptors[0].sampleRates[0]}`);
+console.info(`Info channelcounts: ${info.deviceDescriptors[0].channelCounts[0]}`);
+console.info(`Info channelmask: ${info.deviceDescriptors[0].channelMasks[0]}`);
+if (info.deviceDescriptors[0].encodingTypes) {
+  console.info(`Device encodingTypes: ${info.deviceDescriptors[0].encodingTypes[0]}`);
+}
+```
+
 ## getCurrentInputDevices
 
 ```TypeScript
@@ -354,6 +690,23 @@ getCurrentInputDevices(): AudioDeviceDescriptors
 | 类型 | 说明 |
 | --- | --- |
 | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 同步接口，返回设备属性数组类型数据。 |
+
+**示例**
+
+```TypeScript
+let deviceDescriptors: audio.AudioDeviceDescriptors = audioCapturer.getCurrentInputDevices();
+console.info(`Device id: ${deviceDescriptors[0].id}`);
+console.info(`Device type: ${deviceDescriptors[0].deviceType}`);
+console.info(`Device role: ${deviceDescriptors[0].deviceRole}`);
+console.info(`Device name: ${deviceDescriptors[0].name}`);
+console.info(`Device address: ${deviceDescriptors[0].address}`);
+console.info(`Device samplerates: ${deviceDescriptors[0].sampleRates[0]}`);
+console.info(`Device channelcounts: ${deviceDescriptors[0].channelCounts[0]}`);
+console.info(`Device channelmask: ${deviceDescriptors[0].channelMasks[0]}`);
+if (deviceDescriptors[0].encodingTypes) {
+  console.info(`Device encodingTypes: ${deviceDescriptors[0].encodingTypes[0]}`);
+}
+```
 
 ## getNoiseReductionMode
 
@@ -377,6 +730,13 @@ getNoiseReductionMode(): NoiseReductionMode
 | --- | --- |
 | [NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md) | 当前音频采集器的降噪模式， 默认值为{ |
 
+**示例**
+
+```TypeScript
+let noiseReductionMode: audio.NoiseReductionMode = audioCapturer.getNoiseReductionMode();
+console.info(`getNoiseReductionMode success: ${noiseReductionMode}`);
+```
+
 ## getOverflowCount
 
 ```TypeScript
@@ -396,6 +756,18 @@ getOverflowCount(): Promise<long>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;long&gt; | Promise对象，返回音频流的过载音频帧数量。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getOverflowCount().then((value) => {
+  console.info(`Get overflow count Success! ${value}`);
+}).catch((err: BusinessError) => {
+  console.error(`Get overflow count Fail: ${err}`);
+});
+```
 
 ## getOverflowCountSync
 
@@ -417,6 +789,20 @@ getOverflowCountSync(): long
 | --- | --- |
 | long | 返回音频流的过载音频帧数量。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let value = audioCapturer.getOverflowCountSync();
+  console.info(`Get overflow count Success! ${value}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Get overflow count Fail: ${error}`);
+}
+```
+
 ## getStreamInfo
 
 ```TypeScript
@@ -436,6 +822,64 @@ getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt; | 是 | 回调函数。当获取音频采集器流信息成功，err为undefined，data为获取到的音频采集器流信息；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getStreamInfo((err: BusinessError, streamInfo: audio.AudioStreamInfo) => {
+  if (err) {
+    console.error('Failed to get stream info');
+  } else {
+    console.info('Capturer GetStreamInfo:');
+    console.info(`Capturer sampling rate: ${streamInfo.samplingRate}`);
+    console.info(`Capturer channel: ${streamInfo.channels}`);
+    console.info(`Capturer format: ${streamInfo.sampleFormat}`);
+    console.info(`Capturer encoding type: ${streamInfo.encodingType}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getStreamInfo().then((audioParamsGet: audio.AudioStreamInfo) => {
+  console.info('getStreamInfo:');
+  console.info(`sampleFormat: ${audioParamsGet.sampleFormat}`);
+  console.info(`samplingRate: ${audioParamsGet.samplingRate}`);
+  console.info(`channels: ${audioParamsGet.channels}`);
+  console.info(`encodingType: ${audioParamsGet.encodingType}`);
+}).catch((err: BusinessError) => {
+  console.error(`getStreamInfo :ERROR: ${err}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.getStreamInfo((err: BusinessError, streamInfo: audio.AudioStreamInfo) => {
+  console.info('Renderer GetStreamInfo:');
+  console.info(`Renderer sampling rate: ${streamInfo.samplingRate}`);
+  console.info(`Renderer channel: ${streamInfo.channels}`);
+  console.info(`Renderer format: ${streamInfo.sampleFormat}`);
+  console.info(`Renderer encoding type: ${streamInfo.encodingType}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.getStreamInfo().then((streamInfo: audio.AudioStreamInfo) => {
+  console.info('Renderer GetStreamInfo:');
+  console.info(`Renderer sampling rate: ${streamInfo.samplingRate}`);
+  console.info(`Renderer channel: ${streamInfo.channels}`);
+  console.info(`Renderer format: ${streamInfo.sampleFormat}`);
+  console.info(`Renderer encoding type: ${streamInfo.encodingType}`);
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
 
 ## getStreamInfo
 
@@ -457,6 +901,10 @@ getStreamInfo(): Promise<AudioStreamInfo>
 | --- | --- |
 | Promise&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt; | Promise对象，返回音频流信息。 |
 
+**示例**
+
+参见 [getStreamInfo](#getstreaminfo)
+
 ## getStreamInfoSync
 
 ```TypeScript
@@ -476,6 +924,38 @@ getStreamInfoSync(): AudioStreamInfo
 | 类型 | 说明 |
 | --- | --- |
 | [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md) | 返回音频流信息。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let audioParamsGet: audio.AudioStreamInfo = audioCapturer.getStreamInfoSync();
+  console.info(`sampleFormat: ${audioParamsGet.sampleFormat}`);
+  console.info(`samplingRate: ${audioParamsGet.samplingRate}`);
+  console.info(`channels: ${audioParamsGet.channels}`);
+  console.info(`encodingType: ${audioParamsGet.encodingType}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getStreamInfo :ERROR: ${error}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let streamInfo: audio.AudioStreamInfo = audioRenderer.getStreamInfoSync();
+  console.info(`Renderer sampling rate: ${streamInfo.samplingRate}`);
+  console.info(`Renderer channel: ${streamInfo.channels}`);
+  console.info(`Renderer format: ${streamInfo.sampleFormat}`);
+  console.info(`Renderer encoding type: ${streamInfo.encodingType}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error}`);
+}
+```
 
 ## getSupportedNoiseReductionModes
 
@@ -505,163 +985,19 @@ getSupportedNoiseReductionModes(): Array<NoiseReductionMode>
 | --- | --- |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio server process died. |
 
-## offAudioCapturerChange
+**示例**
 
 ```TypeScript
-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfo>): void
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let supportedModes: Array<audio.NoiseReductionMode> = audioCapturer.getSupportedNoiseReductionModes();
+  console.info(`getSupportedNoiseReductionModes success: ${supportedModes}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getSupportedNoiseReductionModes failed. Code: ${error.code}, message: ${error.message}`);
+}
 ```
-
-Unsubscribes audio capturer info change event callback.
-
-**起始版本：** 23
-
-<!--Device-AudioCapturer-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfo>): void--><!--Device-AudioCapturer-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Capturer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | 否 | Callback used in subscribe. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-## offAudioInterrupt
-
-```TypeScript
-offAudioInterrupt(): void
-```
-
-UnSubscribes to audio interrupt events.
-
-**起始版本：** 23
-
-<!--Device-AudioCapturer-offAudioInterrupt(): void--><!--Device-AudioCapturer-offAudioInterrupt(): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Interrupt
-
-## offInputDeviceChange
-
-```TypeScript
-offInputDeviceChange(callback?: Callback<AudioDeviceDescriptors>): void
-```
-
-Unsubscribes input device change event callback.
-
-**起始版本：** 23
-
-<!--Device-AudioCapturer-offInputDeviceChange(callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioCapturer-offInputDeviceChange(callback?: Callback<AudioDeviceDescriptors>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Device
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | Callback used in subscribe. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-## offMarkReach
-
-```TypeScript
-offMarkReach(callback?: Callback<long>): void
-```
-
-Unsubscribes from the mark reached events.
-
-**起始版本：** 23
-
-<!--Device-AudioCapturer-offMarkReach(callback?: Callback<long>): void--><!--Device-AudioCapturer-offMarkReach(callback?: Callback<long>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Capturer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 否 | Callback invoked when the event is triggered. |
-
-## offPeriodReach
-
-```TypeScript
-offPeriodReach(callback?: Callback<long>): void
-```
-
-Unsubscribes from period reached events.
-
-**起始版本：** 23
-
-<!--Device-AudioCapturer-offPeriodReach(callback?: Callback<long>): void--><!--Device-AudioCapturer-offPeriodReach(callback?: Callback<long>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Capturer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 否 | Callback invoked when the event is triggered. |
-
-## offReadData
-
-```TypeScript
-offReadData(callback?: Callback<ArrayBuffer>): void
-```
-
-Unsubscribes audio data callback.
-
-**起始版本：** 23
-
-<!--Device-AudioCapturer-offReadData(callback?: Callback<ArrayBuffer>): void--><!--Device-AudioCapturer-offReadData(callback?: Callback<ArrayBuffer>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Capturer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 否 | Callback used in subscribe. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-## offStateChange
-
-```TypeScript
-offStateChange(callback?: Callback<AudioState>): void
-```
-
-Unsubscribes audio state change event callback.
-
-**起始版本：** 23
-
-<!--Device-AudioCapturer-offStateChange(callback?: Callback<AudioState>): void--><!--Device-AudioCapturer-offStateChange(callback?: Callback<AudioState>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Capturer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | 否 | Callback used to listen for the audio state change event. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## off('audioCapturerChange')
 
@@ -843,17 +1179,17 @@ off(type: 'stateChange', callback?: Callback<AudioState>): void
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## onAudioCapturerChange
+## offAudioCapturerChange
 
 ```TypeScript
-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfo>): void
+offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfo>): void
 ```
 
-Subscribes audio capturer info change event callback. The event is triggered when input device change for this stream.
+Unsubscribes audio capturer info change event callback.
 
 **起始版本：** 23
 
-<!--Device-AudioCapturer-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfo>): void--><!--Device-AudioCapturer-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfo>): void-End-->
+<!--Device-AudioCapturer-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfo>): void--><!--Device-AudioCapturer-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -861,7 +1197,7 @@ Subscribes audio capturer info change event callback. The event is triggered whe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | 是 | Callback used to listen device change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | 否 | Callback used in subscribe. |
 
 **错误码：**
 
@@ -869,43 +1205,124 @@ Subscribes audio capturer info change event callback. The event is triggered whe
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## onAudioInterrupt
+**示例**
 
 ```TypeScript
-onAudioInterrupt(callback: Callback<InterruptEvent>): void
+// 取消该事件的所有监听。
+audioCapturer.offAudioCapturerChange();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let audioCapturerChangeCallback = (capturerChangeInfo: audio.AudioCapturerChangeInfo) => {
+  console.info(`Succeeded in using on or off function, AudioCapturerChangeInfo: ${capturerChangeInfo}.`);
+};
+
+audioCapturer.onAudioCapturerChange(audioCapturerChangeCallback);
+
+audioCapturer.offAudioCapturerChange(audioCapturerChangeCallback);
 ```
 
-Listens for audio interrupt events. This method uses a callback to get interrupt events. The interrupt event is triggered when audio recording is interrupted.
+```TypeScript
+let audioCapturerChangeCallback = (audioCapturerChangeInfoArray: audio.AudioCapturerChangeInfoArray) => {
+  console.info(`Audio capturer changed, audioCapturerChangeInfoArray: ${JSON.stringify(audioCapturerChangeInfoArray)}.`);
+};
+
+audioStreamManager.onAudioCapturerChange(audioCapturerChangeCallback);
+
+audioStreamManager.offAudioCapturerChange(audioCapturerChangeCallback);
+```
+
+## offAudioInterrupt
+
+```TypeScript
+offAudioInterrupt(): void
+```
+
+UnSubscribes to audio interrupt events.
 
 **起始版本：** 23
 
-<!--Device-AudioCapturer-onAudioInterrupt(callback: Callback<InterruptEvent>): void--><!--Device-AudioCapturer-onAudioInterrupt(callback: Callback<InterruptEvent>): void-End-->
+<!--Device-AudioCapturer-offAudioInterrupt(): void--><!--Device-AudioCapturer-offAudioInterrupt(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Interrupt
 
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | 是 | Callback used to listen for interrupt callback. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-## onInputDeviceChange
+**示例**
 
 ```TypeScript
-onInputDeviceChange(callback: Callback<AudioDeviceDescriptors>): void
+audioCapturer.offAudioInterrupt();
 ```
 
-Subscribes input device change event callback. The event is triggered when input device change for this stream.
+```TypeScript
+// 取消该事件的所有监听。
+audioRenderer.offAudioInterrupt();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let isPlaying: boolean; // 标识符，表示是否正在渲染。
+let isDucked: boolean; // 标识符，表示是否被降低音量。
+
+let audioInterruptCallback = (interruptEvent: audio.InterruptEvent) => {
+  // 在发生音频打断事件时，audioRenderer收到interruptEvent回调，此处根据其内容做相应处理。
+  // 1. 可选：读取interruptEvent.forceType的类型，判断系统是否已强制执行相应操作。
+  // 注：默认焦点策略下，INTERRUPT_HINT_RESUME为INTERRUPT_SHARE类型，其余hintType均为INTERRUPT_FORCE类型。因此对forceType可不做判断。
+  // 2. 必选：读取interruptEvent.hintType的类型，做出相应的处理。
+  if (interruptEvent.forceType == audio.InterruptForceType.INTERRUPT_FORCE) {
+    // 音频焦点事件已由系统强制执行，应用需更新自身状态及显示内容等。
+    switch (interruptEvent.hintType) {
+      case audio.InterruptHint.INTERRUPT_HINT_PAUSE:
+        // 音频流已被暂停，临时失去焦点，待可重获焦点时会收到resume对应的interruptEvent。
+        console.info('Force paused. Update playing status and stop writing');
+        isPlaying = false; // 简化处理，代表应用切换至暂停状态的若干操作。
+        break;
+      case audio.InterruptHint.INTERRUPT_HINT_STOP:
+        // 音频流已被停止，永久失去焦点，若想恢复渲染，需用户主动触发。
+        console.info('Force stopped. Update playing status and stop writing');
+        isPlaying = false; // 简化处理，代表应用切换至暂停状态的若干操作。
+        break;
+      case audio.InterruptHint.INTERRUPT_HINT_DUCK:
+        // 音频流已被降低音量渲染。
+        console.info('Force ducked. Update volume status');
+        isDucked = true; // 简化处理，代表应用更新音量状态的若干操作。
+        break;
+      case audio.InterruptHint.INTERRUPT_HINT_UNDUCK:
+        // 音频流已被恢复正常音量渲染。
+        console.info('Force ducked. Update volume status');
+        isDucked = false; // 简化处理，代表应用更新音量状态的若干操作。
+        break;
+      default:
+        console.info('Invalid interruptEvent');
+        break;
+    }  
+  } else if (interruptEvent.forceType == audio.InterruptForceType.INTERRUPT_SHARE) {
+    // 音频焦点事件需由应用进行操作，应用可以自主选择如何处理该事件，建议应用遵从InterruptHint提示处理。
+    switch (interruptEvent.hintType) {
+      case audio.InterruptHint.INTERRUPT_HINT_RESUME:
+        // 建议应用继续渲染（说明音频流此前被强制暂停，临时失去焦点，现在可以恢复渲染）。
+        // 由于INTERRUPT_HINT_RESUME操作需要应用主动执行，系统无法强制，故INTERRUPT_HINT_RESUME事件一定为INTERRUPT_SHARE类型。
+        console.info('Resume force paused renderer or ignore');
+        // 若选择继续渲染，需在此处主动执行开始渲染的若干操作。
+        break;
+      default:
+        console.info('Invalid interruptEvent');
+        break;
+    }
+  }
+};
+
+audioRenderer.onAudioInterrupt(audioInterruptCallback);
+
+audioRenderer.offAudioInterrupt(audioInterruptCallback);
+```
+
+## offInputDeviceChange
+
+```TypeScript
+offInputDeviceChange(callback?: Callback<AudioDeviceDescriptors>): void
+```
+
+Unsubscribes input device change event callback.
 
 **起始版本：** 23
 
-<!--Device-AudioCapturer-onInputDeviceChange(callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioCapturer-onInputDeviceChange(callback: Callback<AudioDeviceDescriptors>): void-End-->
+<!--Device-AudioCapturer-offInputDeviceChange(callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioCapturer-offInputDeviceChange(callback?: Callback<AudioDeviceDescriptors>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -913,7 +1330,7 @@ Subscribes input device change event callback. The event is triggered when input
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | Callback used to listen device change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | Callback used in subscribe. |
 
 **错误码：**
 
@@ -921,17 +1338,35 @@ Subscribes input device change event callback. The event is triggered when input
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## onMarkReach
+**示例**
 
 ```TypeScript
-onMarkReach(frame: long, callback: Callback<long>): void
+// 取消该事件的所有监听。
+audioCapturer.offInputDeviceChange();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let inputDeviceChangeCallback = (deviceChangeInfo: audio.AudioDeviceDescriptors) => {
+  console.info(`inputDevice id: ${deviceChangeInfo[0].id}`);
+  console.info(`inputDevice deviceRole: ${deviceChangeInfo[0].deviceRole}`);
+  console.info(`inputDevice deviceType: ${deviceChangeInfo[0].deviceType}`);
+};
+
+audioCapturer.onInputDeviceChange(inputDeviceChangeCallback);
+
+audioCapturer.offInputDeviceChange(inputDeviceChangeCallback);
 ```
 
-Subscribes to mark reached events. When the number of frames captured reaches the value of the frame parameter, the callback is invoked.
+## offMarkReach
+
+```TypeScript
+offMarkReach(callback?: Callback<long>): void
+```
+
+Unsubscribes from the mark reached events.
 
 **起始版本：** 23
 
-<!--Device-AudioCapturer-onMarkReach(frame: long, callback: Callback<long>): void--><!--Device-AudioCapturer-onMarkReach(frame: long, callback: Callback<long>): void-End-->
+<!--Device-AudioCapturer-offMarkReach(callback?: Callback<long>): void--><!--Device-AudioCapturer-offMarkReach(callback?: Callback<long>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -939,20 +1374,53 @@ Subscribes to mark reached events. When the number of frames captured reaches th
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| frame | long | 是 | Number of frames to trigger the event. The value must be greater than 0. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 是 | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 否 | Callback invoked when the event is triggered. |
 
-## onPeriodReach
+**示例**
 
 ```TypeScript
-onPeriodReach(frame: long, callback: Callback<long>): void
+// 取消该事件的所有监听。
+audioCapturer.offMarkReach();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let markReachCallback = (position: long) => {
+  if (position == 1000) {
+    console.info('ON Triggered successfully');
+  }
+};
+
+audioCapturer.onMarkReach(1000, markReachCallback);
+
+audioCapturer.offMarkReach(markReachCallback);
 ```
 
-Subscribes to period reached events. When the period of frame capturing reaches the value of frame parameter, the callback is invoked.
+```TypeScript
+// 取消该事件的所有监听。
+audioRenderer.offMarkReach();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let markReachCallback = (position: long) => {
+  if (position == 1000) {
+    console.info('ON Triggered successfully');
+  }
+};
+
+audioRenderer.onMarkReach(1000, markReachCallback);
+
+audioRenderer.offMarkReach(markReachCallback);
+```
+
+## offPeriodReach
+
+```TypeScript
+offPeriodReach(callback?: Callback<long>): void
+```
+
+Unsubscribes from period reached events.
 
 **起始版本：** 23
 
-<!--Device-AudioCapturer-onPeriodReach(frame: long, callback: Callback<long>): void--><!--Device-AudioCapturer-onPeriodReach(frame: long, callback: Callback<long>): void-End-->
+<!--Device-AudioCapturer-offPeriodReach(callback?: Callback<long>): void--><!--Device-AudioCapturer-offPeriodReach(callback?: Callback<long>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -960,20 +1428,53 @@ Subscribes to period reached events. When the period of frame capturing reaches 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| frame | long | 是 | Period during which frame capturing is listened. The value must be greater than 0. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 是 | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 否 | Callback invoked when the event is triggered. |
 
-## onReadData
+**示例**
 
 ```TypeScript
-onReadData(callback: Callback<ArrayBuffer>): void
+// 取消该事件的所有监听。
+audioCapturer.offPeriodReach();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let periodReachCallback = (position: long) => {
+  if (position == 1000) {
+    console.info('ON Triggered successfully');
+  }
+};
+
+audioCapturer.onPeriodReach(1000, periodReachCallback);
+
+audioCapturer.offPeriodReach(periodReachCallback);
 ```
 
-Subscribes audio data callback. The event is triggered when audio buffer is available for reading more data.
+```TypeScript
+// 取消该事件的所有监听。
+audioRenderer.offPeriodReach();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let periodReachCallback = (position: long) => {
+  if (position == 1000) {
+    console.info('ON Triggered successfully');
+  }
+};
+
+audioRenderer.onPeriodReach(1000, periodReachCallback);
+
+audioRenderer.offPeriodReach(periodReachCallback);
+```
+
+## offReadData
+
+```TypeScript
+offReadData(callback?: Callback<ArrayBuffer>): void
+```
+
+Unsubscribes audio data callback.
 
 **起始版本：** 23
 
-<!--Device-AudioCapturer-onReadData(callback: Callback<ArrayBuffer>): void--><!--Device-AudioCapturer-onReadData(callback: Callback<ArrayBuffer>): void-End-->
+<!--Device-AudioCapturer-offReadData(callback?: Callback<ArrayBuffer>): void--><!--Device-AudioCapturer-offReadData(callback?: Callback<ArrayBuffer>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -981,7 +1482,7 @@ Subscribes audio data callback. The event is triggered when audio buffer is avai
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 是 | Callback with the buffer to read. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 否 | Callback used in subscribe. |
 
 **错误码：**
 
@@ -989,17 +1490,33 @@ Subscribes audio data callback. The event is triggered when audio buffer is avai
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## onStateChange
+**示例**
 
 ```TypeScript
-onStateChange(callback: Callback<AudioState>): void
+// 取消该事件的所有监听。
+audioCapturer.offReadData();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let readDataCallback = (data: ArrayBuffer) => {
+    console.info(`read data: ${data}`);
+};
+
+audioCapturer.onReadData(readDataCallback);
+
+audioCapturer.offReadData(readDataCallback);
 ```
 
-Subscribes audio state change event callback.
+## offStateChange
+
+```TypeScript
+offStateChange(callback?: Callback<AudioState>): void
+```
+
+Unsubscribes audio state change event callback.
 
 **起始版本：** 23
 
-<!--Device-AudioCapturer-onStateChange(callback: Callback<AudioState>): void--><!--Device-AudioCapturer-onStateChange(callback: Callback<AudioState>): void-End-->
+<!--Device-AudioCapturer-offStateChange(callback?: Callback<AudioState>): void--><!--Device-AudioCapturer-offStateChange(callback?: Callback<AudioState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -1007,7 +1524,53 @@ Subscribes audio state change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | 是 | Callback used to listen for the audio state change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | 否 | Callback used to listen for the audio state change event. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// 取消该事件的所有监听。
+audioCapturer.offStateChange();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let stateChangeCallback = (state: audio.AudioState) => {
+  if (state == 1) {
+    console.info('audio capturer state is: STATE_PREPARED');
+  }
+  if (state == 2) {
+    console.info('audio capturer state is: STATE_RUNNING');
+  }
+};
+
+audioCapturer.onStateChange(stateChangeCallback);
+
+audioCapturer.offStateChange(stateChangeCallback);
+```
+
+```TypeScript
+// 取消该事件的所有监听。
+audioRenderer.offStateChange();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let stateChangeCallback = (state: audio.AudioState) => {
+  if (state == 1) {
+    console.info('audio renderer state is: STATE_PREPARED');
+  }
+  if (state == 2) {
+    console.info('audio renderer state is: STATE_RUNNING');
+  }
+};
+
+audioRenderer.onStateChange(stateChangeCallback);
+
+audioRenderer.offStateChange(stateChangeCallback);
+```
 
 ## on('audioCapturerChange')
 
@@ -1198,6 +1761,370 @@ on(type: 'stateChange', callback: Callback<AudioState>): void
 | type | 'stateChange' | 是 | 事件回调类型，支持的事件为'stateChange'，当AudioCapturer状态发生变化时，触发该事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | 是 | 回调函数，返回当前音频的状态。 |
 
+## onAudioCapturerChange
+
+```TypeScript
+onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfo>): void
+```
+
+Subscribes audio capturer info change event callback. The event is triggered when input device change for this stream.
+
+**起始版本：** 23
+
+<!--Device-AudioCapturer-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfo>): void--><!--Device-AudioCapturer-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | 是 | Callback used to listen device change event. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+audioCapturer.onAudioCapturerChange((capturerChangeInfo: audio.AudioCapturerChangeInfo) => {
+  console.info(`Succeeded in using on function, AudioCapturerChangeInfo: ${capturerChangeInfo}.`);
+});
+```
+
+```TypeScript
+audioStreamManager.onAudioCapturerChange((audioCapturerChangeInfoArray: audio.AudioCapturerChangeInfoArray) => {
+  console.info(`Audio capturer changed, audioCapturerChangeInfoArray: ${JSON.stringify(audioCapturerChangeInfoArray)}.`);
+});
+```
+
+## onAudioInterrupt
+
+```TypeScript
+onAudioInterrupt(callback: Callback<InterruptEvent>): void
+```
+
+Listens for audio interrupt events. This method uses a callback to get interrupt events. The interrupt event is triggered when audio recording is interrupted.
+
+**起始版本：** 23
+
+<!--Device-AudioCapturer-onAudioInterrupt(callback: Callback<InterruptEvent>): void--><!--Device-AudioCapturer-onAudioInterrupt(callback: Callback<InterruptEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Interrupt
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | 是 | Callback used to listen for interrupt callback. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+let isCapturing: boolean = false;
+
+audioCapturer.onAudioInterrupt((interruptEvent: audio.InterruptEvent) => {
+  if (interruptEvent.forceType == audio.InterruptForceType.INTERRUPT_FORCE) {
+    switch (interruptEvent.hintType) {
+      case audio.InterruptHint.INTERRUPT_HINT_PAUSE:
+        isCapturing = false;
+        break;
+      case audio.InterruptHint.INTERRUPT_HINT_STOP:
+        isCapturing = false;
+        break;
+      default:
+        break;
+    }
+  } else if (interruptEvent.forceType == audio.InterruptForceType.INTERRUPT_SHARE) {
+    switch (interruptEvent.hintType) {
+      case audio.InterruptHint.INTERRUPT_HINT_RESUME:
+        isCapturing = true;
+        break;
+      default:
+        break;
+    }
+  }
+});
+```
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let isPlaying: boolean = false; // 标识符，表示是否正在渲染。
+let isDucked: boolean = false; // 标识符，表示是否被降低音量。
+
+audioRenderer.onAudioInterrupt((interruptEvent: audio.InterruptEvent) => {
+  // 在发生音频打断事件时，audioRenderer收到interruptEvent回调，此处根据其内容做相应处理。
+  // 1. 可选：读取interruptEvent.forceType的类型，判断系统是否已强制执行相应操作。
+  // 注意：默认焦点策略下，INTERRUPT_HINT_RESUME为INTERRUPT_SHARE类型，其余hintType均为INTERRUPT_FORCE类型。因此对forceType可不做判断。
+  // 2. 必选：读取interruptEvent.hintType的类型，做出相应的处理。
+  if (interruptEvent.forceType == audio.InterruptForceType.INTERRUPT_FORCE) {
+    // 音频焦点事件已由系统强制执行，应用需更新自身状态及显示内容等。
+    switch (interruptEvent.hintType) {
+      case audio.InterruptHint.INTERRUPT_HINT_PAUSE:
+        // 音频流已被暂停，临时失去焦点，待可重获焦点时会收到resume对应的interruptEvent。
+        console.info('Force paused. Update playing status and stop writing');
+        isPlaying = false; // 简化处理，代表应用切换至暂停状态的若干操作。
+        break;
+      case audio.InterruptHint.INTERRUPT_HINT_STOP:
+        // 音频流已被停止，永久失去焦点，若想恢复渲染，需用户主动触发。
+        console.info('Force stopped. Update playing status and stop writing');
+        isPlaying = false; // 简化处理，代表应用切换至暂停状态的若干操作。
+        break;
+      case audio.InterruptHint.INTERRUPT_HINT_DUCK:
+        // 音频流已被降低音量渲染。
+        console.info('Force ducked. Update volume status');
+        isDucked = true; // 简化处理，代表应用更新音量状态的若干操作。
+        break;
+      case audio.InterruptHint.INTERRUPT_HINT_UNDUCK:
+        // 音频流已被恢复正常音量渲染。
+        console.info('Force unducked. Update volume status');
+        isDucked = false; // 简化处理，代表应用更新音量状态的若干操作。
+        break;
+      default:
+        console.info('Invalid interruptEvent');
+        break;
+    }
+  } else if (interruptEvent.forceType == audio.InterruptForceType.INTERRUPT_SHARE) {
+    // 音频焦点事件需由应用进行操作，应用可以自主选择如何处理该事件，建议应用遵从InterruptHint提示处理。
+    switch (interruptEvent.hintType) {
+      case audio.InterruptHint.INTERRUPT_HINT_RESUME:
+        // 建议应用继续渲染（说明音频流此前被强制暂停，临时失去焦点，现在可以恢复渲染）。
+        // 由于INTERRUPT_HINT_RESUME操作需要应用主动执行，系统无法强制，故INTERRUPT_HINT_RESUME事件一定为INTERRUPT_SHARE类型。
+        console.info('Resume force paused renderer or ignore');
+        // 若选择继续渲染，需在此处主动执行开始渲染的若干操作。
+        break;
+      default:
+        console.info('Invalid interruptEvent');
+        break;
+    }
+  }
+});
+```
+
+## onInputDeviceChange
+
+```TypeScript
+onInputDeviceChange(callback: Callback<AudioDeviceDescriptors>): void
+```
+
+Subscribes input device change event callback. The event is triggered when input device change for this stream.
+
+**起始版本：** 23
+
+<!--Device-AudioCapturer-onInputDeviceChange(callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioCapturer-onInputDeviceChange(callback: Callback<AudioDeviceDescriptors>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Device
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | Callback used to listen device change event. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+audioCapturer.onInputDeviceChange((deviceChangeInfo: audio.AudioDeviceDescriptors) => {
+  console.info(`inputDevice id: ${deviceChangeInfo[0].id}`);
+  console.info(`inputDevice deviceRole: ${deviceChangeInfo[0].deviceRole}`);
+  console.info(`inputDevice deviceType: ${deviceChangeInfo[0].deviceType}`);
+});
+```
+
+## onMarkReach
+
+```TypeScript
+onMarkReach(frame: long, callback: Callback<long>): void
+```
+
+Subscribes to mark reached events. When the number of frames captured reaches the value of the frame parameter, the callback is invoked.
+
+**起始版本：** 23
+
+<!--Device-AudioCapturer-onMarkReach(frame: long, callback: Callback<long>): void--><!--Device-AudioCapturer-onMarkReach(frame: long, callback: Callback<long>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| frame | long | 是 | Number of frames to trigger the event. The value must be greater than 0. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 是 | Callback invoked when the event is triggered. |
+
+**示例**
+
+```TypeScript
+audioCapturer.onMarkReach(1000, (position: long) => {
+  if (position == 1000) {
+    console.info('ON Triggered successfully');
+  }
+});
+```
+
+```TypeScript
+audioRenderer.onMarkReach(1000, (position: long) => {
+  if (position == 1000) {
+    console.info('ON Triggered successfully');
+  }
+});
+```
+
+## onPeriodReach
+
+```TypeScript
+onPeriodReach(frame: long, callback: Callback<long>): void
+```
+
+Subscribes to period reached events. When the period of frame capturing reaches the value of frame parameter, the callback is invoked.
+
+**起始版本：** 23
+
+<!--Device-AudioCapturer-onPeriodReach(frame: long, callback: Callback<long>): void--><!--Device-AudioCapturer-onPeriodReach(frame: long, callback: Callback<long>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| frame | long | 是 | Period during which frame capturing is listened. The value must be greater than 0. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 是 | Callback invoked when the event is triggered. |
+
+**示例**
+
+```TypeScript
+audioCapturer.onPeriodReach(1000, (position: long) => {
+  if (position == 1000) {
+    console.info('ON Triggered successfully');
+  }
+});
+```
+
+```TypeScript
+audioRenderer.onPeriodReach(1000, (position: long) => {
+  if (position == 1000) {
+    console.info('ON Triggered successfully');
+  }
+});
+```
+
+## onReadData
+
+```TypeScript
+onReadData(callback: Callback<ArrayBuffer>): void
+```
+
+Subscribes audio data callback. The event is triggered when audio buffer is available for reading more data.
+
+**起始版本：** 23
+
+<!--Device-AudioCapturer-onReadData(callback: Callback<ArrayBuffer>): void--><!--Device-AudioCapturer-onReadData(callback: Callback<ArrayBuffer>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 是 | Callback with the buffer to read. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo, WriteOptions } from '@kit.CoreFileKit';
+import { common } from '@kit.AbilityKit';
+
+let bufferSize = 0;
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let path = context.cacheDir;
+let filePath = path + '/StarWars10s-2C-48000-4SW.pcm';
+let file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let readDataCallback = (buffer: ArrayBuffer) => {
+  let options: WriteOptions = {
+    offset: bufferSize,
+    length: buffer.byteLength
+  };
+  fileIo.writeSync(file.fd, buffer, options);
+  bufferSize += buffer.byteLength;
+}
+
+audioCapturer.onReadData(readDataCallback);
+
+audioCapturer.start().then(() => {
+  console.info('Capturer start success.');
+}).catch((err: BusinessError) => {
+  console.error('Capturer start failed.');
+});
+```
+
+## onStateChange
+
+```TypeScript
+onStateChange(callback: Callback<AudioState>): void
+```
+
+Subscribes audio state change event callback.
+
+**起始版本：** 23
+
+<!--Device-AudioCapturer-onStateChange(callback: Callback<AudioState>): void--><!--Device-AudioCapturer-onStateChange(callback: Callback<AudioState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | 是 | Callback used to listen for the audio state change event. |
+
+**示例**
+
+```TypeScript
+audioCapturer.onStateChange((state: audio.AudioState) => {
+  if (state == 1) {
+    console.info('audio capturer state is: STATE_PREPARED');
+  }
+  if (state == 2) {
+    console.info('audio capturer state is: STATE_RUNNING');
+  }
+});
+```
+
+```TypeScript
+audioRenderer.onStateChange((state: audio.AudioState) => {
+  if (state == 1) {
+    console.info('audio renderer state is: STATE_PREPARED');
+  }
+  if (state == 2) {
+    console.info('audio renderer state is: STATE_RUNNING');
+  }
+});
+```
+
 ## read
 
 ```TypeScript
@@ -1223,6 +2150,40 @@ read(size: number, isBlockingRead: boolean, callback: AsyncCallback<ArrayBuffer>
 | size | number | 是 | 读入的字节数。 |
 | isBlockingRead | boolean | 是 | 是否阻塞读操作。true表示阻塞，false表示不阻塞。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | 是 | 回调函数。当读入缓冲区成功，err为undefined，data为获取到的缓冲区；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getBufferSize().then((bufferSize: number) => {
+  console.info('Succeeded in doing getBufferSize.');
+  audioCapturer.read(bufferSize, true, (err: BusinessError, buffer: ArrayBuffer) => {
+    if (err) {
+      console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in doing read.');
+  });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getBufferSize. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getBufferSize().then((bufferSize: number) => {
+  console.info('Succeeded in doing getBufferSize.');
+  audioCapturer.read(bufferSize, true).then((buffer: ArrayBuffer) => {
+    console.info('Succeeded in doing read.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
+  });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getBufferSize. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## read
 
@@ -1255,6 +2216,10 @@ read(size: number, isBlockingRead: boolean): Promise<ArrayBuffer>
 | --- | --- |
 | Promise&lt;ArrayBuffer&gt; | Promise对象，返回读取的缓冲区数据。 |
 
+**示例**
+
+参见 [read](#read)
+
 ## release
 
 ```TypeScript
@@ -1275,6 +2240,75 @@ release(callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当释放音频采集器成功，err为undefined，否则为错误对象。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+tonePlayer.release((err: BusinessError) => {
+  if (err) {
+    console.error(`callback call release failed error: ${err.message}`);
+    return;
+  } else {
+    console.info('callback call release success ');
+  }
+});
+```
+
+```TypeScript
+tonePlayer.release().then(() => {
+  console.info('promise call release');
+}).catch(() => {
+  console.error('promise call release fail');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.release((err: BusinessError) => {
+  if (err) {
+    console.error('capturer release failed');
+  } else {
+    console.info('capturer released.');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.release().then(() => {
+  console.info('AudioFrameworkRecLog: ---------RELEASE RECORD---------');
+  console.info('AudioFrameworkRecLog: Capturer release : SUCCESS');
+  console.info(`AudioFrameworkRecLog: AudioCapturer : STATE : ${audioCapturer.state}`);
+}).catch((err: BusinessError) => {
+  console.error(`AudioFrameworkRecLog: Capturer stop: ERROR: ${err}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.release((err: BusinessError) => {
+  if (err) {
+    console.error('Renderer release failed');
+  } else {
+    console.info('Renderer released.');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.release().then(() => {
+  console.info('Renderer released successfully');
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
+
 ## release
 
 ```TypeScript
@@ -1294,6 +2328,10 @@ release(): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [release](#release)
 
 ## requestPlaybackCaptureStart
 
@@ -1320,6 +2358,18 @@ requestPlaybackCaptureStart(callback: Callback<PlaybackCaptureStartState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PlaybackCaptureStartState](arkts-audio-audio-playbackcapturestartstate-e.md)&gt; | 是 | 回调函数，用于接收启动内录请求的最终结果。 |
+
+**示例**
+
+```TypeScript
+audioCapturer.requestPlaybackCaptureStart((state: audio.PlaybackCaptureStartState) => {
+  if (state === audio.PlaybackCaptureStartState.STATE_SUCCESS) {
+    console.info('Succeeded in starting Playback capture.');
+  } else {
+    console.error(`Failed to start Playback capture. State: ${state}.`);
+  }
+});
+```
 
 ## setIndependentAudioSessionStrategy
 
@@ -1354,6 +2404,24 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: int
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permit at current state. |
+
+**示例**
+
+```TypeScript
+let strategy: audio.AudioSessionStrategy = {
+  concurrencyMode: audio.AudioConcurrencyMode.CONCURRENCY_MIX_WITH_OTHERS
+};
+let behavior = audio.AudioSessionBehaviorFlags.MUTE_WHEN_INTERRUPTED;
+audioCapturer.setIndependentAudioSessionStrategy(strategy, behavior);
+```
+
+```TypeScript
+let strategy: audio.AudioSessionStrategy = {
+  concurrencyMode: audio.AudioConcurrencyMode.CONCURRENCY_MIX_WITH_OTHERS
+};
+let behavior = audio.AudioSessionBehaviorFlags.MUTE_WHEN_INTERRUPTED;
+audioRenderer.setIndependentAudioSessionStrategy(strategy, behavior);
+```
 
 ## setMuteHint
 
@@ -1399,6 +2467,18 @@ setMuteHint(mute: boolean): Promise<void>
 | --- | --- |
 | [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permitted at current state, stream is not running. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.setMuteHint(true).then(() => {
+  console.info('setMuteHint Success!');
+}).catch((err: BusinessError) => {
+  console.error(`setMuteHint Fail: ${err}`);
+});
+```
+
 ## setNoiseReductionMode
 
 ```TypeScript
@@ -1429,6 +2509,25 @@ setNoiseReductionMode(noiseReductionMode: NoiseReductionMode): void
 | [6800103](../errorcode-audio.md#6800103-状态不支持) | Illegal state, audio capturer is in running or released state. |
 | [6800104](../errorcode-audio.md#6800104-参数选项不支持) | The setted mode is not supported. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio server process died. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let supportedModes: Array<audio.NoiseReductionMode> = audioCapturer.getSupportedNoiseReductionModes();
+  if (supportedModes.includes(audio.NoiseReductionMode.PURE_VOCALS)) {
+    audioCapturer.setNoiseReductionMode(audio.NoiseReductionMode.PURE_VOCALS);
+  } else {
+    audioCapturer.setNoiseReductionMode(audio.NoiseReductionMode.FIDELITY);
+  }
+  console.info(`setNoiseReductionMode success: ${audioCapturer.getNoiseReductionMode()}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`setNoiseReductionMode failed. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## setWillMuteWhenInterrupted
 
@@ -1462,6 +2561,18 @@ setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>
 | --- | --- |
 | [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permitted at current state. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.setWillMuteWhenInterrupted(true).then(() => {
+  console.info('setWillMuteWhenInterrupted Success!');
+}).catch((err: BusinessError) => {
+  console.error(`setWillMuteWhenInterrupted Fail: ${err}`);
+});
+```
+
 ## start
 
 ```TypeScript
@@ -1481,6 +2592,76 @@ start(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动音频采集器成功，err为undefined，否则为错误对象。异常将返回error对象： <br>错误码6800301：表示包含状态检查异常、焦点抢占失败、系统处理异常（具体错误查看系统日志）。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+tonePlayer.start((err: BusinessError) => {
+  if (err) {
+    console.error(`callback call start failed error: ${err.message}`);
+    return;
+  } else {
+    console.info('callback call start success');
+  }
+});
+```
+
+```TypeScript
+tonePlayer.start().then(() => {
+  console.info('promise call start');
+}).catch(() => {
+  console.error('promise call start fail');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.start((err: BusinessError) => {
+  if (err) {
+    console.error('Capturer start failed.');
+  } else {
+    console.info('Capturer start success.');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.start().then(() => {
+  console.info('Succeeded in doing start.');
+  if (audioCapturer.state == audio.AudioState.STATE_RUNNING) {
+    console.info('AudioFrameworkRecLog: AudioCapturer is in Running State');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to start. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.start((err: BusinessError) => {
+  if (err) {
+    console.error('Renderer start failed.');
+  } else {
+    console.info('Renderer start success.');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.start().then(() => {
+  console.info('Renderer started');
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
 
 ## start
 
@@ -1502,6 +2683,10 @@ start(): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，成功表示启动音频采集器成功。异常将返回error对象： <br>错误码6800301：表示包含状态检查异常、焦点抢占失败、系统处理异常（具体错误查看系统日志）。 |
 
+**示例**
+
+参见 [start](#start)
+
 ## stop
 
 ```TypeScript
@@ -1522,6 +2707,76 @@ stop(callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止音频采集成功，err为undefined，否则为错误对象。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+tonePlayer.stop((err: BusinessError) => {
+  if (err) {
+    console.error(`callback call stop error: ${err.message}`);
+    return;
+  } else {
+    console.error('callback call stop success ');
+  }
+});
+```
+
+```TypeScript
+tonePlayer.stop().then(() => {
+  console.info('promise call stop finish');
+}).catch(() => {
+  console.error('promise call stop fail');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.stop((err: BusinessError) => {
+  if (err) {
+    console.error('Capturer stop failed');
+  } else {
+    console.info('Capturer stopped.');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.stop().then(() => {
+  console.info('Succeeded in doing stop.');
+  if (audioCapturer.state == audio.AudioState.STATE_STOPPED){
+    console.info('AudioFrameworkRecLog: State is Stopped:');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to stop. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.stop((err: BusinessError) => {
+  if (err) {
+    console.error('Renderer stop failed');
+  } else {
+    console.info('Renderer stopped.');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.stop().then(() => {
+  console.info('Renderer stopped successfully');
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
+
 ## stop
 
 ```TypeScript
@@ -1541,6 +2796,10 @@ stop(): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [stop](#stop)
 
 ## state
 

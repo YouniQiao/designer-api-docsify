@@ -78,6 +78,40 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  cooperate.prepareCooperate().then(() => {
+    console.info(`Keyboard mouse crossing prepareCooperate success.`);
+  }, (error: BusinessError) => {
+    console.error(`Keyboard mouse crossing prepareCooperate failed, error: ${JSON.stringify(error,
+      [`code`, `message`])}`);
+  });
+} catch (error) {
+  console.error(`Keyboard mouse crossing prepareCooperate failed, error: ${JSON.stringify(error,
+    [`code`, `message`])}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+try {
+  cooperate.prepareCooperate().then(() => {
+    console.info(`Keyboard mouse crossing prepareCooperate success.`);
+  }, (error: Error): void => {
+    console.error(`Keyboard mouse crossing prepareCooperate failed, error: ${JSON.stringify(error,
+      [`code`, `message`])}`);
+  });
+} catch (error) {
+  console.error(`Keyboard mouse crossing prepareCooperate failed, error: ${JSON.stringify(error,
+    [`code`, `message`])}`);
+}
+```
+
 
 ## prepareCooperate
 
@@ -113,37 +147,5 @@ function prepareCooperate(): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  cooperate.prepareCooperate().then(() => {
-    console.info(`Keyboard mouse crossing prepareCooperate success.`);
-  }, (error: BusinessError) => {
-    console.error(`Keyboard mouse crossing prepareCooperate failed, error: ${JSON.stringify(error,
-      [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Keyboard mouse crossing prepareCooperate failed, error: ${JSON.stringify(error,
-    [`code`, `message`])}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  cooperate.prepareCooperate().then(() => {
-    console.info(`Keyboard mouse crossing prepareCooperate success.`);
-  }, (error: Error): void => {
-    console.error(`Keyboard mouse crossing prepareCooperate failed, error: ${JSON.stringify(error,
-      [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Keyboard mouse crossing prepareCooperate failed, error: ${JSON.stringify(error,
-    [`code`, `message`])}`);
-}
-```
+参见 [prepareCooperate](#preparecooperate)
 

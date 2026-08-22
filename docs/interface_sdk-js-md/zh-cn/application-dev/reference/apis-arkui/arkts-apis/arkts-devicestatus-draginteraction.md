@@ -28,10 +28,10 @@ import { dragInteraction } from '@kit.ArkUI';
 | 名称 | 说明 |
 | --- | --- |
 | [getDataSummary](arkts-arkui-draginteraction-getdatasummary-f-sys.md) | 获取所有拖拽对象的摘要。 |
-| [offDragStateChange](arkts-arkui-draginteraction-offdragstatechange-f-sys.md) | Disables listening for dragging state change events. |
 | [off_drag](arkts-arkui-draginteraction-offdrag-f-sys.md#offdrag) | 取消监听拖拽状态。 |
-| [onDragStateChange](arkts-arkui-draginteraction-ondragstatechange-f-sys.md) | Listens for dragging state change events. |
+| [offDragStateChange](arkts-arkui-draginteraction-offdragstatechange-f-sys.md) | Disables listening for dragging state change events. |
 | [on_drag](arkts-arkui-draginteraction-ondrag-f-sys.md#ondrag) | 注册监听拖拽状态。 |
+| [onDragStateChange](arkts-arkui-draginteraction-ondragstatechange-f-sys.md) | Listens for dragging state change events. |
 | [setAppDragSwitchState](arkts-arkui-draginteraction-setappdragswitchstate-f-sys.md) | 控制统一拖拽适配应用开关。 |
 | [setDragSwitchState](arkts-arkui-draginteraction-setdragswitchstate-f-sys.md) | 控制统一拖拽功能总开关。 |
 <!--DelEnd-->

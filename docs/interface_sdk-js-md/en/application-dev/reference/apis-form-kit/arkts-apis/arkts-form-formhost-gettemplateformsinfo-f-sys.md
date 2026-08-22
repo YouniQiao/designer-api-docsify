@@ -45,3 +45,22 @@ Obtains the template widget information provided by a specified application on t
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 
+**Examples**
+
+```TypeScript
+import { formHost, formInfo } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formHost.getTemplateFormsInfo('com.example.ohos.formjsdemo', 'entry').then((data: formInfo.FormInfo[]) => {
+    for (let formInfo of data) {
+      console.info(`getTemplateFormsInfo bundleName: ${formInfo.bundleName}, moduleName: ${formInfo.moduleName}, name: ${formInfo.name}`);
+    }
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+

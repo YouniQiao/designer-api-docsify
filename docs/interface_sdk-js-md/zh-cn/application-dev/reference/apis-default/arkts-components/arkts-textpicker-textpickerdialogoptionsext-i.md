@@ -156,32 +156,6 @@ backgroundEffect?: BackgroundEffectOptions
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## canLoop
-
-```TypeScript
-canLoop?: boolean
-```
-
-设置是否可循环滚动。
-
-- true：可循环。 - false：不可循环。
-
-默认值：true
-
-**类型：** boolean
-
-**默认值：** true
-
-**起始版本：** 23
-
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-TextPickerDialogOptionsExt-canLoop?: boolean--><!--Device-TextPickerDialogOptionsExt-canLoop?: boolean-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 ## cancelButtonStyle
 
 ```TypeScript
@@ -205,6 +179,32 @@ cancelButtonStyle?: PickerDialogButtonStyle
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextPickerDialogOptionsExt-cancelButtonStyle?: PickerDialogButtonStyle--><!--Device-TextPickerDialogOptionsExt-cancelButtonStyle?: PickerDialogButtonStyle-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## canLoop
+
+```TypeScript
+canLoop?: boolean
+```
+
+设置是否可循环滚动。
+
+- true：可循环。 - false：不可循环。
+
+默认值：true
+
+**类型：** boolean
+
+**默认值：** true
+
+**起始版本：** 23
+
+**ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TextPickerDialogOptionsExt-canLoop?: boolean--><!--Device-TextPickerDialogOptionsExt-canLoop?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

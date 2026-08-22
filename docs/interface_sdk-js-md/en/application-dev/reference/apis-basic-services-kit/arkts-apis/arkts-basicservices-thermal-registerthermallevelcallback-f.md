@@ -24,7 +24,7 @@ Registers a callback to be invoked when the thermal level changes. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md)&gt; | Yes | Callback used to return thermal level. This parameter is of the function type. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md)&gt; | Yes | Callback used to return thermal level. This parameter is of the function type. |
 
 **Error codes:**
 

@@ -29,5 +29,5 @@ export declare function SelectionMenu(options: SelectionMenuOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [SelectionMenuOptions](arkts-arkui-arkuiadvancedselectionmenu-selectionmenuoptions-i.md) | 是 | 文本选择菜单配置选项，用于配置编辑菜单、扩展下拉菜单、富文本控制器以及复制粘贴剪切等回调事件。 |
+| options | [SelectionMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) | 是 | 文本选择菜单配置选项，用于配置编辑菜单、扩展下拉菜单、富文本控制器以及复制粘贴剪切等回调事件。 |
 

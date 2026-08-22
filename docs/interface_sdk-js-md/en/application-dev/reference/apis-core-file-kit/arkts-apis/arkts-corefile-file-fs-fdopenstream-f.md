@@ -14,7 +14,7 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function fdopenStream(fd: number, mode: string): Promise<Stream>
 ```
 
-Opens a stream based on an FD. This API uses a promise to return the result. To close the stream, use **close()** of [Stream](arkts-corefile-filefs-stream-i.md).
+Opens a stream based on an FD. This API uses a promise to return the result. To close the stream, use **close()** of [Stream](arkts-corefile-file-fs-stream-i.md).
 
 **Since:** 9
 
@@ -35,7 +35,7 @@ Opens a stream based on an FD. This API uses a promise to return the result. To 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Stream](arkts-corefile-filefs-stream-i.md)&gt; | Promise used to return the file stream. |
+| Promise&lt;[Stream](arkts-corefile-file-fs-stream-i.md)&gt; | Promise used to return the file stream. |
 
 **Error codes:**
 
@@ -69,6 +69,38 @@ Opens a stream based on an FD. This API uses a promise to return the result. To 
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + "/test.txt";
+let file = fs.openSync(filePath);
+fs.fdopenStream(file.fd, "r+").then((stream: fs.Stream) => {
+  console.info("openStream succeed");
+  stream.closeSync();
+}).catch((err: BusinessError) => {
+  console.error("openStream failed with error message: " + err.message + ", error code: " + err.code);
+  // If the file stream fails to be opened, the FD must be manually closed.
+  fs.closeSync(file);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + "/test.txt";
+let file = fs.openSync(filePath, fs.OpenMode.READ_ONLY);
+fs.fdopenStream(file.fd, "r+", (err: BusinessError, stream: fs.Stream) => {
+  if (err) {
+    console.error("fdopen stream failed with error message: " + err.message + ", error code: " + err.code);
+    // If the file stream fails to be opened, the FD must be manually closed.
+    fs.closeSync(file);
+  } else {
+    console.info("fdopen stream succeed");
+    stream.closeSync();
+  }
+});
+```
+
 
 ## fdopenStream
 
@@ -76,7 +108,7 @@ Opens a stream based on an FD. This API uses a promise to return the result. To 
 declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<Stream>): void
 ```
 
-Opens a stream based on an FD. This API uses an asynchronous callback to return the result. To close the stream, use **close()** of [Stream](arkts-corefile-filefs-stream-i.md).
+Opens a stream based on an FD. This API uses an asynchronous callback to return the result. To close the stream, use **close()** of [Stream](arkts-corefile-file-fs-stream-i.md).
 
 **Since:** 9
 
@@ -92,7 +124,7 @@ Opens a stream based on an FD. This API uses an asynchronous callback to return 
 | --- | --- | --- | --- |
 | fd | number | Yes | FD of the file. |
 | mode | string | Yes | r**: Open a file for reading. The file must exist.<br>- **r+**: Open a file for both reading and writing. The file must exist.<br>- **w**: Open a file for writing. If the file exists, clear its content. If the file does not exist, create a file.<br>- **w+**: Open a file for both reading and writing. If the file exists, clear its content. If the file does not exist, create a file.<br>- **a**: Open a file in append mode for writing at the end of the file. If the file does not exist, create a file. If the file exists, write data to the end of the file (the original content of the file is reserved).<br>- **a+**: Open a file in append mode for reading or updating at the end of the file. If the file does not exist, create a file. If the file exists, write data to the end of the file (the original content of the file is reserved). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Stream](arkts-corefile-filefs-stream-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stream](arkts-corefile-file-fs-stream-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -125,4 +157,8 @@ Opens a stream based on an FD. This API uses an asynchronous callback to return 
 | 13900038 | Value too large for defined data type |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [fdopenStream](#fdopenstream)
 

@@ -32,3 +32,17 @@ Indicates the contact attributes.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+**Examples**
+
+Create contact data in JSON format:
+
+```TypeScript
+let contactAttributes: contact.ContactAttributes = {
+    attributes: [
+        contact.Attribute.ATTR_EMAIL,
+        contact.Attribute.ATTR_NAME,
+        contact.Attribute.ATTR_PHONE
+    ]
+};
+```
+

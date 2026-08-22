@@ -28,7 +28,7 @@ Obtains the metering network policy. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. . |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. . |
 
 **Error codes:**
 
@@ -50,6 +50,19 @@ policy.getNetQuotaPolicies((error: BusinessError, data: policy.NetQuotaPolicy[])
   console.error(JSON.stringify(error));
   console.info(JSON.stringify(data));
 });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .getNetQuotaPolicies()
+  .then((data: policy.NetQuotaPolicy[]) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
 ```
 
 
@@ -89,16 +102,5 @@ Obtains the metering network policy. This API uses a promise to return the resul
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .getNetQuotaPolicies()
-  .then((data: policy.NetQuotaPolicy[]) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+See [getNetQuotaPolicies](#getnetquotapolicies)
 

@@ -56,6 +56,19 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n, intl } from '@kit.LocalizationKit';
+
+try {
+  let locale: intl.Locale = new intl.Locale('zh-Hans-CN');
+  let formatter: i18n.SimpleDateTimeFormat = i18n.getSimpleDateTimeFormatByPattern("'month('M')'", locale);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call i18n.getSimpleDateTimeFormatByPattern failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
 
 ## getSimpleDateTimeFormatByPattern
 
@@ -98,16 +111,5 @@ Obtains a **SimpleDateTimeFormat** object based on the specified pattern string.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n, intl } from '@kit.LocalizationKit';
-
-try {
-  let locale: intl.Locale = new intl.Locale('zh-Hans-CN');
-  let formatter: i18n.SimpleDateTimeFormat = i18n.getSimpleDateTimeFormatByPattern("'month('M')'", locale);
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call i18n.getSimpleDateTimeFormatByPattern failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
+See [getSimpleDateTimeFormatByPattern](#getsimpledatetimeformatbypattern)
 

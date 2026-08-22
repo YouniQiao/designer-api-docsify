@@ -44,6 +44,16 @@ wallpaper.getFile(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessErro
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+wallpaper.getFile(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: number) => {
+    console.info(`success to getFile: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to getFile. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
 
 ## getFile
 
@@ -77,13 +87,5 @@ function getFile(wallpaperType: WallpaperType): Promise<number>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-wallpaper.getFile(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: number) => {
-    console.info(`success to getFile: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to getFile. Code: ${error.code}, message: ${error.message}`);
-});
-```
+参见 [getFile](#getfile)
 

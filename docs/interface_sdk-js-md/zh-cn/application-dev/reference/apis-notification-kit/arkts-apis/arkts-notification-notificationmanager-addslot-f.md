@@ -81,6 +81,104 @@ let addSlotCallBack = (err: BusinessError | null): void => {
 notificationManager.addSlot(notificationManager.SlotType.SOCIAL_COMMUNICATION, addSlotCallBack);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.addSlot(notificationManager.SlotType.SOCIAL_COMMUNICATION).then(() => {
+  console.info(`Succeeded in adding slot.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to add slot. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.addSlot(notificationManager.SlotType.SOCIAL_COMMUNICATION).then(() => {
+  console.info(`Succeeded in adding slot.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to add slot. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// addSlot回调
+let addSlotCallBack = (err: BusinessError): void => {
+    if (err) {
+        console.error(`addSlot failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+        console.info('addSlot success');
+    }
+}
+// 通知slot对象
+let notificationSlot: notificationManager.NotificationSlot = {
+    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
+};
+notificationManager.addSlot(notificationSlot, addSlotCallBack);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// addSlot回调
+let addSlotCallBack = (err: BusinessError | null): void => {
+    if (err) {
+        console.error(`addSlot failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+        console.info('addSlot success');
+    }
+}
+// 通知slot对象
+let notificationSlot: notificationManager.NotificationSlot = {
+    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
+};
+notificationManager.addSlot(notificationSlot, addSlotCallBack);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 通知slot对象
+let notificationSlot: notificationManager.NotificationSlot = {
+    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
+};
+notificationManager.addSlot(notificationSlot).then(() => {
+    console.info('addSlot success');
+}).catch((err: BusinessError) => {
+    console.error(`addSlot failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 通知slot对象
+let notificationSlot: notificationManager.NotificationSlot = {
+    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
+};
+notificationManager.addSlot(notificationSlot).then(() => {
+    console.info('addSlot success');
+}).catch((err: Error): void => {
+    let error: BusinessError = err as BusinessError;
+    console.error(`addSlot failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## addSlot
 
@@ -130,28 +228,5 @@ removeAllSlots 删除当前应用的所有渠道通知。
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.addSlot(notificationManager.SlotType.SOCIAL_COMMUNICATION).then(() => {
-  console.info(`Succeeded in adding slot.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to add slot. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.addSlot(notificationManager.SlotType.SOCIAL_COMMUNICATION).then(() => {
-  console.info(`Succeeded in adding slot.`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to add slot. Code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [addSlot](#addslot)
 

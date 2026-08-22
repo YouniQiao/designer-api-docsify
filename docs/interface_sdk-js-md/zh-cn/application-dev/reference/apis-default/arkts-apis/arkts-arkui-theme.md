@@ -11,15 +11,15 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ThemeControl](arkts-arkuitheme-themecontrol-c.md) | ThemeControl将自定义Theme应用于App组件内，实现App组件风格跟随Theme切换。 |
+| [ThemeControl](arkts-arkui-theme-themecontrol-c.md) | ThemeControl将自定义Theme应用于App组件内，实现App组件风格跟随Theme切换。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [Colors](arkts-arkuitheme-colors-i.md) | 主题颜色资源。 |
-| [CustomTheme](arkts-arkuitheme-customtheme-i.md) | 自定义主题风格对象。 |
-| [Theme](arkts-arkuitheme-theme-i.md) | 当前生效的主题风格对象，可从 [onWillApplyTheme](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#onwillapplytheme12)中获取。 |
+| [Colors](arkts-arkui-theme-colors-i.md) | 主题颜色资源。 |
+| [CustomTheme](arkts-arkui-theme-customtheme-i.md) | 自定义主题风格对象。 |
+| [Theme](arkts-arkui-theme-theme-i.md) | 当前生效的主题风格对象，可从 [onWillApplyTheme](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#onwillapplytheme12)中获取。 |
 
 ### 类型
 

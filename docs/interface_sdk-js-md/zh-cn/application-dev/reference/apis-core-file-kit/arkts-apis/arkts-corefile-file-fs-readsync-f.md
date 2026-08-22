@@ -34,7 +34,7 @@ declare function readSync(
 | --- | --- | --- | --- |
 | fd | number | 是 | 已打开的文件描述符fd。 |
 | buffer | ArrayBuffer | 是 | 用于保存读取到的文件数据的缓冲区。 |
-| options | [ReadOptions](../../apis-default/arkts-apis/arkts-filefs-readoptions-i.md) | 否 | 支持如下选项：<br/>- offset，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。<br/>- length， number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。<br>**起始版本：** 11 |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | 否 | 支持如下选项：<br/>- offset，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。<br/>- length， number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -56,4 +56,54 @@ declare function readSync(
 | 13900034 | Operation would block |
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+let buf = new ArrayBuffer(4096);
+fileIo.readSync(file.fd, buf);
+fileIo.closeSync(file);
+```
+
+```TypeScript
+import { ReadOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+let readOption: ReadOptions = {
+  offset: 5,
+  length: 5
+};
+let buf = new ArrayBuffer(4096);
+let num = stream.readSync(buf, readOption);
+stream.close();
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+let randomAccessFile = fileIo.createRandomAccessFileSync(file);
+let length: number = 4096;
+let arrayBuffer = new ArrayBuffer(length);
+let readLength = randomAccessFile.readSync(arrayBuffer);
+randomAccessFile.close();
+fileIo.closeSync(file);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath,fileIo.OpenMode.CREATE |fileIo.OpenMode.READ_WRITE);
+let randomAccessFile = fileIo.createRandomAccessFileSync(file);
+let length: long = 4096;
+let arrayBuffer = new ArrayBuffer(length);
+let readLength = randomAccessFile.readSync(arrayBuffer);
+randomAccessFile.close();
+fileIo.closeSync(file);
+```
 

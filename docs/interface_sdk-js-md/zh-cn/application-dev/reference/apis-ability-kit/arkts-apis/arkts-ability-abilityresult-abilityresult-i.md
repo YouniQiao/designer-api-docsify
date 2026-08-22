@@ -34,7 +34,7 @@ want?: Want
 
 表示UIAbility被拉起并退出后返回的数据。
 
-**类型：** [Want](arkts-ability-appabilitywant-want-c.md)
+**类型：** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 23
 

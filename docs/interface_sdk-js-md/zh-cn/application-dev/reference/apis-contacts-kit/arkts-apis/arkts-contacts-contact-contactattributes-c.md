@@ -32,3 +32,17 @@ attributes: Attribute[]
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
+**示例**
+
+通过JSON格式创建数据。
+
+```TypeScript
+let contactAttributes: contact.ContactAttributes = {
+    attributes: [
+        contact.Attribute.ATTR_EMAIL,
+        contact.Attribute.ATTR_NAME,
+        contact.Attribute.ATTR_PHONE
+    ]
+};
+```
+

@@ -54,6 +54,58 @@ ArkTS-Dyn示例：
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// subscribe回调
+let subscribeCallback = (err: BusinessError) => {
+  if (err) {
+    console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('subscribe success');
+  }
+}
+let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
+  console.info(`Consume callback: ${JSON.stringify(data)}`);
+}
+let subscriber: notificationSubscribe.NotificationSubscriber = {
+  onConsume: onConsumeCallback
+};
+// 不会对bundleNames进行校验，开发者自己确定需要订阅哪些bundleName
+let info: notificationSubscribe.NotificationSubscribeInfo = {
+  bundleNames: ['bundleName1','bundleName2']
+};
+notificationSubscribe.subscribe(subscriber, info, subscribeCallback);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+//subscribe回调
+let subscribeCallback = (err: BusinessError | null) => {
+  if (err) {
+    console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('subscribe success');
+  }
+}
+let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
+  console.info(`Consume callback: ${JSON.stringify(data)}`);
+}
+let subscriber: notificationSubscribe.NotificationSubscriber = {
+  onConsume: onConsumeCallback
+};
+//不会对bundleNames进行校验，开发者自己确定需要订阅哪些bundleName
+let info: notificationSubscribe.NotificationSubscribeInfo = {
+  bundleNames: ['bundleName1','bundleName2']
+};
+notificationSubscribe.subscribe(subscriber, info, subscribeCallback);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let subscribeCallback = (err: BusinessError) => {
   if (err) {
     console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
@@ -89,6 +141,41 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
   onConsume: onConsumeCallback
 };
 notificationSubscribe.subscribe(subscriber, subscribeCallback);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
+  console.info(`Consume callback: ${JSON.stringify(data)}`);
+}
+let subscriber: notificationSubscribe.NotificationSubscriber = {
+  onConsume: onConsumeCallback
+};
+notificationSubscribe.subscribe(subscriber).then(() => {
+  console.info('subscribe success');
+}).catch((err: BusinessError) => {
+  console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
+  console.info(`Consume callback: ${JSON.stringify(data)}`);
+}
+let subscriber: notificationSubscribe.NotificationSubscriber = {
+  onConsume: onConsumeCallback
+};
+notificationSubscribe.subscribe(subscriber).then(() => {
+  console.info('subscribe success');
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`subscribe failed, code is ${error.code}, message is ${error.message}`);
+});
 ```
 
 
@@ -140,57 +227,7 @@ function subscribe(
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// subscribe回调
-let subscribeCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('subscribe success');
-  }
-}
-let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
-  console.info(`Consume callback: ${JSON.stringify(data)}`);
-}
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onConsume: onConsumeCallback
-};
-// 不会对bundleNames进行校验，开发者自己确定需要订阅哪些bundleName
-let info: notificationSubscribe.NotificationSubscribeInfo = {
-  bundleNames: ['bundleName1','bundleName2']
-};
-notificationSubscribe.subscribe(subscriber, info, subscribeCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-//subscribe回调
-let subscribeCallback = (err: BusinessError | null) => {
-  if (err) {
-    console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('subscribe success');
-  }
-}
-let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
-  console.info(`Consume callback: ${JSON.stringify(data)}`);
-}
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onConsume: onConsumeCallback
-};
-//不会对bundleNames进行校验，开发者自己确定需要订阅哪些bundleName
-let info: notificationSubscribe.NotificationSubscribeInfo = {
-  bundleNames: ['bundleName1','bundleName2']
-};
-notificationSubscribe.subscribe(subscriber, info, subscribeCallback);
-```
+参见 [subscribe](#subscribe)
 
 
 ## subscribe
@@ -242,38 +279,5 @@ function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscr
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
-  console.info(`Consume callback: ${JSON.stringify(data)}`);
-}
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onConsume: onConsumeCallback
-};
-notificationSubscribe.subscribe(subscriber).then(() => {
-  console.info('subscribe success');
-}).catch((err: BusinessError) => {
-  console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
-  console.info(`Consume callback: ${JSON.stringify(data)}`);
-}
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onConsume: onConsumeCallback
-};
-notificationSubscribe.subscribe(subscriber).then(() => {
-  console.info('subscribe success');
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`subscribe failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [subscribe](#subscribe)
 

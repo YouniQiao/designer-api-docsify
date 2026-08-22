@@ -14,7 +14,7 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function fdopenStream(fd: number, mode: string): Promise<Stream>
 ```
 
-基于文件描述符打开文件流。使用Promise异步回调。需要配合[Stream](arkts-corefile-filefs-stream-i.md)中的close()函数关闭文件流。
+基于文件描述符打开文件流。使用Promise异步回调。需要配合[Stream](arkts-corefile-file-fs-stream-i.md)中的close()函数关闭文件流。
 
 **起始版本：** 9
 
@@ -35,7 +35,7 @@ declare function fdopenStream(fd: number, mode: string): Promise<Stream>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[Stream](arkts-corefile-filefs-stream-i.md)&gt; | Promise对象。返回文件流的结果。 |
+| Promise&lt;[Stream](arkts-corefile-file-fs-stream-i.md)&gt; | Promise对象。返回文件流的结果。 |
 
 **错误码：**
 
@@ -69,6 +69,81 @@ declare function fdopenStream(fd: number, mode: string): Promise<Stream>
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath);
+fileIo.fdopenStream(file.fd, "r+").then((stream: fileIo.Stream) => {
+  console.info(`Succeeded in opening stream.`);
+  stream.closeSync();
+}).catch((err: BusinessError) => {
+  console.error(`Failed to open stream. Code: ${err.code}, message: ${err.message}`);
+  // 文件流打开失败后，文件描述符需要手动关闭
+  fileIo.closeSync(file);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath);
+fileIo.fdopenStream(file.fd, "r+").then((stream:fileIo.Stream) => {
+  console.info(`Succeeded in opening stream.`);
+  stream.closeSync();
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to open stream. Code: ${err.code}, message: ${err.message}`);
+  // 文件流打开失败后，文件描述符需要手动关闭
+  fileIo.closeSync(file);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_ONLY);
+fileIo.fdopenStream(file.fd, "r+", (err: BusinessError, stream: fileIo.Stream) => {
+  if (err) {
+    console.error(`Failed to fdopen stream. Code: ${err.code}, message: ${err.message}`);
+    // 文件流打开失败后，文件描述符需要手动关闭
+    fileIo.closeSync(file);
+  } else {
+    console.info(`Succeeded in fdopening stream.`);
+    stream.closeSync();
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath,fileIo.OpenMode.READ_ONLY);
+fileIo.fdopenStream(file.fd, "r+", (err: BusinessError<void> | null, stream:fileIo.Stream | undefined) => {
+  if (err) {
+    console.error(`Failed to fdopen stream. Code: ${err.code}, message: ${err.message}`);
+    stream?.closeSync();
+  } else {
+    console.info(`Succeeded in fdopening stream.`);
+    // 文件流打开失败后，文件描述符需要手动关闭
+   fileIo.closeSync(file);
+  }
+});
+```
+
 
 ## fdopenStream
 
@@ -76,7 +151,7 @@ declare function fdopenStream(fd: number, mode: string): Promise<Stream>
 declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<Stream>): void
 ```
 
-基于文件描述符打开文件流，需要配合[Stream](arkts-corefile-filefs-stream-i.md)中的close()函数关闭文件流。使用callback异步回调。
+基于文件描述符打开文件流，需要配合[Stream](arkts-corefile-file-fs-stream-i.md)中的close()函数关闭文件流。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -92,7 +167,7 @@ declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<
 | --- | --- | --- | --- |
 | fd | number | 是 | 已打开的文件描述符fd。 |
 | mode | string | 是 | r：打开只读文件，该文件必须存在。<br/>- r+：打开可读写的文件，该文件必须存在。<br/>- w：打开只写文件，若文件存在则文件长度清0，即该文件内容会消失。若文件不存在则 建立该文件。<br/>- w+：打开可读写文件，若文件存在则文件长度清0，即该文件内容会消失。若文件不存在则建立该文件。<br/>- a：以附加的方式打开只写文件。若文件不存在，则会建立该文件，如果文件存在，写入的数据会被加到 文件尾，即文件原先的内容会被保留。<br/>- a+：以附加方式打开可读写的文件。若文件不存在，则会建立该文件，如果文件存在，写入的数据会被加到文件尾后，即文件原先的内容会被保留。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stream](arkts-corefile-filefs-stream-i.md)&gt; | 是 | 回调函数，返回Stream对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stream](arkts-corefile-file-fs-stream-i.md)&gt; | 是 | 回调函数，返回Stream对象。 |
 
 **错误码：**
 
@@ -125,4 +200,8 @@ declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<
 | 13900038 | Value too large for defined data type |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**示例**
+
+参见 [fdopenStream](#fdopenstream)
 

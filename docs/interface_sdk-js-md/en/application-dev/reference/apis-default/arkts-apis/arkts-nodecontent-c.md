@@ -34,7 +34,7 @@ Add FrameNode to NodeContent based on parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-framenode-c.md) | Yes | Newly added FrameNode. |
+| node | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Yes | Newly added FrameNode. |
 
 **Error codes:**
 
@@ -82,5 +82,5 @@ Delete the target FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-framenode-c.md) | Yes | FrameNode deleted. |
+| node | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Yes | FrameNode deleted. |
 

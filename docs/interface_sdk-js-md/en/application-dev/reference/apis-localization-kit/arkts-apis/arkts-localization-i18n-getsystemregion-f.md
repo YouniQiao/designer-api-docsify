@@ -35,6 +35,12 @@ Obtains the system region.
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
 
+let systemRegion: string = i18n.System.getSystemRegion(); // If the system region is China, then systemRegion is CN.
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
 let region: string = i18n.getSystemRegion();
 ```
 

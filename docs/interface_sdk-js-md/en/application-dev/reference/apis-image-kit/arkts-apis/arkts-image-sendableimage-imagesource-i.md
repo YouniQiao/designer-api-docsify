@@ -52,6 +52,22 @@ Images occupy a large amount of memory. When you finish using a PixelMap instanc
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Demo() {
+    const color: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
+    let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 4, width: 6 } }
+    sendableImage.createPixelMap(color, opts).then((pixelMap: sendableImage.PixelMap) => {
+        console.info('Succeeded in creating pixelmap.');
+    }).catch((error: BusinessError) => {
+        console.error(`Failed to create pixelmap. code is ${error.code}, message is ${error.message}`);
+    })
+}
+```
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 async function Demo(context : Context) {
@@ -92,6 +108,21 @@ Before releasing the instance, ensure that all asynchronous operations associate
 **Examples**
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sendableImage } from '@kit.ImageKit';
+
+async function Demo(pixelMap: sendableImage.PixelMap) {
+  if (pixelMap != undefined) {
+    await pixelMap.release().then(() => {
+      console.info('Succeeded in releasing pixelmap object.');
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to release pixelmap object. code is ${error.code}, message is ${error.message}`);
+    })
+  }
+}
+```
+
+```TypeScript
 import { sendableImage } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -102,6 +133,45 @@ async function Demo(context : Context) {
     console.info('Succeeded in releasing the image source instance.');
   }).catch((error: BusinessError) => {
     console.error(`Failed to release the image source instance. code ${error.code}, message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+async function Demo() {
+  let size: image.Size = {
+    height: 8192,
+    width: 8
+  }
+  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
+  let img = await receiver.readNextImage();
+  img.release().then(() => {
+    console.info('release succeeded.');
+  }).catch((error: BusinessError) => {
+    console.error(`release failed. code ${error.code}, message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+async function Demo() {
+  let size: image.Size = {
+    height: 8192,
+    width: 8
+  }
+  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
+  receiver.release().then(() => {
+    console.info('release succeeded.');
+  }).catch((error: BusinessError) => {
+    console.error(`release failed. code ${error.code}, message is ${error.message}`);
   })
 }
 ```

@@ -24,7 +24,7 @@ Obtains the default SIM ID for the voice service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Returns the SIM ID of the default voice sim and SIM ID will increase from 1. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Returns the SIM ID of the default voice sim and SIM ID will increase from 1. |
 
 **Error codes:**
 
@@ -46,6 +46,18 @@ import { sim } from '@kit.TelephonyKit';
 
 sim.getDefaultVoiceSimId((err: BusinessError, data: number) => {
     console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+let promise = sim.getDefaultVoiceSimId();
+promise.then((data: number) => {
+    console.info(`getDefaultVoiceSimId success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getDefaultVoiceSimId failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -83,15 +95,5 @@ Obtains the default SIM ID for the voice service.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let promise = sim.getDefaultVoiceSimId();
-promise.then((data: number) => {
-    console.info(`getDefaultVoiceSimId success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getDefaultVoiceSimId failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getDefaultVoiceSimId](#getdefaultvoicesimid)
 

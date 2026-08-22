@@ -89,7 +89,7 @@ Renames a file or directory. This API uses an asynchronous callback to return th
 | --- | --- | --- | --- |
 | oldPath | string | Yes | Original application sandbox path of the file or directory. |
 | newPath | string | Yes | New application sandbox path of the file or directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is renamed successfully, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is renamed successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

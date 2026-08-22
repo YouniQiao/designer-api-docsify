@@ -1,6 +1,6 @@
 # EntityInfo (System API)
 
-EntityInfo inherits from [IntentEntityDecoratorInfo](arkts-ability-appabilityinsightintentdecorator-intententitydecoratorinfo-i.md) and is used to describe the information about the intent entity defined by the @InsightIntentEntity decorator.
+EntityInfo inherits from [IntentEntityDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intententitydecoratorinfo-i.md) and is used to describe the information about the intent entity defined by the @InsightIntentEntity decorator.
 
 **Since:** 23
 

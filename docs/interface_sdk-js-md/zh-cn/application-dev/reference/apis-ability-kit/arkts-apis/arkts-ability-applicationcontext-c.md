@@ -65,6 +65,23 @@ export default class MyAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onBackground() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    // 清理当前应用的应用文件路径下的所有数据
+    applicationContext.clearUpApplicationData(error => {
+      if (error) {
+        console.error(`Failed to clear up application data. Code: ${error.code}, message: ${error.message}`);
+      }
+    });
+  }
+}
+```
+
 ## clearUpApplicationData
 
 ```TypeScript
@@ -104,22 +121,7 @@ clearUpApplicationData(callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-
-export default class MyAbility extends UIAbility {
-  onBackground() {
-    // 获取应用上下文
-    let applicationContext = this.context.getApplicationContext();
-    // 清理当前应用的应用文件路径下的所有数据
-    applicationContext.clearUpApplicationData(error => {
-      if (error) {
-        console.error(`Failed to clear up application data. Code: ${error.code}, message: ${error.message}`);
-      }
-    });
-  }
-}
-```
+参见 [clearUpApplicationData](#clearupapplicationdata)
 
 ## getAllRunningInstanceKeys
 
@@ -383,6 +385,25 @@ export default class MyAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onForeground() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    // 获取运行中的进程信息
+    applicationContext.getRunningProcessInformation((err, data) => {
+      if (err) {
+        console.error(`Failed to get running process information. Code: ${err.code}, message: ${err.message}`);
+      } else {
+        console.info(`The process running information is: ${JSON.stringify(data)}`);
+      }
+    });
+  }
+}
+```
+
 ## getRunningProcessInformation
 
 ```TypeScript
@@ -417,24 +438,7 @@ getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInformation>>)
 
 **示例**
 
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-
-export default class MyAbility extends UIAbility {
-  onForeground() {
-    // 获取应用上下文
-    let applicationContext = this.context.getApplicationContext();
-    // 获取运行中的进程信息
-    applicationContext.getRunningProcessInformation((err, data) => {
-      if (err) {
-        console.error(`Failed to get running process information. Code: ${err.code}, message: ${err.message}`);
-      } else {
-        console.info(`The process running information is: ${JSON.stringify(data)}`);
-      }
-    });
-  }
-}
-```
+参见 [getRunningProcessInformation](#getrunningprocessinformation)
 
 ## killAllProcesses
 
@@ -486,6 +490,38 @@ export default class MyAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+let isClearPageStack = false;
+
+export default class MyAbility extends UIAbility {
+  onBackground() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    // 终止应用的所有进程，并清除页面堆栈
+    applicationContext.killAllProcesses(isClearPageStack);
+  }
+}
+```
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onBackground() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    // 终止应用的所有进程
+    applicationContext.killAllProcesses(error => {
+      if (error) {
+        console.error(`Failed to kill all processes. Code: ${error.code}, message: ${error.message}`);
+      }
+    });
+  }
+}
+```
+
 ## killAllProcesses
 
 ```TypeScript
@@ -529,20 +565,7 @@ killAllProcesses(clearPageStack: boolean): Promise<void>
 
 **示例**
 
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-
-let isClearPageStack = false;
-
-export default class MyAbility extends UIAbility {
-  onBackground() {
-    // 获取应用上下文
-    let applicationContext = this.context.getApplicationContext();
-    // 终止应用的所有进程，并清除页面堆栈
-    applicationContext.killAllProcesses(isClearPageStack);
-  }
-}
-```
+参见 [killAllProcesses](#killallprocesses)
 
 ## killAllProcesses
 
@@ -581,522 +604,7 @@ killAllProcesses(callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-
-export default class MyAbility extends UIAbility {
-  onBackground() {
-    // 获取应用上下文
-    let applicationContext = this.context.getApplicationContext();
-    // 终止应用的所有进程
-    applicationContext.killAllProcesses(error => {
-      if (error) {
-        console.error(`Failed to kill all processes. Code: ${error.code}, message: ${error.message}`);
-      }
-    });
-  }
-}
-```
-
-## offAbilityLifecycle
-
-```TypeScript
-offAbilityLifecycle(callbackId: int, callback: AsyncCallback<void>): void
-```
-
-取消监听应用内UIAbility的生命周期。使用callback异步回调。仅支持主线程调用。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ApplicationContext-offAbilityLifecycle(callbackId: int, callback: AsyncCallback<void>): void--><!--Device-ApplicationContext-offAbilityLifecycle(callbackId: int, callback: AsyncCallback<void>): void-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callbackId | int | 是 | 通过 [ApplicationContext.on('abilityLifecycle')](#onabilitylifecycle) 接口注册监听应用内UIAbility的生命周期时返回的ID。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调方法。当取消监听应用内生命周期成功，err为undefined，否则为错误对象。 |
-
-**示例**
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIAbility, AbilityLifecycleCallback } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-let lifecycleId: int;
-
-class AbilityLifecycleCallbackCustom extends AbilityLifecycleCallback {
-  onAbilityCreate(ability: UIAbility) {
-    console.info(`AbilityLifecycleCallback onAbilityCreate ability: ${ability}`);
-  }
-
-  onWindowStageCreate(ability: UIAbility, windowStage: window.WindowStage) {
-    console.info(`AbilityLifecycleCallback onWindowStageCreate ability: ${ability}`);
-    console.info(`AbilityLifecycleCallback onWindowStageCreate windowStage: ${windowStage}`);
-  }
-
-  onWindowStageActive(ability: UIAbility, windowStage: window.WindowStage) {
-    console.info(`AbilityLifecycleCallback onWindowStageActive ability: ${ability}`);
-    console.info(`AbilityLifecycleCallback onWindowStageActive windowStage: ${windowStage}`);
-  }
-
-  onWindowStageInactive(ability: UIAbility, windowStage: window.WindowStage) {
-    console.info(`AbilityLifecycleCallback onWindowStageInactive ability: ${ability}`);
-    console.info(`AbilityLifecycleCallback onWindowStageInactive windowStage: ${windowStage}`);
-  }
-
-  onWindowStageDestroy(ability: UIAbility, windowStage: window.WindowStage) {
-    console.info(`AbilityLifecycleCallback onWindowStageDestroy ability: ${ability}`);
-    console.info(`AbilityLifecycleCallback onWindowStageDestroy windowStage: ${windowStage}`);
-  }
-
-  onAbilityDestroy(ability: UIAbility) {
-    console.info(`AbilityLifecycleCallback onAbilityDestroy ability: ${ability}`);
-  }
-
-  onAbilityForeground(ability: UIAbility) {
-    console.info(`AbilityLifecycleCallback onAbilityForeground ability: ${ability}`);
-  }
-
-  onAbilityBackground(ability: UIAbility) {
-    console.info(`AbilityLifecycleCallback onAbilityBackground ability: ${ability}`);
-  }
-
-  onAbilityContinue(ability: UIAbility) {
-    console.info(`AbilityLifecycleCallback onAbilityContinue ability: ${ability}`);
-  }
-}
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate');
-
-    // 1.通过context属性获取applicationContext
-    let applicationContext = this.context.getApplicationContext();
-    try {
-      // 2.通过applicationContext注册监听应用内生命周期
-      let abilityLifecycleCallback = new AbilityLifecycleCallbackCustom();
-      lifecycleId = applicationContext.onAbilityLifecycle(abilityLifecycleCallback);
-      applicationContext.offAbilityLifecycle(lifecycleId, (err: BusinessError<void> | null) => {
-        if (err?.code) {
-          console.error(`unregisterAbilityLifecycleCallback fail, err: ${JSON.stringify(err)}`);
-          return;
-        }
-        console.info(`unregisterAbilityLifecycleCallback success}`);
-      });
-    } catch (paramError) {
-      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-    }
-    console.info(`registerAbilityLifecycleCallback lifecycleId: ${lifecycleId}`);
-  }
-}
-```
-
-## offAbilityLifecycle
-
-```TypeScript
-offAbilityLifecycle(callbackId: int): Promise<void>
-```
-
-取消监听应用内UIAbility的生命周期。使用Promise异步回调。仅支持主线程调用。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ApplicationContext-offAbilityLifecycle(callbackId: int): Promise<void>--><!--Device-ApplicationContext-offAbilityLifecycle(callbackId: int): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callbackId | int | 是 | 通过 [ApplicationContext.on('abilityLifecycle')](#onabilitylifecycle) 接口注册监听应用内UIAbility的生命周期时返回的ID。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIAbility, AbilityLifecycleCallback } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-let lifecycleId: int;
-
-class AbilityLifecycleCallbackCustom extends AbilityLifecycleCallback {
-  onAbilityCreate(ability: UIAbility) {
-    console.info(`AbilityLifecycleCallback onAbilityCreate ability: ${ability}`);
-  }
-
-  onWindowStageCreate(ability: UIAbility, windowStage: window.WindowStage) {
-    console.info(`AbilityLifecycleCallback onWindowStageCreate ability: ${ability}`);
-    console.info(`AbilityLifecycleCallback onWindowStageCreate windowStage: ${windowStage}`);
-  }
-
-  onWindowStageActive(ability: UIAbility, windowStage: window.WindowStage) {
-    console.info(`AbilityLifecycleCallback onWindowStageActive ability: ${ability}`);
-    console.info(`AbilityLifecycleCallback onWindowStageActive windowStage: ${windowStage}`);
-  }
-
-  onWindowStageInactive(ability: UIAbility, windowStage: window.WindowStage) {
-    console.info(`AbilityLifecycleCallback onWindowStageInactive ability: ${ability}`);
-    console.info(`AbilityLifecycleCallback onWindowStageInactive windowStage: ${windowStage}`);
-  }
-
-  onWindowStageDestroy(ability: UIAbility, windowStage: window.WindowStage) {
-    console.info(`AbilityLifecycleCallback onWindowStageDestroy ability: ${ability}`);
-    console.info(`AbilityLifecycleCallback onWindowStageDestroy windowStage: ${windowStage}`);
-  }
-
-  onAbilityDestroy(ability: UIAbility) {
-    console.info(`AbilityLifecycleCallback onAbilityDestroy ability: ${ability}`);
-  }
-
-  onAbilityForeground(ability: UIAbility) {
-    console.info(`AbilityLifecycleCallback onAbilityForeground ability: ${ability}`);
-  }
-
-  onAbilityBackground(ability: UIAbility) {
-    console.info(`AbilityLifecycleCallback onAbilityBackground ability: ${ability}`);
-  }
-
-  onAbilityContinue(ability: UIAbility) {
-    console.info(`AbilityLifecycleCallback onAbilityContinue ability: ${ability}`);
-  }
-}
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate');
-
-    // 1.通过context属性获取applicationContext
-    let applicationContext = this.context.getApplicationContext();
-    try {
-      // 2.通过applicationContext注册监听应用内生命周期
-      let abilityLifecycleCallback = new AbilityLifecycleCallbackCustom();
-      lifecycleId = applicationContext.onAbilityLifecycle(abilityLifecycleCallback);
-      applicationContext.offAbilityLifecycle(lifecycleId, (err: BusinessError<void> | null) => {
-        if (err?.code) {
-          console.error(`unregisterAbilityLifecycleCallback fail, err: ${JSON.stringify(err)}`);
-          return;
-        }
-        console.info(`unregisterAbilityLifecycleCallback success}`);
-      });
-    } catch (paramError) {
-      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-    }
-    console.info(`registerAbilityLifecycleCallback lifecycleId: ${lifecycleId}`);
-  }
-}
-```
-
-## offApplicationStateChange
-
-```TypeScript
-offApplicationStateChange(callback?: ApplicationStateChangeCallback): void
-```
-
-取消对应用前后台状态变化的监听。使用callback异步回调。仅支持主线程调用。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ApplicationContext-offApplicationStateChange(callback?: ApplicationStateChangeCallback): void--><!--Device-ApplicationContext-offApplicationStateChange(callback?: ApplicationStateChangeCallback): void-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [ApplicationStateChangeCallback](arkts-ability-appabilityapplicationstatechangecallback-applicationstatechangecallback-i.md) | 否 | 回调函数。取值可以为使用 [ApplicationContext.onApplicationStateChange](#onapplicationstatechange)方法定义的callback回 调，也可以为空。 - 如果传入已定义的回调，则取消该监听。 - 如果未传入参数，则取消当前应用对所有前后台切换事件的监听。 |
-
-**示例**
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIAbility, ApplicationStateChangeCallback } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class ApplicationStateChangeCallbackCustom implements ApplicationStateChangeCallback {
-  onApplicationForeground() {
-    console.info('applicationStateChangeCallback onApplicationForeground');
-  }
-
-  onApplicationBackground() {
-    console.info('applicationStateChangeCallback onApplicationBackground');
-  }
-}
-
-export default class MyAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate');
-    // 1.获取applicationContext
-    let applicationContext = this.context.getApplicationContext();
-    let applicationStateChangeCallbackCb = new ApplicationStateChangeCallbackCustom();
-    try {
-      // 2.通过applicationContext注册应用前后台状态监听
-      applicationContext.offApplicationStateChange(applicationStateChangeCallbackCb);
-    } catch (paramError) {
-      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
-
-## offEnvironment
-
-```TypeScript
-offEnvironment(callbackId: int, callback: AsyncCallback<void>): void
-```
-
-取消对系统环境变化的监听。使用callback异步回调。仅支持主线程调用。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ApplicationContext-offEnvironment(callbackId: int, callback: AsyncCallback<void>): void--><!--Device-ApplicationContext-offEnvironment(callbackId: int, callback: AsyncCallback<void>): void-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callbackId | int | 是 | 通过[ApplicationContext.onEnvironment](#onenvironment)接口注册监听系统环 境变化时返回的ID。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调方法。当取消对系统环境变化的监听成功，err为undefined，否则为错误对象。 |
-
-**示例**
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIAbility, EnvironmentCallback, Configuration, AbilityConstant } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let callbackId: int;
-
-class EnvironmentCallbackCustom implements EnvironmentCallback {
-  onConfigurationUpdated(config: Configuration) {
-    console.info(`onConfigurationUpdated config: ${JSON.stringify(config)}`);
-  }
-
-  onMemoryLevel(level: AbilityConstant.MemoryLevel) {
-    console.info(`onMemoryLevel level: ${level}`);
-  }
-}
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate')
-    // 1.获取applicationContext
-    let applicationContext = this.context.getApplicationContext();
-    let environmentCallbackCb = new EnvironmentCallbackCustom();
-    try {
-      // 2.通过applicationContext注册监听系统环境变化
-      callbackId = applicationContext.onEnvironment(environmentCallbackCb);
-      applicationContext.offEnvironment(callbackId, (err: BusinessError<void> | null) => {
-        if (err?.code) {
-          console.error(`unregisterEnvironmentCallback fail, err: ${JSON.stringify(err)}`);
-          return;
-        }
-        console.info(`unregisterEnvironmentCallback success}`);
-      });
-    } catch (paramError) {
-      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-    }
-    console.info(`registerEnvironmentCallback callbackId: ${callbackId}`);
-  }
-}
-```
-
-## offEnvironment
-
-```TypeScript
-offEnvironment(callbackId: int): Promise<void>
-```
-
-取消对系统环境变化的监听。使用Promise异步回调。仅支持主线程调用。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ApplicationContext-offEnvironment(callbackId: int): Promise<void>--><!--Device-ApplicationContext-offEnvironment(callbackId: int): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callbackId | int | 是 | 通过[ApplicationContext.onEnvironment](#onenvironment)接口注册监听系统环境 变化时返回的ID。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIAbility, EnvironmentCallback, Configuration, AbilityConstant } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let callbackId: int;
-
-class EnvironmentCallbackCustom implements EnvironmentCallback {
-  onConfigurationUpdated(config: Configuration) {
-    console.info(`onConfigurationUpdated config: ${JSON.stringify(config)}`);
-  }
-
-  onMemoryLevel(level: AbilityConstant.MemoryLevel) {
-    console.info(`onMemoryLevel level: ${level}`);
-  }
-}
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate')
-    // 1.获取applicationContext
-    let applicationContext = this.context.getApplicationContext();
-    let environmentCallbackCb = new EnvironmentCallbackCustom();
-    try {
-      // 2.通过applicationContext注册监听系统环境变化
-      callbackId = applicationContext.onEnvironment(environmentCallbackCb);
-      applicationContext.offEnvironment(callbackId);
-    } catch (paramError) {
-      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-    }
-    console.info(`registerEnvironmentCallback callbackId: ${callbackId}`);
-  }
-}
-```
-
-## offInteropAbilityLifecycle
-
-```TypeScript
-offInteropAbilityLifecycle(callback?: InteropAbilityLifecycleCallback): void
-```
-
-取消应用内不同ArkTS环境下UIAbility生命周期的监听。仅支持主线程调用。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ApplicationContext-offInteropAbilityLifecycle(callback?: InteropAbilityLifecycleCallback): void--><!--Device-ApplicationContext-offInteropAbilityLifecycle(callback?: InteropAbilityLifecycleCallback): void-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [InteropAbilityLifecycleCallback](arkts-ability-appabilityinteropabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) | 否 | 不同ArkTS环境下UIAbility生命周期变化时触发的回调方法。 |
-
-## offSystemConfigurationUpdated
-
-```TypeScript
-offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): void
-```
-
-取消监听系统环境[Configuration](arkts-ability-appabilityconfiguration-configuration-i.md)的变化。仅支持主线程调用。
-
-<p>**NOTE：**: <br>It can be called only by the main thread. </p>
-
-**起始版本：** 24
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ApplicationContext-offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): void--><!--Device-ApplicationContext-offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): void-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | systemConfiguration.UpdatedCallback | 否 | 回调函数。取值可以为使用 [ApplicationContext.onSystemConfigurationUpdated](#onsystemconfigurationupdated) 方法注册的callback回调，也可以为空。<br/>-&nbsp;如果传入已定义的回调，则取消该监听。 <br/>-&nbsp;如果未传入参数，则取消所有已注册的监听。 |
-
-**示例**
-
-```TypeScript
-import { UIAbility, systemConfiguration, ConfigurationConstant } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let callBack: systemConfiguration.UpdatedCallback = {
-      onColorModeUpdated(colorMode: ConfigurationConstant.ColorMode) {
-        console.info(`system configuration updated colormode:` + colorMode);
-      },
-      onFontSizeScaleUpdated(fontSizeScale: number) {
-        console.info(`system configuration updated ability:` + fontSizeScale);
-      },
-      onFontWeightScaleUpdated(fontWeightScale: number) {
-        console.info(`system configuration updated ability:` + fontWeightScale);
-      },
-      onMCCUpdated(mcc: string) {
-        console.info(`system configuration updated ability:` + mcc);
-      },
-      onMNCUpdated(mnc: string) {
-        console.info(`system configuration updated ability:` + mnc);
-      },
-      onLanguageUpdated(language: string) {
-        console.info(`system configuration updated ability:` + language);
-      },
-      onFontIdUpdated(fontId: string) {
-        console.info(`system configuration updated ability:` + fontId);
-      },
-      onHasPointerDeviceUpdated(hasPointerDevice: boolean) {
-        console.info(`system configuration updated ability:` + hasPointerDevice);
-      },
-      onLocaleUpdated(locale: string) {
-        console.info(`system configuration updated ability:` + locale);
-      }
-    }
-    // 1.通过context属性获取applicationContext
-    // 获取应用上下文
-    let applicationContext = this.context.getApplicationContext();
-    try {
-      // 2.通过applicationContext取消监听
-      applicationContext.offSystemConfigurationUpdated(callBack);
-    } catch (paramError) {
-      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-    }
-    console.info(`offSystemConfigurationUpdated finish`);
-  }
-}
-```
+参见 [killAllProcesses](#killallprocesses)
 
 ## off('abilityLifecycle')
 
@@ -1242,7 +750,7 @@ off(type: 'applicationStateChange', callback?: ApplicationStateChangeCallback): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | 是 | 此类型表示当前应用进程状态变化，固定为'applicationStateChange'。 |
-| callback | [ApplicationStateChangeCallback](arkts-ability-appabilityapplicationstatechangecallback-applicationstatechangecallback-i.md) | 否 | 回调函数。取值可以为使用 [ApplicationContext.on('applicationStateChange')](#onabilitylifecycle) 方法定义的callback回调，也可以为空。<br/>-?如果传入已定义的回调，则取消该监听。 <br/>-?如果未传入参数，则取消所有已注册的该类型事件的监听。 |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | 否 | 回调函数。取值可以为使用 [ApplicationContext.on('applicationStateChange')](#onabilitylifecycle) 方法定义的callback回调，也可以为空。<br/>-?如果传入已定义的回调，则取消该监听。 <br/>-?如果未传入参数，则取消所有已注册的该类型事件的监听。 |
 
 **错误码：**
 
@@ -1401,19 +909,19 @@ export default class MyAbility extends UIAbility {
 }
 ```
 
-## onAbilityLifecycle
+## offAbilityLifecycle
 
 ```TypeScript
-onAbilityLifecycle(callback: AbilityLifecycleCallback): int
+offAbilityLifecycle(callbackId: int, callback: AsyncCallback<void>): void
 ```
 
-注册监听应用内UIAbility的生命周期。使用callback异步回调。仅支持主线程调用。
+取消监听应用内UIAbility的生命周期。使用callback异步回调。仅支持主线程调用。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ApplicationContext-onAbilityLifecycle(callback: AbilityLifecycleCallback): int--><!--Device-ApplicationContext-onAbilityLifecycle(callback: AbilityLifecycleCallback): int-End-->
+<!--Device-ApplicationContext-offAbilityLifecycle(callbackId: int, callback: AsyncCallback<void>): void--><!--Device-ApplicationContext-offAbilityLifecycle(callbackId: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1421,13 +929,8 @@ onAbilityLifecycle(callback: AbilityLifecycleCallback): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AbilityLifecycleCallback](arkts-ability-appabilityabilitylifecyclecallback-abilitylifecyclecallback-c.md) | 是 | UIAbility生命周期变化时触发的回调方法。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| int | 返回此次注册的callbackID（每次注册该ID会自增+1，当超过监听上限数量2^63-1时，返回-1），该ID用于在ApplicationContext.offAbilityLifecycle方法中取消注册对应的callback。 |
+| callbackId | int | 是 | 通过 [ApplicationContext.on('abilityLifecycle')](#onabilitylifecycle) 接口注册监听应用内UIAbility的生命周期时返回的ID。 |
+| callback | AsyncCallback&lt;void&gt; | 是 | 回调方法。当取消监听应用内生命周期成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -1493,6 +996,13 @@ export default class EntryAbility extends UIAbility {
       // 2.通过applicationContext注册监听应用内生命周期
       let abilityLifecycleCallback = new AbilityLifecycleCallbackCustom();
       lifecycleId = applicationContext.onAbilityLifecycle(abilityLifecycleCallback);
+      applicationContext.offAbilityLifecycle(lifecycleId, (err: BusinessError<void> | null) => {
+        if (err?.code) {
+          console.error(`unregisterAbilityLifecycleCallback fail, err: ${JSON.stringify(err)}`);
+          return;
+        }
+        console.info(`unregisterAbilityLifecycleCallback success}`);
+      });
     } catch (paramError) {
       console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
     }
@@ -1501,19 +1011,96 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## onApplicationStateChange
+ArkTS-Sta示例：
 
 ```TypeScript
-onApplicationStateChange(callback: ApplicationStateChangeCallback): void
+'use static'
+import { UIAbility, AbilityLifecycleCallback } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+let lifecycleId: int;
+
+class AbilityLifecycleCallbackCustom extends AbilityLifecycleCallback {
+  onAbilityCreate(ability: UIAbility) {
+    console.info(`AbilityLifecycleCallback onAbilityCreate ability: ${ability}`);
+  }
+
+  onWindowStageCreate(ability: UIAbility, windowStage: window.WindowStage) {
+    console.info(`AbilityLifecycleCallback onWindowStageCreate ability: ${ability}`);
+    console.info(`AbilityLifecycleCallback onWindowStageCreate windowStage: ${windowStage}`);
+  }
+
+  onWindowStageActive(ability: UIAbility, windowStage: window.WindowStage) {
+    console.info(`AbilityLifecycleCallback onWindowStageActive ability: ${ability}`);
+    console.info(`AbilityLifecycleCallback onWindowStageActive windowStage: ${windowStage}`);
+  }
+
+  onWindowStageInactive(ability: UIAbility, windowStage: window.WindowStage) {
+    console.info(`AbilityLifecycleCallback onWindowStageInactive ability: ${ability}`);
+    console.info(`AbilityLifecycleCallback onWindowStageInactive windowStage: ${windowStage}`);
+  }
+
+  onWindowStageDestroy(ability: UIAbility, windowStage: window.WindowStage) {
+    console.info(`AbilityLifecycleCallback onWindowStageDestroy ability: ${ability}`);
+    console.info(`AbilityLifecycleCallback onWindowStageDestroy windowStage: ${windowStage}`);
+  }
+
+  onAbilityDestroy(ability: UIAbility) {
+    console.info(`AbilityLifecycleCallback onAbilityDestroy ability: ${ability}`);
+  }
+
+  onAbilityForeground(ability: UIAbility) {
+    console.info(`AbilityLifecycleCallback onAbilityForeground ability: ${ability}`);
+  }
+
+  onAbilityBackground(ability: UIAbility) {
+    console.info(`AbilityLifecycleCallback onAbilityBackground ability: ${ability}`);
+  }
+
+  onAbilityContinue(ability: UIAbility) {
+    console.info(`AbilityLifecycleCallback onAbilityContinue ability: ${ability}`);
+  }
+}
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+
+    // 1.通过context属性获取applicationContext
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 2.通过applicationContext注册监听应用内生命周期
+      let abilityLifecycleCallback = new AbilityLifecycleCallbackCustom();
+      lifecycleId = applicationContext.onAbilityLifecycle(abilityLifecycleCallback);
+      applicationContext.offAbilityLifecycle(lifecycleId, (err: BusinessError<void> | null) => {
+        if (err?.code) {
+          console.error(`unregisterAbilityLifecycleCallback fail, err: ${JSON.stringify(err)}`);
+          return;
+        }
+        console.info(`unregisterAbilityLifecycleCallback success}`);
+      });
+    } catch (paramError) {
+      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+    }
+    console.info(`registerAbilityLifecycleCallback lifecycleId: ${lifecycleId}`);
+  }
+}
 ```
 
-注册对当前应用前后台状态变化的监听。使用callback异步回调。仅支持主线程调用。
+## offAbilityLifecycle
+
+```TypeScript
+offAbilityLifecycle(callbackId: int): Promise<void>
+```
+
+取消监听应用内UIAbility的生命周期。使用Promise异步回调。仅支持主线程调用。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ApplicationContext-onApplicationStateChange(callback: ApplicationStateChangeCallback): void--><!--Device-ApplicationContext-onApplicationStateChange(callback: ApplicationStateChangeCallback): void-End-->
+<!--Device-ApplicationContext-offAbilityLifecycle(callbackId: int): Promise<void>--><!--Device-ApplicationContext-offAbilityLifecycle(callbackId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1521,7 +1108,39 @@ onApplicationStateChange(callback: ApplicationStateChangeCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ApplicationStateChangeCallback](arkts-ability-appabilityapplicationstatechangecallback-applicationstatechangecallback-i.md) | 是 | 应用前后台切换时触发的回调方法。 |
+| callbackId | int | 是 | 通过 [ApplicationContext.on('abilityLifecycle')](#onabilitylifecycle) 接口注册监听应用内UIAbility的生命周期时返回的ID。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [offAbilityLifecycle](#offabilitylifecycle)
+
+## offApplicationStateChange
+
+```TypeScript
+offApplicationStateChange(callback?: ApplicationStateChangeCallback): void
+```
+
+取消对应用前后台状态变化的监听。使用callback异步回调。仅支持主线程调用。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ApplicationContext-offApplicationStateChange(callback?: ApplicationStateChangeCallback): void--><!--Device-ApplicationContext-offApplicationStateChange(callback?: ApplicationStateChangeCallback): void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | 否 | 回调函数。取值可以为使用 [ApplicationContext.onApplicationStateChange](#onapplicationstatechange)方法定义的callback回 调，也可以为空。 - 如果传入已定义的回调，则取消该监听。 - 如果未传入参数，则取消当前应用对所有前后台切换事件的监听。 |
 
 **示例**
 
@@ -1550,28 +1169,27 @@ export default class MyAbility extends UIAbility {
     let applicationStateChangeCallbackCb = new ApplicationStateChangeCallbackCustom();
     try {
       // 2.通过applicationContext注册应用前后台状态监听
-      applicationContext.onApplicationStateChange(applicationStateChangeCallbackCb);
+      applicationContext.offApplicationStateChange(applicationStateChangeCallbackCb);
     } catch (paramError) {
       console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
     }
-    console.info('Register applicationStateChangeCallback');
   }
 }
 ```
 
-## onEnvironment
+## offEnvironment
 
 ```TypeScript
-onEnvironment(callback: EnvironmentCallback): int
+offEnvironment(callbackId: int, callback: AsyncCallback<void>): void
 ```
 
-注册对系统环境变化的监听。使用callback异步回调。仅支持主线程调用。
+取消对系统环境变化的监听。使用callback异步回调。仅支持主线程调用。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ApplicationContext-onEnvironment(callback: EnvironmentCallback): int--><!--Device-ApplicationContext-onEnvironment(callback: EnvironmentCallback): int-End-->
+<!--Device-ApplicationContext-offEnvironment(callbackId: int, callback: AsyncCallback<void>): void--><!--Device-ApplicationContext-offEnvironment(callbackId: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1579,13 +1197,8 @@ onEnvironment(callback: EnvironmentCallback): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [EnvironmentCallback](../../apis-default/arkts-apis/arkts-appabilityenvironmentcallback-environmentcallback-i.md) | 是 | 系统环境变化时触发的回调方法。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| int | 返回此次注册的callbackID（每次注册该ID会自增+1，当超过监听上限数量2^63-1时，返回-1），该ID用于在 [ApplicationContext.offEnvironment]{ |
+| callbackId | int | 是 | 通过[ApplicationContext.onEnvironment](#onenvironment)接口注册监听系统环 境变化时返回的ID。 |
+| callback | AsyncCallback&lt;void&gt; | 是 | 回调方法。当取消对系统环境变化的监听成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -1617,6 +1230,13 @@ export default class EntryAbility extends UIAbility {
     try {
       // 2.通过applicationContext注册监听系统环境变化
       callbackId = applicationContext.onEnvironment(environmentCallbackCb);
+      applicationContext.offEnvironment(callbackId, (err: BusinessError<void> | null) => {
+        if (err?.code) {
+          console.error(`unregisterEnvironmentCallback fail, err: ${JSON.stringify(err)}`);
+          return;
+        }
+        console.info(`unregisterEnvironmentCallback success}`);
+      });
     } catch (paramError) {
       console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
     }
@@ -1625,19 +1245,56 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## onInteropAbilityLifecycle
+ArkTS-Sta示例：
 
 ```TypeScript
-onInteropAbilityLifecycle(callback: InteropAbilityLifecycleCallback): void
+'use static'
+import { UIAbility, EnvironmentCallback, Configuration, AbilityConstant } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let callbackId: int;
+
+class EnvironmentCallbackCustom implements EnvironmentCallback {
+  onConfigurationUpdated(config: Configuration) {
+    console.info(`onConfigurationUpdated config: ${JSON.stringify(config)}`);
+  }
+
+  onMemoryLevel(level: AbilityConstant.MemoryLevel) {
+    console.info(`onMemoryLevel level: ${level}`);
+  }
+}
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate')
+    // 1.获取applicationContext
+    let applicationContext = this.context.getApplicationContext();
+    let environmentCallbackCb = new EnvironmentCallbackCustom();
+    try {
+      // 2.通过applicationContext注册监听系统环境变化
+      callbackId = applicationContext.onEnvironment(environmentCallbackCb);
+      applicationContext.offEnvironment(callbackId);
+    } catch (paramError) {
+      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+    }
+    console.info(`registerEnvironmentCallback callbackId: ${callbackId}`);
+  }
+}
 ```
 
-注册监听应用内不同ArkTS环境下的UIAbility生命周期。仅支持主线程调用。
+## offEnvironment
+
+```TypeScript
+offEnvironment(callbackId: int): Promise<void>
+```
+
+取消对系统环境变化的监听。使用Promise异步回调。仅支持主线程调用。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ApplicationContext-onInteropAbilityLifecycle(callback: InteropAbilityLifecycleCallback): void--><!--Device-ApplicationContext-onInteropAbilityLifecycle(callback: InteropAbilityLifecycleCallback): void-End-->
+<!--Device-ApplicationContext-offEnvironment(callbackId: int): Promise<void>--><!--Device-ApplicationContext-offEnvironment(callbackId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1645,19 +1302,49 @@ onInteropAbilityLifecycle(callback: InteropAbilityLifecycleCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [InteropAbilityLifecycleCallback](arkts-ability-appabilityinteropabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) | 是 | 不同ArkTS环境下UIAbility生命周期变化时触发的回调方法。 |
+| callbackId | int | 是 | 通过[ApplicationContext.onEnvironment](#onenvironment)接口注册监听系统环境 变化时返回的ID。 |
 
-## onSystemConfigurationUpdated
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [offEnvironment](#offenvironment)
+
+## offInteropAbilityLifecycle
 
 ```TypeScript
-onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): void
+offInteropAbilityLifecycle(callback?: InteropAbilityLifecycleCallback): void
 ```
 
-注册监听系统环境[Configuration](arkts-ability-appabilityconfiguration-configuration-i.md)的变化。使用callback异步回调。仅支持主线程调用。
+取消应用内不同ArkTS环境下UIAbility生命周期的监听。仅支持主线程调用。
 
-> **说明：**
-> 
-> 应用自定义的设置不影响回调函数的触发。例如：应用自定义设置了深浅色模式，当系统深浅色模式变化后，注册的回调函数依然会触发。
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ApplicationContext-offInteropAbilityLifecycle(callback?: InteropAbilityLifecycleCallback): void--><!--Device-ApplicationContext-offInteropAbilityLifecycle(callback?: InteropAbilityLifecycleCallback): void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [InteropAbilityLifecycleCallback](arkts-ability-app-ability-interopabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) | 否 | 不同ArkTS环境下UIAbility生命周期变化时触发的回调方法。 |
+
+## offSystemConfigurationUpdated
+
+```TypeScript
+offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): void
+```
+
+取消监听系统环境[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)的变化。仅支持主线程调用。
+
+<p>**NOTE：**: <br>It can be called only by the main thread. </p>
 
 **起始版本：** 24
 
@@ -1665,7 +1352,7 @@ onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): voi
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ApplicationContext-onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): void--><!--Device-ApplicationContext-onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): void-End-->
+<!--Device-ApplicationContext-offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): void--><!--Device-ApplicationContext-offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1673,7 +1360,7 @@ onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | systemConfiguration.UpdatedCallback | 是 | 系统环境变化时触发的回调方法。 |
+| callback | systemConfiguration.UpdatedCallback | 否 | 回调函数。取值可以为使用 [ApplicationContext.onSystemConfigurationUpdated](#onsystemconfigurationupdated) 方法注册的callback回调，也可以为空。<br/>-&nbsp;如果传入已定义的回调，则取消该监听。 <br/>-&nbsp;如果未传入参数，则取消所有已注册的监听。 |
 
 **示例**
 
@@ -1681,61 +1368,47 @@ onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): voi
 import { UIAbility, systemConfiguration, ConfigurationConstant } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let callBack: systemConfiguration.UpdatedCallback = {
-  onColorModeUpdated(colorMode: ConfigurationConstant.ColorMode) {
-    console.info(`system configuration updated colormode:` + colorMode);
-  },
-  onFontSizeScaleUpdated(fontSizeScale: number) {
-    console.info(`system configuration updated ability:` + fontSizeScale);
-  },
-  onFontWeightScaleUpdated(fontWeightScale: number) {
-    console.info(`system configuration updated ability:` + fontWeightScale);
-  },
-  onLanguageUpdated(language: string) {
-    console.info(`system configuration updated ability:` + language);
-  },
-  onFontIdUpdated(fontId: string) {
-    console.info(`system configuration updated ability:` + fontId);
-  },
-  onMCCUpdated(mcc: string) {
-    console.info(`system configuration updated ability:` + mcc);
-  },
-  onMNCUpdated(mnc: string) {
-    console.info(`system configuration updated ability:` + mnc);
-  },
-  onHasPointerDeviceUpdated(hasPointerDevice: boolean) {
-    console.info(`system configuration updated ability:` + hasPointerDevice);
-  },
-  onLocaleUpdated(locale: string) {
-    console.info(`system configuration updated ability:` + locale);
-  }
-}
-
 export default class EntryAbility extends UIAbility {
   onForeground() {
-    // 通过context属性获取applicationContext
-    // 获取应用上下文
-    let applicationContext = this.context.getApplicationContext();
-    try {
-      // 通过applicationContext注册监听
-      applicationContext.onSystemConfigurationUpdated(callBack);
-    } catch (paramError) {
-      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+    let callBack: systemConfiguration.UpdatedCallback = {
+      onColorModeUpdated(colorMode: ConfigurationConstant.ColorMode) {
+        console.info(`system configuration updated colormode:` + colorMode);
+      },
+      onFontSizeScaleUpdated(fontSizeScale: number) {
+        console.info(`system configuration updated ability:` + fontSizeScale);
+      },
+      onFontWeightScaleUpdated(fontWeightScale: number) {
+        console.info(`system configuration updated ability:` + fontWeightScale);
+      },
+      onMCCUpdated(mcc: string) {
+        console.info(`system configuration updated ability:` + mcc);
+      },
+      onMNCUpdated(mnc: string) {
+        console.info(`system configuration updated ability:` + mnc);
+      },
+      onLanguageUpdated(language: string) {
+        console.info(`system configuration updated ability:` + language);
+      },
+      onFontIdUpdated(fontId: string) {
+        console.info(`system configuration updated ability:` + fontId);
+      },
+      onHasPointerDeviceUpdated(hasPointerDevice: boolean) {
+        console.info(`system configuration updated ability:` + hasPointerDevice);
+      },
+      onLocaleUpdated(locale: string) {
+        console.info(`system configuration updated ability:` + locale);
+      }
     }
-    console.info(`onSystemConfigurationUpdated finish`);
-  }
-
-  // 不需要时或应用退出时可以取消监听
-  onDestroy() {
-    // 通过context属性获取applicationContext
+    // 1.通过context属性获取applicationContext
     // 获取应用上下文
     let applicationContext = this.context.getApplicationContext();
     try {
-      // 通过applicationContext取消监听
+      // 2.通过applicationContext取消监听
       applicationContext.offSystemConfigurationUpdated(callBack);
     } catch (paramError) {
       console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
     }
+    console.info(`offSystemConfigurationUpdated finish`);
   }
 }
 ```
@@ -1763,7 +1436,7 @@ on(type: 'abilityLifecycle', callback: AbilityLifecycleCallback): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'abilityLifecycle' | 是 | 此类型表示应用内UIAbility的生命周期，固定为'abilityLifecycle'。 |
-| callback | [AbilityLifecycleCallback](arkts-ability-appabilityabilitylifecyclecallback-abilitylifecyclecallback-c.md) | 是 | UIAbility生命周期变化时触发的回调方法。 |
+| callback | [AbilityLifecycleCallback](arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md) | 是 | UIAbility生命周期变化时触发的回调方法。 |
 
 **返回值：**
 
@@ -1877,7 +1550,7 @@ on(type: 'applicationStateChange', callback: ApplicationStateChangeCallback): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | 是 | 此类型表示当前应用进程状态变化，固定为'applicationStateChange'。 |
-| callback | [ApplicationStateChangeCallback](arkts-ability-appabilityapplicationstatechangecallback-applicationstatechangecallback-i.md) | 是 | 当前应用进程状态切换时触发的回调方法。 |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | 是 | 当前应用进程状态切换时触发的回调方法。 |
 
 **错误码：**
 
@@ -1939,14 +1612,14 @@ on(type: 'environment', callback: EnvironmentCallback): number
 
 > **说明：**
 > 
-> - 使用[onConfigurationUpdate](arkts-ability-appabilityability-ability-c.md#onconfigurationupdate)也可以实现对系统环境变量的监听。相较
-> 于Ability的[onConfigurationUpdate](arkts-ability-appabilityability-ability-c.md#onconfigurationupdate)接口，当前接口的使用场景更
+> - 使用[onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate)也可以实现对系统环境变量的监听。相较
+> 于Ability的[onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate)接口，当前接口的使用场景更
 > 加灵活，不仅可以在应用组件中使用，还可以在页面中使用，但是支持订阅的环境变量与Ability的
-> [onConfigurationUpdate](arkts-ability-appabilityability-ability-c.md#onconfigurationupdate)接口存在差异，如不支持订阅direction
-> 、screenDensity、displayId，详见[Configuration](arkts-ability-appabilityconfiguration-configuration-i.md)中各个环境变量的说明。
+> [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate)接口存在差异，如不支持订阅direction
+> 、screenDensity、displayId，详见[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)中各个环境变量的说明。
 > 
 > - 当前接口在实际触发时存在一定限制。例如如果开发者通过[setLanguage](#setlanguage)接口设置应用的语言，即便系统语
-> 言发生变化，系统也不再触发当前接口的[callback](../../apis-default/arkts-apis/arkts-appabilityenvironmentcallback-environmentcallback-i.md)回调。详见
+> 言发生变化，系统也不再触发当前接口的[callback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md)回调。详见
 > [使用场景](../../../application-models/subscribe-system-environment-variable-changes.md#使用场景)。
 
 **起始版本：** 9
@@ -1964,7 +1637,7 @@ on(type: 'environment', callback: EnvironmentCallback): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'environment' | 是 | 此类型表示系统环境变化，如系统深浅色发生变化，固定为'environment'。 |
-| callback | [EnvironmentCallback](../../apis-default/arkts-apis/arkts-appabilityenvironmentcallback-environmentcallback-i.md) | 是 | 系统环境变化时触发的回调方法。 |
+| callback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | 是 | 系统环境变化时触发的回调方法。 |
 
 **返回值：**
 
@@ -2024,6 +1697,345 @@ export default class EntryAbility extends UIAbility {
       });
     } catch (paramError) {
       console.error(`error code: ${(paramError as BusinessError).code}, error msg: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
+
+## onAbilityLifecycle
+
+```TypeScript
+onAbilityLifecycle(callback: AbilityLifecycleCallback): int
+```
+
+注册监听应用内UIAbility的生命周期。使用callback异步回调。仅支持主线程调用。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ApplicationContext-onAbilityLifecycle(callback: AbilityLifecycleCallback): int--><!--Device-ApplicationContext-onAbilityLifecycle(callback: AbilityLifecycleCallback): int-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AbilityLifecycleCallback](arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md) | 是 | UIAbility生命周期变化时触发的回调方法。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| int | 返回此次注册的callbackID（每次注册该ID会自增+1，当超过监听上限数量2^63-1时，返回-1），该ID用于在ApplicationContext.offAbilityLifecycle方法中取消注册对应的callback。 |
+
+**示例**
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { UIAbility, AbilityLifecycleCallback } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+let lifecycleId: int;
+
+class AbilityLifecycleCallbackCustom extends AbilityLifecycleCallback {
+  onAbilityCreate(ability: UIAbility) {
+    console.info(`AbilityLifecycleCallback onAbilityCreate ability: ${ability}`);
+  }
+
+  onWindowStageCreate(ability: UIAbility, windowStage: window.WindowStage) {
+    console.info(`AbilityLifecycleCallback onWindowStageCreate ability: ${ability}`);
+    console.info(`AbilityLifecycleCallback onWindowStageCreate windowStage: ${windowStage}`);
+  }
+
+  onWindowStageActive(ability: UIAbility, windowStage: window.WindowStage) {
+    console.info(`AbilityLifecycleCallback onWindowStageActive ability: ${ability}`);
+    console.info(`AbilityLifecycleCallback onWindowStageActive windowStage: ${windowStage}`);
+  }
+
+  onWindowStageInactive(ability: UIAbility, windowStage: window.WindowStage) {
+    console.info(`AbilityLifecycleCallback onWindowStageInactive ability: ${ability}`);
+    console.info(`AbilityLifecycleCallback onWindowStageInactive windowStage: ${windowStage}`);
+  }
+
+  onWindowStageDestroy(ability: UIAbility, windowStage: window.WindowStage) {
+    console.info(`AbilityLifecycleCallback onWindowStageDestroy ability: ${ability}`);
+    console.info(`AbilityLifecycleCallback onWindowStageDestroy windowStage: ${windowStage}`);
+  }
+
+  onAbilityDestroy(ability: UIAbility) {
+    console.info(`AbilityLifecycleCallback onAbilityDestroy ability: ${ability}`);
+  }
+
+  onAbilityForeground(ability: UIAbility) {
+    console.info(`AbilityLifecycleCallback onAbilityForeground ability: ${ability}`);
+  }
+
+  onAbilityBackground(ability: UIAbility) {
+    console.info(`AbilityLifecycleCallback onAbilityBackground ability: ${ability}`);
+  }
+
+  onAbilityContinue(ability: UIAbility) {
+    console.info(`AbilityLifecycleCallback onAbilityContinue ability: ${ability}`);
+  }
+}
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+
+    // 1.通过context属性获取applicationContext
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 2.通过applicationContext注册监听应用内生命周期
+      let abilityLifecycleCallback = new AbilityLifecycleCallbackCustom();
+      lifecycleId = applicationContext.onAbilityLifecycle(abilityLifecycleCallback);
+    } catch (paramError) {
+      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+    }
+    console.info(`registerAbilityLifecycleCallback lifecycleId: ${lifecycleId}`);
+  }
+}
+```
+
+## onApplicationStateChange
+
+```TypeScript
+onApplicationStateChange(callback: ApplicationStateChangeCallback): void
+```
+
+注册对当前应用前后台状态变化的监听。使用callback异步回调。仅支持主线程调用。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ApplicationContext-onApplicationStateChange(callback: ApplicationStateChangeCallback): void--><!--Device-ApplicationContext-onApplicationStateChange(callback: ApplicationStateChangeCallback): void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | 是 | 应用前后台切换时触发的回调方法。 |
+
+**示例**
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { UIAbility, ApplicationStateChangeCallback } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class ApplicationStateChangeCallbackCustom implements ApplicationStateChangeCallback {
+  onApplicationForeground() {
+    console.info('applicationStateChangeCallback onApplicationForeground');
+  }
+
+  onApplicationBackground() {
+    console.info('applicationStateChangeCallback onApplicationBackground');
+  }
+}
+
+export default class MyAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    // 1.获取applicationContext
+    let applicationContext = this.context.getApplicationContext();
+    let applicationStateChangeCallbackCb = new ApplicationStateChangeCallbackCustom();
+    try {
+      // 2.通过applicationContext注册应用前后台状态监听
+      applicationContext.onApplicationStateChange(applicationStateChangeCallbackCb);
+    } catch (paramError) {
+      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+    }
+    console.info('Register applicationStateChangeCallback');
+  }
+}
+```
+
+## onEnvironment
+
+```TypeScript
+onEnvironment(callback: EnvironmentCallback): int
+```
+
+注册对系统环境变化的监听。使用callback异步回调。仅支持主线程调用。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ApplicationContext-onEnvironment(callback: EnvironmentCallback): int--><!--Device-ApplicationContext-onEnvironment(callback: EnvironmentCallback): int-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | 是 | 系统环境变化时触发的回调方法。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| int | 返回此次注册的callbackID（每次注册该ID会自增+1，当超过监听上限数量2^63-1时，返回-1），该ID用于在 [ApplicationContext.offEnvironment]{ |
+
+**示例**
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { UIAbility, EnvironmentCallback, Configuration, AbilityConstant } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let callbackId: int;
+
+class EnvironmentCallbackCustom implements EnvironmentCallback {
+  onConfigurationUpdated(config: Configuration) {
+    console.info(`onConfigurationUpdated config: ${JSON.stringify(config)}`);
+  }
+
+  onMemoryLevel(level: AbilityConstant.MemoryLevel) {
+    console.info(`onMemoryLevel level: ${level}`);
+  }
+}
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate')
+    // 1.获取applicationContext
+    let applicationContext = this.context.getApplicationContext();
+    let environmentCallbackCb = new EnvironmentCallbackCustom();
+    try {
+      // 2.通过applicationContext注册监听系统环境变化
+      callbackId = applicationContext.onEnvironment(environmentCallbackCb);
+    } catch (paramError) {
+      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+    }
+    console.info(`registerEnvironmentCallback callbackId: ${callbackId}`);
+  }
+}
+```
+
+## onInteropAbilityLifecycle
+
+```TypeScript
+onInteropAbilityLifecycle(callback: InteropAbilityLifecycleCallback): void
+```
+
+注册监听应用内不同ArkTS环境下的UIAbility生命周期。仅支持主线程调用。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ApplicationContext-onInteropAbilityLifecycle(callback: InteropAbilityLifecycleCallback): void--><!--Device-ApplicationContext-onInteropAbilityLifecycle(callback: InteropAbilityLifecycleCallback): void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [InteropAbilityLifecycleCallback](arkts-ability-app-ability-interopabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) | 是 | 不同ArkTS环境下UIAbility生命周期变化时触发的回调方法。 |
+
+## onSystemConfigurationUpdated
+
+```TypeScript
+onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): void
+```
+
+注册监听系统环境[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)的变化。使用callback异步回调。仅支持主线程调用。
+
+> **说明：**
+> 
+> 应用自定义的设置不影响回调函数的触发。例如：应用自定义设置了深浅色模式，当系统深浅色模式变化后，注册的回调函数依然会触发。
+
+**起始版本：** 24
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ApplicationContext-onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): void--><!--Device-ApplicationContext-onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | systemConfiguration.UpdatedCallback | 是 | 系统环境变化时触发的回调方法。 |
+
+**示例**
+
+```TypeScript
+import { UIAbility, systemConfiguration, ConfigurationConstant } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let callBack: systemConfiguration.UpdatedCallback = {
+  onColorModeUpdated(colorMode: ConfigurationConstant.ColorMode) {
+    console.info(`system configuration updated colormode:` + colorMode);
+  },
+  onFontSizeScaleUpdated(fontSizeScale: number) {
+    console.info(`system configuration updated ability:` + fontSizeScale);
+  },
+  onFontWeightScaleUpdated(fontWeightScale: number) {
+    console.info(`system configuration updated ability:` + fontWeightScale);
+  },
+  onLanguageUpdated(language: string) {
+    console.info(`system configuration updated ability:` + language);
+  },
+  onFontIdUpdated(fontId: string) {
+    console.info(`system configuration updated ability:` + fontId);
+  },
+  onMCCUpdated(mcc: string) {
+    console.info(`system configuration updated ability:` + mcc);
+  },
+  onMNCUpdated(mnc: string) {
+    console.info(`system configuration updated ability:` + mnc);
+  },
+  onHasPointerDeviceUpdated(hasPointerDevice: boolean) {
+    console.info(`system configuration updated ability:` + hasPointerDevice);
+  },
+  onLocaleUpdated(locale: string) {
+    console.info(`system configuration updated ability:` + locale);
+  }
+}
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    // 通过context属性获取applicationContext
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 通过applicationContext注册监听
+      applicationContext.onSystemConfigurationUpdated(callBack);
+    } catch (paramError) {
+      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+    }
+    console.info(`onSystemConfigurationUpdated finish`);
+  }
+
+  // 不需要时或应用退出时可以取消监听
+  onDestroy() {
+    // 通过context属性获取applicationContext
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 通过applicationContext取消监听
+      applicationContext.offSystemConfigurationUpdated(callBack);
+    } catch (paramError) {
+      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
     }
   }
 }
@@ -2130,7 +2142,7 @@ setColorMode(colorMode: ConfigurationConstant.ColorMode): void
 > **说明：**
 > 
 > 调用该接口前，需要确保窗口已完成创建、且UIAbility对应的页面已完成加载，即在
-> [onWindowStageCreate()](arkts-ability-appabilityuiability-uiability-c.md#onwindowstagecreate)生命周期中通过
+> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)生命周期中通过
 > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法加载页面之后调用。
 
 **起始版本：** 23
@@ -2191,7 +2203,7 @@ setFont(font: string): void
 > **说明：**
 > 
 > 调用该接口前，需要确保窗口已完成创建、且UIAbility对应的页面已完成加载，即在
-> [onWindowStageCreate()](arkts-ability-appabilityuiability-uiability-c.md#onwindowstagecreate)生命周期中通过
+> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)生命周期中通过
 > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法加载页面之后调用。
 
 **起始版本：** 23
@@ -2346,7 +2358,7 @@ setLanguage(language: string): void
 > **说明：**
 > 
 > 调用该接口前，需要确保窗口已完成创建、且UIAbility对应的页面已完成加载，即在
-> [onWindowStageCreate()](arkts-ability-appabilityuiability-uiability-c.md#onwindowstagecreate)生命周期中通过
+> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)生命周期中通过
 > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法加载页面之后调用。
 
 **起始版本：** 23
@@ -2409,7 +2421,7 @@ setSupportedProcessCache(isSupported : boolean): void
 > 
 > - 该接口仅表示应用自身是否为缓存后快速启动做好了准备，还需综合其他条件来判断最终是否为应用启用快速启动。
 > 
-> - 为了确保该接口在进程退出前生效，调用时机应尽量提前。建议在[AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md)的`onCreate()
+> - 为了确保该接口在进程退出前生效，调用时机应尽量提前。建议在[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)的`onCreate()
 > `中调用该接口。
 > 
 > - 在同一进程多次调用该接口时，会以最后一次调用的结果为准。当存在多个AbilityStage时，为了确保结果符合预期，需要在各个AbilityStage中分别调用该接口并配置相同的取值。

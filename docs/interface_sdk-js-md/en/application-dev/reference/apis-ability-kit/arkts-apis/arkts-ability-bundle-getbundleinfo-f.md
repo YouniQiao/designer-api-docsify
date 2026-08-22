@@ -51,7 +51,60 @@ No permission is required for obtaining the caller's own information.
 | bundleName | string | Yes | Bundle name. |
 | bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
 | options | BundleOptions | Yes | Includes **userId**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; | Yes | Callback used to return the bundle information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; | Yes | Callback used to return the bundle information. |
+
+**Examples**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleName: string = "com.example.myapplication";
+let bundleFlags: number = 1;
+let options: bundle.BundleOptions = {
+  "userId": 100
+};
+
+bundle.getBundleInfo(bundleName, bundleFlags, options)
+  .then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleName: string = "com.example.myapplication";
+let bundleFlags: number = 1;
+
+bundle.getBundleInfo(bundleName, bundleFlags, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleName: string = "com.example.myapplication";
+let bundleFlags: number = 1;
+let options: bundle.BundleOptions = {
+  "userId": 100
+};
+
+bundle.getBundleInfo(bundleName, bundleFlags, options, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+```
 
 
 ## getBundleInfo
@@ -82,7 +135,11 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; | Yes | Callback used to return the bundle information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; | Yes | Callback used to return the bundle information. |
+
+**Examples**
+
+See [getBundleInfo](#getbundleinfo)
 
 
 ## getBundleInfo
@@ -120,4 +177,8 @@ No permission is required for obtaining the caller's own information.
 | Type | Description |
 | --- | --- |
 | Promise&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; | Promise used to return the bundle information. |
+
+**Examples**
+
+See [getBundleInfo](#getbundleinfo)
 

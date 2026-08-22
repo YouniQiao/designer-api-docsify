@@ -186,31 +186,55 @@ Gets the output volume for audio loopback.
 | --- | --- |
 | double | Current audio loopback output volume value. |
 
-## offStatusChange
+**Examples**
 
 ```TypeScript
-offStatusChange(callback?: Callback<AudioLoopbackStatus>): void
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getVolume(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: number) => {
+  if (err) {
+    console.error(`Failed to obtain the volume. ${err}`);
+    return;
+  }
+  console.info('Callback invoked to indicate that the volume is obtained.');
+});
 ```
 
-Unsubscribes audio loopback status change event callback.
+```TypeScript
+audioManager.getVolume(audio.AudioVolumeType.MEDIA).then((value: number) => {
+  console.info(`Promise returned to indicate that the volume is obtained ${value} .`);
+});
+```
 
-**Since:** 23
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 
-<!--Device-AudioLoopback-offStatusChange(callback?: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-offStatusChange(callback?: Callback<AudioLoopbackStatus>): void-End-->
+try {
+  let value: number = audioRenderer.getVolume();
+  console.info(`Indicate that the volume is obtained ${value}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain the volume, error ${error}.`);
+}
+```
 
-**System capability:** SystemCapability.Multimedia.Audio.Capturer
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 
-**Parameters:**
+audioVolumeGroupManager.getVolume(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: number) => {
+  if (err) {
+    console.error(`Failed to get volume. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting volume. Volume: ${value}.`);
+});
+```
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | No | Callback used to listen for the audio loopback status change event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+```TypeScript
+audioVolumeGroupManager.getVolume(audio.AudioVolumeType.MEDIA).then((value: number) => {
+  console.info(`Succeeded in getting volume. Volume: ${value}.`);
+});
+```
 
 ## off('statusChange')
 
@@ -231,7 +255,7 @@ Unsubscribes from the audio loopback status event. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'statusChange' | Yes | Event type. The event **'statusChange'** is triggered when the status of the audio loopback is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | No | Callback used to return the audio loopback status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | No | Callback used to return the audio loopback status. |
 
 **Error codes:**
 
@@ -239,17 +263,17 @@ Unsubscribes from the audio loopback status event. This API uses an asynchronous
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onStatusChange
+## offStatusChange
 
 ```TypeScript
-onStatusChange(callback: Callback<AudioLoopbackStatus>): void
+offStatusChange(callback?: Callback<AudioLoopbackStatus>): void
 ```
 
-Subscribes to audio loopback status changes.
+Unsubscribes audio loopback status change event callback.
 
 **Since:** 23
 
-<!--Device-AudioLoopback-onStatusChange(callback: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-onStatusChange(callback: Callback<AudioLoopbackStatus>): void-End-->
+<!--Device-AudioLoopback-offStatusChange(callback?: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-offStatusChange(callback?: Callback<AudioLoopbackStatus>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -257,7 +281,7 @@ Subscribes to audio loopback status changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | Yes | Callback used to return the audio loopback status change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | No | Callback used to listen for the audio loopback status change event. |
 
 **Error codes:**
 
@@ -284,7 +308,33 @@ Subscribes to the audio loopback status change event, which is triggered when th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'statusChange' | Yes | Event type. The event **'statusChange'** is triggered when the status of the audio loopback is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | Yes | Callback used to return the audio loopback status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | Yes | Callback used to return the audio loopback status. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onStatusChange
+
+```TypeScript
+onStatusChange(callback: Callback<AudioLoopbackStatus>): void
+```
+
+Subscribes to audio loopback status changes.
+
+**Since:** 23
+
+<!--Device-AudioLoopback-onStatusChange(callback: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-onStatusChange(callback: Callback<AudioLoopbackStatus>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | Yes | Callback used to return the audio loopback status change event. |
 
 **Error codes:**
 
@@ -387,4 +437,64 @@ Sets the volume for audio loopback. This volume does not affect other audio stre
 | Error Code ID | Error Message |
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, from 0.0 to 1.0. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set the volume. ${err}`);
+    return;
+  }
+  console.info('Callback invoked to indicate a successful volume setting.');
+});
+```
+
+```TypeScript
+audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {
+  console.info('Promise returned to indicate a successful volume setting.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.setVolume(audio.AudioVolumeType.MEDIA, 10, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set the volume. ${err}`);
+    return;
+  }
+  console.info('Callback invoked to indicate a successful volume setting.');
+});
+```
+
+```TypeScript
+audioManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {
+  console.info('Promise returned to indicate a successful volume setting.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.setVolume(0.5).then(() => {
+  console.info('setVolume Success!');
+}).catch((err: BusinessError) => {
+  console.error(`setVolume Fail: ${err}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.setVolume(0.5, (err: BusinessError) => {
+  if(err){
+    console.error(`setVolume Fail: ${err}`);
+    return;
+  }
+  console.info('setVolume Success!');
+});
+```
 

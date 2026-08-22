@@ -40,6 +40,16 @@ call.getCallState((err: BusinessError, data: call.CallState) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.getCallState().then((data: call.CallState) => {
+    console.info(`getCallState success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getCallState fail, promise: 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
+});
+```
+
 
 ## getCallState
 
@@ -63,13 +73,5 @@ function getCallState(): Promise<CallState>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.getCallState().then((data: call.CallState) => {
-    console.info(`getCallState success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getCallState fail, promise: 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-});
-```
+参见 [getCallState](#getcallstate)
 

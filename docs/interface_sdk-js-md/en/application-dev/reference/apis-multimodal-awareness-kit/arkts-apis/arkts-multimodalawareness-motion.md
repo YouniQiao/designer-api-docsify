@@ -21,14 +21,14 @@ import { motion } from '@kit.MultimodalAwarenessKit';
 | Name | Description |
 | --- | --- |
 | [getRecentOperatingHandStatus](arkts-multimodalawareness-motion-getrecentoperatinghandstatus-f.md) | Obtains the latest operating hand status. |
-| [offHoldingHandChanged](arkts-multimodalawareness-motion-offholdinghandchanged-f.md) | Unsubscribe from the holding hand changed event. |
-| [offOperatingHandChanged](arkts-multimodalawareness-motion-offoperatinghandchanged-f.md) | Unsubscribe from the operating hand changed event. |
 | [off_holdingHandChanged](arkts-multimodalawareness-motion-offholdinghandchanged-f.md) | Disables listening for holding hand status changes. |
 | [off_operatingHandChanged](arkts-multimodalawareness-motion-offoperatinghandchanged-f.md) | Unsubscribes from operating hand change events. |
-| [onHoldingHandChanged](arkts-multimodalawareness-motion-onholdinghandchanged-f.md) | Subscribe to detect the holding hand changed event. |
-| [onOperatingHandChanged](arkts-multimodalawareness-motion-onoperatinghandchanged-f.md) | Subscribe to detect the operating hand changed event. |
+| [offHoldingHandChanged](arkts-multimodalawareness-motion-offholdinghandchanged-f.md) | Unsubscribe from the holding hand changed event. |
+| [offOperatingHandChanged](arkts-multimodalawareness-motion-offoperatinghandchanged-f.md) | Unsubscribe from the operating hand changed event. |
 | [on_holdingHandChanged](arkts-multimodalawareness-motion-onholdinghandchanged-f.md) | Enables listening for holding hand status changes. |
 | [on_operatingHandChanged](arkts-multimodalawareness-motion-onoperatinghandchanged-f.md) | Subscribes to operating hand change events. |
+| [onHoldingHandChanged](arkts-multimodalawareness-motion-onholdinghandchanged-f.md) | Subscribe to detect the holding hand changed event. |
+| [onOperatingHandChanged](arkts-multimodalawareness-motion-onoperatinghandchanged-f.md) | Subscribe to detect the operating hand changed event. |
 
 <!--Del-->
 ### Functions(System API)

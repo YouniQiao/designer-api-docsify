@@ -63,6 +63,42 @@ compare(
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
 
+let buf1 = buffer.from('1234');
+let buf2 = buffer.from('0123');
+let res = buffer.compare(buf1, buf2);
+
+console.info(Number(res).toString());
+// 输出结果：1
+```
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.from('1234');
+let buf2 = buffer.from('0123');
+let res = buffer.compare(buf1, buf2);
+
+console.info(Number(res).toString());
+// 输出结果：1
+```
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.from([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+let buf2 = buffer.from([5, 6, 7, 8, 9, 1, 2, 3, 4]);
+
+console.info(buf1.compare(buf2, 5, 9, 0, 4).toString());
+// 输出结果：0
+console.info(buf1.compare(buf2, 0, 6, 4).toString());
+// 输出结果：-1
+console.info(buf1.compare(buf2, 5, 6, 5).toString());
+// 输出结果：1
+```
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
 let buf1 = buffer.from([1, 2, 3, 4, 5, 6, 7, 8, 9]);
 let buf2 = buffer.from([5, 6, 7, 8, 9, 1, 2, 3, 4]);
 
@@ -120,19 +156,7 @@ compare(
 
 **示例**
 
-```TypeScript
-import { buffer } from '@kit.ArkTS';
-
-let buf1 = buffer.from([1, 2, 3, 4, 5, 6, 7, 8, 9]);
-let buf2 = buffer.from([5, 6, 7, 8, 9, 1, 2, 3, 4]);
-
-console.info(buf1.compare(buf2, 5, 9, 0, 4).toString());
-// 输出结果：0
-console.info(buf1.compare(buf2, 0, 6, 4).toString());
-// 输出结果：-1
-console.info(buf1.compare(buf2, 5, 6, 5).toString());
-// 输出结果：1
-```
+参见 [compare](#compare)
 
 ## copy
 
@@ -318,6 +342,16 @@ fill(
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[offset/end]" is out of range. It must be &gt;= 0 and &lt;= [right range]. Received value is: [offset/end] |
 
+**示例**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let b = buffer.allocUninitializedFromPool(50).fill('h');
+console.info(b.toString());
+// 输出结果：hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+```
+
 ## includes
 
 ```TypeScript
@@ -348,6 +382,18 @@ includes(value: string | int | double | long | Buffer | Uint8Array, byteOffset?:
 | --- | --- |
 | boolean | 存在返回true，否则返回false。 |
 
+**示例**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from('this is a buffer');
+console.info(buf.includes('this').toString());
+// 输出结果：true
+console.info(buf.includes('be').toString());
+// 输出结果：false
+```
+
 ## indexOf
 
 ```TypeScript
@@ -377,6 +423,18 @@ indexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: 
 | 类型 | 说明 |
 | --- | --- |
 | int | 第一次出现位置。 |
+
+**示例**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from('this is a buffer');
+console.info(buf.indexOf('this').toString());
+// 输出结果：0
+console.info(buf.indexOf('is').toString());
+// 输出结果：2
+```
 
 ## keys
 
@@ -449,6 +507,18 @@ lastIndexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffse
 | 类型 | 说明 |
 | --- | --- |
 | int | 最后一次出现value值的索引。 |
+
+**示例**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from('this buffer is a buffer');
+console.info(buf.lastIndexOf('this').toString());
+// 输出结果：0
+console.info(buf.lastIndexOf('buffer').toString());
+// 输出结果：17
+```
 
 ## readBigInt64BE
 
@@ -1726,6 +1796,15 @@ console.info(JSON.stringify(obj));
 // 输出结果: {"type":"Buffer","data":[1,2,3,4,5]}
 ```
 
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.from([0x1, 0x2, 0x3, 0x4, 0x5]);
+let obj = buf1.toJSON();
+console.info(JSON.stringify(obj));
+// 输出结果: {"type":"Buffer","data":[1,2,3,4,5]}
+```
+
 ## toJSON
 
 ```TypeScript
@@ -1750,14 +1829,7 @@ toJSON(): jsonx.JsonElement
 
 **示例**
 
-```TypeScript
-import { buffer } from '@kit.ArkTS';
-
-let buf1 = buffer.from([0x1, 0x2, 0x3, 0x4, 0x5]);
-let obj = buf1.toJSON();
-console.info(JSON.stringify(obj));
-// 输出结果: {"type":"Buffer","data":[1,2,3,4,5]}
-```
+参见 [toJSON](#tojson)
 
 ## toString
 
@@ -1802,6 +1874,17 @@ console.info(buf1.toString('utf-8'));
 // 输出结果: abcdefghijklmnopqrstuvwxyz
 ```
 
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.allocUninitializedFromPool(26);
+for (let i = 0; i < 26; i++) {
+  buf1.writeInt8(i + 97, i);
+}
+console.info(buf1.toString('utf-8'));
+// 输出结果: abcdefghijklmnopqrstuvwxyz
+```
+
 ## toString
 
 ```TypeScript
@@ -1825,6 +1908,10 @@ toString(): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 解码后的字符串。 |
+
+**示例**
+
+参见 [toString](#tostring)
 
 ## toString
 
@@ -1860,16 +1947,7 @@ toString(encoding?: BufferEncoding, start?: int, end?: int): string
 
 **示例**
 
-```TypeScript
-import { buffer } from '@kit.ArkTS';
-
-let buf1 = buffer.allocUninitializedFromPool(26);
-for (let i = 0; i < 26; i++) {
-  buf1.writeInt8(i + 97, i);
-}
-console.info(buf1.toString('utf-8'));
-// 输出结果: abcdefghijklmnopqrstuvwxyz
-```
+参见 [toString](#tostring)
 
 ## values
 

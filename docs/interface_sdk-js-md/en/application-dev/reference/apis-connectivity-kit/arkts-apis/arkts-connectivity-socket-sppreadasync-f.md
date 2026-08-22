@@ -14,7 +14,7 @@ function sppReadAsync(clientSocket: int): Promise<ArrayBuffer>
 
 Asynchronous interface for reading data from the socket.
 
-**Since:** 26.0.0
+**Since:** 18
 
 <!--Device-socket-function sppReadAsync(clientSocket: int): Promise<ArrayBuffer>--><!--Device-socket-function sppReadAsync(clientSocket: int): Promise<ArrayBuffer>-End-->
 

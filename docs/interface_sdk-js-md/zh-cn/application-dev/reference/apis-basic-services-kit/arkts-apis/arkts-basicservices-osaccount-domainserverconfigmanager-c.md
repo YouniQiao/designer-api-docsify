@@ -72,6 +72,24 @@ osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
 });
 ```
 
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+import type { RecordData } from './@ohos.base';
+
+let configParams: Record<string, RecordData> = {
+  'uri': 'test.example.com',
+  'port': 100
+};
+osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
+  serverConfig: osAccount.DomainServerConfig) => {
+  console.info('add server configuration successfully, the return config: ' + JSON.stringify(serverConfig));
+}).catch((e: Error) => {
+  const err = e as BusinessError;
+  console.error(`add server configuration failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## addServerConfig
 
 ```TypeScript
@@ -114,23 +132,7 @@ static addServerConfig(parameters: Record<string, RecordData>): Promise<DomainSe
 
 **示例**
 
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-import type { RecordData } from './@ohos.base';
-
-let configParams: Record<string, RecordData> = {
-  'uri': 'test.example.com',
-  'port': 100
-};
-osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
-  serverConfig: osAccount.DomainServerConfig) => {
-  console.info('add server configuration successfully, the return config: ' + JSON.stringify(serverConfig));
-}).catch((e: Error) => {
-  const err = e as BusinessError;
-  console.error(`add server configuration failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [addServerConfig](#addserverconfig)
 
 ## getAccountServerConfig
 
@@ -524,6 +526,30 @@ osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
 });
 ```
 
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+import type { RecordData } from './@ohos.base';
+
+let configParams: Record<string, RecordData> = {
+  'uri': 'test.example.com',
+  'port': 100
+};
+osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
+  serverConfig: osAccount.DomainServerConfig) => {
+  console.info('add domain server configuration successfully, the added config: ' + JSON.stringify(serverConfig));
+  osAccount.DomainServerConfigManager.updateServerConfig(serverConfig.id, configParams).then((data: osAccount.DomainServerConfig) => {
+    console.info('update domain server configuration successfully, return config: ' + JSON.stringify(data));
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`update domain server configuration failed, code is ${err.code}, message is ${err.message}`);
+  });
+}).catch((e: Error) => {
+  const err = e as BusinessError;
+  console.error(`add server configuration failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## updateServerConfig
 
 ```TypeScript
@@ -568,27 +594,5 @@ static updateServerConfig(configId: string, parameters: Record<string, RecordDat
 
 **示例**
 
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-import type { RecordData } from './@ohos.base';
-
-let configParams: Record<string, RecordData> = {
-  'uri': 'test.example.com',
-  'port': 100
-};
-osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
-  serverConfig: osAccount.DomainServerConfig) => {
-  console.info('add domain server configuration successfully, the added config: ' + JSON.stringify(serverConfig));
-  osAccount.DomainServerConfigManager.updateServerConfig(serverConfig.id, configParams).then((data: osAccount.DomainServerConfig) => {
-    console.info('update domain server configuration successfully, return config: ' + JSON.stringify(data));
-  }).catch((e: Error) => {
-    const err = e as BusinessError;
-    console.error(`update domain server configuration failed, code is ${err.code}, message is ${err.message}`);
-  });
-}).catch((e: Error) => {
-  const err = e as BusinessError;
-  console.error(`add server configuration failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [updateServerConfig](#updateserverconfig)
 

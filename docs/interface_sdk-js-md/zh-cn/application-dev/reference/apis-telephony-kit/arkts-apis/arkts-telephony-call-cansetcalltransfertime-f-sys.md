@@ -58,6 +58,17 @@ call.canSetCallTransferTime(slotId, (err: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+call.canSetCallTransferTime(slotId).then((data: boolean) => {
+    console.info(`canSetCallTransferTime success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`canSetCallTransferTime fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## canSetCallTransferTime
 
@@ -103,14 +114,5 @@ function canSetCallTransferTime(slotId: int): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-call.canSetCallTransferTime(slotId).then((data: boolean) => {
-    console.info(`canSetCallTransferTime success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`canSetCallTransferTime fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [canSetCallTransferTime](#cansetcalltransfertime)
 

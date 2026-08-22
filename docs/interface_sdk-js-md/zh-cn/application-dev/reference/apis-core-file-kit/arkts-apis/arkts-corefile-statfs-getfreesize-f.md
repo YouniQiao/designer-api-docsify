@@ -66,6 +66,22 @@ statfs.getFreeSize(path).then((freeSize: number) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let path = context.filesDir;
+statfs.getFreeSize(path, (err: BusinessError, freeSize: number) => {
+  if (err) {
+    console.error("Failed to get free size. Code: " + err.code + ", message: " + err.message);
+  } else {
+    console.info("Succeeded in getting free size: " + freeSize);
+  }
+});
+```
+
 
 ## getFreeSize
 
@@ -108,19 +124,5 @@ function getFreeSize(path: string, callback: AsyncCallback<long>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let path = context.filesDir;
-statfs.getFreeSize(path, (err: BusinessError, freeSize: number) => {
-  if (err) {
-    console.error("Failed to get free size. Code: " + err.code + ", message: " + err.message);
-  } else {
-    console.info("Succeeded in getting free size: " + freeSize);
-  }
-});
-```
+参见 [getFreeSize](#getfreesize)
 

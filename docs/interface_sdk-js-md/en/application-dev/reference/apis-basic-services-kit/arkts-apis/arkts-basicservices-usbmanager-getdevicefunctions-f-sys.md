@@ -39,6 +39,12 @@ Obtains the numeric mask combination for the USB function list in Device mode. W
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Normal application do not have permission to use system api. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 
+**Examples**
+
+```TypeScript
+let ret: number = usbManager.getDeviceFunctions();
+```
+
 
 ## getDeviceFunctions
 
@@ -72,4 +78,8 @@ Obtains the numeric mask combination for the current USB function list in Device
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) |  |
 | [14400004](../errorcode-usb.md#14400004-service-exception) |  |
+
+**Examples**
+
+See [getDeviceFunctions](#getdevicefunctions)
 

@@ -68,6 +68,52 @@ try {
 }
 ```
 
+ArkTS-Dyn示例:
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName = 'com.example.myapplication';
+let moduleName = 'library';
+
+try {
+  bundleManager.getSharedBundleInfo(bundleName, moduleName).then((data) => {
+    hilog.info(0x0000, 'testTag', 'getSharedBundleInfo successfully. Data: %{public}s', JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'getSharedBundleInfo failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getSharedBundleInfo failed. Cause: %{public}s', message);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+// 开发者需根据实际工程更新bundleName和moduleName。
+let bundleName = 'com.example.myapplication';
+let moduleName = 'library';
+
+try {
+  bundleManager.getSharedBundleInfo(bundleName, moduleName).then((data: Array<bundleManager.SharedBundleInfo>) => {
+    hilog.info(0x0000, 'testTag', 'getSharedBundleInfo successfully. Data: %{public}s', JSON.stringify(data));
+  }).catch((err: Error) => {
+    hilog.error(0x0000, 'testTag', 'getSharedBundleInfo failed. Cause: %{public}s', (err as BusinessError).message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getSharedBundleInfo failed. Cause: %{public}s', message);
+}
+```
+
 
 ## getSharedBundleInfo
 
@@ -114,49 +160,5 @@ function getSharedBundleInfo(bundleName: string, moduleName: string): Promise<Ar
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = 'com.example.myapplication';
-let moduleName = 'library';
-
-try {
-  bundleManager.getSharedBundleInfo(bundleName, moduleName).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getSharedBundleInfo successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getSharedBundleInfo failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getSharedBundleInfo failed. Cause: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-// 开发者需根据实际工程更新bundleName和moduleName。
-let bundleName = 'com.example.myapplication';
-let moduleName = 'library';
-
-try {
-  bundleManager.getSharedBundleInfo(bundleName, moduleName).then((data: Array<bundleManager.SharedBundleInfo>) => {
-    hilog.info(0x0000, 'testTag', 'getSharedBundleInfo successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: Error) => {
-    hilog.error(0x0000, 'testTag', 'getSharedBundleInfo failed. Cause: %{public}s', (err as BusinessError).message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getSharedBundleInfo failed. Cause: %{public}s', message);
-}
-```
+参见 [getSharedBundleInfo](#getsharedbundleinfo)
 

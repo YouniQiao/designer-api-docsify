@@ -36,3 +36,11 @@ Opens a stream based on the file descriptor. This API returns the result synchro
 | --- | --- |
 | [Stream](arkts-corefile-fileio-stream-depr-i.md) | File stream. |
 
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+let ss = fileio.fdopenStreamSync(fd, "r+");
+```
+

@@ -1,8 +1,8 @@
 # AgentExtensionContext
 
-AgentExtensionContext模块是 [AgentExtensionAbility](arkts-ability-appagentagentextensionability-agentextensionability-c.md)的上下文环境，继承自 [ExtensionContext](arkts-ability-extensioncontext-c.md)。
+AgentExtensionContext模块是 [AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)的上下文环境，继承自 [ExtensionContext](arkts-ability-extensioncontext-c.md)。
 
-AgentExtensionContext为开发者提供访问当前 [AgentExtensionAbility](arkts-ability-appagentagentextensionability-agentextensionability-c.md)智能体所配置的AgentCard信息的能力。
+AgentExtensionContext为开发者提供访问当前 [AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)智能体所配置的AgentCard信息的能力。
 
 > **说明：**
 > 
@@ -24,7 +24,7 @@ AgentExtensionContext为开发者提供访问当前 [AgentExtensionAbility](arkt
 agentCard: AgentCard
 ```
 
-当前[AgentExtensionAbility](arkts-ability-appagentagentextensionability-agentextensionability-c.md)智能体所配置的 [AgentCard](arkts-ability-agentcard-i.md)信息，用于描述智能体的基本信息和能力。
+当前[AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)智能体所配置的 [AgentCard](arkts-ability-agentcard-i.md)信息，用于描述智能体的基本信息和能力。
 
 **类型：** [AgentCard](arkts-ability-agentcard-i.md)
 

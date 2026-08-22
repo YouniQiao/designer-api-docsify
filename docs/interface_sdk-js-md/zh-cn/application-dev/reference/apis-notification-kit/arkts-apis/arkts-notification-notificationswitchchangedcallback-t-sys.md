@@ -22,3 +22,42 @@ export type NotificationSwitchChangedCallback = (callbackData: NotificationSwitc
 | --- | --- | --- | --- |
 | callbackData | [NotificationSwitchChangedCallbackData](arkts-notification-notificationsubscriber-notificationswitchchangedcallbackdata-i-sys.md) | 是 | 回调返回由[notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md) 接口设置的通知开关状态变化信息。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subscriber: notificationSubscribe.NotificationSubscriber = {
+  onNotificationSwitchChanged: (callbackData: notificationSubscribe.NotificationSwitchChangedCallbackData) => {
+    console.info(`onNotificationSwitchChanged: ${JSON.stringify(callbackData)}`);
+  }
+};
+
+notificationSubscribe.subscribeNotification(subscriber).then(() => {
+  console.info('subscribeNotification success');
+}).catch((err: BusinessError) => {
+  console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subscriber: notificationSubscribe.NotificationSubscriber = {
+  onNotificationSwitchChanged: (callbackData: notificationSubscribe.NotificationSwitchChangedCallbackData) => {
+    console.info(`onNotificationSwitchChanged: ${JSON.stringify(callbackData)}`);
+  }
+};
+
+notificationSubscribe.subscribeNotification(subscriber).then(() => {
+  console.info('subscribeNotification success');
+}).catch((err: Error) => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`subscribeNotification failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+

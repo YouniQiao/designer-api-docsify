@@ -49,6 +49,67 @@ function isLastWorkTimeOut(workId: number, callback: AsyncCallback<void>): boole
 | [9700003](../errorcode-workScheduler.md#9700003-系统服务失败) | System service operation failed. |
 | [9700004](../errorcode-workScheduler.md#9700004-workinfo校验失败) | Check on workInfo failed. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { workScheduler } from '@kit.BackgroundTasksKit';
+
+workScheduler.isLastWorkTimeOut(500, (error: BusinessError, res: boolean) => {
+  if (error) {
+    console.error(`workschedulerLog isLastWorkTimeOut failed. code is ${error.code} message is ${error.message}`);
+  } else {
+    console.info(`workschedulerLog isLastWorkTimeOut success, data is: ${res}`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { workScheduler } from '@kit.BackgroundTasksKit';
+
+workScheduler.isLastWorkTimeOut(500, (error: BusinessError<void> | null, res: boolean | undefined) => {
+  if (error) {
+    console.error(`workschedulerLog isLastWorkTimeOut failed. code is ${error.code} message is ${error.message}`);
+  } else {
+    console.info(`workschedulerLog isLastWorkTimeOut success, data is: ${res}`);
+  }
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { workScheduler } from '@kit.BackgroundTasksKit';
+
+workScheduler.isLastWorkTimeOut(500)
+  .then((res: boolean) => {
+    console.info(`workschedulerLog isLastWorkTimeOut success, data is: ${res}`);
+  })
+  .catch((error: BusinessError) => {
+    console.error(`workschedulerLog isLastWorkTimeOut failed. code is ${error.code} message is ${error.message}`);
+  });
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { workScheduler } from '@kit.BackgroundTasksKit';
+
+workScheduler.isLastWorkTimeOut(500)
+  .then((res: boolean) => {
+    console.info(`workschedulerLog isLastWorkTimeOut success, data is: ${res}`);
+  })
+  .catch((error) => {
+    console.error(`workschedulerLog isLastWorkTimeOut failed. code is ${error.code} message is ${error.message}`);
+  });
+```
+
 
 ## isLastWorkTimeOut
 
@@ -85,35 +146,7 @@ function isLastWorkTimeOut(workId: int, callback: AsyncCallback<boolean>): void
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { workScheduler } from '@kit.BackgroundTasksKit';
-
-workScheduler.isLastWorkTimeOut(500, (error: BusinessError, res: boolean) => {
-  if (error) {
-    console.error(`workschedulerLog isLastWorkTimeOut failed. code is ${error.code} message is ${error.message}`);
-  } else {
-    console.info(`workschedulerLog isLastWorkTimeOut success, data is: ${res}`);
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { workScheduler } from '@kit.BackgroundTasksKit';
-
-workScheduler.isLastWorkTimeOut(500, (error: BusinessError<void> | null, res: boolean | undefined) => {
-  if (error) {
-    console.error(`workschedulerLog isLastWorkTimeOut failed. code is ${error.code} message is ${error.message}`);
-  } else {
-    console.info(`workschedulerLog isLastWorkTimeOut success, data is: ${res}`);
-  }
-});
-```
+参见 [isLastWorkTimeOut](#islastworktimeout)
 
 
 ## isLastWorkTimeOut
@@ -156,32 +189,5 @@ function isLastWorkTimeOut(workId: int): Promise<boolean>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { workScheduler } from '@kit.BackgroundTasksKit';
-
-workScheduler.isLastWorkTimeOut(500)
-  .then((res: boolean) => {
-    console.info(`workschedulerLog isLastWorkTimeOut success, data is: ${res}`);
-  })
-  .catch((error: BusinessError) => {
-    console.error(`workschedulerLog isLastWorkTimeOut failed. code is ${error.code} message is ${error.message}`);
-  });
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { workScheduler } from '@kit.BackgroundTasksKit';
-
-workScheduler.isLastWorkTimeOut(500)
-  .then((res: boolean) => {
-    console.info(`workschedulerLog isLastWorkTimeOut success, data is: ${res}`);
-  })
-  .catch((error) => {
-    console.error(`workschedulerLog isLastWorkTimeOut failed. code is ${error.code} message is ${error.message}`);
-  });
-```
+参见 [isLastWorkTimeOut](#islastworktimeout)
 

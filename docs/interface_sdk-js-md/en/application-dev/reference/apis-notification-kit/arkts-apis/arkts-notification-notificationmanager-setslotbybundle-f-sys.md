@@ -32,7 +32,7 @@ Before setting a notification slot, create a slot through [addSlot](arkts-notifi
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
 | slot | NotificationSlot | Yes | Notification slot. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -66,6 +66,24 @@ let notificationSlot: notificationManager.NotificationSlot = {
     notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
 };
 notificationManager.setSlotByBundle(bundle, notificationSlot, setSlotByBundleCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+    bundle: "bundleName1",
+};
+
+let notificationSlot: notificationManager.NotificationSlot = {
+    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
+};
+
+notificationManager.setSlotByBundle(bundle, notificationSlot).then(() => {
+    console.info("setSlotByBundle success");
+}).catch((err: BusinessError) => {
+    console.error(`setSlotByBundle failed, code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -117,21 +135,5 @@ Before setting a notification slot, create a slot through [addSlot](arkts-notifi
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
-};
-
-let notificationSlot: notificationManager.NotificationSlot = {
-    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-};
-
-notificationManager.setSlotByBundle(bundle, notificationSlot).then(() => {
-    console.info("setSlotByBundle success");
-}).catch((err: BusinessError) => {
-    console.error(`setSlotByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [setSlotByBundle](#setslotbybundle)
 

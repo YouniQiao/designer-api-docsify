@@ -38,7 +38,7 @@ pickerStyle?: AVCastPickerStyle
 
 Set the picker style.
 
-**Type:** [AVCastPickerStyle](arkts-avsession-multimediaavcastpickerparam-avcastpickerstyle-e.md)
+**Type:** [AVCastPickerStyle](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstyle-e.md)
 
 **Since:** 24
 

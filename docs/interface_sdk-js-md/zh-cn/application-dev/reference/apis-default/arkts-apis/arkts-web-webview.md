@@ -104,8 +104,8 @@ This module provides the capability to manage web modules.
 | [ProxySchemeFilter](arkts-webview-proxyschemefilter-e.md) | Enum type supplied to [insertProxyRule](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-proxyconfig-c.md#insertproxyrule) for indicating the scheme filter for proxy. @enum { number } |
 | [ReadyState](arkts-webview-readystate-e.md) | 播放器的缓存状态。 |
 | [RenderProcessMode](arkts-webview-renderprocessmode-e.md) | Defines the render process mode. |
-| [ScrollType](arkts-webview-scrolltype-e.md) | Enum type supplied to [setScrollable](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#setscrollable) for indicating the type of scroll. |
 | [ScrollbarMode](arkts-webview-scrollbarmode-e.md) | Enum type supplied to [setScrollbarMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#setscrollbarmode) for indicating the web component scrollbar mode. |
+| [ScrollType](arkts-webview-scrolltype-e.md) | Enum type supplied to [setScrollable](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#setscrollable) for indicating the type of scroll. |
 | [SecureDnsMode](arkts-webview-securednsmode-e.md) | Defines the mode for using HttpDns. @enum {number} |
 | [SecurityLevel](arkts-webview-securitylevel-e.md) | Defines the security level for the page. |
 | [SiteIsolationMode](arkts-webview-siteisolationmode-e.md) | Indicates the site isolation mode of the application, default value depends on different devices type. @enum {number} |
@@ -127,8 +127,8 @@ This module provides the capability to manage web modules.
 | 名称 | 说明 |
 | --- | --- |
 | [CreateNativeMediaPlayerCallback](arkts-webview-createnativemediaplayercallback-t.md) | [onCreateNativeMediaPlayer](../../../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer) 方法的参数。一个回调函数，创建一个播放器，用于接管网页中的媒体播放。 |
-| [OnProxyConfigChangeCallback](arkts-webview-onproxyconfigchangecallback-t.md) | The callback for proxy changed. |
 | [OneParamFn](arkts-webview-oneparamfn-t.md) | The function with one parameter. |
+| [OnProxyConfigChangeCallback](arkts-webview-onproxyconfigchangecallback-t.md) | The callback for proxy changed. |
 | [ResumePlayerFn](arkts-webview-resumeplayerfn-t.md) | The function of reusme media play. |
 | [SuspendPlayerFn](arkts-webview-suspendplayerfn-t.md) | The function of suspend media play. |
 | [UpdateRectFn](arkts-webview-updaterectfn-t.md) | The function of the rect of video tag has changed. |

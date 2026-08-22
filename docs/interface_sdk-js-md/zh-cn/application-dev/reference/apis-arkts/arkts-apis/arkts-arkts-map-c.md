@@ -355,30 +355,6 @@ has(key: K): boolean
 | --- | --- |
 | boolean | 如果该键存在于Map中则返回true，否则返回false。 |
 
-## keySet
-
-```TypeScript
-public keySet(): Set<K>
-```
-
-以Set的形式返回Map中的所有键。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Map-public keySet(): Set<K>--><!--Device-Map-public keySet(): Set<K>-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Set&lt;K&gt; | 包含所有键的新Set实例。 |
-
 ## keys
 
 ```TypeScript
@@ -402,6 +378,30 @@ keys(): IterableIterator<K>
 | 类型 | 说明 |
 | --- | --- |
 | [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; | 包含所有键的迭代器。 |
+
+## keySet
+
+```TypeScript
+public keySet(): Set<K>
+```
+
+以Set的形式返回Map中的所有键。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Map-public keySet(): Set<K>--><!--Device-Map-public keySet(): Set<K>-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Set&lt;K&gt; | 包含所有键的新Set实例。 |
 
 ## set
 

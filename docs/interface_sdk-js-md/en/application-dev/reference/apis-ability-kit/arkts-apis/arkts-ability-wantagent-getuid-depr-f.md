@@ -30,7 +30,7 @@ Obtains the UID of a WantAgent.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | whose UID to obtain. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Create a callback method for WantAgent. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Create a callback method for WantAgent. |
 
 **Examples**
 
@@ -86,41 +86,6 @@ wantAgent.getWantAgent({
 }, getWantAgentCallback);
 ```
 
-
-## getUid
-
-```TypeScript
-function getUid(agent: WantAgent): Promise<number>
-```
-
-Obtains the UID of a WantAgent.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [getUid](arkts-ability-wantagent-getuid-f.md)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-wantAgent-function getUid(agent: WantAgent): Promise<number>--><!--Device-wantAgent-function getUid(agent: WantAgent): Promise<number>-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | whose UID to obtain. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;number&gt; | Returns the UID of the { |
-
-**Examples**
-
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';
 
@@ -162,4 +127,41 @@ wantAgent.getWantAgent({
     }
 });
 ```
+
+
+## getUid
+
+```TypeScript
+function getUid(agent: WantAgent): Promise<number>
+```
+
+Obtains the UID of a WantAgent.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [getUid](arkts-ability-wantagent-getuid-f.md)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-wantAgent-function getUid(agent: WantAgent): Promise<number>--><!--Device-wantAgent-function getUid(agent: WantAgent): Promise<number>-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | whose UID to obtain. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;number&gt; | Returns the UID of the { |
+
+**Examples**
+
+See [getUid](#getuid)
 

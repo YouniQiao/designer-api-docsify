@@ -57,7 +57,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 | [setRetentionState](arkts-dataprotection-dlppermission-setretentionstate-f.md) | 设置DLP沙箱的保留状态。默认情况下，打开DLP文件时系统会自动创建沙箱环境，关闭文件后自动销毁沙箱。设置保留状态后，即使关闭DLP文件，沙箱环境也会保留，便于快速重新打开相同DLP文件。适用于需要频繁操作同一DLP文件的场景 ，可提升文件打开效率。仅支持在DLP沙箱应用中调用。使用Promise异步回调。 |
 | [setRetentionState](arkts-dataprotection-dlppermission-setretentionstate-f.md) | 设置DLP沙箱的保留状态。默认情况下，打开DLP文件时系统会自动创建沙箱环境，关闭文件后自动销毁沙箱。设置保留状态后，即使关闭DLP文件，沙箱环境也会保留，便于快速重新打开相同DLP文件。适用于需要频繁操作同一DLP文件的场景 ，可提升文件打开效率。仅支持在DLP沙箱应用中调用。使用callback异步回调。 |
 | [setSandboxAppConfig](arkts-dataprotection-dlppermission-setsandboxappconfig-f.md) | 设置沙箱应用配置信息，配置信息为JSON字符串格式，具体内容由应用自行设置。调用成功后，沙箱应用将按照配置信息运行。使用Promise异步回调。仅支持在非DLP沙箱应用中调用。 |
-| [startDLPManagerForResult](arkts-dataprotection-dlppermission-startdlpmanagerforresult-f.md) | 在当前[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiability-uiability-c.md)界面以无边框形式打开DLP权限管理应用。使用Promise异步回调。 |
+| [startDLPManagerForResult](arkts-dataprotection-dlppermission-startdlpmanagerforresult-f.md) | 在当前[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)界面以无边框形式打开DLP权限管理应用。使用Promise异步回调。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -93,11 +93,11 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 | --- | --- |
 | [AccessedDLPFileInfo](arkts-dataprotection-dlppermission-accesseddlpfileinfo-i.md) | 表示被打开的DLP文件的信息。 |
 | [CustomProperty](arkts-dataprotection-dlppermission-customproperty-i.md) | 表示自定义策略。 |
+| [DlpConnPlugin](arkts-dataprotection-dlppermission-dlpconnplugin-i.md) | 被用于registerPlugin接口中，将回调能力注册到SA（System Ability）中。 |
+| [DlpFileQueryOptions](arkts-dataprotection-dlppermission-dlpfilequeryoptions-i.md) | 表示企业DLP文件的查询选项。 |
 | [DLPManagerResult](arkts-dataprotection-dlppermission-dlpmanagerresult-i.md) | 表示打开DLP权限管理应用的结果。 |
 | [DLPPermissionInfo](arkts-dataprotection-dlppermission-dlppermissioninfo-i.md) | 表示DLP文件的权限信息。 |
 | [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md) | 表示授权相关信息。 |
-| [DlpConnPlugin](arkts-dataprotection-dlppermission-dlpconnplugin-i.md) | 被用于registerPlugin接口中，将回调能力注册到SA（System Ability）中。 |
-| [DlpFileQueryOptions](arkts-dataprotection-dlppermission-dlpfilequeryoptions-i.md) | 表示企业DLP文件的查询选项。 |
 | [EnterprisePolicy](arkts-dataprotection-dlppermission-enterprisepolicy-i.md) | 表示企业定制策略。 |
 | [RetentionSandboxInfo](arkts-dataprotection-dlppermission-retentionsandboxinfo-i.md) | 保留沙箱的沙箱信息。 |
 

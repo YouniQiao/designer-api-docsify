@@ -40,3 +40,15 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 emitter.onEventData(`eventId`, callback);
 ```
 
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+}
+
+emitter1.onEventData(`eventId`, callback);
+```
+

@@ -35,6 +35,26 @@ function getLinkedInfo(): Promise<WifiLinkedInfo>
 | --- | --- |
 | Promise&lt;WifiLinkedInfo&gt; | 表示WLAN连接信息。 |
 
+**示例**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+wifi.getLinkedInfo((err, data:wifi.WifiLinkedInfo) => {
+    if (err) {
+        console.error("get linked info error");
+        return;
+    }
+    console.info("get wifi linked info: " + JSON.stringify(data));
+});
+
+wifi.getLinkedInfo().then(data => {
+    console.info("get wifi linked info: " + JSON.stringify(data));
+}).catch((error:number) => {
+    console.info("get linked info error");
+});
+```
+
 
 ## getLinkedInfo
 
@@ -64,21 +84,5 @@ function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void
 
 **示例**
 
-```TypeScript
-import wifi from '@ohos.wifi';
-
-wifi.getLinkedInfo((err, data:wifi.WifiLinkedInfo) => {
-    if (err) {
-        console.error("get linked info error");
-        return;
-    }
-    console.info("get wifi linked info: " + JSON.stringify(data));
-});
-
-wifi.getLinkedInfo().then(data => {
-    console.info("get wifi linked info: " + JSON.stringify(data));
-}).catch((error:number) => {
-    console.info("get linked info error");
-});
-```
+参见 [getLinkedInfo](#getlinkedinfo)
 

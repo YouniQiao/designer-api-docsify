@@ -47,3 +47,17 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  <br>1.Mandatory parameters are left unspecified.  <br>2.Incorrect parameter types. |
 
+**示例**
+
+```TypeScript
+import {BusinessError} from '@kit.BasicServicesKit';
+// 定义端口号
+let portId: number = 1;
+// 设置端口角色：电源角色为SOURCE，数据角色为HOST
+usbManager.setPortRoles(portId, usbManager.PowerRoleType.SOURCE, usbManager.DataRoleType.HOST).then(() => {
+    console.info('usb setPortRoles successfully.');
+}).catch((err: BusinessError) => {
+    console.error(`usb setPortRoles failed. Code: ${err.code}, message: ${err.message}`);
+});
+```
+

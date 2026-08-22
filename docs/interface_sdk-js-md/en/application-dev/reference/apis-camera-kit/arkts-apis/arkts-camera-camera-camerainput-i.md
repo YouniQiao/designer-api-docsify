@@ -37,13 +37,41 @@ Closes this camera device. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the camera device is closed successfully, **err** is **undefined**. Otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the camera device is closed successfully, **err** is **undefined**. Otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function closeCameraInput(cameraInput: camera.CameraInput): void {
+  cameraInput.close((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to close the cameras, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback returned with camera closed.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function closeCameraInput(cameraInput: camera.CameraInput): void {
+  cameraInput.close().then(() => {
+    console.info('Promise returned with camera closed.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to close the cameras, error code: ${error.code}.`);
+  }); 
+}
+```
 
 ## close
 
@@ -73,6 +101,10 @@ Closes this camera device. This API uses a promise to return the result.
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
+**Examples**
+
+See [close](#close)
+
 ## getPhysicalCameraOrientation
 
 ```TypeScript
@@ -94,6 +126,15 @@ Obtains the physical camera orientation in the current fold state of the device.
 | Type | Description |
 | --- | --- |
 | int | Physical camera orientation. <br>The value ranges from 0 to 360, in degrees. |
+
+**Examples**
+
+```TypeScript
+function getPhysicalCameraOrientation(cameraInput: camera.CameraInput): number {
+  let physicalCameraOrientation: number = cameraInput.getPhysicalCameraOrientation();
+  return physicalCameraOrientation;
+}
+```
 
 ## isPhysicalCameraOrientationVariable
 
@@ -117,46 +158,14 @@ Checks whether the physical camera orientation is adjustable in different fold s
 | --- | --- |
 | boolean | Checks whether the physical camera orientation is adjustable in different fold states of the device. **true** if adjustable, **false** otherwise. If the API call fails, undefined is returned. |
 
-## offCameraOcclusionDetection
+**Examples**
 
 ```TypeScript
-offCameraOcclusionDetection(callback?: AsyncCallback<CameraOcclusionDetectionResult>): void
+function isPhysicalCameraOrientationVariable(cameraInput: camera.CameraInput): boolean {
+  let isVariable: boolean = cameraInput.isPhysicalCameraOrientationVariable();
+  return isVariable;
+}
 ```
-
-Unsubscribes from camera occlusion detection results.
-
-**Since:** 23
-
-<!--Device-CameraInput-offCameraOcclusionDetection(callback?: AsyncCallback<CameraOcclusionDetectionResult>): void--><!--Device-CameraInput-offCameraOcclusionDetection(callback?: AsyncCallback<CameraOcclusionDetectionResult>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | No | Callback used to get detection results. |
-
-## offError
-
-```TypeScript
-offError(camera: CameraDevice, callback?: ErrorCallback): void
-```
-
-Unsubscribes from error events.
-
-**Since:** 23
-
-<!--Device-CameraInput-offError(camera: CameraDevice, callback?: ErrorCallback): void--><!--Device-CameraInput-offError(camera: CameraDevice, callback?: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | Camera device. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to get the camera input errors. |
 
 ## off('error')
 
@@ -180,19 +189,19 @@ Unsubscribes from CameraInput error events.
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a CameraInput instance is created. This event is triggered and the result is returned when an error occurs on the camera device. For example, if the camera device is unavailable or a conflict occurs, the error information is returned. |
 | camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | Camera device. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the result. If this parameter is specified, only the corresponding callback will be unregistered (the callback object cannot be an anonymous function); otherwise, all registered callbacks will be unregistered. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. If this parameter is specified, only the corresponding callback will be unregistered (the callback object cannot be an anonymous function); otherwise, all registered callbacks will be unregistered. |
 
-## onCameraOcclusionDetection
+## offCameraOcclusionDetection
 
 ```TypeScript
-onCameraOcclusionDetection(callback: AsyncCallback<CameraOcclusionDetectionResult>): void
+offCameraOcclusionDetection(callback?: AsyncCallback<CameraOcclusionDetectionResult>): void
 ```
 
-Subscribes to camera occlusion detection results.
+Unsubscribes from camera occlusion detection results.
 
 **Since:** 23
 
-<!--Device-CameraInput-onCameraOcclusionDetection(callback: AsyncCallback<CameraOcclusionDetectionResult>): void--><!--Device-CameraInput-onCameraOcclusionDetection(callback: AsyncCallback<CameraOcclusionDetectionResult>): void-End-->
+<!--Device-CameraInput-offCameraOcclusionDetection(callback?: AsyncCallback<CameraOcclusionDetectionResult>): void--><!--Device-CameraInput-offCameraOcclusionDetection(callback?: AsyncCallback<CameraOcclusionDetectionResult>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -200,19 +209,19 @@ Subscribes to camera occlusion detection results.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | Yes | Callback used to get detection results. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | No | Callback used to get detection results. |
 
-## onError
+## offError
 
 ```TypeScript
-onError(camera: CameraDevice, callback: ErrorCallback): void
+offError(camera: CameraDevice, callback?: ErrorCallback): void
 ```
 
-Subscribes to error events.
+Unsubscribes from error events.
 
 **Since:** 23
 
-<!--Device-CameraInput-onError(camera: CameraDevice, callback: ErrorCallback): void--><!--Device-CameraInput-onError(camera: CameraDevice, callback: ErrorCallback): void-End-->
+<!--Device-CameraInput-offError(camera: CameraDevice, callback?: ErrorCallback): void--><!--Device-CameraInput-offError(camera: CameraDevice, callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -221,7 +230,7 @@ Subscribes to error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | Camera device. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to get the camera input errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to get the camera input errors. |
 
 ## on('error')
 
@@ -249,7 +258,48 @@ Subscribes to CameraInput error events. This API uses an asynchronous callback t
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a CameraInput instance is created. This event is triggered and the result is returned when an error occurs on the camera device. For example, if the camera device is unavailable or a conflict occurs, the error information is returned. |
 | camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | Camera device. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
+
+## onCameraOcclusionDetection
+
+```TypeScript
+onCameraOcclusionDetection(callback: AsyncCallback<CameraOcclusionDetectionResult>): void
+```
+
+Subscribes to camera occlusion detection results.
+
+**Since:** 23
+
+<!--Device-CameraInput-onCameraOcclusionDetection(callback: AsyncCallback<CameraOcclusionDetectionResult>): void--><!--Device-CameraInput-onCameraOcclusionDetection(callback: AsyncCallback<CameraOcclusionDetectionResult>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | Yes | Callback used to get detection results. |
+
+## onError
+
+```TypeScript
+onError(camera: CameraDevice, callback: ErrorCallback): void
+```
+
+Subscribes to error events.
+
+**Since:** 23
+
+<!--Device-CameraInput-onError(camera: CameraDevice, callback: ErrorCallback): void--><!--Device-CameraInput-onError(camera: CameraDevice, callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | Camera device. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to get the camera input errors. |
 
 ## open
 
@@ -271,7 +321,7 @@ Opens this camera device. This API uses an asynchronous callback to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the camera device is opened successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the camera device is opened successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -280,6 +330,58 @@ Opens this camera device. This API uses an asynchronous callback to return the r
 | [7400107](../errorcode-camera.md#7400107-camera-conflict) | Can not use camera cause of conflict. |
 | [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) | Camera disabled cause of security reason. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function openCameraInput(cameraInput: camera.CameraInput): void {
+  cameraInput.open((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to open the camera, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback returned with camera opened.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function openCameraInput(cameraInput: camera.CameraInput): void {
+  cameraInput.open().then(() => {
+    console.info('Promise returned with camera opened.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to open the camera, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function openCameraInput(cameraInput: camera.CameraInput): void {
+  cameraInput.open(true).then(() => {
+    console.info('Promise returned with camera opened.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to open the camera, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function openCameraInput(cameraInput: camera.CameraInput): void {
+  cameraInput.open(0).then(() => {
+    console.info('Promise returned with camera opened.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to open the camera, error code: ${error.code}.`);
+  });
+}
+```
 
 ## open
 
@@ -311,6 +413,10 @@ Opens this camera device. This API uses a promise to return the result.
 | [7400107](../errorcode-camera.md#7400107-camera-conflict) | Can not use camera cause of conflict. |
 | [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) | Camera disabled cause of security reason. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+**Examples**
+
+See [open](#open)
 
 ## open
 
@@ -347,6 +453,10 @@ Opens this camera device. This API uses a promise to return the result.
 | [7400107](../errorcode-camera.md#7400107-camera-conflict) | Can not use camera cause of conflict. |
 | [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) | Camera disabled cause of security reason. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+**Examples**
+
+See [open](#open)
 
 ## open
 
@@ -385,6 +495,10 @@ Opens the camera with the specified concurrency type. This API uses a promise to
 | [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) | Camera disabled cause of security reason. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
+**Examples**
+
+See [open](#open)
+
 ## usePhysicalCameraOrientation
 
 ```TypeScript
@@ -413,4 +527,19 @@ Enables or disables the use of the physical camera orientation.
 | --- | --- |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function usePhysicalCameraOrientation(cameraInput: camera.CameraInput, isUsed: boolean): void {
+  try {
+    cameraInput.usePhysicalCameraOrientation(isUsed);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The usePhysicalCameraOrientation call failed. error code: ${err.code}`);
+  }
+}
+```
 

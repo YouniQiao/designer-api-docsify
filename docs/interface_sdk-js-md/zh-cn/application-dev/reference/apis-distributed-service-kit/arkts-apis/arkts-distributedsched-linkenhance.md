@@ -29,7 +29,7 @@ import { linkEnhance } from '@kit.DistributedServiceKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ConnectResult](arkts-distributedservice-linkenhance-connectresult-i.md) | 客户端调用connect()后，返回的连接结果。 |
 | [Connection](arkts-distributedservice-linkenhance-connection-i.md) | 连接对象，提供连接、断连、获取对端设备ID、发送数据、注册/取消注册回调等方法。 |
+| [ConnectResult](arkts-distributedservice-linkenhance-connectresult-i.md) | 客户端调用connect()后，返回的连接结果。 |
 | [Server](arkts-distributedservice-linkenhance-server-i.md) | 服务对象，提供启动服务、停止服务、关闭服务、注册/取消注册服务端回调等方法。 |
 

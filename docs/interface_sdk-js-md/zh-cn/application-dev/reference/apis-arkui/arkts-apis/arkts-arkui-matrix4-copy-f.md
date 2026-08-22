@@ -41,6 +41,40 @@ import { matrix4 } from '@kit.ArkUI';
 @Entry
 @Component
 struct Test {
+  private matrix1 = matrix4.identity().scale({ x: 1.5 });
+  private matrix2 = this.matrix1.copy().translate({ x: 200 });
+  imageSize: Length = '300px';
+
+  build() {
+    Column({ space: "50px" }) {
+      // $r("app.media.testImage")需要替换为开发者所需的图像资源文件。
+      Image($r("app.media.testImage"))
+        .width(this.imageSize)
+        .height(this.imageSize)
+      // $r("app.media.testImage")需要替换为开发者所需的图像资源文件。
+      Image($r("app.media.testImage"))
+        .width(this.imageSize)
+        .height(this.imageSize)
+        .transform(this.matrix1)
+      // $r("app.media.testImage")需要替换为开发者所需的图像资源文件。
+      Image($r("app.media.testImage"))
+        .width(this.imageSize)
+        .height(this.imageSize)
+        .transform(this.matrix2)
+    }.alignItems(HorizontalAlign.Center)
+    .height('100%').width("100%")
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+import { matrix4 } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Test {
   private matrix1 = matrix4.identity().translate({ x: 100 });
   // 对matrix1的拷贝矩阵做scale操作，不影响到matrix1
   private matrix2 = this.matrix1.copy().scale({ x: 2 });

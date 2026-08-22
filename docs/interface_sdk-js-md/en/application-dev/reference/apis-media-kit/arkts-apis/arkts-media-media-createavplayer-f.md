@@ -41,7 +41,7 @@ Creates an AVPlayer instance. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, an AVPlayer instance is returned; otherwise, **null** is returned. The instance can be used to play audio and video. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, an AVPlayer instance is returned; otherwise, **null** is returned. The instance can be used to play audio and video. |
 
 **Error codes:**
 
@@ -62,6 +62,22 @@ media.createAVPlayer((error: BusinessError, video: media.AVPlayer) => {
   } else {
     console.error(`Failed to create AVPlayer, error message:${error.message}`);
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let avPlayer: media.AVPlayer;
+media.createAVPlayer().then((video: media.AVPlayer) => {
+  if (video) {
+    avPlayer = video;
+    console.info('Succeeded in creating AVPlayer');
+  } else {
+    console.error('Failed to create AVPlayer');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`Failed to create AVPlayer, error message:${error.message}`);
 });
 ```
 
@@ -86,13 +102,17 @@ The actual number of instances that can be created may be different. It depends 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md) \| undefined&gt; | Yes | used to return the result. If the operation is successful , an **AVPlayer** instance is returned; otherwise, **undefined** is returned. The instance can be used to play audio and video. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md) \| undefined&gt; | Yes | used to return the result. If the operation is successful , an **AVPlayer** instance is returned; otherwise, **undefined** is returned. The instance can be used to play audio and video. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
+
+**Examples**
+
+See [createAVPlayer](#createavplayer)
 
 
 ## createAVPlayer
@@ -140,21 +160,7 @@ Creates an AVPlayer instance. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let avPlayer: media.AVPlayer;
-media.createAVPlayer().then((video: media.AVPlayer) => {
-  if (video) {
-    avPlayer = video;
-    console.info('Succeeded in creating AVPlayer');
-  } else {
-    console.error('Failed to create AVPlayer');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`Failed to create AVPlayer, error message:${error.message}`);
-});
-```
+See [createAVPlayer](#createavplayer)
 
 
 ## createAVPlayer
@@ -184,4 +190,8 @@ The actual number of instances that can be created may be different. It depends 
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+
+**Examples**
+
+See [createAVPlayer](#createavplayer)
 

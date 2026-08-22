@@ -52,6 +52,20 @@ sharing.isSharing((error: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { sharing } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sharing
+  .isSharing()
+  .then((data: boolean) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
+
 
 ## isSharing
 
@@ -89,17 +103,5 @@ function isSharing(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sharing
-  .isSharing()
-  .then((data: boolean) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+参见 [isSharing](#issharing)
 

@@ -59,3 +59,11 @@ declare function renameSync(oldPath: string, newPath: string): void
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**示例**
+
+```TypeScript
+let srcFile = pathDir + "/test.txt";
+let dstFile = pathDir + "/new.txt";
+fileIo.renameSync(srcFile, dstFile);
+```
+

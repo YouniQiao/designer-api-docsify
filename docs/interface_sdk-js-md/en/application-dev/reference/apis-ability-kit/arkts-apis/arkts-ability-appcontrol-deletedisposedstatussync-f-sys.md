@@ -42,3 +42,19 @@ Deletes the disposed status for an application or an application clone. This API
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) | The specified app ID is invalid. |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex is not in the valid range.<br>**Applicable version:** 12 and later |
 
+**Examples**
+
+```TypeScript
+import { appControl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appId: string = "com.example.myapplication_xxxxx";
+
+try {
+  appControl.deleteDisposedStatusSync(appId, 1);
+} catch (error) {
+  let message = (error as BusinessError).message;
+  console.error('deleteDisposedStatusSync failed ' + message);
+}
+```
+

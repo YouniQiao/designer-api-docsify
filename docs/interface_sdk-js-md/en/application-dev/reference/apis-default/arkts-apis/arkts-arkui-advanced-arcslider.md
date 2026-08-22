@@ -11,31 +11,31 @@
 
 | Name | Description |
 | --- | --- |
-| [ArcSliderLayoutOptions](arkts-arkuiadvancedarcslider-arcsliderlayoutoptions-c.md) | The options for ArcSlider layout. |
-| [ArcSliderOptions](arkts-arkuiadvancedarcslider-arcslideroptions-c.md) | The options for ArcSlider. |
-| [ArcSliderStyleOptions](arkts-arkuiadvancedarcslider-arcsliderstyleoptions-c.md) | The options for ArcSlider style. |
-| [ArcSliderValueOptions](arkts-arkuiadvancedarcslider-arcslidervalueoptions-c.md) | The options for ArcSlider progress value. |
+| [ArcSliderLayoutOptions](arkts-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md) | The options for ArcSlider layout. |
+| [ArcSliderOptions](arkts-arkui-advanced-arcslider-arcslideroptions-c.md) | The options for ArcSlider. |
+| [ArcSliderStyleOptions](arkts-arkui-advanced-arcslider-arcsliderstyleoptions-c.md) | The options for ArcSlider style. |
+| [ArcSliderValueOptions](arkts-arkui-advanced-arcslider-arcslidervalueoptions-c.md) | The options for ArcSlider progress value. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [ArcSlider](arkts-arkuiadvancedarcslider-arcslider-s.md) | Defines ArcSlider Component. |
+| [ArcSlider](arkts-arkui-advanced-arcslider-arcslider-s.md) | Defines ArcSlider Component. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ArcSliderLayoutOptionsConstructorOptions](arkts-arkuiadvancedarcslider-arcsliderlayoutoptionsconstructoroptions-i.md) | Construct parameter types for ArcSliderLayoutOptions. |
-| [ArcSliderOptionsConstructorOptions](arkts-arkuiadvancedarcslider-arcslideroptionsconstructoroptions-i.md) | Construct parameter types for ArcSliderOptions. |
-| [ArcSliderStyleOptionsConstructorOptions](arkts-arkuiadvancedarcslider-arcsliderstyleoptionsconstructoroptions-i.md) | Construct parameter types for ArcSliderStyleOptions. |
-| [ArcSliderValueOptionsConstructorOptions](arkts-arkuiadvancedarcslider-arcslidervalueoptionsconstructoroptions-i.md) | Construct parameter types for ArcSliderValueOptions. |
+| [ArcSliderLayoutOptionsConstructorOptions](arkts-arkui-advanced-arcslider-arcsliderlayoutoptionsconstructoroptions-i.md) | Construct parameter types for ArcSliderLayoutOptions. |
+| [ArcSliderOptionsConstructorOptions](arkts-arkui-advanced-arcslider-arcslideroptionsconstructoroptions-i.md) | Construct parameter types for ArcSliderOptions. |
+| [ArcSliderStyleOptionsConstructorOptions](arkts-arkui-advanced-arcslider-arcsliderstyleoptionsconstructoroptions-i.md) | Construct parameter types for ArcSliderStyleOptions. |
+| [ArcSliderValueOptionsConstructorOptions](arkts-arkui-advanced-arcslider-arcslidervalueoptionsconstructoroptions-i.md) | Construct parameter types for ArcSliderValueOptions. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ArcSliderPosition](arkts-arkuiadvancedarcslider-arcsliderposition-e.md) | Enum for ArcSliderPosition |
+| [ArcSliderPosition](arkts-arkui-advanced-arcslider-arcsliderposition-e.md) | Enum for ArcSliderPosition |
 
 ### Types
 

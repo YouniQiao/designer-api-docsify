@@ -80,26 +80,6 @@ true：计时器开启倒计时，例如从30秒 ~ 0秒；false：计时器开�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## startTime
-
-```TypeScript
-startTime?: int
-```
-
-计时器经过的时间，单位为设置格式的最小单位。
-
-**类型：** int
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-TextTimerConfiguration-startTime?: int--><!--Device-TextTimerConfiguration-startTime?: int-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 ## started
 
 ```TypeScript
@@ -121,6 +101,26 @@ true：开始计时；false：未开始计时。
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextTimerConfiguration-started: boolean--><!--Device-TextTimerConfiguration-started: boolean-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## startTime
+
+```TypeScript
+startTime?: int
+```
+
+计时器经过的时间，单位为设置格式的最小单位。
+
+**类型：** int
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TextTimerConfiguration-startTime?: int--><!--Device-TextTimerConfiguration-startTime?: int-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

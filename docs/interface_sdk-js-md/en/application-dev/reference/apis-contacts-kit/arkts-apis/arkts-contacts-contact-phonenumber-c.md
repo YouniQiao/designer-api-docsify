@@ -50,6 +50,42 @@ Invalid phone type, the default value is **-1**.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+## labelId
+
+```TypeScript
+labelId?: number
+```
+
+Phone number type.
+
+**Type:** number
+
+**Since:** 7
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PhoneNumber-labelId?: number--><!--Device-PhoneNumber-labelId?: number-End-->
+
+**System capability:** SystemCapability.Applications.ContactsData
+
+## labelName
+
+```TypeScript
+labelName?: string
+```
+
+Name of the phone number type.
+
+**Type:** string
+
+**Since:** 7
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PhoneNumber-labelName?: string--><!--Device-PhoneNumber-labelName?: string-End-->
+
+**System capability:** SystemCapability.Applications.ContactsData
+
 ## NUM_ASSISTANT
 
 ```TypeScript
@@ -407,42 +443,6 @@ Work pager, the default value is **18**.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PhoneNumber-static readonly NUM_WORK_PAGER: 18--><!--Device-PhoneNumber-static readonly NUM_WORK_PAGER: 18-End-->
-
-**System capability:** SystemCapability.Applications.ContactsData
-
-## labelId
-
-```TypeScript
-labelId?: number
-```
-
-Phone number type.
-
-**Type:** number
-
-**Since:** 7
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PhoneNumber-labelId?: number--><!--Device-PhoneNumber-labelId?: number-End-->
-
-**System capability:** SystemCapability.Applications.ContactsData
-
-## labelName
-
-```TypeScript
-labelName?: string
-```
-
-Name of the phone number type.
-
-**Type:** string
-
-**Since:** 7
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PhoneNumber-labelName?: string--><!--Device-PhoneNumber-labelName?: string-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 

@@ -2,7 +2,7 @@
 
 Provides methods to accessing bluetooth OPP(OBEX OBJECT PUSH Profile)-related capabilities.
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 

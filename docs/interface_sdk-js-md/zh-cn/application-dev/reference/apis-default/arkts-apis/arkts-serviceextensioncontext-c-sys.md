@@ -44,7 +44,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | Want类型参数，传入需要启动的Ability的信息，如Ability名称，Bundle名称等。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Want类型参数，传入需要启动的Ability的信息，如Ability名称，Bundle名称等。 |
 | options | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-connectoptions-i.md) | 是 | ConnectOptions类型的回调函数，返回服务连接成功、断开或连接失败后的信息。 |
 
 **返回值：**
@@ -189,7 +189,7 @@ connectServiceExtensionAbilityWithAccount(want: Want, accountId: int, options: C
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 启动Ability的Want信息。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的Want信息。 |
 | accountId | int | 是 | 系统账号的账号ID。 |
 | options | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-connectoptions-i.md) | 是 | 远端对象实例。 |
 
@@ -413,46 +413,6 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
-## disconnectServiceExtensionAbility
-
-```TypeScript
-disconnectServiceExtensionAbility(connection: long): Promise<void>
-```
-
-将一个Ability与绑定的服务类型的Ability解绑，断开连接之后需要将连接成功时返回的remote对象置空。仅支持在主线程调用。使用Promise异步回调。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ServiceExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>--><!--Device-ServiceExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| connection | long | 是 | 在connectServiceExtensionAbility中返回的number。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -522,6 +482,48 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+## disconnectServiceExtensionAbility
+
+```TypeScript
+disconnectServiceExtensionAbility(connection: long): Promise<void>
+```
+
+将一个Ability与绑定的服务类型的Ability解绑，断开连接之后需要将连接成功时返回的remote对象置空。仅支持在主线程调用。使用Promise异步回调。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>--><!--Device-ServiceExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| connection | long | 是 | 在connectServiceExtensionAbility中返回的number。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
+
+**示例**
+
+参见 [disconnectServiceExtensionAbility](#disconnectserviceextensionability)
+
 ## openAtomicService
 
 ```TypeScript
@@ -549,7 +551,7 @@ openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | appId | string | 是 | 应用的唯一标识，由云端统一分配。 |
-| options | [AtomicServiceOptions](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityatomicserviceoptions-atomicserviceoptions-c.md) | 否 | 跳出式启动原子化服务所携带的参数。 |
+| options | [AtomicServiceOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-atomicserviceoptions-atomicserviceoptions-c.md) | 否 | 跳出式启动原子化服务所携带的参数。 |
 
 **返回值：**
 
@@ -632,7 +634,7 @@ openLink(link: string, options?: OpenLinkOptions): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | link | string | 是 | 指示要打开的标准格式URL。 |
-| options | [OpenLinkOptions](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityopenlinkoptions-openlinkoptions-i.md) | 否 | 打开URL的选项参数。 |
+| options | [OpenLinkOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-openlinkoptions-openlinkoptions-i.md) | 否 | 打开URL的选项参数。 |
 
 **返回值：**
 
@@ -832,7 +834,7 @@ requestModalUIExtension(pickerWant: Want, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pickerWant | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 拉起UIExtension的Want信息。 |
+| pickerWant | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 拉起UIExtension的Want信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当拉起UIExtension成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -849,6 +851,86 @@ requestModalUIExtension(pickerWant: Want, callback: AsyncCallback<void>): void
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released.<br>**适用版本：** 11+ |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class ServiceExtension extends ServiceExtensionAbility {
+  onCreate() {
+    let pickerWant: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'UIExtAbility',
+      moduleName: 'entry_test',
+      parameters: {
+        'bundleName': 'com.example.myapplication',
+        // 与com.example.myapplication.UIExtAbility配置的type相同
+        'ability.want.params.uiExtensionType': 'sys/commonUI'
+      }
+    };
+
+    try {
+      this.context.requestModalUIExtension(pickerWant)
+        .then(() => {
+          // 执行正常业务
+          console.info('requestModalUIExtension succeed');
+        })
+        .catch((err: BusinessError) => {
+          // 处理业务逻辑错误
+          console.error(`requestModalUIExtension failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // 处理入参错误异常
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`requestModalUIExtension failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
+import { BusinessError, RecordData } from '@kit.BasicServicesKit';
+
+class ServiceExtension extends ServiceExtensionAbility {
+  onCreate() {
+    let pickerWant: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'UIExtAbility',
+      moduleName: 'entry_test',
+      parameters: {
+        'bundleName': 'com.example.myapplication',
+        // 与com.example.myapplication.UIExtAbility配置的type相同
+        'ability.want.params.uiExtensionType': 'sys/commonUI'
+      } as Record<string, RecordData>
+    };
+
+    try {
+      this.context.requestModalUIExtension(pickerWant)
+        .then(() => {
+          // 执行正常业务
+          console.info('requestModalUIExtension succeed');
+        })
+        .catch((error) => {
+          // 处理业务逻辑错误
+          let err = error as BusinessError;
+          console.error(`requestModalUIExtension failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // 处理入参错误异常
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`requestModalUIExtension failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
 
 ArkTS-Dyn示例：
 
@@ -957,7 +1039,7 @@ requestModalUIExtension(pickerWant: Want): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pickerWant | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 拉起UIExtension的Want信息。 |
+| pickerWant | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 拉起UIExtension的Want信息。 |
 
 **返回值：**
 
@@ -980,85 +1062,7 @@ requestModalUIExtension(pickerWant: Want): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class ServiceExtension extends ServiceExtensionAbility {
-  onCreate() {
-    let pickerWant: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'UIExtAbility',
-      moduleName: 'entry_test',
-      parameters: {
-        'bundleName': 'com.example.myapplication',
-        // 与com.example.myapplication.UIExtAbility配置的type相同
-        'ability.want.params.uiExtensionType': 'sys/commonUI'
-      }
-    };
-
-    try {
-      this.context.requestModalUIExtension(pickerWant)
-        .then(() => {
-          // 执行正常业务
-          console.info('requestModalUIExtension succeed');
-        })
-        .catch((err: BusinessError) => {
-          // 处理业务逻辑错误
-          console.error(`requestModalUIExtension failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // 处理入参错误异常
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`requestModalUIExtension failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError, RecordData } from '@kit.BasicServicesKit';
-
-class ServiceExtension extends ServiceExtensionAbility {
-  onCreate() {
-    let pickerWant: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'UIExtAbility',
-      moduleName: 'entry_test',
-      parameters: {
-        'bundleName': 'com.example.myapplication',
-        // 与com.example.myapplication.UIExtAbility配置的type相同
-        'ability.want.params.uiExtensionType': 'sys/commonUI'
-      } as Record<string, RecordData>
-    };
-
-    try {
-      this.context.requestModalUIExtension(pickerWant)
-        .then(() => {
-          // 执行正常业务
-          console.info('requestModalUIExtension succeed');
-        })
-        .catch((error) => {
-          // 处理业务逻辑错误
-          let err = error as BusinessError;
-          console.error(`requestModalUIExtension failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // 处理入参错误异常
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`requestModalUIExtension failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+参见 [requestModalUIExtension](#requestmodaluiextension)
 
 ## requestModalUIExtensionWithAccount
 
@@ -1089,7 +1093,7 @@ requestModalUIExtensionWithAccount(pickerWant: Want, accountId: int): Promise<vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pickerWant | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 需要用于启动UIExtensionAbility的信息 |
+| pickerWant | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 需要用于启动UIExtensionAbility的信息 |
 | accountId | int | 是 | 要请求的帐户 <br>取值范围为全体整数。 |
 
 **返回值：**
@@ -1128,7 +1132,7 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | Want类型参数，传入需要启动的Ability的信息，如Ability名称，Bundle名称等。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Want类型参数，传入需要启动的Ability的信息，如Ability名称，Bundle名称等。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -1194,64 +1198,38 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
-## startAbility
-
 ```TypeScript
-startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void
+import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate() {
+    let want: Want = {
+      bundleName: 'com.example.myapp',
+      abilityName: 'MyAbility'
+    };
+    let options: StartOptions = {
+      windowMode: 0,
+    };
+
+    try {
+      this.context.startAbility(want, options)
+        .then(() => {
+          // 执行正常业务
+          console.info('startAbility succeed');
+        })
+        .catch((error: BusinessError<void>): void => {
+          // 处理业务逻辑错误
+          console.error(`startAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
+        });
+    } catch (error) {
+      // 处理入参错误异常
+      let paramError = error as BusinessError;
+      console.error(`error.code: ${paramError.code}, error.message: ${paramError.message}`);
+    }
+  }
+}
 ```
-
-启动Ability。仅支持在主线程调用。使用callback异步回调。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ServiceExtensionContext-startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void--><!--Device-ServiceExtensionContext-startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 启动Ability的Want信息。 |
-| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitystartoptions-startoptions-c.md) | 是 | 启动Ability所携带的参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
-| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
-| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
-| [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../../apis-ability-kit/errorcode-ability.md#16000010-不允许带迁移flag) | The call with the continuation and prepare continuation flag is forbidden. |
-| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10+ |
-| [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10+ |
-| [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
-| [16000019](../../apis-ability-kit/errorcode-ability.md#16000019-隐式启动未查找到匹配ability) | No matching ability is found.<br>**适用版本：** 12+ |
-| [16000073](../../apis-ability-kit/errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid.<br>**适用版本：** 12+ |
-| [16000071](../../apis-ability-kit/errorcode-ability.md#16000071-不支持应用分身模式) | App clone is not supported.<br>**适用版本：** 14+ |
-| [16000072](../../apis-ability-kit/errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
-| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的app_instance_key不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
-| [16000077](../../apis-ability-kit/errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
-| [16000078](../../apis-ability-kit/errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
-| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
-| [16000080](../../apis-ability-kit/errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
-
-**示例**
 
 ```TypeScript
 import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
@@ -1290,6 +1268,67 @@ class EntryAbility extends ServiceExtensionAbility {
 ## startAbility
 
 ```TypeScript
+startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void
+```
+
+启动Ability。仅支持在主线程调用。使用callback异步回调。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void--><!--Device-ServiceExtensionContext-startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的Want信息。 |
+| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动Ability所携带的参数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
+| [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
+| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
+| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
+| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
+| [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
+| [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
+| [16000010](../../apis-ability-kit/errorcode-ability.md#16000010-不允许带迁移flag) | The call with the continuation and prepare continuation flag is forbidden. |
+| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
+| [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
+| [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10+ |
+| [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10+ |
+| [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
+| [16000019](../../apis-ability-kit/errorcode-ability.md#16000019-隐式启动未查找到匹配ability) | No matching ability is found.<br>**适用版本：** 12+ |
+| [16000073](../../apis-ability-kit/errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid.<br>**适用版本：** 12+ |
+| [16000071](../../apis-ability-kit/errorcode-ability.md#16000071-不支持应用分身模式) | App clone is not supported.<br>**适用版本：** 14+ |
+| [16000072](../../apis-ability-kit/errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
+| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的app_instance_key不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000077](../../apis-ability-kit/errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
+| [16000078](../../apis-ability-kit/errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
+| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000080](../../apis-ability-kit/errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
+
+**示例**
+
+参见 [startAbility](#startability)
+
+## startAbility
+
+```TypeScript
 startAbility(want: Want, options?: StartOptions): Promise<void>
 ```
 
@@ -1309,8 +1348,8 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | Want类型参数，传入需要启动的Ability的信息，如Ability名称，Bundle名称等。 |
-| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitystartoptions-startoptions-c.md) | 否 | 启动Ability所携带的参数。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Want类型参数，传入需要启动的Ability的信息，如Ability名称，Bundle名称等。 |
+| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动Ability所携带的参数。 |
 
 **返回值：**
 
@@ -1351,38 +1390,7 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 **示例**
 
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      bundleName: 'com.example.myapp',
-      abilityName: 'MyAbility'
-    };
-    let options: StartOptions = {
-      windowMode: 0,
-    };
-
-    try {
-      this.context.startAbility(want, options)
-        .then(() => {
-          // 执行正常业务
-          console.info('startAbility succeed');
-        })
-        .catch((error: BusinessError<void>): void => {
-          // 处理业务逻辑错误
-          console.error(`startAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
-        });
-    } catch (error) {
-      // 处理入参错误异常
-      let paramError = error as BusinessError;
-      console.error(`error.code: ${paramError.code}, error.message: ${paramError.message}`);
-    }
-  }
-}
-```
+参见 [startAbility](#startability)
 
 ## startAbilityAsCaller
 
@@ -1410,7 +1418,7 @@ startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 启动Ability的Want信息。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的Want信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -1469,6 +1477,62 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+```TypeScript
+import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate(want: Want) {
+    // want包含启动该应用的Caller信息
+    let localWant: Want = want;
+    localWant.bundleName = 'com.example.demo';
+    localWant.moduleName = 'entry';
+    localWant.abilityName = 'TestAbility';
+
+    let option: StartOptions = {
+      displayId: 0
+    }
+
+    // 使用启动方的Caller身份信息启动新Ability
+    this.context.startAbilityAsCaller(localWant, option, (err) => {
+      if (err && err.code != 0) {
+        console.error(`startAbilityAsCaller failed, err: ${JSON.stringify(err)}`);
+      } else {
+        console.info('startAbilityAsCaller success.');
+      }
+    })
+  }
+}
+```
+
+```TypeScript
+import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate(want: Want) {
+    // want包含启动该应用的Caller信息
+    let localWant: Want = want;
+    localWant.bundleName = 'com.example.demo';
+    localWant.moduleName = 'entry';
+    localWant.abilityName = 'TestAbility';
+
+    let option: StartOptions = {
+      displayId: 0
+    };
+
+    // 使用启动方的Caller身份信息启动新Ability
+    this.context.startAbilityAsCaller(localWant, option)
+      .then(() => {
+        console.info('startAbilityAsCaller success.');
+      })
+      .catch((error: Error) => {
+        let err = error as BusinessError;
+        console.error(`startAbilityAsCaller failed, err: ${JSON.stringify(err)}`);
+      })
+  }
+}
+```
+
 ## startAbilityAsCaller
 
 ```TypeScript
@@ -1495,8 +1559,8 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 启动Ability的Want信息。 |
-| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitystartoptions-startoptions-c.md) | 是 | 启动Ability所携带的参数。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的Want信息。 |
+| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动Ability所携带的参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -1530,32 +1594,7 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 
 **示例**
 
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate(want: Want) {
-    // want包含启动该应用的Caller信息
-    let localWant: Want = want;
-    localWant.bundleName = 'com.example.demo';
-    localWant.moduleName = 'entry';
-    localWant.abilityName = 'TestAbility';
-
-    let option: StartOptions = {
-      displayId: 0
-    }
-
-    // 使用启动方的Caller身份信息启动新Ability
-    this.context.startAbilityAsCaller(localWant, option, (err) => {
-      if (err && err.code != 0) {
-        console.error(`startAbilityAsCaller failed, err: ${JSON.stringify(err)}`);
-      } else {
-        console.info('startAbilityAsCaller success.');
-      }
-    })
-  }
-}
-```
+参见 [startAbilityAsCaller](#startabilityascaller)
 
 ## startAbilityAsCaller
 
@@ -1583,8 +1622,8 @@ startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 启动Ability的Want信息。 |
-| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitystartoptions-startoptions-c.md) | 否 | 启动Ability所携带的参数。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的Want信息。 |
+| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动Ability所携带的参数。 |
 
 **返回值：**
 
@@ -1625,34 +1664,7 @@ startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 
 **示例**
 
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate(want: Want) {
-    // want包含启动该应用的Caller信息
-    let localWant: Want = want;
-    localWant.bundleName = 'com.example.demo';
-    localWant.moduleName = 'entry';
-    localWant.abilityName = 'TestAbility';
-
-    let option: StartOptions = {
-      displayId: 0
-    };
-
-    // 使用启动方的Caller身份信息启动新Ability
-    this.context.startAbilityAsCaller(localWant, option)
-      .then(() => {
-        console.info('startAbilityAsCaller success.');
-      })
-      .catch((error: Error) => {
-        let err = error as BusinessError;
-        console.error(`startAbilityAsCaller failed, err: ${JSON.stringify(err)}`);
-      })
-  }
-}
-```
+参见 [startAbilityAsCaller](#startabilityascaller)
 
 ## startAbilityByCall
 
@@ -1684,13 +1696,13 @@ startAbilityByCall(want: Want): Promise<Caller>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 传入需要启动的Ability的信息，包含abilityName、moduleName、bundleName、deviceId、parameters(可选)，parameters缺省或为 空表示后台启动Ability。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 传入需要启动的Ability的信息，包含abilityName、moduleName、bundleName、deviceId、parameters(可选)，parameters缺省或为 空表示后台启动Ability。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[Caller](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiability-caller-i.md)&gt; | Promise对象，返回要通讯的caller对象。 |
+| Promise&lt;[Caller](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-caller-i.md)&gt; | Promise对象，返回要通讯的caller对象。 |
 
 **错误码：**
 
@@ -1889,14 +1901,14 @@ startAbilityByCallWithAccount(want: Want, accountId: int): Promise<Caller>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 传入需要启动的Ability的信息，包含abilityName、moduleName、bundleName、deviceId(可选)、parameters(可选)，其中deviceId 缺省或为空表示启动本地Ability，parameters缺省或为空表示后台启动Ability。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 传入需要启动的Ability的信息，包含abilityName、moduleName、bundleName、deviceId(可选)、parameters(可选)，其中deviceId 缺省或为空表示启动本地Ability，parameters缺省或为空表示后台启动Ability。 |
 | accountId | int | 是 | 系统账号的账号ID，-1表示当前活动用户。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[Caller](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiability-caller-i.md)&gt; | Promise对象，返回要通讯的caller对象。 |
+| Promise&lt;[Caller](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-caller-i.md)&gt; | Promise对象，返回要通讯的caller对象。 |
 
 **错误码：**
 
@@ -2031,7 +2043,7 @@ startAbilityWithAccount(want: Want, accountId: int, callback: AsyncCallback<void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 启动Ability的Want信息。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的Want信息。 |
 | accountId | int | 是 | 系统账号的账号ID。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当根据accountId启动Ability成功，err为undefined，否则为错误对象。 |
 
@@ -2100,6 +2112,77 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+```TypeScript
+import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    // accountId为系统账号ID，可通过getOsAccountLocalId接口获取，此处以100为例
+    let accountId = 100;
+    let options: StartOptions = {
+      windowMode: 0
+    };
+
+    try {
+      this.context.startAbilityWithAccount(want, accountId, options, (error: BusinessError): void => {
+        if (error.code) {
+          // 处理业务逻辑错误
+          console.error(`startAbilityWithAccount failed, error.code: ${error.code}, error.message: ${error.message}`);
+          return;
+        }
+        // 执行正常业务
+        console.info('startAbilityWithAccount succeed');
+      });
+    } catch (paramError) {
+      // 处理入参错误异常
+      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
+
+```TypeScript
+import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    // accountId为系统账号ID，可通过getOsAccountLocalId接口获取，此处以100为例
+    let accountId = 100;
+    let options: StartOptions = {
+      windowMode: 0
+    };
+
+    try {
+      this.context.startAbilityWithAccount(want, accountId, options)
+        .then((data) => {
+          // 执行正常业务
+          console.info('startAbilityWithAccount succeed');
+        })
+        .catch((err: Error) => {
+          // 处理业务逻辑错误
+          let error = err as BusinessError;
+          console.error(`startAbilityWithAccount failed, error.code: ${error.code}, error.message: ${error.message}`);
+        });
+    } catch (paramError) {
+      // 处理入参错误异常
+      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
+
 ## startAbilityWithAccount
 
 ```TypeScript
@@ -2128,9 +2211,9 @@ startAbilityWithAccount(want: Want, accountId: int, options: StartOptions, callb
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 启动Ability的Want信息。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的Want信息。 |
 | accountId | int | 是 | 系统账号的账号ID。 |
-| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitystartoptions-startoptions-c.md) | 是 | 启动Ability所携带的参数。 |
+| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动Ability所携带的参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当根据accountId启动Ability成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -2167,40 +2250,7 @@ startAbilityWithAccount(want: Want, accountId: int, options: StartOptions, callb
 
 **示例**
 
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    // accountId为系统账号ID，可通过getOsAccountLocalId接口获取，此处以100为例
-    let accountId = 100;
-    let options: StartOptions = {
-      windowMode: 0
-    };
-
-    try {
-      this.context.startAbilityWithAccount(want, accountId, options, (error: BusinessError): void => {
-        if (error.code) {
-          // 处理业务逻辑错误
-          console.error(`startAbilityWithAccount failed, error.code: ${error.code}, error.message: ${error.message}`);
-          return;
-        }
-        // 执行正常业务
-        console.info('startAbilityWithAccount succeed');
-      });
-    } catch (paramError) {
-      // 处理入参错误异常
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
+参见 [startAbilityWithAccount](#startabilitywithaccount)
 
 ## startAbilityWithAccount
 
@@ -2230,9 +2280,9 @@ startAbilityWithAccount(want: Want, accountId: int, options?: StartOptions): Pro
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 启动Ability的Want信息。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的Want信息。 |
 | accountId | int | 是 | 系统账号的账号ID。 |
-| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitystartoptions-startoptions-c.md) | 否 | 启动Ability所携带的参数。 |
+| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动Ability所携带的参数。 |
 
 **返回值：**
 
@@ -2274,41 +2324,7 @@ startAbilityWithAccount(want: Want, accountId: int, options?: StartOptions): Pro
 
 **示例**
 
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    // accountId为系统账号ID，可通过getOsAccountLocalId接口获取，此处以100为例
-    let accountId = 100;
-    let options: StartOptions = {
-      windowMode: 0
-    };
-
-    try {
-      this.context.startAbilityWithAccount(want, accountId, options)
-        .then((data) => {
-          // 执行正常业务
-          console.info('startAbilityWithAccount succeed');
-        })
-        .catch((err: Error) => {
-          // 处理业务逻辑错误
-          let error = err as BusinessError;
-          console.error(`startAbilityWithAccount failed, error.code: ${error.code}, error.message: ${error.message}`);
-        });
-    } catch (paramError) {
-      // 处理入参错误异常
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
+参见 [startAbilityWithAccount](#startabilitywithaccount)
 
 ## startRecentAbility
 
@@ -2336,7 +2352,7 @@ startRecentAbility(want: Want, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 需要启动Ability的Want信息。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 需要启动Ability的Want信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动一个指定的Ability成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -2401,69 +2417,6 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
-## startRecentAbility
-
-```TypeScript
-startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void
-```
-
-启动一个指定的Ability，如果该Ability有多个实例，将拉起最近启动的那个实例。仅支持在主线程调用。使用callback异步回调。
-
-当开发者需要携带启动参数时可以选择此API。
-
-> **说明：**
-> 
-> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ServiceExtensionContext-startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void--><!--Device-ServiceExtensionContext-startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 需要启动Ability的Want信息。 |
-| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitystartoptions-startoptions-c.md) | 是 | 启动Ability所携带的参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动一个指定的Ability成功，err为undefined，否则为错误对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type.<br>**适用版本：** 9+ |
-| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
-| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
-| [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../../apis-ability-kit/errorcode-ability.md#16000010-不允许带迁移flag) | The call with the continuation and prepare continuation flag is forbidden.<br>**适用版本：** 9+ |
-| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
-| [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
-| [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10+ |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api.<br>**适用版本：** 14+ |
-| [16000071](../../apis-ability-kit/errorcode-ability.md#16000071-不支持应用分身模式) | App clone is not supported.<br>**适用版本：** 14+ |
-| [16000072](../../apis-ability-kit/errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
-| [16000073](../../apis-ability-kit/errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid.<br>**适用版本：** 14+ |
-| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的app_instance_key不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
-| [16000077](../../apis-ability-kit/errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
-| [16000078](../../apis-ability-kit/errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
-| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
-| [16000080](../../apis-ability-kit/errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
-
-**示例**
-
 ```TypeScript
 import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2499,6 +2452,106 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+```TypeScript
+import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate() {
+    let want: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    let options: StartOptions = {
+      windowMode: 0,
+    };
+
+    try {
+      this.context.startRecentAbility(want, options)
+        .then(() => {
+          // 执行正常业务
+          console.info('startRecentAbility succeed');
+        })
+        .catch((error: Error) => {
+          // 处理业务逻辑错误
+          let err = error as BusinessError;
+          console.error(`startRecentAbility failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // 处理入参错误异常
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startRecentAbility failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
+## startRecentAbility
+
+```TypeScript
+startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void
+```
+
+启动一个指定的Ability，如果该Ability有多个实例，将拉起最近启动的那个实例。仅支持在主线程调用。使用callback异步回调。
+
+当开发者需要携带启动参数时可以选择此API。
+
+> **说明：**
+> 
+> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void--><!--Device-ServiceExtensionContext-startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 需要启动Ability的Want信息。 |
+| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动Ability所携带的参数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动一个指定的Ability成功，err为undefined，否则为错误对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
+| [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type.<br>**适用版本：** 9+ |
+| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
+| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
+| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
+| [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
+| [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
+| [16000010](../../apis-ability-kit/errorcode-ability.md#16000010-不允许带迁移flag) | The call with the continuation and prepare continuation flag is forbidden.<br>**适用版本：** 9+ |
+| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
+| [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
+| [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api.<br>**适用版本：** 14+ |
+| [16000071](../../apis-ability-kit/errorcode-ability.md#16000071-不支持应用分身模式) | App clone is not supported.<br>**适用版本：** 14+ |
+| [16000072](../../apis-ability-kit/errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
+| [16000073](../../apis-ability-kit/errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid.<br>**适用版本：** 14+ |
+| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的app_instance_key不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000077](../../apis-ability-kit/errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
+| [16000078](../../apis-ability-kit/errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
+| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000080](../../apis-ability-kit/errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
+
+**示例**
+
+参见 [startRecentAbility](#startrecentability)
+
 ## startRecentAbility
 
 ```TypeScript
@@ -2525,8 +2578,8 @@ startRecentAbility(want: Want, options?: StartOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 需要启动Ability的Want信息。 |
-| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitystartoptions-startoptions-c.md) | 否 | 启动Ability所携带的参数。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 需要启动Ability的Want信息。 |
+| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动Ability所携带的参数。 |
 
 **返回值：**
 
@@ -2565,40 +2618,7 @@ startRecentAbility(want: Want, options?: StartOptions): Promise<void>
 
 **示例**
 
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let options: StartOptions = {
-      windowMode: 0,
-    };
-
-    try {
-      this.context.startRecentAbility(want, options)
-        .then(() => {
-          // 执行正常业务
-          console.info('startRecentAbility succeed');
-        })
-        .catch((error: Error) => {
-          // 处理业务逻辑错误
-          let err = error as BusinessError;
-          console.error(`startRecentAbility failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // 处理入参错误异常
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startRecentAbility failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+参见 [startRecentAbility](#startrecentability)
 
 ## startServiceExtensionAbility
 
@@ -2622,7 +2642,7 @@ startServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 启动Ability的Want信息。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的Want信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动一个新的ServiceExtensionAbility成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -2677,58 +2697,6 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
-## startServiceExtensionAbility
-
-```TypeScript
-startServiceExtensionAbility(want: Want): Promise<void>
-```
-
-启动一个新的ServiceExtensionAbility。使用Promise异步回调。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ServiceExtensionContext-startServiceExtensionAbility(want: Want): Promise<void>--><!--Device-ServiceExtensionContext-startServiceExtensionAbility(want: Want): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 启动Ability的Want信息。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
-| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
-| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 10+ |
-| [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10+ |
-| [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
-| [16000019](../../apis-ability-kit/errorcode-ability.md#16000019-隐式启动未查找到匹配ability) | No matching ability is found.<br>**适用版本：** 12+ |
-
-**示例**
-
 ```TypeScript
 import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2758,6 +2726,60 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+## startServiceExtensionAbility
+
+```TypeScript
+startServiceExtensionAbility(want: Want): Promise<void>
+```
+
+启动一个新的ServiceExtensionAbility。使用Promise异步回调。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-startServiceExtensionAbility(want: Want): Promise<void>--><!--Device-ServiceExtensionContext-startServiceExtensionAbility(want: Want): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的Want信息。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
+| [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
+| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
+| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
+| [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
+| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 10+ |
+| [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10+ |
+| [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
+| [16000019](../../apis-ability-kit/errorcode-ability.md#16000019-隐式启动未查找到匹配ability) | No matching ability is found.<br>**适用版本：** 12+ |
+
+**示例**
+
+参见 [startServiceExtensionAbility](#startserviceextensionability)
 
 ## startServiceExtensionAbilityWithAccount
 
@@ -2789,7 +2811,7 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: int, callback: As
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 启动Ability的Want信息。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的Want信息。 |
 | accountId | int | 是 | 系统账号的账号ID。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动一个新的ServiceExtensionAbility成功，err为undefined，否则为错误对象。 |
 
@@ -2847,67 +2869,6 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
-## startServiceExtensionAbilityWithAccount
-
-```TypeScript
-startServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>
-```
-
-启动一个新的ServiceExtensionAbility。使用Promise异步回调。
-
-> **说明：**
-> 
-> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
-> 
-> 当accountId为当前用户时，无需进行权限校验。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ServiceExtensionContext-startServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>--><!--Device-ServiceExtensionContext-startServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 启动Ability的Want信息。 |
-| accountId | int | 是 | 系统账号的账号ID。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
-| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
-| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 10+ |
-| [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10+ |
-| [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
-| [16000019](../../apis-ability-kit/errorcode-ability.md#16000019-隐式启动未查找到匹配ability) | No matching ability is found.<br>**适用版本：** 12+ |
-
-**示例**
-
 ```TypeScript
 import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2941,6 +2902,69 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+## startServiceExtensionAbilityWithAccount
+
+```TypeScript
+startServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>
+```
+
+启动一个新的ServiceExtensionAbility。使用Promise异步回调。
+
+> **说明：**
+> 
+> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+> 
+> 当accountId为当前用户时，无需进行权限校验。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-startServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>--><!--Device-ServiceExtensionContext-startServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的Want信息。 |
+| accountId | int | 是 | 系统账号的账号ID。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
+| [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
+| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
+| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
+| [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
+| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 10+ |
+| [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10+ |
+| [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
+| [16000019](../../apis-ability-kit/errorcode-ability.md#16000019-隐式启动未查找到匹配ability) | No matching ability is found.<br>**适用版本：** 12+ |
+
+**示例**
+
+参见 [startServiceExtensionAbilityWithAccount](#startserviceextensionabilitywithaccount)
+
 ## startUIAbilities
 
 ```TypeScript
@@ -2969,7 +2993,7 @@ startUIAbilities(wantList: Array<Want>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wantList | Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)&gt; | 是 | 需要被同时拉起的多个UIAbility的启动参数列表，最多支持传入4个Want。启动参数Want不支持隐式启动、跨用户启动、分布式、免安装和按需加载，不指明分身的 情况下默认启动主应用。 |
+| wantList | Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | 是 | 需要被同时拉起的多个UIAbility的启动参数列表，最多支持传入4个Want。启动参数Want不支持隐式启动、跨用户启动、分布式、免安装和按需加载，不指明分身的 情况下默认启动主应用。 |
 
 **返回值：**
 
@@ -3043,7 +3067,7 @@ export default class EntryServiceExtAbility extends ServiceExtensionAbility {
 startUIServiceExtensionAbility(want: Want): Promise<void>
 ```
 
-启动一个新的[UIServiceExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiserviceextensionability-uiserviceextensionability-c-sys.md) 。使用Promise异步回调。
+启动一个新的[UIServiceExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md) 。使用Promise异步回调。
 
 > **说明：**
 > 
@@ -3063,7 +3087,7 @@ startUIServiceExtensionAbility(want: Want): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | Indicates the want info to start. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Indicates the want info to start. |
 
 **返回值：**
 
@@ -3136,7 +3160,7 @@ stopServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 停止Ability的Want信息。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 停止Ability的Want信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止同一应用程序内的服务成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -3187,54 +3211,6 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
-## stopServiceExtensionAbility
-
-```TypeScript
-stopServiceExtensionAbility(want: Want): Promise<void>
-```
-
-停止指定的ServiceExtensionAbility后台服务。使用Promise异步回调。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ServiceExtensionContext-stopServiceExtensionAbility(want: Want): Promise<void>--><!--Device-ServiceExtensionContext-stopServiceExtensionAbility(want: Want): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 停止Ability的Want信息。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
-| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10+ |
-| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 10+ |
-
-**示例**
-
 ```TypeScript
 import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3265,6 +3241,56 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+## stopServiceExtensionAbility
+
+```TypeScript
+stopServiceExtensionAbility(want: Want): Promise<void>
+```
+
+停止指定的ServiceExtensionAbility后台服务。使用Promise异步回调。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-stopServiceExtensionAbility(want: Want): Promise<void>--><!--Device-ServiceExtensionContext-stopServiceExtensionAbility(want: Want): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 停止Ability的Want信息。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
+| [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
+| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
+| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
+| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10+ |
+| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 10+ |
+
+**示例**
+
+参见 [stopServiceExtensionAbility](#stopserviceextensionability)
+
 ## stopServiceExtensionAbilityWithAccount
 
 ```TypeScript
@@ -3293,7 +3319,7 @@ stopServiceExtensionAbilityWithAccount(want: Want, accountId: int, callback: Asy
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 停止Ability的Want信息。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 停止Ability的Want信息。 |
 | accountId | int | 是 | 需要停止的系统账号的账号ID。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当使用账户停止同一应用程序内的服务成功，err为undefined，否则为错误对象。 |
 
@@ -3347,61 +3373,6 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
-## stopServiceExtensionAbilityWithAccount
-
-```TypeScript
-stopServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>
-```
-
-停止指定账号下指定的ServiceExtensionAbility后台服务。使用Promise异步回调。
-
-> **说明：**
-> 
-> 当accountId为当前用户时，无需进行权限校验。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ServiceExtensionContext-stopServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>--><!--Device-ServiceExtensionContext-stopServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 停止Ability的Want信息。 |
-| accountId | int | 是 | 需要停止的系统账号的账号ID。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
-| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
-| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
-| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 10+ |
-
-**示例**
-
 ```TypeScript
 import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3434,6 +3405,63 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+## stopServiceExtensionAbilityWithAccount
+
+```TypeScript
+stopServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>
+```
+
+停止指定账号下指定的ServiceExtensionAbility后台服务。使用Promise异步回调。
+
+> **说明：**
+> 
+> 当accountId为当前用户时，无需进行权限校验。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-stopServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>--><!--Device-ServiceExtensionContext-stopServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 停止Ability的Want信息。 |
+| accountId | int | 是 | 需要停止的系统账号的账号ID。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
+| [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
+| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
+| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
+| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 10+ |
+
+**示例**
+
+参见 [stopServiceExtensionAbilityWithAccount](#stopserviceextensionabilitywithaccount)
 
 ## terminateSelf
 
@@ -3492,6 +3520,23 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+```TypeScript
+import { ServiceExtensionAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate() {
+    this.context.terminateSelf().then(() => {
+      // 执行正常业务
+      console.info('terminateSelf succeed');
+    }).catch((error: BusinessError<void>): void => {
+      // 处理业务逻辑错误
+      console.error(`terminateSelf failed, error.code: ${error.code}, error.message: ${error.message}`);
+    });
+  }
+}
+```
+
 ## terminateSelf
 
 ```TypeScript
@@ -3529,20 +3574,5 @@ terminateSelf(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { ServiceExtensionAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    this.context.terminateSelf().then(() => {
-      // 执行正常业务
-      console.info('terminateSelf succeed');
-    }).catch((error: BusinessError<void>): void => {
-      // 处理业务逻辑错误
-      console.error(`terminateSelf failed, error.code: ${error.code}, error.message: ${error.message}`);
-    });
-  }
-}
-```
+参见 [terminateSelf](#terminateself)
 

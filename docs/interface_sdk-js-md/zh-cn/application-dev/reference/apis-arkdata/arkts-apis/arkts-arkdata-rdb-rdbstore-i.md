@@ -95,39 +95,6 @@ rdbStore.batchInsert("EMPLOYEE", valueBuckets, (status: number, insertNum: numbe
 })
 ```
 
-## batchInsert
-
-```TypeScript
-batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>
-```
-
-向目标表中插入一组数据，使用Promise异步回调。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert)
-
-<!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>--><!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| table | string | 是 | 指定的目标表名，不能为空字符串。 |
-| values | Array&lt;ValuesBucket&gt; | 是 | 表示要插入到表中的一组数据。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;number&gt; | Promise对象。如果操作成功，返回插入的数据个数，否则返回-1。 |
-
-**示例**
-
 ```TypeScript
 import { ValuesBucket } from '@ohos.data.ValuesBucket';
 
@@ -174,6 +141,41 @@ promise.then((insertNum: number) => {
   console.error("batchInsert failed, status = " + status);
 })
 ```
+
+## batchInsert
+
+```TypeScript
+batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>
+```
+
+向目标表中插入一组数据，使用Promise异步回调。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert)
+
+<!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>--><!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| table | string | 是 | 指定的目标表名，不能为空字符串。 |
+| values | Array&lt;ValuesBucket&gt; | 是 | 表示要插入到表中的一组数据。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;number&gt; | Promise对象。如果操作成功，返回插入的数据个数，否则返回-1。 |
+
+**示例**
+
+参见 [batchInsert](#batchinsert)
 
 ## beginTransaction
 
@@ -308,6 +310,17 @@ rdbStore.delete(predicates, (err: BusinessError, rows: number) => {
 })
 ```
 
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "Lisa")
+let promise: void = rdbStore.delete(predicates)
+promise.then((rows: number) => {
+  console.info("Delete rows: " + rows)
+}).catch((err: BusinessError) => {
+  console.error("Delete failed, err: " + err)
+})
+```
+
 ## delete
 
 ```TypeScript
@@ -340,16 +353,7 @@ delete(predicates: RdbPredicates): Promise<number>
 
 **示例**
 
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "Lisa")
-let promise: void = rdbStore.delete(predicates)
-promise.then((rows: number) => {
-  console.info("Delete rows: " + rows)
-}).catch((err: BusinessError) => {
-  console.error("Delete failed, err: " + err)
-})
-```
+参见 [delete](#delete)
 
 ## executeSql
 
@@ -390,6 +394,16 @@ rdbStore.executeSql(SQL_DELETE_TABLE, ['zhangsan'], (err: BusinessError) => {
 })
 ```
 
+```TypeScript
+const SQL_DELETE_TABLE = "DELETE FROM test WHERE name = 'zhangsan'"
+let promise = rdbStore.executeSql(SQL_DELETE_TABLE)
+promise.then(() => {
+  console.info('Delete table done.')
+}).catch((err: BusinessError) => {
+  console.error("ExecuteSql failed, err: " + err)
+})
+```
+
 ## executeSql
 
 ```TypeScript
@@ -423,15 +437,7 @@ executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>
 
 **示例**
 
-```TypeScript
-const SQL_DELETE_TABLE = "DELETE FROM test WHERE name = 'zhangsan'"
-let promise = rdbStore.executeSql(SQL_DELETE_TABLE)
-promise.then(() => {
-  console.info('Delete table done.')
-}).catch((err: BusinessError) => {
-  console.error("ExecuteSql failed, err: " + err)
-})
-```
+参见 [executeSql](#executesql)
 
 ## insert
 
@@ -488,6 +494,32 @@ rdbStore.insert("EMPLOYEE", valueBucket, (status: number, rowId: number) => {
 })
 ```
 
+```TypeScript
+import { ValuesBucket } from '@ohos.data.ValuesBucket';
+
+let key1 = "NAME";
+let key2 = "AGE";
+let key3 = "SALARY";
+let key4 = "CODES";
+let value1 = "Lisi";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+const valueBucket: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+  key4: value4,
+};
+
+let promise: void = rdbStore.insert("EMPLOYEE", valueBucket)
+promise.then((rowId: BusinessError) => {
+  console.info("Insert is successful, rowId = " + rowId);
+}).catch((status: number) => {
+  console.error("Insert failed");
+})
+```
+
 ## insert
 
 ```TypeScript
@@ -521,31 +553,7 @@ insert(table: string, values: ValuesBucket): Promise<number>
 
 **示例**
 
-```TypeScript
-import { ValuesBucket } from '@ohos.data.ValuesBucket';
-
-let key1 = "NAME";
-let key2 = "AGE";
-let key3 = "SALARY";
-let key4 = "CODES";
-let value1 = "Lisi";
-let value2 = 18;
-let value3 = 100.5;
-let value4 = new Uint8Array([1, 2, 3, 4, 5]);
-const valueBucket: ValuesBucket = {
-  key1: value1,
-  key2: value2,
-  key3: value3,
-  key4: value4,
-};
-
-let promise: void = rdbStore.insert("EMPLOYEE", valueBucket)
-promise.then((rowId: BusinessError) => {
-  console.info("Insert is successful, rowId = " + rowId);
-}).catch((status: number) => {
-  console.error("Insert failed");
-})
-```
+参见 [insert](#insert)
 
 ## obtainDistributedTableName
 
@@ -608,6 +616,29 @@ rdbStore.obtainDistributedTableName(deviceId, "EMPLOYEE", (err: BusinessError, t
 })
 ```
 
+```TypeScript
+import deviceManager from '@ohos.distributedHardware.deviceManager';
+
+let dmInstance: Array<string>;
+
+deviceManager.createDeviceManager("com.example.appdatamgrverify", (err: BusinessError, manager: void) => {
+  if (err) {
+    console.error("create device manager failed, err=" + err);
+    return;
+  }
+  dmInstance = manager;
+  let devices: Array<string> = dmInstance.getTrustedDeviceListSync();
+  let deviceId: Array<string> = devices[0].deviceId;
+})
+
+let promise: void = rdbStore.obtainDistributedTableName(deviceId, "EMPLOYEE")
+promise.then((tableName: String) => {
+  console.info('ObtainDistributedTableName successfully, tableName= ' + tableName)
+}).catch((err: BusinessError) => {
+  console.error('ObtainDistributedTableName failed, err: ' + err)
+})
+```
+
 ## obtainDistributedTableName
 
 ```TypeScript
@@ -650,28 +681,7 @@ obtainDistributedTableName(device: string, table: string): Promise<string>
 
 **示例**
 
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-
-let dmInstance: Array<string>;
-
-deviceManager.createDeviceManager("com.example.appdatamgrverify", (err: BusinessError, manager: void) => {
-  if (err) {
-    console.error("create device manager failed, err=" + err);
-    return;
-  }
-  dmInstance = manager;
-  let devices: Array<string> = dmInstance.getTrustedDeviceListSync();
-  let deviceId: Array<string> = devices[0].deviceId;
-})
-
-let promise: void = rdbStore.obtainDistributedTableName(deviceId, "EMPLOYEE")
-promise.then((tableName: String) => {
-  console.info('ObtainDistributedTableName successfully, tableName= ' + tableName)
-}).catch((err: BusinessError) => {
-  console.error('ObtainDistributedTableName failed, err: ' + err)
-})
-```
+参见 [obtainDistributedTableName](#obtaindistributedtablename)
 
 ## off_dataChange
 
@@ -798,6 +808,18 @@ rdbStore.query(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"], (err: Busin
 })
 ```
 
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "Rose")
+let promise: void = rdbStore.query(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"])
+promise.then((resultSet: void) => {
+  console.info("ResultSet column names: " + resultSet.columnNames)
+  console.info("ResultSet column count: " + resultSet.columnCount)
+}).catch((err: BusinessError) => {
+  console.error("Query failed, err: " + err)
+})
+```
+
 ## query
 
 ```TypeScript
@@ -831,17 +853,7 @@ query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>
 
 **示例**
 
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "Rose")
-let promise: void = rdbStore.query(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"])
-promise.then((resultSet: void) => {
-  console.info("ResultSet column names: " + resultSet.columnNames)
-  console.info("ResultSet column count: " + resultSet.columnCount)
-}).catch((err: BusinessError) => {
-  console.error("Query failed, err: " + err)
-})
-```
+参见 [query](#query)
 
 ## querySql
 
@@ -882,6 +894,16 @@ rdbStore.querySql("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = ?", 
 })
 ```
 
+```TypeScript
+let promise: void = rdbStore.querySql("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = 'sanguo'")
+promise.then((resultSet: void) => {
+  console.info("ResultSet column names: " + resultSet.columnNames)
+  console.info("ResultSet column count: " + resultSet.columnCount)
+}).catch((err: BusinessError) => {
+  console.error("Query failed, err: " + err)
+})
+```
+
 ## querySql
 
 ```TypeScript
@@ -915,15 +937,7 @@ querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 
 **示例**
 
-```TypeScript
-let promise: void = rdbStore.querySql("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = 'sanguo'")
-promise.then((resultSet: void) => {
-  console.info("ResultSet column names: " + resultSet.columnNames)
-  console.info("ResultSet column count: " + resultSet.columnCount)
-}).catch((err: BusinessError) => {
-  console.error("Query failed, err: " + err)
-})
-```
+参见 [querySql](#querysql)
 
 ## rollBack
 
@@ -1016,6 +1030,15 @@ rdbStore.setDistributedTables(["EMPLOYEE"], (err: BusinessError) => {
 })
 ```
 
+```TypeScript
+let promise: void = rdbStore.setDistributedTables(["EMPLOYEE"])
+promise.then(() => {
+  console.info("SetDistributedTables successfully.")
+}).catch((err: BusinessError) => {
+  console.error("SetDistributedTables failed, err: " + err)
+})
+```
+
 ## setDistributedTables
 
 ```TypeScript
@@ -1050,14 +1073,7 @@ setDistributedTables(tables: Array<string>): Promise<void>
 
 **示例**
 
-```TypeScript
-let promise: void = rdbStore.setDistributedTables(["EMPLOYEE"])
-promise.then(() => {
-  console.info("SetDistributedTables successfully.")
-}).catch((err: BusinessError) => {
-  console.error("SetDistributedTables failed, err: " + err)
-})
-```
+参见 [setDistributedTables](#setdistributedtables)
 
 ## sync
 
@@ -1120,6 +1136,36 @@ rdbStore.sync(data_rdb.SyncMode.SYNC_MODE_PUSH, predicates, (err: BusinessError,
 })
 ```
 
+```TypeScript
+import deviceManager from '@ohos.distributedHardware.deviceManager';
+
+let dmInstance: Array<string>;
+
+deviceManager.createDeviceManager("com.example.appdatamgrverify", (err: BusinessError, manager: void) => {
+  if (err) {
+    console.error("create device manager failed, err=" + err);
+    return;
+  }
+  dmInstance = manager;
+  let devices: Array<string> = dmInstance.getTrustedDeviceListSync();
+  for (let i = 0; i < devices.length; i++) {
+    let deviceIds: Array<string> = devices[i].deviceId;
+  }
+})
+
+let predicates = new data_rdb.RdbPredicates('EMPLOYEE')
+predicates.inDevices(deviceIds)
+let promise: void = rdbStore.sync(data_rdb.SyncMode.SYNC_MODE_PUSH, predicates)
+promise.then((result: void) =>{
+  console.info('Sync done.')
+  for (let i = 0; i < result.length; i++) {
+    console.info('device=' + result[i][0] + ' status=' + result[i][1])
+  }
+}).catch((err: BusinessError) => {
+  console.error('Sync failed')
+})
+```
+
 ## sync
 
 ```TypeScript
@@ -1155,35 +1201,7 @@ sync(mode: SyncMode, predicates: RdbPredicates): Promise<Array<[string, number]>
 
 **示例**
 
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-
-let dmInstance: Array<string>;
-
-deviceManager.createDeviceManager("com.example.appdatamgrverify", (err: BusinessError, manager: void) => {
-  if (err) {
-    console.error("create device manager failed, err=" + err);
-    return;
-  }
-  dmInstance = manager;
-  let devices: Array<string> = dmInstance.getTrustedDeviceListSync();
-  for (let i = 0; i < devices.length; i++) {
-    let deviceIds: Array<string> = devices[i].deviceId;
-  }
-})
-
-let predicates = new data_rdb.RdbPredicates('EMPLOYEE')
-predicates.inDevices(deviceIds)
-let promise: void = rdbStore.sync(data_rdb.SyncMode.SYNC_MODE_PUSH, predicates)
-promise.then((result: void) =>{
-  console.info('Sync done.')
-  for (let i = 0; i < result.length; i++) {
-    console.info('device=' + result[i][0] + ' status=' + result[i][1])
-  }
-}).catch((err: BusinessError) => {
-  console.error('Sync failed')
-})
-```
+参见 [sync](#sync)
 
 ## update
 
@@ -1242,6 +1260,34 @@ rdbStore.update(valueBucket, predicates, (err: BusinessError, rows: number) => {
 })
 ```
 
+```TypeScript
+import { ValuesBucket } from '@ohos.data.ValuesBucket';
+
+let key1 = "NAME";
+let key2 = "AGE";
+let key3 = "SALARY";
+let key4 = "CODES";
+let value1 = "Lisa";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+
+const valueBucket: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+  key4: value4,
+};
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "Lisa")
+let promise: void = rdbStore.update(valueBucket, predicates)
+promise.then(async (rows: number) => {
+  console.info("Updated row count: " + rows)
+}).catch((err: BusinessError) => {
+  console.error("Update failed, err: " + err)
+})
+```
+
 ## update
 
 ```TypeScript
@@ -1275,31 +1321,5 @@ update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>
 
 **示例**
 
-```TypeScript
-import { ValuesBucket } from '@ohos.data.ValuesBucket';
-
-let key1 = "NAME";
-let key2 = "AGE";
-let key3 = "SALARY";
-let key4 = "CODES";
-let value1 = "Lisa";
-let value2 = 18;
-let value3 = 100.5;
-let value4 = new Uint8Array([1, 2, 3, 4, 5]);
-
-const valueBucket: ValuesBucket = {
-  key1: value1,
-  key2: value2,
-  key3: value3,
-  key4: value4,
-};
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "Lisa")
-let promise: void = rdbStore.update(valueBucket, predicates)
-promise.then(async (rows: number) => {
-  console.info("Updated row count: " + rows)
-}).catch((err: BusinessError) => {
-  console.error("Update failed, err: " + err)
-})
-```
+参见 [update](#update)
 

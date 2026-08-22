@@ -54,6 +54,16 @@ call.getMainCallId(1, (err: BusinessError, data: number) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.getMainCallId(1).then((data: number) => {
+    console.info(`getMainCallId success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getMainCallId fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getMainCallId
 
@@ -96,13 +106,5 @@ function getMainCallId(callId: int): Promise<int>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.getMainCallId(1).then((data: number) => {
-    console.info(`getMainCallId success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getMainCallId fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [getMainCallId](#getmaincallid)
 

@@ -18,46 +18,6 @@ import { GesturePath } from '@kit.AccessibilityKit';
 import { GesturePoint } from '@kit.AccessibilityKit';
 ```
 
-## offEnableChange
-
-```TypeScript
-offEnableChange(callback?: Callback<boolean>): void
-```
-
-Unregister the observe of the enable state.
-
-**Since:** 23
-
-<!--Device-CaptionsManager-offEnableChange(callback?: Callback<boolean>): void--><!--Device-CaptionsManager-offEnableChange(callback?: Callback<boolean>): void-End-->
-
-**System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No |  |
-
-## offStyleChange
-
-```TypeScript
-offStyleChange(callback?: Callback<CaptionsStyle>): void
-```
-
-Unregister the observer of the style.
-
-**Since:** 23
-
-<!--Device-CaptionsManager-offStyleChange(callback?: Callback<CaptionsStyle>): void--><!--Device-CaptionsManager-offStyleChange(callback?: Callback<CaptionsStyle>): void-End-->
-
-**System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | No |  |
-
 ## off('enableChange')
 
 ```TypeScript
@@ -79,7 +39,7 @@ Unsubscribes from the state changes of captions configuration. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'enableChange' | Yes | Event type, which is set to **'enableChange'** in this API. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Callback used to unregister. It must be consistent with the callback used in [on('enableChange')](#onenablechange). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to unregister. It must be consistent with the callback used in [on('enableChange')](#onenablechange). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Error codes:**
 
@@ -138,7 +98,7 @@ Unsubscribes from the captions style changes. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'styleChange' | Yes | Event type, which is set to **'styleChange'** in this API. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | No | Callback used to unregister. It must be consistent with the callback used in [on('styleChange')](#onenablechange). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | No | Callback used to unregister. It must be consistent with the callback used in [on('styleChange')](#onenablechange). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Error codes:**
 
@@ -176,17 +136,17 @@ struct Index {
 }
 ```
 
-## onEnableChange
+## offEnableChange
 
 ```TypeScript
-onEnableChange(callback: Callback<boolean>): void
+offEnableChange(callback?: Callback<boolean>): void
 ```
 
-Register the observe of the enable state.
+Unregister the observe of the enable state.
 
 **Since:** 23
 
-<!--Device-CaptionsManager-onEnableChange(callback: Callback<boolean>): void--><!--Device-CaptionsManager-onEnableChange(callback: Callback<boolean>): void-End-->
+<!--Device-CaptionsManager-offEnableChange(callback?: Callback<boolean>): void--><!--Device-CaptionsManager-offEnableChange(callback?: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
 
@@ -194,19 +154,19 @@ Register the observe of the enable state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No |  |
 
-## onStyleChange
+## offStyleChange
 
 ```TypeScript
-onStyleChange(callback: Callback<CaptionsStyle>): void
+offStyleChange(callback?: Callback<CaptionsStyle>): void
 ```
 
-Register the observer of the style.
+Unregister the observer of the style.
 
 **Since:** 23
 
-<!--Device-CaptionsManager-onStyleChange(callback: Callback<CaptionsStyle>): void--><!--Device-CaptionsManager-onStyleChange(callback: Callback<CaptionsStyle>): void-End-->
+<!--Device-CaptionsManager-offStyleChange(callback?: Callback<CaptionsStyle>): void--><!--Device-CaptionsManager-offStyleChange(callback?: Callback<CaptionsStyle>): void-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
 
@@ -214,7 +174,7 @@ Register the observer of the style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | No |  |
 
 ## on('enableChange')
 
@@ -247,7 +207,7 @@ Subscribes to the state changes of captions configuration. This API uses an asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'enableChange' | Yes | Event type, which is set to **'enableChange'** in this API. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. When the enabled state changes, the state is notified through this callback. The value **true** indicates that the caption configuration is enabled, and **false** indicates that the caption configuration is disabled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. When the enabled state changes, the state is notified through this callback. The value **true** indicates that the caption configuration is enabled, and **false** indicates that the caption configuration is disabled. |
 
 **Error codes:**
 
@@ -311,7 +271,7 @@ Subscribes to captions style changes. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'styleChange' | Yes | Event type, which is set to **'styleChange'** in this API. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | Yes | Callback invoked when the style of captions changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | Yes | Callback invoked when the style of captions changes. |
 
 **Error codes:**
 
@@ -343,6 +303,46 @@ struct Index {
   }
 }
 ```
+
+## onEnableChange
+
+```TypeScript
+onEnableChange(callback: Callback<boolean>): void
+```
+
+Register the observe of the enable state.
+
+**Since:** 23
+
+<!--Device-CaptionsManager-onEnableChange(callback: Callback<boolean>): void--><!--Device-CaptionsManager-onEnableChange(callback: Callback<boolean>): void-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |  |
+
+## onStyleChange
+
+```TypeScript
+onStyleChange(callback: Callback<CaptionsStyle>): void
+```
+
+Register the observer of the style.
+
+**Since:** 23
+
+<!--Device-CaptionsManager-onStyleChange(callback: Callback<CaptionsStyle>): void--><!--Device-CaptionsManager-onStyleChange(callback: Callback<CaptionsStyle>): void-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | Yes |  |
 
 ## enabled
 

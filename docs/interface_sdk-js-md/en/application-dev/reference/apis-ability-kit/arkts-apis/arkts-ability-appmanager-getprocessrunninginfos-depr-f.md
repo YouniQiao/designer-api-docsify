@@ -48,6 +48,18 @@ appManager.getProcessRunningInfos().then((data) => {
 });
 ```
 
+```TypeScript
+import appManager from '@ohos.application.appManager';
+
+appManager.getProcessRunningInfos((error, data) => {
+  if (error && error.code !== 0) {
+    console.error(`getProcessRunningInfos fail, error: ${JSON.stringify(error)}`);
+  } else {
+    console.info(`getProcessRunningInfos success, data: ${JSON.stringify(data)}`);
+  }
+});
+```
+
 
 ## getProcessRunningInfos
 
@@ -77,19 +89,9 @@ Obtains information about the running processes. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ProcessRunningInfo](arkts-ability-processrunninginfo-i.md)&gt;&gt; | Yes | Callback used to return the information about the running processes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ProcessRunningInfo](arkts-ability-processrunninginfo-i.md)&gt;&gt; | Yes | Callback used to return the information about the running processes. |
 
 **Examples**
 
-```TypeScript
-import appManager from '@ohos.application.appManager';
-
-appManager.getProcessRunningInfos((error, data) => {
-  if (error && error.code !== 0) {
-    console.error(`getProcessRunningInfos fail, error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`getProcessRunningInfos success, data: ${JSON.stringify(data)}`);
-  }
-});
-```
+See [getProcessRunningInfos](#getprocessrunninginfos)
 

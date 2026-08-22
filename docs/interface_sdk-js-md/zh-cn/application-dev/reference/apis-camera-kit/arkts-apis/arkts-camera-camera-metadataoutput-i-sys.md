@@ -50,6 +50,22 @@ addMetadataObjectTypes(types: Array<MetadataObjectType>): void
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function addMetadataObjectTypes(metadataOutput: camera.MetadataOutput, types: Array<camera.MetadataObjectType>): void {
+  try {
+    metadataOutput.addMetadataObjectTypes(types);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`addMetadataObjectTypes error. error code: ${err.code}`);
+  }
+}
+```
+
 ## removeMetadataObjectTypes
 
 ```TypeScript
@@ -82,4 +98,20 @@ removeMetadataObjectTypes(types: Array<MetadataObjectType>): void
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function removeMetadataObjectTypes(metadataOutput: camera.MetadataOutput, types: Array<camera.MetadataObjectType>): void {
+  try {
+    metadataOutput.removeMetadataObjectTypes(types);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`removeMetadataObjectTypes error. error code: ${err.code}`);
+  }
+}
+```
 

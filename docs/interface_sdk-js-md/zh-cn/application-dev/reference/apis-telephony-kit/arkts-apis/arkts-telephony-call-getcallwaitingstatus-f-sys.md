@@ -57,6 +57,16 @@ call.getCallWaitingStatus(0, (err: BusinessError, data: call.CallWaitingStatus) 
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.getCallWaitingStatus(0).then((data: call.CallWaitingStatus) => {
+    console.info(`getCallWaitingStatus success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getCallWaitingStatus fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getCallWaitingStatus
 
@@ -102,13 +112,5 @@ function getCallWaitingStatus(slotId: int): Promise<CallWaitingStatus>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.getCallWaitingStatus(0).then((data: call.CallWaitingStatus) => {
-    console.info(`getCallWaitingStatus success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getCallWaitingStatus fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [getCallWaitingStatus](#getcallwaitingstatus)
 

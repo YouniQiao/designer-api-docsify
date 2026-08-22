@@ -25,7 +25,7 @@ Obtains the OverlayModuleInfo associated with the specified target module. Modul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | targetModuleName | string | Yes | Name of the target module specified by modules with the overlay feature. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result, which is an [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) object. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result, which is an [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) object. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -36,6 +36,24 @@ Obtains the OverlayModuleInfo associated with the specified target module. Modul
 | [17700034](../errorcode-bundle.md#17700034-module-is-configured-with-the-overlay-feature) | The specified module is an overlay module. |
 
 **Examples**
+
+```TypeScript
+import { overlay } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let targetModuleName = "feature";
+
+(async () => {
+  try {
+    let overlayModuleInfos = await overlay.getTargetOverlayModuleInfos(targetModuleName);
+    console.info('overlayModuleInfos are ' + JSON.stringify(overlayModuleInfos));
+  } catch (err) {
+    let code = (err as BusinessError).code;
+    let message = (err as BusinessError).message;
+    console.error('getTargetOverlayModuleInfos failed due to err code : ' + code + ' ' + 'message :' + message);
+  }
+})();
+```
 
 ```TypeScript
 import { overlay } from '@kit.AbilityKit';
@@ -96,21 +114,5 @@ Obtains the OverlayModuleInfo associated with the specified target module. Modul
 
 **Examples**
 
-```TypeScript
-import { overlay } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let targetModuleName = "feature";
-
-(async () => {
-  try {
-    let overlayModuleInfos = await overlay.getTargetOverlayModuleInfos(targetModuleName);
-    console.info('overlayModuleInfos are ' + JSON.stringify(overlayModuleInfos));
-  } catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error('getTargetOverlayModuleInfos failed due to err code : ' + code + ' ' + 'message :' + message);
-  }
-})();
-```
+See [getTargetOverlayModuleInfos](#gettargetoverlaymoduleinfos)
 

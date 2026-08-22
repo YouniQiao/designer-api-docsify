@@ -46,3 +46,42 @@ If the target window is displayed on the screen, you can use this API to send sc
 | [34000001](../errorcode-onScreen.md#34000001-service-exception) | Service exception. |
 | [34000005](../errorcode-onScreen.md#34000005-target-not-found) | The target is not found. |
 
+**Examples**
+
+```TypeScript
+import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: onScreen.ContentOptions = {
+   contentUnderstand: true,
+   textOnly: true
+};
+let event: onScreen.ControlEvent | undefined = undefined;
+try {
+   onScreen.getPageContent(options).then((pageContent: onScreen.PageContent) => {
+      if (pageContent.paragraphs != undefined && pageContent.paragraphs.length > 0 &&
+         pageContent.paragraphs[0].hookId != undefined) {
+         event = {
+            windowId: pageContent.windowId,
+            sessionId: pageContent.sessionId,
+            hookId: pageContent.paragraphs[0].hookId,
+            eventType: onScreen.EventType.SCROLL_TO_HOOK
+         };
+      }
+   }).catch((err: BusinessError) => {
+      console.error("get page content failed, errCode = " + err.code);
+   });
+} catch (err) {
+   console.error('invoke failed, errCode = ' + err.code);
+}
+if (event != undefined) {
+   try {
+      onScreen.sendControlEvent(event).catch((err: BusinessError) => {
+         console.error("send control event failed, errCode =" + err.code);
+      })
+   } catch (err) {
+      console.error('invoke failed, errCode = ' + err.code);
+   }
+}
+```
+

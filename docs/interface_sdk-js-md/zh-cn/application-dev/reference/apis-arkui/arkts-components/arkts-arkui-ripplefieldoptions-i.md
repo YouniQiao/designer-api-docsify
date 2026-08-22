@@ -101,28 +101,6 @@ The region influenced by the ripple field.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## waveSpeed
-
-```TypeScript
-waveSpeed?: number
-```
-
-Wave speed. The greater the wave speed, the faster the wave changes over time, and the more pronounced the wave motion. Range of values:[0, +∞)
-
-**类型：** number
-
-**默认值：** 0
-
-**起始版本：** 22
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-RippleFieldOptions-waveSpeed?: number--><!--Device-RippleFieldOptions-waveSpeed?: number-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 ## wavelength
 
 ```TypeScript
@@ -142,6 +120,28 @@ Wavelength, which is the distance over which a wave cycle changes. The larger th
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RippleFieldOptions-wavelength?: number--><!--Device-RippleFieldOptions-wavelength?: number-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## waveSpeed
+
+```TypeScript
+waveSpeed?: number
+```
+
+Wave speed. The greater the wave speed, the faster the wave changes over time, and the more pronounced the wave motion. Range of values:[0, +∞)
+
+**类型：** number
+
+**默认值：** 0
+
+**起始版本：** 22
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RippleFieldOptions-waveSpeed?: number--><!--Device-RippleFieldOptions-waveSpeed?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -28,7 +28,7 @@ Obtains device information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Enterprise device management extension component, which is used to specify the target application that has the device management capability. The **Want** object must contain **abilityName** ( extended ability name) and **bundleName** (application bundle name) parameters. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Enterprise device management extension component, which is used to specify the target application that has the device management capability. The **Want** object must contain **abilityName** ( extended ability name) and **bundleName** (application bundle name) parameters. |
 | label | string | Yes | Device information label that can be obtained. <br>- **deviceName**: device name. <br>- **deviceSerial**: device serial number. <br>- **simInfo**: SIM card information. |
 
 **Return value:**

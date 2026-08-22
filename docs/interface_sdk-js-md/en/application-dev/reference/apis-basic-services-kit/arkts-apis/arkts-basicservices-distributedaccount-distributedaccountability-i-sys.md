@@ -39,7 +39,7 @@ Obtains distributed information about an OS account. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | int | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;DistributedInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the distributed account information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DistributedInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the distributed account information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -65,6 +65,23 @@ try {
         console.info('distributed information: ' + JSON.stringify(data));
       }
     });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+try {
+  accountAbility.getOsAccountDistributedInfoByLocalId(100).then((
+    data: distributedAccount.DistributedInfo) => {
+    console.info('distributed information: ' + JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
+  });
 } catch (e) {
   const err = e as BusinessError;
   console.error(`getOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
@@ -114,22 +131,7 @@ Obtains distributed information about an OS account. This API uses a promise to 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
-try {
-  accountAbility.getOsAccountDistributedInfoByLocalId(100).then((
-    data: distributedAccount.DistributedInfo) => {
-    console.info('distributed information: ' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getOsAccountDistributedInfoByLocalId](#getosaccountdistributedinfobylocalid)
 
 ## setOsAccountDistributedInfoByLocalId
 
@@ -155,7 +157,7 @@ Sets the distributed information for an OS account. This API uses an asynchronou
 | --- | --- | --- | --- |
 | localId | int | Yes | ID of the target OS account. |
 | distributedInfo | DistributedInfo | Yes | Distributed account information to set. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the distributed information is set successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the distributed information is set successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -185,6 +187,24 @@ try {
     } else {
       console.info('setOsAccountDistributedInfoByLocalId successfully');
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+let accountInfo: distributedAccount.DistributedInfo =
+  { id: '12345', name: 'ZhangSan', event: 'Ohos.account.event.LOGIN' };
+try {
+  accountAbility.setOsAccountDistributedInfoByLocalId(100, accountInfo).then(() => {
+    console.info('setOsAccountDistributedInfoByLocalId successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`setOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -238,21 +258,5 @@ Sets the distributed information for an OS account. This API uses a promise to r
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
-let accountInfo: distributedAccount.DistributedInfo =
-  { id: '12345', name: 'ZhangSan', event: 'Ohos.account.event.LOGIN' };
-try {
-  accountAbility.setOsAccountDistributedInfoByLocalId(100, accountInfo).then(() => {
-    console.info('setOsAccountDistributedInfoByLocalId successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`setOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [setOsAccountDistributedInfoByLocalId](#setosaccountdistributedinfobylocalid)
 

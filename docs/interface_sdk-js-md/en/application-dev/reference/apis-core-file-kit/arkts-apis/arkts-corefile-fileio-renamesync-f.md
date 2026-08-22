@@ -30,3 +30,11 @@ Renames a file. This API returns the result synchronously.
 | oldPath | string | Yes | Application sandbox path of the file to rename. |
 | newPath | string | Yes | Application sandbox path of the file renamed. |
 
+**Examples**
+
+```TypeScript
+let srcFile = pathDir + "/test.txt";
+let dstFile = pathDir + '/new.txt';
+fileio.renameSync(srcFile, dstFile);
+```
+

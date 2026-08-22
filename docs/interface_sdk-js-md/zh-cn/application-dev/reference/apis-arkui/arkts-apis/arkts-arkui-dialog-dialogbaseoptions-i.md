@@ -22,7 +22,7 @@ alignment?: DialogBaseAlignment
 
 对话框的对齐模式。
 
-**类型：** [DialogBaseAlignment](arkts-arkui-arkuidialog-dialogbasealignment-e.md)
+**类型：** [DialogBaseAlignment](arkts-arkui-arkui-dialog-dialogbasealignment-e.md)
 
 **起始版本：** 26.1.0
 
@@ -236,7 +236,7 @@ controller?: DialogBaseController
 
 Dialog 控制器。
 
-**类型：** [DialogBaseController](arkts-arkui-arkuidialog-dialogbasecontroller-c.md)
+**类型：** [DialogBaseController](arkts-arkui-arkui-dialog-dialogbasecontroller-c.md)
 
 **起始版本：** 26.1.0
 
@@ -696,7 +696,7 @@ onWillDismiss?: Callback<DialogDismissal>
 
 对话框交互关闭的回调。 <br>如果注册了此回调，则用户点击后对话框不会立即关闭 遮罩或返回按钮。 回调中的reason参数用于判断是否可以关闭对话框。
 
-**类型：** Callback&lt;[DialogDismissal](arkts-arkui-arkuidialog-dialogdismissal-i.md)&gt;
+**类型：** Callback&lt;[DialogDismissal](arkts-arkui-arkui-dialog-dialogdismissal-i.md)&gt;
 
 **起始版本：** 26.1.0
 

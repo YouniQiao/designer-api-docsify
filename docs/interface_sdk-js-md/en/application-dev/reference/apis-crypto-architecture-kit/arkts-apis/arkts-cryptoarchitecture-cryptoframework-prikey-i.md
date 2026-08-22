@@ -43,6 +43,20 @@ Clears the key data in memory. This API returns the result synchronously.
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 
+async function testGenerateAesKeyFun() {
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES256');
+  let key = await symKeyGenerator.generateSymKey();
+  let encodedKey = key.getEncoded();
+  console.info('key blob: '+ encodedKey.data);
+  key.clearMem();
+  encodedKey = key.getEncoded();
+  console.info('key blob: ' + encodedKey.data);
+}
+```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
 async function testClearMem() {
   let eccGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
     // Use AsyKeyGenerator to randomly generate an asymmetric key pair.
@@ -97,6 +111,42 @@ Obtains a key parameter. This API returns the result synchronously.
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 **Examples**
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+// Construct the EccCommonSpec struct, which defines the common parameters of the ECC public and private keys.
+function genEccCommonSpec(): cryptoFramework.ECCCommonParamsSpec {
+  let fieldFp: cryptoFramework.ECFieldFp = {
+    fieldType: 'Fp',
+    p: BigInt('0xffffffffffffffffffffffffffffffff000000000000000000000001')
+  }
+  let G: cryptoFramework.Point = {
+    x: BigInt('0xb70e0cbd6bb4bf7f321390b94a03c1d356c21122343280d6115c1d21'),
+    y: BigInt('0xbd376388b5f723fb4c22dfe6cd4375a05a07476444d5819985007e34')
+  }
+  let eccCommonSpec: cryptoFramework.ECCCommonParamsSpec = {
+    algName: 'ECC',
+    specType: cryptoFramework.AsyKeySpecType.COMMON_PARAMS_SPEC,
+    field: fieldFp,
+    a: BigInt('0xfffffffffffffffffffffffffffffffefffffffffffffffffffffffe'),
+    b: BigInt('0xb4050a850c04b3abf54132565044b0b7d7bfd8ba270b39432355ffb4'),
+    g: G,
+    n: BigInt('0xffffffffffffffffffffffffffff16a2e0b8f03e13dd29455c5c2a3d'),
+    h: 1
+  }
+  return eccCommonSpec;
+}
+
+async function testgetAsyKeySpec() {
+  let commKeySpec = genEccCommonSpec(); // Construct the EccCommonSpec object.
+  let generatorBySpec = cryptoFramework.createAsyKeyGeneratorBySpec(commKeySpec); // Create an AsyKeyGenerator instance based on the EccCommonSpec object.
+  let keyPair = await generatorBySpec.generateKeyPair();
+  let key = keyPair.pubKey;
+  let p = key.getAsyKeySpec(cryptoFramework.AsyKeySpecItem.ECC_FP_P_BN);
+  console.info('ecc item --- p: ' + p.toString(16));
+}
+```
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -183,6 +233,20 @@ Obtains the private key data that complies with the ASN.1 syntax and DER encodin
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 
 async function testGetEncodedDer() {
+  let pkData = new Uint8Array([48, 90, 48, 20, 6, 7, 42, 134, 72, 206, 61, 2, 1, 6, 9, 43, 36, 3, 3, 2, 8, 1, 1, 7, 3, 66, 0, 4, 143, 39, 57, 249, 145, 50, 63, 222, 35, 70, 178, 121, 202, 154, 21, 146, 129, 75, 76, 63, 8, 195, 157, 111, 40, 217, 215, 148, 120, 224, 205, 82, 83, 92, 185, 21, 211, 184, 5, 19, 114, 33, 86, 85, 228, 123, 242, 206, 200, 98, 178, 184, 130, 35, 232, 45, 5, 202, 189, 11, 46, 163, 156, 152]);
+  let pubKeyBlob: cryptoFramework.DataBlob = { data: pkData };
+  let generator = cryptoFramework.createAsyKeyGenerator('ECC_BrainPoolP256r1');
+  let keyPair = await generator.convertKey(pubKeyBlob, null);
+  let key = keyPair.pubKey;
+  let returnBlob = key.getEncodedDer('X509|UNCOMPRESSED');
+  console.info('returnBlob data: ' + returnBlob.data);
+}
+```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+async function testGetEncodedDer() {
   let eccGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
     // Use AsyKeyGenerator to randomly generate an asymmetric key pair.
     let keyGenPromise = eccGenerator.generateKeyPair();
@@ -236,6 +300,25 @@ Obtains the private key data in PEM encoding. This API returns the result synchr
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 
+let publicPkcs1Str1024: string =
+  '-----BEGIN RSA PUBLIC KEY-----\n'
+    + 'MIGJAoGBALAg3eavbX433pOjGdWdpL7HIr1w1EAeIcaCtuMfDpECPdX6X5ZjrwiE\n'
+    + 'h7cO51WXMT2gyN45DCQySr/8cLE2UiUVHo7qlrSatdLA9ETtgob3sJ4qTaBg5Lxg\n'
+    + 'SHy2gC+bvEpuIuRe64yXGuM/aP+ZvmIj9QBIVI9mJD8jLEOvQBBpAgMBAAE=\n'
+    + '-----END RSA PUBLIC KEY-----\n';
+
+function TestPubKeyPkcs1ToX509BySync1024() {
+  let rsaGenerator = cryptoFramework.createAsyKeyGenerator('RSA1024');
+  let keyPair = rsaGenerator.convertPemKeySync(publicPkcs1Str1024, null);
+  let pubPemKey = keyPair.pubKey;
+  let pubString = pubPemKey.getEncodedPem('X509');
+  console.info('[sync]TestPubKeyPkcs1ToX509BySync1024 pubString output = ' + pubString);
+}
+```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
 let priKeyPkcs1Str1024: string =
   '-----BEGIN RSA PRIVATE KEY-----\n'
     + 'MIICXQIBAAKBgQCwIN3mr21+N96ToxnVnaS+xyK9cNRAHiHGgrbjHw6RAj3V+l+W\n'
@@ -259,6 +342,39 @@ function TestPriKeyPkcs1ToPkcs8BySync1024() {
   let priPemKey = keyPair.priKey;
   let priString = priPemKey.getEncodedPem('PKCS8');
   console.info('[sync]TestPriKeyPkcs1ToPkcs8BySync1024 priString output = ' + priString);
+}
+```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+let priKeyPkcs1Str1024: string =
+  '-----BEGIN RSA PRIVATE KEY-----\n'
+    + 'MIICXQIBAAKBgQCwIN3mr21+N96ToxnVnaS+xyK9cNRAHiHGgrbjHw6RAj3V+l+W\n'
+    + 'Y68IhIe3DudVlzE9oMjeOQwkMkq//HCxNlIlFR6O6pa0mrXSwPRE7YKG97CeKk2g\n'
+    + 'YOS8YEh8toAvm7xKbiLkXuuMlxrjP2j/mb5iI/UASFSPZiQ/IyxDr0AQaQIDAQAB\n'
+    + 'AoGAEvBFzBNa+7J4PXnRQlYEK/tvsd0bBZX33ceacMubHl6WVZbphltLq+fMTBPP\n'
+    + 'LjXmtpC+aJ7Lvmyl+wTi/TsxE9vxW5JnbuRT48rnZ/Xwq0eozDeEeIBRrpsr7Rvr\n'
+    + '7ctrgzr4m4yMHq9aDgpxj8IR7oHkfwnmWr0wM3FuiVlj650CQQDineeNZ1hUTkj4\n'
+    + 'D3O+iCi3mxEVEeJrpqrmSFolRMb+iozrIRKuJlgcOs+Gqi2fHfOTTL7LkpYe8SVg\n'
+    + 'e3JxUdVLAkEAxvcZXk+byMFoetrnlcMR13VHUpoVeoV9qkv6CAWLlbMdgf7uKmgp\n'
+    + 'a1Yp3QPDNQQqkPvrqtfR19JWZ4uy1qREmwJALTU3BjyBoH/liqb6fh4HkWk75Som\n'
+    + 'MzeSjFIOubSYxhq5tgZpBZjcpvUMhV7Zrw54kwASZ+YcUJvmyvKViAm9NQJBAKF7\n'
+    + 'DyXSKrem8Ws0m1ybM7HQx5As6l3EVhePDmDQT1eyRbKp+xaD74nkJpnwYdB3jyyY\n'
+    + 'qc7A1tj5J5NmeEFolR0CQQCn76Xp8HCjGgLHw9vg7YyIL28y/XyfFyaZAzzK+Yia\n'
+    + 'akNwQ6NeGtXSsuGCcyyfpacHp9xy8qXQNKSkw03/5vDO\n'
+    + '-----END RSA PRIVATE KEY-----\n';
+
+function TestPriKeyPkcs1Encoded() {
+  let rsaGenerator = cryptoFramework.createAsyKeyGenerator('RSA1024');
+  let keyPair = rsaGenerator.convertPemKeySync(null, priKeyPkcs1Str1024);
+  let options: cryptoFramework.KeyEncodingConfig = {
+    password: '123456',
+    cipherName: 'AES-128-CBC'
+  }
+  let priPemKey = keyPair.priKey;
+  let priString = priPemKey.getEncodedPem('PKCS1', options);
+  console.info('[sync]TestPriKeyPkcs1Encoded priString output = ' + priString);
 }
 ```
 
@@ -302,38 +418,7 @@ Obtains the encrypted private key data in PEM encoding. This API returns the res
 
 **Examples**
 
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let priKeyPkcs1Str1024: string =
-  '-----BEGIN RSA PRIVATE KEY-----\n'
-    + 'MIICXQIBAAKBgQCwIN3mr21+N96ToxnVnaS+xyK9cNRAHiHGgrbjHw6RAj3V+l+W\n'
-    + 'Y68IhIe3DudVlzE9oMjeOQwkMkq//HCxNlIlFR6O6pa0mrXSwPRE7YKG97CeKk2g\n'
-    + 'YOS8YEh8toAvm7xKbiLkXuuMlxrjP2j/mb5iI/UASFSPZiQ/IyxDr0AQaQIDAQAB\n'
-    + 'AoGAEvBFzBNa+7J4PXnRQlYEK/tvsd0bBZX33ceacMubHl6WVZbphltLq+fMTBPP\n'
-    + 'LjXmtpC+aJ7Lvmyl+wTi/TsxE9vxW5JnbuRT48rnZ/Xwq0eozDeEeIBRrpsr7Rvr\n'
-    + '7ctrgzr4m4yMHq9aDgpxj8IR7oHkfwnmWr0wM3FuiVlj650CQQDineeNZ1hUTkj4\n'
-    + 'D3O+iCi3mxEVEeJrpqrmSFolRMb+iozrIRKuJlgcOs+Gqi2fHfOTTL7LkpYe8SVg\n'
-    + 'e3JxUdVLAkEAxvcZXk+byMFoetrnlcMR13VHUpoVeoV9qkv6CAWLlbMdgf7uKmgp\n'
-    + 'a1Yp3QPDNQQqkPvrqtfR19JWZ4uy1qREmwJALTU3BjyBoH/liqb6fh4HkWk75Som\n'
-    + 'MzeSjFIOubSYxhq5tgZpBZjcpvUMhV7Zrw54kwASZ+YcUJvmyvKViAm9NQJBAKF7\n'
-    + 'DyXSKrem8Ws0m1ybM7HQx5As6l3EVhePDmDQT1eyRbKp+xaD74nkJpnwYdB3jyyY\n'
-    + 'qc7A1tj5J5NmeEFolR0CQQCn76Xp8HCjGgLHw9vg7YyIL28y/XyfFyaZAzzK+Yia\n'
-    + 'akNwQ6NeGtXSsuGCcyyfpacHp9xy8qXQNKSkw03/5vDO\n'
-    + '-----END RSA PRIVATE KEY-----\n';
-
-function TestPriKeyPkcs1Encoded() {
-  let rsaGenerator = cryptoFramework.createAsyKeyGenerator('RSA1024');
-  let keyPair = rsaGenerator.convertPemKeySync(null, priKeyPkcs1Str1024);
-  let options: cryptoFramework.KeyEncodingConfig = {
-    password: '123456',
-    cipherName: 'AES-128-CBC'
-  }
-  let priPemKey = keyPair.priKey;
-  let priString = priPemKey.getEncodedPem('PKCS1', options);
-  console.info('[sync]TestPriKeyPkcs1Encoded priString output = ' + priString);
-}
-```
+See [getEncodedPem](#getencodedpem)
 
 ## getKeyData
 

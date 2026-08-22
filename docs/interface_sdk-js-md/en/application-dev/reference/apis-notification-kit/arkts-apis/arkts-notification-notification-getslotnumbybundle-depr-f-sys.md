@@ -35,7 +35,40 @@ Obtains the number of notification slots of a specified application. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+import NotificationManager from '@ohos.notificationManager';
+
+let getSlotNumByBundleCallback = (err: Base.BusinessError, data: number) => {
+  if (err) {
+    console.info("getSlotNumByBundle failed " + JSON.stringify(err));
+  } else {
+    console.info("getSlotNumByBundle success");
+  }
+}
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+Notification.getSlotNumByBundle(bundle, getSlotNumByBundleCallback);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+import NotificationManager from '@ohos.notificationManager';
+
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+Notification.getSlotNumByBundle(bundle).then((data: number) => {
+  console.info("getSlotNumByBundle success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`getSlotNumByBundle failed, code is ${err}`);
+});
+```
 
 
 ## getSlotNumByBundle
@@ -71,4 +104,8 @@ Obtains the number of notification slots of a specified application. This API us
 | Type | Description |
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the result. |
+
+**Examples**
+
+See [getSlotNumByBundle](#getslotnumbybundle)
 

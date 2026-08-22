@@ -6,7 +6,7 @@ typedef struct MediaKeySession MediaKeySession
 
 ## 概述
 
-MediaKeySession类型。
+媒体密钥会话结构体，用于管理DRM（数字版权管理）的秘密会话。
 
 **起始版本：** 12
 

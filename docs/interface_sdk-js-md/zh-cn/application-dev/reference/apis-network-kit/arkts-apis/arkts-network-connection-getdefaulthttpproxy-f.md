@@ -72,6 +72,33 @@ connection.getDefaultHttpProxy((error: BusinessError|null, data: connection.Http
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.getDefaultHttpProxy().then((data: connection.HttpProxy) => {
+  console.info("Succeeded to get data: " + JSON.stringify(data));
+}).catch((error: BusinessError) => {
+  console.error(`Failed to get request. Code:${error.code}, message:${error.message} `);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.getDefaultHttpProxy().then((data: connection.HttpProxy) => {
+  console.info("Succeeded to get data: " + JSON.stringify(data));
+}).catch((error: Error) => {
+  let businessError = error as BusinessError;
+  console.error(`Failed to get request. Code:${error.code}, message:${error.message} `);
+});
+```
+
 
 ## getDefaultHttpProxy
 
@@ -109,30 +136,5 @@ function getDefaultHttpProxy(): Promise<HttpProxy>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultHttpProxy().then((data: connection.HttpProxy) => {
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-}).catch((error: BusinessError) => {
-  console.error(`Failed to get request. Code:${error.code}, message:${error.message} `);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultHttpProxy().then((data: connection.HttpProxy) => {
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-}).catch((error: Error) => {
-  let businessError = error as BusinessError;
-  console.error(`Failed to get request. Code:${error.code}, message:${error.message} `);
-});
-```
+参见 [getDefaultHttpProxy](#getdefaulthttpproxy)
 

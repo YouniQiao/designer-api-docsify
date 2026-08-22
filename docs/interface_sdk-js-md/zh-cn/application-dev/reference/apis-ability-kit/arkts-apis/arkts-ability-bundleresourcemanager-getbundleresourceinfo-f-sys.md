@@ -65,6 +65,24 @@ try {
 }
 ```
 
+```TypeScript
+import { bundleResourceManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName = "com.example.myapplication";
+let resourceFlag = bundleResourceManager.ResourceFlag.GET_RESOURCE_INFO_ALL;
+let appIndex = 1;
+try {
+  let resourceInfo = bundleResourceManager.getBundleResourceInfo(bundleName, resourceFlag, appIndex);
+  hilog.info(0x0000, 'testTag', 'getBundleResourceInfo successfully. Data label: %{public}s',
+    JSON.stringify(resourceInfo.label));
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getBundleResourceInfo failed: %{public}s', message);
+}
+```
+
 
 ## getBundleResourceInfo
 
@@ -110,21 +128,5 @@ function getBundleResourceInfo(bundleName: string, resourceFlags?: int, appIndex
 
 **示例**
 
-```TypeScript
-import { bundleResourceManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = "com.example.myapplication";
-let resourceFlag = bundleResourceManager.ResourceFlag.GET_RESOURCE_INFO_ALL;
-let appIndex = 1;
-try {
-  let resourceInfo = bundleResourceManager.getBundleResourceInfo(bundleName, resourceFlag, appIndex);
-  hilog.info(0x0000, 'testTag', 'getBundleResourceInfo successfully. Data label: %{public}s',
-    JSON.stringify(resourceInfo.label));
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getBundleResourceInfo failed: %{public}s', message);
-}
-```
+参见 [getBundleResourceInfo](#getbundleresourceinfo)
 

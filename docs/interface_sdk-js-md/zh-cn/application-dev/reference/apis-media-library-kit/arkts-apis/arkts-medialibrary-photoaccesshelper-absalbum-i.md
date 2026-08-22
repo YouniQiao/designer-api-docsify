@@ -47,6 +47,117 @@ getAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<PhotoAsset>
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+**示例**
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('albumGetAssetsDemoCallback');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let albumFetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let albumList: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, albumFetchOptions);
+  let album: photoAccessHelper.Album = await albumList.getFirstObject();
+  album.getAssets(fetchOption, (err, albumFetchResult) => {
+    if (albumFetchResult !== undefined) {
+      console.info('album getAssets successfully, getCount: ' + albumFetchResult.getCount());
+    } else {
+      console.error(`album getAssets failed with error: ${err.code}, ${err.message}`);
+    }
+  });
+}
+```
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('albumGetAssetsDemoPromise');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let albumFetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let albumList: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, albumFetchOptions);
+  let album: photoAccessHelper.Album = await albumList.getFirstObject();
+  album.getAssets(fetchOption).then((albumFetchResult) => {
+    console.info('album getAssets successfully, getCount: ' + albumFetchResult.getCount());
+  }).catch((err: BusinessError) => {
+    console.error(`album getAssets failed with error: ${err.code}, ${err.message}`);
+  });
+}
+```
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getAssets');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+
+  phAccessHelper.getAssets(fetchOptions, async (err, fetchResult) => {
+    if (fetchResult !== undefined) {
+      console.info('fetchResult success');
+      let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+      if (photoAsset !== undefined) {
+        console.info('photoAsset.displayName : ' + photoAsset.displayName);
+      }
+    } else {
+      console.error(`fetchResult fail with error: ${err.code}, ${err.message}`);
+    }
+  });
+}
+```
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getAssets');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    if (fetchResult !== undefined) {
+      console.info('fetchResult success');
+      let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+      if (photoAsset !== undefined) {
+        console.info('photoAsset.displayName :' + photoAsset.displayName);
+      }
+    }
+  } catch (err) {
+    console.error(`getAssets failed, error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
 ## getAssets
 
 ```TypeScript
@@ -86,6 +197,10 @@ getAssets(options: FetchOptions): Promise<FetchResult<PhotoAsset>>
 | 13900012 | Permission denied<br>**适用版本：** 10 - 19 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+**示例**
+
+参见 [getAssets](#getassets)
 
 ## albumName
 

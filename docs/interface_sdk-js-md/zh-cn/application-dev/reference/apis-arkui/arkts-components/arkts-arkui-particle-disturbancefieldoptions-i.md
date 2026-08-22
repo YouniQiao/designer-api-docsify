@@ -118,7 +118,7 @@ position?: PositionT<double>
 
 x、y的取值范围：(-∞, +∞)。
 
-**类型：** [PositionT](../../apis-default/arkts-apis/arkts-positiont-t.md)&lt;double&gt;
+**类型：** [PositionT](../arkts-apis/arkts-arkui-positiont-t.md)&lt;double&gt;
 
 **默认值：** {x:0,y:0}
 
@@ -168,7 +168,7 @@ size?: SizeT<double>
 
 width和height的取值范围：[0, +∞)。
 
-**类型：** [SizeT](../../apis-default/arkts-apis/arkts-graphics-sizet-i.md)&lt;double&gt;
+**类型：** [SizeT](../arkts-apis/arkts-arkui-graphics-sizet-i.md)&lt;double&gt;
 
 **默认值：** {width:0,height:0}
 

@@ -34,7 +34,7 @@ Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG 
 | --- | --- | --- | --- |
 | source | string \| image.PixelMap | Yes | indicates the uri path from a JPEG or PNG file or the pixel map of the PNG file. |
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of setWallpaper. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setWallpaper. |
 
 **Examples**
 
@@ -73,6 +73,37 @@ imageSource.createPixelMap(opts).then((pixelMap: image.PixelMap) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+// The source type is string.
+let wallpaperPath = "/data/storage/el2/base/haps/entry/files/js.jpeg";
+wallpaper.setWallpaper(wallpaperPath, wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
+    console.info(`success to setWallpaper.`);
+  }).catch((error: BusinessError) => {
+    console.error(`failed to setWallpaper because: ${JSON.stringify(error)}`);
+});
+  
+// The source type is image.PixelMap.
+let imageSource = image.createImageSource("file://" + wallpaperPath);
+let opts: image.DecodingOptions = {
+    desiredSize: {
+        height: 3648,
+        width: 2736
+    }
+};
+imageSource.createPixelMap(opts).then((pixelMap: image.PixelMap) => {
+    wallpaper.setWallpaper(pixelMap, wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
+        console.info(`success to setWallpaper.`);
+    }).catch((error: BusinessError) => {
+        console.error(`failed to setWallpaper because: ${JSON.stringify(error)}`);
+    });
+  }).catch((error: BusinessError) => {
+    console.error(`failed to createPixelMap because: ${JSON.stringify(error)}`);
+});
+```
+
 
 ## setWallpaper
 
@@ -107,34 +138,5 @@ Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-// The source type is string.
-let wallpaperPath = "/data/storage/el2/base/haps/entry/files/js.jpeg";
-wallpaper.setWallpaper(wallpaperPath, wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
-    console.info(`success to setWallpaper.`);
-  }).catch((error: BusinessError) => {
-    console.error(`failed to setWallpaper because: ${JSON.stringify(error)}`);
-});
-  
-// The source type is image.PixelMap.
-let imageSource = image.createImageSource("file://" + wallpaperPath);
-let opts: image.DecodingOptions = {
-    desiredSize: {
-        height: 3648,
-        width: 2736
-    }
-};
-imageSource.createPixelMap(opts).then((pixelMap: image.PixelMap) => {
-    wallpaper.setWallpaper(pixelMap, wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
-        console.info(`success to setWallpaper.`);
-    }).catch((error: BusinessError) => {
-        console.error(`failed to setWallpaper because: ${JSON.stringify(error)}`);
-    });
-  }).catch((error: BusinessError) => {
-    console.error(`failed to createPixelMap because: ${JSON.stringify(error)}`);
-});
-```
+See [setWallpaper](#setwallpaper)
 

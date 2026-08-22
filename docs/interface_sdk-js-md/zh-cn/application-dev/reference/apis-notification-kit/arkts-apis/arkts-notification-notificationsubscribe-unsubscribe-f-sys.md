@@ -87,6 +87,41 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
 notificationSubscribe.unsubscribe(subscriber, unsubscribeCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let onDisconnectCallback = () => {
+  console.info('subscribe disconnect');
+}
+let subscriber: notificationSubscribe.NotificationSubscriber = {
+  onDisconnect: onDisconnectCallback
+};
+notificationSubscribe.unsubscribe(subscriber).then(() => {
+  console.info('unsubscribe success');
+}).catch((err: BusinessError) => {
+  console.error(`unsubscribe fail, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let onDisconnectCallback = () => {
+  console.info('subscribe disconnect');
+}
+let subscriber: notificationSubscribe.NotificationSubscriber = {
+  onDisconnect: onDisconnectCallback
+};
+notificationSubscribe.unsubscribe(subscriber).then(() => {
+  console.info('unsubscribe success');
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`unsubscribe fail, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## unsubscribe
 
@@ -132,38 +167,5 @@ function unsubscribe(subscriber: NotificationSubscriber): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let onDisconnectCallback = () => {
-  console.info('subscribe disconnect');
-}
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onDisconnect: onDisconnectCallback
-};
-notificationSubscribe.unsubscribe(subscriber).then(() => {
-  console.info('unsubscribe success');
-}).catch((err: BusinessError) => {
-  console.error(`unsubscribe fail, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let onDisconnectCallback = () => {
-  console.info('subscribe disconnect');
-}
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onDisconnect: onDisconnectCallback
-};
-notificationSubscribe.unsubscribe(subscriber).then(() => {
-  console.info('unsubscribe success');
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`unsubscribe fail, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [unsubscribe](#unsubscribe)
 

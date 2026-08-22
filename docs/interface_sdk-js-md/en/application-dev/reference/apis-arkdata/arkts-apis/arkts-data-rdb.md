@@ -57,6 +57,6 @@ This module provides the following RDB-related functions:
 | Name | Description |
 | --- | --- |
 | [ResultSet](arkts-arkdata-rdb-resultset-t.md) | Configure RdbPredicates to match the specified field whose data type is ValueType array and values are out of a given range. |
-| [ValueType](arkts-arkdata-rdb-valuetype-t.md) | Defines the data types allowed. |
 | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Defines the types of the key and value in a KV pair. |
+| [ValueType](arkts-arkdata-rdb-valuetype-t.md) | Defines the data types allowed. |
 

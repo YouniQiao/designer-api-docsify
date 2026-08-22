@@ -39,6 +39,46 @@ URL constructor, which is used to instantiate a URL object. url: Absolute or rel
 | url | string | Yes | url url |
 | base | string \| URL | No | base base |
 
+**Examples**
+
+```TypeScript
+// Construct a URLParams object in string[][] mode.
+let objectParams = new url.URLParams([ ['user1', 'abc1'], ['query2', 'first2'], ['query3', 'second3'] ]);
+// Construct a URLParams object in Record<string, string> mode.
+let objectParams1 = new url.URLParams({"fod" : '1' , "bard" : '2'});
+// Construct a URLParams object in string mode.
+let objectParams2 = new url.URLParams('?fod=1&bard=2');
+// Construct a URLParams object using the search property of the url object.
+let urlObject = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
+let objectParams3 = new url.URLParams(urlObject.search);
+// Construct a URLParams object using the params property of the url object.
+let urlObject1 = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
+let objectParams4 = urlObject1.params;
+```
+
+```TypeScript
+let mm = 'https://username:password@host:8080';
+let a = new url.URL("/", mm); // Output 'https://username:password@host:8080/';
+let b = new url.URL(mm); // Output 'https://username:password@host:8080/';
+new url.URL('path/path1', b); // Output 'https://username:password@host:8080/path/path1';
+let c = new url.URL('/path/path1', b);  // Output 'https://username:password@host:8080/path/path1'; 
+new url.URL('/path/path1', c); // Output 'https://username:password@host:8080/path/path1';
+new url.URL('/path/path1', a); // Output 'https://username:password@host:8080/path/path1';
+new url.URL('/path/path1', "https://www.exampleUrl/fr-FR/toot"); // Output https://www.exampleUrl/path/path1
+new url.URL('/path/path1', ''); // Raises a TypeError exception as '' is not a valid URL
+new url.URL('/path/path1'); // Raises a TypeError exception as '/path/path1' is not a valid URL
+new url.URL('https://www.example.com', ); // Output https://www.example.com/
+new url.URL('https://www.example.com', b); // Output https://www.example.com/
+```
+
+```TypeScript
+let objectParams = new url.URLSearchParams([ ['user1', 'abc1'], ['query2', 'first2'], ['query3', 'second3'] ]);
+let objectParams1 = new url.URLSearchParams({"fod" : '1' , "bard" : '2'});
+let objectParams2 = new url.URLSearchParams('?fod=1&bard=2');
+let urlObject = new url.URL('https://developer.mozilla.org/?fod=1&bard=2');
+let params = new url.URLSearchParams(urlObject.search);
+```
+
 ## constructor
 
 ```TypeScript
@@ -54,6 +94,10 @@ A no-argument constructor used to create a URL. It returns a URL object after pa
 <!--Device-URL-constructor()--><!--Device-URL-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
+
+**Examples**
+
+See [constructor](#constructor)
 
 ## parseURL
 
@@ -161,8 +205,22 @@ Converts the parsed URL into a string.
 **Examples**
 
 ```TypeScript
+let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
+let params = new url.URLParams(urlObject.search.slice(1));
+params.append('fod', '3');
+console.info(params.toString()); // Output 'fod=1&bard=2&fod=3'
+```
+
+```TypeScript
 const urlObject = url.URL.parseURL('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
 let result = urlObject.toString(); // Output 'https://username:password@host:8080/directory/file?query=pppppp#qwer=da'
+```
+
+```TypeScript
+let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
+let params = new url.URLSearchParams(urlObject.search.slice(1));
+params.append('fod', '3');
+console.info(params.toString()); // Output 'fod=1&bard=2&fod=3'
 ```
 
 ## hash

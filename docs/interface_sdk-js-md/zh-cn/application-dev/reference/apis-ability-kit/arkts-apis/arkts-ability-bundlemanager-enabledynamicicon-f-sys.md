@@ -71,6 +71,54 @@ try {
 }
 ```
 
+ArkTS-Dyn示例:
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName: string = 'com.ohos.demo';
+let moduleName: string = 'moduleTest';
+let option: bundleManager.BundleOptions = { 'userId': 100, 'appIndex': 0 };
+
+try {
+  bundleManager.enableDynamicIcon(bundleName, moduleName, option).then(() => {
+    hilog.info(0x0000, 'testTag', 'enableDynamicIcon successfully');
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'enableDynamicIcon failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'enableDynamicIcon failed. Cause: %{public}s', message);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+// 开发者需根据实际工程更新bundleName、moduleName、userId和appIndex。
+let bundleName: string = 'com.ohos.demo';
+let moduleName: string = 'moduleTest';
+let option: bundleManager.BundleOptions = {'userId':100, 'appIndex':0};
+
+try {
+  bundleManager.enableDynamicIcon(bundleName, moduleName, option).then(() => {
+    hilog.info(0x0000, 'testTag', 'enableDynamicIcon successfully');
+  }).catch((err: Error) => {
+    hilog.error(0x0000, 'testTag', 'enableDynamicIcon failed. Cause: %{public}s', (err as BusinessError).message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'enableDynamicIcon failed. Cause: %{public}s', message);
+}
+```
+
 
 ## enableDynamicIcon
 
@@ -123,51 +171,5 @@ function enableDynamicIcon(bundleName: string, moduleName: string, option?: Bund
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName: string = 'com.ohos.demo';
-let moduleName: string = 'moduleTest';
-let option: bundleManager.BundleOptions = { 'userId': 100, 'appIndex': 0 };
-
-try {
-  bundleManager.enableDynamicIcon(bundleName, moduleName, option).then(() => {
-    hilog.info(0x0000, 'testTag', 'enableDynamicIcon successfully');
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'enableDynamicIcon failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'enableDynamicIcon failed. Cause: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-// 开发者需根据实际工程更新bundleName、moduleName、userId和appIndex。
-let bundleName: string = 'com.ohos.demo';
-let moduleName: string = 'moduleTest';
-let option: bundleManager.BundleOptions = {'userId':100, 'appIndex':0};
-
-try {
-  bundleManager.enableDynamicIcon(bundleName, moduleName, option).then(() => {
-    hilog.info(0x0000, 'testTag', 'enableDynamicIcon successfully');
-  }).catch((err: Error) => {
-    hilog.error(0x0000, 'testTag', 'enableDynamicIcon failed. Cause: %{public}s', (err as BusinessError).message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'enableDynamicIcon failed. Cause: %{public}s', message);
-}
-```
+参见 [enableDynamicIcon](#enabledynamicicon)
 

@@ -47,7 +47,7 @@ Value range: [0, +∞)
 drawable?: DrawableDescriptor
 ```
 
-Image resource of the indicator. Supported types: [DrawableDescriptor](../arkts-apis/arkts-arkui-arkuidrawabledescriptor-drawabledescriptorloadedresult-i.md), [PixelMapDrawableDescriptor](../arkts-apis/arkts-arkui-arkuidrawabledescriptor-pixelmapdrawabledescriptor-c.md), [LayeredDrawableDescriptor](../arkts-apis/arkts-arkui-arkuidrawabledescriptor-layereddrawabledescriptor-c.md), and [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkuidrawabledescriptor-animateddrawabledescriptor-c.md). If an invalid image resource is passed, the default solid indicator is displayed.
+Image resource of the indicator. Supported types: [DrawableDescriptor](../../apis-default/arkts-apis/arkts-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md), [PixelMapDrawableDescriptor](../../apis-default/arkts-apis/arkts-arkui-drawabledescriptor-pixelmapdrawabledescriptor-c.md), [LayeredDrawableDescriptor](../../apis-default/arkts-apis/arkts-arkui-drawabledescriptor-layereddrawabledescriptor-c.md), and [AnimatedDrawableDescriptor](../../apis-default/arkts-apis/arkts-arkui-drawabledescriptor-animateddrawabledescriptor-c.md). If an invalid image resource is passed, the default solid indicator is displayed.
 
 **Type:** [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md)
 

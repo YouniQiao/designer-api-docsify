@@ -2,7 +2,7 @@
 
 Enum for the role of device.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-connection-enum DeviceRole--><!--Device-connection-enum DeviceRole-End-->
 
@@ -18,7 +18,7 @@ DEVICE_ROLE_PERIPHERAL_ONLY = 0
 
 Only peripheral supported.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +36,7 @@ DEVICE_ROLE_CENTRAL_ONLY = 1
 
 Only central supported.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +54,7 @@ DEVICE_ROLE_BOTH_PREFER_PERIPHERAL = 2
 
 Central & peripheral supported, peripheral preferred.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,7 +72,7 @@ DEVICE_ROLE_BOTH_PREFER_CENTRAL = 3
 
 Central & peripheral supported, central preferred.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 

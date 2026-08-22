@@ -1,12 +1,12 @@
 # ArkTS API<!--arkts-universalkeystorekit-->
 
 - [@ohos.security.CryptoExtensionAbility](arkts-security-cryptoextensionability.md)
-  - [CryptoExtensionAbility](arkts-universalkeystore-securitycryptoextensionability-cryptoextensionability-c.md)
-  - [HuksCryptoExtensionCertInfo](arkts-universalkeystore-securitycryptoextensionability-hukscryptoextensioncertinfo-i.md)
-  - [HuksCryptoExtensionParam](arkts-universalkeystore-securitycryptoextensionability-hukscryptoextensionparam-i.md)
-  - [HuksCryptoExtensionParams](arkts-universalkeystore-securitycryptoextensionability-hukscryptoextensionparams-i.md)
-  - [HuksCryptoExtensionResult](arkts-universalkeystore-securitycryptoextensionability-hukscryptoextensionresult-i.md)
-  - [HuksCryptoExtensionResultCode](arkts-universalkeystore-securitycryptoextensionability-hukscryptoextensionresultcode-e.md)
+  - [CryptoExtensionAbility](arkts-universalkeystore-security-cryptoextensionability-cryptoextensionability-c.md)
+  - [HuksCryptoExtensionCertInfo](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensioncertinfo-i.md)
+  - [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)
+  - [HuksCryptoExtensionParams](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparams-i.md)
+  - [HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)
+  - [HuksCryptoExtensionResultCode](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresultcode-e.md)
 - [@ohos.security.huks](arkts-security-huks.md)
   - [abort](arkts-universalkeystore-huks-abort-f.md)
   - [abortSession](arkts-universalkeystore-huks-abortsession-f.md)

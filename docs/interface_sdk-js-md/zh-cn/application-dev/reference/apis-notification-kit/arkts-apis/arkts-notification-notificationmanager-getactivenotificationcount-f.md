@@ -75,6 +75,31 @@ let getActiveNotificationCountCallback = (err: BusinessError | null, data: long 
 notificationManager.getActiveNotificationCount(getActiveNotificationCountCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.getActiveNotificationCount().then((data: number) => {
+  console.info(`Succeeded in getting active notification count, data is ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get active notification count. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.getActiveNotificationCount().then((data: long) => {
+  console.info(`Succeeded in getting active notification count, data is ${JSON.stringify(data)}`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to get active notification count. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## getActiveNotificationCount
 
@@ -112,28 +137,5 @@ setBadgeNumber 设置角标个数。
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getActiveNotificationCount().then((data: number) => {
-  console.info(`Succeeded in getting active notification count, data is ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get active notification count. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getActiveNotificationCount().then((data: long) => {
-  console.info(`Succeeded in getting active notification count, data is ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to get active notification count. Code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [getActiveNotificationCount](#getactivenotificationcount)
 

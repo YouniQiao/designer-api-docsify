@@ -298,93 +298,21 @@ Obtains the number of subscriptions to a specified event of the Emitter instance
 
 **Examples**
 
+ArkTS-Dyn example:
+
+```TypeScript
+let count: number = emitter.getListenerCount("eventId");
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+let count: long = emitter.getListenerCount("eventId");
+```
+
 ```TypeScript
 let emitter1: emitter.Emitter = new emitter.Emitter();
 let count = emitter1.getListenerCount("eventId");
-```
-
-## offEventData
-
-```TypeScript
-offEventData(eventId: string, callback: Callback<EventData>): void
-```
-
-Unsubscribes from an event with the specified event ID and processed by the specified callback.
-
-**Since:** 23
-
-<!--Device-Emitter-offEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-offEventData(eventId: string, callback: Callback<EventData>): void-End-->
-
-**System capability:** SystemCapability.Notification.Emitter
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| eventId | string | Yes | Event ID. The value cannot be an empty string and exceed 10240 bytes. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to unregister. |
-
-**Examples**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let emitter1 = new emitter.Emitter();
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-}
-
-emitter1.offEventData("eventId", callback);
-```
-
-## offGenericEventData
-
-```TypeScript
-offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
-```
-
-Unsubscribes from an event with the specified event ID and processed by the specified callback.
-
-**Since:** 23
-
-<!--Device-Emitter-offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
-
-**System capability:** SystemCapability.Notification.Emitter
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| eventId | string | Yes | Event ID. The value cannot be an empty string and exceed 10240 bytes. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to unregister. |
-
-**Examples**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let emitter1 = new emitter.Emitter();
-
-let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
-  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
-  if (eventData?.data instanceof Sample) {
-    const sampleData = eventData.data as Sample;
-    sampleData.printCount();
-  }
-}
-
-emitter1.offGenericEventData("eventId", callback);
 ```
 
 ## off_string
@@ -442,7 +370,7 @@ After this API is used to unsubscribe from an event, the event that has been pub
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to unregister. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to unregister. |
 
 **Examples**
 
@@ -481,7 +409,7 @@ After this API is used to unsubscribe from an event, the event that has been pub
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to unregister. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to unregister. |
 
 **Examples**
 
@@ -511,17 +439,17 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 emitter1.off("eventId", callback);
 ```
 
-## onEventData
+## offEventData
 
 ```TypeScript
-onEventData(eventId: string, callback: Callback<EventData>): void
+offEventData(eventId: string, callback: Callback<EventData>): void
 ```
 
-Subscribes to an event in persistent manner and executes a callback after the event is received.
+Unsubscribes from an event with the specified event ID and processed by the specified callback.
 
 **Since:** 23
 
-<!--Device-Emitter-onEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-onEventData(eventId: string, callback: Callback<EventData>): void-End-->
+<!--Device-Emitter-offEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-offEventData(eventId: string, callback: Callback<EventData>): void-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
 
@@ -529,10 +457,22 @@ Subscribes to an event in persistent manner and executes a callback after the ev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | Event to subscribe to in persistent manner. The value cannot be an empty string and exceed 10240 bytes. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be executed when the event is received. |
+| eventId | string | Yes | Event ID. The value cannot be an empty string and exceed 10240 bytes. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to unregister. |
 
 **Examples**
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData | undefined | null) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+}
+
+// Unregister the callbacks for events whose ID is eventId. The callback object must be the object used during registration.
+// If the callback handler has not been subscribed, no processing is performed.
+emitter.offEventData("eventId", callback);
+```
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -543,20 +483,20 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
 }
 
-emitter1.onEventData(`eventId`, callback);
+emitter1.offEventData("eventId", callback);
 ```
 
-## onGenericEventData
+## offGenericEventData
 
 ```TypeScript
-onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
+offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 ```
 
-Subscribes to an event in persistent manner and executes a callback after the event is received.
+Unsubscribes from an event with the specified event ID and processed by the specified callback.
 
 **Since:** 23
 
-<!--Device-Emitter-onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
+<!--Device-Emitter-offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
 
@@ -564,15 +504,13 @@ Subscribes to an event in persistent manner and executes a callback after the ev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | Event to subscribe to in persistent manner. The value cannot be an empty string and exceed 10240 bytes. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be executed when the event is received. |
+| eventId | string | Yes | Event ID. The value cannot be an empty string and exceed 10240 bytes. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to unregister. |
 
 **Examples**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
-
-let emitter1 = new emitter.Emitter();
 
 class Sample {
   constructor() {
@@ -586,13 +524,38 @@ class Sample {
 
 let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
   console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  let storage: Sample = eventData.data! as Sample;
+  storage.printCount();
+}
+// Unregister the callbacks for events whose ID is eventId. The callback object must be the object used during registration.
+// If the callback handler has not been subscribed, no processing is performed.
+emitter.offGenericEventData("eventId", callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let emitter1 = new emitter.Emitter();
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
   if (eventData?.data instanceof Sample) {
     const sampleData = eventData.data as Sample;
     sampleData.printCount();
   }
 }
 
-emitter1.onGenericEventData("eventId", callback);
+emitter1.offGenericEventData("eventId", callback);
 ```
 
 ## on_string
@@ -616,7 +579,7 @@ Subscribes to an event specified by the Emitter instance in persistent manner an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be invoked when the event is received. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be invoked when the event is received. |
 
 **Examples**
 
@@ -653,7 +616,7 @@ Subscribes to an event specified by the Emitter instance in persistent manner an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
 
 **Examples**
 
@@ -683,90 +646,6 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 emitter1.on("eventId", callback);
 ```
 
-## onceEventData
-
-```TypeScript
-onceEventData(eventId: string, callback: Callback<EventData>): void
-```
-
-Subscribes to an event in one-shot manner and unsubscribes from it after the event callback is executed.
-
-**Since:** 23
-
-<!--Device-Emitter-onceEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-onceEventData(eventId: string, callback: Callback<EventData>): void-End-->
-
-**System capability:** SystemCapability.Notification.Emitter
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| eventId | string | Yes | Event to subscribe to in one-shot manner. The value cannot be an empty string and exceed 10240 bytes. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be executed when the event is received. |
-
-**Examples**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let emitter1 = new emitter.Emitter();
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-}
-
-emitter1.onceEventData("eventId", callback);
-```
-
-## onceGenericEventData
-
-```TypeScript
-onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
-```
-
-Subscribes to an event in one-shot manner and unsubscribes from it after the event callback is executed.
-
-**Since:** 23
-
-<!--Device-Emitter-onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
-
-**System capability:** SystemCapability.Notification.Emitter
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| eventId | string | Yes | Event to subscribe to in one-shot manner. The value cannot be an empty string and exceed 10240 bytes. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be executed when the event is received. |
-
-**Examples**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let emitter1 = new emitter.Emitter();
-
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
-  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
-  if (eventData?.data instanceof Sample) {
-    const sampleData = eventData.data as Sample;
-    sampleData.printCount();
-  }
-}
-
-emitter1.onceGenericEventData("eventId", callback);
-```
-
 ## once_string
 
 ```TypeScript
@@ -788,7 +667,7 @@ Subscribes to an event specified by the Emitter instance in one-shot manner and 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be invoked when the event is received. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be invoked when the event is received. |
 
 **Examples**
 
@@ -825,7 +704,7 @@ Subscribes to an event specified by the Emitter instance in one-shot manner and 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
 
 **Examples**
 
@@ -853,5 +732,240 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 }
 
 emitter1.once("eventId", callback);
+```
+
+## onceEventData
+
+```TypeScript
+onceEventData(eventId: string, callback: Callback<EventData>): void
+```
+
+Subscribes to an event in one-shot manner and unsubscribes from it after the event callback is executed.
+
+**Since:** 23
+
+<!--Device-Emitter-onceEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-onceEventData(eventId: string, callback: Callback<EventData>): void-End-->
+
+**System capability:** SystemCapability.Notification.Emitter
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| eventId | string | Yes | Event to subscribe to in one-shot manner. The value cannot be an empty string and exceed 10240 bytes. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be executed when the event is received. |
+
+**Examples**
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+}
+// Execute the callback after receiving the event whose ID is eventId.
+emitter.onceEventData("eventId", callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+}
+
+emitter1.onceEventData("eventId", callback);
+```
+
+## onceGenericEventData
+
+```TypeScript
+onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
+```
+
+Subscribes to an event in one-shot manner and unsubscribes from it after the event callback is executed.
+
+**Since:** 23
+
+<!--Device-Emitter-onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
+
+**System capability:** SystemCapability.Notification.Emitter
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| eventId | string | Yes | Event to subscribe to in one-shot manner. The value cannot be an empty string and exceed 10240 bytes. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be executed when the event is received. |
+
+**Examples**
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  let storage: Sample = eventData.data! as Sample;
+  storage.printCount();
+}
+
+// Execute the callback after receiving the event whose ID is eventId.
+emitter.onceGenericEventData("eventId", callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  if (eventData?.data instanceof Sample) {
+    const sampleData = eventData.data as Sample;
+    sampleData.printCount();
+  }
+}
+
+emitter1.onceGenericEventData("eventId", callback);
+```
+
+## onEventData
+
+```TypeScript
+onEventData(eventId: string, callback: Callback<EventData>): void
+```
+
+Subscribes to an event in persistent manner and executes a callback after the event is received.
+
+**Since:** 23
+
+<!--Device-Emitter-onEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-onEventData(eventId: string, callback: Callback<EventData>): void-End-->
+
+**System capability:** SystemCapability.Notification.Emitter
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| eventId | string | Yes | Event to subscribe to in persistent manner. The value cannot be an empty string and exceed 10240 bytes. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be executed when the event is received. |
+
+**Examples**
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+}
+
+// Execute the callback after receiving the event whose ID is eventId.
+emitter.onEventData(`eventId`, callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+}
+
+emitter1.onEventData(`eventId`, callback);
+```
+
+## onGenericEventData
+
+```TypeScript
+onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
+```
+
+Subscribes to an event in persistent manner and executes a callback after the event is received.
+
+**Since:** 23
+
+<!--Device-Emitter-onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
+
+**System capability:** SystemCapability.Notification.Emitter
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| eventId | string | Yes | Event to subscribe to in persistent manner. The value cannot be an empty string and exceed 10240 bytes. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be executed when the event is received. |
+
+**Examples**
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  let storage: Sample = eventData.data! as Sample;
+  storage.printCount();
+}
+
+// Execute the callback after receiving the event whose ID is eventId.
+emitter.onGenericEventData("eventId", callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  if (eventData?.data instanceof Sample) {
+    const sampleData = eventData.data as Sample;
+    sampleData.printCount();
+  }
+}
+
+emitter1.onGenericEventData("eventId", callback);
 ```
 

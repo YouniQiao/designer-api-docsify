@@ -33,9 +33,26 @@ Sends an accessibility event. The event will be distributed to registered access
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | EventInfo | Yes | Accessibility event object. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the accessibility event is sent successfully, err is undefined; otherwise, err is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the accessibility event is sent successfully, err is undefined; otherwise, err is an error object. |
 
 **Examples**
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let eventInfo: accessibility.EventInfo = ({
+  type: 'click',
+  bundleName: 'com.example.MyApplication',
+  triggerAction: 'click',
+});
+
+accessibility.sendEvent(eventInfo).then(() => {
+  console.info(`Succeeded in send event,eventInfo is ${eventInfo}`);
+}).catch((err: BusinessError) => {
+  console.error(`failed to sendEvent, Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -89,20 +106,5 @@ Sends an accessibility event. The event will be distributed to registered access
 
 **Examples**
 
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let eventInfo: accessibility.EventInfo = ({
-  type: 'click',
-  bundleName: 'com.example.MyApplication',
-  triggerAction: 'click',
-});
-
-accessibility.sendEvent(eventInfo).then(() => {
-  console.info(`Succeeded in send event,eventInfo is ${eventInfo}`);
-}).catch((err: BusinessError) => {
-  console.error(`failed to sendEvent, Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [sendEvent](#sendevent)
 

@@ -26,7 +26,7 @@ Obtains the mouse hover scrolling switch state. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **true** (default) will be returned if the switch is enabled while false will be returned if the switch is disabled. If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **true** (default) will be returned if the switch is enabled while false will be returned if the switch is disabled. If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -56,6 +56,32 @@ struct Index {
                 console.info(`Get the mouse hover scroll success, state: ${JSON.stringify(state)}`);
               }
             });
+          } catch (error) {
+            console.error(`Get the mouse hover scroll failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            pointer.getHoverScrollState().then((state: boolean) => {
+              console.info(`Get the mouse hover scroll success, state: ${JSON.stringify(state)}`);
+            }).catch((error: BusinessError) => {
+              console.error(`Get hover scroll failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            })
           } catch (error) {
             console.error(`Get the mouse hover scroll failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
@@ -97,29 +123,5 @@ Obtains the status of the mouse hover scroll switch. This API uses a promise to 
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.getHoverScrollState().then((state: boolean) => {
-              console.info(`Get the mouse hover scroll success, state: ${JSON.stringify(state)}`);
-            }).catch((error: BusinessError) => {
-              console.error(`Get hover scroll failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`Get the mouse hover scroll failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
+See [getHoverScrollState](#gethoverscrollstate)
 

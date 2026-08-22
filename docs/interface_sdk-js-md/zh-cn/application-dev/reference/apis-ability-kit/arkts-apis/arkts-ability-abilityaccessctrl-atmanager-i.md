@@ -235,61 +235,6 @@ try {
 }
 ```
 
-## offSelfPermissionStateChange
-
-```TypeScript
-offSelfPermissionStateChange(
-      permissionList: Array<Permissions>,
-      callback?: Callback<PermissionStateChangeInfo>
-    ): void
-```
-
-取消订阅自身指定权限列表的权限状态变更事件。取消订阅成功后，将不再接收指定权限列表的状态变化通知。
-
-在无需继续监听权限变化、应用退出或切换页面等场景下，可调用该接口取消订阅。
-
-当不传入callback参数时，将批量删除与permissionList相关联的所有回调函数。
-
-该接口通常与[onSelfPermissionStateChange](#onselfpermissionstatechange) 配套使用，用于取消通过onSelfPermissionStateChange创建的监听关系。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtManager-offSelfPermissionStateChange(      permissionList: Array<Permissions>,      callback?: Callback<PermissionStateChangeInfo>    ): void--><!--Device-AtManager-offSelfPermissionStateChange(      permissionList: Array<Permissions>,      callback?: Callback<PermissionStateChangeInfo>    ): void-End-->
-
-**系统能力：** SystemCapability.Security.AccessToken
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| permissionList | Array&lt;Permissions&gt; | 是 | 取消订阅的权限名列表，为空时表示取消订阅所有的权限状态变化，必须与onSelfPermissionStateChange 订阅时的权限列表匹配（不区分顺序）。 <br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 否 | 回调函数。取消订阅指定权限名状态变更事件的回调。 不传入此参数时，将批量删除与permissionList相关联的所有回调函数。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) | The API is not used in pair with 'on'. |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
-
-**示例**
-
-```TypeScript
-import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let permissionList: Array<Permissions> = ['ohos.permission.APPROXIMATELY_LOCATION'];
-try {
-    atManager.offSelfPermissionStateChange(permissionList);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## off('selfPermissionStateChange')
 
 ```TypeScript
@@ -351,30 +296,28 @@ try {
 }
 ```
 
-## onSelfPermissionStateChange
+## offSelfPermissionStateChange
 
 ```TypeScript
-onSelfPermissionStateChange(
+offSelfPermissionStateChange(
       permissionList: Array<Permissions>,
-      callback: Callback<PermissionStateChangeInfo>
+      callback?: Callback<PermissionStateChangeInfo>
     ): void
 ```
 
-订阅本应用的指定权限列表的权限授权状态变化事件，使用callback异步回调。 可在需要根据权限状态实时更新UI或业务逻辑、监听用户授权行为等场景中使用。不再需要监听时，调用 [offSelfPermissionStateChange](#offselfpermissionstatechange)取消订阅。
+取消订阅自身指定权限列表的权限状态变更事件。取消订阅成功后，将不再接收指定权限列表的状态变化通知。
 
-- 多次调用本订阅接口时，如果订阅的权限列表相同，callback不同，允许订阅成功。 - 多次调用本订阅接口时，如果订阅的权限列表间有相同的子集，callback相同时，订阅失败。
+在无需继续监听权限变化、应用退出或切换页面等场景下，可调用该接口取消订阅。
 
-权限状态由“已授权”变更为“未授权”可能存在两种场景：
+当不传入callback参数时，将批量删除与permissionList相关联的所有回调函数。
 
-- 用户主动撤销：系统会终止对应应用进程。 - 系统主动回收：应用进程不会终止。典型场景如安全控件的单次授权，在授权周期结束后由系统自动回收。
-
-该接口通常与[offSelfPermissionStateChange](#offselfpermissionstatechange)配套使用， 当不再需要监听时应调用offSelfPermissionStateChange取消订阅。
+该接口通常与[onSelfPermissionStateChange](#onselfpermissionstatechange) 配套使用，用于取消通过onSelfPermissionStateChange创建的监听关系。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AtManager-onSelfPermissionStateChange(      permissionList: Array<Permissions>,      callback: Callback<PermissionStateChangeInfo>    ): void--><!--Device-AtManager-onSelfPermissionStateChange(      permissionList: Array<Permissions>,      callback: Callback<PermissionStateChangeInfo>    ): void-End-->
+<!--Device-AtManager-offSelfPermissionStateChange(      permissionList: Array<Permissions>,      callback?: Callback<PermissionStateChangeInfo>    ): void--><!--Device-AtManager-offSelfPermissionStateChange(      permissionList: Array<Permissions>,      callback?: Callback<PermissionStateChangeInfo>    ): void-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -382,16 +325,14 @@ onSelfPermissionStateChange(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| permissionList | Array&lt;Permissions&gt; | 是 | 订阅的权限名列表，为空时表示订阅所有的权限状态变化。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 是 | 回调函数。订阅指定权限名状态变更事件的回调。 |
+| permissionList | Array&lt;Permissions&gt; | 是 | 取消订阅的权限名列表，为空时表示取消订阅所有的权限状态变化，必须与onSelfPermissionStateChange 订阅时的权限列表匹配（不区分顺序）。 <br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 否 | 回调函数。取消订阅指定权限名状态变更事件的回调。 不传入此参数时，将批量删除与permissionList相关联的所有回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. Possible causes: 1. The permissionList exceeds the size limit; 2. The permissionNames in the list are all invalid. |
-| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) | The API is used repeatedly with the same input. |
-| [12100005](../errorcode-access-token.md#12100005-监听器数量超过限制) | The registration time has exceeded the limit. |
+| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) | The API is not used in pair with 'on'. |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 **示例**
@@ -403,10 +344,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
 let permissionList: Array<Permissions> = ['ohos.permission.APPROXIMATELY_LOCATION'];
 try {
-  atManager.onSelfPermissionStateChange(permissionList, (data: abilityAccessCtrl.PermissionStateChangeInfo) => {
-    console.info('receive permission state change');
-    console.info(`data change: ${data.change}, tokenID: ${data.tokenID}, permission name: ${data.permissionName}`);
-  });
+    atManager.offSelfPermissionStateChange(permissionList);
 } catch (err) {
   let error = err as BusinessError;
   console.error(`Code: ${error.code}, message: ${error.message}`);
@@ -481,13 +419,75 @@ try {
 }
 ```
 
+## onSelfPermissionStateChange
+
+```TypeScript
+onSelfPermissionStateChange(
+      permissionList: Array<Permissions>,
+      callback: Callback<PermissionStateChangeInfo>
+    ): void
+```
+
+订阅本应用的指定权限列表的权限授权状态变化事件，使用callback异步回调。 可在需要根据权限状态实时更新UI或业务逻辑、监听用户授权行为等场景中使用。不再需要监听时，调用 [offSelfPermissionStateChange](#offselfpermissionstatechange)取消订阅。
+
+- 多次调用本订阅接口时，如果订阅的权限列表相同，callback不同，允许订阅成功。 - 多次调用本订阅接口时，如果订阅的权限列表间有相同的子集，callback相同时，订阅失败。
+
+权限状态由“已授权”变更为“未授权”可能存在两种场景：
+
+- 用户主动撤销：系统会终止对应应用进程。 - 系统主动回收：应用进程不会终止。典型场景如安全控件的单次授权，在授权周期结束后由系统自动回收。
+
+该接口通常与[offSelfPermissionStateChange](#offselfpermissionstatechange)配套使用， 当不再需要监听时应调用offSelfPermissionStateChange取消订阅。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AtManager-onSelfPermissionStateChange(      permissionList: Array<Permissions>,      callback: Callback<PermissionStateChangeInfo>    ): void--><!--Device-AtManager-onSelfPermissionStateChange(      permissionList: Array<Permissions>,      callback: Callback<PermissionStateChangeInfo>    ): void-End-->
+
+**系统能力：** SystemCapability.Security.AccessToken
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| permissionList | Array&lt;Permissions&gt; | 是 | 订阅的权限名列表，为空时表示订阅所有的权限状态变化。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 是 | 回调函数。订阅指定权限名状态变更事件的回调。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. Possible causes: 1. The permissionList exceeds the size limit; 2. The permissionNames in the list are all invalid. |
+| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) | The API is used repeatedly with the same input. |
+| [12100005](../errorcode-access-token.md#12100005-监听器数量超过限制) | The registration time has exceeded the limit. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
+
+**示例**
+
+```TypeScript
+import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let permissionList: Array<Permissions> = ['ohos.permission.APPROXIMATELY_LOCATION'];
+try {
+  atManager.onSelfPermissionStateChange(permissionList, (data: abilityAccessCtrl.PermissionStateChangeInfo) => {
+    console.info('receive permission state change');
+    console.info(`data change: ${data.change}, tokenID: ${data.tokenID}, permission name: ${data.permissionName}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## openPermissionOnSetting
 
 ```TypeScript
 openPermissionOnSetting(context: Context, permission: Permissions): Promise<SelectedResult>
 ```
 
-用于[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)/ [UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md)拉起权限设置页面。调用成功后会打开权限设置页面，用户在页面中 操作后，返回用户在设置页面中的选择结果。使用Promise异步回调。
+用于[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)/ [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)拉起权限设置页面。调用成功后会打开权限设置页面，用户在页面中 操作后，返回用户在设置页面中的选择结果。使用Promise异步回调。
 
 适用于 [manual_settings](../../../security/AccessToken/app-permission-mgmt-overview.md#manual_settings手动设置授权) 类型权限无法通过普通授权弹窗申请、必须引导用户进入系统设置完成授权的场景。manual_settings类型权限是指只能由用户在系统设置中手动开启的权限，无法通过普通授权弹窗直接申请。
 
@@ -616,7 +616,7 @@ atManager.requestGlobalSwitch(context, abilityAccessCtrl.SwitchType.CAMERA).then
 requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>): Promise<Array<GrantStatus>>
 ```
 
-用于[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)/ [UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md)二次拉起权限设置弹窗，返回授权状态数组。使用Promise异 步回调。
+用于[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)/ [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)二次拉起权限设置弹窗，返回授权状态数组。使用Promise异 步回调。
 
 适用于用户在首次弹窗中已拒绝过该权限授予，需要通过设置页面继续申请权限的场景。
 
@@ -688,7 +688,7 @@ atManager.requestPermissionOnSetting(context, ['ohos.permission.CAMERA']).then((
 requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>, requestCallback: AsyncCallback<PermissionRequestResult>) : void
 ```
 
-用于<!--RP1-->[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)<!--RP1End-->拉起弹窗请求 [用户授权](../../../security/AccessToken/request-user-authorization.md)，返回本次请求权限的授权结果。使用callback异步回调。
+用于<!--RP1-->[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)<!--RP1End-->拉起弹窗请求 [用户授权](../../../security/AccessToken/request-user-authorization.md)，返回本次请求权限的授权结果。使用callback异步回调。
 
 适用于应用首次访问受保护资源前主动向用户申请 [user_grant](../../../security/AccessToken/app-permission-mgmt-overview.md#user_grant用户授权) 权限的场景。
 
@@ -752,13 +752,35 @@ atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA'], (err: 
 });
 ```
 
+关于向用户申请授权的完整流程及示例，请参见[向用户申请授权](../../../security/AccessToken/request-user-authorization.md)。
+
+```TypeScript
+import { abilityAccessCtrl, Context, PermissionRequestResult, common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 创建权限管理器实例
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+// 请在组件内获取context
+let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+// 请求用户授权
+atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA']).then((data: PermissionRequestResult) => {
+  console.info(`requestPermissionsFromUser success, result: ${data}`);
+  console.info('requestPermissionsFromUser data permissions:' + data.permissions);
+  console.info('requestPermissionsFromUser data authResults:' + data.authResults);
+  console.info('requestPermissionsFromUser data dialogShownResults:' + data.dialogShownResults);
+  console.info('requestPermissionsFromUser data errorReasons:' + data.errorReasons);
+}).catch((err: BusinessError): void => {
+  console.error(`requestPermissionsFromUser fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## requestPermissionsFromUser
 
 ```TypeScript
 requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>) : Promise<PermissionRequestResult>
 ```
 
-用于<!--RP1-->[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)<!--RP1End-->拉起弹窗请求 [用户授权](../../../security/AccessToken/request-user-authorization.md)，返回本次请求权限的授权结果。使用Promise异步回调。
+用于<!--RP1-->[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)<!--RP1End-->拉起弹窗请求 [用户授权](../../../security/AccessToken/request-user-authorization.md)，返回本次请求权限的授权结果。使用Promise异步回调。
 
 适用于应用首次访问受保护资源前主动向用户申请user_grant权限的场景。
 
@@ -799,27 +821,7 @@ requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>)
 
 **示例**
 
-关于向用户申请授权的完整流程及示例，请参见[向用户申请授权](../../../security/AccessToken/request-user-authorization.md)。
-
-```TypeScript
-import { abilityAccessCtrl, Context, PermissionRequestResult, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 创建权限管理器实例
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-// 请在组件内获取context
-let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-// 请求用户授权
-atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA']).then((data: PermissionRequestResult) => {
-  console.info(`requestPermissionsFromUser success, result: ${data}`);
-  console.info('requestPermissionsFromUser data permissions:' + data.permissions);
-  console.info('requestPermissionsFromUser data authResults:' + data.authResults);
-  console.info('requestPermissionsFromUser data dialogShownResults:' + data.dialogShownResults);
-  console.info('requestPermissionsFromUser data errorReasons:' + data.errorReasons);
-}).catch((err: BusinessError): void => {
-  console.error(`requestPermissionsFromUser fail, code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [requestPermissionsFromUser](#requestpermissionsfromuser)
 
 ## verifyAccessToken
 
@@ -894,6 +896,26 @@ atManager.verifyAccessToken(tokenID, permissionName).then((data: abilityAccessCt
 });
 ```
 
+```TypeScript
+import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 创建权限管理器实例
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+// 获取应用的bundleInfo信息
+let bundleInfo = bundleManager.getBundleInfoForSelfSync(bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION);
+// 获取应用的TokenID
+let tokenID: number = bundleInfo.appInfo.accessTokenId;
+// 设置需要校验的权限名
+let permissionName: Permissions = 'ohos.permission.GRANT_SENSITIVE_PERMISSIONS';
+// 校验应用是否被授予权限
+atManager.verifyAccessToken(tokenID, permissionName).then((data: abilityAccessCtrl.GrantStatus) => {
+  console.info(`verifyAccessToken success, result: ${data}`);
+}).catch((err: BusinessError): void => {
+  console.error(`verifyAccessToken fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## verifyAccessToken
 
 ```TypeScript
@@ -930,25 +952,7 @@ verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>
 
 **示例**
 
-```TypeScript
-import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 创建权限管理器实例
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-// 获取应用的bundleInfo信息
-let bundleInfo = bundleManager.getBundleInfoForSelfSync(bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION);
-// 获取应用的TokenID
-let tokenID: number = bundleInfo.appInfo.accessTokenId;
-// 设置需要校验的权限名
-let permissionName: Permissions = 'ohos.permission.GRANT_SENSITIVE_PERMISSIONS';
-// 校验应用是否被授予权限
-atManager.verifyAccessToken(tokenID, permissionName).then((data: abilityAccessCtrl.GrantStatus) => {
-  console.info(`verifyAccessToken success, result: ${data}`);
-}).catch((err: BusinessError): void => {
-  console.error(`verifyAccessToken fail, code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [verifyAccessToken](#verifyaccesstoken)
 
 ## verifyAccessTokenSync
 

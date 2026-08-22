@@ -42,7 +42,7 @@ function switchInputMethod(target: InputMethodProperty, callback: AsyncCallback<
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | Target input method. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -70,6 +70,48 @@ inputMethod.switchInputMethod(currentIme, (err: BusinessError, result: boolean) 
     console.error('Failed to switch input method.');
   }
 });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
+inputMethod.switchInputMethod(currentIme).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in switching input method.');
+  } else {
+    console.error('Failed to switch input method.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to switchInputMethod, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+
+async function switchInputMethodWithSubtype() {
+  // 1. Obtain the current input method.
+  const currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
+  if (!currentIme) {
+    console.error("Failed to get current input method");
+    return;
+  }
+  // 2. Switch the input method.
+  await inputMethod.switchInputMethod(currentIme.name);
+  console.info('Succeeded in switching inputmethod.');
+  // 3. Obtain the current input method subtype.
+  const currentSubtype: InputMethodSubtype = inputMethod.getCurrentInputMethodSubtype();
+  if (!currentSubtype) {
+    console.error("Failed to get current input subtype");
+    return;
+  }
+  // 4. Switch the input method subtype.
+  await inputMethod.switchInputMethod(currentIme.name, currentSubtype.id);
+  console.info('Succeeded in switching inputmethod.');
+}
+
+switchInputMethodWithSubtype();
 ```
 
 
@@ -122,18 +164,5 @@ function switchInputMethod(target: InputMethodProperty): Promise<boolean>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
-inputMethod.switchInputMethod(currentIme).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in switching input method.');
-  } else {
-    console.error('Failed to switch input method.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to switchInputMethod, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [switchInputMethod](#switchinputmethod)
 

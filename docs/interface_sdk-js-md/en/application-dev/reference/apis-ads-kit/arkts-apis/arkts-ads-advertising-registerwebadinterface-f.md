@@ -68,6 +68,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { advertising } from '@kit.AdsKit';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct Index {
+  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  private webViewController: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      // ...
+      Button('registerWebAdInterface')
+        .onClick(() => {
+          advertising.registerWebAdInterface(this.webViewController, this.context, true);
+        })
+
+      Web({ src: 'https://www.example.com', controller: this.webViewController })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 
 ## registerWebAdInterface
 
@@ -103,30 +130,5 @@ Injects an ad JavaScript object to the **Web** component (this API is only open 
 
 **Examples**
 
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { advertising } from '@kit.AdsKit';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct Index {
-  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  private webViewController: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      // ...
-      Button('registerWebAdInterface')
-        .onClick(() => {
-          advertising.registerWebAdInterface(this.webViewController, this.context, true);
-        })
-
-      Web({ src: 'https://www.example.com', controller: this.webViewController })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
+See [registerWebAdInterface](#registerwebadinterface)
 

@@ -28,7 +28,7 @@ Obtains the current system date. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Date&gt; | Yes | Callback used to return the current system date. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Date&gt; | Yes | Callback used to return the current system date. |
 
 **Error codes:**
 
@@ -48,6 +48,21 @@ try {
       return;
     }
     console.info(`Succeeded in getting date : ${date}`);
+  });
+} catch(e) {
+  let error = e as BusinessError;
+  console.error(`Failed to get date. message: ${error.message}, code: ${error.code}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemDateTime.getDate().then((date: Date) => {
+    console.info(`Succeeded in getting date : ${date}`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to get date. message: ${error.message}, code: ${error.code}`);
   });
 } catch(e) {
   let error = e as BusinessError;
@@ -88,18 +103,5 @@ Obtains the current system date. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.getDate().then((date: Date) => {
-    console.info(`Succeeded in getting date : ${date}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get date. message: ${error.message}, code: ${error.code}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.error(`Failed to get date. message: ${error.message}, code: ${error.code}`);
-}
-```
+See [getDate](#getdate)
 

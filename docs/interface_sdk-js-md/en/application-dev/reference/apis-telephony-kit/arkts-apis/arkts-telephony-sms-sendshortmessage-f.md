@@ -27,7 +27,7 @@ Sends an SMS message. This API uses an asynchronous callback to return the resul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | SendMessageOptions | Yes | Options (including the callback) for sending SMS messages. For details, see [SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -63,6 +63,33 @@ let options: sms.SendMessageOptions = {
 };
 sms.sendShortMessage(options, (err: BusinessError) => {
     console.info(`callback: err->${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+
+let sendCallback: AsyncCallback<sms.ISendShortMessageCallback> = (err: BusinessError, data: sms.ISendShortMessageCallback) => {
+    console.info(`sendCallback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+};
+let deliveryCallback: AsyncCallback<sms.IDeliveryShortMessageCallback> = (err: BusinessError, data: sms.IDeliveryShortMessageCallback) => {
+    console.info(`deliveryCallback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+};
+let options: sms.SendMessageOptions = {
+    slotId: 0,
+    content: 'SMS message content';
+    destinationHost: '+861xxxxxxxxxx',
+    serviceCenter: '+861xxxxxxxxxx',
+    destinationPort: 1000,
+    sendCallback: sendCallback,
+    deliveryCallback: deliveryCallback
+};
+let promise = sms.sendShortMessage(options);
+promise.then(() => {
+    console.info(`sendShortMessage success`);
+}).catch((err: BusinessError) => {
+    console.error(`sendShortMessage failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -108,30 +135,5 @@ Sends an SMS message. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-
-let sendCallback: AsyncCallback<sms.ISendShortMessageCallback> = (err: BusinessError, data: sms.ISendShortMessageCallback) => {
-    console.info(`sendCallback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-};
-let deliveryCallback: AsyncCallback<sms.IDeliveryShortMessageCallback> = (err: BusinessError, data: sms.IDeliveryShortMessageCallback) => {
-    console.info(`deliveryCallback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-};
-let options: sms.SendMessageOptions = {
-    slotId: 0,
-    content: 'SMS message content';
-    destinationHost: '+861xxxxxxxxxx',
-    serviceCenter: '+861xxxxxxxxxx',
-    destinationPort: 1000,
-    sendCallback: sendCallback,
-    deliveryCallback: deliveryCallback
-};
-let promise = sms.sendShortMessage(options);
-promise.then(() => {
-    console.info(`sendShortMessage success`);
-}).catch((err: BusinessError) => {
-    console.error(`sendShortMessage failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [sendShortMessage](#sendshortmessage)
 

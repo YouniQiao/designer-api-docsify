@@ -338,24 +338,6 @@ Selected page size.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
-## printQuality
-
-```TypeScript
-printQuality?: PrintQuality
-```
-
-Print quality.
-
-**Type:** [PrintQuality](arkts-basicservices-print-printquality-e.md)
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PrintJobData-printQuality?: PrintQuality--><!--Device-PrintJobData-printQuality?: PrintQuality-End-->
-
-**System capability:** SystemCapability.Print.PrintFramework
-
 ## printerId
 
 ```TypeScript
@@ -371,6 +353,24 @@ Printer ID.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrintJobData-printerId: string--><!--Device-PrintJobData-printerId: string-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+
+## printQuality
+
+```TypeScript
+printQuality?: PrintQuality
+```
+
+Print quality.
+
+**Type:** [PrintQuality](arkts-basicservices-print-printquality-e.md)
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrintJobData-printQuality?: PrintQuality--><!--Device-PrintJobData-printQuality?: PrintQuality-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 

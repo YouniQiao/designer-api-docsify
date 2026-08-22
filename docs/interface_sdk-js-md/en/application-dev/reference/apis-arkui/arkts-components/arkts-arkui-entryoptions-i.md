@@ -79,3 +79,15 @@ Determines whether to use the LocalStorage instance object returned by the Local
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+@Entry({ routeName: 'myPage' })
+@Component
+struct Index {
+  build() {
+    Text('Index')
+  }
+}
+```
+

@@ -1,6 +1,6 @@
 # LastExitReason
 
-Ability上次退出原因，该类型为枚举，可配合UIAbility的[onCreate()](arkts-ability-appabilityuiability-uiability-c.md#oncreate)方法根据 launchParam.lastExitReason的不同类型执行相应操作。
+Ability上次退出原因，该类型为枚举，可配合UIAbility的[onCreate()](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)方法根据 launchParam.lastExitReason的不同类型执行相应操作。
 
 **起始版本：** 23
 
@@ -213,4 +213,21 @@ SIGNAL = 10
 <!--Device-LastExitReason-SIGNAL = 10--><!--Device-LastExitReason-SIGNAL = 10-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**示例**
+
+```TypeScript
+import { UIAbility, Want, AbilityConstant } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    if (launchParam.lastExitReason === AbilityConstant.LastExitReason.APP_FREEZE) {
+      console.info('The ability has exited last because the ability was not responding.');
+    }
+    if (launchParam.lastExitReason === AbilityConstant.LastExitReason.RESOURCE_CONTROL) {
+      console.info(`The ability has exited last because the rss control, the lastExitReason is ${launchParam.lastExitReason}, the lastExitMessage is ${launchParam.lastExitMessage}.`);
+    }
+  }
+}
+```
 

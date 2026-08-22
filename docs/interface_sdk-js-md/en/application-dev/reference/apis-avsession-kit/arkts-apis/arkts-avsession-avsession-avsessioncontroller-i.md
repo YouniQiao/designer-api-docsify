@@ -34,7 +34,7 @@ Destroy the server controller
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -42,6 +42,52 @@ Destroy the server controller
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+currentAVSession.destroy().then(() => {
+  console.info('Destroy : SUCCESS ');
+}).catch((err: BusinessError) => {
+  console.error(`Destroy BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+currentAVSession.destroy((err: BusinessError) => {
+  if (err) {
+    console.error(`Destroy BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Destroy : SUCCESS ');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.destroy().then(() => {
+  console.info('Destroy : SUCCESS ');
+}).catch((err: BusinessError) => {
+  console.error(`Destroy BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.destroy((err: BusinessError) => {
+  if (err) {
+    console.error(`Destroy BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Destroy : SUCCESS ');
+  }
+});
+```
 
 ## destroy
 
@@ -72,6 +118,10 @@ Destroy the server controller
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
+**Examples**
+
+See [destroy](#destroy)
+
 ## getAVCallState
 
 ```TypeScript
@@ -90,7 +140,7 @@ Get the call status of the current session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes | The triggered asyncCallback when (getAVCallState). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes | The triggered asyncCallback when (getAVCallState). |
 
 **Error codes:**
 
@@ -99,6 +149,30 @@ Get the call status of the current session
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.getAVCallState().then((callstate: avSession.AVCallState) => {
+  console.info(`getAVCallState : SUCCESS : state : ${callstate.state}`);
+}).catch((err: BusinessError) => {
+  console.error(`getAVCallState BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.getAVCallState((err: BusinessError, callstate: avSession.AVCallState) => {
+  if (err) {
+    console.error(`getAVCallState BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`getAVCallState : SUCCESS : state : ${callstate.state}`);
+  }
+});
+```
 
 ## getAVCallState
 
@@ -128,6 +202,10 @@ Get the call status of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
+**Examples**
+
+See [getAVCallState](#getavcallstate)
+
 ## getAVMetadata
 
 ```TypeScript
@@ -146,7 +224,7 @@ Get the metadata of the current session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;AVMetadata&gt; | Yes | The triggered asyncCallback when (getAVMetadata). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadata&gt; | Yes | The triggered asyncCallback when (getAVMetadata). |
 
 **Error codes:**
 
@@ -155,6 +233,30 @@ Get the metadata of the current session
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.getAVMetadata().then((metadata: avSession.AVMetadata) => {
+  console.info(`GetAVMetadata : SUCCESS : assetId : ${metadata.assetId}`);
+}).catch((err: BusinessError) => {
+  console.error(`GetAVMetadata BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.getAVMetadata((err: BusinessError, metadata: avSession.AVMetadata) => {
+  if (err) {
+    console.error(`GetAVMetadata BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`GetAVMetadata : SUCCESS : assetId : ${metadata.assetId}`);
+  }
+});
+```
 
 ## getAVMetadata
 
@@ -186,6 +288,10 @@ Get the metadata of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
+**Examples**
+
+See [getAVMetadata](#getavmetadata)
+
 ## getAVMetadataSync
 
 ```TypeScript
@@ -216,6 +322,19 @@ Get the metadata of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let metaData: avSession.AVMetadata = avsessionController.getAVMetadataSync();
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getAVMetadataSync error, error code: ${error.code}, error message: ${error.message}`);
+}
+```
+
 ## getAVPlaybackState
 
 ```TypeScript
@@ -234,7 +353,7 @@ Get the playback status of the current session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The triggered asyncCallback when (getAVPlaybackState). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The triggered asyncCallback when (getAVPlaybackState). |
 
 **Error codes:**
 
@@ -243,6 +362,52 @@ Get the playback status of the current session
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+aVCastController.getAVPlaybackState((err: BusinessError, state: avSession.AVPlaybackState) => {
+  if (err) {
+    console.error(`getAVPlaybackState BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('getAVPlaybackState : SUCCESS');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+aVCastController.getAVPlaybackState().then((state: avSession.AVPlaybackState) => {
+  console.info('getAVPlaybackState : SUCCESS');
+}).catch((err: BusinessError) => {
+  console.error(`getAVPlaybackState BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.getAVPlaybackState((err: BusinessError, state: avSession.AVPlaybackState) => {
+  if (err) {
+    console.error(`getAVPlaybackState BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('getAVPlaybackState : SUCCESS');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.getAVPlaybackState().then((state: avSession.AVPlaybackState) => {
+  console.info('getAVPlaybackState : SUCCESS');
+}).catch((err: BusinessError) => {
+  console.error(`getAVPlaybackState BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getAVPlaybackState
 
@@ -274,6 +439,10 @@ Get the playback status of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
+**Examples**
+
+See [getAVPlaybackState](#getavplaybackstate)
+
 ## getAVPlaybackStateSync
 
 ```TypeScript
@@ -304,6 +473,19 @@ Get the playback status of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let playbackState: avSession.AVPlaybackState = avsessionController.getAVPlaybackStateSync();
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getAVPlaybackStateSync error, error code: ${error.code}, error message: ${error.message}`);
+}
+```
+
 ## getAVQueueItems
 
 ```TypeScript
@@ -322,7 +504,7 @@ Get the playlist of the current session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | Yes | The triggered asyncCallback when (getAVQueueItems). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | Yes | The triggered asyncCallback when (getAVQueueItems). |
 
 **Error codes:**
 
@@ -331,6 +513,30 @@ Get the playlist of the current session
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.getAVQueueItems().then((items: avSession.AVQueueItem[]) => {
+  console.info(`GetAVQueueItems : SUCCESS : length : ${items.length}`);
+}).catch((err: BusinessError) => {
+  console.error(`GetAVQueueItems BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.getAVQueueItems((err: BusinessError, items: avSession.AVQueueItem[]) => {
+  if (err) {
+    console.error(`GetAVQueueItems BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`GetAVQueueItems : SUCCESS : length : ${items.length}`);
+  }
+});
+```
 
 ## getAVQueueItems
 
@@ -362,6 +568,10 @@ Get the playlist of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
+**Examples**
+
+See [getAVQueueItems](#getavqueueitems)
+
 ## getAVQueueItemsSync
 
 ```TypeScript
@@ -392,6 +602,19 @@ Get the playlist of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let currentQueueItems: Array<avSession.AVQueueItem> = avsessionController.getAVQueueItemsSync();
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getAVQueueItemsSync error, error code: ${error.code}, error message: ${error.message}`);
+}
+```
+
 ## getAVQueueTitle
 
 ```TypeScript
@@ -410,7 +633,7 @@ Get the name of the playlist of the current session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | The triggered asyncCallback when (getAVQueueTitle). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The triggered asyncCallback when (getAVQueueTitle). |
 
 **Error codes:**
 
@@ -419,6 +642,30 @@ Get the name of the playlist of the current session
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.getAVQueueTitle().then((title: string) => {
+  console.info(`GetAVQueueTitle : SUCCESS : title : ${title}`);
+}).catch((err: BusinessError) => {
+  console.error(`GetAVQueueTitle BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.getAVQueueTitle((err: BusinessError, title: string) => {
+  if (err) {
+    console.error(`GetAVQueueTitle BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`GetAVQueueTitle : SUCCESS : title : ${title}`);
+  }
+});
+```
 
 ## getAVQueueTitle
 
@@ -450,6 +697,10 @@ Get the name of the playlist of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
+**Examples**
+
+See [getAVQueueTitle](#getavqueuetitle)
+
 ## getAVQueueTitleSync
 
 ```TypeScript
@@ -480,6 +731,19 @@ Get the name of the playlist of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let currentQueueTitle: string = avsessionController.getAVQueueTitleSync();
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getAVQueueTitleSync error, error code: ${error.code}, error message: ${error.message}`);
+}
+```
+
 ## getCallMetadata
 
 ```TypeScript
@@ -498,7 +762,7 @@ Get the call metadata of the current session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes | The triggered asyncCallback when (getCallMetadata). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes | The triggered asyncCallback when (getCallMetadata). |
 
 **Error codes:**
 
@@ -507,6 +771,30 @@ Get the call metadata of the current session
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.getCallMetadata().then((calldata: avSession.CallMetadata) => {
+  console.info(`getCallMetadata : SUCCESS : name : ${calldata.name}`);
+}).catch((err: BusinessError) => {
+  console.error(`getCallMetadata BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.getCallMetadata((err: BusinessError, calldata: avSession.CallMetadata) => {
+  if (err) {
+    console.error(`getCallMetadata BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`getCallMetadata : SUCCESS : name : ${calldata.name}`);
+  }
+});
+```
 
 ## getCallMetadata
 
@@ -535,6 +823,10 @@ Get the call metadata of the current session
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+See [getCallMetadata](#getcallmetadata)
 
 ## getDesktopLyricState
 
@@ -586,7 +878,7 @@ Get custom media packets provided by the corresponding session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{[key: string]: Object}&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{[key: string]: Object}&gt; | Yes |  |
 
 **Error codes:**
 
@@ -598,6 +890,80 @@ Get custom media packets provided by the corresponding session
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  private tag: string = "createNewSession";
+  private sessionId: string = "";
+  private controller: avSession.AVSessionController | undefined = undefined;
+  private currentAVSession?: avSession.AVSession;
+  context = this.getUIContext();
+
+  aboutToAppear(): void {
+
+    avSession.createAVSession(this.getUIContext().getHostContext(), this.tag, "audio")
+      .then(async (data: avSession.AVSession) => {
+        this.currentAVSession = data;
+        this.sessionId = this.currentAVSession.sessionId;
+        this.controller = await this.currentAVSession.getController();
+        console.info(`CreateAVSession : SUCCESS :sessionId = ${this.sessionId}`);
+      }).catch((err: BusinessError) => {
+      console.error(`CreateAVSession BusinessError:code: ${err.code}, message: ${err.message}`)
+    });
+    if (this.controller !== undefined) {
+      (this.controller as avSession.AVSessionController).getExtras().then((extras) => {
+        console.info(`getExtras : SUCCESS : ${extras}`);
+      }).catch((err: BusinessError) => {
+        console.error(`getExtras BusinessError: code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }
+
+  build() {
+    Column() {
+      Text('AVSession Demo')
+        .fontSize(20)
+        .margin(10)
+    }
+    .width('100%')
+    .height('100%')
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit';
+
+let tag: string = "createNewSession";
+let sessionId: string = "";
+let controller:avSession.AVSessionController | undefined = undefined;
+avSession.createAVSession(context, tag, "audio").then(async (data:avSession.AVSession)=> {
+  currentAVSession = data;
+  sessionId = currentAVSession.sessionId;
+  controller = await currentAVSession.getController();
+  console.info(`CreateAVSession : SUCCESS :sessionId = ${sessionId}`);
+}).catch((err: BusinessError) => {
+  console.error(`CreateAVSession BusinessError:code: ${err.code}, message: ${err.message}`)
+});
+if (controller !== undefined) {
+  (controller as avSession.AVSessionController).getExtras((err, extras) => {
+    if (err) {
+      console.error(`getExtras BusinessError: code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info(`getExtras : SUCCESS : ${extras}`);
+    }
+  });
+}
+```
 
 ## getExtras
 
@@ -617,7 +983,7 @@ Get custom media packets provided by the corresponding session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | The triggered asyncCallback when (getExtras). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | The triggered asyncCallback when (getExtras). |
 
 **Error codes:**
 
@@ -628,6 +994,10 @@ Get custom media packets provided by the corresponding session
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
+
+**Examples**
+
+See [getExtras](#getextras)
 
 ## getExtras
 
@@ -662,6 +1032,10 @@ Get custom media packets provided by the corresponding session
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
+**Examples**
+
+See [getExtras](#getextras)
+
 ## getExtras
 
 ```TypeScript
@@ -693,6 +1067,10 @@ Get custom media packets provided by the corresponding session
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
+
+**Examples**
+
+See [getExtras](#getextras)
 
 ## getExtrasWithEvent
 
@@ -729,6 +1107,36 @@ Get extra information for remote device, such as volume level, connected devices
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let controller: avSession.AVSessionController | ESObject;
+const COMMON_COMMAND_STRING_1 = 'AUDIO_GET_VOLUME';
+const COMMON_COMMAND_STRING_2 = 'AUDIO_GET_AVAILABLE_DEVICES';
+const COMMON_COMMAND_STRING_3 = 'AUDIO_GET_PREFERRED_OUTPUT_DEVICE_FOR_RENDERER_INFO';
+if (controller !== undefined) {
+  controller.getExtrasWithEvent(COMMON_COMMAND_STRING_1).then(() => {
+    console.info(`${[COMMON_COMMAND_STRING_1]}`);
+  }).catch((err: BusinessError) => {
+    console.error(`getExtrasWithEvent failed with err: ${err.code}, ${err.message}`);
+  })
+
+  controller.getExtrasWithEvent(COMMON_COMMAND_STRING_2).then(() => {
+    console.info(`${[COMMON_COMMAND_STRING_2]}`);
+  }).catch((err: BusinessError) => {
+    console.error(`getExtrasWithEvent failed with err: ${err.code}, ${err.message}`);
+  })
+
+  controller.getExtrasWithEvent(COMMON_COMMAND_STRING_3).then(() => {
+    console.info(`${[COMMON_COMMAND_STRING_3]}`);
+  }).catch((err: BusinessError) => {
+    console.error(`getExtrasWithEvent failed with err: ${err.code}, ${err.message}`);
+  })
+}
+```
+
 ## getLaunchAbility
 
 ```TypeScript
@@ -747,7 +1155,7 @@ Get the WantAgent of this session that can launch the session ability
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | Yes | The asyncCallback triggered when getting the WantAgent. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | Yes | The asyncCallback triggered when getting the WantAgent. |
 
 **Error codes:**
 
@@ -756,6 +1164,30 @@ Get the WantAgent of this session that can launch the session ability
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.getLaunchAbility().then((agent: object) => {
+  console.info(`GetLaunchAbility : SUCCESS : wantAgent : ${agent}`);
+}).catch((err: BusinessError) => {
+  console.error(`GetLaunchAbility BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.getLaunchAbility((err: BusinessError, agent: object) => {
+  if (err) {
+    console.error(`GetLaunchAbility BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`GetLaunchAbility : SUCCESS : wantAgent : ${agent}`);
+  }
+});
+```
 
 ## getLaunchAbility
 
@@ -786,6 +1218,10 @@ Get the WantAgent of this session that can launch the session ability
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+See [getLaunchAbility](#getlaunchability)
 
 ## getMediaCenterControlType
 
@@ -834,7 +1270,7 @@ Get output device information
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; | Yes | The triggered asyncCallback when (getOutputDevice). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; | Yes | The triggered asyncCallback when (getOutputDevice). |
 
 **Error codes:**
 
@@ -842,6 +1278,52 @@ Get output device information
 | --- | --- |
 | 600101 | Session service exception. |
 | 600103 | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+currentAVSession.getOutputDevice().then((outputDeviceInfo: avSession.OutputDeviceInfo) => {
+  console.info(`GetOutputDevice : SUCCESS : devices length : ${outputDeviceInfo.devices.length}`);
+}).catch((err: BusinessError) => {
+  console.error(`GetOutputDevice BusinessError: code: ${err.code}, message: ${err.message}`);
+})
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+currentAVSession.getOutputDevice((err: BusinessError, outputDeviceInfo: avSession.OutputDeviceInfo) => {
+  if (err) {
+    console.error(`GetOutputDevice BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`GetOutputDevice : SUCCESS : devices length : ${outputDeviceInfo.devices.length}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.getOutputDevice().then((deviceInfo: avSession.OutputDeviceInfo) => {
+  console.info('GetOutputDevice : SUCCESS');
+}).catch((err: BusinessError) => {
+  console.error(`GetOutputDevice BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.getOutputDevice((err: BusinessError, deviceInfo: avSession.OutputDeviceInfo) => {
+  if (err) {
+    console.error(`GetOutputDevice BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('GetOutputDevice : SUCCESS');
+  }
+});
+```
 
 ## getOutputDevice
 
@@ -872,6 +1354,10 @@ Get output device information
 | 600101 | Session service exception. |
 | 600103 | The session controller does not exist. |
 
+**Examples**
+
+See [getOutputDevice](#getoutputdevice)
+
 ## getOutputDeviceSync
 
 ```TypeScript
@@ -901,6 +1387,30 @@ Get output device information
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let currentOutputDevice: avSession.OutputDeviceInfo = currentAVSession.getOutputDeviceSync();
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getOutputDeviceSync error, error code: ${error.code}, error message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let currentOutputDevice: avSession.OutputDeviceInfo = avsessionController.getOutputDeviceSync();
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getOutputDeviceSync error, error code: ${error.code}, error message: ${error.message}`);
+}
+```
+
 ## getRealPlaybackPositionSync
 
 ```TypeScript
@@ -929,6 +1439,12 @@ Get the adjusted playback position. The time automatically calculated by the sys
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+let time: number = avsessionController.getRealPlaybackPositionSync();
+```
 
 ## getSupportedLoopModes
 
@@ -992,6 +1508,21 @@ Get supported speeds supplied by application.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+aVCastController.getSupportedPlaySpeeds().then((nums: number[]) => {
+  console.info(`getSupportedPlaySpeeds : SUCCESS : hdrFormats.length : ${nums.length}`);
+  if (nums.length > 0 ) {
+    console.info(`getSupportedPlaySpeeds : SUCCESS : descriptors[0] : ${nums[0]}`);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`getSupportedPlaySpeeds BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## getValidCommands
 
 ```TypeScript
@@ -1010,7 +1541,7 @@ Get commands supported by the current session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | Yes | The triggered asyncCallback when ( getValidCommands). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | Yes | The triggered asyncCallback when ( getValidCommands). |
 
 **Error codes:**
 
@@ -1019,6 +1550,52 @@ Get commands supported by the current session
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+aVCastController.getValidCommands((err: BusinessError, state: avSession.AVCastControlCommandType[]) => {
+  if (err) {
+    console.error(`getValidCommands BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('getValidCommands successfully');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+aVCastController.getValidCommands().then((state: avSession.AVCastControlCommandType[]) => {
+  console.info('getValidCommands successfully');
+}).catch((err: BusinessError) => {
+  console.error(`getValidCommands BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.getValidCommands().then((validCommands: avSession.AVControlCommandType[]) => {
+  console.info(`GetValidCommands : SUCCESS : size : ${validCommands.length}`);
+}).catch((err: BusinessError) => {
+  console.error(`GetValidCommands BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.getValidCommands((err: BusinessError, validCommands: avSession.AVControlCommandType[]) => {
+  if (err) {
+    console.error(`GetValidCommands BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`GetValidCommands : SUCCESS : size : ${validCommands.length}`);
+  }
+});
+```
 
 ## getValidCommands
 
@@ -1050,6 +1627,10 @@ Get commands supported by the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
+**Examples**
+
+See [getValidCommands](#getvalidcommands)
+
 ## getValidCommandsSync
 
 ```TypeScript
@@ -1080,6 +1661,19 @@ Get commands supported by the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let validCommands: Array<avSession.AVControlCommandType> = avsessionController.getValidCommandsSync();
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getValidCommandsSync error, error code: ${error.code}, error message: ${error.message}`);
+}
+```
+
 ## isActive
 
 ```TypeScript
@@ -1098,7 +1692,7 @@ Check if the current session is active
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | The triggered asyncCallback when (isActive). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | The triggered asyncCallback when (isActive). |
 
 **Error codes:**
 
@@ -1107,6 +1701,30 @@ Check if the current session is active
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.isActive().then((isActive: boolean) => {
+  console.info(`IsActive : SUCCESS : isactive : ${isActive}`);
+}).catch((err: BusinessError) => {
+  console.error(`IsActive BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.isActive((err: BusinessError, isActive: boolean) => {
+  if (err) {
+    console.error(`IsActive BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`IsActive : SUCCESS : isactive : ${isActive}`);
+  }
+});
+```
 
 ## isActive
 
@@ -1138,6 +1756,10 @@ Check if the current session is active
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
+**Examples**
+
+See [isActive](#isactive)
+
 ## isActiveSync
 
 ```TypeScript
@@ -1167,6 +1789,19 @@ Check if the current session is active
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let isActive: boolean = avsessionController.isActiveSync();
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`isActiveSync error, error code: ${error.code}, error message: ${error.message}`);
+}
+```
 
 ## isDesktopLyricEnabled
 
@@ -1231,537 +1866,6 @@ Query desktop lyric visible state for this session.
 | [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
-## offActiveStateChange
-
-```TypeScript
-offActiveStateChange(callback?: Callback<boolean>): void
-```
-
-Unregister the active state of this session changed callback
-
-**Since:** 23
-
-<!--Device-AVSessionController-offActiveStateChange(callback?: Callback<boolean>): void--><!--Device-AVSessionController-offActiveStateChange(callback?: Callback<boolean>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## offCallMetadataChange
-
-```TypeScript
-offCallMetadataChange(callback?: Callback<CallMetadata>): void
-```
-
-Unregister call metadata changed callback
-
-**Since:** 23
-
-<!--Device-AVSessionController-offCallMetadataChange(callback?: Callback<CallMetadata>): void--><!--Device-AVSessionController-offCallMetadataChange(callback?: Callback<CallMetadata>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | No | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## offCallStateChange
-
-```TypeScript
-offCallStateChange(callback?: Callback<AVCallState>): void
-```
-
-Unregister playback state changed callback
-
-**Since:** 23
-
-<!--Device-AVSessionController-offCallStateChange(callback?: Callback<AVCallState>): void--><!--Device-AVSessionController-offCallStateChange(callback?: Callback<AVCallState>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | No | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## offCustomDataChange
-
-```TypeScript
-offCustomDataChange(callback?: Callback<Record<string, Object>>): void
-```
-
-Unregister listener for custom data.
-
-**Since:** 23
-
-<!--Device-AVSessionController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to retrieve custom data. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## offDesktopLyricEnabled
-
-```TypeScript
-offDesktopLyricEnabled(callback?: Callback<boolean>): void
-```
-
-Unregister desktop lyric enable state change callback.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AVSessionController-offDesktopLyricEnabled(callback?: Callback<boolean>): void--><!--Device-AVSessionController-offDesktopLyricEnabled(callback?: Callback<boolean>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | a callback to receive desktop lyric enable state. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## offDesktopLyricStateChanged
-
-```TypeScript
-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void
-```
-
-Unregister desktop lyric state changed callback.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AVSessionController-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void--><!--Device-AVSessionController-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | No | a callback to receive desktop lyric state. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## offDesktopLyricVisibilityChanged
-
-```TypeScript
-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
-```
-
-Unregister desktop lyric visible state change callback.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AVSessionController-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void--><!--Device-AVSessionController-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | a callback to receive desktop lyric window visible state. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## offExtrasChange
-
-```TypeScript
-offExtrasChange(callback?: Callback<Record<string, Object>>): void
-```
-
-Unregister the custom media packets change callback
-
-**Since:** 23
-
-<!--Device-AVSessionController-offExtrasChange(callback?: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-offExtrasChange(callback?: Callback<Record<string, Object>>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | No | Used to handle custom media packets changed. The callback provides the new media packets. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## offMediaCenterControlTypeChanged
-
-```TypeScript
-offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlType>>): void
-```
-
-Unregister media center control type changed callback.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AVSessionController-offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlType>>): void--><!--Device-AVSessionController-offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlType>>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | No | Callback to receive the changed control types. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## offMetadataChange
-
-```TypeScript
-offMetadataChange(callback?: Callback<AVMetadata>): void
-```
-
-Unregister metadata changed callback
-
-**Since:** 23
-
-<!--Device-AVSessionController-offMetadataChange(callback?: Callback<AVMetadata>): void--><!--Device-AVSessionController-offMetadataChange(callback?: Callback<AVMetadata>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AVMetadata&gt; | No | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## offOutputDeviceChange
-
-```TypeScript
-offOutputDeviceChange(callback?: ConnectionEvent): void
-```
-
-Unregister session output device change callback
-
-**Since:** 23
-
-<!--Device-AVSessionController-offOutputDeviceChange(callback?: ConnectionEvent): void--><!--Device-AVSessionController-offOutputDeviceChange(callback?: ConnectionEvent): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | No | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist |
-
-## offPlaybackStateChange
-
-```TypeScript
-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void
-```
-
-Unregister playback state changed callback
-
-**Since:** 23
-
-<!--Device-AVSessionController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | No | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## offQueueItemsChange
-
-```TypeScript
-offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void
-```
-
-Unregister session playlist change callback
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-AVSessionController-offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void--><!--Device-AVSessionController-offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | No | Used to handle playlist changed. The callback provides the new array of AVQueueItem [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## offQueueTitleChange
-
-```TypeScript
-offQueueTitleChange(callback?: Callback<string>): void
-```
-
-Unregister the name of session playlist change callback
-
-**Since:** 23
-
-<!--Device-AVSessionController-offQueueTitleChange(callback?: Callback<string>): void--><!--Device-AVSessionController-offQueueTitleChange(callback?: Callback<string>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Used to handle name of playlist changed. The callback provides the new name. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## offSessionDestroy
-
-```TypeScript
-offSessionDestroy(callback?: NoParamCallback): void
-```
-
-Unregister current session destroyed callback
-
-**Since:** 23
-
-<!--Device-AVSessionController-offSessionDestroy(callback?: NoParamCallback): void--><!--Device-AVSessionController-offSessionDestroy(callback?: NoParamCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | No | The callback used to handle current session destroyed event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## offSessionEvent
-
-```TypeScript
-offSessionEvent(callback?: EventProcess): void
-```
-
-Unregister session event callback
-
-**Since:** 23
-
-<!--Device-AVSessionController-offSessionEvent(callback?: EventProcess): void--><!--Device-AVSessionController-offSessionEvent(callback?: EventProcess): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | No | Used to cancel a specific listener The callback function provides the event string and key-value pair parameters. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## offSupportedLoopModesChange
-
-```TypeScript
-offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void
-```
-
-Unregister listener for supported loop modes.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-AVSessionController-offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void--><!--Device-AVSessionController-offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | No | Callback used to retrieve supported loop modes. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## offSupportedPlaySpeedsChange
-
-```TypeScript
-offSupportedPlaySpeedsChange(callback?: Callback<Array<double>>): void
-```
-
-Unregister listener for supported play speeds.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-AVSessionController-offSupportedPlaySpeedsChange(callback?: Callback<Array<double>>): void--><!--Device-AVSessionController-offSupportedPlaySpeedsChange(callback?: Callback<Array<double>>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;double&gt;&gt; | No | Callback used to retrieve supported play speeds. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## offValidCommandChange
-
-```TypeScript
-offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void
-```
-
-Unregister the valid commands of the session changed callback
-
-**Since:** 23
-
-<!--Device-AVSessionController-offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void--><!--Device-AVSessionController-offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | No | The callback used to handle the changes. The callback function provides an array of AVControlCommandType. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
 ## off('activeStateChange')
 
 ```TypeScript
@@ -1814,7 +1918,7 @@ Unregister call metadata changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callMetadataChange' | Yes | 'callMetadataChange' |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | No | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | No | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
@@ -1845,7 +1949,7 @@ Unregister playback state changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callStateChange' | Yes | 'callStateChange' |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | No | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | No | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
 
 **Error codes:**
 
@@ -1876,7 +1980,7 @@ Unregister listener for custom data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | Yes | Type of the 'customDataChange' to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to retrieve custom data. |
 
 **Error codes:**
 
@@ -2164,17 +2268,17 @@ Unregister the valid commands of the session changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## onActiveStateChange
+## offActiveStateChange
 
 ```TypeScript
-onActiveStateChange(callback: Callback<boolean>): void
+offActiveStateChange(callback?: Callback<boolean>): void
 ```
 
-Register the active state of this session changed callback
+Unregister the active state of this session changed callback
 
 **Since:** 23
 
-<!--Device-AVSessionController-onActiveStateChange(callback: Callback<boolean>): void--><!--Device-AVSessionController-onActiveStateChange(callback: Callback<boolean>): void-End-->
+<!--Device-AVSessionController-offActiveStateChange(callback?: Callback<boolean>): void--><!--Device-AVSessionController-offActiveStateChange(callback?: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2182,7 +2286,7 @@ Register the active state of this session changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
 
 **Error codes:**
 
@@ -2191,17 +2295,17 @@ Register the active state of this session changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## onCallMetadataChange
+## offCallMetadataChange
 
 ```TypeScript
-onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void
+offCallMetadataChange(callback?: Callback<CallMetadata>): void
 ```
 
-Register call metadata changed callback
+Unregister call metadata changed callback
 
 **Since:** 23
 
-<!--Device-AVSessionController-onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void--><!--Device-AVSessionController-onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void-End-->
+<!--Device-AVSessionController-offCallMetadataChange(callback?: Callback<CallMetadata>): void--><!--Device-AVSessionController-offCallMetadataChange(callback?: Callback<CallMetadata>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2209,8 +2313,7 @@ Register call metadata changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | Array&lt;string&gt; | Yes | The properties of [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) that you cared about |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | No | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
@@ -2219,17 +2322,17 @@ Register call metadata changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## onCallMetadataChangeAll
+## offCallStateChange
 
 ```TypeScript
-onCallMetadataChangeAll(callback: Callback<CallMetadata>): void
+offCallStateChange(callback?: Callback<AVCallState>): void
 ```
 
-Registers a callback for all call metadata changes
+Unregister playback state changed callback
 
 **Since:** 23
 
-<!--Device-AVSessionController-onCallMetadataChangeAll(callback: Callback<CallMetadata>): void--><!--Device-AVSessionController-onCallMetadataChangeAll(callback: Callback<CallMetadata>): void-End-->
+<!--Device-AVSessionController-offCallStateChange(callback?: Callback<AVCallState>): void--><!--Device-AVSessionController-offCallStateChange(callback?: Callback<AVCallState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2237,7 +2340,7 @@ Registers a callback for all call metadata changes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | No | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
 
 **Error codes:**
 
@@ -2246,72 +2349,17 @@ Registers a callback for all call metadata changes
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## onCallStateChange
+## offCustomDataChange
 
 ```TypeScript
-onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void
+offCustomDataChange(callback?: Callback<Record<string, Object>>): void
 ```
 
-Register call state changed callback
+Unregister listener for custom data.
 
 **Since:** 23
 
-<!--Device-AVSessionController-onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void--><!--Device-AVSessionController-onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| filter | Array&lt;string&gt; | Yes | The properties of [AVCallState](arkts-avsession-avsession-avcallstate-i.md) that you cared about |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## onCallStateChangeAll
-
-```TypeScript
-onCallStateChangeAll(callback: Callback<AVCallState>): void
-```
-
-Register a callback for all call attribute changes
-
-**Since:** 23
-
-<!--Device-AVSessionController-onCallStateChangeAll(callback: Callback<AVCallState>): void--><!--Device-AVSessionController-onCallStateChangeAll(callback: Callback<AVCallState>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## onCustomDataChange
-
-```TypeScript
-onCustomDataChange(callback: Callback<Record<string, Object>>): void
-```
-
-Register listener for custom data.
-
-**Since:** 23
-
-<!--Device-AVSessionController-onCustomDataChange(callback: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-onCustomDataChange(callback: Callback<Record<string, Object>>): void-End-->
+<!--Device-AVSessionController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -2319,7 +2367,7 @@ Register listener for custom data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to retrieve custom data. |
 
 **Error codes:**
 
@@ -2328,19 +2376,19 @@ Register listener for custom data.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## onDesktopLyricEnabled
+## offDesktopLyricEnabled
 
 ```TypeScript
-onDesktopLyricEnabled(callback: Callback<boolean>): void
+offDesktopLyricEnabled(callback?: Callback<boolean>): void
 ```
 
-Register desktop lyric enable state change callback.
+Unregister desktop lyric enable state change callback.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AVSessionController-onDesktopLyricEnabled(callback: Callback<boolean>): void--><!--Device-AVSessionController-onDesktopLyricEnabled(callback: Callback<boolean>): void-End-->
+<!--Device-AVSessionController-offDesktopLyricEnabled(callback?: Callback<boolean>): void--><!--Device-AVSessionController-offDesktopLyricEnabled(callback?: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2348,7 +2396,7 @@ Register desktop lyric enable state change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | a callback to receive desktop lyric enable state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | a callback to receive desktop lyric enable state. |
 
 **Error codes:**
 
@@ -2357,19 +2405,19 @@ Register desktop lyric enable state change callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## onDesktopLyricStateChanged
+## offDesktopLyricStateChanged
 
 ```TypeScript
-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
+offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void
 ```
 
-Register desktop lyric state changed callback.
+Unregister desktop lyric state changed callback.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AVSessionController-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void--><!--Device-AVSessionController-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void-End-->
+<!--Device-AVSessionController-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void--><!--Device-AVSessionController-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2377,7 +2425,7 @@ Register desktop lyric state changed callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | Yes | a callback to receive desktop lyric state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | No | a callback to receive desktop lyric state. |
 
 **Error codes:**
 
@@ -2386,19 +2434,19 @@ Register desktop lyric state changed callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## onDesktopLyricVisibilityChanged
+## offDesktopLyricVisibilityChanged
 
 ```TypeScript
-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
+offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
 ```
 
-Register desktop lyric visible state change callback.
+Unregister desktop lyric visible state change callback.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AVSessionController-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void--><!--Device-AVSessionController-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void-End-->
+<!--Device-AVSessionController-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void--><!--Device-AVSessionController-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2406,7 +2454,7 @@ Register desktop lyric visible state change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | a callback to receive desktop lyric window visible state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | a callback to receive desktop lyric window visible state. |
 
 **Error codes:**
 
@@ -2415,17 +2463,17 @@ Register desktop lyric visible state change callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## onExtrasChange
+## offExtrasChange
 
 ```TypeScript
-onExtrasChange(callback: Callback<Record<string, Object>>): void
+offExtrasChange(callback?: Callback<Record<string, Object>>): void
 ```
 
-Register the custom media packets change callback
+Unregister the custom media packets change callback
 
 **Since:** 23
 
-<!--Device-AVSessionController-onExtrasChange(callback: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-onExtrasChange(callback: Callback<Record<string, Object>>): void-End-->
+<!--Device-AVSessionController-offExtrasChange(callback?: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-offExtrasChange(callback?: Callback<Record<string, Object>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2433,7 +2481,7 @@ Register the custom media packets change callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Used to handle custom media packets changed. The callback provides the new media packets. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No | Used to handle custom media packets changed. The callback provides the new media packets. |
 
 **Error codes:**
 
@@ -2442,19 +2490,19 @@ Register the custom media packets change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## onMediaCenterControlTypeChanged
+## offMediaCenterControlTypeChanged
 
 ```TypeScript
-onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlType>>): void
+offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlType>>): void
 ```
 
-Register media center control type changed callback.
+Unregister media center control type changed callback.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AVSessionController-onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlType>>): void--><!--Device-AVSessionController-onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlType>>): void-End-->
+<!--Device-AVSessionController-offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlType>>): void--><!--Device-AVSessionController-offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlType>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2462,7 +2510,7 @@ Register media center control type changed callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | Yes | Callback to receive the changed control types. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | No | Callback to receive the changed control types. |
 
 **Error codes:**
 
@@ -2471,17 +2519,17 @@ Register media center control type changed callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## onMetadataChange
+## offMetadataChange
 
 ```TypeScript
-onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void
+offMetadataChange(callback?: Callback<AVMetadata>): void
 ```
 
-Register metadata changed callback
+Unregister metadata changed callback
 
 **Since:** 23
 
-<!--Device-AVSessionController-onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void--><!--Device-AVSessionController-onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void-End-->
+<!--Device-AVSessionController-offMetadataChange(callback?: Callback<AVMetadata>): void--><!--Device-AVSessionController-offMetadataChange(callback?: Callback<AVMetadata>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2489,8 +2537,7 @@ Register metadata changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | Array&lt;string&gt; | Yes | The properties of [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) that you cared about |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AVMetadata&gt; | Yes | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMetadata&gt; | No | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
@@ -2499,17 +2546,17 @@ Register metadata changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## onMetadataChangeAll
+## offOutputDeviceChange
 
 ```TypeScript
-onMetadataChangeAll(callback: Callback<AVMetadata>): void
+offOutputDeviceChange(callback?: ConnectionEvent): void
 ```
 
-Registers a callback to be invoked whenever any metadata changes
+Unregister session output device change callback
 
 **Since:** 23
 
-<!--Device-AVSessionController-onMetadataChangeAll(callback: Callback<AVMetadata>): void--><!--Device-AVSessionController-onMetadataChangeAll(callback: Callback<AVMetadata>): void-End-->
+<!--Device-AVSessionController-offOutputDeviceChange(callback?: ConnectionEvent): void--><!--Device-AVSessionController-offOutputDeviceChange(callback?: ConnectionEvent): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2517,34 +2564,7 @@ Registers a callback to be invoked whenever any metadata changes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AVMetadata&gt; | Yes | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## onOutputDeviceChange
-
-```TypeScript
-onOutputDeviceChange(callback: ConnectionEvent): void
-```
-
-Register session output device change callback
-
-**Since:** 23
-
-<!--Device-AVSessionController-onOutputDeviceChange(callback: ConnectionEvent): void--><!--Device-AVSessionController-onOutputDeviceChange(callback: ConnectionEvent): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | Yes | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
+| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | No | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
 
 **Error codes:**
 
@@ -2553,17 +2573,17 @@ Register session output device change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist |
 
-## onPlaybackStateChange
+## offPlaybackStateChange
 
 ```TypeScript
-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void
+offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void
 ```
 
-Register playback state changed callback
+Unregister playback state changed callback
 
 **Since:** 23
 
-<!--Device-AVSessionController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void-End-->
+<!--Device-AVSessionController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2571,8 +2591,7 @@ Register playback state changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | Array&lt;string&gt; | Yes | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) that you cared about |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | No | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
 
 **Error codes:**
 
@@ -2581,17 +2600,19 @@ Register playback state changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## onPlaybackStateChangeAll
+## offQueueItemsChange
 
 ```TypeScript
-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void
+offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void
 ```
 
-Registers a callback to be invoked whenever the playback state changes
+Unregister session playlist change callback
 
 **Since:** 23
 
-<!--Device-AVSessionController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-AVSessionController-offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void--><!--Device-AVSessionController-offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2599,7 +2620,7 @@ Registers a callback to be invoked whenever the playback state changes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | No | Used to handle playlist changed. The callback provides the new array of AVQueueItem [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) |
 
 **Error codes:**
 
@@ -2608,17 +2629,17 @@ Registers a callback to be invoked whenever the playback state changes
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## onQueueItemsChange
+## offQueueTitleChange
 
 ```TypeScript
-onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void
+offQueueTitleChange(callback?: Callback<string>): void
 ```
 
-Register session playlist change callback
+Unregister the name of session playlist change callback
 
 **Since:** 23
 
-<!--Device-AVSessionController-onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void--><!--Device-AVSessionController-onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void-End-->
+<!--Device-AVSessionController-offQueueTitleChange(callback?: Callback<string>): void--><!--Device-AVSessionController-offQueueTitleChange(callback?: Callback<string>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2626,7 +2647,7 @@ Register session playlist change callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | Yes | Used to handle playlist changed. The callback provides the new array of AVQueueItem [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Used to handle name of playlist changed. The callback provides the new name. |
 
 **Error codes:**
 
@@ -2635,17 +2656,17 @@ Register session playlist change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## onQueueTitleChange
+## offSessionDestroy
 
 ```TypeScript
-onQueueTitleChange(callback: Callback<string>): void
+offSessionDestroy(callback?: NoParamCallback): void
 ```
 
-Register the name of session playlist change callback
+Unregister current session destroyed callback
 
 **Since:** 23
 
-<!--Device-AVSessionController-onQueueTitleChange(callback: Callback<string>): void--><!--Device-AVSessionController-onQueueTitleChange(callback: Callback<string>): void-End-->
+<!--Device-AVSessionController-offSessionDestroy(callback?: NoParamCallback): void--><!--Device-AVSessionController-offSessionDestroy(callback?: NoParamCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2653,7 +2674,7 @@ Register the name of session playlist change callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Used to handle name of playlist changed. The callback provides the new name. |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | No | The callback used to handle current session destroyed event. |
 
 **Error codes:**
 
@@ -2662,17 +2683,17 @@ Register the name of session playlist change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## onSessionDestroy
+## offSessionEvent
 
 ```TypeScript
-onSessionDestroy(callback: NoParamCallback): void
+offSessionEvent(callback?: EventProcess): void
 ```
 
-Register current session destroyed callback
+Unregister session event callback
 
 **Since:** 23
 
-<!--Device-AVSessionController-onSessionDestroy(callback: NoParamCallback): void--><!--Device-AVSessionController-onSessionDestroy(callback: NoParamCallback): void-End-->
+<!--Device-AVSessionController-offSessionEvent(callback?: EventProcess): void--><!--Device-AVSessionController-offSessionEvent(callback?: EventProcess): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2680,7 +2701,7 @@ Register current session destroyed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Yes | The callback used to handle current session destroyed event. |
+| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | No | Used to cancel a specific listener The callback function provides the event string and key-value pair parameters. |
 
 **Error codes:**
 
@@ -2689,40 +2710,13 @@ Register current session destroyed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## onSessionEvent
+## offSupportedLoopModesChange
 
 ```TypeScript
-onSessionEvent(callback: EventProcess): void
+offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void
 ```
 
-Register session event callback
-
-**Since:** 23
-
-<!--Device-AVSessionController-onSessionEvent(callback: EventProcess): void--><!--Device-AVSessionController-onSessionEvent(callback: EventProcess): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | Yes | The callback used to handle session event changed event. The callback function provides the event string and key-value pair parameters. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
-
-## onSupportedLoopModesChange
-
-```TypeScript
-onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void
-```
-
-Register listener for supported loop modes.
+Unregister listener for supported loop modes.
 
 **Since:** 26.0.0
 
@@ -2730,7 +2724,7 @@ Register listener for supported loop modes.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-AVSessionController-onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void--><!--Device-AVSessionController-onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void-End-->
+<!--Device-AVSessionController-offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void--><!--Device-AVSessionController-offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2738,7 +2732,7 @@ Register listener for supported loop modes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | Yes | Callback used to retrieve supported loop modes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | No | Callback used to retrieve supported loop modes. |
 
 **Error codes:**
 
@@ -2747,13 +2741,13 @@ Register listener for supported loop modes.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## onSupportedPlaySpeedsChange
+## offSupportedPlaySpeedsChange
 
 ```TypeScript
-onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void
+offSupportedPlaySpeedsChange(callback?: Callback<Array<double>>): void
 ```
 
-Register listener for supported play speeds.
+Unregister listener for supported play speeds.
 
 **Since:** 26.0.0
 
@@ -2761,7 +2755,7 @@ Register listener for supported play speeds.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-AVSessionController-onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void--><!--Device-AVSessionController-onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void-End-->
+<!--Device-AVSessionController-offSupportedPlaySpeedsChange(callback?: Callback<Array<double>>): void--><!--Device-AVSessionController-offSupportedPlaySpeedsChange(callback?: Callback<Array<double>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2769,7 +2763,7 @@ Register listener for supported play speeds.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback used to retrieve supported play speeds. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | No | Callback used to retrieve supported play speeds. |
 
 **Error codes:**
 
@@ -2778,17 +2772,17 @@ Register listener for supported play speeds.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## onValidCommandChange
+## offValidCommandChange
 
 ```TypeScript
-onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void
+offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void
 ```
 
-Register the valid commands of the session changed callback
+Unregister the valid commands of the session changed callback
 
 **Since:** 23
 
-<!--Device-AVSessionController-onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void--><!--Device-AVSessionController-onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void-End-->
+<!--Device-AVSessionController-offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void--><!--Device-AVSessionController-offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2796,7 +2790,7 @@ Register the valid commands of the session changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | Yes | The callback used to handle the changes. The callback function provides an array of AVControlCommandType. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | No | The callback used to handle the changes. The callback function provides an array of AVControlCommandType. |
 
 **Error codes:**
 
@@ -2858,7 +2852,7 @@ Register call metadata changed callback
 | --- | --- | --- | --- |
 | type | 'callMetadataChange' | Yes | 'callMetadataChange' |
 | filter | Array&lt;keyof CallMetadata&gt; \| 'all' | Yes | The properties of [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) that you cared about |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
@@ -2890,7 +2884,7 @@ Register call state changed callback
 | --- | --- | --- | --- |
 | type | 'callStateChange' | Yes | 'callStateChange' |
 | filter | Array&lt;keyof AVCallState&gt; \| 'all' | Yes | The properties of [AVCallState](arkts-avsession-avsession-avcallstate-i.md) that you cared about |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
 
 **Error codes:**
 
@@ -2921,7 +2915,7 @@ Register listener for custom data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | Yes | Type of the 'customDataChange' to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
 
 **Error codes:**
 
@@ -3211,6 +3205,647 @@ Register the valid commands of the session changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
+## onActiveStateChange
+
+```TypeScript
+onActiveStateChange(callback: Callback<boolean>): void
+```
+
+Register the active state of this session changed callback
+
+**Since:** 23
+
+<!--Device-AVSessionController-onActiveStateChange(callback: Callback<boolean>): void--><!--Device-AVSessionController-onActiveStateChange(callback: Callback<boolean>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## onCallMetadataChange
+
+```TypeScript
+onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void
+```
+
+Register call metadata changed callback
+
+**Since:** 23
+
+<!--Device-AVSessionController-onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void--><!--Device-AVSessionController-onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filter | Array&lt;string&gt; | Yes | The properties of [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) that you cared about |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## onCallMetadataChangeAll
+
+```TypeScript
+onCallMetadataChangeAll(callback: Callback<CallMetadata>): void
+```
+
+Registers a callback for all call metadata changes
+
+**Since:** 23
+
+<!--Device-AVSessionController-onCallMetadataChangeAll(callback: Callback<CallMetadata>): void--><!--Device-AVSessionController-onCallMetadataChangeAll(callback: Callback<CallMetadata>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## onCallStateChange
+
+```TypeScript
+onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void
+```
+
+Register call state changed callback
+
+**Since:** 23
+
+<!--Device-AVSessionController-onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void--><!--Device-AVSessionController-onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filter | Array&lt;string&gt; | Yes | The properties of [AVCallState](arkts-avsession-avsession-avcallstate-i.md) that you cared about |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## onCallStateChangeAll
+
+```TypeScript
+onCallStateChangeAll(callback: Callback<AVCallState>): void
+```
+
+Register a callback for all call attribute changes
+
+**Since:** 23
+
+<!--Device-AVSessionController-onCallStateChangeAll(callback: Callback<AVCallState>): void--><!--Device-AVSessionController-onCallStateChangeAll(callback: Callback<AVCallState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## onCustomDataChange
+
+```TypeScript
+onCustomDataChange(callback: Callback<Record<string, Object>>): void
+```
+
+Register listener for custom data.
+
+**Since:** 23
+
+<!--Device-AVSessionController-onCustomDataChange(callback: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-onCustomDataChange(callback: Callback<Record<string, Object>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## onDesktopLyricEnabled
+
+```TypeScript
+onDesktopLyricEnabled(callback: Callback<boolean>): void
+```
+
+Register desktop lyric enable state change callback.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVSessionController-onDesktopLyricEnabled(callback: Callback<boolean>): void--><!--Device-AVSessionController-onDesktopLyricEnabled(callback: Callback<boolean>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | a callback to receive desktop lyric enable state. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## onDesktopLyricStateChanged
+
+```TypeScript
+onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
+```
+
+Register desktop lyric state changed callback.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVSessionController-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void--><!--Device-AVSessionController-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | Yes | a callback to receive desktop lyric state. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## onDesktopLyricVisibilityChanged
+
+```TypeScript
+onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
+```
+
+Register desktop lyric visible state change callback.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVSessionController-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void--><!--Device-AVSessionController-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | a callback to receive desktop lyric window visible state. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## onExtrasChange
+
+```TypeScript
+onExtrasChange(callback: Callback<Record<string, Object>>): void
+```
+
+Register the custom media packets change callback
+
+**Since:** 23
+
+<!--Device-AVSessionController-onExtrasChange(callback: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-onExtrasChange(callback: Callback<Record<string, Object>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Used to handle custom media packets changed. The callback provides the new media packets. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## onMediaCenterControlTypeChanged
+
+```TypeScript
+onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlType>>): void
+```
+
+Register media center control type changed callback.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVSessionController-onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlType>>): void--><!--Device-AVSessionController-onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlType>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | Yes | Callback to receive the changed control types. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## onMetadataChange
+
+```TypeScript
+onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void
+```
+
+Register metadata changed callback
+
+**Since:** 23
+
+<!--Device-AVSessionController-onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void--><!--Device-AVSessionController-onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filter | Array&lt;string&gt; | Yes | The properties of [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) that you cared about |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMetadata&gt; | Yes | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## onMetadataChangeAll
+
+```TypeScript
+onMetadataChangeAll(callback: Callback<AVMetadata>): void
+```
+
+Registers a callback to be invoked whenever any metadata changes
+
+**Since:** 23
+
+<!--Device-AVSessionController-onMetadataChangeAll(callback: Callback<AVMetadata>): void--><!--Device-AVSessionController-onMetadataChangeAll(callback: Callback<AVMetadata>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMetadata&gt; | Yes | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## onOutputDeviceChange
+
+```TypeScript
+onOutputDeviceChange(callback: ConnectionEvent): void
+```
+
+Register session output device change callback
+
+**Since:** 23
+
+<!--Device-AVSessionController-onOutputDeviceChange(callback: ConnectionEvent): void--><!--Device-AVSessionController-onOutputDeviceChange(callback: ConnectionEvent): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | Yes | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist |
+
+## onPlaybackStateChange
+
+```TypeScript
+onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void
+```
+
+Register playback state changed callback
+
+**Since:** 23
+
+<!--Device-AVSessionController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filter | Array&lt;string&gt; | Yes | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) that you cared about |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## onPlaybackStateChangeAll
+
+```TypeScript
+onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void
+```
+
+Registers a callback to be invoked whenever the playback state changes
+
+**Since:** 23
+
+<!--Device-AVSessionController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## onQueueItemsChange
+
+```TypeScript
+onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void
+```
+
+Register session playlist change callback
+
+**Since:** 23
+
+<!--Device-AVSessionController-onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void--><!--Device-AVSessionController-onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | Yes | Used to handle playlist changed. The callback provides the new array of AVQueueItem [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## onQueueTitleChange
+
+```TypeScript
+onQueueTitleChange(callback: Callback<string>): void
+```
+
+Register the name of session playlist change callback
+
+**Since:** 23
+
+<!--Device-AVSessionController-onQueueTitleChange(callback: Callback<string>): void--><!--Device-AVSessionController-onQueueTitleChange(callback: Callback<string>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Used to handle name of playlist changed. The callback provides the new name. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## onSessionDestroy
+
+```TypeScript
+onSessionDestroy(callback: NoParamCallback): void
+```
+
+Register current session destroyed callback
+
+**Since:** 23
+
+<!--Device-AVSessionController-onSessionDestroy(callback: NoParamCallback): void--><!--Device-AVSessionController-onSessionDestroy(callback: NoParamCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Yes | The callback used to handle current session destroyed event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## onSessionEvent
+
+```TypeScript
+onSessionEvent(callback: EventProcess): void
+```
+
+Register session event callback
+
+**Since:** 23
+
+<!--Device-AVSessionController-onSessionEvent(callback: EventProcess): void--><!--Device-AVSessionController-onSessionEvent(callback: EventProcess): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | Yes | The callback used to handle session event changed event. The callback function provides the event string and key-value pair parameters. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## onSupportedLoopModesChange
+
+```TypeScript
+onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void
+```
+
+Register listener for supported loop modes.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AVSessionController-onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void--><!--Device-AVSessionController-onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | Yes | Callback used to retrieve supported loop modes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## onSupportedPlaySpeedsChange
+
+```TypeScript
+onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void
+```
+
+Register listener for supported play speeds.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AVSessionController-onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void--><!--Device-AVSessionController-onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback used to retrieve supported play speeds. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+## onValidCommandChange
+
+```TypeScript
+onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void
+```
+
+Register the valid commands of the session changed callback
+
+**Since:** 23
+
+<!--Device-AVSessionController-onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void--><!--Device-AVSessionController-onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | Yes | The callback used to handle the changes. The callback function provides an array of AVControlCommandType. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
 ## sendAVKeyEvent
 
 ```TypeScript
@@ -3229,8 +3864,8 @@ Send media key event to this session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeyevent-keyevent-i.md) | Yes | The KeyEvent |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | The KeyEvent |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -3242,6 +3877,38 @@ Send media key event to this session
 | 600103 | The session controller does not exist. |
 | 600105 | Invalid session command. |
 | 600106 | The session is not activated. |
+
+**Examples**
+
+```TypeScript
+import { Key, KeyEvent } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let keyItem: Key = {code:0x49, pressedTime:2, deviceId:0};
+let event:KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, windowId:1, action:2, key:keyItem, unicodeChar:0, keys:[keyItem], ctrlKey:false, altKey:false, shiftKey:false, logoKey:false, fnKey:false, capsLock:false, numLock:false, scrollLock:false};
+
+
+avsessionController.sendAVKeyEvent(event).then(() => {
+  console.info('SendAVKeyEvent Successfully');
+}).catch((err: BusinessError) => {
+  console.error(`SendAVKeyEvent BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { Key, KeyEvent } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let keyItem: Key = {code:0x49, pressedTime:2, deviceId:0};
+let event:KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, windowId:1, action:2, key:keyItem, unicodeChar:0, keys:[keyItem], ctrlKey:false, altKey:false, shiftKey:false, logoKey:false, fnKey:false, capsLock:false, numLock:false, scrollLock:false};
+avsessionController.sendAVKeyEvent(event, (err: BusinessError) => {
+  if (err) {
+    console.error(`SendAVKeyEvent BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('SendAVKeyEvent Successfully');
+  }
+});
+```
 
 ## sendAVKeyEvent
 
@@ -3263,7 +3930,7 @@ Send media key event to this session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeyevent-keyevent-i.md) | Yes | The KeyEvent |
+| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | The KeyEvent |
 
 **Return value:**
 
@@ -3281,6 +3948,10 @@ Send media key event to this session
 | 600103 | The session controller does not exist. |
 | 600105 | Invalid session command. |
 | 600106 | The session is not activated. |
+
+**Examples**
+
+See [sendAVKeyEvent](#sendavkeyevent)
 
 ## sendCommonCommand
 
@@ -3302,7 +3973,7 @@ Send common commands to this session
 | --- | --- | --- | --- |
 | command | string | Yes | The command name to be sent. |
 | args | {[key: string]: Object} | Yes | The parameters of session event |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -3315,6 +3986,58 @@ Send common commands to this session
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit';
+
+let tag: string = "createNewSession";
+let sessionId: string = "";
+let controller:avSession.AVSessionController | undefined = undefined;
+avSession.createAVSession(context, tag, "audio").then(async (data:avSession.AVSession)=> {
+  currentAVSession = data;
+  sessionId = currentAVSession.sessionId;
+  controller = await currentAVSession.getController();
+  console.info(`CreateAVSession : SUCCESS :sessionId = ${sessionId}`);
+}).catch((err: BusinessError) => {
+  console.error(`CreateAVSession BusinessError:code: ${err.code}, message: ${err.message}`)
+});
+let commandName = "my_command";
+if (controller !== undefined) {
+  (controller as avSession.AVSessionController).sendCommonCommand(commandName, {command : "This is my command"}).then(() => {
+    console.info('SendCommonCommand successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`SendCommonCommand BusinessError: code: ${err.code}, message: ${err.message}`);
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit';
+          
+let tag: string = "createNewSession";
+let sessionId: string = "";
+let controller:avSession.AVSessionController | undefined = undefined;
+avSession.createAVSession(context, tag, "audio").then(async (data:avSession.AVSession)=> {
+  currentAVSession = data;
+  sessionId = currentAVSession.sessionId;
+  controller = await currentAVSession.getController();
+  console.info(`CreateAVSession : SUCCESS :sessionId = ${sessionId}`);
+}).catch((err: BusinessError) => {
+  console.error(`CreateAVSession BusinessError:code: ${err.code}, message: ${err.message}`)
+});
+let commandName = "my_command";
+if (controller !== undefined) {
+  (controller as avSession.AVSessionController).sendCommonCommand(commandName, {command : "This is my command"}, (err: BusinessError) => {
+    if (err) {
+      console.error(`SendCommonCommand BusinessError: code: ${err.code}, message: ${err.message}`);
+    }
+  })
+}
+```
 
 ## sendCommonCommand
 
@@ -3338,7 +4061,7 @@ Send common commands to this session
 | --- | --- | --- | --- |
 | command | string | Yes | The command name to be sent. |
 | args | Record&lt;string, Object&gt; | Yes | The parameters of session event |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -3350,6 +4073,10 @@ Send common commands to this session
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
+
+**Examples**
+
+See [sendCommonCommand](#sendcommoncommand)
 
 ## sendCommonCommand
 
@@ -3392,6 +4119,10 @@ Send common commands to this session
 | [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
+**Examples**
+
+See [sendCommonCommand](#sendcommoncommand)
+
 ## sendCommonCommand
 
 ```TypeScript
@@ -3432,6 +4163,10 @@ Send common commands to this session
 | [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
+**Examples**
+
+See [sendCommonCommand](#sendcommoncommand)
+
 ## sendControlCommand
 
 ```TypeScript
@@ -3451,7 +4186,7 @@ Send control commands to this session
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | Yes | The command to be sent. See [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -3464,6 +4199,56 @@ Send control commands to this session
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let avCommand: avSession.AVCastControlCommand = {command:'play'};
+aVCastController.sendControlCommand(avCommand).then(() => {
+  console.info('SendControlCommand successfully');
+}).catch((err: BusinessError) => {
+  console.error(`SendControlCommand BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let avCommand: avSession.AVCastControlCommand = {command:'play'};
+aVCastController.sendControlCommand(avCommand, (err: BusinessError) => {
+  if (err) {
+    console.error(`SendControlCommand BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('SendControlCommand successfully');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let avCommand: avSession.AVControlCommand = {command:'play'};
+avsessionController.sendControlCommand(avCommand).then(() => {
+  console.info('SendControlCommand successfully');
+}).catch((err: BusinessError) => {
+  console.error(`SendControlCommand BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let avCommand: avSession.AVControlCommand = {command:'play'};
+avsessionController.sendControlCommand(avCommand, (err: BusinessError) => {
+  if (err) {
+    console.error(`SendControlCommand BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('SendControlCommand successfully');
+  }
+});
+```
 
 ## sendControlCommand
 
@@ -3505,6 +4290,10 @@ Send control commands to this session
 | [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
+**Examples**
+
+See [sendControlCommand](#sendcontrolcommand)
+
 ## sendCustomData
 
 ```TypeScript
@@ -3540,6 +4329,95 @@ Send custom data to this avsession.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. You are advised to:1.Scheduled retry.2.Destroy the current session or session controller and re-create it. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+aVCastController.sendCustomData({customData : "This is custom data"});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit';
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+
+  build() { 
+    Column() {
+        Text(this.message)
+          .onClick(()=>{
+            let currentAVSession: avSession.AVSession | undefined = undefined;
+            let tag = "createNewSession";
+            let context: Context = this.getUIContext().getHostContext() as Context;
+
+            avSession.createAVSession(context, tag, "audio", (err: BusinessError, data: avSession.AVSession) => {
+            if (err) {
+                console.error(`CreateAVSession BusinessError: code: ${err.code}, message: ${err.message}`);
+            } else {
+                currentAVSession = data;
+            }
+            });
+            if (currentAVSession !== undefined) {
+            (currentAVSession as avSession.AVSession).sendCustomData({customData : "This is custom data"}).then(() => {
+                console.info('sendCustomData successfully');
+            }).catch((err: BusinessError) => {
+                console.error(`sendCustomData BusinessError: code: ${err.code}, message: ${err.message}`);
+            })
+            }
+          })
+      }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  private tag: string = "createNewSession";
+  private sessionId: string = "";
+  private controller: avSession.AVSessionController | undefined = undefined;
+  private currentAVSession?: avSession.AVSession;
+  context = this.getUIContext();
+
+  aboutToAppear(): void {
+    avSession.createAVSession(this.getUIContext().getHostContext(), this.tag, "audio")
+      .then(async (data: avSession.AVSession) => {
+        this.currentAVSession = data;
+        this.sessionId = this.currentAVSession.sessionId;
+        this.controller = await this.currentAVSession.getController();
+        console.info(`CreateAVSession : SUCCESS :sessionId = ${this.sessionId}`);
+      })
+      .catch((err: BusinessError) => {
+        console.error(`CreateAVSession BusinessError:code: ${err.code}, message: ${err.message}`)
+      });
+
+    if (this.controller !== undefined) {
+      (this.controller as avSession.AVSessionController).sendCustomData({ customData: "This is my data" })
+    }
+  }
+
+  build() {
+    Column() {
+      Text('AVSession Demo')
+        .fontSize(20)
+        .margin(10)
+    }
+    .width('100%')
+    .height('100%')
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```
 
 ## setDesktopLyricState
 
@@ -3636,7 +4514,7 @@ Set the item in the playlist to be played
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | itemId | int | Yes | The serial number of the item to be played |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -3646,6 +4524,32 @@ Set the item in the playlist to be played
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let queueItemId = 0;
+avsessionController.skipToQueueItem(queueItemId).then(() => {
+  console.info('SkipToQueueItem successfully');
+}).catch((err: BusinessError) => {
+  console.error(`SkipToQueueItem BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let queueItemId = 0;
+avsessionController.skipToQueueItem(queueItemId, (err: BusinessError) => {
+  if (err) {
+    console.error(`SkipToQueueItem BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('SkipToQueueItem successfully');
+  }
+});
+```
 
 ## skipToQueueItem
 
@@ -3683,6 +4587,10 @@ Set the item in the playlist to be played
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+**Examples**
+
+See [skipToQueueItem](#skiptoqueueitem)
 
 ## sessionId
 

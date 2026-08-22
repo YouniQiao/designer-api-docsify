@@ -32,7 +32,7 @@ declare function moveDir(src: string, dest: string, mode?: number): Promise<void
 | --- | --- | --- | --- |
 | src | string | 是 | 源目录的应用沙箱路径。 |
 | dest | string | 是 | 目标目录的应用沙箱路径。 |
-| mode | number | 否 | 移动模式，默认值为0。<br/>- mode为0，目录级别抛异常。若目标目录下存在与源目录名冲突的非空目录，则抛出异常。<br/>- mode为1，文件级别抛异常。目标目录下存在与 源目录名冲突的目录，若冲突目录下存在同名文件，则抛出异常。源目录下未冲突的文件全部移动至目标目录下，目标目录下未冲突文件将继续保留，且冲突文件信息将在抛出异常的data属性中以Array&lt; [ConflictFiles](../../apis-default/arkts-apis/arkts-filefs-conflictfiles-i.md)&gt;形式提供。<br/>- mode为2，文件级别强制覆盖。目标目录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则强制覆盖冲突目录下所有同名文件 ，未冲突文件将继续保留。<br/>- mode为3，目录级别强制覆盖。移动源目录至目标目录下，目标目录下移动的目录内容与源目录完全一致。若目标目录下存在与源目录名冲突的目录，该目录下的所有原始文件将被删除。 |
+| mode | number | 否 | 移动模式，默认值为0。<br/>- mode为0，目录级别抛异常。若目标目录下存在与源目录名冲突的非空目录，则抛出异常。<br/>- mode为1，文件级别抛异常。目标目录下存在与 源目录名冲突的目录，若冲突目录下存在同名文件，则抛出异常。源目录下未冲突的文件全部移动至目标目录下，目标目录下未冲突文件将继续保留，且冲突文件信息将在抛出异常的data属性中以Array&lt; [ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt;形式提供。<br/>- mode为2，文件级别强制覆盖。目标目录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则强制覆盖冲突目录下所有同名文件 ，未冲突文件将继续保留。<br/>- mode为3，目录级别强制覆盖。移动源目录至目标目录下，目标目录下移动的目录内容与源目录完全一致。若目标目录下存在与源目录名冲突的目录，该目录下的所有原始文件将被删除。 |
 
 **返回值：**
 
@@ -63,6 +63,137 @@ declare function moveDir(src: string, dest: string, mode?: number): Promise<void
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let srcPath = pathDir + "/srcDir";
+let destPath = pathDir + "/destDir";
+fileIo.moveDir(srcPath, destPath, 1).then(() => {
+  console.info(`Succeeded in moving directory.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to move directory. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let srcPath = pathDir + "/srcDir";
+let destPath = pathDir + "/destDir";
+fileIo.moveDir(srcPath, destPath, 1).then(() => {
+  console.info(`Succeeded in moving directory.`);
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to move directory. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let srcPath = pathDir + "/srcDir";
+let destPath = pathDir + "/destDir";
+fileIo.moveDir(srcPath, destPath, 1, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to move directory. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in moving directory.`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let srcPath = pathDir + "/srcDir";
+let destPath = pathDir + "/destDir";
+fileIo.moveDir(srcPath, destPath, 1, (err: BusinessError<void> | null) => {
+  if (err) {
+    console.error(`Failed to move directory. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in moving directory.`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { ConflictFiles } from '@kit.CoreFileKit';
+
+let srcPath = pathDir + "/srcDir";
+let destPath = pathDir + "/destDir";
+fileIo.moveDir(srcPath, destPath, 1, (err: BusinessError<Array<ConflictFiles>>) => {
+  if (err && err.code == 13900015 && err.data?.length !== undefined) {
+    for (let i = 0; i < err.data.length; i++) {
+      console.error(`Failed to move directory, with conflicting files: ${err.data[i].srcFile} ${err.data[i].destFile}`);
+    }
+  } else if (err) {
+    console.error(`Failed to move directory. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in moving directory.`);
+  }
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let srcPath = pathDir + "/srcDir";
+let destPath = pathDir + "/destDir";
+fileIo.moveDir(srcPath, destPath, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to move directory. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in moving directory.`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let srcPath = pathDir + "/srcDir";
+let destPath = pathDir + "/destDir";
+fileIo.moveDir(srcPath, destPath, (err: BusinessError<void> | null) => {
+  if (err) {
+    console.error(`Failed to move directory. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in moving directory.`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { ConflictFiles } from '@kit.CoreFileKit';
+
+let srcPath = pathDir + "/srcDir";
+let destPath = pathDir + "/destDir";
+fileIo.moveDir(srcPath, destPath, (err: BusinessError<Array<ConflictFiles>>) => {
+  if (err && err.code == 13900015 && err.data?.length !== undefined) {
+    for (let i = 0; i < err.data.length; i++) {
+      console.error(`Failed to move directory, with conflicting files: ${err.data[i].srcFile} ${err.data[i].destFile}`);
+    }
+  } else if (err) {
+    console.error(`Failed to move directory. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in moving directory.`);
+  }
+});
+```
 
 
 ## moveDir
@@ -116,6 +247,10 @@ declare function moveDir(src: string, dest: string, callback: AsyncCallback<void
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**示例**
+
+参见 [moveDir](#movedir)
+
 
 ## moveDir
 
@@ -143,13 +278,17 @@ declare function moveDir(src: string, dest: string, callback: AsyncCallback<void
 | --- | --- | --- | --- |
 | src | string | 是 | 源目录的应用沙箱路径。 |
 | dest | string | 是 | 目标目录的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;[ConflictFiles](../../apis-default/arkts-apis/arkts-filefs-conflictfiles-i.md)&gt;&gt; | 是 | 回调函数。当移动目录成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;[ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt;&gt; | 是 | 回调函数。当移动目录成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900015 | File exists |
+
+**示例**
+
+参见 [moveDir](#movedir)
 
 
 ## moveDir
@@ -198,6 +337,10 @@ declare function moveDir(src: string, dest: string, mode: number, callback: Asyn
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**示例**
+
+参见 [moveDir](#movedir)
+
 
 ## moveDir
 
@@ -223,12 +366,16 @@ declare function moveDir(src: string, dest: string, mode: number, callback: Asyn
 | --- | --- | --- | --- |
 | src | string | 是 | 源目录的应用沙箱路径。 |
 | dest | string | 是 | 目标目录的应用沙箱路径。 |
-| mode | number | 是 | 移动模式。<br/>- mode为0，目录级别抛异常。若目标目录下存在与源目录名冲突的目录，则抛出异常。<br/> - mode为1，文件级别抛异常。目标目录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则抛出异常。源目录下未冲突的文件全部移动至目标目录下，目标目录下未冲突文件将继续保留， 且冲突文件信息将在抛出异常的data属性中以Array&lt;[ConflictFiles](../../apis-default/arkts-apis/arkts-filefs-conflictfiles-i.md)&gt;形式提供。<br/> - mode为2，文件级别强制覆盖。目标目录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则强制覆盖冲突目录下所有同名文件 ，未冲突文件将继续保留。<br/>- mode为3，目录级别强制覆盖。移动源目录至目标目录下，目标目录下移动的目录内容与源目录完全一致。若目标目录下存在与源目录名冲突的目录，该目录下所有原始文件将被删除。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;[ConflictFiles](../../apis-default/arkts-apis/arkts-filefs-conflictfiles-i.md)&gt;&gt; | 是 | 回调函数。当移动目录成功，err为undefined，否则为错误对象。 |
+| mode | number | 是 | 移动模式。<br/>- mode为0，目录级别抛异常。若目标目录下存在与源目录名冲突的目录，则抛出异常。<br/> - mode为1，文件级别抛异常。目标目录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则抛出异常。源目录下未冲突的文件全部移动至目标目录下，目标目录下未冲突文件将继续保留， 且冲突文件信息将在抛出异常的data属性中以Array&lt;[ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt;形式提供。<br/> - mode为2，文件级别强制覆盖。目标目录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则强制覆盖冲突目录下所有同名文件 ，未冲突文件将继续保留。<br/>- mode为3，目录级别强制覆盖。移动源目录至目标目录下，目标目录下移动的目录内容与源目录完全一致。若目标目录下存在与源目录名冲突的目录，该目录下所有原始文件将被删除。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;[ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt;&gt; | 是 | 回调函数。当移动目录成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900015 | File exists |
+
+**示例**
+
+参见 [moveDir](#movedir)
 

@@ -115,7 +115,7 @@ The edited file is transferred to the media library based on the URI, which is *
 | --- | --- | --- | --- |
 | editData | string | Yes | New data to commit. |
 | uri | string | Yes | URI of the committed image or video in the application sandbox. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -125,6 +125,67 @@ The edited file is transferred to the media library based on the URI, which is *
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. Possible causes: <br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
+
+**Examples**
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    console.info('commitEditedAssetCallbackDemo')
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOptions: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    if (photoAsset === undefined) {
+      console.error('photoAsset is undefined');
+      return;
+    }
+    let editData = '123456';
+    let uri = 'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.jpg';
+    photoAsset.commitEditedAsset(editData, uri, (err) => {
+      if (err === undefined) {
+        console.info('commitEditedAsset is successful');
+      } else {
+        console.error(`commitEditedAsset failed with error: ${err.code}, ${err.message}`);
+      }
+    });
+  } catch (err) {
+    console.error(`commitEditedAssetCallbackDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    console.info('commitEditedAssetPromiseDemo')
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOptions: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    let editData = '123456';
+    let uri = 'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.jpg';
+    await photoAsset.commitEditedAsset(editData, uri);
+    console.info('commitEditedAsset is successful');
+  } catch (err) {
+    console.error(`commitEditedAssetPromiseDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
 
 ## commitEditedAsset
 
@@ -174,30 +235,7 @@ The edited file is transferred to the media library based on the URI, which is *
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('commitEditedAssetPromiseDemo')
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOptions: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    let editData = '123456';
-    let uri = 'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.jpg';
-    await photoAsset.commitEditedAsset(editData, uri);
-    console.info('commitEditedAsset is successful');
-  } catch (err) {
-    console.error(`commitEditedAssetPromiseDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+See [commitEditedAsset](#commiteditedasset)
 
 ## convertImageFormat
 
@@ -478,7 +516,7 @@ The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-ap
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the Exif data, in JSON strings. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the Exif data, in JSON strings. |
 
 **Error codes:**
 
@@ -491,6 +529,32 @@ The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-ap
 | 14000011 | System inner fail |
 
 **Examples**
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    console.info('getExifDemo');
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOptions: photoAccessHelper.FetchOptions = {
+      fetchColumns: [ 'all_exif',  photoAccessHelper.PhotoKeys.USER_COMMENT],
+      predicates: predicates
+    };
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    let exifMessage = await photoAsset.getExif();
+    let userCommentKey = 'UserComment';
+    let userComment = JSON.stringify(JSON.parse(exifMessage), [userCommentKey]);
+    console.info('getExifDemo userComment: ' + JSON.stringify(userComment));
+    fetchResult.close();
+  } catch (err) {
+    console.error(`getExifDemoCallback failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -569,31 +633,7 @@ The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-ap
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('getExifDemo');
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOptions: photoAccessHelper.FetchOptions = {
-      fetchColumns: [ 'all_exif',  photoAccessHelper.PhotoKeys.USER_COMMENT],
-      predicates: predicates
-    };
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    let exifMessage = await photoAsset.getExif();
-    let userCommentKey = 'UserComment';
-    let userComment = JSON.stringify(JSON.parse(exifMessage), [userCommentKey]);
-    console.info('getExifDemo userComment: ' + JSON.stringify(userComment));
-    fetchResult.close();
-  } catch (err) {
-    console.error(`getExifDemoCallback failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+See [getExif](#getexif)
 
 ## getKeyFrameThumbnail
 
@@ -782,7 +822,7 @@ Checks whether this image or video asset is edited. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result indicating whether the image or video asset is edited. **true** if edited, **false** otherwise. The default value is **false**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result indicating whether the image or video asset is edited. **true** if edited, **false** otherwise. The default value is **false**. |
 
 **Error codes:**
 
@@ -827,6 +867,33 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    console.info('isEditedPromiseDemo')
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOptions: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    let isEdited = await photoAsset.isEdited();
+    if (isEdited === true) {
+      console.info('Photo is edited');
+    } else {
+      console.info('Photo is not edited');
+    }
+  } catch (err) {
+    console.error(`isEditedDemoCallback failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
 ## isEdited
 
 ```TypeScript
@@ -862,32 +929,7 @@ Checks whether this image or video asset is edited. This API uses a promise to r
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('isEditedPromiseDemo')
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOptions: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    let isEdited = await photoAsset.isEdited();
-    if (isEdited === true) {
-      console.info('Photo is edited');
-    } else {
-      console.info('Photo is not edited');
-    }
-  } catch (err) {
-    console.error(`isEditedDemoCallback failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+See [isEdited](#isedited)
 
 ## open
 
@@ -923,7 +965,7 @@ The returned FD must be closed when it is not required.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | string | Yes | Mode for opening the file, which can be **'r'** (read-only), **'w'** (write-only), or **'rw'** (read/write). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the file descriptor (FD) of the file opened. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the file descriptor (FD) of the file opened. |
 
 **Error codes:**
 
@@ -952,6 +994,27 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
       console.error(`Open file err: ${err.code}, ${err.message}`);
     }
   });
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('Open demo');
+  try {
+    let testFileName: string = 'testFile' + Date.now() + '.jpg';
+    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName);
+    let fd: number = await photoAsset.open('rw');
+    if (fd !== undefined) {
+      console.info('File fd' + fd);
+      photoAsset.close(fd);
+    } else {
+      console.error('Open file fail');
+    }
+  } catch (err) {
+    console.error(`Open demo err: ${err.code}, ${err.message}`);
+  }
 }
 ```
 
@@ -1008,26 +1071,7 @@ The returned FD must be closed when it is not required.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('Open demo');
-  try {
-    let testFileName: string = 'testFile' + Date.now() + '.jpg';
-    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName);
-    let fd: number = await photoAsset.open('rw');
-    if (fd !== undefined) {
-      console.info('File fd' + fd);
-      photoAsset.close(fd);
-    } else {
-      console.error('Open file fail');
-    }
-  } catch (err) {
-    console.error(`Open demo err: ${err.code}, ${err.message}`);
-  }
-}
-```
+See [open](#open)
 
 ## requestEditData
 
@@ -1053,7 +1097,7 @@ If the asset has never been edited, an empty string is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the edit data obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the edit data obtained. |
 
 **Error codes:**
 
@@ -1090,6 +1134,29 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     });
   } catch (err) {
     console.error(`requestEditDataCallbackDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    console.info('requestEditDataPromiseDemo')
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOptions: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    let editdata: string = await photoAsset.requestEditData();
+    console.info('Editdata is ' + editdata);
+  } catch (err) {
+    console.error(`requestEditDataPromiseDemo failed with error: ${err.code}, ${err.message}`);
   }
 }
 ```
@@ -1131,28 +1198,7 @@ If the asset has never been edited, an empty string is returned.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('requestEditDataPromiseDemo')
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOptions: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    let editdata: string = await photoAsset.requestEditData();
-    console.info('Editdata is ' + editdata);
-  } catch (err) {
-    console.error(`requestEditDataPromiseDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+See [requestEditData](#requesteditdata)
 
 ## requestPhoto
 
@@ -1178,7 +1224,7 @@ The size of a quick thumbnail is 128 x 128, and the size of a quality thumbnail 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | Callback invoked twice to return the quick and quality thumbnails obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback invoked twice to return the quick and quality thumbnails obtained. |
 
 **Return value:**
 
@@ -1226,87 +1272,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-## requestPhoto
-
-```TypeScript
-requestPhoto(callback: AsyncCallback<image.PixelMap>): string | null
-```
-
-Obtains the quick thumbnail and quality thumbnail of this asset. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.READ_IMAGEVIDEO
-
-<!--Device-PhotoAsset-requestPhoto(callback: AsyncCallback<image.PixelMap>): string | null--><!--Device-PhotoAsset-requestPhoto(callback: AsyncCallback<image.PixelMap>): string | null-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | Callback invoked twice to return the quick and quality thumbnails obtained. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| string \| null | Returns request photo task id. if the operation fails, returns null. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
-
-## requestPhoto
-
-```TypeScript
-requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMap>): string
-```
-
-Obtains the thumbnails of an asset based on the specified options. This API uses an asynchronous callback to return the result.
-
-**Since:** 11
-
-**Required permissions:** ohos.permission.READ_IMAGEVIDEO
-
-<!--Device-PhotoAsset-requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMap>): string--><!--Device-PhotoAsset-requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMap>): string-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [RequestPhotoOptions](arkts-medialibrary-photoaccesshelper-requestphotooptions-i-sys.md) | Yes | Options for obtaining the asset thumbnail. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the thumbnails obtained. The callback may be invoked more than once, depending on **options**. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| string | ID of the task for obtaining thumbnails. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000011 | System inner fail |
-
-**Examples**
-
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
 ```TypeScript
@@ -1345,6 +1310,93 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 ## requestPhoto
 
 ```TypeScript
+requestPhoto(callback: AsyncCallback<image.PixelMap>): string | null
+```
+
+Obtains the quick thumbnail and quality thumbnail of this asset. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-requestPhoto(callback: AsyncCallback<image.PixelMap>): string | null--><!--Device-PhotoAsset-requestPhoto(callback: AsyncCallback<image.PixelMap>): string | null-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback invoked twice to return the quick and quality thumbnails obtained. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string \| null | Returns request photo task id. if the operation fails, returns null. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
+
+**Examples**
+
+See [requestPhoto](#requestphoto)
+
+## requestPhoto
+
+```TypeScript
+requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMap>): string
+```
+
+Obtains the thumbnails of an asset based on the specified options. This API uses an asynchronous callback to return the result.
+
+**Since:** 11
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMap>): string--><!--Device-PhotoAsset-requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMap>): string-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [RequestPhotoOptions](arkts-medialibrary-photoaccesshelper-requestphotooptions-i-sys.md) | Yes | Options for obtaining the asset thumbnail. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the thumbnails obtained. The callback may be invoked more than once, depending on **options**. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string | ID of the task for obtaining thumbnails. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| 14000011 | System inner fail |
+
+**Examples**
+
+See [requestPhoto](#requestphoto)
+
+## requestPhoto
+
+```TypeScript
 requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMap>): string | null
 ```
 
@@ -1365,7 +1417,7 @@ Obtains the thumbnails of an asset based on the specified options. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [RequestPhotoOptions](arkts-medialibrary-photoaccesshelper-requestphotooptions-i-sys.md) | Yes | Options for obtaining the asset thumbnail. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the thumbnails obtained. The callback may be invoked more than once, depending on options. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the thumbnails obtained. The callback may be invoked more than once, depending on options. |
 
 **Return value:**
 
@@ -1381,6 +1433,10 @@ Obtains the thumbnails of an asset based on the specified options. This API uses
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
+
+**Examples**
+
+See [requestPhoto](#requestphoto)
 
 ## requestSource
 
@@ -1404,7 +1460,7 @@ Opens the source file and returns the FD. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the FD. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the FD. |
 
 **Error codes:**
 
@@ -1445,6 +1501,29 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    console.info('requestSourcePromiseDemo')
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOptions: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    let fd = await photoAsset.requestSource();
+    console.info('Source fd is ' + fd);
+  } catch (err) {
+    console.error(`requestSourcePromiseDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
 ## requestSource
 
 ```TypeScript
@@ -1480,28 +1559,7 @@ Opens the source file and returns the FD. This API uses a promise to return the 
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('requestSourcePromiseDemo')
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOptions: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    let fd = await photoAsset.requestSource();
-    console.info('Source fd is ' + fd);
-  } catch (err) {
-    console.error(`requestSourcePromiseDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+See [requestSource](#requestsource)
 
 ## revertToOriginal
 
@@ -1530,7 +1588,7 @@ Reverts to the state of the file before being edited. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -1540,6 +1598,63 @@ Reverts to the state of the file before being edited. This API uses an asynchron
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 14000011 | System inner fail |
+
+**Examples**
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    console.info('revertToOriginalCallbackDemo')
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOptions: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    photoAsset.revertToOriginal((err) => {
+      if (err === undefined) {
+        console.info('revertToOriginal is successful');
+      } else {
+        console.error(`revertToOriginal failed with error: ${err.code}, ${err.message}`);
+      }
+    });
+  } catch (err) {
+    console.error(`revertToOriginalCallbackDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    console.info('revertToOriginalPromiseDemo')
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOptions: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    if (photoAsset === undefined) {
+      console.error('getHiddenAlbumsViewCallback albums is undefined');
+      return;
+    }
+    photoAsset.revertToOriginal();
+    console.info('revertToOriginal is successful');
+  } catch (err) {
+    console.error(`revertToOriginalPromiseDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
 
 ## revertToOriginal
 
@@ -1581,32 +1696,7 @@ Reverts to the state of the file before being edited. This API uses a promise to
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('revertToOriginalPromiseDemo')
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOptions: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    if (photoAsset === undefined) {
-      console.error('getHiddenAlbumsViewCallback albums is undefined');
-      return;
-    }
-    photoAsset.revertToOriginal();
-    console.info('revertToOriginal is successful');
-  } catch (err) {
-    console.error(`revertToOriginalPromiseDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+See [revertToOriginal](#reverttooriginal)
 
 ## setFavorite
 
@@ -1635,7 +1725,7 @@ Favorites or unfavorites this file asset. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | favoriteState | boolean | Yes | Whether to favorite the file asset. **true** to favorite, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -1669,6 +1759,83 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     } else {
       console.error(`favorite failed with error: ${err.code}, ${err.message}`);
     }
+  });
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('setFavoriteDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  let asset = await fetchResult.getFirstObject();
+  if (asset === undefined) {
+    console.error('asset is undefined');
+    return;
+  }
+  asset.setFavorite(true).then(() => {
+    console.info('setFavorite successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`setFavorite failed with error: ${err.code}, ${err.message}`);
+  });
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('setFavoriteDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  let asset = await fetchResult.getFirstObject();
+  let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = new photoAccessHelper.MediaAssetChangeRequest(asset);
+  assetChangeRequest.setFavorite(true);
+  phAccessHelper.applyChanges(assetChangeRequest).then(() => {
+    console.info('apply setFavorite successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`apply setFavorite failed with error: ${err.code}, ${err.message}`);
+  });
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('setFavoriteDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  let photoAssetList: Array<photoAccessHelper.PhotoAsset> = await fetchResult.getAllObjects();
+  let assetsChangeRequest: photoAccessHelper.MediaAssetsChangeRequest = new photoAccessHelper.MediaAssetsChangeRequest(photoAssetList);
+  assetsChangeRequest.setFavorite(true);
+  phAccessHelper.applyChanges(assetsChangeRequest).then(() => {
+    console.info('apply setFavorite successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`apply setFavorite failed with error: ${err.code}, ${err.message}`);
   });
 }
 ```
@@ -1719,32 +1886,7 @@ Favorites or unfavorites this file asset. This API uses a promise to return the 
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('setFavoriteDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let asset = await fetchResult.getFirstObject();
-  if (asset === undefined) {
-    console.error('asset is undefined');
-    return;
-  }
-  asset.setFavorite(true).then(() => {
-    console.info('setFavorite successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`setFavorite failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
+See [setFavorite](#setfavorite)
 
 ## setHidden
 
@@ -1775,7 +1917,7 @@ Private files are stored in the private album. After obtaining private files fro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hiddenState | boolean | Yes | Whether to set a file to hidden state. **true** to hide, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -1809,6 +1951,82 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     } else {
       console.error(`setHidden failed with error: ${err.code}, ${err.message}`);
     }
+  });
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  // Restore a file from a hidden album. Before the operation, ensure that the file exists in the hidden album.
+  console.info('setHiddenDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let albumList: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.SYSTEM, photoAccessHelper.AlbumSubtype.HIDDEN);
+  let album = await albumList.getFirstObject();
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOption);
+  let asset = await fetchResult.getFirstObject();
+  asset.setHidden(false).then(() => {
+    console.info('setHidden successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`setHidden failed with error: ${err.code}, ${err.message}`);
+  });
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('setHiddenDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  let asset = await fetchResult.getFirstObject();
+  let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = new photoAccessHelper.MediaAssetChangeRequest(asset);
+  assetChangeRequest.setHidden(true);
+  phAccessHelper.applyChanges(assetChangeRequest).then(() => {
+    console.info('apply setHidden successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`apply setHidden failed with error: ${err.code}, ${err.message}`);
+  });
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('setHiddenDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  let photoAssetList: Array<photoAccessHelper.PhotoAsset> = await fetchResult.getAllObjects();
+  let assetsChangeRequest: photoAccessHelper.MediaAssetsChangeRequest = new photoAccessHelper.MediaAssetsChangeRequest(photoAssetList);
+  assetsChangeRequest.setHidden(true);
+  phAccessHelper.applyChanges(assetsChangeRequest).then(() => {
+    console.info('apply setHidden successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`apply setHidden failed with error: ${err.code}, ${err.message}`);
   });
 }
 ```
@@ -1861,31 +2079,7 @@ Private files are stored in the private album. After obtaining private files fro
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  // Restore a file from a hidden album. Before the operation, ensure that the file exists in the hidden album.
-  console.info('setHiddenDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let albumList: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.SYSTEM, photoAccessHelper.AlbumSubtype.HIDDEN);
-  let album = await albumList.getFirstObject();
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOption);
-  let asset = await fetchResult.getFirstObject();
-  asset.setHidden(false).then(() => {
-    console.info('setHidden successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`setHidden failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
+See [setHidden](#sethidden)
 
 ## setPending
 
@@ -1917,7 +2111,7 @@ The pending state can be removed only through **setPending(false)**. You can use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pendingState | boolean | Yes | Whether to set the file to pending state. **true** to pend, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -1953,6 +2147,23 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     });
   } catch (err) {
     console.error(`setPendingCallbackDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    console.info('setPendingPromiseDemo');
+    let testFileName: string = 'testFile' + Date.now() + '.jpg';
+    let photoAsset = await phAccessHelper.createAsset(testFileName);
+    await photoAsset.setPending(true);
+    // add asset resource.
+    photoAsset.setPending(false);
+  } catch (err) {
+    console.error(`setPendingPromiseDemo failed with error: ${err.code}, ${err.message}`);
   }
 }
 ```
@@ -2005,22 +2216,7 @@ The pending state can be removed only through **setPending(false)**. You can use
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('setPendingPromiseDemo');
-    let testFileName: string = 'testFile' + Date.now() + '.jpg';
-    let photoAsset = await phAccessHelper.createAsset(testFileName);
-    await photoAsset.setPending(true);
-    // add asset resource.
-    photoAsset.setPending(false);
-  } catch (err) {
-    console.error(`setPendingPromiseDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+See [setPending](#setpending)
 
 ## setUserComment
 
@@ -2049,7 +2245,7 @@ Sets user comment information of an image or video. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userComment | string | Yes | User comment information to set, which cannot exceed 420 characters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -2079,6 +2275,29 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
     let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
     let userComment = 'test_set_user_comment';
+    await photoAsset.setUserComment(userComment);
+  } catch (err) {
+    console.error(`setUserCommentDemoPromise failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    console.info('setUserCommentDemo')
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOptions: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    let userComment = 'test_set_user_comment';
     photoAsset.setUserComment(userComment, (err) => {
       if (err === undefined) {
         console.info('setUserComment successfully');
@@ -2089,6 +2308,57 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   } catch (err) {
     console.error(`setUserCommentDemoCallback failed with error: ${err.code}, ${err.message}`);
   }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('setUserCommentDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  let asset = await fetchResult.getFirstObject();
+  let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = new photoAccessHelper.MediaAssetChangeRequest(asset);
+  let userComment: string = 'test_set_user_comment';
+  assetChangeRequest.setUserComment(userComment);
+  phAccessHelper.applyChanges(assetChangeRequest).then(() => {
+    console.info('apply setUserComment successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`apply setUserComment failed with error: ${err.code}, ${err.message}`);
+  });
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('setUserCommentDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  let photoAssetList: Array<photoAccessHelper.PhotoAsset> = await fetchResult.getAllObjects();
+  let assetsChangeRequest: photoAccessHelper.MediaAssetsChangeRequest = new photoAccessHelper.MediaAssetsChangeRequest(photoAssetList);
+  assetsChangeRequest.setUserComment('test_set_user_comment');
+  phAccessHelper.applyChanges(assetsChangeRequest).then(() => {
+    console.info('apply setUserComment successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`apply setUserComment failed with error: ${err.code}, ${err.message}`);
+  });
 }
 ```
 
@@ -2138,26 +2408,5 @@ Sets user comment information of an image or video. This API uses a promise to r
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('setUserCommentDemo')
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOptions: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    let userComment = 'test_set_user_comment';
-    await photoAsset.setUserComment(userComment);
-  } catch (err) {
-    console.error(`setUserCommentDemoPromise failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+See [setUserComment](#setusercomment)
 

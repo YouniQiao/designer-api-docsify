@@ -75,36 +75,6 @@ systemRingtonePlayer.configure(ringtoneOptions, (err: BusinessError) => {
 });
 ```
 
-## configure
-
-```TypeScript
-configure(options: RingtoneOptions): Promise<void>
-```
-
-配置铃声播放参数。使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-RingtonePlayer-configure(options: RingtoneOptions): Promise<void>--><!--Device-RingtonePlayer-configure(options: RingtoneOptions): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Multimedia.SystemSound.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [RingtoneOptions](arkts-audio-ringtoneplayer-ringtoneoptions-i-sys.md) | 是 | 指定铃声参数。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -140,6 +110,38 @@ systemRingtonePlayer.configure(ringtoneOptions).then(() => {
   console.error(`Failed to configure ringtone options. ${err}`);
 });
 ```
+
+## configure
+
+```TypeScript
+configure(options: RingtoneOptions): Promise<void>
+```
+
+配置铃声播放参数。使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-RingtonePlayer-configure(options: RingtoneOptions): Promise<void>--><!--Device-RingtonePlayer-configure(options: RingtoneOptions): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.SystemSound.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [RingtoneOptions](arkts-audio-ringtoneplayer-ringtoneoptions-i-sys.md) | 是 | 指定铃声参数。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [configure](#configure)
 
 ## getAudioRendererInfo
 
@@ -181,6 +183,20 @@ systemRingtonePlayer.getAudioRendererInfo((err: BusinessError, value: audio.Audi
 });
 ```
 
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let audioRendererInfo: audio.AudioRendererInfo | undefined = undefined;
+
+systemRingtonePlayer.getAudioRendererInfo().then((value: audio.AudioRendererInfo) => {
+  console.info(`Promise returned to indicate that the value of the ringtone AudioRendererInfo is obtained ${value}.`);
+  audioRendererInfo = value;
+}).catch ((err: BusinessError) => {
+  console.error(`Failed to get the ringtone AudioRendererInfo ${err}`);
+});
+```
+
 ## getAudioRendererInfo
 
 ```TypeScript
@@ -205,19 +221,7 @@ getAudioRendererInfo(): Promise<audio.AudioRendererInfo>
 
 **示例**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let audioRendererInfo: audio.AudioRendererInfo | undefined = undefined;
-
-systemRingtonePlayer.getAudioRendererInfo().then((value: audio.AudioRendererInfo) => {
-  console.info(`Promise returned to indicate that the value of the ringtone AudioRendererInfo is obtained ${value}.`);
-  audioRendererInfo = value;
-}).catch ((err: BusinessError) => {
-  console.error(`Failed to get the ringtone AudioRendererInfo ${err}`);
-});
-```
+参见 [getAudioRendererInfo](#getaudiorendererinfo)
 
 ## getTitle
 
@@ -255,6 +259,16 @@ systemRingtonePlayer.getTitle((err: BusinessError, value: string) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemRingtonePlayer.getTitle().then((value: string) => {
+  console.info(`Promise returned to indicate that the value of the system ringtone title is obtained ${value}.`);
+}).catch ((err: BusinessError) => {
+  console.error(`Failed to get the system ringtone title ${err}`);
+});
+```
+
 ## getTitle
 
 ```TypeScript
@@ -279,43 +293,7 @@ getTitle(): Promise<string>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemRingtonePlayer.getTitle().then((value: string) => {
-  console.info(`Promise returned to indicate that the value of the system ringtone title is obtained ${value}.`);
-}).catch ((err: BusinessError) => {
-  console.error(`Failed to get the system ringtone title ${err}`);
-});
-```
-
-## offAudioInterrupt
-
-```TypeScript
-offAudioInterrupt(): void
-```
-
-取消监听音频中断事件。
-
-**起始版本：** 23
-
-<!--Device-RingtonePlayer-offAudioInterrupt(): void--><!--Device-RingtonePlayer-offAudioInterrupt(): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.SystemSound.Core
-
-**系统接口：** 此接口为系统接口。
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-
-**示例**
-
-```TypeScript
-systemRingtonePlayer.offAudioInterrupt();
-```
+参见 [getTitle](#gettitle)
 
 ## off('audioInterrupt')
 
@@ -352,71 +330,32 @@ off(type: 'audioInterrupt'): void
 systemRingtonePlayer.off('audioInterrupt');
 ```
 
-## onAudioInterrupt
+## offAudioInterrupt
 
 ```TypeScript
-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void
+offAudioInterrupt(): void
 ```
 
-监听音频中断事件（当音频焦点发生变化时触发）。使用callback异步回调。
+取消监听音频中断事件。
 
 **起始版本：** 23
 
-<!--Device-RingtonePlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void--><!--Device-RingtonePlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void-End-->
+<!--Device-RingtonePlayer-offAudioInterrupt(): void--><!--Device-RingtonePlayer-offAudioInterrupt(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | 是 | Callback used to listen for interrupt callback. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 **示例**
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let isPlaying: boolean = false;
-let isDucked: boolean = false;
-
-systemRingtonePlayer.onAudioInterrupt((interruptEvent: audio.InterruptEvent) => {
-  if (interruptEvent.forceType == audio.InterruptForceType.INTERRUPT_FORCE) {
-    switch (interruptEvent.hintType) {
-      case audio.InterruptHint.INTERRUPT_HINT_PAUSE:
-        isPlaying = false;
-        break;
-      case audio.InterruptHint.INTERRUPT_HINT_STOP:
-        isPlaying = false;
-        break;
-      case audio.InterruptHint.INTERRUPT_HINT_DUCK:
-        isDucked = true;
-        break;
-      case audio.InterruptHint.INTERRUPT_HINT_UNDUCK:
-        isDucked = false;
-        break;
-      default:
-        break;
-    }
-  } else if (interruptEvent.forceType == audio.InterruptForceType.INTERRUPT_SHARE) {
-    switch (interruptEvent.hintType) {
-      case audio.InterruptHint.INTERRUPT_HINT_RESUME:
-        isPlaying = true;
-        break;
-      default:
-        break;
-    }
-  }
-});
+systemRingtonePlayer.offAudioInterrupt();
 ```
 
 ## on('audioInterrupt')
@@ -499,6 +438,73 @@ systemRingtonePlayer.on('audioInterrupt', (interruptEvent: audio.InterruptEvent)
 });
 ```
 
+## onAudioInterrupt
+
+```TypeScript
+onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void
+```
+
+监听音频中断事件（当音频焦点发生变化时触发）。使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-RingtonePlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void--><!--Device-RingtonePlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.SystemSound.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | 是 | Callback used to listen for interrupt callback. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let isPlaying: boolean = false;
+let isDucked: boolean = false;
+
+systemRingtonePlayer.onAudioInterrupt((interruptEvent: audio.InterruptEvent) => {
+  if (interruptEvent.forceType == audio.InterruptForceType.INTERRUPT_FORCE) {
+    switch (interruptEvent.hintType) {
+      case audio.InterruptHint.INTERRUPT_HINT_PAUSE:
+        isPlaying = false;
+        break;
+      case audio.InterruptHint.INTERRUPT_HINT_STOP:
+        isPlaying = false;
+        break;
+      case audio.InterruptHint.INTERRUPT_HINT_DUCK:
+        isDucked = true;
+        break;
+      case audio.InterruptHint.INTERRUPT_HINT_UNDUCK:
+        isDucked = false;
+        break;
+      default:
+        break;
+    }
+  } else if (interruptEvent.forceType == audio.InterruptForceType.INTERRUPT_SHARE) {
+    switch (interruptEvent.hintType) {
+      case audio.InterruptHint.INTERRUPT_HINT_RESUME:
+        isPlaying = true;
+        break;
+      default:
+        break;
+    }
+  }
+});
+```
+
 ## release
 
 ```TypeScript
@@ -535,6 +541,16 @@ systemRingtonePlayer.release((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemRingtonePlayer.release().then(() => {
+  console.info(`Promise returned to indicate a successful releasing of ringtone player.`);
+}).catch ((err: BusinessError) => {
+  console.error(`Failed to release ringtone player. ${err}`);
+});
+```
+
 ## release
 
 ```TypeScript
@@ -559,15 +575,7 @@ release(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemRingtonePlayer.release().then(() => {
-  console.info(`Promise returned to indicate a successful releasing of ringtone player.`);
-}).catch ((err: BusinessError) => {
-  console.error(`Failed to release ringtone player. ${err}`);
-});
-```
+参见 [release](#release)
 
 ## start
 
@@ -605,6 +613,16 @@ systemRingtonePlayer.start((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemRingtonePlayer.start().then(() => {
+  console.info(`Promise returned to indicate a successful starting of ringtone.`);
+}).catch ((err: BusinessError) => {
+  console.error(`Failed to start playing ringtone. ${err}`);
+});
+```
+
 ## start
 
 ```TypeScript
@@ -629,15 +647,7 @@ start(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemRingtonePlayer.start().then(() => {
-  console.info(`Promise returned to indicate a successful starting of ringtone.`);
-}).catch ((err: BusinessError) => {
-  console.error(`Failed to start playing ringtone. ${err}`);
-});
-```
+参见 [start](#start)
 
 ## stop
 
@@ -675,6 +685,16 @@ systemRingtonePlayer.stop((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemRingtonePlayer.stop().then(() => {
+  console.info(`Promise returned to indicate a successful stopping of ringtone.`);
+}).catch ((err: BusinessError) => {
+  console.error(`Failed to stop playing ringtone. ${err}`);
+});
+```
+
 ## stop
 
 ```TypeScript
@@ -699,15 +719,7 @@ stop(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemRingtonePlayer.stop().then(() => {
-  console.info(`Promise returned to indicate a successful stopping of ringtone.`);
-}).catch ((err: BusinessError) => {
-  console.error(`Failed to stop playing ringtone. ${err}`);
-});
-```
+参见 [stop](#stop)
 
 ## state
 

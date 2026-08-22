@@ -127,34 +127,6 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## detentSelection
-
-```TypeScript
-detentSelection?: SheetSize | Length
-```
-
-支持非手势切换挡位。
-
-**默认值：** detents[0]。
-
-**说明：**
-
-1. 该接口取值范围为detents数组范围，若设值非detents范围，该接口无效。 2. 当设置SheetSize.FIT_CONTENT时，该接口无效。 3. 不建议手势切换挡位与该接口切换挡位同时生效使用。
-
-**类型：** [SheetSize](arkts-arkui-sheetsize-e.md) \| Length
-
-**默认值：** detents[0]
-
-**起始版本：** 15
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SheetOptions-detentSelection?: SheetSize | Length--><!--Device-SheetOptions-detentSelection?: SheetSize | Length-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 ## detents
 
 ```TypeScript
@@ -180,6 +152,34 @@ detents?: [(SheetSize | Length), (SheetSize | Length)?, (SheetSize | Length)?]
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SheetOptions-detents?: [(SheetSize | Length), (SheetSize | Length)?, (SheetSize | Length)?]--><!--Device-SheetOptions-detents?: [(SheetSize | Length), (SheetSize | Length)?, (SheetSize | Length)?]-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## detentSelection
+
+```TypeScript
+detentSelection?: SheetSize | Length
+```
+
+支持非手势切换挡位。
+
+**默认值：** detents[0]。
+
+**说明：**
+
+1. 该接口取值范围为detents数组范围，若设值非detents范围，该接口无效。 2. 当设置SheetSize.FIT_CONTENT时，该接口无效。 3. 不建议手势切换挡位与该接口切换挡位同时生效使用。
+
+**类型：** [SheetSize](arkts-arkui-sheetsize-e.md) \| Length
+
+**默认值：** detents[0]
+
+**起始版本：** 15
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SheetOptions-detentSelection?: SheetSize | Length--><!--Device-SheetOptions-detentSelection?: SheetSize | Length-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

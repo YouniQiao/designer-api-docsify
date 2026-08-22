@@ -29,7 +29,7 @@ Checks whether the super device administrator application of the first user (u10
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | String | Yes | Super device administrator application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null** and **data** is a Boolean value (**true** means that the device administrator application is enabled; and **false** means the opposite). If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null** and **data** is a Boolean value (**true** means that the device administrator application is enabled; and **false** means the opposite). If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -53,6 +53,21 @@ adminManager.isSuperAdmin(bundleName, (err, result) => {
     return;
   }
   console.info(`Succeeded in querying admin is super admin or not, result : ${result}`);
+});
+```
+
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Replace with actual values.
+let bundleName: string = 'com.example.myapplication';
+
+adminManager.isSuperAdmin(bundleName).then((result) => {
+  console.info(`Succeeded in querying admin is super admin or not, result : ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query admin is super admin or not. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -96,18 +111,5 @@ Checks whether the super device administrator application of the first user (u10
 
 **Examples**
 
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Replace with actual values.
-let bundleName: string = 'com.example.myapplication';
-
-adminManager.isSuperAdmin(bundleName).then((result) => {
-  console.info(`Succeeded in querying admin is super admin or not, result : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query admin is super admin or not. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [isSuperAdmin](#issuperadmin)
 

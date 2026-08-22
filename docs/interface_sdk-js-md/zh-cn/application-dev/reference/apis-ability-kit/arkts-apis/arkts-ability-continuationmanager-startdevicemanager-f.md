@@ -48,6 +48,40 @@ continuationManager.startDeviceManager(token, (err) => {
 });
 ```
 
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+
+let token: number = 1;
+continuationManager.startDeviceManager(
+  token,
+  {
+    deviceType: ["00E"]
+  },
+  (err) => {
+    if (err.code != 0) {
+      console.error('startDeviceManager failed, cause: ' + JSON.stringify(err));
+      return;
+    }
+    console.info('startDeviceManager finished. ');
+});
+```
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let token: number = -1;
+continuationManager.startDeviceManager(
+  token,
+  {
+    deviceType: ["00E"]
+  }).then(() => {
+    console.info('startDeviceManager finished. ');
+  }).catch((err: BusinessError) => {
+    console.error('startDeviceManager failed, cause: ' + JSON.stringify(err));
+});
+```
+
 
 ## startDeviceManager
 
@@ -79,23 +113,7 @@ function startDeviceManager(token: number, options: ContinuationExtraParams, cal
 
 **示例**
 
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = 1;
-continuationManager.startDeviceManager(
-  token,
-  {
-    deviceType: ["00E"]
-  },
-  (err) => {
-    if (err.code != 0) {
-      console.error('startDeviceManager failed, cause: ' + JSON.stringify(err));
-      return;
-    }
-    console.info('startDeviceManager finished. ');
-});
-```
+参见 [startDeviceManager](#startdevicemanager)
 
 
 ## startDeviceManager
@@ -133,19 +151,5 @@ function startDeviceManager(token: number, options?: ContinuationExtraParams): P
 
 **示例**
 
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = -1;
-continuationManager.startDeviceManager(
-  token,
-  {
-    deviceType: ["00E"]
-  }).then(() => {
-    console.info('startDeviceManager finished. ');
-  }).catch((err: BusinessError) => {
-    console.error('startDeviceManager failed, cause: ' + JSON.stringify(err));
-});
-```
+参见 [startDeviceManager](#startdevicemanager)
 

@@ -34,7 +34,7 @@ function installUserCertificate(admin: Want, certificate: CertBlob, callback: As
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | certificate | CertBlob | 是 | 证书信息。证书文件应放在应用沙箱路径(应用沙箱路径和真实路径的对应关系可参见： [应用沙箱路径和真实物理路径的对应关系](../../../file-management/app-sandbox-directory.md#应用沙箱路径和真实物理路径的对应关系))等应用有权限访问的路径下。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，当接口调用成功，err为null，否则为错误对象。 |
 
@@ -81,6 +81,35 @@ context.resourceManager.getRawFileContent("test.cer").then((value) => {
 });
 ```
 
+```TypeScript
+import { deviceSettings } from '@kit.MDMKit';
+import { common, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+let certFileArray: Uint8Array = new Uint8Array();
+// 变量context需要在MainAbility的onCreate回调函数中进行初始化
+// test.cer需要放置在rawfile目录下
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+context.resourceManager.getRawFileContent("test.cer").then((value) => {
+  certFileArray = value
+  deviceSettings.installUserCertificate(wantTemp, { inData: certFileArray, alias: "cert_alias_xts" })
+    .then((result) => {
+      console.info(`Succeeded in installing user certificate, result : ${JSON.stringify(result)}`);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to install user certificate. Code: ${err.code}, message: ${err.message}`);
+  })
+}).catch((error: BusinessError) => {
+  console.error(`Failed to get raw file content. message: ${error.message}`);
+  return;
+});
+```
+
 
 ## installUserCertificate
 
@@ -110,7 +139,7 @@ function installUserCertificate(admin: Want, certificate: CertBlob): Promise<str
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | certificate | CertBlob | 是 | 证书信息。证书文件应放在应用沙箱路径(应用沙箱路径和真实路径的对应关系可参见： [应用沙箱路径和真实物理路径的对应关系](../../../file-management/app-sandbox-directory.md#应用沙箱路径和真实物理路径的对应关系))等应用有权限访问的路径下。 |
 
 **返回值：**
@@ -132,32 +161,5 @@ function installUserCertificate(admin: Want, certificate: CertBlob): Promise<str
 
 **示例**
 
-```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
-import { common, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let certFileArray: Uint8Array = new Uint8Array();
-// 变量context需要在MainAbility的onCreate回调函数中进行初始化
-// test.cer需要放置在rawfile目录下
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-context.resourceManager.getRawFileContent("test.cer").then((value) => {
-  certFileArray = value
-  deviceSettings.installUserCertificate(wantTemp, { inData: certFileArray, alias: "cert_alias_xts" })
-    .then((result) => {
-      console.info(`Succeeded in installing user certificate, result : ${JSON.stringify(result)}`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to install user certificate. Code: ${err.code}, message: ${err.message}`);
-  })
-}).catch((error: BusinessError) => {
-  console.error(`Failed to get raw file content. message: ${error.message}`);
-  return;
-});
-```
+参见 [installUserCertificate](#installusercertificate)
 

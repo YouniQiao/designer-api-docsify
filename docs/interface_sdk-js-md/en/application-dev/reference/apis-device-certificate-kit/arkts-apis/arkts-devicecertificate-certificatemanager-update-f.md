@@ -29,7 +29,7 @@ Updates the data for the signing or signature verification operation. It needs t
 | --- | --- | --- | --- |
 | handle | Uint8Array | Yes | Handle of initialization which needs to be obtained by calling the init method. |
 | data | Uint8Array | Yes | Data to be signed or verified. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -59,6 +59,28 @@ try {
       console.info('Succeeded in updating.');
     }
   });
+} catch (error) {
+  console.error(`Failed to update. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+/* cmHandle is the value returned by init(). The value here is only an example. */
+let cmHandle: Uint8Array = new Uint8Array([
+  0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08
+]);
+let srcData: Uint8Array = new Uint8Array([
+  0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08
+]);
+try {
+  certificateManager.update(cmHandle, srcData).then((result) => {
+    console.info('Succeeded in updating.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to update. Code: ${err.code}, message: ${err.message}`);
+  })
 } catch (error) {
   console.error(`Failed to update. Code: ${error.code}, message: ${error.message}`);
 }
@@ -104,25 +126,5 @@ Updates the data for the signing or signature verification operation. This API u
 
 **Examples**
 
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-/* cmHandle is the value returned by init(). The value here is only an example. */
-let cmHandle: Uint8Array = new Uint8Array([
-  0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08
-]);
-let srcData: Uint8Array = new Uint8Array([
-  0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08
-]);
-try {
-  certificateManager.update(cmHandle, srcData).then((result) => {
-    console.info('Succeeded in updating.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to update. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error) {
-  console.error(`Failed to update. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [update](#update)
 

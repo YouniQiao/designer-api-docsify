@@ -18,106 +18,6 @@ import { GesturePath } from '@kit.AccessibilityKit';
 import { GesturePoint } from '@kit.AccessibilityKit';
 ```
 
-## offEnableChange
-
-```TypeScript
-offEnableChange(callback?: Callback<boolean>): void
-```
-
-取消监听字幕配置启用状态变化事件。使用callback异步回调。
-
-**起始版本：** 23
-
-<!--Device-CaptionsManager-offEnableChange(callback?: Callback<boolean>): void--><!--Device-CaptionsManager-offEnableChange(callback?: Callback<boolean>): void-End-->
-
-**系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与onEnableChange的callback一致。缺省时，表示注销所有已注册事件。 |
-
-**示例**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback: (data: boolean) => void = this.eventCallback;
-  eventCallback(data: boolean): void {
-    console.info(`caption state change, result: ${JSON.stringify(data)}`);
-  }
-
-  aboutToAppear(): void {
-    let captionsManager = accessibility.getCaptionsManager();
-    captionsManager.onEnableChange(this.callback);
-  }
-
-  aboutToDisappear(): void {
-    let captionsManager = accessibility.getCaptionsManager();
-    captionsManager.offEnableChange(this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```
-
-## offStyleChange
-
-```TypeScript
-offStyleChange(callback?: Callback<CaptionsStyle>): void
-```
-
-取消字幕风格变化监听事件。使用callback异步回调。
-
-**起始版本：** 23
-
-<!--Device-CaptionsManager-offStyleChange(callback?: Callback<CaptionsStyle>): void--><!--Device-CaptionsManager-offStyleChange(callback?: Callback<CaptionsStyle>): void-End-->
-
-**系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与onStyleChange的callback一致。缺省时，表示注销所有已注册 事件。 |
-
-**示例**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback: (data: accessibility.CaptionsStyle) => void = this.eventCallback;
-  eventCallback(data: accessibility.CaptionsStyle): void {
-    console.info(`caption style change, result: ${JSON.stringify(data)}`);
-  }
-
-  aboutToAppear(): void {
-    let captionsManager = accessibility.getCaptionsManager();
-    captionsManager.onStyleChange(this.callback);
-  }
-
-  aboutToDisappear(): void {
-    let captionsManager = accessibility.getCaptionsManager();
-    captionsManager.offStyleChange(this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```
-
 ## off('enableChange')
 
 ```TypeScript
@@ -236,17 +136,17 @@ struct Index {
 }
 ```
 
-## onEnableChange
+## offEnableChange
 
 ```TypeScript
-onEnableChange(callback: Callback<boolean>): void
+offEnableChange(callback?: Callback<boolean>): void
 ```
 
-监听字幕配置启用状态变化事件。使用callback异步回调。
+取消监听字幕配置启用状态变化事件。使用callback异步回调。
 
 **起始版本：** 23
 
-<!--Device-CaptionsManager-onEnableChange(callback: Callback<boolean>): void--><!--Device-CaptionsManager-onEnableChange(callback: Callback<boolean>): void-End-->
+<!--Device-CaptionsManager-offEnableChange(callback?: Callback<boolean>): void--><!--Device-CaptionsManager-offEnableChange(callback?: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
@@ -254,7 +154,7 @@ onEnableChange(callback: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数，在启用状态变化时将状态通过此函数进行通知。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与onEnableChange的callback一致。缺省时，表示注销所有已注册事件。 |
 
 **示例**
 
@@ -274,6 +174,11 @@ struct Index {
     captionsManager.onEnableChange(this.callback);
   }
 
+  aboutToDisappear(): void {
+    let captionsManager = accessibility.getCaptionsManager();
+    captionsManager.offEnableChange(this.callback);
+  }
+
   build() {
     Column() {
     }
@@ -281,17 +186,17 @@ struct Index {
 }
 ```
 
-## onStyleChange
+## offStyleChange
 
 ```TypeScript
-onStyleChange(callback: Callback<CaptionsStyle>): void
+offStyleChange(callback?: Callback<CaptionsStyle>): void
 ```
 
-监听字幕风格变化事件。使用callback异步回调。
+取消字幕风格变化监听事件。使用callback异步回调。
 
 **起始版本：** 23
 
-<!--Device-CaptionsManager-onStyleChange(callback: Callback<CaptionsStyle>): void--><!--Device-CaptionsManager-onStyleChange(callback: Callback<CaptionsStyle>): void-End-->
+<!--Device-CaptionsManager-offStyleChange(callback?: Callback<CaptionsStyle>): void--><!--Device-CaptionsManager-offStyleChange(callback?: Callback<CaptionsStyle>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
@@ -299,7 +204,7 @@ onStyleChange(callback: Callback<CaptionsStyle>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | 是 | 回调函数，在字幕风格变化时通过此函数进行通知。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与onStyleChange的callback一致。缺省时，表示注销所有已注册 事件。 |
 
 **示例**
 
@@ -317,6 +222,11 @@ struct Index {
   aboutToAppear(): void {
     let captionsManager = accessibility.getCaptionsManager();
     captionsManager.onStyleChange(this.callback);
+  }
+
+  aboutToDisappear(): void {
+    let captionsManager = accessibility.getCaptionsManager();
+    captionsManager.offStyleChange(this.callback);
   }
 
   build() {
@@ -441,6 +351,96 @@ struct Index {
   aboutToAppear(): void {
     let captionsManager = accessibility.getCaptionsManager();
     captionsManager.on('styleChange', this.callback);
+  }
+
+  build() {
+    Column() {
+    }
+  }
+}
+```
+
+## onEnableChange
+
+```TypeScript
+onEnableChange(callback: Callback<boolean>): void
+```
+
+监听字幕配置启用状态变化事件。使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-CaptionsManager-onEnableChange(callback: Callback<boolean>): void--><!--Device-CaptionsManager-onEnableChange(callback: Callback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数，在启用状态变化时将状态通过此函数进行通知。 |
+
+**示例**
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+
+@Entry
+@Component
+struct Index {
+  callback: (data: boolean) => void = this.eventCallback;
+  eventCallback(data: boolean): void {
+    console.info(`caption state change, result: ${JSON.stringify(data)}`);
+  }
+
+  aboutToAppear(): void {
+    let captionsManager = accessibility.getCaptionsManager();
+    captionsManager.onEnableChange(this.callback);
+  }
+
+  build() {
+    Column() {
+    }
+  }
+}
+```
+
+## onStyleChange
+
+```TypeScript
+onStyleChange(callback: Callback<CaptionsStyle>): void
+```
+
+监听字幕风格变化事件。使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-CaptionsManager-onStyleChange(callback: Callback<CaptionsStyle>): void--><!--Device-CaptionsManager-onStyleChange(callback: Callback<CaptionsStyle>): void-End-->
+
+**系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | 是 | 回调函数，在字幕风格变化时通过此函数进行通知。 |
+
+**示例**
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+
+@Entry
+@Component
+struct Index {
+  callback: (data: accessibility.CaptionsStyle) => void = this.eventCallback;
+  eventCallback(data: accessibility.CaptionsStyle): void {
+    console.info(`caption style change, result: ${JSON.stringify(data)}`);
+  }
+
+  aboutToAppear(): void {
+    let captionsManager = accessibility.getCaptionsManager();
+    captionsManager.onStyleChange(this.callback);
   }
 
   build() {

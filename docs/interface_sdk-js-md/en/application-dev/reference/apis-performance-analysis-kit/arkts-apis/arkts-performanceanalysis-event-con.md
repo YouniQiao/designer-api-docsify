@@ -108,6 +108,26 @@ Event indicating the application launch duration. This is a system event name co
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
+## appFreezeWarning
+
+```TypeScript
+const appFreezeWarning: string
+```
+
+Application freeze warning event. This is a system event name constant.
+
+**Model restriction**: This API can be used only in the stage model. **Atomic service API**: This parameter can be used in atomic services since API version 26.0.0.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-event-const appFreezeWarning: string--><!--Device-event-const appFreezeWarning: string-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiAppEvent
+
 ## AUDIO_JANK_FRAME
 
 ```TypeScript
@@ -285,26 +305,6 @@ User logout event. This is a reserved application event name constant.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-event-const USER_LOGOUT: string--><!--Device-event-const USER_LOGOUT: string-End-->
-
-**System capability:** SystemCapability.HiviewDFX.HiAppEvent
-
-## appFreezeWarning
-
-```TypeScript
-const appFreezeWarning: string
-```
-
-Application freeze warning event. This is a system event name constant.
-
-**Model restriction**: This API can be used only in the stage model. **Atomic service API**: This parameter can be used in atomic services since API version 26.0.0.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-event-const appFreezeWarning: string--><!--Device-event-const appFreezeWarning: string-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 

@@ -17,35 +17,6 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
-## offCommand
-
-```TypeScript
-offCommand(callback?: IAuthWidgetCallback): void
-```
-
-Unsubscribes from commands sent from the user authentication framework.
-
-**Since:** 23
-
-<!--Device-UserAuthWidgetMgr-offCommand(callback?: IAuthWidgetCallback): void--><!--Device-UserAuthWidgetMgr-offCommand(callback?: IAuthWidgetCallback): void-End-->
-
-**System capability:** SystemCapability.UserIAM.UserAuth.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | No | Callback to unregister. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
-
 ## off('command')
 
 ```TypeScript
@@ -98,17 +69,17 @@ try {
 }
 ```
 
-## onCommand
+## offCommand
 
 ```TypeScript
-onCommand(callback: IAuthWidgetCallback): void
+offCommand(callback?: IAuthWidgetCallback): void
 ```
 
-Subscribes to commands from the user authentication framework for the user authentication widget.
+Unsubscribes from commands sent from the user authentication framework.
 
 **Since:** 23
 
-<!--Device-UserAuthWidgetMgr-onCommand(callback: IAuthWidgetCallback): void--><!--Device-UserAuthWidgetMgr-onCommand(callback: IAuthWidgetCallback): void-End-->
+<!--Device-UserAuthWidgetMgr-offCommand(callback?: IAuthWidgetCallback): void--><!--Device-UserAuthWidgetMgr-offCommand(callback?: IAuthWidgetCallback): void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -118,7 +89,7 @@ Subscribes to commands from the user authentication framework for the user authe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | Yes | Callback used to return the command from the user authentication framework to the user authentication widget. |
+| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | No | Callback to unregister. |
 
 **Error codes:**
 
@@ -178,4 +149,33 @@ try {
   console.error(`userAuth widgetMgr catch error: Code is ${err?.code}, message is ${err?.message}`);
 }
 ```
+
+## onCommand
+
+```TypeScript
+onCommand(callback: IAuthWidgetCallback): void
+```
+
+Subscribes to commands from the user authentication framework for the user authentication widget.
+
+**Since:** 23
+
+<!--Device-UserAuthWidgetMgr-onCommand(callback: IAuthWidgetCallback): void--><!--Device-UserAuthWidgetMgr-onCommand(callback: IAuthWidgetCallback): void-End-->
+
+**System capability:** SystemCapability.UserIAM.UserAuth.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | Yes | Callback used to return the command from the user authentication framework to the user authentication widget. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 

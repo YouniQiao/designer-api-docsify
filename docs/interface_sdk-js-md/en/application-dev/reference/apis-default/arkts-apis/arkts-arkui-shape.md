@@ -11,19 +11,19 @@
 
 | Name | Description |
 | --- | --- |
-| [BaseShape](arkts-arkuishape-baseshape-c.md) | Base shape class |
-| [CircleShape](arkts-arkuishape-circleshape-c.md) | Defines a circle drawing class. |
-| [CommonShapeMethod](arkts-arkuishape-commonshapemethod-c.md) | Common shape method class |
-| [EllipseShape](arkts-arkuishape-ellipseshape-c.md) | Defines an ellipse drawing class. |
-| [PathShape](arkts-arkuishape-pathshape-c.md) | Defines a path drawing class. |
-| [RectShape](arkts-arkuishape-rectshape-c.md) | Defines a rect drawing class. |
+| [BaseShape](arkts-arkui-shape-baseshape-c.md) | Base shape class |
+| [CircleShape](arkts-arkui-shape-circleshape-c.md) | Defines a circle drawing class. |
+| [CommonShapeMethod](arkts-arkui-shape-commonshapemethod-c.md) | Common shape method class |
+| [EllipseShape](arkts-arkui-shape-ellipseshape-c.md) | Defines an ellipse drawing class. |
+| [PathShape](arkts-arkui-shape-pathshape-c.md) | Defines a path drawing class. |
+| [RectShape](arkts-arkui-shape-rectshape-c.md) | Defines a rect drawing class. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [PathShapeOptions](arkts-arkuishape-pathshapeoptions-i.md) | Interface for PathShape constructor parameters. |
-| [RectShapeOptions](arkts-arkuishape-rectshapeoptions-i.md) | Interface for RectShape constructor parameters. |
-| [RoundRectShapeOptions](arkts-arkuishape-roundrectshapeoptions-i.md) | Interface for RectShape constructor parameters with separate radius values. |
-| [ShapeSize](arkts-arkuishape-shapesize-i.md) | Interface for shape size properties. |
+| [PathShapeOptions](arkts-arkui-shape-pathshapeoptions-i.md) | Interface for PathShape constructor parameters. |
+| [RectShapeOptions](arkts-arkui-shape-rectshapeoptions-i.md) | Interface for RectShape constructor parameters. |
+| [RoundRectShapeOptions](arkts-arkui-shape-roundrectshapeoptions-i.md) | Interface for RectShape constructor parameters with separate radius values. |
+| [ShapeSize](arkts-arkui-shape-shapesize-i.md) | Interface for shape size properties. |
 

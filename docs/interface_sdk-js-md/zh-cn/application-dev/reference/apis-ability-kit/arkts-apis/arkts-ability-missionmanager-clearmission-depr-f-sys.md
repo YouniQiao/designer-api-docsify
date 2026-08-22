@@ -56,6 +56,24 @@ try {
 }
 ```
 
+```TypeScript
+import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
+
+let testMissionId = 2;
+try {
+  // 清理指定任务
+  missionManager.clearMission(testMissionId).then((data) => {
+    console.info(`clearMission successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`clearMission failed. Code: ${error.code}, message: ${error.message}.`);
+  });
+} catch (error) {
+  let err = error as BusinessError;
+  console.error(`clearMission sync failed. Code: ${err.code}, message: ${err.message}.`);
+}
+```
+
 
 ## clearMission
 
@@ -93,21 +111,5 @@ function clearMission(missionId: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-let testMissionId = 2;
-try {
-  // 清理指定任务
-  missionManager.clearMission(testMissionId).then((data) => {
-    console.info(`clearMission successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`clearMission failed. Code: ${error.code}, message: ${error.message}.`);
-  });
-} catch (error) {
-  let err = error as BusinessError;
-  console.error(`clearMission sync failed. Code: ${err.code}, message: ${err.message}.`);
-}
-```
+参见 [clearMission](#clearmission)
 

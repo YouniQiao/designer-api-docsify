@@ -24,13 +24,13 @@ Indicates the local name data type in the advertisement packet. If both the prop
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AdvertiseData-advertiseName?: string--><!--Device-AdvertiseData-advertiseName?: string-End-->
 

@@ -32,7 +32,7 @@ Opens a stream based on an FD. This API returns the result synchronously. To clo
 
 | Type | Description |
 | --- | --- |
-| [Stream](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-stream-i.md) | File stream. |
+| [Stream](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-stream-i.md) | File stream. |
 
 **Error codes:**
 

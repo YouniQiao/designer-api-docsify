@@ -79,6 +79,39 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { inputEventClient, KeyCode } from '@kit.InputKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+              let backKeyUp: inputEventClient.KeyEvent = {
+                isPressed: false,
+                keyCode: KeyCode.KEYCODE_BACK,
+                keyDownDuration: 0,
+                isIntercepted: false
+              };
+              let keyEventInfo: inputEventClient.KeyEventInfo = {
+                KeyEvent: backKeyUp
+              }
+              // 注入按键事件
+              inputEventClient.injectEvent(keyEventInfo);
+          } catch (error) {
+            console.error(`Failed to inject KeyEvent, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## injectEvent
 
@@ -114,36 +147,5 @@ function injectEvent(keyEvent: KeyEventInfo): void
 
 **示例**
 
-```TypeScript
-import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { inputEventClient, KeyCode } from '@kit.InputKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-              let backKeyUp: inputEventClient.KeyEvent = {
-                isPressed: false,
-                keyCode: KeyCode.KEYCODE_BACK,
-                keyDownDuration: 0,
-                isIntercepted: false
-              };
-              let keyEventInfo: inputEventClient.KeyEventInfo = {
-                KeyEvent: backKeyUp
-              }
-              // 注入按键事件
-              inputEventClient.injectEvent(keyEventInfo);
-          } catch (error) {
-            console.error(`Failed to inject KeyEvent, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+参见 [injectEvent](#injectevent)
 

@@ -63,6 +63,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.assertComponentExist(BY.text('next page'));
+}
+```
+
 ## click
 
 ```TypeScript
@@ -103,10 +113,42 @@ Clicks the target coordinate point. This method can be used only on the default 
 
 ```TypeScript
 // xxx.test.ets
+import { Driver, ON, Component } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  await button.click();
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { Driver } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
+  await driver.click(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, Driver, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  await button.click();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
   await driver.click(100, 100);
 }
 ```
@@ -230,6 +272,24 @@ import { Driver } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { PointerMatrix } from '@kit.TestKit';
+
+async function demo() {
+  let pointerMatrix: PointerMatrix = PointerMatrix.create(2, 3);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
 }
 ```
 
@@ -372,6 +432,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.delayMs(1000);
+}
+```
+
 ## doubleClick
 
 ```TypeScript
@@ -412,10 +482,42 @@ Double-clicks the target coordinate point. This method can be used only on the d
 
 ```TypeScript
 // xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  await button.doubleClick();
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { Driver } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
+  await driver.doubleClick(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  await button.doubleClick();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
   await driver.doubleClick(100, 100);
 }
 ```
@@ -688,6 +790,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.text('next page'));
+}
+```
+
 ## findComponent
 
 ```TypeScript
@@ -720,6 +832,10 @@ Find the first matched [Component](arkts-test-uitest-component-c.md) on current 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+
+**Examples**
+
+See [findComponent](#findcomponent)
 
 ## findComponents
 
@@ -768,6 +884,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let buttonList: Array<UiComponent> = await driver.findComponents(BY.text('next page'));
+}
+```
+
 ## findComponents
 
 ```TypeScript
@@ -800,6 +926,10 @@ Find all the matched [Component](arkts-test-uitest-component-c.md)s on current U
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+
+**Examples**
+
+See [findComponents](#findcomponents)
 
 ## findWindow
 
@@ -881,6 +1011,10 @@ Find the first matched [UiWindow](arkts-test-uitest-uiwindow-c.md) window.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
+**Examples**
+
+See [findWindow](#findwindow)
+
 ## fling
 
 ```TypeScript
@@ -931,6 +1065,26 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver, UiDirection } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.fling(UiDirection.DOWN, 10000);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiDirection } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.fling(UiDirection.DOWN, 10000, 0);
+}
+```
+
 ## fling
 
 ```TypeScript
@@ -969,15 +1123,7 @@ Simulates a fling operation with the specified direction and speed. This API use
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { Driver, UiDirection } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.fling(UiDirection.DOWN, 10000);
-}
-```
+See [fling](#fling)
 
 ## fling
 
@@ -1018,15 +1164,7 @@ Simulates a fling operation on a specified display with the specified direction 
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { Driver, UiDirection } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.fling(UiDirection.DOWN, 10000, 0);
-}
-```
+See [fling](#fling)
 
 ## getDisplayDensity
 
@@ -1073,6 +1211,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let density = await driver.getDisplayDensity(0);
+}
+```
+
 ## getDisplayDensity
 
 ```TypeScript
@@ -1110,15 +1258,7 @@ Obtains the density of the specified display of the current device. This API use
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let density = await driver.getDisplayDensity(0);
-}
-```
+See [getDisplayDensity](#getdisplaydensity)
 
 ## getDisplayRotation
 
@@ -1165,6 +1305,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { DisplayRotation, Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let rotation: DisplayRotation = await driver.getDisplayRotation(0);
+}
+```
+
 ## getDisplayRotation
 
 ```TypeScript
@@ -1202,15 +1352,7 @@ Obtains the display rotation of the specified device. This API uses a promise to
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { DisplayRotation, Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let rotation: DisplayRotation = await driver.getDisplayRotation(0);
-}
-```
+See [getDisplayRotation](#getdisplayrotation)
 
 ## getDisplaySize
 
@@ -1257,6 +1399,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let size = await driver.getDisplaySize(0);
+}
+```
+
 ## getDisplaySize
 
 ```TypeScript
@@ -1294,15 +1446,7 @@ Obtains the size of the specified display on the current device. This API uses a
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let size = await driver.getDisplaySize(0);
-}
-```
+See [getDisplaySize](#getdisplaysize)
 
 ## injectKnucklePointerAction
 
@@ -1521,9 +1665,62 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
+  let text: Component = await driver.findComponent(ON.text('hello world'));
+  await text.inputText('123');
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function mode_demo() {
+  let driver: Driver = Driver.create();
+  let text: Component = await driver.findComponent(ON.text('hello world'));
+  await text.inputText('123', { paste: true, addition: false });
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
   let text: Component = await driver.findComponent(ON.type('TextInput'));
   let point = await text.getBoundsCenter();
   await driver.inputText(point, '123');
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let text: Component = await driver.findComponent(ON.type('TextInput'));
+  let point = await text.getBoundsCenter();
+  await driver.inputText(point, '123', { paste: true, addition: false });
+}
+
+async function demo_Chinese() {
+  let driver: Driver = Driver.create();
+  let text: Component = await driver.findComponent(ON.type('TextInput'));
+  let point = await text.getBoundsCenter();
+  await driver.inputText(point, 'Chinese&', { paste: false, addition: true });
+  // Copy and paste Chinese and a special character to the end of the specified text.
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let text: UiComponent = await driver.findComponent(BY.text('hello world'));
+  await text.inputText('123');
 }
 ```
 
@@ -1567,25 +1764,7 @@ Inputs text at a specified coordinate point in a specified input mode. This API 
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let text: Component = await driver.findComponent(ON.type('TextInput'));
-  let point = await text.getBoundsCenter();
-  await driver.inputText(point, '123', { paste: true, addition: false });
-}
-
-async function demo_Chinese() {
-  let driver: Driver = Driver.create();
-  let text: Component = await driver.findComponent(ON.type('TextInput'));
-  let point = await text.getBoundsCenter();
-  await driver.inputText(point, 'Chinese&', { paste: false, addition: true });
-  // Copy and paste Chinese and a special character to the end of the specified text.
-}
-```
+See [inputText](#inputtext)
 
 ## isComponentPresentWhenDrag
 
@@ -1832,10 +2011,42 @@ Long-clicks the target coordinate point. This method can be used only on the def
 
 ```TypeScript
 // xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  await button.longClick();
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { Driver } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
+  await driver.longClick(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  await button.longClick();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
   await driver.longClick(100, 100);
 }
 ```
@@ -1946,8 +2157,8 @@ Injects a mouse click action at the specified coordinates, with the optional key
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Target coordinates of the mouse click. |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md). <br>Default value: 0 |
-| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md). <br>Default value: 0 |
+| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
+| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 
 **Return value:**
 
@@ -1996,8 +2207,8 @@ Injects a double-click action at the specified coordinates, with the optional ke
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the double-click. |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md). <br>Default value: 0 |
-| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md). <br>Default value: 0 |
+| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
+| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 
 **Return value:**
 
@@ -2073,6 +2284,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.mouseDrag({ x: 100, y: 100 }, { x: 200, y: 200 }, 600, 2000);
+}
+```
+
 ## mouseDrag
 
 ```TypeScript
@@ -2113,15 +2334,7 @@ Drags the mouse from the start point to the end point. You can specify the dragg
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.mouseDrag({ x: 100, y: 100 }, { x: 200, y: 200 }, 600, 2000);
-}
-```
+See [mouseDrag](#mousedrag)
 
 ## mouseDragWithOptions
 
@@ -2183,8 +2396,8 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the long-click of the mouse device. |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | number | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md). <br>Default value: 0 |
-| key2 | number | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md). <br>Default value: 0 |
+| key1 | number | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
+| key2 | number | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 
 **Return value:**
 
@@ -2211,6 +2424,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver, MouseButton } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.mouseLongClick({ x: 248, y: 194 }, MouseButton.MOUSE_BUTTON_LEFT, 2072, 0, 2000);
+}
+```
+
 ## mouseLongClick
 
 ```TypeScript
@@ -2233,8 +2456,8 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the long-click of the mouse device. |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md). <br>Default value: 0 |
-| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md). <br>Default value: 0 |
+| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
+| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 | duration | int | No | Long-click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, error code 401 is thrown. If the value is **null** or **undefined**, the default value is used. |
 
 **Return value:**
@@ -2252,15 +2475,7 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { Driver, MouseButton } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.mouseLongClick({ x: 248, y: 194 }, MouseButton.MOUSE_BUTTON_LEFT, 2072, 0, 2000);
-}
-```
+See [mouseLongClick](#mouselongclick)
 
 ## mouseMoveTo
 
@@ -2381,8 +2596,8 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Target coordinates of mouse scrolling. |
 | down | boolean | Yes | Whether the mouse wheel scrolls downward. The value **true** indicates the mouse wheel scrolls downward, and **false** indicates the mouse wheel scrolls upward. |
 | d | number | Yes | Number of ticks scrolled by the mouse wheel. A tick indicates a 120 px scroll at the mouse cursor position. The value is an integer greater than or equal to 0. If the value is a negative number, error code 401 is returned. |
-| key1 | number | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md). <br>Default value: 0 |
-| key2 | number | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md). <br>Default value: 0 |
+| key1 | number | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
+| key2 | number | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 
 **Return value:**
 
@@ -2409,6 +2624,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.mouseScroll({ x: 360, y: 640 }, true, 30, 2072, 20);
+}
+```
+
 ## mouseScroll
 
 ```TypeScript
@@ -2432,8 +2657,8 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Target coordinates of mouse scrolling. |
 | down | boolean | Yes | Whether the mouse wheel scrolls downward. The value **true** indicates the mouse wheel scrolls downward, and **false** indicates the mouse wheel scrolls upward. |
 | d | int | Yes | Number of ticks scrolled by the mouse wheel. A tick indicates a 120 px scroll at the mouse cursor position. The value is an integer greater than or equal to 0. If the value is a negative number, error code 401 is returned. |
-| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md). <br>Default value: 0 |
-| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md). <br>Default value: 0 |
+| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
+| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 | speed | int | No | Scroll speed of the mouse wheel. <br>Value range:[1, 500] <br>Unit: ticks/s <br>Throws error code 401 if negative. <br>Default value: 20 |
 
 **Return value:**
@@ -2451,15 +2676,7 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.mouseScroll({ x: 360, y: 640 }, true, 30, 2072, 20);
-}
-```
+See [mouseScroll](#mousescroll)
 
 ## penClick
 
@@ -2698,6 +2915,26 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.pressBack(0);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.pressBack();
+}
+```
+
 ## pressBack
 
 ```TypeScript
@@ -2735,15 +2972,7 @@ Simulates pressing the Back button on a specified screen. This API uses a promis
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.pressBack(0);
-}
-```
+See [pressBack](#pressback)
 
 ## pressHome
 
@@ -2785,6 +3014,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.pressHome(0);
+}
+```
+
 ## pressHome
 
 ```TypeScript
@@ -2822,15 +3061,7 @@ Injects an operation of returning to the home screen on the specified display. T
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.pressHome(0);
-}
-```
+See [pressHome](#presshome)
 
 ## screenCap
 
@@ -2879,6 +3110,26 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.screenCap('/data/storage/el2/base/cache/1.png', 0);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.screenCap('/data/storage/el2/base/cache/1.png');
+}
+```
+
 ## screenCap
 
 ```TypeScript
@@ -2917,15 +3168,7 @@ Captures the specified screen and saves it as a PNG image to the given save path
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.screenCap('/data/storage/el2/base/cache/1.png', 0);
-}
-```
+See [screenCap](#screencap)
 
 ## screenCapture
 
@@ -3122,6 +3365,16 @@ import { Driver } from '@kit.TestKit';
 async function demo() {
   let driver: Driver = Driver.create();
   await driver.swipe(100, 100, 200, 200, 600);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.swipe(100, 100, 200, 200);
 }
 ```
 
@@ -3332,9 +3585,9 @@ Triggers a combination key event based on the specified key code values. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key0 | number | Yes | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md). |
-| key1 | number | Yes | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md). |
-| key2 | number | No | Third key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md). <br>Default value: 0 |
+| key0 | number | Yes | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). |
+| key1 | number | Yes | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). |
+| key2 | number | No | Third key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 
 **Return value:**
 
@@ -3361,6 +3614,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.triggerCombineKeys(2072, 2047, 2035, 0);
+}
+```
+
 ## triggerCombineKeys
 
 ```TypeScript
@@ -3381,9 +3644,9 @@ Triggers a combination key event based on the specified key code values on the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key0 | int | Yes | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md). |
-| key1 | int | Yes | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md). |
-| key2 | int | No | Third key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md). <br>Default value: 0 |
+| key0 | int | Yes | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). |
+| key1 | int | Yes | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). |
+| key2 | int | No | Third key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 | displayId | int | No | Display ID. The value is an integer greater than or equal to 0. The default value is the default display ID of the device. |
 
 **Return value:**
@@ -3401,15 +3664,7 @@ Triggers a combination key event based on the specified key code values on the s
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.triggerCombineKeys(2072, 2047, 2035, 0);
-}
-```
+See [triggerCombineKeys](#triggercombinekeys)
 
 ## triggerKey
 
@@ -3431,7 +3686,7 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | int | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md). |
+| keyCode | int | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). |
 
 **Return value:**
 
@@ -3459,6 +3714,28 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+import { KeyCode } from '@kit.InputKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.triggerKey(KeyCode.KEYCODE_BACK, 0); // Back button
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiDriver } from '@kit.TestKit';
+import { KeyCode } from '@kit.InputKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.triggerKey(KeyCode.KEYCODE_BACK); // Back button
+}
+```
+
 ## triggerKey
 
 ```TypeScript
@@ -3479,7 +3756,7 @@ Triggers a key event by passing the key code value on the specified screen. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | int | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md). |
+| keyCode | int | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). |
 | displayId | int | Yes | Display ID. The value is an integer greater than or equal to 0. <br> **Note：**: If the input **displayId** does not exist, the exception **401** is reported. |
 
 **Return value:**
@@ -3497,16 +3774,7 @@ Triggers a key event by passing the key code value on the specified screen. This
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-import { KeyCode } from '@kit.InputKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.triggerKey(KeyCode.KEYCODE_BACK, 0); // Back button
-}
-```
+See [triggerKey](#triggerkey)
 
 ## triggerPenKey
 
@@ -3632,6 +3900,10 @@ Find the first matched [Component](arkts-test-uitest-component-c.md) on current 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+
+**Examples**
+
+See [waitForComponent](#waitforcomponent)
 
 ## waitForIdle
 

@@ -23,7 +23,7 @@ export function createXComponentNodeWithNativeParameters(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkuiuicontext-uicontext-c.md) | 是 | 用于创建 FrameNode 的 UI 上下文 |
+| context | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 用于创建 FrameNode 的 UI 上下文 |
 | parameters | NativeXComponentParameters | 是 | 原生开发初始化参数 |
 | options | [FrameNodeOptions](arkts-framenode-framenodeoptions-i.md) | 否 | Options for configuring FrameNode creation.<br>**起始版本：** 26.0.0 |
 

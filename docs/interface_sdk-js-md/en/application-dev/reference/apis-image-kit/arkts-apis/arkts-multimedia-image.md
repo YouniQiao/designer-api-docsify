@@ -22,8 +22,6 @@ import { image } from '@kit.ImageKit';
 
 | Name | Description |
 | --- | --- |
-| [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md) | Creates an ImageSource instance in incremental mode based on buffers. Such an instance does not support reading or writing of Exif information. |
-| [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md) | Creates an ImageSource instance in incremental mode based on buffers. Such an instance does not support reading or writing of Exif information. |
 | [createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md) | Creates an AuxiliaryPicture instance based on the ArrayBuffer image data, auxiliary picture size, and auxiliary picture type. This API accepts only continuous pixel data in BGRA format and will create an auxiliary picture in RGBA format. |
 | [createAuxiliaryPictureUsingAllocator](arkts-image-image-createauxiliarypictureusingallocator-f.md) | Create an &lt;b&gt;AuxiliaryPicture&lt;/b&gt; object, the memory type used by the AuxiliaryPicture can be specified by allocatorType IMAGE_ALLOCATOR_TYPE. By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the AuxiliaryPicture returned by this interface, please always consider the impact of stride. The created auxiliary picture is initialized with the input pixels. |
 | [createEmptyPixelMap](arkts-image-image-createemptypixelmap-f.md) | Creates an empty PixelMap. |
@@ -48,7 +46,9 @@ import { image } from '@kit.ImageKit';
 | [createImageSource](arkts-image-image-createimagesource-f.md) | Creates an ImageSource instance based on the buffer. |
 | [createImageSource](arkts-image-image-createimagesource-f.md) | Creates an ImageSource instance based on the raw file descriptor of an image resource file. Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
 | [createImageSource](arkts-image-image-createimagesource-f.md) | Creates an ImageSource instance based on the raw file descriptor. |
+| [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md) | Creates an ImageSource instance in incremental mode based on buffers. Such an instance does not support reading or writing of Exif information. |
 | [createIncrementalSource](arkts-image-image-createincrementalsource-f.md) | Creates an ImageSource instance based on the buffer in incremental. |
+| [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md) | Creates an ImageSource instance in incremental mode based on buffers. Such an instance does not support reading or writing of Exif information. |
 | [createIncrementalSource](arkts-image-image-createincrementalsource-f.md) | Creates an ImageSource instance based on the buffer in incremental. |
 | [createPicture](arkts-image-image-createpicture-f.md) | Creates a Picture object based on a main PixelMap. |
 | [createPictureFromParcel](arkts-image-image-createpicturefromparcel-f.md) | Creates a Picture object from a MessageSequence object. |
@@ -185,8 +185,8 @@ import { image } from '@kit.ImageKit';
 | [ScaleMode](arkts-image-image-scalemode-e.md) | Enumerates the scale modes of images. |
 | [TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md) | Enumerates the properties available for the metadata of a TIFF image. |
 | [WebPPropertyKey](arkts-image-image-webppropertykey-e.md) | Enumerates the properties available for the metadata of a WebP image. |
-| [XMPTagType](arkts-image-image-xmptagtype-e.md) | Enumerates XMP tag type. |
 | [XmageColorMode](arkts-image-image-xmagecolormode-e.md) | Enumerates the XMAGE color modes. |
+| [XMPTagType](arkts-image-image-xmptagtype-e.md) | Enumerates XMP tag type. |
 
 <!--Del-->
 ### Enums(System API)

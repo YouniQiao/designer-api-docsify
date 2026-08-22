@@ -26,7 +26,7 @@ Obtain the number of cached GNSS locations reported at a time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Indicates the callback for reporting the cached GNSS locations size. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Indicates the callback for reporting the cached GNSS locations size. |
 
 **Error codes:**
 
@@ -52,6 +52,22 @@ try {
       console.info('getCachedGnssLocationsSize: size=' + JSON.stringify(size));
     }
   });
+} catch (err) {
+  console.error("errCode:" + err.code + ", message:" + err.message);
+}
+```
+
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  geoLocationManager.getCachedGnssLocationsSize().then((result) => {
+    console.info('promise, getCachedGnssLocationsSize: ' + JSON.stringify(result));
+  })
+    .catch((error: BusinessError) => {
+      console.error('promise, getCachedGnssLocationsSize: error=' + JSON.stringify(error));
+    });
 } catch (err) {
   console.error("errCode:" + err.code + ", message:" + err.message);
 }
@@ -91,19 +107,5 @@ Obtain the number of cached GNSS locations.
 
 **Examples**
 
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  geoLocationManager.getCachedGnssLocationsSize().then((result) => {
-    console.info('promise, getCachedGnssLocationsSize: ' + JSON.stringify(result));
-  })
-    .catch((error: BusinessError) => {
-      console.error('promise, getCachedGnssLocationsSize: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
+See [getCachedGnssLocationsSize](#getcachedgnsslocationssize)
 

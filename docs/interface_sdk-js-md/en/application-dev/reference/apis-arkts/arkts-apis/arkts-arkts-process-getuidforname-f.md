@@ -42,3 +42,8 @@ Obtains the UID of a user from the user database of the system based on the spec
 let pres = process.getUidForName("tool");
 ```
 
+```TypeScript
+let pro = new process.ProcessManager();
+let pres = pro.getUidForName("tool");
+```
+

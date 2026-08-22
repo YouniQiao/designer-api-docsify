@@ -36,16 +36,16 @@ import { cooperate } from '@kit.DistributedServiceKit';
 | [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md) | Obtains the screen hopping status of the target device. This API uses a promise to return the result. |
 | [getCrossingSwitchState](arkts-distributedservice-cooperate-getcrossingswitchstate-f-sys.md) | Obtains the screen hopping status of the target device. This API uses an asynchronous callback to return the result. |
 | [getCrossingSwitchState](arkts-distributedservice-cooperate-getcrossingswitchstate-f-sys.md) | Obtains the screen hopping status of the target device. This API uses a promise to return the result. |
-| [offCooperateMessage](arkts-distributedservice-cooperate-offcooperatemessage-f-sys.md) | Disables listening for screen hopping status change events. |
-| [offCooperateMouseEvent](arkts-distributedservice-cooperate-offcooperatemouseevent-f-sys.md) | Disables listening for mouse pointer position information on the specified device for cooperation. |
 | [off_cooperate](arkts-distributedservice-cooperate-offcooperate-f-sys.md#offcooperate) | Disables listening for screen hopping status change events. |
 | [off_cooperateMessage](arkts-distributedservice-cooperate-offcooperatemessage-f-sys.md) | Disables listening for screen hopping status change events. |
 | [off_cooperateMouse](arkts-distributedservice-cooperate-offcooperatemouse-f-sys.md#offcooperatemouse) | Unregisters the listener for the mouse cursor position of a device. |
-| [onCooperateMessage](arkts-distributedservice-cooperate-oncooperatemessage-f-sys.md) | Enables listening for screen hopping status change events. |
-| [onCooperateMouseEvent](arkts-distributedservice-cooperate-oncooperatemouseevent-f-sys.md) | Enables listening for mouse pointer position information on the specified device for cooperation. |
+| [offCooperateMessage](arkts-distributedservice-cooperate-offcooperatemessage-f-sys.md) | Disables listening for screen hopping status change events. |
+| [offCooperateMouseEvent](arkts-distributedservice-cooperate-offcooperatemouseevent-f-sys.md) | Disables listening for mouse pointer position information on the specified device for cooperation. |
 | [on_cooperate](arkts-distributedservice-cooperate-oncooperate-f-sys.md#oncooperate) | Enables listening for screen hopping status change events. |
 | [on_cooperateMessage](arkts-distributedservice-cooperate-oncooperatemessage-f-sys.md) | Enables listening for screen hopping status change events. |
 | [on_cooperateMouse](arkts-distributedservice-cooperate-oncooperatemouse-f-sys.md#oncooperatemouse) | Registers a listener for the mouse cursor position of a device. |
+| [onCooperateMessage](arkts-distributedservice-cooperate-oncooperatemessage-f-sys.md) | Enables listening for screen hopping status change events. |
+| [onCooperateMouseEvent](arkts-distributedservice-cooperate-oncooperatemouseevent-f-sys.md) | Enables listening for mouse pointer position information on the specified device for cooperation. |
 | [prepare](arkts-distributedservice-cooperate-prepare-f-sys.md) | Prepares for screen hopping. This API uses an asynchronous callback to return the result. |
 | [prepare](arkts-distributedservice-cooperate-prepare-f-sys.md) | Prepares for screen hopping. This API uses a promise to return the result. |
 | [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md) | Prepares for screen hopping. This API uses an asynchronous callback to return the result. |

@@ -65,3 +65,32 @@ Set a delegate used to receive the progress of the download triggered from WebDo
 | --- | --- | --- | --- |
 | delegate | [WebDownloadDelegate](arkts-webview-webdownloaddelegate-c.md) | Yes | Delegate used for download triggered from WebDownloadManager. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+

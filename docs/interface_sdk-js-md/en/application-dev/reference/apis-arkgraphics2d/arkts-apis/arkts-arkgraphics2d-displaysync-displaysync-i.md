@@ -14,26 +14,6 @@ An object that implements the setting of the frame rate and callback. It provide
 import { displaySync } from '@kit.ArkGraphics2D';
 ```
 
-## offFrame
-
-```TypeScript
-offFrame(callback?: Callback<IntervalInfo>): void
-```
-
-Unsubscribes from change events of each frame.
-
-**Since:** 23
-
-<!--Device-DisplaySync-offFrame(callback?: Callback<IntervalInfo>): void--><!--Device-DisplaySync-offFrame(callback?: Callback<IntervalInfo>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | No | Callback used for unsubscription. If no value is passed in, all subscriptions to the specified event are canceled. |
-
 ## off('frame')
 
 ```TypeScript
@@ -53,7 +33,7 @@ Unsubscribes from change events of each frame.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'frame' | Yes | Event type. The value is fixed at **'frame'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | No | Callback used for unsubscription. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | No | Callback used for unsubscription. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Examples**
 
@@ -68,17 +48,17 @@ backDisplaySync?.on("frame", callback)
 backDisplaySync?.off("frame", callback)
 ```
 
-## onFrame
+## offFrame
 
 ```TypeScript
-onFrame(callback: Callback<IntervalInfo>): void
+offFrame(callback?: Callback<IntervalInfo>): void
 ```
 
-Subscribes to change events of each frame.
+Unsubscribes from change events of each frame.
 
 **Since:** 23
 
-<!--Device-DisplaySync-onFrame(callback: Callback<IntervalInfo>): void--><!--Device-DisplaySync-onFrame(callback: Callback<IntervalInfo>): void-End-->
+<!--Device-DisplaySync-offFrame(callback?: Callback<IntervalInfo>): void--><!--Device-DisplaySync-offFrame(callback?: Callback<IntervalInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,7 +66,7 @@ Subscribes to change events of each frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | Yes | Callback used for subscription. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | No | Callback used for unsubscription. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 ## on('frame')
 
@@ -107,7 +87,7 @@ Subscribes to change events of each frame.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'frame' | Yes | Event type. The value is fixed at **'frame'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | Yes | Callback used for subscription. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | Yes | Callback used for subscription. |
 
 **Examples**
 
@@ -119,6 +99,26 @@ let callback = (frameInfo: displaySync.IntervalInfo) => {
 // Subscribe to the event.
 backDisplaySync?.on("frame", callback)
 ```
+
+## onFrame
+
+```TypeScript
+onFrame(callback: Callback<IntervalInfo>): void
+```
+
+Subscribes to change events of each frame.
+
+**Since:** 23
+
+<!--Device-DisplaySync-onFrame(callback: Callback<IntervalInfo>): void--><!--Device-DisplaySync-onFrame(callback: Callback<IntervalInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | Yes | Callback used for subscription. |
 
 ## setExpectedFrameRateRange
 

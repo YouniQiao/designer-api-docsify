@@ -90,6 +90,30 @@ try {
 }
 ```
 
+```TypeScript
+// 获取bundleInfo，包含permissions信息的abilitiesInfo信息
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleFlags =
+  bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_HAP_MODULE | bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_ABILITY |
+  bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION;
+
+try {
+  bundleManager.getBundleInfoForSelf(bundleFlags, (err, data) => {
+    if (err) {
+      hilog.error(0x0000, 'testTag', 'getBundleInfoForSelf failed: %{public}s', err.message);
+    } else {
+      hilog.info(0x0000, 'testTag', 'getBundleInfoForSelf successfully: %{public}s', JSON.stringify(data));
+    }
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getBundleInfoForSelf failed: %{public}s', message);
+}
+```
+
 
 ## getBundleInfoForSelf
 
@@ -122,27 +146,5 @@ function getBundleInfoForSelf(bundleFlags: int, callback: AsyncCallback<BundleIn
 
 **示例**
 
-```TypeScript
-// 获取bundleInfo，包含permissions信息的abilitiesInfo信息
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleFlags =
-  bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_HAP_MODULE | bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_ABILITY |
-  bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION;
-
-try {
-  bundleManager.getBundleInfoForSelf(bundleFlags, (err, data) => {
-    if (err) {
-      hilog.error(0x0000, 'testTag', 'getBundleInfoForSelf failed: %{public}s', err.message);
-    } else {
-      hilog.info(0x0000, 'testTag', 'getBundleInfoForSelf successfully: %{public}s', JSON.stringify(data));
-    }
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getBundleInfoForSelf failed: %{public}s', message);
-}
-```
+参见 [getBundleInfoForSelf](#getbundleinfoforself)
 

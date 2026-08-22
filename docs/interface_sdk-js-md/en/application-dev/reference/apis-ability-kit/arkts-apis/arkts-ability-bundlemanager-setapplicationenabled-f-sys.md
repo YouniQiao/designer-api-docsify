@@ -58,6 +58,46 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 let bundleName = "com.ohos.myapplication";
 
 try {
+  bundleManager.setApplicationEnabled(bundleName, false, err => {
+    if (err) {
+      hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', err.message);
+    } else {
+      hilog.info(0x0000, 'testTag', 'setApplicationEnabled successfully.');
+    }
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', message);
+}
+```
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName = "com.ohos.myapplication";
+
+try {
+  bundleManager.setApplicationEnabled(bundleName, false).then(() => {
+    hilog.info(0x0000, "testTag", "setApplicationEnabled successfully.");
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', message);
+}
+```
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName = "com.ohos.myapplication";
+
+try {
   bundleManager.setApplicationEnabled(bundleName, 1, false).then(() => {
     hilog.info(0x0000, "testTag", "setApplicationEnabled successfully.");
   }).catch((err: BusinessError) => {
@@ -114,6 +154,10 @@ Sets the enabled or disabled state of a specified application or application clo
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle is not found. |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
 
+**Examples**
+
+See [setApplicationEnabled](#setapplicationenabled)
+
 
 ## setApplicationEnabled
 
@@ -139,7 +183,7 @@ Enables or disables an application. This API uses an asynchronous callback to re
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | isEnabled | boolean | Yes | Whether to enable the application. **true** to enable, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -152,26 +196,7 @@ Enables or disables an application. This API uses an asynchronous callback to re
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = "com.ohos.myapplication";
-
-try {
-  bundleManager.setApplicationEnabled(bundleName, false, err => {
-    if (err) {
-      hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', err.message);
-    } else {
-      hilog.info(0x0000, 'testTag', 'setApplicationEnabled successfully.');
-    }
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', message);
-}
-```
+See [setApplicationEnabled](#setapplicationenabled)
 
 
 ## setApplicationEnabled
@@ -216,22 +241,5 @@ Enables or disables an application. This API uses a promise to return the result
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = "com.ohos.myapplication";
-
-try {
-  bundleManager.setApplicationEnabled(bundleName, false).then(() => {
-    hilog.info(0x0000, "testTag", "setApplicationEnabled successfully.");
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', message);
-}
-```
+See [setApplicationEnabled](#setapplicationenabled)
 

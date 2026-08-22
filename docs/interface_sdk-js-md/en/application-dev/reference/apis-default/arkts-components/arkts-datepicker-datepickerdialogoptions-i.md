@@ -142,28 +142,6 @@ Options for customizing the background effect.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## canLoop
-
-```TypeScript
-canLoop?: boolean
-```
-
-Can scroll loop if true is set, on the contrary it can not.
-
-**Type:** boolean
-
-**Default:** true
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DatePickerDialogOptions-canLoop?: boolean--><!--Device-DatePickerDialogOptions-canLoop?: boolean-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## cancelButtonStyle
 
 ```TypeScript
@@ -183,6 +161,28 @@ Style of cancel button.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DatePickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle--><!--Device-DatePickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## canLoop
+
+```TypeScript
+canLoop?: boolean
+```
+
+Can scroll loop if true is set, on the contrary it can not.
+
+**Type:** boolean
+
+**Default:** true
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DatePickerDialogOptions-canLoop?: boolean--><!--Device-DatePickerDialogOptions-canLoop?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

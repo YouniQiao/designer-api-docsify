@@ -60,6 +60,24 @@ policy.updateRemindPolicy(
 );
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .updateRemindPolicy(
+    connection.NetBearType.BEARER_CELLULAR,
+    '1',
+    policy.RemindType.REMIND_TYPE_WARNING
+  )
+  .then(() => {
+    console.info('updateRemindPolicy success');
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
+
 
 ## updateRemindPolicy
 
@@ -106,21 +124,5 @@ function updateRemindPolicy(netType: NetBearType, simId: string, remindType: Rem
 
 **示例**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .updateRemindPolicy(
-    connection.NetBearType.BEARER_CELLULAR,
-    '1',
-    policy.RemindType.REMIND_TYPE_WARNING
-  )
-  .then(() => {
-    console.info('updateRemindPolicy success');
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+参见 [updateRemindPolicy](#updateremindpolicy)
 

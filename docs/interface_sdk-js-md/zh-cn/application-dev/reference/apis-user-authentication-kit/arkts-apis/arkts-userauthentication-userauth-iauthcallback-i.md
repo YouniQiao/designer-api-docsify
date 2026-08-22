@@ -308,6 +308,139 @@ try {
 }
 ```
 
+示例1：以模系统方式进行用户身份认证。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+try {
+  const rand = cryptoFramework.createRandom();
+  const len: int = 16;
+  let randData: Uint8Array | null = null;
+  let retryCount = 0;
+  while (retryCount < 3) {
+    randData = rand?.generateRandomSync(len)?.data;
+    if (randData) {
+      break;
+    }
+    retryCount++;
+  }
+  if (!randData) {
+    return;
+  }
+  const authParam: userAuth.AuthParam = {
+    challenge: randData,
+    authType: [userAuth.UserAuthType.PIN],
+    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
+  };
+  const widgetParam: userAuth.WidgetParam = {
+    title: '请输入密码',
+  };
+  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
+  console.info('get userAuth instance successfully.');
+  // 需要调用UserAuthInstance的start()接口，启动认证后，才能通过onResult获取到认证结果。
+  userAuthInstance.onResult({
+    onResult: (result: userAuth.UserAuthResult) => {
+      console.info(`userAuthInstance callback result = ${result.result}`);
+    }
+  });
+  console.info('auth on successfully.');
+  userAuthInstance.start();
+  console.info('auth start successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+示例2：以模应用方式进行用户身份认证。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+@Entry
+@Component
+struct Index {
+  modelApplicationAuth(): void {
+    try {
+      const rand = cryptoFramework.createRandom();
+      const len: int = 16;
+      let randData: Uint8Array | null = null;
+      let retryCount = 0;
+      while (retryCount < 3) {
+        randData = rand?.generateRandomSync(len)?.data;
+        if (randData) {
+          break;
+        }
+        retryCount++;
+      }
+      if (!randData) {
+        return;
+      }
+      const authParam: userAuth.AuthParam = {
+        challenge: randData,
+        authType: [userAuth.UserAuthType.PIN],
+        authTrustLevel: userAuth.AuthTrustLevel.ATL3,
+      };
+      const uiContext: UIContext = this.getUIContext();
+      const context: Context | undefined = uiContext.getHostContext();
+      const widgetParam: userAuth.WidgetParam = {
+        title: '请输入密码',
+        uiContext: context,
+      };
+      const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
+      console.info('get userAuth instance successfully.');
+      // 需要调用UserAuthInstance的start()接口，启动认证后，才能通过onResult获取到认证结果。
+      userAuthInstance.onResult({
+        onResult: (result: userAuth.UserAuthResult) => {
+          console.info(`userAuthInstance callback result =${result.result}`);
+        }
+      });
+      console.info('auth on successfully.');
+      userAuthInstance.start();
+      console.info('auth start successfully.');
+    } catch (error) {
+      const err: BusinessError = error as BusinessError;
+      console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
+    }
+  }
+
+  build() {
+    Column() {
+      Button('start auth')
+        .onClick(() => {
+          this.modelApplicationAuth();
+        });
+    }
+  }
+}
+```
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let auth = new userAuth.UserAuth();
+let challenge = new Uint8Array([]);
+auth.auth(challenge, userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1, {
+  onResult: (result, extraInfo) => {
+    try {
+      console.info(`auth onResult result = ${result}`);
+      if (result == userAuth.ResultCode.SUCCESS) {
+        // 此处添加认证成功逻辑。
+      }  else {
+        // 此处添加认证失败逻辑。
+      }
+    } catch (error) {
+      console.error(`Failed to auth onResult. Code: ${error.code}, message: ${error.message}`);
+    }
+  }
+});
+```
+
 ## onResult
 
 ```TypeScript

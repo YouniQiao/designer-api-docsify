@@ -22,3 +22,28 @@ type TemplateFormDetailInfoCallback = (info: Array<TemplateFormDetailInfo>) => v
 | --- | --- | --- | --- |
 | info | Array&lt;[TemplateFormDetailInfo](arkts-form-forminfo-templateformdetailinfo-i-sys.md)&gt; | 是 | 模板卡真实卡片信息。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formInfo } from '@kit.FormKit';
+
+let templateFormDetailInfoCallback: formInfo.TemplateFormDetailInfoCallback =
+  (info: Array<formInfo.TemplateFormDetailInfo>): void => {
+    console.info('template form detail info callback success.');
+  };
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formInfo } from '@kit.FormKit';
+
+let templateFormDetailInfoCallback: formInfo.TemplateFormDetailInfoCallback =
+  (info): void => {
+    console.info('template form detail info callback success.');
+  };
+```
+

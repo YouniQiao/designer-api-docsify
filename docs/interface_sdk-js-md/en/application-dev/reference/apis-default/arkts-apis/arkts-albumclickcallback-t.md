@@ -20,7 +20,7 @@ The callback of onAlbumClick event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| albumInfo | [AlbumInfo](arkts-filealbumpickercomponent-albuminfo-c.md) | Yes |  |
+| albumInfo | [AlbumInfo](arkts-file-albumpickercomponent-albuminfo-c.md) | Yes |  |
 
 **Return value:**
 

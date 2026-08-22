@@ -65,6 +65,67 @@ try {
 }
 ```
 
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+
+/* cmHandle为业务调用init接口的返回值，此处仅为示例 */
+let cmHandle: Uint8Array = new Uint8Array([
+  0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08
+]);
+let signRes: Uint8Array = new Uint8Array([
+  0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08
+]);
+try {
+  certificateManager.finish(cmHandle, signRes, (err, cmResult) => {
+    if (err != null) {
+      console.error(`Failed to finish. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info('Succeeded in finishing.');
+    }
+  });
+} catch(error) {
+  console.error(`Failed to finish. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+/* cmHandle为业务调用init接口的返回值，此处仅为示例 */
+let cmHandle: Uint8Array = new Uint8Array([
+  0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08
+]);
+try {
+  /* 签名的finish操作 */
+  certificateManager.finish(cmHandle).then((cmResult) => {
+    if (cmResult?.outData != undefined) {
+      let signRes1 = cmResult?.outData;
+      console.info('Succeeded in finishing signature.');
+    } else {
+      console.info('The result of signature is undefined.');
+    }
+  }).catch((error: Error) => {
+    let err = error as BusinessError;
+    console.error(`Failed to finish signature. Code: ${err.code}, message: ${err.message}`);
+  });
+
+  /* 签名的结果 */
+  let signRes: Uint8Array = new Uint8Array([
+    0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08
+  ]);
+  /* 验签的finish操作 */
+  certificateManager.finish(cmHandle, signRes).then((cmResult) => {
+    console.info('Succeeded in finishing verification.');
+  }).catch((error: Error) => {
+    let err = error as BusinessError;
+    console.error(`Failed to finish verification. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch(error) {
+  console.error(`Failed to finish. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 
 ## finish
 
@@ -100,28 +161,7 @@ function finish(handle: Uint8Array, signature: Uint8Array, callback: AsyncCallba
 
 **示例**
 
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-
-/* cmHandle为业务调用init接口的返回值，此处仅为示例 */
-let cmHandle: Uint8Array = new Uint8Array([
-  0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08
-]);
-let signRes: Uint8Array = new Uint8Array([
-  0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08
-]);
-try {
-  certificateManager.finish(cmHandle, signRes, (err, cmResult) => {
-    if (err != null) {
-      console.error(`Failed to finish. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info('Succeeded in finishing.');
-    }
-  });
-} catch(error) {
-  console.error(`Failed to finish. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [finish](#finish)
 
 
 ## finish
@@ -163,41 +203,5 @@ function finish(handle: Uint8Array, signature?: Uint8Array): Promise<CMResult>
 
 **示例**
 
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-/* cmHandle为业务调用init接口的返回值，此处仅为示例 */
-let cmHandle: Uint8Array = new Uint8Array([
-  0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08
-]);
-try {
-  /* 签名的finish操作 */
-  certificateManager.finish(cmHandle).then((cmResult) => {
-    if (cmResult?.outData != undefined) {
-      let signRes1 = cmResult?.outData;
-      console.info('Succeeded in finishing signature.');
-    } else {
-      console.info('The result of signature is undefined.');
-    }
-  }).catch((error: Error) => {
-    let err = error as BusinessError;
-    console.error(`Failed to finish signature. Code: ${err.code}, message: ${err.message}`);
-  });
-
-  /* 签名的结果 */
-  let signRes: Uint8Array = new Uint8Array([
-    0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08
-  ]);
-  /* 验签的finish操作 */
-  certificateManager.finish(cmHandle, signRes).then((cmResult) => {
-    console.info('Succeeded in finishing verification.');
-  }).catch((error: Error) => {
-    let err = error as BusinessError;
-    console.error(`Failed to finish verification. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch(error) {
-  console.error(`Failed to finish. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [finish](#finish)
 

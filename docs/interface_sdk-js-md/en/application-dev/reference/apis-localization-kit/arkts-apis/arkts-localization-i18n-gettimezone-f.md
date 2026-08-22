@@ -39,6 +39,14 @@ Obtains the **TimeZone** object corresponding to the specified time zone ID.
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
 
+let calendar: i18n.Calendar = i18n.getCalendar('zh-Hans');
+calendar.setTimeZone('Asia/Shanghai');
+let timezone: string = calendar.getTimeZone(); // timezone = 'Asia/Shanghai'
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
 let timezone: i18n.TimeZone = i18n.getTimeZone('Asia/Shanghai');
 ```
 

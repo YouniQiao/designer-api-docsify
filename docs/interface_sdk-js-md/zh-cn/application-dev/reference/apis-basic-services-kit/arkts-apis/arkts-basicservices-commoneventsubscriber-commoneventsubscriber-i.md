@@ -74,28 +74,6 @@ subscriber.finishCommonEvent((err: BusinessError | null) => {
 });
 ```
 
-## abortCommonEvent
-
-```TypeScript
-abortCommonEvent(): Promise<void>
-```
-
-添加有序公共事件的中止状态。当该接口与 [finishCommonEvent](#finishcommonevent)配合使用时，可以中止当前的有序公共事 件，使该公共事件不再向下一个订阅者传递。使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-CommonEventSubscriber-abortCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-abortCommonEvent(): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Notification.CommonEvent
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -127,6 +105,30 @@ subscriber.finishCommonEvent().then(() => {
   console.error(`Failed to finish common event. Code is ${error.code}, message is ${error.message}`);
 });
 ```
+
+## abortCommonEvent
+
+```TypeScript
+abortCommonEvent(): Promise<void>
+```
+
+添加有序公共事件的中止状态。当该接口与 [finishCommonEvent](#finishcommonevent)配合使用时，可以中止当前的有序公共事 件，使该公共事件不再向下一个订阅者传递。使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-CommonEventSubscriber-abortCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-abortCommonEvent(): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Notification.CommonEvent
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [abortCommonEvent](#abortcommonevent)
 
 ## abortCommonEventSync
 
@@ -233,28 +235,6 @@ subscriber.finishCommonEvent((err: BusinessError | null) => {
 });
 ```
 
-## clearAbortCommonEvent
-
-```TypeScript
-clearAbortCommonEvent(): Promise<void>
-```
-
-清理有序公共事件的中止状态。当该接口与 [finishCommonEvent](#finishcommonevent)配合使用时，可以使该公共事件继续向下 一个订阅者传递。使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-CommonEventSubscriber-clearAbortCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-clearAbortCommonEvent(): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Notification.CommonEvent
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -286,6 +266,30 @@ subscriber.finishCommonEvent().then(() => {
   console.error(`Failed to finish common event. Code is ${error.code}, message is ${error.message}`);
 });
 ```
+
+## clearAbortCommonEvent
+
+```TypeScript
+clearAbortCommonEvent(): Promise<void>
+```
+
+清理有序公共事件的中止状态。当该接口与 [finishCommonEvent](#finishcommonevent)配合使用时，可以使该公共事件继续向下 一个订阅者传递。使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-CommonEventSubscriber-clearAbortCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-clearAbortCommonEvent(): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Notification.CommonEvent
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [clearAbortCommonEvent](#clearabortcommonevent)
 
 ## clearAbortCommonEventSync
 
@@ -378,6 +382,27 @@ subscriber.finishCommonEvent((err: BusinessError | null) => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to finish common event. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## finishCommonEvent
 
 ```TypeScript
@@ -400,26 +425,7 @@ finishCommonEvent(): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-subscriber.finishCommonEvent().then(() => {
-  console.info(`Succeeded in finishing common event.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-subscriber.finishCommonEvent().then(() => {
-  console.info(`Succeeded in finishing common event.`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to finish common event. Code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [finishCommonEvent](#finishcommonevent)
 
 ## getAbortCommonEvent
 
@@ -473,6 +479,27 @@ subscriber.getAbortCommonEvent((err: BusinessError | null, abortEvent: boolean |
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+subscriber.getAbortCommonEvent().then((abortEvent: boolean) => {
+  console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get abort common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+subscriber.getAbortCommonEvent().then((abortEvent: boolean) => {
+  console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
+}).catch((err: Error): void  => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to get abort common event. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## getAbortCommonEvent
 
 ```TypeScript
@@ -495,26 +522,7 @@ getAbortCommonEvent(): Promise<boolean>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-subscriber.getAbortCommonEvent().then((abortEvent: boolean) => {
-  console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get abort common event. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-subscriber.getAbortCommonEvent().then((abortEvent: boolean) => {
-  console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
-}).catch((err: Error): void  => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to get abort common event. Code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [getAbortCommonEvent](#getabortcommonevent)
 
 ## getAbortCommonEventSync
 
@@ -597,6 +605,27 @@ subscriber.getCode((err: BusinessError | null, code: int | undefined | null) => 
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+subscriber.getCode().then((code: number) => {
+  console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get code. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+subscriber.getCode().then((code: int) => {
+  console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to get code. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## getCode
 
 ```TypeScript
@@ -621,26 +650,7 @@ getCode(): Promise<int>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-subscriber.getCode().then((code: number) => {
-  console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get code. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-subscriber.getCode().then((code: int) => {
-  console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to get code. Code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [getCode](#getcode)
 
 ## getCodeSync
 
@@ -736,6 +746,27 @@ subscriber.getData((err: BusinessError | null, data: string | undefined | null) 
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+subscriber.getData().then((data: string) => {
+  console.info(`Succeeded in getting data, data is ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get data. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+subscriber.getData().then((data: string) => {
+  console.info(`Succeeded in getting data, data is ${JSON.stringify(data)}`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to get data. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## getData
 
 ```TypeScript
@@ -760,26 +791,7 @@ getData(): Promise<string>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-subscriber.getData().then((data: string) => {
-  console.info(`Succeeded in getting data, data is ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get data. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-subscriber.getData().then((data: string) => {
-  console.info(`Succeeded in getting data, data is ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to get data. Code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [getData](#getdata)
 
 ## getDataSync
 
@@ -864,6 +876,26 @@ subscriber.getSubscribeInfo((err: BusinessError | null, subscribeInfo: commonEve
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+subscriber.getSubscribeInfo().then((subscribeInfo: commonEventManager.CommonEventSubscribeInfo) => {
+  console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get subscribe info. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+subscriber.getSubscribeInfo().then((subscribeInfo: commonEventManager.CommonEventSubscribeInfo | null) => {
+  console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
+}).catch((err: BusinessError): void => {
+  console.error(`Failed to get subscribe info. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## getSubscribeInfo
 
 ```TypeScript
@@ -890,6 +922,10 @@ getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo|null>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**示例**
+
+参见 [getSubscribeInfo](#getsubscribeinfo)
+
 ## getSubscribeInfo
 
 ```TypeScript
@@ -914,25 +950,7 @@ getSubscribeInfo(): Promise<CommonEventSubscribeInfo>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-subscriber.getSubscribeInfo().then((subscribeInfo: commonEventManager.CommonEventSubscribeInfo) => {
-  console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get subscribe info. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-subscriber.getSubscribeInfo().then((subscribeInfo: commonEventManager.CommonEventSubscribeInfo | null) => {
-  console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
-}).catch((err: BusinessError): void => {
-  console.error(`Failed to get subscribe info. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [getSubscribeInfo](#getsubscribeinfo)
 
 ## getSubscribeInfo
 
@@ -953,6 +971,10 @@ getSubscribeInfo(): Promise<CommonEventSubscribeInfo|null>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;[CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) \| null&gt; | Promise对象。返回订阅者的订阅信息。 |
+
+**示例**
+
+参见 [getSubscribeInfo](#getsubscribeinfo)
 
 ## getSubscribeInfoSync
 
@@ -1012,6 +1034,10 @@ getSubscribeInfoSync(): CommonEventSubscribeInfo|null
 | --- | --- |
 | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) \| null | 表示订阅者的订阅信息。 |
 
+**示例**
+
+参见 [getSubscribeInfoSync](#getsubscribeinfosync)
+
 ## isOrderedCommonEvent
 
 ```TypeScript
@@ -1064,6 +1090,27 @@ subscriber.isOrderedCommonEvent((err: BusinessError | null, isOrdered: boolean |
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+subscriber.isOrderedCommonEvent().then((isOrdered: boolean) => {
+  console.info(`isOrderedCommonEvent ${JSON.stringify(isOrdered)}`);
+}).catch((err: BusinessError) => {
+  console.error(`isOrderedCommonEvent failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+subscriber.isOrderedCommonEvent().then((isOrdered: boolean) => {
+  console.info(`isOrderedCommonEvent ${JSON.stringify(isOrdered)}`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`isOrderedCommonEvent failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## isOrderedCommonEvent
 
 ```TypeScript
@@ -1086,26 +1133,7 @@ isOrderedCommonEvent(): Promise<boolean>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-subscriber.isOrderedCommonEvent().then((isOrdered: boolean) => {
-  console.info(`isOrderedCommonEvent ${JSON.stringify(isOrdered)}`);
-}).catch((err: BusinessError) => {
-  console.error(`isOrderedCommonEvent failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-subscriber.isOrderedCommonEvent().then((isOrdered: boolean) => {
-  console.info(`isOrderedCommonEvent ${JSON.stringify(isOrdered)}`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`isOrderedCommonEvent failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [isOrderedCommonEvent](#isorderedcommonevent)
 
 ## isOrderedCommonEventSync
 
@@ -1186,6 +1214,27 @@ subscriber.isStickyCommonEvent((err: BusinessError | null, isSticky: boolean | u
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+subscriber.isStickyCommonEvent().then((isSticky: boolean) => {
+  console.info(`isStickyCommonEvent ${JSON.stringify(isSticky)}`);
+}).catch((err: BusinessError) => {
+  console.error(`isStickyCommonEvent failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+subscriber.isStickyCommonEvent().then((isSticky: boolean) => {
+  console.info(`isStickyCommonEvent ${JSON.stringify(isSticky)}`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`isStickyCommonEvent failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## isStickyCommonEvent
 
 ```TypeScript
@@ -1208,26 +1257,7 @@ isStickyCommonEvent(): Promise<boolean>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-subscriber.isStickyCommonEvent().then((isSticky: boolean) => {
-  console.info(`isStickyCommonEvent ${JSON.stringify(isSticky)}`);
-}).catch((err: BusinessError) => {
-  console.error(`isStickyCommonEvent failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-subscriber.isStickyCommonEvent().then((isSticky: boolean) => {
-  console.info(`isStickyCommonEvent ${JSON.stringify(isSticky)}`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`isStickyCommonEvent failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [isStickyCommonEvent](#isstickycommonevent)
 
 ## isStickyCommonEventSync
 
@@ -1311,6 +1341,27 @@ subscriber.setCode(1, (err: BusinessError | null) => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+subscriber.setCode(1).then(() => {
+  console.info(`Succeeded in setting code.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set code. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+subscriber.setCode(1).then(() => {
+  console.info(`Succeeded in setting code.`);
+}).catch((err: Error): void  => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to set code. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## setCode
 
 ```TypeScript
@@ -1347,26 +1398,7 @@ setCode(code: int): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-subscriber.setCode(1).then(() => {
-  console.info(`Succeeded in setting code.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set code. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-subscriber.setCode(1).then(() => {
-  console.info(`Succeeded in setting code.`);
-}).catch((err: Error): void  => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to set code. Code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [setCode](#setcode)
 
 ## setCodeAndData
 
@@ -1424,6 +1456,27 @@ subscriber.setCodeAndData(1, 'publish_data_changed', (err: BusinessError | null)
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+subscriber.setCodeAndData(1, 'publish_data_changed').then(() => {
+  console.info(`Succeeded in setting code and data.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set code and data. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+subscriber.setCodeAndData(1, 'publish_data_changed').then(() => {
+  console.info(`Succeeded in setting code and data.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to set code and data. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## setCodeAndData
 
 ```TypeScript
@@ -1461,26 +1514,7 @@ setCodeAndData(code: int, data: string): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-subscriber.setCodeAndData(1, 'publish_data_changed').then(() => {
-  console.info(`Succeeded in setting code and data.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set code and data. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-subscriber.setCodeAndData(1, 'publish_data_changed').then(() => {
-  console.info(`Succeeded in setting code and data.`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to set code and data. Code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [setCodeAndData](#setcodeanddata)
 
 ## setCodeAndDataSync
 
@@ -1616,6 +1650,27 @@ subscriber.setData('publish_data_changed', (err: BusinessError | null) => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+subscriber.setData('publish_data_changed').then(() => {
+  console.info(`Succeeded in setting data.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set data. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+subscriber.setData('publish_data_changed').then(() => {
+  console.info(`Succeeded in setting data.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to set data. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## setData
 
 ```TypeScript
@@ -1652,26 +1707,7 @@ setData(data: string): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-subscriber.setData('publish_data_changed').then(() => {
-  console.info(`Succeeded in setting data.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set data. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-subscriber.setData('publish_data_changed').then(() => {
-  console.info(`Succeeded in setting data.`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to set data. Code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [setData](#setdata)
 
 ## setDataSync
 

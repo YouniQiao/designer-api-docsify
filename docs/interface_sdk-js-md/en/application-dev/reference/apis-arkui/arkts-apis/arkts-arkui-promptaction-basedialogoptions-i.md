@@ -522,7 +522,7 @@ onWillDismiss?: Callback<DismissDialogAction>
 
 Callback for interactive dismissal of the dialog box. <br>**NOTE：**<br>1. If this callback is registered, the dialog box will not be dismissed immediately after the user touches the mask or the Back button, presses the Esc key, or swipes left or right on the screen. The **reason** parameter in the callback is used to determine whether the dialog box can be dismissed. The reason returned by the component does not support the value **CLOSE_BUTTON**. <br>2. In the **onWillDismiss** callback, another **onWillDismiss** callback is not allowed.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DismissDialogAction](arkts-arkui-promptaction-dismissdialogaction-i.md)&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DismissDialogAction](arkts-arkui-promptaction-dismissdialogaction-i.md)&gt;
 
 **Since:** 12
 

@@ -32,7 +32,7 @@ Moves the source directory to the destination directory. This API returns the re
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the source directory. |
 | dest | string | Yes | Application sandbox path of the destination directory. |
-| mode | number | No | Move mode. The default value is **0**.<br>- **0**: Throw an exception if a directory conflict occurs.<br> An exception will be thrown if the destination directory contains a directory with the same name as the source directory.<br>- **1**: Throw an exception if a file conflict occurs.<br> An exception will be thrown if the destination directory contains a directory with the same name as the source directory, and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory will be moved to the destination directory, and the non-conflicting files in the destination directory will be retained. The data attribute in the error returned provides information about the conflicting files in the Array&lt; [ConflictFiles](../../apis-default/arkts-apis/arkts-filefs-conflictfiles-i.md)&gt; format.<br>- **2**: Forcibly overwrite the conflicting files in the destination directory.<br> When the destination directory contains a directory with the same name as the source directory, the files with the same names in the destination directory are overwritten forcibly; the files without conflicts in the destination directory are retained.<br>- **3**: Forcibly overwrite the conflicting directory.&lt;br &gt; The source directory is moved to the destination directory, and the content of the moved directory is the same as that of the source directory. If the destination directory contains a directory with the same name as the source directory, all original files in the directory will be deleted. |
+| mode | number | No | Move mode. The default value is **0**.<br>- **0**: Throw an exception if a directory conflict occurs.<br> An exception will be thrown if the destination directory contains a directory with the same name as the source directory.<br>- **1**: Throw an exception if a file conflict occurs.<br> An exception will be thrown if the destination directory contains a directory with the same name as the source directory, and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory will be moved to the destination directory, and the non-conflicting files in the destination directory will be retained. The data attribute in the error returned provides information about the conflicting files in the Array&lt; [ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt; format.<br>- **2**: Forcibly overwrite the conflicting files in the destination directory.<br> When the destination directory contains a directory with the same name as the source directory, the files with the same names in the destination directory are overwritten forcibly; the files without conflicts in the destination directory are retained.<br>- **3**: Forcibly overwrite the conflicting directory.&lt;br &gt; The source directory is moved to the destination directory, and the content of the moved directory is the same as that of the source directory. If the destination directory contains a directory with the same name as the source directory, all original files in the directory will be deleted. |
 
 **Error codes:**
 
@@ -57,4 +57,26 @@ Moves the source directory to the destination directory. This API returns the re
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo as fs, ConflictFiles } from '@kit.CoreFileKit';
+let srcPath = pathDir + "/srcDir";
+let destPath = pathDir + "/destDir";
+try {
+  fs.moveDirSync(srcPath, destPath, 1);
+  console.info("move directory succeed");
+} catch (error) {
+  let err: BusinessError<Array<ConflictFiles>> = error as BusinessError<Array<ConflictFiles>>;
+  if (err.code == 13900015 && err.data?.length !== undefined) {
+    for (let i = 0; i < err.data.length; i++) {
+      console.error("move directory failed with conflicting files: " + err.data[i].srcFile + " " + err.data[i].destFile);
+    }
+  } else {
+    console.error("move directory failed with error message: " + err.message + ", error code: " + err.code);
+  }
+}
+```
 

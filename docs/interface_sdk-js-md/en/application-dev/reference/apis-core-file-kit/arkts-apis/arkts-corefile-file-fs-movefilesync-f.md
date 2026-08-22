@@ -58,3 +58,12 @@ Moves a file. This API returns the result synchronously.
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+let srcPath = pathDir + "/source.txt";
+let destPath = pathDir + "/dest.txt";
+fs.moveFileSync(srcPath, destPath, 0);
+console.info("move file succeed");
+```
+

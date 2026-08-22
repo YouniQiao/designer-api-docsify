@@ -27,7 +27,7 @@ Register prepareContinue event, when the ability is configured with 'ContinueQui
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](arkts-ability-context-c.md) | Yes | the ability context. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md)&gt; | Yes | Used to handle ('prepareContinue') command. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md)&gt; | Yes | Used to handle ('prepareContinue') command. |
 
 **Error codes:**
 

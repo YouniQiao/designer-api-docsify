@@ -145,28 +145,6 @@ radius(value: Dimension | BorderRadiuses | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-## subMenuExpandSymbol
-
-```TypeScript
-subMenuExpandSymbol(symbol: SymbolGlyphModifier | undefined): this
-```
-
-**起始版本：** -1
-
-**ArkTS模式：** ArkTS-Sta起始版本为-1。
-
-<!--Device-MenuAttribute-subMenuExpandSymbol(symbol: SymbolGlyphModifier | undefined): this--><!--Device-MenuAttribute-subMenuExpandSymbol(symbol: SymbolGlyphModifier | undefined): this-End-->
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| symbol | [SymbolGlyphModifier](../../apis-arkui/arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) \| undefined | 是 |  |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
 ## subMenuExpandingMode
 
 ```TypeScript
@@ -184,6 +162,28 @@ subMenuExpandingMode(mode: SubMenuExpandingMode | undefined): this
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mode | [SubMenuExpandingMode](arkts-menu-submenuexpandingmode-e.md) \| undefined | 是 |  |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+## subMenuExpandSymbol
+
+```TypeScript
+subMenuExpandSymbol(symbol: SymbolGlyphModifier | undefined): this
+```
+
+**起始版本：** -1
+
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
+
+<!--Device-MenuAttribute-subMenuExpandSymbol(symbol: SymbolGlyphModifier | undefined): this--><!--Device-MenuAttribute-subMenuExpandSymbol(symbol: SymbolGlyphModifier | undefined): this-End-->
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| symbol | [SymbolGlyphModifier](../../apis-arkui/arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) \| undefined | 是 |  |
 
 **返回值：**
 

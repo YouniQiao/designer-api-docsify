@@ -28,7 +28,7 @@ function getSuperAdmin(): Promise<Want>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)&gt; | 返回超级设备管理应用的Promise对象。当设备没有激活超级管理应用时，返回的Promise中Want的bundleName与abilityName为空串。 |
+| Promise&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | 返回超级设备管理应用的Promise对象。当设备没有激活超级管理应用时，返回的Promise中Want的bundleName与abilityName为空串。 |
 
 **错误码：**
 

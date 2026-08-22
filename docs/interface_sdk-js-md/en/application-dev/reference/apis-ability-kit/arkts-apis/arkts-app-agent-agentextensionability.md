@@ -12,13 +12,13 @@ import { AgentExtensionAbility } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [AgentExtensionAbility](arkts-ability-appagentagentextensionability-agentextensionability-c.md) | The class of agent extension ability. This class cannot be used in Harmony Archive(HAR). |
+| [AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md) | The class of agent extension ability. This class cannot be used in Harmony Archive(HAR). |
 
 <!--Del-->
 ### Classes(System API)
 
 | Name | Description |
 | --- | --- |
-| [AgentExtensionAbility](arkts-ability-appagentagentextensionability-agentextensionability-c-sys.md) | The class of agent extension ability. This class cannot be used in Harmony Archive(HAR). |
+| [AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c-sys.md) | The class of agent extension ability. This class cannot be used in Harmony Archive(HAR). |
 <!--DelEnd-->
 

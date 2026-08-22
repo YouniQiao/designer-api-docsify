@@ -61,6 +61,21 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+try {
+  let setPromise: Promise<void> = systemParameter.set('test.parameter.key', 'testValue');
+  setPromise.then(() => {
+    console.info('set test.parameter.key success');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set system parameter. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (e) {
+  console.error('set unexpected error: ' + e);
+}
+```
+
 
 ## set
 
@@ -106,18 +121,5 @@ function set(key: string, value: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-try {
-  let setPromise: Promise<void> = systemParameter.set('test.parameter.key', 'testValue');
-  setPromise.then(() => {
-    console.info('set test.parameter.key success');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set system parameter. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  console.error('set unexpected error: ' + e);
-}
-```
+参见 [set](#set)
 

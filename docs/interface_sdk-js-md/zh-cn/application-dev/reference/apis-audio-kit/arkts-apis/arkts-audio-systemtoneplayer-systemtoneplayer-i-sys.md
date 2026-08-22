@@ -175,98 +175,6 @@ systemTonePlayer.getTitle().then((value: string) => {
 });
 ```
 
-## offError
-
-```TypeScript
-offError(callback?: ErrorCallback): void
-```
-
-取消监听铃音播放过程中的错误事件。使用callback异步回调。
-
-**起始版本：** 23
-
-<!--Device-SystemTonePlayer-offError(callback?: ErrorCallback): void--><!--Device-SystemTonePlayer-offError(callback?: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.SystemSound.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Error callback while receiving the error event. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 取消该事件的所有监听。
-systemTonePlayer.offError();
-
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let callback = (err: BusinessError) => {
-  console.info(`Succeeded in using on or off function. code: ${err.code}, message: ${err.message}`);
-};
-
-systemTonePlayer.onError(callback);
-
-systemTonePlayer.offError(callback);
-```
-
-## offPlayFinished
-
-```TypeScript
-offPlayFinished(callback?: Callback<int>): void
-```
-
-取消监听铃音播放完成事件。使用callback异步回调。
-
-**起始版本：** 23
-
-<!--Device-SystemTonePlayer-offPlayFinished(callback?: Callback<int>): void--><!--Device-SystemTonePlayer-offPlayFinished(callback?: Callback<int>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.SystemSound.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | Callback used to obtain the finished event. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
-
-**示例**
-
-```TypeScript
-// 取消该事件的所有监听。
-systemTonePlayer.offPlayFinished();
-
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let playFinishedCallback = (streamId) => {
-  console.info(`Receive the callback of playFinished, streamId: ${streamId}.`);
-};
-
-systemTonePlayer.onPlayFinished(0, playFinishedCallback);
-
-systemTonePlayer.offPlayFinished(playFinishedCallback);
-```
-
 ## off('error')
 
 ```TypeScript
@@ -361,17 +269,17 @@ systemTonePlayer.on('playFinished', 0, playFinishedCallback);
 systemTonePlayer.off('playFinished', playFinishedCallback);
 ```
 
-## onError
+## offError
 
 ```TypeScript
-onError(callback: ErrorCallback): void
+offError(callback?: ErrorCallback): void
 ```
 
-监听铃音播放过程中的错误事件（当铃音播放过程中发生错误时触发）。使用callback异步回调。
+取消监听铃音播放过程中的错误事件。使用callback异步回调。
 
 **起始版本：** 23
 
-<!--Device-SystemTonePlayer-onError(callback: ErrorCallback): void--><!--Device-SystemTonePlayer-onError(callback: ErrorCallback): void-End-->
+<!--Device-SystemTonePlayer-offError(callback?: ErrorCallback): void--><!--Device-SystemTonePlayer-offError(callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -381,7 +289,7 @@ onError(callback: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Error callback while receiving the error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Error callback while receiving the error event. |
 
 **错误码：**
 
@@ -395,24 +303,30 @@ onError(callback: ErrorCallback): void
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-systemTonePlayer.onError((err: BusinessError) => {
-  console.info(`Succeeded in using onError function. code: ${err.code}, message: ${err.message}`);
-});
+// 取消该事件的所有监听。
+systemTonePlayer.offError();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let callback = (err: BusinessError) => {
+  console.info(`Succeeded in using on or off function. code: ${err.code}, message: ${err.message}`);
+};
+
+systemTonePlayer.onError(callback);
+
+systemTonePlayer.offError(callback);
 ```
 
-## onPlayFinished
+## offPlayFinished
 
 ```TypeScript
-onPlayFinished(streamId: int, callback: Callback<int>): void
+offPlayFinished(callback?: Callback<int>): void
 ```
 
-监听铃音播放完成事件（当铃音播放完成时触发）。使用callback异步回调。
-
-监听对象为传入的streamId对应音频流。当streamId传入0时，监听本播放器对应的所有音频流。
+取消监听铃音播放完成事件。使用callback异步回调。
 
 **起始版本：** 23
 
-<!--Device-SystemTonePlayer-onPlayFinished(streamId: int, callback: Callback<int>): void--><!--Device-SystemTonePlayer-onPlayFinished(streamId: int, callback: Callback<int>): void-End-->
+<!--Device-SystemTonePlayer-offPlayFinished(callback?: Callback<int>): void--><!--Device-SystemTonePlayer-offPlayFinished(callback?: Callback<int>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -422,8 +336,7 @@ onPlayFinished(streamId: int, callback: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| streamId | int | 是 | Stream id, received from start(). |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | Callback used to obtain the finished event. The callback info is the stream id that is finished. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | Callback used to obtain the finished event. |
 
 **错误码：**
 
@@ -435,21 +348,17 @@ onPlayFinished(streamId: int, callback: Callback<int>): void
 **示例**
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
+// 取消该事件的所有监听。
+systemTonePlayer.offPlayFinished();
 
-// 监听所有音频流的结束事件。
-systemTonePlayer.onPlayFinished(0, (streamId) => {
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let playFinishedCallback = (streamId) => {
   console.info(`Receive the callback of playFinished, streamId: ${streamId}.`);
-});
+};
 
-// 监听指定音频流的结束事件。
-systemTonePlayer.start().then((value) => {
-  systemTonePlayer.onPlayFinished(value, (streamId) => {
-    console.info(`Receive the callback of playFinished, streamId: ${streamId}.`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to start system tone player. ${err}`);
-});
+systemTonePlayer.onPlayFinished(0, playFinishedCallback);
+
+systemTonePlayer.offPlayFinished(playFinishedCallback);
 ```
 
 ## on('error')
@@ -538,6 +447,97 @@ systemTonePlayer.on('playFinished', 0, (streamId: number) => {
 // 监听指定音频流的结束事件。
 systemTonePlayer.start().then((value: number) => {
   systemTonePlayer.on('playFinished', value, (streamId: number) => {
+    console.info(`Receive the callback of playFinished, streamId: ${streamId}.`);
+  });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to start system tone player. ${err}`);
+});
+```
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+监听铃音播放过程中的错误事件（当铃音播放过程中发生错误时触发）。使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-SystemTonePlayer-onError(callback: ErrorCallback): void--><!--Device-SystemTonePlayer-onError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.SystemSound.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Error callback while receiving the error event. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemTonePlayer.onError((err: BusinessError) => {
+  console.info(`Succeeded in using onError function. code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## onPlayFinished
+
+```TypeScript
+onPlayFinished(streamId: int, callback: Callback<int>): void
+```
+
+监听铃音播放完成事件（当铃音播放完成时触发）。使用callback异步回调。
+
+监听对象为传入的streamId对应音频流。当streamId传入0时，监听本播放器对应的所有音频流。
+
+**起始版本：** 23
+
+<!--Device-SystemTonePlayer-onPlayFinished(streamId: int, callback: Callback<int>): void--><!--Device-SystemTonePlayer-onPlayFinished(streamId: int, callback: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.SystemSound.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| streamId | int | 是 | Stream id, received from start(). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | Callback used to obtain the finished event. The callback info is the stream id that is finished. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 监听所有音频流的结束事件。
+systemTonePlayer.onPlayFinished(0, (streamId) => {
+  console.info(`Receive the callback of playFinished, streamId: ${streamId}.`);
+});
+
+// 监听指定音频流的结束事件。
+systemTonePlayer.start().then((value) => {
+  systemTonePlayer.onPlayFinished(value, (streamId) => {
     console.info(`Receive the callback of playFinished, streamId: ${streamId}.`);
   });
 }).catch((err: BusinessError) => {

@@ -40,3 +40,13 @@ declare function utimes(path: string, mtime: number): void
 | 13900027 | Read-only file system |
 | 13900042 | Unknown error |
 
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+fileIo.writeSync(file.fd, 'test data');
+fileIo.closeSync(file);
+fileIo.utimes(filePath, new Date().getTime());
+```
+

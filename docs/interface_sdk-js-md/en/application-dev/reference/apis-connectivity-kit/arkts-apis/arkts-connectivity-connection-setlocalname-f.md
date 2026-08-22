@@ -14,7 +14,7 @@ function setLocalName(name: string): void
 
 Sets the Bluetooth friendly name of a device. It is used only by system applications for security. If a non-system application invokes the interface, exception 801 is thrown.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Deprecated since:** 12
 

@@ -140,6 +140,19 @@ constructor(type: Type, effect: Effect)
 | type | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | 是 | 转场类型。 |
 | effect | [Effect](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-effect-i.md) | 是 | 转场参数。 |
 
+**示例**
+
+```TypeScript
+@Builder
+function myBuilder(value: string, size: number) {
+  Text(value)
+    .fontSize(size)
+}
+
+// 使用WrappedBuilder封装myBuilder
+let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(myBuilder);
+```
+
 ## move
 
 ```TypeScript

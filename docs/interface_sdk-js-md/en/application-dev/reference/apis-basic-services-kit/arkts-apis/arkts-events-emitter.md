@@ -48,23 +48,23 @@ import { emitter } from '@kit.BasicServicesKit';
 | [emit_string](arkts-basicservices-emitter-emitstring-f.md#emit_string) | Emits an event of a specified priority. |
 | [emit_string](arkts-basicservices-emitter-emitstring-f.md#emit_string) | Emits an event of a specified priority. |
 | [getListenerCount](arkts-basicservices-emitter-getlistenercount-f.md) | Obtains the number of subscriptions to a specified event. |
-| [offEventData](arkts-basicservices-emitter-offeventdata-f.md) | Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when Callback&lt;EventData&gt; has been registered through the on or once API. Otherwise, no processing is performed. |
-| [offGenericEventData](arkts-basicservices-emitter-offgenericeventdata-f.md) | Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when Callback&lt;EventData&gt; has been registered through the on or once API. Otherwise, no processing is performed. |
 | [off_long](arkts-basicservices-emitter-offlong-f.md#off_long) | Unsubscribes from all events with the specified event ID. |
 | [off_long](arkts-basicservices-emitter-offlong-f.md#off_long) | Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when **Callback\&lt;EventData&gt;** has been registered through the on or once API. Otherwise, no processing is performed. |
 | [off_string](arkts-basicservices-emitter-offstring-f.md#off_string) | Unsubscribes from all events with the specified event ID. |
 | [off_string](arkts-basicservices-emitter-offstring-f.md#off_string) | Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when **Callback\&lt;EventData&gt;** has been registered through the on or once API. Otherwise, no processing is performed. |
 | [off_string](arkts-basicservices-emitter-offstring-f.md#off_string) | Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when **Callback\&lt;EventData&gt;** has been registered through the [on](arkts-basicservices-emitter-emitter-c.md#on_string) or once API. Otherwise, no processing is performed. |
-| [onEventData](arkts-basicservices-emitter-oneventdata-f.md) | Subscribes to an event in persistent manner and executes a callback after the event is received. |
-| [onGenericEventData](arkts-basicservices-emitter-ongenericeventdata-f.md) | Subscribes to an event in persistent manner and executes a callback after the event is received. |
+| [offEventData](arkts-basicservices-emitter-offeventdata-f.md) | Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when Callback&lt;EventData&gt; has been registered through the on or once API. Otherwise, no processing is performed. |
+| [offGenericEventData](arkts-basicservices-emitter-offgenericeventdata-f.md) | Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when Callback&lt;EventData&gt; has been registered through the on or once API. Otherwise, no processing is performed. |
 | [on_InnerEvent](arkts-basicservices-emitter-oninnerevent-f.md#on_innerevent) | Subscribes to an event in persistent manner and executes a callback after the event is received. |
 | [on_string](arkts-basicservices-emitter-onstring-f.md#on_string) | Subscribes to an event in persistent manner and executes a callback after the event is received. |
 | [on_string](arkts-basicservices-emitter-onstring-f.md#on_string) | Subscribes to an event in persistent manner and executes a callback after the event is received. |
-| [onceEventData](arkts-basicservices-emitter-onceeventdata-f.md) | Subscribes to an event in one-shot manner and unsubscribes from it after the event callback is executed. |
-| [onceGenericEventData](arkts-basicservices-emitter-oncegenericeventdata-f.md) | Subscribes to an event in one-shot manner and unsubscribes from it after the event callback is executed. |
 | [once_InnerEvent](arkts-basicservices-emitter-onceinnerevent-f.md#once_innerevent) | Subscribes to an event in one-shot manner and unsubscribes from it after the event callback is executed. |
 | [once_string](arkts-basicservices-emitter-oncestring-f.md#once_string) | Subscribes to an event in one-shot manner and unsubscribes from it after the event callback is executed. |
 | [once_string](arkts-basicservices-emitter-oncestring-f.md#once_string) | Subscribes to an event in one-shot manner and unsubscribes from it after the event callback is executed. |
+| [onceEventData](arkts-basicservices-emitter-onceeventdata-f.md) | Subscribes to an event in one-shot manner and unsubscribes from it after the event callback is executed. |
+| [onceGenericEventData](arkts-basicservices-emitter-oncegenericeventdata-f.md) | Subscribes to an event in one-shot manner and unsubscribes from it after the event callback is executed. |
+| [onEventData](arkts-basicservices-emitter-oneventdata-f.md) | Subscribes to an event in persistent manner and executes a callback after the event is received. |
+| [onGenericEventData](arkts-basicservices-emitter-ongenericeventdata-f.md) | Subscribes to an event in persistent manner and executes a callback after the event is received. |
 
 ### Classes
 

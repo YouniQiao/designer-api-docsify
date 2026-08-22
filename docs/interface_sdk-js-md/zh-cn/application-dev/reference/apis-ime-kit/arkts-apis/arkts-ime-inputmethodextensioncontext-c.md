@@ -104,6 +104,26 @@ class InputMethodExtAbility extends InputMethodExtensionAbility {
 }
 ```
 
+```TypeScript
+import { InputMethodExtensionAbility, InputMethodExtensionContext } from '@kit.IMEKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class InputMethodExtAbility extends InputMethodExtensionAbility {
+  onCreate(want: Want): void {
+    console.info('onCreate, want:' + want.abilityName);
+  }
+
+  onDestroy() {
+    this.context.destroy().then(() => {
+      console.info('Succeeded in destroying context.');
+    }).catch((err: BusinessError)=>{
+      console.error(`Failed to destroy context, err code = ${err.code}`);
+    });
+  }
+}
+```
+
 ## destroy
 
 ```TypeScript
@@ -128,25 +148,7 @@ destroy(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { InputMethodExtensionAbility, InputMethodExtensionContext } from '@kit.IMEKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class InputMethodExtAbility extends InputMethodExtensionAbility {
-  onCreate(want: Want): void {
-    console.info('onCreate, want:' + want.abilityName);
-  }
-
-  onDestroy() {
-    this.context.destroy().then(() => {
-      console.info('Succeeded in destroying context.');
-    }).catch((err: BusinessError)=>{
-      console.error(`Failed to destroy context, err code = ${err.code}`);
-    });
-  }
-}
-```
+参见 [destroy](#destroy)
 
 ## startAbility
 
@@ -168,7 +170,7 @@ startAbility(want: Want): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 用于指定目标应用的Want类型信息，包括ability名称、bundle名称等。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 用于指定目标应用的Want类型信息，包括ability名称、bundle名称等。 |
 
 **返回值：**
 

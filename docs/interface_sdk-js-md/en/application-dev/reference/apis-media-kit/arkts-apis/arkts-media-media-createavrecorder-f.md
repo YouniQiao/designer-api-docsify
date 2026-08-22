@@ -30,7 +30,7 @@ Creates an AVRecorder instance. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVRecorder](arkts-media-media-avrecorder-i.md)&gt; | Yes | Callback function, which returns an **AVRecorder** instance for recording audio and video. Otherwise, **null** is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVRecorder](arkts-media-media-avrecorder-i.md)&gt; | Yes | Callback function, which returns an **AVRecorder** instance for recording audio and video. Otherwise, **null** is returned. |
 
 **Error codes:**
 
@@ -54,6 +54,21 @@ media.createAVRecorder((error: BusinessError, recorder: media.AVRecorder) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let avRecorder: media.AVRecorder;
+media.createAVRecorder().then((recorder: media.AVRecorder) => {
+  if (recorder) {
+    avRecorder = recorder;
+    console.info('Succeeded in creating AVRecorder');
+  } else {
+    console.error('Failed to create AVRecorder');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`Failed to create AVRecorder, error message:${error.message}`);
+});
+```
+
 
 ## createAVRecorder
 
@@ -73,13 +88,17 @@ Creates an **AVRecorder** instance. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVRecorder](arkts-media-media-avrecorder-i.md) \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, an **AVRecorder** instance is returned; otherwise, **undefined** is returned. The instance can be used to record audio and video. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVRecorder](arkts-media-media-avrecorder-i.md) \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, an **AVRecorder** instance is returned; otherwise, **undefined** is returned. The instance can be used to record audio and video. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
+
+**Examples**
+
+See [createAVRecorder](#createavrecorder)
 
 
 ## createAVRecorder
@@ -118,20 +137,7 @@ Creates an AVRecorder instance. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let avRecorder: media.AVRecorder;
-media.createAVRecorder().then((recorder: media.AVRecorder) => {
-  if (recorder) {
-    avRecorder = recorder;
-    console.info('Succeeded in creating AVRecorder');
-  } else {
-    console.error('Failed to create AVRecorder');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`Failed to create AVRecorder, error message:${error.message}`);
-});
-```
+See [createAVRecorder](#createavrecorder)
 
 
 ## createAVRecorder
@@ -159,4 +165,8 @@ Creates an **AVRecorder** instance. This API uses a promise to return the result
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+
+**Examples**
+
+See [createAVRecorder](#createavrecorder)
 

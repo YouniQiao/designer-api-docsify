@@ -12,20 +12,20 @@ import { ArcAlphabetIndexer, ArcAlphabetIndexerAttribute } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkuiarcalphabetindexer-arcalphabetindexerattribute-c.md) | In addition to the universal attributes, the following attributes are supported. |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | In addition to the universal attributes, the following attributes are supported. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ArcAlphabetIndexerInitInfo](arkts-arkui-arkuiarcalphabetindexer-arcalphabetindexerinitinfo-i.md) | Initialization parameters for the **ArcAlphabetIndexer** component. |
-| [ArcAlphabetIndexerInterface](arkts-arkui-arkuiarcalphabetindexer-arcalphabetindexerinterface-i.md) | The **ArcAlphabetIndexer** component is an arc-shaped component designed for quick navigation through alphabetically sorted items. It can be integrated with container components to quickly locate items within the visible area. |
+| [ArcAlphabetIndexerInitInfo](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) | Initialization parameters for the **ArcAlphabetIndexer** component. |
+| [ArcAlphabetIndexerInterface](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerinterface-i.md) | The **ArcAlphabetIndexer** component is an arc-shaped component designed for quick navigation through alphabetically sorted items. It can be integrated with container components to quickly locate items within the visible area. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnSelectCallback](arkts-arkui-onselectcallback-t.md) | Defines the callback used in [onSelect](arkts-arkui-arkuiarcalphabetindexer-arcalphabetindexerattribute-c.md#onselect). |
+| [OnSelectCallback](arkts-arkui-onselectcallback-t.md) | Defines the callback used in [onSelect](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md#onselect). |
 
 ### Constants
 

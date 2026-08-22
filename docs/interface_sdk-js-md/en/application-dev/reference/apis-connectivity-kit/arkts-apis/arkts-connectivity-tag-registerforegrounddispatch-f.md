@@ -30,7 +30,7 @@ Registers a listener for the NFC tag read event so that the tag can be preferent
 | --- | --- | --- | --- |
 | elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | Yes | Information about the tag reading page of the application. It cannot be empty and must contain at least **bundleName** and **abilityName**. |
 | discTech | int[] | Yes | NFC tag technologies supported by the foreground application. It cannot be empty. At least one NFC tag technology must be specified. Each number indicates the constant value of an NFC tag technology. The tag technologies are polled based on the specified value, which contains one or more of [NFC_A](arkts-connectivity-tag-con.md#nfc_a), [NFC_B](arkts-connectivity-tag-con.md#nfc_b), [NFC_F](arkts-connectivity-tag-con.md#nfc_f), and [NFC_V](arkts-connectivity-tag-con.md#nfc_v), only. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TagInfo](arkts-connectivity-tag-taginfo-i.md)&gt; | Yes | Callback used to return the tag information read. It cannot be empty. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TagInfo](arkts-connectivity-tag-taginfo-i.md)&gt; | Yes | Callback used to return the tag information read. It cannot be empty. |
 
 **Error codes:**
 

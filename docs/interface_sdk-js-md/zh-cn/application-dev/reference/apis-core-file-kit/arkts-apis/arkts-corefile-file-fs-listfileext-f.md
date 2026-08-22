@@ -34,7 +34,7 @@ declare function listFileExt(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 目录的应用沙箱路径。 |
-| options | [ListFileExtOptions](../../apis-default/arkts-apis/arkts-filefs-listfileextoptions-i.md) | 否 | 文件列出选项。默认为空，表示不递归、不限制列出数量、不进行过滤。 |
+| options | [ListFileExtOptions](arkts-corefile-file-fs-listfileextoptions-i.md) | 否 | 文件列出选项。默认为空，表示不递归、不限制列出数量、不进行过滤。 |
 
 **返回值：**
 
@@ -50,4 +50,31 @@ declare function listFileExt(
 | 13900011 | Out of memory |
 | 13900018 | Not a directory |
 | 13900020 | Invalid argument |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo, ListFileExtOptions, FileFilter } from '@kit.CoreFileKit';
+
+let filter: FileFilter = {
+  filter: (name: string): boolean => {
+    return name.endsWith('.txt');
+  }
+};
+let options: ListFileExtOptions = {
+  recursion: false,
+  listNum: 0,
+  fileFilter: filter
+};
+fileIo.listFileExt(pathDir, options).then((filenames: Array<string>) => {
+  console.info(`Succeeded in listing file.`);
+  for (let i = 0; i < filenames.length; i++) {
+    console.info(`Succeeded in listing file, file name: ${filenames[i]}`);
+  }
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to list file. Code: ${err.code}, message: ${err.message}`);
+});
+```
 

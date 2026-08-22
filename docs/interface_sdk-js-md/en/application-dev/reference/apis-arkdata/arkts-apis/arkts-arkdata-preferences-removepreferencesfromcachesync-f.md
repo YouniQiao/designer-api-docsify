@@ -60,6 +60,30 @@ class EntryAbility extends UIAbility {
 }
 ```
 
+FA model:
+
+```TypeScript
+// Obtain the context.
+import { featureAbility } from '@kit.AbilityKit';
+let context = featureAbility.getContext();
+let options: preferences.Options = { name: 'myStore' };
+preferences.removePreferencesFromCacheSync(context, options);
+```
+
+Stage model:
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let options: preferences.Options = { name: 'myStore' };
+    preferences.removePreferencesFromCacheSync(this.context, options);
+  }
+}
+```
+
 
 ## removePreferencesFromCacheSync
 
@@ -96,27 +120,5 @@ Removes a **Preferences** instance from the cache. This API returns the result s
 
 **Examples**
 
-FA model:
-
-```TypeScript
-// Obtain the context.
-import { featureAbility } from '@kit.AbilityKit';
-let context = featureAbility.getContext();
-let options: preferences.Options = { name: 'myStore' };
-preferences.removePreferencesFromCacheSync(context, options);
-```
-
-Stage model:
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let options: preferences.Options = { name: 'myStore' };
-    preferences.removePreferencesFromCacheSync(this.context, options);
-  }
-}
-```
+See [removePreferencesFromCacheSync](#removepreferencesfromcachesync)
 

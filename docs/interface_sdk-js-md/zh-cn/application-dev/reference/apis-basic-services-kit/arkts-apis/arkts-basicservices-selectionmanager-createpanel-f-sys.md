@@ -14,7 +14,7 @@ function createPanel(ctx: Context, info: PanelInfo): Promise<Panel>
 
 创建划词面板，用于向用户展示业务相关的操作界面或文本处理结果，使用完毕后需调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f-sys.md)销毁面板释放资源。使用Promise异步回调。
 
-单个划词应用仅允许创建一个[MENU_PANEL](arkts-basicservices-selectioninputselectionpanel-paneltype-e-sys.md)和一个 [MAIN_PANEL](arkts-basicservices-selectioninputselectionpanel-paneltype-e-sys.md)。
+单个划词应用仅允许创建一个[MENU_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e-sys.md)和一个 [MAIN_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e-sys.md)。
 
 **起始版本：** 24
 
@@ -31,7 +31,7 @@ function createPanel(ctx: Context, info: PanelInfo): Promise<Panel>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ctx | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前划词面板依赖的上下文信息，需使用SelectionExtensionAbility提供的上下文。 |
-| info | [PanelInfo](arkts-basicservices-selectioninputselectionpanel-panelinfo-i-sys.md) | 是 | 划词面板的配置信息，用于指定面板类型、位置和宽高。单个划词应用仅允许创建一个MENU_PANEL和一个MAIN_PANEL。 |
+| info | [PanelInfo](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i-sys.md) | 是 | 划词面板的配置信息，用于指定面板类型、位置和宽高。单个划词应用仅允许创建一个MENU_PANEL和一个MAIN_PANEL。 |
 
 **返回值：**
 

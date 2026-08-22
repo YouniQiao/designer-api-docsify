@@ -94,7 +94,7 @@ Called when some error occurred.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md)&lt;[BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)&gt; \| undefined | Yes |  |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md)&lt;[BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -124,7 +124,7 @@ Called when the provider of the embedded UI is terminated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TerminationInfo&gt; \| undefined | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TerminationInfo&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -154,7 +154,7 @@ Sets embedded component options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| loader | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | indicates initialization parameter. |
+| loader | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | indicates initialization parameter. |
 | type | [EmbeddedType](../../apis-arkui/arkts-apis/arkts-arkui-embeddedtype-e.md) | No | indicates type of the EmbeddedComponent. |
 
 **Return value:**
@@ -185,7 +185,7 @@ Sets embedded component options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| loader | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | indicates initialization parameter. |
+| loader | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | indicates initialization parameter. |
 | type | [EmbeddedType](../../apis-arkui/arkts-apis/arkts-arkui-embeddedtype-e.md) | No | indicates type of the EmbeddedComponent. |
 | options | [EmbeddedOptions](arkts-embeddedcomponent-embeddedoptions-i.md) | No | indicates type of the EmbeddedComponent options. |
 

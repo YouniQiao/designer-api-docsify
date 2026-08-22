@@ -34,7 +34,7 @@ Clears this **Preferences** instance. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -54,6 +54,17 @@ dataPreferences.clear((err: BusinessError) =>{
     return;
   }
   console.info("Succeeded in clearing.");
+})
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = dataPreferences.clear();
+promise.then(() => {
+  console.info("Succeeded in clearing.");
+}).catch((err: BusinessError) => {
+  console.error("Failed to clear. code =" + err.code + ", message =" + err.message);
 })
 ```
 
@@ -87,16 +98,7 @@ Clears this **Preferences** instance. This API uses a promise to return the resu
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = dataPreferences.clear();
-promise.then(() => {
-  console.info("Succeeded in clearing.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to clear. code =" + err.code + ", message =" + err.message);
-})
-```
+See [clear](#clear)
 
 ## clearSync
 
@@ -141,7 +143,7 @@ Deletes a KV pair from this **Preferences** instance. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key to be deleted. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](arkts-data-preferences.md#constants). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -161,6 +163,17 @@ dataPreferences.delete('startup', (err: BusinessError) => {
     return;
   }
   console.info("Succeeded in deleting the key 'startup'.");
+})
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = dataPreferences.delete('startup');
+promise.then(() => {
+  console.info("Succeeded in deleting the key 'startup'.");
+}).catch((err: BusinessError) => {
+  console.error("Failed to delete the key 'startup'. code =" + err.code +", message =" + err.message);
 })
 ```
 
@@ -201,16 +214,7 @@ Deletes a KV pair from this **Preferences** instance. This API uses a promise to
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = dataPreferences.delete('startup');
-promise.then(() => {
-  console.info("Succeeded in deleting the key 'startup'.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to delete the key 'startup'. code =" + err.code +", message =" + err.message);
-})
-```
+See [delete](#delete)
 
 ## deleteSync
 
@@ -267,7 +271,7 @@ Flushes the data in this **Preferences** instance to the persistent file. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -287,6 +291,17 @@ dataPreferences.flush((err: BusinessError) => {
     return;
   }
   console.info("Succeeded in flushing.");
+})
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = dataPreferences.flush();
+promise.then(() => {
+  console.info("Succeeded in flushing.");
+}).catch((err: BusinessError) => {
+  console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
 })
 ```
 
@@ -320,16 +335,7 @@ Flushes the data in this **Preferences** instance to the persistent file. This A
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = dataPreferences.flush();
-promise.then(() => {
-  console.info("Succeeded in flushing.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
-})
-```
+See [flush](#flush)
 
 ## flushSync
 
@@ -381,7 +387,7 @@ Obtains the value of a key from this **Preferences** instance. This API uses an 
 | --- | --- | --- | --- |
 | key | string | Yes | Key to be obtained. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](arkts-data-preferences.md#constants). |
 | defValue | ValueType | Yes | Default value to be returned. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ValueType&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the value obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ValueType&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the value obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -401,6 +407,17 @@ dataPreferences.get('startup', 'default', (err: BusinessError, val: preferences.
     return;
   }
   console.info("Succeeded in getting value of 'startup'. val: " + val);
+})
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = dataPreferences.get('startup', 'default');
+promise.then((data: preferences.ValueType) => {
+  console.info("Succeeded in getting value of 'startup'. Data: " + data);
+}).catch((err: BusinessError) => {
+  console.error("Failed to get value of 'startup'. code =" + err.code + ", message =" + err.message);
 })
 ```
 
@@ -442,16 +459,7 @@ Obtains the value of a key from this **Preferences** instance. This API uses a p
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = dataPreferences.get('startup', 'default');
-promise.then((data: preferences.ValueType) => {
-  console.info("Succeeded in getting value of 'startup'. Data: " + data);
-}).catch((err: BusinessError) => {
-  console.error("Failed to get value of 'startup'. code =" + err.code + ", message =" + err.message);
-})
-```
+See [get](#get)
 
 ## getAll
 
@@ -473,7 +481,7 @@ Obtains all KV pairs from a **Preferences** instance. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Object&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **value** provides all KV pairs obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **value** provides all KV pairs obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -502,6 +510,26 @@ dataPreferences.getAll((err: BusinessError, value: Object) => {
   let allKeys = getObjKeys(value);
   console.info("getAll keys = " + allKeys);
   console.info("getAll object = " + JSON.stringify(value));
+})
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// There is no Object.keys in ArkTS, and the for..in... syntax cannot be used.
+// If an error is reported, extract this API to a .ts file and expose it. Then import the API to the .ets file when required.
+function getObjKeys(obj: Object): string[] {
+  let keys = Object.keys(obj);
+  return keys;
+}
+
+let promise = dataPreferences.getAll();
+promise.then((value: Object) => {
+  let allKeys = getObjKeys(value);
+  console.info('getAll keys = ' + allKeys);
+  console.info("getAll object = " + JSON.stringify(value));
+}).catch((err: BusinessError) => {
+  console.error("Failed to get all key-values. code =" + err.code + ", message =" + err.message);
 })
 ```
 
@@ -535,25 +563,7 @@ Obtains all KV pairs from this **Preferences** instance. This API uses a promise
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// There is no Object.keys in ArkTS, and the for..in... syntax cannot be used.
-// If an error is reported, extract this API to a .ts file and expose it. Then import the API to the .ets file when required.
-function getObjKeys(obj: Object): string[] {
-  let keys = Object.keys(obj);
-  return keys;
-}
-
-let promise = dataPreferences.getAll();
-promise.then((value: Object) => {
-  let allKeys = getObjKeys(value);
-  console.info('getAll keys = ' + allKeys);
-  console.info("getAll object = " + JSON.stringify(value));
-}).catch((err: BusinessError) => {
-  console.error("Failed to get all key-values. code =" + err.code + ", message =" + err.message);
-})
-```
+See [getAll](#getall)
 
 ## getAllSync
 
@@ -662,7 +672,7 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key to be checked. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](arkts-data-preferences.md#constants). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the **Preferences** instance contains the KV pair, **true** will be returned. Otherwise, **false** will be returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the **Preferences** instance contains the KV pair, **true** will be returned. Otherwise, **false** will be returned. |
 
 **Error codes:**
 
@@ -686,6 +696,21 @@ dataPreferences.has('startup', (err: BusinessError, val: boolean) => {
   } else {
     console.info("The key 'startup' is not contained.");
   }
+})
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = dataPreferences.has('startup');
+promise.then((val: boolean) => {
+  if (val) {
+    console.info("The key 'startup' is contained.");
+  } else {
+    console.info("The key 'startup' does not contain.");
+  }
+}).catch((err: BusinessError) => {
+  console.error("Failed to check the key 'startup'. code =" + err.code + ", message =" + err.message);
 })
 ```
 
@@ -726,20 +751,7 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = dataPreferences.has('startup');
-promise.then((val: boolean) => {
-  if (val) {
-    console.info("The key 'startup' is contained.");
-  } else {
-    console.info("The key 'startup' does not contain.");
-  }
-}).catch((err: BusinessError) => {
-  console.error("Failed to check the key 'startup'. code =" + err.code + ", message =" + err.message);
-})
-```
+See [has](#has)
 
 ## hasSync
 
@@ -787,85 +799,6 @@ if (isExist) {
 }
 ```
 
-## offChange
-
-```TypeScript
-offChange(callback?: Callback<string>): void
-```
-
-Unregisters an existing observer.
-
-**Since:** 23
-
-<!--Device-Preferences-offChange(callback?: Callback<string>): void--><!--Device-Preferences-offChange(callback?: Callback<string>): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Indicates the callback function. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
-
-## offDataChange
-
-```TypeScript
-offDataChange(keys: Array<string>, callback?: Callback<Record<string, ValueType>>): void
-```
-
-Unregisters an observer for changes to the {@ link Preferences} object.
-
-**Since:** 23
-
-<!--Device-Preferences-offDataChange(keys: Array<string>, callback?: Callback<Record<string, ValueType>>): void--><!--Device-Preferences-offDataChange(keys: Array<string>, callback?: Callback<Record<string, ValueType>>): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | Yes | Indicates the data whose changes are not observed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, ValueType&gt;&gt; | No | Indicates the callback to unregister. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
-
-## offMultiProcessChange
-
-```TypeScript
-offMultiProcessChange(callback?: Callback<string>): void
-```
-
-Unregisters an existing observer.
-
-**Since:** 23
-
-<!--Device-Preferences-offMultiProcessChange(callback?: Callback<string>): void--><!--Device-Preferences-offMultiProcessChange(callback?: Callback<string>): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Indicates the callback function. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
-
 ## off('change')
 
 ```TypeScript
@@ -887,7 +820,7 @@ Unsubscribes from data changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value is **'change'**, which indicates data changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes.<br>**Since:** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes.<br>**Since:** 11 |
 
 **Error codes:**
 
@@ -938,7 +871,7 @@ Unsubscribes from changes of specific data.
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
 | keys | Array&lt;string&gt; | Yes | Array of keys to be unsubscribed from. If this parameter is left empty, all keys are unsubscribed from. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, ValueType&gt;&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the changes of the specified data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, ValueType&gt;&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the changes of the specified data. |
 
 **Error codes:**
 
@@ -993,7 +926,7 @@ Unsubscribes from inter-process data changes. This API is provided for applicati
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'multiProcessChange' | Yes | Event type. The value is **'multiProcessChange'**, which indicates inter- process data changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes.<br>**Since:** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes.<br>**Since:** 11 |
 
 **Error codes:**
 
@@ -1022,17 +955,17 @@ dataPreferences.flush((err: BusinessError) => {
 dataPreferences.off('multiProcessChange', observer);
 ```
 
-## onChange
+## offChange
 
 ```TypeScript
-onChange(callback: Callback<string>): void
+offChange(callback?: Callback<string>): void
 ```
 
-Registers an observer to listen for the change of a [Preferences](#preferences) object.
+Unregisters an existing observer.
 
 **Since:** 23
 
-<!--Device-Preferences-onChange(callback: Callback<string>): void--><!--Device-Preferences-onChange(callback: Callback<string>): void-End-->
+<!--Device-Preferences-offChange(callback?: Callback<string>): void--><!--Device-Preferences-offChange(callback?: Callback<string>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -1040,7 +973,7 @@ Registers an observer to listen for the change of a [Preferences](#preferences) 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Indicates the callback function. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Indicates the callback function. |
 
 **Error codes:**
 
@@ -1048,17 +981,17 @@ Registers an observer to listen for the change of a [Preferences](#preferences) 
 | --- | --- |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
-## onDataChange
+## offDataChange
 
 ```TypeScript
-onDataChange(keys: Array<string>, callback: Callback<Record<string, ValueType>>): void
+offDataChange(keys: Array<string>, callback?: Callback<Record<string, ValueType>>): void
 ```
 
-Registers an observer to listen for changes to the {@ link Preferences} object.
+Unregisters an observer for changes to the {@ link Preferences} object.
 
 **Since:** 23
 
-<!--Device-Preferences-onDataChange(keys: Array<string>, callback: Callback<Record<string, ValueType>>): void--><!--Device-Preferences-onDataChange(keys: Array<string>, callback: Callback<Record<string, ValueType>>): void-End-->
+<!--Device-Preferences-offDataChange(keys: Array<string>, callback?: Callback<Record<string, ValueType>>): void--><!--Device-Preferences-offDataChange(keys: Array<string>, callback?: Callback<Record<string, ValueType>>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -1066,8 +999,8 @@ Registers an observer to listen for changes to the {@ link Preferences} object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | Yes | Indicates one or more keys to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, ValueType&gt;&gt; | Yes | Indicates the callback used to return the data change. |
+| keys | Array&lt;string&gt; | Yes | Indicates the data whose changes are not observed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, ValueType&gt;&gt; | No | Indicates the callback to unregister. |
 
 **Error codes:**
 
@@ -1075,17 +1008,17 @@ Registers an observer to listen for changes to the {@ link Preferences} object.
 | --- | --- |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
-## onMultiProcessChange
+## offMultiProcessChange
 
 ```TypeScript
-onMultiProcessChange(callback: Callback<string>): void
+offMultiProcessChange(callback?: Callback<string>): void
 ```
 
-Registers an observer to listen for the change of a [Preferences](#preferences) object.
+Unregisters an existing observer.
 
 **Since:** 23
 
-<!--Device-Preferences-onMultiProcessChange(callback: Callback<string>): void--><!--Device-Preferences-onMultiProcessChange(callback: Callback<string>): void-End-->
+<!--Device-Preferences-offMultiProcessChange(callback?: Callback<string>): void--><!--Device-Preferences-offMultiProcessChange(callback?: Callback<string>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -1093,14 +1026,13 @@ Registers an observer to listen for the change of a [Preferences](#preferences) 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Indicates the callback function. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Indicates the callback function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
-| [15500019](../errorcode-preferences.md#15500019-failed-to-obtain-the-subscription-service) | Failed to obtain the subscription service. |
 
 ## on('change')
 
@@ -1123,7 +1055,7 @@ Subscribes to data changes. The registered callback will be invoked to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value is **'change'**, which indicates data changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Callback used to return the data change.<br>**Since:** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback used to return the data change.<br>**Since:** 11 |
 
 **Error codes:**
 
@@ -1173,7 +1105,7 @@ Subscribes to changes of specific data. The registered callback will be invoked 
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
 | keys | Array&lt;string&gt; | Yes | Array of the keys to be observed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, ValueType&gt;&gt; | Yes | Callback used to return the changed data, in an array of KV pairs. The keys identify the data changed, and the values are the new values. The values support the following data types: number, string, boolean, Array&lt;number&gt;, Array&lt;string&gt;, Array&lt; boolean&gt;, Uint8Array, and object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, ValueType&gt;&gt; | Yes | Callback used to return the changed data, in an array of KV pairs. The keys identify the data changed, and the values are the new values. The values support the following data types: number, string, boolean, Array&lt;number&gt;, Array&lt;string&gt;, Array&lt; boolean&gt;, Uint8Array, and object. |
 
 **Error codes:**
 
@@ -1227,7 +1159,7 @@ Subscribes to data changes between processes. When multiple processes hold the s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'multiProcessChange' | Yes | Event type. The value is **'multiProcessChange'**, which indicates inter- process data changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Callback used to return the data change.<br>**Since:** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback used to return the data change.<br>**Since:** 11 |
 
 **Error codes:**
 
@@ -1256,6 +1188,86 @@ dataPreferences.flush((err: BusinessError) => {
 })
 ```
 
+## onChange
+
+```TypeScript
+onChange(callback: Callback<string>): void
+```
+
+Registers an observer to listen for the change of a [Preferences](#preferences) object.
+
+**Since:** 23
+
+<!--Device-Preferences-onChange(callback: Callback<string>): void--><!--Device-Preferences-onChange(callback: Callback<string>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Indicates the callback function. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+## onDataChange
+
+```TypeScript
+onDataChange(keys: Array<string>, callback: Callback<Record<string, ValueType>>): void
+```
+
+Registers an observer to listen for changes to the {@ link Preferences} object.
+
+**Since:** 23
+
+<!--Device-Preferences-onDataChange(keys: Array<string>, callback: Callback<Record<string, ValueType>>): void--><!--Device-Preferences-onDataChange(keys: Array<string>, callback: Callback<Record<string, ValueType>>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| keys | Array&lt;string&gt; | Yes | Indicates one or more keys to listen for. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, ValueType&gt;&gt; | Yes | Indicates the callback used to return the data change. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+## onMultiProcessChange
+
+```TypeScript
+onMultiProcessChange(callback: Callback<string>): void
+```
+
+Registers an observer to listen for the change of a [Preferences](#preferences) object.
+
+**Since:** 23
+
+<!--Device-Preferences-onMultiProcessChange(callback: Callback<string>): void--><!--Device-Preferences-onMultiProcessChange(callback: Callback<string>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Indicates the callback function. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [15500019](../errorcode-preferences.md#15500019-failed-to-obtain-the-subscription-service) | Failed to obtain the subscription service. |
+
 ## put
 
 ```TypeScript
@@ -1278,7 +1290,7 @@ Writes data to this **Preferences** instance. This API uses an asynchronous call
 | --- | --- | --- | --- |
 | key | string | Yes | Key to be modified. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](arkts-data-preferences.md#constants). |
 | value | ValueType | Yes | Value to write. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1298,6 +1310,17 @@ dataPreferences.put('startup', 'auto', (err: BusinessError) => {
     return;
   }
   console.info("Succeeded in putting value of 'startup'.");
+})
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = dataPreferences.put('startup', 'auto');
+promise.then(() => {
+  console.info("Succeeded in putting value of 'startup'.");
+}).catch((err: BusinessError) => {
+  console.error("Failed to put value of 'startup'. code =" + err.code + ", message =" + err.message);
 })
 ```
 
@@ -1339,16 +1362,7 @@ Writes data to this **Preferences** instance. This API uses a promise to return 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = dataPreferences.put('startup', 'auto');
-promise.then(() => {
-  console.info("Succeeded in putting value of 'startup'.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to put value of 'startup'. code =" + err.code + ", message =" + err.message);
-})
-```
+See [put](#put)
 
 ## putSync
 

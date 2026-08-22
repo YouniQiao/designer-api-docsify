@@ -60,29 +60,6 @@ import { sensor } from '@kit.SensorServiceKit';
 | [getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md) | Obtains information about the sensor of a specific type. This API uses a promise to return the result. |
 | [getSingleSensorByDeviceSync](arkts-sensorservice-sensor-getsinglesensorbydevicesync-f.md) | Obtains information about the sensor of a specific type. |
 | [getSingleSensorSync](arkts-sensorservice-sensor-getsinglesensorsync-f.md) | Obtains information about the sensor of a specific type. This API returns the result synchronously. |
-| [offAccelerometerChange](arkts-sensorservice-sensor-offaccelerometerchange-f.md) | Unsubscribe to accelerometer sensor data, {@code SensorId.ACCELEROMETER}. |
-| [offAccelerometerUncalibratedChange](arkts-sensorservice-sensor-offaccelerometeruncalibratedchange-f.md) | Unsubscribe to uncalibrated accelerometer sensor data, {@code SensorId.ACCELEROMETER_UNCALIBRATED}. |
-| [offAmbientLightChange](arkts-sensorservice-sensor-offambientlightchange-f.md) | Unsubscribe to ambient light sensor data, {@code SensorId.AMBIENT_LIGHT}. |
-| [offAmbientTemperatureChange](arkts-sensorservice-sensor-offambienttemperaturechange-f.md) | Unsubscribe to ambient temperature sensor data， {@code SensorId.AMBIENT_TEMPERATURE}. |
-| [offBarometerChange](arkts-sensorservice-sensor-offbarometerchange-f.md) | Unsubscribe to barometer sensor data, {@code SensorId.BAROMETER}. |
-| [offFusionPressureChange](arkts-sensorservice-sensor-offfusionpressurechange-f.md) | Unsubscribe to fusion pressure sensor data, {@code SensorId.FUSION_PRESSURE}. |
-| [offGravityChange](arkts-sensorservice-sensor-offgravitychange-f.md) | Unsubscribe to gravity sensor data, {@code SensorId.GRAVITY}. |
-| [offGyroscopeChange](arkts-sensorservice-sensor-offgyroscopechange-f.md) | Unsubscribe to gyroscope sensor data, {@code SensorId.GYROSCOPE}. |
-| [offGyroscopeUncalibratedChange](arkts-sensorservice-sensor-offgyroscopeuncalibratedchange-f.md) | Unsubscribe to uncalibrated gyroscope sensor data, {@code SensorId.GYROSCOPE_UNCALIBRATED}. |
-| [offHallChange](arkts-sensorservice-sensor-offhallchange-f.md) | Unsubscribe to hall sensor data, {@code SensorId.HALL}. |
-| [offHeartRateChange](arkts-sensorservice-sensor-offheartratechange-f.md) | Unsubscribe to heart rate sensor data, {@code SensorId.HEART_RATE}. |
-| [offHumidityChange](arkts-sensorservice-sensor-offhumiditychange-f.md) | Unsubscribe to humidity sensor data, {@code SensorId.HUMIDITY}. |
-| [offLinearAccelerometerChange](arkts-sensorservice-sensor-offlinearaccelerometerchange-f.md) | Unsubscribe to linear acceleration sensor data, {@code SensorId.LINEAR_ACCELEROMETER}. |
-| [offMagneticFieldChange](arkts-sensorservice-sensor-offmagneticfieldchange-f.md) | Unsubscribe to magnetic field sensor data, {@code SensorId.MAGNETIC_FIELD}. |
-| [offMagneticFieldUncalibratedChange](arkts-sensorservice-sensor-offmagneticfielduncalibratedchange-f.md) | Unsubscribe to uncalibrated magnetic field sensor data, {@code SensorId.MAGNETIC_FIELD_UNCALIBRATED}. |
-| [offOrientationChange](arkts-sensorservice-sensor-offorientationchange-f.md) | Unsubscribe to orientation sensor data, {@code SensorId.ORIENTATION}. |
-| [offPedometerChange](arkts-sensorservice-sensor-offpedometerchange-f.md) | Unsubscribe to pedometer sensor data, {@code SensorId.PEDOMETER}. |
-| [offPedometerDetectionChange](arkts-sensorservice-sensor-offpedometerdetectionchange-f.md) | Unsubscribe to pedometer detection sensor data, {@code SensorId.PEDOMETER_DETECTION}. |
-| [offProximityChange](arkts-sensorservice-sensor-offproximitychange-f.md) | Unsubscribe to proximity sensor data, {@code SensorId.PROXIMITY}. |
-| [offRotationVectorChange](arkts-sensorservice-sensor-offrotationvectorchange-f.md) | Unsubscribe to rotation vector sensor data, {@code SensorId.ROTATION_VECTOR}. |
-| [offSensorStatusChange](arkts-sensorservice-sensor-offsensorstatuschange-f.md) | Stop listening on device status changes. |
-| [offSignificantMotionChange](arkts-sensorservice-sensor-offsignificantmotionchange-f.md) | Unsubscribe to significant motion sensor data, {@code SensorId.SIGNIFICANT_MOTION}. |
-| [offWearDetectionChange](arkts-sensorservice-sensor-offweardetectionchange-f.md) | Unsubscribe to wear detection sensor data, {@code SensorId.WEAR_DETECTION}. |
 | [off_SensorId.ACCELEROMETER](arkts-sensorservice-sensor-offsensoridaccelerometer-f.md#off_sensoridaccelerometer) | Unsubscribes from data of the acceleration sensor. |
 | [off_SensorId.ACCELEROMETER](arkts-sensorservice-sensor-offsensoridaccelerometer-f.md#off_sensoridaccelerometer-1) | Unsubscribes from data of the acceleration sensor. |
 | [off_SensorId.ACCELEROMETER_UNCALIBRATED](arkts-sensorservice-sensor-offsensoridaccelerometeruncalibrated-f.md#off_sensoridaccelerometer_uncalibrated) | Unsubscribes from data of the uncalibrated acceleration sensor. |
@@ -126,6 +103,7 @@ import { sensor } from '@kit.SensorServiceKit';
 | [off_SensorId.SIGNIFICANT_MOTION](arkts-sensorservice-sensor-offsensoridsignificantmotion-f.md#off_sensoridsignificant_motion-1) | Unsubscribes from valid motion sensor data. |
 | [off_SensorId.WEAR_DETECTION](arkts-sensorservice-sensor-offsensoridweardetection-f.md#off_sensoridwear_detection) | Unsubscribes from data of the wear detection sensor. |
 | [off_SensorId.WEAR_DETECTION](arkts-sensorservice-sensor-offsensoridweardetection-f.md#off_sensoridwear_detection-1) | Unsubscribes from data of the wear detection sensor. |
+| [off_sensorStatusChange](arkts-sensorservice-sensor-offsensorstatuschange-f.md) | Disables listening for sensor status changes. |
 | [off_SensorType.SENSOR_TYPE_ID_ACCELEROMETER](arkts-sensorservice-sensor-offsensortypesensortypeidaccelerometer-f.md#off_sensortypesensor_type_id_accelerometer) | Unsubscribes from sensor data changes. |
 | [off_SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED](arkts-sensorservice-sensor-offsensortypesensortypeidaccelerometeruncalibrated-f.md#off_sensortypesensor_type_id_accelerometer_uncalibrated) | Unsubscribes from sensor data changes. |
 | [off_SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT](arkts-sensorservice-sensor-offsensortypesensortypeidambientlight-f.md#off_sensortypesensor_type_id_ambient_light) | Unsubscribes from sensor data changes. |
@@ -147,30 +125,29 @@ import { sensor } from '@kit.SensorServiceKit';
 | [off_SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR](arkts-sensorservice-sensor-offsensortypesensortypeidrotationvector-f.md#off_sensortypesensor_type_id_rotation_vector) | Unsubscribes from sensor data changes. |
 | [off_SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION](arkts-sensorservice-sensor-offsensortypesensortypeidsignificantmotion-f.md#off_sensortypesensor_type_id_significant_motion) | Unsubscribes from valid motion sensor data. |
 | [off_SensorType.SENSOR_TYPE_ID_WEAR_DETECTION](arkts-sensorservice-sensor-offsensortypesensortypeidweardetection-f.md#off_sensortypesensor_type_id_wear_detection) | Unsubscribes from sensor data changes. |
-| [off_sensorStatusChange](arkts-sensorservice-sensor-offsensorstatuschange-f.md) | Disables listening for sensor status changes. |
-| [onAccelerometerChange](arkts-sensorservice-sensor-onaccelerometerchange-f.md) | Subscribe to accelerometer sensor data, {@code SensorId.ACCELEROMETER}. |
-| [onAccelerometerUncalibratedChange](arkts-sensorservice-sensor-onaccelerometeruncalibratedchange-f.md) | Subscribe to uncalibrated accelerometer sensor data, {@code SensorId.ACCELEROMETER_UNCALIBRATED}. |
-| [onAmbientLightChange](arkts-sensorservice-sensor-onambientlightchange-f.md) | Subscribe to ambient light sensor data, {@code SensorId.AMBIENT_LIGHT}. |
-| [onAmbientTemperatureChange](arkts-sensorservice-sensor-onambienttemperaturechange-f.md) | Subscribe to ambient temperature sensor data, {@code SensorId.AMBIENT_TEMPERATURE}. |
-| [onBarometerChange](arkts-sensorservice-sensor-onbarometerchange-f.md) | Subscribe to barometer sensor data, {@code SensorId.BAROMETER}. |
-| [onFusionPressureChange](arkts-sensorservice-sensor-onfusionpressurechange-f.md) | Subscribe to fusion pressure sensor data, {@code SensorId.FUSION_PRESSURE}. |
-| [onGravityChange](arkts-sensorservice-sensor-ongravitychange-f.md) | Subscribe to gravity sensor data, {@code SensorId.GRAVITY}. |
-| [onGyroscopeChange](arkts-sensorservice-sensor-ongyroscopechange-f.md) | Subscribe to gyroscope sensor data, {@code SensorId.GYROSCOPE}. |
-| [onGyroscopeUncalibratedChange](arkts-sensorservice-sensor-ongyroscopeuncalibratedchange-f.md) | Subscribe to uncalibrated gyroscope sensor data, {@code SensorId.GYROSCOPE_UNCALIBRATED}. |
-| [onHallChange](arkts-sensorservice-sensor-onhallchange-f.md) | Subscribe to hall sensor data, {@code SensorId.HALL}. |
-| [onHeartRateChange](arkts-sensorservice-sensor-onheartratechange-f.md) | Subscribe to heart rate sensor data, {@code SensorId.HEART_RATE}. |
-| [onHumidityChange](arkts-sensorservice-sensor-onhumiditychange-f.md) | Subscribe to humidity sensor data, {@code SensorId.HUMIDITY}. |
-| [onLinearAccelerometerChange](arkts-sensorservice-sensor-onlinearaccelerometerchange-f.md) | Subscribe to linear acceleration sensor data, {@code SensorId.LINEAR_ACCELEROMETER}. |
-| [onMagneticFieldChange](arkts-sensorservice-sensor-onmagneticfieldchange-f.md) | Subscribe to magnetic field sensor data, {@code SensorId.MAGNETIC_FIELD}. |
-| [onMagneticFieldUncalibratedChange](arkts-sensorservice-sensor-onmagneticfielduncalibratedchange-f.md) | Subscribe to uncalibrated magnetic field sensor data, {@code SensorId.MAGNETIC_FIELD_UNCALIBRATED}. |
-| [onOrientationChange](arkts-sensorservice-sensor-onorientationchange-f.md) | Subscribe to orientation sensor data, {@code SensorId.ORIENTATION}. |
-| [onPedometerChange](arkts-sensorservice-sensor-onpedometerchange-f.md) | Subscribe to pedometer sensor data, {@code SensorId.PEDOMETER}. |
-| [onPedometerDetectionChange](arkts-sensorservice-sensor-onpedometerdetectionchange-f.md) | Subscribe to pedometer detection sensor data, {@code SensorId.PEDOMETER_DETECTION}. |
-| [onProximityChange](arkts-sensorservice-sensor-onproximitychange-f.md) | Subscribe to proximity sensor data, {@code SensorId.PROXIMITY}. |
-| [onRotationVectorChange](arkts-sensorservice-sensor-onrotationvectorchange-f.md) | Subscribe to rotation vector sensor data, {@code SensorId.ROTATION_VECTOR}. |
-| [onSensorStatusChange](arkts-sensorservice-sensor-onsensorstatuschange-f.md) | Start listening on device status changes. |
-| [onSignificantMotionChange](arkts-sensorservice-sensor-onsignificantmotionchange-f.md) | Subscribe to significant motion sensor data, {@code SensorId.SIGNIFICANT_MOTION}. |
-| [onWearDetectionChange](arkts-sensorservice-sensor-onweardetectionchange-f.md) | Subscribe to wear detection sensor data, {@code SensorId.WEAR_DETECTION}. |
+| [offAccelerometerChange](arkts-sensorservice-sensor-offaccelerometerchange-f.md) | Unsubscribe to accelerometer sensor data, {@code SensorId.ACCELEROMETER}. |
+| [offAccelerometerUncalibratedChange](arkts-sensorservice-sensor-offaccelerometeruncalibratedchange-f.md) | Unsubscribe to uncalibrated accelerometer sensor data, {@code SensorId.ACCELEROMETER_UNCALIBRATED}. |
+| [offAmbientLightChange](arkts-sensorservice-sensor-offambientlightchange-f.md) | Unsubscribe to ambient light sensor data, {@code SensorId.AMBIENT_LIGHT}. |
+| [offAmbientTemperatureChange](arkts-sensorservice-sensor-offambienttemperaturechange-f.md) | Unsubscribe to ambient temperature sensor data， {@code SensorId.AMBIENT_TEMPERATURE}. |
+| [offBarometerChange](arkts-sensorservice-sensor-offbarometerchange-f.md) | Unsubscribe to barometer sensor data, {@code SensorId.BAROMETER}. |
+| [offFusionPressureChange](arkts-sensorservice-sensor-offfusionpressurechange-f.md) | Unsubscribe to fusion pressure sensor data, {@code SensorId.FUSION_PRESSURE}. |
+| [offGravityChange](arkts-sensorservice-sensor-offgravitychange-f.md) | Unsubscribe to gravity sensor data, {@code SensorId.GRAVITY}. |
+| [offGyroscopeChange](arkts-sensorservice-sensor-offgyroscopechange-f.md) | Unsubscribe to gyroscope sensor data, {@code SensorId.GYROSCOPE}. |
+| [offGyroscopeUncalibratedChange](arkts-sensorservice-sensor-offgyroscopeuncalibratedchange-f.md) | Unsubscribe to uncalibrated gyroscope sensor data, {@code SensorId.GYROSCOPE_UNCALIBRATED}. |
+| [offHallChange](arkts-sensorservice-sensor-offhallchange-f.md) | Unsubscribe to hall sensor data, {@code SensorId.HALL}. |
+| [offHeartRateChange](arkts-sensorservice-sensor-offheartratechange-f.md) | Unsubscribe to heart rate sensor data, {@code SensorId.HEART_RATE}. |
+| [offHumidityChange](arkts-sensorservice-sensor-offhumiditychange-f.md) | Unsubscribe to humidity sensor data, {@code SensorId.HUMIDITY}. |
+| [offLinearAccelerometerChange](arkts-sensorservice-sensor-offlinearaccelerometerchange-f.md) | Unsubscribe to linear acceleration sensor data, {@code SensorId.LINEAR_ACCELEROMETER}. |
+| [offMagneticFieldChange](arkts-sensorservice-sensor-offmagneticfieldchange-f.md) | Unsubscribe to magnetic field sensor data, {@code SensorId.MAGNETIC_FIELD}. |
+| [offMagneticFieldUncalibratedChange](arkts-sensorservice-sensor-offmagneticfielduncalibratedchange-f.md) | Unsubscribe to uncalibrated magnetic field sensor data, {@code SensorId.MAGNETIC_FIELD_UNCALIBRATED}. |
+| [offOrientationChange](arkts-sensorservice-sensor-offorientationchange-f.md) | Unsubscribe to orientation sensor data, {@code SensorId.ORIENTATION}. |
+| [offPedometerChange](arkts-sensorservice-sensor-offpedometerchange-f.md) | Unsubscribe to pedometer sensor data, {@code SensorId.PEDOMETER}. |
+| [offPedometerDetectionChange](arkts-sensorservice-sensor-offpedometerdetectionchange-f.md) | Unsubscribe to pedometer detection sensor data, {@code SensorId.PEDOMETER_DETECTION}. |
+| [offProximityChange](arkts-sensorservice-sensor-offproximitychange-f.md) | Unsubscribe to proximity sensor data, {@code SensorId.PROXIMITY}. |
+| [offRotationVectorChange](arkts-sensorservice-sensor-offrotationvectorchange-f.md) | Unsubscribe to rotation vector sensor data, {@code SensorId.ROTATION_VECTOR}. |
+| [offSensorStatusChange](arkts-sensorservice-sensor-offsensorstatuschange-f.md) | Stop listening on device status changes. |
+| [offSignificantMotionChange](arkts-sensorservice-sensor-offsignificantmotionchange-f.md) | Unsubscribe to significant motion sensor data, {@code SensorId.SIGNIFICANT_MOTION}. |
+| [offWearDetectionChange](arkts-sensorservice-sensor-offweardetectionchange-f.md) | Unsubscribe to wear detection sensor data, {@code SensorId.WEAR_DETECTION}. |
 | [on_SensorId.ACCELEROMETER](arkts-sensorservice-sensor-onsensoridaccelerometer-f.md#on_sensoridaccelerometer) | Subscribes to data of the acceleration sensor. |
 | [on_SensorId.ACCELEROMETER_UNCALIBRATED](arkts-sensorservice-sensor-onsensoridaccelerometeruncalibrated-f.md#on_sensoridaccelerometer_uncalibrated) | Subscribes to data of the uncalibrated acceleration sensor. |
 | [on_SensorId.AMBIENT_LIGHT](arkts-sensorservice-sensor-onsensoridambientlight-f.md#on_sensoridambient_light) | Subscribes to data of the ambient light sensor. |
@@ -193,6 +170,7 @@ import { sensor } from '@kit.SensorServiceKit';
 | [on_SensorId.ROTATION_VECTOR](arkts-sensorservice-sensor-onsensoridrotationvector-f.md#on_sensoridrotation_vector) | Subscribes to data of the rotation vector sensor. |
 | [on_SensorId.SIGNIFICANT_MOTION](arkts-sensorservice-sensor-onsensoridsignificantmotion-f.md#on_sensoridsignificant_motion) | Subscribes to the significant motion sensor data. |
 | [on_SensorId.WEAR_DETECTION](arkts-sensorservice-sensor-onsensoridweardetection-f.md#on_sensoridwear_detection) | Subscribes to data of the wear detection sensor. |
+| [on_sensorStatusChange](arkts-sensorservice-sensor-onsensorstatuschange-f.md) | Enables listening for sensor status changes. This API asynchronously returns the result through a callback. |
 | [on_SensorType.SENSOR_TYPE_ID_ACCELEROMETER](arkts-sensorservice-sensor-onsensortypesensortypeidaccelerometer-f.md#on_sensortypesensor_type_id_accelerometer) | Subscribes to data changes of the acceleration sensor. If this API is called multiple times for the same application, the last call takes effect. |
 | [on_SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED](arkts-sensorservice-sensor-onsensortypesensortypeidaccelerometeruncalibrated-f.md#on_sensortypesensor_type_id_accelerometer_uncalibrated) | Subscribes to data changes of the uncalibrated acceleration sensor. If this API is called multiple times for the same application, the last call takes effect. |
 | [on_SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT](arkts-sensorservice-sensor-onsensortypesensortypeidambientlight-f.md#on_sensortypesensor_type_id_ambient_light) | Subscribes to data changes of the ambient light sensor. If this API is called multiple times for the same application, the last call takes effect. |
@@ -214,28 +192,11 @@ import { sensor } from '@kit.SensorServiceKit';
 | [on_SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR](arkts-sensorservice-sensor-onsensortypesensortypeidrotationvector-f.md#on_sensortypesensor_type_id_rotation_vector) | Subscribes to data changes of the rotation vector sensor. If this API is called multiple times for the same application, the last call takes effect. |
 | [on_SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION](arkts-sensorservice-sensor-onsensortypesensortypeidsignificantmotion-f.md#on_sensortypesensor_type_id_significant_motion) | Subscribes to data changes of the significant motion sensor. If this API is called multiple times for the same application, the last call takes effect. |
 | [on_SensorType.SENSOR_TYPE_ID_WEAR_DETECTION](arkts-sensorservice-sensor-onsensortypesensortypeidweardetection-f.md#on_sensortypesensor_type_id_wear_detection) | Subscribes to data changes of the wear detection sensor. If this API is called multiple times for the same application, the last call takes effect. |
-| [on_sensorStatusChange](arkts-sensorservice-sensor-onsensorstatuschange-f.md) | Enables listening for sensor status changes. This API asynchronously returns the result through a callback. |
-| [onceAccelerometerChange](arkts-sensorservice-sensor-onceaccelerometerchange-f.md) | Subscribe to accelerometer sensor data once, {@code SensorId.ACCELEROMETER}. |
-| [onceAccelerometerUncalibratedChange](arkts-sensorservice-sensor-onceaccelerometeruncalibratedchange-f.md) | Subscribe to uncalibrated accelerometer sensor data once, {@code SensorId.ACCELEROMETER_UNCALIBRATED}. |
-| [onceAmbientLightChange](arkts-sensorservice-sensor-onceambientlightchange-f.md) | Subscribe to ambient light sensor data once, {@code SensorId.AMBIENT_LIGHT}. |
-| [onceAmbientTemperatureChange](arkts-sensorservice-sensor-onceambienttemperaturechange-f.md) | Subscribe to ambient temperature sensor data once, {@code SensorId.AMBIENT_TEMPERATURE}. |
-| [onceBarometerChange](arkts-sensorservice-sensor-oncebarometerchange-f.md) | Subscribe to barometer sensor data once, {@code SensorId.BAROMETER}. |
-| [onceGravityChange](arkts-sensorservice-sensor-oncegravitychange-f.md) | Subscribe to gravity sensor data once, {@code SensorId.GRAVITY}. |
-| [onceGyroscopeChange](arkts-sensorservice-sensor-oncegyroscopechange-f.md) | Subscribe to gyroscope sensor data once, {@code SensorId.GYROSCOPE}. |
-| [onceGyroscopeUncalibratedChange](arkts-sensorservice-sensor-oncegyroscopeuncalibratedchange-f.md) | Subscribe to uncalibrated gyroscope sensor data once, {@code SensorId.GYROSCOPE_UNCALIBRATED}. |
-| [onceHallChange](arkts-sensorservice-sensor-oncehallchange-f.md) | Subscribe to hall sensor data once, {@code SensorId.HALL}. |
-| [onceHeartRateChange](arkts-sensorservice-sensor-onceheartratechange-f.md) | Subscribe to heart rate sensor data once, {@code SensorId.HEART_RATE}. |
-| [onceHumidityChange](arkts-sensorservice-sensor-oncehumiditychange-f.md) | Subscribe to humidity sensor data once, {@code SensorId.HUMIDITY}. |
-| [onceLinearAccelerometerChange](arkts-sensorservice-sensor-oncelinearaccelerometerchange-f.md) | Subscribe to linear acceleration sensor data once, {@code SensorId.LINEAR_ACCELEROMETER}. |
-| [onceMagneticFieldChange](arkts-sensorservice-sensor-oncemagneticfieldchange-f.md) | Subscribe to magnetic field sensor data once, {@code SensorId.MAGNETIC_FIELD}. |
-| [onceMagneticFieldUncalibratedChange](arkts-sensorservice-sensor-oncemagneticfielduncalibratedchange-f.md) | Subscribe to uncalibrated magnetic field sensor data once, {@code SensorId.MAGNETIC_FIELD_UNCALIBRATED}. |
-| [onceOrientationChange](arkts-sensorservice-sensor-onceorientationchange-f.md) | Subscribe to orientation sensor data once, {@code SensorId.ORIENTATION}. |
-| [oncePedometerChange](arkts-sensorservice-sensor-oncepedometerchange-f.md) | Subscribe to pedometer sensor data once, {@code SensorId.PEDOMETER}. |
-| [oncePedometerDetectionChange](arkts-sensorservice-sensor-oncepedometerdetectionchange-f.md) | Subscribe to pedometer detection sensor data once, {@code SensorId.PEDOMETER_DETECTION}. |
-| [onceProximityChange](arkts-sensorservice-sensor-onceproximitychange-f.md) | Subscribe to proximity sensor data once, {@code SensorId.PROXIMITY}. |
-| [onceRotationVectorChange](arkts-sensorservice-sensor-oncerotationvectorchange-f.md) | Subscribe to rotation vector sensor data once, {@code SensorId.ROTATION_VECTOR}. |
-| [onceSignificantMotionChange](arkts-sensorservice-sensor-oncesignificantmotionchange-f.md) | Subscribe to significant motion sensor data once, {@code SensorId.SIGNIFICANT_MOTION}. |
-| [onceWearDetectionChange](arkts-sensorservice-sensor-onceweardetectionchange-f.md) | Subscribe to wear detection sensor data once, {@code SensorId.WEAR_DETECTION}. |
+| [onAccelerometerChange](arkts-sensorservice-sensor-onaccelerometerchange-f.md) | Subscribe to accelerometer sensor data, {@code SensorId.ACCELEROMETER}. |
+| [onAccelerometerUncalibratedChange](arkts-sensorservice-sensor-onaccelerometeruncalibratedchange-f.md) | Subscribe to uncalibrated accelerometer sensor data, {@code SensorId.ACCELEROMETER_UNCALIBRATED}. |
+| [onAmbientLightChange](arkts-sensorservice-sensor-onambientlightchange-f.md) | Subscribe to ambient light sensor data, {@code SensorId.AMBIENT_LIGHT}. |
+| [onAmbientTemperatureChange](arkts-sensorservice-sensor-onambienttemperaturechange-f.md) | Subscribe to ambient temperature sensor data, {@code SensorId.AMBIENT_TEMPERATURE}. |
+| [onBarometerChange](arkts-sensorservice-sensor-onbarometerchange-f.md) | Subscribe to barometer sensor data, {@code SensorId.BAROMETER}. |
 | [once_SensorId.ACCELEROMETER](arkts-sensorservice-sensor-oncesensoridaccelerometer-f.md#once_sensoridaccelerometer) | Obtains data of the acceleration sensor once. |
 | [once_SensorId.ACCELEROMETER_UNCALIBRATED](arkts-sensorservice-sensor-oncesensoridaccelerometeruncalibrated-f.md#once_sensoridaccelerometer_uncalibrated) | Obtains data of the uncalibrated acceleration sensor once. |
 | [once_SensorId.AMBIENT_LIGHT](arkts-sensorservice-sensor-oncesensoridambientlight-f.md#once_sensoridambient_light) | Obtains data of the ambient light sensor once. |
@@ -278,6 +239,45 @@ import { sensor } from '@kit.SensorServiceKit';
 | [once_SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR](arkts-sensorservice-sensor-oncesensortypesensortypeidrotationvector-f.md#once_sensortypesensor_type_id_rotation_vector) | Subscribes to only one data change of the rotation vector sensor. |
 | [once_SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION](arkts-sensorservice-sensor-oncesensortypesensortypeidsignificantmotion-f.md#once_sensortypesensor_type_id_significant_motion) | Subscribes to only one data change of the significant motion sensor. |
 | [once_SensorType.SENSOR_TYPE_ID_WEAR_DETECTION](arkts-sensorservice-sensor-oncesensortypesensortypeidweardetection-f.md#once_sensortypesensor_type_id_wear_detection) | Subscribes to only one data change of the wear detection sensor. |
+| [onceAccelerometerChange](arkts-sensorservice-sensor-onceaccelerometerchange-f.md) | Subscribe to accelerometer sensor data once, {@code SensorId.ACCELEROMETER}. |
+| [onceAccelerometerUncalibratedChange](arkts-sensorservice-sensor-onceaccelerometeruncalibratedchange-f.md) | Subscribe to uncalibrated accelerometer sensor data once, {@code SensorId.ACCELEROMETER_UNCALIBRATED}. |
+| [onceAmbientLightChange](arkts-sensorservice-sensor-onceambientlightchange-f.md) | Subscribe to ambient light sensor data once, {@code SensorId.AMBIENT_LIGHT}. |
+| [onceAmbientTemperatureChange](arkts-sensorservice-sensor-onceambienttemperaturechange-f.md) | Subscribe to ambient temperature sensor data once, {@code SensorId.AMBIENT_TEMPERATURE}. |
+| [onceBarometerChange](arkts-sensorservice-sensor-oncebarometerchange-f.md) | Subscribe to barometer sensor data once, {@code SensorId.BAROMETER}. |
+| [onceGravityChange](arkts-sensorservice-sensor-oncegravitychange-f.md) | Subscribe to gravity sensor data once, {@code SensorId.GRAVITY}. |
+| [onceGyroscopeChange](arkts-sensorservice-sensor-oncegyroscopechange-f.md) | Subscribe to gyroscope sensor data once, {@code SensorId.GYROSCOPE}. |
+| [onceGyroscopeUncalibratedChange](arkts-sensorservice-sensor-oncegyroscopeuncalibratedchange-f.md) | Subscribe to uncalibrated gyroscope sensor data once, {@code SensorId.GYROSCOPE_UNCALIBRATED}. |
+| [onceHallChange](arkts-sensorservice-sensor-oncehallchange-f.md) | Subscribe to hall sensor data once, {@code SensorId.HALL}. |
+| [onceHeartRateChange](arkts-sensorservice-sensor-onceheartratechange-f.md) | Subscribe to heart rate sensor data once, {@code SensorId.HEART_RATE}. |
+| [onceHumidityChange](arkts-sensorservice-sensor-oncehumiditychange-f.md) | Subscribe to humidity sensor data once, {@code SensorId.HUMIDITY}. |
+| [onceLinearAccelerometerChange](arkts-sensorservice-sensor-oncelinearaccelerometerchange-f.md) | Subscribe to linear acceleration sensor data once, {@code SensorId.LINEAR_ACCELEROMETER}. |
+| [onceMagneticFieldChange](arkts-sensorservice-sensor-oncemagneticfieldchange-f.md) | Subscribe to magnetic field sensor data once, {@code SensorId.MAGNETIC_FIELD}. |
+| [onceMagneticFieldUncalibratedChange](arkts-sensorservice-sensor-oncemagneticfielduncalibratedchange-f.md) | Subscribe to uncalibrated magnetic field sensor data once, {@code SensorId.MAGNETIC_FIELD_UNCALIBRATED}. |
+| [onceOrientationChange](arkts-sensorservice-sensor-onceorientationchange-f.md) | Subscribe to orientation sensor data once, {@code SensorId.ORIENTATION}. |
+| [oncePedometerChange](arkts-sensorservice-sensor-oncepedometerchange-f.md) | Subscribe to pedometer sensor data once, {@code SensorId.PEDOMETER}. |
+| [oncePedometerDetectionChange](arkts-sensorservice-sensor-oncepedometerdetectionchange-f.md) | Subscribe to pedometer detection sensor data once, {@code SensorId.PEDOMETER_DETECTION}. |
+| [onceProximityChange](arkts-sensorservice-sensor-onceproximitychange-f.md) | Subscribe to proximity sensor data once, {@code SensorId.PROXIMITY}. |
+| [onceRotationVectorChange](arkts-sensorservice-sensor-oncerotationvectorchange-f.md) | Subscribe to rotation vector sensor data once, {@code SensorId.ROTATION_VECTOR}. |
+| [onceSignificantMotionChange](arkts-sensorservice-sensor-oncesignificantmotionchange-f.md) | Subscribe to significant motion sensor data once, {@code SensorId.SIGNIFICANT_MOTION}. |
+| [onceWearDetectionChange](arkts-sensorservice-sensor-onceweardetectionchange-f.md) | Subscribe to wear detection sensor data once, {@code SensorId.WEAR_DETECTION}. |
+| [onFusionPressureChange](arkts-sensorservice-sensor-onfusionpressurechange-f.md) | Subscribe to fusion pressure sensor data, {@code SensorId.FUSION_PRESSURE}. |
+| [onGravityChange](arkts-sensorservice-sensor-ongravitychange-f.md) | Subscribe to gravity sensor data, {@code SensorId.GRAVITY}. |
+| [onGyroscopeChange](arkts-sensorservice-sensor-ongyroscopechange-f.md) | Subscribe to gyroscope sensor data, {@code SensorId.GYROSCOPE}. |
+| [onGyroscopeUncalibratedChange](arkts-sensorservice-sensor-ongyroscopeuncalibratedchange-f.md) | Subscribe to uncalibrated gyroscope sensor data, {@code SensorId.GYROSCOPE_UNCALIBRATED}. |
+| [onHallChange](arkts-sensorservice-sensor-onhallchange-f.md) | Subscribe to hall sensor data, {@code SensorId.HALL}. |
+| [onHeartRateChange](arkts-sensorservice-sensor-onheartratechange-f.md) | Subscribe to heart rate sensor data, {@code SensorId.HEART_RATE}. |
+| [onHumidityChange](arkts-sensorservice-sensor-onhumiditychange-f.md) | Subscribe to humidity sensor data, {@code SensorId.HUMIDITY}. |
+| [onLinearAccelerometerChange](arkts-sensorservice-sensor-onlinearaccelerometerchange-f.md) | Subscribe to linear acceleration sensor data, {@code SensorId.LINEAR_ACCELEROMETER}. |
+| [onMagneticFieldChange](arkts-sensorservice-sensor-onmagneticfieldchange-f.md) | Subscribe to magnetic field sensor data, {@code SensorId.MAGNETIC_FIELD}. |
+| [onMagneticFieldUncalibratedChange](arkts-sensorservice-sensor-onmagneticfielduncalibratedchange-f.md) | Subscribe to uncalibrated magnetic field sensor data, {@code SensorId.MAGNETIC_FIELD_UNCALIBRATED}. |
+| [onOrientationChange](arkts-sensorservice-sensor-onorientationchange-f.md) | Subscribe to orientation sensor data, {@code SensorId.ORIENTATION}. |
+| [onPedometerChange](arkts-sensorservice-sensor-onpedometerchange-f.md) | Subscribe to pedometer sensor data, {@code SensorId.PEDOMETER}. |
+| [onPedometerDetectionChange](arkts-sensorservice-sensor-onpedometerdetectionchange-f.md) | Subscribe to pedometer detection sensor data, {@code SensorId.PEDOMETER_DETECTION}. |
+| [onProximityChange](arkts-sensorservice-sensor-onproximitychange-f.md) | Subscribe to proximity sensor data, {@code SensorId.PROXIMITY}. |
+| [onRotationVectorChange](arkts-sensorservice-sensor-onrotationvectorchange-f.md) | Subscribe to rotation vector sensor data, {@code SensorId.ROTATION_VECTOR}. |
+| [onSensorStatusChange](arkts-sensorservice-sensor-onsensorstatuschange-f.md) | Start listening on device status changes. |
+| [onSignificantMotionChange](arkts-sensorservice-sensor-onsignificantmotionchange-f.md) | Subscribe to significant motion sensor data, {@code SensorId.SIGNIFICANT_MOTION}. |
+| [onWearDetectionChange](arkts-sensorservice-sensor-onweardetectionchange-f.md) | Subscribe to wear detection sensor data, {@code SensorId.WEAR_DETECTION}. |
 | [transformCoordinateSystem](arkts-sensorservice-sensor-transformcoordinatesystem-f.md) | Rotates a rotation vector so that it can represent the coordinate system in different ways. This API uses an asynchronous callback to return the result. |
 | [transformCoordinateSystem](arkts-sensorservice-sensor-transformcoordinatesystem-f.md) | Rotates a rotation vector so that it can represent the coordinate system in different ways. This API uses a promise to return the result. |
 | [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md) | Transforms a rotation vector based on the coordinate system. This API uses an asynchronous callback to return the result. |
@@ -288,16 +288,16 @@ import { sensor } from '@kit.SensorServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [offColorChange](arkts-sensorservice-sensor-offcolorchange-f-sys.md) | Unsubscribe to color sensor data, {@code SensorId.COLOR}. |
-| [offSarChange](arkts-sensorservice-sensor-offsarchange-f-sys.md) | Unsubscribe to sar sensor data, {@code SensorId.SAR}. |
 | [off_SensorId.COLOR](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor) | Unsubscribes from data of the color sensor. |
 | [off_SensorId.COLOR](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor-1) | Unsubscribes from data of the color sensor. |
 | [off_SensorId.SAR](arkts-sensorservice-sensor-offsensoridsar-f-sys.md#off_sensoridsar) | Unsubscribes from data of the SAR sensor. |
 | [off_SensorId.SAR](arkts-sensorservice-sensor-offsensoridsar-f-sys.md#off_sensoridsar-1) | Unsubscribes from data of the SAR sensor. |
-| [onColorChange](arkts-sensorservice-sensor-oncolorchange-f-sys.md) | Subscribe to color sensor data, {@code SensorId.COLOR}. |
-| [onSarChange](arkts-sensorservice-sensor-onsarchange-f-sys.md) | Subscribe to SAR sensor data, {@code SensorId.SAR}. |
+| [offColorChange](arkts-sensorservice-sensor-offcolorchange-f-sys.md) | Unsubscribe to color sensor data, {@code SensorId.COLOR}. |
+| [offSarChange](arkts-sensorservice-sensor-offsarchange-f-sys.md) | Unsubscribe to sar sensor data, {@code SensorId.SAR}. |
 | [on_SensorId.COLOR](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor) | Subscribes to data of the color sensor. |
 | [on_SensorId.SAR](arkts-sensorservice-sensor-onsensoridsar-f-sys.md#on_sensoridsar) | Subscribes to data of the Sodium Adsorption Ratio (SAR) sensor. |
+| [onColorChange](arkts-sensorservice-sensor-oncolorchange-f-sys.md) | Subscribe to color sensor data, {@code SensorId.COLOR}. |
+| [onSarChange](arkts-sensorservice-sensor-onsarchange-f-sys.md) | Subscribe to SAR sensor data, {@code SensorId.SAR}. |
 <!--DelEnd-->
 
 ### Interfaces

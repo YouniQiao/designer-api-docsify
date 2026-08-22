@@ -50,7 +50,7 @@ CONTENT_TITLE_KEY = 'ohos.extra.param.key.contentTitle'
 
 Title for sharing in an atomic service.
 
-You can set the sharing title using this field in the [onShare](arkts-ability-appabilityuiability-uiability-c.md#onshare) callback.
+You can set the sharing title using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
 
 **Since:** 23
 
@@ -68,7 +68,7 @@ SHARE_ABSTRACT_KEY = 'ohos.extra.param.key.shareAbstract'
 
 Content abstract for sharing in an atomic service.
 
-You can set the sharing abstract using this field in the [onShare](arkts-ability-appabilityuiability-uiability-c.md#onshare) callback.
+You can set the sharing abstract using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
 
 **Since:** 23
 
@@ -86,7 +86,7 @@ SHARE_URL_KEY = 'ohos.extra.param.key.shareUrl'
 
 URL link for sharing in an atomic service.
 
-You can set the URL link using this field in the [onShare](arkts-ability-appabilityuiability-uiability-c.md#onshare) callback.
+You can set the URL link using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
 
 **Since:** 23
 
@@ -134,7 +134,7 @@ Whether the source application exits during cross-device migration. The default 
 SHOW_MODE_KEY = 'ohos.extra.param.key.showMode'
 ```
 
-Display mode of the [EmbeddableUIAbility](arkts-ability-appabilityembeddableuiability-embeddableuiability-c.md). The value is an enumerated value of [ShowMode](arkts-ability-wantconstant-showmode-e.md).
+Display mode of the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md). The value is an enumerated value of [ShowMode](arkts-ability-wantconstant-showmode-e.md).
 
 **Since:** 23
 

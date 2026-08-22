@@ -47,6 +47,18 @@ appManager.getAppMemorySize().then((data) => {
 });
 ```
 
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+
+appManager.getAppMemorySize((err, data) => {
+  if (err) {
+    console.error(`getAppMemorySize fail, err: ${JSON.stringify(err)}`);
+  } else {
+    console.info(`The size of app memory is: ${JSON.stringify(data)}`);
+  }
+});
+```
+
 
 ## getAppMemorySize
 
@@ -68,7 +80,7 @@ Obtains the maximum memory (RAM allocation) available to the current application
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the maximum memory (RAM allocation) available to the current application. Otherwise, **err** is an error object. You can perform error handling or other custom processing based on the return value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the maximum memory (RAM allocation) available to the current application. Otherwise, **err** is an error object. You can perform error handling or other custom processing based on the return value. |
 
 **Error codes:**
 
@@ -79,15 +91,5 @@ Obtains the maximum memory (RAM allocation) available to the current application
 
 **Examples**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-
-appManager.getAppMemorySize((err, data) => {
-  if (err) {
-    console.error(`getAppMemorySize fail, err: ${JSON.stringify(err)}`);
-  } else {
-    console.info(`The size of app memory is: ${JSON.stringify(data)}`);
-  }
-});
-```
+See [getAppMemorySize](#getappmemorysize)
 

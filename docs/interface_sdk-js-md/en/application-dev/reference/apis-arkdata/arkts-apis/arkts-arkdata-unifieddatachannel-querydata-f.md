@@ -29,7 +29,7 @@ Queries data in the UDMF public data channel. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | Options | Yes | Configuration for the data query operation. Both the **key** and **intention** are optional (the DRAG channel of **intention** is not supported). The return value varies depending on the parameters passed in. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;UnifiedData&gt;&gt; | Yes | Callback used to return the queried data.<br>If only the **key** is specified in **options**, the data corresponding to the key is returned.<br>If only the **intention** is specified in **options**, all data in the **intention** is returned.<br>If both **intention** and **key** are specified, the intersection of the two is returned, which is the result obtained when only **key** is specified. If there is no intersection between the specified **intention** and **key**, an error object is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;UnifiedData&gt;&gt; | Yes | Callback used to return the queried data.<br>If only the **key** is specified in **options**, the data corresponding to the key is returned.<br>If only the **intention** is specified in **options**, all data in the **intention** is returned.<br>If both **intention** and **key** are specified, the intersection of the two is returned, which is the result obtained when only **key** is specified. If there is no intersection between the specified **intention** and **key**, an error object is returned. |
 
 **Error codes:**
 
@@ -63,6 +63,35 @@ try {
     } else {
       console.error(`Failed to query data. code is ${err.code}, message is ${err.message} `);
     }
+  });
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.error(`Query data throws an exception. code is ${error.code}, message is ${error.message} `);
+}
+```
+
+```TypeScript
+import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: unifiedDataChannel.Options = {
+  key: 'udmf://DataHub/com.ohos.test/0123456789'
+};
+
+try {
+  unifiedDataChannel.queryData(options).then((data) => {
+    console.info(`Succeeded in querying data. size = ${data.length}`);
+    for (let i = 0; i < data.length; i++) {
+      let records = data[i].getRecords();
+      for (let j = 0; j < records.length; j++) {
+        if (records[j].getTypes().includes(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT)) {
+          let text = records[j].getEntry(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT) as uniformDataStruct.PlainText;
+          console.info(`${i + 1}.${text.textContent}`);
+        }
+      }
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to query data. code is ${err.code}, message is ${err.message} `);
   });
 } catch (e) {
   let error: BusinessError = e as BusinessError;
@@ -109,32 +138,5 @@ Queries data in the UDMF public data channel. This API uses a promise to return 
 
 **Examples**
 
-```TypeScript
-import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: unifiedDataChannel.Options = {
-  key: 'udmf://DataHub/com.ohos.test/0123456789'
-};
-
-try {
-  unifiedDataChannel.queryData(options).then((data) => {
-    console.info(`Succeeded in querying data. size = ${data.length}`);
-    for (let i = 0; i < data.length; i++) {
-      let records = data[i].getRecords();
-      for (let j = 0; j < records.length; j++) {
-        if (records[j].getTypes().includes(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT)) {
-          let text = records[j].getEntry(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT) as uniformDataStruct.PlainText;
-          console.info(`${i + 1}.${text.textContent}`);
-        }
-      }
-    }
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to query data. code is ${err.code}, message is ${err.message} `);
-  });
-} catch (e) {
-  let error: BusinessError = e as BusinessError;
-  console.error(`Query data throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```
+See [queryData](#querydata)
 

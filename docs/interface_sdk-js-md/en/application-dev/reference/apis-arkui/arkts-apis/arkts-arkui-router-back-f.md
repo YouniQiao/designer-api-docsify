@@ -18,14 +18,14 @@ Returns to the previous page or a specified page, which deletes all pages betwee
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkuiuicontext-uicontext-c.md) object associated
+> [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated
 > with the current UI context.
 
 **Since:** 8
 
 **Deprecated since:** 18
 
-**Substitutes:** [back](arkts-arkui-arkuiuicontext-router-c.md#back)(options?: router.RouterOptions)
+**Substitutes:** [back](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#back)(options?: router.RouterOptions)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -45,6 +45,14 @@ Returns to the previous page or a specified page, which deletes all pages betwee
 this.getUIContext().getRouter().back({ url: 'pages/detail' });
 ```
 
+```TypeScript
+this.getUIContext().getRouter().back(1);
+```
+
+```TypeScript
+this.getUIContext().getRouter().back(1, { info: 'From Home' }); // Returning with parameters.
+```
+
 
 ## back
 
@@ -58,14 +66,14 @@ Returns to the specified page, which deletes all pages between the current page 
 > 
 > - Since API version 12, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkuiuicontext-uicontext-c.md) object associated
+> [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated
 > with the current UI context.
 
 **Since:** 12
 
 **Deprecated since:** 18
 
-**Substitutes:** [back](arkts-arkui-arkuiuicontext-router-c.md#back)(index: number, params?: Object)
+**Substitutes:** [back](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#back)(index: number, params?: Object)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,11 +92,5 @@ Returns to the specified page, which deletes all pages between the current page 
 
 **Examples**
 
-```TypeScript
-this.getUIContext().getRouter().back(1);
-```
-
-```TypeScript
-this.getUIContext().getRouter().back(1, { info: 'From Home' }); // Returning with parameters.
-```
+See [back](#back)
 

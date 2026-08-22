@@ -27,13 +27,93 @@ Obtains a list of all files with the specified names, in ascending order of prio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | relPath | string | Yes | Name of the configuration file. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the file list is successfully obtained, **err** is **undefined**, and **data** is the obtained file list. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the file list is successfully obtained, **err** is **undefined**, and **data** is the obtained file list. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+configPolicy.getCfgFiles('etc/config.xml', (err: BusinessError, data: Array<string>) => {
+  if (err == null) {
+    console.info('data is ' + data);
+  } else {
+    console.error('err: ' + err.code + ', ' + err.message);
+  }
+});
+```
+
+```TypeScript
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+async function fetchCfgFiles() {
+  try {
+    let relpath: string = 'etc/config.xml';
+    let value: Array<string> = await configPolicy.getCfgFiles(relpath);
+    console.info('value is ' + value);
+  } catch (error) {
+    let code = (error as BusinessError).code;
+    let message = (error as BusinessError).message;
+    console.error('error:' + code + ', ' + message);
+  }
+}
+
+fetchCfgFiles();
+```
+
+```TypeScript
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+let relpath: string = 'etc/config.xml';
+configPolicy.getCfgFiles(relpath, configPolicy.FollowXMode.SIM_DEFAULT,
+  (err: BusinessError, data: Array<string>) => {
+    if (err == null) {
+      console.info('data is ' + data);
+    } else {
+      console.error('err: ' + err.code + ', ' + err.message);
+    }
+  });
+```
+
+```TypeScript
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+let relpath: string = 'etc/config.xml';
+let extra: string = 'etc/carrier/${telephony.sim.opkey0}';
+configPolicy.getCfgFiles(relpath, configPolicy.FollowXMode.SIM_DEFAULT, extra,
+  (err: BusinessError, data: Array<string>) => {
+    if (err == null) {
+      console.info('data is ' + data);
+    } else {
+      console.error('err: ' + err.code + ', ' + err.message);
+    }
+  });
+```
+
+```TypeScript
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+async function fetchCfgFiles() {
+  try {
+    let relpath: string = 'etc/config.xml';
+    let extra: string = 'etc/carrier/${telephony.sim.opkey0}';
+    let value: Array<string> = await configPolicy.getCfgFiles(relpath, configPolicy.FollowXMode.SIM_DEFAULT, extra);
+    console.info('value is ' + value);
+  } catch (error) {
+    let code = (error as BusinessError).code;
+    let message = (error as BusinessError).message;
+    console.error('error:' + code + ', ' + message);
+  }
+}
+
+fetchCfgFiles();
+```
 
 
 ## getCfgFiles
@@ -58,13 +138,17 @@ Obtains a list of all files of a specified file name based on the provided follo
 | --- | --- | --- | --- |
 | relPath | string | Yes | Name of the configuration file. |
 | followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | Yes | Follow mode. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the file list is successfully obtained, **err** is **undefined**, and **data** is the obtained file list. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the file list is successfully obtained, **err** is **undefined**, and **data** is the obtained file list. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
+
+**Examples**
+
+See [getCfgFiles](#getcfgfiles)
 
 
 ## getCfgFiles
@@ -90,13 +174,17 @@ Obtains a list of all files of a specified file name based on the provided follo
 | relPath | string | Yes | Name of the configuration file. |
 | followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | Yes | Follow mode. |
 | extra | string | Yes | Custom follow rule. This parameter is valid only when **followMode** is set to [USER_DEFINED](arkts-basicservices-configpolicy-followxmode-e-sys.md#user_defined). |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the file list is successfully obtained, **err** is **undefined**, and **data** is the obtained file list. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the file list is successfully obtained, **err** is **undefined**, and **data** is the obtained file list. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
+
+**Examples**
+
+See [getCfgFiles](#getcfgfiles)
 
 
 ## getCfgFiles
@@ -132,6 +220,10 @@ Obtains a list of all files with the specified names, in ascending order of prio
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
+
+**Examples**
+
+See [getCfgFiles](#getcfgfiles)
 
 
 ## getCfgFiles
@@ -169,4 +261,8 @@ Obtains a list of all files of a specified file name based on the provided follo
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3.Parameter verification failed. |
+
+**Examples**
+
+See [getCfgFiles](#getcfgfiles)
 

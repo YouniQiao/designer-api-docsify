@@ -58,6 +58,32 @@ Creates a symbolic link based on a file path. This API uses a promise to return 
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let srcFile = pathDir + "/test.txt";
+let dstFile = pathDir + "/test";
+fs.symlink(srcFile, dstFile).then(() => {
+  console.info("symlink succeed");
+}).catch((err: BusinessError) => {
+  console.error("symlink failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let srcFile = pathDir + "/test.txt";
+let dstFile = pathDir + "/test";
+fs.symlink(srcFile, dstFile, (err: BusinessError) => {
+  if (err) {
+    console.error("symlink failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("symlink succeed");
+  }
+});
+```
+
 
 ## symlink
 
@@ -83,7 +109,7 @@ Creates a symbolic link based on the file path. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | target | string | Yes | Application sandbox path of the target file. |
 | srcPath | string | Yes | Application sandbox path of the symbolic link. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -103,4 +129,8 @@ Creates a symbolic link based on the file path. This API uses an asynchronous ca
 | 13900030 | File name too long |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [symlink](#symlink)
 

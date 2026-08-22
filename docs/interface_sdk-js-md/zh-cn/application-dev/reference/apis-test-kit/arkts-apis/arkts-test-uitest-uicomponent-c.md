@@ -55,12 +55,45 @@ click(): Promise<void>
 
 ```TypeScript
 // xxx.test.ets
+import { Driver, ON, Component } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    await button.click();
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.click(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
   let driver: UiDriver = UiDriver.create();
   let button: UiComponent = await driver.findComponent(BY.type('Button'));
   await button.click();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.click(100, 100);
 }
 ```
 
@@ -96,12 +129,45 @@ doubleClick(): Promise<void>
 
 ```TypeScript
 // xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    await button.doubleClick();
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.doubleClick(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
   let driver: UiDriver = UiDriver.create();
   let button: UiComponent = await driver.findComponent(BY.type('Button'));
   await button.doubleClick();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.doubleClick(100, 100);
 }
 ```
 
@@ -134,6 +200,19 @@ getId(): Promise<number>
 | Promise&lt;number&gt; | Promise对象，返回控件的id值。 |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    let id = await button.getId();
+  }
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -219,6 +298,19 @@ getText(): Promise<string>
 
 ```TypeScript
 // xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    let text = await button.getText();
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
@@ -257,6 +349,19 @@ getType(): Promise<string>
 | Promise&lt;string&gt; | Promise对象，返回控件的类型。 |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    let type = await button.getType();
+  }
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -307,6 +412,69 @@ inputText(text: string): Promise<void>
 
 ```TypeScript
 // xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let text: Component | null = await driver.findComponent(ON.text('hello world'));
+  if (text) {
+    await text.inputText('123');
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function mode_demo() {
+  let driver: Driver = Driver.create();
+  let text: Component | null = await driver.findComponent(ON.text('hello world'));
+  if (text) {
+    await text.inputText('123', { paste: true, addition: false });
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let text: Component | null = await driver.findComponent(ON.type('TextInput'));
+  if (text) {
+    let point = await text.getBoundsCenter();
+    await driver.inputText(point, '123');
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let text: Component | null = await driver.findComponent(ON.type('TextInput'));
+  if (text) {
+    let point = await text.getBoundsCenter();
+    await driver.inputText(point, '123', { paste: true, addition: false });
+  }
+}
+
+async function demo_Chinese() {
+  let driver: Driver = Driver.create();
+  let text: Component | null = await driver.findComponent(ON.type('TextInput'));
+  if (text) {
+    let point = await text.getBoundsCenter();
+    await driver.inputText(point, '中文&', { paste: false, addition: true });
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
@@ -345,6 +513,21 @@ isClickable(): Promise<boolean>
 | Promise&lt;boolean&gt; | Promise对象，返回控件对象可点击状态。true：可点击。false：不可点击。 |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button && await button.isClickable()) {
+    console.info('This button can be Clicked');
+  } else {
+    console.info('This button can not be Clicked');
+  }
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -395,6 +578,21 @@ isEnabled(): Promise<boolean>
 
 ```TypeScript
 // xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button && await button.isEnabled()) {
+    console.info('This button can be operated');
+  } else {
+    console.info('This button can not be operated');
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
@@ -437,6 +635,34 @@ isFocused(): Promise<boolean>
 | Promise&lt;boolean&gt; | Promise对象，返回控件对象是否获焦。true：获焦。false：未获焦。 |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button && await button.isFocused()) {
+    console.info('This button is focused');
+  } else {
+    console.info('This button is not focused');
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow | null = await driver.findWindow({ active: true });
+  if (window) {
+    let focused = await window.isFocused();
+  }
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -492,6 +718,21 @@ isScrollable(): Promise<boolean>
 
 ```TypeScript
 // xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let scrollBar: Component | null = await driver.findComponent(ON.scrollable(true));
+  if (scrollBar && await scrollBar.isScrollable()) {
+    console.info('This scrollBar can be operated');
+  } else {
+    console.info('This scrollBar can not be operated');
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
@@ -536,6 +777,21 @@ isSelected(): Promise<boolean>
 | Promise&lt;boolean&gt; | Promise对象，返回控件对象被选中的状态。true：被选中。false：未被选中。 |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button && await button.isSelected()) {
+    console.info('This button is selected');
+  } else {
+    console.info('This button is not selected');
+  }
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -584,12 +840,45 @@ longClick(): Promise<void>
 
 ```TypeScript
 // xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    await button.longClick();
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.longClick(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
   let driver: UiDriver = UiDriver.create();
   let button: UiComponent = await driver.findComponent(BY.type('Button'));
   await button.longClick();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.longClick(100, 100);
 }
 ```
 
@@ -628,6 +917,49 @@ scrollSearch(by: By): Promise<UiComponent>
 | Promise&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt; | Promise对象，返回目标控件对象。 |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let scrollBar: Component | null = await driver.findComponent(ON.type('Scroll'));
+  if (scrollBar) {
+  let button = await scrollBar.scrollSearch(ON.text('next page'));
+    if (button) {
+      await button.click();
+    }
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let scrollBar: Component | null = await driver.findComponent(ON.type('Scroll'));
+  if (scrollBar) {
+  let button = await scrollBar.scrollSearch(ON.text('next page'));
+    if (button) {
+      await button.click();
+    }
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let scrollBar: Component = await driver.findComponent(ON.type('Scroll'));
+  let button = await scrollBar.scrollSearch(ON.text('next page'));
+}
+```
 
 ```TypeScript
 // xxx.test.ets

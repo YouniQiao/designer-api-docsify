@@ -132,6 +132,10 @@ Called on unlocking the screen.
 | --- | --- | --- | --- |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
+**Examples**
+
+For details, see the sample code under windowAnimationManager.setController.
+
 ## onStartAppFromLauncher
 
 ```TypeScript

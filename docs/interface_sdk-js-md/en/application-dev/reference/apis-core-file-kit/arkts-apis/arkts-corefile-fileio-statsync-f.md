@@ -35,3 +35,10 @@ Obtains file information. This API returns the result synchronously.
 | --- | --- |
 | [Stat](arkts-corefile-fileio-stat-depr-i.md) | File information obtained. |
 
+**Examples**
+
+```TypeScript
+let stat = fileio.statSync(pathDir);
+// Example code in Stat
+```
+

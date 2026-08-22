@@ -12,5 +12,5 @@ import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 
 | Name | Description |
 | --- | --- |
-| [UserAuthIcon](arkts-userauthentication-useriamuserauthicon-userauthicon-s.md) | The **userAuthIcon** module is a UI component module of the OpenHarmony user identity and access management (UserIAM) system. It provides an out-of-the-box authentication icon component (**UserAuthIcon**). This component is used to display the face or fingerprint authentication icon in the application UI. It supports custom icon colors and sizes, and tapping the icon launches the system authentication dialog box component. |
+| [UserAuthIcon](arkts-userauthentication-useriam-userauthicon-userauthicon-s.md) | The **userAuthIcon** module is a UI component module of the OpenHarmony user identity and access management (UserIAM) system. It provides an out-of-the-box authentication icon component (**UserAuthIcon**). This component is used to display the face or fingerprint authentication icon in the application UI. It supports custom icon colors and sizes, and tapping the icon launches the system authentication dialog box component. |
 

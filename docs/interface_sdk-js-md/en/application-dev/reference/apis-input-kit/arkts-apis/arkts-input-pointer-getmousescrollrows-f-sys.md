@@ -26,7 +26,7 @@ Obtains the number of mouse scroll lines. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **number** is the number of mouse scroll lines. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **number** is the number of mouse scroll lines. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -56,6 +56,32 @@ struct Index {
                 console.info(`getMouseScrollRows success, rows: ${JSON.stringify(rows)}`);
               }
             });
+          } catch (error) {
+            console.error(`getMouseScrollRows failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            pointer.getMouseScrollRows().then((rows: number) => {
+              console.info(`getMouseScrollRows success, rows: ${JSON.stringify(rows)}`);
+            }).catch((error: BusinessError) => {
+              console.error(`Get mouse scroll rows failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            })
           } catch (error) {
             console.error(`getMouseScrollRows failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
@@ -97,29 +123,5 @@ Obtains the number of mouse scroll lines. This API uses a promise to return the 
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.getMouseScrollRows().then((rows: number) => {
-              console.info(`getMouseScrollRows success, rows: ${JSON.stringify(rows)}`);
-            }).catch((error: BusinessError) => {
-              console.error(`Get mouse scroll rows failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`getMouseScrollRows failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
+See [getMouseScrollRows](#getmousescrollrows)
 

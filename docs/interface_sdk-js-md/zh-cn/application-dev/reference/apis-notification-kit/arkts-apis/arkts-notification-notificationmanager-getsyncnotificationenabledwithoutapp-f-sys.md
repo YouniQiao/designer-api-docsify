@@ -82,6 +82,35 @@ let getSyncNotificationEnabledWithoutAppCallback = (err: BusinessError | null, d
 notificationManager.getSyncNotificationEnabledWithoutApp(userId, getSyncNotificationEnabledWithoutAppCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 用户ID，使用时需替换为真实的userId。
+let userId: number = 100;
+notificationManager.getSyncNotificationEnabledWithoutApp(userId).then((data: boolean) => {
+  console.info(`getSyncNotificationEnabledWithoutApp, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSyncNotificationEnabledWithoutApp failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 用户ID，使用时需替换为真实的userId。
+let userId: int = 1;
+notificationManager.getSyncNotificationEnabledWithoutApp(userId).then((data: boolean) => {
+  console.info(`getSyncNotificationEnabledWithoutApp, data: ${JSON.stringify(data)}`);
+}).catch((err: Error): void => {
+    let error: BusinessError = err as BusinessError;
+    console.error(`getSyncNotificationEnabledWithoutApp failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## getSyncNotificationEnabledWithoutApp
 
@@ -130,32 +159,5 @@ function getSyncNotificationEnabledWithoutApp(userId: int): Promise<boolean>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: number = 100;
-notificationManager.getSyncNotificationEnabledWithoutApp(userId).then((data: boolean) => {
-  console.info(`getSyncNotificationEnabledWithoutApp, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSyncNotificationEnabledWithoutApp failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: int = 1;
-notificationManager.getSyncNotificationEnabledWithoutApp(userId).then((data: boolean) => {
-  console.info(`getSyncNotificationEnabledWithoutApp, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`getSyncNotificationEnabledWithoutApp failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [getSyncNotificationEnabledWithoutApp](#getsyncnotificationenabledwithoutapp)
 

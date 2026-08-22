@@ -25,7 +25,7 @@ Obtains the magnetic dip based on the inclination matrix. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | inclinationMatrix | Array&lt;double&gt; | Yes | Inclination matrix. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;double&gt; | Yes | Callback used to return the magnetic dip, in radians. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | Yes | Callback used to return the magnetic dip, in radians. |
 
 **Error codes:**
 
@@ -55,6 +55,30 @@ try {
     }
     console.info('Succeeded in getting inclination: ' + data);
   })
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to get inclination. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  // inclinationMatrix can be 3*3 or 4*4.
+  let inclinationMatrix = [
+    1, 0, 0,
+    0, 1, 0,
+    0, 0, 1
+  ]
+  const promise = sensor.getInclination(inclinationMatrix);
+  promise.then((data: number) => {
+    console.info('Succeeded in getting inclination: ' + data);
+  }, (err: BusinessError) => {
+    console.error(`Failed to get inclination. Code: ${err.code}, message: ${err.message}`);
+  });
 } catch (error) {
   let e: BusinessError = error as BusinessError;
   console.error(`Failed to get inclination. Code: ${e.code}, message: ${e.message}`);
@@ -97,27 +121,5 @@ Obtains the magnetic dip based on the inclination matrix. This API uses a promis
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  // inclinationMatrix can be 3*3 or 4*4.
-  let inclinationMatrix = [
-    1, 0, 0,
-    0, 1, 0,
-    0, 0, 1
-  ]
-  const promise = sensor.getInclination(inclinationMatrix);
-  promise.then((data: number) => {
-    console.info('Succeeded in getting inclination: ' + data);
-  }, (err: BusinessError) => {
-    console.error(`Failed to get inclination. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to get inclination. Code: ${e.code}, message: ${e.message}`);
-}
-```
+See [getInclination](#getinclination)
 

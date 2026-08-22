@@ -32,7 +32,7 @@ getLazyLayoutDirection(): LazyLayoutDirection
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyLayoutDirection](../../apis-arkui/arkts-apis/arkts-arkui-lazylayoutalgorithm-lazylayoutdirection-e.md) | The lazy layout direction. |
+| [LazyLayoutDirection](arkts-lazylayoutalgorithm-lazylayoutdirection-e.md) | The lazy layout direction. |
 
 ## getViewEnd
 

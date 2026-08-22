@@ -18,6 +18,28 @@ Defines the options for selecting images or videos.
 import { picker } from '@kit.CoreFileKit';
 ```
 
+## maxSelectNumber
+
+```TypeScript
+maxSelectNumber?: number
+```
+
+Maximum number of media files that can be selected. The default value is **50**, and the maximum value is **500**.
+
+**Type:** number
+
+**Since:** 9
+
+**Deprecated since:** 18
+
+**Substitutes:** maxSelectNumber
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PhotoSelectOptions-maxSelectNumber?: number--><!--Device-PhotoSelectOptions-maxSelectNumber?: number-End-->
+
+**System capability:** SystemCapability.FileManagement.UserFileService
+
 ## MIMEType
 
 ```TypeScript
@@ -39,28 +61,6 @@ Media file types to select. If this parameter is not specified, **IMAGE_VIDEO_TY
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PhotoSelectOptions-MIMEType?: PhotoViewMIMETypes--><!--Device-PhotoSelectOptions-MIMEType?: PhotoViewMIMETypes-End-->
-
-**System capability:** SystemCapability.FileManagement.UserFileService
-
-## maxSelectNumber
-
-```TypeScript
-maxSelectNumber?: number
-```
-
-Maximum number of media files that can be selected. The default value is **50**, and the maximum value is **500**.
-
-**Type:** number
-
-**Since:** 9
-
-**Deprecated since:** 18
-
-**Substitutes:** maxSelectNumber
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-PhotoSelectOptions-maxSelectNumber?: number--><!--Device-PhotoSelectOptions-maxSelectNumber?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 

@@ -266,6 +266,13 @@ static isRTL(ch: string): boolean
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
 
+let isZhRTL: boolean = i18n.isRTL('zh-CN'); // 中文不是镜像语言，返回false
+let isArRTL: boolean = i18n.isRTL('ar-EG'); // 阿语是镜像语言，返回true
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
 let isRtl: boolean = i18n.Unicode.isRTL('a'); // isRtl = false
 ```
 

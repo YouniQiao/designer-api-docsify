@@ -37,6 +37,24 @@ Obtain information about the P2P connection.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) | Operation failed. |
 
+**Examples**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+  wifiManager.getP2pLinkedInfo((err, data:wifiManager.WifiP2pLinkedInfo) => {
+    if (err) {
+        console.error("get p2p linked info error");
+        return;
+    }
+    console.info("get wifi p2p linked info: " + JSON.stringify(data));
+  });
+
+  wifiManager.getP2pLinkedInfo().then(data => {
+    console.info("get wifi p2p linked info: " + JSON.stringify(data));
+  });
+```
+
 
 ## getP2pLinkedInfo
 
@@ -58,7 +76,7 @@ Obtain information about the P2P connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;WifiP2pLinkedInfo&gt; | Yes | Indicates callback of function. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pLinkedInfo&gt; | Yes | Indicates callback of function. |
 
 **Error codes:**
 
@@ -71,19 +89,5 @@ Obtain information about the P2P connection.
 
 **Examples**
 
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-  wifiManager.getP2pLinkedInfo((err, data:wifiManager.WifiP2pLinkedInfo) => {
-    if (err) {
-        console.error("get p2p linked info error");
-        return;
-    }
-    console.info("get wifi p2p linked info: " + JSON.stringify(data));
-  });
-
-  wifiManager.getP2pLinkedInfo().then(data => {
-    console.info("get wifi p2p linked info: " + JSON.stringify(data));
-  });
-```
+See [getP2pLinkedInfo](#getp2plinkedinfo)
 

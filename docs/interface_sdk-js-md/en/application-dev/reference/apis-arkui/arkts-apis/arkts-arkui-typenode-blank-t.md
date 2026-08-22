@@ -16,5 +16,5 @@ Represents a FrameNode of the **Blank** type. This type of node does not allow c
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;BlankInterface, BlankAttribute&gt;
+**Property type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;BlankInterface, BlankAttribute&gt;
 

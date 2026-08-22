@@ -36,7 +36,7 @@ Unsubscribe Wi-Fi rssi change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'wifiRssiChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | No | the callback of on |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on |
 
 **Examples**
 

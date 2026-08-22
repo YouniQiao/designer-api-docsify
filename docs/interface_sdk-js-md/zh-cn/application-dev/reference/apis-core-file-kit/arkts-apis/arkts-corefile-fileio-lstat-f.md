@@ -35,6 +35,26 @@ declare function lstat(path: string): Promise<Stat>
 | --- | --- |
 | Promise&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | promise对象，返回文件对象，表示文件的具体信息，详情见stat。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "/test.txt";
+fileio.lstat(filePath).then((stat: fileio.Stat) => {
+  console.info("get link status succeed, the size of file is" + stat.size);
+}).catch((err: BusinessError) => {
+  console.error("get link status failed with error:" + err);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "/test.txt";
+fileio.lstat(filePath, (err: BusinessError, stat: fileio.Stat) => {
+  // do something
+});
+```
+
 
 ## lstat
 
@@ -60,4 +80,8 @@ declare function lstat(path: string, callback: AsyncCallback<Stat>): void
 | --- | --- | --- | --- |
 | path | string | 是 | 目标文件的应用沙箱路径。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | 是 | 回调函数，返回文件的具体信息。 |
+
+**示例**
+
+参见 [lstat](#lstat)
 

@@ -1,6 +1,6 @@
 # ExtensionContext
 
-ExtensionContext provides the context environment for an [ExtensionAbility](arkts-ability-appabilityextensionability-extensionability-c.md). It inherits from [Context](arkts-ability-context-c.md). This module provides APIs for accessing resources of a specific [ExtensionAbility](arkts-ability-appabilityextensionability-extensionability-c.md).
+ExtensionContext provides the context environment for an [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md). It inherits from [Context](arkts-ability-context-c.md). This module provides APIs for accessing resources of a specific [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md).
 
 **Inheritance/Implementation:** ExtensionContext extends Context
 
@@ -18,7 +18,7 @@ config: Configuration
 
 Indicates configuration information.
 
-**Type:** [Configuration](arkts-ability-appabilityconfiguration-configuration-i.md)
+**Type:** [Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
 
 **Since:** 23
 

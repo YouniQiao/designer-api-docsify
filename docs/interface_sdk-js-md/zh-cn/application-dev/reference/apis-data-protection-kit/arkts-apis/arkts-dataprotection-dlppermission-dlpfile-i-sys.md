@@ -93,6 +93,39 @@ async function exampleFunction() {
 exampleFunction();
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+  
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
+  dlpFile.addDLPLinkFile('test.txt.dlp.link', async (err, res) => {
+    if (err) {
+      console.error(`Failed to add DLPLinkFile. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+    await dlpFile?.closeDLPFile(); // 关闭DLP对象。
+    fileIo.closeSync(file);
+  }); // 添加link文件。
+}
+
+ExampleFunction();
+```
+
 ## addDLPLinkFile
 
 ```TypeScript
@@ -135,38 +168,7 @@ DLP应用需要通过标准文件接口访问加密文件内容时使用此接�
 
 **示例**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-  
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
-
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
-  dlpFile.addDLPLinkFile('test.txt.dlp.link', async (err, res) => {
-    if (err) {
-      console.error(`Failed to add DLPLinkFile. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-    await dlpFile?.closeDLPFile(); // 关闭DLP对象。
-    fileIo.closeSync(file);
-  }); // 添加link文件。
-}
-
-ExampleFunction();
-```
+参见 [addDLPLinkFile](#adddlplinkfile)
 
 ## closeDLPFile
 
@@ -241,6 +243,38 @@ async function ExampleFunction() {
 ExampleFunction();
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
+  dlpFile.closeDLPFile((err, res) => { // 关闭DLP文件。
+    if (err) {
+      console.error(`Failed to close DLPFile. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+    fileIo.closeSync(file);
+  });
+}
+
+ExampleFunction();
+```
+
 ## closeDLPFile
 
 ```TypeScript
@@ -286,37 +320,7 @@ closeDLPFile(callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
-
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
-  dlpFile.closeDLPFile((err, res) => { // 关闭DLP文件。
-    if (err) {
-      console.error(`Failed to close DLPFile. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-    fileIo.closeSync(file);
-  });
-}
-
-ExampleFunction();
-```
+参见 [closeDLPFile](#closedlpfile)
 
 ## deleteDLPLinkFile
 
@@ -396,6 +400,40 @@ async function ExampleFunction() {
 ExampleFunction();
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
+  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // 添加link文件。
+  dlpFile.deleteDLPLinkFile('test.txt.dlp.link', async (err, res) => { // 删除link文件。
+    if (err) {
+      console.error(`Failed to delete DLPLinkFile. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+    await dlpFile?.closeDLPFile(); // 关闭DLP对象。
+    fileIo.closeSync(file);
+  });
+}
+
+ExampleFunction();
+```
+
 ## deleteDLPLinkFile
 
 ```TypeScript
@@ -438,39 +476,7 @@ DLP文件访问结束后清理link文件映射时使用此接口。
 
 **示例**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
-
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
-  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // 添加link文件。
-  dlpFile.deleteDLPLinkFile('test.txt.dlp.link', async (err, res) => { // 删除link文件。
-    if (err) {
-      console.error(`Failed to delete DLPLinkFile. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-    await dlpFile?.closeDLPFile(); // 关闭DLP对象。
-    fileIo.closeSync(file);
-  });
-}
-
-ExampleFunction();
-```
+参见 [deleteDLPLinkFile](#deletedlplinkfile)
 
 ## recoverDLPFile
 
@@ -557,6 +563,42 @@ async function ExampleFunction() {
 ExampleFunction();
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let destFile: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  destFile = fileIo.openSync('destUri').fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
+  dlpFile.recoverDLPFile(destFile, async (err, res) => { // 还原DLP文件。
+    if (err) {
+      console.error(`Failed to recover DLPFile. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+    await dlpFile?.closeDLPFile(); // 关闭DLP对象。
+    fileIo.closeSync(file);
+    fileIo.closeSync(destFile);
+  });
+}
+
+ExampleFunction();
+```
+
 ## recoverDLPFile
 
 ```TypeScript
@@ -603,41 +645,7 @@ recoverDLPFile(plaintextFd: number, callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let destFile: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
-
-  file = fileIo.openSync(uri).fd;
-  destFile = fileIo.openSync('destUri').fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
-  dlpFile.recoverDLPFile(destFile, async (err, res) => { // 还原DLP文件。
-    if (err) {
-      console.error(`Failed to recover DLPFile. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-    await dlpFile?.closeDLPFile(); // 关闭DLP对象。
-    fileIo.closeSync(file);
-    fileIo.closeSync(destFile);
-  });
-}
-
-ExampleFunction();
-```
+参见 [recoverDLPFile](#recoverdlpfile)
 
 ## replaceDLPLinkFile
 
@@ -717,6 +725,42 @@ async function ExampleFunction() {
 ExampleFunction();
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
+  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // 添加link文件。
+  await dlpFile.stopFuseLink(); // 暂停link读写。
+  dlpFile.replaceDLPLinkFile('test_new.txt.dlp.link', async (err, res) => { // 替换link文件。
+    if (err) {
+      console.error(`Failed to replace DLPLinkFile. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info('res', JSON.stringify(res));
+      await dlpFile?.resumeFuseLink(); // 恢复link读写。
+    }
+    await dlpFile?.closeDLPFile(); // 关闭DLP对象。
+    fileIo.closeSync(file);
+  });
+}
+
+ExampleFunction();
+```
+
 ## replaceDLPLinkFile
 
 ```TypeScript
@@ -757,41 +801,7 @@ replaceDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
-
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
-  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // 添加link文件。
-  await dlpFile.stopFuseLink(); // 暂停link读写。
-  dlpFile.replaceDLPLinkFile('test_new.txt.dlp.link', async (err, res) => { // 替换link文件。
-    if (err) {
-      console.error(`Failed to replace DLPLinkFile. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info('res', JSON.stringify(res));
-      await dlpFile?.resumeFuseLink(); // 恢复link读写。
-    }
-    await dlpFile?.closeDLPFile(); // 关闭DLP对象。
-    fileIo.closeSync(file);
-  });
-}
-
-ExampleFunction();
-```
+参见 [replaceDLPLinkFile](#replacedlplinkfile)
 
 ## resumeFuseLink
 
@@ -865,6 +875,41 @@ async function ExampleFunction() {
 ExampleFunction();
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
+  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // 添加link文件。
+  await dlpFile.stopFuseLink(); // 暂停link读写。
+  dlpFile.resumeFuseLink(async (err, res) => {
+    if (err) {
+      console.error(`Failed to resume FuseLink. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+    await dlpFile?.closeDLPFile(); // 关闭DLP对象。
+    fileIo.closeSync(file);
+  }); // 恢复link读写。
+}
+
+ExampleFunction();
+```
+
 ## resumeFuseLink
 
 ```TypeScript
@@ -906,40 +951,7 @@ link文件替换完成后需要恢复读写关联。
 
 **示例**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
-
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
-  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // 添加link文件。
-  await dlpFile.stopFuseLink(); // 暂停link读写。
-  dlpFile.resumeFuseLink(async (err, res) => {
-    if (err) {
-      console.error(`Failed to resume FuseLink. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-    await dlpFile?.closeDLPFile(); // 关闭DLP对象。
-    fileIo.closeSync(file);
-  }); // 恢复link读写。
-}
-
-ExampleFunction();
-```
+参见 [resumeFuseLink](#resumefuselink)
 
 ## stopFuseLink
 
@@ -1011,6 +1023,40 @@ async function ExampleFunction() {
 ExampleFunction();
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
+  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // 添加link文件。
+  dlpFile.stopFuseLink(async (err, res) => {
+    if (err) {
+      console.error(`Failed to stop FuseLink. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+    await dlpFile?.closeDLPFile(); // 关闭DLP对象。
+    fileIo.closeSync(file);
+  }); // 暂停link读写。
+}
+
+ExampleFunction();
+```
+
 ## stopFuseLink
 
 ```TypeScript
@@ -1052,39 +1098,7 @@ stopFuseLink(callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
-
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
-  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // 添加link文件。
-  dlpFile.stopFuseLink(async (err, res) => {
-    if (err) {
-      console.error(`Failed to stop FuseLink. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-    await dlpFile?.closeDLPFile(); // 关闭DLP对象。
-    fileIo.closeSync(file);
-  }); // 暂停link读写。
-}
-
-ExampleFunction();
-```
+参见 [stopFuseLink](#stopfuselink)
 
 ## dlpProperty
 

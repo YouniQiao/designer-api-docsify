@@ -20,5 +20,5 @@ The callback of onPhotoBrowserChangeStart event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetPhotoInfo | [BaseItemInfo](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-filephotopickercomponent-baseiteminfo-c.md) | Yes |  |
+| targetPhotoInfo | [BaseItemInfo](arkts-file-photopickercomponent-baseiteminfo-c.md) | Yes |  |
 

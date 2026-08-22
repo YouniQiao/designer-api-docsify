@@ -53,6 +53,18 @@ Initiate an HFP connection to a remote device.
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let hfpAg = hfp.createHfpAgProfile();
+    hfpAg.connect('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## disconnect
 
 ```TypeScript
@@ -89,4 +101,16 @@ Disconnect the HFP connection with the remote device.
 | 2900003 | Bluetooth disabled. |
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let hfpAg = hfp.createHfpAgProfile();
+    hfpAg.disconnect('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
 

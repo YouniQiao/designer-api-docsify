@@ -102,49 +102,6 @@ async function ExampleFunction() {
 }
 ```
 
-## addDLPLinkFile
-
-```TypeScript
-addDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
-```
-
-Adds a link file to the FUSE. This API uses an asynchronous callback to return the result. After this API is successfully called, a virtual file used to map the DLP file is created in the FUSE.
-
-After calling **addDLPLinkFile** to add a link file, the system needs to call [deleteDLPLinkFile](#deletedlplinkfile) to remove the DLP link file.
-
-This API is called when a DLP application needs to access a DLP file using a standard file API.
-
-**Since:** 10
-
-**Required permissions:** ohos.permission.ACCESS_DLP_FILE
-
-<!--Device-DLPFile-addDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void--><!--Device-DLPFile-addDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Security.DataLossPrevention
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| linkFileName | string | Yes | Name of the link file in the FUSE. The value contains up to 255 bytes. If the value is out of range, error code 401 is thrown. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the result of adding a link file. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-
-**Examples**
-
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
@@ -188,6 +145,51 @@ async function ExampleFunction() {
   }
 }
 ```
+
+## addDLPLinkFile
+
+```TypeScript
+addDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
+```
+
+Adds a link file to the FUSE. This API uses an asynchronous callback to return the result. After this API is successfully called, a virtual file used to map the DLP file is created in the FUSE.
+
+After calling **addDLPLinkFile** to add a link file, the system needs to call [deleteDLPLinkFile](#deletedlplinkfile) to remove the DLP link file.
+
+This API is called when a DLP application needs to access a DLP file using a standard file API.
+
+**Since:** 10
+
+**Required permissions:** ohos.permission.ACCESS_DLP_FILE
+
+<!--Device-DLPFile-addDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void--><!--Device-DLPFile-addDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Security.DataLossPrevention
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| linkFileName | string | Yes | Name of the link file in the FUSE. The value contains up to 255 bytes. If the value is out of range, error code 401 is thrown. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of adding a link file. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+See [addDLPLinkFile](#adddlplinkfile)
 
 ## closeDLPFile
 
@@ -270,52 +272,6 @@ async function ExampleFunction() {
 }
 ```
 
-## closeDLPFile
-
-```TypeScript
-closeDLPFile(callback: AsyncCallback<void>): void
-```
-
-Closes a **DLPFile** object. This API uses an asynchronous callback to return the result.
-
-After calling **openDLPFile()** to return a **DLPFile** object, the system must call **closeDLPFile()** to release resources after using the object.
-
-This API is used when the file owner decides to close a DLP file.
-
-> **NOTE：**
-> 
-> If a DLP file is no longer used, close the **dlpFile** instance to release the memory.
-
-**Since:** 10
-
-**Required permissions:** ohos.permission.ACCESS_DLP_FILE
-
-<!--Device-DLPFile-closeDLPFile(callback: AsyncCallback<void>): void--><!--Device-DLPFile-closeDLPFile(callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Security.DataLossPrevention
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the result of closing a **DLPFile** object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-
-**Examples**
-
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
@@ -357,6 +313,54 @@ async function ExampleFunction() {
   }
 }
 ```
+
+## closeDLPFile
+
+```TypeScript
+closeDLPFile(callback: AsyncCallback<void>): void
+```
+
+Closes a **DLPFile** object. This API uses an asynchronous callback to return the result.
+
+After calling **openDLPFile()** to return a **DLPFile** object, the system must call **closeDLPFile()** to release resources after using the object.
+
+This API is used when the file owner decides to close a DLP file.
+
+> **NOTE：**
+> 
+> If a DLP file is no longer used, close the **dlpFile** instance to release the memory.
+
+**Since:** 10
+
+**Required permissions:** ohos.permission.ACCESS_DLP_FILE
+
+<!--Device-DLPFile-closeDLPFile(callback: AsyncCallback<void>): void--><!--Device-DLPFile-closeDLPFile(callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Security.DataLossPrevention
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of closing a **DLPFile** object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+See [closeDLPFile](#closedlpfile)
 
 ## deleteDLPLinkFile
 
@@ -444,49 +448,6 @@ async function ExampleFunction() {
 }
 ```
 
-## deleteDLPLinkFile
-
-```TypeScript
-deleteDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
-```
-
-Deletes a link file from the FUSE. This API uses an asynchronous callback to return the result. After the API is successfully called, the specified link file is deleted from the FUSE.
-
-Before calling **deleteDLPLinkFile**, the system must call [addDLPLinkFile](#adddlplinkfile) to add a DLP link file.
-
-This API is used to clear the link file mapping after DLP file access is complete.
-
-**Since:** 10
-
-**Required permissions:** ohos.permission.ACCESS_DLP_FILE
-
-<!--Device-DLPFile-deleteDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void--><!--Device-DLPFile-deleteDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Security.DataLossPrevention
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| linkFileName | string | Yes | Name of the link file in the FUSE. The value contains up to 255 bytes. If the value is out of range, error code 401 is thrown. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the result of deleting a link file. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-
-**Examples**
-
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
@@ -531,6 +492,51 @@ async function ExampleFunction() {
   }
 }
 ```
+
+## deleteDLPLinkFile
+
+```TypeScript
+deleteDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
+```
+
+Deletes a link file from the FUSE. This API uses an asynchronous callback to return the result. After the API is successfully called, the specified link file is deleted from the FUSE.
+
+Before calling **deleteDLPLinkFile**, the system must call [addDLPLinkFile](#adddlplinkfile) to add a DLP link file.
+
+This API is used to clear the link file mapping after DLP file access is complete.
+
+**Since:** 10
+
+**Required permissions:** ohos.permission.ACCESS_DLP_FILE
+
+<!--Device-DLPFile-deleteDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void--><!--Device-DLPFile-deleteDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Security.DataLossPrevention
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| linkFileName | string | Yes | Name of the link file in the FUSE. The value contains up to 255 bytes. If the value is out of range, error code 401 is thrown. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of deleting a link file. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+See [deleteDLPLinkFile](#deletedlplinkfile)
 
 ## recoverDLPFile
 
@@ -626,53 +632,6 @@ async function ExampleFunction() {
 }
 ```
 
-## recoverDLPFile
-
-```TypeScript
-recoverDLPFile(plaintextFd: number, callback: AsyncCallback<void>): void
-```
-
-Recovers the plaintext of a DLP file. This API uses an asynchronous callback to return the result.
-
-This API is used when the file owner decides to disable the DLP protection for a file.
-
-**Since:** 10
-
-**Required permissions:** ohos.permission.ACCESS_DLP_FILE
-
-<!--Device-DLPFile-recoverDLPFile(plaintextFd: number, callback: AsyncCallback<void>): void--><!--Device-DLPFile-recoverDLPFile(plaintextFd: number, callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Security.DataLossPrevention
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| plaintextFd | number | Yes | FD of the target plaintext file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the result of recovering the plaintext of a DLP file. The callback parameter is **err**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
-| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
-| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
-| [19100005](../errorcode-dlp.md#19100005-credential-authentication-server-error) | Credential authentication server error. |
-| [19100008](../errorcode-dlp.md#19100008-non-dlp-file) | The file is not a DLP file. |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
-| [19100010](../errorcode-dlp.md#19100010-read-only-dlp-file) | The DLP file is read only. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-
-**Examples**
-
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
@@ -722,6 +681,55 @@ async function ExampleFunction() {
   }
 }
 ```
+
+## recoverDLPFile
+
+```TypeScript
+recoverDLPFile(plaintextFd: number, callback: AsyncCallback<void>): void
+```
+
+Recovers the plaintext of a DLP file. This API uses an asynchronous callback to return the result.
+
+This API is used when the file owner decides to disable the DLP protection for a file.
+
+**Since:** 10
+
+**Required permissions:** ohos.permission.ACCESS_DLP_FILE
+
+<!--Device-DLPFile-recoverDLPFile(plaintextFd: number, callback: AsyncCallback<void>): void--><!--Device-DLPFile-recoverDLPFile(plaintextFd: number, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Security.DataLossPrevention
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| plaintextFd | number | Yes | FD of the target plaintext file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of recovering the plaintext of a DLP file. The callback parameter is **err**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
+| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
+| [19100005](../errorcode-dlp.md#19100005-credential-authentication-server-error) | Credential authentication server error. |
+| [19100008](../errorcode-dlp.md#19100008-non-dlp-file) | The file is not a DLP file. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100010](../errorcode-dlp.md#19100010-read-only-dlp-file) | The DLP file is read only. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+See [recoverDLPFile](#recoverdlpfile)
 
 ## replaceDLPLinkFile
 
@@ -809,47 +817,6 @@ async function ExampleFunction() {
 }
 ```
 
-## replaceDLPLinkFile
-
-```TypeScript
-replaceDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
-```
-
-Replaces a link file. This API uses an asynchronous callback to return the result. After the API is successfully called, the current link file is replaced with the new link file.
-
-When you need to access a different DLP file, you can replace the link file. Before performing this operation, you need to create a link file and stop the read and write operation on the FUSE.
-
-**Since:** 10
-
-**Required permissions:** ohos.permission.ACCESS_DLP_FILE
-
-<!--Device-DLPFile-replaceDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void--><!--Device-DLPFile-replaceDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Security.DataLossPrevention
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| linkFileName | string | Yes | Name of the link file in the FUSE. The value contains up to 255 bytes. If the value is out of range, error code 401 is thrown. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the result of replacing a link file. The callback parameter is **err**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-
-**Examples**
-
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
@@ -896,6 +863,49 @@ async function ExampleFunction() {
   }
 }
 ```
+
+## replaceDLPLinkFile
+
+```TypeScript
+replaceDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
+```
+
+Replaces a link file. This API uses an asynchronous callback to return the result. After the API is successfully called, the current link file is replaced with the new link file.
+
+When you need to access a different DLP file, you can replace the link file. Before performing this operation, you need to create a link file and stop the read and write operation on the FUSE.
+
+**Since:** 10
+
+**Required permissions:** ohos.permission.ACCESS_DLP_FILE
+
+<!--Device-DLPFile-replaceDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void--><!--Device-DLPFile-replaceDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Security.DataLossPrevention
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| linkFileName | string | Yes | Name of the link file in the FUSE. The value contains up to 255 bytes. If the value is out of range, error code 401 is thrown. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of replacing a link file. The callback parameter is **err**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+See [replaceDLPLinkFile](#replacedlplinkfile)
 
 ## resumeFuseLink
 
@@ -977,48 +987,6 @@ async function ExampleFunction() {
 }
 ```
 
-## resumeFuseLink
-
-```TypeScript
-resumeFuseLink(callback: AsyncCallback<void>): void
-```
-
-Resumes the read and write on the FUSE. This API uses an asynchronous callback to return the result. After the API is successfully called, the read and write on the link file are resumed.
-
-This API can be called to resume read and write only after [stopFuseLink](#stopfuselink) is called to stop the read and write operations.
-
-After the link file is replaced, the read and write need to be resumed.
-
-**Since:** 10
-
-**Required permissions:** ohos.permission.ACCESS_DLP_FILE
-
-<!--Device-DLPFile-resumeFuseLink(callback: AsyncCallback<void>): void--><!--Device-DLPFile-resumeFuseLink(callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Security.DataLossPrevention
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the result of resuming the read and write on the FUSE. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-
-**Examples**
-
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
@@ -1064,6 +1032,50 @@ async function ExampleFunction() {
   }
 }
 ```
+
+## resumeFuseLink
+
+```TypeScript
+resumeFuseLink(callback: AsyncCallback<void>): void
+```
+
+Resumes the read and write on the FUSE. This API uses an asynchronous callback to return the result. After the API is successfully called, the read and write on the link file are resumed.
+
+This API can be called to resume read and write only after [stopFuseLink](#stopfuselink) is called to stop the read and write operations.
+
+After the link file is replaced, the read and write need to be resumed.
+
+**Since:** 10
+
+**Required permissions:** ohos.permission.ACCESS_DLP_FILE
+
+<!--Device-DLPFile-resumeFuseLink(callback: AsyncCallback<void>): void--><!--Device-DLPFile-resumeFuseLink(callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Security.DataLossPrevention
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of resuming the read and write on the FUSE. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+See [resumeFuseLink](#resumefuselink)
 
 ## stopFuseLink
 
@@ -1144,48 +1156,6 @@ async function ExampleFunction() {
 }
 ```
 
-## stopFuseLink
-
-```TypeScript
-stopFuseLink(callback: AsyncCallback<void>): void
-```
-
-Stops the read and write on the FUSE. This API uses an asynchronous callback to return the result. After the API is successfully called, the read and write on the link file are stopped.
-
-After calling **stopFuseLink** to stop the read and write operations on the FUSE, the system must call [resumeFuseLink](#resumefuselink) to resume the read and write operations.
-
-Before deleting a link file, stop the read and write.
-
-**Since:** 10
-
-**Required permissions:** ohos.permission.ACCESS_DLP_FILE
-
-<!--Device-DLPFile-stopFuseLink(callback: AsyncCallback<void>): void--><!--Device-DLPFile-stopFuseLink(callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Security.DataLossPrevention
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the result of stopping read and write on the FUSE. The callback parameter is **err**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-
-**Examples**
-
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
@@ -1230,6 +1200,50 @@ async function ExampleFunction() {
   }
 }
 ```
+
+## stopFuseLink
+
+```TypeScript
+stopFuseLink(callback: AsyncCallback<void>): void
+```
+
+Stops the read and write on the FUSE. This API uses an asynchronous callback to return the result. After the API is successfully called, the read and write on the link file are stopped.
+
+After calling **stopFuseLink** to stop the read and write operations on the FUSE, the system must call [resumeFuseLink](#resumefuselink) to resume the read and write operations.
+
+Before deleting a link file, stop the read and write.
+
+**Since:** 10
+
+**Required permissions:** ohos.permission.ACCESS_DLP_FILE
+
+<!--Device-DLPFile-stopFuseLink(callback: AsyncCallback<void>): void--><!--Device-DLPFile-stopFuseLink(callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Security.DataLossPrevention
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of stopping read and write on the FUSE. The callback parameter is **err**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+See [stopFuseLink](#stopfuselink)
 
 ## dlpProperty
 

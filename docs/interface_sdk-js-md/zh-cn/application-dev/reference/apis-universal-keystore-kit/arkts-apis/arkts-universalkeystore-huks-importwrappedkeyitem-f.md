@@ -241,6 +241,19 @@ function huksImportWrappedKey() {
 }
 ```
 
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* 处理流程与callback类似，主要差异点为如下函数： */
+/* 该处为示例代码，实际运行过程中，应使用实际导入密钥数据。数据构造方式由上注释可见说明 */
+async function TestImportWrappedFunc(alias: string, wrappingAlias: string, options: huks.HuksOptions) {
+  await huks.importWrappedKeyItem(alias, wrappingAlias, options)
+    .then(() => {
+      console.info(`promise: importWrappedKeyItem success`);
+    });
+}
+```
+
 
 ## importWrappedKeyItem
 
@@ -304,16 +317,5 @@ Imports a wrapped key. This API uses a promise to return the result.
 
 **示例**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 处理流程与callback类似，主要差异点为如下函数： */
-/* 该处为示例代码，实际运行过程中，应使用实际导入密钥数据。数据构造方式由上注释可见说明 */
-async function TestImportWrappedFunc(alias: string, wrappingAlias: string, options: huks.HuksOptions) {
-  await huks.importWrappedKeyItem(alias, wrappingAlias, options)
-    .then(() => {
-      console.info(`promise: importWrappedKeyItem success`);
-    });
-}
-```
+参见 [importWrappedKeyItem](#importwrappedkeyitem)
 

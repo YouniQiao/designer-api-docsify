@@ -26,7 +26,7 @@ Obtains the current primary mouse button. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PrimaryButton](arkts-input-pointer-primarybutton-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **PrimaryButton** is the obtained key value. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PrimaryButton](arkts-input-pointer-primarybutton-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **PrimaryButton** is the obtained key value. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -56,6 +56,32 @@ struct Index {
                 console.info(`Get mouse primary button success, primary: ${JSON.stringify(primary)}`);
               }
             });
+          } catch (error) {
+            console.error(`Get mouse primary button failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            pointer.getMousePrimaryButton().then((primary: pointer.PrimaryButton) => {
+              console.info(`Get mouse primary button success, primary: ${JSON.stringify(primary)}`);
+            }).catch((error: BusinessError) => {
+              console.error(`Get mouse failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            })
           } catch (error) {
             console.error(`Get mouse primary button failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
@@ -97,29 +123,5 @@ Obtains the current primary mouse button. This API uses a promise to return the 
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.getMousePrimaryButton().then((primary: pointer.PrimaryButton) => {
-              console.info(`Get mouse primary button success, primary: ${JSON.stringify(primary)}`);
-            }).catch((error: BusinessError) => {
-              console.error(`Get mouse failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`Get mouse primary button failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
+See [getMousePrimaryButton](#getmouseprimarybutton)
 

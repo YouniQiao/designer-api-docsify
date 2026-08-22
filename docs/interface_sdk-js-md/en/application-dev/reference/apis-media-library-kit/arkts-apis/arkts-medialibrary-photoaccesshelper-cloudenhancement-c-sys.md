@@ -231,6 +231,10 @@ Obtains a cloud enhancement instance.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+**Examples**
+
+See [getCloudEnhancementInstance](#getcloudenhancementinstance)
+
 ## getCloudEnhancementPair
 
 ```TypeScript
@@ -532,6 +536,33 @@ async function example(context: Context) {
 }
 ```
 
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(context: Context) {
+  console.info('submitCloudEnhancementTasksDemo');
+  let photoPredicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let photoFetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: photoPredicates
+  };
+  let phAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
+  try {
+    let fetchResult = await phAccessHelper.getAssets(photoFetchOptions);
+    let asset = await fetchResult.getLastObject();
+    let cloudEnhancementInstance: photoAccessHelper.CloudEnhancement
+      = photoAccessHelper.CloudEnhancement.getCloudEnhancementInstance(context);
+    let hasCloudWatermark = true;
+    let triggerAuto = 1;
+    await cloudEnhancementInstance.submitCloudEnhancementTasks([asset], hasCloudWatermark, triggerAuto);
+  } catch (err) {
+    console.error(`submitCloudEnhancementTasksDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
 ## submitCloudEnhancementTasks
 
 ```TypeScript
@@ -579,32 +610,7 @@ Submits cloud enhancement tasks. You can select the trigger mode of the cloud en
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(context: Context) {
-  console.info('submitCloudEnhancementTasksDemo');
-  let photoPredicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let photoFetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: photoPredicates
-  };
-  let phAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-  try {
-    let fetchResult = await phAccessHelper.getAssets(photoFetchOptions);
-    let asset = await fetchResult.getLastObject();
-    let cloudEnhancementInstance: photoAccessHelper.CloudEnhancement
-      = photoAccessHelper.CloudEnhancement.getCloudEnhancementInstance(context);
-    let hasCloudWatermark = true;
-    let triggerAuto = 1;
-    await cloudEnhancementInstance.submitCloudEnhancementTasks([asset], hasCloudWatermark, triggerAuto);
-  } catch (err) {
-    console.error(`submitCloudEnhancementTasksDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+See [submitCloudEnhancementTasks](#submitcloudenhancementtasks)
 
 ## syncCloudEnhancementTaskStatus
 

@@ -36,3 +36,16 @@ A dictionary type object, where the key is of the string type, and the value can
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+**Examples**
+
+```TypeScript
+let sdr = new unifiedDataChannel.SystemDefinedRecord();
+let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+sdr.details = {
+    title: 'recordTitle',
+    version: 1,
+    content: u8Array
+};
+let unifiedData = new unifiedDataChannel.UnifiedData(sdr);
+```
+

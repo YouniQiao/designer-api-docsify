@@ -29,7 +29,7 @@ Obtains the PermissionDef struct based on the given permission name. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | permissionName | string | Yes | Name of the permission. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PermissionDef&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the PermissionDef object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PermissionDef&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the PermissionDef object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -59,6 +59,24 @@ try {
 } catch (err) {
   let message = (err as BusinessError).message;
   hilog.error(0x0000, 'testTag', 'getPermissionDef failed: %{public}s', message);
+}
+```
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let permissionName = "ohos.permission.GET_BUNDLE_INFO";
+try {
+  bundleManager.getPermissionDef(permissionName).then((data) => {
+    hilog.info(0x0000, 'testTag', 'getPermissionDef successfully. Data: %{public}s', JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'getPermissionDef failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getPermissionDef failed. Cause: %{public}s', message);
 }
 ```
 
@@ -104,21 +122,5 @@ Obtains the PermissionDef struct based on the given permission name. This API us
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let permissionName = "ohos.permission.GET_BUNDLE_INFO";
-try {
-  bundleManager.getPermissionDef(permissionName).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getPermissionDef successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getPermissionDef failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getPermissionDef failed. Cause: %{public}s', message);
-}
-```
+See [getPermissionDef](#getpermissiondef)
 

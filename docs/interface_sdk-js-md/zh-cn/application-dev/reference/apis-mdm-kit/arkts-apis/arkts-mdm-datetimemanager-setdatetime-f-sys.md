@@ -34,7 +34,7 @@ function setDateTime(admin: Want, time: number, callback: AsyncCallback<void>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | time | number | 是 | 时间戳(ms)。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为null，否则为错误对象。 |
 
@@ -70,6 +70,25 @@ dateTimeManager.setDateTime(wantTemp, 1526003846000, (err) => {
 })
 ```
 
+```TypeScript
+import { dateTimeManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// 需根据实际情况进行替换
+dateTimeManager.setDateTime(wantTemp, 1526003846000).then(() => {
+  console.info('Succeeded in setting date time');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set date time. Code is ${err.code}, message is ${err.message}`);
+})
+```
+
 
 ## setDateTime
 
@@ -99,7 +118,7 @@ function setDateTime(admin: Want, time: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | time | number | 是 | 时间戳(ms)。 |
 
 **返回值：**
@@ -120,22 +139,5 @@ function setDateTime(admin: Want, time: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import { dateTimeManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 需根据实际情况进行替换
-dateTimeManager.setDateTime(wantTemp, 1526003846000).then(() => {
-  console.info('Succeeded in setting date time');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set date time. Code is ${err.code}, message is ${err.message}`);
-})
-```
+参见 [setDateTime](#setdatetime)
 

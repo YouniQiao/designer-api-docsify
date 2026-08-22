@@ -28,7 +28,7 @@ The phone number must match the specified country code. For example, for a China
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Phone number. |
 | countryCode | string | Yes | Country code, for example, **CN** (China). All country codes are supported. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -51,6 +51,16 @@ call.formatPhoneNumberToE164("138xxxxxxxx", "CN", (err: BusinessError, data: str
     } else {
         console.info(`formatPhoneNumberToE164 success, data->${JSON.stringify(data)}`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.formatPhoneNumberToE164("138xxxxxxxx", "CN").then((data: string) => {
+    console.info(`formatPhoneNumberToE164 success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`formatPhoneNumberToE164 fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -98,13 +108,5 @@ All country codes are supported.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.formatPhoneNumberToE164("138xxxxxxxx", "CN").then((data: string) => {
-    console.info(`formatPhoneNumberToE164 success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`formatPhoneNumberToE164 fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [formatPhoneNumberToE164](#formatphonenumbertoe164)
 

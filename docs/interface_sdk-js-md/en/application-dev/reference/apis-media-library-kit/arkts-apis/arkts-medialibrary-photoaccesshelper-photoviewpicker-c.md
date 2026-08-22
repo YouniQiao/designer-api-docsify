@@ -58,6 +58,72 @@ Starts a **photoPicker** page for the user to select one or more images or video
 | 13900042 | Unknown error |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes: <br>1. An illegal enumeration value was passed to PhotoSelectOptions.globalMovingPhotoState. Only MOVING_PHOTO_ENABLED and MOVING_PHOTO_DISABLED are supported for configuration; <br>2. An illegal enumeration value was passed to PhotoSelectOptions.assetCompatibleAbility.<br>**Applicable version:** 12 and later |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example01(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    let photoSelectOptions = new photoAccessHelper.PhotoSelectOptions();
+    photoSelectOptions.MIMEType = photoAccessHelper.PhotoViewMIMETypes.IMAGE_TYPE;
+    photoSelectOptions.maxSelectNumber = 5;
+    let photoPicker = new photoAccessHelper.PhotoViewPicker();
+    photoPicker.select(photoSelectOptions).then((photoSelectResult: photoAccessHelper.PhotoSelectResult) => {
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    }).catch((err: BusinessError) => {
+      console.error(`PhotoViewPicker.select failed with err: ${err.code}, ${err.message}`);
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example02(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    let photoSelectOptions = new photoAccessHelper.PhotoSelectOptions();
+    photoSelectOptions.MIMEType = photoAccessHelper.PhotoViewMIMETypes.IMAGE_TYPE;
+    photoSelectOptions.maxSelectNumber = 5;
+    let photoPicker = new photoAccessHelper.PhotoViewPicker();
+    photoPicker.select(photoSelectOptions, (err: BusinessError, photoSelectResult: photoAccessHelper.PhotoSelectResult) => {
+      if (err) {
+        console.error(`PhotoViewPicker.select failed with err: ${err.code}, ${err.message}`);
+        return;
+      }
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example03(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    let photoPicker = new photoAccessHelper.PhotoViewPicker();
+    photoPicker.select((err: BusinessError, photoSelectResult: photoAccessHelper.PhotoSelectResult) => {
+      if (err) {
+        console.error(`PhotoViewPicker.select failed with err: ${err.code}, ${err.message}`);
+        return;
+      }
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err: ${err.code}, ${err.message}`);
+  }
+}
+```
+
 ## select
 
 ```TypeScript
@@ -87,7 +153,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | option | PhotoSelectOptions | Yes | Options for selecting images or videos. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PhotoSelectResult&gt; | Yes | Callback used to return information about the images or videos selected. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoSelectResult&gt; | Yes | Callback used to return information about the images or videos selected. |
 
 **Error codes:**
 
@@ -96,6 +162,10 @@ Starts a **photoPicker** page for the user to select one or more images or video
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900042 | Unknown error |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes: <br>1. An illegal enumeration value was passed to PhotoSelectOptions.globalMovingPhotoState. Only MOVING_PHOTO_ENABLED and MOVING_PHOTO_DISABLED are supported for configuration;<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+See [select](#select)
 
 ## select
 
@@ -125,7 +195,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PhotoSelectResult&gt; | Yes | Callback used to return information about the images or videos selected. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoSelectResult&gt; | Yes | Callback used to return information about the images or videos selected. |
 
 **Error codes:**
 
@@ -133,4 +203,8 @@ Starts a **photoPicker** page for the user to select one or more images or video
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [select](#select)
 

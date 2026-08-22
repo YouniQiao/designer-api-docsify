@@ -1,6 +1,6 @@
 # OnSaveResult
 
-保存应用数据的结果，该类型为枚举。配合UIAbility的 [onSaveState()](arkts-ability-appabilityuiability-uiability-c.md#onsavestate) 方法使用，可以实现[UIAbility备份恢复](../../../application-models/ability-recover-guideline.md)。
+保存应用数据的结果，该类型为枚举。配合UIAbility的 [onSaveState()](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate) 方法使用，可以实现[UIAbility备份恢复](../../../application-models/ability-recover-guideline.md)。
 
 **起始版本：** 23
 
@@ -115,4 +115,16 @@ Always rejected to save the status.
 <!--Device-OnSaveResult-ALL_REJECT = 5--><!--Device-OnSaveResult-ALL_REJECT = 5-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**示例**
+
+```TypeScript
+import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>) {
+    return AbilityConstant.OnSaveResult.ALL_AGREE;
+  }
+}
+```
 

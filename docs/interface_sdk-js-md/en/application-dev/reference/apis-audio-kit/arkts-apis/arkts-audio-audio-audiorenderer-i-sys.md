@@ -166,3 +166,7 @@ This API uses a promise to return the result.
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Current renderer is not supported to set target. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio server process died. |
 
+**Examples**
+
+See [setTarget](#settarget)
+

@@ -22,3 +22,50 @@ export type EnabledSilentReminderChangedCallback = (callbackData: EnabledSilentR
 | --- | --- | --- | --- |
 | callbackData | [EnabledSilentReminderCallbackData](arkts-notification-notificationsubscriber-enabledsilentremindercallbackdata-i-sys.md) | 是 | 回调返回监听到的静默提醒使能状态信息。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let onEnabledSilentReminderChangedCallback: notificationSubscribe.EnabledSilentReminderChangedCallback = (callbackData: notificationSubscribe.EnabledSilentReminderCallbackData) => {
+  console.info('bundle: ', callbackData.bundle);
+  console.info('uid: ', callbackData.uid);
+  console.info('enable: ', callbackData.enableStatus);
+};
+
+let subscriber: notificationSubscribe.NotificationSubscriber = {
+  onEnabledSilentReminderChanged: onEnabledSilentReminderChangedCallback
+};
+
+notificationSubscribe.subscribeNotification(subscriber).then(() => {
+  console.info('subscribeNotification success');
+}).catch((err: BusinessError) => {
+  console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let onEnabledSilentReminderChangedCallback: notificationSubscribe.EnabledSilentReminderChangedCallback = (callbackData: notificationSubscribe.EnabledSilentReminderCallbackData) => {
+  console.info('bundle: ', callbackData.bundle);
+  console.info('uid: ', callbackData.uid);
+  console.info('enable: ', callbackData.enableStatus);
+};
+
+let subscriber: notificationSubscribe.NotificationSubscriber = {
+  onEnabledSilentReminderChanged: onEnabledSilentReminderChangedCallback
+};
+
+notificationSubscribe.subscribeNotification(subscriber).then(() => {
+  console.info('subscribeNotification success');
+}).catch((err: Error) => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`subscribeNotification failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+

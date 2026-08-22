@@ -1,0 +1,154 @@
+# FrameCallback
+
+Implements the API for setting the task that needs to be executed during the next frame rendering.
+
+> **NOTE：**
+> 
+> - The following APIs must be used in conjunction with [postFrameCallback](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#postframecallback) and
+> [postDelayedFrameCallback](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#postdelayedframecallback) from [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md).
+> Extend this class and override either the [onFrame](../../apis-default/arkts-apis/arkts-arkui-uicontext-framecallback-c.md#onframe) or
+> [onIdle](../../apis-default/arkts-apis/arkts-arkui-uicontext-framecallback-c.md#onidle) method to implement specific service logic.
+
+**Since:** 12
+
+<!--Device-unnamed-export abstract class FrameCallback--><!--Device-unnamed-export abstract class FrameCallback-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
+```
+
+## onFrame
+
+```TypeScript
+onFrame(frameTimeInNano: number): void
+```
+
+Called when the next frame is rendered.
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameCallback-onFrame(frameTimeInNano: number): void--><!--Device-FrameCallback-onFrame(frameTimeInNano: number): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| frameTimeInNano | number | Yes | Time when the rendering of the next frame starts, in nanoseconds.<br>Value range: [0, +∞) |
+
+**Examples**
+
+```TypeScript
+import { FrameCallback } from '@kit.ArkUI';
+
+class MyFrameCallback extends FrameCallback {
+  private tag: string;
+
+  constructor(tag: string) {
+    super();
+    this.tag = tag;
+  }
+
+  onFrame(frameTimeNanos: number) {
+    console.info('MyFrameCallback ' + this.tag + ' ' + frameTimeNanos.toString());
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('Invoke postFrameCallback')
+          .onClick(() => {
+            this.getUIContext().postFrameCallback(new MyFrameCallback("normTask"));
+          })
+        Button('Invoke postDelayedFrameCallback')
+          .onClick(() => {
+            this.getUIContext().postDelayedFrameCallback(new MyFrameCallback("delayTask"), 5);
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## onIdle
+
+```TypeScript
+onIdle(timeLeftInNano: number): void
+```
+
+Called after the rendering of the subsequent frame has finished and there is more than 1 millisecond left before the next VSync signal. If the time left is not more than 1 millisecond, the execution of this API will be deferred to a later frame.
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameCallback-onIdle(timeLeftInNano: number): void--><!--Device-FrameCallback-onIdle(timeLeftInNano: number): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| timeLeftInNano | number | Yes | Remaining idle time for the current frame, in nanoseconds.<br>Value range: [0, +∞) |
+
+**Examples**
+
+```TypeScript
+import { FrameCallback } from '@kit.ArkUI';
+
+class MyIdleCallback extends FrameCallback {
+  private tag: string;
+
+  constructor(tag: string) {
+    super();
+    this.tag = tag;
+  }
+
+  onIdle(timeLeftInNano: number) {
+    console.info('MyIdleCallback ' + this.tag + ' ' + timeLeftInNano.toString());
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('Invoke postFrameCallback')
+          .onClick(() => {
+            this.getUIContext().postFrameCallback(new MyIdleCallback("normTask"));
+          })
+        Button('Invoke postDelayedFrameCallback')
+          .onClick(() => {
+            this.getUIContext().postDelayedFrameCallback(new MyIdleCallback("delayTask"), 5);
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+

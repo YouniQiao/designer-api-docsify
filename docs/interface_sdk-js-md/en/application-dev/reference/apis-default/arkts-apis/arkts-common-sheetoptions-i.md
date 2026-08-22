@@ -98,6 +98,26 @@ Border width of the sheet. You can set the width for all four sides or set separ
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## detents
+
+```TypeScript
+detents?: SingleLengthDetent | DoubleLengthDetents | TripleLengthDetents
+```
+
+Defines sheet detents
+
+**Type:** [SingleLengthDetent](arkts-singlelengthdetent-t.md) \| [DoubleLengthDetents](arkts-doublelengthdetents-t.md) \| [TripleLengthDetents](arkts-triplelengthdetents-t.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SheetOptions-detents?: SingleLengthDetent | DoubleLengthDetents | TripleLengthDetents--><!--Device-SheetOptions-detents?: SingleLengthDetent | DoubleLengthDetents | TripleLengthDetents-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## detentSelection
 
 ```TypeScript
@@ -117,26 +137,6 @@ Select a detent from detents property
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SheetOptions-detentSelection?: SheetSize | Length--><!--Device-SheetOptions-detentSelection?: SheetSize | Length-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## detents
-
-```TypeScript
-detents?: SingleLengthDetent | DoubleLengthDetents | TripleLengthDetents
-```
-
-Defines sheet detents
-
-**Type:** [SingleLengthDetent](arkts-singlelengthdetent-t.md) \| [DoubleLengthDetents](arkts-doublelengthdetents-t.md) \| [TripleLengthDetents](arkts-triplelengthdetents-t.md)
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SheetOptions-detents?: SingleLengthDetent | DoubleLengthDetents | TripleLengthDetents--><!--Device-SheetOptions-detents?: SingleLengthDetent | DoubleLengthDetents | TripleLengthDetents-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

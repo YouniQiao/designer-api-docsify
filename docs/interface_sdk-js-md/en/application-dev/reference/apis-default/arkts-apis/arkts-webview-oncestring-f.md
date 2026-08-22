@@ -26,7 +26,7 @@ Subscribe to a callback of a specified type of web event once.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Types of web event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Indicate callback used to receive the web event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Indicate callback used to receive the web event. |
 
 **Error codes:**
 

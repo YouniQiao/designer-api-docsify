@@ -1,6 +1,6 @@
 # Uint8ClampedArray
 
-A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-collections.md).
+A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-n.md).
 
 > **NOTE：**
 > 
@@ -1241,24 +1241,6 @@ Returns an iterator object that contains the value of each element in this ArkTS
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-## BYTES_PER_ELEMENT
-
-```TypeScript
-static readonly BYTES_PER_ELEMENT: number
-```
-
-Number of bytes occupied by each element in the ArkTS Uint8ClampedArray.
-
-**Type:** number
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Uint8ClampedArray-static readonly BYTES_PER_ELEMENT: number--><!--Device-Uint8ClampedArray-static readonly BYTES_PER_ELEMENT: number-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
 ## buffer
 
 ```TypeScript
@@ -1310,6 +1292,24 @@ Offset between the ArkTS Uint8ClampedArray and the start position of the ArrayBu
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Uint8ClampedArray-readonly byteOffset: number--><!--Device-Uint8ClampedArray-readonly byteOffset: number-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## BYTES_PER_ELEMENT
+
+```TypeScript
+static readonly BYTES_PER_ELEMENT: number
+```
+
+Number of bytes occupied by each element in the ArkTS Uint8ClampedArray.
+
+**Type:** number
+
+**Since:** 12
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Uint8ClampedArray-static readonly BYTES_PER_ELEMENT: number--><!--Device-Uint8ClampedArray-static readonly BYTES_PER_ELEMENT: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

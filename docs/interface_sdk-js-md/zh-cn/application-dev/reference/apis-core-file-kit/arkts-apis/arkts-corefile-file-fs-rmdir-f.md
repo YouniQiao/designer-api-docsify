@@ -57,6 +57,65 @@ declare function rmdir(path: string): Promise<void>
 | 13900032 | Directory not empty |
 | 13900042 | Unknown error |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dirPath = pathDir + "/testDir";
+fileIo.rmdir(dirPath).then(() => {
+  console.info(`Succeeded in removing directory.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to remove directory. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dirPath = pathDir + "/testDir";
+fileIo.rmdir(dirPath).then(() => {
+  console.info(`Succeeded in removing directory.`);
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to remove directory. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dirPath = pathDir + "/testDir";
+fileIo.rmdir(dirPath, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to remove directory. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in removing directory.`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dirPath = pathDir + "/testDir";
+fileIo.rmdir(dirPath, (err: BusinessError<void> | null) => {
+  if (err) {
+    console.error(`Failed to remove directory. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in removing directory.`);
+  }
+});
+```
+
 
 ## rmdir
 
@@ -101,4 +160,8 @@ declare function rmdir(path: string, callback: AsyncCallback<void>): void
 | 13900030 | File name too long |
 | 13900032 | Directory not empty |
 | 13900042 | Unknown error |
+
+**示例**
+
+参见 [rmdir](#rmdir)
 

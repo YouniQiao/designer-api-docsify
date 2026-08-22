@@ -97,6 +97,26 @@ Defines a constructor used to create a **FieldNode** instance with a string fiel
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+let child1 = new distributedKVStore.FieldNode('id');
+child1.type = distributedKVStore.ValueType.INTEGER;
+child1.nullable = false;
+child1.default = '1';
+let child2 = new distributedKVStore.FieldNode('name');
+child2.type = distributedKVStore.ValueType.STRING;
+child2.nullable = false;
+child2.default = 'zhangsan';
+
+let schema = new distributedKVStore.Schema();
+schema.root.appendChild(child1);
+schema.root.appendChild(child2);
+schema.indexes = ['$.id', '$.name'];
+schema.mode = 1;
+schema.skip = 0;
+```
+
 ## default
 
 ```TypeScript

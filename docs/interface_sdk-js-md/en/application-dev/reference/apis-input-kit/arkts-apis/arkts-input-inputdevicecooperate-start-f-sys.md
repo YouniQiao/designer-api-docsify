@@ -32,7 +32,7 @@ Starts screen hopping. This API uses an asynchronous callback to return the resu
 | --- | --- | --- | --- |
 | sinkDeviceDescriptor | string | Yes | Descriptor of the target device for screen hopping. |
 | srcInputDeviceId | number | Yes | ID of the target device for screen hopping. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback. If the operation is successful, **err** is **undefined**. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback. If the operation is successful, **err** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -65,6 +65,34 @@ struct Index {
                 return;
               }
               console.info(`Start Keyboard mouse crossing success.`);
+            });
+          } catch (error) {
+            console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { inputDeviceCooperate } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          const sinkDeviceDescriptor = "descriptor";
+          const srcInputDeviceId = 0;
+          try {
+            inputDeviceCooperate.start(sinkDeviceDescriptor, srcInputDeviceId).then(() => {
+              console.info(`Start Keyboard mouse crossing success.`);
+            }, (error: BusinessError) => {
+              console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
             });
           } catch (error) {
             console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
@@ -120,31 +148,5 @@ Starts screen hopping. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          const sinkDeviceDescriptor = "descriptor";
-          const srcInputDeviceId = 0;
-          try {
-            inputDeviceCooperate.start(sinkDeviceDescriptor, srcInputDeviceId).then(() => {
-              console.info(`Start Keyboard mouse crossing success.`);
-            }, (error: BusinessError) => {
-              console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            });
-          } catch (error) {
-            console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
+See [start](#start)
 

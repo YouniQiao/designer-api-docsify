@@ -38,6 +38,20 @@ function createAVMetadataExtractor(): Promise<AVMetadataExtractor>
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let avMetadataExtractor: media.AVMetadataExtractor;
+media.createAVMetadataExtractor((error: BusinessError, extractor: media.AVMetadataExtractor) => {
+  if (extractor) {
+    avMetadataExtractor = extractor;
+    console.info('Succeeded in creating AVMetadataExtractor');
+  } else {
+    console.error(`Failed to create AVMetadataExtractor, error message:${error.message}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let avMetadataExtractor: media.AVMetadataExtractor;
 media.createAVMetadataExtractor().then((extractor: media.AVMetadataExtractor) => {
   if (extractor) {
     avMetadataExtractor = extractor;
@@ -77,6 +91,10 @@ Creates an **AVMetadataExtractor** instance. This API uses a promise to return t
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Returned by promise. |
 
+**示例**
+
+参见 [createAVMetadataExtractor](#createavmetadataextractor)
+
 
 ## createAVMetadataExtractor
 
@@ -106,19 +124,7 @@ function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor>)
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let avMetadataExtractor: media.AVMetadataExtractor;
-media.createAVMetadataExtractor((error: BusinessError, extractor: media.AVMetadataExtractor) => {
-  if (extractor) {
-    avMetadataExtractor = extractor;
-    console.info('Succeeded in creating AVMetadataExtractor');
-  } else {
-    console.error(`Failed to create AVMetadataExtractor, error message:${error.message}`);
-  }
-});
-```
+参见 [createAVMetadataExtractor](#createavmetadataextractor)
 
 
 ## createAVMetadataExtractor
@@ -146,4 +152,8 @@ Creates an **AVMetadataExtractor** instance. This API uses an asynchronous callb
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Returned by callback. |
+
+**示例**
+
+参见 [createAVMetadataExtractor](#createavmetadataextractor)
 

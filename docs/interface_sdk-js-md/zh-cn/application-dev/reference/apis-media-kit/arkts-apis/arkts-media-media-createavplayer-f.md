@@ -60,6 +60,22 @@ media.createAVPlayer((error: BusinessError, video: media.AVPlayer) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let avPlayer: media.AVPlayer;
+media.createAVPlayer().then((video: media.AVPlayer) => {
+  if (video) {
+    avPlayer = video;
+    console.info('Succeeded in creating AVPlayer');
+  } else {
+    console.error('Failed to create AVPlayer');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`Failed to create AVPlayer, error message:${error.message}`);
+});
+```
+
 
 ## createAVPlayer
 
@@ -88,6 +104,10 @@ The actual number of instances that can be created may be different. It depends 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
+
+**示例**
+
+参见 [createAVPlayer](#createavplayer)
 
 
 ## createAVPlayer
@@ -130,21 +150,7 @@ function createAVPlayer(): Promise<AVPlayer>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let avPlayer: media.AVPlayer;
-media.createAVPlayer().then((video: media.AVPlayer) => {
-  if (video) {
-    avPlayer = video;
-    console.info('Succeeded in creating AVPlayer');
-  } else {
-    console.error('Failed to create AVPlayer');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`Failed to create AVPlayer, error message:${error.message}`);
-});
-```
+参见 [createAVPlayer](#createavplayer)
 
 
 ## createAVPlayer
@@ -174,4 +180,8 @@ The actual number of instances that can be created may be different. It depends 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+
+**示例**
+
+参见 [createAVPlayer](#createavplayer)
 

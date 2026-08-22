@@ -35,6 +35,24 @@ function isMyCard(id: number, callback: AsyncCallback<boolean>): void
 
 **示例**
 
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+  import { contact } from '@kit.ContactsKit';
+  import { common } from '@kit.AbilityKit';
+
+  // 请在组件内获取context。
+  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  contact.isMyCard(context, 1, (err: BusinessError, data) => {
+    if (err) {
+      console.error(`Failed to isMyCard. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info(`Succeeded in isMyCard. data->${JSON.stringify(data)}`);
+  });
+```
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { contact } from '@kit.ContactsKit';
@@ -45,6 +63,30 @@ contact.isMyCard(1, (err: BusinessError, data) => {
     console.error(`Failed to isMyCard. Code: ${err.code}, message: ${err.message}`);
     return;
   }
+  console.info(`Succeeded in isMyCard. data->${JSON.stringify(data)}`);
+});
+```
+
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+  import { common } from '@kit.AbilityKit';
+
+  // 请在组件内获取context。
+  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  let promise = contact.isMyCard(context, 1);
+  promise.then((data) => {
+    console.info(`Succeeded in isMyCard. data->${JSON.stringify(data)}`);
+  });
+```
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+// 判断id为1的名片是否为“我的名片”
+let promise = contact.isMyCard(1);
+promise.then((data) => {
   console.info(`Succeeded in isMyCard. data->${JSON.stringify(data)}`);
 });
 ```
@@ -83,23 +125,7 @@ function isMyCard(context: Context, id: number, callback: AsyncCallback<boolean>
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-  import { contact } from '@kit.ContactsKit';
-  import { common } from '@kit.AbilityKit';
-
-  // 请在组件内获取context。
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  contact.isMyCard(context, 1, (err: BusinessError, data) => {
-    if (err) {
-      console.error(`Failed to isMyCard. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in isMyCard. data->${JSON.stringify(data)}`);
-  });
-```
+参见 [isMyCard](#ismycard)
 
 
 ## isMyCard
@@ -136,15 +162,7 @@ function isMyCard(id: number): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-// 判断id为1的名片是否为“我的名片”
-let promise = contact.isMyCard(1);
-promise.then((data) => {
-  console.info(`Succeeded in isMyCard. data->${JSON.stringify(data)}`);
-});
-```
+参见 [isMyCard](#ismycard)
 
 
 ## isMyCard
@@ -185,17 +203,5 @@ function isMyCard(context: Context, id: number): Promise<boolean>
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-  import { common } from '@kit.AbilityKit';
-
-  // 请在组件内获取context。
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  let promise = contact.isMyCard(context, 1);
-  promise.then((data) => {
-    console.info(`Succeeded in isMyCard. data->${JSON.stringify(data)}`);
-  });
-```
+参见 [isMyCard](#ismycard)
 

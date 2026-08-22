@@ -85,3 +85,33 @@ function CreatePictureFunc(context: common.UIAbilityContext): image.Picture | un
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+async function CreatePicture() {
+  let options: image.DecodingOptionsForPicture = {
+    desiredAuxiliaryPictures: [image.AuxiliaryPictureType.GAINMAP] // GAINMAP为需要解码的辅助图类型。 
+  };
+  let pictureObj: image.Picture = await imageSourceApi.createPicture(options);
+  if (pictureObj != null) {
+    console.info('Succeeded in creating picture.');
+  } else {
+    console.error('Failed to create picture.');
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+async function CreatePictureFunc(imageSource: image.ImageSource): void {
+  let opts: image.DecodingOptionsForPicture = { desiredAuxiliaryPictures: [image.AuxiliaryPictureType.GAINMAP] };
+  try {
+    let picture = await imageSource.createPicture(opts);
+    console.info(0x00000, 'CreatePictureFunc', 'createPicture success!');
+  } catch (err) {
+    console.error(0x00000, 'CreatePictureFunc', 'CreatePictureFunc failed: ' + err);
+  }
+}
+```
+

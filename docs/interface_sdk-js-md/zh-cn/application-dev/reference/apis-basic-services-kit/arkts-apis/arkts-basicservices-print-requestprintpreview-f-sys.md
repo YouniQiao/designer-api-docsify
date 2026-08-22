@@ -67,6 +67,34 @@ print.requestPrintPreview(jobInfo, (num : number) => {
 })
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+
+let jobInfo : print.PrintJob = {
+    fdList : [44,45],
+    jobId : 'jobId_12',
+    printerId : 'printerId_32',
+    jobState : PRINT_JOB_COMPLETED,
+    jobSubstate : print.PrintJobSubState.PRINT_JOB_COMPLETED_SUCCESS,
+    copyNumber : 1,
+    pageRange : {},
+    isSequential : false,
+    pageSize : {id : '', name : '', width : 10, height : 20},
+    isLandscape : false,
+    colorMode : COLOR_MODE_COLOR,
+    duplexMode : DUPLEX_MODE_NONE,
+    margin : undefined,
+    preview : undefined,
+    options : undefined
+};
+print.requestPrintPreview(jobInfo).then((num: number) => {
+    console.info('requestPrintPreview success, num : ' + JSON.stringify(num));
+}).catch((error: BusinessError) => {
+    console.error('requestPrintPreview failed, because : ' + JSON.stringify(error));
+})
+```
+
 
 ## requestPrintPreview
 
@@ -108,31 +136,5 @@ function requestPrintPreview(jobInfo: PrintJob): Promise<int>
 
 **示例**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let jobInfo : print.PrintJob = {
-    fdList : [44,45],
-    jobId : 'jobId_12',
-    printerId : 'printerId_32',
-    jobState : PRINT_JOB_COMPLETED,
-    jobSubstate : print.PrintJobSubState.PRINT_JOB_COMPLETED_SUCCESS,
-    copyNumber : 1,
-    pageRange : {},
-    isSequential : false,
-    pageSize : {id : '', name : '', width : 10, height : 20},
-    isLandscape : false,
-    colorMode : COLOR_MODE_COLOR,
-    duplexMode : DUPLEX_MODE_NONE,
-    margin : undefined,
-    preview : undefined,
-    options : undefined
-};
-print.requestPrintPreview(jobInfo).then((num: number) => {
-    console.info('requestPrintPreview success, num : ' + JSON.stringify(num));
-}).catch((error: BusinessError) => {
-    console.error('requestPrintPreview failed, because : ' + JSON.stringify(error));
-})
-```
+参见 [requestPrintPreview](#requestprintpreview)
 

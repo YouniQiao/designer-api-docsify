@@ -32,7 +32,7 @@ function getUserRestrictedForAccount(admin: Want | null, settingsItem: string, a
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | settingsItem | string | 是 | 指定设置项。<br/>- modifyWallpaper：修改壁纸，包含锁屏壁纸和桌面壁纸。 |
 | accountId | int | 是 | 用户ID，取值范围：大于等于0。<br/>accountId可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 <br>取值限定为整数。 |
 
@@ -74,6 +74,25 @@ try {
 }
 ```
 
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  // 参数需根据实际情况进行替换
+  let result: boolean = restrictions.getUserRestrictedForAccount(wantTemp, restrictions.SettingsForAccount.MODIFY_WALLPAPER, 100);
+  console.info(`Succeeded in getting user restricted: ${result}`);
+} catch (err) {
+  console.error(`Failed to get user restricted. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## getUserRestrictedForAccount
 
@@ -97,7 +116,7 @@ function getUserRestrictedForAccount(admin: Want | null, settingsItem: SettingsF
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
 | settingsItem | [SettingsForAccount](arkts-mdm-restrictions-settingsforaccount-e.md) | 是 | 指定要查询的用户设置项。 |
 | accountId | int | 是 | 用户ID，取值范围：大于等于0。 <br>取值限定为整数。 <br>accountId可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
 
@@ -119,22 +138,5 @@ function getUserRestrictedForAccount(admin: Want | null, settingsItem: SettingsF
 
 **示例**
 
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 参数需根据实际情况进行替换
-  let result: boolean = restrictions.getUserRestrictedForAccount(wantTemp, restrictions.SettingsForAccount.MODIFY_WALLPAPER, 100);
-  console.info(`Succeeded in getting user restricted: ${result}`);
-} catch (err) {
-  console.error(`Failed to get user restricted. Code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getUserRestrictedForAccount](#getuserrestrictedforaccount)
 

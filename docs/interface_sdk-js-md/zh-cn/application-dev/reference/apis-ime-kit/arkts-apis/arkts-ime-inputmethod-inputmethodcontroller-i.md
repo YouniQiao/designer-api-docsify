@@ -111,6 +111,81 @@ inputMethodController.attach(true, textConfig, (err?: BusinessError) => {
 });
 ```
 
+ArkTS-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let inputAttribute: inputMethod.InputAttribute = {
+  textInputType: inputMethod.TextInputType.TEXT,
+  enterKeyType: inputMethod.EnterKeyType.GO
+}
+let textConfig: inputMethod.TextConfig = { inputAttribute: inputAttribute };
+inputMethod.getController().attach(true, textConfig).then(() => {
+  console.info('Succeeded in attaching inputMethod.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to attach, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+
+let textConfig: inputMethod.TextConfig = {
+  inputAttribute: {
+    textInputType: inputMethod.TextInputType.TEXT,
+    enterKeyType: inputMethod.EnterKeyType.NONE
+  }
+};
+inputMethodController.attach(true, textConfig).then(() => {
+  console.info('Succeeded in attaching inputMethod.');
+}).catch((err: BusinessError): void => {
+  console.error(`Failed to attach, code: ${err.code}, message: ${err.message}`);
+})
+```
+
+ArkTS-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let inputAttribute: inputMethod.InputAttribute = {
+  textInputType: inputMethod.TextInputType.TEXT,
+  enterKeyType: inputMethod.EnterKeyType.GO
+}
+let textConfig: inputMethod.TextConfig = { inputAttribute: inputAttribute };
+let requestKeyboardReason: inputMethod.RequestKeyboardReason = inputMethod.RequestKeyboardReason.MOUSE;
+
+inputMethod.getController().attach(true, textConfig, requestKeyboardReason).then(() => {
+  console.info('Succeeded in attaching inputMethod.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to attach, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+
+let textConfig: inputMethod.TextConfig = {
+  inputAttribute: {
+    textInputType: inputMethod.TextInputType.TEXT,
+    enterKeyType: inputMethod.EnterKeyType.NONE
+  }
+};
+let requestKeyboardReason: inputMethod.RequestKeyboardReason = inputMethod.RequestKeyboardReason.MOUSE;
+inputMethodController.attach(true, textConfig, requestKeyboardReason).then(() => {
+  console.info('Succeeded in attaching inputMethod.');
+}).catch((err: BusinessError): void=> {
+  console.error(`Failed to attach, code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ## attach
 
 ```TypeScript
@@ -163,41 +238,7 @@ attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let inputAttribute: inputMethod.InputAttribute = {
-  textInputType: inputMethod.TextInputType.TEXT,
-  enterKeyType: inputMethod.EnterKeyType.GO
-}
-let textConfig: inputMethod.TextConfig = { inputAttribute: inputAttribute };
-inputMethod.getController().attach(true, textConfig).then(() => {
-  console.info('Succeeded in attaching inputMethod.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to attach, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-
-let textConfig: inputMethod.TextConfig = {
-  inputAttribute: {
-    textInputType: inputMethod.TextInputType.TEXT,
-    enterKeyType: inputMethod.EnterKeyType.NONE
-  }
-};
-inputMethodController.attach(true, textConfig).then(() => {
-  console.info('Succeeded in attaching inputMethod.');
-}).catch((err: BusinessError): void => {
-  console.error(`Failed to attach, code: ${err.code}, message: ${err.message}`);
-})
-```
+参见 [attach](#attach)
 
 ## attach
 
@@ -252,44 +293,7 @@ attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: Req
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let inputAttribute: inputMethod.InputAttribute = {
-  textInputType: inputMethod.TextInputType.TEXT,
-  enterKeyType: inputMethod.EnterKeyType.GO
-}
-let textConfig: inputMethod.TextConfig = { inputAttribute: inputAttribute };
-let requestKeyboardReason: inputMethod.RequestKeyboardReason = inputMethod.RequestKeyboardReason.MOUSE;
-
-inputMethod.getController().attach(true, textConfig, requestKeyboardReason).then(() => {
-  console.info('Succeeded in attaching inputMethod.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to attach, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-
-let textConfig: inputMethod.TextConfig = {
-  inputAttribute: {
-    textInputType: inputMethod.TextInputType.TEXT,
-    enterKeyType: inputMethod.EnterKeyType.NONE
-  }
-};
-let requestKeyboardReason: inputMethod.RequestKeyboardReason = inputMethod.RequestKeyboardReason.MOUSE;
-inputMethodController.attach(true, textConfig, requestKeyboardReason).then(() => {
-  console.info('Succeeded in attaching inputMethod.');
-}).catch((err: BusinessError): void=> {
-  console.error(`Failed to attach, code: ${err.code}, message: ${err.message}`);
-})
-```
+参见 [attach](#attach)
 
 ## attachWithUIContext
 
@@ -316,7 +320,7 @@ attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md) | 是 | UIContext实例对象。 |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | UIContext实例对象。 |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | 是 | 编辑框的配置信息。 |
 | attachOptions | AttachOptions | 否 | 绑定附加选项。 |
 
@@ -442,6 +446,30 @@ inputMethodController.changeSelection('text', 0, 5, (err?: BusinessError) => {
 });
 ```
 
+ArkTs-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().changeSelection('test', 0, 5).then(() => {
+  console.info('Succeeded in changing selection.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to changeSelection, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTs-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethodController.changeSelection('test', 0, 5).then(() => {
+  console.info('Succeeded in changing selection.');
+}).catch((err: BusinessError): void=> {
+  console.error(`Failed to changeSelection, code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ## changeSelection
 
 ```TypeScript
@@ -486,29 +514,7 @@ changeSelection(text: string, start: int, end: int): Promise<void>
 
 **示例**
 
-ArkTs-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getController().changeSelection('test', 0, 5).then(() => {
-  console.info('Succeeded in changing selection.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to changeSelection, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTs-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethodController.changeSelection('test', 0, 5).then(() => {
-  console.info('Succeeded in changing selection.');
-}).catch((err: BusinessError): void=> {
-  console.error(`Failed to changeSelection, code: ${err.code}, message: ${err.message}`);
-})
-```
+参见 [changeSelection](#changeselection)
 
 ## detach
 
@@ -568,6 +574,31 @@ inputMethodController.detach((err?: BusinessError) => {
 });
 ```
 
+ArkTS-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().detach().then(() => {
+  console.info('Succeeded in detaching inputMethod.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to detach, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+
+inputMethodController.detach().then(() => {
+  console.info('Succeeded in detaching inputMethod.');
+}).catch((err: BusinessError): void=> {
+  console.error(`Failed to detach, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## detach
 
 ```TypeScript
@@ -597,30 +628,7 @@ detach(): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getController().detach().then(() => {
-  console.info('Succeeded in detaching inputMethod.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to detach, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-
-inputMethodController.detach().then(() => {
-  console.info('Succeeded in detaching inputMethod.');
-}).catch((err: BusinessError): void=> {
-  console.error(`Failed to detach, code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [detach](#detach)
 
 ## discardTypingText
 
@@ -746,6 +754,56 @@ inputMethodController.hideSoftKeyboard((err?: BusinessError) => {
 })
 ```
 
+ArkTs-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().hideSoftKeyboard().then(() => {
+  console.info('Succeeded in hiding softKeyboard.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to hide softKeyboard, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTs-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethodController.hideSoftKeyboard().then(() => {
+  console.info('Succeeded in hiding softKeyboard.');
+}).catch((err: BusinessError): void=> {
+  console.error(`Failed to hideSoftKeyboard, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let displayId: number = 30;
+inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
+  console.info('Succeeded in hiding softKeyboard.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to hide softKeyboard, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let displayId: long = 30;
+inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
+  console.info('Succeeded in hiding softKeyboard.');
+}).catch((err: BusinessError): void=> {
+  console.error(`Failed to hide softKeyboard, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## hideSoftKeyboard
 
 ```TypeScript
@@ -783,29 +841,7 @@ hideSoftKeyboard(): Promise<void>
 
 **示例**
 
-ArkTs-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getController().hideSoftKeyboard().then(() => {
-  console.info('Succeeded in hiding softKeyboard.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to hide softKeyboard, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTs-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethodController.hideSoftKeyboard().then(() => {
-  console.info('Succeeded in hiding softKeyboard.');
-}).catch((err: BusinessError): void=> {
-  console.error(`Failed to hideSoftKeyboard, code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [hideSoftKeyboard](#hidesoftkeyboard)
 
 ## hideTextInput
 
@@ -879,6 +915,31 @@ inputMethodController.hideTextInput((err?: BusinessError) => {
 });
 ```
 
+ArkTS-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().hideTextInput().then(() => {
+  console.info('Succeeded in hiding inputMethod.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to hideTextInput, code: ${err.code}, message: ${err.message}`);
+})
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+
+inputMethodController.hideTextInput().then(() => {
+  console.info('Succeeded in hiding inputMethod.');
+}).catch((err: BusinessError): void=> {
+  console.error(`Failed to hideTextInput, code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ## hideTextInput
 
 ```TypeScript
@@ -922,502 +983,7 @@ hideTextInput(): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getController().hideTextInput().then(() => {
-  console.info('Succeeded in hiding inputMethod.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to hideTextInput, code: ${err.code}, message: ${err.message}`);
-})
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-
-inputMethodController.hideTextInput().then(() => {
-  console.info('Succeeded in hiding inputMethod.');
-}).catch((err: BusinessError): void=> {
-  console.error(`Failed to hideTextInput, code: ${err.code}, message: ${err.message}`);
-})
-```
-
-## offDeleteLeft
-
-```TypeScript
-offDeleteLeft(callback?: Callback<int>): void
-```
-
-@brief 取消订阅输入法应用向左删除文本事件。
-
-**起始版本：** 23
-
-<!--Device-InputMethodController-offDeleteLeft(callback?: Callback<int>): void--><!--Device-InputMethodController-offDeleteLeft(callback?: Callback<int>): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
-
-**示例**
-
-```TypeScript
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-let onDeleteLeftCallback = (length: int) => {
-  console.info(`Succeeded in subscribing deleteLeft, length: ${length}`);
-};
-inputMethodController.offDeleteLeft(onDeleteLeftCallback);
-inputMethodController.offDeleteLeft();
-```
-
-## offDeleteRight
-
-```TypeScript
-offDeleteRight(callback?: Callback<int>): void
-```
-
-@brief 取消订阅输入法应用向右删除文本事件。
-
-**起始版本：** 23
-
-<!--Device-InputMethodController-offDeleteRight(callback?: Callback<int>): void--><!--Device-InputMethodController-offDeleteRight(callback?: Callback<int>): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
-
-**示例**
-
-```TypeScript
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-let onDeleteRightCallback = (length: int) => {
-  console.info(`Succeeded in subscribing deleteRight, length: ${length}`);
-};
-inputMethodController.offDeleteRight(onDeleteRightCallback);
-inputMethodController.offDeleteRight();
-```
-
-## offFinishTextPreview
-
-```TypeScript
-offFinishTextPreview(callback?: Callback<void>): void
-```
-
-@brief 取消订阅结束文本预览事件。使用callback异步回调。
-
-**起始版本：** 23
-
-<!--Device-InputMethodController-offFinishTextPreview(callback?: Callback<void>): void--><!--Device-InputMethodController-offFinishTextPreview(callback?: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
-
-**示例**
-
-```TypeScript
-import inputMethod from '@ohos.inputMethod';
-let inputMethodController = inputMethod.getController();
-let finishTextPreviewCallback1 = () => {
-  console.info(`FinishTextPreviewCallback1: finishTextPreview event triggered`);
-};
-let finishTextPreviewCallback2 = () => {
-  console.info(`FinishTextPreviewCallback2: finishTextPreview event triggered`);
-};
-
-inputMethodController.onFinishTextPreview(finishTextPreviewCallback1);
-console.info(`FinishTextPreviewCallback1 subscribed to finishTextPreview`);
-inputMethodController.onFinishTextPreview(finishTextPreviewCallback2);
-console.info(`FinishTextPreviewCallback2 subscribed to finishTextPreview`);
-// 仅取消finishTextPreview的callback1的回调。
-inputMethodController.offFinishTextPreview(finishTextPreviewCallback1);
-console.info(`FinishTextPreviewCallback1 unsubscribed from finishTextPreview`);
-// 取消finishTextPreview的所有回调
-inputMethodController.offFinishTextPreview();
-console.info(`All callbacks unsubscribed from finishTextPreview`);
-```
-
-## offGetLeftTextOfCursor
-
-```TypeScript
-offGetLeftTextOfCursor(callback?: GetTextCallback): void
-```
-
-@brief 取消订阅输入法应用获取光标左侧指定长度文本事件。使用callback异步回调。
-
-**起始版本：** 23
-
-<!--Device-InputMethodController-offGetLeftTextOfCursor(callback?: GetTextCallback): void--><!--Device-InputMethodController-offGetLeftTextOfCursor(callback?: GetTextCallback): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [GetTextCallback](arkts-ime-inputmethod-gettextcallback-t.md) | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
-
-**示例**
-
-```TypeScript
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-let getLeftTextOfCursorCallback = (length: int) => {
-  console.info(`Succeeded in unsubscribing getLeftTextOfCursor, length: ${length}`);
-  let text:string = "";
-  return text;
-};
-inputMethodController.offGetLeftTextOfCursor(getLeftTextOfCursorCallback);
-inputMethodController.offGetLeftTextOfCursor();
-```
-
-## offGetRightTextOfCursor
-
-```TypeScript
-offGetRightTextOfCursor(callback?: GetTextCallback): void
-```
-
-@brief 取消订阅输入法应用获取光标右侧指定长度文本事件。使用callback异步回调。
-
-**起始版本：** 23
-
-<!--Device-InputMethodController-offGetRightTextOfCursor(callback?: GetTextCallback): void--><!--Device-InputMethodController-offGetRightTextOfCursor(callback?: GetTextCallback): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [GetTextCallback](arkts-ime-inputmethod-gettextcallback-t.md) | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
-
-**示例**
-
-```TypeScript
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-let getRightTextOfCursorCallback = (length: int) => {
-  console.info(`Succeeded in unsubscribing getRightTextOfCursor, length: ${length}`);
-  let text:string = "";
-  return text;
-};
-inputMethodController.offGetRightTextOfCursor(getRightTextOfCursorCallback);
-inputMethodController.offGetRightTextOfCursor();
-```
-
-## offGetTextIndexAtCursor
-
-```TypeScript
-offGetTextIndexAtCursor(callback?:GetTextIndexAtCursorCallback): void
-```
-
-@brief 取消订阅输入法应用获取光标处文本索引事件。使用callback异步回调。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InputMethodController-offGetTextIndexAtCursor(callback?:GetTextIndexAtCursorCallback): void--><!--Device-InputMethodController-offGetTextIndexAtCursor(callback?:GetTextIndexAtCursorCallback): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [GetTextIndexAtCursorCallback](arkts-ime-inputmethod-gettextindexatcursorcallback-t.md) | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
-
-**示例**
-
-```TypeScript
-let inputMethodController = inputMethod.getController();
-
-let getTextIndexAtCursorCallback = () => {
-  console.info(`Succeeded in unsubscribing getTextIndexAtCursor.`);
-  let index:int = 0;
-  return index;
-};
-inputMethodController.offGetTextIndexAtCursor(getTextIndexAtCursorCallback);
-inputMethodController.offGetTextIndexAtCursor();
-```
-
-## offHandleExtendAction
-
-```TypeScript
-offHandleExtendAction(callback?: Callback<ExtendAction>): void
-```
-
-@brief 取消订阅输入法应用发送扩展编辑操作事件。使用callback异步回调。
-
-**起始版本：** 23
-
-<!--Device-InputMethodController-offHandleExtendAction(callback?: Callback<ExtendAction>): void--><!--Device-InputMethodController-offHandleExtendAction(callback?: Callback<ExtendAction>): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExtendAction&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
-
-**示例**
-
-```TypeScript
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-let onHandleExtendActionCallback = (action: inputMethod.ExtendAction) => {
-  console.info(`Succeeded in subscribing handleExtendAction, action: ${action}`);
-};
-inputMethodController.offHandleExtendAction(onHandleExtendActionCallback);
-inputMethodController.offHandleExtendAction();
-```
-
-## offInsertText
-
-```TypeScript
-offInsertText(callback?: Callback<string>): void
-```
-
-@brief 取消订阅输入法应用插入文本事件。
-
-**起始版本：** 23
-
-<!--Device-InputMethodController-offInsertText(callback?: Callback<string>): void--><!--Device-InputMethodController-offInsertText(callback?: Callback<string>): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br/>参数不填写时，取消订阅type对应的所有回调事件。 |
-
-**示例**
-
-```TypeScript
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-let onInsertTextCallback = (text: string) => {
-  console.info(`Succeeded in subscribing insertText: ${text}`);
-};
-inputMethodController.offInsertText(onInsertTextCallback);
-inputMethodController.offInsertText();
-```
-
-## offMoveCursor
-
-```TypeScript
-offMoveCursor(callback?: Callback<Direction>): void
-```
-
-@brief 取消订阅输入法应用移动光标事件。
-
-**起始版本：** 23
-
-<!--Device-InputMethodController-offMoveCursor(callback?: Callback<Direction>): void--><!--Device-InputMethodController-offMoveCursor(callback?: Callback<Direction>): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Direction&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
-
-**示例**
-
-```TypeScript
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-let onMoveCursorCallback = (direction: inputMethod.Direction) => {
-  console.info(`Succeeded in subscribing moveCursor, direction: ${direction}`);
-};
-inputMethodController.offMoveCursor(onMoveCursorCallback);
-inputMethodController.offMoveCursor();
-```
-
-## offSelectByMovement
-
-```TypeScript
-offSelectByMovement(callback?: Callback<Movement>): void
-```
-
-@brief 取消订阅输入法应用按光标移动方向，选中文本事件。使用callback异步回调。
-
-**起始版本：** 23
-
-<!--Device-InputMethodController-offSelectByMovement(callback?: Callback<Movement>): void--><!--Device-InputMethodController-offSelectByMovement(callback?: Callback<Movement>): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
-
-**示例**
-
-```TypeScript
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-let onSelectByMovementCallback = (movement: inputMethod.Movement) => {
-  console.info(`Succeeded in subscribing selectByMovement, movement.direction: ${movement.direction}`);
-};
-inputMethodController.offSelectByMovement(onSelectByMovementCallback);
-inputMethodController.offSelectByMovement();
-```
-
-## offSelectByRange
-
-```TypeScript
-offSelectByRange(callback?: Callback<Range>): void
-```
-
-@brief 取消订阅输入法应用按范围选中文本事件。使用callback异步回调。
-
-**起始版本：** 23
-
-<!--Device-InputMethodController-offSelectByRange(callback?: Callback<Range>): void--><!--Device-InputMethodController-offSelectByRange(callback?: Callback<Range>): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
-
-**示例**
-
-```TypeScript
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-let onSelectByRangeCallback = (range: inputMethod.Range) => {
-  console.info(`Succeeded in subscribing selectByRange, start: ${range.start} , end: ${range.end}`);
-};
-inputMethodController.offSelectByRange(onSelectByRangeCallback);
-inputMethodController.offSelectByRange();
-```
-
-## offSendFunctionKey
-
-```TypeScript
-offSendFunctionKey(callback?: Callback<FunctionKey>): void
-```
-
-@brief 取消订阅输入法应用发送功能键事件。
-
-**起始版本：** 23
-
-<!--Device-InputMethodController-offSendFunctionKey(callback?: Callback<FunctionKey>): void--><!--Device-InputMethodController-offSendFunctionKey(callback?: Callback<FunctionKey>): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FunctionKey&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
-
-**示例**
-
-```TypeScript
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-let onSendFunctionKey = (functionKey: inputMethod.FunctionKey) => {
-  console.info(`Succeeded in subscribing sendFunctionKey, functionKey: ${functionKey.enterKeyType}`);
-};
-inputMethodController.offSendFunctionKey(onSendFunctionKey);
-inputMethodController.offSendFunctionKey();
-```
-
-## offSendKeyboardStatus
-
-```TypeScript
-offSendKeyboardStatus(callback?: Callback<KeyboardStatus>): void
-```
-
-@brief 取消订阅输入法应用发送输入法软键盘状态事件。
-
-**起始版本：** 23
-
-<!--Device-InputMethodController-offSendKeyboardStatus(callback?: Callback<KeyboardStatus>): void--><!--Device-InputMethodController-offSendKeyboardStatus(callback?: Callback<KeyboardStatus>): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyboardStatus](arkts-ime-inputmethod-keyboardstatus-e.md)&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
-
-**示例**
-
-```TypeScript
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-let onSendKeyboardStatus = (keyboardStatus: inputMethod.KeyboardStatus) => {
-  console.info(`Succeeded in subscribing sendKeyboardStatus, keyboardStatus: ${keyboardStatus}`);
-};
-inputMethodController.offSendKeyboardStatus(onSendKeyboardStatus);
-inputMethodController.offSendKeyboardStatus();
-```
-
-## offSetPreviewText
-
-```TypeScript
-offSetPreviewText(callback?:SetPreviewTextCallback): void
-```
-
-@brief 取消订阅输入法应用操作文本预览内容的事件。使用callback异步回调。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-InputMethodController-offSetPreviewText(callback?:SetPreviewTextCallback): void--><!--Device-InputMethodController-offSetPreviewText(callback?:SetPreviewTextCallback): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [SetPreviewTextCallback](arkts-ime-inputmethod-setpreviewtextcallback-t.md) | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
-
-**示例**
-
-```TypeScript
-import inputMethod from '@ohos.inputMethod';
-let inputMethodController = inputMethod.getController();
-let setPreviewTextCallback1: inputMethod.SetPreviewTextCallback = (text: string, range: inputMethod.Range) => {
-  console.info(`SetPreviewTextCallback1: Received text - ${text}, Received range - start: ${range.start}, end: ${range.end}`);
-};
-
-let setPreviewTextCallback2: inputMethod.SetPreviewTextCallback = (text: string, range: inputMethod.Range) => {
-  console.info(`setPreviewTextCallback2: Received text - ${text}, Received range - start: ${range.start}, end: ${range.end}`);
-};
-
-inputMethodController.onSetPreviewText(setPreviewTextCallback1);
-console.info(`SetPreviewTextCallback1 subscribed to setPreviewText`);
-inputMethodController.onSetPreviewText(setPreviewTextCallback2);
-console.info(`SetPreviewTextCallback2 subscribed to setPreviewText`);
-// 仅取消setPreviewText的callback1的回调。
-inputMethodController.offSetPreviewText(setPreviewTextCallback1);
-console.info(`SetPreviewTextCallback1 unsubscribed from setPreviewText`);
-// 取消setPreviewText的所有回调。
-inputMethodController.offSetPreviewText();
-console.info(`All callbacks unsubscribed from setPreviewText`);
-```
+参见 [hideTextInput](#hidetextinput)
 
 ## off('deleteLeft')
 
@@ -1931,17 +1497,17 @@ inputMethodController.off('setPreviewText');
 console.info(`All callbacks unsubscribed from setPreviewText`);
 ```
 
-## onDeleteLeft
+## offDeleteLeft
 
 ```TypeScript
-onDeleteLeft(callback: Callback<int>): void
+offDeleteLeft(callback?: Callback<int>): void
 ```
 
-@brief 订阅输入法应用向左删除文本事件。使用callback异步回调。
+@brief 取消订阅输入法应用向左删除文本事件。
 
 **起始版本：** 23
 
-<!--Device-InputMethodController-onDeleteLeft(callback: Callback<int>): void--><!--Device-InputMethodController-onDeleteLeft(callback: Callback<int>): void-End-->
+<!--Device-InputMethodController-offDeleteLeft(callback?: Callback<int>): void--><!--Device-InputMethodController-offDeleteLeft(callback?: Callback<int>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1949,34 +1515,30 @@ onDeleteLeft(callback: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回需要向左删除的文本长度。<br/>根据传入的删除长度，在回调函数中操作编辑框中的文本。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
 ```TypeScript
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.onDeleteLeft((length: int) => {
+let onDeleteLeftCallback = (length: int) => {
   console.info(`Succeeded in subscribing deleteLeft, length: ${length}`);
-});
+};
+inputMethodController.offDeleteLeft(onDeleteLeftCallback);
+inputMethodController.offDeleteLeft();
 ```
 
-## onDeleteRight
+## offDeleteRight
 
 ```TypeScript
-onDeleteRight(callback: Callback<int>): void
+offDeleteRight(callback?: Callback<int>): void
 ```
 
-@brief 订阅输入法应用向右删除文本事件。使用callback异步回调。
+@brief 取消订阅输入法应用向右删除文本事件。
 
 **起始版本：** 23
 
-<!--Device-InputMethodController-onDeleteRight(callback: Callback<int>): void--><!--Device-InputMethodController-onDeleteRight(callback: Callback<int>): void-End-->
+<!--Device-InputMethodController-offDeleteRight(callback?: Callback<int>): void--><!--Device-InputMethodController-offDeleteRight(callback?: Callback<int>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1984,47 +1546,30 @@ onDeleteRight(callback: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回需要向右删除的文本长度。<br/>根据传入的删除长度，在回调函数中操作编辑框中的文本。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
 ```TypeScript
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.onDeleteRight((length: int) => {
+let onDeleteRightCallback = (length: int) => {
   console.info(`Succeeded in subscribing deleteRight, length: ${length}`);
-});
+};
+inputMethodController.offDeleteRight(onDeleteRightCallback);
+inputMethodController.offDeleteRight();
 ```
 
-## onFinishTextPreview
+## offFinishTextPreview
 
 ```TypeScript
-onFinishTextPreview(callback: Callback<void>): void
+offFinishTextPreview(callback?: Callback<void>): void
 ```
 
-@brief 订阅结束文本预览事件。使用callback异步回调。 <br> <br>   
-> **说明：** &lt;br
-&gt; 
-> &lt;br
-&gt; 
-> 使用预览文本功能，需在调用 &lt;br
-&gt; 
-> [attach](#attach) &lt;br
-&gt; 
-> 前订阅此事件，并和 &lt;br
-&gt; 
-> [on('setPreviewText')](#onselectbyrange) &lt;br
-&gt; 
-> 一起订阅。
+@brief 取消订阅结束文本预览事件。使用callback异步回调。
 
 **起始版本：** 23
 
-<!--Device-InputMethodController-onFinishTextPreview(callback: Callback<void>): void--><!--Device-InputMethodController-onFinishTextPreview(callback: Callback<void>): void-End-->
+<!--Device-InputMethodController-offFinishTextPreview(callback?: Callback<void>): void--><!--Device-InputMethodController-offFinishTextPreview(callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -2032,7 +1577,7 @@ onFinishTextPreview(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。用于处理预览文本结束的逻辑，类型为void。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -2053,22 +1598,22 @@ console.info(`FinishTextPreviewCallback2 subscribed to finishTextPreview`);
 // 仅取消finishTextPreview的callback1的回调。
 inputMethodController.offFinishTextPreview(finishTextPreviewCallback1);
 console.info(`FinishTextPreviewCallback1 unsubscribed from finishTextPreview`);
-// 取消finishTextPreview的所有回调。
+// 取消finishTextPreview的所有回调
 inputMethodController.offFinishTextPreview();
 console.info(`All callbacks unsubscribed from finishTextPreview`);
 ```
 
-## onGetLeftTextOfCursor
+## offGetLeftTextOfCursor
 
 ```TypeScript
-onGetLeftTextOfCursor(callback: GetTextCallback): void
+offGetLeftTextOfCursor(callback?: GetTextCallback): void
 ```
 
-@brief 订阅输入法应用获取光标左侧指定长度文本事件。使用callback异步回调。
+@brief 取消订阅输入法应用获取光标左侧指定长度文本事件。使用callback异步回调。
 
 **起始版本：** 23
 
-<!--Device-InputMethodController-onGetLeftTextOfCursor(callback: GetTextCallback): void--><!--Device-InputMethodController-onGetLeftTextOfCursor(callback: GetTextCallback): void-End-->
+<!--Device-InputMethodController-offGetLeftTextOfCursor(callback?: GetTextCallback): void--><!--Device-InputMethodController-offGetLeftTextOfCursor(callback?: GetTextCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -2076,36 +1621,32 @@ onGetLeftTextOfCursor(callback: GetTextCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [GetTextCallback](arkts-ime-inputmethod-gettextcallback-t.md) | 是 | 回调函数，获取编辑框最新状态下光标左侧指定长度的文本内容并返回。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
+| callback | [GetTextCallback](arkts-ime-inputmethod-gettextcallback-t.md) | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
 ```TypeScript
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.onGetLeftTextOfCursor((length: int) => {
-  console.info(`Succeeded in subscribing getLeftTextOfCursor, length: ${length}`);
+let getLeftTextOfCursorCallback = (length: int) => {
+  console.info(`Succeeded in unsubscribing getLeftTextOfCursor, length: ${length}`);
   let text:string = "";
   return text;
-});
+};
+inputMethodController.offGetLeftTextOfCursor(getLeftTextOfCursorCallback);
+inputMethodController.offGetLeftTextOfCursor();
 ```
 
-## onGetRightTextOfCursor
+## offGetRightTextOfCursor
 
 ```TypeScript
-onGetRightTextOfCursor(callback: GetTextCallback): void
+offGetRightTextOfCursor(callback?: GetTextCallback): void
 ```
 
-@brief 订阅输入法应用获取光标右侧指定长度文本事件。使用callback异步回调。
+@brief 取消订阅输入法应用获取光标右侧指定长度文本事件。使用callback异步回调。
 
 **起始版本：** 23
 
-<!--Device-InputMethodController-onGetRightTextOfCursor(callback: GetTextCallback): void--><!--Device-InputMethodController-onGetRightTextOfCursor(callback: GetTextCallback): void-End-->
+<!--Device-InputMethodController-offGetRightTextOfCursor(callback?: GetTextCallback): void--><!--Device-InputMethodController-offGetRightTextOfCursor(callback?: GetTextCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -2113,36 +1654,34 @@ onGetRightTextOfCursor(callback: GetTextCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [GetTextCallback](arkts-ime-inputmethod-gettextcallback-t.md) | 是 | 回调函数，获取编辑框最新状态下光标右侧指定长度的文本内容并返回。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
+| callback | [GetTextCallback](arkts-ime-inputmethod-gettextcallback-t.md) | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
 ```TypeScript
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.onGetRightTextOfCursor( (length: int) => {
-  console.info(`Succeeded in subscribing getRightTextOfCursor, length: ${length}`);
+let getRightTextOfCursorCallback = (length: int) => {
+  console.info(`Succeeded in unsubscribing getRightTextOfCursor, length: ${length}`);
   let text:string = "";
   return text;
-});
+};
+inputMethodController.offGetRightTextOfCursor(getRightTextOfCursorCallback);
+inputMethodController.offGetRightTextOfCursor();
 ```
 
-## onGetTextIndexAtCursor
+## offGetTextIndexAtCursor
 
 ```TypeScript
-onGetTextIndexAtCursor(callback: GetTextIndexAtCursorCallback): void
+offGetTextIndexAtCursor(callback?:GetTextIndexAtCursorCallback): void
 ```
 
-@brief 订阅输入法应用获取光标处文本索引事件。使用callback异步回调。
+@brief 取消订阅输入法应用获取光标处文本索引事件。使用callback异步回调。
 
 **起始版本：** 23
 
-<!--Device-InputMethodController-onGetTextIndexAtCursor(callback: GetTextIndexAtCursorCallback): void--><!--Device-InputMethodController-onGetTextIndexAtCursor(callback: GetTextIndexAtCursorCallback): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InputMethodController-offGetTextIndexAtCursor(callback?:GetTextIndexAtCursorCallback): void--><!--Device-InputMethodController-offGetTextIndexAtCursor(callback?:GetTextIndexAtCursorCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -2150,36 +1689,33 @@ onGetTextIndexAtCursor(callback: GetTextIndexAtCursorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [GetTextIndexAtCursorCallback](arkts-ime-inputmethod-gettextindexatcursorcallback-t.md) | 是 | 回调函数，获取编辑框最新状态下光标处文本索引并返回。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
+| callback | [GetTextIndexAtCursorCallback](arkts-ime-inputmethod-gettextindexatcursorcallback-t.md) | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
 ```TypeScript
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.onGetTextIndexAtCursor(():int => {
-  console.info(`Succeeded in subscribing getTextIndexAtCursor.`);
+let inputMethodController = inputMethod.getController();
+
+let getTextIndexAtCursorCallback = () => {
+  console.info(`Succeeded in unsubscribing getTextIndexAtCursor.`);
   let index:int = 0;
   return index;
-});
+};
+inputMethodController.offGetTextIndexAtCursor(getTextIndexAtCursorCallback);
+inputMethodController.offGetTextIndexAtCursor();
 ```
 
-## onHandleExtendAction
+## offHandleExtendAction
 
 ```TypeScript
-onHandleExtendAction(callback: Callback<ExtendAction>): void
+offHandleExtendAction(callback?: Callback<ExtendAction>): void
 ```
 
-@brief 订阅输入法应用发送扩展编辑操作事件。使用callback异步回调。
+@brief 取消订阅输入法应用发送扩展编辑操作事件。使用callback异步回调。
 
 **起始版本：** 23
 
-<!--Device-InputMethodController-onHandleExtendAction(callback: Callback<ExtendAction>): void--><!--Device-InputMethodController-onHandleExtendAction(callback: Callback<ExtendAction>): void-End-->
+<!--Device-InputMethodController-offHandleExtendAction(callback?: Callback<ExtendAction>): void--><!--Device-InputMethodController-offHandleExtendAction(callback?: Callback<ExtendAction>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -2187,34 +1723,30 @@ onHandleExtendAction(callback: Callback<ExtendAction>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExtendAction&gt; | 是 | 回调函数，返回扩展编辑操作类型。<br/>根据传入的扩展编辑操作类型，做相应的操作，如剪切、复制等。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExtendAction&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
 ```TypeScript
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.onHandleExtendAction((action: inputMethod.ExtendAction) => {
+let onHandleExtendActionCallback = (action: inputMethod.ExtendAction) => {
   console.info(`Succeeded in subscribing handleExtendAction, action: ${action}`);
-});
+};
+inputMethodController.offHandleExtendAction(onHandleExtendActionCallback);
+inputMethodController.offHandleExtendAction();
 ```
 
-## onInsertText
+## offInsertText
 
 ```TypeScript
-onInsertText(callback: Callback<string>): void
+offInsertText(callback?: Callback<string>): void
 ```
 
-@brief 订阅输入法应用插入文本事件。使用callback异步回调。
+@brief 取消订阅输入法应用插入文本事件。
 
 **起始版本：** 23
 
-<!--Device-InputMethodController-onInsertText(callback: Callback<string>): void--><!--Device-InputMethodController-onInsertText(callback: Callback<string>): void-End-->
+<!--Device-InputMethodController-offInsertText(callback?: Callback<string>): void--><!--Device-InputMethodController-offInsertText(callback?: Callback<string>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -2222,43 +1754,30 @@ onInsertText(callback: Callback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数，返回需要插入的文本内容。<br/>根据传入的文本，在回调函数中操作编辑框中的内容。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br/>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
 ```TypeScript
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-function callback1(text: string) {
-  console.info(`Succeeded in getting callback1 data: ${text}`);
-}
-
-function callback2(text: string) {
-  console.info(`Succeeded in getting callback2 data: ${text}`);
-}
-
-inputMethodController.onInsertText(callback1);
-inputMethodController.onInsertText(callback2);
-inputMethodController.offInsertText(callback1);
+let onInsertTextCallback = (text: string) => {
+  console.info(`Succeeded in subscribing insertText: ${text}`);
+};
+inputMethodController.offInsertText(onInsertTextCallback);
 inputMethodController.offInsertText();
 ```
 
-## onMoveCursor
+## offMoveCursor
 
 ```TypeScript
-onMoveCursor(callback: Callback<Direction>): void
+offMoveCursor(callback?: Callback<Direction>): void
 ```
 
-@brief 订阅输入法应用移动光标事件。使用callback异步回调。
+@brief 取消订阅输入法应用移动光标事件。
 
 **起始版本：** 23
 
-<!--Device-InputMethodController-onMoveCursor(callback: Callback<Direction>): void--><!--Device-InputMethodController-onMoveCursor(callback: Callback<Direction>): void-End-->
+<!--Device-InputMethodController-offMoveCursor(callback?: Callback<Direction>): void--><!--Device-InputMethodController-offMoveCursor(callback?: Callback<Direction>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -2266,34 +1785,30 @@ onMoveCursor(callback: Callback<Direction>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Direction&gt; | 是 | 回调函数，返回光标信息。<br/>根据返回的光标移动方向，改变光标位置，如光标向上或向下。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Direction&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
 ```TypeScript
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.onMoveCursor((direction: inputMethod.Direction) => {
+let onMoveCursorCallback = (direction: inputMethod.Direction) => {
   console.info(`Succeeded in subscribing moveCursor, direction: ${direction}`);
-});
+};
+inputMethodController.offMoveCursor(onMoveCursorCallback);
+inputMethodController.offMoveCursor();
 ```
 
-## onSelectByMovement
+## offSelectByMovement
 
 ```TypeScript
-onSelectByMovement(callback: Callback<Movement>): void
+offSelectByMovement(callback?: Callback<Movement>): void
 ```
 
-@brief 订阅输入法应用按光标移动方向，选中文本事件。使用callback异步回调。
+@brief 取消订阅输入法应用按光标移动方向，选中文本事件。使用callback异步回调。
 
 **起始版本：** 23
 
-<!--Device-InputMethodController-onSelectByMovement(callback: Callback<Movement>): void--><!--Device-InputMethodController-onSelectByMovement(callback: Callback<Movement>): void-End-->
+<!--Device-InputMethodController-offSelectByMovement(callback?: Callback<Movement>): void--><!--Device-InputMethodController-offSelectByMovement(callback?: Callback<Movement>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -2301,28 +1816,30 @@ onSelectByMovement(callback: Callback<Movement>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | 是 | 回调函数，返回光标移动的方向。<br/>根据传入的光标移动方向，选中编辑框中相应文本。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
 ```TypeScript
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.onSelectByMovement((movement: inputMethod.Movement) => {
-  console.info('Succeeded in subscribing selectByMovement: direction: ' + movement.direction);
-});
+let onSelectByMovementCallback = (movement: inputMethod.Movement) => {
+  console.info(`Succeeded in subscribing selectByMovement, movement.direction: ${movement.direction}`);
+};
+inputMethodController.offSelectByMovement(onSelectByMovementCallback);
+inputMethodController.offSelectByMovement();
 ```
 
-## onSelectByRange
+## offSelectByRange
 
 ```TypeScript
-onSelectByRange(callback: Callback<Range>): void
+offSelectByRange(callback?: Callback<Range>): void
 ```
 
-@brief 订阅输入法应用按范围选中文本事件。使用callback异步回调。
+@brief 取消订阅输入法应用按范围选中文本事件。使用callback异步回调。
 
 **起始版本：** 23
 
-<!--Device-InputMethodController-onSelectByRange(callback: Callback<Range>): void--><!--Device-InputMethodController-onSelectByRange(callback: Callback<Range>): void-End-->
+<!--Device-InputMethodController-offSelectByRange(callback?: Callback<Range>): void--><!--Device-InputMethodController-offSelectByRange(callback?: Callback<Range>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -2330,28 +1847,30 @@ onSelectByRange(callback: Callback<Range>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | 是 | 回调函数，返回需要选中的文本范围。<br/>根据传入的文本范围，开发者在回调函数中编辑框中相应文本。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
 ```TypeScript
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.onSelectByRange((range: inputMethod.Range) => {
-  console.info(`Succeeded in subscribing selectByRange: start: ${range.start} , end: ${range.end}`);
-});
+let onSelectByRangeCallback = (range: inputMethod.Range) => {
+  console.info(`Succeeded in subscribing selectByRange, start: ${range.start} , end: ${range.end}`);
+};
+inputMethodController.offSelectByRange(onSelectByRangeCallback);
+inputMethodController.offSelectByRange();
 ```
 
-## onSendFunctionKey
+## offSendFunctionKey
 
 ```TypeScript
-onSendFunctionKey(callback: Callback<FunctionKey>): void
+offSendFunctionKey(callback?: Callback<FunctionKey>): void
 ```
 
-@brief 订阅输入法应用发送功能键事件。使用callback异步回调。
+@brief 取消订阅输入法应用发送功能键事件。
 
 **起始版本：** 23
 
-<!--Device-InputMethodController-onSendFunctionKey(callback: Callback<FunctionKey>): void--><!--Device-InputMethodController-onSendFunctionKey(callback: Callback<FunctionKey>): void-End-->
+<!--Device-InputMethodController-offSendFunctionKey(callback?: Callback<FunctionKey>): void--><!--Device-InputMethodController-offSendFunctionKey(callback?: Callback<FunctionKey>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -2359,34 +1878,30 @@ onSendFunctionKey(callback: Callback<FunctionKey>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FunctionKey&gt; | 是 | 回调函数，返回输入法应用发送的功能键信息。<br/>根据返回的功能键信息，做相应操作。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FunctionKey&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
 ```TypeScript
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.onSendFunctionKey((functionKey: inputMethod.FunctionKey) => {
-  console.info(`Succeeded in subscribing sendFunctionKey, functionKey.enterKeyType: ${functionKey.enterKeyType}`);
-});
+let onSendFunctionKey = (functionKey: inputMethod.FunctionKey) => {
+  console.info(`Succeeded in subscribing sendFunctionKey, functionKey: ${functionKey.enterKeyType}`);
+};
+inputMethodController.offSendFunctionKey(onSendFunctionKey);
+inputMethodController.offSendFunctionKey();
 ```
 
-## onSendKeyboardStatus
+## offSendKeyboardStatus
 
 ```TypeScript
-onSendKeyboardStatus(callback: Callback<KeyboardStatus>): void
+offSendKeyboardStatus(callback?: Callback<KeyboardStatus>): void
 ```
 
-订阅输入法应用发送输入法软键盘状态事件。使用callback异步回调。
+@brief 取消订阅输入法应用发送输入法软键盘状态事件。
 
 **起始版本：** 23
 
-<!--Device-InputMethodController-onSendKeyboardStatus(callback: Callback<KeyboardStatus>): void--><!--Device-InputMethodController-onSendKeyboardStatus(callback: Callback<KeyboardStatus>): void-End-->
+<!--Device-InputMethodController-offSendKeyboardStatus(callback?: Callback<KeyboardStatus>): void--><!--Device-InputMethodController-offSendKeyboardStatus(callback?: Callback<KeyboardStatus>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -2394,39 +1909,32 @@ onSendKeyboardStatus(callback: Callback<KeyboardStatus>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyboardStatus](arkts-ime-inputmethod-keyboardstatus-e.md)&gt; | 是 | 回调函数，返回软键盘状态。<br/>根据传入的软键盘状态，在回调函数中做相应操作。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyboardStatus](arkts-ime-inputmethod-keyboardstatus-e.md)&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
 ```TypeScript
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.onSendKeyboardStatus((keyboardStatus: inputMethod.KeyboardStatus) => {
+let onSendKeyboardStatus = (keyboardStatus: inputMethod.KeyboardStatus) => {
   console.info(`Succeeded in subscribing sendKeyboardStatus, keyboardStatus: ${keyboardStatus}`);
-});
+};
+inputMethodController.offSendKeyboardStatus(onSendKeyboardStatus);
+inputMethodController.offSendKeyboardStatus();
 ```
 
-## onSetPreviewText
+## offSetPreviewText
 
 ```TypeScript
-onSetPreviewText(callback: SetPreviewTextCallback): void
+offSetPreviewText(callback?:SetPreviewTextCallback): void
 ```
 
-@brief 订阅输入法应用操作文本预览内容的事件。使用callback异步回调。 <br> <br>   
-> **说明：** &lt;br
-&gt; 
-> &lt;br
-&gt; 
-> 使用预览文本功能，需在调用 [attach](#attach) 前订阅此事件，并和 [on('finishTextPreview')](#onselectbyrange) 一起订阅。
+@brief 取消订阅输入法应用操作文本预览内容的事件。使用callback异步回调。
 
 **起始版本：** 23
 
-<!--Device-InputMethodController-onSetPreviewText(callback: SetPreviewTextCallback): void--><!--Device-InputMethodController-onSetPreviewText(callback: SetPreviewTextCallback): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InputMethodController-offSetPreviewText(callback?:SetPreviewTextCallback): void--><!--Device-InputMethodController-offSetPreviewText(callback?:SetPreviewTextCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -2434,7 +1942,7 @@ onSetPreviewText(callback: SetPreviewTextCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [SetPreviewTextCallback](arkts-ime-inputmethod-setpreviewtextcallback-t.md) | 是 | 回调函数。用于接收文本预览的内容并返回。 |
+| callback | [SetPreviewTextCallback](arkts-ime-inputmethod-setpreviewtextcallback-t.md) | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -3039,6 +2547,536 @@ inputMethodController.off('setPreviewText');
 console.info(`All callbacks unsubscribed from setPreviewText`);
 ```
 
+## onDeleteLeft
+
+```TypeScript
+onDeleteLeft(callback: Callback<int>): void
+```
+
+@brief 订阅输入法应用向左删除文本事件。使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-InputMethodController-onDeleteLeft(callback: Callback<int>): void--><!--Device-InputMethodController-onDeleteLeft(callback: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回需要向左删除的文本长度。<br/>根据传入的删除长度，在回调函数中操作编辑框中的文本。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
+
+**示例**
+
+```TypeScript
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+inputMethodController.onDeleteLeft((length: int) => {
+  console.info(`Succeeded in subscribing deleteLeft, length: ${length}`);
+});
+```
+
+## onDeleteRight
+
+```TypeScript
+onDeleteRight(callback: Callback<int>): void
+```
+
+@brief 订阅输入法应用向右删除文本事件。使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-InputMethodController-onDeleteRight(callback: Callback<int>): void--><!--Device-InputMethodController-onDeleteRight(callback: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回需要向右删除的文本长度。<br/>根据传入的删除长度，在回调函数中操作编辑框中的文本。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
+
+**示例**
+
+```TypeScript
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+inputMethodController.onDeleteRight((length: int) => {
+  console.info(`Succeeded in subscribing deleteRight, length: ${length}`);
+});
+```
+
+## onFinishTextPreview
+
+```TypeScript
+onFinishTextPreview(callback: Callback<void>): void
+```
+
+@brief 订阅结束文本预览事件。使用callback异步回调。 <br> <br>   
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 使用预览文本功能，需在调用 &lt;br
+&gt; 
+> [attach](#attach) &lt;br
+&gt; 
+> 前订阅此事件，并和 &lt;br
+&gt; 
+> [on('setPreviewText')](#onselectbyrange) &lt;br
+&gt; 
+> 一起订阅。
+
+**起始版本：** 23
+
+<!--Device-InputMethodController-onFinishTextPreview(callback: Callback<void>): void--><!--Device-InputMethodController-onFinishTextPreview(callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。用于处理预览文本结束的逻辑，类型为void。 |
+
+**示例**
+
+```TypeScript
+import inputMethod from '@ohos.inputMethod';
+let inputMethodController = inputMethod.getController();
+let finishTextPreviewCallback1 = () => {
+  console.info(`FinishTextPreviewCallback1: finishTextPreview event triggered`);
+};
+let finishTextPreviewCallback2 = () => {
+  console.info(`FinishTextPreviewCallback2: finishTextPreview event triggered`);
+};
+
+inputMethodController.onFinishTextPreview(finishTextPreviewCallback1);
+console.info(`FinishTextPreviewCallback1 subscribed to finishTextPreview`);
+inputMethodController.onFinishTextPreview(finishTextPreviewCallback2);
+console.info(`FinishTextPreviewCallback2 subscribed to finishTextPreview`);
+// 仅取消finishTextPreview的callback1的回调。
+inputMethodController.offFinishTextPreview(finishTextPreviewCallback1);
+console.info(`FinishTextPreviewCallback1 unsubscribed from finishTextPreview`);
+// 取消finishTextPreview的所有回调。
+inputMethodController.offFinishTextPreview();
+console.info(`All callbacks unsubscribed from finishTextPreview`);
+```
+
+## onGetLeftTextOfCursor
+
+```TypeScript
+onGetLeftTextOfCursor(callback: GetTextCallback): void
+```
+
+@brief 订阅输入法应用获取光标左侧指定长度文本事件。使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-InputMethodController-onGetLeftTextOfCursor(callback: GetTextCallback): void--><!--Device-InputMethodController-onGetLeftTextOfCursor(callback: GetTextCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [GetTextCallback](arkts-ime-inputmethod-gettextcallback-t.md) | 是 | 回调函数，获取编辑框最新状态下光标左侧指定长度的文本内容并返回。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
+
+**示例**
+
+```TypeScript
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+inputMethodController.onGetLeftTextOfCursor((length: int) => {
+  console.info(`Succeeded in subscribing getLeftTextOfCursor, length: ${length}`);
+  let text:string = "";
+  return text;
+});
+```
+
+## onGetRightTextOfCursor
+
+```TypeScript
+onGetRightTextOfCursor(callback: GetTextCallback): void
+```
+
+@brief 订阅输入法应用获取光标右侧指定长度文本事件。使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-InputMethodController-onGetRightTextOfCursor(callback: GetTextCallback): void--><!--Device-InputMethodController-onGetRightTextOfCursor(callback: GetTextCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [GetTextCallback](arkts-ime-inputmethod-gettextcallback-t.md) | 是 | 回调函数，获取编辑框最新状态下光标右侧指定长度的文本内容并返回。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
+
+**示例**
+
+```TypeScript
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+inputMethodController.onGetRightTextOfCursor( (length: int) => {
+  console.info(`Succeeded in subscribing getRightTextOfCursor, length: ${length}`);
+  let text:string = "";
+  return text;
+});
+```
+
+## onGetTextIndexAtCursor
+
+```TypeScript
+onGetTextIndexAtCursor(callback: GetTextIndexAtCursorCallback): void
+```
+
+@brief 订阅输入法应用获取光标处文本索引事件。使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-InputMethodController-onGetTextIndexAtCursor(callback: GetTextIndexAtCursorCallback): void--><!--Device-InputMethodController-onGetTextIndexAtCursor(callback: GetTextIndexAtCursorCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [GetTextIndexAtCursorCallback](arkts-ime-inputmethod-gettextindexatcursorcallback-t.md) | 是 | 回调函数，获取编辑框最新状态下光标处文本索引并返回。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
+
+**示例**
+
+```TypeScript
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+inputMethodController.onGetTextIndexAtCursor(():int => {
+  console.info(`Succeeded in subscribing getTextIndexAtCursor.`);
+  let index:int = 0;
+  return index;
+});
+```
+
+## onHandleExtendAction
+
+```TypeScript
+onHandleExtendAction(callback: Callback<ExtendAction>): void
+```
+
+@brief 订阅输入法应用发送扩展编辑操作事件。使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-InputMethodController-onHandleExtendAction(callback: Callback<ExtendAction>): void--><!--Device-InputMethodController-onHandleExtendAction(callback: Callback<ExtendAction>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExtendAction&gt; | 是 | 回调函数，返回扩展编辑操作类型。<br/>根据传入的扩展编辑操作类型，做相应的操作，如剪切、复制等。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
+
+**示例**
+
+```TypeScript
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+inputMethodController.onHandleExtendAction((action: inputMethod.ExtendAction) => {
+  console.info(`Succeeded in subscribing handleExtendAction, action: ${action}`);
+});
+```
+
+## onInsertText
+
+```TypeScript
+onInsertText(callback: Callback<string>): void
+```
+
+@brief 订阅输入法应用插入文本事件。使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-InputMethodController-onInsertText(callback: Callback<string>): void--><!--Device-InputMethodController-onInsertText(callback: Callback<string>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数，返回需要插入的文本内容。<br/>根据传入的文本，在回调函数中操作编辑框中的内容。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
+
+**示例**
+
+```TypeScript
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+function callback1(text: string) {
+  console.info(`Succeeded in getting callback1 data: ${text}`);
+}
+
+function callback2(text: string) {
+  console.info(`Succeeded in getting callback2 data: ${text}`);
+}
+
+inputMethodController.onInsertText(callback1);
+inputMethodController.onInsertText(callback2);
+inputMethodController.offInsertText(callback1);
+inputMethodController.offInsertText();
+```
+
+## onMoveCursor
+
+```TypeScript
+onMoveCursor(callback: Callback<Direction>): void
+```
+
+@brief 订阅输入法应用移动光标事件。使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-InputMethodController-onMoveCursor(callback: Callback<Direction>): void--><!--Device-InputMethodController-onMoveCursor(callback: Callback<Direction>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Direction&gt; | 是 | 回调函数，返回光标信息。<br/>根据返回的光标移动方向，改变光标位置，如光标向上或向下。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
+
+**示例**
+
+```TypeScript
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+inputMethodController.onMoveCursor((direction: inputMethod.Direction) => {
+  console.info(`Succeeded in subscribing moveCursor, direction: ${direction}`);
+});
+```
+
+## onSelectByMovement
+
+```TypeScript
+onSelectByMovement(callback: Callback<Movement>): void
+```
+
+@brief 订阅输入法应用按光标移动方向，选中文本事件。使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-InputMethodController-onSelectByMovement(callback: Callback<Movement>): void--><!--Device-InputMethodController-onSelectByMovement(callback: Callback<Movement>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | 是 | 回调函数，返回光标移动的方向。<br/>根据传入的光标移动方向，选中编辑框中相应文本。 |
+
+**示例**
+
+```TypeScript
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+inputMethodController.onSelectByMovement((movement: inputMethod.Movement) => {
+  console.info('Succeeded in subscribing selectByMovement: direction: ' + movement.direction);
+});
+```
+
+## onSelectByRange
+
+```TypeScript
+onSelectByRange(callback: Callback<Range>): void
+```
+
+@brief 订阅输入法应用按范围选中文本事件。使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-InputMethodController-onSelectByRange(callback: Callback<Range>): void--><!--Device-InputMethodController-onSelectByRange(callback: Callback<Range>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | 是 | 回调函数，返回需要选中的文本范围。<br/>根据传入的文本范围，开发者在回调函数中编辑框中相应文本。 |
+
+**示例**
+
+```TypeScript
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+inputMethodController.onSelectByRange((range: inputMethod.Range) => {
+  console.info(`Succeeded in subscribing selectByRange: start: ${range.start} , end: ${range.end}`);
+});
+```
+
+## onSendFunctionKey
+
+```TypeScript
+onSendFunctionKey(callback: Callback<FunctionKey>): void
+```
+
+@brief 订阅输入法应用发送功能键事件。使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-InputMethodController-onSendFunctionKey(callback: Callback<FunctionKey>): void--><!--Device-InputMethodController-onSendFunctionKey(callback: Callback<FunctionKey>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FunctionKey&gt; | 是 | 回调函数，返回输入法应用发送的功能键信息。<br/>根据返回的功能键信息，做相应操作。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
+
+**示例**
+
+```TypeScript
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+inputMethodController.onSendFunctionKey((functionKey: inputMethod.FunctionKey) => {
+  console.info(`Succeeded in subscribing sendFunctionKey, functionKey.enterKeyType: ${functionKey.enterKeyType}`);
+});
+```
+
+## onSendKeyboardStatus
+
+```TypeScript
+onSendKeyboardStatus(callback: Callback<KeyboardStatus>): void
+```
+
+订阅输入法应用发送输入法软键盘状态事件。使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-InputMethodController-onSendKeyboardStatus(callback: Callback<KeyboardStatus>): void--><!--Device-InputMethodController-onSendKeyboardStatus(callback: Callback<KeyboardStatus>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyboardStatus](arkts-ime-inputmethod-keyboardstatus-e.md)&gt; | 是 | 回调函数，返回软键盘状态。<br/>根据传入的软键盘状态，在回调函数中做相应操作。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) | input method client detached. |
+
+**示例**
+
+```TypeScript
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+inputMethodController.onSendKeyboardStatus((keyboardStatus: inputMethod.KeyboardStatus) => {
+  console.info(`Succeeded in subscribing sendKeyboardStatus, keyboardStatus: ${keyboardStatus}`);
+});
+```
+
+## onSetPreviewText
+
+```TypeScript
+onSetPreviewText(callback: SetPreviewTextCallback): void
+```
+
+@brief 订阅输入法应用操作文本预览内容的事件。使用callback异步回调。 <br> <br>   
+> **说明：** &lt;br
+&gt; 
+> &lt;br
+&gt; 
+> 使用预览文本功能，需在调用 [attach](#attach) 前订阅此事件，并和 [on('finishTextPreview')](#onselectbyrange) 一起订阅。
+
+**起始版本：** 23
+
+<!--Device-InputMethodController-onSetPreviewText(callback: SetPreviewTextCallback): void--><!--Device-InputMethodController-onSetPreviewText(callback: SetPreviewTextCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [SetPreviewTextCallback](arkts-ime-inputmethod-setpreviewtextcallback-t.md) | 是 | 回调函数。用于接收文本预览的内容并返回。 |
+
+**示例**
+
+```TypeScript
+import inputMethod from '@ohos.inputMethod';
+let inputMethodController = inputMethod.getController();
+let setPreviewTextCallback1: inputMethod.SetPreviewTextCallback = (text: string, range: inputMethod.Range) => {
+  console.info(`SetPreviewTextCallback1: Received text - ${text}, Received range - start: ${range.start}, end: ${range.end}`);
+};
+
+let setPreviewTextCallback2: inputMethod.SetPreviewTextCallback = (text: string, range: inputMethod.Range) => {
+  console.info(`setPreviewTextCallback2: Received text - ${text}, Received range - start: ${range.start}, end: ${range.end}`);
+};
+
+inputMethodController.onSetPreviewText(setPreviewTextCallback1);
+console.info(`SetPreviewTextCallback1 subscribed to setPreviewText`);
+inputMethodController.onSetPreviewText(setPreviewTextCallback2);
+console.info(`SetPreviewTextCallback2 subscribed to setPreviewText`);
+// 仅取消setPreviewText的callback1的回调。
+inputMethodController.offSetPreviewText(setPreviewTextCallback1);
+console.info(`SetPreviewTextCallback1 unsubscribed from setPreviewText`);
+// 取消setPreviewText的所有回调。
+inputMethodController.offSetPreviewText();
+console.info(`All callbacks unsubscribed from setPreviewText`);
+```
+
 ## recvMessage
 
 ```TypeScript
@@ -3264,6 +3302,32 @@ inputMethodController.setCallingWindow(windowId, (err?: BusinessError) => {
 });
 ```
 
+ArkTs-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let windowId: number = 2000;
+inputMethod.getController().setCallingWindow(windowId).then(() => {
+  console.info('Succeeded in setting callingWindow.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to setCallingWindow, code: ${err.code}, message: ${err.message}`);
+})
+```
+
+ArkTs-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let windowId: int = 2000;
+inputMethodController.setCallingWindow(windowId).then(() => {
+  console.info('Succeeded in setting callingWindow.');
+}).catch((err: BusinessError): void => {
+  console.error(`Failed to setCallingWindow, code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ## setCallingWindow
 
 ```TypeScript
@@ -3306,31 +3370,7 @@ setCallingWindow(windowId: int): Promise<void>
 
 **示例**
 
-ArkTs-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowId: number = 2000;
-inputMethod.getController().setCallingWindow(windowId).then(() => {
-  console.info('Succeeded in setting callingWindow.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to setCallingWindow, code: ${err.code}, message: ${err.message}`);
-})
-```
-
-ArkTs-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowId: int = 2000;
-inputMethodController.setCallingWindow(windowId).then(() => {
-  console.info('Succeeded in setting callingWindow.');
-}).catch((err: BusinessError): void => {
-  console.error(`Failed to setCallingWindow, code: ${err.code}, message: ${err.message}`);
-})
-```
+参见 [setCallingWindow](#setcallingwindow)
 
 ## showSoftKeyboard
 
@@ -3397,6 +3437,56 @@ inputMethodController.showSoftKeyboard((err?: BusinessError) => {
 })
 ```
 
+ArkTs-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().showSoftKeyboard().then(() => {
+  console.info('Succeeded in showing softKeyboard.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to show softKeyboard, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTs-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethodController.showSoftKeyboard().then(() => {
+  console.info('Succeeded in showing softKeyboard.');
+}).catch((err: BusinessError): void=> {
+  console.error(`Failed to showSoftKeyboard, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let displayId: number = 20;
+inputMethod.getController().showSoftKeyboard(displayId).then(() => {
+  console.info('Succeeded in showing softKeyboard.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to show softKeyboard, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let displayId: long = 20;
+inputMethod.getController().showSoftKeyboard(displayId).then(() => {
+  console.info('Succeeded in showing softKeyboard.');
+}).catch((err: BusinessError): void=> {
+  console.error(`Failed to show softKeyboard, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## showSoftKeyboard
 
 ```TypeScript
@@ -3434,29 +3524,7 @@ showSoftKeyboard(): Promise<void>
 
 **示例**
 
-ArkTs-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getController().showSoftKeyboard().then(() => {
-  console.info('Succeeded in showing softKeyboard.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to show softKeyboard, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTs-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethodController.showSoftKeyboard().then(() => {
-  console.info('Succeeded in showing softKeyboard.');
-}).catch((err: BusinessError): void=> {
-  console.error(`Failed to showSoftKeyboard, code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [showSoftKeyboard](#showsoftkeyboard)
 
 ## showTextInput
 
@@ -3522,6 +3590,59 @@ inputMethodController.showTextInput((err?: BusinessError) => {
 });
 ```
 
+ArkTS-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().showTextInput().then(() => {
+  console.info('Succeeded in showing text input.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to showTextInput, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+
+inputMethodController.showTextInput().then(() => {
+  console.info('Succeeded in showing text input.');
+}).catch((err: BusinessError): void=> {
+  console.error(`Failed to showTextInput, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let requestKeyboardReason: inputMethod.RequestKeyboardReason = inputMethod.RequestKeyboardReason.MOUSE;
+
+inputMethod.getController().showTextInput(requestKeyboardReason).then(() => {
+  console.info('Succeeded in showing text input.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to showTextInput, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
+
+let requestKeyboardReason = inputMethod.RequestKeyboardReason.MOUSE;
+inputMethodController.showTextInput(requestKeyboardReason).then(() => {
+  console.info('Succeeded in showing text input.');
+}).catch((err: BusinessError): void=> {
+  console.error(`Failed to showTextInput, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## showTextInput
 
 ```TypeScript
@@ -3557,30 +3678,7 @@ showTextInput(): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getController().showTextInput().then(() => {
-  console.info('Succeeded in showing text input.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to showTextInput, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-
-inputMethodController.showTextInput().then(() => {
-  console.info('Succeeded in showing text input.');
-}).catch((err: BusinessError): void=> {
-  console.error(`Failed to showTextInput, code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [showTextInput](#showtextinput)
 
 ## showTextInput
 
@@ -3623,33 +3721,7 @@ showTextInput(requestKeyboardReason: RequestKeyboardReason): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let requestKeyboardReason: inputMethod.RequestKeyboardReason = inputMethod.RequestKeyboardReason.MOUSE;
-
-inputMethod.getController().showTextInput(requestKeyboardReason).then(() => {
-  console.info('Succeeded in showing text input.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to showTextInput, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-
-let requestKeyboardReason = inputMethod.RequestKeyboardReason.MOUSE;
-inputMethodController.showTextInput(requestKeyboardReason).then(() => {
-  console.info('Succeeded in showing text input.');
-}).catch((err: BusinessError): void=> {
-  console.error(`Failed to showTextInput, code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [showTextInput](#showtextinput)
 
 ## stopInput
 
@@ -3698,6 +3770,20 @@ inputMethod.getController().stopInput((err: BusinessError, result: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().stopInput().then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in stopping input.');
+  } else {
+    console.error('Failed to stopInput.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to stopInput, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## stopInput
 
 ```TypeScript
@@ -3729,19 +3815,7 @@ stopInput(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getController().stopInput().then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in stopping input.');
-  } else {
-    console.error('Failed to stopInput.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to stopInput, code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [stopInput](#stopinput)
 
 ## stopInputSession
 
@@ -3812,6 +3886,38 @@ inputMethodController.stopInputSession((err: BusinessError | null, result: boole
 });
 ```
 
+ArkTs-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().stopInputSession().then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in stopping inputSession.');
+  } else {
+    console.error('Failed to stopInputSession.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to stopInputSession, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTs-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethodController.stopInputSession().then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in stopping inputSession.');
+  } else {
+    console.error('Failed to stopInputSession.');
+  }
+  }).catch((err: BusinessError): void=> {
+  console.error(`Failed to stopInputSession, code: ${error.code}, message: ${error.message}`);
+})
+```
+
 ## stopInputSession
 
 ```TypeScript
@@ -3846,37 +3952,7 @@ stopInputSession(): Promise<boolean>
 
 **示例**
 
-ArkTs-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getController().stopInputSession().then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in stopping inputSession.');
-  } else {
-    console.error('Failed to stopInputSession.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to stopInputSession, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTs-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethodController.stopInputSession().then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in stopping inputSession.');
-  } else {
-    console.error('Failed to stopInputSession.');
-  }
-  }).catch((err: BusinessError): void=> {
-  console.error(`Failed to stopInputSession, code: ${error.code}, message: ${error.message}`);
-})
-```
+参见 [stopInputSession](#stopinputsession)
 
 ## updateAttribute
 
@@ -3940,6 +4016,32 @@ inputMethodController.updateAttribute(inputAttribute, (err?: BusinessError) => {
 });
 ```
 
+ArkTs-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let inputAttribute: inputMethod.InputAttribute = { textInputType: 0, enterKeyType: 1 };
+inputMethod.getController().updateAttribute(inputAttribute).then(() => {
+  console.info('Succeeded in updating attribute.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to updateAttribute, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTs-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let inputAttribute: inputMethod.InputAttribute = { textInputType: inputMethod.TextInputType.TEXT, enterKeyType: inputMethod.EnterKeyType.NONE };
+inputMethodController.updateAttribute(inputAttribute).then(() => {
+  console.info('Succeeded in updating attribute.');
+}).catch((err: BusinessError): void=> {
+  console.error(`Failed to updateAttribute, code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ## updateAttribute
 
 ```TypeScript
@@ -3982,31 +4084,7 @@ updateAttribute(attribute: InputAttribute): Promise<void>
 
 **示例**
 
-ArkTs-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let inputAttribute: inputMethod.InputAttribute = { textInputType: 0, enterKeyType: 1 };
-inputMethod.getController().updateAttribute(inputAttribute).then(() => {
-  console.info('Succeeded in updating attribute.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to updateAttribute, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTs-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let inputAttribute: inputMethod.InputAttribute = { textInputType: inputMethod.TextInputType.TEXT, enterKeyType: inputMethod.EnterKeyType.NONE };
-inputMethodController.updateAttribute(inputAttribute).then(() => {
-  console.info('Succeeded in updating attribute.');
-}).catch((err: BusinessError): void=> {
-  console.error(`Failed to updateAttribute, code: ${err.code}, message: ${err.message}`);
-})
-```
+参见 [updateAttribute](#updateattribute)
 
 ## updateCursor
 
@@ -4080,6 +4158,37 @@ inputMethodController.updateCursor(cursorInfo, (err?: BusinessError) => {
 });
 ```
 
+ArkTs-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let cursorInfo: inputMethod.CursorInfo = {
+  left: 0,
+  top: 0,
+  width: 600,
+  height: 800
+};
+inputMethod.getController().updateCursor(cursorInfo).then(() => {
+  console.info('Succeeded in updating cursorInfo.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to updateCursor, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTs-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let cursorInfo: inputMethod.CursorInfo = { left: 0, top: 0, width: 600, height: 800 };
+inputMethodController.updateCursor(cursorInfo).then(() => {
+  console.info('Succeeded in updating cursorInfo.');
+}).catch((err: BusinessError): void => {
+  console.error(`Failed to updateCursor, code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ## updateCursor
 
 ```TypeScript
@@ -4122,34 +4231,5 @@ updateCursor(cursorInfo: CursorInfo): Promise<void>
 
 **示例**
 
-ArkTs-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let cursorInfo: inputMethod.CursorInfo = {
-  left: 0,
-  top: 0,
-  width: 600,
-  height: 800
-};
-inputMethod.getController().updateCursor(cursorInfo).then(() => {
-  console.info('Succeeded in updating cursorInfo.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to updateCursor, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTs-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let cursorInfo: inputMethod.CursorInfo = { left: 0, top: 0, width: 600, height: 800 };
-inputMethodController.updateCursor(cursorInfo).then(() => {
-  console.info('Succeeded in updating cursorInfo.');
-}).catch((err: BusinessError): void => {
-  console.error(`Failed to updateCursor, code: ${err.code}, message: ${err.message}`);
-})
-```
+参见 [updateCursor](#updatecursor)
 

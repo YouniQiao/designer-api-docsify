@@ -27,7 +27,7 @@ Launches the call screen and displays the dialed number. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Phone number. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -50,6 +50,30 @@ call.makeCall("138xxxxxxxx", (err: BusinessError) => {
     } else {
         console.info(`makeCall success`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// The tel URI format is supported since API version 15, for example, tel:13xxxx.
+call.makeCall("138xxxxxxxx").then(() => {
+    console.info(`makeCall success`);
+}).catch((err: BusinessError) => {
+    console.error(`makeCall fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// Obtain the application context.
+let context = this.getUIContext().getHostContext() as Context;
+// The tel URI format is supported since API version 15, for example, tel:13xxxx.
+call.makeCall(context, "138xxxxxxxx").then(() => {
+    console.info(`makeCall success`);
+}).catch((err: BusinessError) => {
+    console.error(`makeCall fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -94,15 +118,7 @@ Launches the call screen and displays the dialed number. This API uses a promise
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// The tel URI format is supported since API version 15, for example, tel:13xxxx.
-call.makeCall("138xxxxxxxx").then(() => {
-    console.info(`makeCall success`);
-}).catch((err: BusinessError) => {
-    console.error(`makeCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [makeCall](#makecall)
 
 
 ## makeCall
@@ -142,6 +158,10 @@ Launches the call screen and displays the dialed number. This API uses a promise
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+
+**Examples**
+
+See [makeCall](#makecall)
 
 
 ## makeCall
@@ -183,17 +203,5 @@ Launches the call screen and displays the dialed number. This API uses a promise
 
 **Examples**
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// Obtain the application context.
-let context = this.getUIContext().getHostContext() as Context;
-// The tel URI format is supported since API version 15, for example, tel:13xxxx.
-call.makeCall(context, "138xxxxxxxx").then(() => {
-    console.info(`makeCall success`);
-}).catch((err: BusinessError) => {
-    console.error(`makeCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [makeCall](#makecall)
 

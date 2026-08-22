@@ -46,6 +46,35 @@ Synchronizes the data of a file. This API uses a promise to return the result.
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + "/test.txt";
+let file = fs.openSync(filePath);
+fs.fdatasync(file.fd).then(() => {
+  console.info("sync data succeed");
+}).catch((err: BusinessError) => {
+  console.error("sync data failed with error message: " + err.message + ", error code: " + err.code);
+}).finally(() => {
+  fs.closeSync(file);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + "/test.txt";
+let file = fs.openSync(filePath);
+fs.fdatasync(file.fd, (err: BusinessError) => {
+  if (err) {
+    console.error("fdatasync failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("fdatasync succeed");
+  }
+  fs.closeSync(file);
+});
+```
+
 
 ## fdatasync
 
@@ -66,7 +95,7 @@ Synchronizes the data of a file. This API uses an asynchronous callback to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | fd | number | Yes | FD of the file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -79,4 +108,8 @@ Synchronizes the data of a file. This API uses an asynchronous callback to retur
 | 13900027 | Read-only file system |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [fdatasync](#fdatasync)
 

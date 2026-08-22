@@ -61,6 +61,26 @@ struct Index {
     Row() {
       Button("example").onClick(async () => {
         let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+        let phAccessHelper = sendablePhotoAccessHelper.getPhotoAccessHelper(context);
+      }).width('100%')
+    }
+    .height('90%')
+  }
+}
+```
+
+```TypeScript
+// 此处获取的phAccessHelper实例为全局对象，后续使用到phAccessHelper的地方默认为使用此处获取的对象，如未添加此段代码报phAccessHelper未定义的错误请自行添加。
+// 请在组件内获取context，确保this.getUiContext().getHostContext()返回结果为UIAbilityContext
+import { common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Button("example").onClick(async () => {
+        let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
         // 此处101表示其他用户空间的userid
         let phAccessHelper = sendablePhotoAccessHelper.getPhotoAccessHelper(context, 101);
       }).width('100%')

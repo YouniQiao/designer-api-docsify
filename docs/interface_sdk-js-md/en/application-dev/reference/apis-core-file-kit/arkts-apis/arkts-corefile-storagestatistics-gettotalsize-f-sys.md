@@ -29,7 +29,7 @@ Obtains the total size (in bytes) of the built-in storage. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the built-in storage space obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the built-in storage space obtained. |
 
 **Error codes:**
 
@@ -42,6 +42,15 @@ Obtains the total size (in bytes) of the built-in storage. This API uses an asyn
 | 13900042 | Unknown error. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+storageStatistics.getTotalSize().then((number: number) => {
+  console.info("getTotalSize successfully:" + JSON.stringify(number));
+}).catch((err: BusinessError) => {
+  console.error("getTotalSize failed with error:"+ JSON.stringify(err));
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -92,12 +101,5 @@ Obtains the total size (in bytes) of the built-in storage. This API uses a promi
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-storageStatistics.getTotalSize().then((number: number) => {
-  console.info("getTotalSize successfully:" + JSON.stringify(number));
-}).catch((err: BusinessError) => {
-  console.error("getTotalSize failed with error:"+ JSON.stringify(err));
-});
-```
+See [getTotalSize](#gettotalsize)
 

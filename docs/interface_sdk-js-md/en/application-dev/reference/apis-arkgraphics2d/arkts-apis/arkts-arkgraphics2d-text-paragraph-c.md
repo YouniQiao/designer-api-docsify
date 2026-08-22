@@ -426,6 +426,10 @@ Obtains an array of line measurement information.
 let arrLineMetric =  paragraph.getLineMetrics();
 ```
 
+```TypeScript
+let lineMetrics =  paragraph.getLineMetrics(0);
+```
+
 ## getLineMetrics
 
 ```TypeScript
@@ -456,9 +460,7 @@ Obtains the line measurement information of a line.
 
 **Examples**
 
-```TypeScript
-let lineMetrics =  paragraph.getLineMetrics(0);
-```
+See [getLineMetrics](#getlinemetrics)
 
 ## getLineWidth
 
@@ -1059,6 +1061,70 @@ let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: 
 let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
 let canvas = new drawing.Canvas(pixelMap);
 paragraph.paint(canvas, 0, 0);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D'
+import { text } from '@kit.ArkGraphics2D'
+import { common2D } from '@kit.ArkGraphics2D'
+import { image } from '@kit.ImageKit'
+
+function textFunc(pixelmap: PixelMap) {
+  let canvas = new drawing.Canvas(pixelmap);
+  lines[0].paint(canvas, 0, 0);
+}
+
+@Entry
+@Component
+struct Index {
+  @State pixelmap?: PixelMap = undefined;
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Image(this.pixelmap).width(200).height(200);
+      Button().onClick(() => {
+        if (this.pixelmap == undefined) {
+          const color: ArrayBuffer = new ArrayBuffer(160000);
+          let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
+          this.pixelmap = image.createPixelMapSync(color, opts);
+        }
+        this.fun(this.pixelmap);
+      })
+    }
+  }
+}
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D'
+import { text } from '@kit.ArkGraphics2D'
+import { common2D } from '@kit.ArkGraphics2D'
+import { image } from '@kit.ImageKit'
+
+function textFunc(pixelmap: PixelMap) {
+  let canvas = new drawing.Canvas(pixelmap);
+  runs[0].paint(canvas, 0, 0);
+}
+
+@Entry
+@Component
+struct Index {
+  @State pixelmap?: PixelMap = undefined;
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Image(this.pixelmap).width(200).height(200);
+      Button().onClick(() => {
+        if (this.pixelmap == undefined) {
+          const color: ArrayBuffer = new ArrayBuffer(160000);
+          let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
+          this.pixelmap = image.createPixelMapSync(color, opts);
+        }
+        this.fun(this.pixelmap);
+      })
+    }
+  }
+}
 ```
 
 ## paintOnPath

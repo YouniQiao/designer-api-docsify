@@ -36,8 +36,8 @@ import { cloudExtension } from '@kit.ArkData';
 | [AppSchema](arkts-arkdata-cloudextension-appschema-i-sys.md) | 应用数据库模式。 |
 | [AssetLoader](arkts-arkdata-cloudextension-assetloader-i-sys.md) | 提供资产上传下载接口的类。 |
 | [CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md) | 云资产的信息。 |
-| [CloudDB](arkts-arkdata-cloudextension-clouddb-i-sys.md) | 提供云数据库操作接口的类。 |
 | [CloudData](arkts-arkdata-cloudextension-clouddata-i-sys.md) | 云数据。 |
+| [CloudDB](arkts-arkdata-cloudextension-clouddb-i-sys.md) | 提供云数据库操作接口的类。 |
 | [CloudInfo](arkts-arkdata-cloudextension-cloudinfo-i-sys.md) | 云信息。 |
 | [CloudService](arkts-arkdata-cloudextension-cloudservice-i-sys.md) | 提供对接同步云服务的类。开发者需要继承此类并实现类的接口，系统内部通过该类的接口连接并使用同步云服务。 |
 | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | 数据库结构信息。 |

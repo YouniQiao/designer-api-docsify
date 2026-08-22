@@ -43,6 +43,19 @@ function getOAID(callback: AsyncCallback<string>): void
 ```TypeScript
 import { identifier } from '@kit.AdsKit';
 import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+void identifier.getOAID().then((data: string) => {
+  const oaid: string = data;
+  hilog.info(0x0000, 'testTag', `Succeeded in getting OAID: ${oaid}`);
+}).catch((error: BusinessError) => {
+  hilog.error(0x0000, 'testTag', `Failed to get oaid. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
+```TypeScript
+import { identifier } from '@kit.AdsKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 identifier.getOAID((err: BusinessError, data: string) => {
   if (err.code) {
@@ -88,16 +101,5 @@ function getOAID(): Promise<string>
 
 **示例**
 
-```TypeScript
-import { identifier } from '@kit.AdsKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-void identifier.getOAID().then((data: string) => {
-  const oaid: string = data;
-  hilog.info(0x0000, 'testTag', `Succeeded in getting OAID: ${oaid}`);
-}).catch((error: BusinessError) => {
-  hilog.error(0x0000, 'testTag', `Failed to get oaid. Code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [getOAID](#getoaid)
 

@@ -55,6 +55,78 @@ deleteBackward(length: number, callback: AsyncCallback<boolean>): void
 
 **示例**
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.deleteBackward(length, (err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in deleting backward.');
+  } else {
+    console.error(`Failed to deleteBackward.`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: int = 1;
+inputClient.deleteBackward(length, (err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in deleting backward.');
+  } else {
+    console.error(`Failed to deleteBackward.`);
+  }
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.deleteBackward(length).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in deleting backward.');
+  } else {
+    console.error('Failed to deleteBackward.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: int = 1;
+inputClient.deleteBackward(length).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in deleting backward.');
+  } else {
+    console.error('Failed to deleteBackward.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -69,6 +141,21 @@ textInputClient.deleteBackward(length, (err: BusinessError, result: boolean) => 
   } else {
     console.error('Failed to deleteBackward.');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+textInputClient.deleteBackward(length).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in deleting backward.');
+  } else {
+    console.error('Failed to deleteBackward.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -109,20 +196,7 @@ deleteBackward(length: number): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.deleteBackward(length).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in deleting backward.');
-  } else {
-    console.error('Failed to deleteBackward.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [deleteBackward](#deletebackward)
 
 ## deleteForward
 
@@ -156,6 +230,78 @@ deleteForward(length: number, callback: AsyncCallback<boolean>): void
 
 **示例**
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in deleting forward.');
+  } else {
+    console.error(`Failed to deleteForward.`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: int = 1;
+inputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in deleting forward.');
+  } else {
+    console.error(`Failed to deleteForward.`);
+  }
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.deleteForward(length).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in deleting forward.');
+  } else {
+    console.error('Failed to delete Forward.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: int = 1;
+inputClient.deleteForward(length).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in deleting forward.');
+  } else {
+    console.error('Failed to delete Forward.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -170,6 +316,21 @@ textInputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
   } else {
     console.error('Failed to deleteForward.');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+textInputClient.deleteForward(length).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in deleting forward.');
+  } else {
+    console.error('Failed to delete forward.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -210,20 +371,7 @@ deleteForward(length: number): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.deleteForward(length).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in deleting forward.');
-  } else {
-    console.error('Failed to delete forward.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [deleteForward](#deleteforward)
 
 ## getBackward
 
@@ -257,6 +405,62 @@ getBackward(length: number, callback: AsyncCallback<string>): void
 
 **示例**
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.getBackward(length, (err: BusinessError, text: string) => {
+  if (err) {
+    console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting backward, text: ' + text);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: int = 1;
+inputClient.getBackward(length, (err: BusinessError, text: string) => {
+  if (err) {
+    console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting backward, text: ' + text);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.getBackward(length).then((text: string) => {
+  console.info('Succeeded in getting backward, text: ' + text);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: int = 1;
+inputClient.getBackward(length).then((text: string) => {
+  console.info('Succeeded in getting backward, text: ' + text);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -267,6 +471,17 @@ textInputClient.getBackward(length, (err: BusinessError, text: string) => {
     return;
   }
   console.info('Succeeded in getting backward, text: ' + text);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+textInputClient.getBackward(length).then((text: string) => {
+  console.info(`'Succeeded in getting backward: ${text}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -307,16 +522,7 @@ getBackward(length: number): Promise<string>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.getBackward(length).then((text: string) => {
-  console.info(`'Succeeded in getting backward: ${text}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [getBackward](#getbackward)
 
 ## getEditorAttribute
 
@@ -352,6 +558,30 @@ getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+inputClient.getEditorAttribute((err: BusinessError, editorAttribute: inputMethodEngine.EditorAttribute) => {
+  if (err) {
+    console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`editorAttribute.inputPattern:  ${editorAttribute.inputPattern}`);
+  console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.EditorAttribute) => {
+  console.info(`editorAttribute.inputPattern:  ${editorAttribute.inputPattern}`);
+  console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 
 textInputClient.getEditorAttribute((err: BusinessError,
   editorAttribute: inputMethodEngine.EditorAttribute) => {
@@ -361,6 +591,17 @@ textInputClient.getEditorAttribute((err: BusinessError,
   }
   console.info(`editorAttribute.inputPattern: ${editorAttribute.inputPattern}`);
   console.info(`editorAttribute.enterKeyType: ${editorAttribute.enterKeyType}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+textInputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.EditorAttribute) => {
+  console.info(`editorAttribute.inputPattern: ${editorAttribute.inputPattern}`);
+  console.info(`editorAttribute.enterKeyType: ${editorAttribute.enterKeyType}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -395,16 +636,7 @@ getEditorAttribute(): Promise<EditorAttribute>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-textInputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.EditorAttribute) => {
-  console.info(`editorAttribute.inputPattern: ${editorAttribute.inputPattern}`);
-  console.info(`editorAttribute.enterKeyType: ${editorAttribute.enterKeyType}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [getEditorAttribute](#geteditorattribute)
 
 ## getForward
 
@@ -438,6 +670,62 @@ getForward(length: number, callback: AsyncCallback<string>): void
 
 **示例**
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.getForward(length, (err: BusinessError, text: string) => {
+  if (err) {
+    console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting forward, text: ' + text);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: int = 1;
+inputClient.getForward(length, (err: BusinessError, text: string) => {
+  if (err) {
+    console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting forward, text: ' + text);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.getForward(length).then((text: string) => {
+  console.info('Succeeded in getting forward, text: ' + text);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: int = 1;
+inputClient.getForward(length).then((text: string) => {
+  console.info('Succeeded in getting forward, text: ' + text);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -448,6 +736,17 @@ textInputClient.getForward(length, (err: BusinessError, text: string) => {
     return;
   }
   console.info('Succeeded in getting forward, text: ' + text);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+textInputClient.getForward(length).then((text: string) => {
+  console.info('Succeeded in getting forward, text: ' + text);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -488,16 +787,7 @@ getForward(length: number): Promise<string>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.getForward(length).then((text: string) => {
-  console.info('Succeeded in getting forward, text: ' + text);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [getForward](#getforward)
 
 ## insertText
 
@@ -534,6 +824,37 @@ insertText(text: string, callback: AsyncCallback<boolean>): void
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+
+inputClient.insertText('test', (err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in inserting text.');
+  } else {
+    console.error('Failed to insertText.');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputClient.insertText('test').then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in inserting text.');
+  } else {
+    console.error('Failed to insertText.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 textInputClient.insertText('test', (err: BusinessError, result: boolean) => {
   if (err) {
     console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
@@ -544,6 +865,20 @@ textInputClient.insertText('test', (err: BusinessError, result: boolean) => {
   } else {
     console.error('Failed to insertText.');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+textInputClient.insertText('test').then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in inserting text.');
+  } else {
+    console.error('Failed to insertText.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -584,19 +919,7 @@ insertText(text: string): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-textInputClient.insertText('test').then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in inserting text.');
-  } else {
-    console.error('Failed to insertText.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [insertText](#inserttext)
 
 ## sendKeyFunction
 
@@ -630,6 +953,80 @@ sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void
 
 **示例**
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let action: number = 1;
+
+inputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in sending key function.');
+  } else {
+    console.error('Failed to sendKeyFunction.');
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let action: int = 1;
+
+inputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in sending key function.');
+  } else {
+    console.error('Failed to sendKeyFunction.');
+  }
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let action: number = 1;
+inputClient.sendKeyFunction(action).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in sending key function.');
+  } else {
+    console.error('Failed to sendKeyFunction.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let action: int = 1;
+inputClient.sendKeyFunction(action).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in sending key function.');
+  } else {
+    console.error('Failed to sendKeyFunction.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -644,6 +1041,21 @@ textInputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) =>
   } else {
     console.error('Failed to sendKeyFunction.');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let action: number = 1;
+textInputClient.sendKeyFunction(action).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in sending key function.');
+  } else {
+    console.error('Failed to sendKeyFunction.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to sendKeyFunction:. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -684,18 +1096,5 @@ sendKeyFunction(action: number): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let action: number = 1;
-textInputClient.sendKeyFunction(action).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in sending key function.');
-  } else {
-    console.error('Failed to sendKeyFunction.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to sendKeyFunction:. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [sendKeyFunction](#sendkeyfunction)
 

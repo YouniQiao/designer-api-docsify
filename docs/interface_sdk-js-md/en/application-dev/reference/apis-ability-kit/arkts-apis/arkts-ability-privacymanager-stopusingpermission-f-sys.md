@@ -66,6 +66,43 @@ privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO').then((
 });
 ```
 
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { rpc } from '@kit.IPCKit'
+
+let tokenID: number = rpc.IPCSkeleton.getCallingTokenId(); // accessTokenId can also be obtained by using getApplicationInfo.
+let pid: number = rpc.IPCSkeleton.getCallingPid();
+
+// without pid
+privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO').then(() => {
+  console.info('stopUsingPermission success');
+}).catch((err: BusinessError) => {
+  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
+});
+
+// with pid
+privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', pid).then(() => {
+  console.info('stopUsingPermission success');
+}).catch((err: BusinessError) => {
+  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tokenID: number = 0; // You can use getApplicationInfo to obtain accessTokenId.
+privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', (err: BusinessError, data: void) => {
+  if (err) {
+    console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('stopUsingPermission success');
+  }
+});
+```
+
 
 ## stopUsingPermission
 
@@ -93,7 +130,7 @@ This API must be used in conjunction with [startUsingPermission](arkts-ability-p
 | --- | --- | --- | --- |
 | tokenID | int | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br>For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). |
 | permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to stop using. Passing an invalid value returns error code 12100001. <br>Value constraint: The permission name length cannot exceed 256 characters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -110,19 +147,7 @@ This API must be used in conjunction with [startUsingPermission](arkts-ability-p
 
 **Examples**
 
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tokenID: number = 0; // You can use getApplicationInfo to obtain accessTokenId.
-privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', (err: BusinessError, data: void) => {
-  if (err) {
-    console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('stopUsingPermission success');
-  }
-});
-```
+See [stopUsingPermission](#stopusingpermission)
 
 
 ## stopUsingPermission
@@ -179,6 +204,10 @@ The PID must be the same as the PID passed in [startUsingPermission](arkts-abili
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 | [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
 
+**Examples**
+
+See [stopUsingPermission](#stopusingpermission)
+
 
 ## stopUsingPermission
 
@@ -233,26 +262,5 @@ The pid must be the same as the pid passed into [startUsingPermission](arkts-abi
 
 **Examples**
 
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { rpc } from '@kit.IPCKit'
-
-let tokenID: number = rpc.IPCSkeleton.getCallingTokenId(); // accessTokenId can also be obtained by using getApplicationInfo.
-let pid: number = rpc.IPCSkeleton.getCallingPid();
-
-// without pid
-privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO').then(() => {
-  console.info('stopUsingPermission success');
-}).catch((err: BusinessError) => {
-  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
-});
-
-// with pid
-privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', pid).then(() => {
-  console.info('stopUsingPermission success');
-}).catch((err: BusinessError) => {
-  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [stopUsingPermission](#stopusingpermission)
 

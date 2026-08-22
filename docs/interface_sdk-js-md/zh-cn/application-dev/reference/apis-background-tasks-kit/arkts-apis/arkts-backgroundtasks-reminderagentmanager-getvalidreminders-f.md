@@ -67,6 +67,31 @@ let getCallback = (err: BusinessError | null, reminders: Array<reminderAgentMana
 reminderAgentManager.getValidReminders(getCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+reminderAgentManager.getValidReminders().then((reminders: Array<reminderAgentManager.ReminderRequest>) => {
+  console.info(`Succeeded in getting reminder, info is ${JSON.stringify(reminders)}.`);
+}).catch((err: BusinessError) => {
+  console.error("promise err code:" + err.code + " message:" + err.message);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+reminderAgentManager.getValidReminders().then((reminders: Array<reminderAgentManager.ReminderRequest>) => {
+  console.info(`Succeeded in getting reminder, info is ${JSON.stringify(reminders)}.`);
+}).catch((err): void => {
+  console.error(`Failed to get reminder. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## getValidReminders
 
@@ -97,28 +122,5 @@ function getValidReminders(): Promise<Array<ReminderRequest>>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-reminderAgentManager.getValidReminders().then((reminders: Array<reminderAgentManager.ReminderRequest>) => {
-  console.info(`Succeeded in getting reminder, info is ${JSON.stringify(reminders)}.`);
-}).catch((err: BusinessError) => {
-  console.error("promise err code:" + err.code + " message:" + err.message);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-reminderAgentManager.getValidReminders().then((reminders: Array<reminderAgentManager.ReminderRequest>) => {
-  console.info(`Succeeded in getting reminder, info is ${JSON.stringify(reminders)}.`);
-}).catch((err): void => {
-  console.error(`Failed to get reminder. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [getValidReminders](#getvalidreminders)
 

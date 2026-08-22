@@ -48,6 +48,31 @@ ArkTS-Dyn示例：
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+storageStatistics.getTotalSize().then((totalSize: number) => {
+  console.info('getTotalSize successfully:' + totalSize);
+}).catch((err: BusinessError) => {
+  console.error(`getTotalSize failed. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let totalSize: long = 0;
+storageStatistics.getTotalSize().then((totalSize) => {
+  console.info('getTotalSize successfully:' + totalSize);
+}).catch((err: BusinessError): void => {
+  console.error(`getTotalSize failed. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 storageStatistics.getTotalSize((error: BusinessError, totalSize: number) => {
   if (error) {
     console.error(`getTotalSize failed. Code: ${error.code}, message: ${error.message}`);
@@ -112,28 +137,5 @@ function getTotalSize(): Promise<long>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-storageStatistics.getTotalSize().then((totalSize: number) => {
-  console.info('getTotalSize successfully:' + totalSize);
-}).catch((err: BusinessError) => {
-  console.error(`getTotalSize failed. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let totalSize: long = 0;
-storageStatistics.getTotalSize().then((totalSize) => {
-  console.info('getTotalSize successfully:' + totalSize);
-}).catch((err: BusinessError): void => {
-  console.error(`getTotalSize failed. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [getTotalSize](#gettotalsize)
 

@@ -103,8 +103,8 @@ import { webview } from '@kit.ArkWeb';
 | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | Enumerates the schemes that use the proxy. |
 | [ReadyState](arkts-arkweb-webview-readystate-e.md) | Enumerates the cache states of the player. |
 | [RenderProcessMode](arkts-arkweb-webview-renderprocessmode-e.md) | Enumerates the ArkWeb renderer subprocess mode types. You can select the appropriate mode based on the app's requirements for memory usage and renderer process isolation. |
-| [ScrollType](arkts-arkweb-webview-scrolltype-e.md) | Enumerates the scroll types for [setScrollable](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setscrollable). |
 | [ScrollbarMode](arkts-arkweb-webview-scrollbarmode-e.md) | Enumerates the global scrollbar modes in the web page. |
+| [ScrollType](arkts-arkweb-webview-scrolltype-e.md) | Enumerates the scroll types for [setScrollable](../../apis-default/arkts-apis/arkts-webview-webviewcontroller-c.md#setscrollable). |
 | [SecureDnsMode](arkts-arkweb-webview-securednsmode-e.md) | Enumerates the modes in which the **Web** component uses HTTPDNS. |
 | [SecurityLevel](arkts-arkweb-webview-securitylevel-e.md) | Enumerates the security levels of the web page. |
 | [SiteIsolationMode](arkts-arkweb-webview-siteisolationmode-e.md) | The site isolation mechanism isolates websites from different origins in different renderer subprocesses, reducing the cross-origin attack surface. For example, in the original process model on PC, each tab corresponds to one renderer subprocess. After site isolation is enabled, iframes from different origins run in independent renderer subprocesses. |

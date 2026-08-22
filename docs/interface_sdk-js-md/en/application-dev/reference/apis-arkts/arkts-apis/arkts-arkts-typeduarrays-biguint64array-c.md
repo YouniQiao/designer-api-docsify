@@ -2348,26 +2348,6 @@ Returns a new BigUint64Array with the element at the given index replaced by the
 | --- | --- |
 | [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array with the element at index replaced. |
 
-## BYTES_PER_ELEMENT
-
-```TypeScript
-public static readonly BYTES_PER_ELEMENT: int = 8
-```
-
-Number of bytes occupied by each element
-
-**Type:** int
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BigUint64Array-public static readonly BYTES_PER_ELEMENT: int = 8--><!--Device-BigUint64Array-public static readonly BYTES_PER_ELEMENT: int = 8-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
 ## buffer
 
 ```TypeScript
@@ -2385,6 +2365,26 @@ Underlying Buffer.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BigUint64Array-public readonly buffer: ArrayBuffer--><!--Device-BigUint64Array-public readonly buffer: ArrayBuffer-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## BYTES_PER_ELEMENT
+
+```TypeScript
+public static readonly BYTES_PER_ELEMENT: int = 8
+```
+
+Number of bytes occupied by each element
+
+**Type:** int
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BigUint64Array-public static readonly BYTES_PER_ELEMENT: int = 8--><!--Device-BigUint64Array-public static readonly BYTES_PER_ELEMENT: int = 8-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

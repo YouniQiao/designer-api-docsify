@@ -50,6 +50,42 @@ static readonly INVALID_LABEL_ID: -1
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
+## labelId
+
+```TypeScript
+labelId?: number
+```
+
+会话发起协议(SIP)地址类型。
+
+**类型：** number
+
+**起始版本：** 7
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SipAddress-labelId?: number--><!--Device-SipAddress-labelId?: number-End-->
+
+**系统能力：** SystemCapability.Applications.ContactsData
+
+## labelName
+
+```TypeScript
+labelName?: string
+```
+
+会话发起协议(SIP)地址类型名称。
+
+**类型：** string
+
+**起始版本：** 7
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SipAddress-labelName?: string--><!--Device-SipAddress-labelName?: string-End-->
+
+**系统能力：** SystemCapability.Applications.ContactsData
+
 ## SIP_HOME
 
 ```TypeScript
@@ -104,42 +140,6 @@ static readonly SIP_WORK: 2
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
-## labelId
-
-```TypeScript
-labelId?: number
-```
-
-会话发起协议(SIP)地址类型。
-
-**类型：** number
-
-**起始版本：** 7
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SipAddress-labelId?: number--><!--Device-SipAddress-labelId?: number-End-->
-
-**系统能力：** SystemCapability.Applications.ContactsData
-
-## labelName
-
-```TypeScript
-labelName?: string
-```
-
-会话发起协议(SIP)地址类型名称。
-
-**类型：** string
-
-**起始版本：** 7
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SipAddress-labelName?: string--><!--Device-SipAddress-labelName?: string-End-->
-
-**系统能力：** SystemCapability.Applications.ContactsData
-
 ## sipAddress
 
 ```TypeScript
@@ -157,4 +157,25 @@ sipAddress: string
 <!--Device-SipAddress-sipAddress: string--><!--Device-SipAddress-sipAddress: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
+
+**示例**
+
+使用JSON格式创建数据。
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let sipAddress: contact.SipAddress = {
+    sipAddress: 'sipAddress'
+};
+```
+
+或使用new一个SipAddress对象的方式创建数据。
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let sipAddress = new contact.SipAddress();
+sipAddress.sipAddress = 'sipAddress';
+```
 

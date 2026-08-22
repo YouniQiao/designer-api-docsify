@@ -1,8 +1,8 @@
 # UIServiceExtensionContext (System API)
 
-The UIServiceExtensionContext module provides the context environment for a [UIServiceExtensionAbility](arkts-ability-appabilityuiserviceextensionability-uiserviceextensionability-c-sys.md). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md).
+The UIServiceExtensionContext module provides the context environment for a [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md).
 
-UIServiceExtensionContext provides access to a [UIServiceExtensionAbility](arkts-ability-appabilityuiserviceextensionability-uiserviceextensionability-c-sys.md) and APIs for operating the ability, for example, starting, terminating, connecting, and disconnecting ability.
+UIServiceExtensionContext provides access to a [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md) and APIs for operating the ability, for example, starting, terminating, connecting, and disconnecting ability.
 
 > **NOTE：**
 > 
@@ -24,7 +24,7 @@ UIServiceExtensionContext provides access to a [UIServiceExtensionAbility](arkts
 connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 ```
 
-Connects to a [UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md) and returns the connection ID.
+Connects to a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) and returns the connection ID.
 
 > **NOTE：**
 > 
@@ -45,7 +45,7 @@ Connects to a [UIExtensionAbility](arkts-ability-appabilityuiextensionability-ui
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want parameter. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want parameter. |
 | options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | Yes | Connection options. |
 
 **Return value:**
@@ -136,7 +136,7 @@ struct Page_UIServiceExtensionAbility {
 disconnectServiceExtensionAbility(connectionId: long): Promise<void>
 ```
 
-Disconnects from a [UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md). This API is opposite to [connectServiceExtensionAbility](#connectserviceextensionability) . This API uses a promise to return the result.
+Disconnects from a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md). This API is opposite to [connectServiceExtensionAbility](#connectserviceextensionability) . This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -238,8 +238,8 @@ Starts an ability. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability, such as the ability name and bundle name. |
-| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | No | Parameters used for starting the ability. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability, such as the ability name and bundle name. |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used for starting the ability. |
 
 **Return value:**
 
@@ -311,7 +311,7 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-Starts a [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) or [UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md) based on the type of the target ability. This API can be called only by applications running in the foreground. This API uses a promise to return the result.
+Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) or [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) based on the type of the target ability. This API can be called only by applications running in the foreground. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
@@ -417,7 +417,7 @@ startAbilityByType(type: string, wantParam: Record<string, RecordData>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-Starts a [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) or [UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md) based on the type of the target ability. This API can be called only by applications running in the foreground. This API uses a promise to return the result.
+Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) or [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) based on the type of the target ability. This API can be called only by applications running in the foreground. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
@@ -455,13 +455,17 @@ Starts a [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) or [UIExt
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
 
+**Examples**
+
+See [startAbilityByType](#startabilitybytype)
+
 ## terminateSelf
 
 ```TypeScript
 terminateSelf(): Promise<void>
 ```
 
-Terminates this [UIServiceExtensionAbility](arkts-ability-appabilityuiserviceextensionability-uiserviceextensionability-c-sys.md). This API uses a promise to return the result.
+Terminates this [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md). This API uses a promise to return the result.
 
 **Since:** 23
 

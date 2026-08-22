@@ -515,6 +515,32 @@ function tagSessionDemo() {
 }
 ```
 
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
+// getXXX，可以是getIsoDep、getNdef、getMifareClassic...
+
+function tagSessionDemo() {
+    // 如果没有连接，请先连接tag
+    if (!tag.getIsoDep(tagInfo).isTagConnected()) {
+        if (!tag.getIsoDep(tagInfo).connectTag()) {
+            console.error("tagSession connectTag failed.");
+            return;
+        }
+    }
+
+    let cmdData = [0x01, 0x02, 0x03, 0x04]; // 更改为正确的 data
+    tag.getIsoDep(tagInfo).sendData(cmdData, (err, response)=> {
+        if (err) {
+            console.error("tagSession sendData AsyncCallback err: " + err);
+        } else {
+            console.info("tagSession sendData AsyncCallback response: " + response);
+        }
+    });
+}
+```
+
 ## sendData
 
 ```TypeScript
@@ -544,31 +570,7 @@ sendData(data: number[], callback: AsyncCallback<number[]>): void
 
 **示例**
 
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
-// getXXX，可以是getIsoDep、getNdef、getMifareClassic...
-
-function tagSessionDemo() {
-    // 如果没有连接，请先连接tag
-    if (!tag.getIsoDep(tagInfo).isTagConnected()) {
-        if (!tag.getIsoDep(tagInfo).connectTag()) {
-            console.error("tagSession connectTag failed.");
-            return;
-        }
-    }
-
-    let cmdData = [0x01, 0x02, 0x03, 0x04]; // 更改为正确的 data
-    tag.getIsoDep(tagInfo).sendData(cmdData, (err, response)=> {
-        if (err) {
-            console.error("tagSession sendData AsyncCallback err: " + err);
-        } else {
-            console.info("tagSession sendData AsyncCallback response: " + response);
-        }
-    });
-}
-```
+参见 [sendData](#senddata)
 
 ## setSendDataTimeout
 
@@ -739,6 +741,39 @@ function tagSessionDemo() {
 }
 ```
 
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
+// getXXX，可以是getIsoDep、getNdef、getMifareClassic...
+
+function tagSessionDemo() {
+    // 如果没有连接，请先连接tag
+    try {
+        if (!tag.getIsoDep(tagInfo).isConnected()) {
+            tag.getIsoDep(tagInfo).connect();
+        }
+    } catch (businessError) {
+        console.error("tag connect businessError: " + businessError);
+        return;
+    }
+
+    let cmdData = [0x01, 0x02, 0x03, 0x04]; // 更改为正确的 data
+    try {
+        tag.getIsoDep(tagInfo).transmit(cmdData, (err, response)=> {
+            if (err) {
+                console.error("tagSession transmit AsyncCallback err: " + err);
+            } else {
+                console.info("tagSession transmit AsyncCallback response: " + response);
+            }
+        });
+    } catch (businessError) {
+        console.error("tag transmit businessError: " + businessError);
+        return;
+    }
+}
+```
+
 ## transmit
 
 ```TypeScript
@@ -776,36 +811,5 @@ transmit(data: int[], callback: AsyncCallback<int[]>): void
 
 **示例**
 
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
-// getXXX，可以是getIsoDep、getNdef、getMifareClassic...
-
-function tagSessionDemo() {
-    // 如果没有连接，请先连接tag
-    try {
-        if (!tag.getIsoDep(tagInfo).isConnected()) {
-            tag.getIsoDep(tagInfo).connect();
-        }
-    } catch (businessError) {
-        console.error("tag connect businessError: " + businessError);
-        return;
-    }
-
-    let cmdData = [0x01, 0x02, 0x03, 0x04]; // 更改为正确的 data
-    try {
-        tag.getIsoDep(tagInfo).transmit(cmdData, (err, response)=> {
-            if (err) {
-                console.error("tagSession transmit AsyncCallback err: " + err);
-            } else {
-                console.info("tagSession transmit AsyncCallback response: " + response);
-            }
-        });
-    } catch (businessError) {
-        console.error("tag transmit businessError: " + businessError);
-        return;
-    }
-}
-```
+参见 [transmit](#transmit)
 

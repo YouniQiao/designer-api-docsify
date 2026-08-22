@@ -30,7 +30,7 @@ Sets whether to enable the notification badge for a specified application. This 
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
 | enable | boolean | Yes | Whether to enable the notification slot type. The value **true** means to enable the notification slot type, and **false** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -61,6 +61,19 @@ let bundle: notificationManager.BundleOption = {
     bundle: "bundleName1",
 };
 notificationManager.displayBadge(bundle, false, displayBadgeCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+    bundle: "bundleName1",
+};
+notificationManager.displayBadge(bundle, false).then(() => {
+    console.info("displayBadge success");
+}).catch((err: BusinessError) => {
+    console.error(`displayBadge failed, code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -110,16 +123,5 @@ Sets whether to enable the notification badge for a specified application. This 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
-};
-notificationManager.displayBadge(bundle, false).then(() => {
-    console.info("displayBadge success");
-}).catch((err: BusinessError) => {
-    console.error(`displayBadge failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [displayBadge](#displaybadge)
 

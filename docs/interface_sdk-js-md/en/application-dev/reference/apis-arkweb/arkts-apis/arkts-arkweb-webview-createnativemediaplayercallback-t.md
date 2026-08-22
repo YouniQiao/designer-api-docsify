@@ -28,3 +28,7 @@ Parameter of the [onCreateNativeMediaPlayer](../../apis-default/arkts-apis/arkts
 | --- | --- |
 | [NativeMediaPlayerBridge](../../apis-default/arkts-apis/arkts-webview-nativemediaplayerbridge-i.md) | An interface class that bridges the web media player and the ArkWeb kernel.<br />The app needs to implement this interface class.<br/>The ArkWeb kernel controls the media player created by the app through this interface object.<br/>If the app returns null, it indicates that the app does not take over the playback of this media, and the ArkWeb kernel plays the media. |
 
+**Examples**
+
+For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+

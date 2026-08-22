@@ -27,7 +27,7 @@ Enable or disable device to be discoverable, used at sink side.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | true: can be discoverable, false: cannot be discoverable. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | a callback function |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | a callback function |
 
 **Error codes:**
 
@@ -47,6 +47,16 @@ avSession.setDiscoverable(true, (err: BusinessError) => {
   } else {
     console.info('setDiscoverable successfully');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avSession.setDiscoverable(true).then(() => {
+  console.info('setDiscoverable successfully');
+}).catch((err: BusinessError) => {
+  console.error(`setDiscoverable BusinessError: code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -88,13 +98,5 @@ Enable or disable device to be discoverable, used at sink side.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avSession.setDiscoverable(true).then(() => {
-  console.info('setDiscoverable successfully');
-}).catch((err: BusinessError) => {
-  console.error(`setDiscoverable BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
+See [setDiscoverable](#setdiscoverable)
 

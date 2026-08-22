@@ -29,7 +29,7 @@ Applies a quick fix patch. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapModuleQuickFixFiles | Array&lt;string&gt; | Yes | Quick fix patch files, each of which must contain a valid file path. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the quick fix patch is installed, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the quick fix patch is installed, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -57,6 +57,23 @@ try {
   });
 } catch (paramError) {
   console.error(`error.code: ${paramError.code}, error.message: ${paramError.message}`);
+}
+```
+
+```TypeScript
+import { quickFixManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hapModuleQuickFixFiles = ['/data/storage/el2/base/entry.hqf'];
+
+try {
+  quickFixManager.applyQuickFix(hapModuleQuickFixFiles).then(() => {
+    console.info(`applyQuickFix success`);
+  }).catch((error: BusinessError) => {
+    console.error(`applyQuickFix err: ${error}`);
+  });
+} catch (paramError) {
+  console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
 }
 ```
 
@@ -103,20 +120,5 @@ Applies a quick fix patch. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hapModuleQuickFixFiles = ['/data/storage/el2/base/entry.hqf'];
-
-try {
-  quickFixManager.applyQuickFix(hapModuleQuickFixFiles).then(() => {
-    console.info(`applyQuickFix success`);
-  }).catch((error: BusinessError) => {
-    console.error(`applyQuickFix err: ${error}`);
-  });
-} catch (paramError) {
-  console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-}
-```
+See [applyQuickFix](#applyquickfix)
 

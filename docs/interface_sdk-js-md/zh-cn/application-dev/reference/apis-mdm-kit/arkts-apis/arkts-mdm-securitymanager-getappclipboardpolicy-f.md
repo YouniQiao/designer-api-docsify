@@ -28,7 +28,7 @@ function getAppClipboardPolicy(admin: Want, tokenId?: number): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | tokenId | number | 否 | 目标应用的身份标识。可通过 bundleManager.getApplicationInfo获取accessTokenId。 |
 
 **返回值：**
@@ -67,6 +67,55 @@ try {
 }
 ```
 
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+
+// 需根据实际情况进行替换
+let tokenId: number = 586874394;
+try {
+  // 参数需根据实际情况进行替换
+  let result: string = securityManager.getAppClipboardPolicy(null, tokenId);
+  console.info(`Succeeded in getting clipboard policy, result : ${result}`);
+} catch(err) {
+  console.error(`Failed to get clipboard policy. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// 需根据实际情况进行替换
+let bundleName: string = 'com.example.myapplication';
+let accountId: number = 100;
+try {
+  let result: string = securityManager.getAppClipboardPolicy(wantTemp, bundleName, accountId);
+  console.info(`Succeeded in getting clipboard policy, result : ${result}`);
+} catch (err) {
+  console.error(`Failed to get clipboard policy. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+
+// 需根据实际情况进行替换
+let bundleName: string = 'com.example.myapplication';
+let accountId: number = 100;
+try {
+  // 参数需根据实际情况进行替换
+  let result: string = securityManager.getAppClipboardPolicy(null, bundleName, accountId);
+  console.info(`Succeeded in getting clipboard policy, result : ${result}`);
+} catch(err) {
+  console.error(`Failed to get clipboard policy. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## getAppClipboardPolicy
 
@@ -90,7 +139,7 @@ function getAppClipboardPolicy(admin: Want | null, tokenId?: number): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
 | tokenId | number | 否 | 目标应用的身份标识。可通过 bundleManager.getApplicationInfo获取accessTokenId。 |
 
 **返回值：**
@@ -110,19 +159,7 @@ function getAppClipboardPolicy(admin: Want | null, tokenId?: number): string
 
 **示例**
 
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-
-// 需根据实际情况进行替换
-let tokenId: number = 586874394;
-try {
-  // 参数需根据实际情况进行替换
-  let result: string = securityManager.getAppClipboardPolicy(null, tokenId);
-  console.info(`Succeeded in getting clipboard policy, result : ${result}`);
-} catch(err) {
-  console.error(`Failed to get clipboard policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [getAppClipboardPolicy](#getappclipboardpolicy)
 
 
 ## getAppClipboardPolicy
@@ -147,7 +184,7 @@ function getAppClipboardPolicy(admin: Want, bundleName: string, accountId: numbe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 被设置剪贴板策略的应用包名。 |
 | accountId | number | 是 | 用户ID，指定具体用户，取值范围：大于等于0。accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。*@ohos.account.osAccount** to obtain the account ID. |
 
@@ -167,25 +204,7 @@ function getAppClipboardPolicy(admin: Want, bundleName: string, accountId: numbe
 
 **示例**
 
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let bundleName: string = 'com.example.myapplication';
-let accountId: number = 100;
-try {
-  let result: string = securityManager.getAppClipboardPolicy(wantTemp, bundleName, accountId);
-  console.info(`Succeeded in getting clipboard policy, result : ${result}`);
-} catch (err) {
-  console.error(`Failed to get clipboard policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [getAppClipboardPolicy](#getappclipboardpolicy)
 
 
 ## getAppClipboardPolicy
@@ -210,7 +229,7 @@ function getAppClipboardPolicy(admin: Want | null, bundleName: string, accountId
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
 | bundleName | string | 是 | 被设置剪贴板策略的应用包名。 |
 | accountId | number | 是 | 用户ID，指定具体用户，取值范围：大于等于0。accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。*@ohos.account.osAccount** to obtain the user ID. |
 
@@ -230,18 +249,5 @@ function getAppClipboardPolicy(admin: Want | null, bundleName: string, accountId
 
 **示例**
 
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-
-// 需根据实际情况进行替换
-let bundleName: string = 'com.example.myapplication';
-let accountId: number = 100;
-try {
-  // 参数需根据实际情况进行替换
-  let result: string = securityManager.getAppClipboardPolicy(null, bundleName, accountId);
-  console.info(`Succeeded in getting clipboard policy, result : ${result}`);
-} catch(err) {
-  console.error(`Failed to get clipboard policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [getAppClipboardPolicy](#getappclipboardpolicy)
 

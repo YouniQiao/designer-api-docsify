@@ -47,6 +47,67 @@ function notifySaveAsResult(parameter: AbilityResult, requestCode: int, callback
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
+**示例**
+
+```TypeScript
+import { abilityManager, Want, common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let want: Want = {
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EntryAbility'
+};
+// 设置操作结果码
+let resultCode = 100;
+// 返回给另存为行为发起方AbilityResult信息
+let abilityResult: common.AbilityResult = {
+  want,
+  resultCode
+};
+let requestCode = 1;
+try {
+  abilityManager.notifySaveAsResult(abilityResult, requestCode, (err: BusinessError) => {
+    if (err && err.code != 0) {
+      console.error(`notifySaveAsResult fail, err: ${JSON.stringify(err)}`);
+    } else {
+      console.info(`notifySaveAsResult success`);
+    }
+  });
+} catch (paramError) {
+  let code: number = (paramError as BusinessError).code;
+  let message: string = (paramError as BusinessError).message;
+  console.error(`error.code: ${code}, error.message: ${message}`);
+}
+```
+
+```TypeScript
+import { abilityManager, Want, common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let want: Want = {
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EntryAbility'
+};
+let resultCode = 100;
+// 返回给另存为行为发起方AbilityResult信息
+let abilityResult: common.AbilityResult = {
+  want,
+  resultCode
+};
+let requestCode = 1;
+try {
+  abilityManager.notifySaveAsResult(abilityResult, requestCode).then(() => {
+    console.info(`notifySaveAsResult success`);
+  }).catch((err: BusinessError) => {
+    console.error(`notifySaveAsResult fail, err: ${JSON.stringify(err)}`);
+  });
+} catch (paramError) {
+  let code: number = (paramError as BusinessError).code;
+  let message: string = (paramError as BusinessError).message;
+  console.error(`error.code: ${code}, error.message: ${message}`);
+}
+```
+
 
 ## notifySaveAsResult
 
@@ -89,4 +150,8 @@ function notifySaveAsResult(parameter: AbilityResult, requestCode: int): Promise
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+
+**示例**
+
+参见 [notifySaveAsResult](#notifysaveasresult)
 

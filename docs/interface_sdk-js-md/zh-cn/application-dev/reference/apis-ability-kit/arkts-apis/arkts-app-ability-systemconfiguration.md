@@ -4,9 +4,9 @@ systemConfiguration模块提供系统环境变化监听回调能力，包括系�
 
 例如，通过对系统深浅色模式变化的监听，应用可感知系统的深浅色模式变化，并动态调整自身应用的深浅色主题以适配系统环境。
 
-该模块与[EnvironmentCallback](../../apis-default/arkts-apis/arkts-appabilityenvironmentcallback-environmentcallback-i.md)模块的区别在于：
+该模块与[EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md)模块的区别在于：
 
-- systemConfiguration模块：用于监听系统环境变量[Configuration](arkts-ability-appabilityconfiguration-configuration-i.md)的变化。 - [EnvironmentCallback](../../apis-default/arkts-apis/arkts-appabilityenvironmentcallback-environmentcallback-i.md)模块：用于监听某个应用环境变量 [Configuration](arkts-ability-appabilityconfiguration-configuration-i.md)的变化。
+- systemConfiguration模块：用于监听系统环境变量[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)的变化。 - [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md)模块：用于监听某个应用环境变量 [Configuration](arkts-ability-app-ability-configuration-configuration-i.md)的变化。
 
 **起始版本：** 24
 

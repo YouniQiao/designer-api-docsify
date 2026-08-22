@@ -14,7 +14,7 @@ function sppCloseClientSocket(socket: int): void
 
 Disables an spp client socket and releases related resources.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-socket-function sppCloseClientSocket(socket: int): void--><!--Device-socket-function sppCloseClientSocket(socket: int): void-End-->
 

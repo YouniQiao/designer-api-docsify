@@ -47,3 +47,20 @@ getColorTintRange(): Array<int>
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getColorTintRange(session: camera.PhotoSession | camera.VideoSession): Array<number> {
+  let range: Array<number> = [];
+  try {
+    range = session.getColorTintRange();
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The getColorTintRange call failed. error code: ${err.code}`);
+  }
+  return range;
+}
+```
+

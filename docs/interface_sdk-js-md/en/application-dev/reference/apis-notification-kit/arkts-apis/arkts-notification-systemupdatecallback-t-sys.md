@@ -22,3 +22,19 @@ Returns the notification information carrying system property values. type Syste
 | --- | --- | --- | --- |
 | data | [SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md) | Yes | Notification information that carries the system property value. |
 
+**Examples**
+
+```TypeScript
+let subscriber: notificationSubscribe.NotificationSubscriber = {
+  onSystemUpdate: (data: notificationSubscribe.SubscribeCallbackData) => {
+    let req = data.request;
+    console.info(`onSystemUpdate callback req.priorityType: ${req.priorityNotificationType}`);
+  }
+};
+try {
+  notificationSubscribe.subscribe(subscriber);
+} catch (error) {
+  console.error("subscribe failed");
+}
+```
+

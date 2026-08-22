@@ -79,6 +79,34 @@ Creates a **Helper** object to bind with all file management services in the sys
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { Want } from '@kit.AbilityKit';
+import { common } from '@kit.AbilityKit';
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext; 
+function createFileAccessHelper01(context: common.UIAbilityContext) {
+  let fileAccessHelper: fileAccess.FileAccessHelper;
+  // Obtain wantInfos by using getFileAccessAbilityInfo().
+  let wantInfos: Array<Want> = [
+    {
+      bundleName: "com.ohos.UserFile.ExternalFileManager",
+      abilityName: "FileExtensionAbility",
+    },
+  ]
+  try {
+    // context is passed by EntryAbility.
+    fileAccessHelper = fileAccess.createFileAccessHelper(context, wantInfos);
+    if (!fileAccessHelper) {
+      console.error("createFileAccessHelper interface returns an undefined object");
+    }
+  } catch (err) {
+    let error: BusinessError = err as BusinessError;
+    console.error("createFileAccessHelper failed, errCode:" + error.code + ", errMessage:" + error.message);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
 // Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext; 
@@ -126,7 +154,7 @@ Creates a **Helper** object to bind with the specified Wants. This API returns t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Indicates the application context. |
-| wants | Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)&gt; | Yes | Represents the connected data provider. |
+| wants | Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Represents the connected data provider. |
 
 **Return value:**
 
@@ -171,31 +199,5 @@ Creates a **Helper** object to bind with the specified Wants. This API returns t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-import { common } from '@kit.AbilityKit';
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext; 
-function createFileAccessHelper01(context: common.UIAbilityContext) {
-  let fileAccessHelper: fileAccess.FileAccessHelper;
-  // Obtain wantInfos by using getFileAccessAbilityInfo().
-  let wantInfos: Array<Want> = [
-    {
-      bundleName: "com.ohos.UserFile.ExternalFileManager",
-      abilityName: "FileExtensionAbility",
-    },
-  ]
-  try {
-    // context is passed by EntryAbility.
-    fileAccessHelper = fileAccess.createFileAccessHelper(context, wantInfos);
-    if (!fileAccessHelper) {
-      console.error("createFileAccessHelper interface returns an undefined object");
-    }
-  } catch (err) {
-    let error: BusinessError = err as BusinessError;
-    console.error("createFileAccessHelper failed, errCode:" + error.code + ", errMessage:" + error.message);
-  }
-}
-```
+See [createFileAccessHelper](#createfileaccesshelper)
 

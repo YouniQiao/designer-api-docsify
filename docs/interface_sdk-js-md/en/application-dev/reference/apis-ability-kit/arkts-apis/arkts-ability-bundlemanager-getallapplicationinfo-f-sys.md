@@ -29,7 +29,7 @@ Obtains all the application information in the system based on the given applica
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appFlags | int | Yes | Type of the application information to obtain. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;ApplicationInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of application information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ApplicationInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of application information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -40,6 +40,28 @@ Obtains all the application information in the system based on the given applica
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 **Examples**
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let appFlags = bundleManager.ApplicationFlag.GET_APPLICATION_INFO_DEFAULT;
+let userId = 100;
+
+try {
+  bundleManager.getAllApplicationInfo(appFlags, userId, (err, data) => {
+    if (err) {
+      hilog.error(0x0000, 'testTag', 'getAllApplicationInfo failed: %{public}s', err.message);
+    } else {
+      hilog.info(0x0000, 'testTag', 'getAllApplicationInfo successfully: %{public}s', JSON.stringify(data));
+    }
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getAllApplicationInfo failed: %{public}s', message);
+}
+```
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -59,6 +81,25 @@ try {
 } catch (err) {
   let message = (err as BusinessError).message;
   hilog.error(0x0000, 'testTag', 'getAllApplicationInfo failed: %{public}s', message);
+}
+```
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let appFlags = bundleManager.ApplicationFlag.GET_APPLICATION_INFO_DEFAULT;
+
+try {
+  bundleManager.getAllApplicationInfo(appFlags).then((data) => {
+    hilog.info(0x0000, 'testTag', 'getAllApplicationInfo successfully. Data: %{public}s', JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'getAllApplicationInfo failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getAllApplicationInfo failed. Cause: %{public}s', message);
 }
 ```
 
@@ -88,7 +129,7 @@ Obtains all the application information in the system based on the given applica
 | --- | --- | --- | --- |
 | appFlags | int | Yes | Type of the application information to obtain. |
 | userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;ApplicationInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of application information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ApplicationInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of application information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -101,27 +142,7 @@ Obtains all the application information in the system based on the given applica
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let appFlags = bundleManager.ApplicationFlag.GET_APPLICATION_INFO_DEFAULT;
-let userId = 100;
-
-try {
-  bundleManager.getAllApplicationInfo(appFlags, userId, (err, data) => {
-    if (err) {
-      hilog.error(0x0000, 'testTag', 'getAllApplicationInfo failed: %{public}s', err.message);
-    } else {
-      hilog.info(0x0000, 'testTag', 'getAllApplicationInfo successfully: %{public}s', JSON.stringify(data));
-    }
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAllApplicationInfo failed: %{public}s', message);
-}
-```
+See [getAllApplicationInfo](#getallapplicationinfo)
 
 
 ## getAllApplicationInfo
@@ -166,22 +187,5 @@ Obtains all the application information in the system based on the given applica
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let appFlags = bundleManager.ApplicationFlag.GET_APPLICATION_INFO_DEFAULT;
-
-try {
-  bundleManager.getAllApplicationInfo(appFlags).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getAllApplicationInfo successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getAllApplicationInfo failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAllApplicationInfo failed. Cause: %{public}s', message);
-}
-```
+See [getAllApplicationInfo](#getallapplicationinfo)
 

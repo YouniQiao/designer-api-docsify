@@ -35,6 +35,24 @@ function getP2pPeerDevices(): Promise<WifiP2pDevice[]>
 | --- | --- |
 | Promise&lt;WifiP2pDevice[]&gt; | 发现的设备列表。 |
 
+**示例**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+wifi.getP2pPeerDevices((err, data:wifi.WifiP2pDevice) => {
+   if (err) {
+       console.error("get P2P peer devices error");
+       return;
+   }
+  console.info("get P2P peer devices: " + JSON.stringify(data));
+});
+
+wifi.getP2pPeerDevices().then(data => {
+  console.info("get P2P peer devices: " + JSON.stringify(data));
+});
+```
+
 
 ## getP2pPeerDevices
 
@@ -64,19 +82,5 @@ function getP2pPeerDevices(callback: AsyncCallback<WifiP2pDevice[]>): void
 
 **示例**
 
-```TypeScript
-import wifi from '@ohos.wifi';
-
-wifi.getP2pPeerDevices((err, data:wifi.WifiP2pDevice) => {
-   if (err) {
-       console.error("get P2P peer devices error");
-       return;
-   }
-  console.info("get P2P peer devices: " + JSON.stringify(data));
-});
-
-wifi.getP2pPeerDevices().then(data => {
-  console.info("get P2P peer devices: " + JSON.stringify(data));
-});
-```
+参见 [getP2pPeerDevices](#getp2ppeerdevices)
 

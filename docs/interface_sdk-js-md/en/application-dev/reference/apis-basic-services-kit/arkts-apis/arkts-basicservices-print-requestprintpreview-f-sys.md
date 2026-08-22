@@ -29,7 +29,7 @@ Requests print preview data. This API uses a callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | jobInfo | [PrintJob](arkts-basicservices-print-printjob-i.md) | Yes | Information about the print job. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -64,6 +64,34 @@ let jobInfo : print.PrintJob = {
 print.requestPrintPreview(jobInfo, (num : number) => {
     console.info('requestPrintPreview success, num : ' + JSON.stringify(num));
 
+})
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let jobInfo : print.PrintJob = {
+    fdList : [44,45],
+    jobId : 'jobId_12',
+    printerId : 'printerId_32',
+    jobState : PRINT_JOB_COMPLETED,
+    jobSubstate : print.PrintJobSubState.PRINT_JOB_COMPLETED_SUCCESS,
+    copyNumber : 1,
+    pageRange : {},
+    isSequential : false,
+    pageSize : {id : '', name : '', width : 10, height : 20},
+    isLandscape : false,
+    colorMode : COLOR_MODE_COLOR,
+    duplexMode : DUPLEX_MODE_NONE,
+    margin : undefined,
+    preview : undefined,
+    options : undefined
+};
+print.requestPrintPreview(jobInfo).then((num: number) => {
+    console.info('requestPrintPreview success, num : ' + JSON.stringify(num));
+}).catch((error: BusinessError) => {
+    console.error('requestPrintPreview failed, because : ' + JSON.stringify(error));
 })
 ```
 
@@ -108,31 +136,5 @@ Requests print preview data. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let jobInfo : print.PrintJob = {
-    fdList : [44,45],
-    jobId : 'jobId_12',
-    printerId : 'printerId_32',
-    jobState : PRINT_JOB_COMPLETED,
-    jobSubstate : print.PrintJobSubState.PRINT_JOB_COMPLETED_SUCCESS,
-    copyNumber : 1,
-    pageRange : {},
-    isSequential : false,
-    pageSize : {id : '', name : '', width : 10, height : 20},
-    isLandscape : false,
-    colorMode : COLOR_MODE_COLOR,
-    duplexMode : DUPLEX_MODE_NONE,
-    margin : undefined,
-    preview : undefined,
-    options : undefined
-};
-print.requestPrintPreview(jobInfo).then((num: number) => {
-    console.info('requestPrintPreview success, num : ' + JSON.stringify(num));
-}).catch((error: BusinessError) => {
-    console.error('requestPrintPreview failed, because : ' + JSON.stringify(error));
-})
-```
+See [requestPrintPreview](#requestprintpreview)
 

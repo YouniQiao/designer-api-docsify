@@ -55,6 +55,12 @@ function getSystemInputMethodConfigAbility(userId?: int): ElementName
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
+
+let inputMethodConfig: bundleManager.ElementName = inputMethod.getSystemInputMethodConfigAbility();
+```
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {

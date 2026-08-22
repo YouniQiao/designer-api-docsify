@@ -100,38 +100,6 @@ struct Index {
 }
 ```
 
-
-## getKeyboardRepeatRate
-
-```TypeScript
-function getKeyboardRepeatRate(): Promise<int>
-```
-
-获取键盘按键的重复速率，使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-inputDevice-function getKeyboardRepeatRate(): Promise<int>--><!--Device-inputDevice-function getKeyboardRepeatRate(): Promise<int>-End-->
-
-**系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
-
-**系统接口：** 此接口为系统接口。
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | Promise对象，返回键盘按键的重复速率，单位为ms/次。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -187,4 +155,38 @@ struct Index {
   }
 }
 ```
+
+
+## getKeyboardRepeatRate
+
+```TypeScript
+function getKeyboardRepeatRate(): Promise<int>
+```
+
+获取键盘按键的重复速率，使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-inputDevice-function getKeyboardRepeatRate(): Promise<int>--><!--Device-inputDevice-function getKeyboardRepeatRate(): Promise<int>-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;int&gt; | Promise对象，返回键盘按键的重复速率，单位为ms/次。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+参见 [getKeyboardRepeatRate](#getkeyboardrepeatrate)
 

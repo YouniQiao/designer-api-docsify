@@ -30,7 +30,7 @@ Deletes a message from the SIM card. If the specified **msgIndex** is invalid, a
 | --- | --- | --- | --- |
 | slotId | int | Yes | SIM card slot ID. <br>- **0**: card slot 1 <br>- **1**: card slot 2 |
 | msgIndex | int | Yes | Message index. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -54,6 +54,20 @@ let slotId: number = 0;
 let msgIndex: number = 1;
 sms.delSimMessage(slotId, msgIndex, (err: BusinessError) => {
       console.info(`callback: err->${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+let msgIndex: number = 1;
+let promise = sms.delSimMessage(slotId, msgIndex);
+promise.then(() => {
+    console.info(`delSimMessage success.`);
+}).catch((err: BusinessError) => {
+    console.error(`delSimMessage failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -103,17 +117,5 @@ Deletes a message from the SIM card. If the specified **msgIndex** is invalid, a
 
 **Examples**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let msgIndex: number = 1;
-let promise = sms.delSimMessage(slotId, msgIndex);
-promise.then(() => {
-    console.info(`delSimMessage success.`);
-}).catch((err: BusinessError) => {
-    console.error(`delSimMessage failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [delSimMessage](#delsimmessage)
 

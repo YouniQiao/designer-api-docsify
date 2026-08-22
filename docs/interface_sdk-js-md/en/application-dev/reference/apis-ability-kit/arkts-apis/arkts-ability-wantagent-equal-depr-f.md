@@ -31,7 +31,7 @@ Checks whether two WantAgent objects are equal.
 | --- | --- | --- | --- |
 | agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | to compare. |
 | otherAgent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | WantAgent Object. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback method for determining whether two WantAgent instances are equal. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback method for determining whether two WantAgent instances are equal. |
 
 **Examples**
 
@@ -89,42 +89,6 @@ wantAgent.getWantAgent({
 }, getWantAgentCallback);
 ```
 
-
-## equal
-
-```TypeScript
-function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>
-```
-
-Checks whether two WantAgent objects are equal.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [equal](arkts-ability-wantagent-equal-f.md)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-wantAgent-function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>--><!--Device-wantAgent-function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | to compare. |
-| otherAgent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | WantAgent Object. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
-
-**Examples**
-
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';
 
@@ -168,4 +132,42 @@ wantAgent.getWantAgent({
     }
 });
 ```
+
+
+## equal
+
+```TypeScript
+function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>
+```
+
+Checks whether two WantAgent objects are equal.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [equal](arkts-ability-wantagent-equal-f.md)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-wantAgent-function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>--><!--Device-wantAgent-function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | to compare. |
+| otherAgent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | WantAgent Object. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;boolean&gt; | Returns { |
+
+**Examples**
+
+See [equal](#equal)
 

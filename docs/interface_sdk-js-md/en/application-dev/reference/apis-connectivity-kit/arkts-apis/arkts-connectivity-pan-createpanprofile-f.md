@@ -14,7 +14,7 @@ function createPanProfile(): PanProfile
 
 create the instance of pan profile.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 

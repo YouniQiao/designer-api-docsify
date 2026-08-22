@@ -65,49 +65,6 @@ try {
 }
 ```
 
-
-## getBundleArchiveInfo
-
-```TypeScript
-function getBundleArchiveInfo(hapFilePath: string,  bundleFlags: int): Promise<BundleInfo>
-```
-
-根据给定的hapFilePath和bundleFlags获取BundleInfo。使用Promise异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
-
-<!--Device-bundleManager-function getBundleArchiveInfo(hapFilePath: string,  bundleFlags: int): Promise<BundleInfo>--><!--Device-bundleManager-function getBundleArchiveInfo(hapFilePath: string,  bundleFlags: int): Promise<BundleInfo>-End-->
-
-**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| hapFilePath | string | 是 | 表示存储HAP的路径，路径应该是当前应用程序数据目录的相对路径。 |
-| bundleFlags | int | 是 | 表示用于指定要返回的BundleInfo对象中包含的信息的标志。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;BundleInfo&gt; | Promise对象，返回BundleInfo。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700022](../errorcode-bundle.md#17700022-输入的待解析源文件无效) | The hapFilePath is invalid. |
-
-**示例**
-
 ArkTS-Dyn示例:
 
 ```TypeScript
@@ -153,4 +110,49 @@ try {
   hilog.error(0x0000, 'testTag', 'getBundleArchiveInfo failed. Cause: %{public}s', message);
 }
 ```
+
+
+## getBundleArchiveInfo
+
+```TypeScript
+function getBundleArchiveInfo(hapFilePath: string,  bundleFlags: int): Promise<BundleInfo>
+```
+
+根据给定的hapFilePath和bundleFlags获取BundleInfo。使用Promise异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getBundleArchiveInfo(hapFilePath: string,  bundleFlags: int): Promise<BundleInfo>--><!--Device-bundleManager-function getBundleArchiveInfo(hapFilePath: string,  bundleFlags: int): Promise<BundleInfo>-End-->
+
+**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| hapFilePath | string | 是 | 表示存储HAP的路径，路径应该是当前应用程序数据目录的相对路径。 |
+| bundleFlags | int | 是 | 表示用于指定要返回的BundleInfo对象中包含的信息的标志。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;BundleInfo&gt; | Promise对象，返回BundleInfo。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700022](../errorcode-bundle.md#17700022-输入的待解析源文件无效) | The hapFilePath is invalid. |
+
+**示例**
+
+参见 [getBundleArchiveInfo](#getbundlearchiveinfo)
 

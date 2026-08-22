@@ -2323,26 +2323,6 @@ Creates a copy with replaced value on index
 | --- | --- |
 | Uint8Array | an Uint8Array with replaced value on index |
 
-## BYTES_PER_ELEMENT
-
-```TypeScript
-public static readonly BYTES_PER_ELEMENT: int = 1
-```
-
-Number of bytes occupied by each element
-
-**Type:** int
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint8Array-public static readonly BYTES_PER_ELEMENT: int = 1--><!--Device-Uint8Array-public static readonly BYTES_PER_ELEMENT: int = 1-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
 ## buffer
 
 ```TypeScript
@@ -2360,6 +2340,26 @@ Underlying Buffer.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Uint8Array-public readonly buffer: ArrayBuffer--><!--Device-Uint8Array-public readonly buffer: ArrayBuffer-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## BYTES_PER_ELEMENT
+
+```TypeScript
+public static readonly BYTES_PER_ELEMENT: int = 1
+```
+
+Number of bytes occupied by each element
+
+**Type:** int
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Uint8Array-public static readonly BYTES_PER_ELEMENT: int = 1--><!--Device-Uint8Array-public static readonly BYTES_PER_ELEMENT: int = 1-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

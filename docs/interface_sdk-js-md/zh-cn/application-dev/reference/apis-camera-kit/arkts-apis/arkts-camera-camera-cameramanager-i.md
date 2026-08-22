@@ -55,6 +55,42 @@ createCameraInput(camera: CameraDevice): CameraInput
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function createCameraInput(camera: camera.CameraDevice, cameraManager: camera.CameraManager): camera.CameraInput | undefined {
+  let cameraInput: camera.CameraInput | undefined = undefined;
+  try {
+    cameraInput = cameraManager.createCameraInput(camera);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The createCameraInput call failed. error code: ${err.code}`);
+  }
+  return cameraInput;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function createCameraInput(camera: camera.CameraDevice, cameraManager: camera.CameraManager): camera.CameraInput | undefined {
+  let position: camera.CameraPosition = camera.cameraPosition;
+  let type: camera.CameraType = camera.cameraType;
+  let cameraInput: camera.CameraInput | undefined = undefined;
+  try {
+    cameraInput = cameraManager.createCameraInput(position, type);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The createCameraInput call failed. error code: ${err.code}`);
+  }
+  return cameraInput;
+}
+```
+
 ## createCameraInput
 
 ```TypeScript
@@ -96,6 +132,10 @@ createCameraInput(position: CameraPosition, type: CameraType): CameraInput
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
 
+**示例**
+
+参见 [createCameraInput](#createcamerainput)
+
 ## createCaptureSession
 
 ```TypeScript
@@ -129,6 +169,24 @@ createCaptureSession(): CaptureSession
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function createCaptureSession(cameraManager: camera.CameraManager): camera.CaptureSession | undefined {
+  let captureSession: camera.CaptureSession | undefined = undefined;
+  try {
+    captureSession = cameraManager.createCaptureSession();
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`createCaptureSession error. error code: ${err.code}`);
+  }
+  return captureSession;
+}
+```
 
 ## createMetadataOutput
 
@@ -164,6 +222,24 @@ createMetadataOutput(metadataObjectTypes: Array<MetadataObjectType>): MetadataOu
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function createMetadataOutput(cameraManager: camera.CameraManager, cameraOutputCapability: camera.CameraOutputCapability): void {
+  let metadataObjectTypes: Array<camera.MetadataObjectType> = cameraOutputCapability.supportedMetadataObjectTypes;
+  let metadataOutput: camera.MetadataOutput | undefined = undefined;
+  try {
+    metadataOutput = cameraManager.createMetadataOutput(metadataObjectTypes);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`createMetadataOutput error. error code: ${err.code}`);
+  }
+}
+```
 
 ## createPhotoOutput
 
@@ -208,6 +284,42 @@ createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function createPhotoOutput(cameraOutputCapability: camera.CameraOutputCapability, cameraManager: camera.CameraManager): camera.PhotoOutput | undefined {
+  let profile: camera.Profile = cameraOutputCapability.photoProfiles[0];
+  let photoOutput: camera.PhotoOutput | undefined = undefined;
+  try {
+    photoOutput = cameraManager.createPhotoOutput(profile);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The createPhotoOutput call failed. error code: ${err.code}`);
+  }
+  return photoOutput;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function createPhotoOutput(cameraOutputCapability: camera.CameraOutputCapability, cameraManager: camera.CameraManager, surfaceId: string): camera.PhotoOutput | undefined {
+  let profile: camera.Profile = cameraOutputCapability.photoProfiles[0];
+  let photoOutput: camera.PhotoOutput | undefined = undefined;
+  try {
+    photoOutput = cameraManager.createPhotoOutput(profile, surfaceId);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The createPhotoOutput call failed. error code: ${err.code}`);
+  }
+  return photoOutput;
+}
+```
+
 ## createPhotoOutput
 
 ```TypeScript
@@ -242,6 +354,10 @@ createPhotoOutput(profile?: Profile): PhotoOutput
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
+
+**示例**
+
+参见 [createPhotoOutput](#createphotooutput)
 
 ## createPreviewOutput
 
@@ -279,6 +395,41 @@ createPreviewOutput(profile: Profile, surfaceId: string): PreviewOutput
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function createPreviewOutput(cameraOutputCapability: camera.CameraOutputCapability, cameraManager: camera.CameraManager, surfaceId: string): camera.PreviewOutput | undefined {
+  let profile: camera.Profile = cameraOutputCapability.previewProfiles[0];
+  let previewOutput: camera.PreviewOutput | undefined = undefined;
+  try {
+    previewOutput = cameraManager.createPreviewOutput(profile, surfaceId);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The createPreviewOutput call failed. error code: ${err.code}`);
+  }
+  return previewOutput;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function createPreviewOutput(cameraManager: camera.CameraManager, surfaceId: string): camera.PreviewOutput | undefined {
+  let previewOutput: camera.PreviewOutput | undefined = undefined;
+  try {
+    previewOutput = cameraManager.createPreviewOutput(surfaceId);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The createPreviewOutput call failed. error code: ${err.code}`);
+  }
+  return previewOutput;
+}
+```
+
 ## createPreviewOutput
 
 ```TypeScript
@@ -314,6 +465,10 @@ createPreviewOutput(surfaceId: string): PreviewOutput
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
+**示例**
+
+参见 [createPreviewOutput](#createpreviewoutput)
+
 ## createSession
 
 ```TypeScript
@@ -348,6 +503,24 @@ createSession<T extends Session>(mode: SceneMode): T
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.<br>**适用版本：** 19+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function createSession(cameraManager: camera.CameraManager, mode: camera.SceneMode): camera.Session | undefined {
+  let photoSession: camera.PhotoSession | undefined = undefined;
+  try {
+    photoSession = cameraManager.createSession(mode) as camera.PhotoSession;
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`createCaptureSession error. error code: ${err.code}`);
+  }
+  return photoSession;
+}
+```
 
 ## createVideoOutput
 
@@ -389,6 +562,41 @@ createVideoOutput(profile: VideoProfile, surfaceId: string): VideoOutput
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function createVideoOutput(cameraOutputCapability: camera.CameraOutputCapability, cameraManager: camera.CameraManager, surfaceId: string): camera.VideoOutput | undefined {
+  let profile: camera.VideoProfile = cameraOutputCapability.videoProfiles[0];
+  let videoOutput: camera.VideoOutput | undefined = undefined;
+  try {
+    videoOutput = cameraManager.createVideoOutput(profile, surfaceId);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The createVideoOutput call failed. error code: ${err.code}`);
+  }
+  return videoOutput;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function createVideoOutput(cameraManager: camera.CameraManager, surfaceId: string): camera.VideoOutput | undefined {
+  let videoOutput: camera.VideoOutput | undefined = undefined;
+  try {
+    videoOutput = cameraManager.createVideoOutput(surfaceId);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The createVideoOutput call failed. error code: ${err.code}`);
+  }
+  return videoOutput;
+}
+```
+
 ## createVideoOutput
 
 ```TypeScript
@@ -424,6 +632,10 @@ createVideoOutput(surfaceId: string): VideoOutput
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
+**示例**
+
+参见 [createVideoOutput](#createvideooutput)
+
 ## getCameraConcurrentInfos
 
 ```TypeScript
@@ -457,6 +669,26 @@ getCameraConcurrentInfos(cameras: Array<CameraDevice>): Array<CameraConcurrentIn
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+**示例**
+
+```TypeScript
+import { camera } from '@kit.CameraKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getCameraConcurrentInfos(cameraManager: camera.CameraManager,
+  cameraDeviceArray: Array<camera.CameraDevice>): Array<camera.CameraConcurrentInfo> {
+  let cameraConcurrentInfos: Array<camera.CameraConcurrentInfo> = [];
+  try {
+    cameraConcurrentInfos = cameraManager.getCameraConcurrentInfos(cameraDeviceArray);
+  } catch (error) {
+    // 失败返回错误码并处理。
+    let err = error as BusinessError;
+    console.error(`The getCameraConcurrentInfos call failed. error code: ${err.code}`);
+  }
+  return cameraConcurrentInfos;
+}
+```
 
 ## getCameraDevice
 
@@ -495,6 +727,24 @@ getCameraDevice(position: CameraPosition, type: CameraType): CameraDevice
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
+**示例**
+
+```TypeScript
+import { camera } from '@kit.CameraKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getCameraDevice(cameraManager: camera.CameraManager, position: camera.CameraPosition, type: camera.CameraType): void {
+  try {
+    let curCameraDev: camera.CameraDevice | undefined = undefined;
+    curCameraDev = cameraManager.getCameraDevice(position, type);
+  } catch (error) {
+    // 失败返回错误码并处理。
+    let err = error as BusinessError;
+    console.error(`The getCameraDevice call failed. error code: ${err.code}`);
+  }
+}
+```
+
 ## getCameraDevices
 
 ```TypeScript
@@ -531,6 +781,24 @@ getCameraDevices(position: CameraPosition, types: Array<CameraType>, connectType
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
+**示例**
+
+```TypeScript
+import { camera } from '@kit.CameraKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getCameraDevices(cameraManager: camera.CameraManager, position: camera.CameraPosition, types: Array<camera.CameraType>, connectType: camera.ConnectionType): void {
+  try {
+    let cameraDevs: Array<camera.CameraDevice> = [];
+    cameraDevs = cameraManager.getCameraDevices(position, types, connectType);
+  } catch (error) {
+    // 失败返回错误码并处理。
+    let err = error as BusinessError;
+    console.error(`The getCameraDevices call failed. error code: ${err.code}`);
+  }
+}
+```
+
 ## getSupportedCameras
 
 ```TypeScript
@@ -554,6 +822,23 @@ getSupportedCameras(): Array<CameraDevice>
 | 类型 | 说明 |
 | --- | --- |
 | Array&lt;[CameraDevice](arkts-camera-camera-cameradevice-i.md)&gt; | 相机设备列表。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getSupportedCameras(cameraManager: camera.CameraManager): Array<camera.CameraDevice> {
+  let cameras: Array<camera.CameraDevice> = [];
+  try {
+    cameras = cameraManager.getSupportedCameras();
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The getSupportedCameras call failed. error code: ${err.code}`);
+  }
+  return cameras;
+}
+```
 
 ## getSupportedFullOutputCapability
 
@@ -590,6 +875,17 @@ getSupportedFullOutputCapability(camera: CameraDevice, mode: SceneMode): CameraO
 | --- | --- |
 | [CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i.md) | 相机输出能力。 |
 
+**示例**
+
+```TypeScript
+import { camera } from '@kit.CameraKit';
+
+function getSupportedFullOutputCapability(camera: camera.CameraDevice, cameraManager: camera.CameraManager, sceneMode: camera.SceneMode): camera.CameraOutputCapability {
+  let cameraOutputCapability: camera.CameraOutputCapability = cameraManager.getSupportedFullOutputCapability(camera, sceneMode);
+  return cameraOutputCapability;
+}
+```
+
 ## getSupportedOutputCapability
 
 ```TypeScript
@@ -624,6 +920,22 @@ getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability
 | --- | --- |
 | [CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i.md) | 相机输出能力。 |
 
+**示例**
+
+```TypeScript
+function getSupportedOutputCapability(camera: camera.CameraDevice, cameraManager: camera.CameraManager, sceneMode: camera.SceneMode): camera.CameraOutputCapability {
+  let cameraOutputCapability: camera.CameraOutputCapability = cameraManager.getSupportedOutputCapability(camera, sceneMode);
+  return cameraOutputCapability;
+}
+```
+
+```TypeScript
+function getSupportedOutputCapability(camera: camera.CameraDevice, cameraManager: camera.CameraManager): camera.CameraOutputCapability {
+  let cameraOutputCapability: camera.CameraOutputCapability = cameraManager.getSupportedOutputCapability(camera);
+  return cameraOutputCapability;
+}
+```
+
 ## getSupportedOutputCapability
 
 ```TypeScript
@@ -653,6 +965,10 @@ getSupportedOutputCapability(camera: CameraDevice, mode: SceneMode): CameraOutpu
 | --- | --- |
 | [CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i.md) | 相机输出能力。 |
 
+**示例**
+
+参见 [getSupportedOutputCapability](#getsupportedoutputcapability)
+
 ## getSupportedSceneModes
 
 ```TypeScript
@@ -681,6 +997,23 @@ getSupportedSceneModes(camera: CameraDevice): Array<SceneMode>
 | --- | --- |
 | Array&lt;[SceneMode](arkts-camera-camera-scenemode-e.md)&gt; | 相机支持的模式列表。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getSupportedSceneModes(cameraManager: camera.CameraManager, camera: camera.CameraDevice): Array<camera.SceneMode> {
+  let modes: Array<camera.SceneMode> = [];
+  try {
+    modes = cameraManager.getSupportedSceneModes(camera);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The getSupportedSceneModes call failed. error code: ${err.code}`);
+  }
+  return modes;
+}
+```
+
 ## getTorchMode
 
 ```TypeScript
@@ -703,6 +1036,16 @@ getTorchMode(): TorchMode
 | --- | --- |
 | [TorchMode](arkts-camera-camera-torchmode-e.md) | 返回设备当前手电筒模式。 |
 
+**示例**
+
+```TypeScript
+function getTorchMode(cameraManager: camera.CameraManager): camera.TorchMode | undefined {
+  let torchMode: camera.TorchMode | undefined = undefined;
+  torchMode = cameraManager.getTorchMode();
+  return torchMode;
+}
+```
+
 ## isCameraMuted
 
 ```TypeScript
@@ -724,6 +1067,15 @@ isCameraMuted(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 返回true表示相机被禁用，返回false表示相机未被禁用。 |
+
+**示例**
+
+```TypeScript
+function isCameraMuted(cameraManager: camera.CameraManager): boolean {
+  let isMuted: boolean = cameraManager.isCameraMuted();
+  return isMuted;
+}
+```
 
 ## isTorchModeSupported
 
@@ -753,6 +1105,15 @@ isTorchModeSupported(mode: TorchMode): boolean
 | --- | --- |
 | boolean | 返回true表示设备支持设置的手电筒模式，返回false表示设备不支持的手电筒模式。若接口调用失败，返回undefined。 |
 
+**示例**
+
+```TypeScript
+function isTorchModeSupported(cameraManager: camera.CameraManager, torchMode: camera.TorchMode): boolean {
+  let isSupported = cameraManager.isTorchModeSupported(torchMode);
+  return isSupported;
+}
+```
+
 ## isTorchSupported
 
 ```TypeScript
@@ -775,65 +1136,14 @@ isTorchSupported(): boolean
 | --- | --- |
 | boolean | 表示设备是否支持手电筒，true表示设备支持手电筒，false表示设备不支持手电。 <br>如果返回false，则[isTorchModeSupported]{ |
 
-## offCameraStatus
+**示例**
 
 ```TypeScript
-offCameraStatus(callback?: AsyncCallback<CameraStatusInfo>): void
+function isTorchSupported(cameraManager: camera.CameraManager): boolean {
+  let isSupported = cameraManager.isTorchSupported();
+  return isSupported;
+}
 ```
-
-Unsubscribes from camera status change event callback.
-
-**起始版本：** 23
-
-<!--Device-CameraManager-offCameraStatus(callback?: AsyncCallback<CameraStatusInfo>): void--><!--Device-CameraManager-offCameraStatus(callback?: AsyncCallback<CameraStatusInfo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | 否 | Callback used to get the camera status change. |
-
-## offFoldStatusChange
-
-```TypeScript
-offFoldStatusChange(callback?: AsyncCallback<FoldStatusInfo>): void
-```
-
-Unsubscribes from fold status change event callback.
-
-**起始版本：** 23
-
-<!--Device-CameraManager-offFoldStatusChange(callback?: AsyncCallback<FoldStatusInfo>): void--><!--Device-CameraManager-offFoldStatusChange(callback?: AsyncCallback<FoldStatusInfo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | 否 | Callback used to get the fold status change. |
-
-## offTorchStatusChange
-
-```TypeScript
-offTorchStatusChange(callback?: AsyncCallback<TorchStatusInfo>): void
-```
-
-Unsubscribes torch status change event callback.
-
-**起始版本：** 23
-
-<!--Device-CameraManager-offTorchStatusChange(callback?: AsyncCallback<TorchStatusInfo>): void--><!--Device-CameraManager-offTorchStatusChange(callback?: AsyncCallback<TorchStatusInfo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 否 | Callback used to return the torch status change |
 
 ## off('cameraStatus')
 
@@ -904,17 +1214,17 @@ off(type: 'torchStatusChange', callback?: AsyncCallback<TorchStatusInfo>): void
 | type | 'torchStatusChange' | 是 | 监听事件，固定为'torchStatusChange'。cameraManager对象获取成功后可监听。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
-## onCameraStatus
+## offCameraStatus
 
 ```TypeScript
-onCameraStatus(callback: AsyncCallback<CameraStatusInfo>): void
+offCameraStatus(callback?: AsyncCallback<CameraStatusInfo>): void
 ```
 
-Subscribes camera status change event callback.
+Unsubscribes from camera status change event callback.
 
 **起始版本：** 23
 
-<!--Device-CameraManager-onCameraStatus(callback: AsyncCallback<CameraStatusInfo>): void--><!--Device-CameraManager-onCameraStatus(callback: AsyncCallback<CameraStatusInfo>): void-End-->
+<!--Device-CameraManager-offCameraStatus(callback?: AsyncCallback<CameraStatusInfo>): void--><!--Device-CameraManager-offCameraStatus(callback?: AsyncCallback<CameraStatusInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -922,19 +1232,27 @@ Subscribes camera status change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | 是 | Callback used to get the camera status change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | 否 | Callback used to get the camera status change. |
 
-## onFoldStatusChange
+**示例**
 
 ```TypeScript
-onFoldStatusChange(callback: AsyncCallback<FoldStatusInfo>): void
+function unregisterCameraStatus(cameraManager: camera.CameraManager): void {
+  cameraManager.offCameraStatus();
+}
 ```
 
-Subscribes fold status change event callback.
+## offFoldStatusChange
+
+```TypeScript
+offFoldStatusChange(callback?: AsyncCallback<FoldStatusInfo>): void
+```
+
+Unsubscribes from fold status change event callback.
 
 **起始版本：** 23
 
-<!--Device-CameraManager-onFoldStatusChange(callback: AsyncCallback<FoldStatusInfo>): void--><!--Device-CameraManager-onFoldStatusChange(callback: AsyncCallback<FoldStatusInfo>): void-End-->
+<!--Device-CameraManager-offFoldStatusChange(callback?: AsyncCallback<FoldStatusInfo>): void--><!--Device-CameraManager-offFoldStatusChange(callback?: AsyncCallback<FoldStatusInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -942,19 +1260,27 @@ Subscribes fold status change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | 是 | Callback used to get the fold status change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | 否 | Callback used to get the fold status change. |
 
-## onTorchStatusChange
+**示例**
 
 ```TypeScript
-onTorchStatusChange(callback: AsyncCallback<TorchStatusInfo>): void
+function unregisterFoldStatusChange(cameraManager: camera.CameraManager): void {
+  cameraManager.offFoldStatusChange();
+}
 ```
 
-Subscribes torch status change event callback.
+## offTorchStatusChange
+
+```TypeScript
+offTorchStatusChange(callback?: AsyncCallback<TorchStatusInfo>): void
+```
+
+Unsubscribes torch status change event callback.
 
 **起始版本：** 23
 
-<!--Device-CameraManager-onTorchStatusChange(callback: AsyncCallback<TorchStatusInfo>): void--><!--Device-CameraManager-onTorchStatusChange(callback: AsyncCallback<TorchStatusInfo>): void-End-->
+<!--Device-CameraManager-offTorchStatusChange(callback?: AsyncCallback<TorchStatusInfo>): void--><!--Device-CameraManager-offTorchStatusChange(callback?: AsyncCallback<TorchStatusInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -962,7 +1288,15 @@ Subscribes torch status change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 是 | Callback used to return the torch status change |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 否 | Callback used to return the torch status change |
+
+**示例**
+
+```TypeScript
+function unregisterTorchStatusChange(cameraManager: camera.CameraManager): void {
+  cameraManager.offTorchStatusChange();
+}
+```
 
 ## on('cameraStatus')
 
@@ -1045,6 +1379,122 @@ on(type: 'torchStatusChange', callback: AsyncCallback<TorchStatusInfo>): void
 | type | 'torchStatusChange' | 是 | 监听事件，固定为'torchStatusChange'。cameraManager对象获取成功后可监听。目前只支持手电筒打开，手电筒关闭，手电筒不可 用，手电筒恢复可用会触发该事件并返回对应信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 是 | 回调函数，用于获取手电筒状态变化信息。 |
 
+## onCameraStatus
+
+```TypeScript
+onCameraStatus(callback: AsyncCallback<CameraStatusInfo>): void
+```
+
+Subscribes camera status change event callback.
+
+**起始版本：** 23
+
+<!--Device-CameraManager-onCameraStatus(callback: AsyncCallback<CameraStatusInfo>): void--><!--Device-CameraManager-onCameraStatus(callback: AsyncCallback<CameraStatusInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | 是 | Callback used to get the camera status change. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(err: BusinessError | null, cameraStatusInfo: camera.CameraStatusInfo | undefined): void {
+  if (err !== undefined && err!.code !== 0) {
+    console.error('cameraStatus with errorCode = ' + err!.code);
+    return;
+  }
+  console.info(`camera : ${cameraStatusInfo!.camera.cameraId}`);
+  console.info(`status: ${cameraStatusInfo!.status}`);
+}
+
+function registerCameraStatus(cameraManager: camera.CameraManager): void {
+  cameraManager.onCameraStatus(callback);
+}
+```
+
+## onFoldStatusChange
+
+```TypeScript
+onFoldStatusChange(callback: AsyncCallback<FoldStatusInfo>): void
+```
+
+Subscribes fold status change event callback.
+
+**起始版本：** 23
+
+<!--Device-CameraManager-onFoldStatusChange(callback: AsyncCallback<FoldStatusInfo>): void--><!--Device-CameraManager-onFoldStatusChange(callback: AsyncCallback<FoldStatusInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | 是 | Callback used to get the fold status change. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(err: BusinessError | null, foldStatusInfo: camera.FoldStatusInfo | undefined): void {
+  if (err !== undefined && err!.code !== 0) {
+    console.error('foldStatusChange with errorCode = ' + err!.code);
+    return;
+  }
+  console.info(`camera length: ${foldStatusInfo!.supportedCameras.length}`);
+  console.info(`foldStatus: ${foldStatusInfo!.foldStatus}`);
+}
+
+function registerFoldStatusChange(cameraManager: camera.CameraManager): void {
+  cameraManager.onFoldStatusChange(callback);
+}
+```
+
+## onTorchStatusChange
+
+```TypeScript
+onTorchStatusChange(callback: AsyncCallback<TorchStatusInfo>): void
+```
+
+Subscribes torch status change event callback.
+
+**起始版本：** 23
+
+<!--Device-CameraManager-onTorchStatusChange(callback: AsyncCallback<TorchStatusInfo>): void--><!--Device-CameraManager-onTorchStatusChange(callback: AsyncCallback<TorchStatusInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 是 | Callback used to return the torch status change |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(err: BusinessError | null, torchStatusInfo: camera.TorchStatusInfo | undefined): void {
+  if (err !== undefined && err!.code !== 0) {
+    console.error(`Callback Error, errorCode: ${err!.code}`);
+    return;
+  }
+  console.info(`onTorchStatusChange, isTorchAvailable: ${torchStatusInfo!.isTorchAvailable}, isTorchActive: ${torchStatusInfo!.isTorchActive}, level: ${torchStatusInfo!.torchLevel}`);
+}
+
+function registerTorchStatusChange(cameraManager: camera.CameraManager): void {
+  cameraManager.onTorchStatusChange(callback);
+}
+```
+
 ## setTorchMode
 
 ```TypeScript
@@ -1074,4 +1524,20 @@ setTorchMode(mode: TorchMode): void
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect.<br>**适用版本：** 11 - 17 |
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setTorchMode(cameraManager: camera.CameraManager, torchMode: camera.TorchMode): void {
+  try {
+    cameraManager.setTorchMode(torchMode);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The setTorchMode call failed. error code: ${err.code}`);
+  }
+}
+```
 

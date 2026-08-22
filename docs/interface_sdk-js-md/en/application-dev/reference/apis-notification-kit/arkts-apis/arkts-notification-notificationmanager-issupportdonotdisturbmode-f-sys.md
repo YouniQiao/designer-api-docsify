@@ -30,7 +30,7 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that DND mode is supported, and **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that DND mode is supported, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -58,6 +58,16 @@ let isSupportDoNotDisturbModeCallback = (err: BusinessError, data: boolean): voi
 }
 
 notificationManager.isSupportDoNotDisturbMode(isSupportDoNotDisturbModeCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.isSupportDoNotDisturbMode().then((data: boolean) => {
+    console.info(`isSupportDoNotDisturbMode success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isSupportDoNotDisturbMode failed, code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -100,13 +110,5 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.isSupportDoNotDisturbMode().then((data: boolean) => {
-    console.info(`isSupportDoNotDisturbMode success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isSupportDoNotDisturbMode failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [isSupportDoNotDisturbMode](#issupportdonotdisturbmode)
 

@@ -44,6 +44,42 @@ function createController(sessionId: string, callback: AsyncCallback<AVSessionCo
 **示例**
 
 ```TypeScript
+import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+
+  build() {
+    Column() {
+        Text(this.message)
+          .onClick(()=>{
+            avSession.getAllSessionDescriptors().then((descriptors: avSession.AVSessionDescriptor[]) => {
+              console.info(`Succeeded in getting all session descriptors, length: ${descriptors.length}`);
+              if (descriptors.length > 0 ) {
+                avSession.createController(descriptors[0]?.sessionId).then((avcontroller: avSession.AVSessionController) => {
+                  console.info('Succeeded in creating controller.');
+                });
+              }
+            });
+          })
+      }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+let currentAVcontroller: avSession.AVSessionController | undefined = undefined;
+avSession.createController(sessionId).then((avcontroller: avSession.AVSessionController) => {
+  currentAVcontroller = avcontroller;
+  console.info('Succeeded in creating controller.');
+});
+```
+
+```TypeScript
 let currentAVcontroller: avSession.AVSessionController | undefined = undefined;
 avSession.createController(sessionId, (err, avcontroller: avSession.AVSessionController) => {
   currentAVcontroller = avcontroller;
@@ -95,39 +131,5 @@ function createController(sessionId: string): Promise<AVSessionController>
 
 **示例**
 
-```TypeScript
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello world';
-
-  build() {
-    Column() {
-        Text(this.message)
-          .onClick(()=>{
-            avSession.getAllSessionDescriptors().then((descriptors: avSession.AVSessionDescriptor[]) => {
-              console.info(`Succeeded in getting all session descriptors, length: ${descriptors.length}`);
-              if (descriptors.length > 0 ) {
-                avSession.createController(descriptors[0]?.sessionId).then((avcontroller: avSession.AVSessionController) => {
-                  console.info('Succeeded in creating controller.');
-                });
-              }
-            });
-          })
-      }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-let currentAVcontroller: avSession.AVSessionController | undefined = undefined;
-avSession.createController(sessionId).then((avcontroller: avSession.AVSessionController) => {
-  currentAVcontroller = avcontroller;
-  console.info('Succeeded in creating controller.');
-});
-```
+参见 [createController](#createcontroller)
 

@@ -57,6 +57,46 @@ cloudSyncManager.notifyDataChange(accountId, bundleName).then(() => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountId: string = "testAccount";
+let bundleName: string = "com.example.bundle";
+cloudSyncManager.notifyDataChange(accountId, bundleName, (err: BusinessError) => {
+  if (err) {
+    console.error("notifyDataChange failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("notifyDataChange successfully");
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userId: number = 100;
+let extraData: cloudSyncManager.ExtraData = {eventId: "eventId", extraData: "data"};
+cloudSyncManager.notifyDataChange(userId, extraData).then(() => {
+  console.info("notifyDataChange successfully");
+}).catch((err: BusinessError) => {
+  console.error("notifyDataChange failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userId: number = 100;
+let extraData: cloudSyncManager.ExtraData = {eventId: "eventId", extraData: "data"};
+cloudSyncManager.notifyDataChange(userId, extraData, (err: BusinessError) => {
+  if (err) {
+    console.error("notifyDataChange failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("notifyDataChange successfully");
+  }
+});
+```
+
 
 ## notifyDataChange
 
@@ -80,7 +120,7 @@ Notifies the device-cloud service that the cloud data of a specific application 
 | --- | --- | --- | --- |
 | accountId | string | Yes | Account ID. |
 | bundleName | string | Yes | Bundle name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the application data change in the cloud. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the application data change in the cloud. |
 
 **Error codes:**
 
@@ -92,19 +132,7 @@ Notifies the device-cloud service that the cloud data of a specific application 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-let bundleName: string = "com.example.bundle";
-cloudSyncManager.notifyDataChange(accountId, bundleName, (err: BusinessError) => {
-  if (err) {
-    console.error("notifyDataChange failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("notifyDataChange successfully");
-  }
-});
-```
+See [notifyDataChange](#notifydatachange)
 
 
 ## notifyDataChange
@@ -149,17 +177,7 @@ Notifies the device-cloud service of the cloud data change information of a spec
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: number = 100;
-let extraData: cloudSyncManager.ExtraData = {eventId: "eventId", extraData: "data"};
-cloudSyncManager.notifyDataChange(userId, extraData).then(() => {
-  console.info("notifyDataChange successfully");
-}).catch((err: BusinessError) => {
-  console.error("notifyDataChange failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
+See [notifyDataChange](#notifydatachange)
 
 
 ## notifyDataChange
@@ -186,7 +204,7 @@ Notifies the device-cloud service of the cloud data change information of a spec
 | --- | --- | --- | --- |
 | userId | int | Yes | User ID. |
 | extraData | ExtraData | Yes | Represents the cloud data change information. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the application data change in the cloud. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the application data change in the cloud. |
 
 **Error codes:**
 
@@ -199,17 +217,5 @@ Notifies the device-cloud service of the cloud data change information of a spec
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: number = 100;
-let extraData: cloudSyncManager.ExtraData = {eventId: "eventId", extraData: "data"};
-cloudSyncManager.notifyDataChange(userId, extraData, (err: BusinessError) => {
-  if (err) {
-    console.error("notifyDataChange failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("notifyDataChange successfully");
-  }
-});
-```
+See [notifyDataChange](#notifydatachange)
 

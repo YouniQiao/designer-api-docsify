@@ -30,7 +30,7 @@ Ability名称。
 abilityType: int
 ```
 
-[Ability类型](#abilitytype)： [UIAbility](arkts-ability-appabilityuiability-uiability-c.md)或 [ExtensionAbility](arkts-ability-appabilityextensionability-extensionability-c.md)等。
+[Ability类型](#abilitytype)： [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)或 [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)等。
 
 **类型：** int
 
@@ -148,7 +148,7 @@ state: int
 
 Ability状态。
 
-- [Stage模型](../../../application-models/ability-terminology.md#stage模型)： [UIAbility](arkts-ability-appabilityuiability-uiability-c.md)的状态参见 UIAbility状态； [ExtensionAbility](arkts-ability-appabilityextensionability-extensionability-c.md)的状态参见 ExtensionAbility状态 ；[UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md)的状态参见 UIExtensionAbility状态 。 - [FA模型](../../../application-models/ability-terminology.md#fa模型)：参见 Ability状态。
+- [Stage模型](../../../application-models/ability-terminology.md#stage模型)： [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)的状态参见 UIAbility状态； [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)的状态参见 ExtensionAbility状态 ；[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)的状态参见 UIExtensionAbility状态 。 - [FA模型](../../../application-models/ability-terminology.md#fa模型)：参见 Ability状态。
 
 **类型：** int
 

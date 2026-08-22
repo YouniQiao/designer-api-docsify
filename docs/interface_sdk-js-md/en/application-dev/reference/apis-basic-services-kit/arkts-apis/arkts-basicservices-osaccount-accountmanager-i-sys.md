@@ -37,7 +37,7 @@ Activates an OS account. This API uses an asynchronous callback to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | int | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -234,7 +234,7 @@ Creates an OS account. This API uses an asynchronous callback to return the resu
 | --- | --- | --- | --- |
 | localName | string | Yes | Name of the OS account to create. |
 | type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | Yes | Type of the OS account to create. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the created OS account. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the created OS account. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -265,6 +265,28 @@ try {
     } else {
       console.info('createOsAccount osAccountInfo:' + JSON.stringify(osAccountInfo));
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`createOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let options: osAccount.CreateOsAccountOptions = {
+  shortName: 'myShortName',
+  disallowedPreinstalledBundles: [],
+  allowedPreinstalledBundles: [],
+}
+try {
+  accountManager.createOsAccount('testAccountName', osAccount.OsAccountType.NORMAL, options).then(
+    (accountInfo: osAccount.OsAccountInfo) => {
+    console.info('createOsAccount, accountInfo: ' + JSON.stringify(accountInfo));
+  }).catch((err: BusinessError) => {
+    console.error(`createOsAccount err: code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -322,27 +344,7 @@ Creates an OS account. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let options: osAccount.CreateOsAccountOptions = {
-  shortName: 'myShortName',
-  disallowedPreinstalledBundles: [],
-  allowedPreinstalledBundles: [],
-}
-try {
-  accountManager.createOsAccount('testAccountName', osAccount.OsAccountType.NORMAL, options).then(
-    (accountInfo: osAccount.OsAccountInfo) => {
-    console.info('createOsAccount, accountInfo: ' + JSON.stringify(accountInfo));
-  }).catch((err: BusinessError) => {
-    console.error(`createOsAccount err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`createOsAccount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [createOsAccount](#createosaccount)
 
 ## createOsAccountForDomain
 
@@ -372,7 +374,7 @@ Creates an OS account and associates it with the specified domain account. This 
 | --- | --- | --- | --- |
 | type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | Yes | Type of the OS account to create. |
 | domainInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Domain account information. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the created OS account. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the created OS account. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -406,6 +408,28 @@ try {
     } else {
       console.info('createOsAccountForDomain osAccountInfo:' + JSON.stringify(osAccountInfo));
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`createOsAccountForDomain exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let domainInfo: osAccount.DomainAccountInfo =
+  {domain: 'testDomain', accountName: 'testAccountName'};
+let options: osAccount.CreateOsAccountForDomainOptions = {
+  shortName: 'myShortName'
+}
+try {
+  accountManager.createOsAccountForDomain(osAccount.OsAccountType.NORMAL, domainInfo, options).then(
+    (accountInfo: osAccount.OsAccountInfo) => {
+    console.info('createOsAccountForDomain, account info: ' + JSON.stringify(accountInfo));
+  }).catch((err: BusinessError) => {
+    console.error(`createOsAccountForDomain err: code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -464,27 +488,7 @@ Creates an OS account and associates it with the specified domain account. This 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let domainInfo: osAccount.DomainAccountInfo =
-  {domain: 'testDomain', accountName: 'testAccountName'};
-let options: osAccount.CreateOsAccountForDomainOptions = {
-  shortName: 'myShortName'
-}
-try {
-  accountManager.createOsAccountForDomain(osAccount.OsAccountType.NORMAL, domainInfo, options).then(
-    (accountInfo: osAccount.OsAccountInfo) => {
-    console.info('createOsAccountForDomain, account info: ' + JSON.stringify(accountInfo));
-  }).catch((err: BusinessError) => {
-    console.error(`createOsAccountForDomain err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`createOsAccountForDomain exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [createOsAccountForDomain](#createosaccountfordomain)
 
 ## deactivateOsAccount
 
@@ -549,7 +553,7 @@ Obtains the bundle ID based on the specified UID. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | int | Yes | Process UID. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the bundle ID obtained. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the bundle ID obtained. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
@@ -574,6 +578,23 @@ try {
     } else {
       console.info('getBundleIdForUid bundleId:' + JSON.stringify(bundleId));
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getBundleIdForUid exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let testUid: number = 1000000;
+try {
+  accountManager.getBundleIdForUid(testUid).then((result: number) => {
+    console.info('getBundleIdForUid bundleId:' + JSON.stringify(result));
+  }).catch((err: BusinessError) => {
+    console.error(`getBundleIdForUid errInfo:code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -620,22 +641,7 @@ Obtains the bundle ID based on the specified UID. This API uses a promise to ret
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let testUid: number = 1000000;
-try {
-  accountManager.getBundleIdForUid(testUid).then((result: number) => {
-    console.info('getBundleIdForUid bundleId:' + JSON.stringify(result));
-  }).catch((err: BusinessError) => {
-    console.error(`getBundleIdForUid errInfo:code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getBundleIdForUid exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getBundleIdForUid](#getbundleidforuid)
 
 ## getBundleIdForUidSync
 
@@ -832,6 +838,22 @@ Obtains the ID of the foreground OS account running on a specified logical displ
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getForegroundOsAccountLocalId().then((localId: number) => {
+    console.info('getForegroundOsAccountLocalId, localId: ' + localId);
+  }).catch((err: BusinessError) => {
+    console.error(`getForegroundOsAccountLocalId err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getForegroundOsAccountLocalId exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
 let displayId: number = 0;
 try {
   accountManager.getForegroundOsAccountLocalId(displayId).then((localId: number) => {
@@ -869,7 +891,7 @@ Obtains the constraint source information of an OS account. This API uses an asy
 | --- | --- | --- | --- |
 | localId | int | Yes | ID of the target OS account. |
 | constraint | string | Yes | [Constraint](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) whose source information is to be obtained. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the [constraint](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) source information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the [constraint](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) source information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -896,6 +918,23 @@ try {
     } else {
       console.info('getOsAccountConstraintSourceTypes sourceTypeInfos:' + JSON.stringify(sourceTypeInfos));
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountConstraintSourceTypes exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getOsAccountConstraintSourceTypes(100, 'constraint.wifi').then(
+    (result: osAccount.ConstraintSourceTypeInfo[]) => {
+    console.info('getOsAccountConstraintSourceTypes sourceTypeInfos:' + JSON.stringify(result));
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountConstraintSourceTypes errInfo:code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -947,22 +986,7 @@ Obtains the constraint source information of an OS account. This API uses a prom
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.getOsAccountConstraintSourceTypes(100, 'constraint.wifi').then(
-    (result: osAccount.ConstraintSourceTypeInfo[]) => {
-    console.info('getOsAccountConstraintSourceTypes sourceTypeInfos:' + JSON.stringify(result));
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountConstraintSourceTypes errInfo:code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountConstraintSourceTypes exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getOsAccountConstraintSourceTypes](#getosaccountconstraintsourcetypes)
 
 ## getOsAccountProfilePhoto
 
@@ -987,7 +1011,7 @@ Obtains the profile photo of an OS account. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | int | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the profile photo information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the profile photo information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1088,6 +1112,40 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
 try {
+  accountManager.getOsAccountType((err: BusinessError, accountType: osAccount.OsAccountType) => {
+    if (err) {
+      console.error(`getOsAccountType err: code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('getOsAccountType accountType: ' + accountType);
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountType exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getOsAccountType().then((accountType: osAccount.OsAccountType) => {
+    console.info('getOsAccountType, accountType: ' + accountType);
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountType err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountType exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
   let localId: number = 100;
   accountManager.getOsAccountType(localId).then((type: osAccount.OsAccountType) => {
     console.info('getOsAccountType Type:' + type);
@@ -1122,7 +1180,7 @@ Checks whether the current process belongs to the main OS account. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If **true** is returned, the current process belongs to the main OS account. If **false** is returned, the current process does not belong to the main OS account. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If **true** is returned, the current process belongs to the main OS account. If **false** is returned, the current process does not belong to the main OS account. |
 
 **Error codes:**
 
@@ -1146,6 +1204,22 @@ try {
     } else {
       console.info('isMainOsAccount result:' + JSON.stringify(result));
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`isMainOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.isMainOsAccount().then((result: boolean) => {
+    console.info('isMainOsAccount result:' + JSON.stringify(result));
+  }).catch((err: BusinessError) => {
+    console.error(`isMainOsAccount errInfo:code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -1187,21 +1261,7 @@ Checks whether the current process belongs to the main OS account. This API uses
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.isMainOsAccount().then((result: boolean) => {
-    console.info('isMainOsAccount result:' + JSON.stringify(result));
-  }).catch((err: BusinessError) => {
-    console.error(`isMainOsAccount errInfo:code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`isMainOsAccount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [isMainOsAccount](#ismainosaccount)
 
 ## isOsAccountActivated
 
@@ -1330,6 +1390,22 @@ Checks whether an OS account has been verified. This API uses a promise to retur
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.isOsAccountUnlocked().then((isVerified: boolean) => {
+    console.info('isOsAccountUnlocked successfully, isVerified: ' + isVerified);
+  }).catch((err: BusinessError) => {
+    console.error(`isOsAccountUnlocked failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`isOsAccountUnlocked exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
 let localId: number = 100;
 try {
   accountManager.isOsAccountUnlocked(localId).then((isVerified: boolean) => {
@@ -1340,6 +1416,201 @@ try {
 } catch (e) {
   const err = e as BusinessError;
   console.error(`isOsAccountUnlocked exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+## off('activate' | 'activating')
+
+```TypeScript
+off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void
+```
+
+Unsubscribes from the OS account activation states, including the states of the account being activated and the account with activation completed. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
+
+<!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void--><!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'activate' \| 'activating' | Yes | Type of the event to unsubscribe from. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
+| name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes, and must be the same as the value passed by **on()**. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the OS account activation states. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+
+function offCallback(){
+  console.info('off enter')
+}
+
+try {
+  accountManager.off('activating', 'osAccountOnOffNameA', offCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+## off('activate' | 'activating')
+
+```TypeScript
+off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void
+```
+
+Unsubscribes from the OS account activation states, including the states of the account being activated and the account with activation completed. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
+
+<!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void--><!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'activate' \| 'activating' | Yes | Type of the event to unsubscribe from. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
+| name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes, and must be the same as the value passed by **on()**. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the OS account activation states. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
+
+**Examples**
+
+See off_activate
+
+## off('switched')
+
+```TypeScript
+off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void
+```
+
+Unsubscribes from the end of a switchover between a foreground OS account and a background OS account. This API uses an asynchronous callback to return the result.
+
+**Since:** 12
+
+**Required permissions:** 
+- API version 23+: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+- API version 12 - 22: ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'switched' | Yes | Event type. The value **switched** indicates that the switchover between a foreground OS account and a background OS account is complete. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the **switched** event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.off('switched');
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+## off('switching')
+
+```TypeScript
+off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void
+```
+
+Unsubscribes from the switchover between a foreground OS account and a background OS account in progress. This API uses an asynchronous callback to return the result.
+
+**Since:** 12
+
+**Required permissions:** 
+- API version 23+: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+- API version 12 - 22: ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'switching' | Yes | Event type. The value **switching** indicates that the switchover between a foreground OS account and a background account is being performed. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the **switching** event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.off('switching');
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
 
@@ -1366,7 +1637,7 @@ Unsubscribes from the event indicating the completion of an OS account activatio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the name of subscriber. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | No | Asynchronous callback interface. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Asynchronous callback interface. |
 
 **Error codes:**
 
@@ -1400,7 +1671,7 @@ Unsubscribes from the event indicating that an OS account is being activated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the name of subscriber. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | No | Asynchronous callback interface. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Asynchronous callback interface. |
 
 **Error codes:**
 
@@ -1431,7 +1702,7 @@ Unsubscribes from constraint change events associated with the specified callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | No | Callback for receiving constraint change information. - Callback used to listen for the constraint change events.<br>The default value is **undefined**, indicating that all subscription records are unsubscribed.<br>If this parameter is not **undefined**, the subscription records associated with the callback are unsubscribed. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | No | Callback for receiving constraint change information. - Callback used to listen for the constraint change events.<br>The default value is **undefined**, indicating that all subscription records are unsubscribed.<br>If this parameter is not **undefined**, the subscription records associated with the callback are unsubscribed. |
 
 **Error codes:**
 
@@ -1488,7 +1759,7 @@ Unsubscribes from the OS account switched event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Indicates the callback for getting the event data. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Indicates the callback for getting the event data. |
 
 **Error codes:**
 
@@ -1520,384 +1791,7 @@ Unsubscribes from the OS account switching event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Indicates the callback for getting the event data. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-
-## off('activate' | 'activating')
-
-```TypeScript
-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void
-```
-
-Unsubscribes from the OS account activation states, including the states of the account being activated and the account with activation completed. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
-
-<!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void--><!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.Account.OsAccount
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'activate' \| 'activating' | Yes | Type of the event to unsubscribe from. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
-| name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes, and must be the same as the value passed by **on()**. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the OS account activation states. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-
-function offCallback(){
-  console.info('off enter')
-}
-
-try {
-  accountManager.off('activating', 'osAccountOnOffNameA', offCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-## off('activate' | 'activating')
-
-```TypeScript
-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void
-```
-
-Unsubscribes from the OS account activation states, including the states of the account being activated and the account with activation completed. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
-
-<!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void--><!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.Account.OsAccount
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'activate' \| 'activating' | Yes | Type of the event to unsubscribe from. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
-| name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes, and must be the same as the value passed by **on()**. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the OS account activation states. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
-
-**Examples**
-
-See off_activate
-
-## off('switched')
-
-```TypeScript
-off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void
-```
-
-Unsubscribes from the end of a switchover between a foreground OS account and a background OS account. This API uses an asynchronous callback to return the result.
-
-**Since:** 12
-
-**Required permissions:** 
-- API version 23+: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-- API version 12 - 22: ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void-End-->
-
-**System capability:** SystemCapability.Account.OsAccount
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'switched' | Yes | Event type. The value **switched** indicates that the switchover between a foreground OS account and a background OS account is complete. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the **switched** event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.off('switched');
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-## off('switching')
-
-```TypeScript
-off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void
-```
-
-Unsubscribes from the switchover between a foreground OS account and a background OS account in progress. This API uses an asynchronous callback to return the result.
-
-**Since:** 12
-
-**Required permissions:** 
-- API version 23+: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-- API version 12 - 22: ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void-End-->
-
-**System capability:** SystemCapability.Account.OsAccount
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'switching' | Yes | Event type. The value **switching** indicates that the switchover between a foreground OS account and a background account is being performed. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the **switching** event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.off('switching');
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-## onActivate
-
-```TypeScript
-onActivate(name: string, callback: Callback<int>): void
-```
-
-Subscribes to the event indicating the completion of an OS account activation.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
-
-<!--Device-AccountManager-onActivate(name: string, callback: Callback<int>): void--><!--Device-AccountManager-onActivate(name: string, callback: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.Account.OsAccount
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Indicates the name of subscriber. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Asynchronous callback interface. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
-
-## onActivating
-
-```TypeScript
-onActivating(name: string, callback: Callback<int>): void
-```
-
-Subscribes to the event indicating that an OS account is being activated.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
-
-<!--Device-AccountManager-onActivating(name: string, callback: Callback<int>): void--><!--Device-AccountManager-onActivating(name: string, callback: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.Account.OsAccount
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Indicates the name of subscriber. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Asynchronous callback interface. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
-
-## onConstraintChanged
-
-```TypeScript
-onConstraintChanged(constraints: string[], callback: Callback<ConstraintChangeInfo>): void
-```
-
-Subscribes to one or more constraint change events of the OS account to which the caller belongs. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-<!--Device-AccountManager-onConstraintChanged(constraints: string[], callback: Callback<ConstraintChangeInfo>): void--><!--Device-AccountManager-onConstraintChanged(constraints: string[], callback: Callback<ConstraintChangeInfo>): void-End-->
-
-**System capability:** SystemCapability.Account.OsAccount
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| constraints | string[] | Yes | List of [constraints](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) to be subscribed to. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | Yes | Callback used to listen for the constraint change events. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | One or more constraints are invalid. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let constraint: string = 'constraint.wifi';
-const callback:Callback<osAccount.ConstraintChangeInfo> = (data: osAccount.ConstraintChangeInfo): void => {
-  console.info(`ConstraintChangeInfo received, constraint: ${data.constraint} isEnabled: ${data.isEnabled}`);
-};
-
-try {
-  accountManager.onConstraintChanged([constraint], callback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`onConstraintChanged exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-## onSwitched
-
-```TypeScript
-onSwitched(callback: Callback<OsAccountSwitchEventData>): void
-```
-
-Subscribes to the OS account switched event.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-onSwitched(callback: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-onSwitched(callback: Callback<OsAccountSwitchEventData>): void-End-->
-
-**System capability:** SystemCapability.Account.OsAccount
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Indicates the callback for getting the event data. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-
-## onSwitching
-
-```TypeScript
-onSwitching(callback: Callback<OsAccountSwitchEventData>): void
-```
-
-Subscribes to the OS account switching event.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-onSwitching(callback: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-onSwitching(callback: Callback<OsAccountSwitchEventData>): void-End-->
-
-**System capability:** SystemCapability.Account.OsAccount
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Indicates the callback for getting the event data. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Indicates the callback for getting the event data. |
 
 **Error codes:**
 
@@ -1931,7 +1825,7 @@ Subscribes to the OS account activation states, including the states of the acco
 | --- | --- | --- | --- |
 | type | 'activate' \| 'activating' | Yes | Type of the event to subscribe to. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
 | name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the ID of the OS account being activated or activated. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the ID of the OS account being activated or activated. |
 
 **Error codes:**
 
@@ -1986,7 +1880,7 @@ Subscribes to the OS account activation states, including the states of the acco
 | --- | --- | --- | --- |
 | type | 'activate' \| 'activating' | Yes | Type of the event to subscribe to. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
 | name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the ID of the OS account being activated or activated. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the ID of the OS account being activated or activated. |
 
 **Error codes:**
 
@@ -2027,7 +1921,7 @@ Subscribes to the end of a switchover between a foreground OS account and a back
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'switched' | Yes | Event type. The value **switched** indicates that the switchover between a foreground OS account and a background OS account is complete. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Callback to be invoked when an OS account is switched between the foreground and background. The source and target OS account IDs are subscribed to. <br>Note: Since API version 23, the optional field **displayId** is available, indicating the ID of the logical display where the switch event occurs. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Callback to be invoked when an OS account is switched between the foreground and background. The source and target OS account IDs are subscribed to. <br>Note: Since API version 23, the optional field **displayId** is available, indicating the ID of the logical display where the switch event occurs. |
 
 **Error codes:**
 
@@ -2082,7 +1976,7 @@ Subscribes to the switchover between a foreground OS account and a background OS
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'switching' | Yes | Event type. The value **switching** indicates that the switchover between a foreground OS account and a background account is being performed. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Callback to be invoked when an OS account is switching between the foreground and background. The source and target OS account IDs are subscribed to.<br>Note: Since API version 23, the optional field **displayId** is available, indicating the ID of the logical display where the switch event occurs. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Callback to be invoked when an OS account is switching between the foreground and background. The source and target OS account IDs are subscribed to.<br>Note: Since API version 23, the optional field **displayId** is available, indicating the ID of the logical display where the switch event occurs. |
 
 **Error codes:**
 
@@ -2112,6 +2006,188 @@ try {
 }
 ```
 
+## onActivate
+
+```TypeScript
+onActivate(name: string, callback: Callback<int>): void
+```
+
+Subscribes to the event indicating the completion of an OS account activation.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
+
+<!--Device-AccountManager-onActivate(name: string, callback: Callback<int>): void--><!--Device-AccountManager-onActivate(name: string, callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Indicates the name of subscriber. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Asynchronous callback interface. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+
+## onActivating
+
+```TypeScript
+onActivating(name: string, callback: Callback<int>): void
+```
+
+Subscribes to the event indicating that an OS account is being activated.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
+
+<!--Device-AccountManager-onActivating(name: string, callback: Callback<int>): void--><!--Device-AccountManager-onActivating(name: string, callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Indicates the name of subscriber. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Asynchronous callback interface. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+
+## onConstraintChanged
+
+```TypeScript
+onConstraintChanged(constraints: string[], callback: Callback<ConstraintChangeInfo>): void
+```
+
+Subscribes to one or more constraint change events of the OS account to which the caller belongs. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+<!--Device-AccountManager-onConstraintChanged(constraints: string[], callback: Callback<ConstraintChangeInfo>): void--><!--Device-AccountManager-onConstraintChanged(constraints: string[], callback: Callback<ConstraintChangeInfo>): void-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| constraints | string[] | Yes | List of [constraints](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) to be subscribed to. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | Yes | Callback used to listen for the constraint change events. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | One or more constraints are invalid. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let constraint: string = 'constraint.wifi';
+const callback:Callback<osAccount.ConstraintChangeInfo> = (data: osAccount.ConstraintChangeInfo): void => {
+  console.info(`ConstraintChangeInfo received, constraint: ${data.constraint} isEnabled: ${data.isEnabled}`);
+};
+
+try {
+  accountManager.onConstraintChanged([constraint], callback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`onConstraintChanged exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+## onSwitched
+
+```TypeScript
+onSwitched(callback: Callback<OsAccountSwitchEventData>): void
+```
+
+Subscribes to the OS account switched event.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-onSwitched(callback: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-onSwitched(callback: Callback<OsAccountSwitchEventData>): void-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Indicates the callback for getting the event data. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+
+## onSwitching
+
+```TypeScript
+onSwitching(callback: Callback<OsAccountSwitchEventData>): void
+```
+
+Subscribes to the OS account switching event.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-onSwitching(callback: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-onSwitching(callback: Callback<OsAccountSwitchEventData>): void-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Indicates the callback for getting the event data. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+
 ## queryAllCreatedOsAccounts
 
 ```TypeScript
@@ -2134,7 +2210,7 @@ Queries information about all the OS accounts created. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all created OS accounts. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all created OS accounts. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
@@ -2158,6 +2234,22 @@ try {
     } else {
       console.info('queryAllCreatedOsAccounts accountArr:' + JSON.stringify(accountArr));
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`queryAllCreatedOsAccounts exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.queryAllCreatedOsAccounts().then((accountArr: osAccount.OsAccountInfo[]) => {
+    console.info('queryAllCreatedOsAccounts, accountArr: ' + JSON.stringify(accountArr));
+  }).catch((err: BusinessError) => {
+    console.error(`queryAllCreatedOsAccounts err: code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -2199,21 +2291,7 @@ Queries information about all the OS accounts created. This API uses a promise t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.queryAllCreatedOsAccounts().then((accountArr: osAccount.OsAccountInfo[]) => {
-    console.info('queryAllCreatedOsAccounts, accountArr: ' + JSON.stringify(accountArr));
-  }).catch((err: BusinessError) => {
-    console.error(`queryAllCreatedOsAccounts err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`queryAllCreatedOsAccounts exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [queryAllCreatedOsAccounts](#queryallcreatedosaccounts)
 
 ## queryMaxLoggedInOsAccountNumber
 
@@ -2282,7 +2360,7 @@ Queries the maximum number of OS accounts that can be created. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the maximum number of OS accounts that can be created. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the maximum number of OS accounts that can be created. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2305,6 +2383,22 @@ try {
     } else {
       console.info('queryMaxOsAccountNumber successfully, maxCnt:' + maxCnt);
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`queryMaxOsAccountNumber exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.queryMaxOsAccountNumber().then((maxCnt: number) => {
+    console.info('queryMaxOsAccountNumber successfully, maxCnt: ' + maxCnt);
+  }).catch((err: BusinessError) => {
+    console.error(`queryMaxOsAccountNumber failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -2343,21 +2437,7 @@ Queries the maximum number of OS accounts that can be created. This API uses a p
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.queryMaxOsAccountNumber().then((maxCnt: number) => {
-    console.info('queryMaxOsAccountNumber successfully, maxCnt: ' + maxCnt);
-  }).catch((err: BusinessError) => {
-    console.error(`queryMaxOsAccountNumber failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`queryMaxOsAccountNumber exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [queryMaxOsAccountNumber](#querymaxosaccountnumber)
 
 ## queryOsAccount
 
@@ -2432,7 +2512,7 @@ Queries information about the OS account of the given ID. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | int | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account information obtained. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account information obtained. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
@@ -2509,7 +2589,7 @@ Removes an OS account. This API uses an asynchronous callback to return the resu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | int | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2541,6 +2621,50 @@ try {
           console.info('removeOsAccount successfully');
         }
     });
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`removeOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let accountName: string = 'testAccountName';
+try {
+  accountManager.createOsAccount(accountName, osAccount.OsAccountType.NORMAL,
+    (err: BusinessError, osAccountInfo: osAccount.OsAccountInfo)=>{
+      accountManager.removeOsAccount(osAccountInfo.localId).then(() => {
+        console.info('removeOsAccount successfully');
+      }).catch((err: BusinessError) => {
+        console.error(`removeOsAccount failed, code is ${err.code}, message is ${err.message}`);
+      });
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`removeOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let accountName: string = 'testAccountName';
+let token: Uint8Array = new Uint8Array([0]);
+let options: osAccount.RemoveOsAccountOptions = {
+  token: token,
+}
+try {
+  accountManager.createOsAccount(accountName, osAccount.OsAccountType.NORMAL,
+    (err: BusinessError, osAccountInfo: osAccount.OsAccountInfo)=>{
+      accountManager.removeOsAccount(osAccountInfo.localId, options).then(() => {
+        console.info('removeOsAccount successfully');
+      }).catch((err: BusinessError) => {
+        console.error(`removeOsAccount failed, code is ${err.code}, message is ${err.message}`);
+      });
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -2593,25 +2717,7 @@ Removes an OS account. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let accountName: string = 'testAccountName';
-try {
-  accountManager.createOsAccount(accountName, osAccount.OsAccountType.NORMAL,
-    (err: BusinessError, osAccountInfo: osAccount.OsAccountInfo)=>{
-      accountManager.removeOsAccount(osAccountInfo.localId).then(() => {
-        console.info('removeOsAccount successfully');
-      }).catch((err: BusinessError) => {
-        console.error(`removeOsAccount failed, code is ${err.code}, message is ${err.message}`);
-      });
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`removeOsAccount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [removeOsAccount](#removeosaccount)
 
 ## removeOsAccount
 
@@ -2659,29 +2765,7 @@ Removes a specified OS account based on the options. This API uses a promise to 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let accountName: string = 'testAccountName';
-let token: Uint8Array = new Uint8Array([0]);
-let options: osAccount.RemoveOsAccountOptions = {
-  token: token,
-}
-try {
-  accountManager.createOsAccount(accountName, osAccount.OsAccountType.NORMAL,
-    (err: BusinessError, osAccountInfo: osAccount.OsAccountInfo)=>{
-      accountManager.removeOsAccount(osAccountInfo.localId, options).then(() => {
-        console.info('removeOsAccount successfully');
-      }).catch((err: BusinessError) => {
-        console.error(`removeOsAccount failed, code is ${err.code}, message is ${err.message}`);
-      });
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`removeOsAccount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [removeOsAccount](#removeosaccount)
 
 ## setOsAccountConstraints
 
@@ -2708,7 +2792,7 @@ Sets or removes constraints for an OS account. This API uses an asynchronous cal
 | localId | int | Yes | ID of the target OS account. |
 | constraints | Array&lt;string&gt; | Yes | [Constraints](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) to set or remove. |
 | enable | boolean | Yes | Whether to set or remove constraints. The value **true** means to set constraints, and **false** means to remove constraints. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2790,7 +2874,7 @@ Sets the name of an OS account. This API uses an asynchronous callback to return
 | --- | --- | --- | --- |
 | localId | int | Yes | ID of the target OS account. |
 | localName | string | Yes | Account name to set. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2871,7 +2955,7 @@ Sets a profile photo for an OS account. This API uses an asynchronous callback t
 | --- | --- | --- | --- |
 | localId | int | Yes | ID of the target OS account. |
 | photo | string | Yes | Profile photo information. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

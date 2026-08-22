@@ -103,8 +103,8 @@ import { webview } from '@kit.ArkWeb';
 | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | 使用代理的请求的scheme信息。 |
 | [ReadyState](arkts-arkweb-webview-readystate-e.md) | 播放器的缓存状态。 |
 | [RenderProcessMode](arkts-arkweb-webview-renderprocessmode-e.md) | ArkWeb渲染子进程模式类型，可根据应用对内存占用与渲染进程隔离的需求选择对应的模式。 |
-| [ScrollType](arkts-arkweb-webview-scrolltype-e.md) | Scroll滚动类型，用于[setScrollable](arkts-arkweb-webview-webviewcontroller-c.md#setscrollable)。 |
 | [ScrollbarMode](arkts-arkweb-webview-scrollbarmode-e.md) | Web页面场景下，全局滚动条模式。 |
+| [ScrollType](arkts-arkweb-webview-scrolltype-e.md) | Scroll滚动类型，用于[setScrollable](arkts-arkweb-webview-webviewcontroller-c.md#setscrollable)。 |
 | [SecureDnsMode](arkts-arkweb-webview-securednsmode-e.md) | Web组件使用HTTPDNS的模式。 |
 | [SecurityLevel](arkts-arkweb-webview-securitylevel-e.md) | 当前网页的安全级别。 |
 | [SiteIsolationMode](arkts-arkweb-webview-siteisolationmode-e.md) | 站点隔离机制将不同源的网站隔离在不同的渲染子进程中，减少跨域攻击面。例如，PC上原有进程模型是每一个Tab对应一个渲染子进程，站点隔离打开后，让不同源的Iframe运行在独立的渲染子进程中。 |

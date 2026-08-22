@@ -63,6 +63,17 @@ Compares this **Buffer** object with another object.
 ```TypeScript
 import { buffer } from '@kit.ArkTS';
 
+let buf1 = buffer.from('1234');
+let buf2 = buffer.from('0123');
+let res = buffer.compare(buf1, buf2);
+
+console.info(Number(res).toString());
+// Output: 1
+```
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
 let buf1 = buffer.from([1, 2, 3, 4, 5, 6, 7, 8, 9]);
 let buf2 = buffer.from([5, 6, 7, 8, 9, 1, 2, 3, 4]);
 
@@ -117,6 +128,10 @@ Compares buf with target and returns a number indicating whether buf comes befor
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range. It must be &gt;= 0 and &lt;= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
+
+**Examples**
+
+See [compare](#compare)
 
 ## copy
 
@@ -302,6 +317,16 @@ Fills this **Buffer** object at the specified position. By default, data is fill
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[offset/end]" is out of range. It must be &gt;= 0 and &lt;= [right range]. Received value is: [offset/end] |
 
+**Examples**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let b = buffer.allocUninitializedFromPool(50).fill('h');
+console.info(b.toString());
+// Output: hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+```
+
 ## includes
 
 ```TypeScript
@@ -332,6 +357,18 @@ Checks whether this **Buffer** object contains the specified value.
 | --- | --- |
 | boolean | Check result. The value **true** is returned if the object contains the specified value; otherwise, **false** is returned. |
 
+**Examples**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from('this is a buffer');
+console.info(buf.includes('this').toString());
+// Output: true
+console.info(buf.includes('be').toString());
+// Output: false
+```
+
 ## indexOf
 
 ```TypeScript
@@ -361,6 +398,18 @@ Obtains the index of the first occurrence of the specified value in this **Buffe
 | Type | Description |
 | --- | --- |
 | int | Index obtained. |
+
+**Examples**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from('this is a buffer');
+console.info(buf.indexOf('this').toString());
+// Output: 0
+console.info(buf.indexOf('is').toString());
+// Output: 2
+```
 
 ## keys
 
@@ -433,6 +482,18 @@ Obtains the index of the last occurrence of the specified value in this **Buffer
 | Type | Description |
 | --- | --- |
 | int | Index obtained. |
+
+**Examples**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from('this buffer is a buffer');
+console.info(buf.lastIndexOf('this').toString());
+// Output: 0
+console.info(buf.lastIndexOf('buffer').toString());
+// Output: 17
+```
 
 ## readBigInt64BE
 
@@ -1732,6 +1793,10 @@ Converts this Buffer instance into a JsonElement.
 | --- | --- |
 | jsonx.JsonElement | A new JsonElement containing the Buffer |
 
+**Examples**
+
+See [toJSON](#tojson)
+
 ## toString
 
 ```TypeScript
@@ -1799,6 +1864,10 @@ Decodes buf to a string according to the specified character encoding in encodin
 | --- | --- |
 | string |  |
 
+**Examples**
+
+See [toString](#tostring)
+
 ## toString
 
 ```TypeScript
@@ -1830,6 +1899,10 @@ Decodes buf to a string according to the specified character encoding in encodin
 | Type | Description |
 | --- | --- |
 | string |  |
+
+**Examples**
+
+See [toString](#tostring)
 
 ## values
 

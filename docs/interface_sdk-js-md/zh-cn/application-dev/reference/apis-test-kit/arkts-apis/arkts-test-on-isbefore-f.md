@@ -33,3 +33,21 @@ Requires that the target Component which is before another Component that specif
 | --- | --- |
 | [On](arkts-test-uitest-on-c.md) | this { |
 
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+// 使用静态构造器ON创建On对象，指定目标控件位于给出的特征属性控件之前。
+let on: On = ON.type('Button').isBefore(ON.text('123')); // 查找text为123之前的第一个Button组件。
+```
+
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+// 使用静态构造器BY创建by对象，指定目标控件位于给出的特征属性控件之前。
+let by: By = BY.type('Button').isBefore(BY.text('123')); // 查找text为123之前的第一个Button组件。
+```
+

@@ -341,7 +341,7 @@ levelOrder?: LevelOrder
 levelUniqueId?: int
 ```
 
-设置页面级弹窗需要显示的层级下的节点UniqueID，该ID可以通过[getUniqueId](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getuniqueid)获取。 <br/>取值范围：大于等于0的数字。&lt;br /&gt;**说明：** &lt;br /&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
+设置页面级弹窗需要显示的层级下的节点UniqueID，该ID可以通过[getUniqueId](arkts-framenode-c.md#getuniqueid)获取。 <br/>取值范围：大于等于0的数字。&lt;br /&gt;**说明：** &lt;br /&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
 **类型：** int
 

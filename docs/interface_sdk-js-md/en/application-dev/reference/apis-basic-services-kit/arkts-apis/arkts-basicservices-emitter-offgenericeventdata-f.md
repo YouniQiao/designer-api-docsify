@@ -25,7 +25,7 @@ Unsubscribes from an event with the specified event ID and processed by the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID. The value cannot be an empty string and exceed 10240 bytes. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to unregister. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to unregister. |
 
 **Examples**
 
@@ -50,5 +50,31 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 // Unregister the callbacks for events whose ID is eventId. The callback object must be the object used during registration.
 // If the callback handler has not been subscribed, no processing is performed.
 emitter.offGenericEventData("eventId", callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let emitter1 = new emitter.Emitter();
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  if (eventData?.data instanceof Sample) {
+    const sampleData = eventData.data as Sample;
+    sampleData.printCount();
+  }
+}
+
+emitter1.offGenericEventData("eventId", callback);
 ```
 

@@ -31,6 +31,147 @@ Constructor.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class WebObj {
+  constructor() {
+  }
+
+  webTest(): string {
+    console.info('Web test');
+    return "Web test";
+  }
+
+  webString(): void {
+    console.info('Web test toString');
+  }
+}
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State webTestObj: WebObj = new WebObj();
+
+  build() {
+    Column() {
+      Button('refresh')
+        .onClick(() => {
+          try {
+            this.controller.refresh();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('deleteJavaScriptRegister')
+        .onClick(() => {
+          try {
+            this.controller.deleteJavaScriptRegister("objTestName");
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: '', controller: this.controller })
+        .javaScriptAccess(true)
+        .onControllerAttached(() => {
+          this.controller.loadUrl($rawfile("index.html"));
+          this.controller.registerJavaScriptProxy(this.webTestObj, "objTestName", ["webTest", "webString"]);
+        })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { $rawfile, Web, Button, Column, State, Component, Entry } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class WebObj {
+  constructor() {
+  }
+
+  webTest(): string {
+    console.info('Web test');
+    return "Web test";
+  }
+
+  webString(): void {
+    console.info('Web test toString');
+  }
+}
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined)
+  @State webTestObj: WebObj = new WebObj();
+
+  build() {
+    Column() {
+      Button('refresh')
+        .onClick(() => {
+          try {
+            this.controller.refresh();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('deleteJavaScriptRegister')
+        .onClick(() => {
+          try {
+            this.controller.deleteJavaScriptRegister("objTestName");
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: '', controller: this.controller })
+        .javaScriptAccess(true)
+        .onControllerAttached(() => {
+          this.controller.loadUrl($rawfile("index.html"));
+          this.controller.registerJavaScriptProxy(this.webTestObj, "objTestName", ["webTest", "webString"]);
+        })
+    }
+  }
+}
+```
+
+加载的html文件。
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+    </head>
+    <body>
+      <button type="button" onclick="htmlTest()">Click Me!</button>
+      <p id="demo"></p>
+      <p id="webDemo"></p>
+      <script type="text/javascript">
+        function htmlTest() {
+          // This function call expects to return "Web test"
+          let webStr = objTestName.webTest();
+          document.getElementById("webDemo").innerHTML=webStr;
+          console.info('objTestName.webTest result:'+ webStr)
+        }
+      </script>
+    </body>
+</html>
+```
+
 ## getEncoding
 
 ```TypeScript
@@ -123,7 +264,7 @@ Get net error code.
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebNetErrorList](../../apis-arkweb/arkts-apis/arkts-arkweb-webneterrorlist-webneterrorlist-e.md) | Return response error code. |
+| [WebNetErrorList](../../apis-arkweb/arkts-apis/arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | Return response error code. |
 
 ## getStatus
 
@@ -190,6 +331,67 @@ Get the resolved URL after redirects or changed as a result of HSTS.
 | 类型 | 说明 |
 | --- | --- |
 | string | Return response url for redirects. |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getUrl')
+        .onClick(() => {
+          try {
+            let url = this.controller.getUrl();
+            console.info("url: " + url);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@ohos.base';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+
+  build() {
+    Column() {
+      Button('getUrl')
+        .onClick(() => {
+          try {
+            let url = this.controller.getUrl();
+            console.info("url: " + url);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## setEncoding
 
@@ -297,7 +499,7 @@ Set net error code.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | [WebNetErrorList](../../apis-arkweb/arkts-apis/arkts-arkweb-webneterrorlist-webneterrorlist-e.md) | 是 | Set net error code. |
+| code | [WebNetErrorList](../../apis-arkweb/arkts-apis/arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 是 | Set net error code. |
 
 **错误码：**
 

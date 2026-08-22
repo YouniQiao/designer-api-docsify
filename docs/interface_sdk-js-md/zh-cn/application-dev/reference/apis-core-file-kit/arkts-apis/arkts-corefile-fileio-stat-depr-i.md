@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [Stat](arkts-corefile-filefs-stat-i.md)
+**替代接口：** [Stat](arkts-corefile-file-fs-stat-i.md)
 
 <!--Device-unnamed-declare interface Stat--><!--Device-unnamed-declare interface Stat-End-->
 
@@ -29,7 +29,7 @@ isBlockDevice(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [isBlockDevice](arkts-corefile-filefs-stat-i.md#isblockdevice)
+**替代接口：** [isBlockDevice](arkts-corefile-file-fs-stat-i.md#isblockdevice)
 
 <!--Device-Stat-isBlockDevice(): boolean--><!--Device-Stat-isBlockDevice(): boolean-End-->
 
@@ -48,6 +48,11 @@ let filePath = pathDir + "/test.txt";
 let isBLockDevice = fileio.statSync(filePath).isBlockDevice();
 ```
 
+```TypeScript
+let dir = fileio.opendirSync(pathDir);
+let isBLockDevice = dir.readSync().isBlockDevice();
+```
+
 ## isCharacterDevice
 
 ```TypeScript
@@ -60,7 +65,7 @@ isCharacterDevice(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [isCharacterDevice](arkts-corefile-filefs-stat-i.md#ischaracterdevice)
+**替代接口：** [isCharacterDevice](arkts-corefile-file-fs-stat-i.md#ischaracterdevice)
 
 <!--Device-Stat-isCharacterDevice(): boolean--><!--Device-Stat-isCharacterDevice(): boolean-End-->
 
@@ -79,6 +84,11 @@ let filePath = pathDir + "/test.txt";
 let isCharacterDevice = fileio.statSync(filePath).isCharacterDevice();
 ```
 
+```TypeScript
+let dir = fileio.opendirSync(pathDir);
+let isCharacterDevice = dir.readSync().isCharacterDevice();
+```
+
 ## isDirectory
 
 ```TypeScript
@@ -91,7 +101,7 @@ isDirectory(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [isDirectory](arkts-corefile-filefs-stat-i.md#isdirectory)
+**替代接口：** [isDirectory](arkts-corefile-file-fs-stat-i.md#isdirectory)
 
 <!--Device-Stat-isDirectory(): boolean--><!--Device-Stat-isDirectory(): boolean-End-->
 
@@ -110,6 +120,11 @@ let dirPath = pathDir + "/test";
 let isDirectory = fileio.statSync(dirPath).isDirectory();
 ```
 
+```TypeScript
+let dir = fileio.opendirSync(pathDir);
+let isDirectory = dir.readSync().isDirectory();
+```
+
 ## isFIFO
 
 ```TypeScript
@@ -122,7 +137,7 @@ isFIFO(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [isFIFO](arkts-corefile-filefs-stat-i.md#isfifo)
+**替代接口：** [isFIFO](arkts-corefile-file-fs-stat-i.md#isfifo)
 
 <!--Device-Stat-isFIFO(): boolean--><!--Device-Stat-isFIFO(): boolean-End-->
 
@@ -141,6 +156,11 @@ let filePath = pathDir + "/test.txt";
 let isFIFO = fileio.statSync(filePath).isFIFO();
 ```
 
+```TypeScript
+let dir = fileio.opendirSync(pathDir);
+let isFIFO = dir.readSync().isFIFO();
+```
+
 ## isFile
 
 ```TypeScript
@@ -153,7 +173,7 @@ isFile(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [isFile](arkts-corefile-filefs-stat-i.md#isfile)
+**替代接口：** [isFile](arkts-corefile-file-fs-stat-i.md#isfile)
 
 <!--Device-Stat-isFile(): boolean--><!--Device-Stat-isFile(): boolean-End-->
 
@@ -172,6 +192,11 @@ let filePath = pathDir + "/test.txt";
 let isFile = fileio.statSync(filePath).isFile();
 ```
 
+```TypeScript
+let dir = fileio.opendirSync(pathDir);
+let isFile = dir.readSync().isFile();
+```
+
 ## isSocket
 
 ```TypeScript
@@ -184,7 +209,7 @@ isSocket(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [isSocket](arkts-corefile-filefs-stat-i.md#issocket)
+**替代接口：** [isSocket](arkts-corefile-file-fs-stat-i.md#issocket)
 
 <!--Device-Stat-isSocket(): boolean--><!--Device-Stat-isSocket(): boolean-End-->
 
@@ -203,6 +228,11 @@ let filePath = pathDir + "/test.txt";
 let isSocket = fileio.statSync(filePath).isSocket();
 ```
 
+```TypeScript
+let dir = fileio.opendirSync(pathDir);
+let isSocket = dir.readSync().isSocket();
+```
+
 ## isSymbolicLink
 
 ```TypeScript
@@ -215,7 +245,7 @@ isSymbolicLink(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [isSymbolicLink](arkts-corefile-filefs-stat-i.md#issymboliclink)
+**替代接口：** [isSymbolicLink](arkts-corefile-file-fs-stat-i.md#issymboliclink)
 
 <!--Device-Stat-isSymbolicLink(): boolean--><!--Device-Stat-isSymbolicLink(): boolean-End-->
 
@@ -234,6 +264,11 @@ let filePath = pathDir + "/test";
 let isSymbolicLink = fileio.statSync(filePath).isSymbolicLink();
 ```
 
+```TypeScript
+let dir = fileio.opendirSync(pathDir);
+let isSymbolicLink = dir.readSync().isSymbolicLink();
+```
+
 ## atime
 
 ```TypeScript
@@ -248,7 +283,7 @@ readonly atime: number
 
 **废弃版本：** 9
 
-**替代接口：** [atime](arkts-corefile-filefs-stat-i.md#atime)
+**替代接口：** [atime](arkts-corefile-file-fs-stat-i.md#atime)
 
 <!--Device-Stat-readonly atime: number--><!--Device-Stat-readonly atime: number-End-->
 
@@ -286,7 +321,7 @@ readonly ctime: number
 
 **废弃版本：** 9
 
-**替代接口：** [ctime](arkts-corefile-filefs-stat-i.md#ctime)
+**替代接口：** [ctime](arkts-corefile-file-fs-stat-i.md#ctime)
 
 <!--Device-Stat-readonly ctime: number--><!--Device-Stat-readonly ctime: number-End-->
 
@@ -324,7 +359,7 @@ readonly gid: number
 
 **废弃版本：** 9
 
-**替代接口：** [gid](arkts-corefile-filefs-stat-i.md#gid)
+**替代接口：** [gid](arkts-corefile-file-fs-stat-i.md#gid)
 
 <!--Device-Stat-readonly gid: number--><!--Device-Stat-readonly gid: number-End-->
 
@@ -364,7 +399,7 @@ readonly mode: number
 
 **废弃版本：** 9
 
-**替代接口：** [mode](arkts-corefile-filefs-stat-i.md#mode)
+**替代接口：** [mode](arkts-corefile-file-fs-stat-i.md#mode)
 
 <!--Device-Stat-readonly mode: number--><!--Device-Stat-readonly mode: number-End-->
 
@@ -384,7 +419,7 @@ readonly mtime: number
 
 **废弃版本：** 9
 
-**替代接口：** [mtime](arkts-corefile-filefs-stat-i.md#mtime)
+**替代接口：** [mtime](arkts-corefile-file-fs-stat-i.md#mtime)
 
 <!--Device-Stat-readonly mtime: number--><!--Device-Stat-readonly mtime: number-End-->
 
@@ -440,7 +475,7 @@ readonly size: number
 
 **废弃版本：** 9
 
-**替代接口：** [size](arkts-corefile-filefs-stat-i.md#size)
+**替代接口：** [size](arkts-corefile-file-fs-stat-i.md#size)
 
 <!--Device-Stat-readonly size: number--><!--Device-Stat-readonly size: number-End-->
 
@@ -460,7 +495,7 @@ readonly uid: number
 
 **废弃版本：** 9
 
-**替代接口：** [uid](arkts-corefile-filefs-stat-i.md#uid)
+**替代接口：** [uid](arkts-corefile-file-fs-stat-i.md#uid)
 
 <!--Device-Stat-readonly uid: number--><!--Device-Stat-readonly uid: number-End-->
 

@@ -16,3 +16,7 @@ Called when auto-save is successful.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
+**Examples**
+
+See [AutoSaveCallback.onFailure](arkts-ability-autofillmanager-onfailurefn-t.md).
+

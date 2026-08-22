@@ -114,6 +114,30 @@ Detailed message that describes the reason for the ability launch.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## launchUptime
+
+```TypeScript
+launchUptime?: long
+```
+
+System uptime (the time elapsed since the system booted up) when the UIAbility starts, in milliseconds.
+
+**Constraints**:
+
+This feature takes effect only when the UIAbility is started. For other types of abilities (for example, UIExtensionAbility), the obtained start time is the default value **0**.
+
+**Type:** long
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-LaunchParam-launchUptime?: long--><!--Device-LaunchParam-launchUptime?: long-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
 ## launchUTCTime
 
 ```TypeScript
@@ -137,30 +161,6 @@ This feature takes effect only when the UIAbility is started. For other types of
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LaunchParam-launchUTCTime?: long--><!--Device-LaunchParam-launchUTCTime?: long-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-## launchUptime
-
-```TypeScript
-launchUptime?: long
-```
-
-System uptime (the time elapsed since the system booted up) when the UIAbility starts, in milliseconds.
-
-**Constraints**:
-
-This feature takes effect only when the UIAbility is started. For other types of abilities (for example, UIExtensionAbility), the obtained start time is the default value **0**.
-
-**Type:** long
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-LaunchParam-launchUptime?: long--><!--Device-LaunchParam-launchUptime?: long-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

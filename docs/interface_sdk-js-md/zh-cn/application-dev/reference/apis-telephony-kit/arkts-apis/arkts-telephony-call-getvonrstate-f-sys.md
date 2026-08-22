@@ -58,6 +58,17 @@ call.getVoNRState(slotId, (err: BusinessError, data: call.VoNRState) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+call.getVoNRState(slotId).then((data: call.VoNRState) => {
+    console.info(`getVoNRState success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getVoNRState fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getVoNRState
 
@@ -103,14 +114,5 @@ function getVoNRState(slotId: int): Promise<VoNRState>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-call.getVoNRState(slotId).then((data: call.VoNRState) => {
-    console.info(`getVoNRState success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getVoNRState fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [getVoNRState](#getvonrstate)
 

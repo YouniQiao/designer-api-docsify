@@ -58,6 +58,22 @@ audio.createAudioLoopback(audio.AudioLoopbackMode.HARDWARE).then((data) => {
 });
 ```
 
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let audioLoopback: audio.AudioLoopback;
+
+audio.createAudioLoopback(audio.AudioLoopbackMode.HARDWARE).then((data) => {
+  if (data != null) {
+    audioLoopback = data;
+    console.info('AudioLoopback Created : SUCCESS');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`AudioLoopback Created : ERROR : ${err}`);
+});
+```
+
 
 ## createAudioLoopback
 
@@ -94,19 +110,5 @@ Creates an &lt;b&gt;AudioLoopback&lt;/b&gt; instance, which provides low-latency
 
 **示例**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let audioLoopback: audio.AudioLoopback;
-
-audio.createAudioLoopback(audio.AudioLoopbackMode.HARDWARE).then((data) => {
-  if (data != null) {
-    audioLoopback = data;
-    console.info('AudioLoopback Created : SUCCESS');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`AudioLoopback Created : ERROR : ${err}`);
-});
-```
+参见 [createAudioLoopback](#createaudioloopback)
 

@@ -82,6 +82,36 @@ let panelRect: inputMethodEngine.PanelRect = {
 panel.adjustPanelRect(panelFlag, panelRect);
 ```
 
+```TypeScript
+import { window } from '@kit.ArkUI';
+
+let landscapeRect1: window.Rect = {
+  left: 300,
+  top: 650,
+  width: 2000,
+  height: 500
+};
+let landscapeInputRegion: Array<window.Rect> = [landscapeRect1];
+
+let portraitRect1: window.Rect = {
+  left: 0,
+  top: 1800,
+  width: 1200,
+  height: 800
+}
+let portraitInputRegion: Array<window.Rect> = [portraitRect1];
+
+let panelFlag: inputMethodEngine.PanelFlag = inputMethodEngine.PanelFlag.FLG_FIXED;
+let panelRect: inputMethodEngine.EnhancedPanelRect = {
+  landscapeAvoidY: 650,
+  landscapeInputRegion: landscapeInputRegion,
+  portraitAvoidY: 1800,
+  portraitInputRegion: portraitInputRegion,
+  fullScreenMode: true
+};
+panel.adjustPanelRect(panelFlag, panelRect);
+```
+
 ## adjustPanelRect
 
 ```TypeScript
@@ -126,35 +156,7 @@ adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 
 **Examples**
 
-```TypeScript
-import { window } from '@kit.ArkUI';
-
-let landscapeRect1: window.Rect = {
-  left: 300,
-  top: 650,
-  width: 2000,
-  height: 500
-};
-let landscapeInputRegion: Array<window.Rect> = [landscapeRect1];
-
-let portraitRect1: window.Rect = {
-  left: 0,
-  top: 1800,
-  width: 1200,
-  height: 800
-}
-let portraitInputRegion: Array<window.Rect> = [portraitRect1];
-
-let panelFlag: inputMethodEngine.PanelFlag = inputMethodEngine.PanelFlag.FLG_FIXED;
-let panelRect: inputMethodEngine.EnhancedPanelRect = {
-  landscapeAvoidY: 650,
-  landscapeInputRegion: landscapeInputRegion,
-  portraitAvoidY: 1800,
-  portraitInputRegion: portraitInputRegion,
-  fullScreenMode: true
-};
-panel.adjustPanelRect(panelFlag, panelRect);
-```
+See [adjustPanelRect](#adjustpanelrect)
 
 ## changeFlag
 
@@ -345,6 +347,10 @@ getSystemPanelCurrentInsets(displayId: long): Promise<SystemPanelInsets | null>
 | [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. Possible causes: 1. Current panel's type is not SOFT_KEYBOARD. 2. Panel's flag is not FLG_FIXED or FLG_FLOATING. |
 | [12800022](../errorcode-inputmethod-framework.md#12800022-invalid-displayid) | invalid displayId. |
 
+**Examples**
+
+See [getSystemPanelCurrentInsets](#getsystempanelcurrentinsets)
+
 ## hide
 
 ```TypeScript
@@ -363,7 +369,7 @@ hide(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -376,6 +382,38 @@ panel.hide((err: BusinessError) => {
     return;
   }
   console.info('Succeeded in hiding the panel.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+panel.hide().then(() => {
+  console.info('Succeeded in hiding the panel.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to hide panel. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+keyboardController.hide((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to hide. Code:${err.code}, message:${err.message}`);
+    return;
+  }
+  console.info('Succeeded in hiding keyboard.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+keyboardController.hide().then(() => {
+  console.info('Succeeded in hiding keyboard.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to hide. Code:${err.code}, message:${err.message}`);
 });
 ```
 
@@ -401,15 +439,7 @@ hide(): Promise<void>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-panel.hide().then(() => {
-  console.info('Succeeded in hiding the panel.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to hide panel. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [hide](#hide)
 
 ## moveTo
 
@@ -431,7 +461,7 @@ moveTo(x: int, y: int, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | x | int | Yes | Distance to move along the horizontal axis, in px. A positive value indicates moving rightwards. The value must be an integer. |
 | y | int | Yes | Distance to move along the vertical axis, in px. A positive value indicates moving downwards. The value must be an integer. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -450,6 +480,16 @@ panel.moveTo(300, 300, (err: BusinessError) => {
     return;
   }
   console.info('Succeeded in moving the panel.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+panel.moveTo(300, 300).then(() => {
+  console.info('Succeeded in moving the panel.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to move panel. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -488,75 +528,7 @@ moveTo(x: int, y: int): Promise<void>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-panel.moveTo(300, 300).then(() => {
-  console.info('Succeeded in moving the panel.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to move panel. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-## offHide
-
-```TypeScript
-offHide(callback?: Callback<void>): void
-```
-
-@brief Unregisters panel hide event.
-
-**Since:** 23
-
-<!--Device-Panel-offHide(callback?: Callback<void>): void--><!--Device-Panel-offHide(callback?: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | the callback to Unregister. |
-
-## offShow
-
-```TypeScript
-offShow(callback?: Callback<void>): void
-```
-
-Unregisters panel show event.
-
-**Since:** 23
-
-<!--Device-Panel-offShow(callback?: Callback<void>): void--><!--Device-Panel-offShow(callback?: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | optional, the callback called when the panel shows. |
-
-## offSizeChange
-
-```TypeScript
-offSizeChange(callback?: SizeChangeCallback): void
-```
-
-@brief Unsubscribe 'sizeChange' event. <br> <br><p>It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.</p>
-
-**Since:** 23
-
-<!--Device-Panel-offSizeChange(callback?: SizeChangeCallback): void--><!--Device-Panel-offSizeChange(callback?: SizeChangeCallback): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | SizeChangeCallback | No | optional, the callback called when the panel size changes. |
+See [moveTo](#moveto)
 
 ## off('hide')
 
@@ -668,17 +640,17 @@ panel.off('sizeChange', (windowSize: window.Size) => {
 });
 ```
 
-## onHide
+## offHide
 
 ```TypeScript
-onHide(callback: Callback<void>): void
+offHide(callback?: Callback<void>): void
 ```
 
-Registers panel hide event. <br> <br><p>The "hide" events are triggered when the panel is hidden.</p>
+@brief Unregisters panel hide event.
 
 **Since:** 23
 
-<!--Device-Panel-onHide(callback: Callback<void>): void--><!--Device-Panel-onHide(callback: Callback<void>): void-End-->
+<!--Device-Panel-offHide(callback?: Callback<void>): void--><!--Device-Panel-offHide(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -686,19 +658,19 @@ Registers panel hide event. <br> <br><p>The "hide" events are triggered when the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when the panel hides. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the callback to Unregister. |
 
-## onShow
+## offShow
 
 ```TypeScript
-onShow(callback: Callback<void>): void
+offShow(callback?: Callback<void>): void
 ```
 
-@brief Registers panel show event. <br> <br><p>The "show" events are triggered when the panel is shown.</p>
+Unregisters panel show event.
 
 **Since:** 23
 
-<!--Device-Panel-onShow(callback: Callback<void>): void--><!--Device-Panel-onShow(callback: Callback<void>): void-End-->
+<!--Device-Panel-offShow(callback?: Callback<void>): void--><!--Device-Panel-offShow(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -706,19 +678,19 @@ onShow(callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when the panel shows. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | optional, the callback called when the panel shows. |
 
-## onSizeChange
+## offSizeChange
 
 ```TypeScript
-onSizeChange(callback: SizeChangeCallback): void
+offSizeChange(callback?: SizeChangeCallback): void
 ```
 
-@brief Subscribe 'sizeChange' event. <br> <br><p>It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.</p>
+@brief Unsubscribe 'sizeChange' event. <br> <br><p>It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.</p>
 
 **Since:** 23
 
-<!--Device-Panel-onSizeChange(callback: SizeChangeCallback): void--><!--Device-Panel-onSizeChange(callback: SizeChangeCallback): void-End-->
+<!--Device-Panel-offSizeChange(callback?: SizeChangeCallback): void--><!--Device-Panel-offSizeChange(callback?: SizeChangeCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -726,7 +698,7 @@ onSizeChange(callback: SizeChangeCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | SizeChangeCallback | Yes | the callback called when the panel size changes. |
+| callback | SizeChangeCallback | No | optional, the callback called when the panel size changes. |
 
 ## on('hide')
 
@@ -837,6 +809,66 @@ panel.on('sizeChange', (windowSize: window.Size, keyboardArea: inputMethodEngine
 });
 ```
 
+## onHide
+
+```TypeScript
+onHide(callback: Callback<void>): void
+```
+
+Registers panel hide event. <br> <br><p>The "hide" events are triggered when the panel is hidden.</p>
+
+**Since:** 23
+
+<!--Device-Panel-onHide(callback: Callback<void>): void--><!--Device-Panel-onHide(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when the panel hides. |
+
+## onShow
+
+```TypeScript
+onShow(callback: Callback<void>): void
+```
+
+@brief Registers panel show event. <br> <br><p>The "show" events are triggered when the panel is shown.</p>
+
+**Since:** 23
+
+<!--Device-Panel-onShow(callback: Callback<void>): void--><!--Device-Panel-onShow(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when the panel shows. |
+
+## onSizeChange
+
+```TypeScript
+onSizeChange(callback: SizeChangeCallback): void
+```
+
+@brief Subscribe 'sizeChange' event. <br> <br><p>It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.</p>
+
+**Since:** 23
+
+<!--Device-Panel-onSizeChange(callback: SizeChangeCallback): void--><!--Device-Panel-onSizeChange(callback: SizeChangeCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | SizeChangeCallback | Yes | the callback called when the panel size changes. |
+
 ## resize
 
 ```TypeScript
@@ -866,7 +898,7 @@ resize(width: long, height: long, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | width | long | Yes | Target width of the panel, in px. The value is an integer greater than or equal to 0, and cannot be greater than the screen width. |
 | height | long | Yes | Target height of the panel, in px. The value is an integer greater than or equal to 0, and cannot be greater than 0.7 times the screen height. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -885,6 +917,16 @@ panel.resize(500, 1000, (err: BusinessError) => {
     return;
   }
   console.info('Succeeded in changing the panel size.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+panel.resize(500, 1000).then(() => {
+  console.info('Succeeded in changing the panel size.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to resize panel. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -932,15 +974,7 @@ resize(width: long, height: long): Promise<void>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-panel.resize(500, 1000).then(() => {
-  console.info('Succeeded in changing the panel size.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to resize panel. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [resize](#resize)
 
 ## setImmersiveEffect
 
@@ -1170,7 +1204,7 @@ setUiContent(path: string, callback: AsyncCallback<void>): void
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the page from which the content will be loaded. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1189,6 +1223,42 @@ panel.setUiContent('pages/page2/page2', (err: BusinessError) => {
     return;
   }
   console.info('Succeeded in setting the content.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+panel.setUiContent('pages/page2/page2').then(() => {
+  console.info('Succeeded in setting the content.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to setUiContent. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let storage: LocalStorage = new LocalStorage();
+storage.setOrCreate('storageSimpleProp', 121);
+panel.setUiContent('pages/page2/page2', storage, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to setUiContent. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the content.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let storage: LocalStorage = new LocalStorage();
+storage.setOrCreate('storageSimpleProp', 121);
+panel.setUiContent('pages/page2/page2', storage).then(() => {
+  console.info('Succeeded in setting the content.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to setUiContent. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -1226,15 +1296,7 @@ setUiContent(path: string): Promise<void>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-panel.setUiContent('pages/page2/page2').then(() => {
-  console.info('Succeeded in setting the content.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to setUiContent. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [setUiContent](#setuicontent)
 
 ## setUiContent
 
@@ -1256,7 +1318,7 @@ setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>)
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the page linked to LocalStorage. |
 | storage | LocalStorage | Yes | Storage unit that provides storage for mutable and immutable state variables in the application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1266,19 +1328,7 @@ setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>)
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let storage: LocalStorage = new LocalStorage();
-storage.setOrCreate('storageSimpleProp', 121);
-panel.setUiContent('pages/page2/page2', storage, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to setUiContent. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the content.');
-});
-```
+See [setUiContent](#setuicontent)
 
 ## setUiContent
 
@@ -1315,17 +1365,7 @@ setUiContent(path: string, storage: LocalStorage): Promise<void>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let storage: LocalStorage = new LocalStorage();
-storage.setOrCreate('storageSimpleProp', 121);
-panel.setUiContent('pages/page2/page2', storage).then(() => {
-  console.info('Succeeded in setting the content.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to setUiContent. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [setUiContent](#setuicontent)
 
 ## show
 
@@ -1345,7 +1385,7 @@ show(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -1358,6 +1398,16 @@ panel.show((err: BusinessError) => {
     return;
   }
   console.info('Succeeded in showing the panel.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+panel.show().then(() => {
+  console.info('Succeeded in showing the panel.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to show panel. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -1383,15 +1433,7 @@ show(): Promise<void>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-panel.show().then(() => {
-  console.info('Succeeded in showing the panel.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to show panel. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [show](#show)
 
 ## startMoving
 

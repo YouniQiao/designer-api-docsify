@@ -32,7 +32,7 @@ Unregister application state observer.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | observerId | number | Yes | Indicates the number code of the observer. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Represents the specified callback method. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Represents the specified callback method. |
 
 **Examples**
 
@@ -50,6 +50,21 @@ function unregisterApplicationStateObserverCallback(err: BusinessError) {
 }
 
 appManager.unregisterApplicationStateObserver(observerId, unregisterApplicationStateObserverCallback);
+```
+
+```TypeScript
+import appManager from '@ohos.application.appManager';
+import { BusinessError } from '@ohos.base';
+
+let observerId = 100;
+
+appManager.unregisterApplicationStateObserver(observerId)
+.then((data) => {
+    console.info(`unregisterApplicationStateObserver success, data: ${data}.`);
+})
+.catch((err: BusinessError) => {
+    console.error(`unregisterApplicationStateObserver failed, err code: ${err.code}, err msg: ${err.message}.`);
+});
 ```
 
 
@@ -89,18 +104,5 @@ Unregister application state observer.
 
 **Examples**
 
-```TypeScript
-import appManager from '@ohos.application.appManager';
-import { BusinessError } from '@ohos.base';
-
-let observerId = 100;
-
-appManager.unregisterApplicationStateObserver(observerId)
-.then((data) => {
-    console.info(`unregisterApplicationStateObserver success, data: ${data}.`);
-})
-.catch((err: BusinessError) => {
-    console.error(`unregisterApplicationStateObserver failed, err code: ${err.code}, err msg: ${err.message}.`);
-});
-```
+See [unregisterApplicationStateObserver](#unregisterapplicationstateobserver)
 

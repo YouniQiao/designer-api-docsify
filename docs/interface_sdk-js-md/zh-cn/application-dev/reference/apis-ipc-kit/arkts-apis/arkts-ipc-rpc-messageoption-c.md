@@ -43,8 +43,76 @@ MessageOption构造函数。
 import { rpc } from '@kit.IPCKit';
 
 class TestRemoteObject extends rpc.MessageOption {
+  constructor(async: boolean) {
+    super(async);
+  }
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+
+class TestRemoteObject extends rpc.MessageOption {
   constructor(syncFlags?: number, waitTime?: number) {
     super(syncFlags, waitTime);
+  }
+}
+```
+
+```TypeScript
+// ArkTS-Sta示例
+import rpc from '@ohos.rpc';
+import hilog from 'ohos.hilog';
+import { BusinessError } from '@ohos.base';
+
+class TestRemoteObject extends rpc.MessageOption {
+  constructor(isAsync: boolean) {
+    super(isAsync);
+  }
+}
+```
+
+```TypeScript
+// ArkTS-Sta示例
+import { rpc } from '@kit.IPCKit';
+
+class TestRemoteObject extends rpc.MessageOption {
+  constructor() {
+    super();
+  }
+}
+```
+
+```TypeScript
+// ArkTS-Sta示例
+import { rpc } from '@kit.IPCKit';
+
+class TestRemoteObject extends rpc.MessageOption {
+  constructor(syncFlags: int) {
+    super(syncFlags);
+  }
+}
+```
+
+```TypeScript
+// ArkTS-Sta示例
+import rpc from '@ohos.rpc';
+import hilog from 'ohos.hilog';
+import { BusinessError } from '@ohos.base';
+
+class TestRemoteObject extends rpc.MessageOption {
+  constructor(syncFlags: int, waitTime: int) {
+    super(syncFlags, waitTime);
+  }
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
   }
 }
 ```
@@ -73,15 +141,7 @@ MessageOption构造函数。
 
 **示例**
 
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-
-class TestRemoteObject extends rpc.MessageOption {
-  constructor(async: boolean) {
-    super(async);
-  }
-}
-```
+参见 [constructor](#constructor)
 
 ## constructor
 
@@ -105,18 +165,7 @@ MessageOption构造函数。
 
 **示例**
 
-```TypeScript
-// ArkTS-Sta示例
-import rpc from '@ohos.rpc';
-import hilog from 'ohos.hilog';
-import { BusinessError } from '@ohos.base';
-
-class TestRemoteObject extends rpc.MessageOption {
-  constructor(isAsync: boolean) {
-    super(isAsync);
-  }
-}
-```
+参见 [constructor](#constructor)
 
 ## constructor
 
@@ -134,16 +183,7 @@ MessageOption构造函数。
 
 **示例**
 
-```TypeScript
-// ArkTS-Sta示例
-import { rpc } from '@kit.IPCKit';
-
-class TestRemoteObject extends rpc.MessageOption {
-  constructor() {
-    super();
-  }
-}
-```
+参见 [constructor](#constructor)
 
 ## constructor
 
@@ -167,16 +207,7 @@ MessageOption构造函数。
 
 **示例**
 
-```TypeScript
-// ArkTS-Sta示例
-import { rpc } from '@kit.IPCKit';
-
-class TestRemoteObject extends rpc.MessageOption {
-  constructor(syncFlags: int) {
-    super(syncFlags);
-  }
-}
-```
+参见 [constructor](#constructor)
 
 ## constructor
 
@@ -201,18 +232,7 @@ MessageOption构造函数。
 
 **示例**
 
-```TypeScript
-// ArkTS-Sta示例
-import rpc from '@ohos.rpc';
-import hilog from 'ohos.hilog';
-import { BusinessError } from '@ohos.base';
-
-class TestRemoteObject extends rpc.MessageOption {
-  constructor(syncFlags: int, waitTime: int) {
-    super(syncFlags, waitTime);
-  }
-}
-```
+参见 [constructor](#constructor)
 
 ## getFlags
 

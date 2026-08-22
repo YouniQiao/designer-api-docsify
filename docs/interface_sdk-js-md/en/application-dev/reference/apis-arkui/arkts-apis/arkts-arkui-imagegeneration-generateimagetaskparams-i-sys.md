@@ -42,28 +42,6 @@ the number of AI-generated image in one task.
 
 **System API:** This is a system API.
 
-## imageSize
-
-```TypeScript
-imageSize: image.Size
-```
-
-the size information of AI-generated image in one task.
-
-**Type:** image.Size
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GenerateImageTaskParams-imageSize: image.Size--><!--Device-GenerateImageTaskParams-imageSize: image.Size-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**System API:** This is a system API.
-
 ## images
 
 ```TypeScript
@@ -81,6 +59,28 @@ image information used for AI-generated image tasks.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GenerateImageTaskParams-images: Array<ImageItem>--><!--Device-GenerateImageTaskParams-images: Array<ImageItem>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## imageSize
+
+```TypeScript
+imageSize: image.Size
+```
+
+the size information of AI-generated image in one task.
+
+**Type:** image.Size
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GenerateImageTaskParams-imageSize: image.Size--><!--Device-GenerateImageTaskParams-imageSize: image.Size-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

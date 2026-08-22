@@ -47,7 +47,7 @@ function switchCurrentInputMethodAndSubtype(
 | --- | --- | --- | --- |
 | inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | Target input method. |
 | inputMethodSubtype | [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | Yes | Target input method subtype. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -76,6 +76,23 @@ inputMethod.switchCurrentInputMethodAndSubtype(currentIme, imSubType, (err: Busi
   } else {
     console.error('Failed to switchCurrentInputMethodAndSubtype.');
   }
+});
+```
+
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
+let imSubType: InputMethodSubtype = inputMethod.getCurrentInputMethodSubtype();
+inputMethod.switchCurrentInputMethodAndSubtype(currentIme, imSubType).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in switching currentInputMethodAndSubtype.');
+  } else {
+    console.error('Failed to switchCurrentInputMethodAndSubtype.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to switchCurrentInputMethodAndSubtype, code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -133,20 +150,5 @@ function switchCurrentInputMethodAndSubtype(
 
 **Examples**
 
-```TypeScript
-import { InputMethodSubtype } from '@kit.IMEKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
-let imSubType: InputMethodSubtype = inputMethod.getCurrentInputMethodSubtype();
-inputMethod.switchCurrentInputMethodAndSubtype(currentIme, imSubType).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in switching currentInputMethodAndSubtype.');
-  } else {
-    console.error('Failed to switchCurrentInputMethodAndSubtype.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to switchCurrentInputMethodAndSubtype, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [switchCurrentInputMethodAndSubtype](#switchcurrentinputmethodandsubtype)
 

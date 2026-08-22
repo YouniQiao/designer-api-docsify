@@ -72,6 +72,31 @@ commonEventManager.removeStickyCommonEvent('sticky_event', (err: BusinessError |
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+commonEventManager.removeStickyCommonEvent('sticky_event').then(() => {
+  console.info(`removeStickyCommonEvent success`);
+}).catch ((err: BusinessError) => {
+  console.error(`removeStickyCommonEvent failed, errCode: ${err.code}, errMes: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+commonEventManager.removeStickyCommonEvent('sticky_event').then(() => {
+  console.info(`removeStickyCommonEvent success`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`removeStickyCommonEvent failed, errCode: ${error.code}, errMes: ${error.message}`);
+});
+```
+
 
 ## removeStickyCommonEvent
 
@@ -116,28 +141,5 @@ function removeStickyCommonEvent(event: string): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-commonEventManager.removeStickyCommonEvent('sticky_event').then(() => {
-  console.info(`removeStickyCommonEvent success`);
-}).catch ((err: BusinessError) => {
-  console.error(`removeStickyCommonEvent failed, errCode: ${err.code}, errMes: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-commonEventManager.removeStickyCommonEvent('sticky_event').then(() => {
-  console.info(`removeStickyCommonEvent success`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`removeStickyCommonEvent failed, errCode: ${error.code}, errMes: ${error.message}`);
-});
-```
+参见 [removeStickyCommonEvent](#removestickycommonevent)
 

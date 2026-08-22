@@ -67,6 +67,25 @@ screen.makeExpand(expandOptionArray, (err: BusinessError, data: number) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class ExpandOption {
+  screenId: number = 0;
+  startX: number = 0;
+  startY: number = 0;
+}
+let mainScreenOption: ExpandOption = { screenId: 0, startX: 0, startY: 0 };
+let otherScreenOption: ExpandOption = { screenId: 1, startX: 1080, startY: 0 };
+let expandOptionArray : ExpandOption[] = [ mainScreenOption, otherScreenOption ];
+// 将屏幕设置为扩展模式
+screen.makeExpand(expandOptionArray).then((data: number) => {
+  console.info(`Succeeded in expanding the screen. Data: ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to expand the screen. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## makeExpand
 
@@ -108,22 +127,5 @@ function makeExpand(options:Array<ExpandOption>): Promise<long>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class ExpandOption {
-  screenId: number = 0;
-  startX: number = 0;
-  startY: number = 0;
-}
-let mainScreenOption: ExpandOption = { screenId: 0, startX: 0, startY: 0 };
-let otherScreenOption: ExpandOption = { screenId: 1, startX: 1080, startY: 0 };
-let expandOptionArray : ExpandOption[] = [ mainScreenOption, otherScreenOption ];
-// 将屏幕设置为扩展模式
-screen.makeExpand(expandOptionArray).then((data: number) => {
-  console.info(`Succeeded in expanding the screen. Data: ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to expand the screen. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [makeExpand](#makeexpand)
 

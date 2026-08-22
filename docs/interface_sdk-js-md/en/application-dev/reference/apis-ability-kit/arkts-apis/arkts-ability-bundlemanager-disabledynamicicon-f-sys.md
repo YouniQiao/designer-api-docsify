@@ -67,6 +67,26 @@ try {
 }
 ```
 
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName: string = 'com.ohos.demo';
+let option: bundleManager.BundleOptions = { 'userId': 100, 'appIndex': 0 };
+
+try {
+  bundleManager.disableDynamicIcon(bundleName, option).then(() => {
+    hilog.info(0x0000, 'testTag', 'disableDynamicIcon successfully');
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'disableDynamicIcon failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'disableDynamicIcon failed. Cause: %{public}s', message);
+}
+```
+
 
 ## disableDynamicIcon
 
@@ -116,23 +136,5 @@ To disable the dynamic icon for another user, you must request the ohos.permissi
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName: string = 'com.ohos.demo';
-let option: bundleManager.BundleOptions = { 'userId': 100, 'appIndex': 0 };
-
-try {
-  bundleManager.disableDynamicIcon(bundleName, option).then(() => {
-    hilog.info(0x0000, 'testTag', 'disableDynamicIcon successfully');
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'disableDynamicIcon failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'disableDynamicIcon failed. Cause: %{public}s', message);
-}
-```
+See [disableDynamicIcon](#disabledynamicicon)
 

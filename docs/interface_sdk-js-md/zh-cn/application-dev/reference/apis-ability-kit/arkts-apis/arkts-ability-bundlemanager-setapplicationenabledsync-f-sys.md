@@ -58,6 +58,26 @@ try {
 }
 ```
 
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+// 需要替换为要设置的应用Bundle名称、应用索引、是否启用应用和禁用应用时是否退出应用进程
+let bundleName = 'com.example.myapplication';
+let appIndex = 0;
+let isEnabled = true;
+let killProcess = false;
+
+try {
+  bundleManager.setApplicationEnabledSync(bundleName, appIndex, isEnabled, killProcess);
+  hilog.info(0x0000, 'testTag', 'setApplicationEnabledSync successfully');
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'setApplicationEnabledSync failed: %{public}s', message);
+}
+```
+
 
 ## setApplicationEnabledSync
 
@@ -99,23 +119,5 @@ function setApplicationEnabledSync(bundleName: string, appIndex: int, isEnabled:
 
 **示例**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-// 需要替换为要设置的应用Bundle名称、应用索引、是否启用应用和禁用应用时是否退出应用进程
-let bundleName = 'com.example.myapplication';
-let appIndex = 0;
-let isEnabled = true;
-let killProcess = false;
-
-try {
-  bundleManager.setApplicationEnabledSync(bundleName, appIndex, isEnabled, killProcess);
-  hilog.info(0x0000, 'testTag', 'setApplicationEnabledSync successfully');
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'setApplicationEnabledSync failed: %{public}s', message);
-}
-```
+参见 [setApplicationEnabledSync](#setapplicationenabledsync)
 

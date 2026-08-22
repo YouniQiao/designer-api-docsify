@@ -35,6 +35,27 @@ Removes a directory. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let dirPath = pathDir + '/testDir';
+fileio.rmdir(dirPath).then(() => {
+  console.info("rmdir succeed");
+}).catch((err: BusinessError) => {
+  console.error("rmdir failed with error:" + err);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let dirPath = pathDir + '/testDir';
+fileio.rmdir(dirPath, (err: BusinessError) => {
+  // Do something.
+  console.info("rmdir succeed");
+});
+```
+
 
 ## rmdir
 
@@ -59,5 +80,9 @@ Removes a directory. This API uses an asynchronous callback to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked when a directory is removed asynchronously. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when a directory is removed asynchronously. |
+
+**Examples**
+
+See [rmdir](#rmdir)
 

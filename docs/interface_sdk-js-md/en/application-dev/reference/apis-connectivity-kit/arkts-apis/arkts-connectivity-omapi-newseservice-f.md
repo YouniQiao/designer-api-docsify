@@ -36,7 +36,7 @@ The returned **SEService** instance is available only when **true** is returned 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceState' | Yes | Type of the SE service to create. It has a fixed value of **'serviceState'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ServiceState](arkts-connectivity-omapi-servicestate-e.md)&gt; | Yes | Callback used to return the SE service state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceState](arkts-connectivity-omapi-servicestate-e.md)&gt; | Yes | Callback used to return the SE service state. |
 
 **Return value:**
 

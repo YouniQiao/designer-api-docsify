@@ -64,6 +64,30 @@ featureAbility.startAbility(
 );
 ```
 
+```TypeScript
+import { featureAbility, wantConstant } from '@kit.AbilityKit';
+
+// 启动新的Ability
+featureAbility.startAbility(
+  {
+    want:
+    {
+      action: 'ohos.want.action.home',
+      entities: ['entity.system.home'],
+      type: 'MIMETYPE',
+      flags: wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION,
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      /* FA模型中abilityName由package + Ability name组成 */
+      abilityName: 'com.example.myapplication.secondAbility',
+      uri: ''
+    },
+  }
+).then((data) => {
+  console.info(`startAbility data: ${JSON.stringify(data)}`);
+});
+```
+
 
 ## startAbility
 
@@ -99,27 +123,5 @@ function startAbility(parameter: StartAbilityParameter): Promise<number>
 
 **示例**
 
-```TypeScript
-import { featureAbility, wantConstant } from '@kit.AbilityKit';
-
-// 启动新的Ability
-featureAbility.startAbility(
-  {
-    want:
-    {
-      action: 'ohos.want.action.home',
-      entities: ['entity.system.home'],
-      type: 'MIMETYPE',
-      flags: wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION,
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      /* FA模型中abilityName由package + Ability name组成 */
-      abilityName: 'com.example.myapplication.secondAbility',
-      uri: ''
-    },
-  }
-).then((data) => {
-  console.info(`startAbility data: ${JSON.stringify(data)}`);
-});
-```
+参见 [startAbility](#startability)
 

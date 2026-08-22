@@ -90,6 +90,45 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { logLibrary } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let logFiles = logLibrary.list('HILOG');
+  if (logFiles.length > 0) {
+    logLibrary.copy('HILOG', logFiles[0].name, 'dir1', (error, copyResult) => {
+      if (error) {
+        console.error(`Failed to copy log file. Code: ${error.code}, message: ${error.message}`);
+      } else {
+        // copy success.
+      }
+    });
+  }
+} catch (error) {
+    console.error(`Failed to call logLibrary API. Code: ${error?.code}, message: ${error?.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { logLibrary } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let logObj = logLibrary.list('HILOG');
+  if (logObj.length > 0) {
+    logLibrary.copy('HILOG', logObj[0].name, 'dir1', (err: BusinessError | null) => {
+      // copy结果
+    });
+  }
+} catch (err: BusinessError) {
+  console.error(`error code: ${err?.code}, error msg: ${err?.message}`);
+}
+```
+
 
 ## copy
 
@@ -129,42 +168,5 @@ function copy(logType: string, logName: string, dest: string, callback: AsyncCal
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { logLibrary } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let logFiles = logLibrary.list('HILOG');
-  if (logFiles.length > 0) {
-    logLibrary.copy('HILOG', logFiles[0].name, 'dir1', (error, copyResult) => {
-      if (error) {
-        console.error(`Failed to copy log file. Code: ${error.code}, message: ${error.message}`);
-      } else {
-        // copy success.
-      }
-    });
-  }
-} catch (error) {
-    console.error(`Failed to call logLibrary API. Code: ${error?.code}, message: ${error?.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { logLibrary } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let logObj = logLibrary.list('HILOG');
-  if (logObj.length > 0) {
-    logLibrary.copy('HILOG', logObj[0].name, 'dir1', (err: BusinessError | null) => {
-      // copy结果
-    });
-  }
-} catch (err: BusinessError) {
-  console.error(`error code: ${err?.code}, error msg: ${err?.message}`);
-}
-```
+参见 [copy](#copy)
 

@@ -71,6 +71,150 @@ try {
     hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
     let info = abilitiesInfo[0];
 
+    bundleManager.setAbilityEnabled(info, false, err => {
+      if (err) {
+        hilog.error(0x0000, 'testTag', 'setAbilityEnabled failed: %{public}s', err.message);
+      } else {
+        hilog.info(0x0000, "testTag", "setAbilityEnabled successfully.");
+      }
+    });
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { Want } from '@kit.AbilityKit';
+// 开发者需根据实际工程更新userId、bundleName和abilityName。
+let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT;
+let userId = 100;
+let want: Want = {
+  bundleName : "com.example.myapplication",
+  abilityName : "EntryAbility"
+};
+
+try {
+  bundleManager.queryAbilityInfo(want, abilityFlags, userId).then((abilitiesInfo: Array<bundleManager.AbilityInfo>) => {
+    hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
+    let info = abilitiesInfo[0];
+
+    bundleManager.setAbilityEnabled(info, false, err => {
+      if (err) {
+        hilog.error(0x0000, 'testTag', 'setAbilityEnabled failed: %{public}s', err.message);
+      } else {
+        hilog.info(0x0000, "testTag", "setAbilityEnabled successfully.");
+      }
+    });
+  }).catch((err: Error) => {
+    hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', (err as BusinessError).message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
+}
+```
+
+ArkTS-Dyn示例:
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { Want } from '@kit.AbilityKit';
+
+let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT;
+let userId = 100;
+let want: Want = {
+  bundleName: "com.example.myapplication",
+  abilityName: "EntryAbility"
+};
+
+try {
+  bundleManager.queryAbilityInfo(want, abilityFlags, userId).then((abilitiesInfo) => {
+    hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
+    let info = abilitiesInfo[0];
+
+    bundleManager.setAbilityEnabled(info, false).then(() => {
+      hilog.info(0x0000, "testTag", "setAbilityEnabled successfully.");
+    }).catch((err: BusinessError) => {
+      hilog.error(0x0000, 'testTag', 'setAbilityEnabled failed: %{public}s', err.message);
+    });
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { Want } from '@kit.AbilityKit';
+// 开发者需根据实际工程更新userId、bundleName和abilityName。
+let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT;
+let userId = 100;
+let want: Want = {
+  bundleName : "com.example.myapplication",
+  abilityName : "EntryAbility"
+};
+
+try {
+  bundleManager.queryAbilityInfo(want, abilityFlags, userId).then((abilitiesInfo: Array<bundleManager.AbilityInfo>) => {
+    hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
+    let info = abilitiesInfo[0];
+
+    bundleManager.setAbilityEnabled(info, false).then(() => {
+      hilog.info(0x0000, "testTag", "setAbilityEnabled successfully.");
+    }).catch((err: Error) => {
+      hilog.error(0x0000, 'testTag', 'setAbilityEnabled failed: %{public}s', (err as BusinessError).message);
+    });
+  }).catch((err: Error) => {
+    hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', (err as BusinessError).message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
+}
+```
+
+ArkTS-Dyn示例:
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { Want } from '@kit.AbilityKit';
+
+let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT;
+let userId = 100;
+let want: Want = {
+  bundleName: "com.example.myapplication",
+  abilityName: "EntryAbility"
+};
+
+try {
+  bundleManager.queryAbilityInfo(want, abilityFlags, userId).then((abilitiesInfo) => {
+    hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
+    let info = abilitiesInfo[0];
+
     bundleManager.setAbilityEnabled(info, 1, false).then(() => {
       hilog.info(0x0000, "testTag", "setAbilityEnabled successfully.");
     }).catch((err: BusinessError) => {
@@ -160,79 +304,7 @@ function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean, callback: Asyn
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { Want } from '@kit.AbilityKit';
-
-let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT;
-let userId = 100;
-let want: Want = {
-  bundleName: "com.example.myapplication",
-  abilityName: "EntryAbility"
-};
-
-try {
-  bundleManager.queryAbilityInfo(want, abilityFlags, userId).then((abilitiesInfo) => {
-    hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
-    let info = abilitiesInfo[0];
-
-    bundleManager.setAbilityEnabled(info, false, err => {
-      if (err) {
-        hilog.error(0x0000, 'testTag', 'setAbilityEnabled failed: %{public}s', err.message);
-      } else {
-        hilog.info(0x0000, "testTag", "setAbilityEnabled successfully.");
-      }
-    });
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { Want } from '@kit.AbilityKit';
-// 开发者需根据实际工程更新userId、bundleName和abilityName。
-let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT;
-let userId = 100;
-let want: Want = {
-  bundleName : "com.example.myapplication",
-  abilityName : "EntryAbility"
-};
-
-try {
-  bundleManager.queryAbilityInfo(want, abilityFlags, userId).then((abilitiesInfo: Array<bundleManager.AbilityInfo>) => {
-    hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
-    let info = abilitiesInfo[0];
-
-    bundleManager.setAbilityEnabled(info, false, err => {
-      if (err) {
-        hilog.error(0x0000, 'testTag', 'setAbilityEnabled failed: %{public}s', err.message);
-      } else {
-        hilog.info(0x0000, "testTag", "setAbilityEnabled successfully.");
-      }
-    });
-  }).catch((err: Error) => {
-    hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', (err as BusinessError).message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
-}
-```
+参见 [setAbilityEnabled](#setabilityenabled)
 
 
 ## setAbilityEnabled
@@ -278,73 +350,5 @@ function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { Want } from '@kit.AbilityKit';
-
-let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT;
-let userId = 100;
-let want: Want = {
-  bundleName: "com.example.myapplication",
-  abilityName: "EntryAbility"
-};
-
-try {
-  bundleManager.queryAbilityInfo(want, abilityFlags, userId).then((abilitiesInfo) => {
-    hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
-    let info = abilitiesInfo[0];
-
-    bundleManager.setAbilityEnabled(info, false).then(() => {
-      hilog.info(0x0000, "testTag", "setAbilityEnabled successfully.");
-    }).catch((err: BusinessError) => {
-      hilog.error(0x0000, 'testTag', 'setAbilityEnabled failed: %{public}s', err.message);
-    });
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { Want } from '@kit.AbilityKit';
-// 开发者需根据实际工程更新userId、bundleName和abilityName。
-let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT;
-let userId = 100;
-let want: Want = {
-  bundleName : "com.example.myapplication",
-  abilityName : "EntryAbility"
-};
-
-try {
-  bundleManager.queryAbilityInfo(want, abilityFlags, userId).then((abilitiesInfo: Array<bundleManager.AbilityInfo>) => {
-    hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
-    let info = abilitiesInfo[0];
-
-    bundleManager.setAbilityEnabled(info, false).then(() => {
-      hilog.info(0x0000, "testTag", "setAbilityEnabled successfully.");
-    }).catch((err: Error) => {
-      hilog.error(0x0000, 'testTag', 'setAbilityEnabled failed: %{public}s', (err as BusinessError).message);
-    });
-  }).catch((err: Error) => {
-    hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', (err as BusinessError).message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
-}
-```
+参见 [setAbilityEnabled](#setabilityenabled)
 

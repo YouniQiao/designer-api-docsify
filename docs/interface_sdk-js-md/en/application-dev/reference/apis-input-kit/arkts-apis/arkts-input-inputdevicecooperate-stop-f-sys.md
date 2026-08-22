@@ -30,7 +30,7 @@ Stops screen hopping. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback. If the operation is successful, **err** is **undefined**. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback. If the operation is successful, **err** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -59,6 +59,32 @@ struct Index {
                 return;
               }
               console.info(`Stop Keyboard mouse crossing success.`);
+            });
+          } catch (error) {
+            console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { inputDeviceCooperate } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            inputDeviceCooperate.stop().then(() => {
+              console.info(`Stop Keyboard mouse crossing success.`);
+            }, (error: BusinessError) => {
+              console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
             });
           } catch (error) {
             console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
@@ -104,29 +130,5 @@ Stops screen hopping. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            inputDeviceCooperate.stop().then(() => {
-              console.info(`Stop Keyboard mouse crossing success.`);
-            }, (error: BusinessError) => {
-              console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            });
-          } catch (error) {
-            console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
+See [stop](#stop)
 

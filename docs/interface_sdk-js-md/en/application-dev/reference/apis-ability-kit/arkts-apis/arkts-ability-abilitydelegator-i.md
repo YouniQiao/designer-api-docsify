@@ -1,6 +1,6 @@
 # AbilityDelegator
 
-The **AbilityDelegator** module can listen for and manage the lifecycle changes of [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) through [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instances. For example, you can obtain the current state of a UIAbility (for example, whether the UIAbility has been created or is in the foreground), obtain the UIAbility that currently has the focus, wait for the UIAbility to enter a lifecycle node (for example, the **onForeground** state), start a specified UIAbility, and set the timeout mechanism. You can obtain **AbilityDelegator** by calling [getAbilityDelegator](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md).
+The **AbilityDelegator** module can listen for and manage the lifecycle changes of [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) through [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instances. For example, you can obtain the current state of a UIAbility (for example, whether the UIAbility has been created or is in the foreground), obtain the UIAbility that currently has the focus, wait for the UIAbility to enter a lifecycle node (for example, the **onForeground** state), start a specified UIAbility, and set the timeout mechanism. You can obtain **AbilityDelegator** by calling [getAbilityDelegator](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md).
 
 > **NOTE：**
 > 
@@ -33,7 +33,7 @@ Adds an **AbilityMonitor** instance. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityMonitor** instance is added, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityMonitor** instance is added, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -62,6 +62,25 @@ function onAbilityCreateCallback(data: UIAbility) {
 abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
 abilityDelegator.addAbilityMonitor(monitor, (error: BusinessError) => {
   console.error(`addAbilityMonitor fail, error: ${JSON.stringify(error)}`);
+});
+```
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { UIAbility } from '@kit.AbilityKit';
+
+function onAbilityCreateCallback(data: UIAbility) {
+  console.info('onAbilityCreateCallback');
+}
+
+let monitor: abilityDelegatorRegistry.AbilityMonitor = {
+  abilityName: 'abilityName',
+  onAbilityCreate: onAbilityCreateCallback
+};
+let abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+
+abilityDelegator.addAbilityMonitor(monitor).then(() => {
+  console.info('addAbilityMonitor promise');
 });
 ```
 
@@ -102,24 +121,7 @@ Adds an **AbilityMonitor** instance. This API uses a promise to return the resul
 
 **Examples**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { UIAbility } from '@kit.AbilityKit';
-
-function onAbilityCreateCallback(data: UIAbility) {
-  console.info('onAbilityCreateCallback');
-}
-
-let monitor: abilityDelegatorRegistry.AbilityMonitor = {
-  abilityName: 'abilityName',
-  onAbilityCreate: onAbilityCreateCallback
-};
-let abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-
-abilityDelegator.addAbilityMonitor(monitor).then(() => {
-  console.info('addAbilityMonitor promise');
-});
-```
+See [addAbilityMonitor](#addabilitymonitor)
 
 ## addAbilityMonitorSync
 
@@ -192,7 +194,7 @@ Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityStageMonitor** instance is added, **err** is undefined. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityStageMonitor** instance is added, **err** is undefined. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -215,6 +217,20 @@ abilityDelegator.addAbilityStageMonitor({
   srcEntrance: 'srcEntrance',
 }, (err: BusinessError) => {
   console.info('addAbilityStageMonitor callback');
+});
+```
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.addAbilityStageMonitor({
+  moduleName: 'moduleName',
+  srcEntrance: 'srcEntrance',
+}).then(() => {
+  console.info('addAbilityStageMonitor promise');
 });
 ```
 
@@ -255,19 +271,7 @@ Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes 
 
 **Examples**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.addAbilityStageMonitor({
-  moduleName: 'moduleName',
-  srcEntrance: 'srcEntrance',
-}).then(() => {
-  console.info('addAbilityStageMonitor promise');
-});
-```
+See [addAbilityStageMonitor](#addabilitystagemonitor)
 
 ## addAbilityStageMonitorSync
 
@@ -362,8 +366,8 @@ Schedules the lifecycle state of an ability to **Background**. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) | Yes | Target ability. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability lifecycle state is changed to **Background**, **err** is **undefined**. Otherwise, **err** is an error object. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Target ability. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability lifecycle state is changed to **Background**, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -392,6 +396,24 @@ abilityDelegator.getCurrentTopAbility((err: BusinessError, data: UIAbility) => {
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let ability: UIAbility;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.getCurrentTopAbility((err: BusinessError, data: UIAbility) => {
+  console.info('getCurrentTopAbility callback');
+  ability = data;
+  abilityDelegator.doAbilityBackground(ability).then(() => {
+    console.info("doAbilityBackground promise");
+  });
+});
+```
+
 ## doAbilityBackground
 
 ```TypeScript
@@ -412,7 +434,7 @@ Schedules the lifecycle state of an ability to **Background**. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) | Yes | Target ability. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Target ability. |
 
 **Return value:**
 
@@ -429,23 +451,7 @@ Schedules the lifecycle state of an ability to **Background**. This API uses a p
 
 **Examples**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let ability: UIAbility;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.getCurrentTopAbility((err: BusinessError, data: UIAbility) => {
-  console.info('getCurrentTopAbility callback');
-  ability = data;
-  abilityDelegator.doAbilityBackground(ability).then(() => {
-    console.info("doAbilityBackground promise");
-  });
-});
-```
+See [doAbilityBackground](#doabilitybackground)
 
 ## doAbilityForeground
 
@@ -467,8 +473,8 @@ Schedules the lifecycle state of an ability to **Foreground**. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) | Yes | Target ability. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability lifecycle state is changed to **Foreground**, **err** is **undefined**. Otherwise, **err** is an error object. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Target ability. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability lifecycle state is changed to **Foreground**, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -497,6 +503,24 @@ abilityDelegator.getCurrentTopAbility((err: BusinessError, data: UIAbility) => {
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let ability: UIAbility;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.getCurrentTopAbility((err: BusinessError, data: UIAbility) => {
+  console.info('getCurrentTopAbility callback');
+  ability = data;
+  abilityDelegator.doAbilityForeground(ability).then(() => {
+    console.info("doAbilityForeground promise");
+  });
+});
+```
+
 ## doAbilityForeground
 
 ```TypeScript
@@ -517,7 +541,7 @@ Schedules the lifecycle state of an ability to **Foreground**. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) | Yes | Target ability. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Target ability. |
 
 **Return value:**
 
@@ -534,23 +558,7 @@ Schedules the lifecycle state of an ability to **Foreground**. This API uses a p
 
 **Examples**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let ability: UIAbility;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.getCurrentTopAbility((err: BusinessError, data: UIAbility) => {
-  console.info('getCurrentTopAbility callback');
-  ability = data;
-  abilityDelegator.doAbilityForeground(ability).then(() => {
-    console.info("doAbilityForeground promise");
-  });
-});
-```
+See [doAbilityForeground](#doabilityforeground)
 
 ## executeShellCommand
 
@@ -573,7 +581,7 @@ Executes a shell command. This API uses an asynchronous callback to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | cmd | string | Yes | Shell command string. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)&gt; | Yes | Callback used to return the result. If the shell command is executed , **err** is **undefined** and **data** is the execution result obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)&gt; | Yes | Callback used to return the result. If the shell command is executed , **err** is **undefined** and **data** is the execution result obtained. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -587,6 +595,33 @@ let cmd = 'cmd';
 abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
 abilityDelegator.executeShellCommand(cmd, (err: BusinessError, data: abilityDelegatorRegistry.ShellCmdResult) => {
   console.info('executeShellCommand callback');
+});
+```
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let cmd = 'cmd';
+let timeout = 100;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.executeShellCommand(cmd, timeout, (err: BusinessError, data: abilityDelegatorRegistry.ShellCmdResult) => {
+  console.info('executeShellCommand callback');
+});
+```
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let cmd = 'cmd';
+let timeout = 100;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.executeShellCommand(cmd, timeout).then((data) => {
+  console.info('executeShellCommand promise');
 });
 ```
 
@@ -612,23 +647,11 @@ Executes a shell command with the timeout period specified. This API uses an asy
 | --- | --- | --- | --- |
 | cmd | string | Yes | Shell command string. |
 | timeoutSecs | long | Yes | Command timeout period, in seconds. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)&gt; | Yes | Callback used to return the result. If the shell command is executed , **err** is **undefined** and **data** is the execution result obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)&gt; | Yes | Callback used to return the result. If the shell command is executed , **err** is **undefined** and **data** is the execution result obtained. Otherwise, **err** is an error object. |
 
 **Examples**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let cmd = 'cmd';
-let timeout = 100;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.executeShellCommand(cmd, timeout, (err: BusinessError, data: abilityDelegatorRegistry.ShellCmdResult) => {
-  console.info('executeShellCommand callback');
-});
-```
+See [executeShellCommand](#executeshellcommand)
 
 ## executeShellCommand
 
@@ -661,18 +684,7 @@ Executes a shell command with the timeout period specified. This API uses a prom
 
 **Examples**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let cmd = 'cmd';
-let timeout = 100;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.executeShellCommand(cmd, timeout).then((data) => {
-  console.info('executeShellCommand promise');
-});
-```
+See [executeShellCommand](#executeshellcommand)
 
 ## finishTest
 
@@ -696,7 +708,7 @@ Finishes the test and prints log information to the unit test console. This API 
 | --- | --- | --- | --- |
 | msg | string | Yes | Log string. |
 | code | long | Yes | Log code. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the test finishes and the log information is printed to the unit test console, **err** is undefined. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the test finishes and the log information is printed to the unit test console, **err** is undefined. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -717,6 +729,18 @@ let msg = 'msg';
 abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
 abilityDelegator.finishTest(msg, 0, (err: BusinessError) => {
   console.info('finishTest callback');
+});
+```
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let msg = 'msg';
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.finishTest(msg, 0).then(() => {
+  console.info('finishTest promise');
 });
 ```
 
@@ -758,17 +782,7 @@ Finishes the test and prints log information to the unit test console. This API 
 
 **Examples**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let msg = 'msg';
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.finishTest(msg, 0).then(() => {
-  console.info('finishTest promise');
-});
-```
+See [finishTest](#finishtest)
 
 ## getAbilityState
 
@@ -790,7 +804,7 @@ Obtains the lifecycle state of an ability.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) | Yes | Target ability. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Target ability. |
 
 **Return value:**
 
@@ -877,7 +891,7 @@ Obtains the top ability of this application. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)&gt; | Yes | Callback used to return the result. If the top ability is obtained, **err** is **undefined** and **data** is the **Ability** instance obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Yes | Callback used to return the result. If the top ability is obtained, **err** is **undefined** and **data** is the **Ability** instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -903,6 +917,20 @@ abilityDelegator.getCurrentTopAbility((err: BusinessError, data: UIAbility) => {
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { UIAbility } from '@kit.AbilityKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let ability: UIAbility;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.getCurrentTopAbility().then((data: UIAbility) => {
+  console.info('getCurrentTopAbility promise');
+  ability = data;
+});
+```
+
 ## getCurrentTopAbility
 
 ```TypeScript
@@ -923,7 +951,7 @@ Obtains the top ability of this application. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)&gt; | Promise used to return the top ability. |
+| Promise&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Promise used to return the top ability. |
 
 **Error codes:**
 
@@ -933,19 +961,7 @@ Obtains the top ability of this application. This API uses a promise to return t
 
 **Examples**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { UIAbility } from '@kit.AbilityKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let ability: UIAbility;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.getCurrentTopAbility().then((data: UIAbility) => {
-  console.info('getCurrentTopAbility promise');
-  ability = data;
-});
-```
+See [getCurrentTopAbility](#getcurrenttopability)
 
 ## print
 
@@ -968,7 +984,7 @@ Prints log information to the unit test console. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | msg | string | Yes | Log string. The value contains a maximum of 10,000 characters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the log information is printed to the unit test console, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the log information is printed to the unit test console, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -982,6 +998,18 @@ let msg = 'msg';
 abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
 abilityDelegator.print(msg, (err: BusinessError) => {
   console.info('print callback');
+});
+```
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let msg = 'msg';
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.print(msg).then(() => {
+  console.info('print promise');
 });
 ```
 
@@ -1015,17 +1043,7 @@ Prints log information to the unit test console. This API uses a promise to retu
 
 **Examples**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let msg = 'msg';
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.print(msg).then(() => {
-  console.info('print promise');
-});
-```
+See [print](#print)
 
 ## printSync
 
@@ -1088,7 +1106,7 @@ Removes an **AbilityMonitor** instance. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityMonitor** instance is removed, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityMonitor** instance is removed, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1118,6 +1136,26 @@ let monitor: abilityDelegatorRegistry.AbilityMonitor = {
 abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
 abilityDelegator.removeAbilityMonitor(monitor, (error: BusinessError) => {
     console.error(`removeAbilityMonitor fail, error: ${JSON.stringify(error)}`);
+});
+```
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { UIAbility } from '@kit.AbilityKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let monitor: abilityDelegatorRegistry.AbilityMonitor = {
+  abilityName: 'abilityName',
+  onAbilityCreate: onAbilityCreateCallback
+};
+
+function onAbilityCreateCallback(data: UIAbility) {
+  console.info('onAbilityCreateCallback');
+}
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.removeAbilityMonitor(monitor).then(() => {
+  console.info('removeAbilityMonitor promise');
 });
 ```
 
@@ -1158,25 +1196,7 @@ Removes an **AbilityMonitor** instance. This API uses a promise to return the re
 
 **Examples**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { UIAbility } from '@kit.AbilityKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let monitor: abilityDelegatorRegistry.AbilityMonitor = {
-  abilityName: 'abilityName',
-  onAbilityCreate: onAbilityCreateCallback
-};
-
-function onAbilityCreateCallback(data: UIAbility) {
-  console.info('onAbilityCreateCallback');
-}
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.removeAbilityMonitor(monitor).then(() => {
-  console.info('removeAbilityMonitor promise');
-});
-```
+See [removeAbilityMonitor](#removeabilitymonitor)
 
 ## removeAbilityMonitorSync
 
@@ -1248,7 +1268,7 @@ Removes an **AbilityStageMonitor** instance from the application memory. This AP
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityStageMonitor** instance is removed, **err** is undefined. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityStageMonitor** instance is removed, **err** is undefined. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1271,6 +1291,20 @@ abilityDelegator.removeAbilityStageMonitor({
   srcEntrance: 'srcEntrance',
 }, (err: BusinessError) => {
   console.info('removeAbilityStageMonitor callback');
+});
+```
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.removeAbilityStageMonitor({
+  moduleName: 'moduleName',
+  srcEntrance: 'srcEntrance',
+}).then(() => {
+  console.info('removeAbilityStageMonitor promise');
 });
 ```
 
@@ -1311,19 +1345,7 @@ Removes an **AbilityStageMonitor** instance from the application memory. This AP
 
 **Examples**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.removeAbilityStageMonitor({
-  moduleName: 'moduleName',
-  srcEntrance: 'srcEntrance',
-}).then(() => {
-  console.info('removeAbilityStageMonitor promise');
-});
-```
+See [removeAbilityStageMonitor](#removeabilitystagemonitor)
 
 ## removeAbilityStageMonitorSync
 
@@ -1462,8 +1484,8 @@ Starts an ability. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want** parameter for starting the ability. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is started, **err** is **undefined**. Otherwise, **err** is an error object. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want** parameter for starting the ability. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is started, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1505,6 +1527,22 @@ abilityDelegator.startAbility(want, (err: BusinessError, data: void) => {
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { Want } from '@kit.AbilityKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let want: Want = {
+  bundleName: 'bundleName',
+  abilityName: 'abilityName'
+};
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.startAbility(want).then((data: void) => {
+  console.info('startAbility promise');
+});
+```
+
 ## startAbility
 
 ```TypeScript
@@ -1525,7 +1563,7 @@ Starts an ability. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want** parameter for starting the ability. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want** parameter for starting the ability. |
 
 **Return value:**
 
@@ -1556,21 +1594,7 @@ Starts an ability. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { Want } from '@kit.AbilityKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let want: Want = {
-  bundleName: 'bundleName',
-  abilityName: 'abilityName'
-};
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.startAbility(want).then((data: void) => {
-  console.info('startAbility promise');
-});
-```
+See [startAbility](#startability)
 
 ## waitAbilityMonitor
 
@@ -1593,7 +1617,7 @@ Waits for the **Ability** instance that matches the **AbilityMonitor** instance 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **Ability** instance obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **Ability** instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1629,39 +1653,6 @@ abilityDelegator.waitAbilityMonitor(monitor, (error: BusinessError, data: UIAbil
 });
 ```
 
-## waitAbilityMonitor
-
-```TypeScript
-waitAbilityMonitor(monitor: AbilityMonitor, timeout: long, callback: AsyncCallback<UIAbility>): void
-```
-
-Waits a period of time for the **Ability** instance that matches the **AbilityMonitor** instance to reach the **onCreate** lifecycle state and returns the **Ability** instance. This API uses an asynchronous callback to return the result. Multi-thread concurrent calls are not supported.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-AbilityDelegator-waitAbilityMonitor(monitor: AbilityMonitor, timeout: long, callback: AsyncCallback<UIAbility>): void--><!--Device-AbilityDelegator-waitAbilityMonitor(monitor: AbilityMonitor, timeout: long, callback: AsyncCallback<UIAbility>): void-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
-| timeout | long | Yes | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)&gt; | Yes | Callback used to return the result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityMonitor failed. |
-
-**Examples**
-
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
 import { UIAbility } from '@kit.AbilityKit';
@@ -1687,6 +1678,61 @@ abilityDelegator.waitAbilityMonitor(monitor, timeout, (error: BusinessError, dat
   }
 });
 ```
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { UIAbility } from '@kit.AbilityKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let monitor: abilityDelegatorRegistry.AbilityMonitor = {
+  abilityName: 'abilityName',
+  onAbilityCreate: onAbilityCreateCallback
+};
+
+function onAbilityCreateCallback(data: UIAbility) {
+  console.info('onAbilityCreateCallback');
+}
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.waitAbilityMonitor(monitor).then((data: UIAbility) => {
+  console.info('waitAbilityMonitor promise');
+});
+```
+
+## waitAbilityMonitor
+
+```TypeScript
+waitAbilityMonitor(monitor: AbilityMonitor, timeout: long, callback: AsyncCallback<UIAbility>): void
+```
+
+Waits a period of time for the **Ability** instance that matches the **AbilityMonitor** instance to reach the **onCreate** lifecycle state and returns the **Ability** instance. This API uses an asynchronous callback to return the result. Multi-thread concurrent calls are not supported.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityDelegator-waitAbilityMonitor(monitor: AbilityMonitor, timeout: long, callback: AsyncCallback<UIAbility>): void--><!--Device-AbilityDelegator-waitAbilityMonitor(monitor: AbilityMonitor, timeout: long, callback: AsyncCallback<UIAbility>): void-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
+| timeout | long | Yes | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Yes | Callback used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityMonitor failed. |
+
+**Examples**
+
+See [waitAbilityMonitor](#waitabilitymonitor)
 
 ## waitAbilityMonitor
 
@@ -1715,7 +1761,7 @@ Waits a period of time for the **Ability** instance that matches the **AbilityMo
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)&gt; | Promise used to return the **Ability** instance obtained. |
+| Promise&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Promise used to return the **Ability** instance obtained. |
 
 **Error codes:**
 
@@ -1726,25 +1772,7 @@ Waits a period of time for the **Ability** instance that matches the **AbilityMo
 
 **Examples**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { UIAbility } from '@kit.AbilityKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let monitor: abilityDelegatorRegistry.AbilityMonitor = {
-  abilityName: 'abilityName',
-  onAbilityCreate: onAbilityCreateCallback
-};
-
-function onAbilityCreateCallback(data: UIAbility) {
-  console.info('onAbilityCreateCallback');
-}
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.waitAbilityMonitor(monitor).then((data: UIAbility) => {
-  console.info('waitAbilityMonitor promise');
-});
-```
+See [waitAbilityMonitor](#waitabilitymonitor)
 
 ## waitAbilityStageMonitor
 
@@ -1767,7 +1795,7 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and data is the [AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md) instance obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and data is the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md) instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1794,6 +1822,38 @@ abilityDelegator.waitAbilityStageMonitor({
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { AbilityStage } from '@kit.AbilityKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.waitAbilityStageMonitor({
+  moduleName: 'moduleName',
+  srcEntrance: 'srcEntrance',
+}).then((data: AbilityStage) => {
+  console.info('waitAbilityStageMonitor promise');
+});
+```
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { AbilityStage } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let timeout = 100;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.waitAbilityStageMonitor({
+  moduleName: 'moduleName',
+  srcEntrance: 'srcEntrance',
+}, timeout, (err: BusinessError, data: AbilityStage) => {
+  console.info('waitAbilityStageMonitor callback');
+});
+```
+
 ## waitAbilityStageMonitor
 
 ```TypeScript
@@ -1816,7 +1876,7 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 | --- | --- | --- | --- |
 | monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
 | timeout | long | Yes | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and data is the [AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md) instance obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and data is the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md) instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1827,22 +1887,7 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 
 **Examples**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { AbilityStage } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let timeout = 100;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.waitAbilityStageMonitor({
-  moduleName: 'moduleName',
-  srcEntrance: 'srcEntrance',
-}, timeout, (err: BusinessError, data: AbilityStage) => {
-  console.info('waitAbilityStageMonitor callback');
-});
-```
+See [waitAbilityStageMonitor](#waitabilitystagemonitor)
 
 ## waitAbilityStageMonitor
 
@@ -1871,7 +1916,7 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md)&gt; | Promise used to return the [AbilityStage]{ |
+| Promise&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Promise used to return the [AbilityStage]{ |
 
 **Error codes:**
 
@@ -1882,18 +1927,5 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 
 **Examples**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { AbilityStage } from '@kit.AbilityKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.waitAbilityStageMonitor({
-  moduleName: 'moduleName',
-  srcEntrance: 'srcEntrance',
-}).then((data: AbilityStage) => {
-  console.info('waitAbilityStageMonitor promise');
-});
-```
+See [waitAbilityStageMonitor](#waitabilitystagemonitor)
 

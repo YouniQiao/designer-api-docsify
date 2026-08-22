@@ -46,6 +46,25 @@ Obtains the session information based on the session ID.
 | [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
+**Examples**
+
+```TypeScript
+import { dialogSession, Want, UIExtensionAbility, UIExtensionContentSession } from '@kit.AbilityKit';
+
+const TAG: string = '[testTag] UIExtAbility';
+
+export default class UIExtAbility extends UIExtensionAbility {
+  onSessionCreate(want: Want, session: UIExtensionContentSession) {
+    // want is specified by the system. dialogSessionId is a built-in parameter.
+    let dialogSessionId = want?.parameters?.dialogSessionId.toString();
+
+    // Obtain DialogSessionInfo.
+    let dialogSessionInfo: dialogSession.DialogSessionInfo = dialogSession.getDialogSessionInfo(dialogSessionId);
+    console.info(TAG, `onSessionCreate, want: ${JSON.stringify(want)}`);
+  }
+}
+```
+
 
 ## getDialogSessionInfo
 
@@ -85,4 +104,8 @@ Query the session info of dialog.
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
 | [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+
+**Examples**
+
+See [getDialogSessionInfo](#getdialogsessioninfo)
 

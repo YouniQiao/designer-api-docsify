@@ -89,6 +89,30 @@ true：计时器开启倒计时，例如从30秒 ~ 0秒；false：计时器开�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## started
+
+```TypeScript
+started: boolean
+```
+
+是否已经开始了计时。
+
+true：开始计时；false：未开始计时。
+
+默认值：false
+
+**类型：** boolean
+
+**起始版本：** 12
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextTimerConfiguration-started: boolean--><!--Device-TextTimerConfiguration-started: boolean-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 ## startTime
 
 ```TypeScript
@@ -116,30 +140,6 @@ startTime?: number
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TextTimerConfiguration-startTime?: number--><!--Device-TextTimerConfiguration-startTime?: number-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## started
-
-```TypeScript
-started: boolean
-```
-
-是否已经开始了计时。
-
-true：开始计时；false：未开始计时。
-
-默认值：false
-
-**类型：** boolean
-
-**起始版本：** 12
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextTimerConfiguration-started: boolean--><!--Device-TextTimerConfiguration-started: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

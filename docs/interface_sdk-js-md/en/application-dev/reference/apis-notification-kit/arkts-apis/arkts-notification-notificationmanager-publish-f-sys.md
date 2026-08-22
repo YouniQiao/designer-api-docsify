@@ -32,7 +32,7 @@ Publishes a notification to a specified user. This API uses an asynchronous call
 | --- | --- | --- | --- |
 | request | NotificationRequest | Yes | Content and related configuration of the notification to publish. |
 | userId | int | Yes | User ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -68,6 +68,54 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // publish callback
 let publishCallback = (err: BusinessError): void => {
+  if (err) {
+    console.error(`Failed to publish notification. Code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info(`Succeeded in publishing notification.`);
+  }
+}
+// NotificationRequest object
+let notificationRequest: notificationManager.NotificationRequest = {
+  id: 1,
+  content: {
+    notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
+    normal: {
+      title: "test_title",
+      text: "test_text",
+      additionalText: "test_additionalText"
+    }
+  }
+};
+notificationManager.publish(notificationRequest, publishCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// NotificationRequest object
+let notificationRequest: notificationManager.NotificationRequest = {
+  id: 1,
+  content: {
+    notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
+    normal: {
+      title: "test_title",
+      text: "test_text",
+      additionalText: "test_additionalText"
+    }
+  }
+};
+notificationManager.publish(notificationRequest).then(() => {
+  console.info(`Succeeded in publishing notification.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to publish notification. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// publish callback
+let publishCallback = (err: BusinessError): void => {
     if (err) {
         console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
     } else {
@@ -89,6 +137,31 @@ let notificationRequest: notificationManager.NotificationRequest = {
     }
 };
 notificationManager.publish(notificationRequest, userId, publishCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let notificationRequest: notificationManager.NotificationRequest = {
+    id: 1,
+    content: {
+        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
+        normal: {
+            title: "test_title",
+            text: "test_text",
+            additionalText: "test_additionalText"
+        }
+    }
+};
+
+// Use the actual user ID when calling the API.
+let userId: number = 1;
+
+notificationManager.publish(notificationRequest, userId).then(() => {
+    console.info("publish success");
+}).catch((err: BusinessError) => {
+    console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -154,28 +227,5 @@ Publishes a notification to a specified user. This API uses a promise to return 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let notificationRequest: notificationManager.NotificationRequest = {
-    id: 1,
-    content: {
-        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-        normal: {
-            title: "test_title",
-            text: "test_text",
-            additionalText: "test_additionalText"
-        }
-    }
-};
-
-// Use the actual user ID when calling the API.
-let userId: number = 1;
-
-notificationManager.publish(notificationRequest, userId).then(() => {
-    console.info("publish success");
-}).catch((err: BusinessError) => {
-    console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [publish](#publish)
 

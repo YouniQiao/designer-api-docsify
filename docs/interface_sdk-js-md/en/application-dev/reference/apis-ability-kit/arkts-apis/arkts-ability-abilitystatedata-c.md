@@ -30,7 +30,7 @@ Ability name.
 abilityType: int
 ```
 
-Ability type, which can be [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) or [ExtensionAbility](arkts-ability-appabilityextensionability-extensionability-c.md).
+Ability type, which can be [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) or [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md).
 
 **Type:** int
 
@@ -148,7 +148,7 @@ state: int
 
 Ability state.
 
-- [Stage model](../../../application-models/ability-terminology.md#stage-model): For the [UIAbility](arkts-ability-appabilityuiability-uiability-c.md), see UIAbility States . For the [ExtensionAbility](arkts-ability-appabilityextensionability-extensionability-c.md), see ExtensionAbility States . For the [UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md), see UIExtensionAbility States . - [FA model](../../../application-models/ability-terminology.md#fa-model): For the ability, see Ability States .
+- [Stage model](../../../application-models/ability-terminology.md#stage-model): For the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md), see UIAbility States . For the [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md), see ExtensionAbility States . For the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md), see UIExtensionAbility States . - [FA model](../../../application-models/ability-terminology.md#fa-model): For the ability, see Ability States .
 
 **Type:** int
 

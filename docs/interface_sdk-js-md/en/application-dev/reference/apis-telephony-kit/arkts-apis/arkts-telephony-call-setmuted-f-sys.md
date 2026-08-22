@@ -26,7 +26,7 @@ Sets call muting. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -50,6 +50,16 @@ call.setMuted((err: BusinessError) => {
     } else {
         console.info(`setMuted success.`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.setMuted().then(() => {
+    console.info(`setMuted success.`);
+}).catch((err: BusinessError) => {
+    console.error(`setMuted fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -87,13 +97,5 @@ Sets call muting. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.setMuted().then(() => {
-    console.info(`setMuted success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setMuted fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [setMuted](#setmuted)
 

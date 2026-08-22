@@ -140,7 +140,7 @@ customUIController?: NodeController
 
 Custom UI controller, which is used to implement the custom UI features on the PiP page. If this parameter is left empty, the custom UI features are not used by default.
 
-**Type:** [NodeController](../../apis-default/arkts-apis/arkts-nodecontroller-c.md)
+**Type:** [NodeController](arkts-arkui-nodecontroller-c.md)
 
 **Since:** 26.0.0
 

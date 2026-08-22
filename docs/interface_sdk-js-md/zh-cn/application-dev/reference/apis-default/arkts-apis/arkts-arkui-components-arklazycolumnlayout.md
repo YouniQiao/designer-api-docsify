@@ -18,5 +18,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkuicomponentsarklazycolumnlayout-lazycolumnlayoutattribute-i.md) | 定义懒列布局属性。 |
+| [LazyColumnLayoutAttribute](arkts-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) | 定义懒列布局属性。 |
 

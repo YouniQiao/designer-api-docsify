@@ -65,6 +65,42 @@ config.enableAbility(name, capability).then(() => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { accessibility, config } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let name: string = 'com.ohos.example/axExtension';
+let capability: accessibility.Capability[] = ['retrieve'];
+
+config.enableAbility(name, capability, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to enable ability. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in enabling ability, name is ${name}, capability is ${capability}`); 
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { accessibility, config } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let name: string = 'com.ohos.example/axExtension';
+let capability: accessibility.Capability[] = ['retrieve'];
+
+config.enableAbility(name, capability, (err: BusinessError | null) => {
+  if (err?.code) {
+    console.error(`failed to enable ability, Code is ${err?.code}, message is ${err?.message}`);
+    return;
+  }
+  console.info(`Succeeded in enable ability, name is ${name}, capability is ${capability}`); 
+});
+```
+
 
 ## enableAbility
 
@@ -110,39 +146,5 @@ function enableAbility(
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { accessibility, config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let name: string = 'com.ohos.example/axExtension';
-let capability: accessibility.Capability[] = ['retrieve'];
-
-config.enableAbility(name, capability, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to enable ability. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in enabling ability, name is ${name}, capability is ${capability}`); 
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { accessibility, config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let name: string = 'com.ohos.example/axExtension';
-let capability: accessibility.Capability[] = ['retrieve'];
-
-config.enableAbility(name, capability, (err: BusinessError | null) => {
-  if (err?.code) {
-    console.error(`failed to enable ability, Code is ${err?.code}, message is ${err?.message}`);
-    return;
-  }
-  console.info(`Succeeded in enable ability, name is ${name}, capability is ${capability}`); 
-});
-```
+参见 [enableAbility](#enableability)
 

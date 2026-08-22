@@ -55,6 +55,32 @@ let userId = 100;
 commonEvent.publishAsUser("event", userId, publishCB);
 ```
 
+```TypeScript
+import Base from '@ohos.base';
+import CommonEventManager from '@ohos.commonEventManager';
+
+// 公共事件相关信息
+let options: CommonEventManager.CommonEventPublishData = {
+    code: 0,              // 公共事件的初始代码
+    data: "initial data", // 公共事件的初始数据
+}
+
+// 发布公共事件回调
+function publishCB(err:Base.BusinessError) {
+    if (err.code) {
+        console.error(`publishAsUser failed, code is ${err.code}`);
+    } else {
+        console.info("publishAsUser");
+    }
+}
+
+// 指定发送的用户
+let userId = 100;
+
+// 发布公共事件
+commonEvent.publishAsUser("event", userId, options, publishCB);
+```
+
 
 ## publishAsUser
 
@@ -92,29 +118,5 @@ function publishAsUser(
 
 **示例**
 
-```TypeScript
-import Base from '@ohos.base';
-import CommonEventManager from '@ohos.commonEventManager';
-
-// 公共事件相关信息
-let options: CommonEventManager.CommonEventPublishData = {
-    code: 0,              // 公共事件的初始代码
-    data: "initial data", // 公共事件的初始数据
-}
-
-// 发布公共事件回调
-function publishCB(err:Base.BusinessError) {
-    if (err.code) {
-        console.error(`publishAsUser failed, code is ${err.code}`);
-    } else {
-        console.info("publishAsUser");
-    }
-}
-
-// 指定发送的用户
-let userId = 100;
-
-// 发布公共事件
-commonEvent.publishAsUser("event", userId, options, publishCB);
-```
+参见 [publishAsUser](#publishasuser)
 

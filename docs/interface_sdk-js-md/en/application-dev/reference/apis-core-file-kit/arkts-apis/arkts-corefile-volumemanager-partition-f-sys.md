@@ -30,7 +30,7 @@ Partitions a disk. This API uses an asynchronous callback to return the result. 
 | --- | --- | --- | --- |
 | diskId | string | Yes | ID of the disk to partition. |
 | type | int | Yes | Partition type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -42,6 +42,28 @@ Partitions a disk. This API uses an asynchronous callback to return the result. 
 | 13600001 | IPC error. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let diskId: string = "";
+let type: number = 0;
+volumeManager.partition(diskId, type).then(() => {
+  console.info("partition successfully");
+}).catch((error: BusinessError) => {
+  console.error("partition failed with error:" + JSON.stringify(error));
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let diskId: string = "";
+let type: number = 0;
+volumeManager.partition(diskId, type, (error: BusinessError) => {
+  // Do something.   
+});
+```
 
 
 ## partition
@@ -85,4 +107,8 @@ Partitions a disk. This API uses a promise to return the result. The system supp
 | 13600001 | IPC error. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
+
+**Examples**
+
+See [partition](#partition)
 

@@ -29,7 +29,7 @@ import { linkEnhance } from '@kit.DistributedServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [ConnectResult](arkts-distributedservice-linkenhance-connectresult-i.md) | Represents the connection result, which is returned after the client calls **connect()**. |
 | [Connection](arkts-distributedservice-linkenhance-connection-i.md) | Represents a **Connection** object, which provides methods for connecting to and disconnecting from a peer device, obtaining the device's ID, sending data, and registering or unregistering event callbacks. |
+| [ConnectResult](arkts-distributedservice-linkenhance-connectresult-i.md) | Represents the connection result, which is returned after the client calls **connect()**. |
 | [Server](arkts-distributedservice-linkenhance-server-i.md) | Represents a **Server** object, which provides methods for starting, stopping, and closing the server, and registering or unregistering event callbacks. |
 

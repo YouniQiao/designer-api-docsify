@@ -27,13 +27,13 @@ Creates a readable stream. This API returns the result synchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the file. |
-| options | [ReadStreamOptions](../../apis-default/arkts-apis/arkts-filefs-readstreamoptions-i.md) | No | The options are as follows:<br>- **start** (number): start position to read data, in bytes. This parameter is optional. By default, data is read from the current position.<br>- **end** ( number): end position to read data, in bytes. This parameter is optional. The default value is the end of the file. |
+| options | [ReadStreamOptions](arkts-corefile-file-fs-readstreamoptions-i.md) | No | The options are as follows:<br>- **start** (number): start position to read data, in bytes. This parameter is optional. By default, data is read from the current position.<br>- **end** ( number): end position to read data, in bytes. This parameter is optional. The default value is the end of the file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ReadStream](arkts-corefile-filefs-readstream-c.md) | ReadStream** instance obtained. |
+| [ReadStream](arkts-corefile-file-fs-readstream-c.md) | ReadStream** instance obtained. |
 
 **Error codes:**
 
@@ -55,4 +55,21 @@ Creates a readable stream. This API returns the result synchronously.
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable |
+
+**Examples**
+
+```TypeScript
+// Create a readable stream.
+const rs = fs.createReadStream(`${pathDir}/read.txt`);
+// Create a writeable stream.
+const ws = fs.createWriteStream(`${pathDir}/write.txt`);
+// Copy files in paused mode.
+rs.on('readable', () => {
+  const data = rs.read();
+  if (!data) {
+    return;
+  }
+  ws.write(data);
+});
+```
 

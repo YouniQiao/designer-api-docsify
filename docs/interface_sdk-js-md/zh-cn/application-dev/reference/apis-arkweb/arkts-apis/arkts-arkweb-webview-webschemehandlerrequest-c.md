@@ -34,6 +34,10 @@ getFrameUrl(): string
 | --- | --- |
 | string | 返回触发此请求的Frame的URL。 |
 
+**示例**
+
+完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
+
 ## getHeader
 
 ```TypeScript
@@ -55,6 +59,10 @@ getHeader(): Array<WebHeader>
 | 类型 | 说明 |
 | --- | --- |
 | Array&lt;WebHeader&gt; | 返回资源请求头信息。 |
+
+**示例**
+
+完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
 
 ## getHttpBodyStream
 
@@ -78,6 +86,10 @@ getHttpBodyStream(): WebHttpBodyStream | null
 | --- | --- |
 | [WebHttpBodyStream](arkts-arkweb-webview-webhttpbodystream-c.md) \| null | 返回资源请求中的WebHttpBodyStream，如果没有则返回null。 |
 
+**示例**
+
+完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
+
 ## getReferrer
 
 ```TypeScript
@@ -99,6 +111,10 @@ getReferrer(): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 获取到的referrer。 |
+
+**示例**
+
+完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
 
 ## getRequestMethod
 
@@ -122,6 +138,10 @@ getRequestMethod(): string
 | --- | --- |
 | string | 返回请求方法。 |
 
+**示例**
+
+完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
+
 ## getRequestResourceType
 
 ```TypeScript
@@ -141,6 +161,10 @@ getRequestResourceType(): WebResourceType
 | 类型 | 说明 |
 | --- | --- |
 | [WebResourceType](arkts-arkweb-webview-webresourcetype-e.md) | 返回资源请求的资源类型。 |
+
+**示例**
+
+完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
 
 ## getRequestUrl
 
@@ -164,6 +188,10 @@ getRequestUrl(): string
 | --- | --- |
 | string | 返回资源请求的URL信息。 |
 
+**示例**
+
+完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
+
 ## hasGesture
 
 ```TypeScript
@@ -186,6 +214,10 @@ hasGesture(): boolean
 | --- | --- |
 | boolean | 返回资源请求是否与手势（如点击）相关联，如果资源请求与手势相关联则返回true，否则返回false。 |
 
+**示例**
+
+完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
+
 ## isMainFrame
 
 ```TypeScript
@@ -207,4 +239,8 @@ isMainFrame(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 判断资源请求是否为主Frame，如果资源请求是主Frame则返回true，否则返回false。 |
+
+**示例**
+
+完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
 

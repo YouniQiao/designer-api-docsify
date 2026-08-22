@@ -49,6 +49,20 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let abilityType: accessibility.AbilityType = 'spoken';
 let abilityState: accessibility.AbilityState = 'enable';
 
+accessibility.getAbilityLists(abilityType, abilityState).then((data: accessibility.AccessibilityAbilityInfo[]) => {
+  console.info(`succeeded in getting accessibility extension list, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get accessibility extension list. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let abilityType: accessibility.AbilityType = 'spoken';
+let abilityState: accessibility.AbilityState = 'enable';
+
 accessibility.getAbilityLists(abilityType, abilityState, (err: BusinessError, data: accessibility.AccessibilityAbilityInfo[]) => {
   if (err) {
     console.error(`Failed to get accessibility extension list. Code: ${err.code}, message: ${err.message}`);
@@ -92,17 +106,5 @@ function getAbilityLists(abilityType: AbilityType, stateType: AbilityState): Pro
 
 **示例**
 
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let abilityType: accessibility.AbilityType = 'spoken';
-let abilityState: accessibility.AbilityState = 'enable';
-
-accessibility.getAbilityLists(abilityType, abilityState).then((data: accessibility.AccessibilityAbilityInfo[]) => {
-  console.info(`succeeded in getting accessibility extension list, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get accessibility extension list. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [getAbilityLists](#getabilitylists)
 

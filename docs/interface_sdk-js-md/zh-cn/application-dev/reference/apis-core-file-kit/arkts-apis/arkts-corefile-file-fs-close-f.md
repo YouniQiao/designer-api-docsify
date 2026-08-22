@@ -28,7 +28,7 @@ declare function close(file: number | File): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| file | number \| [File](arkts-corefile-filefs-file-i.md) | 是 | 已打开的File对象或已打开的文件描述符fd。关闭后File对象或文件描述符fd不可再用于读写等操作，继续使用可能导致错误或操作失败。 |
+| file | number \| [File](arkts-corefile-file-fs-file-i.md) | 是 | 已打开的File对象或已打开的文件描述符fd。关闭后File对象或文件描述符fd不可再用于读写等操作，继续使用可能导致错误或操作失败。 |
 
 **返回值：**
 
@@ -46,6 +46,148 @@ declare function close(file: number | File): Promise<void>
 | 13900025 | No space left on device |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath);
+fileIo.close(file).then(() => {
+  console.info(`Succeeded in closing file.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to close file. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath);
+fileIo.close(file).then(() => {
+  console.info(`Succeeded in closing file.`);
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to close file. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath);
+fileIo.close(file, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to close file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in closing file.`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath);
+fileIo.close(file, (err: BusinessError<void> | null) => {
+  if (err) {
+    console.error(`Failed to close file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in closing file.`);
+  }
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+stream.close().then(() => {
+  console.info(`Succeeded in closing file stream.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to close file stream. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+stream.close().then(() => {
+  console.info(`Succeeded in closing file stream.`);
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to close file stream. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+stream.close((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to close stream. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in closing stream.`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+stream.close((err: BusinessError<void> | null) => {
+  if (err) {
+    console.error(`Failed to close stream. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in closing stream.`);
+  }
+});
+```
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let randomAccessFile = fileIo.createRandomAccessFileSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+randomAccessFile.close();
+```
+
+```TypeScript
+const filePath = pathDir + "/test.txt";
+const rs = fileIo.createReadStream(filePath);
+rs.close();
+```
+
+```TypeScript
+const filePath = pathDir + "/test.txt";
+const ws = fileIo.createWriteStream(filePath);
+ws.close();
+```
 
 
 ## close
@@ -68,7 +210,7 @@ declare function close(file: number | File, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| file | number \| [File](arkts-corefile-filefs-file-i.md) | 是 | 已打开的File对象或已打开的文件描述符fd。关闭后File对象或文件描述符fd不可再用于读写等操作，继续使用可能导致错误或操作失败。 |
+| file | number \| [File](arkts-corefile-file-fs-file-i.md) | 是 | 已打开的File对象或已打开的文件描述符fd。关闭后File对象或文件描述符fd不可再用于读写等操作，继续使用可能导致错误或操作失败。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当异步关闭文件或目录成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -81,4 +223,8 @@ declare function close(file: number | File, callback: AsyncCallback<void>): void
 | 13900025 | No space left on device |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**示例**
+
+参见 [close](#close)
 

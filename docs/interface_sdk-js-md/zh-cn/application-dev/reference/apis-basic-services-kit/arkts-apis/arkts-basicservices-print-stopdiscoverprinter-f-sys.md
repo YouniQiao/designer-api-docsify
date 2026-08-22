@@ -54,6 +54,17 @@ print.stopDiscoverPrinter((err: BusinessError) => {
 })
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+
+print.stopDiscoverPrinter().then(() => {
+    console.info('stop Discovery success');
+}).catch((error: BusinessError) => {
+    console.error('failed to stop Discovery because : ' + JSON.stringify(error));
+})
+```
+
 
 ## stopDiscoverPrinter
 
@@ -90,14 +101,5 @@ function stopDiscoverPrinter(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-print.stopDiscoverPrinter().then(() => {
-    console.info('stop Discovery success');
-}).catch((error: BusinessError) => {
-    console.error('failed to stop Discovery because : ' + JSON.stringify(error));
-})
-```
+参见 [stopDiscoverPrinter](#stopdiscoverprinter)
 

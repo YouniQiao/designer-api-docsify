@@ -47,6 +47,20 @@ addEventListener(type: string, listener: WorkerEventListener): void
 **示例**
 
 ```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+workerInstance.addEventListener("alert", () => {
+  console.info("alert listener callback");
+})
+
+// 执行 alert 事件类型的回调
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp暂未支持
+```
+
+```TypeScript
 // worker.ets
 import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
 
@@ -57,6 +71,17 @@ workerPort.onmessage = (event: MessageEvents) => {
     console.info("alert listener callback");
   })
 };
+```
+
+```TypeScript
+// worker.ets
+import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
+
+const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
+
+workerPort.addEventListener("alert", () => {
+  console.info("alert listener callback");
+})
 ```
 
 ## dispatchEvent
@@ -96,6 +121,21 @@ dispatchEvent(event: Event): boolean
 **示例**
 
 ```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+workerInstance.addEventListener("alert", () => {
+  console.info("alert listener callback");
+})
+
+let result: boolean = workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp暂未支持
+
+console.info("dispatchEvent result is: ", result);
+```
+
+```TypeScript
 // worker.ets
 import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
 
@@ -108,6 +148,47 @@ workerPort.onmessage = (event: MessageEvents) => {
 
   workerPort.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp暂未支持
 };
+```
+
+```TypeScript
+// worker.ets
+import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
+
+const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
+
+workerPort.addEventListener("alert_add", ()=>{
+  console.info("alert listener callback");
+})
+
+workerPort.dispatchEvent({type: 'alert_add', timeStamp: 0}); // timeStamp暂未支持
+```
+
+分发事件（dispatchEvent）可与监听接口（addEventListener）搭配使用，示例如下：
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+workerInstance.postMessage("hello world");
+workerInstance.onmessage = (): void => {
+    console.info("receive data from worker.ets");
+}
+```
+
+```TypeScript
+// worker.ets
+import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
+
+const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
+
+workerPort.addEventListener("alert", ()=>{
+  console.info("alert listener callback");
+})
+
+workerPort.onmessage = (event: MessageEvents) => {
+  workerPort.dispatchEvent({type:"alert", timeStamp:0}); // timeStamp暂未支持
+}
 ```
 
 ## removeAllListener
@@ -135,6 +216,17 @@ removeAllListener(): void
 **示例**
 
 ```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+workerInstance.addEventListener("alert", () => {
+    console.info("alert listener callback");
+})
+workerInstance.removeAllListener();
+```
+
+```TypeScript
 // worker.ets
 import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
 
@@ -147,6 +239,19 @@ workerPort.onmessage = (event: MessageEvents) => {
 
   workerPort.removeAllListener();
 };
+```
+
+```TypeScript
+// worker.ets
+import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
+
+const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
+
+workerPort.addEventListener("alert_add", ()=>{
+  console.info("alert listener callback");
+})
+
+workerPort.removeAllListener();
 ```
 
 ## removeEventListener
@@ -181,6 +286,21 @@ removeEventListener(type: string, callback?: WorkerEventListener): void
 **示例**
 
 ```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+workerInstance.addEventListener("alert", () => {
+  console.info("alert listener callback");
+})
+
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp暂未支持
+
+workerInstance.removeEventListener("alert");
+```
+
+```TypeScript
 // worker.ets
 import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
 
@@ -193,5 +313,18 @@ workerPort.onmessage = (event: MessageEvents) => {
 
   workerPort.removeEventListener("alert");
 };
+```
+
+```TypeScript
+// worker.ets
+import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
+
+const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
+
+workerPort.addEventListener("alert", () => {
+  console.info("alert listener callback");
+})
+
+workerPort.removeEventListener('alert');
 ```
 

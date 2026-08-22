@@ -42,6 +42,25 @@ function startCasting(session: SessionToken, device: OutputDeviceInfo, callback:
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600108](../errorcode-avsession.md#6600108-设备连接失败) | Device connecting failed |
 
+**示例**
+
+```TypeScript
+let sessionId = 'xxx'; // sessionId需要通过avSession.createAVSession创建会话后获取。
+let myToken: avSession.SessionToken = {
+  sessionId: sessionId,
+}
+let castDevice: avSession.OutputDeviceInfo | undefined = undefined;
+avSession.on('deviceAvailable', (device: avSession.OutputDeviceInfo) => {
+  castDevice = device;
+  console.info(`on deviceAvailable  : ${device} `);
+  if (castDevice !== undefined) {
+    avSession.startCasting(myToken, castDevice, () => {
+        console.info('Succeeded in starting casting.');
+    });
+  }
+});
+```
+
 
 ## startCasting
 
@@ -86,20 +105,5 @@ function startCasting(session: SessionToken, device: OutputDeviceInfo): Promise<
 
 **示例**
 
-```TypeScript
-let sessionId = 'xxx'; // sessionId需要通过avSession.createAVSession创建会话后获取。
-let myToken: avSession.SessionToken = {
-  sessionId: sessionId,
-}
-let castDevice: avSession.OutputDeviceInfo | undefined = undefined;
-avSession.on('deviceAvailable', (device: avSession.OutputDeviceInfo) => {
-  castDevice = device;
-  console.info(`on deviceAvailable  : ${device} `);
-  if (castDevice !== undefined) {
-    avSession.startCasting(myToken, castDevice, () => {
-        console.info('Succeeded in starting casting.');
-    });
-  }
-});
-```
+参见 [startCasting](#startcasting)
 

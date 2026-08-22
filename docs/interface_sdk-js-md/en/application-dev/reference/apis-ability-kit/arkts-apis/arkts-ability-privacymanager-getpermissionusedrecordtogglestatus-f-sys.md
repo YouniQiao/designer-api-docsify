@@ -100,3 +100,7 @@ A system application can call this API to obtain the permission usage record tog
 | [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The specified subProfileId does not exist for the current user. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 
+**Examples**
+
+See [getPermissionUsedRecordToggleStatus](#getpermissionusedrecordtogglestatus)
+

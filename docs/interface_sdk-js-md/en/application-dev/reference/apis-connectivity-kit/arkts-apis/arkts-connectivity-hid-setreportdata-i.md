@@ -2,7 +2,7 @@
 
 Describe the SET_REPORT data is received from remote host.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-hid-interface SetReportData--><!--Device-hid-interface SetReportData-End-->
 
@@ -24,7 +24,7 @@ data of SET_REPORT data.
 
 **Type:** Uint8Array
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +42,7 @@ id of SET_REPORT data.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +60,7 @@ reportType of SET_REPORT data.
 
 **Type:** ReportType
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 

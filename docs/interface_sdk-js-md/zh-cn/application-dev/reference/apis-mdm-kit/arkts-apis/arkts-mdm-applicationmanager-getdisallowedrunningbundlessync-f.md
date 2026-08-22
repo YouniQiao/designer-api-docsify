@@ -28,7 +28,7 @@ function getDisallowedRunningBundlesSync(admin: Want, accountId?: number): Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | accountId | number | 否 | 用户ID，取值范围：大于等于0。<br> accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。<br/> - 调用接口时，若传入accountId，表示指定用户。<br/> - 调用接口时，若未传入accountId，表示当前用户。 |
 
 **返回值：**
@@ -66,6 +66,18 @@ try {
 }
 ```
 
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+
+try {
+  // 参数需根据实际情况进行替换
+  let result: Array<string> = applicationManager.getDisallowedRunningBundlesSync(null);
+  console.info(`Succeeded in getting disallowed running bundles, result : ${JSON.stringify(result)}`);
+} catch (err) {
+  console.error(`Failed to get disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## getDisallowedRunningBundlesSync
 
@@ -89,7 +101,7 @@ function getDisallowedRunningBundlesSync(admin: Want | null, accountId?: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
 | accountId | number | 否 | 用户ID，取值范围：大于等于0。 <br> accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。<br/> - 调用接口时，若传入accountId，表示指定用户。<br/> - 调用接口时，若未传入accountId，表示当前用户。 |
 
 **返回值：**
@@ -109,15 +121,5 @@ function getDisallowedRunningBundlesSync(admin: Want | null, accountId?: number)
 
 **示例**
 
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  let result: Array<string> = applicationManager.getDisallowedRunningBundlesSync(null);
-  console.info(`Succeeded in getting disallowed running bundles, result : ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getDisallowedRunningBundlesSync](#getdisallowedrunningbundlessync)
 

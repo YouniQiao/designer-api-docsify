@@ -93,6 +93,49 @@ try {
 }
 ```
 
+ArkTS-Dyn示例:
+
+```TypeScript
+import { launcherBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  launcherBundleManager.getShortcutInfo("com.example.demo")
+    .then((data: launcherBundleManager.ShortcutInfo[]) => {
+      console.info('data is ' + JSON.stringify(data));
+    }).catch((errData: BusinessError) => {
+      console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+    });
+} catch (errData) {
+  let code = (errData as BusinessError).code;
+  let message = (errData as BusinessError).message;
+  console.error(`errData is errCode:${code}  message:${message}`);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+// 开发者需传入实际工程的bundleName。
+import { launcherBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  launcherBundleManager.getShortcutInfo("com.example.demo")
+    .then((data: launcherBundleManager.ShortcutInfo[]) => {
+      console.info('data is ' + JSON.stringify(data));
+    }).catch ((errData: Error) => {
+      console.error(`errData is errCode:${(errData as BusinessError).code}  message:${(errData as BusinessError).message}`);
+    });
+} catch (errData) {
+  let code = (errData as BusinessError).code;
+  let message = (errData as BusinessError).message;
+  console.error(`errData is errCode:${code}  message:${message}`);
+}
+```
+
 
 ## getShortcutInfo
 
@@ -139,46 +182,5 @@ function getShortcutInfo(bundleName : string) : Promise<Array<ShortcutInfo>>
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  launcherBundleManager.getShortcutInfo("com.example.demo")
-    .then((data: launcherBundleManager.ShortcutInfo[]) => {
-      console.info('data is ' + JSON.stringify(data));
-    }).catch((errData: BusinessError) => {
-      console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-    });
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`errData is errCode:${code}  message:${message}`);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-// 开发者需传入实际工程的bundleName。
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  launcherBundleManager.getShortcutInfo("com.example.demo")
-    .then((data: launcherBundleManager.ShortcutInfo[]) => {
-      console.info('data is ' + JSON.stringify(data));
-    }).catch ((errData: Error) => {
-      console.error(`errData is errCode:${(errData as BusinessError).code}  message:${(errData as BusinessError).message}`);
-    });
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`errData is errCode:${code}  message:${message}`);
-}
-```
+参见 [getShortcutInfo](#getshortcutinfo)
 

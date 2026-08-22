@@ -54,6 +54,23 @@ Before calling this API, ensure that the app has enabled the sensitive data prot
 **Examples**
 
 ```TypeScript
+// Request the permission to access sensitive data on the lock screen.
+import { screenLockFileManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+    let acquireStatus = screenLockFileManager.acquireAccess();
+    if (acquireStatus === screenLockFileManager.AccessStatus.ACCESS_GRANTED) {
+        hilog.info(0x0000, 'testTag', 'acquireAccess successfully.');
+    }
+} catch (err) {
+    let message = (err as BusinessError).message;
+    hilog.error(0x0000, 'testTag', 'acquireAccess failed: %{public}s', message);
+}
+```
+
+```TypeScript
 // Request the permission to access media data on the lock screen.
 import { screenLockFileManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';

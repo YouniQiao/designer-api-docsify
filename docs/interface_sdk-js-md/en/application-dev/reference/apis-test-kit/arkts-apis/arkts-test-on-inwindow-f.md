@@ -33,3 +33,12 @@ Specifies the bundleName of the application which the window that the target Com
 | --- | --- |
 | [On](arkts-test-uitest-on-c.md) | this { |
 
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.inWindow('com.uitestScene.acts'); // Use the static constructor ON to create an On object and specify that the target component is located within the given application window.
+```
+

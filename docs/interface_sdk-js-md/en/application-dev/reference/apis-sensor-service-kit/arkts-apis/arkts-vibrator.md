@@ -26,10 +26,10 @@ import { vibrator } from '@kit.SensorServiceKit';
 | [isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md) | Checks whether an effect ID is supported. This API uses an asynchronous callback to return the result. |
 | [isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md) | Checks whether an effect ID is supported. This API uses a promise to return the result. |
 | [isSupportEffectSync](arkts-sensorservice-vibrator-issupporteffectsync-f.md) | Checks whether the preset vibration effect is supported. |
-| [offVibratorStateChange](arkts-sensorservice-vibrator-offvibratorstatechange-f.md) | Unregister a callback function for vibrator plugin or unplug events. |
 | [off_vibratorStateChange](arkts-sensorservice-vibrator-offvibratorstatechange-f.md) | Disables listening for vibrator status changes. |
-| [onVibratorStateChange](arkts-sensorservice-vibrator-onvibratorstatechange-f.md) | Register a callback function to be called when a vibrator plugin or unplug event occurs. |
+| [offVibratorStateChange](arkts-sensorservice-vibrator-offvibratorstatechange-f.md) | Unregister a callback function for vibrator plugin or unplug events. |
 | [on_vibratorStateChange](arkts-sensorservice-vibrator-onvibratorstatechange-f.md) | Enables listening for vibrator status changes. |
+| [onVibratorStateChange](arkts-sensorservice-vibrator-onvibratorstatechange-f.md) | Register a callback function to be called when a vibrator plugin or unplug event occurs. |
 | [startVibration](arkts-sensorservice-vibrator-startvibration-f.md) | Starts vibration based on a specified effect and attribute. This API uses an asynchronous callback to return the result. |
 | [startVibration](arkts-sensorservice-vibrator-startvibration-f.md) | Starts vibration based on a specified effect and attribute. This API uses a promise to return the result. |
 | [stop](arkts-sensorservice-vibrator-stop-f.md) | Stops vibration in the specified mode. This API uses a promise to return the result. |

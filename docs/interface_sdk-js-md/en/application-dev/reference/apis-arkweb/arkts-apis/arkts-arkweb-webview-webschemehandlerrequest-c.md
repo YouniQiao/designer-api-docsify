@@ -34,6 +34,10 @@ Obtains the URL of the frame that triggers this request.
 | --- | --- |
 | string | URL of the frame that triggers the request. |
 
+**Examples**
+
+For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
+
 ## getHeader
 
 ```TypeScript
@@ -55,6 +59,10 @@ Obtains the information about the resource request header.
 | Type | Description |
 | --- | --- |
 | Array&lt;WebHeader&gt; | Information about the resource request header. |
+
+**Examples**
+
+For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
 
 ## getHttpBodyStream
 
@@ -78,6 +86,10 @@ Obtains the **WebHttpBodyStream** instance in this resource request.
 | --- | --- |
 | [WebHttpBodyStream](../../apis-default/arkts-apis/arkts-webview-webhttpbodystream-c.md) \| null | WebHttpBodyStream** instance in the resource request. If there is no **WebHttpBodyStream** instance, **null** is returned. |
 
+**Examples**
+
+For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
+
 ## getReferrer
 
 ```TypeScript
@@ -99,6 +111,10 @@ Obtains the referrer.
 | Type | Description |
 | --- | --- |
 | string | Obtained referrer. |
+
+**Examples**
+
+For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
 
 ## getRequestMethod
 
@@ -122,6 +138,10 @@ Obtains the request method.
 | --- | --- |
 | string | Request method. |
 
+**Examples**
+
+For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
+
 ## getRequestResourceType
 
 ```TypeScript
@@ -141,6 +161,10 @@ Obtains the resource type of this resource request.
 | Type | Description |
 | --- | --- |
 | [WebResourceType](../../apis-default/arkts-apis/arkts-webview-webresourcetype-e.md) | Resource type of the resource request. |
+
+**Examples**
+
+For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
 
 ## getRequestUrl
 
@@ -164,6 +188,10 @@ Obtains the URL of the resource request.
 | --- | --- |
 | string | URL of the resource request. |
 
+**Examples**
+
+For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
+
 ## hasGesture
 
 ```TypeScript
@@ -186,6 +214,10 @@ Checks whether the resource request is associated with a gesture (for example, a
 | --- | --- |
 | boolean | true if the resource request is associated with a gesture (such as a tap); false otherwise. |
 
+**Examples**
+
+For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
+
 ## isMainFrame
 
 ```TypeScript
@@ -207,4 +239,8 @@ Checks whether the resource request is from the main frame.
 | Type | Description |
 | --- | --- |
 | boolean | Whether the resource request is for the main frame. The value **true** indicates the resource request is for the main frame, and **false** indicates otherwise. |
+
+**Examples**
+
+For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
 

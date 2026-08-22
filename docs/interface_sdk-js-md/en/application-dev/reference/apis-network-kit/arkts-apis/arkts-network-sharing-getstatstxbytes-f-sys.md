@@ -28,7 +28,7 @@ Obtains the volume of mobile data traffic sent via network sharing. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the data volume, in KB. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the data volume, in KB. |
 
 **Error codes:**
 
@@ -50,6 +50,20 @@ sharing.getStatsTxBytes((error: BusinessError, data: number) => {
   console.error(JSON.stringify(error));
   console.info(JSON.stringify(data));
 });
+```
+
+```TypeScript
+import { sharing } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sharing
+  .getStatsTxBytes()
+  .then((data: number) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
 ```
 
 
@@ -89,17 +103,5 @@ Obtains the volume of mobile data traffic sent via network sharing. This API use
 
 **Examples**
 
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sharing
-  .getStatsTxBytes()
-  .then((data: number) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+See [getStatsTxBytes](#getstatstxbytes)
 

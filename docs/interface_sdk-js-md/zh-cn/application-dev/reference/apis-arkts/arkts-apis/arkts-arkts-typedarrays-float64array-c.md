@@ -2047,26 +2047,6 @@ public with(index: int, value: double): Float64Array
 | --- | --- |
 | Float64Array | 将index处元素替换为value后的新Float64Array。 |
 
-## BYTES_PER_ELEMENT
-
-```TypeScript
-public static readonly BYTES_PER_ELEMENT: int = 8
-```
-
-每个元素占用的字节数。
-
-**类型：** int
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Float64Array-public static readonly BYTES_PER_ELEMENT: int = 8--><!--Device-Float64Array-public static readonly BYTES_PER_ELEMENT: int = 8-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
 ## buffer
 
 ```TypeScript
@@ -2124,6 +2104,26 @@ public readonly byteOffset: int
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Float64Array-public readonly byteOffset: int--><!--Device-Float64Array-public readonly byteOffset: int-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## BYTES_PER_ELEMENT
+
+```TypeScript
+public static readonly BYTES_PER_ELEMENT: int = 8
+```
+
+每个元素占用的字节数。
+
+**类型：** int
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Float64Array-public static readonly BYTES_PER_ELEMENT: int = 8--><!--Device-Float64Array-public static readonly BYTES_PER_ELEMENT: int = 8-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

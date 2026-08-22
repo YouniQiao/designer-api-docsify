@@ -40,6 +40,60 @@ function getAllVolumes(callback: AsyncCallback<Array<Volume>>): void
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
+  // 获取到所有卷设备信息
+}).catch((error: BusinessError) => {
+  console.error(`Failed to getAllVolumes. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
+  // 获取到所有卷设备信息
+}).catch((error: BusinessError): void => {
+  console.error(`Failed to getAllVolumes. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+volumeManager.getAllVolumes((error: BusinessError, volumes: Array<volumeManager.Volume>) => {
+  if (error) {
+    console.error(`getAllVolumes failed, code is: ${error.code}, message is: ${error.message}`);
+    return;
+  }
+  // 获取到所有卷设备信息
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+volumeManager.getAllVolumes((error: BusinessError | null, volumes: Array<volumeManager.Volume> | undefined) => {
+  if (error) {
+    console.error(`getAllVolumes failed, code is: ${error.code}, message is: ${error.message}`);
+    return;
+  }
+  // 获取到所有卷设备信息
+});
+```
+
 
 ## getAllVolumes
 
@@ -74,4 +128,8 @@ function getAllVolumes(): Promise<Array<Volume>>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:Mandatory parameters are left unspecified; |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
+
+**示例**
+
+参见 [getAllVolumes](#getallvolumes)
 

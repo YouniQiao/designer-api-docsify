@@ -67,3 +67,18 @@ Application uid.
 
 **系统接口：** 此接口为系统接口。
 
+**示例**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let outputAudioRendererFilter: audio.AudioRendererFilter = {
+  uid : 20010041,
+  rendererInfo : {
+    usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
+    rendererFlags : 0
+  },
+  rendererId : 0
+};
+```
+

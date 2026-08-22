@@ -18,5 +18,5 @@ Callback to be invoked when the video playback state on a photo browser page cha
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | [VideoPlayerState](arkts-medialibrary-filephotopickercomponent-videoplayerstate-e.md) | Yes | Enumerates the video playback states. |
+| state | [VideoPlayerState](../../apis-default/arkts-apis/arkts-file-photopickercomponent-videoplayerstate-e.md) | Yes | Enumerates the video playback states. |
 

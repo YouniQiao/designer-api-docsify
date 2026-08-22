@@ -20,7 +20,7 @@ List的回调函数类型。
 | --- | --- | --- | --- |
 | value | T | 是 | 当前元素的旧值。 |
 | index | int | 是 | 当前元素的下标。 该值为整数。 |
-| list | [List](arkts-arkts-utillist-list-c.md)&lt;T&gt; | 是 | 当前正在遍历的List实例。 |
+| list | [List](arkts-arkts-util-list-list-c.md)&lt;T&gt; | 是 | 当前正在遍历的List实例。 |
 
 **返回值：**
 

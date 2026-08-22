@@ -30,3 +30,11 @@ Truncates a file based on the file path. This API returns the result synchronous
 | path | string | Yes | Application sandbox path of the file to truncate. |
 | len | number | No | File length after truncation, in bytes. The default value is **0**. |
 
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let len = 5;
+fileio.truncateSync(filePath, len);
+```
+

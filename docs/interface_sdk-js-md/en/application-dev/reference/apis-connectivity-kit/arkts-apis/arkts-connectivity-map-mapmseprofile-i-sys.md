@@ -4,7 +4,7 @@ Manager MAP MSE profile.
 
 **Inheritance/Implementation:** MapMseProfile extends [BaseProfile](arkts-connectivity-map-baseprofile-t.md)
 
-**Since:** 26.0.0
+**Since:** 11
 
 <!--Device-map-interface MapMseProfile--><!--Device-map-interface MapMseProfile-End-->
 
@@ -24,7 +24,7 @@ disconnect(deviceId: string): void
 
 Disconnect the map connection with the remote device.
 
-**Since:** 26.0.0
+**Since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -53,6 +53,18 @@ Disconnect the map connection with the remote device.
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let mapMseProfile = map.createMapMseProfile();
+    mapMseProfile.disconnect('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## getMessageAccessAuthorization
 
 ```TypeScript
@@ -61,7 +73,7 @@ getMessageAccessAuthorization(deviceId: string): Promise<AccessAuthorization>
 
 Get the message access authorization.
 
-**Since:** 26.0.0
+**Since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -96,6 +108,20 @@ Get the message access authorization.
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let mapMseProfile = map.createMapMseProfile();
+    mapMseProfile.getMessageAccessAuthorization('XX:XX:XX:XX:XX:XX').then((authorization) => {
+        console.info('authorization ' + authorization);
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## setMessageAccessAuthorization
 
 ```TypeScript
@@ -104,7 +130,7 @@ setMessageAccessAuthorization(deviceId: string, authorization: AccessAuthorizati
 
 Set the message access authorization.
 
-**Since:** 26.0.0
+**Since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -139,4 +165,18 @@ Set the message access authorization.
 | 2900003 | Bluetooth disabled. |
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let mapMseProfile = map.createMapMseProfile();
+    mapMseProfile.setMessageAccessAuthorization('XX:XX:XX:XX:XX:XX', 0).then(() => {
+        console.info('setMessageAccessAuthorization');
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
 

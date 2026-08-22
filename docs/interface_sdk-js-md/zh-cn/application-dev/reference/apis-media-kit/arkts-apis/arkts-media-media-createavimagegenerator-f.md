@@ -38,6 +38,20 @@ function createAVImageGenerator(): Promise<AVImageGenerator>
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let avImageGenerator: media.AVImageGenerator;
+media.createAVImageGenerator((error: BusinessError, generator: media.AVImageGenerator) => {
+  if (generator) {
+    avImageGenerator = generator;
+    console.info('Succeeded in creating AVImageGenerator');
+  } else {
+    console.error(`Failed to create AVImageGenerator, error message:${error.message}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let avImageGenerator: media.AVImageGenerator;
 media.createAVImageGenerator().then((generator: media.AVImageGenerator) => {
   if (generator) {
     avImageGenerator = generator;
@@ -77,6 +91,10 @@ Creates an **AVImageGenerator** instance. This API uses a promise to return the 
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Returned by promise. |
 
+**示例**
+
+参见 [createAVImageGenerator](#createavimagegenerator)
+
 
 ## createAVImageGenerator
 
@@ -106,19 +124,7 @@ function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let avImageGenerator: media.AVImageGenerator;
-media.createAVImageGenerator((error: BusinessError, generator: media.AVImageGenerator) => {
-  if (generator) {
-    avImageGenerator = generator;
-    console.info('Succeeded in creating AVImageGenerator');
-  } else {
-    console.error(`Failed to create AVImageGenerator, error message:${error.message}`);
-  }
-});
-```
+参见 [createAVImageGenerator](#createavimagegenerator)
 
 
 ## createAVImageGenerator
@@ -146,4 +152,8 @@ Creates an **AVImageGenerator** instance. This API uses an asynchronous callback
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Returned by callback. |
+
+**示例**
+
+参见 [createAVImageGenerator](#createavimagegenerator)
 

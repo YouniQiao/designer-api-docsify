@@ -52,6 +52,17 @@ sim.getSimAccountInfo(0, (err:BusinessError , data: sim.IccAccountInfo) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.getSimAccountInfo(0).then((data: sim.IccAccountInfo) => {
+    console.info(`getSimAccountInfo success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSimAccountInfo failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getSimAccountInfo
 
@@ -95,14 +106,5 @@ Get account information of SIM card.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getSimAccountInfo(0).then((data: sim.IccAccountInfo) => {
-    console.info(`getSimAccountInfo success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSimAccountInfo failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [getSimAccountInfo](#getsimaccountinfo)
 

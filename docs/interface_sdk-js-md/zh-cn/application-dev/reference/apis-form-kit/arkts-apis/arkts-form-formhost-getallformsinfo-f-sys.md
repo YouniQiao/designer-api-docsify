@@ -41,6 +41,80 @@ function getAllFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): voi
 | [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formHost, formInfo } from '@kit.FormKit';
+
+try {
+  formHost.getAllFormsInfo((error: BusinessError, data: formInfo.FormInfo[]) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      console.info('formHost getAllFormsInfo success.');
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formHost, formInfo } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formHost.getAllFormsInfo((error, data) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      console.info(`formHost getAllFormsInfo`);
+    }
+  });
+} catch(error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formHost, formInfo } from '@kit.FormKit';
+
+try {
+  formHost.getAllFormsInfo().then((data: formInfo.FormInfo[]) => {
+    console.info('formHost getAllFormsInfo success.');
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formHost, formInfo } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formHost.getAllFormsInfo().then((data: formInfo.FormInfo[]) => {
+    console.info(`formHost getAllFormsInfo`);
+  }).catch((error) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch(error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
 
 ## getAllFormsInfo
 
@@ -75,4 +149,8 @@ function getAllFormsInfo(): Promise<Array<formInfo.FormInfo>>
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+
+**示例**
+
+参见 [getAllFormsInfo](#getallformsinfo)
 

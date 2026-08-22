@@ -34,3 +34,12 @@ Specifies the hint for the target Component.
 | --- | --- |
 | [On](arkts-test-uitest-on-c.md) | this { |
 
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { MatchPattern, On, ON } from '@kit.TestKit';
+
+let on: On = ON.hint('welcome', MatchPattern.EQUALS); // Use the static constructor ON to create an On object with the hint text attribute of the target component specified.
+```
+

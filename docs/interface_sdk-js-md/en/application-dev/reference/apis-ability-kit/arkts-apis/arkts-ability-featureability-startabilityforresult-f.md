@@ -34,7 +34,7 @@ Starts an ability. This API uses an asynchronous callback to return the result. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | Yes | Ability to start. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is an AbilityResult object; otherwise, err is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is an AbilityResult object; otherwise, err is an error object. |
 
 **Examples**
 
@@ -64,6 +64,40 @@ featureAbility.startAbilityForResult(
     }
   }
 );
+```
+
+```TypeScript
+import { featureAbility, wantConstant } from '@kit.AbilityKit';
+
+featureAbility.startAbilityForResult(
+  {
+    want:
+    {
+      action: 'ohos.want.action.home',
+      entities: ['entity.system.home'],
+      type: 'MIMETYPE',
+      flags: wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION,
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      /* In the FA model, abilityName consists of package and ability names. */
+      abilityName: 'com.example.myapplication.secondAbility',
+      uri: '',
+      parameters:
+      {
+        mykey0: 1111,
+        mykey1: [1, 2, 3],
+        mykey2: '[1, 2, 3]',
+        mykey3: 'xxxxxxxxxxxxxxxxxxxxxx',
+        mykey4: [1, 15],
+        mykey5: [false, true, false],
+        mykey6: ['aaaaaa', 'bbbbb', 'ccccccccccc'],
+        mykey7: true,
+      },
+    },
+  },
+).then((data) => {
+  console.info(`startAbilityForResult data: ${JSON.stringify(data)}`);
+});
 ```
 
 
@@ -104,37 +138,5 @@ Starts an ability. This API uses a promise to return the result. The following s
 
 **Examples**
 
-```TypeScript
-import { featureAbility, wantConstant } from '@kit.AbilityKit';
-
-featureAbility.startAbilityForResult(
-  {
-    want:
-    {
-      action: 'ohos.want.action.home',
-      entities: ['entity.system.home'],
-      type: 'MIMETYPE',
-      flags: wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION,
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      /* In the FA model, abilityName consists of package and ability names. */
-      abilityName: 'com.example.myapplication.secondAbility',
-      uri: '',
-      parameters:
-      {
-        mykey0: 1111,
-        mykey1: [1, 2, 3],
-        mykey2: '[1, 2, 3]',
-        mykey3: 'xxxxxxxxxxxxxxxxxxxxxx',
-        mykey4: [1, 15],
-        mykey5: [false, true, false],
-        mykey6: ['aaaaaa', 'bbbbb', 'ccccccccccc'],
-        mykey7: true,
-      },
-    },
-  },
-).then((data) => {
-  console.info(`startAbilityForResult data: ${JSON.stringify(data)}`);
-});
-```
+See [startAbilityForResult](#startabilityforresult)
 

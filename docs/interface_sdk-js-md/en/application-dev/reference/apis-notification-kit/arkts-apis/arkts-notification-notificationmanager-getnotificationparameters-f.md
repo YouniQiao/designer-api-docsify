@@ -97,3 +97,7 @@ Obtains some information about the **wantAgent** field in [NotificationRequest](
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 | [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
 
+**Examples**
+
+See [getNotificationParameters](#getnotificationparameters)
+

@@ -30,7 +30,7 @@ Removes notifications under a notification group of the specified application. T
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
 | groupName | string | Yes | Name of the notification group. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -61,6 +61,19 @@ let bundleOption: notificationManager.BundleOption = { bundle: "Bundle" };
 let groupName: string = "GroupName";
 
 notificationManager.removeGroupByBundle(bundleOption, groupName, removeGroupByBundleCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleOption: notificationManager.BundleOption = { bundle: "Bundle" };
+let groupName: string = "GroupName";
+
+notificationManager.removeGroupByBundle(bundleOption, groupName).then(() => {
+    console.info("removeGroupByBundle success");
+}).catch((err: BusinessError) => {
+    console.error(`removeGroupByBundle failed, code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -109,16 +122,5 @@ Removes notifications under a notification group of the specified application. T
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleOption: notificationManager.BundleOption = { bundle: "Bundle" };
-let groupName: string = "GroupName";
-
-notificationManager.removeGroupByBundle(bundleOption, groupName).then(() => {
-    console.info("removeGroupByBundle success");
-}).catch((err: BusinessError) => {
-    console.error(`removeGroupByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [removeGroupByBundle](#removegroupbybundle)
 

@@ -25,7 +25,7 @@ Obtains the device direction based on the rotation matrix. This API uses an asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | rotationMatrix | Array&lt;double&gt; | Yes | Rotation matrix. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback used to return the rotation angle around the z, x, and y axes, in degrees. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback used to return the rotation angle around the z, x, and y axes, in degrees. |
 
 **Error codes:**
 
@@ -65,6 +65,31 @@ try {
 }
 ```
 
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  let preRotationMatrix = [
+    1, 0, 0,
+    0, 0.87, -0.50,
+    0, 0.50, 0.87
+  ];
+  const promise = sensor.getOrientation(preRotationMatrix);
+  promise.then((data: Array<number>) => {
+    for (let i = 0; i < data.length; i++) {
+      console.info('Succeeded in getting data[' + i + ']: ' + data[i]);
+    }
+  }, (err: BusinessError) => {
+    console.error(`Failed to getOrientation. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to getOrientation Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 ## getOrientation
 
@@ -101,28 +126,5 @@ Obtains the device direction based on the rotation matrix. This API uses a promi
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  let preRotationMatrix = [
-    1, 0, 0,
-    0, 0.87, -0.50,
-    0, 0.50, 0.87
-  ];
-  const promise = sensor.getOrientation(preRotationMatrix);
-  promise.then((data: Array<number>) => {
-    for (let i = 0; i < data.length; i++) {
-      console.info('Succeeded in getting data[' + i + ']: ' + data[i]);
-    }
-  }, (err: BusinessError) => {
-    console.error(`Failed to getOrientation. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to getOrientation Code: ${e.code}, message: ${e.message}`);
-}
-```
+See [getOrientation](#getorientation)
 

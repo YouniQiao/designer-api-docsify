@@ -47,6 +47,25 @@ let eventParams: Record<string, number | string> = {
   "int_data": 100,
   "str_data": "strValue",
 };
+hiAppEvent.write("test_event", hiAppEvent.EventType.FAULT, eventParams, (err: BusinessError) => {
+  if (err) {
+    // 事件写入异常：事件存在异常参数时忽略异常参数后继续写入，或者事件校验失败时不执行写入
+    hilog.error(0x0000, 'hiAppEvent', `failed to write event, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  // 事件写入正常
+  hilog.info(0x0000, 'hiAppEvent', `success to write event`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let eventParams: Record<string, number | string> = {
+  "int_data": 100,
+  "str_data": "strValue",
+};
 hiAppEvent.write("test_event", hiAppEvent.EventType.FAULT, eventParams).then(() => {
   // 事件写入正常
   hilog.info(0x0000, 'hiAppEvent', `success to write event`);
@@ -86,22 +105,5 @@ function write(eventName: string, eventType: EventType, keyValues: object, callb
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let eventParams: Record<string, number | string> = {
-  "int_data": 100,
-  "str_data": "strValue",
-};
-hiAppEvent.write("test_event", hiAppEvent.EventType.FAULT, eventParams, (err: BusinessError) => {
-  if (err) {
-    // 事件写入异常：事件存在异常参数时忽略异常参数后继续写入，或者事件校验失败时不执行写入
-    hilog.error(0x0000, 'hiAppEvent', `failed to write event, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  // 事件写入正常
-  hilog.info(0x0000, 'hiAppEvent', `success to write event`);
-});
-```
+参见 [write](#write)
 

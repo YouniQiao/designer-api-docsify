@@ -217,176 +217,6 @@ try {
 }
 ```
 
-## offConnectResult
-
-```TypeScript
-offConnectResult(callback?: Callback<ConnectResult>): void
-```
-
-Unregisters the listener for **connectResult** events.
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Connection-offConnectResult(callback?: Callback<ConnectResult>): void--><!--Device-Connection-offConnectResult(callback?: Callback<ConnectResult>): void-End-->
-
-**系统能力：** SystemCapability.DistributedSched.AppCollaboration
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | 否 | Registered callback. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [32390206](../errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
-
-**示例**
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let peerDeviceId: string = "00:11:22:33:44:55";
-  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
-  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  connection.onConnectResult((result: linkEnhance.ConnectResult): void => {
-    hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
-  });
-  // 取消订阅连接结果
-  connection.offConnectResult((result: linkEnhance.ConnectResult): void => {
-    hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
-  });
-} catch (err) {
-  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
-
-## offDataReceived
-
-```TypeScript
-offDataReceived(callback?: Callback<ArrayBuffer>): void
-```
-
-Unregisters the listener for **dataReceived** events.
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Connection-offDataReceived(callback?: Callback<ArrayBuffer>): void--><!--Device-Connection-offDataReceived(callback?: Callback<ArrayBuffer>): void-End-->
-
-**系统能力：** SystemCapability.DistributedSched.AppCollaboration
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 否 | Registered callback. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [32390206](../errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
-
-**示例**
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let peerDeviceId: string = "00:11:22:33:44:55";
-  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
-  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  connection.onDataReceived((data: ArrayBuffer) => {
-    hilog.info(0x0000, TAG, 'recv dataLen = ' + data.byteLength);
-  });
-  connection.offDataReceived((data: ArrayBuffer) => {
-    hilog.info(0x0000, TAG, 'recv dataLen = ' + data.byteLength);
-  });
-} catch (err) {
-  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
-
-## offDisconnected
-
-```TypeScript
-offDisconnected(callback?: Callback<int>): void
-```
-
-Unregisters the listener for **disconnected** events. This API uses an asynchronous callback to return the result.
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Connection-offDisconnected(callback?: Callback<int>): void--><!--Device-Connection-offDisconnected(callback?: Callback<int>): void-End-->
-
-**系统能力：** SystemCapability.DistributedSched.AppCollaboration
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | Registered callback, where **int** indicates the returned error code. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [32390206](../errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
-
-**示例**
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let peerDeviceId: string = "00:11:22:33:44:55";
-  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
-  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  connection.onDisconnected((number: int) => {
-    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + number);
-  });
-  // 取消订阅断连通知
-  connection.offDisconnected((number: int) => {
-    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + number);
-  });
-} catch (err) {
-  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
-
 ## off('connectResult')
 
 ```TypeScript
@@ -564,13 +394,13 @@ try {
 }
 ```
 
-## onConnectResult
+## offConnectResult
 
 ```TypeScript
-onConnectResult(callback: Callback<ConnectResult>): void
+offConnectResult(callback?: Callback<ConnectResult>): void
 ```
 
-Registers a listener for **connectResult** events. This API uses an asynchronous callback to return the result.
+Unregisters the listener for **connectResult** events.
 
 **起始版本：** 23
 
@@ -578,7 +408,7 @@ Registers a listener for **connectResult** events. This API uses an asynchronous
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Connection-onConnectResult(callback: Callback<ConnectResult>): void--><!--Device-Connection-onConnectResult(callback: Callback<ConnectResult>): void-End-->
+<!--Device-Connection-offConnectResult(callback?: Callback<ConnectResult>): void--><!--Device-Connection-offConnectResult(callback?: Callback<ConnectResult>): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -586,7 +416,7 @@ Registers a listener for **connectResult** events. This API uses an asynchronous
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | 是 | Registered callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | 否 | Registered callback. |
 
 **错误码：**
 
@@ -608,26 +438,26 @@ try {
   let peerDeviceId: string = "00:11:22:33:44:55";
   hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
   let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  // 订阅连接结果
   connection.onConnectResult((result: linkEnhance.ConnectResult): void => {
     hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
   });
-
-  // 发起连接
-  connection.connect();
+  // 取消订阅连接结果
+  connection.offConnectResult((result: linkEnhance.ConnectResult): void => {
+    hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
+  });
 } catch (err) {
   hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
   (err as BusinessError).message);
 }
 ```
 
-## onDataReceived
+## offDataReceived
 
 ```TypeScript
-onDataReceived(callback: Callback<ArrayBuffer>): void
+offDataReceived(callback?: Callback<ArrayBuffer>): void
 ```
 
-Registers a listener for the **dataReceived** events. This API uses an asynchronous callback to return the result.
+Unregisters the listener for **dataReceived** events.
 
 **起始版本：** 23
 
@@ -635,7 +465,7 @@ Registers a listener for the **dataReceived** events. This API uses an asynchron
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Connection-onDataReceived(callback: Callback<ArrayBuffer>): void--><!--Device-Connection-onDataReceived(callback: Callback<ArrayBuffer>): void-End-->
+<!--Device-Connection-offDataReceived(callback?: Callback<ArrayBuffer>): void--><!--Device-Connection-offDataReceived(callback?: Callback<ArrayBuffer>): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -643,7 +473,7 @@ Registers a listener for the **dataReceived** events. This API uses an asynchron
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 是 | Registered callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 否 | Registered callback. |
 
 **错误码：**
 
@@ -665,8 +495,10 @@ try {
   let peerDeviceId: string = "00:11:22:33:44:55";
   hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
   let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  connection.connect();
   connection.onDataReceived((data: ArrayBuffer) => {
+    hilog.info(0x0000, TAG, 'recv dataLen = ' + data.byteLength);
+  });
+  connection.offDataReceived((data: ArrayBuffer) => {
     hilog.info(0x0000, TAG, 'recv dataLen = ' + data.byteLength);
   });
 } catch (err) {
@@ -675,13 +507,13 @@ try {
 }
 ```
 
-## onDisconnected
+## offDisconnected
 
 ```TypeScript
-onDisconnected(callback: Callback<int>): void
+offDisconnected(callback?: Callback<int>): void
 ```
 
-Registers a listener for **disconnected** events. This API uses an asynchronous callback to return the result.
+Unregisters the listener for **disconnected** events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 23
 
@@ -689,7 +521,7 @@ Registers a listener for **disconnected** events. This API uses an asynchronous 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Connection-onDisconnected(callback: Callback<int>): void--><!--Device-Connection-onDisconnected(callback: Callback<int>): void-End-->
+<!--Device-Connection-offDisconnected(callback?: Callback<int>): void--><!--Device-Connection-offDisconnected(callback?: Callback<int>): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -697,7 +529,7 @@ Registers a listener for **disconnected** events. This API uses an asynchronous 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | Registered callback, where **int** indicates the returned error code. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | Registered callback, where **int** indicates the returned error code. |
 
 **错误码：**
 
@@ -719,9 +551,12 @@ try {
   let peerDeviceId: string = "00:11:22:33:44:55";
   hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
   let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  // 订阅断连通知
-  connection.onDisconnected((reason: int) => {
-    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + reason);
+  connection.onDisconnected((number: int) => {
+    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + number);
+  });
+  // 取消订阅断连通知
+  connection.offDisconnected((number: int) => {
+    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + number);
   });
 } catch (err) {
   hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
@@ -892,6 +727,171 @@ try {
   // 订阅断连通知
   connection.on('disconnected', (number: number) => {
     hilog.info(0x0000, TAG, 'connection disconnected reason = ' + number);
+  });
+} catch (err) {
+  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
+
+## onConnectResult
+
+```TypeScript
+onConnectResult(callback: Callback<ConnectResult>): void
+```
+
+Registers a listener for **connectResult** events. This API uses an asynchronous callback to return the result.
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-onConnectResult(callback: Callback<ConnectResult>): void--><!--Device-Connection-onConnectResult(callback: Callback<ConnectResult>): void-End-->
+
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | 是 | Registered callback. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+
+**示例**
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let peerDeviceId: string = "00:11:22:33:44:55";
+  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
+  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
+  // 订阅连接结果
+  connection.onConnectResult((result: linkEnhance.ConnectResult): void => {
+    hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
+  });
+
+  // 发起连接
+  connection.connect();
+} catch (err) {
+  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
+
+## onDataReceived
+
+```TypeScript
+onDataReceived(callback: Callback<ArrayBuffer>): void
+```
+
+Registers a listener for the **dataReceived** events. This API uses an asynchronous callback to return the result.
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-onDataReceived(callback: Callback<ArrayBuffer>): void--><!--Device-Connection-onDataReceived(callback: Callback<ArrayBuffer>): void-End-->
+
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 是 | Registered callback. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+
+**示例**
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let peerDeviceId: string = "00:11:22:33:44:55";
+  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
+  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
+  connection.connect();
+  connection.onDataReceived((data: ArrayBuffer) => {
+    hilog.info(0x0000, TAG, 'recv dataLen = ' + data.byteLength);
+  });
+} catch (err) {
+  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
+
+## onDisconnected
+
+```TypeScript
+onDisconnected(callback: Callback<int>): void
+```
+
+Registers a listener for **disconnected** events. This API uses an asynchronous callback to return the result.
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-onDisconnected(callback: Callback<int>): void--><!--Device-Connection-onDisconnected(callback: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | Registered callback, where **int** indicates the returned error code. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+
+**示例**
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let peerDeviceId: string = "00:11:22:33:44:55";
+  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
+  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
+  // 订阅断连通知
+  connection.onDisconnected((reason: int) => {
+    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + reason);
   });
 } catch (err) {
   hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +

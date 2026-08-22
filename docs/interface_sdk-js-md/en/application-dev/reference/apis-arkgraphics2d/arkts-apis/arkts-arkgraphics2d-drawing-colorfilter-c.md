@@ -54,6 +54,21 @@ Creates a **ColorFilter** object with a given color and blend mode.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+const color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
+let colorFilter = drawing.ColorFilter.createBlendModeColorFilter(color, drawing.BlendMode.SRC);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let colorFilter = drawing.ColorFilter.createBlendModeColorFilter(0xffff0000, drawing.BlendMode.SRC);
+```
+
 ## createBlendModeColorFilter
 
 ```TypeScript
@@ -86,6 +101,10 @@ Creates a ColorFilter object with a given color and blend mode.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+See [createBlendModeColorFilter](#createblendmodecolorfilter)
 
 ## createBlendModeColorFilter
 
@@ -120,6 +139,10 @@ Creates a **ColorFilter** object with a given color and blend mode.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**Examples**
+
+See [createBlendModeColorFilter](#createblendmodecolorfilter)
+
 ## createBlendModeColorFilter
 
 ```TypeScript
@@ -152,6 +175,10 @@ Creates a ColorFilter object with a given color and blend mode.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+See [createBlendModeColorFilter](#createblendmodecolorfilter)
 
 ## createComposeColorFilter
 
@@ -186,6 +213,17 @@ Creates a **ColorFilter** object by combining another two color filters.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 
+**Examples**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+const color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
+let colorFilter1 = drawing.ColorFilter.createBlendModeColorFilter(color, drawing.BlendMode.SRC);
+let colorFilter2 = drawing.ColorFilter.createBlendModeColorFilter(color, drawing.BlendMode.DST);
+let colorFilter = drawing.ColorFilter.createComposeColorFilter(colorFilter1, colorFilter2);
+```
+
 ## createComposeColorFilter
 
 ```TypeScript
@@ -219,6 +257,10 @@ Creates a ColorFilter object by combining another two color filters.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 
+**Examples**
+
+See [createComposeColorFilter](#createcomposecolorfilter)
+
 ## createLightingColorFilter
 
 ```TypeScript
@@ -245,6 +287,15 @@ Creates a lighting color filter. It multiplies the RGB channel values by one col
 | Type | Description |
 | --- | --- |
 | ColorFilter | ColorFilter** object created. |
+
+**Examples**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+let mulColor : common2D.Color = { alpha: 0, red: 0, green: 0, blue: 20 };
+let addColor : common2D.Color = { alpha: 0, red: 0, green: 0, blue: 125 };
+let colorFilter = drawing.ColorFilter.createLightingColorFilter(mulColor, addColor);
+```
 
 ## createLightingColorFilter
 
@@ -273,6 +324,10 @@ Makes a color filter with the given mutColor and addColor.
 | --- | --- |
 | ColorFilter \| undefined | Colorfilter object. |
 
+**Examples**
+
+See [createLightingColorFilter](#createlightingcolorfilter)
+
 ## createLinearToSRGBGamma
 
 ```TypeScript
@@ -292,6 +347,14 @@ Creates a **ColorFilter** object that applies the sRGB gamma curve to the RGB ch
 | Type | Description |
 | --- | --- |
 | ColorFilter | Color filter. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let colorFilter = drawing.ColorFilter.createLinearToSRGBGamma();
+```
 
 ## createLinearToSRGBGamma
 
@@ -313,6 +376,10 @@ Creates a ColorFilter object that applies the sRGB gamma curve to the RGB channe
 | --- | --- |
 | ColorFilter \| undefined | Colorfilter object. |
 
+**Examples**
+
+See [createLinearToSRGBGamma](#createlineartosrgbgamma)
+
 ## createLumaColorFilter
 
 ```TypeScript
@@ -333,6 +400,14 @@ Creates a **ColorFilter** object that multiplies the luma into the alpha channel
 | --- | --- |
 | ColorFilter | Color filter. |
 
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let colorFilter = drawing.ColorFilter.createLumaColorFilter();
+```
+
 ## createLumaColorFilter
 
 ```TypeScript
@@ -352,6 +427,10 @@ Creates a ColorFilter object that multiplies the luma into the alpha channel and
 | Type | Description |
 | --- | --- |
 | ColorFilter \| undefined | Colorfilter. |
+
+**Examples**
+
+See [createLumaColorFilter](#createlumacolorfilter)
 
 ## createMatrixColorFilter
 
@@ -385,6 +464,20 @@ Creates a color filter object with a 4*5 color matrix.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let matrix: Array<number> = [
+  1, 0, 0, 0, 0,
+  0, 1, 0, 0, 0,
+  0, 0, 100, 0, 0,
+  0, 0, 0, 1, 0
+];
+let colorFilter = drawing.ColorFilter.createMatrixColorFilter(matrix);
+```
+
 ## createMatrixColorFilter
 
 ```TypeScript
@@ -417,6 +510,10 @@ Creates a color filter object with a 4*5 color matrix.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**Examples**
+
+See [createMatrixColorFilter](#creatematrixcolorfilter)
+
 ## createSRGBGammaToLinear
 
 ```TypeScript
@@ -437,6 +534,14 @@ Creates a **ColorFilter** object that applies the RGB channels to the sRGB gamma
 | --- | --- |
 | ColorFilter | Color filter. |
 
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let colorFilter = drawing.ColorFilter.createSRGBGammaToLinear();
+```
+
 ## createSRGBGammaToLinear
 
 ```TypeScript
@@ -456,4 +561,8 @@ Creates a ColorFilter object that applies the RGB channels to the sRGB gamma cur
 | Type | Description |
 | --- | --- |
 | ColorFilter \| undefined | Colorfilter object. |
+
+**Examples**
+
+See [createSRGBGammaToLinear](#createsrgbgammatolinear)
 

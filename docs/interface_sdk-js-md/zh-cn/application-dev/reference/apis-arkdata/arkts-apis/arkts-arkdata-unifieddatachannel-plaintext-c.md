@@ -36,3 +36,21 @@ abstract?: string
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+let text = new unifiedDataChannel.PlainText();
+text.textContent = 'this is textContent';
+text.abstract = 'This is abstract';
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let text = new unifiedDataChannel.PlainText();
+text.textContent = 'this is textContent';
+text.textAbstract = 'This is a text abstract';
+```
+

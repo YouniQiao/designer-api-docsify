@@ -100,81 +100,6 @@ let getActiveNotificationByFilterCallback = (err: BusinessError | null, data: no
 notificationManager.getActiveNotificationByFilter(filter, getActiveNotificationByFilterCallback);
 ```
 
-
-## getActiveNotificationByFilter
-
-```TypeScript
-function getActiveNotificationByFilter(filter: NotificationFilter, callback: AsyncCallback<NotificationRequest|null>): void
-```
-
-获取满足条件的普通实况通知信息。使用callback异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
-
-<!--Device-notificationManager-function getActiveNotificationByFilter(filter: NotificationFilter, callback: AsyncCallback<NotificationRequest|null>): void--><!--Device-notificationManager-function getActiveNotificationByFilter(filter: NotificationFilter, callback: AsyncCallback<NotificationRequest|null>): void-End-->
-
-**系统能力：** SystemCapability.Notification.Notification
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| filter | NotificationFilter | 是 | 查询普通实况窗的过滤条件。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NotificationRequest \| null&gt; | 是 | 获取满足条件的普通实况通知信息的回调函数。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
-
-
-## getActiveNotificationByFilter
-
-```TypeScript
-function getActiveNotificationByFilter(filter: NotificationFilter): Promise<NotificationRequest>
-```
-
-获取满足条件的普通实况通知信息。使用Promise异步回调。
-
-**起始版本：** 11
-
-**需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
-
-<!--Device-notificationManager-function getActiveNotificationByFilter(filter: NotificationFilter): Promise<NotificationRequest>--><!--Device-notificationManager-function getActiveNotificationByFilter(filter: NotificationFilter): Promise<NotificationRequest>-End-->
-
-**系统能力：** SystemCapability.Notification.Notification
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| filter | NotificationFilter | 是 | 查询普通实况窗的过滤条件。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;NotificationRequest&gt; | 以Promise形式返回获取的满足条件的普通实况通知信息。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -233,6 +158,87 @@ notificationManager.getActiveNotificationByFilter(filter).then((data: notificati
 ## getActiveNotificationByFilter
 
 ```TypeScript
+function getActiveNotificationByFilter(filter: NotificationFilter, callback: AsyncCallback<NotificationRequest|null>): void
+```
+
+获取满足条件的普通实况通知信息。使用callback异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function getActiveNotificationByFilter(filter: NotificationFilter, callback: AsyncCallback<NotificationRequest|null>): void--><!--Device-notificationManager-function getActiveNotificationByFilter(filter: NotificationFilter, callback: AsyncCallback<NotificationRequest|null>): void-End-->
+
+**系统能力：** SystemCapability.Notification.Notification
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filter | NotificationFilter | 是 | 查询普通实况窗的过滤条件。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NotificationRequest \| null&gt; | 是 | 获取满足条件的普通实况通知信息的回调函数。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
+| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
+
+**示例**
+
+参见 [getActiveNotificationByFilter](#getactivenotificationbyfilter)
+
+
+## getActiveNotificationByFilter
+
+```TypeScript
+function getActiveNotificationByFilter(filter: NotificationFilter): Promise<NotificationRequest>
+```
+
+获取满足条件的普通实况通知信息。使用Promise异步回调。
+
+**起始版本：** 11
+
+**需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function getActiveNotificationByFilter(filter: NotificationFilter): Promise<NotificationRequest>--><!--Device-notificationManager-function getActiveNotificationByFilter(filter: NotificationFilter): Promise<NotificationRequest>-End-->
+
+**系统能力：** SystemCapability.Notification.Notification
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filter | NotificationFilter | 是 | 查询普通实况窗的过滤条件。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;NotificationRequest&gt; | 以Promise形式返回获取的满足条件的普通实况通知信息。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
+| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
+
+**示例**
+
+参见 [getActiveNotificationByFilter](#getactivenotificationbyfilter)
+
+
+## getActiveNotificationByFilter
+
+```TypeScript
 function getActiveNotificationByFilter(filter: NotificationFilter): Promise<NotificationRequest|null>
 ```
 
@@ -267,4 +273,8 @@ function getActiveNotificationByFilter(filter: NotificationFilter): Promise<Noti
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
+
+**示例**
+
+参见 [getActiveNotificationByFilter](#getactivenotificationbyfilter)
 

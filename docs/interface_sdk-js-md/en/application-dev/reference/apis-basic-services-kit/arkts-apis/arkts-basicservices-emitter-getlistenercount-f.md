@@ -48,3 +48,8 @@ ArkTS-Sta example:
 let count: long = emitter.getListenerCount("eventId");
 ```
 
+```TypeScript
+let emitter1: emitter.Emitter = new emitter.Emitter();
+let count = emitter1.getListenerCount("eventId");
+```
+

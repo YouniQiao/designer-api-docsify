@@ -52,6 +52,18 @@ request.agent.show("123456", (err: BusinessError<void> | null, taskInfo: request
 });
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+request.agent.show("123456").then((taskInfo: request.agent.TaskInfo) => {
+  console.info(`Succeeded in showing a upload task.`);
+}).catch((err: Error) => {
+  console.error(`Failed to show a upload task, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## show
 
@@ -89,15 +101,5 @@ function show(id: string): Promise<TaskInfo>
 
 **示例**
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-request.agent.show("123456").then((taskInfo: request.agent.TaskInfo) => {
-  console.info(`Succeeded in showing a upload task.`);
-}).catch((err: Error) => {
-  console.error(`Failed to show a upload task, Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [show](#show)
 

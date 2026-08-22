@@ -1,6 +1,6 @@
 # Scenarios
 
-表示不触发[onNewWant](arkts-ability-appabilityuiability-uiability-c.md#onnewwant)生命周期回调场景的枚举，用于 [setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios)接口。
+表示不触发[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)生命周期回调场景的枚举，用于 [setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios)接口。
 
 **起始版本：** 23
 
@@ -61,4 +61,36 @@ SCENARIO_BACK_TO_CALLER_ABILITY_WITH_RESULT = 0x00000004
 <!--Device-Scenarios-SCENARIO_BACK_TO_CALLER_ABILITY_WITH_RESULT = 0x00000004--><!--Device-Scenarios-SCENARIO_BACK_TO_CALLER_ABILITY_WITH_RESULT = 0x00000004-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, contextConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    // 设置不触发onNewWant的场景，组合多个场景标志位
+    let scenarios: number = contextConstant.Scenarios.SCENARIO_MOVE_MISSION_TO_FRONT |
+      contextConstant.Scenarios.SCENARIO_SHOW_ABILITY |
+      contextConstant.Scenarios.SCENARIO_BACK_TO_CALLER_ABILITY_WITH_RESULT;
+
+    try {
+      // 设置跳过onNewWant的场景
+      this.context.setOnNewWantSkipScenarios(scenarios).then(() => {
+        // 执行正常业务
+        console.info('setOnNewWantSkipScenarios succeed');
+      }).catch((err: BusinessError) => {
+        // 处理业务逻辑错误
+        console.error(`setOnNewWantSkipScenarios failed, code is ${err.code}, message is ${err.message}`);
+      });
+    } catch (err) {
+      // 处理入参错误异常
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`setOnNewWantSkipScenarios failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
 

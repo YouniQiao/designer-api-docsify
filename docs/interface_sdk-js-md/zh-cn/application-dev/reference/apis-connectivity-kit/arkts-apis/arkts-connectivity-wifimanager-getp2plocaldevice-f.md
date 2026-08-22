@@ -37,6 +37,24 @@ function getP2pLocalDevice(): Promise<WifiP2pDevice>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [2801000](../errorcode-wifi.md#2801000-p2p模块异常) | Operation failed. |
 
+**示例**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+  // p2p已经建组或者连接成功，才能正常获取到本端设备信息
+  wifiManager.getP2pLocalDevice((err, data:wifiManager.WifiP2pDevice) => {
+    if (err) {
+        console.error("get P2P local device error");
+        return;
+    }
+    console.info("get P2P local device: " + JSON.stringify(data));
+  });
+
+  wifiManager.getP2pLocalDevice().then(data => {
+    console.info("get P2P local device: " + JSON.stringify(data));
+  });
+```
+
 
 ## getP2pLocalDevice
 
@@ -71,19 +89,5 @@ function getP2pLocalDevice(callback: AsyncCallback<WifiP2pDevice>): void
 
 **示例**
 
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-  // p2p已经建组或者连接成功，才能正常获取到本端设备信息
-  wifiManager.getP2pLocalDevice((err, data:wifiManager.WifiP2pDevice) => {
-    if (err) {
-        console.error("get P2P local device error");
-        return;
-    }
-    console.info("get P2P local device: " + JSON.stringify(data));
-  });
-
-  wifiManager.getP2pLocalDevice().then(data => {
-    console.info("get P2P local device: " + JSON.stringify(data));
-  });
-```
+参见 [getP2pLocalDevice](#getp2plocaldevice)
 

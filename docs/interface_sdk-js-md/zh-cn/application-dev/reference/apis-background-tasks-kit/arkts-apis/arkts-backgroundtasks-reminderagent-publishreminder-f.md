@@ -50,6 +50,19 @@ reminderAgent.publishReminder(timer, (err: BusinessError, reminderId: number) =>
 });
 ```
 
+```TypeScript
+import reminderAgent from '@ohos.reminderAgent';
+
+let timer:reminderAgent.ReminderRequestTimer = {
+  reminderType: reminderAgent.ReminderType.REMINDER_TYPE_TIMER,
+  triggerTimeInSeconds: 10
+}
+
+reminderAgent.publishReminder(timer).then((reminderId: number) => {
+  console.info("promise, reminderId = " + reminderId);
+});
+```
+
 
 ## publishReminder
 
@@ -85,16 +98,5 @@ function publishReminder(reminderReq: ReminderRequest): Promise<number>
 
 **示例**
 
-```TypeScript
-import reminderAgent from '@ohos.reminderAgent';
-
-let timer:reminderAgent.ReminderRequestTimer = {
-  reminderType: reminderAgent.ReminderType.REMINDER_TYPE_TIMER,
-  triggerTimeInSeconds: 10
-}
-
-reminderAgent.publishReminder(timer).then((reminderId: number) => {
-  console.info("promise, reminderId = " + reminderId);
-});
-```
+参见 [publishReminder](#publishreminder)
 

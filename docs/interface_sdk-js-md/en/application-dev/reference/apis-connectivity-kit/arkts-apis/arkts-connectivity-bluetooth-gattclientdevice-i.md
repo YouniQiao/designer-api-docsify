@@ -66,6 +66,11 @@ This method unregisters the device and clears the registered callbacks and handl
 **Examples**
 
 ```TypeScript
+let server : bluetooth.GattServer = bluetooth.BLE.createGattServer();
+server.close();
+```
+
+```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
 let ret : boolean = device.close();
 ```
@@ -101,6 +106,17 @@ The 'BLEConnectionStateChange' event is subscribed to return the connection stat
 **Examples**
 
 ```TypeScript
+let a2dpSrc : bluetooth.A2dpSourceProfile = bluetooth.getProfile(bluetooth.ProfileId.PROFILE_A2DP_SOURCE) as bluetooth.A2dpSourceProfile;
+let ret : boolean = a2dpSrc.connect('XX:XX:XX:XX:XX:XX');
+```
+
+```TypeScript
+let hfpAg : bluetooth.HandsFreeAudioGatewayProfile= bluetooth.getProfile(bluetooth.ProfileId
+    .PROFILE_HANDS_FREE_AUDIO_GATEWAY);
+let ret : boolean = hfpAg.connect('XX:XX:XX:XX:XX:XX');
+```
+
+```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
 let ret : boolean = device.connect();
 ```
@@ -134,6 +150,17 @@ Disconnects from or stops an ongoing connection to a BLE peripheral device.
 **Examples**
 
 ```TypeScript
+let a2dpSrc : bluetooth.A2dpSourceProfile = bluetooth.getProfile(bluetooth.ProfileId.PROFILE_A2DP_SOURCE) as bluetooth.A2dpSourceProfile;
+let ret : boolean = a2dpSrc.disconnect('XX:XX:XX:XX:XX:XX');
+```
+
+```TypeScript
+let hfpAg : bluetooth.HandsFreeAudioGatewayProfile = bluetooth.getProfile(bluetooth.ProfileId
+    .PROFILE_HANDS_FREE_AUDIO_GATEWAY);
+let ret : boolean = hfpAg.disconnect('XX:XX:XX:XX:XX:XX');
+```
+
+```TypeScript
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
 let ret : boolean = device.disconnect();
 ```
@@ -162,7 +189,7 @@ Obtains the name of BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to obtain the device name. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to obtain the device name. |
 
 **Examples**
 
@@ -172,6 +199,14 @@ import { BusinessError } from '@ohos.base';
 let gattClient : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
 let deviceName : void = gattClient.getDeviceName((err : BusinessError, data : string)=> {
     console.info('device name err ' + JSON.stringify(err));
+    console.info('device name' + JSON.stringify(data));
+})
+```
+
+```TypeScript
+// promise
+let gattClient : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
+gattClient.getDeviceName().then((data) => {
     console.info('device name' + JSON.stringify(data));
 })
 ```
@@ -204,13 +239,7 @@ Obtains the name of BLE peripheral device.
 
 **Examples**
 
-```TypeScript
-// promise
-let gattClient : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
-gattClient.getDeviceName().then((data) => {
-    console.info('device name' + JSON.stringify(data));
-})
-```
+See [getDeviceName](#getdevicename)
 
 ## getRssiValue
 
@@ -236,7 +265,7 @@ Get the RSSI value of this BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback invoked to return the RSSI, in dBm. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked to return the RSSI, in dBm. |
 
 **Examples**
 
@@ -248,6 +277,14 @@ let ret : boolean = gattClient.connect();
 gattClient.getRssiValue((err : BusinessError, data : number)=> {
     console.info('rssi err ' + JSON.stringify(err));
     console.info('rssi value' + JSON.stringify(data));
+})
+```
+
+```TypeScript
+// promise
+let gattClient : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
+gattClient.getRssiValue().then((data : number) => {
+    console.info('rssi' + JSON.stringify(data));
 })
 ```
 
@@ -279,13 +316,7 @@ Get the RSSI value of this BLE peripheral device.
 
 **Examples**
 
-```TypeScript
-// promise
-let gattClient : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
-gattClient.getRssiValue().then((data : number) => {
-    console.info('rssi' + JSON.stringify(data));
-})
-```
+See [getRssiValue](#getrssivalue)
 
 ## getServices
 
@@ -311,7 +342,7 @@ Starts discovering services.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;GattService&gt;&gt; | Yes | Callback used to catch the services. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GattService&gt;&gt; | Yes | Callback used to catch the services. |
 
 **Examples**
 
@@ -332,6 +363,15 @@ function getServices(code : BusinessError, gattServices : Array<bluetooth.GattSe
 let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
 device.connect();
 device.getServices(getServices);
+```
+
+```TypeScript
+// Promise
+let device : bluetooth.GattClientDevice= bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+device.connect();
+device.getServices().then((result : Array<bluetooth.GattService>) => {
+    console.info("getServices successfully:" + JSON.stringify(result));
+});
 ```
 
 ## getServices
@@ -362,14 +402,7 @@ Starts discovering services.
 
 **Examples**
 
-```TypeScript
-// Promise
-let device : bluetooth.GattClientDevice= bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-device.connect();
-device.getServices().then((result : Array<bluetooth.GattService>) => {
-    console.info("getServices successfully:" + JSON.stringify(result));
-});
-```
+See [getServices](#getservices)
 
 ## off('BLECharacteristicChange')
 
@@ -396,7 +429,7 @@ Unsubscribe characteristic value changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | Yes | Type of the characteristic value changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BLECharacteristic&gt; | No | Callback used to listen for the characteristic value changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | No | Callback used to listen for the characteristic value changed event. |
 
 **Examples**
 
@@ -430,7 +463,7 @@ Unsubscribe client connection state changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BLEConnectChangedState&gt; | No | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | No | Callback used to listen for the connection state changed event. |
 
 **Examples**
 
@@ -464,7 +497,7 @@ Subscribe characteristic value changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | Yes | Type of the characteristic value changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BLECharacteristic&gt; | Yes | Callback used to listen for the characteristic value changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback used to listen for the characteristic value changed event. |
 
 **Examples**
 
@@ -503,7 +536,7 @@ Subscribe client connection state changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BLEConnectChangedState&gt; | Yes | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | Yes | Callback used to listen for the connection state changed event. |
 
 **Examples**
 
@@ -541,7 +574,7 @@ Reads the characteristic of a BLE peripheral device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | characteristic | BLECharacteristic | Yes | Indicates the characteristic to read. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;BLECharacteristic&gt; | Yes | Callback invoked to return the characteristic value read. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback invoked to return the characteristic value read. |
 
 **Examples**
 
@@ -573,6 +606,27 @@ characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
 characteristicValue: bufferCCC, descriptors:descriptors};
 
 device.readCharacteristicValue(characteristic, readCcc);
+```
+
+```TypeScript
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+let descriptors : Array<bluetooth.BLEDescriptor> = [];
+let bufferDesc = new ArrayBuffer(8);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 11;
+let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
+descriptors[0] = descriptor;
+
+let bufferCCC = new ArrayBuffer(8);
+let cccV = new Uint8Array(bufferCCC);
+cccV[0] = 1;
+let characteristic : bluetooth.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+characteristicValue: bufferCCC, descriptors:descriptors};
+
+device.readCharacteristicValue(characteristic);
 ```
 
 ## readCharacteristicValue
@@ -609,26 +663,7 @@ Reads the characteristic of a BLE peripheral device.
 
 **Examples**
 
-```TypeScript
-let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-let descriptors : Array<bluetooth.BLEDescriptor> = [];
-let bufferDesc = new ArrayBuffer(8);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 11;
-let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
-descriptors[0] = descriptor;
-
-let bufferCCC = new ArrayBuffer(8);
-let cccV = new Uint8Array(bufferCCC);
-cccV[0] = 1;
-let characteristic : bluetooth.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-characteristicValue: bufferCCC, descriptors:descriptors};
-
-device.readCharacteristicValue(characteristic);
-```
+See [readCharacteristicValue](#readcharacteristicvalue)
 
 ## readDescriptorValue
 
@@ -655,7 +690,7 @@ Reads the descriptor of a BLE peripheral device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | descriptor | BLEDescriptor | Yes | Indicates the descriptor to read. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;BLEDescriptor&gt; | Yes | Callback invoked to return the descriptor read. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLEDescriptor&gt; | Yes | Callback invoked to return the descriptor read. |
 
 **Examples**
 
@@ -677,6 +712,17 @@ let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-800
   characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
   descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
 device.readDescriptorValue(descriptor, readDesc);
+```
+
+```TypeScript
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+let bufferDesc = new ArrayBuffer(8);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 11;
+let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+  descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
+device.readDescriptorValue(descriptor);
 ```
 
 ## readDescriptorValue
@@ -713,16 +759,7 @@ Reads the descriptor of a BLE peripheral device.
 
 **Examples**
 
-```TypeScript
-let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-let bufferDesc = new ArrayBuffer(8);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 11;
-let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-  descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
-device.readDescriptorValue(descriptor);
-```
+See [readDescriptorValue](#readdescriptorvalue)
 
 ## setBLEMtuSize
 

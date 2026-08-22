@@ -37,6 +37,45 @@ function unsubscribe(subscriber: NotificationSubscriber, callback: AsyncCallback
 | subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | 是 | 通知订阅对象。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 取消订阅动作回调函数。 |
 
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+import NotificationSubscribe from '@ohos.notificationSubscribe';
+
+let unsubscribeCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.error("unsubscribe failed " + JSON.stringify(err));
+  } else {
+    console.info("unsubscribe success");
+  }
+}
+let onDisconnectCallback = () => {
+  console.info("subscribe disconnect");
+}
+let subscriber: NotificationSubscribe.NotificationSubscriber = {
+  onDisconnect: onDisconnectCallback
+};
+Notification.unsubscribe(subscriber, unsubscribeCallback);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+import NotificationSubscribe from '@ohos.notificationSubscribe';
+
+function onDisconnectCallback() {
+  console.info("subscribe disconnect");
+}
+let subscriber: NotificationSubscribe.NotificationSubscriber = {
+  onDisconnect: onDisconnectCallback
+};
+Notification.unsubscribe(subscriber).then(() => {
+  console.info("unsubscribe success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`unsubscribe failed, code is ${err}`);
+});
+```
+
 
 ## unsubscribe
 
@@ -71,4 +110,8 @@ function unsubscribe(subscriber: NotificationSubscriber): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [unsubscribe](#unsubscribe)
 

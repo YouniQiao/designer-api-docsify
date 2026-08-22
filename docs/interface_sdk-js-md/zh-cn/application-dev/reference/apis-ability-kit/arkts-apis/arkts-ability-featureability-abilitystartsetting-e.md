@@ -58,3 +58,11 @@ DISPLAY_ID_KEY = 'displayId'
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
+**示例**
+
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+
+featureAbility.AbilityStartSetting.BOUNDS_KEY
+```
+

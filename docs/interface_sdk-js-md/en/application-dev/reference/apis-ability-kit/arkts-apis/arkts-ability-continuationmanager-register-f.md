@@ -30,7 +30,7 @@ Registers the continuation management service and obtains a token. This API does
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the token generated after the continuation management service is connected. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the token generated after the continuation management service is connected. |
 
 **Examples**
 
@@ -45,6 +45,38 @@ continuationManager.register((err, data) => {
   }
   console.info('register finished, ' + JSON.stringify(data));
   token = data;
+});
+```
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+
+let token: number = -1;
+continuationManager.register(
+  {
+    deviceType: ["00E"]
+  },
+  (err, data) => {
+    if (err.code != 0) {
+      console.error('register failed, cause: ' + JSON.stringify(err));
+      return;
+    }
+    console.info('register finished, ' + JSON.stringify(data));
+    token = data;
+});
+```
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let token: number = -1;
+continuationManager.register(
+  { deviceType: ["00E"] }).then((data) => {
+    console.info('register finished, ' + JSON.stringify(data));
+    token = data;
+  }).catch((err: BusinessError) => {
+    console.error('register failed, cause: ' + JSON.stringify(err));
 });
 ```
 
@@ -74,27 +106,11 @@ Registers the continuation management service and obtains a token. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | ContinuationExtraParams | Yes | Extra parameters used to filter the list of available devices. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the token generated after the continuation management service is connected. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the token generated after the continuation management service is connected. |
 
 **Examples**
 
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = -1;
-continuationManager.register(
-  {
-    deviceType: ["00E"]
-  },
-  (err, data) => {
-    if (err.code != 0) {
-      console.error('register failed, cause: ' + JSON.stringify(err));
-      return;
-    }
-    console.info('register finished, ' + JSON.stringify(data));
-    token = data;
-});
-```
+See [register](#register)
 
 
 ## register
@@ -131,17 +147,5 @@ Registers the continuation management service and obtains a token. This API uses
 
 **Examples**
 
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = -1;
-continuationManager.register(
-  { deviceType: ["00E"] }).then((data) => {
-    console.info('register finished, ' + JSON.stringify(data));
-    token = data;
-  }).catch((err: BusinessError) => {
-    console.error('register failed, cause: ' + JSON.stringify(err));
-});
-```
+See [register](#register)
 

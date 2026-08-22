@@ -29,7 +29,7 @@ Obtains the widget information provided by a specified application on the device
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -42,6 +42,73 @@ Obtains the widget information provided by a specified application on the device
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+
+**Examples**
+
+```TypeScript
+import { formHost, formInfo } from '@kit.FormKit';
+
+try {
+  formHost.getFormsInfo('com.example.ohos.formjsdemo', (error: BusinessError, data: formInfo.FormInfo[]) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      console.info('formHost getFormsInfo success.');
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { formHost, formInfo } from '@kit.FormKit';
+
+try {
+  formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry', (error: BusinessError, data: formInfo.FormInfo[]) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      console.info('formHost getFormsInfo success.');
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { formHost, formInfo } from '@kit.FormKit';
+
+try {
+  formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry').then((data: formInfo.FormInfo[]) => {
+    console.info('formHost getFormsInfo success.');
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { formHost, formInfo } from '@kit.FormKit';
+
+const filter: formInfo.FormInfoFilter = {
+  bundleName: 'ohos.samples.FormApplication',
+  moduleName: 'entry',
+  supportedDimensions: [FormDimension.Dimension_1_2, FormDimension.Dimension_2_2, FormDimension.Dimension_2_4]
+};
+try {
+  formHost.getFormsInfo(filter).then((data: formInfo.FormInfo[]) => {
+    console.info('formHost getFormsInfo success.');
+  }).catch((error: BusinessError) => {
+    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
 
 
 ## getFormsInfo
@@ -72,7 +139,7 @@ Obtains the widget information provided by a specified application on the device
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
 | moduleName | string | Yes | Module name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -85,6 +152,10 @@ Obtains the widget information provided by a specified application on the device
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+
+**Examples**
+
+See [getFormsInfo](#getformsinfo)
 
 
 ## getFormsInfo
@@ -130,6 +201,10 @@ Obtains the widget information provided by a specified application on the device
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
+**Examples**
+
+See [getFormsInfo](#getformsinfo)
+
 
 ## getFormsInfo
 
@@ -172,4 +247,8 @@ Obtains the widget information provided by a specified application on the device
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+
+**Examples**
+
+See [getFormsInfo](#getformsinfo)
 

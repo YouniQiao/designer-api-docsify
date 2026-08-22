@@ -77,6 +77,102 @@ Obtains the XMP metadata as a blob.
 | [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
 | [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Memory copy failed. |
 
+**Examples**
+
+```TypeScript
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg'; // An image containing Exif metadata is required.
+  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function GetBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let pictureObj: image.Picture = await imageSource.createPicture();
+  let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
+  let metaData: image.Metadata | null = await pictureObj.getMetadata(metadataType);
+  if (metaData != null) {
+    let blob = await metaData.getBlob();
+    if (blob != undefined) {
+      console.info("get blob success");
+    }
+  }
+}
+```
+
+```TypeScript
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
+  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function exifMetadataGetBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
+  if (metaData != undefined && metaData.exifMetadata != undefined) {
+    let blob = await metaData.exifMetadata.getBlob();
+    if (blob != undefined) {
+      console.info("get blob success");
+    }
+  }
+}
+```
+
+```TypeScript
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
+  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function makerNoteHuaweiGetBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
+  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
+    let blob = await metaData.makerNoteHuaweiMetadata.getBlob();
+    if (blob != undefined) {
+      console.info("get blob success");
+    }
+  }
+}
+```
+
+```TypeScript
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/heifs.heic';  // An image containing HeifsMetadata is required.
+  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function heifsMetadataGetBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
+  if (metaData != undefined && metaData.heifsMetadata != undefined) {
+    let blob = await metaData.heifsMetadata.getBlob();
+    if (blob != undefined) {
+      console.info("get blob success");
+    }
+  }
+}
+```
+
 ## getTag
 
 ```TypeScript
@@ -247,6 +343,122 @@ Set a blob into the XMP metadata.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. The buffer is empty or invalid. |
+
+**Examples**
+
+```TypeScript
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
+  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function setBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let pictureObj: image.Picture = await imageSource.createPicture();
+  let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
+  let metaData: image.Metadata | null = await pictureObj.getMetadata(metadataType);
+  if (metaData != null) {
+    let blob = await metaData.getBlob();
+    if (blob != undefined) {
+      console.info("get blob success");
+      metaData.setBlob(blob);
+    }
+    let new_blob = metaData.getBlob();
+    if (new_blob != undefined) {
+      console.info("new_blob is not undefined");
+    }
+  }
+}
+```
+
+```TypeScript
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
+  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function exifMetadataSetBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
+  if (metaData != undefined && metaData.exifMetadata != undefined) {
+    let blob = await metaData.exifMetadata.getBlob();
+    if (blob != undefined) {
+      console.info("get blob success");
+      metaData.exifMetadata.setBlob(blob);
+    }
+    let new_blob = metaData.exifMetadata.getBlob();
+    if (new_blob != undefined) {
+      console.info("new_blob is not undefined");
+    }
+  }
+}
+```
+
+```TypeScript
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
+  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function makerNoteHuaweiSetBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
+  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
+    let blob = await metaData.makerNoteHuaweiMetadata.getBlob();
+    if (blob != undefined) {
+      console.info("get blob success");
+      metaData.makerNoteHuaweiMetadata.setBlob(blob);
+    }
+    let new_blob = metaData.makerNoteHuaweiMetadata.getBlob();
+    if (new_blob != undefined) {
+      console.info("new_blob is not undefined");
+    }
+  }
+}
+```
+
+```TypeScript
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/heifs.heic';  // An image containing HeifsMetadata is required.
+  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function heifsMetadataSetBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
+  if (metaData != undefined && metaData.heifsMetadata != undefined) {
+    let blob = await metaData.heifsMetadata.getBlob();
+    if (blob != undefined) {
+      console.info("get blob success");
+      metaData.heifsMetadata.setBlob(blob);
+    }
+    let new_blob = metaData.heifsMetadata.getBlob();
+    if (new_blob != undefined) {
+      console.info("new_blob is not undefined");
+    }
+  }
+}
+```
 
 ## setValue
 

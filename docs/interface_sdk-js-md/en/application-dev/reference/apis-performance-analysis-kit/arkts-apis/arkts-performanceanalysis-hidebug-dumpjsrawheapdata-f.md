@@ -111,6 +111,10 @@ Dumps the original heap snapshot of the VM for the current thread. The API uses 
 | [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-repeated-data-dump) | Repeated data dump. |
 | [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) | Failed to create dump file. |
 
+**Examples**
+
+See [dumpJsRawHeapData](#dumpjsrawheapdata)
+
 
 ## dumpJsRawHeapData
 
@@ -158,4 +162,8 @@ The generated file will be stored in a folder within the application directory. 
 | [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-node-api) | Napi interface call exception. |
 | [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-repeated-data-dump) | Repeated data dump. |
 | [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) | Failed to create dump file. |
+
+**Examples**
+
+See [dumpJsRawHeapData](#dumpjsrawheapdata)
 

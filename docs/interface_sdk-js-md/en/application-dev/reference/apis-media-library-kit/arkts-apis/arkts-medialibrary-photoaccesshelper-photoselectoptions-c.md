@@ -256,3 +256,14 @@ Name of the child window.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+**Examples**
+
+```TypeScript
+async function photoPicker() {
+    let picker = new photoAccessHelper.PhotoViewPicker();
+    let option = new photoAccessHelper.PhotoSelectOptions();
+    option.userId = 101;
+    picker.select(option);
+  }
+```
+

@@ -149,6 +149,10 @@ Called back when data is sent.
 | --- | --- | --- | --- |
 | data | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the received data. |
 
+**Examples**
+
+See [onData](#ondata)
+
 ## onDisconnect
 
 ```TypeScript

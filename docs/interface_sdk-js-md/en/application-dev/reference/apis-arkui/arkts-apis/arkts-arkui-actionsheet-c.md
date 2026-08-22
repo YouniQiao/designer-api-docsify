@@ -4,7 +4,7 @@
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [showActionSheet](arkts-arkui-arkuiuicontext-uicontext-c.md#showactionsheet)
+**Substitutes:** [showActionSheet](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#showactionsheet)
 
 <!--Device-unnamed-declare class ActionSheet--><!--Device-unnamed-declare class ActionSheet-End-->
 
@@ -26,14 +26,14 @@ Shows an action sheet in the given settings.
 > **NOTE：**
 > 
 > Since API version 10, you can use
-> [showActionSheet](arkts-arkui-arkuiuicontext-uicontext-c.md#showactionsheet) in
-> [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) to specify the UI execution context.
+> [showActionSheet](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#showactionsheet) in
+> [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to specify the UI execution context.
 
 **Since:** 8
 
 **Deprecated since:** 18
 
-**Substitutes:** [showActionSheet](arkts-arkui-arkuiuicontext-uicontext-c.md#showactionsheet)
+**Substitutes:** [showActionSheet](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#showactionsheet)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

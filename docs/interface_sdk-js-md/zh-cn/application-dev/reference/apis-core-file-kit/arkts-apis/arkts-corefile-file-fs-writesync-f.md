@@ -34,7 +34,7 @@ declare function writeSync(
 | --- | --- | --- | --- |
 | fd | number | 是 | 已打开的文件描述符fd。 |
 | buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | [WriteOptions](../../apis-default/arkts-apis/arkts-filefs-writeoptions-i.md) | 否 | 支持如下选项：<br/>- offset，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。<br/> - length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。<br/> - encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。当前仅支持'utf-8'。<br>**起始版本：** 11 |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | 否 | 支持如下选项：<br/>- offset，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。<br/> - length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。<br/> - encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。当前仅支持'utf-8'。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -58,4 +58,43 @@ declare function writeSync(
 | 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let str: string = "hello, world";
+let writeLen = fileIo.writeSync(file.fd, str);
+console.info(`Succeeded in writing data to file, size is: ${writeLen}`);
+fileIo.closeSync(file);
+```
+
+```TypeScript
+import { WriteOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath,"r+");
+let writeOption: WriteOptions = {
+  offset: 5,
+  length: 5,
+  encoding: 'utf-8'
+};
+let num = stream.writeSync("hello, world", writeOption);
+stream.close();
+```
+
+```TypeScript
+import { WriteOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let randomAccessFile = fileIo.createRandomAccessFileSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+let writeOption: WriteOptions = {
+  offset: 5,
+  length: 5,
+  encoding: 'utf-8'
+};
+let bytesWritten = randomAccessFile.writeSync("hello, world", writeOption);
+randomAccessFile.close();
+```
 

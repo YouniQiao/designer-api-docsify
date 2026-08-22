@@ -33,7 +33,7 @@ Publishes a reminder. This API uses an asynchronous callback to return the resul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reminderReq | ReminderRequest | Yes | Request used for publishing the reminder. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. After the agent-powered reminder is published, **err** is **undefined**, and **data** is the ID of the published reminder. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. After the agent-powered reminder is published, **err** is **undefined**, and **data** is the ID of the published reminder. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -61,6 +61,22 @@ reminderAgentManager.publishReminder(timer, (err: BusinessError, reminderId: num
   } else {
     console.info("callback, reminderId = " + reminderId);
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+let timer: reminderAgentManager.ReminderRequestTimer = {
+  reminderType: reminderAgentManager.ReminderType.REMINDER_TYPE_TIMER,
+  triggerTimeInSeconds: 10
+}
+
+reminderAgentManager.publishReminder(timer).then((reminderId: number) => {
+  console.info("promise, reminderId = " + reminderId);
+}).catch((err: BusinessError) => {
+  console.error("promise err code:" + err.code + " message:" + err.message);
 });
 ```
 
@@ -110,19 +126,5 @@ Publishes a reminder. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-let timer: reminderAgentManager.ReminderRequestTimer = {
-  reminderType: reminderAgentManager.ReminderType.REMINDER_TYPE_TIMER,
-  triggerTimeInSeconds: 10
-}
-
-reminderAgentManager.publishReminder(timer).then((reminderId: number) => {
-  console.info("promise, reminderId = " + reminderId);
-}).catch((err: BusinessError) => {
-  console.error("promise err code:" + err.code + " message:" + err.message);
-});
-```
+See [publishReminder](#publishreminder)
 

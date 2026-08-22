@@ -82,13 +82,13 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 
 | Name | Description |
 | --- | --- |
-| [CMHandle](arkts-devicecertificate-certificatemanager-cmhandle-i.md) | Represents the handle to a signing or signature verification operation. |
-| [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md) | Represents the result returned. |
-| [CMSignatureSpec](arkts-devicecertificate-certificatemanager-cmsignaturespec-i.md) | Represents a set of parameters used for signing or signature verification, including the key usage purpose, padding mode, and digest algorithm. |
 | [CertAbstract](arkts-devicecertificate-certificatemanager-certabstract-i.md) | Represents brief information about a certificate. |
 | [CertBlob](arkts-devicecertificate-certificatemanager-certblob-i.md) | Indicates the certificate file data. |
 | [CertInfo](arkts-devicecertificate-certificatemanager-certinfo-i.md) | Represents detailed information about a certificate. |
 | [CertStoreProperty](arkts-devicecertificate-certificatemanager-certstoreproperty-i.md) | Represents the storage information about a certificate, including the certificate type and location. |
+| [CMHandle](arkts-devicecertificate-certificatemanager-cmhandle-i.md) | Represents the handle to a signing or signature verification operation. |
+| [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md) | Represents the result returned. |
+| [CMSignatureSpec](arkts-devicecertificate-certificatemanager-cmsignaturespec-i.md) | Represents a set of parameters used for signing or signature verification, including the key usage purpose, padding mode, and digest algorithm. |
 | [Credential](arkts-devicecertificate-certificatemanager-credential-i.md) | Represents detailed information about a credential. |
 | [CredentialAbstract](arkts-devicecertificate-certificatemanager-credentialabstract-i.md) | Represents brief information about a credential. |
 | [UkeyInfo](arkts-devicecertificate-certificatemanager-ukeyinfo-i.md) | Provides USB Key certificate credential attribute information. |
@@ -98,12 +98,12 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 | Name | Description |
 | --- | --- |
 | [AuthStorageLevel](arkts-devicecertificate-certificatemanager-authstoragelevel-e.md) | Enumerates the credential storage levels. |
-| [CMErrorCode](arkts-devicecertificate-certificatemanager-cmerrorcode-e.md) | Enumerates the error codes used in the certificate management APIs. |
 | [CertAlgorithm](arkts-devicecertificate-certificatemanager-certalgorithm-e.md) | Enumerates the certificate algorithms. |
 | [CertFileFormat](arkts-devicecertificate-certificatemanager-certfileformat-e.md) | Represents the certificate file format. |
+| [CertificatePurpose](arkts-devicecertificate-certificatemanager-certificatepurpose-e.md) | Enumerates the usage of a credential. |
 | [CertScope](arkts-devicecertificate-certificatemanager-certscope-e.md) | Enumerates the certificate scopes. |
 | [CertType](arkts-devicecertificate-certificatemanager-certtype-e.md) | Enumerates the certificate types. |
-| [CertificatePurpose](arkts-devicecertificate-certificatemanager-certificatepurpose-e.md) | Enumerates the usage of a credential. |
+| [CMErrorCode](arkts-devicecertificate-certificatemanager-cmerrorcode-e.md) | Enumerates the error codes used in the certificate management APIs. |
 | [CmKeyDigest](arkts-devicecertificate-certificatemanager-cmkeydigest-e.md) | Enumerates the digest algorithms that can be used for signing and signature verification. |
 | [CmKeyPadding](arkts-devicecertificate-certificatemanager-cmkeypadding-e.md) | Enumerates the padding modes that can be used for signing and signature verification. |
 | [CmKeyPurpose](arkts-devicecertificate-certificatemanager-cmkeypurpose-e.md) | Enumerates the purposes of using the key. |

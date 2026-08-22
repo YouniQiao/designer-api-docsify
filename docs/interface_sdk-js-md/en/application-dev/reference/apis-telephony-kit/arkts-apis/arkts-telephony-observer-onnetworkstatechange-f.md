@@ -26,7 +26,7 @@ Callback when the network state corresponding to the default sim card is updated
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NetworkState&gt; | Yes | Indicates the callback for getting an instance of the {@code NetworkState} class. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkState&gt; | Yes | Indicates the callback for getting an instance of the {@code NetworkState} class. |
 
 **Error codes:**
 
@@ -61,7 +61,7 @@ Callback when the network state corresponding to the monitored {@code slotId} is
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | ObserverOptions | Yes | Indicates the options for observer. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NetworkState&gt; | Yes | Indicates the callback for getting an instance of the {@code NetworkState} class. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkState&gt; | Yes | Indicates the callback for getting an instance of the {@code NetworkState} class. |
 
 **Error codes:**
 

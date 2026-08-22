@@ -14,24 +14,6 @@ Defines a contact.
 import { contact } from '@kit.ContactsKit';
 ```
 
-## INVALID_CONTACT_ID
-
-```TypeScript
-static readonly INVALID_CONTACT_ID: -1
-```
-
-Default contact ID, value is -1.
-
-**Type:** -1
-
-**Since:** 7
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Contact-static readonly INVALID_CONTACT_ID: -1--><!--Device-Contact-static readonly INVALID_CONTACT_ID: -1-End-->
-
-**System capability:** SystemCapability.Applications.ContactsData
-
 ## contactAttributes
 
 ```TypeScript
@@ -137,6 +119,24 @@ List of instant message addresses of the contact.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Contact-imAddresses?: ImAddress[]--><!--Device-Contact-imAddresses?: ImAddress[]-End-->
+
+**System capability:** SystemCapability.Applications.ContactsData
+
+## INVALID_CONTACT_ID
+
+```TypeScript
+static readonly INVALID_CONTACT_ID: -1
+```
+
+Default contact ID, value is -1.
+
+**Type:** -1
+
+**Since:** 7
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Contact-static readonly INVALID_CONTACT_ID: -1--><!--Device-Contact-static readonly INVALID_CONTACT_ID: -1-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 

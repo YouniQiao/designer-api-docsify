@@ -24,10 +24,10 @@ import { continueManager } from '@kit.AbilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [offPrepareContinue](arkts-ability-continuemanager-offpreparecontinue-f.md) | Unregister prepareContinue event. |
 | [off_prepareContinue](arkts-ability-continuemanager-offpreparecontinue-f.md) | 在应用快速拉起时，注销回调函数，不再获取快速拉起结果。使用callback异步回调。 |
-| [onPrepareContinue](arkts-ability-continuemanager-onpreparecontinue-f.md) | prepareContinue 事件，当在 continueType 中配置了“ContinueQuickStart”功能时，即可获取 |
+| [offPrepareContinue](arkts-ability-continuemanager-offpreparecontinue-f.md) | Unregister prepareContinue event. |
 | [on_prepareContinue](arkts-ability-continuemanager-onpreparecontinue-f.md) | 在应用快速拉起时，注册回调函数以获取快速拉起结果。使用callback异步回调。 |
+| [onPrepareContinue](arkts-ability-continuemanager-onpreparecontinue-f.md) | prepareContinue 事件，当在 continueType 中配置了“ContinueQuickStart”功能时，即可获取 |
 
 ### 接口
 

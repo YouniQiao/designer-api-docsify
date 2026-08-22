@@ -45,7 +45,7 @@ Adjusts system volume by step for target volume type. This method uses an asynch
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
 | adjustType | [VolumeAdjustType](arkts-audio-audio-volumeadjusttype-e-sys.md) | Yes | Volume adjustment type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -67,6 +67,16 @@ audioVolumeGroupManager.adjustSystemVolumeByStep(audio.AudioVolumeType.MEDIA, au
   } else {
     console.info('Success to adjust the system volume by step.');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioVolumeGroupManager.adjustSystemVolumeByStep(audio.AudioVolumeType.MEDIA, audio.VolumeAdjustType.VOLUME_UP).then(() => {
+  console.info('Success to adjust the system volume by step.');
+}).catch((error: BusinessError) => {
+  console.error('Fail to adjust the system volume by step.');
 });
 ```
 
@@ -112,15 +122,7 @@ Adjusts system volume by step for target volume type. This method uses a promise
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeGroupManager.adjustSystemVolumeByStep(audio.AudioVolumeType.MEDIA, audio.VolumeAdjustType.VOLUME_UP).then(() => {
-  console.info('Success to adjust the system volume by step.');
-}).catch((error: BusinessError) => {
-  console.error('Fail to adjust the system volume by step.');
-});
-```
+See [adjustSystemVolumeByStep](#adjustsystemvolumebystep)
 
 ## adjustVolumeByStep
 
@@ -145,7 +147,7 @@ Adjusts system volume by step, volume type is decided by system. This method use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | adjustType | [VolumeAdjustType](arkts-audio-audio-volumeadjusttype-e-sys.md) | Yes | Volume adjustment type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -168,6 +170,16 @@ audioVolumeGroupManager.adjustVolumeByStep(audio.VolumeAdjustType.VOLUME_UP, (er
   } else {
     console.info('Success to adjust the volume by step.');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioVolumeGroupManager.adjustVolumeByStep(audio.VolumeAdjustType.VOLUME_UP).then(() => {
+  console.info('Success to adjust the volume by step.');
+}).catch((error: BusinessError) => {
+  console.error('Fail to adjust the volume by step.');
 });
 ```
 
@@ -212,15 +224,7 @@ Adjusts system volume by step, volume type is decided by system. This method use
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeGroupManager.adjustVolumeByStep(audio.VolumeAdjustType.VOLUME_UP).then(() => {
-  console.info('Success to adjust the volume by step.');
-}).catch((error: BusinessError) => {
-  console.error('Fail to adjust the volume by step.');
-});
-```
+See [adjustVolumeByStep](#adjustvolumebystep)
 
 ## getActiveVolumeTypeSync
 
@@ -327,7 +331,7 @@ Mutes a stream. This method uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio stream type. |
 | mute | boolean | Yes | Mute status to set. The value true means to mute the stream, and false means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -340,6 +344,30 @@ audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true, (err: BusinessEr
     return;
   }
   console.info('Callback invoked to indicate that the stream is muted.');
+});
+```
+
+```TypeScript
+audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
+  console.info('Promise returned to indicate that the stream is muted.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.mute(audio.AudioVolumeType.MEDIA, true, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to mute the stream. ${err}`);
+    return;
+  }
+  console.info('Callback invoked to indicate that the stream is muted.');
+});
+```
+
+```TypeScript
+audioManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
+  console.info('Promise returned to indicate that the stream is muted.');
 });
 ```
 
@@ -376,11 +404,7 @@ Mutes a stream. This method uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
-  console.info('Promise returned to indicate that the stream is muted.');
-});
-```
+See [mute](#mute)
 
 ## setMicMute
 
@@ -500,7 +524,7 @@ Sets the ringer mode. This method uses an asynchronous callback to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | [AudioRingMode](arkts-audio-audio-audioringmode-e.md) | Yes | Ringer mode. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -513,6 +537,30 @@ audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL, (e
     return;
   }
   console.info('Callback invoked to indicate a successful setting of the ringer mode.');
+});
+```
+
+```TypeScript
+audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL).then(() => {
+  console.info('Promise returned to indicate a successful setting of the ringer mode.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set the ringer mode. ${err}`);
+    return;
+  }
+  console.info('Callback invoked to indicate a successful setting of the ringer mode.');
+});
+```
+
+```TypeScript
+audioManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL).then(() => {
+  console.info('Promise returned to indicate a successful setting of the ringer mode.');
 });
 ```
 
@@ -548,11 +596,7 @@ Sets the ringer mode. This method uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL).then(() => {
-  console.info('Promise returned to indicate a successful setting of the ringer mode.');
-});
-```
+See [setRingerMode](#setringermode)
 
 ## setVolume
 
@@ -578,7 +622,7 @@ Sets the volume for a stream. This method uses an asynchronous callback to retur
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio stream type. |
 | volume | int | Yes | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -591,6 +635,52 @@ audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10, (err: Busines
     return;
   }
   console.info('Callback invoked to indicate a successful volume setting.');
+});
+```
+
+```TypeScript
+audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {
+  console.info('Promise returned to indicate a successful volume setting.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.setVolume(audio.AudioVolumeType.MEDIA, 10, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set the volume. ${err}`);
+    return;
+  }
+  console.info('Callback invoked to indicate a successful volume setting.');
+});
+```
+
+```TypeScript
+audioManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {
+  console.info('Promise returned to indicate a successful volume setting.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.setVolume(0.5).then(() => {
+  console.info('setVolume Success!');
+}).catch((err: BusinessError) => {
+  console.error(`setVolume Fail: ${err}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.setVolume(0.5, (err: BusinessError) => {
+  if(err){
+    console.error(`setVolume Fail: ${err}`);
+    return;
+  }
+  console.info('setVolume Success!');
 });
 ```
 
@@ -627,11 +717,7 @@ Sets the volume for a stream. This method uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {
-  console.info('Promise returned to indicate a successful volume setting.');
-});
-```
+See [setVolume](#setvolume)
 
 ## setVolumeWithFlag
 

@@ -145,28 +145,6 @@ onChange(callback: ((selected: boolean) => void) | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-## selectIcon
-
-```TypeScript
-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier | undefined): this
-```
-
-**起始版本：** -1
-
-**ArkTS模式：** ArkTS-Sta起始版本为-1。
-
-<!--Device-MenuItemAttribute-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier | undefined): this--><!--Device-MenuItemAttribute-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier | undefined): this-End-->
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean \| [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) \| [SymbolGlyphModifier](../../apis-arkui/arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) \| undefined | 是 |  |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
 ## selected
 
 ```TypeScript
@@ -184,6 +162,28 @@ selected(value: boolean | undefined | Bindable<boolean>): this
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | boolean \| undefined \| [Bindable](../arkts-apis/arkts-common-bindable-i.md)&lt;boolean&gt; | 是 |  |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+## selectIcon
+
+```TypeScript
+selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier | undefined): this
+```
+
+**起始版本：** -1
+
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
+
+<!--Device-MenuItemAttribute-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier | undefined): this--><!--Device-MenuItemAttribute-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier | undefined): this-End-->
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean \| [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) \| [SymbolGlyphModifier](../../apis-arkui/arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) \| undefined | 是 |  |
 
 **返回值：**
 

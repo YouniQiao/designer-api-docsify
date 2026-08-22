@@ -80,6 +80,22 @@ Whether the blocking mode is used. The value **true** indicates that the blockin
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
+## isInternal
+
+```TypeScript
+isInternal?: boolean
+```
+
+Whether the built-in VPN is supported. The value **true** indicates that the built-in VPN is supported, and the value **false** indicates the opposite. The default value is **false**.
+
+**Type:** boolean
+
+**Since:** 11
+
+<!--Device-VpnConfig-isInternal?: boolean--><!--Device-VpnConfig-isInternal?: boolean-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.Vpn
+
 ## isIPv4Accepted
 
 ```TypeScript
@@ -113,22 +129,6 @@ Note: If the IPv6 is supported, you need to configure IPv6 addresses in **addres
 **Since:** 11
 
 <!--Device-VpnConfig-isIPv6Accepted?: boolean--><!--Device-VpnConfig-isIPv6Accepted?: boolean-End-->
-
-**System capability:** SystemCapability.Communication.NetManager.Vpn
-
-## isInternal
-
-```TypeScript
-isInternal?: boolean
-```
-
-Whether the built-in VPN is supported. The value **true** indicates that the built-in VPN is supported, and the value **false** indicates the opposite. The default value is **false**.
-
-**Type:** boolean
-
-**Since:** 11
-
-<!--Device-VpnConfig-isInternal?: boolean--><!--Device-VpnConfig-isInternal?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -213,4 +213,45 @@ Unique VPN ID.
 <!--Device-VpnConfig-vpnId?: string--><!--Device-VpnConfig-vpnId?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
+
+**Examples**
+
+```TypeScript
+import { vpnExtension} from '@kit.NetworkKit';
+
+let vpnConfig: vpnExtension.VpnConfig = {
+  addresses: [],
+  vpnId: '123',
+  routes: [{
+    interface: "eth0",
+    destination: {
+      address: {
+        address:'',
+        family:1,
+        port:8080
+      },
+      prefixLength:1
+    },
+    gateway: {
+      address:'',
+      family:1,
+      port:8080
+    },
+    hasGateway: true,
+    isDefaultRoute: true,
+  }],
+  mtu: 1400,
+  dnsAddresses: ["223.5.5.5", "223.6.6.6"],
+  trustedApplications: [],
+  blockedApplications: [],
+}
+let context: vpnExtension.VpnExtensionContext;
+
+function vpnCreate(){
+  let vpnConnection: vpnExtension.VpnConnection = vpnExtension.createVpnConnection(context);
+  vpnConnection.create(vpnConfig).then((data) => {
+    console.info("VPN create " + JSON.stringify(data));
+  })
+}
+```
 

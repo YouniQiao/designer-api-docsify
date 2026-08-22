@@ -35,6 +35,28 @@ Changes the file owner (owner of the symbolic link, not the file referred to by 
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "/test.txt";
+let stat = fileio.statSync(filePath);
+fileio.lchown(filePath, stat.uid, stat.gid).then(() => {
+  console.info("chown succeed");
+}).catch((err: BusinessError) => {
+  console.error("chown failed with error:" + err);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "/test.txt";
+let stat = fileio.statSync(filePath);
+fileio.lchown(filePath, stat.uid, stat.gid, (err: BusinessError) => {
+  // Do something.
+});
+```
+
 
 ## lchown
 
@@ -59,5 +81,9 @@ Changes the file owner (owner of the symbolic link, not the file referred to by 
 | path | string | Yes | Application sandbox path of the file. |
 | uid | number | Yes | New UID. |
 | gid | number | Yes | New GID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked when the file owner is changed asynchronously. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file owner is changed asynchronously. |
+
+**Examples**
+
+See [lchown](#lchown)
 

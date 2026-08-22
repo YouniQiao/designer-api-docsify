@@ -21,7 +21,7 @@ Plugin component push event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Push request sender's relevant information. |
+| source | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Push request sender's relevant information. |
 | template | [PluginComponentTemplate](arkts-plugincomponent-plugincomponenttemplate-i.md) | Yes | Request component template name. |
 | data | [KVObject](arkts-plugincomponentmanager-kvobject-t.md) | Yes | data info. |
 | extraData | [KVObject](arkts-plugincomponentmanager-kvobject-t.md) | Yes | extra data info. |

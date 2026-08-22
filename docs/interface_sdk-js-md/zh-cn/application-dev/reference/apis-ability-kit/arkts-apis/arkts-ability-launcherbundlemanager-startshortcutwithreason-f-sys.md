@@ -32,7 +32,7 @@ function startShortcutWithReason(shortcutInfo: ShortcutInfo, startReason: string
 | --- | --- | --- | --- |
 | shortcutInfo | ShortcutInfo | 是 | 应用的快捷方式信息。 |
 | startReason | string | 是 | 快捷方式的启动原因，取值包括： [AbilityConstant.REASON_MESSAGE_DESKTOP_SHORTCUT](arkts-app-ability-abilityconstant.md#常量) ，表示桌面快捷方式启动。 |
-| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | 否 | 启动Ability所携带的参数，用于指定目标Ability的窗口模式。 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动Ability所携带的参数，用于指定目标Ability的窗口模式。 |
 
 **返回值：**
 

@@ -47,6 +47,26 @@ async function Demo(context : Context) {
 }
 ```
 
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function Demo(context : Context) {
+  const path: string = context.cacheDir + "/test.jpg";
+  let file = fs.openSync(path, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
+  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(file.fd);
+}
+```
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+
+async function Demo() {
+  const buf: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
+  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(buf);
+}
+```
+
 
 ## createImageSource
 
@@ -80,16 +100,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 **Examples**
 
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-async function Demo(context : Context) {
-  const path: string = context.cacheDir + "/test.jpg";
-  let file = fs.openSync(path, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
-  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(file.fd);
-}
-```
+See [createImageSource](#createimagesource)
 
 
 ## createImageSource
@@ -126,12 +137,5 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 **Examples**
 
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-
-async function Demo() {
-  const buf: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
-  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(buf);
-}
-```
+See [createImageSource](#createimagesource)
 

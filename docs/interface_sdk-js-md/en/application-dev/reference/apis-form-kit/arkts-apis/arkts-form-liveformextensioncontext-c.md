@@ -1,6 +1,6 @@
 # LiveFormExtensionContext
 
-*LiveFormExtensionContext**, inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md), is the context of [LiveFormExtensionAbility](arkts-form-appformliveformextensionability-liveformextensionability-c.md).
+*LiveFormExtensionContext**, inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md), is the context of [LiveFormExtensionAbility](arkts-form-app-form-liveformextensionability-liveformextensionability-c.md).
 
 **Inheritance/Implementation:** LiveFormExtensionContext extends ExtensionContext
 
@@ -32,7 +32,7 @@ Starts the widget provider (application) page. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Information about the application page to be started. [Only explicit Want is supported](../../../application-models/ability-startup-with-explicit-want.md). |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Information about the application page to be started. [Only explicit Want is supported](../../../application-models/ability-startup-with-explicit-want.md). |
 
 **Return value:**
 

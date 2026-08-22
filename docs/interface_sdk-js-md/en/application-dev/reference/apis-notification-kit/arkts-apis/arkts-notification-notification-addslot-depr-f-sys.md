@@ -35,7 +35,67 @@ Adds a notification slot. This API uses an asynchronous callback to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slot | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md) | Yes | Notification slot to add. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+// addSlot callback
+let addSlotCallBack = (err: Base.BusinessError) => {
+  if (err) {
+    console.info("addSlot failed " + JSON.stringify(err));
+  } else {
+    console.info("addSlot success");
+  }
+}
+Notification.addSlot(Notification.SlotType.SOCIAL_COMMUNICATION, addSlotCallBack);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+Notification.addSlot(Notification.SlotType.SOCIAL_COMMUNICATION).then(() => {
+  console.info("addSlot success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`addSlot failed, code is ${err}`);
+});
+```
+
+```TypeScript
+import NotificationManager from '@ohos.notificationManager';
+import Base from '@ohos.base';
+
+// addSlot callback
+let addSlotCallBack = (err: Base.BusinessError) => {
+  if (err) {
+    console.info("addSlot failed " + JSON.stringify(err));
+  } else {
+    console.info("addSlot success");
+  }
+}
+// NotificationSlot object
+let notificationSlot: NotificationManager.NotificationSlot = {
+  type: Notification.SlotType.SOCIAL_COMMUNICATION
+};
+Notification.addSlot(notificationSlot, addSlotCallBack);
+```
+
+```TypeScript
+import NotificationManager from '@ohos.notificationManager';
+import Base from '@ohos.base';
+
+// NotificationSlot object
+let notificationSlot: NotificationManager.NotificationSlot = {
+    type: Notification.SlotType.SOCIAL_COMMUNICATION
+};
+Notification.addSlot(notificationSlot).then(() => {
+  console.info("addSlot success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`addSlot failed, code is ${err}`);
+});
+```
 
 
 ## addSlot
@@ -71,4 +131,8 @@ Adds a notification slot. This API uses a promise to return the result.
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+See [addSlot](#addslot)
 

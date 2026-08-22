@@ -43,3 +43,9 @@ let tid = process.tid;
 let pres = process.getThreadPriority(tid);
 ```
 
+```TypeScript
+let pro = new process.ProcessManager();
+let tid = process.tid;
+let pres = pro.getThreadPriority(tid);
+```
+

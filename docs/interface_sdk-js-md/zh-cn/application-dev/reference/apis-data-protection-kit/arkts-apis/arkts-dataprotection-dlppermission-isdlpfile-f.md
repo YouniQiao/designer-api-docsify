@@ -62,6 +62,23 @@ dlpPermission.isDLPFile(file).then((isDLPFile: boolean) => {
 });
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+
+let uri = "file://docs/storage/Users/currentUser/Desktop/test.txt.dlp";
+let file: number | undefined = undefined;
+file = fileIo.openSync(uri).fd;
+dlpPermission.isDLPFile(file, (err, isDLPFile) => {
+ if (err) {
+    console.error(`Failed to check if file is DLP file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('isDLPFile:', isDLPFile);
+  }
+  fileIo.closeSync(file);
+});
+```
+
 
 ## isDLPFile
 
@@ -96,20 +113,5 @@ function isDLPFile(fd: number, callback: AsyncCallback<boolean>): void
 
 **示例**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-let uri = "file://docs/storage/Users/currentUser/Desktop/test.txt.dlp";
-let file: number | undefined = undefined;
-file = fileIo.openSync(uri).fd;
-dlpPermission.isDLPFile(file, (err, isDLPFile) => {
- if (err) {
-    console.error(`Failed to check if file is DLP file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('isDLPFile:', isDLPFile);
-  }
-  fileIo.closeSync(file);
-});
-```
+参见 [isDLPFile](#isdlpfile)
 

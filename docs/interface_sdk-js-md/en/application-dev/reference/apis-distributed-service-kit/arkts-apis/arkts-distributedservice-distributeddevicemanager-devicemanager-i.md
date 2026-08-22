@@ -36,7 +36,7 @@ Binds a device. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Device ID. The value is a string of 1 to 255 characters. |
 | bindParam | { [key: string]: Object; } | Yes | Authentication parameters. You can determine the key-value pair to be passed in. By default, the following keys are carried: <br>**bindType**: binding type, which is mandatory. <br>The value **1** means PIN authentication. <br>**targetPkgName**: bundle name of the target to bind. <br>**appName**: application that attempts to bind the target. <br>**appOperation**: reason for the application to bind the target. <br>**customDescription**: detailed description of the operation. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{deviceId: string;}&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{deviceId: string;}&gt; | Yes |  |
 
 **Error codes:**
 
@@ -104,7 +104,7 @@ Binds a device. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Device ID. The value is a string of 1 to 255 characters. |
 | bindParam | Record&lt;string, int \| string&gt; | Yes | Authentication parameters. You can determine the key-value pair to be passed in. By default, the following keys are carried: <br>**bindType**: binding type, which is mandatory. <br>The value **1** means PIN authentication. <br>**targetPkgName**: bundle name of the target to bind. <br>**appName**: application that attempts to bind the target. <br>**appOperation**: reason for the application to bind the target. <br>**customDescription**: detailed description of the operation. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[BindTargetResult](arkts-distributedservice-distributeddevicemanager-bindtargetresult-i.md)&gt; | Yes | Callback used to return the authentication result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BindTargetResult](arkts-distributedservice-distributeddevicemanager-bindtargetresult-i.md)&gt; | Yes | Callback used to return the authentication result. |
 
 **Error codes:**
 
@@ -113,6 +113,10 @@ Binds a device. This API uses an asynchronous callback to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 | [11600103](../errorcode-device-manager.md#11600103-authentication-unavailable) | Authentication unavailable. |
+
+**Examples**
+
+See [bindTarget](#bindtarget)
 
 ## getAvailableDeviceList
 
@@ -134,7 +138,7 @@ Obtains all trusted devices. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)&gt;&gt; | Yes | Callback used to return the list of trusted devices. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)&gt;&gt; | Yes | Callback used to return the list of trusted devices. |
 
 **Error codes:**
 
@@ -162,6 +166,18 @@ try {
   let e: BusinessError = err as BusinessError;
   console.error('getAvailableDeviceList errCode:' + e.code + ',errMessage:' + e.message);
 }
+```
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+dmInstance.getAvailableDeviceList().then((data: Array<distributedDeviceManager.DeviceBasicInfo>) => {
+  console.info('get available device info: ' + JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    console.error('getAvailableDeviceList errCode:' + err.code + ',errMessage:' + err.message);
+});
 ```
 
 ## getAvailableDeviceList
@@ -195,17 +211,7 @@ Obtains all trusted devices. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-dmInstance.getAvailableDeviceList().then((data: Array<distributedDeviceManager.DeviceBasicInfo>) => {
-  console.info('get available device info: ' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error('getAvailableDeviceList errCode:' + err.code + ',errMessage:' + err.message);
-});
-```
+See [getAvailableDeviceList](#getavailabledevicelist)
 
 ## getAvailableDeviceListSync
 
@@ -539,146 +545,6 @@ try {
 }
 ```
 
-## offDeviceNameChange
-
-```TypeScript
-offDeviceNameChange(callback?: Callback<DeviceNameChangeResult>): void
-```
-
-UnRegister the device name change result callback.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DeviceManager-offDeviceNameChange(callback?: Callback<DeviceNameChangeResult>): void--><!--Device-DeviceManager-offDeviceNameChange(callback?: Callback<DeviceNameChangeResult>): void-End-->
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md)&gt; | No | Indicates the device name change callback to unregister. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-
-## offDeviceStateChange
-
-```TypeScript
-offDeviceStateChange(callback?: Callback<DeviceStateChangeResult>): void
-```
-
-UnRegister device state callback based on the application bundle name.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DeviceManager-offDeviceStateChange(callback?: Callback<DeviceStateChangeResult>): void--><!--Device-DeviceManager-offDeviceStateChange(callback?: Callback<DeviceStateChangeResult>): void-End-->
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md)&gt; | No | Indicates the device state callback to unregister. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-
-## offDiscoverFailure
-
-```TypeScript
-offDiscoverFailure(callback?: Callback<DiscoveryFailureResult>): void
-```
-
-UnRegister the device discovery result callback.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DeviceManager-offDiscoverFailure(callback?: Callback<DiscoveryFailureResult>): void--><!--Device-DeviceManager-offDiscoverFailure(callback?: Callback<DiscoveryFailureResult>): void-End-->
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md)&gt; | No | Indicates the device found result callback to unregister. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-
-## offDiscoverSuccess
-
-```TypeScript
-offDiscoverSuccess(callback?: Callback<DiscoverySuccessResult>): void
-```
-
-UnRegister the device discovery result callback.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DeviceManager-offDiscoverSuccess(callback?: Callback<DiscoverySuccessResult>): void--><!--Device-DeviceManager-offDiscoverSuccess(callback?: Callback<DiscoverySuccessResult>): void-End-->
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md)&gt; | No | Indicates the device discovery callback to unregister. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-
-## offServiceDie
-
-```TypeScript
-offServiceDie(callback?: Callback<ServiceDieData>): void
-```
-
-UnRegister the service error callback.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DeviceManager-offServiceDie(callback?: Callback<ServiceDieData>): void--><!--Device-DeviceManager-offServiceDie(callback?: Callback<ServiceDieData>): void-End-->
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md)&gt; | No | Indicates the service error callback to unregister. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-
 ## off('deviceNameChange')
 
 ```TypeScript
@@ -700,7 +566,7 @@ Unsubscribes from the device name changes. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceNameChange' | Yes | Event type, which has a fixed value of **deviceNameChange**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ deviceName: string; }&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ deviceName: string; }&gt; | No |  |
 
 **Error codes:**
 
@@ -751,7 +617,7 @@ Unsubscribes from the device state changes. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceStateChange' | Yes | Event type. The value **'deviceStateChange'** indicates device state changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | No |  |
 
 **Error codes:**
 
@@ -808,7 +674,7 @@ Unsubscribes from the **'discoverFailure'** event. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoverFailure' | Yes | Event type, which has a fixed value of **'discoverFailure'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ reason: int; }&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ reason: int; }&gt; | No |  |
 
 **Error codes:**
 
@@ -859,7 +725,7 @@ Unsubscribes from the **'discoverSuccess'** event. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoverSuccess' | Yes | Event type, which has a fixed value of **'discoverSuccess'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ device: DeviceBasicInfo; }&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ device: DeviceBasicInfo; }&gt; | No |  |
 
 **Error codes:**
 
@@ -915,7 +781,7 @@ Unsubscribes from the dead events of the **DeviceManager** service. This API use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceDie' | Yes | Event type, which has a fixed value of **'serviceDie'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{}&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{}&gt; | No |  |
 
 **Error codes:**
 
@@ -941,19 +807,19 @@ try {
 }
 ```
 
-## onDeviceNameChange
+## offDeviceNameChange
 
 ```TypeScript
-onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void
+offDeviceNameChange(callback?: Callback<DeviceNameChangeResult>): void
 ```
 
-Register a device name change callback so that the application can be notified when discovery success.
+UnRegister the device name change result callback.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
-<!--Device-DeviceManager-onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void--><!--Device-DeviceManager-onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void-End-->
+<!--Device-DeviceManager-offDeviceNameChange(callback?: Callback<DeviceNameChangeResult>): void--><!--Device-DeviceManager-offDeviceNameChange(callback?: Callback<DeviceNameChangeResult>): void-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -961,7 +827,7 @@ Register a device name change callback so that the application can be notified w
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md)&gt; | Yes | Indicates the device name change callback to register. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md)&gt; | No | Indicates the device name change callback to unregister. |
 
 **Error codes:**
 
@@ -969,19 +835,19 @@ Register a device name change callback so that the application can be notified w
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## onDeviceStateChange
+## offDeviceStateChange
 
 ```TypeScript
-onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void
+offDeviceStateChange(callback?: Callback<DeviceStateChangeResult>): void
 ```
 
-Register a device state callback so that the application can be notified upon device state changes based on the application bundle name.
+UnRegister device state callback based on the application bundle name.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
-<!--Device-DeviceManager-onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void--><!--Device-DeviceManager-onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void-End-->
+<!--Device-DeviceManager-offDeviceStateChange(callback?: Callback<DeviceStateChangeResult>): void--><!--Device-DeviceManager-offDeviceStateChange(callback?: Callback<DeviceStateChangeResult>): void-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -989,35 +855,7 @@ Register a device state callback so that the application can be notified upon de
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md)&gt; | Yes | Indicates the device state callback to register. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-
-## onDiscoverFailure
-
-```TypeScript
-onDiscoverFailure(callback: Callback<DiscoveryFailureResult>): void
-```
-
-Register a device discovery result callback so that the application can be notified when discover failed.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DeviceManager-onDiscoverFailure(callback: Callback<DiscoveryFailureResult>): void--><!--Device-DeviceManager-onDiscoverFailure(callback: Callback<DiscoveryFailureResult>): void-End-->
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md)&gt; | Yes | Indicates the device found result callback to register. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md)&gt; | No | Indicates the device state callback to unregister. |
 
 **Error codes:**
 
@@ -1025,19 +863,19 @@ Register a device discovery result callback so that the application can be notif
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## onDiscoverSuccess
+## offDiscoverFailure
 
 ```TypeScript
-onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void
+offDiscoverFailure(callback?: Callback<DiscoveryFailureResult>): void
 ```
 
-Register a device discovery result callback so that the application can be notified when discovery success.
+UnRegister the device discovery result callback.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
-<!--Device-DeviceManager-onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void--><!--Device-DeviceManager-onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void-End-->
+<!--Device-DeviceManager-offDiscoverFailure(callback?: Callback<DiscoveryFailureResult>): void--><!--Device-DeviceManager-offDiscoverFailure(callback?: Callback<DiscoveryFailureResult>): void-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -1045,7 +883,7 @@ Register a device discovery result callback so that the application can be notif
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md)&gt; | Yes | Indicates the device discovery callback to register. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md)&gt; | No | Indicates the device found result callback to unregister. |
 
 **Error codes:**
 
@@ -1053,19 +891,19 @@ Register a device discovery result callback so that the application can be notif
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## onServiceDie
+## offDiscoverSuccess
 
 ```TypeScript
-onServiceDie(callback: Callback<ServiceDieData>): void
+offDiscoverSuccess(callback?: Callback<DiscoverySuccessResult>): void
 ```
 
-Register a serviceError callback so that the application can be notified when devicemanager service died
+UnRegister the device discovery result callback.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
-<!--Device-DeviceManager-onServiceDie(callback: Callback<ServiceDieData>): void--><!--Device-DeviceManager-onServiceDie(callback: Callback<ServiceDieData>): void-End-->
+<!--Device-DeviceManager-offDiscoverSuccess(callback?: Callback<DiscoverySuccessResult>): void--><!--Device-DeviceManager-offDiscoverSuccess(callback?: Callback<DiscoverySuccessResult>): void-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -1073,7 +911,35 @@ Register a serviceError callback so that the application can be notified when de
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md)&gt; | Yes | Indicates the service error callback to register. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md)&gt; | No | Indicates the device discovery callback to unregister. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+
+## offServiceDie
+
+```TypeScript
+offServiceDie(callback?: Callback<ServiceDieData>): void
+```
+
+UnRegister the service error callback.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-offServiceDie(callback?: Callback<ServiceDieData>): void--><!--Device-DeviceManager-offServiceDie(callback?: Callback<ServiceDieData>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md)&gt; | No | Indicates the service error callback to unregister. |
 
 **Error codes:**
 
@@ -1102,7 +968,7 @@ Subscribes to device name changes. The application will be notified when the nam
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceNameChange' | Yes | Event type, which has a fixed value of **deviceNameChange**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ deviceName: string; }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ deviceName: string; }&gt; | Yes |  |
 
 **Error codes:**
 
@@ -1153,7 +1019,7 @@ Subscribes to the device state changes. The application (identified by the bundl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceStateChange' | Yes | Event type. The value **'deviceStateChange'** indicates device state changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | Yes |  |
 
 **Error codes:**
 
@@ -1210,7 +1076,7 @@ Subscribes to the **'discoverFailure'** event. The application will be notified 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoverFailure' | Yes | Event type, which has a fixed value of **'discoverFailure'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ reason: int; }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ reason: int; }&gt; | Yes |  |
 
 **Error codes:**
 
@@ -1261,7 +1127,7 @@ Subscribes to the **'discoverSuccess'** event. The application will be notified 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoverSuccess' | Yes | Event type, which has a fixed value of **'discoverSuccess'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ device: DeviceBasicInfo; }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ device: DeviceBasicInfo; }&gt; | Yes |  |
 
 **Error codes:**
 
@@ -1317,7 +1183,7 @@ Subscribes to the dead events of the **DeviceManager** service. The application 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceDie' | Yes | Event type, which has a fixed value of **'serviceDie'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{}&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{}&gt; | No |  |
 
 **Error codes:**
 
@@ -1342,6 +1208,146 @@ try {
   console.error('serviceDie errCode:' + e.code + ',errMessage:' + e.message);
 }
 ```
+
+## onDeviceNameChange
+
+```TypeScript
+onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void
+```
+
+Register a device name change callback so that the application can be notified when discovery success.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void--><!--Device-DeviceManager-onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md)&gt; | Yes | Indicates the device name change callback to register. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+
+## onDeviceStateChange
+
+```TypeScript
+onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void
+```
+
+Register a device state callback so that the application can be notified upon device state changes based on the application bundle name.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void--><!--Device-DeviceManager-onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md)&gt; | Yes | Indicates the device state callback to register. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+
+## onDiscoverFailure
+
+```TypeScript
+onDiscoverFailure(callback: Callback<DiscoveryFailureResult>): void
+```
+
+Register a device discovery result callback so that the application can be notified when discover failed.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-onDiscoverFailure(callback: Callback<DiscoveryFailureResult>): void--><!--Device-DeviceManager-onDiscoverFailure(callback: Callback<DiscoveryFailureResult>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md)&gt; | Yes | Indicates the device found result callback to register. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+
+## onDiscoverSuccess
+
+```TypeScript
+onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void
+```
+
+Register a device discovery result callback so that the application can be notified when discovery success.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void--><!--Device-DeviceManager-onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md)&gt; | Yes | Indicates the device discovery callback to register. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+
+## onServiceDie
+
+```TypeScript
+onServiceDie(callback: Callback<ServiceDieData>): void
+```
+
+Register a serviceError callback so that the application can be notified when devicemanager service died
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-onServiceDie(callback: Callback<ServiceDieData>): void--><!--Device-DeviceManager-onServiceDie(callback: Callback<ServiceDieData>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md)&gt; | Yes | Indicates the service error callback to register. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## startDiscovering
 
@@ -1438,6 +1444,10 @@ Starts to discover devices nearby. The discovery process takes 2 minutes. A maxi
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600104](../errorcode-device-manager.md#11600104-discovery-unavailable) | Discovery unavailable. |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+
+**Examples**
+
+See [startDiscovering](#startdiscovering)
 
 ## stopDiscovering
 

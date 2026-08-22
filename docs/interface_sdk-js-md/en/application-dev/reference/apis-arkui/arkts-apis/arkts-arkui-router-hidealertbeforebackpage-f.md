@@ -18,14 +18,14 @@ Disables the display of a confirm dialog box before returning to the previous pa
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkuiuicontext-uicontext-c.md) object associated
+> [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated
 > with the current UI context.
 
 **Since:** 9
 
 **Deprecated since:** 18
 
-**Substitutes:** [hideAlertBeforeBackPage](arkts-arkui-arkuiuicontext-router-c.md#hidealertbeforebackpage)
+**Substitutes:** [hideAlertBeforeBackPage](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#hidealertbeforebackpage)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

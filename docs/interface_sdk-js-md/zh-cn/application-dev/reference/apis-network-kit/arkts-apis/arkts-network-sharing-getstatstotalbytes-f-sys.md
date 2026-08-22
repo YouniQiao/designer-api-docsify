@@ -52,6 +52,20 @@ sharing.getStatsTotalBytes((error: BusinessError, data: number) => {
 });
 ```
 
+```TypeScript
+import { sharing } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sharing
+  .getStatsTotalBytes()
+  .then((data: number) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
+
 
 ## getStatsTotalBytes
 
@@ -89,17 +103,5 @@ function getStatsTotalBytes(): Promise<int>
 
 **示例**
 
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sharing
-  .getStatsTotalBytes()
-  .then((data: number) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+参见 [getStatsTotalBytes](#getstatstotalbytes)
 

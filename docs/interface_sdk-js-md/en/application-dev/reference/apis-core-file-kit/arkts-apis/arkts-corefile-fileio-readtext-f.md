@@ -43,6 +43,34 @@ Reads the text content of a file. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;string&gt; | Promise that returns the file content read. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "/test.txt";
+fileio.readText(filePath).then((str: string) => {
+  console.info("readText succeed:" + str);
+}).catch((err: BusinessError) => {
+  console.error("readText failed with error:" + err);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "/test.txt";
+class Option {
+  length: number = 4096;
+  position: number = 0;
+  encoding: string = 'utf-8';
+}
+let option = new Option();
+option.position = 1;
+option.encoding = 'utf-8';
+fileio.readText(filePath, option, (err: BusinessError, str: string) => {
+  // Do something.
+});
+```
+
 
 ## readText
 
@@ -76,5 +104,9 @@ Reads the text content of a file. This API uses an asynchronous callback to retu
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file to read. |
 | options | {     position?: number;     length?: number;     encoding?: string;   } | Yes | The options are as follows:<br>- **position** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length minus the offset.<br>- **encoding**: format of the data to be encoded. The default value is **'utf-8'**, which is the only value supported. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the file content read. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the file content read. |
+
+**Examples**
+
+See [readText](#readtext)
 

@@ -28,7 +28,7 @@ export declare function SecurityUIExtensionComponent(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 要加载的Ability信息。 通过bundleName和abilityName共同确定被拉起的UIExtensionAbility， 同时需要在parameters中配置ability.want.params.uiExtensionType字段指定UIExtensionAbility的类型，当前仅支持'sysPicker/photoPicker'。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 要加载的Ability信息。 通过bundleName和abilityName共同确定被拉起的UIExtensionAbility， 同时需要在parameters中配置ability.want.params.uiExtensionType字段指定UIExtensionAbility的类型，当前仅支持'sysPicker/photoPicker'。 |
 | options | [SecurityUIExtensionOptions](arkts-securityuiextensioncomponent-securityuiextensionoptions-i-sys.md) | 否 | 用于构造SecurityUIExtensionComponent的参数。不填时各字段使用默认值。 |
 | content_ | [CustomBuilder](../arkts-apis/arkts-custombuilder-t.md) | 否 | 容器内容构建器。ArkTS-Sta模式下可传入自定义内容构建器。 |
 

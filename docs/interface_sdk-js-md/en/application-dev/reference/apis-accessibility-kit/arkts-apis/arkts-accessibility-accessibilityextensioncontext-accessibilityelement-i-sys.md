@@ -490,6 +490,10 @@ Searches for an element based on the focus direction and focus rule type. This A
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
 
+**Examples**
+
+See [findElementByFocusDirection](#findelementbyfocusdirection)
+
 ## findElementById
 
 ```TypeScript
@@ -761,6 +765,10 @@ Searches for focusable nodes of the target type based on the rule and query cond
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+**Examples**
+
+See [findElementsByCondition](#findelementsbycondition)
+
 ## getChildren
 
 ```TypeScript
@@ -829,9 +837,20 @@ Obtains the cursor position in a text component. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the cursor position is obtained successfully, **err** is undefined and **data** is the position index of the cursor in the text; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the cursor position is obtained successfully, **err** is undefined and **data** is the position index of the cursor in the text; otherwise, **err** is an error object. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement is an instance of AccessibilityElement.
+rootElement.getCursorPosition().then((data: number) => {
+  console.info(`Succeeded in getCursorPosition, ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`failed to getCursorPosition, Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -870,16 +889,7 @@ Obtains the cursor position in a text component. This API uses a promise to retu
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement is an instance of AccessibilityElement.
-rootElement.getCursorPosition().then((data: number) => {
-  console.info(`Succeeded in getCursorPosition, ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`failed to getCursorPosition, Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getCursorPosition](#getcursorposition)
 
 ## getParent
 

@@ -56,6 +56,25 @@ dlpPermission.isInSandbox().then(async (inSandbox) => {
 }); // 是否在沙箱内。
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+let uri = "file://docs/storage/Users/currentUser/Desktop/test.txt.dlp";
+dlpPermission.isInSandbox().then((inSandbox) => { // 是否在沙箱内。
+  if (inSandbox) {
+    dlpPermission.setRetentionState([uri], (err) => {
+      if (err) {
+        console.error(`Failed to set retention state. Code: ${err.code}, message: ${err.message}`);
+      } else {
+        console.info('setRetentionState success');
+      }
+    }); // 设置沙箱保留。
+  }
+}).catch((error: BusinessError)=> {
+  console.error(JSON.stringify(error));
+});
+```
+
 
 ## setRetentionState
 
@@ -89,22 +108,5 @@ function setRetentionState(docUris: Array<string>, callback: AsyncCallback<void>
 
 **示例**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-let uri = "file://docs/storage/Users/currentUser/Desktop/test.txt.dlp";
-dlpPermission.isInSandbox().then((inSandbox) => { // 是否在沙箱内。
-  if (inSandbox) {
-    dlpPermission.setRetentionState([uri], (err) => {
-      if (err) {
-        console.error(`Failed to set retention state. Code: ${err.code}, message: ${err.message}`);
-      } else {
-        console.info('setRetentionState success');
-      }
-    }); // 设置沙箱保留。
-  }
-}).catch((error: BusinessError)=> {
-  console.error(JSON.stringify(error));
-});
-```
+参见 [setRetentionState](#setretentionstate)
 

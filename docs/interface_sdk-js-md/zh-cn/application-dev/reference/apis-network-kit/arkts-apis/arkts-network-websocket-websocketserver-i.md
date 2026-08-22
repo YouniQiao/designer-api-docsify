@@ -58,6 +58,120 @@ ArkTS-Dyn示例：
 import { webSocket } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let ws = webSocket.createWebSocket();
+ws.close((err: BusinessError) => {
+  if (!err) {
+    console.info("close success");
+  } else {
+    console.error(`close fail. Code: ${err.code}, message: ${err.message}`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let ws = webSocket.createWebSocket();
+ws.close((err: BusinessError<void>|null, value: Boolean|undefined) => {
+  if (!err) {
+    console.info("close success");
+  } else {
+    console.error(`close fail. Code: ${err.code}, message: ${err.message}`);
+  }
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let ws = webSocket.createWebSocket();
+
+let options: webSocket.WebSocketCloseOptions | undefined;
+if (options != undefined) {
+    options.code = 1000;
+    options.reason = "your reason";
+}
+ws.close(options, (err: BusinessError) => {
+    if (!err) {
+        console.info("close success");
+    } else {
+        console.error(`close fail. Code: ${err.code}, message: ${err.message}`);
+    }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let ws = webSocket.createWebSocket();
+
+let options: webSocket.WebSocketCloseOptions;
+if (options != undefined) {
+    options.code = 1000;
+    options.reason = "your reason";
+}
+ws.close(options, (err: BusinessError<void>|null, value: Boolean|undefined) => {
+    if (!err) {
+        console.info("close success");
+    } else {
+        console.error(`close fail. Code: ${err.code}, message: ${err.message}`);
+    }
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let ws = webSocket.createWebSocket();
+let options: webSocket.WebSocketCloseOptions | undefined;
+if (options != undefined) {
+    options.code = 1000;
+    options.reason = "your reason";
+}
+let promise = ws.close();
+promise.then((value: boolean) => {
+    console.info("close success");
+}).catch((err:string) => {
+    console.error("close fail, error:" + JSON.stringify(err));
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let ws = webSocket.createWebSocket();
+let options: webSocket.WebSocketCloseOptions;
+if (options != undefined) {
+    options.code = 1000;
+    options.reason = "your reason";
+}
+let promise = ws.close();
+promise.then((value: boolean) => {
+    console.info("close success");
+}).catch((err: Error) => {
+    console.error(`close fail, error: ${err}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let localServer: webSocket.WebSocketServer;
 let config: webSocket.WebSocketServerConfig = {
   serverPort: 8080, // 监听端口
@@ -240,142 +354,6 @@ localServer.onConnect((connection: webSocket.WebSocketConnection) => {
 });
 ```
 
-## offConnect
-
-```TypeScript
-offConnect(callback?: Callback<WebSocketConnection>): void
-```
-
-取消订阅客户端请求连接服务器的事件。
-
-**起始版本：** 23
-
-<!--Device-WebSocketServer-offConnect(callback?: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-offConnect(callback?: Callback<WebSocketConnection>): void-End-->
-
-**系统能力：** 
-- API版本23+：SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 否 | the callback used to return the result.<br>**起始版本：** 23 |
-
-**示例**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let localServer = webSocket.createWebSocketServer();
-let callback = (connection: webSocket.WebSocketConnection) => {
-  console.info(`connections: ${JSON.stringify(connection)}`);
-}
-localServer.onConnect(callback);
-localServer.offConnect(callback);
-```
-
-## offMessageReceive
-
-```TypeScript
-offMessageReceive(callback?: Callback<WebSocketMessage>): void
-```
-
-取消订阅服务器收到消息的事件。
-
-**起始版本：** 23
-
-<!--Device-WebSocketServer-offMessageReceive(callback?: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-offMessageReceive(callback?: Callback<WebSocketMessage>): void-End-->
-
-**系统能力：** 
-- API版本23+：SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 否 | the callback used to return the result.<br>**起始版本：** 23 |
-
-**示例**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let localServer = webSocket.createWebSocketServer();
-let callback = (message: webSocket.WebSocketMessage) => {
-  console.info(`message: ${JSON.stringify(message)}}`);
-}
-localServer.onMessageReceive(callback);
-localServer.offMessageReceive(callback);
-```
-
-## offWebSocketServerClose
-
-```TypeScript
-offWebSocketServerClose(callback?: ClientConnectionCloseCallback): void
-```
-
-Cancels listening for events that a connection from a given client has been closed.
-
-**起始版本：** 26.0.0
-
-<!--Device-WebSocketServer-offWebSocketServerClose(callback?: ClientConnectionCloseCallback): void--><!--Device-WebSocketServer-offWebSocketServerClose(callback?: ClientConnectionCloseCallback): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | 否 | the callback used to return the result. |
-
-**示例**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let localServer = webSocket.createWebSocketServer();
-let closeCallback = (clientConnection: webSocket.WebSocketConnection, closeReason: webSocket.CloseResult) => {
-  console.info(`connection: ${JSON.stringify(clientConnection)}, closeReason: ${JSON.stringify(closeReason)}`);
-}
-localServer.onWebSocketServerClose(closeCallback);
-localServer.offWebSocketServerClose(closeCallback);
-```
-
-## offWebSocketServerError
-
-```TypeScript
-offWebSocketServerError(callback?: ErrorCallback): void
-```
-
-取消订阅WebSocket服务器的错误事件。
-
-**起始版本：** 23
-
-<!--Device-WebSocketServer-offWebSocketServerError(callback?: ErrorCallback): void--><!--Device-WebSocketServer-offWebSocketServerError(callback?: ErrorCallback): void-End-->
-
-**系统能力：** 
-- API版本23+：SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | the callback used to return the result.<br>**起始版本：** 23 |
-
-**示例**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let localServer = webSocket.createWebSocketServer();
-let callback = (err: Error) => {
-  console.info(`error. Code: ${err.code}, message: ${err.message}`);
-}
-localServer.onWebSocketServerError(callback);
-localServer.offWebSocketServerError(callback);
-localServer.offWebSocketServerError();
-```
-
 ## off('close')
 
 ```TypeScript
@@ -512,17 +490,17 @@ let localServer = webSocket.createWebSocketServer();
 localServer.off('messageReceive');
 ```
 
-## onConnect
+## offConnect
 
 ```TypeScript
-onConnect(callback: Callback<WebSocketConnection>): void
+offConnect(callback?: Callback<WebSocketConnection>): void
 ```
 
-订阅客户端请求连接服务器的事件。
+取消订阅客户端请求连接服务器的事件。
 
 **起始版本：** 23
 
-<!--Device-WebSocketServer-onConnect(callback: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-onConnect(callback: Callback<WebSocketConnection>): void-End-->
+<!--Device-WebSocketServer-offConnect(callback?: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-offConnect(callback?: Callback<WebSocketConnection>): void-End-->
 
 **系统能力：** 
 - API版本23+：SystemCapability.Communication.NetStack
@@ -531,31 +509,32 @@ onConnect(callback: Callback<WebSocketConnection>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 是 | the callback used to return the result.<br>**起始版本：** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 否 | the callback used to return the result.<br>**起始版本：** 23 |
 
 **示例**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
-import { BusinessError, Callback } from '@kit.BasicServicesKit';
 
 let localServer = webSocket.createWebSocketServer();
-localServer.onConnect((connection: webSocket.WebSocketConnection) => {
-  console.info(`New client connected! Client ip: ${connection.clientIP}, Client port: ${connection.clientPort}`);
-});
+let callback = (connection: webSocket.WebSocketConnection) => {
+  console.info(`connections: ${JSON.stringify(connection)}`);
+}
+localServer.onConnect(callback);
+localServer.offConnect(callback);
 ```
 
-## onMessageReceive
+## offMessageReceive
 
 ```TypeScript
-onMessageReceive(callback: Callback<WebSocketMessage>): void
+offMessageReceive(callback?: Callback<WebSocketMessage>): void
 ```
 
-订阅服务器收到消息的事件。
+取消订阅服务器收到消息的事件。
 
 **起始版本：** 23
 
-<!--Device-WebSocketServer-onMessageReceive(callback: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-onMessageReceive(callback: Callback<WebSocketMessage>): void-End-->
+<!--Device-WebSocketServer-offMessageReceive(callback?: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-offMessageReceive(callback?: Callback<WebSocketMessage>): void-End-->
 
 **系统能力：** 
 - API版本23+：SystemCapability.Communication.NetStack
@@ -564,7 +543,7 @@ onMessageReceive(callback: Callback<WebSocketMessage>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 是 | the callback used to return the result.<br>**起始版本：** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 否 | the callback used to return the result.<br>**起始版本：** 23 |
 
 **示例**
 
@@ -572,22 +551,24 @@ onMessageReceive(callback: Callback<WebSocketMessage>): void
 import { webSocket } from '@kit.NetworkKit';
 
 let localServer = webSocket.createWebSocketServer();
-localServer.onMessageReceive((message: webSocket.WebSocketMessage) => {
-  console.info(`on message received, client: ${message.clientConnection}, data: ${message.data}`);
-});
+let callback = (message: webSocket.WebSocketMessage) => {
+  console.info(`message: ${JSON.stringify(message)}}`);
+}
+localServer.onMessageReceive(callback);
+localServer.offMessageReceive(callback);
 ```
 
-## onWebSocketServerClose
+## offWebSocketServerClose
 
 ```TypeScript
-onWebSocketServerClose(callback: ClientConnectionCloseCallback): void
+offWebSocketServerClose(callback?: ClientConnectionCloseCallback): void
 ```
 
-Enables listening for events that a connection from a given client has been closed.
+Cancels listening for events that a connection from a given client has been closed.
 
 **起始版本：** 26.0.0
 
-<!--Device-WebSocketServer-onWebSocketServerClose(callback: ClientConnectionCloseCallback): void--><!--Device-WebSocketServer-onWebSocketServerClose(callback: ClientConnectionCloseCallback): void-End-->
+<!--Device-WebSocketServer-offWebSocketServerClose(callback?: ClientConnectionCloseCallback): void--><!--Device-WebSocketServer-offWebSocketServerClose(callback?: ClientConnectionCloseCallback): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -595,7 +576,7 @@ Enables listening for events that a connection from a given client has been clos
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | 是 | the callback function when a client connection is closed. |
+| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | 否 | the callback used to return the result. |
 
 **示例**
 
@@ -603,22 +584,24 @@ Enables listening for events that a connection from a given client has been clos
 import { webSocket } from '@kit.NetworkKit';
 
 let localServer = webSocket.createWebSocketServer();
-localServer.onWebSocketServerClose((clientConnection: webSocket.WebSocketConnection, closeReason: webSocket.CloseResult) => {
-  console.info(`client close, client: ${clientConnection}, closeReason: Code: ${closeReason.code}, reason: ${closeReason.reason}`);
-});
+let closeCallback = (clientConnection: webSocket.WebSocketConnection, closeReason: webSocket.CloseResult) => {
+  console.info(`connection: ${JSON.stringify(clientConnection)}, closeReason: ${JSON.stringify(closeReason)}`);
+}
+localServer.onWebSocketServerClose(closeCallback);
+localServer.offWebSocketServerClose(closeCallback);
 ```
 
-## onWebSocketServerError
+## offWebSocketServerError
 
 ```TypeScript
-onWebSocketServerError(callback: ErrorCallback): void
+offWebSocketServerError(callback?: ErrorCallback): void
 ```
 
-订阅WebSocket服务器的错误事件。
+取消订阅WebSocket服务器的错误事件。
 
 **起始版本：** 23
 
-<!--Device-WebSocketServer-onWebSocketServerError(callback: ErrorCallback): void--><!--Device-WebSocketServer-onWebSocketServerError(callback: ErrorCallback): void-End-->
+<!--Device-WebSocketServer-offWebSocketServerError(callback?: ErrorCallback): void--><!--Device-WebSocketServer-offWebSocketServerError(callback?: ErrorCallback): void-End-->
 
 **系统能力：** 
 - API版本23+：SystemCapability.Communication.NetStack
@@ -627,18 +610,20 @@ onWebSocketServerError(callback: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | the callback used to return the result.<br>**起始版本：** 23 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | the callback used to return the result.<br>**起始版本：** 23 |
 
 **示例**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let localServer = webSocket.createWebSocketServer();
-localServer.onWebSocketServerError((err: BusinessError) => {
-  console.error(`error. Code: ${err.code}, message: ${err.message}`);
-});
+let callback = (err: Error) => {
+  console.info(`error. Code: ${err.code}, message: ${err.message}`);
+}
+localServer.onWebSocketServerError(callback);
+localServer.offWebSocketServerError(callback);
+localServer.offWebSocketServerError();
 ```
 
 ## on('close')
@@ -771,6 +756,135 @@ localServer.on('messageReceive', (message: webSocket.WebSocketMessage) => {
 });
 ```
 
+## onConnect
+
+```TypeScript
+onConnect(callback: Callback<WebSocketConnection>): void
+```
+
+订阅客户端请求连接服务器的事件。
+
+**起始版本：** 23
+
+<!--Device-WebSocketServer-onConnect(callback: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-onConnect(callback: Callback<WebSocketConnection>): void-End-->
+
+**系统能力：** 
+- API版本23+：SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 是 | the callback used to return the result.<br>**起始版本：** 23 |
+
+**示例**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError, Callback } from '@kit.BasicServicesKit';
+
+let localServer = webSocket.createWebSocketServer();
+localServer.onConnect((connection: webSocket.WebSocketConnection) => {
+  console.info(`New client connected! Client ip: ${connection.clientIP}, Client port: ${connection.clientPort}`);
+});
+```
+
+## onMessageReceive
+
+```TypeScript
+onMessageReceive(callback: Callback<WebSocketMessage>): void
+```
+
+订阅服务器收到消息的事件。
+
+**起始版本：** 23
+
+<!--Device-WebSocketServer-onMessageReceive(callback: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-onMessageReceive(callback: Callback<WebSocketMessage>): void-End-->
+
+**系统能力：** 
+- API版本23+：SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 是 | the callback used to return the result.<br>**起始版本：** 23 |
+
+**示例**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let localServer = webSocket.createWebSocketServer();
+localServer.onMessageReceive((message: webSocket.WebSocketMessage) => {
+  console.info(`on message received, client: ${message.clientConnection}, data: ${message.data}`);
+});
+```
+
+## onWebSocketServerClose
+
+```TypeScript
+onWebSocketServerClose(callback: ClientConnectionCloseCallback): void
+```
+
+Enables listening for events that a connection from a given client has been closed.
+
+**起始版本：** 26.0.0
+
+<!--Device-WebSocketServer-onWebSocketServerClose(callback: ClientConnectionCloseCallback): void--><!--Device-WebSocketServer-onWebSocketServerClose(callback: ClientConnectionCloseCallback): void-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | 是 | the callback function when a client connection is closed. |
+
+**示例**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let localServer = webSocket.createWebSocketServer();
+localServer.onWebSocketServerClose((clientConnection: webSocket.WebSocketConnection, closeReason: webSocket.CloseResult) => {
+  console.info(`client close, client: ${clientConnection}, closeReason: Code: ${closeReason.code}, reason: ${closeReason.reason}`);
+});
+```
+
+## onWebSocketServerError
+
+```TypeScript
+onWebSocketServerError(callback: ErrorCallback): void
+```
+
+订阅WebSocket服务器的错误事件。
+
+**起始版本：** 23
+
+<!--Device-WebSocketServer-onWebSocketServerError(callback: ErrorCallback): void--><!--Device-WebSocketServer-onWebSocketServerError(callback: ErrorCallback): void-End-->
+
+**系统能力：** 
+- API版本23+：SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | the callback used to return the result.<br>**起始版本：** 23 |
+
+**示例**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let localServer = webSocket.createWebSocketServer();
+localServer.onWebSocketServerError((err: BusinessError) => {
+  console.error(`error. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## send
 
 ```TypeScript
@@ -812,6 +926,125 @@ send(data: string | ArrayBuffer, connection: WebSocketConnection): Promise<boole
 | 2302006 | websocket connection does not exist. |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let ws = webSocket.createWebSocket();
+let url = "ws://"
+class OutValue {
+  status: number = 0
+  message: string = ""
+}
+ws.connect(url, (err: BusinessError, value: boolean) => {
+    if (!err) {
+      console.info("connect success")
+    } else {
+      console.error(`connect fail. Code: ${err.code}, message: ${err.message}`)
+    }
+});
+ws.on('open', (err: BusinessError, value: Object) => {
+  console.info("on open, status:" + (value as OutValue).status + ", message:" + (value as OutValue).message)
+    ws.send("Hello, server!", (err: BusinessError, value: boolean) => {
+    if (!err) {
+      console.info("send success")
+    } else {
+      console.error(`send fail. Code: ${err.code}, message: ${err.message}`)
+    }
+  });
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let url = "ws://";
+const ws : webSocket.WebSocket = webSocket.createWebSocket();
+
+ws.onOpen((data: webSocket.OpenResult | undefined) => {
+  console.info(`onopen value is ${data?.status}`);
+  ws.send('Hello, server!', (err: BusinessError<void>|null, value: boolean|undefined) => {
+    if (err?.code) {
+      console.error(`send fail: ${err?.code} ${err?.message}`);
+    } else {
+      console.info(`send success and value is ${value}`);
+    }
+  })
+});
+ws.connect(url, (err: BusinessError<void>|null, value: boolean|undefined) => {
+  if (err?.code) {
+    console.error(`test connect fail ${err?.code} ${err?.message}`);
+  } else {
+    console.info(`test connect success and value is ${value}`);
+  }
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let ws = webSocket.createWebSocket();
+let url = "ws://";
+class OutValue {
+  status: number = 0
+  message: string = ""
+}
+ws.connect(url, (err: BusinessError, value: boolean) => {
+    if (!err) {
+      console.info("connect success");
+    } else {
+      console.error(`connect fail. Code: ${err.code}, message: ${err.message}`);
+    }
+});
+
+ws.on('open', (err: BusinessError, value: Object) => {
+  console.info("on open, status:" + (value as OutValue).status + ", message:" + (value as OutValue).message);
+  let promise = ws.send("Hello, server!");
+  promise.then((value: boolean) => {
+    console.info("send success");
+  }).catch((err:string) => {
+    console.error("send fail, error:" + JSON.stringify(err));
+  });
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import hilog from '@ohos.hilog';
+
+let domain: int = 0x0000;
+let tag: string = ' WebsocketTestTag';
+let url = "ws://";
+
+const ws : webSocket.WebSocket = webSocket.createWebSocket();
+ws.onOpen((data: webSocket.OpenResult | undefined) => {
+  hilog.info(domain, tag, `onopen value is ${data?.status}`);
+  ws.send('Hello, server!').then((value: boolean) => {
+    hilog.info(domain, tag, `send success and value is ${value}`);
+  }).catch((err: Error) => {
+    hilog.info(domain, tag, `send fail ${err}`);
+  })
+});
+ws.connect(url, (err: BusinessError<void>|null, value: boolean|undefined) => {
+  if (err?.code) {
+    hilog.info(domain, tag, `test connect fail ${err}`);
+  } else {
+    hilog.info(domain, tag, `test connect success and value is ${value}`);
+  }
+});
+```
 
 ArkTS-Dyn示例：
 

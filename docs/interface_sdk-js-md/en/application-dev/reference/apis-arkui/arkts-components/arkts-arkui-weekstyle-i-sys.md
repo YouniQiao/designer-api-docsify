@@ -61,6 +61,50 @@ Style of week color.
 
 **System API:** This is a system API.
 
+## weekendDayColor
+
+```TypeScript
+weekendDayColor?: ResourceColor
+```
+
+Style of week day color.
+
+**Type:** ResourceColor
+
+**Since:** 7
+
+**Deprecated since:** 20
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-WeekStyle-weekendDayColor?: ResourceColor--><!--Device-WeekStyle-weekendDayColor?: ResourceColor-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## weekendLunarColor
+
+```TypeScript
+weekendLunarColor?: ResourceColor
+```
+
+Style of lunar color.
+
+**Type:** ResourceColor
+
+**Since:** 7
+
+**Deprecated since:** 20
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-WeekStyle-weekendLunarColor?: ResourceColor--><!--Device-WeekStyle-weekendLunarColor?: ResourceColor-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
 ## weekFontSize
 
 ```TypeScript
@@ -122,50 +166,6 @@ Style of week width.
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
 <!--Device-WeekStyle-weekWidth?: number--><!--Device-WeekStyle-weekWidth?: number-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**System API:** This is a system API.
-
-## weekendDayColor
-
-```TypeScript
-weekendDayColor?: ResourceColor
-```
-
-Style of week day color.
-
-**Type:** ResourceColor
-
-**Since:** 7
-
-**Deprecated since:** 20
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-WeekStyle-weekendDayColor?: ResourceColor--><!--Device-WeekStyle-weekendDayColor?: ResourceColor-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**System API:** This is a system API.
-
-## weekendLunarColor
-
-```TypeScript
-weekendLunarColor?: ResourceColor
-```
-
-Style of lunar color.
-
-**Type:** ResourceColor
-
-**Since:** 7
-
-**Deprecated since:** 20
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-<!--Device-WeekStyle-weekendLunarColor?: ResourceColor--><!--Device-WeekStyle-weekendLunarColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

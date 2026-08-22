@@ -15,205 +15,6 @@ import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, 
 import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 ```
 
-## onceComponentEventOccur
-
-```TypeScript
-onceComponentEventOccur(componentEventType: ComponentEventType, options: ComponentEventOptions, callback: Callback<UIElementInfo>): void
-```
-
-Listen on component event once, additional listening options can be set.
-
-**起始版本：** 23
-
-<!--Device-UIEventObserver-onceComponentEventOccur(componentEventType: ComponentEventType, options: ComponentEventOptions, callback: Callback<UIElementInfo>): void--><!--Device-UIEventObserver-onceComponentEventOccur(componentEventType: ComponentEventType, options: ComponentEventOptions, callback: Callback<UIElementInfo>): void-End-->
-
-**系统能力：** SystemCapability.Test.UiTest
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| componentEventType | [ComponentEventType](arkts-test-uitest-componenteventtype-e.md) | 是 | Component event type to be listened on. |
-| options | [ComponentEventOptions](arkts-test-uitest-componenteventoptions-i.md) | 是 | Additional listening options of component event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | function, returns the monitored UIElementInfo. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { UIElementInfo, UIEventObserver, ComponentEventOptions, ComponentEventType, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let observer: UIEventObserver = driver.createUIEventObserver();
-  let option: ComponentEventOptions = {
-    timeout: 20000,
-    on: ON.id('123')  // 请开发者替换为实际存在的控件id值
-  };
-  let callback = (UIElementInfo: UIElementInfo) => {
-    console.info(UIElementInfo.bundleName);
-    console.info(UIElementInfo.text);
-    console.info(UIElementInfo.type);
-    console.info(UIElementInfo.componentEventType?.toString());
-    console.info(UIElementInfo.windowId?.toString());
-    console.info(UIElementInfo.componentId);
-    console.info(UIElementInfo.componentRect?.left.toString());
-    console.info(UIElementInfo.componentRect?.top.toString());
-    console.info(UIElementInfo.componentRect?.right.toString());
-    console.info(UIElementInfo.componentRect?.bottom.toString());
-  };
-  observer.onceComponentEventOccur(ComponentEventType.COMPONENT_CLICKED, option, callback);
-}
-```
-
-## onceDialogShow
-
-```TypeScript
-onceDialogShow(callback: Callback<UIElementInfo>): void
-```
-
-Listen for dialog show once
-
-**起始版本：** 23
-
-<!--Device-UIEventObserver-onceDialogShow(callback: Callback<UIElementInfo>): void--><!--Device-UIEventObserver-onceDialogShow(callback: Callback<UIElementInfo>): void-End-->
-
-**系统能力：** SystemCapability.Test.UiTest
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | function, returns the monitored UIElementInfo. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { UIElementInfo, UIEventObserver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let observer: UIEventObserver = driver.createUIEventObserver();
-  let callback = (UIElementInfo: UIElementInfo) => {
-    console.info(UIElementInfo.bundleName);
-    console.info(UIElementInfo.text);
-    console.info(UIElementInfo.type);
-  }
-  observer.onceDialogShow(callback);
-}
-```
-
-## onceToastShow
-
-```TypeScript
-onceToastShow(callback: Callback<UIElementInfo>): void
-```
-
-Listen for toast show once
-
-**起始版本：** 23
-
-<!--Device-UIEventObserver-onceToastShow(callback: Callback<UIElementInfo>): void--><!--Device-UIEventObserver-onceToastShow(callback: Callback<UIElementInfo>): void-End-->
-
-**系统能力：** SystemCapability.Test.UiTest
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | function, returns the monitored UIElementInfo. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { UIElementInfo, UIEventObserver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let observer: UIEventObserver = driver.createUIEventObserver();
-  let callback = (UIElementInfo: UIElementInfo) => {
-    console.info(UIElementInfo.bundleName);
-    console.info(UIElementInfo.text);
-    console.info(UIElementInfo.type);
-  }
-  observer.onceToastShow(callback);
-}
-```
-
-## onceWindowChange
-
-```TypeScript
-onceWindowChange(windowChangeType: WindowChangeType, options: WindowChangeOptions, callback: Callback<UIElementInfo>): void
-```
-
-Listen on window change once, additional listening options can be set.
-
-**起始版本：** 23
-
-<!--Device-UIEventObserver-onceWindowChange(windowChangeType: WindowChangeType, options: WindowChangeOptions, callback: Callback<UIElementInfo>): void--><!--Device-UIEventObserver-onceWindowChange(windowChangeType: WindowChangeType, options: WindowChangeOptions, callback: Callback<UIElementInfo>): void-End-->
-
-**系统能力：** SystemCapability.Test.UiTest
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| windowChangeType | [WindowChangeType](arkts-test-uitest-windowchangetype-e.md) | 是 | Window change type to be listened on. |
-| options | [WindowChangeOptions](arkts-test-uitest-windowchangeoptions-i.md) | 是 | Additional listening options of window change. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | function, returns the monitored UIElementInfo. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { UIElementInfo, UIEventObserver, WindowChangeOptions, WindowChangeType } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let observer: UIEventObserver = driver.createUIEventObserver();
-  let options: WindowChangeOptions = {
-    timeout: 20000,
-    bundleName: 'com.example.myapplication'  // 请开发者替换为实际包名
-  }
-  let callback = (UIElementInfo: UIElementInfo) => {
-    console.info(UIElementInfo.bundleName);
-    console.info(UIElementInfo.text);
-    console.info(UIElementInfo.type);
-    console.info(UIElementInfo.windowChangeType?.toString());
-    console.info(UIElementInfo.windowId?.toString());
-  }
-  observer.onceWindowChange(WindowChangeType.WINDOW_ADDED, options, callback);
-}
-```
-
 ## once_componentEventOccur('componentEventOccur')
 
 ```TypeScript
@@ -426,6 +227,205 @@ async function demo() {
     console.info(UIElementInfo.windowId?.toString());
   }
   observer.once('windowChange', WindowChangeType.WINDOW_ADDED, options, callback);
+}
+```
+
+## onceComponentEventOccur
+
+```TypeScript
+onceComponentEventOccur(componentEventType: ComponentEventType, options: ComponentEventOptions, callback: Callback<UIElementInfo>): void
+```
+
+Listen on component event once, additional listening options can be set.
+
+**起始版本：** 23
+
+<!--Device-UIEventObserver-onceComponentEventOccur(componentEventType: ComponentEventType, options: ComponentEventOptions, callback: Callback<UIElementInfo>): void--><!--Device-UIEventObserver-onceComponentEventOccur(componentEventType: ComponentEventType, options: ComponentEventOptions, callback: Callback<UIElementInfo>): void-End-->
+
+**系统能力：** SystemCapability.Test.UiTest
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| componentEventType | [ComponentEventType](arkts-test-uitest-componenteventtype-e.md) | 是 | Component event type to be listened on. |
+| options | [ComponentEventOptions](arkts-test-uitest-componenteventoptions-i.md) | 是 | Additional listening options of component event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | function, returns the monitored UIElementInfo. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { UIElementInfo, UIEventObserver, ComponentEventOptions, ComponentEventType, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let observer: UIEventObserver = driver.createUIEventObserver();
+  let option: ComponentEventOptions = {
+    timeout: 20000,
+    on: ON.id('123')  // 请开发者替换为实际存在的控件id值
+  };
+  let callback = (UIElementInfo: UIElementInfo) => {
+    console.info(UIElementInfo.bundleName);
+    console.info(UIElementInfo.text);
+    console.info(UIElementInfo.type);
+    console.info(UIElementInfo.componentEventType?.toString());
+    console.info(UIElementInfo.windowId?.toString());
+    console.info(UIElementInfo.componentId);
+    console.info(UIElementInfo.componentRect?.left.toString());
+    console.info(UIElementInfo.componentRect?.top.toString());
+    console.info(UIElementInfo.componentRect?.right.toString());
+    console.info(UIElementInfo.componentRect?.bottom.toString());
+  };
+  observer.onceComponentEventOccur(ComponentEventType.COMPONENT_CLICKED, option, callback);
+}
+```
+
+## onceDialogShow
+
+```TypeScript
+onceDialogShow(callback: Callback<UIElementInfo>): void
+```
+
+Listen for dialog show once
+
+**起始版本：** 23
+
+<!--Device-UIEventObserver-onceDialogShow(callback: Callback<UIElementInfo>): void--><!--Device-UIEventObserver-onceDialogShow(callback: Callback<UIElementInfo>): void-End-->
+
+**系统能力：** SystemCapability.Test.UiTest
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | function, returns the monitored UIElementInfo. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { UIElementInfo, UIEventObserver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let observer: UIEventObserver = driver.createUIEventObserver();
+  let callback = (UIElementInfo: UIElementInfo) => {
+    console.info(UIElementInfo.bundleName);
+    console.info(UIElementInfo.text);
+    console.info(UIElementInfo.type);
+  }
+  observer.onceDialogShow(callback);
+}
+```
+
+## onceToastShow
+
+```TypeScript
+onceToastShow(callback: Callback<UIElementInfo>): void
+```
+
+Listen for toast show once
+
+**起始版本：** 23
+
+<!--Device-UIEventObserver-onceToastShow(callback: Callback<UIElementInfo>): void--><!--Device-UIEventObserver-onceToastShow(callback: Callback<UIElementInfo>): void-End-->
+
+**系统能力：** SystemCapability.Test.UiTest
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | function, returns the monitored UIElementInfo. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { UIElementInfo, UIEventObserver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let observer: UIEventObserver = driver.createUIEventObserver();
+  let callback = (UIElementInfo: UIElementInfo) => {
+    console.info(UIElementInfo.bundleName);
+    console.info(UIElementInfo.text);
+    console.info(UIElementInfo.type);
+  }
+  observer.onceToastShow(callback);
+}
+```
+
+## onceWindowChange
+
+```TypeScript
+onceWindowChange(windowChangeType: WindowChangeType, options: WindowChangeOptions, callback: Callback<UIElementInfo>): void
+```
+
+Listen on window change once, additional listening options can be set.
+
+**起始版本：** 23
+
+<!--Device-UIEventObserver-onceWindowChange(windowChangeType: WindowChangeType, options: WindowChangeOptions, callback: Callback<UIElementInfo>): void--><!--Device-UIEventObserver-onceWindowChange(windowChangeType: WindowChangeType, options: WindowChangeOptions, callback: Callback<UIElementInfo>): void-End-->
+
+**系统能力：** SystemCapability.Test.UiTest
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| windowChangeType | [WindowChangeType](arkts-test-uitest-windowchangetype-e.md) | 是 | Window change type to be listened on. |
+| options | [WindowChangeOptions](arkts-test-uitest-windowchangeoptions-i.md) | 是 | Additional listening options of window change. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | function, returns the monitored UIElementInfo. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { UIElementInfo, UIEventObserver, WindowChangeOptions, WindowChangeType } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let observer: UIEventObserver = driver.createUIEventObserver();
+  let options: WindowChangeOptions = {
+    timeout: 20000,
+    bundleName: 'com.example.myapplication'  // 请开发者替换为实际包名
+  }
+  let callback = (UIElementInfo: UIElementInfo) => {
+    console.info(UIElementInfo.bundleName);
+    console.info(UIElementInfo.text);
+    console.info(UIElementInfo.type);
+    console.info(UIElementInfo.windowChangeType?.toString());
+    console.info(UIElementInfo.windowId?.toString());
+  }
+  observer.onceWindowChange(WindowChangeType.WINDOW_ADDED, options, callback);
 }
 ```
 

@@ -54,6 +54,6 @@ Copyright (c) 2021-2026 Huawei Device Co., Ltd.
 | [StringIndexOutOfBoundsError(Defines the commonly used Errors for ArkTS)](arkts-arkts-errors-stringindexoutofboundserror-c.md) | 表示传入的字符串索引越界时抛出的错误。 |
 | [SyntaxError(Defines the commonly used Errors for ArkTS)](arkts-arkts-errors-syntaxerror-c.md) | 表示解析语法非法的代码时发生的错误。 |
 | [TypeError(Defines the commonly used Errors for ArkTS)](arkts-arkts-errors-typeerror-c.md) | 表示操作无法执行时发生的错误，通常（但不限于）是因为 值的类型不符合预期。 |
-| [URIError(Defines the commonly used Errors for ArkTS)](arkts-arkts-errors-urierror-c.md) | 表示以错误方式使用全局URI处理函数时发生的错误。 |
 | [UncaughtExceptionError(Defines the commonly used Errors for ArkTS)](arkts-arkts-errors-uncaughtexceptionerror-c.md) | 表示异常被抛出但未被捕获时发生的错误。 |
+| [URIError(Defines the commonly used Errors for ArkTS)](arkts-arkts-errors-urierror-c.md) | 表示以错误方式使用全局URI处理函数时发生的错误。 |
 

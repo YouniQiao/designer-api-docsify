@@ -83,7 +83,7 @@ Unsubscribes from event notification events. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Event&gt; | No | Callback used to return the **Event** object of the service. <br>If this parameter is specified, the current callback is unregistered. If this parameter is not set, all callbacks corresponding to the type are unsubscribed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | No | Callback used to return the **Event** object of the service. <br>If this parameter is specified, the current callback is unregistered. If this parameter is not set, all callbacks corresponding to the type are unsubscribed. |
 
 ## onEventNotify
 
@@ -109,7 +109,7 @@ The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Event&gt; | Yes | Callback used to return the **Event** object of the service. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | Yes | Callback used to return the **Event** object of the service. |
 
 ## readDescriptor
 

@@ -30,7 +30,7 @@ The priority defined in a priority group restricts the resource usage of an appl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the app group of the calling application. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the app group of the calling application. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -53,7 +53,42 @@ The priority defined in a priority group restricts the resource usage of an appl
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+usageStatistics.queryAppGroup().then((res: number) => {
+  console.info('BUNDLE_ACTIVE queryAppGroup promise succeeded. result: ' + JSON.stringify(res));
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE queryAppGroup promise failed. code is: ' + err.code + ',message is: ' + err.message);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 usageStatistics.queryAppGroup((err: BusinessError, res: number) => {
+  if(err) {
+    console.error('BUNDLE_ACTIVE queryAppGroup callback failed. code is: ' + err.code + ',message is: ' + err.message);
+  } else {
+    console.info('BUNDLE_ACTIVE queryAppGroup callback succeeded. result: ' + JSON.stringify(res));
+  }
+});
+```
+
+```TypeScript
+// Promise mode when bundleName is specified
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName: string = "com.ohos.camera";
+usageStatistics.queryAppGroup(bundleName).then((res: number) => {
+  console.info('BUNDLE_ACTIVE queryAppGroup promise succeeded. result: ' + JSON.stringify(res));
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE queryAppGroup promise failed. code is: ' + err.code + ',message is: ' + err.message);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName: string = "com.ohos.camera";
+usageStatistics.queryAppGroup(bundleName, (err: BusinessError, res: number) => {
   if(err) {
     console.error('BUNDLE_ACTIVE queryAppGroup callback failed. code is: ' + err.code + ',message is: ' + err.message);
   } else {
@@ -106,15 +141,7 @@ The priority defined in a priority group restricts the resource usage of an appl
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-usageStatistics.queryAppGroup().then((res: number) => {
-  console.info('BUNDLE_ACTIVE queryAppGroup promise succeeded. result: ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryAppGroup promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
+See [queryAppGroup](#queryappgroup)
 
 
 ## queryAppGroup
@@ -142,7 +169,7 @@ The priority defined in a priority group restricts the resource usage of an appl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | name of the application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the usage priority group of the calling application. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the usage priority group of the calling application. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -162,18 +189,7 @@ The priority defined in a priority group restricts the resource usage of an appl
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName: string = "com.ohos.camera";
-usageStatistics.queryAppGroup(bundleName, (err: BusinessError, res: number) => {
-  if(err) {
-    console.error('BUNDLE_ACTIVE queryAppGroup callback failed. code is: ' + err.code + ',message is: ' + err.message);
-  } else {
-    console.info('BUNDLE_ACTIVE queryAppGroup callback succeeded. result: ' + JSON.stringify(res));
-  }
-});
-```
+See [queryAppGroup](#queryappgroup)
 
 
 ## queryAppGroup
@@ -226,15 +242,5 @@ The priority defined in a priority group restricts the resource usage of an appl
 
 **Examples**
 
-```TypeScript
-// Promise mode when bundleName is specified
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName: string = "com.ohos.camera";
-usageStatistics.queryAppGroup(bundleName).then((res: number) => {
-  console.info('BUNDLE_ACTIVE queryAppGroup promise succeeded. result: ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryAppGroup promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
+See [queryAppGroup](#queryappgroup)
 

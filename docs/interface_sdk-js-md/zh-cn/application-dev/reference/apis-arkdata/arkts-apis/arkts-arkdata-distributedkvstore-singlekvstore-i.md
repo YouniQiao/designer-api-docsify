@@ -86,6 +86,41 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let backupFile = 'BK001';
+try {
+  kvStore.backup(backupFile).then(() => {
+    console.info(`Succeeded in backupping data`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to backup. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let backupFile = 'BK001';
+try {
+  kvStore!.backup(backupFile).then((): void => {
+    console.info(`Succeeded in backupping data`);
+  }).catch((err): void => {
+    console.error(`Failed to backup. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## backup
 
 ```TypeScript
@@ -122,40 +157,7 @@ backup(file: string): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let backupFile = 'BK001';
-try {
-  kvStore.backup(backupFile).then(() => {
-    console.info(`Succeeded in backupping data`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to backup. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let backupFile = 'BK001';
-try {
-  kvStore!.backup(backupFile).then((): void => {
-    console.info(`Succeeded in backupping data`);
-  }).catch((err): void => {
-    console.error(`Failed to backup. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [backup](#backup)
 
 ## backupEx
 
@@ -327,42 +329,6 @@ try {
 }
 ```
 
-## closeResultSet
-
-```TypeScript
-closeResultSet(resultSet: KVStoreResultSet): Promise<void>
-```
-
-关闭由[SingleKVStore.getResultSet](#getresultset)返回的 KVStoreResultSet对象，使用Promise异步回调。关闭结果集后，该结果集对象将不可再用，相关数据库资源被释放。
-
-**起始版本：** -1
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SingleKVStore-closeResultSet(resultSet: KVStoreResultSet): Promise<void>--><!--Device-SingleKVStore-closeResultSet(resultSet: KVStoreResultSet): Promise<void>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resultSet | [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md) | 是 | 表示要关闭的KVStoreResultSet对象。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 [ |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -416,6 +382,44 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+## closeResultSet
+
+```TypeScript
+closeResultSet(resultSet: KVStoreResultSet): Promise<void>
+```
+
+关闭由[SingleKVStore.getResultSet](#getresultset)返回的 KVStoreResultSet对象，使用Promise异步回调。关闭结果集后，该结果集对象将不可再用，相关数据库资源被释放。
+
+**起始版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-closeResultSet(resultSet: KVStoreResultSet): Promise<void>--><!--Device-SingleKVStore-closeResultSet(resultSet: KVStoreResultSet): Promise<void>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resultSet | [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md) | 是 | 表示要关闭的KVStoreResultSet对象。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 [ |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
+
+**示例**
+
+参见 [closeResultSet](#closeresultset)
 
 ## commit
 
@@ -491,36 +495,6 @@ try {
 }
 ```
 
-## commit
-
-```TypeScript
-commit(): Promise<void>
-```
-
-提交SingleKVStore数据库中的事务，使用Promise异步回调。需先调用 [startTransaction](#starttransaction)启动事务后再调 用本接口提交事务。提交成功后，事务期间的所有数据变更将永久生效并写入数据库。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SingleKVStore-commit(): Promise<void>--><!--Device-SingleKVStore-commit(): Promise<void>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -560,6 +534,38 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+## commit
+
+```TypeScript
+commit(): Promise<void>
+```
+
+提交SingleKVStore数据库中的事务，使用Promise异步回调。需先调用 [startTransaction](#starttransaction)启动事务后再调 用本接口提交事务。提交成功后，事务期间的所有数据变更将永久生效并写入数据库。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-commit(): Promise<void>--><!--Device-SingleKVStore-commit(): Promise<void>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+
+**示例**
+
+参见 [commit](#commit)
 
 ## delete
 
@@ -653,43 +659,6 @@ try {
 }
 ```
 
-## delete
-
-```TypeScript
-delete(key: string): Promise<void>
-```
-
-从数据库中删除指定键值的数据，使用Promise异步回调。删除成功后，指定键值对将被永久删除，无法再通过get等方法查询；若已订阅数据变更通知，将触发变更通知回调。
-
-**起始版本：** -1
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SingleKVStore-delete(key: string): Promise<void>--><!--Device-SingleKVStore-delete(key: string): Promise<void>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | string | 是 | 要删除数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 [ |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. [ |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -741,6 +710,45 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+## delete
+
+```TypeScript
+delete(key: string): Promise<void>
+```
+
+从数据库中删除指定键值的数据，使用Promise异步回调。删除成功后，指定键值对将被永久删除，无法再通过get等方法查询；若已订阅数据变更通知，将触发变更通知回调。
+
+**起始版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-delete(key: string): Promise<void>--><!--Device-SingleKVStore-delete(key: string): Promise<void>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | string | 是 | 要删除数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 [ |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
+
+**示例**
+
+参见 [delete](#delete)
 
 ## deleteBackup
 
@@ -821,42 +829,6 @@ try {
 }
 ```
 
-## deleteBackup
-
-```TypeScript
-deleteBackup(files: Array<string>): Promise<Array<[string, int]>>
-```
-
-根据指定名称从默认路径（context.databaseDir）删除备份文件，使用Promise异步回调。删除备份文件后，将无法再通过 [restore](#restore)接口恢复该备份文件中的 数据。如需从自定义路径删除备份，请使用[deleteBackupEx](#deletebackupex)接口。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SingleKVStore-deleteBackup(files: Array<string>): Promise<Array<[string, int]>>--><!--Device-SingleKVStore-deleteBackup(files: Array<string>): Promise<Array<[string, int]>>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| files | Array&lt;string&gt; | 是 | 删除备份文件所指定的名称，不能为空，无长度限制，不能包含特殊字符'/'。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[string, int]&gt;&gt; | Promise对象，返回删除备份的文件名及其处理结果。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -900,6 +872,44 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+## deleteBackup
+
+```TypeScript
+deleteBackup(files: Array<string>): Promise<Array<[string, int]>>
+```
+
+根据指定名称从默认路径（context.databaseDir）删除备份文件，使用Promise异步回调。删除备份文件后，将无法再通过 [restore](#restore)接口恢复该备份文件中的 数据。如需从自定义路径删除备份，请使用[deleteBackupEx](#deletebackupex)接口。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-deleteBackup(files: Array<string>): Promise<Array<[string, int]>>--><!--Device-SingleKVStore-deleteBackup(files: Array<string>): Promise<Array<[string, int]>>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| files | Array&lt;string&gt; | 是 | 删除备份文件所指定的名称，不能为空，无长度限制，不能包含特殊字符'/'。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[string, int]&gt;&gt; | Promise对象，返回删除备份的文件名及其处理结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. |
+
+**示例**
+
+参见 [deleteBackup](#deletebackup)
 
 ## deleteBackupEx
 
@@ -1097,43 +1107,6 @@ try {
 }
 ```
 
-## deleteBatch
-
-```TypeScript
-deleteBatch(keys: string[]): Promise<void>
-```
-
-批量删除SingleKVStore数据库中的键值对，使用Promise异步回调。删除成功后，指定键值对将被永久删除，无法再通过get等方法查询；若已订阅数据变更通知，将触发变更通知回调。
-
-**起始版本：** -1
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SingleKVStore-deleteBatch(keys: string[]): Promise<void>--><!--Device-SingleKVStore-deleteBatch(keys: string[]): Promise<void>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| keys | string[] | 是 | 表示要批量删除的键名列表，不能为空，数组中每个元素的长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 [ |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. [ |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -1212,6 +1185,45 @@ try {
 }
 ```
 
+## deleteBatch
+
+```TypeScript
+deleteBatch(keys: string[]): Promise<void>
+```
+
+批量删除SingleKVStore数据库中的键值对，使用Promise异步回调。删除成功后，指定键值对将被永久删除，无法再通过get等方法查询；若已订阅数据变更通知，将触发变更通知回调。
+
+**起始版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-deleteBatch(keys: string[]): Promise<void>--><!--Device-SingleKVStore-deleteBatch(keys: string[]): Promise<void>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| keys | string[] | 是 | 表示要批量删除的键名列表，不能为空，数组中每个元素的长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 [ |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
+
+**示例**
+
+参见 [deleteBatch](#deletebatch)
+
 ## enableSync
 
 ```TypeScript
@@ -1280,6 +1292,39 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  kvStore.enableSync(true).then(() => {
+    console.info('Succeeded in enabling sync');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to enable sync. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  kvStore!.enableSync(true).then((): void => {
+    console.info('Succeeded in enabling sync');
+  }).catch((err): void => {
+    console.error(`Failed to enable sync. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## enableSync
 
 ```TypeScript
@@ -1316,38 +1361,7 @@ enableSync(enabled: boolean): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  kvStore.enableSync(true).then(() => {
-    console.info('Succeeded in enabling sync');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to enable sync. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  kvStore!.enableSync(true).then((): void => {
-    console.info('Succeeded in enabling sync');
-  }).catch((err): void => {
-    console.error(`Failed to enable sync. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [enableSync](#enablesync)
 
 ## get
 
@@ -1378,6 +1392,339 @@ get(key: string, callback: AsyncCallback<boolean | string | long | double | Uint
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. [ |
 | [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. [ |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting');
+    if (kvStore != null) {
+      kvStore.get(KEY_TEST_STRING_ELEMENT, (err: BusinessError, data: boolean | string | number | Uint8Array) => {
+        if (err) {
+          console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info(`Succeeded in getting data.data=${data}`);
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+    kvStore!.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, (err: BusinessError|null) => {
+        if (err != null) {
+            console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+            return;
+        }
+        console.info('Succeeded in putting');
+        if (kvStore != null) {
+            kvStore!.get(KEY_TEST_STRING_ELEMENT, (err: BusinessError|null, data: boolean | string | long | double | Uint8Array |undefined) => {
+                if (err != null) {
+                    console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+                    return;
+                }
+                if (data != undefined) {
+                    console.info(`Succeeded in getting data.data=${data}`);
+                }
+            });
+        }
+    });
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(() => {
+    console.info(`Succeeded in putting data`);
+    if (kvStore != null) {
+      kvStore.get(KEY_TEST_STRING_ELEMENT).then((data: boolean | string | number | Uint8Array) => {
+        console.info(`Succeeded in getting data.data=${data}`);
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+    kvStore!.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(() => {
+        console.info(`Succeeded in putting data`);
+        if (kvStore != null) {
+            kvStore!.get(KEY_TEST_STRING_ELEMENT).then((data: boolean | string | long | double | Uint8Array) => {
+                console.info(`Succeeded in getting data.data=${data}`);
+            }).catch((err) => {
+                console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+            });
+        }
+    }).catch((err) => {
+        console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+    });
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting');
+    if (kvStore != null) {
+      kvStore.get(KEY_TEST_STRING_ELEMENT, (err: BusinessError, data: boolean | string | number | Uint8Array) => {
+        if (err) {
+          console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info(`Succeeded in getting data.data=${data}`);
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+  kvStore!.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, (err: BusinessError | null): void => {
+    if (err) {
+      console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting');
+    kvStore!.get(KEY_TEST_STRING_ELEMENT, (err: BusinessError | null, data: boolean | string | long | double | Uint8Array): void => {
+      if (err) {
+        console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info(`Succeeded in getting data. Data=${data}`);
+    });
+  });
+} catch (error) {
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(() => {
+    console.info(`Succeeded in putting data`);
+    if (kvStore != null) {
+      kvStore.get(KEY_TEST_STRING_ELEMENT).then((data: boolean | string | number | Uint8Array) => {
+        console.info(`Succeeded in getting data.data=${data}`);
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+  kvStore!.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(() => {
+    console.info(`Succeeded in putting data`);
+    if (kvStore != null) {
+      kvStore!.get(KEY_TEST_STRING_ELEMENT).then((data: boolean | string | long | double | Uint8Array): void => {
+        console.info(`Succeeded in getting data.data=${data}`);
+        done();
+      }).catch((err): void => {
+        console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err): void => {
+    console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
+const VALUE_TEST_STRING_ELEMENT = 'value-string-002';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting');
+    if (kvStore != null) {
+      kvStore.get('localDeviceId', KEY_TEST_STRING_ELEMENT, (err: BusinessError, data: boolean | string | number | Uint8Array) => {
+        if (err) {
+          console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting');
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
+const VALUE_TEST_STRING_ELEMENT = 'value-string-002';
+try {
+  kvStore!.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, (err: BusinessError | null): void => {
+    if (err) {
+      console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting');
+    kvStore!.get('localDeviceId', KEY_TEST_STRING_ELEMENT, (err: BusinessError | null, data: boolean | string | long | double | Uint8Array): void => {
+      if (err) {
+        console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info(`Succeeded in getting data.data=${data}`);
+    });
+  });
+} catch (error) {
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
+const VALUE_TEST_STRING_ELEMENT = 'value-string-002';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(async () => {
+    console.info('Succeeded in putting');
+    if (kvStore != null) {
+      kvStore.get('localDeviceId', KEY_TEST_STRING_ELEMENT).then((data: boolean | string | number | Uint8Array) => {
+        console.info('Succeeded in getting');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to put. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
+const VALUE_TEST_STRING_ELEMENT = 'value-string-002';
+try {
+  kvStore!.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, (err: BusinessError | null): void => {
+    if (err) {
+      console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting');
+    kvStore!.get('localDeviceId', KEY_TEST_STRING_ELEMENT).then((data: boolean | string | long | double | Uint8Array): void => {
+      console.info(`Succeeded in getting data.data=${data}`);
+    }).catch((err): void => {
+      console.error(`Failed to get. Code: ${err.code}, message: ${err.message}`);
+    });
+  });
+} catch (error) {
+  console.error(`Failed to get. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## get
 
@@ -1413,6 +1760,10 @@ get(key: string): Promise<boolean | string | long | double | Uint8Array>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. [ |
 | [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. [ |
+
+**示例**
+
+参见 [get](#get)
 
 ## getEntries
 
@@ -1534,43 +1885,6 @@ try {
 }
 ```
 
-## getEntries
-
-```TypeScript
-getEntries(keyPrefix: string): Promise<Entry[]>
-```
-
-获取匹配指定键前缀的所有键值对，使用Promise异步回调。
-
-**起始版本：** -1
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SingleKVStore-getEntries(keyPrefix: string): Promise<Entry[]>--><!--Device-SingleKVStore-getEntries(keyPrefix: string): Promise<Entry[]>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Entry[]&gt; | Promise对象。返回匹配指定前缀的键值对列表。 [ |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -1646,38 +1960,6 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
 }
 ```
-
-## getEntries
-
-```TypeScript
-getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
-```
-
-获取与指定Query对象匹配的键值对列表，使用callback异步回调。
-
-**起始版本：** -1
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SingleKVStore-getEntries(query: Query, callback: AsyncCallback<Entry[]>): void--><!--Device-SingleKVStore-getEntries(query: Query, callback: AsyncCallback<Entry[]>): void-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| query | Query | 是 | 表示要查询的对象。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | 是 | 回调函数。返回与指定Query对象匹配的键值对列表。 [ |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
-
-**示例**
 
 ArkTS-Dyn示例：
 
@@ -1765,43 +2047,6 @@ try {
 }
 ```
 
-## getEntries
-
-```TypeScript
-getEntries(query: Query): Promise<Entry[]>
-```
-
-获取与指定Query对象匹配的键值对列表，使用Promise异步回调。
-
-**起始版本：** -1
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SingleKVStore-getEntries(query: Query): Promise<Entry[]>--><!--Device-SingleKVStore-getEntries(query: Query): Promise<Entry[]>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| query | Query | 是 | 表示查询对象。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Entry[]&gt; | Promise对象。返回与指定Query对象匹配的键值对列表。 [ |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -1883,6 +2128,783 @@ import { BusinessError } from '@kit.BasicServicesKit';
   console.error(`Failed to get Entries. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore.putBatch(entries, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting Batch');
+    if (kvStore != null) {
+      kvStore.getEntries('batch_test_string_key', (err: BusinessError, entries: distributedKVStore.Entry[]) => {
+        if (err) {
+          console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting Entries');
+        console.info(`entries.length: ${entries.length}`);
+        console.info(`entries[0]: ${entries[0]}`);
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting Batch');
+    kvStore!.getEntries('batch_test_string_key', (err: BusinessError | null, entries: distributedKVStore.Entry[] | undefined): void => {
+      if (err != null) {
+        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      if (entries != undefined) {
+        console.info('Succeeded in getting Entries');
+        console.info(`entries.length: ${entries.length}`);
+        console.info(`entries[0]: ${entries[0]}`);
+      }
+    });
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting Batch');
+    if (kvStore != null) {
+      kvStore.getEntries('batch_test_string_key').then((entries: distributedKVStore.Entry[]) => {
+        console.info('Succeeded in getting Entries');
+        console.info(`PutBatch ${entries}`);
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting Batch');
+    kvStore!.getEntries('batch_test_string_key').then((entries: distributedKVStore.Entry[]): void => {
+      console.info('Succeeded in getting Entries');
+      console.info(`PutBatch ${entries}`);
+    }).catch((err): void => {
+      console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+    });
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries : ${entries}`);
+  kvStore.putBatch(entries, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting batch');
+    if (kvStore != null) {
+      kvStore.getEntries('localDeviceId', 'batch_test_string_key', (err: BusinessError, entries: distributedKVStore.Entry[]) => {
+        if (err) {
+          console.error(`Failed to get entries. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting entries');
+        console.info(`entries.length: ${entries.length}`);
+        console.info(`entries[0]: ${entries[0]}`);
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to put batch. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting Batch');
+    kvStore!.getEntries('localDeviceId', 'batch_test_string_key', (err: BusinessError | null, entries: distributedKVStore.Entry[] | undefined): void => {
+      if (err != null) {
+        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      if (entries != undefined) {
+        console.info('Succeeded in getting Entries');
+        console.info(`entries.length: ${entries.length}`);
+        console.info(`entries[0]: ${entries[0]}`);
+      }
+    });
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting batch');
+    if (kvStore != null) {
+      kvStore.getEntries('localDeviceId', 'batch_test_string_key').then((entries: distributedKVStore.Entry[]) => {
+        console.info('Succeeded in getting entries');
+        console.info(`entries.length: ${entries.length}`);
+        console.info(`entries[0]: ${entries[0]}`);
+        console.info(`entries[0].value: ${entries[0].value}`);
+        console.info(`entries[0].value.value: ${entries[0].value.value}`);
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get entries. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to put batch. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting Batch');
+    kvStore!.getEntries('localDeviceId', 'batch_test_string_key').then((entries: distributedKVStore.Entry[]): void => {
+      console.info('Succeeded in getting Entries');
+      console.info(`entries.length: ${entries.length}`);
+      console.info(`entries[0]: ${entries[0]}`);
+      console.info(`entries[0].value: ${entries[0].value}`);
+      console.info(`entries[0].value.value: ${entries[0].value.value}`);
+    }).catch((err): void => {
+      console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+    });
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let arr = new Uint8Array([21, 31]);
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_bool_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.BYTE_ARRAY,
+        value: arr
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore.putBatch(entries, (err: BusinessError) => {
+    console.info('Succeeded in putting Batch');
+    const query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    if (kvStore != null) {
+      kvStore.getEntries(query, (err: BusinessError, entries: distributedKVStore.Entry[]) => {
+        if (err) {
+          console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting Entries');
+        console.info(`entries.length: ${entries.length}`);
+        console.info(`entries[0]: ${entries[0]}`);
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get Entries. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let arr = new Uint8Array([21, 31]);
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_bool_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.BYTE_ARRAY,
+        value: arr
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting Batch');
+    const query: distributedKVStore.Query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    kvStore!.getEntries(query, (err: BusinessError | null, entries: distributedKVStore.Entry[] | undefined): void => {
+      if (err != null) {
+        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      if (entries != undefined) {
+        console.info('Succeeded in getting Entries');
+        console.info(`entries.length: ${entries.length}`);
+        console.info(`entries[0]: ${entries[0]}`);
+      }
+    });
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let arr = new Uint8Array([21, 31]);
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_bool_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.BYTE_ARRAY,
+        value: arr
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting Batch');
+    const query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    if (kvStore != null) {
+      kvStore.getEntries(query).then((entries: distributedKVStore.Entry[]) => {
+        console.info('Succeeded in getting Entries');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`)
+  });
+  console.info('Succeeded in getting Entries');
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get Entries. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let arr = new Uint8Array([21, 31]);
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_bool_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.BYTE_ARRAY,
+        value: arr
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting Batch');
+    const query: distributedKVStore.Query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    kvStore!.getEntries(query).then((entries: distributedKVStore.Entry[]): void => {
+      console.info('Succeeded in getting Entries');
+      console.info(`entries.length: ${entries.length}`);
+      console.info(`entries[0]: ${entries[0]}`);
+    }).catch((err): void => {
+      console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+    });
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let arr = new Uint8Array([21, 31]);
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_bool_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.BYTE_ARRAY,
+        value: arr
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore.putBatch(entries, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting batch');
+    let query = new distributedKVStore.Query();
+    query.deviceId('localDeviceId');
+    query.prefixKey('batch_test');
+    if (kvStore != null) {
+      kvStore.getEntries('localDeviceId', query, (err: BusinessError, entries: distributedKVStore.Entry[]) => {
+        if (err) {
+          console.error(`Failed to get entries. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting entries');
+        console.info(`entries.length: ${entries.length}`);
+        console.info(`entries[0]: ${entries[0]}`);
+      });
+    }
+  });
+  console.info('Succeeded in getting entries');
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get entries. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let arr = new Uint8Array([21, 31]);
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_bool_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.BYTE_ARRAY,
+        value: arr
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting Batch');
+    const query: distributedKVStore.Query = new distributedKVStore.Query();
+    query.deviceId('localDeviceId');
+    query.prefixKey('batch_test');
+    kvStore!.getEntries('localDeviceId', query, (err: BusinessError | null, entries: distributedKVStore.Entry[] | undefined): void => {
+      if (err != null) {
+        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      if (entries != undefined) {
+        console.info('Succeeded in getting Entries');
+        console.info(`entries.length: ${entries.length}`);
+        console.info(`entries[0]: ${entries[0]}`);
+      }
+    });
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let arr = new Uint8Array([21, 31]);
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_bool_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.BYTE_ARRAY,
+        value: arr
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting batch');
+    let query = new distributedKVStore.Query();
+    query.deviceId('localDeviceId');
+    query.prefixKey('batch_test');
+    if (kvStore != null) {
+      kvStore.getEntries('localDeviceId', query).then((entries: distributedKVStore.Entry[]) => {
+        console.info('Succeeded in getting entries');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get entries. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+  });
+  console.info('Succeeded in getting entries');
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get entries. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let arr = new Uint8Array([21, 31]);
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_bool_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.BYTE_ARRAY,
+        value: arr
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting Batch');
+    const query: distributedKVStore.Query = new distributedKVStore.Query();
+    query.deviceId('localDeviceId');
+    query.prefixKey('batch_test');
+    kvStore!.getEntries('localDeviceId', query).then((entries: distributedKVStore.Entry[]): void => {
+      console.info('Succeeded in getting Entries');
+      console.info(`entries.length: ${entries.length}`);
+      console.info(`entries[0]: ${entries[0]}`);
+    }).catch((err): void => {
+      console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+    });
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+}
+```
+
+## getEntries
+
+```TypeScript
+getEntries(keyPrefix: string): Promise<Entry[]>
+```
+
+获取匹配指定键前缀的所有键值对，使用Promise异步回调。
+
+**起始版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-getEntries(keyPrefix: string): Promise<Entry[]>--><!--Device-SingleKVStore-getEntries(keyPrefix: string): Promise<Entry[]>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Entry[]&gt; | Promise对象。返回匹配指定前缀的键值对列表。 [ |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+
+**示例**
+
+参见 [getEntries](#getentries)
+
+## getEntries
+
+```TypeScript
+getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
+```
+
+获取与指定Query对象匹配的键值对列表，使用callback异步回调。
+
+**起始版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-getEntries(query: Query, callback: AsyncCallback<Entry[]>): void--><!--Device-SingleKVStore-getEntries(query: Query, callback: AsyncCallback<Entry[]>): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| query | Query | 是 | 表示要查询的对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | 是 | 回调函数。返回与指定Query对象匹配的键值对列表。 [ |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+
+**示例**
+
+参见 [getEntries](#getentries)
+
+## getEntries
+
+```TypeScript
+getEntries(query: Query): Promise<Entry[]>
+```
+
+获取与指定Query对象匹配的键值对列表，使用Promise异步回调。
+
+**起始版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-getEntries(query: Query): Promise<Entry[]>--><!--Device-SingleKVStore-getEntries(query: Query): Promise<Entry[]>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| query | Query | 是 | 表示查询对象。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Entry[]&gt; | Promise对象。返回与指定Query对象匹配的键值对列表。 [ |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+
+**示例**
+
+参见 [getEntries](#getentries)
 
 ## getResultSet
 
@@ -2018,43 +3040,6 @@ try {
 }
 ```
 
-## getResultSet
-
-```TypeScript
-getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
-```
-
-从SingleKVStore数据库中获取具有指定前缀的结果集，使用Promise异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](#closeresultset) 关闭结果集释放资源。
-
-**起始版本：** -1
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SingleKVStore-getResultSet(keyPrefix: string): Promise<KVStoreResultSet>--><!--Device-SingleKVStore-getResultSet(keyPrefix: string): Promise<KVStoreResultSet>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Promise对象。返回具有指定前缀的结果集。 [ |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -2140,38 +3125,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
-
-## getResultSet
-
-```TypeScript
-getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
-```
-
-获取与指定Query对象匹配的KVStoreResultSet对象，使用callback异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](#closeresultset) 关闭结果集释放资源。
-
-**起始版本：** -1
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SingleKVStore-getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void--><!--Device-SingleKVStore-getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| query | Query | 是 | 表示查询对象。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | 回调函数，获取与指定Query对象匹配的KVStoreResultSet对象。 [ |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
-
-**示例**
 
 ArkTS-Dyn示例：
 
@@ -2259,43 +3212,6 @@ try {
 }
 ```
 
-## getResultSet
-
-```TypeScript
-getResultSet(query: Query): Promise<KVStoreResultSet>
-```
-
-获取与指定Query对象匹配的KVStoreResultSet对象，使用Promise异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](#closeresultset) 关闭结果集释放资源。
-
-**起始版本：** -1
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SingleKVStore-getResultSet(query: Query): Promise<KVStoreResultSet>--><!--Device-SingleKVStore-getResultSet(query: Query): Promise<KVStoreResultSet>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| query | Query | 是 | 表示查询对象。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Promise对象。获取与指定Query对象匹配的KVStoreResultSet对象。 [ |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -2370,6 +3286,744 @@ try {
     console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore.putBatch(entries, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting batch');
+    if (kvStore != null) {
+      kvStore.getResultSet('batch_test_string_key', async (err: BusinessError, result: distributedKVStore.KVStoreResultSet) => {
+        if (err) {
+          console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting result set');
+        resultSet = result;
+        if (kvStore != null) {
+          kvStore.closeResultSet(resultSet, (err: BusinessError) => {
+            if (err) {
+              console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
+              return;
+            }
+            console.info('Succeeded in closing result set');
+          });
+        }
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting Batch');
+    kvStore!.getResultSet('batch_test_string_key', (err: BusinessError | null, result: distributedKVStore.KVStoreResultSet | undefined): void => {
+      if (err != null) {
+        console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('Succeeded in getting result set');
+      if (result != undefined) {
+        resultSet = result;
+        kvStore!.closeResultSet(resultSet, (err: BusinessError | null): void => {
+          if (err != null) {
+            console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
+            return;
+          }
+          console.info('Succeeded in closing result set');
+        });
+      }
+    });
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting batch');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+  });
+  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+    console.info('Succeeded in getting result set');
+    resultSet = result;
+    if (kvStore != null) {
+      kvStore.closeResultSet(resultSet).then(() => {
+        console.info('Succeeded in closing result set');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  kvStore.getResultSet('localDeviceId', 'batch_test_string_key', async (err: BusinessError, result: distributedKVStore.KVStoreResultSet) => {
+    if (err) {
+      console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in getting resultSet');
+    resultSet = result;
+    if (kvStore != null) {
+      kvStore.closeResultSet(resultSet, (err: BusinessError) => {
+        if (err) {
+          console.error(`Failed to close resultSet. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in closing resultSet');
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get resultSet. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting Batch');
+    kvStore!.getResultSet('localDeviceId', 'batch_test_string_key', (err: BusinessError | null, result: distributedKVStore.KVStoreResultSet | undefined): void => {
+      if (err != null) {
+        console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('Succeeded in getting result set');
+      if (result != undefined) {
+        resultSet = result;
+        kvStore!.closeResultSet(resultSet, (err: BusinessError | null): void => {
+          if (err != null) {
+            console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
+            return;
+          }
+          console.info('Succeeded in closing result set');
+        });
+      }
+    });
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  kvStore.getResultSet('localDeviceId', 'batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+    console.info('Succeeded in getting resultSet');
+    resultSet = result;
+    if (kvStore != null) {
+      kvStore.closeResultSet(resultSet).then(() => {
+        console.info('Succeeded in closing resultSet');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to close resultSet. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get resultSet. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting Batch');
+    kvStore!.getResultSet('localDeviceId', 'batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet): void => {
+      console.info('Succeeded in getting result set');
+      resultSet = result;
+      kvStore!.closeResultSet(resultSet).then((): void => {
+        console.info('Succeeded in closing result set');
+      }).catch((err): void => {
+        console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
+      });
+    }).catch((err): void => {
+      console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    });
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore.putBatch(entries, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting batch');
+    const query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    if (kvStore != null) {
+      kvStore.getResultSet('localDeviceId', query, async (err: BusinessError, result: distributedKVStore.KVStoreResultSet) => {
+        if (err) {
+          console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting resultSet');
+        resultSet = result;
+        if (kvStore != null) {
+          kvStore.closeResultSet(resultSet, (err: BusinessError) => {
+            if (err) {
+              console.error(`Failed to close resultSet. Code: ${err.code}, message: ${err.message}`);
+              return;
+            }
+            console.info('Succeeded in closing resultSet');
+          });
+        }
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get resultSet. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting Batch');
+    const query: distributedKVStore.Query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    kvStore!.getResultSet('localDeviceId', query, (err: BusinessError | null, result: distributedKVStore.KVStoreResultSet | undefined): void => {
+      if (err != null) {
+        console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('Succeeded in getting resultSet');
+      if (result != undefined) {
+        resultSet = result;
+        kvStore!.closeResultSet(resultSet, (err: BusinessError | null): void => {
+          if (err != null) {
+            console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
+            return;
+          }
+          console.info('Succeeded in closing resultSet');
+        });
+      }
+    });
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting batch');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+  });
+  const query = new distributedKVStore.Query();
+  query.prefixKey('batch_test');
+  if (kvStore != null) {
+    kvStore.getResultSet('localDeviceId', query).then((result: distributedKVStore.KVStoreResultSet) => {
+      console.info('Succeeded in getting resultSet');
+      resultSet = result;
+      if (kvStore != null) {
+        kvStore.closeResultSet(resultSet).then(() => {
+          console.info('Succeeded in closing resultSet');
+        }).catch((err: BusinessError) => {
+          console.error(`Failed to close resultSet. Code: ${err.code}, message: ${err.message}`);
+        });
+      }
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+  query.deviceId('localDeviceId');
+  console.info(`GetResultSet ` + query.getSqlLike());
+
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get resultSet. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting Batch');
+    const query: distributedKVStore.Query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    kvStore!.getResultSet('localDeviceId', query).then((result: distributedKVStore.KVStoreResultSet): void => {
+      console.info('Succeeded in getting resultSet');
+      resultSet = result;
+      kvStore!.closeResultSet(resultSet).then((): void => {
+        console.info('Succeeded in closing resultSet');
+      }).catch((err): void => {
+        console.error(`Failed to close resultSet. Code: ${err.code}, message: ${err.message}`);
+      });
+    }).catch((err): void => {
+      console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
+    });
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting batch');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+  });
+  const query = new distributedKVStore.Query();
+  query.prefixKey('batch_test');
+  kvStore.getResultSet(query).then((result: distributedKVStore.KVStoreResultSet) => {
+    console.info('Succeeded in getting result set');
+    resultSet = result;
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore.putBatch(entries, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting batch');
+    const query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    if (kvStore != null) {
+      kvStore.getResultSet(query, async (err: BusinessError, result: distributedKVStore.KVStoreResultSet) => {
+        if (err) {
+          console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting resultSet');
+        resultSet = result;
+        if (kvStore != null) {
+          kvStore.closeResultSet(resultSet, (err: BusinessError) => {
+            if (err) {
+              console.error(`Failed to close resultSet. Code: ${err.code}, message: ${err.message}`);
+              return;
+            }
+            console.info('Succeeded in closing resultSet');
+          });
+        }
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get resultSet`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+    kvStore!.putBatch(entries, (err: BusinessError | null): void => {
+      if (err != null) {
+        console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+    console.info('Succeeded in putting Batch');
+    const query: distributedKVStore.Query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    kvStore!.getResultSet(query, (err: BusinessError | null, result: distributedKVStore.KVStoreResultSet | undefined): void => {
+      if (err != null) {
+        console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('Succeeded in getting resultSet');
+      if (result != undefined) {
+        resultSet = result;
+        kvStore!.closeResultSet(resultSet, (err: BusinessError | null): void => {
+          if (err != null) {
+            console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
+            return;
+          }
+          console.info('Succeeded in closing resultSet');
+        });
+      }
+    });
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+}
+```
+
+## getResultSet
+
+```TypeScript
+getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
+```
+
+从SingleKVStore数据库中获取具有指定前缀的结果集，使用Promise异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](#closeresultset) 关闭结果集释放资源。
+
+**起始版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-getResultSet(keyPrefix: string): Promise<KVStoreResultSet>--><!--Device-SingleKVStore-getResultSet(keyPrefix: string): Promise<KVStoreResultSet>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| keyPrefix | string | 是 | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Promise对象。返回具有指定前缀的结果集。 [ |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
+
+**示例**
+
+参见 [getResultSet](#getresultset)
+
+## getResultSet
+
+```TypeScript
+getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
+```
+
+获取与指定Query对象匹配的KVStoreResultSet对象，使用callback异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](#closeresultset) 关闭结果集释放资源。
+
+**起始版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void--><!--Device-SingleKVStore-getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| query | Query | 是 | 表示查询对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | 回调函数，获取与指定Query对象匹配的KVStoreResultSet对象。 [ |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
+
+**示例**
+
+参见 [getResultSet](#getresultset)
+
+## getResultSet
+
+```TypeScript
+getResultSet(query: Query): Promise<KVStoreResultSet>
+```
+
+获取与指定Query对象匹配的KVStoreResultSet对象，使用Promise异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](#closeresultset) 关闭结果集释放资源。
+
+**起始版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-getResultSet(query: Query): Promise<KVStoreResultSet>--><!--Device-SingleKVStore-getResultSet(query: Query): Promise<KVStoreResultSet>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| query | Query | 是 | 表示查询对象。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Promise对象。获取与指定Query对象匹配的KVStoreResultSet对象。 [ |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
+
+**示例**
+
+参见 [getResultSet](#getresultset)
 
 ## getResultSize
 
@@ -2479,42 +4133,153 @@ try {
 }
 ```
 
-## getResultSize
+ArkTS-Dyn示例：
 
 ```TypeScript
-getResultSize(query: Query): Promise<int>
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting batch');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+  });
+  const query = new distributedKVStore.Query();
+  query.prefixKey('batch_test');
+  kvStore.getResultSize(query).then((resultSize: number) => {
+    console.info('Succeeded in getting result set size');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get result size. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
 ```
 
-获取与指定Query对象匹配的结果数，使用Promise异步回调。
+ArkTS-Sta示例：
 
-**起始版本：** -1
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore!.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting batch');
+  }).catch((err) => {
+    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+  });
+  const query = new distributedKVStore.Query();
+  query.prefixKey('batch_test');
+  kvStore!.getResultSize(query).then((resultSize: int) => {
+    console.info('Succeeded in getting result set size');
+  }).catch((err) => {
+    console.error(`Failed to get result size. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
-<!--Device-SingleKVStore-getResultSize(query: Query): Promise<int>--><!--Device-SingleKVStore-getResultSize(query: Query): Promise<int>-End-->
+ArkTS-Dyn示例：
 
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 
-**参数：**
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore.putBatch(entries, (err: BusinessError) => {
+    console.info('Succeeded in putting batch');
+    const query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    if (kvStore != null) {
+      kvStore.getResultSize(query, (err: BusinessError, resultSize: number) => {
+        if (err) {
+          console.error(`Failed to get result size. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting result set size');
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| query | Query | 是 | 表示查询对象。 |
+ArkTS-Sta示例：
 
-**返回值：**
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | Promise对象。获取与指定Query对象匹配的结果数。 [ |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
-| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. [ |
-
-**示例**
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore!.putBatch(entries, (err: BusinessError|null) :void=> {
+    console.info('Succeeded in putting batch');
+    const query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    if (kvStore != null) {
+      kvStore!.getResultSize(query, (err: BusinessError|null, resultSize: number|undefined): void=> {
+        if (err != null) {
+          console.error(`Failed to get result size. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting result set size');
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ArkTS-Dyn示例：
 
@@ -2588,6 +4353,199 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore.putBatch(entries, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting batch');
+    const query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    if (kvStore != null) {
+      kvStore.getResultSize('localDeviceId', query, (err: BusinessError, resultSize: number) => {
+        if (err) {
+          console.error(`Failed to get resultSize. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting resultSize');
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get resultSize. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting Batch');
+    const query: distributedKVStore.Query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    kvStore!.getResultSize('localDeviceId', query, (err: BusinessError | null, resultSize: int | undefined): void => {
+      if (err != null) {
+        console.error(`Failed to get result size. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('Succeeded in getting result size');
+    });
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting batch');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+  });
+  let query = new distributedKVStore.Query();
+  query.prefixKey('batch_test');
+  kvStore.getResultSize('localDeviceId', query).then((resultSize: number) => {
+    console.info('Succeeded in getting resultSize');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get resultSize. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get resultSize. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore!.putBatch(entries, (err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting Batch');
+    const query: distributedKVStore.Query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    kvStore!.getResultSize('localDeviceId', query).then((resultSize: int): void => {
+      console.info('Succeeded in getting result size');
+    }).catch((err): void => {
+      console.error(`Failed to get result size. Code: ${err.code}, message: ${err.message}`);
+    });
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+}
+```
+
+## getResultSize
+
+```TypeScript
+getResultSize(query: Query): Promise<int>
+```
+
+获取与指定Query对象匹配的结果数，使用Promise异步回调。
+
+**起始版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-getResultSize(query: Query): Promise<int>--><!--Device-SingleKVStore-getResultSize(query: Query): Promise<int>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| query | Query | 是 | 表示查询对象。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;int&gt; | Promise对象。获取与指定Query对象匹配的结果数。 [ |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. [ |
+| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. [ |
+
+**示例**
+
+参见 [getResultSize](#getresultsize)
+
 ## getSecurityLevel
 
 ```TypeScript
@@ -2655,36 +4613,6 @@ try {
 }
 ```
 
-## getSecurityLevel
-
-```TypeScript
-getSecurityLevel(): Promise<SecurityLevel>
-```
-
-获取数据库的安全级别，使用Promise异步回调。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SingleKVStore-getSecurityLevel(): Promise<SecurityLevel>--><!--Device-SingleKVStore-getSecurityLevel(): Promise<SecurityLevel>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;SecurityLevel&gt; | Promise对象。返回数据库的安全级别。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -2718,27 +4646,27 @@ try {
 }
 ```
 
-## offDataChange
+## getSecurityLevel
 
 ```TypeScript
-offDataChange(listener?: Callback<ChangeNotification>): void
+getSecurityLevel(): Promise<SecurityLevel>
 ```
 
-取消订阅数据变更通知。必须先调用onDataChange订阅后，才能调用offDataChange取消订阅。
+获取数据库的安全级别，使用Promise异步回调。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-SingleKVStore-offDataChange(listener?: Callback<ChangeNotification>): void--><!--Device-SingleKVStore-offDataChange(listener?: Callback<ChangeNotification>): void-End-->
+<!--Device-SingleKVStore-getSecurityLevel(): Promise<SecurityLevel>--><!--Device-SingleKVStore-getSecurityLevel(): Promise<SecurityLevel>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
-**参数：**
+**返回值：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | 否 |  |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;SecurityLevel&gt; | Promise对象。返回数据库的安全级别。 |
 
 **错误码：**
 
@@ -2748,57 +4676,7 @@ offDataChange(listener?: Callback<ChangeNotification>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  const dataChangeCallback = (data: distributedKVStore.ChangeNotification): void => {
-    console.info(`dataChange callback call data: ${data}`);
-  }
-  kvStore.onDataChange(distributedKVStore.SubscribeType.SUBSCRIBE_TYPE_LOCAL, dataChangeCallback);
-  kvStore.offDataChange(dataChangeCallback);
-} catch (error) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## offSyncComplete
-
-```TypeScript
-offSyncComplete(syncCallback?: Callback<Array<[string, int]>>): void
-```
-
-取消订阅端端同步完成事件回调通知。必须先调用onSyncComplete订阅后，才能调用offSyncComplete取消订阅。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SingleKVStore-offSyncComplete(syncCallback?: Callback<Array<[string, int]>>): void--><!--Device-SingleKVStore-offSyncComplete(syncCallback?: Callback<Array<[string, int]>>): void-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, int]&gt;&gt; | 否 |  |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  const syncCompleteCallback = (data: [string, int][]): void => {
-    console.info(`syncComplete ${data}`);
-  }
-  kvStore.onSyncComplete(syncCompleteCallback);
-  kvStore.offSyncComplete(syncCompleteCallback);
-} catch (error) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [getSecurityLevel](#getsecuritylevel)
 
 ## off_dataChange
 
@@ -2923,19 +4801,19 @@ class KvstoreModel {
 }
 ```
 
-## onDataChange
+## offDataChange
 
 ```TypeScript
-onDataChange(type: SubscribeType, listener: Callback<ChangeNotification>): void
+offDataChange(listener?: Callback<ChangeNotification>): void
 ```
 
-订阅指定类型的数据变更通知。调用onDataChange订阅后，在不需要监听时必须调用offDataChange取消订阅。
+取消订阅数据变更通知。必须先调用onDataChange订阅后，才能调用offDataChange取消订阅。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-SingleKVStore-onDataChange(type: SubscribeType, listener: Callback<ChangeNotification>): void--><!--Device-SingleKVStore-onDataChange(type: SubscribeType, listener: Callback<ChangeNotification>): void-End-->
+<!--Device-SingleKVStore-offDataChange(listener?: Callback<ChangeNotification>): void--><!--Device-SingleKVStore-offDataChange(listener?: Callback<ChangeNotification>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -2943,14 +4821,12 @@ onDataChange(type: SubscribeType, listener: Callback<ChangeNotification>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | SubscribeType | 是 | 表示订阅的类型。. |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | 是 | 回调函数。成功返回数据变更时通知的对象。 |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | 否 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 **示例**
@@ -2959,27 +4835,29 @@ onDataChange(type: SubscribeType, listener: Callback<ChangeNotification>): void
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  kvStore.onDataChange(distributedKVStore.SubscribeType.SUBSCRIBE_TYPE_LOCAL, (data: distributedKVStore.ChangeNotification): void => {
+  const dataChangeCallback = (data: distributedKVStore.ChangeNotification): void => {
     console.info(`dataChange callback call data: ${data}`);
-  });
+  }
+  kvStore.onDataChange(distributedKVStore.SubscribeType.SUBSCRIBE_TYPE_LOCAL, dataChangeCallback);
+  kvStore.offDataChange(dataChangeCallback);
 } catch (error) {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
-## onSyncComplete
+## offSyncComplete
 
 ```TypeScript
-onSyncComplete(syncCallback: Callback<Array<[string, int]>>): void
+offSyncComplete(syncCallback?: Callback<Array<[string, int]>>): void
 ```
 
-订阅端端同步完成事件回调通知。调用onSyncComplete订阅后，在不需要监听时必须调用offSyncComplete取消订阅。
+取消订阅端端同步完成事件回调通知。必须先调用onSyncComplete订阅后，才能调用offSyncComplete取消订阅。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-SingleKVStore-onSyncComplete(syncCallback: Callback<Array<[string, int]>>): void--><!--Device-SingleKVStore-onSyncComplete(syncCallback: Callback<Array<[string, int]>>): void-End-->
+<!--Device-SingleKVStore-offSyncComplete(syncCallback?: Callback<Array<[string, int]>>): void--><!--Device-SingleKVStore-offSyncComplete(syncCallback?: Callback<Array<[string, int]>>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -2987,14 +4865,22 @@ onSyncComplete(syncCallback: Callback<Array<[string, int]>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, int]&gt;&gt; | 是 | 回调函数。用于向调用方发送同步结果的回调。 |
+| syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, int]&gt;&gt; | 否 |  |
 
 **示例**
 
 ```TypeScript
-kvStore.onSyncComplete((data: [string, int][]): void => {
-  console.info(`syncComplete ${data}`);
-});
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const syncCompleteCallback = (data: [string, int][]): void => {
+    console.info(`syncComplete ${data}`);
+  }
+  kvStore.onSyncComplete(syncCompleteCallback);
+  kvStore.offSyncComplete(syncCompleteCallback);
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
 ```
 
 ## on_dataChange
@@ -3092,6 +4978,80 @@ try {
 }
 ```
 
+## onDataChange
+
+```TypeScript
+onDataChange(type: SubscribeType, listener: Callback<ChangeNotification>): void
+```
+
+订阅指定类型的数据变更通知。调用onDataChange订阅后，在不需要监听时必须调用offDataChange取消订阅。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-onDataChange(type: SubscribeType, listener: Callback<ChangeNotification>): void--><!--Device-SingleKVStore-onDataChange(type: SubscribeType, listener: Callback<ChangeNotification>): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | SubscribeType | 是 | 表示订阅的类型。. |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | 是 | 回调函数。成功返回数据变更时通知的对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  kvStore.onDataChange(distributedKVStore.SubscribeType.SUBSCRIBE_TYPE_LOCAL, (data: distributedKVStore.ChangeNotification): void => {
+    console.info(`dataChange callback call data: ${data}`);
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+## onSyncComplete
+
+```TypeScript
+onSyncComplete(syncCallback: Callback<Array<[string, int]>>): void
+```
+
+订阅端端同步完成事件回调通知。调用onSyncComplete订阅后，在不需要监听时必须调用offSyncComplete取消订阅。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-onSyncComplete(syncCallback: Callback<Array<[string, int]>>): void--><!--Device-SingleKVStore-onSyncComplete(syncCallback: Callback<Array<[string, int]>>): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, int]&gt;&gt; | 是 | 回调函数。用于向调用方发送同步结果的回调。 |
+
+**示例**
+
+```TypeScript
+kvStore.onSyncComplete((data: [string, int][]): void => {
+  console.info(`syncComplete ${data}`);
+});
+```
+
 ## put
 
 ```TypeScript
@@ -3124,6 +5084,88 @@ put(key: string, value: Uint8Array | string | long | double | boolean, callback:
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting');
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+  kvStore!.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, (err?: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting');
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(() => {
+    console.info(`Succeeded in putting data`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+  kvStore!.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(() => {
+    console.info(`Succeeded in putting data`);
+  }).catch((err) => {
+    console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## put
 
@@ -3162,6 +5204,10 @@ put(key: string, value: Uint8Array | string | long | double | boolean): Promise<
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
+
+**示例**
+
+参见 [put](#put)
 
 ## putBatch
 
@@ -3284,45 +5330,6 @@ try {
 }
 ```
 
-## putBatch
-
-```TypeScript
-putBatch(entries: Entry[]): Promise<void>
-```
-
-批量插入键值对到SingleKVStore数据库中，使用Promise异步回调。若Key已存在则更新对应Value；若已订阅数据变更通知，将触发变更通知回调。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SingleKVStore-putBatch(entries: Entry[]): Promise<void>--><!--Device-SingleKVStore-putBatch(entries: Entry[]): Promise<void>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| entries | Entry[] | 是 | 表示要批量插入的键值对。一个entries对象中允许的最大数据量为512MB。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -3398,6 +5405,47 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
 }
 ```
+
+## putBatch
+
+```TypeScript
+putBatch(entries: Entry[]): Promise<void>
+```
+
+批量插入键值对到SingleKVStore数据库中，使用Promise异步回调。若Key已存在则更新对应Value；若已订阅数据变更通知，将触发变更通知回调。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-putBatch(entries: Entry[]): Promise<void>--><!--Device-SingleKVStore-putBatch(entries: Entry[]): Promise<void>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| entries | Entry[] | 是 | 表示要批量插入的键值对。一个entries对象中允许的最大数据量为512MB。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
+
+**示例**
+
+参见 [putBatch](#putbatch)
 
 ## rekey
 
@@ -3546,52 +5594,6 @@ try {
 }
 ```
 
-## removeDeviceData
-
-```TypeScript
-removeDeviceData(deviceId: string): Promise<void>
-```
-
-删除指定设备的数据，使用Promise异步回调。删除成功后，指定设备的所有数据将从本地数据库中永久移除，无法再通过get等方法查询该设备的数据。
-
-> **说明：**
-> 
-> 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的
-> networkId，通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](#sync)。
-
-**起始版本：** -1
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SingleKVStore-removeDeviceData(deviceId: string): Promise<void>--><!--Device-SingleKVStore-removeDeviceData(deviceId: string): Promise<void>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| deviceId | string | 是 | 设备的networkId，标识要删除其数据的设备，不能为空。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 [ |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. [ |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -3651,6 +5653,54 @@ try {
     console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`)
 }
 ```
+
+## removeDeviceData
+
+```TypeScript
+removeDeviceData(deviceId: string): Promise<void>
+```
+
+删除指定设备的数据，使用Promise异步回调。删除成功后，指定设备的所有数据将从本地数据库中永久移除，无法再通过get等方法查询该设备的数据。
+
+> **说明：**
+> 
+> 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的
+> networkId，通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
+> 
+> deviceId具体获取方式请参考
+> [sync接口示例](#sync)。
+
+**起始版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-removeDeviceData(deviceId: string): Promise<void>--><!--Device-SingleKVStore-removeDeviceData(deviceId: string): Promise<void>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| deviceId | string | 是 | 设备的networkId，标识要删除其数据的设备，不能为空。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 [ |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. [ |
+
+**示例**
+
+参见 [removeDeviceData](#removedevicedata)
 
 ## restore
 
@@ -3729,42 +5779,6 @@ try {
 }
 ```
 
-## restore
-
-```TypeScript
-restore(file: string): Promise<void>
-```
-
-从数据库默认路径（context.databaseDir）下指定名称的备份文件恢复数据库，使用Promise异步回调。恢复成功后，当前数据库中的数据将被替换为备份文件中的数据，原有的未备份数据将丢失。如需从自定义路径恢复，请使 用[restoreEx](#restoreex)接口。
-
-**起始版本：** -1
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SingleKVStore-restore(file: string): Promise<void>--><!--Device-SingleKVStore-restore(file: string): Promise<void>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| file | string | 是 | 指定的数据库文件名称，不能为空，无长度限制，不能包含特殊字符'/'。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 [ |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. [ |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -3806,6 +5820,44 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+## restore
+
+```TypeScript
+restore(file: string): Promise<void>
+```
+
+从数据库默认路径（context.databaseDir）下指定名称的备份文件恢复数据库，使用Promise异步回调。恢复成功后，当前数据库中的数据将被替换为备份文件中的数据，原有的未备份数据将丢失。如需从自定义路径恢复，请使 用[restoreEx](#restoreex)接口。
+
+**起始版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-restore(file: string): Promise<void>--><!--Device-SingleKVStore-restore(file: string): Promise<void>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| file | string | 是 | 指定的数据库文件名称，不能为空，无长度限制，不能包含特殊字符'/'。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 [ |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. [ |
+
+**示例**
+
+参见 [restore](#restore)
 
 ## restoreEx
 
@@ -3959,36 +6011,6 @@ try {
 }
 ```
 
-## rollback
-
-```TypeScript
-rollback(): Promise<void>
-```
-
-在SingleKVStore数据库中回滚事务，使用Promise异步回调。需先调用 [startTransaction](#starttransaction)启动事务后再调 用本接口回滚事务。回滚成功后，事务期间的所有数据变更将被丢弃，不会写入数据库。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SingleKVStore-rollback(): Promise<void>--><!--Device-SingleKVStore-rollback(): Promise<void>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -4028,6 +6050,38 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+## rollback
+
+```TypeScript
+rollback(): Promise<void>
+```
+
+在SingleKVStore数据库中回滚事务，使用Promise异步回调。需先调用 [startTransaction](#starttransaction)启动事务后再调 用本接口回滚事务。回滚成功后，事务期间的所有数据变更将被丢弃，不会写入数据库。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-rollback(): Promise<void>--><!--Device-SingleKVStore-rollback(): Promise<void>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+
+**示例**
+
+参见 [rollback](#rollback)
 
 ## setSyncParam
 
@@ -4105,6 +6159,41 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const defaultAllowedDelayMs = 500;
+  kvStore.setSyncParam(defaultAllowedDelayMs).then(() => {
+    console.info('Succeeded in setting syncParam');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set syncParam. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const defaultAllowedDelayMs: int = 500;
+  kvStore!.setSyncParam(defaultAllowedDelayMs).then((): void => {
+    console.info('Succeeded in setting syncParam');
+  }).catch((err): void => {
+    console.error(`Failed to set syncParam. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## setSyncParam
 
 ```TypeScript
@@ -4147,40 +6236,7 @@ setSyncParam(defaultAllowedDelayMs: int): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  const defaultAllowedDelayMs = 500;
-  kvStore.setSyncParam(defaultAllowedDelayMs).then(() => {
-    console.info('Succeeded in setting syncParam');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set syncParam. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  const defaultAllowedDelayMs: int = 500;
-  kvStore!.setSyncParam(defaultAllowedDelayMs).then((): void => {
-    console.info('Succeeded in setting syncParam');
-  }).catch((err): void => {
-    console.error(`Failed to set syncParam. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [setSyncParam](#setsyncparam)
 
 ## setSyncRange
 
@@ -4255,6 +6311,43 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const localLabels = ['A', 'B'];
+  const remoteSupportLabels = ['C', 'D'];
+  kvStore.setSyncRange(localLabels, remoteSupportLabels).then(() => {
+    console.info('Succeeded in setting syncRange');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set syncRange. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const localLabels = ['A', 'B'];
+  const remoteSupportLabels = ['C', 'D'];
+  kvStore!.setSyncRange(localLabels, remoteSupportLabels).then((): void => {
+    console.info('Succeeded in setting syncRange');
+  }).catch((err): void => {
+    console.error(`Failed to set syncRange. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## setSyncRange
 
 ```TypeScript
@@ -4292,42 +6385,7 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  const localLabels = ['A', 'B'];
-  const remoteSupportLabels = ['C', 'D'];
-  kvStore.setSyncRange(localLabels, remoteSupportLabels).then(() => {
-    console.info('Succeeded in setting syncRange');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set syncRange. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  const localLabels = ['A', 'B'];
-  const remoteSupportLabels = ['C', 'D'];
-  kvStore!.setSyncRange(localLabels, remoteSupportLabels).then((): void => {
-    console.info('Succeeded in setting syncRange');
-  }).catch((err): void => {
-    console.error(`Failed to set syncRange. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [setSyncRange](#setsyncrange)
 
 ## startTransaction
 
@@ -4428,37 +6486,6 @@ try {
 }
 ```
 
-## startTransaction
-
-```TypeScript
-startTransaction(): Promise<void>
-```
-
-启动SingleKVStore数据库中的事务，使用Promise异步回调。启动事务后，后续的数据库操作将纳入此事务范围，直到调用 [commit](#commit)提交或 [rollback](#rollback)回滚才会结束事务。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SingleKVStore-startTransaction(): Promise<void>--><!--Device-SingleKVStore-startTransaction(): Promise<void>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -4496,6 +6523,39 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+## startTransaction
+
+```TypeScript
+startTransaction(): Promise<void>
+```
+
+启动SingleKVStore数据库中的事务，使用Promise异步回调。启动事务后，后续的数据库操作将纳入此事务范围，直到调用 [commit](#commit)提交或 [rollback](#rollback)回滚才会结束事务。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-startTransaction(): Promise<void>--><!--Device-SingleKVStore-startTransaction(): Promise<void>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
+
+**示例**
+
+参见 [startTransaction](#starttransaction)
 
 ## sync
 
@@ -4638,50 +6698,6 @@ class EntryAbility extends UIAbility {
 }
 ```
 
-## sync
-
-```TypeScript
-sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: int): void
-```
-
-在手动同步方式下，触发数据库端端同步，支持按查询条件过滤同步数据。同步结果可通过订阅 [on('syncComplete')](#on_datachange) 事件获取。关于键值型数据库的端端同步方式说明，请见[键值型数据库跨设备数据同步](../../../database/data-sync-of-kv-store.md)。
-
-> **说明：**
-> 
-> 其中deviceIds为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的
-> networkId, 通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
-> 方法得到。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SingleKVStore-sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: int): void--><!--Device-SingleKVStore-sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: int): void-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| deviceIds | string[] | 是 | 同一组网环境下，需要同步的设备的networkId列表。 |
-| query | Query | 是 | 表示数据库的查询谓词条件。 |
-| mode | SyncMode | 是 | 同步模式。 |
-| delayMs | int | 否 | 可选参数，允许延时时间，单位：ms（毫秒），默认为0。设置delayMs后，调用sync接口时延时时间为delayMs。未设置时以 [setSyncParam](#setsyncparam) 设置的时长为准。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
-| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -4783,4 +6799,50 @@ class EntryAbility extends UIAbility {
   }
 }
 ```
+
+## sync
+
+```TypeScript
+sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: int): void
+```
+
+在手动同步方式下，触发数据库端端同步，支持按查询条件过滤同步数据。同步结果可通过订阅 [on('syncComplete')](#on_datachange) 事件获取。关于键值型数据库的端端同步方式说明，请见[键值型数据库跨设备数据同步](../../../database/data-sync-of-kv-store.md)。
+
+> **说明：**
+> 
+> 其中deviceIds为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的
+> networkId, 通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: int): void--><!--Device-SingleKVStore-sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: int): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| deviceIds | string[] | 是 | 同一组网环境下，需要同步的设备的networkId列表。 |
+| query | Query | 是 | 表示数据库的查询谓词条件。 |
+| mode | SyncMode | 是 | 同步模式。 |
+| delayMs | int | 否 | 可选参数，允许延时时间，单位：ms（毫秒），默认为0。设置delayMs后，调用sync接口时延时时间为delayMs。未设置时以 [setSyncParam](#setsyncparam) 设置的时长为准。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
+| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. |
+
+**示例**
+
+参见 [sync](#sync)
 

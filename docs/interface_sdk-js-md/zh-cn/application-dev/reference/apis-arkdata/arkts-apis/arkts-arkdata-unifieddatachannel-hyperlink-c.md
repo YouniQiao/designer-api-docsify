@@ -36,3 +36,11 @@ description?: string
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+**示例**
+
+```TypeScript
+let link = new unifiedDataChannel.Hyperlink();
+link.url = 'www.XXX.com';
+link.description = 'This is description';
+```
+

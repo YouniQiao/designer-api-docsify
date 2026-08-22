@@ -37,7 +37,7 @@ Decompresses a file. This API uses an asynchronous callback to return the result
 | inFile | string | Yes | Path of the file to decompress. The file name extension must be .zip. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see FA Model and Stage Model. If the.zip file to be unzipped contains Chinese file names or folder names, use UTF-8 to encode them. Otherwise, garbled characters may be displayed after unzipping. |
 | outFile | string | Yes | Path of the decompressed file. The path must exist in the system. Otherwise, the decompression fails. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see FA Model and Stage Model. If a file or folder with the same name already exists in the path, they will be overwritten. When multiple threads decompress files at the same time, the values of **outFile** must be different. |
 | options | Options | Yes | Decompression parameters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **null** is returned; otherwise, a specific error code is returned. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **null** is returned; otherwise, a specific error code is returned. |
 
 **Error codes:**
 
@@ -76,6 +76,51 @@ try {
 }
 ```
 
+```TypeScript
+// The path used in the code must be an application sandbox path, for example, /data/storage/el2/base/temp. You can obtain the path through the context.
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+let inFile = '/data/storage/el2/base/temp/xxx.zip';
+let outFileDir = '/data/storage/el2/base/temp';
+let options: zlib.Options = {
+  level: zlib.CompressLevel.COMPRESS_LEVEL_DEFAULT_COMPRESSION
+};
+
+try {
+  zlib.decompressFile(inFile, outFileDir, options).then((data: void) => {
+    console.info('decompressFile success. data: ' + JSON.stringify(data));
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+} catch (errData) {
+  let code = (errData as BusinessError).code;
+  let message = (errData as BusinessError).message;
+  console.error(`errData is errCode:${code}  message:${message}`);
+}
+```
+
+```TypeScript
+// The path used in the code must be an application sandbox path, for example, /data/storage/el2/base/temp. You can obtain the path through the context.
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+let inFile = '/data/storage/el2/base/temp/xxx.zip';
+let outFileDir = '/data/storage/el2/base/temp';
+
+try {
+  zlib.decompressFile(inFile, outFileDir, (errData: BusinessError) => {
+    if (errData !== null) {
+      console.error(`decompressFile failed. code is ${errData.code}, message is ${errData.message}`);
+    } else {
+      console.info(`decompressFile success.`);
+    }
+  })
+} catch (errData) {
+  let code = (errData as BusinessError).code;
+  let message = (errData as BusinessError).message;
+  console.error(`decompressFile failed. code is ${code}, message is ${message}`);
+}
+```
+
 
 ## decompressFile
 
@@ -107,7 +152,7 @@ Decompresses a file. This API uses an asynchronous callback to return the result
 | --- | --- | --- | --- |
 | inFile | string | Yes | Path of the file to decompress. The file name extension must be .zip. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see FA Model and Stage Model. If the.zip file to be unzipped contains Chinese file names or folder names, use UTF-8 to encode them. Otherwise, garbled characters may be displayed after unzipping. |
 | outFile | string | Yes | Path of the decompressed file. The path must exist in the system. Otherwise, the decompression fails. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see FA Model and Stage Model. If a file or folder with the same name already exists in the path, they will be overwritten. When multiple threads decompress files at the same time, the values of **outFile** must be different. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **null** is returned; otherwise, a specific error code is returned. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **null** is returned; otherwise, a specific error code is returned. |
 
 **Error codes:**
 
@@ -120,27 +165,7 @@ Decompresses a file. This API uses an asynchronous callback to return the result
 
 **Examples**
 
-```TypeScript
-// The path used in the code must be an application sandbox path, for example, /data/storage/el2/base/temp. You can obtain the path through the context.
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-let inFile = '/data/storage/el2/base/temp/xxx.zip';
-let outFileDir = '/data/storage/el2/base/temp';
-
-try {
-  zlib.decompressFile(inFile, outFileDir, (errData: BusinessError) => {
-    if (errData !== null) {
-      console.error(`decompressFile failed. code is ${errData.code}, message is ${errData.message}`);
-    } else {
-      console.info(`decompressFile success.`);
-    }
-  })
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`decompressFile failed. code is ${code}, message is ${message}`);
-}
-```
+See [decompressFile](#decompressfile)
 
 
 ## decompressFile
@@ -192,26 +217,5 @@ Decompresses a file. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-// The path used in the code must be an application sandbox path, for example, /data/storage/el2/base/temp. You can obtain the path through the context.
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-let inFile = '/data/storage/el2/base/temp/xxx.zip';
-let outFileDir = '/data/storage/el2/base/temp';
-let options: zlib.Options = {
-  level: zlib.CompressLevel.COMPRESS_LEVEL_DEFAULT_COMPRESSION
-};
-
-try {
-  zlib.decompressFile(inFile, outFileDir, options).then((data: void) => {
-    console.info('decompressFile success. data: ' + JSON.stringify(data));
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`errData is errCode:${code}  message:${message}`);
-}
-```
+See [decompressFile](#decompressfile)
 

@@ -23,7 +23,7 @@ context: UIAbilityContext | UIContext
 
 The context of the navigation operation.
 
-**Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkuiuicontext-uicontext-c.md)
+**Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-uicontext-uicontext-c.md)
 
 **Since:** 23
 

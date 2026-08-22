@@ -28,7 +28,7 @@ function getOutgoingCallPolicyNumbers(admin: Want, policy: adminManager.Policy):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | policy | adminManager.Policy | 是 | 允许或禁用名单策略。 BLOCK_LIST为禁用名单，TRUST_LIST为允许名单。 |
 
 **返回值：**
@@ -69,6 +69,22 @@ try {
 }
 ```
 
+```TypeScript
+import { telephonyManager } from '@kit.MDMKit';
+import { adminManager } from '@kit.MDMKit';
+
+try {
+  // 设置策略类型为禁用名单
+  // 参数需根据实际情况进行替换
+  let policy: adminManager.Policy = adminManager.Policy.BLOCK_LIST;
+  // 获取通话呼出禁用名单
+  let numbers: Array<string> = telephonyManager.getOutgoingCallPolicyNumbers(null, policy);
+  console.info(`Succeeded in getting outgoing call policy. result: ${JSON.stringify(numbers)}`);
+} catch (err) {
+  console.error(`Failed to get outgoing call policy. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## getOutgoingCallPolicyNumbers
 
@@ -92,7 +108,7 @@ function getOutgoingCallPolicyNumbers(admin: Want | null, policy: adminManager.P
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
 | policy | adminManager.Policy | 是 | 允许或禁用名单策略。 BLOCK_LIST为禁用名单，TRUST_LIST为允许名单。 |
 
 **返回值：**
@@ -112,19 +128,5 @@ function getOutgoingCallPolicyNumbers(admin: Want | null, policy: adminManager.P
 
 **示例**
 
-```TypeScript
-import { telephonyManager } from '@kit.MDMKit';
-import { adminManager } from '@kit.MDMKit';
-
-try {
-  // 设置策略类型为禁用名单
-  // 参数需根据实际情况进行替换
-  let policy: adminManager.Policy = adminManager.Policy.BLOCK_LIST;
-  // 获取通话呼出禁用名单
-  let numbers: Array<string> = telephonyManager.getOutgoingCallPolicyNumbers(null, policy);
-  console.info(`Succeeded in getting outgoing call policy. result: ${JSON.stringify(numbers)}`);
-} catch (err) {
-  console.error(`Failed to get outgoing call policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [getOutgoingCallPolicyNumbers](#getoutgoingcallpolicynumbers)
 

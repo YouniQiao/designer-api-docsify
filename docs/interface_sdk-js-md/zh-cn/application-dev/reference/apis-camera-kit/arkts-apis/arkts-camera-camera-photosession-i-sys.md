@@ -86,85 +86,6 @@ Gets session functions.
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
-## offEffectSuggestionChange
-
-```TypeScript
-offEffectSuggestionChange(callback?: AsyncCallback<EffectSuggestionType>): void
-```
-
-Unsubscribes from effect suggestion event callback.
-
-**起始版本：** 23
-
-<!--Device-PhotoSession-offEffectSuggestionChange(callback?: AsyncCallback<EffectSuggestionType>): void--><!--Device-PhotoSession-offEffectSuggestionChange(callback?: AsyncCallback<EffectSuggestionType>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | 否 | Callback used to return the result. |
-
-## offFeatureDetection
-
-```TypeScript
-offFeatureDetection(featureType: SceneFeatureType, callback?: AsyncCallback<SceneFeatureDetectionResult>): void
-```
-
-Unsubscribes from feature detection result.
-
-**起始版本：** 23
-
-<!--Device-PhotoSession-offFeatureDetection(featureType: SceneFeatureType, callback?: AsyncCallback<SceneFeatureDetectionResult>): void--><!--Device-PhotoSession-offFeatureDetection(featureType: SceneFeatureType, callback?: AsyncCallback<SceneFeatureDetectionResult>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| featureType | [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md) | 是 | Feature type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md)&gt; | 否 | Callback used to get the detection result. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-
-## offLcdFlashStatus
-
-```TypeScript
-offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void
-```
-
-Unsubscribes from lcd flash status.
-
-**起始版本：** 23
-
-<!--Device-PhotoSession-offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void--><!--Device-PhotoSession-offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | 否 | Callback used to get the lcd flash status. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-
 ## off('effectSuggestionChange')
 
 ```TypeScript
@@ -294,17 +215,17 @@ off(type: 'macroStatusChanged', callback?: AsyncCallback<boolean>): void
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11 - 19 |
 
-## onEffectSuggestionChange
+## offEffectSuggestionChange
 
 ```TypeScript
-onEffectSuggestionChange(callback: AsyncCallback<EffectSuggestionType>): void
+offEffectSuggestionChange(callback?: AsyncCallback<EffectSuggestionType>): void
 ```
 
-Subscribes to effect suggestion event callback.
+Unsubscribes from effect suggestion event callback.
 
 **起始版本：** 23
 
-<!--Device-PhotoSession-onEffectSuggestionChange(callback: AsyncCallback<EffectSuggestionType>): void--><!--Device-PhotoSession-onEffectSuggestionChange(callback: AsyncCallback<EffectSuggestionType>): void-End-->
+<!--Device-PhotoSession-offEffectSuggestionChange(callback?: AsyncCallback<EffectSuggestionType>): void--><!--Device-PhotoSession-offEffectSuggestionChange(callback?: AsyncCallback<EffectSuggestionType>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -314,19 +235,19 @@ Subscribes to effect suggestion event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | 否 | Callback used to return the result. |
 
-## onFeatureDetection
+## offFeatureDetection
 
 ```TypeScript
-onFeatureDetection(featureType: SceneFeatureType, callback: AsyncCallback<SceneFeatureDetectionResult>): void
+offFeatureDetection(featureType: SceneFeatureType, callback?: AsyncCallback<SceneFeatureDetectionResult>): void
 ```
 
-Subscribes to feature detection results.
+Unsubscribes from feature detection result.
 
 **起始版本：** 23
 
-<!--Device-PhotoSession-onFeatureDetection(featureType: SceneFeatureType, callback: AsyncCallback<SceneFeatureDetectionResult>): void--><!--Device-PhotoSession-onFeatureDetection(featureType: SceneFeatureType, callback: AsyncCallback<SceneFeatureDetectionResult>): void-End-->
+<!--Device-PhotoSession-offFeatureDetection(featureType: SceneFeatureType, callback?: AsyncCallback<SceneFeatureDetectionResult>): void--><!--Device-PhotoSession-offFeatureDetection(featureType: SceneFeatureType, callback?: AsyncCallback<SceneFeatureDetectionResult>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -337,7 +258,7 @@ Subscribes to feature detection results.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | featureType | [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md) | 是 | Feature type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md)&gt; | 是 | Callback used to get the detection result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md)&gt; | 否 | Callback used to get the detection result. |
 
 **错误码：**
 
@@ -345,17 +266,17 @@ Subscribes to feature detection results.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-## onLcdFlashStatus
+## offLcdFlashStatus
 
 ```TypeScript
-onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void
+offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void
 ```
 
-Subscribes to lcd flash status.
+Unsubscribes from lcd flash status.
 
 **起始版本：** 23
 
-<!--Device-PhotoSession-onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void--><!--Device-PhotoSession-onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void-End-->
+<!--Device-PhotoSession-offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void--><!--Device-PhotoSession-offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -365,7 +286,7 @@ Subscribes to lcd flash status.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | 是 | Callback used to get the lcd flash status. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | 否 | Callback used to get the lcd flash status. |
 
 **错误码：**
 
@@ -523,4 +444,83 @@ on(type: 'macroStatusChanged', callback: AsyncCallback<boolean>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11 - 19 |
+
+## onEffectSuggestionChange
+
+```TypeScript
+onEffectSuggestionChange(callback: AsyncCallback<EffectSuggestionType>): void
+```
+
+Subscribes to effect suggestion event callback.
+
+**起始版本：** 23
+
+<!--Device-PhotoSession-onEffectSuggestionChange(callback: AsyncCallback<EffectSuggestionType>): void--><!--Device-PhotoSession-onEffectSuggestionChange(callback: AsyncCallback<EffectSuggestionType>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | 是 | Callback used to return the result. |
+
+## onFeatureDetection
+
+```TypeScript
+onFeatureDetection(featureType: SceneFeatureType, callback: AsyncCallback<SceneFeatureDetectionResult>): void
+```
+
+Subscribes to feature detection results.
+
+**起始版本：** 23
+
+<!--Device-PhotoSession-onFeatureDetection(featureType: SceneFeatureType, callback: AsyncCallback<SceneFeatureDetectionResult>): void--><!--Device-PhotoSession-onFeatureDetection(featureType: SceneFeatureType, callback: AsyncCallback<SceneFeatureDetectionResult>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| featureType | [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md) | 是 | Feature type. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md)&gt; | 是 | Callback used to get the detection result. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+
+## onLcdFlashStatus
+
+```TypeScript
+onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void
+```
+
+Subscribes to lcd flash status.
+
+**起始版本：** 23
+
+<!--Device-PhotoSession-onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void--><!--Device-PhotoSession-onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | 是 | Callback used to get the lcd flash status. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 

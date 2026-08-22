@@ -62,7 +62,7 @@ center?: PositionT<double>
 
 The central point where the ripple field generates force. The top-left corner of the component is the origin of coordinates. The coordinate unit is vp.
 
-**类型：** [PositionT](../../apis-default/arkts-apis/arkts-positiont-t.md)&lt;double&gt;
+**类型：** [PositionT](../arkts-apis/arkts-arkui-positiont-t.md)&lt;double&gt;
 
 **默认值：** {x:0,y:0}
 
@@ -98,28 +98,6 @@ The region influenced by the ripple field.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## waveSpeed
-
-```TypeScript
-waveSpeed?: double
-```
-
-Wave speed. The greater the wave speed, the faster the wave changes over time, and the more pronounced the wave motion. Range of values:[0, +∞)
-
-**类型：** double
-
-**默认值：** 0
-
-**起始版本：** 24
-
-**ArkTS模式：** ArkTS-Sta起始版本为24。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RippleFieldOptions-waveSpeed?: double--><!--Device-RippleFieldOptions-waveSpeed?: double-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 ## wavelength
 
 ```TypeScript
@@ -139,6 +117,28 @@ Wavelength, which is the distance over which a wave cycle changes. The larger th
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RippleFieldOptions-wavelength?: double--><!--Device-RippleFieldOptions-wavelength?: double-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## waveSpeed
+
+```TypeScript
+waveSpeed?: double
+```
+
+Wave speed. The greater the wave speed, the faster the wave changes over time, and the more pronounced the wave motion. Range of values:[0, +∞)
+
+**类型：** double
+
+**默认值：** 0
+
+**起始版本：** 24
+
+**ArkTS模式：** ArkTS-Sta起始版本为24。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RippleFieldOptions-waveSpeed?: double--><!--Device-RippleFieldOptions-waveSpeed?: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

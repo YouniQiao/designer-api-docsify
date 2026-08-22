@@ -39,7 +39,7 @@ Get connection strategy of this profile.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ConnectionStrategy](arkts-connectivity-baseprofile-connectionstrategy-e-sys.md)&gt; | Yes | the callback of getConnectionStrategy. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ConnectionStrategy](arkts-connectivity-baseprofile-connectionstrategy-e-sys.md)&gt; | Yes | the callback of getConnectionStrategy. |
 
 **Error codes:**
 
@@ -53,6 +53,36 @@ Get connection strategy of this profile.
 | 2900003 | Bluetooth disabled. |
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
+
+**Examples**
+
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+import { a2dp } from '@kit.ConnectivityKit';
+try {
+    let a2dpSrc = a2dp.createA2dpSrcProfile();
+    a2dpSrc.getConnectionStrategy('XX:XX:XX:XX:XX:XX', (err: BusinessError, data: baseProfile.ConnectionStrategy) => {
+        console.info('getConnectionStrategy, err: ' + JSON.stringify(err) + ', data: ' + JSON.stringify(data));
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+import { a2dp } from '@kit.ConnectivityKit';
+try {
+    let a2dpSrc = a2dp.createA2dpSrcProfile();
+    a2dpSrc.getConnectionStrategy('XX:XX:XX:XX:XX:XX').then((data: baseProfile.ConnectionStrategy) => {
+        console.info('getConnectionStrategy');
+    }, (err: BusinessError) => {
+        console.error('getConnectionStrategy errCode: ' + err.code + ', errMessage: ' + err.message);
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
 
 ## getConnectionStrategy
 
@@ -98,6 +128,10 @@ Get connection strategy of this profile.
 | 2900003 | Bluetooth disabled. |
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
+
+**Examples**
+
+See [getConnectionStrategy](#getconnectionstrategy)
 
 ## setConnectionStrategy
 
@@ -145,6 +179,36 @@ Set connection strategy of this profile.
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
 
+**Examples**
+
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+import { a2dp } from '@kit.ConnectivityKit';
+try {
+    let a2dpSrc = a2dp.createA2dpSrcProfile();
+    a2dpSrc.setConnectionStrategy('XX:XX:XX:XX:XX:XX', 0, (err: BusinessError) => {
+        console.info('setConnectionStrategy, err: ' + JSON.stringify(err));
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+import { a2dp } from '@kit.ConnectivityKit';
+try {
+    let a2dpSrc = a2dp.createA2dpSrcProfile();
+    a2dpSrc.setConnectionStrategy('XX:XX:XX:XX:XX:XX', 1).then(() => {
+        console.info('setConnectionStrategy');
+    }, (err: BusinessError) => {
+        console.error('setConnectionStrategy errCode: ' + err.code + ', errMessage: ' + err.message);
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## setConnectionStrategy
 
 ```TypeScript
@@ -171,7 +235,7 @@ Set connection strategy of this profile.
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
 | strategy | [ConnectionStrategy](arkts-connectivity-baseprofile-connectionstrategy-e-sys.md) | Yes | the connection strategy of this profile. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of setConnectionStrategy. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setConnectionStrategy. |
 
 **Error codes:**
 
@@ -185,4 +249,8 @@ Set connection strategy of this profile.
 | 2900003 | Bluetooth disabled. |
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
+
+**Examples**
+
+See [setConnectionStrategy](#setconnectionstrategy)
 

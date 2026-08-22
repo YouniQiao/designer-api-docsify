@@ -40,12 +40,34 @@ function stopCasting(session: SessionToken, callback: AsyncCallback<void>): void
 **示例**
 
 ```TypeScript
+currentAVSession.stopCasting(() => {
+  console.info('Succeeded in stopping casting.');
+});
+```
+
+```TypeScript
+currentAVSession.stopCasting().then(() => {
+  console.info('Succeeded in stopping casting.');
+});
+```
+
+```TypeScript
 let sessionId = 'xxx'; // sessionId需要通过avSession.createAVSession创建会话后获取。
 let myToken: avSession.SessionToken = {
   sessionId: sessionId,
 }
 avSession.stopCasting(myToken, () => {
     console.info('Succeeded in stopping casting.');
+});
+```
+
+```TypeScript
+let sessionId = 'xxx'; // sessionId需要通过avSession.createAVSession创建会话后获取。
+let myToken: avSession.SessionToken = {
+  sessionId: sessionId,
+}
+avSession.stopCasting(myToken).then(() => {
+  console.info('stopCasting successfully');
 });
 ```
 
@@ -88,13 +110,5 @@ function stopCasting(session: SessionToken): Promise<void>
 
 **示例**
 
-```TypeScript
-let sessionId = 'xxx'; // sessionId需要通过avSession.createAVSession创建会话后获取。
-let myToken: avSession.SessionToken = {
-  sessionId: sessionId,
-}
-avSession.stopCasting(myToken).then(() => {
-  console.info('stopCasting successfully');
-});
-```
+参见 [stopCasting](#stopcasting)
 

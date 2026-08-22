@@ -1,6 +1,6 @@
 # ExtensionContext
 
-ExtensionContext是[ExtensionAbility](arkts-ability-appabilityextensionability-extensionability-c.md)的上下文环境，继承自 [Context](arkts-ability-context-c.md)。 ExtensionContext模块提供访问特定[ExtensionAbility](arkts-ability-appabilityextensionability-extensionability-c.md)的资源的能力。
+ExtensionContext是[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)的上下文环境，继承自 [Context](arkts-ability-context-c.md)。 ExtensionContext模块提供访问特定[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)的资源的能力。
 
 **继承/实现关系：** ExtensionContext extends Context
 
@@ -18,7 +18,7 @@ config: Configuration
 
 当前ExtensionAbility的配置信息，可用于获取语言、颜色模式等配置。
 
-**类型：** [Configuration](arkts-ability-appabilityconfiguration-configuration-i.md)
+**类型：** [Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
 
 **起始版本：** 23
 
@@ -56,7 +56,7 @@ currentHapModuleInfo: HapModuleInfo
 extensionAbilityInfo: ExtensionAbilityInfo
 ```
 
-当前[ExtensionAbility](arkts-ability-appabilityextensionability-extensionability-c.md)的信息，包含名称、类型、标签ID等。
+当前[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)的信息，包含名称、类型、标签ID等。
 
 **类型：** [ExtensionAbilityInfo](arkts-ability-extensionabilityinfo-i.md)
 

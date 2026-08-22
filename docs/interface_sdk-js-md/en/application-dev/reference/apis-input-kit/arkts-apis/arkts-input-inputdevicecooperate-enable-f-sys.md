@@ -31,7 +31,7 @@ Enables or disables screen hopping. This API uses an asynchronous callback to re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Whether to enable screen hopping. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback. If the operation is successful, **err** is **undefined**. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback. If the operation is successful, **err** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -60,6 +60,32 @@ struct Index {
                 return;
               }
               console.info(`Keyboard mouse crossing enable success.`);
+            });
+          } catch (error) {
+            console.error(`Keyboard mouse crossing enable failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { inputDeviceCooperate } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            inputDeviceCooperate.enable(true).then(() => {
+              console.info(`Keyboard mouse crossing enable success.`);
+            }, (error: BusinessError) => {
+              console.error(`Keyboard mouse crossing enable failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
             });
           } catch (error) {
             console.error(`Keyboard mouse crossing enable failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
@@ -112,29 +138,5 @@ Specifies whether to enable screen hopping. This API uses a promise to return th
 
 **Examples**
 
-```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            inputDeviceCooperate.enable(true).then(() => {
-              console.info(`Keyboard mouse crossing enable success.`);
-            }, (error: BusinessError) => {
-              console.error(`Keyboard mouse crossing enable failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            });
-          } catch (error) {
-            console.error(`Keyboard mouse crossing enable failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
+See [enable](#enable)
 

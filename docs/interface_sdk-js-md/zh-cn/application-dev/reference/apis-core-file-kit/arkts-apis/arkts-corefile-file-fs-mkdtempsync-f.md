@@ -54,3 +54,9 @@ declare function mkdtempSync(prefix: string): string
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**示例**
+
+```TypeScript
+let res = fileIo.mkdtempSync(pathDir + "/XXXXXX");
+```
+

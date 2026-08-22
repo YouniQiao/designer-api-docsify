@@ -43,3 +43,9 @@ let _SC_ARG_MAX = 0;
 let pres = process.getSystemConfig(_SC_ARG_MAX);
 ```
 
+```TypeScript
+let pro = new process.ProcessManager();
+let _SC_ARG_MAX = 0;
+let pres = pro.getSystemConfig(_SC_ARG_MAX);
+```
+

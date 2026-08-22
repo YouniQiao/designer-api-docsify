@@ -33,34 +33,6 @@ constructor()
 **示例**
 
 ```TypeScript
-let documentPicker = new picker.DocumentViewPicker(); // 不推荐使用无参构造，会出现概率性拉起失败问题
-```
-
-## constructor
-
-```TypeScript
-constructor(context: Context)
-```
-
-创建DocumentViewPicker对象，推荐使用该构造函数，获取context参考 [getHostContext](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#gethostcontext)。
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DocumentViewPicker-constructor(context: Context)--><!--Device-DocumentViewPicker-constructor(context: Context)-End-->
-
-**系统能力：** SystemCapability.FileManagement.UserFileService
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见Context。 |
-
-**示例**
-
-```TypeScript
 import { common } from '@kit.AbilityKit';
 
 @Entry
@@ -86,32 +58,9 @@ struct Index {
 }
 ```
 
-## constructor
-
 ```TypeScript
-constructor(context: Context, window: window.Window)
+let documentPicker = new picker.DocumentViewPicker(); // 不推荐使用无参构造，会出现概率性拉起失败问题
 ```
-
-应用自行创建窗口中，可用通过该构造函数创建DocumentViewPicker对象。一般场景推荐使用constructor(context: Context)方法 创建DocumentViewPicker对象。
-
-> **说明：**
-> 
-> 从API version 19开始，2in1和Tablet设备支持该方法。
-
-**起始版本：** 23
-
-<!--Device-DocumentViewPicker-constructor(context: Context, window: window.Window)--><!--Device-DocumentViewPicker-constructor(context: Context, window: window.Window)-End-->
-
-**系统能力：** SystemCapability.FileManagement.UserFileService
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见Context。 |
-| window | window.Window | 是 | 应用创建的窗口实例。 |
-
-**示例**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -141,6 +90,121 @@ struct Index {
   }
 }
 ```
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello World';
+
+  build() {
+    Row() {
+      Column() {
+        Text(this.message)
+          .fontSize(50)
+          .fontWeight(FontWeight.Bold)
+          .onClick(() => {
+            let context = this.getUIContext().getHostContext() as common.UIAbilityContext; // 请确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+            let audioPicker = new picker.AudioViewPicker(context);
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+let audioPicker = new picker.AudioViewPicker(); // 不推荐使用无参构造，会出现概率性拉起失败问题
+```
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello World';
+
+  build() {
+    Row() {
+      Column() {
+        Text(this.message)
+          .fontSize(50)
+          .fontWeight(FontWeight.Bold)
+          .onClick(() => {
+            let context = this.getUIContext().getHostContext() as common.UIAbilityContext; // 请确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+            let photoPicker = new picker.PhotoViewPicker(context);
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+let photoPicker = new picker.PhotoViewPicker(); // 不推荐使用无参构造，会出现概率性拉起失败问题
+```
+
+## constructor
+
+```TypeScript
+constructor(context: Context)
+```
+
+创建DocumentViewPicker对象，推荐使用该构造函数，获取context参考 [getHostContext](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#gethostcontext)。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DocumentViewPicker-constructor(context: Context)--><!--Device-DocumentViewPicker-constructor(context: Context)-End-->
+
+**系统能力：** SystemCapability.FileManagement.UserFileService
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见Context。 |
+
+**示例**
+
+参见 [constructor](#constructor)
+
+## constructor
+
+```TypeScript
+constructor(context: Context, window: window.Window)
+```
+
+应用自行创建窗口中，可用通过该构造函数创建DocumentViewPicker对象。一般场景推荐使用constructor(context: Context)方法 创建DocumentViewPicker对象。
+
+> **说明：**
+> 
+> 从API version 19开始，2in1和Tablet设备支持该方法。
+
+**起始版本：** 23
+
+<!--Device-DocumentViewPicker-constructor(context: Context, window: window.Window)--><!--Device-DocumentViewPicker-constructor(context: Context, window: window.Window)-End-->
+
+**系统能力：** SystemCapability.FileManagement.UserFileService
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见Context。 |
+| window | window.Window | 是 | 应用创建的窗口实例。 |
+
+**示例**
+
+参见 [constructor](#constructor)
 
 ## getSelectedIndex
 
@@ -307,31 +371,6 @@ async function example10(context: common.UIAbilityContext) { // 需确保 contex
 }
 ```
 
-## save
-
-```TypeScript
-save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void
-```
-
-通过保存模式拉起documentPicker界面，用户可以保存一个或多个文件。使用callback异步回调。
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DocumentViewPicker-save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.UserFileService
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| option | [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c.md) | 是 | documentPicker保存选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker保存后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -386,30 +425,6 @@ async function example11(context: common.UIAbilityContext) { // 需确保 contex
 }
 ```
 
-## save
-
-```TypeScript
-save(callback: AsyncCallback<Array<string>>): void
-```
-
-通过保存模式拉起documentPicker界面，用户可以保存一个或多个文件。使用callback异步回调。
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DocumentViewPicker-save(callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-save(callback: AsyncCallback<Array<string>>): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.UserFileService
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker保存后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -454,6 +469,266 @@ function example12(context: common.UIAbilityContext) { // 需确保 context 由 
   }
 }
 ```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+async function example16(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let audioSaveOptions = new picker.AudioSaveOptions();
+    audioSaveOptions.newFileNames = ['AudioViewPicker01.mp3'];
+    let audioPicker = new picker.AudioViewPicker(context);
+    audioPicker.save(audioSaveOptions).then((audioSaveResult: Array<string>) => {
+      console.info('AudioViewPicker.save successfully, audioSaveResult uri: ' + JSON.stringify(audioSaveResult))
+    }).catch((err: BusinessError) => {
+      console.error(`AudioViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+async function example16(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let audioSaveOptions: picker.AudioSaveOptions = {
+      newFileNames: ['AudioViewPicker01.mp3']
+    };
+    let audioPicker = new picker.AudioViewPicker(context);
+    audioPicker.save(audioSaveOptions).then((audioSaveResult: Array<string>) => {
+      console.info('AudioViewPicker.save successfully, audioSaveResult uri: ' + JSON.stringify(audioSaveResult))
+    }).catch((err: BusinessError): void => {
+      console.error(`AudioViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+    });
+  } catch (err:BusinessError) {
+    console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+async function example17(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let audioSaveOptions = new picker.AudioSaveOptions();
+    audioSaveOptions.newFileNames = ['AudioViewPicker02.mp3'];
+    let audioPicker = new picker.AudioViewPicker(context);
+    audioPicker.save(audioSaveOptions, (err: BusinessError, audioSaveResult: Array<string>) => {
+      if (err) {
+        console.error(`AudioViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('AudioViewPicker.save successfully, audioSaveResult uri: ' + JSON.stringify(audioSaveResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+function example17(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let audioSaveOptions: picker.AudioSaveOptions = {
+      newFileNames: ['AudioViewPicker01.mp3']
+    };
+    let audioPicker = new picker.AudioViewPicker(context);
+    audioPicker.save(audioSaveOptions, (err: BusinessError | null, audioSaveResult: Array<string> | undefined) => {
+      if (err) {
+        console.error(`AudioViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('AudioViewPicker.save successfully, audioSaveResult uri: ' + JSON.stringify(audioSaveResult));
+    });
+  } catch (err: BusinessError) {
+    console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+async function example18(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let audioPicker = new picker.AudioViewPicker(context);
+    audioPicker.save((err: BusinessError, audioSaveResult: Array<string>) => {
+      if (err) {
+        console.error(`AudioViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('AudioViewPicker.save successfully, audioSaveResult uri: ' + JSON.stringify(audioSaveResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+        console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+function example18(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let audioPicker = new picker.AudioViewPicker(context);
+    audioPicker.save((err: BusinessError | null, audioSaveResult: Array<string> | undefined) => {
+      if (err) {
+        console.error(`AudioViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('AudioViewPicker.save successfully, audioSaveResult uri: ' + JSON.stringify(audioSaveResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+        console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+async function example04(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let photoSaveOptions = new picker.PhotoSaveOptions();
+    photoSaveOptions.newFileNames = ['PhotoViewPicker01.jpg', 'PhotoViewPicker01.mp4'];
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.save(photoSaveOptions).then((photoSaveResult: Array<string>) => {
+      console.info('PhotoViewPicker.save successfully, photoSaveResult uri: ' + JSON.stringify(photoSaveResult));
+    }).catch((err: BusinessError) => {
+      console.error(`PhotoViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+async function example05(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let photoSaveOptions = new picker.PhotoSaveOptions();
+    photoSaveOptions.newFileNames = ['PhotoViewPicker02.jpg','PhotoViewPicker02.mp4'];
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.save(photoSaveOptions, (err: BusinessError, photoSaveResult: Array<string>) => {
+      if (err) {
+        console.error(`PhotoViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('PhotoViewPicker.save successfully, photoSaveResult uri: ' + JSON.stringify(photoSaveResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+async function example06(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.save((err: BusinessError, photoSaveResult: Array<string>) => {
+      if (err) {
+        console.error(`PhotoViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('PhotoViewPicker.save successfully, photoSaveResult uri: ' + JSON.stringify(photoSaveResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+## save
+
+```TypeScript
+save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void
+```
+
+通过保存模式拉起documentPicker界面，用户可以保存一个或多个文件。使用callback异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DocumentViewPicker-save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.UserFileService
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| option | [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c.md) | 是 | documentPicker保存选项。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker保存后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
+
+**示例**
+
+参见 [save](#save)
+
+## save
+
+```TypeScript
+save(callback: AsyncCallback<Array<string>>): void
+```
+
+通过保存模式拉起documentPicker界面，用户可以保存一个或多个文件。使用callback异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DocumentViewPicker-save(callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-save(callback: AsyncCallback<Array<string>>): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.UserFileService
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker保存后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
+
+**示例**
+
+参见 [save](#save)
 
 ## select
 
@@ -530,31 +805,6 @@ async function example07(context: common.UIAbilityContext) { // 需确保 contex
 }
 ```
 
-## select
-
-```TypeScript
-select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): void
-```
-
-通过选择模式拉起documentPicker界面，用户可以选择一个或多个文件。使用callback异步回调。
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DocumentViewPicker-select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.UserFileService
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| option | [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c.md) | 是 | documentPicker选择选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker选择后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -604,30 +854,6 @@ function example08(context: common.UIAbilityContext) { // 需确保 context 由 
 }
 ```
 
-## select
-
-```TypeScript
-select(callback: AsyncCallback<Array<string>>): void
-```
-
-通过选择模式拉起documentPicker界面，用户可以选择一个或多个文件。使用callback异步回调。
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DocumentViewPicker-select(callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-select(callback: AsyncCallback<Array<string>>): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.UserFileService
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker选择后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -672,4 +898,264 @@ function example09(context: common.UIAbilityContext) { // 需确保 context 由 
   }
 }
 ```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+async function example13(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let audioSelectOptions = new picker.AudioSelectOptions();
+    let audioPicker = new picker.AudioViewPicker(context);
+    audioPicker.select(audioSelectOptions).then((audioSelectResult: Array<string>) => {
+      console.info('AudioViewPicker.select successfully, audioSelectResult uri: ' + JSON.stringify(audioSelectResult));
+    }).catch((err: BusinessError) => {
+      console.error(`AudioViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+async function example13(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let audioSelectOptions: picker.AudioSelectOptions = {
+      maxSelectNumber: 5
+    };
+    let audioPicker = new picker.AudioViewPicker(context);
+    audioPicker.select(audioSelectOptions).then((audioSelectResult: Array<string>) => {
+      console.info('AudioViewPicker.select successfully, audioSelectResult uri: ' + JSON.stringify(audioSelectResult));
+    }).catch((err: BusinessError): void => {
+      console.error(`AudioViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
+    });
+  } catch (err: BusinessError) {
+    console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+async function example14(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let audioSelectOptions = new picker.AudioSelectOptions();
+    let audioPicker = new picker.AudioViewPicker(context);
+    audioPicker.select(audioSelectOptions, (err: BusinessError, audioSelectResult: Array<string>) => {
+      if (err) {
+        console.error(`AudioViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('AudioViewPicker.select successfully, audioSelectResult uri: ' + JSON.stringify(audioSelectResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+function example14(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let audioSelectOptions: picker.AudioSelectOptions = {
+      maxSelectNumber: 5
+    };
+    let audioPicker = new picker.AudioViewPicker(context);
+    audioPicker.select(audioSelectOptions, (err: BusinessError | null, audioSelectResult: Array<string> | undefined) => {
+      if (err) {
+        console.error(`AudioViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('AudioViewPicker.select successfully, audioSelectResult uri: ' + JSON.stringify(audioSelectResult));
+    });
+  } catch (err: BusinessError) {
+    console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+async function example15(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let audioPicker = new picker.AudioViewPicker(context);
+    audioPicker.select((err: BusinessError, audioSelectResult: Array<string>) => {
+      if (err) {
+        console.error(`AudioViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('AudioViewPicker.select successfully, audioSelectResult uri: ' + JSON.stringify(audioSelectResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+function example15(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let audioPicker = new picker.AudioViewPicker(context);
+    audioPicker.select((err: BusinessError | null, audioSelectResult: Array<string> | undefined) => {
+      if (err) {
+        console.error(`AudioViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('AudioViewPicker.select successfully, audioSelectResult uri: ' + JSON.stringify(audioSelectResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+async function example01(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let photoSelectOptions = new picker.PhotoSelectOptions();
+    photoSelectOptions.MIMEType = picker.PhotoViewMIMETypes.IMAGE_TYPE;
+    photoSelectOptions.maxSelectNumber = 5;
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.select(photoSelectOptions).then((photoSelectResult: picker.PhotoSelectResult) => {
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    }).catch((err: BusinessError) => {
+      console.error(`PhotoViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+async function example02(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let photoSelectOptions = new picker.PhotoSelectOptions();
+    photoSelectOptions.MIMEType = picker.PhotoViewMIMETypes.IMAGE_TYPE;
+    photoSelectOptions.maxSelectNumber = 5;
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.select(photoSelectOptions, (err: BusinessError, photoSelectResult: picker.PhotoSelectResult) => {
+      if (err) {
+        console.error(`PhotoViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+async function example03(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.select((err: BusinessError, photoSelectResult: picker.PhotoSelectResult) => {
+      if (err) {
+        console.error(`PhotoViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+## select
+
+```TypeScript
+select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): void
+```
+
+通过选择模式拉起documentPicker界面，用户可以选择一个或多个文件。使用callback异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DocumentViewPicker-select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.UserFileService
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| option | [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c.md) | 是 | documentPicker选择选项。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker选择后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
+
+**示例**
+
+参见 [select](#select)
+
+## select
+
+```TypeScript
+select(callback: AsyncCallback<Array<string>>): void
+```
+
+通过选择模式拉起documentPicker界面，用户可以选择一个或多个文件。使用callback异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DocumentViewPicker-select(callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-select(callback: AsyncCallback<Array<string>>): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.UserFileService
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker选择后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
+
+**示例**
+
+参见 [select](#select)
 

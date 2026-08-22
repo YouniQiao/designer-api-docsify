@@ -39,6 +39,14 @@ aboutToBeDeleted(unsubscribeMe?: IPropertySubscriber): void
 | --- | --- | --- | --- |
 | unsubscribeMe | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 否 | 被取消的订阅者，需为已订阅的订阅者；不传入则取消所有订阅者。 |
 
+**示例**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let link = AppStorage.setAndLink('PropB', 49); // PropA -> 47, PropB -> 49
+link.aboutToBeDeleted();
+```
+
 ## constructor
 
 ```TypeScript
@@ -63,6 +71,13 @@ constructor(source: SubscribedAbstractProperty<T>, subscribeMe?: IPropertySubscr
 | subscribeMe | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 否 | 订阅者，用于接收属性变化通知；不传入则不建立订阅关系。 |
 | info | string | 否 | 变量信息，用于标识该订阅关系；不传入时默认为undefined。 |
 
+**示例**
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+```
+
 ## get
 
 ```TypeScript
@@ -84,6 +99,31 @@ get(): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回单向同步属性当前的数据值。 |
+
+**示例**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let value: number = AppStorage.get('PropA') as number; // 47
+```
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+let value: number = storage.get('PropA') as number; // 47
+```
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let ref1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
+ref1?.get(); // ref1.get()=47
+```
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47); 
+let prop1: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');    
+prop1.get(); // prop1.get()=47
+```
 
 ## hasChanged
 
@@ -128,6 +168,56 @@ set(newValue: T): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | newValue | T | 是 | 要设置的新值。 |
+
+**示例**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 48);
+let res: boolean = AppStorage.set('PropA', 47); // true
+let res1: boolean = AppStorage.set('PropB', 47); // false
+```
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+let res: boolean = storage.set('PropA', 47); // true
+let res1: boolean = storage.set('PropB', 47); // false
+```
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let ref1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
+ref1?.set(1); // ref1.get()=1
+let mapValue: Map<string, number> = new Map([['1', 0]]);
+let ref2 = AppStorage.setAndRef('MapA', mapValue);
+ref2.set(mapValue);
+let setValue: Set<string> = new Set(['1']);
+let ref3 = AppStorage.setAndRef('SetB', setValue);
+ref3.set(setValue);
+let dateValue: Date = new Date('2024');
+let ref4 = AppStorage.setAndRef('DateC', dateValue);
+ref4.set(dateValue);
+ref2.set(null);
+ref3.set(undefined);
+```
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let prop1: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
+prop1.set(1); // prop1.get()=1
+// 从API version 12开始支持Map、Set、Date类型，支持null、undefined以及联合类型。
+let mapValue: Map<string, number> = new Map([['1', 0]]);
+let prop2 = AppStorage.setAndProp('MapA', mapValue);
+prop2.set(mapValue);
+let setValue: Set<string> = new Set(['1']);
+let prop3 = AppStorage.setAndProp('SetB', setValue);
+prop3.set(setValue);
+let dateValue: Date = new Date('2024');
+let prop4 = AppStorage.setAndProp('DateC', dateValue);
+prop4.set(dateValue);
+prop2.set(null);
+prop3.set(undefined);
+```
 
 ## source_
 

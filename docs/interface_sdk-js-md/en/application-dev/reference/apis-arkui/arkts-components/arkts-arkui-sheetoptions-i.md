@@ -97,6 +97,26 @@ Defines the sheet's border width.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## detents
+
+```TypeScript
+detents?: [(SheetSize | Length), (SheetSize | Length)?, (SheetSize | Length)?]
+```
+
+Defines sheet detents
+
+**Type:** [(SheetSize \| Length), (SheetSize \| Length)?, (SheetSize \| Length)?]
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SheetOptions-detents?: [(SheetSize | Length), (SheetSize | Length)?, (SheetSize | Length)?]--><!--Device-SheetOptions-detents?: [(SheetSize | Length), (SheetSize | Length)?, (SheetSize | Length)?]-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## detentSelection
 
 ```TypeScript
@@ -116,26 +136,6 @@ Select a detent from detents property
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-SheetOptions-detentSelection?: SheetSize | Length--><!--Device-SheetOptions-detentSelection?: SheetSize | Length-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## detents
-
-```TypeScript
-detents?: [(SheetSize | Length), (SheetSize | Length)?, (SheetSize | Length)?]
-```
-
-Defines sheet detents
-
-**Type:** [(SheetSize \| Length), (SheetSize \| Length)?, (SheetSize \| Length)?]
-
-**Since:** 11
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SheetOptions-detents?: [(SheetSize | Length), (SheetSize | Length)?, (SheetSize | Length)?]--><!--Device-SheetOptions-detents?: [(SheetSize | Length), (SheetSize | Length)?, (SheetSize | Length)?]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -45,3 +45,11 @@ Obtains radio access technology (RAT) of the registered network.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
 
+**Examples**
+
+```TypeScript
+let slotId: number = 0;
+let networkRadioTech: radio.NetworkRadioTech = radio.getRadioTechSync(slotId);
+console.info(`getRadioTechSync success, NetworkRadioTech->${JSON.stringify(networkRadioTech)}`);
+```
+

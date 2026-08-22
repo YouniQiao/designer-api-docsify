@@ -35,6 +35,24 @@ function queryContactsByPhoneNumber(phoneNumber: string, callback: AsyncCallback
 
 **示例**
 
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context。
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
+```
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { contact } from '@kit.ContactsKit';
@@ -45,6 +63,159 @@ contact.queryContactsByPhoneNumber('138xxxxxxxx', (err: BusinessError, data) => 
     console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
     return;
   }
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
+```
+
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context。
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+// 根据电话号码138xxxxxxxx和holderId查询联系人
+contact.queryContactsByPhoneNumber('138xxxxxxxx', {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
+```
+
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context。
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+contact.queryContactsByPhoneNumber('138xxxxxxxx', {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
+```
+
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context。
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+contact.queryContactsByPhoneNumber('138xxxxxxxx', {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
+```
+
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context。
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let promise = contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+});
+promise.then((data) => {
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let promise = contact.queryContactsByPhoneNumber('138xxxxxxxx', {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+});
+promise.then((data) => {
   console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
 });
 ```
@@ -83,23 +254,7 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, callb
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
 
 
 ## queryContactsByPhoneNumber
@@ -132,23 +287,7 @@ function queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, callbac
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-// 根据电话号码138xxxxxxxx和holderId查询联系人
-contact.queryContactsByPhoneNumber('138xxxxxxxx', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
 
 
 ## queryContactsByPhoneNumber
@@ -185,27 +324,7 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holde
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
 
 
 ## queryContactsByPhoneNumber
@@ -238,20 +357,7 @@ function queryContactsByPhoneNumber(phoneNumber: string, attrs: ContactAttribute
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-contact.queryContactsByPhoneNumber('138xxxxxxxx', {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
 
 
 ## queryContactsByPhoneNumber
@@ -288,25 +394,7 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, attrs
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
 
 
 ## queryContactsByPhoneNumber
@@ -340,24 +428,7 @@ function queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, attrs: 
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-contact.queryContactsByPhoneNumber('138xxxxxxxx', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
 
 
 ## queryContactsByPhoneNumber
@@ -396,29 +467,7 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holde
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
 
 
 ## queryContactsByPhoneNumber
@@ -457,20 +506,7 @@ function queryContactsByPhoneNumber(phoneNumber: string, holder?: Holder, attrs?
 
 **示例**
 
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-let promise = contact.queryContactsByPhoneNumber('138xxxxxxxx', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-});
-promise.then((data) => {
-  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
 
 
 ## queryContactsByPhoneNumber
@@ -513,23 +549,5 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holde
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let promise = contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-});
-promise.then((data) => {
-  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
 

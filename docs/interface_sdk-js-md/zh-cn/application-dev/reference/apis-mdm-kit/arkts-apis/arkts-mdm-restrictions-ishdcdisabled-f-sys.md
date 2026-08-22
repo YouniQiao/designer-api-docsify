@@ -34,7 +34,7 @@ function isHdcDisabled(admin: Want, callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，callback方式返回HDC是否被禁用，true表示HDC被禁用，false表示HDC未被禁用。 |
 
 **错误码：**
@@ -68,6 +68,24 @@ restrictions.isHdcDisabled(wantTemp, (err, result) => {
 })
 ```
 
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+restrictions.isHdcDisabled(wantTemp).then((result) => {
+  console.info(`Succeeded in querying is hdc disabled : ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query is hdc disabled or not. Code is ${err.code}, message is ${err.message}`);
+})
+```
+
 
 ## isHdcDisabled
 
@@ -97,7 +115,7 @@ function isHdcDisabled(admin: Want): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 
 **返回值：**
 
@@ -117,21 +135,5 @@ function isHdcDisabled(admin: Want): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-restrictions.isHdcDisabled(wantTemp).then((result) => {
-  console.info(`Succeeded in querying is hdc disabled : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query is hdc disabled or not. Code is ${err.code}, message is ${err.message}`);
-})
-```
+参见 [isHdcDisabled](#ishdcdisabled)
 

@@ -46,6 +46,13 @@ function getStringFromFunctions(funcs: FunctionType): string
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  <br>1.Mandatory parameters are left unspecified.  <br>2.Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
+**示例**
+
+```TypeScript
+let funcs: int = usbManager.FunctionType.ACM | usbManager.FunctionType.ECM;
+let ret: string = usbManager.getStringFromFunctions(funcs);
+```
+
 
 ## getStringFromFunctions
 
@@ -84,4 +91,8 @@ Converts the numeric mask combination of a given USB function list to a string d
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Normal application do not have permission to use system api. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-权限校验失败) |  |
+
+**示例**
+
+参见 [getStringFromFunctions](#getstringfromfunctions)
 

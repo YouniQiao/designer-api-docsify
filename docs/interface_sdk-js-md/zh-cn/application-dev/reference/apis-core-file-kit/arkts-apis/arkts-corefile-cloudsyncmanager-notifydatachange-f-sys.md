@@ -73,6 +73,98 @@ cloudSyncManager.notifyDataChange(accountId, bundleName).then<void>((): void => 
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountId: string = "testAccount";
+let bundleName: string = "com.example.bundle";
+cloudSyncManager.notifyDataChange(accountId, bundleName, (err: BusinessError) => {
+  if (err) {
+    console.error(`notifyDataChange failed with error message: ${err.message}, error code: ${err.code}`);
+  } else {
+    console.info("notifyDataChange successfully");
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountId: string = "testAccount";
+let bundleName: string = "com.example.bundle";
+cloudSyncManager.notifyDataChange(accountId, bundleName, (err: BusinessError<void> | null): void => {
+  if (err && err.code) {
+    console.error("notifyDataChange failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("notifyDataChange successfully");
+  }
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userId: number = 100;
+let extraData: cloudSyncManager.ExtraData = {eventId: "eventId", extraData: "data"};
+cloudSyncManager.notifyDataChange(userId, extraData).then(() => {
+  console.info("notifyDataChange successfully");
+}).catch((err: BusinessError) => {
+  console.error(`notifyDataChange failed with error message: ${err.message}, error code: ${err.code}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userId: int = 100;
+let extraData: cloudSyncManager.ExtraData = {eventId: "eventId", extraData: "data"};
+cloudSyncManager.notifyDataChange(userId, extraData).then<void>((): void => {
+  console.info("notifyDataChange successfully");
+}).catch((err: BusinessError<void>): void => {
+  console.error("notifyDataChange failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userId: number = 100;
+let extraData: cloudSyncManager.ExtraData = {eventId: "eventId", extraData: "data"};
+cloudSyncManager.notifyDataChange(userId, extraData, (err: BusinessError) => {
+  if (err) {
+    console.error(`notifyDataChange failed with error message: ${err.message}, error code: ${err.code}`);
+  } else {
+    console.info("notifyDataChange successfully");
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userId: int = 100;
+let extraData: cloudSyncManager.ExtraData = {eventId: "eventId", extraData: "data"};
+cloudSyncManager.notifyDataChange(userId, extraData, (err: BusinessError<void> | null): void => {
+  if (err && err.code) {
+    console.error("notifyDataChange failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("notifyDataChange successfully");
+  }
+});
+```
+
 
 ## notifyDataChange
 
@@ -108,37 +200,7 @@ function notifyDataChange(accountId: string, bundleName: string, callback: Async
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-let bundleName: string = "com.example.bundle";
-cloudSyncManager.notifyDataChange(accountId, bundleName, (err: BusinessError) => {
-  if (err) {
-    console.error(`notifyDataChange failed with error message: ${err.message}, error code: ${err.code}`);
-  } else {
-    console.info("notifyDataChange successfully");
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-let bundleName: string = "com.example.bundle";
-cloudSyncManager.notifyDataChange(accountId, bundleName, (err: BusinessError<void> | null): void => {
-  if (err && err.code) {
-    console.error("notifyDataChange failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("notifyDataChange successfully");
-  }
-});
-```
+参见 [notifyDataChange](#notifydatachange)
 
 
 ## notifyDataChange
@@ -183,33 +245,7 @@ function notifyDataChange(userId: int, extraData: ExtraData): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: number = 100;
-let extraData: cloudSyncManager.ExtraData = {eventId: "eventId", extraData: "data"};
-cloudSyncManager.notifyDataChange(userId, extraData).then(() => {
-  console.info("notifyDataChange successfully");
-}).catch((err: BusinessError) => {
-  console.error(`notifyDataChange failed with error message: ${err.message}, error code: ${err.code}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: int = 100;
-let extraData: cloudSyncManager.ExtraData = {eventId: "eventId", extraData: "data"};
-cloudSyncManager.notifyDataChange(userId, extraData).then<void>((): void => {
-  console.info("notifyDataChange successfully");
-}).catch((err: BusinessError<void>): void => {
-  console.error("notifyDataChange failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
+参见 [notifyDataChange](#notifydatachange)
 
 
 ## notifyDataChange
@@ -249,35 +285,5 @@ function notifyDataChange(userId: int, extraData: ExtraData, callback: AsyncCall
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: number = 100;
-let extraData: cloudSyncManager.ExtraData = {eventId: "eventId", extraData: "data"};
-cloudSyncManager.notifyDataChange(userId, extraData, (err: BusinessError) => {
-  if (err) {
-    console.error(`notifyDataChange failed with error message: ${err.message}, error code: ${err.code}`);
-  } else {
-    console.info("notifyDataChange successfully");
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: int = 100;
-let extraData: cloudSyncManager.ExtraData = {eventId: "eventId", extraData: "data"};
-cloudSyncManager.notifyDataChange(userId, extraData, (err: BusinessError<void> | null): void => {
-  if (err && err.code) {
-    console.error("notifyDataChange failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("notifyDataChange successfully");
-  }
-});
-```
+参见 [notifyDataChange](#notifydatachange)
 

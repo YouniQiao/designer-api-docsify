@@ -36,8 +36,8 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 | Name | Description |
 | --- | --- |
 | [AuthorizeRequest](arkts-devicecertificate-certificatemanagerdialog-authorizerequest-i.md) | Represents the authorization request information of the credentials. |
-| [CertReference](arkts-devicecertificate-certificatemanagerdialog-certreference-i.md) | Represents the reference information of the credential. |
 | [CertificateDialogProperty](arkts-devicecertificate-certificatemanagerdialog-certificatedialogproperty-i.md) | Defines the property of the certificate management dialog box. |
+| [CertReference](arkts-devicecertificate-certificatemanagerdialog-certreference-i.md) | Represents the reference information of the credential. |
 | [UkeyAuthRequest](arkts-devicecertificate-certificatemanagerdialog-ukeyauthrequest-i.md) | USB key PIN authentication request. |
 
 ### Enums

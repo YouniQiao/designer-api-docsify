@@ -50,6 +50,17 @@ sim.getActiveSimAccountInfoList((err: BusinessError, data: Array<sim.IccAccountI
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.getActiveSimAccountInfoList().then((data: Array<sim.IccAccountInfo>) => {
+    console.info(`getActiveSimAccountInfoList success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getActiveSimAccountInfoList failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getActiveSimAccountInfoList
 
@@ -84,14 +95,5 @@ Get the list of active SIM card account information.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getActiveSimAccountInfoList().then((data: Array<sim.IccAccountInfo>) => {
-    console.info(`getActiveSimAccountInfoList success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getActiveSimAccountInfoList failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [getActiveSimAccountInfoList](#getactivesimaccountinfolist)
 

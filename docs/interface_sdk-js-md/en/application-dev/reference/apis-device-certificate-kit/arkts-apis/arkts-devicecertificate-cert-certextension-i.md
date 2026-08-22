@@ -119,6 +119,93 @@ Obtains the serialized data of the certificate extensions.
 
 ```TypeScript
 import { cert } from '@kit.DeviceCertificateKit';
+
+// Convert the string into a Uint8Array.
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+// Certificate binary data, which needs to match your case.
+let certData = '-----BEGIN CERTIFICATE-----\n' +
+  'MIIBHTCBwwICA+gwCgYIKoZIzj0EAwIwGjEYMBYGA1UEAwwPRXhhbXBsZSBSb290\n' +
+  'IENBMB4XDTIzMDkwNTAyNDgyMloXDTI2MDUzMTAyNDgyMlowGjEYMBYGA1UEAwwP\n' +
+  'RXhhbXBsZSBSb290IENBMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHjG74yMI\n' +
+  'ueO7z3T+dyuEIrhxTg2fqgeNB3SGfsIXlsiUfLTatUsU0i/sePnrKglj2H8Abbx9\n' +
+  'PK0tsW/VgqwDIDAKBggqhkjOPQQDAgNJADBGAiEApVZno/Z7WyDc/muRN1y57uaY\n' +
+  'Mjrgnvp/AMdE8qmFiDwCIQCrIYdHVO1awaPgcdALZY+uLQi6mEs/oMJLUcmaag3E\n' +
+  'Qw==\n' +
+  '-----END CERTIFICATE-----\n';
+
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(certData),
+  // Assign a value based on the encodingData format. FORMAT_PEM and FORMAT_DER are supported.
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+cert.createX509Cert(encodingBlob, (error, x509Cert) => {
+  if (error) {
+    console.error(`createX509Cert failed, errCode: ${error.code}, errMsg: ${error.message}`);
+  } else {
+    console.info('createX509Cert result: success.');
+    x509Cert.getEncoded((error, data) => {
+      if (error) {
+        console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
+      } else {
+        console.info('getEncoded result: success.');
+      }
+    });
+  }
+});
+```
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Convert the string into a Uint8Array.
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+// Certificate binary data, which needs to match your case.
+let certData = '-----BEGIN CERTIFICATE-----\n' +
+  'MIIBLzCB1QIUO/QDVJwZLIpeJyPjyTvE43xvE5cwCgYIKoZIzj0EAwIwGjEYMBYG\n' +
+  'A1UEAwwPRXhhbXBsZSBSb290IENBMB4XDTIzMDkwNDExMjAxOVoXDTI2MDUzMDEx\n' +
+  'MjAxOVowGjEYMBYGA1UEAwwPRXhhbXBsZSBSb290IENBMFkwEwYHKoZIzj0CAQYI\n' +
+  'KoZIzj0DAQcDQgAEHjG74yMIueO7z3T+dyuEIrhxTg2fqgeNB3SGfsIXlsiUfLTa\n' +
+  'tUsU0i/sePnrKglj2H8Abbx9PK0tsW/VgqwDIDAKBggqhkjOPQQDAgNJADBGAiEA\n' +
+  '0ce/fvA4tckNZeB865aOApKXKlBjiRlaiuq5mEEqvNACIQDPD9WyC21MXqPBuRUf\n' +
+  'BetUokslUfjT6+s/X4ByaxycAA==\n' +
+  '-----END CERTIFICATE-----\n';
+
+// Certificate binary data, which needs to match your case.
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(certData),
+  // Assign a value based on the encodingData format. FORMAT_PEM and FORMAT_DER are supported.
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+cert.createX509Cert(encodingBlob).then(x509Cert => {
+  console.info('createX509Cert result: success.');
+  x509Cert.getEncoded().then(result => {
+    console.info('getEncoded result: success.');
+  }).catch((error: BusinessError) => {
+    console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
+  });
+}).catch((error: BusinessError) => {
+  console.error(`createX509Cert failed, errCode: ${error.code}, errMsg: ${error.message}`);
+});
+```
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 // Binary data of the certificate extension, which needs to be set to match your case.
@@ -153,6 +240,402 @@ cert.createCertExtension(encodingBlob, (error, certExt) => {
     }
   }
 });
+```
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+
+// Convert the string into a Uint8Array.
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let crlData = '-----BEGIN X509 CRL-----\n' +
+  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
+  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
+  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
+  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
+  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
+  'eavsH0Q3\n' +
+  '-----END X509 CRL-----\n';
+
+// Binary data of the CRL, which needs to match your case.
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(crlData),
+  // Assign a value based on the encodingData format. FORMAT_PEM and FORMAT_DER are supported.
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+cert.createX509Crl(encodingBlob, (error, x509Crl) => {
+  if (error) {
+    console.error(`createX509Crl failed, errCode: ${error.code}, errMsg: ${error.message}`);
+  } else {
+    console.info('createX509Crl result: success.');
+    x509Crl.getEncoded((error, data) => {
+      if (error) {
+        console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
+      } else {
+        console.info('getEncoded result: success.');
+      }
+    });
+  }
+});
+```
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Convert the string into a Uint8Array.
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let crlData = '-----BEGIN X509 CRL-----\n' +
+  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
+  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
+  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
+  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
+  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
+  'eavsH0Q3\n' +
+  '-----END X509 CRL-----\n';
+
+// Binary data of the CRL, which needs to match your case.
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(crlData),
+  // Assign a value based on the encodingData format. FORMAT_PEM and FORMAT_DER are supported.
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+cert.createX509Crl(encodingBlob).then(x509Crl => {
+  console.info('createX509Crl result: success.');
+  x509Crl.getEncoded().then(result => {
+    console.info('getEncoded result: success.');
+  }).catch((error: BusinessError) => {
+    console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
+  });
+}).catch((error: BusinessError) => {
+  console.error(`createX509Crl failed, errCode: ${error.code}, errMsg: ${error.message}`);
+});
+```
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+
+// Convert the string into a Uint8Array.
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let crlData = '-----BEGIN X509 CRL-----\n' +
+  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
+  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
+  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
+  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
+  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
+  'eavsH0Q3\n' +
+  '-----END X509 CRL-----\n';
+
+// Binary data of the CRL, which needs to match your case.
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(crlData),
+  // Assign a value based on the encodingData format. FORMAT_PEM and FORMAT_DER are supported.
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+cert.createX509CRL(encodingBlob, (error, x509CRL) => {
+  if (error) {
+    console.error(`createX509CRL failed, errCode: ${error.code}, errMsg: ${error.message}`);
+  } else {
+    console.info('createX509CRL result: success.');
+    x509CRL.getEncoded((error, data) => {
+      if (error) {
+        console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
+      } else {
+        console.info('getEncoded result: success.');
+      }
+    });
+  }
+});
+```
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Convert the string into a Uint8Array.
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let crlData = '-----BEGIN X509 CRL-----\n' +
+  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
+  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
+  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
+  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
+  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
+  'eavsH0Q3\n' +
+  '-----END X509 CRL-----\n';
+
+// Binary data of the CRL, which needs to match your case.
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(crlData),
+  // Assign a value based on the encodingData format. FORMAT_PEM and FORMAT_DER are supported.
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+cert.createX509CRL(encodingBlob).then(x509CRL => {
+  console.info('createX509CRL result: success.');
+  x509CRL.getEncoded().then(result => {
+    console.info('getEncoded result: success.');
+  }).catch((error: BusinessError) => {
+    console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
+  });
+}).catch((error: BusinessError) => {
+  console.error(`createX509CRL failed, errCode: ${error.code}, errMsg: ${error.message}`);
+});
+```
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Convert the string into a Uint8Array.
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let crlData = '-----BEGIN X509 CRL-----\n' +
+  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
+  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
+  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
+  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
+  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
+  'eavsH0Q3\n' +
+  '-----END X509 CRL-----\n'
+
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(crlData),
+  // Assign a value based on the encodingData format. FORMAT_PEM and FORMAT_DER are supported.
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+cert.createX509Crl(encodingBlob, (err, x509Crl) => {
+  if (err) {
+    console.error(`createX509Crl failed, errCode: ${err.code}, errMsg: ${err.message}`);
+  } else {
+    console.info('create x509 crl result: success.');
+
+    try {
+      let serialNumber = 1000;
+      let crlEntry = x509Crl.getRevokedCert(serialNumber);
+      crlEntry.getEncoded((error, data) => {
+        if (error) {
+          console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
+        } else {
+          console.info('getEncoded result: success.');
+        }
+      });
+    } catch (error) {
+      let e: BusinessError = error as BusinessError;
+      console.error(`getRevokedCert failed, errCode: ${e.code}, errMsg: ${e.message}`);
+    }
+  }
+})
+```
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Convert the string into a Uint8Array.
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let crlData = '-----BEGIN X509 CRL-----\n' +
+  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
+  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
+  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
+  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
+  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
+  'eavsH0Q3\n' +
+  '-----END X509 CRL-----\n'
+
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(crlData),
+  // Assign a value based on the encodingData format. FORMAT_PEM and FORMAT_DER are supported.
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+cert.createX509Crl(encodingBlob, (err, x509Crl) => {
+  if (err) {
+    console.error(`createX509Crl failed, errCode: ${err.code}, errMsg: ${err.message}`);
+  } else {
+    console.info('create x509 crl result: success.');
+
+    try {
+      let serialNumber = 1000;
+      let crlEntry = x509Crl.getRevokedCert(serialNumber);
+      crlEntry.getEncoded().then(result => {
+        console.info('getEncoded result: success.');
+      }).catch((error: BusinessError) => {
+        console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
+      });
+    } catch (error) {
+      let e: BusinessError = error as BusinessError;
+      console.error(`getRevokedCert failed, errCode: ${e.code}, errMsg: ${e.message}`);
+    }
+  }
+})
+```
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Convert the string into a Uint8Array.
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let crlData = '-----BEGIN X509 CRL-----\n' +
+  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
+  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
+  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
+  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
+  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
+  'eavsH0Q3\n' +
+  '-----END X509 CRL-----\n'
+
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(crlData),
+  // Assign a value based on the encodingData format. FORMAT_PEM and FORMAT_DER are supported.
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+cert.createX509CRL(encodingBlob, (err, x509CRL) => {
+  if (err) {
+    console.error(`createX509CRL failed, errCode: ${err.code}, errMsg: ${err.message}`);
+  } else {
+    console.info('create x509 CRL result: success.');
+
+    try {
+      let serialNumber = BigInt(1000);
+      let crlEntry = x509CRL.getRevokedCert(serialNumber);
+      crlEntry.getEncoded((error, data) => {
+        if (error) {
+          console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
+        } else {
+          console.info('getEncoded result: success.');
+        }
+      });
+    } catch (error) {
+      let e: BusinessError = error as BusinessError;
+      console.error(`getRevokedCert failed, errCode: ${e.code}, errMsg: ${e.message}`);
+    }
+  }
+})
+```
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Convert the string into a Uint8Array.
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let crlData = '-----BEGIN X509 CRL-----\n' +
+  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
+  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
+  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
+  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
+  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
+  'eavsH0Q3\n' +
+  '-----END X509 CRL-----\n'
+
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(crlData),
+  // Assign a value based on the encodingData format. FORMAT_PEM and FORMAT_DER are supported.
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+cert.createX509CRL(encodingBlob, (err, x509CRL) => {
+  if (err) {
+    console.error(`createX509CRL failed, errCode: ${err.code}, errMsg: ${err.message}`);
+  } else {
+    console.info('create x509 CRL result: success.');
+
+    try {
+      let serialNumber = BigInt(1000);
+      let crlEntry = x509CRL.getRevokedCert(serialNumber);
+      crlEntry.getEncoded().then(result => {
+        console.info('getEncoded result: success.');
+      }).catch((error: BusinessError) => {
+        console.error(`getEncoded failed, errCode: ${error.code}, errMsg: ${error.message}`);
+      });
+    } catch (error) {
+      let e: BusinessError = error as BusinessError;
+      console.error(`getRevokedCert failed, errCode: ${e.code}, errMsg: ${e.message}`);
+    }
+  }
+})
+```
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let nameStr = '/CN=Example CA/OU=test cert/O=test/L=XA/ST=SX/C=CN/CN=RSA CA/CN=XTS';
+async function getEncoded() {
+  try {
+    cert.createX500DistinguishedName(nameStr)
+      .then((data) => {
+        console.info('createX500DistinguishedName result: success.');
+        let encodingBlobData = data.getEncoded();
+      })
+      .catch((err: BusinessError) => {
+        console.error(`createX500DistinguishedName failed, errCode: ${err.code}, errMsg: ${err.message}`);
+      })
+  } catch (error) {
+    let e: BusinessError = error as BusinessError;
+    console.error(`createX500DistinguishedName failed, errCode: ${e.code}, errMsg: ${e.message}`);
+  }
+}
 ```
 
 ## getEntry

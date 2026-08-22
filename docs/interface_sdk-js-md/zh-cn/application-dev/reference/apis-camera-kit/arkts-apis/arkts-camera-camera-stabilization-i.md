@@ -49,6 +49,40 @@ getActiveVideoStabilizationMode(): VideoStabilizationMode
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getActiveVideoStabilizationMode(captureSession: camera.CaptureSession): camera.VideoStabilizationMode | undefined {
+  let vsMode: camera.VideoStabilizationMode | undefined = undefined;
+  try {
+    vsMode = captureSession.getActiveVideoStabilizationMode();
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The getActiveVideoStabilizationMode call failed. error code: ${err.code}`);
+  }
+  return vsMode;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getActiveVideoStabilizationMode(videoSession: camera.VideoSession): camera.VideoStabilizationMode | undefined {
+  let vsMode: camera.VideoStabilizationMode | undefined = undefined;
+  try {
+    vsMode = videoSession.getActiveVideoStabilizationMode();
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The getActiveVideoStabilizationMode call failed. error code: ${err.code}`);
+  }
+  return vsMode;
+}
+```
+
 ## setVideoStabilizationMode
 
 ```TypeScript
@@ -76,4 +110,34 @@ setVideoStabilizationMode(mode: VideoStabilizationMode): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setVideoStabilizationMode(captureSession: camera.CaptureSession): void {
+  try {
+    captureSession.setVideoStabilizationMode(camera.VideoStabilizationMode.OFF);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The setVideoStabilizationMode call failed. error code: ${err.code}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setVideoStabilizationMode(videoSession: camera.VideoSession): void {
+  try {
+    videoSession.setVideoStabilizationMode(camera.VideoStabilizationMode.OFF);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The setVideoStabilizationMode call failed. error code: ${err.code}`);
+  }
+}
+```
 

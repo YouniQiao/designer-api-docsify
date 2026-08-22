@@ -43,6 +43,16 @@ function changeConfirmation(sharingResource: string, state: State, callback: Asy
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+cloudData.sharing.changeConfirmation('sharing_resource_test', cloudData.sharing.State.STATE_REJECTED).then((result) => {
+  console.info(`change confirmation succeeded, result: ${result}`);
+}).catch((err) => {
+  console.error(`change confirmation failed, code is ${err.code},message is ${err.message}`);
+})
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 cloudData.sharing.changeConfirmation('sharing_resource_test', cloudData.sharing.State.STATE_REJECTED, ((err: BusinessError|null, result) => {
   if (err) {
     console.error(`change confirmation failed, code is ${err.code},message is ${err.message}`);
@@ -92,13 +102,5 @@ function changeConfirmation(sharingResource: string, state: State): Promise<Resu
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-cloudData.sharing.changeConfirmation('sharing_resource_test', cloudData.sharing.State.STATE_REJECTED).then((result) => {
-  console.info(`change confirmation succeeded, result: ${result}`);
-}).catch((err) => {
-  console.error(`change confirmation failed, code is ${err.code},message is ${err.message}`);
-})
-```
+参见 [changeConfirmation](#changeconfirmation)
 

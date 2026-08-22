@@ -26,7 +26,7 @@ Obtains the current mouse pointer size. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **number** is the obtained mouse pointer size (value range: [1-7]). Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **number** is the obtained mouse pointer size (value range: [1-7]). Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -56,6 +56,32 @@ struct Index {
                 console.info(`getPointerSize success, size: ${JSON.stringify(size)}`);
               }
             });
+          } catch (error) {
+            console.error(`getPointerSize failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            pointer.getPointerSize().then((size: number) => {
+              console.info(`getPointerSize success, size: ${JSON.stringify(size)}`);
+            }).catch((error: BusinessError) => {
+              console.error(`Get pointer size failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            })
           } catch (error) {
             console.error(`getPointerSize failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
@@ -96,29 +122,5 @@ Obtains the current mouse pointer size. This API uses a promise to return the re
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.getPointerSize().then((size: number) => {
-              console.info(`getPointerSize success, size: ${JSON.stringify(size)}`);
-            }).catch((error: BusinessError) => {
-              console.error(`Get pointer size failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`getPointerSize failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
+See [getPointerSize](#getpointersize)
 

@@ -19,7 +19,7 @@ Downloads and installs an application from AppGallery.
 > After this API is successfully called, an application download task is generated on the home screen. The task is
 > the same as that created during download from AppGallery. Upon completion of the download and installation, the
 > installation result is returned through the
-> [EnterpriseAdminExtensionAbility.onMarketAppInstallResult](arkts-mdm-enterpriseenterpriseadminextensionability-enterpriseadminextensionability-c.md#onmarketappinstallresult)
+> [EnterpriseAdminExtensionAbility.onMarketAppInstallResult](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onmarketappinstallresult)
 > callback.
 
 **Since:** 22
@@ -36,7 +36,7 @@ Downloads and installs an application from AppGallery.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleNames | Array&lt;string&gt; | Yes | Application bundle name list. A maximum of 10 bundle names can be passed at a time. The bundle name must be the same as that on AppGallery. Otherwise, the download task cannot be created, and error code 9201002 will be reported. |
 
 **Error codes:**

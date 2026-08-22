@@ -48,7 +48,7 @@ Unsubscribe the event reported when the Bluetooth state changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Type of the Bluetooth state changes event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BluetoothState&gt; | No | Callback used to listen for the Bluetooth state event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BluetoothState&gt; | No | Callback used to listen for the Bluetooth state event. |
 
 **Examples**
 

@@ -28,7 +28,7 @@ Enables listening touchPad swipe inward events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SwipeInward](arkts-input-multimodalinputgestureevent-swipeinward-i-sys.md)&gt; | Yes | Callback used to receive the reported data. |
+| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SwipeInward](arkts-input-multimodalinput-gestureevent-swipeinward-i-sys.md)&gt; | Yes | Callback used to receive the reported data. |
 
 **Error codes:**
 

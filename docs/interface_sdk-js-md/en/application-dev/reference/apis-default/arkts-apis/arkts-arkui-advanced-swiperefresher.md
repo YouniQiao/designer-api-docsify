@@ -11,5 +11,5 @@
 
 | Name | Description |
 | --- | --- |
-| [SwipeRefresher](arkts-arkuiadvancedswiperefresher-swiperefresher-s.md) | Declare component SwipeRefresher @struct { SwipeRefresher } |
+| [SwipeRefresher](arkts-arkui-advanced-swiperefresher-swiperefresher-s.md) | Declare component SwipeRefresher @struct { SwipeRefresher } |
 

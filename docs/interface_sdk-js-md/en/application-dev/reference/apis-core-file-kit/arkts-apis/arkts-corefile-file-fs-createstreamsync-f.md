@@ -14,7 +14,7 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function createStreamSync(path: string, mode: string): Stream
 ```
 
-Creates a stream based on a file path. This API returns the result synchronously. To close the stream, use **close()** of [Stream](arkts-corefile-filefs-stream-i.md).
+Creates a stream based on a file path. This API returns the result synchronously. To close the stream, use **close()** of [Stream](arkts-corefile-file-fs-stream-i.md).
 
 **Since:** 9
 
@@ -35,7 +35,7 @@ Creates a stream based on a file path. This API returns the result synchronously
 
 | Type | Description |
 | --- | --- |
-| [Stream](arkts-corefile-filefs-stream-i.md) | File stream. |
+| [Stream](arkts-corefile-file-fs-stream-i.md) | File stream. |
 
 **Error codes:**
 
@@ -68,4 +68,13 @@ Creates a stream based on a file path. This API returns the result synchronously
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let stream = fs.createStreamSync(filePath, "r+");
+console.info("createStream succeed");
+stream.closeSync();
+```
 

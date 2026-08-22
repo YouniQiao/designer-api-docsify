@@ -63,17 +63,6 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 | [isMeteredHotspot](arkts-connectivity-wifimanager-ismeteredhotspot-f.md) | 查询热点是否为按流量计费热点。 |
 | [isWifiActive](arkts-connectivity-wifimanager-iswifiactive-f.md) | 查询WLAN开关是否已使能。 |
 | [isWlanSupported](arkts-connectivity-wifimanager-iswlansupported-f.md) | 查询WLAN是否可用。 |
-| [offHotspotStateChange](arkts-connectivity-wifimanager-offhotspotstatechange-f.md) | 取消注册热点状态改变事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
-| [offP2pConnectionChange](arkts-connectivity-wifimanager-offp2pconnectionchange-f.md) | 取消注册P2P连接状态改变事件。 |
-| [offP2pDeviceChange](arkts-connectivity-wifimanager-offp2pdevicechange-f.md) | 取消注册P2P本端设备状态改变事件。 |
-| [offP2pDiscoveryChange](arkts-connectivity-wifimanager-offp2pdiscoverychange-f.md) | 取消注册发现设备状态改变事件。 |
-| [offP2pPeerDeviceChange](arkts-connectivity-wifimanager-offp2ppeerdevicechange-f.md) | 取消注册P2P对端设备状态改变事件。 |
-| [offP2pPersistentGroupChange](arkts-connectivity-wifimanager-offp2ppersistentgroupchange-f.md) | 取消注册P2P永久组状态改变事件。 |
-| [offP2pStateChange](arkts-connectivity-wifimanager-offp2pstatechange-f.md) | 取消注册P2P开关状态改变事件。 |
-| [offWifiConnectionChange](arkts-connectivity-wifimanager-offwificonnectionchange-f.md) | 取消注册WLAN连接状态改变事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
-| [offWifiRssiChange](arkts-connectivity-wifimanager-offwifirssichange-f.md) | 取消注册WLAN接收信号强度(RSSI)变化事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
-| [offWifiScanStateChange](arkts-connectivity-wifimanager-offwifiscanstatechange-f.md) | 取消注册扫描状态改变事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
-| [offWifiStateChange](arkts-connectivity-wifimanager-offwifistatechange-f.md) | 取消注册WLAN状态改变事件。 |
 | [off_hotspotStateChange](arkts-connectivity-wifimanager-offhotspotstatechange-f.md) | 取消注册热点状态改变事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
 | [off_p2pConnectionChange](arkts-connectivity-wifimanager-offp2pconnectionchange-f.md) | 取消注册P2P连接状态改变事件。 |
 | [off_p2pDeviceChange](arkts-connectivity-wifimanager-offp2pdevicechange-f.md) | 取消注册P2P本端设备状态改变事件。 |
@@ -85,17 +74,17 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 | [off_wifiRssiChange](arkts-connectivity-wifimanager-offwifirssichange-f.md) | 取消注册WLAN接收信号强度(RSSI)变化事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
 | [off_wifiScanStateChange](arkts-connectivity-wifimanager-offwifiscanstatechange-f.md) | 取消注册扫描状态改变事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
 | [off_wifiStateChange](arkts-connectivity-wifimanager-offwifistatechange-f.md) | 取消注册WLAN状态改变事件。 |
-| [onHotspotStateChange](arkts-connectivity-wifimanager-onhotspotstatechange-f.md) | 注册热点状态改变事件。 |
-| [onP2pConnectionChange](arkts-connectivity-wifimanager-onp2pconnectionchange-f.md) | 注册P2P连接状态改变事件。 |
-| [onP2pDeviceChange](arkts-connectivity-wifimanager-onp2pdevicechange-f.md) | 注册P2P本端设备状态改变事件。 |
-| [onP2pDiscoveryChange](arkts-connectivity-wifimanager-onp2pdiscoverychange-f.md) | 注册发现设备状态改变事件。 |
-| [onP2pPeerDeviceChange](arkts-connectivity-wifimanager-onp2ppeerdevicechange-f.md) | 注册P2P对端设备状态改变事件。 |
-| [onP2pPersistentGroupChange](arkts-connectivity-wifimanager-onp2ppersistentgroupchange-f.md) | 注册P2P永久组状态改变事件。 |
-| [onP2pStateChange](arkts-connectivity-wifimanager-onp2pstatechange-f.md) | 注册P2P开关状态改变事件。 |
-| [onWifiConnectionChange](arkts-connectivity-wifimanager-onwificonnectionchange-f.md) | 注册WLAN连接状态改变事件。 |
-| [onWifiRssiChange](arkts-connectivity-wifimanager-onwifirssichange-f.md) | 注册WLAN接收信号强度(RSSI)变化事件。 |
-| [onWifiScanStateChange](arkts-connectivity-wifimanager-onwifiscanstatechange-f.md) | 注册扫描状态改变事件。 |
-| [onWifiStateChange](arkts-connectivity-wifimanager-onwifistatechange-f.md) | 注册WLAN状态改变事件。 |
+| [offHotspotStateChange](arkts-connectivity-wifimanager-offhotspotstatechange-f.md) | 取消注册热点状态改变事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
+| [offP2pConnectionChange](arkts-connectivity-wifimanager-offp2pconnectionchange-f.md) | 取消注册P2P连接状态改变事件。 |
+| [offP2pDeviceChange](arkts-connectivity-wifimanager-offp2pdevicechange-f.md) | 取消注册P2P本端设备状态改变事件。 |
+| [offP2pDiscoveryChange](arkts-connectivity-wifimanager-offp2pdiscoverychange-f.md) | 取消注册发现设备状态改变事件。 |
+| [offP2pPeerDeviceChange](arkts-connectivity-wifimanager-offp2ppeerdevicechange-f.md) | 取消注册P2P对端设备状态改变事件。 |
+| [offP2pPersistentGroupChange](arkts-connectivity-wifimanager-offp2ppersistentgroupchange-f.md) | 取消注册P2P永久组状态改变事件。 |
+| [offP2pStateChange](arkts-connectivity-wifimanager-offp2pstatechange-f.md) | 取消注册P2P开关状态改变事件。 |
+| [offWifiConnectionChange](arkts-connectivity-wifimanager-offwificonnectionchange-f.md) | 取消注册WLAN连接状态改变事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
+| [offWifiRssiChange](arkts-connectivity-wifimanager-offwifirssichange-f.md) | 取消注册WLAN接收信号强度(RSSI)变化事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
+| [offWifiScanStateChange](arkts-connectivity-wifimanager-offwifiscanstatechange-f.md) | 取消注册扫描状态改变事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
+| [offWifiStateChange](arkts-connectivity-wifimanager-offwifistatechange-f.md) | 取消注册WLAN状态改变事件。 |
 | [on_hotspotStateChange](arkts-connectivity-wifimanager-onhotspotstatechange-f.md) | 注册热点状态改变事件。 |
 | [on_p2pConnectionChange](arkts-connectivity-wifimanager-onp2pconnectionchange-f.md) | 注册P2P连接状态改变事件。 |
 | [on_p2pDeviceChange](arkts-connectivity-wifimanager-onp2pdevicechange-f.md) | 注册P2P本端设备状态改变事件。 |
@@ -107,6 +96,17 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 | [on_wifiRssiChange](arkts-connectivity-wifimanager-onwifirssichange-f.md) | 注册WLAN接收信号强度(RSSI)变化事件。 |
 | [on_wifiScanStateChange](arkts-connectivity-wifimanager-onwifiscanstatechange-f.md) | 注册扫描状态改变事件。 |
 | [on_wifiStateChange](arkts-connectivity-wifimanager-onwifistatechange-f.md) | 注册WLAN状态改变事件。 |
+| [onHotspotStateChange](arkts-connectivity-wifimanager-onhotspotstatechange-f.md) | 注册热点状态改变事件。 |
+| [onP2pConnectionChange](arkts-connectivity-wifimanager-onp2pconnectionchange-f.md) | 注册P2P连接状态改变事件。 |
+| [onP2pDeviceChange](arkts-connectivity-wifimanager-onp2pdevicechange-f.md) | 注册P2P本端设备状态改变事件。 |
+| [onP2pDiscoveryChange](arkts-connectivity-wifimanager-onp2pdiscoverychange-f.md) | 注册发现设备状态改变事件。 |
+| [onP2pPeerDeviceChange](arkts-connectivity-wifimanager-onp2ppeerdevicechange-f.md) | 注册P2P对端设备状态改变事件。 |
+| [onP2pPersistentGroupChange](arkts-connectivity-wifimanager-onp2ppersistentgroupchange-f.md) | 注册P2P永久组状态改变事件。 |
+| [onP2pStateChange](arkts-connectivity-wifimanager-onp2pstatechange-f.md) | 注册P2P开关状态改变事件。 |
+| [onWifiConnectionChange](arkts-connectivity-wifimanager-onwificonnectionchange-f.md) | 注册WLAN连接状态改变事件。 |
+| [onWifiRssiChange](arkts-connectivity-wifimanager-onwifirssichange-f.md) | 注册WLAN接收信号强度(RSSI)变化事件。 |
+| [onWifiScanStateChange](arkts-connectivity-wifimanager-onwifiscanstatechange-f.md) | 注册扫描状态改变事件。 |
+| [onWifiStateChange](arkts-connectivity-wifimanager-onwifistatechange-f.md) | 注册WLAN状态改变事件。 |
 | [p2pCancelConnect](arkts-connectivity-wifimanager-p2pcancelconnect-f.md) | 停止正在建立的P2P连接。 |
 | [p2pConnect](arkts-connectivity-wifimanager-p2pconnect-f.md) | 使用指定配置发起与设备的P2P连接。 |
 | [removeCandidateConfig](arkts-connectivity-wifimanager-removecandidateconfig-f.md) | 移除指定的候选热点配置，只允许移除自己添加的配置。 应用必须在前台运行。 |
@@ -126,8 +126,8 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 | [addHotspotBlockList](arkts-connectivity-wifimanager-addhotspotblocklist-f-sys.md) | 将站点添加到黑名单，该站点无法访问热点。 |
 | [allowAutoConnect](arkts-connectivity-wifimanager-allowautoconnect-f-sys.md) | 设置是否允许通过networkId自动连接。 如果isAllowed为true，则可以再次关联该网络，否则不可。 |
 | [connectToDevice](arkts-connectivity-wifimanager-connecttodevice-f-sys.md) | 连接到指定网络（如果当前已经连接到热点，请先使用disconnect()接口断开连接）。 |
-| [delHotspotBlockList](arkts-connectivity-wifimanager-delhotspotblocklist-f-sys.md) | 从黑名单中删除站点，该站点可以访问热点。 |
 | [deletePersistentGroup](arkts-connectivity-wifimanager-deletepersistentgroup-f-sys.md) | 删除指定网络ID的持久P2P群组。 |
+| [delHotspotBlockList](arkts-connectivity-wifimanager-delhotspotblocklist-f-sys.md) | 从黑名单中删除站点，该站点可以访问热点。 |
 | [disableHotspot](arkts-connectivity-wifimanager-disablehotspot-f-sys.md) | 关闭WLAN热点功能。 此方法为异步方法。如果WLAN热点关闭后WLAN已使能，则WLAN可能会重新使能。 |
 | [disableNetwork](arkts-connectivity-wifimanager-disablenetwork-f-sys.md) | 通过networkId去使能指定的DeviceConfig。 去使能后的DeviceConfig将不再被关联。 |
 | [disableNetwork](arkts-connectivity-wifimanager-disablenetwork-f-sys.md) | 通过networkId在一段时间内去使能指定的DeviceConfig。 去使能后的DeviceConfig将不再被关联。 |
@@ -150,22 +150,22 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 | [isHotspotDualBandSupported](arkts-connectivity-wifimanager-ishotspotdualbandsupported-f-sys.md) | 检查作为WLAN热点的设备是否同时支持2.4 GHz和5 GHz WLAN。 |
 | [isOpenSoftApAllowed](arkts-connectivity-wifimanager-isopensoftapallowed-f-sys.md) | 检查在某些情况下是否可以操作WLAN热点。当飞行模式开启 且不支持softap与sta共存，也不支持信号桥接时， 热点开关无法操作。 |
 | [isRandomMacDisabled](arkts-connectivity-wifimanager-israndommacdisabled-f-sys.md) | 随机MAC地址是否被禁用。 |
-| [offDeviceConfigChange](arkts-connectivity-wifimanager-offdeviceconfigchange-f-sys.md) | 注册设备配置改变事件。 |
-| [offHotspotStaJoin](arkts-connectivity-wifimanager-offhotspotstajoin-f-sys.md) | 取消注册热点STA加入事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
-| [offHotspotStaLeave](arkts-connectivity-wifimanager-offhotspotstaleave-f-sys.md) | 取消注册热点STA离开事件。 |
-| [offStreamChange](arkts-connectivity-wifimanager-offstreamchange-f-sys.md) | 取消注册WLAN流量改变事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
 | [off_deviceConfigChange](arkts-connectivity-wifimanager-offdeviceconfigchange-f-sys.md) | 注册设备配置改变事件。 |
 | [off_hotspotStaJoin](arkts-connectivity-wifimanager-offhotspotstajoin-f-sys.md) | 取消注册热点STA加入事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
 | [off_hotspotStaLeave](arkts-connectivity-wifimanager-offhotspotstaleave-f-sys.md) | 取消注册热点STA离开事件。 |
 | [off_streamChange](arkts-connectivity-wifimanager-offstreamchange-f-sys.md) | 取消注册WLAN流量改变事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
-| [onDeviceConfigChange](arkts-connectivity-wifimanager-ondeviceconfigchange-f-sys.md) | 注册设备配置改变事件。 |
-| [onHotspotStaJoin](arkts-connectivity-wifimanager-onhotspotstajoin-f-sys.md) | 注册热点STA加入事件。 |
-| [onHotspotStaLeave](arkts-connectivity-wifimanager-onhotspotstaleave-f-sys.md) | 注册热点STA离开事件。 |
-| [onStreamChange](arkts-connectivity-wifimanager-onstreamchange-f-sys.md) | 注册WLAN流量改变事件。 |
+| [offDeviceConfigChange](arkts-connectivity-wifimanager-offdeviceconfigchange-f-sys.md) | 注册设备配置改变事件。 |
+| [offHotspotStaJoin](arkts-connectivity-wifimanager-offhotspotstajoin-f-sys.md) | 取消注册热点STA加入事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
+| [offHotspotStaLeave](arkts-connectivity-wifimanager-offhotspotstaleave-f-sys.md) | 取消注册热点STA离开事件。 |
+| [offStreamChange](arkts-connectivity-wifimanager-offstreamchange-f-sys.md) | 取消注册WLAN流量改变事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
 | [on_deviceConfigChange](arkts-connectivity-wifimanager-ondeviceconfigchange-f-sys.md) | 注册设备配置改变事件。 |
 | [on_hotspotStaJoin](arkts-connectivity-wifimanager-onhotspotstajoin-f-sys.md) | 注册热点STA加入事件。 |
 | [on_hotspotStaLeave](arkts-connectivity-wifimanager-onhotspotstaleave-f-sys.md) | 注册热点STA离开事件。 |
 | [on_streamChange](arkts-connectivity-wifimanager-onstreamchange-f-sys.md) | 注册WLAN流量改变事件。 |
+| [onDeviceConfigChange](arkts-connectivity-wifimanager-ondeviceconfigchange-f-sys.md) | 注册设备配置改变事件。 |
+| [onHotspotStaJoin](arkts-connectivity-wifimanager-onhotspotstajoin-f-sys.md) | 注册热点STA加入事件。 |
+| [onHotspotStaLeave](arkts-connectivity-wifimanager-onhotspotstaleave-f-sys.md) | 注册热点STA离开事件。 |
+| [onStreamChange](arkts-connectivity-wifimanager-onstreamchange-f-sys.md) | 注册WLAN流量改变事件。 |
 | [reassociate](arkts-connectivity-wifimanager-reassociate-f-sys.md) | 重新关联当前网络。 |
 | [reconnect](arkts-connectivity-wifimanager-reconnect-f-sys.md) | 重新连接当前网络。 |
 | [removeAllNetwork](arkts-connectivity-wifimanager-removeallnetwork-f-sys.md) | 移除所有已保存的WLAN配置。 |

@@ -30,7 +30,7 @@ Unsubscribes from **TabContent** page switching events for the specified **Tabs*
 | --- | --- | --- | --- |
 | type | 'tabContentUpdate' | Yes | Event type. Set to **'tabContentUpdate'** for **TabContent** page switching events. |
 | options | ObserverOptions | Yes | ID of the target **Tabs** component. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TabContentInfo](../../apis-default/arkts-apis/arkts-uiobserver-tabcontentinfo-i.md)&gt; | No | Target listener to unregister. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](../../apis-default/arkts-apis/arkts-uiobserver-tabcontentinfo-i.md)&gt; | No | Target listener to unregister. |
 
 
 ## off('tabContentUpdate')
@@ -56,5 +56,5 @@ Unsubscribes from the **TabContent** switching event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'tabContentUpdate' | Yes | Event type. Set to **'tabContentUpdate'** for **TabContent** page switching events. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TabContentInfo](../../apis-default/arkts-apis/arkts-uiobserver-tabcontentinfo-i.md)&gt; | No | Target listener to unregister. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](../../apis-default/arkts-apis/arkts-uiobserver-tabcontentinfo-i.md)&gt; | No | Target listener to unregister. |
 

@@ -51,6 +51,24 @@ getExposureMeteringMode(): ExposureMeteringMode
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal.<br>**适用版本：** 24+ |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getExposureMeteringMode(photoSession: camera.PhotoSession): camera.ExposureMeteringMode {
+  let meteringMode: camera.ExposureMeteringMode = camera.ExposureMeteringMode.MATRIX;
+  try {
+    meteringMode = photoSession.getExposureMeteringMode();
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The getExposureMeteringMode call failed. error code: ${err.code}`);
+  }
+  return meteringMode;
+}
+```
+
 ## setExposureMeteringMode
 
 ```TypeScript
@@ -83,4 +101,20 @@ setExposureMeteringMode(aeMeteringMode: ExposureMeteringMode): void
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect.<br>**适用版本：** 12 - 23 |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal.<br>**适用版本：** 24+ |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setExposureMeteringMode(photoSession: camera.PhotoSession, aeMeteringMode: camera.ExposureMeteringMode): void {
+  try {
+    photoSession.setExposureMeteringMode(aeMeteringMode);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The setExposureMeteringMode call failed. error code: ${err.code}`);
+  }
+}
+```
 

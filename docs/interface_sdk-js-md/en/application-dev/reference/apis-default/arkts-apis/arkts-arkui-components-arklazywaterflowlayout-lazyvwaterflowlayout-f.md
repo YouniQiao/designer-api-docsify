@@ -36,7 +36,7 @@ Defines LazyVWaterFlowLayout Component.
 
 | Type | Description |
 | --- | --- |
-| [LazyVWaterFlowLayoutAttribute](arkts-arkuicomponentsarklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) |  |
+| [LazyVWaterFlowLayoutAttribute](arkts-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) |  |
 
 
 ## LazyVWaterFlowLayout
@@ -65,12 +65,12 @@ Defines LazyVWaterFlowLayout Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | CustomBuilderT&lt;[LazyVWaterFlowLayoutAttribute](arkts-arkuicomponentsarklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md)&gt; | Yes | The style to create a LazyVWaterFlowLayout. |
+| style_ | CustomBuilderT&lt;[LazyVWaterFlowLayoutAttribute](arkts-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md)&gt; | Yes | The style to create a LazyVWaterFlowLayout. |
 | content_ | CustomBuilder | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyVWaterFlowLayoutAttribute](arkts-arkuicomponentsarklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) | The attribute of the LazyVWaterFlowLayout. |
+| [LazyVWaterFlowLayoutAttribute](arkts-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) | The attribute of the LazyVWaterFlowLayout. |
 

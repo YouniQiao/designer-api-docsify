@@ -30,7 +30,7 @@ export function onNavDestinationUpdate(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [NavDestinationSwitchObserverOptions](../../apis-arkui/arkts-apis/arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | 是 | 指定监听的Navigation的id。 |
+| options | [NavDestinationSwitchObserverOptions](arkts-uiobserver-navdestinationswitchobserveroptions-i.md) | 是 | 指定监听的Navigation的id。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | 是 | 回调函数。返回当前的NavDestination组件状态。 |
 
 

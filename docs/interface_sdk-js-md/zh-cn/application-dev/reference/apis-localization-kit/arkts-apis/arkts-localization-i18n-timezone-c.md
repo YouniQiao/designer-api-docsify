@@ -88,6 +88,14 @@ import { i18n } from '@kit.LocalizationKit';
 let ids: Array<string> = i18n.TimeZone.getAvailableIDs();
 ```
 
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// 共支持742个ID。每一个ID由使用中划线分割的两部分组成，格式为 source-destination。例如ids = ['Han-Latin','Latin-ASCII', 'Amharic-Latin/BGN','Accents-Any', ...]，Han-Latin表示汉语转为译拉丁文，Amharic-Latin表示阿姆哈拉语转为拉丁文。
+// 更多使用信息可以参考ISO-15924。
+let ids: string[] = i18n.Transliterator.getAvailableIDs();
+```
+
 ## getAvailableZoneCityIDs
 
 ```TypeScript
@@ -186,6 +194,13 @@ getDisplayName(locale?: string, isDST?: boolean): string
 | string | 时区对象名称在指定语言下的翻译。 |
 
 **示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let calendar: i18n.Calendar = i18n.getCalendar('en-US', 'buddhist');
+let calendarName: string = calendar.getDisplayName('zh'); // calendarName = '佛历'
+```
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -401,6 +416,31 @@ public getZoneRules(): ZoneRules
 | --- | --- |
 | [ZoneRules](../../apis-default/arkts-apis/arkts-i18n-zonerules-c.md) | 时区跳变规则，包含跳变的时间点、跳变前后的偏移量信息。 |
 
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let tzId: string = 'America/Tijuana';
+let timeZone: i18n.TimeZone = i18n.getTimeZone(tzId);
+let zoneRules: i18n.ZoneRules = timeZone.getZoneRules();
+let date = new Date(2025, 4, 13);
+let zoneOffsetTransition: i18n.ZoneOffsetTransition =
+    zoneRules.nextTransition(date.getTime()); // 获取2025年5月13日以后的下一个时区跳变对象
+zoneOffsetTransition.getMilliseconds(); // 跳变点的时间戳: 1762074000000
+zoneOffsetTransition.getOffsetAfter(); // 跳变后的偏移量: -28800000
+zoneOffsetTransition.getOffsetBefore(); // 跳变前的偏移量: -25200000
+// 将跳变点时间格式化
+let dateTimeFormat: Intl.DateTimeFormat = new Intl.DateTimeFormat('en-US', {
+  timeZone: tzId,
+  dateStyle: 'long',
+  timeStyle: 'long',
+  hour12: false
+});
+let dateFormat: string =
+  dateTimeFormat.format(new Date(zoneOffsetTransition.getMilliseconds())); // November 2, 2025, 1:00:00 PST
+```
+
 ## isDaylightSavingTime
 
 ```TypeScript
@@ -430,6 +470,13 @@ public isDaylightSavingTime(date: Date): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 是否处于夏令时。true表示处于夏令时，false表示不处于夏令时。 |
+
+**示例**
+
+```TypeScript
+let timezone: i18n.TimeZone = i18n.getTimeZone('Asia/Shanghai');
+let isDST = timezone.isDaylightSavingTime(new Date(2026, 3, 15));
+```
 
 ## setAppDefaultTimeZoneById
 

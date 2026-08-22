@@ -86,24 +86,6 @@ Other event type, the default value is **2**.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
-## INVALID_LABEL_ID
-
-```TypeScript
-static readonly INVALID_LABEL_ID: -1
-```
-
-Invalid event type, the default value is **-1**.
-
-**Type:** -1
-
-**Since:** 7
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Event-static readonly INVALID_LABEL_ID: -1--><!--Device-Event-static readonly INVALID_LABEL_ID: -1-End-->
-
-**System capability:** SystemCapability.Applications.ContactsData
-
 ## eventDate
 
 ```TypeScript
@@ -119,6 +101,24 @@ Event date.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Event-eventDate: string--><!--Device-Event-eventDate: string-End-->
+
+**System capability:** SystemCapability.Applications.ContactsData
+
+## INVALID_LABEL_ID
+
+```TypeScript
+static readonly INVALID_LABEL_ID: -1
+```
+
+Invalid event type, the default value is **-1**.
+
+**Type:** -1
+
+**Since:** 7
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Event-static readonly INVALID_LABEL_ID: -1--><!--Device-Event-static readonly INVALID_LABEL_ID: -1-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 

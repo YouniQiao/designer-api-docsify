@@ -18,7 +18,7 @@ Represents the callback invoked when resource loading is intercepted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [OnLoadInterceptEvent](arkts-arkui-atomicserviceatomicserviceweb-onloadinterceptevent-i.md) | Yes | Event triggered when resource loading is intercepted. |
+| event | [OnLoadInterceptEvent](arkts-arkui-atomicservice-atomicserviceweb-onloadinterceptevent-i.md) | Yes | Event triggered when resource loading is intercepted. |
 
 **Return value:**
 

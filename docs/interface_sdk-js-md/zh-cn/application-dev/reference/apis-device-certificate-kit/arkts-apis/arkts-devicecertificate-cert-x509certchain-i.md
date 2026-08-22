@@ -284,6 +284,298 @@ function stringToUint8Array(str: string): Uint8Array {
   return new Uint8Array(arr);
 }
 
+let certData = '-----BEGIN CERTIFICATE-----\n' +
+  'MIID1TCCAr2gAwIBAgIITXr1++kFUU4wDQYJKoZIhvcNAQELBQAwcDELMAkGA1UE\n' +
+  'BhMCQ04xEjAQBgNVBAgTCWd1YW5nZG9uZzERMA8GA1UEBxMIc2hlbnpoZW4xEjAQ\n' +
+  'BgNVBAoTCXRlc3RTZWNDYTESMBAGA1UECxMJdGVzdFNlY0NhMRIwEAYDVQQDEwl0\n' +
+  'ZXN0U2VjQ2EwHhcNMjMxMjIxMDAwMDAwWhcNMjcxMjIwMjM1OTU5WjBxMQswCQYD\n' +
+  'VQQGEwJDTjEOMAwGA1UECBMFZ2Fuc3UxEDAOBgNVBAcTB2xhbnpob3UxFDASBgNV\n' +
+  'BAoTC3Rlc3RUaGlyZENhMRQwEgYDVQQLEwt0ZXN0VGhpcmRDYTEUMBIGA1UEAxML\n' +
+  'dGVzdFRoaXJkQ2EwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDJMKSq\n' +
+  'Fn4G4EJATauw+4s+n/JbINBAiuhzURzzdt2T8JJQLDV9RHj4mZt84yv6lqEpl2fm\n' +
+  'gIClfu173pEV51/PSq5IaV481u/Dz/OTy9TwfxmIXAWdNpyodDOg4I9K7LC01ge8\n' +
+  'xxyKFi7k7m2eTGA4dYQM0E0AEXzCpg2JN3IIIPhzHCIVJmYjcbVxiaFkvT4ZFFUk\n' +
+  '4rDSbAQdn6dJ29msrFm8iGhMGC/bzq9Bii38Qg4y4o89QYiboRWCxv3XfuibT+jw\n' +
+  'O3pmfsFuT8/bKOWVm94FmRxiKuj6iE8UVewxtByzDgAsBtJKDjaCv3IkqfbIu+sq\n' +
+  '/eeJkVJRJXAP3ZpLAgMBAAGjcjBwMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYE\n' +
+  'FIxvPSwEmjOMW10H+gn2gy5HvMmMMAsGA1UdDwQEAwIBBjARBglghkgBhvhCAQEE\n' +
+  'BAMCAAcwHgYJYIZIAYb4QgENBBEWD3hjYSBjZXJ0aWZpY2F0ZTANBgkqhkiG9w0B\n' +
+  'AQsFAAOCAQEAWu0u72g5y1weexPoJQnUgcwVtuC+/tTS9YvyCtKYE91gn97LSWn9\n' +
+  'mXXGmLceU27B8JwhER9JeiQO1SUdDcvlfb5vt6eB+5cbZcgeERUBP8t0znh7DbMg\n' +
+  '4TFjt9gZ970PZ1OlTBNPoZNRBKIox61KVUhiVKTVSbXlVP1yUF1uSlSq+0NYayHw\n' +
+  'MnX1BeLxbAcAsTPYHjoeFJIrGkKlydLyt/8hDQzpLRW5uEUTjjqLh7vef0OaOP80\n' +
+  'MmADt6ojRYvwdMDHF0ASJyupLQ+hiRLVadciK8Z5W34JGN2jwEw5X3nXyAgErIJZ\n' +
+  'pqdTflnFLnSwy5M3QHB+xjYAcS9l1br2LA==\n' +
+  '-----END CERTIFICATE-----\n';
+
+// 证书二进制数据，需业务自行赋值。
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(certData),
+  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+async function certHashCode() {
+  let x509Cert: cert.X509Cert = {} as cert.X509Cert;
+  try {
+    x509Cert = await cert.createX509Cert(encodingBlob);
+    console.info('createX509Cert result: success.');
+    console.info('certHashCode success: ' + x509Cert.hashCode());
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`createX509Cert failed, errCode: ${e.code}, errMsg: ${e.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@ohos.base';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let certData = "-----BEGIN CERTIFICATE-----\n" +
+  "MIID1TCCAr2gAwIBAgIITXr1++kFUU4wDQYJKoZIhvcNAQELBQAwcDELMAkGA1UE\n" +
+  "BhMCQ04xEjAQBgNVBAgTCWd1YW5nZG9uZzERMA8GA1UEBxMIc2hlbnpoZW4xEjAQ\n" +
+  "BgNVBAoTCXRlc3RTZWNDYTESMBAGA1UECxMJdGVzdFNlY0NhMRIwEAYDVQQDEwl0\n" +
+  "ZXN0U2VjQ2EwHhcNMjMxMjIxMDAwMDAwWhcNMjcxMjIwMjM1OTU5WjBxMQswCQYD\n" +
+  "VQQGEwJDTjEOMAwGA1UECBMFZ2Fuc3UxEDAOBgNVBAcTB2xhbnpob3UxFDASBgNV\n" +
+  "BAoTC3Rlc3RUaGlyZENhMRQwEgYDVQQLEwt0ZXN0VGhpcmRDYTEUMBIGA1UEAxML\n" +
+  "dGVzdFRoaXJkQ2EwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDJMKSq\n" +
+  "Fn4G4EJATauw+4s+n/JbINBAiuhzURzzdt2T8JJQLDV9RHj4mZt84yv6lqEpl2fm\n" +
+  "gIClfu173pEV51/PSq5IaV481u/Dz/OTy9TwfxmIXAWdNpyodDOg4I9K7LC01ge8\n" +
+  "xxyKFi7k7m2eTGA4dYQM0E0AEXzCpg2JN3IIIPhzHCIVJmYjcbVxiaFkvT4ZFFUk\n" +
+  "4rDSbAQdn6dJ29msrFm8iGhMGC/bzq9Bii38Qg4y4o89QYiboRWCxv3XfuibT+jw\n" +
+  "O3pmfsFuT8/bKOWVm94FmRxiKuj6iE8UVewxtByzDgAsBtJKDjaCv3IkqfbIu+sq\n" +
+  "/eeJkVJRJXAP3ZpLAgMBAAGjcjBwMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYE\n" +
+  "FIxvPSwEmjOMW10H+gn2gy5HvMmMMAsGA1UdDwQEAwIBBjARBglghkgBhvhCAQEE\n" +
+  "BAMCAAcwHgYJYIZIAYb4QgENBBEWD3hjYSBjZXJ0aWZpY2F0ZTANBgkqhkiG9w0B\n" +
+  "AQsFAAOCAQEAWu0u72g5y1weexPoJQnUgcwVtuC+/tTS9YvyCtKYE91gn97LSWn9\n" +
+  "mXXGmLceU27B8JwhER9JeiQO1SUdDcvlfb5vt6eB+5cbZcgeERUBP8t0znh7DbMg\n" +
+  "4TFjt9gZ970PZ1OlTBNPoZNRBKIox61KVUhiVKTVSbXlVP1yUF1uSlSq+0NYayHw\n" +
+  "MnX1BeLxbAcAsTPYHjoeFJIrGkKlydLyt/8hDQzpLRW5uEUTjjqLh7vef0OaOP80\n" +
+  "MmADt6ojRYvwdMDHF0ASJyupLQ+hiRLVadciK8Z5W34JGN2jwEw5X3nXyAgErIJZ\n" +
+  "pqdTflnFLnSwy5M3QHB+xjYAcS9l1br2LA==\n" +
+  "-----END CERTIFICATE-----\n";
+
+// 证书二进制数据，需业务自行赋值。
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(certData),
+  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+async function certHashCode() {
+  let x509Cert: cert.X509Cert;
+  try {
+    x509Cert = await cert.createX509Cert(encodingBlob);
+    console.info('createX509Cert result: success.');
+    console.info('certHashCode success: ' + x509Cert.hashCode());
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error('createX509Cert failed, errCode: ' + e.code + ', errMsg: ' + e.message);
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let crlData = '-----BEGIN X509 CRL-----\n' +
+  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
+  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
+  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
+  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
+  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
+  'eavsH0Q3\n' +
+  '-----END X509 CRL-----\n';
+
+// 证书吊销列表二进制数据，需业务自行赋值。
+let crlEncodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(crlData),
+  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+async function crlHashCode() {
+  let x509Crl: cert.X509CRL = {} as cert.X509CRL;
+  try {
+    x509Crl = await cert.createX509CRL(crlEncodingBlob);
+    console.info('createX509CRL result: success.');
+    console.info('crlHashCode success: ' + x509Crl.hashCode());
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`createX509CRL failed, errCode: ${e.code}, errMsg: ${e.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@ohos.base';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let crlData = '-----BEGIN X509 CRL-----\n' +
+  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
+  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
+  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
+  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
+  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
+  'eavsH0Q3\n' +
+  '-----END X509 CRL-----\n';
+
+// 证书吊销列表二进制数据，需业务自行赋值。
+let crlEncodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(crlData),
+  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+async function crlHashCode() {
+  let x509Crl: cert.X509CRL;
+  try {
+    x509Crl = await cert.createX509CRL(crlEncodingBlob);
+    console.info('createX509CRL result: success.');
+    console.info('crlHashCode success: ' + x509Crl.hashCode());
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error('createX509CRL failed, errCode: ' + e.code + ', errMsg: ' + e.message);
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let crlData = '-----BEGIN X509 CRL-----\n' +
+  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
+  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
+  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
+  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
+  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
+  'eavsH0Q3\n' +
+  '-----END X509 CRL-----\n';
+
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(crlData),
+  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+async function certHashCode() {
+  let x509Crl: cert.X509CRL = {} as cert.X509CRL;
+  try {
+    x509Crl = await cert.createX509CRL(encodingBlob);
+    console.info('createX509CRL result: success.');
+    console.info('hashCode success: ' + x509Crl.getRevokedCert(BigInt(1000)).hashCode());
+  } catch (error) {
+    let e: BusinessError = error as BusinessError;
+    console.error(`createX509CRL failed, errCode: ${e.code}, errMsg: ${e.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@ohos.base';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let crlData = '-----BEGIN X509 CRL-----\n' +
+  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
+  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
+  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
+  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
+  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
+  'eavsH0Q3\n' +
+  '-----END X509 CRL-----\n';
+
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(crlData),
+  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+async function certHashCode() {
+  let x509Crl: cert.X509CRL;
+  try {
+    x509Crl = await cert.createX509CRL(encodingBlob);
+    console.info('createX509CRL result: success.');
+    console.info('hashCode success: ' + x509Crl.getRevokedCert(BigInt(1000)).hashCode());
+  } catch (error) {
+    let e: BusinessError = error as BusinessError;
+    console.error('createX509CRL failed, errCode: ' + e.code + ', errMsg: ' + e.message);
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
 let certChainData = '-----BEGIN CERTIFICATE-----\n' +
   'MIIGVjCCBT6gAwIBAgIQBMO0W3CU9LWVw1bE/jqYojANBgkqhkiG9w0BAQsFADBE\n' +
   'MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMR4wHAYDVQQDExVH\n' +
@@ -504,6 +796,506 @@ toString(): string
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let certData = '-----BEGIN CERTIFICATE-----\n' +
+  'MIID1TCCAr2gAwIBAgIITXr1++kFUU4wDQYJKoZIhvcNAQELBQAwcDELMAkGA1UE\n' +
+  'BhMCQ04xEjAQBgNVBAgTCWd1YW5nZG9uZzERMA8GA1UEBxMIc2hlbnpoZW4xEjAQ\n' +
+  'BgNVBAoTCXRlc3RTZWNDYTESMBAGA1UECxMJdGVzdFNlY0NhMRIwEAYDVQQDEwl0\n' +
+  'ZXN0U2VjQ2EwHhcNMjMxMjIxMDAwMDAwWhcNMjcxMjIwMjM1OTU5WjBxMQswCQYD\n' +
+  'VQQGEwJDTjEOMAwGA1UECBMFZ2Fuc3UxEDAOBgNVBAcTB2xhbnpob3UxFDASBgNV\n' +
+  'BAoTC3Rlc3RUaGlyZENhMRQwEgYDVQQLEwt0ZXN0VGhpcmRDYTEUMBIGA1UEAxML\n' +
+  'dGVzdFRoaXJkQ2EwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDJMKSq\n' +
+  'Fn4G4EJATauw+4s+n/JbINBAiuhzURzzdt2T8JJQLDV9RHj4mZt84yv6lqEpl2fm\n' +
+  'gIClfu173pEV51/PSq5IaV481u/Dz/OTy9TwfxmIXAWdNpyodDOg4I9K7LC01ge8\n' +
+  'xxyKFi7k7m2eTGA4dYQM0E0AEXzCpg2JN3IIIPhzHCIVJmYjcbVxiaFkvT4ZFFUk\n' +
+  '4rDSbAQdn6dJ29msrFm8iGhMGC/bzq9Bii38Qg4y4o89QYiboRWCxv3XfuibT+jw\n' +
+  'O3pmfsFuT8/bKOWVm94FmRxiKuj6iE8UVewxtByzDgAsBtJKDjaCv3IkqfbIu+sq\n' +
+  '/eeJkVJRJXAP3ZpLAgMBAAGjcjBwMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYE\n' +
+  'FIxvPSwEmjOMW10H+gn2gy5HvMmMMAsGA1UdDwQEAwIBBjARBglghkgBhvhCAQEE\n' +
+  'BAMCAAcwHgYJYIZIAYb4QgENBBEWD3hjYSBjZXJ0aWZpY2F0ZTANBgkqhkiG9w0B\n' +
+  'AQsFAAOCAQEAWu0u72g5y1weexPoJQnUgcwVtuC+/tTS9YvyCtKYE91gn97LSWn9\n' +
+  'mXXGmLceU27B8JwhER9JeiQO1SUdDcvlfb5vt6eB+5cbZcgeERUBP8t0znh7DbMg\n' +
+  '4TFjt9gZ970PZ1OlTBNPoZNRBKIox61KVUhiVKTVSbXlVP1yUF1uSlSq+0NYayHw\n' +
+  'MnX1BeLxbAcAsTPYHjoeFJIrGkKlydLyt/8hDQzpLRW5uEUTjjqLh7vef0OaOP80\n' +
+  'MmADt6ojRYvwdMDHF0ASJyupLQ+hiRLVadciK8Z5W34JGN2jwEw5X3nXyAgErIJZ\n' +
+  'pqdTflnFLnSwy5M3QHB+xjYAcS9l1br2LA==\n' +
+  '-----END CERTIFICATE-----\n';
+
+// 证书二进制数据，需业务自行赋值。
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(certData),
+  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+async function certToString() {
+  let x509Cert: cert.X509Cert = {} as cert.X509Cert;
+  try {
+    x509Cert = await cert.createX509Cert(encodingBlob);
+    console.info('createX509Cert result: success.');
+    console.info('certToString success: ' + x509Cert.toString());
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`createX509Cert failed, errCode: ${e.code}, errMsg: ${e.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@ohos.base';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let certData = "-----BEGIN CERTIFICATE-----\n" +
+  "MIID1TCCAr2gAwIBAgIITXr1++kFUU4wDQYJKoZIhvcNAQELBQAwcDELMAkGA1UE\n" +
+  "BhMCQ04xEjAQBgNVBAgTCWd1YW5nZG9uZzERMA8GA1UEBxMIc2hlbnpoZW4xEjAQ\n" +
+  "BgNVBAoTCXRlc3RTZWNDYTESMBAGA1UECxMJdGVzdFNlY0NhMRIwEAYDVQQDEwl0\n" +
+  "ZXN0U2VjQ2EwHhcNMjMxMjIxMDAwMDAwWhcNMjcxMjIwMjM1OTU5WjBxMQswCQYD\n" +
+  "VQQGEwJDTjEOMAwGA1UECBMFZ2Fuc3UxEDAOBgNVBAcTB2xhbnpob3UxFDASBgNV\n" +
+  "BAoTC3Rlc3RUaGlyZENhMRQwEgYDVQQLEwt0ZXN0VGhpcmRDYTEUMBIGA1UEAxML\n" +
+  "dGVzdFRoaXJkQ2EwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDJMKSq\n" +
+  "Fn4G4EJATauw+4s+n/JbINBAiuhzURzzdt2T8JJQLDV9RHj4mZt84yv6lqEpl2fm\n" +
+  "gIClfu173pEV51/PSq5IaV481u/Dz/OTy9TwfxmIXAWdNpyodDOg4I9K7LC01ge8\n" +
+  "xxyKFi7k7m2eTGA4dYQM0E0AEXzCpg2JN3IIIPhzHCIVJmYjcbVxiaFkvT4ZFFUk\n" +
+  "4rDSbAQdn6dJ29msrFm8iGhMGC/bzq9Bii38Qg4y4o89QYiboRWCxv3XfuibT+jw\n" +
+  "O3pmfsFuT8/bKOWVm94FmRxiKuj6iE8UVewxtByzDgAsBtJKDjaCv3IkqfbIu+sq\n" +
+  "/eeJkVJRJXAP3ZpLAgMBAAGjcjBwMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYE\n" +
+  "FIxvPSwEmjOMW10H+gn2gy5HvMmMMAsGA1UdDwQEAwIBBjARBglghkgBhvhCAQEE\n" +
+  "BAMCAAcwHgYJYIZIAYb4QgENBBEWD3hjYSBjZXJ0aWZpY2F0ZTANBgkqhkiG9w0B\n" +
+  "AQsFAAOCAQEAWu0u72g5y1weexPoJQnUgcwVtuC+/tTS9YvyCtKYE91gn97LSWn9\n" +
+  "mXXGmLceU27B8JwhER9JeiQO1SUdDcvlfb5vt6eB+5cbZcgeERUBP8t0znh7DbMg\n" +
+  "4TFjt9gZ970PZ1OlTBNPoZNRBKIox61KVUhiVKTVSbXlVP1yUF1uSlSq+0NYayHw\n" +
+  "MnX1BeLxbAcAsTPYHjoeFJIrGkKlydLyt/8hDQzpLRW5uEUTjjqLh7vef0OaOP80\n" +
+  "MmADt6ojRYvwdMDHF0ASJyupLQ+hiRLVadciK8Z5W34JGN2jwEw5X3nXyAgErIJZ\n" +
+  "pqdTflnFLnSwy5M3QHB+xjYAcS9l1br2LA==\n" +
+  "-----END CERTIFICATE-----\n";
+
+// 证书二进制数据，需业务自行赋值。
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(certData),
+  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+async function certToString() {
+  let x509Cert: cert.X509Cert;
+  try {
+    x509Cert = await cert.createX509Cert(encodingBlob);
+    console.info('createX509Cert result: success.');
+    console.info('certToString success: ' + x509Cert.toString());
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error('createX509Cert failed, errCode: ' + e.code + ', errMsg: ' + e.message);
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let certData = '-----BEGIN CERTIFICATE-----\n' +
+    'MIIDgTCCAmmgAwIBAgIGAXKnJjrAMA0GCSqGSIb3DQEBCwUAMFcxCzAJBgNVBAYT\n' +
+    'AkNOMQ8wDQYDVQQIDAbpmZXopb8xDzANBgNVBAcMBuilv+WuiTEPMA0GA1UECgwG\n' +
+    '5rWL6K+VMRUwEwYDVQQDDAzkuK3mlofmtYvor5UwHhcNMjUwMzA1MDk1MTIzWhcN\n' +
+    'MzUwMzAzMDk1MTIzWjBXMQswCQYDVQQGEwJDTjEPMA0GA1UECAwG6ZmV6KW/MQ8w\n' +
+    'DQYDVQQHDAbopb/lrokxDzANBgNVBAoMBua1i+ivlTEVMBMGA1UEAwwM5Lit5paH\n' +
+    '5rWL6K+VMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkonJ4UIuxRzX\n' +
+    'gr8fLU1PjadDWJp/GrxkYGe30TXqQHDh7O14Rc0xxacj3aLMNffzj+rhxUzl3C9p\n' +
+    'wLzIVO2e3iC3Fx2csRzOSIdbimR8879/3uaW8CPkgqlKQw8FDwrGk0S26sdDV8of\n' +
+    '8AAHlrnUO2yyL53rAunn4ZKo4EyxHrvHmZKuv006onj0SByu8RNHx97v+4KaaY7p\n' +
+    'HngTC55F0KVALiNGygJHeKP7GGxS7kpYV/CvBuABpA00WMqc7nmo2vCa4yC/mIk2\n' +
+    '5CF7l860rQ50HLjrmlDYJHpc8p88NJ2BEyHQWiN4YkSKDAKNr+SssD3Tf2wHSYxA\n' +
+    'UwdgsatGlwIDAQABo1MwUTAdBgNVHQ4EFgQUMFEfTXLVm7D6fsC7LYtTMhIgVQUw\n' +
+    'HwYDVR0jBBgwFoAUMFEfTXLVm7D6fsC7LYtTMhIgVQUwDwYDVR0TAQH/BAUwAwEB\n' +
+    '/zANBgkqhkiG9w0BAQsFAAOCAQEABCr9+iK30OSp67ksK1qhkKCzwKYDH2E5KEF4\n' +
+    '1E1/o4haXIR14V+5DGcX/1OH3Znd863TecQdNnCFMGArWygq8j7O0uStbWMb3Rhu\n' +
+    '+7RJ9GOCbBSeR3v2fC6+T3LI0Sm1G77xIYADmHGt33IW0DRKr44iOalwi6IbcqzD\n' +
+    's9XlNO8e6ht2apeL656fjv1gCo/PA7e+A0QHn6zapggzEccEwKdFixCsw5ZMZaHm\n' +
+    'adGz3lBCK+0QKYXYL1CtX/6wcDgQ9PuZSgdQgrudLKRN+843m3LJSUJ7AIyL1kQW\n' +
+    'kY1ah7eSx4wwaKrLOM06ZkzORMnY5GAy8Aup+UCh6mWU3dPv3w==\n' +
+    '-----END CERTIFICATE-----\n';
+
+// 证书二进制数据，需业务自行赋值。
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(certData),
+  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+async function certToString() {
+  let x509Cert: cert.X509Cert = {} as cert.X509Cert;
+  try {
+    x509Cert = await cert.createX509Cert(encodingBlob);
+    console.info('createX509Cert result: success.');
+    console.info('certToString success: ' + x509Cert.toString(cert.EncodingType.ENCODING_UTF8));
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`createX509Cert failed, errCode: ${e.code}, errMsg: ${e.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@ohos.base';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let certData = '-----BEGIN CERTIFICATE-----\n' +
+  'MIIDgTCCAmmgAwIBAgIGAXKnJjrAMA0GCSqGSIb3DQEBCwUAMFcxCzAJBgNVBAYT\n' +
+  'AkNOMQ8wDQYDVQQIDAbpmZXopb8xDzANBgNVBAcMBuilv+WuiTEPMA0GA1UECgwG\n' +
+  '5rWL6K+VMRUwEwYDVQQDDAzkuK3mlofmtYvor5UwHhcNMjUwMzA1MDk1MTIzWhcN\n' +
+  'MzUwMzAzMDk1MTIzWjBXMQswCQYDVQQGEwJDTjEPMA0GA1UECAwG6ZmV6KW/MQ8w\n' +
+  'DQYDVQQHDAbopb/lrokxDzANBgNVBAoMBua1i+ivlTEVMBMGA1UEAwwM5Lit5paH\n' +
+  '5rWL6K+VMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkonJ4UIuxRzX\n' +
+  'gr8fLU1PjadDWJp/GrxkYGe30TXqQHDh7O14Rc0xxacj3aLMNffzj+rhxUzl3C9p\n' +
+  'wLzIVO2e3iC3Fx2csRzOSIdbimR8879/3uaW8CPkgqlKQw8FDwrGk0S26sdDV8of\n' +
+  '8AAHlrnUO2yyL53rAunn4ZKo4EyxHrvHmZKuv006onj0SByu8RNHx97v+4KaaY7p\n' +
+  'HngTC55F0KVALiNGygJHeKP7GGxS7kpYV/CvBuABpA00WMqc7nmo2vCa4yC/mIk2\n' +
+  '5CF7l860rQ50HLjrmlDYJHpc8p88NJ2BEyHQWiN4YkSKDAKNr+SssD3Tf2wHSYxA\n' +
+  'UwdgsatGlwIDAQABo1MwUTAdBgNVHQ4EFgQUMFEfTXLVm7D6fsC7LYtTMhIgVQUw\n' +
+  'HwYDVR0jBBgwFoAUMFEfTXLVm7D6fsC7LYtTMhIgVQUwDwYDVR0TAQH/BAUwAwEB\n' +
+  '/zANBgkqhkiG9w0BAQsFAAOCAQEABCr9+iK30OSp67ksK1qhkKCzwKYDH2E5KEF4\n' +
+  '1E1/o4haXIR14V+5DGcX/1OH3Znd863TecQdNnCFMGArWygq8j7O0uStbWMb3Rhu\n' +
+  '+7RJ9GOCbBSeR3v2fC6+T3LI0Sm1G77xIYADmHGt33IW0DRKr44iOalwi6IbcqzD\n' +
+  's9XlNO8e6ht2apeL656fjv1gCo/PA7e+A0QHn6zapggzEccEwKdFixCsw5ZMZaHm\n' +
+  'adGz3lBCK+0QKYXYL1CtX/6wcDgQ9PuZSgdQgrudLKRN+843m3LJSUJ7AIyL1kQW\n' +
+  'kY1ah7eSx4wwaKrLOM06ZkzORMnY5GAy8Aup+UCh6mWU3dPv3w==\n' +
+  '-----END CERTIFICATE-----\n';
+
+// 证书二进制数据，需业务自行赋值。
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(certData),
+  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+async function certToString() {
+  let x509Cert: cert.X509Cert;
+  try {
+    x509Cert = await cert.createX509Cert(encodingBlob);
+    console.info('createX509Cert result: success.');
+    console.info('certToString success: ' + x509Cert.toString(cert.EncodingType.ENCODING_UTF8));
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error('createX509Cert failed, errCode: ' + e.code + ', errMsg: ' + e.message);
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let crlData = '-----BEGIN X509 CRL-----\n' +
+  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
+  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
+  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
+  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
+  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
+  'eavsH0Q3\n' +
+  '-----END X509 CRL-----\n';
+
+// 证书吊销列表二进制数据，需业务自行赋值。
+let crlEncodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(crlData),
+  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+async function crlToString() {
+  let x509Crl: cert.X509CRL = {} as cert.X509CRL;
+  try {
+    x509Crl = await cert.createX509CRL(crlEncodingBlob);
+    console.info('createX509CRL result: success.');
+    console.info('crlToString success: ' + x509Crl.toString());
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`createX509CRL failed, errCode: ${e.code}, errMsg: ${e.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@ohos.base';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let crlData = '-----BEGIN X509 CRL-----\n' +
+  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
+  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
+  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
+  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
+  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
+  'eavsH0Q3\n' +
+  '-----END X509 CRL-----\n';
+
+// 证书吊销列表二进制数据，需业务自行赋值。
+let crlEncodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(crlData),
+  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+async function crlToString() {
+  let x509Crl: cert.X509CRL;
+  try {
+    x509Crl = await cert.createX509CRL(crlEncodingBlob);
+    console.info('createX509CRL result: success.');
+    console.info('crlToString success: ' + x509Crl.toString());
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error('createX509CRL failed, errCode: ' + e.code + ', errMsg: ' + e.message);
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let crlData = '-----BEGIN X509 CRL-----\n' +
+  'MIIByzCBtAIBATANBgkqhkiG9w0BAQsFADBXMQswCQYDVQQGEwJDTjEPMA0GA1UE\n' +
+  'CAwG6ZmV6KW/MQ8wDQYDVQQHDAbopb/lrokxDzANBgNVBAoMBua1i+ivlTEVMBMG\n' +
+  'A1UEAwwM5Lit5paH5rWL6K+VFw0yNDEwMTYwODUwMDlaFw0yNDExMTUwODUwMDla\n' +
+  'MBkwFwIGAXKnJjrAFw0yNDEwMTYwODQ5NDBaoA4wDDAKBgNVHRQEAwIBADANBgkq\n' +
+  'hkiG9w0BAQsFAAOCAQEAU0JPK/DnGmjCi5lKyun506JE+FVDuQsEWuF5CZPqE2um\n' +
+  'hA04Qffi+8AfwLpG2KPBaAYTteU4fx30y8Wm0kLutalk32FgrbQX0VQ7EaCOmkMU\n' +
+  '2dnQMmFmaFiVcOTaRzgqDOYKuzSAptCo6hqtk9kgjbda5HnsNiVC7dNMRp1Jlzwr\n' +
+  'k/42mqZ3fFIy3wYLaxRlq368BX3u94J9Cx754V2V/XEApiRI/FsiSRzRX+jfUBa4\n' +
+  '+wwu3WhWxisQj6z3bBkQD4RTg3S+ic8hhP44wt/1MmSLG946Dc9uVYJKUVZqTco9\n' +
+  'QDoDwYfBJBzcXjManSkPsGCb7RfTAr5HqcEtIHsK+w==\n' +
+  '-----END X509 CRL-----\n';
+// 证书吊销列表二进制数据，需业务自行赋值。
+let crlEncodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(crlData),
+  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+async function crlToString() {
+  let x509Crl: cert.X509CRL = {} as cert.X509CRL;
+  try {
+    x509Crl = await cert.createX509CRL(crlEncodingBlob);
+    console.info('createX509CRL result: success.');
+    console.info('crlToString success: ' + x509Crl.toString(cert.EncodingType.ENCODING_UTF8));
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`createX509CRL failed, errCode: ${e.code}, errMsg: ${e.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@ohos.base';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let crlData = '-----BEGIN X509 CRL-----\n' +
+  'MIIByzCBtAIBATANBgkqhkiG9w0BAQsFADBXMQswCQYDVQQGEwJDTjEPMA0GA1UE\n' +
+  'CAwG6ZmV6KW/MQ8wDQYDVQQHDAbopb/lrokxDzANBgNVBAoMBua1i+ivlTEVMBMG\n' +
+  'A1UEAwwM5Lit5paH5rWL6K+VFw0yNDEwMTYwODUwMDlaFw0yNDExMTUwODUwMDla\n' +
+  'MBkwFwIGAXKnJjrAFw0yNDEwMTYwODQ5NDBaoA4wDDAKBgNVHRQEAwIBADANBgkq\n' +
+  'hkiG9w0BAQsFAAOCAQEAU0JPK/DnGmjCi5lKyun506JE+FVDuQsEWuF5CZPqE2um\n' +
+  'hA04Qffi+8AfwLpG2KPBaAYTteU4fx30y8Wm0kLutalk32FgrbQX0VQ7EaCOmkMU\n' +
+  '2dnQMmFmaFiVcOTaRzgqDOYKuzSAptCo6hqtk9kgjbda5HnsNiVC7dNMRp1Jlzwr\n' +
+  'k/42mqZ3fFIy3wYLaxRlq368BX3u94J9Cx754V2V/XEApiRI/FsiSRzRX+jfUBa4\n' +
+  '+wwu3WhWxisQj6z3bBkQD4RTg3S+ic8hhP44wt/1MmSLG946Dc9uVYJKUVZqTco9\n' +
+  'QDoDwYfBJBzcXjManSkPsGCb7RfTAr5HqcEtIHsK+w==\n' +
+  '-----END X509 CRL-----\n';
+// 证书吊销列表二进制数据，需业务自行赋值。
+let crlEncodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(crlData),
+  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+async function crlToString() {
+  let x509Crl: cert.X509CRL;
+  try {
+    x509Crl = await cert.createX509CRL(crlEncodingBlob);
+    console.info('createX509CRL result: success.');
+    console.info('crlToString success: ' + x509Crl.toString(cert.EncodingType.ENCODING_UTF8));
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error('createX509CRL failed, errCode: ' + e.code + ', errMsg: ' + e.message);
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let crlData = '-----BEGIN X509 CRL-----\n' +
+  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
+  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
+  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
+  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
+  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
+  'eavsH0Q3\n' +
+  '-----END X509 CRL-----\n';
+
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(crlData),
+  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+async function certToString() {
+  let x509Crl: cert.X509CRL = {} as cert.X509CRL;
+  try {
+    x509Crl = await cert.createX509CRL(encodingBlob);
+    console.info('createX509CRL result: success.');
+    console.info('toString success: ' + x509Crl.getRevokedCert(BigInt(1000)).toString());
+  } catch (error) {
+    let e: BusinessError = error as BusinessError;
+    console.error(`createX509CRL failed, errCode: ${e.code}, errMsg: ${e.message}`);
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@ohos.base';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let crlData = '-----BEGIN X509 CRL-----\n' +
+  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
+  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
+  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
+  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
+  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
+  'eavsH0Q3\n' +
+  '-----END X509 CRL-----\n';
+
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(crlData),
+  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+async function certToString() {
+  let x509Crl: cert.X509CRL;
+  try {
+    x509Crl = await cert.createX509CRL(encodingBlob);
+    console.info('createX509CRL result: success.');
+    console.info('toString success: ' + x509Crl.getRevokedCert(BigInt(1000)).toString());
+  } catch (error) {
+    let e: BusinessError = error as BusinessError;
+    console.error('createX509CRL failed, errCode: ' + e.code + ', errMsg: ' + e.message);
+  }
+}
+```
 
 ArkTS-Dyn示例：
 
@@ -755,6 +1547,277 @@ validate(param: CertChainValidationParameters): Promise<CertChainValidationResul
 
 **示例**
 
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+// 证书链二进制数据。
+let certPem = '-----BEGIN CERTIFICATE-----\n' +
+  'MIIDTjCCAjagAwIBAgIBBDANBgkqhkiG9w0BAQsFADASMRAwDgYDVQQDDAdSb290\n' +
+  'IENBMB4XDTI0MDMxOTAyMDQwMVoXDTM0MDMxNzAyMDQwMVowEjEQMA4GA1UEAwwH\n' +
+  'ZGV2aWNlMjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMIXL3e7UE/c\n' +
+  'Z1dPVgRZ5L8gsQ/azuYVBvoFf7o8ksYrL7G1+qZIJjVRqZkuTirLW4GicbkIkPNW\n' +
+  'eix5cDhkjkC+q5SBCOrSSTTlvX3xcOY1gMlA5MgeBfGixFusq4d5VPF2KceZ20/a\n' +
+  'ygwGD0Uv0X81OERyPom/dYdJUvfaD9ifPFJ1fKIj/cPFG3yJK/ojpEfndZNdESQL\n' +
+  'TkoDekilg2UGOLtY6fb9Ns37ncuIj33gCS/R9m1tgtmqCTcgOQ4hwKhjVF3InmPO\n' +
+  '2BbWKvD1RUX+rHC2a2HHDQILOOtDTy8dHvE+qZlK0efrpRgoFEERJAGPi1GDGWiA\n' +
+  '7UX1c4MCxIECAwEAAaOBrjCBqzAJBgNVHRMEAjAAMB0GA1UdDgQWBBQbkAcMT7ND\n' +
+  'fGp3VPFzYHppZ1zxLTAfBgNVHSMEGDAWgBR0W/koCbvDtFGHUQZLM3j6HKsW2DAd\n' +
+  'BgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwCwYDVR0PBAQDAgeAMDIGCCsG\n' +
+  'AQUFBwEBBCYwJDAiBggrBgEFBQcwAYYWaHR0cHM6Ly8xMjcuMC4wLjE6OTk5OTAN\n' +
+  'BgkqhkiG9w0BAQsFAAOCAQEAF1OTzTmbklFOdZCxrF3zg9owUPJR5RB+PbuBlUfI\n' +
+  '8tkGXkMltQ8PN1dv6Cq+d8BluiJdWEzqVoJa/e5SHHJyYQSOhlurRG0GBXllVQ1I\n' +
+  'n1PFaI40+9X2X6wrEcdC5nbzogR1jSiksCiTcARMddj0Xrp5FMrFaaGY8M/xqzdW\n' +
+  'LTDl4nfbuxtA71cIjnE4kOcaemly9/S2wYWdPktsPxQPY1nPUOeJFI7o0sH3rK0c\n' +
+  'JSqtgAG8vnjK+jbx9RpkgqCsXgUbIahL573VTgxrNrsRjCuVal7XVxl/xOKXr6Er\n' +
+  'Gpc+OCrXbHNZkUQE5fZH3yL2tXd7EASEb6J3aEWHfF8YBA==\n' +
+  '-----END CERTIFICATE-----';
+
+let caPem = '-----BEGIN CERTIFICATE-----\n' +
+  'MIIC/zCCAeegAwIBAgIBATANBgkqhkiG9w0BAQsFADASMRAwDgYDVQQDDAdSb290\n' +
+  'IENBMB4XDTI0MDMxOTAyMDIyNFoXDTM0MDMxNzAyMDIyNFowEjEQMA4GA1UEAwwH\n' +
+  'Um9vdCBDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALxI5SDvRfKU\n' +
+  '6XaTeyh2LHlUK0rVSeYfXkYf5Mc3Pgucg+ewzQjxkACMx5NYaW1zfGDNPG1i5IZl\n' +
+  'cPeWNz1Tm2g6wTd+LyNoNOOmwfLV8pLXSfAukgNrBREf3BzVrbu7hvPd2MmLH23H\n' +
+  'OBM9uDPTIqu3n2CDN2EzwULjaSk2g+jvhVKsDLInu5uKPmZBFhs1FWKgcnVnlbi1\n' +
+  'AyAx4efheits6EO70oV6UufCEtS1VsBXQHZRAG4ogshWldRBVNxkU6yHAfg0mM/5\n' +
+  'EhrZsfh51fWqlrhNWrInjgNV3xIt5ebTIgKZWUlSVHEA/UqDoGfY+CsAJdteZWOW\n' +
+  'KjsrC/DK2O0CAwEAAaNgMF4wHQYDVR0OBBYEFHRb+SgJu8O0UYdRBkszePocqxbY\n' +
+  'MB8GA1UdIwQYMBaAFHRb+SgJu8O0UYdRBkszePocqxbYMA8GA1UdEwEB/wQFMAMB\n' +
+  'Af8wCwYDVR0PBAQDAgEGMA0GCSqGSIb3DQEBCwUAA4IBAQAKOT1ObfQNMN2wdfHq\n' +
+  'PQgFDDp6rBMbZe70LswPirSXljo4S/vfbG+gBoWCdu/SfsV+lyP75kg1wX0IQvzW\n' +
+  'xYNh864dgqPmGd0v8TIfM0UT0PpnowUyBHQ+E7LNYIOh/kjHbl3oERdEFA2PUyE9\n' +
+  'j3GLdg8oe/LqhEQCSAlH+v2RQgBZ9eVN+mSdUxwywm9U3acb0uqVkGiWK/ywumpg\n' +
+  'AmIZLMJtMVvg8uDkfy16Z4lChTEdNaJVUqPczUNk2kHXIF4we4be9HoOuTVz/SD/\n' +
+  'IsOhXn/BjS3jnhyS9fxo+opJf9zVTWI02Hlh1WVVtH/m3nIZblyAJhcjCHA2wZSz\n' +
+  'sSus\n' +
+  '-----END CERTIFICATE-----';
+
+let certPemData = stringToUint8Array(certPem);
+let caPemData = stringToUint8Array(caPem);
+
+let certPemDataLenData = new Uint8Array(new Uint16Array([certPemData.length]).buffer);
+let caPemDataLenData = new Uint8Array(new Uint16Array([caPemData.length]).buffer);
+
+let certChainBuff =
+  new Uint8Array(certPemDataLenData.length + certPemData.length + caPemDataLenData.length + caPemData.length);
+certChainBuff.set(certPemDataLenData);
+certChainBuff.set(certPemData, certPemDataLenData.length);
+certChainBuff.set(caPemDataLenData, certPemDataLenData.length + certPemData.length);
+certChainBuff.set(caPemData, certPemDataLenData.length + certPemData.length + caPemDataLenData.length);
+
+let certChainData: cert.CertChainData = {
+  data: certChainBuff,
+  // 证书链包含的证书个数，需业务自行赋值。
+  count: 2,
+  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+try {
+  let validator = cert.createCertChainValidator('PKIX');
+  validator.validate(certChainData, (error, _data) => {
+    if (error) {
+      console.error(`validate failed, errCode: ${error.code}, errMsg: ${error.message}`);
+    } else {
+      console.info('validate result: success.');
+    }
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`validate failed, errCode: ${e.code}, errMsg: ${e.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+// 证书链数据。
+let certPem = '-----BEGIN CERTIFICATE-----\n' +
+  'MIIDTjCCAjagAwIBAgIBBDANBgkqhkiG9w0BAQsFADASMRAwDgYDVQQDDAdSb290\n' +
+  'IENBMB4XDTI0MDMxOTAyMDQwMVoXDTM0MDMxNzAyMDQwMVowEjEQMA4GA1UEAwwH\n' +
+  'ZGV2aWNlMjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMIXL3e7UE/c\n' +
+  'Z1dPVgRZ5L8gsQ/azuYVBvoFf7o8ksYrL7G1+qZIJjVRqZkuTirLW4GicbkIkPNW\n' +
+  'eix5cDhkjkC+q5SBCOrSSTTlvX3xcOY1gMlA5MgeBfGixFusq4d5VPF2KceZ20/a\n' +
+  'ygwGD0Uv0X81OERyPom/dYdJUvfaD9ifPFJ1fKIj/cPFG3yJK/ojpEfndZNdESQL\n' +
+  'TkoDekilg2UGOLtY6fb9Ns37ncuIj33gCS/R9m1tgtmqCTcgOQ4hwKhjVF3InmPO\n' +
+  '2BbWKvD1RUX+rHC2a2HHDQILOOtDTy8dHvE+qZlK0efrpRgoFEERJAGPi1GDGWiA\n' +
+  '7UX1c4MCxIECAwEAAaOBrjCBqzAJBgNVHRMEAjAAMB0GA1UdDgQWBBQbkAcMT7ND\n' +
+  'fGp3VPFzYHppZ1zxLTAfBgNVHSMEGDAWgBR0W/koCbvDtFGHUQZLM3j6HKsW2DAd\n' +
+  'BgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwCwYDVR0PBAQDAgeAMDIGCCsG\n' +
+  'AQUFBwEBBCYwJDAiBggrBgEFBQcwAYYWaHR0cHM6Ly8xMjcuMC4wLjE6OTk5OTAN\n' +
+  'BgkqhkiG9w0BAQsFAAOCAQEAF1OTzTmbklFOdZCxrF3zg9owUPJR5RB+PbuBlUfI\n' +
+  '8tkGXkMltQ8PN1dv6Cq+d8BluiJdWEzqVoJa/e5SHHJyYQSOhlurRG0GBXllVQ1I\n' +
+  'n1PFaI40+9X2X6wrEcdC5nbzogR1jSiksCiTcARMddj0Xrp5FMrFaaGY8M/xqzdW\n' +
+  'LTDl4nfbuxtA71cIjnE4kOcaemly9/S2wYWdPktsPxQPY1nPUOeJFI7o0sH3rK0c\n' +
+  'JSqtgAG8vnjK+jbx9RpkgqCsXgUbIahL573VTgxrNrsRjCuVal7XVxl/xOKXr6Er\n' +
+  'Gpc+OCrXbHNZkUQE5fZH3yL2tXd7EASEb6J3aEWHfF8YBA==\n' +
+  '-----END CERTIFICATE-----';
+
+let caPem = '-----BEGIN CERTIFICATE-----\n' +
+  'MIIC/zCCAeegAwIBAgIBATANBgkqhkiG9w0BAQsFADASMRAwDgYDVQQDDAdSb290\n' +
+  'IENBMB4XDTI0MDMxOTAyMDIyNFoXDTM0MDMxNzAyMDIyNFowEjEQMA4GA1UEAwwH\n' +
+  'Um9vdCBDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALxI5SDvRfKU\n' +
+  '6XaTeyh2LHlUK0rVSeYfXkYf5Mc3Pgucg+ewzQjxkACMx5NYaW1zfGDNPG1i5IZl\n' +
+  'cPeWNz1Tm2g6wTd+LyNoNOOmwfLV8pLXSfAukgNrBREf3BzVrbu7hvPd2MmLH23H\n' +
+  'OBM9uDPTIqu3n2CDN2EzwULjaSk2g+jvhVKsDLInu5uKPmZBFhs1FWKgcnVnlbi1\n' +
+  'AyAx4efheits6EO70oV6UufCEtS1VsBXQHZRAG4ogshWldRBVNxkU6yHAfg0mM/5\n' +
+  'EhrZsfh51fWqlrhNWrInjgNV3xIt5ebTIgKZWUlSVHEA/UqDoGfY+CsAJdteZWOW\n' +
+  'KjsrC/DK2O0CAwEAAaNgMF4wHQYDVR0OBBYEFHRb+SgJu8O0UYdRBkszePocqxbY\n' +
+  'MB8GA1UdIwQYMBaAFHRb+SgJu8O0UYdRBkszePocqxbYMA8GA1UdEwEB/wQFMAMB\n' +
+  'Af8wCwYDVR0PBAQDAgEGMA0GCSqGSIb3DQEBCwUAA4IBAQAKOT1ObfQNMN2wdfHq\n' +
+  'PQgFDDp6rBMbZe70LswPirSXljo4S/vfbG+gBoWCdu/SfsV+lyP75kg1wX0IQvzW\n' +
+  'xYNh864dgqPmGd0v8TIfM0UT0PpnowUyBHQ+E7LNYIOh/kjHbl3oERdEFA2PUyE9\n' +
+  'j3GLdg8oe/LqhEQCSAlH+v2RQgBZ9eVN+mSdUxwywm9U3acb0uqVkGiWK/ywumpg\n' +
+  'AmIZLMJtMVvg8uDkfy16Z4lChTEdNaJVUqPczUNk2kHXIF4we4be9HoOuTVz/SD/\n' +
+  'IsOhXn/BjS3jnhyS9fxo+opJf9zVTWI02Hlh1WVVtH/m3nIZblyAJhcjCHA2wZSz\n' +
+  'sSus\n' +
+  '-----END CERTIFICATE-----';
+
+let certPemData = stringToUint8Array(certPem);
+let caPemData = stringToUint8Array(caPem);
+
+let certPemDataLenData = new Uint8Array(new Uint16Array([certPemData.length]).buffer);
+let caPemDataLenData = new Uint8Array(new Uint16Array([caPemData.length]).buffer);
+
+let certChainBuff =
+  new Uint8Array(certPemDataLenData.length + certPemData.length + caPemDataLenData.length + caPemData.length);
+certChainBuff.set(certPemDataLenData);
+certChainBuff.set(certPemData, certPemDataLenData.length);
+certChainBuff.set(caPemDataLenData, certPemDataLenData.length + certPemData.length);
+certChainBuff.set(caPemData, certPemDataLenData.length + certPemData.length + caPemDataLenData.length);
+
+let certChainData: cert.CertChainData = {
+  data: certChainBuff,
+  // 证书链包含的证书个数，需业务自行赋值。
+  count: 2,
+  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+try {
+  let validator = cert.createCertChainValidator('PKIX');
+  validator.validate(certChainData).then(_result => {
+    console.info('validate result: success.');
+  }).catch((error: BusinessError) => {
+    console.error(`validate failed, errCode: ${error.code}, errMsg: ${error.message}`);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`validate failed, errCode: ${e.code}, errMsg: ${e.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@ohos.base';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+async function TestValidate() {
+  // 证书链数据。
+  let certPem = '-----BEGIN CERTIFICATE-----\n' +
+    'MIIDTjCCAjagAwIBAgIBBDANBgkqhkiG9w0BAQsFADASMRAwDgYDVQQDDAdSb290\n' +
+    'IENBMB4XDTI0MDMxOTAyMDQwMVoXDTM0MDMxNzAyMDQwMVowEjEQMA4GA1UEAwwH\n' +
+    'ZGV2aWNlMjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMIXL3e7UE/c\n' +
+    'Z1dPVgRZ5L8gsQ/azuYVBvoFf7o8ksYrL7G1+qZIJjVRqZkuTirLW4GicbkIkPNW\n' +
+    'eix5cDhkjkC+q5SBCOrSSTTlvX3xcOY1gMlA5MgeBfGixFusq4d5VPF2KceZ20/a\n' +
+    'ygwGD0Uv0X81OERyPom/dYdJUvfaD9ifPFJ1fKIj/cPFG3yJK/ojpEfndZNdESQL\n' +
+    'TkoDekilg2UGOLtY6fb9Ns37ncuIj33gCS/R9m1tgtmqCTcgOQ4hwKhjVF3InmPO\n' +
+    '2BbWKvD1RUX+rHC2a2HHDQILOOtDTy8dHvE+qZlK0efrpRgoFEERJAGPi1GDGWiA\n' +
+    '7UX1c4MCxIECAwEAAaOBrjCBqzAJBgNVHRMEAjAAMB0GA1UdDgQWBBQbkAcMT7ND\n' +
+    'fGp3VPFzYHppZ1zxLTAfBgNVHSMEGDAWgBR0W/koCbvDtFGHUQZLM3j6HKsW2DAd\n' +
+    'BgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwCwYDVR0PBAQDAgeAMDIGCCsG\n' +
+    'AQUFBwEBBCYwJDAiBggrBgEFBQcwAYYWaHR0cHM6Ly8xMjcuMC4wLjE6OTk5OTAN\n' +
+    'BgkqhkiG9w0BAQsFAAOCAQEAF1OTzTmbklFOdZCxrF3zg9owUPJR5RB+PbuBlUfI\n' +
+    '8tkGXkMltQ8PN1dv6Cq+d8BluiJdWEzqVoJa/e5SHHJyYQSOhlurRG0GBXllVQ1I\n' +
+    'n1PFaI40+9X2X6wrEcdC5nbzogR1jSiksCiTcARMddj0Xrp5FMrFaaGY8M/xqzdW\n' +
+    'LTDl4nfbuxtA71cIjnE4kOcaemly9/S2wYWdPktsPxQPY1nPUOeJFI7o0sH3rK0c\n' +
+    'JSqtgAG8vnjK+jbx9RpkgqCsXgUbIahL573VTgxrNrsRjCuVal7XVxl/xOKXr6Er\n' +
+    'Gpc+OCrXbHNZkUQE5fZH3yL2tXd7EASEb6J3aEWHfF8YBA==\n' +
+    '-----END CERTIFICATE-----';
+
+  let caPem = '-----BEGIN CERTIFICATE-----\n' +
+    'MIIC/zCCAeegAwIBAgIBATANBgkqhkiG9w0BAQsFADASMRAwDgYDVQQDDAdSb290\n' +
+    'IENBMB4XDTI0MDMxOTAyMDIyNFoXDTM0MDMxNzAyMDIyNFowEjEQMA4GA1UEAwwH\n' +
+    'Um9vdCBDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALxI5SDvRfKU\n' +
+    '6XaTeyh2LHlUK0rVSeYfXkYf5Mc3Pgucg+ewzQjxkACMx5NYaW1zfGDNPG1i5IZl\n' +
+    'cPeWNz1Tm2g6wTd+LyNoNOOmwfLV8pLXSfAukgNrBREf3BzVrbu7hvPd2MmLH23H\n' +
+    'OBM9uDPTIqu3n2CDN2EzwULjaSk2g+jvhVKsDLInu5uKPmZBFhs1FWKgcnVnlbi1\n' +
+    'AyAx4efheits6EO70oV6UufCEtS1VsBXQHZRAG4ogshWldRBVNxkU6yHAfg0mM/5\n' +
+    'EhrZsfh51fWqlrhNWrInjgNV3xIt5ebTIgKZWUlSVHEA/UqDoGfY+CsAJdteZWOW\n' +
+    'KjsrC/DK2O0CAwEAAaNgMF4wHQYDVR0OBBYEFHRb+SgJu8O0UYdRBkszePocqxbY\n' +
+    'MB8GA1UdIwQYMBaAFHRb+SgJu8O0UYdRBkszePocqxbYMA8GA1UdEwEB/wQFMAMB\n' +
+    'Af8wCwYDVR0PBAQDAgEGMA0GCSqGSIb3DQEBCwUAA4IBAQAKOT1ObfQNMN2wdfHq\n' +
+    'PQgFDDp6rBMbZe70LswPirSXljo4S/vfbG+gBoWCdu/SfsV+lyP75kg1wX0IQvzW\n' +
+    'xYNh864dgqPmGd0v8TIfM0UT0PpnowUyBHQ+E7LNYIOh/kjHbl3oERdEFA2PUyE9\n' +
+    'j3GLdg8oe/LqhEQCSAlH+v2RQgBZ9eVN+mSdUxwywm9U3acb0uqVkGiWK/ywumpg\n' +
+    'AmIZLMJtMVvg8uDkfy16Z4lChTEdNaJVUqPczUNk2kHXIF4we4be9HoOuTVz/SD/\n' +
+    'IsOhXn/BjS3jnhyS9fxo+opJf9zVTWI02Hlh1WVVtH/m3nIZblyAJhcjCHA2wZSz\n' +
+    'sSus\n' +
+    '-----END CERTIFICATE-----';
+
+  let certPemData = stringToUint8Array(certPem);
+  let caPemData = stringToUint8Array(caPem);
+
+  let certPemDataLenData = new Uint8Array(new Uint16Array([certPemData.length]).buffer);
+  let caPemDataLenData = new Uint8Array(new Uint16Array([caPemData.length]).buffer);
+
+  let certChainBuff = new Uint8Array(certPemDataLenData.length + certPemData.length + caPemDataLenData.length + caPemData.length);
+  certChainBuff.set(certPemDataLenData);
+  certChainBuff.set(certPemData, certPemDataLenData.length);
+  certChainBuff.set(caPemDataLenData, certPemDataLenData.length + certPemData.length);
+  certChainBuff.set(caPemData, certPemDataLenData.length + certPemData.length + caPemDataLenData.length);
+
+  let certChainData: cert.CertChainData = {
+    data: certChainBuff,
+    // 证书链包含的证书个数，需业务自行赋值。
+    count: 2,
+    // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+    encodingFormat: cert.EncodingFormat.FORMAT_PEM
+  };
+
+  try {
+    let validator = cert.createCertChainValidator('PKIX');
+    await validator.validate(certChainData);
+    console.info('validate result: success.');
+  } catch (error) {
+    let e: BusinessError = error as BusinessError;
+    console.error('validate failed, errCode: ' + e.code + ', errMsg: ' + e.message);
+  }
+}
+```
+
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -988,46 +2051,6 @@ async function validate() {
 }
 ```
 
-## validate
-
-```TypeScript
-validate(param: CertChainValidationParameters, callback: AsyncCallback<CertChainValidationResult>): void
-```
-
-使用校验参数校验证书链。使用Callback异步回调。
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-X509CertChain-validate(param: CertChainValidationParameters, callback: AsyncCallback<CertChainValidationResult>): void--><!--Device-X509CertChain-validate(param: CertChainValidationParameters, callback: AsyncCallback<CertChainValidationResult>): void-End-->
-
-**系统能力：** SystemCapability.Security.Cert
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| param | [CertChainValidationParameters](arkts-devicecertificate-cert-certchainvalidationparameters-i.md) | 是 | 表示校验X.509证书链的参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CertChainValidationResult](arkts-devicecertificate-cert-certchainvalidationresult-i.md)&gt; | 是 | 回调函数。当校验证书链成功时，err为undefined， data为获取到的证书链校验结果；否则为错误对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
-| [19030002](../errorcode-cert.md#19030002-证书签名验证错误) | The certificate signature verification failed. |
-| [19030003](../errorcode-cert.md#19030003-证书尚未生效) | The certificate has not taken effect. |
-| [19030004](../errorcode-cert.md#19030004-证书过期) | The certificate has expired. |
-| [19030005](../errorcode-cert.md#19030005-无法获取证书的颁发者) | Failed to obtain the certificate issuer. |
-| [19030006](../errorcode-cert.md#19030006-证书的密钥用途不含证书签名) | The key cannot be used for signing a certificate. |
-| [19030007](../errorcode-cert.md#19030007-证书的密钥用途不含数字签名) | The key cannot be used for a digital signature. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -1247,4 +2270,46 @@ function doTestValidate() {
   });
 }
 ```
+
+## validate
+
+```TypeScript
+validate(param: CertChainValidationParameters, callback: AsyncCallback<CertChainValidationResult>): void
+```
+
+使用校验参数校验证书链。使用Callback异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CertChain-validate(param: CertChainValidationParameters, callback: AsyncCallback<CertChainValidationResult>): void--><!--Device-X509CertChain-validate(param: CertChainValidationParameters, callback: AsyncCallback<CertChainValidationResult>): void-End-->
+
+**系统能力：** SystemCapability.Security.Cert
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| param | [CertChainValidationParameters](arkts-devicecertificate-cert-certchainvalidationparameters-i.md) | 是 | 表示校验X.509证书链的参数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CertChainValidationResult](arkts-devicecertificate-cert-certchainvalidationresult-i.md)&gt; | 是 | 回调函数。当校验证书链成功时，err为undefined， data为获取到的证书链校验结果；否则为错误对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
+| [19030002](../errorcode-cert.md#19030002-证书签名验证错误) | The certificate signature verification failed. |
+| [19030003](../errorcode-cert.md#19030003-证书尚未生效) | The certificate has not taken effect. |
+| [19030004](../errorcode-cert.md#19030004-证书过期) | The certificate has expired. |
+| [19030005](../errorcode-cert.md#19030005-无法获取证书的颁发者) | Failed to obtain the certificate issuer. |
+| [19030006](../errorcode-cert.md#19030006-证书的密钥用途不含证书签名) | The key cannot be used for signing a certificate. |
+| [19030007](../errorcode-cert.md#19030007-证书的密钥用途不含数字签名) | The key cannot be used for a digital signature. |
+
+**示例**
+
+参见 [validate](#validate)
 

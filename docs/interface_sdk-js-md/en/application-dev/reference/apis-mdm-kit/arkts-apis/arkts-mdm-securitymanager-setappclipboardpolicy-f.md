@@ -28,7 +28,7 @@ Sets the device clipboard policy. After the policy is set, applications will be 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | tokenId | number | Yes | Application token ID, which can be obtained using bundleManager.getApplicationInfo. |
 | policy | [ClipboardPolicy](arkts-mdm-securitymanager-clipboardpolicy-e.md) | Yes | Clipboard policy to set. |
 
@@ -62,6 +62,26 @@ try {
 }
 ```
 
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let bundleName: string = 'com.example.myapplication';
+let accountId: number = 100;
+try {
+    securityManager.setAppClipboardPolicy(wantTemp, bundleName, accountId, securityManager.ClipboardPolicy.IN_APP);
+    console.info(`Succeeded in setting clipboard policy.`);
+} catch(err) {
+    console.error(`Failed to set clipboard policy. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## setAppClipboardPolicy
 
@@ -85,7 +105,7 @@ Sets the device clipboard policy of a specified application for a specified user
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleName | string | Yes | Bundle name of the application for which the device clipboard policy is set. |
 | accountId | number | Yes | User ID, which must be greater than or equal to 0. You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of **@ohos.account.osAccount** to obtain the user ID. |
 | policy | [ClipboardPolicy](arkts-mdm-securitymanager-clipboardpolicy-e.md) | Yes | Clipboard policy to set. |
@@ -100,23 +120,5 @@ Sets the device clipboard policy of a specified application for a specified user
 
 **Examples**
 
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let bundleName: string = 'com.example.myapplication';
-let accountId: number = 100;
-try {
-    securityManager.setAppClipboardPolicy(wantTemp, bundleName, accountId, securityManager.ClipboardPolicy.IN_APP);
-    console.info(`Succeeded in setting clipboard policy.`);
-} catch(err) {
-    console.error(`Failed to set clipboard policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
+See [setAppClipboardPolicy](#setappclipboardpolicy)
 

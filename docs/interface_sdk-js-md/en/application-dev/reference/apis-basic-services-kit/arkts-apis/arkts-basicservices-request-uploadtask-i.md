@@ -40,7 +40,7 @@ Deletes the upload task. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -51,6 +51,14 @@ Deletes the upload task. This API uses an asynchronous callback to return the re
 **Examples**
 
 ```TypeScript
+uploadTask.delete().then((result: boolean) => {
+  console.info('Succeeded in deleting the upload task.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to delete the upload task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
 uploadTask.delete((err: BusinessError, result: boolean) => {
   if (err) {
     console.error(`Failed to delete the upload task. Code: ${err.code}, message: ${err.message}`);
@@ -58,6 +66,53 @@ uploadTask.delete((err: BusinessError, result: boolean) => {
   }
   console.info('Succeeded in deleting the upload task.');
 });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    data.delete().then((result: boolean) => {
+      console.info('Succeeded in removing the download task.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.delete((err: BusinessError, result: boolean) => {
+      if (err) {
+        console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('Succeeded in removing the download task.');
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
 ```
 
 ## delete
@@ -95,93 +150,7 @@ Deletes the upload task. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-uploadTask.delete().then((result: boolean) => {
-  console.info('Succeeded in deleting the upload task.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to delete the upload task. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-## offComplete
-
-```TypeScript
-offComplete(callback?: Callback<Array<TaskState>>): void
-```
-
-Called when the current upload session complete.
-
-**Since:** 23
-
-<!--Device-UploadTask-offComplete(callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-offComplete(callback?: Callback<Array<TaskState>>): void-End-->
-
-**System capability:** SystemCapability.MiscServices.Upload
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No | The callback function for the upload complete event. |
-
-## offFail
-
-```TypeScript
-offFail(callback?: Callback<Array<TaskState>>): void
-```
-
-Called when the current upload session fail.
-
-**Since:** 23
-
-<!--Device-UploadTask-offFail(callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-offFail(callback?: Callback<Array<TaskState>>): void-End-->
-
-**System capability:** SystemCapability.MiscServices.Upload
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No | The callback function for the upload fail change event. |
-
-## offHeaderReceive
-
-```TypeScript
-offHeaderReceive(callback?: UploadHeaderReceiveCallback): void
-```
-
-Called when the header of the current upload session has been received.
-
-**Since:** 23
-
-<!--Device-UploadTask-offHeaderReceive(callback?: UploadHeaderReceiveCallback): void--><!--Device-UploadTask-offHeaderReceive(callback?: UploadHeaderReceiveCallback): void-End-->
-
-**System capability:** SystemCapability.MiscServices.Upload
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [UploadHeaderReceiveCallback](arkts-basicservices-request-uploadheaderreceivecallback-t.md) | No | The callback function for the HTTP Response Header event. |
-
-## offProgress
-
-```TypeScript
-offProgress(callback?: UploadProgressCallback): void
-```
-
-Called when the current upload session is in process.
-
-**Since:** 23
-
-<!--Device-UploadTask-offProgress(callback?: UploadProgressCallback): void--><!--Device-UploadTask-offProgress(callback?: UploadProgressCallback): void-End-->
-
-**System capability:** SystemCapability.MiscServices.Upload
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [UploadProgressCallback](arkts-basicservices-request-uploadprogresscallback-t.md) | No | The callback function for the upload progress event. |
+See [delete](#delete)
 
 ## off('complete' | 'fail')
 
@@ -202,7 +171,7 @@ Unsubscribes from upload completion or failure events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'fail' | Yes | Event type.<br>- **'complete'**: upload task completion.<br>- **'fail'**: upload task failure. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -271,7 +240,7 @@ Unsubscribes from upload completion or failure events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'fail' | Yes | Event type.<br>- **'complete'**: upload task completion.<br>- **'fail'**: upload task failure. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -371,17 +340,17 @@ uploadTask.off('progress', upProgressCallback1);
 uploadTask.off('progress');
 ```
 
-## onComplete
+## offComplete
 
 ```TypeScript
-onComplete(callback: Callback<Array<TaskState>>): void
+offComplete(callback?: Callback<Array<TaskState>>): void
 ```
 
 Called when the current upload session complete.
 
 **Since:** 23
 
-<!--Device-UploadTask-onComplete(callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-onComplete(callback: Callback<Array<TaskState>>): void-End-->
+<!--Device-UploadTask-offComplete(callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-offComplete(callback?: Callback<Array<TaskState>>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -389,19 +358,19 @@ Called when the current upload session complete.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes | The callback function for the upload complete event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No | The callback function for the upload complete event. |
 
-## onFail
+## offFail
 
 ```TypeScript
-onFail(callback: Callback<Array<TaskState>>): void
+offFail(callback?: Callback<Array<TaskState>>): void
 ```
 
 Called when the current upload session fail.
 
 **Since:** 23
 
-<!--Device-UploadTask-onFail(callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-onFail(callback: Callback<Array<TaskState>>): void-End-->
+<!--Device-UploadTask-offFail(callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-offFail(callback?: Callback<Array<TaskState>>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -409,19 +378,19 @@ Called when the current upload session fail.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes | The callback function for the upload fail event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No | The callback function for the upload fail change event. |
 
-## onHeaderReceive
+## offHeaderReceive
 
 ```TypeScript
-onHeaderReceive(callback: UploadHeaderReceiveCallback): void
+offHeaderReceive(callback?: UploadHeaderReceiveCallback): void
 ```
 
 Called when the header of the current upload session has been received.
 
 **Since:** 23
 
-<!--Device-UploadTask-onHeaderReceive(callback: UploadHeaderReceiveCallback): void--><!--Device-UploadTask-onHeaderReceive(callback: UploadHeaderReceiveCallback): void-End-->
+<!--Device-UploadTask-offHeaderReceive(callback?: UploadHeaderReceiveCallback): void--><!--Device-UploadTask-offHeaderReceive(callback?: UploadHeaderReceiveCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -429,19 +398,19 @@ Called when the header of the current upload session has been received.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [UploadHeaderReceiveCallback](arkts-basicservices-request-uploadheaderreceivecallback-t.md) | Yes | The callback function for the HTTP Response Header event. |
+| callback | [UploadHeaderReceiveCallback](arkts-basicservices-request-uploadheaderreceivecallback-t.md) | No | The callback function for the HTTP Response Header event. |
 
-## onProgress
+## offProgress
 
 ```TypeScript
-onProgress(callback: UploadProgressCallback): void
+offProgress(callback?: UploadProgressCallback): void
 ```
 
 Called when the current upload session is in process.
 
 **Since:** 23
 
-<!--Device-UploadTask-onProgress(callback: UploadProgressCallback): void--><!--Device-UploadTask-onProgress(callback: UploadProgressCallback): void-End-->
+<!--Device-UploadTask-offProgress(callback?: UploadProgressCallback): void--><!--Device-UploadTask-offProgress(callback?: UploadProgressCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -449,7 +418,7 @@ Called when the current upload session is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [UploadProgressCallback](arkts-basicservices-request-uploadprogresscallback-t.md) | Yes | The callback function for the upload progress event. |
+| callback | [UploadProgressCallback](arkts-basicservices-request-uploadprogresscallback-t.md) | No | The callback function for the upload progress event. |
 
 ## on('complete' | 'fail')
 
@@ -470,7 +439,7 @@ Subscribes to upload completion or failure events. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'fail' | Yes | Type of the event to subscribe to. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes | Callback used to return the state of the upload task. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes | Callback used to return the state of the upload task. |
 
 **Error codes:**
 
@@ -515,7 +484,7 @@ Subscribes to upload completion or failure events. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'fail' | Yes | Type of the event to subscribe to. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes | Callback used to return the state of the upload task. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes | Callback used to return the state of the upload task. |
 
 **Error codes:**
 
@@ -604,6 +573,86 @@ let upProgressCallback = (uploadedSize: number, totalSize: number) => {
 uploadTask.on('progress', upProgressCallback);
 ```
 
+## onComplete
+
+```TypeScript
+onComplete(callback: Callback<Array<TaskState>>): void
+```
+
+Called when the current upload session complete.
+
+**Since:** 23
+
+<!--Device-UploadTask-onComplete(callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-onComplete(callback: Callback<Array<TaskState>>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Upload
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes | The callback function for the upload complete event. |
+
+## onFail
+
+```TypeScript
+onFail(callback: Callback<Array<TaskState>>): void
+```
+
+Called when the current upload session fail.
+
+**Since:** 23
+
+<!--Device-UploadTask-onFail(callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-onFail(callback: Callback<Array<TaskState>>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Upload
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes | The callback function for the upload fail event. |
+
+## onHeaderReceive
+
+```TypeScript
+onHeaderReceive(callback: UploadHeaderReceiveCallback): void
+```
+
+Called when the header of the current upload session has been received.
+
+**Since:** 23
+
+<!--Device-UploadTask-onHeaderReceive(callback: UploadHeaderReceiveCallback): void--><!--Device-UploadTask-onHeaderReceive(callback: UploadHeaderReceiveCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Upload
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [UploadHeaderReceiveCallback](arkts-basicservices-request-uploadheaderreceivecallback-t.md) | Yes | The callback function for the HTTP Response Header event. |
+
+## onProgress
+
+```TypeScript
+onProgress(callback: UploadProgressCallback): void
+```
+
+Called when the current upload session is in process.
+
+**Since:** 23
+
+<!--Device-UploadTask-onProgress(callback: UploadProgressCallback): void--><!--Device-UploadTask-onProgress(callback: UploadProgressCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Upload
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [UploadProgressCallback](arkts-basicservices-request-uploadprogresscallback-t.md) | Yes | The callback function for the upload progress event. |
+
 ## remove
 
 ```TypeScript
@@ -628,7 +677,7 @@ Deletes the upload task. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -639,6 +688,14 @@ Deletes the upload task. This API uses an asynchronous callback to return the re
 **Examples**
 
 ```TypeScript
+uploadTask.remove().then((result: boolean) => {
+  console.info('Succeeded in removing the upload task.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to remove the upload task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
 uploadTask.remove((err: BusinessError, result: boolean) => {
   if (err) {
     console.error(`Failed to remove the upload task. Code: ${err.code}, message: ${err.message}`);
@@ -647,6 +704,24 @@ uploadTask.remove((err: BusinessError, result: boolean) => {
   if (result) {
     console.info('Succeeded in removing the upload task.');
   }
+});
+```
+
+```TypeScript
+downloadTask.remove().then((result) => {
+  console.info('Succeeded in removing the download task.');
+}).catch ((err: BusinessError) => {
+  console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+downloadTask.remove((err, result)=>{
+  if(err) {
+    console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in removing the download task.');
 });
 ```
 
@@ -684,11 +759,5 @@ Deletes the upload task. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-uploadTask.remove().then((result: boolean) => {
-  console.info('Succeeded in removing the upload task.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove the upload task. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [remove](#remove)
 

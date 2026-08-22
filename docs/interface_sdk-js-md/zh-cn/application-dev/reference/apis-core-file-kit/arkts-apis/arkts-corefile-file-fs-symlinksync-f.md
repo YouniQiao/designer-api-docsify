@@ -52,3 +52,11 @@ declare function symlinkSync(target: string, srcPath: string): void
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**示例**
+
+```TypeScript
+let srcFile = pathDir + "/test.txt";
+let dstFile = pathDir + "/test";
+fileIo.symlinkSync(srcFile, dstFile);
+```
+

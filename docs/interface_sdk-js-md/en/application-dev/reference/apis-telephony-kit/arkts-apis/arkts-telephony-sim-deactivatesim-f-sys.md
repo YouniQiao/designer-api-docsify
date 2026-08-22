@@ -29,7 +29,7 @@ Disable SIM card in specified slot.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of deactivateSim. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of deactivateSim. |
 
 **Error codes:**
 
@@ -52,6 +52,17 @@ import { sim } from '@kit.TelephonyKit';
 
 sim.deactivateSim(0, (err: BusinessError) => {
     console.info(`callback: err->${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.deactivateSim(0).then(() => {
+    console.info(`deactivateSim success.`);
+}).catch((err: BusinessError) => {
+    console.error(`deactivateSim failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -101,14 +112,5 @@ Disable SIM card in specified slot.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.deactivateSim(0).then(() => {
-    console.info(`deactivateSim success.`);
-}).catch((err: BusinessError) => {
-    console.error(`deactivateSim failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [deactivateSim](#deactivatesim)
 

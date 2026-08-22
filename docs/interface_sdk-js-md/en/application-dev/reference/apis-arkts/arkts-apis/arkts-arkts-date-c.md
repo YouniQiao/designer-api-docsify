@@ -15,102 +15,6 @@ Date JS API-compatible class
 ```TypeScript
 ```
 
-## UTC
-
-```TypeScript
-public static UTC(d: Date): long
-```
-
-Returns the number of milliseconds elapsed since the epoch, which is defined as the midnight at the beginning of January 1, 1970, UTC.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Date-public static UTC(d: Date): long--><!--Device-Date-public static UTC(d: Date): long-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| d | Date | Yes | to be converted to milliseconds. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| long | get new date value |
-
-## UTC
-
-```TypeScript
-public static UTC(year: int): long
-```
-
-Returns the number of milliseconds elapsed since the epoch, which is defined as the midnight at the beginning of January 1, 1970, UTC.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Date-public static UTC(year: int): long--><!--Device-Date-public static UTC(year: int): long-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| year | int | Yes | to be converted to milliseconds <br>The value range is all integers. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| long | get new date value |
-
-## UTC
-
-```TypeScript
-public static UTC(year: int, month: int, day?: int, hours?: int, minutes?: int, seconds?: int, ms?: int): long
-```
-
-Returns the number of milliseconds elapsed since the epoch, which is defined as the midnight at the beginning of January 1, 1970, UTC.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Date-public static UTC(year: int, month: int, day?: int, hours?: int, minutes?: int, seconds?: int, ms?: int): long--><!--Device-Date-public static UTC(year: int, month: int, day?: int, hours?: int, minutes?: int, seconds?: int, ms?: int): long-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| year | int | Yes | to be converted to milliseconds <br>The value range is all integers. |
-| month | int | Yes | to be converted to milliseconds <br>The value range is all integers. |
-| day | int | No | to be converted to milliseconds <br>The value range is all integers. |
-| hours | int | No | to be converted to milliseconds <br>The value range is all integers. |
-| minutes | int | No | to be converted to milliseconds <br>The value range is all integers. |
-| seconds | int | No | to be converted to milliseconds <br>The value range is all integers. |
-| ms | int | No | to be converted to milliseconds <br>The value range is all integers. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| long | get new date value |
-
 ## constructor
 
 ```TypeScript
@@ -2143,6 +2047,102 @@ Returns a string representing the Date object in UTC.
 | Type | Description |
 | --- | --- |
 | string | The UTC string representation. |
+
+## UTC
+
+```TypeScript
+public static UTC(d: Date): long
+```
+
+Returns the number of milliseconds elapsed since the epoch, which is defined as the midnight at the beginning of January 1, 1970, UTC.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Date-public static UTC(d: Date): long--><!--Device-Date-public static UTC(d: Date): long-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| d | Date | Yes | to be converted to milliseconds. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| long | get new date value |
+
+## UTC
+
+```TypeScript
+public static UTC(year: int): long
+```
+
+Returns the number of milliseconds elapsed since the epoch, which is defined as the midnight at the beginning of January 1, 1970, UTC.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Date-public static UTC(year: int): long--><!--Device-Date-public static UTC(year: int): long-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| year | int | Yes | to be converted to milliseconds <br>The value range is all integers. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| long | get new date value |
+
+## UTC
+
+```TypeScript
+public static UTC(year: int, month: int, day?: int, hours?: int, minutes?: int, seconds?: int, ms?: int): long
+```
+
+Returns the number of milliseconds elapsed since the epoch, which is defined as the midnight at the beginning of January 1, 1970, UTC.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Date-public static UTC(year: int, month: int, day?: int, hours?: int, minutes?: int, seconds?: int, ms?: int): long--><!--Device-Date-public static UTC(year: int, month: int, day?: int, hours?: int, minutes?: int, seconds?: int, ms?: int): long-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| year | int | Yes | to be converted to milliseconds <br>The value range is all integers. |
+| month | int | Yes | to be converted to milliseconds <br>The value range is all integers. |
+| day | int | No | to be converted to milliseconds <br>The value range is all integers. |
+| hours | int | No | to be converted to milliseconds <br>The value range is all integers. |
+| minutes | int | No | to be converted to milliseconds <br>The value range is all integers. |
+| seconds | int | No | to be converted to milliseconds <br>The value range is all integers. |
+| ms | int | No | to be converted to milliseconds <br>The value range is all integers. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| long | get new date value |
 
 ## valueOf
 

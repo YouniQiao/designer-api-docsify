@@ -53,6 +53,17 @@ huks.isKeyExist(keyAlias, emptyOptions, (err, data) => {
 });
 ```
 
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* 此处options选择emptyOptions来传空 */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+let result = huks.isKeyExist(keyAlias, emptyOptions);
+```
+
 
 ## isKeyExist
 
@@ -92,14 +103,5 @@ function isKeyExist(keyAlias: string, options: HuksOptions): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions来传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-let result = huks.isKeyExist(keyAlias, emptyOptions);
-```
+参见 [isKeyExist](#iskeyexist)
 

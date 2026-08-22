@@ -4,7 +4,7 @@ Defines the row layout algorithm.
 
 @implements LayoutAlgorithm
 
-**Inheritance/Implementation:** RowLayoutAlgorithm implements [LayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-i.md)
+**Inheritance/Implementation:** RowLayoutAlgorithm implements [LayoutAlgorithm](arkts-layoutalgorithm-i.md)
 
 **Since:** 24
 
@@ -36,7 +36,7 @@ constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [RowLayoutAlgorithmOptions](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-rowlayoutalgorithmoptions-i.md) | No | set properties of row layout algorithm. |
+| option | [RowLayoutAlgorithmOptions](arkts-layoutalgorithm-rowlayoutalgorithmoptions-i.md) | No | set properties of row layout algorithm. |
 
 ## alignItems
 

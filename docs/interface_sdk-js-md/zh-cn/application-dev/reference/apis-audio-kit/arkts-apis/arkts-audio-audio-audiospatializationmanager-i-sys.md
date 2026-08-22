@@ -266,6 +266,34 @@ try {
 }
 ```
 
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let deviceDescriptor: audio.AudioDeviceDescriptor = {
+  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
+  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
+  id : 1,
+  name : "",
+  address : "123",
+  sampleRates : [44100],
+  channelCounts : [2],
+  channelMasks : [0],
+  networkId : audio.LOCAL_NETWORK_ID,
+  interruptGroupId : 1,
+  volumeGroupId : 1,
+  displayName : ""
+};
+
+try {
+  let isHeadTrackingEnabled: boolean = audioSpatializationManager.isHeadTrackingEnabled(deviceDescriptor);
+  console.info(`AudioSpatializationManager isHeadTrackingEnabled: ${isHeadTrackingEnabled}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error}`);
+}
+```
+
 ## isHeadTrackingEnabled
 
 ```TypeScript
@@ -304,33 +332,7 @@ Checks whether the head tracking is enabled by the specified device.
 
 **示例**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor: audio.AudioDeviceDescriptor = {
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
-  id : 1,
-  name : "",
-  address : "123",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : ""
-};
-
-try {
-  let isHeadTrackingEnabled: boolean = audioSpatializationManager.isHeadTrackingEnabled(deviceDescriptor);
-  console.info(`AudioSpatializationManager isHeadTrackingEnabled: ${isHeadTrackingEnabled}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
+参见 [isHeadTrackingEnabled](#isheadtrackingenabled)
 
 ## isHeadTrackingSupported
 
@@ -555,6 +557,34 @@ try {
 }
 ```
 
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let deviceDescriptor: audio.AudioDeviceDescriptor = {
+  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
+  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
+  id : 1,
+  name : "",
+  address : "123",
+  sampleRates : [44100],
+  channelCounts : [2],
+  channelMasks : [0],
+  networkId : audio.LOCAL_NETWORK_ID,
+  interruptGroupId : 1,
+  volumeGroupId : 1,
+  displayName : ""
+};
+
+try {
+  let isSpatializationEnabled: boolean = audioSpatializationManager.isSpatializationEnabled(deviceDescriptor);
+  console.info(`AudioSpatializationManager isSpatializationEnabled: ${isSpatializationEnabled}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error}`);
+}
+```
+
 ## isSpatializationEnabled
 
 ```TypeScript
@@ -593,33 +623,7 @@ Checks whether the spatialization is enabled by the specified device.
 
 **示例**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor: audio.AudioDeviceDescriptor = {
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
-  id : 1,
-  name : "",
-  address : "123",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : ""
-};
-
-try {
-  let isSpatializationEnabled: boolean = audioSpatializationManager.isSpatializationEnabled(deviceDescriptor);
-  console.info(`AudioSpatializationManager isSpatializationEnabled: ${isSpatializationEnabled}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
+参见 [isSpatializationEnabled](#isspatializationenabled)
 
 ## isSpatializationSupported
 
@@ -727,6 +731,210 @@ try {
   let error = err as BusinessError;
   console.error(`ERROR: ${error}`);
 }
+```
+
+## off('headTrackingEnabledChange')
+
+```TypeScript
+off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void
+```
+
+Unsubscribes to the head tracking enable state change events.
+
+**起始版本：** 11
+
+**废弃版本：** 12
+
+**替代接口：** off
+
+<!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'headTrackingEnabledChange' | 是 | Type of the event to listen for. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | Callback used to get the head tracking enable state. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+// 取消该事件的所有监听。
+audioSpatializationManager.off('headTrackingEnabledChange');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let headTrackingEnabledChangeCallback = (isHeadTrackingEnabled: boolean) => {
+  console.info(`isHeadTrackingEnabled: ${isHeadTrackingEnabled}`);
+};
+
+audioSpatializationManager.on('headTrackingEnabledChange', headTrackingEnabledChangeCallback);
+
+audioSpatializationManager.off('headTrackingEnabledChange', headTrackingEnabledChangeCallback);
+```
+
+## off('headTrackingEnabledChangeForAnyDevice')
+
+```TypeScript
+off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void
+```
+
+Unsubscribes to the head tracking enable state change events by the specified device.
+
+**起始版本：** 12
+
+<!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'headTrackingEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the head tracking enable state by the specified device. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+// 取消该事件的所有监听。
+audioSpatializationManager.off('headTrackingEnabledChangeForAnyDevice');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let headTrackingEnabledChangeForAnyDeviceCallback = (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
+  console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
+  console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
+};
+
+audioSpatializationManager.on('headTrackingEnabledChangeForAnyDevice', headTrackingEnabledChangeForAnyDeviceCallback);
+
+audioSpatializationManager.off('headTrackingEnabledChangeForAnyDevice', headTrackingEnabledChangeForAnyDeviceCallback);
+```
+
+## off('spatializationEnabledChange')
+
+```TypeScript
+off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void
+```
+
+Unsubscribes to the spatialization enable state change events.
+
+**起始版本：** 11
+
+**废弃版本：** 12
+
+**替代接口：** off
+
+<!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'spatializationEnabledChange' | 是 | Type of the event to listen for. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | Callback used to get the spatialization enable state. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// 取消该事件的所有监听。
+audioSpatializationManager.off('spatializationEnabledChange');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let spatializationEnabledChangeCallback = (isSpatializationEnabled: boolean) => {
+  console.info(`isSpatializationEnabled: ${isSpatializationEnabled}`);
+};
+
+audioSpatializationManager.on('spatializationEnabledChange', spatializationEnabledChangeCallback);
+
+audioSpatializationManager.off('spatializationEnabledChange', spatializationEnabledChangeCallback);
+```
+
+## off('spatializationEnabledChangeForAnyDevice')
+
+```TypeScript
+off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void
+```
+
+Unsubscribes to the spatialization enable state change events by the specified device.
+
+**起始版本：** 12
+
+<!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'spatializationEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the spatialization enable state by the specified device. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+// 取消该事件的所有监听。
+audioSpatializationManager.off('spatializationEnabledChangeForAnyDevice');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let spatializationEnabledChangeForAnyDeviceCallback = (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
+  console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
+  console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
+};
+
+audioSpatializationManager.on('spatializationEnabledChangeForAnyDevice', spatializationEnabledChangeForAnyDeviceCallback);
+
+audioSpatializationManager.off('spatializationEnabledChangeForAnyDevice', spatializationEnabledChangeForAnyDeviceCallback);
 ```
 
 ## offAdaptiveSpatialRenderingEnabledChangeForAnyDevice
@@ -949,21 +1157,21 @@ audioSpatializationManager.onSpatializationEnabledChangeForAnyDevice(spatializat
 audioSpatializationManager.offSpatializationEnabledChangeForAnyDevice(spatializationEnabledChangeForAnyDeviceCallback);
 ```
 
-## off('headTrackingEnabledChange')
+## on('headTrackingEnabledChange')
 
 ```TypeScript
-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void
+on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void
 ```
 
-Unsubscribes to the head tracking enable state change events.
+Subscribes to the head tracking enable state change events. When the head tracking enable state changes, registered clients will receive the callback.
 
 **起始版本：** 11
 
 **废弃版本：** 12
 
-**替代接口：** off
+**替代接口：** on
 
-<!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void-End-->
+<!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -974,7 +1182,7 @@ Unsubscribes to the head tracking enable state change events.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChange' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | Callback used to get the head tracking enable state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | Callback used to get the head tracking enable state. |
 
 **错误码：**
 
@@ -989,30 +1197,22 @@ Unsubscribes to the head tracking enable state change events.
 ```TypeScript
 import { audio } from '@kit.AudioKit';
 
-// 取消该事件的所有监听。
-audioSpatializationManager.off('headTrackingEnabledChange');
-
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let headTrackingEnabledChangeCallback = (isHeadTrackingEnabled: boolean) => {
+audioSpatializationManager.on('headTrackingEnabledChange', (isHeadTrackingEnabled: boolean) => {
   console.info(`isHeadTrackingEnabled: ${isHeadTrackingEnabled}`);
-};
-
-audioSpatializationManager.on('headTrackingEnabledChange', headTrackingEnabledChangeCallback);
-
-audioSpatializationManager.off('headTrackingEnabledChange', headTrackingEnabledChangeCallback);
+});
 ```
 
-## off('headTrackingEnabledChangeForAnyDevice')
+## on('headTrackingEnabledChangeForAnyDevice')
 
 ```TypeScript
-off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void
+on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Unsubscribes to the head tracking enable state change events by the specified device.
+Subscribes to the head tracking enable state change events by the specified device. When the head tracking enable state changes, registered clients will receive the callback.
 
 **起始版本：** 12
 
-<!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+<!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1023,7 +1223,7 @@ Unsubscribes to the head tracking enable state change events by the specified de
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the head tracking enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the head tracking enable state by the specified device. |
 
 **错误码：**
 
@@ -1038,35 +1238,27 @@ Unsubscribes to the head tracking enable state change events by the specified de
 ```TypeScript
 import { audio } from '@kit.AudioKit';
 
-// 取消该事件的所有监听。
-audioSpatializationManager.off('headTrackingEnabledChangeForAnyDevice');
-
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let headTrackingEnabledChangeForAnyDeviceCallback = (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
+audioSpatializationManager.on('headTrackingEnabledChangeForAnyDevice', (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
   console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
   console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
-};
-
-audioSpatializationManager.on('headTrackingEnabledChangeForAnyDevice', headTrackingEnabledChangeForAnyDeviceCallback);
-
-audioSpatializationManager.off('headTrackingEnabledChangeForAnyDevice', headTrackingEnabledChangeForAnyDeviceCallback);
+});
 ```
 
-## off('spatializationEnabledChange')
+## on('spatializationEnabledChange')
 
 ```TypeScript
-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void
+on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void
 ```
 
-Unsubscribes to the spatialization enable state change events.
+Subscribes to the spatialization enable state change events. When the spatialization enable state changes, registered clients will receive the callback.
 
 **起始版本：** 11
 
 **废弃版本：** 12
 
-**替代接口：** off
+**替代接口：** on
 
-<!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void-End-->
+<!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1077,54 +1269,7 @@ Unsubscribes to the spatialization enable state change events.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChange' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | Callback used to get the spatialization enable state. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-// 取消该事件的所有监听。
-audioSpatializationManager.off('spatializationEnabledChange');
-
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let spatializationEnabledChangeCallback = (isSpatializationEnabled: boolean) => {
-  console.info(`isSpatializationEnabled: ${isSpatializationEnabled}`);
-};
-
-audioSpatializationManager.on('spatializationEnabledChange', spatializationEnabledChangeCallback);
-
-audioSpatializationManager.off('spatializationEnabledChange', spatializationEnabledChangeCallback);
-```
-
-## off('spatializationEnabledChangeForAnyDevice')
-
-```TypeScript
-off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void
-```
-
-Unsubscribes to the spatialization enable state change events by the specified device.
-
-**起始版本：** 12
-
-<!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'spatializationEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the spatialization enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | Callback used to get the spatialization enable state. |
 
 **错误码：**
 
@@ -1139,18 +1284,51 @@ Unsubscribes to the spatialization enable state change events by the specified d
 ```TypeScript
 import { audio } from '@kit.AudioKit';
 
-// 取消该事件的所有监听。
-audioSpatializationManager.off('spatializationEnabledChangeForAnyDevice');
+audioSpatializationManager.on('spatializationEnabledChange', (isSpatializationEnabled: boolean) => {
+  console.info(`isSpatializationEnabled: ${isSpatializationEnabled}`);
+});
+```
 
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let spatializationEnabledChangeForAnyDeviceCallback = (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
+## on('spatializationEnabledChangeForAnyDevice')
+
+```TypeScript
+on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void
+```
+
+Subscribes to the spatialization enable state change events by the specified device. When the spatialization enable state changes, registered clients will receive the callback.
+
+**起始版本：** 12
+
+<!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'spatializationEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the spatialization enable state by the specified device. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+audioSpatializationManager.on('spatializationEnabledChangeForAnyDevice', (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
   console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
   console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
-};
-
-audioSpatializationManager.on('spatializationEnabledChangeForAnyDevice', spatializationEnabledChangeForAnyDeviceCallback);
-
-audioSpatializationManager.off('spatializationEnabledChangeForAnyDevice', spatializationEnabledChangeForAnyDeviceCallback);
+});
 ```
 
 ## onAdaptiveSpatialRenderingEnabledChangeForAnyDevice
@@ -1343,180 +1521,6 @@ audioSpatializationManager.onSpatializationEnabledChangeForAnyDevice((audioSpati
 });
 ```
 
-## on('headTrackingEnabledChange')
-
-```TypeScript
-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void
-```
-
-Subscribes to the head tracking enable state change events. When the head tracking enable state changes, registered clients will receive the callback.
-
-**起始版本：** 11
-
-**废弃版本：** 12
-
-**替代接口：** on
-
-<!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'headTrackingEnabledChange' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | Callback used to get the head tracking enable state. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-audioSpatializationManager.on('headTrackingEnabledChange', (isHeadTrackingEnabled: boolean) => {
-  console.info(`isHeadTrackingEnabled: ${isHeadTrackingEnabled}`);
-});
-```
-
-## on('headTrackingEnabledChangeForAnyDevice')
-
-```TypeScript
-on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void
-```
-
-Subscribes to the head tracking enable state change events by the specified device. When the head tracking enable state changes, registered clients will receive the callback.
-
-**起始版本：** 12
-
-<!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'headTrackingEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the head tracking enable state by the specified device. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-audioSpatializationManager.on('headTrackingEnabledChangeForAnyDevice', (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
-  console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
-  console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
-});
-```
-
-## on('spatializationEnabledChange')
-
-```TypeScript
-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void
-```
-
-Subscribes to the spatialization enable state change events. When the spatialization enable state changes, registered clients will receive the callback.
-
-**起始版本：** 11
-
-**废弃版本：** 12
-
-**替代接口：** on
-
-<!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'spatializationEnabledChange' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | Callback used to get the spatialization enable state. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-audioSpatializationManager.on('spatializationEnabledChange', (isSpatializationEnabled: boolean) => {
-  console.info(`isSpatializationEnabled: ${isSpatializationEnabled}`);
-});
-```
-
-## on('spatializationEnabledChangeForAnyDevice')
-
-```TypeScript
-on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void
-```
-
-Subscribes to the spatialization enable state change events by the specified device. When the spatialization enable state changes, registered clients will receive the callback.
-
-**起始版本：** 12
-
-<!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'spatializationEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the spatialization enable state by the specified device. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-audioSpatializationManager.on('spatializationEnabledChangeForAnyDevice', (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
-  console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
-  console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
-});
-```
-
 ## setAdaptiveSpatialRenderingEnabled
 
 ```TypeScript
@@ -1642,6 +1646,46 @@ audioSpatializationManager.setHeadTrackingEnabled(enable, (err: BusinessError) =
 });
 ```
 
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let enable: boolean = true;
+
+audioSpatializationManager.setHeadTrackingEnabled(enable).then(() => {
+  console.info(`setHeadTrackingEnabled success`);
+}).catch((err: BusinessError) => {
+  console.error(`Result ERROR: ${err}`);
+});
+```
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let deviceDescriptor: audio.AudioDeviceDescriptor = {
+  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
+  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
+  id : 1,
+  name : "",
+  address : "123",
+  sampleRates : [44100],
+  channelCounts : [2],
+  channelMasks : [0],
+  networkId : audio.LOCAL_NETWORK_ID,
+  interruptGroupId : 1,
+  volumeGroupId : 1,
+  displayName : ""
+};
+let enable: boolean = true;
+
+audioSpatializationManager.setHeadTrackingEnabled(deviceDescriptor, enable).then(() => {
+  console.info(`setHeadTrackingEnabled success`);
+}).catch((err: BusinessError) => {
+  console.error(`Result ERROR: ${err}`);
+});
+```
+
 ## setHeadTrackingEnabled
 
 ```TypeScript
@@ -1686,18 +1730,7 @@ Sets the head tracking enabled or disabled. This method uses a promise to return
 
 **示例**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let enable: boolean = true;
-
-audioSpatializationManager.setHeadTrackingEnabled(enable).then(() => {
-  console.info(`setHeadTrackingEnabled success`);
-}).catch((err: BusinessError) => {
-  console.error(`Result ERROR: ${err}`);
-});
-```
+参见 [setHeadTrackingEnabled](#setheadtrackingenabled)
 
 ## setHeadTrackingEnabled
 
@@ -1741,32 +1774,7 @@ Sets the head tracking enabled or disabled by the specified device. This method 
 
 **示例**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor: audio.AudioDeviceDescriptor = {
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
-  id : 1,
-  name : "",
-  address : "123",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : ""
-};
-let enable: boolean = true;
-
-audioSpatializationManager.setHeadTrackingEnabled(deviceDescriptor, enable).then(() => {
-  console.info(`setHeadTrackingEnabled success`);
-}).catch((err: BusinessError) => {
-  console.error(`Result ERROR: ${err}`);
-});
-```
+参见 [setHeadTrackingEnabled](#setheadtrackingenabled)
 
 ## setPersonalizedSpatializationEnabled
 
@@ -1865,6 +1873,46 @@ audioSpatializationManager.setSpatializationEnabled(enable, (err: BusinessError)
 });
 ```
 
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let enable: boolean = true;
+
+audioSpatializationManager.setSpatializationEnabled(enable).then(() => {
+  console.info(`setSpatializationEnabled success`);
+}).catch((err: BusinessError) => {
+  console.error(`Result ERROR: ${err}`);
+});
+```
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let deviceDescriptor: audio.AudioDeviceDescriptor = {
+  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
+  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
+  id : 1,
+  name : "",
+  address : "123",
+  sampleRates : [44100],
+  channelCounts : [2],
+  channelMasks : [0],
+  networkId : audio.LOCAL_NETWORK_ID,
+  interruptGroupId : 1,
+  volumeGroupId : 1,
+  displayName : ""
+};
+let enabled: boolean = true;
+
+audioSpatializationManager.setSpatializationEnabled(deviceDescriptor, enabled).then(() => {
+  console.info(`setSpatializationEnabled success`);
+}).catch((err: BusinessError) => {
+  console.error(`Result ERROR: ${err}`);
+});
+```
+
 ## setSpatializationEnabled
 
 ```TypeScript
@@ -1909,18 +1957,7 @@ Sets the spatialization enabled or disabled. This method uses a promise to retur
 
 **示例**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let enable: boolean = true;
-
-audioSpatializationManager.setSpatializationEnabled(enable).then(() => {
-  console.info(`setSpatializationEnabled success`);
-}).catch((err: BusinessError) => {
-  console.error(`Result ERROR: ${err}`);
-});
-```
+参见 [setSpatializationEnabled](#setspatializationenabled)
 
 ## setSpatializationEnabled
 
@@ -1964,32 +2001,7 @@ Sets the spatialization enabled or disabled by the specified device. This method
 
 **示例**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor: audio.AudioDeviceDescriptor = {
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
-  id : 1,
-  name : "",
-  address : "123",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : ""
-};
-let enabled: boolean = true;
-
-audioSpatializationManager.setSpatializationEnabled(deviceDescriptor, enabled).then(() => {
-  console.info(`setSpatializationEnabled success`);
-}).catch((err: BusinessError) => {
-  console.error(`Result ERROR: ${err}`);
-});
-```
+参见 [setSpatializationEnabled](#setspatializationenabled)
 
 ## setSpatializationSceneType
 

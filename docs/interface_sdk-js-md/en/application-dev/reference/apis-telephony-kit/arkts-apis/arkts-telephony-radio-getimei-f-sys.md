@@ -29,7 +29,7 @@ Obtains the IMEI of a specified card slot of the device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Indicates the callback for getting the IMEI. Returns an empty string if the IMEI does not exist. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Indicates the callback for getting the IMEI. Returns an empty string if the IMEI does not exist. |
 
 **Error codes:**
 
@@ -48,6 +48,18 @@ Obtains the IMEI of a specified card slot of the device.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+radio.getIMEI((err: BusinessError, data: string) => {
+    if (err) {
+        console.error(`getIMEI failed, callback: err->${JSON.stringify(err)}`);
+        return;
+    }
+    console.info(`getIMEI success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let slotId: number = 0;
 radio.getIMEI(slotId, (err: BusinessError, data: string) => {
     if (err) {
@@ -55,6 +67,17 @@ radio.getIMEI(slotId, (err: BusinessError, data: string) => {
         return;
     }
     console.info(`getIMEI success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.getIMEI(slotId).then((data: string) => {
+    console.info(`getIMEI success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getIMEI failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -103,16 +126,7 @@ Obtains the IMEI of a specified card slot of the device.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getIMEI(slotId).then((data: string) => {
-    console.info(`getIMEI success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getIMEI failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getIMEI](#getimei)
 
 
 ## getIMEI
@@ -137,7 +151,7 @@ Obtains the IMEI of a specified card slot of the device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Indicates the callback for getting the IMEI. Returns an empty string if the IMEI does not exist. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Indicates the callback for getting the IMEI. Returns an empty string if the IMEI does not exist. |
 
 **Error codes:**
 
@@ -153,15 +167,5 @@ Obtains the IMEI of a specified card slot of the device.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.getIMEI((err: BusinessError, data: string) => {
-    if (err) {
-        console.error(`getIMEI failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`getIMEI success, callback: data->${JSON.stringify(data)}`);
-});
-```
+See [getIMEI](#getimei)
 

@@ -34,7 +34,7 @@ Connects this ability to a ServiceAbility.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | ServiceAbility to connect. |
+| request | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | ServiceAbility to connect. |
 | options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | Yes | Connection options. |
 
 **Return value:**

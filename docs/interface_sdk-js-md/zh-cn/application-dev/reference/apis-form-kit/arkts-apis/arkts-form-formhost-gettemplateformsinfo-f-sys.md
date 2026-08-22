@@ -45,3 +45,44 @@ function getTemplateFormsInfo(bundleName: string, moduleName?: string): Promise<
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formHost, formInfo } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formHost.getTemplateFormsInfo('com.example.ohos.formjsdemo', 'entry').then((data: formInfo.FormInfo[]) => {
+    for (let info of data) {
+      console.info(`getTemplateFormsInfo bundleName: ${info.bundleName}, moduleName: ${info.moduleName}, name: ${info.name}`);
+    }
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formHost, formInfo } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formHost.getTemplateFormsInfo('com.example.ohos.formjsdemo', 'entry').then((data) => {
+    for (let info of data) {
+      console.info(`getTemplateFormsInfo bundleName: ${info.bundleName}, moduleName: ${info.moduleName}, name: ${info.name}`);
+    }
+  }).catch((error) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+

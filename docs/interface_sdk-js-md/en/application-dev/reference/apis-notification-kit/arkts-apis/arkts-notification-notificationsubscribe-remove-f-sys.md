@@ -36,7 +36,7 @@ Removes a notification based on the bundle information and notification key. Thi
 | bundle | BundleOption | Yes | Bundle information of the application. |
 | notificationKey | NotificationKey | Yes | Notification key. |
 | reason | RemoveReason | Yes | Reason for removing the notification. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -73,6 +73,79 @@ let notificationKey: notificationSubscribe.NotificationKey = {
 };
 let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
 notificationSubscribe.remove(bundle, notificationKey, reason, removeCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { notificationManager } from '@kit.NotificationKit';
+
+let bundle: notificationManager.BundleOption = {
+  bundle: "bundleName1",
+};
+let notificationKey: notificationSubscribe.NotificationKey = {
+  id: 0,
+  label: "label",
+};
+let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
+notificationSubscribe.remove(bundle, notificationKey, reason).then(() => {
+  console.info("remove success");
+}).catch((err: BusinessError) => {
+  console.error(`remove fail: ${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hashCode: string = 'hashCode';
+let removeCallback = (err: BusinessError) => {
+  if (err) {
+    console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info("remove success");
+  }
+}
+let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CANCEL_REASON_REMOVE;
+notificationSubscribe.remove(hashCode, reason, removeCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hashCode: string = 'hashCode';
+let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
+notificationSubscribe.remove(hashCode, reason).then(() => {
+  console.info("remove success");
+}).catch((err: BusinessError) => {
+  console.error(`remove fail: ${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hashCodes: string[] = ['hashCode1', 'hashCode2'];
+let removeCallback = (err: BusinessError) => {
+  if (err) {
+    console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info("remove success");
+  }
+}
+let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CANCEL_REASON_REMOVE;
+notificationSubscribe.remove(hashCodes, reason, removeCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hashCodes: string[] = ['hashCode1','hashCode2'];
+let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
+notificationSubscribe.remove(hashCodes, reason).then(() => {
+  console.info("remove success");
+}).catch((err: BusinessError) => {
+  console.error(`remove fail: ${JSON.stringify(err)}`);
+});
 ```
 
 
@@ -123,24 +196,7 @@ Removes a notification based on the bundle information and notification key. Thi
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { notificationManager } from '@kit.NotificationKit';
-
-let bundle: notificationManager.BundleOption = {
-  bundle: "bundleName1",
-};
-let notificationKey: notificationSubscribe.NotificationKey = {
-  id: 0,
-  label: "label",
-};
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
-notificationSubscribe.remove(bundle, notificationKey, reason).then(() => {
-  console.info("remove success");
-}).catch((err: BusinessError) => {
-  console.error(`remove fail: ${JSON.stringify(err)}`);
-});
-```
+See [remove](#remove)
 
 
 ## remove
@@ -167,7 +223,7 @@ Removes a notification based on the specified unique notification ID. This API u
 | --- | --- | --- | --- |
 | hashCode | string | Yes | Unique notification ID. It is the value of **hashCode** in the [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) object of [SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md) used in the [onConsume](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md#onconsume) callback. |
 | reason | RemoveReason | Yes | Reason for removing the notification. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -183,20 +239,7 @@ Removes a notification based on the specified unique notification ID. This API u
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hashCode: string = 'hashCode';
-let removeCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info("remove success");
-  }
-}
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CANCEL_REASON_REMOVE;
-notificationSubscribe.remove(hashCode, reason, removeCallback);
-```
+See [remove](#remove)
 
 
 ## remove
@@ -223,7 +266,7 @@ Removes specified notifications. This API uses an asynchronous callback to retur
 | --- | --- | --- | --- |
 | hashCodes | Array&lt;String&gt; | Yes | Array of unique notification IDs. It is the value of **hashCode** in the [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) object of [SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md) used in the [onConsume](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md#onconsume) callback. |
 | reason | RemoveReason | Yes | Reason for removing the notification. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -238,20 +281,7 @@ Removes specified notifications. This API uses an asynchronous callback to retur
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hashCodes: string[] = ['hashCode1', 'hashCode2'];
-let removeCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info("remove success");
-  }
-}
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CANCEL_REASON_REMOVE;
-notificationSubscribe.remove(hashCodes, reason, removeCallback);
-```
+See [remove](#remove)
 
 
 ## remove
@@ -299,17 +329,7 @@ Removes a notification based on the specified unique notification ID. This API u
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hashCode: string = 'hashCode';
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
-notificationSubscribe.remove(hashCode, reason).then(() => {
-  console.info("remove success");
-}).catch((err: BusinessError) => {
-  console.error(`remove fail: ${JSON.stringify(err)}`);
-});
-```
+See [remove](#remove)
 
 
 ## remove
@@ -356,15 +376,5 @@ Removes specified notifications. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hashCodes: string[] = ['hashCode1','hashCode2'];
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
-notificationSubscribe.remove(hashCodes, reason).then(() => {
-  console.info("remove success");
-}).catch((err: BusinessError) => {
-  console.error(`remove fail: ${JSON.stringify(err)}`);
-});
-```
+See [remove](#remove)
 

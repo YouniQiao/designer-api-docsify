@@ -28,7 +28,7 @@ Closes a file or directory. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | number \| [File](arkts-corefile-filefs-file-i.md) | Yes | File** object or FD of the file to close. Once closed, the **File** object or FD cannot be used for read or write operations. |
+| file | number \| [File](arkts-corefile-file-fs-file-i.md) | Yes | File** object or FD of the file to close. Once closed, the **File** object or FD cannot be used for read or write operations. |
 
 **Error codes:**
 
@@ -40,4 +40,18 @@ Closes a file or directory. This API returns the result synchronously.
 | 13900025 | No space left on device |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fs.openSync(filePath);
+fs.closeSync(file);
+```
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let stream = fs.createStreamSync(filePath, "r+");
+stream.closeSync();
+```
 

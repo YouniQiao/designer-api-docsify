@@ -50,3 +50,48 @@ function requestFormWithParams(formId: string, wantParams?: Record<string, Objec
 | [16501001](../errorcode-form.md#16501001-卡片id不存在) | The ID of the form to be operated does not exist. |
 | [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let formId: string = '12400633174999288';
+  let params: Record<string, Object> = {
+    'ohos.extra.param.key.host_bg_inverse_color': '#ff000000' as Object
+  };
+  formHost.requestFormWithParams(formId, params).then(() => {
+    console.info('formHost requestFormWithParams success');
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let formId: string = '12400633174999288';
+  let params: Record<string, Object> = {
+    'ohos.extra.param.key.host_bg_inverse_color': '#ff000000' as Object
+  };
+  formHost.requestFormWithParams(formId, params).then(() => {
+    console.info('formHost requestFormWithParams success');
+  }).catch((error) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch(error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+

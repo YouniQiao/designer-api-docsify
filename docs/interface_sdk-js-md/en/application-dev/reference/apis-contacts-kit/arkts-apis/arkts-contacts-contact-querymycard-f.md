@@ -30,9 +30,26 @@ Queries my card. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
 
 **Examples**
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+  import { common } from '@kit.AbilityKit';
+
+  // Obtain the context within the component.
+  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  contact.queryMyCard(context, (err: BusinessError, data) => {
+    if (err) {
+      console.error(`Failed to query My Card. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info(`Succeeded in querying My Card. data->${JSON.stringify(data)}`);
+  });
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -43,6 +60,70 @@ contact.queryMyCard((err: BusinessError, data) => {
     return;
   }
   console.info(`Succeeded in querying My Card. data->${JSON.stringify(data)}`);
+});
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+  import { common } from '@kit.AbilityKit';
+
+  // Obtain the context within the component.
+  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  contact.queryMyCard(context, {
+    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+  }, (err: BusinessError, data) => {
+    if (err) {
+      console.error(`Failed to query My Card. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info(`Succeeded in querying My Card. data->${JSON.stringify(data)}`);
+  });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+contact.queryMyCard({
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query My Card. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying My Card. data->${JSON.stringify(data)}`);
+});
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+  import { common } from '@kit.AbilityKit';
+
+  // Obtain the context within the component.
+  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  let promise = contact.queryMyCard(context, {
+    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+  });
+  promise.then((data) => {
+    console.info(`Succeeded in querying My Card. data->${JSON.stringify(data)}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to query My Card. Code: ${err.code}, message: ${err.message}`);
+  });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = contact.queryMyCard({
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+});
+promise.then((data) => {
+  console.info(`Succeeded in querying My Card. data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query My Card. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -68,7 +149,7 @@ Queries my card. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | Context | Yes | Indicates the context of application or capability. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -79,22 +160,7 @@ Queries my card. This API uses an asynchronous callback to return the result.
 
 **Examples**
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-  import { common } from '@kit.AbilityKit';
-
-  // Obtain the context within the component.
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  contact.queryMyCard(context, (err: BusinessError, data) => {
-    if (err) {
-      console.error(`Failed to query My Card. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in querying My Card. data->${JSON.stringify(data)}`);
-  });
-```
+See [queryMyCard](#querymycard)
 
 
 ## queryMyCard
@@ -122,23 +188,11 @@ Queries my card. (The contact attribute list can be imported.) This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes | List of contact attributes. If this parameter is empty, all attribute fields ( including the name, phone number, and email address) of the contact are queried. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-contact.queryMyCard({
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query My Card. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying My Card. data->${JSON.stringify(data)}`);
-});
-```
+See [queryMyCard](#querymycard)
 
 
 ## queryMyCard
@@ -163,7 +217,7 @@ Queries my card. (The contact attribute list can be imported.) This API uses an 
 | --- | --- | --- | --- |
 | context | Context | Yes | Indicates the context of application or capability. |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes | List of contact attributes. If this parameter is empty, all attribute fields ( including the name, phone number, and email address) of the contact are queried. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -174,24 +228,7 @@ Queries my card. (The contact attribute list can be imported.) This API uses an 
 
 **Examples**
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-  import { common } from '@kit.AbilityKit';
-
-  // Obtain the context within the component.
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  contact.queryMyCard(context, {
-    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-  }, (err: BusinessError, data) => {
-    if (err) {
-      console.error(`Failed to query My Card. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in querying My Card. data->${JSON.stringify(data)}`);
-  });
-```
+See [queryMyCard](#querymycard)
 
 
 ## queryMyCard
@@ -228,18 +265,7 @@ Queries my card. (The contact attribute list can be imported.) This API uses a p
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = contact.queryMyCard({
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-});
-promise.then((data) => {
-  console.info(`Succeeded in querying My Card. data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query My Card. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [queryMyCard](#querymycard)
 
 
 ## queryMyCard
@@ -280,21 +306,5 @@ Queries my card. (The contact attribute list can be imported.) This API uses a p
 
 **Examples**
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-  import { common } from '@kit.AbilityKit';
-
-  // Obtain the context within the component.
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  let promise = contact.queryMyCard(context, {
-    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-  });
-  promise.then((data) => {
-    console.info(`Succeeded in querying My Card. data->${JSON.stringify(data)}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to query My Card. Code: ${err.code}, message: ${err.message}`);
-  });
-```
+See [queryMyCard](#querymycard)
 

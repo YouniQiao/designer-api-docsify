@@ -32,7 +32,35 @@ Obtains a surface ID for the camera or other components. This API uses an asynch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the surface ID obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the surface ID obtained. Otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function GetReceivingSurfaceId(receiver : image.ImageReceiver) {
+  receiver.getReceivingSurfaceId((err: BusinessError, id: string) => {
+    if (err) {
+      console.error(`Failed to get the ReceivingSurfaceId.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in getting the ReceivingSurfaceId.');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function GetReceivingSurfaceId(receiver : image.ImageReceiver) {
+  receiver.getReceivingSurfaceId().then((id: string) => { 
+    console.info('Succeeded in getting the ReceivingSurfaceId.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to get the ReceivingSurfaceId.code ${error.code},message is ${error.message}`);
+  })
+}
+```
 
 ## getReceivingSurfaceId
 
@@ -54,25 +82,9 @@ Obtains a surface ID for the camera or other components. This API uses a promise
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the surface ID. |
 
-## offImageArrival
+**Examples**
 
-```TypeScript
-offImageArrival(callback?: AsyncCallback<void>): void
-```
-
-Remove callback subscriptions when releasing buffer.
-
-**Since:** 23
-
-<!--Device-ImageReceiver-offImageArrival(callback?: AsyncCallback<void>): void--><!--Device-ImageReceiver-offImageArrival(callback?: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Image.ImageReceiver
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | No | Callback to be removed. |
+See [getReceivingSurfaceId](#getreceivingsurfaceid)
 
 ## off('imageArrival')
 
@@ -93,19 +105,19 @@ Unregisters the callback function that is triggered when the buffer is released.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'imageArrival' | Yes | Type of event, which is **'imageArrival'**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | No | Callback to unregister. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback to unregister. |
 
-## onImageArrival
+## offImageArrival
 
 ```TypeScript
-onImageArrival(callback: AsyncCallback<void>): void
+offImageArrival(callback?: AsyncCallback<void>): void
 ```
 
-Subscribe callback when receiving an image.
+Remove callback subscriptions when releasing buffer.
 
 **Since:** 23
 
-<!--Device-ImageReceiver-onImageArrival(callback: AsyncCallback<void>): void--><!--Device-ImageReceiver-onImageArrival(callback: AsyncCallback<void>): void-End-->
+<!--Device-ImageReceiver-offImageArrival(callback?: AsyncCallback<void>): void--><!--Device-ImageReceiver-offImageArrival(callback?: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
 
@@ -113,7 +125,7 @@ Subscribe callback when receiving an image.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return image. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback to be removed. |
 
 ## on('imageArrival')
 
@@ -134,7 +146,27 @@ Listens for image arrival events. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'imageArrival' | Yes | Type of event to listen for. The value is fixed at **'imageArrival'**, which is triggered when an image is received. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+## onImageArrival
+
+```TypeScript
+onImageArrival(callback: AsyncCallback<void>): void
+```
+
+Subscribe callback when receiving an image.
+
+**Since:** 23
+
+<!--Device-ImageReceiver-onImageArrival(callback: AsyncCallback<void>): void--><!--Device-ImageReceiver-onImageArrival(callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.ImageReceiver
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return image. |
 
 ## readLatestImage
 
@@ -162,7 +194,35 @@ Reads the latest image from the ImageReceiver instance. This API uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Image&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the latest image obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Image&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the latest image obtained; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function ReadLatestImage(receiver : image.ImageReceiver) {
+  receiver.readLatestImage((err: BusinessError, img: image.Image) => {
+    if (err) {
+      console.error(`Failed to read the latest Image.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in reading the latest Image.');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function ReadLatestImage(receiver : image.ImageReceiver) {
+  receiver.readLatestImage().then((img: image.Image) => {
+    console.info('Succeeded in reading the latest Image.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to read the latest Image.code ${error.code},message is ${error.message}`);
+  });
+}
+```
 
 ## readLatestImage
 
@@ -192,6 +252,10 @@ Reads the latest image from the ImageReceiver instance. This API uses a promise 
 | --- | --- |
 | Promise&lt;Image&gt; | Promise used to return the latest image. |
 
+**Examples**
+
+See [readLatestImage](#readlatestimage)
+
 ## readNextImage
 
 ```TypeScript
@@ -218,7 +282,35 @@ Reads the next image from the ImageReceiver instance. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Image&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the next image obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Image&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the next image obtained. Otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function ReadNextImage(receiver : image.ImageReceiver) {
+  receiver.readNextImage((err: BusinessError, img: image.Image) => {
+    if (err) {
+      console.error(`Failed to read the next Image.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in reading the next Image.');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function ReadNextImage(receiver : image.ImageReceiver) {
+  receiver.readNextImage().then((img: image.Image) => {
+    console.info('Succeeded in reading the next Image.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to read the next Image.code ${error.code},message is ${error.message}`);
+  });
+}
+```
 
 ## readNextImage
 
@@ -248,6 +340,10 @@ Reads the next image from the ImageReceiver instance. This API uses a promise to
 | --- | --- |
 | Promise&lt;Image&gt; | Promise used to return the next image. |
 
+**Examples**
+
+See [readNextImage](#readnextimage)
+
 ## release
 
 ```TypeScript
@@ -270,7 +366,204 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+async function Release(auxPictureObj: image.AuxiliaryPicture) {
+  let funcName = "Release";
+  if (auxPictureObj != null) {
+    auxPictureObj.release();
+    if (auxPictureObj.getType() == null) {
+      console.info(funcName, 'Success !');
+    } else {
+      console.error(funcName, 'Failed !');
+    }
+  } else {
+    console.error('PictureObj is null');
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(img : image.Image) {
+  img.release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release the image instance.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in releasing the image instance.');
+    }
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(img : image.Image) {
+  img.release().then(() => {
+    console.info('Succeeded in releasing the image instance.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the image instance.code ${error.code},message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(creator : image.ImageCreator) {
+  creator.release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release the creator.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in releasing creator.');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(creator : image.ImageCreator) {
+  creator.release().then(() => {
+    console.info('Succeeded in releasing creator.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the creator.code ${error.code},message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release() {
+  const imagePackerObj: image.ImagePacker = image.createImagePacker();
+  imagePackerObj.release((err: BusinessError)=>{
+    if (err) {
+      console.error(`Failed to release image packaging.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in releasing image packaging.');
+    }
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release() {
+  const imagePackerObj: image.ImagePacker = image.createImagePacker();
+  imagePackerObj.release().then(() => {
+    console.info('Succeeded in releasing image packaging.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release image packaging.code ${error.code},message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(receiver : image.ImageReceiver) {
+  receiver.release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release the receiver.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in releasing the receiver.');
+    }
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(receiver : image.ImageReceiver) {
+  receiver.release().then(() => {
+    console.info('Succeeded in releasing the receiver.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the receiver.code ${error.code},message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(imageSourceObj : image.ImageSource) {
+  imageSourceObj.release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release the image source instance.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in releasing the image source instance.');
+    }
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(imageSourceObj : image.ImageSource) {
+  imageSourceObj.release().then(() => {
+    console.info('Succeeded in releasing the image source instance.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the image source instance.code ${error.code},message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+async function Release(pictureObj : image.Picture) {
+  let funcName = "Release";
+  if (pictureObj != null) {
+    pictureObj.release();
+    if (pictureObj.getMainPixelmap() == null) {
+      console.info(funcName, 'Success !');
+    } else {
+      console.error(funcName, 'Failed !');
+    }
+  } else {
+    console.error('PictureObj is null');
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(pixelMap:image.PixelMap) {
+  if (pixelMap != undefined) {
+    await pixelMap.release().then(() => {
+      console.info('Succeeded in releasing pixelmap object.');
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to release pixelmap object. code is ${error.code}, message is ${error.message}`);
+    })
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(pixelMap:image.PixelMap) {
+  if (pixelMap != undefined) {
+    pixelMap.release((err: BusinessError) => {
+      if (err) {
+        console.error(`Failed to release pixelmap object. code is ${err.code}, message is ${err.message}`);
+        return;
+      } else {
+        console.info('Succeeded in releasing pixelmap object.');
+      }
+    })
+  }
+}
+```
 
 ## release
 
@@ -295,6 +588,10 @@ Before releasing the instance, ensure that all asynchronous operations associate
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+See [release](#release)
 
 ## capacity
 

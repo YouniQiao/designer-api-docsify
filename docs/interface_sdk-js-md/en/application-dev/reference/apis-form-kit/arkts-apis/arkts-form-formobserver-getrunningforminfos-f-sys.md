@@ -28,7 +28,7 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback is used to return the RunningFormInfo. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback is used to return the RunningFormInfo. |
 | hostBundleName | string | No | Indicates the bundle name of the form host application. |
 
 **Error codes:**
@@ -40,6 +40,76 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
+
+**Examples**
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formObserver.getRunningFormInfos((error: BusinessError, data: formInfo.RunningFormInfo[]) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      data.forEach(data => {
+        console.info(`formObserver getRunningFormInfos, formId: ${data.formId}`);
+      });
+    }
+  }, 'com.example.ohos.formjsdemo');
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formObserver.getRunningFormInfos((error: BusinessError, data: formInfo.RunningFormInfo[]) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      data.forEach(data => {
+        console.info(`formObserver getRunningFormInfos, formId: ${data.formId}`);
+      });
+    }
+  }, true, 'com.example.ohos.formjsdemo');
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formObserver.getRunningFormInfos('com.example.ohos.formjsdemo').then((data: formInfo.RunningFormInfo[]) => {
+    console.info('formObserver getRunningFormInfos success.');
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formObserver.getRunningFormInfos(true, 'com.example.ohos.formjsdemo').then((data: formInfo.RunningFormInfo[]) => {
+    console.info('formObserver getRunningFormInfos success.');
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
 
 
 ## getRunningFormInfos
@@ -68,7 +138,7 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback is used to return the RunningFormInfo. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback is used to return the RunningFormInfo. |
 | isUnusedIncluded | boolean | Yes | Indicates whether to include unused form. |
 | hostBundleName | string | No | Indicates the bundle name of the form host application. |
 
@@ -81,6 +151,10 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
+
+**Examples**
+
+See [getRunningFormInfos](#getrunningforminfos)
 
 
 ## getRunningFormInfos
@@ -122,6 +196,10 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
+
+**Examples**
+
+See [getRunningFormInfos](#getrunningforminfos)
 
 
 ## getRunningFormInfos
@@ -167,4 +245,8 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
+
+**Examples**
+
+See [getRunningFormInfos](#getrunningforminfos)
 

@@ -75,6 +75,47 @@ try {
 }
 ```
 
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'bundleName';
+let accountId = 0;
+let isClearPageStack = false;
+let appIndex = 1;
+
+try {
+  appManager.killProcessWithAccount(bundleName, accountId, isClearPageStack, appIndex).then(() => {
+    console.info('killProcessWithAccount success');
+  }).catch((e: Error) => {
+    let err = e as BusinessError;
+    console.error(`killProcessWithAccount fail, err: ${err.code}, ${err.message}`);
+  });
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`[appManager] error: ${code}, ${message}`);
+}
+```
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'bundleName';
+let accountId = 0;
+
+function killProcessWithAccountCallback(err: BusinessError | null) {
+  if (err) {
+    console.error(`killProcessWithAccountCallback fail, err: ${JSON.stringify(err)}`);
+  } else {
+    console.info('killProcessWithAccountCallback success.');
+  }
+}
+
+appManager.killProcessWithAccount(bundleName, accountId, killProcessWithAccountCallback);
+```
+
 
 ## killProcessWithAccount
 
@@ -125,28 +166,7 @@ function killProcessWithAccount(bundleName: string, accountId: int, clearPageSta
 
 **示例**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'bundleName';
-let accountId = 0;
-let isClearPageStack = false;
-let appIndex = 1;
-
-try {
-  appManager.killProcessWithAccount(bundleName, accountId, isClearPageStack, appIndex).then(() => {
-    console.info('killProcessWithAccount success');
-  }).catch((e: Error) => {
-    let err = e as BusinessError;
-    console.error(`killProcessWithAccount fail, err: ${err.code}, ${err.message}`);
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
+参见 [killProcessWithAccount](#killprocesswithaccount)
 
 
 ## killProcessWithAccount
@@ -192,21 +212,5 @@ function killProcessWithAccount(bundleName: string, accountId: int, callback: As
 
 **示例**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'bundleName';
-let accountId = 0;
-
-function killProcessWithAccountCallback(err: BusinessError | null) {
-  if (err) {
-    console.error(`killProcessWithAccountCallback fail, err: ${JSON.stringify(err)}`);
-  } else {
-    console.info('killProcessWithAccountCallback success.');
-  }
-}
-
-appManager.killProcessWithAccount(bundleName, accountId, killProcessWithAccountCallback);
-```
+参见 [killProcessWithAccount](#killprocesswithaccount)
 

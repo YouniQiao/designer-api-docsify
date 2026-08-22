@@ -268,7 +268,7 @@ strokeJoinStyle?: StrokeJoinStyle
 strokeWidth?: LengthMetrics | double
 ```
 
-文本描边宽度。如果LengthMetrics的unit值是[PERCENT](../../apis-default/arkts-apis/arkts-graphics-lengthunit-e.md)，当前设置不生效，作为0处理。
+文本描边宽度。如果LengthMetrics的unit值是[PERCENT](../arkts-apis/arkts-arkui-graphics-lengthunit-e.md)，当前设置不生效，作为0处理。
 
 值小于0时为实体字，大于0时为轮廓字，等于0时无描边效果。
 
@@ -280,7 +280,7 @@ strokeWidth?: LengthMetrics | double
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**类型：** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md) \| double
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| double
 
 **起始版本：** 23
 

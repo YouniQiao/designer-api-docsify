@@ -139,7 +139,7 @@ FileIO
 | [write](arkts-fileio-write-f.md) | Writes data to a file and returns the number of bytes written. This API uses an asynchronous callback to return the result. |
 | [write](arkts-fileio-write-f.md) | Writes data to a file. Write options (such as the offset position and length of the data written) can be configured.The number of bytes written is returned. This API uses an asynchronous callback to return the result. |
 | [writeSync](arkts-fileio-writesync-f.md) | Writes data to a file synchronously and returns the number of bytes written. |
-| [connectDfs](arkts-fileio-connectdfs-f.md) | Triggers connection. If the peer device is abnormal, [onStatus](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-dfslisteners-i.md#onstatus) in DfsListeners will be called to notify the application. |
+| [connectDfs](arkts-fileio-connectdfs-f.md) | Triggers connection. If the peer device is abnormal, [onStatus](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-dfslisteners-i.md#onstatus) in DfsListeners will be called to notify the application. |
 | [disconnectDfs](arkts-fileio-disconnectdfs-f.md) | Triggers disconnection. |
 | [setxattr](arkts-fileio-setxattr-f.md) | Sets an extended attribute of a file or directory. This API uses a promise to return the result. |
 | [setxattrSync](arkts-fileio-setxattrsync-f.md) | Sets an extended attribute of a file or directory. |

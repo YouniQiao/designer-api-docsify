@@ -27,6 +27,6 @@ Registers a callback function to be called when the layout is done.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | The context scope of the observer. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | The callback function to be called when the layout is done. |
+| context | [UIContext](arkts-arkui-uicontext-uicontext-c.md) | Yes | The context scope of the observer. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | The callback function to be called when the layout is done. |
 

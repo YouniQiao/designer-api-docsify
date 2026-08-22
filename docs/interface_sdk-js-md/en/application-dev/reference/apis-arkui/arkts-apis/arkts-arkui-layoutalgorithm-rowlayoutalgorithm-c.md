@@ -9,7 +9,7 @@ Horizontal linear layout algorithm class.
 > [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the
 > layout algorithm.
 
-**Inheritance/Implementation:** RowLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)
+**Inheritance/Implementation:** RowLayoutAlgorithm implements [LayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-i.md)
 
 **Since:** 24
 
@@ -41,7 +41,7 @@ Constructs the horizontal linear layout algorithm class.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [RowLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-rowlayoutalgorithmoptions-i.md) | No | Input parameters for constructing the horizontal linear layout algorithm, which are used to set the spacing, main axis alignment method, cross axis alignment method, and main axis arrangement direction of the layout algorithm. |
+| option | [RowLayoutAlgorithmOptions](../../apis-default/arkts-apis/arkts-layoutalgorithm-rowlayoutalgorithmoptions-i.md) | No | Input parameters for constructing the horizontal linear layout algorithm, which are used to set the spacing, main axis alignment method, cross axis alignment method, and main axis arrangement direction of the layout algorithm. |
 
 ## alignItems
 

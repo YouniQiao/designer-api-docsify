@@ -11,11 +11,11 @@
 
 | Name | Description |
 | --- | --- |
-| [Network](arkts-network-systemnetwork-network-depr-c.md) |  |
+| [Network](arkts-network-system-network-network-depr-c.md) |  |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [NetworkResponse](arkts-network-systemnetwork-networkresponse-depr-i.md) | This module provides the Network Response. |
+| [NetworkResponse](arkts-network-system-network-networkresponse-depr-i.md) | This module provides the Network Response. |
 

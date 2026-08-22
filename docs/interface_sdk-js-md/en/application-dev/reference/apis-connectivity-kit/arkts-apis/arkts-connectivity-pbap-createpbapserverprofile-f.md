@@ -14,7 +14,7 @@ function createPbapServerProfile(): PbapServerProfile
 
 create the instance of PBAP server profile.
 
-**Since:** 26.0.0
+**Since:** 11
 
 <!--Device-pbap-function createPbapServerProfile(): PbapServerProfile--><!--Device-pbap-function createPbapServerProfile(): PbapServerProfile-End-->
 

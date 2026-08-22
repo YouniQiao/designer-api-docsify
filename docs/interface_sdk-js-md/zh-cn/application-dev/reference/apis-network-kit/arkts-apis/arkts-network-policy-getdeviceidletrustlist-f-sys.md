@@ -52,6 +52,19 @@ policy.getDeviceIdleTrustlist((error: BusinessError, data: number[]) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .getDeviceIdleTrustlist()
+  .then((data: number[]) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
+
 
 ## getDeviceIdleTrustlist
 
@@ -89,16 +102,5 @@ function getDeviceIdleTrustlist(): Promise<Array<int>>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .getDeviceIdleTrustlist()
-  .then((data: number[]) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+参见 [getDeviceIdleTrustlist](#getdeviceidletrustlist)
 

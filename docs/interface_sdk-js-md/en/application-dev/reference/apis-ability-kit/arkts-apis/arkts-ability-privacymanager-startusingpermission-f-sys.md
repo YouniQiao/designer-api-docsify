@@ -67,6 +67,55 @@ privacyManager.startUsingPermission(tokenID, 'ohos.permission.READ_AUDIO').then(
 });
 ```
 
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { rpc } from '@kit.IPCKit'
+
+let tokenID: number = rpc.IPCSkeleton.getCallingTokenId(); // accessTokenId can also be obtained by using getApplicationInfo.
+let pid: number = rpc.IPCSkeleton.getCallingPid();
+let usedType: privacyManager.PermissionUsedType = privacyManager.PermissionUsedType.PICKER_TYPE;
+
+// without pid and usedType
+privacyManager.startUsingPermission(tokenID, 'ohos.permission.READ_AUDIO').then(() => {
+  console.info('startUsingPermission success');
+}).catch((err: BusinessError) => {
+  console.error(`startUsingPermission fail, code: ${err.code}, message: ${err.message}`);
+});
+// with pid
+privacyManager.startUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', pid).then(() => {
+  console.info('startUsingPermission success');
+}).catch((err: BusinessError) => {
+  console.error(`startUsingPermission fail, code: ${err.code}, message: ${err.message}`);
+});
+// with usedType
+privacyManager.startUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', -1, usedType).then(() => {
+  console.info('startUsingPermission success');
+}).catch((err: BusinessError) => {
+  console.error(`startUsingPermission fail, code: ${err.code}, message: ${err.message}`);
+});
+// with pid and usedType
+privacyManager.startUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', pid, usedType).then(() => {
+  console.info('startUsingPermission success');
+}).catch((err: BusinessError) => {
+  console.error(`startUsingPermission fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tokenID: number = 0; // You can use getApplicationInfo to obtain accessTokenId.
+privacyManager.startUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', (err: BusinessError, data: void) => {
+  if (err) {
+    console.error(`startUsingPermission fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('startUsingPermission success');
+  }
+});
+```
+
 
 ## startUsingPermission
 
@@ -123,40 +172,7 @@ After starting to use a permission, [stopUsingPermission](arkts-ability-privacym
 
 **Examples**
 
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { rpc } from '@kit.IPCKit'
-
-let tokenID: number = rpc.IPCSkeleton.getCallingTokenId(); // accessTokenId can also be obtained by using getApplicationInfo.
-let pid: number = rpc.IPCSkeleton.getCallingPid();
-let usedType: privacyManager.PermissionUsedType = privacyManager.PermissionUsedType.PICKER_TYPE;
-
-// without pid and usedType
-privacyManager.startUsingPermission(tokenID, 'ohos.permission.READ_AUDIO').then(() => {
-  console.info('startUsingPermission success');
-}).catch((err: BusinessError) => {
-  console.error(`startUsingPermission fail, code: ${err.code}, message: ${err.message}`);
-});
-// with pid
-privacyManager.startUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', pid).then(() => {
-  console.info('startUsingPermission success');
-}).catch((err: BusinessError) => {
-  console.error(`startUsingPermission fail, code: ${err.code}, message: ${err.message}`);
-});
-// with usedType
-privacyManager.startUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', -1, usedType).then(() => {
-  console.info('startUsingPermission success');
-}).catch((err: BusinessError) => {
-  console.error(`startUsingPermission fail, code: ${err.code}, message: ${err.message}`);
-});
-// with pid and usedType
-privacyManager.startUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', pid, usedType).then(() => {
-  console.info('startUsingPermission success');
-}).catch((err: BusinessError) => {
-  console.error(`startUsingPermission fail, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [startUsingPermission](#startusingpermission)
 
 
 ## startUsingPermission
@@ -217,6 +233,10 @@ When a pid is passed in, the pid must be the same as the pid passed into [stopUs
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 | [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
 
+**Examples**
+
+See [startUsingPermission](#startusingpermission)
+
 
 ## startUsingPermission
 
@@ -248,7 +268,7 @@ After starting to use a permission, [stopUsingPermission](arkts-ability-privacym
 | --- | --- | --- | --- |
 | tokenID | int | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br>For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). |
 | permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be used. Passing an invalid value returns error code 12100001. <br>Value constraint: The permission name length cannot exceed 256 characters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -266,17 +286,5 @@ After starting to use a permission, [stopUsingPermission](arkts-ability-privacym
 
 **Examples**
 
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tokenID: number = 0; // You can use getApplicationInfo to obtain accessTokenId.
-privacyManager.startUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', (err: BusinessError, data: void) => {
-  if (err) {
-    console.error(`startUsingPermission fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('startUsingPermission success');
-  }
-});
-```
+See [startUsingPermission](#startusingpermission)
 

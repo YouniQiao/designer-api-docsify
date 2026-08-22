@@ -29,7 +29,7 @@ Obtains the information about a specified network interface. This API uses an as
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | iface | string | Yes | Network interface. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md)&gt; | Yes | Callback used to return the result. Returns information about the specified network interface. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md)&gt; | Yes | Callback used to return the result. Returns information about the specified network interface. |
 
 **Error codes:**
 
@@ -60,6 +60,22 @@ ethernet.getIfaceConfig("eth0", (error: BusinessError, value: ethernet.Interface
     console.info("getIfaceConfig callback netMask = " + JSON.stringify(value.netMask));
     console.info("getIfaceConfig callback dnsServers = " + JSON.stringify(value.dnsServers));
   }
+});
+```
+
+```TypeScript
+import { ethernet } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+ethernet.getIfaceConfig("eth0").then((data: ethernet.InterfaceConfiguration) => {
+  console.info("getIfaceConfig promise mode = " + JSON.stringify(data.mode));
+  console.info("getIfaceConfig promise ipAddr = " + JSON.stringify(data.ipAddr));
+  console.info("getIfaceConfig promise route = " + JSON.stringify(data.route));
+  console.info("getIfaceConfig promise gateway = " + JSON.stringify(data.gateway));
+  console.info("getIfaceConfig promise netMask = " + JSON.stringify(data.netMask));
+  console.info("getIfaceConfig promise dnsServers = " + JSON.stringify(data.dnsServers));
+}).catch((error: BusinessError) => {
+  console.error("getIfaceConfig promise error = " + JSON.stringify(error));
 });
 ```
 
@@ -108,19 +124,5 @@ Obtains the information about a specified network interface. This API uses a pro
 
 **Examples**
 
-```TypeScript
-import { ethernet } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-ethernet.getIfaceConfig("eth0").then((data: ethernet.InterfaceConfiguration) => {
-  console.info("getIfaceConfig promise mode = " + JSON.stringify(data.mode));
-  console.info("getIfaceConfig promise ipAddr = " + JSON.stringify(data.ipAddr));
-  console.info("getIfaceConfig promise route = " + JSON.stringify(data.route));
-  console.info("getIfaceConfig promise gateway = " + JSON.stringify(data.gateway));
-  console.info("getIfaceConfig promise netMask = " + JSON.stringify(data.netMask));
-  console.info("getIfaceConfig promise dnsServers = " + JSON.stringify(data.dnsServers));
-}).catch((error: BusinessError) => {
-  console.error("getIfaceConfig promise error = " + JSON.stringify(error));
-});
-```
+See [getIfaceConfig](#getifaceconfig)
 

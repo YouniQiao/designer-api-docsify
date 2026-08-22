@@ -12,20 +12,20 @@ import { DownloadFileButton, DownloadLayoutDirection, DownloadIconStyle, Downloa
 
 | Name | Description |
 | --- | --- |
-| [DownloadFileButton](arkts-arkui-arkuiadvanceddownloadfilebutton-downloadfilebutton-s.md) | Declare Component DownloadFileButton |
+| [DownloadFileButton](arkts-arkui-arkui-advanced-downloadfilebutton-downloadfilebutton-s.md) | Declare Component DownloadFileButton |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [DownloadContentOptions](arkts-arkui-arkuiadvanceddownloadfilebutton-downloadcontentoptions-i.md) | Defines the download content options. |
-| [DownloadStyleOptions](arkts-arkui-arkuiadvanceddownloadfilebutton-downloadstyleoptions-i.md) | Defines the DownloadFileButton style option. |
+| [DownloadContentOptions](arkts-arkui-arkui-advanced-downloadfilebutton-downloadcontentoptions-i.md) | Defines the download content options. |
+| [DownloadStyleOptions](arkts-arkui-arkui-advanced-downloadfilebutton-downloadstyleoptions-i.md) | Defines the DownloadFileButton style option. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [DownloadDescription](arkts-arkui-arkuiadvanceddownloadfilebutton-downloaddescription-e.md) | Enum for DownloadDescription |
-| [DownloadIconStyle](arkts-arkui-arkuiadvanceddownloadfilebutton-downloadiconstyle-e.md) | Enum for DownloadIconStyle |
-| [DownloadLayoutDirection](arkts-arkui-arkuiadvanceddownloadfilebutton-downloadlayoutdirection-e.md) | Enum for DownloadDescription |
+| [DownloadDescription](arkts-arkui-arkui-advanced-downloadfilebutton-downloaddescription-e.md) | Enum for DownloadDescription |
+| [DownloadIconStyle](arkts-arkui-arkui-advanced-downloadfilebutton-downloadiconstyle-e.md) | Enum for DownloadIconStyle |
+| [DownloadLayoutDirection](arkts-arkui-arkui-advanced-downloadfilebutton-downloadlayoutdirection-e.md) | Enum for DownloadDescription |
 

@@ -16,5 +16,5 @@ Represents a FrameNode of the **TextTimer** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;TextTimerInterface, TextTimerAttribute&gt;
+**Property type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;TextTimerInterface, TextTimerAttribute&gt;
 

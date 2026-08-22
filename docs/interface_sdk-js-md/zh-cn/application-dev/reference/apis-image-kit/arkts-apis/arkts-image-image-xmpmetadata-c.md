@@ -77,6 +77,251 @@ Obtains the XMP metadata as a blob.
 | [7600301](../errorcode-image.md#7600301-申请内存失败) | Memory alloc failed. |
 | [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Memory copy failed. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function GetBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let pictureObj: image.Picture = await imageSource.createPicture();
+  let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
+  let metaData: image.Metadata | null = await pictureObj.getMetadata(metadataType);
+  if (metaData != null) {
+    let blob = await metaData.getBlob();
+    if (blob != undefined) {
+      console.info("Succeeded in getting blob.");
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+import { common } from '@kit.AbilityKit';
+
+function getFileFd(context: common.UIAbilityContext): int | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd = file.fd;
+  return fd;
+}
+
+async function metadataGetBlob(context: common.UIAbilityContext) {
+  let fd = getFileFd(context);
+  if (fd == undefined) {
+    return;
+  }
+  let imageSource = image.createImageSource(fd);
+  if (imageSource == null) {
+    return;
+  }
+  let picture = await imageSource.createPicture();
+  if (picture != undefined) {
+    let metadataType = image.MetadataType.EXIF_METADATA;
+    let metadata = await picture.getMetadata(metadataType);
+    if (metadata != null) {
+      let blob = await metadata.getBlob();
+      if (blob != undefined) {
+        console.info("get blob success");
+      }
+    }
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function exifMetadataGetBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
+  if (metaData != undefined && metaData.exifMetadata != undefined) {
+    let blob = await metaData.exifMetadata.getBlob();
+    if (blob != undefined) {
+      console.info("Succeeded in getting blob.");
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+import { common } from '@kit.AbilityKit';
+
+function getFileFd(context: common.UIAbilityContext): int | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd = file.fd;
+  return fd;
+}
+
+async function exifMetadataGetBlob(context: common.UIAbilityContext) {
+  let fd = getFileFd(context);
+  if (fd == undefined) {
+    return;
+  }
+  let imageSource = image.createImageSource(fd);
+  if (imageSource == null) {
+    return;
+  }
+  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
+  if (metaData != undefined && metaData.exifMetadata != undefined) {
+    const exif = metaData?.exifMetadata;
+    if (exif) {
+      let blob = await exif.getBlob();
+      if (blob != undefined) {
+        console.info("get blob success");
+      }
+    }
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function makerNoteHuaweiGetBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
+  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
+    let blob = await metaData.makerNoteHuaweiMetadata.getBlob();
+    if (blob != undefined) {
+      console.info("Succeeded in getting blob.");
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+import { common } from '@kit.AbilityKit';
+
+function getFileFd(context: common.UIAbilityContext): int | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd = file.fd;
+  return fd;
+}
+
+async function makerNoteHuaweiMetadataGetBlob(context: common.UIAbilityContext) {
+  let fd = getFileFd(context);
+  if (fd == undefined) {
+    return;
+  }
+  let imageSource = image.createImageSource(fd);
+  if (imageSource == null) {
+    return;
+  }
+  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
+  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
+    const exif = metaData?.makerNoteHuaweiMetadata;
+    if (exif) {
+      let blob = await exif.getBlob();
+      if (blob != undefined) {
+        console.info("get blob success");
+      }
+    }
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/heifs.heic';  // 图片包含HeifsMetadata。
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function heifsMetadataGetBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
+  if (metaData != undefined && metaData.heifsMetadata != undefined) {
+    let blob = await metaData.heifsMetadata.getBlob();
+    if (blob != undefined) {
+      console.info("Succeeded in getting blob.");
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+import { common } from '@kit.AbilityKit';
+
+function getFileFd(context: common.UIAbilityContext): int | undefined {
+  const filePath: string = context.cacheDir + '/heifs.heic';  // 图片包含HeifsMetadata。
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd = file.fd;
+  return fd;
+}
+
+async function heifsMetadataGetBlob(context: common.UIAbilityContext) {
+  let fd = getFileFd(context);
+  if (fd == undefined) {
+    return;
+  }
+  let imageSource = image.createImageSource(fd);
+  if (imageSource == null) {
+    return;
+  }
+  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
+  if (metaData != undefined && metaData.heifsMetadata != undefined) {
+    const exif = metaData?.heifsMetadata;
+    if (exif) {
+      let blob = await exif.getBlob();
+      if (blob != undefined) {
+        console.info("get blob success");
+      }
+    }
+  }
+}
+```
+
 ## getTag
 
 ```TypeScript
@@ -247,6 +492,291 @@ Set a blob into the XMP metadata.
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7600206](../errorcode-image.md#7600206-无效参数) | Invalid argument. Possible causes: 1. The buffer is empty or invalid. |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function setBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let pictureObj: image.Picture = await imageSource.createPicture();
+  let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
+  let metaData: image.Metadata | null = await pictureObj.getMetadata(metadataType);
+  if (metaData != null) {
+    let blob = await metaData.getBlob();
+    if (blob != undefined) {
+      console.info("Succeeded in getting blob.");
+      metaData.setBlob(blob);
+    }
+    let new_blob = metaData.getBlob();
+    if (new_blob != undefined) {
+      console.info("new_blob is not undefined");
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+import { common } from '@kit.AbilityKit';
+
+function getFileFd(context: common.UIAbilityContext): int | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd = file.fd;
+  return fd;
+}
+
+async function metadataSetBlob(context: common.UIAbilityContext) {
+  let fd = getFileFd(context);
+  if (fd == undefined) {
+    return;
+  }
+  let imageSource = image.createImageSource(fd);
+  if (imageSource == null) {
+    return;
+  }
+  let picture = await imageSource.createPicture();
+  if (picture != undefined) {
+    let metadataType = image.MetadataType.EXIF_METADATA;
+    let metadata = await picture.getMetadata(metadataType);
+    if (metadata != null) {
+      let blob = await metadata.getBlob();
+      if (blob != undefined) {
+        console.info("get blob success");
+        metadata.setBlob(blob);
+      }
+      let new_blob = metadata.getBlob();
+      if (new_blob != undefined) {
+        console.info("new_blob is not undefined");
+      }
+    }
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function exifMetadataSetBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
+  if (metaData != undefined && metaData.exifMetadata != undefined) {
+    let blob = await metaData.exifMetadata.getBlob();
+    if (blob != undefined) {
+      console.info("Succeeded in getting blob.");
+      metaData.exifMetadata.setBlob(blob);
+    }
+    let new_blob = metaData.exifMetadata.getBlob();
+    if (new_blob != undefined) {
+      console.info("new_blob is not undefined");
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+import { common } from '@kit.AbilityKit';
+
+function getFileFd(context: common.UIAbilityContext): int | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd = file.fd;
+  return fd;
+}
+
+async function exifMetadataSetBlob(context: common.UIAbilityContext) {
+  let fd = getFileFd(context);
+  if (fd == undefined) {
+    return;
+  }
+  let imageSource = image.createImageSource(fd);
+  if (imageSource == null) {
+    return;
+  }
+  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
+  if (metaData != undefined && metaData.exifMetadata != undefined) {
+    const exif = metaData?.exifMetadata;
+    if (exif) {
+      let blob = await exif.getBlob();
+      if (blob != undefined) {
+        console.info("get blob success");
+        exif.setBlob(blob);
+      }
+      let new_blob = exif.getBlob();
+      if (new_blob != undefined) {
+        console.info("new_blob is not undefined");
+      }
+    }
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function makerNoteHuaweiSetBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
+  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
+    let blob = await metaData.makerNoteHuaweiMetadata.getBlob();
+    if (blob != undefined) {
+      console.info("Succeeded in getting blob.");
+      metaData.makerNoteHuaweiMetadata.setBlob(blob);
+    }
+    let new_blob = metaData.makerNoteHuaweiMetadata.getBlob();
+    if (new_blob != undefined) {
+      console.info("new_blob is not undefined");
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+import { common } from '@kit.AbilityKit';
+
+function getFileFd(context: common.UIAbilityContext): int | undefined {
+  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd = file.fd;
+  return fd;
+}
+
+async function makerNoteHuaweiMetadataSetBlob(context: common.UIAbilityContext) {
+  let fd = getFileFd(context);
+  if (fd == undefined) {
+    return;
+  }
+  let imageSource = image.createImageSource(fd);
+  if (imageSource == null) {
+    return;
+  }
+  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
+  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
+    const exif = metaData?.makerNoteHuaweiMetadata;
+    if (exif) {
+      let blob = await exif.getBlob();
+      if (blob != undefined) {
+        console.info("get blob success");
+        exif.setBlob(blob);
+      }
+      let new_blob = exif.getBlob();
+      if (new_blob != undefined) {
+        console.info("new_blob is not undefined");
+      }
+    }
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+
+function getFileFd(context: Context): number | undefined {
+  const filePath: string = context.cacheDir + '/heifs.heic';  // 图片包含HeifsMetadata。
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd: number = file?.fd;
+  return fd;
+}
+
+async function heifsMetadataSetBlob(context: Context) {
+  let fd = getFileFd(context);
+  let imageSource = image.createImageSource(fd);
+  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
+  if (metaData != undefined && metaData.heifsMetadata != undefined) {
+    let blob = await metaData.heifsMetadata.getBlob();
+    if (blob != undefined) {
+      console.info("Succeeded in getting blob.");
+      metaData.heifsMetadata.setBlob(blob);
+    }
+    let new_blob = metaData.heifsMetadata.getBlob();
+    if (new_blob != undefined) {
+      console.info("new_blob is not undefined");
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+import { common } from '@kit.AbilityKit';
+
+function getFileFd(context: common.UIAbilityContext): int | undefined {
+  const filePath: string = context.cacheDir + '/heifs.heic';  // 图片包含HeifsMetadata。
+  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
+  const fd = file.fd;
+  return fd;
+}
+
+async function heifsMetadataSetBlob(context: common.UIAbilityContext) {
+  let fd = getFileFd(context);
+  if (fd == undefined) {
+    return;
+  }
+  let imageSource = image.createImageSource(fd);
+  if (imageSource == null) {
+    return;
+  }
+  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
+  if (metaData != undefined && metaData.heifsMetadata != undefined) {
+    const exif = metaData?.heifsMetadata;
+    if (exif) {
+      let blob = await exif.getBlob();
+      if (blob != undefined) {
+        console.info("get blob success");
+        exif.setBlob(blob);
+      }
+      let new_blob = exif.getBlob();
+      if (new_blob != undefined) {
+        console.info("new_blob is not undefined");
+      }
+    }
+  }
+}
+```
 
 ## setValue
 

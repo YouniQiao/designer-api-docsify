@@ -27,7 +27,7 @@ Obtains the network state of the registered network.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NetworkState&gt; | Yes | Indicates the callback for getting network registration state. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetworkState&gt; | Yes | Indicates the callback for getting network registration state. |
 
 **Error codes:**
 
@@ -45,6 +45,18 @@ Obtains the network state of the registered network.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+radio.getNetworkState((err: BusinessError, data: radio.NetworkState) => {
+    if (err) {
+        console.error(`getNetworkState failed, callback: err->${JSON.stringify(err)}`);
+        return;
+    }
+    console.info(`getNetworkState success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let slotId: number = 0;
 radio.getNetworkState(slotId, (err: BusinessError, data: radio.NetworkState) => {
     if (err) {
@@ -52,6 +64,17 @@ radio.getNetworkState(slotId, (err: BusinessError, data: radio.NetworkState) => 
         return;
     }
     console.info(`getNetworkState success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.getNetworkState(slotId).then((data: radio.NetworkState) => {
+    console.info(`getNetworkState success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getNetworkState failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -97,16 +120,7 @@ Obtains the network state of the registered network.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getNetworkState(slotId).then((data: radio.NetworkState) => {
-    console.info(`getNetworkState success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getNetworkState failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getNetworkState](#getnetworkstate)
 
 
 ## getNetworkState
@@ -129,7 +143,7 @@ Obtains the network state of the registered network.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NetworkState&gt; | Yes | Indicates the callback for getting network registration state. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetworkState&gt; | Yes | Indicates the callback for getting network registration state. |
 
 **Error codes:**
 
@@ -144,15 +158,5 @@ Obtains the network state of the registered network.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.getNetworkState((err: BusinessError, data: radio.NetworkState) => {
-    if (err) {
-        console.error(`getNetworkState failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`getNetworkState success, callback: data->${JSON.stringify(data)}`);
-});
-```
+See [getNetworkState](#getnetworkstate)
 

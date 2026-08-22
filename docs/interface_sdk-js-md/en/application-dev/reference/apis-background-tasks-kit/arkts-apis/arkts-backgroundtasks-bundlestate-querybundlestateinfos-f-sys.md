@@ -34,7 +34,7 @@ This method queries usage information at the BY_OPTIMIZED interval by default.
 | --- | --- | --- | --- |
 | begin | number | Yes | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
 | end | number | Yes | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md)&gt; | Yes | the callback of queryBundleStateInfos. the [BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md) objects containing the usage information about each bundle. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md)&gt; | Yes | the callback of queryBundleStateInfos. the [BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md) objects containing the usage information about each bundle. |
 
 **Examples**
 
@@ -49,6 +49,17 @@ bundleState.queryBundleStateInfos(0, 20000000000000, (err: BusinessError ,
     console.info('BUNDLE_ACTIVE queryBundleStateInfos callback success.');
     console.info('BUNDLE_ACTIVE queryBundleStateInfos callback result ' + JSON.stringify(res));
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+bundleState.queryBundleStateInfos(0, 20000000000000).then((res: bundleState.BundleActiveInfoResponse) => {
+  console.info('BUNDLE_ACTIVE queryBundleStateInfos promise success.');
+  console.info('BUNDLE_ACTIVE queryBundleStateInfos promise result ' + JSON.stringify(res));
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE queryBundleStateInfos promise failed, because: ' + err.code);
 });
 ```
 
@@ -90,14 +101,5 @@ This method queries usage information at the BY_OPTIMIZED interval by default.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-bundleState.queryBundleStateInfos(0, 20000000000000).then((res: bundleState.BundleActiveInfoResponse) => {
-  console.info('BUNDLE_ACTIVE queryBundleStateInfos promise success.');
-  console.info('BUNDLE_ACTIVE queryBundleStateInfos promise result ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryBundleStateInfos promise failed, because: ' + err.code);
-});
-```
+See [queryBundleStateInfos](#querybundlestateinfos)
 

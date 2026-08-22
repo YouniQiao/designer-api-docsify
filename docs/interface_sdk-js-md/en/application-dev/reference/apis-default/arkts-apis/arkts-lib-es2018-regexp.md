@@ -11,7 +11,7 @@
 
 | Name | Description |
 | --- | --- |
-| [RegExp](arkts-libes2018regexp-regexp-i.md) |  |
-| [RegExpExecArray](arkts-libes2018regexp-regexpexecarray-i.md) |  |
-| [RegExpMatchArray](arkts-libes2018regexp-regexpmatcharray-i.md) |  |
+| [RegExp](arkts-lib-es2018-regexp-regexp-i.md) |  |
+| [RegExpExecArray](arkts-lib-es2018-regexp-regexpexecarray-i.md) |  |
+| [RegExpMatchArray](arkts-lib-es2018-regexp-regexpmatcharray-i.md) |  |
 

@@ -30,7 +30,7 @@ Adds applications specified by given UIDs to the device idle allowlist. This API
 | --- | --- | --- | --- |
 | uids | Array&lt;int&gt; | Yes | Unique ID of the application. |
 | isAllowed | boolean | Yes | Whether to add the application to the allowlist. The value **true** means to add the application to the allowlist, and the value **false** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -51,6 +51,19 @@ import { BusinessError } from '@kit.BasicServicesKit';
 policy.setDeviceIdleTrustlist([11111, 22222], true, (error: BusinessError) => {
   console.error(JSON.stringify(error));
 });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .setDeviceIdleTrustlist([11111, 22222], true)
+  .then(() => {
+    console.info('setDeviceIdleTrustlist success');
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
 ```
 
 
@@ -98,16 +111,5 @@ Sets whether multiple UIDs are in the whitelist of the sleep firewall. This API 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .setDeviceIdleTrustlist([11111, 22222], true)
-  .then(() => {
-    console.info('setDeviceIdleTrustlist success');
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+See [setDeviceIdleTrustlist](#setdeviceidletrustlist)
 

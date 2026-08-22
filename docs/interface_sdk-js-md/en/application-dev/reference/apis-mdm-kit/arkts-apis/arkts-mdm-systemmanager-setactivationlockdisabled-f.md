@@ -28,7 +28,7 @@ Enables or disables the device activation lock. After the device activation lock
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | isDisabled | boolean | Yes | Whether to disable the activation lock. The value **true** indicates yes, and the value **false** indicates no. |
 | credential | string | No | Credential for disabling the activation lock. To disable the activation lock, you must set this parameter to a valid credential. Leave this parameter empty when enabling the activation lock. |
 

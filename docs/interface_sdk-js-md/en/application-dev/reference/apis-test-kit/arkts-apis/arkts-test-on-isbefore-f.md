@@ -33,3 +33,21 @@ Requires that the target Component which is before another Component that specif
 | --- | --- |
 | [On](arkts-test-uitest-on-c.md) | this { |
 
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+// Use the static constructor ON to create an On object and specify that the target component is located before the given attribute component.
+let on: On = ON.type('Button').isBefore(ON.text('123')); // Search for the first Button component located before the component whose text is 123.
+```
+
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+// Use the static constructor BY to create a by object and specify that the target component is located before the given attribute component.
+let by: By = BY.type('Button').isBefore(BY.text('123')); // Search for the first Button component located before the component whose text is 123.
+```
+

@@ -33,7 +33,26 @@ A constructor used to create a **Readable** object.
 **Examples**
 
 ```TypeScript
+let writableStream = new stream.Writable();
+```
+
+```TypeScript
 let readableStream = new stream.Readable();
+```
+
+```TypeScript
+let option : stream.ReadableOptions = {
+  encoding : 'utf-8'
+};
+let readableStream = new stream.Readable(option);
+```
+
+```TypeScript
+let duplex = new stream.Duplex();
+```
+
+```TypeScript
+let transform = new stream.Transform();
 ```
 
 ## constructor
@@ -60,12 +79,7 @@ A constructor used to create a **Readable** object.
 
 **Examples**
 
-```TypeScript
-let option : stream.ReadableOptions = {
-  encoding : 'utf-8'
-};
-let readableStream = new stream.Readable(option);
-```
+See [constructor](#constructor)
 
 ## doInitialize
 
@@ -90,6 +104,21 @@ You need to implement this API. It is called when the readable stream calls [on]
 | callback | Function | Yes | Callback function. |
 
 **Examples**
+
+```TypeScript
+class MyWritable extends stream.Writable {
+  doInitialize(callback: Function) {
+    super.doInitialize(callback);
+    console.info("Writable doInitialize"); // Writable doInitialize
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    super.doWrite(chunk, encoding, callback);
+  }
+}
+
+new MyWritable();
+```
 
 ```TypeScript
 class MyReadable extends stream.Readable {
@@ -208,7 +237,7 @@ Unregisters an event processing callback used to listen for different events on 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Type of the event. The following events are supported: |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;emitter.EventData&gt; | No | Callback function. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | No | Callback function. |
 
 **Examples**
 
@@ -279,7 +308,7 @@ Registers an event processing callback to listen for different events on the rea
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Type of the event. The following events are supported: |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;emitter.EventData&gt; | Yes | Callback function used to return the event data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | Yes | Callback function used to return the event data. |
 
 **Examples**
 
@@ -555,6 +584,10 @@ Reads a buffer of a specified size from the buffer. If the available buffer is s
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200038](../errorcode-utils.md#10200038-doread-is-not-implemented) | The doRead method has not been implemented. |
+
+**Examples**
+
+See [read](#read)
 
 ## resume
 

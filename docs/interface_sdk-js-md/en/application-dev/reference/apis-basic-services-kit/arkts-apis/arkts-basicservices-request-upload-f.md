@@ -34,7 +34,7 @@ Uploads a file. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | [UploadConfig](arkts-basicservices-request-uploadconfig-i.md) | Yes | Upload configurations. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[UploadTask](arkts-basicservices-request-uploadtask-i.md)&gt; | Yes | Callback used to return the **UploadTask** object. If the operation is successful, **err** is **undefined**, and **data** is the **UploadTask** object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[UploadTask](arkts-basicservices-request-uploadtask-i.md)&gt; | Yes | Callback used to return the **UploadTask** object. If the operation is successful, **err** is **undefined**, and **data** is the **UploadTask** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -43,6 +43,22 @@ Uploads a file. This API uses an asynchronous callback to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 **Examples**
+
+```TypeScript
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // Replace the URL with the HTTP address of the real server.
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // Set type to the MIME type specified by the HTTP.
+  data: [{ name: "name123", value: "123" }],
+};
+request.upload(uploadConfig).then((data: request.UploadTask) => {
+  uploadTask = data;
+}).catch((err: BusinessError) => {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+})
+```
 
 ```TypeScript
 let uploadTask: request.UploadTask;
@@ -105,19 +121,5 @@ Uploads a file. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-let uploadTask: request.UploadTask;
-let uploadConfig: request.UploadConfig = {
-  url: 'http://www.example.com', // Replace the URL with the HTTP address of the real server.
-  header: { 'Accept': '*/*' },
-  method: "POST",
-  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // Set type to the MIME type specified by the HTTP.
-  data: [{ name: "name123", value: "123" }],
-};
-request.upload(uploadConfig).then((data: request.UploadTask) => {
-  uploadTask = data;
-}).catch((err: BusinessError) => {
-  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
-})
-```
+See [upload](#upload)
 

@@ -2349,26 +2349,6 @@ Returns a new Uint32Array with the element at the given index replaced by the gi
 | --- | --- |
 | Uint32Array | a new Uint32Array with the element at index replaced. |
 
-## BYTES_PER_ELEMENT
-
-```TypeScript
-public static readonly BYTES_PER_ELEMENT: int = 4
-```
-
-Number of bytes occupied by each element
-
-**Type:** int
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Uint32Array-public static readonly BYTES_PER_ELEMENT: int = 4--><!--Device-Uint32Array-public static readonly BYTES_PER_ELEMENT: int = 4-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
 ## buffer
 
 ```TypeScript
@@ -2386,6 +2366,26 @@ Underlying Buffer.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Uint32Array-public readonly buffer: ArrayBuffer--><!--Device-Uint32Array-public readonly buffer: ArrayBuffer-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## BYTES_PER_ELEMENT
+
+```TypeScript
+public static readonly BYTES_PER_ELEMENT: int = 4
+```
+
+Number of bytes occupied by each element
+
+**Type:** int
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Uint32Array-public static readonly BYTES_PER_ELEMENT: int = 4--><!--Device-Uint32Array-public static readonly BYTES_PER_ELEMENT: int = 4-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

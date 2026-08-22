@@ -28,7 +28,7 @@ Cancel listening touchPad four finger swipe events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FourFingersSwipe](arkts-input-multimodalinputgestureevent-fourfingersswipe-i.md)&gt; | No | Callback used to receive the reported data. |
+| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FourFingersSwipe](arkts-input-multimodalinput-gestureevent-fourfingersswipe-i.md)&gt; | No | Callback used to receive the reported data. |
 
 **Error codes:**
 

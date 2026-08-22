@@ -44,3 +44,30 @@ Updates the static configuration information of a specified template widget on t
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16501013](../errorcode-form.md#16501013-operation-not-supported) | The system does not support the current operation. |
 
+**Examples**
+
+```TypeScript
+import { formProvider, formInfo } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const templateFormInfo: formInfo.TemplateFormDetailInfo[] = [{
+    bundleName: 'com.example.ohos.formjsdemo',
+    moduleName: 'entry',
+    abilityName: 'EntryAbility',
+    formName: 'widget',
+    dimension: 2,
+    detailId: 'detailId',
+    displayName: 'displayName',
+    description: 'description',
+  }];
+  formProvider.updateTemplateFormDetailInfo(templateFormInfo).then(() => {
+    console.info('updateTemplateFormDetailInfo succeed.');
+  }).catch((error: BusinessError) => {
+    console.error(`promise error, code: ${error.code}, message: ${error.message})`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
+}
+```
+

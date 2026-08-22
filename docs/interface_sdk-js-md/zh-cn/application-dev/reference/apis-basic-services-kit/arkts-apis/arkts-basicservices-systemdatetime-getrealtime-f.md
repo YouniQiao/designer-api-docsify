@@ -56,6 +56,38 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemDateTime.getRealTime((error: BusinessError, time: number) => {
+    if (error) {
+      console.error(`Failed to get real time. Code: ${error.code}, message: ${error.message}`);
+      return;
+    }
+    console.info(`Succeeded in getting real time : ${time}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get real time. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemDateTime.getRealTime().then((time: number) => {
+    console.info(`Succeeded in getting real time : ${time}`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to get real time. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get real time. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 
 ## getRealTime
 
@@ -89,22 +121,7 @@ function getRealTime(callback: AsyncCallback<number>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.getRealTime((error: BusinessError, time: number) => {
-    if (error) {
-      console.error(`Failed to get real time. Code: ${error.code}, message: ${error.message}`);
-      return;
-    }
-    console.info(`Succeeded in getting real time : ${time}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get real time. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [getRealTime](#getrealtime)
 
 
 ## getRealTime
@@ -145,18 +162,5 @@ function getRealTime(isNano?: boolean): Promise<number>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.getRealTime().then((time: number) => {
-    console.info(`Succeeded in getting real time : ${time}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get real time. Code: ${error.code}, message: ${error.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get real time. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [getRealTime](#getrealtime)
 

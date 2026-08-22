@@ -28,7 +28,7 @@ Get all avsession descriptors of the system
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i-sys.md)&gt;&gt;&gt; | Yes | async callback for an array of AVSessionDescriptors. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i-sys.md)&gt;&gt;&gt; | Yes | async callback for an array of AVSessionDescriptors. |
 
 **Error codes:**
 
@@ -39,6 +39,21 @@ Get all avsession descriptors of the system
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avSession.getAllSessionDescriptors().then((descriptors: avSession.AVSessionDescriptor[]) => {
+  console.info(`getAllSessionDescriptors : SUCCESS : descriptors.length : ${descriptors.length}`);
+  if (descriptors.length > 0 ) {
+    console.info(`getAllSessionDescriptors : SUCCESS : descriptors[0].isActive : ${descriptors[0].isActive}`);
+    console.info(`GetAllSessionDescriptors : SUCCESS : descriptors[0].type : ${descriptors[0].type}`);
+    console.info(`GetAllSessionDescriptors : SUCCESS : descriptors[0].sessionTag : ${descriptors[0].sessionTag}`);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`GetAllSessionDescriptors BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -94,18 +109,5 @@ Get all avsession descriptors which can be shown on system entrance.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avSession.getAllSessionDescriptors().then((descriptors: avSession.AVSessionDescriptor[]) => {
-  console.info(`getAllSessionDescriptors : SUCCESS : descriptors.length : ${descriptors.length}`);
-  if (descriptors.length > 0 ) {
-    console.info(`getAllSessionDescriptors : SUCCESS : descriptors[0].isActive : ${descriptors[0].isActive}`);
-    console.info(`GetAllSessionDescriptors : SUCCESS : descriptors[0].type : ${descriptors[0].type}`);
-    console.info(`GetAllSessionDescriptors : SUCCESS : descriptors[0].sessionTag : ${descriptors[0].sessionTag}`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`GetAllSessionDescriptors BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
+See [getAllSessionDescriptors](#getallsessiondescriptors)
 

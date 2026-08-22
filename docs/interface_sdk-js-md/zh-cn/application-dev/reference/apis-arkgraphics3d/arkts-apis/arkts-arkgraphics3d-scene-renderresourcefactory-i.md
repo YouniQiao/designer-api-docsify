@@ -295,6 +295,21 @@ function createScenePromise(fromFile: boolean = false): Promise<Scene> {
 }
 ```
 
+```TypeScript
+import { Scene, SceneLoadParams, RenderContext, RenderResourceFactory } from '@kit.ArkGraphics3D';
+
+function createSceneWithParams(): Promise<Scene> {
+  const renderContext: RenderContext | null = Scene.getDefaultRenderContext();
+  if (!renderContext) {
+    return Promise.reject(new Error("RenderContext is null"));
+  }
+  const renderResourceFactory: RenderResourceFactory = renderContext.getRenderResourceFactory();
+  // 创建场景并传入场景加载参数，路径和文件名可根据项目实际资源自定义
+  let loadParams: SceneLoadParams = { offset: 0 };
+  return renderResourceFactory.createScene($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"), loadParams);
+}
+```
+
 ## createShader
 
 ```TypeScript

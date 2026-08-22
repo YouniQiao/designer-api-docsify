@@ -32,7 +32,7 @@ Creates a stream based on a file path. This API returns the result synchronously
 
 | Type | Description |
 | --- | --- |
-| [Stream](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-stream-i.md) | File stream. |
+| [Stream](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-stream-i.md) | File stream. |
 
 **Error codes:**
 

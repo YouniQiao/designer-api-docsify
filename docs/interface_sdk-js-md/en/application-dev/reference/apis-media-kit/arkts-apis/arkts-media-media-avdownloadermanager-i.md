@@ -321,6 +321,241 @@ Release resources used for AVDownloaderManager.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// asyncallback.
+videoRecorder.release((err: BusinessError) => {
+  if (err == null) {
+    console.info('release videorecorder success');
+  } else {
+    console.error('release videorecorder failed and error is ' + err.message);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// promise.
+videoRecorder.release().then(() => {
+  console.info('release videorecorder success');
+}).catch((err: BusinessError) => {
+  console.error('release videorecorder failed and catch error is ' + err.message);
+});
+```
+
+```TypeScript
+audioPlayer.release();
+audioPlayer = undefined;
+```
+
+```TypeScript
+audioRecorder.on('release', () => {    // Set the 'release' event callback.
+  console.info('audio recorder release called');
+});
+audioRecorder.release();
+audioRecorder = undefined;
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+let avImageGenerator: media.AVImageGenerator | undefined = undefined;
+
+// Release the resources.
+media.createAVImageGenerator((err: BusinessError, generator: media.AVImageGenerator) => {
+  if (generator != null) {
+    avImageGenerator = generator;
+    console.info(`Succeeded in creating AVImageGenerator`);
+    avImageGenerator.release((error: BusinessError) => {
+      if (error) {
+        console.error(`Failed to release, err = ${JSON.stringify(error)}`);
+        return;
+      }
+      console.info(`Succeeded in releasing`);
+    });
+  } else {
+    console.error(`Failed to create AVImageGenerator, error message:${err.message}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+let avImageGenerator: media.AVImageGenerator | undefined = undefined;
+
+// Release the resources.
+media.createAVImageGenerator((err: BusinessError, generator: media.AVImageGenerator) => {
+  if (generator != null) {
+    avImageGenerator = generator;
+    console.info(`Succeeded in creating AVImageGenerator`);
+    avImageGenerator.release().then(() => {
+      console.info(`Succeeded in releasing.`);
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to release, error message:${error.message}`);
+    });
+  } else {
+    console.error(`Failed to create AVImageGenerator, error message:${err.message}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+async function test() {
+  // Create an AVMetadataExtractor instance.
+  let avMetadataExtractor: media.AVMetadataExtractor = await media.createAVMetadataExtractor();
+  avMetadataExtractor.release((error: BusinessError) => {
+    if (error) {
+      console.error(`Failed to release, err = ${JSON.stringify(error)}`);
+      return;
+    }
+    console.info(`Succeeded in releasing.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+async function test() {
+  // Create an AVMetadataExtractor instance.
+  let avMetadataExtractor: media.AVMetadataExtractor = await media.createAVMetadataExtractor();
+  avMetadataExtractor.release().then(() => {
+    console.info(`Succeeded in releasing.`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release, error message:${error.message}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach a state other than released before proceeding.
+  avPlayer.release((err: BusinessError) => {
+    if (err) {
+      console.error('Failed to release,error message is :' + err.message);
+    } else {
+      console.info('Succeeded in releasing');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach a state other than released before proceeding.
+  avPlayer.release().then(() => {
+    console.info('Succeeded in releasing');
+  }, (err: BusinessError) => {
+    console.error('Failed to release,error message is :' + err.message);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avRecorder.release((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to release AVRecorder and error is: Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Succeeded in releasing AVRecorder');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avRecorder.release().then(() => {
+  console.info('Succeeded in releasing AVRecorder');
+}).catch((err: Error) => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to release AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Initialize avScreenCaptureRecorder.
+let avScreenCaptureRecorder: media.AVScreenCaptureRecorder | undefined;
+media.createAVScreenCaptureRecorder().then((captureRecorder: media.AVScreenCaptureRecorder) => {
+  if (captureRecorder != null) {
+    avScreenCaptureRecorder = captureRecorder;
+    console.info('Succeeded in creating avScreenCaptureRecorder');
+  } else {
+    console.error('Failed to create avScreenCaptureRecorder');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`createAVScreenCaptureRecorder catchCallback, error message:${error.message}`);
+});
+
+// Other processes.
+
+// Call the release method.
+if (avScreenCaptureRecorder != undefined) {
+  avScreenCaptureRecorder.release().then(() => {
+    console.info('Succeeded in releasing avScreenCaptureRecorder');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to release avScreenCaptureRecorder. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+async function test() {
+  // Create an AVTranscoder instance.
+  let avTranscoder = await media.createAVTranscoder();
+  avTranscoder.release().then(() => {
+    console.info('release AVTranscoder success');
+  }).catch((err: BusinessError) => {
+    console.error('release AVTranscoder failed and catch error is ' + err.message);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.release((err: BusinessError) => {
+  if (err) {
+    console.error('Failed to release!');
+  } else {
+    console.info('Succeeded in releasing!');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.release().then(() => {
+  console.info('Succeeded in releasing');
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error:${error}`);
+});
+```
+
 ## removeDownloadTask
 
 ```TypeScript

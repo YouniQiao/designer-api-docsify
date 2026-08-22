@@ -79,6 +79,14 @@ Compares two values and returns a Boolean value.
 
 **Examples**
 
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let rational = util.RationalNumber.createRationalFromString("3/4");
+let result = rationalNumber.compareTo(rational);
+console.info("result = " + result);
+// Output: result = -1
+```
+
 Create a class to implement the compareTo method. The Temperature class is used as an example in the following sample code.
 
 ```TypeScript

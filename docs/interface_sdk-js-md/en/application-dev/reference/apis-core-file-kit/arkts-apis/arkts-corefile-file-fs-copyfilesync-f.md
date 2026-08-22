@@ -55,3 +55,11 @@ Copies a file. This API returns the result synchronously.
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
 
+**Examples**
+
+```TypeScript
+let srcPath = pathDir + "/srcDir/test.txt";
+let dstPath = pathDir + "/dstDir/test.txt";
+fs.copyFileSync(srcPath, dstPath);
+```
+

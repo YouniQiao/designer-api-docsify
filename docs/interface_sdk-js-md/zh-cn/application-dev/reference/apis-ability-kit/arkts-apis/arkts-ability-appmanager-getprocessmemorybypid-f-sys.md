@@ -44,6 +44,56 @@ function getProcessMemoryByPid(pid: int): Promise<int>
 
 **示例**
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let pid = 0;
+function getProcessMemoryByPidCallback(err: BusinessError, data: number) {
+  if (err) {
+    console.error(`getProcessMemoryByPidCallback fail, err: ${JSON.stringify(err)}`);
+  } else {
+    console.info('getProcessMemoryByPidCallback success.');
+  }
+}
+
+try {
+  appManager.getProcessMemoryByPid(pid, getProcessMemoryByPidCallback);
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`[appManager] error: ${code}, ${message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let pid: int = 0;
+
+function getProcessMemoryByPidCallback(err: BusinessError | null, data: int | undefined) {
+  if (err) {
+    console.error(`getProcessMemoryByPidCallback fail, err: ${JSON.stringify(err)}`);
+  } else {
+    console.info('getProcessMemoryByPidCallback success.');
+  }
+}
+
+try {
+  appManager.getProcessMemoryByPid(pid, getProcessMemoryByPidCallback);
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`[appManager] error: ${code}, ${message}`);
+}
+```
+
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -98,53 +148,5 @@ function getProcessMemoryByPid(pid: int, callback: AsyncCallback<int>): void
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let pid = 0;
-function getProcessMemoryByPidCallback(err: BusinessError, data: number) {
-  if (err) {
-    console.error(`getProcessMemoryByPidCallback fail, err: ${JSON.stringify(err)}`);
-  } else {
-    console.info('getProcessMemoryByPidCallback success.');
-  }
-}
-
-try {
-  appManager.getProcessMemoryByPid(pid, getProcessMemoryByPidCallback);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let pid: int = 0;
-
-function getProcessMemoryByPidCallback(err: BusinessError | null, data: int | undefined) {
-  if (err) {
-    console.error(`getProcessMemoryByPidCallback fail, err: ${JSON.stringify(err)}`);
-  } else {
-    console.info('getProcessMemoryByPidCallback success.');
-  }
-}
-
-try {
-  appManager.getProcessMemoryByPid(pid, getProcessMemoryByPidCallback);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
+参见 [getProcessMemoryByPid](#getprocessmemorybypid)
 

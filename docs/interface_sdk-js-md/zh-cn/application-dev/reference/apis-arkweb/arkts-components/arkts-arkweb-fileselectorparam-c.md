@@ -40,6 +40,26 @@ FileSelectorParam的构造函数。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## getAcceptableFileTypes
+
+```TypeScript
+getAcceptableFileTypes(): Array<Array<AcceptableFileType>>
+```
+
+获取文件类型信息。对应HTML里[option](../../../web/web-file-upload.md#自定义处理js接口拉起的文件请求)中的`types`。返回值为二维数组，每个子数组代表一组允许的文件类型。开发者应 在构建文件选择器时使用该返回值设置文件类型过滤规则，确保用户只能选择符合前端要求的文件。该参数与getAcceptType和getMimeTypes的区别在于types支持更精细的文件类型控制，可按MIME类型或扩展名分组设置。
+
+**起始版本：** 23
+
+<!--Device-FileSelectorParam-getAcceptableFileTypes(): Array<Array<AcceptableFileType>>--><!--Device-FileSelectorParam-getAcceptableFileTypes(): Array<Array<AcceptableFileType>>-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;Array&lt;[AcceptableFileType](arkts-arkweb-acceptablefiletype-i.md)&gt;&gt; | 返回文件类型信息，为二维数组结构，包含多组可选文件类型的详细信息。对应HTML option的types属性。 |
+
 ## getAcceptType
 
 ```TypeScript
@@ -61,26 +81,6 @@ getAcceptType(): Array<string>
 | 类型 | 说明 |
 | --- | --- |
 | Array&lt;string&gt; | 返回文件过滤类型数组，包含用于限制文件选择器可选文件范围的类型信息。元素为扩展名（如'.png'），对应HTML accept属性。 |
-
-## getAcceptableFileTypes
-
-```TypeScript
-getAcceptableFileTypes(): Array<Array<AcceptableFileType>>
-```
-
-获取文件类型信息。对应HTML里[option](../../../web/web-file-upload.md#自定义处理js接口拉起的文件请求)中的`types`。返回值为二维数组，每个子数组代表一组允许的文件类型。开发者应 在构建文件选择器时使用该返回值设置文件类型过滤规则，确保用户只能选择符合前端要求的文件。该参数与getAcceptType和getMimeTypes的区别在于types支持更精细的文件类型控制，可按MIME类型或扩展名分组设置。
-
-**起始版本：** 23
-
-<!--Device-FileSelectorParam-getAcceptableFileTypes(): Array<Array<AcceptableFileType>>--><!--Device-FileSelectorParam-getAcceptableFileTypes(): Array<Array<AcceptableFileType>>-End-->
-
-**系统能力：** SystemCapability.Web.Webview.Core
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;Array&lt;[AcceptableFileType](arkts-arkweb-acceptablefiletype-i.md)&gt;&gt; | 返回文件类型信息，为二维数组结构，包含多组可选文件类型的详细信息。对应HTML option的types属性。 |
 
 ## getDefaultPath
 

@@ -28,11 +28,11 @@ Defines LazyDynamicLayout Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithm | [LazyLayoutAlgorithm](../../apis-default/arkts-apis/arkts-lazylayoutalgorithm-i.md) | Yes | Lazy layout algorithm. |
+| algorithm | [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md) | Yes | Lazy layout algorithm. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyDynamicLayoutAttribute](arkts-arkui-arkuicomponentsarklazydynamiclayout-lazydynamiclayoutattribute-c.md) |  |
+| [LazyDynamicLayoutAttribute](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md) |  |
 

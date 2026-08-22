@@ -34,9 +34,9 @@ Obtains the device IP address based on the network interface. This API uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | networkInterface | string | Yes | Network port. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null** and **data** is the IP address obtained. If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null** and **data** is the IP address obtained. If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -70,6 +70,25 @@ networkManager.getIpAddress(wantTemp, 'eth0', (err, result) => {
 });
 ```
 
+```TypeScript
+import { networkManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// Replace parameters with actual values.
+networkManager.getIpAddress(wantTemp, 'eth0').then((result) => {
+  console.info(`Succeeded in getting ip address, result : ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get ip address. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## getIpAddress
 
@@ -99,7 +118,7 @@ Obtains the device IP address based on the network interface. This API uses a pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | networkInterface | string | Yes | Network port. |
 
 **Return value:**
@@ -120,22 +139,5 @@ Obtains the device IP address based on the network interface. This API uses a pr
 
 **Examples**
 
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace parameters with actual values.
-networkManager.getIpAddress(wantTemp, 'eth0').then((result) => {
-  console.info(`Succeeded in getting ip address, result : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get ip address. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [getIpAddress](#getipaddress)
 

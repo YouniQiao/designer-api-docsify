@@ -13,5 +13,5 @@ import { SwipeRefresherV2 } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [SwipeRefresher](arkts-arkui-arkuiadvancedswiperefresher-swiperefresher-s.md) | Declare component SwipeRefresher |
+| [SwipeRefresher](arkts-arkui-arkui-advanced-swiperefresher-swiperefresher-s.md) | Declare component SwipeRefresher |
 

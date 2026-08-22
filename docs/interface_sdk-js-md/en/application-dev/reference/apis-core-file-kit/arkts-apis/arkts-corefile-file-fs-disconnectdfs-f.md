@@ -44,3 +44,22 @@ Triggers disconnection.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed.Possible causes: 1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | 13600004 | Unmount failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+let dmInstance = distributedDeviceManager.createDeviceManager("com.example.filesync");
+let deviceInfoList: Array<distributedDeviceManager.DeviceBasicInfo> = dmInstance.getAvailableDeviceListSync();
+if (deviceInfoList && deviceInfoList.length > 0) {
+  console.info(`Success to get available device list`);
+  let networkId = deviceInfoList[0].networkId;
+  fs.disconnectDfs(networkId).then(() => {
+    console.info("Success to disconnect dfs");
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to disconnect dfs. Code: ${err.code}, message: ${err.message}`);
+  })
+}
+```
+

@@ -14,22 +14,6 @@ Provides configuration options for download and cache, including HTTP options, t
 import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
-## caPath
-
-```TypeScript
-caPath?: string
-```
-
-CA certificate path. Currently, only the .pem certificate is supported. The CA certificate preset by the system is used by default.
-
-**Type:** string
-
-**Since:** 23
-
-<!--Device-CacheDownloadOptions-caPath?: string--><!--Device-CacheDownloadOptions-caPath?: string-End-->
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
 ## cacheStrategy
 
 ```TypeScript
@@ -43,6 +27,22 @@ Cache update strategies, including **FORCE** or **LAZY**. The **FORCE** policy i
 **Since:** 23
 
 <!--Device-CacheDownloadOptions-cacheStrategy?: CacheStrategy--><!--Device-CacheDownloadOptions-cacheStrategy?: CacheStrategy-End-->
+
+**System capability:** SystemCapability.Request.FileTransferAgent
+
+## caPath
+
+```TypeScript
+caPath?: string
+```
+
+CA certificate path. Currently, only the .pem certificate is supported. The CA certificate preset by the system is used by default.
+
+**Type:** string
+
+**Since:** 23
+
+<!--Device-CacheDownloadOptions-caPath?: string--><!--Device-CacheDownloadOptions-caPath?: string-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 

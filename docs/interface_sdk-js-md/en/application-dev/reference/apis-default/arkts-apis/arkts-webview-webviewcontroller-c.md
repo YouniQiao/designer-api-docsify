@@ -43,6 +43,35 @@ Checks whether the web page can go back.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('accessBackward')
+        .onClick(() => {
+          try {
+            let result = this.controller.accessBackward();
+            console.info('result:' + result);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## accessForward
 
 ```TypeScript
@@ -70,6 +99,35 @@ Checks whether the web page can go forward.
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('accessForward')
+        .onClick(() => {
+          try {
+            let result = this.controller.accessForward();
+            console.info('result:' + result);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## accessStep
 
@@ -106,6 +164,36 @@ Checks whether the web page can go back or forward the given number of steps.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State steps: number = 2;
+
+  build() {
+    Column() {
+      Button('accessStep')
+        .onClick(() => {
+          try {
+            let result = this.controller.accessStep(this.steps);
+            console.info('result:' + result);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## addIntelligentTrackingPreventionBypassingList
 
 ```TypeScript
@@ -134,6 +222,35 @@ Add bypassing hosts for Intelligent Tracking Prevention.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('addIntelligentTrackingPreventionBypassingList')
+        .onClick(() => {
+          try {
+            let hostList = ["www.test1.com", "www.test2.com", "www.test3.com"];
+            webview.WebviewController.addIntelligentTrackingPreventionBypassingList(hostList);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## avoidVisibleViewportBottom
 
@@ -164,6 +281,43 @@ Sets the bottom avoidance height of the web visible viewport. When setting non-z
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  avoidHeight: number = 100;
+
+  build() {
+    Column() {
+      Button('avoid')
+        .onClick(() => {
+          try {
+            this.controller.avoidVisibleViewportBottom(this.avoidHeight);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('reset')
+        .onClick(() => {
+          try {
+            this.controller.avoidVisibleViewportBottom(0);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## backOrForward
 
 ```TypeScript
@@ -193,6 +347,35 @@ Goes forward or back backOrForward in the history of the web page.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State step: number = -2;
+
+  build() {
+    Column() {
+      Button('backOrForward')
+        .onClick(() => {
+          try {
+            this.controller.backOrForward(this.step);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## backward
 
 ```TypeScript
@@ -214,6 +397,34 @@ Goes back in the history of the web page.
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('backward')
+        .onClick(() => {
+          try {
+            this.controller.backward();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## clearBlanklessLoadingCache
 
@@ -243,6 +454,35 @@ Clears the blankless loading cache of the page with a specified key value.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) |  |
 
+**Examples**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info("EntryAbility onCreate");
+    // If the web page of the application will be greatly changed on June 10, 2025, for example, during product promotion activities, you are advised to clear the frame interpolation to optimize the cache.
+    webview.WebviewController.initializeWebEngine();
+    let pageUpdateTime: number = Date.UTC(2025, 5, 10, 0, 0, 0, 0);
+    let pageUpdateTime1: number = Date.UTC(2025, 5, 11, 0, 0, 0, 0);
+    let pageUpdateTimeNow: number = Date.now();
+    if (pageUpdateTimeNow > pageUpdateTime && pageUpdateTime < pageUpdateTime1) {
+      // Clear the cache of the frame interpolation on the specified page.
+      try {
+        webview.WebviewController.clearBlanklessLoadingCache(["https://www.example.com", "https://www.example1.com"]);
+      } catch (error) {
+        console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+      }
+    }
+    AppStorage.setOrCreate("abilityWant", want);
+    console.info("EntryAbility onCreate done");
+  }
+}
+```
+
 ## clearClientAuthenticationCache
 
 ```TypeScript
@@ -265,6 +505,34 @@ Clears the client authentication certificate cache in the Web.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('clearClientAuthenticationCache')
+        .onClick(() => {
+          try {
+            this.controller.clearClientAuthenticationCache();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## clearHistory
 
 ```TypeScript
@@ -286,6 +554,34 @@ Clears the history in the Web.
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('clearHistory')
+        .onClick(() => {
+          try {
+            this.controller.clearHistory();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## clearHostIP
 
@@ -315,6 +611,43 @@ Clear the host name IP address.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      // The setting takes effect before the URL is loaded.
+      Button('setHostIP')
+        .onClick(() => {
+          try {
+            webview.WebviewController.setHostIP('www.example.com', '127.0.0.1', 30);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('clearHostIP')
+        .onClick(() => {
+          try {
+            webview.WebviewController.clearHostIP('www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## clearIntelligentTrackingPreventionBypassingList
 
 ```TypeScript
@@ -336,6 +669,29 @@ Clear bypassing hosts for Intelligent Tracking Prevention.
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('clearIntelligentTrackingPreventionBypassingList')
+        .onClick(() => {
+          webview.WebviewController.clearIntelligentTrackingPreventionBypassingList();
+      })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## clearMatches
 
@@ -359,6 +715,34 @@ Clears the highlighting surrounding text matches created by searchAllAsync.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('clearMatches')
+        .onClick(() => {
+          try {
+            this.controller.clearMatches();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: $rawfile('index.html'), controller: this.controller })
+    }
+  }
+}
+```
+
 ## clearPrefetchedResource
 
 ```TypeScript
@@ -381,6 +765,43 @@ Clears the cache of prefetched resources based on the specified cache key list. 
 | --- | --- | --- | --- |
 | cacheKeyList | Array&lt;string&gt; | Yes | The keys for memory cache. The key in cacheKeyList only support number and letters. |
 
+**Examples**
+
+```TypeScript
+// Index.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Web({ src: "https://www.example.com/", controller: this.controller })
+        .onAppear(() => {
+          // Replace "https://www.example1.com/post?e=f&g=h" with a real URL to visit.
+          webview.WebviewController.prefetchResource(
+            {
+              url: "https://www.example1.com/post?e=f&g=h",
+              method: "POST",
+              formData: "a=x&b=y",
+            },
+            [{
+              headerKey: "c",
+              headerValue: "z",
+            },],
+            "KeyX", 500);
+        })
+        .onPageEnd(() => {
+          // Clear the prefetch cache that is no longer used.
+          webview.WebviewController.clearPrefetchedResource(["KeyX",]);
+        })
+    }
+  }
+}
+```
+
 ## clearServiceWorkerWebSchemeHandler
 
 ```TypeScript
@@ -396,6 +817,29 @@ Clear all web service worker scheme handlers.
 <!--Device-WebviewController-static clearServiceWorkerWebSchemeHandler(): void--><!--Device-WebviewController-static clearServiceWorkerWebSchemeHandler(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('clearServiceWorkerWebSchemeHandler')
+        .onClick(() => {
+          webview.WebviewController.clearServiceWorkerWebSchemeHandler();
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## clearSslCache
 
@@ -419,6 +863,34 @@ Clears the ssl cache in the Web.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('clearSslCache')
+        .onClick(() => {
+          try {
+            this.controller.clearSslCache();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## clearWebSchemeHandler
 
 ```TypeScript
@@ -440,6 +912,34 @@ Clear all web scheme handlers for related web component.
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('clearWebSchemeHandler')
+        .onClick(() => {
+          try {
+            this.controller.clearWebSchemeHandler();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## closeAllMediaPresentations
 
@@ -463,6 +963,34 @@ Closes all full-screen videos on a web page.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('closeAllMediaPresentations')
+        .onClick(() => {
+          try {
+            this.controller.closeAllMediaPresentations();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## closeCamera
 
 ```TypeScript
@@ -484,6 +1012,10 @@ Disables the camera capture of the current web page.
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+For the complete sample code, see [startCamera](#startcamera).
 
 ## constructor
 
@@ -507,6 +1039,87 @@ A constructor used to create a WebviewController object.
 | --- | --- | --- | --- |
 | webTag | string | No | specified the name of the web component, Empty by default. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class WebObj {
+  constructor() {
+  }
+
+  webTest(): string {
+    console.info('Web test');
+    return "Web test";
+  }
+
+  webString(): void {
+    console.info('Web test toString');
+  }
+}
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController()
+  @State webTestObj: WebObj = new WebObj();
+
+  build() {
+    Column() {
+      Button('refresh')
+        .onClick(() => {
+          try {
+            this.controller.refresh();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('deleteJavaScriptRegister')
+        .onClick(() => {
+          try {
+            this.controller.deleteJavaScriptRegister("objTestName");
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: '', controller: this.controller })
+        .javaScriptAccess(true)
+        .onControllerAttached(() => {
+          this.controller.loadUrl($rawfile("index.html"));
+          this.controller.registerJavaScriptProxy(this.webTestObj, "objTestName", ["webTest", "webString"]);
+        })
+    }
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+    </head>
+    <body>
+      <button type="button" onclick="htmlTest()">Click Me!</button>
+      <p id="demo"></p>
+      <p id="webDemo"></p>
+      <script type="text/javascript">
+        function htmlTest() {
+          // This function call expects to return "Web test"
+          let webStr = objTestName.webTest();
+          document.getElementById("webDemo").innerHTML=webStr;
+          console.info('objTestName.webTest result:'+ webStr)
+        }
+      </script>
+    </body>
+</html>
+```
+
 ## createPdf
 
 ```TypeScript
@@ -528,7 +1141,7 @@ Rendering current Web page into Pdf data, return the result in async mode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | configuration | [PdfConfiguration](arkts-webview-pdfconfiguration-i.md) | Yes | configuration for createPdf, including page width and height, etc. {@Link PdfConfiguration} |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PdfData](arkts-webview-pdfdata-c.md)&gt; | Yes | Callbacks execute createPdf results. PdfData is pdf data stream of current web page in Uint8Array {@Link PdfData}. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PdfData](arkts-webview-pdfdata-c.md)&gt; | Yes | Callbacks execute createPdf results. PdfData is pdf data stream of current web page in Uint8Array {@Link PdfData}. |
 
 **Error codes:**
 
@@ -536,6 +1149,111 @@ Rendering current Web page into Pdf data, return the result in async mode.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid input parameter. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+import { fileIo as fs } from '@kit.CoreFileKit';
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  controller: webview.WebviewController = new webview.WebviewController();
+  pdfConfig: webview.PdfConfiguration = {
+    width: 8.27,
+    height: 11.69,
+    marginTop: 0,
+    marginBottom: 0,
+    marginRight: 0,
+    marginLeft: 0,
+    shouldPrintBackground: true
+  }
+
+  build() {
+    Column() {
+      Button('SavePDF')
+        .onClick(() => {
+          this.controller.createPdf(
+            this.pdfConfig,
+            (error, result: webview.PdfData) => {
+              try {
+                // Obtain the component context.
+                let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+                // Obtain the sandbox path and set the PDF file name.
+                let filePath = context.filesDir + "/test.pdf";
+                let file = fs.openSync(filePath, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
+                fs.write(file.fd, result.pdfArrayBuffer().buffer).then((writeLen: number) => {
+                  console.info("createPDF write data to file succeed and size is:" + writeLen);
+                }).catch((err: BusinessError) => {
+                  console.error("createPDF write data to file failed with error message: " + err.message +
+                    ", error code: " + err.code);
+                }).finally(() => {
+                  fs.closeSync(file);
+                });
+              } catch (resError) {
+                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+              }
+            });
+        })
+      Web({ src: "www.example.com", controller: this.controller })
+    }
+  }
+}
+```
+
+```TypeScript
+import { fileIo as fs } from '@kit.CoreFileKit';
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  controller: webview.WebviewController = new webview.WebviewController();
+  pdfConfig: webview.PdfConfiguration = {
+    width: 8.27,
+    height: 11.69,
+    marginTop: 0,
+    marginBottom: 0,
+    marginRight: 0,
+    marginLeft: 0,
+    shouldPrintBackground: true
+  }
+
+  build() {
+    Column() {
+      Button('SavePDF')
+        .onClick(() => {
+          this.controller.createPdf(this.pdfConfig)
+            .then((result: webview.PdfData) => {
+              try {
+                // Obtain the component context.
+                let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+                // Obtain the sandbox path and set the PDF file name.
+                let filePath = context.filesDir + "/test.pdf";
+                let file = fs.openSync(filePath, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
+                fs.write(file.fd, result.pdfArrayBuffer().buffer).then((writeLen: number) => {
+                  console.info("createPDF write data to file succeed and size is:" + writeLen);
+                }).catch((err: BusinessError) => {
+                  console.error("createPDF write data to file failed with error message: " + err.message +
+                    ", error code: " + err.code);
+                }).finally(() => {
+                  fs.closeSync(file);
+                });
+              } catch (resError) {
+                console.error(`ErrorCode: ${(resError as BusinessError).code},  Message: ${(resError as BusinessError).message}`);
+              }
+            })
+        })
+      Web({ src: "www.example.com", controller: this.controller })
+    }
+  }
+}
+```
 
 ## createPdf
 
@@ -572,6 +1290,10 @@ Rendering current Web page into Pdf data, return the result in promise mode.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid input parameter. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+See [createPdf](#createpdf)
+
 ## createWebMessagePorts
 
 ```TypeScript
@@ -606,6 +1328,10 @@ Create web message ports
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+For details about the sample code, see [onMessageEventExt](./arkts-apis-webview-WebMessagePort.md#onmessageeventext).
 
 ## createWebPrintDocumentAdapter
 
@@ -642,6 +1368,35 @@ Creates a PrintDocumentAdapter instance to provide content for printing.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError, print } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('createWebPrintDocumentAdapter')
+        .onClick(() => {
+          try {
+            let webPrintDocadapter = this.controller.createWebPrintDocumentAdapter('example.pdf');
+            print.print('example_jobid', webPrintDocadapter, null, this.getUIContext().getHostContext());
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## customizeSchemes
 
 ```TypeScript
@@ -670,6 +1425,74 @@ Register Web custom schemes.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [17100020](../../apis-arkweb/errorcode-webview.md#17100020-failed-to-register-custom-schemes) | Failed to register custom schemes. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  responseWeb: WebResourceResponse = new WebResourceResponse();
+  scheme1: webview.WebCustomScheme = { schemeName: "name1", isSupportCORS: true, isSupportFetch: true };
+  scheme2: webview.WebCustomScheme = { schemeName: "name2", isSupportCORS: true, isSupportFetch: true };
+  scheme3: webview.WebCustomScheme = { schemeName: "name3", isSupportCORS: true, isSupportFetch: true };
+
+  aboutToAppear(): void {
+    try {
+      webview.WebviewController.customizeSchemes([this.scheme1, this.scheme2, this.scheme3]);
+    } catch (error) {
+      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+    }
+  }
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+        .onInterceptRequest((event) => {
+          if (event) {
+            console.info('url:' + event.request.getRequestUrl());
+          }
+          return this.responseWeb;
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  responseWeb: WebResourceResponse = new WebResourceResponse();
+  scheme1: webview.WebCustomScheme = { schemeName: "name1", isSupportCORS: true, isSupportFetch: true };
+  scheme2: webview.WebCustomScheme = { schemeName: "name2", isSupportCORS: true, isSupportFetch: true };
+  scheme3: webview.WebCustomScheme = { schemeName: "name3", isSupportCORS: true, isSupportFetch: true };
+
+  aboutToAppear(): void {
+    try {
+      webview.WebviewController.customizeSchemes([this.scheme1, this.scheme2, this.scheme3], true);
+    } catch (error) {
+      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+    }
+  }
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## customizeSchemes
 
@@ -701,6 +1524,10 @@ Register Web custom schemes.
 | [17100020](../../apis-arkweb/errorcode-webview.md#17100020-failed-to-register-custom-schemes) | Failed to register custom schemes. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. The length of the schemes array is greater than 10. 2. The character length of the scheme is greater than 32. 3. The character in the scheme is not within the allowed range of lowercase English letters, numbers, and the symbols ".", "+", "-". @static |
 
+**Examples**
+
+See [customizeSchemes](#customizeschemes)
+
 ## deleteJavaScriptRegister
 
 ```TypeScript
@@ -731,6 +1558,88 @@ Deletes a registered JavaScript object with given name.
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 | [17100008](../../apis-arkweb/errorcode-webview.md#17100008-deleting-a-javascriptproxy-that-does-not-exist) | Failed to delete JavaScriptProxy because it does not exist. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class TestObj {
+  constructor() {
+  }
+
+  test(): string {
+    return "ArkUI Web Component";
+  }
+
+  toString(): void {
+    console.info('Web Component toString');
+  }
+}
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State testObjtest: TestObj = new TestObj();
+  @State name: string = 'objName';
+  build() {
+    Column() {
+      Button('refresh')
+        .onClick(() => {
+          try {
+            this.controller.refresh();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('Register JavaScript To Window')
+        .onClick(() => {
+          try {
+            this.controller.registerJavaScriptProxy(this.testObjtest, this.name, ["test", "toString"]);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('deleteJavaScriptRegister')
+        .onClick(() => {
+          try {
+            this.controller.deleteJavaScriptRegister(this.name);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: $rawfile('index.html'), controller: this.controller })
+        .javaScriptAccess(true)
+    }
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+    </head>
+    <body>
+      <button type="button" onclick="htmlTest()">Click Me!</button>
+      <p id="demo"></p>
+      <script type="text/javascript">
+        function htmlTest() {
+          let str=objName.test();
+          document.getElementById("demo").innerHTML=str;
+          console.info('objName.test result:'+ str)
+        }
+      </script>
+    </body>
+</html>
+```
+
 ## enableAdsBlock
 
 ```TypeScript
@@ -760,6 +1669,35 @@ Enable the ability to block Ads, disabled by default.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Parameter string is too long. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('enableAdsBlock')
+        .onClick(() => {
+          try {
+            this.controller.enableAdsBlock(true);
+            console.info("enableAdsBlock: true")
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## enableAdvancedSecurityMode
 
@@ -807,6 +1745,29 @@ Enable the BackForwardCache and indicate features that are allowed to enter Back
 | --- | --- | --- | --- |
 | features | [BackForwardCacheSupportedFeatures](arkts-webview-backforwardcachesupportedfeatures-c.md) | No | The features that supports BackForwardCache. @static |
 
+**Examples**
+
+```TypeScript
+// EntryAbility.ets
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { window } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+        let features = new webview.BackForwardCacheSupportedFeatures();
+        features.nativeEmbed = true;
+        features.mediaTakeOver = true;
+        // If a page uses the same-layer rendering and takes over media playback at the same time,
+        // you need to set the values of nativeEmbed and mediaTakeOver to true to add the page to the back-forward cache.
+        webview.WebviewController.enableBackForwardCache(features);
+        webview.WebviewController.initializeWebEngine();
+        AppStorage.setOrCreate("abilityWant", want);
+    }
+}
+```
+
 ## enableIntelligentTrackingPrevention
 
 ```TypeScript
@@ -837,6 +1798,35 @@ Enable the ability to use Intelligent Tracking Prevention; default is disabled.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('enableIntelligentTrackingPrevention')
+        .onClick(() => {
+          try {
+            this.controller.enableIntelligentTrackingPrevention(true);
+            console.info("enableIntelligentTrackingPrevention: true");
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## enablePrivateNetworkAccess
 
 ```TypeScript
@@ -858,6 +1848,28 @@ After enable PrivateNetworkAccess feature, ArkWeb will send a CORS preflight req
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | {@code true} enable the private network access check; {@code false} otherwise. @static |
+
+**Examples**
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+        .onControllerAttached(() => {
+          // If the value is set to false, ArkWeb does not check whether the private network request is valid.
+          webview.WebviewController.enablePrivateNetworkAccess(false);
+        })
+    }
+  }
+}
+```
 
 ## enableSafeBrowsing
 
@@ -887,6 +1899,35 @@ Enable the ability to check website security risks. Illegal and fraudulent websi
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('enableSafeBrowsing')
+        .onClick(() => {
+          try {
+            this.controller.enableSafeBrowsing(true);
+            console.info("enableSafeBrowsing: true");
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## enableWholeWebPageDrawing
 
 ```TypeScript
@@ -902,6 +1943,34 @@ Enables the full drawing capability for the web page. This API works only during
 <!--Device-WebviewController-static enableWholeWebPageDrawing(): void--><!--Device-WebviewController-static enableWholeWebPageDrawing(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  aboutToAppear(): void {
+    try {
+      webview.WebviewController.enableWholeWebPageDrawing();
+    } catch (error) {
+      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+    }
+  }
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## executeAIPageCommand
 
@@ -962,6 +2031,34 @@ Goes forward in the history of the web page.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('forward')
+        .onClick(() => {
+          try {
+            this.controller.forward();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## getActiveWebEngineVersion
 
 ```TypeScript
@@ -983,6 +2080,10 @@ Obtains the current ArkWeb kernel version.
 | Type | Description |
 | --- | --- |
 | [ArkWebEngineVersion](arkts-webview-arkwebengineversion-e.md) | The ArkWeb kernel version defined by [ArkWebEngineVersion]{ |
+
+**Examples**
+
+For details, see [setActiveWebEngineVersion](#setactivewebengineversion).
 
 ## getAttachState
 
@@ -1034,6 +2135,34 @@ Get back forward stack list from current webview.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getBackForwardEntries')
+        .onClick(() => {
+          try {
+            let list = this.controller.getBackForwardEntries()
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## getBlanklessInfoWithKey
 
 ```TypeScript
@@ -1068,6 +2197,43 @@ Obtains the prediction information about the blankless loading solution and enab
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) |  |
 
+**Examples**
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  build() {
+    Column() {
+      Web({ src: 'https://www.example.com', controller: this.controller })
+       .javaScriptAccess(true)
+       .onLoadIntercept((event) => {
+            // Enable frame interpolation only when the similarity exceeds 50% and the loading duration is less than 1000 ms.
+            try {
+              let info = this.controller.getBlanklessInfoWithKey('https://www.example.com/page1');
+              if (info.errCode == webview.WebBlanklessErrorCode.SUCCESS) {
+                if (info.similarity >= 0.5 && info.loadingTime < 1000) {
+                  this.controller.setBlanklessLoadingWithKey('http://www.example.com/page1', true);
+                } else {
+                  this.controller.setBlanklessLoadingWithKey('http://www.example.com/page1', false);
+                }
+              } else {
+                console.info('getBlankless info err');
+              }
+            } catch (error) {
+              console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+            }
+            return false;
+        })
+    }
+  }
+}
+```
+
 ## getCertificate
 
 ```TypeScript
@@ -1096,6 +2262,282 @@ Get certificate for the current website.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { cert } from '@kit.DeviceCertificateKit';
+
+function Uint8ArrayToString(dataArray: Uint8Array) {
+  let dataString = '';
+  for (let i = 0; i < dataArray.length; i++) {
+    dataString += String.fromCharCode(dataArray[i]);
+  }
+  return dataString;
+}
+
+function ParseX509CertInfo(x509CertArray: Array<cert.X509Cert>) {
+  let res: string = 'getCertificate success: len = ' + x509CertArray.length;
+  for (let i = 0; i < x509CertArray.length; i++) {
+    res += ', index = ' + i + ', issuer name = '
+      + Uint8ArrayToString(x509CertArray[i].getIssuerName().data) + ', subject name = '
+      + Uint8ArrayToString(x509CertArray[i].getSubjectName().data) + ', valid start = '
+      + x509CertArray[i].getNotBeforeTime()
+      + ', valid end = ' + x509CertArray[i].getNotAfterTime();
+  }
+  return res;
+}
+
+@Entry
+@Component
+struct Index {
+  // outputStr displays debug information on the UI.
+  @State outputStr: string = '';
+  webviewCtl: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Row() {
+      Column() {
+        List({ space: 20, initialIndex: 0 }) {
+          ListItem() {
+            Button() {
+              Text('load bad ssl')
+                .fontSize(10)
+                .fontWeight(FontWeight.Bold)
+            }
+            .type(ButtonType.Capsule)
+            .onClick(() => {
+              // Load an expired certificate website and view the obtained certificate information.
+              this.webviewCtl.loadUrl('https://expired.badssl.com');
+            })
+            .height(50)
+          }
+
+          ListItem() {
+            Button() {
+              Text('load example')
+                .fontSize(10)
+                .fontWeight(FontWeight.Bold)
+            }
+            .type(ButtonType.Capsule)
+            .onClick(() => {
+              // Load an HTTPS website and view the certificate information of the website.
+              this.webviewCtl.loadUrl('https://www.example.com');
+            })
+            .height(50)
+          }
+
+          ListItem() {
+            Button() {
+              Text('getCertificate Promise')
+                .fontSize(10)
+                .fontWeight(FontWeight.Bold)
+            }
+            .type(ButtonType.Capsule)
+            .onClick(() => {
+              try {
+                this.webviewCtl.getCertificate().then((x509CertArray: Array<cert.X509Cert>) => {
+                  this.outputStr = ParseX509CertInfo(x509CertArray);
+                })
+              } catch (error) {
+                this.outputStr = 'getCertificate failed: ' + (error as BusinessError).code + ", errMsg: " + (error as BusinessError).message;
+              }
+            })
+            .height(50)
+          }
+
+          ListItem() {
+            Button() {
+              Text('getCertificate AsyncCallback')
+                .fontSize(10)
+                .fontWeight(FontWeight.Bold)
+            }
+            .type(ButtonType.Capsule)
+            .onClick(() => {
+              try {
+                this.webviewCtl.getCertificate((error: BusinessError, x509CertArray: Array<cert.X509Cert>) => {
+                  if (error) {
+                    this.outputStr = 'getCertificate failed: ' + error.code + ", errMsg: " + error.message;
+                  } else {
+                    this.outputStr = ParseX509CertInfo(x509CertArray);
+                  }
+                })
+              } catch (error) {
+                this.outputStr = 'getCertificate failed: ' + (error as BusinessError).code + ", errMsg: " + (error as BusinessError).message;
+              }
+            })
+            .height(50)
+          }
+        }
+        .listDirection(Axis.Horizontal)
+        .height('10%')
+
+        Text(this.outputStr)
+          .width('100%')
+          .fontSize(10)
+
+        Web({ src: 'https://www.example.com', controller: this.webviewCtl })
+          .fileAccess(true)
+          .javaScriptAccess(true)
+          .domStorageAccess(true)
+          .onlineImageAccess(true)
+          .onPageEnd((e) => {
+            if (e) {
+              this.outputStr = 'onPageEnd : url = ' + e.url;
+            }
+          })
+          .onSslErrorEventReceive((e) => {
+            // Ignore SSL certificate errors to test websites whose certificates have expired, for example, https://expired.badssl.com.
+            e.handler.handleConfirm();
+          })
+          .width('100%')
+          .height('70%')
+      }
+      .height('100%')
+    }
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { cert } from '@kit.DeviceCertificateKit';
+
+function Uint8ArrayToString(dataArray: Uint8Array) {
+  let dataString = '';
+  for (let i = 0; i < dataArray.length; i++) {
+    dataString += String.fromCharCode(dataArray[i]);
+  }
+  return dataString;
+}
+
+function ParseX509CertInfo(x509CertArray: Array<cert.X509Cert>) {
+  let res: string = 'getCertificate success: len = ' + x509CertArray.length;
+  for (let i = 0; i < x509CertArray.length; i++) {
+    res += ', index = ' + i + ', issuer name = '
+      + Uint8ArrayToString(x509CertArray[i].getIssuerName().data) + ', subject name = '
+      + Uint8ArrayToString(x509CertArray[i].getSubjectName().data) + ', valid start = '
+      + x509CertArray[i].getNotBeforeTime()
+      + ', valid end = ' + x509CertArray[i].getNotAfterTime();
+  }
+  return res;
+}
+
+@Entry
+@Component
+struct Index {
+  // outputStr displays debug information on the UI.
+  @State outputStr: string = '';
+  webviewCtl: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Row() {
+      Column() {
+        List({ space: 20, initialIndex: 0 }) {
+          ListItem() {
+            Button() {
+              Text('load bad ssl')
+                .fontSize(10)
+                .fontWeight(FontWeight.Bold)
+            }
+            .type(ButtonType.Capsule)
+            .onClick(() => {
+              // Load an expired certificate website and view the obtained certificate information.
+              this.webviewCtl.loadUrl('https://expired.badssl.com');
+            })
+            .height(50)
+          }
+
+          ListItem() {
+            Button() {
+              Text('load example')
+                .fontSize(10)
+                .fontWeight(FontWeight.Bold)
+            }
+            .type(ButtonType.Capsule)
+            .onClick(() => {
+              // Load an HTTPS website and view the certificate information of the website.
+              this.webviewCtl.loadUrl('https://www.example.com');
+            })
+            .height(50)
+          }
+
+          ListItem() {
+            Button() {
+              Text('getCertificate Promise')
+                .fontSize(10)
+                .fontWeight(FontWeight.Bold)
+            }
+            .type(ButtonType.Capsule)
+            .onClick(() => {
+              try {
+                this.webviewCtl.getCertificate().then((x509CertArray: Array<cert.X509Cert>) => {
+                  this.outputStr = ParseX509CertInfo(x509CertArray);
+                })
+              } catch (error) {
+                this.outputStr = 'getCertificate failed: ' + (error as BusinessError).code + ", errMsg: " + (error as BusinessError).message;
+              }
+            })
+            .height(50)
+          }
+
+          ListItem() {
+            Button() {
+              Text('getCertificate AsyncCallback')
+                .fontSize(10)
+                .fontWeight(FontWeight.Bold)
+            }
+            .type(ButtonType.Capsule)
+            .onClick(() => {
+              try {
+                this.webviewCtl.getCertificate((error: BusinessError, x509CertArray: Array<cert.X509Cert>) => {
+                  if (error) {
+                    this.outputStr = 'getCertificate failed: ' + error.code + ", errMsg: " + error.message;
+                  } else {
+                    this.outputStr = ParseX509CertInfo(x509CertArray);
+                  }
+                })
+              } catch (error) {
+                this.outputStr = 'getCertificate failed: ' + (error as BusinessError).code + ", errMsg: " + (error as BusinessError).message;
+              }
+            })
+            .height(50)
+          }
+        }
+        .listDirection(Axis.Horizontal)
+        .height('10%')
+
+        Text(this.outputStr)
+          .width('100%')
+          .fontSize(10)
+
+        Web({ src: 'https://www.example.com', controller: this.webviewCtl })
+          .fileAccess(true)
+          .javaScriptAccess(true)
+          .domStorageAccess(true)
+          .onlineImageAccess(true)
+          .onPageEnd((e) => {
+            if (e) {
+              this.outputStr = 'onPageEnd : url = ' + e.url;
+            }
+          })
+          .onSslErrorEventReceive((e) => {
+            // Ignore SSL certificate errors to test websites whose certificates have expired, for example, https://expired.badssl.com.
+            e.handler.handleConfirm();
+          })
+          .width('100%')
+          .height('70%')
+      }
+      .height('100%')
+    }
+  }
+}
+```
+
 ## getCertificate
 
 ```TypeScript
@@ -1116,7 +2558,7 @@ Get certificate for the current website.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | Yes | the callback of getCertificate. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | Yes | the callback of getCertificate. |
 
 **Error codes:**
 
@@ -1124,6 +2566,10 @@ Get certificate for the current website.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a web component. |
+
+**Examples**
+
+See [getCertificate](#getcertificate)
 
 ## getCustomUserAgent
 
@@ -1153,6 +2599,36 @@ Get custom user agent.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State userAgent: string = '';
+
+  build() {
+    Column() {
+      Button('getCustomUserAgent')
+        .onClick(() => {
+          try {
+            this.userAgent = this.controller.getCustomUserAgent();
+            console.info("userAgent: " + this.userAgent);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## getDefaultUserAgent
 
 ```TypeScript
@@ -1174,6 +2650,23 @@ Get the default user agent.
 | Type | Description |
 | --- | --- |
 | string | The default user agent string. |
+
+**Examples**
+
+```TypeScript
+// EntryAbility.ets
+import { webview } from '@kit.ArkWeb';
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info("EntryAbility onCreate");
+    webview.WebviewController.initializeWebEngine();
+    let defaultUserAgent = webview.WebviewController.getDefaultUserAgent();
+    console.info("defaultUserAgent: " + defaultUserAgent);
+  }
+}
+```
 
 ## getErrorPageEnabled
 
@@ -1203,6 +2696,29 @@ Get whether default error page feature is enabled.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+       .onControllerAttached(() => {
+            this.controller.setErrorPageEnabled(true);
+            if (!this.controller.getErrorPageEnabled()) {
+                this.controller.setErrorPageEnabled(true);
+            }
+        })
+    }
+  }
+}
+```
+
 ## getFavicon
 
 ```TypeScript
@@ -1230,6 +2746,36 @@ Gets the favicon of current Web page.
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State pixelmap: image.PixelMap | undefined = undefined;
+
+  build() {
+    Column() {
+      Button('getFavicon')
+        .onClick(() => {
+          try {
+            this.pixelmap = this.controller.getFavicon();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## getLastHitTest
 
@@ -1259,6 +2805,36 @@ Gets the last hit test value of HitTest.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getLastHitTest')
+        .onClick(() => {
+          try {
+            let hitValue = this.controller.getLastHitTest();
+            console.info("hitType: " + hitValue.type);
+            console.info("extra: " + hitValue.extra);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## getLastJavascriptProxyCallingFrameUrl
 
 ```TypeScript
@@ -1286,6 +2862,131 @@ Get the url of the last frame that calls the JavaScriptProxy. This should be cal
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class TestObj {
+  mycontroller: webview.WebviewController;
+
+  constructor(controller: webview.WebviewController) {
+    this.mycontroller = controller;
+  }
+
+  test(testStr: string): string {
+    console.info('Web Component str' + testStr + " url " + this.mycontroller.getLastJavascriptProxyCallingFrameUrl());
+    return testStr;
+  }
+
+  toString(): void {
+    console.info('Web Component toString ' + " url " + this.mycontroller.getLastJavascriptProxyCallingFrameUrl());
+  }
+
+  testNumber(testNum: number): number {
+    console.info('Web Component number' + testNum + " url " + this.mycontroller.getLastJavascriptProxyCallingFrameUrl());
+    return testNum;
+  }
+
+  testBool(testBol: boolean): boolean {
+    console.info('Web Component boolean' + testBol + " url " + this.mycontroller.getLastJavascriptProxyCallingFrameUrl());
+    return testBol;
+  }
+}
+
+class WebObj {
+  mycontroller: webview.WebviewController;
+
+  constructor(controller: webview.WebviewController) {
+    this.mycontroller = controller;
+  }
+
+  webTest(): string {
+    console.info('Web test ' + " url " + this.mycontroller.getLastJavascriptProxyCallingFrameUrl());
+    return "Web test";
+  }
+
+  webString(): void {
+    console.info('Web test toString ' + " url " + this.mycontroller.getLastJavascriptProxyCallingFrameUrl());
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State testObjtest: TestObj = new TestObj(this.controller);
+  @State webTestObj: WebObj = new WebObj(this.controller);
+
+  build() {
+    Column() {
+      Button('refresh')
+        .onClick(() => {
+          try {
+            this.controller.refresh();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('Register JavaScript To Window')
+        .onClick(() => {
+          try {
+            this.controller.registerJavaScriptProxy(this.testObjtest, "objName", ["test", "toString", "testNumber", "testBool"]);
+            this.controller.registerJavaScriptProxy(this.webTestObj, "objTestName", ["webTest", "webString"]);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('deleteJavaScriptRegister')
+        .onClick(() => {
+          try {
+            this.controller.deleteJavaScriptRegister("objName");
+            this.controller.deleteJavaScriptRegister("objTestName");
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: $rawfile('index.html'), controller: this.controller })
+        .javaScriptAccess(true)
+    }
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+    </head>
+    <body>
+      <button type="button" onclick="htmlTest()">Click Me!</button>
+      <p id="demo"></p>
+      <p id="webDemo"></p>
+      <script type="text/javascript">
+        function htmlTest() {
+          // This function call expects to return "ArkUI Web Component"
+          let str=objName.test("webtest data");
+          objName.testNumber(1);
+          objName.testBool(true);
+          document.getElementById("demo").innerHTML=str;
+          console.info('objName.test result:'+ str)
+
+          // This function call expects to return "Web test"
+          let webStr = objTestName.webTest();
+          document.getElementById("webDemo").innerHTML=webStr;
+          console.info('objTestName.webTest result:'+ webStr)
+        }
+      </script>
+    </body>
+</html>
+```
 
 ## getLastPostMessageURL
 
@@ -1345,6 +3046,34 @@ Queries the audio and video playback status of the current web page.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getMediaPlaybackState')
+        .onClick(() => {
+          try {
+            console.info("MediaPlaybackState : " + this.controller.getMediaPlaybackState());
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## getOriginalUrl
 
 ```TypeScript
@@ -1372,6 +3101,35 @@ Gets the original url of current Web page.
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getOrgUrl')
+        .onClick(() => {
+          try {
+            let url = this.controller.getOriginalUrl();
+            console.info("original url: " + url);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## getPageHeight
 
@@ -1401,6 +3159,35 @@ Obtains the height of this web page.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getPageHeight')
+        .onClick(() => {
+          try {
+            let pageHeight = this.controller.getPageHeight();
+            console.info("pageHeight : " + pageHeight);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## getPageOffset
 
 ```TypeScript
@@ -1428,6 +3215,67 @@ Get the page offset. And the unit is virtual pixel.
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) |  |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { BusinessError } from '@kit.BasicServicesKit';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Web({ src: $rawfile('index.html'), controller: this.controller })
+        .onScroll((event) => {
+          try {
+            console.info("getPageOffset x:" + this.controller.getPageOffset().x + ",y:" +
+            this.controller.getPageOffset().y);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .blue {
+          background-color: lightblue;
+        }
+        .green {
+          background-color: lightgreen;
+        }
+        .blue, .green {
+         font-size:16px;
+         height:200px;
+         text-align: center;       /* Horizontally centered */
+         line-height: 200px;       /* Vertically centered (the height matches the container height) */
+        }
+    </style>
+</head>
+<body>
+<div class="blue" >webArea</div>
+<div class="green">webArea</div>
+<div class="blue">webArea</div>
+<div class="green">webArea</div>
+<div class="blue">webArea</div>
+<div class="green">webArea</div>
+<div class="blue">webArea</div>
+</body>
+</html>
+```
 
 ## getPrintBackground
 
@@ -1457,6 +3305,34 @@ Get whether print web page background.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('setPrintBackground')
+        .onClick(() => {
+          try {
+            let enable = this.controller.getPrintBackground();
+            console.info("getPrintBackground: " + enable);
+          } catch (error) {
+            console.error(`ErrorCode:${(error as BusinessError).code}, Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## getProgress
 
 ```TypeScript
@@ -1485,6 +3361,28 @@ Gets the loading progress for the current page.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
+**Examples**
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+        .onPageBegin(() => {
+          let curProgress = this.controller.getProgress();
+          console.info("current page loading progress is :" + curProgress);
+        })
+    }
+  }
+}
+```
+
 ## getRenderProcessMode
 
 ```TypeScript
@@ -1507,27 +3405,29 @@ Get render process mode of the ArkWeb.
 | --- | --- |
 | [RenderProcessMode](arkts-webview-renderprocessmode-e.md) | mode - The render process mode of the ArkWeb. Call { |
 
-## getScrollOffset
+**Examples**
 
 ```TypeScript
-getScrollOffset(): ScrollOffset
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getRenderProcessMode')
+        .onClick(() => {
+          let mode = webview.WebviewController.getRenderProcessMode();
+          console.info("getRenderProcessMode: " + mode);
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
 ```
-
-Get the scroll offset of the webpage in view port, the coordinates of the top left corner of the view port are X: 0, Y: 0. And the unit is virtual pixel.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-WebviewController-getScrollOffset(): ScrollOffset--><!--Device-WebviewController-getScrollOffset(): ScrollOffset-End-->
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| ScrollOffset | scroll offset |
 
 ## getScrollable
 
@@ -1557,6 +3457,137 @@ Get whether scrolling is allowed.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getScrollable')
+        .onClick(() => {
+          try {
+            let scrollEnabled = this.controller.getScrollable();
+            console.info("scrollEnabled: " + scrollEnabled);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+## getScrollOffset
+
+```TypeScript
+getScrollOffset(): ScrollOffset
+```
+
+Get the scroll offset of the webpage in view port, the coordinates of the top left corner of the view port are X: 0, Y: 0. And the unit is virtual pixel.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta since version 23.
+
+<!--Device-WebviewController-getScrollOffset(): ScrollOffset--><!--Device-WebviewController-getScrollOffset(): ScrollOffset-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ScrollOffset | scroll offset |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  @State testTitle: string = 'webScroll'
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State controllerX: number =-100;
+  @State controllerY: number =-100;
+  @State mode: OverScrollMode = OverScrollMode.ALWAYS;
+
+  build() {
+    Column() {
+      Row() {
+        Text(this.testTitle)
+          .fontSize(30)
+          .fontWeight(FontWeight.Bold)
+          .margin(5)
+      }
+      Column() {
+        Text(`controllerX: ${this.controllerX}, controllerY: ${this.controllerY}`)
+      }
+      .margin({ top: 10, bottom: 10 })
+      Web({ src: $rawfile("index.html"), controller: this.controller })
+        .key("web_01")
+        .overScrollMode(this.mode)
+        .onTouch(() => {
+          this.controllerX = this.controller.getScrollOffset().x;
+          this.controllerY = this.controller.getScrollOffset().y;
+          let componentInfo = this.getUIContext().getComponentUtils().getRectangleById("web_01");
+          let webHeight = this.getUIContext().px2vp(componentInfo.size.height);
+          let pageHeight = this.controller.getPageHeight();
+          if (this.controllerY < 0) {
+            // Case 1: When a web page is scrolled down, use ScrollOffset.y directly.
+            console.info(`get downwards overscroll offsetY = ${this.controllerY}`);
+          } else if ((this.controllerY != 0) && (this.controllerY > (pageHeight - webHeight))) {
+            // Case 2: When a web page is scrolled up, calculate the offset between the lower boundary of the web page and that of the Web component.
+            console.info(`get upwards overscroll offsetY = ${this.controllerY - (pageHeight >= webHeight ? (pageHeight - webHeight) : 0)}`);
+          } else {
+            // Case 3: If the web page is not scrolled, use ScrollOffset.y directly.
+            console.info(`get scroll offsetY = ${this.controllerY}`);
+          }
+        })
+        .height(600)
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Demo</title>
+    <style>
+        body {
+          width:3000px;
+          height:6000px;
+          padding-right:170px;
+          padding-left:170px;
+          border:5px solid blueviolet;
+        }
+    </style>
+</head>
+<body>
+Scroll Test
+</body>
+</html>
+```
+
 ## getSecurityLevel
 
 ```TypeScript
@@ -1585,6 +3616,30 @@ Get the security level of the current page.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+        .onPageEnd((event) => {
+          if (event) {
+            let securityLevel = this.controller.getSecurityLevel();
+            console.info('securityLevel: ', securityLevel);
+          }
+        })
+    }
+  }
+}
+```
+
 ## getSiteIsolationMode
 
 ```TypeScript
@@ -1606,6 +3661,30 @@ Get the site isolation mode.
 | Type | Description |
 | --- | --- |
 | [SiteIsolationMode](arkts-webview-siteisolationmode-e.md) | The site isolation mode of the application. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getSiteIsolationMode')
+        .onClick(() => {
+          let mode = webview.WebviewController.getSiteIsolationMode();
+          console.info("getSiteIsolationMode: " + mode);
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## getSubframeErrorPageEnabled
 
@@ -1659,6 +3738,44 @@ Get the ID of the surface created by ArkWeb. This ID can be used for web page sc
 | --- | --- |
 | string | The ID of the surface created by ArkWeb. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { image } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Example{
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  @State imagePixelMap: image.PixelMap | undefined = undefined;
+
+  build(){
+    Column(){
+      Button("Screenshot")
+        .onClick(()=>{
+          try {
+            let surfaceId = this.controller.getSurfaceId();
+            console.info("surfaceId: " + surfaceId);
+            if(surfaceId.length != 0) {
+              let region:image.Region = { x: 0, y: 0, size: { height: 800, width: 1000}}
+              this.imagePixelMap = image.createPixelMapFromSurfaceSync(surfaceId, region)
+            }
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Image(this.imagePixelMap)
+        .height(100)
+      Web({src: 'www.example.com', controller: this.controller})
+    }
+  }
+}
+```
+
 ## getTitle
 
 ```TypeScript
@@ -1686,6 +3803,35 @@ Gets the title of current Web page.
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getTitle')
+        .onClick(() => {
+          try {
+            let title = this.controller.getTitle();
+            console.info("title: " + title);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## getUrl
 
@@ -1715,6 +3861,35 @@ Gets the url of current Web page.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getUrl')
+        .onClick(() => {
+          try {
+            let url = this.controller.getUrl();
+            console.info("url: " + url);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## getUserAgent
 
 ```TypeScript
@@ -1743,6 +3918,68 @@ Gets the default user agent.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getUserAgent')
+        .onClick(() => {
+          try {
+            let userAgent = this.controller.getUserAgent();
+            console.info("userAgent: " + userAgent);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+You can customize User-Agent based on the default User-Agent.
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State ua: string = "";
+
+  aboutToAppear(): void {
+    webview.once('webInited', () => {
+      try {
+        // Customize a User-Agent on the application side.
+        this.ua = this.controller.getUserAgent() + 'xxx';
+        this.controller.setCustomUserAgent(this.ua);
+      } catch (error) {
+        console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+      }
+    })
+  }
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## getUserAgentClientHintsEnabled
 
 ```TypeScript
@@ -1766,6 +4003,10 @@ Get if the User-Agent Client Hints enabled.
 | Type | Description |
 | --- | --- |
 | boolean | If User-Agent Client Hints was enabled. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled).
 
 ## getUserAgentMetadata
 
@@ -1797,6 +4038,10 @@ Get the User-Agent metadata corresponding to the User-Agent.
 | --- | --- |
 | [UserAgentMetadata](arkts-webview-useragentmetadata-c.md) | The UserAgentMetadata for the userAgent. |
 
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled).
+
 ## getWebId
 
 ```TypeScript
@@ -1824,6 +4069,35 @@ Gets the index value of the current Web component for the management of multiple
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getWebId')
+        .onClick(() => {
+          try {
+            let id = this.controller.getWebId();
+            console.info("id: " + id);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## hasImage
 
@@ -1854,6 +4128,70 @@ Checks whether this page contains images. This API uses a promise to return the 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('hasImageCb')
+        .onClick(() => {
+          try {
+            this.controller.hasImage((error, data) => {
+              if (error) {
+                console.error(`hasImage error, ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+                return;
+              }
+              console.info("hasImage: " + data);
+            });
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('hasImagePm')
+        .onClick(() => {
+          try {
+            this.controller.hasImage().then((data) => {
+              console.info('hasImage: ' + data);
+            }).catch((error: BusinessError) => {
+              console.error("error: " + error);
+            })
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## hasImage
 
 ```TypeScript
@@ -1874,7 +4212,7 @@ Checks whether this page contains images. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result.<br> The value **true** indicates that this page contains images, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result.<br> The value **true** indicates that this page contains images, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -1882,6 +4220,10 @@ Checks whether this page contains images. This API uses an asynchronous callback
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+See [hasImage](#hasimage)
 
 ## initializeWebEngine
 
@@ -1898,6 +4240,24 @@ Initialize the web engine before loading the Web components. This is a global st
 <!--Device-WebviewController-static initializeWebEngine(): void--><!--Device-WebviewController-static initializeWebEngine(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
+
+**Examples**
+
+The following code snippet exemplifies calling this API after the EntryAbility is created.
+
+```TypeScript
+// EntryAbility.ets
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { webview } from '@kit.ArkWeb';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info("EntryAbility onCreate")
+    webview.WebviewController.initializeWebEngine()
+    console.info("EntryAbility onCreate done")
+  }
+}
+```
 
 ## injectOfflineResources
 
@@ -1928,6 +4288,251 @@ Inject offline resources into cache.
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 | [17100002](../../apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2 *1024 *1024. |
 
+**Examples**
+
+Save UIContext to localStorage in EntryAbility.
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+const localStorage: LocalStorage = new LocalStorage('uiContext');
+
+export default class EntryAbility extends UIAbility {
+  storage: LocalStorage = localStorage;
+
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    windowStage.loadContent('pages/Index', this.storage, (err, data) => {
+      if (err.code) {
+        return;
+      }
+
+      this.storage.setOrCreate<UIContext>("uiContext", windowStage.getMainWindowSync().getUIContext());
+    });
+  }
+}
+```
+
+Write the basic code required by the dynamic component.
+
+```TypeScript
+// DynamicComponent.ets
+import { NodeController, BuilderNode, FrameNode, UIContext } from '@kit.ArkUI';
+
+export interface BuilderData {
+  url: string;
+  controller: WebviewController;
+  context: UIContext;
+}
+
+let storage : LocalStorage | undefined = undefined;
+
+export class NodeControllerImpl extends NodeController {
+  private rootNode: BuilderNode<BuilderData[]> | null = null;
+  private wrappedBuilder: WrappedBuilder<BuilderData[]> | null = null;
+
+  constructor(wrappedBuilder: WrappedBuilder<BuilderData[]>, context: UIContext) {
+    storage = context.getSharedLocalStorage();
+    super();
+    this.wrappedBuilder = wrappedBuilder;
+  }
+
+  makeNode(): FrameNode | null {
+    if (this.rootNode != null) {
+      return this.rootNode.getFrameNode();
+    }
+    return null;
+  }
+
+  initWeb(url: string, controller: WebviewController) {
+    if(this.rootNode != null) {
+      return;
+    }
+
+    const uiContext: UIContext = storage!.get<UIContext>("uiContext") as UIContext;
+    if (!uiContext) {
+      return;
+    }
+    this.rootNode = new BuilderNode(uiContext);
+    this.rootNode.build(this.wrappedBuilder, { url: url, controller: controller });
+  }
+}
+
+export const createNode = (wrappedBuilder: WrappedBuilder<BuilderData[]>, data: BuilderData) => {
+  const baseNode = new NodeControllerImpl(wrappedBuilder, data.context);
+  baseNode.initWeb(data.url, data.controller);
+  return baseNode;
+}
+```
+
+Write the component code for injecting resources. In this example, the local resource content reads the local file in the rawfile directory through the file reading API.
+
+```TypeScript
+// InjectWebview.ets
+import { webview } from '@kit.ArkWeb';
+import { resourceConfigs } from "./Resource";
+import { BuilderData } from "./DynamicComponent";
+
+@Builder
+function WebBuilder(data: BuilderData) {
+  Web({ src: data.url, controller: data.controller })
+    .onControllerAttached(async () => {
+      try {
+        data.controller.injectOfflineResources(await getData (data.context));
+      } catch (err) {
+        console.error("error: " + err.code + " " + err.message);
+      }
+    })
+    .fileAccess(true)
+}
+
+export const injectWebview = wrapBuilder<BuilderData[]>(WebBuilder);
+
+export async function getData(context: UIContext) {
+  const resourceMapArr: Array<webview.OfflineResourceMap> = [];
+
+  // Read the configuration and read the file content from the rawfile directory.
+  for (let config of resourceConfigs) {
+    let buf: Uint8Array = new Uint8Array(0);
+    if (config.localPath) {
+      buf = await readRawFile(config.localPath, context);
+    }
+
+    resourceMapArr.push({
+      urlList: config.urlList,
+      resource: buf,
+      responseHeaders: config.responseHeaders,
+      type: config.type,
+    })
+  }
+
+  return resourceMapArr;
+}
+
+export async function readRawFile(url: string, context: UIContext) {
+  try {
+    return await context.getHostContext()!.resourceManager.getRawFileContent(url);
+  } catch (err) {
+    return new Uint8Array(0);
+  }
+}
+```
+
+Compile the code of the service component.
+
+```TypeScript
+// BusinessWebview.ets
+import { BuilderData } from "./DynamicComponent";
+
+@Builder
+function WebBuilder(data: BuilderData) {
+  // The component can be extended based on service requirements.
+  Web({ src: data.url, controller: data.controller })
+    .cacheMode(CacheMode.Default)
+}
+
+export const businessWebview = wrapBuilder<BuilderData[]>(WebBuilder);
+```
+
+Write the resource configuration information.
+
+```TypeScript
+// Resource.ets
+import { webview } from '@kit.ArkWeb';
+
+export interface ResourceConfig {
+  urlList: Array<string>,
+  type: webview.OfflineResourceType,
+  responseHeaders: Array<Header>,
+  localPath: string, // Path for storing local resources in the rawfile directory.
+}
+
+export const resourceConfigs: Array<ResourceConfig> = [
+  {
+    localPath: "example.png",
+    urlList: [
+      "https://www.example.com/",
+      "https://www.example.com/path1/example.png",
+      "https://www.example.com/path2/example.png",
+    ],
+    type: webview.OfflineResourceType.IMAGE,
+    responseHeaders: [
+      { headerKey: "Cache-Control", headerValue: "max-age=1000" },
+      { headerKey: "Content-Type", headerValue: "image/png" },
+    ]
+  },
+  {
+    localPath: "example.js",
+    urlList: [ // Only one URL is provided. This URL is used as both the resource origin and the network request address of the resource.
+      "https://www.example.com/example.js",
+    ],
+    type: webview.OfflineResourceType.CLASSIC_JS,
+    responseHeaders: [
+      // Used in <script crossorigin="anonymous"/> mode to provide additional response headers.
+      { headerKey: "Cross-Origin", headerValue:"anonymous" }
+    ]
+  },
+];
+```
+
+Use the component on the page.
+
+```TypeScript
+// Index.ets
+import { webview } from '@kit.ArkWeb';
+import { NodeController } from '@kit.ArkUI';
+import { createNode } from "./DynamicComponent"
+import { injectWebview } from "./InjectWebview"
+import { businessWebview } from "./BusinessWebview"
+
+@Entry
+@Component
+struct Index {
+  @State injectNode: NodeController | undefined = undefined;
+  injectController: webview.WebviewController = new webview.WebviewController();
+
+  @State businessNode: NodeController | undefined = undefined;
+  businessController: webview.WebviewController = new webview.WebviewController();
+
+  aboutToAppear(): void {
+    // Initialize the Web component used to inject local resources and provide an empty HTML page as the URL.
+    this.injectNode = createNode(injectWebview,
+        { url: "https://www.example.com/empty.html", controller: this.injectController, context: this.getUIContext()});
+  }
+
+  build() {
+    Column() {
+      // Load the Web component used by the service at a proper time. In this example, the button is clicked.
+      Button("Load Page")
+        .onClick(() => {
+          this.businessNode = createNode(businessWebview, {
+            url: "https://www.example.com/business.html",
+            controller: this.businessController,
+            context: this.getUIContext()
+          });
+        })
+      // The Web component used for the service.
+      NodeContainer(this.businessNode);
+    }
+  }
+}
+```
+
+Example of a loaded HTML web page:
+
+```TypeScript
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+  <img src="https://www.example.com/path1/request.png" />
+  <img src="https://www.example.com/path2/request.png" />
+  <script src="https://www.example.com/example.js" crossorigin="anonymous"></script>
+</body>
+</html>
+```
+
 ## isActiveWebEngineEvergreen
 
 ```TypeScript
@@ -1949,6 +4554,26 @@ Checks whether the system is using the evergreen kernel, that is, the latest ker
 | Type | Description |
 | --- | --- |
 | boolean | Whether the system is using the evergreen kernel. If the system is using the evergreen kernel, **true** is returned. Otherwise, **false** is returned. |
+
+**Examples**
+
+This example shows how to determine whether the evergreen kernel is used in the EntryAbility creation phase.
+
+```TypeScript
+// xxx.ets
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { webview } from '@kit.ArkWeb';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info("EntryAbility onCreate")
+    if (webview.WebviewController.isActiveWebEngineEvergreen()) {
+      console.info("Active Web Engine is Evergreen")
+    }
+    console.info("EntryAbility onCreate done")
+  }
+}
+```
 
 ## isAdsBlockEnabled
 
@@ -1978,6 +4603,35 @@ Get whether Ads block is enabled.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('isAdsBlockEnabled')
+        .onClick(() => {
+          try {
+            let isAdsBlockEnabled: boolean = this.controller.isAdsBlockEnabled();
+            console.info("isAdsBlockEnabled:", isAdsBlockEnabled);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## isAdsBlockEnabledForCurPage
 
 ```TypeScript
@@ -2006,6 +4660,35 @@ Get whether Ads block is enabled for current Webpage.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('isAdsBlockEnabledForCurPage')
+        .onClick(() => {
+          try {
+            let isAdsBlockEnabledForCurPage: boolean = this.controller.isAdsBlockEnabledForCurPage();
+            console.info("isAdsBlockEnabledForCurPage:", isAdsBlockEnabledForCurPage);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## isAutoPreconnectEnabled
 
 ```TypeScript
@@ -2027,6 +4710,31 @@ static isAutoPreconnectEnabled(): boolean
 | Type | Description |
 | --- | --- |
 | boolean | Return true if enabled, false if disabled. |
+
+**Examples**
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  build() {
+    Column() {
+      Button('isAutoPreconnectEnabled')
+        .onClick(() => {
+          try {
+            let isEnabled: boolean = webview.WebviewController.isAutoPreconnectEnabled();
+            console.info("isAutoPreconnectEnabled:", isEnabled);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+    }
+  }
+}
+```
 
 ## isIncognitoMode
 
@@ -2055,6 +4763,35 @@ Whether the incognito mode is set.
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('isIncognitoMode')
+        .onClick(() => {
+          try {
+            let result = this.controller.isIncognitoMode();
+            console.info('isIncognitoMode' + result);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## isIntelligentTrackingPreventionEnabled
 
@@ -2085,6 +4822,35 @@ Get whether Intelligent Tracking Prevention is enabled.
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('isIntelligentTrackingPreventionEnabled')
+        .onClick(() => {
+          try {
+            let result = this.controller.isIntelligentTrackingPreventionEnabled();
+            console.info("result: " + result);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## isPrivateNetworkAccessEnabled
 
 ```TypeScript
@@ -2107,6 +4873,38 @@ Get whether PrivateNetworkAccess is enabled.
 | --- | --- |
 | boolean | True is enable the ability to check private network access else false. |
 
+**Examples**
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('isPrivateNetworkAccessEnabled')
+        .onClick(() => {
+          try {
+            let isEnabled: boolean = webview.WebviewController.isPrivateNetworkAccessEnabled();
+            console.info("isPrivateNetworkAccessEnabled:", isEnabled);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+        .onControllerAttached(() => {
+          // If the value is set to false, ArkWeb does not check whether the private network request is valid.
+          webview.WebviewController.enablePrivateNetworkAccess(false);
+        })
+    }
+  }
+}
+```
+
 ## isSafeBrowsingEnabled
 
 ```TypeScript
@@ -2128,6 +4926,30 @@ Get whether checking website security risks is enabled.
 | Type | Description |
 | --- | --- |
 | boolean | True if enable the ability to check website security risks else false. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('isSafeBrowsingEnabled')
+        .onClick(() => {
+          let result = this.controller.isSafeBrowsingEnabled();
+          console.info("result: " + result);
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## loadData
 
@@ -2162,6 +4984,172 @@ Loads the data or URL.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+When both baseUrl and historyUrl are empty:
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('loadData')
+        .onClick(() => {
+          try {
+            this.controller.loadData(
+              "<html><body bgcolor=\"white\">Source:<pre>source</pre></body></html>",
+              "text/html",
+              // UTF-8 is charset.
+              "UTF-8"
+            );
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('loadData')
+        .onClick(() => {
+          try {
+            this.controller.loadData(
+              // Coding tests: string encoded using base64.
+              "Q29kaW5nIHRlc3Rz",
+              "text/html",
+              "base64"
+            );
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+Specify baseURL.
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('loadData')
+        .onClick(() => {
+          try {
+            this.controller.loadData(
+              "<img src=aa/bb.jpg>", // Attempt to load the image from "https: // xxx.com/" + "aa/bb.jpg".
+              "text/html",
+              "UTF-8",
+              "https://xxx.com/",
+              "about:blank"
+            );
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+Example of loading local resource:
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  updataContent: string = '<body><div><image src="resource://rawfile/xxx.png" alt="image -- end" width="500" height="250"></image></div></body>'
+
+  build() {
+    Column() {
+      Button('loadData')
+        .onClick(() => {
+          try {
+            // UTF-8 is charset.
+            this.controller.loadData(this.updataContent, "text/html", "UTF-8", " ", " ");
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+Load the sandbox image.
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('loadData')
+        .onClick(() => {
+          try {
+            this.controller.loadData(
+              "<img src=bb.jpg>", // Try to download the image from "file:///xxx/" + "bb.jpg".
+              "text/html",
+              "UTF-8",
+              // Load the image path in the local application sandbox. Change the path to the actual sandbox path.
+              "file:///data/storage/el2/base/haps/entry/files/data/.cache_dir/",
+              ""
+            );
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+        .fileAccess(true) // Enable the file access functionality to load images in the application sandbox.
+    }
+  }
+}
+```
+
 ## loadUrl
 
 ```TypeScript
@@ -2194,6 +5182,163 @@ Loads the data or URL.
 | [17100002](../../apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid. |
 | [17100003](../../apis-arkweb/errorcode-webview.md#17100003-incorrect-resource-path) | Invalid resource path or file type. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('loadUrl')
+        .onClick(() => {
+          try {
+            // The URL to be loaded is of the string type.
+            this.controller.loadUrl('www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('loadUrl')
+        .onClick(() => {
+          try {
+            // The headers parameter is passed.
+            this.controller.loadUrl('www.example.com', [{ headerKey: "headerKey", headerValue: "headerValue" }]);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+Using $rawfile.
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('loadUrl')
+        .onClick(() => {
+          try {
+            // Load a local resource file through $rawfile.
+            this.controller.loadUrl($rawfile('index.html'));
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+When $rawfile is used to load a URL contains a number sign (#), the content following the number sign is treated as a fragment. To avoid this issue, you can use the resource://rawfile/ protocol prefix instead.
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('loadUrl')
+        .onClick(() => {
+          try {
+            // Load local resource files through the resource protocol.
+            this.controller.loadUrl("resource://rawfile/index.html#home");
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+Create an index.html file in src/main/resources/rawfile.
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<body>
+<div id="content"></div>
+
+<script>
+  function loadContent() {
+    var hash = window.location.hash;
+    var contentDiv = document.getElementById('content');
+
+    if (hash === '#home') {
+      contentDiv.innerHTML = '<h1>Home Page</h1><p>Welcome to the Home Page!</p>';
+    } else {
+      contentDiv.innerHTML = '<h1>Default Page</h1><p>This is the default content.</p>';
+    }
+  }
+
+  // Load the UI.
+  window.addEventListener('load', loadContent);
+
+  // Update the UI when the hash changes.
+  window.addEventListener('hashchange', loadContent);
+</script>
+</body>
+</html>
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>Hello World</p>
+  </body>
+</html>
+```
+
 ## offControllerAttachStateChange
 
 ```TypeScript
@@ -2214,7 +5359,7 @@ Unregister the callback for controller attach state change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControllerAttachState](arkts-webview-controllerattachstate-e.md)&gt; | No | Callback used to return the controller attach state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-webview-controllerattachstate-e.md)&gt; | No | Callback used to return the controller attach state. |
 
 ## onActive
 
@@ -2238,6 +5383,34 @@ Call this interface to notify the Web component to enter the foreground activati
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('onActive')
+        .onClick(() => {
+          try {
+            this.controller.onActive();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## onControllerAttachStateChange
 
 ```TypeScript
@@ -2258,7 +5431,7 @@ Register the callback for controller attach state change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControllerAttachState](arkts-webview-controllerattachstate-e.md)&gt; | Yes | Callback used to return the controller attach state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-webview-controllerattachstate-e.md)&gt; | Yes | Callback used to return the controller attach state. |
 
 ## onCreateNativeMediaPlayer
 
@@ -2284,6 +5457,214 @@ If the application does not take over media playback on the web page, this callb
 | --- | --- | --- | --- |
 | callback | [CreateNativeMediaPlayerCallback](arkts-webview-createnativemediaplayercallback-t.md) | Yes | Callback when the application takes over media playback on the web page. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+class ActualNativeMediaPlayerListener {
+  handler: webview.NativeMediaPlayerHandler;
+
+  constructor(handler: webview.NativeMediaPlayerHandler) {
+    this.handler = handler;
+  }
+
+  onPlaying() {
+    // The native media player starts playback.
+    this.handler.handleStatusChanged(webview.PlaybackStatus.PLAYING);
+  }
+  onPaused() {
+    // The native media player pauses the playback.
+    this.handler.handleStatusChanged(webview.PlaybackStatus.PAUSED);
+  }
+  onSeeking() {
+    // The local player starts to jump to the target time point.
+    this.handler.handleSeeking();
+  }
+  onSeekDone() {
+    // The native media player seeks to the target time point.
+    this.handler.handleSeekFinished();
+  }
+  onEnded() {
+    // The playback on the native media player is ended.
+    this.handler.handleEnded();
+  }
+  onVolumeChanged() {
+    // Obtain the volume of the local player.
+    let volume: number = getVolume();
+    this.handler.handleVolumeChanged(volume);
+  }
+  onCurrentPlayingTimeUpdate() {
+    // Update the playback time.
+    let currentTime: number = getCurrentPlayingTime();
+    // Convert the time unit to second.
+    let currentTimeInSeconds = convertToSeconds(currentTime);
+    this.handler.handleTimeUpdate(currentTimeInSeconds);
+  }
+  onBufferedChanged() {
+    // The cache is changed.
+    // Obtain the cache duration of the native media player.
+    let bufferedEndTime: number = getCurrentBufferedTime();
+    // Convert the time unit to second.
+    let bufferedEndTimeInSeconds = convertToSeconds(bufferedEndTime);
+    this.handler.handleBufferedEndTimeChanged(bufferedEndTimeInSeconds);
+
+    // Check the cache status.
+    // If the cache status changes, notify the ArkWeb engine of the cache status.
+    let lastReadyState: webview.ReadyState = getLastReadyState();
+    let currentReadyState:  webview.ReadyState = getCurrentReadyState();
+    if (lastReadyState != currentReadyState) {
+      this.handler.handleReadyStateChanged(currentReadyState);
+    }
+  }
+  onEnterFullscreen() {
+    // The native media player enters the full screen mode.
+    let isFullscreen: boolean = true;
+    this.handler.handleFullscreenChanged(isFullscreen);
+  }
+  onExitFullscreen() {
+    // The native media player exits the full screen mode.
+    let isFullscreen: boolean = false;
+    this.handler.handleFullscreenChanged(isFullscreen);
+  }
+  onUpdateVideoSize(width: number, height: number) {
+    // Notify the ArkWeb kernel when the native media player parses the video width and height.
+    this.handler.handleVideoSizeChanged(width, height);
+  }
+  onDurationChanged(duration: number) {
+    // Notify the ArkWeb kernel when the native media player parses the video duration.
+    this.handler.handleDurationChanged(duration);
+  }
+  onError(error: webview.MediaError, errorMessage: string) {
+    // Notify the ArkWeb kernel that an error occurs in the native media player.
+    this.handler.handleError(error, errorMessage);
+  }
+  onNetworkStateChanged(state: webview.NetworkState) {
+    // Notify the ArkWeb kernel that the network state of the native media player changes.
+    this.handler.handleNetworkStateChanged(state);
+  }
+  onPlaybackRateChanged(playbackRate: number) {
+    // Notify the ArkWeb kernel that the playback rate of the native media player changes.
+    this.handler.handlePlaybackRateChanged(playbackRate);
+  }
+  onMutedChanged(muted: boolean) {
+    // Notify the ArkWeb kernel that the native media player is muted.
+    this.handler.handleMutedChanged(muted);
+  }
+
+  // Listen for other state of the native media player.
+}
+
+class NativeMediaPlayerImpl implements webview.NativeMediaPlayerBridge {
+  constructor(handler: webview.NativeMediaPlayerHandler, mediaInfo: webview.MediaInfo) {
+    // 1. Create a listener for the native media player.
+    let listener: ActualNativeMediaPlayerListener = new ActualNativeMediaPlayerListener(handler);
+    // 2. Create a native media player.
+    // 3. Listen for the local player.
+    // ...
+  }
+
+  updateRect(x: number, y: number, width: number, height: number) {
+    // The position and size of the <video> tag are changed.
+    // Make changes based on the information change.
+  }
+
+  play() {
+    // Start the native media player for playback.
+  }
+
+  pause() {
+    //Pause the playback on the local player.
+  }
+
+  seek(targetTime: number) {
+    // The local player jumps to a specified time point.
+  }
+
+  release() {
+    // Destroy the local player.
+  }
+
+  setVolume(volume: number) {
+    // The ArkWeb kernel requires to adjust the volume of the local player.
+    // Set the volume of the local player.
+  }
+
+  setMuted(muted: boolean) {
+    // Mute or unmute the local player.
+  }
+
+  setPlaybackRate(playbackRate: number) {
+    // Adjust the playback speed of the local player.
+  }
+
+  enterFullscreen() {
+    // Set the local player to play in full screen mode.
+  }
+
+  exitFullscreen() {
+    // Set the local player to exit full screen mode.
+  }
+
+  resumePlayer() {
+    // Create a player again.
+    // Resume the status information of the player.
+  }
+
+  suspendPlayer(type: webview.SuspendType) {
+    // Record the status information of the player.
+    // Destroy the player.
+  }
+}
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController()
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+        .enableNativeMediaPlayer({enable: true, shouldOverlay: false})
+        .onPageBegin((event) => {
+          this.controller.onCreateNativeMediaPlayer((handler: webview.NativeMediaPlayerHandler, mediaInfo: webview.MediaInfo) => {
+            if (!shouldHandle(mediaInfo)) {
+              // The local player does not take over the media.
+              // The ArkWeb engine will play the media with its own player.
+              return null;
+            }
+            let nativePlayer: webview.NativeMediaPlayerBridge = new NativeMediaPlayerImpl(handler, mediaInfo);
+            return nativePlayer;
+          });
+        })
+    }
+  }
+}
+
+// stub
+function getVolume() {
+  return 1;
+}
+function getCurrentPlayingTime() {
+  return 1;
+}
+function getCurrentBufferedTime() {
+  return 1;
+}
+function convertToSeconds(input: number) {
+  return input;
+}
+function getLastReadyState() {
+  return webview.ReadyState.HAVE_NOTHING;
+}
+function getCurrentReadyState() {
+  return webview.ReadyState.HAVE_NOTHING;
+}
+function shouldHandle(mediaInfo: webview.MediaInfo) {
+  return true;
+}
+```
+
 ## onInactive
 
 ```TypeScript
@@ -2305,6 +5686,34 @@ Call this interface to notify the Web component to enter the inactive state. In 
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('onInactive')
+        .onClick(() => {
+          try {
+            this.controller.onInactive();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## pageDown
 
@@ -2335,6 +5744,69 @@ Scroll the contents of this Webview down by half the view size.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('pageDown')
+        .onClick(() => {
+          try {
+            this.controller.pageDown(false);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: $rawfile("index.html"), controller: this.controller })
+    }
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .blue {
+          background-color: lightblue;
+        }
+        .green {
+          background-color: lightgreen;
+        }
+        .blue, .green {
+         font-size:16px;
+         height:200px;
+         text-align: center;       /* Horizontally centered */
+         line-height: 200px;       /* Vertically centered (the height matches the container height) */
+        }
+    </style>
+</head>
+<body>
+<div class="blue" >webArea</div>
+<div class="green">webArea</div>
+<div class="blue">webArea</div>
+<div class="green">webArea</div>
+<div class="blue">webArea</div>
+<div class="green">webArea</div>
+<div class="blue">webArea</div>
+</body>
+</html>
+```
+
 ## pageUp
 
 ```TypeScript
@@ -2364,6 +5836,67 @@ Scroll the contents of this Webview up by half the view size.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('pageUp')
+        .onClick(() => {
+          try {
+            this.controller.pageUp(false);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: $rawfile("index.html"), controller: this.controller })
+    }
+  }
+}
+```
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .blue {
+          background-color: lightblue;
+        }
+        .green {
+          background-color: lightgreen;
+        }
+        .blue, .green {
+         font-size:16px;
+         height:200px;
+         text-align: center;       /* Horizontally centered */
+         line-height: 200px;       /* Vertically centered (the height matches the container height) */
+        }
+    </style>
+</head>
+<body>
+<div class="blue" >webArea</div>
+<div class="green">webArea</div>
+<div class="blue">webArea</div>
+<div class="green">webArea</div>
+<div class="blue">webArea</div>
+<div class="green">webArea</div>
+<div class="blue">webArea</div>
+</body>
+</html>
+```
+
 ## pauseAllMedia
 
 ```TypeScript
@@ -2385,6 +5918,34 @@ Pauses all audio and video on a web page.
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('pauseAllMedia')
+        .onClick(() => {
+          try {
+            this.controller.pauseAllMedia();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## pauseAllTimers
 
@@ -2408,6 +5969,59 @@ Pause all WebView timers.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Row() {
+        Button('PauseAllTimers')
+          .onClick(() => {
+            webview.WebviewController.pauseAllTimers();
+          })
+      }
+      Web({ src: $rawfile("index.html"), controller: this.controller })
+    }
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!DOCTYPE html>
+<html>
+    <body>
+        <button style="width:300px;height:150px;font-size:50px" onclick="startTimer()">start</button>
+        <button style="width:300px;height:150px;font-size:50px" onclick="resetTimer()">reset</button>
+        <input style="width:300px;height:150px;font-size:50px" value="0" id="show_num">
+    </body>
+</html>
+<script>
+    var timer = null;
+    var num = 0;
+
+    function startTimer() {
+        timer = setInterval(function() {
+            document.getElementById("show_num").value = ++num;
+        }, 1000);
+    }
+    
+    function resetTimer() {
+        clearInterval(timer);
+        document.getElementById("show_num").value = 0;
+        num = 0;
+    }
+</script>
+```
+
 ## pauseMicrophone
 
 ```TypeScript
@@ -2429,6 +6043,10 @@ Pauses microphone capture on the current web page.
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+For the complete sample code, see [resumeMicrophone](#resumemicrophone).
 
 ## postMessage
 
@@ -2461,6 +6079,144 @@ Post web message port to html
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  ports: webview.WebMessagePort[] = [];
+  @State sendFromEts: string = 'Send this message from ets to HTML';
+  @State receivedFromHtml: string = 'Display received message send from HTML';
+
+  build() {
+    Column() {
+      // Display the received HTML content.
+      Text(this.receivedFromHtml)
+      // Send the content in the text box to an HTML window.
+      TextInput({ placeholder: 'Send this message from ets to HTML' })
+        .onChange((value: string) => {
+          this.sendFromEts = value;
+        })
+
+      Button('postMessage')
+        .onClick(() => {
+          try {
+            // 1. Create two message ports.
+            this.ports = this.controller.createWebMessagePorts();
+            // 2. Register a callback on a message port (for example, port 1) on the application side.
+            this.ports[1].onMessageEvent((result: webview.WebMessage) => {
+              let msg = 'Got msg from HTML:';
+              if (typeof (result) == "string") {
+                console.info("received string message from html5, string is:" + result);
+                msg = msg + result;
+              } else if (typeof (result) == "object") {
+                if (result instanceof ArrayBuffer) {
+                  console.info("received arraybuffer from html5, length is:" + result.byteLength);
+                  msg = msg + "length is " + result.byteLength;
+                } else {
+                  console.info("not support");
+                }
+              } else {
+                console.info("not support");
+              }
+              this.receivedFromHtml = msg;
+            })
+            // 3. Send another message port (for example, port 0) to the HTML side, which can then save the port for future use.
+            this.controller.postMessage('__init_port__', [this.ports[0]], '*');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+
+      // 4. Use the port on the application side to send messages to the port that has been sent to the HTML side.
+      Button('SendDataToHTML')
+        .onClick(() => {
+          try {
+            if (this.ports && this.ports[1]) {
+              this.ports[1].postMessageEvent(this.sendFromEts);
+            } else {
+              console.error(`ports is null, Please initialize first`);
+            }
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: $rawfile('index.html'), controller: this.controller })
+    }
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebView Message Port Demo</title>
+</head>
+
+  <body>
+    <h1>WebView Message Port Demo</h1>
+    <div>
+        <input type="button" value="SendToEts" onclick="PostMsgToEts(msgFromJS.value);"/><br/>
+        <input id="msgFromJS" type="text" value="send this message from HTML to ets"/><br/>
+    </div>
+    <p class="output">display received message send from ets</p>
+  </body>
+  <script src="xxx.js"></script>
+</html>
+```
+
+```TypeScript
+// xxx.js
+var h5Port;
+var output = document.querySelector('.output');
+window.addEventListener('message', function (event) {
+    if (event.data == '__init_port__') {
+        if (event.ports[0] != null) {
+            h5Port = event.ports[0]; // 1. Save the port number sent from the eTS side.
+            h5Port.onmessage = function (event) {
+              // 2. Receive the message sent from the eTS side.
+              var msg = 'Got message from ets:';
+              var result = event.data;
+              if (typeof(result) == "string") {
+                console.info("received string message from html5, string is:" + result);
+                msg = msg + result;
+              } else if (typeof(result) == "object") {
+                if (result instanceof ArrayBuffer) {
+                  console.info("received arraybuffer from html5, length is:" + result.byteLength);
+                  msg = msg + "length is " + result.byteLength;
+                } else {
+                  console.info("not support");
+                }
+              } else {
+                console.info("not support");
+              }
+              output.innerHTML = msg;
+            }
+        }
+    }
+})
+
+// 3. Use h5Port to send messages to the eTS side.
+function PostMsgToEts(data) {
+    if (h5Port) {
+      h5Port.postMessage(data);
+    } else {
+      console.error("h5Port is null, Please initialize first");
+    }
+}
+```
+
 ## postUrl
 
 ```TypeScript
@@ -2491,6 +6247,52 @@ Loads the URL use "POST" method with post data.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 | [17100002](../../apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class TestObj {
+  constructor() {
+  }
+
+  test(str: string): ArrayBuffer {
+    let buf = new ArrayBuffer(str.length);
+    let buff = new Uint8Array(buf);
+
+    for (let i = 0; i < str.length; i++) {
+      buff[i] = str.charCodeAt(i);
+    }
+    return buf;
+  }
+}
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State testObjtest: TestObj = new TestObj();
+
+  build() {
+    Column() {
+      Button('postUrl')
+        .onClick(() => {
+          try {
+            // Convert data to the ArrayBuffer type.
+            let postData = this.testObjtest.test("Name=test&Password=test");
+            this.controller.postUrl('www.example.com', postData);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: '', controller: this.controller })
+    }
+  }
+}
+```
 
 ## precompileJavaScript
 
@@ -2529,6 +6331,213 @@ Compile javascript and generate code cache.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+Save UIContext to localStorage in EntryAbility.
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+const localStorage: LocalStorage = new LocalStorage('uiContext');
+
+export default class EntryAbility extends UIAbility {
+  storage: LocalStorage = localStorage;
+
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    windowStage.loadContent('pages/Index', this.storage, (err, data) => {
+      if (err.code) {
+        return;
+      }
+
+      this.storage.setOrCreate<UIContext>("uiContext", windowStage.getMainWindowSync().getUIContext());
+    });
+  }
+}
+```
+
+Write the basic code required by the dynamic component.
+
+```TypeScript
+// DynamicComponent.ets
+import { NodeController, BuilderNode, FrameNode, UIContext } from '@kit.ArkUI';
+
+export interface BuilderData {
+  url: string;
+  controller: WebviewController;
+  context: UIContext;
+}
+
+let storage : LocalStorage | undefined = undefined;
+
+export class NodeControllerImpl extends NodeController {
+  private rootNode: BuilderNode<BuilderData[]> | null = null;
+  private wrappedBuilder: WrappedBuilder<BuilderData[]> | null = null;
+
+  constructor(wrappedBuilder: WrappedBuilder<BuilderData[]>, context: UIContext) {
+    storage = context.getSharedLocalStorage();
+    super();
+    this.wrappedBuilder = wrappedBuilder;
+  }
+
+  makeNode(): FrameNode | null {
+    if (this.rootNode != null) {
+      return this.rootNode.getFrameNode();
+    }
+    return null;
+  }
+
+  initWeb(url: string, controller: WebviewController) {
+    if(this.rootNode != null) {
+      return;
+    }
+
+    const uiContext: UIContext = storage!.get<UIContext>("uiContext") as UIContext;
+    if (!uiContext) {
+      return;
+    }
+    this.rootNode = new BuilderNode(uiContext);
+    this.rootNode.build(this.wrappedBuilder, { url: url, controller: controller });
+  }
+}
+
+export const createNode = (wrappedBuilder: WrappedBuilder<BuilderData[]>, data: BuilderData) => {
+  const baseNode = new NodeControllerImpl(wrappedBuilder, data.context);
+  baseNode.initWeb(data.url, data.controller);
+  return baseNode;
+}
+```
+
+Write a component for generating bytecode caches. In this example, the local JavaScript resource content is read through the file reading API from a local file in the rawfile directory.
+
+```TypeScript
+// PrecompileWebview.ets
+import { BuilderData } from "./DynamicComponent";
+import { Config, configs } from "./PrecompileConfig";
+
+@Builder
+function WebBuilder(data: BuilderData) {
+  Web({ src: data.url, controller: data.controller })
+    .onControllerAttached(() => {
+      precompile(data.controller, configs, data.context);
+    })
+    .fileAccess(true)
+}
+
+export const precompileWebview = wrapBuilder<BuilderData[]>(WebBuilder);
+
+export const precompile = async (controller: WebviewController, configs: Array<Config>, context: UIContext) => {
+  for (const config of configs) {
+    let content = await readRawFile(config.localPath, context);
+
+    try {
+      controller.precompileJavaScript(config.url, content, config.options)
+        .then(errCode => {
+          console.error("precompile successfully! " + errCode);
+        }).catch((errCode: number) => {
+          console.error("precompile failed. " + errCode);
+      });
+    } catch (err) {
+      console.error("precompile failed. " + err.code + " " + err.message);
+    }
+  }
+}
+
+async function readRawFile(path: string, context: UIContext) {
+  try {
+    return await context.getHostContext()!.resourceManager.getRawFileContent(path);
+  } catch (err) {
+    return new Uint8Array(0);
+  }
+}
+```
+
+Compile the code of the service component.
+
+```TypeScript
+// BusinessWebview.ets
+import { BuilderData } from "./DynamicComponent";
+
+@Builder
+function WebBuilder(data: BuilderData) {
+  // The component can be extended based on service requirements.
+  Web({ src: data.url, controller: data.controller })
+    .cacheMode(CacheMode.Default)
+}
+
+export const businessWebview = wrapBuilder<BuilderData[]>(WebBuilder);
+```
+
+Write the resource configuration information.
+
+```TypeScript
+// PrecompileConfig.ets
+import { webview } from '@kit.ArkWeb'
+
+export interface Config {
+  url:  string,
+  localPath: string, // Local resource path
+  options: webview.CacheOptions
+}
+
+export let configs: Array<Config> = [
+  {
+    url: "https://www.example.com/example.js",
+    localPath: "example.js",
+    options: {
+      responseHeaders: [
+        { headerKey: "E-Tag", headerValue: "aWO42N9P9dG/5xqYQCxsx+vDOoU="},
+        { headerKey: "Last-Modified", headerValue: "Wed, 21 Mar 2024 10:38:41 GMT"}
+      ]
+    }
+  }
+]
+```
+
+Use the component on the page.
+
+```TypeScript
+// Index.ets
+import { webview } from '@kit.ArkWeb';
+import { NodeController } from '@kit.ArkUI';
+import { createNode } from "./DynamicComponent"
+import { precompileWebview } from "./PrecompileWebview"
+import { businessWebview } from "./BusinessWebview"
+
+@Entry
+@Component
+struct Index {
+  @State precompileNode: NodeController | undefined = undefined;
+  precompileController: webview.WebviewController = new webview.WebviewController();
+
+  @State businessNode: NodeController | undefined = undefined;
+  businessController: webview.WebviewController = new webview.WebviewController();
+
+  aboutToAppear(): void {
+    // Initialize the Web component used to inject local resources.
+    this.precompileNode = createNode(precompileWebview,
+      { url: "https://www.example.com/empty.html", controller: this.precompileController, context: this.getUIContext()});
+  }
+
+  build() {
+    Column() {
+      // Load the Web component used by the service at a proper time. In this example, the button is clicked.
+      Button("Load Page")
+        .onClick(() => {
+          this.businessNode = createNode(businessWebview, {
+            url:  "https://www.example.com/business.html",
+            controller: this.businessController,
+            context: this.getUIContext()
+          });
+        })
+      // The Web component used for the service.
+      NodeContainer(this.businessNode);
+    }
+  }
+}
+```
+
 ## prefetchPage
 
 ```TypeScript
@@ -2558,6 +6567,65 @@ Prefetch the resources required by the page, but will not execute js or render t
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 | [17100002](../../apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  build() {
+    Column() {
+      Button('prefetchPopularPage')
+        .onClick(() => {
+          try {
+            // Replace 'https://www.example.com' with a real URL for the API to work.
+            let options = new webview.PrefetchOptions();
+            options.ignoreCacheControlNoStore = true;
+            options.minTimeBetweenPrefetchesMs = 100;
+            this.controller.prefetchPage('https://www.example.com', [{ headerKey: "headerKey", headerValue: "headerValue" }], options);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      // Replace ''www.example1.com' with a real URL for the API to work.
+      Web({ src: 'www.example1.com', controller: this.controller })
+    }
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('prefetchPopularPage')
+        .onClick(() => {
+          try {
+            // Replace 'https://www.example.com' with a real URL for the API to work.
+            this.controller.prefetchPage('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      // Replace ''www.example1.com' with a real URL for the API to work.
+      Web({ src: 'www.example1.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## prefetchPage
 
@@ -2589,6 +6657,10 @@ Prefetch the resources required by the page, but will not execute js or render t
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 | [17100002](../../apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024. |
+
+**Examples**
+
+See [prefetchPage](#prefetchpage)
 
 ## prefetchResource
 
@@ -2622,6 +6694,35 @@ Prefetches resource requests based on specified request information and addition
 | --- | --- |
 | [17100002](../../apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2 *1024 *1024. |
 
+**Examples**
+
+```TypeScript
+// EntryAbility.ets
+import { webview } from '@kit.ArkWeb';
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info("EntryAbility onCreate");
+    webview.WebviewController.initializeWebEngine();
+    // Replace "https://www.example1.com/post?e=f&g=h" with a real URL to visit.
+    webview.WebviewController.prefetchResource(
+      {
+        url: "https://www.example1.com/post?e=f&g=h",
+        method: "POST",
+        formData: "a=x&b=y",
+      },
+      [{
+        headerKey: "c",
+        headerValue: "z",
+      },],
+      "KeyX", 500);
+    AppStorage.setOrCreate("abilityWant", want);
+    console.info("EntryAbility onCreate done");
+  }
+}
+```
+
 ## prepareForPageLoad
 
 ```TypeScript
@@ -2653,6 +6754,25 @@ Preresolve or Preconnect the url. This API can be called before loading the url 
 | [17100002](../../apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048. |
 | [17100013](../../apis-arkweb/errorcode-webview.md#17100013-invalid-number-of-sockets-during-preconnection) | The number of preconnect sockets is invalid. |
 
+**Examples**
+
+```TypeScript
+// EntryAbility.ets
+import { webview } from '@kit.ArkWeb';
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info("EntryAbility onCreate");
+    webview.WebviewController.initializeWebEngine();
+    // Replace 'https://www.example.com' with a real URL for the API to work.
+    webview.WebviewController.prepareForPageLoad("https://www.example.com", true, 2);
+    AppStorage.setOrCreate("abilityWant", want);
+    console.info("EntryAbility onCreate done");
+  }
+}
+```
+
 ## refresh
 
 ```TypeScript
@@ -2674,6 +6794,60 @@ Refreshes the current URL.
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('refresh')
+        .onClick(() => {
+          try {
+            this.controller.refresh();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('refresh')
+        .onClick(() => {
+          try {
+            this.controller.refresh(true);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## refresh
 
@@ -2704,6 +6878,10 @@ Refreshes the current URL.
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+See [refresh](#refresh)
 
 ## registerJavaScriptProxy
 
@@ -2739,6 +6917,147 @@ Registers the supplied ArkTS object into this Web component. The object is regis
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class TestObj {
+  constructor() {
+  }
+
+  test(testStr: string): string {
+    console.info('Web Component str' + testStr);
+    return testStr;
+  }
+
+  toString(): void {
+    console.info('Web Component toString');
+  }
+
+  testNumber(testNum: number): number {
+    console.info('Web Component number' + testNum);
+    return testNum;
+  }
+
+  asyncTestBool(testBol: boolean): void {
+    console.info('Web Component boolean' + testBol);
+  }
+}
+
+class WebObj {
+  constructor() {
+  }
+
+  webTest(): string {
+    console.info('Web test');
+    return "Web test";
+  }
+
+  webString(): void {
+    console.info('Web test toString');
+  }
+}
+
+class AsyncObj {
+  constructor() {
+  }
+
+  asyncTest(): void {
+    console.info('Async test');
+  }
+
+  asyncString(testStr: string): void {
+    console.info('Web async string' + testStr);
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State testObjtest: TestObj = new TestObj();
+  @State webTestObj: WebObj = new WebObj();
+  @State asyncTestObj: AsyncObj = new AsyncObj();
+
+  build() {
+    Column() {
+      Button('refresh')
+        .onClick(() => {
+          try {
+            this.controller.refresh();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('Register JavaScript To Window')
+        .onClick(() => {
+          try {
+            // Register both synchronous and asynchronous functions.
+            this.controller.registerJavaScriptProxy(this.testObjtest, "objName", ["test", "toString", "testNumber"], ["asyncTestBool"]);
+            // Register only the synchronous function.
+            this.controller.registerJavaScriptProxy(this.webTestObj, "objTestName", ["webTest", "webString"]);
+            // Register only the asynchronous function.
+            this.controller.registerJavaScriptProxy(this.asyncTestObj, "objAsyncName", [], ["asyncTest", "asyncString"]);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('deleteJavaScriptRegister')
+        .onClick(() => {
+          try {
+            this.controller.deleteJavaScriptRegister("objName");
+            this.controller.deleteJavaScriptRegister("objTestName");
+            this.controller.deleteJavaScriptRegister("objAsyncName");
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: $rawfile('index.html'), controller: this.controller })
+        .javaScriptAccess(true)
+    }
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+    </head>
+    <body>
+      <button type="button" onclick="htmlTest()">Click Me!</button>
+      <p id="demo"></p>
+      <p id="webDemo"></p>
+      <p id="asyncDemo"></p>
+      <script type="text/javascript">
+        function htmlTest() {
+          // This function call expects to return "ArkUI Web Component"
+          let str=objName.test("webtest data");
+          objName.testNumber(1);
+          objName.asyncTestBool(true);
+          document.getElementById("demo").innerHTML=str;
+          console.info('objName.test result:'+ str)
+
+          // This function call expects to return "Web test"
+          let webStr = objTestName.webTest();
+          document.getElementById("webDemo").innerHTML=webStr;
+          console.info('objTestName.webTest result:'+ webStr)
+
+          objAsyncName.asyncTest();
+          objAsyncName.asyncString("async test data");
+        }
+      </script>
+    </body>
+</html>
+```
+
 ## removeAllCache
 
 ```TypeScript
@@ -2766,6 +7085,34 @@ Remove resource cache in application. So this method will remove all cache for a
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('removeAllCache')
+        .onClick(() => {
+          try {
+            webview.WebviewController.removeAllCache(false);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## removeCache
 
@@ -2798,6 +7145,34 @@ Clears the cache in the application. This API will clear the cache for all webvi
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('removeCache')
+        .onClick(() => {
+          try {
+            this.controller.removeCache(false);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## removeIntelligentTrackingPreventionBypassingList
 
 ```TypeScript
@@ -2827,6 +7202,35 @@ Remove bypassing hosts for Intelligent Tracking Prevention.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('removeIntelligentTrackingPreventionBypassingList')
+        .onClick(() => {
+          try {
+            let hostList = ["www.test1.com", "www.test2.com"];
+            webview.WebviewController.removeIntelligentTrackingPreventionBypassingList(hostList);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## requestFocus
 
 ```TypeScript
@@ -2848,6 +7252,34 @@ Gets the request focus.
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('requestFocus')
+        .onClick(() => {
+          try {
+            this.controller.requestFocus();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        });
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## restoreWebState
 
@@ -2878,6 +7310,68 @@ Restoring the web access stack, that is, the history of access.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+To perform operations on files, you must first import the fs module. For details, see File Management.
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('RestoreWebState')
+        .onClick(() => {
+          try {
+            let path: string | undefined = AppStorage.get("cacheDir");
+            if (path) {
+              path += '/WebState';
+              // Synchronously open a file.
+              let file = fileIo.openSync(path, fileIo.OpenMode.READ_WRITE);
+              let stat = fileIo.statSync(path);
+              let size = stat.size;
+              let buf = new ArrayBuffer(size);
+              fileIo.read(file.fd, buf, (err, readLen) => {
+                if (err) {
+                  console.error("console error with error message: " + err.message + ", error code: " + err.code);
+                } else {
+                  console.info("read file data succeed");
+                  this.controller.restoreWebState(new Uint8Array(buf.slice(0, readLen)));
+                  fileIo.closeSync(file);
+                }
+              });
+            }
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+Obtain the path of the application cache file.
+
+```TypeScript
+// xxx.ets
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    // Data synchronization between the UIAbility component and the page can be implemented by binding cacheDir to the AppStorage object.
+    AppStorage.setOrCreate("cacheDir", this.context.cacheDir);
+  }
+}
+```
+
 ## resumeAllMedia
 
 ```TypeScript
@@ -2899,6 +7393,34 @@ Resumes the playback of the audio and video that are paused by the pauseAllMedia
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('resumeAllMedia')
+        .onClick(() => {
+          try {
+            this.controller.resumeAllMedia();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## resumeAllTimers
 
@@ -2922,6 +7444,63 @@ Resume all timers suspended from the pauseAllTimers() interface.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Row() {
+        Button('ResumeAllTimers')
+          .onClick(() => {
+            webview.WebviewController.resumeAllTimers();
+          })
+        Button('PauseAllTimers')
+          .onClick(() => {
+            webview.WebviewController.pauseAllTimers();
+          })
+      }
+      Web({ src: $rawfile("index.html"), controller: this.controller })
+    }
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!DOCTYPE html>
+<html>
+    <body>
+        <button style="width:300px;height:150px;font-size:50px" onclick="startTimer()">start</button>
+        <button style="width:300px;height:150px;font-size:50px" onclick="resetTimer()">reset</button>
+        <input style="width:300px;height:150px;font-size:50px" value="0" id="show_num">
+    </body>
+</html>
+<script>
+    var timer = null;
+    var num = 0;
+
+    function startTimer() {
+        timer = setInterval(function() {
+            document.getElementById("show_num").value = ++num;
+        }, 1000);
+    }
+
+    function resetTimer() {
+        clearInterval(timer);
+        document.getElementById("show_num").value = 0;
+        num = 0;
+    }
+</script>
+```
+
 ## resumeMicrophone
 
 ```TypeScript
@@ -2943,6 +7522,120 @@ Resumes microphone capture on the current web page. Before using the microphone 
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { abilityAccessCtrl, PermissionRequestResult, common } from '@kit.AbilityKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  uiContext: UIContext = this.getUIContext();
+
+  aboutToAppear(): void {
+    let context: Context | undefined = this.uiContext.getHostContext() as common.UIAbilityContext;
+    atManager.requestPermissionsFromUser(context, ['ohos.permission.MICROPHONE'], (err: BusinessError, data: PermissionRequestResult) => {
+      console.info('data:' + JSON.stringify(data));
+      console.info('data permissions:' + data.permissions);
+      console.info('data authResults:' + data.authResults);
+    })
+  }
+
+  build() {
+    Column() {
+      Button("resumeMicrophone").onClick(() => {
+        try {
+          this.controller.resumeMicrophone();
+        } catch (error) {
+          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+        }
+      })
+      Button("pauseMicrophone").onClick(() => {
+        try {
+          this.controller.pauseMicrophone();
+        } catch (error) {
+          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+        }
+      })
+      Button("stopMicrophone").onClick(() => {
+        try {
+          this.controller.stopMicrophone();
+        } catch (error) {
+          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+        }
+      })
+      Web({ src: $rawfile('index.html'), controller: this.controller })
+        .onPermissionRequest((event) => {
+          if (event) {
+            this.uiContext.showAlertDialog({
+              title: 'title',
+              message: 'text',
+              primaryButton: {
+                value: 'deny',
+                action: () => {
+                  event.request.deny();
+                }
+              },
+              secondaryButton: {
+                value: 'onConfirm',
+                action: () => {
+                  event.request.grant(event.request.getAccessibleResource());
+                }
+              },
+              cancel: () => {
+                event.request.deny();
+              }
+            })
+          }
+        })
+        .onMicrophoneCaptureStateChange((event: MicrophoneCaptureStateChangeInfo) => {
+          console.info("MicrophoneCapture from ", event.originalState, " to ", event.newState);
+        })
+    }
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+ </head>
+ <body>
+   <video id="video" width="400px" height="400px" autoplay="autoplay">
+   </video>
+   <input type="button" title="HTML5 Microphone" value="Enable Microphone" onclick="getMedia()" />
+   <script>
+     function getMedia() {
+       let constraints = {
+         video: {
+           width: 500,
+           height: 500
+         },
+         audio: true
+       }
+       let video = document.getElementById("video");
+       let promise = navigator.mediaDevices.getUserMedia(constraints);
+       promise.then(function(MediaStream) {
+         video.srcObject = MediaStream;
+         video.play();
+       })
+     }
+   </script>
+ </body>
+</html>
+```
 
 ## runJavaScript
 
@@ -2980,6 +7673,126 @@ Asynchronously execute JavaScript in the context of the currently displayed page
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 | [17100003](../../apis-arkweb/errorcode-webview.md#17100003-incorrect-resource-path) | Calling a JS method that returns an empty ArrayBuffer via runJavaScript. |
 
+**Examples**
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State webResult: string = '';
+
+  build() {
+    Column() {
+      Text(this.webResult).fontSize(20)
+      Web({ src: $rawfile('index.html'), controller: this.controller })
+        .javaScriptAccess(true)
+        .onPageEnd(e => {
+          try {
+            this.controller.runJavaScript(
+              'test()',
+              (error, result) => {
+                if (error) {
+                  console.error(`run JavaScript error, ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+                  return;
+                }
+                if (result) {
+                  this.webResult = result;
+                  console.info(`The test() return value is: ${result}`);
+                }
+              });
+            if (e) {
+              console.info('url: ', e.url);
+            }
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+    }
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    Hello world!
+    <script type="text/javascript">
+      function test() {
+        console.info('Ark WebComponent')
+        return "This value is from index.html"
+      }
+    </script>
+  </body>
+</html>
+```
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Web({ src: $rawfile('index.html'), controller: this.controller })
+        .javaScriptAccess(true)
+        .onPageEnd(e => {
+          try {
+            this.controller.runJavaScript('test()')
+              .then((result) => {
+                console.info('result: ' + result);
+              })
+              .catch((error: BusinessError) => {
+                console.error("error: " + error);
+              })
+            if (e) {
+              console.info('url: ', e.url);
+            }
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+    }
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    Hello world!
+    <script type="text/javascript">
+      function test() {
+        console.info('Ark WebComponent')
+        return "This value is from index.html"
+      }
+    </script>
+  </body>
+</html>
+```
+
 ## runJavaScript
 
 ```TypeScript
@@ -3001,7 +7814,7 @@ Asynchronously execute JavaScript in the context of the currently displayed page
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | script | string | Yes | JavaScript Script. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callbacks execute JavaScript script results. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callbacks execute JavaScript script results. |
 
 **Error codes:**
 
@@ -3010,6 +7823,10 @@ Asynchronously execute JavaScript in the context of the currently displayed page
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 | [17100003](../../apis-arkweb/errorcode-webview.md#17100003-incorrect-resource-path) | Calling a JS method that returns an empty ArrayBuffer via runJavaScript. |
+
+**Examples**
+
+See [runJavaScript](#runjavascript)
 
 ## runJavaScriptExt
 
@@ -3046,6 +7863,387 @@ Execute JavaScript code in the context of the currently displayed page, and retu
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State msg1: string = '';
+  @State msg2: string = '';
+
+  build() {
+    Column() {
+      Text(this.msg1).fontSize(20)
+      Text(this.msg2).fontSize(20)
+      Web({ src: $rawfile('index.html'), controller: this.controller })
+        .javaScriptAccess(true)
+        .onPageEnd(e => {
+          try {
+            this.controller.runJavaScriptExt(
+              'test()',
+              (error, result) => {
+                if (error) {
+                  console.error(`run JavaScript error, ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`)
+                  return;
+                }
+                if (result) {
+                  try {
+                    if (result.getErrorDescription()) {
+                      // If an exception occurs or the return type is not supported, getErrorDescription is not empty.
+                      console.info(`runJavaScriptExt getErrorDescription: ${result.getErrorDescription()}`);
+                      return;
+                    }
+                    let type = result.getType();
+                    switch (type) {
+                      case webview.JsMessageType.STRING: {
+                        this.msg1 = "result type:" + typeof (result.getString());
+                        this.msg2 = "result getString:" + ((result.getString()));
+                        break;
+                      }
+                      case webview.JsMessageType.NUMBER: {
+                        this.msg1 = "result type:" + typeof (result.getNumber());
+                        this.msg2 = "result getNumber:" + ((result.getNumber()));
+                        break;
+                      }
+                      case webview.JsMessageType.BOOLEAN: {
+                        this.msg1 = "result type:" + typeof (result.getBoolean());
+                        this.msg2 = "result getBoolean:" + ((result.getBoolean()));
+                        break;
+                      }
+                      case webview.JsMessageType.ARRAY_BUFFER: {
+                        this.msg1 = "result type:" + typeof (result.getArrayBuffer());
+                        this.msg2 = "result getArrayBuffer byteLength:" + ((result.getArrayBuffer().byteLength));
+                        break;
+                      }
+                      case webview.JsMessageType.ARRAY: {
+                        this.msg1 = "result type:" + typeof (result.getArray());
+                        this.msg2 = "result getArray:" + result.getArray();
+                        break;
+                      }
+                      default: {
+                        this.msg1 = "default break, type:" + type;
+                        break;
+                      }
+                    }
+                  }
+                  catch (resError) {
+                    console.error(`ErrorCode: ${(resError as BusinessError).code},  Message: ${(resError as BusinessError).message}`);
+                  }
+                }
+              });
+            if (e) {
+              console.info('url: ', e.url);
+            }
+          } catch (resError) {
+            console.error(`ErrorCode: ${(resError as BusinessError).code},  Message: ${(resError as BusinessError).message}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+// Use the ArrayBuffer input parameter to obtain the JavaScript script data from the file.
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State msg1: string = ''
+  @State msg2: string = ''
+
+  build() {
+    Column() {
+      Text(this.msg1).fontSize(20)
+      Text(this.msg2).fontSize(20)
+      Button('runJavaScriptExt')
+        .onClick(() => {
+          try {
+            let uiContext : UIContext = this.getUIContext();
+            let context : Context | undefined = uiContext.getHostContext() as common.UIAbilityContext;
+            let filePath = context!.filesDir + 'test.txt';
+            // Create a file and open it.
+            let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+            // Write data to the file.
+            fileIo.writeSync(file.fd, "test()");
+            // Read data from the file.
+            let arrayBuffer: ArrayBuffer = new ArrayBuffer(6);
+            fileIo.readSync(file.fd, arrayBuffer, { offset: 0, length: arrayBuffer.byteLength });
+            // Close the file.
+            fileIo.closeSync(file);
+            this.controller.runJavaScriptExt(
+              arrayBuffer,
+              (error, result) => {
+                if (error) {
+                  console.error(`run JavaScript error, ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`)
+                  return;
+                }
+                if (result) {
+                  try {
+                    if (result.getErrorDescription()) {
+                      // If an exception occurs or the return type is not supported, getErrorDescription is not empty.
+                      console.info(`runJavaScriptExt getErrorDescription: ${result.getErrorDescription()}`);
+                      return;
+                    }
+                    let type = result.getType();
+                    switch (type) {
+                      case webview.JsMessageType.STRING: {
+                        this.msg1 = "result type:" + typeof (result.getString());
+                        this.msg2 = "result getString:" + ((result.getString()));
+                        break;
+                      }
+                      case webview.JsMessageType.NUMBER: {
+                        this.msg1 = "result type:" + typeof (result.getNumber());
+                        this.msg2 = "result getNumber:" + ((result.getNumber()));
+                        break;
+                      }
+                      case webview.JsMessageType.BOOLEAN: {
+                        this.msg1 = "result type:" + typeof (result.getBoolean());
+                        this.msg2 = "result getBoolean:" + ((result.getBoolean()));
+                        break;
+                      }
+                      case webview.JsMessageType.ARRAY_BUFFER: {
+                        this.msg1 = "result type:" + typeof (result.getArrayBuffer());
+                        this.msg2 = "result getArrayBuffer byteLength:" + ((result.getArrayBuffer().byteLength));
+                        break;
+                      }
+                      case webview.JsMessageType.ARRAY: {
+                        this.msg1 = "result type:" + typeof (result.getArray());
+                        this.msg2 = "result getArray:" + result.getArray();
+                        break;
+                      }
+                      default: {
+                        this.msg1 = "default break, type:" + type;
+                        break;
+                      }
+                    }
+                  }
+                  catch (resError) {
+                    console.error(`ErrorCode: ${(resError as BusinessError).code},  Message: ${(resError as BusinessError).message}`);
+                  }
+                }
+              });
+          } catch (resError) {
+            console.error(`ErrorCode: ${(resError as BusinessError).code},  Message: ${(resError as BusinessError).message}`);
+          }
+        })
+      Web({ src: $rawfile('index.html'), controller: this.controller })
+        .javaScriptAccess(true)
+    }
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en-gb">
+<body>
+<h1>run JavaScript Ext demo</h1>
+</body>
+<script type="text/javascript">
+function test() {
+  return "hello, world";
+}
+</script>
+</html>
+```
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State webResult: string = '';
+  @State msg1: string = '';
+  @State msg2: string = '';
+
+  build() {
+    Column() {
+      Text(this.webResult).fontSize(20)
+      Text(this.msg1).fontSize(20)
+      Text(this.msg2).fontSize(20)
+      Web({ src: $rawfile('index.html'), controller: this.controller })
+        .javaScriptAccess(true)
+        .onPageEnd(() => {
+          this.controller.runJavaScriptExt('test()')
+            .then((result) => {
+              try {
+                if (result.getErrorDescription()) {
+                  // If an exception occurs or the return type is not supported, getErrorDescription is not empty.
+                  console.info(`runJavaScriptExt getErrorDescription: ${result.getErrorDescription()}`);
+                  return;
+                }
+                let type = result.getType();
+                switch (type) {
+                  case webview.JsMessageType.STRING: {
+                    this.msg1 = "result type:" + typeof (result.getString());
+                    this.msg2 = "result getString:" + ((result.getString()));
+                    break;
+                  }
+                  case webview.JsMessageType.NUMBER: {
+                    this.msg1 = "result type:" + typeof (result.getNumber());
+                    this.msg2 = "result getNumber:" + ((result.getNumber()));
+                    break;
+                  }
+                  case webview.JsMessageType.BOOLEAN: {
+                    this.msg1 = "result type:" + typeof (result.getBoolean());
+                    this.msg2 = "result getBoolean:" + ((result.getBoolean()));
+                    break;
+                  }
+                  case webview.JsMessageType.ARRAY_BUFFER: {
+                    this.msg1 = "result type:" + typeof (result.getArrayBuffer());
+                    this.msg2 = "result getArrayBuffer byteLength:" + ((result.getArrayBuffer().byteLength));
+                    break;
+                  }
+                  case webview.JsMessageType.ARRAY: {
+                    this.msg1 = "result type:" + typeof (result.getArray());
+                    this.msg2 = "result getArray:" + result.getArray();
+                    break;
+                  }
+                  default: {
+                    this.msg1 = "default break, type:" + type;
+                    break;
+                  }
+                }
+              }
+              catch (resError) {
+                console.error(`ErrorCode: ${(resError as BusinessError).code},  Message: ${(resError as BusinessError).message}`);
+              }
+            }).catch((error: BusinessError) => {
+            console.error("error: " + error);
+          })
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+// Use the ArrayBuffer input parameter to obtain the JavaScript script data from the file.
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State msg1: string = '';
+  @State msg2: string = '';
+
+  build() {
+    Column() {
+      Text(this.msg1).fontSize(20)
+      Text(this.msg2).fontSize(20)
+      Button('runJavaScriptExt')
+        .onClick(() => {
+          try {
+            let uiContext : UIContext = this.getUIContext();
+            let context : Context | undefined = uiContext.getHostContext() as common.UIAbilityContext;
+            let filePath = context!.filesDir + 'test.txt';
+            // Create a file and open it.
+            let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+            // Write data to the file.
+            fileIo.writeSync(file.fd, "test()");
+            // Read data from the file.
+            let arrayBuffer: ArrayBuffer = new ArrayBuffer(6);
+            fileIo.readSync(file.fd, arrayBuffer, { offset: 0, length: arrayBuffer.byteLength });
+            // Close the file.
+            fileIo.closeSync(file);
+            this.controller.runJavaScriptExt(arrayBuffer)
+              .then((result) => {
+                try {
+                  if (result.getErrorDescription()) {
+                    // If an exception occurs or the return type is not supported, getErrorDescription is not empty.
+                    console.info(`runJavaScriptExt getErrorDescription: ${result.getErrorDescription()}`);
+                    return;
+                  }
+                  let type = result.getType();
+                  switch (type) {
+                    case webview.JsMessageType.STRING: {
+                      this.msg1 = "result type:" + typeof (result.getString());
+                      this.msg2 = "result getString:" + ((result.getString()));
+                      break;
+                    }
+                    case webview.JsMessageType.NUMBER: {
+                      this.msg1 = "result type:" + typeof (result.getNumber());
+                      this.msg2 = "result getNumber:" + ((result.getNumber()));
+                      break;
+                    }
+                    case webview.JsMessageType.BOOLEAN: {
+                      this.msg1 = "result type:" + typeof (result.getBoolean());
+                      this.msg2 = "result getBoolean:" + ((result.getBoolean()));
+                      break;
+                    }
+                    case webview.JsMessageType.ARRAY_BUFFER: {
+                      this.msg1 = "result type:" + typeof (result.getArrayBuffer());
+                      this.msg2 = "result getArrayBuffer byteLength:" + ((result.getArrayBuffer().byteLength));
+                      break;
+                    }
+                    case webview.JsMessageType.ARRAY: {
+                      this.msg1 = "result type:" + typeof (result.getArray());
+                      this.msg2 = "result getArray:" + result.getArray();
+                      break;
+                    }
+                    default: {
+                      this.msg1 = "default break, type:" + type;
+                      break;
+                    }
+                  }
+                }
+                catch (resError) {
+                  console.error(`ErrorCode: ${(resError as BusinessError).code},  Message: ${(resError as BusinessError).message}`);
+                }
+              })
+              .catch((error: BusinessError) => {
+                console.error("error: " + error);
+              })
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: $rawfile('index.html'), controller: this.controller })
+        .javaScriptAccess(true)
+    }
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en-gb">
+<body>
+<h1>run JavaScript Ext demo</h1>
+</body>
+<script type="text/javascript">
+function test() {
+  return "hello, world";
+}
+</script>
+</html>
+```
+
 ## runJavaScriptExt
 
 ```TypeScript
@@ -3067,7 +8265,7 @@ Execute JavaScript code in the context of the currently displayed page, and retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | script | string \| ArrayBuffer | Yes | JavaScript Script. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[JsMessageExt](arkts-webview-jsmessageext-c.md)&gt; | Yes | Callbacks execute JavaScript script results. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[JsMessageExt](arkts-webview-jsmessageext-c.md)&gt; | Yes | Callbacks execute JavaScript script results. |
 
 **Error codes:**
 
@@ -3075,6 +8273,10 @@ Execute JavaScript code in the context of the currently displayed page, and retu
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+See [runJavaScriptExt](#runjavascriptext)
 
 ## scrollBy
 
@@ -3106,6 +8308,66 @@ Scroll by the delta position within specified time.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('scrollBy')
+        .onClick(() => {
+          try {
+            this.controller.scrollBy(50, 50, 500);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('stopScroll')
+        .onClick(() => {
+          try {
+            this.controller.scrollBy(0, 0, 1); // To stop the animation generated by the current scroll, you can generate another 1 ms animation to interrupt the animation.
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: $rawfile('index.html'), controller: this.controller })
+    }
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo</title>
+    <style>
+        body {
+            width:2000px;
+            height:2000px;
+            padding-right:170px;
+            padding-left:170px;
+            border:5px solid blueviolet;
+        }
+    </style>
+</head>
+<body>
+Scroll Test
+</body>
+</html>
+```
 
 ## scrollByWithResult
 
@@ -3143,6 +8405,59 @@ Scrolls by the specified delta position and returns a result indicating whether 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('scrollByWithResult')
+        .onClick(() => {
+          try {
+          let result = this.controller.scrollByWithResult(50, 50);
+          console.info("original result: " + result);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: $rawfile('index.html'), controller: this.controller })
+    }
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo</title>
+    <style>
+        body {
+            width:2000px;
+            height:2000px;
+            padding-right:170px;
+            padding-left:170px;
+            border:5px solid blueviolet;
+        }
+    </style>
+</head>
+<body>
+Scroll Test
+</body>
+</html>
+```
+
 ## scrollTo
 
 ```TypeScript
@@ -3174,6 +8489,66 @@ Scroll to the position within specified time.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('scrollTo')
+        .onClick(() => {
+          try {
+            this.controller.scrollTo(50, 50, 500);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+        Button('stopScroll')
+        .onClick(() => {
+          try {
+            this.controller.scrollBy(0, 0, 1); // To stop the animation generated by the current scroll, you can generate another 1 ms animation to interrupt the animation.
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: $rawfile('index.html'), controller: this.controller })
+    }
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo</title>
+    <style>
+        body {
+            width:2000px;
+            height:2000px;
+            padding-right:170px;
+            padding-left:170px;
+            border:5px solid blueviolet;
+        }
+    </style>
+</head>
+<body>
+Scroll Test
+</body>
+</html>
+```
+
 ## searchAllAsync
 
 ```TypeScript
@@ -3202,6 +8577,53 @@ Search all instances of 'searchString' on the page and highlights them, result w
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State searchString: string = "Hello World";
+
+  build() {
+    Column() {
+      Button('searchString')
+        .onClick(() => {
+          try {
+            this.controller.searchAllAsync(this.searchString);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: $rawfile('index.html'), controller: this.controller })
+        .onSearchResultReceive(ret => {
+          if (ret) {
+            console.info("on search result receive:" + "[cur]" + ret.activeMatchOrdinal +
+              "[total]" + ret.numberOfMatches + "[isDone]" + ret.isDoneCounting);
+          }
+        })
+    }
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>Hello World Highlight Hello World</p>
+  </body>
+</html>
+```
 
 ## searchNext
 
@@ -3232,6 +8654,34 @@ Highlights and scrolls to the next match search.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('searchNext')
+        .onClick(() => {
+          try {
+            this.controller.searchNext(true);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: $rawfile('index.html'), controller: this.controller })
+    }
+  }
+}
+```
+
 ## serializeWebState
 
 ```TypeScript
@@ -3259,6 +8709,59 @@ Serialize the access stack of the web, that is, the history of access.
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+To perform operations on files, you must first import the fs module. For details, see File Management.
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('serializeWebState')
+        .onClick(() => {
+          try {
+            let state = this.controller.serializeWebState();
+            let path:string | undefined = AppStorage.get("cacheDir");
+            if (path) {
+              path += '/WebState';
+              // Synchronously open a file.
+              let file = fileIo.openSync(path, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+              fileIo.writeSync(file.fd, state.buffer);
+              fileIo.closeSync(file.fd);
+            }
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+Obtain the path of the application cache file.
+
+```TypeScript
+// xxx.ets
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+        // Data synchronization between the UIAbility component and the page can be implemented by binding cacheDir to the AppStorage object.
+        AppStorage.setOrCreate("cacheDir", this.context.cacheDir);
+    }
+}
+```
 
 ## setActiveWebEngineVersion
 
@@ -3289,6 +8792,27 @@ Sets the ArkWeb kernel version. If the system does not support the specified ver
 | --- | --- | --- | --- |
 | engineVersion | [ArkWebEngineVersion](arkts-webview-arkwebengineversion-e.md) | Yes | ArkWeb kernel version. |
 
+**Examples**
+
+This example shows how to set the ArkWeb kernel version in the EntryAbility creation phase.
+
+```TypeScript
+// xxx.ets
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { webview } from '@kit.ArkWeb';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info("EntryAbility onCreate")
+    webview.WebviewController.setActiveWebEngineVersion(webview.ArkWebEngineVersion.M114)
+    if (webview.WebviewController.getActiveWebEngineVersion() == webview.ArkWebEngineVersion.M114) {
+      console.info("Active Web Engine Version set to M114")
+    }
+    console.info("EntryAbility onCreate done")
+  }
+}
+```
+
 ## setAppCustomUserAgent
 
 ```TypeScript
@@ -3312,6 +8836,37 @@ Set the default User-Agent for the application.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userAgent | string | Yes | The User-Agent string. @static |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  aboutToAppear(): void {
+    try {
+      webview.WebviewController.initializeWebEngine();
+      let defaultUserAgent = webview.WebviewController.getDefaultUserAgent();
+      let appUA = defaultUserAgent + " appUA";
+      webview.WebviewController.setAppCustomUserAgent(appUA);
+    } catch (error) {
+      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+    }
+  }
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## setAudioMuted
 
@@ -3342,6 +8897,33 @@ Mutes this web page.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State muted: boolean = false;
+
+  build() {
+    Column() {
+      Button("Toggle Mute")
+        .onClick(event => {
+          if (event) {
+            this.muted = !this.muted;
+            this.controller.setAudioMuted(this.muted);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## setAutoPreconnect
 
 ```TypeScript
@@ -3363,6 +8945,22 @@ Configure whether to enable automatic pre-connection to high-frequency URLs acce
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enabled | boolean | Yes | Enable if true, disable if false. @static |
+
+**Examples**
+
+```TypeScript
+// EntryAbility.ets
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { webview } from '@kit.ArkWeb';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+        webview.WebviewController.setAutoPreconnect(false);
+        webview.WebviewController.initializeWebEngine();
+        AppStorage.setOrCreate("abilityWant", want);
+    }
+}
+```
 
 ## setBackForwardCacheOptions
 
@@ -3391,6 +8989,41 @@ Configure the BackForwardCache.
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ts
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct Index {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Row() {
+        Button("Add options").onClick((event: ClickEvent) => {
+          let options = new webview.BackForwardCacheOptions();
+          options.size = 3;
+          options.timeToLive = 10;
+          this.controller.setBackForwardCacheOptions(options);
+        })
+        Button("Backward").onClick((event: ClickEvent) => {
+          this.controller.backward();
+        })
+        Button("Forward").onClick((event: ClickEvent) => {
+          this.controller.forward();
+        })
+      }
+      Web({ src: "https://www.example.com", controller: this.controller })
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
 
 ## setBlanklessLoadingCacheCapacity
 
@@ -3426,6 +9059,29 @@ Sets the cache capacity of the blankless loading solution and returns the value 
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) |  |
 
+**Examples**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info("EntryAbility onCreate");
+    webview.WebviewController.initializeWebEngine();
+    // Set the cache capacity to 10 MB.
+    try {
+      webview.WebviewController.setBlanklessLoadingCacheCapacity(10);
+    } catch (error) {
+      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+    }
+    AppStorage.setOrCreate("abilityWant", want);
+    console.info("EntryAbility onCreate done");
+  }
+}
+```
+
 ## setBlanklessLoadingWithKey
 
 ```TypeScript
@@ -3460,6 +9116,43 @@ Sets whether to enable blankless page loading. This API must be used in pair wit
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) |  |
+
+**Examples**
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  build() {
+    Column() {
+      Web({ src: 'https://www.example.com', controller: this.controller })
+       .javaScriptAccess(true)
+       .onLoadIntercept((event) => {
+            // Enable frame interpolation only when the similarity exceeds 50% and the loading duration is less than 1000 ms.
+            try {
+              let info = this.controller.getBlanklessInfoWithKey('https://www.example.com/page1');
+              if (info.errCode == webview.WebBlanklessErrorCode.SUCCESS) {
+                if (info.similarity >= 0.5 && info.loadingTime < 1000) {
+                  this.controller.setBlanklessLoadingWithKey('http://www.example.com/page1', true);
+                } else {
+                  this.controller.setBlanklessLoadingWithKey('http://www.example.com/page1', false);
+                }
+              } else {
+                console.info('getBlankless info err');
+              }
+            } catch (error) {
+              console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+            }
+            return false;
+        })
+    }
+  }
+}
+```
 
 ## setBlanklessLoadingWithParams
 
@@ -3501,6 +9194,48 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
+**Examples**
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  build() {
+    Column() {
+      Web({ src: 'https://www.example.com', controller: this.controller })
+       .javaScriptAccess(true)
+       .onLoadIntercept((event) => {
+            try {
+              let info = this.controller.getBlanklessInfoWithKey('https://www.example.com/page1');
+              if (info.errCode == webview.WebBlanklessErrorCode.SUCCESS) {
+                let data = new Date(2026, 5, 10, 0, 0, 0, 0);
+                let param: webview.BlanklessLoadingParam = {
+                  enable: info.similarity > 0.4 && info.similarity < 2000,
+                  duration: info.loadingTime,
+                  expirationTime: data.getTime(),
+                  callback: (info: webview.BlanklessFrameInterpolationInfo)=>{
+                    // Data monitoring.
+                  },
+                };
+                this.controller.setBlanklessLoadingWithParams('http://www.example.com/page1', param);
+              } else {
+                console.info('getBlankless info err');
+              }
+            } catch (error) {
+              console.error(`ErrorCode: ${(error as BusinessError).code},
+                Message: ${(error as BusinessError).message}`);
+            }
+            return false;
+        })
+    }
+  }
+}
+```
+
 ## setConnectionTimeout
 
 ```TypeScript
@@ -3528,6 +9263,41 @@ Set web engine socket connection timeout. Unit: seconds.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('setConnectionTimeout')
+        .onClick(() => {
+          try {
+            webview.WebviewController.setConnectionTimeout(5);
+            console.info("setConnectionTimeout: 5s");
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+        .onErrorReceive((event) => {
+          if (event) {
+            console.info('getErrorInfo:' + event.error.getErrorInfo());
+            console.info('getErrorCode:' + event.error.getErrorCode());
+          }
+        })
+    }
+  }
+}
+```
 
 ## setCustomUserAgent
 
@@ -3558,6 +9328,36 @@ Set custom user agent.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State customUserAgent: string = ' DemoApp';
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+      .onControllerAttached(() => {
+        console.info("onControllerAttached");
+        try {
+          let userAgent = this.controller.getUserAgent() + this.customUserAgent;
+          this.controller.setCustomUserAgent(userAgent);
+        } catch (error) {
+          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+        }
+      })
+    }
+  }
+}
+```
+
 ## setDownloadDelegate
 
 ```TypeScript
@@ -3586,6 +9386,35 @@ Set delegate for download. Used to notify the progress of the download triggered
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## setErrorPageEnabled
 
 ```TypeScript
@@ -3613,6 +9442,29 @@ Set whether enable the error page. onOverrideErrorPage will be triggered when th
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+       .onControllerAttached(() => {
+            this.controller.setErrorPageEnabled(true);
+            if (!this.controller.getErrorPageEnabled()) {
+                this.controller.setErrorPageEnabled(true);
+            }
+        })
+    }
+  }
+}
+```
 
 ## setErrorPageEnabled
 
@@ -3645,6 +9497,10 @@ Set whether to enable error page. onOverrideErrorPage will be triggered when the
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+See [setErrorPageEnabled](#seterrorpageenabled)
+
 ## setHostIP
 
 ```TypeScript
@@ -3675,6 +9531,10 @@ Set IP address for host name.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
+**Examples**
+
+For details, see [clearHostIP](#clearhostip).
+
 ## setHttpDns
 
 ```TypeScript
@@ -3704,6 +9564,29 @@ Set web engine to use HttpDns server to resolve dns.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3. Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+// EntryAbility.ets
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info("EntryAbility onCreate")
+    try {
+      webview.WebviewController.setHttpDns(webview.SecureDnsMode.AUTO, "https://example1.test")
+    } catch (error) {
+      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+    }
+
+    AppStorage.setOrCreate("abilityWant", want);
+    console.info("EntryAbility onCreate done")
+  }
+}
+```
+
 ## setNetworkAvailable
 
 ```TypeScript
@@ -3732,6 +9615,58 @@ Put network state for web. Which is used to set window.navigator.onLine property
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('setNetworkAvailable')
+        .onClick(() => {
+          try {
+            this.controller.setNetworkAvailable(true);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: $rawfile('index.html'), controller: this.controller })
+    }
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<body>
+<h1>online attribute </h1>
+<p id="demo"></p>
+<button onclick="func()">click</button>
+<script>
+    // Check whether the browser is online.
+    var online1 = navigator.onLine;
+    document.getElementById("demo").innerHTML = "Browser online:" + online1;
+
+    function func(){
+      var online2 = navigator.onLine;
+      document.getElementById("demo").innerHTML = "Browser online:" + online2;
+    }
+</script>
+</body>
+</html>
+```
 
 ## setPathAllowingUniversalAccess
 
@@ -3780,6 +9715,98 @@ If a path in the list is not of the preceding paths, error code 401 is reported 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Parameter string is too long. 3. Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: WebviewController = new webview.WebviewController();
+  uiContext: UIContext = this.getUIContext();
+
+  build() {
+    Row() {
+      Web({ src: "", controller: this.controller })
+        .onControllerAttached(() => {
+          try {
+            // Set the list of paths that can be accessed across domains.
+            this.controller.setPathAllowingUniversalAccess([
+              this.uiContext.getHostContext()!.resourceDir,
+              this.uiContext.getHostContext()!.filesDir + "/example"
+            ])
+            this.controller.loadUrl("file://" + this.getUIContext().getHostContext()!.resourceDir + "/index.html")
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+        .javaScriptAccess(true)
+        .fileAccess(true)
+        .domStorageAccess(true)
+    }
+  }
+}
+```
+
+Load the HTML file, which is located in the application resource directory resource/resfile/index.html.
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+    <script>
+        function getFile() {
+            var file = "file:///data/storage/el1/bundle/entry/resources/resfile/js/script.js";
+            var xmlHttpReq = new XMLHttpRequest();
+            xmlHttpReq.onreadystatechange = function(){
+                console.info("readyState:" + xmlHttpReq.readyState);
+                console.info("status:" + xmlHttpReq.status);
+                if(xmlHttpReq.readyState == 4){
+                    if (xmlHttpReq.status == 200) {
+                // If the path list is set on the eTS, resources can be obtained.
+                        const element = document.getElementById('text');
+                        element.textContent = "load " + file + " success";
+                    } else {
+                // If the path list is not set on the eTS, a CORS error is triggered.
+                        const element = document.getElementById('text');
+                        element.textContent = "load " + file + " failed";
+                    }
+                }
+            }
+            xmlHttpReq.open("GET", file);
+            xmlHttpReq.send(null);
+        }
+
+    </script>
+</head>
+
+<body>
+<div class="page">
+    <button id="example" onclick="getFile()">stealFile</button>
+</div>
+<div id="text"></div>
+</body>
+
+</html>
+```
+
+In the HTML file, use the file protocol to access the local JS file through XMLHttpRequest. The JS file is stored in resource/resfile/js/script.js.
+
+```TypeScript
+const body = document.body;
+const element = document.createElement('div');
+element.textContent = 'success';
+body.appendChild(element);
+```
+
 ## setPrintBackground
 
 ```TypeScript
@@ -3809,6 +9836,33 @@ Set whether print web page background.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('setPrintBackground')
+        .onClick(() => {
+          try {
+            this.controller.setPrintBackground(false);
+          } catch (error) {
+            console.error(`ErrorCode:${(error as BusinessError).code}, Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## setRenderProcessMode
 
 ```TypeScript
@@ -3836,6 +9890,34 @@ Set render process mode of the ArkWeb.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('setRenderProcessMode')
+        .onClick(() => {
+          try {
+            webview.WebviewController.setRenderProcessMode(webview.RenderProcessMode.MULTIPLE);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## setScrollable
 
@@ -3867,6 +9949,34 @@ Set whether scroll is allowed; default is true.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('setScrollable')
+        .onClick(() => {
+          try {
+            this.controller.setScrollable(true);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## setScrollbarMode
 
 ```TypeScript
@@ -3888,6 +9998,53 @@ Sets whether to switch web scrollbar mode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | scrollbarMode | [ScrollbarMode](arkts-webview-scrollbarmode-e.md) | Yes | web scrollbar mode, default OVERLAY_LAYOUT_SCROLLBAR. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  aboutToAppear(): void {
+    webview.WebviewController.setScrollbarMode(webview.ScrollbarMode.FORCE_DISPLAY_SCROLLBAR);
+  }
+  build() {
+    Column() {
+      Web({ src: $rawfile('index.html'), controller: this.controller })
+        .height('90%')
+    }
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <style>
+      body {
+        width:2560px;
+        height:2560px;
+        padding-right:170px;
+        padding-left:170px;
+        border:5px solid blueviolet;
+      }
+    </style>
+</head>
+<body>
+Scroll Test
+</body>
+</html>
+```
 
 ## setServiceWorkerWebSchemeHandler
 
@@ -3918,6 +10075,35 @@ Set web scheme handler for specific scheme. This is used for service worker.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  schemeHandler: webview.WebSchemeHandler = new webview.WebSchemeHandler();
+
+  build() {
+    Column() {
+      Button('setWebSchemeHandler')
+        .onClick(() => {
+          try {
+            webview.WebviewController.setServiceWorkerWebSchemeHandler('http', this.schemeHandler);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## setSiteIsolationMode
 
 ```TypeScript
@@ -3946,6 +10132,34 @@ Set the site isolation mode.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. Possible causes: 1. Site Isolation mode is already set by the developer. 2. Site Isolation mode cannot be strict in single-render-process mode. 3. Site Isolation mode cannot be changed while Secure Shield mode is active. @static |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('setSiteIsolationMode')
+        .onClick(() => {
+          try {
+            webview.WebviewController.setSiteIsolationMode(webview.SiteIsolationMode.PARTIAL);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## setSocketIdleTimeout
 
 ```TypeScript
@@ -3967,6 +10181,21 @@ Set web engine socket idle timeout. <p>&lt;strong&gt;API Note&lt;/strong&gt;:<br
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | timeout | int | Yes | Socket idle timeout. @static |
+
+**Examples**
+
+```TypeScript
+// EntryAbility.ets
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { webview } from '@kit.ArkWeb';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+        webview.WebviewController.setSocketIdleTimeout(200);
+        AppStorage.setOrCreate("abilityWant", want);
+    }
+}
+```
 
 ## setSoftKeyboardBehaviorMode
 
@@ -3995,6 +10224,29 @@ Set the WebSoftKeyboardBehaviorMode to decide whether the keyboard will be shown
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// index.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('Web InActive').onClick(() => {
+        this.controller.setSoftKeyboardBehaviorMode(webview.WebSoftKeyboardBehaviorMode.DISABLE_AUTO_KEYBOARD_ON_ACTIVE);
+      })
+      Web({ src: 'www.example.com', controller: this.controller })
+        .keyboardAvoidMode(WebKeyboardAvoidMode.RETURN_TO_UICONTEXT)
+    }
+  }
+}
+```
 
 ## setUrlTrustList
 
@@ -4033,6 +10285,142 @@ Example of the urlTrustList:
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Initialization error. The WebviewController must be associated with a Web component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  urltrustList: string = "{\"UrlPermissionList\":[{\"scheme\":\"http\", \"host\":\"trust.example.com\", \"port\":80, \"path\":\"test\"}]}"
+
+  build() {
+    Column() {
+      Button('Setting the trustlist')
+        .onClick(() => {
+          try {
+            // Set a trustlist to allow access only to trust web pages.
+            this.controller.setUrlTrustList(this.urltrustList);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('Cancel the trustlist.')
+        .onClick(() => {
+          try {
+            // Input an empty string to setUrlTrustList() to disable the trustlist, and all URLs can be accessed.
+            this.controller.setUrlTrustList("");
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('Access the trust web')
+        .onClick(() => {
+          try {
+            // The trustlist is enabled and trust web pages can be accessed.
+            this.controller.loadUrl('http://trust.example.com/test');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('Access the untrust web')
+        .onClick(() => {
+          try {
+            // The trustlist is enabled that untrust web pages cannot be accessed and an error page is displayed.
+            this.controller.loadUrl('http://untrust.example.com/test');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'http://untrust.example.com/test', controller: this.controller }).onControllerAttached(() => {
+        try {
+          // Set the trustlist using onControllerAttached() to enable the trustlist before the URL starts to be loaded. The untrusted web page cannot be accessed, and an error page is displayed.
+          this.controller.setUrlTrustList(this.urltrustList);
+        } catch (error) {
+          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+        }
+      })
+    }
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  urltrustList: string = "{\"UrlPermissionList\":[{\"scheme\":\"http\", \"host\":\"trust.example.com\", \"path\":\"test\"}]}"
+  urlWildcardList: string = "{\"UrlPermissionList\":[{\"scheme\":\"http\", \"host\":\"*.example.com\", \"path\":\"*\"}]}"
+
+  build() {
+    Column() {
+      Button('Setting the trustlist')
+        .onClick(() => {
+          try {
+            // Set a trustlist to allow access only to trust web pages.
+            this.controller.setUrlTrustList(this.urltrustList);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('Setting the wildcardlist')
+        .onClick(() => {
+          try {
+            // Set a wildcard trustlist to allow access to all URLs.
+            this.controller.setUrlTrustList(this.urlWildcardList, true, true);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('Cancel the trustlist.')
+        .onClick(() => {
+          try {
+            // Input an empty string to setUrlTrustList() to disable the trustlist, and all URLs can be accessed.
+            this.controller.setUrlTrustList("");
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('Access the trust web')
+        .onClick(() => {
+          try {
+            // The trustlist is enabled and trust web pages can be accessed.
+            this.controller.loadUrl('http://trust.example.com/test');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('Access the untrust web')
+        .onClick(() => {
+          try {
+            // The trustlist is enabled that untrust web pages cannot be accessed and an error page is displayed.
+            this.controller.loadUrl('http://untrust.example.com/test');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'http://untrust.example.com/test', controller: this.controller }).onControllerAttached(() => {
+        try {
+          // Set the trustlist using onControllerAttached() to enable the trustlist before the URL starts to be loaded. The untrusted web page cannot be accessed, and an error page is displayed.
+          this.controller.setUrlTrustList(this.urltrustList);
+        } catch (error) {
+          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+        }
+      })
+    }
+  }
+}
+```
+
 ## setUrlTrustList
 
 ```TypeScript
@@ -4062,6 +10450,10 @@ Set the URL trust list for the ArkWeb. When the URL trust list has been set, onl
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Parameter string is too long. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+See [setUrlTrustList](#seturltrustlist)
+
 ## setUserAgentClientHintsEnabled
 
 ```TypeScript
@@ -4086,6 +10478,91 @@ Enable the User-Agent Client Hints.
 | --- | --- | --- | --- |
 | enabled | boolean | Yes | User-Agent Client Hints will enabled when set true. @static |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State userAgent: string = "";
+
+  build() {
+    Column() {
+      Button('setUserAgentMetadata').fontSize(20)
+        .onClick((e: ClickEvent) => {
+          try {
+            let arrayVersions: Array<webview.UserAgentBrandVersion> = new Array<webview.UserAgentBrandVersion>;
+            let brandVersion:webview.UserAgentBrandVersion = new webview.UserAgentBrandVersion();
+            brandVersion.setBrand("brand OpenHarmony");
+            brandVersion.setMajorVersion("major version 1.0");
+            brandVersion.setFullVersion("blank full version 1.0");
+            arrayVersions.push(brandVersion);
+            let metadata:webview.UserAgentMetadata = new webview.UserAgentMetadata();
+            metadata.setBrandVersionList(arrayVersions);
+            metadata.setFormFactors([webview.UserAgentFormFactor.AUTOMOTIVE]);
+            metadata.setArchitecture("arch OpenHarmony");
+            metadata.setBitness("bitness 64");
+            metadata.setFullVersion("full version OpenHarmony");
+            metadata.setMobile(true);
+            metadata.setModel("model OpenHarmony");
+            metadata.setPlatform("platform OpenHarmony");
+            metadata.setPlatformVersion("platform version OpenHarmony");
+            metadata.setWow64(false);
+            this.controller.setUserAgentMetadata(this.userAgent, metadata);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('getUserAgentMetadata').fontSize(20)
+        .onClick((e: ClickEvent) => {
+          try {
+            this.userAgent = this.controller.getUserAgent();
+            let metadata = this.controller.getUserAgentMetadata(this.userAgent);
+            let versionList = metadata.getBrandVersionList();
+            for(let i = 0; i < versionList.length; i++) {
+              console.info("Brand:" + versionList[i].getBrand());
+              console.info("MajorVersion " + versionList[i].getMajorVersion());
+              console.info("FullVersion " + versionList[i].getFullVersion());
+            }
+            let FormFactors = metadata.getFormFactors();
+            for(let j = 0; j < FormFactors.length; j++) {
+              console.info("FormFactor:" + FormFactors[j]);
+            }
+            console.info("Bitness:" + metadata.getBitness());
+            console.info("FullVersion:" + metadata.getFullVersion());
+            console.info("Mobile:" + metadata.getMobile());
+            console.info("Model:" + metadata.getModel());
+            console.info("Platform:" + metadata.getPlatform());
+            console.info("PlatformVersion:" + metadata.getPlatformVersion());
+            console.info("Wow64:" + metadata.getWow64());
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'https://www.example.com', controller: this.controller })
+        .onControllerAttached(() => {
+          try {
+            this.userAgent = this.controller.getUserAgent();
+            let metaData: webview.UserAgentMetadata = new webview.UserAgentMetadata();
+            metaData.setPlatform("OpenHarmony");
+            this.controller.setCustomUserAgent(this.userAgent);
+            let enabled: boolean = webview.WebviewController.getUserAgentClientHintsEnabled();
+            console.info("isUserAgentClientHintsEnabled:", enabled);
+            webview.WebviewController.setUserAgentClientHintsEnabled(true);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+    }
+  }
+}
+```
+
 ## setUserAgentForHosts
 
 ```TypeScript
@@ -4108,6 +10585,43 @@ Set the User-Agent to be used for specified hosts, with a maximum of 20,000 host
 | --- | --- | --- | --- |
 | userAgent | string | Yes | The User-Agent string. |
 | hosts | Array&lt;string&gt; | Yes | The hosts to which the User-Agent apply. @static |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  aboutToAppear(): void {
+    try {
+      webview.WebviewController.initializeWebEngine();
+      let defaultUserAgent = webview.WebviewController.getDefaultUserAgent();
+      let appUA = defaultUserAgent + " appUA";
+      webview.WebviewController.setUserAgentForHosts(
+        appUA,
+        [
+          "www.example.com",
+          "www.baidu.com"
+        ]
+      );
+    } catch (error) {
+      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+    }
+  }
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## setUserAgentMetadata
 
@@ -4142,6 +10656,10 @@ If the UserAgentMetadata is not found according to the overridden User-Agent but
 | userAgent | string | Yes | The User-Agent string. |
 | metaData | [UserAgentMetadata](arkts-webview-useragentmetadata-c.md) | Yes | The UserAgentMetadata for the userAgent. |
 
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled).
+
 ## setWebDebuggingAccess
 
 ```TypeScript
@@ -4172,6 +10690,60 @@ Sets whether to enable web debugging. By default, web debugging is disabled. For
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  aboutToAppear(): void {
+    try {
+      webview.WebviewController.setWebDebuggingAccess(true);
+    } catch (error) {
+      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+    }
+  }
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  aboutToAppear(): void {
+    try {
+      webview.WebviewController.setWebDebuggingAccess(true, 8888);
+    } catch (error) {
+      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+    }
+  }
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## setWebDebuggingAccess
 
 ```TypeScript
@@ -4201,6 +10773,10 @@ Enables debugging of web contents. <p>&lt;strong&gt;API Note&lt;/strong&gt;:<br>
 | --- | --- |
 | [17100023](../../apis-arkweb/errorcode-webview.md#17100023-port-number-not-allowed) | The port number is not within the allowed range. @static |
 
+**Examples**
+
+See [setWebDebuggingAccess](#setwebdebuggingaccess)
+
 ## setWebDestroyMode
 
 ```TypeScript
@@ -4222,6 +10798,24 @@ Set web destroy mode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | [WebDestroyMode](arkts-webview-webdestroymode-e.md) | Yes | web destroy mode, default NORMAL_MODE. |
+
+**Examples**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { webview } from '@kit.ArkWeb';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info("EntryAbility onCreate");
+    webview.WebviewController.initializeWebEngine();
+    // Set the fast destroy mode.
+    webview.WebviewController.setWebDestroyMode(webview.WebDestroyMode.FAST_MODE);
+    AppStorage.setOrCreate("abilityWant", want);
+    console.info("EntryAbility onCreate done");
+  }
+}
+```
 
 ## setWebSchemeHandler
 
@@ -4253,6 +10847,35 @@ Set web scheme handler for specific scheme. This is only used for related web co
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  schemeHandler: webview.WebSchemeHandler = new webview.WebSchemeHandler();
+
+  build() {
+    Column() {
+      Button('setWebSchemeHandler')
+        .onClick(() => {
+          try {
+            this.controller.setWebSchemeHandler('http', this.schemeHandler);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## slideScroll
 
 ```TypeScript
@@ -4283,6 +10906,58 @@ Slide by the speed.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('slideScroll')
+        .onClick(() => {
+          try {
+            this.controller.slideScroll(500, 500);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: $rawfile('index.html'), controller: this.controller })
+    }
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo</title>
+    <style>
+        body {
+            width:3000px;
+            height:3000px;
+            padding-right:170px;
+            padding-left:170px;
+            border:5px solid blueviolet;
+        }
+    </style>
+</head>
+<body>
+Scroll Test
+</body>
+</html>
+```
+
 ## startCamera
 
 ```TypeScript
@@ -4304,6 +10979,117 @@ Enables the camera capture of the current web page. Before using the camera, add
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { abilityAccessCtrl, PermissionRequestResult, common } from '@kit.AbilityKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  uiContext: UIContext = this.getUIContext();
+
+  aboutToAppear(): void {
+    let context: Context | undefined = this.uiContext.getHostContext() as common.UIAbilityContext;
+    atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA'], (err: BusinessError, data: PermissionRequestResult) => {
+      console.info('data:' + JSON.stringify(data));
+      console.info('data permissions:' + data.permissions);
+      console.info('data authResults:' + data.authResults);
+    })
+  }
+
+  build() {
+    Column() {
+      Button("startCamera").onClick(() => {
+        try {
+          this.controller.startCamera();
+        } catch (error) {
+          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+        }
+      })
+      Button("stopCamera").onClick(() => {
+        try {
+          this.controller.stopCamera();
+        } catch (error) {
+          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+        }
+      })
+      Button("closeCamera").onClick(() => {
+        try {
+          this.controller.closeCamera();
+        } catch (error) {
+          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+        }
+      })
+      Web({ src: $rawfile('index.html'), controller: this.controller })
+        .onPermissionRequest((event) => {
+          if (event) {
+            this.uiContext.showAlertDialog({
+              title: 'title',
+              message: 'text',
+              primaryButton: {
+                value: 'deny',
+                action: () => {
+                  event.request.deny();
+                }
+              },
+              secondaryButton: {
+                value: 'onConfirm',
+                action: () => {
+                  event.request.grant(event.request.getAccessibleResource());
+                }
+              },
+              cancel: () => {
+                event.request.deny();
+              }
+            })
+          }
+        })
+    }
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <video id="video" width="400px" height="400px" autoplay>
+    </video>
+    <input type="button" title="HTML5 Camera" value="Enable Camera" onclick="getMedia()" />
+    <script>
+      function getMedia() {
+        let constraints = {
+          video: {
+            width: 500,
+            height: 500
+          },
+          audio: true
+        }
+        let video = document.getElementById("video");
+        let promise = navigator.mediaDevices.getUserMedia(constraints);
+        promise.then(function(mediaStream) {
+          video.srcObject = mediaStream;
+          video.play();
+        })
+      }
+    </script>
+  </body>
+</html>
+```
 
 ## startDownload
 
@@ -4334,6 +11120,43 @@ Start a download.
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 | [17100002](../../apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2 *1024 *1024. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## stop
 
 ```TypeScript
@@ -4355,6 +11178,34 @@ Stops the current load.
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('stop')
+        .onClick(() => {
+          try {
+            this.controller.stop();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        });
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## stopAllMedia
 
@@ -4378,6 +11229,34 @@ Stops all audio and video on a web page.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('stopAllMedia')
+        .onClick(() => {
+          try {
+            this.controller.stopAllMedia();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## stopCamera
 
 ```TypeScript
@@ -4400,6 +11279,10 @@ Stops the camera capture of the current web page.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+For the complete sample code, see [startCamera](#startcamera).
+
 ## stopMicrophone
 
 ```TypeScript
@@ -4421,6 +11304,10 @@ Stops microphone capture on the current web page.
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+For the complete sample code, see [resumeMicrophone](#resumemicrophone).
 
 ## storeWebArchive
 
@@ -4459,6 +11346,76 @@ Stores the current page as a web archive.
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 | [17100003](../../apis-arkweb/errorcode-webview.md#17100003-incorrect-resource-path) | Invalid resource path or file type. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('storeWebArchive')
+        .onClick(() => {
+          try {
+            this.controller.storeWebArchive("/data/storage/el2/base/", true, (error, filename) => {
+              if (error) {
+                console.error(`save web archive error, ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+                return;
+              }
+              if (filename != null) {
+                console.info(`save web archive success: ${filename}`);
+              }
+            });
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('storeWebArchive')
+        .onClick(() => {
+          try {
+            this.controller.storeWebArchive("/data/storage/el2/base/", true)
+              .then(filename => {
+                if (filename != null) {
+                  console.info(`save web archive success: ${filename}`)
+                }
+              })
+              .catch((error: BusinessError) => {
+                console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+              })
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## storeWebArchive
 
 ```TypeScript
@@ -4481,7 +11438,7 @@ Stores the current page as a web archive.
 | --- | --- | --- | --- |
 | baseName | string | Yes | Where the generated offline webpage is stored, This value cannot be null. |
 | autoName | boolean | Yes | Decide whether to automatically generate the file name. If false, it is stored by the file name of baseName. If true, the file name is automatically generated based on the current URL and stored in the file directory of baseName. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | called after the web archive has been stored. The parameter will either be the filename under which the file was stored, or empty if storing the file failed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | called after the web archive has been stored. The parameter will either be the filename under which the file was stored, or empty if storing the file failed. |
 
 **Error codes:**
 
@@ -4490,6 +11447,10 @@ Stores the current page as a web archive.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3. Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 | [17100003](../../apis-arkweb/errorcode-webview.md#17100003-incorrect-resource-path) | Invalid resource path or file type. |
+
+**Examples**
+
+See [storeWebArchive](#storewebarchive)
 
 ## terminateRenderProcess
 
@@ -4519,6 +11480,30 @@ Destroy the rendering process. Calling this interface will actively destroy the 
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('terminateRenderProcess')
+        .onClick(() => {
+          let result = this.controller.terminateRenderProcess();
+          console.info("terminateRenderProcess result: " + result);
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## trimMemoryByPressureLevel
 
 ```TypeScript
@@ -4546,6 +11531,37 @@ Clears the cache occupied by **Web** component based on the specified memory pre
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Parameter string is too long. 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: WebviewController = new webview.WebviewController();
+  build() {
+    Column() {
+      Row() {
+        Button('trim_Memory')
+          .onClick(() => {
+            try {
+              // Set the current memory pressure level to moderate and release a small amount of memory.
+              webview.WebviewController.trimMemoryByPressureLevel(
+                webview.PressureLevel.MEMORY_PRESSURE_LEVEL_MODERATE);
+            } catch (error) {
+              console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+            }
+          })
+      }.height('10%')
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## waitForAttached
 
@@ -4575,6 +11591,45 @@ Wait for the controller to attach a web component until timeout.
 | --- | --- |
 | Promise&lt;[ControllerAttachState](arkts-webview-controllerattachstate-e.md)&gt; | Promise used to return the state of attach. |
 
+**Examples**
+
+In the initialization phase, set the WebViewController to wait for the attachment to complete. The timeout interval is 1000 ms. If the attachment is complete or times out, the callback is triggered.
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  async aboutToAppear() {
+    this.controller.waitForAttached(1000).then((state: webview.ControllerAttachState) => {
+      if (state == webview.ControllerAttachState.ATTACHED) {
+        // The callback is triggered when the attachment is complete or times out.
+        console.info('Controller is attached.');
+      }
+    })
+    try {
+      const state = await this.controller.waitForAttached(1000);
+      if (state == webview.ControllerAttachState.ATTACHED) {
+        console.info('Controller is attached.');
+      }
+    } catch (error) {
+      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+    }
+  }
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## warmupServiceWorker
 
 ```TypeScript
@@ -4603,6 +11658,25 @@ Warmup the registered service worker associated the url.
 | --- | --- |
 | [17100002](../../apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048. |
 
+**Examples**
+
+```TypeScript
+// EntryAbility.ets
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { window } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+        console.info("EntryAbility onCreate");
+        webview.WebviewController.initializeWebEngine();
+        webview.WebviewController.warmupServiceWorker("https://www.example.com");
+        AppStorage.setOrCreate("abilityWant", want);
+    }
+}
+```
+
 ## webPageSnapshot
 
 ```TypeScript
@@ -4626,7 +11700,44 @@ Web page snapshot.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | [SnapshotInfo](arkts-webview-snapshotinfo-i.md) | Yes | The snapshot info. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SnapshotResult](arkts-webview-snapshotresult-i.md)&gt; | Yes | the callback of snapshot. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SnapshotResult](arkts-webview-snapshotresult-i.md)&gt; | Yes | the callback of snapshot. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('webPageSnapshot')
+        .onClick(() => {
+          try {
+            this.controller.webPageSnapshot({ id: "1234", size: { width: 100, height: 100 } }, (error, result) => {
+              if (error) {
+                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+                return;
+              }
+              if (result) {
+                console.info(`return value is:${result}`);
+                // You can process the returned result as required.
+              }
+            });
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## zoom
 
@@ -4658,6 +11769,36 @@ Zooms in or out of this web page. This API is effective only when zoomAccess is 
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 | [17100004](../../apis-arkweb/errorcode-webview.md#17100004-function-not-enabled) | Function not enabled. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State factor: number = 2;
+
+  build() {
+    Column() {
+      Button('zoom')
+        .onClick(() => {
+          try {
+            this.controller.zoom(this.factor);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+        .zoomAccess(true)
+    }
+  }
+}
+```
+
 ## zoomIn
 
 ```TypeScript
@@ -4681,6 +11822,34 @@ Zooms in on this web page by 25%.
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 | [17100004](../../apis-arkweb/errorcode-webview.md#17100004-function-not-enabled) | Function not enabled. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('zoomIn')
+        .onClick(() => {
+          try {
+            this.controller.zoomIn();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## zoomOut
 
 ```TypeScript
@@ -4703,4 +11872,32 @@ Zooms out of this web page by 20%.
 | --- | --- |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 | [17100004](../../apis-arkweb/errorcode-webview.md#17100004-function-not-enabled) | Function not enabled. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('zoomOut')
+        .onClick(() => {
+          try {
+            this.controller.zoomOut();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 

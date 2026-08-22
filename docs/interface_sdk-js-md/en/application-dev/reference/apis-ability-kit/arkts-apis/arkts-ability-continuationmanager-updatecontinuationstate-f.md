@@ -40,7 +40,7 @@ Instructs the device selection module to update the device connection state. Thi
 | token | number | Yes | Token obtained after the registration of the continuation management service. |
 | deviceId | string | Yes | Device ID. |
 | status | [DeviceConnectState](arkts-ability-continuationmanager-deviceconnectstate-e.md) | Yes | Device connection state. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the state is updated, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the state is updated, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -66,6 +66,25 @@ try {
     }
     console.info('updateContinuationState finished. ');
   });
+} catch (err) {
+  console.error('updateContinuationState failed, cause: ' + JSON.stringify(err));
+}
+```
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let token: number = 1;
+let deviceId: string = "test deviceId";
+try {
+  continuationManager.updateContinuationState(token, deviceId, continuationManager.DeviceConnectState.CONNECTED)
+    .then(() => {
+      console.info('updateContinuationState finished. ');
+    })
+    .catch((err: BusinessError) => {
+      console.error('updateContinuationState failed, cause: ' + JSON.stringify(err));
+    });
 } catch (err) {
   console.error('updateContinuationState failed, cause: ' + JSON.stringify(err));
 }
@@ -119,22 +138,5 @@ Instructs the device selection module to update the device connection state. Thi
 
 **Examples**
 
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = 1;
-let deviceId: string = "test deviceId";
-try {
-  continuationManager.updateContinuationState(token, deviceId, continuationManager.DeviceConnectState.CONNECTED)
-    .then(() => {
-      console.info('updateContinuationState finished. ');
-    })
-    .catch((err: BusinessError) => {
-      console.error('updateContinuationState failed, cause: ' + JSON.stringify(err));
-    });
-} catch (err) {
-  console.error('updateContinuationState failed, cause: ' + JSON.stringify(err));
-}
-```
+See [updateContinuationState](#updatecontinuationstate)
 

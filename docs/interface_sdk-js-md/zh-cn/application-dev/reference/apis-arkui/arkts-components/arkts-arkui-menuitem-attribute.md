@@ -133,28 +133,6 @@ onChange(callback: (selected: boolean) => void)
 | --- | --- | --- | --- |
 | callback | (selected: boolean) =&gt; void | 是 | 当前菜单项是否被选中。&lt;br /&gt;true：当前菜单项已选中；false：当前菜单项未选中。 |
 
-## selectIcon
-
-```TypeScript
-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier)
-```
-
-设置当菜单项被选中时，菜单项图标的显示方式。
-
-**起始版本：** 9
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MenuItemAttribute-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier): MenuItemAttribute--><!--Device-MenuItemAttribute-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier): MenuItemAttribute-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean \| ResourceStr \| SymbolGlyphModifier | 是 | 菜单项被选中时的图标显示方式。<br/>true：显示默认的对勾图标；false：不显示图标。&lt; br/&gt;ResourceStr：显示指定的图标。<br/>SymbolGlyphModifier：显示指定的HMSymbol图标。<br/>默认值：false<br>**起始版本：** 12 |
-
 ## selected
 
 ```TypeScript
@@ -180,6 +158,28 @@ selected(value: boolean)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | boolean | 是 | 菜单项是否选中。<br/>true：菜单项被选中；false：菜单项不被选中。&lt;br /&gt;默认值：false |
+
+## selectIcon
+
+```TypeScript
+selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier)
+```
+
+设置当菜单项被选中时，菜单项图标的显示方式。
+
+**起始版本：** 9
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MenuItemAttribute-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier): MenuItemAttribute--><!--Device-MenuItemAttribute-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier): MenuItemAttribute-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean \| ResourceStr \| SymbolGlyphModifier | 是 | 菜单项被选中时的图标显示方式。<br/>true：显示默认的对勾图标；false：不显示图标。&lt; br/&gt;ResourceStr：显示指定的图标。<br/>SymbolGlyphModifier：显示指定的HMSymbol图标。<br/>默认值：false<br>**起始版本：** 12 |
 
 ## subMenuBuilder
 

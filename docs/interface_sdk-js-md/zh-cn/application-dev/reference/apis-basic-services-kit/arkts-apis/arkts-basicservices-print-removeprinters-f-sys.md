@@ -55,6 +55,18 @@ print.removePrinters([printerId], (err: BusinessError) => {
 })
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+
+let printerId : string = '1212';
+print.removePrinters([printerId]).then(() => {
+    console.info('remove printers success');
+}).catch((error: BusinessError) => {
+    console.error('remove printers error : ' + JSON.stringify(error));
+})
+```
+
 
 ## removePrinters
 
@@ -96,15 +108,5 @@ function removePrinters(printerIds: Array<string>): Promise<void>
 
 **示例**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let printerId : string = '1212';
-print.removePrinters([printerId]).then(() => {
-    console.info('remove printers success');
-}).catch((error: BusinessError) => {
-    console.error('remove printers error : ' + JSON.stringify(error));
-})
-```
+参见 [removePrinters](#removeprinters)
 

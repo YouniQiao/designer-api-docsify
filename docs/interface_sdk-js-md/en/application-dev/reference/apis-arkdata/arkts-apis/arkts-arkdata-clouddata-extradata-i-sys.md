@@ -52,3 +52,18 @@ Data to be transmitted transparently. **extraData** is a JSON string that must c
 
 **System API:** This is a system API.
 
+**Examples**
+
+```TypeScript
+// accountId: ID of the cloud account.
+// bundleName: application bundle name.
+// containerName: name of the cloud database.
+// databaseScopes: type of the cloud database.
+// recordTypes: names of the tables in the cloud database.
+
+let extraData: cloudData.ExtraData = {
+  eventId: "cloud_data_change",
+  extraData: '{"data": "{"accountId": "aaa", "bundleName": "com.bbb.xxx", "containerName": "alias", "databaseScopes": ["private", "shared"], "recordTypes": ["xxx", "yyy", "zzz"]}"}',
+}
+```
+

@@ -60,6 +60,27 @@ appManager.isApplicationRunning(bundleName).then((data) => {
 });
 ```
 
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = "com.example.myapplication";
+
+try {
+  appManager.isApplicationRunning(bundleName, (err, data) => {
+    if (err) {
+      console.error(`err: ${JSON.stringify(err)}`);
+    } else {
+      console.info(`The application running is: ${JSON.stringify(data)}`);
+    }
+  });
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`[appManager] error: ${code}, ${message}`);
+}
+```
+
 
 ## isApplicationRunning
 
@@ -84,7 +105,7 @@ Checks whether the application with the specified bundle name is running across 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** is returned if at least one user is running the specified application. **false** is returned if none of the users are running the application. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** is returned if at least one user is running the specified application. **false** is returned if none of the users are running the application. |
 
 **Error codes:**
 
@@ -97,24 +118,5 @@ Checks whether the application with the specified bundle name is running across 
 
 **Examples**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = "com.example.myapplication";
-
-try {
-  appManager.isApplicationRunning(bundleName, (err, data) => {
-    if (err) {
-      console.error(`err: ${JSON.stringify(err)}`);
-    } else {
-      console.info(`The application running is: ${JSON.stringify(data)}`);
-    }
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
+See [isApplicationRunning](#isapplicationrunning)
 

@@ -28,7 +28,7 @@ Starts a timer. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | timer | long | Yes | ID of the timer. |
 | triggerTime | long | Yes | Time when the timer is triggered, in milliseconds.<br>If **TIMER_TYPE_REALTIME** is set as the timer type, the value of **triggerTime** is the system startup time, which can be obtained by calling [systemDateTime.getUptime(STARTUP)](arkts-basicservices-systemdatetime-getuptime-f.md).<br>If **TIMER_TYPE_REALTIME** is not set, the value of **triggerTime** is the wall time, which can be obtained by calling [systemDateTime.getTime()](arkts-basicservices-systemdatetime-gettime-f.md). |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -57,6 +57,33 @@ try {
         return;
       }
       console.info(`Succeeded in starting the timer.`);
+    });
+    console.info(`Succeeded in creating a timer. timerId: ${timerId}`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to create timer. message: ${error.message}, code: ${error.code}`);
+  });
+} catch(e) {
+  let error = e as BusinessError;
+  console.error(`Failed to create timer. message: ${error.message}, code: ${error.code}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: systemTimer.TimerOptions = {
+  type: systemTimer.TIMER_TYPE_REALTIME,
+  repeat:false
+}
+let triggerTime: number = new Date().getTime();
+triggerTime += 3000;
+
+try {
+  systemTimer.createTimer(options).then((timerId: number) => {
+    systemTimer.startTimer(timerId, triggerTime).then(() => {
+      console.info(`Succeeded in starting the timer.`);
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to start timer. message: ${error.message}, code: ${error.code}`);
     });
     console.info(`Succeeded in creating a timer. timerId: ${timerId}`);
   }).catch((error: BusinessError) => {
@@ -107,30 +134,5 @@ Starts a timer. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: systemTimer.TimerOptions = {
-  type: systemTimer.TIMER_TYPE_REALTIME,
-  repeat:false
-}
-let triggerTime: number = new Date().getTime();
-triggerTime += 3000;
-
-try {
-  systemTimer.createTimer(options).then((timerId: number) => {
-    systemTimer.startTimer(timerId, triggerTime).then(() => {
-      console.info(`Succeeded in starting the timer.`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to start timer. message: ${error.message}, code: ${error.code}`);
-    });
-    console.info(`Succeeded in creating a timer. timerId: ${timerId}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to create timer. message: ${error.message}, code: ${error.code}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.error(`Failed to create timer. message: ${error.message}, code: ${error.code}`);
-}
-```
+See [startTimer](#starttimer)
 

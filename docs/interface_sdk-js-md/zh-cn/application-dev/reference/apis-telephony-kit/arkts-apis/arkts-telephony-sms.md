@@ -50,11 +50,11 @@ import { sms } from '@kit.TelephonyKit';
 | [getAllSimMessages](arkts-telephony-sms-getallsimmessages-f-sys.md) | 获取所有SIM卡消息。使用Promise异步回调。 |
 | [getImsShortMessageFormat](arkts-telephony-sms-getimsshortmessageformat-f-sys.md) | 获取IMS上支持的SMS格式。使用callback异步回调。 |
 | [getImsShortMessageFormat](arkts-telephony-sms-getimsshortmessageformat-f-sys.md) | 获取IMS上支持的SMS格式。使用Promise异步回调。 |
+| [getSmscAddr](arkts-telephony-sms-getsmscaddr-f-sys.md) | 获取短信服务中心（SMSC）地址。使用callback异步回调。 |
+| [getSmscAddr](arkts-telephony-sms-getsmscaddr-f-sys.md) | 获取短信服务中心（SMSC）地址。使用Promise异步回调。 |
 | [getSmsSegmentsInfo](arkts-telephony-sms-getsmssegmentsinfo-f-sys.md) | 获取短信段信息。使用callback异步回调。 |
 | [getSmsSegmentsInfo](arkts-telephony-sms-getsmssegmentsinfo-f-sys.md) | 获取短信段信息。使用Promise异步回调。 |
 | [getSmsShortCodeType](arkts-telephony-sms-getsmsshortcodetype-f-sys.md) | 获取拟发送短信的目标地址短码类型 |
-| [getSmscAddr](arkts-telephony-sms-getsmscaddr-f-sys.md) | 获取短信服务中心（SMSC）地址。使用callback异步回调。 |
-| [getSmscAddr](arkts-telephony-sms-getsmscaddr-f-sys.md) | 获取短信服务中心（SMSC）地址。使用Promise异步回调。 |
 | [isImsSmsSupported](arkts-telephony-sms-isimssmssupported-f-sys.md) | 如果IMS已注册并且在IMS上支持SMS，则支持通过IMS发送SMS。使用callback异步回调。 |
 | [isImsSmsSupported](arkts-telephony-sms-isimssmssupported-f-sys.md) | 如果IMS已注册并且在IMS上支持SMS，则支持通过IMS发送SMS。使用Promise异步回调。 |
 | [sendMms](arkts-telephony-sms-sendmms-f-sys.md) | 发送彩信。使用callback异步回调。 |

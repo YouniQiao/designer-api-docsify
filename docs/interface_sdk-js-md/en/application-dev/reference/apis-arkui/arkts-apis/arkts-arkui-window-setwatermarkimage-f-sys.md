@@ -62,6 +62,37 @@ let initializationOptions: image.InitializationOptions = {
 image.createPixelMap(color, initializationOptions).then((pixelMap: image.PixelMap) => {
   console.info('Succeeded in creating pixelmap.');
   try {
+    window.setWaterMarkImage(pixelMap, enable, (err: BusinessError) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to show watermark image. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('Succeeded in showing watermark image.');
+    });
+  } catch (exception) {
+    console.error(`Failed to show watermark image. Cause code: ${exception.code}, message: ${exception.message}`);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create PixelMap. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let enable: boolean = true;
+let color: ArrayBuffer = new ArrayBuffer(0);
+let initializationOptions: image.InitializationOptions = {
+  size: {
+    height: 100,
+    width: 100
+  }
+};
+image.createPixelMap(color, initializationOptions).then((pixelMap: image.PixelMap) => {
+  console.info('Succeeded in creating pixelmap.');
+  try {
     let promise = window.setWaterMarkImage(pixelMap, enable);
     promise.then(() => {
       console.info('Succeeded in showing watermark image.');
@@ -117,6 +148,10 @@ Set watermark image.
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
 
+**Examples**
+
+See [setWaterMarkImage](#setwatermarkimage)
+
 
 ## setWaterMarkImage
 
@@ -140,7 +175,7 @@ Controls whether a watermark image is displayed on the screen. This API uses an 
 | --- | --- | --- | --- |
 | pixelMap | image.PixelMap | Yes | Watermark image, which can be obtained by calling [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md) . |
 | enable | boolean | Yes | Whether to display the watermark image. **true** to display, **false** otherwise. After the watermark image is displayed, you need to set this parameter to **false** to disable the watermark display. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -152,34 +187,5 @@ Controls whether a watermark image is displayed on the screen. This API uses an 
 
 **Examples**
 
-```TypeScript
-import { image } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let enable: boolean = true;
-let color: ArrayBuffer = new ArrayBuffer(0);
-let initializationOptions: image.InitializationOptions = {
-  size: {
-    height: 100,
-    width: 100
-  }
-};
-image.createPixelMap(color, initializationOptions).then((pixelMap: image.PixelMap) => {
-  console.info('Succeeded in creating pixelmap.');
-  try {
-    window.setWaterMarkImage(pixelMap, enable, (err: BusinessError) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to show watermark image. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in showing watermark image.');
-    });
-  } catch (exception) {
-    console.error(`Failed to show watermark image. Cause code: ${exception.code}, message: ${exception.message}`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create PixelMap. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
+See [setWaterMarkImage](#setwatermarkimage)
 

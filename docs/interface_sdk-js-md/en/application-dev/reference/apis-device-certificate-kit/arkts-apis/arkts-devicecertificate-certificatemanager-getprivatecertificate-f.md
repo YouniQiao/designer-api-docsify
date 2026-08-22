@@ -28,7 +28,7 @@ Obtains detailed information about a private credential. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyUri | string | Yes | Unique identifier of the credential to be obtained. The value contains up to 256 bytes. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is **credential** in the [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md) object. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is **credential** in the [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md) object. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -58,6 +58,27 @@ try {
       }
     }
   });
+} catch (error) {
+  console.error(`Failed to get private certificate. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri: string = 'test'; /* The service needs to use the unique identifier of the credential to obtain the private credential details, which is not elaborated here. */
+try {
+  certificateManager.getPrivateCertificate(uri).then((cmResult) => {
+    if (cmResult?.credential == undefined) {
+      console.info('The result of getting private certificate is undefined.');
+    } else {
+      let list = cmResult.credential;
+      console.info('Succeeded in getting private certificate.');
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get private certificate. Code: ${err.code}, message: ${err.message}`);
+  })
 } catch (error) {
   console.error(`Failed to get private certificate. Code: ${error.code}, message: ${error.message}`);
 }
@@ -103,24 +124,5 @@ Obtains detailed information about a private credential. This API uses a promise
 
 **Examples**
 
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri: string = 'test'; /* The service needs to use the unique identifier of the credential to obtain the private credential details, which is not elaborated here. */
-try {
-  certificateManager.getPrivateCertificate(uri).then((cmResult) => {
-    if (cmResult?.credential == undefined) {
-      console.info('The result of getting private certificate is undefined.');
-    } else {
-      let list = cmResult.credential;
-      console.info('Succeeded in getting private certificate.');
-    }
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get private certificate. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error) {
-  console.error(`Failed to get private certificate. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [getPrivateCertificate](#getprivatecertificate)
 

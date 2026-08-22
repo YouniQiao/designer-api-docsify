@@ -35,7 +35,7 @@ Opens a file or directory. This API returns the result synchronously. This API s
 
 | Type | Description |
 | --- | --- |
-| [File](arkts-corefile-filefs-file-i.md) | File object opened. |
+| [File](arkts-corefile-file-fs-file-i.md) | File object opened. |
 
 **Error codes:**
 
@@ -68,4 +68,13 @@ Opens a file or directory. This API returns the result synchronously. This API s
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fs.openSync(filePath, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
+console.info("file fd: " + file.fd);
+fs.closeSync(file);
+```
 

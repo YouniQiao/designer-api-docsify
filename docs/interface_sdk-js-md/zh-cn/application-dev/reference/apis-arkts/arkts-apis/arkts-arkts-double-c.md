@@ -1767,26 +1767,6 @@ public static readonly MIN_VALUE: double = 4.9e-300 / 1.e+24
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## NEGATIVE_INFINITY
-
-```TypeScript
-public static readonly NEGATIVE_INFINITY: double = -1.0 / 0.0
-```
-
-表示IEEE-754规范中的-Infinity值。
-
-**类型：** double
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Double-public static readonly NEGATIVE_INFINITY: double = -1.0 / 0.0--><!--Device-Double-public static readonly NEGATIVE_INFINITY: double = -1.0 / 0.0-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
 ## NaN
 
 ```TypeScript
@@ -1804,6 +1784,26 @@ public static readonly NaN: double = 0.0 / 0.0
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Double-public static readonly NaN: double = 0.0 / 0.0--><!--Device-Double-public static readonly NaN: double = 0.0 / 0.0-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## NEGATIVE_INFINITY
+
+```TypeScript
+public static readonly NEGATIVE_INFINITY: double = -1.0 / 0.0
+```
+
+表示IEEE-754规范中的-Infinity值。
+
+**类型：** double
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Double-public static readonly NEGATIVE_INFINITY: double = -1.0 / 0.0--><!--Device-Double-public static readonly NEGATIVE_INFINITY: double = -1.0 / 0.0-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

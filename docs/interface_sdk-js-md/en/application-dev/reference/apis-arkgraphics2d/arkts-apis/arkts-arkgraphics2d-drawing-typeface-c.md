@@ -41,6 +41,16 @@ Obtains the name of the typeface family, which is the name given to a collection
 | --- | --- |
 | string | Family name. |
 
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const font = new drawing.Font();
+let typeface = font.getTypeface();
+let familyName = typeface.getFamilyName();
+```
+
 ## getFamilyName
 
 ```TypeScript
@@ -60,6 +70,10 @@ Get the family name for this typeface.
 | Type | Description |
 | --- | --- |
 | string \| undefined | Family name. |
+
+**Examples**
+
+See [getFamilyName](#getfamilyname)
 
 ## isBold
 
@@ -81,6 +95,16 @@ Checks whether the font is bold.
 | --- | --- |
 | boolean | Check result. **true** if the font is bold; **false** otherwise. |
 
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const font = new drawing.Font();
+let typeface = font.getTypeface();
+let result = typeface.isBold();
+```
+
 ## isItalic
 
 ```TypeScript
@@ -100,6 +124,16 @@ Checks whether the font is italic.
 | Type | Description |
 | --- | --- |
 | boolean | Check result. **true** if the font is italic; **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const font = new drawing.Font();
+let typeface = font.getTypeface();
+let result = typeface.isItalic();
+```
 
 ## makeFromCurrent
 
@@ -127,6 +161,27 @@ Constructs a typeface object from the current typeface and its arguments.
 | --- | --- |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | Typeface object. In abnormal cases, a null pointer is returned. |
 
+**Examples**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class TextRenderNode extends RenderNode {
+  async draw(context: DrawContext) {
+    const canvas = context.canvas;
+    let typeArguments = new drawing.TypefaceArguments();
+    typeArguments.addVariation("wght", 100);
+    const myTypeFace = drawing.Typeface.makeFromFile("/system/fonts/HarmonyOS_Sans_SC.ttf");
+    const typeFace1 = myTypeFace.makeFromCurrent(typeArguments);
+    let font = new drawing.Font();
+    font.setTypeface(typeFace1);
+    const textBlob = drawing.TextBlob.makeFromString("Hello World", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    canvas.drawTextBlob(textBlob, 60, 100);
+  }
+}
+```
+
 ## makeFromCurrent
 
 ```TypeScript
@@ -152,6 +207,10 @@ Generate typeface from current typeface and TypefaceArguments.
 | Type | Description |
 | --- | --- |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | Typeface. |
+
+**Examples**
+
+See [makeFromCurrent](#makefromcurrent)
 
 ## makeFromFile
 
@@ -187,6 +246,25 @@ Constructs a typeface from a file.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 
+**Examples**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class TextRenderNode extends RenderNode {
+  async draw(context: DrawContext) {
+    const canvas = context.canvas;
+    let font = new drawing.Font();
+    let str = "/system/fonts/HarmonyOS_Sans_Italic.ttf";
+    const mytypeface = drawing.Typeface.makeFromFile(str);
+    font.setTypeface(mytypeface);
+    const textBlob = drawing.TextBlob.makeFromString("Hello World", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    canvas.drawTextBlob(textBlob, 60, 100);
+  }
+}
+```
+
 ## makeFromFile
 
 ```TypeScript
@@ -219,6 +297,10 @@ Constructs a typeface from a file.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 
+**Examples**
+
+See [makeFromFile](#makefromfile)
+
 ## makeFromFileWithArguments
 
 ```TypeScript
@@ -248,6 +330,26 @@ Constructs a typeface from the typeface file path and arguments.
 | --- | --- |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | Typeface object. In abnormal cases, a null pointer is returned. |
 
+**Examples**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class TextRenderNode extends RenderNode {
+  async draw(context: DrawContext) {
+    const canvas = context.canvas;
+    let font = new drawing.Font();
+    let str = "/system/fonts/HarmonyOS_Sans_Italic.ttf";
+    let typeFaceArgument = new drawing.TypefaceArguments();
+    const myTypeFace = drawing.Typeface.makeFromFileWithArguments(str, typeFaceArgument);
+    font.setTypeface(myTypeFace);
+    const textBlob = drawing.TextBlob.makeFromString("Hello World", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    canvas.drawTextBlob(textBlob, 60, 100);
+  }
+}
+```
+
 ## makeFromFileWithArguments
 
 ```TypeScript
@@ -274,6 +376,10 @@ Generate typeface from file and TypefaceArguments.
 | Type | Description |
 | --- | --- |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | Typeface. |
+
+**Examples**
+
+See [makeFromFileWithArguments](#makefromfilewitharguments)
 
 ## makeFromRawFile
 
@@ -303,6 +409,24 @@ Constructs a typeface from a file, which must be stored in the **resources/rawfi
 | --- | --- |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | Typeface object. In abnormal cases, a null pointer is returned. |
 
+**Examples**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class TextRenderNode extends RenderNode {
+  async draw(context: DrawContext) {
+    const canvas = context.canvas;
+    let font = new drawing.Font();
+    const myTypeFace = drawing.Typeface.makeFromRawFile($rawfile('HarmonyOS_Sans_Bold.ttf'));
+    font.setTypeface(myTypeFace);
+    const textBlob = drawing.TextBlob.makeFromString("Hello World", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    canvas.drawTextBlob(textBlob, 60, 100);
+  }
+}
+```
+
 ## makeFromRawFile
 
 ```TypeScript
@@ -328,6 +452,10 @@ Constructs a typeface from a file, which must be stored in the resources/rawfile
 | Type | Description |
 | --- | --- |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | Typeface. |
+
+**Examples**
+
+See [makeFromRawFile](#makefromrawfile)
 
 ## makeFromRawFileWithArguments
 
@@ -358,6 +486,25 @@ Constructs a typeface from a file with typeface arguments, which must be stored 
 | --- | --- |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | Typeface object. In abnormal cases, a null pointer is returned. |
 
+**Examples**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class TextRenderNode extends RenderNode {
+  async draw(context: DrawContext) {
+    const canvas = context.canvas;
+    let font = new drawing.Font();
+    let typeFaceArgument = new drawing.TypefaceArguments();
+    const myTypeFace = drawing.Typeface.makeFromRawFileWithArguments($rawfile('HarmonyOS_Sans_Bold.ttf'), typeFaceArgument);
+    font.setTypeface(myTypeFace);
+    const textBlob = drawing.TextBlob.makeFromString("Hello World", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    canvas.drawTextBlob(textBlob, 60, 100);
+  }
+}
+```
+
 ## makeFromRawFileWithArguments
 
 ```TypeScript
@@ -384,4 +531,8 @@ Generate typeface from Rawfile and TypefaceArguments.
 | Type | Description |
 | --- | --- |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | Typeface. |
+
+**Examples**
+
+See [makeFromRawFileWithArguments](#makefromrawfilewitharguments)
 

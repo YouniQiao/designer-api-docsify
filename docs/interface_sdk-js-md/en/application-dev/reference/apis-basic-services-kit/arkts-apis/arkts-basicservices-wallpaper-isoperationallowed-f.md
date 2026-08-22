@@ -26,7 +26,7 @@ Checks whether a user is allowed to set wallpapers. Returns true if a user is al
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | the callback of isOperationAllowed. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of isOperationAllowed. |
 
 **Examples**
 
@@ -39,6 +39,16 @@ wallpaper.isOperationAllowed((error: BusinessError, data: Boolean) => {
         return;
     }
     console.info(`success to isOperationAllowed: ${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+wallpaper.isOperationAllowed().then((data: Boolean) => {
+    console.info(`success to isOperationAllowed: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`failed to isOperationAllowed because: ${JSON.stringify(error)}`);
 });
 ```
 
@@ -67,13 +77,5 @@ Checks whether a user is allowed to set wallpapers. Returns true if a user is al
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-wallpaper.isOperationAllowed().then((data: Boolean) => {
-    console.info(`success to isOperationAllowed: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`failed to isOperationAllowed because: ${JSON.stringify(error)}`);
-});
-```
+See [isOperationAllowed](#isoperationallowed)
 

@@ -12,7 +12,7 @@
 
 | Name | Description |
 | --- | --- |
-| [DataShareResultSet](arkts-datadatashareresultset-datashareresultset-i-sys.md) | Provides APIs for accessing the result sets returned. |
+| [DataShareResultSet](arkts-data-datashareresultset-datashareresultset-i-sys.md) | Provides APIs for accessing the result sets returned. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -20,6 +20,6 @@
 
 | Name | Description |
 | --- | --- |
-| [DataType](arkts-datadatashareresultset-datatype-e-sys.md) | Enumerates the data types. |
+| [DataType](arkts-data-datashareresultset-datatype-e-sys.md) | Enumerates the data types. |
 <!--DelEnd-->
 

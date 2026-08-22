@@ -55,6 +55,19 @@ dlpPermission.cancelRetentionState([uri]).then(() => { // 取消沙箱保留。
 });
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+let uri = "file://docs/storage/Users/currentUser/Desktop/test.txt.dlp";
+dlpPermission.cancelRetentionState([uri], (err, res) => {
+  if (err) {
+    console.error(`Failed to cancel retention state. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('cancelRetentionState success');
+  }
+}); // 取消沙箱保留。
+```
+
 
 ## cancelRetentionState
 
@@ -89,16 +102,5 @@ function cancelRetentionState(docUris: Array<string>, callback: AsyncCallback<vo
 
 **示例**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-let uri = "file://docs/storage/Users/currentUser/Desktop/test.txt.dlp";
-dlpPermission.cancelRetentionState([uri], (err, res) => {
-  if (err) {
-    console.error(`Failed to cancel retention state. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('cancelRetentionState success');
-  }
-}); // 取消沙箱保留。
-```
+参见 [cancelRetentionState](#cancelretentionstate)
 

@@ -30,8 +30,8 @@ Discovers printers by specifying the extension list. The discovered printers con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extensionList | Array&lt;string&gt; | Yes | List of [PrintExtensionAbilities](arkts-basicservices-appabilityprintextensionability-printextensionability-c.md) to be loaded. The list members are the bundle names of the applications with print extension abilities. An empty list indicates that all extension abilities are loaded. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback to be invoked when a printer is discovered. |
+| extensionList | Array&lt;string&gt; | Yes | List of [PrintExtensionAbilities](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md) to be loaded. The list members are the bundle names of the applications with print extension abilities. An empty list indicates that all extension abilities are loaded. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback to be invoked when a printer is discovered. |
 
 **Error codes:**
 
@@ -56,6 +56,21 @@ print.startDiscoverPrinter(extensionList, (err: BusinessError) => {
     } else {
         console.info('start Discover Printer success');
     }
+})
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Load all print extension abilities.
+let extensionList: string[] = [];
+// Specify the bundle name of your applications to load required print extension abilities during printer discovery.
+// let extensionList: string[] = ['com.myapplication.test'];
+print.startDiscoverPrinter(extensionList).then(() => {
+    console.info('start Discovery success');
+}).catch((error: BusinessError) => {
+    console.error('failed to start Discovery because : ' + JSON.stringify(error));
 })
 ```
 
@@ -84,7 +99,7 @@ Discovers printers by specifying the extension list. The discovered printers con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extensionList | Array&lt;string&gt; | Yes | List of [PrintExtensionAbilities](arkts-basicservices-appabilityprintextensionability-printextensionability-c.md) to be loaded. The list members are the bundle names of the applications with print extension abilities. An empty list indicates that all extension abilities are loaded. |
+| extensionList | Array&lt;string&gt; | Yes | List of [PrintExtensionAbilities](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md) to be loaded. The list members are the bundle names of the applications with print extension abilities. An empty list indicates that all extension abilities are loaded. |
 
 **Return value:**
 
@@ -101,18 +116,5 @@ Discovers printers by specifying the extension list. The discovered printers con
 
 **Examples**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Load all print extension abilities.
-let extensionList: string[] = [];
-// Specify the bundle name of your applications to load required print extension abilities during printer discovery.
-// let extensionList: string[] = ['com.myapplication.test'];
-print.startDiscoverPrinter(extensionList).then(() => {
-    console.info('start Discovery success');
-}).catch((error: BusinessError) => {
-    console.error('failed to start Discovery because : ' + JSON.stringify(error));
-})
-```
+See [startDiscoverPrinter](#startdiscoverprinter)
 

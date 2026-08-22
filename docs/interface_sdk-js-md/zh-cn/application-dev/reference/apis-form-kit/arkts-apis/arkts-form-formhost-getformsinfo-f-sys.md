@@ -43,6 +43,162 @@ function getFormsInfo(bundleName: string, callback: AsyncCallback<Array<formInfo
 | [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formHost, formInfo } from '@kit.FormKit';
+
+try {
+  formHost.getFormsInfo('com.example.ohos.formjsdemo', (error: BusinessError, data: formInfo.FormInfo[]) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      console.info('formHost getFormsInfo success.');
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formHost, formInfo } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formHost.getFormsInfo('com.example.ohos.formjsdemo', (error, data) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      console.info(`formHost getFormsInfo`);
+    }
+  });
+} catch(error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formHost, formInfo } from '@kit.FormKit';
+
+try {
+  formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry', (error: BusinessError, data: formInfo.FormInfo[]) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      console.info('formHost getFormsInfo success.');
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formHost, formInfo } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry', (error, data) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      console.info(`formHost getFormsInfo`);
+    }
+  });
+} catch(error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formHost, formInfo } from '@kit.FormKit';
+
+try {
+  formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry').then((data: formInfo.FormInfo[]) => {
+    console.info('formHost getFormsInfo success.');
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formHost, formInfo } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry').then((data: formInfo.FormInfo[]) => {
+    console.info(`formHost getFormsInfo`);
+  }).catch((error) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch(error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formHost, formInfo } from '@kit.FormKit';
+
+const filter: formInfo.FormInfoFilter = {
+  bundleName: 'ohos.samples.FormApplication',
+  moduleName: 'entry',
+  supportedDimensions: [FormDimension.Dimension_1_2, FormDimension.Dimension_2_2, FormDimension.Dimension_2_4]
+};
+try {
+  formHost.getFormsInfo(filter).then((data: formInfo.FormInfo[]) => {
+    console.info('formHost getFormsInfo success.');
+  }).catch((error: BusinessError) => {
+    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formHost, formInfo } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const filter: formInfo.FormInfoFilter = {
+  bundleName: 'ohos.samples.FormApplication',
+  moduleName: 'entry',
+  supportedDimensions: [formInfo.FormDimension.Dimension_1_2, formInfo.FormDimension.Dimension_2_2, formInfo.FormDimension.Dimension_2_4]
+};
+try {
+  formHost.getFormsInfo(filter).then((data: formInfo.FormInfo[]) => {
+    console.info(`formHost getFormsInfo`);
+  }).catch((error) => {
+    console.error(`promise error, code: ${error.code}, message: ${error.message})`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message})`);
+}
+```
+
 
 ## getFormsInfo
 
@@ -85,6 +241,10 @@ function getFormsInfo(
 | [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+
+**示例**
+
+参见 [getFormsInfo](#getformsinfo)
 
 
 ## getFormsInfo
@@ -130,6 +290,10 @@ function getFormsInfo(bundleName: string, moduleName?: string): Promise<Array<fo
 | [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 
+**示例**
+
+参见 [getFormsInfo](#getformsinfo)
+
 
 ## getFormsInfo
 
@@ -172,4 +336,8 @@ function getFormsInfo(filter: formInfo.FormInfoFilter): Promise<Array<formInfo.F
 | [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+
+**示例**
+
+参见 [getFormsInfo](#getformsinfo)
 

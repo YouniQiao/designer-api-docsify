@@ -60,6 +60,28 @@ vibrator.stop(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_PRESET).then(() => {
 });
 ```
 
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Start vibration based on the specified effect ID.
+vibrator.vibrate(vibrator.EffectId.EFFECT_CLOCK_TIMER, (error: BusinessError) => {
+  if (error) {
+    console.error(`Failed to vibrate. Code: ${error.code}, message: ${error.message}`);
+  } else {
+    console.info('Succeed in vibrating');
+  }
+})
+// Stop vibration in VIBRATOR_STOP_MODE_PRESET mode.
+vibrator.stop(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_PRESET, (error: BusinessError) => {
+  if (error) {
+    console.error(`Failed to stop. Code: ${error.code}, message: ${error.message}`);
+  } else {
+    console.info('Succeed in stopping');
+  }
+})
+```
+
 
 ## stop
 
@@ -86,29 +108,9 @@ Stops vibration in the specified mode. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | stopMode | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | Yes | Mode to stop the vibration. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | No | Callback used to return the result. If the vibration stops, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If the vibration stops, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Examples**
 
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Start vibration based on the specified effect ID.
-vibrator.vibrate(vibrator.EffectId.EFFECT_CLOCK_TIMER, (error: BusinessError) => {
-  if (error) {
-    console.error(`Failed to vibrate. Code: ${error.code}, message: ${error.message}`);
-  } else {
-    console.info('Succeed in vibrating');
-  }
-})
-// Stop vibration in VIBRATOR_STOP_MODE_PRESET mode.
-vibrator.stop(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_PRESET, (error: BusinessError) => {
-  if (error) {
-    console.error(`Failed to stop. Code: ${error.code}, message: ${error.message}`);
-  } else {
-    console.info('Succeed in stopping');
-  }
-})
-```
+See [stop](#stop)
 

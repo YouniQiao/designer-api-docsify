@@ -88,6 +88,33 @@ systemSoundManagerInstance.addCustomizedTone(context, toneAttrs, path).then((val
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let title = 'test'; // Change it to the actual name.
+let fileName = 'displayName_test'; // Change it to the actual file name.
+let categoryValue = systemSoundManager.TONE_CATEGORY_ALARM;
+
+let toneAttrs = systemSoundManager.createCustomizedToneAttrs();
+toneAttrs.setTitle(title);
+toneAttrs.setFileName(fileName);
+toneAttrs.setCategory(categoryValue);
+
+let fd = 10; // Set the FD of the target tone.
+let offset = 0; // Set the offset.
+let length = 50; // Set the data length.
+
+let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
+systemSoundManagerInstance.addCustomizedTone(context, toneAttrs, fd, offset, length).then((value: string) => {
+  console.info('Succeeded in doing addCustomizedTone.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to addCustomizedTone. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## addCustomizedTone
 
 ```TypeScript
@@ -138,32 +165,7 @@ Add customized tone into ringtone library.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let title = 'test'; // Change it to the actual name.
-let fileName = 'displayName_test'; // Change it to the actual file name.
-let categoryValue = systemSoundManager.TONE_CATEGORY_ALARM;
-
-let toneAttrs = systemSoundManager.createCustomizedToneAttrs();
-toneAttrs.setTitle(title);
-toneAttrs.setFileName(fileName);
-toneAttrs.setCategory(categoryValue);
-
-let fd = 10; // Set the FD of the target tone.
-let offset = 0; // Set the offset.
-let length = 50; // Set the data length.
-
-let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
-systemSoundManagerInstance.addCustomizedTone(context, toneAttrs, fd, offset, length).then((value: string) => {
-  console.info('Succeeded in doing addCustomizedTone.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to addCustomizedTone. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [addCustomizedTone](#addcustomizedtone)
 
 ## close
 
@@ -820,6 +822,10 @@ Gets the ringtone player.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
+**Examples**
+
+See [getRingtonePlayer](#getringtoneplayer)
+
 ## getRingtoneUri
 
 ```TypeScript
@@ -901,7 +907,7 @@ Gets the ringtone player.
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Current application context. |
 | type | RingtoneType | Yes | Ringtone type to get. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RingtonePlayer&gt; | Yes | Callback used to return a ringtone player instance. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RingtonePlayer&gt; | Yes | Callback used to return a ringtone player instance. |
 
 **Examples**
 
@@ -922,6 +928,24 @@ systemSoundManagerInstance.getSystemRingtonePlayer(context, type, (err: Business
   }
   console.info(`Callback invoked to indicate the value of the system ringtone player is obtained.`);
   systemRingtonePlayer = value;
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let type: systemSoundManager.RingtoneType = systemSoundManager.RingtoneType.RINGTONE_TYPE_DEFAULT;
+let systemRingtonePlayer: systemSoundManager.RingtonePlayer | undefined = undefined;
+
+let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
+systemSoundManagerInstance.getSystemRingtonePlayer(context, type).then((value: systemSoundManager.RingtonePlayer) => {
+  console.info('Succeeded in doing getSystemRingtonePlayer.');
+  systemRingtonePlayer = value;
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getSystemRingtonePlayer. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -960,23 +984,7 @@ Gets the ringtone player.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let type: systemSoundManager.RingtoneType = systemSoundManager.RingtoneType.RINGTONE_TYPE_DEFAULT;
-let systemRingtonePlayer: systemSoundManager.RingtonePlayer | undefined = undefined;
-
-let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
-systemSoundManagerInstance.getSystemRingtonePlayer(context, type).then((value: systemSoundManager.RingtonePlayer) => {
-  console.info('Succeeded in doing getSystemRingtonePlayer.');
-  systemRingtonePlayer = value;
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getSystemRingtonePlayer. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [getSystemRingtonePlayer](#getsystemringtoneplayer)
 
 ## getSystemRingtoneUri
 
@@ -1004,7 +1012,7 @@ Gets the ringtone uri.
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Current application context. |
 | type | RingtoneType | Yes | Ringtone type to get. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the ringtone uri maintained in system. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the ringtone uri maintained in system. |
 
 **Examples**
 
@@ -1023,6 +1031,22 @@ systemSoundManagerInstance.getSystemRingtoneUri(context, type, (err: BusinessErr
     return;
   }
   console.info(`Callback invoked to indicate the value of the system ringtone uri is obtained ${value}.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let type: systemSoundManager.RingtoneType = systemSoundManager.RingtoneType.RINGTONE_TYPE_DEFAULT;
+
+let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
+systemSoundManagerInstance.getSystemRingtoneUri(context, type).then((value: string) => {
+  console.info('Succeeded in doing getSystemRingtoneUri.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getSystemRingtoneUri. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -1061,21 +1085,7 @@ Gets the ringtone uri.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let type: systemSoundManager.RingtoneType = systemSoundManager.RingtoneType.RINGTONE_TYPE_DEFAULT;
-
-let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
-systemSoundManagerInstance.getSystemRingtoneUri(context, type).then((value: string) => {
-  console.info('Succeeded in doing getSystemRingtoneUri.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getSystemRingtoneUri. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [getSystemRingtoneUri](#getsystemringtoneuri)
 
 ## getSystemToneAttrList
 
@@ -1222,6 +1232,10 @@ Gets the system tone player.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+
+**Examples**
+
+See [getSystemTonePlayer](#getsystemtoneplayer)
 
 ## getSystemToneUri
 
@@ -1808,7 +1822,7 @@ Sets the ringtone uri to system.
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Current application context. |
 | uri | string | Yes | Ringtone uri to set. |
 | type | RingtoneType | Yes | Ringtone type to set. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the set uri result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the set uri result. |
 
 **Examples**
 
@@ -1828,6 +1842,23 @@ systemSoundManagerInstance.setSystemRingtoneUri(context, uri, type, (err: Busine
     return;
   }
   console.info(`Callback invoked to indicate a successful setting of the system ringtone uri.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uri = 'file://data/test.wav'; // Change it to the URI of the target tone file.
+let type: systemSoundManager.RingtoneType = systemSoundManager.RingtoneType.RINGTONE_TYPE_DEFAULT;
+
+let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
+systemSoundManagerInstance.setSystemRingtoneUri(context, uri, type).then(() => {
+  console.info('Succeeded in doing setSystemRingtoneUri.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to setSystemRingtoneUri. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -1867,22 +1898,7 @@ Sets the ringtone uri to system.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let uri = 'file://data/test.wav'; // Change it to the URI of the target tone file.
-let type: systemSoundManager.RingtoneType = systemSoundManager.RingtoneType.RINGTONE_TYPE_DEFAULT;
-
-let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
-systemSoundManagerInstance.setSystemRingtoneUri(context, uri, type).then(() => {
-  console.info('Succeeded in doing setSystemRingtoneUri.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to setSystemRingtoneUri. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [setSystemRingtoneUri](#setsystemringtoneuri)
 
 ## setSystemToneUri
 

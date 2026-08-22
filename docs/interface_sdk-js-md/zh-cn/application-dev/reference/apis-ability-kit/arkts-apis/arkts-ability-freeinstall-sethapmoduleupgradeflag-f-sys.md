@@ -66,6 +66,48 @@ try {
 }
 ```
 
+ArkTS-Dyn示例:
+
+```TypeScript
+import { freeInstall } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'com.example.myapplication';
+let moduleName = 'entry';
+let upgradeFlag = freeInstall.UpgradeFlag.SINGLE_UPGRADE;
+try {
+  freeInstall.setHapModuleUpgradeFlag(bundleName, moduleName, upgradeFlag).then(() => {
+    console.info('Operation succeed')
+  }).catch((err: BusinessError) => {
+    console.error('Operation failed:' + JSON.stringify(err));
+  });
+} catch (err) {
+  console.error('Operation failed:' + JSON.stringify(err));
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { freeInstall } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+// 开发者需根据实际工程更新bundleName和moduleName。
+let bundleName = 'com.example.myapplication';
+let moduleName = 'entry';
+let upgradeFlag = freeInstall.UpgradeFlag.SINGLE_UPGRADE;
+try {
+  freeInstall.setHapModuleUpgradeFlag(bundleName, moduleName, upgradeFlag).then(() => {
+    console.info('Operation succeed')
+  }).catch((err: Error) => {
+    console.error('Operation failed:' + JSON.stringify(err as BusinessError));
+  });
+} catch (err) {
+  console.error('Operation failed:' + JSON.stringify(err));
+}
+```
+
 
 ## setHapModuleUpgradeFlag
 
@@ -112,45 +154,5 @@ function setHapModuleUpgradeFlag(bundleName: string, moduleName: string, upgrade
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.example.myapplication';
-let moduleName = 'entry';
-let upgradeFlag = freeInstall.UpgradeFlag.SINGLE_UPGRADE;
-try {
-  freeInstall.setHapModuleUpgradeFlag(bundleName, moduleName, upgradeFlag).then(() => {
-    console.info('Operation succeed')
-  }).catch((err: BusinessError) => {
-    console.error('Operation failed:' + JSON.stringify(err));
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { freeInstall } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新bundleName和moduleName。
-let bundleName = 'com.example.myapplication';
-let moduleName = 'entry';
-let upgradeFlag = freeInstall.UpgradeFlag.SINGLE_UPGRADE;
-try {
-  freeInstall.setHapModuleUpgradeFlag(bundleName, moduleName, upgradeFlag).then(() => {
-    console.info('Operation succeed')
-  }).catch((err: Error) => {
-    console.error('Operation failed:' + JSON.stringify(err as BusinessError));
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```
+参见 [setHapModuleUpgradeFlag](#sethapmoduleupgradeflag)
 

@@ -82,6 +82,97 @@ aboutToRecycle?(): void
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+**示例**
+
+```TypeScript
+import { ComponentInit, ComponentDisappear, UIUtils, CustomComponentLifecycleObserver, CustomComponentLifecycle } from '@kit.ArkUI';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+export class Message {
+  value: string | undefined;
+  constructor(value: string) {
+    this.value = value;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  @State isChildVisible: boolean = true;
+
+  build() {
+    Column() {
+      Button('Hello')
+        .fontSize(30)
+        .fontWeight(FontWeight.Bold)
+        .onClick(() => {
+          this.isChildVisible = !this.isChildVisible;
+        })
+      if (this.isChildVisible) {
+        // 如果只有一个复用的组件，可以不用设置reuseId。
+        Child({ message: new Message('Child') })
+          .reuseId('Child')
+      }
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+
+@Reusable
+@Component
+struct Child {
+  @State message: Message = new Message('AboutToReuse');
+  @ComponentInit
+  myInit(): void {
+    registerObserver(UIUtils.getLifecycle(this));
+  }
+  @ComponentDisappear
+  myDisappear(): void {
+    unRegisterObserver(UIUtils.getLifecycle(this));
+  }
+  build() {
+    Column() {
+      Text(this.message.value)
+        .fontSize(30)
+    }
+  }
+}
+
+export class MyObserver implements CustomComponentLifecycleObserver {
+  // 重写CustomComponentLifecycleObserver中的生命周期事件。
+  aboutToAppear() {
+    hilog.info(0x0000, 'testTag', 'MyObserver aboutToAppear');
+  }
+  onDidBuild() {
+    hilog.info(0x0000, 'testTag', 'MyObserver onDidBuild');
+  }
+  aboutToReuse(params?: Record<string, Object | undefined | null>) {
+    // params存在时，为V1的复用；
+    hilog.info(0x0000, 'testTag', 'MyObserver aboutToReuse');
+  }
+  aboutToRecycle() {
+    hilog.info(0x0000, 'testTag', 'MyObserver aboutToRecycle');
+  }
+  aboutToDisappear() {
+    hilog.info(0x0000, 'testTag', 'MyObserver aboutToDisappear');
+  }
+}
+
+// 创建Observer对象
+const observer = new MyObserver();
+
+export function registerObserver(lifeCycle: CustomComponentLifecycle) {
+  // 向lifeCycle注册监听
+  lifeCycle.addObserver(observer);
+}
+
+export function unRegisterObserver(lifeCycle: CustomComponentLifecycle) {
+  // 向lifeCycle取消注册监听
+  lifeCycle.removeObserver(observer);
+}
+```
+
 ## build
 
 ```TypeScript
@@ -123,6 +214,72 @@ The dialog controller of the custom component.
 | 类型 | 说明 |
 | --- | --- |
 | [PromptActionDialogController](arkts-arkui-promptactiondialogcontroller-t.md) \| undefined | The controller of dialog, or undefined if it is not available |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { ComponentContent } from '@kit.ArkUI';
+
+class Params {
+  text: string = "";
+  constructor(text: string) {
+    this.text = text;
+  }
+}
+
+@ComponentV2
+struct MyComponent {
+  build() {
+    Column() {
+      Button('Close Dialog')
+        .onClick(() => {
+          let ctrl: PromptActionDialogController | undefined = this.getDialogController();
+          if (ctrl != undefined) {
+            ctrl.close();
+          }
+        })
+    }
+  }
+}
+
+@Builder
+function buildText(params: Params) {
+  Column() {
+    Text(params.text)
+      .fontSize(50)
+      .fontWeight(FontWeight.Bold)
+      .margin({ bottom: 36 })
+    MyComponent()
+  }.backgroundColor('#FFF0F0F0')
+}
+
+@Entry
+@ComponentV2
+struct Index {
+  @Local message: string = "hello";
+
+  build() {
+    Row() {
+      Column({ space: 10 }) {
+        Button('click me')
+          .fontSize(20)
+          .onClick(() => {
+            let ctx = this.getUIContext();
+            let promptAction = ctx.getPromptAction();
+            promptAction.openCustomDialog(new ComponentContent(ctx, wrapBuilder(buildText), new Params(this.message)))
+              .catch((err: BusinessError) => {
+                console.error("openCustomDialog error: " + err.code + " " + err.message);
+              })
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## getUIContext
 
@@ -171,6 +328,22 @@ Get uniqueId of the custom component.
 | 类型 | 说明 |
 | --- | --- |
 | number | The uniqueId of the custom component. |
+
+**示例**
+
+```TypeScript
+@Entry
+@Component
+struct MyComponent {
+  aboutToAppear() {
+    let uniqueId: number = this.getUniqueId();
+  }
+
+  build() {
+    // ...
+  }
+}
+```
 
 ## onBackPress
 
@@ -232,6 +405,55 @@ onFormRecover回调函数在卡片恢复时执行，卡片提供方可以拿到�
 | --- | --- | --- | --- |
 | statusData | string | 是 | 卡片回收时卡片管理服务代保存的数据。 |
 
+**示例**
+
+```TypeScript
+@Entry
+@Component
+struct WidgetCard {
+  readonly title: string = 'Hello World';
+  readonly actionType: string = 'router';
+  readonly abilityName: string = 'EntryAbility';
+  readonly message: string = 'add detail';
+  readonly fullWidthPercent: string = '100%';
+  readonly fullHeightPercent: string = '100%';
+
+  onFormRecycle(): string {
+    let formId: string = '1859635745';
+    console.info('card is recycled, formID: ' + formId);
+    return formId;
+  }
+
+  onFormRecover(statusData: string): void {
+    // 在卡片恢复时触发回调
+    console.info('card has been restored, formID: ' + statusData);
+  }
+
+  build() {
+    Row() {
+      Column() {
+        Text(this.title)
+          .fontSize($r('app.float.font_size'))
+          .fontWeight(FontWeight.Medium)
+          .fontColor($r('sys.color.font'))
+      }
+      .width(this.fullWidthPercent)
+    }
+    .height(this.fullHeightPercent)
+    .backgroundColor($r('sys.color.comp_background_primary'))
+    .onClick(() => {
+      postCardAction(this, {
+        action: this.actionType,
+        abilityName: this.abilityName,
+        params: {
+          message: this.message
+        }
+      });
+    })
+  }
+}
+```
+
 ## onFormRecycle
 
 ```TypeScript
@@ -257,6 +479,55 @@ onFormRecycle回调函数在卡片回收时执行，卡片提供方可以返回�
 | 类型 | 说明 |
 | --- | --- |
 | string | 返回卡片提供方需要卡片管理服务代保存的数据。 |
+
+**示例**
+
+```TypeScript
+@Entry
+@Component
+struct WidgetCard {
+  readonly title: string = 'Hello World';
+  readonly actionType: string = 'router';
+  readonly abilityName: string = 'EntryAbility';
+  readonly message: string = 'add detail';
+  readonly fullWidthPercent: string = '100%';
+  readonly fullHeightPercent: string = '100%';
+
+  onFormRecycle(): string {
+    let formId: string = '1859635745';
+    // 卡片回收时触发回调
+    console.info('card is recycled, formID: ' + formId);
+    return formId;
+  }
+
+  onFormRecover(statusData: string): void {
+    console.info('card has been restored, formID: ' + statusData);
+  }
+
+  build() {
+    Row() {
+      Column() {
+        Text(this.title)
+          .fontSize($r('app.float.font_size'))
+          .fontWeight(FontWeight.Medium)
+          .fontColor($r('sys.color.font'))
+      }
+      .width(this.fullWidthPercent)
+    }
+    .height(this.fullHeightPercent)
+    .backgroundColor($r('sys.color.comp_background_primary'))
+    .onClick(() => {
+      postCardAction(this, {
+        action: this.actionType,
+        abilityName: this.abilityName,
+        params: {
+          message: this.message
+        }
+      });
+    })
+  }
+}
+```
 
 ## onMeasureSize
 
@@ -377,6 +648,10 @@ ArkUI框架会在自定义组件确定位置时，将该自定义组件的子节
 | children | Array&lt;[Layoutable](arkts-arkui-layoutable-i.md)&gt; | 是 | 计算子组件大小后的子组件布局信息。 |
 | constraint | ConstraintSizeOptions | 是 | 自定义组件的布局约束信息。 |
 
+**示例**
+
+示例请参考[自定义布局代码示例](#示例)。
+
 ## onWillApplyTheme
 
 ```TypeScript
@@ -445,6 +720,138 @@ queryNavDestinationInfo(): NavDestinationInfo | undefined
 | --- | --- |
 | [NavDestinationInfo](arkts-arkui-navdestinationinfo-t.md) \| undefined | NavDestinationInfo** instance obtained. |
 
+**示例**
+
+```TypeScript
+import { uiObserver } from '@kit.ArkUI';
+
+@Component
+export struct NavDestinationExample {
+  build() {
+    NavDestination() {
+      MyComponent()
+    }
+  }
+}
+
+@Component
+struct MyComponent {
+  navDesInfo: uiObserver.NavDestinationInfo | undefined
+
+  aboutToAppear() {
+    // this指代MyComponent自定义节点，并从该节点向上查找其最近的一个类型为NavDestination的父亲节点
+    this.navDesInfo = this.queryNavDestinationInfo();
+    console.info('get navDestinationInfo: ' + JSON.stringify(this.navDesInfo));
+  }
+
+  build() {
+    // ...
+  }
+}
+```
+
+```TypeScript
+// Index.ets
+@Entry
+@Component
+struct NavigationExample {
+  pageInfo: NavPathStack = new NavPathStack();
+
+  build() {
+    Navigation(this.pageInfo) {
+      Column() {
+        Button('pageOne', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfo.pushPath({ name: 'pageOne' }); // 将name指定的NavDestination页面信息入栈。
+          })
+      }
+    }.title('NavIndex')
+  }
+}
+```
+
+```TypeScript
+// PageOne.ets
+import { uiObserver } from '@kit.ArkUI';
+
+@Builder
+export function PageOneBuilder() {
+  PageOneComponent()
+}
+
+@Component
+export struct PageOneComponent {
+  navDesInfo: uiObserver.NavDestinationInfo | undefined;
+  @State text: string = '';
+  build() {
+    NavDestination() {
+      Column() {
+        Button('点击向内查找')
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            // 向内查询PageOne的NavDestination信息
+            this.navDesInfo = this.queryNavDestinationInfo(true);
+            this.text = JSON.stringify(this.navDesInfo?.name).toString();
+          })
+        Text('向内查找的NavDestination是:' + this.text)
+          .width('80%')
+          .height(50)
+          .margin(50)
+          .fontSize(20)
+        MyComponent()
+      }.width('100%').height('100%')
+    }
+    .title('pageOne')
+  }
+}
+
+@Component
+struct MyComponent {
+  navDesInfo: uiObserver.NavDestinationInfo | undefined;
+  @State text: string = '';
+
+  build() {
+    Column() {
+      Button('点击向外查找')
+        .width('80%')
+        .height(40)
+        .margin(20)
+        .onClick(() => {
+          // 向外查询PageOne的NavDestination信息
+          this.navDesInfo = this.queryNavDestinationInfo(false);
+          this.text = JSON.stringify(this.navDesInfo?.name).toString();
+        })
+      Text('向外查找的NavDestination是:' + this.text)
+        .width('80%')
+        .height(50)
+        .margin(50)
+        .fontSize(20)
+    }
+  }
+}
+```
+
+```TypeScript
+// route_map.json
+{
+  "routerMap": [
+    {
+      "name": "pageOne",
+      "pageSourceFile": "src/main/ets/pages/PageOne.ets",
+      "buildFunction": "PageOneBuilder",
+      "data": {
+        "description": "this is pageOne"
+      }
+    }
+  ]
+}
+```
+
 ## queryNavDestinationInfo
 
 ```TypeScript
@@ -475,6 +882,10 @@ queryNavDestinationInfo(isInner: Optional<boolean>): NavDestinationInfo | undefi
 | --- | --- |
 | [NavDestinationInfo](arkts-arkui-navdestinationinfo-t.md) \| undefined | NavDestinationInfo** instance obtained. |
 
+**示例**
+
+参见 [queryNavDestinationInfo](#querynavdestinationinfo)
+
 ## queryNavigationInfo
 
 ```TypeScript
@@ -499,6 +910,46 @@ queryNavigationInfo(): NavigationInfo | undefined
 | --- | --- |
 | [NavigationInfo](arkts-arkui-navigationinfo-t.md) \| undefined | NavigationInfo** instance obtained. |
 
+**示例**
+
+```TypeScript
+// index.ets
+import { uiObserver } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct MainPage {
+  pathStack: NavPathStack = new NavPathStack();
+
+  build() {
+    Navigation(this.pathStack) {
+      // ...
+    }.id("NavigationId")
+  }
+}
+
+
+@Component
+export struct PageOne {
+  pathStack: NavPathStack = new NavPathStack();
+
+  aboutToAppear() {
+    // this指代PageOne自定义节点，并从该节点向上查找其最近的一个类型为Navigation的父亲节点
+    let navigationInfo: uiObserver.NavigationInfo | undefined = this.queryNavigationInfo();
+    console.info('get navigationInfo: ' + JSON.stringify(navigationInfo));
+    if (navigationInfo !== undefined) {
+      this.pathStack = navigationInfo.pathStack;
+    }
+  }
+
+  build() {
+    NavDestination() {
+      // ...
+    }.title('PageOne')
+  }
+}
+```
+
 ## queryRouterPageInfo
 
 ```TypeScript
@@ -522,4 +973,22 @@ queryRouterPageInfo(): RouterPageInfo | undefined
 | 类型 | 说明 |
 | --- | --- |
 | [RouterPageInfo](arkts-arkui-routerpageinfo-t.md) \| undefined | RouterPageInfo** instance obtained. |
+
+**示例**
+
+```TypeScript
+import { uiObserver } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct MyComponent {
+  aboutToAppear() {
+    let info: uiObserver.RouterPageInfo | undefined = this.queryRouterPageInfo();
+  }
+
+  build() {
+    // ...
+  }
+}
+```
 

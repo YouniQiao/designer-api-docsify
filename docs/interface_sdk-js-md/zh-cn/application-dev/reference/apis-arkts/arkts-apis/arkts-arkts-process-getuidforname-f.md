@@ -42,3 +42,10 @@ function getUidForName(v: string): number
 let pres = process.getUidForName("tool");
 ```
 
+```TypeScript
+// 创建ProcessManager实例
+let processManager = new process.ProcessManager();
+// 根据用户名获取uid
+let pres = processManager.getUidForName("tool");
+```
+

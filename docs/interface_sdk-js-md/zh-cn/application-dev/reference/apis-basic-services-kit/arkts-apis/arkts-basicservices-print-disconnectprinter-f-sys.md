@@ -55,6 +55,18 @@ print.disconnectPrinter(printerId, (err: BusinessError) => {
 })
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+
+let printerId: string = 'printerId_32';
+print.disconnectPrinter(printerId).then(() => {
+    console.info('start disconnect Printer success');
+}).catch((error: BusinessError) => {
+    console.error('failed to disconnect Printer because : ' + JSON.stringify(error));
+})
+```
+
 
 ## disconnectPrinter
 
@@ -96,15 +108,5 @@ function disconnectPrinter(printerId: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let printerId: string = 'printerId_32';
-print.disconnectPrinter(printerId).then(() => {
-    console.info('start disconnect Printer success');
-}).catch((error: BusinessError) => {
-    console.error('failed to disconnect Printer because : ' + JSON.stringify(error));
-})
-```
+参见 [disconnectPrinter](#disconnectprinter)
 

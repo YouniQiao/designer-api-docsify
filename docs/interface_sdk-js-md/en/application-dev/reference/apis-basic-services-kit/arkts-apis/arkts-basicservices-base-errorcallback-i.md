@@ -2,7 +2,7 @@
 
 Defines a common callback that carries an error parameter. It is used to return error information when an asynchronous operation fails. The specific error code is defined by each API. For details, please refer to the error code description of the corresponding API.
 
-The information returned by the callback is an error parameter of the [BusinessError](arkts-basicservices-base-businesserror-c.md) type.
+The information returned by the callback is an error parameter of the [BusinessError](arkts-basicservices-base-businesserror-i.md) type.
 
 **Since:** 6
 
@@ -36,4 +36,18 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } fro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | err | T | Yes | Common error information returned when the API fails to be called. The default type is **BusinessError**, including the error code (**code**) and optional additional data (**data**). |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+interface ErrorDataType {
+    url: string;
+}
+
+const businessError = new BusinessError<ErrorDataType>(201, 'no permission', {
+    url: 'http://'
+});
+```
 

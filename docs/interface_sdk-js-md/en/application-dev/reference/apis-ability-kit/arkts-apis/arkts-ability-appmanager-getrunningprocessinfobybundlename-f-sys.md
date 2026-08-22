@@ -27,7 +27,7 @@ Obtains information about the running processes by bundle name. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;ProcessInformation&gt;&gt; | Yes | Callback used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ProcessInformation&gt;&gt; | Yes | Callback used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 
@@ -61,40 +61,24 @@ try {
 }
 ```
 
-
-## getRunningProcessInfoByBundleName
-
 ```TypeScript
-function getRunningProcessInfoByBundleName(bundleName: string, userId: int, callback: AsyncCallback<Array<ProcessInformation>>): void
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = "bundleName";
+
+try {
+  appManager.getRunningProcessInfoByBundleName(bundleName).then((data) => {
+    console.info('getRunningProcessInfoByBundleName success.');
+  }).catch((err: BusinessError) => {
+    console.error(`getRunningProcessInfoByBundleName fail, err: ${JSON.stringify(err)}`);
+  });
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`[appManager] error: ${code}, ${message}`);
+}
 ```
-
-Obtains information about the running processes by bundle name and user ID. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-<!--Device-appManager-function getRunningProcessInfoByBundleName(bundleName: string, userId: int, callback: AsyncCallback<Array<ProcessInformation>>): void--><!--Device-appManager-function getRunningProcessInfoByBundleName(bundleName: string, userId: int, callback: AsyncCallback<Array<ProcessInformation>>): void-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name. |
-| userId | int | Yes | User ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;ProcessInformation&gt;&gt; | Yes | Callback used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-
-**Examples**
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -118,6 +102,63 @@ try {
   console.error(`[appManager] error: ${code}, ${message}`);
 }
 ```
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = "bundleName";
+let userId = 0;
+
+try {
+  appManager.getRunningProcessInfoByBundleName(bundleName, userId).then((data) => {
+    console.info('getRunningProcessInfoByBundleName success.');
+  }).catch((err: BusinessError) => {
+    console.error(`getRunningProcessInfoByBundleName fail, err: ${JSON.stringify(err)}`);
+  });
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`[appManager] error: ${code}, ${message}`);
+}
+```
+
+
+## getRunningProcessInfoByBundleName
+
+```TypeScript
+function getRunningProcessInfoByBundleName(bundleName: string, userId: int, callback: AsyncCallback<Array<ProcessInformation>>): void
+```
+
+Obtains information about the running processes by bundle name and user ID. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+<!--Device-appManager-function getRunningProcessInfoByBundleName(bundleName: string, userId: int, callback: AsyncCallback<Array<ProcessInformation>>): void--><!--Device-appManager-function getRunningProcessInfoByBundleName(bundleName: string, userId: int, callback: AsyncCallback<Array<ProcessInformation>>): void-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Bundle name. |
+| userId | int | Yes | User ID. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ProcessInformation&gt;&gt; | Yes | Callback used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+
+**Examples**
+
+See [getRunningProcessInfoByBundleName](#getrunningprocessinfobybundlename)
 
 
 ## getRunningProcessInfoByBundleName
@@ -158,24 +199,7 @@ Obtains information about the running processes by bundle name. This API uses a 
 
 **Examples**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = "bundleName";
-
-try {
-  appManager.getRunningProcessInfoByBundleName(bundleName).then((data) => {
-    console.info('getRunningProcessInfoByBundleName success.');
-  }).catch((err: BusinessError) => {
-    console.error(`getRunningProcessInfoByBundleName fail, err: ${JSON.stringify(err)}`);
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
+See [getRunningProcessInfoByBundleName](#getrunningprocessinfobybundlename)
 
 
 ## getRunningProcessInfoByBundleName
@@ -217,23 +241,5 @@ Obtains information about the running processes by bundle name and user ID. This
 
 **Examples**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = "bundleName";
-let userId = 0;
-
-try {
-  appManager.getRunningProcessInfoByBundleName(bundleName, userId).then((data) => {
-    console.info('getRunningProcessInfoByBundleName success.');
-  }).catch((err: BusinessError) => {
-    console.error(`getRunningProcessInfoByBundleName fail, err: ${JSON.stringify(err)}`);
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
+See [getRunningProcessInfoByBundleName](#getrunningprocessinfobybundlename)
 

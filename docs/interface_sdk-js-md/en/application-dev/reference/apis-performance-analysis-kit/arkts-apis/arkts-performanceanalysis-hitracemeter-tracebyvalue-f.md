@@ -41,6 +41,15 @@ hiTraceMeter.traceByValue("myTestCount", traceCount);
 // Service flow...
 ```
 
+```TypeScript
+const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;
+let traceCount = 3;
+hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);
+traceCount = 4;
+hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);
+// Service flow...
+```
+
 
 ## traceByValue
 
@@ -68,12 +77,5 @@ Traces an integer with the trace output level specified. It is used to mark the 
 
 **Examples**
 
-```TypeScript
-const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;
-let traceCount = 3;
-hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);
-traceCount = 4;
-hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);
-// Service flow...
-```
+See [traceByValue](#tracebyvalue)
 

@@ -106,6 +106,17 @@ onResultReport(bundleName: string, result: string): void
 | 13900025 | No space left on device |
 | 13900042 | Unknown error |
 
+**示例**
+
+```TypeScript
+import { backup } from '@kit.CoreFileKit';
+
+onResultReport: (bundleName: string, result: string) => {
+  console.info('onResultReport bundleName : ' + bundleName);
+  console.info('onResultReport result : ' + result);
+}
+```
+
 ## onAllBundlesEnd
 
 ```TypeScript

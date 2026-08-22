@@ -35,6 +35,12 @@ Obtains the first language in the preferred language list.
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
 
+let firstPreferredLanguage: string = i18n.System.getFirstPreferredLanguage();
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
 let firstPreferredLanguage: string = i18n.getFirstPreferredLanguage();
 ```
 

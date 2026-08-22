@@ -35,10 +35,10 @@ import { appAccount } from '@kit.BasicServicesKit';
 | [AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md) | 表示应用账号信息。 |
 | [AppAccountManager](arkts-basicservices-appaccount-appaccountmanager-i.md) | 应用账号管理器，可用于管理应用自身的账号信息。 |
 | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 认证器回调类。 |
-| [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | 表示认证结果信息。 |
-| [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md) | 表示Auth令牌信息。 |
 | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | OAuth认证器回调接口。 |
 | [AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md) | 表示OAuth认证器信息。 |
+| [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | 表示认证结果信息。 |
+| [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md) | 表示Auth令牌信息。 |
 | [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) | 表示隐式创建账号的选项。 |
 | [CreateAccountOptions](arkts-basicservices-appaccount-createaccountoptions-i.md) | 表示创建账号的选项。 |
 | [OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md) | 表示OAuth令牌信息。 |

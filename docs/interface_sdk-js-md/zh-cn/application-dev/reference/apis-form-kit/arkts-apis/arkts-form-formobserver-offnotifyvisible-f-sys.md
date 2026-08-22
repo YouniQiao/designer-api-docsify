@@ -42,3 +42,31 @@ Cancels listening to the event of notifyVisible type change. <p>You can use this
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+'use static'
+
+import { formInfo, formObserver } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const DOMAIN: int = 0x0000;
+const TAG: string = 'testTag formAgentTest';
+
+try {
+  let hostBundleName: string = 'com.example.demoForm';
+  let observerCallback = (data: Array<formInfo.RunningFormInfo>) => {
+    console.info('testTag', `formObserverStaticTest observerCallback success`);
+  };
+  formObserver.onNotifyVisible(hostBundleName, observerCallback);
+  console.info('testTag', 'formObserverStaticTest formObserver on success');
+  formObserver.offNotifyVisible(hostBundleName, observerCallback);
+  console.info('testTag', 'formObserverStaticTest formObserver off success');
+} catch (error) {
+  let code = error.code;
+  let message = error.message;
+  hilog.error(DOMAIN, TAG, `formObserverStaticTest catch error, code: ${code}, message: ${message})`);
+}
+```
+

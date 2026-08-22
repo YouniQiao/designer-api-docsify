@@ -32,7 +32,7 @@ Sets whether to enable the notification sync feature for devices where the appli
 | --- | --- | --- | --- |
 | userId | int | Yes | User ID. |
 | enable | boolean | Yes | Whether to enable the notification sync feature. The value **true** means to enable the feature, and **false** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -63,6 +63,19 @@ let setSyncNotificationEnabledWithoutAppCallback = (err: BusinessError): void =>
     }
 }
 notificationManager.setSyncNotificationEnabledWithoutApp(userId, enable, setSyncNotificationEnabledWithoutAppCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use the actual user ID when calling the API.
+let userId: number = 100;
+let enable: boolean = true;
+notificationManager.setSyncNotificationEnabledWithoutApp(userId, enable).then(() => {
+    console.info('setSyncNotificationEnabledWithoutApp success');
+}).catch((err: BusinessError) => {
+    console.error(`setSyncNotificationEnabledWithoutApp failed, code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -114,16 +127,5 @@ Sets whether to enable the notification sync feature for devices where the appli
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use the actual user ID when calling the API.
-let userId: number = 100;
-let enable: boolean = true;
-notificationManager.setSyncNotificationEnabledWithoutApp(userId, enable).then(() => {
-    console.info('setSyncNotificationEnabledWithoutApp success');
-}).catch((err: BusinessError) => {
-    console.error(`setSyncNotificationEnabledWithoutApp failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [setSyncNotificationEnabledWithoutApp](#setsyncnotificationenabledwithoutapp)
 

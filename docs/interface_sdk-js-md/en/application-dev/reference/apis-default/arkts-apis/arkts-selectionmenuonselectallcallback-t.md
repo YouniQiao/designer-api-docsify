@@ -20,5 +20,5 @@ Defines a SelectionMenu callback when onSelectAll.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [EditorEventInfo](arkts-arkuiadvancedselectionmenu-editoreventinfo-i.md) | No | the event info. |
+| event | [EditorEventInfo](arkts-arkui-advanced-selectionmenu-editoreventinfo-i.md) | No | the event info. |
 

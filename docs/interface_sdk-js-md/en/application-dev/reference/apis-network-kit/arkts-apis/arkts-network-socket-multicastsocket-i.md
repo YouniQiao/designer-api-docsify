@@ -44,7 +44,7 @@ Adds a member to a multicast group. This API uses an asynchronous callback to re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | multicastAddress | NetAddress | Yes | Destination address. For details, see NetAddress. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -73,6 +73,21 @@ multicast.addMembership(addr, (err: Object) => {
   }
   console.info('add membership success');
 })
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+let addr: socket.NetAddress = {
+  address: '239.255.0.1',
+  port: 8080
+}
+multicast.addMembership(addr).then(() => {
+  console.info('addMembership success');
+}).catch((err: Object) => {
+  console.error('addMembership fail');
+});
 ```
 
 ## addMembership
@@ -121,20 +136,7 @@ Adds a member to a multicast group. This API uses a promise to return the result
 
 **Examples**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-let addr: socket.NetAddress = {
-  address: '239.255.0.1',
-  port: 8080
-}
-multicast.addMembership(addr).then(() => {
-  console.info('addMembership success');
-}).catch((err: Object) => {
-  console.error('addMembership fail');
-});
-```
+See [addMembership](#addmembership)
 
 ## dropMembership
 
@@ -164,7 +166,7 @@ Drops a member from a multicast group. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | multicastAddress | NetAddress | Yes | Destination address. For details, see NetAddress. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -192,6 +194,21 @@ multicast.dropMembership(addr, (err: Object) => {
   }
   console.info('drop membership success');
 })
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+let addr: socket.NetAddress = {
+  address: '239.255.0.1',
+  port: 8080
+}
+multicast.dropMembership(addr).then(() => {
+  console.info('drop membership success');
+}).catch((err: Object) => {
+  console.error('drop membership fail');
+});
 ```
 
 ## dropMembership
@@ -240,20 +257,7 @@ Drops a member from a multicast group. This API uses a promise to return the res
 
 **Examples**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-let addr: socket.NetAddress = {
-  address: '239.255.0.1',
-  port: 8080
-}
-multicast.dropMembership(addr).then(() => {
-  console.info('drop membership success');
-}).catch((err: Object) => {
-  console.error('drop membership fail');
-});
-```
+See [dropMembership](#dropmembership)
 
 ## getLoopbackMode
 
@@ -284,7 +288,7 @@ Obtains the loopback mode flag for multicast communication. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the loopback mode is enabled, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the loopback mode is enabled, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -306,6 +310,17 @@ multicast.getLoopbackMode((err: Object, value: Boolean) => {
   }
   console.info('get loopback mode success, value: ' + JSON.stringify(value));
 })
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+multicast.getLoopbackMode().then((value: Boolean) => {
+  console.info('loopback mode: ', JSON.stringify(value));
+}).catch((err: Object) => {
+  console.error('get loopback mode failed');
+});
 ```
 
 ## getLoopbackMode
@@ -348,16 +363,7 @@ Obtains the loopback mode flag for multicast communication. This API uses a prom
 
 **Examples**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-multicast.getLoopbackMode().then((value: Boolean) => {
-  console.info('loopback mode: ', JSON.stringify(value));
-}).catch((err: Object) => {
-  console.error('get loopback mode failed');
-});
-```
+See [getLoopbackMode](#getloopbackmode)
 
 ## getMulticastTTL
 
@@ -390,7 +396,7 @@ Obtains the TTL for multicast packets. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -412,6 +418,17 @@ multicast.getMulticastTTL((err: Object, value: Number) => {
   }
   console.info('set ttl success, value: ' + JSON.stringify(value));
 })
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+multicast.getMulticastTTL().then((value: Number) => {
+  console.info('ttl: ', JSON.stringify(value));
+}).catch((err: Object) => {
+  console.error('set ttl failed');
+});
 ```
 
 ## getMulticastTTL
@@ -456,16 +473,7 @@ Obtains the TTL for multicast packets. This API uses a promise to return the res
 
 **Examples**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-multicast.getMulticastTTL().then((value: Number) => {
-  console.info('ttl: ', JSON.stringify(value));
-}).catch((err: Object) => {
-  console.error('set ttl failed');
-});
-```
+See [getMulticastTTL](#getmulticastttl)
 
 ## getSocketFd
 
@@ -515,6 +523,28 @@ Obtains the file descriptor of the MulticastSocket. This API uses a promise to r
 import { socket } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+let bindAddr: socket.NetAddress = {
+    address: '192.168.xx.xxx',
+    port: 8080
+}
+udp.bind(bindAddr)
+  .then(() => {
+    udp.getSocketFd()
+      .then((fd: number) => {
+        console.info(`Socket FD: ${fd}`);
+      }).catch((err: BusinessError) => {
+      console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
+    });
+  }).catch((err: BusinessError) => {
+  console.error('bind fail');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
 let bindAddr: socket.NetAddress = {
     address: '192.168.xx.xxx',
@@ -530,6 +560,273 @@ multicast.bind(bindAddr)
     });
   }).catch((err: BusinessError) => {
   console.error('bind fail');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  // Bind the specified network API.
+}
+tcp.bind(bindAddr)
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tcpconnectoptions: socket.TCPConnectOptions = {
+  address: netAddress,
+  timeout: 6000
+}
+tcp.connect(tcpconnectoptions)
+tcp.getSocketFd((err: BusinessError, data: number) => {
+  console.error("getSocketFd failed: " + err);
+  console.info("socketFd: " + data);
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let bindAddr: socket.NetAddress = {
+    address: '192.168.xx.xxx',
+  // Bind the specified network API.
+}
+tcp.bind(bindAddr)
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tcpconnectoptions: socket.TCPConnectOptions = {
+  address: netAddress,
+  timeout: 6000
+}
+tcp.connect(tcpconnectoptions)
+tcp.getSocketFd().then((data: number) => {
+  console.info("socketFd: " + data);
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+let listenAddr: socket.NetAddress = {
+  address:  '192.168.xx.xxx',
+  port: 8080,
+  family: 1
+}
+tcpServer.listen(listenAddr).then(() => {
+  console.info('listen success');
+  tcpServer.getSocketFd().then((fd: number) => {
+    console.info(`Socket FD: ${fd}`);
+  }).catch((err: BusinessError) => {
+    console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
+  });
+}).catch((err: BusinessError) => {
+  console.error('listen fail');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+let listenAddr: socket.NetAddress = {
+  address: "192.168.xx.xx",
+  port: 8080,
+  family: 1
+}
+tcpServer.listen(listenAddr, (err: BusinessError) => {
+  tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
+    client.getSocketFd().then((fd: number) => {
+      console.info(`Socket FD: ${fd}`);
+    }).catch((err: BusinessError) => {
+      console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
+    });
+  })
+}).catch((err: BusinessError) => {
+  console.error('listen fail');
+});
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let localAddress : socket.LocalAddress = {
+  address: sandboxPath
+}
+let connectOpt: socket.LocalConnectOptions = {
+  address: localAddress,
+  timeout: 6000
+}
+client.connect(connectOpt).then(() => {
+  console.info('connect ok')
+}).catch((err: Object) => {
+  console.error('connect fail: ' + JSON.stringify(err))
+})
+client.getSocketFd().then((data: number) => {
+  console.info("fd: " + data);
+}).catch((err: Object) => {
+  console.error("getSocketFd failed: " + JSON.stringify(err));
+})
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let listenAddr : socket.LocalAddress = {
+  address: sandboxPath
+}
+
+server.listen(listenAddr).then(() => {
+  console.info("listen success");
+  server.getSocketFd().then((fd: number) => {
+    console.info(`Socket FD: ${fd}`);
+  }).catch((err: Object) => {
+    console.error(`getSocketFd fail: ${JSON.stringify(err)}`);
+  });
+}).catch((err: Object) => {
+  console.error("listen fail: " + JSON.stringify(err));
+})
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let listenAddr : socket.LocalAddress = {
+  address: sandboxPath
+}
+server.on('connect', (connection: socket.LocalSocketConnection) => {
+  connection.getSocketFd().then((fd: number) => {
+    console.info(`Socket FD: ${fd}`);
+  }).catch((err: Object) => {
+    console.error(`getSocketFd fail: ${JSON.stringify(err)}`);
+  });
+});
+server.listen(listenAddr).then(() => {
+  console.info("listen success");
+}).catch((err: Object) => {
+  console.error(`listen fail: ${JSON.stringify(err)}`);
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+tls.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+});
+tls.getSocketFd().then((data: number) => {
+  console.info("tls socket fd: " + data);
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen success");
+  tlsServer.getSocketFd().then((fd: number) => {
+    console.info(`Socket FD: ${fd}`);
+  }).catch((err: BusinessError) => {
+    console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
+  });
+}).catch((err: BusinessError) => {
+  console.error(`listen failed: ${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen success");
+  tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
+    client.getSocketFd().then((fd: number) => {
+      console.info(`Socket FD: ${fd}`);
+    }).catch((err: BusinessError) => {
+      console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
+    })
+  });
+}).catch((err: BusinessError) => {
+  console.error(`listen failed: ${JSON.stringify(err)}`);
 });
 ```
 
@@ -563,7 +860,7 @@ Sets the loopback mode flag for multicast communication. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | flag | boolean | Yes | Whether to enable the loopback mode. The value **true** means to enable the loopback mode, and the value **false** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -585,6 +882,17 @@ multicast.setLoopbackMode(false, (err: Object) => {
   }
   console.info('set loopback mode success');
 })
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+multicast.setLoopbackMode(false).then(() => {
+  console.info('set loopback mode success');
+}).catch((err: Object) => {
+  console.error('set loopback mode failed');
+});
 ```
 
 ## setLoopbackMode
@@ -633,16 +941,7 @@ Sets the loopback mode flag for multicast communication. This API uses a promise
 
 **Examples**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-multicast.setLoopbackMode(false).then(() => {
-  console.info('set loopback mode success');
-}).catch((err: Object) => {
-  console.error('set loopback mode failed');
-});
-```
+See [setLoopbackMode](#setloopbackmode)
 
 ## setMulticastTTL
 
@@ -676,7 +975,7 @@ Sets the time to live (TTL) for multicast packets. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ttl | int | Yes | TTL value. The value is of the number type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -700,6 +999,17 @@ multicast.setMulticastTTL(ttl, (err: Object) => {
   }
   console.info('set ttl success');
 })
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+multicast.setMulticastTTL(8).then(() => {
+  console.info('set ttl success');
+}).catch((err: Object) => {
+  console.error('set ttl failed');
+});
 ```
 
 ## setMulticastTTL
@@ -751,16 +1061,7 @@ Sets the TTL for multicast packets. This API uses a promise to return the result
 
 **Examples**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-multicast.setMulticastTTL(8).then(() => {
-  console.info('set ttl success');
-}).catch((err: Object) => {
-  console.error('set ttl failed');
-});
-```
+See [setMulticastTTL](#setmulticastttl)
 
 ## setReuseAddress
 

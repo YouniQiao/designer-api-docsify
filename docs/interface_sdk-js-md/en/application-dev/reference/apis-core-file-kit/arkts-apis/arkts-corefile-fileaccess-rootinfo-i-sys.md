@@ -46,7 +46,7 @@ Obtains a **FileIterator** object that lists the next-level files or directories
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-default/arkts-apis/arkts-filefs-filter-i.md) | No | Indicates the filter of file. |
+| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | No | Indicates the filter of file. |
 
 **Return value:**
 
@@ -94,6 +94,36 @@ Obtains a **FileIterator** object that lists the next-level files or directories
 | 14300004 | Get wrong result |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// fileInfoDir indicates information about a directory.
+// let filter = { suffix : [".txt", ".jpg", ".xlsx"] };
+let fileInfoDir :Array<fileAccess.FileInfo> = [];
+let subfileInfos: Array<fileAccess.FileInfo> = [];
+let isDone: boolean = false;
+try {
+  for (let i = 0; i < fileInfoDir.length; ++i) {
+    let fileIterator = fileInfoDir[i].listFile();
+    // listFile() with the filter implementation.
+    // let fileIterator = fileInfoDir.listFile(filter);
+    if (!fileIterator) {
+      console.error("listFile interface returns an undefined object");
+    }
+    while (!isDone) {
+      let result = fileIterator.next();
+      console.info("next result = " + JSON.stringify(result));
+      isDone = result.done;
+      if (!isDone) {
+        subfileInfos.push(result.value);
+      }
+    }
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("listFile failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -151,7 +181,7 @@ Obtains a **FileIterator** object that recursively retrieves the files matching 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-default/arkts-apis/arkts-filefs-filter-i.md) | No | Indicates the filter of file. |
+| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | No | Indicates the filter of file. |
 
 **Return value:**
 
@@ -199,6 +229,36 @@ Obtains a **FileIterator** object that recursively retrieves the files matching 
 | 14300004 | Get wrong result |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// fileInfoDir indicates information about a directory.
+// let filter = {suffix : [".txt", ".jpg", ".xlsx"]};
+let fileInfoDir: Array<fileAccess.FileInfo> = [];
+let subfileInfos: Array<fileAccess.FileInfo> = [];
+let isDone: boolean = false;
+try {
+  for (let i = 0; i < fileInfoDir.length; ++i) {
+    let fileIterator = fileInfoDir[i].scanFile();
+    // scanFile() with the filter implementation.
+    // let fileIterator = fileInfoDir.scanFile(filter);
+    if (!fileIterator) {
+      console.error("scanFile interface returns an undefined object");
+    }
+    while (!isDone) {
+      let result = fileIterator.next();
+      console.info("next result = " + JSON.stringify(result));
+      isDone = result.done;
+      if (!isDone) {
+        subfileInfos.push(result.value);
+      }
+    }
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("scanFile failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

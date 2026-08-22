@@ -51,6 +51,38 @@ import { fileIo } from '@kit.CoreFileKit';
 
 let modelFile = '/path/to/xxx.ms';
 let file = fileIo.openSync(modelFile, fileIo.OpenMode.READ_ONLY);
+mindSporeLite.loadModelFromFd(file.fd, (mindSporeLiteModel: mindSporeLite.Model) => {
+  let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
+  if (modelInputs == null) {
+    console.error('MS_LITE_ERR: getInputs failed.')
+  } else {
+    console.info(modelInputs[0].name);
+  }
+})
+```
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+
+let modelFile = '/path/to/xxx.ms';
+let context: mindSporeLite.Context = {};
+context.target = ['cpu'];
+let file = fileIo.openSync(modelFile, fileIo.OpenMode.READ_ONLY);
+mindSporeLite.loadModelFromFd(file.fd, context, (mindSporeLiteModel: mindSporeLite.Model) => {
+  let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
+  if (modelInputs == null) {
+    console.error('MS_LITE_ERR: getInputs failed.')
+  } else {
+    console.info(modelInputs[0].name);
+  }
+})
+```
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+
+let modelFile = '/path/to/xxx.ms';
+let file = fileIo.openSync(modelFile, fileIo.OpenMode.READ_ONLY);
 mindSporeLite.loadModelFromFd(file.fd).then((mindSporeLiteModel: mindSporeLite.Model) => {
   let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
   if (modelInputs == null) {
@@ -84,7 +116,7 @@ Create a Model instance from file description
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | model | int | Yes | model indicates model file description to be loaded |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes | the callback of model |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes | the callback of model |
 
 **Error codes:**
 
@@ -95,20 +127,7 @@ Create a Model instance from file description
 
 **Examples**
 
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-
-let modelFile = '/path/to/xxx.ms';
-let file = fileIo.openSync(modelFile, fileIo.OpenMode.READ_ONLY);
-mindSporeLite.loadModelFromFd(file.fd, (mindSporeLiteModel: mindSporeLite.Model) => {
-  let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
-  if (modelInputs == null) {
-    console.error('MS_LITE_ERR: getInputs failed.')
-  } else {
-    console.info(modelInputs[0].name);
-  }
-})
-```
+See [loadModelFromFd](#loadmodelfromfd)
 
 
 ## loadModelFromFd
@@ -135,7 +154,7 @@ Create a Model instance from file description
 | --- | --- | --- | --- |
 | model | int | Yes | model indicates model file description to be loaded |
 | context | Context | Yes | context indicates model context information |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes | the callback of model |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes | the callback of model |
 
 **Error codes:**
 
@@ -146,20 +165,5 @@ Create a Model instance from file description
 
 **Examples**
 
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-
-let modelFile = '/path/to/xxx.ms';
-let context: mindSporeLite.Context = {};
-context.target = ['cpu'];
-let file = fileIo.openSync(modelFile, fileIo.OpenMode.READ_ONLY);
-mindSporeLite.loadModelFromFd(file.fd, context, (mindSporeLiteModel: mindSporeLite.Model) => {
-  let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
-  if (modelInputs == null) {
-    console.error('MS_LITE_ERR: getInputs failed.')
-  } else {
-    console.info(modelInputs[0].name);
-  }
-})
-```
+See [loadModelFromFd](#loadmodelfromfd)
 

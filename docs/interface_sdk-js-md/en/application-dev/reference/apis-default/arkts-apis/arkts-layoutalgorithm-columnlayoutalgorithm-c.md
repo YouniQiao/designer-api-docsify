@@ -4,7 +4,7 @@ Defines the column layout algorithm.
 
 @implements LayoutAlgorithm
 
-**Inheritance/Implementation:** ColumnLayoutAlgorithm implements [LayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-i.md)
+**Inheritance/Implementation:** ColumnLayoutAlgorithm implements [LayoutAlgorithm](arkts-layoutalgorithm-i.md)
 
 **Since:** 24
 
@@ -36,7 +36,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [ColumnLayoutAlgorithmOptions](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-columnlayoutalgorithmoptions-i.md) | No | set properties of column layout algorithm. |
+| option | [ColumnLayoutAlgorithmOptions](arkts-layoutalgorithm-columnlayoutalgorithmoptions-i.md) | No | set properties of column layout algorithm. |
 
 ## alignItems
 

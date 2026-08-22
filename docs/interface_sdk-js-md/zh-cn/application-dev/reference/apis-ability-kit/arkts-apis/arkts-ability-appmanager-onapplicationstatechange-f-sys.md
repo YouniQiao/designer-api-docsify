@@ -45,3 +45,110 @@ function onApplicationStateChange(observer: ApplicationStateObserver, filter: Ap
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service failed to communicate with dependency module. |
 
+**示例**
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class CustomApplicationStateObserver implements appManager.ApplicationStateObserver {
+  public appStateData?: appManager.AppStateData;
+  public abilityStateData?: appManager.AbilityStateData;
+  public processData?: appManager.ProcessData;
+
+  onForegroundApplicationChanged(appStateData: appManager.AppStateData): void {
+    console.info(`[appManager] onForegroundApplicationChanged: ${JSON.stringify(appStateData)}`);
+  }
+
+  onAbilityStateChanged(abilityStateData: appManager.AbilityStateData): void {
+    console.info(`[appManager] onAbilityStateChanged: ${JSON.stringify(abilityStateData)}`);
+  }
+
+  onProcessCreated(processData: appManager.ProcessData): void {
+    console.info(`[appManager] onProcessCreated: ${JSON.stringify(processData)}`);
+  }
+
+  onProcessDied(processData: appManager.ProcessData): void {
+    console.info(`[appManager] onProcessDied: ${JSON.stringify(processData)}`);
+  }
+
+  onProcessStateChanged(processData: appManager.ProcessData) {
+    console.info(`[appManager] onProcessStateChanged: ${JSON.stringify(processData)}`);
+  }
+
+  onAppStarted(appStateData: appManager.AppStateData) {
+    console.info(`[appManager] onAppStarted: ${JSON.stringify(appStateData)}`);
+  }
+
+  onAppStopped(appStateData: appManager.AppStateData) {
+    console.info(`[appManager] onAppStopped: ${JSON.stringify(appStateData)}`);
+  }
+}
+
+try {
+  let applicationStateObserver = new CustomApplicationStateObserver();
+  const observerId = appManager.onApplicationStateChange(applicationStateObserver);
+  console.info(`[appManager] observerCode: ${observerId}`);
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`[appManager] error: ${code}, ${message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class CustomApplicationStateObserver implements appManager.ApplicationStateObserver {
+  public appStateData?: appManager.AppStateData;
+  public abilityStateData?: appManager.AbilityStateData;
+  public processData?: appManager.ProcessData;
+
+  onForegroundApplicationChanged(appStateData: appManager.AppStateData): void {
+    console.info(`[appManager] onForegroundApplicationChanged: ${JSON.stringify(appStateData)}`);
+  }
+
+  onAbilityStateChanged(abilityStateData: appManager.AbilityStateData): void {
+    console.info(`[appManager] onAbilityStateChanged: ${JSON.stringify(abilityStateData)}`);
+  }
+
+  onProcessCreated(processData: appManager.ProcessData): void {
+    console.info(`[appManager] onProcessCreated: ${JSON.stringify(processData)}`);
+  }
+
+  onProcessDied(processData: appManager.ProcessData): void {
+    console.info(`[appManager] onProcessDied: ${JSON.stringify(processData)}`);
+  }
+
+  onProcessStateChanged(processData: appManager.ProcessData) {
+    console.info(`[appManager] onProcessStateChanged: ${JSON.stringify(processData)}`);
+  }
+
+  onAppStarted(appStateData: appManager.AppStateData) {
+    console.info(`[appManager] onAppStarted: ${JSON.stringify(appStateData)}`);
+  }
+
+  onAppStopped(appStateData: appManager.AppStateData) {
+    console.info(`[appManager] onAppStopped:  ${JSON.stringify(appStateData)}`);
+  }
+}
+
+try {
+  let bundleNameList = ['bundleName1', 'bundleName2'];
+  let applicationStateObserver = new CustomApplicationStateObserver();
+  const observerId = appManager.onApplicationStateChange(applicationStateObserver, bundleNameList);
+  console.info(`[appManager] observerCode: ${observerId}`);
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`[appManager] error: ${code}, ${message}`);
+}
+```
+

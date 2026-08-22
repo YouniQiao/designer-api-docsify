@@ -12,7 +12,7 @@ import { abilityManager } from '@kit.AbilityKit';
 function offPreloadedUIExtensionAbilityDestroyed(callback?: PreloadedUIExtensionAbilityDestroyedFn): void
 ```
 
-注销当前进程中预加载的[UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md)实例的销毁监听。
+注销当前进程中预加载的[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)实例的销毁监听。
 
 **起始版本：** 23
 

@@ -42,6 +42,84 @@ function deleteInvalidForms(formIds: Array<string>, callback: AsyncCallback<int>
 | [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+
+try {
+  let formIds: string[] = new Array('12400633174999288', '12400633174999289');
+  formHost.deleteInvalidForms(formIds, (error: BusinessError, data: number) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      console.info(`formHost deleteInvalidForms, data: ${data}`);
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let formIds: Array<string> = new Array<string>('12400633174999288', '12400633174999289');
+  formHost.deleteInvalidForms(formIds, (error, data) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      console.info(`formHost deleteInvalidForms`);
+    }
+  });
+} catch(error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+
+try {
+  let formIds: string[] = new Array('12400633174999288', '12400633174999289');
+  formHost.deleteInvalidForms(formIds).then((data: number) => {
+    console.info(`formHost deleteInvalidForms, data: ${data}`);
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let formIds: Array<string> = new Array<string>('12400633174999288', '12400633174999289');
+  formHost.deleteInvalidForms(formIds).then((data: int) => {
+    console.info(`formHost deleteInvalidForms, data: ${data}`);
+  }).catch((error) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch(error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
 
 ## deleteInvalidForms
 
@@ -83,4 +161,8 @@ function deleteInvalidForms(formIds: Array<string>): Promise<int>
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+
+**示例**
+
+参见 [deleteInvalidForms](#deleteinvalidforms)
 

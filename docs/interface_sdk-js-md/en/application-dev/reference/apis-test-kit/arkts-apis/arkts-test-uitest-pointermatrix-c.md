@@ -54,10 +54,28 @@ Creates a **PointerMatrix** object and returns the object created. This API is a
 
 ```TypeScript
 // xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { PointerMatrix } from '@kit.TestKit';
 
 async function demo() {
   let pointerMatrix: PointerMatrix = PointerMatrix.create(2, 3);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
 }
 ```
 

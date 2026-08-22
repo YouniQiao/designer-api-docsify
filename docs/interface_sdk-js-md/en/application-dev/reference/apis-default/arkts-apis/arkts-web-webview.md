@@ -104,8 +104,8 @@ This module provides the capability to manage web modules.
 | [ProxySchemeFilter](arkts-webview-proxyschemefilter-e.md) | Enum type supplied to [insertProxyRule](arkts-webview-proxyconfig-c.md#insertproxyrule) for indicating the scheme filter for proxy. @enum { number } |
 | [ReadyState](arkts-webview-readystate-e.md) | Enumerates the cache states of the player. |
 | [RenderProcessMode](arkts-webview-renderprocessmode-e.md) | Defines the render process mode. |
-| [ScrollType](arkts-webview-scrolltype-e.md) | Enum type supplied to [setScrollable](arkts-webview-webviewcontroller-c.md#setscrollable) for indicating the type of scroll. |
 | [ScrollbarMode](arkts-webview-scrollbarmode-e.md) | Enum type supplied to [setScrollbarMode](arkts-webview-webviewcontroller-c.md#setscrollbarmode) for indicating the web component scrollbar mode. |
+| [ScrollType](arkts-webview-scrolltype-e.md) | Enum type supplied to [setScrollable](arkts-webview-webviewcontroller-c.md#setscrollable) for indicating the type of scroll. |
 | [SecureDnsMode](arkts-webview-securednsmode-e.md) | Defines the mode for using HttpDns. @enum {number} |
 | [SecurityLevel](arkts-webview-securitylevel-e.md) | Defines the security level for the page. |
 | [SiteIsolationMode](arkts-webview-siteisolationmode-e.md) | Indicates the site isolation mode of the application, default value depends on different devices type. @enum {number} |
@@ -127,8 +127,8 @@ This module provides the capability to manage web modules.
 | Name | Description |
 | --- | --- |
 | [CreateNativeMediaPlayerCallback](arkts-webview-createnativemediaplayercallback-t.md) | Defines a **CreateNativeMediaPlayerCallback** object used as a parameter of the [onCreateNativeMediaPlayer](../../../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer) callback. This object is used to create a player to take over media playback of the web page. |
-| [OnProxyConfigChangeCallback](arkts-webview-onproxyconfigchangecallback-t.md) | The callback for proxy changed. |
 | [OneParamFn](arkts-webview-oneparamfn-t.md) | The function with one parameter. |
+| [OnProxyConfigChangeCallback](arkts-webview-onproxyconfigchangecallback-t.md) | The callback for proxy changed. |
 | [ResumePlayerFn](arkts-webview-resumeplayerfn-t.md) | The function of reusme media play. |
 | [SuspendPlayerFn](arkts-webview-suspendplayerfn-t.md) | The function of suspend media play. |
 | [UpdateRectFn](arkts-webview-updaterectfn-t.md) | The function of the rect of video tag has changed. |

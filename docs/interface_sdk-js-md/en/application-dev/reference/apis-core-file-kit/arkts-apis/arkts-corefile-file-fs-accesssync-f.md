@@ -31,7 +31,7 @@ If the read, write, or read and write permission verification fails, the error c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file or directory. |
-| mode | [AccessModeType](arkts-corefile-filefs-accessmodetype-e.md) | No | Permission on the file or directory to check. If this parameter is left blank, the system checks whether the file or directory exists.<br>**Since:** 12 |
+| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | No | Permission on the file or directory to check. If this parameter is left blank, the system checks whether the file or directory exists.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -56,6 +56,40 @@ If the read, write, or read and write permission verification fails, the error c
 | 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + "/test.txt";
+try {
+  let res = fs.accessSync(filePath);
+  if (res) {
+    console.info("file exists");
+  } else {
+    console.info("file not exists");
+  }
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error("accessSync failed with error message: " + err.message + ", error code: " + err.code);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + "/test.txt";
+try {
+  let res = fs.accessSync(filePath, fs.AccessModeType.EXIST, fs.AccessFlagType.LOCAL);
+  if (res) {
+    console.info("file exists");
+  } else {
+    console.info("file not exists");
+  }
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error("accessSync failed with error message: " + err.message + ", error code: " + err.code);
+}
+```
+
 
 ## accessSync
 
@@ -78,8 +112,8 @@ If the read, write, or read and write permission verification fails, the error c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file to check. |
-| mode | [AccessModeType](arkts-corefile-filefs-accessmodetype-e.md) | Yes | Permission on the file or directory to check. |
-| flag | [AccessFlagType](arkts-corefile-filefs-accessflagtype-e.md) | Yes | Position of the file or directory to check. |
+| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | Yes | Permission on the file or directory to check. |
+| flag | [AccessFlagType](arkts-corefile-file-fs-accessflagtype-e.md) | Yes | Position of the file or directory to check. |
 
 **Return value:**
 
@@ -101,4 +135,8 @@ If the read, write, or read and write permission verification fails, the error c
 | 13900023 | Text file busy |
 | 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
+
+**Examples**
+
+See [accessSync](#accesssync)
 

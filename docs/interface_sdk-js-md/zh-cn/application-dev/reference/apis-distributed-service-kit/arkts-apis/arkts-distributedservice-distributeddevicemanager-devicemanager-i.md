@@ -116,6 +116,10 @@ bindTarget(deviceId: string, bindParam: Record<string, int | string>, callback: 
 | [11600101](../errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 | [11600103](../errorcode-device-manager.md#11600103-认证业务不可用) | Authentication unavailable. |
 
+**示例**
+
+参见 [bindTarget](#bindtarget)
+
 ## getAvailableDeviceList
 
 ```TypeScript
@@ -168,6 +172,25 @@ try {
 }
 ```
 
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 创建设备管理实例
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  // 获取所有在线可信设备
+  dmInstance.getAvailableDeviceList().then((data: Array<distributedDeviceManager.DeviceBasicInfo>) => {
+    console.info('get available device info: ' + JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get available device list. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to get available device list. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getAvailableDeviceList
 
 ```TypeScript
@@ -199,24 +222,7 @@ getAvailableDeviceList(): Promise<Array<DeviceBasicInfo>>
 
 **示例**
 
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 创建设备管理实例
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  // 获取所有在线可信设备
-  dmInstance.getAvailableDeviceList().then((data: Array<distributedDeviceManager.DeviceBasicInfo>) => {
-    console.info('get available device info: ' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get available device list. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to get available device list. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [getAvailableDeviceList](#getavailabledevicelist)
 
 ## getAvailableDeviceListSync
 
@@ -578,226 +584,6 @@ try {
 }
 ```
 
-## offDeviceNameChange
-
-```TypeScript
-offDeviceNameChange(callback?: Callback<DeviceNameChangeResult>): void
-```
-
-取消注册设备名称变更回调监听。使用callback异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DeviceManager-offDeviceNameChange(callback?: Callback<DeviceNameChangeResult>): void--><!--Device-DeviceManager-offDeviceNameChange(callback?: Callback<DeviceNameChangeResult>): void-End-->
-
-**系统能力：** SystemCapability.DistributedHardware.DeviceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md)&gt; | 否 | 指示要取消注册设备名称改变的回调方法。 如果指定该参数则取消对应callback，否则取消所有已注册的deviceNameChange回调。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.offDeviceNameChange((data: distributedDeviceManager.DeviceNameChangeResult) => {
-    console.info('deviceNameChange' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error(`deviceNameChange errCode: ${e.code}, errMessage: ${e.message}`);
-}
-```
-
-## offDeviceStateChange
-
-```TypeScript
-offDeviceStateChange(callback?: Callback<DeviceStateChangeResult>): void
-```
-
-取消注册设备状态回调。使用callback异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DeviceManager-offDeviceStateChange(callback?: Callback<DeviceStateChangeResult>): void--><!--Device-DeviceManager-offDeviceStateChange(callback?: Callback<DeviceStateChangeResult>): void-End-->
-
-**系统能力：** SystemCapability.DistributedHardware.DeviceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md)&gt; | 否 | 指示要取消注册的设备状态回调，返回设备状态和设备信息。 如果指定该参数则取消对应callback，否则取消所有已注册的deviceStateChange回调。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.offDeviceStateChange((data: distributedDeviceManager.DeviceStateChangeResult) => {
-    console.info('deviceStateChange' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error(`deviceStateChange errCode: ${e.code}, errMessage: ${e.message}`);
-}
-```
-
-## offDiscoverFailure
-
-```TypeScript
-offDiscoverFailure(callback?: Callback<DiscoveryFailureResult>): void
-```
-
-取消注册设备发现失败回调。使用callback异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DeviceManager-offDiscoverFailure(callback?: Callback<DiscoveryFailureResult>): void--><!--Device-DeviceManager-offDiscoverFailure(callback?: Callback<DiscoveryFailureResult>): void-End-->
-
-**系统能力：** SystemCapability.DistributedHardware.DeviceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md)&gt; | 否 | 指示要取消注册的设备发现失败回调。如果指定该参数则取消 对应callback，否则取消所有已注册的discoverFailure回调。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.offDiscoverFailure((data: distributedDeviceManager.DiscoveryFailureResult) => {
-    console.info('discoverFailure' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error(`discoverFailure errCode: ${e.code}, errMessage: ${e.message}`);
-}
-```
-
-## offDiscoverSuccess
-
-```TypeScript
-offDiscoverSuccess(callback?: Callback<DiscoverySuccessResult>): void
-```
-
-取消注册设备发现成功回调。使用callback异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DeviceManager-offDiscoverSuccess(callback?: Callback<DiscoverySuccessResult>): void--><!--Device-DeviceManager-offDiscoverSuccess(callback?: Callback<DiscoverySuccessResult>): void-End-->
-
-**系统能力：** SystemCapability.DistributedHardware.DeviceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md)&gt; | 否 | 指示要取消注册的设备发现回调，返回设备状态和设备信息。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.offDiscoverSuccess((data: distributedDeviceManager.DiscoverySuccessResult) => {
-    console.info('discoverSuccess' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error(`discoverSuccess errCode: ${e.code}, errMessage: ${e.message}`);
-}
-```
-
-## offServiceDie
-
-```TypeScript
-offServiceDie(callback?: Callback<ServiceDieData>): void
-```
-
-取消注册设备管理服务死亡回调。使用callback异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DeviceManager-offServiceDie(callback?: Callback<ServiceDieData>): void--><!--Device-DeviceManager-offServiceDie(callback?: Callback<ServiceDieData>): void-End-->
-
-**系统能力：** SystemCapability.DistributedHardware.DeviceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md)&gt; | 否 | 指示要取消注册的serviceDie回调。如果指定该参数则取消对应callback， 否则取消所有已注册的serviceDie回调。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.offServiceDie((data: distributedDeviceManager.ServiceDieData) => {
-    console.info('serviceDie off');
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error(`serviceDie errCode: ${e.code}, errMessage: ${e.message}`);
-}
-```
-
 ## off('deviceNameChange')
 
 ```TypeScript
@@ -1070,19 +856,19 @@ try {
 }
 ```
 
-## onDeviceNameChange
+## offDeviceNameChange
 
 ```TypeScript
-onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void
+offDeviceNameChange(callback?: Callback<DeviceNameChangeResult>): void
 ```
 
-注册设备名称变更回调，以便在设备名称改变时通知应用。使用callback异步回调。
+取消注册设备名称变更回调监听。使用callback异步回调。
 
 **起始版本：** 23
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
-<!--Device-DeviceManager-onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void--><!--Device-DeviceManager-onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void-End-->
+<!--Device-DeviceManager-offDeviceNameChange(callback?: Callback<DeviceNameChangeResult>): void--><!--Device-DeviceManager-offDeviceNameChange(callback?: Callback<DeviceNameChangeResult>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -1090,7 +876,7 @@ onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md)&gt; | 是 | 注册设备名称改变的回调方法，返回变更后的设备名称。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md)&gt; | 否 | 指示要取消注册设备名称改变的回调方法。 如果指定该参数则取消对应callback，否则取消所有已注册的deviceNameChange回调。 |
 
 **错误码：**
 
@@ -1105,8 +891,8 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.onDeviceNameChange((data: distributedDeviceManager.DeviceNameChangeResult) => {
-    console.info('deviceNameChange on:' + JSON.stringify(data));
+  dmInstance.offDeviceNameChange((data: distributedDeviceManager.DeviceNameChangeResult) => {
+    console.info('deviceNameChange' + JSON.stringify(data));
   });
 } catch (err) {
   let e: BusinessError = err as BusinessError;
@@ -1114,19 +900,19 @@ try {
 }
 ```
 
-## onDeviceStateChange
+## offDeviceStateChange
 
 ```TypeScript
-onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void
+offDeviceStateChange(callback?: Callback<DeviceStateChangeResult>): void
 ```
 
-注册设备状态回调，以便在设备状态发生变化时通知应用。使用callback异步回调。
+取消注册设备状态回调。使用callback异步回调。
 
 **起始版本：** 23
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
-<!--Device-DeviceManager-onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void--><!--Device-DeviceManager-onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void-End-->
+<!--Device-DeviceManager-offDeviceStateChange(callback?: Callback<DeviceStateChangeResult>): void--><!--Device-DeviceManager-offDeviceStateChange(callback?: Callback<DeviceStateChangeResult>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -1134,51 +920,7 @@ onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md)&gt; | 是 | 指示要注册的设备状态回调，返回设备状态和设备信息。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.onDeviceStateChange((data: distributedDeviceManager.DeviceStateChangeResult) => {
-    console.info('deviceStateChange on:' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error(`deviceStateChange errCode: ${e.code}, errMessage: ${e.message}`);
-}
-```
-
-## onDiscoverFailure
-
-```TypeScript
-onDiscoverFailure(callback: Callback<DiscoveryFailureResult>): void
-```
-
-注册设备发现失败回调。使用callback异步回调。此回调在调用startDiscovering发现设备失败时触发， 返回失败原因。需在调用startDiscovering之前注册此回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DeviceManager-onDiscoverFailure(callback: Callback<DiscoveryFailureResult>): void--><!--Device-DeviceManager-onDiscoverFailure(callback: Callback<DiscoveryFailureResult>): void-End-->
-
-**系统能力：** SystemCapability.DistributedHardware.DeviceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md)&gt; | 是 | 注册设备发现失败的回调方法。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md)&gt; | 否 | 指示要取消注册的设备状态回调，返回设备状态和设备信息。 如果指定该参数则取消对应callback，否则取消所有已注册的deviceStateChange回调。 |
 
 **错误码：**
 
@@ -1193,7 +935,51 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.onDiscoverFailure((data: distributedDeviceManager.DiscoveryFailureResult) => {
+  dmInstance.offDeviceStateChange((data: distributedDeviceManager.DeviceStateChangeResult) => {
+    console.info('deviceStateChange' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`deviceStateChange errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
+
+## offDiscoverFailure
+
+```TypeScript
+offDiscoverFailure(callback?: Callback<DiscoveryFailureResult>): void
+```
+
+取消注册设备发现失败回调。使用callback异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-offDiscoverFailure(callback?: Callback<DiscoveryFailureResult>): void--><!--Device-DeviceManager-offDiscoverFailure(callback?: Callback<DiscoveryFailureResult>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md)&gt; | 否 | 指示要取消注册的设备发现失败回调。如果指定该参数则取消 对应callback，否则取消所有已注册的discoverFailure回调。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.offDiscoverFailure((data: distributedDeviceManager.DiscoveryFailureResult) => {
     console.info('discoverFailure' + JSON.stringify(data));
   });
 } catch (err) {
@@ -1202,19 +988,19 @@ try {
 }
 ```
 
-## onDiscoverSuccess
+## offDiscoverSuccess
 
 ```TypeScript
-onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void
+offDiscoverSuccess(callback?: Callback<DiscoverySuccessResult>): void
 ```
 
-注册发现设备成功回调。使用callback异步回调。此回调在调用startDiscovering发现到周边设备时触发， 返回发现的设备信息（DeviceBasicInfo）。需在调用startDiscovering之前注册此回调。
+取消注册设备发现成功回调。使用callback异步回调。
 
 **起始版本：** 23
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
-<!--Device-DeviceManager-onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void--><!--Device-DeviceManager-onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void-End-->
+<!--Device-DeviceManager-offDiscoverSuccess(callback?: Callback<DiscoverySuccessResult>): void--><!--Device-DeviceManager-offDiscoverSuccess(callback?: Callback<DiscoverySuccessResult>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -1222,7 +1008,7 @@ onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md)&gt; | 是 | 注册设备发现的回调方法。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md)&gt; | 否 | 指示要取消注册的设备发现回调，返回设备状态和设备信息。 |
 
 **错误码：**
 
@@ -1237,8 +1023,8 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.onDiscoverSuccess((data: distributedDeviceManager.DiscoverySuccessResult) => {
-    console.info('discoverSuccess:' + JSON.stringify(data));
+  dmInstance.offDiscoverSuccess((data: distributedDeviceManager.DiscoverySuccessResult) => {
+    console.info('discoverSuccess' + JSON.stringify(data));
   });
 } catch (err) {
   let e: BusinessError = err as BusinessError;
@@ -1246,19 +1032,19 @@ try {
 }
 ```
 
-## onServiceDie
+## offServiceDie
 
 ```TypeScript
-onServiceDie(callback: Callback<ServiceDieData>): void
+offServiceDie(callback?: Callback<ServiceDieData>): void
 ```
 
-注册设备管理服务死亡回调，以便在服务死亡时通知应用。使用callback异步回调。
+取消注册设备管理服务死亡回调。使用callback异步回调。
 
 **起始版本：** 23
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
-<!--Device-DeviceManager-onServiceDie(callback: Callback<ServiceDieData>): void--><!--Device-DeviceManager-onServiceDie(callback: Callback<ServiceDieData>): void-End-->
+<!--Device-DeviceManager-offServiceDie(callback?: Callback<ServiceDieData>): void--><!--Device-DeviceManager-offServiceDie(callback?: Callback<ServiceDieData>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -1266,7 +1052,7 @@ onServiceDie(callback: Callback<ServiceDieData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md)&gt; | 是 | 注册serviceDie的回调方法，当设备管理服务异常终止时触发该回调通知应用。 如果不传入callback参数，则不会注册回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md)&gt; | 否 | 指示要取消注册的serviceDie回调。如果指定该参数则取消对应callback， 否则取消所有已注册的serviceDie回调。 |
 
 **错误码：**
 
@@ -1281,8 +1067,8 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.onServiceDie((data: distributedDeviceManager.ServiceDieData) => {
-    console.info('serviceDie on');
+  dmInstance.offServiceDie((data: distributedDeviceManager.ServiceDieData) => {
+    console.info('serviceDie off');
   });
 } catch (err) {
   let e: BusinessError = err as BusinessError;
@@ -1562,6 +1348,226 @@ try {
 }
 ```
 
+## onDeviceNameChange
+
+```TypeScript
+onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void
+```
+
+注册设备名称变更回调，以便在设备名称改变时通知应用。使用callback异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void--><!--Device-DeviceManager-onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md)&gt; | 是 | 注册设备名称改变的回调方法，返回变更后的设备名称。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.onDeviceNameChange((data: distributedDeviceManager.DeviceNameChangeResult) => {
+    console.info('deviceNameChange on:' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`deviceNameChange errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
+
+## onDeviceStateChange
+
+```TypeScript
+onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void
+```
+
+注册设备状态回调，以便在设备状态发生变化时通知应用。使用callback异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void--><!--Device-DeviceManager-onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md)&gt; | 是 | 指示要注册的设备状态回调，返回设备状态和设备信息。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.onDeviceStateChange((data: distributedDeviceManager.DeviceStateChangeResult) => {
+    console.info('deviceStateChange on:' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`deviceStateChange errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
+
+## onDiscoverFailure
+
+```TypeScript
+onDiscoverFailure(callback: Callback<DiscoveryFailureResult>): void
+```
+
+注册设备发现失败回调。使用callback异步回调。此回调在调用startDiscovering发现设备失败时触发， 返回失败原因。需在调用startDiscovering之前注册此回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-onDiscoverFailure(callback: Callback<DiscoveryFailureResult>): void--><!--Device-DeviceManager-onDiscoverFailure(callback: Callback<DiscoveryFailureResult>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md)&gt; | 是 | 注册设备发现失败的回调方法。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.onDiscoverFailure((data: distributedDeviceManager.DiscoveryFailureResult) => {
+    console.info('discoverFailure' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`discoverFailure errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
+
+## onDiscoverSuccess
+
+```TypeScript
+onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void
+```
+
+注册发现设备成功回调。使用callback异步回调。此回调在调用startDiscovering发现到周边设备时触发， 返回发现的设备信息（DeviceBasicInfo）。需在调用startDiscovering之前注册此回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void--><!--Device-DeviceManager-onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md)&gt; | 是 | 注册设备发现的回调方法。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.onDiscoverSuccess((data: distributedDeviceManager.DiscoverySuccessResult) => {
+    console.info('discoverSuccess:' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`discoverSuccess errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
+
+## onServiceDie
+
+```TypeScript
+onServiceDie(callback: Callback<ServiceDieData>): void
+```
+
+注册设备管理服务死亡回调，以便在服务死亡时通知应用。使用callback异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-onServiceDie(callback: Callback<ServiceDieData>): void--><!--Device-DeviceManager-onServiceDie(callback: Callback<ServiceDieData>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md)&gt; | 是 | 注册serviceDie的回调方法，当设备管理服务异常终止时触发该回调通知应用。 如果不传入callback参数，则不会注册回调。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.onServiceDie((data: distributedDeviceManager.ServiceDieData) => {
+    console.info('serviceDie on');
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`serviceDie errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
+
 ## startDiscovering
 
 ```TypeScript
@@ -1649,6 +1655,10 @@ startDiscovering(discoverParam: Record<string, int | string>, filterOptions?: Re
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600104](../errorcode-device-manager.md#11600104-发现业务不可用) | Discovery unavailable. |
 | [11600101](../errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+
+**示例**
+
+参见 [startDiscovering](#startdiscovering)
 
 ## stopDiscovering
 

@@ -1,6 +1,6 @@
 # LaunchReason
 
-Enumerates the ability launch reasons. You can use it together with the value of **launchParam.launchReason** in [onCreate(want, launchParam)](arkts-ability-appabilityuiability-uiability-c.md#oncreate) of the UIAbility to complete different operations.
+Enumerates the ability launch reasons. You can use it together with the value of **launchParam.launchReason** in [onCreate(want, launchParam)](arkts-ability-app-ability-uiability-uiability-c.md#oncreate) of the UIAbility to complete different operations.
 
 **Since:** 23
 
@@ -185,4 +185,18 @@ The ability is started through preloading.
 <!--Device-LaunchReason-PRELOAD = 11--><!--Device-LaunchReason-PRELOAD = 11-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+import { UIAbility, Want, AbilityConstant } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    if (launchParam.launchReason === AbilityConstant.LaunchReason.START_ABILITY) {
+      console.info('The ability has been started by the way of startAbility.');
+    }
+  }
+}
+```
 

@@ -51,6 +51,23 @@ getColorTint(): int
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getColorTint(session: camera.PhotoSession | camera.VideoSession): number {
+  let colorTint: number = 0;
+  try {
+    colorTint = session.getColorTint();
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The getColorTint call failed. error code: ${err.code}`);
+  }
+  return colorTint;
+}
+```
+
 ## setColorTint
 
 ```TypeScript
@@ -82,4 +99,20 @@ setColorTint(colorTint: int): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setColorTint(session: camera.PhotoSession | camera.VideoSession): void {
+  let colorTint: number = 0;
+  try {
+    session.setColorTint(colorTint);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The setColorTint call failed. error code: ${err.code}`);
+  }
+}
+```
 

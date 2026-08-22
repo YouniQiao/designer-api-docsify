@@ -68,7 +68,144 @@ constructor()
 **示例**
 
 ```TypeScript
+let textDecoder = new util.TextDecoder();
+let retStr = textDecoder.encoding;
+console.info('retStr = ' + retStr);
+// 输出结果：retStr = utf-8
+```
+
+```TypeScript
+let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});
+```
+
+```TypeScript
 let textEncoder = new util.TextEncoder();
+```
+
+```TypeScript
+let textEncoder = new util.TextEncoder("utf-8");
+```
+
+```TypeScript
+let rationalNumber = new util.RationalNumber();
+```
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+let lruCache = new util.LRUCache<number, number>();
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let lruCache = new util.LRUCache<int, int>();
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+console.info("range = " + range);
+// 输出结果：range = [30, 40]
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable<Temperature> {
+  private readonly _temp: int;
+
+  constructor(value: int) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp(): int {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.ScopeHelper<Temperature>(tempLower, tempUpper);
+console.info("range = " + range);
+// 输出结果：range = [30, 40]
+```
+
+```TypeScript
+let base64 = new util.Base64Helper();
+```
+
+```TypeScript
+let decoder = new util.StringDecoder();
+```
+
+```TypeScript
+let type = new util.types();
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.Scope(tempLower, tempUpper);
+console.info("range = " + range);
+// 输出结果：range = [30, 40]
+```
+
+```TypeScript
+let base64 = new  util.Base64();
 ```
 
 ## constructor
@@ -95,9 +232,7 @@ constructor(encoding?: string)
 
 **示例**
 
-```TypeScript
-let textEncoder = new util.TextEncoder("utf-8");
-```
+参见 [constructor](#constructor)
 
 ## create
 
@@ -128,6 +263,17 @@ static create(encoding?: string): TextEncoder
 | [TextEncoder](arkts-arkts-util-textencoder-c.md) | TextEncoder** 对象。 |
 
 **示例**
+
+```TypeScript
+let textDecoderOptions: util.TextDecoderOptions = {
+  fatal: false,
+  ignoreBOM : true
+}
+let textDecoder = util.TextDecoder.create('utf-8', textDecoderOptions);
+let retStr = textDecoder.encoding;
+console.info('retStr = ' + retStr);
+// 输出结果：retStr = utf-8
+```
 
 ```TypeScript
 let textEncoder = util.TextEncoder.create("utf-8");
@@ -172,6 +318,24 @@ console.info("result = " + result);
 // 输出结果: result = 237,160,128,194,165,194,165
 ```
 
+```TypeScript
+let base64Helper = new util.Base64Helper();
+let array = new Uint8Array([115,49,51]);
+base64Helper.encode(array).then((val) => {
+  console.info(val.toString());
+  // 输出结果：99,122,69,122
+})
+```
+
+```TypeScript
+let base64 = new util.Base64();
+let array = new Uint8Array([115,49,51]);
+base64.encode(array).then((val) => {
+  console.info(val.toString());
+  // 输出结果：99,122,69,122
+})
+```
+
 ## encodeInto
 
 ```TypeScript
@@ -209,6 +373,15 @@ console.info("result = " + result);
 // 输出结果: result = 237,160,128,194,165,194,165
 ```
 
+```TypeScript
+let textEncoder = new util.TextEncoder();
+let buffer = new ArrayBuffer(4);
+let uint8 = new Uint8Array(buffer);
+let result = textEncoder.encodeInto('abcd', uint8);
+console.info("uint8 = " + uint8);
+// 输出结果: uint8 = 97,98,99,100
+```
+
 ## encodeInto
 
 ```TypeScript
@@ -242,14 +415,7 @@ encodeInto(input: string, dest: Uint8Array): { read: number; written: number }
 
 **示例**
 
-```TypeScript
-let textEncoder = new util.TextEncoder();
-let buffer = new ArrayBuffer(4);
-let uint8 = new Uint8Array(buffer);
-let result = textEncoder.encodeInto('abcd', uint8);
-console.info("uint8 = " + uint8);
-// 输出结果: uint8 = 97,98,99,100
-```
+参见 [encodeInto](#encodeinto)
 
 ## encodeIntoUint8Array
 

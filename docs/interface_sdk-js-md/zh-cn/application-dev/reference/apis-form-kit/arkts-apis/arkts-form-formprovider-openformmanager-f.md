@@ -26,7 +26,7 @@ function openFormManager(want: Want): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 打开卡片管理页面的请求中的want参数，需包含以下字段。 <br>bundleName: 卡片所属应用的包名。 <br>abilityName: 卡片所属的ability名称。 <br>parameters: <br>- ohos.extra.param.key.form_dimension: [卡片尺寸](arkts-form-forminfo-formdimension-e.md)。 <br>- ohos.extra.param.key.form_name: 卡片名称。 <br>- ohos.extra.param.key.module_name: 卡片所属的模块名称。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 打开卡片管理页面的请求中的want参数，需包含以下字段。 <br>bundleName: 卡片所属应用的包名。 <br>abilityName: 卡片所属的ability名称。 <br>parameters: <br>- ohos.extra.param.key.form_dimension: [卡片尺寸](arkts-form-forminfo-formdimension-e.md)。 <br>- ohos.extra.param.key.form_name: 卡片名称。 <br>- ohos.extra.param.key.module_name: 卡片所属的模块名称。 |
 
 **错误码：**
 

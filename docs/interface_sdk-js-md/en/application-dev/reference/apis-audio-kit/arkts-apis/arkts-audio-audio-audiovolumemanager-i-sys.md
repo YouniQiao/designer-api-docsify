@@ -55,6 +55,25 @@ Interface for forcibly setting the volume type by pressing the volume key.
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Crash or blocking occurs in system process. |
 
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let audioManager = audio.getAudioManager();
+let audioVolumeManager = audioManager.getVolumeManager();
+
+// Set the volume control type to ringtone mode.
+let volumeType = audio.AudioVolumeType.RINGTONE;
+let duration = 10;
+audioVolumeManager.forceVolumeKeyControlType(volumeType, duration);
+
+// Cancel the custom volume control, and restore the default volume control.
+let volumeTypeDefault = audio.AudioVolumeType.MEDIA;
+let durationToCancel = -1;
+audioVolumeManager.forceVolumeKeyControlType(volumeTypeDefault, durationToCancel);
+```
+
 ## getActiveStreamsVolumeInfo
 
 ```TypeScript
@@ -274,6 +293,18 @@ Gets the minimum system volume percentage application can set for specified volu
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+try {
+  let volume = audioVolumeManager.getMinSystemVolumePercentage(audio.AudioVolumeType.MEDIA);
+  console.info(`MEDIA volume percentage obtained success.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain the volume percentage, error: ${error}`);
+}
+```
+
 ## getStreamUsagesByVolumeType
 
 ```TypeScript
@@ -444,6 +475,18 @@ Gets the current system volume percentage for specified volume type.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+try {
+  let volume = audioVolumeManager.getSystemVolumePercentage(audio.AudioVolumeType.MEDIA);
+  console.info(`MEDIA volume percentage obtained success.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain the volume percentage, error: ${error}`);
+}
+```
+
 ## getVolumeGroupInfos
 
 ```TypeScript
@@ -465,7 +508,7 @@ Get the volume group list for a networkId. This method uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | networkId | string | Yes | Distributed deice net work id |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[VolumeGroupInfos](arkts-audio-audio-volumegroupinfos-t-sys.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VolumeGroupInfos](arkts-audio-audio-volumegroupinfos-t-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -479,6 +522,13 @@ audioVolumeManager.getVolumeGroupInfos(audio.LOCAL_NETWORK_ID, (err: BusinessErr
   }
   console.info('Callback invoked to indicate that the volume group infos list is obtained.');
 });
+```
+
+```TypeScript
+async function getVolumeGroupInfos(){
+  let volumegroupinfos: audio.VolumeGroupInfos = await audio.getAudioManager().getVolumeManager().getVolumeGroupInfos(audio.LOCAL_NETWORK_ID);
+  console.info('Promise returned to indicate that the volumeGroup list is obtained.'+JSON.stringify(volumegroupinfos))
+}
 ```
 
 ## getVolumeGroupInfos
@@ -511,12 +561,7 @@ Get the volume group list for a networkId. This method uses a promise to return 
 
 **Examples**
 
-```TypeScript
-async function getVolumeGroupInfos(){
-  let volumegroupinfos: audio.VolumeGroupInfos = await audio.getAudioManager().getVolumeManager().getVolumeGroupInfos(audio.LOCAL_NETWORK_ID);
-  console.info('Promise returned to indicate that the volumeGroup list is obtained.'+JSON.stringify(volumegroupinfos))
-}
-```
+See [getVolumeGroupInfos](#getvolumegroupinfos)
 
 ## getVolumeGroupInfosSync
 
@@ -643,6 +688,16 @@ Checks whether the app volume is muted. If there are multiple callers setting mu
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+let uid: number = 20010041; // Application ID.
+
+audioVolumeManager.isAppVolumeMutedForUid(uid, true).then((value: boolean) => {
+  console.info(`app muted state is ${value}.`);
+});
+```
+
 ## isSystemMuted
 
 ```TypeScript
@@ -678,156 +733,6 @@ Checks whether a volume type is muted.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## offActiveVolumeTypeChange
-
-```TypeScript
-offActiveVolumeTypeChange(callback?: Callback<AudioVolumeType>): void
-```
-
-Unsubscribes from active volume type changes.
-
-**Since:** 23
-
-<!--Device-AudioVolumeManager-offActiveVolumeTypeChange(callback?: Callback<AudioVolumeType>): void--><!--Device-AudioVolumeManager-offActiveVolumeTypeChange(callback?: Callback<AudioVolumeType>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Volume
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | No | Callback used to return the active volume type. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-## offAppVolumeChangeForUid
-
-```TypeScript
-offAppVolumeChangeForUid(callback?: Callback<VolumeEvent>): void
-```
-
-Unsubscribes to the app volume change events..
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.MANAGE_AUDIO_CONFIG
-
-<!--Device-AudioVolumeManager-offAppVolumeChangeForUid(callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-offAppVolumeChangeForUid(callback?: Callback<VolumeEvent>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Volume
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to obtain the invoking volume change event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-## offSystemVolumeChange
-
-```TypeScript
-offSystemVolumeChange(callback?: Callback<VolumeEvent>): void
-```
-
-Unsubscribes to the system volume change events.
-
-**Since:** 23
-
-<!--Device-AudioVolumeManager-offSystemVolumeChange(callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-offSystemVolumeChange(callback?: Callback<VolumeEvent>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Volume
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to obtain the invoking volume change event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-## offSystemVolumeChangeByFilter
-
-```TypeScript
-offSystemVolumeChangeByFilter(callback?: Callback<VolumeEvent>): void
-```
-
-Unsubscribes from the system volume change events.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AudioVolumeManager-offSystemVolumeChangeByFilter(callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-offSystemVolumeChangeByFilter(callback?: Callback<VolumeEvent>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Volume
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used in the subscription. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-## offVolumePercentageChange
-
-```TypeScript
-offVolumePercentageChange(callback?: Callback<VolumeEvent>): void
-```
-
-Unsubscribes from system volume percentage change events.
-
-**Since:** 23
-
-<!--Device-AudioVolumeManager-offVolumePercentageChange(callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-offVolumePercentageChange(callback?: Callback<VolumeEvent>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Volume
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to return the system volume percentage change event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
 ## off('activeVolumeTypeChange')
 
 ```TypeScript
@@ -849,7 +754,7 @@ Unsubscribes from active volume type changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'activeVolumeTypeChange' | Yes | Type of the event to unregister. Only the activeVolumeTypeChange event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | No | Callback used to return the active volume type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | No | Callback used to return the active volume type. |
 
 **Error codes:**
 
@@ -881,7 +786,7 @@ Unsubscribes to the app volume change events..
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'appVolumeChangeForUid' | Yes | Type of the event to be unregistered. Only the appVolumeChangeForUid event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to obtain the invoking volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to obtain the invoking volume change event. |
 
 **Error codes:**
 
@@ -912,7 +817,7 @@ Unsubscribes to the system volume change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'systemVolumeChange' | Yes | Type of the event to be unregistered. Only the systemVolumeChange event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to obtain the invoking volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to obtain the invoking volume change event. |
 
 **Error codes:**
 
@@ -921,17 +826,17 @@ Unsubscribes to the system volume change events.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onActiveVolumeTypeChange
+## offActiveVolumeTypeChange
 
 ```TypeScript
-onActiveVolumeTypeChange(callback: Callback<AudioVolumeType>): void
+offActiveVolumeTypeChange(callback?: Callback<AudioVolumeType>): void
 ```
 
-Subscribes to active volume type changes.
+Unsubscribes from active volume type changes.
 
 **Since:** 23
 
-<!--Device-AudioVolumeManager-onActiveVolumeTypeChange(callback: Callback<AudioVolumeType>): void--><!--Device-AudioVolumeManager-onActiveVolumeTypeChange(callback: Callback<AudioVolumeType>): void-End-->
+<!--Device-AudioVolumeManager-offActiveVolumeTypeChange(callback?: Callback<AudioVolumeType>): void--><!--Device-AudioVolumeManager-offActiveVolumeTypeChange(callback?: Callback<AudioVolumeType>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -941,7 +846,7 @@ Subscribes to active volume type changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | Yes | Callback used to return the active volume type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | No | Callback used to return the active volume type. |
 
 **Error codes:**
 
@@ -950,19 +855,19 @@ Subscribes to active volume type changes.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onAppVolumeChangeForUid
+## offAppVolumeChangeForUid
 
 ```TypeScript
-onAppVolumeChangeForUid(uid: int, callback: Callback<VolumeEvent>): void
+offAppVolumeChangeForUid(callback?: Callback<VolumeEvent>): void
 ```
 
-Listens for specified app volume change events. The app volume may changed by [setAppVolumePercentageForUid](#setappvolumepercentageforuid).
+Unsubscribes to the app volume change events..
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.MANAGE_AUDIO_CONFIG
 
-<!--Device-AudioVolumeManager-onAppVolumeChangeForUid(uid: int, callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onAppVolumeChangeForUid(uid: int, callback: Callback<VolumeEvent>): void-End-->
+<!--Device-AudioVolumeManager-offAppVolumeChangeForUid(callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-offAppVolumeChangeForUid(callback?: Callback<VolumeEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -972,8 +877,7 @@ Listens for specified app volume change events. The app volume may changed by [s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | int | Yes | The app's uid. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the app volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to obtain the invoking volume change event. |
 
 **Error codes:**
 
@@ -983,17 +887,17 @@ Listens for specified app volume change events. The app volume may changed by [s
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onSystemVolumeChange
+## offSystemVolumeChange
 
 ```TypeScript
-onSystemVolumeChange(callback: Callback<VolumeEvent>): void
+offSystemVolumeChange(callback?: Callback<VolumeEvent>): void
 ```
 
-Listens for system volume change events. This method uses a callback to get volume change events.
+Unsubscribes to the system volume change events.
 
 **Since:** 23
 
-<!--Device-AudioVolumeManager-onSystemVolumeChange(callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onSystemVolumeChange(callback: Callback<VolumeEvent>): void-End-->
+<!--Device-AudioVolumeManager-offSystemVolumeChange(callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-offSystemVolumeChange(callback?: Callback<VolumeEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -1003,7 +907,7 @@ Listens for system volume change events. This method uses a callback to get volu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the system volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to obtain the invoking volume change event. |
 
 **Error codes:**
 
@@ -1012,19 +916,19 @@ Listens for system volume change events. This method uses a callback to get volu
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onSystemVolumeChangeByFilter
+## offSystemVolumeChangeByFilter
 
 ```TypeScript
-onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void
+offSystemVolumeChangeByFilter(callback?: Callback<VolumeEvent>): void
 ```
 
-Subscribes to system volume change events. When the system volume for the target filter changes, registered clients will receive a callback.
+Unsubscribes from the system volume change events.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AudioVolumeManager-onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void-End-->
+<!--Device-AudioVolumeManager-offSystemVolumeChangeByFilter(callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-offSystemVolumeChangeByFilter(callback?: Callback<VolumeEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -1034,27 +938,26 @@ Subscribes to system volume change events. When the system volume for the target
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [SystemVolumeFilter](arkts-audio-audio-systemvolumefilter-i-sys.md) | Yes | Filter for system volume changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback to receive information about the system volume. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used in the subscription. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not a system app. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onVolumePercentageChange
+## offVolumePercentageChange
 
 ```TypeScript
-onVolumePercentageChange(callback: Callback<VolumeEvent>): void
+offVolumePercentageChange(callback?: Callback<VolumeEvent>): void
 ```
 
-Subscribes to system volume percentage change events.
+Unsubscribes from system volume percentage change events.
 
 **Since:** 23
 
-<!--Device-AudioVolumeManager-onVolumePercentageChange(callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onVolumePercentageChange(callback: Callback<VolumeEvent>): void-End-->
+<!--Device-AudioVolumeManager-offVolumePercentageChange(callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-offVolumePercentageChange(callback?: Callback<VolumeEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -1064,7 +967,7 @@ Subscribes to system volume percentage change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to return the system volume percentage change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to return the system volume percentage change event. |
 
 **Error codes:**
 
@@ -1072,6 +975,25 @@ Subscribes to system volume percentage change events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Cancel all subscriptions to the event.
+audioVolumeManager.offVolumePercentageChange();
+
+// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
+let volumePercentageChangeCallback = (volumeEvent: audio.VolumeEvent) => {
+  console.info(`VolumeType of stream: ${volumeEvent.volumeType} `);
+  console.info(`Volume level: ${volumeEvent.volume} `);
+  console.info(`Volume percentage: ${volumeEvent.percentage} `);
+  console.info(`Whether to updateUI: ${volumeEvent.updateUi} `);
+};
+
+audioVolumeManager.onVolumePercentageChange(volumePercentageChangeCallback);
+
+audioVolumeManager.offVolumePercentageChange(volumePercentageChangeCallback);
+```
 
 ## on('activeVolumeTypeChange')
 
@@ -1094,7 +1016,7 @@ Subscribes to active volume type changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'activeVolumeTypeChange' | Yes | Type of the event to listen for. Only the activeVolumeTypeChange event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | Yes | Callback used to return the active volume type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | Yes | Callback used to return the active volume type. |
 
 **Error codes:**
 
@@ -1127,7 +1049,7 @@ Listens for specified app volume change events. The app volume may changed by [s
 | --- | --- | --- | --- |
 | type | 'appVolumeChangeForUid' | Yes | Type of the event to listen for. Only the appVolumeChangeForUid event is supported. |
 | uid | int | Yes | The app's uid. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the app volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the app volume change event. |
 
 **Error codes:**
 
@@ -1158,7 +1080,7 @@ Listens for system volume change events. This method uses a callback to get volu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'systemVolumeChange' | Yes | Type of the event to listen for. Only the systemVolumeChange event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the system volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the system volume change event. |
 
 **Error codes:**
 
@@ -1166,6 +1088,169 @@ Listens for system volume change events. This method uses a callback to get volu
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onActiveVolumeTypeChange
+
+```TypeScript
+onActiveVolumeTypeChange(callback: Callback<AudioVolumeType>): void
+```
+
+Subscribes to active volume type changes.
+
+**Since:** 23
+
+<!--Device-AudioVolumeManager-onActiveVolumeTypeChange(callback: Callback<AudioVolumeType>): void--><!--Device-AudioVolumeManager-onActiveVolumeTypeChange(callback: Callback<AudioVolumeType>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | Yes | Callback used to return the active volume type. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onAppVolumeChangeForUid
+
+```TypeScript
+onAppVolumeChangeForUid(uid: int, callback: Callback<VolumeEvent>): void
+```
+
+Listens for specified app volume change events. The app volume may changed by [setAppVolumePercentageForUid](#setappvolumepercentageforuid).
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioVolumeManager-onAppVolumeChangeForUid(uid: int, callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onAppVolumeChangeForUid(uid: int, callback: Callback<VolumeEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uid | int | Yes | The app's uid. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the app volume change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onSystemVolumeChange
+
+```TypeScript
+onSystemVolumeChange(callback: Callback<VolumeEvent>): void
+```
+
+Listens for system volume change events. This method uses a callback to get volume change events.
+
+**Since:** 23
+
+<!--Device-AudioVolumeManager-onSystemVolumeChange(callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onSystemVolumeChange(callback: Callback<VolumeEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the system volume change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onSystemVolumeChangeByFilter
+
+```TypeScript
+onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void
+```
+
+Subscribes to system volume change events. When the system volume for the target filter changes, registered clients will receive a callback.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioVolumeManager-onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| filter | [SystemVolumeFilter](arkts-audio-audio-systemvolumefilter-i-sys.md) | Yes | Filter for system volume changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback to receive information about the system volume. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not a system app. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onVolumePercentageChange
+
+```TypeScript
+onVolumePercentageChange(callback: Callback<VolumeEvent>): void
+```
+
+Subscribes to system volume percentage change events.
+
+**Since:** 23
+
+<!--Device-AudioVolumeManager-onVolumePercentageChange(callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onVolumePercentageChange(callback: Callback<VolumeEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to return the system volume percentage change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+onVolumePercentageChange((volumeEvent: audio.VolumeEvent) => {
+  console.info(`VolumeType of stream: ${volumeEvent.volumeType} `);
+  console.info(`Volume level: ${volumeEvent.volume} `);
+  console.info(`Volume percentage: ${volumeEvent.percentage} `);
+  console.info(`Whether to updateUI: ${volumeEvent.updateUi} `);
+});
+```
 
 ## setAppVolumeMutedForUid
 
@@ -1206,6 +1291,16 @@ Change mute state of specified application volume. If there are multiple callers
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Crash or blocking occurs in system process. |
+
+**Examples**
+
+```TypeScript
+let uid: number = 20010041; // Application ID.
+
+audioVolumeManager.setAppVolumeMutedForUid(uid, true).then(() => {
+  console.info(`set app mute state success.`);
+});
+```
 
 ## setAppVolumePercentageForUid
 
@@ -1338,6 +1433,14 @@ Sets the system volume percentage, using an integer ranging from minimum system 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, including volumeType or percentage param begin out of range. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Crash or blocking occurs in system process. |
+
+**Examples**
+
+```TypeScript
+audioVolumeManager.setSystemVolumePercentage(audio.AudioVolumeType.MEDIA, 10).then(() => {
+  console.info('Promise returned to indicate a successful volume setting.');
+});
+```
 
 ## setVoipCapturerMuteForUid
 

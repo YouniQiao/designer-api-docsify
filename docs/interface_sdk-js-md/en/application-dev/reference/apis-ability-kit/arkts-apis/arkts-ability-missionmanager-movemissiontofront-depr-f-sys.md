@@ -32,7 +32,7 @@ Switches a given mission to the foreground. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | missionId | number | Yes | Mission ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the mission is switched to the foreground, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the mission is switched to the foreground, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -50,6 +50,39 @@ try {
   });
 } catch (err) {
   console.error(`moveMissionToFront failed: ${err.message}`);
+}
+```
+
+```TypeScript
+import missionManager from '@ohos.application.missionManager';
+
+let testMissionId = 2;
+try {
+  missionManager.moveMissionToFront(testMissionId, { windowMode: 101 }, (err, data) => {
+    if (err) {
+      console.error(`moveMissionToFront failed: ${err.message}`);
+    } else {
+      console.info(`moveMissionToFront successfully: ${JSON.stringify(data)}`);
+    }
+  });
+} catch (err) {
+  console.error(`moveMissionToFront failed: ${err.message}`);
+}
+```
+
+```TypeScript
+import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
+
+let testMissionId = 2;
+try {
+  missionManager.moveMissionToFront(testMissionId).then((data) => {
+    console.info(`moveMissionToFront successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`moveMissionToFront failed. Cause: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`moveMissionToFront failed. Cause: ${error.message}`);
 }
 ```
 
@@ -81,27 +114,12 @@ Switches a given mission to the foreground, with the startup parameters for the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | missionId | number | Yes | Mission ID. |
-| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | Yes | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the mission is switched to the foreground, **err** is **undefined**. Otherwise, **err** is an error object. |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the mission is switched to the foreground, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Examples**
 
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-
-let testMissionId = 2;
-try {
-  missionManager.moveMissionToFront(testMissionId, { windowMode: 101 }, (err, data) => {
-    if (err) {
-      console.error(`moveMissionToFront failed: ${err.message}`);
-    } else {
-      console.info(`moveMissionToFront successfully: ${JSON.stringify(data)}`);
-    }
-  });
-} catch (err) {
-  console.error(`moveMissionToFront failed: ${err.message}`);
-}
-```
+See [moveMissionToFront](#movemissiontofront)
 
 
 ## moveMissionToFront
@@ -131,7 +149,7 @@ Switches a given mission to the foreground, with the startup parameters for the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | missionId | number | Yes | Mission ID. |
-| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | No | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. |
 
 **Return value:**
 
@@ -141,19 +159,5 @@ Switches a given mission to the foreground, with the startup parameters for the 
 
 **Examples**
 
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-let testMissionId = 2;
-try {
-  missionManager.moveMissionToFront(testMissionId).then((data) => {
-    console.info(`moveMissionToFront successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`moveMissionToFront failed. Cause: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`moveMissionToFront failed. Cause: ${error.message}`);
-}
-```
+See [moveMissionToFront](#movemissiontofront)
 

@@ -40,7 +40,7 @@ Subscribes to the state changes of animation reduction mode. This API uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback invoked when the reduced motion mode status changes. The value **true** indicates that the reduced motion mode is enabled, and **false** indicates that the reduced motion mode is disabled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback invoked when the reduced motion mode status changes. The value **true** indicates that the reduced motion mode is enabled, and **false** indicates that the reduced motion mode is disabled. |
 
 **Examples**
 

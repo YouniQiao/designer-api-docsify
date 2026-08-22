@@ -55,6 +55,30 @@ dlpPermission.getRetentionSandboxList().then((sandboxList) => { // 获取沙箱�
 });
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+dlpPermission.getRetentionSandboxList('bundleName', (err, sandboxList) => {
+  if (err) {
+    console.error(`Failed to get retention sandbox list. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('sandboxList', JSON.stringify(sandboxList));
+  }
+}); // 获取沙箱保留列表。
+```
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+dlpPermission.getRetentionSandboxList((err, retentionSandboxList) => {
+  if (err) {
+    console.error(`Failed to get retention sandbox list. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('retentionSandboxList', JSON.stringify(retentionSandboxList));
+  }
+}); // 获取沙箱保留列表。
+```
+
 
 ## getRetentionSandboxList
 
@@ -90,17 +114,7 @@ function getRetentionSandboxList(bundleName: string, callback: AsyncCallback<Arr
 
 **示例**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.getRetentionSandboxList('bundleName', (err, sandboxList) => {
-  if (err) {
-    console.error(`Failed to get retention sandbox list. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('sandboxList', JSON.stringify(sandboxList));
-  }
-}); // 获取沙箱保留列表。
-```
+参见 [getRetentionSandboxList](#getretentionsandboxlist)
 
 
 ## getRetentionSandboxList
@@ -136,15 +150,5 @@ function getRetentionSandboxList(callback: AsyncCallback<Array<RetentionSandboxI
 
 **示例**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.getRetentionSandboxList((err, retentionSandboxList) => {
-  if (err) {
-    console.error(`Failed to get retention sandbox list. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('retentionSandboxList', JSON.stringify(retentionSandboxList));
-  }
-}); // 获取沙箱保留列表。
-```
+参见 [getRetentionSandboxList](#getretentionsandboxlist)
 

@@ -29,3 +29,21 @@ Closes a file. This API returns the result synchronously.
 | --- | --- | --- | --- |
 | fd | number | Yes | File descriptor of the file to close. |
 
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+fileio.closeSync(fd);
+```
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let ss = fileio.createStreamSync(filePath, "r+");
+ss.closeSync();
+```
+
+```TypeScript
+dir.closeSync();
+```
+

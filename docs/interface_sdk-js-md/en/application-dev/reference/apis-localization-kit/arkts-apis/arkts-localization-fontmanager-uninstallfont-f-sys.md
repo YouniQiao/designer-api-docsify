@@ -46,3 +46,19 @@ Uninstalls an installed font file from the system font library by font name. Thi
 | [31100108](../errorcode-font-manager.md#31100108-failed-to-delete-font-file) | Failed to delete the font file. |
 | [31100109](../errorcode-font-manager.md#31100109-uninstallation-failed-due-to-other-errors) | The system ability works abnormally. |
 
+**Examples**
+
+```TypeScript
+import { fontManager } from '@kit.LocalizationKit';
+
+async uninstallFont() {
+  try {
+    let res = await fontManager.uninstallFont('fontName');
+    console.info('uninstallFont suc. res is ' + res);
+  } catch (error) {
+    console.error('uninstallFont err.' + error.code);
+  }
+  return;
+}
+```
+

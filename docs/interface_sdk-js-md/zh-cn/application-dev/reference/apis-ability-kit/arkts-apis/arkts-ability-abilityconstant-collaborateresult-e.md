@@ -1,6 +1,6 @@
 # CollaborateResult
 
-应用协同状态，该类型为枚举。用于多设备场景下，调用方应用拉起协同方应用时，协同方应用是否接受协同。需要配合UIAbility的 [onCollaborate()](arkts-ability-appabilityuiability-uiability-c.md#oncollaborate)方法进行 设置。
+应用协同状态，该类型为枚举。用于多设备场景下，调用方应用拉起协同方应用时，协同方应用是否接受协同。需要配合UIAbility的 [onCollaborate()](arkts-ability-app-ability-uiability-uiability-c.md#oncollaborate)方法进行 设置。
 
 **起始版本：** 23
 
@@ -39,4 +39,16 @@ REJECT = 1
 <!--Device-CollaborateResult-REJECT = 1--><!--Device-CollaborateResult-REJECT = 1-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**示例**
+
+```TypeScript
+import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onCollaborate(wantParam: Record<string, Object>) {
+    return AbilityConstant.CollaborateResult.ACCEPT;
+  }
+}
+```
 

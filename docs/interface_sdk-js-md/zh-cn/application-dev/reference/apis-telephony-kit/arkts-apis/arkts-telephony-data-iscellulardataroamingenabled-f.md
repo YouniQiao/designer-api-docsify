@@ -55,6 +55,17 @@ data.isCellularDataRoamingEnabled(0, (err: BusinessError, contextData: boolean) 
 });
 ```
 
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+data.isCellularDataRoamingEnabled(0).then((contextData: boolean) => {
+    console.info(`isCellularDataRoamingEnabled success, contextData: ${contextData}`);
+}).catch((err: BusinessError) => {
+    console.error(`isCellularDataRoamingEnabled fail. code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## isCellularDataRoamingEnabled
 
@@ -97,14 +108,5 @@ function isCellularDataRoamingEnabled(slotId: int): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.isCellularDataRoamingEnabled(0).then((contextData: boolean) => {
-    console.info(`isCellularDataRoamingEnabled success, contextData: ${contextData}`);
-}).catch((err: BusinessError) => {
-    console.error(`isCellularDataRoamingEnabled fail. code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [isCellularDataRoamingEnabled](#iscellulardataroamingenabled)
 

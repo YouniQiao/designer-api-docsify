@@ -28,7 +28,7 @@ Open the view of forms belonging to the specified bundle. Client to communicatio
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | The want of the form to open. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | The want of the form to open. |
 
 **错误码：**
 
@@ -38,4 +38,54 @@ Open the view of forms belonging to the specified bundle. Client to communicatio
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formProvider } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want } from '@kit.AbilityKit';
+
+const want: Want = {
+  bundleName: 'com.example.formbutton',
+  abilityName: 'EntryFormAbility',
+  parameters: {
+    'ohos.extra.param.key.form_dimension': 2,
+    'ohos.extra.param.key.form_name': 'widget',
+    'ohos.extra.param.key.module_name': 'entry'
+  },
+};
+try {
+  formProvider.openFormManagerCrossBundle(want);
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { formInfo, formProvider } from '@kit.FormKit';
+import { BusinessError, RecordData } from '@kit.BasicServicesKit';
+import { Want } from '@kit.AbilityKit';
+
+const want: Want = {
+  bundleName: 'com.example.formbutton',
+  abilityName: 'EntryFormAbility',
+  parameters: {
+    'ohos.extra.param.key.form_dimension': 2,
+    'ohos.extra.param.key.form_name': 'widget',
+    'ohos.extra.param.key.module_name': 'entry'
+  } as Record<string, RecordData>
+};
+try {
+  formProvider.openFormManagerCrossBundle(want);
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
 

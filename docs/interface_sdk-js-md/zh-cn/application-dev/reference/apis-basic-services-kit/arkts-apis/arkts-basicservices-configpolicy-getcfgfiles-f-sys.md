@@ -35,6 +35,276 @@ function getCfgFiles(relPath: string, callback: AsyncCallback<Array<string>>): v
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      configPolicy.getCfgFiles('etc/config.xml', (error: BusinessError, value: Array<string>) => {
+        if (error == null) {
+          console.info('value is ' + value);
+        } else {
+          console.error('error: ' + error.code + ', ' + error.message);
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error('error: ' + code + ', ' + message);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      configPolicy.getCfgFiles('etc/config.xml', (error: BusinessError | null, value: Array<string> | undefined) => {
+        if (error == null) {
+          console.info('value is ' + value);
+        } else {
+          console.error('error: ' + error.code + ', ' + error.message);
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error('error: ' + code + ', ' + message);
+    }
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      let relpath: string = 'etc/config.xml';
+      configPolicy.getCfgFiles(relpath).then((value: Array<string>) => {
+        console.info('value is ' + value);
+      }).catch((error: BusinessError) => {
+        console.error('getCfgFiles promise error: ' + error.code + ', ' + error.message);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error('error: ' + code + ', ' + message);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      let relpath: string = 'etc/config.xml';
+      configPolicy.getCfgFiles(relpath).then((value: Array<string>) => {
+        console.info('value is ' + value);
+      }).catch((error: Error) => {
+        console.error('getCfgFiles promise error: ' + error);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error('error: ' + code + ', ' + message);
+    }
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      let relpath: string = 'etc/config.xml';
+      configPolicy.getCfgFiles(relpath, configPolicy.FollowXMode.SIM_DEFAULT,
+        (error: BusinessError, value: Array<string>) => {
+          if (error == null) {
+            console.info('value is ' + value);
+          } else {
+            console.error('error: ' + error.code + ', ' + error.message);
+          }
+        });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error('error: ' + code + ', ' + message);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      let relpath: string = 'etc/config.xml';
+      configPolicy.getCfgFiles(relpath, configPolicy.FollowXMode.SIM_DEFAULT,
+        (error: BusinessError | null, value: Array<string> | undefined) => {
+          if (error == null) {
+            console.info('value is ' + value);
+          } else {
+            console.error('error: ' + error.code + ', ' + error.message);
+          }
+        });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error('error: ' + code + ', ' + message);
+    }
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      let relpath: string = 'etc/config.xml';
+      let extra: string = 'etc/carrier/${telephony.sim.opkey0}';
+      configPolicy.getCfgFiles(relpath, configPolicy.FollowXMode.USER_DEFINED, extra,
+        (error: BusinessError, value: Array<string>) => {
+          if (error == null) {
+            console.info('value is ' + value);
+          } else {
+            console.error('error: ' + error.code + ', ' + error.message);
+          }
+        });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error('error: ' + code + ', ' + message);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      let relpath: string = 'etc/config.xml';
+      let extra: string = 'etc/carrier/${telephony.sim.opkey0}';
+      configPolicy.getCfgFiles(relpath, configPolicy.FollowXMode.USER_DEFINED, extra,
+        (error: BusinessError | null, value: Array<string> | undefined) => {
+          if (error == null) {
+            console.info('value is ' + value);
+          } else {
+            console.error('error: ' + error.code + ', ' + error.message);
+          }
+        });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error('error: ' + code + ', ' + message);
+    }
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      let relpath: string = 'etc/config.xml';
+      let extra: string = 'etc/carrier/${telephony.sim.opkey0}';
+      configPolicy.getCfgFiles(relpath, configPolicy.FollowXMode.SIM_DEFAULT, extra).then((value: Array<string>) => {
+        console.info('value is ' + value);
+      }).catch((error: BusinessError) => {
+        console.error('getCfgFiles promise error: ' + error.code + ', ' + error.message);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error('error: ' + code + ', ' + message);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      let relpath: string = 'etc/config.xml';
+      let extra: string = 'etc/carrier/${telephony.sim.opkey0}';
+      configPolicy.getCfgFiles(relpath, configPolicy.FollowXMode.SIM_DEFAULT, extra).then((value: Array<string>) => {
+        console.info('value is ' + value);
+      }).catch((error: Error) => {
+        console.error('getCfgFiles promise error: ' + error);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error('error: ' + code + ', ' + message);
+    }
+  }
+}
+```
+
 
 ## getCfgFiles
 
@@ -65,6 +335,10 @@ function getCfgFiles(relPath: string, followMode: FollowXMode, callback: AsyncCa
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
+
+**示例**
+
+参见 [getCfgFiles](#getcfgfiles)
 
 
 ## getCfgFiles
@@ -97,6 +371,10 @@ function getCfgFiles(relPath: string, followMode: FollowXMode, extra: string, ca
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
+
+**示例**
+
+参见 [getCfgFiles](#getcfgfiles)
 
 
 ## getCfgFiles
@@ -132,6 +410,10 @@ function getCfgFiles(relPath: string): Promise<Array<string>>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
+
+**示例**
+
+参见 [getCfgFiles](#getcfgfiles)
 
 
 ## getCfgFiles
@@ -169,4 +451,8 @@ function getCfgFiles(relPath: string, followMode: FollowXMode, extra?: string): 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3.Parameter verification failed. |
+
+**示例**
+
+参见 [getCfgFiles](#getcfgfiles)
 

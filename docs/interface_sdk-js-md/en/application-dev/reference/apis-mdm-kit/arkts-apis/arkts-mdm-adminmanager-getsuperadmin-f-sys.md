@@ -28,7 +28,7 @@ Queries the super device administrator application of this first user (u100). Th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)&gt; | Promise used to return the super device administrator application obtained. If no super device administrator application is activated on the device, **bundleName** and **abilityName** in **Want** returned are empty strings. |
+| Promise&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | Promise used to return the super device administrator application obtained. If no super device administrator application is activated on the device, **bundleName** and **abilityName** in **Want** returned are empty strings. |
 
 **Error codes:**
 

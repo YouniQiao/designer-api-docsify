@@ -29,16 +29,16 @@
 | [EdgeColors](arkts-units-edgecolors-i.md) | type EdgeColors = { top: ResourceColor; right: ResourceColor; bottom: ResourceColor; left: ResourceColor; } |
 | [EdgeOutlineStyles](arkts-units-edgeoutlinestyles-i.md) | 引入该对象时，至少传入一个参数。 |
 | [EdgeOutlineWidths](arkts-units-edgeoutlinewidths-i.md) | 引入该对象时，至少传入一个参数。 |
+| [Edges](arkts-units-edges-i.md) | 位置类型，表示相对四边的偏移量。同时设置top和bottom，仅top生效；同时设置left和right，仅left生效。 |
 | [EdgeStyles](arkts-units-edgestyles-i.md) | type EdgeStyles = { top: BorderStyle; right: BorderStyle; bottom: BorderStyle; left: BorderStyle; } |
 | [EdgeWidths](arkts-units-edgewidths-i.md) | type EdgeWidths = { top: Length; right: Length; bottom: Length; left: Length; } |
-| [Edges](arkts-units-edges-i.md) | 位置类型，表示相对四边的偏移量。同时设置top和bottom，仅top生效；同时设置left和right，仅left生效。 |
 | [Font](arkts-units-font-i.md) | 设置文本样式。 |
 | [ItemFillPolicy](arkts-units-itemfillpolicy-i.md) | 定义一个适用于WaterFlow、Grid、 List、Swiper和 [LazyVWaterFlowLayout](../../../reference/apis-arkui/arkui-ts/ts-container-lazyvwaterflowlayout.md)组件的响应式布局策略。 LazyVWaterFlowLayout组件从API版本26.0.0开始支持。 |
 | [LengthConstrain](arkts-units-lengthconstrain-i.md) | type LengthConstrain = { minLength: Length; maxLength: Length; } |
 | [LocalizedBorderRadiuses](arkts-units-localizedborderradiuses-i.md) | 圆角类型，用于描述组件边框圆角半径。 |
 | [LocalizedEdgeColors](arkts-units-localizededgecolors-i.md) | 边框颜色，用于描述组件边框四条边的颜色。 |
-| [LocalizedEdgeWidths](arkts-units-localizededgewidths-i.md) | 边框宽度类型，用于描述组件边框不同方向的宽度。 |
 | [LocalizedEdges](arkts-units-localizededges-i.md) | 位置类型，表示相对四边的偏移量。同时设置top和bottom，仅top生效；同时设置start和end，仅start生效。 |
+| [LocalizedEdgeWidths](arkts-units-localizededgewidths-i.md) | 边框宽度类型，用于描述组件边框不同方向的宽度。 |
 | [LocalizedPadding](arkts-units-localizedpadding-i.md) | 内边距类型，用于描述组件不同方向的内边距。 |
 | [LocalizedPosition](arkts-units-localizedposition-i.md) | 位置类型，用于表示一个坐标点。 |
 | [MarkStyle](arkts-units-markstyle-i.md) | Define the style of checkbox mark. |
@@ -61,18 +61,18 @@
 | [DrawingCanvas](arkts-drawingcanvas-t.md) | 可用于向DrawingRenderingContext上绘制内容的画布对象。 |
 | [EdgeWidth](arkts-edgewidth-t.md) | 边框宽度类型，用于描述组件边框不同方向的宽度。 |
 | [FP](arkts-fp-t.md) | 长度类型，用于描述以fp像素单位为单位的长度。 |
-| [LPX](arkts-lpx-t.md) | 长度类型，用于描述以lpx像素单位为单位的长度。 |
 | [Length](arkts-length-t.md) | 长度类型，用于描述尺寸单位。 |
 | [LengthMetrics](arkts-lengthmetrics-t.md) | 定义长度属性。 |
 | [LengthMetricsUnit](arkts-lengthmetricsunit-t.md) | 定义长度属性单位。 |
 | [LocalizedMargin](arkts-localizedmargin-t.md) | 外边距类型，用于描述组件不同方向的外边距。 |
+| [LPX](arkts-lpx-t.md) | 长度类型，用于描述以lpx像素单位为单位的长度。 |
 | [Margin](arkts-margin-t.md) | 外边距类型，用于描述组件不同方向的外边距。 |
-| [PX](arkts-px-t.md) | 长度类型，用于描述以px像素单位为单位的长度。 |
 | [Percentage](arkts-percentage-t.md) | 长度类型，用于描述以百分比单位为单位的长度。 |
+| [PX](arkts-px-t.md) | 长度类型，用于描述以px像素单位为单位的长度。 |
 | [Resource](arkts-resource-t.md) | 资源引用类型，用于设置组件属性的值。各类资源文件，需要放入特定子目录中存储管理，资源目录的示例请参考 [资源分类](../../../quick-start/resource-categories-and-access.md#资源分类)。 |
 | [ResourceColor](arkts-resourcecolor-t.md) | 颜色类型，用于描述资源颜色类型。 |
 | [ResourceStr](arkts-resourcestr-t.md) | 字符串类型，用于描述字符串入参可以使用的类型。 |
 | [ResponsiveFillType](arkts-responsivefilltype-t.md) | 响应式布局填充模式，用于WaterFlow、Grid、List、Swiper和LazyVWaterFlowLayout组件。LazyVWaterFlowLayout组件从API版本26.0.0开始支持。 |
-| [VP](arkts-vp-t.md) | 长度类型，用于描述以vp像素单位为单位的长度。 |
 | [VoidCallback](arkts-voidcallback-t.md) | Defines VoidCallback. |
+| [VP](arkts-vp-t.md) | 长度类型，用于描述以vp像素单位为单位的长度。 |
 

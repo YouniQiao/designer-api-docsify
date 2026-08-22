@@ -31,7 +31,7 @@ Checks whether a key exists. This API uses an asynchronous callback to return th
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key to check. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Options for checking the key. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the key exists; the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the key exists; the value **false** means the opposite. |
 
 **Examples**
 
@@ -45,6 +45,17 @@ let emptyOptions: huks.HuksOptions = {
 };
 huks.isKeyExist(keyAlias, emptyOptions, (err, data) => {
 });
+```
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* Set options to emptyOptions. */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+let result = huks.isKeyExist(keyAlias, emptyOptions);
 ```
 
 
@@ -81,14 +92,5 @@ Checks whether a key exists. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-let result = huks.isKeyExist(keyAlias, emptyOptions);
-```
+See [isKeyExist](#iskeyexist)
 

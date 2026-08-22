@@ -93,7 +93,7 @@ Generates a random number of the specified length. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | len | int | Yes | Length of the random number to generate, in bytes. The value range is [1, INT_MAX]. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the random number obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the random number obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -115,6 +115,19 @@ rand.generateRandom(12, (err, randData) => {
   } else {
     console.info('[Callback]: generate random result: ' + randData.data);
   }
+});
+```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rand = cryptoFramework.createRandom();
+let promiseGenerateRand = rand.generateRandom(12);
+promiseGenerateRand.then(randData => {
+  console.info('[Promise]: rand result: ' + randData.data);
+}).catch((error: BusinessError) => {
+  console.error(`[Promise] failed: errCode: ${error.code}, errMsg: ${error.message}`);
 });
 ```
 
@@ -160,18 +173,7 @@ Generates a random number of the specified length. This API uses a promise to re
 
 **Examples**
 
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let rand = cryptoFramework.createRandom();
-let promiseGenerateRand = rand.generateRandom(12);
-promiseGenerateRand.then(randData => {
-  console.info('[Promise]: rand result: ' + randData.data);
-}).catch((error: BusinessError) => {
-  console.error(`[Promise] failed: errCode: ${error.code}, errMsg: ${error.message}`);
-});
-```
+See [generateRandom](#generaterandom)
 
 ## generateRandomSync
 

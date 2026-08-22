@@ -67,6 +67,25 @@ dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.REA
 }); // 安装后卸载DLP沙箱。
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.READ_ONLY, 100,
+  uri).then((dlpSandboxInfo: dlpPermission.DLPSandboxInfo) => {
+  console.info('dlpSandboxInfo：', JSON.stringify(dlpSandboxInfo));
+  dlpPermission.uninstallDLPSandbox('com.ohos.note', 100, dlpSandboxInfo.appIndex, (err, res) => {
+    if (err) {
+      console.error(`Failed to uninstall DLPSandbox. Code: ${err.code}, message: ${err.message}`); 
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+  }); // 卸载DLP沙箱。
+}).catch((error: BusinessError)=> {
+  console.error(`Failed to install or uninstall DLPSandbox. Code: ${error.code}, message: ${error.message}`);
+}); // 安装后卸载DLP沙箱。
+```
+
 
 ## uninstallDLPSandbox
 
@@ -111,22 +130,5 @@ function uninstallDLPSandbox(bundleName: string, userId: number, appIndex: numbe
 
 **示例**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.READ_ONLY, 100,
-  uri).then((dlpSandboxInfo: dlpPermission.DLPSandboxInfo) => {
-  console.info('dlpSandboxInfo：', JSON.stringify(dlpSandboxInfo));
-  dlpPermission.uninstallDLPSandbox('com.ohos.note', 100, dlpSandboxInfo.appIndex, (err, res) => {
-    if (err) {
-      console.error(`Failed to uninstall DLPSandbox. Code: ${err.code}, message: ${err.message}`); 
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-  }); // 卸载DLP沙箱。
-}).catch((error: BusinessError)=> {
-  console.error(`Failed to install or uninstall DLPSandbox. Code: ${error.code}, message: ${error.message}`);
-}); // 安装后卸载DLP沙箱。
-```
+参见 [uninstallDLPSandbox](#uninstalldlpsandbox)
 

@@ -32,12 +32,71 @@ Constructor of ReactiveComponentContent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
+| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
 | builder | WrappedBuilder&lt;T&gt; | Yes | Encapsulates the WrappedBuilder object of the @Builder function with parameters. |
 | config | [BuildOptions](../../apis-default/arkts-apis/arkts-buildernode-buildoptions-i.md) | Yes | Configures the build behavior of the builder. All attributes in BuildOptions are optional. The default value is the corresponding default value in BuildOptions. |
 | args | T | Yes | Parameters of the builder function encapsulated in the **WrappedBuilder** object. Transfers external data to the WrappedBuilder&lt;T&gt and build functions specified in the constructor. Multiple input parameters are supported. The default value is **undefined**. |
 
 **Examples**
+
+```TypeScript
+import { ComponentContent, NodeContent, typeNode } from "@kit.ArkUI";
+
+interface ParamsInterface {
+  text: string;
+  func: Function;
+}
+
+@Builder
+function buildTextWithFunc(fun: Function) {
+  Text(fun())
+    .fontSize(20)
+    .fontWeight(FontWeight.Bold)
+    .margin({ bottom: 36 })
+}
+
+@Builder
+function buildText(params: ParamsInterface) {
+  Column() {
+    Text(params.text)
+      .fontSize(20)
+      .fontWeight(FontWeight.Bold)
+      .margin({ bottom: 12 })
+    buildTextWithFunc(params.func)
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  @State message: string = "HELLO";
+  private content: NodeContent = new NodeContent();
+
+  build() {
+    Row() {
+      Column({ space: 12 }) {
+        Button('addComponentContent')
+          .onClick(() => {
+            let column = typeNode.createNode(this.getUIContext(), "Column");
+            column.initialize();
+            column.addComponentContent(new ComponentContent<ParamsInterface>(this.getUIContext(),
+              wrapBuilder<[ParamsInterface]>(buildText), {
+                text: this.message, func: () => {
+                  return "FUNCTION"
+                }
+              }, { nestingBuilderSupported: true }));
+            this.content.addFrameNode(column);
+          })
+        ContentSlot(this.content)
+      }
+      .id("column")
+      .width('100%')
+      .height('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 This example demonstrates how to use the ReactiveComponentContent constructor to dynamically create UI components that contain reactive content, implementing nested calls to the Builder function and flexible transfer of function parameters.
 
@@ -125,6 +184,66 @@ Immediately releases the reference relationship between this **ReactiveComponent
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { ComponentContent } from '@kit.ArkUI';
+
+class Params {
+  text: string = "";
+
+  constructor(text: string) {
+    this.text = text;
+  }
+}
+
+@Builder
+function buildText(params: Params) {
+  Column() {
+    Text(params.text)
+      .fontSize(50)
+      .fontWeight(FontWeight.Bold)
+      .margin({ bottom: 36 })
+  }.backgroundColor('#FFF0F0F0')
+}
+
+@Entry
+@Component
+struct Index {
+  @State message: string = "hello";
+
+  build() {
+    Row() {
+      Column() {
+        Button("click me")
+          .onClick(() => {
+            let uiContext = this.getUIContext();
+            let promptAction = uiContext.getPromptAction();
+            let contentNode = new ComponentContent(uiContext, wrapBuilder(buildText), new Params(this.message));
+            promptAction.openCustomDialog(contentNode);
+
+            setTimeout(() => {
+              promptAction.closeCustomDialog(contentNode)
+                .then(() => {
+                  console.info('customDialog closed.');
+                  if (contentNode !== null) {
+                    contentNode.dispose(); // Dispose the contentNode object.
+                  }
+                }).catch((error: BusinessError) => {
+                let message = (error as BusinessError).message;
+                let code = (error as BusinessError).code;
+                console.error(`closeCustomDialog args error code is ${code}, message is ${message}`);
+              })
+            }, 2000); // Automatically close the dialog box after 2 seconds.
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 The following example shows how to use the dispose API to correctly release the ReactiveComponentContent object and manage the node lifecycle.
 
@@ -391,6 +510,192 @@ Sets whether the current **ReactiveComponentContent** object inherits the freeze
 
 **Examples**
 
+```TypeScript
+import { ComponentContent, FrameNode, NodeController } from '@kit.ArkUI';
+
+class Params {
+  count: number = 0;
+
+  constructor(count: number) {
+    this.count = count;
+  }
+}
+
+@Builder
+// Builder component
+function buildText(params: Params) {
+
+  Column() {
+    TextBuilder({ message: params.count })
+  }
+}
+
+class TextNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+  private contentNode: ComponentContent<Params> | null = null;
+  private count: number = 0;
+
+  makeNode(context: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(context);
+    this.contentNode =
+      new ComponentContent(context, wrapBuilder(buildText), new Params(this.count)); // Create ComponentContent using buildText.
+    this.contentNode.inheritFreezeOptions(true); // Configure the ComponentContent object to inherit the freeze policy from its parent component.
+    if (this.rootNode !== null) {
+      this.rootNode.addComponentContent(this.contentNode); // Add ComponentContent to the tree.
+    }
+    return this.rootNode;
+  }
+
+  update(): void {
+    if (this.contentNode !== null) {
+      this.count += 1;
+      this.contentNode.update(new Params(this.count)); // Update the ComponentContent data, which triggers logs.
+    }
+  }
+}
+
+const textNodeController: TextNodeController = new TextNodeController();
+
+@Entry
+@Component
+struct MyNavigationTestStack {
+  @Provide('pageInfo') pageInfo: NavPathStack = new NavPathStack();
+  @State message: number = 0;
+  @State logNumber: number = 0;
+
+  @Builder
+  PageMap(name: string) {
+    if (name === 'pageOne') {
+      pageOneStack({ message: this.message, logNumber: this.logNumber })
+    } else if (name === 'pageTwo') {
+      pageTwoStack({ message: this.message, logNumber: this.logNumber })
+    }
+  }
+
+  build() {
+    Column() {
+      Button('update ComponentContent') // Clicking the button updates ComponentContent.
+        .onClick(() => {
+          textNodeController.update();
+        })
+      Navigation(this.pageInfo) {
+        Column() {
+          Button('Next Page', { stateEffect: true, type: ButtonType.Capsule })
+            .width('80%')
+            .height(40)
+            .margin(20)
+            .onClick(() => {
+              this.pageInfo.pushPath({ name: 'pageOne' }); // Push the navigation destination page specified by name to the navigation stack.
+            })
+        }
+      }.title('NavIndex')
+      .navDestination(this.PageMap)
+      .mode(NavigationMode.Stack)
+    }
+  }
+}
+
+@Component
+struct pageOneStack { // Page 1
+  @Consume('pageInfo') pageInfo: NavPathStack;
+  @State index: number = 1;
+  @Link message: number;
+  @Link logNumber: number;
+
+  build() {
+    NavDestination() {
+      Column() {
+        NavigationContentMsgStack({ message: this.message, index: this.index, logNumber: this.logNumber })
+        Button('Next Page', { stateEffect: true, type: ButtonType.Capsule }) // Navigate to page 2.
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfo.pushPathByName('pageTwo', null);
+          })
+        Button('Back Page', { stateEffect: true, type: ButtonType.Capsule }) // Return to the home page.
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfo.pop();
+          })
+      }.width('100%').height('100%')
+    }.title('pageOne')
+    .onBackPressed(() => {
+      this.pageInfo.pop();
+      return true;
+    })
+  }
+}
+
+@Component
+struct pageTwoStack { // Page 2
+  @Consume('pageInfo') pageInfo: NavPathStack;
+  @State index: number = 2;
+  @Link message: number;
+  @Link logNumber: number;
+
+  build() {
+    NavDestination() {
+      Column() {
+        NavigationContentMsgStack({ message: this.message, index: this.index, logNumber: this.logNumber })
+        Text('BuilderNode is frozen')
+          .fontWeight(FontWeight.Bold)
+          .margin({ top: 48, bottom: 48 })
+        Button('Back Page', { stateEffect: true, type: ButtonType.Capsule }) // Return to page 1.
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfo.pop();
+          })
+      }.width('100%').height('100%')
+    }.title('pageTwo')
+    .onBackPressed(() => {
+      this.pageInfo.pop();
+      return true;
+    })
+  }
+}
+
+@Component({ freezeWhenInactive: true })
+  // Set the freeze policy to inactive freeze.
+struct NavigationContentMsgStack {
+  @Link message: number;
+  @Link index: number;
+  @Link logNumber: number;
+
+  build() {
+    Column() {
+      if (this.index === 1) {
+        NodeContainer(textNodeController)
+      }
+    }
+  }
+}
+
+@Component({ freezeWhenInactive: true })
+  // Set the freeze policy to inactive freeze.
+struct TextBuilder {
+  @Prop @Watch("info") message: number = 0;
+
+  info() {
+    console.info(`freeze-test TextBuilder message callback ${this.message}`); // Print logs based on the message content change to determine whether the freeze occurs.
+  }
+
+  build() {
+    Row() {
+      Column() {
+        Text(`Update count: ${this.message}`)
+          .fontWeight(FontWeight.Bold)
+          .margin({ top: 48, bottom: 48 })
+      }
+    }
+  }
+}
+```
+
 In this example, the inheritance status of ReactiveComponentContent is set to true, the freezing policy of the parent custom component is inherited, the component is frozen when it is inactive, and the component is unfrozen when it is active. The cached data is updated.
 
 ```TypeScript
@@ -599,6 +904,78 @@ Checks whether this **ReactiveComponentContent** object has released its referen
 
 **Examples**
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { ComponentContent } from '@kit.ArkUI';
+
+class Params {
+  text: string = "";
+
+  constructor(text: string) {
+    this.text = text;
+  }
+}
+
+@Builder
+function buildText(params: Params) {
+  Column() {
+    Text(params.text)
+      .fontSize(50)
+      .fontWeight(FontWeight.Bold)
+      .margin({ bottom: 36 })
+  }.backgroundColor('#FFF0F0F0')
+}
+
+@Entry
+@Component
+struct Index {
+  @State message: string = "hello";
+  @State beforeDispose: string = ''
+  @State afterDispose: string = ''
+
+  build() {
+    Row() {
+      Column() {
+        Button("click me")
+          .onClick(() => {
+            let uiContext = this.getUIContext();
+            let promptAction = uiContext.getPromptAction();
+            let contentNode = new ComponentContent(uiContext, wrapBuilder(buildText), new Params(this.message));
+            promptAction.openCustomDialog(contentNode);
+
+            setTimeout(() => {
+              promptAction.closeCustomDialog(contentNode)
+                .then(() => {
+                  console.info('customDialog closed.');
+                  if (contentNode !== null) {
+                    this.beforeDispose =
+                      contentNode.isDisposed() ? 'before dispose componentContent isDisposed is true' :
+                        'before dispose componentContent isDisposed is false';
+                    contentNode.dispose(); // Dispose the contentNode object.
+                    this.afterDispose = contentNode.isDisposed() ? 'after dispose componentContent isDisposed is true' :
+                      'after dispose componentContent isDisposed is false';
+                  }
+                }).catch((error: BusinessError) => {
+                let message = (error as BusinessError).message;
+                let code = (error as BusinessError).code;
+                console.error(`closeCustomDialog args error code is ${code}, message is ${message}`);
+              })
+            }, 1000); // Automatically close the dialog box 1 second later.
+          })
+        Text(this.beforeDispose)
+          .fontSize(25)
+          .margin({ top: 10, bottom: 10 })
+        Text(this.afterDispose)
+          .fontSize(25)
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
 This example demonstrates how to use the isDisposed API to check whether the ReactiveComponentContent object's reference to the backend node is released, providing a complete implementation solution for node status security detection.
 
 ```TypeScript
@@ -753,7 +1130,7 @@ recycle(): void
 
 Recycles the custom component in ReactiveComponentContent. Component recycling is part of the component reuse mechanism. For details, see [@Reusable Decorator: Reusing V1 Components](../../../ui/state-management/arkts-reusable.md). Since API version 26 .0.0, custom components in **ReactiveComponentContent** support V2 component reuse. For details, see [@ReusableV2 Decorator: Reusing Components](../../../ui/state-management/arkts-new-reusableV2.md).
 
-**ReactiveComponentContent** completes the reuse event transfer between internal and external custom components through [reuse](arkts-arkui-componentcontent-c.md#reuse) and **recycle**. For specific usage scenarios, see [Implementing Node Reuse with the BuilderNode reuse and recycle APIs](../../../ui/arkts-user-defined-arktsNode-builderNode.md#implementing-node-reuse-with-the-buildernode-reuse-and-recycle-apis).
+**ReactiveComponentContent** completes the reuse event transfer between internal and external custom components through [reuse](../../apis-default/arkts-apis/arkts-componentcontent-c.md#reuse) and **recycle**. For specific usage scenarios, see [Implementing Node Reuse with the BuilderNode reuse and recycle APIs](../../../ui/arkts-user-defined-arktsNode-builderNode.md#implementing-node-reuse-with-the-buildernode-reuse-and-recycle-apis).
 
 **Since:** 22
 
@@ -945,7 +1322,7 @@ reuse(param?: Object): void
 
 Triggers component reuse for custom components under this **ReactiveComponentContent**. For details about component reuse, see [@Reusable Decorator: Reusing V1 Components](../../../ui/state-management/arkts-reusable.md). For details about the scenarios involving **ReactiveComponentContent** unbinding, see [Canceling the Reference to the Entity Node](../../../ui/arkts-user-defined-arktsNode-builderNode.md#canceling-the-reference-to-the-entity-node). Since API version 26.0.0, custom components in **ReactiveComponentContent** support V2 component reuse. For details, see [@ReusableV2 Decorator: Reusing Components](../../../ui/state-management/arkts-new-reusableV2.md).
 
-**ReactiveComponentContent** completes the reuse event transfer between internal and external custom components through **reuse** and [recycle](arkts-arkui-componentcontent-c.md#recycle). For specific usage scenarios, see [Implementing Node Reuse with the BuilderNode reuse and recycle APIs](../../../ui/arkts-user-defined-arktsNode-builderNode.md#implementing-node-reuse-with-the-buildernode-reuse-and-recycle-apis).
+**ReactiveComponentContent** completes the reuse event transfer between internal and external custom components through **reuse** and [recycle](../../apis-default/arkts-apis/arkts-componentcontent-c.md#recycle). For specific usage scenarios, see [Implementing Node Reuse with the BuilderNode reuse and recycle APIs](../../../ui/arkts-user-defined-arktsNode-builderNode.md#implementing-node-reuse-with-the-buildernode-reuse-and-recycle-apis).
 
 **Since:** 22
 
@@ -961,7 +1338,7 @@ Triggers component reuse for custom components under this **ReactiveComponentCon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | Object | No | Parameter used to reuse [ReactiveComponentContent](#reactivecomponentcontent). This parameter is directly used for reusing all top-level custom components in **ReactiveComponentContent**. It should contain the content required by the constructor parameters of each custom component. Otherwise, undefined behavior may occur. Calling this method synchronously triggers the [aboutToReuse](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoreuse10) lifecycle callback of internal custom components, with this parameter as the callback input. The default value is undefined. In this case, the custom component in ReactiveComponentContent directly uses the data source during construction. |
+| param | Object | No | Parameter used to reuse [ReactiveComponentContent](../../apis-default/arkts-apis/arkts-componentcontent-reactivecomponentcontent-c.md). This parameter is directly used for reusing all top-level custom components in **ReactiveComponentContent**. It should contain the content required by the constructor parameters of each custom component. Otherwise, undefined behavior may occur. Calling this method synchronously triggers the [aboutToReuse](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoreuse10) lifecycle callback of internal custom components, with this parameter as the callback input. The default value is undefined. In this case, the custom component in ReactiveComponentContent directly uses the data source during construction. |
 
 **Examples**
 
@@ -973,7 +1350,7 @@ For details, see the example in [recycle](#recycle).
 updateConfiguration(): void
 ```
 
-Transfers a system environment change event and triggers full update of a node. This event can be used to notify the object of the update. Whether the system environment used by the object is updated depends on the current system environment change of the application. For details about system environment changes, see [@ohos.app.ability.Configuration (Environment Variables)](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityconfiguration-configuration-i.md).
+Transfers a system environment change event and triggers full update of a node. This event can be used to notify the object of the update. Whether the system environment used by the object is updated depends on the current system environment change of the application. For details about system environment changes, see [@ohos.app.ability.Configuration (Environment Variables)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md).
 
 **Since:** 22
 
@@ -986,6 +1363,104 @@ Transfers a system environment change event and triggers full update of a node. 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Examples**
+
+```TypeScript
+import { NodeController, FrameNode, ComponentContent, UIContext, FrameCallback } from '@kit.ArkUI';
+import { AbilityConstant, Configuration, EnvironmentCallback, ConfigurationConstant } from '@kit.AbilityKit';
+
+@Builder
+function buildText() {
+  Column() {
+    Text('Hello')
+      .fontSize(36)
+      .fontWeight(FontWeight.Bold)
+  }
+  .backgroundColor($r('sys.color.ohos_id_color_background'))
+  .width('100%')
+  .alignItems(HorizontalAlign.Center)
+  .padding(16)
+}
+
+const componentContentMap: Array<ComponentContent<[Object]>> = new Array();
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    return this.rootNode;
+  }
+
+  createNode(context: UIContext) {
+    this.rootNode = new FrameNode(context);
+    let component = new ComponentContent<Object>(context, wrapBuilder(buildText));
+    componentContentMap.push(component);
+    this.rootNode.addComponentContent(component);
+  }
+
+  deleteNode() {
+    let node = componentContentMap.pop();
+    this.rootNode?.dispose();
+    node?.dispose();
+  }
+}
+
+class MyFrameCallback extends FrameCallback {
+  onFrame() {
+    updateColorMode();
+  }
+}
+
+function updateColorMode() {
+  componentContentMap.forEach((value, index) => {
+    value.updateConfiguration();
+  })
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  aboutToAppear(): void {
+    let environmentCallback: EnvironmentCallback = {
+      onMemoryLevel: (level: AbilityConstant.MemoryLevel): void => {
+        console.info('onMemoryLevel');
+      },
+      onConfigurationUpdated: (config: Configuration): void => {
+        console.info(`onConfigurationUpdated ${config}`);
+        this.getUIContext()?.postFrameCallback(new MyFrameCallback());
+      }
+    }
+    // Register a callback.
+    this.getUIContext().getHostContext()?.getApplicationContext().on('environment', environmentCallback);
+    // Set the application color mode to follow the system settings.
+    this.getUIContext()
+      .getHostContext()?.getApplicationContext().setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_NOT_SET);
+    this.myNodeController.createNode(this.getUIContext());
+  }
+
+  aboutToDisappear(): void {
+    // Remove the reference to the custom node from the map and release the node.
+    this.myNodeController.deleteNode();
+  }
+
+  build() {
+    Column({ space: 16 }) {
+      NodeContainer(this.myNodeController);
+      Button('Switch to Dark Mode')
+        .onClick(() => {
+          this.getUIContext()
+            .getHostContext()?.getApplicationContext().setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_DARK);
+        })
+      Button('Switch to Light Mode')
+        .onClick(() => {
+          this.getUIContext()
+            .getHostContext()?.getApplicationContext().setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_LIGHT);
+        })
+    }
+  }
+}
+```
 
 The following example shows how to use the updateConfiguration API to respond to system environment configuration changes and dynamically update the UI node constructed by ReactiveComponentContent.
 

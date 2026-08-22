@@ -37,6 +37,12 @@ export function getSystemLocale(): string
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
 
+let systemLocale: string = i18n.System.getSystemLocale(); // 如果系统语言为简体中文、地区为中国，systemLocale = 'zh-Hans-CN'
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
 let locale: string = i18n.getSystemLocale();
 ```
 

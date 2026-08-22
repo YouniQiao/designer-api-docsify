@@ -82,13 +82,13 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [CMHandle](arkts-devicecertificate-certificatemanager-cmhandle-i.md) | 表示签名、验签的初始化操作句柄。 |
-| [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md) | 表示接口的返回结果。 |
-| [CMSignatureSpec](arkts-devicecertificate-certificatemanager-cmsignaturespec-i.md) | 表示签名、验签操作使用的参数集合，包括密钥使用目的、填充方式和摘要算法。 |
 | [CertAbstract](arkts-devicecertificate-certificatemanager-certabstract-i.md) | 表示证书简要信息。 |
 | [CertBlob](arkts-devicecertificate-certificatemanager-certblob-i.md) | 表示证书文件数据。 |
 | [CertInfo](arkts-devicecertificate-certificatemanager-certinfo-i.md) | 表示证书详细信息。 |
 | [CertStoreProperty](arkts-devicecertificate-certificatemanager-certstoreproperty-i.md) | 表示获取证书存储位置的参数集合，包括证书的类型及证书的位置。 |
+| [CMHandle](arkts-devicecertificate-certificatemanager-cmhandle-i.md) | 表示签名、验签的初始化操作句柄。 |
+| [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md) | 表示接口的返回结果。 |
+| [CMSignatureSpec](arkts-devicecertificate-certificatemanager-cmsignaturespec-i.md) | 表示签名、验签操作使用的参数集合，包括密钥使用目的、填充方式和摘要算法。 |
 | [Credential](arkts-devicecertificate-certificatemanager-credential-i.md) | 表示凭据详细信息。 |
 | [CredentialAbstract](arkts-devicecertificate-certificatemanager-credentialabstract-i.md) | 表示凭据的简要信息。 |
 | [UkeyInfo](arkts-devicecertificate-certificatemanager-ukeyinfo-i.md) | 提供USB Key证书凭据属性信息。 |
@@ -98,12 +98,12 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 | 名称 | 说明 |
 | --- | --- |
 | [AuthStorageLevel](arkts-devicecertificate-certificatemanager-authstoragelevel-e.md) | 表示凭据的存储级别。 |
-| [CMErrorCode](arkts-devicecertificate-certificatemanager-cmerrorcode-e.md) | 表示调用证书管理相关API的错误码。 |
 | [CertAlgorithm](arkts-devicecertificate-certificatemanager-certalgorithm-e.md) | 表示证书的算法类型。 |
 | [CertFileFormat](arkts-devicecertificate-certificatemanager-certfileformat-e.md) | 表示证书文件格式。 |
+| [CertificatePurpose](arkts-devicecertificate-certificatemanager-certificatepurpose-e.md) | 表示凭据用途的枚举。 |
 | [CertScope](arkts-devicecertificate-certificatemanager-certscope-e.md) | 表示证书的位置。 |
 | [CertType](arkts-devicecertificate-certificatemanager-certtype-e.md) | 表示证书类型。 |
-| [CertificatePurpose](arkts-devicecertificate-certificatemanager-certificatepurpose-e.md) | 表示凭据用途的枚举。 |
+| [CMErrorCode](arkts-devicecertificate-certificatemanager-cmerrorcode-e.md) | 表示调用证书管理相关API的错误码。 |
 | [CmKeyDigest](arkts-devicecertificate-certificatemanager-cmkeydigest-e.md) | 表示签名、验签使用的摘要算法的枚举。 |
 | [CmKeyPadding](arkts-devicecertificate-certificatemanager-cmkeypadding-e.md) | 表示签名、验签使用的填充方式的枚举。 |
 | [CmKeyPurpose](arkts-devicecertificate-certificatemanager-cmkeypurpose-e.md) | 表示密钥使用目的的枚举，用于签名、验签。 |

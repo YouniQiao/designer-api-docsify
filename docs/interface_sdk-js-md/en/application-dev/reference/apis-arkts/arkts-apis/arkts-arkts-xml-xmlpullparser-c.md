@@ -40,6 +40,15 @@ Creates and returns an XmlPullParser object.
 **Examples**
 
 ```TypeScript
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer, "utf-8");
+```
+
+```TypeScript
+let serializer = new xml.XmlDynamicSerializer('utf-8');
+```
+
+```TypeScript
 import { util } from '@kit.ArkTS';
 
 let strXml = '<title>Happy</title>'

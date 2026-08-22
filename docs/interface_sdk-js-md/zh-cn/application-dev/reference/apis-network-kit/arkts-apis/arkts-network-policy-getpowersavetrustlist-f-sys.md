@@ -52,6 +52,19 @@ policy.getPowerSaveTrustlist((error: BusinessError, data: number[]) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .getPowerSaveTrustlist()
+  .then((data: number[]) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
+
 
 ## getPowerSaveTrustlist
 
@@ -89,16 +102,5 @@ function getPowerSaveTrustlist(): Promise<Array<int>>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .getPowerSaveTrustlist()
-  .then((data: number[]) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+参见 [getPowerSaveTrustlist](#getpowersavetrustlist)
 

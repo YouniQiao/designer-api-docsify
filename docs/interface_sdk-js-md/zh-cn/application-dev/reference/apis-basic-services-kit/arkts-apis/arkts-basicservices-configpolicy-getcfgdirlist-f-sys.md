@@ -34,6 +34,108 @@ function getCfgDirList(callback: AsyncCallback<Array<string>>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      configPolicy.getCfgDirList((error: BusinessError, value: Array<string>) => {
+        if (error == null) {
+          console.info('value is ' + value);
+        } else {
+          console.error('error: ' + error.code + ', ' + error.message);
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error('error: ' + code + ', ' + message);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      configPolicy.getCfgDirList((error: BusinessError | null, value: Array<string> | undefined) => {
+        if (error == null) {
+          console.info('value is ' + value);
+        } else {
+          console.error('error: ' + error.code + ', ' + error.message);
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error('error: ' + code + ', ' + message);
+    }
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      configPolicy.getCfgDirList().then((value: Array<string>) => {
+        console.info('value is ' + value);
+      }).catch((error: BusinessError) => {
+        console.error('getCfgDirList promise error: ' + error.code + ', ' + error.message);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error('error: ' + code + ', ' + message);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      configPolicy.getCfgDirList().then((value: Array<string>) => {
+        console.info('value is ' + value);
+      }).catch((error: Error) => {
+        console.error('getCfgDirList promise error: ' + error);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error('error: ' + code + ', ' + message);
+    }
+  }
+}
+```
+
 
 ## getCfgDirList
 
@@ -56,4 +158,8 @@ function getCfgDirList(): Promise<Array<string>>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回配置层级目录列表。 |
+
+**示例**
+
+参见 [getCfgDirList](#getcfgdirlist)
 

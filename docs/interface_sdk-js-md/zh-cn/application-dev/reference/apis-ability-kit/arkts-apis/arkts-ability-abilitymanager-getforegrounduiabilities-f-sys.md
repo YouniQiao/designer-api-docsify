@@ -55,6 +55,18 @@ abilityManager.getForegroundUIAbilities((err: BusinessError | null,
 });
 ```
 
+```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+abilityManager.getForegroundUIAbilities().then((data: Array<abilityManager.AbilityStateData>) => {
+  console.info(`Get foreground ui abilities data is: ${JSON.stringify(data)}`);
+}).catch((e: Error) => {
+  let error = e as BusinessError;
+  console.error(`Get foreground ui abilities failed, error: ${JSON.stringify(error)}`);
+});
+```
+
 
 ## getForegroundUIAbilities
 
@@ -90,15 +102,5 @@ function getForegroundUIAbilities(): Promise<Array<AbilityStateData>>
 
 **示例**
 
-```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-abilityManager.getForegroundUIAbilities().then((data: Array<abilityManager.AbilityStateData>) => {
-  console.info(`Get foreground ui abilities data is: ${JSON.stringify(data)}`);
-}).catch((e: Error) => {
-  let error = e as BusinessError;
-  console.error(`Get foreground ui abilities failed, error: ${JSON.stringify(error)}`);
-});
-```
+参见 [getForegroundUIAbilities](#getforegrounduiabilities)
 

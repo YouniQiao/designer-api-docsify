@@ -147,55 +147,6 @@ async function example(context: Context) {
 }
 ```
 
-## canPerformDeepOptimizeSpace
-
-```TypeScript
-canPerformDeepOptimizeSpace(): Promise<boolean>
-```
-
-查询当前系统是否可以执行深度优化存储空间功能。使用Promise异步回调。
-
-**起始版本：** 26.0.0
-
-**需要权限：** ohos.permission.READ_IMAGEVIDEO
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PhotoAccessHelper-canPerformDeepOptimizeSpace(): Promise<boolean>--><!--Device-PhotoAccessHelper-canPerformDeepOptimizeSpace(): Promise<boolean>-End-->
-
-**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**系统接口：** 此接口为系统接口。
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。**true**表示可以调用 [startDeepOptimizeSpace()]{ |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
-
-**示例**
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let canPerform: boolean = await phAccessHelper.canPerformDeepOptimizeSpace();
-    console.info(`canPerformDeepOptimizeSpace result: ${canPerform}`);
-  } catch (err) {
-    console.error(`canPerformDeepOptimizeSpace failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## cancelAnalysisTool
 
 ```TypeScript
@@ -316,6 +267,55 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     console.info('cancelPhotoUriPermission success, result=' + result);
   } catch (err) {
     console.error('cancelPhotoUriPermission failed, error=' + err);
+  }
+}
+```
+
+## canPerformDeepOptimizeSpace
+
+```TypeScript
+canPerformDeepOptimizeSpace(): Promise<boolean>
+```
+
+查询当前系统是否可以执行深度优化存储空间功能。使用Promise异步回调。
+
+**起始版本：** 26.0.0
+
+**需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PhotoAccessHelper-canPerformDeepOptimizeSpace(): Promise<boolean>--><!--Device-PhotoAccessHelper-canPerformDeepOptimizeSpace(): Promise<boolean>-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise对象。**true**表示可以调用 [startDeepOptimizeSpace()]{ |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
+
+**示例**
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    let canPerform: boolean = await phAccessHelper.canPerformDeepOptimizeSpace();
+    console.info(`canPerformDeepOptimizeSpace result: ${canPerform}`);
+  } catch (err) {
+    console.error(`canPerformDeepOptimizeSpace failed with error: ${err.code}, ${err.message}`);
   }
 }
 ```
@@ -706,6 +706,22 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('createAlbumDemo');
+  let albumName: string = 'newAlbumName' + new Date().getTime();
+  phAccessHelper.createAlbum(albumName).then((album) => {
+    console.info('createAlbumPromise successfully, album: ' + album.albumName + ' album uri: ' + album.albumUri);
+  }).catch((err: BusinessError) => {
+    console.error(`createAlbumPromise failed with err: ${err.code}, ${err.message}`);
+  });
+}
+```
+
 ## createAlbum
 
 ```TypeScript
@@ -761,21 +777,7 @@ createAlbum(name: string): Promise<Album>
 
 **示例**
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAlbumDemo');
-  let albumName: string = 'newAlbumName' + new Date().getTime();
-  phAccessHelper.createAlbum(albumName).then((album) => {
-    console.info('createAlbumPromise successfully, album: ' + album.albumName + ' album uri: ' + album.albumUri);
-  }).catch((err: BusinessError) => {
-    console.error(`createAlbumPromise failed with err: ${err.code}, ${err.message}`);
-  });
-}
-```
+参见 [createAlbum](#createalbum)
 
 ## createAsset
 
@@ -840,6 +842,120 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('createAssetDemo');
+  try {
+    let testFileName: string = 'testFile' + Date.now() + '.jpg';
+    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName);
+    console.info('createAsset file displayName' + photoAsset.displayName);
+    console.info('createAsset successfully');
+  } catch (err) {
+    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('createAssetDemo');
+  let testFileName: string = 'testFile' + Date.now() + '.jpg';
+  let createOption: photoAccessHelper.PhotoCreateOptions = {
+    subtype: photoAccessHelper.PhotoSubtype.DEFAULT
+  }
+  phAccessHelper.createAsset(testFileName, createOption, (err, photoAsset) => {
+    if (photoAsset !== undefined) {
+      console.info('createAsset file displayName' + photoAsset.displayName);
+      console.info('createAsset successfully');
+    } else {
+      console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
+    }
+  });
+}
+```
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('createAssetDemo');
+  try {
+    let testFileName:string = 'testFile' + Date.now() + '.jpg';
+    let createOption: photoAccessHelper.PhotoCreateOptions = {
+      subtype: photoAccessHelper.PhotoSubtype.DEFAULT
+    }
+    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName, createOption);
+    console.info('createAsset file displayName' + photoAsset.displayName);
+    console.info('createAsset successfully');
+  } catch (err) {
+    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('createAssetDemo');
+  let photoType: photoAccessHelper.PhotoType = photoAccessHelper.PhotoType.IMAGE;
+  let extension:string = 'jpg';
+  let options: photoAccessHelper.CreateOptions = {
+    title: 'testPhoto'
+  }
+  phAccessHelper.createAsset(photoType, extension, options, (err, uri) => {
+    if (uri !== undefined) {
+      console.info('createAsset uri' + uri);
+      console.info('createAsset successfully');
+    } else {
+      console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
+    }
+  });
+}
+```
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('createAssetDemo');
+  let photoType: photoAccessHelper.PhotoType = photoAccessHelper.PhotoType.IMAGE;
+  let extension: string = 'jpg';
+  phAccessHelper.createAsset(photoType, extension, (err, uri) => {
+    if (uri !== undefined) {
+      console.info('createAsset uri' + uri);
+      console.info('createAsset successfully');
+    } else {
+      console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
+    }
+  });
+}
+```
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('createAssetDemo');
+  try {
+    let photoType: photoAccessHelper.PhotoType = photoAccessHelper.PhotoType.IMAGE;
+    let extension: string = 'jpg';
+    let options: photoAccessHelper.CreateOptions = {
+      title: 'testPhoto'
+    }
+    let uri: string = await phAccessHelper.createAsset(photoType, extension, options);
+    console.info('createAsset uri' + uri);
+    console.info('createAsset successfully');
+  } catch (err) {
+    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
 ## createAsset
 
 ```TypeScript
@@ -891,21 +1007,7 @@ API10-17，非法字符包括：. .. \ / : ? " ' ` &lt; &gt; | { } [ ]
 
 **示例**
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  try {
-    let testFileName: string = 'testFile' + Date.now() + '.jpg';
-    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName);
-    console.info('createAsset file displayName' + photoAsset.displayName);
-    console.info('createAsset successfully');
-  } catch (err) {
-    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-  }
-}
-```
+参见 [createAsset](#createasset)
 
 ## createAsset
 
@@ -959,24 +1061,7 @@ API10-17，非法字符包括：. .. \ / : ? " ' ` &lt; &gt; | { } [ ]
 
 **示例**
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  try {
-    let testFileName:string = 'testFile' + Date.now() + '.jpg';
-    let createOption: photoAccessHelper.PhotoCreateOptions = {
-      subtype: photoAccessHelper.PhotoSubtype.DEFAULT
-    }
-    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName, createOption);
-    console.info('createAsset file displayName' + photoAsset.displayName);
-    console.info('createAsset successfully');
-  } catch (err) {
-    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-  }
-}
-```
+参见 [createAsset](#createasset)
 
 ## createAsset
 
@@ -1025,25 +1110,7 @@ API10-17，非法字符包括：. .. \ / : ? " ' ` &lt; &gt; | { } [ ]
 
 **示例**
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  let testFileName: string = 'testFile' + Date.now() + '.jpg';
-  let createOption: photoAccessHelper.PhotoCreateOptions = {
-    subtype: photoAccessHelper.PhotoSubtype.DEFAULT
-  }
-  phAccessHelper.createAsset(testFileName, createOption, (err, photoAsset) => {
-    if (photoAsset !== undefined) {
-      console.info('createAsset file displayName' + photoAsset.displayName);
-      console.info('createAsset successfully');
-    } else {
-      console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-    }
-  });
-}
-```
+参见 [createAsset](#createasset)
 
 ## createAssetsForApp
 
@@ -1418,6 +1485,55 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  // 示例代码为删除相册名为newAlbumName的相册。
+  console.info('deleteAlbumsDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  predicates.equalTo('album_name', 'newAlbumName');
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
+  let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
+  phAccessHelper.deleteAlbums([album]).then(() => {
+    console.info('deletePhotoAlbumsPromise successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`deletePhotoAlbumsPromise failed with err: ${err.code}, ${err.message}`);
+  });
+  fetchResult.close();
+}
+```
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  console.info('deleteAlbumsDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
+    let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
+    await photoAccessHelper.MediaAlbumChangeRequest.deleteAlbums(context, [album]);
+    console.info('deleteAlbums successfully');
+  } catch (err) {
+    console.error(`deleteAlbumsDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
 ## deleteAlbums
 
 ```TypeScript
@@ -1464,31 +1580,7 @@ deleteAlbums(albums: Array<Album>): Promise<void>
 
 **示例**
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  // 示例代码为删除相册名为newAlbumName的相册。
-  console.info('deleteAlbumsDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  predicates.equalTo('album_name', 'newAlbumName');
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
-  let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
-  phAccessHelper.deleteAlbums([album]).then(() => {
-    console.info('deletePhotoAlbumsPromise successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`deletePhotoAlbumsPromise failed with err: ${err.code}, ${err.message}`);
-  });
-  fetchResult.close();
-}
-```
+参见 [deleteAlbums](#deletealbums)
 
 ## deleteAssets
 
@@ -1564,6 +1656,174 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('deleteDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    if (asset === undefined) {
+      console.error('asset not exist');
+      return;
+    }
+    await phAccessHelper.deleteAssets([asset.uri]);
+    console.info('deleteAssets successfully');
+  } catch (err) {
+    console.error(`deleteAssets failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    console.info('deleteAssetsDemoCallback');
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.SYSTEM, photoAccessHelper.AlbumSubtype.TRASH);
+    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOption);
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    album.deleteAssets([asset], (err) => {
+      if (err === undefined) {
+        console.info('album deleteAssets successfully');
+      } else {
+        console.error(`album deleteAssets failed with error: ${err.code}, ${err.message}`);
+      }
+    });
+  } catch (err) {
+    console.error(`deleteAssetsDemoCallback failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    console.info('deleteAssetsDemoPromise');
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.SYSTEM, photoAccessHelper.AlbumSubtype.TRASH);
+    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOption);
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    album.deleteAssets([asset]).then(() => {
+      console.info('album deleteAssets successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`album deleteAssets failed with error: ${err.code}, ${err.message}`);
+    });
+  } catch (err) {
+    console.error(`deleteAssetsDemoPromise failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('deleteAssetsPermanentlyDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.SYSTEM, photoAccessHelper.AlbumSubtype.TRASH);
+    if (albumFetchResult === undefined) {
+      console.error('albumFetchResult is undefined');
+      return;
+    }
+    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOptions);
+    if (fetchResult === undefined) {
+      console.error('fetchResult is undefined');
+      return;
+    }
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+
+    let albumChangeRequest: photoAccessHelper.MediaAlbumChangeRequest = new photoAccessHelper.MediaAlbumChangeRequest(album);
+    albumChangeRequest.deleteAssets([asset]);
+    await phAccessHelper.applyChanges(albumChangeRequest);
+    console.info('succeed to deleteAssets permanently');
+  } catch (err) {
+    console.error(`deleteAssetsPermanentlyDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  console.info('deleteAssetsDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let photoAssetList: Array<photoAccessHelper.PhotoAsset> = await fetchResult.getAllObjects();
+    await photoAccessHelper.MediaAssetChangeRequest.deleteAssets(context, photoAssetList);
+    console.info('deleteAssets successfully');
+  } catch (err) {
+    console.error(`deleteAssetsDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  console.info('deleteAssetsDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    await photoAccessHelper.MediaAssetChangeRequest.deleteAssets(context, [asset.uri]);
+    console.info('deleteAssets successfully');
+  } catch (err) {
+    console.error(`deleteAssetsDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
 ## deleteAssets
 
 ```TypeScript
@@ -1611,32 +1871,7 @@ deleteAssets(uriList: Array<string>): Promise<void>
 
 **示例**
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('deleteDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    if (asset === undefined) {
-      console.error('asset not exist');
-      return;
-    }
-    await phAccessHelper.deleteAssets([asset.uri]);
-    console.info('deleteAssets successfully');
-  } catch (err) {
-    console.error(`deleteAssets failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+参见 [deleteAssets](#deleteassets)
 
 ## getAlbumIdByBundleName
 
@@ -2189,42 +2424,6 @@ async function getHiddenAlbumsView(phAccessHelper: photoAccessHelper.PhotoAccess
 }
 ```
 
-## getHiddenAlbums
-
-```TypeScript
-getHiddenAlbums(mode: HiddenPhotosDisplayMode, callback: AsyncCallback<FetchResult<Album>>): void
-```
-
-根据隐藏文件显示模式获取系统中的隐藏相册。使用callback异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
-
-<!--Device-PhotoAccessHelper-getHiddenAlbums(mode: HiddenPhotosDisplayMode, callback: AsyncCallback<FetchResult<Album>>): void--><!--Device-PhotoAccessHelper-getHiddenAlbums(mode: HiddenPhotosDisplayMode, callback: AsyncCallback<FetchResult<Album>>): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mode | [HiddenPhotosDisplayMode](arkts-medialibrary-photoaccesshelper-hiddenphotosdisplaymode-e-sys.md) | 是 | Display mode of hidden albums. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | 是 | Callback used to return the result. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000011 | System inner fail. |
-
-**示例**
-
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 
 ```TypeScript
@@ -2285,48 +2484,6 @@ async function getHiddenAlbumsView(phAccessHelper: photoAccessHelper.PhotoAccess
 }
 ```
 
-## getHiddenAlbums
-
-```TypeScript
-getHiddenAlbums(mode: HiddenPhotosDisplayMode, options?: FetchOptions): Promise<FetchResult<Album>>
-```
-
-根据隐藏文件显示模式和检索选项获取系统中的隐藏相册。使用Promise异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
-
-<!--Device-PhotoAccessHelper-getHiddenAlbums(mode: HiddenPhotosDisplayMode, options?: FetchOptions): Promise<FetchResult<Album>>--><!--Device-PhotoAccessHelper-getHiddenAlbums(mode: HiddenPhotosDisplayMode, options?: FetchOptions): Promise<FetchResult<Album>>-End-->
-
-**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mode | [HiddenPhotosDisplayMode](arkts-medialibrary-photoaccesshelper-hiddenphotosdisplaymode-e-sys.md) | 是 | 隐藏文件显示模式。 |
-| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 否 | 检索选项，不填时默认根据隐藏文件显示模式检索。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise对象，返回获取相册的结果集。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000011 | System inner fail. |
-
-**示例**
-
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 
 ```TypeScript
@@ -2380,6 +2537,88 @@ async function getHiddenAlbumsView(phAccessHelper: photoAccessHelper.PhotoAccess
   });
 }
 ```
+
+## getHiddenAlbums
+
+```TypeScript
+getHiddenAlbums(mode: HiddenPhotosDisplayMode, callback: AsyncCallback<FetchResult<Album>>): void
+```
+
+根据隐藏文件显示模式获取系统中的隐藏相册。使用callback异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+<!--Device-PhotoAccessHelper-getHiddenAlbums(mode: HiddenPhotosDisplayMode, callback: AsyncCallback<FetchResult<Album>>): void--><!--Device-PhotoAccessHelper-getHiddenAlbums(mode: HiddenPhotosDisplayMode, callback: AsyncCallback<FetchResult<Album>>): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mode | [HiddenPhotosDisplayMode](arkts-medialibrary-photoaccesshelper-hiddenphotosdisplaymode-e-sys.md) | 是 | Display mode of hidden albums. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | 是 | Callback used to return the result. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| 14000011 | System inner fail. |
+
+**示例**
+
+参见 [getHiddenAlbums](#gethiddenalbums)
+
+## getHiddenAlbums
+
+```TypeScript
+getHiddenAlbums(mode: HiddenPhotosDisplayMode, options?: FetchOptions): Promise<FetchResult<Album>>
+```
+
+根据隐藏文件显示模式和检索选项获取系统中的隐藏相册。使用Promise异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+<!--Device-PhotoAccessHelper-getHiddenAlbums(mode: HiddenPhotosDisplayMode, options?: FetchOptions): Promise<FetchResult<Album>>--><!--Device-PhotoAccessHelper-getHiddenAlbums(mode: HiddenPhotosDisplayMode, options?: FetchOptions): Promise<FetchResult<Album>>-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mode | [HiddenPhotosDisplayMode](arkts-medialibrary-photoaccesshelper-hiddenphotosdisplaymode-e-sys.md) | 是 | 隐藏文件显示模式。 |
+| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 否 | 检索选项，不填时默认根据隐藏文件显示模式检索。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise对象，返回获取相册的结果集。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| 14000011 | System inner fail. |
+
+**示例**
+
+参见 [getHiddenAlbums](#gethiddenalbums)
 
 ## getIndexConstructProgress
 
@@ -2723,6 +2962,44 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    console.info('getPhotoIndexDemo');
+    let predicatesForGetAsset: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOp: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicatesForGetAsset
+    };
+    // Obtain the uri of the album.
+    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.SYSTEM, photoAccessHelper.AlbumSubtype.FAVORITE, fetchOp);
+    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    predicates.orderByAsc(photoAccessHelper.PhotoKeys.DATE_MODIFIED);
+    let fetchOptions: photoAccessHelper.FetchOptions = {
+      fetchColumns: [photoAccessHelper.PhotoKeys.DATE_MODIFIED],
+      predicates: predicates
+    };
+    let photoFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOptions);
+    let expectIndex = 1;
+    // Obtain the uri of the second file.
+    let photoAsset: photoAccessHelper.PhotoAsset = await photoFetchResult.getObjectByPosition(expectIndex);
+    phAccessHelper.getPhotoIndex(photoAsset.uri, album.albumUri, fetchOptions).then((index) => {
+      console.info(`getPhotoIndex successfully and index is : ${index}`);
+    }).catch((err: BusinessError) => {
+      console.error(`getPhotoIndex failed; error: ${err.code}, ${err.message}`);
+    });
+  } catch (error) {
+    console.error(`getPhotoIndex failed; error: ${error.code}, ${error.message}`);
+  }
+}
+```
+
 ## getPhotoIndex
 
 ```TypeScript
@@ -2767,43 +3044,7 @@ getPhotoIndex(photoUri: string, albumUri: string, options: FetchOptions): Promis
 
 **示例**
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('getPhotoIndexDemo');
-    let predicatesForGetAsset: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOp: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicatesForGetAsset
-    };
-    // Obtain the uri of the album.
-    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.SYSTEM, photoAccessHelper.AlbumSubtype.FAVORITE, fetchOp);
-    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    predicates.orderByAsc(photoAccessHelper.PhotoKeys.DATE_MODIFIED);
-    let fetchOptions: photoAccessHelper.FetchOptions = {
-      fetchColumns: [photoAccessHelper.PhotoKeys.DATE_MODIFIED],
-      predicates: predicates
-    };
-    let photoFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOptions);
-    let expectIndex = 1;
-    // Obtain the uri of the second file.
-    let photoAsset: photoAccessHelper.PhotoAsset = await photoFetchResult.getObjectByPosition(expectIndex);
-    phAccessHelper.getPhotoIndex(photoAsset.uri, album.albumUri, fetchOptions).then((index) => {
-      console.info(`getPhotoIndex successfully and index is : ${index}`);
-    }).catch((err: BusinessError) => {
-      console.error(`getPhotoIndex failed; error: ${err.code}, ${err.message}`);
-    });
-  } catch (error) {
-    console.error(`getPhotoIndex failed; error: ${error.code}, ${error.message}`);
-  }
-}
-```
+参见 [getPhotoIndex](#getphotoindex)
 
 ## getPreferredCompatibleMode
 
@@ -3528,307 +3769,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-## offAnalysisAlbumChange
-
-```TypeScript
-offAnalysisAlbumChange(callback?: Callback<AlbumChangeInfos>): void
-```
-
-取消对智慧分析相册的监听。存在多个callback监听时，可以取消指定注册的callback监听；不指定callback时取消所有监听。使用callback异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.READ_IMAGEVIDEO
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PhotoAccessHelper-offAnalysisAlbumChange(callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-offAnalysisAlbumChange(callback?: Callback<AlbumChangeInfos>): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 回调函数，返回变更的智慧分析相册信息，填入时取消 [onAnalysisAlbumChange](#onanalysisalbumchange) 注册时指定的callback监听；不填时，则取消 [onAnalysisAlbumChange](#onanalysisalbumchange) 注册的所有监听。 <br>**注意：** <br>取消注册的callback后，有智慧相册发生变化时，不会进入此回调。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
-
-**示例**
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
-  console.info('offAnalysisAlbumChangeDemo.');
-
-  try {
-    // 注册onCallback1监听。
-    phAccessHelper.onAnalysisAlbumChange(onCallback1);
-    // 注册onCallback2监听。
-    phAccessHelper.onAnalysisAlbumChange(onCallback2);
-
-    // 关闭onCallback1监听，onCallback2继续监听。
-    phAccessHelper.offAnalysisAlbumChange(onCallback1);
-  } catch (error) {
-    console.error('offAnalysisAlbumChangeDemo failed, errCode is', error);
-  }
-}
-```
-
-## offAnalysisPhotoChange
-
-```TypeScript
-offAnalysisPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
-```
-
-取消对与智慧分析相册相关的媒体资产变更的监听。存在多个callback监听时，可以取消指定注册的callback监听；不指定callback时取消所有监听。使用callback异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PhotoAccessHelper-offAnalysisPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-offAnalysisPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 回调函数，返回含对应智慧分析相册变更的媒体资产信息，填入时取消 [onAnalysisPhotoChange](#onanalysisphotochange) 注册时指定的callback监听；不填时，则取消对 [onAnalysisPhotoChange](#onanalysisphotochange) 的所有监听。 <br>**注意：** <br>取消注册的callback后，智慧分析相册的资产变更时，不再进入此回调。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
-
-**示例**
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback1 success, changData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback2 success, changData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
-  console.info('offAnalysisPhotoChangeDemo.');
-
-  try {
-    // 注册onCallback1监听。
-    phAccessHelper.offAnalysisPhotoChange(onCallback1);
-    // 注册onCallback2监听。
-    phAccessHelper.offAnalysisPhotoChange(onCallback2);
-
-    // 关闭onCallback1监听，onCallback2继续监听。
-    phAccessHelper.offAnalysisPhotoChange(onCallback1);
-  } catch (error) {
-    console.error('offAnalysisPhotoChangeDemo failed, errCode is', error);
-  }
-}
-```
-
-## offHiddenPhotoChange
-
-```TypeScript
-offHiddenPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
-```
-
-取消监听隐藏的媒体资产。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
-
-<!--Device-PhotoAccessHelper-offHiddenPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-offHiddenPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | Callback used for unsubscription. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
-
-## offShareAlbumChange
-
-```TypeScript
-offShareAlbumChange(callback?: Callback<AlbumChangeInfos>): void
-```
-
-注销共享相册的监听
-
-**起始版本：** 26.1.0
-
-**需要权限：** ohos.permission.MANAGE_SHARE_PHOTO
-
-<!--Device-PhotoAccessHelper-offShareAlbumChange(callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-offShareAlbumChange(callback?: Callback<AlbumChangeInfos>): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 共享相册的监听回调 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
-
-## offSharePhotoChange
-
-```TypeScript
-offSharePhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
-```
-
-注销共享相册图片和视频的监听
-
-**起始版本：** 26.1.0
-
-**需要权限：** ohos.permission.MANAGE_SHARE_PHOTO
-
-<!--Device-PhotoAccessHelper-offSharePhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-offSharePhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 监听图片和视频的回调 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
-
-## offTrashedAlbumChange
-
-```TypeScript
-offTrashedAlbumChange(callback?: Callback<AlbumChangeInfos>): void
-```
-
-Unsubscribes from changes in the trashed album.
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.READ_IMAGEVIDEO
-
-<!--Device-PhotoAccessHelper-offTrashedAlbumChange(callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-offTrashedAlbumChange(callback?: Callback<AlbumChangeInfos>): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | Callback used for unsubscription. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
-
-## offTrashedPhotoChange
-
-```TypeScript
-offTrashedPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
-```
-
-注销回收站媒体资产监听。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.READ_IMAGEVIDEO
-
-<!--Device-PhotoAccessHelper-offTrashedPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-offTrashedPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 监听图片和视频的回调 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
-
 ## off('hiddenAlbumChange')
 
 ```TypeScript
@@ -4097,6 +4037,142 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 }
 ```
 
+## offAnalysisAlbumChange
+
+```TypeScript
+offAnalysisAlbumChange(callback?: Callback<AlbumChangeInfos>): void
+```
+
+取消对智慧分析相册的监听。存在多个callback监听时，可以取消指定注册的callback监听；不指定callback时取消所有监听。使用callback异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PhotoAccessHelper-offAnalysisAlbumChange(callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-offAnalysisAlbumChange(callback?: Callback<AlbumChangeInfos>): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 回调函数，返回变更的智慧分析相册信息，填入时取消 [onAnalysisAlbumChange](#onanalysisalbumchange) 注册时指定的callback监听；不填时，则取消 [onAnalysisAlbumChange](#onanalysisalbumchange) 注册的所有监听。 <br>**注意：** <br>取消注册的callback后，有智慧相册发生变化时，不会进入此回调。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
+
+**示例**
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData'
+
+let onCallback1 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
+    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+let onCallback2 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
+    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
+  console.info('offAnalysisAlbumChangeDemo.');
+
+  try {
+    // 注册onCallback1监听。
+    phAccessHelper.onAnalysisAlbumChange(onCallback1);
+    // 注册onCallback2监听。
+    phAccessHelper.onAnalysisAlbumChange(onCallback2);
+
+    // 关闭onCallback1监听，onCallback2继续监听。
+    phAccessHelper.offAnalysisAlbumChange(onCallback1);
+  } catch (error) {
+    console.error('offAnalysisAlbumChangeDemo failed, errCode is', error);
+  }
+}
+```
+
+## offAnalysisPhotoChange
+
+```TypeScript
+offAnalysisPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
+```
+
+取消对与智慧分析相册相关的媒体资产变更的监听。存在多个callback监听时，可以取消指定注册的callback监听；不指定callback时取消所有监听。使用callback异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PhotoAccessHelper-offAnalysisPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-offAnalysisPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 回调函数，返回含对应智慧分析相册变更的媒体资产信息，填入时取消 [onAnalysisPhotoChange](#onanalysisphotochange) 注册时指定的callback监听；不填时，则取消对 [onAnalysisPhotoChange](#onanalysisphotochange) 的所有监听。 <br>**注意：** <br>取消注册的callback后，智慧分析相册的资产变更时，不再进入此回调。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
+
+**示例**
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData'
+
+let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
+    console.info('onCallback1 success, changData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
+    console.info('onCallback2 success, changData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
+  console.info('offAnalysisPhotoChangeDemo.');
+
+  try {
+    // 注册onCallback1监听。
+    phAccessHelper.offAnalysisPhotoChange(onCallback1);
+    // 注册onCallback2监听。
+    phAccessHelper.offAnalysisPhotoChange(onCallback2);
+
+    // 关闭onCallback1监听，onCallback2继续监听。
+    phAccessHelper.offAnalysisPhotoChange(onCallback1);
+  } catch (error) {
+    console.error('offAnalysisPhotoChangeDemo failed, errCode is', error);
+  }
+}
+```
+
 ## offhiddenAlbumChange
 
 ```TypeScript
@@ -4129,6 +4205,427 @@ offhiddenAlbumChange(callback?: Callback<AlbumChangeInfos>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
+
+## offHiddenPhotoChange
+
+```TypeScript
+offHiddenPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
+```
+
+取消监听隐藏的媒体资产。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+<!--Device-PhotoAccessHelper-offHiddenPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-offHiddenPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | Callback used for unsubscription. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
+
+## offShareAlbumChange
+
+```TypeScript
+offShareAlbumChange(callback?: Callback<AlbumChangeInfos>): void
+```
+
+注销共享相册的监听
+
+**起始版本：** 26.1.0
+
+**需要权限：** ohos.permission.MANAGE_SHARE_PHOTO
+
+<!--Device-PhotoAccessHelper-offShareAlbumChange(callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-offShareAlbumChange(callback?: Callback<AlbumChangeInfos>): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 共享相册的监听回调 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
+
+## offSharePhotoChange
+
+```TypeScript
+offSharePhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
+```
+
+注销共享相册图片和视频的监听
+
+**起始版本：** 26.1.0
+
+**需要权限：** ohos.permission.MANAGE_SHARE_PHOTO
+
+<!--Device-PhotoAccessHelper-offSharePhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-offSharePhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 监听图片和视频的回调 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
+
+## offTrashedAlbumChange
+
+```TypeScript
+offTrashedAlbumChange(callback?: Callback<AlbumChangeInfos>): void
+```
+
+Unsubscribes from changes in the trashed album.
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-offTrashedAlbumChange(callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-offTrashedAlbumChange(callback?: Callback<AlbumChangeInfos>): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | Callback used for unsubscription. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
+
+## offTrashedPhotoChange
+
+```TypeScript
+offTrashedPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
+```
+
+注销回收站媒体资产监听。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-offTrashedPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-offTrashedPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 监听图片和视频的回调 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
+
+## on('hiddenAlbumChange')
+
+```TypeScript
+on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void
+```
+
+注册'hiddenAlbumChange'监听隐藏相册，并通过callback方式返回相册变化结果，可以注册多个callback。
+
+**起始版本：** 20
+
+**需要权限：** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+<!--Device-PhotoAccessHelper-on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'hiddenAlbumChange' | 是 | 注册监听隐藏相册，取值为'hiddenAlbumChange'。注册完成后，有隐藏相册发生变化时，通过callback返回变更信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的隐藏相册信息 [AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)。 <br>**注意：** <br>该接口可以注册多个不同的callback监听， [off('hiddenAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
+
+**示例**
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData'
+
+let onCallback1 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
+    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+let onCallback2 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
+    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
+  console.info('onHiddenAlbumChangeDemo.');
+
+  try {
+    // 注册onCallback1监听。
+    phAccessHelper.on('hiddenAlbumChange', onCallback1);
+    // 注册onCallback2监听。
+    phAccessHelper.on('hiddenAlbumChange', onCallback2);
+  } catch (error) {
+    console.error('onHiddenAlbumChangeDemo failed, errCode is', error);
+  }
+}
+```
+
+## on('hiddenPhotoChange')
+
+```TypeScript
+on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void
+```
+
+注册'hiddenPhotoChange'监听隐藏的媒体资产，并通过callback方式返回隐藏资产变化结果，可以注册多个callback。
+
+**起始版本：** 20
+
+**需要权限：** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+<!--Device-PhotoAccessHelper-on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'hiddenPhotoChange' | 是 | 注册监听隐藏资产，取值为'hiddenPhotoChange'。注册完成后，有隐藏资产发生变化时，通过callback返回变更信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的隐藏媒体资产信息 [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md). <br>**注意：** <br>该接口可以注册多个不同的callback监听， [off('hiddenPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
+
+**示例**
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData'
+
+let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
+    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
+    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
+  console.info('onHiddenPhotoChangeDemo.');
+
+  try {
+    // 注册onCallback1监听。
+    phAccessHelper.on('hiddenPhotoChange', onCallback1);
+    // 注册onCallback2监听。
+    phAccessHelper.on('hiddenPhotoChange', onCallback2);
+  } catch (error) {
+    console.error('onHiddenPhotoChange failed, errCode is', error);
+  }
+}
+```
+
+## on('trashedAlbumChange')
+
+```TypeScript
+on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void
+```
+
+注册'trashedAlbumChange'监听回收站相册，并通过callback方式返回相册变化结果，可以注册多个callback。
+
+**起始版本：** 20
+
+**需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'trashedAlbumChange' | 是 | 注册监听回收站相册，取值为'trashedAlbumChange'。注册完成后，有回收站相册发生变化时，通过callback返回变更信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的相册信息 [AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)。 <br>**注意：** <br>该接口可以注册多个不同的callback监听， [off('trashedAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
+
+**示例**
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData'
+
+let onCallback1 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
+    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+let onCallback2 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
+    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
+  console.info('onTrashedAlbumChangeDemo.');
+
+  try {
+    // 注册onCallback1监听。
+    phAccessHelper.on('trashedAlbumChange', onCallback1);
+    // 注册onCallback2监听。
+    phAccessHelper.on('trashedAlbumChange', onCallback2);
+  } catch (error) {
+    console.error('onTrashedAlbumChangeDemo failed, errCode is', error);
+  }
+}
+```
+
+## on('trashedPhotoChange')
+
+```TypeScript
+on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void
+```
+
+注册'trashedPhotoChange'监听回收站的媒体资产，并通过callback方式返回回收站资产变化结果，可以注册多个callback。
+
+**起始版本：** 20
+
+**需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'trashedPhotoChange' | 是 | 注册监听回收站资产，取值为'trashedPhotoChange'。注册完成后，有回收站资产发生变化时，通过callback返回变更信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的回收站媒体资产信息 [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md). <br>**注意：** <br>该接口可以注册多个不同的callback监听， [off('trashedPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
+
+**示例**
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData'
+
+let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
+    console.info('onCallback1 success, changData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
+    console.info('onCallback2 success, changData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
+  console.info('onTrashedPhotoChangeDemo.');
+
+  try {
+    // 注册onCallback1监听。
+    phAccessHelper.on('trashedPhotoChange', onCallback1);
+    // 注册onCallback2监听。
+    phAccessHelper.on('trashedPhotoChange', onCallback2);
+  } catch (error) {
+    console.error('onTrashedPhotoChangeDemo failed, errCode is', error);
+  }
+}
+```
 
 ## onAnalysisAlbumChange
 
@@ -4458,262 +4955,6 @@ onTrashedPhotoChange(callback: Callback<PhotoAssetChangeInfos>): void
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
-## on('hiddenAlbumChange')
-
-```TypeScript
-on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void
-```
-
-注册'hiddenAlbumChange'监听隐藏相册，并通过callback方式返回相册变化结果，可以注册多个callback。
-
-**起始版本：** 20
-
-**需要权限：** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
-
-<!--Device-PhotoAccessHelper-on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'hiddenAlbumChange' | 是 | 注册监听隐藏相册，取值为'hiddenAlbumChange'。注册完成后，有隐藏相册发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的隐藏相册信息 [AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)。 <br>**注意：** <br>该接口可以注册多个不同的callback监听， [off('hiddenAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
-
-**示例**
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
-  console.info('onHiddenAlbumChangeDemo.');
-
-  try {
-    // 注册onCallback1监听。
-    phAccessHelper.on('hiddenAlbumChange', onCallback1);
-    // 注册onCallback2监听。
-    phAccessHelper.on('hiddenAlbumChange', onCallback2);
-  } catch (error) {
-    console.error('onHiddenAlbumChangeDemo failed, errCode is', error);
-  }
-}
-```
-
-## on('hiddenPhotoChange')
-
-```TypeScript
-on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void
-```
-
-注册'hiddenPhotoChange'监听隐藏的媒体资产，并通过callback方式返回隐藏资产变化结果，可以注册多个callback。
-
-**起始版本：** 20
-
-**需要权限：** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
-
-<!--Device-PhotoAccessHelper-on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'hiddenPhotoChange' | 是 | 注册监听隐藏资产，取值为'hiddenPhotoChange'。注册完成后，有隐藏资产发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的隐藏媒体资产信息 [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md). <br>**注意：** <br>该接口可以注册多个不同的callback监听， [off('hiddenPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
-
-**示例**
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
-  console.info('onHiddenPhotoChangeDemo.');
-
-  try {
-    // 注册onCallback1监听。
-    phAccessHelper.on('hiddenPhotoChange', onCallback1);
-    // 注册onCallback2监听。
-    phAccessHelper.on('hiddenPhotoChange', onCallback2);
-  } catch (error) {
-    console.error('onHiddenPhotoChange failed, errCode is', error);
-  }
-}
-```
-
-## on('trashedAlbumChange')
-
-```TypeScript
-on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void
-```
-
-注册'trashedAlbumChange'监听回收站相册，并通过callback方式返回相册变化结果，可以注册多个callback。
-
-**起始版本：** 20
-
-**需要权限：** ohos.permission.READ_IMAGEVIDEO
-
-<!--Device-PhotoAccessHelper-on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'trashedAlbumChange' | 是 | 注册监听回收站相册，取值为'trashedAlbumChange'。注册完成后，有回收站相册发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的相册信息 [AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)。 <br>**注意：** <br>该接口可以注册多个不同的callback监听， [off('trashedAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
-
-**示例**
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
-  console.info('onTrashedAlbumChangeDemo.');
-
-  try {
-    // 注册onCallback1监听。
-    phAccessHelper.on('trashedAlbumChange', onCallback1);
-    // 注册onCallback2监听。
-    phAccessHelper.on('trashedAlbumChange', onCallback2);
-  } catch (error) {
-    console.error('onTrashedAlbumChangeDemo failed, errCode is', error);
-  }
-}
-```
-
-## on('trashedPhotoChange')
-
-```TypeScript
-on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void
-```
-
-注册'trashedPhotoChange'监听回收站的媒体资产，并通过callback方式返回回收站资产变化结果，可以注册多个callback。
-
-**起始版本：** 20
-
-**需要权限：** ohos.permission.READ_IMAGEVIDEO
-
-<!--Device-PhotoAccessHelper-on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'trashedPhotoChange' | 是 | 注册监听回收站资产，取值为'trashedPhotoChange'。注册完成后，有回收站资产发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的回收站媒体资产信息 [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md). <br>**注意：** <br>该接口可以注册多个不同的callback监听， [off('trashedPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) 既可以关闭所有监听，也可以关闭指定callback监听。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
-
-**示例**
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback1 success, changData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback2 success, changData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
-  console.info('onTrashedPhotoChangeDemo.');
-
-  try {
-    // 注册onCallback1监听。
-    phAccessHelper.on('trashedPhotoChange', onCallback1);
-    // 注册onCallback2监听。
-    phAccessHelper.on('trashedPhotoChange', onCallback2);
-  } catch (error) {
-    console.error('onTrashedPhotoChangeDemo failed, errCode is', error);
-  }
-}
-```
-
 ## query
 
 ```TypeScript
@@ -4873,6 +5114,27 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('removeFormInfoDemo');
+  let info: photoAccessHelper.FormInfo = {
+    // formId是一个由纯数字组成的字符串，移除卡片的时候uri填空即可。
+    formId: "20230116123",
+    uri: "",
+  }
+
+  phAccessHelper.removeFormInfo(info).then(() => {
+    console.info('removeFormInfo successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`removeFormInfo failed with error: ${err.code}, ${err.message}`);
+  });
+}
+```
+
 ## removeFormInfo
 
 ```TypeScript
@@ -4914,26 +5176,7 @@ removeFormInfo(info: FormInfo): Promise<void>
 
 **示例**
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('removeFormInfoDemo');
-  let info: photoAccessHelper.FormInfo = {
-    // formId是一个由纯数字组成的字符串，移除卡片的时候uri填空即可。
-    formId: "20230116123",
-    uri: "",
-  }
-
-  phAccessHelper.removeFormInfo(info).then(() => {
-    console.info('removeFormInfo successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`removeFormInfo failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
+参见 [removeFormInfo](#removeforminfo)
 
 ## removeGalleryFormInfo
 
@@ -5062,6 +5305,36 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('saveFormInfoDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+  let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+
+  let info: photoAccessHelper.FormInfo = {
+    // formId是一个由纯数字组成的字符串，uri为图库中存在的图片的uri信息，图库中无图片创建卡片时uri需为空字符串。
+    formId: "20230116123",
+    uri: photoAsset.uri,
+  }
+
+  phAccessHelper.saveFormInfo(info).then(() => {
+    console.info('saveFormInfo successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`saveFormInfo failed with error: ${err.code}, ${err.message}`);
+  });
+}
+```
+
 ## saveFormInfo
 
 ```TypeScript
@@ -5103,35 +5376,7 @@ saveFormInfo(info: FormInfo): Promise<void>
 
 **示例**
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('saveFormInfoDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-  let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-
-  let info: photoAccessHelper.FormInfo = {
-    // formId是一个由纯数字组成的字符串，uri为图库中存在的图片的uri信息，图库中无图片创建卡片时uri需为空字符串。
-    formId: "20230116123",
-    uri: photoAsset.uri,
-  }
-
-  phAccessHelper.saveFormInfo(info).then(() => {
-    console.info('saveFormInfo successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`saveFormInfo failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
+参见 [saveFormInfo](#saveforminfo)
 
 ## saveGalleryFormInfo
 
@@ -5263,6 +5508,21 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
         supportedHighResolution : true,
     };
     await phAccessHelper.setAssetCompatibleCapability(bundleName, capability);
+  } catch (error) {
+    console.error('failed to setAssetCompatibleCapability err', error);
+  }
+}
+```
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    let capability : photoAccessHelper.AssetCompatibleCapability = {
+      supportedHighResolution : true,
+    };
+    await phAccessHelper.setAssetCompatibleCapability(capability);
   } catch (error) {
     console.error('failed to setAssetCompatibleCapability err', error);
   }
@@ -5656,6 +5916,34 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData'
+
+function testCallBack() {
+  console.info(`startThumbnailCreationTask: 第一个回调`);
+}
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+
+  try {
+    console.info('startThumbnailCreationTask test start');
+    phAccessHelper.startThumbnailCreationTask(predicates, testCallBack, (err, state) =>{
+        if(err) {
+          console.error("error message: " + err?.message)
+          console.error("error code: " + err?.code)
+          return
+        }
+        console.info(`startThumbnailCreationTask: response state ${state}`);
+      });
+  } catch (err) {
+    console.error(`startThumbnailCreationTask failed, error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
 ## startThumbnailCreationTask
 
 ```TypeScript
@@ -5701,33 +5989,7 @@ startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, c
 
 **示例**
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-function testCallBack() {
-  console.info(`startThumbnailCreationTask: 第一个回调`);
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-
-  try {
-    console.info('startThumbnailCreationTask test start');
-    phAccessHelper.startThumbnailCreationTask(predicates, testCallBack, (err, state) =>{
-        if(err) {
-          console.error("error message: " + err?.message)
-          console.error("error code: " + err?.code)
-          return
-        }
-        console.info(`startThumbnailCreationTask: response state ${state}`);
-      });
-  } catch (err) {
-    console.error(`startThumbnailCreationTask failed, error: ${err.code}, ${err.message}`);
-  }
-}
-```
+参见 [startThumbnailCreationTask](#startthumbnailcreationtask)
 
 ## stopAssetAnalysis
 

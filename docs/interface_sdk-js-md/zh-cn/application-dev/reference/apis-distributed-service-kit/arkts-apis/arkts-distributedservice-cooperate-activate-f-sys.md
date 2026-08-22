@@ -62,6 +62,22 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let targetNetworkId = "networkId";
+let inputDeviceId = 0;
+try {
+  cooperate.activate(targetNetworkId, inputDeviceId).then(() => {
+    console.info(`Start Keyboard mouse crossing success.`);
+  }, (error: BusinessError) => {
+    console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+  });
+} catch (error) {
+  console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+}
+```
+
 
 ## activate
 
@@ -106,19 +122,5 @@ function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let targetNetworkId = "networkId";
-let inputDeviceId = 0;
-try {
-  cooperate.activate(targetNetworkId, inputDeviceId).then(() => {
-    console.info(`Start Keyboard mouse crossing success.`);
-  }, (error: BusinessError) => {
-    console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
+参见 [activate](#activate)
 

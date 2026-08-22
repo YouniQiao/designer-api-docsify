@@ -64,3 +64,24 @@ uid: int
 
 **系统接口：** 此接口为系统接口。
 
+**示例**
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let bundleName: string = 'ohos.samples.etsclock';
+  appManager.getRunningMultiAppInfo(bundleName).then((info: appManager.RunningMultiAppInfo) => {
+    hilog.info(0x0000, 'testTag', `getRunningMultiAppInfo success`);
+  }).catch((error: Error) => {
+    let err = error as BusinessError;
+    hilog.error(0x0000, 'testTag', `getRunningMultiAppInfo error, code: ${err.code}, msg:${err.message}`);
+  })
+} catch (error: BusinessError) {
+  let err = error as BusinessError;
+  hilog.error(0x0000, 'testTag', `getRunningMultiAppInfo error, code: ${err.code}, msg:${err.message}`);
+}
+```
+

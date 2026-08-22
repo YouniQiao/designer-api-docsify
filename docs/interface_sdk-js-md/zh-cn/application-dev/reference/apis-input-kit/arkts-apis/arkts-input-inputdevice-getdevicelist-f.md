@@ -98,29 +98,6 @@ struct Index {
 }
 ```
 
-
-## getDeviceList
-
-```TypeScript
-function getDeviceList(): Promise<Array<int>>
-```
-
-获取所有输入设备的ID列表，使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-inputDevice-function getDeviceList(): Promise<Array<int>>--><!--Device-inputDevice-function getDeviceList(): Promise<Array<int>>-End-->
-
-**系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;int&gt;&gt; | Promise对象，返回所有输入设备的ID列表。ID是输入设备的唯一标识。 |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -179,4 +156,29 @@ struct Index {
   }
 }
 ```
+
+
+## getDeviceList
+
+```TypeScript
+function getDeviceList(): Promise<Array<int>>
+```
+
+获取所有输入设备的ID列表，使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-inputDevice-function getDeviceList(): Promise<Array<int>>--><!--Device-inputDevice-function getDeviceList(): Promise<Array<int>>-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;int&gt;&gt; | Promise对象，返回所有输入设备的ID列表。ID是输入设备的唯一标识。 |
+
+**示例**
+
+参见 [getDeviceList](#getdevicelist)
 

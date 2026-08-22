@@ -190,3 +190,7 @@ takeNext(): AppEventPackage | null
 | --- | --- |
 | [AppEventPackage](arkts-performanceanalysis-hiappevent-appeventpackage-i.md) \| null | 取出的事件包对象，订阅事件数据被全部取出后 会返回null。 |
 
+**示例**
+
+参见 [takeNext](#takenext)
+

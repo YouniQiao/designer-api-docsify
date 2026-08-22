@@ -29,7 +29,7 @@ Registers the callback when the **policy** changes. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netUidPolicyChange' | Yes | Event type.<br/> The value **netUidPolicyChange** indicates a policy change event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NetUidPolicyInfo](arkts-network-policy-netuidpolicyinfo-i-sys.md)&gt; | Yes | Callback used to return the result. It is called when the network policy changes.<br>**Since:** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetUidPolicyInfo](arkts-network-policy-netuidpolicyinfo-i-sys.md)&gt; | Yes | Callback used to return the result. It is called when the network policy changes.<br>**Since:** 11 |
 
 **Error codes:**
 

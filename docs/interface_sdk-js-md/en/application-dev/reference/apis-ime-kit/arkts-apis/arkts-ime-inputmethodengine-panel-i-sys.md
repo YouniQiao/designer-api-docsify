@@ -14,28 +14,6 @@
 import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
-## offSizeUpdate
-
-```TypeScript
-offSizeUpdate(callback?: SizeUpdateCallback): void
-```
-
-@brief Unsubscribe 'sizeUpdate' event. <br> <br><p>It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.</p>
-
-**Since:** 23
-
-<!--Device-Panel-offSizeUpdate(callback?: SizeUpdateCallback): void--><!--Device-Panel-offSizeUpdate(callback?: SizeUpdateCallback): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | No | optional, the callback called when the panel size updates. |
-
 ## off('sizeUpdate')
 
 ```TypeScript
@@ -74,17 +52,17 @@ panel.off('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngin
 });
 ```
 
-## onSizeUpdate
+## offSizeUpdate
 
 ```TypeScript
-onSizeUpdate(callback: SizeUpdateCallback): void
+offSizeUpdate(callback?: SizeUpdateCallback): void
 ```
 
-@brief Subscribe 'sizeUpdate' event. <br> <br><p>It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.</p>
+@brief Unsubscribe 'sizeUpdate' event. <br> <br><p>It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.</p>
 
 **Since:** 23
 
-<!--Device-Panel-onSizeUpdate(callback: SizeUpdateCallback): void--><!--Device-Panel-onSizeUpdate(callback: SizeUpdateCallback): void-End-->
+<!--Device-Panel-offSizeUpdate(callback?: SizeUpdateCallback): void--><!--Device-Panel-offSizeUpdate(callback?: SizeUpdateCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -94,7 +72,7 @@ onSizeUpdate(callback: SizeUpdateCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | Yes | the callback called when the panel size updates. |
+| callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | No | optional, the callback called when the panel size updates. |
 
 ## on('sizeUpdate')
 
@@ -134,6 +112,28 @@ panel.on('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngine
     `keyboardArea: ${keyboardArea.top}, ${keyboardArea.bottom}, ${keyboardArea.left}, ${keyboardArea.right}`);
 });
 ```
+
+## onSizeUpdate
+
+```TypeScript
+onSizeUpdate(callback: SizeUpdateCallback): void
+```
+
+@brief Subscribe 'sizeUpdate' event. <br> <br><p>It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.</p>
+
+**Since:** 23
+
+<!--Device-Panel-onSizeUpdate(callback: SizeUpdateCallback): void--><!--Device-Panel-onSizeUpdate(callback: SizeUpdateCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | Yes | the callback called when the panel size updates. |
 
 ## setShadow
 

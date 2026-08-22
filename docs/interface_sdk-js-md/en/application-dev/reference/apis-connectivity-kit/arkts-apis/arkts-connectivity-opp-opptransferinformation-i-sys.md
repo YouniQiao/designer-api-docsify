@@ -2,7 +2,7 @@
 
 Describes the transferred file information.
 
-**Since:** 26.0.0
+**Since:** 16
 
 <!--Device-opp-interface OppTransferInformation--><!--Device-opp-interface OppTransferInformation-End-->
 
@@ -26,7 +26,7 @@ Number of bytes of the file that have been transferred currently
 
 **Type:** long
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +46,7 @@ Number of files currently transferred
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,7 +66,7 @@ File Transfer Direction
 
 **Type:** [DirectionType](arkts-connectivity-opp-directiontype-e-sys.md)
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,7 +86,7 @@ Path of the file to be transferred.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,7 +106,7 @@ Device Address of the peer transmission object
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,7 +126,7 @@ Device name of the peer transmission object
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,7 +146,7 @@ File transfer result
 
 **Type:** [TransferResult](arkts-connectivity-opp-transferresult-e-sys.md)
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -166,7 +166,7 @@ File transfer status
 
 **Type:** TransferStatus
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -186,7 +186,7 @@ Total number of file bytes to transfer
 
 **Type:** long
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -206,7 +206,7 @@ Total number of transferred files
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 

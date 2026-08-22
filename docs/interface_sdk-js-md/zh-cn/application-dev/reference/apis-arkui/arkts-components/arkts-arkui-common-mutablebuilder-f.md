@@ -35,3 +35,48 @@ declare function mutableBuilder<Args extends Object[]>(builder: BuilderCallback)
 | --- | --- |
 | [MutableBuilder](arkts-arkui-mutablebuilder-c.md)&lt;Args&gt; | `MutableBuilder&lt;Args&gt;`的实例，用于封装全局` |
 
+**示例**
+
+```TypeScript
+class TextContent {
+  text: string = '';
+}
+
+@Builder
+function textBuilder(textContent: TextContent) {
+  Text(textContent.text)
+    .margin(20)
+}
+
+@Builder
+function buttonBuilder(buttonContent: TextContent) {
+  Button(buttonContent.text)
+    .margin(20)
+}
+
+let counter: number = 1;
+
+@Entry
+@ComponentV2
+struct MyApp {
+  @Local message: string = 'init';
+  @Local switchingBuilder: MutableBuilder<[TextContent]> = mutableBuilder(textBuilder);
+  build() {
+    Column() {
+      this.switchingBuilder.builder({ text: this.message })
+      Button('Click to change')
+        .onClick(() => {
+          counter++; // 每次点击按钮修改counter来动态改变全局@Builder
+          if (counter % 2 === 0) {
+            this.message += 'B';
+            this.switchingBuilder = mutableBuilder(buttonBuilder); // textBuilder ---> buttonBuilder
+          } else {
+            this.message += 'T';
+            this.switchingBuilder = mutableBuilder(textBuilder);   // buttonBuilder ---> textBuilder
+          }
+        })
+    }.position({x: 120, y: 60})
+  }
+}
+```
+

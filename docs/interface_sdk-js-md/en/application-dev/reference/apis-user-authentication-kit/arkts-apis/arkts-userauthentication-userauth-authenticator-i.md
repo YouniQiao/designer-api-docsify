@@ -45,7 +45,7 @@ Starts user authentication. This API uses an asynchronous callback to return the
 | --- | --- | --- | --- |
 | type | AuthType | Yes | Authentication type. Currently, only **FACE_ONLY** is supported. <br>**ALL** is reserved and not supported by the current version. |
 | level | [SecureLevel](arkts-userauthentication-userauth-securelevel-t.md) | Yes | Security level of the authentication. It can be **S1** (lowest), **S2**, **S3**, or **S4** (highest). <br>Devices capable of 3D facial recognition support S3 and lower-level authentication. <br>Devices capable of 2D facial recognition support S2 and lower-level authentication. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. **number** indicates the [AuthenticationResult](arkts-userauthentication-userauth-authenticationresult-e.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. **number** indicates the [AuthenticationResult](arkts-userauthentication-userauth-authenticationresult-e.md). |
 
 **Examples**
 
@@ -60,6 +60,19 @@ authenticator.execute('FACE_ONLY', 'S2', (error, code)=>{
   }
   console.error(`auth fail, code = ${code}`);
 });
+```
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+try {
+  let authenticator = userAuth.getAuthenticator();
+  authenticator.execute('FACE_ONLY', 'S2').then((code)=>{
+    console.info('auth success');
+  })
+} catch (error) {
+  console.error(`auth fail, code = ${error}`);
+}
 ```
 
 ## execute
@@ -97,16 +110,5 @@ Starts user authentication. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-try {
-  let authenticator = userAuth.getAuthenticator();
-  authenticator.execute('FACE_ONLY', 'S2').then((code)=>{
-    console.info('auth success');
-  })
-} catch (error) {
-  console.error(`auth fail, code = ${error}`);
-}
-```
+See [execute](#execute)
 

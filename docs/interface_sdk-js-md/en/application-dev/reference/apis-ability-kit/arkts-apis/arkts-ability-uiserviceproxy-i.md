@@ -168,3 +168,7 @@ Sends data to the UIServiceExtensionAbility server.
 | --- | --- |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible cause: Connect to stub failed. |
 
+**Examples**
+
+See [sendData](#senddata)
+

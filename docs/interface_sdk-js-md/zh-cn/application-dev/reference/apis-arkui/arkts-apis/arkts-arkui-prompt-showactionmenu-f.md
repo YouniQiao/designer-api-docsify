@@ -57,6 +57,29 @@ prompt.showActionMenu({
 })
 ```
 
+```TypeScript
+import prompt from '@ohos.prompt'
+prompt.showActionMenu({
+  title: 'showActionMenu Title Info',
+  buttons: [
+    {
+      text: 'item1',
+      color: '#666666'
+    },
+    {
+      text: 'item2',
+      color: '#000000'
+    },
+  ]
+})
+  .then(data => {
+    console.info('showActionMenu success, click button: ' + data.index);
+  })
+  .catch((err:Error) => {
+    console.info('showActionMenu error: ' + err);
+  })
+```
+
 
 ## showActionMenu
 
@@ -90,26 +113,5 @@ function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessRe
 
 **示例**
 
-```TypeScript
-import prompt from '@ohos.prompt'
-prompt.showActionMenu({
-  title: 'showActionMenu Title Info',
-  buttons: [
-    {
-      text: 'item1',
-      color: '#666666'
-    },
-    {
-      text: 'item2',
-      color: '#000000'
-    },
-  ]
-})
-  .then(data => {
-    console.info('showActionMenu success, click button: ' + data.index);
-  })
-  .catch((err:Error) => {
-    console.info('showActionMenu error: ' + err);
-  })
-```
+参见 [showActionMenu](#showactionmenu)
 

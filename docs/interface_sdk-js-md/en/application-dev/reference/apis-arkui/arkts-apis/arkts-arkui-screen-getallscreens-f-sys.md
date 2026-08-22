@@ -27,7 +27,7 @@ Obtains all screens. This API uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;Screen&gt;&gt; | Yes | Callback used to return all the Screen objects obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Screen&gt;&gt; | Yes | Callback used to return all the Screen objects obtained. |
 
 **Error codes:**
 
@@ -55,6 +55,21 @@ screen.getAllScreens((err: BusinessError, data: Array<screen.Screen>) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let screenClass: screen.Screen | null = null;
+let promise: Promise<Array<screen.Screen>> = screen.getAllScreens();
+promise.then((data: Array<screen.Screen>) => {
+  if(data.length > 0){
+    screenClass = data[0];
+  }
+  console.info(`Succeeded in getting all screens. Data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get all screens. Code: ${err.code}, message : ${err.message}`);
+});
+```
+
 
 ## getAllScreens
 
@@ -78,7 +93,7 @@ Obtains all screens. This API uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;Screen&gt;&gt; | Yes | Callback used to return the result. If obtaining all screens is successful is successful, **err** is **undefined**, and the returned object is screen object set obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Screen&gt;&gt; | Yes | Callback used to return the result. If obtaining all screens is successful is successful, **err** is **undefined**, and the returned object is screen object set obtained. Otherwise, **err** is an error object. |
 | isNeedUnused | boolean | No | Indicates whether unused screen information is required. **true** means they should be provided, **false** means they should not. <br>Default value: false. |
 
 **Error codes:**
@@ -87,6 +102,10 @@ Obtains all screens. This API uses an asynchronous callback to return the result
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+
+**Examples**
+
+See [getAllScreens](#getallscreens)
 
 
 ## getAllScreens
@@ -120,20 +139,7 @@ Obtains all screens. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let screenClass: screen.Screen | null = null;
-let promise: Promise<Array<screen.Screen>> = screen.getAllScreens();
-promise.then((data: Array<screen.Screen>) => {
-  if(data.length > 0){
-    screenClass = data[0];
-  }
-  console.info(`Succeeded in getting all screens. Data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get all screens. Code: ${err.code}, message : ${err.message}`);
-});
-```
+See [getAllScreens](#getallscreens)
 
 
 ## getAllScreens
@@ -172,4 +178,8 @@ Obtains all screens. This API uses a promise to return the result.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+
+**Examples**
+
+See [getAllScreens](#getallscreens)
 

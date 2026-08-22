@@ -28,7 +28,7 @@ Stop Bluetooth scanning and searching.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BluetoothScanResult](arkts-location-geolocationmanager-bluetoothscanresult-i.md)&gt; | No | Callback used to return \\${BluetoothScanResult}. It should be the same as the callback passed to \\${geoLocationManager.startBluetoothSearch}. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BluetoothScanResult](arkts-location-geolocationmanager-bluetoothscanresult-i.md)&gt; | No | Callback used to return \\${BluetoothScanResult}. It should be the same as the callback passed to \\${geoLocationManager.startBluetoothSearch}. |
 
 **Error codes:**
 

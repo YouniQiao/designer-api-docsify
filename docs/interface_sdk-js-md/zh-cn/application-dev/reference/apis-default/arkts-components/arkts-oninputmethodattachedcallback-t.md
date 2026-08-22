@@ -16,3 +16,7 @@ The callback will be triggered when inputmethod is attached.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+**示例**
+
+完整示例代码参考[onInputmethodAttached](./arkts-basic-components-web-events.md#oninputmethodattached)。
+

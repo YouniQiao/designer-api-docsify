@@ -48,3 +48,38 @@ declare function getxattrSync(path: string, key: string): string
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let attrKey = "user.comment";
+
+try {
+  let attrValue = fileIo.getxattrSync(filePath, attrKey);
+  console.info(`Succeeded in getting extended attribute, the value is: ${attrValue}`);
+} catch (err) {
+  console.error(`Failed to get extended attribute. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let attrKey = "user.comment";
+
+try {
+  let attrValue = fileIo.getxattrSync(filePath, attrKey);
+  console.info(`Succeeded in getting extended attribute, the value is: ${attrValue}`);
+} catch (error: Error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to get extended attribute. Code: ${err.code}, message: ${err.message}`);
+}
+```
+

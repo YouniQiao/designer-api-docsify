@@ -30,7 +30,7 @@ Adds a notification slot. This API uses an asynchronous callback to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slot | [NotificationSlot](../../apis-notification-kit/arkts-apis/arkts-notification-notificationslot-notificationslot-i.md) | Yes | Notification slot, whose type can be set. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -43,6 +43,17 @@ let mySlot:notification.NotificationSlot = {
 }
 reminderAgent.addNotificationSlot(mySlot, (err: BusinessError, data: void) => {
   console.info("addNotificationSlot callback");
+});
+```
+
+```TypeScript
+import notification from '@ohos.notificationManager'
+
+let mySlot:notification.NotificationSlot = {
+  type: notification.SlotType.SOCIAL_COMMUNICATION
+}
+reminderAgent.addNotificationSlot(mySlot).then(() => {
+  console.info("addNotificationSlot promise");
 });
 ```
 
@@ -79,14 +90,5 @@ Adds a notification slot. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import notification from '@ohos.notificationManager'
-
-let mySlot:notification.NotificationSlot = {
-  type: notification.SlotType.SOCIAL_COMMUNICATION
-}
-reminderAgent.addNotificationSlot(mySlot).then(() => {
-  console.info("addNotificationSlot promise");
-});
-```
+See [addNotificationSlot](#addnotificationslot)
 

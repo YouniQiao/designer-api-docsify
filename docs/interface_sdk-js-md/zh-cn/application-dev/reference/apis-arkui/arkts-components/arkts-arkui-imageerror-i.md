@@ -2,7 +2,7 @@
 
 图片加载异常时触发回调的返回对象。
 
-当组件的参数类型为[AnimatedDrawableDescriptor](../../apis-default/arkts-apis/arkts-arkuidrawabledescriptor-animateddrawabledescriptor-c.md)时该事件不触发。
+当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时该事件不触发。
 
 **起始版本：** 9
 

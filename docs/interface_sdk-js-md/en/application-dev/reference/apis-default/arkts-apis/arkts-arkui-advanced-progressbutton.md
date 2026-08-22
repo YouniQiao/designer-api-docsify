@@ -11,11 +11,11 @@
 
 | Name | Description |
 | --- | --- |
-| [ProgressButton](arkts-arkuiadvancedprogressbutton-progressbutton-s.md) | Declare Component ProgressButton @struct { ProgressButton } |
+| [ProgressButton](arkts-arkui-advanced-progressbutton-progressbutton-s.md) | Declare Component ProgressButton @struct { ProgressButton } |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ProgressButtonColorOptions](arkts-arkuiadvancedprogressbutton-progressbuttoncoloroptions-i.md) | Declare Color options of the ProgressButton. |
+| [ProgressButtonColorOptions](arkts-arkui-advanced-progressbutton-progressbuttoncoloroptions-i.md) | Declare Color options of the ProgressButton. |
 

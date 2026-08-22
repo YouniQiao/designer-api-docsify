@@ -39,7 +39,7 @@ Obtains the value of an intelligent voice parameter. This method uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | the key of the intelligent voice parameter whose value is to be obtained. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | the callback used to return the value of the intelligent voice parameter. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | the callback used to return the value of the intelligent voice parameter. |
 
 **Error codes:**
 
@@ -55,6 +55,47 @@ Obtains the value of an intelligent voice parameter. This method uses an asynchr
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+if (wakeupManager != null) {
+  (wakeupManager as intelligentVoice.WakeupManager).getParameter('isEnrolled').then((data: string) => {
+    let param: string = data;
+    console.info(`Succeeded in getting parameter, param:${param}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get parameter, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).getParameter('key', (err: BusinessError, data: string) => {
+    if (err) {
+      console.error(`Failed to get parameter, Code:${err.code}, message:${err.message}`);
+    } else {
+      let param: string = data;
+      console.info(`Succeeded in getting parameter, param:${param}`);
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).getParameter('key').then((data: string) => {
+    let param: string = data;
+    console.info(`Succeeded in getting parameter, param:${param}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get parameter, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 if (wakeupIntelligentVoiceEngine != null) {
   (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).getParameter('key', (err: BusinessError, data: string) => {
     if (err) {
@@ -63,6 +104,19 @@ if (wakeupIntelligentVoiceEngine != null) {
       let param: string = data;
       console.info(`Succeeded in getting parameter, param:${param}`);
     }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (wakeupIntelligentVoiceEngine != null) {
+  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).getParameter('key').then((data: string) => {
+    let param: string = data;
+    console.info(`Succeeded in getting parameter, param:${param}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get parameter, Code:${err.code}, message:${err.message}`);
   });
 }
 ```
@@ -108,18 +162,7 @@ Obtains the value of an intelligent voice parameter. This method uses a promise 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).getParameter('key').then((data: string) => {
-    let param: string = data;
-    console.info(`Succeeded in getting parameter, param:${param}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get parameter, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
+See [getParameter](#getparameter)
 
 ## getPcm
 
@@ -191,7 +234,7 @@ Obtains the supported regions, This method uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | the callback used to return the supported regions. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | the callback used to return the supported regions. |
 
 **Error codes:**
 
@@ -205,6 +248,37 @@ Obtains the supported regions, This method uses an asynchronous callback to retu
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let regions: Array<string> | null = null;
+
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).getSupportedRegions((err: BusinessError, data: Array<string>) => {
+    if (err) {
+      console.error(`Failed to get supported regions, Code:${err.code}, message:${err.message}`);
+    } else {
+      regions = data;
+      console.info(`Succeeded in getting supported regions, regions:${regions}.`);
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let regions: Array<string> | null = null;
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).getSupportedRegions().then((data: Array<string>) => {
+    regions = data;
+    console.info(`Succeeded in getting supported regions, regions:${regions}.`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get supported regions, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 if (wakeupIntelligentVoiceEngine != null) {
   (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).getSupportedRegions((err: BusinessError, data: Array<string>) => {
     if (err) {
@@ -213,6 +287,19 @@ if (wakeupIntelligentVoiceEngine != null) {
       let regions: Array<string> = data;
       console.info(`Succeeded in getting supported regions, regions:${regions}.`);
     }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (wakeupIntelligentVoiceEngine != null) {
+  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).getSupportedRegions().then((data: Array<string>) => {
+    let regions: Array<string> = data;
+    console.info(`Succeeded in getting supported regions, regions:${regions}.`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get supported regions, Code:${err.code}, message:${err.message}`);
   });
 }
 ```
@@ -250,16 +337,45 @@ Obtains the supported regions, This method uses a promise to return the query re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
+See [getSupportedRegions](#getsupportedregions)
 
+## off('wakeupIntelligentVoiceEvent')
+
+```TypeScript
+off(type: 'wakeupIntelligentVoiceEvent', callback?: Callback<WakeupIntelligentVoiceEngineCallbackInfo>): void
+```
+
+Unsubscribes wakeup intelligent voice events.
+
+**Since:** 10
+
+**Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
+
+<!--Device-WakeupIntelligentVoiceEngine-off(type: 'wakeupIntelligentVoiceEvent', callback?: Callback<WakeupIntelligentVoiceEngineCallbackInfo>): void--><!--Device-WakeupIntelligentVoiceEngine-off(type: 'wakeupIntelligentVoiceEvent', callback?: Callback<WakeupIntelligentVoiceEngineCallbackInfo>): void-End-->
+
+**System capability:** SystemCapability.AI.IntelligentVoice.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'wakeupIntelligentVoiceEvent' | Yes | Type of the event to listen for. Only the wakeupIntelligentVoice event is supported. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WakeupIntelligentVoiceEngineCallbackInfo](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceenginecallbackinfo-i-sys.md)&gt; | No | the callback invoked when the event is triggered. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+
+**Examples**
+
+```TypeScript
 if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).getSupportedRegions().then((data: Array<string>) => {
-    let regions: Array<string> = data;
-    console.info(`Succeeded in getting supported regions, regions:${regions}.`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get supported regions, Code:${err.code}, message:${err.message}`);
-  });
+  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).off('wakeupIntelligentVoiceEvent');
 }
 ```
 
@@ -285,78 +401,7 @@ Unsubscribes wakeup intelligent voice events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WakeupIntelligentVoiceEngineCallbackInfo](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceenginecallbackinfo-i-sys.md)&gt; | No | the callback invoked when the event is triggered. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-
-## off('wakeupIntelligentVoiceEvent')
-
-```TypeScript
-off(type: 'wakeupIntelligentVoiceEvent', callback?: Callback<WakeupIntelligentVoiceEngineCallbackInfo>): void
-```
-
-Unsubscribes wakeup intelligent voice events.
-
-**Since:** 10
-
-**Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
-
-<!--Device-WakeupIntelligentVoiceEngine-off(type: 'wakeupIntelligentVoiceEvent', callback?: Callback<WakeupIntelligentVoiceEngineCallbackInfo>): void--><!--Device-WakeupIntelligentVoiceEngine-off(type: 'wakeupIntelligentVoiceEvent', callback?: Callback<WakeupIntelligentVoiceEngineCallbackInfo>): void-End-->
-
-**System capability:** SystemCapability.AI.IntelligentVoice.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'wakeupIntelligentVoiceEvent' | Yes | Type of the event to listen for. Only the wakeupIntelligentVoice event is supported. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WakeupIntelligentVoiceEngineCallbackInfo](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceenginecallbackinfo-i-sys.md)&gt; | No | the callback invoked when the event is triggered. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-
-**Examples**
-
-```TypeScript
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).off('wakeupIntelligentVoiceEvent');
-}
-```
-
-## onWakeupIntelligentVoiceEvent
-
-```TypeScript
-onWakeupIntelligentVoiceEvent(callback: Callback<WakeupIntelligentVoiceEngineCallbackInfo>): void
-```
-
-Subscribes wakeup intelligent voice events. When wakeup intelligent voice events reach, the callback is invoked.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
-
-<!--Device-WakeupIntelligentVoiceEngine-onWakeupIntelligentVoiceEvent(callback: Callback<WakeupIntelligentVoiceEngineCallbackInfo>): void--><!--Device-WakeupIntelligentVoiceEngine-onWakeupIntelligentVoiceEvent(callback: Callback<WakeupIntelligentVoiceEngineCallbackInfo>): void-End-->
-
-**System capability:** SystemCapability.AI.IntelligentVoice.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WakeupIntelligentVoiceEngineCallbackInfo](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceenginecallbackinfo-i-sys.md)&gt; | Yes | the callback invoked when the event is triggered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WakeupIntelligentVoiceEngineCallbackInfo](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceenginecallbackinfo-i-sys.md)&gt; | No | the callback invoked when the event is triggered. |
 
 **Error codes:**
 
@@ -388,7 +433,7 @@ Subscribes wakeup intelligent voice events. When wakeup intelligent voice events
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'wakeupIntelligentVoiceEvent' | Yes | Type of the event to listen for. Only the wakeupIntelligentVoice event is supported. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WakeupIntelligentVoiceEngineCallbackInfo](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceenginecallbackinfo-i-sys.md)&gt; | Yes | the callback invoked when the event is triggered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WakeupIntelligentVoiceEngineCallbackInfo](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceenginecallbackinfo-i-sys.md)&gt; | Yes | the callback invoked when the event is triggered. |
 
 **Error codes:**
 
@@ -408,6 +453,37 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+## onWakeupIntelligentVoiceEvent
+
+```TypeScript
+onWakeupIntelligentVoiceEvent(callback: Callback<WakeupIntelligentVoiceEngineCallbackInfo>): void
+```
+
+Subscribes wakeup intelligent voice events. When wakeup intelligent voice events reach, the callback is invoked.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
+
+<!--Device-WakeupIntelligentVoiceEngine-onWakeupIntelligentVoiceEvent(callback: Callback<WakeupIntelligentVoiceEngineCallbackInfo>): void--><!--Device-WakeupIntelligentVoiceEngine-onWakeupIntelligentVoiceEvent(callback: Callback<WakeupIntelligentVoiceEngineCallbackInfo>): void-End-->
+
+**System capability:** SystemCapability.AI.IntelligentVoice.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WakeupIntelligentVoiceEngineCallbackInfo](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceenginecallbackinfo-i-sys.md)&gt; | Yes | the callback invoked when the event is triggered. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## read
 
@@ -480,7 +556,7 @@ Releases the engine, This method uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -494,6 +570,32 @@ Releases the engine, This method uses an asynchronous callback to return the res
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release enrollIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
+    } else {
+      console.info(`Succeeded in releasing enrollIntelligentVoice engine.`);
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).release().then(() => {
+    console.info(`Succeeded in releasing enrollIntelligentVoice engine.`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to release enrollIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 if (wakeupIntelligentVoiceEngine != null) {
   (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).release((err: BusinessError) => {
     if (err) {
@@ -501,6 +603,18 @@ if (wakeupIntelligentVoiceEngine != null) {
     } else {
       console.info(`Succeeded in releasing wakeupIntelligentVoice engine.`);
     }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (wakeupIntelligentVoiceEngine != null) {
+  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).release().then(() => {
+    console.info(`Succeeded in releasing wakeupIntelligentVoice engine.`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to release wakeupIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
   });
 }
 ```
@@ -538,17 +652,7 @@ Releases the engine, This method uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).release().then(() => {
-    console.info(`Succeeded in releasing wakeupIntelligentVoice engine.`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to release wakeupIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
+See [release](#release)
 
 ## setParameter
 
@@ -574,7 +678,7 @@ Sets an intelligent voice parameter. This method uses an asynchronous callback t
 | --- | --- | --- | --- |
 | key | string | Yes | the key of the intelligent voice parameter to set. |
 | value | string | Yes | the value of the intelligent voice parameter to set. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -590,6 +694,44 @@ Sets an intelligent voice parameter. This method uses an asynchronous callback t
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+if (wakeupManager != null) {
+  (wakeupManager as intelligentVoice.WakeupManager).setParameter('wakeup_phrase', 'xiaohuaxiaohua').then(() => {
+    console.info(`Succeeded in setting parameter`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set parameter, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).setParameter('scene', '0', (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to set parameter, Code:${err.code}, message:${err.message}`);
+    } else {
+      console.info(`Succeeded in setting parameter`);
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).setParameter('scene', '0').then(() => {
+    console.info(`Succeeded in setting parameter`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set parameter, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 if (wakeupIntelligentVoiceEngine != null) {
   (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).setParameter('scene', '0', (err: BusinessError) => {
     if (err) {
@@ -597,6 +739,18 @@ if (wakeupIntelligentVoiceEngine != null) {
     } else {
       console.info(`Succeeded in setting parameter`);
     }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (wakeupIntelligentVoiceEngine != null) {
+  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).setParameter('scene', '0').then(() => {
+    console.info(`Succeeded in setting parameter`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set parameter, Code:${err.code}, message:${err.message}`);
   });
 }
 ```
@@ -643,17 +797,7 @@ Sets an intelligent voice parameter. This method uses a promise to return the re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).setParameter('scene', '0').then(() => {
-    console.info(`Succeeded in setting parameter`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set parameter, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
+See [setParameter](#setparameter)
 
 ## setSensibility
 
@@ -678,7 +822,7 @@ Sets sensibility, This method uses an asynchronous callback to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sensibility | [SensibilityType](arkts-basicservices-intelligentvoice-sensibilitytype-e-sys.md) | Yes | sensibility to set. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -694,6 +838,32 @@ Sets sensibility, This method uses an asynchronous callback to return the result
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).setSensibility(intelligentVoice.SensibilityType.LOW_SENSIBILITY, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to set sensibility, Code:${err.code}, message:${err.message}`);
+    } else {
+      console.info(`Succeeded in setting sensibility.`);
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).setSensibility(intelligentVoice.SensibilityType.LOW_SENSIBILITY).then(() => {
+    console.info(`Succeeded in setting sensibility.`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set sensibility, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 if (wakeupIntelligentVoiceEngine != null) {
   (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).setSensibility(intelligentVoice.SensibilityType.LOW_SENSIBILITY, (err: BusinessError) => {
     if (err) {
@@ -701,6 +871,18 @@ if (wakeupIntelligentVoiceEngine != null) {
     } else {
       console.info(`Succeeded in setting sensibility.`);
     }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (wakeupIntelligentVoiceEngine != null) {
+  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).setSensibility(intelligentVoice.SensibilityType.LOW_SENSIBILITY).then(() => {
+    console.info(`Succeeded in setting sensibility.`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set sensibility, Code:${err.code}, message:${err.message}`);
   });
 }
 ```
@@ -746,17 +928,7 @@ Sets sensibility, This method uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).setSensibility(intelligentVoice.SensibilityType.LOW_SENSIBILITY).then(() => {
-    console.info(`Succeeded in setting sensibility.`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set sensibility, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
+See [setSensibility](#setsensibility)
 
 ## setWakeupHapInfo
 
@@ -781,7 +953,7 @@ Sets wakeup hap information, This method uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | [WakeupHapInfo](arkts-basicservices-intelligentvoice-wakeuphapinfo-i-sys.md) | Yes | info indicates wakeup hap information. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -793,6 +965,40 @@ Sets wakeup hap information, This method uses an asynchronous callback to return
 | [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let info: intelligentVoice.WakeupHapInfo = {
+  bundleName: 'com.wakeup',
+  abilityName: 'WakeUpExtAbility',
+}
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).setWakeupHapInfo(info, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to set wakeup hap info, Code:${err.code}, message:${err.message}`);
+    } else {
+      console.info(`Succeeded in setting wakeup hap info.`);
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let info: intelligentVoice.WakeupHapInfo = {
+  bundleName: 'com.wakeup',
+  abilityName: 'WakeUpExtAbility',
+}
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).setWakeupHapInfo(info).then(() => {
+    console.info(`Succeeded in setting wakeup hap info.`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set wakeup hap info, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -809,6 +1015,22 @@ if (wakeupIntelligentVoiceEngine != null) {
     } else {
       console.info(`Succeeded in setting wakeup hap info.`);
     }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hapInfo: intelligentVoice.WakeupHapInfo = {
+  bundleName: 'com.wakeup',
+  abilityName: 'WakeUpExtAbility',
+}
+if (wakeupIntelligentVoiceEngine != null) {
+  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).setWakeupHapInfo(hapInfo).then(() => {
+    console.info(`Succeeded in setting wakeup hap info.`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set wakeup hap info, Code:${err.code}, message:${err.message}`);
   });
 }
 ```
@@ -854,21 +1076,7 @@ Sets wakeup hap information, This method uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hapInfo: intelligentVoice.WakeupHapInfo = {
-  bundleName: 'com.wakeup',
-  abilityName: 'WakeUpExtAbility',
-}
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).setWakeupHapInfo(hapInfo).then(() => {
-    console.info(`Succeeded in setting wakeup hap info.`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set wakeup hap info, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
+See [setWakeupHapInfo](#setwakeuphapinfo)
 
 ## startCapturer
 

@@ -110,6 +110,10 @@ cleanFileCache(): Promise<void>
 | --- | --- |
 | 13900010 | Try again. |
 
+**示例**
+
+参见 [cleanFileCache](#cleanfilecache)
+
 ## constructor
 
 ```TypeScript
@@ -133,7 +137,31 @@ A constructor used to create a **CloudFileCache** instance. Data is not shared b
 **示例**
 
 ```TypeScript
+let fileSync = new cloudSync.FileSync()
+```
+
+```TypeScript
 let fileCache = new cloudSync.CloudFileCache();
+```
+
+```TypeScript
+let fileVersion = new cloudSync.FileVersion();
+```
+
+```TypeScript
+let gallerySync = new cloudSync.GallerySync()
+```
+
+```TypeScript
+let download = new cloudSync.Download()
+```
+
+```TypeScript
+let fileSync = new cloudSync.FileSync("com.ohos.demo")
+```
+
+```TypeScript
+let fileCache = new cloudSync.CloudFileCache("com.ohos.demo");
 ```
 
 ## getCachedTotalSize
@@ -188,95 +216,6 @@ fileCache.getCachedTotalSize().then<long>((totalDownloadSize: long): void => {
 }).catch((err: BusinessError<void>): void => {
   console.error("get totalDownloadSize failed with error message: " + err.message + ", error code: " + err.code);
 });
-```
-
-## offBatchDownload
-
-```TypeScript
-offBatchDownload(callback?: Callback<MultiDownloadProgress>): void
-```
-
-Unsubscribes from cloud file cache download progress event.
-
-**起始版本：** 23
-
-<!--Device-CloudFileCache-offBatchDownload(callback?: Callback<MultiDownloadProgress>): void--><!--Device-CloudFileCache-offBatchDownload(callback?: Callback<MultiDownloadProgress>): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 否 | callback function with a `MultiDownloadProgress` argument. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| 13900020 | Invalid argument. Possible causes:Incorrect parameter types. |
-| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileCache = new cloudSync.CloudFileCache();
-let callback = (pg: cloudSync.MultiDownloadProgress): void => {
-  console.info("download state: " + pg.state);
-}
-try {
-  fileCache.onBatchDownload(callback);
-  fileCache.offBatchDownload(callback);
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to unregister download callback, error code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## offProgress
-
-```TypeScript
-offProgress(callback?: Callback<DownloadProgress>): void
-```
-
-Unsubscribes from cloud file cache download progress event.
-
-**起始版本：** 23
-
-<!--Device-CloudFileCache-offProgress(callback?: Callback<DownloadProgress>): void--><!--Device-CloudFileCache-offProgress(callback?: Callback<DownloadProgress>): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | 否 | callback function with a `DownloadProgress` argument. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
-| 13600001 | IPC error |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileCache = new cloudSync.CloudFileCache();
-let callback = (pg: cloudSync.DownloadProgress): void => {
-  console.info("download state: " + pg.state);
-}
-try {
-  fileCache.onProgress(callback);
-  fileCache.offProgress(callback);
-} catch (error) {
-  console.error(`Error code: ${error.code}, message: ${error.message}`);
-}
 ```
 
 ## off_batchDownload
@@ -374,17 +313,17 @@ try {
 }
 ```
 
-## onBatchDownload
+## offBatchDownload
 
 ```TypeScript
-onBatchDownload(callback: Callback<MultiDownloadProgress>): void
+offBatchDownload(callback?: Callback<MultiDownloadProgress>): void
 ```
 
-Subscribes to a batch of cloud file cache download progress change event. This method uses a callback to get download progress changes.
+Unsubscribes from cloud file cache download progress event.
 
 **起始版本：** 23
 
-<!--Device-CloudFileCache-onBatchDownload(callback: Callback<MultiDownloadProgress>): void--><!--Device-CloudFileCache-onBatchDownload(callback: Callback<MultiDownloadProgress>): void-End-->
+<!--Device-CloudFileCache-offBatchDownload(callback?: Callback<MultiDownloadProgress>): void--><!--Device-CloudFileCache-offBatchDownload(callback?: Callback<MultiDownloadProgress>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -392,13 +331,13 @@ Subscribes to a batch of cloud file cache download progress change event. This m
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 是 | callback function with a `MultiDownloadProgress` argument. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 否 | callback function with a `MultiDownloadProgress` argument. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 13900020 | Invalid argument. Possible causes:Incorrect parameter types. |
 | 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 **示例**
@@ -407,33 +346,29 @@ Subscribes to a batch of cloud file cache download progress change event. This m
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let fileCache = new cloudSync.CloudFileCache();
-let callback = (data: cloudSync.MultiDownloadProgress): void => {
-  console.info(`Batch download progress: downloadedSize: ${data.downloadedSize}, totalSize: ${data.totalSize}`);
-  if (data.state == cloudSync.State.COMPLETED) {
-    console.info('Batch download finished.');
-  } else if (data.state == cloudSync.State.FAILED) {
-    console.info(`Batch download stopped, error type: ${data.errType}.`);
-  }
-};
+let callback = (pg: cloudSync.MultiDownloadProgress): void => {
+  console.info("download state: " + pg.state);
+}
 try {
   fileCache.onBatchDownload(callback);
+  fileCache.offBatchDownload(callback);
 } catch (e) {
   let error = e as BusinessError;
-  console.error(`Failed to register download callback, error code: ${error.code}, message: ${error.message}`);
+  console.error(`Failed to unregister download callback, error code: ${error.code}, message: ${error.message}`);
 }
 ```
 
-## onProgress
+## offProgress
 
 ```TypeScript
-onProgress(callback: Callback<DownloadProgress>): void
+offProgress(callback?: Callback<DownloadProgress>): void
 ```
 
-Subscribes to cloud file cache download progress change event. This method uses a callback to get download progress changes.
+Unsubscribes from cloud file cache download progress event.
 
 **起始版本：** 23
 
-<!--Device-CloudFileCache-onProgress(callback: Callback<DownloadProgress>): void--><!--Device-CloudFileCache-onProgress(callback: Callback<DownloadProgress>): void-End-->
+<!--Device-CloudFileCache-offProgress(callback?: Callback<DownloadProgress>): void--><!--Device-CloudFileCache-offProgress(callback?: Callback<DownloadProgress>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -441,16 +376,25 @@ Subscribes to cloud file cache download progress change event. This method uses 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | 是 | callback function with a `DownloadProgress` argument. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | 否 | callback function with a `DownloadProgress` argument. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
 | 13600001 | IPC error |
 
 **示例**
+
+```TypeScript
+let fileSync = new cloudSync.FileSync();
+let callback = (pg: cloudSync.SyncProgress): void => {
+  console.info("file sync state: " + pg.state + "error type: " + pg.error);
+}
+fileSync.onProgress(callback);
+fileSync.offProgress(callback);
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -458,12 +402,49 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let fileCache = new cloudSync.CloudFileCache();
 let callback = (pg: cloudSync.DownloadProgress): void => {
   console.info("download state: " + pg.state);
-};
+}
 try {
   fileCache.onProgress(callback);
+  fileCache.offProgress(callback);
 } catch (error) {
   console.error(`Error code: ${error.code}, message: ${error.message}`);
 }
+```
+
+```TypeScript
+let gallerySync = new cloudSync.GallerySync();
+let callback = (pg: cloudSync.SyncProgress): void => {
+  console.info("gallery sync state: " + pg.state + "error type: " + pg.error);
+}
+gallerySync.onProgress(callback);
+gallerySync.offProgress(callback);
+```
+
+```TypeScript
+let gallerySync = new cloudSync.GallerySync();
+let callback = (pg: cloudSync.SyncProgress): void => {
+  console.info("gallery sync state: " + pg.state + "error type: " + pg.error);
+}
+gallerySync.onProgress(callback);
+gallerySync.offProgress();
+```
+
+```TypeScript
+let download = new cloudSync.Download();
+let callback = (pg: cloudSync.DownloadProgress): void => {
+  console.info("download state: " + pg.state);
+}
+download.onProgress(callback);
+download.offProgress(callback);
+```
+
+```TypeScript
+let download = new cloudSync.Download();
+let callback = (pg: cloudSync.DownloadProgress): void => {
+  console.info("download state: " + pg.state);
+}
+download.onProgress(callback);
+download.offProgress();
 ```
 
 ## on_batchDownload
@@ -563,6 +544,128 @@ try {
 }
 ```
 
+## onBatchDownload
+
+```TypeScript
+onBatchDownload(callback: Callback<MultiDownloadProgress>): void
+```
+
+Subscribes to a batch of cloud file cache download progress change event. This method uses a callback to get download progress changes.
+
+**起始版本：** 23
+
+<!--Device-CloudFileCache-onBatchDownload(callback: Callback<MultiDownloadProgress>): void--><!--Device-CloudFileCache-onBatchDownload(callback: Callback<MultiDownloadProgress>): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 是 | callback function with a `MultiDownloadProgress` argument. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900020 | Invalid argument. Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileCache = new cloudSync.CloudFileCache();
+let callback = (data: cloudSync.MultiDownloadProgress): void => {
+  console.info(`Batch download progress: downloadedSize: ${data.downloadedSize}, totalSize: ${data.totalSize}`);
+  if (data.state == cloudSync.State.COMPLETED) {
+    console.info('Batch download finished.');
+  } else if (data.state == cloudSync.State.FAILED) {
+    console.info(`Batch download stopped, error type: ${data.errType}.`);
+  }
+};
+try {
+  fileCache.onBatchDownload(callback);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to register download callback, error code: ${error.code}, message: ${error.message}`);
+}
+```
+
+## onProgress
+
+```TypeScript
+onProgress(callback: Callback<DownloadProgress>): void
+```
+
+Subscribes to cloud file cache download progress change event. This method uses a callback to get download progress changes.
+
+**起始版本：** 23
+
+<!--Device-CloudFileCache-onProgress(callback: Callback<DownloadProgress>): void--><!--Device-CloudFileCache-onProgress(callback: Callback<DownloadProgress>): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | 是 | callback function with a `DownloadProgress` argument. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes: <br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 13600001 | IPC error |
+
+**示例**
+
+```TypeScript
+let fileSync = new cloudSync.FileSync();
+let callback = (pg: cloudSync.SyncProgress): void => {
+  console.info("file sync state: " + pg.state + "error type: " + pg.error);
+}
+fileSync.onProgress(callback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileCache = new cloudSync.CloudFileCache();
+let callback = (pg: cloudSync.DownloadProgress): void => {
+  console.info("download state: " + pg.state);
+};
+try {
+  fileCache.onProgress(callback);
+} catch (error) {
+  console.error(`Error code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let gallerySync = new cloudSync.GallerySync();
+let callback = (pg: cloudSync.SyncProgress): void => {
+  console.info("syncState: " + pg.state);
+};
+try {
+  gallerySync.onProgress(callback);
+} catch (error) {
+  console.error(`Error code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+let download = new cloudSync.Download();
+let callback = (pg: cloudSync.DownloadProgress): void => {
+  console.info("download state: " + pg.state + "error type: " + pg.error);
+}
+download.onProgress(callback);
+```
+
 ## start
 
 ```TypeScript
@@ -600,6 +703,74 @@ start(uri: string): Promise<void>
 | 14000002 | Invalid uri. |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync();
+
+let callback = (pg: cloudSync.SyncProgress) => {
+  console.info("file sync state: " + pg.state + "error type: " + pg.error);
+}
+
+fileSync.on('progress', callback);
+
+fileSync.start().then(() => {
+  console.info("start sync successfully");
+}).catch((err: BusinessError) => {
+  console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync();
+let callback = (pg: cloudSync.SyncProgress): void => {
+  console.info("file sync state: " + pg.state + "error type: " + pg.error);
+}
+fileSync.on('progress', callback);
+fileSync.start().then<void>((): void => {
+  console.info("start sync successfully");
+}).catch((err: BusinessError<void>): void => {
+  console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync();
+
+fileSync.start((err: BusinessError) => {
+  if (err) {
+    console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("start sync successfully");
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync();
+fileSync.start((err: BusinessError<void> | null): void => {
+  if (err && err.code) {
+    console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("start sync successfully");
+  }
+});
+```
 
 ArkTS-Dyn示例：
 
@@ -650,39 +821,6 @@ fileCache.start(uri).then<void>((): void => {
 });
 ```
 
-## start
-
-```TypeScript
-start(uri: string, callback: AsyncCallback<void>): void
-```
-
-异步方法启动云盘文件缓存。使用callback异步回调。
-
-**起始版本：** 23
-
-<!--Device-CloudFileCache-start(uri: string, callback: AsyncCallback<void>): void--><!--Device-CloudFileCache-start(uri: string, callback: AsyncCallback<void>): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uri | string | 是 | 待下载文件uri。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步启动云文件下载。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
-| 13600001 | IPC error. |
-| 13900002 | No such file or directory. |
-| 13900025 | No space left on device. |
-| 14000002 | Invalid uri. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -719,6 +857,177 @@ fileCache.start(uri, (err: BusinessError<void> | null): void => {
   }
 });
 ```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let gallerySync = new cloudSync.GallerySync();
+
+gallerySync.on('progress', (pg: cloudSync.SyncProgress) => {
+  console.info("syncState: " + pg.state);
+});
+
+gallerySync.start().then(() => {
+  console.info("start sync successfully");
+}).catch((err: BusinessError) => {
+  console.error(`start sync failed with error message: ${err.message}, error code: ${err.code}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let gallerySync = new cloudSync.GallerySync();
+let callback = (pg: cloudSync.SyncProgress): void => {
+  console.info("gallery sync state: " + pg.state + "error type: " + pg.error);
+}
+gallerySync.onProgress(callback);
+gallerySync.start().then((): void => {
+  console.info("start sync successfully");
+}).catch((err: BusinessError): void => {
+  console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let gallerySync = new cloudSync.GallerySync();
+
+gallerySync.start((err: BusinessError) => {
+  if (err) {
+    console.error(`start sync failed with error message: ${err.message}, error code: ${err.code}`);
+  } else {
+    console.info("start sync successfully");
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let gallerySync = new cloudSync.GallerySync();
+gallerySync.start((err: BusinessError<void> | null): void => {
+  if (err && err.code) {
+    console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("start sync successfully");
+  }
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let download = new cloudSync.Download();
+let uri: string = "file:///media/Photo/1";
+
+download.on('progress', (pg: cloudSync.DownloadProgress) => {
+  console.info("download state: " + pg.state);
+});
+
+download.start(uri).then(() => {
+  console.info("start download successfully");
+}).catch((err: BusinessError) => {
+  console.error(`start download failed with error message: ${err.message}, error code: ${err.code}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let download = new cloudSync.Download();
+let uri: string = "file:///media/Photo/1";
+let callback = (pg: cloudSync.DownloadProgress): void => {
+  console.info("download state: " + pg.state);
+}
+download.on('progress', callback);
+download.start(uri).then<void>((): void => {
+  console.info("start download successfully");
+}).catch((err: BusinessError<void>): void => {
+  console.error("start download failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let download = new cloudSync.Download();
+let uri: string = "file:///media/Photo/1";
+
+download.start(uri, (err: BusinessError) => {
+  if (err) {
+    console.error(`start download failed with error message: ${err.message}, error code: ${err.code}`);
+  } else {
+    console.info("start download successfully");
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let download = new cloudSync.Download();
+let uri: string = "file:///media/Photo/1";
+download.start(uri, (err: BusinessError<void> | null): void => {
+  if (err && err.code) {
+    console.error("start download failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("start download successfully");
+  }
+});
+```
+
+## start
+
+```TypeScript
+start(uri: string, callback: AsyncCallback<void>): void
+```
+
+异步方法启动云盘文件缓存。使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-CloudFileCache-start(uri: string, callback: AsyncCallback<void>): void--><!--Device-CloudFileCache-start(uri: string, callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 待下载文件uri。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步启动云文件下载。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
+| 13600001 | IPC error. |
+| 13900002 | No such file or directory. |
+| 13900025 | No space left on device. |
+| 14000002 | Invalid uri. |
+
+**示例**
+
+参见 [start](#start)
 
 ## startBatch
 
@@ -850,6 +1159,64 @@ ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync();
+
+fileSync.stop().then(() => {
+  console.info("stop sync successfully");
+}).catch((err: BusinessError) => {
+  console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync();
+fileSync.stop().then<void>((): void => {
+  console.info("stop sync successfully");
+}).catch((err: BusinessError<void>): void => {
+  console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync();
+
+fileSync.stop((err: BusinessError) => {
+  if (err) {
+    console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("stop sync successfully");
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync();
+fileSync.stop((err: BusinessError<void> | null): void => {
+  if (err && err.code) {
+    console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("stop sync successfully");
+  }
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 import { fileUri } from '@kit.CoreFileKit';
 
 let fileCache = new cloudSync.CloudFileCache();
@@ -878,40 +1245,6 @@ fileCache.stop(uri, true).then<void>((): void => {
   console.error("stop download failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
-
-## stop
-
-```TypeScript
-stop(uri: string, callback: AsyncCallback<void>): void
-```
-
-异步方法停止云盘文件缓存。使用callback异步回调。
-
-调用stop接口，当前文件下载流程会终止，不删除缓存文件，再次调用start接口重新启动下载。
-
-**起始版本：** 23
-
-<!--Device-CloudFileCache-stop(uri: string, callback: AsyncCallback<void>): void--><!--Device-CloudFileCache-stop(uri: string, callback: AsyncCallback<void>): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uri | string | 是 | 待下载文件uri。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步停止云文件下载。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
-| 13600001 | IPC error. |
-| 13900002 | No such file or directory. |
-| 14000002 | Invalid uri. |
-
-**示例**
 
 ArkTS-Dyn示例：
 
@@ -949,6 +1282,162 @@ fileCache.stop(uri, (err: BusinessError<void> | null): void => {
   }
 });
 ```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let gallerySync = new cloudSync.GallerySync();
+
+gallerySync.stop().then(() => {
+  console.info("stop sync successfully");
+}).catch((err: BusinessError) => {
+  console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let gallerySync = new cloudSync.GallerySync();
+gallerySync.stop().then<void>((): void => {
+  console.info("stop sync successfully");
+}, (err: BusinessError<void>): void => {
+  console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let gallerySync = new cloudSync.GallerySync();
+
+gallerySync.stop((err: BusinessError) => {
+  if (err) {
+    console.error(`stop sync failed with error message: ${err.message}, error code: ${err.code}`);
+  } else {
+    console.info("stop sync successfully");
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let gallerySync = new cloudSync.GallerySync();
+gallerySync.stop((err: BusinessError<void> | null): void => {
+  if (err && err.code) {
+    console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("stop sync successfully");
+  }
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let download = new cloudSync.Download();
+let uri: string = "file:///media/Photo/1";
+
+download.stop(uri).then(() => {
+  console.info("stop download successfully");
+}).catch((err: BusinessError) => {
+  console.error(`stop download failed with error message: ${err.message}, error code: ${err.code}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let download = new cloudSync.Download();
+let uri: string = "file:///media/Photo/1";
+download.stop(uri).then<void>((): void => {
+  console.info("stop download successfully");
+}).catch((err: BusinessError<void>): void => {
+  console.error("stop download failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let download = new cloudSync.Download();
+let uri: string = "file:///media/Photo/1";
+
+download.stop(uri, (err: BusinessError) => {
+  if (err) {
+    console.error(`stop download failed with error message: ${err.message}, error code: ${err.code}`);
+  } else {
+    console.info("stop download successfully");
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let download = new cloudSync.Download();
+let uri: string = "file:///media/Photo/1";
+download.stop(uri, (err: BusinessError<void> | null): void => {
+  if (err && err.code) {
+    console.error("stop download failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("stop download successfully");
+  }
+});
+```
+
+## stop
+
+```TypeScript
+stop(uri: string, callback: AsyncCallback<void>): void
+```
+
+异步方法停止云盘文件缓存。使用callback异步回调。
+
+调用stop接口，当前文件下载流程会终止，不删除缓存文件，再次调用start接口重新启动下载。
+
+**起始版本：** 23
+
+<!--Device-CloudFileCache-stop(uri: string, callback: AsyncCallback<void>): void--><!--Device-CloudFileCache-stop(uri: string, callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 待下载文件uri。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步停止云文件下载。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
+| 13600001 | IPC error. |
+| 13900002 | No such file or directory. |
+| 14000002 | Invalid uri. |
+
+**示例**
+
+参见 [stop](#stop)
 
 ## stopBatch
 

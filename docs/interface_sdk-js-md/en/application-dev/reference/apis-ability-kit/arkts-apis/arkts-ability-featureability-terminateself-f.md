@@ -26,7 +26,7 @@ Terminates this ability. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -38,6 +38,17 @@ featureAbility.terminateSelf(
     console.error(`error: ${JSON.stringify(error)}`);
   }
 )
+```
+
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+featureAbility.terminateSelf().then(() => {
+  console.info('==========================>terminateSelf=======================>');
+}).catch((error: BusinessError) => {
+  console.error(`terminateSelf failed, error.code: ${error.code}, error.message: ${error.message}`);
+});
 ```
 
 
@@ -65,14 +76,5 @@ Terminates this ability. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-featureAbility.terminateSelf().then(() => {
-  console.info('==========================>terminateSelf=======================>');
-}).catch((error: BusinessError) => {
-  console.error(`terminateSelf failed, error.code: ${error.code}, error.message: ${error.message}`);
-});
-```
+See [terminateSelf](#terminateself)
 

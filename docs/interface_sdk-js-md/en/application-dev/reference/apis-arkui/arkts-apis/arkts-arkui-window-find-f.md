@@ -31,7 +31,7 @@ Finds a window based on the ID. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the window found. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the window found. |
 
 **Examples**
 
@@ -47,6 +47,19 @@ window.find('test', (err: BusinessError, data) => {
   }
   windowClass = data;
   console.info('Succeeded in finding the window. Data: ' + JSON.stringify(data));
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let windowClass: window.Window | undefined = undefined;
+let promise = window.find('test');
+promise.then((data) => {
+  windowClass = data;
+  console.info('Succeeded in finding the window. Data: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to find the Window. Cause code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -83,16 +96,5 @@ Finds a window based on the ID. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowClass: window.Window | undefined = undefined;
-let promise = window.find('test');
-promise.then((data) => {
-  windowClass = data;
-  console.info('Succeeded in finding the window. Data: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to find the Window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
+See [find](#find)
 

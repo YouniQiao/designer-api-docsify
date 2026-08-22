@@ -12,13 +12,13 @@ import { DynamicLayout, DynamicLayoutAttribute } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [DynamicLayoutAttribute](arkts-arkui-arkuicomponentsarkdynamiclayout-dynamiclayoutattribute-c.md) | The universal attributes are supported. |
+| [DynamicLayoutAttribute](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-c.md) | The universal attributes are supported. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [DynamicLayoutInterface](arkts-arkui-arkuicomponentsarkdynamiclayout-dynamiclayoutinterface-i.md) | Defines the dynamic layout container. |
+| [DynamicLayoutInterface](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutinterface-i.md) | Defines the dynamic layout container. |
 
 ### Constants
 

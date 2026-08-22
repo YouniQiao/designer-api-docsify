@@ -138,6 +138,26 @@ Defines the textPickerDialog's background effect with options
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## cancelButtonStyle
+
+```TypeScript
+cancelButtonStyle?: PickerDialogButtonStyle
+```
+
+Style of cancel button.
+
+**Type:** [PickerDialogButtonStyle](../../apis-arkui/arkts-components/arkts-arkui-pickerdialogbuttonstyle-i.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TextPickerDialogOptionsExt-cancelButtonStyle?: PickerDialogButtonStyle--><!--Device-TextPickerDialogOptionsExt-cancelButtonStyle?: PickerDialogButtonStyle-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## canLoop
 
 ```TypeScript
@@ -157,26 +177,6 @@ Can scroll loop if true is set, on the contrary it can not.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextPickerDialogOptionsExt-canLoop?: boolean--><!--Device-TextPickerDialogOptionsExt-canLoop?: boolean-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## cancelButtonStyle
-
-```TypeScript
-cancelButtonStyle?: PickerDialogButtonStyle
-```
-
-Style of cancel button.
-
-**Type:** [PickerDialogButtonStyle](../../apis-arkui/arkts-components/arkts-arkui-pickerdialogbuttonstyle-i.md)
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TextPickerDialogOptionsExt-cancelButtonStyle?: PickerDialogButtonStyle--><!--Device-TextPickerDialogOptionsExt-cancelButtonStyle?: PickerDialogButtonStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

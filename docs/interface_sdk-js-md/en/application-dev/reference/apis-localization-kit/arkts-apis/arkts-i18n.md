@@ -69,8 +69,8 @@ import { i18n } from '@kit.LocalizationKit';
 | [EntityRecognizer](arkts-localization-i18n-entityrecognizer-c.md) | Provides entity recognition capabilities, which can be used to obtain the type and start and end positions of an entity in the text. Currently, supported entities include phone numbers, and date and time. |
 | [HolidayManager](arkts-localization-i18n-holidaymanager-c.md) | Provides holiday data parsing capabilities, such as determining holidays and obtaining the holiday list of a specified year. |
 | [I18NUtil](arkts-localization-i18n-i18nutil-c.md) | Internationalization utility class, which provides the capabilities of unit conversion, date sequence retrieval, time segment name retrieval, region matching, and path localization. |
-| [ISO8601DateTimeFormat](arkts-localization-i18n-iso8601datetimeformat-c.md) | Provide a DateTime formatting interface which could format date to ISO 8601 standard string. [ISO8601](https://iso8601.com/). |
 | [IndexUtil](arkts-localization-i18n-indexutil-c.md) | Provides index management capabilities, such as obtaining the locale index list and text index values. |
+| [ISO8601DateTimeFormat](arkts-localization-i18n-iso8601datetimeformat-c.md) | Provide a DateTime formatting interface which could format date to ISO 8601 standard string. [ISO8601](https://iso8601.com/). |
 | [Normalizer](arkts-localization-i18n-normalizer-c.md) | Provides the text normalization capabilities. |
 | [PhoneNumberFormat](arkts-localization-i18n-phonenumberformat-c.md) | Provides phone number management capabilities, such as phone number validity verification, formatting, and home location retrieval. |
 | [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) | Provide a simple date time formatting interface. |

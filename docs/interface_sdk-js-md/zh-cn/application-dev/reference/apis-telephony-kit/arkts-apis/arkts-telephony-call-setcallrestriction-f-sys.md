@@ -63,6 +63,21 @@ call.setCallRestriction(0, callRestrictionInfo, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let callRestrictionInfo: call.CallRestrictionInfo = {
+    type: call.CallRestrictionType.RESTRICTION_TYPE_ALL_INCOMING,
+    password: "123456",
+    mode: call.CallRestrictionMode.RESTRICTION_MODE_ACTIVATION
+}
+call.setCallRestriction(0, callRestrictionInfo).then(() => {
+    console.info(`setCallRestriction success.`);
+}).catch((err: BusinessError) => {
+    console.error(`setCallRestriction fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## setCallRestriction
 
@@ -109,18 +124,5 @@ function setCallRestriction(slotId: int, info: CallRestrictionInfo): Promise<voi
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let callRestrictionInfo: call.CallRestrictionInfo = {
-    type: call.CallRestrictionType.RESTRICTION_TYPE_ALL_INCOMING,
-    password: "123456",
-    mode: call.CallRestrictionMode.RESTRICTION_MODE_ACTIVATION
-}
-call.setCallRestriction(0, callRestrictionInfo).then(() => {
-    console.info(`setCallRestriction success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setCallRestriction fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [setCallRestriction](#setcallrestriction)
 

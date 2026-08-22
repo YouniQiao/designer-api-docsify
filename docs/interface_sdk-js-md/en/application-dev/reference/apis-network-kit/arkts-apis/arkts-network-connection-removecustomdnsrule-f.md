@@ -33,7 +33,7 @@ Removes the custom DNS rules of the specified host from the current application.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | host | string | Yes | Name of the host for which DNS rules are to be deleted. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the DNS rules are removed successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the DNS rules are removed successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -57,6 +57,17 @@ connection.removeCustomDnsRule("xxxx", (error: BusinessError, data: void) => {
     return;
   }
   console.info("Succeeded to get data: " + JSON.stringify(data));
+})
+```
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.removeCustomDnsRule("xxxx").then(() => {
+    console.info("success");
+}).catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
 })
 ```
 
@@ -107,14 +118,5 @@ Removes the custom DNS rules of the specified host from the current application.
 
 **Examples**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.removeCustomDnsRule("xxxx").then(() => {
-    console.info("success");
-}).catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-})
-```
+See [removeCustomDnsRule](#removecustomdnsrule)
 

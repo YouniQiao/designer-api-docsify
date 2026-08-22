@@ -55,6 +55,204 @@ ArkTS-Dyn示例：
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { buffer } from '@kit.ArkTS';
 
+function generateRandom(len: number) {
+  let rand = cryptoFramework.createRandom();
+  let generateRandSync = rand.generateRandomSync(len);
+  return generateRandSync;
+}
+
+function genGcmParamsSpec() {
+  let ivBlob = generateRandom(12);
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+  let dataAad = new Uint8Array(arr);
+  let aadBlob: cryptoFramework.DataBlob = { data: dataAad };
+  arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let dataTag = new Uint8Array(arr);
+  let tagBlob: cryptoFramework.DataBlob = {
+    data: dataTag
+  };
+  let gcmParamsSpec: cryptoFramework.GcmParamsSpec = {
+    iv: ivBlob,
+    aad: aadBlob,
+    authTag: tagBlob,
+    algName: 'GcmParamsSpec'
+  };
+  return gcmParamsSpec;
+}
+
+function cipherByCallback() {
+  let gcmParams = genGcmParamsSpec();
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let cipher = cryptoFramework.createCipher('AES128|GCM|PKCS7');
+  symKeyGenerator.generateSymKey((err, symKey) => {
+    cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, gcmParams, (err) => {
+      let message = 'This is a test';
+      let plainText: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from(message, 'utf-8').buffer) };
+      cipher.update(plainText, (err, encryptUpdate) => {
+        cipher.doFinal(null, (err, tag) => {
+          gcmParams.authTag = tag;
+          console.info('encryptUpdate plainText: ' + encryptUpdate.data);
+        });
+      });
+    });
+  });
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function generateRandom(len: int) {
+  let rand = cryptoFramework.createRandom();
+  let generateRandSync = rand.generateRandomSync(len);
+  return generateRandSync;
+}
+
+function genGcmParamsSpec() {
+  let ivBlob = generateRandom(12);
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+  let dataAad = new Uint8Array(arr);
+  let aadBlob: cryptoFramework.DataBlob = { data: dataAad };
+  arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let dataTag = new Uint8Array(arr);
+  let tagBlob: cryptoFramework.DataBlob = {
+    data: dataTag
+  };
+  let gcmParamsSpec: cryptoFramework.GcmParamsSpec = {
+    iv: ivBlob,
+    aad: aadBlob,
+    authTag: tagBlob,
+    algName: "GcmParamsSpec"
+  };
+  return gcmParamsSpec;
+}
+
+function cipherByCallback() {
+  let gcmParams = genGcmParamsSpec();
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let cipher = cryptoFramework.createCipher('AES128|GCM|PKCS7');
+  symKeyGenerator.generateSymKey((err, symKey) => {
+    if (symKey != undefined) {
+      cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, gcmParams, (err) => {
+        let message = "This is a test";
+        let plainText: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from(message, 'utf-8').buffer) };
+        cipher.update(plainText, (err, encryptUpdate) => {
+          cipher.doFinal(null, (err, tag) => {
+            if (tag != undefined) {
+              gcmParams.authTag = tag;
+            }
+            if (encryptUpdate != undefined) {
+              console.info('encryptUpdate plainText：' + encryptUpdate.data);
+            }
+          });
+        });
+      });
+    }
+  });
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function generateRandom(len: number) {
+  let rand = cryptoFramework.createRandom();
+  let generateRandSync = rand.generateRandomSync(len);
+  return generateRandSync;
+}
+
+function genGcmParamsSpec() {
+  let ivBlob = generateRandom(12);
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+  let dataAad = new Uint8Array(arr);
+  let aadBlob: cryptoFramework.DataBlob = { data: dataAad };
+  arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let dataTag = new Uint8Array(arr);
+  let tagBlob: cryptoFramework.DataBlob = {
+    data: dataTag
+  };
+  let gcmParamsSpec: cryptoFramework.GcmParamsSpec = {
+    iv: ivBlob,
+    aad: aadBlob,
+    authTag: tagBlob,
+    algName: 'GcmParamsSpec'
+  };
+  return gcmParamsSpec;
+}
+
+async function cipherByPromise() {
+  let gcmParams = genGcmParamsSpec();
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let cipher = cryptoFramework.createCipher('AES128|GCM|PKCS7');
+  let symKey = await symKeyGenerator.generateSymKey();
+  await cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, gcmParams);
+  let message = 'This is a test';
+  let plainText: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from(message, 'utf-8').buffer) };
+  let encryptUpdate = await cipher.update(plainText);
+  gcmParams.authTag = await cipher.doFinal(null);
+  console.info('encryptUpdate plainText: ' + encryptUpdate.data);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function generateRandom(len: int) {
+  let rand = cryptoFramework.createRandom();
+  let generateRandSync = rand.generateRandomSync(len);
+  return generateRandSync;
+}
+
+function genGcmParamsSpec() {
+  let ivBlob = generateRandom(12);
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+  let dataAad = new Uint8Array(arr);
+  let aadBlob: cryptoFramework.DataBlob = { data: dataAad };
+  arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let dataTag = new Uint8Array(arr);
+  let tagBlob: cryptoFramework.DataBlob = {
+    data: dataTag
+  };
+  let gcmParamsSpec: cryptoFramework.GcmParamsSpec = {
+    iv: ivBlob,
+    aad: aadBlob,
+    authTag: tagBlob,
+    algName: "GcmParamsSpec"
+  };
+  return gcmParamsSpec;
+}
+
+async function cipherByPromise() {
+  let gcmParams = genGcmParamsSpec();
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let cipher = cryptoFramework.createCipher('AES128|GCM|PKCS7');
+  let symKey = await symKeyGenerator.generateSymKey();
+  await cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, gcmParams);
+  let message = "This is a test";
+  let plainText: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from(message, 'utf-8').buffer) };
+  let encryptUpdate = await cipher.update(plainText);
+  await cipher.doFinal(null);
+  if(encryptUpdate != undefined) {
+    console.info('encryptUpdate plainText: ' + encryptUpdate.data);
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
 function hmacByCallback() {
   let mac = cryptoFramework.createMac('SHA256');
   let keyBlob: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from('12345678abcdefgh', 'utf-8').buffer) };
@@ -99,6 +297,25 @@ function hmacByCallback() {
 }
 ```
 
+此外，更多HMAC的完整示例可参考开发指导[消息认证码计算](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#分段hmac)。
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+async function hmacByPromise() {
+  let mac = cryptoFramework.createMac('SHA256');
+  let keyBlob: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from('12345678abcdefgh', 'utf-8').buffer) };
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let symKey = await symKeyGenerator.convertKey(keyBlob);
+  await mac.init(symKey);
+  await mac.update({ data: new Uint8Array(buffer.from('hmacTestMessage', 'utf-8').buffer) });
+  let macOutput = await mac.doFinal();
+  console.info('[Promise]: HMAC result: ' + macOutput.data);
+  console.info('[Promise]: MAC len: ' + mac.getMacLength());
+}
+```
+
 ## doFinal
 
 ```TypeScript
@@ -132,24 +349,7 @@ doFinal(): Promise<DataBlob>
 
 **示例**
 
-此外，更多HMAC的完整示例可参考开发指导[消息认证码计算](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#分段hmac)。
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-async function hmacByPromise() {
-  let mac = cryptoFramework.createMac('SHA256');
-  let keyBlob: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from('12345678abcdefgh', 'utf-8').buffer) };
-  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
-  let symKey = await symKeyGenerator.convertKey(keyBlob);
-  await mac.init(symKey);
-  await mac.update({ data: new Uint8Array(buffer.from('hmacTestMessage', 'utf-8').buffer) });
-  let macOutput = await mac.doFinal();
-  console.info('[Promise]: HMAC result: ' + macOutput.data);
-  console.info('[Promise]: MAC len: ' + mac.getMacLength());
-}
-```
+参见 [doFinal](#dofinal)
 
 ## doFinalSync
 
@@ -185,6 +385,98 @@ doFinalSync(): DataBlob
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function generateRandom(len: number) {
+  let rand = cryptoFramework.createRandom();
+  let generateRandSync = rand.generateRandomSync(len);
+  return generateRandSync;
+}
+
+function genGcmParamsSpec() {
+  let ivBlob = generateRandom(12);
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+  let dataAad = new Uint8Array(arr);
+  let aadBlob: cryptoFramework.DataBlob = { data: dataAad };
+  arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let dataTag = new Uint8Array(arr);
+  let tagBlob: cryptoFramework.DataBlob = {
+    data: dataTag
+  };
+  let gcmParamsSpec: cryptoFramework.GcmParamsSpec = {
+    iv: ivBlob,
+    aad: aadBlob,
+    authTag: tagBlob,
+    algName: 'GcmParamsSpec'
+  };
+  return gcmParamsSpec;
+}
+
+async function cipherBySync() {
+  let gcmParams = genGcmParamsSpec();
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let cipher = cryptoFramework.createCipher('AES128|GCM|PKCS7');
+  let symKey = await symKeyGenerator.generateSymKey();
+  await cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, gcmParams);
+  let message = 'This is a test';
+  let plainText: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from(message, 'utf-8').buffer) };
+  let encryptUpdate = cipher.updateSync(plainText);
+  gcmParams.authTag = cipher.doFinalSync(null);
+  console.info('encryptUpdate plainText: ' + encryptUpdate.data);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function generateRandom(len: int) {
+  let rand = cryptoFramework.createRandom();
+  let generateRandSync = rand.generateRandomSync(len);
+  return generateRandSync;
+}
+
+function genGcmParamsSpec() {
+  let ivBlob = generateRandom(12);
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+  let dataAad = new Uint8Array(arr);
+  let aadBlob: cryptoFramework.DataBlob = { data: dataAad };
+  arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let dataTag = new Uint8Array(arr);
+  let tagBlob: cryptoFramework.DataBlob = {
+    data: dataTag
+  };
+  let gcmParamsSpec: cryptoFramework.GcmParamsSpec = {
+    iv: ivBlob,
+    aad: aadBlob,
+    authTag: tagBlob,
+    algName: "GcmParamsSpec"
+  };
+  return gcmParamsSpec;
+}
+
+async function cipherBySync() {
+  let gcmParams = genGcmParamsSpec();
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let cipher = cryptoFramework.createCipher('AES128|GCM|PKCS7');
+  let symKey = await symKeyGenerator.generateSymKey();
+  await cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, gcmParams);
+  let message = "This is a test";
+  let plainText: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from(message, 'utf-8').buffer) };
+  let encryptUpdate = cipher.updateSync(plainText);
+  cipher.doFinalSync(null);
+  if (encryptUpdate != undefined) {
+    console.info('encryptUpdate plainText: ' + encryptUpdate.data);
+  }
+}
+```
 
 此外，更多HMAC的完整示例可参考开发指导[消息认证码计算](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#分段hmac)。
 

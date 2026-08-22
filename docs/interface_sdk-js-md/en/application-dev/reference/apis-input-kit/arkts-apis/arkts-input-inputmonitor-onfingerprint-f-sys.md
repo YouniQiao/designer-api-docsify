@@ -28,7 +28,7 @@ Enables listening for fingerprint key events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FingerprintEvent](arkts-input-multimodalinputshortkey-fingerprintevent-i-sys.md)&gt; | Yes | Callback used to receive the reported data. |
+| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FingerprintEvent](arkts-input-multimodalinput-shortkey-fingerprintevent-i-sys.md)&gt; | Yes | Callback used to receive the reported data. |
 
 **Error codes:**
 

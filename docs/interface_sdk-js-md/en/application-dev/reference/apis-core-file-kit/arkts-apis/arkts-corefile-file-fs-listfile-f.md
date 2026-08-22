@@ -34,7 +34,7 @@ You can configure the **recursion** parameter in **options** to recursively list
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| options | [ListFileOptions](../../apis-default/arkts-apis/arkts-filefs-listfileoptions-i.md) | No | Options for filtering files. The files are not filtered by default.<br>**Since:** 11 |
+| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | No | Options for filtering files. The files are not filtered by default.<br>**Since:** 11 |
 
 **Return value:**
 
@@ -51,6 +51,54 @@ You can configure the **recursion** parameter in **options** to recursively list
 | 13900011 | Out of memory |
 | 13900018 | Not a directory |
 | 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo as fs, Filter, ListFileOptions } from '@kit.CoreFileKit';
+let listFileOption: ListFileOptions = {
+  recursion: false,
+  listNum: 0,
+  filter: {
+    suffix: [".png", ".jpg", ".jpeg"],
+    displayName: ["*abc", "efg*"],
+    fileSizeOver: 1024
+  }
+}
+fs.listFile(pathDir, listFileOption).then((filenames: Array<string>) => {
+  console.info("listFile succeed");
+  for (let i = 0; i < filenames.length; i++) {
+    console.info("fileName: %s", filenames[i]);
+  }
+}).catch((err: BusinessError) => {
+  console.error("list file failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo as fs, Filter, ListFileOptions } from '@kit.CoreFileKit';
+let listFileOption: ListFileOptions = {
+  recursion: false,
+  listNum: 0,
+  filter: {
+    suffix: [".png", ".jpg", ".jpeg"],
+    displayName: ["*abc", "efg*"],
+    fileSizeOver: 1024
+  }
+};
+fs.listFile(pathDir, listFileOption, (err: BusinessError, filenames: Array<string>) => {
+  if (err) {
+    console.error("list file failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("listFile succeed");
+    for (let i = 0; i < filenames.length; i++) {
+      console.info("filename: %s", filenames[i]);
+    }
+  }
+});
+```
 
 
 ## listFile
@@ -76,7 +124,7 @@ You can configure the **recursion** parameter in **options** to recursively list
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string[]&gt; | Yes | Callback used to return the file names listed. The files are encoded in UTF-8 by default. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | Yes | Callback used to return the file names listed. The files are encoded in UTF-8 by default. |
 
 **Error codes:**
 
@@ -87,6 +135,10 @@ You can configure the **recursion** parameter in **options** to recursively list
 | 13900011 | Out of memory |
 | 13900018 | Not a directory |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [listFile](#listfile)
 
 
 ## listFile
@@ -116,8 +168,8 @@ You can configure the **recursion** parameter in **options** to recursively list
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| options | [ListFileOptions](../../apis-default/arkts-apis/arkts-filefs-listfileoptions-i.md) | Yes | Options for filtering files. The files are not filtered by default.<br>**Since:** 11 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string[]&gt; | Yes | Callback used to return the file names listed. The files are encoded in UTF-8 by default. |
+| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | Yes | Options for filtering files. The files are not filtered by default.<br>**Since:** 11 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | Yes | Callback used to return the file names listed. The files are encoded in UTF-8 by default. |
 
 **Error codes:**
 
@@ -128,4 +180,8 @@ You can configure the **recursion** parameter in **options** to recursively list
 | 13900011 | Out of memory |
 | 13900018 | Not a directory |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [listFile](#listfile)
 

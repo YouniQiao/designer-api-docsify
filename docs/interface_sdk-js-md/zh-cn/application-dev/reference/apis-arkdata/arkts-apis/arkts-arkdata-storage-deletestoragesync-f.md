@@ -27,3 +27,18 @@ function deleteStorageSync(path: string): void
 | --- | --- | --- | --- |
 | path | string | 是 | 应用程序内部数据存储路径。 |
 
+**示例**
+
+```TypeScript
+import featureAbility from '@ohos.ability.featureAbility';
+
+let path;
+let context = featureAbility.getContext();
+context.getFilesDir().then((filePath) => {
+    path = filePath;
+    console.info("======================>getFilesDirPromise====================>");
+
+    data_storage.deleteStorageSync(path + '/mystore');
+});
+```
+

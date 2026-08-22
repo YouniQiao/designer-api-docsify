@@ -30,7 +30,7 @@ Sets wallpaper of the specified type based on the uri path of the custom wallpap
 | --- | --- | --- | --- |
 | source | string | Yes | indicates the uri path of the custom wallpaper. |
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of setCustomWallpaper. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setCustomWallpaper. |
 
 **Error codes:**
 
@@ -53,6 +53,21 @@ try {
             return;
         }
         console.info(`success to setCustomWallpaper.`);
+    });
+} catch (error) {
+    console.error(`failed to setCustomWallpaper. Code: ${error.code}, Message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wallpaperPath = "/data/storage/el2/base/haps/entry/files/test.zip";
+try {
+    wallpaper.setCustomWallpaper(wallpaperPath, wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
+        console.info(`success to setCustomWallpaper.`);
+    }).catch((error: BusinessError) => {
+        console.error(`failed to setCustomWallpaper. Code: ${error.code}, Message: ${error.message}`);
     });
 } catch (error) {
     console.error(`failed to setCustomWallpaper. Code: ${error.code}, Message: ${error.message}`);
@@ -101,18 +116,5 @@ Sets wallpaper of the specified type based on the uri path of the custom wallpap
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wallpaperPath = "/data/storage/el2/base/haps/entry/files/test.zip";
-try {
-    wallpaper.setCustomWallpaper(wallpaperPath, wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
-        console.info(`success to setCustomWallpaper.`);
-    }).catch((error: BusinessError) => {
-        console.error(`failed to setCustomWallpaper. Code: ${error.code}, Message: ${error.message}`);
-    });
-} catch (error) {
-    console.error(`failed to setCustomWallpaper. Code: ${error.code}, Message: ${error.message}`);
-}
-```
+See [setCustomWallpaper](#setcustomwallpaper)
 

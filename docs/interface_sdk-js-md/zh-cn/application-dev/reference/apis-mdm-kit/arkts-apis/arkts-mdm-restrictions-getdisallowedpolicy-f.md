@@ -35,7 +35,7 @@ function getDisallowedPolicy(admin: Want | null, feature: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。<br>**起始版本：** 12 - 19 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。<br>**起始版本：** 12 - 19 |
 | feature | string | 是 | 支持查询的特性清单参考下表2。 <br/> **说明：** 从API version 15开始，应用申请权限 ohos.permission.PERSONAL_MANAGE_RESTRICTIONS并通过 [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md)激活为 [BDA](../../../mdm/mdm-kit-term.md#byod-device-admin-bdabyod设备管理员)，可以使用此接口获取以下特性状态：bluetooth、hdc、microphone、 usb、wifi、tethering、camera，从API版本26.0.0开始，新增支持使用此接口获取mtpServer特性状态。 |
 
 **返回值：**
@@ -73,6 +73,24 @@ try {
 }
 ```
 
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  let result: boolean = restrictions.getDisallowedPolicy(wantTemp, restrictions.FeatureForDevice.WIFI_P2P);
+  console.info(`Succeeded in querying whether Wi-Fi P2P is disabled. Disabled status: ${result}`);
+} catch (err) {
+  console.error(`Failed to get Wi-Fi P2P disabled status. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## getDisallowedPolicy
 
@@ -96,7 +114,7 @@ function getDisallowedPolicy(admin: Want | null, feature: FeatureForDevice): boo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
 | feature | [FeatureForDevice](arkts-mdm-restrictions-featurefordevice-e.md) | 是 | 指定要查询的设备特性。 |
 
 **返回值：**
@@ -116,21 +134,5 @@ function getDisallowedPolicy(admin: Want | null, feature: FeatureForDevice): boo
 
 **示例**
 
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let result: boolean = restrictions.getDisallowedPolicy(wantTemp, restrictions.FeatureForDevice.WIFI_P2P);
-  console.info(`Succeeded in querying whether Wi-Fi P2P is disabled. Disabled status: ${result}`);
-} catch (err) {
-  console.error(`Failed to get Wi-Fi P2P disabled status. Code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getDisallowedPolicy](#getdisallowedpolicy)
 

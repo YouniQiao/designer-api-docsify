@@ -21,9 +21,9 @@ import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@k
 
 | Name | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkuiarclist-arclistattribute-i.md) | The ArcListAttribute |
-| [ArcListItemAttribute](arkts-arkui-arkuiarclist-arclistitemattribute-i.md) | The ArcListItemAttribute |
-| [ArkListOptions](arkts-arkui-arkuiarclist-arklistoptions-i.md) | Defines the arc list options. |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) | The ArcListAttribute |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) | The ArcListItemAttribute |
+| [ArkListOptions](arkts-arkui-arkui-arclist-arklistoptions-i.md) | Defines the arc list options. |
 
 ### Types
 

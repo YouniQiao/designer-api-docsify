@@ -71,6 +71,33 @@ let reminderId: int = 1;
 reminderAgentManager.cancelReminder(reminderId, cancelCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+let reminderId: number = 1;
+reminderAgentManager.cancelReminder(reminderId).then(() => {
+  console.info("cancelReminder promise");
+}).catch((err: BusinessError) => {
+  console.error("promise err code:" + err.code + " message:" + err.message);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+let reminderId: int = 1;
+reminderAgentManager.cancelReminder(reminderId).then(() => {
+  console.info(`Succeeded in canceling reminder`);
+}).catch((err): void => {
+  console.error(`Failed to cancel reminder. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## cancelReminder
 
@@ -108,30 +135,5 @@ function cancelReminder(reminderId: int): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-let reminderId: number = 1;
-reminderAgentManager.cancelReminder(reminderId).then(() => {
-  console.info("cancelReminder promise");
-}).catch((err: BusinessError) => {
-  console.error("promise err code:" + err.code + " message:" + err.message);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-let reminderId: int = 1;
-reminderAgentManager.cancelReminder(reminderId).then(() => {
-  console.info(`Succeeded in canceling reminder`);
-}).catch((err): void => {
-  console.error(`Failed to cancel reminder. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [cancelReminder](#cancelreminder)
 

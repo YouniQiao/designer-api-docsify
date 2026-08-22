@@ -25,7 +25,7 @@ Removes a specified notification slot. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotType | notification.SlotType | Yes | Type of the notification slot. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the notification slot is removed, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the notification slot is removed, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -47,6 +47,18 @@ reminderAgentManager.removeNotificationSlot(notificationManager.SlotType.CONTENT
   } else {
     console.info("removeNotificationSlot callback");
   }
+});
+```
+
+```TypeScript
+import { notificationManager } from '@kit.NotificationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+reminderAgentManager.removeNotificationSlot(notificationManager.SlotType.CONTENT_INFORMATION).then(() => {
+  console.info("removeNotificationSlot promise");
+}).catch((err: BusinessError) => {
+  console.error("promise err code:" + err.code + " message:" + err.message);
 });
 ```
 
@@ -85,15 +97,5 @@ Removes a specified notification slot. This API uses a promise to return the res
 
 **Examples**
 
-```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-reminderAgentManager.removeNotificationSlot(notificationManager.SlotType.CONTENT_INFORMATION).then(() => {
-  console.info("removeNotificationSlot promise");
-}).catch((err: BusinessError) => {
-  console.error("promise err code:" + err.code + " message:" + err.message);
-});
-```
+See [removeNotificationSlot](#removenotificationslot)
 

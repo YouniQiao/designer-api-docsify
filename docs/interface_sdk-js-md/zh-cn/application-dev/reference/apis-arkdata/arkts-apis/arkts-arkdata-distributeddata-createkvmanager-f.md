@@ -56,6 +56,26 @@ try {
 }
 ```
 
+```TypeScript
+try {
+  const kvManagerConfig = {
+    bundleName: 'com.example.datamanagertest',
+    userInfo: {
+      userId: '0',
+      userType: distributedData.UserType.SAME_USER_ID
+    }
+  }
+  distributedData.createKVManager(kvManagerConfig).then((manager) => {
+    console.log("Succeeded in creating KVManager");
+    kvManager = manager;
+  }).catch((err) => {
+    console.error("Failed to create KVManager: " + JSON.stringify(err));
+  });
+} catch (e) {
+  console.log("An unexpected error occurred. Error:" + e);
+}
+```
+
 
 ## createKVManager
 
@@ -89,23 +109,5 @@ function createKVManager(config: KVManagerConfig): Promise<KVManager>
 
 **示例**
 
-```TypeScript
-try {
-  const kvManagerConfig = {
-    bundleName: 'com.example.datamanagertest',
-    userInfo: {
-      userId: '0',
-      userType: distributedData.UserType.SAME_USER_ID
-    }
-  }
-  distributedData.createKVManager(kvManagerConfig).then((manager) => {
-    console.log("Succeeded in creating KVManager");
-    kvManager = manager;
-  }).catch((err) => {
-    console.error("Failed to create KVManager: " + JSON.stringify(err));
-  });
-} catch (e) {
-  console.log("An unexpected error occurred. Error:" + e);
-}
-```
+参见 [createKVManager](#createkvmanager)
 

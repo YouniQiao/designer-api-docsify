@@ -232,3 +232,11 @@ Website that stores the contact information.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+**Examples**
+
+Create contact data in JSON format:
+
+```TypeScript
+let attributes = [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE];
+```
+

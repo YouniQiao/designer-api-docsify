@@ -35,3 +35,9 @@ declare function mkdtempSync(prefix: string): string
 | --- | --- |
 | string | 产生的唯一目录路径。 |
 
+**示例**
+
+```TypeScript
+let res = fileio.mkdtempSync(pathDir + "/XXXXXX");
+```
+

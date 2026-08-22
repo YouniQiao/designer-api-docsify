@@ -44,6 +44,48 @@ console.info(buf.toString('hex'));
 // 输出结果：627566666572
 ```
 
+```TypeScript
+import { fastbuffer } from '@kit.ArkTS';
+
+let arrayBuffer = new ArrayBuffer(10);
+let buf = fastbuffer.from(arrayBuffer, 0, 2);
+console.info(buf.length.toString());
+// 输出结果：2
+```
+
+```TypeScript
+import { fastbuffer } from '@kit.ArkTS';
+
+// 从字符串创建FastBuffer对象
+let buf1 = fastbuffer.from('buffer');
+// 以FastBuffer对象类型创建新的FastBuffer对象
+let buf2 = fastbuffer.from(buf1);
+console.info(buf2.toString());
+// 输出结果：buffer
+
+// 以Uint8Array对象类型进行创建FastBuffer对象，保持对象间内存共享
+let uint8Array = new Uint8Array(10);
+let buf3 = fastbuffer.from(uint8Array);
+// 修改buf3以验证内存共享：buf3修改后uint8Array同步变化
+buf3.fill(1);
+console.info('uint8Array:', uint8Array);
+// 输出结果：1,1,1,1,1,1,1,1,1,1
+```
+
+```TypeScript
+import { fastbuffer } from '@kit.ArkTS';
+
+// 从普通字符串创建FastBuffer对象
+let buf1 = fastbuffer.from('this is a test');
+// 从hex编码字符串创建FastBuffer对象
+let buf2 = fastbuffer.from('7468697320697320612074c3a97374', 'hex');
+
+console.info(buf1.toString());
+// 输出结果：this is a test
+console.info(buf2.toString());
+// 输出结果：this is a tést
+```
+
 
 ## from
 
@@ -84,14 +126,7 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 
 **示例**
 
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let arrayBuffer = new ArrayBuffer(10);
-let buf = fastbuffer.from(arrayBuffer, 0, 2);
-console.info(buf.length.toString());
-// 输出结果：2
-```
+参见 [from](#from)
 
 
 ## from
@@ -132,24 +167,7 @@ function from(buffer: FastBuffer | Uint8Array): FastBuffer
 
 **示例**
 
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-// 从字符串创建FastBuffer对象
-let buf1 = fastbuffer.from('buffer');
-// 以FastBuffer对象类型创建新的FastBuffer对象
-let buf2 = fastbuffer.from(buf1);
-console.info(buf2.toString());
-// 输出结果：buffer
-
-// 以Uint8Array对象类型进行创建FastBuffer对象，保持对象间内存共享
-let uint8Array = new Uint8Array(10);
-let buf3 = fastbuffer.from(uint8Array);
-// 修改buf3以验证内存共享：buf3修改后uint8Array同步变化
-buf3.fill(1);
-console.info('uint8Array:', uint8Array);
-// 输出结果：1,1,1,1,1,1,1,1,1,1
-```
+参见 [from](#from)
 
 
 ## from
@@ -183,17 +201,5 @@ function from(value: string, encoding?: BufferEncoding): FastBuffer
 
 **示例**
 
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-// 从普通字符串创建FastBuffer对象
-let buf1 = fastbuffer.from('this is a test');
-// 从hex编码字符串创建FastBuffer对象
-let buf2 = fastbuffer.from('7468697320697320612074c3a97374', 'hex');
-
-console.info(buf1.toString());
-// 输出结果：this is a test
-console.info(buf2.toString());
-// 输出结果：this is a tést
-```
+参见 [from](#from)
 

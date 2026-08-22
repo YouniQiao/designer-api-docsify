@@ -34,25 +34,15 @@ Creates an **RdbPredicates** object to add the AND condition.
 | --- | --- |
 | RdbPredicates | RdbPredicates** object created. |
 
-## beginWrap
+**Examples**
 
 ```TypeScript
-beginWrap(): RdbPredicates
+// Find the records in the EMPLOYEE table where the NAME column is Lisa and the SALARY column is 200.5.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Lisa")
+  .and()
+  .equalTo("SALARY", 200.5);
 ```
-
-Creates an **RdbPredicates** object to add a left parenthesis.
-
-**Since:** 23
-
-<!--Device-RdbPredicates-beginWrap(): RdbPredicates--><!--Device-RdbPredicates-beginWrap(): RdbPredicates-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| RdbPredicates | RdbPredicates** object created. |
 
 ## beginsWith
 
@@ -86,6 +76,46 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Find all the records that start with "Li" in the NAME column, for example, Lisa.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.beginsWith("NAME", "Li");
+```
+
+## beginWrap
+
+```TypeScript
+beginWrap(): RdbPredicates
+```
+
+Creates an **RdbPredicates** object to add a left parenthesis.
+
+**Since:** 23
+
+<!--Device-RdbPredicates-beginWrap(): RdbPredicates--><!--Device-RdbPredicates-beginWrap(): RdbPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| RdbPredicates | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Lisa")
+  .beginWrap()
+  .equalTo("AGE", 18)
+  .or()
+  .equalTo("SALARY", 200.5)
+  .endWrap();
+```
 
 ## between
 
@@ -121,6 +151,14 @@ Creates an **RdbPredicates** object to search for the records that are within th
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+// Find the records that are greater than or equal to 10 and less than or equal to 50 in the AGE column.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.between("AGE", 10, 50);
+```
+
 ## constructor
 
 ```TypeScript
@@ -146,6 +184,12 @@ Defines a constructor used to create an **RdbPredicates** object.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+```
 
 ## contains
 
@@ -180,6 +224,14 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+// Find all the records that contain the string 'os' in the NAME column, for example, Rose.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.contains("NAME", "os");
+```
+
 ## distinct
 
 ```TypeScript
@@ -200,25 +252,12 @@ Creates an **RdbPredicates** object to filter out duplicate records.
 | --- | --- |
 | RdbPredicates | RdbPredicates** object that can filter out duplicate records. |
 
-## endWrap
+**Examples**
 
 ```TypeScript
-endWrap(): RdbPredicates
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Rose").distinct(); // Deduplicate result sets whose NAME is Rose.
 ```
-
-Creates an **RdbPredicates** object to add a right parenthesis.
-
-**Since:** 23
-
-<!--Device-RdbPredicates-endWrap(): RdbPredicates--><!--Device-RdbPredicates-endWrap(): RdbPredicates-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| RdbPredicates | RdbPredicates** object created. |
 
 ## endsWith
 
@@ -253,6 +292,46 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+// Find all the records that end with "se" in the NAME column, for example, Rose.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.endsWith("NAME", "se");
+```
+
+## endWrap
+
+```TypeScript
+endWrap(): RdbPredicates
+```
+
+Creates an **RdbPredicates** object to add a right parenthesis.
+
+**Since:** 23
+
+<!--Device-RdbPredicates-endWrap(): RdbPredicates--><!--Device-RdbPredicates-endWrap(): RdbPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| RdbPredicates | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Lisa")
+  .beginWrap()
+  .equalTo("AGE", 18)
+  .or()
+  .equalTo("SALARY", 200.5)
+  .endWrap();
+```
+
 ## equalTo
 
 ```TypeScript
@@ -285,6 +364,14 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Find all the records in the NAME column where the value is Lisa.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Lisa");
+```
 
 ## glob
 
@@ -319,6 +406,14 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+// Find the strings that match "?h*g" in the NAME column.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.glob("NAME", "?h*g");
+```
+
 ## greaterThan
 
 ```TypeScript
@@ -351,6 +446,14 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Find all the records that are greater than 18 in the AGE column.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.greaterThan("AGE", 18);
+```
 
 ## greaterThanOrEqualTo
 
@@ -385,6 +488,14 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+// Find all the records that are greater than or equal to 18 in the AGE column.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.greaterThanOrEqualTo("AGE", 18);
+```
+
 ## groupBy
 
 ```TypeScript
@@ -416,6 +527,13 @@ Creates a **RdbPredicates** object to group the query results based on the speci
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.groupBy(["AGE", "NAME"]);
+```
 
 ## having
 
@@ -489,6 +607,14 @@ Creates an **RdbPredicates** object to search for the records that are in the gi
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+// Find records that are within [18, 20] in the AGE column.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.in("AGE", [18, 20]);
+```
+
 ## inAllDevices
 
 ```TypeScript
@@ -508,6 +634,13 @@ Creates an **RdbPredicates** object to specify all remote devices on the network
 | Type | Description |
 | --- | --- |
 | RdbPredicates | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.inAllDevices();
+```
 
 ## inDevices
 
@@ -548,38 +681,30 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## inValues
+**Examples**
 
 ```TypeScript
-inValues(field: string, value: Array<ValueType>): RdbPredicates
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dmInstance: distributedDeviceManager.DeviceManager;
+let deviceIds: Array<string> = [];
+
+try {
+  dmInstance = distributedDeviceManager.createDeviceManager("com.example.appdatamgrverify");
+  let devices: Array<distributedDeviceManager.DeviceBasicInfo> = dmInstance.getAvailableDeviceListSync();
+  for (let i = 0; i < devices.length; i++) {
+    deviceIds[i] = devices[i].networkId!;
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error("createDeviceManager errCode:" + code + ",errMessage:" + message);
+}
+
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.inDevices(deviceIds);
 ```
-
-Configure RdbPredicates to match the specified field whose data type is ValueType array and values are within a given range.
-
-**Since:** 23
-
-<!--Device-RdbPredicates-inValues(field: string, value: Array<ValueType>): RdbPredicates--><!--Device-RdbPredicates-inValues(field: string, value: Array<ValueType>): RdbPredicates-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| field | string | Yes | Indicates the column name in the database table. |
-| value | Array&lt;ValueType&gt; | Yes | Indicates the values to match with [RdbPredicates](#rdbpredicates). |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| RdbPredicates | The SQL statement with the specified { |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 
 ## indexedBy
 
@@ -613,6 +738,46 @@ Creates a **RdbPredicates** object to specify the index column.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.indexedBy("SALARY");
+```
+
+## inValues
+
+```TypeScript
+inValues(field: string, value: Array<ValueType>): RdbPredicates
+```
+
+Configure RdbPredicates to match the specified field whose data type is ValueType array and values are within a given range.
+
+**Since:** 23
+
+<!--Device-RdbPredicates-inValues(field: string, value: Array<ValueType>): RdbPredicates--><!--Device-RdbPredicates-inValues(field: string, value: Array<ValueType>): RdbPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| field | string | Yes | Indicates the column name in the database table. |
+| value | Array&lt;ValueType&gt; | Yes | Indicates the values to match with [RdbPredicates](#rdbpredicates). |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| RdbPredicates | The SQL statement with the specified { |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+
 ## isNotNull
 
 ```TypeScript
@@ -645,6 +810,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.isNotNull("NAME");
+```
+
 ## isNull
 
 ```TypeScript
@@ -676,6 +848,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.isNull("NAME");
+```
 
 ## lessThan
 
@@ -710,6 +889,14 @@ Creates an **RdbPredicates** object to search for the records that are less than
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+// Find all the records that are less than 20 in the AGE column.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.lessThan("AGE", 20);
+```
+
 ## lessThanOrEqualTo
 
 ```TypeScript
@@ -742,6 +929,14 @@ Creates an **RdbPredicates** object to search for the records that are less than
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Find all the records that are less than or equal to 20 in the AGE column.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.lessThanOrEqualTo("AGE", 20);
+```
 
 ## like
 
@@ -776,6 +971,14 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+// Find all the records that are similar to "os" in the NAME column, for example, Rose.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.like("NAME", "%os%");
+```
+
 ## limitAs
 
 ```TypeScript
@@ -807,6 +1010,13 @@ Creates a **RdbPredicates** object to limit the number of records.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Rose").limitAs(3);
+```
 
 ## notBetween
 
@@ -842,6 +1052,14 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+// Find the records that are less than 10 or greater than 50 in the AGE column.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.notBetween("AGE", 10, 50);
+```
+
 ## notContains
 
 ```TypeScript
@@ -874,6 +1092,14 @@ Creates an **RdbPredicates** object to search for the records that do not contai
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Find the records that do not contain the string "os" in the NAME column, for example, Lisa.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.notContains("NAME", "os");
+```
 
 ## notEqualTo
 
@@ -908,6 +1134,14 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+// Find all the records in the NAME column where the value is not Lisa.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.notEqualTo("NAME", "Lisa");
+```
+
 ## notIn
 
 ```TypeScript
@@ -940,6 +1174,14 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// Find the records that are not within [Lisa, Rose] in the NAME column.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.notIn("NAME", ["Lisa", "Rose"]);
+```
 
 ## notInValues
 
@@ -1007,6 +1249,14 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+// Find all the records that are not similar to "os" in the NAME column, for example, Lisa.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.notLike("NAME", "%os%");
+```
+
 ## offsetAs
 
 ```TypeScript
@@ -1039,6 +1289,13 @@ Creates an **RdbPredicates** object to set the start position of the query resul
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Rose").limitAs(-1).offsetAs(3);
+```
+
 ## or
 
 ```TypeScript
@@ -1058,6 +1315,16 @@ Creates an **RdbPredicates** object to add the OR condition.
 | Type | Description |
 | --- | --- |
 | RdbPredicates | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+// Find all records in the NAME column where the value is Lisa or Rose.
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Lisa")
+  .or()
+  .equalTo("NAME", "Rose");
+```
 
 ## orderByAsc
 
@@ -1091,6 +1358,13 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.orderByAsc("NAME");
+```
+
 ## orderByDesc
 
 ```TypeScript
@@ -1122,4 +1396,11 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.orderByDesc("AGE");
+```
 

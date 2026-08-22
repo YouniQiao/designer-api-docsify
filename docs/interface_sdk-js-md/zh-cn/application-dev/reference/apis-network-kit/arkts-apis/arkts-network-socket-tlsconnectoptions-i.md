@@ -14,22 +14,6 @@ TLS连接的操作。
 import { socket } from '@kit.NetworkKit';
 ```
 
-## ALPNProtocols
-
-```TypeScript
-ALPNProtocols?: Array<string>
-```
-
-ALPN协议，支持["spdy/1", "http/1.1"]，默认为[]。
-
-**类型：** Array&lt;string&gt;
-
-**起始版本：** 9
-
-<!--Device-TLSConnectOptions-ALPNProtocols?: Array<string>--><!--Device-TLSConnectOptions-ALPNProtocols?: Array<string>-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
 ## address
 
 ```TypeScript
@@ -43,6 +27,22 @@ address: NetAddress
 **起始版本：** 9
 
 <!--Device-TLSConnectOptions-address: NetAddress--><!--Device-TLSConnectOptions-address: NetAddress-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+## ALPNProtocols
+
+```TypeScript
+ALPNProtocols?: Array<string>
+```
+
+ALPN协议，支持["spdy/1", "http/1.1"]，默认为[]。
+
+**类型：** Array&lt;string&gt;
+
+**起始版本：** 9
+
+<!--Device-TLSConnectOptions-ALPNProtocols?: Array<string>--><!--Device-TLSConnectOptions-ALPNProtocols?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 

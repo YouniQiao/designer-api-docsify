@@ -31,7 +31,7 @@ Aborts a key operation. This API uses an asynchronous callback to return the res
 | --- | --- | --- | --- |
 | handle | number | Yes | Handle of the **abort** operation, which is of the uint64 type. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Parameter set used for the **abort** operation. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -123,40 +123,6 @@ async function huksAbort() {
   });
 }
 ```
-
-
-## abort
-
-```TypeScript
-function abort(handle: number, options: HuksOptions): Promise<HuksResult>
-```
-
-Aborts a key operation. This API uses a promise to return the result.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [abortSession](arkts-universalkeystore-huks-abortsession-f.md)(handle: number, options: HuksOptions)
-
-<!--Device-huks-function abort(handle: number, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function abort(handle: number, options: HuksOptions): Promise<HuksResult>-End-->
-
-**System capability:** SystemCapability.Security.Huks.Extension
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| handle | number | Yes | Handle of the **abort** operation, which is of the uint64 type. |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Parameter set used for the **abort** operation. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Promise that returns **HuksResult**. |
-
-**Examples**
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
@@ -261,4 +227,40 @@ function huksAbort() {
   });
 }
 ```
+
+
+## abort
+
+```TypeScript
+function abort(handle: number, options: HuksOptions): Promise<HuksResult>
+```
+
+Aborts a key operation. This API uses a promise to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [abortSession](arkts-universalkeystore-huks-abortsession-f.md)(handle: number, options: HuksOptions)
+
+<!--Device-huks-function abort(handle: number, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function abort(handle: number, options: HuksOptions): Promise<HuksResult>-End-->
+
+**System capability:** SystemCapability.Security.Huks.Extension
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handle | number | Yes | Handle of the **abort** operation, which is of the uint64 type. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Parameter set used for the **abort** operation. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Promise that returns **HuksResult**. |
+
+**Examples**
+
+See [abort](#abort)
 

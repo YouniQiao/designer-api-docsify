@@ -11,20 +11,20 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [Filter](arkts-arkuiadvancedfilter-filter-s.md) | 多条件筛选，帮助用户在大量信息中找到所需内容，应结合具体场景选择合适筛选方式。多条件筛选控件由筛选器与悬浮条构成，悬浮条可下拉展示悬浮筛选器。筛选器样式可分为多行可折叠类型与多行列表类型，并可以在筛选器最后一行附加快捷筛选器。 |
+| [Filter](arkts-arkui-advanced-filter-filter-s.md) | 多条件筛选，帮助用户在大量信息中找到所需内容，应结合具体场景选择合适筛选方式。多条件筛选控件由筛选器与悬浮条构成，悬浮条可下拉展示悬浮筛选器。筛选器样式可分为多行可折叠类型与多行列表类型，并可以在筛选器最后一行附加快捷筛选器。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [FilterParams](arkts-arkuiadvancedfilter-filterparams-i.md) |  |
-| [FilterResult](arkts-arkuiadvancedfilter-filterresult-i.md) |  |
+| [FilterParams](arkts-arkui-advanced-filter-filterparams-i.md) |  |
+| [FilterResult](arkts-arkui-advanced-filter-filterresult-i.md) |  |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [FilterType](arkts-arkuiadvancedfilter-filtertype-e.md) |  |
+| [FilterType](arkts-arkui-advanced-filter-filtertype-e.md) |  |
 
 ### 类型
 

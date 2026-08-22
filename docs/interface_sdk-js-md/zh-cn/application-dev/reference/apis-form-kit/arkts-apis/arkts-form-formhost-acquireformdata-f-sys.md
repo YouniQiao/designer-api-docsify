@@ -45,6 +45,85 @@ function acquireFormData(formId: string, callback: AsyncCallback<Record<string, 
 | [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. invalid input parameter during form operation |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+
+let formId: string = '12400633174999288';
+try {
+  formHost.acquireFormData(formId, (error: BusinessError, data: Record<string, Object>) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      console.info('formHost acquireFormData success.');
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288';
+try {
+  formHost.acquireFormData(formId, (error, data) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      console.info(`formHost acquireFormData`);
+    }
+  });
+} catch(error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288';
+try {
+  formHost.acquireFormData(formId).then((data) => {
+    console.info('formHost acquireFormData success' + data);
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (e) {
+  console.error(`catch error, code: ${(e as BusinessError).code}, message: ${(e as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288';
+try {
+  formHost.acquireFormData(formId).then((data) => {
+    console.info('formHost acquireFormData success' + data);
+  }).catch((error) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
 
 ## acquireFormData
 
@@ -90,4 +169,8 @@ function acquireFormData(formId: string): Promise<Record<string, Object>>
 | [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. invalid input parameter during form operation |
+
+**示例**
+
+参见 [acquireFormData](#acquireformdata)
 

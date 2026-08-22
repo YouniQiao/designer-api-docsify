@@ -37,23 +37,23 @@ import { missionManager } from '@kit.AbilityKit';
 | [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md) | Obtains the snapshot of a given mission. This API uses a promise to return the result. |
 | [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md) | Locks a given mission. This API uses an asynchronous callback to return the result. |
 | [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md) | Locks a given mission. This API uses a promise to return the result. |
-| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md) | Switches a given mission to the foreground. This API uses an asynchronous callback to return the result. |
-| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md) | Switches a given mission to the foreground, with the startup parameters for the switching specified. This API uses an asynchronous callback to return the result. |
-| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md) | Switches a given mission to the foreground, with the startup parameters for the switching specified. This API uses a promise to return the result. |
 | [moveMissionsToBackground](arkts-ability-missionmanager-movemissionstobackground-f-sys.md) | Switches a batch of missions to the background. The mission IDs returned are sorted by mission level when the missions are switched. This API uses an asynchronous callback to return the result. |
 | [moveMissionsToBackground](arkts-ability-missionmanager-movemissionstobackground-f-sys.md) | Switches a batch of missions to the background. The mission IDs returned are sorted by mission level when the missions are switched. This API uses a promise to return the result. |
 | [moveMissionsToForeground](arkts-ability-missionmanager-movemissionstoforeground-f-sys.md) | Switches a batch of missions to the foreground. This API uses an asynchronous callback to return the result. |
 | [moveMissionsToForeground](arkts-ability-missionmanager-movemissionstoforeground-f-sys.md) | Switches a batch of missions to the foreground, and moves the mission with the specified ID to the top. This API uses an asynchronous callback to return the result. |
 | [moveMissionsToForeground](arkts-ability-missionmanager-movemissionstoforeground-f-sys.md) | Switches a batch of missions to the foreground, and moves the mission with the specified ID to the top. This API uses a promise to return the result. |
-| [offMission](arkts-ability-missionmanager-offmission-f-sys.md) | Unregister the missionListener to ams. |
-| [offMission](arkts-ability-missionmanager-offmission-f-sys.md) | Unregister the missionListener to ams. |
+| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md) | Switches a given mission to the foreground. This API uses an asynchronous callback to return the result. |
+| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md) | Switches a given mission to the foreground, with the startup parameters for the switching specified. This API uses an asynchronous callback to return the result. |
+| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md) | Switches a given mission to the foreground, with the startup parameters for the switching specified. This API uses a promise to return the result. |
 | [off_mission](arkts-ability-missionmanager-offmission-f-sys.md) | Deregisters a mission status listener. This API uses an asynchronous callback to return the result. |
 | [off_mission](arkts-ability-missionmanager-offmission-f-sys.md) | Unregisters a mission status listener. This API uses a promise to return the result. |
 | [off_missionEvent](arkts-ability-missionmanager-offmissionevent-f-sys.md#offmissionevent) | Deregisters a mission status listener. This API uses an asynchronous callback to return the result. |
 | [off_missionEvent](arkts-ability-missionmanager-offmissionevent-f-sys.md#offmissionevent) | Unregisters a mission status listener. This API uses a promise to return the result. |
-| [onMission](arkts-ability-missionmanager-onmission-f-sys.md) | Register the missionListener to ams. |
+| [offMission](arkts-ability-missionmanager-offmission-f-sys.md) | Unregister the missionListener to ams. |
+| [offMission](arkts-ability-missionmanager-offmission-f-sys.md) | Unregister the missionListener to ams. |
 | [on_mission](arkts-ability-missionmanager-onmission-f-sys.md) | Registers a listener to observe the mission status. |
 | [on_missionEvent](arkts-ability-missionmanager-onmissionevent-f-sys.md#onmissionevent) | Registers a listener to observe the mission status. |
+| [onMission](arkts-ability-missionmanager-onmission-f-sys.md) | Register the missionListener to ams. |
 | [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md) | Unlocks a given mission. This API uses an asynchronous callback to return the result. |
 | [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md) | Unlocks a given mission. This API uses a promise to return the result. |
 <!--DelEnd-->

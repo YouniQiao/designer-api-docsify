@@ -37,3 +37,17 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } fro
 | --- | --- | --- | --- |
 | err | T | 是 | 接口调用失败的公共错误信息，类型默认为[BusinessError](arkts-basicservices-base-businesserror-i.md)，包含错误码（code）和可选附加数据（data）。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+interface ErrorDataType {
+    url: string;
+}
+
+const businessError = new BusinessError<ErrorDataType>(201, 'no permission', {
+    url: 'http://'
+});
+```
+

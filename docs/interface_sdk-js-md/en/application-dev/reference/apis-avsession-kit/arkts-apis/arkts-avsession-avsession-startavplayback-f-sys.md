@@ -59,6 +59,17 @@ avSession.startAVPlayback("com.example.myapplication", "121278").then(() => {
 });
 ```
 
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avSession.startAVPlayback("com.example.myapplication", "121278", "entry").then(() => {
+  console.info('startAVPlayback : SUCCESS');
+}).catch((err: BusinessError) => {
+  console.error(`startAVPlayback BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## startAVPlayback
 
@@ -102,14 +113,5 @@ Start an application for media playback with command info.
 
 **Examples**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avSession.startAVPlayback("com.example.myapplication", "121278", "entry").then(() => {
-  console.info('startAVPlayback : SUCCESS');
-}).catch((err: BusinessError) => {
-  console.error(`startAVPlayback BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
+See [startAVPlayback](#startavplayback)
 

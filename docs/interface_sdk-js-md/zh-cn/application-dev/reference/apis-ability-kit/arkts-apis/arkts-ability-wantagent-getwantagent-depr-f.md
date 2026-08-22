@@ -75,6 +75,39 @@ wantAgent.getWantAgent({
 }, getWantAgentCallback);
 ```
 
+```TypeScript
+import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';
+
+wantAgent.getWantAgent({
+    wants: [
+        {
+            deviceId: 'deviceId',
+            bundleName: 'com.neu.setResultOnAbilityResultTest1',
+            abilityName: 'com.example.test.EntryAbility',
+            action: 'action1',
+            entities: ['entity1'],
+            type: 'MIMETYPE',
+            uri: 'key={true,true,false}',
+            parameters:
+            {
+                mykey0: 2222,
+                mykey1: [1, 2, 3],
+                mykey2: '[1, 2, 3]',
+                mykey3: 'ssssssssssssssssssssssssss',
+                mykey4: [false, true, false],
+                mykey5: ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
+                mykey6: true,
+            }
+        }
+    ],
+    operationType: wantAgent.OperationType.START_ABILITY,
+    requestCode: 0,
+    wantAgentFlags:[wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
+}).then((data: _WantAgent) => {
+    console.info('==========================>getWantAgentCallback=======================>');
+});
+```
+
 
 ## getWantAgent
 
@@ -110,36 +143,5 @@ function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 
 **示例**
 
-```TypeScript
-import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';
-
-wantAgent.getWantAgent({
-    wants: [
-        {
-            deviceId: 'deviceId',
-            bundleName: 'com.neu.setResultOnAbilityResultTest1',
-            abilityName: 'com.example.test.EntryAbility',
-            action: 'action1',
-            entities: ['entity1'],
-            type: 'MIMETYPE',
-            uri: 'key={true,true,false}',
-            parameters:
-            {
-                mykey0: 2222,
-                mykey1: [1, 2, 3],
-                mykey2: '[1, 2, 3]',
-                mykey3: 'ssssssssssssssssssssssssss',
-                mykey4: [false, true, false],
-                mykey5: ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
-                mykey6: true,
-            }
-        }
-    ],
-    operationType: wantAgent.OperationType.START_ABILITY,
-    requestCode: 0,
-    wantAgentFlags:[wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
-}).then((data: _WantAgent) => {
-    console.info('==========================>getWantAgentCallback=======================>');
-});
-```
+参见 [getWantAgent](#getwantagent)
 

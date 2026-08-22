@@ -26,7 +26,7 @@ Checks whether to allow the application to change the wallpaper for the current 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | the callback of isChangePermitted. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of isChangePermitted. |
 
 **Examples**
 
@@ -39,6 +39,16 @@ wallpaper.isChangePermitted((error: BusinessError, data: Boolean) => {
         return;
     }
     console.info(`success to isChangePermitted: ${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+wallpaper.isChangePermitted().then((data: Boolean) => {
+    console.info(`success to isChangePermitted: ${JSON.stringify(data)}`);
+}).catch((error: BusinessError) => {
+    console.error(`failed to isChangePermitted because: ${JSON.stringify(error)}`);
 });
 ```
 
@@ -67,13 +77,5 @@ Checks whether to allow the application to change the wallpaper for the current 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-wallpaper.isChangePermitted().then((data: Boolean) => {
-    console.info(`success to isChangePermitted: ${JSON.stringify(data)}`);
-}).catch((error: BusinessError) => {
-    console.error(`failed to isChangePermitted because: ${JSON.stringify(error)}`);
-});
-```
+See [isChangePermitted](#ischangepermitted)
 

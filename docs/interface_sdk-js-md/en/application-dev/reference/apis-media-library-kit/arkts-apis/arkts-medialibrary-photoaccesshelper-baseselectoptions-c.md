@@ -14,24 +14,6 @@ Defines the basic options for selecting media files from Gallery.
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-## MIMEType
-
-```TypeScript
-MIMEType?: PhotoViewMIMETypes
-```
-
-Available media file types. **IMAGE_VIDEO_TYPE** is used by default.
-
-**Type:** PhotoViewMIMETypes
-
-**Since:** 26.0.0
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-BaseSelectOptions-MIMEType?: PhotoViewMIMETypes--><!--Device-BaseSelectOptions-MIMEType?: PhotoViewMIMETypes-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 ## assetCompatibleCapability
 
 ```TypeScript
@@ -277,6 +259,24 @@ Maximum number of media files that can be selected. The maximum value is **500**
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-BaseSelectOptions-maxSelectNumber?: int--><!--Device-BaseSelectOptions-maxSelectNumber?: int-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## MIMEType
+
+```TypeScript
+MIMEType?: PhotoViewMIMETypes
+```
+
+Available media file types. **IMAGE_VIDEO_TYPE** is used by default.
+
+**Type:** PhotoViewMIMETypes
+
+**Since:** 26.0.0
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-BaseSelectOptions-MIMEType?: PhotoViewMIMETypes--><!--Device-BaseSelectOptions-MIMEType?: PhotoViewMIMETypes-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

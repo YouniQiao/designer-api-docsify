@@ -29,7 +29,7 @@ Converts a rotation vector into a rotation matrix. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | rotationVector | Array&lt;number&gt; | Yes | Rotation vector to convert. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the rotation matrix. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the rotation matrix. |
 
 **Examples**
 
@@ -46,6 +46,47 @@ sensor.createRotationMatrix([0.20046076, 0.21907, 0.73978853, 0.60376877],
   for (let i = 0; i < data.length; i++) {
     console.info("Succeeded in getting data[" + i + "]: " + data[i]);
   }
+})
+```
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const promise = sensor.createRotationMatrix([0.20046076, 0.21907, 0.73978853, 0.60376877]);
+promise.then((data: Array<number>) => {
+  console.info('Succeeded in getting createRotationMatrix_promise');
+  for (let i = 0; i < data.length; i++) {
+    console.info("data[" + i + "]: " + data[i]);
+  }
+}).catch((reason: BusinessError) => {
+  console.info("Succeeded in getting promise::catch", reason);
+})
+```
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sensor.createRotationMatrix([-0.27775216, 0.5351276, 9.788099], [210.87253, -78.6096, -111.44444], 
+                            (err: BusinessError, data: sensor.RotationMatrixResponse) => {
+  if (err) {
+    console.error(`Failed to get create rotationMatrix. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(JSON.stringify(data));
+})
+```
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const promise = sensor.createRotationMatrix([-0.27775216, 0.5351276, 9.788099], [210.87253, -78.6096, -111.44444]);
+promise.then((data: sensor.RotationMatrixResponse) => {
+  console.info(JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get promise.`);
 })
 ```
 
@@ -82,20 +123,7 @@ Converts a rotation vector into a rotation matrix. This API uses a promise to re
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const promise = sensor.createRotationMatrix([0.20046076, 0.21907, 0.73978853, 0.60376877]);
-promise.then((data: Array<number>) => {
-  console.info('Succeeded in getting createRotationMatrix_promise');
-  for (let i = 0; i < data.length; i++) {
-    console.info("data[" + i + "]: " + data[i]);
-  }
-}).catch((reason: BusinessError) => {
-  console.info("Succeeded in getting promise::catch", reason);
-})
-```
+See [createRotationMatrix](#createrotationmatrix)
 
 
 ## createRotationMatrix
@@ -122,23 +150,11 @@ Obtains the rotation matrix based on a gravity vector and geomagnetic vector. Th
 | --- | --- | --- | --- |
 | gravity | Array&lt;number&gt; | Yes | Gravity vector. |
 | geomagnetic | Array&lt;number&gt; | Yes | Geomagnetic vector. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md)&gt; | Yes | Callback used to return the rotation matrix. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md)&gt; | Yes | Callback used to return the rotation matrix. |
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sensor.createRotationMatrix([-0.27775216, 0.5351276, 9.788099], [210.87253, -78.6096, -111.44444], 
-                            (err: BusinessError, data: sensor.RotationMatrixResponse) => {
-  if (err) {
-    console.error(`Failed to get create rotationMatrix. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(JSON.stringify(data));
-})
-```
+See [createRotationMatrix](#createrotationmatrix)
 
 
 ## createRotationMatrix
@@ -171,4 +187,8 @@ Obtains the rotation matrix based on a gravity vector and geomagnetic vector. Th
 | Type | Description |
 | --- | --- |
 | Promise&lt;[RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md)&gt; | Promise used to return the rotation matrix. |
+
+**Examples**
+
+See [createRotationMatrix](#createrotationmatrix)
 

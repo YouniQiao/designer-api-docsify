@@ -36,8 +36,8 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 | 名称 | 说明 |
 | --- | --- |
 | [AuthorizeRequest](arkts-devicecertificate-certificatemanagerdialog-authorizerequest-i.md) | 证书凭据授权请求信息。 |
-| [CertReference](arkts-devicecertificate-certificatemanagerdialog-certreference-i.md) | 表示证书凭据的引用信息。 |
 | [CertificateDialogProperty](arkts-devicecertificate-certificatemanagerdialog-certificatedialogproperty-i.md) | 表示证书管理对话框的属性。 |
+| [CertReference](arkts-devicecertificate-certificatemanagerdialog-certreference-i.md) | 表示证书凭据的引用信息。 |
 | [UkeyAuthRequest](arkts-devicecertificate-certificatemanagerdialog-ukeyauthrequest-i.md) | USB Key PIN码认证请求。 |
 
 ### 枚举

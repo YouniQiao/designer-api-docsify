@@ -38,6 +38,10 @@ Obtains the brand name.
 | --- | --- |
 | string | Brand name string. |
 
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+
 ## getFullVersion
 
 ```TypeScript
@@ -59,6 +63,12 @@ Obtains the full version number.
 | Type | Description |
 | --- | --- |
 | string | Full version number string. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## getMajorVersion
 
@@ -82,6 +92,10 @@ Obtains the major version number.
 | --- | --- |
 | string | Major version number string. |
 
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+
 ## setBrand
 
 ```TypeScript
@@ -103,6 +117,10 @@ Sets the brand name.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | brand | string | Yes | Brand name, which cannot be an empty string. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 
 ## setFullVersion
 
@@ -126,6 +144,12 @@ Sets the full version number.
 | --- | --- | --- | --- |
 | fullVersion | string | Yes | Full version number, which cannot be an empty string. |
 
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
+
 ## setMajorVersion
 
 ```TypeScript
@@ -147,4 +171,8 @@ Sets the major version number.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | majorVersion | string | Yes | Major version number, which cannot be an empty string. |
+
+**Examples**
+
+For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
 

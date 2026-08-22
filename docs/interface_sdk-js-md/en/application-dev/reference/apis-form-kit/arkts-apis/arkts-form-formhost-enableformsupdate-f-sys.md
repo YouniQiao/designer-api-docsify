@@ -29,7 +29,7 @@ Instructs the widget framework to make a widget updatable. After this API is cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | Yes | List of widget IDs. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If a notification is sent to the widget framework to make the widget updatable, **error** is undefined; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If a notification is sent to the widget framework to make the widget updatable, **error** is undefined; otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -42,6 +42,40 @@ Instructs the widget framework to make a widget updatable. After this API is cal
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
+
+**Examples**
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let formId: string[] = ['12400633174999288'];
+  formHost.enableFormsUpdate(formId, (error: BusinessError) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let formId: string[] = ['12400633174999288'];
+  formHost.enableFormsUpdate(formId).then(() => {
+    console.info('formHost enableFormsUpdate success');
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
 
 
 ## enableFormsUpdate
@@ -85,4 +119,8 @@ Instructs the widget framework to make a widget updatable. After this API is cal
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
+
+**Examples**
+
+See [enableFormsUpdate](#enableformsupdate)
 

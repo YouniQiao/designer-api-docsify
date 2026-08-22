@@ -65,6 +65,20 @@ try {
 }
 ```
 
+```TypeScript
+import { launcherBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data = launcherBundleManager.getShortcutInfoSync("com.example.demo", 100);
+  console.info('data is ' + JSON.stringify(data));
+} catch (errData) {
+  let code = (errData as BusinessError).code;
+  let message = (errData as BusinessError).message;
+  console.error(`errData is errCode:${code}  message:${message}`);
+}
+```
+
 
 ## getShortcutInfoSync
 
@@ -113,17 +127,5 @@ function getShortcutInfoSync(bundleName: string, userId: int): Array<ShortcutInf
 
 **示例**
 
-```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = launcherBundleManager.getShortcutInfoSync("com.example.demo", 100);
-  console.info('data is ' + JSON.stringify(data));
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`errData is errCode:${code}  message:${message}`);
-}
-```
+参见 [getShortcutInfoSync](#getshortcutinfosync)
 

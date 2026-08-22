@@ -20,5 +20,5 @@ The type of Deque forEach callback function.
 | --- | --- | --- | --- |
 | value | T | Yes | The current element being processed |
 | index | int | Yes | The index of the current element |
-| deque | [Deque](arkts-arkts-utildeque-deque-c.md)&lt;T&gt; | Yes | The Deque instance being traversed |
+| deque | [Deque](arkts-arkts-util-deque-deque-c.md)&lt;T&gt; | Yes | The Deque instance being traversed |
 

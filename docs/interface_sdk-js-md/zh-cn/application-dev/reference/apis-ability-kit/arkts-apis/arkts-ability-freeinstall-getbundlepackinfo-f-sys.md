@@ -63,6 +63,46 @@ try {
 }
 ```
 
+ArkTS-Dyn示例:
+
+```TypeScript
+import { freeInstall } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'com.example.myapplication';
+let bundlePackFlag = freeInstall.BundlePackFlag.GET_PACK_INFO_ALL;
+try {
+  freeInstall.getBundlePackInfo(bundleName, bundlePackFlag).then(data => {
+    console.info('Operation succeed:' + JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    console.error('Operation failed:' + JSON.stringify(err));
+  });
+} catch (err) {
+  console.error('Operation failed:' + JSON.stringify(err));
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { freeInstall } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+// 开发者需根据实际工程更新bundleName。
+let bundleName = 'com.example.myapplication';
+let bundlePackFlag = freeInstall.BundlePackFlag.GET_PACK_INFO_ALL;
+try {
+  freeInstall.getBundlePackInfo(bundleName, bundlePackFlag).then((data: freeInstall.BundlePackInfo) => {
+    console.info('Operation succeed:' + JSON.stringify(data));
+  }).catch((err: Error) => {
+    console.error('Operation failed:' + JSON.stringify(err as BusinessError));
+  });
+} catch (err) {
+  console.error('Operation failed:' + JSON.stringify(err));
+}
+```
+
 
 ## getBundlePackInfo
 
@@ -107,43 +147,5 @@ function getBundlePackInfo(bundleName: string, bundlePackFlag : BundlePackFlag):
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.example.myapplication';
-let bundlePackFlag = freeInstall.BundlePackFlag.GET_PACK_INFO_ALL;
-try {
-  freeInstall.getBundlePackInfo(bundleName, bundlePackFlag).then(data => {
-    console.info('Operation succeed:' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error('Operation failed:' + JSON.stringify(err));
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { freeInstall } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新bundleName。
-let bundleName = 'com.example.myapplication';
-let bundlePackFlag = freeInstall.BundlePackFlag.GET_PACK_INFO_ALL;
-try {
-  freeInstall.getBundlePackInfo(bundleName, bundlePackFlag).then((data: freeInstall.BundlePackInfo) => {
-    console.info('Operation succeed:' + JSON.stringify(data));
-  }).catch((err: Error) => {
-    console.error('Operation failed:' + JSON.stringify(err as BusinessError));
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```
+参见 [getBundlePackInfo](#getbundlepackinfo)
 

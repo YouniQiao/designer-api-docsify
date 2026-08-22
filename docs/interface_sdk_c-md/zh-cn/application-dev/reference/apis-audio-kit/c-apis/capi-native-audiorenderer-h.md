@@ -678,7 +678,7 @@ OH_AudioStream_Result OH_AudioRenderer_GetChannelLayout(OH_AudioRenderer* render
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AudioRenderer](capi-ohaudio-oh-audiorendererstruct.md)* renderer | 指向{@link OH_AudioStreamBuilder_GenerateRenderer}创建的音频流实例。 |
-| [OH_AudioChannelLayout](../AVCodecKit/capi-native-audio-channel-layout-h.md#oh_audiochannellayout)* channelLayout | 指向一个用来接收音频流声道布局的变量的指针。 |
+| OH_AudioChannelLayout* channelLayout | 指向一个用来接收音频流声道布局的变量的指针。 |
 
 **返回：**
 
@@ -828,7 +828,7 @@ OH_AudioStream_Result OH_AudioRenderer_SetDefaultOutputDevice(OH_AudioRenderer* 
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AudioRenderer](capi-ohaudio-oh-audiorendererstruct.md)* renderer | 指向{@link OH_AudioStreamBuilder_GenerateRenderer}创建的音频流实例。 |
-| OH_AudioDevice_Type deviceType | 指向[OH_AudioDevice_Type](capi-native-audio-device-base-h.md#oh_audiodevice_type)用于设置发声设备类型。可设置的设备类型包括:<br>AUDIO_DEVICE_TYPE_EARPIECE：听筒<br>AUDIO_DEVICE_TYPE_SPEAKER：扬声器<br>AUDIO_DEVICE_TYPE_DEFAULT：系统默认设备 |
+| [OH_AudioDevice_Type](capi-native-audio-device-base-h.md#oh_audiodevice_type) deviceType | 指向[OH_AudioDevice_Type](capi-native-audio-device-base-h.md#oh_audiodevice_type)用于设置发声设备类型。可设置的设备类型包括:<br>AUDIO_DEVICE_TYPE_EARPIECE：听筒<br>AUDIO_DEVICE_TYPE_SPEAKER：扬声器<br>AUDIO_DEVICE_TYPE_DEFAULT：系统默认设备 |
 
 **返回：**
 
@@ -1083,7 +1083,7 @@ OH_AudioStream_Result OH_AudioRenderer_SetIndependentAudioSessionStrategy(OH_Aud
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AudioRenderer](capi-ohaudio-oh-audiorendererstruct.md)* renderer | 指向{@link OH_AudioStreamBuilder_GenerateRenderer}创建的音频流实例。 |
-| [const OH_AudioSession_Strategy](capi-ohaudio-oh-audiosession-strategy.md) *strategy | 用于设置独立的音频会话策略。 |
+| const OH_AudioSession_Strategy *strategy | 用于设置独立的音频会话策略。 |
 | uint32_t behavior | 音频会话行为标志，可以是单个标志，也可以是多个标志的按位OR组合。当前支持的音频会话行为详见[OH_AudioSession_BehaviorFlags](capi-native-audio-session-base-h.md#oh_audiosession_behaviorflags)。 |
 
 **返回：**

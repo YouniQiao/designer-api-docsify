@@ -29,7 +29,7 @@ Subscribe Wi-Fi device config change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | the callback of on, 0: config is added, 1: config is changed, 2: config is removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | the callback of on, 0: config is added, 1: config is changed, 2: config is removed. |
 
 **Error codes:**
 

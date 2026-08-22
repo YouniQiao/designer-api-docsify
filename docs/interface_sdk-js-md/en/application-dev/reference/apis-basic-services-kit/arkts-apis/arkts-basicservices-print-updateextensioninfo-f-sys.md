@@ -29,7 +29,7 @@ Updates the printer extension information. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | string | Yes | New printer extension information. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -52,6 +52,18 @@ print.updateExtensionInfo(info, (err: BusinessError) => {
     } else {
         console.info('updateExtensionInfo success');
     }
+})
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let info : string = 'WIFI_INACTIVE';
+print.updateExtensionInfo(info).then(() => {
+    console.info('update print job state success');
+}).catch((error: BusinessError) => {
+    console.error('update print job state error : ' + JSON.stringify(error));
 })
 ```
 
@@ -96,15 +108,5 @@ Updates the printer extension information. This API uses a promise to return the
 
 **Examples**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let info : string = 'WIFI_INACTIVE';
-print.updateExtensionInfo(info).then(() => {
-    console.info('update print job state success');
-}).catch((error: BusinessError) => {
-    console.error('update print job state error : ' + JSON.stringify(error));
-})
-```
+See [updateExtensionInfo](#updateextensioninfo)
 

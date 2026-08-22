@@ -46,6 +46,33 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let isLocked: boolean = false;
 // 设置自动转屏开关为未锁定
+screen.setScreenRotationLocked(isLocked).then(() => {
+  console.info('Succeeded in unlocking auto rotate');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to unlock auto rotate. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isLocked: boolean = false;
+screen.setScreenRotationLocked(isLocked).then(() => {
+  console.info('Succeeded in unlocking auto rotate');
+}).catch((err: Error) => {
+  console.error(`Failed to unlock auto rotate. Code: ${err?.code}, message: ${err?.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isLocked: boolean = false;
+// 设置自动转屏开关为未锁定
 screen.setScreenRotationLocked(isLocked, (err: BusinessError) => {
   const errCode: number = err.code;
   if (errCode) {
@@ -110,30 +137,5 @@ function setScreenRotationLocked(isLocked:boolean): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isLocked: boolean = false;
-// 设置自动转屏开关为未锁定
-screen.setScreenRotationLocked(isLocked).then(() => {
-  console.info('Succeeded in unlocking auto rotate');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to unlock auto rotate. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isLocked: boolean = false;
-screen.setScreenRotationLocked(isLocked).then(() => {
-  console.info('Succeeded in unlocking auto rotate');
-}).catch((err: Error) => {
-  console.error(`Failed to unlock auto rotate. Code: ${err?.code}, message: ${err?.message}`);
-});
-```
+参见 [setScreenRotationLocked](#setscreenrotationlocked)
 

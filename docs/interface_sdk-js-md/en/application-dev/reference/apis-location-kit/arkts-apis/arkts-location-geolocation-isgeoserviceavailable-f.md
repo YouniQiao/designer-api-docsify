@@ -30,7 +30,7 @@ Obtain geocode service status
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the geocode service status. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the geocode service status. |
 
 **Examples**
 
@@ -43,6 +43,13 @@ geolocation.isGeoServiceAvailable((err, data) => {
     if (data) {
         console.info('isGeoServiceAvailable: data=' + JSON.stringify(data));
     }
+});
+```
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.isGeoServiceAvailable().then((result) => {
+    console.info('promise, isGeoServiceAvailable: ' + JSON.stringify(result));
 });
 ```
 
@@ -75,10 +82,5 @@ Obtain geocode service status
 
 **Examples**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.isGeoServiceAvailable().then((result) => {
-    console.info('promise, isGeoServiceAvailable: ' + JSON.stringify(result));
-});
-```
+See [isGeoServiceAvailable](#isgeoserviceavailable)
 

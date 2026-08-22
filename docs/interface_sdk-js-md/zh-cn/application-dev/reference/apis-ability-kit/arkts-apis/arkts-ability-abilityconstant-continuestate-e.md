@@ -44,3 +44,18 @@ INACTIVE = 1
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+**示例**
+
+```TypeScript
+import { UIAbility, Want, AbilityConstant } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class MyAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    this.context.setMissionContinueState(AbilityConstant.ContinueState.INACTIVE, (result: BusinessError) => {
+      console.info(`setMissionContinueState: ${JSON.stringify(result)}`);
+    });
+  }
+}
+```
+

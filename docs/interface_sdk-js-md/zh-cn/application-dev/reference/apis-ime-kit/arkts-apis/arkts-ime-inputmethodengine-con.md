@@ -294,20 +294,6 @@ const OPTION_MULTI_LINE: int
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
-## OPTION_NONE
-
-```TypeScript
-const OPTION_NONE: int
-```
-
-@brief 不指定编辑框输入属性。
-
-**起始版本：** 23
-
-<!--Device-inputMethodEngine-const OPTION_NONE: int--><!--Device-inputMethodEngine-const OPTION_NONE: int-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
 ## OPTION_NO_FULLSCREEN
 
 ```TypeScript
@@ -319,6 +305,20 @@ const OPTION_NO_FULLSCREEN: int
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-const OPTION_NO_FULLSCREEN: int--><!--Device-inputMethodEngine-const OPTION_NO_FULLSCREEN: int-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+## OPTION_NONE
+
+```TypeScript
+const OPTION_NONE: int
+```
+
+@brief 不指定编辑框输入属性。
+
+**起始版本：** 23
+
+<!--Device-inputMethodEngine-const OPTION_NONE: int--><!--Device-inputMethodEngine-const OPTION_NONE: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

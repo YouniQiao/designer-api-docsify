@@ -99,42 +99,6 @@ struct Index {
 }
 ```
 
-
-## setPointerVisible
-
-```TypeScript
-function setPointerVisible(visible: boolean): Promise<void>
-```
-
-设置当前窗口的鼠标光标是否显示，使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-pointer-function setPointerVisible(visible: boolean): Promise<void>--><!--Device-pointer-function setPointerVisible(visible: boolean): Promise<void>-End-->
-
-**系统能力：** SystemCapability.MultimodalInput.Input.Pointer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| visible | boolean | 是 | 当前窗口鼠标光标是否显示。true表示显示，false表示不显示。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported;<br>**适用版本：** 18+ |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -193,4 +157,42 @@ struct Index {
   }
 }
 ```
+
+
+## setPointerVisible
+
+```TypeScript
+function setPointerVisible(visible: boolean): Promise<void>
+```
+
+设置当前窗口的鼠标光标是否显示，使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-pointer-function setPointerVisible(visible: boolean): Promise<void>--><!--Device-pointer-function setPointerVisible(visible: boolean): Promise<void>-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Pointer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| visible | boolean | 是 | 当前窗口鼠标光标是否显示。true表示显示，false表示不显示。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported;<br>**适用版本：** 18+ |
+
+**示例**
+
+参见 [setPointerVisible](#setpointervisible)
 

@@ -31,9 +31,26 @@ Queries a contact based on the specified phone number. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Phone number of a contact. Only full match is supported, and wildcards are not supported. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
 
 **Examples**
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context within the component.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -44,6 +61,156 @@ contact.queryContactsByPhoneNumber('138xxxxxxxx', (err: BusinessError, data) => 
     return;
   }
   console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context within the component.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
+  holderId: 1,
+  bundleName: "",
+  displayName: ""
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+contact.queryContactsByPhoneNumber('138xxxxxxxx', {
+  holderId: 1,
+  bundleName: "",
+  displayName: ""
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context within the component.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+contact.queryContactsByPhoneNumber('138xxxxxxxx', {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context within the component.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
+  holderId: 1,
+  bundleName: "",
+  displayName: ""
+}, {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+contact.queryContactsByPhoneNumber('138xxxxxxxx', {
+  holderId: 1,
+  bundleName: "",
+  displayName: ""
+}, {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context within the component.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let promise = contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
+  holderId: 1,
+  bundleName: "",
+  displayName: ""
+}, {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+});
+promise.then((data) => {
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = contact.queryContactsByPhoneNumber('138xxxxxxxx', {
+  holderId: 1,
+  bundleName: "",
+  displayName: ""
+}, {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+});
+promise.then((data) => {
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -70,7 +237,7 @@ Queries a contact based on the specified phone number. This API uses an asynchro
 | --- | --- | --- | --- |
 | context | Context | Yes | Indicates the context of application or capability. |
 | phoneNumber | string | Yes | Phone number of a contact. Only full match is supported, and wildcards are not supported. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
 
 **Error codes:**
 
@@ -81,22 +248,7 @@ Queries a contact based on the specified phone number. This API uses an asynchro
 
 **Examples**
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context within the component.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
-});
-```
+See [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
 
 
 ## queryContactsByPhoneNumber
@@ -125,25 +277,11 @@ Queries a contact based on the specified phone number and holder. This API uses 
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Phone number of a contact. Only full match is supported, and wildcards are not supported. |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-contact.queryContactsByPhoneNumber('138xxxxxxxx', {
-  holderId: 1,
-  bundleName: "",
-  displayName: ""
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
-});
-```
+See [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
 
 
 ## queryContactsByPhoneNumber
@@ -169,7 +307,7 @@ Queries a contact based on the specified phone number and holder. This API uses 
 | context | Context | Yes | Indicates the context of application or capability. |
 | phoneNumber | string | Yes | Phone number of a contact. Only full match is supported, and wildcards are not supported. |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
 
 **Error codes:**
 
@@ -180,26 +318,7 @@ Queries a contact based on the specified phone number and holder. This API uses 
 
 **Examples**
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context within the component.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
-  holderId: 1,
-  bundleName: "",
-  displayName: ""
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
-});
-```
+See [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
 
 
 ## queryContactsByPhoneNumber
@@ -228,23 +347,11 @@ Queries a contact based on the specified phone number and attributes. This API u
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Phone number of a contact. Only full match is supported, and wildcards are not supported. |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes | Contact attribute list. If this parameter is left empty, the id, key, and phoneNumbers attributes of the contact are queried. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-contact.queryContactsByPhoneNumber('138xxxxxxxx', {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
-});
-```
+See [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
 
 
 ## queryContactsByPhoneNumber
@@ -270,7 +377,7 @@ Queries a contact based on the specified phone number and attributes. This API u
 | context | Context | Yes | Indicates the context of application or capability. |
 | phoneNumber | string | Yes | Phone number of a contact. Only full match is supported, and wildcards are not supported. |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes | Contact attribute list. If this parameter is left empty, the id, key, and phoneNumbers attributes of the contact are queried. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
 
 **Error codes:**
 
@@ -281,24 +388,7 @@ Queries a contact based on the specified phone number and attributes. This API u
 
 **Examples**
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context within the component.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
-});
-```
+See [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
 
 
 ## queryContactsByPhoneNumber
@@ -328,27 +418,11 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 | phoneNumber | string | Yes | Phone number of a contact. Only full match is supported, and wildcards are not supported. |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes | Contact attribute list. If this parameter is left empty, the id, key, and phoneNumbers attributes of the contact are queried. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-contact.queryContactsByPhoneNumber('138xxxxxxxx', {
-  holderId: 1,
-  bundleName: "",
-  displayName: ""
-}, {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
-});
-```
+See [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
 
 
 ## queryContactsByPhoneNumber
@@ -376,7 +450,7 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 | phoneNumber | string | Yes | Phone number of a contact. Only full match is supported, and wildcards are not supported. |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes | Contact attribute list. If this parameter is left empty, the id, key, and phoneNumbers attributes of the contact are queried. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. Returns the contact list which user select; returns empty contact list if user not select. |
 
 **Error codes:**
 
@@ -387,28 +461,7 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 
 **Examples**
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context within the component.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
-  holderId: 1,
-  bundleName: "",
-  displayName: ""
-}, {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
-});
-```
+See [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
 
 
 ## queryContactsByPhoneNumber
@@ -447,22 +500,7 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = contact.queryContactsByPhoneNumber('138xxxxxxxx', {
-  holderId: 1,
-  bundleName: "",
-  displayName: ""
-}, {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-});
-promise.then((data) => {
-  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
 
 
 ## queryContactsByPhoneNumber
@@ -505,25 +543,5 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 
 **Examples**
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context within the component.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let promise = contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
-  holderId: 1,
-  bundleName: "",
-  displayName: ""
-}, {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-});
-promise.then((data) => {
-  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
 

@@ -27,7 +27,7 @@ Transforms a rotation vector based on the coordinate system. This API uses an as
 | --- | --- | --- | --- |
 | inRotationVector | Array&lt;double&gt; | Yes | Rotation vector. |
 | coordinates | [CoordinatesOptions](arkts-sensorservice-sensor-coordinatesoptions-i.md) | Yes | Rotation vector to transform. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback used to return the rotation vector after being transformed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback used to return the rotation vector after being transformed. |
 
 **Error codes:**
 
@@ -58,6 +58,31 @@ try {
       console.info('Succeeded in getting data[' + i + '] = ' + data[i]);
     }
   })
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to transform rotationMatrix. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  let rotationMatrix = [
+    1, 0, 0,
+    0, 0.87, -0.50,
+    0, 0.50, 0.87
+  ];
+  const promise = sensor.transformRotationMatrix(rotationMatrix, { x: 1, y: 3 });
+  promise.then((data: Array<number>) => {
+    for (let i = 0; i < data.length; i++) {
+      console.info('Succeeded in getting data[' + i + ']: ' + data[i]);
+    }
+  }, (err: BusinessError) => {
+    console.error(`Failed to transform rotationMatrix. Code: ${err.code}, message: ${err.message}`);
+  });
 } catch (error) {
   let e: BusinessError = error as BusinessError;
   console.error(`Failed to transform rotationMatrix. Code: ${e.code}, message: ${e.message}`);
@@ -101,28 +126,5 @@ Transforms a rotation vector based on the coordinate system. This API uses a pro
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  let rotationMatrix = [
-    1, 0, 0,
-    0, 0.87, -0.50,
-    0, 0.50, 0.87
-  ];
-  const promise = sensor.transformRotationMatrix(rotationMatrix, { x: 1, y: 3 });
-  promise.then((data: Array<number>) => {
-    for (let i = 0; i < data.length; i++) {
-      console.info('Succeeded in getting data[' + i + ']: ' + data[i]);
-    }
-  }, (err: BusinessError) => {
-    console.error(`Failed to transform rotationMatrix. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to transform rotationMatrix. Code: ${e.code}, message: ${e.message}`);
-}
-```
+See [transformRotationMatrix](#transformrotationmatrix)
 

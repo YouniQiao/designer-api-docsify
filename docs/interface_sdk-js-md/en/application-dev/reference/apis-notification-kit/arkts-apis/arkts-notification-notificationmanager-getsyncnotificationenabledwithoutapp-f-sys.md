@@ -31,7 +31,7 @@ Obtains whether the notification sync feature is enabled for devices where the a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | int | Yes | User ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the notification sync feature is enabled, and **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the notification sync feature is enabled, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -61,6 +61,18 @@ let getSyncNotificationEnabledWithoutAppCallback = (err: BusinessError, data: bo
     }
 }
 notificationManager.getSyncNotificationEnabledWithoutApp(userId, getSyncNotificationEnabledWithoutAppCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use the actual user ID when calling the API.
+let userId: number = 100;
+notificationManager.getSyncNotificationEnabledWithoutApp(userId).then((data: boolean) => {
+  console.info(`getSyncNotificationEnabledWithoutApp, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSyncNotificationEnabledWithoutApp failed, code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -111,15 +123,5 @@ Obtains whether the notification sync feature is enabled for devices where the a
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use the actual user ID when calling the API.
-let userId: number = 100;
-notificationManager.getSyncNotificationEnabledWithoutApp(userId).then((data: boolean) => {
-  console.info(`getSyncNotificationEnabledWithoutApp, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSyncNotificationEnabledWithoutApp failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getSyncNotificationEnabledWithoutApp](#getsyncnotificationenabledwithoutapp)
 

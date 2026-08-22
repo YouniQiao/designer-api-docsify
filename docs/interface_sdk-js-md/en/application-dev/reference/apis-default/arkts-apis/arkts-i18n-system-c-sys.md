@@ -111,36 +111,6 @@ Gets measurements supported by system locale.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## getSystemNumberPatterns
-
-```TypeScript
-static getSystemNumberPatterns(): Map<string, string>
-```
-
-Gets commonly used number patterns for system locale.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-System-static getSystemNumberPatterns(): Map<string, string>--><!--Device-System-static getSystemNumberPatterns(): Map<string, string>-End-->
-
-**System capability:** SystemCapability.Global.I18n
-
-**System API:** This is a system API.
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Map&lt;string, string&gt; | a map containing the used number patterns and example of system locale. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-
 ## getSystemNumberingSystems
 
 ```TypeScript
@@ -164,6 +134,36 @@ Gets numbering systems supported by system locale.
 | Type | Description |
 | --- | --- |
 | Map&lt;string, string&gt; | a map will containing the numbering system 's identifier and sample. If the map is empty, there is no local digit for given locale. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+## getSystemNumberPatterns
+
+```TypeScript
+static getSystemNumberPatterns(): Map<string, string>
+```
+
+Gets commonly used number patterns for system locale.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta since version 23.
+
+<!--Device-System-static getSystemNumberPatterns(): Map<string, string>--><!--Device-System-static getSystemNumberPatterns(): Map<string, string>-End-->
+
+**System capability:** SystemCapability.Global.I18n
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Map&lt;string, string&gt; | a map containing the used number patterns and example of system locale. |
 
 **Error codes:**
 
@@ -261,36 +261,6 @@ Gets measurement currently used by system locale.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## getUsingNumberPattern
-
-```TypeScript
-static getUsingNumberPattern(): string
-```
-
-Gets number pattern used by system locale.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-System-static getUsingNumberPattern(): string--><!--Device-System-static getUsingNumberPattern(): string-End-->
-
-**System capability:** SystemCapability.Global.I18n
-
-**System API:** This is a system API.
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| string | The number pattern identifier used by system locale |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-
 ## getUsingNumberingSystem
 
 ```TypeScript
@@ -314,6 +284,36 @@ Gets numbering system currently used by system locale.
 | Type | Description |
 | --- | --- |
 | string | the numbering systems's identifier. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+## getUsingNumberPattern
+
+```TypeScript
+static getUsingNumberPattern(): string
+```
+
+Gets number pattern used by system locale.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta since version 23.
+
+<!--Device-System-static getUsingNumberPattern(): string--><!--Device-System-static getUsingNumberPattern(): string-End-->
+
+**System capability:** SystemCapability.Global.I18n
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string | The number pattern identifier used by system locale |
 
 **Error codes:**
 
@@ -558,40 +558,6 @@ Sets the measurement system used by the system locale.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [8900001](../../apis-localization-kit/errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-## setSystemNumberPattern
-
-```TypeScript
-static setSystemNumberPattern(pattern: string): void
-```
-
-Sets the number pattern used by the system locale.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-**Required permissions:** ohos.permission.UPDATE_CONFIGURATION
-
-<!--Device-System-static setSystemNumberPattern(pattern: string): void--><!--Device-System-static setSystemNumberPattern(pattern: string): void-End-->
-
-**System capability:** SystemCapability.Global.I18n
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pattern | string | Yes | Identifier of the number pattern. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [8900001](../../apis-localization-kit/errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
-
 ## setSystemNumberingSystem
 
 ```TypeScript
@@ -617,6 +583,40 @@ Sets the numbering system used by the system locale.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | identifier | string | Yes | Identifier of the numbering system. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [8900001](../../apis-localization-kit/errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+## setSystemNumberPattern
+
+```TypeScript
+static setSystemNumberPattern(pattern: string): void
+```
+
+Sets the number pattern used by the system locale.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-System-static setSystemNumberPattern(pattern: string): void--><!--Device-System-static setSystemNumberPattern(pattern: string): void-End-->
+
+**System capability:** SystemCapability.Global.I18n
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pattern | string | Yes | Identifier of the number pattern. |
 
 **Error codes:**
 

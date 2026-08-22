@@ -78,10 +78,6 @@
   - [InjectActionType(系统接口)](arkts-accessibility-accessibility-injectactiontype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [OperateVirtualNodeResult(系统接口)](arkts-accessibility-accessibility-operatevirtualnoderesult-e-sys.md)<!--DelEnd-->
-- [@ohos.accessibility.GesturePath](arkts-accessibility-gesturepath.md)
-  - [GesturePath](arkts-accessibility-accessibilitygesturepath-gesturepath-c.md)
-- [@ohos.accessibility.GesturePoint](arkts-accessibility-gesturepoint.md)
-  - [GesturePoint](arkts-accessibility-accessibilitygesturepoint-gesturepoint-c.md)
 <!--Del-->
 - [@ohos.accessibility.config](arkts-accessibility-config.md)<!--DelEnd-->
   <!--Del-->
@@ -142,13 +138,17 @@
   - [BlinkResultCode(系统接口)](arkts-accessibility-config-blinkresultcode-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [常量(系统接口)](arkts-accessibility-config-con-sys.md)<!--DelEnd-->
+- [@ohos.accessibility.GesturePath](arkts-accessibility-gesturepath.md)
+  - [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md)
+- [@ohos.accessibility.GesturePoint](arkts-accessibility-gesturepoint.md)
+  - [GesturePoint](arkts-accessibility-accessibility-gesturepoint-gesturepoint-c.md)
 - [@ohos.application.AccessibilityExtensionAbility](arkts-application-accessibilityextensionability.md)
-  - [AccessibilityExtensionAbility](arkts-accessibility-applicationaccessibilityextensionability-accessibilityextensionability-c.md)
+  - [AccessibilityExtensionAbility](arkts-accessibility-application-accessibilityextensionability-accessibilityextensionability-c.md)
   <!--Del-->
-  - [AccessibilityExtensionAbility(系统接口)](arkts-accessibility-applicationaccessibilityextensionability-accessibilityextensionability-c-sys.md)<!--DelEnd-->
-  - [AccessibilityEvent](arkts-accessibility-applicationaccessibilityextensionability-accessibilityevent-i.md)
+  - [AccessibilityExtensionAbility(系统接口)](arkts-accessibility-application-accessibilityextensionability-accessibilityextensionability-c-sys.md)<!--DelEnd-->
+  - [AccessibilityEvent](arkts-accessibility-application-accessibilityextensionability-accessibilityevent-i.md)
   <!--Del-->
-  - [AccessibilityEventInfo(系统接口)](arkts-accessibility-applicationaccessibilityextensionability-accessibilityeventinfo-i-sys.md)<!--DelEnd-->
+  - [AccessibilityEventInfo(系统接口)](arkts-accessibility-application-accessibilityextensionability-accessibilityeventinfo-i-sys.md)<!--DelEnd-->
   - [AccessibilityElement](arkts-accessibility-accessibilityelement-t.md)
   - [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md)
   <!--Del-->

@@ -27,7 +27,7 @@ Obtains the information a deferred task. This API uses an asynchronous callback 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | workId | int | Yes | ID of the deferred task. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md)&gt; | Yes | Callback used to return the result. If **workId** is valid, the task information obtained from WorkSchedulerService is returned. Otherwise, an exception is thrown. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md)&gt; | Yes | Callback used to return the result. If **workId** is valid, the task information obtained from WorkSchedulerService is returned. Otherwise, an exception is thrown. |
 
 **Error codes:**
 
@@ -52,6 +52,17 @@ import { BusinessError } from '@kit.BasicServicesKit';
       console.info(`workschedulerLog getWorkStatus success, ${JSON.stringify(res)}`);
     }
   });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+  import { workScheduler } from '@kit.BackgroundTasksKit';
+
+  workScheduler.getWorkStatus(50).then((res: workScheduler.WorkInfo) => {
+    console.info(`workschedulerLog getWorkStatus success, ${JSON.stringify(res)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`workschedulerLog getWorkStatus failed. code is ${error.code} message is ${error.message}`);
+  })
 ```
 
 
@@ -95,14 +106,5 @@ Obtains the information a deferred task. This API uses a promise to return the r
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-  import { workScheduler } from '@kit.BackgroundTasksKit';
-
-  workScheduler.getWorkStatus(50).then((res: workScheduler.WorkInfo) => {
-    console.info(`workschedulerLog getWorkStatus success, ${JSON.stringify(res)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`workschedulerLog getWorkStatus failed. code is ${error.code} message is ${error.message}`);
-  })
-```
+See [getWorkStatus](#getworkstatus)
 

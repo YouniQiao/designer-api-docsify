@@ -26,7 +26,7 @@ Obtains **TagInfo** from **Want**, which is initialized by the NFC service and c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Data obtained from the parameters of the **onCreate** entry function when an ability is dispatched. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Data obtained from the parameters of the **onCreate** entry function when an ability is dispatched. |
 
 **Return value:**
 

@@ -88,3 +88,11 @@ WINDOW_MODE_FLOATING = 102
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
+**示例**
+
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+
+featureAbility.AbilityWindowConfiguration.WINDOW_MODE_UNDEFINED
+```
+

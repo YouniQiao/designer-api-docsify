@@ -32,8 +32,8 @@ function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startupTasks | Array&lt;string&gt; | 是 | 表示准备执行的启动任务 [StartupTask](../../apis-default/arkts-apis/arkts-appappstartupstartuptask-startuptask-c.md)的名称或预加载so名称的数组。 |
-| config | [StartupConfig](arkts-ability-appappstartupstartupconfig-startupconfig-i.md) | 否 | 表示启动任务配置信息，包含启动框架超时时间与启动任务监听器配置。 |
+| startupTasks | Array&lt;string&gt; | 是 | 表示准备执行的启动任务 [StartupTask](../../apis-default/arkts-apis/arkts-app-appstartup-startuptask-startuptask-c.md)的名称或预加载so名称的数组。 |
+| config | [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | 否 | 表示启动任务配置信息，包含启动框架超时时间与启动任务监听器配置。 |
 
 **返回值：**
 
@@ -82,49 +82,6 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-
-## run
-
-```TypeScript
-function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>
-```
-
-执行启动框架启动任务或加载so文件。支持指定[AbilityStageContext](arkts-ability-abilitystagecontext-c.md)用于启动任务的加载。使 用Promise异步回调。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-startupManager-function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>--><!--Device-startupManager-function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Ability.AppStartup
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| startupTasks | Array&lt;string&gt; | 是 | 表示准备执行的启动任务 [StartupTask](../../apis-default/arkts-apis/arkts-appappstartupstartuptask-startuptask-c.md)的名称或预加载so名称的数组。 |
-| context | common.AbilityStageContext | 是 | 表示执行启动任务 [StartupTask](../../apis-default/arkts-apis/arkts-appappstartupstartuptask-startuptask-c.md)的AbilityStage上下文，作为入参传给启动任务的 [init](../../apis-default/arkts-apis/arkts-appappstartupstartuptask-startuptask-c.md#init)。 |
-| config | [StartupConfig](arkts-ability-appappstartupstartupconfig-startupconfig-i.md) | 是 | 表示启动任务配置信息，包含启动框架超时时间与启动任务监听器配置。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [28800001](../errorcode-ability.md#28800001-启动任务或其依赖项不存在) | Startup task or its dependency not found. |
-| [28800002](../errorcode-ability.md#28800002-启动任务之间存在循环依赖关系) | The startup tasks have circular dependencies. |
-| [28800003](../errorcode-ability.md#28800003-运行启动任务时发生错误) | An error occurred while running the startup tasks. |
-| [28800004](../errorcode-ability.md#28800004-执行启动任务超时) | Running startup tasks timeout. |
-
-**示例**
-
 ```TypeScript
 import { AbilityStage, startupManager, StartupListener, StartupConfig } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -163,4 +120,49 @@ export default class MyAbilityStage extends AbilityStage {
   // ...
 }
 ```
+
+
+## run
+
+```TypeScript
+function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>
+```
+
+执行启动框架启动任务或加载so文件。支持指定[AbilityStageContext](arkts-ability-abilitystagecontext-c.md)用于启动任务的加载。使 用Promise异步回调。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-startupManager-function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>--><!--Device-startupManager-function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AppStartup
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| startupTasks | Array&lt;string&gt; | 是 | 表示准备执行的启动任务 [StartupTask](../../apis-default/arkts-apis/arkts-app-appstartup-startuptask-startuptask-c.md)的名称或预加载so名称的数组。 |
+| context | common.AbilityStageContext | 是 | 表示执行启动任务 [StartupTask](../../apis-default/arkts-apis/arkts-app-appstartup-startuptask-startuptask-c.md)的AbilityStage上下文，作为入参传给启动任务的 [init](../../apis-default/arkts-apis/arkts-app-appstartup-startuptask-startuptask-c.md#init)。 |
+| config | [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | 是 | 表示启动任务配置信息，包含启动框架超时时间与启动任务监听器配置。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [28800001](../errorcode-ability.md#28800001-启动任务或其依赖项不存在) | Startup task or its dependency not found. |
+| [28800002](../errorcode-ability.md#28800002-启动任务之间存在循环依赖关系) | The startup tasks have circular dependencies. |
+| [28800003](../errorcode-ability.md#28800003-运行启动任务时发生错误) | An error occurred while running the startup tasks. |
+| [28800004](../errorcode-ability.md#28800004-执行启动任务超时) | Running startup tasks timeout. |
+
+**示例**
+
+参见 [run](#run)
 

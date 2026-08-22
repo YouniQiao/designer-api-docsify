@@ -14,3 +14,11 @@ export type ElementAttributeValues = _ElementAttributeValues
 
 **属性类型：** _ElementAttributeValues
 
+**示例**
+
+```TypeScript
+import { ElementAttributeValues } from '@kit.AccessibilityKit';
+
+let elementAttributeValues: ElementAttributeValues;
+```
+

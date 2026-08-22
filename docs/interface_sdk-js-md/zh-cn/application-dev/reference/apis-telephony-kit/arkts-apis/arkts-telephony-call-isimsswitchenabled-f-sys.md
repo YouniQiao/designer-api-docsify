@@ -54,6 +54,16 @@ call.isImsSwitchEnabled(0, (err: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.isImsSwitchEnabled(0).then((data: boolean) => {
+    console.info(`isImsSwitchEnabled success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isImsSwitchEnabled fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## isImsSwitchEnabled
 
@@ -96,13 +106,5 @@ function isImsSwitchEnabled(slotId: int): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isImsSwitchEnabled(0).then((data: boolean) => {
-    console.info(`isImsSwitchEnabled success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isImsSwitchEnabled fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [isImsSwitchEnabled](#isimsswitchenabled)
 

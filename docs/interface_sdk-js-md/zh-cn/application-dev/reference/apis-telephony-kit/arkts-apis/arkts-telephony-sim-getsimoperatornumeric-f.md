@@ -51,6 +51,17 @@ sim.getSimOperatorNumeric(0, (err: BusinessError, data: string) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.getSimOperatorNumeric(0).then((data: string) => {
+    console.info(`getSimOperatorNumeric success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSimOperatorNumeric failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getSimOperatorNumeric
 
@@ -93,14 +104,5 @@ Obtains the home PLMN number of the SIM card in a specified slot.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getSimOperatorNumeric(0).then((data: string) => {
-    console.info(`getSimOperatorNumeric success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSimOperatorNumeric failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [getSimOperatorNumeric](#getsimoperatornumeric)
 

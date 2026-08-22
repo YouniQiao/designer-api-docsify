@@ -74,7 +74,144 @@ constructor(encoding?: string)
 **示例**
 
 ```TypeScript
+let textDecoder = new util.TextDecoder();
+let retStr = textDecoder.encoding;
+console.info('retStr = ' + retStr);
+// 输出结果：retStr = utf-8
+```
+
+```TypeScript
+let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});
+```
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+```
+
+```TypeScript
+let textEncoder = new util.TextEncoder("utf-8");
+```
+
+```TypeScript
+let rationalNumber = new util.RationalNumber();
+```
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+let lruCache = new util.LRUCache<number, number>();
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let lruCache = new util.LRUCache<int, int>();
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+console.info("range = " + range);
+// 输出结果：range = [30, 40]
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable<Temperature> {
+  private readonly _temp: int;
+
+  constructor(value: int) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp(): int {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.ScopeHelper<Temperature>(tempLower, tempUpper);
+console.info("range = " + range);
+// 输出结果：range = [30, 40]
+```
+
+```TypeScript
+let base64 = new util.Base64Helper();
+```
+
+```TypeScript
 let decoder = new util.StringDecoder();
+```
+
+```TypeScript
+let type = new util.types();
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.Scope(tempLower, tempUpper);
+console.info("range = " + range);
+// 输出结果：range = [30, 40]
+```
+
+```TypeScript
+let base64 = new  util.Base64();
 ```
 
 ## end

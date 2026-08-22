@@ -60,6 +60,17 @@ usageStatistics.isIdleState('com.ohos.camera', (err: BusinessError, res: boolean
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+
+usageStatistics.isIdleState('com.ohos.camera').then((res: boolean) => {
+  console.info('BUNDLE_ACTIVE isIdleState promise succeeded, result: ' + JSON.stringify(res));
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE isIdleState promise failed. code is: ' + err.code + ',message is: ' + err.message);
+});
+```
+
 
 ## isIdleState
 
@@ -107,14 +118,5 @@ function isIdleState(bundleName: string): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-usageStatistics.isIdleState('com.ohos.camera').then((res: boolean) => {
-  console.info('BUNDLE_ACTIVE isIdleState promise succeeded, result: ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE isIdleState promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
+参见 [isIdleState](#isidlestate)
 

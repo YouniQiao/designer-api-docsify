@@ -27,13 +27,13 @@ declare function createReadStream(path: string, options?: ReadStreamOptions): Re
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 文件路径。 |
-| options | [ReadStreamOptions](../../apis-default/arkts-apis/arkts-filefs-readstreamoptions-i.md) | 否 | 支持如下选项：<br/>- start，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。<br/>- end， number类型，表示期望读取结束的位置，单位为Byte。可选，默认文件末尾。 |
+| options | [ReadStreamOptions](arkts-corefile-file-fs-readstreamoptions-i.md) | 否 | 支持如下选项：<br/>- start，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。<br/>- end， number类型，表示期望读取结束的位置，单位为Byte。可选，默认文件末尾。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ReadStream](arkts-corefile-filefs-readstream-c.md) | 文件可读流。 |
+| [ReadStream](arkts-corefile-file-fs-readstream-c.md) | 文件可读流。 |
 
 **错误码：**
 
@@ -55,4 +55,45 @@ declare function createReadStream(path: string, options?: ReadStreamOptions): Re
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// 创建文件可读流
+const rs = fileIo.createReadStream(`${pathDir}/read.txt`);
+// 创建文件可写流
+const ws = fileIo.createWriteStream(`${pathDir}/write.txt`);
+// 暂停模式拷贝文件
+rs.on('readable', () => {
+  const data = rs.read();
+  if (!data) {
+    return;
+  }
+  ws.write(data);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// 创建文件可读流
+const rs = fileIo.createReadStream(`${pathDir}/read.txt`);
+// 创建文件可写流
+const ws = fileIo.createWriteStream(`${pathDir}/write.txt`);
+// 暂停模式拷贝文件
+rs.on('readable', () => {
+  const data = rs.read();
+  if (data == undefined) {
+    return;
+  }
+  if (data instanceof String) {
+    ws.write(data);
+  }
+  if (data instanceof buffer.Buffer) {
+    ws.write(data.toString())
+  }
+});
+```
 

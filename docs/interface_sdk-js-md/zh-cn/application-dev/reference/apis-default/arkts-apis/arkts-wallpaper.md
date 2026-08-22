@@ -57,10 +57,10 @@
 | [getPixelMap](arkts-wallpaper-getpixelmap-f-sys.md) | 获取壁纸图片的像素图。 |
 | [getPixelMap](arkts-wallpaper-getpixelmap-f-sys.md) | 获取壁纸图片的像素图。 |
 | [getWallpaperByState](arkts-wallpaper-getwallpaperbystate-f-sys.md) | 获取指定壁纸类型、折展态、横竖屏的壁纸图片的像素图，如果指定的壁纸不存在，会逐步降级匹配，unfolded-land -&gt; unfolded-port -&gt;normal-port。使用promise异步回调。 |
-| [offWallpaperChange](arkts-wallpaper-offwallpaperchange-f-sys.md) | 取消订阅壁纸变化通知事件。不支持多线程并发调用。 |
 | [off_wallpaperChange](arkts-wallpaper-offwallpaperchange-f-sys.md) | 取消订阅壁纸变化通知事件。不支持多线程并发调用。 |
-| [onWallpaperChange](arkts-wallpaper-onwallpaperchange-f-sys.md) | 订阅壁纸变化通知事件。不支持多线程并发调用。 |
+| [offWallpaperChange](arkts-wallpaper-offwallpaperchange-f-sys.md) | 取消订阅壁纸变化通知事件。不支持多线程并发调用。 |
 | [on_wallpaperChange](arkts-wallpaper-onwallpaperchange-f-sys.md) | 订阅壁纸变化通知事件。不支持多线程并发调用。 |
+| [onWallpaperChange](arkts-wallpaper-onwallpaperchange-f-sys.md) | 订阅壁纸变化通知事件。不支持多线程并发调用。 |
 | [restore](arkts-wallpaper-restore-f-sys.md) | 移除指定类型的壁纸，恢复为默认显示的壁纸。使用callback异步回调。 |
 | [restore](arkts-wallpaper-restore-f-sys.md) | 移除指定类型的壁纸，恢复为默认显示的壁纸。使用promise异步回调。 |
 | [setAllWallpapers](arkts-wallpaper-setallwallpapers-f-sys.md) | 设置设备所有形态的壁纸。使用promise异步回调。（包括折展状态、横竖屏状态、资源路径，其中NORMAL-PORT为必选） |

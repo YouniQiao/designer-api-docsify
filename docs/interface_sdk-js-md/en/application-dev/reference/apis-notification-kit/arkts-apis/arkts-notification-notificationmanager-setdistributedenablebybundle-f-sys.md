@@ -34,7 +34,7 @@ Sets whether to enable distributed notification for a specified application. Thi
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
 | enable | boolean | Yes | Whether to enable distributed notification. The value **true** means to enable distributed notification, and **false** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -67,6 +67,20 @@ let bundle: notificationManager.BundleOption = {
 };
 let enable: boolean = true;
 notificationManager.setDistributedEnableByBundle(bundle, enable, setDistributedEnableByBundleCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+    bundle: "bundleName1",
+};
+let enable: boolean = true;
+notificationManager.setDistributedEnableByBundle(bundle, enable).then(() => {
+    console.info("setDistributedEnableByBundle success");
+}).catch((err: BusinessError) => {
+    console.error(`setDistributedEnableByBundle failed, code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -121,17 +135,5 @@ Sets whether to enable distributed notification for a specified application. Thi
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
-};
-let enable: boolean = true;
-notificationManager.setDistributedEnableByBundle(bundle, enable).then(() => {
-    console.info("setDistributedEnableByBundle success");
-}).catch((err: BusinessError) => {
-    console.error(`setDistributedEnableByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [setDistributedEnableByBundle](#setdistributedenablebybundle)
 

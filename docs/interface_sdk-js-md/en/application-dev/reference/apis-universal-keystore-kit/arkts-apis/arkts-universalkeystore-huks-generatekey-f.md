@@ -31,7 +31,7 @@ Generates a key. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not include sensitive data such as personal information. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Tags required for generating the key. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -70,6 +70,36 @@ huks.generateKey(keyAlias, options, (err, data) => {
 });
 ```
 
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* Generate a 256-bit ECC key. */
+
+let keyAlias = 'keyAlias';
+let properties: Array<huks.HuksParam> = [
+  {
+    tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
+    value: huks.HuksKeyAlg.HUKS_ALG_ECC
+  },
+  {
+    tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
+    value: huks.HuksKeySize.HUKS_ECC_KEY_SIZE_256
+  },
+  {
+    tag: huks.HuksTag.HUKS_TAG_PURPOSE,
+    value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_SIGN | huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_VERIFY
+  },
+  {
+    tag: huks.HuksTag.HUKS_TAG_DIGEST,
+    value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256
+  }
+];
+let options: huks.HuksOptions = {
+  properties: properties
+};
+let result = huks.generateKey(keyAlias, options);
+```
+
 
 ## generateKey
 
@@ -104,33 +134,5 @@ Generates a key. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Generate a 256-bit ECC key. */
-
-let keyAlias = 'keyAlias';
-let properties: Array<huks.HuksParam> = [
-  {
-    tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
-    value: huks.HuksKeyAlg.HUKS_ALG_ECC
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
-    value: huks.HuksKeySize.HUKS_ECC_KEY_SIZE_256
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_PURPOSE,
-    value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_SIGN | huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_VERIFY
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_DIGEST,
-    value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256
-  }
-];
-let options: huks.HuksOptions = {
-  properties: properties
-};
-let result = huks.generateKey(keyAlias, options);
-```
+See [generateKey](#generatekey)
 

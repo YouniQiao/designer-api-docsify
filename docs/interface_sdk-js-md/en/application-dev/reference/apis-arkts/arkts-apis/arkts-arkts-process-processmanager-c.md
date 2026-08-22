@@ -43,6 +43,10 @@ Exercise caution when using this API. After this API is called, the application 
 **Examples**
 
 ```TypeScript
+process.exit(0);
+```
+
+```TypeScript
 let pro = new process.ProcessManager();
 pro.exit(0);
 ```
@@ -83,6 +87,10 @@ Obtains the value of an environment variable.
 **Examples**
 
 ```TypeScript
+let pres = process.getEnvironmentVar("PATH");
+```
+
+```TypeScript
 let pro = new process.ProcessManager();
 let pres = pro.getEnvironmentVar("PATH");
 ```
@@ -116,6 +124,11 @@ Obtains the system configuration.
 | number | System configuration obtained. If the configuration does not exist, **-1** is returned. |
 
 **Examples**
+
+```TypeScript
+let _SC_ARG_MAX = 0;
+let pres = process.getSystemConfig(_SC_ARG_MAX);
+```
 
 ```TypeScript
 let pro = new process.ProcessManager();
@@ -154,6 +167,11 @@ Obtains the thread priority based on the specified TID.
 **Examples**
 
 ```TypeScript
+let tid = process.tid;
+let pres = process.getThreadPriority(tid);
+```
+
+```TypeScript
 let pro = new process.ProcessManager();
 let tid = process.tid;
 let pres = pro.getThreadPriority(tid);
@@ -190,6 +208,10 @@ Obtains the UID of a user from the user database of the system based on the spec
 **Examples**
 
 ```TypeScript
+let pres = process.getUidForName("tool");
+```
+
+```TypeScript
 let pro = new process.ProcessManager();
 let pres = pro.getUidForName("tool");
 ```
@@ -223,6 +245,10 @@ Checks whether a UID belongs to this application.
 | boolean | Check result. The value **true** is returned if the UID belongs to the application; otherwise, **false** is returned. |
 
 **Examples**
+
+```TypeScript
+let result = process.isAppUid(688);
+```
 
 ```TypeScript
 let pro = new process.ProcessManager();
@@ -262,6 +288,11 @@ Sends a signal to the specified process to terminate it. Only the current proces
 | boolean | Signal sending result. The value **true** is returned if the signal is sent successfully; otherwise, **false** is returned. |
 
 **Examples**
+
+```TypeScript
+let pres = process.pid;
+let result = process.kill(28, pres);
+```
 
 ```TypeScript
 let pro = new process.ProcessManager();

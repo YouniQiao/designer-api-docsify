@@ -89,6 +89,41 @@ let timer: reminderAgentManager.ReminderRequestTimer = {
 reminderAgentManager.publishReminder(timer, publishCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+let timer: reminderAgentManager.ReminderRequestTimer = {
+  reminderType: reminderAgentManager.ReminderType.REMINDER_TYPE_TIMER,
+  triggerTimeInSeconds: 10
+}
+
+reminderAgentManager.publishReminder(timer).then((reminderId: number) => {
+  console.info("promise, reminderId = " + reminderId);
+}).catch((err: BusinessError) => {
+  console.error("promise err code:" + err.code + " message:" + err.message);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+let timer: reminderAgentManager.ReminderRequestTimer = {
+  reminderType: reminderAgentManager.ReminderType.REMINDER_TYPE_TIMER,
+  triggerTimeInSeconds: 10
+}
+
+reminderAgentManager.publishReminder(timer).then((reminderId: int) => {
+  console.info(`Succeeded in publishing reminder, reminderId is  ${JSON.stringify(reminderId)}.`);
+}).catch((err): void => {
+  console.error(`Failed to publish reminder. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## publishReminder
 
@@ -135,38 +170,5 @@ function publishReminder(reminderReq: ReminderRequest): Promise<int>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-let timer: reminderAgentManager.ReminderRequestTimer = {
-  reminderType: reminderAgentManager.ReminderType.REMINDER_TYPE_TIMER,
-  triggerTimeInSeconds: 10
-}
-
-reminderAgentManager.publishReminder(timer).then((reminderId: number) => {
-  console.info("promise, reminderId = " + reminderId);
-}).catch((err: BusinessError) => {
-  console.error("promise err code:" + err.code + " message:" + err.message);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-let timer: reminderAgentManager.ReminderRequestTimer = {
-  reminderType: reminderAgentManager.ReminderType.REMINDER_TYPE_TIMER,
-  triggerTimeInSeconds: 10
-}
-
-reminderAgentManager.publishReminder(timer).then((reminderId: int) => {
-  console.info(`Succeeded in publishing reminder, reminderId is  ${JSON.stringify(reminderId)}.`);
-}).catch((err): void => {
-  console.error(`Failed to publish reminder. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [publishReminder](#publishreminder)
 

@@ -113,7 +113,7 @@ owner: Want
 
 组件提供方Ability信息。
 
-**类型：** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)
+**类型：** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 23
 
@@ -135,7 +135,7 @@ target: Want
 
 组件使用方Ability信息。
 
-**类型：** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)
+**类型：** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 23
 

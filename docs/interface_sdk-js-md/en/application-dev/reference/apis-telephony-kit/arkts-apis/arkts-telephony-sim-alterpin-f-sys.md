@@ -31,7 +31,7 @@ Change Pin Password.
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 | newPin | string | Yes | Indicates a new password. |
 | oldPin | string | Yes | Indicates old password. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LockStatusResponse](arkts-telephony-sim-lockstatusresponse-i-sys.md)&gt; | Yes | Indicates the callback for getting the response to obtain the SIM card lock status of the specified card slot. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LockStatusResponse](arkts-telephony-sim-lockstatusresponse-i-sys.md)&gt; | Yes | Indicates the callback for getting the response to obtain the SIM card lock status of the specified card slot. |
 
 **Error codes:**
 
@@ -55,6 +55,17 @@ import { sim } from '@kit.TelephonyKit';
 
 sim.alterPin(0, "1234", "0000", (err: BusinessError, data: sim.LockStatusResponse) => {
     console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.alterPin(0, "1234", "0000").then((data: sim.LockStatusResponse) => {
+    console.info(`alterPin success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`alterPin failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -107,14 +118,5 @@ Change Pin Password.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.alterPin(0, "1234", "0000").then((data: sim.LockStatusResponse) => {
-    console.info(`alterPin success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`alterPin failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [alterPin](#alterpin)
 

@@ -28,7 +28,7 @@ function setRestartWant(want: Want): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 通过设置Want中"bundleName"和"abilityName"字段来指定恢复重启的Ability。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 通过设置Want中"bundleName"和"abilityName"字段来指定恢复重启的Ability。 |
 
 **示例**
 

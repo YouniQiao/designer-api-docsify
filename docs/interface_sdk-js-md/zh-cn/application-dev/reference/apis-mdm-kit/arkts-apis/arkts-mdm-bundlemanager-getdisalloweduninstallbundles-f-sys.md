@@ -34,7 +34,7 @@ function getDisallowedUninstallBundles(admin: Want, callback: AsyncCallback<Arra
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，当接口调用成功，err为null，否则为错误对象。 |
 
 **错误码：**
@@ -68,6 +68,43 @@ bundleManager.getDisallowedUninstallBundles(wantTemp, (err, result) => {
 });
 ```
 
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+bundleManager.getDisallowedUninstallBundles(wantTemp, 100, (err, result) => {
+  if (err) {
+    console.error(`Failed to get disallowed uninstall bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting disallowed uninstall bundles, result : ${JSON.stringify(result)}`);
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+bundleManager.getDisallowedUninstallBundles(wantTemp, 100).then((result) => {
+  console.info(`Succeeded in getting disallowed uninstall bundles, result : ${JSON.stringify(result)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get disallowed uninstall bundles. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## getDisallowedUninstallBundles
 
@@ -97,7 +134,7 @@ function getDisallowedUninstallBundles(admin: Want, userId: number, callback: As
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | userId | number | 是 | 用户ID，指定具体用户。取值范围：大于等于0。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，当接口调用成功，err为null，否则为错误对象。 |
 
@@ -113,24 +150,7 @@ function getDisallowedUninstallBundles(admin: Want, userId: number, callback: As
 
 **示例**
 
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.getDisallowedUninstallBundles(wantTemp, 100, (err, result) => {
-  if (err) {
-    console.error(`Failed to get disallowed uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting disallowed uninstall bundles, result : ${JSON.stringify(result)}`);
-});
-```
+参见 [getDisallowedUninstallBundles](#getdisalloweduninstallbundles)
 
 
 ## getDisallowedUninstallBundles
@@ -161,7 +181,7 @@ function getDisallowedUninstallBundles(admin: Want, userId?: number): Promise<Ar
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | userId | number | 否 | 用户ID，取值范围：大于等于0。 <br> - 调用接口时，若传入userId，表示指定用户。 <br> - 调用接口时，若未传入userId，表示当前用户。 |
 
 **返回值：**
@@ -182,21 +202,5 @@ function getDisallowedUninstallBundles(admin: Want, userId?: number): Promise<Ar
 
 **示例**
 
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.getDisallowedUninstallBundles(wantTemp, 100).then((result) => {
-  console.info(`Succeeded in getting disallowed uninstall bundles, result : ${JSON.stringify(result)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get disallowed uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [getDisallowedUninstallBundles](#getdisalloweduninstallbundles)
 

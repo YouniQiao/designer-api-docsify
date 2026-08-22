@@ -54,6 +54,16 @@ call.getCallIdListForConference(1, (err: BusinessError, data: Array<string>) => 
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.getCallIdListForConference(1).then((data: Array<string>) => {
+    console.info(`getCallIdListForConference success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getCallIdListForConference fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getCallIdListForConference
 
@@ -96,13 +106,5 @@ function getCallIdListForConference(callId: int): Promise<Array<string>>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.getCallIdListForConference(1).then((data: Array<string>) => {
-    console.info(`getCallIdListForConference success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getCallIdListForConference fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [getCallIdListForConference](#getcallidlistforconference)
 

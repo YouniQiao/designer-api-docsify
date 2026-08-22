@@ -270,6 +270,14 @@ constructor()
 **示例**
 
 ```TypeScript
+let userAuth = new osAccount.UserAuth();
+```
+
+```TypeScript
+let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
+```
+
+```TypeScript
 let userIDM = new osAccount.UserIdentityManager();
 ```
 
@@ -505,43 +513,6 @@ try {
 }
 ```
 
-## getAuthInfo
-
-```TypeScript
-getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>): void
-```
-
-获取指定类型的认证信息。使用callback异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.USE_USER_IDM
-
-<!--Device-UserIdentityManager-getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>): void--><!--Device-UserIdentityManager-getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>): void-End-->
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| authType | AuthType | 是 | 认证类型。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | 是 | 回调函数，如果获取成功，err为null，data为当前用户指定类型的所有已注册凭据信息；否则为错误对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid authType. |
-| 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -586,6 +557,131 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userIDM = new osAccount.UserIdentityManager();
+try {
+  userIDM.getAuthInfo(osAccount.AuthType.PIN).then((result: osAccount.EnrolledCredInfo[]) => {
+    console.info('getAuthInfo result = ' + JSON.stringify(result))
+  }).catch((err: BusinessError) => {
+    console.error(`getAuthInfo error = code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userIDM = new osAccount.UserIdentityManager();
+try {
+  userIDM.getAuthInfo(osAccount.AuthType.PIN).then((result: osAccount.EnrolledCredInfo[]) => {
+    console.info('getAuthInfo result = ' + JSON.stringify(result))
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`getAuthInfo error = code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userIDM = new osAccount.UserIdentityManager();
+let options: osAccount.GetAuthInfoOptions = {
+  authType: osAccount.AuthType.PIN,
+  accountId: 100,
+};
+try {
+  userIDM.getAuthInfo(options).then((result: osAccount.EnrolledCredInfo[]) => {
+    console.info('getAuthInfo result = ' + JSON.stringify(result))
+  }).catch((err: BusinessError) => {
+    console.error(`getAuthInfo error = code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userIDM = new osAccount.UserIdentityManager();
+let options: osAccount.GetAuthInfoOptions = {
+  authType: osAccount.AuthType.PIN,
+  accountId: 100,
+};
+try {
+  userIDM.getAuthInfo(options).then((result: osAccount.EnrolledCredInfo[]) => {
+    console.info('getAuthInfo result = ' + JSON.stringify(result))
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`getAuthInfo error = code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+## getAuthInfo
+
+```TypeScript
+getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>): void
+```
+
+获取指定类型的认证信息。使用callback异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.USE_USER_IDM
+
+<!--Device-UserIdentityManager-getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>): void--><!--Device-UserIdentityManager-getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>): void-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| authType | AuthType | 是 | 认证类型。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | 是 | 回调函数，如果获取成功，err为null，data为当前用户指定类型的所有已注册凭据信息；否则为错误对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid authType. |
+| 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
+
+**示例**
+
+参见 [getAuthInfo](#getauthinfo)
+
 ## getAuthInfo
 
 ```TypeScript
@@ -628,44 +724,7 @@ getAuthInfo(authType: AuthType): Promise<Array<EnrolledCredInfo>>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userIDM = new osAccount.UserIdentityManager();
-try {
-  userIDM.getAuthInfo(osAccount.AuthType.PIN).then((result: osAccount.EnrolledCredInfo[]) => {
-    console.info('getAuthInfo result = ' + JSON.stringify(result))
-  }).catch((err: BusinessError) => {
-    console.error(`getAuthInfo error = code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userIDM = new osAccount.UserIdentityManager();
-try {
-  userIDM.getAuthInfo(osAccount.AuthType.PIN).then((result: osAccount.EnrolledCredInfo[]) => {
-    console.info('getAuthInfo result = ' + JSON.stringify(result))
-  }).catch((e: Error) => {
-    const err = e as BusinessError;
-    console.error(`getAuthInfo error = code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e: Error) {
-  const err = e as BusinessError;
-  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getAuthInfo](#getauthinfo)
 
 ## getAuthInfo
 
@@ -710,52 +769,7 @@ getAuthInfo(options?: GetAuthInfoOptions): Promise<Array<EnrolledCredInfo>>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userIDM = new osAccount.UserIdentityManager();
-let options: osAccount.GetAuthInfoOptions = {
-  authType: osAccount.AuthType.PIN,
-  accountId: 100,
-};
-try {
-  userIDM.getAuthInfo(options).then((result: osAccount.EnrolledCredInfo[]) => {
-    console.info('getAuthInfo result = ' + JSON.stringify(result))
-  }).catch((err: BusinessError) => {
-    console.error(`getAuthInfo error = code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userIDM = new osAccount.UserIdentityManager();
-let options: osAccount.GetAuthInfoOptions = {
-  authType: osAccount.AuthType.PIN,
-  accountId: 100,
-};
-try {
-  userIDM.getAuthInfo(options).then((result: osAccount.EnrolledCredInfo[]) => {
-    console.info('getAuthInfo result = ' + JSON.stringify(result))
-  }).catch((e: Error) => {
-    const err = e as BusinessError;
-    console.error(`getAuthInfo error = code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e: Error) {
-  const err = e as BusinessError;
-  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getAuthInfo](#getauthinfo)
 
 ## getEnrolledId
 
@@ -1050,6 +1064,47 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userIDM = new osAccount.UserIdentityManager();
+let accountId = 100;
+try {
+  userIDM.openSession(accountId).then((challenge: Uint8Array) => {
+      console.info('openSession challenge = ' + JSON.stringify(challenge));
+  }).catch((err: BusinessError) => {
+      console.error(`openSession error = code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`openSession exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userIDM = new osAccount.UserIdentityManager();
+let accountId = 100;
+try {
+  userIDM.openSession(accountId).then((challenge: Uint8Array) => {
+    console.info('openSession challenge = ' + JSON.stringify(challenge));
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`openSession error = code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`openSession exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## openSession
 
 ```TypeScript
@@ -1092,46 +1147,7 @@ openSession(accountId?: int): Promise<Uint8Array>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userIDM = new osAccount.UserIdentityManager();
-let accountId = 100;
-try {
-  userIDM.openSession(accountId).then((challenge: Uint8Array) => {
-      console.info('openSession challenge = ' + JSON.stringify(challenge));
-  }).catch((err: BusinessError) => {
-      console.error(`openSession error = code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`openSession exception = code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userIDM = new osAccount.UserIdentityManager();
-let accountId = 100;
-try {
-  userIDM.openSession(accountId).then((challenge: Uint8Array) => {
-    console.info('openSession challenge = ' + JSON.stringify(challenge));
-  }).catch((e: Error) => {
-    const err = e as BusinessError;
-    console.error(`openSession error = code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e: Error) {
-  const err = e as BusinessError;
-  console.error(`openSession exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [openSession](#opensession)
 
 ## updateCredential
 

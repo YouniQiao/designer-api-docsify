@@ -79,3 +79,16 @@ spatialDeviceType: AudioSpatialDeviceType
 
 **系统接口：** 此接口为系统接口。
 
+**示例**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let spatialDeviceState: audio.AudioSpatialDeviceState = {
+  address: "123",
+  isSpatializationSupported: true,
+  isHeadTrackingSupported: true,
+  spatialDeviceType: audio.AudioSpatialDeviceType.SPATIAL_DEVICE_TYPE_IN_EAR_HEADPHONE
+};
+```
+

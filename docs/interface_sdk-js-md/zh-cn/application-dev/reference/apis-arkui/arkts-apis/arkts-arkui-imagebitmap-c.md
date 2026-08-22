@@ -62,6 +62,47 @@ constructor(src: string)
 | --- | --- | --- | --- |
 | src | string | 是 | 图片的数据源支持本地图片。 <br>1、string格式用于加载本地图片，例如ImageBitmap("common/images/example.jpg")， type为"entry"和"feature"类型的Module，其图片加载路径的起点为当前Module的ets文件夹， type为"har"和"shared"类型的Module，其图片加载路径的起点为当前构建的"entry"或"feature" 类型Module的ets文件夹。 <br/>type为"har"和"shared"类型的Module中推荐使用 [ImageSource](../../../media/image/image-decoding.md)图片解码方式将资源图片解码为统一的 PixelMap加载使用。 <br>2、支持本地图片类型：bmp、jpg、png、svg和webp类型。 <br/>**说明：**<br/>- ArkTS卡片上不支持`http://`等网络相关路径前缀、`datashare://`路径前缀 以及`file://data/storage`路径前缀的字符串。 |
 
+**示例**
+
+以下示例展示了配置CanvasRenderingContext2D对象的单位模式，默认单位模式为LengthMetricsUnit.DEFAULT，对应默认单位vp，配置后无法动态更改。详细说明见LengthMetricsUnit。
+
+```TypeScript
+// xxx.ets
+import { LengthMetricsUnit } from '@kit.ArkUI'
+
+@Entry
+@Component
+struct LengthMetricsUnitDemo {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private contextPX: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings, LengthMetricsUnit.PX);
+  private contextVP: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.contextPX)
+        .width('100%')
+        .height(150)
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.contextPX.fillRect(10, 10, 100, 100)
+          this.contextPX.clearRect(10, 10, 50, 50)
+        })
+
+      Canvas(this.contextVP)
+        .width('100%')
+        .height(150)
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.contextVP.fillRect(10, 10, 100, 100)
+          this.contextVP.clearRect(10, 10, 50, 50)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 ## constructor
 
 ```TypeScript
@@ -89,6 +130,10 @@ constructor(src: string, unit: LengthMetricsUnit)
 | src | string | 是 | 图片的数据源支持本地图片。 <br>1、string格式用于加载本地图片，例如ImageBitmap("common/images/example.jpg")， type为"entry"和"feature"类型的Module，其图片加载路径的起点为当前Module的ets文件夹， type为"har"和"shared"类型的Module，其图片加载路径的起点为当前构建的"entry"或"feature" 类型Module的ets文件夹。 <br/>type为"har"和"shared"类型的Module中推荐使用 [ImageSource](../../../media/image/image-decoding.md)图片解码方式将资源图片解码为统一的 PixelMap加载使用。 <br>2、支持本地图片类型：bmp、jpg、png、svg和webp类型。 <br/>**说明：**<br/>- ArkTS卡片上不支持`http://`等网络相关路径前缀、`datashare://`路径前缀 以及`file://data/storage`路径前缀的字符串。 |
 | unit | LengthMetricsUnit | 是 | 用来配置ImageBitmap对象的单位模式，配置后无法动态更改， 配置方法同 [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)。 <br>异常值undefined、NaN和Infinity按默认值处理。 |
 
+**示例**
+
+参见 [constructor](#constructor)
+
 ## constructor
 
 ```TypeScript
@@ -110,6 +155,10 @@ constructor(data: PixelMap)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | PixelMap | 是 | 图片的数据源支持PixelMap对象。 |
+
+**示例**
+
+参见 [constructor](#constructor)
 
 ## constructor
 
@@ -136,6 +185,10 @@ constructor(data: PixelMap, unit: LengthMetricsUnit)
 | data | PixelMap | 是 | 图片的数据源支持PixelMap对象。 |
 | unit | LengthMetricsUnit | 是 | 用来配置ImageBitmap对象的单位模式，配置后无法动态更改， 配置方法同 [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)。 |
 
+**示例**
+
+参见 [constructor](#constructor)
+
 ## constructor
 
 ```TypeScript
@@ -160,6 +213,10 @@ constructor(data: Resource, unit?: LengthMetricsUnit)
 | --- | --- | --- | --- |
 | data | Resource | 是 | 通过资源引用方式设置图片数据源。 |
 | unit | LengthMetricsUnit | 否 | 用来配置ImageBitmap对象的单位模式，配置后无法动态更改。 <br>默认值：LengthMetricsUnit.DEFAULT。 |
+
+**示例**
+
+参见 [constructor](#constructor)
 
 ## height
 

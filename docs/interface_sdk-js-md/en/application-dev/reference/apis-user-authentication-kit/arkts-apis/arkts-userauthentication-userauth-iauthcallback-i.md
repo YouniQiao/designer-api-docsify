@@ -37,6 +37,30 @@ Called to return the authentication result. If the authentication is successful,
 | --- | --- | --- | --- |
 | result | UserAuthResult | Yes | Authentication result. It contains information such as the authentication result code, authentication token (when the authentication is successful), authentication type, and credential status. The application needs to check the **result.result** field to determine whether the authentication is successful. <br>- If the value of **result.result** is **SUCCESS(12500000)**, the authentication is successful. In this case, you can use **result.token** to perform the subsequent operations. <br>- If the value of **result.result** is another value, the authentication fails. In this case, you need to handle the error based on the specific error code. |
 
+**Examples**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let auth = new userAuth.UserAuth();
+let challenge = new Uint8Array([]);
+auth.auth(challenge, userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1, {
+  onResult: (result, extraInfo) => {
+    try {
+      console.info(`auth onResult result = ${result}`);
+      console.info(`auth onResult extraInfo = ${JSON.stringify(extraInfo)}`);
+      if (result == userAuth.ResultCode.SUCCESS) {
+        // Add the logic to be executed when the authentication is successful.
+      }  else {
+        // Add the logic to be executed when the authentication fails.
+      }
+    } catch (error) {
+      console.error(`auth onResult error = ${error}`);
+    }
+  }
+});
+```
+
 ## onResult
 
 ```TypeScript

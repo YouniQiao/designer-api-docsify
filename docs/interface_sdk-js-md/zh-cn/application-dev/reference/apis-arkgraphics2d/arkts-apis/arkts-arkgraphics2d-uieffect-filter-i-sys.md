@@ -287,6 +287,73 @@ struct ColorGradient {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { common2D, uiEffect } from "@kit.ArkGraphics2D"
+
+@Entry
+@Component
+struct ColorGradientExample {
+  build() {
+    Stack() {
+      Stack() {}
+      .visualEffect(uiEffect.createEffect()
+        .colorGradient(
+          [
+            {red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0},
+            {red: 0.0, green: 1.0, blue: 0.0, alpha: 1.0},
+            {red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0},
+            {red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0},
+          ],
+          [
+            {x: 0.1, y: 0.1},
+            {x: 0.1, y: 0.9},
+            {x: 0.9, y: 0.1},
+            {x: 0.9, y: 0.9},
+          ],
+          [12.4, 7.8, 7.8, 10.0],
+          uiEffect.Mask.createRippleMask({x: 0.5, y: 0.5}, 0.2, 0.1)
+        )
+      )
+      .width("1024px")
+      .height("1024px")
+    }
+    .width("100%")
+    .height("100%")
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component, Column, Stack, State, Row, $r } from '@kit.ArkUI'
+import uiEffect from '@ohos.graphics.uiEffect'
+import type common2D from '@ohos.graphics.common2D'
+
+@Entry
+@Component
+struct ColorGradient {
+  @State colors: Array<uiEffect.Color> = [
+    {red: 1.0, green: 0.8, blue: 0.5, alpha: 0.8} as uiEffect.Color,
+    {red: 1.0, green: 1.0, blue: 0.5, alpha: 1.0} as uiEffect.Color
+  ]
+  @State positions: Array<common2D.Point> = [
+    {x: 0.2, y: 0.2} as common2D.Point,
+    {x: 0.8, y: 0.6} as common2D.Point]
+  @State strengths: Array<double> = [0.3, 0.3]
+
+  build() {
+    Column() {
+      Row().width("100%").height("100%")
+        .backgroundFilter(uiEffect.createFilter().colorGradient(this.colors.map((v: uiEffect.Color) => v),
+          this.positions.map((v: common2D.Point) => v), this.strengths.map((v: double) => v)))
+    }
+  }
+}
+```
+
 ## contentLight
 
 ```TypeScript
@@ -929,6 +996,79 @@ maskDispersion(dispersionMap: Mask, alpha: double, rFactor?: [double, double], g
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import {image} from '@kit.ImageKit'
+import {common2D, uiEffect} from '@kit.ArkGraphics2D'
+import {common} from '@kit.AbilityKit'
+
+@Entry
+@Component
+struct MaskDispersion {
+  @State pixelMap_: PixelMap | null = null
+  @State src: common2D.Rect = { left: 0, top: 0, right: 1.0, bottom: 1.0 }
+  @State dst: common2D.Rect = { left: 0, top: 0, right: 1.0, bottom: 1.0 }
+  @State fillColor: uiEffect.Color = { red: 0, green: 0, blue: 0, alpha: 0 }
+
+  onPageShow(): void {
+    let context = this.getUIContext().getHostContext() as common.UIAbilityContext
+    context.resourceManager.getMediaByName("mask_alpha").then(val => {
+      let buffer = val.buffer.slice(0, val.buffer.byteLength)
+      let imageSource = image.createImageSource(buffer);
+      imageSource.createPixelMap().then(pixelMap => {
+        this.pixelMap_ = pixelMap
+      })
+    })
+  }
+
+  build() {
+    Stack() {
+      Image($rawfile('test.png'))
+      Row()
+        .width("100%")
+        .height("100%")
+        .backgroundFilter(uiEffect.createFilter().maskDispersion(
+          uiEffect.Mask.createPixelMapMask(this.pixelMap_, this.src, this.dst, this.fillColor),
+          1.0,
+          [0.5, -0.5],
+          [0.0, 0.0],
+          [-0.5, 0.5]))
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component, Stack, State, Image, RelativeContainer, $r } from '@kit.ArkUI'
+import uiEffect from '@ohos.graphics.uiEffect'
+
+@Entry
+@Component
+struct MaskDispersion {
+  @State centerX: double = 0.5
+  @State centerY: double = 0.5
+  @State radius: double = 0.5
+  @State rf: [double, double] = [0.3, -0.3] as [double, double]
+  @State gf: [double, double] = [0, 0] as [double, double]
+  @State bf: [double, double] = [-0.3, 0.3] as [double, double]
+
+  build() {
+    RelativeContainer() {
+      Image($r('app.media.man'))
+      Stack().width("100%").height("100%")
+        .backgroundFilter(uiEffect.createFilter().maskDispersion(
+          uiEffect.Mask.createRippleMask({ x: this.centerX, y: this.centerY }, this.radius, 0.3, 0.0),
+          1.0, this.rf, this.gf, this.bf))
+    }
+  }
+}
+```
 
 ## maskTransition
 

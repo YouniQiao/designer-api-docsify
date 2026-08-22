@@ -175,32 +175,6 @@ backgroundEffect?: BackgroundEffectOptions
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## canLoop
-
-```TypeScript
-canLoop?: boolean
-```
-
-设置是否可循环滚动。
-
-- true：可循环，年份随着月份的循环滚动进行联动加减，月份随着日的循环滚动进行联动加减。 - false：不可循环，年、月、日到达本列的顶部或底部时，无法再进行滚动，年、月、日之间也无法再联动加减。
-
-> 默认值：true
-
-**类型：** boolean
-
-**默认值：** true
-
-**起始版本：** 20
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DatePickerDialogOptions-canLoop?: boolean--><!--Device-DatePickerDialogOptions-canLoop?: boolean-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 ## cancelButtonStyle
 
 ```TypeScript
@@ -226,6 +200,32 @@ cancelButtonStyle?: PickerDialogButtonStyle
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DatePickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle--><!--Device-DatePickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## canLoop
+
+```TypeScript
+canLoop?: boolean
+```
+
+设置是否可循环滚动。
+
+- true：可循环，年份随着月份的循环滚动进行联动加减，月份随着日的循环滚动进行联动加减。 - false：不可循环，年、月、日到达本列的顶部或底部时，无法再进行滚动，年、月、日之间也无法再联动加减。
+
+> 默认值：true
+
+**类型：** boolean
+
+**默认值：** true
+
+**起始版本：** 20
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DatePickerDialogOptions-canLoop?: boolean--><!--Device-DatePickerDialogOptions-canLoop?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

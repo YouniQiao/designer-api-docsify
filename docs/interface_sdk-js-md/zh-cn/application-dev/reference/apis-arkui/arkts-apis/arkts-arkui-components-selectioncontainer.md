@@ -12,23 +12,23 @@ import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainer
 
 | 名称 | 说明 |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-arkuicomponentsselectioncontainer-selectioncontainerattribute-c.md) | 支持[通用属性](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)。 |
-| [SelectionContainerController](arkts-arkui-arkuicomponentsselectioncontainer-selectioncontainercontroller-c.md) | SelectionContainer组件的控制器。 |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | 支持[通用属性](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)。 |
+| [SelectionContainerController](arkts-arkui-arkui-components-selectioncontainer-selectioncontainercontroller-c.md) | SelectionContainer组件的控制器。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [SelectionContainerEditMenuOptions](arkts-arkui-arkuicomponentsselectioncontainer-selectioncontainereditmenuoptions-i.md) | SelectionContainer自定义编辑菜单选项。 |
-| [SelectionContainerInterface](arkts-arkui-arkuicomponentsselectioncontainer-selectioncontainerinterface-i.md) | 创建一个SelectionContainer组件。 |
-| [SelectionContainerMenuOptions](arkts-arkui-arkuicomponentsselectioncontainer-selectioncontainermenuoptions-i.md) | 配置选择菜单中的选项。 |
-| [SelectionContainerOptions](arkts-arkui-arkuicomponentsselectioncontainer-selectioncontaineroptions-i.md) | 组件初始化配置项。 |
+| [SelectionContainerEditMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md) | SelectionContainer自定义编辑菜单选项。 |
+| [SelectionContainerInterface](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerinterface-i.md) | 创建一个SelectionContainer组件。 |
+| [SelectionContainerMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md) | 配置选择菜单中的选项。 |
+| [SelectionContainerOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontaineroptions-i.md) | 组件初始化配置项。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [SelectionContainerTextJoinStyle](arkts-arkui-arkuicomponentsselectioncontainer-selectioncontainertextjoinstyle-e.md) | 文本聚合拼接方式。 |
+| [SelectionContainerTextJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md) | 文本聚合拼接方式。 |
 
 ### 类型
 

@@ -14,7 +14,7 @@ function isDeviceBound(deviceAddress: PartnerDeviceAddress): boolean
 
 Checks whether a device is bound to this application.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 

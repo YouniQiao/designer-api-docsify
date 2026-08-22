@@ -46,3 +46,19 @@ function uninstallFont(fullName: string): Promise<int>
 | [31100108](../errorcode-font-manager.md#31100108-无法删除字体) | Failed to delete the font file. |
 | [31100109](../errorcode-font-manager.md#31100109-其他错误导致卸载失败) | The system ability works abnormally. |
 
+**示例**
+
+```TypeScript
+import { fontManager } from '@kit.LocalizationKit';
+
+  async function uninstallFont() {
+    try {
+      let res = await fontManager.uninstallFont('fontName');
+      console.info('uninstallFont suc. res is ' + res);
+    } catch (error) {
+      console.error('uninstallFont err.' + error.code);
+    }
+    return;
+  }
+```
+

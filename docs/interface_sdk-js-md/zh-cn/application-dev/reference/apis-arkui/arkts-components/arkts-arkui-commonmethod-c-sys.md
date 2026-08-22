@@ -62,6 +62,19 @@ constructor.
 
 **系统接口：** 此接口为系统接口。
 
+**示例**
+
+```TypeScript
+@Builder
+function myBuilder(value: string, size: number) {
+  Text(value)
+    .fontSize(size)
+}
+
+// 使用WrappedBuilder封装myBuilder
+let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(myBuilder);
+```
+
 ## edgeLight
 
 ```TypeScript

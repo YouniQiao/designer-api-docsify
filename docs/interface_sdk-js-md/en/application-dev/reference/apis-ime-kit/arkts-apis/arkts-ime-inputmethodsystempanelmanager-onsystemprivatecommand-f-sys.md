@@ -28,7 +28,7 @@ function onSystemPrivateCommand(callback: Callback<Record<string, CommandDataTyp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | Callback function, which is triggered when the input method application or system service sends a private data command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | Callback function, which is triggered when the input method application or system service sends a private data command. |
 
 **Error codes:**
 

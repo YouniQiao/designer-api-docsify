@@ -36,6 +36,10 @@ onFailure(): void
 
 参见autoFillManager.requestAutoSave。
 
+参见autoFillManager.requestAutoSave。
+
+参见autoFillManager.requestAutoFill。
+
 ## onSuccess
 
 ```TypeScript
@@ -57,6 +61,10 @@ onSuccess(): void
 **示例**
 
 参见autoFillManager.requestAutoSave。
+
+参见autoFillManager.requestAutoSave。
+
+参见autoFillManager.requestAutoFill。
 
 ## onFailure
 

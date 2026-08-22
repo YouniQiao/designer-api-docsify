@@ -31,7 +31,7 @@ Obtain latitude and longitude info from location address
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | request | GeoCodeRequest | Yes | Indicates the geocode query parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the latitude and longitude result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the latitude and longitude result. |
 
 **Examples**
 
@@ -45,6 +45,14 @@ geolocation.getAddressesFromLocationName(geocodeRequest, (err, data) => {
     if (data) {
         console.info('getAddressesFromLocationName: data=' + JSON.stringify(data));
     }
+});
+```
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+let geocodeRequest:geolocation.GeoCodeRequest = {"description": "No. xx, xx Road, Pudong District, Shanghai", "maxItems": 1};
+geolocation.getAddressesFromLocationName(geocodeRequest).then((result) => {
+    console.info('getAddressesFromLocationName: ' + JSON.stringify(result));
 });
 ```
 
@@ -83,11 +91,5 @@ Obtain latitude and longitude info from location address
 
 **Examples**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-let geocodeRequest:geolocation.GeoCodeRequest = {"description": "No. xx, xx Road, Pudong District, Shanghai", "maxItems": 1};
-geolocation.getAddressesFromLocationName(geocodeRequest).then((result) => {
-    console.info('getAddressesFromLocationName: ' + JSON.stringify(result));
-});
-```
+See [getAddressesFromLocationName](#getaddressesfromlocationname)
 

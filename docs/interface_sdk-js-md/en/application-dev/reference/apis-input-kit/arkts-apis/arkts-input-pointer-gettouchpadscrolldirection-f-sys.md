@@ -26,7 +26,7 @@ Obtains the touchpad scroll direction. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **state** indicates whether the touchpad scroll direction matches the direction of finger movement (**true** indicates yes). Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **state** indicates whether the touchpad scroll direction matches the direction of finger movement (**true** indicates yes). Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -52,6 +52,32 @@ struct Index {
             pointer.getTouchpadScrollDirection ((error: BusinessError, state: boolean) => {
               console.info(`getTouchpadScrollDirection success, state: ${JSON.stringify(state)}`);
             });
+          } catch (error) {
+            console.error(`getTouchpadScrollDirection failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            pointer.getTouchpadScrollDirection().then((state: boolean) => {
+              console.info(`getTouchpadScrollDirection success, state: ${JSON.stringify(state)}`);
+            }).catch((error: BusinessError) => {
+              console.error(`Get touchpad scroll direction failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            })
           } catch (error) {
             console.error(`getTouchpadScrollDirection failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
@@ -93,29 +119,5 @@ Obtains the scroll direction of the touchpad. This API uses a promise to return 
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.getTouchpadScrollDirection().then((state: boolean) => {
-              console.info(`getTouchpadScrollDirection success, state: ${JSON.stringify(state)}`);
-            }).catch((error: BusinessError) => {
-              console.error(`Get touchpad scroll direction failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`getTouchpadScrollDirection failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
+See [getTouchpadScrollDirection](#gettouchpadscrolldirection)
 

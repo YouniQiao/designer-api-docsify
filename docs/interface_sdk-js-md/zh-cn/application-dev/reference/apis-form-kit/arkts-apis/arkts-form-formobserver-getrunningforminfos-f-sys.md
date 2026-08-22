@@ -41,6 +41,178 @@ function getRunningFormInfos(callback: AsyncCallback<Array<formInfo.RunningFormI
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formObserver.getRunningFormInfos((error: BusinessError, data: formInfo.RunningFormInfo[]) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      data.forEach(item => {
+        console.info(`formObserver getRunningFormInfos, formId: ${item.formId}`);
+      });
+    }
+  }, 'com.example.ohos.formjsdemo');
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { AsyncCallback } from '@ohos.base';
+import { formInfo, formObserver } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const DOMAIN: int = 0x0000;
+const TAG: string = 'testTag formAgentTest';
+
+try {
+  let callback: AsyncCallback<Array<formInfo.RunningFormInfo>> = (error: BusinessError | null, data: Array<formInfo.RunningFormInfo> | undefined) => {
+    if (error?.code != 0) {
+      console.error(`error, code: ${error?.code}, message: ${error?.message}`);
+    } else {
+      console.info(`formObserver getRunningFormInfos, item count: ${data?.length}`);
+    }
+  };
+  formObserver.getRunningFormInfos(callback, 'com.example.ohos.formjsdemo');
+} catch(error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formObserver.getRunningFormInfos((error: BusinessError, data: formInfo.RunningFormInfo[]) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      data.forEach(item => {
+        console.info(`formObserver getRunningFormInfos, formId: ${item.formId}`);
+      });
+    }
+  }, true, 'com.example.ohos.formjsdemo');
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { formInfo, formObserver } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formObserver.getRunningFormInfos((error: BusinessError | null, data: formInfo.RunningFormInfo[] | undefined) => {
+    if (error?.code != 0) {
+      console.error(`error, code: ${error?.code}, message: ${error?.message}`);
+    } else {
+      if (data !== undefined) {
+        for (let runningFormInfo of data) {
+          console.info(`formObserver getRunningFormInfos, hostBundleName : ${runningFormInfo.hostBundleName}`);
+        }
+      }
+    }
+  }, true, 'com.example.ohos.formjsdemo');
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formObserver.getRunningFormInfos('com.example.ohos.formjsdemo').then((data: formInfo.RunningFormInfo[]) => {
+    console.info('formObserver getRunningFormInfos success.');
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { formInfo, formObserver } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formObserver.getRunningFormInfos('com.example.ohos.formjsdemo').then((data: formInfo.RunningFormInfo[]) => {
+    for (let runningFormInfo of data) {
+      console.info(`formObserver getRunningFormInfos, hostBundleName : ${runningFormInfo.hostBundleName}`);
+    }
+  }).catch((error) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formObserver.getRunningFormInfos(true, 'com.example.ohos.formjsdemo').then((data: formInfo.RunningFormInfo[]) => {
+    console.info('formObserver getRunningFormInfos success.');
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { formInfo, formObserver } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formObserver.getRunningFormInfos(true, 'com.example.ohos.formjsdemo')
+    .then((data: Array<formInfo.RunningFormInfo>) => {
+      console.info(`formObserver getRunningFormInfos, item count: ${data?.length}`);
+    })
+    .catch((error) => {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
 
 ## getRunningFormInfos
 
@@ -82,6 +254,10 @@ function getRunningFormInfos(
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 
+**示例**
+
+参见 [getRunningFormInfos](#getrunningforminfos)
+
 
 ## getRunningFormInfos
 
@@ -122,6 +298,10 @@ function getRunningFormInfos(hostBundleName?: string): Promise<Array<formInfo.Ru
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
+
+**示例**
+
+参见 [getRunningFormInfos](#getrunningforminfos)
 
 
 ## getRunningFormInfos
@@ -167,4 +347,8 @@ function getRunningFormInfos(
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
+
+**示例**
+
+参见 [getRunningFormInfos](#getrunningforminfos)
 

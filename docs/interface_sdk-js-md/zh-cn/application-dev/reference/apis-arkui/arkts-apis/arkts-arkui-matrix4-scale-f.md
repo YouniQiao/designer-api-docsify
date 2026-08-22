@@ -38,3 +38,32 @@ Matrix的缩放函数，可以为当前矩阵增加x轴/y轴/z轴缩放效果。
 | --- | --- |
 | Matrix4Transit | 缩放后的矩阵对象。 |
 
+**示例**
+
+```TypeScript
+// xxx.ets
+import { matrix4 } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Test {
+  private matrix1 = matrix4.identity()
+    .scale({
+      x: 2,
+      y: 3,
+      z: 4,
+      centerX: 50,
+      centerY: 50
+    });
+
+  build() {
+    Column() {
+      // $r("app.media.testImage")需要替换为开发者所需的图像资源文件。
+      Image($r("app.media.testImage")).transform(this.matrix1)
+        .width("300px")
+        .height("300px")
+    }.width("100%").height("100%").justifyContent(FlexAlign.Center)
+  }
+}
+```
+

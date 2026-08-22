@@ -34,7 +34,7 @@ Obtains detailed attribute information of a file or directory. This API returns 
 
 | Type | Description |
 | --- | --- |
-| [Stat](arkts-corefile-filefs-stat-i.md) | Detailed information of a file or directory. |
+| [Stat](arkts-corefile-file-fs-stat-i.md) | Detailed information of a file or directory. |
 
 **Error codes:**
 
@@ -53,4 +53,11 @@ Obtains detailed attribute information of a file or directory. This API returns 
 | 13900033 | Too many symbolic links encountered |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let stat = fs.statSync(pathDir);
+console.info("get file info succeed, the size of file is " + stat.size);
+```
 

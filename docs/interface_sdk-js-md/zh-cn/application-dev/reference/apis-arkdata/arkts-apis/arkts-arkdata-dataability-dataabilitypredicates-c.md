@@ -42,37 +42,6 @@ dataAbilityPredicates.equalTo("NAME", "Lisa")
     .equalTo("SALARY", 200.5);
 ```
 
-## beginWrap
-
-```TypeScript
-beginWrap(): DataAbilityPredicates
-```
-
-在谓词中添加左括号。此方法类似于SQL语句的“(”，需要与[endWrap](#endwrap)一起使用。
-
-**起始版本：** 7
-
-<!--Device-DataAbilityPredicates-beginWrap(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-beginWrap(): DataAbilityPredicates-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回带有左括号的DataAbility谓词。 |
-
-**示例**
-
-```TypeScript
-dataAbilityPredicates.equalTo("NAME", "lisi")
-    .beginWrap()
-    .equalTo("AGE", 18)
-    .or()
-    .equalTo("SALARY", 200.5)
-    .endWrap();
-```
-
 ## beginsWith
 
 ```TypeScript
@@ -106,6 +75,37 @@ beginsWith(field: string, value: string): DataAbilityPredicates
 
 ```TypeScript
 dataAbilityPredicates.beginsWith("NAME", "os");
+```
+
+## beginWrap
+
+```TypeScript
+beginWrap(): DataAbilityPredicates
+```
+
+在谓词中添加左括号。此方法类似于SQL语句的“(”，需要与[endWrap](#endwrap)一起使用。
+
+**起始版本：** 7
+
+<!--Device-DataAbilityPredicates-beginWrap(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-beginWrap(): DataAbilityPredicates-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回带有左括号的DataAbility谓词。 |
+
+**示例**
+
+```TypeScript
+dataAbilityPredicates.equalTo("NAME", "lisi")
+    .beginWrap()
+    .equalTo("AGE", 18)
+    .or()
+    .equalTo("SALARY", 200.5)
+    .endWrap();
 ```
 
 ## between
@@ -201,37 +201,6 @@ distinct(): DataAbilityPredicates
 dataAbilityPredicates.equalTo("NAME", "Rose").distinct();
 ```
 
-## endWrap
-
-```TypeScript
-endWrap(): DataAbilityPredicates
-```
-
-在谓词中添加右括号。此方法类似于SQL语句的“)”，需要和[beginWrap](#beginwrap)一起使用。
-
-**起始版本：** 7
-
-<!--Device-DataAbilityPredicates-endWrap(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-endWrap(): DataAbilityPredicates-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回带有右括号的DataAbility谓词。 |
-
-**示例**
-
-```TypeScript
-dataAbilityPredicates.equalTo("NAME", "lisi")
-    .beginWrap()
-    .equalTo("AGE", 18)
-    .or()
-    .equalTo("SALARY", 200.5)
-    .endWrap();
-```
-
 ## endsWith
 
 ```TypeScript
@@ -265,6 +234,37 @@ endsWith(field: string, value: string): DataAbilityPredicates
 
 ```TypeScript
 dataAbilityPredicates.endsWith("NAME", "se");
+```
+
+## endWrap
+
+```TypeScript
+endWrap(): DataAbilityPredicates
+```
+
+在谓词中添加右括号。此方法类似于SQL语句的“)”，需要和[beginWrap](#beginwrap)一起使用。
+
+**起始版本：** 7
+
+<!--Device-DataAbilityPredicates-endWrap(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-endWrap(): DataAbilityPredicates-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回带有右括号的DataAbility谓词。 |
+
+**示例**
+
+```TypeScript
+dataAbilityPredicates.equalTo("NAME", "lisi")
+    .beginWrap()
+    .equalTo("AGE", 18)
+    .or()
+    .equalTo("SALARY", 200.5)
+    .endWrap();
 ```
 
 ## equalTo

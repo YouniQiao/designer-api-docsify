@@ -33,3 +33,13 @@ Requires that the target Component which is inside of another Component that spe
 | --- | --- |
 | [On](arkts-test-uitest-on-c.md) | this { |
 
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+// 使用静态构造器ON创建On对象，指定目标控件位于给出的特征属性控件之内。
+let on: On = ON.text('java').within(ON.type('Scroll')); // 查找Scroll里面的text为java的子组件。
+```
+

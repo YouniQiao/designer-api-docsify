@@ -50,6 +50,28 @@ constructor(album: Album)
 **示例**
 
 ```TypeScript
+let assetEditData: photoAccessHelper.MediaAssetEditData = new photoAccessHelper.MediaAssetEditData('system', '1.0');
+```
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('HighlightAlbum constructorDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(
+    photoAccessHelper.AlbumType.SMART, photoAccessHelper.AlbumSubtype.HIGHLIGHT, fetchOption);
+  let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
+  let highlightAlbum: photoAccessHelper.HighlightAlbum = new photoAccessHelper.HighlightAlbum(album);
+  albumFetchResult.close();
+}
+```
+
+```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
 
 async function example(context: Context) {
@@ -69,6 +91,87 @@ async function example(context: Context) {
   albumFetchResult.close();
   let changeRequest: photoAccessHelper.MediaAnalysisAlbumChangeRequest =
     new photoAccessHelper.MediaAnalysisAlbumChangeRequest(highlightAlbum);
+}
+```
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(context: Context) {
+  console.info('MediaHighlightAlbumChangeRequest constructorDemo');
+  let helper: photoAccessHelper.PhotoAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
+  let albumFetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: new dataSharePredicates.DataSharePredicates()
+  };
+  let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> =
+    await helper.getAlbums(photoAccessHelper.AlbumType.SMART, photoAccessHelper.AlbumSubtype.HIGHLIGHT, albumFetchOption);
+  if (albumFetchResult.getCount() === 0) {
+    console.error('No album');
+    return;
+  }
+  let highlightAlbum: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
+  albumFetchResult.close();
+  let changeRequest: photoAccessHelper.MediaHighlightAlbumChangeRequest =
+    new photoAccessHelper.MediaHighlightAlbumChangeRequest(highlightAlbum);
+}
+```
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(context: Context) {
+  console.info('AnalysisAlbum constructorDemo');
+  let helper: photoAccessHelper.PhotoAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
+  let albumFetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: new dataSharePredicates.DataSharePredicates()
+  };
+  let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = 
+    await helper.getAlbums(photoAccessHelper.AlbumType.SMART, photoAccessHelper.AlbumSubtype.HIGHLIGHT, albumFetchOption);
+  if (albumFetchResult.getCount() === 0) {
+    console.error('No album');
+    return;
+  }
+  let highlightAlbum: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
+  albumFetchResult.close();
+  let analysisAlbum: photoAccessHelper.AnalysisAlbum = new photoAccessHelper.AnalysisAlbum(highlightAlbum);
+}
+```
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('MediaAlbumChangeRequest constructorDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
+  let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
+  let albumChangeRequest: photoAccessHelper.MediaAlbumChangeRequest = new photoAccessHelper.MediaAlbumChangeRequest(album);
+}
+```
+
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('MediaAssetChangeRequest constructorDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+  let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+  let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = new photoAccessHelper.MediaAssetChangeRequest(photoAsset);
 }
 ```
 
@@ -115,6 +218,24 @@ static createAnalysisAlbumRequest(
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. <br>Possible causes: <br>1. The input parameter is not within the valid range. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
+
+**示例**
+
+photoAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  console.info('createAlbumRequestDemo');
+  try {
+    let albumName: string = 'newAlbumName' + new Date().getTime();
+    let albumChangeRequest: photoAccessHelper.MediaAnalysisAlbumChangeRequest = photoAccessHelper.MediaAnalysisAlbumChangeRequest.createAnalysisAlbumRequest(context, albumName, photoAccessHelper.AlbumSubtype.PORTRAIT);
+    await phAccessHelper.applyChanges(albumChangeRequest);
+    console.info('apply createAlbumRequest successfully');
+  } catch (err) {
+    console.error(`createAlbumRequestDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
 
 ## createAnalysisAlbumRequest
 
@@ -171,21 +292,7 @@ static createAnalysisAlbumRequest(
 
 **示例**
 
-photoAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
-  console.info('createAlbumRequestDemo');
-  try {
-    let albumName: string = 'newAlbumName' + new Date().getTime();
-    let albumChangeRequest: photoAccessHelper.MediaAnalysisAlbumChangeRequest = photoAccessHelper.MediaAnalysisAlbumChangeRequest.createAnalysisAlbumRequest(context, albumName, photoAccessHelper.AlbumSubtype.PORTRAIT);
-    await phAccessHelper.applyChanges(albumChangeRequest);
-    console.info('apply createAlbumRequest successfully');
-  } catch (err) {
-    console.error(`createAlbumRequestDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+参见 [createAnalysisAlbumRequest](#createanalysisalbumrequest)
 
 ## setDefaultCoverUri
 

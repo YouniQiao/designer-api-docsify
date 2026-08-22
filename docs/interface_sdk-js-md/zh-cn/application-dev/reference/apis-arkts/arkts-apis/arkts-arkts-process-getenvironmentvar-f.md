@@ -42,3 +42,10 @@ function getEnvironmentVar(name: string): string
 let pres = process.getEnvironmentVar("PATH");
 ```
 
+```TypeScript
+// 创建ProcessManager实例
+let processManager = new process.ProcessManager();
+// 获取PATH环境变量的值
+let pres = processManager.getEnvironmentVar("PATH");
+```
+

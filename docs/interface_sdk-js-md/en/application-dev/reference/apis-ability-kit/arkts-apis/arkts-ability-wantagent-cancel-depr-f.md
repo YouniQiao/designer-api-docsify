@@ -30,7 +30,7 @@ Cancel a WantAgent. Only the application that creates the WantAgent can cancel i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | to cancel. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Cancel the callback method for Want in WantAgent. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Cancel the callback method for Want in WantAgent. |
 
 **Examples**
 
@@ -86,41 +86,6 @@ wantAgent.getWantAgent({
 }, getWantAgentCallback);
 ```
 
-
-## cancel
-
-```TypeScript
-function cancel(agent: WantAgent): Promise<void>
-```
-
-Cancel a WantAgent. Only the application that creates the WantAgent can cancel it.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [cancel](arkts-ability-wantagent-cancel-f.md)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-wantAgent-function cancel(agent: WantAgent): Promise<void>--><!--Device-wantAgent-function cancel(agent: WantAgent): Promise<void>-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | to cancel. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
-
-**Examples**
-
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';
 import { BusinessError } from '@ohos.base';
@@ -163,4 +128,41 @@ wantAgent.getWantAgent({
     }
 });
 ```
+
+
+## cancel
+
+```TypeScript
+function cancel(agent: WantAgent): Promise<void>
+```
+
+Cancel a WantAgent. Only the application that creates the WantAgent can cancel it.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [cancel](arkts-ability-wantagent-cancel-f.md)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-wantAgent-function cancel(agent: WantAgent): Promise<void>--><!--Device-wantAgent-function cancel(agent: WantAgent): Promise<void>-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | to cancel. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | The promise returned by the function. |
+
+**Examples**
+
+See [cancel](#cancel)
 

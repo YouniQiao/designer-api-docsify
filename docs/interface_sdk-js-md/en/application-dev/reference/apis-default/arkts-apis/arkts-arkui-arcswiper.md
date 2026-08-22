@@ -18,22 +18,22 @@
 
 | Name | Description |
 | --- | --- |
-| [ArcDotIndicator](arkts-arkuiarcswiper-arcdotindicator-c.md) | Define ArcDotIndicator, the indicator type is arc dot. |
-| [ArcSwiperController](arkts-arkuiarcswiper-arcswipercontroller-c.md) | Provide methods for controlling ArcSwiper component. |
+| [ArcDotIndicator](arkts-arkui-arcswiper-arcdotindicator-c.md) | Define ArcDotIndicator, the indicator type is arc dot. |
+| [ArcSwiperController](arkts-arkui-arcswiper-arcswipercontroller-c.md) | Provide methods for controlling ArcSwiper component. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkuiarcswiper-arcswiperattribute-i.md) | Defines the Arc swiper attribute functions. |
-| [ArcSwiperContentAnimatedTransition](arkts-arkuiarcswiper-arcswipercontentanimatedtransition-i.md) | Defines the swiper content animated transition options. |
-| [ArcSwiperContentTransitionProxy](arkts-arkuiarcswiper-arcswipercontenttransitionproxy-i.md) | The proxy object returned to the developer during the execution of the Swiper custom content transition animation. |
+| [ArcSwiperAttribute](arkts-arkui-arcswiper-arcswiperattribute-i.md) | Defines the Arc swiper attribute functions. |
+| [ArcSwiperContentAnimatedTransition](arkts-arkui-arcswiper-arcswipercontentanimatedtransition-i.md) | Defines the swiper content animated transition options. |
+| [ArcSwiperContentTransitionProxy](arkts-arkui-arcswiper-arcswipercontenttransitionproxy-i.md) | The proxy object returned to the developer during the execution of the Swiper custom content transition animation. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ArcDirection](arkts-arkuiarcswiper-arcdirection-e.md) | Declare the direction of arc indicator. |
+| [ArcDirection](arkts-arkui-arcswiper-arcdirection-e.md) | Declare the direction of arc indicator. |
 
 ### Types
 

@@ -29,7 +29,7 @@ Answers a call. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | int | Yes | Call ID. You can obtain the value by subscribing to **callDetailsChange** events. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -48,12 +48,44 @@ Answers a call. This API uses an asynchronous callback to return the result.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+call.answerCall((err: BusinessError) => {
+    if (err) {
+        console.error(`answerCall fail, err->${JSON.stringify(err)}`);
+    } else {
+        console.info(`answerCall success.`);
+    }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 call.answerCall(1, (err: BusinessError) => {
     if (err) {
         console.error(`answerCall fail, err->${JSON.stringify(err)}`);
     } else {
         console.info(`answerCall success.`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.answerCall(1).then(() => {
+    console.info(`answerCall success.`);
+}).catch((err: BusinessError) => {
+    console.error(`answerCall fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.answerCall(0, 1).then(() => {
+    console.info(`answerCall success.`);
+}).catch((err: BusinessError) => {
+    console.error(`answerCall fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -102,15 +134,7 @@ Answers a call. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.answerCall(1).then(() => {
-    console.info(`answerCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`answerCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [answerCall](#answercall)
 
 
 ## answerCall
@@ -135,7 +159,7 @@ Answers a call. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the call is answered successfully, the value of **err** is **undefined**. Otherwise, the value is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the call is answered successfully, the value of **err** is **undefined**. Otherwise, the value is an error object. |
 
 **Error codes:**
 
@@ -151,17 +175,7 @@ Answers a call. This API uses an asynchronous callback to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.answerCall((err: BusinessError) => {
-    if (err) {
-        console.error(`answerCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`answerCall success.`);
-    }
-});
-```
+See [answerCall](#answercall)
 
 
 ## answerCall
@@ -209,15 +223,7 @@ Answers a call. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.answerCall(0, 1).then(() => {
-    console.info(`answerCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`answerCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [answerCall](#answercall)
 
 
 ## answerCall
@@ -262,4 +268,8 @@ Answers the incoming rtt
 | 8400002 | Operation failed. Cannot connect to service. |
 | 8400003 | System internal error. |
 | 8400999 | Unknown error code. |
+
+**Examples**
+
+See [answerCall](#answercall)
 

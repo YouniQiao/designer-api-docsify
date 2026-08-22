@@ -35,6 +35,25 @@ constructor()
 **示例**
 
 ```TypeScript
+let writableStream = new stream.Writable();
+```
+
+```TypeScript
+let readableStream = new stream.Readable();
+```
+
+```TypeScript
+let option : stream.ReadableOptions = {
+  encoding : "utf-8"
+};
+let readableStream = new stream.Readable(option);
+```
+
+```TypeScript
+let duplex = new stream.Duplex();
+```
+
+```TypeScript
 let transformStream = new stream.Transform();
 ```
 

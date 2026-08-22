@@ -42,7 +42,42 @@ Checks whether the ability that matches a given AbilityInfo object is enabled. T
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | Yes | Ability information. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if enabled, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if enabled, **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleName: string = "com.example.myapplication";
+let abilityName: string = "EntryAbility";
+
+bundle.getAbilityInfo(bundleName, abilityName).then((abilityInfo) => {
+  bundle.isAbilityEnabled(abilityInfo).then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+})
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleName: string = "com.example.myapplication";
+let abilityName: string = "EntryAbility";
+
+bundle.getAbilityInfo(bundleName, abilityName).then((abilityInfo) => {
+  bundle.isAbilityEnabled(abilityInfo, (err, data) => {
+    if (err) {
+      console.error('Operation failed. Cause: ' + JSON.stringify(err));
+      return;
+    }
+    console.info('Operation successful. Data:' + JSON.stringify(data));
+  })
+})
+```
 
 
 ## isAbilityEnabled
@@ -72,4 +107,8 @@ Checks whether the ability that matches a given AbilityInfo object is enabled. T
 | Type | Description |
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. **true** if enabled, **false** otherwise. |
+
+**Examples**
+
+See [isAbilityEnabled](#isabilityenabled)
 

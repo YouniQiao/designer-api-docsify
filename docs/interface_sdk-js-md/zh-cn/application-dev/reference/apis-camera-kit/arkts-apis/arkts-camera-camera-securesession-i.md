@@ -55,45 +55,21 @@ addSecureOutput(previewOutput: PreviewOutput): void
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config.<br>**适用版本：** 12 - 17 |
 
-## offError
+**示例**
 
 ```TypeScript
-offError(callback?: ErrorCallback): void
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function addSecureOutput(session: camera.SecureSession, previewOutput: camera.PreviewOutput): void {
+  try {
+    session.addSecureOutput(previewOutput);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The addOutput call failed. error code: ${err.code}`);
+  }
+}
 ```
-
-Unsubscribes from error events.
-
-**起始版本：** 23
-
-<!--Device-SecureSession-offError(callback?: ErrorCallback): void--><!--Device-SecureSession-offError(callback?: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to get the capture session errors. |
-
-## offFocusStateChange
-
-```TypeScript
-offFocusStateChange(callback?: AsyncCallback<FocusState>): void
-```
-
-Unsubscribes from focus state change event callback.
-
-**起始版本：** 23
-
-<!--Device-SecureSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void--><!--Device-SecureSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 | Callback used to get the focus state change. |
 
 ## off('error')
 
@@ -141,17 +117,17 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 | type | 'focusStateChange' | 是 | 监听事件，固定为'focusStateChange'，session创建成功可监听。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
-## onError
+## offError
 
 ```TypeScript
-onError(callback: ErrorCallback): void
+offError(callback?: ErrorCallback): void
 ```
 
-Subscribes to error events.
+Unsubscribes from error events.
 
 **起始版本：** 23
 
-<!--Device-SecureSession-onError(callback: ErrorCallback): void--><!--Device-SecureSession-onError(callback: ErrorCallback): void-End-->
+<!--Device-SecureSession-offError(callback?: ErrorCallback): void--><!--Device-SecureSession-offError(callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -159,19 +135,33 @@ Subscribes to error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to get the capture session errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to get the capture session errors. |
 
-## onFocusStateChange
+**示例**
 
 ```TypeScript
-onFocusStateChange(callback: AsyncCallback<FocusState>): void
+function unregisterCameraInputError(cameraInput: camera.CameraInput, camera: camera.CameraDevice): void {
+   cameraInput.offError(camera);
+}
 ```
 
-Subscribes focus state change event callback.
+```TypeScript
+function unregisterMetadataOutputError(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.offError();
+}
+```
+
+## offFocusStateChange
+
+```TypeScript
+offFocusStateChange(callback?: AsyncCallback<FocusState>): void
+```
+
+Unsubscribes from focus state change event callback.
 
 **起始版本：** 23
 
-<!--Device-SecureSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void--><!--Device-SecureSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void-End-->
+<!--Device-SecureSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void--><!--Device-SecureSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -179,7 +169,7 @@ Subscribes focus state change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 | Callback used to get the focus state change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 | Callback used to get the focus state change. |
 
 ## on('error')
 
@@ -234,4 +224,70 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 | --- | --- | --- | --- |
 | type | 'focusStateChange' | 是 | 监听事件，固定为'focusStateChange'，session创建成功可监听。仅当自动对焦模式时，且相机对焦状态发生改变时可触发该事件。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 | 回调函数，用于获取当前对焦状态。 |
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to error events.
+
+**起始版本：** 23
+
+<!--Device-SecureSession-onError(callback: ErrorCallback): void--><!--Device-SecureSession-onError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to get the capture session errors. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(err: BusinessError): void {
+  console.error(`Camera input error code: ${err.code}`);
+}
+
+function registerCameraInputError(cameraInput: camera.CameraInput, camera: camera.CameraDevice): void {
+   cameraInput.onError(camera, callback);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(metadataOutputError: BusinessError): void {
+  console.error(`Metadata output error code: ${metadataOutputError.code}`);
+}
+
+function registerMetadataOutputError(metadataOutput: camera.MetadataOutput): void {
+   metadataOutput.onError(callback);
+}
+```
+
+## onFocusStateChange
+
+```TypeScript
+onFocusStateChange(callback: AsyncCallback<FocusState>): void
+```
+
+Subscribes focus state change event callback.
+
+**起始版本：** 23
+
+<!--Device-SecureSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void--><!--Device-SecureSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 | Callback used to get the focus state change. |
 

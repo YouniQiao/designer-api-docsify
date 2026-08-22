@@ -40,18 +40,18 @@ import { screenshot } from '@kit.ArkUI';
 | [makeMirror](arkts-arkui-screen-makemirror-f-sys.md) | Sets the screen to mirror mode. This API uses a promise to return the result. |
 | [makeMirrorWithRegion](arkts-arkui-screen-makemirrorwithregion-f-sys.md) | Sets a rectangle on the screen to mirror mode. This API uses a promise to return the result. After this API is called, you are advised not to rotate or fold the screen further. Otherwise, the mirrored content may be abnormal. |
 | [makeUnique](arkts-arkui-screen-makeunique-f-sys.md) | Sets the screen to independent display mode. This API uses a promise to return the result. |
-| [offChange](arkts-arkui-screen-offchange-f-sys.md) | Unregister the callback for screen changes. |
-| [offConnect](arkts-arkui-screen-offconnect-f-sys.md) | Unregister the callback for screen connection events. |
-| [offDisconnect](arkts-arkui-screen-offdisconnect-f-sys.md) | Unregister the callback for screen disconnection events. |
 | off_change | Unsubscribes from events related to the screen state. |
 | off_connect | Unsubscribes from events related to the screen state. |
 | off_disconnect | Unsubscribes from events related to the screen state. |
-| [onChange](arkts-arkui-screen-onchange-f-sys.md) | Register the callback for screen change. |
-| [onConnect](arkts-arkui-screen-onconnect-f-sys.md) | Register the callback for screen connection events. |
-| [onDisconnect](arkts-arkui-screen-ondisconnect-f-sys.md) | Register the callback for screen disconnection events. |
+| [offChange](arkts-arkui-screen-offchange-f-sys.md) | Unregister the callback for screen changes. |
+| [offConnect](arkts-arkui-screen-offconnect-f-sys.md) | Unregister the callback for screen connection events. |
+| [offDisconnect](arkts-arkui-screen-offdisconnect-f-sys.md) | Unregister the callback for screen disconnection events. |
 | on_change | Subscribes to events related to the screen state. |
 | on_connect | Subscribes to events related to the screen state. |
 | on_disconnect | Subscribes to events related to the screen state. |
+| [onChange](arkts-arkui-screen-onchange-f-sys.md) | Register the callback for screen change. |
+| [onConnect](arkts-arkui-screen-onconnect-f-sys.md) | Register the callback for screen connection events. |
+| [onDisconnect](arkts-arkui-screen-ondisconnect-f-sys.md) | Register the callback for screen disconnection events. |
 | [resizeVirtualScreen](arkts-arkui-screen-resizevirtualscreen-f-sys.md) | Resizes the virtual screen. This API uses a promise to return the result. |
 | [setMultiScreenMode](arkts-arkui-screen-setmultiscreenmode-f-sys.md) | Sets the display mode (mirror or extend) of the secondary screen. This API uses a promise to return the result. If both **primaryScreenId** and **secondaryScreenId** are set to **0**, the content is displayed only on the secondary screen. |
 | [setMultiScreenRelativePosition](arkts-arkui-screen-setmultiscreenrelativeposition-f-sys.md) | Sets the positions of the primary and secondary screens in extend mode. This API uses a promise to return the result. |

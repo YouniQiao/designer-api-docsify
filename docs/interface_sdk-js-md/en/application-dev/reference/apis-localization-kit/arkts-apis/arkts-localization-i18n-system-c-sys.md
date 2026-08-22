@@ -51,6 +51,15 @@ Adds a preferred language to the specified position on the preferred language li
 **Examples**
 
 ```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// Add zh-CN to the preferred language list.
+let language: string = 'zh-CN';
+let index: number = 0;
+let success: boolean = i18n.addPreferredLanguage(language, index);
+```
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { i18n } from '@kit.LocalizationKit';
 
@@ -149,48 +158,6 @@ try {
 }
 ```
 
-## getSystemNumberPatterns
-
-```TypeScript
-static getSystemNumberPatterns(): Map<string, string>
-```
-
-Gets commonly used number patterns for system locale.
-
-**Since:** 23
-
-<!--Device-System-static getSystemNumberPatterns(): Map<string, string>--><!--Device-System-static getSystemNumberPatterns(): Map<string, string>-End-->
-
-**System capability:** SystemCapability.Global.I18n
-
-**System API:** This is a system API.
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Map&lt;string, string&gt; | a map containing the used number patterns and example of system locale. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n } from '@kit.LocalizationKit';
-
-try {
-  let systemNumberPatterns: Map<string, string> = i18n.System.getSystemNumberPatterns();
-} catch(error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call System.getSystemNumberPatterns failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
-
 ## getSystemNumberingSystems
 
 ```TypeScript
@@ -230,6 +197,48 @@ try {
 } catch(error) {
   let err: BusinessError = error as BusinessError;
   console.error(`call System.getSystemNumberingSystems failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
+## getSystemNumberPatterns
+
+```TypeScript
+static getSystemNumberPatterns(): Map<string, string>
+```
+
+Gets commonly used number patterns for system locale.
+
+**Since:** 23
+
+<!--Device-System-static getSystemNumberPatterns(): Map<string, string>--><!--Device-System-static getSystemNumberPatterns(): Map<string, string>-End-->
+
+**System capability:** SystemCapability.Global.I18n
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Map&lt;string, string&gt; | a map containing the used number patterns and example of system locale. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let systemNumberPatterns: Map<string, string> = i18n.System.getSystemNumberPatterns();
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getSystemNumberPatterns failed, error code: ${err.code}, message: ${err.message}.`);
 }
 ```
 
@@ -359,6 +368,34 @@ try {
 }
 ```
 
+## getUsingNumberingSystem
+
+```TypeScript
+static getUsingNumberingSystem(): string
+```
+
+Gets numbering system currently used by system locale.
+
+**Since:** 23
+
+<!--Device-System-static getUsingNumberingSystem(): string--><!--Device-System-static getUsingNumberingSystem(): string-End-->
+
+**System capability:** SystemCapability.Global.I18n
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string | the numbering systems's identifier. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
 ## getUsingNumberPattern
 
 ```TypeScript
@@ -400,34 +437,6 @@ try {
   console.error(`call System.getUsingNumberPattern failed, error code: ${err.code}, message: ${err.message}.`);
 }
 ```
-
-## getUsingNumberingSystem
-
-```TypeScript
-static getUsingNumberingSystem(): string
-```
-
-Gets numbering system currently used by system locale.
-
-**Since:** 23
-
-<!--Device-System-static getUsingNumberingSystem(): string--><!--Device-System-static getUsingNumberingSystem(): string-End-->
-
-**System capability:** SystemCapability.Global.I18n
-
-**System API:** This is a system API.
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| string | the numbering systems's identifier. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## getUsingNumericalDatePattern
 
@@ -507,6 +516,14 @@ Removes a preferred language from the specified position on the preferred langua
 **Examples**
 
 ```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// Delete the first preferred language from the preferred language list.
+let index: number = 0;
+let success: boolean = i18n.removePreferredLanguage(index);
+```
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { i18n } from '@kit.LocalizationKit';
 
@@ -556,6 +573,13 @@ Sets whether to use the 24-hour clock.
 **Examples**
 
 ```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// Set the system time to the 24-hour clock.
+let success: boolean = i18n.set24HourClock(true);
+```
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { i18n } from '@kit.LocalizationKit';
 
@@ -601,6 +625,14 @@ Sets the first day of a week.
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 **Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let calendar: i18n.Calendar = i18n.getCalendar('zh-Hans');
+calendar.setFirstDayOfWeek(3);
+let firstDayOfWeek: number = calendar.getFirstDayOfWeek(); // firstDayOfWeek = 3
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -802,52 +834,6 @@ try {
 }
 ```
 
-## setSystemNumberPattern
-
-```TypeScript
-static setSystemNumberPattern(pattern: string): void
-```
-
-Sets the number pattern used by the system locale.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.UPDATE_CONFIGURATION
-
-<!--Device-System-static setSystemNumberPattern(pattern: string): void--><!--Device-System-static setSystemNumberPattern(pattern: string): void-End-->
-
-**System capability:** SystemCapability.Global.I18n
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pattern | string | Yes | Identifier of the number pattern. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n } from '@kit.LocalizationKit';
-
-try {
-  i18n.System.setSystemNumberPattern("002e002c"); // If the specified number pattern is not supported, an error is reported.
-} catch(error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call System.setSystemNumberPattern failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
-
 ## setSystemNumberingSystem
 
 ```TypeScript
@@ -891,6 +877,52 @@ try {
 } catch(error) {
   let err: BusinessError = error as BusinessError;
   console.error(`call System.setSystemNumberingSystem failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
+## setSystemNumberPattern
+
+```TypeScript
+static setSystemNumberPattern(pattern: string): void
+```
+
+Sets the number pattern used by the system locale.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-System-static setSystemNumberPattern(pattern: string): void--><!--Device-System-static setSystemNumberPattern(pattern: string): void-End-->
+
+**System capability:** SystemCapability.Global.I18n
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pattern | string | Yes | Identifier of the number pattern. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  i18n.System.setSystemNumberPattern("002e002c"); // If the specified number pattern is not supported, an error is reported.
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.setSystemNumberPattern failed, error code: ${err.code}, message: ${err.message}.`);
 }
 ```
 

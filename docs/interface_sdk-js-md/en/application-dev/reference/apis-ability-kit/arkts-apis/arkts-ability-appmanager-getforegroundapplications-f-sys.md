@@ -28,7 +28,7 @@ Obtains applications that are running in the foreground. The application informa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;AppStateData&gt;&gt; | Yes | Callback used to return the API call result and an array holding the application state data. You can perform error handling or custom processing in this callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AppStateData&gt;&gt; | Yes | Callback used to return the API call result and an array holding the application state data. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 
@@ -60,6 +60,17 @@ try {
   let message = (paramError as BusinessError).message;
   console.error(`[appManager] error: ${code}, ${message}`);
 }
+```
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appManager.getForegroundApplications().then((data) => {
+  console.info(`getForegroundApplications success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`getForegroundApplications fail, err: ${JSON.stringify(err)}`);
+});
 ```
 
 
@@ -97,14 +108,5 @@ Obtains applications that are running in the foreground. The application informa
 
 **Examples**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appManager.getForegroundApplications().then((data) => {
-  console.info(`getForegroundApplications success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`getForegroundApplications fail, err: ${JSON.stringify(err)}`);
-});
-```
+See [getForegroundApplications](#getforegroundapplications)
 

@@ -56,6 +56,18 @@ print.connectPrinter(printerId, (err: BusinessError) => {
 })
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+
+let printerId: string = 'printerId_32';
+print.connectPrinter(printerId).then(() => {
+    console.info('start connect Printer success');
+}).catch((error: BusinessError) => {
+    console.error('failed to connect Printer because : ' + JSON.stringify(error));
+})
+```
+
 
 ## connectPrinter
 
@@ -98,15 +110,5 @@ function connectPrinter(printerId: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let printerId: string = 'printerId_32';
-print.connectPrinter(printerId).then(() => {
-    console.info('start connect Printer success');
-}).catch((error: BusinessError) => {
-    console.error('failed to connect Printer because : ' + JSON.stringify(error));
-})
-```
+参见 [connectPrinter](#connectprinter)
 

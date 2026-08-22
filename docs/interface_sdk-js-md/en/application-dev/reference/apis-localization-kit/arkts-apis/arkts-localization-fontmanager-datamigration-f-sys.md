@@ -45,3 +45,30 @@ Data migration API used during device upgrades to start a migration task, provid
 | [31100110](../errorcode-font-manager.md#31100110-failed-to-call-the-api-due-to-system-errors) | Call failed due to system error. |
 | [31100111](../errorcode-font-manager.md#31100111-migration-task-being-executed) | Data migration is in progress. |
 
+**Examples**
+
+```TypeScript
+import { fontManager } from '@kit.LocalizationKit';
+
+dataMigration() {
+  const callback: fontManager.DataMigrationCallback = {
+    onHeartBeat: () => {
+      console.info('onHeartBeat callback');
+    },
+    onProgress(progress : fontManager.DataMigrationProgress) => {
+      console.info('onProgress callback');
+    },
+    onResult(result : int) => {
+      console.info('onResult callback');
+    }
+  }
+  try {
+    let res = await fontManager.dataMigration(callback);
+    console.info('dataMigration suc. res is ' + res);
+  } catch (error) {
+    console.error('dataMigration err.' + error.code);
+  }
+  return;
+}
+```
+

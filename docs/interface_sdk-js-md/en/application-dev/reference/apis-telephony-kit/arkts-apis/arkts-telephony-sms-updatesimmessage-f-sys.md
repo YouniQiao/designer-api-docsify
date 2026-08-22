@@ -29,7 +29,7 @@ Updates a SIM message. This API uses an asynchronous callback to return the resu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [UpdateSimMessageOptions](arkts-telephony-sms-updatesimmessageoptions-i-sys.md) | Yes | SIM message updating options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -58,6 +58,25 @@ let updateSimMessageOptions: sms.UpdateSimMessageOptions = {
 };
 sms.updateSimMessage(updateSimMessageOptions, (err: BusinessError) => {
       console.info(`callback: err->${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let updateSimMessageOptions: sms.UpdateSimMessageOptions = {
+    slotId: 0,
+    msgIndex: 1,
+    newStatus: sms.SimMessageStatus.SIM_MESSAGE_STATUS_FREE,
+    pdu: "xxxxxxx",
+    smsc: "test"
+};
+let promise = sms.updateSimMessage(updateSimMessageOptions);
+promise.then(() => {
+    console.info(`updateSimMessage success.`);
+}).catch((err: BusinessError) => {
+    console.error(`updateSimMessage failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -106,22 +125,5 @@ Updates a SIM message. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let updateSimMessageOptions: sms.UpdateSimMessageOptions = {
-    slotId: 0,
-    msgIndex: 1,
-    newStatus: sms.SimMessageStatus.SIM_MESSAGE_STATUS_FREE,
-    pdu: "xxxxxxx",
-    smsc: "test"
-};
-let promise = sms.updateSimMessage(updateSimMessageOptions);
-promise.then(() => {
-    console.info(`updateSimMessage success.`);
-}).catch((err: BusinessError) => {
-    console.error(`updateSimMessage failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [updateSimMessage](#updatesimmessage)
 

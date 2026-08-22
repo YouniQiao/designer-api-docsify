@@ -36,7 +36,38 @@ Removes notifications under a notification group of a specified application. Thi
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
 | groupName | string | Yes | Name of the notification group. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let removeGroupByBundleCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.info("removeGroupByBundle failed " + JSON.stringify(err));
+  } else {
+    console.info("removeGroupByBundle success");
+  }
+}
+
+let bundleOption: Notification.BundleOption = {bundle: "Bundle"};
+let groupName: string = "GroupName";
+
+Notification.removeGroupByBundle(bundleOption, groupName, removeGroupByBundleCallback);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+let bundleOption: Notification.BundleOption = {bundle: "Bundle"};
+let groupName: string = "GroupName";
+Notification.removeGroupByBundle(bundleOption, groupName).then(() => {
+  console.info("removeGroupByBundle success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`removeGroupByBundle failed, code is ${err}`);
+});
+```
 
 
 ## removeGroupByBundle
@@ -73,4 +104,8 @@ Removes notifications under a notification group of a specified application. Thi
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | the promise returned by the function. |
+
+**Examples**
+
+See [removeGroupByBundle](#removegroupbybundle)
 

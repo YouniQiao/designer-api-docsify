@@ -32,7 +32,7 @@ cancel cancels a published notification based
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -57,6 +57,16 @@ let cancelAllCallback = (err: BusinessError): void => {
   }
 }
 notificationManager.cancelAll(cancelAllCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.cancelAll().then(() => {
+  console.info(`Succeeded in canceling all notification.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to cancel all notification. Code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -98,13 +108,5 @@ cancel cancels a notification with the specified ID.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.cancelAll().then(() => {
-  console.info(`Succeeded in canceling all notification.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to cancel all notification. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [cancelAll](#cancelall)
 

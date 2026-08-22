@@ -28,7 +28,7 @@ export function requestAutoSave(context: UIContext, callback?: AutoSaveCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md) | 是 | UI context in which the auto-save operation will be performed. |
+| context | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | UI context in which the auto-save operation will be performed. |
 | callback | [AutoSaveCallback](arkts-ability-autofillmanager-autosavecallback-i.md) | 否 | Implements callbacks triggered when auto-save is complete. |
 
 **错误码：**
@@ -230,6 +230,169 @@ struct Index {
             try {
               // 发起保存请求
               autoFillManager.requestAutoSave(this.uiContext, callback);
+            } catch (error) {
+              console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+            }
+          })
+      }
+    }
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// Index.ets
+import { autoFillManager } from '@kit.AbilityKit';
+import { UIContext } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// request需按照实际工程配置
+let request: autoFillManager.SaveRequest = {
+  viewData: {
+    bundleName: "com.example.testBundleName",
+    pageUrl: "testPageUrl",
+    pageNodeInfos: [
+      {
+        id: 1,
+        autoFillType: autoFillManager.AutoFillType.USER_NAME,
+        value: "testValue1",
+        placeholder: "testPlaceholder1",
+        rect: {
+          left: 1,
+          top: 1,
+          width: 1,
+          height: 1,
+        },
+        isFocus: false
+      },
+      {
+        id: 2,
+        autoFillType: autoFillManager.AutoFillType.PASSWORD,
+        value: "testValue2",
+        placeholder: "testPlaceholder2",
+        rect: {
+          left: 1,
+          top: 1,
+          width: 1,
+          height: 1,
+        },
+        isFocus: false
+      }
+    ],
+    pageRect: {
+      left: 1,
+      top: 1,
+      width: 1,
+      height: 1
+    }
+  }
+}
+// 定义自动保存回调
+let callback: autoFillManager.AutoSaveCallback = {
+  onSuccess: () => {
+    console.info(`save request on success.`);
+  },
+  onFailure: () => {
+    console.error(`save request on failure.`);
+  }
+};
+
+@Entry
+@Component
+struct Index {
+  private uiContext: UIContext = this.getUIContext();
+  build() {
+    GridRow({ gutter: { y: 20 } }) {
+      GridCol({ span: 20 }) {
+        Button('requestAutoSave')
+          .onClick(() => {
+            try {
+              // 发起保存请求
+              autoFillManager.requestAutoSave(this.uiContext, request, callback);
+            } catch (error) {
+              console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+            }
+          })
+      }
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+// Index.ets
+import { autoFillManager } from '@kit.AbilityKit';
+import { Entry, Component, Button, UIContext, State, GridRow, GridCol, TextInput, InputType } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// request需按照实际工程配置
+let request: autoFillManager.SaveRequest = {
+  viewData: {
+    bundleName: "com.example.testBundleName",
+    pageUrl: "testPageUrl",
+    pageNodeInfos: [
+      {
+        id: 1,
+        autoFillType: autoFillManager.AutoFillType.USER_NAME,
+        value: "testValue1",
+        placeholder: "testPlaceholder1",
+        rect: {
+          left: 1,
+          top: 1,
+          width: 1,
+          height: 1,
+        },
+        isFocus: false
+      },
+      {
+        id: 2,
+        autoFillType: autoFillManager.AutoFillType.PASSWORD,
+        value: "testValue2",
+        placeholder: "testPlaceholder2",
+        rect: {
+          left: 1,
+          top: 1,
+          width: 1,
+          height: 1,
+        },
+        isFocus: false
+      }
+    ],
+    pageRect: {
+      left: 1,
+      top: 1,
+      width: 1,
+      height: 1
+    }
+  }
+}
+let callback: autoFillManager.AutoSaveCallback = {
+  onSuccess: () => {
+    console.info(`save request on success.`);
+  },
+  onFailure: () => {
+    console.error(`save request on failure.`);
+  }
+};
+
+@Entry
+@Component
+struct Index {
+  private uiContext: UIContext = this.getUIContext();
+  build() {
+    GridRow({ gutter: { y: 20 } }) {
+      GridCol({ span: 20 }) {
+        Button('requestAutoSave')
+          .onClick(() => {
+            try {
+              // 发起保存请求
+              autoFillManager.requestAutoSave(this.uiContext, request, callback);
             } catch (error) {
               console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
             }

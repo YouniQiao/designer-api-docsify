@@ -107,7 +107,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | uiContext used to create the BuilderNode |
+| uiContext | [UIContext](arkts-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the BuilderNode |
 | options | [RenderOptions](arkts-buildernode-renderoptions-i.md) | No | Render options of the Builder Node |
 
 ## dispose
@@ -150,7 +150,7 @@ Get the FrameNode in BuilderNode.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-framenode-c.md) \| null | Returns a FrameNode inside the BuilderNode, or null if not contained. |
+| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) \| null | Returns a FrameNode inside the BuilderNode, or null if not contained. |
 
 ## inheritFreezeOptions
 

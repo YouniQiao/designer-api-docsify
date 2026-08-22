@@ -29,7 +29,7 @@ Enables or disables static subscription for an app. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Whether static subscription is enabled.<br> **true**: enabled; **false**: disabled. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -67,6 +67,54 @@ commonEventManager.setStaticSubscriberState(true, (err: BusinessError | null) =>
     return;
   }
   console.info(`setStaticSubscriberState success`);
+});
+```
+
+ArkTS-Dyn example:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+commonEventManager.setStaticSubscriberState(false).then(() => {
+  console.info(`setStaticSubscriberState success`);
+}).catch ((err: BusinessError) => {
+  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMes: ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+commonEventManager.setStaticSubscriberState(false).then(() => {
+  console.info(`setStaticSubscriberState success`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`setStaticSubscriberState failed, errCode: ${error.code}, errMes: ${error.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let eventName: string[] = ['usual.event.SEND_DATA'];
+commonEventManager.setStaticSubscriberState(true, eventName).then(() => {
+  console.info(`setStaticSubscriberState success, state is ${true}`);
+}).catch((err: BusinessError) => {
+  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMes: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let evenName: string[] = ['usual.event.SEND_DATA'];
+commonEventManager.setStaticSubscriberState(true, evenName).then(() => {
+  console.info(`setStaticSubscriberState success, state is ${true}`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`setStaticSubscriberState failed, errCode: ${error.code}, errMes: ${error.message}`);
 });
 ```
 
@@ -112,30 +160,7 @@ Enables or disables static subscription for an app. This API uses a promise to r
 
 **Examples**
 
-ArkTS-Dyn example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-commonEventManager.setStaticSubscriberState(false).then(() => {
-  console.info(`setStaticSubscriberState success`);
-}).catch ((err: BusinessError) => {
-  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMes: ${err.message}`);
-});
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-commonEventManager.setStaticSubscriberState(false).then(() => {
-  console.info(`setStaticSubscriberState success`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`setStaticSubscriberState failed, errCode: ${error.code}, errMes: ${error.message}`);
-});
-```
+See [setStaticSubscriberState](#setstaticsubscriberstate)
 
 
 ## setStaticSubscriberState
@@ -180,16 +205,7 @@ Enables or disables static subscription to a common event for the current app. T
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let eventName: string[] = ['usual.event.SEND_DATA'];
-commonEventManager.setStaticSubscriberState(true, eventName).then(() => {
-  console.info(`setStaticSubscriberState success, state is ${true}`);
-}).catch((err: BusinessError) => {
-  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMes: ${err.message}`);
-});
-```
+See [setStaticSubscriberState](#setstaticsubscriberstate)
 
 
 ## setStaticSubscriberState
@@ -234,15 +250,5 @@ Set static subscriber state.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let evenName: string[] = ['usual.event.SEND_DATA'];
-commonEventManager.setStaticSubscriberState(true, evenName).then(() => {
-  console.info(`setStaticSubscriberState success, state is ${true}`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`setStaticSubscriberState failed, errCode: ${error.code}, errMes: ${error.message}`);
-});
-```
+See [setStaticSubscriberState](#setstaticsubscriberstate)
 

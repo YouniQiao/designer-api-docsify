@@ -31,6 +31,87 @@ Constructor.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class WebObj {
+  constructor() {
+  }
+
+  webTest(): string {
+    console.info('Web test');
+    return "Web test";
+  }
+
+  webString(): void {
+    console.info('Web test toString');
+  }
+}
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController()
+  @State webTestObj: WebObj = new WebObj();
+
+  build() {
+    Column() {
+      Button('refresh')
+        .onClick(() => {
+          try {
+            this.controller.refresh();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('deleteJavaScriptRegister')
+        .onClick(() => {
+          try {
+            this.controller.deleteJavaScriptRegister("objTestName");
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: '', controller: this.controller })
+        .javaScriptAccess(true)
+        .onControllerAttached(() => {
+          this.controller.loadUrl($rawfile("index.html"));
+          this.controller.registerJavaScriptProxy(this.webTestObj, "objTestName", ["webTest", "webString"]);
+        })
+    }
+  }
+}
+```
+
+HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+    </head>
+    <body>
+      <button type="button" onclick="htmlTest()">Click Me!</button>
+      <p id="demo"></p>
+      <p id="webDemo"></p>
+      <script type="text/javascript">
+        function htmlTest() {
+          // This function call expects to return "Web test"
+          let webStr = objTestName.webTest();
+          document.getElementById("webDemo").innerHTML=webStr;
+          console.info('objTestName.webTest result:'+ webStr)
+        }
+      </script>
+    </body>
+</html>
+```
+
 ## getCustomErrorCode
 
 ```TypeScript
@@ -147,7 +228,7 @@ Get net error code.
 
 | Type | Description |
 | --- | --- |
-| [WebNetErrorList](../../apis-arkweb/arkts-apis/arkts-arkweb-webneterrorlist-webneterrorlist-e.md) | Return response error code. |
+| [WebNetErrorList](../../apis-arkweb/arkts-apis/arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | Return response error code. |
 
 ## getStatus
 
@@ -214,6 +295,35 @@ Get the resolved URL after redirects or changed as a result of HSTS.
 | Type | Description |
 | --- | --- |
 | string | Return response url for redirects. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getUrl')
+        .onClick(() => {
+          try {
+            let url = this.controller.getUrl();
+            console.info("url: " + url);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## setCustomErrorCode
 
@@ -345,7 +455,7 @@ Set net error code.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | [WebNetErrorList](../../apis-arkweb/arkts-apis/arkts-arkweb-webneterrorlist-webneterrorlist-e.md) | Yes | Set net error code. |
+| code | [WebNetErrorList](../../apis-arkweb/arkts-apis/arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | Yes | Set net error code. |
 
 **Error codes:**
 

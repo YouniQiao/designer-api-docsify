@@ -20,3 +20,22 @@
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
+**示例**
+
+```TypeScript
+import { unifiedDataChannel } from '@kit.ArkData';
+import { fileUri } from '@kit.CoreFileKit';
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let context = this.context;
+    let pathDir = context.filesDir;
+    let image = new unifiedDataChannel.Image();
+    let filePath = pathDir + '/test.jpg';
+    image.imageUri = fileUri.getUriFromPath(filePath);
+  }
+}
+```
+

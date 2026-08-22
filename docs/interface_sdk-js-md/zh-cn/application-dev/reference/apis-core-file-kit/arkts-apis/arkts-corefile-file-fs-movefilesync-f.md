@@ -58,3 +58,12 @@ declare function moveFileSync(src: string, dest: string, mode?: number): void
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**示例**
+
+```TypeScript
+let srcPath = pathDir + "/source.txt";
+let destPath = pathDir + "/dest.txt";
+fileIo.moveFileSync(srcPath, destPath, 0);
+console.info(`Succeeded in moving file.`);
+```
+

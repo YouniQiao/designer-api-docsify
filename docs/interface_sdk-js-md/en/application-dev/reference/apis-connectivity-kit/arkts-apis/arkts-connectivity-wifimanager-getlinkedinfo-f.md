@@ -40,6 +40,18 @@ Obtain connection information about the Wi-Fi connection. If does't have the per
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 | [2501001](../errorcode-wifi.md#2501001-sta-disabled) | Wi-Fi STA disabled. |
 
+**Examples**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+wifiManager.getLinkedInfo().then((data: wifiManager.WifiLinkedInfo) => {
+    console.info("get wifi linked info: " + JSON.stringify(data));
+}).catch((error: Error) => {
+    console.error("get linked info error: ", error);
+});
+```
+
 
 ## getLinkedInfo
 
@@ -61,7 +73,7 @@ Obtain connection information about the Wi-Fi connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;WifiLinkedInfo&gt; | Yes | Indicates callback of function. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiLinkedInfo&gt; | Yes | Indicates callback of function. |
 
 **Error codes:**
 
@@ -75,13 +87,5 @@ Obtain connection information about the Wi-Fi connection.
 
 **Examples**
 
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-wifiManager.getLinkedInfo().then((data: wifiManager.WifiLinkedInfo) => {
-    console.info("get wifi linked info: " + JSON.stringify(data));
-}).catch((error: Error) => {
-    console.error("get linked info error: ", error);
-});
-```
+See [getLinkedInfo](#getlinkedinfo)
 

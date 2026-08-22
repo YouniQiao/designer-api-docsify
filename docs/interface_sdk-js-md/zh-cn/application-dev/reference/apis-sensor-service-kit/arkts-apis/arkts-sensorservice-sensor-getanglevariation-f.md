@@ -116,43 +116,6 @@ try {
 }
 ```
 
-
-## getAngleVariation
-
-```TypeScript
-function getAngleVariation(currentRotationMatrix: Array<double>, preRotationMatrix: Array<double>): Promise<Array<double>>
-```
-
-得到两个旋转矩阵之间的角度变化。使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-sensor-function getAngleVariation(currentRotationMatrix: Array<double>, preRotationMatrix: Array<double>): Promise<Array<double>>--><!--Device-sensor-function getAngleVariation(currentRotationMatrix: Array<double>, preRotationMatrix: Array<double>): Promise<Array<double>>-End-->
-
-**系统能力：** SystemCapability.Sensors.Sensor
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| currentRotationMatrix | Array&lt;double&gt; | 是 | 当前旋转矩阵。 |
-| preRotationMatrix | Array&lt;double&gt; | 是 | 相对旋转矩阵。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;double&gt;&gt; | Promise对象，使用异步方式返回绕z、x、y轴方向的旋转角度，单位：°（度）。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -225,4 +188,43 @@ try {
   console.error(`Failed to get angle variation. Code: ${e.code}, message: ${e.message}`);
 }
 ```
+
+
+## getAngleVariation
+
+```TypeScript
+function getAngleVariation(currentRotationMatrix: Array<double>, preRotationMatrix: Array<double>): Promise<Array<double>>
+```
+
+得到两个旋转矩阵之间的角度变化。使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-sensor-function getAngleVariation(currentRotationMatrix: Array<double>, preRotationMatrix: Array<double>): Promise<Array<double>>--><!--Device-sensor-function getAngleVariation(currentRotationMatrix: Array<double>, preRotationMatrix: Array<double>): Promise<Array<double>>-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| currentRotationMatrix | Array&lt;double&gt; | 是 | 当前旋转矩阵。 |
+| preRotationMatrix | Array&lt;double&gt; | 是 | 相对旋转矩阵。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;double&gt;&gt; | Promise对象，使用异步方式返回绕z、x、y轴方向的旋转角度，单位：°（度）。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+**示例**
+
+参见 [getAngleVariation](#getanglevariation)
 

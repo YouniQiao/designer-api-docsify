@@ -97,3 +97,7 @@ Set whether an application is enabled or disabled, with control over whether the
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle is not found. |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
 
+**Examples**
+
+See [setApplicationEnabledSync](#setapplicationenabledsync)
+

@@ -48,6 +48,14 @@ console.info(`${str}: ${str.length} characters, ${buffer.byteLength(str, 'utf-8'
 // 输出结果：½ + ¼ = ¾: 9 characters, 12 bytes
 ```
 
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let str = '\u00bd + \u00bc = \u00be';
+console.info(`${str}: ${str.length} characters, ${buffer.byteLength(str, 'utf-8')} bytes`);
+// 输出结果：½ + ¼ = ¾: 9 characters, 12 bytes
+```
+
 
 ## byteLength
 
@@ -83,11 +91,5 @@ function byteLength(
 
 **示例**
 
-```TypeScript
-import { buffer } from '@kit.ArkTS';
-
-let str = '\u00bd + \u00bc = \u00be';
-console.info(`${str}: ${str.length} characters, ${buffer.byteLength(str, 'utf-8')} bytes`);
-// 输出结果：½ + ¼ = ¾: 9 characters, 12 bytes
-```
+参见 [byteLength](#bytelength)
 

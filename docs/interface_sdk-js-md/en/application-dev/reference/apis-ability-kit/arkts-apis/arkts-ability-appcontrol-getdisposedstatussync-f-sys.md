@@ -34,7 +34,7 @@ Obtains the disposed status of an application. This API returns the result synch
 
 | Type | Description |
 | --- | --- |
-| [Want](arkts-ability-appabilitywant-want-c.md) | Disposed status. |
+| [Want](arkts-ability-app-ability-want-want-c.md) | Disposed status. |
 
 **Error codes:**
 

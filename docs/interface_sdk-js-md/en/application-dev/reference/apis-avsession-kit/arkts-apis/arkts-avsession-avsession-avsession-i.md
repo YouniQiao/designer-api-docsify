@@ -32,7 +32,7 @@ Activate the session, indicating that the session can accept control commands
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the session is activated. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the session is activated. |
 
 **Error codes:**
 
@@ -40,6 +40,30 @@ Activate the session, indicating that the session can accept control commands
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+currentAVSession.activate().then(() => {
+  console.info('Activate : SUCCESS ');
+}).catch((err: BusinessError) => {
+  console.error(`Activate BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+currentAVSession.activate((err: BusinessError) => {
+  if (err) {
+    console.error(`Activate BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Activate : SUCCESS ');
+  }
+});
+```
 
 ## activate
 
@@ -70,6 +94,10 @@ Activate the session, indicating that the session can accept control commands
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
+**Examples**
+
+See [activate](#activate)
+
 ## deactivate
 
 ```TypeScript
@@ -88,7 +116,7 @@ Deactivate the session, indicating that the session not ready to accept control 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the session is deactivated. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the session is deactivated. |
 
 **Error codes:**
 
@@ -96,6 +124,30 @@ Deactivate the session, indicating that the session not ready to accept control 
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+currentAVSession.deactivate().then(() => {
+  console.info('Deactivate : SUCCESS ');
+}).catch((err: BusinessError) => {
+  console.error(`Deactivate BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+currentAVSession.deactivate((err: BusinessError) => {
+  if (err) {
+    console.error(`Deactivate BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Deactivate : SUCCESS ');
+  }
+});
+```
 
 ## deactivate
 
@@ -126,6 +178,10 @@ Deactivate the session, indicating that the session not ready to accept control 
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
+**Examples**
+
+See [deactivate](#deactivate)
+
 ## destroy
 
 ```TypeScript
@@ -144,7 +200,7 @@ Destroy this session, the server will clean up the session resources
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -152,6 +208,52 @@ Destroy this session, the server will clean up the session resources
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+currentAVSession.destroy().then(() => {
+  console.info('Destroy : SUCCESS ');
+}).catch((err: BusinessError) => {
+  console.error(`Destroy BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+currentAVSession.destroy((err: BusinessError) => {
+  if (err) {
+    console.error(`Destroy BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Destroy : SUCCESS ');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.destroy().then(() => {
+  console.info('Destroy : SUCCESS ');
+}).catch((err: BusinessError) => {
+  console.error(`Destroy BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.destroy((err: BusinessError) => {
+  if (err) {
+    console.error(`Destroy BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Destroy : SUCCESS ');
+  }
+});
+```
 
 ## destroy
 
@@ -182,6 +284,10 @@ Destroy this session, the server will clean up the session resources
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
+**Examples**
+
+See [destroy](#destroy)
+
 ## dispatchSessionEvent
 
 ```TypeScript
@@ -202,7 +308,7 @@ Dispatch the session event of this session.
 | --- | --- | --- | --- |
 | event | string | Yes | Session event name to dispatch |
 | args | {[key: string]: Object} | Yes | The parameters of session event |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -211,6 +317,87 @@ Dispatch the session event of this session.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+
+  build() { 
+    Column() {
+        Text(this.message)
+          .onClick(()=>{
+            let currentAVSession: avSession.AVSession | undefined = undefined;
+            let tag = "createNewSession";
+            let context: Context = this.getUIContext().getHostContext() as Context;
+
+            avSession.createAVSession(context, tag, "audio", (err: BusinessError, data: avSession.AVSession) => {
+              if (err) {
+                console.error(`CreateAVSession BusinessError: code: ${err.code}, message: ${err.message}`);
+              } else {
+                currentAVSession = data;
+                let eventName = "dynamic_lyric";
+                if (currentAVSession !== undefined) {
+                  (currentAVSession as avSession.AVSession).dispatchSessionEvent(eventName, {lyric : "This is lyric"}).then(() => {
+                    console.info('dispatchSessionEvent successfully');
+                  }).catch((err: BusinessError) => {
+                    console.error(`dispatchSessionEvent BusinessError: code: ${err.code}, message: ${err.message}`);
+                  })
+                }
+              }
+            });
+          })
+      }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit';
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+
+  build() { 
+    Column() {
+        Text(this.message)
+          .onClick(()=>{
+            let currentAVSession: avSession.AVSession | undefined = undefined;
+            let tag = "createNewSession";
+            let context: Context = this.getUIContext().getHostContext() as Context;
+
+            avSession.createAVSession(context, tag, "audio", (err: BusinessError, data: avSession.AVSession) => {
+              if (err) {
+                console.error(`CreateAVSession BusinessError: code: ${err.code}, message: ${err.message}`);
+              } else {
+                currentAVSession = data;
+                let eventName: string = "dynamic_lyric";
+                if (currentAVSession !== undefined) {
+                  (currentAVSession as avSession.AVSession).dispatchSessionEvent(eventName, {lyric : "This is lyric"}, (err: BusinessError) => {
+                    if (err) {
+                      console.error(`dispatchSessionEvent BusinessError: code: ${err.code}, message: ${err.message}`);
+                    }
+                  })
+                }
+              }
+            });
+          })
+      }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## dispatchSessionEvent
 
@@ -234,7 +421,7 @@ Dispatch the session event of this session.
 | --- | --- | --- | --- |
 | event | string | Yes | Session event name to dispatch |
 | args | Record&lt;string, Object&gt; | Yes | The parameters of session event |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -242,6 +429,10 @@ Dispatch the session event of this session.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+See [dispatchSessionEvent](#dispatchsessionevent)
 
 ## dispatchSessionEvent
 
@@ -280,6 +471,10 @@ Dispatch the session event of this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
+**Examples**
+
+See [dispatchSessionEvent](#dispatchsessionevent)
+
 ## dispatchSessionEvent
 
 ```TypeScript
@@ -315,6 +510,10 @@ Dispatch the session event of this session.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+See [dispatchSessionEvent](#dispatchsessionevent)
 
 ## enableDesktopLyric
 
@@ -352,6 +551,50 @@ Enable desktop lyric for this session.
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
+## getAllCastDisplays
+
+```TypeScript
+getAllCastDisplays(): Promise<Array<CastDisplayInfo>>
+```
+
+Get all the current virtual display information for extended display.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-AVSession-getAllCastDisplays(): Promise<Array<CastDisplayInfo>>--><!--Device-AVSession-getAllCastDisplays(): Promise<Array<CastDisplayInfo>>-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.ExtendedDisplayCast
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt;&gt; | Promise for the CastDisplayInfo |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let castDisplay: avSession.CastDisplayInfo;
+currentAVSession.getAllCastDisplays().then((data: Array< avSession.CastDisplayInfo >) => {
+    if (data.length >= 1) {
+       castDisplay = data[0];
+     }
+   }).catch((err: BusinessError) => {
+     console.error(`Failed to getAllCastDisplay. Code: ${err.code}, message: ${err.message}`);
+   });
+```
+
 ## getAVCastController
 
 ```TypeScript
@@ -370,7 +613,7 @@ Get the cast controller when the session is casted to remote device. If the avse
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md)&gt; | Yes | async callback for the AVCastController. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md)&gt; | Yes | async callback for the AVCastController. |
 
 **Error codes:**
 
@@ -378,6 +621,102 @@ Get the cast controller when the session is casted to remote device. If the avse
 | --- | --- |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let aVCastController: avSession.AVCastController;
+currentAVSession.getAVCastController().then((avcontroller: avSession.AVCastController) => {
+  aVCastController = avcontroller;
+  console.info('getAVCastController : SUCCESS');
+}).catch((err: BusinessError) => {
+  console.error(`getAVCastController BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let aVCastController: avSession.AVCastController;
+currentAVSession.getAVCastController((err: BusinessError, avcontroller: avSession.AVCastController) => {
+  if (err) {
+    console.error(`getAVCastController BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    aVCastController = avcontroller;
+    console.info('getAVCastController : SUCCESS');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+
+  build() {
+    Column() {
+      Text(this.message)
+        .onClick(() => {
+          let currentAVSession: avSession.AVSession | undefined = undefined;
+          let tag = "createNewSession";
+          let context = this.getUIContext().getHostContext() as Context;
+          let sessionId: string = ""; // Used as an input parameter of subsequent functions.
+
+          let aVCastController: avSession.AVCastController;
+          avSession.getAVCastController(sessionId, (err: BusinessError, avcontroller: avSession.AVCastController) => {
+            if (err) {
+              console.error(`getAVCastController BusinessError: code: ${err.code}, message: ${err.message}`);
+            } else {
+              aVCastController = avcontroller;
+              console.info('getAVCastController : SUCCESS ');
+            }
+          });
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+
+  build() {
+    Column() {
+      Text(this.message)
+        .onClick(() => {
+          let currentAVSession: avSession.AVSession | undefined = undefined;
+          let tag = "createNewSession";
+          let context = this.getUIContext().getHostContext() as Context;
+          let sessionId: string = ""; // Used as an input parameter of subsequent functions.
+
+          let aVCastController: avSession.AVCastController;
+          avSession.getAVCastController(sessionId).then((avcontroller: avSession.AVCastController) => {
+            aVCastController = avcontroller;
+            console.info('getAVCastController : SUCCESS');
+          }).catch((err: BusinessError) => {
+            console.error(`getAVCastController BusinessError: code: ${err.code}, message: ${err.message}`);
+          });
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## getAVCastController
 
@@ -397,7 +736,7 @@ Get the cast controller when the session is casted to remote device. If the avse
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md) \| undefined&gt; | Yes | async callback for the AVCastController. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md) \| undefined&gt; | Yes | async callback for the AVCastController. |
 
 **Error codes:**
 
@@ -405,6 +744,10 @@ Get the cast controller when the session is casted to remote device. If the avse
 | --- | --- |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
+
+**Examples**
+
+See [getAVCastController](#getavcastcontroller)
 
 ## getAVCastController
 
@@ -435,6 +778,10 @@ Get the cast controller when the session is casted to remote device. If the avse
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 
+**Examples**
+
+See [getAVCastController](#getavcastcontroller)
+
 ## getAVCastController
 
 ```TypeScript
@@ -464,34 +811,9 @@ Get the cast controller when the session is casted to remote device. If the avse
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 
-## getAllCastDisplays
+**Examples**
 
-```TypeScript
-getAllCastDisplays(): Promise<Array<CastDisplayInfo>>
-```
-
-Get all the current virtual display information for extended display.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-AVSession-getAllCastDisplays(): Promise<Array<CastDisplayInfo>>--><!--Device-AVSession-getAllCastDisplays(): Promise<Array<CastDisplayInfo>>-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.ExtendedDisplayCast
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;Array&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt;&gt; | Promise for the CastDisplayInfo |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+See [getAVCastController](#getavcastcontroller)
 
 ## getController
 
@@ -511,7 +833,7 @@ Get the current session's own controller
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md)&gt; | Yes | async callback for the AVSessionController. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md)&gt; | Yes | async callback for the AVSessionController. |
 
 **Error codes:**
 
@@ -519,6 +841,81 @@ Get the current session's own controller
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+  build() {
+    Column() {
+      Text(this.message)
+        .onClick(async ()=>{
+          try {
+            let context: Context = this.getUIContext().getHostContext() as Context;
+            let currentAVSession: avSession.AVSession = await avSession.createAVSession(context, 'SESSION_NAME', 'audio');
+            let avSessionController: avSession.AVSessionController;
+            currentAVSession.getController().then((avController: avSession.AVSessionController) => {
+              avSessionController = avController;
+              console.info(`GetController : SUCCESS : sessionid : ${avSessionController.sessionId}`);
+            }).catch((err: BusinessError) => {
+              console.error(`GetController BusinessError: code: ${err.code}, message: ${err.message}`);
+            });
+          } catch (err) {
+            if (err) {
+              console.error(`AVSession create Error: ${JSON.stringify(err)}`);
+            }
+          }
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+import { avSession } from '@kit.AVSessionKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+
+  build() {
+    Column() {
+      Text(this.message)
+        .onClick(async () => {
+          try {
+            let context: Context = this.getUIContext().getHostContext() as Context;
+            let currentAVSession: avSession.AVSession = await avSession.createAVSession(context, 'SESSION_NAME', 'audio');
+            let avsessionController: avSession.AVSessionController;
+            currentAVSession.getController((err: BusinessError, avcontroller: avSession.AVSessionController) => {
+              if (err) {
+                console.error(`GetController BusinessError: code: ${err.code}, message: ${err.message}`);
+              } else {
+                avsessionController = avcontroller;
+                console.info(`GetController : SUCCESS : sessionid : ${avsessionController.sessionId}`);
+              }
+            });
+          } catch (err) {
+            if (err) {
+              console.error(`AVSession create Error: code: ${err.code}, message: ${err.message}`);
+            }
+          }
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## getController
 
@@ -548,6 +945,10 @@ Get the current session's own controller
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+See [getController](#getcontroller)
 
 ## getDesktopLyricState
 
@@ -598,7 +999,7 @@ Get output device information
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; | Yes | async callback for the OutputDeviceInfo. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; | Yes | async callback for the OutputDeviceInfo. |
 
 **Error codes:**
 
@@ -606,6 +1007,52 @@ Get output device information
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+currentAVSession.getOutputDevice().then((outputDeviceInfo: avSession.OutputDeviceInfo) => {
+  console.info(`GetOutputDevice : SUCCESS : devices length : ${outputDeviceInfo.devices.length}`);
+}).catch((err: BusinessError) => {
+  console.error(`GetOutputDevice BusinessError: code: ${err.code}, message: ${err.message}`);
+})
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+currentAVSession.getOutputDevice((err: BusinessError, outputDeviceInfo: avSession.OutputDeviceInfo) => {
+  if (err) {
+    console.error(`GetOutputDevice BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`GetOutputDevice : SUCCESS : devices length : ${outputDeviceInfo.devices.length}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.getOutputDevice().then((deviceInfo: avSession.OutputDeviceInfo) => {
+  console.info('GetOutputDevice : SUCCESS');
+}).catch((err: BusinessError) => {
+  console.error(`GetOutputDevice BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avsessionController.getOutputDevice((err: BusinessError, deviceInfo: avSession.OutputDeviceInfo) => {
+  if (err) {
+    console.error(`GetOutputDevice BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('GetOutputDevice : SUCCESS');
+  }
+});
+```
 
 ## getOutputDevice
 
@@ -636,6 +1083,10 @@ Get output device information
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
+**Examples**
+
+See [getOutputDevice](#getoutputdevice)
+
 ## getOutputDeviceSync
 
 ```TypeScript
@@ -664,6 +1115,30 @@ Get output device information
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let currentOutputDevice: avSession.OutputDeviceInfo = currentAVSession.getOutputDeviceSync();
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getOutputDeviceSync error, error code: ${error.code}, error message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let currentOutputDevice: avSession.OutputDeviceInfo = avsessionController.getOutputDeviceSync();
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getOutputDeviceSync error, error code: ${error.code}, error message: ${error.message}`);
+}
+```
 
 ## isDesktopLyricVisible
 
@@ -696,660 +1171,6 @@ Query desktop lyric visible state for this session.
 | [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
-## offAnswer
-
-```TypeScript
-offAnswer(callback?: NoParamCallback): void
-```
-
-Unregister answer command callback.
-
-**Since:** 23
-
-<!--Device-AVSession-offAnswer(callback?: NoParamCallback): void--><!--Device-AVSession-offAnswer(callback?: NoParamCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | No | Used to handle ('answer') command |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offCastDisplayChange
-
-```TypeScript
-offCastDisplayChange(callback?: Callback<CastDisplayInfo>): void
-```
-
-Unregister listener for cast display information changed.
-
-**Since:** 23
-
-<!--Device-AVSession-offCastDisplayChange(callback?: Callback<CastDisplayInfo>): void--><!--Device-AVSession-offCastDisplayChange(callback?: Callback<CastDisplayInfo>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.ExtendedDisplayCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | No | Callback used to return cast display information. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offCommonCommand
-
-```TypeScript
-offCommonCommand(callback?: EventProcess): void
-```
-
-Unregister session custom command change callback
-
-**Since:** 23
-
-<!--Device-AVSession-offCommonCommand(callback?: EventProcess): void--><!--Device-AVSession-offCommonCommand(callback?: EventProcess): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | No | Used to cancel a specific listener The callback provide the command name and command args |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offCustomDataChange
-
-```TypeScript
-offCustomDataChange(callback?: Callback<Record<string, Object>>): void
-```
-
-Unsubscribes from custom data changes.
-
-**Since:** 23
-
-<!--Device-AVSession-offCustomDataChange(callback?: Callback<Record<string, Object>>): void--><!--Device-AVSession-offCustomDataChange(callback?: Callback<Record<string, Object>>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to return the custom data. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offDesktopLyricStateChanged
-
-```TypeScript
-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void
-```
-
-Unregister desktop lyric state changed callback.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AVSession-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void--><!--Device-AVSession-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | No | a callback to receive desktop lyric state. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offDesktopLyricVisibilityChanged
-
-```TypeScript
-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
-```
-
-Unregister desktop lyric visible state change callback.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AVSession-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void--><!--Device-AVSession-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | a callback to receive desktop lyric window visible state. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offFastForward
-
-```TypeScript
-offFastForward(callback?: TwoParamCallback<long, CommandInfo>): void
-```
-
-Unregister fastForward command callback. When canceling the callback, need to update the supported commands list.
-
-**Since:** 23
-
-<!--Device-AVSession-offFastForward(callback?: TwoParamCallback<long, CommandInfo>): void--><!--Device-AVSession-offFastForward(callback?: TwoParamCallback<long, CommandInfo>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;long, [CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | No | Used to handle ('fastForward') command |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offHandleKeyEvent
-
-```TypeScript
-offHandleKeyEvent(callback?: Callback<KeyEvent>): void
-```
-
-Unregister media key handling callback
-
-**Since:** 23
-
-<!--Device-AVSession-offHandleKeyEvent(callback?: Callback<KeyEvent>): void--><!--Device-AVSession-offHandleKeyEvent(callback?: Callback<KeyEvent>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeyevent-keyevent-i.md)&gt; | No | Used to handle key events.The callback provides the KeyEvent |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offHangUp
-
-```TypeScript
-offHangUp(callback?: NoParamCallback): void
-```
-
-Unregister hangUp command callback.
-
-**Since:** 23
-
-<!--Device-AVSession-offHangUp(callback?: NoParamCallback): void--><!--Device-AVSession-offHangUp(callback?: NoParamCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | No | Used to handle ('hangUp') command |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offOutputDeviceChange
-
-```TypeScript
-offOutputDeviceChange(callback?: ConnectionEvent): void
-```
-
-Unregister session output device change callback
-
-**Since:** 23
-
-<!--Device-AVSession-offOutputDeviceChange(callback?: ConnectionEvent): void--><!--Device-AVSession-offOutputDeviceChange(callback?: ConnectionEvent): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | No | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offPause
-
-```TypeScript
-offPause(callback?: NoParamCallback): void
-```
-
-Unregister pause command callback. When canceling the callback, need to update the supported commands list.
-
-**Since:** 23
-
-<!--Device-AVSession-offPause(callback?: NoParamCallback): void--><!--Device-AVSession-offPause(callback?: NoParamCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | No | Used to handle ('pause') command |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offPlay
-
-```TypeScript
-offPlay(callback?: Callback<CommandInfo>): void
-```
-
-Unregister play command callback. When canceling the callback, need to update the supported commands list.
-
-**Since:** 23
-
-<!--Device-AVSession-offPlay(callback?: Callback<CommandInfo>): void--><!--Device-AVSession-offPlay(callback?: Callback<CommandInfo>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | No | Used to handle ('play') command |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offPlayNext
-
-```TypeScript
-offPlayNext(callback?: Callback<CommandInfo>): void
-```
-
-Unregister playNext command callback. When canceling the callback, need to update the supported commands list.
-
-**Since:** 23
-
-<!--Device-AVSession-offPlayNext(callback?: Callback<CommandInfo>): void--><!--Device-AVSession-offPlayNext(callback?: Callback<CommandInfo>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | No | Used to handle ('playNext') command |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offPlayPrevious
-
-```TypeScript
-offPlayPrevious(callback?: Callback<CommandInfo>): void
-```
-
-Unregister playPrevious command callback. When canceling the callback, need to update the supported commands list.
-
-**Since:** 23
-
-<!--Device-AVSession-offPlayPrevious(callback?: Callback<CommandInfo>): void--><!--Device-AVSession-offPlayPrevious(callback?: Callback<CommandInfo>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | No | Used to handle ('playPrevious') command |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offPlayWithAssetId
-
-```TypeScript
-offPlayWithAssetId(callback?: Callback<string>): void
-```
-
-Unsubscribes from playWithAssetId events.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-AVSession-offPlayWithAssetId(callback?: Callback<string>): void--><!--Device-AVSession-offPlayWithAssetId(callback?: Callback<string>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Callback used to handle the 'playWithAssetId' command. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offRewind
-
-```TypeScript
-offRewind(callback?: TwoParamCallback<long, CommandInfo>): void
-```
-
-Unregister rewind command callback. When canceling the callback, need to update the supported commands list.
-
-**Since:** 23
-
-<!--Device-AVSession-offRewind(callback?: TwoParamCallback<long, CommandInfo>): void--><!--Device-AVSession-offRewind(callback?: TwoParamCallback<long, CommandInfo>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;long, [CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | No | Used to handle ('rewind') command |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offSeek
-
-```TypeScript
-offSeek(callback?: Callback<long>): void
-```
-
-Unregister seek command callback
-
-**Since:** 23
-
-<!--Device-AVSession-offSeek(callback?: Callback<long>): void--><!--Device-AVSession-offSeek(callback?: Callback<long>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | No | Used to handle seek command.The callback provides the seek time(ms) |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offSetLoopMode
-
-```TypeScript
-offSetLoopMode(callback?: Callback<LoopMode>): void
-```
-
-Unregister setLoopMode command callback
-
-**Since:** 23
-
-<!--Device-AVSession-offSetLoopMode(callback?: Callback<LoopMode>): void--><!--Device-AVSession-offSetLoopMode(callback?: Callback<LoopMode>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | No | Used to handle setLoopMode command. The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offSetSpeed
-
-```TypeScript
-offSetSpeed(callback?: Callback<double>): void
-```
-
-Unregister setSpeed command callback
-
-**Since:** 23
-
-<!--Device-AVSession-offSetSpeed(callback?: Callback<double>): void--><!--Device-AVSession-offSetSpeed(callback?: Callback<double>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;double&gt; | No | Used to handle setSpeed command.The callback provides the speed value |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offSetTargetLoopMode
-
-```TypeScript
-offSetTargetLoopMode(callback?: Callback<LoopMode>): void
-```
-
-Unregister setTargetLoopMode command callback
-
-**Since:** 23
-
-<!--Device-AVSession-offSetTargetLoopMode(callback?: Callback<LoopMode>): void--><!--Device-AVSession-offSetTargetLoopMode(callback?: Callback<LoopMode>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | No | Used to handle setTargetLoopMode command. The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offSkipToQueueItem
-
-```TypeScript
-offSkipToQueueItem(callback?: Callback<int>): void
-```
-
-Unregister the item to play from the playlist change callback
-
-**Since:** 23
-
-<!--Device-AVSession-offSkipToQueueItem(callback?: Callback<int>): void--><!--Device-AVSession-offSkipToQueueItem(callback?: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Used to handle the item to be played. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offStop
-
-```TypeScript
-offStop(callback?: NoParamCallback): void
-```
-
-Unregister stop command callback. When canceling the callback, need to update the supported commands list.
-
-**Since:** 23
-
-<!--Device-AVSession-offStop(callback?: NoParamCallback): void--><!--Device-AVSession-offStop(callback?: NoParamCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | No | Used to handle ('stop') command |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offToggleCallMute
-
-```TypeScript
-offToggleCallMute(callback?: NoParamCallback): void
-```
-
-Unregister toggleCallMute command callback.
-
-**Since:** 23
-
-<!--Device-AVSession-offToggleCallMute(callback?: NoParamCallback): void--><!--Device-AVSession-offToggleCallMute(callback?: NoParamCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | No | Used to handle ('toggleCallMute') command |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## offToggleFavorite
-
-```TypeScript
-offToggleFavorite(callback?: Callback<string>): void
-```
-
-Unregister toggle favorite command callback
-
-**Since:** 23
-
-<!--Device-AVSession-offToggleFavorite(callback?: Callback<string>): void--><!--Device-AVSession-offToggleFavorite(callback?: Callback<string>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Used to handle toggleFavorite command.The callback provides the assetId for which the favorite status needs to be switched. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
 ## off('answer')
 
 ```TypeScript
@@ -1371,7 +1192,7 @@ Unregister answer command callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'answer' | Yes | Command to register 'answer'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Used to handle ('answer') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Used to handle ('answer') command |
 
 **Error codes:**
 
@@ -1402,7 +1223,7 @@ Unregister listener for cast display information changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castDisplayChange' | Yes | Type of the 'castDisplayChange' to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | No | Callback used to return cast display information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | No | Callback used to return cast display information. |
 
 **Error codes:**
 
@@ -1464,7 +1285,7 @@ Unsubscribes from custom data changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | Yes | Custom data type. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to return the custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to return the custom data. |
 
 **Error codes:**
 
@@ -1556,7 +1377,7 @@ Unregister hangUp command callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hangUp' | Yes | Command to register 'hangUp'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Used to handle ('hangUp') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Used to handle ('hangUp') command |
 
 **Error codes:**
 
@@ -1777,7 +1598,7 @@ Unsubscribes from playWithAssetId events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playWithAssetId' | Yes | Event type. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Callback used to handle the 'playWithAssetId' command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback used to handle the 'playWithAssetId' command. |
 
 **Error codes:**
 
@@ -1931,7 +1752,7 @@ Unregister setTargetLoopMode command callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setTargetLoopMode' | Yes | Registration Type 'setTargetLoopMode' |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | No | Used to handle setTargetLoopMode command.The callback provides the {@ link LoopMode} |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | No | Used to handle setTargetLoopMode command.The callback provides the {@ link LoopMode} |
 
 **Error codes:**
 
@@ -2023,7 +1844,7 @@ Unregister toggleCallMute command callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'toggleCallMute' | Yes | Command to register 'toggleCallMute'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Used to handle ('toggleCallMute') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Used to handle ('toggleCallMute') command |
 
 **Error codes:**
 
@@ -2064,17 +1885,17 @@ Unregister toggle favorite command callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-## onAnswer
+## offAnswer
 
 ```TypeScript
-onAnswer(callback: NoParamCallback): void
+offAnswer(callback?: NoParamCallback): void
 ```
 
-Register answer command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off
+Unregister answer command callback.
 
 **Since:** 23
 
-<!--Device-AVSession-onAnswer(callback: NoParamCallback): void--><!--Device-AVSession-onAnswer(callback: NoParamCallback): void-End-->
+<!--Device-AVSession-offAnswer(callback?: NoParamCallback): void--><!--Device-AVSession-offAnswer(callback?: NoParamCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2082,7 +1903,7 @@ Register answer command callback. As long as it is registered, it means that the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Yes | Used to handle ('answer') command |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | No | Used to handle ('answer') command |
 
 **Error codes:**
 
@@ -2091,17 +1912,17 @@ Register answer command callback. As long as it is registered, it means that the
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-## onCastDisplayChange
+## offCastDisplayChange
 
 ```TypeScript
-onCastDisplayChange(callback: Callback<CastDisplayInfo>): void
+offCastDisplayChange(callback?: Callback<CastDisplayInfo>): void
 ```
 
-Register listener for cast display information changed.
+Unregister listener for cast display information changed.
 
 **Since:** 23
 
-<!--Device-AVSession-onCastDisplayChange(callback: Callback<CastDisplayInfo>): void--><!--Device-AVSession-onCastDisplayChange(callback: Callback<CastDisplayInfo>): void-End-->
+<!--Device-AVSession-offCastDisplayChange(callback?: Callback<CastDisplayInfo>): void--><!--Device-AVSession-offCastDisplayChange(callback?: Callback<CastDisplayInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.ExtendedDisplayCast
 
@@ -2109,7 +1930,7 @@ Register listener for cast display information changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | Yes | Callback used to return cast display information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | No | Callback used to return cast display information. |
 
 **Error codes:**
 
@@ -2118,17 +1939,17 @@ Register listener for cast display information changed.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-## onCommonCommand
+## offCommonCommand
 
 ```TypeScript
-onCommonCommand(callback: EventProcess): void
+offCommonCommand(callback?: EventProcess): void
 ```
 
-Register session custom command change callback
+Unregister session custom command change callback
 
 **Since:** 23
 
-<!--Device-AVSession-onCommonCommand(callback: EventProcess): void--><!--Device-AVSession-onCommonCommand(callback: EventProcess): void-End-->
+<!--Device-AVSession-offCommonCommand(callback?: EventProcess): void--><!--Device-AVSession-offCommonCommand(callback?: EventProcess): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2136,7 +1957,7 @@ Register session custom command change callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | Yes | Used to handle event when the common command is received The callback provide the command name and command args |
+| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | No | Used to cancel a specific listener The callback provide the command name and command args |
 
 **Error codes:**
 
@@ -2145,17 +1966,17 @@ Register session custom command change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-## onCustomDataChange
+## offCustomDataChange
 
 ```TypeScript
-onCustomDataChange(callback: Callback<Record<string, Object>>): void
+offCustomDataChange(callback?: Callback<Record<string, Object>>): void
 ```
 
-Register listener for custom data sent from remote device.
+Unsubscribes from custom data changes.
 
 **Since:** 23
 
-<!--Device-AVSession-onCustomDataChange(callback: Callback<Record<string, Object>>): void--><!--Device-AVSession-onCustomDataChange(callback: Callback<Record<string, Object>>): void-End-->
+<!--Device-AVSession-offCustomDataChange(callback?: Callback<Record<string, Object>>): void--><!--Device-AVSession-offCustomDataChange(callback?: Callback<Record<string, Object>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -2163,7 +1984,7 @@ Register listener for custom data sent from remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to return the custom data. |
 
 **Error codes:**
 
@@ -2172,19 +1993,19 @@ Register listener for custom data sent from remote device.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-## onDesktopLyricStateChanged
+## offDesktopLyricStateChanged
 
 ```TypeScript
-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
+offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void
 ```
 
-Register desktop lyric state changed callback.
+Unregister desktop lyric state changed callback.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AVSession-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void--><!--Device-AVSession-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void-End-->
+<!--Device-AVSession-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void--><!--Device-AVSession-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2192,7 +2013,7 @@ Register desktop lyric state changed callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | Yes | a callback to receive desktop lyric state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | No | a callback to receive desktop lyric state. |
 
 **Error codes:**
 
@@ -2201,19 +2022,19 @@ Register desktop lyric state changed callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-## onDesktopLyricVisibilityChanged
+## offDesktopLyricVisibilityChanged
 
 ```TypeScript
-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
+offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
 ```
 
-Register desktop lyric visible state change callback.
+Unregister desktop lyric visible state change callback.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AVSession-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void--><!--Device-AVSession-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void-End-->
+<!--Device-AVSession-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void--><!--Device-AVSession-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2221,7 +2042,7 @@ Register desktop lyric visible state change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | a callback to receive desktop lyric window visible state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | a callback to receive desktop lyric window visible state. |
 
 **Error codes:**
 
@@ -2230,17 +2051,17 @@ Register desktop lyric visible state change callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-## onFastForward
+## offFastForward
 
 ```TypeScript
-onFastForward(callback: TwoParamCallback<long, CommandInfo>): void
+offFastForward(callback?: TwoParamCallback<long, CommandInfo>): void
 ```
 
-Register fastForward command callback. The application will receive forward time and [CommandInfo](arkts-avsession-avsession-commandinfo-i.md) from a controller.
+Unregister fastForward command callback. When canceling the callback, need to update the supported commands list.
 
 **Since:** 23
 
-<!--Device-AVSession-onFastForward(callback: TwoParamCallback<long, CommandInfo>): void--><!--Device-AVSession-onFastForward(callback: TwoParamCallback<long, CommandInfo>): void-End-->
+<!--Device-AVSession-offFastForward(callback?: TwoParamCallback<long, CommandInfo>): void--><!--Device-AVSession-offFastForward(callback?: TwoParamCallback<long, CommandInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2248,7 +2069,7 @@ Register fastForward command callback. The application will receive forward time
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;long, [CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | Yes | Used to handle ('fastForward') command, described by milliseconds. |
+| callback | [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;long, [CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | No | Used to handle ('fastForward') command |
 
 **Error codes:**
 
@@ -2257,17 +2078,23 @@ Register fastForward command callback. The application will receive forward time
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-## onHandleKeyEvent
+**Examples**
 
 ```TypeScript
-onHandleKeyEvent(callback: Callback<KeyEvent>): void
+currentAVSession.offFastForward();
 ```
 
-Register media key handling callback
+## offHandleKeyEvent
+
+```TypeScript
+offHandleKeyEvent(callback?: Callback<KeyEvent>): void
+```
+
+Unregister media key handling callback
 
 **Since:** 23
 
-<!--Device-AVSession-onHandleKeyEvent(callback: Callback<KeyEvent>): void--><!--Device-AVSession-onHandleKeyEvent(callback: Callback<KeyEvent>): void-End-->
+<!--Device-AVSession-offHandleKeyEvent(callback?: Callback<KeyEvent>): void--><!--Device-AVSession-offHandleKeyEvent(callback?: Callback<KeyEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2275,7 +2102,7 @@ Register media key handling callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeyevent-keyevent-i.md)&gt; | Yes | Used to handle key events.The callback provides the KeyEvent |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | No | Used to handle key events.The callback provides the KeyEvent |
 
 **Error codes:**
 
@@ -2284,17 +2111,17 @@ Register media key handling callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-## onHangUp
+## offHangUp
 
 ```TypeScript
-onHangUp(callback: NoParamCallback): void
+offHangUp(callback?: NoParamCallback): void
 ```
 
-Register hangUp command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off
+Unregister hangUp command callback.
 
 **Since:** 23
 
-<!--Device-AVSession-onHangUp(callback: NoParamCallback): void--><!--Device-AVSession-onHangUp(callback: NoParamCallback): void-End-->
+<!--Device-AVSession-offHangUp(callback?: NoParamCallback): void--><!--Device-AVSession-offHangUp(callback?: NoParamCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2302,7 +2129,7 @@ Register hangUp command callback. As long as it is registered, it means that the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Yes | Used to handle ('hangUp') command |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | No | Used to handle ('hangUp') command |
 
 **Error codes:**
 
@@ -2311,17 +2138,17 @@ Register hangUp command callback. As long as it is registered, it means that the
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-## onOutputDeviceChange
+## offOutputDeviceChange
 
 ```TypeScript
-onOutputDeviceChange(callback: ConnectionEvent): void
+offOutputDeviceChange(callback?: ConnectionEvent): void
 ```
 
-Register session output device change callback
+Unregister session output device change callback
 
 **Since:** 23
 
-<!--Device-AVSession-onOutputDeviceChange(callback: ConnectionEvent): void--><!--Device-AVSession-onOutputDeviceChange(callback: ConnectionEvent): void-End-->
+<!--Device-AVSession-offOutputDeviceChange(callback?: ConnectionEvent): void--><!--Device-AVSession-offOutputDeviceChange(callback?: ConnectionEvent): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2329,7 +2156,7 @@ Register session output device change callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | Yes | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
+| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | No | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
 
 **Error codes:**
 
@@ -2338,17 +2165,17 @@ Register session output device change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-## onPause
+## offPause
 
 ```TypeScript
-onPause(callback: NoParamCallback): void
+offPause(callback?: NoParamCallback): void
 ```
 
-Register pause command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
+Unregister pause command callback. When canceling the callback, need to update the supported commands list.
 
 **Since:** 23
 
-<!--Device-AVSession-onPause(callback: NoParamCallback): void--><!--Device-AVSession-onPause(callback: NoParamCallback): void-End-->
+<!--Device-AVSession-offPause(callback?: NoParamCallback): void--><!--Device-AVSession-offPause(callback?: NoParamCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2356,7 +2183,7 @@ Register pause command callback. As long as it is registered, it means that the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Yes | Used to handle ('pause') command |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | No | Used to handle ('pause') command |
 
 **Error codes:**
 
@@ -2365,17 +2192,17 @@ Register pause command callback. As long as it is registered, it means that the 
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-## onPlay
+## offPlay
 
 ```TypeScript
-onPlay(callback: Callback<CommandInfo>): void
+offPlay(callback?: Callback<CommandInfo>): void
 ```
 
-Register play command callback. The application will receive [CommandInfo](arkts-avsession-avsession-commandinfo-i.md) from a controller.
+Unregister play command callback. When canceling the callback, need to update the supported commands list.
 
 **Since:** 23
 
-<!--Device-AVSession-onPlay(callback: Callback<CommandInfo>): void--><!--Device-AVSession-onPlay(callback: Callback<CommandInfo>): void-End-->
+<!--Device-AVSession-offPlay(callback?: Callback<CommandInfo>): void--><!--Device-AVSession-offPlay(callback?: Callback<CommandInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2383,7 +2210,7 @@ Register play command callback. The application will receive [CommandInfo](arkts
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | Yes | Used to handle ('play') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | No | Used to handle ('play') command |
 
 **Error codes:**
 
@@ -2392,17 +2219,23 @@ Register play command callback. The application will receive [CommandInfo](arkts
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-## onPlayNext
+**Examples**
 
 ```TypeScript
-onPlayNext(callback: Callback<CommandInfo>): void
+currentAVSession.offPlay();
 ```
 
-Register playNext command callback. The application will receive [CommandInfo](arkts-avsession-avsession-commandinfo-i.md) from a controller.
+## offPlayNext
+
+```TypeScript
+offPlayNext(callback?: Callback<CommandInfo>): void
+```
+
+Unregister playNext command callback. When canceling the callback, need to update the supported commands list.
 
 **Since:** 23
 
-<!--Device-AVSession-onPlayNext(callback: Callback<CommandInfo>): void--><!--Device-AVSession-onPlayNext(callback: Callback<CommandInfo>): void-End-->
+<!--Device-AVSession-offPlayNext(callback?: Callback<CommandInfo>): void--><!--Device-AVSession-offPlayNext(callback?: Callback<CommandInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2410,7 +2243,7 @@ Register playNext command callback. The application will receive [CommandInfo](a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | Yes | Used to handle ('playNext') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | No | Used to handle ('playNext') command |
 
 **Error codes:**
 
@@ -2419,19 +2252,23 @@ Register playNext command callback. The application will receive [CommandInfo](a
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-## onPlayPrevious
+**Examples**
 
 ```TypeScript
-onPlayPrevious(callback: Callback<CommandInfo>): void
+currentAVSession.offPlayNext();
 ```
 
-Register playPrevious command callback. The application will receive [CommandInfo](arkts-avsession-avsession-commandinfo-i.md) from a controller.
+## offPlayPrevious
+
+```TypeScript
+offPlayPrevious(callback?: Callback<CommandInfo>): void
+```
+
+Unregister playPrevious command callback. When canceling the callback, need to update the supported commands list.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-AVSession-onPlayPrevious(callback: Callback<CommandInfo>): void--><!--Device-AVSession-onPlayPrevious(callback: Callback<CommandInfo>): void-End-->
+<!--Device-AVSession-offPlayPrevious(callback?: Callback<CommandInfo>): void--><!--Device-AVSession-offPlayPrevious(callback?: Callback<CommandInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2439,7 +2276,7 @@ Register playPrevious command callback. The application will receive [CommandInf
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | Yes | Used to handle ('playPrevious') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | No | Used to handle ('playPrevious') command |
 
 **Error codes:**
 
@@ -2448,73 +2285,25 @@ Register playPrevious command callback. The application will receive [CommandInf
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-## onPlayWithAssetId
+**Examples**
 
 ```TypeScript
-onPlayWithAssetId(callback: Callback<string>): void
+currentAVSession.offPlayPrevious();
 ```
 
-Subscribes to playWithAssetId events.
-
-**Since:** 23
-
-<!--Device-AVSession-onPlayWithAssetId(callback: Callback<string>): void--><!--Device-AVSession-onPlayWithAssetId(callback: Callback<string>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Callback used to handle the 'playWithAssetId' command. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## onRewind
+## offPlayWithAssetId
 
 ```TypeScript
-onRewind(callback: TwoParamCallback<long, CommandInfo>): void
+offPlayWithAssetId(callback?: Callback<string>): void
 ```
 
-Register rewind command callback. The application will receive rewind time and [CommandInfo](arkts-avsession-avsession-commandinfo-i.md) from a controller.
-
-**Since:** 23
-
-<!--Device-AVSession-onRewind(callback: TwoParamCallback<long, CommandInfo>): void--><!--Device-AVSession-onRewind(callback: TwoParamCallback<long, CommandInfo>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;long, [CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | Yes | Used to handle ('rewind') command, described by milliseconds. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-## onSeek
-
-```TypeScript
-onSeek(callback: Callback<long>): void
-```
-
-Register seek command callback
+Unsubscribes from playWithAssetId events.
 
 **Since:** 23
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-AVSession-onSeek(callback: Callback<long>): void--><!--Device-AVSession-onSeek(callback: Callback<long>): void-End-->
+<!--Device-AVSession-offPlayWithAssetId(callback?: Callback<string>): void--><!--Device-AVSession-offPlayWithAssetId(callback?: Callback<string>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2522,7 +2311,7 @@ Register seek command callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | Yes | Used to handle seek command.The callback provides the seek time(ms) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback used to handle the 'playWithAssetId' command. |
 
 **Error codes:**
 
@@ -2531,17 +2320,17 @@ Register seek command callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-## onSetLoopMode
+## offRewind
 
 ```TypeScript
-onSetLoopMode(callback: Callback<LoopMode>): void
+offRewind(callback?: TwoParamCallback<long, CommandInfo>): void
 ```
 
-Register setLoopMode command callback
+Unregister rewind command callback. When canceling the callback, need to update the supported commands list.
 
 **Since:** 23
 
-<!--Device-AVSession-onSetLoopMode(callback: Callback<LoopMode>): void--><!--Device-AVSession-onSetLoopMode(callback: Callback<LoopMode>): void-End-->
+<!--Device-AVSession-offRewind(callback?: TwoParamCallback<long, CommandInfo>): void--><!--Device-AVSession-offRewind(callback?: TwoParamCallback<long, CommandInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2549,7 +2338,7 @@ Register setLoopMode command callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | Yes | Used to handle setLoopMode command.The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
+| callback | [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;long, [CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | No | Used to handle ('rewind') command |
 
 **Error codes:**
 
@@ -2558,17 +2347,23 @@ Register setLoopMode command callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-## onSetSpeed
+**Examples**
 
 ```TypeScript
-onSetSpeed(callback: Callback<double>): void
+currentAVSession.offRewind();
 ```
 
-Register setSpeed command callback
+## offSeek
+
+```TypeScript
+offSeek(callback?: Callback<long>): void
+```
+
+Unregister seek command callback
 
 **Since:** 23
 
-<!--Device-AVSession-onSetSpeed(callback: Callback<double>): void--><!--Device-AVSession-onSetSpeed(callback: Callback<double>): void-End-->
+<!--Device-AVSession-offSeek(callback?: Callback<long>): void--><!--Device-AVSession-offSeek(callback?: Callback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2576,7 +2371,7 @@ Register setSpeed command callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;double&gt; | Yes | Used to handle setSpeed command.The callback provides the speed value |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | No | Used to handle seek command.The callback provides the seek time(ms) |
 
 **Error codes:**
 
@@ -2585,17 +2380,17 @@ Register setSpeed command callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-## onSetTargetLoopMode
+## offSetLoopMode
 
 ```TypeScript
-onSetTargetLoopMode(callback: Callback<LoopMode>): void
+offSetLoopMode(callback?: Callback<LoopMode>): void
 ```
 
-Register setTargetLoopMode command callback Application should change playmode to the loopmode which is requested.
+Unregister setLoopMode command callback
 
 **Since:** 23
 
-<!--Device-AVSession-onSetTargetLoopMode(callback: Callback<LoopMode>): void--><!--Device-AVSession-onSetTargetLoopMode(callback: Callback<LoopMode>): void-End-->
+<!--Device-AVSession-offSetLoopMode(callback?: Callback<LoopMode>): void--><!--Device-AVSession-offSetLoopMode(callback?: Callback<LoopMode>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2603,7 +2398,7 @@ Register setTargetLoopMode command callback Application should change playmode t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | Yes | Used to handle setTargetLoopMode command. The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | No | Used to handle setLoopMode command. The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
 
 **Error codes:**
 
@@ -2612,17 +2407,17 @@ Register setTargetLoopMode command callback Application should change playmode t
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-## onSkipToQueueItem
+## offSetSpeed
 
 ```TypeScript
-onSkipToQueueItem(callback: Callback<int>): void
+offSetSpeed(callback?: Callback<double>): void
 ```
 
-Register the item to play from the playlist change callback
+Unregister setSpeed command callback
 
 **Since:** 23
 
-<!--Device-AVSession-onSkipToQueueItem(callback: Callback<int>): void--><!--Device-AVSession-onSkipToQueueItem(callback: Callback<int>): void-End-->
+<!--Device-AVSession-offSetSpeed(callback?: Callback<double>): void--><!--Device-AVSession-offSetSpeed(callback?: Callback<double>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2630,7 +2425,7 @@ Register the item to play from the playlist change callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Used to handle the item to be played. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;double&gt; | No | Used to handle setSpeed command.The callback provides the speed value |
 
 **Error codes:**
 
@@ -2639,17 +2434,17 @@ Register the item to play from the playlist change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-## onStop
+## offSetTargetLoopMode
 
 ```TypeScript
-onStop(callback: NoParamCallback): void
+offSetTargetLoopMode(callback?: Callback<LoopMode>): void
 ```
 
-Register stop command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
+Unregister setTargetLoopMode command callback
 
 **Since:** 23
 
-<!--Device-AVSession-onStop(callback: NoParamCallback): void--><!--Device-AVSession-onStop(callback: NoParamCallback): void-End-->
+<!--Device-AVSession-offSetTargetLoopMode(callback?: Callback<LoopMode>): void--><!--Device-AVSession-offSetTargetLoopMode(callback?: Callback<LoopMode>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2657,7 +2452,7 @@ Register stop command callback. As long as it is registered, it means that the a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Yes | Used to handle ('stop') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | No | Used to handle setTargetLoopMode command. The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
 
 **Error codes:**
 
@@ -2666,17 +2461,17 @@ Register stop command callback. As long as it is registered, it means that the a
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-## onToggleCallMute
+## offSkipToQueueItem
 
 ```TypeScript
-onToggleCallMute(callback: NoParamCallback): void
+offSkipToQueueItem(callback?: Callback<int>): void
 ```
 
-Register toggleCallMute command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off
+Unregister the item to play from the playlist change callback
 
 **Since:** 23
 
-<!--Device-AVSession-onToggleCallMute(callback: NoParamCallback): void--><!--Device-AVSession-onToggleCallMute(callback: NoParamCallback): void-End-->
+<!--Device-AVSession-offSkipToQueueItem(callback?: Callback<int>): void--><!--Device-AVSession-offSkipToQueueItem(callback?: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2684,7 +2479,7 @@ Register toggleCallMute command callback. As long as it is registered, it means 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Yes | Used to handle ('toggleCallMute') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Used to handle the item to be played. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) |
 
 **Error codes:**
 
@@ -2693,17 +2488,17 @@ Register toggleCallMute command callback. As long as it is registered, it means 
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-## onToggleFavorite
+## offStop
 
 ```TypeScript
-onToggleFavorite(callback: Callback<string>): void
+offStop(callback?: NoParamCallback): void
 ```
 
-Register toggle favorite command callback
+Unregister stop command callback. When canceling the callback, need to update the supported commands list.
 
 **Since:** 23
 
-<!--Device-AVSession-onToggleFavorite(callback: Callback<string>): void--><!--Device-AVSession-onToggleFavorite(callback: Callback<string>): void-End-->
+<!--Device-AVSession-offStop(callback?: NoParamCallback): void--><!--Device-AVSession-offStop(callback?: NoParamCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2711,7 +2506,61 @@ Register toggle favorite command callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Used to handle toggleFavorite command.The callback provides the assetId for which the favorite status needs to be switched. |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | No | Used to handle ('stop') command |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+## offToggleCallMute
+
+```TypeScript
+offToggleCallMute(callback?: NoParamCallback): void
+```
+
+Unregister toggleCallMute command callback.
+
+**Since:** 23
+
+<!--Device-AVSession-offToggleCallMute(callback?: NoParamCallback): void--><!--Device-AVSession-offToggleCallMute(callback?: NoParamCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | No | Used to handle ('toggleCallMute') command |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+## offToggleFavorite
+
+```TypeScript
+offToggleFavorite(callback?: Callback<string>): void
+```
+
+Unregister toggle favorite command callback
+
+**Since:** 23
+
+<!--Device-AVSession-offToggleFavorite(callback?: Callback<string>): void--><!--Device-AVSession-offToggleFavorite(callback?: Callback<string>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Used to handle toggleFavorite command.The callback provides the assetId for which the favorite status needs to be switched. |
 
 **Error codes:**
 
@@ -2741,7 +2590,7 @@ Register answer command callback. As long as it is registered, it means that the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'answer' | Yes | Command to register 'answer'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Used to handle ('answer') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Used to handle ('answer') command |
 
 **Error codes:**
 
@@ -2772,7 +2621,7 @@ Register listener for cast display information changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castDisplayChange' | Yes | Type of the 'castDisplayChange' to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | Yes | Callback used to return cast display information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | Yes | Callback used to return cast display information. |
 
 **Error codes:**
 
@@ -2834,7 +2683,7 @@ Register listener for custom data sent from remote device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | Yes | Type of the 'customDataChange' to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
 
 **Error codes:**
 
@@ -2926,7 +2775,7 @@ Register hangUp command callback. As long as it is registered, it means that the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hangUp' | Yes | Command to register 'hangUp'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Used to handle ('hangUp') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Used to handle ('hangUp') command |
 
 **Error codes:**
 
@@ -3147,7 +2996,7 @@ Subscribes to playWithAssetId events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playWithAssetId' | Yes | Event type. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Callback used to handle the 'playWithAssetId' command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback used to handle the 'playWithAssetId' command. |
 
 **Error codes:**
 
@@ -3301,7 +3150,7 @@ Register setTargetLoopMode command callback Application should change playmode t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setTargetLoopMode' | Yes | Registration Type 'setTargetLoopMode' |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | Yes | Used to handle setTargetLoopMode command.The callback provides the {@ link LoopMode} |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | Yes | Used to handle setTargetLoopMode command.The callback provides the {@ link LoopMode} |
 
 **Error codes:**
 
@@ -3393,7 +3242,7 @@ Register toggleCallMute command callback. As long as it is registered, it means 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'toggleCallMute' | Yes | Command to register 'toggleCallMute'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Used to handle ('toggleCallMute') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Used to handle ('toggleCallMute') command |
 
 **Error codes:**
 
@@ -3434,6 +3283,702 @@ Register toggle favorite command callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
+## onAnswer
+
+```TypeScript
+onAnswer(callback: NoParamCallback): void
+```
+
+Register answer command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off
+
+**Since:** 23
+
+<!--Device-AVSession-onAnswer(callback: NoParamCallback): void--><!--Device-AVSession-onAnswer(callback: NoParamCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Yes | Used to handle ('answer') command |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+## onCastDisplayChange
+
+```TypeScript
+onCastDisplayChange(callback: Callback<CastDisplayInfo>): void
+```
+
+Register listener for cast display information changed.
+
+**Since:** 23
+
+<!--Device-AVSession-onCastDisplayChange(callback: Callback<CastDisplayInfo>): void--><!--Device-AVSession-onCastDisplayChange(callback: Callback<CastDisplayInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.ExtendedDisplayCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | Yes | Callback used to return cast display information. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+## onCommonCommand
+
+```TypeScript
+onCommonCommand(callback: EventProcess): void
+```
+
+Register session custom command change callback
+
+**Since:** 23
+
+<!--Device-AVSession-onCommonCommand(callback: EventProcess): void--><!--Device-AVSession-onCommonCommand(callback: EventProcess): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | Yes | Used to handle event when the common command is received The callback provide the command name and command args |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+## onCustomDataChange
+
+```TypeScript
+onCustomDataChange(callback: Callback<Record<string, Object>>): void
+```
+
+Register listener for custom data sent from remote device.
+
+**Since:** 23
+
+<!--Device-AVSession-onCustomDataChange(callback: Callback<Record<string, Object>>): void--><!--Device-AVSession-onCustomDataChange(callback: Callback<Record<string, Object>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+## onDesktopLyricStateChanged
+
+```TypeScript
+onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
+```
+
+Register desktop lyric state changed callback.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVSession-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void--><!--Device-AVSession-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | Yes | a callback to receive desktop lyric state. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+## onDesktopLyricVisibilityChanged
+
+```TypeScript
+onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
+```
+
+Register desktop lyric visible state change callback.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVSession-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void--><!--Device-AVSession-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | a callback to receive desktop lyric window visible state. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+## onFastForward
+
+```TypeScript
+onFastForward(callback: TwoParamCallback<long, CommandInfo>): void
+```
+
+Register fastForward command callback. The application will receive forward time and [CommandInfo](arkts-avsession-avsession-commandinfo-i.md) from a controller.
+
+**Since:** 23
+
+<!--Device-AVSession-onFastForward(callback: TwoParamCallback<long, CommandInfo>): void--><!--Device-AVSession-onFastForward(callback: TwoParamCallback<long, CommandInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;long, [CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | Yes | Used to handle ('fastForward') command, described by milliseconds. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+currentAVSession.onFastForward((time: number, info: CommandInfo) => {
+  console.info('on fastForward entry');
+});
+```
+
+## onHandleKeyEvent
+
+```TypeScript
+onHandleKeyEvent(callback: Callback<KeyEvent>): void
+```
+
+Register media key handling callback
+
+**Since:** 23
+
+<!--Device-AVSession-onHandleKeyEvent(callback: Callback<KeyEvent>): void--><!--Device-AVSession-onHandleKeyEvent(callback: Callback<KeyEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | Yes | Used to handle key events.The callback provides the KeyEvent |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+## onHangUp
+
+```TypeScript
+onHangUp(callback: NoParamCallback): void
+```
+
+Register hangUp command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off
+
+**Since:** 23
+
+<!--Device-AVSession-onHangUp(callback: NoParamCallback): void--><!--Device-AVSession-onHangUp(callback: NoParamCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Yes | Used to handle ('hangUp') command |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+## onOutputDeviceChange
+
+```TypeScript
+onOutputDeviceChange(callback: ConnectionEvent): void
+```
+
+Register session output device change callback
+
+**Since:** 23
+
+<!--Device-AVSession-onOutputDeviceChange(callback: ConnectionEvent): void--><!--Device-AVSession-onOutputDeviceChange(callback: ConnectionEvent): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | Yes | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+## onPause
+
+```TypeScript
+onPause(callback: NoParamCallback): void
+```
+
+Register pause command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
+
+**Since:** 23
+
+<!--Device-AVSession-onPause(callback: NoParamCallback): void--><!--Device-AVSession-onPause(callback: NoParamCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Yes | Used to handle ('pause') command |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+## onPlay
+
+```TypeScript
+onPlay(callback: Callback<CommandInfo>): void
+```
+
+Register play command callback. The application will receive [CommandInfo](arkts-avsession-avsession-commandinfo-i.md) from a controller.
+
+**Since:** 23
+
+<!--Device-AVSession-onPlay(callback: Callback<CommandInfo>): void--><!--Device-AVSession-onPlay(callback: Callback<CommandInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | Yes | Used to handle ('play') command |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+currentAVSession.onPlay((info: CommandInfo) => {
+  console.info('on play entry');
+});
+```
+
+## onPlayNext
+
+```TypeScript
+onPlayNext(callback: Callback<CommandInfo>): void
+```
+
+Register playNext command callback. The application will receive [CommandInfo](arkts-avsession-avsession-commandinfo-i.md) from a controller.
+
+**Since:** 23
+
+<!--Device-AVSession-onPlayNext(callback: Callback<CommandInfo>): void--><!--Device-AVSession-onPlayNext(callback: Callback<CommandInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | Yes | Used to handle ('playNext') command |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+currentAVSession.onPlayNext((info: CommandInfo) => {
+  console.info('on playNext entry');
+});
+```
+
+## onPlayPrevious
+
+```TypeScript
+onPlayPrevious(callback: Callback<CommandInfo>): void
+```
+
+Register playPrevious command callback. The application will receive [CommandInfo](arkts-avsession-avsession-commandinfo-i.md) from a controller.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-AVSession-onPlayPrevious(callback: Callback<CommandInfo>): void--><!--Device-AVSession-onPlayPrevious(callback: Callback<CommandInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | Yes | Used to handle ('playPrevious') command |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+currentAVSession.onPlayPrevious((info: CommandInfo) => {
+  console.info('on playPrevious entry');
+});
+```
+
+## onPlayWithAssetId
+
+```TypeScript
+onPlayWithAssetId(callback: Callback<string>): void
+```
+
+Subscribes to playWithAssetId events.
+
+**Since:** 23
+
+<!--Device-AVSession-onPlayWithAssetId(callback: Callback<string>): void--><!--Device-AVSession-onPlayWithAssetId(callback: Callback<string>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback used to handle the 'playWithAssetId' command. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+## onRewind
+
+```TypeScript
+onRewind(callback: TwoParamCallback<long, CommandInfo>): void
+```
+
+Register rewind command callback. The application will receive rewind time and [CommandInfo](arkts-avsession-avsession-commandinfo-i.md) from a controller.
+
+**Since:** 23
+
+<!--Device-AVSession-onRewind(callback: TwoParamCallback<long, CommandInfo>): void--><!--Device-AVSession-onRewind(callback: TwoParamCallback<long, CommandInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;long, [CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | Yes | Used to handle ('rewind') command, described by milliseconds. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+currentAVSession.onRewind((time: number, info: CommandInfo) => {
+  console.info('on rewind entry');
+});
+```
+
+## onSeek
+
+```TypeScript
+onSeek(callback: Callback<long>): void
+```
+
+Register seek command callback
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-AVSession-onSeek(callback: Callback<long>): void--><!--Device-AVSession-onSeek(callback: Callback<long>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | Used to handle seek command.The callback provides the seek time(ms) |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+## onSetLoopMode
+
+```TypeScript
+onSetLoopMode(callback: Callback<LoopMode>): void
+```
+
+Register setLoopMode command callback
+
+**Since:** 23
+
+<!--Device-AVSession-onSetLoopMode(callback: Callback<LoopMode>): void--><!--Device-AVSession-onSetLoopMode(callback: Callback<LoopMode>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | Yes | Used to handle setLoopMode command.The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+## onSetSpeed
+
+```TypeScript
+onSetSpeed(callback: Callback<double>): void
+```
+
+Register setSpeed command callback
+
+**Since:** 23
+
+<!--Device-AVSession-onSetSpeed(callback: Callback<double>): void--><!--Device-AVSession-onSetSpeed(callback: Callback<double>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;double&gt; | Yes | Used to handle setSpeed command.The callback provides the speed value |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+## onSetTargetLoopMode
+
+```TypeScript
+onSetTargetLoopMode(callback: Callback<LoopMode>): void
+```
+
+Register setTargetLoopMode command callback Application should change playmode to the loopmode which is requested.
+
+**Since:** 23
+
+<!--Device-AVSession-onSetTargetLoopMode(callback: Callback<LoopMode>): void--><!--Device-AVSession-onSetTargetLoopMode(callback: Callback<LoopMode>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | Yes | Used to handle setTargetLoopMode command. The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+## onSkipToQueueItem
+
+```TypeScript
+onSkipToQueueItem(callback: Callback<int>): void
+```
+
+Register the item to play from the playlist change callback
+
+**Since:** 23
+
+<!--Device-AVSession-onSkipToQueueItem(callback: Callback<int>): void--><!--Device-AVSession-onSkipToQueueItem(callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Used to handle the item to be played. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+## onStop
+
+```TypeScript
+onStop(callback: NoParamCallback): void
+```
+
+Register stop command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
+
+**Since:** 23
+
+<!--Device-AVSession-onStop(callback: NoParamCallback): void--><!--Device-AVSession-onStop(callback: NoParamCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Yes | Used to handle ('stop') command |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+## onToggleCallMute
+
+```TypeScript
+onToggleCallMute(callback: NoParamCallback): void
+```
+
+Register toggleCallMute command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off
+
+**Since:** 23
+
+<!--Device-AVSession-onToggleCallMute(callback: NoParamCallback): void--><!--Device-AVSession-onToggleCallMute(callback: NoParamCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Yes | Used to handle ('toggleCallMute') command |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+## onToggleFavorite
+
+```TypeScript
+onToggleFavorite(callback: Callback<string>): void
+```
+
+Register toggle favorite command callback
+
+**Since:** 23
+
+<!--Device-AVSession-onToggleFavorite(callback: Callback<string>): void--><!--Device-AVSession-onToggleFavorite(callback: Callback<string>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Used to handle toggleFavorite command.The callback provides the assetId for which the favorite status needs to be switched. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
 ## sendCustomData
 
 ```TypeScript
@@ -3469,6 +4014,95 @@ Sends custom data to a remote device.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. You are advised to:1.Scheduled retry.2.Destroy the current session or session controller and re-create it. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+aVCastController.sendCustomData({customData : "This is custom data"});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit';
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+
+  build() { 
+    Column() {
+        Text(this.message)
+          .onClick(()=>{
+            let currentAVSession: avSession.AVSession | undefined = undefined;
+            let tag = "createNewSession";
+            let context: Context = this.getUIContext().getHostContext() as Context;
+
+            avSession.createAVSession(context, tag, "audio", (err: BusinessError, data: avSession.AVSession) => {
+            if (err) {
+                console.error(`CreateAVSession BusinessError: code: ${err.code}, message: ${err.message}`);
+            } else {
+                currentAVSession = data;
+            }
+            });
+            if (currentAVSession !== undefined) {
+            (currentAVSession as avSession.AVSession).sendCustomData({customData : "This is custom data"}).then(() => {
+                console.info('sendCustomData successfully');
+            }).catch((err: BusinessError) => {
+                console.error(`sendCustomData BusinessError: code: ${err.code}, message: ${err.message}`);
+            })
+            }
+          })
+      }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  private tag: string = "createNewSession";
+  private sessionId: string = "";
+  private controller: avSession.AVSessionController | undefined = undefined;
+  private currentAVSession?: avSession.AVSession;
+  context = this.getUIContext();
+
+  aboutToAppear(): void {
+    avSession.createAVSession(this.getUIContext().getHostContext(), this.tag, "audio")
+      .then(async (data: avSession.AVSession) => {
+        this.currentAVSession = data;
+        this.sessionId = this.currentAVSession.sessionId;
+        this.controller = await this.currentAVSession.getController();
+        console.info(`CreateAVSession : SUCCESS :sessionId = ${this.sessionId}`);
+      })
+      .catch((err: BusinessError) => {
+        console.error(`CreateAVSession BusinessError:code: ${err.code}, message: ${err.message}`)
+      });
+
+    if (this.controller !== undefined) {
+      (this.controller as avSession.AVSessionController).sendCustomData({ customData: "This is my data" })
+    }
+  }
+
+  build() {
+    Column() {
+      Text('AVSession Demo')
+        .fontSize(20)
+        .margin(10)
+    }
+    .width('100%')
+    .height('100%')
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```
+
 ## setAVCallState
 
 ```TypeScript
@@ -3488,7 +4122,7 @@ Set the call state of this session.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | state | [AVCallState](arkts-avsession-avsession-avcallstate-i.md) | Yes | [AVCallState](arkts-avsession-avsession-avcallstate-i.md) |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -3497,6 +4131,38 @@ Set the call state of this session.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let calldata: avSession.AVCallState = {
+  state: avSession.CallState.CALL_STATE_ACTIVE,
+  muted: false
+};
+currentAVSession.setAVCallState(calldata).then(() => {
+  console.info('setAVCallState successfully');
+}).catch((err: BusinessError) => {
+  console.error(`setAVCallState BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let avcalldata: avSession.AVCallState = {
+  state: avSession.CallState.CALL_STATE_ACTIVE,
+  muted: false
+};
+currentAVSession.setAVCallState(avcalldata, (err: BusinessError) => {
+  if (err) {
+    console.error(`setAVCallState BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('setAVCallState successfully');
+  }
+});
+```
 
 ## setAVCallState
 
@@ -3532,6 +4198,10 @@ Set the call state of this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
+**Examples**
+
+See [setAVCallState](#setavcallstate)
+
 ## setAVMetadata
 
 ```TypeScript
@@ -3551,7 +4221,7 @@ Set the metadata of this session. In addition to the required properties, users 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | AVMetadata | Yes | { |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -3560,6 +4230,72 @@ Set the metadata of this session. In addition to the required properties, users 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let metadata: avSession.AVMetadata = {
+  assetId: "121278",
+  title: "lose yourself",
+  artist: "Eminem",
+  author: "ST",
+  album: "Slim shady",
+  writer: "ST",
+  composer: "ST",
+  duration: 2222,
+  mediaImage: "https://www.example.com/example.jpg",
+  subtitle: "8 Mile",
+  description: "Rap",
+  // The LRC contains two types of elements: time tag + lyrics, and ID tag.
+  // Example: [00:25.44]xxx\r\n[00:26.44]xxx\r\n
+  lyric: "Lyrics in LRC format",
+  // The singleLyricText field stores a single line of lyric text without timestamps.
+  // Example: "Content of a single lyric line"
+  singleLyricText: "Content of a single lyric line",
+  previousAssetId: "121277",
+  nextAssetId: "121279"
+};
+currentAVSession.setAVMetadata(metadata).then(() => {
+  console.info('SetAVMetadata successfully');
+}).catch((err: BusinessError) => {
+  console.error(`SetAVMetadata BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let metadata: avSession.AVMetadata = {
+  assetId: "121278",
+  title: "lose yourself",
+  artist: "Eminem",
+  author: "ST",
+  album: "Slim shady",
+  writer: "ST",
+  composer: "ST",
+  duration: 2222,
+  mediaImage: "https://www.example.com/example.jpg",
+  subtitle: "8 Mile",
+  description: "Rap",
+  // The LRC contains two types of elements: time tag + lyrics, and ID tag.
+  // Example: [00:25.44]xxx\r\n[00:26.44]xxx\r\n
+  lyric: "Lyrics in LRC format",
+  // The singleLyricText field stores a single line of lyric text without timestamps.
+  // Example: "Content of a single lyric line"
+  singleLyricText: "Content of a single lyric line",
+  previousAssetId: "121277",
+  nextAssetId: "121279"
+};
+currentAVSession.setAVMetadata(metadata, (err: BusinessError) => {
+  if (err) {
+    console.error(`SetAVMetadata BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('SetAVMetadata successfully');
+  }
+});
+```
 
 ## setAVMetadata
 
@@ -3597,6 +4333,10 @@ Set the metadata of this session. In addition to the required properties, users 
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
+**Examples**
+
+See [setAVMetadata](#setavmetadata)
+
 ## setAVPlaybackState
 
 ```TypeScript
@@ -3616,7 +4356,7 @@ Set the playback state of this session.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | state | [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) | Yes | { |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -3625,6 +4365,46 @@ Set the playback state of this session.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let playbackState: avSession.AVPlaybackState = {
+  state:avSession.PlaybackState.PLAYBACK_STATE_PLAY,
+  speed: 1.0,
+  position:{elapsedTime:10, updateTime:(new Date()).getTime()},
+  bufferedTime:1000,
+  loopMode:avSession.LoopMode.LOOP_MODE_SINGLE,
+  isFavorite:true
+};
+currentAVSession.setAVPlaybackState(playbackState).then(() => {
+  console.info('SetAVPlaybackState successfully');
+}).catch((err: BusinessError) => {
+  console.error(`SetAVPlaybackState BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let PlaybackState: avSession.AVPlaybackState = {
+  state:avSession.PlaybackState.PLAYBACK_STATE_PLAY,
+  speed: 1.0,
+  position:{elapsedTime:10, updateTime:(new Date()).getTime()},
+  bufferedTime:1000,
+  loopMode:avSession.LoopMode.LOOP_MODE_SINGLE,
+  isFavorite:true
+};
+currentAVSession.setAVPlaybackState(PlaybackState, (err: BusinessError) => {
+  if (err) {
+    console.error(`SetAVPlaybackState BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('SetAVPlaybackState successfully');
+  }
+});
+```
 
 ## setAVPlaybackState
 
@@ -3662,6 +4442,10 @@ Set the playback state of this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
+**Examples**
+
+See [setAVPlaybackState](#setavplaybackstate)
+
 ## setAVQueueItems
 
 ```TypeScript
@@ -3681,7 +4465,7 @@ Set the playlist of queueItem. Identifies the content of the playlist presented 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | items | Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes | An array of the AVQueueItem |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -3690,6 +4474,137 @@ Set the playlist of queueItem. Identifies the content of the playlist presented 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit';
+interface ExtrasType {
+  extras: string;
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+    }
+  }
+}
+
+let currentAVSession: avSession.AVSession;
+
+async function setAVQueueItems() {
+  try {
+    let value = await resourceManager.getSysResourceManager().getRawFileContent('IMAGE_URI');
+    let imageSource = await image.createImageSource(value.buffer);
+    let imagePixel = await imageSource.createPixelMap({desiredSize:{width: 150, height: 150}});
+    let queueItemDescription_1: avSession.AVMediaDescription = {
+      assetId: '001',
+      title: 'music_name',
+      subtitle: 'music_sub_name',
+      description: 'music_description',
+      mediaImage : imagePixel,
+      extras: {extras:'any'}
+    };
+    let queueItem_1: avSession.AVQueueItem = {
+      itemId: 1,
+      description: queueItemDescription_1
+    } as avSession.AVQueueItem;
+    let queueItemDescription_2: avSession.AVMediaDescription = {
+      assetId: '002',
+      title: 'music_name',
+      subtitle: 'music_sub_name',
+      description: 'music_description',
+      mediaImage: imagePixel,
+      extras: {extras:'any'}
+    };
+    let queueItem_2: avSession.AVQueueItem = {
+      itemId: 2,
+      description: queueItemDescription_2
+    } as avSession.AVQueueItem;
+    let queueItemsArray: avSession.AVQueueItem[] = [queueItem_1, queueItem_2];
+    currentAVSession.setAVQueueItems(queueItemsArray).then(() => {
+      console.info('SetAVQueueItems successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`SetAVQueueItems BusinessError: code: ${err.code}, message: ${err.message}`);
+    });
+  } catch (err) {
+    if (err) {
+      console.error(`ImageSource or PixelMap create Error: code: ${err.code}, message: ${err.message}`);
+    }
+  }
+}
+```
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit'
+
+interface ExtrasType {
+  extras: string;
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+    }
+  }
+}
+
+let currentAVSession: avSession.AVSession;
+
+async function setAVQueueItems() {
+  try {
+    let value = await resourceManager.getSysResourceManager().getRawFileContent('IMAGE_URI');
+    let imageSource = await image.createImageSource(value.buffer);
+    let imagePixel = await imageSource.createPixelMap({ desiredSize: { width: 150, height: 150 } });
+    let queueItemDescription_1: avSession.AVMediaDescription = {
+      assetId: '001',
+      title: 'music_name',
+      subtitle: 'music_sub_name',
+      description: 'music_description',
+      mediaImage: imagePixel,
+      extras: { extras: 'any' }
+    };
+    let queueItem_1: avSession.AVQueueItem = {
+      itemId: 1,
+      description: queueItemDescription_1
+    };
+    let queueItemDescription_2: avSession.AVMediaDescription = {
+      assetId: '002',
+      title: 'music_name',
+      subtitle: 'music_sub_name',
+      description: 'music_description',
+      mediaImage: imagePixel,
+      extras: { extras: 'any' }
+    };
+    let queueItem_2: avSession.AVQueueItem = {
+      itemId: 2,
+      description: queueItemDescription_2
+    };
+    let queueItemsArray: avSession.AVQueueItem[] = [queueItem_1, queueItem_2];
+    currentAVSession.setAVQueueItems(queueItemsArray, (err: BusinessError) => {
+      if (err) {
+        console.error(`SetAVQueueItems BusinessError: code: ${err.code}, message: ${err.message}`);
+      } else {
+        console.info('SetAVQueueItems successfully');
+      }
+    });
+  } catch (err) {
+    if (err) {
+      console.error(`ImageSource or PixelMap create Error: code: ${err.code}, message: ${err.message}`);
+    }
+  }
+}
+```
 
 ## setAVQueueItems
 
@@ -3727,6 +4642,10 @@ Set the playlist of queueItem. Identifies the content of the playlist presented 
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
+**Examples**
+
+See [setAVQueueItems](#setavqueueitems)
+
 ## setAVQueueTitle
 
 ```TypeScript
@@ -3746,7 +4665,7 @@ Set the name of the playlist presented by this session.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | title | string | Yes | The name of the playlist |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -3755,6 +4674,32 @@ Set the name of the playlist presented by this session.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let queueTitle = 'QUEUE_TITLE';
+currentAVSession.setAVQueueTitle(queueTitle).then(() => {
+  console.info('SetAVQueueTitle successfully');
+}).catch((err: BusinessError) => {
+  console.error(`SetAVQueueTitle BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let queueTitle = 'QUEUE_TITLE';
+currentAVSession.setAVQueueTitle(queueTitle, (err: BusinessError) => {
+  if (err) {
+    console.error(`SetAVQueueTitle BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('SetAVQueueTitle successfully');
+  }
+});
+```
 
 ## setAVQueueTitle
 
@@ -3791,6 +4736,10 @@ Set the name of the playlist presented by this session.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+See [setAVQueueTitle](#setavqueuetitle)
 
 ## setBackgroundPlayMode
 
@@ -3846,7 +4795,7 @@ Set the metadata related with current call.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) | Yes | [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -3855,6 +4804,101 @@ Set the metadata related with current call.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Text('Hello World')
+        .fontSize(50)
+        .fontWeight(FontWeight.Bold)
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+
+class CallManager {
+  private currentAVSession: avSession.AVSession | null = null;
+
+  async setCallMetadata() {
+    try {
+      let value = await resourceManager.getSysResourceManager().getRawFileContent('IMAGE_URI');
+      let imageSource = await image.createImageSource(value.buffer);
+      let imagePixel = await imageSource.createPixelMap({ desiredSize: { width: 150, height: 150 } });
+      let calldata: avSession.CallMetadata = {
+        name: "xiaoming",
+        phoneNumber: "111xxxxxxxx",
+        avatar: imagePixel
+      };
+      await this.currentAVSession?.setCallMetadata(calldata);
+      console.info('setCallMetadata successfully');
+    } catch (err) {
+      if (err) {
+        console.error('setCallMetadata BusinessError: code: ${err.code}, message: ${err.message}');
+      } else {
+        console.error('setCallMetadata Error: ${err}')
+      }
+    }
+  }
+}
+```
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Text('Hello World')
+        .fontSize(50)
+        .fontWeight(FontWeight.Bold)
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+
+class CallManager {
+  private currentAVSession: avSession.AVSession | null = null;
+
+  async setCallMetadata() {
+    try {
+      let value = await resourceManager.getSysResourceManager().getRawFileContent('IMAGE_URI');
+      let imageSource = await image.createImageSource(value.buffer);
+      let imagePixel = await imageSource.createPixelMap({ desiredSize: { width: 150, height: 150 } });
+      let calldata: avSession.CallMetadata = {
+        name: "xiaoming",
+        phoneNumber: "111xxxxxxxx",
+        avatar: imagePixel
+      };
+      this.currentAVSession?.setCallMetadata(calldata, (err: BusinessError) => {
+        if (err) {
+          console.error('setCallMetadata BusinessError: code: ${err.code}, message: ${err.message}');
+        } else {
+          console.info("setCallMetadata successfully");
+        }
+      });
+    }catch (syncErr) {
+      console.error('Syncronous operation failed: ${syncErr}');
+    }
+  }
+}
+```
 
 ## setCallMetadata
 
@@ -3889,6 +4933,10 @@ Set the metadata related with current call.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+See [setCallMetadata](#setcallmetadata)
 
 ## setDesktopLyricState
 
@@ -3983,7 +5031,7 @@ Set the custom media packets for this session.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | extras | {[key: string]: Object} | Yes | The custom media packets |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -3992,6 +5040,84 @@ Set the custom media packets for this session.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit';
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+
+  build() { 
+    Column() {
+        Text(this.message)
+          .onClick(() => {
+            let currentAVSession: avSession.AVSession | undefined = undefined;
+            let tag = "createNewSession";
+            let context: Context = this.getUIContext().getHostContext() as Context;
+
+            avSession.createAVSession(context, tag, "audio", (err: BusinessError, data: avSession.AVSession) => {
+              if (err) {
+                console.error(`CreateAVSession BusinessError: code: ${err.code}, message: ${err.message}`);
+              } else {
+                currentAVSession = data;
+                if (currentAVSession !== undefined) {
+                  (currentAVSession as avSession.AVSession).setExtras({extras : "This is custom media packet"}).then(() => {
+                      console.info('setExtras successfully');
+                  }).catch((err: BusinessError) => {
+                      console.error(`setExtras BusinessError: code: ${err.code}, message: ${err.message}`);
+                  })
+                }
+              }
+            });
+          })
+      }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit';
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+
+  build() { 
+    Column() {
+        Text(this.message)
+          .onClick(()=>{
+            let currentAVSession: avSession.AVSession | undefined = undefined;
+            let tag = "createNewSession";
+            let context: Context = this.getUIContext().getHostContext() as Context;
+
+            avSession.createAVSession(context, tag, "audio", (err: BusinessError, data: avSession.AVSession) => {
+              if (err) {
+                console.error(`CreateAVSession BusinessError: code: ${err.code}, message: ${err.message}`);
+              } else {
+                currentAVSession = data;
+                if (currentAVSession !== undefined) {
+                  (currentAVSession as avSession.AVSession).setExtras({extras : "This is custom media packet"}, (err: BusinessError) => {
+                    if (err) {
+                      console.error(`setExtras BusinessError: code: ${err.code}, message: ${err.message}`);
+                    }
+                  })
+                }
+              }
+            });
+          })
+      }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## setExtras
 
@@ -4014,7 +5140,7 @@ Set the custom media packets for this session.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | extras | Record&lt;string, Object&gt; | Yes | The custom media packets |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -4022,6 +5148,10 @@ Set the custom media packets for this session.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+See [setExtras](#setextras)
 
 ## setExtras
 
@@ -4059,6 +5189,10 @@ Set the custom media packets for this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
+**Examples**
+
+See [setExtras](#setextras)
+
 ## setExtras
 
 ```TypeScript
@@ -4094,6 +5228,10 @@ Set the custom media packets for this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
+**Examples**
+
+See [setExtras](#setextras)
+
 ## setLaunchAbility
 
 ```TypeScript
@@ -4113,7 +5251,7 @@ Set the ability to start the session corresponding to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ability | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md) | Yes | The WantAgent for launch the ability |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -4122,6 +5260,92 @@ Set the ability to start the session corresponding to
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+import { wantAgent } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// WantAgentInfo object.
+let wantAgentInfo: wantAgent.WantAgentInfo = {
+  wants: [
+    {
+      deviceId: "deviceId",
+      bundleName: "com.example.myapplication",
+      abilityName: "EntryAbility",
+      action: "action1",
+      entities: ["entity1"],
+      type: "MIMETYPE",
+      uri: "key = {true,true,false}",
+      parameters:
+        {
+          mykey0: 2222,
+          mykey1: [1, 2, 3],
+          mykey2: "[1, 2, 3]",
+          mykey3: "ssssssssssssssssssssssssss",
+          mykey4: [false, true, false],
+          mykey5: ["qqqqq", "wwwwww", "aaaaaaaaaaaaaaaaa"],
+          mykey6: true
+        }
+    }
+  ],
+  operationType: wantAgent.OperationType.START_ABILITIES,
+  requestCode: 0,
+  wantAgentFlags:[wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
+}
+
+wantAgent.getWantAgent(wantAgentInfo).then((agent) => {
+  currentAVSession.setLaunchAbility(agent).then(() => {
+    console.info('SetLaunchAbility successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`SetLaunchAbility BusinessError: code: ${err.code}, message: ${err.message}`);
+  });
+});
+```
+
+```TypeScript
+import { wantAgent } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// WantAgentInfo object.
+let wantAgentInfo: wantAgent.WantAgentInfo = {
+  wants: [
+    {
+      deviceId: "deviceId",
+      bundleName: "com.example.myapplication",
+      abilityName: "EntryAbility",
+      action: "action1",
+      entities: ["entity1"],
+      type: "MIMETYPE",
+      uri: "key = {true,true,false}",
+      parameters:
+        {
+          mykey0: 2222,
+          mykey1: [1, 2, 3],
+          mykey2: "[1, 2, 3]",
+          mykey3: "ssssssssssssssssssssssssss",
+          mykey4: [false, true, false],
+          mykey5: ["qqqqq", "wwwwww", "aaaaaaaaaaaaaaaaa"],
+          mykey6: true
+        }
+    }
+  ],
+  operationType: wantAgent.OperationType.START_ABILITIES,
+  requestCode: 0,
+  wantAgentFlags:[wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
+}
+
+wantAgent.getWantAgent(wantAgentInfo).then((agent) => {
+  currentAVSession.setLaunchAbility(agent, (err: BusinessError) => {
+    if (err) {
+      console.error(`SetLaunchAbility BusinessError: code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info('SetLaunchAbility successfully');
+    }
+  });
+});
+```
 
 ## setLaunchAbility
 
@@ -4158,6 +5382,10 @@ Set the ability to start the session corresponding to
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+See [setLaunchAbility](#setlaunchability)
 
 ## setMediaCenterControlType
 
@@ -4286,13 +5514,65 @@ Stop current cast and disconnect device connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | A callback instance used to return when cast stopped completed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | A callback instance used to return when cast stopped completed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+currentAVSession.stopCasting((err: BusinessError) => {
+  if (err) {
+    console.error(`stopCasting BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('stopCasting successfully');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+currentAVSession.stopCasting().then(() => {
+  console.info('stopCasting successfully');
+}).catch((err: BusinessError) => {
+  console.error(`stopCasting BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let myToken: avSession.SessionToken = {
+  sessionId: sessionId,
+}
+avSession.stopCasting(myToken, (err: BusinessError) => {
+  if (err) {
+    console.error(`stopCasting BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('stopCasting successfully');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let myToken: avSession.SessionToken = {
+  sessionId: sessionId,
+}
+avSession.stopCasting(myToken).then(() => {
+  console.info('stopCasting successfully');
+}).catch((err: BusinessError) => {
+  console.error(`stopCasting BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## stopCasting
 
@@ -4321,6 +5601,10 @@ Stop current cast and disconnect device connection.
 | Error Code ID | Error Message |
 | --- | --- |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
+
+**Examples**
+
+See [stopCasting](#stopcasting)
 
 ## sessionId
 

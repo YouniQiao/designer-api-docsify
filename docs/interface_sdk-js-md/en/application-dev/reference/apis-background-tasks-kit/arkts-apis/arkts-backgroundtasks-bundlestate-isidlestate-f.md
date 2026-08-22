@@ -27,7 +27,7 @@ Checks whether the application specified by **bundleName** is in the idle state.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of an application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the specified **bundleName** is valid, the idle state of the application is returned; otherwise, **null** is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the specified **bundleName** is valid, the idle state of the application is returned; otherwise, **null** is returned. |
 
 **Examples**
 
@@ -40,6 +40,16 @@ bundleState.isIdleState("com.ohos.camera", (err: BusinessError, res: boolean) =>
   } else {
     console.info('BUNDLE_ACTIVE isIdleState callback succeeded, result: ' + JSON.stringify(res));
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+// When a third-party application uses the sample code, change bundleName to its own bundle name.
+bundleState.isIdleState("com.ohos.camera").then((res: boolean) => {
+  console.info('BUNDLE_ACTIVE isIdleState promise succeeded, result: ' + JSON.stringify(res));
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE isIdleState promise failed, because: ' + err.code);
 });
 ```
 
@@ -74,13 +84,5 @@ Checks whether the application specified by **bundleName** is in the idle state.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// When a third-party application uses the sample code, change bundleName to its own bundle name.
-bundleState.isIdleState("com.ohos.camera").then((res: boolean) => {
-  console.info('BUNDLE_ACTIVE isIdleState promise succeeded, result: ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE isIdleState promise failed, because: ' + err.code);
-});
-```
+See [isIdleState](#isidlestate)
 

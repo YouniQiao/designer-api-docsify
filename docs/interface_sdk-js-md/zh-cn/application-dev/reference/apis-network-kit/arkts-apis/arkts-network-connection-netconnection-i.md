@@ -24,124 +24,6 @@
 import { connection } from '@kit.NetworkKit';
 ```
 
-## onNetBlockStatusChange
-
-```TypeScript
-onNetBlockStatusChange(callback: Callback<NetBlockStatusInfo>): void
-```
-
-Registers a listener for netBlockStatusChange events.
-
-**起始版本：** 23
-
-<!--Device-NetConnection-onNetBlockStatusChange(callback: Callback<NetBlockStatusInfo>): void--><!--Device-NetConnection-onNetBlockStatusChange(callback: Callback<NetBlockStatusInfo>): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetBlockStatusInfo](arkts-network-connection-netblockstatusinfo-i.md)&gt; | 是 | the callback used to return the result. |
-
-## onNetLost
-
-```TypeScript
-onNetLost(callback: Callback<NetHandle>): void
-```
-
-Registers a listener for **netLost** events.
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NetConnection-onNetLost(callback: Callback<NetHandle>): void--><!--Device-NetConnection-onNetLost(callback: Callback<NetHandle>): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | 是 | the callback used to return the result. |
-
-**示例**
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 创建NetConnection对象。
-let netCon: connection.NetConnection = connection.createNetConnection();
-
-// 先使用on接口订阅网络丢失事件。
-netCon.on('netLost', (data: connection.NetHandle) => {
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-});
-
-// 注册网络状态变化事件。此接口要在调用on后调用。
-netCon.register((error: BusinessError) => {
-  console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
-});
-
-// 使用unregister接口取消订阅网络丢失事件。
-netCon.unregister((error: BusinessError) => {
-  console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
-});
-```
-
-## onNetUnavailable
-
-```TypeScript
-onNetUnavailable(callback: Callback<void>): void
-```
-
-Registers a listener for netUnavailable events.
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-NetConnection-onNetUnavailable(callback: Callback<void>): void--><!--Device-NetConnection-onNetUnavailable(callback: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | the callback used to return the result. |
-
-**示例**
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 创建NetConnection对象。
-let netCon: connection.NetConnection = connection.createNetConnection();
-
-// 先使用on接口订阅网络不可用事件。
-netCon.on('netUnavailable', () => {
-  console.info("Succeeded to get unavailable net event");
-});
-
-// 注册网络状态变化事件。此接口要在调用on后调用。
-netCon.register((error: BusinessError) => {
-  console.error(`Failed to get register.Code:${error.code}, message:${error.message}`);
-});
-
-// 使用unregister接口取消订阅网络不可用事件。
-netCon.unregister((error: BusinessError) => {
-  console.error(`Failed to get unregister.Code:${error.code}, message:${error.message}`);
-});
-```
-
 ## on('netAvailable')
 
 ```TypeScript
@@ -404,6 +286,124 @@ on(type: 'netUnavailable', callback: Callback<void>): void
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，无返回结果。 |
 
 **示例**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 创建NetConnection对象。
+let netCon: connection.NetConnection = connection.createNetConnection();
+
+// 先使用on接口订阅网络不可用事件。
+netCon.on('netUnavailable', () => {
+  console.info("Succeeded to get unavailable net event");
+});
+
+// 注册网络状态变化事件。此接口要在调用on后调用。
+netCon.register((error: BusinessError) => {
+  console.error(`Failed to get register.Code:${error.code}, message:${error.message}`);
+});
+
+// 使用unregister接口取消订阅网络不可用事件。
+netCon.unregister((error: BusinessError) => {
+  console.error(`Failed to get unregister.Code:${error.code}, message:${error.message}`);
+});
+```
+
+## onNetBlockStatusChange
+
+```TypeScript
+onNetBlockStatusChange(callback: Callback<NetBlockStatusInfo>): void
+```
+
+Registers a listener for netBlockStatusChange events.
+
+**起始版本：** 23
+
+<!--Device-NetConnection-onNetBlockStatusChange(callback: Callback<NetBlockStatusInfo>): void--><!--Device-NetConnection-onNetBlockStatusChange(callback: Callback<NetBlockStatusInfo>): void-End-->
+
+**系统能力：** SystemCapability.Communication.NetManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetBlockStatusInfo](arkts-network-connection-netblockstatusinfo-i.md)&gt; | 是 | the callback used to return the result. |
+
+## onNetLost
+
+```TypeScript
+onNetLost(callback: Callback<NetHandle>): void
+```
+
+Registers a listener for **netLost** events.
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NetConnection-onNetLost(callback: Callback<NetHandle>): void--><!--Device-NetConnection-onNetLost(callback: Callback<NetHandle>): void-End-->
+
+**系统能力：** SystemCapability.Communication.NetManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | 是 | the callback used to return the result. |
+
+**示例**
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 创建NetConnection对象。
+let netCon: connection.NetConnection = connection.createNetConnection();
+
+// 先使用on接口订阅网络丢失事件。
+netCon.on('netLost', (data: connection.NetHandle) => {
+  console.info("Succeeded to get data: " + JSON.stringify(data));
+});
+
+// 注册网络状态变化事件。此接口要在调用on后调用。
+netCon.register((error: BusinessError) => {
+  console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
+});
+
+// 使用unregister接口取消订阅网络丢失事件。
+netCon.unregister((error: BusinessError) => {
+  console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
+});
+```
+
+## onNetUnavailable
+
+```TypeScript
+onNetUnavailable(callback: Callback<void>): void
+```
+
+Registers a listener for netUnavailable events.
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NetConnection-onNetUnavailable(callback: Callback<void>): void--><!--Device-NetConnection-onNetUnavailable(callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.Communication.NetManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | the callback used to return the result. |
+
+**示例**
+
+ArkTS-Sta示例：
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

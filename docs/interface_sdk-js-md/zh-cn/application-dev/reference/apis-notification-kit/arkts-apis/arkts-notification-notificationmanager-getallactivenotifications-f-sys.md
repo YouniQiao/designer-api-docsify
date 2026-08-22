@@ -75,6 +75,31 @@ let getAllActiveNotificationsCallback = (err: BusinessError | null, data: Array<
 notificationManager.getAllActiveNotifications(getAllActiveNotificationsCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.getAllActiveNotifications().then((data: Array<notificationManager.NotificationRequest>) => {
+    console.info(`getAllActiveNotifications success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getAllActiveNotifications failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.getAllActiveNotifications().then((data: Array<notificationManager.NotificationRequest>) => {
+    console.info(`getAllActiveNotifications success, data: ${JSON.stringify(data)}`);
+}).catch((err: Error): void => {
+    let error: BusinessError = err as BusinessError;
+    console.error(`getAllActiveNotifications failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## getAllActiveNotifications
 
@@ -112,28 +137,5 @@ function getAllActiveNotifications(): Promise<Array<NotificationRequest>>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getAllActiveNotifications().then((data: Array<notificationManager.NotificationRequest>) => {
-    console.info(`getAllActiveNotifications success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getAllActiveNotifications failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getAllActiveNotifications().then((data: Array<notificationManager.NotificationRequest>) => {
-    console.info(`getAllActiveNotifications success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`getAllActiveNotifications failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [getAllActiveNotifications](#getallactivenotifications)
 

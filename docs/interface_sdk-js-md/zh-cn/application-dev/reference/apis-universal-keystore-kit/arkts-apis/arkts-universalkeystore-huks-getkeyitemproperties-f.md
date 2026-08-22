@@ -81,6 +81,22 @@ huks.getKeyItemProperties(keyAlias, emptyOptions, (error, data) => {
 });
 ```
 
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* 此处options选择emptyOptions来传空 */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+
+/* 获取密钥属性 */
+huks.getKeyItemProperties(keyAlias, emptyOptions)
+  .then((data) => {
+    console.info(`promise: getKeyItemProperties success, data = ${JSON.stringify(data)}`);
+  });
+```
+
 
 ## getKeyItemProperties
 
@@ -136,19 +152,5 @@ function getKeyItemProperties(keyAlias: string, options: HuksOptions): Promise<H
 
 **示例**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions来传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-/* 获取密钥属性 */
-huks.getKeyItemProperties(keyAlias, emptyOptions)
-  .then((data) => {
-    console.info(`promise: getKeyItemProperties success, data = ${JSON.stringify(data)}`);
-  });
-```
+参见 [getKeyItemProperties](#getkeyitemproperties)
 

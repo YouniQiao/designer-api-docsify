@@ -2,7 +2,7 @@
 
 Enum for the file transfer result.
 
-**Since:** 26.0.0
+**Since:** 16
 
 <!--Device-opp-enum TransferResult--><!--Device-opp-enum TransferResult-End-->
 
@@ -18,7 +18,7 @@ SUCCESS = 0
 
 Success
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +36,7 @@ ERROR_UNSUPPORTED_TYPE = 1
 
 The transfer file type is not supported.
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +54,7 @@ ERROR_BAD_REQUEST = 2
 
 The peer device cannot process the request.
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,7 +72,7 @@ ERROR_NOT_ACCEPTABLE = 3
 
 The peer device refuses to receive the file.
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,7 +90,7 @@ ERROR_CANCELED = 4
 
 The peer device cancels the ongoing file transfer process.
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,7 +108,7 @@ ERROR_CONNECTION_FAILED = 5
 
 Failed to connect to the peer device.
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,7 +126,7 @@ ERROR_TRANSFER_FAILED = 6
 
 Indicates that the file transfer fails.
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,7 +144,7 @@ ERROR_UNKNOWN = 7
 
 Unknown error
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 

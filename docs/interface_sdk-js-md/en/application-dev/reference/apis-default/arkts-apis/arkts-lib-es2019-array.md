@@ -11,8 +11,8 @@
 
 | Name | Description |
 | --- | --- |
-| [Array](arkts-libes2019array-array-i.md) |  |
-| [ReadonlyArray](arkts-libes2019array-readonlyarray-i.md) |  |
+| [Array](arkts-lib-es2019-array-array-i.md) |  |
+| [ReadonlyArray](arkts-lib-es2019-array-readonlyarray-i.md) |  |
 
 ### Types
 

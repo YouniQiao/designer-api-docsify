@@ -47,6 +47,10 @@ Get file name of haptics.
 **Examples**
 
 ```TypeScript
+toneAttrs.getFileName();
+```
+
+```TypeScript
 toneHapticsAttrs.getFileName();
 ```
 
@@ -183,6 +187,10 @@ Get title of haptics.
 **Examples**
 
 ```TypeScript
+toneAttrs.getTitle();
+```
+
+```TypeScript
 toneHapticsAttrs.getTitle();
 ```
 
@@ -215,6 +223,10 @@ Get haptics uri.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 **Examples**
+
+```TypeScript
+toneAttrs.getUri();
+```
 
 ```TypeScript
 toneHapticsAttrs.getUri();

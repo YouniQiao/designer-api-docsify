@@ -152,49 +152,6 @@ export default class EntryAbility extends UIExtensionAbility {
 }
 ```
 
-## createSubWindowWithOptions
-
-```TypeScript
-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,
-        followCreatorLifecycle: boolean): Promise<window.Window>
-```
-
-创建该UIExtensionHostWindowProxy实例下的子窗口，可通过设置followCreatorLifecycle，决定子窗是否跟随组件（EmbeddedComponent或 UIExtensionComponent）的生命周期，使用Promise异步回调。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-UIExtensionHostWindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,        followCreatorLifecycle: boolean): Promise<window.Window>--><!--Device-UIExtensionHostWindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,        followCreatorLifecycle: boolean): Promise<window.Window>-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 子窗口的名字。 |
-| subWindowConfig | window.SubWindowOptions | 是 | 子窗口参数。 |
-| followCreatorLifecycle | boolean | 是 | 子窗生命周期是否跟组件（EmbeddedComponent或UIExtensionComponent）保持同步。true表示该组件隐藏时， 子窗隐藏，该组件显示时子窗显示，false表示子窗的显隐不跟随该组件变化。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;window.Window&gt; | Promise used to return the subwindow. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible causes: 1. The window is not created or destroyed. 2. Internal task error. 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
-| 1300035 | Creating a subwindow is not allowed in the current context. Possible cause: 1. An AgentUIExtensionAbility cannot create a subwindow. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -289,6 +246,51 @@ export default class EntryAbility extends UIExtensionAbility {
   }
 }
 ```
+
+## createSubWindowWithOptions
+
+```TypeScript
+createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,
+        followCreatorLifecycle: boolean): Promise<window.Window>
+```
+
+创建该UIExtensionHostWindowProxy实例下的子窗口，可通过设置followCreatorLifecycle，决定子窗是否跟随组件（EmbeddedComponent或 UIExtensionComponent）的生命周期，使用Promise异步回调。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionHostWindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,        followCreatorLifecycle: boolean): Promise<window.Window>--><!--Device-UIExtensionHostWindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,        followCreatorLifecycle: boolean): Promise<window.Window>-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 子窗口的名字。 |
+| subWindowConfig | window.SubWindowOptions | 是 | 子窗口参数。 |
+| followCreatorLifecycle | boolean | 是 | 子窗生命周期是否跟组件（EmbeddedComponent或UIExtensionComponent）保持同步。true表示该组件隐藏时， 子窗隐藏，该组件显示时子窗显示，false表示子窗的显隐不跟随该组件变化。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;window.Window&gt; | Promise used to return the subwindow. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible causes: 1. The window is not created or destroyed. 2. Internal task error. 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
+| 1300035 | Creating a subwindow is not allowed in the current context. Possible cause: 1. An AgentUIExtensionAbility cannot create a subwindow. |
+
+**示例**
+
+参见 [createSubWindowWithOptions](#createsubwindowwithoptions)
 
 ## getWindowAvoidArea
 
@@ -545,6 +547,100 @@ export default class EntryAbility extends UIExtensionAbility {
 }
 ```
 
+## off('avoidAreaChange')
+
+```TypeScript
+off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void
+```
+
+注销系统避让区变化的监听。
+
+**起始版本：** 11
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionHostWindowProxy-off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void--><!--Device-UIExtensionHostWindowProxy-off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'avoidAreaChange' | 是 | 注销的事件类型，固定为'avoidAreaChange'，即系统避让区变化事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | 否 |  |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
+
+**示例**
+
+```TypeScript
+// ExtensionProvider.ets
+import { UIExtensionAbility, UIExtensionContentSession} from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIExtensionAbility {
+  onSessionDestroy(session: UIExtensionContentSession) {
+    const extensionHostWindow = session.getUIExtensionHostWindowProxy();
+    // 注销所有避让区变化的监听
+    extensionHostWindow.off('avoidAreaChange');
+  }
+}
+```
+
+## off('windowSizeChange')
+
+```TypeScript
+off(type: 'windowSizeChange', callback?: Callback<window.Size>): void
+```
+
+注销组件（EmbeddedComponent或UIExtensionComponent）尺寸变化的监听。
+
+**起始版本：** 11
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionHostWindowProxy-off(type: 'windowSizeChange', callback?: Callback<window.Size>): void--><!--Device-UIExtensionHostWindowProxy-off(type: 'windowSizeChange', callback?: Callback<window.Size>): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'windowSizeChange' | 是 | 注销的事件类型，固定值：'windowSizeChange'，即组件（EmbeddedComponent或UIExtensionComponent）尺寸 变化事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | 否 | 回调函数。返回当前的组件（EmbeddedComponent或UIExtensionComponent）尺寸。如果传入该参数，则关闭该 监听。如果未传入参数，则关闭组件（EmbeddedComponent或UIExtensionComponent）尺寸变化的监听。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
+
+**示例**
+
+```TypeScript
+// ExtensionProvider.ets
+import { UIExtensionAbility, UIExtensionContentSession } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIExtensionAbility {
+  onSessionDestroy(session: UIExtensionContentSession) {
+    const extensionHostWindow = session.getUIExtensionHostWindowProxy();
+    // 注销组件（EmbeddedComponent或UIExtensionComponent）大小变化的监听
+    extensionHostWindow.off('windowSizeChange');
+  }
+}
+```
+
 ## offAvoidAreaChange
 
 ```TypeScript
@@ -643,19 +739,19 @@ export default class EntryAbility extends UIExtensionAbility {
 }
 ```
 
-## off('avoidAreaChange')
+## on('avoidAreaChange')
 
 ```TypeScript
-off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void
+on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void
 ```
 
-注销系统避让区变化的监听。
+注册系统避让区变化的监听。
 
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-UIExtensionHostWindowProxy-off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void--><!--Device-UIExtensionHostWindowProxy-off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void-End-->
+<!--Device-UIExtensionHostWindowProxy-on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void--><!--Device-UIExtensionHostWindowProxy-on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -665,44 +761,46 @@ off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, a
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'avoidAreaChange' | 是 | 注销的事件类型，固定为'avoidAreaChange'，即系统避让区变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | 否 |  |
+| type | 'avoidAreaChange' | 是 | 监听的事件类型，固定为'avoidAreaChange'，即系统避让区变化事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
 **示例**
 
 ```TypeScript
 // ExtensionProvider.ets
-import { UIExtensionAbility, UIExtensionContentSession} from '@kit.AbilityKit';
+import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
 
 export default class EntryAbility extends UIExtensionAbility {
-  onSessionDestroy(session: UIExtensionContentSession) {
+  onSessionCreate(want: Want, session: UIExtensionContentSession) {
     const extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    // 注销所有避让区变化的监听
-    extensionHostWindow.off('avoidAreaChange');
+    // 注册避让区变化的监听
+    extensionHostWindow.on('avoidAreaChange', (info) => {
+      console.info(`The avoid area of the host window is: ${JSON.stringify(info.area)}.`);
+    });
   }
 }
 ```
 
-## off('windowSizeChange')
+## on('windowSizeChange')
 
 ```TypeScript
-off(type: 'windowSizeChange', callback?: Callback<window.Size>): void
+on(type: 'windowSizeChange', callback: Callback<window.Size>): void
 ```
 
-注销组件（EmbeddedComponent或UIExtensionComponent）尺寸变化的监听。
+注册组件（EmbeddedComponent或UIExtensionComponent）尺寸变化的监听。
 
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-UIExtensionHostWindowProxy-off(type: 'windowSizeChange', callback?: Callback<window.Size>): void--><!--Device-UIExtensionHostWindowProxy-off(type: 'windowSizeChange', callback?: Callback<window.Size>): void-End-->
+<!--Device-UIExtensionHostWindowProxy-on(type: 'windowSizeChange', callback: Callback<window.Size>): void--><!--Device-UIExtensionHostWindowProxy-on(type: 'windowSizeChange', callback: Callback<window.Size>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -712,27 +810,29 @@ off(type: 'windowSizeChange', callback?: Callback<window.Size>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'windowSizeChange' | 是 | 注销的事件类型，固定值：'windowSizeChange'，即组件（EmbeddedComponent或UIExtensionComponent）尺寸 变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | 否 | 回调函数。返回当前的组件（EmbeddedComponent或UIExtensionComponent）尺寸。如果传入该参数，则关闭该 监听。如果未传入参数，则关闭组件（EmbeddedComponent或UIExtensionComponent）尺寸变化的监听。 |
+| type | 'windowSizeChange' | 是 | 监听的事件类型，固定为'windowSizeChange'，即组件（EmbeddedComponent或UIExtensionComponent）尺寸变 化事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | 是 | 回调函数：入参用于接收当前组件（EmbeddedComponent或UIExtensionComponent）的尺寸。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
 **示例**
 
 ```TypeScript
 // ExtensionProvider.ets
-import { UIExtensionAbility, UIExtensionContentSession } from '@kit.AbilityKit';
+import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
 
 export default class EntryAbility extends UIExtensionAbility {
-  onSessionDestroy(session: UIExtensionContentSession) {
+  onSessionCreate(want: Want, session: UIExtensionContentSession) {
     const extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    // 注销组件（EmbeddedComponent或UIExtensionComponent）大小变化的监听
-    extensionHostWindow.off('windowSizeChange');
+    // 注册组件（EmbeddedComponent或UIExtensionComponent）大小变化的监听
+    extensionHostWindow.on('windowSizeChange', (size) => {
+      console.info(`The size of the component is: ${JSON.stringify(size)}.`);
+    });
   }
 }
 ```
@@ -827,104 +927,6 @@ export default class EntryAbility extends UIExtensionAbility {
     const extensionHostWindow = session.getUIExtensionHostWindowProxy();
     // 注册组件（EmbeddedComponent或UIExtensionComponent）大小变化的监听
     extensionHostWindow.onWindowSizeChange((size) => {
-      console.info(`The size of the component is: ${JSON.stringify(size)}.`);
-    });
-  }
-}
-```
-
-## on('avoidAreaChange')
-
-```TypeScript
-on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void
-```
-
-注册系统避让区变化的监听。
-
-**起始版本：** 11
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-UIExtensionHostWindowProxy-on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void--><!--Device-UIExtensionHostWindowProxy-on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'avoidAreaChange' | 是 | 监听的事件类型，固定为'avoidAreaChange'，即系统避让区变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | 是 |  |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
-
-**示例**
-
-```TypeScript
-// ExtensionProvider.ets
-import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIExtensionAbility {
-  onSessionCreate(want: Want, session: UIExtensionContentSession) {
-    const extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    // 注册避让区变化的监听
-    extensionHostWindow.on('avoidAreaChange', (info) => {
-      console.info(`The avoid area of the host window is: ${JSON.stringify(info.area)}.`);
-    });
-  }
-}
-```
-
-## on('windowSizeChange')
-
-```TypeScript
-on(type: 'windowSizeChange', callback: Callback<window.Size>): void
-```
-
-注册组件（EmbeddedComponent或UIExtensionComponent）尺寸变化的监听。
-
-**起始版本：** 11
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-UIExtensionHostWindowProxy-on(type: 'windowSizeChange', callback: Callback<window.Size>): void--><!--Device-UIExtensionHostWindowProxy-on(type: 'windowSizeChange', callback: Callback<window.Size>): void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'windowSizeChange' | 是 | 监听的事件类型，固定为'windowSizeChange'，即组件（EmbeddedComponent或UIExtensionComponent）尺寸变 化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | 是 | 回调函数：入参用于接收当前组件（EmbeddedComponent或UIExtensionComponent）的尺寸。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
-
-**示例**
-
-```TypeScript
-// ExtensionProvider.ets
-import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIExtensionAbility {
-  onSessionCreate(want: Want, session: UIExtensionContentSession) {
-    const extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    // 注册组件（EmbeddedComponent或UIExtensionComponent）大小变化的监听
-    extensionHostWindow.on('windowSizeChange', (size) => {
       console.info(`The size of the component is: ${JSON.stringify(size)}.`);
     });
   }
@@ -1041,7 +1043,7 @@ properties: UIExtensionHostWindowProxyProperties
 
 UIExtensionComponent组件以及宿主窗口的信息。
 
-**约束：** 由于架构约束，不建议在 [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiextensionability-uiextensionability-c.md#onsessioncreate)阶段同步获取该值，建议在收到 [on('windowSizeChange')](#onavoidareachange) 回调之后获取。
+**约束：** 由于架构约束，不建议在 [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate)阶段同步获取该值，建议在收到 [on('windowSizeChange')](#onavoidareachange) 回调之后获取。
 
 **类型：** [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhost-uiextensionhostwindowproxyproperties-i-sys.md)
 

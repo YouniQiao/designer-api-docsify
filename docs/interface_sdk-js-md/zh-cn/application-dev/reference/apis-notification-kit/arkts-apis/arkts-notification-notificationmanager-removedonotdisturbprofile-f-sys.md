@@ -88,6 +88,42 @@ notificationManager.removeDoNotDisturbProfile(templates).then(() => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userId : number = 100;
+let templates: Array<notificationManager.DoNotDisturbProfile> = [
+  {
+    id: 3,
+    name: '工作模式'
+  }
+]
+notificationManager.removeDoNotDisturbProfile(templates, userId).then(() => {
+  console.info('removeDoNotDisturbProfile success.');
+}).catch((err: BusinessError) => {
+  console.error(`removeDoNotDisturbProfile failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let userId : int = 100;
+let templates: Array<notificationManager.DoNotDisturbProfile> = [
+  {
+    id: 3,
+    name: '工作模式'
+  }
+]
+notificationManager.removeDoNotDisturbProfile(templates, userId).then(() => {
+  console.info(`removeDoNotDisturbProfile success. userId: ${userId}, templates: ${JSON.stringify(templates)}`);
+}).catch((err: Error | undefined): void => {
+  console.info(`removeDoNotDisturbProfile error, code: ${err?.code}, message: ${err?.message}`);
+});
+```
+
 
 ## removeDoNotDisturbProfile
 
@@ -137,39 +173,5 @@ function removeDoNotDisturbProfile(templates: Array<DoNotDisturbProfile>, userId
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId : number = 100;
-let templates: Array<notificationManager.DoNotDisturbProfile> = [
-  {
-    id: 3,
-    name: '工作模式'
-  }
-]
-notificationManager.removeDoNotDisturbProfile(templates, userId).then(() => {
-  console.info('removeDoNotDisturbProfile success.');
-}).catch((err: BusinessError) => {
-  console.error(`removeDoNotDisturbProfile failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let userId : int = 100;
-let templates: Array<notificationManager.DoNotDisturbProfile> = [
-  {
-    id: 3,
-    name: '工作模式'
-  }
-]
-notificationManager.removeDoNotDisturbProfile(templates, userId).then(() => {
-  console.info(`removeDoNotDisturbProfile success. userId: ${userId}, templates: ${JSON.stringify(templates)}`);
-}).catch((err: Error | undefined): void => {
-  console.info(`removeDoNotDisturbProfile error, code: ${err?.code}, message: ${err?.message}`);
-});
-```
+参见 [removeDoNotDisturbProfile](#removedonotdisturbprofile)
 

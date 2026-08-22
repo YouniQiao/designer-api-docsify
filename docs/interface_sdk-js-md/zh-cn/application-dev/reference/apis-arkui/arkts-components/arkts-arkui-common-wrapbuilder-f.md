@@ -33,3 +33,16 @@ declare function wrapBuilder<Args extends Object[]>(builder: (...args: Args) => 
 | --- | --- |
 | [WrappedBuilder](arkts-arkui-wrappedbuilder-c.md)&lt;Args&gt; | `WrappedBuilder&lt;Args&gt;`的实例，用于在组件之间复用或传递全局` |
 
+**示例**
+
+```TypeScript
+@Builder
+function myBuilder(value: string, size: number) {
+  Text(value)
+    .fontSize(size)
+}
+
+// 使用wrapBuilder封装myBuilder
+let builderVar: WrappedBuilder<[string, number]> = wrapBuilder(myBuilder);
+```
+

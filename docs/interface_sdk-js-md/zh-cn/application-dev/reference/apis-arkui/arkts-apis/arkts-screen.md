@@ -38,18 +38,18 @@ import { screenshot } from '@kit.ArkUI';
 | [makeMirror](arkts-arkui-screen-makemirror-f-sys.md) | 将屏幕设置为镜像模式，使用Promise异步回调。 |
 | [makeMirrorWithRegion](arkts-arkui-screen-makemirrorwithregion-f-sys.md) | 将屏幕的某一矩形区域设置为镜像模式，使用Promise异步回调。调用该接口后，不建议再进行屏幕的旋转/折叠，否则可能导致镜像内容异常。 |
 | [makeUnique](arkts-arkui-screen-makeunique-f-sys.md) | 将屏幕设置为异源模式，使用Promise异步回调。 |
-| [offChange](arkts-arkui-screen-offchange-f-sys.md) | Unregister the callback for screen changes. |
-| [offConnect](arkts-arkui-screen-offconnect-f-sys.md) | Unregister the callback for screen connection events. |
-| [offDisconnect](arkts-arkui-screen-offdisconnect-f-sys.md) | Unregister the callback for screen disconnection events. |
 | off_change | 关闭屏幕状态变化的监听。 |
 | off_connect | 关闭屏幕状态变化的监听。 |
 | off_disconnect | 关闭屏幕状态变化的监听。 |
-| [onChange](arkts-arkui-screen-onchange-f-sys.md) | Register the callback for screen change. |
-| [onConnect](arkts-arkui-screen-onconnect-f-sys.md) | Register the callback for screen connection events. |
-| [onDisconnect](arkts-arkui-screen-ondisconnect-f-sys.md) | Register the callback for screen disconnection events. |
+| [offChange](arkts-arkui-screen-offchange-f-sys.md) | Unregister the callback for screen changes. |
+| [offConnect](arkts-arkui-screen-offconnect-f-sys.md) | Unregister the callback for screen connection events. |
+| [offDisconnect](arkts-arkui-screen-offdisconnect-f-sys.md) | Unregister the callback for screen disconnection events. |
 | on_change | 开启屏幕状态变化的监听。 |
 | on_connect | 开启屏幕状态变化的监听。 |
 | on_disconnect | 开启屏幕状态变化的监听。 |
+| [onChange](arkts-arkui-screen-onchange-f-sys.md) | Register the callback for screen change. |
+| [onConnect](arkts-arkui-screen-onconnect-f-sys.md) | Register the callback for screen connection events. |
+| [onDisconnect](arkts-arkui-screen-ondisconnect-f-sys.md) | Register the callback for screen disconnection events. |
 | [resizeVirtualScreen](arkts-arkui-screen-resizevirtualscreen-f-sys.md) | 修改指定虚拟屏的尺寸，使用Promise异步回调。 |
 | [setMultiScreenMode](arkts-arkui-screen-setmultiscreenmode-f-sys.md) | 设置扩展屏幕的显示模式（镜像/扩展），使用Promise异步回调。primaryScreenId和secondaryScreenId均为0时，仅在扩展屏显示。 |
 | [setMultiScreenRelativePosition](arkts-arkui-screen-setmultiscreenrelativeposition-f-sys.md) | 仅在扩展模式下，设置主屏和扩展屏幕的位置信息，使用Promise异步回调。 |

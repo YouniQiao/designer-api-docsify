@@ -56,3 +56,26 @@ PREFER_OPEN_LOG = 2
 
 **系统能力：** SystemCapability.HiviewDFX.HiLog
 
+**示例**
+
+以全局日志级别为INFO下，打印5条不同级别的hilog日志，在打印过程中调用两次setLogLevel接口为例：
+
+```TypeScript
+hilog.info(0x0001, "testTag", 'this is an info level log, id: %{public}d', 1);
+hilog.setLogLevel(hilog.LogLevel.WARN, hilog.PreferStrategy.PREFER_OPEN_LOG);
+hilog.info(0x0001, "testTag", 'this is an info level log, id: %{public}d', 2);
+hilog.error(0x0001, "testTag", 'this is an error level log, id: %{public}d', 3);
+hilog.setLogLevel(hilog.LogLevel.DEBUG, hilog.PreferStrategy.PREFER_CLOSE_LOG);
+hilog.debug(0x0001, "testTag", 'this is a debug level log, id: %{public}d', 4);
+hilog.info(0x0001, "testTag", 'this is an info level log, id: %{public}d', 5);
+```
+
+最终打印结果如下所示：
+
+```TypeScript
+08-07 23:50:01.532   13694-13694   A00001/testTag                  com.example.hilogDemo  I     this is an info level log, id: 1
+08-07 23:50:01.532   13694-13694   A00001/testTag                  com.example.hilogDemo  I     this is an info level log, id: 2
+08-07 23:50:01.532   13694-13694   A00001/testTag                  com.example.hilogDemo  E     this is an error level log, id: 3
+08-07 23:50:01.532   13694-13694   A00001/testTag                  com.example.hilogDemo  I     this is an info level log, id: 5
+```
+

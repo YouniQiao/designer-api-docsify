@@ -57,6 +57,22 @@ Activates an audio session. This API uses a promise to return the result.
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Possible causes: 1.Focus preemption failure. 2.Audio server process died. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let strategy: audio.AudioSessionStrategy = {
+  concurrencyMode: audio.AudioConcurrencyMode.CONCURRENCY_MIX_WITH_OTHERS
+};
+
+audioSessionManager.activateAudioSession(strategy).then(() => {
+  console.info('activateAudioSession SUCCESS');
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
+
 ## clearSelectedMediaInputDevice
 
 ```TypeScript
@@ -82,6 +98,18 @@ Clears the media input device set by calling [selectMediaInputDevice](#selectmed
 | Error Code ID | Error Message |
 | --- | --- |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioSessionManager.clearSelectedMediaInputDevice().then(() => {
+  console.info('Succeeded in doing clearSelectedMediaInputDevice.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to clearSelectedMediaInputDevice. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## deactivateAudioSession
 
@@ -110,6 +138,18 @@ Deactivates this audio session. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Possible causes: 1.The audio session is not existed or has been released. 2.Audio server process died. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioSessionManager.deactivateAudioSession().then(() => {
+  console.info('deactivateAudioSession SUCCESS');
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
 
 ## enableMuteSuggestionWhenMixWithOthers
 
@@ -148,6 +188,12 @@ For details, see [Enabling Mute Suggestion Notifications for Mixed Playback](../
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Function is called without setting [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md) or called after audio session activation. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, system internal error. |
 
+**Examples**
+
+```TypeScript
+audio.getAudioManager().getSessionManager().enableMuteSuggestionWhenMixWithOthers(true);
+```
+
 ## getAvailableDevices
 
 ```TypeScript
@@ -181,6 +227,32 @@ Obtains the available audio devices.
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data: audio.AudioDeviceDescriptors = audioRoutingManager.getAvailableDevices(audio.DeviceUsage.MEDIA_OUTPUT_DEVICES);
+  console.info('Succeeded in doing getAvailableDevices.');
+} catch (err) {
+  let error = err as BusinessError;
+   console.error(`Failed to getAvailableDevices. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data: audio.AudioDeviceDescriptors = audioSessionManager.getAvailableDevices(audio.DeviceUsage.MEDIA_OUTPUT_DEVICES);
+  console.info('Succeeded in doing getAvailableDevices.');
+} catch (err) {
+  let error = err as BusinessError;
+   console.error(`Failed to getAvailableDevices. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getBluetoothAndNearlinkPreferredRecordCategory
 
 ```TypeScript
@@ -206,6 +278,20 @@ Obtains the preferred device category for recording with Bluetooth or NearLink, 
 | Error Code ID | Error Message |
 | --- | --- |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let category: audio.BluetoothAndNearlinkPreferredRecordCategory = audioSessionManager.getBluetoothAndNearlinkPreferredRecordCategory();
+  console.info('Succeeded in doing getBluetoothAndNearlinkPreferredRecordCategory.');
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to getBluetoothAndNearlinkPreferredRecordCategory. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## getDefaultOutputDevice
 
@@ -234,6 +320,12 @@ Obtains the default audio output device set by calling [setDefaultOutputDevice](
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. Return by promise. |
 
+**Examples**
+
+```TypeScript
+let deviceType = audioSessionManager.getDefaultOutputDevice();
+```
+
 ## getSelectedMediaInputDevice
 
 ```TypeScript
@@ -260,6 +352,20 @@ Obtains the media input device set by calling [selectMediaInputDevice](#selectme
 | --- | --- |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let device: audio.AudioDeviceDescriptor = audioSessionManager.getSelectedMediaInputDevice();
+  console.info('Succeeded in doing getSelectedMediaInputDevice.');
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to getSelectedMediaInputDevice. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## isAudioSessionActivated
 
 ```TypeScript
@@ -281,6 +387,12 @@ Checks whether this audio session is activated.
 | Type | Description |
 | --- | --- |
 | boolean | Check result for whether the audio session is activated. **true** if activated, **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+let isActivated = audioSessionManager.isAudioSessionActivated();
+```
 
 ## isOtherMediaPlaying
 
@@ -304,140 +416,11 @@ Check whether any other application is currently playing audio of the four media
 | --- | --- |
 | boolean | Whether another application is playing audio of certain media types. **true** means yes; **false** otherwise. |
 
-## offAudioSessionDeactivated
+**Examples**
 
 ```TypeScript
-offAudioSessionDeactivated(callback?: Callback<AudioSessionDeactivatedEvent>): void
+let isExistence = audioSessionManager.isOtherMediaPlaying();
 ```
-
-Unsubscribes to audio session deactivated event.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-AudioSessionManager-offAudioSessionDeactivated(callback?: Callback<AudioSessionDeactivatedEvent>): void--><!--Device-AudioSessionManager-offAudioSessionDeactivated(callback?: Callback<AudioSessionDeactivatedEvent>): void-End-->
-
-**System capability:** 
-- API version 23 and later: SystemCapability.Multimedia.Audio.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSessionDeactivatedEvent](arkts-audio-audio-audiosessiondeactivatedevent-i.md)&gt; | No | Callback invoked for the audio session deactivated event.<br>**Since:** 23 |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed.<br>**Applicable version:** 23 and later |
-
-## offAudioSessionStateChanged
-
-```TypeScript
-offAudioSessionStateChanged(callback?: Callback<AudioSessionStateChangedEvent>): void
-```
-
-Unsubscribes to audio session deactivated event.
-
-**Since:** 23
-
-<!--Device-AudioSessionManager-offAudioSessionStateChanged(callback?: Callback<AudioSessionStateChangedEvent>): void--><!--Device-AudioSessionManager-offAudioSessionStateChanged(callback?: Callback<AudioSessionStateChangedEvent>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)&gt; | No | Callback invoked for the audio session state change event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
-
-## offAvailableDeviceChange
-
-```TypeScript
-offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void
-```
-
-Unsubscribes to available device change events.
-
-**Since:** 24
-
-<!--Device-AudioSessionManager-offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioSessionManager-offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Device
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | No | Callback used in subscribe. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
-
-## offCurrentInputDeviceChanged
-
-```TypeScript
-offCurrentInputDeviceChanged(callback?: Callback<CurrentInputDeviceChangedEvent>): void
-```
-
-Unsubscribes current input device change events.
-
-**Since:** 24
-
-<!--Device-AudioSessionManager-offCurrentInputDeviceChanged(callback?: Callback<CurrentInputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-offCurrentInputDeviceChanged(callback?: Callback<CurrentInputDeviceChangedEvent>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Device
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)&gt; | No | Callback used in subscribe. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
-
-## offCurrentOutputDeviceChanged
-
-```TypeScript
-offCurrentOutputDeviceChanged(callback?: Callback<CurrentOutputDeviceChangedEvent>): void
-```
-
-UnSubscribes output device change event callback.
-
-**Since:** 23
-
-<!--Device-AudioSessionManager-offCurrentOutputDeviceChanged(callback?: Callback<CurrentOutputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-offCurrentOutputDeviceChanged(callback?: Callback<CurrentOutputDeviceChangedEvent>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Device
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)&gt; | No | Callback used to listen device change event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## off('audioSessionDeactivated')
 
@@ -460,7 +443,7 @@ Unsubscribes from the audio session deactivation event. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioSessionDeactivated' | Yes | Event type. The event **'audioSessionDeactivated'** is triggered when the audio session is deactivated. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSessionDeactivatedEvent](arkts-audio-audio-audiosessiondeactivatedevent-i.md)&gt; | No | Callback used to return the reason why the audio session is deactivated. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionDeactivatedEvent](arkts-audio-audio-audiosessiondeactivatedevent-i.md)&gt; | No | Callback used to return the reason why the audio session is deactivated. |
 
 **Error codes:**
 
@@ -488,7 +471,7 @@ Unsubscribes from the audio session state change event. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioSessionStateChanged' | Yes | Event type. The event **'audioSessionStateChanged'** is triggered when the audio session state is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)&gt; | No | Callback used to return the audio session change information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)&gt; | No | Callback used to return the audio session change information. |
 
 **Error codes:**
 
@@ -516,7 +499,7 @@ Unsubscribes from the event indicating that the connection status of an availabl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'availableDeviceChange' | Yes | Event type. The event **'availableDeviceChange'** is triggered when the connection status of available audio devices is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | No | Callback used to return the available device change details. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | No | Callback used to return the available device change details. |
 
 **Error codes:**
 
@@ -543,7 +526,7 @@ Unsubscribes from the current input device change event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'currentInputDeviceChanged' | Yes | Event type. The event **'currentInputDeviceChanged'** is triggered when the current input device is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)&gt; | No | Callback used to return the information about the current input device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)&gt; | No | Callback used to return the information about the current input device. |
 
 **Error codes:**
 
@@ -570,7 +553,7 @@ Unsubscribes from the current output device change event. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'currentOutputDeviceChanged' | Yes | Event type. The event **'currentOutputDeviceChanged'** is triggered when the current output device is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)&gt; | No | Callback used to return the information about the current output device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)&gt; | No | Callback used to return the information about the current output device. |
 
 **Error codes:**
 
@@ -579,19 +562,19 @@ Unsubscribes from the current output device change event. This API uses an async
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-## onAudioSessionDeactivated
+## offAudioSessionDeactivated
 
 ```TypeScript
-onAudioSessionDeactivated(callback: Callback<AudioSessionDeactivatedEvent>): void
+offAudioSessionDeactivated(callback?: Callback<AudioSessionDeactivatedEvent>): void
 ```
 
-Listens for audio session deactivated event. When the audio session is deactivated, registered clients will receive the callback.
+Unsubscribes to audio session deactivated event.
 
 **Since:** 23
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-AudioSessionManager-onAudioSessionDeactivated(callback: Callback<AudioSessionDeactivatedEvent>): void--><!--Device-AudioSessionManager-onAudioSessionDeactivated(callback: Callback<AudioSessionDeactivatedEvent>): void-End-->
+<!--Device-AudioSessionManager-offAudioSessionDeactivated(callback?: Callback<AudioSessionDeactivatedEvent>): void--><!--Device-AudioSessionManager-offAudioSessionDeactivated(callback?: Callback<AudioSessionDeactivatedEvent>): void-End-->
 
 **System capability:** 
 - API version 23 and later: SystemCapability.Multimedia.Audio.Core
@@ -600,7 +583,7 @@ Listens for audio session deactivated event. When the audio session is deactivat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSessionDeactivatedEvent](arkts-audio-audio-audiosessiondeactivatedevent-i.md)&gt; | Yes | Callback invoked for the audio session deactivated event.<br>**Since:** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionDeactivatedEvent](arkts-audio-audio-audiosessiondeactivatedevent-i.md)&gt; | No | Callback invoked for the audio session deactivated event.<br>**Since:** 23 |
 
 **Error codes:**
 
@@ -608,17 +591,17 @@ Listens for audio session deactivated event. When the audio session is deactivat
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed.<br>**Applicable version:** 23 and later |
 
-## onAudioSessionStateChanged
+## offAudioSessionStateChanged
 
 ```TypeScript
-onAudioSessionStateChanged(callback: Callback<AudioSessionStateChangedEvent>): void
+offAudioSessionStateChanged(callback?: Callback<AudioSessionStateChangedEvent>): void
 ```
 
-Listens for audio session state change event. When the audio session state change, registered clients will receive the callback.
+Unsubscribes to audio session deactivated event.
 
 **Since:** 23
 
-<!--Device-AudioSessionManager-onAudioSessionStateChanged(callback: Callback<AudioSessionStateChangedEvent>): void--><!--Device-AudioSessionManager-onAudioSessionStateChanged(callback: Callback<AudioSessionStateChangedEvent>): void-End-->
+<!--Device-AudioSessionManager-offAudioSessionStateChanged(callback?: Callback<AudioSessionStateChangedEvent>): void--><!--Device-AudioSessionManager-offAudioSessionStateChanged(callback?: Callback<AudioSessionStateChangedEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -626,27 +609,26 @@ Listens for audio session state change event. When the audio session state chang
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)&gt; | Yes | Callback invoked for the audio session state change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)&gt; | No | Callback invoked for the audio session state change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-## onAvailableDeviceChange
+## offAvailableDeviceChange
 
 ```TypeScript
-onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void
+offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void
 ```
 
-Subscribes to available device change events. When a device is connected/disconnected, registered clients will receive the callback.
+Unsubscribes to available device change events.
 
 **Since:** 24
 
-<!--Device-AudioSessionManager-onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void--><!--Device-AudioSessionManager-onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void-End-->
+<!--Device-AudioSessionManager-offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioSessionManager-offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -654,27 +636,25 @@ Subscribes to available device change events. When a device is connected/disconn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceUsage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | Yes | Audio device usage to filter available devices. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | Yes | Callback used to obtain the device update details. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | No | Callback used in subscribe. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-## onCurrentInputDeviceChanged
+## offCurrentInputDeviceChanged
 
 ```TypeScript
-onCurrentInputDeviceChanged(callback: Callback<CurrentInputDeviceChangedEvent>): void
+offCurrentInputDeviceChanged(callback?: Callback<CurrentInputDeviceChangedEvent>): void
 ```
 
-Subscribes input device change event callback. The event is triggered when current input device change.
+Unsubscribes current input device change events.
 
 **Since:** 24
 
-<!--Device-AudioSessionManager-onCurrentInputDeviceChanged(callback: Callback<CurrentInputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-onCurrentInputDeviceChanged(callback: Callback<CurrentInputDeviceChangedEvent>): void-End-->
+<!--Device-AudioSessionManager-offCurrentInputDeviceChanged(callback?: Callback<CurrentInputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-offCurrentInputDeviceChanged(callback?: Callback<CurrentInputDeviceChangedEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -682,26 +662,25 @@ Subscribes input device change event callback. The event is triggered when curre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)&gt; | Yes | Callback used to listen input device change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)&gt; | No | Callback used in subscribe. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-## onCurrentOutputDeviceChanged
+## offCurrentOutputDeviceChanged
 
 ```TypeScript
-onCurrentOutputDeviceChanged(callback: Callback<CurrentOutputDeviceChangedEvent>): void
+offCurrentOutputDeviceChanged(callback?: Callback<CurrentOutputDeviceChangedEvent>): void
 ```
 
-Subscribes output device change event callback. The event is triggered when device change.
+UnSubscribes output device change event callback.
 
 **Since:** 23
 
-<!--Device-AudioSessionManager-onCurrentOutputDeviceChanged(callback: Callback<CurrentOutputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-onCurrentOutputDeviceChanged(callback: Callback<CurrentOutputDeviceChangedEvent>): void-End-->
+<!--Device-AudioSessionManager-offCurrentOutputDeviceChanged(callback?: Callback<CurrentOutputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-offCurrentOutputDeviceChanged(callback?: Callback<CurrentOutputDeviceChangedEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -709,14 +688,13 @@ Subscribes output device change event callback. The event is triggered when devi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)&gt; | Yes | Callback used to listen device change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)&gt; | No | Callback used to listen device change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
 ## on('audioSessionDeactivated')
@@ -740,7 +718,7 @@ Subscribes to the audio session deactivation event, which is triggered when an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioSessionDeactivated' | Yes | Event type. The event **'audioSessionDeactivated'** is triggered when the audio session is deactivated. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSessionDeactivatedEvent](arkts-audio-audio-audiosessiondeactivatedevent-i.md)&gt; | Yes | Callback used to return the reason why the audio session is deactivated. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionDeactivatedEvent](arkts-audio-audio-audiosessiondeactivatedevent-i.md)&gt; | Yes | Callback used to return the reason why the audio session is deactivated. |
 
 **Error codes:**
 
@@ -768,7 +746,7 @@ Subscribes to the audio session state change event, which is triggered when the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioSessionStateChanged' | Yes | Event type. The event **'audioSessionStateChanged'** is triggered when the audio session state is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)&gt; | Yes | Callback used to return the audio session change information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)&gt; | Yes | Callback used to return the audio session change information. |
 
 **Error codes:**
 
@@ -798,7 +776,7 @@ Subscribes to the event indicating that the connection status of an available au
 | --- | --- | --- | --- |
 | type | 'availableDeviceChange' | Yes | Event type. The event **'availableDeviceChange'** is triggered when the connection status of available audio devices is changed. |
 | deviceUsage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | Yes | Audio device type (classified by usage). |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | Yes | Callback used to return the available device change details. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | Yes | Callback used to return the available device change details. |
 
 **Error codes:**
 
@@ -826,7 +804,7 @@ Subscribes to the current input device change event, which is triggered when the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'currentInputDeviceChanged' | Yes | Event type. The event **'currentInputDeviceChanged'** is triggered when the current input device is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)&gt; | Yes | Callback used to return the information about the current input device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)&gt; | Yes | Callback used to return the information about the current input device. |
 
 **Error codes:**
 
@@ -854,7 +832,147 @@ Subscribes to the current output device change event, which is triggered when th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'currentOutputDeviceChanged' | Yes | Event type. The event **'currentOutputDeviceChanged'** is triggered when the current output device is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)&gt; | Yes | Callback used to return the information about the current output device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)&gt; | Yes | Callback used to return the information about the current output device. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## onAudioSessionDeactivated
+
+```TypeScript
+onAudioSessionDeactivated(callback: Callback<AudioSessionDeactivatedEvent>): void
+```
+
+Listens for audio session deactivated event. When the audio session is deactivated, registered clients will receive the callback.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AudioSessionManager-onAudioSessionDeactivated(callback: Callback<AudioSessionDeactivatedEvent>): void--><!--Device-AudioSessionManager-onAudioSessionDeactivated(callback: Callback<AudioSessionDeactivatedEvent>): void-End-->
+
+**System capability:** 
+- API version 23 and later: SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionDeactivatedEvent](arkts-audio-audio-audiosessiondeactivatedevent-i.md)&gt; | Yes | Callback invoked for the audio session deactivated event.<br>**Since:** 23 |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed.<br>**Applicable version:** 23 and later |
+
+## onAudioSessionStateChanged
+
+```TypeScript
+onAudioSessionStateChanged(callback: Callback<AudioSessionStateChangedEvent>): void
+```
+
+Listens for audio session state change event. When the audio session state change, registered clients will receive the callback.
+
+**Since:** 23
+
+<!--Device-AudioSessionManager-onAudioSessionStateChanged(callback: Callback<AudioSessionStateChangedEvent>): void--><!--Device-AudioSessionManager-onAudioSessionStateChanged(callback: Callback<AudioSessionStateChangedEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)&gt; | Yes | Callback invoked for the audio session state change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## onAvailableDeviceChange
+
+```TypeScript
+onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void
+```
+
+Subscribes to available device change events. When a device is connected/disconnected, registered clients will receive the callback.
+
+**Since:** 24
+
+<!--Device-AudioSessionManager-onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void--><!--Device-AudioSessionManager-onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceUsage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | Yes | Audio device usage to filter available devices. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | Yes | Callback used to obtain the device update details. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## onCurrentInputDeviceChanged
+
+```TypeScript
+onCurrentInputDeviceChanged(callback: Callback<CurrentInputDeviceChangedEvent>): void
+```
+
+Subscribes input device change event callback. The event is triggered when current input device change.
+
+**Since:** 24
+
+<!--Device-AudioSessionManager-onCurrentInputDeviceChanged(callback: Callback<CurrentInputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-onCurrentInputDeviceChanged(callback: Callback<CurrentInputDeviceChangedEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)&gt; | Yes | Callback used to listen input device change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## onCurrentOutputDeviceChanged
+
+```TypeScript
+onCurrentOutputDeviceChanged(callback: Callback<CurrentOutputDeviceChangedEvent>): void
+```
+
+Subscribes output device change event callback. The event is triggered when device change.
+
+**Since:** 23
+
+<!--Device-AudioSessionManager-onCurrentOutputDeviceChanged(callback: Callback<CurrentOutputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-onCurrentOutputDeviceChanged(callback: Callback<CurrentOutputDeviceChangedEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)&gt; | Yes | Callback used to listen device change event. |
 
 **Error codes:**
 
@@ -911,6 +1029,28 @@ Selects a media input device. This API uses a promise to return the result.
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, for example, the selected device does not exist. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data: audio.AudioDeviceDescriptors = audioSessionManager.getAvailableDevices(audio.DeviceUsage.MEDIA_OUTPUT_DEVICES);
+  console.info('Succeeded in doing getAvailableDevices.');
+
+  if (data[0]) {
+    audioSessionManager.selectMediaInputDevice(data[0]).then(() => {
+      console.info('Succeeded in doing selectMediaInputDevice.');
+    }).catch((selectErr: BusinessError) => {
+      console.error(`Failed to selectMediaInputDevice. Code: ${selectErr.code}, message: ${selectErr.message}`);
+    });
+  }
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to getAvailableDevices. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## setAudioSessionBehavior
 
@@ -975,6 +1115,12 @@ Sets an audio session scene.
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
+**Examples**
+
+```TypeScript
+audioSessionManager.setAudioSessionScene(audio.AudioSessionScene.AUDIO_SESSION_SCENE_MEDIA);
+```
+
 ## setBluetoothAndNearlinkPreferredRecordCategory
 
 ```TypeScript
@@ -1019,6 +1165,19 @@ Sets the preferred device category for recording with Bluetooth or NearLink. Thi
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const category = audio.BluetoothAndNearlinkPreferredRecordCategory.PREFERRED_LOW_LATENCY;
+audioSessionManager.setBluetoothAndNearlinkPreferredRecordCategory(category).then(() => {
+  console.info('Succeeded in doing setBluetoothAndNearlinkPreferredRecordCategory.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to setBluetoothAndNearlinkPreferredRecordCategory. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## setCapturerMuteHint
 
@@ -1102,6 +1261,31 @@ Sets the default audio output device. This API uses a promise to return the resu
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
 | [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. Return by promise. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// This API can be called at any time after an AudioRenderer instance is created.
+// If the API is called when no audio is being played, the system records the default device set by the application. When the application starts playing, the sound is played from this default device.
+// If the API is called when audio is being played and no external device, such as a Bluetooth or wired headset, is connected, the system immediately switches to the default device. If an external device is connected, the system records the default device and switches to it once the external device is disconnected.
+audioRenderer.setDefaultOutputDevice(audio.DeviceType.SPEAKER).then(() => {
+  console.info('setDefaultOutputDevice Success!');
+}).catch((err: BusinessError) => {
+  console.error(`setDefaultOutputDevice Fail: ${err}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioSessionManager.setDefaultOutputDevice(audio.DeviceType.SPEAKER).then(() => {
+  console.info('setDefaultOutputDevice Success!');
+}).catch((err: BusinessError) => {
+  console.error(`setDefaultOutputDevice Fail: ${err}`);
+});
+```
 
 ## setMediaOutputDevice
 

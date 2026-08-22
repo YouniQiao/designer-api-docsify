@@ -25,7 +25,7 @@ Cancels a reminder published. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reminderId | int | Yes | ID of the agent-powered reminder to be canceled. The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md) API is called. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If all the reminders are canceled, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If all the reminders are canceled, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -48,6 +48,18 @@ reminderAgentManager.cancelReminder(reminderId, (err: BusinessError) => {
   } else {
     console.info("cancelReminder callback");
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+let reminderId: number = 1;
+reminderAgentManager.cancelReminder(reminderId).then(() => {
+  console.info("cancelReminder promise");
+}).catch((err: BusinessError) => {
+  console.error("promise err code:" + err.code + " message:" + err.message);
 });
 ```
 
@@ -88,15 +100,5 @@ Cancels a reminder published. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-let reminderId: number = 1;
-reminderAgentManager.cancelReminder(reminderId).then(() => {
-  console.info("cancelReminder promise");
-}).catch((err: BusinessError) => {
-  console.error("promise err code:" + err.code + " message:" + err.message);
-});
-```
+See [cancelReminder](#cancelreminder)
 

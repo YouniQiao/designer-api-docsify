@@ -35,6 +35,24 @@ function getCurrentGroup(): Promise<WifiP2pGroupInfo>
 | --- | --- |
 | Promise&lt;WifiP2pGroupInfo&gt; | 当前群组信息。 |
 
+**示例**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+wifi.getCurrentGroup((err, data:wifi.WifiP2pGroupInfo) => {
+   if (err) {
+       console.error("get current P2P group error");
+       return;
+   }
+  console.info("get current P2P group: " + JSON.stringify(data));
+});
+
+wifi.getCurrentGroup().then(data => {
+  console.info("get current P2P group: " + JSON.stringify(data));
+});
+```
+
 
 ## getCurrentGroup
 
@@ -64,19 +82,5 @@ function getCurrentGroup(callback: AsyncCallback<WifiP2pGroupInfo>): void
 
 **示例**
 
-```TypeScript
-import wifi from '@ohos.wifi';
-
-wifi.getCurrentGroup((err, data:wifi.WifiP2pGroupInfo) => {
-   if (err) {
-       console.error("get current P2P group error");
-       return;
-   }
-  console.info("get current P2P group: " + JSON.stringify(data));
-});
-
-wifi.getCurrentGroup().then(data => {
-  console.info("get current P2P group: " + JSON.stringify(data));
-});
-```
+参见 [getCurrentGroup](#getcurrentgroup)
 

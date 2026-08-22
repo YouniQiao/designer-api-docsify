@@ -47,3 +47,27 @@ Obtains call transfer information with the phone number. This API uses a promise
 | [8401002](../errorcode-telephony.md#8401002-incorrect-number) | Invalid input call number. |
 | [8401003](../errorcode-telephony.md#8401003-frequent-operations) | Operation too frequent. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.getCallTransferInfo(0, call.CallTransferType.TRANSFER_TYPE_BUSY, (err: BusinessError, data: call.CallTransferResult) => {
+    if (err) {
+        console.error(`getCallTransferInfo fail, err->${JSON.stringify(err)}`);
+    } else {
+        console.info(`getCallTransferInfo success, data->${JSON.stringify(data)}`);
+    }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.getCallTransferInfo(0, call.CallTransferType.TRANSFER_TYPE_BUSY).then((data: call.CallTransferResult) => {
+    console.info(`getCallTransferInfo success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getCallTransferInfo fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+

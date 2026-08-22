@@ -37,6 +37,24 @@ function getCurrentGroup(): Promise<WifiP2pGroupInfo>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [2801000](../errorcode-wifi.md#2801000-p2p模块异常) | Operation failed. |
 
+**示例**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+  // p2p已经建组或者连接成功，才能正常获取到当前组信息
+  wifiManager.getCurrentGroup((err, data:wifiManager.WifiP2pGroupInfo) => {
+    if (err) {
+        console.error("get current P2P group error");
+        return;
+    }
+    console.info("get current P2P group: " + JSON.stringify(data));
+  });
+
+  wifiManager.getCurrentGroup().then(data => {
+    console.info("get current P2P group: " + JSON.stringify(data));
+  });
+```
+
 
 ## getCurrentGroup
 
@@ -70,19 +88,5 @@ function getCurrentGroup(callback: AsyncCallback<WifiP2pGroupInfo>): void
 
 **示例**
 
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-  // p2p已经建组或者连接成功，才能正常获取到当前组信息
-  wifiManager.getCurrentGroup((err, data:wifiManager.WifiP2pGroupInfo) => {
-    if (err) {
-        console.error("get current P2P group error");
-        return;
-    }
-    console.info("get current P2P group: " + JSON.stringify(data));
-  });
-
-  wifiManager.getCurrentGroup().then(data => {
-    console.info("get current P2P group: " + JSON.stringify(data));
-  });
-```
+参见 [getCurrentGroup](#getcurrentgroup)
 

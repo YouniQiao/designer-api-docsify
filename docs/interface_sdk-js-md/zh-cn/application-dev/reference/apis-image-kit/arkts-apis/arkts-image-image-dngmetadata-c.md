@@ -500,6 +500,24 @@ readonly chromaBlurRadius?: double
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## colorimetricReference
+
+```TypeScript
+readonly colorimetricReference?: int
+```
+
+色度参考标准。
+
+**类型：** int
+
+**起始版本：** 24
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly colorimetricReference?: int--><!--Device-DngMetadata-readonly colorimetricReference?: int-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
 ## colorMatrix1
 
 ```TypeScript
@@ -533,24 +551,6 @@ readonly colorMatrix2?: double[]
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly colorMatrix2?: double[]--><!--Device-DngMetadata-readonly colorMatrix2?: double[]-End-->
-
-**系统能力：** SystemCapability.Multimedia.Image.Core
-
-## colorimetricReference
-
-```TypeScript
-readonly colorimetricReference?: int
-```
-
-色度参考标准。
-
-**类型：** int
-
-**起始版本：** 24
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DngMetadata-readonly colorimetricReference?: int--><!--Device-DngMetadata-readonly colorimetricReference?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -806,24 +806,6 @@ readonly lensInfo?: double[]
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
-## linearResponseLimit
-
-```TypeScript
-readonly linearResponseLimit?: double
-```
-
-线性响应上限。
-
-**类型：** double
-
-**起始版本：** 24
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DngMetadata-readonly linearResponseLimit?: double--><!--Device-DngMetadata-readonly linearResponseLimit?: double-End-->
-
-**系统能力：** SystemCapability.Multimedia.Image.Core
-
 ## linearizationTable
 
 ```TypeScript
@@ -839,6 +821,24 @@ readonly linearizationTable?: int[]
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngMetadata-readonly linearizationTable?: int[]--><!--Device-DngMetadata-readonly linearizationTable?: int[]-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
+## linearResponseLimit
+
+```TypeScript
+readonly linearResponseLimit?: double
+```
+
+线性响应上限。
+
+**类型：** double
+
+**起始版本：** 24
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly linearResponseLimit?: double--><!--Device-DngMetadata-readonly linearResponseLimit?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

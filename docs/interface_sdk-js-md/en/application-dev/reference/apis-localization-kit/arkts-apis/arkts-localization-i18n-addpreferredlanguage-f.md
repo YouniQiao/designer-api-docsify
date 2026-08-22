@@ -48,3 +48,18 @@ let index: number = 0;
 let success: boolean = i18n.addPreferredLanguage(language, index);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+// Add zh-CN to the preferred language list.
+let language = 'zh-CN';
+let index = 0;
+try {
+  i18n.System.addPreferredLanguage(language, index); // Add zh-CN to the first place in the preferred language list.
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.addPreferredLanguage failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+

@@ -32,7 +32,7 @@ Unregisters a mission status listener. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | listenerId | number | Yes | Index of the mission status listener to unregister. It is returned by **registerMissionListener()**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -67,6 +67,44 @@ let listenerId = missionManager.registerMissionListener({
 missionManager.unregisterMissionListener(listenerId, (error) => {
   console.error(`unregisterMissionListener fail, error: ${JSON.stringify(error)}`);
 });
+```
+
+```TypeScript
+import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
+
+console.info('registerMissionListener');
+let listenerId = missionManager.registerMissionListener({
+  onMissionCreated: (mission) => {
+    console.info('--------onMissionCreated-------');
+  },
+  onMissionDestroyed: (mission) => {
+    console.info('--------onMissionDestroyed-------');
+  },
+  onMissionSnapshotChanged: (mission) => {
+    console.info('--------onMissionSnapshotChanged-------');
+  },
+  onMissionMovedToFront: (mission) => {
+    console.info('--------onMissionMovedToFront-------');
+  },
+  onMissionIconUpdated: (mission, icon) => {
+    console.info('--------onMissionIconUpdated-------');
+  },
+  onMissionClosed: (mission) => {
+    console.info('--------onMissionClosed-------');
+  },
+  onMissionLabelUpdated: (mission) => {
+    console.info('--------onMissionLabelUpdated-------');
+  }
+});
+
+missionManager.unregisterMissionListener(listenerId)
+  .then(() => {
+    console.info(`UnregisterMissionListener success.`)
+  })
+  .catch((error: BusinessError) => {
+    console.error(`UnregisterMissionListener fail, error: ${JSON.stringify(error)}.`);
+  });
 ```
 
 
@@ -106,41 +144,5 @@ Unregisters a mission status listener. This API uses a promise to return the res
 
 **Examples**
 
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-console.info('registerMissionListener');
-let listenerId = missionManager.registerMissionListener({
-  onMissionCreated: (mission) => {
-    console.info('--------onMissionCreated-------');
-  },
-  onMissionDestroyed: (mission) => {
-    console.info('--------onMissionDestroyed-------');
-  },
-  onMissionSnapshotChanged: (mission) => {
-    console.info('--------onMissionSnapshotChanged-------');
-  },
-  onMissionMovedToFront: (mission) => {
-    console.info('--------onMissionMovedToFront-------');
-  },
-  onMissionIconUpdated: (mission, icon) => {
-    console.info('--------onMissionIconUpdated-------');
-  },
-  onMissionClosed: (mission) => {
-    console.info('--------onMissionClosed-------');
-  },
-  onMissionLabelUpdated: (mission) => {
-    console.info('--------onMissionLabelUpdated-------');
-  }
-});
-
-missionManager.unregisterMissionListener(listenerId)
-  .then(() => {
-    console.info(`UnregisterMissionListener success.`)
-  })
-  .catch((error: BusinessError) => {
-    console.error(`UnregisterMissionListener fail, error: ${JSON.stringify(error)}.`);
-  });
-```
+See [unregisterMissionListener](#unregistermissionlistener)
 

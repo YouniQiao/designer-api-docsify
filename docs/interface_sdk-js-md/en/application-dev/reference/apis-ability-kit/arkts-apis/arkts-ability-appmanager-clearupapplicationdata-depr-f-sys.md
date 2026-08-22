@@ -46,6 +46,23 @@ import appManager from '@ohos.application.appManager';
 import { BusinessError } from '@ohos.base';
 
 let bundleName = 'bundleName';
+
+function clearUpApplicationDataCallback(err: BusinessError, data: void) {
+  if (err) {
+    console.error(`ClearUpApplicationDataCallback failed, error code: ${err.code}, error msg: ${err.message}.`);
+  } else {
+    console.info(`ClearUpApplicationDataCallback success, data: ${JSON.stringify(data)}.`);
+  }
+}
+
+appManager.clearUpApplicationData(bundleName, clearUpApplicationDataCallback);
+```
+
+```TypeScript
+import appManager from '@ohos.application.appManager';
+import { BusinessError } from '@ohos.base';
+
+let bundleName = 'bundleName';
 appManager.clearUpApplicationData(bundleName)
   .then((data) => {
     console.info(`ClearUpApplicationData success, data: ${JSON.stringify(data)}.`);
@@ -83,24 +100,9 @@ Clear up application data by bundle name
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | bundle name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Represents the specified callback method. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Represents the specified callback method. |
 
 **Examples**
 
-```TypeScript
-import appManager from '@ohos.application.appManager';
-import { BusinessError } from '@ohos.base';
-
-let bundleName = 'bundleName';
-
-function clearUpApplicationDataCallback(err: BusinessError, data: void) {
-  if (err) {
-    console.error(`ClearUpApplicationDataCallback failed, error code: ${err.code}, error msg: ${err.message}.`);
-  } else {
-    console.info(`ClearUpApplicationDataCallback success, data: ${JSON.stringify(data)}.`);
-  }
-}
-
-appManager.clearUpApplicationData(bundleName, clearUpApplicationDataCallback);
-```
+See [clearUpApplicationData](#clearupapplicationdata)
 

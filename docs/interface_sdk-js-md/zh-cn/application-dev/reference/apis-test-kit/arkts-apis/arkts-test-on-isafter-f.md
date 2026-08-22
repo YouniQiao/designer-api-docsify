@@ -33,3 +33,21 @@ Requires that the target Component which is after another Component that specifi
 | --- | --- |
 | [On](arkts-test-uitest-on-c.md) | this { |
 
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+// 使用静态构造器ON创建On对象，指定目标控件位于给出的特征属性控件之后。
+let on: On = ON.type('Text').isAfter(ON.text('123')); // 查找text为123之后的第一个Text组件
+```
+
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+// 使用静态构造器BY创建by对象，指定目标控件位于给出的特征属性控件之后。
+let by: By = BY.type('Text').isAfter(BY.text('123')); // 查找text为123之后的第一个Text组件。
+```
+

@@ -26,7 +26,7 @@ Stop device discovery.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | a callback function |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | a callback function |
 
 **Error codes:**
 
@@ -45,6 +45,16 @@ avSession.stopCastDeviceDiscovery((err: BusinessError) => {
   } else {
     console.info('stopCastDeviceDiscovery successfully');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avSession.stopCastDeviceDiscovery().then(() => {
+  console.info('stopCastDeviceDiscovery successfully');
+}).catch((err: BusinessError) => {
+  console.error(`stopCastDeviceDiscovery BusinessError: code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -79,13 +89,5 @@ Stop device discovery.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avSession.stopCastDeviceDiscovery().then(() => {
-  console.info('stopCastDeviceDiscovery successfully');
-}).catch((err: BusinessError) => {
-  console.error(`stopCastDeviceDiscovery BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
+See [stopCastDeviceDiscovery](#stopcastdevicediscovery)
 

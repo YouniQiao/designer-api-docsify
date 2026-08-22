@@ -15,22 +15,6 @@ import { usbManager } from '@kit.BasicServicesKit';
 import { serialManager } from '@kit.BasicServicesKit';
 ```
 
-## bRequest
-
-```TypeScript
-bRequest: int
-```
-
-Request type.
-
-**Type:** int
-
-**Since:** 23
-
-<!--Device-USBDeviceRequestParams-bRequest: int--><!--Device-USBDeviceRequestParams-bRequest: int-End-->
-
-**System capability:** SystemCapability.USB.USBManager
-
 ## bmRequestType
 
 ```TypeScript
@@ -44,6 +28,22 @@ Control request type.
 **Since:** 23
 
 <!--Device-USBDeviceRequestParams-bmRequestType: int--><!--Device-USBDeviceRequestParams-bmRequestType: int-End-->
+
+**System capability:** SystemCapability.USB.USBManager
+
+## bRequest
+
+```TypeScript
+bRequest: int
+```
+
+Request type.
+
+**Type:** int
+
+**Since:** 23
+
+<!--Device-USBDeviceRequestParams-bRequest: int--><!--Device-USBDeviceRequestParams-bRequest: int-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 

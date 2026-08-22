@@ -750,6 +750,10 @@ getLineMetrics(): Array<LineMetrics>
 let arrLineMetric =  paragraph.getLineMetrics();
 ```
 
+```TypeScript
+let lineMetrics =  paragraph.getLineMetrics(0);
+```
+
 ## getLineMetrics
 
 ```TypeScript
@@ -780,9 +784,7 @@ getLineMetrics(lineNumber: int): LineMetrics | undefined
 
 **示例**
 
-```TypeScript
-let lineMetrics =  paragraph.getLineMetrics(0);
-```
+参见 [getLineMetrics](#getlinemetrics)
 
 ## getLineWidth
 
@@ -1779,6 +1781,177 @@ let opts: image.InitializationOptions = { editable: true, pixelFormat: image.Pix
 let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
 let canvas = new drawing.Canvas(pixelMap);
 paragraph.paint(canvas, 0, 0);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D'
+import { image } from '@kit.ImageKit'
+
+function textFunc(pixelmap: PixelMap) {
+  let canvas = new drawing.Canvas(pixelmap);
+  lines[0].paint(canvas, 0, 0);
+}
+
+@Entry
+@Component
+struct Index {
+  @State pixelmap?: PixelMap = undefined;
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Image(this.pixelmap).width(200).height(200);
+      Button().onClick(() => {
+        if (this.pixelmap == undefined) {
+          const color: ArrayBuffer = new ArrayBuffer(160000);
+          let opts: image.InitializationOptions =
+            { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 200, width: 200 } }
+          this.pixelmap = image.createPixelMapSync(color, opts);
+        }
+        this.fun(this.pixelmap);
+      })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component, Column, Button, Image, ClickEvent} from '@ohos.arkui.component'
+import { State } from '@ohos.arkui.stateManagement'
+import { drawing } from '@kit.ArkGraphics2D'
+import { text } from "@kit.ArkGraphics2D"
+import { image } from '@kit.ImageKit';
+
+function textFunc(pixelmap?: image.PixelMap) {
+  if (pixelmap) {
+    let canvas = new drawing.Canvas(pixelmap);
+    let textStyle: text.TextStyle = {
+      color: { alpha: 255, red: 255, green: 0, blue: 0 },
+      fontSize: 33,
+    };
+    let paragraphStyle: text.ParagraphStyle = {
+      textStyle: textStyle,
+      align: text.TextAlign.END,
+    };
+    let fontCollection = new text.FontCollection();
+    let paragraphBuilder = new text.ParagraphBuilder(paragraphStyle, fontCollection);
+    paragraphBuilder.addText("Hello World");
+    let paragraph = paragraphBuilder.build();
+    let lines = paragraph.getTextLines();
+    lines[0].paint(canvas, 0, 0);
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  @State pixelmap?: image.PixelMap = undefined;
+  fun: (pixelmap?: image.PixelMap) => void = textFunc;
+  build() {
+    Column() {
+      Image(this.pixelmap).width(200).height(200);
+      Button("Click").onClick((e: ClickEvent) => {
+        if (this.pixelmap == undefined) {
+          const color: ArrayBuffer = new ArrayBuffer(160000);
+          let opts: image.InitializationOptions =
+            { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 200, width: 200 } }
+          this.pixelmap = image.createPixelMapSync(color, opts);
+        }
+        this.fun(this.pixelmap);
+      })
+    }
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D'
+import { text } from '@kit.ArkGraphics2D'
+import { common2D } from '@kit.ArkGraphics2D'
+import { image } from '@kit.ImageKit'
+
+function textFunc(pixelmap: PixelMap) {
+  let canvas = new drawing.Canvas(pixelmap);
+  runs[0].paint(canvas, 0, 0);
+}
+
+@Entry
+@Component
+struct Index {
+  @State pixelmap?: PixelMap = undefined;
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Image(this.pixelmap).width(200).height(200);
+      Button().onClick(() => {
+        if (this.pixelmap == undefined) {
+          const color: ArrayBuffer = new ArrayBuffer(160000);
+          let opts: image.InitializationOptions =
+            { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 200, width: 200 } }
+          this.pixelmap = image.createPixelMapSync(color, opts);
+        }
+        this.fun(this.pixelmap);
+      })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component, Column, Button, Image, ClickEvent} from '@ohos.arkui.component'
+import { State } from '@ohos.arkui.stateManagement'
+import { drawing } from '@kit.ArkGraphics2D'
+import { text } from "@kit.ArkGraphics2D"
+import { image } from '@kit.ImageKit';
+
+function textFunc(pixelmap?: image.PixelMap) {
+  if (pixelmap) {
+    let canvas = new drawing.Canvas(pixelmap);
+    let textStyle: text.TextStyle = {
+      color: { alpha: 255, red: 255, green: 0, blue: 0 },
+      fontSize: 33,
+    };
+    let paragraphStyle: text.ParagraphStyle = {
+      textStyle: textStyle,
+      align: text.TextAlign.END,
+    };
+    let fontCollection = new text.FontCollection();
+    let paragraphBuilder = new text.ParagraphBuilder(paragraphStyle, fontCollection);
+    paragraphBuilder.addText("Hello World");
+    let paragraph = paragraphBuilder.build();
+    let lines = paragraph.getTextLines();
+    let runs = lines[0].getGlyphRuns();
+    runs[0].paint(canvas, 0, 0);
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  @State pixelmap?: image.PixelMap = undefined;
+  fun: (pixelmap?: image.PixelMap) => void = textFunc;
+  build() {
+    Column() {
+      Image(this.pixelmap).width(200).height(200);
+      Button("Click").onClick((e: ClickEvent) => {
+        if (this.pixelmap == undefined) {
+          const color: ArrayBuffer = new ArrayBuffer(160000);
+          let opts: image.InitializationOptions =
+            { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 200, width: 200 } }
+          this.pixelmap = image.createPixelMapSync(color, opts);
+        }
+        this.fun(this.pixelmap);
+      })
+    }
+  }
+}
 ```
 
 ## paintOnPath

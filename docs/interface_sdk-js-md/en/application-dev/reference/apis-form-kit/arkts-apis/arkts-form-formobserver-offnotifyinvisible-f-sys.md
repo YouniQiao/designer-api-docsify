@@ -32,7 +32,7 @@ Cancels listening to the event of notifyInvisible type change. <p>You can use th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hostBundleName | string | No | Indicates the bundle name of the form host application. |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | No | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | No | The callback is used to return the running form info. |
 
 **Error codes:**
 

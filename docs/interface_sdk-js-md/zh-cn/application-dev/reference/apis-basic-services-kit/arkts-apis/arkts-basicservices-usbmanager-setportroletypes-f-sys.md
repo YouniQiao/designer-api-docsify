@@ -51,3 +51,17 @@ function setPortRoleTypes(portId: int, powerRole: PowerRoleType, dataRole: DataR
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 | [14400003](../errorcode-usb.md#14400003-不支持的端口角色切换) | Unsupported operation. The current device does not support port role switching. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// 定义端口号
+let portId: int = 1;
+// 设置端口角色类型：电源角色为SOURCE，数据角色为HOST
+usbManager.setPortRoleTypes(portId, usbManager.PowerRoleType.SOURCE, usbManager.DataRoleType.HOST).then(() => {
+  console.info('usb setPortRoleTypes successfully.');
+}).catch((err : BusinessError) => {
+  console.error(`usb setPortRoleTypes failed. Code: ${err.code}, message: ${err.message}`);
+});
+```
+

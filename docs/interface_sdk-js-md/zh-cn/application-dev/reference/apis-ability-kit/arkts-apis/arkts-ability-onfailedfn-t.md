@@ -18,3 +18,37 @@ type OnFailedFn = (code: int) => void
 | --- | --- | --- | --- |
 | code | int | 是 | 连接指定Ability失败返回的错误码。  错误码详细介绍请参考[通用错误码](../../errorcode-universal.md)和[元能力子系统错误码](../errorcode-ability.md)。  201 - The application does not have permission to call the interface.  16000001 - The specified ability does not exist.  16000002 - Incorrect ability type.  16000004 - Cannot start an invisible component.  16000005 - The specified process does not have the permission.  16000006 - Cross-user operations are not allowed.  16000008 - The crowdtesting application expires.  16000053 - The ability is not on the top of the UI.  16000055 - Installation-free timed out.  16000050 - Internal error. |
 
+**示例**
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { UIAbility, common, Want, AbilityConstant } from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
+import rpc from '@ohos.rpc';
+
+let connectWant: Want = {
+  bundleName: 'com.example.myapp',
+  abilityName: 'MyAbility'
+};
+
+let connectOptions: common.ConnectOptions = {
+  onConnect: (elementName: bundleManager.ElementName, remote: rpc.IRemoteObject): void => {
+    console.info(`onConnect elementName: ${JSON.stringify(elementName)}`);
+  },
+  onDisconnect: (elementName: bundleManager.ElementName): void => {
+    console.info(`onDisconnect elementName: ${JSON.stringify(elementName)}`);
+  },
+  onFailed: (code: int): void => {
+    console.error(`onFailed code: ${code}`);
+  }
+};
+
+class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    let connection = this.context.connectServiceExtensionAbility(connectWant, connectOptions);
+  }
+}
+```
+

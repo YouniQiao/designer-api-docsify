@@ -53,6 +53,16 @@ call.setMuted((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.setMuted().then(() => {
+    console.info(`setMuted success.`);
+}).catch((err: BusinessError) => {
+    console.error(`setMuted fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## setMuted
 
@@ -87,13 +97,5 @@ function setMuted(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.setMuted().then(() => {
-    console.info(`setMuted success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setMuted fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [setMuted](#setmuted)
 

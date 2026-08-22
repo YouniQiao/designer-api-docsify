@@ -60,6 +60,52 @@ globalContext.getApplicationContext()
   .getRawFileContent(modelFile)
   .then((buffer: Uint8Array) => {
     let modelBuffer = buffer.buffer;
+    mindSporeLite.loadModelFromBuffer(modelBuffer, (mindSporeLiteModel: mindSporeLite.Model) => {
+      let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
+      console.info('MS_LITE_LOG: ' + modelInputs[0].name);
+    })
+  })
+  .catch((error: BusinessError) => {
+    console.error("getRawFileContent promise error is " + error);
+  });
+```
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { UIContext } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let modelFile = 'xxx.ms';
+let globalContext = new UIContext().getHostContext() as common.UIAbilityContext;
+globalContext.getApplicationContext()
+  .resourceManager
+  .getRawFileContent(modelFile)
+  .then((buffer: Uint8Array) => {
+    let modelBuffer = buffer.buffer;
+    let context: mindSporeLite.Context = {};
+    context.target = ['cpu'];
+    mindSporeLite.loadModelFromBuffer(modelBuffer, context, (mindSporeLiteModel: mindSporeLite.Model) => {
+      let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
+      console.info('MS_LITE_LOG: ' + modelInputs[0].name);
+    })
+  })
+  .catch((error: BusinessError) => {
+    console.error("getRawFileContent promise error is " + error);
+  });
+```
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { UIContext } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let modelFile = 'xxx.ms';
+let globalContext = new UIContext().getHostContext() as common.UIAbilityContext;
+globalContext.getApplicationContext()
+  .resourceManager
+  .getRawFileContent(modelFile)
+  .then((buffer: Uint8Array) => {
+    let modelBuffer = buffer.buffer;
     mindSporeLite.loadModelFromBuffer(modelBuffer).then((mindSporeLiteModel: mindSporeLite.Model) => {
       let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
       console.info('MS_LITE_LOG: ' + modelInputs[0].name);
@@ -93,7 +139,7 @@ Create a Model instance from buffer
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | model | ArrayBuffer | Yes | model indicates model buffer to be loaded |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes | the callback of model |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes | the callback of model |
 
 **Error codes:**
 
@@ -106,27 +152,7 @@ Create a Model instance from buffer
 
 **Examples**
 
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { UIContext } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let modelFile = 'xxx.ms';
-let globalContext = new UIContext().getHostContext() as common.UIAbilityContext;
-globalContext.getApplicationContext()
-  .resourceManager
-  .getRawFileContent(modelFile)
-  .then((buffer: Uint8Array) => {
-    let modelBuffer = buffer.buffer;
-    mindSporeLite.loadModelFromBuffer(modelBuffer, (mindSporeLiteModel: mindSporeLite.Model) => {
-      let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
-      console.info('MS_LITE_LOG: ' + modelInputs[0].name);
-    })
-  })
-  .catch((error: BusinessError) => {
-    console.error("getRawFileContent promise error is " + error);
-  });
-```
+See [loadModelFromBuffer](#loadmodelfrombuffer)
 
 
 ## loadModelFromBuffer
@@ -153,7 +179,7 @@ Create a Model instance from buffer
 | --- | --- | --- | --- |
 | model | ArrayBuffer | Yes | model indicates model buffer to be loaded |
 | context | Context | Yes | context indicates model context information |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes | the callback of model |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes | the callback of model |
 
 **Error codes:**
 
@@ -166,27 +192,5 @@ Create a Model instance from buffer
 
 **Examples**
 
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { UIContext } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let modelFile = 'xxx.ms';
-let globalContext = new UIContext().getHostContext() as common.UIAbilityContext;
-globalContext.getApplicationContext()
-  .resourceManager
-  .getRawFileContent(modelFile)
-  .then((buffer: Uint8Array) => {
-    let modelBuffer = buffer.buffer;
-    let context: mindSporeLite.Context = {};
-    context.target = ['cpu'];
-    mindSporeLite.loadModelFromBuffer(modelBuffer, context, (mindSporeLiteModel: mindSporeLite.Model) => {
-      let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
-      console.info('MS_LITE_LOG: ' + modelInputs[0].name);
-    })
-  })
-  .catch((error: BusinessError) => {
-    console.error("getRawFileContent promise error is " + error);
-  });
-```
+See [loadModelFromBuffer](#loadmodelfrombuffer)
 

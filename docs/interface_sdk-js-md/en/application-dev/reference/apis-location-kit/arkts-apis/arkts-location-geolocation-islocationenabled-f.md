@@ -30,7 +30,7 @@ Obtain current location switch status
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the location switch result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the location switch result. |
 
 **Examples**
 
@@ -43,6 +43,13 @@ geolocation.isLocationEnabled((err, data) => {
     if (data) {
         console.info('isLocationEnabled: data=' + JSON.stringify(data));
     }
+});
+```
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.isLocationEnabled().then((result) => {
+    console.info('promise, isLocationEnabled: ' + JSON.stringify(result));
 });
 ```
 
@@ -75,10 +82,5 @@ Obtain current location switch status
 
 **Examples**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.isLocationEnabled().then((result) => {
-    console.info('promise, isLocationEnabled: ' + JSON.stringify(result));
-});
-```
+See [isLocationEnabled](#islocationenabled)
 

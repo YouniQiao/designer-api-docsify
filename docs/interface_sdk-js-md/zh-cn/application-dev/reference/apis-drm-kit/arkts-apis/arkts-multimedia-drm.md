@@ -24,8 +24,8 @@ import { drm } from '@kit.DrmKit';
 | --- | --- |
 | [createMediaKeySystem(Defines the DRM capability.)](arkts-drm-drm-createmediakeysystem-f.md) | Creates a MediaKeySystem instance. |
 | [createMediaKeySystem(Defines the DRM capability.)](arkts-drm-drm-createmediakeysystem-f.md) | Creates a MediaKeySystem instance. |
-| [getMediaKeySystemUuid(Defines the DRM capability.)](arkts-drm-drm-getmediakeysystemuuid-f.md) | Get a MediaKeySystem's UUID. |
 | [getMediaKeySystems(Defines the DRM capability.)](arkts-drm-drm-getmediakeysystems-f.md) | Get all media key systems supported. |
+| [getMediaKeySystemUuid(Defines the DRM capability.)](arkts-drm-drm-getmediakeysystemuuid-f.md) | Get a MediaKeySystem's UUID. |
 | [isMediaKeySystemSupported(Defines the DRM capability.)](arkts-drm-drm-ismediakeysystemsupported-f.md) | Judge whether a system that specifies name, mimetype and content protection level is supported. |
 | [isMediaKeySystemSupported(Defines the DRM capability.)](arkts-drm-drm-ismediakeysystemsupported-f.md) | Judge whether a system that specifies name, mimetype is supported. |
 | [isMediaKeySystemSupported(Defines the DRM capability.)](arkts-drm-drm-ismediakeysystemsupported-f.md) | Judge whether a system that specifies name is supported. |

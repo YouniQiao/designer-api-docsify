@@ -41,41 +41,6 @@ Obtain the scanned sta list.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 
-
-## getScanResults
-
-```TypeScript
-function getScanResults(callback: AsyncCallback<Array<WifiScanInfo>>): void
-```
-
-Obtain the scanned sta list.
-
-**Since:** 9
-
-**Deprecated since:** 10
-
-**Substitutes:** [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md)
-
-**Required permissions:** ohos.permission.GET_WIFI_INFO and (ohos.permission.GET_WIFI_PEERS_MAC or (ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION))
-
-<!--Device-wifiManager-function getScanResults(callback: AsyncCallback<Array<WifiScanInfo>>): void--><!--Device-wifiManager-function getScanResults(callback: AsyncCallback<Array<WifiScanInfo>>): void-End-->
-
-**System capability:** SystemCapability.Communication.WiFi.STA
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;WifiScanInfo&gt;&gt; | Yes | Returns information about scanned Wi-Fi hotspot if any. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
-
 **Examples**
 
 ```TypeScript
@@ -120,4 +85,43 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.error("failed:" + JSON.stringify(err));
   });
 ```
+
+
+## getScanResults
+
+```TypeScript
+function getScanResults(callback: AsyncCallback<Array<WifiScanInfo>>): void
+```
+
+Obtain the scanned sta list.
+
+**Since:** 9
+
+**Deprecated since:** 10
+
+**Substitutes:** [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md)
+
+**Required permissions:** ohos.permission.GET_WIFI_INFO and (ohos.permission.GET_WIFI_PEERS_MAC or (ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION))
+
+<!--Device-wifiManager-function getScanResults(callback: AsyncCallback<Array<WifiScanInfo>>): void--><!--Device-wifiManager-function getScanResults(callback: AsyncCallback<Array<WifiScanInfo>>): void-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.STA
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;WifiScanInfo&gt;&gt; | Yes | Returns information about scanned Wi-Fi hotspot if any. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
+
+**Examples**
+
+See [getScanResults](#getscanresults)
 

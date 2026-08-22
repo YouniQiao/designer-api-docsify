@@ -50,6 +50,16 @@ This method unregisters the device and clears the registered callbacks and handl
 
 ```TypeScript
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+let server: ble.GattServer = ble.createGattServer();
+try {
+    server.close();
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
 try {
     let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
     device.close();
@@ -152,7 +162,7 @@ getConnectedState(): ProfileConnectionState
 
 Get the connection status of a specific device.
 
-**Since:** 26.0.0
+**Since:** 22
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -179,6 +189,17 @@ Get the connection status of a specific device.
 | 2900099 | Operation failed. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let gattServer: ble.GattServer = ble.createGattServer();
+let deviceId: string = 'XX:XX:XX:XX:XX:XX';
+try {
+    let result: ble.ProfileConnectionState = gattServer.getConnectedState(deviceId);
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -214,7 +235,7 @@ Obtains the name of BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to obtain the device name. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to obtain the device name. |
 
 **Error codes:**
 
@@ -243,6 +264,28 @@ function ConnectStateChanged(state: ble.BLEConnectionChangeState) {
     }
 }
 // callback
+try {
+    gattClient.connect();
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { ble, constant } from '@kit.ConnectivityKit';
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+let gattClient: ble.GattClientDevice = ble.createGattClientDevice("11:22:33:44:55:66");
+gattClient.on('BLEConnectionStateChange', ConnectStateChanged);
+function ConnectStateChanged(state: ble.BLEConnectionChangeState) {
+    console.info('bluetooth connect state changed');
+    let connectState: ble.ProfileConnectionState = state.state;
+    if (connectState == constant.ProfileConnectionState.STATE_CONNECTED) {
+        gattClient.getDeviceName().then((data: string) => {
+            console.info('device name' + JSON.stringify(data));
+        })
+    }
+}
+// promise
 try {
     gattClient.connect();
 } catch (err) {
@@ -288,27 +331,7 @@ Obtains the name of BLE peripheral device.
 
 **Examples**
 
-```TypeScript
-import { ble, constant } from '@kit.ConnectivityKit';
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-let gattClient: ble.GattClientDevice = ble.createGattClientDevice("11:22:33:44:55:66");
-gattClient.on('BLEConnectionStateChange', ConnectStateChanged);
-function ConnectStateChanged(state: ble.BLEConnectionChangeState) {
-    console.info('bluetooth connect state changed');
-    let connectState: ble.ProfileConnectionState = state.state;
-    if (connectState == constant.ProfileConnectionState.STATE_CONNECTED) {
-        gattClient.getDeviceName().then((data: string) => {
-            console.info('device name' + JSON.stringify(data));
-        })
-    }
-}
-// promise
-try {
-    gattClient.connect();
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [getDeviceName](#getdevicename)
 
 ## getRssiValue
 
@@ -318,7 +341,7 @@ getRssiValue(callback: AsyncCallback<int>): void
 
 Get the RSSI value of this BLE peripheral device.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -334,7 +357,7 @@ Get the RSSI value of this BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback invoked to return the RSSI, in dBm. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback invoked to return the RSSI, in dBm. |
 
 **Error codes:**
 
@@ -364,6 +387,19 @@ try {
 }
 ```
 
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+// promise
+try {
+    let gattClient: ble.GattClientDevice = ble.createGattClientDevice("XX:XX:XX:XX:XX:XX");
+    gattClient.getRssiValue().then((data: number) => {
+        console.info('rssi' + JSON.stringify(data));
+    })
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## getRssiValue
 
 ```TypeScript
@@ -372,7 +408,7 @@ getRssiValue(): Promise<int>
 
 Get the RSSI value of this BLE peripheral device.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -403,18 +439,7 @@ Get the RSSI value of this BLE peripheral device.
 
 **Examples**
 
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-// promise
-try {
-    let gattClient: ble.GattClientDevice = ble.createGattClientDevice("XX:XX:XX:XX:XX:XX");
-    gattClient.getRssiValue().then((data: number) => {
-        console.info('rssi' + JSON.stringify(data));
-    })
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [getRssiValue](#getrssivalue)
 
 ## getServices
 
@@ -424,7 +449,7 @@ getServices(callback: AsyncCallback<Array<GattService>>): void
 
 Starts discovering services.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -440,7 +465,7 @@ Starts discovering services.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;GattService&gt;&gt; | Yes | Callback used to catch the services. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GattService&gt;&gt; | Yes | Callback used to catch the services. |
 
 **Error codes:**
 
@@ -453,6 +478,20 @@ Starts discovering services.
 | 2900099 | Operation failed. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let server: ble.GattServer = ble.createGattServer();
+try {
+    let services: ble.GattService[] = server.getServices();
+    console.info('services size is: ' + services.length);
+    for (let i = 0; i < services.length; i++) {
+        console.info('serviceUuid is: ' + services[i].serviceUuid);
+    }
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
 
 ```TypeScript
 import { ble, constant } from '@kit.ConnectivityKit';
@@ -485,6 +524,27 @@ try {
 }
 ```
 
+```TypeScript
+import { ble, constant } from '@kit.ConnectivityKit';
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+// Promise mode.
+let device: ble.GattClientDevice = ble.createGattClientDevice("11:22:33:44:55:66");
+function ConnectStateChanged(state: ble.BLEConnectionChangeState) {
+    console.info('bluetooth connect state changed');
+    let connectState: ble.ProfileConnectionState = state.state;
+    if (connectState == constant.ProfileConnectionState.STATE_CONNECTED) {
+        device.getServices().then((result: Array<ble.GattService>) => {
+            console.info('getServices successfully:' + JSON.stringify(result));
+        });
+    }
+}
+try {
+    device.connect();
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## getServices
 
 ```TypeScript
@@ -493,7 +553,7 @@ getServices(): Promise<Array<GattService>>
 
 Starts discovering services.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -523,193 +583,7 @@ Starts discovering services.
 
 **Examples**
 
-```TypeScript
-import { ble, constant } from '@kit.ConnectivityKit';
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-// Promise mode.
-let device: ble.GattClientDevice = ble.createGattClientDevice("11:22:33:44:55:66");
-function ConnectStateChanged(state: ble.BLEConnectionChangeState) {
-    console.info('bluetooth connect state changed');
-    let connectState: ble.ProfileConnectionState = state.state;
-    if (connectState == constant.ProfileConnectionState.STATE_CONNECTED) {
-        device.getServices().then((result: Array<ble.GattService>) => {
-            console.info('getServices successfully:' + JSON.stringify(result));
-        });
-    }
-}
-try {
-    device.connect();
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
-## offBLECharacteristicChange
-
-```TypeScript
-offBLECharacteristicChange(callback?: Callback<BLECharacteristic>): void
-```
-
-Unsubscribe characteristic value changed event.
-
-**Since:** 26.0.0
-
-**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GattClientDevice-offBLECharacteristicChange(callback?: Callback<BLECharacteristic>): void--><!--Device-GattClientDevice-offBLECharacteristicChange(callback?: Callback<BLECharacteristic>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BLECharacteristic&gt; | No | Callback used to listen for the characteristic value changed event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-
-## offBLEConnectionStateChange
-
-```TypeScript
-offBLEConnectionStateChange(callback?: Callback<BLEConnectionChangeState>): void
-```
-
-Unsubscribe client connection state changed event.
-
-**Since:** 26.0.0
-
-**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
-
-<!--Device-GattClientDevice-offBLEConnectionStateChange(callback?: Callback<BLEConnectionChangeState>): void--><!--Device-GattClientDevice-offBLEConnectionStateChange(callback?: Callback<BLEConnectionChangeState>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BLEConnectionChangeState](arkts-connectivity-ble-bleconnectionchangestate-i.md)&gt; | No | Callback used to listen for the connection state changed event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-
-## offBLEMtuChange
-
-```TypeScript
-offBLEMtuChange(callback?: Callback<int>): void
-```
-
-Unsubscribe mtu changed event.
-
-**Since:** 26.0.0
-
-**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GattClientDevice-offBLEMtuChange(callback?: Callback<int>): void--><!--Device-GattClientDevice-offBLEMtuChange(callback?: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to listen for the mtu changed event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-
-## offBlePhyUpdate
-
-```TypeScript
-offBlePhyUpdate(callback?: Callback<PhyValue>): void
-```
-
-Unsubscribe phy updated event.
-
-**Since:** 26.0.0
-
-**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GattClientDevice-offBlePhyUpdate(callback?: Callback<PhyValue>): void--><!--Device-GattClientDevice-offBlePhyUpdate(callback?: Callback<PhyValue>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhyValue](arkts-connectivity-ble-phyvalue-i.md)&gt; | No | Callback used to listen for the phy updated event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-
-**Examples**
-
-```TypeScript
-function BlePhyCallback(data:ble.PhyValue) {
-    console.info(`txPhy: ${data.txPhy}, rxPhy: ${data.rxPhy}`);
-}
-let gattClient: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-try {
-    gattClient.offBlePhyUpdate(BlePhyCallback);
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```
-
-## offServiceChange
-
-```TypeScript
-offServiceChange(callback?: Callback<void>): void
-```
-
-Unsubscribe to GATT service changed event.
-
-**Since:** 26.0.0
-
-**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GattClientDevice-offServiceChange(callback?: Callback<void>): void--><!--Device-GattClientDevice-offServiceChange(callback?: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to listen for the service changed event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+See [getServices](#getservices)
 
 ## off('BLECharacteristicChange')
 
@@ -736,7 +610,7 @@ Unsubscribe characteristic value changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | Yes | Type of the characteristic value changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BLECharacteristic&gt; | No | Callback used to listen for the characteristic value changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | No | Callback used to listen for the characteristic value changed event. |
 
 **Error codes:**
 
@@ -783,7 +657,7 @@ Unsubscribe client connection state changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BLEConnectionChangeState](arkts-connectivity-ble-bleconnectionchangestate-i.md)&gt; | No | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectionChangeState](arkts-connectivity-ble-bleconnectionchangestate-i.md)&gt; | No | Callback used to listen for the connection state changed event. |
 
 **Error codes:**
 
@@ -830,7 +704,7 @@ Unsubscribe mtu changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEMtuChange' | Yes | Type of the mtu changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to listen for the mtu changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to listen for the mtu changed event. |
 
 **Error codes:**
 
@@ -875,7 +749,7 @@ Unsubscribe to GATT service changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceChange' | Yes | Type of the service changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to listen for the service changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to listen for the service changed event. |
 
 **Error codes:**
 
@@ -901,50 +775,21 @@ try {
 }
 ```
 
-## onBLECharacteristicChange
+## offBlePhyUpdate
 
 ```TypeScript
-onBLECharacteristicChange(callback: Callback<BLECharacteristic>): void
+offBlePhyUpdate(callback?: Callback<PhyValue>): void
 ```
 
-Subscribe characteristic value changed event.
+Unsubscribe phy updated event.
 
-**Since:** 26.0.0
-
-**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
-
-<!--Device-GattClientDevice-onBLECharacteristicChange(callback: Callback<BLECharacteristic>): void--><!--Device-GattClientDevice-onBLECharacteristicChange(callback: Callback<BLECharacteristic>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BLECharacteristic&gt; | Yes | Callback used to listen for the characteristic value changed event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-
-## onBLEConnectionStateChange
-
-```TypeScript
-onBLEConnectionStateChange(callback: Callback<BLEConnectionChangeState>): void
-```
-
-Subscribe client connection state changed event.
-
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-GattClientDevice-onBLEConnectionStateChange(callback: Callback<BLEConnectionChangeState>): void--><!--Device-GattClientDevice-onBLEConnectionStateChange(callback: Callback<BLEConnectionChangeState>): void-End-->
+<!--Device-GattClientDevice-offBlePhyUpdate(callback?: Callback<PhyValue>): void--><!--Device-GattClientDevice-offBlePhyUpdate(callback?: Callback<PhyValue>): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -952,67 +797,7 @@ Subscribe client connection state changed event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BLEConnectionChangeState](arkts-connectivity-ble-bleconnectionchangestate-i.md)&gt; | Yes | Callback used to listen for the connection state changed event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-
-## onBLEMtuChange
-
-```TypeScript
-onBLEMtuChange(callback: Callback<int>): void
-```
-
-Subscribe mtu changed event.
-
-**Since:** 26.0.0
-
-**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
-
-<!--Device-GattClientDevice-onBLEMtuChange(callback: Callback<int>): void--><!--Device-GattClientDevice-onBLEMtuChange(callback: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to listen for the mtu changed event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-
-## onBlePhyUpdate
-
-```TypeScript
-onBlePhyUpdate(callback: Callback<PhyValue>): void
-```
-
-Subscribe phy updated event.
-
-**Since:** 26.0.0
-
-**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GattClientDevice-onBlePhyUpdate(callback: Callback<PhyValue>): void--><!--Device-GattClientDevice-onBlePhyUpdate(callback: Callback<PhyValue>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhyValue](arkts-connectivity-ble-phyvalue-i.md)&gt; | Yes | Callback used to listen for the phy updated event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhyValue](arkts-connectivity-ble-phyvalue-i.md)&gt; | No | Callback used to listen for the phy updated event. |
 
 **Error codes:**
 
@@ -1027,44 +812,25 @@ Subscribe phy updated event.
 function BlePhyCallback(data:ble.PhyValue) {
     console.info(`txPhy: ${data.txPhy}, rxPhy: ${data.rxPhy}`);
 }
-let gattClient: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+let gattServer: ble.GattServer = ble.createGattServer();
 try {
-    gattClient.onBlePhyUpdate(BlePhyCallback);
+    gattServer.offBlePhyUpdate(BlePhyCallback);
 } catch (err) {
     console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
 }
 ```
 
-## onServiceChange
-
 ```TypeScript
-onServiceChange(callback: Callback<void>): void
+function BlePhyCallback(data:ble.PhyValue) {
+    console.info(`txPhy: ${data.txPhy}, rxPhy: ${data.rxPhy}`);
+}
+let gattClient: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+try {
+    gattClient.offBlePhyUpdate(BlePhyCallback);
+} catch (err) {
+    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
+}
 ```
-
-Subscribe to GATT service changed event. Receiving this event indicates that the peer GATT database has been refreshed, and it is necessary to re-fetch the GATT service list.
-
-**Since:** 26.0.0
-
-**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GattClientDevice-onServiceChange(callback: Callback<void>): void--><!--Device-GattClientDevice-onServiceChange(callback: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to listen for the service changed event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## on('BLECharacteristicChange')
 
@@ -1091,7 +857,7 @@ Subscribe characteristic value changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | Yes | Type of the characteristic value changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BLECharacteristic&gt; | Yes | Callback used to listen for the characteristic value changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback used to listen for the characteristic value changed event. |
 
 **Error codes:**
 
@@ -1143,7 +909,7 @@ Subscribe client connection state changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BLEConnectionChangeState](arkts-connectivity-ble-bleconnectionchangestate-i.md)&gt; | Yes | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectionChangeState](arkts-connectivity-ble-bleconnectionchangestate-i.md)&gt; | Yes | Callback used to listen for the connection state changed event. |
 
 **Error codes:**
 
@@ -1194,7 +960,7 @@ Subscribe mtu changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEMtuChange' | Yes | Type of the mtu changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to listen for the mtu changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to listen for the mtu changed event. |
 
 **Error codes:**
 
@@ -1241,7 +1007,7 @@ Subscribe to GATT service changed event. Receiving this event indicates that the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceChange' | Yes | Type of the service changed event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to listen for the service changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to listen for the service changed event. |
 
 **Error codes:**
 
@@ -1267,6 +1033,94 @@ try {
 }
 ```
 
+## onBlePhyUpdate
+
+```TypeScript
+onBlePhyUpdate(callback: Callback<PhyValue>): void
+```
+
+Subscribe phy updated event.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GattClientDevice-onBlePhyUpdate(callback: Callback<PhyValue>): void--><!--Device-GattClientDevice-onBlePhyUpdate(callback: Callback<PhyValue>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhyValue](arkts-connectivity-ble-phyvalue-i.md)&gt; | Yes | Callback used to listen for the phy updated event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+
+**Examples**
+
+```TypeScript
+function BlePhyCallback(data:ble.PhyValue) {
+    console.info(`txPhy: ${data.txPhy}, rxPhy: ${data.rxPhy}`);
+}
+let gattServer: ble.GattServer = ble.createGattServer();
+try {
+    gattServer.onBlePhyUpdate(BlePhyCallback);
+} catch (err) {
+    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
+}
+```
+
+```TypeScript
+function BlePhyCallback(data:ble.PhyValue) {
+    console.info(`txPhy: ${data.txPhy}, rxPhy: ${data.rxPhy}`);
+}
+let gattClient: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+try {
+    gattClient.onBlePhyUpdate(BlePhyCallback);
+} catch (err) {
+    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
+}
+```
+
+## onServiceChange
+
+```TypeScript
+onServiceChange(callback: Callback<void>): void
+```
+
+Subscribe to GATT service changed event. Receiving this event indicates that the peer GATT database has been refreshed, and it is necessary to re-fetch the GATT service list.
+
+**Since:** -1
+
+**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GattClientDevice-onServiceChange(callback: Callback<void>): void--><!--Device-GattClientDevice-onServiceChange(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to listen for the service changed event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+
 ## readCharacteristicValue
 
 ```TypeScript
@@ -1275,7 +1129,7 @@ readCharacteristicValue(characteristic: BLECharacteristic, callback: AsyncCallba
 
 Reads the characteristic of a BLE peripheral device.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -1292,7 +1146,7 @@ Reads the characteristic of a BLE peripheral device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | characteristic | BLECharacteristic | Yes | Indicates the characteristic to read. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;BLECharacteristic&gt; | Yes | Callback invoked to return the characteristic value read. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback invoked to return the characteristic value read. |
 
 **Error codes:**
 
@@ -1348,6 +1202,32 @@ try {
 }
 ```
 
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+let descriptors: Array<ble.BLEDescriptor> = [];
+let bufferDesc = new ArrayBuffer(2);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 0; // Use the Client Characteristic Configuration descriptor as an example. When bit 0 and bit 1 are both set to 0, the notification and indication functions are disabled.
+let descriptor: ble.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
+descriptors[0] = descriptor;
+
+let bufferCCC = new ArrayBuffer(8);
+let cccV = new Uint8Array(bufferCCC);
+cccV[0] = 1;
+let characteristic: ble.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+characteristicValue: bufferCCC, descriptors:descriptors};
+
+try {
+    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+    device.readCharacteristicValue(characteristic);
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## readCharacteristicValue
 
 ```TypeScript
@@ -1397,31 +1277,7 @@ Reads the characteristic of a BLE peripheral device.
 
 **Examples**
 
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-let descriptors: Array<ble.BLEDescriptor> = [];
-let bufferDesc = new ArrayBuffer(2);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 0; // Use the Client Characteristic Configuration descriptor as an example. When bit 0 and bit 1 are both set to 0, the notification and indication functions are disabled.
-let descriptor: ble.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
-descriptors[0] = descriptor;
-
-let bufferCCC = new ArrayBuffer(8);
-let cccV = new Uint8Array(bufferCCC);
-cccV[0] = 1;
-let characteristic: ble.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-characteristicValue: bufferCCC, descriptors:descriptors};
-
-try {
-    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.readCharacteristicValue(characteristic);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [readCharacteristicValue](#readcharacteristicvalue)
 
 ## readDescriptorValue
 
@@ -1446,7 +1302,7 @@ Reads the descriptor of a BLE peripheral device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | descriptor | BLEDescriptor | Yes | Indicates the descriptor to read. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;BLEDescriptor&gt; | Yes | Callback invoked to return the descriptor read. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLEDescriptor&gt; | Yes | Callback invoked to return the descriptor read. |
 
 **Error codes:**
 
@@ -1490,6 +1346,25 @@ let descriptor: ble.BLEDescriptor = {
 try {
     let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
     device.readDescriptorValue(descriptor, readDesc);
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+let bufferDesc = new ArrayBuffer(2);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 0; // Use the Client Characteristic Configuration descriptor as an example. When bit 0 and bit 1 are both set to 0, the notification and indication functions are disabled.
+let descriptor: ble.BLEDescriptor = {
+    serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+    descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB',
+    descriptorValue: bufferDesc
+};
+try {
+    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+    device.readDescriptorValue(descriptor);
 } catch (err) {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
@@ -1544,24 +1419,7 @@ Reads the descriptor of a BLE peripheral device.
 
 **Examples**
 
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-let bufferDesc = new ArrayBuffer(2);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 0; // Use the Client Characteristic Configuration descriptor as an example. When bit 0 and bit 1 are both set to 0, the notification and indication functions are disabled.
-let descriptor: ble.BLEDescriptor = {
-    serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-    descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB',
-    descriptorValue: bufferDesc
-};
-try {
-    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.readDescriptorValue(descriptor);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [readDescriptorValue](#readdescriptorvalue)
 
 ## readPhy
 
@@ -1571,7 +1429,7 @@ readPhy(): Promise<PhyValue>
 
 Read the phy associated with the connection.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -1598,6 +1456,18 @@ Read the phy associated with the connection.
 | 2901003 | The connection is not established. |
 
 **Examples**
+
+```TypeScript
+let gattServer: ble.GattServer = ble.createGattServer();
+let deviceId: string = 'XX:XX:XX:XX:XX:XX';
+try {
+    gattServer.readPhy(deviceId).then((phyValue:ble.PhyValue) => {
+        console.info(`txPhy: ${phyValue.txPhy}, rxPhy: ${phyValue.rxPhy}`);
+    });
+} catch (err) {
+    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
+}
+```
 
 ```TypeScript
 let gattClient: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
@@ -1730,7 +1600,7 @@ Enables or disables indication of a characteristic when value changed.
 | --- | --- | --- | --- |
 | characteristic | BLECharacteristic | Yes | Indicates the characteristic to indicate. |
 | enable | boolean | Yes | Specifies whether to enable indication of the characteristic. The value {@code true} indicates that indication is enabled, and the value {@code false} indicates that indication is disabled. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of setCharacteristicChangeIndication. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setCharacteristicChangeIndication. |
 
 **Error codes:**
 
@@ -1769,6 +1639,28 @@ try {
       console.info('notifyCharacteristicChanged callback successful');
     }
   });
+} catch (err) {
+  console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+// Create descriptors.
+let descriptors: Array<ble.BLEDescriptor> = [];
+let arrayBuffer = new ArrayBuffer(2);
+let descV = new Uint8Array(arrayBuffer);
+descV[0] = 0; // Use the Client Characteristic Configuration descriptor as an example. When bit 0 and bit 1 are both set to 0, the notification and indication functions are disabled.
+let descriptor: ble.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+  descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB', descriptorValue: arrayBuffer};
+descriptors[0] = descriptor;
+let arrayBufferC = new ArrayBuffer(8);
+let characteristic: ble.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB', characteristicValue: arrayBufferC, descriptors:descriptors};
+try {
+  let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+  device.setCharacteristicChangeIndication(characteristic, false);
 } catch (err) {
   console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
@@ -1821,27 +1713,7 @@ Enables or disables indication of a characteristic when value changed.
 
 **Examples**
 
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-// Create descriptors.
-let descriptors: Array<ble.BLEDescriptor> = [];
-let arrayBuffer = new ArrayBuffer(2);
-let descV = new Uint8Array(arrayBuffer);
-descV[0] = 0; // Use the Client Characteristic Configuration descriptor as an example. When bit 0 and bit 1 are both set to 0, the notification and indication functions are disabled.
-let descriptor: ble.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-  descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB', descriptorValue: arrayBuffer};
-descriptors[0] = descriptor;
-let arrayBufferC = new ArrayBuffer(8);
-let characteristic: ble.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB', characteristicValue: arrayBufferC, descriptors:descriptors};
-try {
-  let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-  device.setCharacteristicChangeIndication(characteristic, false);
-} catch (err) {
-  console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [setCharacteristicChangeIndication](#setcharacteristicchangeindication)
 
 ## setCharacteristicChangeNotification
 
@@ -1855,7 +1727,7 @@ setCharacteristicChangeNotification(
 
 Enables or disables notification of a characteristic when value changed.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -1873,7 +1745,7 @@ Enables or disables notification of a characteristic when value changed.
 | --- | --- | --- | --- |
 | characteristic | BLECharacteristic | Yes | Indicates the characteristic to indicate. |
 | enable | boolean | Yes | Specifies whether to enable indication of the characteristic. The value {@code true} indicates that notification is enabled, and the value {@code false} indicates that indication is disabled. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of setCharacteristicChangeNotification. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setCharacteristicChangeNotification. |
 
 **Error codes:**
 
@@ -1917,6 +1789,28 @@ try {
 }
 ```
 
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+// Create descriptors.
+let descriptors: Array<ble.BLEDescriptor> = [];
+let arrayBuffer = new ArrayBuffer(2);
+let descV = new Uint8Array(arrayBuffer);
+descV[0] = 0; // Use the Client Characteristic Configuration descriptor as an example. When bit 0 and bit 1 are both set to 0, the notification and indication functions are disabled.
+let descriptor: ble.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+  descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB', descriptorValue: arrayBuffer};
+descriptors[0] = descriptor;
+let arrayBufferC = new ArrayBuffer(8);
+let characteristic: ble.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB', characteristicValue: arrayBufferC, descriptors:descriptors};
+try {
+  let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+  device.setCharacteristicChangeNotification(characteristic, false);
+} catch (err) {
+  console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## setCharacteristicChangeNotification
 
 ```TypeScript
@@ -1925,7 +1819,7 @@ setCharacteristicChangeNotification(characteristic: BLECharacteristic, enable: b
 
 Enables or disables indication of a characteristic when value changed.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -1964,27 +1858,7 @@ Enables or disables indication of a characteristic when value changed.
 
 **Examples**
 
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-// Create descriptors.
-let descriptors: Array<ble.BLEDescriptor> = [];
-let arrayBuffer = new ArrayBuffer(2);
-let descV = new Uint8Array(arrayBuffer);
-descV[0] = 0; // Use the Client Characteristic Configuration descriptor as an example. When bit 0 and bit 1 are both set to 0, the notification and indication functions are disabled.
-let descriptor: ble.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-  descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB', descriptorValue: arrayBuffer};
-descriptors[0] = descriptor;
-let arrayBufferC = new ArrayBuffer(8);
-let characteristic: ble.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB', characteristicValue: arrayBufferC, descriptors:descriptors};
-try {
-  let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-  device.setCharacteristicChangeNotification(characteristic, false);
-} catch (err) {
-  console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [setCharacteristicChangeNotification](#setcharacteristicchangenotification)
 
 ## setPhy
 
@@ -1994,7 +1868,7 @@ setPhy(phyValue: PhyValue): Promise<void>
 
 Set the preferred phy associated with the connection. Whether the phy value will be changed depends on the strategy of the Bluetooth chip. A successful call to this interface does not guarantee that the chip's phy value has been successfully set.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -2029,6 +1903,20 @@ Set the preferred phy associated with the connection. Whether the phy value will
 **Examples**
 
 ```TypeScript
+let gattServer: ble.GattServer = ble.createGattServer();
+let deviceId: string = 'XX:XX:XX:XX:XX:XX';
+try {
+    let phyValue:ble.PhyValue = {
+        txPhy: ble.BlePhy.BLE_PHY_1M,
+        rxPhy: ble.BlePhy.BLE_PHY_1M
+    };
+    gattServer.setPhy(deviceId,phyValue);
+} catch (err) {
+    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
+}
+```
+
+```TypeScript
 let gattClient: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
 try {
     let phyValue: ble.PhyValue = {
@@ -2049,7 +1937,7 @@ updateConnectionParam(param: ConnectionParam): Promise<void>
 
 Update the connection parameters of the current GATT link to save power or improve transmission performance.
 
-**Since:** 26.0.0
+**Since:** 22
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -2106,7 +1994,7 @@ writeCharacteristicValue(
 
 Writes the characteristic of a BLE peripheral device.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -2124,7 +2012,7 @@ Writes the characteristic of a BLE peripheral device.
 | --- | --- | --- | --- |
 | characteristic | BLECharacteristic | Yes | Indicates the characteristic to write. |
 | writeType | [GattWriteType](arkts-connectivity-ble-gattwritetype-e.md) | Yes | Write type of the characteristic. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -2176,6 +2064,31 @@ try {
 }
 ```
 
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+let descriptors: Array<ble.BLEDescriptor>  = [];
+let bufferDesc = new ArrayBuffer(2);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 0; // Use the Client Characteristic Configuration descriptor as an example. When bit 0 and bit 1 are both set to 0, the notification and indication functions are disabled.
+let descriptor: ble.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+  descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
+descriptors[0] = descriptor;
+
+let bufferCCC = new ArrayBuffer(8);
+let cccV = new Uint8Array(bufferCCC);
+cccV[0] = 1;
+let characteristic: ble.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+  characteristicValue: bufferCCC, descriptors:descriptors};
+try {
+    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+    device.writeCharacteristicValue(characteristic, ble.GattWriteType.WRITE);
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## writeCharacteristicValue
 
 ```TypeScript
@@ -2184,7 +2097,7 @@ writeCharacteristicValue(characteristic: BLECharacteristic, writeType: GattWrite
 
 Writes the characteristic of a BLE peripheral device.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -2228,30 +2141,7 @@ Writes the characteristic of a BLE peripheral device.
 
 **Examples**
 
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-let descriptors: Array<ble.BLEDescriptor>  = [];
-let bufferDesc = new ArrayBuffer(2);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 0; // Use the Client Characteristic Configuration descriptor as an example. When bit 0 and bit 1 are both set to 0, the notification and indication functions are disabled.
-let descriptor: ble.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-  descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
-descriptors[0] = descriptor;
-
-let bufferCCC = new ArrayBuffer(8);
-let cccV = new Uint8Array(bufferCCC);
-cccV[0] = 1;
-let characteristic: ble.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-  characteristicValue: bufferCCC, descriptors:descriptors};
-try {
-    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.writeCharacteristicValue(characteristic, ble.GattWriteType.WRITE);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [writeCharacteristicValue](#writecharacteristicvalue)
 
 ## writeDescriptorValue
 
@@ -2261,7 +2151,7 @@ writeDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<void>): 
 
 Writes the descriptor of a BLE peripheral device.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -2278,7 +2168,7 @@ Writes the descriptor of a BLE peripheral device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | descriptor | BLEDescriptor | Yes | Indicates the descriptor to write. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -2324,6 +2214,27 @@ try {
 }
 ```
 
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+let bufferDesc = new ArrayBuffer(2);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 0; // Use the Client Characteristic Configuration descriptor as an example. When bit 0 and bit 1 are both set to 0, the notification and indication functions are disabled.
+let descriptor: ble.BLEDescriptor = {
+    serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+    descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB',
+    descriptorValue: bufferDesc
+};
+try {
+    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+    device.writeDescriptorValue(descriptor).then(() => {
+        console.info('writeDescriptorValue promise success');
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## writeDescriptorValue
 
 ```TypeScript
@@ -2332,7 +2243,7 @@ writeDescriptorValue(descriptor: BLEDescriptor): Promise<void>
 
 Writes the descriptor of a BLE peripheral device.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -2375,24 +2286,5 @@ Writes the descriptor of a BLE peripheral device.
 
 **Examples**
 
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-let bufferDesc = new ArrayBuffer(2);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 0; // Use the Client Characteristic Configuration descriptor as an example. When bit 0 and bit 1 are both set to 0, the notification and indication functions are disabled.
-let descriptor: ble.BLEDescriptor = {
-    serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-    descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB',
-    descriptorValue: bufferDesc
-};
-try {
-    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.writeDescriptorValue(descriptor).then(() => {
-        console.info('writeDescriptorValue promise success');
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [writeDescriptorValue](#writedescriptorvalue)
 

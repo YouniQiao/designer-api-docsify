@@ -109,6 +109,10 @@ Create an audio haptic player. This method uses a promise to return the result. 
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupport format. |
 
+**示例**
+
+参见 [createPlayer](#createplayer)
+
 ## registerSource
 
 ```TypeScript

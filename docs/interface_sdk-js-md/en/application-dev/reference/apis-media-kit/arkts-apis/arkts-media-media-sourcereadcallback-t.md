@@ -26,3 +26,12 @@ This callback function is implemented by applications to handle resource read re
 | requestedOffset | long | Yes | Offset of the current media data relative to the start of the resource. |
 | requestedLength | long | Yes | Length of the current request. The value **-1** indicates reaching the end of the resource. After pushing the data, call [finishLoading](arkts-media-media-mediasourceloadingrequest-i.md#finishloading) to notify the player that the push is complete. |
 
+**Examples**
+
+```TypeScript
+let sourceReadCallback: media.SourceReadCallback = (uuid: number, requestedOffset: number, requestedLength: number) => {
+  console.info(`Reading resource with handle ${uuid}, offset: ${requestedOffset}, length: ${requestedLength}`);
+  // Check whether the UUID is valid and store the read request. Avoid blocking the request while pushing data and header information.
+};
+```
+

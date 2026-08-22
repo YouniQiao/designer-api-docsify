@@ -28,7 +28,7 @@ Obtains the active network interface. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -54,6 +54,20 @@ ethernet.getAllActiveIfaces((error: BusinessError, value: string[]) => {
       console.info("getAllActiveIfaces callback = " + JSON.stringify(value[i]));
     }
   }
+});
+```
+
+```TypeScript
+import { ethernet } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+ethernet.getAllActiveIfaces().then((data: string[]) => {
+  console.info("getAllActiveIfaces promise data.length = " + JSON.stringify(data.length));
+  for (let i = 0; i < data.length; i++) {
+    console.info("getAllActiveIfaces promise  = " + JSON.stringify(data[i]));
+  }
+}).catch((error:BusinessError) => {
+  console.error("getAllActiveIfaces promise error = " + JSON.stringify(error));
 });
 ```
 
@@ -93,17 +107,5 @@ Obtains the active network interface. This API uses a promise to return the resu
 
 **Examples**
 
-```TypeScript
-import { ethernet } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-ethernet.getAllActiveIfaces().then((data: string[]) => {
-  console.info("getAllActiveIfaces promise data.length = " + JSON.stringify(data.length));
-  for (let i = 0; i < data.length; i++) {
-    console.info("getAllActiveIfaces promise  = " + JSON.stringify(data[i]));
-  }
-}).catch((error:BusinessError) => {
-  console.error("getAllActiveIfaces promise error = " + JSON.stringify(error));
-});
-```
+See [getAllActiveIfaces](#getallactiveifaces)
 

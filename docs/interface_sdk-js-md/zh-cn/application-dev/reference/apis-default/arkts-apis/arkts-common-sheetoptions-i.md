@@ -126,34 +126,6 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## detentSelection
-
-```TypeScript
-detentSelection?: SheetSize | Length
-```
-
-支持非手势切换挡位。
-
-**默认值：** detents[0]。
-
-**说明：**
-
-1. 该接口取值范围为detents数组范围，若设值非detents范围，该接口无效。 2. 当设置SheetSize.FIT_CONTENT时，该接口无效。 3. 不建议手势切换挡位与该接口切换挡位同时生效使用。
-
-**类型：** [SheetSize](arkts-common-sheetsize-e.md) \| [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md)
-
-**默认值：** detents[0]
-
-**起始版本：** 23
-
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-SheetOptions-detentSelection?: SheetSize | Length--><!--Device-SheetOptions-detentSelection?: SheetSize | Length-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 ## detents
 
 ```TypeScript
@@ -179,6 +151,34 @@ detents?: SingleLengthDetent | DoubleLengthDetents | TripleLengthDetents
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SheetOptions-detents?: SingleLengthDetent | DoubleLengthDetents | TripleLengthDetents--><!--Device-SheetOptions-detents?: SingleLengthDetent | DoubleLengthDetents | TripleLengthDetents-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## detentSelection
+
+```TypeScript
+detentSelection?: SheetSize | Length
+```
+
+支持非手势切换挡位。
+
+**默认值：** detents[0]。
+
+**说明：**
+
+1. 该接口取值范围为detents数组范围，若设值非detents范围，该接口无效。 2. 当设置SheetSize.FIT_CONTENT时，该接口无效。 3. 不建议手势切换挡位与该接口切换挡位同时生效使用。
+
+**类型：** [SheetSize](arkts-common-sheetsize-e.md) \| [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md)
+
+**默认值：** detents[0]
+
+**起始版本：** 23
+
+**ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SheetOptions-detentSelection?: SheetSize | Length--><!--Device-SheetOptions-detentSelection?: SheetSize | Length-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -750,7 +750,7 @@ radius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 
 1. 根据设置的圆角半径值显示，如果未设置，则使用默认值。底部样式不显示半模态底部2个圆角，即使设置了底部2个圆角也不生效。 2. 分别设置4个方向的圆角半径后，如果某个方向的值异常，异常方向的圆角值重置为默认值，非异常方向的圆角值为已设置的值。统一设置4个方向的圆角时，如果设置的值异常，4个方向的圆角都重置为默认值。 3. 半径设置为百分比时，以半模态页面的宽度为基准。 4. 当圆角的半径大于半模态页面宽度一半时，圆角的半径取值为半模态页面宽度的一半。 5. 当半模态页面高度过小且圆角半径设置过大时，可能导致显示异常。
 
-**类型：** [LengthMetrics](arkts-graphics-lengthmetrics-c.md) \| [BorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
+**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| [BorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **起始版本：** 23
 

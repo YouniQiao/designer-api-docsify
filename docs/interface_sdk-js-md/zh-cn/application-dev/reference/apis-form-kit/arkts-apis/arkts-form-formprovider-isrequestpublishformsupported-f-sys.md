@@ -37,6 +37,167 @@ function isRequestPublishFormSupported(callback: AsyncCallback<boolean>): void
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formProvider } from '@kit.FormKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formProvider.isRequestPublishFormSupported((error: BusinessError, isSupported: boolean) => {
+    if (error) {
+      console.error(`callback error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      if (isSupported) {
+        let want: Want = {
+          abilityName: 'FormAbility',
+          parameters: {
+            'ohos.extra.param.key.form_dimension': 2,
+            'ohos.extra.param.key.form_name': 'widget',
+            'ohos.extra.param.key.module_name': 'entry'
+          }
+        };
+        try {
+          formProvider.requestPublishForm(want, (error: BusinessError, data: string) => {
+            if (error) {
+              console.error(`callback error, code: ${error.code}, message: ${error.message}`);
+              return;
+            }
+            console.info(`formProvider requestPublishForm, form ID is: ${data}`);
+          });
+        } catch (error) {
+          console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+        }
+      }
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { AsyncCallback } from '@ohos.base';
+import { formProvider } from '@kit.FormKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError, RecordData } from '@kit.BasicServicesKit';
+
+try {
+  let callback: AsyncCallback<boolean> = (error: BusinessError | null, isSupported: boolean | undefined) => {
+    if (error?.code != 0) {
+      console.error(`callback error, code: ${error?.code}, message: ${error?.message}`);
+    } else {
+      if (isSupported) {
+        let want: Want = {
+          abilityName: 'FormAbility',
+          parameters: {
+            'ohos.extra.param.key.form_dimension': 2,
+            'ohos.extra.param.key.form_name': 'widget',
+            'ohos.extra.param.key.module_name': 'entry'
+          } as Record<string, RecordData>
+        };
+        try {
+          let callback: AsyncCallback<string> = (error: BusinessError | null, data: string | undefined) => {
+            if (error?.code != 0) {
+              console.error(`callback error, code: ${error?.code}, message: ${error?.message}`);
+              return;
+            }
+            console.info(`formProvider requestPublishForm, form ID is: ${data}`);
+          };
+          formProvider.requestPublishForm(want, callback);
+        } catch (error) {
+          console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+        }
+      }
+    }
+  };
+  formProvider.isRequestPublishFormSupported(callback);
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formProvider } from '@kit.FormKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formProvider.isRequestPublishFormSupported().then((isSupported: boolean) => {
+    if (isSupported) {
+      let want: Want = {
+        abilityName: 'FormAbility',
+        parameters: {
+          'ohos.extra.param.key.form_dimension': 2,
+          'ohos.extra.param.key.form_name': 'widget',
+          'ohos.extra.param.key.module_name': 'entry'
+        }
+      };
+      try {
+        formProvider.requestPublishForm(want).then((data: string) => {
+          console.info(`formProvider requestPublishForm success, form ID is : ${data}`);
+        }).catch((error: BusinessError) => {
+          console.error(`promise error, code: ${error.code}, message: ${error.message}`);
+        });
+      } catch (error) {
+        console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+      }
+    }
+  }).catch((error: BusinessError) => {
+    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { formProvider } from '@kit.FormKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError, RecordData } from '@kit.BasicServicesKit';
+
+try {
+  formProvider.isRequestPublishFormSupported().then((isSupported: boolean) => {
+    if (isSupported) {
+      let want: Want = {
+        abilityName: 'FormAbility',
+        parameters: {
+          'ohos.extra.param.key.form_dimension': 2,
+          'ohos.extra.param.key.form_name': 'widget',
+          'ohos.extra.param.key.module_name': 'entry'
+        } as Record<string, RecordData>
+      };
+      try {
+        formProvider.requestPublishForm(want).then((data: string) => {
+          console.info(`formProvider requestPublishForm success, form ID is : ${data}`);
+        }).catch((error) => {
+          console.error(`promise error, code: ${error.code}, message: ${error.message}`);
+        });
+      } catch (error) {
+        console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+      }
+    }
+  }).catch((error) => {
+    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
 
 ## isRequestPublishFormSupported
 
@@ -67,4 +228,8 @@ function isRequestPublishFormSupported(): Promise<boolean>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not a system application. |
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
+
+**示例**
+
+参见 [isRequestPublishFormSupported](#isrequestpublishformsupported)
 

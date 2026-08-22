@@ -22,7 +22,7 @@ state: MaterialState
 
 材质使能状态配置。
 
-**类型：** [MaterialState](arkts-arkui-uimaterial-materialstate-e.md)
+**类型：** [MaterialState](../../apis-default/arkts-apis/arkts-uimaterial-materialstate-e.md)
 
 **默认值：** MaterialState.DEFAULT
 

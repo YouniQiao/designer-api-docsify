@@ -113,7 +113,7 @@ Note: This parameter takes effect for the display effect of devices with all lev
 
 Default value: **undefined**, indicating that the light sensing interaction feedback effect is not set.
 
-**Type:** [LightEffectOptions](arkts-uimaterial-lighteffectoptions-i.md) \| null
+**Type:** [LightEffectOptions](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-lighteffectoptions-i.md) \| null
 
 **Since:** 26.0.0
 
@@ -163,7 +163,7 @@ Note: This parameter takes effect only for the display effect of devices with hi
 
 Default value: **ImmersiveStyle.REGULAR**
 
-**Type:** [ImmersiveStyle](arkts-uimaterial-immersivestyle-e.md)
+**Type:** [ImmersiveStyle](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-immersivestyle-e.md)
 
 **Default:** uiMaterial.ImmersiveStyle.REGULAR
 

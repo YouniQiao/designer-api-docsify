@@ -102,7 +102,7 @@ In non-silent scenarios, the size of the **values** parameter and the **uri** pa
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to insert. |
 | values | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | Yes | Data to insert. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of data records inserted. Otherwise, **err** is an error object.The number of inserted data records is not returned if the APIs of the database in use (for example, KVDB) do not support this return. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of data records inserted. Otherwise, **err** is an error object.The number of inserted data records is not returned if the APIs of the database in use (for example, KVDB) do not support this return. |
 
 **Error codes:**
 
@@ -131,6 +131,30 @@ try {
         return;
       }
       console.info("batchInsert succeed, data : " + data);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`batchInsert error: code: ${code}, message: ${message} `);
+};
+```
+
+```TypeScript
+import { ValuesBucket } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let vbs: ValuesBucket[] = [
+  { "name": "roe11", "age": 21, "salary": 20.5 }
+]
+
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).batchInsert(uri, vbs).then((data: number) => {
+      console.info("batchInsert succeed, data : " + data);
+    }).catch((err: BusinessError) => {
+      console.error(`batchInsert error: code: ${err.code}, message: ${err.message} `);
     });
   }
 } catch (err) {
@@ -183,29 +207,7 @@ In non-silent scenarios, the size of the **values** parameter and the **uri** pa
 
 **Examples**
 
-```TypeScript
-import { ValuesBucket } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-let vbs: ValuesBucket[] = [
-  { "name": "roe11", "age": 21, "salary": 20.5 }
-]
-
-try {
-  if (dataShareHelper != undefined) {
-    (dataShareHelper as dataShare.DataShareHelper).batchInsert(uri, vbs).then((data: number) => {
-      console.info("batchInsert succeed, data : " + data);
-    }).catch((err: BusinessError) => {
-      console.error(`batchInsert error: code: ${err.code}, message: ${err.message} `);
-    });
-  }
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error(`batchInsert error: code: ${code}, message: ${message} `);
-};
-```
+See [batchInsert](#batchinsert)
 
 ## batchUpdate
 
@@ -345,6 +347,154 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+## delete
+
+```TypeScript
+delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<int>): void
+```
+
+Deletes one or more data records from the database. This API uses an asynchronous callback to return the result.
+
+In non-silent scenarios, the total size of the **uri** and **predicates** parameters passed in this API cannot exceed 900 KB. Otherwise, the operation fails or an exception is thrown.
+
+In silent scenarios, the total size of the **uri** and **predicates** parameters passed in this API cannot exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<int>): void--><!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<int>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | URI of the data to delete. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for deleting data.The predicate methods supported by **delete()** vary depending on the database in use. For example, the KVDB supports only **inKeys**. If this parameter is left empty, the entire table will be deleted by default. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of deleted data records. Otherwise, **err** is an error object.The number of deleted data records is not returned if the APIs of the database in use (for example , KVDB) do not support this return. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+```TypeScript
+const urisToDelete: string[] =
+  ['datashareproxy://com.example.app1/config1', 'datashareproxy://com.example.app1/config2',];
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+dataProxyHandle.delete(urisToDelete, config).then((results: dataShare.DataProxyResult[]) => {
+  results.forEach((result) => {
+    console.info(`URI: ${result.uri}, Result: ${result.result}`);
+  });
+}).catch((error: BusinessError) => {
+  console.error('Error deleting config:', error);
+});
+```
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).delete(uri, da, (err: BusinessError, data: number) => {
+      if (err !== undefined) {
+        console.error(`delete error: code: ${err.code}, message: ${err.message} `);
+        return;
+      }
+      console.info("delete succeed, data : " + data);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`delete error: code: ${code}, message: ${message} `);
+};
+```
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).delete(uri, da).then((data: number) => {
+      console.info("delete succeed, data : " + data);
+    }).catch((err: BusinessError) => {
+      console.error(`delete error: code: ${err.code}, message: ${err.message} `);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`delete error: code: ${code}, message: ${message} `);
+};
+```
+
+## delete
+
+```TypeScript
+delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promise<int>
+```
+
+Deletes one or more data records from the database. This API uses a promise to return the result.
+
+In non-silent scenarios, the total size of the **uri** and **predicates** parameters passed in this API cannot exceed 900 KB. Otherwise, the operation fails or an exception is thrown.
+
+In silent scenarios, the total size of the **uri** and **predicates** parameters passed in this API cannot exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promise<int>--><!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promise<int>-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | URI of the data to delete. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for deleting data.The predicate methods supported by **delete()** vary depending on the database in use. For example, the KVDB supports only **inKeys**. If this parameter is left empty, the entire table will be deleted by default. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;int&gt; | Promise used to return the number of deleted data records. The number of deleted data records is not returned if the APIs of the database in use (for example, KVDB) do not support this return. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+See [delete](#delete)
+
 ## delTemplate
 
 ```TypeScript
@@ -403,137 +553,6 @@ if (dataShareHelper != undefined) {
 }
 ```
 
-## delete
-
-```TypeScript
-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<int>): void
-```
-
-Deletes one or more data records from the database. This API uses an asynchronous callback to return the result.
-
-In non-silent scenarios, the total size of the **uri** and **predicates** parameters passed in this API cannot exceed 900 KB. Otherwise, the operation fails or an exception is thrown.
-
-In silent scenarios, the total size of the **uri** and **predicates** parameters passed in this API cannot exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<int>): void--><!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<int>): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | URI of the data to delete. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for deleting data.The predicate methods supported by **delete()** vary depending on the database in use. For example, the KVDB supports only **inKeys**. If this parameter is left empty, the entire table will be deleted by default. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of deleted data records. Otherwise, **err** is an error object.The number of deleted data records is not returned if the APIs of the database in use (for example , KVDB) do not support this return. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-let da = new dataSharePredicates.DataSharePredicates();
-da.equalTo("name", "ZhangSan");
-try {
-  if (dataShareHelper != undefined) {
-    (dataShareHelper as dataShare.DataShareHelper).delete(uri, da, (err: BusinessError, data: number) => {
-      if (err !== undefined) {
-        console.error(`delete error: code: ${err.code}, message: ${err.message} `);
-        return;
-      }
-      console.info("delete succeed, data : " + data);
-    });
-  }
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error(`delete error: code: ${code}, message: ${message} `);
-};
-```
-
-## delete
-
-```TypeScript
-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promise<int>
-```
-
-Deletes one or more data records from the database. This API uses a promise to return the result.
-
-In non-silent scenarios, the total size of the **uri** and **predicates** parameters passed in this API cannot exceed 900 KB. Otherwise, the operation fails or an exception is thrown.
-
-In silent scenarios, the total size of the **uri** and **predicates** parameters passed in this API cannot exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promise<int>--><!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promise<int>-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | URI of the data to delete. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for deleting data.The predicate methods supported by **delete()** vary depending on the database in use. For example, the KVDB supports only **inKeys**. If this parameter is left empty, the entire table will be deleted by default. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;int&gt; | Promise used to return the number of deleted data records. The number of deleted data records is not returned if the APIs of the database in use (for example, KVDB) do not support this return. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-let da = new dataSharePredicates.DataSharePredicates();
-da.equalTo("name", "ZhangSan");
-try {
-  if (dataShareHelper != undefined) {
-    (dataShareHelper as dataShare.DataShareHelper).delete(uri, da).then((data: number) => {
-      console.info("delete succeed, data : " + data);
-    }).catch((err: BusinessError) => {
-      console.error(`delete error: code: ${err.code}, message: ${err.message} `);
-    });
-  }
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error(`delete error: code: ${code}, message: ${message} `);
-};
-```
-
 ## denormalizeUri
 
 ```TypeScript
@@ -557,7 +576,7 @@ Denormalizes a URI. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md) to denormalize. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the URI obtained. If the original URI is returned, denormalization is not required. If **null** is returned, denormalization is not supported. If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the URI obtained. If the original URI is returned, denormalization is not required. If **null** is returned, denormalization is not supported. If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -580,6 +599,19 @@ if (dataShareHelper != undefined) {
     } else {
       console.info("denormalizeUri = " + data);
     }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).denormalizeUri(uri).then((data: string) => {
+    console.info("denormalizeUri = " + data);
+  }).catch((err: BusinessError) => {
+    console.error("denormalizeUri failed, error message : " + err);
   });
 }
 ```
@@ -624,18 +656,7 @@ Denormalizes a URI. This API uses a promise to return the result. Silent access 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-if (dataShareHelper != undefined) {
-  (dataShareHelper as dataShare.DataShareHelper).denormalizeUri(uri).then((data: string) => {
-    console.info("denormalizeUri = " + data);
-  }).catch((err: BusinessError) => {
-    console.error("denormalizeUri failed, error message : " + err);
-  });
-}
-```
+See [denormalizeUri](#denormalizeuri)
 
 ## getPublishedData
 
@@ -662,7 +683,7 @@ In silent scenarios, the size of the **bundleName** parameter passed in this API
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Application to which the data belongs. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md)&gt;&gt; | Yes | Callback used to return the published data obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md)&gt;&gt; | Yes | Callback used to return the published data obtained. |
 
 **Error codes:**
 
@@ -683,6 +704,12 @@ let publishCallback: (err: BusinessError, data: Array<dataShare.PublishedItem>) 
 };
 if (dataShareHelper != undefined) {
   (dataShareHelper as dataShare.DataShareHelper).getPublishedData("com.acts.ohos.data.datasharetest", publishCallback);
+}
+```
+
+```TypeScript
+if (dataShareHelper != undefined) {
+  let publishedData: Promise<Array<dataShare.PublishedItem>> = (dataShareHelper as dataShare.DataShareHelper).getPublishedData("com.acts.ohos.data.datasharetest");
 }
 ```
 
@@ -729,11 +756,7 @@ In silent scenarios, the size of the **bundleName** parameter passed in this API
 
 **Examples**
 
-```TypeScript
-if (dataShareHelper != undefined) {
-  let publishedData: Promise<Array<dataShare.PublishedItem>> = (dataShareHelper as dataShare.DataShareHelper).getPublishedData("com.acts.ohos.data.datasharetest");
-}
-```
+See [getPublishedData](#getpublisheddata)
 
 ## insert
 
@@ -763,7 +786,7 @@ In silent scenarios, the total size of the **uri** and **value** parameters pass
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to insert. |
 | value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Value of the data to insert. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the index of the inserted data record. Otherwise, **err** is an error object.The data index is not returned if the APIs of the database in use, for example, the key- value database (KVDB), do not support the return of indexes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the index of the inserted data record. Otherwise, **err** is an error object.The data index is not returned if the APIs of the database in use, for example, the key- value database (KVDB), do not support the return of indexes. |
 
 **Error codes:**
 
@@ -799,6 +822,37 @@ try {
         return;
       }
       console.info("insert succeed, data : " + data);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`insert error: code: ${code}, message: ${message} `);
+};
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { ValuesBucket } from '@kit.ArkData';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let key1: string = "name";
+let value1: string = "rose1";
+let key2: string = "age";
+let value2: number = 21;
+let key3: string = "salary";
+let value3: number = 20.5;
+const valueBucket: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+};
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).insert(uri, valueBucket).then((data: number) => {
+      console.info("insert succeed, data : " + data);
+    }).catch((err: BusinessError) => {
+      console.error(`insert error: code: ${err.code}, message: ${err.message} `);
     });
   }
 } catch (err) {
@@ -853,36 +907,7 @@ In silent scenarios, the total size of the **uri** and **value** parameters pass
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ValuesBucket } from '@kit.ArkData';
-
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-let key1: string = "name";
-let value1: string = "rose1";
-let key2: string = "age";
-let value2: number = 21;
-let key3: string = "salary";
-let value3: number = 20.5;
-const valueBucket: ValuesBucket = {
-  key1: value1,
-  key2: value2,
-  key3: value3,
-};
-try {
-  if (dataShareHelper != undefined) {
-    (dataShareHelper as dataShare.DataShareHelper).insert(uri, valueBucket).then((data: number) => {
-      console.info("insert succeed, data : " + data);
-    }).catch((err: BusinessError) => {
-      console.error(`insert error: code: ${err.code}, message: ${err.message} `);
-    });
-  }
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error(`insert error: code: ${code}, message: ${message} `);
-};
-```
+See [insert](#insert)
 
 ## normalizeUri
 
@@ -907,7 +932,7 @@ Normalizes a **DataShare** URI. The **DataShare** URI can be used only by the lo
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md) to normalize. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the normalized URI (if **null** is returned, URI normalization is not supported). Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the normalized URI (if **null** is returned, URI normalization is not supported). Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -930,6 +955,19 @@ if (dataShareHelper != undefined) {
     } else {
       console.info("normalizeUri = " + data);
     }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).normalizeUri(uri).then((data: string) => {
+    console.info("normalizeUri = " + data);
+  }).catch((err: BusinessError) => {
+    console.info("normalizeUri failed, error message : " + err);
   });
 }
 ```
@@ -974,18 +1012,7 @@ Normalizes a **DataShare** URI. The **DataShare** URI can be used only by the lo
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-if (dataShareHelper != undefined) {
-  (dataShareHelper as dataShare.DataShareHelper).normalizeUri(uri).then((data: string) => {
-    console.info("normalizeUri = " + data);
-  }).catch((err: BusinessError) => {
-    console.info("normalizeUri failed, error message : " + err);
-  });
-}
-```
+See [normalizeUri](#normalizeuri)
 
 ## notifyChange
 
@@ -1012,7 +1039,7 @@ In non-silent scenarios, the size of the **uri** parameter passed in this API ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the observer is notified of the data changes, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the observer is notified of the data changes, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1030,6 +1057,29 @@ if (dataShareHelper != undefined) {
   (dataShareHelper as dataShare.DataShareHelper).notifyChange(uri, () => {
     console.info("***** notifyChange *****");
   });
+}
+```
+
+```TypeScript
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).notifyChange(uri);
+}
+```
+
+```TypeScript
+import { ValuesBucket } from '@kit.ArkData';
+
+let dsUri = "datashare:///com.acts.datasharetest";
+let people: ValuesBucket[] = [
+  { "name": "LiSi" },
+  { "name": "WangWu" },
+  { "name": "ZhaoLiu" }
+]
+
+let changeData:dataShare.ChangeInfo= { type:dataShare.ChangeType.INSERT, uri:dsUri, values:people};
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).notifyChange(changeData);
 }
 ```
 
@@ -1075,12 +1125,7 @@ In non-silent scenarios, the size of the **uri** parameter passed in this API ca
 
 **Examples**
 
-```TypeScript
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-if (dataShareHelper != undefined) {
-  (dataShareHelper as dataShare.DataShareHelper).notifyChange(uri);
-}
-```
+See [notifyChange](#notifychange)
 
 ## notifyChange
 
@@ -1124,172 +1169,7 @@ In non-silent scenarios, the size of the **data** parameter passed in this API c
 
 **Examples**
 
-```TypeScript
-import { ValuesBucket } from '@kit.ArkData';
-
-let dsUri = "datashare:///com.acts.datasharetest";
-let people: ValuesBucket[] = [
-  { "name": "LiSi" },
-  { "name": "WangWu" },
-  { "name": "ZhaoLiu" }
-]
-
-let changeData:dataShare.ChangeInfo= { type:dataShare.ChangeType.INSERT, uri:dsUri, values:people};
-if (dataShareHelper != undefined) {
-  (dataShareHelper as dataShare.DataShareHelper).notifyChange(changeData);
-}
-```
-
-## offDataChange
-
-```TypeScript
-offDataChange(uri: string, callback?: Callback<void>): void
-```
-
-Unsubscribes from the data change of the specified URI. This API corresponds to the [on](#ondatachange) API.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataShareHelper-offDataChange(uri: string, callback?: Callback<void>): void--><!--Device-DataShareHelper-offDataChange(uri: string, callback?: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uri | string | Yes | URI of the data to be observed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
-
-## offDataChange
-
-```TypeScript
-offDataChange(type:SubscriptionType, uri: string, callback?: Callback<ChangeInfo>): void
-```
-
-Unsubscribes from the data change of the specified URI. This API corresponds to the [on](#ondatachange) API.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataShareHelper-offDataChange(type:SubscriptionType, uri: string, callback?: Callback<ChangeInfo>): void--><!--Device-DataShareHelper-offDataChange(type:SubscriptionType, uri: string, callback?: Callback<ChangeInfo>): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | Yes | Subscription type. |
-| uri | string | Yes | URI of the data to be observed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeInfo&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. If this parameter is specified, the callback must be the one registered in [on('datachange')](#ondatachange) . |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
-
-## offPublishedDataChange
-
-```TypeScript
-offPublishedDataChange(
-       uris: Array<string>,
-       subscriberId: string,
-       callback?: Callback<PublishedDataChangeNode>
-     ): Array<OperationResult>
-```
-
-Unsubscribes from the change of the published data. Only silent access is supported.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataShareHelper-offPublishedDataChange(       uris: Array<string>,       subscriberId: string,       callback?: Callback<PublishedDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-offPublishedDataChange(       uris: Array<string>,       subscriberId: string,       callback?: Callback<PublishedDataChangeNode>     ): Array<OperationResult>-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uris | Array&lt;string&gt; | Yes | URIs of the target data. |
-| subscriberId | string | Yes | Subscriber ID of the callback. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt; | Returns the operation result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
-
-## offRdbDataChange
-
-```TypeScript
-offRdbDataChange(
-       uris: Array<string>,
-       templateId: TemplateId,
-       callback?: Callback<RdbDataChangeNode>
-     ): Array<OperationResult>
-```
-
-Unsubscribes from the changes of the data corresponding to the specified URI and template. Only silent access is supported.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataShareHelper-offRdbDataChange(       uris: Array<string>,       templateId: TemplateId,       callback?: Callback<RdbDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-offRdbDataChange(       uris: Array<string>,       templateId: TemplateId,       callback?: Callback<RdbDataChangeNode>     ): Array<OperationResult>-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uris | Array&lt;string&gt; | Yes | URIs of the target data. |
-| templateId | [TemplateId](arkts-arkdata-datashare-templateid-i-sys.md) | Yes | ID of the template that triggers the callback. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | No | Callback to unregister. If this parameter is **undefined** , **null**, or left empty, this API unregisters all callbacks for the specified URI. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt; | : The operation result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
+See [notifyChange](#notifychange)
 
 ## off('dataChange')
 
@@ -1315,7 +1195,7 @@ Unsubscribes from the data change of the specified URI. This API corresponds to 
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | Event/callback type. The value is **'dataChange'**, which indicates the data change. |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **Error codes:**
 
@@ -1363,7 +1243,7 @@ Unsubscribes from the data change of the specified URI. This API corresponds to 
 | event | 'dataChange' | Yes | Event/callback type. The value is **'dataChange'**, which indicates the data change. |
 | type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | Yes | Subscription type. |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ChangeInfo&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. If this parameter is specified, the callback must be the one registered in [on('datachange')](#ondatachange) . |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ChangeInfo&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. If this parameter is specified, the callback must be the one registered in [on('datachange')](#ondatachange) . |
 
 **Error codes:**
 
@@ -1418,7 +1298,7 @@ Unsubscribes from the change of the published data. Only silent access is suppor
 | type | 'publishedDataChange' | Yes | Event type. The value is **publishedDataChange**, which indicates the change of the published data. |
 | uris | Array&lt;string&gt; | Yes | URIs of the target data. |
 | subscriberId | string | Yes | Subscriber ID of the callback. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **Return value:**
 
@@ -1479,7 +1359,7 @@ Unsubscribes from the changes of the data corresponding to the specified URI and
 | type | 'rdbDataChange' | Yes | Event type. The value is **rdbDataChange**, which indicates the change of the RDB data. |
 | uris | Array&lt;string&gt; | Yes | URIs of the target data. |
 | templateId | [TemplateId](arkts-arkdata-datashare-templateid-i-sys.md) | Yes | ID of the template that triggers the callback. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | No | Callback to unregister. If this parameter is **undefined** , **null**, or left empty, this API unregisters all callbacks for the specified URI. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | No | Callback to unregister. If this parameter is **undefined** , **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **Return value:**
 
@@ -1505,19 +1385,19 @@ if (dataShareHelper != undefined) {
 }
 ```
 
-## onDataChange
+## offDataChange
 
 ```TypeScript
-onDataChange(uri: string, callback: Callback<void>): void
+offDataChange(uri: string, callback?: Callback<void>): void
 ```
 
-Subscribes to the data change of the specified URI. After an observer is registered, the subscriber will receive a notification when the **notifyChange** API is called. This API uses an asynchronous callback to return the result. This function does not support cross-user notification subscription. An application can subscribe to a single URI for a maximum of 51 times.
+Unsubscribes from the data change of the specified URI. This API corresponds to the [on](#ondatachange) API.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DataShareHelper-onDataChange(uri: string, callback: Callback<void>): void--><!--Device-DataShareHelper-onDataChange(uri: string, callback: Callback<void>): void-End-->
+<!--Device-DataShareHelper-offDataChange(uri: string, callback?: Callback<void>): void--><!--Device-DataShareHelper-offDataChange(uri: string, callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1528,7 +1408,7 @@ Subscribes to the data change of the specified URI. After an observer is registe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the data is changed, **err** is **undefined**. Otherwise, this callback is not invoked or **err** is an error object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **Error codes:**
 
@@ -1537,19 +1417,19 @@ Subscribes to the data change of the specified URI. After an observer is registe
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
 
-## onDataChange
+## offDataChange
 
 ```TypeScript
-onDataChange(type:SubscriptionType, uri: string, callback: Callback<ChangeInfo>): void
+offDataChange(type:SubscriptionType, uri: string, callback?: Callback<ChangeInfo>): void
 ```
 
-Subscribes to the data change of the specified URI. After a change notification is registered, the subscriber will receive a notification when the **notifyChange** API is called. The change notification contains the data change type, URI of the data changed, and the changed data. This API uses an asynchronous callback to return the result. This function does not support cross-user notification subscription. An application can subscribe to a single URI for a maximum of 51 times.
+Unsubscribes from the data change of the specified URI. This API corresponds to the [on](#ondatachange) API.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DataShareHelper-onDataChange(type:SubscriptionType, uri: string, callback: Callback<ChangeInfo>): void--><!--Device-DataShareHelper-onDataChange(type:SubscriptionType, uri: string, callback: Callback<ChangeInfo>): void-End-->
+<!--Device-DataShareHelper-offDataChange(type:SubscriptionType, uri: string, callback?: Callback<ChangeInfo>): void--><!--Device-DataShareHelper-offDataChange(type:SubscriptionType, uri: string, callback?: Callback<ChangeInfo>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1561,7 +1441,7 @@ Subscribes to the data change of the specified URI. After a change notification 
 | --- | --- | --- | --- |
 | type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | Yes | Subscription type. |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeInfo&gt; | Yes | Callback to be invoked when data is changed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeInfo&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. If this parameter is specified, the callback must be the one registered in [on('datachange')](#ondatachange) . |
 
 **Error codes:**
 
@@ -1570,23 +1450,23 @@ Subscribes to the data change of the specified URI. After a change notification 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
 
-## onPublishedDataChange
+## offPublishedDataChange
 
 ```TypeScript
-onPublishedDataChange(
+offPublishedDataChange(
        uris: Array<string>,
        subscriberId: string,
-       callback: Callback<PublishedDataChangeNode>
+       callback?: Callback<PublishedDataChangeNode>
      ): Array<OperationResult>
 ```
 
-Subscribes to the change of the published data. Only silent access is supported. This function does not support cross-user notification subscription.
+Unsubscribes from the change of the published data. Only silent access is supported.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DataShareHelper-onPublishedDataChange(       uris: Array<string>,       subscriberId: string,       callback: Callback<PublishedDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-onPublishedDataChange(       uris: Array<string>,       subscriberId: string,       callback: Callback<PublishedDataChangeNode>     ): Array<OperationResult>-End-->
+<!--Device-DataShareHelper-offPublishedDataChange(       uris: Array<string>,       subscriberId: string,       callback?: Callback<PublishedDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-offPublishedDataChange(       uris: Array<string>,       subscriberId: string,       callback?: Callback<PublishedDataChangeNode>     ): Array<OperationResult>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1598,7 +1478,7 @@ Subscribes to the change of the published data. Only silent access is supported.
 | --- | --- | --- | --- |
 | uris | Array&lt;string&gt; | Yes | URIs of the target data. |
 | subscriberId | string | Yes | Subscriber ID of the callback. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is not invoked or **err** is an error object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **Return value:**
 
@@ -1613,23 +1493,23 @@ Subscribes to the change of the published data. Only silent access is supported.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
 
-## onRdbDataChange
+## offRdbDataChange
 
 ```TypeScript
-onRdbDataChange(
+offRdbDataChange(
        uris: Array<string>,
        templateId: TemplateId,
-       callback: Callback<RdbDataChangeNode>
+       callback?: Callback<RdbDataChangeNode>
      ): Array<OperationResult>
 ```
 
-Subscribes to the changes of the data corresponding to the specified URI and template. Only silent access is supported. This function does not support cross-user notification subscription.
+Unsubscribes from the changes of the data corresponding to the specified URI and template. Only silent access is supported.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DataShareHelper-onRdbDataChange(       uris: Array<string>,       templateId: TemplateId,       callback: Callback<RdbDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-onRdbDataChange(       uris: Array<string>,       templateId: TemplateId,       callback: Callback<RdbDataChangeNode>     ): Array<OperationResult>-End-->
+<!--Device-DataShareHelper-offRdbDataChange(       uris: Array<string>,       templateId: TemplateId,       callback?: Callback<RdbDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-offRdbDataChange(       uris: Array<string>,       templateId: TemplateId,       callback?: Callback<RdbDataChangeNode>     ): Array<OperationResult>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1641,13 +1521,13 @@ Subscribes to the changes of the data corresponding to the specified URI and tem
 | --- | --- | --- | --- |
 | uris | Array&lt;string&gt; | Yes | URIs of the target data. |
 | templateId | [TemplateId](arkts-arkdata-datashare-templateid-i-sys.md) | Yes | ID of the template that triggers the callback. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is not invoked or **err** is an error object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | No | Callback to unregister. If this parameter is **undefined** , **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt; | Returns the operation result. |
+| Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt; | : The operation result. |
 
 **Error codes:**
 
@@ -1682,7 +1562,7 @@ Notification triggering: In non-silent scenarios, a notification is published if
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | Event/callback type. The value is **dataChange**, which indicates the data change. |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the data is changed, **err** is **undefined**. Otherwise, this callback is not invoked or **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the data is changed, **err** is **undefined**. Otherwise, this callback is not invoked or **err** is an error object. |
 
 **Error codes:**
 
@@ -1731,7 +1611,7 @@ Notification triggering: In non-silent scenarios, a notification is published if
 | event | 'dataChange' | Yes | Event/callback type. The value is **dataChange**, which indicates the data change. |
 | type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | Yes | Subscription type. |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ChangeInfo&gt; | Yes | Callback to be invoked when data is changed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ChangeInfo&gt; | Yes | Callback to be invoked when data is changed. |
 
 **Error codes:**
 
@@ -1785,7 +1665,7 @@ Subscribes to the change of the published data. Only silent access is supported.
 | type | 'publishedDataChange' | Yes | Event type. The value is **publishedDataChange**, which indicates the change of the published data. |
 | uris | Array&lt;string&gt; | Yes | URIs of the target data. |
 | subscriberId | string | Yes | Subscriber ID of the callback. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is not invoked or **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is not invoked or **err** is an error object. |
 
 **Return value:**
 
@@ -1856,7 +1736,7 @@ Subscribes to the changes of the data corresponding to the specified URI and tem
 | type | 'rdbDataChange' | Yes | Event type. The value is **rdbDataChange**, which indicates the change of the RDB data. If **type** is any other value, there is no response to this API. |
 | uris | Array&lt;string&gt; | Yes | URIs of the target data. |
 | templateId | [TemplateId](arkts-arkdata-datashare-templateid-i-sys.md) | Yes | ID of the template that triggers the callback. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is not invoked or **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is not invoked or **err** is an error object. |
 
 **Return value:**
 
@@ -1897,6 +1777,157 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+## onDataChange
+
+```TypeScript
+onDataChange(uri: string, callback: Callback<void>): void
+```
+
+Subscribes to the data change of the specified URI. After an observer is registered, the subscriber will receive a notification when the **notifyChange** API is called. This API uses an asynchronous callback to return the result. This function does not support cross-user notification subscription. An application can subscribe to a single URI for a maximum of 51 times.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-onDataChange(uri: string, callback: Callback<void>): void--><!--Device-DataShareHelper-onDataChange(uri: string, callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | string | Yes | URI of the data to be observed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the data is changed, **err** is **undefined**. Otherwise, this callback is not invoked or **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
+
+## onDataChange
+
+```TypeScript
+onDataChange(type:SubscriptionType, uri: string, callback: Callback<ChangeInfo>): void
+```
+
+Subscribes to the data change of the specified URI. After a change notification is registered, the subscriber will receive a notification when the **notifyChange** API is called. The change notification contains the data change type, URI of the data changed, and the changed data. This API uses an asynchronous callback to return the result. This function does not support cross-user notification subscription. An application can subscribe to a single URI for a maximum of 51 times.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-onDataChange(type:SubscriptionType, uri: string, callback: Callback<ChangeInfo>): void--><!--Device-DataShareHelper-onDataChange(type:SubscriptionType, uri: string, callback: Callback<ChangeInfo>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | Yes | Subscription type. |
+| uri | string | Yes | URI of the data to be observed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeInfo&gt; | Yes | Callback to be invoked when data is changed. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
+
+## onPublishedDataChange
+
+```TypeScript
+onPublishedDataChange(
+       uris: Array<string>,
+       subscriberId: string,
+       callback: Callback<PublishedDataChangeNode>
+     ): Array<OperationResult>
+```
+
+Subscribes to the change of the published data. Only silent access is supported. This function does not support cross-user notification subscription.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-onPublishedDataChange(       uris: Array<string>,       subscriberId: string,       callback: Callback<PublishedDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-onPublishedDataChange(       uris: Array<string>,       subscriberId: string,       callback: Callback<PublishedDataChangeNode>     ): Array<OperationResult>-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uris | Array&lt;string&gt; | Yes | URIs of the target data. |
+| subscriberId | string | Yes | Subscriber ID of the callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is not invoked or **err** is an error object. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt; | Returns the operation result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
+
+## onRdbDataChange
+
+```TypeScript
+onRdbDataChange(
+       uris: Array<string>,
+       templateId: TemplateId,
+       callback: Callback<RdbDataChangeNode>
+     ): Array<OperationResult>
+```
+
+Subscribes to the changes of the data corresponding to the specified URI and template. Only silent access is supported. This function does not support cross-user notification subscription.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-onRdbDataChange(       uris: Array<string>,       templateId: TemplateId,       callback: Callback<RdbDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-onRdbDataChange(       uris: Array<string>,       templateId: TemplateId,       callback: Callback<RdbDataChangeNode>     ): Array<OperationResult>-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uris | Array&lt;string&gt; | Yes | URIs of the target data. |
+| templateId | [TemplateId](arkts-arkdata-datashare-templateid-i-sys.md) | Yes | ID of the template that triggers the callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is not invoked or **err** is an error object. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt; | Returns the operation result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
+
 ## publish
 
 ```TypeScript
@@ -1929,7 +1960,7 @@ In silent scenarios, the total size of the **data** and **bundleName** parameter
 | data | Array&lt;[PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md)&gt; | Yes | Data to publish. |
 | bundleName | string | Yes | Application of the data to publish. This parameter is valid only for the private data published. Only the application can read the data. |
 | version | int | Yes | Version of the data to publish. A larger value indicates a later version. If the version of the data published is earlier than that of the data in the database, the data in the database will not be updated. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If data is published, **err** is **undefined**, and **result** is the data publish result. Otherwise, this callback is not triggered or **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If data is published, **err** is **undefined**, and **result** is the data publish result. Otherwise, this callback is not triggered or **err** is an error object. |
 
 **Error codes:**
 
@@ -1941,6 +1972,28 @@ In silent scenarios, the total size of the **data** and **bundleName** parameter
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
 **Examples**
+
+```TypeScript
+const newConfigData: dataShare.ProxyData[] = [{
+  uri: 'datashareproxy://com.example.app1/config1',
+  value: 'Value1',
+  allowList: ['appIdentifier2', 'appIdentifier3'], // This string is for reference only. Replace it with the actual application identifier.
+}, {
+  uri: 'datashareproxy://com.example.app1/config2',
+  value: 'Value2',
+  allowList: ['appIdentifier3', 'appIdentifier4'], // This string is for reference only. Replace it with the actual application identifier.
+}];
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+dataProxyHandle.publish(newConfigData, config).then((results: dataShare.DataProxyResult[]) => {
+  results.forEach((result) => {
+    console.info(`URI: ${result.uri}, Result: ${result.result}`);
+  });
+}).catch((error: BusinessError) => {
+  console.error('Error publishing config:', error);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1958,6 +2011,31 @@ try {
   }
 } catch (e) {
   console.error("publish error " + JSON.stringify(e));
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit'
+
+let publishCallback: (err: BusinessError, result: Array<dataShare.OperationResult>) => void = (err: BusinessError, result: Array<dataShare.OperationResult>): void => {
+  console.info("publishCallback " + JSON.stringify(result));
+}
+let dataArray : Array<dataShare.PublishedItem> = [
+  {key:"city", subscriberId:"11", data:"xian"},
+  {key:"datashareproxy://com.acts.ohos.data.datasharetest/appInfo", subscriberId:"11", data:"appinfo is just a test app"},
+  {key:"empty", subscriberId:"11", data:"nobody sub"}];
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest", publishCallback);
+}
+```
+
+```TypeScript
+let dataArray: Array<dataShare.PublishedItem> = [
+  {key:"city", subscriberId:"11", data:"xian"},
+  {key:"datashareproxy://com.acts.ohos.data.datasharetest/appInfo", subscriberId:"11", data:"appinfo is just a test app"},
+  {key:"empty", subscriberId:"11", data:"nobody sub"}];
+if (dataShareHelper != undefined) {
+  let result: Promise<Array<dataShare.OperationResult>> = (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest");
 }
 ```
 
@@ -1991,7 +2069,7 @@ In silent scenarios, the total size of the **data** and **bundleName** parameter
 | --- | --- | --- | --- |
 | data | Array&lt;[PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md)&gt; | Yes | Data to publish. |
 | bundleName | string | Yes | Application of the data to publish. This parameter is valid only for the private data published. Only the application can read the data. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If data is published, **err** is **undefined**, and **result** is the data publish result. Otherwise, this callback is not triggered or **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If data is published, **err** is **undefined**, and **result** is the data publish result. Otherwise, this callback is not triggered or **err** is an error object. |
 
 **Error codes:**
 
@@ -2004,20 +2082,7 @@ In silent scenarios, the total size of the **data** and **bundleName** parameter
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit'
-
-let publishCallback: (err: BusinessError, result: Array<dataShare.OperationResult>) => void = (err: BusinessError, result: Array<dataShare.OperationResult>): void => {
-  console.info("publishCallback " + JSON.stringify(result));
-}
-let dataArray : Array<dataShare.PublishedItem> = [
-  {key:"city", subscriberId:"11", data:"xian"},
-  {key:"datashareproxy://com.acts.ohos.data.datasharetest/appInfo", subscriberId:"11", data:"appinfo is just a test app"},
-  {key:"empty", subscriberId:"11", data:"nobody sub"}];
-if (dataShareHelper != undefined) {
-  (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest", publishCallback);
-}
-```
+See [publish](#publish)
 
 ## publish
 
@@ -2064,15 +2129,7 @@ In silent scenarios, the total size of the **data** and **bundleName** parameter
 
 **Examples**
 
-```TypeScript
-let dataArray: Array<dataShare.PublishedItem> = [
-  {key:"city", subscriberId:"11", data:"xian"},
-  {key:"datashareproxy://com.acts.ohos.data.datasharetest/appInfo", subscriberId:"11", data:"appinfo is just a test app"},
-  {key:"empty", subscriberId:"11", data:"nobody sub"}];
-if (dataShareHelper != undefined) {
-  let result: Promise<Array<dataShare.OperationResult>> = (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest");
-}
-```
+See [publish](#publish)
 
 ## query
 
@@ -2110,7 +2167,7 @@ When this API is used to query database data, if the query content exceeds the r
 | uri | string | Yes | URI of the data to query. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for querying data.The predicate methods supported by **query()** vary depending on the database used. For example, the KVDB supports only **inKeys** and **prefixKey**. If this parameter is left empty, the entire table will be queried by default. |
 | columns | Array&lt;string&gt; | Yes | Column to query. If this parameter is left empty, all columns will be queried. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DataShareResultSet](../../apis-default/arkts-apis/arkts-datadatashareresultset-datashareresultset-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the result set obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataShareResultSet](../../apis-default/arkts-apis/arkts-data-datashareresultset-datashareresultset-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the result set obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2138,6 +2195,29 @@ try {
         return;
       }
       console.info("query succeed, rowCount : " + data.rowCount);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`query error: code: ${code}, message: ${message} `);
+};
+```
+
+```TypeScript
+import { dataSharePredicates, DataShareResultSet } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let columns = ["*"];
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).query(uri, da, columns).then((data: DataShareResultSet) => {
+      console.info("query succeed, rowCount : " + data.rowCount);
+    }).catch((err: BusinessError) => {
+      console.error(`query error: code: ${err.code}, message: ${err.message} `);
     });
   }
 } catch (err) {
@@ -2187,7 +2267,7 @@ When this API is used to query database data, if the query content exceeds the r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[DataShareResultSet](../../apis-default/arkts-apis/arkts-datadatashareresultset-datashareresultset-i-sys.md)&gt; | Promise used to return the result set obtained. |
+| Promise&lt;[DataShareResultSet](../../apis-default/arkts-apis/arkts-data-datashareresultset-datashareresultset-i-sys.md)&gt; | Promise used to return the result set obtained. |
 
 **Error codes:**
 
@@ -2199,28 +2279,7 @@ When this API is used to query database data, if the query content exceeds the r
 
 **Examples**
 
-```TypeScript
-import { dataSharePredicates, DataShareResultSet } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-let columns = ["*"];
-let da = new dataSharePredicates.DataSharePredicates();
-da.equalTo("name", "ZhangSan");
-try {
-  if (dataShareHelper != undefined) {
-    (dataShareHelper as dataShare.DataShareHelper).query(uri, da, columns).then((data: DataShareResultSet) => {
-      console.info("query succeed, rowCount : " + data.rowCount);
-    }).catch((err: BusinessError) => {
-      console.error(`query error: code: ${err.code}, message: ${err.message} `);
-    });
-  }
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error(`query error: code: ${code}, message: ${message} `);
-};
-```
+See [query](#query)
 
 ## update
 
@@ -2256,7 +2315,7 @@ In silent scenarios, the total size of the **uri**, **predicates**, and **value*
 | uri | string | Yes | URI of the data to update. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for updating data.The predicate methods supported by **update()** vary depending on the database in use. For example, only the relational database (RDB) supports predicates. If this parameter is left empty, the entire table will be updated by default. |
 | value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Value of the data to update. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of updated data records. Otherwise, **err** is an error object.The number of updated data records is not returned if the APIs of the database in use (for example , KVDB) do not support this return. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of updated data records. Otherwise, **err** is an error object.The number of updated data records is not returned if the APIs of the database in use (for example , KVDB) do not support this return. |
 
 **Error codes:**
 
@@ -2294,6 +2353,39 @@ try {
         return;
       }
       console.info("update succeed, data : " + data);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`update error: code: ${code}, message: ${message} `);
+};
+```
+
+```TypeScript
+import { dataSharePredicates, ValuesBucket } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+let key1: string = "name";
+let value1: string = "roe1";
+let key2: string = "age";
+let value2: number = 21;
+let key3: string = "salary";
+let value3: number = 20.5;
+const va: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+};
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).update(uri, da, va).then((data: number) => {
+      console.info("update succeed, data : " + data);
+    }).catch((err: BusinessError) => {
+      console.error(`update error: code: ${err.code}, message: ${err.message} `);
     });
   }
 } catch (err) {
@@ -2349,36 +2441,5 @@ In silent scenarios, the total size of the **uri**, **predicates**, and **value*
 
 **Examples**
 
-```TypeScript
-import { dataSharePredicates, ValuesBucket } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-let da = new dataSharePredicates.DataSharePredicates();
-da.equalTo("name", "ZhangSan");
-let key1: string = "name";
-let value1: string = "roe1";
-let key2: string = "age";
-let value2: number = 21;
-let key3: string = "salary";
-let value3: number = 20.5;
-const va: ValuesBucket = {
-  key1: value1,
-  key2: value2,
-  key3: value3,
-};
-try {
-  if (dataShareHelper != undefined) {
-    (dataShareHelper as dataShare.DataShareHelper).update(uri, da, va).then((data: number) => {
-      console.info("update succeed, data : " + data);
-    }).catch((err: BusinessError) => {
-      console.error(`update error: code: ${err.code}, message: ${err.message} `);
-    });
-  }
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error(`update error: code: ${code}, message: ${message} `);
-};
-```
+See [update](#update)
 

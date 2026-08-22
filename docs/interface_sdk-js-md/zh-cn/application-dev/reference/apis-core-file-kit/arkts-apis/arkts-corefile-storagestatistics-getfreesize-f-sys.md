@@ -48,6 +48,31 @@ ArkTS-Dyn示例：
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+storageStatistics.getFreeSize().then((freeSize: number) => {
+  console.info('getFreeSize successfully:' + freeSize);
+}).catch((err: BusinessError) => {
+  console.error(`getFreeSize failed. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let totalSize: long = 0;
+storageStatistics.getFreeSize().then((freeSize) => {
+  console.info('getFreeSize successfully:' + freeSize);
+}).catch((err: BusinessError): void => {
+  console.error(`getFreeSize failed. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 storageStatistics.getFreeSize((error: BusinessError, freeSize: number) => {
   if (error) {
     console.error(`getFreeSize failed. Code: ${error.code}, message: ${error.message}`);
@@ -112,28 +137,5 @@ function getFreeSize(): Promise<long>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-storageStatistics.getFreeSize().then((freeSize: number) => {
-  console.info('getFreeSize successfully:' + freeSize);
-}).catch((err: BusinessError) => {
-  console.error(`getFreeSize failed. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let totalSize: long = 0;
-storageStatistics.getFreeSize().then((freeSize) => {
-  console.info('getFreeSize successfully:' + freeSize);
-}).catch((err: BusinessError): void => {
-  console.error(`getFreeSize failed. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [getFreeSize](#getfreesize)
 

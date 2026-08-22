@@ -30,6 +30,6 @@ Subscribes to data changes of the Hall effect sensor. If this API is called mult
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorType.SENSOR_TYPE_ID_HALL | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_HALL**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[HallResponse](arkts-sensorservice-sensor-hallresponse-i.md)&gt; | Yes | Callback used to return the Hall effect sensor data. The reported data type in the callback is **HallResponse**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HallResponse](arkts-sensorservice-sensor-hallresponse-i.md)&gt; | Yes | Callback used to return the Hall effect sensor data. The reported data type in the callback is **HallResponse**. |
 | options | Options | No | List of optional parameters. The default value is 200,000,000 ns. This parameter is used to set the data reporting frequency when Hall effect events are frequently triggered. |
 

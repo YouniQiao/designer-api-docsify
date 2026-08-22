@@ -149,6 +149,21 @@ export default {
 };
 ```
 
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* 此处options选择emptyOptions来传空 */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+
+/* 判断密钥是否存在 */
+huks.isKeyItemExist(keyAlias, emptyOptions).then(() => {
+  console.info(`keyAlias:${keyAlias} is existed!`);
+});
+```
+
 
 ## isKeyItemExist
 
@@ -195,18 +210,5 @@ function isKeyItemExist(keyAlias: string, options: HuksOptions): Promise<boolean
 
 **示例**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions来传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-/* 判断密钥是否存在 */
-huks.isKeyItemExist(keyAlias, emptyOptions).then(() => {
-  console.info(`keyAlias:${keyAlias} is existed!`);
-});
-```
+参见 [isKeyItemExist](#iskeyitemexist)
 

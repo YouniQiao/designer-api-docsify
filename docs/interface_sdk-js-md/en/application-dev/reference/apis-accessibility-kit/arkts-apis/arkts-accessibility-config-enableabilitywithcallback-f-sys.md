@@ -55,3 +55,24 @@ When the accessibility extension process is abnormally disconnected, the onDisco
 | [9300001](../errorcode-accessibility.md#9300001-invalid-bundle-name-or-ability-name) | Invalid bundle name or ability name. |
 | [9300002](../errorcode-accessibility.md#9300002-target-ability-already-enabled) | Target ability already enabled. |
 
+**Examples**
+
+```TypeScript
+import { accessibility, config } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let name: string = 'com.ohos.example/axExtension';
+let capability: accessibility.Capability[] = ['retrieve'];
+let connectCallback: config.ConnectCallback = {
+  onDisconnect: () => {
+    console.info(`Ability is disconnected.`)
+  }
+}
+
+config.enableAbilityWithCallback(name, capability, connectCallback).then(() => {
+  console.info(`Succeeded in enable ability, name is ${name}, capability is ${capability}`);
+}).catch((err: BusinessError) => {
+  console.error(`failed to enable ability, Code is ${err.code}, message is ${err.message}`);
+});
+```
+

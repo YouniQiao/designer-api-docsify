@@ -61,10 +61,10 @@ import { statistics } from '@kit.NetworkKit';
 | [getTrafficStatsByUid](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md) | 获取指定应用历史流量信息，使用 callback 异步回调。 |
 | [getTrafficStatsByUid](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md) | 获取指定应用历史流量信息，使用 Promise 异步回调。 |
 | [getTrafficStatsByUidNetwork](arkts-network-statistics-gettrafficstatsbyuidnetwork-f-sys.md) | 获取指定时间段内，应用在指定网络中的流量使用详情，使用 Promise 异步回调。 |
-| [offNetStatsChange](arkts-network-statistics-offnetstatschange-f-sys.md) | 取消注册网络流量更新通知。 |
 | [off_netStatsChange](arkts-network-statistics-offnetstatschange-f-sys.md) | 取消订阅流量改变事件通知。使用callback异步回调。 |
-| [onNetStatsChange](arkts-network-statistics-onnetstatschange-f-sys.md) | 注册网络流量更新通知。 |
+| [offNetStatsChange](arkts-network-statistics-offnetstatschange-f-sys.md) | 取消注册网络流量更新通知。 |
 | [on_netStatsChange](arkts-network-statistics-onnetstatschange-f-sys.md) | 订阅流量改变事件通知。使用callback异步回调。 |
+| [onNetStatsChange](arkts-network-statistics-onnetstatschange-f-sys.md) | 注册网络流量更新通知。 |
 | [setCalibrationTraffic](arkts-network-statistics-setcalibrationtraffic-f-sys.md) | 设置流量校准数据。在做流量校准时，可通过本接口设置相关流量数据。使用Promise异步回调。 |
 | [setTrafficPlanInfo](arkts-network-statistics-settrafficplaninfo-f-sys.md) | 设置流量计划信息。 |
 | [updateIfacesStats](arkts-network-statistics-updateifacesstats-f-sys.md) | 更新网络接口统计数据。 |

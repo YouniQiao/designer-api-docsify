@@ -87,6 +87,40 @@ let bundle: notificationManager.BundleOption = {
 notificationManager.getSlotNumByBundle(bundle, getSlotNumByBundleCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+  bundle: 'bundleName1',
+};
+
+notificationManager.getSlotNumByBundle(bundle).then((data: number) => {
+    console.info(`getSlotNumByBundle success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSlotNumByBundle failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+    // 需根据实际情况进行替换
+    bundle: 'bundleName1',
+};
+
+notificationManager.getSlotNumByBundle(bundle).then((data: long) => {
+    console.info(`getSlotNumByBundle success, data: ${JSON.stringify(data)}`);
+}).catch((err: Error): void => {
+    let error: BusinessError = err as BusinessError;
+    console.error(`getSlotNumByBundle failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## getSlotNumByBundle
 
@@ -133,37 +167,5 @@ function getSlotNumByBundle(bundle: BundleOption): Promise<long>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-  bundle: 'bundleName1',
-};
-
-notificationManager.getSlotNumByBundle(bundle).then((data: number) => {
-    console.info(`getSlotNumByBundle success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSlotNumByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-};
-
-notificationManager.getSlotNumByBundle(bundle).then((data: long) => {
-    console.info(`getSlotNumByBundle success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`getSlotNumByBundle failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [getSlotNumByBundle](#getslotnumbybundle)
 

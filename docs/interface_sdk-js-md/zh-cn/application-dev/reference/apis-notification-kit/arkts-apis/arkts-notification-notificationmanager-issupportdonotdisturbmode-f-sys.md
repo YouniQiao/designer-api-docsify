@@ -76,6 +76,31 @@ let isSupportDoNotDisturbModeCallback = (err: BusinessError | null, data: boolea
 notificationManager.isSupportDoNotDisturbMode(isSupportDoNotDisturbModeCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.isSupportDoNotDisturbMode().then((data: boolean) => {
+    console.info(`isSupportDoNotDisturbMode success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isSupportDoNotDisturbMode failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.isSupportDoNotDisturbMode().then((data: boolean) => {
+    console.info(`isSupportDoNotDisturbMode success, data: ${JSON.stringify(data)}`);
+}).catch((err: Error): void => {
+    let error: BusinessError = err as BusinessError;
+    console.error(`isSupportDoNotDisturbMode failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## isSupportDoNotDisturbMode
 
@@ -114,28 +139,5 @@ function isSupportDoNotDisturbMode(): Promise<boolean>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.isSupportDoNotDisturbMode().then((data: boolean) => {
-    console.info(`isSupportDoNotDisturbMode success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isSupportDoNotDisturbMode failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.isSupportDoNotDisturbMode().then((data: boolean) => {
-    console.info(`isSupportDoNotDisturbMode success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`isSupportDoNotDisturbMode failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [isSupportDoNotDisturbMode](#issupportdonotdisturbmode)
 

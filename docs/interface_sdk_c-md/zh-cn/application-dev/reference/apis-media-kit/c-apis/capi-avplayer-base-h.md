@@ -4,6 +4,8 @@
 
 定义AVPlayer的结构体和枚举。
 
+**引用文件：** <multimedia/player_framework/avplayer_base.h>
+
 **库：** libavplayer.so
 
 **起始版本：** 11
@@ -49,8 +51,8 @@
 | -- | -- |
 | const char * OH_PLAYER_STATE | 获取播放状态的关键字，对应值类型是int32_t。<br>**起始版本：** 12 |
 | const char * OH_PLAYER_STATE_CHANGE_REASON | 获取播放状态变更原因的关键字，对应值类型是int32_t。1：用户操作触发；2：系统变更触发。<br>**起始版本：** 12 |
-| const char * OH_PLAYER_VOLUME | 获取音量的关键字，对应值类型是float。<br>**起始版本：** 12 |
-| const char * OH_PLAYER_BITRATE_ARRAY | 获取比特率列表的关键字，对应值类型是uint8_t字节数组。通过该关键字获取信息时：需要先使用uint8_t类型指针变量保存比特率列表，使用size_t类型变量保存字节数组长度。然后分配若干个uint32_t类型的存储空间，接收将uint8_t字节数组转换为uint32_t类型比特率整数值。<br>**起始版本：** 12 |
+| const char * OH_PLAYER_VOLUME | 获取音量的关键字，对应值类型是float，取值范围[0.0，1.0]。<br>**起始版本：** 12 |
+| const char * OH_PLAYER_BITRATE_ARRAY | 获取比特率列表的关键字，对应值类型是uint8_t字节数组。通过该关键字获取信息时：需要先使用uint8_t类型指针变量保存比特率列表，使用size_t类型变量保存字节数组长度。然后分配若干个uint32_t类型的存储空间，接收将uint8_t字节数组转换为uint32_t类型比特率整数值，单位为bps。<br>**起始版本：** 12 |
 | const char * OH_PLAYER_AUDIO_INTERRUPT_TYPE | 获取音频打断类型的关键字，对应值类型是int32_t。<br>**起始版本：** 12 |
 | const char * OH_PLAYER_AUDIO_INTERRUPT_FORCE | 获取音频打断FORCE类型的关键字，对应值类型是int32_t。<br>**起始版本：** 12 |
 | const char * OH_PLAYER_AUDIO_INTERRUPT_HINT | 获取音频打断HINT类型的关键字，对应值类型是int32_t。<br>**起始版本：** 12 |
@@ -88,11 +90,11 @@
 | const char * OH_MEDIA_EVENT_INFO_DOWNLOAD_TOTAL_SIZE | 获取统计指标信息中的已加载媒体资源累计字节数的关键字，对应值类型为int64_t。<br>**起始版本：** 23 |
 | const char * OH_MEDIA_EVENT_INFO_STALLING_COUNT | 获取统计指标信息中的累计卡顿次数的关键字，对应值类型为uint32_t。<br>**起始版本：** 23 |
 | const char * OH_MEDIA_EVENT_INFO_TOTAL_STALLING_TIME | 获取统计指标信息中的累计卡顿时长的关键字，对应值类型为uint32_t，单位为毫秒。<br>**起始版本：** 23 |
-| const char * OH_PLAYER_SERVER_IP_ADDRESS |  |
-| const char * OH_PLAYER_IS_DOWNLOADING |  |
-| const char * OH_PLAYER_BUFFER_DURATION |  |
-| const char * OH_PLAYER_DOWNLOAD_RATE |  |
-| const char * OH_PLAYER_AVG_DOWNLOAD_RATE |  |
+| const char * OH_PLAYER_SERVER_IP_ADDRESS | 播放信息中表示服务器IP地址的关键字，对应值类型为字符串。<br>**起始版本：** 23 |
+| const char * OH_PLAYER_IS_DOWNLOADING | 播放信息中表示当前是否处于下载状态的关键字，值类型为int32_t。值为1表示正在下载，0表示未下载。<br>**起始版本：** 23 |
+| const char * OH_PLAYER_BUFFER_DURATION | 播放信息中表示缓冲区时长的关键字，值类型为int32_t，单位为毫秒。<br>**起始版本：** 23 |
+| const char * OH_PLAYER_DOWNLOAD_RATE | 播放信息中表示当前下载速率的关键字，对应值类型是int32_t，下载速率的单位为比特率（bps）。<br>**起始版本：** 23 |
+| const char * OH_PLAYER_AVG_DOWNLOAD_RATE | 播放信息中表示平均下载速率的关键字，对应值类型是int32_t，下载速率的单位为比特率（bps）。<br>**起始版本：** 23 |
 
 ## 枚举类型说明
 
@@ -134,8 +136,8 @@ enum AVPlayerSeekMode
 
 | 枚举项 | 描述 |
 | -- | -- |
-| AV_SEEK_NEXT_SYNC = 0 | sync to keyframes after the time point. |
-| AV_SEEK_PREVIOUS_SYNC = 1 | sync to keyframes before the time point. |
+| AV_SEEK_NEXT_SYNC = 0 | 在时间点之后同步至关键帧。 |
+| AV_SEEK_PREVIOUS_SYNC = 1 | 在时间点之前同步至关键帧。 |
 | AV_SEEK_CLOSEST = 2 | 同步到距离指定时间点最近的帧。<br>**起始版本：** 12 |
 | AV_SEEK_CONTINUOUS = 3 | 连续拖动模式下的跳转（seek）。该模式可提供更流畅的拖拽体验，但要求设备支持对当前流执行连续跳转。在调用连续跳转前，请先检查是否支持，参见{@link OH_AVPlayer_IsSeekContinuousSupported}。**起始版本：** 23 |
 
@@ -153,11 +155,11 @@ enum AVPlaybackSpeed
 
 | 枚举项 | 描述 |
 | -- | -- |
-| AV_SPEED_FORWARD_0_75_X = 0 | Video playback at 0.75x normal speed |
-| AV_SPEED_FORWARD_1_00_X = 1 | Video playback at normal speed |
-| AV_SPEED_FORWARD_1_25_X = 2 | Video playback at 1.25x normal speed |
-| AV_SPEED_FORWARD_1_75_X = 3 | Video playback at 1.75x normal speed |
-| AV_SPEED_FORWARD_2_00_X = 4 | Video playback at 2.0x normal speed |
+| AV_SPEED_FORWARD_0_75_X = 0 | 0.75倍速播放。 |
+| AV_SPEED_FORWARD_1_00_X = 1 | 正常播放。 |
+| AV_SPEED_FORWARD_1_25_X = 2 | 1.25倍速播放。 |
+| AV_SPEED_FORWARD_1_75_X = 3 | 1.75倍速播放。 |
+| AV_SPEED_FORWARD_2_00_X = 4 | 2.0倍速播放。 |
 | AV_SPEED_FORWARD_0_50_X = 5 | 0.5倍速播放。<br>**起始版本：** 12 |
 | AV_SPEED_FORWARD_1_50_X = 6 | 1.5倍速播放。<br>**起始版本：** 12 |
 | AV_SPEED_FORWARD_3_00_X = 7 | 3.0倍速播放。<br>**起始版本：** 13 |
@@ -298,7 +300,7 @@ typedef void (*OH_AVPlayerOnInfoCallback)(OH_AVPlayer *player, AVPlayerOnInfoTyp
 | -- | -- |
 | OH_AVPlayer \*player | 指向OH_AVPlayer实例的指针。 |
 | [AVPlayerOnInfoType](capi-avplayer-base-h.md#avplayeroninfotype) type | 信息类型。具体请参见[AVPlayerOnInfoType](capi-avplayer-base-h.md#avplayeroninfotype)。 |
-| [OH_AVFormat](capi-core-oh-avformat.md)\* infoBody | 指向携带具体消息的指针，仅在该回调方法内有效。 |
+| [OH_AVFormat](../AVCodecKit/capi-core-oh-avformat.md)\* infoBody | 指向携带具体消息的指针，仅在该回调方法内有效。 |
 | void \*userData | 指向应用调用者设置该回调函数时提供的实例的指针。 |
 
 ### OH_AVPlayerOnError()

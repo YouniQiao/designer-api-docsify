@@ -34,7 +34,7 @@ Compresses a file. This API uses an asynchronous callback to return the result.
 | inFile | string | Yes | Path of the folder or file to compress. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see FA Model and Stage Model. The folder to compress cannot be empty. Otherwise, an error will be reported when [decompressFile](arkts-basicservices-zlib-decompressfile-f.md) is used to decompress the folder. |
 | outFile | string | Yes | Path of the compressed file. When multiple threads compress files at the same time, the values of **outFile** must be different. |
 | options | Options | Yes | Compression parameters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **null** is returned; otherwise, a specific error code is returned. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **null** is returned; otherwise, a specific error code is returned. |
 
 **Error codes:**
 
@@ -70,6 +70,31 @@ try {
   let code = (errData as BusinessError).code;
   let message = (errData as BusinessError).message;
   console.error(`compressFile errData is errCode:${code}  message:${message}`);
+}
+```
+
+```TypeScript
+// The path used in the code must be an application sandbox path, for example, /data/storage/el2/base/temp. You can obtain the path through the context.
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+let inFile = '/data/storage/el2/base/temp/filename.xxx';
+let outFile = '/data/storage/el2/base/temp/xxx.zip';
+let options: zlib.Options = {
+  level: zlib.CompressLevel.COMPRESS_LEVEL_DEFAULT_COMPRESSION,
+  memLevel: zlib.MemLevel.MEM_LEVEL_DEFAULT,
+  strategy: zlib.CompressStrategy.COMPRESS_STRATEGY_DEFAULT_STRATEGY
+};
+
+try {
+  zlib.compressFile(inFile, outFile, options).then((data: void) => {
+    console.info('compressFile success. data: ' + JSON.stringify(data));
+  }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  })
+} catch (errData) {
+  let code = (errData as BusinessError).code;
+  let message = (errData as BusinessError).message;
+  console.error(`errData is errCode:${code}  message:${message}`);
 }
 ```
 
@@ -119,28 +144,5 @@ Compresses a file. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-// The path used in the code must be an application sandbox path, for example, /data/storage/el2/base/temp. You can obtain the path through the context.
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-let inFile = '/data/storage/el2/base/temp/filename.xxx';
-let outFile = '/data/storage/el2/base/temp/xxx.zip';
-let options: zlib.Options = {
-  level: zlib.CompressLevel.COMPRESS_LEVEL_DEFAULT_COMPRESSION,
-  memLevel: zlib.MemLevel.MEM_LEVEL_DEFAULT,
-  strategy: zlib.CompressStrategy.COMPRESS_STRATEGY_DEFAULT_STRATEGY
-};
-
-try {
-  zlib.compressFile(inFile, outFile, options).then((data: void) => {
-    console.info('compressFile success. data: ' + JSON.stringify(data));
-  }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`errData is errCode:${code}  message:${message}`);
-}
-```
+See [compressFile](#compressfile)
 

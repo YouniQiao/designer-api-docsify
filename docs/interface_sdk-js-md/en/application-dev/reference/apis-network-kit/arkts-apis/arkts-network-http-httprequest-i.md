@@ -99,7 +99,7 @@ Unregisters the observer for events indicating completion of receiving HTTP stre
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "dataEnd" | Yes | Event type. The value is **dataEnd**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Examples**
 
@@ -144,7 +144,7 @@ Unregisters the observer for events indicating receiving of HTTP streaming respo
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "dataReceive" | Yes | Event type. The value is **dataReceive**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Examples**
 
@@ -189,7 +189,7 @@ Unregisters the observer for events indicating progress of receiving HTTP stream
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataReceiveProgress' | Yes | Event type. The value is **dataReceiveProgress**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
 
 **Examples**
 
@@ -234,7 +234,7 @@ Unregisters the observer for events indicating progress of sending HTTP requests
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataSendProgress' | Yes | Event type. The value is **dataSendProgress**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Examples**
 
@@ -281,7 +281,7 @@ Unregisters the observer for HTTP Response Header events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "headerReceive" | Yes | Event type. The value is **headerReceive**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Object&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Examples**
 
@@ -320,7 +320,7 @@ Unregisters the observer for HTTP Response Header events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "headersReceive" | Yes | Event type. The value is **headersReceive**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Object&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
 
 **Examples**
 
@@ -365,7 +365,7 @@ Registers an observer for events indicating completion of receiving HTTP streami
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "dataEnd" | Yes | Event type. The value is **dataEnd**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an **Error** object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an **Error** object. |
 
 **Examples**
 
@@ -410,7 +410,7 @@ Registers an observer for events indicating receiving of HTTP streaming response
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "dataReceive" | Yes | Event type. The value is **dataReceive**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined**, and **data** is the received HTTP streaming data of the ArrayBuffer type. Otherwise, **error** is an error object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined**, and **data** is the received HTTP streaming data of the ArrayBuffer type. Otherwise, **error** is an error object. |
 
 **Examples**
 
@@ -455,7 +455,7 @@ Registers an observer for events indicating progress of receiving HTTP streaming
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataReceiveProgress' | Yes | Event type. The value is **dataReceiveProgress**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the callback content is a [DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md) object; otherwise, the callback content is **undefined**.<br>**Since:** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the callback content is a [DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md) object; otherwise, the callback content is **undefined**.<br>**Since:** 11 |
 
 **Examples**
 
@@ -500,7 +500,7 @@ Registers an observer for events indicating progress of sending HTTP requests.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataSendProgress' | Yes | Event type. The value is **dataSendProgress**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the callback content is a [DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md) object; otherwise, the callback content is **undefined**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the callback content is a [DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md) object; otherwise, the callback content is **undefined**. |
 
 **Examples**
 
@@ -547,7 +547,7 @@ Registers an observer for HTTP Response Header events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "headerReceive" | Yes | Event type. The value is **headerReceive**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Object&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined**, and **data** is the received HTTP response header. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined**, and **data** is the received HTTP response header. Otherwise, **error** is an error object. |
 
 **Examples**
 
@@ -592,7 +592,7 @@ Registers an observer for HTTP Response Header events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "headersReceive" | Yes | Event type. The value is **headersReceive**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Object&gt; | Yes | Callback used to return the HTTP response header. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | Yes | Callback used to return the HTTP response header. |
 
 **Examples**
 
@@ -637,7 +637,7 @@ Registers a one-time observer for HTTP Response Header events. Once triggered, t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "headersReceive" | Yes | Event type. The value is **headersReceive**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Object&gt; | Yes | Callback used to return the HTTP response header. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | Yes | Callback used to return the HTTP response header. |
 
 **Examples**
 
@@ -696,7 +696,7 @@ Initiates an HTTP request to a given URL. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;HttpResponse&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpResponse&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -770,6 +770,148 @@ httpRequest.request("EXAMPLE_URL", (err: Error, data: http.HttpResponse) => {
   } else {
     console.error('error:' + JSON.stringify(err));
   }
+});
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+class Header {
+  public contentType: string;
+
+  constructor(contentType: string) {
+    this.contentType = contentType;
+  }
+}
+
+let httpRequest = http.createHttp();
+let options: http.HttpRequestOptions = {
+    method: http.RequestMethod.POST, // Optional. The default value is http.RequestMethod.GET.
+    // This field is used to transfer the request body when a POST request is used. Its format needs to be negotiated with the server.
+    extraData: 'data to send',
+    expectDataType: http.HttpDataType.STRING, // Optional. This parameter specifies the type of the return data.
+    usingCache: true, // Optional. The default value is true.
+    priority: 1, // Optional. The default value is 1.
+    // You can add header fields based on service requirements.
+    header: new Header('application/json'),
+    readTimeout: 60000, // Optional. The default value is 60000, in ms.
+    connectTimeout: 60000 // Optional. The default value is 60000, in ms.
+    usingProtocol: http.HttpProtocol.HTTP1_1, // Optional. The default protocol type is automatically specified by the system.
+    usingProxy: false, // Optional. By default, network proxy is not used. This field is supported since API version 10.
+};
+
+httpRequest.request("EXAMPLE_URL", options, (err: Error, data: http.HttpResponse) => {
+  if (!err) {
+    console.info('Result:' + data.result);
+    console.info('code:' + data.responseCode);
+    console.info('type:' + JSON.stringify(data.resultType));
+    console.info('header:' + JSON.stringify(data.header));
+    console.info('cookies:' + data.cookies); // Cookies are supported since API version 8.
+  } else {
+    console.error('error:' + JSON.stringify(err));
+  }
+});
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+class Header {
+  public contentType: string;
+
+  constructor(contentType: string) {
+    this.contentType = contentType;
+  }
+}
+
+let httpRequest = http.createHttp();
+let options: http.HttpRequestOptions = {
+    method: http.RequestMethod.POST, // Optional. The default value is http.RequestMethod.GET.
+    // This field is used to transfer the request body when a POST request is used. Its format needs to be negotiated with the server.
+    extraData: 'data to send',
+    expectDataType: http.HttpDataType.STRING, // Optional. This parameter specifies the type of the return data.
+    usingCache: true, // Optional. The default value is true.
+    priority: 1, // Optional. The default value is 1.
+    // You can add header fields based on service requirements.
+    header: new Header('application/json'),
+    readTimeout: 60000, // Optional. The default value is 60000, in ms.
+    connectTimeout: 60000 // Optional. The default value is 60000, in ms.
+    usingProtocol: http.HttpProtocol.HTTP1_1, // Optional. The default protocol type is automatically specified by the system.
+    usingProxy: false, // Optional. By default, network proxy is not used. This field is supported since API version 10.
+};
+
+httpRequest.request("EXAMPLE_URL", options, (err: Error, data: http.HttpResponse) => {
+  if (!err) {
+    console.info('Result:' + data.result);
+    console.info('code:' + data.responseCode);
+    console.info('type:' + JSON.stringify(data.resultType));
+    console.info('header:' + JSON.stringify(data.header));
+    console.info('cookies:' + data.cookies); // Cookies are supported since API version 8.
+  } else {
+    console.error('error:' + JSON.stringify(err));
+  }
+});
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+class Header {
+  public contentType: string;
+
+  constructor(contentType: string) {
+    this.contentType = contentType;
+  }
+}
+
+let httpRequest = http.createHttp();
+let promise = httpRequest.request("EXAMPLE_URL", {
+  method: http.RequestMethod.GET,
+  connectTimeout: 60000,
+  readTimeout: 60000,
+  header: new Header('application/json')
+});
+promise.then((data:http.HttpResponse) => {
+  console.info('Result:' + data.result);
+  console.info('code:' + data.responseCode);
+  console.info('type:' + JSON.stringify(data.resultType));
+  console.info('header:' + JSON.stringify(data.header));
+  console.info('cookies:' + data.cookies); // Cookies are supported since API version 8.
+  console.info('header.content-Type:' + data.header);
+  console.info('header.Status-Line:' + data.header);
+}).catch((err:Error) => {
+  console.error('error:' + JSON.stringify(err));
+});
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+class Header {
+  public contentType: string;
+
+  constructor(contentType: string) {
+    this.contentType = contentType;
+  }
+}
+
+let httpRequest = http.createHttp();
+let promise = httpRequest.request("EXAMPLE_URL", {
+  method: http.RequestMethod.GET,
+  connectTimeout: 60000,
+  readTimeout: 60000,
+  header: new Header('application/json')
+});
+promise.then((data:http.HttpResponse) => {
+  console.info('Result:' + data.result);
+  console.info('code:' + data.responseCode);
+  console.info('type:' + JSON.stringify(data.resultType));
+  console.info('header:' + JSON.stringify(data.header));
+  console.info('cookies:' + data.cookies); // Cookies are supported since API version 8.
+  console.info('header.content-Type:' + data.header);
+  console.info('header.Status-Line:' + data.header);
+}).catch((err:Error) => {
+  console.error('error:' + JSON.stringify(err));
 });
 ```
 
@@ -811,7 +953,7 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
 | options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | Yes | Request options. For details, see [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;HttpResponse&gt; | Yes | Callback used to return the result. If the operation is successful, the callback content is an [HttpResponse](arkts-network-http-httpresponse-i.md) object; otherwise, the callback content is undefined. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpResponse&gt; | Yes | Callback used to return the result. If the operation is successful, the callback content is an [HttpResponse](arkts-network-http-httpresponse-i.md) object; otherwise, the callback content is undefined. |
 
 **Error codes:**
 
@@ -854,85 +996,7 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Examples**
 
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let options: http.HttpRequestOptions = {
-    method: http.RequestMethod.POST, // Optional. The default value is http.RequestMethod.GET.
-    // This field is used to transfer the request body when a POST request is used. Its format needs to be negotiated with the server.
-    extraData: 'data to send',
-    expectDataType: http.HttpDataType.STRING, // Optional. This parameter specifies the type of the return data.
-    usingCache: true, // Optional. The default value is true.
-    priority: 1, // Optional. The default value is 1.
-    // You can add header fields based on service requirements.
-    header: new Header('application/json'),
-    readTimeout: 60000, // Optional. The default value is 60000, in ms.
-    connectTimeout: 60000 // Optional. The default value is 60000, in ms.
-    usingProtocol: http.HttpProtocol.HTTP1_1, // Optional. The default protocol type is automatically specified by the system.
-    usingProxy: false, // Optional. By default, network proxy is not used. This field is supported since API version 10.
-};
-
-httpRequest.request("EXAMPLE_URL", options, (err: Error, data: http.HttpResponse) => {
-  if (!err) {
-    console.info('Result:' + data.result);
-    console.info('code:' + data.responseCode);
-    console.info('type:' + JSON.stringify(data.resultType));
-    console.info('header:' + JSON.stringify(data.header));
-    console.info('cookies:' + data.cookies); // Cookies are supported since API version 8.
-  } else {
-    console.error('error:' + JSON.stringify(err));
-  }
-});
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let options: http.HttpRequestOptions = {
-    method: http.RequestMethod.POST, // Optional. The default value is http.RequestMethod.GET.
-    // This field is used to transfer the request body when a POST request is used. Its format needs to be negotiated with the server.
-    extraData: 'data to send',
-    expectDataType: http.HttpDataType.STRING, // Optional. This parameter specifies the type of the return data.
-    usingCache: true, // Optional. The default value is true.
-    priority: 1, // Optional. The default value is 1.
-    // You can add header fields based on service requirements.
-    header: new Header('application/json'),
-    readTimeout: 60000, // Optional. The default value is 60000, in ms.
-    connectTimeout: 60000 // Optional. The default value is 60000, in ms.
-    usingProtocol: http.HttpProtocol.HTTP1_1, // Optional. The default protocol type is automatically specified by the system.
-    usingProxy: false, // Optional. By default, network proxy is not used. This field is supported since API version 10.
-};
-
-httpRequest.request("EXAMPLE_URL", options, (err: Error, data: http.HttpResponse) => {
-  if (!err) {
-    console.info('Result:' + data.result);
-    console.info('code:' + data.responseCode);
-    console.info('type:' + JSON.stringify(data.resultType));
-    console.info('header:' + JSON.stringify(data.header));
-    console.info('cookies:' + data.cookies); // Cookies are supported since API version 8.
-  } else {
-    console.error('error:' + JSON.stringify(err));
-  }
-});
-```
+See [request](#request)
 
 ## request
 
@@ -1020,67 +1084,7 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Examples**
 
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let promise = httpRequest.request("EXAMPLE_URL", {
-  method: http.RequestMethod.GET,
-  connectTimeout: 60000,
-  readTimeout: 60000,
-  header: new Header('application/json')
-});
-promise.then((data:http.HttpResponse) => {
-  console.info('Result:' + data.result);
-  console.info('code:' + data.responseCode);
-  console.info('type:' + JSON.stringify(data.resultType));
-  console.info('header:' + JSON.stringify(data.header));
-  console.info('cookies:' + data.cookies); // Cookies are supported since API version 8.
-  console.info('header.content-Type:' + data.header);
-  console.info('header.Status-Line:' + data.header);
-}).catch((err:Error) => {
-  console.error('error:' + JSON.stringify(err));
-});
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let promise = httpRequest.request("EXAMPLE_URL", {
-  method: http.RequestMethod.GET,
-  connectTimeout: 60000,
-  readTimeout: 60000,
-  header: new Header('application/json')
-});
-promise.then((data:http.HttpResponse) => {
-  console.info('Result:' + data.result);
-  console.info('code:' + data.responseCode);
-  console.info('type:' + JSON.stringify(data.resultType));
-  console.info('header:' + JSON.stringify(data.header));
-  console.info('cookies:' + data.cookies); // Cookies are supported since API version 8.
-  console.info('header.content-Type:' + data.header);
-  console.info('header.Status-Line:' + data.header);
-}).catch((err:Error) => {
-  console.error('error:' + JSON.stringify(err));
-});
-```
+See [request](#request)
 
 ## requestInStream
 
@@ -1105,7 +1109,7 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the request is successful, **err** is **undefined**, and the HTTP result code is returned. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the request is successful, **err** is **undefined**, and the HTTP result code is returned. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1174,6 +1178,128 @@ httpRequest.requestInStream("EXAMPLE_URL", (err: BusinessError, data: number) =>
     console.error("requestInStream ERROR : err = " + JSON.stringify(err));
   }
 })
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class Header {
+  public contentType: string;
+
+  constructor(contentType: string) {
+    this.contentType = contentType;
+  }
+}
+
+let httpRequest = http.createHttp();
+let options: http.HttpRequestOptions = {
+    method: http.RequestMethod.POST, // Optional. The default value is http.RequestMethod.GET.
+    // This field is used to transfer the request body when a POST request is used. Its format needs to be negotiated with the server.
+    extraData: 'data to send',
+    expectDataType: http.HttpDataType.STRING, // Optional. This parameter specifies the type of the return data.
+    usingCache: true, // Optional. The default value is true.
+    priority: 1, // Optional. The default value is 1.
+    // You can add header fields based on service requirements.
+    header: new Header('application/json'),
+    readTimeout: 60000, // Optional. The default value is 60000, in ms.
+    connectTimeout: 60000 // Optional. The default value is 60000, in ms.
+    usingProtocol: http.HttpProtocol.HTTP1_1, // Optional. The default protocol type is automatically specified by the system.
+    usingProxy: false, // Optional. By default, network proxy is not used. This field is supported since API version 10.
+};
+httpRequest.requestInStream("EXAMPLE_URL", options, (err: BusinessError<void> , data: number) => {
+  if (!err) {
+    console.info("requestInStream OK! ResponseCode is " + JSON.stringify(data));
+  } else {
+    console.error("requestInStream ERROR : err = " + JSON.stringify(err));
+  }
+})
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class Header {
+  public contentType: string;
+
+  constructor(contentType: string) {
+    this.contentType = contentType;
+  }
+}
+
+let httpRequest = http.createHttp();
+let options: http.HttpRequestOptions = {
+    method: http.RequestMethod.POST, // Optional. The default value is http.RequestMethod.GET.
+    // This field is used to transfer the request body when a POST request is used. Its format needs to be negotiated with the server.
+    extraData: 'data to send',
+    expectDataType: http.HttpDataType.STRING, // Optional. This parameter specifies the type of the return data.
+    usingCache: true, // Optional. The default value is true.
+    priority: 1, // Optional. The default value is 1.
+    // You can add header fields based on service requirements.
+    header: new Header('application/json'),
+    readTimeout: 60000, // Optional. The default value is 60000, in ms.
+    connectTimeout: 60000 // Optional. The default value is 60000, in ms.
+    usingProtocol: http.HttpProtocol.HTTP1_1, // Optional. The default protocol type is automatically specified by the system.
+    usingProxy: false, // Optional. By default, network proxy is not used. This field is supported since API version 10.
+};
+httpRequest.requestInStream("EXAMPLE_URL", options, (err: BusinessError<void> , data: number) => {
+  if (!err) {
+    console.info("requestInStream OK! ResponseCode is " + JSON.stringify(data));
+  } else {
+    console.error("requestInStream ERROR : err = " + JSON.stringify(err));
+  }
+})
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+class Header {
+  public contentType: string;
+
+  constructor(contentType: string) {
+    this.contentType = contentType;
+  }
+}
+
+let httpRequest = http.createHttp();
+let promise = httpRequest.requestInStream("EXAMPLE_URL", {
+  method: http.RequestMethod.GET,
+  connectTimeout: 60000,
+  readTimeout: 60000,
+  header: new Header('application/json')
+});
+promise.then((data: number) => {
+  console.info("requestInStream OK!" + data);
+}).catch((err: Error) => {
+  console.error("requestInStream ERROR : err = " + JSON.stringify(err));
+});
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+class Header {
+  public contentType: string;
+
+  constructor(contentType: string) {
+    this.contentType = contentType;
+  }
+}
+
+let httpRequest = http.createHttp();
+let promise = httpRequest.requestInStream("EXAMPLE_URL", {
+  method: http.RequestMethod.GET,
+  connectTimeout: 60000,
+  readTimeout: 60000,
+  header: new Header('application/json')
+});
+promise.then((data: number) => {
+  console.info("requestInStream OK!" + data);
+}).catch((err: Error) => {
+  console.error("requestInStream ERROR : err = " + JSON.stringify(err));
+});
 ```
 
 ## requestInStream
@@ -1200,7 +1326,7 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
 | options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | Yes | Request options. For details, see [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the request is successful, **err** is **undefined**, and the [HTTP result code](arkts-network-http-responsecode-e.md) is returned. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the request is successful, **err** is **undefined**, and the [HTTP result code](arkts-network-http-responsecode-e.md) is returned. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1243,77 +1369,7 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Examples**
 
-```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let options: http.HttpRequestOptions = {
-    method: http.RequestMethod.POST, // Optional. The default value is http.RequestMethod.GET.
-    // This field is used to transfer the request body when a POST request is used. Its format needs to be negotiated with the server.
-    extraData: 'data to send',
-    expectDataType: http.HttpDataType.STRING, // Optional. This parameter specifies the type of the return data.
-    usingCache: true, // Optional. The default value is true.
-    priority: 1, // Optional. The default value is 1.
-    // You can add header fields based on service requirements.
-    header: new Header('application/json'),
-    readTimeout: 60000, // Optional. The default value is 60000, in ms.
-    connectTimeout: 60000 // Optional. The default value is 60000, in ms.
-    usingProtocol: http.HttpProtocol.HTTP1_1, // Optional. The default protocol type is automatically specified by the system.
-    usingProxy: false, // Optional. By default, network proxy is not used. This field is supported since API version 10.
-};
-httpRequest.requestInStream("EXAMPLE_URL", options, (err: BusinessError<void> , data: number) => {
-  if (!err) {
-    console.info("requestInStream OK! ResponseCode is " + JSON.stringify(data));
-  } else {
-    console.error("requestInStream ERROR : err = " + JSON.stringify(err));
-  }
-})
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let options: http.HttpRequestOptions = {
-    method: http.RequestMethod.POST, // Optional. The default value is http.RequestMethod.GET.
-    // This field is used to transfer the request body when a POST request is used. Its format needs to be negotiated with the server.
-    extraData: 'data to send',
-    expectDataType: http.HttpDataType.STRING, // Optional. This parameter specifies the type of the return data.
-    usingCache: true, // Optional. The default value is true.
-    priority: 1, // Optional. The default value is 1.
-    // You can add header fields based on service requirements.
-    header: new Header('application/json'),
-    readTimeout: 60000, // Optional. The default value is 60000, in ms.
-    connectTimeout: 60000 // Optional. The default value is 60000, in ms.
-    usingProtocol: http.HttpProtocol.HTTP1_1, // Optional. The default protocol type is automatically specified by the system.
-    usingProxy: false, // Optional. By default, network proxy is not used. This field is supported since API version 10.
-};
-httpRequest.requestInStream("EXAMPLE_URL", options, (err: BusinessError<void> , data: number) => {
-  if (!err) {
-    console.info("requestInStream OK! ResponseCode is " + JSON.stringify(data));
-  } else {
-    console.error("requestInStream ERROR : err = " + JSON.stringify(err));
-  }
-})
-```
+See [requestInStream](#requestinstream)
 
 ## requestInStream
 
@@ -1387,55 +1443,7 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Examples**
 
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let promise = httpRequest.requestInStream("EXAMPLE_URL", {
-  method: http.RequestMethod.GET,
-  connectTimeout: 60000,
-  readTimeout: 60000,
-  header: new Header('application/json')
-});
-promise.then((data: number) => {
-  console.info("requestInStream OK!" + data);
-}).catch((err: Error) => {
-  console.error("requestInStream ERROR : err = " + JSON.stringify(err));
-});
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let promise = httpRequest.requestInStream("EXAMPLE_URL", {
-  method: http.RequestMethod.GET,
-  connectTimeout: 60000,
-  readTimeout: 60000,
-  header: new Header('application/json')
-});
-promise.then((data: number) => {
-  console.info("requestInStream OK!" + data);
-}).catch((err: Error) => {
-  console.error("requestInStream ERROR : err = " + JSON.stringify(err));
-});
-```
+See [requestInStream](#requestinstream)
 
 ## requestSync
 

@@ -26,14 +26,14 @@ import { mechanicManager } from '@kit.MechanicKit';
 | [getCameraTrackingEnabled](arkts-mechanic-mechanicmanager-getcameratrackingenabled-f.md) | Checks whether camera tracking is enabled for this mechanical device. |
 | [getCameraTrackingLayout](arkts-mechanic-mechanicmanager-getcameratrackinglayout-f.md) | Obtains the camera tracking layout of this mechanical device. |
 | [isControlSupported](arkts-mechanic-mechanicmanager-iscontrolsupported-f.md) | Checks whether the current device supports embodied control for a specific type of device. |
-| [offAttachStateChange](arkts-mechanic-mechanicmanager-offattachstatechange-f.md) | Unsubscribes from device attachment state change events. |
-| [offTrackingStateChange](arkts-mechanic-mechanicmanager-offtrackingstatechange-f.md) | Unsubscribes from tracking events. |
 | [off_attachStateChange](arkts-mechanic-mechanicmanager-offattachstatechange-f.md) | Unsubscribes from device attachment state change events. |
 | [off_trackingStateChange](arkts-mechanic-mechanicmanager-offtrackingstatechange-f.md) | Unsubscribes from tracking events. |
-| [onAttachStateChange](arkts-mechanic-mechanicmanager-onattachstatechange-f.md) | Subscribes to device attachment state change events. |
-| [onTrackingStateChange](arkts-mechanic-mechanicmanager-ontrackingstatechange-f.md) | Subscribes to tracking events. |
+| [offAttachStateChange](arkts-mechanic-mechanicmanager-offattachstatechange-f.md) | Unsubscribes from device attachment state change events. |
+| [offTrackingStateChange](arkts-mechanic-mechanicmanager-offtrackingstatechange-f.md) | Unsubscribes from tracking events. |
 | [on_attachStateChange](arkts-mechanic-mechanicmanager-onattachstatechange-f.md) | Subscribes to device attachment state change events. |
 | [on_trackingStateChange](arkts-mechanic-mechanicmanager-ontrackingstatechange-f.md) | Subscribes to tracking events. |
+| [onAttachStateChange](arkts-mechanic-mechanicmanager-onattachstatechange-f.md) | Subscribes to device attachment state change events. |
+| [onTrackingStateChange](arkts-mechanic-mechanicmanager-ontrackingstatechange-f.md) | Subscribes to tracking events. |
 | [setCameraTrackingEnabled](arkts-mechanic-mechanicmanager-setcameratrackingenabled-f.md) | Enables or disables camera tracking. |
 
 <!--Del-->
@@ -52,10 +52,10 @@ import { mechanicManager } from '@kit.MechanicKit';
 | [isSupportAction](arkts-mechanic-mechanicmanager-issupportaction-f-sys.md) | Check whether the specific action type is supported. |
 | [move](arkts-mechanic-mechanicmanager-move-f-sys.md) | Move a mechanical device with the specified parameters. |
 | [moveBySpeed](arkts-mechanic-mechanicmanager-movebyspeed-f-sys.md) | Move a mechanical device at the specified speed. |
-| [offRotationAxesStatusChange](arkts-mechanic-mechanicmanager-offrotationaxesstatuschange-f-sys.md) | Unregister a listener for axis state changes. |
 | [off_rotationAxesStatusChange](arkts-mechanic-mechanicmanager-offrotationaxesstatuschange-f-sys.md) | Unregister a listener for axis state changes. |
-| [onRotationAxesStatusChange](arkts-mechanic-mechanicmanager-onrotationaxesstatuschange-f-sys.md) | Register a listener for axis state changes. The status of the rotation axis changes dynamically, which needs to be monitored. |
+| [offRotationAxesStatusChange](arkts-mechanic-mechanicmanager-offrotationaxesstatuschange-f-sys.md) | Unregister a listener for axis state changes. |
 | [on_rotationAxesStatusChange](arkts-mechanic-mechanicmanager-onrotationaxesstatuschange-f-sys.md) | Register a listener for axis state changes. The status of the rotation axis changes dynamically, which needs to be monitored. |
+| [onRotationAxesStatusChange](arkts-mechanic-mechanicmanager-onrotationaxesstatuschange-f-sys.md) | Register a listener for axis state changes. The status of the rotation axis changes dynamically, which needs to be monitored. |
 | [rotate](arkts-mechanic-mechanicmanager-rotate-f-sys.md) | Rotates a mechanical device to the relative angles. |
 | [rotateBySpeed](arkts-mechanic-mechanicmanager-rotatebyspeed-f-sys.md) | Rotates a mechanical device at the specified speed. |
 | [rotateToEulerAngles](arkts-mechanic-mechanicmanager-rotatetoeulerangles-f-sys.md) | Rotates a mechanical device to the absolute angles. |

@@ -1,9 +1,9 @@
 # ArkTS API<!--arkts-notificationkit-->
 
 - [@ohos.application.NotificationSubscriberExtensionAbility](arkts-application-notificationsubscriberextensionability.md)
-  - [NotificationSubscriberExtensionAbility](arkts-notification-applicationnotificationsubscriberextensionability-notificationsubscriberextensionability-c.md)
+  - [NotificationSubscriberExtensionAbility](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md)
 - [@ohos.application.NotificationSubscriberExtensionContext](arkts-application-notificationsubscriberextensioncontext.md)
-  - [NotificationSubscriberExtensionContext](arkts-notification-applicationnotificationsubscriberextensioncontext-notificationsubscriberextensioncontext-c.md)
+  - [NotificationSubscriberExtensionContext](arkts-notification-application-notificationsubscriberextensioncontext-notificationsubscriberextensioncontext-c.md)
 - [@ohos.notification](arkts-notification.md)
   - [addSlot](arkts-notification-notification-addslot-depr-f.md)
   <!--Del-->
@@ -437,22 +437,16 @@
   <!--Del-->
   - [RemoveReason(系统接口)](arkts-notification-notificationsubscribe-removereason-e-sys.md)<!--DelEnd-->
 - [@system.notification](arkts-system-notification.md)
-  - [Notification](arkts-notification-systemnotification-notification-c.md)
-  - [ActionResult](arkts-notification-systemnotification-actionresult-i.md)
-  - [ShowNotificationOptions](arkts-notification-systemnotification-shownotificationoptions-i.md)
+  - [Notification](arkts-notification-system-notification-notification-c.md)
+  - [ActionResult](arkts-notification-system-notification-actionresult-i.md)
+  - [ShowNotificationOptions](arkts-notification-system-notification-shownotificationoptions-i.md)
 - notification<!--arkts-notificationkit-notification-->
+  - [notificationActionButton](arkts-notificationactionbutton.md)
+    - [NotificationActionButton](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)
   - [NotificationCommonDef](arkts-notificationcommondef.md)
     - [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md)
     - [GrantedBundleInfo](arkts-notification-notificationcommondef-grantedbundleinfo-i.md)
     - [UserGrantSetting](arkts-notification-notificationcommondef-usergrantsetting-i.md)
-  - [NotificationExtensionContent](arkts-notificationextensioncontent.md)
-    - [NotificationExtensionContent](arkts-notification-notificationextensioncontent-i.md)
-  - [NotificationExtensionSubscriptionInfo](arkts-notificationextensionsubscriptioninfo.md)
-    - [NotificationExtensionSubscriptionInfo](arkts-notification-notificationextensionsubscriptioninfo-i.md)
-  - [NotificationInfo](arkts-notificationinfo.md)
-    - [NotificationInfo](arkts-notification-notificationinfo-i.md)
-  - [notificationActionButton](arkts-notificationactionbutton.md)
-    - [NotificationActionButton](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)
   - [notificationContent](arkts-notificationcontent.md)
     - [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
     <!--Del-->
@@ -484,12 +478,18 @@
     - [LiveViewStatus(系统接口)](arkts-notification-notificationcontent-liveviewstatus-e-sys.md)<!--DelEnd-->
     <!--Del-->
     - [LiveViewTypes(系统接口)](arkts-notification-notificationcontent-liveviewtypes-e-sys.md)<!--DelEnd-->
+  - [NotificationExtensionContent](arkts-notificationextensioncontent.md)
+    - [NotificationExtensionContent](arkts-notification-notificationextensioncontent-i.md)
+  - [NotificationExtensionSubscriptionInfo](arkts-notificationextensionsubscriptioninfo.md)
+    - [NotificationExtensionSubscriptionInfo](arkts-notification-notificationextensionsubscriptioninfo-i.md)
   - [notificationFlags](arkts-notificationflags.md)
     - [NotificationFlags](arkts-notification-notificationflags-notificationflags-i.md)
     <!--Del-->
     - [NotificationFlags(系统接口)](arkts-notification-notificationflags-notificationflags-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [NotificationFlagStatus(系统接口)](arkts-notification-notificationflags-notificationflagstatus-e-sys.md)<!--DelEnd-->
+  - [NotificationInfo](arkts-notificationinfo.md)
+    - [NotificationInfo](arkts-notification-notificationinfo-i.md)
   - [notificationRequest](arkts-notificationrequest.md)
     - [DistributedOptions](arkts-notification-notificationrequest-distributedoptions-i.md)
     <!--Del-->

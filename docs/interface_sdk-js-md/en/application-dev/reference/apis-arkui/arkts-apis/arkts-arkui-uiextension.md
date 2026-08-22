@@ -1,6 +1,6 @@
 # @ohos.arkui.uiExtension
 
-The **uiExtension** module provides APIs for the [EmbeddedUIExtensionAbility](../../../application-models/embeddeduiextensionability.md) (or [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiextensionability-uiextensionability-c.md)) to obtain the host application window information or the information about the corresponding EmbeddedComponent<!--Del--> (or UIExtensionComponent)<!--DelEnd--> component.
+The **uiExtension** module provides APIs for the [EmbeddedUIExtensionAbility](../../../application-models/embeddeduiextensionability.md) (or [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)) to obtain the host application window information or the information about the corresponding EmbeddedComponent<!--Del--> (or UIExtensionComponent)<!--DelEnd--> component.
 
 **Since:** 23
 

@@ -12,19 +12,19 @@ import { ComposeTitleBarV2, ComposeTitleBarV2MenuItem, ComposeTitleBarV2MenuItem
 
 | Name | Description |
 | --- | --- |
-| [ComposeTitleBarV2MenuItem](arkts-arkui-arkuiadvancedcomposetitlebarv2-composetitlebarv2menuitem-c.md) | Declaration of the menu item on the right side. |
+| [ComposeTitleBarV2MenuItem](arkts-arkui-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md) | Declaration of the menu item on the right side. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [ComposeTitleBarV2](arkts-arkui-arkuiadvancedcomposetitlebarv2-composetitlebarv2-s.md) | Declaration of the composable title bar. Composable title bar represents a common title bar that contains a title, subtitle (optional), and profile picture (optional). It can come with a Back button for switching between pages of different levels. |
+| [ComposeTitleBarV2](arkts-arkui-arkui-advanced-composetitlebarv2-composetitlebarv2-s.md) | Declaration of the composable title bar. Composable title bar represents a common title bar that contains a title, subtitle (optional), and profile picture (optional). It can come with a Back button for switching between pages of different levels. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ComposeTitleBarV2MenuItemParams](arkts-arkui-arkuiadvancedcomposetitlebarv2-composetitlebarv2menuitemparams-i.md) | Options for creating a menu item instance. |
+| [ComposeTitleBarV2MenuItemParams](arkts-arkui-arkui-advanced-composetitlebarv2-composetitlebarv2menuitemparams-i.md) | Options for creating a menu item instance. |
 
 ### Types
 

@@ -34,7 +34,7 @@ Updates the print job state. This API uses an asynchronous callback to return th
 | jobId | string | Yes | ID of the print job. |
 | state | [PrintJobState](arkts-basicservices-print-printjobstate-e.md) | Yes | Print job state. |
 | subState | [PrintJobSubState](arkts-basicservices-print-printjobsubstate-e.md) | Yes | Substate of the print job. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback to be invoked when the print job state is updated. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback to be invoked when the print job state is updated. |
 
 **Error codes:**
 
@@ -59,6 +59,20 @@ print.updatePrintJobState(jobId, state, subState, (err: BusinessError) => {
     } else {
         console.info('updatePrintJobState success');
     }
+})
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let jobId : string = 'jobId';
+let state : print.PrintJobState = print.PrintJobState.PRINT_JOB_PREPARE;
+let subState : print.PrintJobSubState = print.PrintJobSubState.PRINT_JOB_COMPLETED_SUCCESS;
+print.updatePrintJobState(jobId, state, subState).then(() => {
+    console.info('update print job state success');
+}).catch((error: BusinessError) => {
+    console.error('update print job state error : ' + JSON.stringify(error));
 })
 ```
 
@@ -107,17 +121,5 @@ Updates the print job state. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let jobId : string = 'jobId';
-let state : print.PrintJobState = print.PrintJobState.PRINT_JOB_PREPARE;
-let subState : print.PrintJobSubState = print.PrintJobSubState.PRINT_JOB_COMPLETED_SUCCESS;
-print.updatePrintJobState(jobId, state, subState).then(() => {
-    console.info('update print job state success');
-}).catch((error: BusinessError) => {
-    console.error('update print job state error : ' + JSON.stringify(error));
-})
-```
+See [updatePrintJobState](#updateprintjobstate)
 

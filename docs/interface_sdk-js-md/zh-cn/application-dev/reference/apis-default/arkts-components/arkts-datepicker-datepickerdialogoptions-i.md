@@ -162,6 +162,32 @@ backgroundEffect?: BackgroundEffectOptions
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## cancelButtonStyle
+
+```TypeScript
+cancelButtonStyle?: PickerDialogButtonStyle
+```
+
+设置取消按钮显示样式、样式和重要程度、角色、背景色、圆角、文本颜色、字号、字体粗细、字体样式、字体列表、按钮是否默认响应Enter键。
+
+**说明：**
+
+1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效， 保持默认值false。
+
+2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形 [ROUNDED_RECTANGLE](../../../reference/apis-arkui/arkui-ts/ts-basic-components-button.md#buttontype)，呈现效果 依然是胶囊型按钮[Capsule](../../../reference/apis-arkui/arkui-ts/ts-basic-components-button.md#buttontype)。
+
+**类型：** [PickerDialogButtonStyle](../../apis-arkui/arkts-components/arkts-arkui-pickerdialogbuttonstyle-i.md)
+
+**起始版本：** 23
+
+**ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DatePickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle--><!--Device-DatePickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 ## canLoop
 
 ```TypeScript
@@ -187,32 +213,6 @@ true：可循环，年份随着月份的循环滚动进行联动加减，月份�
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DatePickerDialogOptions-canLoop?: boolean--><!--Device-DatePickerDialogOptions-canLoop?: boolean-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## cancelButtonStyle
-
-```TypeScript
-cancelButtonStyle?: PickerDialogButtonStyle
-```
-
-设置取消按钮显示样式、样式和重要程度、角色、背景色、圆角、文本颜色、字号、字体粗细、字体样式、字体列表、按钮是否默认响应Enter键。
-
-**说明：**
-
-1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效， 保持默认值false。
-
-2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形 [ROUNDED_RECTANGLE](../../../reference/apis-arkui/arkui-ts/ts-basic-components-button.md#buttontype)，呈现效果 依然是胶囊型按钮[Capsule](../../../reference/apis-arkui/arkui-ts/ts-basic-components-button.md#buttontype)。
-
-**类型：** [PickerDialogButtonStyle](../../apis-arkui/arkts-components/arkts-arkui-pickerdialogbuttonstyle-i.md)
-
-**起始版本：** 23
-
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DatePickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle--><!--Device-DatePickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

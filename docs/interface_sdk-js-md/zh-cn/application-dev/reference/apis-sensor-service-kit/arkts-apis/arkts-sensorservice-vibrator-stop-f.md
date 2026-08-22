@@ -65,6 +65,28 @@ vibrator.stop(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_PRESET).then(() => {
 });
 ```
 
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 按照effectId类型启动振动
+vibrator.vibrate(vibrator.EffectId.EFFECT_CLOCK_TIMER, (error: BusinessError) => {
+  if (error) {
+    console.error(`Failed to vibrate. Code: ${error.code}, message: ${error.message}`);
+  } else {
+    console.info('Succeed in vibrating');
+  }
+})
+// 使用VIBRATOR_STOP_MODE_PRESET模式停止振动
+vibrator.stop(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_PRESET, (error: BusinessError) => {
+  if (error) {
+    console.error(`Failed to stop. Code: ${error.code}, message: ${error.message}`);
+  } else {
+    console.info('Succeed in stopping');
+  }
+})
+```
+
 
 ## stop
 
@@ -101,25 +123,5 @@ function stop(stopMode: VibratorStopMode, callback?: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 按照effectId类型启动振动
-vibrator.vibrate(vibrator.EffectId.EFFECT_CLOCK_TIMER, (error: BusinessError) => {
-  if (error) {
-    console.error(`Failed to vibrate. Code: ${error.code}, message: ${error.message}`);
-  } else {
-    console.info('Succeed in vibrating');
-  }
-})
-// 使用VIBRATOR_STOP_MODE_PRESET模式停止振动
-vibrator.stop(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_PRESET, (error: BusinessError) => {
-  if (error) {
-    console.error(`Failed to stop. Code: ${error.code}, message: ${error.message}`);
-  } else {
-    console.info('Succeed in stopping');
-  }
-})
-```
+参见 [stop](#stop)
 

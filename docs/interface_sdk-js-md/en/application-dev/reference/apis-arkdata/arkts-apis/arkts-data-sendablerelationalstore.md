@@ -41,6 +41,6 @@ import { sendableRelationalStore } from '@kit.ArkData';
 | [NonSendableAsset](arkts-arkdata-sendablerelationalstore-nonsendableasset-t.md) | Represents the asset (such as a document, image, or video) that cannot be passed across threads. |
 | [NonSendableBucket](arkts-arkdata-sendablerelationalstore-nonsendablebucket-t.md) | Represents the KV pair that cannot be passed across threads. |
 | [NonSendableValues](arkts-arkdata-sendablerelationalstore-nonsendablevalues-t.md) | Represents the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) array that cannot be passed across threads. |
-| [ValueType](arkts-arkdata-sendablerelationalstore-valuetype-t.md) | Defines the types of the value in a KV pair. The type varies with the parameter function. |
 | [ValuesBucket](arkts-arkdata-sendablerelationalstore-valuesbucket-t.md) | Represents the KV pair of the [ValueType](arkts-arkdata-sendablerelationalstore-valuetype-t.md) data that can be passed across threads. |
+| [ValueType](arkts-arkdata-sendablerelationalstore-valuetype-t.md) | Defines the types of the value in a KV pair. The type varies with the parameter function. |
 

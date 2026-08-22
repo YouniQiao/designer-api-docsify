@@ -29,7 +29,7 @@ Disconnects from the specified printer. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | printerId | string | Yes | Printer ID. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -52,6 +52,18 @@ print.disconnectPrinter(printerId, (err: BusinessError) => {
     } else {
         console.info('start disconnect Printer success');
     }
+})
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let printerId: string = 'printerId_32';
+print.disconnectPrinter(printerId).then(() => {
+    console.info('start disconnect Printer success');
+}).catch((error: BusinessError) => {
+    console.error('failed to disconnect Printer because : ' + JSON.stringify(error));
 })
 ```
 
@@ -96,15 +108,5 @@ Disconnects from the specified printer. This API uses a promise to return the re
 
 **Examples**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let printerId: string = 'printerId_32';
-print.disconnectPrinter(printerId).then(() => {
-    console.info('start disconnect Printer success');
-}).catch((error: BusinessError) => {
-    console.error('failed to disconnect Printer because : ' + JSON.stringify(error));
-})
-```
+See [disconnectPrinter](#disconnectprinter)
 

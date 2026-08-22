@@ -27,7 +27,7 @@ Sets the mouse pointer size. This API uses an asynchronous callback to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | size | int | Yes | Pointer size. The value ranges from **1** to **7**. The default value is **1**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -57,6 +57,32 @@ struct Index {
               }
               console.info(`setPointerSize success`);
             });
+          } catch (error) {
+            console.error(`setPointerSize failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            pointer.setPointerSize(3).then(() => {
+              console.info(`setPointerSize success`);
+            }).catch((error: BusinessError) => {
+              console.error(`Set pointer size failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            })
           } catch (error) {
             console.error(`setPointerSize failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
@@ -104,29 +130,5 @@ Sets the mouse pointer size. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.setPointerSize(3).then(() => {
-              console.info(`setPointerSize success`);
-            }).catch((error: BusinessError) => {
-              console.error(`Set pointer size failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`setPointerSize failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
+See [setPointerSize](#setpointersize)
 

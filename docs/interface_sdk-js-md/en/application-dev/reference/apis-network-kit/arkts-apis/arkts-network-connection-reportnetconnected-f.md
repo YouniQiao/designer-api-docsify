@@ -34,7 +34,7 @@ Reports the network availability to the network management module. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | netHandle | NetHandle | Yes | Network handle. For details, see [NetHandle](arkts-network-connection-nethandle-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the network status is reported successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the network status is reported successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -55,6 +55,16 @@ import { BusinessError } from '@kit.BasicServicesKit';
 connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
   connection.reportNetConnected(netHandle, (error: BusinessError) => {
     console.error(JSON.stringify(error));
+  });
+});
+```
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  connection.reportNetConnected(netHandle).then(() => {
+    console.info(`report success`);
   });
 });
 ```
@@ -102,13 +112,5 @@ Reports that the network is available to the network management module. This API
 
 **Examples**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  connection.reportNetConnected(netHandle).then(() => {
-    console.info(`report success`);
-  });
-});
-```
+See [reportNetConnected](#reportnetconnected)
 

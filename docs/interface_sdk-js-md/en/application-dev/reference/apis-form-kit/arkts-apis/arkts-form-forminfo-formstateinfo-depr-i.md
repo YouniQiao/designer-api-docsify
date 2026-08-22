@@ -45,7 +45,7 @@ want: Want
 
 Want text.
 
-**Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)
+**Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 8
 

@@ -12,5 +12,5 @@ import { ActionExtensionAbility } from '@kit.AbilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ActionExtensionAbility](arkts-ability-appabilityactionextensionability-actionextensionability-c.md) | ActionExtensionAbility是为开发者提供的自定义操作业务模板，继承自 [UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md)。 |
+| [ActionExtensionAbility](arkts-ability-app-ability-actionextensionability-actionextensionability-c.md) | ActionExtensionAbility是为开发者提供的自定义操作业务模板，继承自 [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)。 |
 

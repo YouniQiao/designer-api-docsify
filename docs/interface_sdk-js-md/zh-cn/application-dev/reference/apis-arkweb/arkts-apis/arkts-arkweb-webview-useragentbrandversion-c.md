@@ -38,6 +38,10 @@ getBrand(): string
 | --- | --- |
 | string | 返回品牌名称字符串。 |
 
+**示例**
+
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+
 ## getFullVersion
 
 ```TypeScript
@@ -59,6 +63,12 @@ getFullVersion(): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 返回完整版本号字符串。 |
+
+**示例**
+
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+
+ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## getMajorVersion
 
@@ -82,6 +92,10 @@ getMajorVersion(): string
 | --- | --- |
 | string | 返回主版本号字符串。 |
 
+**示例**
+
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+
 ## setBrand
 
 ```TypeScript
@@ -103,6 +117,10 @@ setBrand(brand: string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | brand | string | 是 | 品牌名称，不能为空字符串。 |
+
+**示例**
+
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## setFullVersion
 
@@ -126,6 +144,12 @@ setFullVersion(fullVersion: string): void
 | --- | --- | --- | --- |
 | fullVersion | string | 是 | 完整版本号，不能为空字符串。 |
 
+**示例**
+
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+
+ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+
 ## setMajorVersion
 
 ```TypeScript
@@ -147,4 +171,8 @@ setMajorVersion(majorVersion: string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | majorVersion | string | 是 | 主版本号，不能为空字符串。 |
+
+**示例**
+
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 

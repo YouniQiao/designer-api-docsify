@@ -31,7 +31,7 @@ function dup(fd: int): File
 
 | 类型 | 说明 |
 | --- | --- |
-| [File](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-file-i.md) | 打开的File对象。 |
+| [File](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-file-i.md) | 打开的File对象。 |
 
 **错误码：**
 

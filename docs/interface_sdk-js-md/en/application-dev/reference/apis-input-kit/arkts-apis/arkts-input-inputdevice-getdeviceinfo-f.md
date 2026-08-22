@@ -26,7 +26,7 @@ Obtains information about the specified input device. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | int | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[InputDeviceData](arkts-input-inputdevice-inputdevicedata-i.md)&gt; | Yes | Callback function. If the retrieval is successful, **err** is **undefined**, and **data** is the input device information (including the device ID, name, supported input capabilities). Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InputDeviceData](arkts-input-inputdevice-inputdevicedata-i.md)&gt; | Yes | Callback function. If the retrieval is successful, **err** is **undefined**, and **data** is the input device information (including the device ID, name, supported input capabilities). Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -55,6 +55,33 @@ struct Index {
                 return;
               }
               console.info(`Device info: ${JSON.stringify(deviceData)}`);
+            });
+          } catch (error) {
+            console.error(`Failed to get device info, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          // Obtain the name of the device whose ID is 1.
+          try {
+            inputDevice.getDeviceInfo(1).then((deviceData: inputDevice.InputDeviceData) => {
+              console.info(`Device info: ${JSON.stringify(deviceData)}`);
+            }).catch((error: BusinessError) => {
+              console.error(`Get device info failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
             });
           } catch (error) {
             console.error(`Failed to get device info, error: ${JSON.stringify(error, [`code`, `message`])}`);
@@ -100,30 +127,5 @@ Obtains the information about the input device with the specified ID. This API u
 
 **Examples**
 
-```TypeScript
-import { inputDevice } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          // Obtain the name of the device whose ID is 1.
-          try {
-            inputDevice.getDeviceInfo(1).then((deviceData: inputDevice.InputDeviceData) => {
-              console.info(`Device info: ${JSON.stringify(deviceData)}`);
-            }).catch((error: BusinessError) => {
-              console.error(`Get device info failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            });
-          } catch (error) {
-            console.error(`Failed to get device info, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
+See [getDeviceInfo](#getdeviceinfo)
 

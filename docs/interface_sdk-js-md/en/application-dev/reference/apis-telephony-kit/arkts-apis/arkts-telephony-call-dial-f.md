@@ -37,9 +37,17 @@ Initiates a call. You can set call options as needed. This API uses an asynchron
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Phone number. |
 | options | [DialOptions](arkts-telephony-call-dialoptions-i.md) | Yes | Call option, which indicates whether the call is a voice call or video call. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.dial("138xxxxxxxx", (err: BusinessError, data: boolean) => {
+    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -49,6 +57,19 @@ let dialOptions: call.DialOptions = {
 }
 call.dial("138xxxxxxxx", dialOptions, (err: BusinessError, data: boolean) => {
     console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dialOptions: call.DialOptions = {
+    extras: false
+}
+call.dial("138xxxxxxxx", dialOptions).then((data: boolean) => {
+    console.info(`dial success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`dial fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -93,18 +114,7 @@ Initiates a call. You can set call options as needed. This API uses a promise to
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dialOptions: call.DialOptions = {
-    extras: false
-}
-call.dial("138xxxxxxxx", dialOptions).then((data: boolean) => {
-    console.info(`dial success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`dial fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [dial](#dial)
 
 
 ## dial
@@ -137,15 +147,9 @@ Initiates a call. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Phone number. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.dial("138xxxxxxxx", (err: BusinessError, data: boolean) => {
-    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
+See [dial](#dial)
 

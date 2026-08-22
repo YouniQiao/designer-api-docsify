@@ -57,6 +57,30 @@ Removes a directory and all its subdirectories and files. This API uses a promis
 | 13900032 | Directory not empty |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let dirPath = pathDir + "/testDir";
+fs.rmdir(dirPath).then(() => {
+  console.info("rmdir succeed");
+}).catch((err: BusinessError) => {
+  console.error("rmdir failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let dirPath = pathDir + "/testDir";
+fs.rmdir(dirPath, (err: BusinessError) => {
+  if (err) {
+    console.error("rmdir failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("rmdir succeed");
+  }
+});
+```
+
 
 ## rmdir
 
@@ -83,7 +107,7 @@ Removes a directory and all its subdirectories and files. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -101,4 +125,8 @@ Removes a directory and all its subdirectories and files. This API uses an async
 | 13900030 | File name too long |
 | 13900032 | Directory not empty |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [rmdir](#rmdir)
 

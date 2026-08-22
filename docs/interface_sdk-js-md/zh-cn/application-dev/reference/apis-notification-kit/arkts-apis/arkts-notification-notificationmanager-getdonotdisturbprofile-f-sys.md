@@ -76,6 +76,34 @@ notificationManager.getDoNotDisturbProfile(1).then((data: notificationManager.Do
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let id : number = 101;
+let userId : number = 100;
+
+notificationManager.getDoNotDisturbProfile(id, userId).then((data: notificationManager.DoNotDisturbProfile) => {
+  console.info(`getDoNotDisturbProfile success: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`getDoNotDisturbProfile failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let id : long = 101;
+let userId : int = 100;
+
+notificationManager.getDoNotDisturbProfile(id, userId).then((data: notificationManager.DoNotDisturbProfile | undefined): void => {
+  console.info(`getDoNotDisturbProfile success. data: ${JSON.stringify(data)}`);
+}).catch((err: Error | undefined): void => {
+  console.error(`getDoNotDisturbProfile error, code: ${err?.code}, message: ${err?.message}`);
+});
+```
+
 
 ## getDoNotDisturbProfile
 
@@ -125,31 +153,5 @@ function getDoNotDisturbProfile(id: long, userId: int): Promise<DoNotDisturbProf
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let id : number = 101;
-let userId : number = 100;
-
-notificationManager.getDoNotDisturbProfile(id, userId).then((data: notificationManager.DoNotDisturbProfile) => {
-  console.info(`getDoNotDisturbProfile success: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`getDoNotDisturbProfile failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let id : long = 101;
-let userId : int = 100;
-
-notificationManager.getDoNotDisturbProfile(id, userId).then((data: notificationManager.DoNotDisturbProfile | undefined): void => {
-  console.info(`getDoNotDisturbProfile success. data: ${JSON.stringify(data)}`);
-}).catch((err: Error | undefined): void => {
-  console.error(`getDoNotDisturbProfile error, code: ${err?.code}, message: ${err?.message}`);
-});
-```
+参见 [getDoNotDisturbProfile](#getdonotdisturbprofile)
 

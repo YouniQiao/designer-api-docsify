@@ -57,6 +57,13 @@ Constructor.
 | subscribeMe | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No | Variable properties. |
 | info | string | No | Variable information. |
 
+**Examples**
+
+```TypeScript
+let para: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(para);
+```
+
 ## createOneWaySync
 
 ```TypeScript

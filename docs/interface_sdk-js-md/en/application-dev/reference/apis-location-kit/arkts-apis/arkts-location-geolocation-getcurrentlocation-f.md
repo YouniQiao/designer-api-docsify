@@ -31,7 +31,7 @@ Obtain current location
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | request | CurrentLocationRequest | Yes | Indicates the location request parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
 
 **Examples**
 
@@ -48,6 +48,28 @@ let locationChange = (err:BusinessError.BusinessError, location:geolocation.Loca
     }
 };
 geolocation.getCurrentLocation(requestInfo, locationChange);
+```
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+import BusinessError from "@ohos.base"
+let locationChange = (err:BusinessError.BusinessError, location:geolocation.Location):void => {
+    if (err) {
+        console.info('locationChanger: err=' + JSON.stringify(err));
+    }
+    if (location) {
+        console.info('locationChanger: location=' + JSON.stringify(location));
+    }
+};
+geolocation.getCurrentLocation(locationChange);
+```
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+let requestInfo:geolocation.CurrentLocationRequest = {'priority': 0x203, 'scenario': 0x300,'maxAccuracy': 0};
+geolocation.getCurrentLocation(requestInfo).then((result) => {
+    console.info('current location: ' + JSON.stringify(result));
+});
 ```
 
 
@@ -75,23 +97,11 @@ Obtain current location
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
 
 **Examples**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-import BusinessError from "@ohos.base"
-let locationChange = (err:BusinessError.BusinessError, location:geolocation.Location):void => {
-    if (err) {
-        console.info('locationChanger: err=' + JSON.stringify(err));
-    }
-    if (location) {
-        console.info('locationChanger: location=' + JSON.stringify(location));
-    }
-};
-geolocation.getCurrentLocation(locationChange);
-```
+See [getCurrentLocation](#getcurrentlocation)
 
 
 ## getCurrentLocation
@@ -128,11 +138,5 @@ Obtain current location
 
 **Examples**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-let requestInfo:geolocation.CurrentLocationRequest = {'priority': 0x203, 'scenario': 0x300,'maxAccuracy': 0};
-geolocation.getCurrentLocation(requestInfo).then((result) => {
-    console.info('current location: ' + JSON.stringify(result));
-});
-```
+See [getCurrentLocation](#getcurrentlocation)
 

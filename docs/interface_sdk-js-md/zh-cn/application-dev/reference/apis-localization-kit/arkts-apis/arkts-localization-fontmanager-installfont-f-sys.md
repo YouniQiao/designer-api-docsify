@@ -49,3 +49,19 @@ function installFont(path: string): Promise<int>
 | [31100105](../errorcode-font-manager.md#31100105-已安装字体文件超过最大数量) | Exceeded the maximum number of installed files. |
 | [31100106](../errorcode-font-manager.md#31100106-其他错误导致安装失败) | The system ability works abnormally. |
 
+**示例**
+
+```TypeScript
+import { fontManager } from '@kit.LocalizationKit';
+
+  async function installFont() {
+    try {
+      let res = await fontManager.installFont('fontPath');
+      console.info('installFont suc. res is ' + res);
+    } catch (error) {
+      console.error('installFont err.' + error.code);
+    }
+    return;
+  }
+```
+

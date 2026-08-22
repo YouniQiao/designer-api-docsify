@@ -147,28 +147,6 @@ onChange(callback: ((selected: boolean) => void) | undefined): this
 
 | Type | Description |
 | --- | --- |
-## selectIcon
-
-```TypeScript
-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier | undefined): this
-```
-
-**Since:** -1
-
-**ArkTS mode:** ArkTS-Sta since version -1.
-
-<!--Device-MenuItemAttribute-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier | undefined): this--><!--Device-MenuItemAttribute-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier | undefined): this-End-->
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | boolean \| [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) \| [SymbolGlyphModifier](../../apis-arkui/arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) \| undefined | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## selected
 
 ```TypeScript
@@ -186,6 +164,28 @@ selected(value: boolean | undefined | Bindable<boolean>): this
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | boolean \| undefined \| [Bindable](../arkts-apis/arkts-common-bindable-i.md)&lt;boolean&gt; | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## selectIcon
+
+```TypeScript
+selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier | undefined): this
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Sta since version -1.
+
+<!--Device-MenuItemAttribute-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier | undefined): this--><!--Device-MenuItemAttribute-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier | undefined): this-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean \| [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) \| [SymbolGlyphModifier](../../apis-arkui/arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) \| undefined | Yes |  |
 
 **Return value:**
 

@@ -18,14 +18,14 @@ Obtains state information about the page at the top of the navigation stack.
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkuiuicontext-uicontext-c.md) object associated
+> [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated
 > with the current UI context.
 
 **Since:** 8
 
 **Deprecated since:** 18
 
-**Substitutes:** [getState](arkts-arkui-arkuiuicontext-router-c.md#getstate)
+**Substitutes:** [getState](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#getstate)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

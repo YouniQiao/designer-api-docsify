@@ -32,7 +32,7 @@ Registers a mission status listener. This API uses an asynchronous callback to r
 | --- | --- | --- | --- |
 | parameter | MissionDeviceInfo | Yes | Information about the device to listen for. |
 | options | MissionCallback | Yes | Callback to register. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the listener is registered, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the listener is registered, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -80,6 +80,40 @@ try {
 }
 ```
 
+```TypeScript
+import { distributedMissionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Implement a callback function.
+function NotifyMissionsChanged(deviceId: string): void {
+  console.info('NotifyMissionsChanged deviceId ' + JSON.stringify(deviceId));
+}
+function NotifySnapshot(deviceId: string, missionId: number): void {
+  console.info('NotifySnapshot deviceId ' + JSON.stringify(deviceId));
+  console.info('NotifySnapshot missionId ' + JSON.stringify(missionId));
+}
+function NotifyNetDisconnect(deviceId: string, state: number): void {
+  console.info('NotifyNetDisconnect deviceId ' + JSON.stringify(deviceId));
+  console.info('NotifyNetDisconnect state ' + JSON.stringify(state));
+}
+try {
+    // Call registerMissionListener.
+    distributedMissionManager.registerMissionListener(
+      { deviceId: "" },
+      {
+        notifyMissionsChanged: NotifyMissionsChanged,
+        notifySnapshot: NotifySnapshot,
+        notifyNetDisconnect: NotifyNetDisconnect
+      }).then(() => {
+        console.info('registerMissionListener finished. ');
+    }).catch((error: BusinessError) => {
+        console.error('registerMissionListener failed, cause: ' + JSON.stringify(error));
+    })
+} catch (error) {
+    console.error('registerMissionListener failed, cause: ' + JSON.stringify(error));
+}
+```
+
 
 ## registerMissionListener
 
@@ -123,37 +157,5 @@ Registers a mission status listener. This API uses a promise to return the resul
 
 **Examples**
 
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Implement a callback function.
-function NotifyMissionsChanged(deviceId: string): void {
-  console.info('NotifyMissionsChanged deviceId ' + JSON.stringify(deviceId));
-}
-function NotifySnapshot(deviceId: string, missionId: number): void {
-  console.info('NotifySnapshot deviceId ' + JSON.stringify(deviceId));
-  console.info('NotifySnapshot missionId ' + JSON.stringify(missionId));
-}
-function NotifyNetDisconnect(deviceId: string, state: number): void {
-  console.info('NotifyNetDisconnect deviceId ' + JSON.stringify(deviceId));
-  console.info('NotifyNetDisconnect state ' + JSON.stringify(state));
-}
-try {
-    // Call registerMissionListener.
-    distributedMissionManager.registerMissionListener(
-      { deviceId: "" },
-      {
-        notifyMissionsChanged: NotifyMissionsChanged,
-        notifySnapshot: NotifySnapshot,
-        notifyNetDisconnect: NotifyNetDisconnect
-      }).then(() => {
-        console.info('registerMissionListener finished. ');
-    }).catch((error: BusinessError) => {
-        console.error('registerMissionListener failed, cause: ' + JSON.stringify(error));
-    })
-} catch (error) {
-    console.error('registerMissionListener failed, cause: ' + JSON.stringify(error));
-}
-```
+See [registerMissionListener](#registermissionlistener)
 

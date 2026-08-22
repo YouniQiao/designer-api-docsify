@@ -31,7 +31,7 @@ Starts to synchronize the remote mission list. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | parameter | MissionParameter | Yes | Parameters required for synchronization. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the synchronization is started, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the synchronization is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -60,6 +60,27 @@ try {
       }
       console.info('startSyncRemoteMissions finished');}
   )
+} catch (error) {
+  console.error('startSyncRemoteMissions failed, cause: ' + JSON.stringify(error));
+}
+```
+
+```TypeScript
+import { distributedMissionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  distributedMissionManager.startSyncRemoteMissions(
+    {
+      deviceId: "",
+      fixConflict: false,
+      tag: 0
+    }
+  ).then(() => {
+      console.info('startSyncRemoteMissions finished successfully');
+    }).catch((error: BusinessError) => {
+    console.error('startSyncRemoteMissions failed, cause: ' + JSON.stringify(error));
+  })
 } catch (error) {
   console.error('startSyncRemoteMissions failed, cause: ' + JSON.stringify(error));
 }
@@ -107,24 +128,5 @@ Starts to synchronize the remote mission list. This API uses a promise to return
 
 **Examples**
 
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  distributedMissionManager.startSyncRemoteMissions(
-    {
-      deviceId: "",
-      fixConflict: false,
-      tag: 0
-    }
-  ).then(() => {
-      console.info('startSyncRemoteMissions finished successfully');
-    }).catch((error: BusinessError) => {
-    console.error('startSyncRemoteMissions failed, cause: ' + JSON.stringify(error));
-  })
-} catch (error) {
-  console.error('startSyncRemoteMissions failed, cause: ' + JSON.stringify(error));
-}
-```
+See [startSyncRemoteMissions](#startsyncremotemissions)
 

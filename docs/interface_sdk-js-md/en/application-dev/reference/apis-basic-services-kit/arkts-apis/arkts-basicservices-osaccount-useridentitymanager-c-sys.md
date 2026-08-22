@@ -212,6 +212,14 @@ A **constructor()** used to create an instance for user IDM.
 **Examples**
 
 ```TypeScript
+let userAuth = new osAccount.UserAuth();
+```
+
+```TypeScript
+let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
+```
+
+```TypeScript
 let userIDM = new osAccount.UserIdentityManager();
 ```
 
@@ -351,7 +359,7 @@ Obtains authentication information. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is information about all registered credentials of the user. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is information about all registered credentials of the user. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -382,6 +390,61 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userIDM = new osAccount.UserIdentityManager();
+try {
+  userIDM.getAuthInfo(osAccount.AuthType.PIN,
+    (err: BusinessError, result: osAccount.EnrolledCredInfo[]) => {
+    if (err) {
+      console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('getAuthInfo result = ' + JSON.stringify(result));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userIDM = new osAccount.UserIdentityManager();
+try {
+  userIDM.getAuthInfo(osAccount.AuthType.PIN).then((result: osAccount.EnrolledCredInfo[]) => {
+    console.info('getAuthInfo result = ' + JSON.stringify(result))
+  }).catch((err: BusinessError) => {
+    console.error(`getAuthInfo error = code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userIDM = new osAccount.UserIdentityManager();
+let options: osAccount.GetAuthInfoOptions = {
+  authType: osAccount.AuthType.PIN,
+  accountId: 100,
+};
+try {
+  userIDM.getAuthInfo(options).then((result: osAccount.EnrolledCredInfo[]) => {
+    console.info('getAuthInfo result = ' + JSON.stringify(result))
+  }).catch((err: BusinessError) => {
+    console.error(`getAuthInfo error = code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## getAuthInfo
 
 ```TypeScript
@@ -405,7 +468,7 @@ Obtains authentication information of the specified type. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | authType | AuthType | Yes | Authentication credential type. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the information about all enrolled credentials of the specified type. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the information about all enrolled credentials of the specified type. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -419,24 +482,7 @@ Obtains authentication information of the specified type. This API uses an async
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userIDM = new osAccount.UserIdentityManager();
-try {
-  userIDM.getAuthInfo(osAccount.AuthType.PIN,
-    (err: BusinessError, result: osAccount.EnrolledCredInfo[]) => {
-    if (err) {
-      console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('getAuthInfo result = ' + JSON.stringify(result));
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getAuthInfo](#getauthinfo)
 
 ## getAuthInfo
 
@@ -480,21 +526,7 @@ Obtains authentication information. This API uses a promise to return the result
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userIDM = new osAccount.UserIdentityManager();
-try {
-  userIDM.getAuthInfo(osAccount.AuthType.PIN).then((result: osAccount.EnrolledCredInfo[]) => {
-    console.info('getAuthInfo result = ' + JSON.stringify(result))
-  }).catch((err: BusinessError) => {
-    console.error(`getAuthInfo error = code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getAuthInfo](#getauthinfo)
 
 ## getAuthInfo
 
@@ -539,25 +571,7 @@ Obtains authentication information. This API uses a promise to return the result
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userIDM = new osAccount.UserIdentityManager();
-let options: osAccount.GetAuthInfoOptions = {
-  authType: osAccount.AuthType.PIN,
-  accountId: 100,
-};
-try {
-  userIDM.getAuthInfo(options).then((result: osAccount.EnrolledCredInfo[]) => {
-    console.info('getAuthInfo result = ' + JSON.stringify(result))
-  }).catch((err: BusinessError) => {
-    console.error(`getAuthInfo error = code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getAuthInfo](#getauthinfo)
 
 ## getEnrolledId
 
@@ -645,7 +659,7 @@ Unsubscribes from credential change events. If no callback is not specified, thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | No | Callback used to listen for the credential change events. The default value is **undefined**, indicating that all subscription records are unregistered. If the value is not undefined, only the subscription records related to the specified callback are unregistered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | No | Callback used to listen for the credential change events. The default value is **undefined**, indicating that all subscription records are unregistered. If the value is not undefined, only the subscription records related to the specified callback are unregistered. |
 
 **Error codes:**
 
@@ -712,7 +726,7 @@ Subscribes to one or more credential change events. This API uses a callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | credentialTypes | AuthType[] | Yes | Credential types subscribed. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | Yes | Callback used to listen for the credential change events. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | Yes | Callback used to listen for the credential change events. |
 
 **Error codes:**
 
@@ -772,7 +786,7 @@ Opens a session to obtain the challenge value. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Uint8Array&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the challenge value obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the challenge value obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -796,6 +810,23 @@ try {
     } else {
       console.info('openSession challenge = ' + JSON.stringify(challenge));
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`openSession exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userIDM = new osAccount.UserIdentityManager();
+let accountId = 100;
+try {
+  userIDM.openSession(accountId).then((challenge: Uint8Array) => {
+    console.info('openSession challenge = ' + JSON.stringify(challenge));
+  }).catch((err: BusinessError) => {
+    console.error(`openSession error = code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -845,22 +876,7 @@ Opens a session. This API returns a challenge value, which can be used to determ
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userIDM = new osAccount.UserIdentityManager();
-let accountId = 100;
-try {
-  userIDM.openSession(accountId).then((challenge: Uint8Array) => {
-    console.info('openSession challenge = ' + JSON.stringify(challenge));
-  }).catch((err: BusinessError) => {
-    console.error(`openSession error = code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`openSession exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+See [openSession](#opensession)
 
 ## updateCredential
 

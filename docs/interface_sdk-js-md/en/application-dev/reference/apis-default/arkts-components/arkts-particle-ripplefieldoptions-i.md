@@ -100,28 +100,6 @@ The region influenced by the ripple field.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## waveSpeed
-
-```TypeScript
-waveSpeed?: double
-```
-
-Wave speed. The greater the wave speed, the faster the wave changes over time, and the more pronounced the wave motion. Range of values:[0, +∞)
-
-**Type:** double
-
-**Default:** 0
-
-**Since:** 24
-
-**ArkTS mode:** ArkTS-Sta since version 24.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RippleFieldOptions-waveSpeed?: double--><!--Device-RippleFieldOptions-waveSpeed?: double-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## wavelength
 
 ```TypeScript
@@ -141,6 +119,28 @@ Wavelength, which is the distance over which a wave cycle changes. The larger th
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RippleFieldOptions-wavelength?: double--><!--Device-RippleFieldOptions-wavelength?: double-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## waveSpeed
+
+```TypeScript
+waveSpeed?: double
+```
+
+Wave speed. The greater the wave speed, the faster the wave changes over time, and the more pronounced the wave motion. Range of values:[0, +∞)
+
+**Type:** double
+
+**Default:** 0
+
+**Since:** 24
+
+**ArkTS mode:** ArkTS-Sta since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RippleFieldOptions-waveSpeed?: double--><!--Device-RippleFieldOptions-waveSpeed?: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

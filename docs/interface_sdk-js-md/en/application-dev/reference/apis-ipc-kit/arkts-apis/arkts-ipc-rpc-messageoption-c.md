@@ -43,8 +43,28 @@ A constructor used to create a **MessageOption** object.
 import { rpc } from '@kit.IPCKit';
 
 class TestRemoteObject extends rpc.MessageOption {
+  constructor(async: boolean) {
+    super(async);
+  }
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+
+class TestRemoteObject extends rpc.MessageOption {
   constructor(syncFlags?: number,waitTime?: number) {
     super(syncFlags,waitTime);
+  }
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
   }
 }
 ```
@@ -73,15 +93,7 @@ A constructor used to create a **MessageOption** object.
 
 **Examples**
 
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-
-class TestRemoteObject extends rpc.MessageOption {
-  constructor(async: boolean) {
-    super(async);
-  }
-}
-```
+See [constructor](#constructor)
 
 ## constructor
 
@@ -103,6 +115,10 @@ A constructor used to create a MessageOption instance.
 | --- | --- | --- | --- |
 | isAsync | boolean | Yes | Specifies whether the SendRequest is called synchronously (default) or asynchronously. |
 
+**Examples**
+
+See [constructor](#constructor)
+
 ## constructor
 
 ```TypeScript
@@ -116,6 +132,10 @@ A constructor used to create a MessageOption instance.
 <!--Device-MessageOption-constructor()--><!--Device-MessageOption-constructor()-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
+
+**Examples**
+
+See [constructor](#constructor)
 
 ## constructor
 
@@ -137,6 +157,10 @@ A constructor used to create a MessageOption instance.
 | --- | --- | --- | --- |
 | syncFlags | int | Yes | Specifies whether the SendRequest is called synchronously (default) or asynchronously. |
 
+**Examples**
+
+See [constructor](#constructor)
+
 ## constructor
 
 ```TypeScript
@@ -157,6 +181,10 @@ A constructor used to create a MessageOption instance.
 | --- | --- | --- | --- |
 | syncFlags | int | Yes | Specifies whether the SendRequest is called synchronously (default) or asynchronously. |
 | waitTime | int | Yes | Maximum wait time for a RPC call, in seconds. The default value is **TF_WAIT_TIME**. |
+
+**Examples**
+
+See [constructor](#constructor)
 
 ## getFlags
 

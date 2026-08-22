@@ -54,6 +54,28 @@ Creates a temporary directory. This API uses a promise to return the result.
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+fs.mkdtemp(pathDir + "/XXXXXX").then((dir: string) => {
+  console.info("mkdtemp succeed:" + dir);
+}).catch((err: BusinessError) => {
+  console.error("mkdtemp failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+fs.mkdtemp(pathDir + "/XXXXXX", (err: BusinessError, res: string) => {
+  if (err) {
+    console.error("mkdtemp failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("mkdtemp succeed");
+  }
+});
+```
+
 
 ## mkdtemp
 
@@ -74,7 +96,7 @@ Creates a temporary directory. This API uses an asynchronous callback to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | prefix | string | Yes | String to be replaced with six randomly generated characters to create a unique temporary directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -95,4 +117,8 @@ Creates a temporary directory. This API uses an asynchronous callback to return 
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [mkdtemp](#mkdtemp)
 

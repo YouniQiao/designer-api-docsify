@@ -37,3 +37,16 @@ function queryAllActivePrintJobs(): Promise<PrintJob[]>
 | [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
 
+**示例**
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+
+print.queryAllActivePrintJobs().then((printJobs : print.PrintJob[]) => {
+    console.info('queryAllActivePrintJobs success, data : ' + JSON.stringify(printJobs));
+}).catch((error: BusinessError) => {
+    console.error('queryAllActivePrintJobs failed, error : ' + JSON.stringify(error));
+})
+```
+

@@ -73,6 +73,31 @@ let getActiveNotificationsCallback = (err: BusinessError | null, data: Array<not
 notificationManager.getActiveNotifications(getActiveNotificationsCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.getActiveNotifications().then((data: Array<notificationManager.NotificationRequest>) => {
+  console.info(`Succeeded in getting active notifications, data is ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get active notifications. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.getActiveNotifications().then((data: Array<notificationManager.NotificationRequest>) => {
+  console.info(`Succeeded in getting active notifications, data is ${JSON.stringify(data)}`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to get active notifications. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## getActiveNotifications
 
@@ -110,28 +135,5 @@ setBadgeNumber 设置角标个数。
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getActiveNotifications().then((data: Array<notificationManager.NotificationRequest>) => {
-  console.info(`Succeeded in getting active notifications, data is ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get active notifications. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getActiveNotifications().then((data: Array<notificationManager.NotificationRequest>) => {
-  console.info(`Succeeded in getting active notifications, data is ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to get active notifications. Code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [getActiveNotifications](#getactivenotifications)
 

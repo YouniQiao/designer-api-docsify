@@ -34,7 +34,7 @@ Currently, **getRdbStore()** does not support multi-thread concurrent operations
 | --- | --- | --- | --- |
 | context | Context | Yes | Application context.<br>For details about the application context of the FA model, see Context.<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
 | config | StoreConfig | Yes | Configuration of the RDB store. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RdbStore&gt; | Yes | Callback invoked to return the RDB store obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RdbStore&gt; | Yes | Callback invoked to return the RDB store obtained. |
 
 **Error codes:**
 
@@ -112,6 +112,54 @@ class EntryAbility extends UIAbility {
 }
 ```
 
+FA model:
+
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let store: relationalStore.RdbStore | undefined = undefined;
+let context = featureAbility.getContext();
+
+const STORE_CONFIG: relationalStore.StoreConfig = {
+  name: "RdbTest.db",
+  securityLevel: relationalStore.SecurityLevel.S3
+};
+
+relationalStore.getRdbStore(context, STORE_CONFIG).then(async (rdbStore: relationalStore.RdbStore) => {
+  store = rdbStore;
+  console.info('Get RdbStore successfully.');
+}).catch((err: BusinessError) => {
+  console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
+});
+```
+
+Stage model:
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let store: relationalStore.RdbStore | undefined = undefined;
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    const STORE_CONFIG: relationalStore.StoreConfig = {
+      name: "RdbTest.db",
+      securityLevel: relationalStore.SecurityLevel.S3
+    };
+
+    relationalStore.getRdbStore(this.context, STORE_CONFIG).then(async (rdbStore: relationalStore.RdbStore) => {
+      store = rdbStore;
+      console.info('Get RdbStore successfully.');
+    }).catch((err: BusinessError) => {
+      console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
+    });
+  }
+}
+```
+
 
 ## getRdbStore
 
@@ -170,51 +218,5 @@ Currently, **getRdbStore()** does not support multi-thread concurrent operations
 
 **Examples**
 
-FA model:
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let store: relationalStore.RdbStore | undefined = undefined;
-let context = featureAbility.getContext();
-
-const STORE_CONFIG: relationalStore.StoreConfig = {
-  name: "RdbTest.db",
-  securityLevel: relationalStore.SecurityLevel.S3
-};
-
-relationalStore.getRdbStore(context, STORE_CONFIG).then(async (rdbStore: relationalStore.RdbStore) => {
-  store = rdbStore;
-  console.info('Get RdbStore successfully.');
-}).catch((err: BusinessError) => {
-  console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
-});
-```
-
-Stage model:
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let store: relationalStore.RdbStore | undefined = undefined;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    const STORE_CONFIG: relationalStore.StoreConfig = {
-      name: "RdbTest.db",
-      securityLevel: relationalStore.SecurityLevel.S3
-    };
-
-    relationalStore.getRdbStore(this.context, STORE_CONFIG).then(async (rdbStore: relationalStore.RdbStore) => {
-      store = rdbStore;
-      console.info('Get RdbStore successfully.');
-    }).catch((err: BusinessError) => {
-      console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
-    });
-  }
-}
-```
+See [getRdbStore](#getrdbstore)
 

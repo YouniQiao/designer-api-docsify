@@ -42,6 +42,90 @@ arc(x: number, y: number, radius: number, startAngle: number, endAngle: number, 
 | endAngle | number | 是 | 弧线的终止弧度。单位：弧度。 |
 | counterclockwise | boolean | 否 | 是否逆时针绘制圆弧。<br>**true**：逆时针方向绘制圆弧。 <br>**false**：顺时针方向绘制圆弧。<br>默认值：**false**，设置**null**或**undefined**按默认值处理。 |
 
+**示例**
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct Arc {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true)
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.context.beginPath()
+          this.context.arc(100, 75, 50, 0, 6.28)
+          this.context.stroke()
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct Arc {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          let offContext = this.offCanvas.getContext("2d", this.settings)
+          offContext.beginPath()
+          offContext.arc(100, 75, 50, 0, 6.28)
+          offContext.stroke()
+          let image = this.offCanvas.transferToImageBitmap()
+          this.context.transferFromImageBitmap(image)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct Arc {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private path2Db: Path2D = new Path2D();
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.path2Db.arc(100, 75, 50, 0, 6.28)
+          this.context.stroke(this.path2Db)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 ## arcTo
 
 ```TypeScript
@@ -69,6 +153,145 @@ arcTo(x1: number, y1: number, x2: number, y2: number, radius: number): void
 | x2 | number | 是 | 圆弧经过的第二个点的x坐标值。<br>API version 18之前，设置NaN或Infinity时，整条路径 不显示；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或 undefined时当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
 | y2 | number | 是 | 圆弧经过的第二个点的y坐标值。<br>API version 18之前，设置NaN或Infinity时，整条路径 不显示；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或 undefined时当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
 | radius | number | 是 | 圆弧的圆半径值。<br>API version 18之前，设置NaN或Infinity时，整条路径不显示； 设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时 当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
+
+**示例**
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct ArcTo {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true)
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          // 切线
+          this.context.beginPath()
+          this.context.strokeStyle = '#808080'
+          this.context.lineWidth = 1.5;
+          this.context.moveTo(360, 20);
+          this.context.lineTo(360, 170);
+          this.context.lineTo(110, 170);
+          this.context.stroke();
+
+          // 圆弧
+          this.context.beginPath()
+          this.context.strokeStyle = '#000000'
+          this.context.lineWidth = 3;
+          this.context.moveTo(360, 20)
+          this.context.arcTo(360, 170, 110, 170, 150)
+          this.context.stroke()
+
+          // 起始点
+          this.context.beginPath();
+          this.context.fillStyle = '#00ff00';
+          this.context.arc(360, 20, 4, 0, 2 * Math.PI);
+          this.context.fill();
+
+          // 控制点
+          this.context.beginPath();
+          this.context.fillStyle = '#ff0000';
+          this.context.arc(360, 170, 4, 0, 2 * Math.PI);
+          this.context.arc(110, 170, 4, 0, 2 * Math.PI);
+          this.context.fill();
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct ArcTo {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          let offContext = this.offCanvas.getContext("2d", this.settings)
+
+          // 切线
+          offContext.beginPath()
+          offContext.strokeStyle = '#808080'
+          offContext.lineWidth = 1.5;
+          offContext.moveTo(360, 20);
+          offContext.lineTo(360, 170);
+          offContext.lineTo(110, 170);
+          offContext.stroke();
+
+          // 圆弧
+          offContext.beginPath()
+          offContext.strokeStyle = '#000000'
+          offContext.lineWidth = 3;
+          offContext.moveTo(360, 20)
+          offContext.arcTo(360, 170, 110, 170, 150)
+          offContext.stroke()
+
+          // 起始点
+          offContext.beginPath();
+          offContext.fillStyle = '#00ff00';
+          offContext.arc(360, 20, 4, 0, 2 * Math.PI);
+          offContext.fill();
+
+          // 控制点
+          offContext.beginPath();
+          offContext.fillStyle = '#ff0000';
+          offContext.arc(360, 170, 4, 0, 2 * Math.PI);
+          offContext.arc(110, 170, 4, 0, 2 * Math.PI);
+          offContext.fill();
+
+          let image = this.offCanvas.transferToImageBitmap()
+          this.context.transferFromImageBitmap(image)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct ArcTo {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private path2Db: Path2D = new Path2D();
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.path2Db.moveTo(0, 0)
+          this.path2Db.arcTo(150, 20, 150, 70, 50)
+          this.context.stroke(this.path2Db)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## bezierCurveTo
 
@@ -99,6 +322,136 @@ bezierCurveTo(cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number,
 | x | number | 是 | 路径结束时的x坐标值。<br>API version 18之前，设置NaN或Infinity时，整条路径不显示； 设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时 当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
 | y | number | 是 | 路径结束时的y坐标值。<br>API version 18之前，设置NaN或Infinity时，整条路径不显示； 设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时 当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
 
+**示例**
+
+```TypeScript
+// xxx.ets
+import { Point } from '@kit.TestKit';
+
+@Entry
+@Component
+struct BezierCurveTo {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private start: Point = { x: 50, y: 50 };
+  private end: Point = { x: 250, y: 100 };
+  private cp1: Point = { x: 200, y: 30 };
+  private cp2: Point = { x: 130, y: 80 };
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('rgb(213,213,213)')
+        .onReady(() => {
+          let ctx = this.context;
+          // 三次贝塞尔曲线
+          ctx.beginPath();
+          ctx.moveTo(this.start.x, this.start.y);
+          ctx.bezierCurveTo(this.cp1.x, this.cp1.y, this.cp2.x, this.cp2.y, this.end.x, this.end.y);
+          ctx.stroke();
+
+          // 起点和终点
+          ctx.fillStyle = 'rgb(39,135,217)';
+          ctx.beginPath();
+          ctx.arc(this.start.x, this.start.y, 5, 0, 2 * Math.PI); // 起点
+          ctx.arc(this.end.x, this.end.y, 5, 0, 2 * Math.PI); // 终点
+          ctx.fill();
+
+          // 控制点
+          ctx.fillStyle = 'rgb(23,169,141)';
+          ctx.beginPath();
+          ctx.arc(this.cp1.x, this.cp1.y, 5, 0, 2 * Math.PI); // 控制点一
+          ctx.arc(this.cp2.x, this.cp2.y, 5, 0, 2 * Math.PI); // 控制点二
+          ctx.fill();
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+import { Point } from '@kit.TestKit';
+
+@Entry
+@Component
+struct BezierCurveTo {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
+  private start: Point = { x: 50, y: 50 };
+  private end: Point = { x: 250, y: 100 };
+  private cp1: Point = { x: 200, y: 30 };
+  private cp2: Point = { x: 130, y: 80 };
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('rgb(213,213,213)')
+        .onReady(() => {
+          let offContext = this.offCanvas.getContext("2d", this.settings)
+          // 三次贝塞尔曲线
+          offContext.beginPath();
+          offContext.moveTo(this.start.x, this.start.y);
+          offContext.bezierCurveTo(this.cp1.x, this.cp1.y, this.cp2.x, this.cp2.y, this.end.x, this.end.y);
+          offContext.stroke();
+
+          // 起点和终点
+          offContext.fillStyle = 'rgb(39,135,217)';
+          offContext.beginPath();
+          offContext.arc(this.start.x, this.start.y, 5, 0, 2 * Math.PI); // 起点
+          offContext.arc(this.end.x, this.end.y, 5, 0, 2 * Math.PI); // 终点
+          offContext.fill();
+
+          // 控制点
+          offContext.fillStyle = 'rgb(23,169,141)';
+          offContext.beginPath();
+          offContext.arc(this.cp1.x, this.cp1.y, 5, 0, 2 * Math.PI); // 控制点一
+          offContext.arc(this.cp2.x, this.cp2.y, 5, 0, 2 * Math.PI); // 控制点二
+          offContext.fill();
+          let image = this.offCanvas.transferToImageBitmap();
+          this.context.transferFromImageBitmap(image);
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct BezierCurveTo {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private path2Db: Path2D = new Path2D();
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.path2Db.moveTo(10, 10)
+          this.path2Db.bezierCurveTo(20, 100, 200, 100, 200, 20)
+          this.context.stroke(this.path2Db)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 ## closePath
 
 ```TypeScript
@@ -116,6 +469,99 @@ closePath(): void
 <!--Device-CanvasPath-closePath(): void--><!--Device-CanvasPath-closePath(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**示例**
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct ClosePath {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true)
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.context.beginPath()
+          this.context.moveTo(30, 30)
+          this.context.lineTo(110, 30)
+          this.context.lineTo(70, 90)
+          this.context.closePath()
+          this.context.stroke()
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct ClosePath {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+            let offContext = this.offCanvas.getContext("2d", this.settings)
+            offContext.beginPath()
+            offContext.moveTo(30, 30)
+            offContext.lineTo(110, 30)
+            offContext.lineTo(70, 90)
+            offContext.closePath()
+            offContext.stroke()
+            let image = this.offCanvas.transferToImageBitmap()
+            this.context.transferFromImageBitmap(image)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct ClosePath {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private path2Db: Path2D = new Path2D();
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.path2Db.moveTo(200, 100)
+          this.path2Db.lineTo(300, 100)
+          this.path2Db.lineTo(200, 200)
+          this.path2Db.closePath()
+          this.context.stroke(this.path2Db)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## ellipse
 
@@ -157,6 +603,95 @@ ellipse(
 | endAngle | number | 是 | 椭圆绘制的结束点角度。单位：弧度。 |
 | counterclockwise | boolean | 否 | 是否以逆时针方向绘制椭圆。<br>**true**：逆时针方向绘制椭圆。 <br>**false**：顺时针方向绘制椭圆。<br>默认值：**false**，设置**null**或**undefined**按默认值处理。 |
 
+**示例**
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct CanvasExample {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true)
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.context.beginPath()
+          this.context.ellipse(200, 200, 50, 100, Math.PI * 0.25, Math.PI * 0.5, Math.PI * 2, false)
+          this.context.stroke()
+          this.context.beginPath()
+          this.context.ellipse(200, 300, 50, 100, Math.PI * 0.25, Math.PI * 0.5, Math.PI * 2, true)
+          this.context.stroke()
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct CanvasExample {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          let offContext = this.offCanvas.getContext("2d", this.settings)
+          offContext.beginPath()
+          offContext.ellipse(200, 200, 50, 100, Math.PI * 0.25, Math.PI * 0.5, Math.PI * 2, false)
+          offContext.stroke()
+          offContext.beginPath()
+          offContext.ellipse(200, 300, 50, 100, Math.PI * 0.25, Math.PI * 0.5, Math.PI * 2, true)
+          offContext.stroke()
+          let image = this.offCanvas.transferToImageBitmap()
+          this.context.transferFromImageBitmap(image)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct CanvasExample {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private path2Db: Path2D = new Path2D();
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.path2Db.ellipse(200, 200, 50, 100, 0, Math.PI * 1, Math.PI * 2)
+          this.context.stroke(this.path2Db)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 ## lineTo
 
 ```TypeScript
@@ -182,6 +717,96 @@ lineTo(x: number, y: number): void
 | x | number | 是 | 目标点X轴坐标。<br>API version 18之前，设置NaN或Infinity时，整条路径不显示； 设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时 当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
 | y | number | 是 | 目标点Y轴坐标。<br>API version 18之前，设置NaN或Infinity时，整条路径不显示； 设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时 当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
 
+**示例**
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct LineTo {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true)
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.context.beginPath()
+          this.context.moveTo(10, 10)
+          this.context.lineTo(280, 160)
+          this.context.stroke()
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct LineTo {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          let offContext = this.offCanvas.getContext("2d", this.settings)
+          offContext.beginPath()
+          offContext.moveTo(10, 10)
+          offContext.lineTo(280, 160)
+          offContext.stroke()
+          let image = this.offCanvas.transferToImageBitmap()
+          this.context.transferFromImageBitmap(image)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct LineTo {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private path2Db: Path2D = new Path2D();
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.path2Db.moveTo(100, 100)
+          this.path2Db.lineTo(100, 200)
+          this.path2Db.lineTo(200, 200)
+          this.path2Db.lineTo(200, 100)
+          this.path2Db.closePath()
+          this.context.stroke(this.path2Db)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 ## moveTo
 
 ```TypeScript
@@ -206,6 +831,95 @@ moveTo(x: number, y: number): void
 | --- | --- | --- | --- |
 | x | number | 是 | 目标点X轴坐标。<br>API version 18之前，设置NaN或Infinity时，整条路径不显示； 设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时 当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
 | y | number | 是 | 目标点Y轴坐标。<br>API version 18之前，设置NaN或Infinity时，整条路径不显示； 设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时 当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp  > **说明：** >  > API version 18之前，如果没有调用**moveTo**接口或传入无效参数，路径从(0,0)开始。 >  > API version 18及以后，如果没有调用**moveTo**接口或传入无效参数，路径将从第一个有效调用的 > **lineTo**、**arcTo**、**bezierCurveTo**或**quadraticCurveTo**的起始点开始。 |
+
+**示例**
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct MoveTo {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true)
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.context.beginPath()
+          this.context.moveTo(10, 10)
+          this.context.lineTo(280, 160)
+          this.context.stroke()
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct MoveTo {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          let offContext = this.offCanvas.getContext("2d", this.settings)
+          offContext.beginPath()
+          offContext.moveTo(10, 10)
+          offContext.lineTo(280, 160)
+          offContext.stroke()
+          let image = this.offCanvas.transferToImageBitmap()
+          this.context.transferFromImageBitmap(image)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct MoveTo {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private path2Db: Path2D = new Path2D();
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.path2Db.moveTo(50, 100)
+          this.path2Db.lineTo(250, 100)
+          this.path2Db.lineTo(150, 200)
+          this.path2Db.closePath()
+          this.context.stroke(this.path2Db)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## quadraticCurveTo
 
@@ -234,6 +948,133 @@ quadraticCurveTo(cpx: number, cpy: number, x: number, y: number): void
 | x | number | 是 | 路径结束时的x坐标值。<br>API version 18之前，设置NaN或Infinity时，整条路径不显示； 设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时 当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
 | y | number | 是 | 路径结束时的y坐标值。<br>API version 18之前，设置NaN或Infinity时，整条路径不显示； 设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时 当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
 
+**示例**
+
+```TypeScript
+// xxx.ets
+import { Point } from '@kit.TestKit';
+
+@Entry
+@Component
+struct QuadraticCurveTo {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private start: Point = { x: 50, y: 20 };
+  private end: Point = { x: 50, y: 100 };
+  private cp: Point = { x: 230, y: 30 };
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('rgb(213,213,213)')
+        .onReady(() => {
+          let ctx = this.context;
+          // 二次贝塞尔曲线
+          ctx.beginPath();
+          ctx.moveTo(this.start.x, this.start.y);
+          ctx.quadraticCurveTo(this.cp.x, this.cp.y, this.end.x, this.end.y);
+          ctx.stroke();
+
+          // 起始点和结束点
+          ctx.fillStyle = 'rgb(39,135,217)';
+          ctx.beginPath();
+          ctx.arc(this.start.x, this.start.y, 5, 0, 2 * Math.PI); // 起始点
+          ctx.arc(this.end.x, this.end.y, 5, 0, 2 * Math.PI); // 结束点
+          ctx.fill();
+
+          // 控制点
+          ctx.fillStyle = 'rgb(23,169,141)';
+          ctx.beginPath();
+          ctx.arc(this.cp.x, this.cp.y, 5, 0, 2 * Math.PI);
+          ctx.fill();
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+import { Point } from '@kit.TestKit';
+
+@Entry
+@Component
+struct QuadraticCurveTo {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
+  private start: Point = { x: 50, y: 20 };
+  private end: Point = { x: 50, y: 100 };
+  private cp: Point = { x: 230, y: 30 };
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('rgb(213,213,213)')
+        .onReady(() => {
+          let offContext = this.offCanvas.getContext("2d", this.settings);
+          // 二次贝塞尔曲线
+          offContext.beginPath();
+          offContext.moveTo(this.start.x, this.start.y);
+          offContext.quadraticCurveTo(this.cp.x, this.cp.y, this.end.x, this.end.y);
+          offContext.stroke();
+
+          // 起始点和结束点
+          offContext.fillStyle = 'rgb(39,135,217)';
+          offContext.beginPath();
+          offContext.arc(this.start.x, this.start.y, 5, 0, 2 * Math.PI); // 起始点
+          offContext.arc(this.end.x, this.end.y, 5, 0, 2 * Math.PI); // 结束点
+          offContext.fill();
+
+          // 控制点
+          offContext.fillStyle = 'rgb(23,169,141)';
+          offContext.beginPath();
+          offContext.arc(this.cp.x, this.cp.y, 5, 0, 2 * Math.PI);
+          offContext.fill();
+
+          let image = this.offCanvas.transferToImageBitmap();
+          this.context.transferFromImageBitmap(image);
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct QuadraticCurveTo {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private path2Db: Path2D = new Path2D();
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.path2Db.moveTo(10, 10)
+          this.path2Db.quadraticCurveTo(100, 100, 200, 20)
+          this.context.stroke(this.path2Db)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 ## rect
 
 ```TypeScript
@@ -260,6 +1101,88 @@ rect(x: number, y: number, w: number, h: number): void
 | y | number | 是 | 指定矩形的左上角y坐标值。<br>API version 18之前，设置NaN或Infinity时，整条路径 不显示；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或 undefined时当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
 | w | number | 是 | 指定矩形的宽度。<br>API version 18之前，设置NaN或Infinity时，整条路径不显示； 设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时 当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
 | h | number | 是 | 指定矩形的高度。<br>API version 18之前，设置NaN或Infinity时，整条路径不显示； 设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时 当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
+
+**示例**
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct CanvasExample {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true)
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.context.rect(20, 20, 100, 100) // Create a 100*100 rectangle at (20, 20)
+          this.context.stroke()
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct CanvasExample {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          let offContext = this.offCanvas.getContext("2d", this.settings)
+          offContext.rect(20, 20, 100, 100) // Create a 100*100 rectangle at (20, 20)
+          offContext.stroke()
+          let image = this.offCanvas.transferToImageBitmap()
+          this.context.transferFromImageBitmap(image)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct CanvasExample {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private path2Db: Path2D = new Path2D();
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.path2Db.rect(20, 20, 100, 100);
+          this.context.stroke(this.path2Db)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## roundRect
 
@@ -296,4 +1219,159 @@ roundRect(x: number, y: number, w: number, h: number, radii?: number | Array<num
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [103701](../errorcode-canvas.md#103701-参数错误) | 参数错误。可能的原因： <br> 1. 参数radii数组的元素个数为0或超过4个。 <br> 2. 参数radii中包含负数。 |
+
+**示例**
+
+创建一个(220vp, 330vp)为起点，宽高为-100vp，左上矩形角圆弧半径为10vp，右上矩形角圆弧半径为20vp，右下矩形角圆弧半径为30vp，左下矩形角圆弧半径为40vp的圆角矩形并描边。
+
+```TypeScript
+// xxx.ets
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct CanvasExample {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#D5D5D5')
+        .onReady(() => {
+          try {
+            this.context.fillStyle = '#707070'
+            this.context.beginPath()
+            // 创建一个(10vp, 10vp)为起点，宽高为100vp，四个矩形角圆弧半径为10vp的圆角矩形
+            this.context.roundRect(10, 10, 100, 100, 10)
+            // 创建一个(120vp, 10vp)为起点，宽高为100vp，四个矩形角圆弧半径为10vp的圆角矩形
+            this.context.roundRect(120, 10, 100, 100, [10])
+            this.context.fill()
+            this.context.beginPath()
+            // 创建一个(10vp, 120vp)为起点，宽高为100vp，左上矩形角圆弧半径及右下矩形角圆弧半径为10vp，右上矩形角圆弧半径及左下矩形角圆弧半径为20vp的圆角矩形
+            this.context.roundRect(10, 120, 100, 100, [10, 20])
+            // 创建一个(120vp, 120vp)为起点，宽高为100vp，左上矩形角圆弧半径为10vp，右上矩形角圆弧半径及左下矩形角圆弧半径为20vp，右下矩形角圆弧半径为30vp的圆角矩形
+            this.context.roundRect(120, 120, 100, 100, [10, 20, 30])
+            // 创建一个(10vp, 230vp)为起点，宽高为100vp，左上矩形角圆弧半径为10vp，右上矩形角圆弧半径为20vp，右下矩形角圆弧半径为30vp，左下矩形角圆弧半径为40vp的圆角矩形
+            this.context.roundRect(10, 230, 100, 100, [10, 20, 30, 40])
+            // 创建一个(220vp, 330vp)为起点，宽高为-100vp，左上矩形角圆弧半径为10vp，右上矩形角圆弧半径为20vp，右下矩形角圆弧半径为30vp，左下矩形角圆弧半径为40vp的圆角矩形
+            this.context.roundRect(220, 330, -100, -100, [10, 20, 30, 40])
+            this.context.stroke()
+          } catch (error) {
+            let e: BusinessError = error as BusinessError;
+            console.error(`Failed to create roundRect. Code: ${e.code}, message: ${e.message}`);
+          }
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+创建一个(220vp, 330vp)为起点，宽高为-100vp，左上矩形角圆弧半径为10vp，右上矩形角圆弧半径为20vp，右下矩形角圆弧半径为30vp，左下矩形角圆弧半径为40vp的圆角矩形并描边。
+
+```TypeScript
+// xxx.ets
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct CanvasExample {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#D5D5D5')
+        .onReady(() => {
+          let offContext = this.offCanvas.getContext("2d", this.settings)
+          try {
+            offContext.fillStyle = '#707070'
+            offContext.beginPath()
+            // 创建一个(10vp, 10vp)为起点，宽高为100vp，四个矩形角圆弧半径为10vp的圆角矩形
+            offContext.roundRect(10, 10, 100, 100, 10)
+            // 创建一个(120vp, 10vp)为起点，宽高为100vp，四个矩形角圆弧半径为10vp的圆角矩形
+            offContext.roundRect(120, 10, 100, 100, [10])
+            offContext.fill()
+            offContext.beginPath()
+            // 创建一个(10vp, 120vp)为起点，宽高为100vp，左上矩形角圆弧半径及右下矩形角圆弧半径为10vp，右上矩形角圆弧半径及左下矩形角圆弧半径为20vp的圆角矩形
+            offContext.roundRect(10, 120, 100, 100, [10, 20])
+            // 创建一个(120vp, 120vp)为起点，宽高为100vp，左上矩形角圆弧半径为10vp，右上矩形角圆弧半径及左下矩形角圆弧半径为20vp，右下矩形角圆弧半径为30vp的圆角矩形
+            offContext.roundRect(120, 120, 100, 100, [10, 20, 30])
+            // 创建一个(10vp, 230vp)为起点，宽高为100vp，左上矩形角圆弧半径为10vp，右上矩形角圆弧半径为20vp，右下矩形角圆弧半径为30vp，左下矩形角圆弧半径为40vp的圆角矩形
+            offContext.roundRect(10, 230, 100, 100, [10, 20, 30, 40])
+            // 创建一个(220vp, 330vp)为起点，宽高为-100vp，左上矩形角圆弧半径为10vp，右上矩形角圆弧半径为20vp，右下矩形角圆弧半径为30vp，左下矩形角圆弧半径为40vp的圆角矩形
+            offContext.roundRect(220, 330, -100, -100, [10, 20, 30, 40])
+            offContext.stroke()
+          } catch (error) {
+            let e: BusinessError = error as BusinessError;
+            console.error(`Failed to create roundRect. Code: ${e.code}, message: ${e.message}`);
+          }
+          // 在离屏画布最近渲染的图像上创建一个ImageBitmap对象
+          let image = this.offCanvas.transferToImageBitmap()
+          // 将创建的ImageBitmap对象显示在Canvas画布上
+          this.context.transferFromImageBitmap(image)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+创建一个(220vp, 330vp)为起点，宽高为-100vp，左上矩形角圆弧半径为10vp，右上矩形角圆弧半径为20vp，右下矩形角圆弧半径为30vp，左下矩形角圆弧半径为40vp的圆角矩形并描边。
+
+```TypeScript
+// xxx.ets
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct CanvasExample {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private pathA: Path2D = new Path2D();
+  private pathB: Path2D = new Path2D();
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#D5D5D5')
+        .onReady(() => {
+          try {
+            this.context.fillStyle = '#707070'
+            // 创建一个(10vp, 10vp)为起点，宽高为100vp，四个矩形角圆弧半径为10vp的圆角矩形
+            this.pathA.roundRect(10, 10, 100, 100, 10)
+            // 创建一个(120vp, 10vp)为起点，宽高为100vp，四个矩形角圆弧半径为10vp的圆角矩形
+            this.pathA.roundRect(120, 10, 100, 100, [10])
+            this.context.fill(this.pathA)
+            // 创建一个(10vp, 120vp)为起点，宽高为100vp，左上矩形角圆弧半径及右下矩形角圆弧半径为10vp，右上矩形角圆弧半径及左下矩形角圆弧半径为20vp的圆角矩形
+            this.pathB.roundRect(10, 120, 100, 100, [10, 20])
+            // 创建一个(120vp, 120vp)为起点，宽高为100vp，左上矩形角圆弧半径为10vp，右上矩形角圆弧半径及左下矩形角圆弧半径为20vp，右下矩形角圆弧半径为30vp的圆角矩形
+            this.pathB.roundRect(120, 120, 100, 100, [10, 20, 30])
+            // 创建一个(10vp, 230vp)为起点，宽高为100vp，左上矩形角圆弧半径为10vp，右上矩形角圆弧半径为20vp，右下矩形角圆弧半径为30vp，左下矩形角圆弧半径为40vp的圆角矩形
+            this.pathB.roundRect(10, 230, 100, 100, [10, 20, 30, 40])
+            // 创建一个(220vp, 330vp)为起点，宽高为-100vp，左上矩形角圆弧半径为10vp，右上矩形角圆弧半径为20vp，右下矩形角圆弧半径为30vp，左下矩形角圆弧半径为40vp的圆角矩形
+            this.pathB.roundRect(220, 330, -100, -100, [10, 20, 30, 40])
+            this.context.stroke(this.pathB)
+          } catch (error) {
+            let e: BusinessError = error as BusinessError;
+            console.error(`Failed to create roundRect. Code: ${e.code}, message: ${e.message}`);
+          }
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 

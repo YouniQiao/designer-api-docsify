@@ -45,6 +45,185 @@ onBeforeDownload(callback: Callback<WebDownloadItem>): void
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | 下载开始前的回调。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+  download: webview.WebDownloadItem = new webview.WebDownloadItem();
+  failedData: Uint8Array = new Uint8Array();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+              this.download = webDownloadItem;
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+              // 序列化失败的下载到一个字节数组。
+              this.failedData = webDownloadItem.serialize();
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('resumeDownload')
+        .onClick(() => {
+          try {
+            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('cancel')
+        .onClick(() => {
+          try {
+            this.download.cancel();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('pause')
+        .onClick(() => {
+          try {
+            this.download.pause();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('resume')
+        .onClick(() => {
+          try {
+            this.download.resume();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+  download: webview.WebDownloadItem = new webview.WebDownloadItem();
+  failedData: Uint8Array = new Uint8Array();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+              this.download = webDownloadItem;
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+              // 序列化失败的下载到一个字节数组。
+              this.failedData = webDownloadItem.serialize();
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Button('resumeDownload')
+        .onClick(() => {
+          try {
+            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Button('cancel')
+        .onClick(() => {
+          try {
+            this.download.cancel();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Button('pause')
+        .onClick(() => {
+          try {
+            this.download.pause();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Button('resume')
+        .onClick(() => {
+          try {
+            this.download.resume();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## onDownloadFailed
 
 ```TypeScript
@@ -66,6 +245,185 @@ onDownloadFailed(callback: Callback<WebDownloadItem>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | 下载失败的回调。 |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+  download: webview.WebDownloadItem = new webview.WebDownloadItem();
+  failedData: Uint8Array = new Uint8Array();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+              this.download = webDownloadItem;
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+              // 序列化失败的下载到一个字节数组。
+              this.failedData = webDownloadItem.serialize();
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('resumeDownload')
+        .onClick(() => {
+          try {
+            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('cancel')
+        .onClick(() => {
+          try {
+            this.download.cancel();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('pause')
+        .onClick(() => {
+          try {
+            this.download.pause();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('resume')
+        .onClick(() => {
+          try {
+            this.download.resume();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+  download: webview.WebDownloadItem = new webview.WebDownloadItem();
+  failedData: Uint8Array = new Uint8Array();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+              this.download = webDownloadItem;
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+              // 序列化失败的下载到一个字节数组。
+              this.failedData = webDownloadItem.serialize();
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Button('resumeDownload')
+        .onClick(() => {
+          try {
+            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Button('cancel')
+        .onClick(() => {
+          try {
+            this.download.cancel();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Button('pause')
+        .onClick(() => {
+          try {
+            this.download.pause();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Button('resume')
+        .onClick(() => {
+          try {
+            this.download.resume();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## onDownloadFinish
 
@@ -89,6 +447,185 @@ onDownloadFinish(callback: Callback<WebDownloadItem>): void
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | 下载完成的回调。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+  download: webview.WebDownloadItem = new webview.WebDownloadItem();
+  failedData: Uint8Array = new Uint8Array();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+              this.download = webDownloadItem;
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+              // 序列化失败的下载到一个字节数组。
+              this.failedData = webDownloadItem.serialize();
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('resumeDownload')
+        .onClick(() => {
+          try {
+            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('cancel')
+        .onClick(() => {
+          try {
+            this.download.cancel();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('pause')
+        .onClick(() => {
+          try {
+            this.download.pause();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('resume')
+        .onClick(() => {
+          try {
+            this.download.resume();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+  download: webview.WebDownloadItem = new webview.WebDownloadItem();
+  failedData: Uint8Array = new Uint8Array();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+              this.download = webDownloadItem;
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+              // 序列化失败的下载到一个字节数组。
+              this.failedData = webDownloadItem.serialize();
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Button('resumeDownload')
+        .onClick(() => {
+          try {
+            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Button('cancel')
+        .onClick(() => {
+          try {
+            this.download.cancel();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Button('pause')
+        .onClick(() => {
+          try {
+            this.download.pause();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Button('resume')
+        .onClick(() => {
+          try {
+            this.download.resume();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## onDownloadUpdated
 
 ```TypeScript
@@ -110,4 +647,183 @@ onDownloadUpdated(callback: Callback<WebDownloadItem>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | 下载更新的回调。 |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+  download: webview.WebDownloadItem = new webview.WebDownloadItem();
+  failedData: Uint8Array = new Uint8Array();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+              this.download = webDownloadItem;
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+              // 序列化失败的下载到一个字节数组。
+              this.failedData = webDownloadItem.serialize();
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('resumeDownload')
+        .onClick(() => {
+          try {
+            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('cancel')
+        .onClick(() => {
+          try {
+            this.download.cancel();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('pause')
+        .onClick(() => {
+          try {
+            this.download.pause();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('resume')
+        .onClick(() => {
+          try {
+            this.download.resume();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+  download: webview.WebDownloadItem = new webview.WebDownloadItem();
+  failedData: Uint8Array = new Uint8Array();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+              this.download = webDownloadItem;
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+              // 序列化失败的下载到一个字节数组。
+              this.failedData = webDownloadItem.serialize();
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Button('resumeDownload')
+        .onClick(() => {
+          try {
+            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Button('cancel')
+        .onClick(() => {
+          try {
+            this.download.cancel();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Button('pause')
+        .onClick(() => {
+          try {
+            this.download.pause();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Button('resume')
+        .onClick(() => {
+          try {
+            this.download.resume();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 

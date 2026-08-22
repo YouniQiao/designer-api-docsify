@@ -62,7 +62,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 | [setRetentionState](arkts-dataprotection-dlppermission-setretentionstate-f.md) | Sets the retention state for sandbox applications. By default, when a DLP file is opened, the system automatically creates a sandbox environment. After the file is closed, the sandbox is automatically destroyed. After the retention state is set, the sandbox environment is retained even if the DLP file is closed, allowing the system to quickly reopen the same DLP file. This is applicable to scenarios where the same DLP file needs to be frequently operated, improving the file opening efficiency. This API uses a promise to return the result. |
 | [setRetentionState](arkts-dataprotection-dlppermission-setretentionstate-f.md) | Sets the retention state for sandbox applications. By default, when a DLP file is opened, the system automatically creates a sandbox environment. After the file is closed, the sandbox is automatically destroyed. After the retention state is set, the sandbox environment is retained even if the DLP file is closed, allowing the system to quickly reopen the same DLP file. This is applicable to scenarios where the same DLP file needs to be frequently operated, improving the file opening efficiency. |
 | [setSandboxAppConfig](arkts-dataprotection-dlppermission-setsandboxappconfig-f.md) | Sets the configuration information of the sandbox application. The configuration information is in JSON string format and can be set by the application. After the API is successfully called, the sandbox application runs based on the configuration information. This API uses a promise to return the result. This API can be called only in non-DLP sandbox applications. |
-| [startDLPManagerForResult](arkts-dataprotection-dlppermission-startdlpmanagerforresult-f.md) | Starts the DLP manager application on the current [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiability-uiability-c.md) page in borderless mode. This API uses a promise to return the result. |
+| [startDLPManagerForResult](arkts-dataprotection-dlppermission-startdlpmanagerforresult-f.md) | Starts the DLP manager application on the current [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md) page in borderless mode. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions(System API)
@@ -98,11 +98,11 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 | --- | --- |
 | [AccessedDLPFileInfo](arkts-dataprotection-dlppermission-accesseddlpfileinfo-i.md) | Represents the information about a DLP file opened. |
 | [CustomProperty](arkts-dataprotection-dlppermission-customproperty-i.md) | Represents a custom policy. |
+| [DlpConnPlugin](arkts-dataprotection-dlppermission-dlpconnplugin-i.md) | Registers the callback capability with the system ability (SA). This API is used in the **registerPlugin** API. |
+| [DlpFileQueryOptions](arkts-dataprotection-dlppermission-dlpfilequeryoptions-i.md) | Represents the query options about an enterprise DLP file. |
 | [DLPManagerResult](arkts-dataprotection-dlppermission-dlpmanagerresult-i.md) | Represents information about the trigger of the DLP manager application. |
 | [DLPPermissionInfo](arkts-dataprotection-dlppermission-dlppermissioninfo-i.md) | Represents the permission information about a DLP file. |
 | [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md) | Represents the authorization information. |
-| [DlpConnPlugin](arkts-dataprotection-dlppermission-dlpconnplugin-i.md) | Registers the callback capability with the system ability (SA). This API is used in the **registerPlugin** API. |
-| [DlpFileQueryOptions](arkts-dataprotection-dlppermission-dlpfilequeryoptions-i.md) | Represents the query options about an enterprise DLP file. |
 | [EnterprisePolicy](arkts-dataprotection-dlppermission-enterprisepolicy-i.md) | Represents an enterprise custom policy. |
 | [RetentionSandboxInfo](arkts-dataprotection-dlppermission-retentionsandboxinfo-i.md) | Represents the sandbox retention information. |
 

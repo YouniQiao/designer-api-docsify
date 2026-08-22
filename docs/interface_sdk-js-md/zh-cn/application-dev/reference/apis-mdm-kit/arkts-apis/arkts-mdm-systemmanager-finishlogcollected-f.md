@@ -17,7 +17,7 @@ function finishLogCollected(admin: Want): void
 > **说明：**
 > 
 > 在应用调用[startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md)开始收集日志后，收到
-> [EnterpriseAdminExtensionAbility.onLogCollected](../../apis-default/arkts-apis/arkts-enterpriseenterpriseadminextensionability-enterpriseadminextensionability-c.md#onlogcollected)
+> [EnterpriseAdminExtensionAbility.onLogCollected](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onlogcollected)
 > 回调时，建议立即拷贝或者处理日志，并调用此接口删除收集到的日志。
 > 
 > 若不调本接口，设备日志会占用系统存储空间，不影响下一次调用[startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md)启动日志收集任务。
@@ -36,7 +36,7 @@ function finishLogCollected(admin: Want): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 
 **错误码：**
 

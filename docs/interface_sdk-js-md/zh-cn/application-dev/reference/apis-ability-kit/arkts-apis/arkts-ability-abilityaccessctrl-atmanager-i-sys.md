@@ -152,6 +152,20 @@ atManager.getPermissionRequestToggleStatus(permission).then((res: abilityAccessC
 });
 ```
 
+```TypeScript
+import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let permission: Permissions = 'ohos.permission.CAMERA';
+let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
+atManager.getPermissionRequestToggleStatus(permission, subProfileId).then((status: abilityAccessCtrl.PermissionRequestToggleStatus) => {
+  console.info(`getPermissionRequestToggleStatus success, status: ${status}`);
+}).catch((err: BusinessError): void => {
+  console.error(`getPermissionRequestToggleStatus fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## getPermissionRequestToggleStatus
 
 ```TypeScript
@@ -201,19 +215,7 @@ getPermissionRequestToggleStatus(
 
 **示例**
 
-```TypeScript
-import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let permission: Permissions = 'ohos.permission.CAMERA';
-let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
-atManager.getPermissionRequestToggleStatus(permission, subProfileId).then((status: abilityAccessCtrl.PermissionRequestToggleStatus) => {
-  console.info(`getPermissionRequestToggleStatus success, status: ${status}`);
-}).catch((err: BusinessError): void => {
-  console.error(`getPermissionRequestToggleStatus fail, code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [getPermissionRequestToggleStatus](#getpermissionrequesttogglestatus)
 
 ## getPermissionsStatus
 
@@ -506,6 +508,45 @@ atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', perm
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let tokenID: number = 0; // 获取tokenID的方式可参考AtManager章节的描述。
+let permissionFlags: number = 1;
+atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError, data: void) => {
+  if (err) {
+    console.error(`grantUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('grantUserGrantedPermission success');
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 创建权限管理实例
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+// 获取应用的TokenID，具体方式可参考AtManager章节的说明。
+let tokenID: int = 0; // 获取tokenID的方式可参考AtManager章节的描述。
+// 设置授权选项
+let permissionFlags: int = 1;
+atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError | null): void => {
+  if (err) {
+    console.error(`grantUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('grantUserGrantedPermission success');
+  }
+});
+```
+
 ## grantUserGrantedPermission
 
 ```TypeScript
@@ -553,109 +594,7 @@ grantUserGrantedPermission(
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { abilityAccessCtrl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let tokenID: number = 0; // 获取tokenID的方式可参考AtManager章节的描述。
-let permissionFlags: number = 1;
-atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError, data: void) => {
-  if (err) {
-    console.error(`grantUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('grantUserGrantedPermission success');
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { abilityAccessCtrl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 创建权限管理实例
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-// 获取应用的TokenID，具体方式可参考AtManager章节的说明。
-let tokenID: int = 0; // 获取tokenID的方式可参考AtManager章节的描述。
-// 设置授权选项
-let permissionFlags: int = 1;
-atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError | null): void => {
-  if (err) {
-    console.error(`grantUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('grantUserGrantedPermission success');
-  }
-});
-```
-
-## offPermissionStateChange
-
-```TypeScript
-offPermissionStateChange(
-      tokenIDList: Array<int>,
-      permissionList: Array<Permissions>,
-      callback?: Callback<PermissionStateChangeInfo>
-    ): void
-```
-
-取消订阅指定tokenID列表与权限列表的权限状态变更事件。使用callback异步回调。
-
-取消订阅时，若不传入callback，则批量取消与tokenIDList和permissionList完全匹配的所有监听回调。
-
-> **说明：**
-> 该接口通常与[onPermissionStateChange](#onpermissionstatechange)
-> 配套使用，用于取消通过onPermissionStateChange创建的监听关系。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.GET_SENSITIVE_PERMISSIONS
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AtManager-offPermissionStateChange(      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback?: Callback<PermissionStateChangeInfo>    ): void--><!--Device-AtManager-offPermissionStateChange(      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback?: Callback<PermissionStateChangeInfo>    ): void-End-->
-
-**系统能力：** SystemCapability.Security.AccessToken
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| tokenIDList | Array&lt;int&gt; | 是 | 取消订阅的tokenID列表，为空时表示取消订阅所有的应用的权限状态变化，必须与on的输入一致。应用的身份标识可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的tokenID必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。 |
-| permissionList | Array&lt;Permissions&gt; | 是 | 取消订阅的权限名列表，为空时表示取消订阅所有的权限状态变化，必须与on的输入一致。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 否 | 回调函数。返回取消订阅指定tokenID与指定权限名状态变更事件的对象，需与 onPermissionStateChange注册时的callback一致。不传入此参数时，将取消与tokenIDList和permissionList完全匹配的所有监听回调。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.GET_SENSITIVE_PERMISSIONS". |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenIDList or permissionList is not in the listening list. |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
-
-**示例**
-
-```TypeScript
-import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-  let appInfo: bundleManager.ApplicationInfo = bundleManager.getApplicationInfoSync('com.example.myapplication', 0, 100);
-  let tokenIDList: Array<int> = [appInfo.accessTokenId as int];
-  let permissionList: Array<Permissions> = ['ohos.permission.DISTRIBUTED_DATASYNC'];
-  atManager.offPermissionStateChange(tokenIDList, permissionList);
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`Catch errcode: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [grantUserGrantedPermission](#grantusergrantedpermission)
 
 ## off('permissionStateChange')
 
@@ -722,23 +661,23 @@ try {
 }
 ```
 
-## onPermissionStateChange
+## offPermissionStateChange
 
 ```TypeScript
-onPermissionStateChange(
+offPermissionStateChange(
       tokenIDList: Array<int>,
       permissionList: Array<Permissions>,
-      callback: Callback<PermissionStateChangeInfo>
+      callback?: Callback<PermissionStateChangeInfo>
     ): void
 ```
 
-订阅指定tokenID列表与权限列表的权限状态变更事件。使用callback异步回调。
+取消订阅指定tokenID列表与权限列表的权限状态变更事件。使用callback异步回调。
 
-允许指定tokenID列表与权限列表订阅多个callback。
+取消订阅时，若不传入callback，则批量取消与tokenIDList和permissionList完全匹配的所有监听回调。
 
-若新的订阅与已有订阅在tokenID列表和权限列表上存在交集，不允许使用相同的callback进行订阅。
-
-该接口通常与[offPermissionStateChange](#offpermissionstatechange)配套使用， 当不再需要监听时应调用offPermissionStateChange取消订阅。
+> **说明：**
+> 该接口通常与[onPermissionStateChange](#onpermissionstatechange)
+> 配套使用，用于取消通过onPermissionStateChange创建的监听关系。
 
 **起始版本：** 23
 
@@ -746,7 +685,7 @@ onPermissionStateChange(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AtManager-onPermissionStateChange(      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback: Callback<PermissionStateChangeInfo>    ): void--><!--Device-AtManager-onPermissionStateChange(      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback: Callback<PermissionStateChangeInfo>    ): void-End-->
+<!--Device-AtManager-offPermissionStateChange(      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback?: Callback<PermissionStateChangeInfo>    ): void--><!--Device-AtManager-offPermissionStateChange(      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback?: Callback<PermissionStateChangeInfo>    ): void-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -756,9 +695,9 @@ onPermissionStateChange(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenIDList | Array&lt;int&gt; | 是 | 订阅的tokenID列表，为空时表示订阅所有的应用的权限状态变化。应用的身份标识可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的tokenID必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。 |
-| permissionList | Array&lt;Permissions&gt; | 是 | 订阅的权限名列表，为空时表示订阅所有的权限状态变化。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 是 | 回调函数。订阅指定tokenID与指定权限名状态变更事件的回调。 |
+| tokenIDList | Array&lt;int&gt; | 是 | 取消订阅的tokenID列表，为空时表示取消订阅所有的应用的权限状态变化，必须与on的输入一致。应用的身份标识可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的tokenID必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。 |
+| permissionList | Array&lt;Permissions&gt; | 是 | 取消订阅的权限名列表，为空时表示取消订阅所有的权限状态变化，必须与on的输入一致。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 否 | 回调函数。返回取消订阅指定tokenID与指定权限名状态变更事件的对象，需与 onPermissionStateChange注册时的callback一致。不传入此参数时，将取消与tokenIDList和permissionList完全匹配的所有监听回调。 |
 
 **错误码：**
 
@@ -766,10 +705,8 @@ onPermissionStateChange(
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.GET_SENSITIVE_PERMISSIONS". |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. Possible causes: 1. The tokenIDList or permissionList exceeds the size limit; 2. The tokenIDs or permissionNames in the list are all invalid. |
-| [12100005](../errorcode-access-token.md#12100005-监听器数量超过限制) | The registration time has exceeded the limit. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenIDList or permissionList is not in the listening list. |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
-| [12100008](../errorcode-access-token.md#12100008-内存申请失败) | Out of memory. |
 
 **示例**
 
@@ -782,10 +719,7 @@ try {
   let appInfo: bundleManager.ApplicationInfo = bundleManager.getApplicationInfoSync('com.example.myapplication', 0, 100);
   let tokenIDList: Array<int> = [appInfo.accessTokenId as int];
   let permissionList: Array<Permissions> = ['ohos.permission.DISTRIBUTED_DATASYNC'];
-  atManager.onPermissionStateChange(tokenIDList, permissionList, (data: abilityAccessCtrl.PermissionStateChangeInfo) => {
-    console.info('receive permission state change');
-    console.info(`data change: ${data.change}, tokenID: ${data.tokenID}, permission name: ${data.permissionName}`);
-  });
+  atManager.offPermissionStateChange(tokenIDList, permissionList);
 } catch (err) {
     let error = err as BusinessError;
     console.error(`Catch errcode: ${error.code}, message: ${error.message}`);
@@ -861,6 +795,76 @@ try {
 } catch (err) {
   let error = err as BusinessError;
   console.error(`catch errcode: ${error.code}, message: ${error.message}`);
+}
+```
+
+## onPermissionStateChange
+
+```TypeScript
+onPermissionStateChange(
+      tokenIDList: Array<int>,
+      permissionList: Array<Permissions>,
+      callback: Callback<PermissionStateChangeInfo>
+    ): void
+```
+
+订阅指定tokenID列表与权限列表的权限状态变更事件。使用callback异步回调。
+
+允许指定tokenID列表与权限列表订阅多个callback。
+
+若新的订阅与已有订阅在tokenID列表和权限列表上存在交集，不允许使用相同的callback进行订阅。
+
+该接口通常与[offPermissionStateChange](#offpermissionstatechange)配套使用， 当不再需要监听时应调用offPermissionStateChange取消订阅。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.GET_SENSITIVE_PERMISSIONS
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AtManager-onPermissionStateChange(      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback: Callback<PermissionStateChangeInfo>    ): void--><!--Device-AtManager-onPermissionStateChange(      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback: Callback<PermissionStateChangeInfo>    ): void-End-->
+
+**系统能力：** SystemCapability.Security.AccessToken
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| tokenIDList | Array&lt;int&gt; | 是 | 订阅的tokenID列表，为空时表示订阅所有的应用的权限状态变化。应用的身份标识可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的tokenID必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。 |
+| permissionList | Array&lt;Permissions&gt; | 是 | 订阅的权限名列表，为空时表示订阅所有的权限状态变化。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 是 | 回调函数。订阅指定tokenID与指定权限名状态变更事件的回调。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.GET_SENSITIVE_PERMISSIONS". |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. Possible causes: 1. The tokenIDList or permissionList exceeds the size limit; 2. The tokenIDs or permissionNames in the list are all invalid. |
+| [12100005](../errorcode-access-token.md#12100005-监听器数量超过限制) | The registration time has exceeded the limit. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
+| [12100008](../errorcode-access-token.md#12100008-内存申请失败) | Out of memory. |
+
+**示例**
+
+```TypeScript
+import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+  let appInfo: bundleManager.ApplicationInfo = bundleManager.getApplicationInfoSync('com.example.myapplication', 0, 100);
+  let tokenIDList: Array<int> = [appInfo.accessTokenId as int];
+  let permissionList: Array<Permissions> = ['ohos.permission.DISTRIBUTED_DATASYNC'];
+  atManager.onPermissionStateChange(tokenIDList, permissionList, (data: abilityAccessCtrl.PermissionStateChangeInfo) => {
+    console.info('receive permission state change');
+    console.info(`data change: ${data.change}, tokenID: ${data.tokenID}, permission name: ${data.permissionName}`);
+  });
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`Catch errcode: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1329,6 +1333,45 @@ atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', per
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let tokenID: number = 0; // 获取tokenID的方式可参考AtManager章节的描述。
+let permissionFlags: number = 1;
+atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError, data: void) => {
+  if (err) {
+    console.error(`revokeUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('revokeUserGrantedPermission success');
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 创建权限管理实例
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+// 获取应用的TokenID，具体方式可参考AtManager章节的说明。
+let tokenID: int = 0; // 获取tokenID的方式可参考AtManager章节的描述。
+// 设置授权选项
+let permissionFlags: int = 1;
+atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError | null): void => {
+  if (err) {
+    console.error(`revokeUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('revokeUserGrantedPermission success');
+  }
+});
+```
+
 ## revokeUserGrantedPermission
 
 ```TypeScript
@@ -1376,44 +1419,7 @@ revokeUserGrantedPermission(
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { abilityAccessCtrl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let tokenID: number = 0; // 获取tokenID的方式可参考AtManager章节的描述。
-let permissionFlags: number = 1;
-atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError, data: void) => {
-  if (err) {
-    console.error(`revokeUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('revokeUserGrantedPermission success');
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { abilityAccessCtrl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 创建权限管理实例
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-// 获取应用的TokenID，具体方式可参考AtManager章节的说明。
-let tokenID: int = 0; // 获取tokenID的方式可参考AtManager章节的描述。
-// 设置授权选项
-let permissionFlags: int = 1;
-atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError | null): void => {
-  if (err) {
-    console.error(`revokeUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('revokeUserGrantedPermission success');
-  }
-});
-```
+参见 [revokeUserGrantedPermission](#revokeusergrantedpermission)
 
 ## setPermissionRequestToggleStatus
 
@@ -1475,6 +1481,20 @@ atManager.setPermissionRequestToggleStatus(permission, abilityAccessCtrl.Permiss
 });
 ```
 
+```TypeScript
+import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let permission: Permissions = 'ohos.permission.CAMERA';
+let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
+atManager.setPermissionRequestToggleStatus(permission, abilityAccessCtrl.PermissionRequestToggleStatus.CLOSED, subProfileId).then(() => {
+  console.info('setPermissionRequestToggleStatus success');
+}).catch((err: BusinessError): void => {
+  console.error(`setPermissionRequestToggleStatus fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## setPermissionRequestToggleStatus
 
 ```TypeScript
@@ -1527,17 +1547,5 @@ setPermissionRequestToggleStatus(
 
 **示例**
 
-```TypeScript
-import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let permission: Permissions = 'ohos.permission.CAMERA';
-let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
-atManager.setPermissionRequestToggleStatus(permission, abilityAccessCtrl.PermissionRequestToggleStatus.CLOSED, subProfileId).then(() => {
-  console.info('setPermissionRequestToggleStatus success');
-}).catch((err: BusinessError): void => {
-  console.error(`setPermissionRequestToggleStatus fail, code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [setPermissionRequestToggleStatus](#setpermissionrequesttogglestatus)
 

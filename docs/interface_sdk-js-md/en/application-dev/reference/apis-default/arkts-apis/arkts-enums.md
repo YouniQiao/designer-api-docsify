@@ -22,8 +22,8 @@
 | [CheckBoxShape](arkts-enums-checkboxshape-e.md) | common enum of the checkbox shape |
 | [ClickEffectLevel](arkts-enums-clickeffectlevel-e.md) | Enum of click effect level. |
 | [Color](arkts-enums-color-e.md) | common enum of color |
-| [ColorSpace](arkts-enums-colorspace-e.md) | Define ColorSpace enumeration. |
 | [ColoringStrategy](arkts-enums-coloringstrategy-e.md) | Common enum of color strategy |
+| [ColorSpace](arkts-enums-colorspace-e.md) | Define ColorSpace enumeration. |
 | [CompetitionStrategy](arkts-enums-competitionstrategy-e.md) | Defines whether a competition for gesture recognition results should occur between the event injector and the gesture recognizers of the target component. This strategy determines how the injected input event interacts with the target component's own gesture handling logic. |
 | [CopyOptions](arkts-enums-copyoptions-e.md) | Indicates the share option. |
 | [CrownAction](arkts-enums-crownaction-e.md) | Rotating crown event behavior. |

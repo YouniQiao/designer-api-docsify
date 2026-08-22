@@ -56,6 +56,21 @@ Initiate an HID connection to a remote device.
 **Examples**
 
 ```TypeScript
+import { common } from '@kit.ConnectivityKit';
+
+let device: common.BluetoothAddress = {
+    "address": "11:22:33:44:55:66",
+    "addressType": common.BluetoothAddressType.REAL,
+}
+try {
+    let hidDevice: hid.HidDeviceProfile = hid.createHidDeviceProfile();
+    hidDevice.connect(device);
+} catch (err) {
+    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
+}
+```
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let hidHostProfile = hid.createHidHostProfile();
@@ -103,6 +118,15 @@ Disconnect the HID connection with the remote device.
 | 2900099 | Operation failed. |
 
 **Examples**
+
+```TypeScript
+try {
+    let hidDevice: hid.HidDeviceProfile = hid.createHidDeviceProfile();
+    hidDevice.disconnect();
+} catch (err) {
+    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

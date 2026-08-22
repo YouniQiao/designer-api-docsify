@@ -28,9 +28,19 @@ Obtains the total size of the specified file system, in bytes. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the file system. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the total size obtained, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the total size obtained, in bytes. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let path = "/dev";
+statfs.getTotalBytes(path).then((number: number) => {
+  console.info("getTotalBytes promise successfully:" + number);
+}).catch((err: BusinessError) => {
+  console.error("getTotalBytes failed with error:" + JSON.stringify(err));
+});
+```
 
 ```TypeScript
 import common from '@ohos.app.ability.common';
@@ -79,13 +89,5 @@ Obtains the total size of the specified file system, in byte. This API uses a pr
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let path = "/dev";
-statfs.getTotalBytes(path).then((number: number) => {
-  console.info("getTotalBytes promise successfully:" + number);
-}).catch((err: BusinessError) => {
-  console.error("getTotalBytes failed with error:" + JSON.stringify(err));
-});
-```
+See [getTotalBytes](#gettotalbytes)
 

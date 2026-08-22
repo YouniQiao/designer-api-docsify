@@ -28,7 +28,7 @@ Checks whether there is an available network. This API uses an asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return whether there is an available network. The value **true** indicates that a network is available, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return whether there is an available network. The value **true** indicates that a network is available, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -47,6 +47,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 connection.hasDefaultNet((error: BusinessError, data: boolean) => {
   console.error(JSON.stringify(error));
+  console.info('data: ' + data);
+});
+```
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.hasDefaultNet().then((data: boolean) => {
   console.info('data: ' + data);
 });
 ```
@@ -86,11 +94,5 @@ Checks whether there is an available network. This API uses a promise to return 
 
 **Examples**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.hasDefaultNet().then((data: boolean) => {
-  console.info('data: ' + data);
-});
-```
+See [hasDefaultNet](#hasdefaultnet)
 

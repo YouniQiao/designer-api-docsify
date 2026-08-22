@@ -30,7 +30,7 @@ Obtains the mission information. This API uses an asynchronous callback to retur
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
 | missionId | int | Yes | Mission ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;MissionInfo&gt; | Yes | Callback used to return the mission information obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;MissionInfo&gt; | Yes | Callback used to return the mission information obtained. |
 
 **Error codes:**
 
@@ -78,6 +78,26 @@ missionManager.getMissionInfos('', 10)
   });
 ```
 
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let testMissionId = 1;
+
+try {
+  missionManager.getMissionInfo('', testMissionId)
+    .then((data: missionManager.MissionInfo) => {
+      console.info(`getMissionInfo successfully. Data: ${JSON.stringify(data)}`);
+    })
+    .catch((error: BusinessError) => {
+      console.error(`getMissionInfo failed. Cause: ${error.message}`);
+    });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`getMissionInfo failed. Cause: ${err.message}`);
+}
+```
+
 
 ## getMissionInfo
 
@@ -120,23 +140,5 @@ Obtains the mission information. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let testMissionId = 1;
-
-try {
-  missionManager.getMissionInfo('', testMissionId)
-    .then((data: missionManager.MissionInfo) => {
-      console.info(`getMissionInfo successfully. Data: ${JSON.stringify(data)}`);
-    })
-    .catch((error: BusinessError) => {
-      console.error(`getMissionInfo failed. Cause: ${error.message}`);
-    });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`getMissionInfo failed. Cause: ${err.message}`);
-}
-```
+See [getMissionInfo](#getmissioninfo)
 

@@ -34,3 +34,19 @@ Specifies the text for the target Component.
 | --- | --- |
 | [On](arkts-test-uitest-on-c.md) | this { |
 
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.text('123'); // 使用静态构造器ON创建On对象，指定目标控件的text属性。
+```
+
+```TypeScript
+// xxx.test.ets
+import { BY, By } from '@kit.TestKit';
+
+let by: By = BY.text('123'); // 使用静态构造器BY创建by对象，指定目标控件的text属性。
+```
+

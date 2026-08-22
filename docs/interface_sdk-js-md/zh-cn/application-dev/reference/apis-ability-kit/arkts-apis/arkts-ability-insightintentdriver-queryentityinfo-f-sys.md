@@ -47,6 +47,88 @@ function queryEntityInfo(param: QueryParam): Promise<Array<Record<string, Object
 | [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { insightIntent, insightIntentDriver } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+function queryEntityInfoByPromise() {
+  let queryParam: insightIntentDriver.QueryParam = {
+    bundleName: 'com.example.intent', // 开发者需自行修改为实际包名
+    moduleName: 'entry', // 开发者需自行修改为实际模块名
+    intentName: 'PlayMusic', // 开发者需自行修改为实际意图名
+    className: 'AppIntentEntityImpl', // 开发者需自行修改为实际的类名
+    queryEntityParam: {
+      queryType: insightIntent.QueryType.BY_PROPERTY,
+      parameters: { // 开发者需自行修改为实际的查询参数
+        'entityId': 'default'
+      },
+    },
+    userId: 100,
+  }
+
+  try {
+    insightIntentDriver.queryEntityInfo(queryParam)
+      .then((data: Array<Record<string, Object>> | undefined) => {
+        if (data) {
+          hilog.info(0x0000, 'testTag', 'queryEntityInfo return %{public}s', JSON.stringify(data));
+        } else {
+          hilog.info(0x0000, 'testTag', 'queryEntityInfo return empty result');
+        }
+      })
+      .catch((err: BusinessError) => {
+        hilog.error(0x0000, 'testTag', 'queryEntityInfo errCode: %{public}d', err.code);
+        hilog.error(0x0000, 'testTag', 'queryEntityInfo errMessage %{public}s', err.message);
+      });
+  } catch (error) {
+    hilog.error(0x0000, 'testTag', 'queryEntityInfo error caught %{public}s', JSON.stringify(error));
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { insightIntent, insightIntentDriver } from '@kit.AbilityKit';
+import { BusinessError, RecordData } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+function queryEntityInfoByPromise() {
+  let queryParam: insightIntentDriver.QueryParam = {
+    bundleName: 'com.example.intent', // 开发者需自行修改为实际包名
+    moduleName: 'entry', // 开发者需自行修改为实际模块名
+    intentName: 'PlayMusic', // 开发者需自行修改为实际意图名
+    className: 'AppIntentEntityImpl', // 开发者需自行修改为实际的类名
+    queryEntityParam: {
+      queryType: insightIntent.QueryType.BY_PROPERTY,
+      parameters: { // 开发者需自行修改为实际的查询参数
+        'entityId': 'default'
+      },
+    },
+    userId: 100,
+  }
+
+  try {
+    insightIntentDriver.queryEntityInfo(queryParam)
+      .then((data: Array<Record<string, RecordData>> | undefined) => {
+        hilog.info(0x0000, 'testTag', 'queryEntityInfo return %{public}s', JSON.stringify(data));
+      })
+      .catch((err) => {
+        hilog.error(0x0000, 'testTag', 'queryEntityInfo errCode: %{public}d', err.code);
+        hilog.error(0x0000, 'testTag', 'queryEntityInfo errMessage %{public}s', err.message);
+      });
+  } catch (error) {
+    hilog.error(0x0000, 'testTag', 'queryEntityInfo error caught %{public}s', JSON.stringify(error));
+  }
+}
+```
+
 
 ## queryEntityInfo
 
@@ -88,4 +170,8 @@ function queryEntityInfo(param: QueryParam): Promise<Array<Record<string, Record
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
+
+**示例**
+
+参见 [queryEntityInfo](#queryentityinfo)
 

@@ -44,6 +44,86 @@ function shareForm(formId: string, deviceId: string, callback: AsyncCallback<voi
 | [16501001](../errorcode-form.md#16501001-卡片id不存在) | The ID of the form to be operated does not exist. |
 | [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288';
+let deviceId: string = 'EFC11C0C53628D8CC2F8CB5052477E130D075917034613B9884C55CD22B3DEF2';
+try {
+  formHost.shareForm(formId, deviceId, (error: BusinessError) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288';
+let deviceId: string = 'EFC11C0C53628D8CC2F8CB5052477E130D075917034613B9884C55CD22B3DEF2';
+try {
+  formHost.shareForm(formId, deviceId, (error) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    }
+  });
+} catch(error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288';
+let deviceId: string = 'EFC11C0C53628D8CC2F8CB5052477E130D075917034613B9884C55CD22B3DEF2';
+try {
+  formHost.shareForm(formId, deviceId).then(() => {
+    console.info('formHost shareForm success');
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288';
+let deviceId: string = 'EFC11C0C53628D8CC2F8CB5052477E130D075917034613B9884C55CD22B3DEF2';
+try {
+  formHost.shareForm(formId, deviceId).then(() => {
+    console.info('formHost shareForm success');
+  }).catch((error) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch(error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
 
 ## shareForm
 
@@ -87,4 +167,8 @@ function shareForm(formId: string, deviceId: string): Promise<void>
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 | [16501001](../errorcode-form.md#16501001-卡片id不存在) | The ID of the form to be operated does not exist. |
 | [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
+
+**示例**
+
+参见 [shareForm](#shareform)
 

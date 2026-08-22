@@ -46,7 +46,7 @@ Grants the URI permission to an application. If the call is successful, the appl
 | uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). |
 | flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. |
 | targetBundleName | string | Yes | Bundle name of the target application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
 
 **Error codes:**
 
@@ -85,6 +85,74 @@ uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_U
     }
     console.info(`grantUriPermission success.`);
   });
+```
+
+```TypeScript
+import { uriPermissionManager, wantConstant } from '@kit.AbilityKit';
+import { fileIo, fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let targetBundleName = 'com.example.test_case1'
+let path = 'file://com.example.test_case1/data/storage/el2/base/haps/entry_test/files/newDir';
+
+fileIo.mkdir(path, (err) => {
+  if (err) {
+    console.error(`mkdir failed, err code: ${err.code}, err msg: ${err.message}.`);
+  } else {
+    console.info(`mkdir succeed.`);
+  }
+});
+let uri = fileUri.getUriFromPath(path);
+uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, targetBundleName)
+  .then((data) => {
+    console.info(`Verification succeeded, data: ${JSON.stringify(data)}.`);
+  }).catch((err: BusinessError) => {
+  console.error(`Verification failed, err code: ${err.code}, err msg: ${err.message}.`);
+});
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want, wantConstant, uriPermissionManager } from '@kit.AbilityKit';
+import { fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+  }
+
+  onForeground(): void {
+    let targetBundleName: string = 'com.example.demo1';
+    let filePath: string = this.context.filesDir + "/test.txt";
+    let uri: string = fileUri.getUriFromPath(filePath);
+    // grant uri permission to main application
+    try {
+      let appCloneIndex: number = 0;
+      uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, targetBundleName,
+        appCloneIndex)
+        .then(() => {
+          console.info('grantUriPermission succeeded.');
+        }).catch((error: BusinessError) => {
+        console.error(`grantUriPermission failed. error: ${JSON.stringify(error)}.`);
+      });
+    } catch (error) {
+      console.error(`grantUriPermission failed. error: ${JSON.stringify(error)}.`);
+    }
+
+    // grant uri permission to clone application
+    try {
+      let appCloneIndex: number = 1;
+      uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, targetBundleName,
+        appCloneIndex)
+        .then(() => {
+          console.info('grantUriPermission succeeded.');
+        }).catch((error: BusinessError) => {
+        console.error(`grantUriPermission failed. error: ${JSON.stringify(error)}.`);
+      });
+    } catch (error) {
+      console.error(`grantUriPermission failed. error: ${JSON.stringify(error)}.`);
+    }
+  }
+}
 ```
 
 
@@ -130,7 +198,7 @@ Grants the URI permission to an application. If the call is successful, the appl
 | uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). |
 | flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. |
 | targetBundleName | string | Yes | Bundle name of the target application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
 
 **Error codes:**
 
@@ -143,6 +211,10 @@ Grants the URI permission to an application. If the call is successful, the appl
 | [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
 | [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
+
+**Examples**
+
+See [grantUriPermission](#granturipermission)
 
 
 ## grantUriPermission
@@ -202,29 +274,7 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 **Examples**
 
-```TypeScript
-import { uriPermissionManager, wantConstant } from '@kit.AbilityKit';
-import { fileIo, fileUri } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let targetBundleName = 'com.example.test_case1'
-let path = 'file://com.example.test_case1/data/storage/el2/base/haps/entry_test/files/newDir';
-
-fileIo.mkdir(path, (err) => {
-  if (err) {
-    console.error(`mkdir failed, err code: ${err.code}, err msg: ${err.message}.`);
-  } else {
-    console.info(`mkdir succeed.`);
-  }
-});
-let uri = fileUri.getUriFromPath(path);
-uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, targetBundleName)
-  .then((data) => {
-    console.info(`Verification succeeded, data: ${JSON.stringify(data)}.`);
-  }).catch((err: BusinessError) => {
-  console.error(`Verification failed, err code: ${err.code}, err msg: ${err.message}.`);
-});
-```
+See [grantUriPermission](#granturipermission)
 
 
 ## grantUriPermission
@@ -280,6 +330,10 @@ Grants the URI permission to an application. If the call is successful, the appl
 | [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
 | [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
+
+**Examples**
+
+See [grantUriPermission](#granturipermission)
 
 
 ## grantUriPermission
@@ -344,47 +398,5 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 **Examples**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want, wantConstant, uriPermissionManager } from '@kit.AbilityKit';
-import { fileUri } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-  }
-
-  onForeground(): void {
-    let targetBundleName: string = 'com.example.demo1';
-    let filePath: string = this.context.filesDir + "/test.txt";
-    let uri: string = fileUri.getUriFromPath(filePath);
-    // grant uri permission to main application
-    try {
-      let appCloneIndex: number = 0;
-      uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, targetBundleName,
-        appCloneIndex)
-        .then(() => {
-          console.info('grantUriPermission succeeded.');
-        }).catch((error: BusinessError) => {
-        console.error(`grantUriPermission failed. error: ${JSON.stringify(error)}.`);
-      });
-    } catch (error) {
-      console.error(`grantUriPermission failed. error: ${JSON.stringify(error)}.`);
-    }
-
-    // grant uri permission to clone application
-    try {
-      let appCloneIndex: number = 1;
-      uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, targetBundleName,
-        appCloneIndex)
-        .then(() => {
-          console.info('grantUriPermission succeeded.');
-        }).catch((error: BusinessError) => {
-        console.error(`grantUriPermission failed. error: ${JSON.stringify(error)}.`);
-      });
-    } catch (error) {
-      console.error(`grantUriPermission failed. error: ${JSON.stringify(error)}.`);
-    }
-  }
-}
-```
+See [grantUriPermission](#granturipermission)
 

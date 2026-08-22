@@ -35,7 +35,7 @@ Called back when Service is started.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Indicates the want of Service to start. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the want of Service to start. |
 | startId | number | Yes | Indicates the number of times the Service ability has been started. {@code startId} is incremented by 1 every time the ability is started. For example, if the ability has been started for six times. |
 
 ## onConnect
@@ -58,7 +58,7 @@ Called back when a Service ability is first connected to an ability.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Indicates connection information about the Service ability. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates connection information about the Service ability. |
 
 **Return value:**
 
@@ -86,7 +86,7 @@ Called back when all abilities connected to a Service ability are disconnected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Indicates disconnection information about the Service ability. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates disconnection information about the Service ability. |
 
 ## onReconnect
 
@@ -108,7 +108,7 @@ Called when a new client attempts to connect to a Service ability after all prev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Indicates the want of the Service ability being connected. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the want of the Service ability being connected. |
 
 ## onStart
 

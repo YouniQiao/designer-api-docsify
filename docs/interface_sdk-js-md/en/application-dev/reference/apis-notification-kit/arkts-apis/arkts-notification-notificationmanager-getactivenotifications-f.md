@@ -30,7 +30,7 @@ setBadgeNumber sets the notification
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;NotificationRequest&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the obtained **NotificationRequest** array; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NotificationRequest&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the obtained **NotificationRequest** array; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -54,6 +54,16 @@ let getActiveNotificationsCallback = (err: BusinessError, data: Array<notificati
   }
 }
 notificationManager.getActiveNotifications(getActiveNotificationsCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.getActiveNotifications().then((data: Array<notificationManager.NotificationRequest>) => {
+  console.info(`Succeeded in getting active notifications, data is ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get active notifications. Code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -93,13 +103,5 @@ setBadgeNumber sets the notification
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getActiveNotifications().then((data: Array<notificationManager.NotificationRequest>) => {
-  console.info(`Succeeded in getting active notifications, data is ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get active notifications. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getActiveNotifications](#getactivenotifications)
 

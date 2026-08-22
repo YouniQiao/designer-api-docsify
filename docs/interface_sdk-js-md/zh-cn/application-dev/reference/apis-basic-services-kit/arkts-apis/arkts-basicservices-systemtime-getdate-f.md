@@ -56,6 +56,21 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemTime.getDate().then((date: Date) => {
+    console.info(`Succeeded in getting date : ${date}`);
+  }).catch((error: BusinessError) => {
+    console.info(`Failed to get date. message: ${error.message}, code: ${error.code}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.info(`Failed to get date. message: ${error.message}, code: ${error.code}`);
+}
+```
+
 
 ## getDate
 
@@ -89,18 +104,5 @@ function getDate(): Promise<Date>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemTime.getDate().then((date: Date) => {
-    console.info(`Succeeded in getting date : ${date}`);
-  }).catch((error: BusinessError) => {
-    console.info(`Failed to get date. message: ${error.message}, code: ${error.code}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.info(`Failed to get date. message: ${error.message}, code: ${error.code}`);
-}
-```
+参见 [getDate](#getdate)
 

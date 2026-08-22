@@ -46,6 +46,12 @@ console.info("Succeeded to get data:" + JSON.stringify(data));
 });
 ```
 
+```TypeScript
+observer.onCellularDataConnectionStateChange((data: observer.DataConnectionStateInfo) => {
+    console.info('onCellularDataConnectionStateChange, data->${JSON.stringify(data)}');
+});
+```
+
 
 ## onCellularDataConnectionStateChange
 
@@ -81,9 +87,5 @@ Callback when the cellular data link connection state corresponding to the monit
 
 **示例**
 
-```TypeScript
-observer.onCellularDataConnectionStateChange((data: observer.DataConnectionStateInfo) => {
-    console.info('onCellularDataConnectionStateChange, data->${JSON.stringify(data)}');
-});
-```
+参见 [onCellularDataConnectionStateChange](#oncellulardataconnectionstatechange)
 

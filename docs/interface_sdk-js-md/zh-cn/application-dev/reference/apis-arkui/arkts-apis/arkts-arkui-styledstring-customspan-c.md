@@ -52,7 +52,7 @@ abstract onDraw(context: DrawContext, drawInfo: CustomSpanDrawInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [DrawContext](../../apis-default/arkts-apis/arkts-graphics-drawcontext-c.md) | 是 |  |
+| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | 是 |  |
 | drawInfo | [CustomSpanDrawInfo](arkts-arkui-styledstring-customspandrawinfo-i.md) | 是 |  |
 
 ## onMeasure

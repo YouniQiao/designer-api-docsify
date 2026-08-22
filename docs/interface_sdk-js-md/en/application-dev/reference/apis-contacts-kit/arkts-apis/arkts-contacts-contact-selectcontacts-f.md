@@ -26,7 +26,7 @@ Selects a contact. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of selected contacts is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of selected contacts is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -45,6 +45,42 @@ contact.selectContacts((err: BusinessError, data) => {
     return;
   }
   console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = contact.selectContacts();
+promise.then((data) => {
+  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+contact.selectContacts({
+  isMultiSelect:false
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = contact.selectContacts({isMultiSelect:false});
+promise.then((data) => {
+  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -73,16 +109,7 @@ Selects a contact. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = contact.selectContacts();
-promise.then((data) => {
-  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [selectContacts](#selectcontacts)
 
 
 ## selectContacts
@@ -106,7 +133,7 @@ Selects a contact. (Filter criteria can be transferred during contact selection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [ContactSelectionOptions](arkts-contacts-contact-contactselectionoptions-i.md) | Yes | Contact selection options, which specifies whether one contact or multiple contacts can be selected. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of selected contacts is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of selected contacts is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -116,19 +143,7 @@ Selects a contact. (Filter criteria can be transferred during contact selection.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-contact.selectContacts({
-  isMultiSelect:false
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
-});
-```
+See [selectContacts](#selectcontacts)
 
 
 ## selectContacts
@@ -167,14 +182,5 @@ Selects a contact. (Filter criteria can be transferred during contact selection.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = contact.selectContacts({isMultiSelect:false});
-promise.then((data) => {
-  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [selectContacts](#selectcontacts)
 

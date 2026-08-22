@@ -40,6 +40,21 @@ Closes this channel.
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { omapi } from '@kit.ConnectivityKit';
 
+let seSession : omapi.Session;
+
+// Initialize seSession before using it.
+
+try {
+    seSession.close();
+} catch (error) {
+    hilog.error(0x0000, 'testTag', 'close error %{public}s', JSON.stringify(error));
+}
+```
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
 let seChannel : omapi.Channel;
 
 // Initialize seChannel before using it.
@@ -212,6 +227,22 @@ Checks whether this channel is closed.
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { omapi } from '@kit.ConnectivityKit';
 
+let seSession : omapi.Session;
+
+// Initialize seSession before using it.
+
+try {
+    let isClosed = seSession.isClosed();
+    hilog.info(0x0000, 'testTag', 'isClosed %{public}s', JSON.stringify(isClosed));
+} catch (error) {
+    hilog.error(0x0000, 'testTag', 'isClosed error %{public}s', JSON.stringify(error));
+}
+```
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
 let seChannel : omapi.Channel;
 
 // Initialize seChannel before using it.
@@ -280,39 +311,6 @@ try {
 }
 ```
 
-## transmit
-
-```TypeScript
-transmit(command: number[], callback: AsyncCallback<number[]>): void
-```
-
-Transmits APDU data (as per ISO/IEC 7816) to the SE. This API uses an asynchronous callback to return the result.
-
-**Since:** 10
-
-<!--Device-Channel-transmit(command: number[], callback: AsyncCallback<number[]>): void--><!--Device-Channel-transmit(command: number[], callback: AsyncCallback<number[]>): void-End-->
-
-**System capability:** SystemCapability.Communication.SecureElement
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| command | number[] | Yes | APDU data to send. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number[]&gt; | Yes | Callback used to return the response received, in a number array. If the chip captures an exception, an all zero value is returned. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session or channel that has been closed. |
-| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the command is filtered by the security policy. |
-| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
-
-**Examples**
-
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { omapi } from '@kit.ConnectivityKit';
@@ -333,4 +331,39 @@ try {
     hilog.error(0x0000, 'testTag', 'transmit exception %{public}s', JSON.stringify(exception));
 }
 ```
+
+## transmit
+
+```TypeScript
+transmit(command: number[], callback: AsyncCallback<number[]>): void
+```
+
+Transmits APDU data (as per ISO/IEC 7816) to the SE. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+<!--Device-Channel-transmit(command: number[], callback: AsyncCallback<number[]>): void--><!--Device-Channel-transmit(command: number[], callback: AsyncCallback<number[]>): void-End-->
+
+**System capability:** SystemCapability.Communication.SecureElement
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| command | number[] | Yes | APDU data to send. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | Yes | Callback used to return the response received, in a number array. If the chip captures an exception, an all zero value is returned. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session or channel that has been closed. |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the command is filtered by the security policy. |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
+
+**Examples**
+
+See [transmit](#transmit)
 

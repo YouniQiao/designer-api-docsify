@@ -46,3 +46,9 @@ Obtains the mask combination for the supported mode list of a given USB port.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  <br>1.Mandatory parameters are left unspecified.  <br>2.Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 
+**Examples**
+
+```TypeScript
+let ret: number = usbManager.getPortSupportModes(0);
+```
+

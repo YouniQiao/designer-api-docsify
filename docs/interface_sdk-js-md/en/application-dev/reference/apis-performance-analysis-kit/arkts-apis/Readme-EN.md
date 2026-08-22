@@ -19,66 +19,6 @@
     - [write](arkts-performanceanalysis-hiappevent-write-depr-f.md)
     - [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-depr-i.md)
     - [EventType](arkts-performanceanalysis-hiappevent-eventtype-depr-e.md)
-<!--Del-->
-- [@ohos.hiSysEvent](arkts-hisysevent.md)<!--DelEnd-->
-  <!--Del-->
-  - [addWatcher(system api)](arkts-performanceanalysis-hisysevent-addwatcher-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [exportSysEvents(system api)](arkts-performanceanalysis-hisysevent-exportsysevents-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [query(system api)](arkts-performanceanalysis-hisysevent-query-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [removeWatcher(system api)](arkts-performanceanalysis-hisysevent-removewatcher-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [subscribe(system api)](arkts-performanceanalysis-hisysevent-subscribe-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [unsubscribe(system api)](arkts-performanceanalysis-hisysevent-unsubscribe-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [write(system api)](arkts-performanceanalysis-hisysevent-write-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [Querier(system api)](arkts-performanceanalysis-hisysevent-querier-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [QueryArg(system api)](arkts-performanceanalysis-hisysevent-queryarg-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [QueryRule(system api)](arkts-performanceanalysis-hisysevent-queryrule-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [SysEventInfo(system api)](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [Watcher(system api)](arkts-performanceanalysis-hisysevent-watcher-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [WatchRule(system api)](arkts-performanceanalysis-hisysevent-watchrule-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [EventType(system api)](arkts-performanceanalysis-hisysevent-eventtype-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [RuleType(system api)](arkts-performanceanalysis-hisysevent-ruletype-e-sys.md)<!--DelEnd-->
-- [@ohos.hiTraceChain](arkts-hitracechain.md)
-  - [begin](arkts-performanceanalysis-hitracechain-begin-f.md)
-  - [clearId](arkts-performanceanalysis-hitracechain-clearid-f.md)
-  - [createSpan](arkts-performanceanalysis-hitracechain-createspan-f.md)
-  - [enableFlag](arkts-performanceanalysis-hitracechain-enableflag-f.md)
-  - [end](arkts-performanceanalysis-hitracechain-end-f.md)
-  - [getId](arkts-performanceanalysis-hitracechain-getid-f.md)
-  - [isFlagEnabled](arkts-performanceanalysis-hitracechain-isflagenabled-f.md)
-  - [isValid](arkts-performanceanalysis-hitracechain-isvalid-f.md)
-  - [setId](arkts-performanceanalysis-hitracechain-setid-f.md)
-  - [tracepoint](arkts-performanceanalysis-hitracechain-tracepoint-f.md)
-  - [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md)
-  - [HiTraceCommunicationMode](arkts-performanceanalysis-hitracechain-hitracecommunicationmode-e.md)
-  - [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md)
-  - [HiTraceTracepointType](arkts-performanceanalysis-hitracechain-hitracetracepointtype-e.md)
-- [@ohos.hiTraceMeter](arkts-hitracemeter.md)
-  - [finishAsyncTrace](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md)
-  - [finishSyncTrace](arkts-performanceanalysis-hitracemeter-finishsynctrace-f.md)
-  - [finishTrace](arkts-performanceanalysis-hitracemeter-finishtrace-f.md)
-  - [isTraceEnabled](arkts-performanceanalysis-hitracemeter-istraceenabled-f.md)
-  - [registerTraceListener](arkts-performanceanalysis-hitracemeter-registertracelistener-f.md)
-  - [startAsyncTrace](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md)
-  - [startSyncTrace](arkts-performanceanalysis-hitracemeter-startsynctrace-f.md)
-  - [startTrace](arkts-performanceanalysis-hitracemeter-starttrace-f.md)
-  - [traceByValue](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md)
-  - [unregisterTraceListener](arkts-performanceanalysis-hitracemeter-unregistertracelistener-f.md)
-  - [TraceEventListener](arkts-performanceanalysis-hitracemeter-traceeventlistener-t.md)
-  - [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md)
 - [@ohos.hichecker](arkts-hichecker.md)
   - [addCheckRule](arkts-performanceanalysis-hichecker-addcheckrule-f.md)
   - [addRule](arkts-performanceanalysis-hichecker-addrule-f.md)
@@ -164,10 +104,70 @@
   - [LogLevel](arkts-performanceanalysis-hilog-loglevel-e.md)
   - [OutputType](arkts-performanceanalysis-hilog-outputtype-e.md)
   - [PreferStrategy](arkts-performanceanalysis-hilog-preferstrategy-e.md)
+<!--Del-->
+- [@ohos.hiSysEvent](arkts-hisysevent.md)<!--DelEnd-->
+  <!--Del-->
+  - [addWatcher(system api)](arkts-performanceanalysis-hisysevent-addwatcher-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [exportSysEvents(system api)](arkts-performanceanalysis-hisysevent-exportsysevents-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [query(system api)](arkts-performanceanalysis-hisysevent-query-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [removeWatcher(system api)](arkts-performanceanalysis-hisysevent-removewatcher-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [subscribe(system api)](arkts-performanceanalysis-hisysevent-subscribe-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [unsubscribe(system api)](arkts-performanceanalysis-hisysevent-unsubscribe-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [write(system api)](arkts-performanceanalysis-hisysevent-write-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [Querier(system api)](arkts-performanceanalysis-hisysevent-querier-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [QueryArg(system api)](arkts-performanceanalysis-hisysevent-queryarg-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [QueryRule(system api)](arkts-performanceanalysis-hisysevent-queryrule-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SysEventInfo(system api)](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [Watcher(system api)](arkts-performanceanalysis-hisysevent-watcher-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [WatchRule(system api)](arkts-performanceanalysis-hisysevent-watchrule-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [EventType(system api)](arkts-performanceanalysis-hisysevent-eventtype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RuleType(system api)](arkts-performanceanalysis-hisysevent-ruletype-e-sys.md)<!--DelEnd-->
+- [@ohos.hiTraceChain](arkts-hitracechain.md)
+  - [begin](arkts-performanceanalysis-hitracechain-begin-f.md)
+  - [clearId](arkts-performanceanalysis-hitracechain-clearid-f.md)
+  - [createSpan](arkts-performanceanalysis-hitracechain-createspan-f.md)
+  - [enableFlag](arkts-performanceanalysis-hitracechain-enableflag-f.md)
+  - [end](arkts-performanceanalysis-hitracechain-end-f.md)
+  - [getId](arkts-performanceanalysis-hitracechain-getid-f.md)
+  - [isFlagEnabled](arkts-performanceanalysis-hitracechain-isflagenabled-f.md)
+  - [isValid](arkts-performanceanalysis-hitracechain-isvalid-f.md)
+  - [setId](arkts-performanceanalysis-hitracechain-setid-f.md)
+  - [tracepoint](arkts-performanceanalysis-hitracechain-tracepoint-f.md)
+  - [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md)
+  - [HiTraceCommunicationMode](arkts-performanceanalysis-hitracechain-hitracecommunicationmode-e.md)
+  - [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md)
+  - [HiTraceTracepointType](arkts-performanceanalysis-hitracechain-hitracetracepointtype-e.md)
+- [@ohos.hiTraceMeter](arkts-hitracemeter.md)
+  - [finishAsyncTrace](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md)
+  - [finishSyncTrace](arkts-performanceanalysis-hitracemeter-finishsynctrace-f.md)
+  - [finishTrace](arkts-performanceanalysis-hitracemeter-finishtrace-f.md)
+  - [isTraceEnabled](arkts-performanceanalysis-hitracemeter-istraceenabled-f.md)
+  - [registerTraceListener](arkts-performanceanalysis-hitracemeter-registertracelistener-f.md)
+  - [startAsyncTrace](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md)
+  - [startSyncTrace](arkts-performanceanalysis-hitracemeter-startsynctrace-f.md)
+  - [startTrace](arkts-performanceanalysis-hitracemeter-starttrace-f.md)
+  - [traceByValue](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md)
+  - [unregisterTraceListener](arkts-performanceanalysis-hitracemeter-unregistertracelistener-f.md)
+  - [TraceEventListener](arkts-performanceanalysis-hitracemeter-traceeventlistener-t.md)
+  - [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md)
 - [@ohos.hiviewdfx.FaultLogExtensionAbility](arkts-hiviewdfx-faultlogextensionability.md)
-  - [FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfxfaultlogextensionability-faultlogextensionability-c.md)
+  - [FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md)
 - [@ohos.hiviewdfx.FaultLogExtensionContext](arkts-hiviewdfx-faultlogextensioncontext.md)
-  - [FaultLogExtensionContext](arkts-performanceanalysis-hiviewdfxfaultlogextensioncontext-faultlogextensioncontext-c.md)
+  - [FaultLogExtensionContext](arkts-performanceanalysis-hiviewdfx-faultlogextensioncontext-faultlogextensioncontext-c.md)
 - [@ohos.hiviewdfx.hiAppEvent](arkts-hiviewdfx-hiappevent.md)
   - [hiAppEvent](arkts-performanceanalysis-hiappevent-n.md)
     - [domain](arkts-performanceanalysis-hiappevent-domain-n.md)

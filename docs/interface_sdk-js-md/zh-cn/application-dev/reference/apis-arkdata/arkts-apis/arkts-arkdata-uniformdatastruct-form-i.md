@@ -140,3 +140,53 @@ readonly uniformDataType: 'openharmony.form'
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
+
+let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+let formDetails: Record<string, number | string | Uint8Array> = {
+  'formKey1': 123,
+  'formKey2': 'formValue',
+  'formKey3': u8Array
+};
+let form: uniformDataStruct.Form = {
+  uniformDataType: 'openharmony.form',
+  formId: 1,
+  formName: 'formName',
+  bundleName: 'com.xx.app',
+  abilityName: 'abilityName',
+  module: 'module',
+  details: formDetails
+};
+console.info('form.uniformDataType: ' + form.uniformDataType);
+let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.OPENHARMONY_FORM, form);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
+
+let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+let formDetails: Record<string, int | long | double | string | Uint8Array> = {
+  'formKey1': 123,
+  'formKey2': 'formValue',
+  'formKey3': u8Array
+};
+let form: uniformDataStruct.Form = {
+  uniformDataType: 'openharmony.form',
+  formId: 1,
+  formName: 'formName',
+  bundleName: 'com.xx.app',
+  abilityName: 'abilityName',
+  module: 'module',
+  details: formDetails
+}
+console.info('form.uniformDataType: ' + form.uniformDataType);
+let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.OPENHARMONY_FORM, form);
+```
+

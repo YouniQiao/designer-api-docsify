@@ -1,6 +1,6 @@
 # @ohos.i18n
 
-本模块提供系统相关的以及增强的[国际化](../../../internationalization/i18n-l10n.md)能力，包括区域管理、电话号码处理、日历等，相关接口为 [ECMA 402](https://dev.ecma-international.org/publications-and-standards/standards/ecma-402/)标准中未定义的补充接口。 [国际化-Intl](../../apis-localization-kit/arkts-apis/arkts-intl.md)模块提供了ECMA 402标准定义的基础国际化接口，与本模块共同使用可提供完整的国际化能力。接口中使用的名词定义如下：
+本模块提供系统相关的以及增强的[国际化](../../../internationalization/i18n-l10n.md)能力，包括区域管理、电话号码处理、日历等，相关接口为 [ECMA 402](https://dev.ecma-international.org/publications-and-standards/standards/ecma-402/)标准中未定义的补充接口。 [国际化-Intl](arkts-intl.md)模块提供了ECMA 402标准定义的基础国际化接口，与本模块共同使用可提供完整的国际化能力。接口中使用的名词定义如下：
 
 - 模式字符串：由[Unicode日期字段符号](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)和单引号包裹的自定义文本自由组 合而成的字符串。 - 框架字符串：由[Unicode日期字段符号](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)自由组合而成的字符串，不支持自 定义文本。
 
@@ -52,8 +52,8 @@
 | [EntityRecognizer](arkts-i18n-entityrecognizer-c.md) | 提供实体识别相关的能力，可以获取文本中实体的类型和起止位置。当前支持识别的实体包括电话号码和时间日期。 |
 | [HolidayManager](arkts-i18n-holidaymanager-c.md) | 提供解析节假日数据的能力，包括节假日判断和指定年份节假日列表获取等。 |
 | [I18NUtil](arkts-i18n-i18nutil-c.md) | 国际化工具类，提供单位转换、获取日期顺序、获取时段名称、区域匹配和路径本地化等能力。 |
-| [ISO8601DateTimeFormat](arkts-i18n-iso8601datetimeformat-c.md) | 符合ISO 8601标准的日期格式化对象。 |
 | [IndexUtil](arkts-i18n-indexutil-c.md) | 提供索引相关的能力，包括区域索引列表和文本索引值获取。 |
+| [ISO8601DateTimeFormat](arkts-i18n-iso8601datetimeformat-c.md) | 符合ISO 8601标准的日期格式化对象。 |
 | [Normalizer](arkts-i18n-normalizer-c.md) | 提供文本标准化的能力。 |
 | [PhoneNumberFormat](arkts-i18n-phonenumberformat-c.md) | 提供电话号码相关的能力，包括电话号码有效性判断、格式化和归属地获取。 |
 | [SimpleDateTimeFormat](arkts-i18n-simpledatetimeformat-c.md) | 提供时间日期格式化的能力。 |

@@ -12,7 +12,7 @@ import { pointer } from '@kit.InputKit';
 function setCustomCursor(windowId: int, pixelMap: image.PixelMap, focusX?: int, focusY?: int): Promise<void>
 ```
 
-Sets a custom pointer style for a specified window. This API can set only the custom pointer style of windows within the current application process. For details about how to set the custom pointer style of the host window through the **UIExtensionAbility** process, see [setCustomCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkuiuicontext-cursorcontroller-c.md#setcustomcursor). This API uses a promise to return the result.
+Sets a custom pointer style for a specified window. This API can set only the custom pointer style of windows within the current application process. For details about how to set the custom pointer style of the host window through the **UIExtensionAbility** process, see [setCustomCursor](../../apis-default/arkts-apis/arkts-arkui-uicontext-cursorcontroller-c.md#setcustomcursor). This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -83,46 +83,6 @@ struct Index {
 }
 ```
 
-
-## setCustomCursor
-
-```TypeScript
-function setCustomCursor(windowId: int, cursor: CustomCursor, config: CursorConfig): Promise<void>
-```
-
-Sets a custom pointer style for a specified window. This API can set only the custom pointer style of windows within the current application process. For details about how to set the custom pointer style of the host window through the **UIExtensionAbility** process, see [setCustomCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkuiuicontext-cursorcontroller-c.md#setcustomcursor). This API uses a promise to return the result.
-
-The cursor may be switched back to the system style in the following cases: application window layout change, hot zone switching, page redirection, moving of the cursor out of the window and then back to the window, or moving of the cursor in different areas of the window. In this case, you need to reset the cursor style.
-
-**Since:** 23
-
-<!--Device-pointer-function setCustomCursor(windowId: int, cursor: CustomCursor, config: CursorConfig): Promise<void>--><!--Device-pointer-function setCustomCursor(windowId: int, cursor: CustomCursor, config: CursorConfig): Promise<void>-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| windowId | int | Yes | Window ID. |
-| cursor | [CustomCursor](arkts-input-pointer-customcursor-i.md) | Yes | Custom cursor resource. |
-| config | [CursorConfig](arkts-input-pointer-cursorconfig-i.md) | Yes | Custom cursor configuration, which specifies whether to adjust the cursor size based on system settings. If **followSystem** in **CursorConfig** is set to **true**, the supported adjustment range is [size of the cursor image, 256 x 256]. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Abnormal windowId parameter passed in; <br>2. Abnormal pixelMap parameter passed in; 3. Abnormal focusX parameter passed in; <br>4. Abnormal focusY parameter passed in. |
-| [26500001](../errorcode-pointer.md#26500001-invalid-window-id) | Invalid windowId. Possible causes: The window id does not belong to the current process. |
-
-**Examples**
-
 ```TypeScript
 import { pointer } from '@kit.InputKit';
 import { image } from '@kit.ImageKit';
@@ -163,4 +123,46 @@ struct Index {
   }
 }
 ```
+
+
+## setCustomCursor
+
+```TypeScript
+function setCustomCursor(windowId: int, cursor: CustomCursor, config: CursorConfig): Promise<void>
+```
+
+Sets a custom pointer style for a specified window. This API can set only the custom pointer style of windows within the current application process. For details about how to set the custom pointer style of the host window through the **UIExtensionAbility** process, see [setCustomCursor](../../apis-default/arkts-apis/arkts-arkui-uicontext-cursorcontroller-c.md#setcustomcursor). This API uses a promise to return the result.
+
+The cursor may be switched back to the system style in the following cases: application window layout change, hot zone switching, page redirection, moving of the cursor out of the window and then back to the window, or moving of the cursor in different areas of the window. In this case, you need to reset the cursor style.
+
+**Since:** 23
+
+<!--Device-pointer-function setCustomCursor(windowId: int, cursor: CustomCursor, config: CursorConfig): Promise<void>--><!--Device-pointer-function setCustomCursor(windowId: int, cursor: CustomCursor, config: CursorConfig): Promise<void>-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| windowId | int | Yes | Window ID. |
+| cursor | [CustomCursor](arkts-input-pointer-customcursor-i.md) | Yes | Custom cursor resource. |
+| config | [CursorConfig](arkts-input-pointer-cursorconfig-i.md) | Yes | Custom cursor configuration, which specifies whether to adjust the cursor size based on system settings. If **followSystem** in **CursorConfig** is set to **true**, the supported adjustment range is [size of the cursor image, 256 x 256]. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Abnormal windowId parameter passed in; <br>2. Abnormal pixelMap parameter passed in; 3. Abnormal focusX parameter passed in; <br>4. Abnormal focusY parameter passed in. |
+| [26500001](../errorcode-pointer.md#26500001-invalid-window-id) | Invalid windowId. Possible causes: The window id does not belong to the current process. |
+
+**Examples**
+
+See [setCustomCursor](#setcustomcursor)
 

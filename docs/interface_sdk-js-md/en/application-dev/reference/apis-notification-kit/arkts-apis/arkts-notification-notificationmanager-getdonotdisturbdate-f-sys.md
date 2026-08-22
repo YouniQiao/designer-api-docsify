@@ -30,7 +30,7 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DoNotDisturbDate&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -59,6 +59,46 @@ let getDoNotDisturbDateCallback = (err: BusinessError, data: notificationManager
 }
 
 notificationManager.getDoNotDisturbDate(getDoNotDisturbDateCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.getDoNotDisturbDate().then((data: notificationManager.DoNotDisturbDate) => {
+  console.info(`getDoNotDisturbDate success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let getDoNotDisturbDateCallback = (err: BusinessError, data: notificationManager.DoNotDisturbDate): void => {
+    if (err) {
+        console.error(`getDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+        console.info(`getDoNotDisturbDate success, data is ${JSON.stringify(data)}`);
+    }
+}
+
+// Use the actual user ID when calling the API.
+let userId: number = 1;
+
+notificationManager.getDoNotDisturbDate(userId, getDoNotDisturbDateCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use the actual user ID when calling the API.
+let userId: number = 1;
+
+notificationManager.getDoNotDisturbDate(userId).then((data: notificationManager.DoNotDisturbDate) => {
+    console.info(`getDoNotDisturbDate success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -102,15 +142,7 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getDoNotDisturbDate().then((data: notificationManager.DoNotDisturbDate) => {
-  console.info(`getDoNotDisturbDate success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getDoNotDisturbDate](#getdonotdisturbdate)
 
 
 ## getDoNotDisturbDate
@@ -138,7 +170,7 @@ This API can be properly called on devices other than wearables and TVs. If it i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | int | Yes | User ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DoNotDisturbDate&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -156,22 +188,7 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let getDoNotDisturbDateCallback = (err: BusinessError, data: notificationManager.DoNotDisturbDate): void => {
-    if (err) {
-        console.error(`getDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`getDoNotDisturbDate success, data is ${JSON.stringify(data)}`);
-    }
-}
-
-// Use the actual user ID when calling the API.
-let userId: number = 1;
-
-notificationManager.getDoNotDisturbDate(userId, getDoNotDisturbDateCallback);
-```
+See [getDoNotDisturbDate](#getdonotdisturbdate)
 
 
 ## getDoNotDisturbDate
@@ -222,16 +239,5 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use the actual user ID when calling the API.
-let userId: number = 1;
-
-notificationManager.getDoNotDisturbDate(userId).then((data: notificationManager.DoNotDisturbDate) => {
-    console.info(`getDoNotDisturbDate success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getDoNotDisturbDate](#getdonotdisturbdate)
 

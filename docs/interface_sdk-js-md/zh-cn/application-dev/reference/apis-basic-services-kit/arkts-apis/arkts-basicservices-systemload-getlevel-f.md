@@ -26,3 +26,16 @@ function getLevel(): Promise<SystemLoadLevel>
 | --- | --- |
 | Promise&lt;[SystemLoadLevel](arkts-basicservices-systemload-systemloadlevel-e.md)&gt; | Promise对象，返回系统负载融合档位。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { systemLoad } from '@kit.BasicServicesKit';
+
+systemLoad.getLevel().then((res: systemLoad.SystemLoadLevel) => {
+    console.info(`getLevel promise succeeded. result: ` + JSON.stringify(res));
+}).catch((err: BusinessError) => {
+    console.error(`getLevel promise failed. code is ${err.code} message is ${err.message}`);
+})
+```
+

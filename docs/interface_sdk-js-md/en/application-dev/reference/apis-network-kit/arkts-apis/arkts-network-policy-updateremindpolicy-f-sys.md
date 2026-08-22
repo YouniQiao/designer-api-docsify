@@ -31,7 +31,7 @@ Updates a reminder policy. This API uses an asynchronous callback to return the 
 | netType | NetBearType | Yes | Network type. |
 | simId | string | Yes | SIM card ID. |
 | remindType | [RemindType](arkts-network-policy-remindtype-e-sys.md) | Yes | Enumerates the reminder types. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -58,6 +58,24 @@ policy.updateRemindPolicy(
     console.error(JSON.stringify(error));
   }
 );
+```
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .updateRemindPolicy(
+    connection.NetBearType.BEARER_CELLULAR,
+    '1',
+    policy.RemindType.REMIND_TYPE_WARNING
+  )
+  .then(() => {
+    console.info('updateRemindPolicy success');
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
 ```
 
 
@@ -106,21 +124,5 @@ Updates a reminder policy. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .updateRemindPolicy(
-    connection.NetBearType.BEARER_CELLULAR,
-    '1',
-    policy.RemindType.REMIND_TYPE_WARNING
-  )
-  .then(() => {
-    console.info('updateRemindPolicy success');
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+See [updateRemindPolicy](#updateremindpolicy)
 

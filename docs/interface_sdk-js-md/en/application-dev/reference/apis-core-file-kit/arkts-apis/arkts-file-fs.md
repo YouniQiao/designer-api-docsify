@@ -30,7 +30,7 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 | [close](arkts-corefile-file-fs-close-f.md) | Closes a file or directory. This API uses a promise to return the result. |
 | [close](arkts-corefile-file-fs-close-f.md) | Closes a file or directory. This API uses an asynchronous callback to return the result. |
 | [closeSync](arkts-corefile-file-fs-closesync-f.md) | Closes a file or directory. This API returns the result synchronously. |
-| [connectDfs](arkts-corefile-file-fs-connectdfs-f.md) | Triggers connection. If the peer device is abnormal, [onStatus](arkts-corefile-filefs-dfslisteners-i.md#onstatus) in **DfsListeners** will be called to notify the application. |
+| [connectDfs](arkts-corefile-file-fs-connectdfs-f.md) | Triggers connection. If the peer device is abnormal, [onStatus](arkts-corefile-file-fs-dfslisteners-i.md#onstatus) in **DfsListeners** will be called to notify the application. |
 | [copy](arkts-corefile-file-fs-copy-f.md) | Copies a file or directory. This API uses a promise to return the result. |
 | [copy](arkts-corefile-file-fs-copy-f.md) | Copies a file or directory. This API uses an asynchronous callback to return the result. |
 | [copy](arkts-corefile-file-fs-copy-f.md) | Copies a file or directory. This API uses an asynchronous callback to return the result. |
@@ -49,9 +49,9 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 | [createRandomAccessFile](arkts-corefile-file-fs-createrandomaccessfile-f.md) | Creates a **RandomAccessFile** instance based on a file path or file object. This API uses an asynchronous callback to return the result. |
 | [createRandomAccessFileSync](arkts-corefile-file-fs-createrandomaccessfilesync-f.md) | Creates a **RandomAccessFile** instance based on a file path or file object. |
 | [createReadStream](arkts-corefile-file-fs-createreadstream-f.md) | Creates a readable stream. This API returns the result synchronously. |
-| [createStream](arkts-corefile-file-fs-createstream-f.md) | Creates a stream based on a file path. This API uses a promise to return the result. To close the stream, use **close()** of [Stream](arkts-corefile-filefs-stream-i.md). |
-| [createStream](arkts-corefile-file-fs-createstream-f.md) | Creates a stream based on a file path. This API uses an asynchronous callback to return the result. To close the stream, use **close()** of [Stream](arkts-corefile-filefs-stream-i.md). |
-| [createStreamSync](arkts-corefile-file-fs-createstreamsync-f.md) | Creates a stream based on a file path. This API returns the result synchronously. To close the stream, use **close()** of [Stream](arkts-corefile-filefs-stream-i.md). |
+| [createStream](arkts-corefile-file-fs-createstream-f.md) | Creates a stream based on a file path. This API uses a promise to return the result. To close the stream, use **close()** of [Stream](arkts-corefile-file-fs-stream-i.md). |
+| [createStream](arkts-corefile-file-fs-createstream-f.md) | Creates a stream based on a file path. This API uses an asynchronous callback to return the result. To close the stream, use **close()** of [Stream](arkts-corefile-file-fs-stream-i.md). |
+| [createStreamSync](arkts-corefile-file-fs-createstreamsync-f.md) | Creates a stream based on a file path. This API returns the result synchronously. To close the stream, use **close()** of [Stream](arkts-corefile-file-fs-stream-i.md). |
 | [createWatcher](arkts-corefile-file-fs-createwatcher-f.md) | Creates a **Watcher** object to listen for file or directory changes. |
 | [createWriteStream](arkts-corefile-file-fs-createwritestream-f.md) | Creates a writeable stream. This API returns the result synchronously. |
 | [disconnectDfs](arkts-corefile-file-fs-disconnectdfs-f.md) | Triggers disconnection. |
@@ -59,9 +59,9 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 | [fdatasync](arkts-corefile-file-fs-fdatasync-f.md) | Synchronizes the data of a file. This API uses a promise to return the result. |
 | [fdatasync](arkts-corefile-file-fs-fdatasync-f.md) | Synchronizes the data of a file. This API uses an asynchronous callback to return the result. |
 | [fdatasyncSync](arkts-corefile-file-fs-fdatasyncsync-f.md) | Synchronizes the data of a file. This API returns the result synchronously. |
-| [fdopenStream](arkts-corefile-file-fs-fdopenstream-f.md) | Opens a stream based on an FD. This API uses a promise to return the result. To close the stream, use **close()** of [Stream](arkts-corefile-filefs-stream-i.md). |
-| [fdopenStream](arkts-corefile-file-fs-fdopenstream-f.md) | Opens a stream based on an FD. This API uses an asynchronous callback to return the result. To close the stream, use **close()** of [Stream](arkts-corefile-filefs-stream-i.md). |
-| [fdopenStreamSync](arkts-corefile-file-fs-fdopenstreamsync-f.md) | Opens a stream based on an FD. This API returns the result synchronously. To close the stream, use **close()** of [Stream](arkts-corefile-filefs-stream-i.md). |
+| [fdopenStream](arkts-corefile-file-fs-fdopenstream-f.md) | Opens a stream based on an FD. This API uses a promise to return the result. To close the stream, use **close()** of [Stream](arkts-corefile-file-fs-stream-i.md). |
+| [fdopenStream](arkts-corefile-file-fs-fdopenstream-f.md) | Opens a stream based on an FD. This API uses an asynchronous callback to return the result. To close the stream, use **close()** of [Stream](arkts-corefile-file-fs-stream-i.md). |
+| [fdopenStreamSync](arkts-corefile-file-fs-fdopenstreamsync-f.md) | Opens a stream based on an FD. This API returns the result synchronously. To close the stream, use **close()** of [Stream](arkts-corefile-file-fs-stream-i.md). |
 | [fsync](arkts-corefile-file-fs-fsync-f.md) | Synchronizes the cached data of a file to storage. This API uses a promise to return the result. |
 | [fsync](arkts-corefile-file-fs-fsync-f.md) | Synchronizes the cached data of a file to storage. This API uses an asynchronous callback to return the result. |
 | [fsyncSync](arkts-corefile-file-fs-fsyncsync-f.md) | Synchronizes the cached data of a file to storage. This API returns the result synchronously. |
@@ -145,50 +145,50 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 
 | Name | Description |
 | --- | --- |
-| [AtomicFile](arkts-corefile-filefs-atomicfile-c.md) | AtomicFile is a class used to perform atomic read and write operations on files. |
-| [ReadStream](arkts-corefile-filefs-readstream-c.md) | Defines a readable stream. You need to use fileIo.createReadStream to create a **ReadStream** instance, which is inherited from [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readableoptions-i.md). |
-| [TaskSignal](arkts-corefile-filefs-tasksignal-c.md) | Provides APIs for interrupting a copy task. |
-| [WriteStream](arkts-corefile-filefs-writestream-c.md) | Defines a writeable stream. You need to use fileIo.createWriteStream to create a **WriteStream** instance, which is inherited from [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md) . |
+| [AtomicFile](arkts-corefile-file-fs-atomicfile-c.md) | AtomicFile is a class used to perform atomic read and write operations on files. |
+| [ReadStream](arkts-corefile-file-fs-readstream-c.md) | Defines a readable stream. You need to use fileIo.createReadStream to create a **ReadStream** instance, which is inherited from [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readableoptions-i.md). |
+| [TaskSignal](arkts-corefile-file-fs-tasksignal-c.md) | Provides APIs for interrupting a copy task. |
+| [WriteStream](arkts-corefile-file-fs-writestream-c.md) | Defines a writeable stream. You need to use fileIo.createWriteStream to create a **WriteStream** instance, which is inherited from [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md) . |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ConflictFiles](arkts-corefile-filefs-conflictfiles-i.md) | Defines conflicting file information used in **copyDir()** or **moveDir()**. |
-| [CopyOptions](arkts-corefile-filefs-copyoptions-i.md) | Defines the callback for listening for the copy progress. |
-| [DfsListeners](arkts-corefile-filefs-dfslisteners-i.md) | Provides APIs for observing events. listening for the distributed file system status. |
-| [File](arkts-corefile-filefs-file-i.md) | Represents a **File** object opened by **open()**. |
-| [FileFilter](arkts-corefile-filefs-filefilter-i.md) | Defines the file name filtering interface used by listFileExt(). |
-| [FileMapping](arkts-corefile-filefs-filemapping-i.md) | File mapping object. Before invoking the FileMapping method, you need to use the mmap() method (synchronous or asynchronous) to construct a FileMapping instance. |
-| [Filter](arkts-corefile-filefs-filter-i.md) | Defines the file filtering configuration used by **listFile()**. |
-| [ListFileExtOptions](arkts-corefile-filefs-listfileextoptions-i.md) | Defines the options used in listFileExt(). |
-| [ListFileOptions](arkts-corefile-filefs-listfileoptions-i.md) | Defines the options used in **listFile()**. |
-| [Options](arkts-corefile-filefs-options-i.md) | Defines the options used in **readLines()**. |
-| [Progress](arkts-corefile-filefs-progress-i.md) | Defines the copy progress information. |
-| [RandomAccessFile](arkts-corefile-filefs-randomaccessfile-i.md) | Provides APIs for randomly reading and writing a stream. Before invoking any API of **RandomAccessFile**, you need to use **createRandomAccessFile()** to create a **RandomAccessFile** instance synchronously or asynchronously. |
-| [RandomAccessFileOptions](arkts-corefile-filefs-randomaccessfileoptions-i.md) | Defines the options used in **createRandomAccessFile()**. |
-| [ReadOptions](arkts-corefile-filefs-readoptions-i.md) | Defines the options used in **read()**. |
-| [ReadStreamOptions](arkts-corefile-filefs-readstreamoptions-i.md) | Defines the options used in **createReadStream()**. |
-| [ReadTextOptions](arkts-corefile-filefs-readtextoptions-i.md) | Defines the options used in **readText()**. It inherits from [ReadOptions](../../apis-default/arkts-apis/arkts-filefs-readoptions-i.md). |
-| [ReaderIterator](arkts-corefile-filefs-readeriterator-i.md) | Provides a **ReaderIterator** object. Before calling APIs of **ReaderIterator**, you need to use **readLines()** to create a **ReaderIterator** instance. |
-| [ReaderIteratorResult](arkts-corefile-filefs-readeriteratorresult-i.md) | Represents the information obtained by the **ReaderIterator** object. |
-| [Stat](arkts-corefile-filefs-stat-i.md) | Represents detailed file information. Before calling any API of the **Stat()** class, use stat() to create a **Stat** instance. |
-| [Stream](arkts-corefile-filefs-stream-i.md) | Provides API for stream operations. Before calling any API of **Stream**, you need to create a **Stream** instance by using fileIo.createStream or fileIo.fdopenStream. |
-| [WatchEvent](arkts-corefile-filefs-watchevent-i.md) | Defines the event to observe. |
-| [WatchEventListener](arkts-corefile-filefs-watcheventlistener-i.md) | (event: WatchEvent): void |
-| [Watcher](arkts-corefile-filefs-watcher-i.md) | Provides APIs for observing the changes of files or directories. Before using the APIs of **Watcher**, call **createWatcher()** to create a **Watcher** object. |
-| [WriteOptions](arkts-corefile-filefs-writeoptions-i.md) | Defines the options used in **write()**. It inherits from [Options](../../apis-default/arkts-apis/arkts-filefs-options-i.md). |
-| [WriteStreamOptions](arkts-corefile-filefs-writestreamoptions-i.md) | Defines the options used in **createWriteStream()**. |
+| [ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md) | Defines conflicting file information used in **copyDir()** or **moveDir()**. |
+| [CopyOptions](arkts-corefile-file-fs-copyoptions-i.md) | Defines the callback for listening for the copy progress. |
+| [DfsListeners](arkts-corefile-file-fs-dfslisteners-i.md) | Provides APIs for observing events. listening for the distributed file system status. |
+| [File](arkts-corefile-file-fs-file-i.md) | Represents a **File** object opened by **open()**. |
+| [FileFilter](arkts-corefile-file-fs-filefilter-i.md) | Defines the file name filtering interface used by listFileExt(). |
+| [FileMapping](arkts-corefile-file-fs-filemapping-i.md) | File mapping object. Before invoking the FileMapping method, you need to use the mmap() method (synchronous or asynchronous) to construct a FileMapping instance. |
+| [Filter](arkts-corefile-file-fs-filter-i.md) | Defines the file filtering configuration used by **listFile()**. |
+| [ListFileExtOptions](arkts-corefile-file-fs-listfileextoptions-i.md) | Defines the options used in listFileExt(). |
+| [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | Defines the options used in **listFile()**. |
+| [Options](arkts-corefile-file-fs-options-i.md) | Defines the options used in **readLines()**. |
+| [Progress](arkts-corefile-file-fs-progress-i.md) | Defines the copy progress information. |
+| [RandomAccessFile](arkts-corefile-file-fs-randomaccessfile-i.md) | Provides APIs for randomly reading and writing a stream. Before invoking any API of **RandomAccessFile**, you need to use **createRandomAccessFile()** to create a **RandomAccessFile** instance synchronously or asynchronously. |
+| [RandomAccessFileOptions](arkts-corefile-file-fs-randomaccessfileoptions-i.md) | Defines the options used in **createRandomAccessFile()**. |
+| [ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md) | Provides a **ReaderIterator** object. Before calling APIs of **ReaderIterator**, you need to use **readLines()** to create a **ReaderIterator** instance. |
+| [ReaderIteratorResult](arkts-corefile-file-fs-readeriteratorresult-i.md) | Represents the information obtained by the **ReaderIterator** object. |
+| [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | Defines the options used in **read()**. |
+| [ReadStreamOptions](arkts-corefile-file-fs-readstreamoptions-i.md) | Defines the options used in **createReadStream()**. |
+| [ReadTextOptions](arkts-corefile-file-fs-readtextoptions-i.md) | Defines the options used in **readText()**. It inherits from [ReadOptions](arkts-corefile-file-fs-readoptions-i.md). |
+| [Stat](arkts-corefile-file-fs-stat-i.md) | Represents detailed file information. Before calling any API of the **Stat()** class, use stat() to create a **Stat** instance. |
+| [Stream](arkts-corefile-file-fs-stream-i.md) | Provides API for stream operations. Before calling any API of **Stream**, you need to create a **Stream** instance by using fileIo.createStream or fileIo.fdopenStream. |
+| [Watcher](arkts-corefile-file-fs-watcher-i.md) | Provides APIs for observing the changes of files or directories. Before using the APIs of **Watcher**, call **createWatcher()** to create a **Watcher** object. |
+| [WatchEvent](arkts-corefile-file-fs-watchevent-i.md) | Defines the event to observe. |
+| [WatchEventListener](arkts-corefile-file-fs-watcheventlistener-i.md) | (event: WatchEvent): void |
+| [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Defines the options used in **write()**. It inherits from [Options](arkts-corefile-file-fs-options-i.md). |
+| [WriteStreamOptions](arkts-corefile-file-fs-writestreamoptions-i.md) | Defines the options used in **createWriteStream()**. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [AccessFlagType](arkts-corefile-filefs-accessflagtype-e.md) | Enumerates the locations of the file to verify. |
-| [AccessModeType](arkts-corefile-filefs-accessmodetype-e.md) | Enumerates the access modes to verify. If this parameter is left blank, the system checks whether the file exists. |
-| [LocationType](arkts-corefile-filefs-locationtype-e.md) | Enumerates the file locations. |
-| [MappingMode](arkts-corefile-filefs-mappingmode-e.md) | Enumerated type of the file memory mapping mode, which can be used by the mmap API. |
-| [WhenceType](arkts-corefile-filefs-whencetype-e.md) | Enumerates the types of the relative offset position used in **lseek()**. |
+| [AccessFlagType](arkts-corefile-file-fs-accessflagtype-e.md) | Enumerates the locations of the file to verify. |
+| [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | Enumerates the access modes to verify. If this parameter is left blank, the system checks whether the file exists. |
+| [LocationType](arkts-corefile-file-fs-locationtype-e.md) | Enumerates the file locations. |
+| [MappingMode](arkts-corefile-file-fs-mappingmode-e.md) | Enumerated type of the file memory mapping mode, which can be used by the mmap API. |
+| [WhenceType](arkts-corefile-file-fs-whencetype-e.md) | Enumerates the types of the relative offset position used in **lseek()**. |
 
 ### Types
 

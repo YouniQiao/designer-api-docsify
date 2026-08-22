@@ -53,6 +53,16 @@ call.cancelMuted((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.cancelMuted().then(() => {
+    console.info(`cancelMuted success.`);
+}).catch((err: BusinessError) => {
+    console.error(`cancelMuted fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## cancelMuted
 
@@ -87,13 +97,5 @@ function cancelMuted(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.cancelMuted().then(() => {
-    console.info(`cancelMuted success.`);
-}).catch((err: BusinessError) => {
-    console.error(`cancelMuted fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [cancelMuted](#cancelmuted)
 

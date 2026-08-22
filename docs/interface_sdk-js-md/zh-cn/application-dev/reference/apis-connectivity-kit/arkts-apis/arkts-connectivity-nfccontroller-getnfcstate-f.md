@@ -28,3 +28,13 @@ function getNfcState(): NfcState
 | --- | --- |
 | [NfcState](arkts-connectivity-nfccontroller-nfcstate-e.md) | NFC状态值，详细请见[NfcState]{ |
 
+**示例**
+
+```TypeScript
+import { nfcController } from '@kit.ConnectivityKit';
+
+// 查询nfc状态
+let nfcState: nfcController.NfcState = nfcController.getNfcState();
+console.info("nfcController on callback nfcstate: " + nfcState);
+```
+

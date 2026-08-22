@@ -44,3 +44,12 @@ let pid = process.pid;
 let result = process.kill(28, pid);
 ```
 
+```TypeScript
+// 创建ProcessManager实例
+let processManager = new process.ProcessManager();
+// 获取当前进程pid
+let pres = process.pid;
+// 发送信号28结束当前进程
+let result = processManager.kill(28, pres);
+```
+

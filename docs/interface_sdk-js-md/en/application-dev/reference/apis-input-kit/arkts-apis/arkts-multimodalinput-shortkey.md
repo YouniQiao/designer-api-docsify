@@ -22,7 +22,7 @@ import { FingerprintEvent } from '@kit.InputKit';
 
 | Name | Description |
 | --- | --- |
-| [FingerprintEvent](arkts-input-multimodalinputshortkey-fingerprintevent-i-sys.md) | Provides fingerprint gesture event types and the offset of the fingerprint sensor relative to the side edge. |
+| [FingerprintEvent](arkts-input-multimodalinput-shortkey-fingerprintevent-i-sys.md) | Provides fingerprint gesture event types and the offset of the fingerprint sensor relative to the side edge. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -30,6 +30,6 @@ import { FingerprintEvent } from '@kit.InputKit';
 
 | Name | Description |
 | --- | --- |
-| [FingerprintAction](arkts-input-multimodalinputshortkey-fingerprintaction-e-sys.md) | Enumerates fingerprint gesture event types. |
+| [FingerprintAction](arkts-input-multimodalinput-shortkey-fingerprintaction-e-sys.md) | Enumerates fingerprint gesture event types. |
 <!--DelEnd-->
 

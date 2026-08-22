@@ -47,6 +47,42 @@ destroy(callback: AsyncCallback<void>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+**示例**
+
+```TypeScript
+currentAVSession.destroy().then(() => {
+  console.info('Succeeded in destroying.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+currentAVSession.destroy((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to destroy, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in destroying.');
+});
+```
+
+```TypeScript
+avcontroller.destroy().then(() => {
+  console.info('Succeeded in destroying.');
+});
+```
+
+```TypeScript
+avcontroller.destroy((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to destroy controller, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in destroying.');
+});
+```
+
 ## destroy
 
 ```TypeScript
@@ -76,6 +112,10 @@ destroy(): Promise<void>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+**示例**
+
+参见 [destroy](#destroy)
+
 ## getAVCallState
 
 ```TypeScript
@@ -103,6 +143,24 @@ getAVCallState(callback: AsyncCallback<AVCallState>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.getAVCallState().then((callstate: avSession.AVCallState) => {
+  console.info(`Succeeded in getting AV call state: ${callstate.state}`);
+});
+```
+
+```TypeScript
+avcontroller.getAVCallState((err: BusinessError, callstate: avSession.AVCallState) => {
+  if (err) {
+    console.error(`Failed to get AV call state, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting AV call state: ${callstate.state}`);
+});
+```
 
 ## getAVCallState
 
@@ -132,6 +190,10 @@ getAVCallState(): Promise<AVCallState>
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+**示例**
+
+参见 [getAVCallState](#getavcallstate)
+
 ## getAVMetadata
 
 ```TypeScript
@@ -159,6 +221,24 @@ getAVMetadata(callback: AsyncCallback<AVMetadata>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.getAVMetadata().then((metadata: avSession.AVMetadata) => {
+  console.info(`Succeeded in getting AV metadata, assetId: ${metadata.assetId}`);
+});
+```
+
+```TypeScript
+avcontroller.getAVMetadata((err: BusinessError, metadata: avSession.AVMetadata) => {
+  if (err) {
+    console.error(`Failed to get AV metadata, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting AV metadata, assetId: ${metadata.assetId}`);
+});
+```
 
 ## getAVMetadata
 
@@ -190,6 +270,10 @@ getAVMetadata(): Promise<AVMetadata>
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+**示例**
+
+参见 [getAVMetadata](#getavmetadata)
+
 ## getAVMetadataSync
 
 ```TypeScript
@@ -220,6 +304,12 @@ getAVMetadataSync(): AVMetadata
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+**示例**
+
+```TypeScript
+let metaData: avSession.AVMetadata = avcontroller.getAVMetadataSync();
+```
+
 ## getAVPlaybackState
 
 ```TypeScript
@@ -247,6 +337,42 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avCastController.getAVPlaybackState((err: BusinessError, state: avSession.AVPlaybackState) => {
+  if (err) {
+    console.error(`Failed to get AV playback state, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting AV playback state.');
+});
+```
+
+```TypeScript
+avCastController.getAVPlaybackState().then((state: avSession.AVPlaybackState) => {
+  console.info('Succeeded in getting AV playback state.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get AV playback state, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+avcontroller.getAVPlaybackState((err: BusinessError, state: avSession.AVPlaybackState) => {
+  if (err) {
+    console.error(`Failed to get AV playback state, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting AV playback state.');
+});
+```
+
+```TypeScript
+avcontroller.getAVPlaybackState().then((state: avSession.AVPlaybackState) => {
+  console.info('Succeeded in getting AV playback state.');
+});
+```
 
 ## getAVPlaybackState
 
@@ -278,6 +404,10 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+**示例**
+
+参见 [getAVPlaybackState](#getavplaybackstate)
+
 ## getAVPlaybackStateSync
 
 ```TypeScript
@@ -308,6 +438,12 @@ getAVPlaybackStateSync(): AVPlaybackState
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+**示例**
+
+```TypeScript
+let playbackState: avSession.AVPlaybackState = avcontroller.getAVPlaybackStateSync();
+```
+
 ## getAVQueueItems
 
 ```TypeScript
@@ -335,6 +471,24 @@ getAVQueueItems(callback: AsyncCallback<Array<AVQueueItem>>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.getAVQueueItems().then((items: avSession.AVQueueItem[]) => {
+  console.info(`Succeeded in getting AV queue items, length: ${items.length}`);
+});
+```
+
+```TypeScript
+avcontroller.getAVQueueItems((err: BusinessError, items: avSession.AVQueueItem[]) => {
+  if (err) {
+    console.error(`Failed to get AV queue items, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting AV queue items, length: ${items.length}`);
+});
+```
 
 ## getAVQueueItems
 
@@ -366,6 +520,10 @@ getAVQueueItems(): Promise<Array<AVQueueItem>>
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+**示例**
+
+参见 [getAVQueueItems](#getavqueueitems)
+
 ## getAVQueueItemsSync
 
 ```TypeScript
@@ -396,6 +554,12 @@ getAVQueueItemsSync(): Array<AVQueueItem>
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+**示例**
+
+```TypeScript
+let currentQueueItems: Array<avSession.AVQueueItem> = avcontroller.getAVQueueItemsSync();
+```
+
 ## getAVQueueTitle
 
 ```TypeScript
@@ -423,6 +587,24 @@ getAVQueueTitle(callback: AsyncCallback<string>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.getAVQueueTitle().then((title: string) => {
+  console.info(`Succeeded in getting AV queue title: ${title}`);
+});
+```
+
+```TypeScript
+avcontroller.getAVQueueTitle((err: BusinessError, title: string) => {
+  if (err) {
+    console.error(`Failed to get AV queue title, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting AV queue title: ${title}`);
+});
+```
 
 ## getAVQueueTitle
 
@@ -454,6 +636,10 @@ getAVQueueTitle(): Promise<string>
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+**示例**
+
+参见 [getAVQueueTitle](#getavqueuetitle)
+
 ## getAVQueueTitleSync
 
 ```TypeScript
@@ -484,6 +670,12 @@ getAVQueueTitleSync(): string
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+**示例**
+
+```TypeScript
+let currentQueueTitle: string = avcontroller.getAVQueueTitleSync();
+```
+
 ## getCallMetadata
 
 ```TypeScript
@@ -512,6 +704,24 @@ getCallMetadata(callback: AsyncCallback<CallMetadata>): void
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+**示例**
+
+```TypeScript
+avcontroller.getCallMetadata().then((calldata: avSession.CallMetadata) => {
+  console.info(`Succeeded in getting call metadata, name: ${calldata.name}`);
+});
+```
+
+```TypeScript
+avcontroller.getCallMetadata((err: BusinessError, calldata: avSession.CallMetadata) => {
+  if (err) {
+    console.error(`Failed to get call metadata, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting call metadata, name: ${calldata.name}`);
+});
+```
+
 ## getCallMetadata
 
 ```TypeScript
@@ -539,6 +749,10 @@ getCallMetadata(): Promise<CallMetadata>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+参见 [getCallMetadata](#getcallmetadata)
 
 ## getDesktopLyricState
 
@@ -572,6 +786,28 @@ getDesktopLyricState(): Promise<DesktopLyricState>
 | [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
 
+**示例**
+
+```TypeScript
+if (currentAVSession !== undefined) {
+  (currentAVSession as avSession.AVSession).getDesktopLyricState()
+    .then((state: avSession.DesktopLyricState) => {
+    console.info(`getDesktopLyricState: ${state.isLocked}`);
+  })
+}
+```
+
+```TypeScript
+currentAVSession.getDesktopLyricState()
+    .then((state: avSession.DesktopLyricState) => {
+    console.info(`getDesktopLyricState: ${state.isLocked}`);
+});
+```
+
+```TypeScript
+avcontroller.getDesktopLyricState();
+```
+
 ## getExtras
 
 ```TypeScript
@@ -603,6 +839,57 @@ getExtras(callback: AsyncCallback<{[key: string]: Object}>): void
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
+**示例**
+
+```TypeScript
+// Index.ets
+import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  private tag: string = "createNewSession";
+  private sessionId: string = "";
+  private controller: avSession.AVSessionController | undefined = undefined;
+  private currentAVSession?: avSession.AVSession;
+
+  aboutToAppear(): void {
+
+    avSession.createAVSession(this.getUIContext().getHostContext(), this.tag, "audio")
+      .then(async (data: avSession.AVSession) => {
+        this.currentAVSession = data;
+        this.sessionId = this.currentAVSession.sessionId;
+        this.controller = await this.currentAVSession.getController();
+        console.info(`Succeeded in creating AV session, sessionId: ${this.sessionId}`);
+        (this.controller as avSession.AVSessionController).getExtras().then((extras) => {
+          console.info(`Succeeded in getting extras: ${extras}`);
+        });
+      });
+  }
+
+  build() {
+    Column() {
+      Text('AVSession Demo')
+        .fontSize(20)
+        .margin(10)
+    }
+    .width('100%')
+    .height('100%')
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```
+
+```TypeScript
+avcontroller.getExtras((err: BusinessError, extras: Record<string, Object>) => {
+  if (err) {
+    console.error(`Failed to get extras, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting extras: ${JSON.stringify(extras)}`);
+});
+```
+
 ## getExtras
 
 ```TypeScript
@@ -632,6 +919,10 @@ Get custom media packets provided by the corresponding session
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+
+**示例**
+
+参见 [getExtras](#getextras)
 
 ## getExtras
 
@@ -666,6 +957,10 @@ getExtras(): Promise<{[key: string]: Object}>
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
+**示例**
+
+参见 [getExtras](#getextras)
+
 ## getExtras
 
 ```TypeScript
@@ -697,6 +992,10 @@ Get custom media packets provided by the corresponding session
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+
+**示例**
+
+参见 [getExtras](#getextras)
 
 ## getExtrasWithEvent
 
@@ -733,6 +1032,28 @@ getExtrasWithEvent(extraEvent: string): Promise<ExtraInfo>
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 
+**示例**
+
+```TypeScript
+let controller: avSession.AVSessionController | undefined;
+const COMMON_COMMAND_STRING_1 = 'AUDIO_GET_VOLUME';
+const COMMON_COMMAND_STRING_2 = 'AUDIO_GET_AVAILABLE_DEVICES';
+const COMMON_COMMAND_STRING_3 = 'AUDIO_GET_PREFERRED_OUTPUT_DEVICE_FOR_RENDERER_INFO';
+if (controller !== undefined) {
+  controller.getExtrasWithEvent(COMMON_COMMAND_STRING_1).then(() => {
+    console.info(`${[COMMON_COMMAND_STRING_1]}`);
+  })
+
+  controller.getExtrasWithEvent(COMMON_COMMAND_STRING_2).then(() => {
+    console.info(`${[COMMON_COMMAND_STRING_2]}`);
+  })
+
+  controller.getExtrasWithEvent(COMMON_COMMAND_STRING_3).then(() => {
+    console.info(`${[COMMON_COMMAND_STRING_3]}`);
+  })
+}
+```
+
 ## getLaunchAbility
 
 ```TypeScript
@@ -760,6 +1081,24 @@ getLaunchAbility(callback: AsyncCallback<WantAgent>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.getLaunchAbility().then((agent: WantAgent) => {
+  console.info(`Succeeded in getting launch ability: ${agent}`);
+});
+```
+
+```TypeScript
+avcontroller.getLaunchAbility((err: BusinessError, agent: WantAgent) => {
+  if (err) {
+    console.error(`Failed to get launch ability, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting launch ability: ${agent}`);
+});
+```
 
 ## getLaunchAbility
 
@@ -790,6 +1129,10 @@ getLaunchAbility(): Promise<WantAgent>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+参见 [getLaunchAbility](#getlaunchability)
 
 ## getMediaCenterControlType
 
@@ -822,6 +1165,14 @@ getMediaCenterControlType(): Promise<Array<AVMediaCenterControlType>>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+**示例**
+
+```TypeScript
+avcontroller.getMediaCenterControlType().then((types: avSession.AVMediaCenterControlType[]) => {
+  console.info(`Succeeded in getting media center control types, size: ${types.length}`);
+});
+```
+
 ## getOutputDevice
 
 ```TypeScript
@@ -848,6 +1199,42 @@ getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void
 | --- | --- |
 | 600101 | Session service exception. |
 | 600103 | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+currentAVSession.getOutputDevice().then((outputDeviceInfo: avSession.OutputDeviceInfo) => {
+  console.info(`Succeeded in getting output device, devices length: ${outputDeviceInfo.devices.length}`);
+})
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+currentAVSession.getOutputDevice((err: BusinessError, outputDeviceInfo: avSession.OutputDeviceInfo) => {
+  if (err) {
+    console.error(`Failed to get output device, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting output device, devices length: ${outputDeviceInfo.devices.length}`);
+});
+```
+
+```TypeScript
+avcontroller.getOutputDevice().then((deviceInfo: avSession.OutputDeviceInfo) => {
+  console.info('Succeeded in getting output device.');
+});
+```
+
+```TypeScript
+avcontroller.getOutputDevice((err: BusinessError, deviceInfo: avSession.OutputDeviceInfo) => {
+  if (err) {
+    console.error(`Failed to get output device, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting output device.');
+});
+```
 
 ## getOutputDevice
 
@@ -878,6 +1265,10 @@ getOutputDevice(): Promise<OutputDeviceInfo>
 | 600101 | Session service exception. |
 | 600103 | The session controller does not exist. |
 
+**示例**
+
+参见 [getOutputDevice](#getoutputdevice)
+
 ## getOutputDeviceSync
 
 ```TypeScript
@@ -907,6 +1298,16 @@ getOutputDeviceSync(): OutputDeviceInfo
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+**示例**
+
+```TypeScript
+let currentOutputDevice: avSession.OutputDeviceInfo = currentAVSession.getOutputDeviceSync();
+```
+
+```TypeScript
+let currentOutputDevice: avSession.OutputDeviceInfo = avcontroller.getOutputDeviceSync();
+```
+
 ## getRealPlaybackPositionSync
 
 ```TypeScript
@@ -935,6 +1336,20 @@ getRealPlaybackPositionSync(): long
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+let time: number = avcontroller.getRealPlaybackPositionSync();
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let time: long = avcontroller.getRealPlaybackPositionSync();
+```
 
 ## getSupportedLoopModes
 
@@ -969,6 +1384,14 @@ getSupportedLoopModes(): Promise<Array<LoopMode>>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+**示例**
+
+```TypeScript
+avcontroller.getSupportedLoopModes().then((loopModes: avSession.LoopMode[]) => {
+  console.info(`Succeeded in getting supported loop modes, size: ${loopModes.length}`);
+});
+```
+
 ## getSupportedPlaySpeeds
 
 ```TypeScript
@@ -1002,6 +1425,25 @@ getSupportedPlaySpeeds(): Promise<Array<double>>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+**示例**
+
+```TypeScript
+avCastController.getSupportedPlaySpeeds().then((nums: number[]) => {
+  console.info(`Succeeded in getting supported play speeds, length: ${nums.length}`);
+  if (nums.length > 0 ) {
+    console.info(`Succeeded in getting supported play speed: ${nums[0]}`);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get supported play speeds, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+avcontroller.getSupportedPlaySpeeds().then((speeds: double[]) => {
+  console.info(`Succeeded in getting supported play speeds, size: ${speeds.length}`);
+});
+```
+
 ## getValidCommands
 
 ```TypeScript
@@ -1029,6 +1471,42 @@ getValidCommands(callback: AsyncCallback<Array<AVControlCommandType>>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avCastController.getValidCommands((err: BusinessError, state: avSession.AVCastControlCommandType[]) => {
+  if (err) {
+    console.error(`Failed to get valid commands, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting valid commands.');
+});
+```
+
+```TypeScript
+avCastController.getValidCommands().then((state: avSession.AVCastControlCommandType[]) => {
+  console.info('Succeeded in getting valid commands.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get valid commands, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+avcontroller.getValidCommands().then((validCommands: avSession.AVControlCommandType[]) => {
+  console.info(`Succeeded in getting valid commands, size: ${validCommands.length}`);
+});
+```
+
+```TypeScript
+avcontroller.getValidCommands((err: BusinessError, validCommands: avSession.AVControlCommandType[]) => {
+  if (err) {
+    console.error(`Failed to get valid commands, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting valid commands, size: ${validCommands.length}`);
+});
+```
 
 ## getValidCommands
 
@@ -1060,6 +1538,10 @@ getValidCommands(): Promise<Array<AVControlCommandType>>
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+**示例**
+
+参见 [getValidCommands](#getvalidcommands)
+
 ## getValidCommandsSync
 
 ```TypeScript
@@ -1090,6 +1572,12 @@ getValidCommandsSync(): Array<AVControlCommandType>
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+**示例**
+
+```TypeScript
+let validCommands: Array<avSession.AVControlCommandType> = avcontroller.getValidCommandsSync();
+```
+
 ## isActive
 
 ```TypeScript
@@ -1117,6 +1605,24 @@ isActive(callback: AsyncCallback<boolean>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.isActive().then((isActive: boolean) => {
+  console.info(`Succeeded in checking active state: ${isActive}`);
+});
+```
+
+```TypeScript
+avcontroller.isActive((err: BusinessError, isActive: boolean) => {
+  if (err) {
+    console.error(`Failed to check active state, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in checking active state: ${isActive}`);
+});
+```
 
 ## isActive
 
@@ -1148,6 +1654,10 @@ isActive(): Promise<boolean>
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+**示例**
+
+参见 [isActive](#isactive)
+
 ## isActiveSync
 
 ```TypeScript
@@ -1177,6 +1687,12 @@ isActiveSync(): boolean
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+let isActive: boolean = avcontroller.isActiveSync();
+```
 
 ## isDesktopLyricEnabled
 
@@ -1241,542 +1757,23 @@ isDesktopLyricVisible(): Promise<boolean>
 | [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
 
-## offActiveStateChange
+**示例**
 
 ```TypeScript
-offActiveStateChange(callback?: Callback<boolean>): void
+currentAVSession.isDesktopLyricVisible().then((visible: boolean) => {
+  console.info(`isDesktopLyricVisible: ${visible}`);
+});
 ```
-
-Unregister the active state of this session changed callback
-
-**起始版本：** 23
-
-<!--Device-AVSessionController-offActiveStateChange(callback?: Callback<boolean>): void--><!--Device-AVSessionController-offActiveStateChange(callback?: Callback<boolean>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offCallMetadataChange
 
 ```TypeScript
-offCallMetadataChange(callback?: Callback<CallMetadata>): void
+currentAVSession.isDesktopLyricVisible().then((visible: boolean) => {
+  console.info(`isDesktopLyricVisible: ${visible}`);
+});
 ```
-
-Unregister call metadata changed callback
-
-**起始版本：** 23
-
-<!--Device-AVSessionController-offCallMetadataChange(callback?: Callback<CallMetadata>): void--><!--Device-AVSessionController-offCallMetadataChange(callback?: Callback<CallMetadata>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 否 | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offCallStateChange
 
 ```TypeScript
-offCallStateChange(callback?: Callback<AVCallState>): void
+avcontroller.isDesktopLyricVisible();
 ```
-
-Unregister playback state changed callback
-
-**起始版本：** 23
-
-<!--Device-AVSessionController-offCallStateChange(callback?: Callback<AVCallState>): void--><!--Device-AVSessionController-offCallStateChange(callback?: Callback<AVCallState>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 否 | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offCustomDataChange
-
-```TypeScript
-offCustomDataChange(callback?: Callback<Record<string, Object>>): void
-```
-
-Unregister listener for custom data.
-
-**起始版本：** 23
-
-<!--Device-AVSessionController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;&gt; | 否 | Callback used to retrieve custom data. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offDesktopLyricEnabled
-
-```TypeScript
-offDesktopLyricEnabled(callback?: Callback<boolean>): void
-```
-
-取消桌面歌词启用状态变更事件监听，取消后将不再对该事件进行监听。使用callback异步回调。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AVSessionController-offDesktopLyricEnabled(callback?: Callback<boolean>): void--><!--Device-AVSessionController-offDesktopLyricEnabled(callback?: Callback<boolean>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有桌面歌词功能启用状态变更事件监听。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offDesktopLyricStateChanged
-
-```TypeScript
-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void
-```
-
-取消桌面歌词状态变更事件监听，取消后将不再对该事件进行监听。使用callback异步回调。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AVSessionController-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void--><!--Device-AVSessionController-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有桌面歌词状态变更事件监听。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offDesktopLyricVisibilityChanged
-
-```TypeScript
-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
-```
-
-取消显示桌面歌词状态变更事件监听，取消后将不再对该事件进行监听。使用callback异步回调。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AVSessionController-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void--><!--Device-AVSessionController-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有显示桌面歌词状态变更事件监听。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offExtrasChange
-
-```TypeScript
-offExtrasChange(callback?: Callback<Record<string, Object>>): void
-```
-
-Unregister the custom media packets change callback
-
-**起始版本：** 23
-
-<!--Device-AVSessionController-offExtrasChange(callback?: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-offExtrasChange(callback?: Callback<Record<string, Object>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;&gt; | 否 | Used to handle custom media packets changed. The callback provides the new media packets. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offMediaCenterControlTypeChanged
-
-```TypeScript
-offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlType>>): void
-```
-
-取消控制类型列表变化的监听事件。
-
-取消后将不再对该事件进行监听。其中控制类型列表由应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setmediacentercontroltype)接口设置。
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AVSessionController-offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlType>>): void--><!--Device-AVSessionController-offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlType>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | 否 | 回调函数。该参数为可选参数，若不填写该参数，则认为对所有控制类型列表变化事件取消监听。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offMetadataChange
-
-```TypeScript
-offMetadataChange(callback?: Callback<AVMetadata>): void
-```
-
-Unregister metadata changed callback
-
-**起始版本：** 23
-
-<!--Device-AVSessionController-offMetadataChange(callback?: Callback<AVMetadata>): void--><!--Device-AVSessionController-offMetadataChange(callback?: Callback<AVMetadata>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMetadata&gt; | 否 | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offOutputDeviceChange
-
-```TypeScript
-offOutputDeviceChange(callback?: ConnectionEvent): void
-```
-
-Unregister session output device change callback
-
-**起始版本：** 23
-
-<!--Device-AVSessionController-offOutputDeviceChange(callback?: ConnectionEvent): void--><!--Device-AVSessionController-offOutputDeviceChange(callback?: ConnectionEvent): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | 否 | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist |
-
-## offPlaybackStateChange
-
-```TypeScript
-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void
-```
-
-Unregister playback state changed callback
-
-**起始版本：** 23
-
-<!--Device-AVSessionController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 否 | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offQueueItemsChange
-
-```TypeScript
-offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void
-```
-
-Unregister session playlist change callback
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void--><!--Device-AVSessionController-offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | 否 | Used to handle playlist changed. The callback provides the new array of AVQueueItem [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offQueueTitleChange
-
-```TypeScript
-offQueueTitleChange(callback?: Callback<string>): void
-```
-
-Unregister the name of session playlist change callback
-
-**起始版本：** 23
-
-<!--Device-AVSessionController-offQueueTitleChange(callback?: Callback<string>): void--><!--Device-AVSessionController-offQueueTitleChange(callback?: Callback<string>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | Used to handle name of playlist changed. The callback provides the new name. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offSessionDestroy
-
-```TypeScript
-offSessionDestroy(callback?: NoParamCallback): void
-```
-
-Unregister current session destroyed callback
-
-**起始版本：** 23
-
-<!--Device-AVSessionController-offSessionDestroy(callback?: NoParamCallback): void--><!--Device-AVSessionController-offSessionDestroy(callback?: NoParamCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 否 | The callback used to handle current session destroyed event. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offSessionEvent
-
-```TypeScript
-offSessionEvent(callback?: EventProcess): void
-```
-
-Unregister session event callback
-
-**起始版本：** 23
-
-<!--Device-AVSessionController-offSessionEvent(callback?: EventProcess): void--><!--Device-AVSessionController-offSessionEvent(callback?: EventProcess): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | 否 | Used to cancel a specific listener The callback function provides the event string and key-value pair parameters. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offSupportedLoopModesChange
-
-```TypeScript
-offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void
-```
-
-取消支持的循环模式列表变化事件监听。
-
-取消后将不再对该事件进行监听。其中循环模式列表由应用通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setsupportedloopmodes)接口设置。
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void--><!--Device-AVSessionController-offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | 否 | 回调函数。该参数为可选参数，若不填写该参数，则认为对所有支持的循环模式列表变化事件取消监听。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offSupportedPlaySpeedsChange
-
-```TypeScript
-offSupportedPlaySpeedsChange(callback?: Callback<Array<double>>): void
-```
-
-取消支持的播放倍速列表变化事件监听。
-
-取消后将不再对该事件进行监听。其中播放倍速列表由应用通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setsupportedplayspeeds)接口设置。
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-offSupportedPlaySpeedsChange(callback?: Callback<Array<double>>): void--><!--Device-AVSessionController-offSupportedPlaySpeedsChange(callback?: Callback<Array<double>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | 否 | 回调函数。该参数为可选参数，若不填写该参数，则认为对所有支持的播放倍速列表变化事件取消监听。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offValidCommandChange
-
-```TypeScript
-offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void
-```
-
-Unregister the valid commands of the session changed callback
-
-**起始版本：** 23
-
-<!--Device-AVSessionController-offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void--><!--Device-AVSessionController-offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | 否 | The callback used to handle the changes. The callback function provides an array of AVControlCommandType. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('activeStateChange')
 
@@ -2180,17 +2177,17 @@ off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## onActiveStateChange
+## offActiveStateChange
 
 ```TypeScript
-onActiveStateChange(callback: Callback<boolean>): void
+offActiveStateChange(callback?: Callback<boolean>): void
 ```
 
-Register the active state of this session changed callback
+Unregister the active state of this session changed callback
 
 **起始版本：** 23
 
-<!--Device-AVSessionController-onActiveStateChange(callback: Callback<boolean>): void--><!--Device-AVSessionController-onActiveStateChange(callback: Callback<boolean>): void-End-->
+<!--Device-AVSessionController-offActiveStateChange(callback?: Callback<boolean>): void--><!--Device-AVSessionController-offActiveStateChange(callback?: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2198,7 +2195,7 @@ Register the active state of this session changed callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
 
 **错误码：**
 
@@ -2207,17 +2204,23 @@ Register the active state of this session changed callback
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## onCallMetadataChange
+**示例**
 
 ```TypeScript
-onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void
+avcontroller.offActiveStateChange();
 ```
 
-Register call metadata changed callback
+## offCallMetadataChange
+
+```TypeScript
+offCallMetadataChange(callback?: Callback<CallMetadata>): void
+```
+
+Unregister call metadata changed callback
 
 **起始版本：** 23
 
-<!--Device-AVSessionController-onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void--><!--Device-AVSessionController-onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void-End-->
+<!--Device-AVSessionController-offCallMetadataChange(callback?: Callback<CallMetadata>): void--><!--Device-AVSessionController-offCallMetadataChange(callback?: Callback<CallMetadata>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2225,8 +2228,7 @@ Register call metadata changed callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | Array&lt;string&gt; | 是 | The properties of [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) that you cared about |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 否 | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **错误码：**
 
@@ -2235,17 +2237,23 @@ Register call metadata changed callback
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## onCallMetadataChangeAll
+**示例**
 
 ```TypeScript
-onCallMetadataChangeAll(callback: Callback<CallMetadata>): void
+avcontroller.offCallMetadataChange();
 ```
 
-Register call metadata changed callback
+## offCallStateChange
+
+```TypeScript
+offCallStateChange(callback?: Callback<AVCallState>): void
+```
+
+Unregister playback state changed callback
 
 **起始版本：** 23
 
-<!--Device-AVSessionController-onCallMetadataChangeAll(callback: Callback<CallMetadata>): void--><!--Device-AVSessionController-onCallMetadataChangeAll(callback: Callback<CallMetadata>): void-End-->
+<!--Device-AVSessionController-offCallStateChange(callback?: Callback<AVCallState>): void--><!--Device-AVSessionController-offCallStateChange(callback?: Callback<AVCallState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2253,7 +2261,7 @@ Register call metadata changed callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 否 | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
 
 **错误码：**
 
@@ -2262,72 +2270,23 @@ Register call metadata changed callback
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## onCallStateChange
+**示例**
 
 ```TypeScript
-onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void
+avcontroller.offCallStateChange();
 ```
 
-Register call state changed callback
+## offCustomDataChange
+
+```TypeScript
+offCustomDataChange(callback?: Callback<Record<string, Object>>): void
+```
+
+Unregister listener for custom data.
 
 **起始版本：** 23
 
-<!--Device-AVSessionController-onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void--><!--Device-AVSessionController-onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| filter | Array&lt;string&gt; | 是 | The properties of [AVCallState](arkts-avsession-avsession-avcallstate-i.md) that you cared about |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onCallStateChangeAll
-
-```TypeScript
-onCallStateChangeAll(callback: Callback<AVCallState>): void
-```
-
-Register call state changed callback
-
-**起始版本：** 23
-
-<!--Device-AVSessionController-onCallStateChangeAll(callback: Callback<AVCallState>): void--><!--Device-AVSessionController-onCallStateChangeAll(callback: Callback<AVCallState>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onCustomDataChange
-
-```TypeScript
-onCustomDataChange(callback: Callback<Record<string, Object>>): void
-```
-
-Register listener for custom data.
-
-**起始版本：** 23
-
-<!--Device-AVSessionController-onCustomDataChange(callback: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-onCustomDataChange(callback: Callback<Record<string, Object>>): void-End-->
+<!--Device-AVSessionController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -2335,7 +2294,7 @@ Register listener for custom data.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;&gt; | 是 | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;&gt; | 否 | Callback used to retrieve custom data. |
 
 **错误码：**
 
@@ -2344,19 +2303,33 @@ Register listener for custom data.
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## onDesktopLyricEnabled
+**示例**
 
 ```TypeScript
-onDesktopLyricEnabled(callback: Callback<boolean>): void
+avCastController.offCustomDataChange(callback);
 ```
 
-桌面歌词功能启用状态变更的监听事件。使用callback异步回调。
+```TypeScript
+currentAVSession.offCustomDataChange();
+```
+
+```TypeScript
+avcontroller.offCustomDataChange();
+```
+
+## offDesktopLyricEnabled
+
+```TypeScript
+offDesktopLyricEnabled(callback?: Callback<boolean>): void
+```
+
+取消桌面歌词启用状态变更事件监听，取消后将不再对该事件进行监听。使用callback异步回调。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AVSessionController-onDesktopLyricEnabled(callback: Callback<boolean>): void--><!--Device-AVSessionController-onDesktopLyricEnabled(callback: Callback<boolean>): void-End-->
+<!--Device-AVSessionController-offDesktopLyricEnabled(callback?: Callback<boolean>): void--><!--Device-AVSessionController-offDesktopLyricEnabled(callback?: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2364,7 +2337,7 @@ onDesktopLyricEnabled(callback: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示桌面歌词功能启用；返回false表示桌面歌词功能未启用。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有桌面歌词功能启用状态变更事件监听。 |
 
 **错误码：**
 
@@ -2373,19 +2346,25 @@ onDesktopLyricEnabled(callback: Callback<boolean>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## onDesktopLyricStateChanged
+**示例**
 
 ```TypeScript
-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
+avcontroller.offDesktopLyricEnabled();
 ```
 
-桌面歌词状态变更的监听事件。使用callback异步回调。
+## offDesktopLyricStateChanged
+
+```TypeScript
+offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void
+```
+
+取消桌面歌词状态变更事件监听，取消后将不再对该事件进行监听。使用callback异步回调。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AVSessionController-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void--><!--Device-AVSessionController-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void-End-->
+<!--Device-AVSessionController-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void--><!--Device-AVSessionController-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2393,7 +2372,7 @@ onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | 是 | 回调函数。返回桌面歌词状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有桌面歌词状态变更事件监听。 |
 
 **错误码：**
 
@@ -2402,19 +2381,39 @@ onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## onDesktopLyricVisibilityChanged
+**示例**
 
 ```TypeScript
-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
+try {
+  currentAVSession.offDesktopLyricStateChanged();
+} catch (err) {
+  console.error(`Failed to unregister desktop lyric state changed, code: ${err.code}, message: ${err.message}`);
+}
 ```
 
-显示桌面歌词状态变更的监听事件。使用callback异步回调。
+```TypeScript
+if (currentAVSession !== undefined) {
+  (currentAVSession as avSession.AVSession).offDesktopLyricStateChanged();
+}
+```
+
+```TypeScript
+avcontroller.offDesktopLyricStateChanged();
+```
+
+## offDesktopLyricVisibilityChanged
+
+```TypeScript
+offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
+```
+
+取消显示桌面歌词状态变更事件监听，取消后将不再对该事件进行监听。使用callback异步回调。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AVSessionController-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void--><!--Device-AVSessionController-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void-End-->
+<!--Device-AVSessionController-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void--><!--Device-AVSessionController-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2422,7 +2421,7 @@ onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示开启显示桌面歌词状态；返回false表示关闭显示桌面歌词状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有显示桌面歌词状态变更事件监听。 |
 
 **错误码：**
 
@@ -2431,17 +2430,35 @@ onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## onExtrasChange
+**示例**
 
 ```TypeScript
-onExtrasChange(callback: Callback<Record<string, Object>>): void
+if (currentAVSession !== undefined) {
+  (currentAVSession as avSession.AVSession).offDesktopLyricVisibilityChanged();
+}
 ```
 
-Register the custom media packets change callback
+```TypeScript
+if (currentAVSession !== undefined) {
+  (currentAVSession as avSession.AVSession).offDesktopLyricVisibilityChanged();
+}
+```
+
+```TypeScript
+avcontroller.offDesktopLyricVisibilityChanged();
+```
+
+## offExtrasChange
+
+```TypeScript
+offExtrasChange(callback?: Callback<Record<string, Object>>): void
+```
+
+Unregister the custom media packets change callback
 
 **起始版本：** 23
 
-<!--Device-AVSessionController-onExtrasChange(callback: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-onExtrasChange(callback: Callback<Record<string, Object>>): void-End-->
+<!--Device-AVSessionController-offExtrasChange(callback?: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-offExtrasChange(callback?: Callback<Record<string, Object>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2449,7 +2466,7 @@ Register the custom media packets change callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;&gt; | 是 | Used to handle custom media packets changed. The callback provides the new media packets. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;&gt; | 否 | Used to handle custom media packets changed. The callback provides the new media packets. |
 
 **错误码：**
 
@@ -2458,21 +2475,27 @@ Register the custom media packets change callback
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## onMediaCenterControlTypeChanged
+**示例**
 
 ```TypeScript
-onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlType>>): void
+avcontroller.offExtrasChange();
 ```
 
-注册控制类型列表变化的监听事件。使用callback异步回调。
+## offMediaCenterControlTypeChanged
 
-其中控制类型列表由应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setmediacentercontroltype)接口设置。
+```TypeScript
+offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlType>>): void
+```
+
+取消控制类型列表变化的监听事件。
+
+取消后将不再对该事件进行监听。其中控制类型列表由应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setmediacentercontroltype)接口设置。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AVSessionController-onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlType>>): void--><!--Device-AVSessionController-onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlType>>): void-End-->
+<!--Device-AVSessionController-offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlType>>): void--><!--Device-AVSessionController-offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlType>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2480,7 +2503,7 @@ onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlTyp
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | 是 | 回调函数。返回变化后的控制类型列表。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | 否 | 回调函数。该参数为可选参数，若不填写该参数，则认为对所有控制类型列表变化事件取消监听。 |
 
 **错误码：**
 
@@ -2489,17 +2512,23 @@ onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlTyp
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## onMetadataChange
+**示例**
 
 ```TypeScript
-onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void
+avcontroller.offMediaCenterControlTypeChanged();
 ```
 
-Register metadata changed callback
+## offMetadataChange
+
+```TypeScript
+offMetadataChange(callback?: Callback<AVMetadata>): void
+```
+
+Unregister metadata changed callback
 
 **起始版本：** 23
 
-<!--Device-AVSessionController-onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void--><!--Device-AVSessionController-onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void-End-->
+<!--Device-AVSessionController-offMetadataChange(callback?: Callback<AVMetadata>): void--><!--Device-AVSessionController-offMetadataChange(callback?: Callback<AVMetadata>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2507,8 +2536,7 @@ Register metadata changed callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | Array&lt;string&gt; | 是 | The properties of [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) that you cared about |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMetadata&gt; | 是 | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMetadata&gt; | 否 | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **错误码：**
 
@@ -2517,17 +2545,23 @@ Register metadata changed callback
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## onMetadataChangeAll
+**示例**
 
 ```TypeScript
-onMetadataChangeAll(callback: Callback<AVMetadata>): void
+avcontroller.offMetadataChange();
 ```
 
-Register metadata changed callback
+## offOutputDeviceChange
+
+```TypeScript
+offOutputDeviceChange(callback?: ConnectionEvent): void
+```
+
+Unregister session output device change callback
 
 **起始版本：** 23
 
-<!--Device-AVSessionController-onMetadataChangeAll(callback: Callback<AVMetadata>): void--><!--Device-AVSessionController-onMetadataChangeAll(callback: Callback<AVMetadata>): void-End-->
+<!--Device-AVSessionController-offOutputDeviceChange(callback?: ConnectionEvent): void--><!--Device-AVSessionController-offOutputDeviceChange(callback?: ConnectionEvent): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2535,34 +2569,7 @@ Register metadata changed callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMetadata&gt; | 是 | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onOutputDeviceChange
-
-```TypeScript
-onOutputDeviceChange(callback: ConnectionEvent): void
-```
-
-Register session output device change callback
-
-**起始版本：** 23
-
-<!--Device-AVSessionController-onOutputDeviceChange(callback: ConnectionEvent): void--><!--Device-AVSessionController-onOutputDeviceChange(callback: ConnectionEvent): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | 是 | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
+| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | 否 | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
 
 **错误码：**
 
@@ -2571,17 +2578,27 @@ Register session output device change callback
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist |
 
-## onPlaybackStateChange
+**示例**
 
 ```TypeScript
-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void
+currentAVSession.offOutputDeviceChange();
 ```
 
-Register playback state changed callback
+```TypeScript
+avcontroller.offOutputDeviceChange();
+```
+
+## offPlaybackStateChange
+
+```TypeScript
+offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void
+```
+
+Unregister playback state changed callback
 
 **起始版本：** 23
 
-<!--Device-AVSessionController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void-End-->
+<!--Device-AVSessionController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2589,8 +2606,7 @@ Register playback state changed callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | Array&lt;string&gt; | 是 | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) that you cared about |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 否 | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
 
 **错误码：**
 
@@ -2599,17 +2615,29 @@ Register playback state changed callback
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## onPlaybackStateChangeAll
+**示例**
 
 ```TypeScript
-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void
+avCastController.offPlaybackStateChange();
 ```
 
-Register playback state changed callback
+```TypeScript
+avcontroller.offPlaybackStateChange();
+```
+
+## offQueueItemsChange
+
+```TypeScript
+offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void
+```
+
+Unregister session playlist change callback
 
 **起始版本：** 23
 
-<!--Device-AVSessionController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void-End-->
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void--><!--Device-AVSessionController-offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2617,7 +2645,7 @@ Register playback state changed callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | 否 | Used to handle playlist changed. The callback provides the new array of AVQueueItem [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) |
 
 **错误码：**
 
@@ -2626,17 +2654,23 @@ Register playback state changed callback
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## onQueueItemsChange
+**示例**
 
 ```TypeScript
-onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void
+avcontroller.offQueueItemsChange();
 ```
 
-Register session playlist change callback
+## offQueueTitleChange
+
+```TypeScript
+offQueueTitleChange(callback?: Callback<string>): void
+```
+
+Unregister the name of session playlist change callback
 
 **起始版本：** 23
 
-<!--Device-AVSessionController-onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void--><!--Device-AVSessionController-onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void-End-->
+<!--Device-AVSessionController-offQueueTitleChange(callback?: Callback<string>): void--><!--Device-AVSessionController-offQueueTitleChange(callback?: Callback<string>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2644,7 +2678,7 @@ Register session playlist change callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | 是 | Used to handle playlist changed. The callback provides the new array of AVQueueItem [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | Used to handle name of playlist changed. The callback provides the new name. |
 
 **错误码：**
 
@@ -2653,17 +2687,23 @@ Register session playlist change callback
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## onQueueTitleChange
+**示例**
 
 ```TypeScript
-onQueueTitleChange(callback: Callback<string>): void
+avcontroller.offQueueTitleChange();
 ```
 
-Register the name of session playlist change callback
+## offSessionDestroy
+
+```TypeScript
+offSessionDestroy(callback?: NoParamCallback): void
+```
+
+Unregister current session destroyed callback
 
 **起始版本：** 23
 
-<!--Device-AVSessionController-onQueueTitleChange(callback: Callback<string>): void--><!--Device-AVSessionController-onQueueTitleChange(callback: Callback<string>): void-End-->
+<!--Device-AVSessionController-offSessionDestroy(callback?: NoParamCallback): void--><!--Device-AVSessionController-offSessionDestroy(callback?: NoParamCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2671,7 +2711,7 @@ Register the name of session playlist change callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | Used to handle name of playlist changed. The callback provides the new name. |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 否 | The callback used to handle current session destroyed event. |
 
 **错误码：**
 
@@ -2680,17 +2720,49 @@ Register the name of session playlist change callback
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## onSessionDestroy
+**示例**
 
 ```TypeScript
-onSessionDestroy(callback: NoParamCallback): void
+import { avSession } from '@kit.AVSessionKit';
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+
+  build() {
+    Column() {
+        Text(this.message)
+          .onClick(()=>{
+            avSession.onSessionDestroy((descriptor: avSession.AVSessionDescriptor) => {
+            });
+            avSession.offSessionDestroy();
+          })
+      }
+    .width('100%')
+    .height('100%')
+  }
+}
 ```
 
-Register current session destroyed callback
+```TypeScript
+avcontroller.offSessionDestroy();
+```
+
+```TypeScript
+avSession.offSessionDestroy();
+```
+
+## offSessionEvent
+
+```TypeScript
+offSessionEvent(callback?: EventProcess): void
+```
+
+Unregister session event callback
 
 **起始版本：** 23
 
-<!--Device-AVSessionController-onSessionDestroy(callback: NoParamCallback): void--><!--Device-AVSessionController-onSessionDestroy(callback: NoParamCallback): void-End-->
+<!--Device-AVSessionController-offSessionEvent(callback?: EventProcess): void--><!--Device-AVSessionController-offSessionEvent(callback?: EventProcess): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2698,7 +2770,7 @@ Register current session destroyed callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 是 | The callback used to handle current session destroyed event. |
+| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | 否 | Used to cancel a specific listener The callback function provides the event string and key-value pair parameters. |
 
 **错误码：**
 
@@ -2707,42 +2779,21 @@ Register current session destroyed callback
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## onSessionEvent
+**示例**
 
 ```TypeScript
-onSessionEvent(callback: EventProcess): void
+avcontroller.offSessionEvent();
 ```
 
-Register session event callback
-
-**起始版本：** 23
-
-<!--Device-AVSessionController-onSessionEvent(callback: EventProcess): void--><!--Device-AVSessionController-onSessionEvent(callback: EventProcess): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | 是 | The callback used to handle session event changed event. The callback function provides the event string and key-value pair parameters. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onSupportedLoopModesChange
+## offSupportedLoopModesChange
 
 ```TypeScript
-onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void
+offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void
 ```
 
-注册支持的循环模式列表变化的监听事件。使用callback异步回调。
+取消支持的循环模式列表变化事件监听。
 
-其中循环模式列表由应用通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setsupportedloopmodes)接口设置。
+取消后将不再对该事件进行监听。其中循环模式列表由应用通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setsupportedloopmodes)接口设置。
 
 **起始版本：** 26.0.0
 
@@ -2750,7 +2801,7 @@ onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AVSessionController-onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void--><!--Device-AVSessionController-onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void-End-->
+<!--Device-AVSessionController-offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void--><!--Device-AVSessionController-offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2758,7 +2809,7 @@ onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | 是 | 回调函数。返回变化后支持的循环模式列表。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | 否 | 回调函数。该参数为可选参数，若不填写该参数，则认为对所有支持的循环模式列表变化事件取消监听。 |
 
 **错误码：**
 
@@ -2767,15 +2818,21 @@ onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## onSupportedPlaySpeedsChange
+**示例**
 
 ```TypeScript
-onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void
+avcontroller.offSupportedLoopModesChange();
 ```
 
-注册支持的播放倍速列表变化的监听事件。使用callback异步回调。
+## offSupportedPlaySpeedsChange
 
-其中播放倍速列表由应用通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setsupportedplayspeeds)接口设置。
+```TypeScript
+offSupportedPlaySpeedsChange(callback?: Callback<Array<double>>): void
+```
+
+取消支持的播放倍速列表变化事件监听。
+
+取消后将不再对该事件进行监听。其中播放倍速列表由应用通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setsupportedplayspeeds)接口设置。
 
 **起始版本：** 26.0.0
 
@@ -2783,7 +2840,7 @@ onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AVSessionController-onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void--><!--Device-AVSessionController-onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void-End-->
+<!--Device-AVSessionController-offSupportedPlaySpeedsChange(callback?: Callback<Array<double>>): void--><!--Device-AVSessionController-offSupportedPlaySpeedsChange(callback?: Callback<Array<double>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2791,7 +2848,7 @@ onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | 是 | 回调函数。返回变化后支持的播放倍速列表。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | 否 | 回调函数。该参数为可选参数，若不填写该参数，则认为对所有支持的播放倍速列表变化事件取消监听。 |
 
 **错误码：**
 
@@ -2800,17 +2857,23 @@ onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## onValidCommandChange
+**示例**
 
 ```TypeScript
-onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void
+avcontroller.offSupportedPlaySpeedsChange();
 ```
 
-Register the valid commands of the session changed callback
+## offValidCommandChange
+
+```TypeScript
+offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void
+```
+
+Unregister the valid commands of the session changed callback
 
 **起始版本：** 23
 
-<!--Device-AVSessionController-onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void--><!--Device-AVSessionController-onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void-End-->
+<!--Device-AVSessionController-offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void--><!--Device-AVSessionController-offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2818,7 +2881,7 @@ Register the valid commands of the session changed callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | 是 | The callback used to handle the changes. The callback function provides an array of AVControlCommandType. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | 否 | The callback used to handle the changes. The callback function provides an array of AVControlCommandType. |
 
 **错误码：**
 
@@ -2826,6 +2889,16 @@ Register the valid commands of the session changed callback
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avCastController.offValidCommandChange();
+```
+
+```TypeScript
+avcontroller.offValidCommandChange();
+```
 
 ## on('activeStateChange')
 
@@ -3253,6 +3326,956 @@ on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>)
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+## onActiveStateChange
+
+```TypeScript
+onActiveStateChange(callback: Callback<boolean>): void
+```
+
+Register the active state of this session changed callback
+
+**起始版本：** 23
+
+<!--Device-AVSessionController-onActiveStateChange(callback: Callback<boolean>): void--><!--Device-AVSessionController-onActiveStateChange(callback: Callback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.onActiveStateChange((isActive: boolean) => {
+  console.info(`onActiveStateChange : SUCCESS : isActive ${isActive}`);
+});
+```
+
+## onCallMetadataChange
+
+```TypeScript
+onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void
+```
+
+Register call metadata changed callback
+
+**起始版本：** 23
+
+<!--Device-AVSessionController-onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void--><!--Device-AVSessionController-onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filter | Array&lt;string&gt; | 是 | The properties of [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) that you cared about |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avsessionController.onCallMetadataChange(['name'], (callmetadata: avSession.CallMetadata) => {
+  console.info(`onCallMetadataChange state : ${callmetadata.name}`);
+});
+```
+
+## onCallMetadataChangeAll
+
+```TypeScript
+onCallMetadataChangeAll(callback: Callback<CallMetadata>): void
+```
+
+Register call metadata changed callback
+
+**起始版本：** 23
+
+<!--Device-AVSessionController-onCallMetadataChangeAll(callback: Callback<CallMetadata>): void--><!--Device-AVSessionController-onCallMetadataChangeAll(callback: Callback<CallMetadata>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avsessionController.onCallMetadataChangeAll((callmetadata: avSession.CallMetadata) => {
+  console.info(`onCallMetadataChangeAll state : ${callmetadata.name}`);
+});
+```
+
+## onCallStateChange
+
+```TypeScript
+onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void
+```
+
+Register call state changed callback
+
+**起始版本：** 23
+
+<!--Device-AVSessionController-onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void--><!--Device-AVSessionController-onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filter | Array&lt;string&gt; | 是 | The properties of [AVCallState](arkts-avsession-avsession-avcallstate-i.md) that you cared about |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avsessionController.onCallStateChange(['state'], (callstate: avSession.AVCallState) => {
+  console.info(`onCallStateChange state : ${callstate.state}`);
+});
+```
+
+## onCallStateChangeAll
+
+```TypeScript
+onCallStateChangeAll(callback: Callback<AVCallState>): void
+```
+
+Register call state changed callback
+
+**起始版本：** 23
+
+<!--Device-AVSessionController-onCallStateChangeAll(callback: Callback<AVCallState>): void--><!--Device-AVSessionController-onCallStateChangeAll(callback: Callback<AVCallState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avsessionController.onCallStateChangeAll((callstate: avSession.AVCallState) => {
+  console.info(`onCallStateChangeAll state : ${callstate.state}`);
+});
+```
+
+## onCustomDataChange
+
+```TypeScript
+onCustomDataChange(callback: Callback<Record<string, Object>>): void
+```
+
+Register listener for custom data.
+
+**起始版本：** 23
+
+<!--Device-AVSessionController-onCustomDataChange(callback: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-onCustomDataChange(callback: Callback<Record<string, Object>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;&gt; | 是 | Callback used to retrieve custom data. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avCastController.onCustomDataChange((data: Record<string, Object>) => {
+  console.info(`onCustomDataChange, data, code: ${err.code}, message, code: ${err.code}, message: ${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+currentAVSession.onCustomDataChange((callback) =>
+{
+  console.info(`Caught customDataChange event,the new callback is: ${JSON.stringify(callback)}`);
+});
+```
+
+```TypeScript
+avcontroller.onCustomDataChange((data: Record<string, Object>) => {
+  console.info(`on_customDataChange Successfully ${data}`);
+});
+```
+
+## onDesktopLyricEnabled
+
+```TypeScript
+onDesktopLyricEnabled(callback: Callback<boolean>): void
+```
+
+桌面歌词功能启用状态变更的监听事件。使用callback异步回调。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVSessionController-onDesktopLyricEnabled(callback: Callback<boolean>): void--><!--Device-AVSessionController-onDesktopLyricEnabled(callback: Callback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示桌面歌词功能启用；返回false表示桌面歌词功能未启用。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.onDesktopLyricEnabled((enabled: boolean) => {
+  console.info(`desktop lyric enabled state : ${enabled}`);
+});
+```
+
+## onDesktopLyricStateChanged
+
+```TypeScript
+onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
+```
+
+桌面歌词状态变更的监听事件。使用callback异步回调。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVSessionController-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void--><!--Device-AVSessionController-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | 是 | 回调函数。返回桌面歌词状态。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+try {
+  currentAVSession.onDesktopLyricStateChanged((state: avSession.DesktopLyricState) => {
+    console.info(`desktop lyric isLocked : ${state.isLocked}`);
+  });
+} catch (err) {
+  console.error(`Failed to register desktop lyric state changed, code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+if (currentAVSession !== undefined) {
+  (currentAVSession as avSession.AVSession).onDesktopLyricStateChanged((state: avSession.DesktopLyricState) => {
+    console.info(`desktop lyric isLocked : ${state.isLocked}`);
+  })
+}
+```
+
+```TypeScript
+avcontroller.onDesktopLyricStateChanged((state: avSession.DesktopLyricState) => {
+  console.info(`desktop lyric isLocked : ${state.isLocked}`);
+});
+```
+
+## onDesktopLyricVisibilityChanged
+
+```TypeScript
+onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
+```
+
+显示桌面歌词状态变更的监听事件。使用callback异步回调。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVSessionController-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void--><!--Device-AVSessionController-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示开启显示桌面歌词状态；返回false表示关闭显示桌面歌词状态。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+if (currentAVSession !== undefined) {
+  (currentAVSession as avSession.AVSession).onDesktopLyricVisibilityChanged((visible: boolean) => {
+    console.info(`desktop lyric visible state: ${visible}`);
+  });
+}
+```
+
+```TypeScript
+currentAVSession.onDesktopLyricVisibilityChanged((visible: boolean) => {
+  console.info(`desktop lyric visible state: ${visible}`);
+});
+```
+
+```TypeScript
+avcontroller.onDesktopLyricVisibilityChanged((visible: boolean) => {
+  console.info(`desktop lyric visible state: ${visible}`);
+});
+```
+
+## onExtrasChange
+
+```TypeScript
+onExtrasChange(callback: Callback<Record<string, Object>>): void
+```
+
+Register the custom media packets change callback
+
+**起始版本：** 23
+
+<!--Device-AVSessionController-onExtrasChange(callback: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-onExtrasChange(callback: Callback<Record<string, Object>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, Object&gt;&gt; | 是 | Used to handle custom media packets changed. The callback provides the new media packets. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.onExtrasChange((extras) => {
+    console.info(`Caught extrasChange event,the new extra is: ${JSON.stringify(extras)}`);
+});
+```
+
+## onMediaCenterControlTypeChanged
+
+```TypeScript
+onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlType>>): void
+```
+
+注册控制类型列表变化的监听事件。使用callback异步回调。
+
+其中控制类型列表由应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setmediacentercontroltype)接口设置。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVSessionController-onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlType>>): void--><!--Device-AVSessionController-onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlType>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | 是 | 回调函数。返回变化后的控制类型列表。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.onMediaCenterControlTypeChanged((types: avSession.AVMediaCenterControlType[]) => {
+  console.info(`Media center control types changed, size: ${types.length}`);
+});
+```
+
+## onMetadataChange
+
+```TypeScript
+onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void
+```
+
+Register metadata changed callback
+
+**起始版本：** 23
+
+<!--Device-AVSessionController-onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void--><!--Device-AVSessionController-onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filter | Array&lt;string&gt; | 是 | The properties of [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) that you cared about |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMetadata&gt; | 是 | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avsessionController.onMetadataChange(['assetId', 'title', 'description'], (metadata: avSession.AVMetadata) => {
+  console.info(`onMetadataChange assetId : ${metadata.assetId}`);
+});
+```
+
+## onMetadataChangeAll
+
+```TypeScript
+onMetadataChangeAll(callback: Callback<AVMetadata>): void
+```
+
+Register metadata changed callback
+
+**起始版本：** 23
+
+<!--Device-AVSessionController-onMetadataChangeAll(callback: Callback<AVMetadata>): void--><!--Device-AVSessionController-onMetadataChangeAll(callback: Callback<AVMetadata>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMetadata&gt; | 是 | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avsessionController.onMetadataChangeAll((metadata: avSession.AVMetadata) => {
+  console.info(`onMetadataChangeAll assetId : ${metadata.assetId}`);
+});
+```
+
+## onOutputDeviceChange
+
+```TypeScript
+onOutputDeviceChange(callback: ConnectionEvent): void
+```
+
+Register session output device change callback
+
+**起始版本：** 23
+
+<!--Device-AVSessionController-onOutputDeviceChange(callback: ConnectionEvent): void--><!--Device-AVSessionController-onOutputDeviceChange(callback: ConnectionEvent): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | 是 | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist |
+
+**示例**
+
+```TypeScript
+currentAVSession.onOutputDeviceChange((state: avSession.ConnectionState, device: avSession.OutputDeviceInfo) => {
+  console.info(`onOutputDeviceChange device : ${device}`);
+});
+```
+
+```TypeScript
+avsessionController.onOutputDeviceChange((state: avSession.ConnectionState, device: avSession.OutputDeviceInfo) => {
+  console.info(`onOutputDeviceChange state: ${state}, device : ${device}`);
+});
+```
+
+## onPlaybackStateChange
+
+```TypeScript
+onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void
+```
+
+Register playback state changed callback
+
+**起始版本：** 23
+
+<!--Device-AVSessionController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filter | Array&lt;string&gt; | 是 | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) that you cared about |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+let playbackFilter: Array<string> = ['state', 'speed', 'loopMode'];
+avCastController.onPlaybackStateChange(playbackFilter, (playbackState: avSession.AVPlaybackState) => {
+  console.info(`onPlaybackStateChange state : ${playbackState.state}`);
+});
+```
+
+```TypeScript
+avsessionController.onPlaybackStateChange(['state', 'speed', 'loopMode'], (playbackState: avSession.AVPlaybackState) => {
+  console.info(`onPlaybackStateChange state : ${playbackState.state}`);
+});
+```
+
+## onPlaybackStateChangeAll
+
+```TypeScript
+onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void
+```
+
+Register playback state changed callback
+
+**起始版本：** 23
+
+<!--Device-AVSessionController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avCastController.onPlaybackStateChangeAll((playbackState: avSession.AVPlaybackState) => {
+  console.info(`onPlaybackStateChangeAll state : ${playbackState.state}`);
+});
+```
+
+```TypeScript
+avsessionController.onPlaybackStateChangeAll((playbackState: avSession.AVPlaybackState) => {
+  console.info(`onPlaybackStateChangeAll state : ${playbackState.state}`);
+});
+```
+
+## onQueueItemsChange
+
+```TypeScript
+onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void
+```
+
+Register session playlist change callback
+
+**起始版本：** 23
+
+<!--Device-AVSessionController-onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void--><!--Device-AVSessionController-onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | 是 | Used to handle playlist changed. The callback provides the new array of AVQueueItem [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.onQueueItemsChange((items: avSession.AVQueueItem[]) => {
+  console.info(`OnQueueItemsChange, items length is ${items.length}`);
+});
+```
+
+## onQueueTitleChange
+
+```TypeScript
+onQueueTitleChange(callback: Callback<string>): void
+```
+
+Register the name of session playlist change callback
+
+**起始版本：** 23
+
+<!--Device-AVSessionController-onQueueTitleChange(callback: Callback<string>): void--><!--Device-AVSessionController-onQueueTitleChange(callback: Callback<string>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | Used to handle name of playlist changed. The callback provides the new name. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.onQueueTitleChange((title: string) => {
+  console.info(`queueTitleChange, title is ${title}`);
+});
+```
+
+## onSessionDestroy
+
+```TypeScript
+onSessionDestroy(callback: NoParamCallback): void
+```
+
+Register current session destroyed callback
+
+**起始版本：** 23
+
+<!--Device-AVSessionController-onSessionDestroy(callback: NoParamCallback): void--><!--Device-AVSessionController-onSessionDestroy(callback: NoParamCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 是 | The callback used to handle current session destroyed event. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+import { avSession } from '@kit.AVSessionKit';
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+
+  build() {
+    Column() {
+        Text(this.message)
+          .onClick(()=>{
+            avSession.onSessionDestroy((descriptor: avSession.AVSessionDescriptor) => {
+              console.info(`on sessionDestroy : ${descriptor.sessionId}`);
+            });
+          })
+      }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+avcontroller.onSessionDestroy(() => {
+  console.info('onSessionDestroy : SUCCESS ');
+});
+```
+
+```TypeScript
+import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+
+  build() {
+    Column() {
+        Text(this.message)
+          .onClick(()=>{
+            avSession.on('topSessionChange', (descriptor: avSession.AVSessionDescriptor) => {
+              console.info(`on topSessionChange : isActive : ${descriptor.isActive}`);
+              console.info(`on topSessionChange : type : ${descriptor.type}`);
+              console.info(`on topSessionChange : sessionTag : ${descriptor.sessionTag}`);
+            });
+          })
+      }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+## onSessionEvent
+
+```TypeScript
+onSessionEvent(callback: EventProcess): void
+```
+
+Register session event callback
+
+**起始版本：** 23
+
+<!--Device-AVSessionController-onSessionEvent(callback: EventProcess): void--><!--Device-AVSessionController-onSessionEvent(callback: EventProcess): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | 是 | The callback used to handle session event changed event. The callback function provides the event string and key-value pair parameters. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.onSessionEvent((sessionEvent, args) => {
+  console.info(`OnSessionEvent, sessionEvent is ${sessionEvent}, args: ${JSON.stringify(args)}`);
+});
+```
+
+## onSupportedLoopModesChange
+
+```TypeScript
+onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void
+```
+
+注册支持的循环模式列表变化的监听事件。使用callback异步回调。
+
+其中循环模式列表由应用通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setsupportedloopmodes)接口设置。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void--><!--Device-AVSessionController-onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | 是 | 回调函数。返回变化后支持的循环模式列表。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.onSupportedLoopModesChange((loopModes: avSession.LoopMode[]) => {
+  console.info(`Supported loop modes changed, size: ${loopModes.length}`);
+});
+```
+
+## onSupportedPlaySpeedsChange
+
+```TypeScript
+onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void
+```
+
+注册支持的播放倍速列表变化的监听事件。使用callback异步回调。
+
+其中播放倍速列表由应用通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setsupportedplayspeeds)接口设置。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void--><!--Device-AVSessionController-onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | 是 | 回调函数。返回变化后支持的播放倍速列表。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avcontroller.onSupportedPlaySpeedsChange((speeds: double[]) => {
+  console.info(`Supported play speeds changed, size: ${speeds.length}`);
+});
+```
+
+## onValidCommandChange
+
+```TypeScript
+onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void
+```
+
+Register the valid commands of the session changed callback
+
+**起始版本：** 23
+
+<!--Device-AVSessionController-onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void--><!--Device-AVSessionController-onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | 是 | The callback used to handle the changes. The callback function provides an array of AVControlCommandType. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avCastController.onValidCommandChange((validCommands: avSession.AVCastControlCommandType[]) => {
+  console.info(`Succeeded in valid command change, size: ${validCommands.length}`);
+  console.info(`Succeeded in valid command change, validCommands: ${validCommands.values()}`);
+});
+```
+
+```TypeScript
+avcontroller.onValidCommandChange((validCommands: avSession.AVControlCommandType[]) => {
+  console.info(`validCommandChange : SUCCESS : size : ${validCommands.length}`);
+  console.info(`validCommandChange : SUCCESS : validCommands : ${validCommands.values()}`);
+});
+```
+
 ## sendAVKeyEvent
 
 ```TypeScript
@@ -3271,7 +4294,7 @@ sendAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeyevent-keyevent-i.md) | 是 | 按键事件。 |
+| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 | 按键事件。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当事件发送成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
@@ -3284,6 +4307,34 @@ sendAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void
 | 600103 | The session controller does not exist. |
 | 600105 | Invalid session command. |
 | 600106 | The session is not activated. |
+
+**示例**
+
+```TypeScript
+import { Key, KeyEvent } from '@kit.InputKit';
+
+let keyItem: Key = {code:0x49, pressedTime:2, deviceId:0};
+let event:KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, windowId:1, action:2, key:keyItem, unicodeChar:0, keys:[keyItem], ctrlKey:false, altKey:false, shiftKey:false, logoKey:false, fnKey:false, capsLock:false, numLock:false, scrollLock:false};
+
+avcontroller.sendAVKeyEvent(event).then(() => {
+  console.info('Succeeded in sending AV key event.');
+});
+```
+
+```TypeScript
+import { Key, KeyEvent } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let keyItem: Key = {code:0x49, pressedTime:2, deviceId:0};
+let event:KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, windowId:1, action:2, key:keyItem, unicodeChar:0, keys:[keyItem], ctrlKey:false, altKey:false, shiftKey:false, logoKey:false, fnKey:false, capsLock:false, numLock:false, scrollLock:false};
+avcontroller.sendAVKeyEvent(event, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to send AV key event, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in sending AV key event.');
+});
+```
 
 ## sendAVKeyEvent
 
@@ -3305,7 +4356,7 @@ sendAVKeyEvent(event: KeyEvent): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeyevent-keyevent-i.md) | 是 | 按键事件。 |
+| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 | 按键事件。 |
 
 **返回值：**
 
@@ -3323,6 +4374,10 @@ sendAVKeyEvent(event: KeyEvent): Promise<void>
 | 600103 | The session controller does not exist. |
 | 600105 | Invalid session command. |
 | 600106 | The session is not activated. |
+
+**示例**
+
+参见 [sendAVKeyEvent](#sendavkeyevent)
 
 ## sendCommonCommand
 
@@ -3358,6 +4413,26 @@ sendCommonCommand(command: string, args: {[key: string]: Object}, callback: Asyn
 | [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
+**示例**
+
+```TypeScript
+let commandName = "my_command";
+avcontroller.sendCommonCommand(commandName, {command : "This is my command"}).then(() => {
+  console.info('Succeeded in sending common command.');
+});
+```
+
+```TypeScript
+let commandName = "my_command";
+avcontroller.sendCommonCommand(commandName, {command : "This is my command"}, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to send common command, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in sending common command.');
+})
+```
+
 ## sendCommonCommand
 
 ```TypeScript
@@ -3392,6 +4467,10 @@ Send common commands to this session
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 | [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+
+**示例**
+
+参见 [sendCommonCommand](#sendcommoncommand)
 
 ## sendCommonCommand
 
@@ -3434,6 +4513,10 @@ sendCommonCommand(command: string, args: {[key: string]: Object}): Promise<void>
 | [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
+**示例**
+
+参见 [sendCommonCommand](#sendcommoncommand)
+
 ## sendCommonCommand
 
 ```TypeScript
@@ -3474,6 +4557,10 @@ Send common commands to this session
 | [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
+**示例**
+
+参见 [sendCommonCommand](#sendcommoncommand)
+
 ## sendControlCommand
 
 ```TypeScript
@@ -3512,6 +4599,46 @@ sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): vo
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 | [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+
+**示例**
+
+```TypeScript
+let avCommand: avSession.AVCastControlCommand = {command: 'play'};
+avCastController.sendControlCommand(avCommand).then(() => {
+  console.info('Succeeded in sending control command.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to send control command, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+let avCommand: avSession.AVCastControlCommand = {command: 'play'};
+avCastController.sendControlCommand(avCommand, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to send control command, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in sending control command.');
+});
+```
+
+```TypeScript
+let avCommand: avSession.AVControlCommand = {command:'play'};
+avcontroller.sendControlCommand(avCommand).then(() => {
+  console.info('Succeeded in sending control command.');
+});
+```
+
+```TypeScript
+let avCommand: avSession.AVControlCommand = {command:'play'};
+avcontroller.sendControlCommand(avCommand, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to send control command, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in sending control command.');
+});
+```
 
 ## sendControlCommand
 
@@ -3559,6 +4686,10 @@ sendControlCommand(command: AVControlCommand): Promise<void>
 | [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
+**示例**
+
+参见 [sendControlCommand](#sendcontrolcommand)
+
 ## sendCustomData
 
 ```TypeScript
@@ -3594,6 +4725,58 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avCastController.sendCustomData({customData: 'This is custom data'}).then(() => {
+  console.info('Succeeded in sending custom data.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to send custom data, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+await currentAVSession.sendCustomData({customData : "This is custom data"}).then(() => {
+  console.info('Succeeded in sending custom data.');
+});
+```
+
+```TypeScript
+// Index.ets
+import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  private tag: string = "createNewSession";
+  private sessionId: string = "";
+  private controller: avSession.AVSessionController | undefined = undefined;
+  private currentAVSession?: avSession.AVSession;
+
+  aboutToAppear(): void {
+    avSession.createAVSession(this.getUIContext().getHostContext(), this.tag, "audio")
+      .then(async (data: avSession.AVSession) => {
+        this.currentAVSession = data;
+        this.sessionId = this.currentAVSession.sessionId;
+        this.controller = await this.currentAVSession.getController();
+        console.info(`Succeeded in creating AV session, sessionId: ${this.sessionId}`);
+        (this.controller as avSession.AVSessionController).sendCustomData({ customData: "This is my data" });
+      });
+  }
+
+  build() {
+    Column() {
+      Text('AVSession Demo')
+        .fontSize(20)
+        .margin(10)
+    }
+    .width('100%')
+    .height('100%')
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```
 
 ## setDesktopLyricState
 
@@ -3633,6 +4816,33 @@ setDesktopLyricState(state: DesktopLyricState): Promise<void>
 | [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
 
+**示例**
+
+```TypeScript
+let state: avSession.DesktopLyricState = {
+  isLocked: true,
+};
+currentAVSession.setDesktopLyricState(state).then(() => {
+  console.info('setDesktopLyricState successfully');
+});
+```
+
+```TypeScript
+let state: avSession.DesktopLyricState = {
+  isLocked: true,
+};
+currentAVSession.setDesktopLyricState(state).then(() => {
+  console.info('setDesktopLyricState successfully');
+});
+```
+
+```TypeScript
+let state: avSession.DesktopLyricState = {
+  isLocked: true,
+};
+avcontroller.setDesktopLyricState(state);
+```
+
 ## setDesktopLyricVisible
 
 ```TypeScript
@@ -3671,6 +4881,24 @@ setDesktopLyricVisible(visible: boolean): Promise<void>
 | [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
 
+**示例**
+
+```TypeScript
+currentAVSession.setDesktopLyricVisible(true).then(() => {
+  console.info('Succeeded in setting desktop lyric visible.');
+});
+```
+
+```TypeScript
+currentAVSession.setDesktopLyricVisible(true).then(() => {
+  console.info('Succeeded in setting desktop lyric visible.');
+});
+```
+
+```TypeScript
+avcontroller.setDesktopLyricVisible(true);
+```
+
 ## skipToQueueItem
 
 ```TypeScript
@@ -3700,6 +4928,26 @@ skipToQueueItem(itemId: int, callback: AsyncCallback<void>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+let queueItemId = 0;
+avcontroller.skipToQueueItem(queueItemId).then(() => {
+  console.info('Succeeded in skipping to queue item.');
+});
+```
+
+```TypeScript
+let queueItemId = 0;
+avcontroller.skipToQueueItem(queueItemId, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to skip to queue item, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in skipping to queue item.');
+});
+```
 
 ## skipToQueueItem
 
@@ -3737,6 +4985,10 @@ skipToQueueItem(itemId: int): Promise<void>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+参见 [skipToQueueItem](#skiptoqueueitem)
 
 ## sessionId
 

@@ -108,43 +108,6 @@ interface Data {
 })
 ```
 
-## bindSocket
-
-```TypeScript
-bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>
-```
-
-将TCPSocket或UDPSocket绑定到当前NetHandle对应的网络。使用Promise异步回调。
-
-**起始版本：** 9
-
-<!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>--><!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| socketParam | TCPSocket \| UDPSocket | 是 | 待绑定的TCPSocket或UDPSocket对象。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
-
-**示例**
-
 ```TypeScript
 import { connection, socket } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -199,6 +162,45 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
   }
 });
 ```
+
+## bindSocket
+
+```TypeScript
+bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>
+```
+
+将TCPSocket或UDPSocket绑定到当前NetHandle对应的网络。使用Promise异步回调。
+
+**起始版本：** 9
+
+<!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>--><!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Communication.NetManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| socketParam | TCPSocket \| UDPSocket | 是 | 待绑定的TCPSocket或UDPSocket对象。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| [2100001](../errorcode-net-connection.md#2100001-非法参数值) | Invalid parameter value. |
+| [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
+
+**示例**
+
+参见 [bindSocket](#bindsocket)
 
 ## getAddressByName
 
@@ -279,6 +281,40 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // 当前没有已连接的网络时，netHandler的netId为0，属于异常场景。可根据实际情况添加处理机制。
+    return;
+  }
+  let host = "xxxx";
+  netHandle.getAddressByName(host).then((data: connection.NetAddress) => {
+    console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
+  });
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // 当前没有已连接的网络时，netHandler的netId为0，属于异常场景。可根据实际情况添加处理机制。
+    return 0;
+  }
+  let host = "xxxx";
+  netHandle.getAddressByName(host).then((data: connection.NetAddress) => {
+    console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
+  });
+});
+```
+
 ## getAddressByName
 
 ```TypeScript
@@ -319,39 +355,7 @@ getAddressByName(host: string): Promise<NetAddress>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  if (netHandle.netId == 0) {
-    // 当前没有已连接的网络时，netHandler的netId为0，属于异常场景。可根据实际情况添加处理机制。
-    return;
-  }
-  let host = "xxxx";
-  netHandle.getAddressByName(host).then((data: connection.NetAddress) => {
-    console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
-  });
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  if (netHandle.netId == 0) {
-    // 当前没有已连接的网络时，netHandler的netId为0，属于异常场景。可根据实际情况添加处理机制。
-    return 0;
-  }
-  let host = "xxxx";
-  netHandle.getAddressByName(host).then((data: connection.NetAddress) => {
-    console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
-  });
-});
-```
+参见 [getAddressByName](#getaddressbyname)
 
 ## getAddressesByName
 
@@ -394,6 +398,27 @@ getAddressesByName(host: string, callback: AsyncCallback<Array<NetAddress>>): vo
 import { connection } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+connection.getAddressesByName("xxxx", (error: BusinessError, data: connection.NetAddress[]) => {
+  if (error) {
+    console.error(`Failed to get addresses. Code:${error.code}, message:${error.message}`);
+    return;
+  }
+  console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getAddressesByName("xxxx").then((data: connection.NetAddress[]) => {
+  console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
 connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
   if (netHandle.netId == 0) {
     // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
@@ -405,6 +430,40 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
       console.error(`Failed to get addresses. Code:${error.code}, message:${error.message}`);
       return;
     }
+    console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
+  });
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
+    return;
+  }
+  let host = "www.example.com";
+  netHandle.getAddressesByName(host).then((data: connection.NetAddress[]) => {
+    console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
+  });
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
+    return;
+  }
+  let host = "www.example.com";
+  netHandle.getAddressesByName(host).then((data: Array<connection.NetAddress>|undefined) => {
     console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
   });
 });
@@ -452,39 +511,7 @@ getAddressesByName(host: string): Promise<Array<NetAddress>>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  if (netHandle.netId == 0) {
-    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
-    return;
-  }
-  let host = "www.example.com";
-  netHandle.getAddressesByName(host).then((data: connection.NetAddress[]) => {
-    console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
-  });
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  if (netHandle.netId == 0) {
-    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
-    return;
-  }
-  let host = "www.example.com";
-  netHandle.getAddressesByName(host).then((data: Array<connection.NetAddress>|undefined) => {
-    console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
-  });
-});
-```
+参见 [getAddressesByName](#getaddressesbyname)
 
 ## getAddressesByNameWithOptions
 
@@ -527,6 +554,19 @@ getAddressesByNameWithOptions(host: string, option?: QueryOptions): Promise<Arra
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
 
 **示例**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+let option: connection.QueryOptions = {
+  family: connection.FamilyType.FAMILY_TYPE_IPV4
+};
+connection.getAddressesByNameWithOptions("www.example.com", option).then((data: connection.NetAddress[]) => {
+  console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get msg. Code:${err.code}, message:${err.message}`)
+});
+```
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

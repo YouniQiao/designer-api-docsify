@@ -49,6 +49,15 @@ Gets the supported physical apertures. Move to ApertureQuery interface from Aper
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal.<br>**Applicable version:** 24 and later |
 
+**Examples**
+
+```TypeScript
+function getSupportedPhysicalApertures(session: camera.PortraitPhotoSession): Array<camera.PhysicalAperture> {
+  let physicalApertures: Array<camera.PhysicalAperture> = session.getSupportedPhysicalApertures();
+  return physicalApertures;
+}
+```
+
 ## getSupportedVirtualApertures
 
 ```TypeScript
@@ -77,4 +86,13 @@ Obtains the supported virtual apertures.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+
+**Examples**
+
+```TypeScript
+function getSupportedVirtualApertures(session: camera.PortraitPhotoSession): Array<number> {
+  let virtualApertures: Array<number> = session.getSupportedVirtualApertures();
+  return virtualApertures;
+}
+```
 

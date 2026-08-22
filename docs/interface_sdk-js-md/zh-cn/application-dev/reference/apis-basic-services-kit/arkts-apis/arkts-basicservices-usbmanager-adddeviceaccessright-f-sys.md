@@ -49,3 +49,34 @@ function addDeviceAccessRight(tokenId: string, deviceName: string): boolean
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  <br>1.Mandatory parameters are left unspecified.  <br>2.Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
+**示例**
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+// 设备名称示例值，实际使用时请通过usbManager.getDevices()接口获取设备列表后，从设备对象中获取deviceName字段
+let devicesName: string = '1-1';
+// 定义tokenId变量
+let tokenId: string = '';
+  // 为指定应用添加USB设备访问权限
+  try {
+    // 获取bundle信息标志
+    let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_DEFAULT;
+    // 异步获取当前应用的bundle信息
+    bundleManager.getBundleInfoForSelf(bundleFlags).then((bundleInfo) => {
+      console.info('testTag', 'getBundleInfoForSelf successfully. Data: %{public}s', JSON.stringify(bundleInfo));
+      // 获取应用的accessTokenId
+      let token = bundleInfo.appInfo.accessTokenId;
+      tokenId = token.toString();
+      // 添加设备访问权限
+      if (usbManager.addDeviceAccessRight(tokenId, devicesName)) {
+        console.info(`Succeed in adding right`);
+      }
+    }).catch((err : BusinessError) => {
+      console.error(`testTag getBundleInfoForSelf failed. Code: ${err.code}, message: ${err.message}`);
+    });
+  } catch (err : BusinessError) {
+    console.error(`testTag failed. Code: ${err.code}, message: ${err.message}`);
+  }
+```
+

@@ -34,7 +34,7 @@ removeAllSlots removes all notification
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;NotificationSlot&gt;&gt; | Yes | Callback used to return the result. If the notification slots are obtained successfully, **err** is **undefined** and **data** is the obtained **NotificationSlot** array. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NotificationSlot&gt;&gt; | Yes | Callback used to return the result. If the notification slots are obtained successfully, **err** is **undefined** and **data** is the obtained **NotificationSlot** array. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -59,6 +59,16 @@ let getSlotsCallback = (err: BusinessError, data: Array<notificationManager.Noti
   }
 }
 notificationManager.getSlots(getSlotsCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.getSlots().then((data: Array<notificationManager.NotificationSlot>) => {
+  console.info(`Succeeded in getting slots, data is ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get slots. Code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -102,13 +112,5 @@ removeAllSlots removes all notification
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getSlots().then((data: Array<notificationManager.NotificationSlot>) => {
-  console.info(`Succeeded in getting slots, data is ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get slots. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getSlots](#getslots)
 

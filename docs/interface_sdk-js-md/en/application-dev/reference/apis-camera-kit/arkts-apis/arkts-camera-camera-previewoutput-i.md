@@ -55,6 +55,22 @@ Before enabling this feature, you can call [isBandwidthCompressionSupported](#is
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function enableBandwidthCompression(previewOutput: camera.PreviewOutput, enabled: boolean): void {
+  try {
+    previewOutput.enableBandwidthCompression(enabled);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The previewOutput.enableBandwidthCompression call failed. error code: ${err.code}`);
+  }
+}
+```
+
 ## getActiveFrameRate
 
 ```TypeScript
@@ -78,6 +94,22 @@ This API is valid only after [setFrameRate](#setframerate) is called to set a fr
 | Type | Description |
 | --- | --- |
 | [FrameRateRange](arkts-camera-camera-frameraterange-i.md) | Frame rate range. |
+
+**Examples**
+
+```TypeScript
+function getActiveFrameRate(previewOutput: camera.PreviewOutput): camera.FrameRateRange {
+  let activeFrameRate: camera.FrameRateRange = previewOutput.getActiveFrameRate();
+  return activeFrameRate;
+}
+```
+
+```TypeScript
+function getActiveFrameRate(videoOutput: camera.VideoOutput): camera.FrameRateRange {
+  let activeFrameRate: camera.FrameRateRange = videoOutput.getActiveFrameRate();
+  return activeFrameRate;
+}
+```
 
 ## getActiveProfile
 
@@ -106,6 +138,56 @@ Obtains the profile that takes effect currently.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function testGetActiveProfile(photoOutput: camera.PhotoOutput): camera.Profile | undefined {
+  let activeProfile: camera.Profile | undefined = undefined;
+  try {
+    activeProfile = photoOutput.getActiveProfile();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The photoOutput.getActiveProfile call failed. error code: ${err.code}`);
+  }
+  return activeProfile;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function testGetActiveProfile(previewOutput: camera.PreviewOutput): camera.Profile | undefined {
+  let activeProfile: camera.Profile | undefined = undefined;
+  try {
+    activeProfile = previewOutput.getActiveProfile();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The previewOutput.getActiveProfile call failed. error code: ${err.code}`);
+  }
+  return activeProfile;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function testGetActiveProfile(videoOutput: camera.VideoOutput): camera.Profile | undefined {
+  let activeProfile: camera.VideoProfile | undefined = undefined;
+  try {
+    activeProfile = videoOutput.getActiveProfile();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The videoOutput.getActiveProfile call failed. error code: ${err.code}`);
+  }
+  return activeProfile;
+}
+```
 
 ## getPreviewRotation
 
@@ -146,6 +228,38 @@ Obtains the preview rotation angle.
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 - 22 |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function testGetPreviewRotation(previewOutput: camera.PreviewOutput, imageRotation : camera.ImageRotation): camera.ImageRotation {
+  let previewRotation: camera.ImageRotation = camera.ImageRotation.ROTATION_0;
+  try {
+    previewRotation = previewOutput.getPreviewRotation(imageRotation);
+    console.info(`Preview rotation is: ${previewRotation}`);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The previewOutput.getPreviewRotation call failed. error code: ${err.code}`);
+  }
+  return previewRotation;
+}
+
+function testGetPreviewRotationWithOutParam(previewOutput: camera.PreviewOutput): camera.ImageRotation {
+  let previewRotation: camera.ImageRotation = camera.ImageRotation.ROTATION_0;
+  try {
+    previewRotation = previewOutput.getPreviewRotation();
+    console.info(`Preview rotation is: ${previewRotation}`);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The previewOutput.testGetPreviewRotationWithOutParam call failed. error code: ${err.code}`);
+  }
+  return previewRotation;
+}
+```
+
 ## getSupportedFrameRates
 
 ```TypeScript
@@ -168,6 +282,22 @@ Obtains the supported frame rates.
 | --- | --- |
 | Array&lt;[FrameRateRange](arkts-camera-camera-frameraterange-i.md)&gt; | Array of supported frame rates. If the API call fails, undefined is returned. |
 
+**Examples**
+
+```TypeScript
+function getSupportedFrameRates(previewOutput: camera.PreviewOutput): Array<camera.FrameRateRange> {
+  let supportedFrameRatesArray: Array<camera.FrameRateRange> = previewOutput.getSupportedFrameRates();
+  return supportedFrameRatesArray;
+}
+```
+
+```TypeScript
+function getSupportedFrameRates(videoOutput: camera.VideoOutput): Array<camera.FrameRateRange> {
+  let supportedFrameRatesArray: Array<camera.FrameRateRange> = videoOutput.getSupportedFrameRates();
+  return supportedFrameRatesArray;
+}
+```
+
 ## isBandwidthCompressionSupported
 
 ```TypeScript
@@ -189,6 +319,24 @@ Checks whether preview bandwidth compression is supported. This involves reducin
 | Type | Description |
 | --- | --- |
 | boolean | Check result for the support of preview bandwidth compression. **true** if supported, **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isBandwidthCompressionSupported(previewOutput: camera.PreviewOutput): boolean {
+  let supported: boolean = false;
+  try {
+    supported = previewOutput.isBandwidthCompressionSupported();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The previewOutput.isBandwidthCompressionSupported call failed. error code: ${err.code}`);
+  }
+  return supported;
+}
+```
 
 ## isLogViewAssistSupported
 
@@ -214,66 +362,6 @@ Checks whether log video view assistance is supported.
 | --- | --- |
 | boolean | Check result for the support of log video view assistance. **true** if supported, **false** otherwise. |
 
-## offError
-
-```TypeScript
-offError(callback?: ErrorCallback): void
-```
-
-Unsubscribes from error events.
-
-**Since:** 23
-
-<!--Device-PreviewOutput-offError(callback?: ErrorCallback): void--><!--Device-PreviewOutput-offError(callback?: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to get the preview output errors. |
-
-## offFrameEnd
-
-```TypeScript
-offFrameEnd(callback?: AsyncCallback<void>): void
-```
-
-Unsubscribes from frame end event callback.
-
-**Since:** 23
-
-<!--Device-PreviewOutput-offFrameEnd(callback?: AsyncCallback<void>): void--><!--Device-PreviewOutput-offFrameEnd(callback?: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | No | Callback used to return the result. |
-
-## offFrameStart
-
-```TypeScript
-offFrameStart(callback?: AsyncCallback<void>): void
-```
-
-Unsubscribes from frame start event callback.
-
-**Since:** 23
-
-<!--Device-PreviewOutput-offFrameStart(callback?: AsyncCallback<void>): void--><!--Device-PreviewOutput-offFrameStart(callback?: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | No | Callback used to return the result. |
-
 ## off('error')
 
 ```TypeScript
@@ -295,7 +383,7 @@ Unsubscribes from PreviewOutput error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a previewOutput instance is created. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## off('frameEnd')
 
@@ -318,7 +406,7 @@ Unsubscribes from preview frame end events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'frameEnd' | Yes | Event type. The value is fixed at **'frameEnd'**. The event can be listened for when a previewOutput instance is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## off('frameStart')
 
@@ -341,19 +429,19 @@ Unsubscribes from preview frame start events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'frameStart' | Yes | Event type. The value is fixed at **'frameStart'**. The event can be listened for when a previewOutput instance is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
-## onError
+## offError
 
 ```TypeScript
-onError(callback: ErrorCallback): void
+offError(callback?: ErrorCallback): void
 ```
 
-Subscribes to error events.
+Unsubscribes from error events.
 
 **Since:** 23
 
-<!--Device-PreviewOutput-onError(callback: ErrorCallback): void--><!--Device-PreviewOutput-onError(callback: ErrorCallback): void-End-->
+<!--Device-PreviewOutput-offError(callback?: ErrorCallback): void--><!--Device-PreviewOutput-offError(callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -361,19 +449,19 @@ Subscribes to error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to get the preview output errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to get the preview output errors. |
 
-## onFrameEnd
+## offFrameEnd
 
 ```TypeScript
-onFrameEnd(callback: AsyncCallback<void>): void
+offFrameEnd(callback?: AsyncCallback<void>): void
 ```
 
-Subscribes frame end event callback.
+Unsubscribes from frame end event callback.
 
 **Since:** 23
 
-<!--Device-PreviewOutput-onFrameEnd(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-onFrameEnd(callback: AsyncCallback<void>): void-End-->
+<!--Device-PreviewOutput-offFrameEnd(callback?: AsyncCallback<void>): void--><!--Device-PreviewOutput-offFrameEnd(callback?: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -381,19 +469,19 @@ Subscribes frame end event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. |
 
-## onFrameStart
+## offFrameStart
 
 ```TypeScript
-onFrameStart(callback: AsyncCallback<void>): void
+offFrameStart(callback?: AsyncCallback<void>): void
 ```
 
-Subscribes frame start event callback.
+Unsubscribes from frame start event callback.
 
 **Since:** 23
 
-<!--Device-PreviewOutput-onFrameStart(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-onFrameStart(callback: AsyncCallback<void>): void-End-->
+<!--Device-PreviewOutput-offFrameStart(callback?: AsyncCallback<void>): void--><!--Device-PreviewOutput-offFrameStart(callback?: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -401,7 +489,7 @@ Subscribes frame start event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. |
 
 ## on('error')
 
@@ -428,7 +516,7 @@ Subscribes to PreviewOutput error events. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a previewOutput instance is created. This event is triggered and the corresponding error message is returned when an error occurs during the use of a preview-related API such as [Session.start](arkts-camera-camera-session-i.md#start) or [CameraOutput.release](arkts-camera-camera-cameraoutput-i.md#release). |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 ## on('frameEnd')
 
@@ -455,7 +543,7 @@ Subscribes to preview frame end events. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'frameEnd' | Yes | Event type. The value is fixed at **'frameEnd'**. The event can be listened for when a previewOutput instance is created. This event is triggered and returned when the last frame of preview ends. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. The preview ends as long as this event is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. The preview ends as long as this event is returned. |
 
 ## on('frameStart')
 
@@ -482,7 +570,67 @@ Subscribes to preview frame start events. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'frameStart' | Yes | Event type. The value is fixed at **'frameStart'**. The event can be listened for when a previewOutput instance is created. This event is triggered and returned when the bottom layer starts exposure for the first time. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. The preview starts as long as this event is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. The preview starts as long as this event is returned. |
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to error events.
+
+**Since:** 23
+
+<!--Device-PreviewOutput-onError(callback: ErrorCallback): void--><!--Device-PreviewOutput-onError(callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to get the preview output errors. |
+
+## onFrameEnd
+
+```TypeScript
+onFrameEnd(callback: AsyncCallback<void>): void
+```
+
+Subscribes frame end event callback.
+
+**Since:** 23
+
+<!--Device-PreviewOutput-onFrameEnd(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-onFrameEnd(callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+## onFrameStart
+
+```TypeScript
+onFrameStart(callback: AsyncCallback<void>): void
+```
+
+Subscribes frame start event callback.
+
+**Since:** 23
+
+<!--Device-PreviewOutput-onFrameStart(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-onFrameStart(callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## setFrameRate
 
@@ -520,6 +668,20 @@ which can be obtained by calling [getSupportedFrameRates](#getsupportedframerate
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400110](../errorcode-camera.md#7400110-configuration-conflicts) | Unresolved conflicts with current configurations. |
+
+**Examples**
+
+```TypeScript
+function setFrameRateRange(previewOutput: camera.PreviewOutput, frameRateRange: Array<number>): void {
+  previewOutput.setFrameRate(frameRateRange[0], frameRateRange[1]);
+}
+```
+
+```TypeScript
+function setFrameRateRange(videoOutput: camera.VideoOutput, frameRateRange: Array<number>): void {
+  videoOutput.setFrameRate(frameRateRange[0], frameRateRange[1]);
+}
+```
 
 ## setLogViewAssistEnable
 
@@ -583,6 +745,23 @@ Sets the preview rotation angle.
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function testSetPreviewRotation(previewOutput: camera.PreviewOutput, previewRotation : camera.ImageRotation, isDisplayLocked: boolean): void {
+  try {
+    previewOutput.setPreviewRotation(previewRotation, isDisplayLocked);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The previewOutput.setPreviewRotation call failed. error code: ${err.code}`);
+  }
+  return;
+}
+```
+
 ## start
 
 ```TypeScript
@@ -605,13 +784,157 @@ Starts to output preview streams. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the preview stream output starts successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the preview stream output starts successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startDepthDataOutput(depthDataOutput: camera.DepthDataOutput): void {
+  depthDataOutput.start().then(() => {
+    console.info('Promise returned to indicate that start method execution success.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to depth data output start, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startCaptureSession(captureSession: camera.CaptureSession): void {
+  captureSession.start((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to start the session, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback invoked to indicate the session start success.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startCaptureSession(captureSession: camera.CaptureSession): void {
+  captureSession.start().then(() => {
+    console.info('Promise returned to indicate the session start success.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to start the session, error code: ${err.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startMetadataOutput(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.start((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to start metadata output, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback returned with metadata output started.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startMetadataOutput(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.start().then(() => {
+    console.info('Callback returned with metadata output started.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to metadata output start, error code: ${error.code}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startPreviewOutput(previewOutput: camera.PreviewOutput): void {
+  previewOutput.start((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to start the preview output, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback returned with preview output started.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startPreviewOutput(previewOutput: camera.PreviewOutput): void {
+  previewOutput.start().then(() => {
+    console.info('Promise returned with preview output started.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to preview output start, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startCaptureSession(session: camera.Session): void {
+  session.start((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to start the session, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback invoked to indicate the session start success.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startCaptureSession(session: camera.Session): void {
+  session.start().then(() => {
+    console.info('Promise returned to indicate the session start success.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to start the session, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startVideoOutput(videoOutput: camera.VideoOutput): void {
+  videoOutput.start((err: BusinessError) => {
+    if (err.code) {
+      console.error(`Failed to start the video output, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback invoked to indicate the video output start success.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startVideoOutput(videoOutput: camera.VideoOutput): void {
+  videoOutput.start().then(() => {
+    console.info('Promise returned to indicate that start method execution success.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to video output start, error code: ${error.code}.`);
+  });
+}
+```
 
 ## start
 
@@ -643,6 +966,10 @@ Starts to output preview streams. This API uses a promise to return the result.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
+**Examples**
+
+See [start](#start)
+
 ## stop
 
 ```TypeScript
@@ -665,7 +992,145 @@ Stops outputting preview streams. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the preview stream output stops successfully, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the preview stream output stops successfully, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopDepthDataOutput(depthDataOutput: camera.DepthDataOutput): void {
+  depthDataOutput.stop().then(() => {
+    console.info('Promise returned to indicate that stop method execution success.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to depth data output stop, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopCaptureSession(captureSession: camera.CaptureSession): void {
+  captureSession.stop((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to stop the session, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback invoked to indicate the session stop success.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopCaptureSession(captureSession: camera.CaptureSession): void {
+  captureSession.stop().then(() => {
+    console.info('Promise returned to indicate the session stop success.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to stop the session, error code: ${err.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopMetadataOutput(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.stop((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to stop the metadata output, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback returned with metadata output stopped.');
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopMetadataOutput(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.stop().then(() => {
+    console.info('Callback returned with metadata output stopped.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to metadata output stop, error code: ${error.code}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopPreviewOutput(previewOutput: camera.PreviewOutput): void {
+  previewOutput.stop((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to stop the preview output, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Returned with preview output stopped.');
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopPreviewOutput(previewOutput: camera.PreviewOutput): void {
+  previewOutput.stop().then(() => {
+    console.info('Callback returned with preview output stopped.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to preview output stop, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopCaptureSession(session: camera.Session): void {
+  session.stop((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to stop the session, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback invoked to indicate the session stop success.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopCaptureSession(session: camera.Session): void {
+  session.stop().then(() => {
+    console.info('Promise returned to indicate the session stop success.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to stop the session, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+function stopVideoOutput(videoOutput: camera.VideoOutput): void {
+  videoOutput.stop(() => {
+    console.info('Callback invoked to indicate the video output stop success.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopVideoOutput(videoOutput: camera.VideoOutput): void {
+  videoOutput.stop().then(() => {
+    console.info('Promise returned to indicate that stop method execution success.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to video output stop, error code: ${error.code}.`);
+  });
+}
+```
 
 ## stop
 
@@ -690,4 +1155,8 @@ Stops outputting preview streams. This API uses a promise to return the result.
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+See [stop](#stop)
 

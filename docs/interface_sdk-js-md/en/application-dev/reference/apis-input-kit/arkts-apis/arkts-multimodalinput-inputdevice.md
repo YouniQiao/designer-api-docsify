@@ -35,10 +35,10 @@ import { inputDeviceCooperate } from '@kit.InputKit';
 | [getKeyboardType](arkts-input-inputdevice-getkeyboardtype-f.md) | Obtains the keyboard type of an input device. This API uses a promise to return the result. |
 | [getKeyboardTypeSync](arkts-input-inputdevice-getkeyboardtypesync-f.md) | Obtains the keyboard type of the input device. |
 | [isFunctionKeyEnabled](arkts-input-inputdevice-isfunctionkeyenabled-f.md) | Checks whether the specified function key (for example, **CapsLock**) is enabled. This API uses a promise to return the result. |
-| [offChange](arkts-input-inputdevice-offchange-f.md) | Stops listening for an input device event. |
 | [off_change](arkts-input-inputdevice-offchange-f.md) | Disables listening for device hot swap events. This API is called before the application exits. This API uses an asynchronous callback to return the result. |
-| [onChange](arkts-input-inputdevice-onchange-f.md) | Starts listening for an input device event. |
+| [offChange](arkts-input-inputdevice-offchange-f.md) | Stops listening for an input device event. |
 | [on_change](arkts-input-inputdevice-onchange-f.md) | Enables listening for device hot swap events. When performing this operation, you need to connect to external devices such as a mouse, keyboard, and touchscreen. This API uses an asynchronous callback to return the result. |
+| [onChange](arkts-input-inputdevice-onchange-f.md) | Starts listening for an input device event. |
 | [setFunctionKeyEnabled](arkts-input-inputdevice-setfunctionkeyenabled-f.md) | Specifies whether to enable a function key (for example, **CapsLock**). This API uses a promise to return the result. |
 | [supportKeys](arkts-input-inputdevice-supportkeys-f.md) | Queries whether a specified input device supports specified keys. This API uses an asynchronous callback to return the result. |
 | [supportKeys](arkts-input-inputdevice-supportkeys-f.md) | Checks whether the input device supports the specified keys. This API uses a promise to return the result. |

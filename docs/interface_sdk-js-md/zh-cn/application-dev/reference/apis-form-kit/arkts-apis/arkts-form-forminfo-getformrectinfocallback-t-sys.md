@@ -26,3 +26,49 @@ type GetFormRectInfoCallback = (formId: string) => Promise<formInfo.Rect>
 | --- | --- |
 | Promise&lt;[formInfo.Rect](arkts-form-forminfo-rect-i.md)&gt; | Promise对象，返回卡片相对屏幕左上角的位置信息和卡片尺寸信息。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formInfo } from '@kit.FormKit';
+
+// 卡片使用方需要对查询请求进行处理，计算并返回卡片尺寸、位置信息
+let getFormRectInfoCallback: formInfo.GetFormRectInfoCallback =
+  (formId: string): Promise<formInfo.Rect> => {
+    return new Promise<formInfo.Rect>((resolve: (value: formInfo.Rect) => void) => {
+      console.info(`formId is ${formId}`);
+      let formRect: formInfo.Rect = {
+        left: 0,
+        top: 0,
+        width: 0,
+        height: 0
+      };
+      resolve(formRect);
+    })
+  };
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { formInfo } from '@kit.FormKit';
+
+// 卡片使用方需要对查询请求进行处理，计算并返回卡片尺寸、位置信息
+let getFormRectInfoCallback: formInfo.GetFormRectInfoCallback =
+  (formId: string): Promise<formInfo.Rect> => {
+    return new Promise<formInfo.Rect>((
+      resolve: (rect: formInfo.Rect) => void, reject: (err: Error) => void): void => {
+      let formRect: formInfo.Rect = {
+        left: 1.0,
+        top: 1.0,
+        width: 1.0,
+        height: 1.0
+      }
+      resolve(formRect);
+    });
+  }
+```
+

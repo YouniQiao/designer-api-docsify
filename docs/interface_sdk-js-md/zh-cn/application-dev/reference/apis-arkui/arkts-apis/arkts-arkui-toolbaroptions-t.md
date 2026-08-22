@@ -14,5 +14,5 @@ Declare ToolBarOptions use in ToolBar.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**属性类型：** Array&lt;[ToolBarOption](arkts-arkui-arkuiadvancedtoolbar-toolbaroption-c.md)&gt;
+**属性类型：** Array&lt;[ToolBarOption](arkts-arkui-arkui-advanced-toolbar-toolbaroption-c.md)&gt;
 

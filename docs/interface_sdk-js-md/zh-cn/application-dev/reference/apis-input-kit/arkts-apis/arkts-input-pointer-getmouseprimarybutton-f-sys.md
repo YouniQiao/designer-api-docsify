@@ -100,38 +100,6 @@ struct Index {
 }
 ```
 
-
-## getMousePrimaryButton
-
-```TypeScript
-function getMousePrimaryButton(): Promise<PrimaryButton>
-```
-
-获取当前鼠标主键，使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-pointer-function getMousePrimaryButton(): Promise<PrimaryButton>--><!--Device-pointer-function getMousePrimaryButton(): Promise<PrimaryButton>-End-->
-
-**系统能力：** SystemCapability.MultimodalInput.Input.Pointer
-
-**系统接口：** 此接口为系统接口。
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[PrimaryButton](arkts-input-pointer-primarybutton-e.md)&gt; | Promise对象，返回鼠标主键。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -188,4 +156,38 @@ struct Index {
   }
 }
 ```
+
+
+## getMousePrimaryButton
+
+```TypeScript
+function getMousePrimaryButton(): Promise<PrimaryButton>
+```
+
+获取当前鼠标主键，使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-pointer-function getMousePrimaryButton(): Promise<PrimaryButton>--><!--Device-pointer-function getMousePrimaryButton(): Promise<PrimaryButton>-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Pointer
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[PrimaryButton](arkts-input-pointer-primarybutton-e.md)&gt; | Promise对象，返回鼠标主键。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+参见 [getMousePrimaryButton](#getmouseprimarybutton)
 

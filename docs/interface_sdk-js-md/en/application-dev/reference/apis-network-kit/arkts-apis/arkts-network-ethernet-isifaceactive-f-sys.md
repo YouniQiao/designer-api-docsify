@@ -29,7 +29,7 @@ Checks whether the interface is activated. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | iface | string | Yes | Interface name. If this parameter is left empty, the API checks for any active network interface. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. The value **1** means that the network interface is active, **0** means that the network interface is inactive, and any other value means that an error has occurred. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. The value **1** means that the network interface is active, **0** means that the network interface is inactive, and any other value means that an error has occurred. |
 
 **Error codes:**
 
@@ -55,6 +55,17 @@ ethernet.isIfaceActive("eth0", (error: BusinessError, value: number) => {
   } else {
     console.info("whether2Activate callback = " + JSON.stringify(value));
   }
+});
+```
+
+```TypeScript
+import { ethernet } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+ethernet.isIfaceActive("eth0").then((data: number) => {
+  console.info("isIfaceActive promise = " + JSON.stringify(data));
+}).catch((error: BusinessError) => {
+  console.error("isIfaceActive promise error = " + JSON.stringify(error));
 });
 ```
 
@@ -103,14 +114,5 @@ Checks whether the interface is activated. This API uses a promise to return the
 
 **Examples**
 
-```TypeScript
-import { ethernet } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-ethernet.isIfaceActive("eth0").then((data: number) => {
-  console.info("isIfaceActive promise = " + JSON.stringify(data));
-}).catch((error: BusinessError) => {
-  console.error("isIfaceActive promise error = " + JSON.stringify(error));
-});
-```
+See [isIfaceActive](#isifaceactive)
 

@@ -30,7 +30,7 @@ Sets the status of the VoNR switch. This API uses an asynchronous callback to re
 | --- | --- | --- | --- |
 | slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2. |
 | state | [VoNRState](arkts-telephony-call-vonrstate-e-sys.md) | Yes | Status of the VoNR switch. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -57,6 +57,18 @@ call.setVoNRState(slotId, state, (err: BusinessError) => {
     } else {
         console.info(`setVoNRState success`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+let state: call.VoNRState = call.VoNRState.VONR_STATE_ON;
+call.setVoNRState(slotId, state).then(() => {
+    console.info(`setVoNRState success`);
+}).catch((err: BusinessError) => {
+    console.error(`setVoNRState fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -106,15 +118,5 @@ Sets the status of the VoNR switch. This API uses a promise to return the result
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let state: call.VoNRState = call.VoNRState.VONR_STATE_ON;
-call.setVoNRState(slotId, state).then(() => {
-    console.info(`setVoNRState success`);
-}).catch((err: BusinessError) => {
-    console.error(`setVoNRState fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [setVoNRState](#setvonrstate)
 

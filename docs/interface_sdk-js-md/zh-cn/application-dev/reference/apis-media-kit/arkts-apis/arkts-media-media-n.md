@@ -80,7 +80,7 @@ import { media } from '@kit.MediaKit';
 | [AVTimedMetaData](arkts-media-media-avtimedmetadata-i.md) | Interface for defining time base metadata |
 | [AVAdsController](arkts-media-media-avadscontroller-i.md) | 广告内容控制接口 |
 | [AVMetadataExtractor](arkts-media-media-avmetadataextractor-i.md) | 元数据获取类，用于从媒体资源中获取元数据、缩略图。在调用AVMetadataExtractor的方法前，需要先通过 [media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md) 构建一个AVMetadataExtractor实例。 |
-| [AVMetadata](arkts-media-media-avmetadata-i.md) | Defines the audio and video metadata. Parameters that are not declared as read-only in [AVRecorderConfig](arkts-media-multimediamedia-avrecorderconfig-i.md) can be used as input parameters for recording of [AVRecorder](arkts-media-multimediamedia-avrecorder-i.md). |
+| [AVMetadata](arkts-media-media-avmetadata-i.md) | Defines the audio and video metadata. Parameters that are not declared as read-only in [AVRecorderConfig](arkts-media-multimedia-media-avrecorderconfig-i.md) can be used as input parameters for recording of [AVRecorder](arkts-media-multimedia-media-avrecorder-i.md). |
 | [OutputSize](arkts-media-media-outputsize-i.md) | This interface is used to define the output image size. |
 | [AVImageGenerator](arkts-media-media-avimagegenerator-i.md) | 视频缩略图获取类，用于从视频资源中获取缩略图。在调用AVImageGenerator的方法前，需要先通过 [createAVImageGenerator()](arkts-media-media-createavimagegenerator-f.md) 构建一个AVImageGenerator实例。 |
 | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Defines the format parameters of the video thumbnail to be obtained. |
@@ -97,7 +97,7 @@ import { media } from '@kit.MediaKit';
 | 名称 | 说明 |
 | --- | --- |
 | [AVMetadataExtractor](arkts-media-media-avmetadataextractor-i-sys.md) | 元数据获取类，用于从媒体资源中获取元数据、缩略图。在调用AVMetadataExtractor的方法前，需要先通过 [media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md) 构建一个AVMetadataExtractor实例。 |
-| [AVMetadata](arkts-media-media-avmetadata-i-sys.md) | Defines the audio and video metadata. Parameters that are not declared as read-only in [AVRecorderConfig](arkts-media-multimediamedia-avrecorderconfig-i.md) can be used as input parameters for recording of [AVRecorder](arkts-media-multimediamedia-avrecorder-i.md). |
+| [AVMetadata](arkts-media-media-avmetadata-i-sys.md) | Defines the audio and video metadata. Parameters that are not declared as read-only in [AVRecorderConfig](arkts-media-multimedia-media-avrecorderconfig-i.md) can be used as input parameters for recording of [AVRecorder](arkts-media-multimedia-media-avrecorder-i.md). |
 | [PixelMapParams](arkts-media-media-pixelmapparams-i-sys.md) | Defines the format parameters of the video thumbnail to be obtained. |
 | [AVPlayer](arkts-media-media-avplayer-i-sys.md) | 播放管理类，用于管理和播放媒体资源。在调用AVPlayer的方法前，需要先通过 [createAVPlayer()](arkts-media-media-createavplayer-f.md)构建一个 AVPlayer实例。 |
 <!--DelEnd-->

@@ -48,6 +48,42 @@ getZoomRatio(): double
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getZoomRatio(captureSession: camera.CaptureSession): number {
+  const invalidValue: number = -1;
+  let zoomRatio: number = invalidValue;
+  try {
+    zoomRatio = captureSession.getZoomRatio();
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The getZoomRatio call failed. error code: ${err.code}`);
+  }
+  return zoomRatio;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getZoomRatio(photoSession: camera.PhotoSession): number {
+  const invalidValue: number = -1;
+  let zoomRatio: number = invalidValue;
+  try {
+    zoomRatio = photoSession.getZoomRatio();
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The getZoomRatio call failed. error code: ${err.code}`);
+  }
+  return zoomRatio;
+}
+```
+
 ## setSmoothZoom
 
 ```TypeScript
@@ -77,6 +113,14 @@ setSmoothZoom(targetRatio: double, mode?: SmoothZoomMode): void
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config.<br>**适用版本：** 11 - 17 |
 
+**示例**
+
+```TypeScript
+function setSmoothZoom(sessionExtendsZoom: camera.Zoom, targetZoomRatio: number, mode: camera.SmoothZoomMode): void {
+  sessionExtendsZoom.setSmoothZoom(targetZoomRatio, mode);
+}
+```
+
 ## setZoomRatio
 
 ```TypeScript
@@ -104,4 +148,42 @@ setZoomRatio(zoomRatio: double): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setZoomRatio(captureSession: camera.CaptureSession, zoomRatioRange: Array<number>): void {
+  if (zoomRatioRange === undefined || zoomRatioRange.length <= 0) {
+    return;
+  }
+  let zoomRatio = zoomRatioRange[0];
+  try {
+    captureSession.setZoomRatio(zoomRatio);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The setZoomRatio call failed. error code: ${err.code}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setZoomRatio(photoSession: camera.PhotoSession, zoomRatioRange: Array<number>): void {
+  if (zoomRatioRange === undefined || zoomRatioRange.length <= 0) {
+    return;
+  }
+  let zoomRatio = zoomRatioRange[0];
+  try {
+    photoSession.setZoomRatio(zoomRatio);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The setZoomRatio call failed. error code: ${err.code}`);
+  }
+}
+```
 

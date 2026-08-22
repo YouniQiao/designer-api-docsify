@@ -37,7 +37,7 @@ Obtains the Want used to launch the bundle based on the given bundle name and us
 
 | Type | Description |
 | --- | --- |
-| [Want](arkts-ability-appabilitywant-want-c.md) | Want object. |
+| [Want](arkts-ability-app-ability-want-want-c.md) | Want object. |
 
 **Error codes:**
 

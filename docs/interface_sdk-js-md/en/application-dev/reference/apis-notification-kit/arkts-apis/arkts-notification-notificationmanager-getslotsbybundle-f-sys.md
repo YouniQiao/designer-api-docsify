@@ -29,7 +29,7 @@ Obtains the notification slots of a specified application. This API uses an asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;NotificationSlot&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NotificationSlot&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -60,6 +60,20 @@ let bundle: notificationManager.BundleOption = {
     bundle: "bundleName1",
 };
 notificationManager.getSlotsByBundle(bundle, getSlotsByBundleCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+    bundle: "bundleName1",
+};
+
+notificationManager.getSlotsByBundle(bundle).then((data: Array<notificationManager.NotificationSlot>) => {
+     console.info(`getSlotsByBundle success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSlotsByBundle failed, code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -108,17 +122,5 @@ Obtains the notification slots of a specified application. This API uses a promi
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
-};
-
-notificationManager.getSlotsByBundle(bundle).then((data: Array<notificationManager.NotificationSlot>) => {
-     console.info(`getSlotsByBundle success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSlotsByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getSlotsByBundle](#getslotsbybundle)
 

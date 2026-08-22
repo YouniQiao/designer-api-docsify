@@ -29,7 +29,7 @@ Removes printers. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | printerIds | Array&lt;string&gt; | Yes | List of printers to remove. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -52,6 +52,18 @@ print.removePrinters([printerId], (err: BusinessError) => {
     } else {
         console.info('removePrinters success');
     }
+})
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let printerId : string = '1212';
+print.removePrinters([printerId]).then(() => {
+    console.info('remove printers success');
+}).catch((error: BusinessError) => {
+    console.error('remove printers error : ' + JSON.stringify(error));
 })
 ```
 
@@ -96,15 +108,5 @@ Removes printers. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let printerId : string = '1212';
-print.removePrinters([printerId]).then(() => {
-    console.info('remove printers success');
-}).catch((error: BusinessError) => {
-    console.error('remove printers error : ' + JSON.stringify(error));
-})
-```
+See [removePrinters](#removeprinters)
 

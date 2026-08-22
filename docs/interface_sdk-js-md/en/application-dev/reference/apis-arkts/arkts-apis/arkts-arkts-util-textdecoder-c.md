@@ -74,6 +74,105 @@ console.info('retStr = ' + retStr);
 // Output: retStr = utf-8
 ```
 
+```TypeScript
+let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});
+```
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+```
+
+```TypeScript
+let textEncoder = new util.TextEncoder("utf-8");
+```
+
+```TypeScript
+let rationalNumber = new util.RationalNumber();
+```
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+```
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+console.info("range = " + range);
+// Output: range = [30, 40]
+```
+
+```TypeScript
+let base64 = new util.Base64Helper();
+```
+
+```TypeScript
+let decoder = new util.StringDecoder();
+```
+
+```TypeScript
+let type = new util.types();
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.Scope(tempLower, tempUpper);
+console.info("range = " + range);
+// Output: range = [30, 40]
+```
+
+```TypeScript
+let base64 = new  util.Base64();
+```
+
 ## constructor
 
 ```TypeScript
@@ -101,9 +200,7 @@ A constructor used to create a **TextDecoder** object.
 
 **Examples**
 
-```TypeScript
-let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});
-```
+See [constructor](#constructor)
 
 ## create
 
@@ -145,6 +242,10 @@ let textDecoder = util.TextDecoder.create('utf-8', textDecoderOptions);
 let retStr = textDecoder.encoding;
 console.info('retStr = ' + retStr);
 // Output: retStr = utf-8
+```
+
+```TypeScript
+let textEncoder = util.TextEncoder.create("utf-8");
 ```
 
 ## decode
@@ -193,6 +294,26 @@ console.info("input num:");
 let retStr = textDecoder.decode(uint8, {stream: false});
 console.info("retStr = " + retStr);
 // Output: retStr = abc
+```
+
+```TypeScript
+let base64Helper = new util.Base64Helper();
+let array = 'TWFuaXNkaXN0aW5ndWlzaGVkbm90b25seWJ5aGlzcmVhc29uYnV0Ynl0aGlzc2luZ3VsYXJwYXNz\r\naW9uZnJvbW90aGVyYW5pbWFsc3doaWNoaXNhbHVzdG9mdGhlbWluZGV4Y2VlZHN0aGVzaG9ydHZl\r\naGVtZW5jZW9mYW55Y2FybmFscGxlYXN1cmU=\r\n';
+base64Helper.decode(array, util.Type.MIME).then((val) => {
+  console.info(val.toString());
+  /*
+  Output: 77,97,110,105,115,100,105,115,116,105,110,103,117,105,115,104,101,100,110,111,116,111,110,108,121,98,121,104,105,115,114,101,97,115,111,110,98,117,116,98,121,116,104,105,115,115,105,110,103,117,108,97,114,112,97,115,115,105,111,110,102,114,111,109,111,116,104,101,114,97,110,105,109,97,108,115,119,104,105,99,104,105,115,97,108,117,115,116,111,102,116,104,101,109,105,110,100,101,120,99,101,101,100,115,116,104,101,115,104,111,114,116,118,101,104,101,109,101,110,99,101,111,102,97,110,121,99,97,114,110,97,108,112,108,101,97,115,117,114,101
+  */
+})
+```
+
+```TypeScript
+let base64 = new util.Base64();
+let array = new Uint8Array([99,122,69,122]);
+base64.decode(array).then((val) => {
+  console.info(val.toString());
+  // Output: 115,49,51
+})
 ```
 
 ## decodeToString

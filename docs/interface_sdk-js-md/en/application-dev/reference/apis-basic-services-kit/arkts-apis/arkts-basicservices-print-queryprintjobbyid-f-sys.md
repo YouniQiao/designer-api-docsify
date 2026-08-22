@@ -29,7 +29,7 @@ Queries a print job by ID. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | jobId | string | Yes | ID of the print job. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[PrintJob](arkts-basicservices-print-printjob-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PrintJob](arkts-basicservices-print-printjob-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -52,6 +52,18 @@ print.queryPrintJobById(jobId, (err: BusinessError, printJob : print.PrintJob) =
     } else {
         console.info('queryPrintJobById success, data : ' + JSON.stringify(printJob));
     }
+})
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let jobId : string = '1';
+print.queryPrintJobById(jobId).then((printJob : print.PrintJob) => {
+    console.info('queryPrintJobById data : ' + JSON.stringify(printJob));
+}).catch((error: BusinessError) => {
+    console.error('queryPrintJobById error : ' + JSON.stringify(error));
 })
 ```
 
@@ -96,15 +108,5 @@ Queries a print job by ID. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let jobId : string = '1';
-print.queryPrintJobById(jobId).then((printJob : print.PrintJob) => {
-    console.info('queryPrintJobById data : ' + JSON.stringify(printJob));
-}).catch((error: BusinessError) => {
-    console.error('queryPrintJobById error : ' + JSON.stringify(error));
-})
-```
+See [queryPrintJobById](#queryprintjobbyid)
 

@@ -31,7 +31,7 @@ Imports a key in plaintext. This API uses an asynchronous callback to return the
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not include sensitive data such as personal information. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Tags required for the import and key to import. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -81,40 +81,6 @@ huks.importKey(keyAlias, options, (err, data) => {
 });
 ```
 
-
-## importKey
-
-```TypeScript
-function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
-```
-
-Imports a key in plaintext. This API uses a promise to return the result.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [importKeyItem](arkts-universalkeystore-huks-importkeyitem-f.md)(keyAlias: string, options: HuksOptions)
-
-<!--Device-huks-function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>-End-->
-
-**System capability:** SystemCapability.Security.Huks.Extension
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not include sensitive data such as personal information. |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Tags required for the import and key to import. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Promise that returns **HuksResult**. |
-
-**Examples**
-
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';
 
@@ -160,4 +126,40 @@ let huksOptions: huks.HuksOptions = {
 /* Step 2: Import the key. */
 let result = huks.importKey(keyAlias, huksOptions);
 ```
+
+
+## importKey
+
+```TypeScript
+function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
+```
+
+Imports a key in plaintext. This API uses a promise to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [importKeyItem](arkts-universalkeystore-huks-importkeyitem-f.md)(keyAlias: string, options: HuksOptions)
+
+<!--Device-huks-function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>-End-->
+
+**System capability:** SystemCapability.Security.Huks.Extension
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not include sensitive data such as personal information. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Tags required for the import and key to import. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Promise that returns **HuksResult**. |
+
+**Examples**
+
+See [importKey](#importkey)
 

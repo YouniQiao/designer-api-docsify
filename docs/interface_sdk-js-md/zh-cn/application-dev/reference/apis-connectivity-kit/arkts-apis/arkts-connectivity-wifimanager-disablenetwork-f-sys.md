@@ -55,6 +55,18 @@ try {
 }
 ```
 
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+try {
+  let netId = 0;
+  let blockDuration = 300;
+  wifiManager.disableNetwork(netId, blockDuration);  
+} catch (error) {
+  console.error(`failed: ${JSON.stringify(error)}`);
+}
+```
+
 
 ## disableNetwork
 
@@ -93,15 +105,5 @@ function disableNetwork(netId: int, blockDuration: int): void
 
 **示例**
 
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-try {
-  let netId = 0;
-  let blockDuration = 300;
-  wifiManager.disableNetwork(netId, blockDuration);  
-} catch (error) {
-  console.error(`failed: ${JSON.stringify(error)}`);
-}
-```
+参见 [disableNetwork](#disablenetwork)
 

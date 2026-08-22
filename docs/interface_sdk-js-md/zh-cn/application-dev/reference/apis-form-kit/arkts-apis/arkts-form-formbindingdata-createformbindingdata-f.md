@@ -144,3 +144,7 @@ Create an FormBindingData instance.
 | --- | --- |
 | FormBindingData | Returns the FormBindingData. |
 
+**示例**
+
+参见 [createFormBindingData](#createformbindingdata)
+

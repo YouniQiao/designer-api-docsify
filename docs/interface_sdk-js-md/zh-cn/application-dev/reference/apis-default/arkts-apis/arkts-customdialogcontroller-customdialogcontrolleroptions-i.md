@@ -620,7 +620,7 @@ keyboardAvoidDistance?: LengthMetrics
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 15开始，该接口支持在原子化服务中使用。
 
-**类型：** [LengthMetrics](arkts-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 23
 
@@ -720,7 +720,7 @@ levelOrder?: LevelOrder
 levelUniqueId?: int
 ```
 
-设置页面级弹窗需要显示的层级下的[getUniqueId](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getuniqueid)。
+设置页面级弹窗需要显示的层级下的[getUniqueId](arkts-framenode-c.md#getuniqueid)。
 
 取值范围：大于等于0的数字。
 

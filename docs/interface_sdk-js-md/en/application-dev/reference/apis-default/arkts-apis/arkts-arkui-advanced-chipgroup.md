@@ -11,22 +11,22 @@
 
 | Name | Description |
 | --- | --- |
-| [ChipGroup](arkts-arkuiadvancedchipgroup-chipgroup-s.md) | Defines chipGroup. |
-| [IconGroupSuffix](arkts-arkuiadvancedchipgroup-icongroupsuffix-s.md) | Defines IconGroupSuffix. |
+| [ChipGroup](arkts-arkui-advanced-chipgroup-chipgroup-s.md) | Defines chipGroup. |
+| [IconGroupSuffix](arkts-arkui-advanced-chipgroup-icongroupsuffix-s.md) | Defines IconGroupSuffix. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ChipGroupItemOptions](arkts-arkuiadvancedchipgroup-chipgroupitemoptions-i.md) | Defines chipItem options. |
-| [ChipGroupPaddingOptions](arkts-arkuiadvancedchipgroup-chipgrouppaddingoptions-i.md) | Defines ChipGroupPaddingOptions. |
-| [ChipGroupSpaceOptions](arkts-arkuiadvancedchipgroup-chipgroupspaceoptions-i.md) | Defines chip group space. |
-| [ChipItemLabelOptions](arkts-arkuiadvancedchipgroup-chipitemlabeloptions-i.md) | Defines label options. |
-| [ChipItemStyle](arkts-arkuiadvancedchipgroup-chipitemstyle-i.md) | Defines ChipItemStyle. |
-| [IconItemOptions](arkts-arkuiadvancedchipgroup-iconitemoptions-i.md) | Defines IconItemOptions. |
-| [IconOptions](arkts-arkuiadvancedchipgroup-iconoptions-i.md) | Defines icon options. |
-| [SuffixImageIconOptions](arkts-arkuiadvancedchipgroup-suffiximageiconoptions-i.md) | Defines suffix icon options. |
-| [SymbolItemOptions](arkts-arkuiadvancedchipgroup-symbolitemoptions-i.md) | Defines symbol item options. |
+| [ChipGroupItemOptions](arkts-arkui-advanced-chipgroup-chipgroupitemoptions-i.md) | Defines chipItem options. |
+| [ChipGroupPaddingOptions](arkts-arkui-advanced-chipgroup-chipgrouppaddingoptions-i.md) | Defines ChipGroupPaddingOptions. |
+| [ChipGroupSpaceOptions](arkts-arkui-advanced-chipgroup-chipgroupspaceoptions-i.md) | Defines chip group space. |
+| [ChipItemLabelOptions](arkts-arkui-advanced-chipgroup-chipitemlabeloptions-i.md) | Defines label options. |
+| [ChipItemStyle](arkts-arkui-advanced-chipgroup-chipitemstyle-i.md) | Defines ChipItemStyle. |
+| [IconItemOptions](arkts-arkui-advanced-chipgroup-iconitemoptions-i.md) | Defines IconItemOptions. |
+| [IconOptions](arkts-arkui-advanced-chipgroup-iconoptions-i.md) | Defines icon options. |
+| [SuffixImageIconOptions](arkts-arkui-advanced-chipgroup-suffiximageiconoptions-i.md) | Defines suffix icon options. |
+| [SymbolItemOptions](arkts-arkui-advanced-chipgroup-symbolitemoptions-i.md) | Defines symbol item options. |
 
 ### Types
 

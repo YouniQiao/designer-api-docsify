@@ -60,6 +60,19 @@ adminManager.disableSuperAdmin(bundleName, (err) => {
 });
 ```
 
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 需根据实际情况进行替换
+let bundleName: string = 'com.example.myapplication';
+
+adminManager.disableSuperAdmin(bundleName).catch((err: BusinessError) => {
+  console.error(`Failed to disable super admin. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## disableSuperAdmin
 
@@ -104,16 +117,5 @@ function disableSuperAdmin(bundleName: String): Promise<void>
 
 **示例**
 
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 需根据实际情况进行替换
-let bundleName: string = 'com.example.myapplication';
-
-adminManager.disableSuperAdmin(bundleName).catch((err: BusinessError) => {
-  console.error(`Failed to disable super admin. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [disableSuperAdmin](#disablesuperadmin)
 

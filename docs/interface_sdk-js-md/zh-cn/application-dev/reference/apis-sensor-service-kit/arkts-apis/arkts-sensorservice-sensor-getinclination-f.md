@@ -94,42 +94,6 @@ try {
 }
 ```
 
-
-## getInclination
-
-```TypeScript
-function getInclination(inclinationMatrix: Array<double>): Promise<double>
-```
-
-根据倾斜矩阵计算地磁倾角。使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-sensor-function getInclination(inclinationMatrix: Array<double>): Promise<double>--><!--Device-sensor-function getInclination(inclinationMatrix: Array<double>): Promise<double>-End-->
-
-**系统能力：** SystemCapability.Sensors.Sensor
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| inclinationMatrix | Array&lt;double&gt; | 是 | 倾斜矩阵。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;double&gt; | Promise对象，使用异步方式返回地磁倾斜角，单位：rad（弧度）。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -181,4 +145,42 @@ try {
   console.error(`Failed to get inclination. Code: ${e.code}, message: ${e.message}`);
 }
 ```
+
+
+## getInclination
+
+```TypeScript
+function getInclination(inclinationMatrix: Array<double>): Promise<double>
+```
+
+根据倾斜矩阵计算地磁倾角。使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-sensor-function getInclination(inclinationMatrix: Array<double>): Promise<double>--><!--Device-sensor-function getInclination(inclinationMatrix: Array<double>): Promise<double>-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| inclinationMatrix | Array&lt;double&gt; | 是 | 倾斜矩阵。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;double&gt; | Promise对象，使用异步方式返回地磁倾斜角，单位：rad（弧度）。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+**示例**
+
+参见 [getInclination](#getinclination)
 

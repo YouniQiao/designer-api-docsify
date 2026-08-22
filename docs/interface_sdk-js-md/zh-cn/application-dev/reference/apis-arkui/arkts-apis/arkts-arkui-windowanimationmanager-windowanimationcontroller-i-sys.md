@@ -130,6 +130,10 @@ onScreenUnlock(finishCallback: WindowAnimationFinishedCallback): void
 | --- | --- | --- | --- |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | 是 | 动画完成后的回调。 |
 
+**示例**
+
+请参考windowAnimationManager.setController的示例代码。
+
 ## onStartAppFromLauncher
 
 ```TypeScript

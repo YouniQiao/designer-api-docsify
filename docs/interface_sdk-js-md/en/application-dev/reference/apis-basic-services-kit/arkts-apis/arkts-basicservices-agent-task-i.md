@@ -20,186 +20,6 @@ import { request } from '@kit.BasicServicesKit';
 import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
-## offCompleted
-
-```TypeScript
-offCompleted(callback?: ProgressCallback): void
-```
-
-Disables the specified callback.
-
-**Since:** 23
-
-<!--Device-Task-offCompleted(callback?: ProgressCallback): void--><!--Device-Task-offCompleted(callback?: ProgressCallback): void-End-->
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | No | callback function with a `Progress` argument. |
-
-## offFailed
-
-```TypeScript
-offFailed(callback?: ProgressCallback): void
-```
-
-Disables the specified callback.
-
-**Since:** 23
-
-<!--Device-Task-offFailed(callback?: ProgressCallback): void--><!--Device-Task-offFailed(callback?: ProgressCallback): void-End-->
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | No | callback function with a `Progress` argument. |
-
-## offFaultOccur
-
-```TypeScript
-offFaultOccur(callback?: Callback<Faults>): void
-```
-
-Disables the 'faultOccur' callback.
-
-**Since:** 23
-
-<!--Device-Task-offFaultOccur(callback?: Callback<Faults>): void--><!--Device-Task-offFaultOccur(callback?: Callback<Faults>): void-End-->
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | No | callback function with a `Faults` argument. |
-
-## offPause
-
-```TypeScript
-offPause(callback?: ProgressCallback): void
-```
-
-Disables the specified callback.
-
-**Since:** 23
-
-<!--Device-Task-offPause(callback?: ProgressCallback): void--><!--Device-Task-offPause(callback?: ProgressCallback): void-End-->
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | No | callback function with a `Progress` argument. |
-
-## offProgress
-
-```TypeScript
-offProgress(callback?: ProgressCallback): void
-```
-
-Disables the specified callback.
-
-**Since:** 23
-
-<!--Device-Task-offProgress(callback?: ProgressCallback): void--><!--Device-Task-offProgress(callback?: ProgressCallback): void-End-->
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | No | callback function with a `Progress` argument. |
-
-## offRemove
-
-```TypeScript
-offRemove(callback?: ProgressCallback): void
-```
-
-Disables the specified callback.
-
-**Since:** 23
-
-<!--Device-Task-offRemove(callback?: ProgressCallback): void--><!--Device-Task-offRemove(callback?: ProgressCallback): void-End-->
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | No | callback function with a `Progress` argument. |
-
-## offResponse
-
-```TypeScript
-offResponse(callback?: Callback<HttpResponse>): void
-```
-
-Disables the response callback.
-
-**Since:** 23
-
-<!--Device-Task-offResponse(callback?: Callback<HttpResponse>): void--><!--Device-Task-offResponse(callback?: Callback<HttpResponse>): void-End-->
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;HttpResponse&gt; | No | callback function with an `HttpResponse` argument. |
-
-## offResume
-
-```TypeScript
-offResume(callback?: ProgressCallback): void
-```
-
-Disables the specified callback.
-
-**Since:** 23
-
-<!--Device-Task-offResume(callback?: ProgressCallback): void--><!--Device-Task-offResume(callback?: ProgressCallback): void-End-->
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | No | callback function with a `Progress` argument. |
-
-## offWait
-
-```TypeScript
-offWait(callback?: Callback<WaitingReason>): void
-```
-
-Disables the wait callback.
-
-**Since:** 23
-
-<!--Device-Task-offWait(callback?: Callback<WaitingReason>): void--><!--Device-Task-offWait(callback?: Callback<WaitingReason>): void-End-->
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | No | callback function with an `WaitingReason` argument. |
-
 ## off_completed
 
 ```TypeScript
@@ -297,7 +117,7 @@ Unsubscribes from task failure events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'faultOccur' | Yes | Event type.<br>- **'faultOccur'**: task failure. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -434,7 +254,7 @@ Unsubscribes from task response headers.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'response' | Yes | Event type.<br>- **response**: task response. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;HttpResponse&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -500,7 +320,7 @@ Unsubscribes from task waiting events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'wait' | Yes | Event type.<br>- 'wait': The task is waiting. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -508,17 +328,17 @@ Unsubscribes from task waiting events.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
-## onCompleted
+## offCompleted
 
 ```TypeScript
-onCompleted(callback: ProgressCallback): void
+offCompleted(callback?: ProgressCallback): void
 ```
 
-Enables the specified callback.
+Disables the specified callback.
 
 **Since:** 23
 
-<!--Device-Task-onCompleted(callback: ProgressCallback): void--><!--Device-Task-onCompleted(callback: ProgressCallback): void-End-->
+<!--Device-Task-offCompleted(callback?: ProgressCallback): void--><!--Device-Task-offCompleted(callback?: ProgressCallback): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -526,19 +346,19 @@ Enables the specified callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | Yes | callback function with a `Progress` argument. |
+| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | No | callback function with a `Progress` argument. |
 
-## onFailed
+## offFailed
 
 ```TypeScript
-onFailed(callback: ProgressCallback): void
+offFailed(callback?: ProgressCallback): void
 ```
 
-Enables the specified callback.
+Disables the specified callback.
 
 **Since:** 23
 
-<!--Device-Task-onFailed(callback: ProgressCallback): void--><!--Device-Task-onFailed(callback: ProgressCallback): void-End-->
+<!--Device-Task-offFailed(callback?: ProgressCallback): void--><!--Device-Task-offFailed(callback?: ProgressCallback): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -546,19 +366,19 @@ Enables the specified callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | Yes | callback function with a `Progress` argument. |
+| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | No | callback function with a `Progress` argument. |
 
-## onFaultOccur
+## offFaultOccur
 
 ```TypeScript
-onFaultOccur(callback: Callback<Faults>): void
+offFaultOccur(callback?: Callback<Faults>): void
 ```
 
-Enables the 'faultOccur' callback. This callback is triggered when the task failed. The returned `Faults` will contain the reason why the task failed.
+Disables the 'faultOccur' callback.
 
 **Since:** 23
 
-<!--Device-Task-onFaultOccur(callback: Callback<Faults>): void--><!--Device-Task-onFaultOccur(callback: Callback<Faults>): void-End-->
+<!--Device-Task-offFaultOccur(callback?: Callback<Faults>): void--><!--Device-Task-offFaultOccur(callback?: Callback<Faults>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -566,19 +386,19 @@ Enables the 'faultOccur' callback. This callback is triggered when the task fail
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | Yes | callback function with a `Faults` argument. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | No | callback function with a `Faults` argument. |
 
-## onPause
+## offPause
 
 ```TypeScript
-onPause(callback: ProgressCallback): void
+offPause(callback?: ProgressCallback): void
 ```
 
-Enables the specified callback.
+Disables the specified callback.
 
 **Since:** 23
 
-<!--Device-Task-onPause(callback: ProgressCallback): void--><!--Device-Task-onPause(callback: ProgressCallback): void-End-->
+<!--Device-Task-offPause(callback?: ProgressCallback): void--><!--Device-Task-offPause(callback?: ProgressCallback): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -586,19 +406,19 @@ Enables the specified callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | Yes | callback function with a `Progress` argument. |
+| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | No | callback function with a `Progress` argument. |
 
-## onProgress
+## offProgress
 
 ```TypeScript
-onProgress(callback: ProgressCallback): void
+offProgress(callback?: ProgressCallback): void
 ```
 
-Enables the specified callback.
+Disables the specified callback.
 
 **Since:** 23
 
-<!--Device-Task-onProgress(callback: ProgressCallback): void--><!--Device-Task-onProgress(callback: ProgressCallback): void-End-->
+<!--Device-Task-offProgress(callback?: ProgressCallback): void--><!--Device-Task-offProgress(callback?: ProgressCallback): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -606,19 +426,19 @@ Enables the specified callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | Yes | callback function with a `Progress` argument. |
+| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | No | callback function with a `Progress` argument. |
 
-## onRemove
+## offRemove
 
 ```TypeScript
-onRemove(callback: ProgressCallback): void
+offRemove(callback?: ProgressCallback): void
 ```
 
-Enables the specified callback.
+Disables the specified callback.
 
 **Since:** 23
 
-<!--Device-Task-onRemove(callback: ProgressCallback): void--><!--Device-Task-onRemove(callback: ProgressCallback): void-End-->
+<!--Device-Task-offRemove(callback?: ProgressCallback): void--><!--Device-Task-offRemove(callback?: ProgressCallback): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -626,19 +446,19 @@ Enables the specified callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | Yes | callback function with a `Progress` argument. |
+| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | No | callback function with a `Progress` argument. |
 
-## onResponse
+## offResponse
 
 ```TypeScript
-onResponse(callback: Callback<HttpResponse>): void
+offResponse(callback?: Callback<HttpResponse>): void
 ```
 
-Enables the response callback.
+Disables the response callback.
 
 **Since:** 23
 
-<!--Device-Task-onResponse(callback: Callback<HttpResponse>): void--><!--Device-Task-onResponse(callback: Callback<HttpResponse>): void-End-->
+<!--Device-Task-offResponse(callback?: Callback<HttpResponse>): void--><!--Device-Task-offResponse(callback?: Callback<HttpResponse>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -646,19 +466,19 @@ Enables the response callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;HttpResponse&gt; | Yes | callback function with an `HttpResponse` argument. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | No | callback function with an `HttpResponse` argument. |
 
-## onResume
+## offResume
 
 ```TypeScript
-onResume(callback: ProgressCallback): void
+offResume(callback?: ProgressCallback): void
 ```
 
-Enables the specified callback.
+Disables the specified callback.
 
 **Since:** 23
 
-<!--Device-Task-onResume(callback: ProgressCallback): void--><!--Device-Task-onResume(callback: ProgressCallback): void-End-->
+<!--Device-Task-offResume(callback?: ProgressCallback): void--><!--Device-Task-offResume(callback?: ProgressCallback): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -666,19 +486,19 @@ Enables the specified callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | Yes | callback function with a `Progress` argument. |
+| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | No | callback function with a `Progress` argument. |
 
-## onWait
+## offWait
 
 ```TypeScript
-onWait(callback: Callback<WaitingReason>): void
+offWait(callback?: Callback<WaitingReason>): void
 ```
 
-Enables the wait callback. This callback is triggered when the task changes from other states to the waiting state. The returned `WaitingReason` will contain the reason why the task enters waiting state.
+Disables the wait callback.
 
 **Since:** 23
 
-<!--Device-Task-onWait(callback: Callback<WaitingReason>): void--><!--Device-Task-onWait(callback: Callback<WaitingReason>): void-End-->
+<!--Device-Task-offWait(callback?: Callback<WaitingReason>): void--><!--Device-Task-offWait(callback?: Callback<WaitingReason>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -686,7 +506,7 @@ Enables the wait callback. This callback is triggered when the task changes from
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | Yes | callback function with an `WaitingReason` argument. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | No | callback function with an `WaitingReason` argument. |
 
 ## on_completed
 
@@ -785,7 +605,7 @@ Subscribes to task failure events. This API uses a callback to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'faultOccur' | Yes | Event type.<br>- **'faultOccur'**: task failure. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | Yes | Callback used to return the failure cause of the task. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | Yes | Callback used to return the failure cause of the task. |
 
 **Error codes:**
 
@@ -922,7 +742,7 @@ Subscribes to task response headers. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'response' | Yes | Event type.<br>- **'response'**: task response. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;HttpResponse&gt; | Yes | Callback used to return the data structure of the task response header. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | Yes | Callback used to return the data structure of the task response header. |
 
 **Error codes:**
 
@@ -988,13 +808,193 @@ Subscribes to task wait events. This API uses a callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'wait' | Yes | Event type.<br>- 'wait': The task is waiting. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | Yes | Callback used to return the waiting reason of the task. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | Yes | Callback used to return the waiting reason of the task. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
+
+## onCompleted
+
+```TypeScript
+onCompleted(callback: ProgressCallback): void
+```
+
+Enables the specified callback.
+
+**Since:** 23
+
+<!--Device-Task-onCompleted(callback: ProgressCallback): void--><!--Device-Task-onCompleted(callback: ProgressCallback): void-End-->
+
+**System capability:** SystemCapability.Request.FileTransferAgent
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | Yes | callback function with a `Progress` argument. |
+
+## onFailed
+
+```TypeScript
+onFailed(callback: ProgressCallback): void
+```
+
+Enables the specified callback.
+
+**Since:** 23
+
+<!--Device-Task-onFailed(callback: ProgressCallback): void--><!--Device-Task-onFailed(callback: ProgressCallback): void-End-->
+
+**System capability:** SystemCapability.Request.FileTransferAgent
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | Yes | callback function with a `Progress` argument. |
+
+## onFaultOccur
+
+```TypeScript
+onFaultOccur(callback: Callback<Faults>): void
+```
+
+Enables the 'faultOccur' callback. This callback is triggered when the task failed. The returned `Faults` will contain the reason why the task failed.
+
+**Since:** 23
+
+<!--Device-Task-onFaultOccur(callback: Callback<Faults>): void--><!--Device-Task-onFaultOccur(callback: Callback<Faults>): void-End-->
+
+**System capability:** SystemCapability.Request.FileTransferAgent
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | Yes | callback function with a `Faults` argument. |
+
+## onPause
+
+```TypeScript
+onPause(callback: ProgressCallback): void
+```
+
+Enables the specified callback.
+
+**Since:** 23
+
+<!--Device-Task-onPause(callback: ProgressCallback): void--><!--Device-Task-onPause(callback: ProgressCallback): void-End-->
+
+**System capability:** SystemCapability.Request.FileTransferAgent
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | Yes | callback function with a `Progress` argument. |
+
+## onProgress
+
+```TypeScript
+onProgress(callback: ProgressCallback): void
+```
+
+Enables the specified callback.
+
+**Since:** 23
+
+<!--Device-Task-onProgress(callback: ProgressCallback): void--><!--Device-Task-onProgress(callback: ProgressCallback): void-End-->
+
+**System capability:** SystemCapability.Request.FileTransferAgent
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | Yes | callback function with a `Progress` argument. |
+
+## onRemove
+
+```TypeScript
+onRemove(callback: ProgressCallback): void
+```
+
+Enables the specified callback.
+
+**Since:** 23
+
+<!--Device-Task-onRemove(callback: ProgressCallback): void--><!--Device-Task-onRemove(callback: ProgressCallback): void-End-->
+
+**System capability:** SystemCapability.Request.FileTransferAgent
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | Yes | callback function with a `Progress` argument. |
+
+## onResponse
+
+```TypeScript
+onResponse(callback: Callback<HttpResponse>): void
+```
+
+Enables the response callback.
+
+**Since:** 23
+
+<!--Device-Task-onResponse(callback: Callback<HttpResponse>): void--><!--Device-Task-onResponse(callback: Callback<HttpResponse>): void-End-->
+
+**System capability:** SystemCapability.Request.FileTransferAgent
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | Yes | callback function with an `HttpResponse` argument. |
+
+## onResume
+
+```TypeScript
+onResume(callback: ProgressCallback): void
+```
+
+Enables the specified callback.
+
+**Since:** 23
+
+<!--Device-Task-onResume(callback: ProgressCallback): void--><!--Device-Task-onResume(callback: ProgressCallback): void-End-->
+
+**System capability:** SystemCapability.Request.FileTransferAgent
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | Yes | callback function with a `Progress` argument. |
+
+## onWait
+
+```TypeScript
+onWait(callback: Callback<WaitingReason>): void
+```
+
+Enables the wait callback. This callback is triggered when the task changes from other states to the waiting state. The returned `WaitingReason` will contain the reason why the task enters waiting state.
+
+**Since:** 23
+
+<!--Device-Task-onWait(callback: Callback<WaitingReason>): void--><!--Device-Task-onWait(callback: Callback<WaitingReason>): void-End-->
+
+**System capability:** SystemCapability.Request.FileTransferAgent
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | Yes | callback function with an `WaitingReason` argument. |
 
 ## pause
 
@@ -1014,7 +1014,7 @@ Pauses a task that is waiting, running, or retrying. A paused task can be resume
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1023,6 +1023,118 @@ Pauses a task that is waiting, running, or retrying. A paused task can be resume
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 | [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
+
+**Examples**
+
+```TypeScript
+downloadTask.pause().then(() => {    
+  console.info('Succeeded in pausing the download task.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+downloadTask.pause((err: BusinessError) => {
+  if(err) {
+    console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in pausing the download task.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
+  title: 'taskPauseTest',
+  description: 'Sample code for pause the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(),1000)
+  })
+  task.pause((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to pause the download task, Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info(`Succeeded in pausing a download task. `);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
+  title: 'taskPauseTest',
+  description: 'Sample code for pause the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(),1000)
+  })
+  task.pause().then(() => {
+    console.info(`Succeeded in pausing a download task. `);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to pause the download task, Code: ${err.code}, message: ${err.message}`);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## pause
 
@@ -1052,6 +1164,10 @@ Pauses a task that is waiting, running, or retrying. A paused task can be resume
 | [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
+**Examples**
+
+See [pause](#pause)
+
 ## resume
 
 ```TypeScript
@@ -1072,7 +1188,7 @@ Resumes a paused task. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1082,6 +1198,128 @@ Resumes a paused task. This API uses an asynchronous callback to return the resu
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 | [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
+
+**Examples**
+
+```TypeScript
+downloadTask.resume().then(() => {
+  console.info('Succeeded in resuming the download task.')
+}).catch((err: BusinessError) => {
+  console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+downloadTask.resume((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in resuming the download task.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
+  title: 'taskResumeTest',
+  description: 'Sample code for resume the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(),1000)
+  })
+  task.pause();
+  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(),1000)
+  })
+  task.resume((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to resume the download task, Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info(`Succeeded in resuming a download task. `);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
+  title: 'taskResumeTest',
+  description: 'Sample code for resume the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(),1000)
+  })
+  task.pause();
+  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(),1000)
+  })
+  task.resume().then(() => {
+    console.info(`Succeeded in resuming a download task. `);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to resume the download task, Code: ${err.code}, message: ${err.message}`);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## resume
 
@@ -1113,6 +1351,10 @@ Resumes a paused task. This API uses a promise to return the result.
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 | [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
+
+**Examples**
+
+See [resume](#resume)
 
 ## setMaxSpeed
 
@@ -1147,6 +1389,31 @@ Sets the maximum number of bytes that can be transmitted by a task per second. T
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
+  saveas: "./",
+};
+request.agent.create(context, config).then((task: request.agent.Task) => {
+  // Set the maximum transmission speed.
+  task.setMaxSpeed(10 * 1024 * 1024).then(() => {
+    console.info(`Succeeded in setting the max speed of the task. result: ${task.tid}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set the max speed of the task. result: ${task.tid}`);
+  });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## start
 
 ```TypeScript
@@ -1179,7 +1446,7 @@ Tasks in the following states can be started:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1188,6 +1455,90 @@ Tasks in the following states can be started:
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
+  title: 'taskStartTest',
+  description: 'Sample code for start the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then((task: request.agent.Task) => {
+  task.start((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to start the download task, Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info(`Succeeded in starting a download task.`);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
+  title: 'taskStartTest',
+  description: 'Sample code for start the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then((task: request.agent.Task) => {
+  task.start().then(() => {
+    console.info(`Succeeded in starting a download task.`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to start the download task, Code: ${err.code}, message: ${err.message}`);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## start
 
@@ -1231,6 +1582,10 @@ Tasks in the following states can be started:
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
+**Examples**
+
+See [start](#start)
+
 ## stop
 
 ```TypeScript
@@ -1251,7 +1606,7 @@ Stops a task that is running, waiting, or retrying. A paused task can be resumed
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1259,6 +1614,100 @@ Stops a task that is running, waiting, or retrying. A paused task can be resumed
 | --- | --- |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
+  title: 'taskStopTest',
+  description: 'Sample code for stop the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(),1000)
+  })
+  task.stop((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to stop the download task, Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info(`Succeeded in stopping a download task. `);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
+  title: 'taskStopTest',
+  description: 'Sample code for stop the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(),1000)
+  })
+  task.stop().then(() => {
+    console.info(`Succeeded in stopping a download task. `);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to stop the download task, Code: ${err.code}, message: ${err.message}`);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## stop
 
@@ -1288,6 +1737,10 @@ Stops a task that is running, waiting, or retrying. A paused task can be resumed
 | --- | --- |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
+
+**Examples**
+
+See [stop](#stop)
 
 ## config
 

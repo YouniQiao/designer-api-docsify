@@ -76,3 +76,7 @@ Exports the heap data. The input parameter is a user-defined file name, excludin
 | filename | string | Yes | User-defined file name of the sampling data. The .heapsnapshot file is generated in the files directory of the application based on the specified file name. |
 | needClean | boolean | Yes | Whether to release the snapshot cache before dumping the heap snapshot. The default value is false. |
 
+**Examples**
+
+See [dumpJsHeapData](#dumpjsheapdata)
+

@@ -26,7 +26,7 @@ Creates an SMS instance based on the protocol data unit (PDU) and specified SMS 
 | --- | --- | --- | --- |
 | pdu | Array&lt;int&gt; | Yes | Protocol data unit, which is obtained from the received SMS message. |
 | specification | string | Yes | SMS protocol type. <br>- **3gpp**: GSM/UMTS/LTE SMS <br>- **3gpp2**: CDMA SMS |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ShortMessage](arkts-telephony-sms-shortmessage-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ShortMessage](arkts-telephony-sms-shortmessage-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -49,6 +49,20 @@ const specification: string = '3gpp';
 const pdu: Array<number> = [0x01, 0x00, 0x05, 0x81, 0x01, 0x80, 0xF6, 0x00, 0x00, 0x05, 0xE8, 0x32, 0x9B, 0xFD, 0x06];
 sms.createMessage(pdu, specification, (err: BusinessError, data: sms.ShortMessage) => {
     console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const specification: string = '3gpp';
+// Display PDUs in array format. The type is number.
+const pdu: Array<number> = [0x01, 0x00, 0x05, 0x81, 0x01, 0x80, 0xF6, 0x00, 0x00, 0x05, 0xE8, 0x32, 0x9B, 0xFD, 0x06];
+sms.createMessage(pdu, specification).then((data: sms.ShortMessage) => {
+    console.info(`createMessage success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`createMessage failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -92,17 +106,5 @@ Creates an SMS instance based on the protocol data unit (PDU) and specified SMS 
 
 **Examples**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const specification: string = '3gpp';
-// Display PDUs in array format. The type is number.
-const pdu: Array<number> = [0x01, 0x00, 0x05, 0x81, 0x01, 0x80, 0xF6, 0x00, 0x00, 0x05, 0xE8, 0x32, 0x9B, 0xFD, 0x06];
-sms.createMessage(pdu, specification).then((data: sms.ShortMessage) => {
-    console.info(`createMessage success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`createMessage failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [createMessage](#createmessage)
 

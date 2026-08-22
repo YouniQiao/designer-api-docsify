@@ -28,7 +28,7 @@ Obtains all Display objects. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Display](arkts-arkui-display-display-i.md)&gt;&gt; | Yes | Callback used to return all the Display objects. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Display](arkts-arkui-display-display-i.md)&gt;&gt; | Yes | Callback used to return all the Display objects. |
 
 **Examples**
 
@@ -42,6 +42,17 @@ display.getAllDisplay((err: BusinessError, data: Array<display.Display>) => {
     return;
   }
   console.info(`Succeeded in obtaining the default display objects. Data: ${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise: Promise<Array<display.Display>> = display.getAllDisplay();
+promise.then((data: Array<display.Display>) => {
+  console.info(`Succeeded in obtaining the default display objects. Data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain all the display objects. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -72,14 +83,5 @@ Obtains all Display objects. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise: Promise<Array<display.Display>> = display.getAllDisplay();
-promise.then((data: Array<display.Display>) => {
-  console.info(`Succeeded in obtaining the default display objects. Data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain all the display objects. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [getAllDisplay](#getalldisplay)
 

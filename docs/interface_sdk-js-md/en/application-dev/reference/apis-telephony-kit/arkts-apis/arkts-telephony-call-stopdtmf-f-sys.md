@@ -29,7 +29,7 @@ Stops playing DTMF tones. This API uses an asynchronous callback to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | int | Yes | Call ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -54,6 +54,16 @@ call.stopDTMF(1, (err: BusinessError) => {
     } else {
         console.info(`stopDTMF success.`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.stopDTMF(1).then(() => {
+    console.info(`stopDTMF success.`);
+}).catch((err: BusinessError) => {
+    console.error(`stopDTMF fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -102,13 +112,5 @@ Stops playing DTMF tones. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.stopDTMF(1).then(() => {
-    console.info(`stopDTMF success.`);
-}).catch((err: BusinessError) => {
-    console.error(`stopDTMF fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [stopDTMF](#stopdtmf)
 

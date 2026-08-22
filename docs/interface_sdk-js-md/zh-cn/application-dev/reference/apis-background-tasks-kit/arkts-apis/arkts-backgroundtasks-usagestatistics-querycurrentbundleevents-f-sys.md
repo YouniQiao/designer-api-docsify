@@ -63,6 +63,36 @@ usageStatistics.queryCurrentBundleEvents(0, 20000000000000, (err: BusinessError,
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+
+usageStatistics.queryCurrentBundleEvents(0, 20000000000000, 100).then((res: Array<usageStatistics.BundleEvents>) => {
+  console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise success.');
+  for (let i = 0; i < res.length; i++) {
+    console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise number : ' + (i + 1));
+    console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise result ' + JSON.stringify(res[i]));
+  }
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE queryCurrentBundleEvents promise failed. code is: ' + err.code + ',message is: ' + err.message);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+
+usageStatistics.queryCurrentBundleEvents(0, 20000000000000).then((res: Array<usageStatistics.BundleEvents>) => {
+  console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise success.');
+  for (let i = 0; i < res.length; i++) {
+    console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise number : ' + (i + 1));
+    console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise result ' + JSON.stringify(res[i]));
+  }
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE queryCurrentBundleEvents promise failed. code is: ' + err.code + ',message is: ' + err.message);
+});
+```
+
 
 ## queryCurrentBundleEvents
 
@@ -109,20 +139,7 @@ function queryCurrentBundleEvents(begin: long, end: long): Promise<Array<BundleE
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-usageStatistics.queryCurrentBundleEvents(0, 20000000000000).then((res: Array<usageStatistics.BundleEvents>) => {
-  console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise success.');
-  for (let i = 0; i < res.length; i++) {
-    console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise number : ' + (i + 1));
-    console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise result ' + JSON.stringify(res[i]));
-  }
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryCurrentBundleEvents promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
+参见 [queryCurrentBundleEvents](#querycurrentbundleevents)
 
 
 ## queryCurrentBundleEvents
@@ -172,18 +189,5 @@ function queryCurrentBundleEvents(begin: long, end: long, maxNum: int): Promise<
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-usageStatistics.queryCurrentBundleEvents(0, 20000000000000, 100).then((res: Array<usageStatistics.BundleEvents>) => {
-  console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise success.');
-  for (let i = 0; i < res.length; i++) {
-    console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise number : ' + (i + 1));
-    console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise result ' + JSON.stringify(res[i]));
-  }
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryCurrentBundleEvents promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
+参见 [queryCurrentBundleEvents](#querycurrentbundleevents)
 

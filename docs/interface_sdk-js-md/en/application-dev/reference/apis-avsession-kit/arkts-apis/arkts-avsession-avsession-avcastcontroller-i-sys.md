@@ -35,7 +35,7 @@ Set a surface instance to display playing view, used at sink side.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | surfaceId | string | Yes | surface id, video player will use this id get a surface instance. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | A callback instance used to return when set surface completed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | A callback instance used to return when set surface completed. |
 
 **Error codes:**
 
@@ -46,6 +46,26 @@ Set a surface instance to display playing view, used at sink side.
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 
 **Examples**
+
+```TypeScript
+import { media } from '@kit.MediaKit';
+let surfaceID: string = '';
+media.createAVRecorder().then((avRecorder) => {
+  avRecorder.getInputSurface((err: BusinessError, surfaceId: string) => {
+    if (err == null) {
+      console.info('getInputSurface success');
+      surfaceID = surfaceId;
+      if (surfaceID) {
+        aVCastController.setDisplaySurface(surfaceID).then(() => {
+          console.info('setDisplaySurface : SUCCESS');
+        });
+      }
+    } else {
+      console.error('getInputSurface failed and error is ' + err.message);
+    }
+  });
+})
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -110,23 +130,5 @@ Set a surface instance to display playing view, used at sink side.
 
 **Examples**
 
-```TypeScript
-import { media } from '@kit.MediaKit';
-let surfaceID: string = '';
-media.createAVRecorder().then((avRecorder) => {
-  avRecorder.getInputSurface((err: BusinessError, surfaceId: string) => {
-    if (err == null) {
-      console.info('getInputSurface success');
-      surfaceID = surfaceId;
-      if (surfaceID) {
-        aVCastController.setDisplaySurface(surfaceID).then(() => {
-          console.info('setDisplaySurface : SUCCESS');
-        });
-      }
-    } else {
-      console.error('getInputSurface failed and error is ' + err.message);
-    }
-  });
-})
-```
+See [setDisplaySurface](#setdisplaysurface)
 

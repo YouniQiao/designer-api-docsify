@@ -65,6 +65,32 @@ Renames a file or directory. This API uses a promise to return the result.
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let srcFile = pathDir + "/test.txt";
+let dstFile = pathDir + "/new.txt";
+fs.rename(srcFile, dstFile).then(() => {
+  console.info("rename succeed");
+}).catch((err: BusinessError) => {
+  console.error("rename failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let srcFile = pathDir + "/test.txt";
+let dstFile = pathDir + "/new.txt";
+fs.rename(srcFile, dstFile, (err: BusinessError) => {
+  if (err) {
+    console.error("rename failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("rename succeed");
+  }
+});
+```
+
 
 ## rename
 
@@ -92,7 +118,7 @@ Renames a file or directory. This API uses an asynchronous callback to return th
 | --- | --- | --- | --- |
 | oldPath | string | Yes | Application sandbox path of the file or directory to rename. |
 | newPath | string | Yes | Application sandbox path of the renamed file or directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -117,4 +143,8 @@ Renames a file or directory. This API uses an asynchronous callback to return th
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [rename](#rename)
 

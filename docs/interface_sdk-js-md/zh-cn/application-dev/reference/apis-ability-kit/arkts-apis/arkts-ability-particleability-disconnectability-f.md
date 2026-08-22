@@ -58,6 +58,36 @@ particleAbility.disconnectAbility(connId, (err) => {
 });
 ```
 
+```TypeScript
+import { particleAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let connId = particleAbility.connectAbility(
+  {
+    bundleName: 'com.ix.ServiceAbility',
+    abilityName: 'ServiceAbilityA',
+  },
+  {
+    onConnect: (element, remote) => {
+      console.info(`ConnectAbility onConnect remote is proxy: ${(remote instanceof rpc.RemoteProxy)}`);
+    },
+    onDisconnect: (element) => {
+      console.info(`ConnectAbility onDisconnect element.deviceId: ${element.deviceId}`);
+    },
+    onFailed: (code) => {
+      console.error(`particleAbilityTest ConnectAbility onFailed errCode: ${code}`);
+    },
+  },
+);
+
+particleAbility.disconnectAbility(connId).then(() => {
+  console.info('disconnectAbility success');
+}).catch((error: BusinessError) => {
+  console.error(`particleAbilityTest result errCode : ${error.code}`);
+});
+```
+
 
 ## disconnectAbility
 
@@ -89,33 +119,5 @@ function disconnectAbility(connection: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import { particleAbility } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let connId = particleAbility.connectAbility(
-  {
-    bundleName: 'com.ix.ServiceAbility',
-    abilityName: 'ServiceAbilityA',
-  },
-  {
-    onConnect: (element, remote) => {
-      console.info(`ConnectAbility onConnect remote is proxy: ${(remote instanceof rpc.RemoteProxy)}`);
-    },
-    onDisconnect: (element) => {
-      console.info(`ConnectAbility onDisconnect element.deviceId: ${element.deviceId}`);
-    },
-    onFailed: (code) => {
-      console.error(`particleAbilityTest ConnectAbility onFailed errCode: ${code}`);
-    },
-  },
-);
-
-particleAbility.disconnectAbility(connId).then(() => {
-  console.info('disconnectAbility success');
-}).catch((error: BusinessError) => {
-  console.error(`particleAbilityTest result errCode : ${error.code}`);
-});
-```
+参见 [disconnectAbility](#disconnectability)
 

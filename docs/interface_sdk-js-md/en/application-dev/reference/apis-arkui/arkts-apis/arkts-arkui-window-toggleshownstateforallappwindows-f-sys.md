@@ -28,7 +28,7 @@ Hides or restores the application's windows during quick multi-window switching.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -50,6 +50,17 @@ window.toggleShownStateForAllAppWindows((err: BusinessError) => {
     return;
   }
   console.info('Succeeded in toggling shown state for all app windows.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = window.toggleShownStateForAllAppWindows();
+promise.then(() => {
+  console.info('Succeeded in toggling shown state for all app windows.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to toggle shown state for all app windows. Cause code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -86,14 +97,5 @@ Hides or restores the application's windows during quick multi-window switching.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = window.toggleShownStateForAllAppWindows();
-promise.then(() => {
-  console.info('Succeeded in toggling shown state for all app windows.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to toggle shown state for all app windows. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
+See [toggleShownStateForAllAppWindows](#toggleshownstateforallappwindows)
 

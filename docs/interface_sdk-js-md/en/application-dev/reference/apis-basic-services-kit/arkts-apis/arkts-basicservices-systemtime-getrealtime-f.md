@@ -30,7 +30,7 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isNano | boolean | Yes | Whether the time to return is in nanoseconds.<br>- **true**: The result is in nanoseconds.<br>- **false**: The result is in milliseconds. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -50,6 +50,38 @@ try {
       return;
     }
     console.info(`Succeeded in getting real time : ${time}`);
+  });
+} catch(e) {
+  let error = e as BusinessError;
+  console.info(`Failed to get real time. message: ${error.message}, code: ${error.code}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemTime.getRealTime((error: BusinessError, time: number) => {
+    if (error) {
+      console.info(`Failed to get real time. message: ${error.message}, code: ${error.code}`);
+      return;
+    }
+    console.info(`Succeeded in getting real time : ${time}`);
+  });
+} catch(e) {
+  let error = e as BusinessError;
+  console.info(`Failed to get real time. message: ${error.message}, code: ${error.code}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemTime.getRealTime().then((time: number) => {
+    console.info(`Succeeded in getting real time : ${time}`);
+  }).catch((error: BusinessError) => {
+    console.info(`Failed to get real time. message: ${error.message}, code: ${error.code}`);
   });
 } catch(e) {
   let error = e as BusinessError;
@@ -80,7 +112,7 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -90,22 +122,7 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemTime.getRealTime((error: BusinessError, time: number) => {
-    if (error) {
-      console.info(`Failed to get real time. message: ${error.message}, code: ${error.code}`);
-      return;
-    }
-    console.info(`Succeeded in getting real time : ${time}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.info(`Failed to get real time. message: ${error.message}, code: ${error.code}`);
-}
-```
+See [getRealTime](#getrealtime)
 
 
 ## getRealTime
@@ -146,18 +163,5 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemTime.getRealTime().then((time: number) => {
-    console.info(`Succeeded in getting real time : ${time}`);
-  }).catch((error: BusinessError) => {
-    console.info(`Failed to get real time. message: ${error.message}, code: ${error.code}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.info(`Failed to get real time. message: ${error.message}, code: ${error.code}`);
-}
-```
+See [getRealTime](#getrealtime)
 

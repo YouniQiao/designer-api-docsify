@@ -28,7 +28,7 @@ Switches the system account. Currently, this API is supported only on phones and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | accountId | number | Yes | System account ID. If you switch to a system account that does not exist, error code 9200012 is reported. If you switch to a restricted system account, for example, a system account created via [addOsAccountAsync](arkts-mdm-accountmanager-addosaccountasync-f.md), error code 9201041 is reported. |
 
 **Return value:**

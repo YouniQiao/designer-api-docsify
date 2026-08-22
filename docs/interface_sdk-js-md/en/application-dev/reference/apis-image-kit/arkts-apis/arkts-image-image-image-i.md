@@ -45,6 +45,19 @@ Obtains ImageBufferData from an image.
 | --- | --- |
 | [ImageBufferData](arkts-image-image-imagebufferdata-i.md) \| null | Struct that encapsulates the image data buffer. If no struct is obtained, **null** is returned. |
 
+**Examples**
+
+```TypeScript
+function GetBufferData(img: image.Image) {
+  const bufferData = img.getBufferData();
+  if (bufferData == null) {
+    console.error('Failed to get the bufferData: bufferData is null.');
+    return;
+  }
+  console.info('Succeeded in getting bufferData.');
+}
+```
+
 ## getComponent
 
 ```TypeScript
@@ -64,7 +77,35 @@ Obtains the component buffer from the Image instance based on the color componen
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | componentType | ComponentType | Yes | Component type. (Currently, only **ComponentType:JPEG** is supported. The actual format is determined by the producer, for example, camera.) |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Component&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the component buffer obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Component&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the component buffer obtained; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function GetComponent(img : image.Image) {
+  img.getComponent(image.ComponentType.JPEG, (err: BusinessError, component: image.Component) => {
+    if (err) {
+      console.error(`Failed to get the component.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in getting component.');
+    }
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function GetComponent(img : image.Image) {
+  img.getComponent(image.ComponentType.JPEG).then((component: image.Component) => {
+    console.info('Succeeded in getting component.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to get the component.code ${error.code},message is ${error.message}`);
+  })
+}
+```
 
 ## getComponent
 
@@ -91,6 +132,10 @@ Obtains the component buffer from the Image instance based on the color componen
 | Type | Description |
 | --- | --- |
 | Promise&lt;Component&gt; | Promise used to return the component buffer. |
+
+**Examples**
+
+See [getComponent](#getcomponent)
 
 ## getMetadata
 
@@ -127,6 +172,74 @@ Obtains the HDR metadata from an image based on the HDR metadata type.
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
 | [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Memory copy failed. |
 
+**Examples**
+
+```TypeScript
+async function GetAuxPictureObjMetadata(auxPictureObj: image.AuxiliaryPicture) {
+  if (auxPictureObj != null) {
+    let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
+    let auxPictureObjMetaData: image.Metadata | null = await auxPictureObj.getMetadata(metadataType);
+    if (auxPictureObjMetaData != null) {
+      console.info('Get AuxPictureObj Metadata success' );
+    } else {
+      console.error('Get AuxPictureObj Metadata failed');
+    }
+  } else {
+    console.error('Get AuxPictureObj is null.');
+  }
+}
+```
+
+```TypeScript
+async function GetMetadata(img : image.Image) {
+  try {
+    let staticMetadata = img.getMetadata(image.HdrMetadataKey.HDR_STATIC_METADATA);
+    console.info(`getMetadata:${staticMetadata}`);
+  } catch (err) {
+    console.error('getMetadata failed' + err);
+  }
+}
+```
+
+```TypeScript
+async function GetPictureObjMetadataProperties(pictureObj : image.Picture) {
+  if (pictureObj != null) {
+    let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
+    let pictureObjMetaData: image.Metadata = await pictureObj.getMetadata(metadataType);
+    if (pictureObjMetaData != null) {
+      console.info('get picture metadata success');
+    } else {
+      console.error('get picture metadata is failed');
+    }
+  } else {
+    console.error(" pictureObj is null");
+  }
+}
+```
+
+```TypeScript
+async function GetMetadata(context: Context) {
+  // Replace app.media.startIcon with a local HDR image.
+  let img = context.resourceManager.getMediaContentSync($r('app.media.startIcon').id);
+  let imageSource = image.createImageSource(img.buffer.slice(0));
+  let decodingOptions: image.DecodingOptions = {
+    desiredDynamicRange: image.DecodingDynamicRange.AUTO
+  };
+  let pixelmap = imageSource.createPixelMapSync(decodingOptions);
+  if (pixelmap != undefined) {
+    console.info('Succeeded in creating pixelMap object.');
+    try {
+      let staticMetadata = pixelmap.getMetadata(image.HdrMetadataKey.HDR_STATIC_METADATA);
+      console.info(`getMetadata:${staticMetadata}`);
+    } catch (e) {
+      console.error('pixelmap create failed' + e);
+    }
+  } else {
+    console.error('Failed to create pixelMap.');
+  }
+}
+```
+
 ## release
 
 ```TypeScript
@@ -151,7 +264,204 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+async function Release(auxPictureObj: image.AuxiliaryPicture) {
+  let funcName = "Release";
+  if (auxPictureObj != null) {
+    auxPictureObj.release();
+    if (auxPictureObj.getType() == null) {
+      console.info(funcName, 'Success !');
+    } else {
+      console.error(funcName, 'Failed !');
+    }
+  } else {
+    console.error('PictureObj is null');
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(img : image.Image) {
+  img.release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release the image instance.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in releasing the image instance.');
+    }
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(img : image.Image) {
+  img.release().then(() => {
+    console.info('Succeeded in releasing the image instance.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the image instance.code ${error.code},message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(creator : image.ImageCreator) {
+  creator.release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release the creator.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in releasing creator.');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(creator : image.ImageCreator) {
+  creator.release().then(() => {
+    console.info('Succeeded in releasing creator.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the creator.code ${error.code},message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release() {
+  const imagePackerObj: image.ImagePacker = image.createImagePacker();
+  imagePackerObj.release((err: BusinessError)=>{
+    if (err) {
+      console.error(`Failed to release image packaging.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in releasing image packaging.');
+    }
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release() {
+  const imagePackerObj: image.ImagePacker = image.createImagePacker();
+  imagePackerObj.release().then(() => {
+    console.info('Succeeded in releasing image packaging.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release image packaging.code ${error.code},message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(receiver : image.ImageReceiver) {
+  receiver.release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release the receiver.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in releasing the receiver.');
+    }
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(receiver : image.ImageReceiver) {
+  receiver.release().then(() => {
+    console.info('Succeeded in releasing the receiver.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the receiver.code ${error.code},message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(imageSourceObj : image.ImageSource) {
+  imageSourceObj.release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release the image source instance.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in releasing the image source instance.');
+    }
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(imageSourceObj : image.ImageSource) {
+  imageSourceObj.release().then(() => {
+    console.info('Succeeded in releasing the image source instance.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the image source instance.code ${error.code},message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+async function Release(pictureObj : image.Picture) {
+  let funcName = "Release";
+  if (pictureObj != null) {
+    pictureObj.release();
+    if (pictureObj.getMainPixelmap() == null) {
+      console.info(funcName, 'Success !');
+    } else {
+      console.error(funcName, 'Failed !');
+    }
+  } else {
+    console.error('PictureObj is null');
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(pixelMap:image.PixelMap) {
+  if (pixelMap != undefined) {
+    await pixelMap.release().then(() => {
+      console.info('Succeeded in releasing pixelmap object.');
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to release pixelmap object. code is ${error.code}, message is ${error.message}`);
+    })
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(pixelMap:image.PixelMap) {
+  if (pixelMap != undefined) {
+    pixelMap.release((err: BusinessError) => {
+      if (err) {
+        console.error(`Failed to release pixelmap object. code is ${err.code}, message is ${err.message}`);
+        return;
+      } else {
+        console.info('Succeeded in releasing pixelmap object.');
+      }
+    })
+  }
+}
+```
 
 ## release
 
@@ -178,6 +488,10 @@ Before releasing the instance, ensure that all asynchronous operations associate
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+See [release](#release)
 
 ## clipRect
 

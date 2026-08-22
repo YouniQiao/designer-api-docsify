@@ -37,6 +37,14 @@ Called when the object is about to be destroyed.
 | --- | --- | --- | --- |
 | owningView | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No | Component that owns the current property. |
 
+**Examples**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let link = AppStorage.setAndLink('PropB', 49); // PropA -> 47, PropB -> 49
+link.aboutToBeDeleted();
+```
+
 ## id
 
 ```TypeScript

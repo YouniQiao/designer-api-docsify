@@ -50,6 +50,42 @@ static readonly INVALID_LABEL_ID: -1
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
+## labelId
+
+```TypeScript
+labelId?: number
+```
+
+关系类型。
+
+**类型：** number
+
+**起始版本：** 7
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Relation-labelId?: number--><!--Device-Relation-labelId?: number-End-->
+
+**系统能力：** SystemCapability.Applications.ContactsData
+
+## labelName
+
+```TypeScript
+labelName?: string
+```
+
+关系类型名称。
+
+**类型：** string
+
+**起始版本：** 7
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Relation-labelName?: string--><!--Device-Relation-labelName?: string-End-->
+
+**系统能力：** SystemCapability.Applications.ContactsData
+
 ## RELATION_ASSISTANT
 
 ```TypeScript
@@ -302,42 +338,6 @@ static readonly RELATION_SPOUSE: 14
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
-## labelId
-
-```TypeScript
-labelId?: number
-```
-
-关系类型。
-
-**类型：** number
-
-**起始版本：** 7
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Relation-labelId?: number--><!--Device-Relation-labelId?: number-End-->
-
-**系统能力：** SystemCapability.Applications.ContactsData
-
-## labelName
-
-```TypeScript
-labelName?: string
-```
-
-关系类型名称。
-
-**类型：** string
-
-**起始版本：** 7
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Relation-labelName?: string--><!--Device-Relation-labelName?: string-End-->
-
-**系统能力：** SystemCapability.Applications.ContactsData
-
 ## relationName
 
 ```TypeScript
@@ -355,4 +355,27 @@ relationName: string
 <!--Device-Relation-relationName: string--><!--Device-Relation-relationName: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
+
+**示例**
+
+使用JSON格式创建数据。
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let relation: contact.Relation = {
+    relationName: 'relationName',
+    labelId: contact.Relation.RELATION_ASSISTANT
+};
+```
+
+或使用new一个Relation对象的方式创建数据。
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let relation = new contact.Relation();
+relation.relationName = 'relationName';
+relation.labelId = contact.Relation.RELATION_ASSISTANT;
+```
 

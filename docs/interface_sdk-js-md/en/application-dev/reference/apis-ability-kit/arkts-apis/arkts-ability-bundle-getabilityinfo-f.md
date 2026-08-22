@@ -47,7 +47,39 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | abilityName | string | Yes | Ability name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt; | Yes | Callback used to return the ability information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt; | Yes | Callback used to return the ability information. |
+
+**Examples**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleName: string = "com.example.myapplication";
+let abilityName: string = "EntryAbility";
+
+bundle.getAbilityInfo(bundleName, abilityName)
+  .then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleName: string = "com.example.myapplication";
+let abilityName: string = "EntryAbility";
+
+bundle.getAbilityInfo(bundleName, abilityName, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+```
 
 
 ## getAbilityInfo
@@ -82,4 +114,8 @@ No permission is required for obtaining the caller's own information.
 | Type | Description |
 | --- | --- |
 | Promise&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt; | Promise used to return the ability information. |
+
+**Examples**
+
+See [getAbilityInfo](#getabilityinfo)
 

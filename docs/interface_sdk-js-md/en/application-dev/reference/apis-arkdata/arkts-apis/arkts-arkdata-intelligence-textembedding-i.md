@@ -66,6 +66,34 @@ textEmbedding.getEmbedding(text)
   })
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+textEmbedding.loadModel();
+let batchTexts = ['text1', 'text2'];
+textEmbedding.getEmbedding(batchTexts)
+  .then((data: Array<Array<number>>) => {
+    console.info("Succeeded in getting Embedding");
+  })
+  .catch((err: BusinessError) => {
+    console.error("Failed to get Embedding and code is " + err.code);
+  })
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+imageEmbedding.loadModel();
+let image = 'file://<packageName>/data/storage/el2/base/haps/entry/files/xxx.jpg';
+imageEmbedding.getEmbedding(image)
+  .then((data: Array<number>) => {
+    console.info("Succeeded in getting Embedding");
+  })
+  .catch((err: BusinessError) => {
+    console.error("Failed to get Embedding and code is " + err.code);
+  })
+```
+
 ## getEmbedding
 
 ```TypeScript
@@ -102,19 +130,7 @@ Obtains the embedding vector of a given batch of text. The model can process up 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-textEmbedding.loadModel();
-let batchTexts = ['text1', 'text2'];
-textEmbedding.getEmbedding(batchTexts)
-  .then((data: Array<Array<number>>) => {
-    console.info("Succeeded in getting Embedding");
-  })
-  .catch((err: BusinessError) => {
-    console.error("Failed to get Embedding and code is " + err.code);
-  })
-```
+See [getEmbedding](#getembedding)
 
 ## loadModel
 
@@ -157,6 +173,18 @@ textEmbedding.loadModel()
   })
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+imageEmbedding.loadModel()
+  .then(() => {
+    console.info("Succeeded in loading Model");
+  })
+  .catch((err: BusinessError) => {
+    console.error("Failed to load Model and code is " + err.code);
+  })
+```
+
 ## releaseModel
 
 ```TypeScript
@@ -190,6 +218,18 @@ Releases this text embedding model. If the releasing fails, an error code is ret
 import { BusinessError } from '@kit.BasicServicesKit';
 
 textEmbedding.releaseModel()
+  .then(() => {
+    console.info("Succeeded in releasing Model");
+  })
+  .catch((err: BusinessError) => {
+    console.error("Failed to release Model and code is " + err.code);
+  })
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+imageEmbedding.releaseModel()
   .then(() => {
     console.info("Succeeded in releasing Model");
   })

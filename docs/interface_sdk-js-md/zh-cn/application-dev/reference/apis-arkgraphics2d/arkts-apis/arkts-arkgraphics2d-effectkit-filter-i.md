@@ -111,39 +111,6 @@ struct Index {
 }
 ```
 
-## blur
-
-```TypeScript
-blur(radius: double, tileMode: TileMode): Filter
-```
-
-将模糊效果添加到效果链表中，返回链表的实例。支持选择着色器效果平铺模式， 常用于实现背景虚化效果、隐私信息遮挡、毛玻璃背景效果、弹窗背景模糊等场景。
-
-> **说明：**
-> 
-> 该接口为静态模糊接口，为静态图像提供模糊化效果，如果要对组件进行实时渲染的模糊，可以使用[动态模糊](../../../ui/arkts-blur-effect.md)。
-
-**起始版本：** 23
-
-<!--Device-Filter-blur(radius: double, tileMode: TileMode): Filter--><!--Device-Filter-blur(radius: double, tileMode: TileMode): Filter-End-->
-
-**系统能力：** SystemCapability.Multimedia.Image.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| radius | double | 是 | 模糊半径，单位为px，取值范围为[0, +∞)。模糊半径值越大，模糊效果越明显。传入负数时无效果。 |
-| tileMode | TileMode | 是 | 着色器效果平铺模式。影响图像边缘的模糊效果。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Filter | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
-
-**示例**
-
 ```TypeScript
 import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
@@ -204,6 +171,41 @@ struct Index {
   }
 }
 ```
+
+## blur
+
+```TypeScript
+blur(radius: double, tileMode: TileMode): Filter
+```
+
+将模糊效果添加到效果链表中，返回链表的实例。支持选择着色器效果平铺模式， 常用于实现背景虚化效果、隐私信息遮挡、毛玻璃背景效果、弹窗背景模糊等场景。
+
+> **说明：**
+> 
+> 该接口为静态模糊接口，为静态图像提供模糊化效果，如果要对组件进行实时渲染的模糊，可以使用[动态模糊](../../../ui/arkts-blur-effect.md)。
+
+**起始版本：** 23
+
+<!--Device-Filter-blur(radius: double, tileMode: TileMode): Filter--><!--Device-Filter-blur(radius: double, tileMode: TileMode): Filter-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| radius | double | 是 | 模糊半径，单位为px，取值范围为[0, +∞)。模糊半径值越大，模糊效果越明显。传入负数时无效果。 |
+| tileMode | TileMode | 是 | 着色器效果平铺模式。影响图像边缘的模糊效果。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Filter | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
+
+**示例**
+
+参见 [blur](#blur)
 
 ## brightness
 
@@ -348,6 +350,26 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 })
 ```
 
+```TypeScript
+import { image } from "@kit.ImageKit";
+import { effectKit } from "@kit.ArkGraphics2D";
+
+const color = new ArrayBuffer(96);
+let opts : image.InitializationOptions = {
+  editable: true,
+  pixelFormat: 3,
+  size: {
+    height: 4,
+    width: 6
+  }
+};
+image.createPixelMap(color, opts).then((pixelMap) => {
+  effectKit.createEffect(pixelMap).grayscale().getEffectPixelMap(false).then(data => {
+    console.info('getPixelBytesNumber = ', data.getPixelBytesNumber());
+  })
+})
+```
+
 ## getEffectPixelMap
 
 ```TypeScript
@@ -380,25 +402,7 @@ getEffectPixelMap(useCpuRender : boolean): Promise<image.PixelMap>
 
 **示例**
 
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-};
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createEffect(pixelMap).grayscale().getEffectPixelMap(false).then(data => {
-    console.info('getPixelBytesNumber = ', data.getPixelBytesNumber());
-  })
-})
-```
+参见 [getEffectPixelMap](#geteffectpixelmap)
 
 ## getPixelMap
 

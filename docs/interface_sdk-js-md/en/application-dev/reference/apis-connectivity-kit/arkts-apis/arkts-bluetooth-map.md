@@ -2,7 +2,7 @@
 
 Provides methods to accessing bluetooth MAP(Message Access Profile)-related capabilities.
 
-**Since:** 26.0.0
+**Since:** 11
 
 <!--Device-unnamed-declare namespace map--><!--Device-unnamed-declare namespace map-End-->
 

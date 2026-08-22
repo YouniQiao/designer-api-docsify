@@ -33,3 +33,9 @@ Obtains the numeric mask combination for the USB function list in Device mode. W
 | --- | --- |
 | FunctionType | Numeric mask combination for the USB function list. |
 
+**Examples**
+
+```TypeScript
+let ret: number = usbManager.getCurrentFunctions();
+```
+

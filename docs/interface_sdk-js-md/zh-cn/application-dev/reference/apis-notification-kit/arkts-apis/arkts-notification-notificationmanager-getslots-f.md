@@ -79,6 +79,30 @@ let getSlotsCallback = (err: BusinessError<void> | null, data: Array<notificatio
 notificationManager.getSlots(getSlotsCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.getSlots().then((data: Array<notificationManager.NotificationSlot>) => {
+  console.info(`Succeeded in getting slots, data is ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get slots. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.getSlots().then((data: Array<notificationManager.NotificationSlot>) => {
+  console.info(`Succeeded in getting slots, data is ${JSON.stringify(data)}`);
+}).catch((err: Error ): void => {
+  console.error(`Failed to get slots. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## getSlots
 
@@ -120,27 +144,5 @@ removeAllSlots 删除所有通知渠道。
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getSlots().then((data: Array<notificationManager.NotificationSlot>) => {
-  console.info(`Succeeded in getting slots, data is ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get slots. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getSlots().then((data: Array<notificationManager.NotificationSlot>) => {
-  console.info(`Succeeded in getting slots, data is ${JSON.stringify(data)}`);
-}).catch((err: Error ): void => {
-  console.error(`Failed to get slots. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [getSlots](#getslots)
 

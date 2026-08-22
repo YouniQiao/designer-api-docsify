@@ -206,6 +206,10 @@ Obtains a CloudMediaAssetManager instance.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+**Examples**
+
+See [getCloudMediaAssetManagerInstance](#getcloudmediaassetmanagerinstance)
+
 ## getCloudMediaAssetStatus
 
 ```TypeScript
@@ -280,7 +284,7 @@ Unregisters a callback to monitor changes in the progress of a batch download fo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CloudAssetDownloadProgressInfo](arkts-medialibrary-photoaccesshelper-cloudassetdownloadprogressinfo-i-sys.md)&gt; | No | Callback to unregister, which is registered by onDownloadProgressChange. If this parameter is left empty, all progress-related callbacks are unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CloudAssetDownloadProgressInfo](arkts-medialibrary-photoaccesshelper-cloudassetdownloadprogressinfo-i-sys.md)&gt; | No | Callback to unregister, which is registered by onDownloadProgressChange. If this parameter is left empty, all progress-related callbacks are unregistered. |
 
 **Error codes:**
 
@@ -327,7 +331,7 @@ Registers a callback to monitor changes in the progress of a batch download for 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CloudAssetDownloadProgressInfo](arkts-medialibrary-photoaccesshelper-cloudassetdownloadprogressinfo-i-sys.md)&gt; | Yes | Callback to register. The callback returns progress information of the batch download. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CloudAssetDownloadProgressInfo](arkts-medialibrary-photoaccesshelper-cloudassetdownloadprogressinfo-i-sys.md)&gt; | Yes | Callback to register. The callback returns progress information of the batch download. |
 
 **Error codes:**
 
@@ -777,4 +781,22 @@ Starts a batch download for the specified cloud media assets. This API uses a pr
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: <br>1. The assetUris array is empty; <br>2. The assetUris array size is bigger than 500. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
+
+**Examples**
+
+```TypeScript
+async function example(context: Context) {
+  console.info('StartDownloadSpecificCloudMediaDemo');
+  try {
+    let assetURIs: Array<string> = [
+       'file://media/Photo/12/IMG_1755046662_091/IMG_20250801_175331.jpg'];
+    let cloudMediaAssetManagerInstance: photoAccessHelper.CloudMediaAssetManager
+      = photoAccessHelper.CloudMediaAssetManager.getCloudMediaAssetManagerInstance(context);
+    let taskRespMap : Map<string, photoAccessHelper.CloudAssetDownloadCode> =
+      await cloudMediaAssetManagerInstance.startDownloadSpecificCloudMedia(assetURIs, 2);
+  } catch (err) {
+    console.error(`failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
 

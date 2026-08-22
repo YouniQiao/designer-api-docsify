@@ -58,6 +58,19 @@ config.highContrastText.get().then((data: boolean) => {
 });
 ```
 
+```TypeScript
+import { config } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+config.highContrastText.get((err: BusinessError, data: boolean) => {
+  if (err) {
+    console.error(`failed to get highContrastText, Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in get highContrastText, data is ${data}`);
+});
+```
+
 ## get
 
 ```TypeScript
@@ -78,7 +91,7 @@ Obtains the property value. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | Yes | Callback used to return the result. If the attribute is obtained successfully, **err** is **undefined** and **data** is the attribute value; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the result. If the attribute is obtained successfully, **err** is **undefined** and **data** is the attribute value; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -88,18 +101,7 @@ Obtains the property value. This API uses an asynchronous callback to return the
 
 **Examples**
 
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-config.highContrastText.get((err: BusinessError, data: boolean) => {
-  if (err) {
-    console.error(`failed to get highContrastText, Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in get highContrastText, data is ${data}`);
-});
-```
+See [get](#get)
 
 ## off_Callback<T>
 
@@ -123,7 +125,7 @@ Cancels the listener for property changes. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;T&gt; | No | Callback used to unregister. The value must be the same as the value of **callback** in **on()**. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;T&gt; | No | Callback used to unregister. The value must be the same as the value of **callback** in **on()**. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Error codes:**
 
@@ -166,7 +168,7 @@ This API must be used together with [off](#off_callbackt). Call off to unregiste
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;T&gt; | Yes | Callback invoked when the property changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;T&gt; | Yes | Callback invoked when the property changes. |
 
 **Error codes:**
 
@@ -239,6 +241,21 @@ config.highContrastText.set(value).then(() => {
 });
 ```
 
+```TypeScript
+import { config } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let value: boolean = true;
+
+config.highContrastText.set(value, (err: BusinessError) => {
+  if (err) {
+    console.error(`failed to set highContrastText, Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in set highContrastText, value is ${value}`);
+});
+```
+
 ## set
 
 ```TypeScript
@@ -262,7 +279,7 @@ Sets the property value. This API uses an asynchronous callback to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | T | Yes | Attribute value to set. The value type is the same as that of the corresponding Config attribute. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -274,18 +291,5 @@ Sets the property value. This API uses an asynchronous callback to return the re
 
 **Examples**
 
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let value: boolean = true;
-
-config.highContrastText.set(value, (err: BusinessError) => {
-  if (err) {
-    console.error(`failed to set highContrastText, Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in set highContrastText, value is ${value}`);
-});
-```
+See [set](#set)
 

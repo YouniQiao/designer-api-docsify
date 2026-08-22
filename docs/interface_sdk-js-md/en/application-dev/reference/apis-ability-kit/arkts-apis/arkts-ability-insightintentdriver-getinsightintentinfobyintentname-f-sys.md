@@ -49,3 +49,29 @@ Obtains the intent information on the current device based on the bundle name, m
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service fails to communicate with the dependency module. |
 
+**Examples**
+
+```TypeScript
+import { insightIntentDriver } from '@kit.AbilityKit';
+  import { BusinessError } from '@kit.BasicServicesKit';
+  import { hilog } from '@kit.PerformanceAnalysisKit';
+
+  function getInfoByIntentName() {
+    try {
+      let bundleName = "com.example.intent"; // Use the actual bundle name.
+      let moduleName = "entry"; // Use the actual module name.
+      let intentName = "play"; // Use the actual intent name.
+      insightIntentDriver.getInsightIntentInfoByIntentName(
+        bundleName, moduleName, intentName, insightIntentDriver.GetInsightIntentFlag.GET_FULL_INSIGHT_INTENT | insightIntentDriver.GetInsightIntentFlag.GET_ENTITY_INFO)
+      .then((data) => {
+        hilog.info(0x0000, 'testTag', 'getInsightIntentInfoByIntentName return %{public}s', JSON.stringify(data));
+      }).catch((err: BusinessError) => {
+        hilog.info(0x0000, 'testTag', 'getInsightIntentInfoByIntentName errCode: %{public}d', err.code);
+        hilog.info(0x0000, 'testTag', 'getInsightIntentInfoByIntentName errMessage: %{public}s', err.message);
+      });
+    } catch (error) {
+      hilog.error(0x0000, 'testTag', 'getInsightIntentInfoByIntentName error caught %{public}s', JSON.stringify(error));
+    }
+  }
+```
+

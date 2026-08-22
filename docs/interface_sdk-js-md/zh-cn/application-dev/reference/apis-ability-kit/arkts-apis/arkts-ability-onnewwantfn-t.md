@@ -16,5 +16,9 @@ type OnNewWantFn = (ability: UIAbility) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) | 是 | 当前Ability对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 当前Ability对象。 |
+
+**示例**
+
+参见AbilityLifecycleCallback使用示例。
 

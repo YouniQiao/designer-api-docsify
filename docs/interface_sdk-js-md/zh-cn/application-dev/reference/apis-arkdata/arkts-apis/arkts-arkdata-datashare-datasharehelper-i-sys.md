@@ -170,49 +170,6 @@ try {
 };
 ```
 
-## batchInsert
-
-```TypeScript
-batchInsert(uri: string, values: Array<ValuesBucket>): Promise<int>
-```
-
-将批量数据插入数据库。使用Promise异步回调。暂不支持静默访问。
-
-非静默场景下，调用此接口时，传入的values参数的大小不能超过128MB，传入的uri参数大小不能超过900KB，超出限制将导致操作失败或抛出异常。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DataShareHelper-batchInsert(uri: string, values: Array<ValuesBucket>): Promise<int>--><!--Device-DataShareHelper-batchInsert(uri: string, values: Array<ValuesBucket>): Promise<int>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uri | string | 是 | 要插入的数据的路径。 |
-| values | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | 是 | 要插入的数据。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | Promise对象。返回插入的数据记录数。&lt;br /&gt;因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回插入的数据记录 数。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -259,6 +216,51 @@ try {
   console.error(`Failed to batch insert. Code: ${err.code}, message: ${err.message}`);
 };
 ```
+
+## batchInsert
+
+```TypeScript
+batchInsert(uri: string, values: Array<ValuesBucket>): Promise<int>
+```
+
+将批量数据插入数据库。使用Promise异步回调。暂不支持静默访问。
+
+非静默场景下，调用此接口时，传入的values参数的大小不能超过128MB，传入的uri参数大小不能超过900KB，超出限制将导致操作失败或抛出异常。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-batchInsert(uri: string, values: Array<ValuesBucket>): Promise<int>--><!--Device-DataShareHelper-batchInsert(uri: string, values: Array<ValuesBucket>): Promise<int>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 要插入的数据的路径。 |
+| values | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | 是 | 要插入的数据。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;int&gt; | Promise对象。返回插入的数据记录数。&lt;br /&gt;因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回插入的数据记录 数。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+参见 [batchInsert](#batchinsert)
 
 ## batchUpdate
 
@@ -398,6 +400,203 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+## delete
+
+```TypeScript
+delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<int>): void
+```
+
+从数据库中删除一条或多条数据记录。使用callback异步回调。
+
+非静默场景下，调用此接口时，传入的uri和predicates参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。
+
+静默场景下，调用此接口时，传入的uri和predicates参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<int>): void--><!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<int>): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 要删除的数据的路径。 |
+| predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。&lt;br /&gt;delete接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB的删除 目前仅支持inKeys谓词。静默场景下谓词内方法为空时，默认全表删除。非静默场景下规格由数据提供方制定。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当从数据库中删除一条或多条数据记录成功，err为undefined，data为获取到的已删除的数据记录数；否则为错误对象。&lt;br /&gt; 因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此callback也无法返回删除的数据记录数。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+const urisToDelete: string[] =
+  ['datashareproxy://com.example.app1/config1', 'datashareproxy://com.example.app1/config2',];
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+dataProxyHandle.delete(urisToDelete, config).then((results: dataShare.DataProxyResult[]) => {
+  results.forEach((result) => {
+    console.info(`URI: ${result.uri}, Result: ${result.result}`);
+  });
+}).catch((error: BusinessError) => {
+  console.error(`Failed to delete config. code: ${error.code}, message: ${error.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).delete(uri, da, (err: BusinessError, data: number) => {
+      if (err !== undefined) {
+        console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info("delete succeed, data : " + data);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to delete. Code: ${code}, message: ${message}`);
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = ("datashare:///com.samples.datasharetest.DataShare");
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).delete(uri, da, (err: BusinessError | null, data: int | undefined) => {
+      if (err?.message) {
+        console.error(`Failed to delete. Code: ${err?.code}, message: ${err?.message}`);
+        return;
+      }
+      if (data != undefined) {
+        console.info("delete succeed, data : " + data);
+      }
+    });
+  }
+} catch (err: BusinessError) {
+  console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
+};
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).delete(uri, da).then((data: number) => {
+      console.info("delete succeed, data : " + data);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to delete. Code: ${code}, message: ${message}`);
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = ("datashare:///com.samples.datasharetest.DataShare");
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    let data: int = await (dataShareHelper as dataShare.DataShareHelper).delete(uri, da);
+    console.info("delete succeed, data : " + data);
+  }
+} catch (err: BusinessError) {
+  console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
+};
+```
+
+## delete
+
+```TypeScript
+delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promise<int>
+```
+
+从数据库中删除一条或多条数据记录。使用Promise异步回调。
+
+非静默场景下，调用此接口时，传入的uri和predicates参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。
+
+静默场景下，调用此接口时，传入的uri和predicates参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promise<int>--><!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promise<int>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 要删除的数据的路径。 |
+| predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。&lt;br /&gt;delete接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB的删除 目前仅支持inKeys谓词。静默场景下谓词内方法为空时，默认全表删除。非静默场景下规格由数据提供方制定。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;int&gt; | Promise对象。返回已删除的数据记录数。&lt;br /&gt;因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回删除的数据记 录数。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+参见 [delete](#delete)
+
 ## delTemplate
 
 ```TypeScript
@@ -456,186 +655,6 @@ if (dataShareHelper != undefined) {
 }
 ```
 
-## delete
-
-```TypeScript
-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<int>): void
-```
-
-从数据库中删除一条或多条数据记录。使用callback异步回调。
-
-非静默场景下，调用此接口时，传入的uri和predicates参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。
-
-静默场景下，调用此接口时，传入的uri和predicates参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<int>): void--><!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<int>): void-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uri | string | 是 | 要删除的数据的路径。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。&lt;br /&gt;delete接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB的删除 目前仅支持inKeys谓词。静默场景下谓词内方法为空时，默认全表删除。非静默场景下规格由数据提供方制定。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当从数据库中删除一条或多条数据记录成功，err为undefined，data为获取到的已删除的数据记录数；否则为错误对象。&lt;br /&gt; 因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此callback也无法返回删除的数据记录数。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-let da = new dataSharePredicates.DataSharePredicates();
-da.equalTo("name", "ZhangSan");
-try {
-  if (dataShareHelper != undefined) {
-    (dataShareHelper as dataShare.DataShareHelper).delete(uri, da, (err: BusinessError, data: number) => {
-      if (err !== undefined) {
-        console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info("delete succeed, data : " + data);
-    });
-  }
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error(`Failed to delete. Code: ${code}, message: ${message}`);
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = ("datashare:///com.samples.datasharetest.DataShare");
-let da = new dataSharePredicates.DataSharePredicates();
-da.equalTo("name", "ZhangSan");
-try {
-  if (dataShareHelper != undefined) {
-    (dataShareHelper as dataShare.DataShareHelper).delete(uri, da, (err: BusinessError | null, data: int | undefined) => {
-      if (err?.message) {
-        console.error(`Failed to delete. Code: ${err?.code}, message: ${err?.message}`);
-        return;
-      }
-      if (data != undefined) {
-        console.info("delete succeed, data : " + data);
-      }
-    });
-  }
-} catch (err: BusinessError) {
-  console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
-};
-```
-
-## delete
-
-```TypeScript
-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promise<int>
-```
-
-从数据库中删除一条或多条数据记录。使用Promise异步回调。
-
-非静默场景下，调用此接口时，传入的uri和predicates参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。
-
-静默场景下，调用此接口时，传入的uri和predicates参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promise<int>--><!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promise<int>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uri | string | 是 | 要删除的数据的路径。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。&lt;br /&gt;delete接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB的删除 目前仅支持inKeys谓词。静默场景下谓词内方法为空时，默认全表删除。非静默场景下规格由数据提供方制定。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | Promise对象。返回已删除的数据记录数。&lt;br /&gt;因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回删除的数据记 录数。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-let da = new dataSharePredicates.DataSharePredicates();
-da.equalTo("name", "ZhangSan");
-try {
-  if (dataShareHelper != undefined) {
-    (dataShareHelper as dataShare.DataShareHelper).delete(uri, da).then((data: number) => {
-      console.info("delete succeed, data : " + data);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
-    });
-  }
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error(`Failed to delete. Code: ${code}, message: ${message}`);
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = ("datashare:///com.samples.datasharetest.DataShare");
-let da = new dataSharePredicates.DataSharePredicates();
-da.equalTo("name", "ZhangSan");
-try {
-  if (dataShareHelper != undefined) {
-    let data: int = await (dataShareHelper as dataShare.DataShareHelper).delete(uri, da);
-    console.info("delete succeed, data : " + data);
-  }
-} catch (err: BusinessError) {
-  console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
-};
-```
-
 ## denormalizeUri
 
 ```TypeScript
@@ -686,6 +705,19 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).denormalizeUri(uri).then((data: string) => {
+    console.info("denormalizeUri = " + data);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to denormalize URI. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
+
 ## denormalizeUri
 
 ```TypeScript
@@ -726,18 +758,7 @@ denormalizeUri(uri: string): Promise<string>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-if (dataShareHelper != undefined) {
-  (dataShareHelper as dataShare.DataShareHelper).denormalizeUri(uri).then((data: string) => {
-    console.info("denormalizeUri = " + data);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to denormalize URI. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
+参见 [denormalizeUri](#denormalizeuri)
 
 ## getPublishedData
 
@@ -788,6 +809,12 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+```TypeScript
+if (dataShareHelper != undefined) {
+  let publishedData: Promise<Array<dataShare.PublishedItem>> = (dataShareHelper as dataShare.DataShareHelper).getPublishedData("com.acts.ohos.data.datasharetest");
+}
+```
+
 ## getPublishedData
 
 ```TypeScript
@@ -831,11 +858,7 @@ getPublishedData(bundleName: string): Promise<Array<PublishedItem>>
 
 **示例**
 
-```TypeScript
-if (dataShareHelper != undefined) {
-  let publishedData: Promise<Array<dataShare.PublishedItem>> = (dataShareHelper as dataShare.DataShareHelper).getPublishedData("com.acts.ohos.data.datasharetest");
-}
-```
+参见 [getPublishedData](#getpublisheddata)
 
 ## insert
 
@@ -944,51 +967,6 @@ try {
 };
 ```
 
-## insert
-
-```TypeScript
-insert(uri: string, value: ValuesBucket): Promise<int>
-```
-
-将单条数据插入数据库。使用Promise异步回调。
-
-非静默场景下，调用此接口时，传入的uri和value参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。
-
-静默场景下，调用此接口时，传入的uri和value参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DataShareHelper-insert(uri: string, value: ValuesBucket): Promise<int>--><!--Device-DataShareHelper-insert(uri: string, value: ValuesBucket): Promise<int>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uri | string | 是 | 要插入的数据的路径。 |
-| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 要插入的数据的值。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | Promise对象。返回插入数据记录的索引。&lt;br /&gt;因部分数据库（如KVDB）的相应接口并不支持返回索引，故若服务端使用了不支持索引的数据库，则此Promise也无法返回 索引值。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -1047,6 +1025,53 @@ try {
 };
 ```
 
+## insert
+
+```TypeScript
+insert(uri: string, value: ValuesBucket): Promise<int>
+```
+
+将单条数据插入数据库。使用Promise异步回调。
+
+非静默场景下，调用此接口时，传入的uri和value参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。
+
+静默场景下，调用此接口时，传入的uri和value参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-insert(uri: string, value: ValuesBucket): Promise<int>--><!--Device-DataShareHelper-insert(uri: string, value: ValuesBucket): Promise<int>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 要插入的数据的路径。 |
+| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 要插入的数据的值。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;int&gt; | Promise对象。返回插入数据记录的索引。&lt;br /&gt;因部分数据库（如KVDB）的相应接口并不支持返回索引，故若服务端使用了不支持索引的数据库，则此Promise也无法返回 索引值。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+参见 [insert](#insert)
+
 ## normalizeUri
 
 ```TypeScript
@@ -1097,6 +1122,19 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).normalizeUri(uri).then((data: string) => {
+    console.info("normalizeUri = " + data);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to normalize URI. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
+
 ## normalizeUri
 
 ```TypeScript
@@ -1137,18 +1175,7 @@ normalizeUri(uri: string): Promise<string>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-if (dataShareHelper != undefined) {
-  (dataShareHelper as dataShare.DataShareHelper).normalizeUri(uri).then((data: string) => {
-    console.info("normalizeUri = " + data);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to normalize URI. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
+参见 [normalizeUri](#normalizeuri)
 
 ## notifyChange
 
@@ -1196,6 +1223,29 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+```TypeScript
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).notifyChange(uri);
+}
+```
+
+```TypeScript
+import { ValuesBucket } from '@kit.ArkData';
+
+let dsUri = "datashare:///com.acts.datasharetest";
+let people: ValuesBucket[] = [
+  { "name": "LiSi" },
+  { "name": "WangWu" },
+  { "name": "ZhaoLiu" }
+]
+
+let changeData:dataShare.ChangeInfo= { type:dataShare.ChangeType.INSERT, uri:dsUri, values:people};
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).notifyChange(changeData);
+}
+```
+
 ## notifyChange
 
 ```TypeScript
@@ -1238,12 +1288,7 @@ notifyChange(uri: string): Promise<void>
 
 **示例**
 
-```TypeScript
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-if (dataShareHelper != undefined) {
-  (dataShareHelper as dataShare.DataShareHelper).notifyChange(uri);
-}
-```
+参见 [notifyChange](#notifychange)
 
 ## notifyChange
 
@@ -1287,221 +1332,7 @@ notifyChange(data: ChangeInfo): Promise<void>
 
 **示例**
 
-```TypeScript
-import { ValuesBucket } from '@kit.ArkData';
-
-let dsUri = "datashare:///com.acts.datasharetest";
-let people: ValuesBucket[] = [
-  { "name": "LiSi" },
-  { "name": "WangWu" },
-  { "name": "ZhaoLiu" }
-]
-
-let changeData:dataShare.ChangeInfo= { type:dataShare.ChangeType.INSERT, uri:dsUri, values:people};
-if (dataShareHelper != undefined) {
-  (dataShareHelper as dataShare.DataShareHelper).notifyChange(changeData);
-}
-```
-
-## offDataChange
-
-```TypeScript
-offDataChange(uri: string, callback?: Callback<void>): void
-```
-
-取消订阅指定URI下指定callback对应的数据资源的变更通知。 与订阅接口[onDataChange](#ondatachange)相对应。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DataShareHelper-offDataChange(uri: string, callback?: Callback<void>): void--><!--Device-DataShareHelper-offDataChange(uri: string, callback?: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uri | string | 是 | 表示指定的数据路径。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
-
-**示例**
-
-```TypeScript
-let callback: () => void = (): void => {
-  console.info("**** Observer on callback ****");
-}
-let uri = ("datashare:///com.samples.datasharetest.DataShare");
-if (dataShareHelper != undefined) {
-  (dataShareHelper as dataShare.DataShareHelper).onDataChange(uri, callback);
-  (dataShareHelper as dataShare.DataShareHelper).offDataChange(uri, callback);
-}
-```
-
-## offDataChange
-
-```TypeScript
-offDataChange(type:SubscriptionType, uri: string, callback?: Callback<ChangeInfo>): void
-```
-
-取消订阅指定URI下指定callback对应的数据资源的变更通知。 与订阅接口[onDataChange](#ondatachange)相对应。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DataShareHelper-offDataChange(type:SubscriptionType, uri: string, callback?: Callback<ChangeInfo>): void--><!--Device-DataShareHelper-offDataChange(type:SubscriptionType, uri: string, callback?: Callback<ChangeInfo>): void-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | 是 | 表示数据更改时按指定数据路径通知变更。 |
-| uri | string | 是 | 表示指定的数据路径。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeInfo&gt; | 否 | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. If this parameter is specified, the callback must be the one registered in [on('datachange')](#ondatachange) . |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
-
-**示例**
-
-```TypeScript
-let uri = ("datashare:///com.acts.datasharetest");
-export function callback(ChangeInfo:dataShare.ChangeInfo) {
-    console.info(' **** Observer callback **** ChangeInfo:' + JSON.stringify(ChangeInfo));
-}
-if (dataShareHelper !== undefined) {
-  (dataShareHelper as dataShare.DataShareHelper).onDataChange(dataShare.SubscriptionType.SUBSCRIPTION_TYPE_EXACT_URI, uri, callback);
-  (dataShareHelper as dataShare.DataShareHelper).offDataChange(dataShare.SubscriptionType.SUBSCRIPTION_TYPE_EXACT_URI, uri, callback);
-}
-```
-
-## offPublishedDataChange
-
-```TypeScript
-offPublishedDataChange(
-       uris: Array<string>,
-       subscriberId: string,
-       callback?: Callback<PublishedDataChangeNode>
-     ): Array<OperationResult>
-```
-
-取消订阅已发布数据的数据变更通知。仅支持静默访问。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DataShareHelper-offPublishedDataChange(       uris: Array<string>,       subscriberId: string,       callback?: Callback<PublishedDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-offPublishedDataChange(       uris: Array<string>,       subscriberId: string,       callback?: Callback<PublishedDataChangeNode>     ): Array<OperationResult>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uris | Array&lt;string&gt; | 是 | 要操作的数据的路径。 |
-| subscriberId | string | 是 | 指定处理回调的用户ID。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | 否 | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt; | 返回操作结果。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
-
-**示例**
-
-```TypeScript
-let offCallback: (node: dataShare.PublishedDataChangeNode) => void = (node:dataShare.PublishedDataChangeNode): void => {
-  console.info("**** Observer off callback ****");
-}
-let uris:Array<string> = ["city", "datashareproxy://com.acts.ohos.data.datasharetest/appInfo", "key2"];
-let subscriberId = '11';
-if (dataShareHelper != undefined) {
-  let result: Array<dataShare.OperationResult> = (dataShareHelper as dataShare.DataShareHelper).offPublishedDataChange(uris, subscriberId, offCallback);
-}
-```
-
-## offRdbDataChange
-
-```TypeScript
-offRdbDataChange(
-       uris: Array<string>,
-       templateId: TemplateId,
-       callback?: Callback<RdbDataChangeNode>
-     ): Array<OperationResult>
-```
-
-取消订阅指定URI和模板对应的数据变更事件。仅支持静默访问。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DataShareHelper-offRdbDataChange(       uris: Array<string>,       templateId: TemplateId,       callback?: Callback<RdbDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-offRdbDataChange(       uris: Array<string>,       templateId: TemplateId,       callback?: Callback<RdbDataChangeNode>     ): Array<OperationResult>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uris | Array&lt;string&gt; | 是 | 要操作的数据的路径。 |
-| templateId | [TemplateId](arkts-arkdata-datashare-templateid-i-sys.md) | 是 | 处理回调的templateId。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | 否 | Callback to unregister. If this parameter is **undefined** , **null**, or left empty, this API unregisters all callbacks for the specified URI. |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt; | : The operation result. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
-
-**示例**
-
-```TypeScript
-let uri = ("datashareproxy://com.samples.datasharetest.DataShare");
-let templateId:dataShare.TemplateId = {subscriberId:"11", bundleNameOfOwner:"com.acts.ohos.data.datasharetest"};
-if (dataShareHelper != undefined) {
-  let result: Array<dataShare.OperationResult> = (dataShareHelper as dataShare.DataShareHelper).offRdbDataChange([uri], templateId);
-}
-```
+参见 [notifyChange](#notifychange)
 
 ## off('dataChange')
 
@@ -1717,19 +1548,19 @@ if (dataShareHelper != undefined) {
 }
 ```
 
-## onDataChange
+## offDataChange
 
 ```TypeScript
-onDataChange(uri: string, callback: Callback<void>): void
+offDataChange(uri: string, callback?: Callback<void>): void
 ```
 
-订阅指定URI对应数据的数据变更事件。若订阅者已注册了观察者，当有其他通知者触发了变更通知时，订阅者将会接收到callback通知。使用callback异步回调。 该功能不支持跨用户订阅通知。同一应用内对单个URI的重复订阅上限为51次。
+取消订阅指定URI下指定callback对应的数据资源的变更通知。 与订阅接口[onDataChange](#ondatachange)相对应。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DataShareHelper-onDataChange(uri: string, callback: Callback<void>): void--><!--Device-DataShareHelper-onDataChange(uri: string, callback: Callback<void>): void-End-->
+<!--Device-DataShareHelper-offDataChange(uri: string, callback?: Callback<void>): void--><!--Device-DataShareHelper-offDataChange(uri: string, callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1740,7 +1571,7 @@ onDataChange(uri: string, callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示指定的数据路径。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。当有其他用户触发了变更通知时调用；否则不被触发或为错误对象。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **错误码：**
 
@@ -1752,28 +1583,61 @@ onDataChange(uri: string, callback: Callback<void>): void
 **示例**
 
 ```TypeScript
-let onCallback: () => void = (): void => {
+const urisToUnWatch: string[] =
+  ['datashareproxy://com.example.app1/config1', 'datashareproxy://com.example.app1/config2',];
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+const callback = (err: BusinessError<void>, changes: dataShare.DataProxyChangeInfo[]): void => {
+  if (err) {
+    console.error('err:', err);
+  } else {
+    changes.forEach((change) => {
+      console.info(`Change Type: ${change.type}, URI: ${change.uri}, Value: ${change.value}`);
+    });
+  }
+};
+const results: dataShare.DataProxyResult[] = dataProxyHandle.offDataChange(, urisToUnWatch, config, callback);
+results.forEach((result) => {
+  console.info(`URI: ${result.uri}, Result: ${result.result}`);
+});
+```
+
+```TypeScript
+let callback: () => void = (): void => {
   console.info("**** Observer on callback ****");
 }
 let uri = ("datashare:///com.samples.datasharetest.DataShare");
-if (dataShareHelper !== undefined) {
-  (dataShareHelper as dataShare.DataShareHelper).onDataChange(uri, onCallback);
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).onDataChange(uri, callback);
+  (dataShareHelper as dataShare.DataShareHelper).offDataChange(uri, callback);
 }
 ```
 
-## onDataChange
-
 ```TypeScript
-onDataChange(type:SubscriptionType, uri: string, callback: Callback<ChangeInfo>): void
+let uri = ("datashare:///com.acts.datasharetest");
+export function callback(ChangeInfo:dataShare.ChangeInfo) {
+    console.info(' **** Observer callback **** ChangeInfo:' + JSON.stringify(ChangeInfo));
+}
+if (dataShareHelper !== undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).onDataChange(dataShare.SubscriptionType.SUBSCRIPTION_TYPE_EXACT_URI, uri, callback);
+  (dataShareHelper as dataShare.DataShareHelper).offDataChange(dataShare.SubscriptionType.SUBSCRIPTION_TYPE_EXACT_URI, uri, callback);
+}
 ```
 
-订阅指定URI对应数据的数据变更事件。若订阅者已注册变更通知，当有其他通知者触发了变更通知时，订阅者将会接收到callback通知， 通知携带数据变更类型、变化的uri、变更的数据内容。使用callback回调。该功能不支持跨用户订阅通知。同一应用内对单个URI的重复订阅上限为51次。
+## offDataChange
+
+```TypeScript
+offDataChange(type:SubscriptionType, uri: string, callback?: Callback<ChangeInfo>): void
+```
+
+取消订阅指定URI下指定callback对应的数据资源的变更通知。 与订阅接口[onDataChange](#ondatachange)相对应。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DataShareHelper-onDataChange(type:SubscriptionType, uri: string, callback: Callback<ChangeInfo>): void--><!--Device-DataShareHelper-onDataChange(type:SubscriptionType, uri: string, callback: Callback<ChangeInfo>): void-End-->
+<!--Device-DataShareHelper-offDataChange(type:SubscriptionType, uri: string, callback?: Callback<ChangeInfo>): void--><!--Device-DataShareHelper-offDataChange(type:SubscriptionType, uri: string, callback?: Callback<ChangeInfo>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1785,7 +1649,7 @@ onDataChange(type:SubscriptionType, uri: string, callback: Callback<ChangeInfo>)
 | --- | --- | --- | --- |
 | type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | 是 | 表示数据更改时按指定数据路径通知变更。 |
 | uri | string | 是 | 表示指定的数据路径。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeInfo&gt; | 是 | 回调函数。当有其他用户触发了变更通知时会回调该函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeInfo&gt; | 否 | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. If this parameter is specified, the callback must be the one registered in [on('datachange')](#ondatachange) . |
 
 **错误码：**
 
@@ -1796,33 +1660,25 @@ onDataChange(type:SubscriptionType, uri: string, callback: Callback<ChangeInfo>)
 
 **示例**
 
-```TypeScript
-let uri = ("datashare:///com.acts.datasharetest");
-export function callback(ChangeInfo:dataShare.ChangeInfo) {
-    console.info(' **** Observer callback **** ChangeInfo:' + JSON.stringify(ChangeInfo));
-}
-if (dataShareHelper !== undefined) {
-  (dataShareHelper as dataShare.DataShareHelper).onDataChange(dataShare.SubscriptionType.SUBSCRIPTION_TYPE_EXACT_URI, uri, callback);
-}
-```
+参见 [offDataChange](#offdatachange)
 
-## onPublishedDataChange
+## offPublishedDataChange
 
 ```TypeScript
-onPublishedDataChange(
+offPublishedDataChange(
        uris: Array<string>,
        subscriberId: string,
-       callback: Callback<PublishedDataChangeNode>
+       callback?: Callback<PublishedDataChangeNode>
      ): Array<OperationResult>
 ```
 
-订阅已发布数据的数据变更通知。仅支持静默访问。该功能不支持跨用户订阅通知。
+取消订阅已发布数据的数据变更通知。仅支持静默访问。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DataShareHelper-onPublishedDataChange(       uris: Array<string>,       subscriberId: string,       callback: Callback<PublishedDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-onPublishedDataChange(       uris: Array<string>,       subscriberId: string,       callback: Callback<PublishedDataChangeNode>     ): Array<OperationResult>-End-->
+<!--Device-DataShareHelper-offPublishedDataChange(       uris: Array<string>,       subscriberId: string,       callback?: Callback<PublishedDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-offPublishedDataChange(       uris: Array<string>,       subscriberId: string,       callback?: Callback<PublishedDataChangeNode>     ): Array<OperationResult>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1834,7 +1690,7 @@ onPublishedDataChange(
 | --- | --- | --- | --- |
 | uris | Array&lt;string&gt; | 是 | 要操作的数据的路径。 |
 | subscriberId | string | 是 | 指定处理回调的用户ID。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | 是 | 回调函数。当触发变更通知时调用，err为undefined， node为订阅数据变更结果；否则不被触发或为错误对象。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | 否 | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **返回值：**
 
@@ -1852,43 +1708,33 @@ onPublishedDataChange(
 **示例**
 
 ```TypeScript
-let onPublishCallback: (node: dataShare.PublishedDataChangeNode) => void = (node:dataShare.PublishedDataChangeNode): void => {
-  console.info("onPublishCallback node bundleName " + JSON.stringify(node.bundleName));
-  console.info("onPublishCallback node data size" + node.data.length);
-  for (let i = 0; i < node.data.length; i++) {
-    console.info("onPublishCallback node " + typeof node.data[i].data);
-    if (typeof node.data[i].data != 'string') {
-      let array: ArrayBuffer = node.data[i].data as ArrayBuffer;
-      let data: Uint8Array = new Uint8Array(array);
-      console.info("onPublishCallback " + i + " " + JSON.stringify(data));
-    }
-    console.info("onPublishCallback data " + i + " " + JSON.stringify(node.data[i]));
-  }
+let offCallback: (node: dataShare.PublishedDataChangeNode) => void = (node:dataShare.PublishedDataChangeNode): void => {
+  console.info("**** Observer off callback ****");
 }
-let uris:Array<string> = ['city', 'datashareproxy://com.acts.ohos.data.datasharetest/appInfo', 'key2'];
+let uris:Array<string> = ["city", "datashareproxy://com.acts.ohos.data.datasharetest/appInfo", "key2"];
 let subscriberId = '11';
 if (dataShareHelper != undefined) {
-  let result: Array<dataShare.OperationResult> = (dataShareHelper as dataShare.DataShareHelper).onPublishedDataChange(uris, subscriberId, onPublishCallback);
+  let result: Array<dataShare.OperationResult> = (dataShareHelper as dataShare.DataShareHelper).offPublishedDataChange(uris, subscriberId, offCallback);
 }
 ```
 
-## onRdbDataChange
+## offRdbDataChange
 
 ```TypeScript
-onRdbDataChange(
+offRdbDataChange(
        uris: Array<string>,
        templateId: TemplateId,
-       callback: Callback<RdbDataChangeNode>
+       callback?: Callback<RdbDataChangeNode>
      ): Array<OperationResult>
 ```
 
-订阅指定URI和模板对应的数据变更事件。仅支持静默访问。该功能不支持跨用户订阅通知。
+取消订阅指定URI和模板对应的数据变更事件。仅支持静默访问。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DataShareHelper-onRdbDataChange(       uris: Array<string>,       templateId: TemplateId,       callback: Callback<RdbDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-onRdbDataChange(       uris: Array<string>,       templateId: TemplateId,       callback: Callback<RdbDataChangeNode>     ): Array<OperationResult>-End-->
+<!--Device-DataShareHelper-offRdbDataChange(       uris: Array<string>,       templateId: TemplateId,       callback?: Callback<RdbDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-offRdbDataChange(       uris: Array<string>,       templateId: TemplateId,       callback?: Callback<RdbDataChangeNode>     ): Array<OperationResult>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1900,13 +1746,13 @@ onRdbDataChange(
 | --- | --- | --- | --- |
 | uris | Array&lt;string&gt; | 是 | 要操作的数据的路径。 |
 | templateId | [TemplateId](arkts-arkdata-datashare-templateid-i-sys.md) | 是 | 处理回调的templateId。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | 是 | 回调函数。当触发变更通知时调用，err为undefined，node为订阅数据变更结果；否则不被触发或为错误对象。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | 否 | Callback to unregister. If this parameter is **undefined** , **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt; | 返回操作结果。 |
+| Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt; | : The operation result. |
 
 **错误码：**
 
@@ -1918,23 +1764,10 @@ onRdbDataChange(
 **示例**
 
 ```TypeScript
-let onCallback: (node: dataShare.RdbDataChangeNode) => void = (node:dataShare.RdbDataChangeNode): void => {
-  if (!node.data.length) {
-    console.info("node.data.length is empty");
-    return;
-  }
-  console.info("onCallback " + JSON.stringify(node.uri));
-  console.info("onCallback " + JSON.stringify(node.templateId));
-  console.info("onCallback " + node.data.length);
-  for (let i = 0; i < node.data.length; i++) {
-    console.info("onCallback " + typeof node.data[i] + " " + node.data[i]);
-  }
-}
-
 let uri = ("datashareproxy://com.samples.datasharetest.DataShare");
 let templateId:dataShare.TemplateId = {subscriberId:"11", bundleNameOfOwner:"com.acts.ohos.data.datasharetest"};
 if (dataShareHelper != undefined) {
-  let result: Array<dataShare.OperationResult> = (dataShareHelper as dataShare.DataShareHelper).onRdbDataChange([uri], templateId, onCallback);
+  let result: Array<dataShare.OperationResult> = (dataShareHelper as dataShare.DataShareHelper).offRdbDataChange([uri], templateId);
 }
 ```
 
@@ -2179,6 +2012,250 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+## onDataChange
+
+```TypeScript
+onDataChange(uri: string, callback: Callback<void>): void
+```
+
+订阅指定URI对应数据的数据变更事件。若订阅者已注册了观察者，当有其他通知者触发了变更通知时，订阅者将会接收到callback通知。使用callback异步回调。 该功能不支持跨用户订阅通知。同一应用内对单个URI的重复订阅上限为51次。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-onDataChange(uri: string, callback: Callback<void>): void--><!--Device-DataShareHelper-onDataChange(uri: string, callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 表示指定的数据路径。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。当有其他用户触发了变更通知时调用；否则不被触发或为错误对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
+
+**示例**
+
+```TypeScript
+const urisToWatch: string[] =
+  ['datashareproxy://com.example.app1/config1', 'datashareproxy://com.example.app1/config2',];
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+const callback = (err: BusinessError<void>, changes: dataShare.DataProxyChangeInfo[]): void => {
+  if (err) {
+    console.error('err:', err);
+  } else {
+    changes.forEach((change) => {
+      console.info(`Change Type: ${change.type}, URI: ${change.uri}, Value: ${change.value}`);
+    });
+  }
+};
+const results: dataShare.DataProxyResult[] = dataProxyHandle.onDataChange(urisToWatch, config, callback);
+results.forEach((result) => {
+  console.info(`URI: ${result.uri}, Result: ${result.result}`);
+});
+```
+
+```TypeScript
+let onCallback: () => void = (): void => {
+  console.info("**** Observer on callback ****");
+}
+let uri = ("datashare:///com.samples.datasharetest.DataShare");
+if (dataShareHelper !== undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).onDataChange(uri, onCallback);
+}
+```
+
+```TypeScript
+let uri = ("datashare:///com.acts.datasharetest");
+export function callback(ChangeInfo:dataShare.ChangeInfo) {
+    console.info(' **** Observer callback **** ChangeInfo:' + JSON.stringify(ChangeInfo));
+}
+if (dataShareHelper !== undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).onDataChange(dataShare.SubscriptionType.SUBSCRIPTION_TYPE_EXACT_URI, uri, callback);
+}
+```
+
+## onDataChange
+
+```TypeScript
+onDataChange(type:SubscriptionType, uri: string, callback: Callback<ChangeInfo>): void
+```
+
+订阅指定URI对应数据的数据变更事件。若订阅者已注册变更通知，当有其他通知者触发了变更通知时，订阅者将会接收到callback通知， 通知携带数据变更类型、变化的uri、变更的数据内容。使用callback回调。该功能不支持跨用户订阅通知。同一应用内对单个URI的重复订阅上限为51次。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-onDataChange(type:SubscriptionType, uri: string, callback: Callback<ChangeInfo>): void--><!--Device-DataShareHelper-onDataChange(type:SubscriptionType, uri: string, callback: Callback<ChangeInfo>): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | 是 | 表示数据更改时按指定数据路径通知变更。 |
+| uri | string | 是 | 表示指定的数据路径。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeInfo&gt; | 是 | 回调函数。当有其他用户触发了变更通知时会回调该函数。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
+
+**示例**
+
+参见 [onDataChange](#ondatachange)
+
+## onPublishedDataChange
+
+```TypeScript
+onPublishedDataChange(
+       uris: Array<string>,
+       subscriberId: string,
+       callback: Callback<PublishedDataChangeNode>
+     ): Array<OperationResult>
+```
+
+订阅已发布数据的数据变更通知。仅支持静默访问。该功能不支持跨用户订阅通知。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-onPublishedDataChange(       uris: Array<string>,       subscriberId: string,       callback: Callback<PublishedDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-onPublishedDataChange(       uris: Array<string>,       subscriberId: string,       callback: Callback<PublishedDataChangeNode>     ): Array<OperationResult>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uris | Array&lt;string&gt; | 是 | 要操作的数据的路径。 |
+| subscriberId | string | 是 | 指定处理回调的用户ID。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | 是 | 回调函数。当触发变更通知时调用，err为undefined， node为订阅数据变更结果；否则不被触发或为错误对象。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt; | 返回操作结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
+
+**示例**
+
+```TypeScript
+let onPublishCallback: (node: dataShare.PublishedDataChangeNode) => void = (node:dataShare.PublishedDataChangeNode): void => {
+  console.info("onPublishCallback node bundleName " + JSON.stringify(node.bundleName));
+  console.info("onPublishCallback node data size" + node.data.length);
+  for (let i = 0; i < node.data.length; i++) {
+    console.info("onPublishCallback node " + typeof node.data[i].data);
+    if (typeof node.data[i].data != 'string') {
+      let array: ArrayBuffer = node.data[i].data as ArrayBuffer;
+      let data: Uint8Array = new Uint8Array(array);
+      console.info("onPublishCallback " + i + " " + JSON.stringify(data));
+    }
+    console.info("onPublishCallback data " + i + " " + JSON.stringify(node.data[i]));
+  }
+}
+let uris:Array<string> = ['city', 'datashareproxy://com.acts.ohos.data.datasharetest/appInfo', 'key2'];
+let subscriberId = '11';
+if (dataShareHelper != undefined) {
+  let result: Array<dataShare.OperationResult> = (dataShareHelper as dataShare.DataShareHelper).onPublishedDataChange(uris, subscriberId, onPublishCallback);
+}
+```
+
+## onRdbDataChange
+
+```TypeScript
+onRdbDataChange(
+       uris: Array<string>,
+       templateId: TemplateId,
+       callback: Callback<RdbDataChangeNode>
+     ): Array<OperationResult>
+```
+
+订阅指定URI和模板对应的数据变更事件。仅支持静默访问。该功能不支持跨用户订阅通知。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-onRdbDataChange(       uris: Array<string>,       templateId: TemplateId,       callback: Callback<RdbDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-onRdbDataChange(       uris: Array<string>,       templateId: TemplateId,       callback: Callback<RdbDataChangeNode>     ): Array<OperationResult>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uris | Array&lt;string&gt; | 是 | 要操作的数据的路径。 |
+| templateId | [TemplateId](arkts-arkdata-datashare-templateid-i-sys.md) | 是 | 处理回调的templateId。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | 是 | 回调函数。当触发变更通知时调用，err为undefined，node为订阅数据变更结果；否则不被触发或为错误对象。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt; | 返回操作结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
+
+**示例**
+
+```TypeScript
+let onCallback: (node: dataShare.RdbDataChangeNode) => void = (node:dataShare.RdbDataChangeNode): void => {
+  if (!node.data.length) {
+    console.info("node.data.length is empty");
+    return;
+  }
+  console.info("onCallback " + JSON.stringify(node.uri));
+  console.info("onCallback " + JSON.stringify(node.templateId));
+  console.info("onCallback " + node.data.length);
+  for (let i = 0; i < node.data.length; i++) {
+    console.info("onCallback " + typeof node.data[i] + " " + node.data[i]);
+  }
+}
+
+let uri = ("datashareproxy://com.samples.datasharetest.DataShare");
+let templateId:dataShare.TemplateId = {subscriberId:"11", bundleNameOfOwner:"com.acts.ohos.data.datasharetest"};
+if (dataShareHelper != undefined) {
+  let result: Array<dataShare.OperationResult> = (dataShareHelper as dataShare.DataShareHelper).onRdbDataChange([uri], templateId, onCallback);
+}
+```
+
 ## publish
 
 ```TypeScript
@@ -2225,6 +2302,28 @@ publish(
 **示例**
 
 ```TypeScript
+const newConfigData: dataShare.ProxyData[] = [{
+  uri: 'datashareproxy://com.example.app1/config1',
+  value: 'Value1',
+  allowList: ['appIdentifier2', 'appIdentifier3'], // 此处字符串仅作示例，使用时需替换为应用实际的appIdentifier
+}, {
+  uri: 'datashareproxy://com.example.app1/config2',
+  value: 'Value2',
+  allowList: ['appIdentifier3', 'appIdentifier4'], // 此处字符串仅作示例，使用时需替换为应用实际的appIdentifier
+}];
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+dataProxyHandle.publish(newConfigData, config).then((results: dataShare.DataProxyResult[]) => {
+  results.forEach((result) => {
+    console.info(`URI: ${result.uri}, Result: ${result.result}`);
+  });
+}).catch((error: BusinessError) => {
+  console.error(`Failed to publish config. code: ${error.code}, message: ${error.message}`);
+});
+```
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let arrayBuffer = new ArrayBuffer(1);
@@ -2240,6 +2339,31 @@ try {
   }
 } catch (e) {
   console.error(`Failed to publish. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let publishCallback: (err: BusinessError, result: Array<dataShare.OperationResult>) => void = (err: BusinessError, result: Array<dataShare.OperationResult>): void => {
+  console.info("publishCallback " + JSON.stringify(result));
+}
+let dataArray : Array<dataShare.PublishedItem> = [
+  {key:"city", subscriberId:"11", data:"xian"},
+  {key:"datashareproxy://com.acts.ohos.data.datasharetest/appInfo", subscriberId:"11", data:"appinfo is just a test app"},
+  {key:"empty", subscriberId:"11", data:"nobody sub"}];
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest", publishCallback);
+}
+```
+
+```TypeScript
+let dataArray: Array<dataShare.PublishedItem> = [
+  {key:"city", subscriberId:"11", data:"xian"},
+  {key:"datashareproxy://com.acts.ohos.data.datasharetest/appInfo", subscriberId:"11", data:"appinfo is just a test app"},
+  {key:"empty", subscriberId:"11", data:"nobody sub"}];
+if (dataShareHelper != undefined) {
+  let result: Promise<Array<dataShare.OperationResult>> = (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest");
 }
 ```
 
@@ -2286,20 +2410,7 @@ publish(
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let publishCallback: (err: BusinessError, result: Array<dataShare.OperationResult>) => void = (err: BusinessError, result: Array<dataShare.OperationResult>): void => {
-  console.info("publishCallback " + JSON.stringify(result));
-}
-let dataArray : Array<dataShare.PublishedItem> = [
-  {key:"city", subscriberId:"11", data:"xian"},
-  {key:"datashareproxy://com.acts.ohos.data.datasharetest/appInfo", subscriberId:"11", data:"appinfo is just a test app"},
-  {key:"empty", subscriberId:"11", data:"nobody sub"}];
-if (dataShareHelper != undefined) {
-  (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest", publishCallback);
-}
-```
+参见 [publish](#publish)
 
 ## publish
 
@@ -2346,15 +2457,7 @@ publish(data: Array<PublishedItem>, bundleName: string, version?: int): Promise<
 
 **示例**
 
-```TypeScript
-let dataArray: Array<dataShare.PublishedItem> = [
-  {key:"city", subscriberId:"11", data:"xian"},
-  {key:"datashareproxy://com.acts.ohos.data.datasharetest/appInfo", subscriberId:"11", data:"appinfo is just a test app"},
-  {key:"empty", subscriberId:"11", data:"nobody sub"}];
-if (dataShareHelper != undefined) {
-  let result: Promise<Array<dataShare.OperationResult>> = (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest");
-}
-```
+参见 [publish](#publish)
 
 ## query
 
@@ -2392,7 +2495,7 @@ query(
 | uri | string | 是 | 要查询的数据的路径。 |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。&lt;br /&gt;query接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB目前仅支 持inKeys和prefixKey。静默场景下谓词内方法为空时，默认全表查询。非静默场景下规格由数据提供方制定。 |
 | columns | Array&lt;string&gt; | 是 | 要查询的列。如果此参数为空，则查询所有列。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataShareResultSet](arkts-arkdata-datadatashareresultset-datashareresultset-i-sys.md)&gt; | 是 | 回调函数。当查询数据库中的数据成功，err为undefined，data为获取到的查询到的结果集；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataShareResultSet](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md)&gt; | 是 | 回调函数。当查询数据库中的数据成功，err为undefined，data为获取到的查询到的结果集；否则为错误对象。 |
 
 **错误码：**
 
@@ -2420,6 +2523,29 @@ try {
         return;
       }
       console.info("query succeed, rowCount : " + data.rowCount);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to query. Code: ${code}, message: ${message}`);
+}
+```
+
+```TypeScript
+import { dataSharePredicates, DataShareResultSet } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let columns = ["*"];
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).query(uri, da, columns).then((data: DataShareResultSet) => {
+      console.info("query succeed, rowCount : " + data.rowCount);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to query. Code: ${err.code}, message: ${err.message}`);
     });
   }
 } catch (err) {
@@ -2469,7 +2595,7 @@ query(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[DataShareResultSet](arkts-arkdata-datadatashareresultset-datashareresultset-i-sys.md)&gt; | Promise对象。返回查询到的结果集。 |
+| Promise&lt;[DataShareResultSet](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md)&gt; | Promise对象。返回查询到的结果集。 |
 
 **错误码：**
 
@@ -2481,28 +2607,7 @@ query(
 
 **示例**
 
-```TypeScript
-import { dataSharePredicates, DataShareResultSet } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-let columns = ["*"];
-let da = new dataSharePredicates.DataSharePredicates();
-da.equalTo("name", "ZhangSan");
-try {
-  if (dataShareHelper != undefined) {
-    (dataShareHelper as dataShare.DataShareHelper).query(uri, da, columns).then((data: DataShareResultSet) => {
-      console.info("query succeed, rowCount : " + data.rowCount);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to query. Code: ${err.code}, message: ${err.message}`);
-    });
-  }
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error(`Failed to query. Code: ${code}, message: ${message}`);
-}
-```
+参见 [query](#query)
 
 ## update
 
@@ -2621,52 +2726,6 @@ try {
 };
 ```
 
-## update
-
-```TypeScript
-update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: ValuesBucket): Promise<int>
-```
-
-更新数据库中的数据记录。使用Promise异步回调。
-
-非静默场景下，调用此接口时，传入的uri、predicates和value参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。
-
-静默场景下，调用此接口时，传入的uri、predicates和value参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DataShareHelper-update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: ValuesBucket): Promise<int>--><!--Device-DataShareHelper-update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: ValuesBucket): Promise<int>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uri | string | 是 | 要更新的数据的路径。 |
-| predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。&lt;br /&gt;update接口是否支持谓词筛选条件取决于服务端所选用的数据库，如KVDB目 前并不支持谓词筛选条件，仅RDB支持。静默场景下谓词内方法为空时，默认全表更新。非静默场景下规格由数据提供方制定。 |
-| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 要更新的数据的值。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | Promise对象。返回更新的数据记录数。&lt;br /&gt;因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回更新的数据记录 数。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -2728,4 +2787,52 @@ try {
   console.error(`Failed to update. Code: ${err.code}, message: ${err.message}`);
 };
 ```
+
+## update
+
+```TypeScript
+update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: ValuesBucket): Promise<int>
+```
+
+更新数据库中的数据记录。使用Promise异步回调。
+
+非静默场景下，调用此接口时，传入的uri、predicates和value参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。
+
+静默场景下，调用此接口时，传入的uri、predicates和value参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: ValuesBucket): Promise<int>--><!--Device-DataShareHelper-update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: ValuesBucket): Promise<int>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uri | string | 是 | 要更新的数据的路径。 |
+| predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。&lt;br /&gt;update接口是否支持谓词筛选条件取决于服务端所选用的数据库，如KVDB目 前并不支持谓词筛选条件，仅RDB支持。静默场景下谓词内方法为空时，默认全表更新。非静默场景下规格由数据提供方制定。 |
+| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 要更新的数据的值。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;int&gt; | Promise对象。返回更新的数据记录数。&lt;br /&gt;因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回更新的数据记录 数。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+**示例**
+
+参见 [update](#update)
 

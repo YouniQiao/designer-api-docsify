@@ -70,6 +70,33 @@ let removeCallback = (err: BusinessError | null) => {
 reminderAgentManager.removeNotificationSlot(notificationManager.SlotType.CONTENT_INFORMATION, removeCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { notificationManager } from '@kit.NotificationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+reminderAgentManager.removeNotificationSlot(notificationManager.SlotType.CONTENT_INFORMATION).then(() => {
+  console.info("removeNotificationSlot promise");
+}).catch((err: BusinessError) => {
+  console.error("promise err code:" + err.code + " message:" + err.message);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { notificationManager } from '@kit.NotificationKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+reminderAgentManager.removeNotificationSlot(notificationManager.SlotType.CONTENT_INFORMATION).then(() => {
+  console.info(`Succeeded in removing slot.`);
+}).catch((err): void => {
+  console.error(`Failed to remove slot. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## removeNotificationSlot
 
@@ -105,30 +132,5 @@ function removeNotificationSlot(slotType: notification.SlotType): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-reminderAgentManager.removeNotificationSlot(notificationManager.SlotType.CONTENT_INFORMATION).then(() => {
-  console.info("removeNotificationSlot promise");
-}).catch((err: BusinessError) => {
-  console.error("promise err code:" + err.code + " message:" + err.message);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-reminderAgentManager.removeNotificationSlot(notificationManager.SlotType.CONTENT_INFORMATION).then(() => {
-  console.info(`Succeeded in removing slot.`);
-}).catch((err): void => {
-  console.error(`Failed to remove slot. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [removeNotificationSlot](#removenotificationslot)
 

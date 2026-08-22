@@ -126,30 +126,6 @@ struct UIServiceExtensionAbility {
 }
 ```
 
-## onData
-
-```TypeScript
-onData(data: Record<string, RecordData>): void
-```
-
-Called back when data is sent.
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-UIServiceExtensionConnectCallback-onData(data: Record<string, RecordData>): void--><!--Device-UIServiceExtensionConnectCallback-onData(data: Record<string, RecordData>): void-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | Indicates the received data. |
-
-**示例**
-
 ArkTS-Sta示例：
 
 ```TypeScript
@@ -235,6 +211,32 @@ struct UIServiceExtensionAbility {
   }
 }
 ```
+
+## onData
+
+```TypeScript
+onData(data: Record<string, RecordData>): void
+```
+
+Called back when data is sent.
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIServiceExtensionConnectCallback-onData(data: Record<string, RecordData>): void--><!--Device-UIServiceExtensionConnectCallback-onData(data: Record<string, RecordData>): void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | [Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | Indicates the received data. |
+
+**示例**
+
+参见 [onData](#ondata)
 
 ## onDisconnect
 

@@ -20,11 +20,27 @@ Called to return a FormState object. <p>You must override this callback if you w
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | Indicates the description of the form for which the FormState is obtained. The description covers the bundle name, ability name, module name, form name, and form dimensions. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Indicates the description of the form for which the FormState is obtained. The description covers the bundle name, ability name, module name, form name, and form dimensions. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
 | formInfo.FormState | Returns the { |
+
+**示例**
+
+```TypeScript
+'use static'
+
+import { FormExtensionAbility, formInfo } from '@kit.FormKit';
+import { Want } from '@kit.AbilityKit';
+
+export default class MyFormExtensionAbility extends FormExtensionAbility {
+  onAcquireFormStateFn(want: Want) {
+    console.info(`FormExtensionAbility onAcquireFormState, want: ${want}`);
+    return formInfo.FormState.UNKNOWN;
+  }
+}
+```
 

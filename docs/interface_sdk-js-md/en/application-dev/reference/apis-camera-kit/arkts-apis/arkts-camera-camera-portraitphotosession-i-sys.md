@@ -82,100 +82,6 @@ Gets session functions.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
-## offError
-
-```TypeScript
-offError(callback?: ErrorCallback): void
-```
-
-Unsubscribes from error events.
-
-**Since:** 23
-
-<!--Device-PortraitPhotoSession-offError(callback?: ErrorCallback): void--><!--Device-PortraitPhotoSession-offError(callback?: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to get the capture session errors. |
-
-## offFocusStateChange
-
-```TypeScript
-offFocusStateChange(callback?: AsyncCallback<FocusState>): void
-```
-
-Unsubscribes from focus state change event callback.
-
-**Since:** 23
-
-<!--Device-PortraitPhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void--><!--Device-PortraitPhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | No | Callback used to get the focus state change. |
-
-## offLcdFlashStatus
-
-```TypeScript
-offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void
-```
-
-Unsubscribes from lcd flash status.
-
-**Since:** 23
-
-<!--Device-PortraitPhotoSession-offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void--><!--Device-PortraitPhotoSession-offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | No | Callback used to get the lcd flash status. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-
-## offSmoothZoomInfoAvailable
-
-```TypeScript
-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void
-```
-
-Unsubscribes from zoom info event callback.
-
-**Since:** 23
-
-<!--Device-PortraitPhotoSession-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PortraitPhotoSession-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | No | Callback used to get the zoom info. |
-
 ## off('error')
 
 ```TypeScript
@@ -197,7 +103,7 @@ Unsubscribes from PortraitSession error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('error')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('error')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Examples**
 
@@ -228,7 +134,7 @@ Unsubscribes from focus state change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('focusStateChange')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('focusStateChange')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Examples**
 
@@ -259,7 +165,7 @@ Unsubscribes from LCD flash status change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'lcdFlashStatus' | Yes | Event type. The value is fixed at **'lcdFlashStatus'**. The event can be listened for when a session is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('lcdFlashStatus')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('lcdFlashStatus')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
@@ -296,7 +202,7 @@ Unsubscribes from smooth zoom state change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'smoothZoomInfoAvailable' | Yes | Event type. The value is fixed at **'smoothZoomInfoAvailable'**. The event can be listened for when a session is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('smoothZoomInfoAvailable')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('smoothZoomInfoAvailable')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Examples**
 
@@ -306,17 +212,17 @@ function unregisterSmoothZoomInfo(portraitPhotoSession: camera.PortraitPhotoSess
 }
 ```
 
-## onError
+## offError
 
 ```TypeScript
-onError(callback: ErrorCallback): void
+offError(callback?: ErrorCallback): void
 ```
 
-Subscribes to error events.
+Unsubscribes from error events.
 
 **Since:** 23
 
-<!--Device-PortraitPhotoSession-onError(callback: ErrorCallback): void--><!--Device-PortraitPhotoSession-onError(callback: ErrorCallback): void-End-->
+<!--Device-PortraitPhotoSession-offError(callback?: ErrorCallback): void--><!--Device-PortraitPhotoSession-offError(callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -326,19 +232,19 @@ Subscribes to error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to get the capture session errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to get the capture session errors. |
 
-## onFocusStateChange
+## offFocusStateChange
 
 ```TypeScript
-onFocusStateChange(callback: AsyncCallback<FocusState>): void
+offFocusStateChange(callback?: AsyncCallback<FocusState>): void
 ```
 
-Subscribes focus state change event callback.
+Unsubscribes from focus state change event callback.
 
 **Since:** 23
 
-<!--Device-PortraitPhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void--><!--Device-PortraitPhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void-End-->
+<!--Device-PortraitPhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void--><!--Device-PortraitPhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -348,19 +254,19 @@ Subscribes focus state change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | Yes | Callback used to get the focus state change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | No | Callback used to get the focus state change. |
 
-## onLcdFlashStatus
+## offLcdFlashStatus
 
 ```TypeScript
-onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void
+offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void
 ```
 
-Subscribes to lcd flash status.
+Unsubscribes from lcd flash status.
 
 **Since:** 23
 
-<!--Device-PortraitPhotoSession-onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void--><!--Device-PortraitPhotoSession-onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void-End-->
+<!--Device-PortraitPhotoSession-offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void--><!--Device-PortraitPhotoSession-offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -370,7 +276,7 @@ Subscribes to lcd flash status.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | Yes | Callback used to get the lcd flash status. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | No | Callback used to get the lcd flash status. |
 
 **Error codes:**
 
@@ -378,17 +284,17 @@ Subscribes to lcd flash status.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## onSmoothZoomInfoAvailable
+## offSmoothZoomInfoAvailable
 
 ```TypeScript
-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void
+offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void
 ```
 
-Subscribes zoom info event callback.
+Unsubscribes from zoom info event callback.
 
 **Since:** 23
 
-<!--Device-PortraitPhotoSession-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PortraitPhotoSession-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void-End-->
+<!--Device-PortraitPhotoSession-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PortraitPhotoSession-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -398,7 +304,7 @@ Subscribes zoom info event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | Yes | Callback used to get the zoom info. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | No | Callback used to get the zoom info. |
 
 ## on('error')
 
@@ -421,7 +327,7 @@ Subscribes to PortraitSession error events. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. This event is triggered and the error message is returned when an error occurs during the calling of a session-related API such as [beginConfig](arkts-camera-camera-session-i.md#beginconfig), [commitConfig](arkts-camera-camera-session-i.md#commitconfig), and [addInput](arkts-camera-camera-session-i.md#addinput). |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Examples**
 
@@ -458,7 +364,7 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. This event is triggered only when the camera focus state changes in auto focus mode. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | Yes | Callback used to return the focus state change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | Yes | Callback used to return the focus state change. |
 
 **Examples**
 
@@ -499,7 +405,7 @@ Subscribes to LCD flash status change events. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'lcdFlashStatus' | Yes | Event type. The value is fixed at **'lcdFlashStatus'**. The event can be listened for when a session is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | Yes | Callback used to return the LCD flash status change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | Yes | Callback used to return the LCD flash status change. |
 
 **Error codes:**
 
@@ -547,7 +453,7 @@ Subscribes to smooth zoom state change events. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'smoothZoomInfoAvailable' | Yes | Event type. The value is fixed at **'smoothZoomInfoAvailable'**. The event can be listened for when a session is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | Yes | Callback used to return the smooth zoom state change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | Yes | Callback used to return the smooth zoom state change. |
 
 **Examples**
 
@@ -566,4 +472,98 @@ function registerSmoothZoomInfo(portraitPhotoSession: camera.PortraitPhotoSessio
   portraitPhotoSession.on('smoothZoomInfoAvailable', callback);
 }
 ```
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to error events.
+
+**Since:** 23
+
+<!--Device-PortraitPhotoSession-onError(callback: ErrorCallback): void--><!--Device-PortraitPhotoSession-onError(callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to get the capture session errors. |
+
+## onFocusStateChange
+
+```TypeScript
+onFocusStateChange(callback: AsyncCallback<FocusState>): void
+```
+
+Subscribes focus state change event callback.
+
+**Since:** 23
+
+<!--Device-PortraitPhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void--><!--Device-PortraitPhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | Yes | Callback used to get the focus state change. |
+
+## onLcdFlashStatus
+
+```TypeScript
+onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void
+```
+
+Subscribes to lcd flash status.
+
+**Since:** 23
+
+<!--Device-PortraitPhotoSession-onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void--><!--Device-PortraitPhotoSession-onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | Yes | Callback used to get the lcd flash status. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+## onSmoothZoomInfoAvailable
+
+```TypeScript
+onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void
+```
+
+Subscribes zoom info event callback.
+
+**Since:** 23
+
+<!--Device-PortraitPhotoSession-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PortraitPhotoSession-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | Yes | Callback used to get the zoom info. |
 

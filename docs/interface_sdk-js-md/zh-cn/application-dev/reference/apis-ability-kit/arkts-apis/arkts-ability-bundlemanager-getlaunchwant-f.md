@@ -26,7 +26,7 @@ function getLaunchWant(): Want
 
 | 类型 | 说明 |
 | --- | --- |
-| [Want](arkts-ability-appabilitywant-want-c.md) | 返回仅包含bundleName和abilityName的Want对象。 |
+| [Want](arkts-ability-app-ability-want-want-c.md) | 返回仅包含bundleName和abilityName的Want对象。 |
 
 **错误码：**
 

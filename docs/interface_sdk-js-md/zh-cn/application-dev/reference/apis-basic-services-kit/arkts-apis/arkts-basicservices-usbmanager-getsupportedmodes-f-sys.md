@@ -45,3 +45,10 @@ function getSupportedModes(portId: number): PortModeType
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  <br>1.Mandatory parameters are left unspecified.  <br>2.Incorrect parameter types. |
 
+**示例**
+
+```TypeScript
+// 获取端口ID为0的端口支持的模式
+let ret: usbManager.PortModeType = usbManager.getSupportedModes(0);
+```
+

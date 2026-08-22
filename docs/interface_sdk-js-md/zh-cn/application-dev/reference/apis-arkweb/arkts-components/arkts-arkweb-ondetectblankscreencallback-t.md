@@ -18,3 +18,7 @@ type OnDetectBlankScreenCallback = (event: BlankScreenDetectionEventInfo) => voi
 | --- | --- | --- | --- |
 | event | [BlankScreenDetectionEventInfo](arkts-arkweb-blankscreendetectioneventinfo-i.md) | 是 | 检测到白屏时的详细信息。 |
 
+**示例**
+
+完整示例代码参考[onDetectedBlankScreen](./arkts-basic-components-web-events.md#ondetectedblankscreen22)。
+

@@ -88,3 +88,11 @@ The PageAbility is displayed in floating window mode.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
+**Examples**
+
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+
+featureAbility.AbilityWindowConfiguration.WINDOW_MODE_UNDEFINED
+```
+

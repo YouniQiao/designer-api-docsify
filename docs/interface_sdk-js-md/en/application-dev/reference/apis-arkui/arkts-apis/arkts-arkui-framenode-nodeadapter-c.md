@@ -39,8 +39,8 @@ Attaches a FrameNode to a NodeAdapter. Each node can be bound to only one NodeAd
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adapter | [NodeAdapter](../../apis-default/arkts-apis/arkts-framenode-nodeadapter-c.md) | Yes | NodeAdapter class for lazy loading. |
-| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | FrameNode to be attached. |
+| adapter | [NodeAdapter](arkts-arkui-framenode-nodeadapter-c.md) | Yes | NodeAdapter class for lazy loading. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode to be attached. |
 
 **Return value:**
 
@@ -88,7 +88,7 @@ Detaches a FrameNode from its NodeAdapter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | FrameNode to detach. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode to detach. |
 
 ## dispose
 
@@ -107,6 +107,94 @@ Disposes of this **NodeAdapter** object. Bindings, if any, of the object will be
 <!--Device-NodeAdapter-dispose(): void--><!--Device-NodeAdapter-dispose(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+import { NodeController, FrameNode, BuilderNode } from '@kit.ArkUI';
+
+@Component
+struct TestComponent {
+  build() {
+    Column() {
+      Text('This is a BuilderNode.')
+        .fontSize(16)
+        .fontWeight(FontWeight.Bold)
+    }
+    .width('100%')
+    .backgroundColor(Color.Gray)
+  }
+
+  aboutToAppear() {
+    console.info('aboutToAppear');
+  }
+
+  aboutToDisappear() {
+    console.info('aboutToDisappear');
+  }
+}
+
+@Builder
+function buildComponent() {
+  TestComponent()
+}
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+  private builderNode: BuilderNode<[]> | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+    this.builderNode = new BuilderNode(uiContext, { selfIdealSize: { width: 200, height: 100 } });
+    this.builderNode.build(new WrappedBuilder(buildComponent));
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.size = { width: 200, height: 200 };
+      rootRenderNode.backgroundColor = 0xffd5d5d5;
+      rootRenderNode.appendChild(this.builderNode!.getFrameNode()!.getRenderNode());
+    }
+
+    return this.rootNode;
+  }
+
+  disposeFrameNode() {
+    if (this.rootNode !== null && this.builderNode !== null) {
+      // Remove all child nodes from rootNode before clearing the reference relationships.
+      this.rootNode.removeChild(this.builderNode.getFrameNode());
+      // Release the reference between builderNode and FrameNode.
+      this.builderNode.dispose();
+      // Release the reference between rootNode and FrameNode.
+      this.rootNode.dispose();
+    }
+  }
+
+  removeBuilderNode() {
+    const rootRenderNode = this.rootNode!.getRenderNode();
+    if (rootRenderNode !== null && this.builderNode !== null && this.builderNode.getFrameNode() !== null) {
+      rootRenderNode.removeChild(this.builderNode!.getFrameNode()!.getRenderNode());
+    }
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 4 }) {
+      NodeContainer(this.myNodeController)
+      Button('FrameNode dispose')
+        .onClick(() => {
+          this.myNodeController.disposeFrameNode();
+        })
+        .width('100%')
+    }
+  }
+}
+```
 
 ## getAllAvailableItems
 
@@ -130,7 +218,7 @@ Obtains all available items. Available nodes include both currently displayed an
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md)&gt; | Array of items in the FrameNode. |
+| Array&lt;[FrameNode](arkts-arkui-framenode-c.md)&gt; | Array of items in the FrameNode. |
 
 ## insertItem
 
@@ -183,7 +271,9 @@ Checks whether the NodeAdapter's backend reference has been released. Frontend n
 
 **Examples**
 
-See [NodeAdapter Validity Check Example.
+See [FrameNode Validity Check Example.
+
+See NodeAdapter Validity Check Example.
 
 ## moveItem
 
@@ -222,7 +312,7 @@ Called when a FrameNode is attached to the NodeAdapter.
 > 
 > In versions earlier than API version 26.0.0, this callback is triggered when the host node is attached to the
 > main tree. If you set this callback by dynamically assigning a value, you can complete the setting after calling
-> [attachNodeAdapter](../../apis-default/arkts-apis/arkts-framenode-nodeadapter-c.md#attachnodeadapter) and before the host node is attached to the main tree.
+> [attachNodeAdapter](#attachnodeadapter) and before the host node is attached to the main tree.
 > In this case, you will receive this callback when the host node is attached to the main tree.
 > 
 > In API version 26.0.0 and later, this callback is triggered immediately when the NodeAdapter is bound to the host
@@ -231,7 +321,7 @@ Called when a FrameNode is attached to the NodeAdapter.
 > accessing layout information or executing animation), you are advised to register
 > onAppear in the callback and place the related logic in **onAppear** for
 > execution. If you set this callback by dynamically assigning a value, complete the setting before calling
-> [attachNodeAdapter](../../apis-default/arkts-apis/arkts-framenode-nodeadapter-c.md#attachnodeadapter). Otherwise, the callback may fail to be triggered.
+> [attachNodeAdapter](#attachnodeadapter). Otherwise, the callback may fail to be triggered.
 
 **Since:** 12
 
@@ -247,7 +337,7 @@ Called when a FrameNode is attached to the NodeAdapter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | FrameNode attached to the NodeAdapter. |
+| target | [FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode attached to the NodeAdapter. |
 
 ## onCreateChild
 
@@ -277,7 +367,7 @@ Called during node initialization or when new child nodes are detected. When add
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | FrameNode created by you. |
+| [FrameNode](arkts-arkui-framenode-c.md) | FrameNode created by you. |
 
 ## onDetachFromNode
 
@@ -320,7 +410,7 @@ Called when a child node is about to be disposed. Nodes that are neither display
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | number | Yes | ID of the child node to be disposed of. |
-| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | FrameNode to be disposed of. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode to be disposed of. |
 
 ## onGetChildId
 
@@ -375,7 +465,7 @@ Called when a loaded node is reused. Node reuse occurs when the key value of a c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | number | Yes | ID of the node to be reused. |
-| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | Yes | FrameNode that is reused. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode that is reused. |
 
 ## reloadAllItems
 
@@ -417,7 +507,7 @@ Reloads a specified number of items starting from a specific index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | Starting index of the items to reload. <br>Value range: [0, +∞). |
+| start | number | Yes | Starting index of the items to reload. <br>Value range: 0, +∞). |
 | count | number | Yes | Number of the items to reload. <br>Value range: [0, +∞). |
 
 ## removeItem
@@ -444,4 +534,8 @@ Removes a specified number of items starting from a specific index.
 | --- | --- | --- | --- |
 | start | number | Yes | Starting index of the items to remove. <br>Value range: [0, +∞). |
 | count | number | Yes | Number of the items to remove. <br>Value range: [0, +∞). |
+
+**Examples**
+
+See the example for [NodeAdapter Usage Example.
 

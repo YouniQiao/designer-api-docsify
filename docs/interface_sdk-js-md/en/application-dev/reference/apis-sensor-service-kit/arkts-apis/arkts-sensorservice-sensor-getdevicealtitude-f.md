@@ -26,7 +26,7 @@ Obtains the altitude based on the atmospheric pressure. This API uses an asynchr
 | --- | --- | --- | --- |
 | seaPressure | double | Yes | Sea-level atmospheric pressure, in hPa. |
 | currentPressure | double | Yes | Specified atmospheric pressure, in hPa. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;double&gt; | Yes | Callback used to return the altitude, in meters. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | Yes | Callback used to return the altitude, in meters. |
 
 **Error codes:**
 
@@ -51,6 +51,26 @@ try {
       return;
     }
     console.info('Succeeded in getting altitude: ' + data);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to get altitude. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  let seaPressure = 1013.2;
+  let currentPressure = 1500.0;
+  const promise = sensor.getDeviceAltitude(seaPressure, currentPressure);
+  promise.then((data: number) => {
+    console.info('Succeeded in getting sensor_getDeviceAltitude_Promise', data);
+  }, (err: BusinessError) => {
+    console.error(`Failed to get altitude. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (error) {
   let e: BusinessError = error as BusinessError;
@@ -95,23 +115,5 @@ Obtains the altitude based on the atmospheric pressure. This API uses a promise 
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  let seaPressure = 1013.2;
-  let currentPressure = 1500.0;
-  const promise = sensor.getDeviceAltitude(seaPressure, currentPressure);
-  promise.then((data: number) => {
-    console.info('Succeeded in getting sensor_getDeviceAltitude_Promise', data);
-  }, (err: BusinessError) => {
-    console.error(`Failed to get altitude. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to get altitude. Code: ${e.code}, message: ${e.message}`);
-}
-```
+See [getDeviceAltitude](#getdevicealtitude)
 

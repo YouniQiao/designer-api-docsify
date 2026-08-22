@@ -29,7 +29,7 @@ Register to monitor the installation status
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [BundleChangedEvent](arkts-ability-bundlemonitor-bundlechangedevent-t-sys.md) | Yes | Indicates the command should be implement. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)&gt; | Yes | Indicates the callback to be register. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)&gt; | Yes | Indicates the callback to be register. |
 
 **Error codes:**
 

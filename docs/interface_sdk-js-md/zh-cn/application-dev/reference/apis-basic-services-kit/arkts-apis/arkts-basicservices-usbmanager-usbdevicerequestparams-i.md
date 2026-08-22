@@ -15,22 +15,6 @@ import { usbManager } from '@kit.BasicServicesKit';
 import { serialManager } from '@kit.BasicServicesKit';
 ```
 
-## bRequest
-
-```TypeScript
-bRequest: int
-```
-
-请求类型，用于指定具体的USB控制请求命令（如获取描述符，设置地址等）。
-
-**类型：** int
-
-**起始版本：** 23
-
-<!--Device-USBDeviceRequestParams-bRequest: int--><!--Device-USBDeviceRequestParams-bRequest: int-End-->
-
-**系统能力：** SystemCapability.USB.USBManager
-
 ## bmRequestType
 
 ```TypeScript
@@ -44,6 +28,22 @@ bmRequestType: int
 **起始版本：** 23
 
 <!--Device-USBDeviceRequestParams-bmRequestType: int--><!--Device-USBDeviceRequestParams-bmRequestType: int-End-->
+
+**系统能力：** SystemCapability.USB.USBManager
+
+## bRequest
+
+```TypeScript
+bRequest: int
+```
+
+请求类型，用于指定具体的USB控制请求命令（如获取描述符，设置地址等）。
+
+**类型：** int
+
+**起始版本：** 23
+
+<!--Device-USBDeviceRequestParams-bRequest: int--><!--Device-USBDeviceRequestParams-bRequest: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 

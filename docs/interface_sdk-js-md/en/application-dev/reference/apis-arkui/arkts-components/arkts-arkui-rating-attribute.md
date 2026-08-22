@@ -111,6 +111,56 @@ Triggered when the rating value changes. Compared with onChange, this API suppor
 | --- | --- | --- | --- |
 | callback | Optional&lt;[OnRatingChangeCallback](arkts-arkui-onratingchangecallback-t.md)&gt; | Yes | Defines the callback triggered when the rating value changes.<br>If **callback** is set to **undefined**, the callback function is not used. |
 
+## stars
+
+```TypeScript
+stars(value: number)
+```
+
+Sets the total number of stars. Values less than 0 are treated as the default value.
+
+**Since:** 7
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-RatingAttribute-stars(value: number): RatingAttribute--><!--Device-RatingAttribute-stars(value: number): RatingAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Total number of stars.<br>Default value: **5 |
+
+## stars
+
+```TypeScript
+stars(starCount: Optional<number>)
+```
+
+Sets the total number of stars. Values less than 0 are treated as the default value. Compared with [stars](#stars), this API supports the **undefined** type for the **starCount** parameter.
+
+**Since:** 18
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-RatingAttribute-stars(starCount: Optional<number>): RatingAttribute--><!--Device-RatingAttribute-stars(starCount: Optional<number>): RatingAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| starCount | Optional&lt;number&gt; | Yes | Total number of stars.<br>If **starCount** is set to **undefined**, the default value **5** is used. |
+
 ## starStyle
 
 ```TypeScript
@@ -170,56 +220,6 @@ Compared with [starStyle](#starstyle), this API supports the **undefined** type 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | Optional&lt;[StarStyleOptions](arkts-arkui-starstyleoptions-i.md)&gt; | Yes | Star style.<br>**NOTE：**<br>If an incorrect image path is provided for **backgroundUri**, **foregroundUri**, or **secondaryUri**, the previously displayed image will be retained. If the first provided path is incorrect, no image will be displayed.<br>When **backgroundUri** or **foregroundUri** is set to **undefined** or an empty string, the **Rating** component falls back to the default star image.<br>If **secondaryUri** is not set, or is set to **undefined** or an empty string, **backgroundUri** will be used as a fallback. The behavior in this case is the same as when only **foregroundUri** and **backgroundUri** are configured. |
-
-## stars
-
-```TypeScript
-stars(value: number)
-```
-
-Sets the total number of stars. Values less than 0 are treated as the default value.
-
-**Since:** 7
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-RatingAttribute-stars(value: number): RatingAttribute--><!--Device-RatingAttribute-stars(value: number): RatingAttribute-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | Total number of stars.<br>Default value: **5 |
-
-## stars
-
-```TypeScript
-stars(starCount: Optional<number>)
-```
-
-Sets the total number of stars. Values less than 0 are treated as the default value. Compared with [stars](#stars), this API supports the **undefined** type for the **starCount** parameter.
-
-**Since:** 18
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
-
-<!--Device-RatingAttribute-stars(starCount: Optional<number>): RatingAttribute--><!--Device-RatingAttribute-stars(starCount: Optional<number>): RatingAttribute-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| starCount | Optional&lt;number&gt; | Yes | Total number of stars.<br>If **starCount** is set to **undefined**, the default value **5** is used. |
 
 ## stepSize
 

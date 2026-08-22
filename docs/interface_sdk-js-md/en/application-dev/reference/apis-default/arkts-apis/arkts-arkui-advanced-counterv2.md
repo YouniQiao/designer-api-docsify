@@ -11,24 +11,24 @@
 
 | Name | Description |
 | --- | --- |
-| [CounterV2CommonOptions](arkts-arkuiadvancedcounterv2-counterv2commonoptions-c.md) | Defines the common options. |
-| [CounterV2DateData](arkts-arkuiadvancedcounterv2-counterv2datedata-c.md) | Defines the date data. |
-| [CounterV2DateStyleOptions](arkts-arkuiadvancedcounterv2-counterv2datestyleoptions-c.md) | Defines the date style options. |
-| [CounterV2InlineStyleOptions](arkts-arkuiadvancedcounterv2-counterv2inlinestyleoptions-c.md) | Defines the inline style options. |
-| [CounterV2NumberStyleOptions](arkts-arkuiadvancedcounterv2-counterv2numberstyleoptions-c.md) | Defines the number style options. |
-| [CounterV2Options](arkts-arkuiadvancedcounterv2-counterv2options-c.md) | Defines the CounterV2 options. |
+| [CounterV2CommonOptions](arkts-arkui-advanced-counterv2-counterv2commonoptions-c.md) | Defines the common options. |
+| [CounterV2DateData](arkts-arkui-advanced-counterv2-counterv2datedata-c.md) | Defines the date data. |
+| [CounterV2DateStyleOptions](arkts-arkui-advanced-counterv2-counterv2datestyleoptions-c.md) | Defines the date style options. |
+| [CounterV2InlineStyleOptions](arkts-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md) | Defines the inline style options. |
+| [CounterV2NumberStyleOptions](arkts-arkui-advanced-counterv2-counterv2numberstyleoptions-c.md) | Defines the number style options. |
+| [CounterV2Options](arkts-arkui-advanced-counterv2-counterv2options-c.md) | Defines the CounterV2 options. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [CounterV2Component](arkts-arkuiadvancedcounterv2-counterv2component-s.md) | Defines CounterV2 Component. |
+| [CounterV2Component](arkts-arkui-advanced-counterv2-counterv2component-s.md) | Defines CounterV2 Component. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [CounterV2Type](arkts-arkuiadvancedcounterv2-counterv2type-e.md) | Enum for the CounterV2 type. |
+| [CounterV2Type](arkts-arkui-advanced-counterv2-counterv2type-e.md) | Enum for the CounterV2 type. |
 
 ### Types
 

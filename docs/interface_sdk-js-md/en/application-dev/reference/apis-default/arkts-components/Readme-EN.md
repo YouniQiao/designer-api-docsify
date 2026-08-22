@@ -24,11 +24,15 @@
   - [ButtonStyleMode](arkts-button-buttonstylemode-e.md)
   - [ButtonType](arkts-button-buttontype-e.md)
   - [ControlSize](arkts-button-controlsize-e.md)
+  - [ExtendableButton](arkts-button-extendablebutton-c.md)
 - [CalendarPicker](arkts-calendarpicker.md)
   - [CalendarPicker properties/events](arkts-calendarpicker-attribute.md)
   - [CalendarDialogOptions](arkts-calendarpicker-calendardialogoptions-i.md)
+  <!--Del-->
+  - [CalendarDialogOptions(system api)](arkts-calendarpicker-calendardialogoptions-i-sys.md)<!--DelEnd-->
   - [CalendarOptions](arkts-calendarpicker-calendaroptions-i.md)
   - [CalendarAlign](arkts-calendarpicker-calendaralign-e.md)
+  - [CalendarPickerDialog](arkts-calendarpicker-calendarpickerdialog-c.md)
 - [Checkbox](arkts-checkbox.md)
   - [Checkbox properties/events](arkts-checkbox-attribute.md)
   - [CheckBoxConfiguration](arkts-checkbox-checkboxconfiguration-i.md)
@@ -52,33 +56,50 @@
   - [DataPanelOptions](arkts-datapanel-datapaneloptions-i.md)
   - [DataPanelShadowOptions](arkts-datapanel-datapanelshadowoptions-i.md)
   - [DataPanelType](arkts-datapanel-datapaneltype-e.md)
+  - [LinearGradient](arkts-datapanel-lineargradient-c.md)
 - [DatePicker](arkts-datepicker.md)
   - [DatePicker properties/events](arkts-datepicker-attribute.md)
   - [DatePickerDialogOptions](arkts-datepicker-datepickerdialogoptions-i.md)
+  <!--Del-->
+  - [DatePickerDialogOptions(system api)](arkts-datepicker-datepickerdialogoptions-i-sys.md)<!--DelEnd-->
   - [DatePickerOptions](arkts-datepicker-datepickeroptions-i.md)
   - [DatePickerResult](arkts-datepicker-datepickerresult-i.md)
   - [LunarSwitchStyle](arkts-datepicker-lunarswitchstyle-i.md)
   - [DatePickerMode](arkts-datepicker-datepickermode-e.md)
 - [DepthComponent](arkts-depthcomponent.md)
   - [DepthComponent properties/events](arkts-depthcomponent-attribute.md)
-  - [CameraBufferCrop](arkts-depthcomponent-camerabuffercrop-i-sys.md)
-  - [CropOffset](arkts-depthcomponent-cropoffset-i-sys.md)
-  - [DepthCameraParams](arkts-depthcomponent-depthcameraparams-i-sys.md)
-  - [DepthComponentCompleteEvent](arkts-depthcomponent-depthcomponentcompleteevent-i-sys.md)
-  - [DepthComponentErrorEvent](arkts-depthcomponent-depthcomponenterrorevent-i-sys.md)
-  - [DepthComponentOptions](arkts-depthcomponent-depthcomponentoptions-i-sys.md)
-  - [DepthLightParams](arkts-depthcomponent-depthlightparams-i-sys.md)
-  - [DepthComponentCompleteCallback](arkts-depthcomponentcompletecallback-t-sys.md)
-  - [DepthComponentErrorCallback](arkts-depthcomponenterrorcallback-t-sys.md)
-  - [DepthMapCallback](arkts-depthmapcallback-t-sys.md)
-  - [DepthSpaceType](arkts-depthcomponent-depthspacetype-e-sys.md)
+  <!--Del-->
+  - [CameraBufferCrop(system api)](arkts-depthcomponent-camerabuffercrop-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [CropOffset(system api)](arkts-depthcomponent-cropoffset-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DepthCameraParams(system api)](arkts-depthcomponent-depthcameraparams-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DepthComponentCompleteEvent(system api)](arkts-depthcomponent-depthcomponentcompleteevent-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DepthComponentErrorEvent(system api)](arkts-depthcomponent-depthcomponenterrorevent-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DepthComponentOptions(system api)](arkts-depthcomponent-depthcomponentoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DepthLightParams(system api)](arkts-depthcomponent-depthlightparams-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DepthComponentCompleteCallback(system api)](arkts-depthcomponentcompletecallback-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DepthComponentErrorCallback(system api)](arkts-depthcomponenterrorcallback-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DepthMapCallback(system api)](arkts-depthmapcallback-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DepthSpaceType(system api)](arkts-depthcomponent-depthspacetype-e-sys.md)<!--DelEnd-->
 - [DistortionComponent](arkts-distortioncomponent.md)
   - [DistortionComponent properties/events](arkts-distortioncomponent-attribute.md)
-  - [DistortionComponentOptions](arkts-distortioncomponent-distortioncomponentoptions-i-sys.md)
-  - [DistortionParam](arkts-distortioncomponent-distortionparam-i-sys.md)
+  <!--Del-->
+  - [DistortionComponentOptions(system api)](arkts-distortioncomponent-distortioncomponentoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DistortionParam(system api)](arkts-distortioncomponent-distortionparam-i-sys.md)<!--DelEnd-->
 - [DynamicComponent](arkts-dynamiccomponent.md)
   - [DynamicComponent properties/events](arkts-dynamiccomponent-attribute.md)
-  - [DynamicOptions](arkts-dynamiccomponent-dynamicoptions-i-sys.md)
+  <!--Del-->
+  - [DynamicOptions(system api)](arkts-dynamiccomponent-dynamicoptions-i-sys.md)<!--DelEnd-->
 - [EmbeddedComponent](arkts-embeddedcomponent.md)
   - [EmbeddedComponent properties/events](arkts-embeddedcomponent-attribute.md)
   - [EmbeddedOptions](arkts-embeddedcomponent-embeddedoptions-i.md)
@@ -92,14 +113,22 @@
   - [KeyGeneratorFunc](arkts-keygeneratorfunc-t.md)
 - [FormComponent](arkts-formcomponent.md)
   - [FormComponent properties/events](arkts-formcomponent-attribute.md)
-  - [ErrorInformation](arkts-formcomponent-errorinformation-i-sys.md)
-  - [FormCallbackInfo](arkts-formcomponent-formcallbackinfo-i-sys.md)
-  - [FormInfo](arkts-formcomponent-forminfo-i-sys.md)
-  - [RouterCallbackInfo](arkts-formcomponent-routercallbackinfo-i-sys.md)
-  - [FormColorMode](arkts-formcomponent-formcolormode-e-sys.md)
-  - [FormDimension](arkts-formcomponent-formdimension-e-sys.md)
-  - [FormRenderingMode](arkts-formcomponent-formrenderingmode-e-sys.md)
-  - [FormShape](arkts-formcomponent-formshape-e-sys.md)
+  <!--Del-->
+  - [ErrorInformation(system api)](arkts-formcomponent-errorinformation-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FormCallbackInfo(system api)](arkts-formcomponent-formcallbackinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FormInfo(system api)](arkts-formcomponent-forminfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RouterCallbackInfo(system api)](arkts-formcomponent-routercallbackinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FormColorMode(system api)](arkts-formcomponent-formcolormode-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FormDimension(system api)](arkts-formcomponent-formdimension-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FormRenderingMode(system api)](arkts-formcomponent-formrenderingmode-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FormShape(system api)](arkts-formcomponent-formshape-e-sys.md)<!--DelEnd-->
 - [Gauge](arkts-gauge.md)
   - [Gauge properties/events](arkts-gauge-attribute.md)
   - [GaugeConfiguration](arkts-gauge-gaugeconfiguration-i.md)
@@ -110,17 +139,24 @@
   - [Grid properties/events](arkts-grid-attribute.md)
   - [ComputedBarAttribute](arkts-grid-computedbarattribute-i.md)
   - [GridLayoutOptions](arkts-grid-gridlayoutoptions-i.md)
-  - [StartLineInfo](arkts-grid-startlineinfo-i-sys.md)
+  <!--Del-->
+  - [GridLayoutOptions(system api)](arkts-grid-gridlayoutoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [StartLineInfo(system api)](arkts-grid-startlineinfo-i-sys.md)<!--DelEnd-->
   - [UIGridEvent](arkts-grid-uigridevent-i.md)
-  - [OnGetStartIndexByIndexCallback](arkts-ongetstartindexbyindexcallback-t-sys.md)
-  - [OnGetStartIndexByOffsetCallback](arkts-ongetstartindexbyoffsetcallback-t-sys.md)
+  <!--Del-->
+  - [OnGetStartIndexByIndexCallback(system api)](arkts-ongetstartindexbyindexcallback-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [OnGetStartIndexByOffsetCallback(system api)](arkts-ongetstartindexbyoffsetcallback-t-sys.md)<!--DelEnd-->
   - [OnGridScrollIndexCallback](arkts-ongridscrollindexcallback-t.md)
   - [GridDirection](arkts-grid-griddirection-e.md)
   - [GridItemAlignment](arkts-grid-griditemalignment-e.md)
+  - [ExtendableGrid](arkts-grid-extendablegrid-c.md)
 - [GridItem](arkts-griditem.md)
   - [GridItem properties/events](arkts-griditem-attribute.md)
   - [GridItemOptions](arkts-griditem-griditemoptions-i.md)
   - [GridItemStyle](arkts-griditem-griditemstyle-e.md)
+  - [ExtendableGridItem](arkts-griditem-extendablegriditem-c.md)
 - If
   - [If properties/events](arkts-if-attribute.md)
 - [Image](arkts-image.md)
@@ -136,17 +172,21 @@
   - [ImageMatrix](arkts-imagematrix-t.md)
   - [ImageOnCompleteCallback](arkts-imageoncompletecallback-t.md)
   - [RequestDownloadInfo](arkts-requestdownloadinfo-t.md)
-  - [ResolutionQuality](arkts-resolutionquality-t-sys.md)
+  <!--Del-->
+  - [ResolutionQuality(system api)](arkts-resolutionquality-t-sys.md)<!--DelEnd-->
   - [DynamicRangeMode](arkts-image-dynamicrangemode-e.md)
   - [ImageContent](arkts-image-imagecontent-e.md)
   - [ImageInterpolation](arkts-image-imageinterpolation-e.md)
   - [ImageRenderMode](arkts-image-imagerendermode-e.md)
   - [ImageRotateOrientation](arkts-image-imagerotateorientation-e.md)
+  - [ColorContent](arkts-image-colorcontent-c.md)
+  - [ExtendableImage](arkts-image-extendableimage-c.md)
 - [ImageAnimator](arkts-imageanimator.md)
   - [ImageAnimator properties/events](arkts-imageanimator-attribute.md)
   - [ImageFrameInfo](arkts-imageanimator-imageframeinfo-i.md)
 - IndicatorComponent
   - [IndicatorComponent properties/events](arkts-indicatorcomponent-attribute.md)
+  - [IndicatorComponentController](arkts-indicatorcomponent-indicatorcomponentcontroller-c.md)
 - [LazyForEach](arkts-lazyforeach.md)
   - [LazyForEach properties/events](arkts-lazyforeach-attribute.md)
   - [DataAddOperation](arkts-lazyforeach-dataaddoperation-i.md)
@@ -173,7 +213,8 @@
   - [LazyGridLayoutAttribute](arkts-lazygridlayout-lazygridlayoutattribute-i.md)
 - [List](arkts-list.md)
   - [List properties/events](arkts-list-attribute.md)
-  - [ChainAnimationOptions](arkts-list-chainanimationoptions-i-sys.md)
+  <!--Del-->
+  - [ChainAnimationOptions(system api)](arkts-list-chainanimationoptions-i-sys.md)<!--DelEnd-->
   - [CloseSwipeActionOptions](arkts-list-closeswipeactionoptions-i.md)
   - [ListBackPressBehavior](arkts-list-listbackpressbehavior-i.md)
   - [ListDividerOptions](arkts-list-listdivideroptions-i.md)
@@ -182,13 +223,16 @@
   - [VisibleListContentInfo](arkts-list-visiblelistcontentinfo-i.md)
   - [OnListScrollIndexCallback](arkts-onlistscrollindexcallback-t.md)
   - [OnScrollVisibleContentChangeCallback](arkts-onscrollvisiblecontentchangecallback-t.md)
-  - [ChainEdgeEffect](arkts-list-chainedgeeffect-e-sys.md)
+  <!--Del-->
+  - [ChainEdgeEffect(system api)](arkts-list-chainedgeeffect-e-sys.md)<!--DelEnd-->
   - [ListItemAlign](arkts-list-listitemalign-e.md)
   - [ListItemGroupArea](arkts-list-listitemgrouparea-e.md)
   - [ScrollSnapAlign](arkts-list-scrollsnapalign-e.md)
   - [ScrollSnapAnimationSpeed](arkts-list-scrollsnapanimationspeed-e.md)
   - [ScrollState](arkts-list-scrollstate-e.md)
   - [StickyStyle](arkts-list-stickystyle-e.md)
+  - [ExtendableList](arkts-list-extendablelist-c.md)
+  - [ListScroller](arkts-list-listscroller-c.md)
 - [ListItem](arkts-listitem.md)
   - [ListItem properties/events](arkts-listitem-attribute.md)
   - [ListItemOptions](arkts-listitem-listitemoptions-i.md)
@@ -198,6 +242,8 @@
   - [ListItemSwipeActionDirection](arkts-listitem-listitemswipeactiondirection-e.md)
   - [SwipeActionState](arkts-listitem-swipeactionstate-e.md)
   - [SwipeEdgeEffect](arkts-listitem-swipeedgeeffect-e.md)
+  - [ExtendableListItem](arkts-listitem-extendablelistitem-c.md)
+  - [ListItemSwipeActionManager](arkts-listitem-listitemswipeactionmanager-c.md)
 - [ListItemGroup](arkts-listitemgroup.md)
   - [ListItemGroup properties/events](arkts-listitemgroup-attribute.md)
   - [ListItemGroupOptions](arkts-listitemgroup-listitemgroupoptions-i.md)
@@ -209,7 +255,8 @@
   - [LoadingProgressStyle](arkts-loadingprogress-loadingprogressstyle-e.md)
 - [MediaCachedImage](arkts-mediacachedimage.md)
   - [MediaCachedImage properties/events](arkts-mediacachedimage-attribute.md)
-  - [ASTCResource](arkts-mediacachedimage-astcresource-i-sys.md)
+  <!--Del-->
+  - [ASTCResource(system api)](arkts-mediacachedimage-astcresource-i-sys.md)<!--DelEnd-->
 - [Menu](arkts-menu.md)
   - [Menu properties/events](arkts-menu-attribute.md)
   - [SubMenuExpandingMode](arkts-menu-submenuexpandingmode-e.md)
@@ -272,6 +319,8 @@
   - [NavigationTitleMode](arkts-navigation-navigationtitlemode-e.md)
   - [ScrollEffectType](arkts-navigation-scrolleffecttype-e.md)
   - [ToolbarItemStatus](arkts-navigation-toolbaritemstatus-e.md)
+  - [NavPathInfo](arkts-navigation-navpathinfo-c.md)
+  - [NavPathStack](arkts-navigation-navpathstack-c.md)
 - NodeContainer
   - [NodeContainer properties/events](arkts-nodecontainer-attribute.md)
 - [Particle](arkts-particle.md)
@@ -309,12 +358,17 @@
   - [PatternLock properties/events](arkts-patternlock-attribute.md)
   - [CircleStyleOptions](arkts-patternlock-circlestyleoptions-i.md)
   - [PatternLockChallengeResult](arkts-patternlock-patternlockchallengeresult-e.md)
+  - [PatternLockController](arkts-patternlock-patternlockcontroller-c.md)
 - [PluginComponent](arkts-plugincomponent.md)
   - [PluginComponent properties/events](arkts-plugincomponent-attribute.md)
-  - [PluginComponentOptions](arkts-plugincomponent-plugincomponentoptions-i-sys.md)
-  - [PluginComponentTemplate](arkts-plugincomponent-plugincomponenttemplate-i-sys.md)
-  - [PluginErrorData](arkts-plugincomponent-pluginerrordata-i-sys.md)
-  - [PluginErrorCallback](arkts-pluginerrorcallback-t-sys.md)
+  <!--Del-->
+  - [PluginComponentOptions(system api)](arkts-plugincomponent-plugincomponentoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PluginComponentTemplate(system api)](arkts-plugincomponent-plugincomponenttemplate-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PluginErrorData(system api)](arkts-plugincomponent-pluginerrordata-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PluginErrorCallback(system api)](arkts-pluginerrorcallback-t-sys.md)<!--DelEnd-->
 - [Progress](arkts-progress.md)
   - [Progress properties/events](arkts-progress-attribute.md)
   - [CapsuleStyleOptions](arkts-progress-capsulestyleoptions-i.md)
@@ -351,8 +405,10 @@
   - [RefreshStatus](arkts-refresh-refreshstatus-e.md)
 - [RemoteWindow](arkts-remotewindow.md)
   - [RemoteWindow properties/events](arkts-remotewindow-attribute.md)
-  - [RRect](arkts-remotewindow-rrect-i-sys.md)
-  - [WindowAnimationTarget](arkts-remotewindow-windowanimationtarget-i-sys.md)
+  <!--Del-->
+  - [RRect(system api)](arkts-remotewindow-rrect-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [WindowAnimationTarget(system api)](arkts-remotewindow-windowanimationtarget-i-sys.md)<!--DelEnd-->
 - [Repeat](arkts-repeat.md)
   - [Repeat properties/events](arkts-repeat-attribute.md)
   - [RepeatItem](arkts-repeat-repeatitem-i.md)
@@ -391,16 +447,21 @@
   - [ScrollOnWillScrollCallback](arkts-scrollonwillscrollcallback-t.md)
   - [ScrollAlign](arkts-scroll-scrollalign-e.md)
   - [ScrollDirection](arkts-scroll-scrolldirection-e.md)
+  - [Scroller](arkts-scroll-scroller-c.md)
 - [ScrollBar](arkts-scrollbar.md)
   - [ScrollBar properties/events](arkts-scrollbar-attribute.md)
   - [ScrollBarOptions](arkts-scrollbar-scrollbaroptions-i.md)
   - [ScrollBarDirection](arkts-scrollbar-scrollbardirection-e.md)
 - [SecurityUIExtensionComponent](arkts-securityuiextensioncomponent.md)
   - [SecurityUIExtensionComponent properties/events](arkts-securityuiextensioncomponent-attribute.md)
-  - [SecurityUIExtensionOptions](arkts-securityuiextensioncomponent-securityuiextensionoptions-i-sys.md)
-  - [SecurityUIExtensionProxy](arkts-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)
-  - [ReceiveCallback](arkts-receivecallback-t-sys.md)
-  - [SecurityDpiFollowStrategy](arkts-securityuiextensioncomponent-securitydpifollowstrategy-e-sys.md)
+  <!--Del-->
+  - [SecurityUIExtensionOptions(system api)](arkts-securityuiextensioncomponent-securityuiextensionoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SecurityUIExtensionProxy(system api)](arkts-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ReceiveCallback(system api)](arkts-receivecallback-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SecurityDpiFollowStrategy(system api)](arkts-securityuiextensioncomponent-securitydpifollowstrategy-e-sys.md)<!--DelEnd-->
 - [Select](arkts-select.md)
   - [Select properties/events](arkts-select-attribute.md)
   - [MenuItemConfiguration](arkts-select-menuitemconfiguration-i.md)
@@ -433,6 +494,7 @@
   - [SliderChangeMode](arkts-slider-sliderchangemode-e.md)
   - [SliderInteraction](arkts-slider-sliderinteraction-e.md)
   - [SliderStyle](arkts-slider-sliderstyle-e.md)
+  - [ColorMetricsLinearGradient](arkts-slider-colormetricslineargradient-c.md)
 - [Swiper](arkts-swiper.md)
   - [Swiper properties/events](arkts-swiper-attribute.md)
   - [ArrowStyle](arkts-swiper-arrowstyle-i.md)
@@ -452,6 +514,10 @@
   - [SwiperAnimationMode](arkts-swiper-swiperanimationmode-e.md)
   - [SwiperDisplayMode](arkts-swiper-swiperdisplaymode-e.md)
   - [SwiperNestedScrollMode](arkts-swiper-swipernestedscrollmode-e.md)
+  - [DigitIndicator](arkts-swiper-digitindicator-c.md)
+  - [DotIndicator](arkts-swiper-dotindicator-c.md)
+  - [Indicator](arkts-swiper-indicator-c.md)
+  - [SwiperController](arkts-swiper-swipercontroller-c.md)
 - [TabContent](arkts-tabcontent.md)
   - [TabContent properties/events](arkts-tabcontent-attribute.md)
   - [BoardStyle](arkts-tabcontent-boardstyle-i.md)
@@ -462,6 +528,9 @@
   - [TabBarOptions](arkts-tabcontent-tabbaroptions-i.md)
   - [LayoutMode](arkts-tabcontent-layoutmode-e.md)
   - [SelectedMode](arkts-tabcontent-selectedmode-e.md)
+  - [BottomTabBarStyle](arkts-tabcontent-bottomtabbarstyle-c.md)
+  - [SubTabBarStyle](arkts-tabcontent-subtabbarstyle-c.md)
+  - [TabBarSymbol](arkts-tabcontent-tabbarsymbol-c.md)
 - [Tabs](arkts-tabs.md)
   - [Tabs properties/events](arkts-tabs-attribute.md)
   - [BarGridColumnOptions](arkts-tabs-bargridcolumnoptions-i.md)
@@ -484,10 +553,12 @@
   - [LayoutStyle](arkts-tabs-layoutstyle-e.md)
   - [TabsCacheMode](arkts-tabs-tabscachemode-e.md)
   - [TabsNestedScrollMode](arkts-tabs-tabsnestedscrollmode-e.md)
+  - [TabsController](arkts-tabs-tabscontroller-c.md)
 - [TextClock](arkts-textclock.md)
   - [TextClock properties/events](arkts-textclock-attribute.md)
   - [TextClockConfiguration](arkts-textclock-textclockconfiguration-i.md)
   - [TextClockOptions](arkts-textclock-textclockoptions-i.md)
+  - [TextClockController](arkts-textclock-textclockcontroller-c.md)
 - [TextPicker](arkts-textpicker.md)
   - [TextPicker properties/events](arkts-textpicker-attribute.md)
   - [DividerOptions](arkts-textpicker-divideroptions-i.md)
@@ -495,6 +566,8 @@
   - [TextCascadePickerRangeContent](arkts-textpicker-textcascadepickerrangecontent-i.md)
   - [TextPickerDialogOptions](arkts-textpicker-textpickerdialogoptions-i.md)
   - [TextPickerDialogOptionsExt](arkts-textpicker-textpickerdialogoptionsext-i.md)
+  <!--Del-->
+  - [TextPickerDialogOptionsExt(system api)](arkts-textpicker-textpickerdialogoptionsext-i-sys.md)<!--DelEnd-->
   - [TextPickerOptions](arkts-textpicker-textpickeroptions-i.md)
   - [TextPickerRangeContent](arkts-textpicker-textpickerrangecontent-i.md)
   - [TextPickerResult](arkts-textpicker-textpickerresult-i.md)
@@ -507,9 +580,12 @@
   - [TextTimerConfiguration](arkts-texttimer-texttimerconfiguration-i.md)
   - [TextTimerOptions](arkts-texttimer-texttimeroptions-i.md)
   - [TimerCallback](arkts-timercallback-t.md)
+  - [TextTimerController](arkts-texttimer-texttimercontroller-c.md)
 - [TimePicker](arkts-timepicker.md)
   - [TimePicker properties/events](arkts-timepicker-attribute.md)
   - [TimePickerDialogOptions](arkts-timepicker-timepickerdialogoptions-i.md)
+  <!--Del-->
+  - [TimePickerDialogOptions(system api)](arkts-timepicker-timepickerdialogoptions-i-sys.md)<!--DelEnd-->
   - [TimePickerOptions](arkts-timepicker-timepickeroptions-i.md)
   - [TimePickerResult](arkts-timepicker-timepickerresult-i.md)
   - [OnTimePickerChangeCallback](arkts-ontimepickerchangecallback-t.md)
@@ -520,17 +596,23 @@
   - [ToggleConfiguration](arkts-toggle-toggleconfiguration-i.md)
   - [ToggleOptions](arkts-toggle-toggleoptions-i.md)
   - [ToggleType](arkts-toggle-toggletype-e.md)
+  - [ExtendableToggle](arkts-toggle-extendabletoggle-c.md)
 - [ToolBarItem](arkts-toolbaritem.md)
   - [ToolBarItem properties/events](arkts-toolbaritem-attribute.md)
   - [ToolBarItemOptions](arkts-toolbar-toolbaritemoptions-i.md)
   - [ToolBarItemPlacement](arkts-toolbar-toolbaritemplacement-e.md)
 - [UIExtensionComponent](arkts-uiextensioncomponent.md)
   - [UIExtensionComponent properties/events](arkts-uiextensioncomponent-attribute.md)
-  - [UIExtensionOptions](arkts-uiextensioncomponent-uiextensionoptions-i-sys.md)
-  - [UIExtensionProxy](arkts-uiextensioncomponent-uiextensionproxy-i-sys.md)
-  - [ReceiveCallback](arkts-receivecallback-t-sys.md)
-  - [DpiFollowStrategy](arkts-uiextensioncomponent-dpifollowstrategy-e-sys.md)
-  - [WindowModeFollowStrategy](arkts-uiextensioncomponent-windowmodefollowstrategy-e-sys.md)
+  <!--Del-->
+  - [UIExtensionOptions(system api)](arkts-uiextensioncomponent-uiextensionoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [UIExtensionProxy(system api)](arkts-uiextensioncomponent-uiextensionproxy-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ReceiveCallback(system api)](arkts-receivecallback-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DpiFollowStrategy(system api)](arkts-uiextensioncomponent-dpifollowstrategy-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [WindowModeFollowStrategy(system api)](arkts-uiextensioncomponent-windowmodefollowstrategy-e-sys.md)<!--DelEnd-->
 - [UIPickerComponent](arkts-uipickercomponent.md)
   - [UIPickerComponent properties/events](arkts-uipickercomponent-attribute.md)
   - [PickerIndicatorStyle](arkts-uipickercomponent-pickerindicatorstyle-i.md)
@@ -539,8 +621,10 @@
   - [PickerIndicatorType](arkts-uipickercomponent-pickerindicatortype-e.md)
 - [UnionEffectContainer](arkts-unioneffectcontainer.md)
   - [UnionEffectContainer properties/events](arkts-unioneffectcontainer-attribute.md)
-  - [UnionEffectContainerOptions](arkts-unioneffectcontainer-unioneffectcontaineroptions-i-sys.md)
-  - [UnionMode](arkts-unioneffectcontainer-unionmode-e-sys.md)
+  <!--Del-->
+  - [UnionEffectContainerOptions(system api)](arkts-unioneffectcontainer-unioneffectcontaineroptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [UnionMode(system api)](arkts-unioneffectcontainer-unionmode-e-sys.md)<!--DelEnd-->
 - [WaterFlow](arkts-waterflow.md)
   - [WaterFlow properties/events](arkts-waterflow-attribute.md)
   - [UIWaterFlowEvent](arkts-waterflow-uiwaterflowevent-i.md)
@@ -548,6 +632,8 @@
   - [GetItemMainSizeByIndex](arkts-getitemmainsizebyindex-t.md)
   - [OnWaterFlowScrollIndexCallback](arkts-onwaterflowscrollindexcallback-t.md)
   - [WaterFlowLayoutMode](arkts-waterflow-waterflowlayoutmode-e.md)
+  - [SectionOptions](arkts-waterflow-sectionoptions-c.md)
+  - [WaterFlowSections](arkts-waterflow-waterflowsections-c.md)
 - [Web](arkts-web.md)
   - [Web properties/events](arkts-web-attribute.md)
   - [AcceptableFileType](arkts-web-acceptablefiletype-i.md)
@@ -704,6 +790,27 @@
   - [WebNavigationType](arkts-web-webnavigationtype-e.md)
   - [WebResponseType](arkts-web-webresponsetype-e.md)
   - [WebRotateEffect](arkts-web-webrotateeffect-e.md)
+  - [ClientAuthenticationHandler](arkts-web-clientauthenticationhandler-c.md)
+  - [ConsoleMessage](arkts-web-consolemessage-c.md)
+  - [ControllerHandler](arkts-web-controllerhandler-c.md)
+  - [DataResubmissionHandler](arkts-web-dataresubmissionhandler-c.md)
+  - [EventResult](arkts-web-eventresult-c.md)
+  - [FileSelectorParam](arkts-web-fileselectorparam-c.md)
+  - [FileSelectorResult](arkts-web-fileselectorresult-c.md)
+  - [FullScreenExitHandler](arkts-web-fullscreenexithandler-c.md)
+  - [HttpAuthHandler](arkts-web-httpauthhandler-c.md)
+  - [JsGeolocation](arkts-web-jsgeolocation-c.md)
+  - [JsResult](arkts-web-jsresult-c.md)
+  - [PermissionRequest](arkts-web-permissionrequest-c.md)
+  - [ScreenCaptureHandler](arkts-web-screencapturehandler-c.md)
+  - [SslErrorHandler](arkts-web-sslerrorhandler-c.md)
+  - [VerifyPinHandler](arkts-web-verifypinhandler-c.md)
+  - [WebContextMenuParam](arkts-web-webcontextmenuparam-c.md)
+  - [WebContextMenuResult](arkts-web-webcontextmenuresult-c.md)
+  - [WebKeyboardController](arkts-web-webkeyboardcontroller-c.md)
+  - [WebResourceError](arkts-web-webresourceerror-c.md)
+  - [WebResourceRequest](arkts-web-webresourcerequest-c.md)
+  - [WebResourceResponse](arkts-web-webresourceresponse-c.md)
 - WindowScene
   - [WindowScene properties/events](arkts-windowscene-attribute.md)
 - [XComponent](arkts-xcomponent.md)
@@ -713,6 +820,9 @@
   - [SurfaceRect](arkts-xcomponent-surfacerect-i.md)
   - [SurfaceRotationOptions](arkts-xcomponent-surfacerotationoptions-i.md)
   - [XComponentOptions](arkts-xcomponent-xcomponentoptions-i.md)
+  <!--Del-->
+  - [XComponentOptions(system api)](arkts-xcomponent-xcomponentoptions-i-sys.md)<!--DelEnd-->
   - [XComponentParameters](arkts-xcomponent-xcomponentparameters-i.md)
   - [NativeXComponentPointer](arkts-nativexcomponentpointer-t.md)
   - [HdrType](arkts-xcomponent-hdrtype-e.md)
+  - [XComponentController](arkts-xcomponent-xcomponentcontroller-c.md)

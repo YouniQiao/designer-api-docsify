@@ -45,3 +45,15 @@ Checks whether the device supports automatic camera switch.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage.<br>**Applicable version:** 13 - 17 |
 
+**Examples**
+
+```TypeScript
+// Check whether the foldable device supports automatic camera switch.
+// If the sample code returns **true**, you can continue to use enableAutoDeviceSwitch to enable automatic camera switching.
+function isAutoDeviceSwitchSupported(session: camera.PhotoSession): boolean {
+  let isSupported = false;
+  isSupported = session.isAutoDeviceSwitchSupported();
+  return isSupported;
+}
+```
+

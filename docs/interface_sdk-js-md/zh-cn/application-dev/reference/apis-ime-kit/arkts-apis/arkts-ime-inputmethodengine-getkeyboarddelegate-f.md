@@ -54,3 +54,7 @@ function getKeyboardDelegate(): KeyboardDelegate | null
 | --- | --- |
 | [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) \| null | 客户端编辑事件监听代理。 |
 
+**示例**
+
+参见 [getKeyboardDelegate](#getkeyboarddelegate)
+

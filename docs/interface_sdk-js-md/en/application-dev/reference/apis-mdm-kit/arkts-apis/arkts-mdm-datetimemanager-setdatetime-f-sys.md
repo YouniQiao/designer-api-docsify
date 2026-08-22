@@ -34,9 +34,9 @@ Sets the system time. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | time | number | Yes | Timestamp to set, in ms. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -70,6 +70,25 @@ dateTimeManager.setDateTime(wantTemp, 1526003846000, (err) => {
 })
 ```
 
+```TypeScript
+import { dateTimeManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// Replace with actual values.
+dateTimeManager.setDateTime(wantTemp, 1526003846000).then(() => {
+  console.info('Succeeded in setting date time');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set date time. Code is ${err.code}, message is ${err.message}`);
+})
+```
+
 
 ## setDateTime
 
@@ -99,7 +118,7 @@ Sets the system time. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | time | number | Yes | Timestamp to set, in ms. |
 
 **Return value:**
@@ -120,22 +139,5 @@ Sets the system time. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { dateTimeManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace with actual values.
-dateTimeManager.setDateTime(wantTemp, 1526003846000).then(() => {
-  console.info('Succeeded in setting date time');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set date time. Code is ${err.code}, message is ${err.message}`);
-})
-```
+See [setDateTime](#setdatetime)
 

@@ -39,7 +39,7 @@ Appends a child node to this RenderNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [RenderNode](arkts-arkui-rendernode-c.md) | Yes | Child node to append. |
+| node | [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) | Yes | Child node to append. |
 
 **Error codes:**
 
@@ -505,7 +505,7 @@ Obtains the child node in the specified position of this RenderNode.
 
 | Type | Description |
 | --- | --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) \| null | Child node obtained. If the RenderNode does not contain the specified child node, null is returned. |
+| [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) \| null | Child node obtained. If the RenderNode does not contain the specified child node, null is returned. |
 
 **Examples**
 
@@ -590,7 +590,7 @@ Obtains the first child node of this RenderNode.
 
 | Type | Description |
 | --- | --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) \| null | First child node. If the RenderNode does not contain any child node, null is returned. |
+| [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) \| null | First child node. If the RenderNode does not contain any child node, null is returned. |
 
 **Examples**
 
@@ -680,7 +680,7 @@ Obtains the next sibling node of this RenderNode.
 
 | Type | Description |
 | --- | --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) \| null | Next sibling node of the current RenderNode. If the RenderNode does not have the next sibling node, null is returned. |
+| [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) \| null | Next sibling node of the current RenderNode. If the RenderNode does not have the next sibling node, null is returned. |
 
 **Examples**
 
@@ -771,7 +771,7 @@ Obtains the previous sibling node of this RenderNode.
 
 | Type | Description |
 | --- | --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) \| null | Previous sibling node of the current RenderNode. If the RenderNode does not have the previous sibling node, null is returned. |
+| [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) \| null | Previous sibling node of the current RenderNode. If the RenderNode does not have the previous sibling node, null is returned. |
 
 **Examples**
 
@@ -862,8 +862,8 @@ Inserts a child node after the specified child node of this RenderNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| child | [RenderNode](arkts-arkui-rendernode-c.md) | Yes | Child node to add. |
-| sibling | [RenderNode](arkts-arkui-rendernode-c.md) \| null | Yes | Node after which the new child node will be inserted. If this parameter is left empty, the new node is inserted before the first subnode. |
+| child | [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) | Yes | Child node to add. |
+| sibling | [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) \| null | Yes | Node after which the new child node will be inserted. If this parameter is left empty, the new node is inserted before the first subnode. |
 
 **Error codes:**
 
@@ -1143,7 +1143,7 @@ Deletes the specified child node from this RenderNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [RenderNode](arkts-arkui-rendernode-c.md) | Yes | Child node to delete. |
+| node | [RenderNode](../../apis-default/arkts-apis/arkts-rendernode-c.md) | Yes | Child node to delete. |
 
 **Examples**
 

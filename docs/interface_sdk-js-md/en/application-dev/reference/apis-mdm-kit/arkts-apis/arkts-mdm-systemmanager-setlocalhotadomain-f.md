@@ -28,7 +28,7 @@ Set the local HOTA domain of the device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | admin indicates the enterprise admin extension ability information. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | admin indicates the enterprise admin extension ability information. |
 | domain | string | Yes | Indicates the local HOTA domain to set. The value must comply with domain name rules. The validation rules are as follows: 1. The length must not exceed 64 characters. 2. IP addresses and localhost are not supported. 3. The domain requires the full request root address, must start with the https://. 4. The domain must match the folllowing regular expression: ^(?:[a-zA-Z0-9](?:[a-zA-Z0-9.-]*[a-zA-Z0-9])?\\.)+[a-zA-Z]{2,}\\$ 5. Passing an empty string means reverting the domain to its default value. |
 
 **Error codes:**

@@ -36,6 +36,290 @@ constructor()
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+```
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+const brushColor: common2D.Color = { alpha: 255, red: 0, green: 255, blue: 0 };
+brush.setColor(brushColor);
+const newBrush = new drawing.Brush(brush);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+import { image } from '@kit.ImageKit';
+
+const color = new ArrayBuffer(96);
+let opts : image.InitializationOptions = {
+  editable: true,
+  pixelFormat: image.PixelMapFormat.RGBA_8888,
+  size: {
+    height: 4,
+    width: 6
+  }
+};
+image.createPixelMap(color, opts).then((pixelMap) => {
+  const canvas = new drawing.Canvas(pixelMap);
+});
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let matrix = new drawing.Matrix();
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let matrix = new drawing.Matrix();
+let matrix2 = new drawing.Matrix(matrix);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path: drawing.Path = new drawing.Path();
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path: drawing.Path = new drawing.Path();
+path.moveTo(0.0, 0.0);
+path.lineTo(0.0, 700.0);
+path.lineTo(700.0, 0.0);
+path.close();
+let path1: drawing.Path = new drawing.Path(path);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path: drawing.Path = new drawing.Path();
+let iter: drawing.PathIterator = new drawing.PathIterator(path);
+console.info('PathIterator created successfully');
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+```
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+const penColor: common2D.Color = { alpha: 255, red: 0, green: 255, blue: 0 };
+pen.setColor(penColor);
+pen.setStrokeWidth(10.0);
+const newPen = new drawing.Pen(pen);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
+    pen.setStrokeWidth(10);
+    canvas.attachPen(pen);
+    let region = new drawing.Region();
+    region.setRect(200, 200, 400, 400);
+    canvas.drawRegion(region);
+    canvas.detachPen();
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
+    pen.setStrokeWidth(10.0);
+    canvas.attachPen(pen);
+    let region = new drawing.Region();
+    region.setRect(200, 200, 400, 400);
+    canvas.drawRegion(region);
+    canvas.detachPen();
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
+    pen.setStrokeWidth(10);
+    canvas.attachPen(pen);
+    let region = new drawing.Region();
+    region.setRect(200, 200, 400, 400);
+    let region2 = new drawing.Region(region);
+    canvas.drawRegion(region2);
+    canvas.detachPen();
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
+    pen.setStrokeWidth(10);
+    canvas.attachPen(pen);
+    let region = new drawing.Region();
+    region.setRect(200, 200, 400, 400);
+    let region2 = new drawing.Region(region);
+    canvas.drawRegion(region2);
+    canvas.detachPen();
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
+    pen.setStrokeWidth(10);
+    canvas.attachPen(pen);
+    let region = new drawing.Region(100, 100, 200, 200);
+    canvas.drawRegion(region);
+    canvas.detachPen();
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
+    pen.setStrokeWidth(10.0);
+    canvas.attachPen(pen);
+    let region = new drawing.Region(100, 100, 200, 200);
+    canvas.drawRegion(region);
+    canvas.detachPen();
+  }
+}
+```
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+let rect: common2D.Rect = {left: 100.0, top: 100.0, right: 500.0, bottom: 300.0};
+let roundRect = new drawing.RoundRect(rect, 50.0, 50.0);
+let roundRect2 = new drawing.RoundRect(roundRect);
+```
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+let rect: common2D.Rect = { left: 100.0, top: 100.0, right: 500.0, bottom: 300.0 };
+let roundRect = new drawing.RoundRect(rect, 50.0, 50.0);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context: DrawContext) {
+    let samplingOptions = new drawing.SamplingOptions();
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    let samplingOptions = new drawing.SamplingOptions();
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context: DrawContext) {
+    let samplingOptions = new drawing.SamplingOptions(drawing.FilterMode.FILTER_MODE_NEAREST);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let samplingOptions = new drawing.SamplingOptions(drawing.FilterMode.FILTER_MODE_NEAREST);
+  }
+}
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+let typefaceArgument = new drawing.TypefaceArguments();
+```
+
 ## constructor
 
 ```TypeScript
@@ -62,6 +346,10 @@ constructor(brush: Brush)
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 
+**示例**
+
+参见 [constructor](#constructor)
+
 ## getAlpha
 
 ```TypeScript
@@ -81,6 +369,22 @@ getAlpha(): int
 | 类型 | 说明 |
 | --- | --- |
 | int | 返回画刷的透明度，取值范围为[0, 255]的整数。 |
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+let alpha = brush.getAlpha();
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+let alpha = pen.getAlpha();
+```
 
 ## getColor
 
@@ -102,6 +406,26 @@ getColor(): common2D.Color
 | --- | --- |
 | common2D.Color | 返回画刷的颜色，为ARGB格式的颜色对象，包含alpha、red、green、blue四个通道值，每个通道取值范围为[0, 255]的整数。 |
 
+**示例**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+const color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
+const brush = new drawing.Brush();
+brush.setColor(color);
+let currentColor = brush.getColor();
+```
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+const color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
+const pen = new drawing.Pen();
+pen.setColor(color);
+let colorGet = pen.getColor();
+```
+
 ## getColor
 
 ```TypeScript
@@ -121,6 +445,10 @@ getColor(): common2D.Color | undefined
 | 类型 | 说明 |
 | --- | --- |
 | common2D.Color \| undefined | 返回画刷的颜色，为ARGB格式的颜色对象，包含alpha、red、green、blue四个通道值，每个通道取值范围为[0, 255]的整数。获取颜色失败时返回undefined。 |
+
+**示例**
+
+参见 [getColor](#getcolor)
 
 ## getColor4f
 
@@ -142,6 +470,28 @@ getColor4f(): common2D.Color4f
 | --- | --- |
 | common2D.Color4f | 返回画刷的颜色，为浮点数格式的ARGB颜色对象，每个通道值为[0.0, 1.0]之间的浮点数。 |
 
+**示例**
+
+```TypeScript
+import { common2D, drawing, colorSpaceManager } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+let colorSpace = colorSpaceManager.create(colorSpaceManager.ColorSpace.BT2020_HLG);
+let color4f: common2D.Color4f = { alpha: 1, red: 0.5, green: 0.4, blue: 0.7 };
+brush.setColor4f(color4f, colorSpace);
+let color = brush.getColor4f();
+```
+
+```TypeScript
+import { common2D, drawing, colorSpaceManager } from "@kit.ArkGraphics2D";
+
+const pen = new drawing.Pen();
+let colorSpace = colorSpaceManager.create(colorSpaceManager.ColorSpace.BT2020_HLG);
+let color4f: common2D.Color4f = {alpha: 1, red: 0.5, green: 0.4, blue: 0.7};
+pen.setColor4f(color4f, colorSpace);
+let color = pen.getColor4f();
+```
+
 ## getColor4f
 
 ```TypeScript
@@ -161,6 +511,10 @@ getColor4f(): common2D.Color4f | undefined
 | 类型 | 说明 |
 | --- | --- |
 | common2D.Color4f \| undefined | 返回画刷的颜色，为浮点数格式的ARGB颜色对象，每个通道值为[0.0, 1.0]之间的浮点数。获取颜色失败时返回undefined。 |
+
+**示例**
+
+参见 [getColor4f](#getcolor4f)
 
 ## getColorFilter
 
@@ -182,6 +536,56 @@ getColorFilter(): ColorFilter
 | --- | --- |
 | ColorFilter | 返回画刷的颜色滤波器，用于对绘制内容进行颜色调整，如伽马校正、颜色矩阵变换等。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let brush = new drawing.Brush();
+let colorFilter = drawing.ColorFilter.createSRGBGammaToLinear();
+brush.setColorFilter(colorFilter);
+let currentFilter = brush.getColorFilter();
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let brush = new drawing.Brush();
+let setColorFilter = drawing.ColorFilter.createSRGBGammaToLinear();
+if (setColorFilter != undefined) {
+  brush.setColorFilter(setColorFilter!);
+}
+let filter = brush.getColorFilter();
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let pen = new drawing.Pen();
+let colorFilter = drawing.ColorFilter.createLumaColorFilter();
+pen.setColorFilter(colorFilter);
+let filter = pen.getColorFilter();
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let pen = new drawing.Pen();
+let setColorFilter = drawing.ColorFilter.createSRGBGammaToLinear();
+if (setColorFilter != undefined) {
+  pen.setColorFilter(setColorFilter!);
+}
+let filter = pen.getColorFilter();
+```
+
 ## getColorFilter
 
 ```TypeScript
@@ -201,6 +605,10 @@ getColorFilter(): ColorFilter | undefined
 | 类型 | 说明 |
 | --- | --- |
 | ColorFilter \| undefined | 返回颜色滤波器，用于对绘制内容进行颜色调整，如伽马校正、颜色矩阵变换等。获取颜色滤波器失败时返回undefined。 |
+
+**示例**
+
+参见 [getColorFilter](#getcolorfilter)
 
 ## getHexColor
 
@@ -222,6 +630,28 @@ getHexColor(): int
 | --- | --- |
 | int | 返回画刷的颜色，以16进制ARGB格式的32位无符号整数表示。 |
 
+**示例**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+let color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
+let brush = new drawing.Brush();
+brush.setColor(color);
+let hexColor = brush.getHexColor();
+console.info('getHexColor: ', hexColor.toString(16));
+```
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+let color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
+let pen = new drawing.Pen();
+pen.setColor(color);
+let hexColor = pen.getHexColor();
+console.info('getHexColor: ', hexColor.toString(16));
+```
+
 ## isAntiAlias
 
 ```TypeScript
@@ -242,6 +672,22 @@ isAntiAlias(): boolean
 | --- | --- |
 | boolean | 返回画刷是否开启抗锯齿属性，true表示开启，false表示关闭。 |
 
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+let isAntiAlias = brush.isAntiAlias();
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+let isAntiAlias = pen.isAntiAlias();
+```
+
 ## reset
 
 ```TypeScript
@@ -255,6 +701,55 @@ reset(): void
 <!--Device-Brush-reset(): void--><!--Device-Brush-reset(): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+brush.reset();
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import {drawing} from "@kit.ArkGraphics2D";
+
+let matrix = new drawing.Matrix();
+matrix.postScale(2, 3, 4, 5);
+matrix.reset();
+console.info("matrix= "+matrix.getAll().toString());
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import {drawing} from "@kit.ArkGraphics2D";
+
+let matrix = new drawing.Matrix();
+matrix.postScale(2.0, 3.0, 4.0, 5.0);
+matrix.reset();
+if (matrix.getAll() != undefined) {
+  console.info("matrix= "+matrix.getAll()!.toString());
+}
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let path = new drawing.Path();
+path.moveTo(10.0, 10.0);
+path.cubicTo(10.0, 10.0, 10.0, 10.0, 15.0, 15.0);
+path.reset();
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+pen.reset();
+```
 
 ## setAlpha
 
@@ -282,6 +777,22 @@ setAlpha(alpha: int): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+brush.setAlpha(128);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+pen.setAlpha(128);
+```
+
 ## setAntiAlias
 
 ```TypeScript
@@ -307,6 +818,22 @@ setAntiAlias(aa: boolean): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+brush.setAntiAlias(true);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+pen.setAntiAlias(true);
+```
 
 ## setBlendMode
 
@@ -334,6 +861,22 @@ setBlendMode(mode: BlendMode): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+brush.setBlendMode(drawing.BlendMode.SRC);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+pen.setBlendMode(drawing.BlendMode.SRC);
+```
+
 ## setColor
 
 ```TypeScript
@@ -359,6 +902,74 @@ setColor(color: common2D.Color): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+const color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
+const brush = new drawing.Brush();
+brush.setColor(color);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+brush.setColor(255, 255, 0, 0);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+brush.setColor(0xffff0000);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+brush.setColor((0xffff0000).toInt());
+```
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+const color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
+const pen = new drawing.Pen();
+pen.setColor(color);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+pen.setColor(255, 255, 0, 0);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+pen.setColor(0xffff0000);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+pen.setColor((0xffff0000).toInt());
+```
 
 ## setColor
 
@@ -389,6 +1000,10 @@ setColor(alpha: int, red: int, green: int, blue: int): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**示例**
+
+参见 [setColor](#setcolor)
+
 ## setColor
 
 ```TypeScript
@@ -415,6 +1030,10 @@ setColor(color: int): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**示例**
+
+参见 [setColor](#setcolor)
+
 ## setColor4f
 
 ```TypeScript
@@ -435,6 +1054,26 @@ setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceMa
 | --- | --- | --- | --- |
 | color4f | common2D.Color4f | 是 | ARGB格式的颜色，每个颜色通道的值是0.0-1.0之间的浮点数，大于1.0时，取1.0， 小于0.0时，取0.0。颜色值在colorSpace参数指定的色域下进行映射。 |
 | colorSpace | colorSpaceManager.ColorSpaceManager \| null | 是 | 标准色域对象，需通过 [colorSpaceManager.create()](arkts-arkgraphics2d-colorspacemanager-create-f.md)方法创建，与color4f配合使 用，决定color4f颜色值的映射色域。null表示使用sRGB色域。 |
+
+**示例**
+
+```TypeScript
+import { common2D, drawing, colorSpaceManager } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+let colorSpace = colorSpaceManager.create(colorSpaceManager.ColorSpace.BT2020_HLG);
+let color4f: common2D.Color4f = { alpha: 1, red: 0.5, green: 0.4, blue: 0.7 };
+brush.setColor4f(color4f, colorSpace);
+```
+
+```TypeScript
+import { common2D, drawing, colorSpaceManager } from "@kit.ArkGraphics2D";
+
+const pen = new drawing.Pen();
+let colorSpace = colorSpaceManager.create(colorSpaceManager.ColorSpace.BT2020_HLG);
+let color4f: common2D.Color4f = {alpha: 1, red: 0.5, green: 0.4, blue: 0.7};
+pen.setColor4f(color4f, colorSpace);
+```
 
 ## setColorFilter
 
@@ -462,6 +1101,54 @@ setColorFilter(filter: ColorFilter | null): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+let colorFilter = drawing.ColorFilter.createLinearToSRGBGamma();
+brush.setColorFilter(colorFilter);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+let colorFilter = drawing.ColorFilter.createLinearToSRGBGamma();
+if (colorFilter != undefined) {
+  brush.setColorFilter(colorFilter!);
+}
+brush.setColorFilter(null);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+let colorFilter = drawing.ColorFilter.createLinearToSRGBGamma();
+pen.setColorFilter(colorFilter);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+let colorFilter = drawing.ColorFilter.createLinearToSRGBGamma();
+if (colorFilter != undefined) {
+  pen.setColorFilter(colorFilter!);
+}
+pen.setColorFilter(null);
+```
+
 ## setImageFilter
 
 ```TypeScript
@@ -487,6 +1174,58 @@ setImageFilter(filter: ImageFilter | null): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let brush = new drawing.Brush();
+let imageFilter = drawing.ImageFilter.createBlurImageFilter(5, 10, drawing.TileMode.DECAL);
+brush.setImageFilter(imageFilter);
+brush.setImageFilter(null);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing }  from '@kit.ArkGraphics2D';
+
+let brush = new drawing.Brush();
+let imgFilter = drawing.ImageFilter.createBlurImageFilter(5, 10, drawing.TileMode.DECAL);
+if (imgFilter != undefined) {
+  brush.setImageFilter(imgFilter!);
+}
+brush.setImageFilter(null);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let colorfilter = drawing.ColorFilter.createSRGBGammaToLinear();
+let imgFilter = drawing.ImageFilter.createFromColorFilter(colorfilter);
+let pen = new drawing.Pen();
+pen.setImageFilter(imgFilter);
+pen.setImageFilter(null);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let colorfilter = drawing.ColorFilter.createSRGBGammaToLinear();
+let imgFilter = colorfilter == undefined ? undefined : drawing.ImageFilter.createFromColorFilter(colorfilter!);
+let pen = new drawing.Pen();
+if (imgFilter != undefined) {
+  pen.setImageFilter(imgFilter!);
+}
+pen.setImageFilter(null);
+```
 
 ## setMaskFilter
 
@@ -514,6 +1253,81 @@ setMaskFilter(filter: MaskFilter | null): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const brush = new drawing.Brush();
+    let maskFilter = drawing.MaskFilter.createBlurMaskFilter(drawing.BlurType.OUTER, 10);
+    brush.setMaskFilter(maskFilter);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const brush = new drawing.Brush();
+    let maskFilter = drawing.MaskFilter.createBlurMaskFilter(drawing.BlurType.OUTER, 10);
+    if (maskFilter == undefined) {
+      return;
+    }
+    brush.setMaskFilter(maskFilter);
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const pen = new drawing.Pen();
+    pen.setStrokeWidth(5);
+    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
+    let maskFilter = drawing.MaskFilter.createBlurMaskFilter(drawing.BlurType.OUTER, 10);
+    pen.setMaskFilter(maskFilter);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setStrokeWidth(5.0);
+    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
+    let maskFilter = drawing.MaskFilter.createBlurMaskFilter(drawing.BlurType.OUTER, 10.0);
+    if (maskFilter == undefined) {
+      return;
+    }
+    pen.setMaskFilter(maskFilter);
+    pen.setMaskFilter(null);
+  }
+}
+```
+
 ## setShaderEffect
 
 ```TypeScript
@@ -540,6 +1354,53 @@ setShaderEffect(shaderEffect: ShaderEffect | null): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+let shaderEffect = drawing.ShaderEffect.createLinearGradient({x: 100, y: 100}, {x: 300, y: 300}, [0xFF00FF00, 0xFFFF0000], drawing.TileMode.REPEAT);
+brush.setShaderEffect(shaderEffect);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const brush = new drawing.Brush();
+let shaderEffect = drawing.ShaderEffect.createLinearGradient({x: 100, y: 100}, {x: 300, y: 300}, [(0xFF00FF00).toInt(), (0xFFFF0000).toInt()], drawing.TileMode.REPEAT);
+if (shaderEffect != undefined) {
+  brush.setShaderEffect(shaderEffect!);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+let shaderEffect = drawing.ShaderEffect.createLinearGradient({x: 100, y: 100}, {x: 300, y: 300}, [0xFF00FF00, 0xFFFF0000], drawing.TileMode.REPEAT);
+pen.setShaderEffect(shaderEffect);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+let shaderEffect = drawing.ShaderEffect.createLinearGradient({x: 100.0, y: 100.0}, {x: 300.0, y: 300.0}, [(0xFF00FF00).toInt(), (0xFFFF0000).toInt()], drawing.TileMode.REPEAT);
+if (shaderEffect != undefined) {
+  pen.setShaderEffect(shaderEffect!);
+}
+pen.setShaderEffect(null);
+```
+
 ## setShadowLayer
 
 ```TypeScript
@@ -565,4 +1426,168 @@ setShadowLayer(shadowLayer: ShadowLayer | null): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let font = new drawing.Font();
+    font.setSize(60);
+
+    let textBlob = drawing.TextBlob.makeFromString('hello', font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    let pen = new drawing.Pen();
+    pen.setStrokeWidth(2.0);
+
+    let penColor : common2D.Color = {alpha: 0xFF, red: 0xFF, green: 0x00, blue: 0x00};
+    pen.setColor(penColor);
+    canvas.attachPen(pen);
+    canvas.drawTextBlob(textBlob, 100, 100);
+    canvas.detachPen();
+
+    let color : common2D.Color = {alpha: 0xFF, red: 0x00, green: 0xFF, blue: 0x00};
+    let shadowLayer = drawing.ShadowLayer.create(3, -3, 3, color);
+    pen.setShadowLayer(shadowLayer);
+    canvas.attachPen(pen);
+    canvas.drawTextBlob(textBlob, 100, 200);
+    canvas.detachPen();
+
+    let brush = new drawing.Brush();
+    let brushColor : common2D.Color = {alpha: 0xFF, red: 0xFF, green: 0x00, blue: 0x00};
+    brush.setColor(brushColor);
+    canvas.attachBrush(brush);
+    canvas.drawTextBlob(textBlob, 300, 100);
+    canvas.detachBrush();
+
+    brush.setShadowLayer(shadowLayer);
+    canvas.attachBrush(brush);
+    canvas.drawTextBlob(textBlob, 300, 200);
+    canvas.detachBrush();
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context: DrawContext) {
+    const canvas = context.canvas;
+    let font = new drawing.Font();
+    font.setSize(60);
+
+    let textBlob = drawing.TextBlob.makeFromString("hello", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    if (textBlob == undefined) {
+      return;
+    }
+    let pen = new drawing.Pen();
+    pen.setStrokeWidth(2.0);
+
+    let pen_color : common2D.Color = {alpha: 0xFF, red: 0xFF, green: 0x00, blue: 0x00};
+    pen.setColor(pen_color);
+    canvas.attachPen(pen);
+    canvas.drawTextBlob(textBlob, 100, 100);
+    canvas.detachPen();
+
+    let color : common2D.Color = {alpha: 0xFF, red: 0x00, green: 0xFF, blue: 0x00};
+    let shadowLayer = drawing.ShadowLayer.create(3, -3, 3, color);
+    if (shadowLayer == undefined) {
+      return;
+    }
+    pen.setShadowLayer(shadowLayer);
+    canvas.attachPen(pen);
+    canvas.drawTextBlob(textBlob, 100, 200);
+    canvas.detachPen();
+
+    let brush = new drawing.Brush();
+    let brush_color : common2D.Color = {alpha: 0xFF, red: 0xFF, green: 0x00, blue: 0x00};
+    brush.setColor(brush_color);
+    canvas.attachBrush(brush);
+    canvas.drawTextBlob(textBlob, 300, 100);
+    canvas.detachBrush();
+
+    brush.setShadowLayer(shadowLayer);
+    canvas.attachBrush(brush);
+    canvas.drawTextBlob(textBlob, 300, 200);
+    canvas.detachBrush();
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let font = new drawing.Font();
+    font.setSize(60);
+    let textBlob = drawing.TextBlob.makeFromString("hello", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    let pen = new drawing.Pen();
+    pen.setStrokeWidth(2.0);
+    let pen_color : common2D.Color = {alpha: 0xFF, red: 0xFF, green: 0x00, blue: 0x00};
+    pen.setColor(pen_color);
+    canvas.attachPen(pen);
+    canvas.drawTextBlob(textBlob, 100, 100);
+    canvas.detachPen();
+    let color : common2D.Color = {alpha: 0xFF, red: 0x00, green: 0xFF, blue: 0x00};
+    let shadowLayer = drawing.ShadowLayer.create(3, -3, 3, color);
+    pen.setShadowLayer(shadowLayer);
+    canvas.attachPen(pen);
+    canvas.drawTextBlob(textBlob, 100, 200);
+    canvas.detachPen();
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let font = new drawing.Font();
+    font.setSize(60.0);
+    let textBlob = drawing.TextBlob.makeFromString("hello", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    if (textBlob == undefined) {
+      return;
+    }
+    let pen = new drawing.Pen();
+    pen.setStrokeWidth(2.0);
+    let pen_color : common2D.Color = {alpha: 0xFF, red: 0xFF, green: 0x00, blue: 0x00};
+    pen.setColor(pen_color);
+    canvas.attachPen(pen);
+    canvas.drawTextBlob(textBlob, 100.0, 100.0);
+    canvas.detachPen();
+    let color : common2D.Color = {alpha: 0xFF, red: 0x00, green: 0xFF, blue: 0x00};
+    let shadowLayer = drawing.ShadowLayer.create(3.0, -3.0, 3.0, color);
+    if (shadowLayer == undefined) {
+      return;
+    }
+    pen.setShadowLayer(shadowLayer);
+    canvas.attachPen(pen);
+    canvas.drawTextBlob(textBlob, 100.0, 200.0);
+    canvas.detachPen();
+    pen.setShadowLayer(null);
+    canvas.attachPen(pen);
+    canvas.drawTextBlob(textBlob, 100, 200);
+    canvas.detachPen();
+  }
+}
+```
 

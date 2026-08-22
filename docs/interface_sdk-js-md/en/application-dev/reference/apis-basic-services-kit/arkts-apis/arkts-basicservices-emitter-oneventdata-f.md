@@ -25,7 +25,7 @@ Subscribes to an event in persistent manner and executes a callback after the ev
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event to subscribe to in persistent manner. The value cannot be an empty string and exceed 10240 bytes. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be executed when the event is received. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be executed when the event is received. |
 
 **Examples**
 
@@ -38,5 +38,17 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 
 // Execute the callback after receiving the event whose ID is eventId.
 emitter.onEventData(`eventId`, callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+}
+
+emitter1.onEventData(`eventId`, callback);
 ```
 

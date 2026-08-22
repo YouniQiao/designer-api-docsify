@@ -34,6 +34,56 @@ cancel(): void
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+        .onDataResubmitted((event) => {
+          console.info('onDataResubmitted');
+          event.handler.cancel();
+        })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { Entry, Column, Component, Web } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+        .onDataResubmitted((event) => {
+          console.info('onDataResubmitted');
+          event.handler.cancel();
+        })
+    }
+  }
+}
+```
+
 ## constructor
 
 ```TypeScript
@@ -65,4 +115,54 @@ resend(): void
 <!--Device-DataResubmissionHandler-resend(): void--><!--Device-DataResubmissionHandler-resend(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+        .onDataResubmitted((event) => {
+          console.info('onDataResubmitted');
+          event.handler.resend();
+        })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { Entry, Column, Component, Web } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+        .onDataResubmitted((event) => {
+          console.info('onDataResubmitted');
+          event.handler.resend();
+        })
+    }
+  }
+}
+```
 

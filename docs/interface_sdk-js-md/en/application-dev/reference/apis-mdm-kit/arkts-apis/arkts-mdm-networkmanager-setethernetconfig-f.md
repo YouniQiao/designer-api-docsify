@@ -28,7 +28,7 @@ Sets the IP address of a specific Ethernet interface. This API is suitable for e
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | networkInterface | string | Yes | Network interface name to set. |
 | config | [InterfaceConfig](arkts-mdm-networkmanager-interfaceconfig-i.md) | Yes | Network interface configuration to set. |
 

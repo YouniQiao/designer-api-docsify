@@ -41,7 +41,15 @@ constructor()
 **示例**
 
 ```TypeScript
+let userAuth = new osAccount.UserAuth();
+```
+
+```TypeScript
 let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
+```
+
+```TypeScript
+let userIDM = new osAccount.UserIdentityManager();
 ```
 
 ## registerInputer
@@ -99,6 +107,24 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let authType: osAccount.AuthType = osAccount.AuthType.DOMAIN;
+let password: Uint8Array = new Uint8Array([0, 0, 0, 0, 0]);
+try {
+  osAccount.InputerManager.registerInputer(authType, {
+    onGetData: (authSubType: osAccount.AuthSubType, callback: osAccount.IInputData) => {
+      callback.onSetData(authSubType, password);
+    }
+  });
+  console.info('registerInputer success.');
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`registerInputer exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## unregisterInputer
 
 ```TypeScript
@@ -129,5 +155,36 @@ unregisterInputer(): void
 ```TypeScript
 let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
 pinAuth.unregisterInputer();
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let authType: osAccount.AuthType = osAccount.AuthType.DOMAIN;
+try {
+  osAccount.InputerManager.unregisterInputer(authType);
+  console.info('unregisterInputer success.');
+} catch(err) {
+  console.error(`unregisterInputer code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let authType: osAccount.AuthType = osAccount.AuthType.DOMAIN;
+try {
+  osAccount.InputerManager.unregisterInputer(authType);
+  console.info('unregisterInputer success.');
+} catch(e: Error) {
+  const err = e as BusinessError;
+  console.error(`unregisterInputer code is ${err.code}, message is ${err.message}`);
+}
 ```
 

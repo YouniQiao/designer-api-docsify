@@ -524,6 +524,13 @@ audioVolumeManager.getVolumeGroupInfos(audio.LOCAL_NETWORK_ID, (err: BusinessErr
 });
 ```
 
+```TypeScript
+async function getVolumeGroupInfos(){
+  let volumegroupinfos: audio.VolumeGroupInfos = await audio.getAudioManager().getVolumeManager().getVolumeGroupInfos(audio.LOCAL_NETWORK_ID);
+  console.info('Promise returned to indicate that the volumeGroup list is obtained.'+JSON.stringify(volumegroupinfos))
+}
+```
+
 ## getVolumeGroupInfos
 
 ```TypeScript
@@ -554,12 +561,7 @@ Get the volume group list for a networkId. This method uses a promise to return 
 
 **示例**
 
-```TypeScript
-async function getVolumeGroupInfos(){
-  let volumegroupinfos: audio.VolumeGroupInfos = await audio.getAudioManager().getVolumeManager().getVolumeGroupInfos(audio.LOCAL_NETWORK_ID);
-  console.info('Promise returned to indicate that the volumeGroup list is obtained.'+JSON.stringify(volumegroupinfos))
-}
-```
+参见 [getVolumeGroupInfos](#getvolumegroupinfos)
 
 ## getVolumeGroupInfosSync
 
@@ -730,6 +732,149 @@ Checks whether a volume type is muted.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+## off('activeVolumeTypeChange')
+
+```TypeScript
+off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void
+```
+
+取消订阅 活跃的音量类型 事件
+
+**起始版本：** 20
+
+<!--Device-AudioVolumeManager-off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void--><!--Device-AudioVolumeManager-off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'activeVolumeTypeChange' | 是 | Type of the event to unregister. Only the activeVolumeTypeChange event is supported. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 否 | Callback used to return the active volume type. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// 取消该事件的所有监听。
+audioVolumeManager.off('activeVolumeTypeChange');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let activeVolumeTypeChangeCallback = (volumeType: audio.AudioVolumeType) => {
+  console.info(`VolumeType of stream: ${volumeType} `);
+};
+
+audioVolumeManager.on('activeVolumeTypeChange', activeVolumeTypeChangeCallback);
+
+audioVolumeManager.off('activeVolumeTypeChange', activeVolumeTypeChangeCallback);
+```
+
+## off('appVolumeChangeForUid')
+
+```TypeScript
+off(type: 'appVolumeChangeForUid', callback?: Callback<VolumeEvent>): void
+```
+
+Unsubscribes to the app volume change events..
+
+**起始版本：** 19
+
+**需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioVolumeManager-off(type: 'appVolumeChangeForUid', callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'appVolumeChangeForUid', callback?: Callback<VolumeEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'appVolumeChangeForUid' | 是 | Type of the event to be unregistered. Only the appVolumeChangeForUid event is supported. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | Callback used to obtain the invoking volume change event. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// 取消该事件的所有监听。
+audioVolumeManager.off('appVolumeChangeForUid');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let appVolumeChangeForUidCallback = (volumeEvent: audio.VolumeEvent) => {
+  console.info(`VolumeType of stream: ${volumeEvent.volumeType} `);
+  console.info(`Volume level: ${volumeEvent.volume} `);
+  console.info(`Whether to updateUI: ${volumeEvent.updateUi} `);
+};
+
+audioVolumeManager.on('appVolumeChangeForUid', appVolumeChangeForUidCallback);
+
+audioVolumeManager.off('appVolumeChangeForUid', appVolumeChangeForUidCallback);
+```
+
+## off('systemVolumeChange')
+
+```TypeScript
+off(type: 'systemVolumeChange', callback?: Callback<VolumeEvent>): void
+```
+
+Unsubscribes to the system volume change events.
+
+**起始版本：** 20
+
+<!--Device-AudioVolumeManager-off(type: 'systemVolumeChange', callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'systemVolumeChange', callback?: Callback<VolumeEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'systemVolumeChange' | 是 | Type of the event to be unregistered. Only the systemVolumeChange event is supported. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | Callback used to obtain the invoking volume change event. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// 取消该事件的所有监听。
+audioVolumeManager.off('systemVolumeChange');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let systemVolumeChangeCallback = (volumeEvent: audio.VolumeEvent) => {
+  console.info(`Succeeded in using on or off function, VolumeEvent: ${volumeEvent}.`);
+};
+
+audioVolumeManager.on('systemVolumeChange', systemVolumeChangeCallback);
+
+audioVolumeManager.off('systemVolumeChange', systemVolumeChangeCallback);
+```
 
 ## offActiveVolumeTypeChange
 
@@ -950,17 +1095,17 @@ audioVolumeManager.onVolumePercentageChange(volumePercentageChangeCallback);
 audioVolumeManager.offVolumePercentageChange(volumePercentageChangeCallback);
 ```
 
-## off('activeVolumeTypeChange')
+## on('activeVolumeTypeChange')
 
 ```TypeScript
-off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void
+on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void
 ```
 
-取消订阅 活跃的音量类型 事件
+订阅 活跃的音量类型 变化事件
 
 **起始版本：** 20
 
-<!--Device-AudioVolumeManager-off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void--><!--Device-AudioVolumeManager-off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void-End-->
+<!--Device-AudioVolumeManager-on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void--><!--Device-AudioVolumeManager-on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -970,8 +1115,8 @@ off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'activeVolumeTypeChange' | 是 | Type of the event to unregister. Only the activeVolumeTypeChange event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 否 | Callback used to return the active volume type. |
+| type | 'activeVolumeTypeChange' | 是 | Type of the event to listen for. Only the activeVolumeTypeChange event is supported. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 是 | Callback used to return the active volume type. |
 
 **错误码：**
 
@@ -983,32 +1128,24 @@ off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void
 **示例**
 
 ```TypeScript
-// 取消该事件的所有监听。
-audioVolumeManager.off('activeVolumeTypeChange');
-
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let activeVolumeTypeChangeCallback = (volumeType: audio.AudioVolumeType) => {
+audioVolumeManager.on('activeVolumeTypeChange', (volumeType: audio.AudioVolumeType) => {
   console.info(`VolumeType of stream: ${volumeType} `);
-};
-
-audioVolumeManager.on('activeVolumeTypeChange', activeVolumeTypeChangeCallback);
-
-audioVolumeManager.off('activeVolumeTypeChange', activeVolumeTypeChangeCallback);
+});
 ```
 
-## off('appVolumeChangeForUid')
+## on('appVolumeChangeForUid')
 
 ```TypeScript
-off(type: 'appVolumeChangeForUid', callback?: Callback<VolumeEvent>): void
+on(type: 'appVolumeChangeForUid', uid: int, callback: Callback<VolumeEvent>): void
 ```
 
-Unsubscribes to the app volume change events..
+Listens for specified app volume change events. The app volume may changed by [setAppVolumePercentageForUid](#setappvolumepercentageforuid).
 
 **起始版本：** 19
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
 
-<!--Device-AudioVolumeManager-off(type: 'appVolumeChangeForUid', callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'appVolumeChangeForUid', callback?: Callback<VolumeEvent>): void-End-->
+<!--Device-AudioVolumeManager-on(type: 'appVolumeChangeForUid', uid: int, callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-on(type: 'appVolumeChangeForUid', uid: int, callback: Callback<VolumeEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -1018,8 +1155,9 @@ Unsubscribes to the app volume change events..
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'appVolumeChangeForUid' | 是 | Type of the event to be unregistered. Only the appVolumeChangeForUid event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | Callback used to obtain the invoking volume change event. |
+| type | 'appVolumeChangeForUid' | 是 | Type of the event to listen for. Only the appVolumeChangeForUid event is supported. |
+| uid | int | 是 | The app's uid. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the app volume change event. |
 
 **错误码：**
 
@@ -1032,32 +1170,26 @@ Unsubscribes to the app volume change events..
 **示例**
 
 ```TypeScript
-// 取消该事件的所有监听。
-audioVolumeManager.off('appVolumeChangeForUid');
+let uid: number = 20010041; // 应用ID。
 
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let appVolumeChangeForUidCallback = (volumeEvent: audio.VolumeEvent) => {
+audioVolumeManager.on('appVolumeChangeForUid', uid, (volumeEvent: audio.VolumeEvent) => {
   console.info(`VolumeType of stream: ${volumeEvent.volumeType} `);
   console.info(`Volume level: ${volumeEvent.volume} `);
   console.info(`Whether to updateUI: ${volumeEvent.updateUi} `);
-};
-
-audioVolumeManager.on('appVolumeChangeForUid', appVolumeChangeForUidCallback);
-
-audioVolumeManager.off('appVolumeChangeForUid', appVolumeChangeForUidCallback);
+});
 ```
 
-## off('systemVolumeChange')
+## on('systemVolumeChange')
 
 ```TypeScript
-off(type: 'systemVolumeChange', callback?: Callback<VolumeEvent>): void
+on(type: 'systemVolumeChange', callback: Callback<VolumeEvent>): void
 ```
 
-Unsubscribes to the system volume change events.
+Listens for system volume change events. This method uses a callback to get volume change events.
 
 **起始版本：** 20
 
-<!--Device-AudioVolumeManager-off(type: 'systemVolumeChange', callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'systemVolumeChange', callback?: Callback<VolumeEvent>): void-End-->
+<!--Device-AudioVolumeManager-on(type: 'systemVolumeChange', callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-on(type: 'systemVolumeChange', callback: Callback<VolumeEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -1067,8 +1199,8 @@ Unsubscribes to the system volume change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'systemVolumeChange' | 是 | Type of the event to be unregistered. Only the systemVolumeChange event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | Callback used to obtain the invoking volume change event. |
+| type | 'systemVolumeChange' | 是 | Type of the event to listen for. Only the systemVolumeChange event is supported. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the system volume change event. |
 
 **错误码：**
 
@@ -1080,17 +1212,9 @@ Unsubscribes to the system volume change events.
 **示例**
 
 ```TypeScript
-// 取消该事件的所有监听。
-audioVolumeManager.off('systemVolumeChange');
-
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let systemVolumeChangeCallback = (volumeEvent: audio.VolumeEvent) => {
-  console.info(`Succeeded in using on or off function, VolumeEvent: ${volumeEvent}.`);
-};
-
-audioVolumeManager.on('systemVolumeChange', systemVolumeChangeCallback);
-
-audioVolumeManager.off('systemVolumeChange', systemVolumeChangeCallback);
+audioVolumeManager.on('systemVolumeChange', (volumeEvent: audio.VolumeEvent) => {
+  console.info(`Succeeded in using on function, VolumeEvent: ${volumeEvent}.`);
+});
 ```
 
 ## onActiveVolumeTypeChange
@@ -1281,128 +1405,6 @@ audioVolumeManager.onVolumePercentageChange((volumeEvent: audio.VolumeEvent) => 
   console.info(`Volume level: ${volumeEvent.volume} `);
   console.info(`Volume percentage: ${volumeEvent.percentage} `);
   console.info(`Whether to updateUI: ${volumeEvent.updateUi} `);
-});
-```
-
-## on('activeVolumeTypeChange')
-
-```TypeScript
-on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void
-```
-
-订阅 活跃的音量类型 变化事件
-
-**起始版本：** 20
-
-<!--Device-AudioVolumeManager-on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void--><!--Device-AudioVolumeManager-on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Volume
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'activeVolumeTypeChange' | 是 | Type of the event to listen for. Only the activeVolumeTypeChange event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 是 | Callback used to return the active volume type. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-audioVolumeManager.on('activeVolumeTypeChange', (volumeType: audio.AudioVolumeType) => {
-  console.info(`VolumeType of stream: ${volumeType} `);
-});
-```
-
-## on('appVolumeChangeForUid')
-
-```TypeScript
-on(type: 'appVolumeChangeForUid', uid: int, callback: Callback<VolumeEvent>): void
-```
-
-Listens for specified app volume change events. The app volume may changed by [setAppVolumePercentageForUid](#setappvolumepercentageforuid).
-
-**起始版本：** 19
-
-**需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
-
-<!--Device-AudioVolumeManager-on(type: 'appVolumeChangeForUid', uid: int, callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-on(type: 'appVolumeChangeForUid', uid: int, callback: Callback<VolumeEvent>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Volume
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'appVolumeChangeForUid' | 是 | Type of the event to listen for. Only the appVolumeChangeForUid event is supported. |
-| uid | int | 是 | The app's uid. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the app volume change event. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-let uid: number = 20010041; // 应用ID。
-
-audioVolumeManager.on('appVolumeChangeForUid', uid, (volumeEvent: audio.VolumeEvent) => {
-  console.info(`VolumeType of stream: ${volumeEvent.volumeType} `);
-  console.info(`Volume level: ${volumeEvent.volume} `);
-  console.info(`Whether to updateUI: ${volumeEvent.updateUi} `);
-});
-```
-
-## on('systemVolumeChange')
-
-```TypeScript
-on(type: 'systemVolumeChange', callback: Callback<VolumeEvent>): void
-```
-
-Listens for system volume change events. This method uses a callback to get volume change events.
-
-**起始版本：** 20
-
-<!--Device-AudioVolumeManager-on(type: 'systemVolumeChange', callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-on(type: 'systemVolumeChange', callback: Callback<VolumeEvent>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Volume
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'systemVolumeChange' | 是 | Type of the event to listen for. Only the systemVolumeChange event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the system volume change event. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-audioVolumeManager.on('systemVolumeChange', (volumeEvent: audio.VolumeEvent) => {
-  console.info(`Succeeded in using on function, VolumeEvent: ${volumeEvent}.`);
 });
 ```
 

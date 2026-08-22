@@ -175,6 +175,54 @@ Obtains the list of all accessibility-accessible windows on the current display 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
+**Examples**
+
+```TypeScript
+import {
+  AccessibilityEvent, 
+  AccessibilityExtensionContext
+} from '@kit.AccessibilityKit';
+
+export default class AccessibilityManager {
+  private static instance: AccessibilityManager;
+  context?: AccessibilityExtensionContext;
+
+  static getInstance(): AccessibilityManager {
+    if (!AccessibilityManager.instance) {
+      AccessibilityManager.instance = new AccessibilityManager();
+    }
+    return AccessibilityManager.instance;
+  }
+
+  onStart(context: AccessibilityExtensionContext) {
+    this.context = context;
+  }
+
+  onStop() {
+    this.context = undefined;
+  }
+
+  onEvent(accessibilityEvent: AccessibilityEvent): void {
+    if (!this.context) {
+      console.error('context is not available!');
+      return;
+    }
+
+    try {
+      let displayId: number = 0;
+      let windowList = this.context.getAccessibilityWindowsSync(displayId);
+      if (windowList) {
+        for (let window of windowList) {
+          console.info(`getAccessibilityWindowsSync: windowId: ${window.windowId}`);
+        }
+      }
+    } catch (err) {
+      console.error(`[FAILED] getAccessibilityWindowsSync: ${err.code} ${err.message}`)
+    }
+  }
+}
+```
+
 ## getDefaultFocusedElementIds
 
 ```TypeScript
@@ -383,6 +431,52 @@ The active window refers to the foreground app window that currently gains focus
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 | [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
 
+**Examples**
+
+```TypeScript
+import {
+  AccessibilityElement,
+  AccessibilityEvent, 
+  AccessibilityExtensionContext
+} from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class AccessibilityManager {
+  private static instance: AccessibilityManager;
+  context?: AccessibilityExtensionContext;
+
+  static getInstance(): AccessibilityManager {
+    if (!AccessibilityManager.instance) {
+      AccessibilityManager.instance = new AccessibilityManager();
+    }
+    return AccessibilityManager.instance;
+  }
+
+  onStart(context: AccessibilityExtensionContext) {
+    this.context = context;
+  }
+
+  onStop() {
+    this.context = undefined;
+  }
+
+  onEvent(accessibilityEvent: AccessibilityEvent): void {
+    if (!this.context) {
+      console.error('context is not available!');
+      return;
+    }
+
+    let windowId: number = 0;
+
+    this.context.getRootInActiveWindow(windowId).then((element: AccessibilityElement) => {
+      console.info(`Succeeded in get root inactive window element, ${element.bundleName}`);
+    }).catch((err: BusinessError) => {
+      console.error(`failed to get root inactive window element, Code is ${err.code}, message is ${err.message}`);
+    });
+  }
+}
+```
+
 ## holdRunningLockSync
 
 ```TypeScript
@@ -519,37 +613,6 @@ export default class AccessibilityManager {
 }
 ```
 
-## offPreDisconnect
-
-```TypeScript
-offPreDisconnect(callback?: Callback<void>): void
-```
-
-Unregister accessibilityExtensionAbility disconnect callback.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
-
-<!--Device-AccessibilityExtensionContext-offPreDisconnect(callback?: Callback<void>): void--><!--Device-AccessibilityExtensionContext-offPreDisconnect(callback?: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.BarrierFree.Accessibility.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Indicates the callback function. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-
 ## off('preDisconnect')
 
 ```TypeScript
@@ -573,7 +636,7 @@ Unregisters the pre-disconnect callback registered with the accessibility servic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'preDisconnect' | Yes | Event name, which is fixed to 'preDisconnect', indicating that the accessibility extension service is about to be closed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback for the event that the accessibility extension service is about to be closed. It must be the same as the callback in [on('preDisconnect')](#onpredisconnect). If this parameter is not specified, all registered events are unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback for the event that the accessibility extension service is about to be closed. It must be the same as the callback in [on('preDisconnect')](#onpredisconnect). If this parameter is not specified, all registered events are unregistered. |
 
 **Error codes:**
 
@@ -626,19 +689,19 @@ export default class AccessibilityManager {
 }
 ```
 
-## onPreDisconnect
+## offPreDisconnect
 
 ```TypeScript
-onPreDisconnect(callback: Callback<void>): void
+offPreDisconnect(callback?: Callback<void>): void
 ```
 
-Register accessibilityExtensionAbility disconnect callback.
+Unregister accessibilityExtensionAbility disconnect callback.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
-<!--Device-AccessibilityExtensionContext-onPreDisconnect(callback: Callback<void>): void--><!--Device-AccessibilityExtensionContext-onPreDisconnect(callback: Callback<void>): void-End-->
+<!--Device-AccessibilityExtensionContext-offPreDisconnect(callback?: Callback<void>): void--><!--Device-AccessibilityExtensionContext-offPreDisconnect(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -648,7 +711,7 @@ Register accessibilityExtensionAbility disconnect callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Indicates the callback function. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Indicates the callback function. |
 
 **Error codes:**
 
@@ -682,7 +745,7 @@ This registration function must be used together with [notifyDisconnect](#notify
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'preDisconnect' | Yes | Listening event name, which is fixed to 'preDisconnect', indicating the event that the Accessibility Extension Service is about to be closed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback invoked when the Accessibility Extension Service is about to be closed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the Accessibility Extension Service is about to be closed. |
 
 **Error codes:**
 
@@ -734,6 +797,37 @@ export default class AccessibilityManager {
   }
 }
 ```
+
+## onPreDisconnect
+
+```TypeScript
+onPreDisconnect(callback: Callback<void>): void
+```
+
+Register accessibilityExtensionAbility disconnect callback.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
+
+<!--Device-AccessibilityExtensionContext-onPreDisconnect(callback: Callback<void>): void--><!--Device-AccessibilityExtensionContext-onPreDisconnect(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Indicates the callback function. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## removeAccessibilityVirtualNodes
 
@@ -796,7 +890,7 @@ Starts a foreground page. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Want type parameter, which passes in the information about the ability to start, such as the ability name and bundle name. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want type parameter, which passes in the information about the ability to start, such as the ability name and bundle name. |
 
 **Return value:**
 

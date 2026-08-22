@@ -108,3 +108,7 @@ Cast Audio to the remote devices or cast back local device
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600104](../errorcode-avsession.md#6600104-远端会话连接失败) | The remote session connection failed. |
 
+**示例**
+
+参见 [castAudioSession](#castaudiosession)
+

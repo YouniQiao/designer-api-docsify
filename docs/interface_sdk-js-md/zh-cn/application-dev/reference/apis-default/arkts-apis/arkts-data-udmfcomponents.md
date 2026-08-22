@@ -11,11 +11,11 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ContentFormCard](arkts-dataudmfcomponents-contentformcard-s.md) | 内容卡片控件，用于在应用内展示标题、描述、内容图片、应用信息等。 |
+| [ContentFormCard](arkts-data-udmfcomponents-contentformcard-s.md) | 内容卡片控件，用于在应用内展示标题、描述、内容图片、应用信息等。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [FormType](arkts-dataudmfcomponents-formtype-e.md) | 内容卡片类型枚举，提供了大、中、小三种尺寸。 |
+| [FormType](arkts-data-udmfcomponents-formtype-e.md) | 内容卡片类型枚举，提供了大、中、小三种尺寸。 |
 

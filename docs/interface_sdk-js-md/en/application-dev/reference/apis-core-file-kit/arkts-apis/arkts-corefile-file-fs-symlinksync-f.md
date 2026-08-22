@@ -52,3 +52,11 @@ Creates a symbolic link based on the file path. This API returns the result sync
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+let srcFile = pathDir + "/test.txt";
+let dstFile = pathDir + "/test";
+fs.symlinkSync(srcFile, dstFile);
+```
+

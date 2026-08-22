@@ -64,6 +64,23 @@ connection.setGlobalHttpProxy(httpProxy, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let exclusionStr = "192.168,baidu.com";
+let exclusionArray = exclusionStr.split(',');
+connection.setGlobalHttpProxy({
+  host: "192.168.xx.xxx",
+  port: 8080,
+  exclusionList: exclusionArray
+} as connection.HttpProxy).then(() => {
+  console.info("success");
+}).catch((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+});
+```
+
 
 ## setGlobalHttpProxy
 
@@ -108,20 +125,5 @@ function setGlobalHttpProxy(httpProxy: HttpProxy): Promise<void>
 
 **示例**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let exclusionStr = "192.168,baidu.com";
-let exclusionArray = exclusionStr.split(',');
-connection.setGlobalHttpProxy({
-  host: "192.168.xx.xxx",
-  port: 8080,
-  exclusionList: exclusionArray
-} as connection.HttpProxy).then(() => {
-  console.info("success");
-}).catch((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
+参见 [setGlobalHttpProxy](#setglobalhttpproxy)
 

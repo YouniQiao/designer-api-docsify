@@ -29,7 +29,7 @@ Obtains all private credentials. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Yes | Callback used to return the result. If all private credentials are obtained, **err** is **null**, and **data** is the **credentialList** attribute in the [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md) object. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Yes | Callback used to return the result. If all private credentials are obtained, **err** is **null**, and **data** is the **credentialList** attribute in the [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md) object. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -60,6 +60,28 @@ try {
       }
     }
   });
+} catch (error) {
+  console.error(`Failed to get all app private certificates. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  certificateManager.getAllAppPrivateCertificates().then((cmResult) => {
+    if (cmResult === undefined) { // If the number of private credentials is 0, return undefined in cmResult.
+      console.info('The count of the app private certificates is 0.');
+    } else if (cmResult.credentialList == undefined) {
+      console.info('The result of getting all app private certificates is undefined.');
+    } else {
+      let list = cmResult.credentialList;
+      console.info('Succeeded in getting all app private certificates.');
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get all app private certificates. Code: ${err.code}, message: ${err.message}`);
+  })
 } catch (error) {
   console.error(`Failed to get all app private certificates. Code: ${error.code}, message: ${error.message}`);
 }
@@ -100,25 +122,5 @@ Obtains all private credentials. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  certificateManager.getAllAppPrivateCertificates().then((cmResult) => {
-    if (cmResult === undefined) { // If the number of private credentials is 0, return undefined in cmResult.
-      console.info('The count of the app private certificates is 0.');
-    } else if (cmResult.credentialList == undefined) {
-      console.info('The result of getting all app private certificates is undefined.');
-    } else {
-      let list = cmResult.credentialList;
-      console.info('Succeeded in getting all app private certificates.');
-    }
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get all app private certificates. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error) {
-  console.error(`Failed to get all app private certificates. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [getAllAppPrivateCertificates](#getallappprivatecertificates)
 

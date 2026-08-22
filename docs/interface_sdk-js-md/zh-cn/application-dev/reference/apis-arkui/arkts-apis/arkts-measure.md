@@ -3,7 +3,7 @@
 The **measure** module provides APIs for measuring text metrics, such as text height and width.
  > **NOTE**
  >
- > - This module cannot be used in the file declaration of the [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiability-uiability-c.md). In
+ > - This module cannot be used in the file declaration of the [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md). In
  > other words, the APIs of this module can be used only after a component instance is created; they cannot be called
  > in the lifecycle of the UIAbility.
  >

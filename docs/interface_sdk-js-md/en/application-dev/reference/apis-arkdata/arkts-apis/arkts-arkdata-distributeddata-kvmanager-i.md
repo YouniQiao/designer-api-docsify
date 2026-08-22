@@ -43,7 +43,7 @@ Closes a KV store. This API uses an asynchronous callback to return the result.
 | appId | string | Yes | Bundle name of the app that invokes the KV store. |
 | storeId | string | Yes | Unique identifier of the KV store to close. The length cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md). |
 | kvStore | [KVStore](arkts-arkdata-distributeddata-kvstore-i.md) | Yes | KV store to close. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -66,6 +66,35 @@ try {
         kvManager.closeKVStore('appId', 'storeId', kvStore, function (err, data) {
             console.log('closeKVStore success');
         });
+    });
+} catch (e) {
+    console.log('closeKVStore e ' + e);
+}
+```
+
+```TypeScript
+let kvManager;
+let kvStore;
+const options = {
+    createIfMissing: true,
+    encrypt: false,
+    backup: false,
+    autoSync: false,
+    kvStoreType: distributedData.KVStoreType.SINGLE_VERSION,
+    schema: undefined,
+    securityLevel: distributedData.SecurityLevel.S3,
+}
+try {
+    kvManager.getKVStore('storeId', options).then(async (store) => {
+        console.log('getKVStore success');
+        kvStore = store;
+        kvManager.closeKVStore('appId', 'storeId', kvStore).then(() => {
+            console.log('closeKVStore success');
+        }).catch((err) => {
+            console.log('closeKVStore err ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.log('CloseKVStore getKVStore err ' + JSON.stringify(err));
     });
 } catch (e) {
     console.log('closeKVStore e ' + e);
@@ -106,34 +135,7 @@ Closes a KV store. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-let kvManager;
-let kvStore;
-const options = {
-    createIfMissing: true,
-    encrypt: false,
-    backup: false,
-    autoSync: false,
-    kvStoreType: distributedData.KVStoreType.SINGLE_VERSION,
-    schema: undefined,
-    securityLevel: distributedData.SecurityLevel.S3,
-}
-try {
-    kvManager.getKVStore('storeId', options).then(async (store) => {
-        console.log('getKVStore success');
-        kvStore = store;
-        kvManager.closeKVStore('appId', 'storeId', kvStore).then(() => {
-            console.log('closeKVStore success');
-        }).catch((err) => {
-            console.log('closeKVStore err ' + JSON.stringify(err));
-        });
-    }).catch((err) => {
-        console.log('CloseKVStore getKVStore err ' + JSON.stringify(err));
-    });
-} catch (e) {
-    console.log('closeKVStore e ' + e);
-}
-```
+See [closeKVStore](#closekvstore)
 
 ## deleteKVStore
 
@@ -159,7 +161,7 @@ Deletes a KV store. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | appId | string | Yes | Bundle name of the app that invokes the KV store. |
 | storeId | string | Yes | Unique identifier of the KV store to delete. The length cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -185,6 +187,35 @@ try {
     });
 } catch (e) {
     console.log('DeleteKVStore e ' + e);
+}
+```
+
+```TypeScript
+let kvManager;
+let kvStore;
+const options = {
+    createIfMissing : true,
+    encrypt : false,
+    backup : false,
+    autoSync : true,
+    kvStoreType : distributedData.KVStoreType.SINGLE_VERSION,
+    schema : undefined,
+    securityLevel : distributedData.SecurityLevel.S3,
+}
+try {
+    kvManager.getKVStore('storeId', options).then(async (store) => {
+        console.log('getKVStore success');
+        kvStore = store;
+        kvManager.deleteKVStore('appId', 'storeId').then(() => {
+            console.log('deleteKVStore success');
+        }).catch((err) => {
+            console.log('deleteKVStore err ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.log('getKVStore err ' + JSON.stringify(err));
+    });
+} catch (e) {
+    console.log('deleteKVStore e ' + e);
 }
 ```
 
@@ -221,34 +252,7 @@ Deletes a KV store. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-let kvManager;
-let kvStore;
-const options = {
-    createIfMissing : true,
-    encrypt : false,
-    backup : false,
-    autoSync : true,
-    kvStoreType : distributedData.KVStoreType.SINGLE_VERSION,
-    schema : undefined,
-    securityLevel : distributedData.SecurityLevel.S3,
-}
-try {
-    kvManager.getKVStore('storeId', options).then(async (store) => {
-        console.log('getKVStore success');
-        kvStore = store;
-        kvManager.deleteKVStore('appId', 'storeId').then(() => {
-            console.log('deleteKVStore success');
-        }).catch((err) => {
-            console.log('deleteKVStore err ' + JSON.stringify(err));
-        });
-    }).catch((err) => {
-        console.log('getKVStore err ' + JSON.stringify(err));
-    });
-} catch (e) {
-    console.log('deleteKVStore e ' + e);
-}
-```
+See [deleteKVStore](#deletekvstore)
 
 ## getAllKVStoreId
 
@@ -273,7 +277,7 @@ Obtains the IDs of all KV stores that are created by getKVStore() and have not b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appId | string | Yes | Bundle name of the app that invokes the KV store. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string[]&gt; | Yes | Callback used to return the IDs of all created KV stores. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | Yes | Callback used to return the IDs of all created KV stores. |
 
 **Examples**
 
@@ -286,6 +290,21 @@ try {
     });
 } catch (e) {
     console.log('GetAllKVStoreId e ' + e);
+}
+```
+
+```TypeScript
+let kvManager;
+try {
+    console.log('GetAllKVStoreId');
+    kvManager.getAllKVStoreId('appId').then((data) => {
+        console.log('getAllKVStoreId success');
+        console.log('size = ' + data.length);
+    }).catch((err) => {
+        console.log('getAllKVStoreId err ' + JSON.stringify(err));
+    });
+} catch(e) {
+    console.log('getAllKVStoreId e ' + e);
 }
 ```
 
@@ -321,20 +340,7 @@ Obtains the IDs of all KV stores that are created by getKVStore() and have not b
 
 **Examples**
 
-```TypeScript
-let kvManager;
-try {
-    console.log('GetAllKVStoreId');
-    kvManager.getAllKVStoreId('appId').then((data) => {
-        console.log('getAllKVStoreId success');
-        console.log('size = ' + data.length);
-    }).catch((err) => {
-        console.log('getAllKVStoreId err ' + JSON.stringify(err));
-    });
-} catch(e) {
-    console.log('getAllKVStoreId e ' + e);
-}
-```
+See [getAllKVStoreId](#getallkvstoreid)
 
 ## getKVStore
 
@@ -368,6 +374,31 @@ Creates and obtains a KV store. This API uses a promise to return the result.
 | Promise&lt;T&gt;, &lt;T extends KVStore&gt; | Promise used to return the KV store instance created. |
 
 **Examples**
+
+```TypeScript
+let kvStore;
+let kvManager;
+try {
+    const options = {
+        createIfMissing : true,
+        encrypt : false,
+        backup : false,
+        autoSync : true,
+        kvStoreType : distributedData.KVStoreType.SINGLE_VERSION,
+        securityLevel : distributedData.SecurityLevel.S3,
+    };
+    kvManager.getKVStore('storeId', options, function (err, store) {
+        if (err) {
+            console.log("getKVStore err: "  + JSON.stringify(err));
+            return;
+        }
+        console.log("getKVStore success");
+        kvStore = store;
+    });
+} catch (e) {
+    console.log("An unexpected error occurred. Error:" + e);
+}
+```
 
 ```TypeScript
 let kvStore;
@@ -416,34 +447,11 @@ Creates and obtains a KV store. This API uses an asynchronous callback to return
 | --- | --- | --- | --- |
 | storeId | string | Yes | Unique identifier of the KV store. The length cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md). |
 | options | Options | Yes | Configuration of the KV store. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | Yes | Callback used to return the KV store instance created. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the KV store instance created. |
 
 **Examples**
 
-```TypeScript
-let kvStore;
-let kvManager;
-try {
-    const options = {
-        createIfMissing : true,
-        encrypt : false,
-        backup : false,
-        autoSync : true,
-        kvStoreType : distributedData.KVStoreType.SINGLE_VERSION,
-        securityLevel : distributedData.SecurityLevel.S3,
-    };
-    kvManager.getKVStore('storeId', options, function (err, store) {
-        if (err) {
-            console.log("getKVStore err: "  + JSON.stringify(err));
-            return;
-        }
-        console.log("getKVStore success");
-        kvStore = store;
-    });
-} catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
-}
-```
+See [getKVStore](#getkvstore)
 
 ## off_distributedDataServiceDie
 
@@ -468,7 +476,7 @@ Unsubscribes from service status changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'distributedDataServiceDie' | Yes | Event type. The value is **distributedDataServiceDie**, which indicates service status changes. |
-| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for service status changes will be unregistered. |
+| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for service status changes will be unregistered. |
 
 **Examples**
 
@@ -508,7 +516,7 @@ Subscribes to service status changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'distributedDataServiceDie' | Yes | Event type. The value is **distributedDataServiceDie**, which indicates service status changes. |
-| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 

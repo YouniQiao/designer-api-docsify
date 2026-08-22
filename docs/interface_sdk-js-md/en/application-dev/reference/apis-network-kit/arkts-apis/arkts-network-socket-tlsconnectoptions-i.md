@@ -14,22 +14,6 @@ Defines TLS connection options.
 import { socket } from '@kit.NetworkKit';
 ```
 
-## ALPNProtocols
-
-```TypeScript
-ALPNProtocols?: Array<string>
-```
-
-ALPN protocol. The value range is ["spdy/1", "http/1.1"]. The default value is **[]**.
-
-**Type:** Array&lt;string&gt;
-
-**Since:** 9
-
-<!--Device-TLSConnectOptions-ALPNProtocols?: Array<string>--><!--Device-TLSConnectOptions-ALPNProtocols?: Array<string>-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
 ## address
 
 ```TypeScript
@@ -43,6 +27,22 @@ Gateway address.
 **Since:** 9
 
 <!--Device-TLSConnectOptions-address: NetAddress--><!--Device-TLSConnectOptions-address: NetAddress-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## ALPNProtocols
+
+```TypeScript
+ALPNProtocols?: Array<string>
+```
+
+ALPN protocol. The value range is ["spdy/1", "http/1.1"]. The default value is **[]**.
+
+**Type:** Array&lt;string&gt;
+
+**Since:** 9
+
+<!--Device-TLSConnectOptions-ALPNProtocols?: Array<string>--><!--Device-TLSConnectOptions-ALPNProtocols?: Array<string>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

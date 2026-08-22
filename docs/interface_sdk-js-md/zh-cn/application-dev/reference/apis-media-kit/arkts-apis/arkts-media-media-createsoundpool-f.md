@@ -66,6 +66,28 @@ media.createSoundPool(5, audioRendererInfo, (error, soundPool_: media.SoundPool)
 });
 ```
 
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let soundPool: media.SoundPool;
+let audioRendererInfo: audio.AudioRendererInfo = {
+  usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
+  rendererFlags : 0
+};
+
+media.createSoundPool(5, audioRendererInfo).then((soundpool_: media.SoundPool) => {
+  if (soundpool_) {
+    soundPool = soundpool_;
+    console.info('Succeeded in creating SoundPool');
+  } else {
+    console.error('Failed to create SoundPool');
+  }
+}, (error: BusinessError) => {
+  console.error(`soundpool catchCallback, error message:${error.message}`);
+});
+```
+
 
 ## createSoundPool
 
@@ -102,6 +124,10 @@ Creates a **SoundPool** instance. This API uses an asynchronous callback to retu
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
+
+**示例**
+
+参见 [createSoundPool](#createsoundpool)
 
 
 ## createSoundPool
@@ -145,27 +171,7 @@ function createSoundPool(maxStreams: number, audioRenderInfo: audio.AudioRendere
 
 **示例**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let soundPool: media.SoundPool;
-let audioRendererInfo: audio.AudioRendererInfo = {
-  usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
-  rendererFlags : 0
-};
-
-media.createSoundPool(5, audioRendererInfo).then((soundpool_: media.SoundPool) => {
-  if (soundpool_) {
-    soundPool = soundpool_;
-    console.info('Succeeded in creating SoundPool');
-  } else {
-    console.error('Failed to create SoundPool');
-  }
-}, (error: BusinessError) => {
-  console.error(`soundpool catchCallback, error message:${error.message}`);
-});
-```
+参见 [createSoundPool](#createsoundpool)
 
 
 ## createSoundPool
@@ -204,4 +210,8 @@ Creates a **SoundPool** instance. This API uses a promise to return the result.
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+
+**示例**
+
+参见 [createSoundPool](#createsoundpool)
 

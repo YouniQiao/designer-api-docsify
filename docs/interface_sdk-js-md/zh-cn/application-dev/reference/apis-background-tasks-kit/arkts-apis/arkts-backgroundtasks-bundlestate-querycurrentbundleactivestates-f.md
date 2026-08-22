@@ -53,6 +53,21 @@ bundleState.queryCurrentBundleActiveStates(0, 20000000000000, (err: BusinessErro
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
+
+bundleState.queryCurrentBundleActiveStates(0, 20000000000000).then((res: Array<bundleState.BundleActiveState>) => {
+  console.info('BUNDLE_ACTIVE queryCurrentBundleActiveStates promise success.');
+  for (let i = 0; i < res.length; i++) {
+    console.info('BUNDLE_ACTIVE queryCurrentBundleActiveStates promise number : ' + (i + 1));
+    console.info('BUNDLE_ACTIVE queryCurrentBundleActiveStates promise result ' + JSON.stringify(res[i]));
+  }
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE queryCurrentBundleActiveStates promise failed, because: ' + err.code);
+});
+```
+
 
 ## queryCurrentBundleActiveStates
 
@@ -85,18 +100,5 @@ Queries state data of the current bundle within a specified period.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleState } from '@kit.BackgroundTasksKit';
-
-bundleState.queryCurrentBundleActiveStates(0, 20000000000000).then((res: Array<bundleState.BundleActiveState>) => {
-  console.info('BUNDLE_ACTIVE queryCurrentBundleActiveStates promise success.');
-  for (let i = 0; i < res.length; i++) {
-    console.info('BUNDLE_ACTIVE queryCurrentBundleActiveStates promise number : ' + (i + 1));
-    console.info('BUNDLE_ACTIVE queryCurrentBundleActiveStates promise result ' + JSON.stringify(res[i]));
-  }
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryCurrentBundleActiveStates promise failed, because: ' + err.code);
-});
-```
+参见 [queryCurrentBundleActiveStates](#querycurrentbundleactivestates)
 

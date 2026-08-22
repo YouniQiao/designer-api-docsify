@@ -90,7 +90,7 @@ Moves a file and forcibly overwrites the file with the same name in the destinat
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the file to move. |
 | dest | string | Yes | Application sandbox path of the destination file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is moved successfully, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is moved successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -144,7 +144,7 @@ Moves a file to the target path. You can set the conflict handling mode. This AP
 | src | string | Yes | Application sandbox path of the file to move. |
 | dest | string | Yes | Application sandbox path of the destination file. |
 | mode | int | Yes | Move mode. <br> The value **0** means to overwrite the file with the same name in the destination directory; the value **1** means to throw an exception. The default value is **0**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is moved successfully, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is moved successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

@@ -26,7 +26,7 @@ Obtains the keyboard type of the input device, such as full keyboard and numeric
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | int | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KeyboardType](arkts-input-inputdevice-keyboardtype-e.md)&gt; | Yes | Callback function. If the query is successful, **err** is **undefined**, and **data** is the keyboard type of the input device. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KeyboardType](arkts-input-inputdevice-keyboardtype-e.md)&gt; | Yes | Callback function. If the query is successful, **err** is **undefined**, and **data** is the keyboard type of the input device. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -56,6 +56,33 @@ struct Index {
               }
               console.info(`Keyboard type: ${JSON.stringify(type)}`);
             });
+          } catch (error) {
+            console.error(`Failed to get keyboard type, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          // Query the keyboard type of the input device whose ID is 1.
+          try {
+            inputDevice.getKeyboardType(1).then((type: number) => {
+              console.info(`Keyboard type: ${JSON.stringify(type)}`);
+            }).catch((error: BusinessError) => {
+              console.error(`Get keyboard type failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            })
           } catch (error) {
             console.error(`Failed to get keyboard type, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
@@ -100,30 +127,5 @@ Obtains the keyboard type of an input device. This API uses a promise to return 
 
 **Examples**
 
-```TypeScript
-import { inputDevice } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          // Query the keyboard type of the input device whose ID is 1.
-          try {
-            inputDevice.getKeyboardType(1).then((type: number) => {
-              console.info(`Keyboard type: ${JSON.stringify(type)}`);
-            }).catch((error: BusinessError) => {
-              console.error(`Get keyboard type failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`Failed to get keyboard type, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
+See [getKeyboardType](#getkeyboardtype)
 

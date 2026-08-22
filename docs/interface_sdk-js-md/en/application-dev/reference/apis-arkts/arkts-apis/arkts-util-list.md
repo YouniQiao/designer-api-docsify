@@ -15,7 +15,7 @@ import { ListReplaceCb } from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [List](arkts-arkts-utillist-list-c.md) | List is implemented based on the singly linked list. Each node has a reference pointing to the next element. When querying an element, the system traverses the list from the beginning. |
+| [List](arkts-arkts-util-list-list-c.md) | List is implemented based on the singly linked list. Each node has a reference pointing to the next element. When querying an element, the system traverses the list from the beginning. |
 
 ### Types
 

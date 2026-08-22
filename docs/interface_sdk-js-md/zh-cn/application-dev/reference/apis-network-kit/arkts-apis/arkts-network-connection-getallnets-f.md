@@ -69,6 +69,26 @@ connection.getAllNets((error: BusinessError|null, data: Array<connection.NetHand
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getAllNets().then((data: connection.NetHandle[]) => {
+  console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getAllNets().then((data: Array<connection.NetHandle>|undefined) => {
+  console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
+});
+```
+
 
 ## getAllNets
 
@@ -102,23 +122,5 @@ function getAllNets(): Promise<Array<NetHandle>>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getAllNets().then((data: connection.NetHandle[]) => {
-  console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getAllNets().then((data: Array<connection.NetHandle>|undefined) => {
-  console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
-});
-```
+参见 [getAllNets](#getallnets)
 

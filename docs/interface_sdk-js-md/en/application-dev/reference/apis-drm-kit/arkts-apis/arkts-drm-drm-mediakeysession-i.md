@@ -43,6 +43,22 @@ Checks the status of the media keys in use.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+try {
+  let keyStatus: drm.MediaKeyStatus[] =  mediaKeySession.checkMediaKeyStatus();
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`checkMediaKeyStatus ERROR: ${error}`);
+}
+```
+
 ## clearMediaKeys
 
 ```TypeScript
@@ -66,6 +82,29 @@ Clears the media keys in use.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+// mediaKeyResponse is obtained from the DRM service. Pass in the actual value as required.
+let mediaKeyResponse = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySession.processMediaKeyResponse(mediaKeyResponse).then((mediaKeyId: Uint8Array) => {
+  console.info('processMediaKeyResponse:' + mediaKeyId);
+}).catch((err: BusinessError) => {
+  console.error(`processMediaKeyResponse: ERROR: ${err}`);
+});
+try {
+  mediaKeySession.clearMediaKeys();
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`clearMediaKeys ERROR: ${error}`);
+}
+```
+
 ## destroy
 
 ```TypeScript
@@ -88,6 +127,35 @@ Destroys this MediaKeySession instance.
 | --- | --- |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+try {
+  mediaKeySession.destroy();
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`mediaKeySession destroy ERROR: ${error}`);
+}
+```
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+try {
+  mediaKeySystem.destroy();
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`mediaKeySystem destroy ERROR: ${error}`);
+}
+```
 
 ## generateMediaKeyRequest
 
@@ -128,6 +196,23 @@ Generates a media key request. This API uses a promise to return the result.
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
 
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+// Protection System Specific Header (PSSH) data is embedded in the encrypted stream. For MP4 files, it is located in the pssh box. In DASH streams, it is located in the MPD and MP4 pssh box. For HLS + TS streams, it is located in the m3u8 file and each TS segment. Pass in the actual value as required.
+let uint8pssh = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySession.generateMediaKeyRequest("video/avc", uint8pssh, drm.MediaKeyType.MEDIA_KEY_TYPE_ONLINE).then((mediaKeyRequest: drm.MediaKeyRequest) =>{
+  console.info('generateMediaKeyRequest' + mediaKeyRequest);
+}).catch((err: BusinessError) => {
+  console.error(`generateMediaKeyRequest: ERROR: ${err}`);
+});
+```
+
 ## generateOfflineReleaseRequest
 
 ```TypeScript
@@ -164,6 +249,23 @@ Generates a request to release offline media keys. This API uses a promise to re
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+// mediaKeyId is the return value of processMediaKeyResponse or getOfflineMediaKeyIds. Pass in the actual value as required.
+let mediaKeyId = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySession.generateOfflineReleaseRequest(mediaKeyId).then((offlineReleaseRequest: Uint8Array) => {
+  console.info('generateOfflineReleaseRequest:' + offlineReleaseRequest);
+}).catch((err: BusinessError) => {
+  console.error(`generateOfflineReleaseRequest: ERROR: ${err}`);
+});
+```
+
 ## getContentProtectionLevel
 
 ```TypeScript
@@ -193,135 +295,21 @@ Obtains the content protection level of this media key session.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-## offExpirationUpdate
+**Examples**
 
 ```TypeScript
-offExpirationUpdate(callback?: (eventInfo: EventInfo) => void): void
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+try {
+  let contentProtectionLevel: drm.ContentProtectionLevel = mediaKeySession.getContentProtectionLevel();
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getContentProtectionLevel ERROR: ${error}`);
+}
 ```
-
-Unregister expirationUpdate event.
-
-**Since:** 23
-
-<!--Device-MediaKeySession-offExpirationUpdate(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offExpirationUpdate(callback?: (eventInfo: EventInfo) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Drm.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | No | Used to listen for expiration update event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-
-## offKeyExpired
-
-```TypeScript
-offKeyExpired(callback?: (eventInfo: EventInfo) => void): void
-```
-
-Unregister keyExpired event.
-
-**Since:** 23
-
-<!--Device-MediaKeySession-offKeyExpired(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offKeyExpired(callback?: (eventInfo: EventInfo) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Drm.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | No | Used to listen for the key required event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-
-## offKeyRequired
-
-```TypeScript
-offKeyRequired(callback?: (eventInfo: EventInfo) => void): void
-```
-
-Unregister keyRequired event.
-
-**Since:** 23
-
-<!--Device-MediaKeySession-offKeyRequired(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offKeyRequired(callback?: (eventInfo: EventInfo) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Drm.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | No | used to listen for the key required event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-
-## offKeysChange
-
-```TypeScript
-offKeysChange(callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
-```
-
-Unregister keysChange event.
-
-**Since:** 23
-
-<!--Device-MediaKeySession-offKeysChange(callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void--><!--Device-MediaKeySession-offKeysChange(callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Drm.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | No | Used to listen for keys change event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-
-## offVendorDefined
-
-```TypeScript
-offVendorDefined(callback?: (eventInfo: EventInfo) => void): void
-```
-
-Unregister vendorDefined event.
-
-**Since:** 23
-
-<!--Device-MediaKeySession-offVendorDefined(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offVendorDefined(callback?: (eventInfo: EventInfo) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Drm.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | No | Used to listen for the vendor defined event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## off('expirationUpdate')
 
@@ -473,17 +461,17 @@ Unsubscribes from vendor-defined events. This API uses an asynchronous callback 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## onExpirationUpdate
+## offExpirationUpdate
 
 ```TypeScript
-onExpirationUpdate(callback: (eventInfo: EventInfo) => void): void
+offExpirationUpdate(callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Register expirationUpdate event.
+Unregister expirationUpdate event.
 
 **Since:** 23
 
-<!--Device-MediaKeySession-onExpirationUpdate(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onExpirationUpdate(callback: (eventInfo: EventInfo) => void): void-End-->
+<!--Device-MediaKeySession-offExpirationUpdate(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offExpirationUpdate(callback?: (eventInfo: EventInfo) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -491,7 +479,7 @@ Register expirationUpdate event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | Yes | Used to listen for expiration update event. |
+| callback | (eventInfo: EventInfo) =&gt; void | No | Used to listen for expiration update event. |
 
 **Error codes:**
 
@@ -499,17 +487,17 @@ Register expirationUpdate event.
 | --- | --- |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## onKeyExpired
+## offKeyExpired
 
 ```TypeScript
-onKeyExpired(callback: (eventInfo: EventInfo) => void): void
+offKeyExpired(callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Register keyExpired event.
+Unregister keyExpired event.
 
 **Since:** 23
 
-<!--Device-MediaKeySession-onKeyExpired(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onKeyExpired(callback: (eventInfo: EventInfo) => void): void-End-->
+<!--Device-MediaKeySession-offKeyExpired(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offKeyExpired(callback?: (eventInfo: EventInfo) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -517,7 +505,7 @@ Register keyExpired event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | Yes | Used to listen for the key required event. |
+| callback | (eventInfo: EventInfo) =&gt; void | No | Used to listen for the key required event. |
 
 **Error codes:**
 
@@ -525,17 +513,17 @@ Register keyExpired event.
 | --- | --- |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## onKeyRequired
+## offKeyRequired
 
 ```TypeScript
-onKeyRequired(callback: (eventInfo: EventInfo) => void): void
+offKeyRequired(callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Register keyRequired event.
+Unregister keyRequired event.
 
 **Since:** 23
 
-<!--Device-MediaKeySession-onKeyRequired(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onKeyRequired(callback: (eventInfo: EventInfo) => void): void-End-->
+<!--Device-MediaKeySession-offKeyRequired(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offKeyRequired(callback?: (eventInfo: EventInfo) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -543,7 +531,7 @@ Register keyRequired event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | Yes | used to listen for the key required event. |
+| callback | (eventInfo: EventInfo) =&gt; void | No | used to listen for the key required event. |
 
 **Error codes:**
 
@@ -551,17 +539,17 @@ Register keyRequired event.
 | --- | --- |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## onKeysChange
+## offKeysChange
 
 ```TypeScript
-onKeysChange(callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
+offKeysChange(callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
 ```
 
-Register keysChange event.
+Unregister keysChange event.
 
 **Since:** 23
 
-<!--Device-MediaKeySession-onKeysChange(callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void--><!--Device-MediaKeySession-onKeysChange(callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void-End-->
+<!--Device-MediaKeySession-offKeysChange(callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void--><!--Device-MediaKeySession-offKeysChange(callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -569,7 +557,7 @@ Register keysChange event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | Yes | Used to listen for keys change event. |
+| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | No | Used to listen for keys change event. |
 
 **Error codes:**
 
@@ -577,17 +565,17 @@ Register keysChange event.
 | --- | --- |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## onVendorDefined
+## offVendorDefined
 
 ```TypeScript
-onVendorDefined(callback: (eventInfo: EventInfo) => void): void
+offVendorDefined(callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Register vendorDefined event.
+Unregister vendorDefined event.
 
 **Since:** 23
 
-<!--Device-MediaKeySession-onVendorDefined(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onVendorDefined(callback: (eventInfo: EventInfo) => void): void-End-->
+<!--Device-MediaKeySession-offVendorDefined(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offVendorDefined(callback?: (eventInfo: EventInfo) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -595,7 +583,7 @@ Register vendorDefined event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | Yes | Used to listen for the vendor defined event. |
+| callback | (eventInfo: EventInfo) =&gt; void | No | Used to listen for the vendor defined event. |
 
 **Error codes:**
 
@@ -753,6 +741,136 @@ Subscribes to vendor-defined events. This API uses an asynchronous callback to r
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
+## onExpirationUpdate
+
+```TypeScript
+onExpirationUpdate(callback: (eventInfo: EventInfo) => void): void
+```
+
+Register expirationUpdate event.
+
+**Since:** 23
+
+<!--Device-MediaKeySession-onExpirationUpdate(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onExpirationUpdate(callback: (eventInfo: EventInfo) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (eventInfo: EventInfo) =&gt; void | Yes | Used to listen for expiration update event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+
+## onKeyExpired
+
+```TypeScript
+onKeyExpired(callback: (eventInfo: EventInfo) => void): void
+```
+
+Register keyExpired event.
+
+**Since:** 23
+
+<!--Device-MediaKeySession-onKeyExpired(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onKeyExpired(callback: (eventInfo: EventInfo) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (eventInfo: EventInfo) =&gt; void | Yes | Used to listen for the key required event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+
+## onKeyRequired
+
+```TypeScript
+onKeyRequired(callback: (eventInfo: EventInfo) => void): void
+```
+
+Register keyRequired event.
+
+**Since:** 23
+
+<!--Device-MediaKeySession-onKeyRequired(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onKeyRequired(callback: (eventInfo: EventInfo) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (eventInfo: EventInfo) =&gt; void | Yes | used to listen for the key required event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+
+## onKeysChange
+
+```TypeScript
+onKeysChange(callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
+```
+
+Register keysChange event.
+
+**Since:** 23
+
+<!--Device-MediaKeySession-onKeysChange(callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void--><!--Device-MediaKeySession-onKeysChange(callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | Yes | Used to listen for keys change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+
+## onVendorDefined
+
+```TypeScript
+onVendorDefined(callback: (eventInfo: EventInfo) => void): void
+```
+
+Register vendorDefined event.
+
+**Since:** 23
+
+<!--Device-MediaKeySession-onVendorDefined(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onVendorDefined(callback: (eventInfo: EventInfo) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (eventInfo: EventInfo) =&gt; void | Yes | Used to listen for the vendor defined event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+
 ## processMediaKeyResponse
 
 ```TypeScript
@@ -788,6 +906,23 @@ Processes a media key response. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+// mediaKeyResponse is obtained from the DRM service. Pass in the actual value as required.
+let mediaKeyResponse = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySession.processMediaKeyResponse(mediaKeyResponse).then((mediaKeyId: Uint8Array) => {
+  console.info('processMediaKeyResponse:' + mediaKeyId);
+}).catch((err: BusinessError) => {
+  console.error(`processMediaKeyResponse: ERROR: ${err}`);
+});
+```
 
 ## processOfflineReleaseResponse
 
@@ -826,6 +961,30 @@ Processes a response to a request for releasing offline media keys. This API use
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+// mediaKeyId is the return value of processMediaKeyResponse or getOfflineMediaKeyIds. Apply for memory based on the actual length.
+let mediaKeyId = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySession.generateOfflineReleaseRequest(mediaKeyId).then((offlineReleaseRequest: Uint8Array) => {
+  console.info('generateOfflineReleaseRequest:' + offlineReleaseRequest);
+}).catch((err: BusinessError) => {
+  console.error(`generateOfflineReleaseRequest: ERROR: ${err}`);
+});
+// offlineReleaseResponse is obtained from the DRM service. Apply for memory based on the actual length.
+let offlineReleaseResponse = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySession.processOfflineReleaseResponse(mediaKeyId, offlineReleaseResponse).then(() => {
+  console.info('processOfflineReleaseResponse');
+}).catch((err: BusinessError) => {
+  console.error(`processOfflineReleaseResponse: ERROR: ${err}`);
+});
+```
+
 ## requireSecureDecoderModule
 
 ```TypeScript
@@ -862,6 +1021,22 @@ Checks whether secure decoding is required.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+try {
+  let status: boolean = mediaKeySession.requireSecureDecoderModule("video/avc");
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`requireSecureDecoderModule ERROR: ${error}`);
+}
+```
+
 ## restoreOfflineMediaKeys
 
 ```TypeScript
@@ -897,4 +1072,21 @@ Restores offline media keys. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+// mediaKeyId is the return value of processMediaKeyResponse or getOfflineMediaKeyIds. Pass in the actual value as required.
+let mediaKeyId = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySession.restoreOfflineMediaKeys(mediaKeyId).then(() => {
+  console.info("restoreOfflineMediaKeys");
+}).catch((err: BusinessError) => {
+  console.error(`restoreOfflineMediaKeys: ERROR: ${err}`);
+});
+```
 

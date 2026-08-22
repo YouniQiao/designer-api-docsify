@@ -24,7 +24,7 @@ Callback invoked after frame interpolation succeeds, fails, or is removed.
 
 This takes effect only when **enable** is **true**. This parameter is optional. If not set, no operation is performed.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BlanklessFrameInterpolationInfo](../../apis-default/arkts-apis/arkts-webview-blanklessframeinterpolationinfo-i.md)&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BlanklessFrameInterpolationInfo](../../apis-default/arkts-apis/arkts-webview-blanklessframeinterpolationinfo-i.md)&gt;
 
 **Since:** 23
 

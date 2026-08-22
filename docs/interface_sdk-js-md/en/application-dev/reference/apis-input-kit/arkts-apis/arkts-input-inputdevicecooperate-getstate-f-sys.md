@@ -31,7 +31,7 @@ Obtains the state of the screen hopping switch. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceDescriptor | string | Yes | Descriptor of the target device for screen hopping. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{ state: boolean }&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ state: boolean }&gt; | Yes |  |
 
 **Error codes:**
 
@@ -61,6 +61,33 @@ struct Index {
                 return;
               }
               console.info(`Get the status success, data: ${JSON.stringify(data)}`);
+            });
+          } catch (error) {
+            console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { inputDeviceCooperate } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          let deviceDescriptor = "descriptor";
+          try {
+            inputDeviceCooperate.getState(deviceDescriptor).then((data: object) => {
+              console.info(`Get the status success, data: ${JSON.stringify(data)}`);
+            }, (error: BusinessError) => {
+              console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
             });
           } catch (error) {
             console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
@@ -113,30 +140,5 @@ Checks whether screen hopping is enabled. This API uses a promise to return the 
 
 **Examples**
 
-```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          let deviceDescriptor = "descriptor";
-          try {
-            inputDeviceCooperate.getState(deviceDescriptor).then((data: object) => {
-              console.info(`Get the status success, data: ${JSON.stringify(data)}`);
-            }, (error: BusinessError) => {
-              console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            });
-          } catch (error) {
-            console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
+See [getState](#getstate)
 

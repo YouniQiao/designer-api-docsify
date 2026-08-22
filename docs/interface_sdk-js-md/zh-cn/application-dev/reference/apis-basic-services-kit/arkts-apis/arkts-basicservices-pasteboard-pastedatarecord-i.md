@@ -95,6 +95,17 @@ record.convertToText((err: BusinessError, data: string) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let record: pasteboard.PasteDataRecord = pasteboard.createUriRecord('dataability:///com.example.myapplication1/user.txt');
+record.convertToText().then((data: string) => {
+    console.info(`Succeeded in converting to text. Data: ${data}`);
+}).catch((err: BusinessError) => {
+    console.error(`Failed to convert to text. Cause: ${err.message}`);
+});
+```
+
 ## convertToText
 
 ```TypeScript
@@ -121,16 +132,7 @@ convertToText(): Promise<string>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let record: pasteboard.PasteDataRecord = pasteboard.createUriRecord('dataability:///com.example.myapplication1/user.txt');
-record.convertToText().then((data: string) => {
-    console.info(`Succeeded in converting to text. Data: ${data}`);
-}).catch((err: BusinessError) => {
-    console.error(`Failed to convert to text. Cause: ${err.message}`);
-});
-```
+参见 [convertToText](#converttotext)
 
 ## getData
 
@@ -209,6 +211,30 @@ record.getData(pasteboard.MIMETYPE_TEXT_URI).then((value: pasteboard.ValueType) 
     console.info('Success to get text/uri value. value is: ' + uri);
 }).catch((err: BusinessError): void => {
     console.error('Failed to get text/uri value. Cause: ' + err.message);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.getData((err: BusinessError, pasteData: pasteboard.PasteData) => {
+    if (err) {
+        console.error('Failed to get PasteData. Cause: ' + err.message);
+        return;
+    }
+    let text: string = pasteData.getPrimaryText();
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
+    let text: string = pasteData.getPrimaryText();
+}).catch((err: BusinessError) => {
+    console.error('Failed to get PasteData. Cause: ' + err.message);
 });
 ```
 
@@ -406,7 +432,7 @@ want: Want
 
 Want内容。对此属性的修改无效，如需刷新属性值，请使用[addEntry](#addentry)。
 
-**类型：** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)
+**类型：** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 23
 

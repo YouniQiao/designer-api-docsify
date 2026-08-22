@@ -60,6 +60,10 @@ struct Index {
 ```
 
 ```TypeScript
+avcontroller.offSessionDestroy();
+```
+
+```TypeScript
 avSession.offSessionDestroy();
 ```
 

@@ -49,6 +49,76 @@ Obtains the RunningFormInfo object by formId.
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
+**Examples**
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288';
+try {
+  formObserver.getRunningFormInfoById(formId).then((data: formInfo.RunningFormInfo) => {
+    console.info(`formObserver getRunningFormInfoById success, formId: ${data.formId}`);
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288';
+try {
+  formObserver.getRunningFormInfoById(formId, true).then((data: formInfo.RunningFormInfo) => {
+    console.info(`formObserver getRunningFormInfoById success, formId: ${data.formId}`);
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288';
+try {
+  formObserver.getRunningFormInfoById(formId, (error: BusinessError, data: formInfo.RunningFormInfo) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      console.info(`formObserver getRunningFormInfoById, formId: ${data.formId}`);
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288';
+try {
+  formObserver.getRunningFormInfoById(formId, true, (error: BusinessError, data: formInfo.RunningFormInfo) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      console.info(`formObserver getRunningFormInfoById, formId: ${data.formId}`);
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
 
 ## getRunningFormInfoById
 
@@ -94,6 +164,10 @@ Obtains the RunningFormInfo object by formId.
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
+**Examples**
+
+See [getRunningFormInfoById](#getrunningforminfobyid)
+
 
 ## getRunningFormInfoById
 
@@ -120,7 +194,7 @@ Obtains the RunningFormInfo object by formId.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Indicates the form provider formId. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback of getFormInstancesById. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback of getFormInstancesById. |
 
 **Error codes:**
 
@@ -132,6 +206,10 @@ Obtains the RunningFormInfo object by formId.
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+
+**Examples**
+
+See [getRunningFormInfoById](#getrunningforminfobyid)
 
 
 ## getRunningFormInfoById
@@ -164,7 +242,7 @@ Obtains the RunningFormInfo object by formId.
 | --- | --- | --- | --- |
 | formId | string | Yes | Indicates the form provider formId. |
 | isUnusedIncluded | boolean | Yes | Indicates whether to include unused form. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback of getFormInstancesById. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback of getFormInstancesById. |
 
 **Error codes:**
 
@@ -176,4 +254,8 @@ Obtains the RunningFormInfo object by formId.
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+
+**Examples**
+
+See [getRunningFormInfoById](#getrunningforminfobyid)
 

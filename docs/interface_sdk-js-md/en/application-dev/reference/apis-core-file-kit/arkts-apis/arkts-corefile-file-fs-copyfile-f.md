@@ -61,6 +61,45 @@ Copies a file. This API uses a promise to return the result.
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let srcPath = pathDir + "/srcDir/test.txt";
+let dstPath = pathDir + "/dstDir/test.txt";
+fs.copyFile(srcPath, dstPath, 0).then(() => {
+  console.info("copy file succeed");
+}).catch((err: BusinessError) => {
+  console.error("copy file failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let srcPath = pathDir + "/srcDir/test.txt";
+let dstPath = pathDir + "/dstDir/test.txt";
+fs.copyFile(srcPath, dstPath, 0, (err: BusinessError) => {
+  if (err) {
+    console.error("copy file failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("copy file succeed");
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let srcPath = pathDir + "/srcDir/test.txt";
+let dstPath = pathDir + "/dstDir/test.txt";
+fs.copyFile(srcPath, dstPath, (err: BusinessError) => {
+  if (err) {
+    console.error("copy file failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("copy file succeed");
+  }
+});
+```
+
 
 ## copyFile
 
@@ -84,7 +123,7 @@ Copies a file. This API overwrites the file with the same name in the destinatio
 | --- | --- | --- | --- |
 | src | string \| number | Yes | Path or FD of the file to copy. |
 | dest | string \| number | Yes | Destination path of the file or FD of the file created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked immediately after the file is copied. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked immediately after the file is copied. |
 
 **Error codes:**
 
@@ -107,6 +146,10 @@ Copies a file. This API overwrites the file with the same name in the destinatio
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [copyFile](#copyfile)
 
 
 ## copyFile
@@ -137,7 +180,7 @@ Copies a file with the specified mode. This API uses an asynchronous callback to
 | src | string \| number | Yes | Path or FD of the file to copy. |
 | dest | string \| number | Yes | Destination path of the file or FD of the file created. |
 | mode | number | Yes | Whether to overwrite the file with the same name in the destination directory. The default value is **0**, which is the only value supported.<br>**0**: overwrite the file with the same name and truncate the part that is not overwritten. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked immediately after the file is copied. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked immediately after the file is copied. |
 
 **Error codes:**
 
@@ -160,4 +203,8 @@ Copies a file with the specified mode. This API uses an asynchronous callback to
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [copyFile](#copyfile)
 

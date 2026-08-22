@@ -79,6 +79,10 @@ Gets the glyph width array within the range.
 | --- | --- |
 | Array&lt;common2D.Point&gt; \| undefined | Array holding the advance width and height of each glyph. |
 
+**Examples**
+
+See [getAdvances](#getadvances)
+
 ## getFont
 
 ```TypeScript
@@ -132,6 +136,10 @@ Obtains the number of glyphs in this run.
 **Examples**
 
 ```TypeScript
+let glyphCount = lines[0].getGlyphCount();
+```
+
+```TypeScript
 let glyphs = runs[0].getGlyphCount();
 ```
 
@@ -161,6 +169,32 @@ Obtains the index of each glyph in this run.
 
 ```TypeScript
 let glyph = runs[0].getGlyphs();
+```
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+function textFunc() {
+  let glyphs = runs[0].getGlyphs(); // Obtain the index of all glyphs of the run.
+  let glyphsRange = runs[0].getGlyphs ({start:1, end:2}); // Obtain the indices of glyphs in the range starting from position 1, with a length of 2.
+  glyphsRange = runs[0].getGlyphs({start:-1, end:2}); // -1 is an invalid value, and undefined is returned.
+  glyphsRange = runs[0].getGlyphs({start:0, end:-10}); // -10 is an invalid value, and undefined is returned.
+  let glyphsNull = runs[0].getGlyphs(null); // null is an invalid value, and undefined is returned.
+  let glyphsUndefined = runs[0].getGlyphs(undefined); // undefined is an invalid value, and undefined is returned.
+}
+
+@Entry
+@Component
+struct Index {
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Button().onClick(() => {
+        this.fun();
+      })
+    }
+  }
+}
 ```
 
 ## getGlyphs
@@ -193,31 +227,7 @@ Obtains the index of each glyph in the specified range of this run.
 
 **Examples**
 
-```TypeScript
-import { text } from '@kit.ArkGraphics2D'
-
-function textFunc() {
-  let glyphs = runs[0].getGlyphs(); // Obtain the index of all glyphs of the run.
-  let glyphsRange = runs[0].getGlyphs ({start:1, end:2}); // Obtain the indices of glyphs in the range starting from position 1, with a length of 2.
-  glyphsRange = runs[0].getGlyphs({start:-1, end:2}); // -1 is an invalid value, and undefined is returned.
-  glyphsRange = runs[0].getGlyphs({start:0, end:-10}); // -10 is an invalid value, and undefined is returned.
-  let glyphsNull = runs[0].getGlyphs(null); // null is an invalid value, and undefined is returned.
-  let glyphsUndefined = runs[0].getGlyphs(undefined); // undefined is an invalid value, and undefined is returned.
-}
-
-@Entry
-@Component
-struct Index {
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Button().onClick(() => {
-        this.fun();
-      })
-    }
-  }
-}
-```
+See [getGlyphs](#getglyphs)
 
 ## getGlyphs
 
@@ -244,6 +254,10 @@ Gets the range glyph identifier for each character.
 | Type | Description |
 | --- | --- |
 | Array&lt;int&gt; \| undefined | Glyph identifier or undefined. |
+
+**Examples**
+
+See [getGlyphs](#getglyphs)
 
 ## getImageBounds
 
@@ -278,6 +292,10 @@ Obtains the image boundaries of the typographic unit. Equivalent to visual bound
 | common2D.Rect | Image boundary of the layout unit, in physical pixels (px). |
 
 **Examples**
+
+```TypeScript
+let imageBounds = lines[0].getImageBounds();
+```
 
 ```TypeScript
 let bounds = runs[0].getImageBounds();
@@ -339,6 +357,32 @@ Obtains the position of each glyph relative to the respective line in this run.
 let positions = runs[0].getPositions();
 ```
 
+```TypeScript
+import { text } from '@kit.ArkGraphics2D'
+
+function textFunc() {
+  let positions = runs[0].getPositions(); // Obtain the positions of all glyphs in the run.
+  let positionsRange = runs[0].getPositions({start:1, end:2}); // Obtain the positions of glyphs in the range starting from position 1, with a length of 2.
+  positionsRange = runs[0].getPositions({start:-1, end:2}); // -1 is an invalid value, and undefined is returned.
+  positionsRange = runs[0].getPositions({start:0, end:-10}); // -10 is an invalid value, and undefined is returned.
+  let positionsNull = runs[0].getPositions(null); // null is an invalid value, and undefined is returned.
+  let positionsUndefined = runs[0].getPositions(undefined); // undefined is an invalid value, and undefined is returned.
+}
+
+@Entry
+@Component
+struct Index {
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Button().onClick(() => {
+        this.fun();
+      })
+    }
+  }
+}
+```
+
 ## getPositions
 
 ```TypeScript
@@ -369,31 +413,7 @@ Obtains the position array of each glyph relative to the respective line within 
 
 **Examples**
 
-```TypeScript
-import { text } from '@kit.ArkGraphics2D'
-
-function textFunc() {
-  let positions = runs[0].getPositions(); // Obtain the positions of all glyphs in the run.
-  let positionsRange = runs[0].getPositions({start:1, end:2}); // Obtain the positions of glyphs in the range starting from position 1, with a length of 2.
-  positionsRange = runs[0].getPositions({start:-1, end:2}); // -1 is an invalid value, and undefined is returned.
-  positionsRange = runs[0].getPositions({start:0, end:-10}); // -10 is an invalid value, and undefined is returned.
-  let positionsNull = runs[0].getPositions(null); // null is an invalid value, and undefined is returned.
-  let positionsUndefined = runs[0].getPositions(undefined); // undefined is an invalid value, and undefined is returned.
-}
-
-@Entry
-@Component
-struct Index {
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Button().onClick(() => {
-        this.fun();
-      })
-    }
-  }
-}
-```
+See [getPositions](#getpositions)
 
 ## getPositions
 
@@ -420,6 +440,10 @@ Gets the range font position offset.
 | Type | Description |
 | --- | --- |
 | Array&lt;common2D.Point&gt; \| undefined | The position of the font in the layout or undefined. |
+
+**Examples**
+
+See [getPositions](#getpositions)
 
 ## getStringIndices
 
@@ -502,6 +526,10 @@ Gets the range of run glyph indices, the offset of the indices relative to the e
 | Type | Description |
 | --- | --- |
 | Array&lt;int&gt; \| undefined | The glyph indices or undefined. |
+
+**Examples**
+
+See [getStringIndices](#getstringindices)
 
 ## getStringRange
 
@@ -621,6 +649,11 @@ Obtains the typographic boundaries of the typographic unit. These boundaries are
 **Examples**
 
 ```TypeScript
+let bounds = lines[0].getTypographicBounds();
+console.info('textLine ascent:' + bounds.ascent + ', descent:' + bounds.descent + ', leading:' + bounds.leading + ', width:' + bounds.width);
+```
+
+```TypeScript
 let typographicBounds = runs[0].getTypographicBounds();
 ```
 
@@ -649,6 +682,46 @@ Paints this run on the canvas with the coordinate point (x, y) as the upper left
 | y | double | Yes | Vertical coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
 
 **Examples**
+
+```TypeScript
+const color: ArrayBuffer = new ArrayBuffer(160000);
+let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
+let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
+let canvas = new drawing.Canvas(pixelMap);
+paragraph.paint(canvas, 0, 0);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D'
+import { text } from '@kit.ArkGraphics2D'
+import { common2D } from '@kit.ArkGraphics2D'
+import { image } from '@kit.ImageKit'
+
+function textFunc(pixelmap: PixelMap) {
+  let canvas = new drawing.Canvas(pixelmap);
+  lines[0].paint(canvas, 0, 0);
+}
+
+@Entry
+@Component
+struct Index {
+  @State pixelmap?: PixelMap = undefined;
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Image(this.pixelmap).width(200).height(200);
+      Button().onClick(() => {
+        if (this.pixelmap == undefined) {
+          const color: ArrayBuffer = new ArrayBuffer(160000);
+          let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
+          this.pixelmap = image.createPixelMapSync(color, opts);
+        }
+        this.fun(this.pixelmap);
+      })
+    }
+  }
+}
+```
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D'

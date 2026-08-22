@@ -32,6 +32,42 @@ Custom email type, the default value is **0**.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+## displayName
+
+```TypeScript
+displayName?: string
+```
+
+Displayed name of the email.
+
+**Type:** string
+
+**Since:** 7
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Email-displayName?: string--><!--Device-Email-displayName?: string-End-->
+
+**System capability:** SystemCapability.Applications.ContactsData
+
+## email
+
+```TypeScript
+email: string
+```
+
+Email address of the contact.
+
+**Type:** string
+
+**Since:** 7
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Email-email: string--><!--Device-Email-email: string-End-->
+
+**System capability:** SystemCapability.Applications.ContactsData
+
 ## EMAIL_HOME
 
 ```TypeScript
@@ -101,42 +137,6 @@ Invalid email type, the default value is **-1**.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Email-static readonly INVALID_LABEL_ID: -1--><!--Device-Email-static readonly INVALID_LABEL_ID: -1-End-->
-
-**System capability:** SystemCapability.Applications.ContactsData
-
-## displayName
-
-```TypeScript
-displayName?: string
-```
-
-Displayed name of the email.
-
-**Type:** string
-
-**Since:** 7
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Email-displayName?: string--><!--Device-Email-displayName?: string-End-->
-
-**System capability:** SystemCapability.Applications.ContactsData
-
-## email
-
-```TypeScript
-email: string
-```
-
-Email address of the contact.
-
-**Type:** string
-
-**Since:** 7
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Email-email: string--><!--Device-Email-email: string-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 

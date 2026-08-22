@@ -29,7 +29,7 @@ Adds an MDNS service. This API uses an asynchronous callback to return the resul
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. <br>For details about the application context of the FA model, see Context. <br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
 | serviceInfo | [LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md) | Yes | MDNS service information. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined** and **data** is the MDNS service information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined** and **data** is the MDNS service information. |
 
 **Error codes:**
 
@@ -66,6 +66,31 @@ let localServiceInfo: mdns.LocalServiceInfo = {
 
 mdns.addLocalService(context, localServiceInfo, (error:BusinessError, data:mdns.LocalServiceInfo) =>  {
   console.error(JSON.stringify(error));
+  console.info(JSON.stringify(data));
+});
+```
+
+Stage model:
+
+```TypeScript
+import { mdns } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the application context.
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+
+let localServiceInfo: mdns.LocalServiceInfo = {
+  serviceType: "_print._tcp",
+  serviceName: "servicename",
+  port: 5555,
+  host: {
+    address: "10.14.**.***",
+  },
+  serviceAttribute: [{key: "111", value: [1]}]
+}
+
+mdns.addLocalService(context, localServiceInfo).then((data: mdns.LocalServiceInfo) => {
   console.info(JSON.stringify(data));
 });
 ```
@@ -113,28 +138,5 @@ Adds an MDNS service. This API uses a promise to return the result.
 
 **Examples**
 
-Stage model:
-
-```TypeScript
-import { mdns } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the application context.
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-
-let localServiceInfo: mdns.LocalServiceInfo = {
-  serviceType: "_print._tcp",
-  serviceName: "servicename",
-  port: 5555,
-  host: {
-    address: "10.14.**.***",
-  },
-  serviceAttribute: [{key: "111", value: [1]}]
-}
-
-mdns.addLocalService(context, localServiceInfo).then((data: mdns.LocalServiceInfo) => {
-  console.info(JSON.stringify(data));
-});
-```
+See [addLocalService](#addlocalservice)
 

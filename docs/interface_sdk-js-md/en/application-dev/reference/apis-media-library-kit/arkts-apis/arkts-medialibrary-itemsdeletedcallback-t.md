@@ -18,5 +18,5 @@ Called when the selected items are deleted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| baseItemInfos | Array&lt;[BaseItemInfo](arkts-medialibrary-filephotopickercomponent-baseiteminfo-c.md)&gt; | Yes | Basic information about the selected items. |
+| baseItemInfos | Array&lt;[BaseItemInfo](../../apis-default/arkts-apis/arkts-file-photopickercomponent-baseiteminfo-c.md)&gt; | Yes | Basic information about the selected items. |
 

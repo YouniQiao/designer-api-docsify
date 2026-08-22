@@ -103,28 +103,6 @@ The region influenced by the ripple field.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## waveSpeed
-
-```TypeScript
-waveSpeed?: number
-```
-
-Wave speed. The greater the wave speed, the faster the wave changes over time, and the more pronounced the wave motion. Range of values:[0, +∞)
-
-**Type:** number
-
-**Default:** 0
-
-**Since:** 22
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-RippleFieldOptions-waveSpeed?: number--><!--Device-RippleFieldOptions-waveSpeed?: number-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## wavelength
 
 ```TypeScript
@@ -144,6 +122,28 @@ Wavelength, which is the distance over which a wave cycle changes. The larger th
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-RippleFieldOptions-wavelength?: number--><!--Device-RippleFieldOptions-wavelength?: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## waveSpeed
+
+```TypeScript
+waveSpeed?: number
+```
+
+Wave speed. The greater the wave speed, the faster the wave changes over time, and the more pronounced the wave motion. Range of values:[0, +∞)
+
+**Type:** number
+
+**Default:** 0
+
+**Since:** 22
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-RippleFieldOptions-waveSpeed?: number--><!--Device-RippleFieldOptions-waveSpeed?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

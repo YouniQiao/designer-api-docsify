@@ -61,6 +61,101 @@ declare function copyFile(src: string | number, dest: string | number, mode?: nu
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**适用版本：** 12+ |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let srcPath = pathDir + "/srcDir/test.txt";
+let dstPath = pathDir + "/dstDir/test.txt";
+fileIo.copyFile(srcPath, dstPath, 0).then(() => {
+  console.info(`Succeeded in copying file.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to copy file. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let srcPath = pathDir + "/srcDir/test.txt";
+let dstPath = pathDir + "/dstDir/test.txt";
+fileIo.copyFile(srcPath, dstPath, 0).then(() => {
+  console.info(`Succeeded in copying file.`);
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to copy file. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let srcPath = pathDir + "/srcDir/test.txt";
+let dstPath = pathDir + "/dstDir/test.txt";
+fileIo.copyFile(srcPath, dstPath, 0, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to copy file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in copying file.`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let srcPath = pathDir + "/srcDir/test.txt";
+let dstPath = pathDir + "/dstDir/test.txt";
+fileIo.copyFile(srcPath, dstPath, 0, (err: BusinessError<void> | null) => {
+  if (err) {
+    console.error(`Failed to copy file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in copying file.`);
+  }
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let srcPath = pathDir + "/srcDir/test.txt";
+let dstPath = pathDir + "/dstDir/test.txt";
+fileIo.copyFile(srcPath, dstPath, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to copy file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in copying file.`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let srcPath = pathDir + "/srcDir/test.txt";
+let dstPath = pathDir + "/dstDir/test.txt";
+fileIo.copyFile(srcPath, dstPath, (err: BusinessError<void> | null) => {
+  if (err) {
+    console.error(`Failed to copy file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in copying file.`);
+  }
+});
+```
+
 
 ## copyFile
 
@@ -107,6 +202,10 @@ declare function copyFile(src: string | number, dest: string | number, callback:
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
+
+**示例**
+
+参见 [copyFile](#copyfile)
 
 
 ## copyFile
@@ -160,4 +259,8 @@ declare function copyFile(
 | 13900034 | Operation would block |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
+
+**示例**
+
+参见 [copyFile](#copyfile)
 

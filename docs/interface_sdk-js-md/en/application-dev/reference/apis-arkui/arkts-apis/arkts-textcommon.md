@@ -22,8 +22,8 @@
 | [CaretStyle](arkts-arkui-textcommon-caretstyle-i.md) | Defines the cursor style |
 | [DecorationStyleResult](arkts-arkui-textcommon-decorationstyleresult-i.md) | Defines the font decoration result. |
 | [DeleteValue](arkts-arkui-textcommon-deletevalue-i.md) | Provides an interface for deleting value from text. |
-| [EditMenuOptions](arkts-arkui-textcommon-editmenuoptions-i.md) | EditMenuOptions |
 | [EditableTextChangeValue](arkts-arkui-textcommon-editabletextchangevalue-i.md) | Define the editableText Component changed value. |
+| [EditMenuOptions](arkts-arkui-textcommon-editmenuoptions-i.md) | EditMenuOptions |
 | [FontConfigs](arkts-arkui-textcommon-fontconfigs-i.md) | Defines the configuration of font. |
 | [FontSettingOptions](arkts-arkui-textcommon-fontsettingoptions-i.md) | Defines the options of font. |
 | [FontWeightConfigs](arkts-arkui-textcommon-fontweightconfigs-i.md) | Defines the configuration of font weight. |
@@ -36,8 +36,8 @@
 | [PositionWithAffinity](arkts-arkui-textcommon-positionwithaffinity-i.md) | Position and affinity. |
 | [PreviewText](arkts-arkui-textcommon-previewtext-i.md) | The previewText. |
 | [SelectedDragPreviewStyle](arkts-arkui-textcommon-selecteddragpreviewstyle-i.md) | Selected drag preview style configuration. |
-| [StyledStringChangeValue](arkts-arkui-textcommon-styledstringchangevalue-i.md) | Define the StyledString changed value. |
 | [StyledStringChangedListener](arkts-arkui-textcommon-styledstringchangedlistener-i.md) | Define the StyledString changed listener. |
+| [StyledStringChangeValue](arkts-arkui-textcommon-styledstringchangevalue-i.md) | Define the StyledString changed value. |
 | [StyledStringController](arkts-arkui-textcommon-styledstringcontroller-i.md) | Define the StyledString controller. |
 | [TextBaseController](arkts-arkui-textcommon-textbasecontroller-i.md) | Define the text selection controller. |
 | [TextChangeOptions](arkts-arkui-textcommon-textchangeoptions-i.md) | The TextChangeOptions. |

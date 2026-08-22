@@ -50,6 +50,26 @@ clicked: boolean
 
 **系统能力：** SystemCapability.Advertising.Ads
 
+## rewarded
+
+```TypeScript
+rewarded: boolean
+```
+
+广告是否获得奖励。
+
+- true：获得奖励。 - false：没有获得奖励。
+
+**类型：** boolean
+
+**起始版本：** 11
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Advertisement-rewarded: boolean--><!--Device-Advertisement-rewarded: boolean-End-->
+
+**系统能力：** SystemCapability.Advertising.Ads
+
 ## rewardVerifyConfig
 
 ```TypeScript
@@ -73,26 +93,6 @@ userId: "12345"
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Advertisement-rewardVerifyConfig: Map<string, string>--><!--Device-Advertisement-rewardVerifyConfig: Map<string, string>-End-->
-
-**系统能力：** SystemCapability.Advertising.Ads
-
-## rewarded
-
-```TypeScript
-rewarded: boolean
-```
-
-广告是否获得奖励。
-
-- true：获得奖励。 - false：没有获得奖励。
-
-**类型：** boolean
-
-**起始版本：** 11
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Advertisement-rewarded: boolean--><!--Device-Advertisement-rewarded: boolean-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 

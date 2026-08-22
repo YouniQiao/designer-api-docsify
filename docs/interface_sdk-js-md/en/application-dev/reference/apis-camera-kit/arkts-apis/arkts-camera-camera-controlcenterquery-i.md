@@ -37,6 +37,16 @@ Obtains the effect types supported by the camera controller.
 | --- | --- |
 | Array&lt;[ControlCenterEffectType](arkts-camera-camera-controlcentereffecttype-e.md)&gt; | Array of effect types supported. |
 
+**Examples**
+
+```TypeScript
+function getSupportedEffectTypes(videoSession: camera.VideoSession): Array<camera.ControlCenterEffectType> {
+    let effectTypes: Array<camera.ControlCenterEffectType> = [];
+    effectTypes = videoSession.getSupportedEffectTypes();
+    return effectTypes;
+}
+```
+
 ## isControlCenterSupported
 
 ```TypeScript
@@ -58,4 +68,13 @@ Checks whether the camera controller is supported.
 | Type | Description |
 | --- | --- |
 | boolean | Check result for the support of the camera controller. **true** if supported, **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+function isControlCenterSupported(videoSession: camera.VideoSession): boolean {
+    let isSupported: boolean = videoSession.isControlCenterSupported();
+    return isSupported;
+}
+```
 

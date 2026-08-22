@@ -66,6 +66,96 @@ try {
 }
 ```
 
+ArkTS-Dyn示例:
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName = "com.ohos.myapplication";
+
+try {
+  bundleManager.cleanBundleCacheFiles(bundleName).then(() => {
+    hilog.info(0x0000, 'testTag', 'cleanBundleCacheFiles successfully.');
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'cleanBundleCacheFiles failed: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'cleanBundleCacheFiles failed: %{public}s', message);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+// 开发者需根据实际工程更新bundleName。
+let bundleName = "com.ohos.myapplication";
+
+try {
+  bundleManager.cleanBundleCacheFiles(bundleName).then(() => {
+    hilog.info(0x0000, 'testTag', 'cleanBundleCacheFiles successfully.');
+  }).catch((err: Error) => {
+    hilog.error(0x0000, 'testTag', 'cleanBundleCacheFiles failed: %{public}s', (err as BusinessError).message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'cleanBundleCacheFiles failed: %{public}s', message);
+}
+```
+
+ArkTS-Dyn示例:
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName = "com.ohos.myapplication";
+let appIndex = 1;
+
+try {
+  bundleManager.cleanBundleCacheFiles(bundleName, appIndex).then(() => {
+    hilog.info(0x0000, 'testTag', 'cleanBundleCacheFiles successfully.');
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'cleanBundleCacheFiles failed: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'cleanBundleCacheFiles failed: %{public}s', message);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+// 代码中使用的bundleName、appIndex需为应用实际的包名和分身应用索引。
+let bundleName = "com.ohos.myapplication";
+let appIndex = 1;
+
+try {
+  bundleManager.cleanBundleCacheFiles(bundleName, appIndex).then(() => {
+    hilog.info(0x0000, 'testTag', 'cleanBundleCacheFiles successfully.');
+  }).catch((err: Error) => {
+    hilog.error(0x0000, 'testTag', 'cleanBundleCacheFiles failed: %{public}s', (err as BusinessError).message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'cleanBundleCacheFiles failed: %{public}s', message);
+}
+```
+
 
 ## cleanBundleCacheFiles
 
@@ -111,49 +201,7 @@ function cleanBundleCacheFiles(bundleName: string): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = "com.ohos.myapplication";
-
-try {
-  bundleManager.cleanBundleCacheFiles(bundleName).then(() => {
-    hilog.info(0x0000, 'testTag', 'cleanBundleCacheFiles successfully.');
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'cleanBundleCacheFiles failed: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'cleanBundleCacheFiles failed: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-// 开发者需根据实际工程更新bundleName。
-let bundleName = "com.ohos.myapplication";
-
-try {
-  bundleManager.cleanBundleCacheFiles(bundleName).then(() => {
-    hilog.info(0x0000, 'testTag', 'cleanBundleCacheFiles successfully.');
-  }).catch((err: Error) => {
-    hilog.error(0x0000, 'testTag', 'cleanBundleCacheFiles failed: %{public}s', (err as BusinessError).message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'cleanBundleCacheFiles failed: %{public}s', message);
-}
-```
+参见 [cleanBundleCacheFiles](#cleanbundlecachefiles)
 
 
 ## cleanBundleCacheFiles
@@ -202,49 +250,5 @@ function cleanBundleCacheFiles(bundleName: string, appIndex: int): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = "com.ohos.myapplication";
-let appIndex = 1;
-
-try {
-  bundleManager.cleanBundleCacheFiles(bundleName, appIndex).then(() => {
-    hilog.info(0x0000, 'testTag', 'cleanBundleCacheFiles successfully.');
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'cleanBundleCacheFiles failed: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'cleanBundleCacheFiles failed: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-// 代码中使用的bundleName、appIndex需为应用实际的包名和分身应用索引。
-let bundleName = "com.ohos.myapplication";
-let appIndex = 1;
-
-try {
-  bundleManager.cleanBundleCacheFiles(bundleName, appIndex).then(() => {
-    hilog.info(0x0000, 'testTag', 'cleanBundleCacheFiles successfully.');
-  }).catch((err: Error) => {
-    hilog.error(0x0000, 'testTag', 'cleanBundleCacheFiles failed: %{public}s', (err as BusinessError).message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'cleanBundleCacheFiles failed: %{public}s', message);
-}
-```
+参见 [cleanBundleCacheFiles](#cleanbundlecachefiles)
 

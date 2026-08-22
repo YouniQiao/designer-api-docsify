@@ -40,3 +40,12 @@ Specifies the original text for the target Component. If the accessibility prope
 | --- | --- |
 | [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.originalText('123'); // 使用静态构造器ON创建On对象，指定目标控件的originalText属性。
+```
+

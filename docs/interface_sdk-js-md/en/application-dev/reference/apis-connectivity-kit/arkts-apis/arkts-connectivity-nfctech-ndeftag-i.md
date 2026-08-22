@@ -79,6 +79,16 @@ Obtains the NDEF message from this NDEF tag.
 | --- | --- |
 | [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | NDEF message created. For details, see *NFCForum-TS-NDEF_1.0*. |
 
+**Examples**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain the correct ndefTag tag by using the tag.TagInfo API in @ohos.nfc.tag.
+let ndefMessage : tag.NdefMessage = ndefTag.getNdefMessage();
+console.info("ndef ndefMessage: " + ndefMessage);
+```
+
 ## getNdefTagType
 
 ```TypeScript
@@ -100,6 +110,16 @@ Obtains the NDEF tag type.
 | Type | Description |
 | --- | --- |
 | tag.NfcForumType | NDEF tag type obtained. It can be NFC FORUM TYPE 1, 2, 3, or 4. |
+
+**Examples**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain the correct ndefTag tag by using the tag.TagInfo API in @ohos.nfc.tag.
+let ndefTagType : tag.NfcForumType = ndefTag.getNdefTagType();
+console.info("ndef ndefTagType: " + ndefTagType);
+```
 
 ## getNdefTagTypeString
 
@@ -134,6 +154,22 @@ Converts an NFC Forum Type tag to a string defined in the NFC Forum.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain the correct ndefTag tag by using the tag.TagInfo API in @ohos.nfc.tag.
+
+try {
+    let ndefTypeString : string = ndefTag.getNdefTagTypeString(tag.NfcForumType.NFC_FORUM_TYPE_1);
+    console.info("ndef ndefTypeString: " + ndefTypeString);
+} catch (businessError) {
+    console.error(`ndef getNdefTagTypeString catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
+}
+```
 
 ## isNdefWritable
 
@@ -200,6 +236,62 @@ Reads the NDEF message from the NDEF tag. This API uses a promise to return the 
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed.<br>**Applicable version:** 12 and later |
 
+**Examples**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain the correct ndefTag tag by using the tag.TagInfo API in @ohos.nfc.tag.
+function nfcTechDemo(){
+    // Connect the tag if it has not been connected.
+    if (!ndefTag.isTagConnected()) {
+        if (!ndefTag.connectTag()) {
+            console.error("ndefTag connectTag failed.");
+            return;
+        }
+    }
+
+    try {
+        ndefTag.readNdef().then((ndefmessage : tag.NdefMessage) => {
+            console.info("ndef readNdef Promise ndefmessage: " + ndefmessage);
+        }).catch((err : BusinessError)=> {
+            console.error("ndef readNdef Promise err Code: ${err.code}, message: ${err.message}");
+        });
+    } catch (businessError) {
+        console.error(`ndef readNdef Promise catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
+    }
+}
+```
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain the correct ndefTag tag by using the tag.TagInfo API in @ohos.nfc.tag.
+function nfcTechDemo() {
+    // Connect the tag if it has not been connected.
+    if (!ndefTag.isTagConnected()) {
+        if (!ndefTag.connectTag()) {
+            console.error("ndefTag connectTag failed.");
+            return;
+        }
+    }
+
+    try {
+        ndefTag.readNdef((err : BusinessError, ndefmessage : tag.NdefMessage)=> {
+            if (err) {
+                console.error(`ndef readNdef AsyncCallback err Code: ${err.code}, message: ${err.message}`);
+            } else {
+                console.info("ndef readNdef AsyncCallback ndefmessage: " + ndefmessage);
+            }
+        });
+    } catch (businessError) {
+        console.error(`ndef readNdef AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
+    }
+}
+```
+
 ## readNdef
 
 ```TypeScript
@@ -222,7 +314,7 @@ Reads the NDEF message from the NDEF tag. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md)&gt; | Yes | Callback used to return the NDEF message read. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md)&gt; | Yes | Callback used to return the NDEF message read. |
 
 **Error codes:**
 
@@ -232,6 +324,10 @@ Reads the NDEF message from the NDEF tag. This API uses an asynchronous callback
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+See [readNdef](#readndef)
 
 ## setReadOnly
 
@@ -295,41 +391,6 @@ function nfcTechDemo() {
 }
 ```
 
-## setReadOnly
-
-```TypeScript
-setReadOnly(callback: AsyncCallback<void>): void
-```
-
-Sets the NDEF tag to read-only. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.NFC_TAG
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-NdefTag-setReadOnly(callback: AsyncCallback<void>): void--><!--Device-NdefTag-setReadOnly(callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Communication.NFC.Tag
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
 ```TypeScript
 import { tag } from '@kit.ConnectivityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -358,6 +419,43 @@ function nfcTechDemo() {
     }
 }
 ```
+
+## setReadOnly
+
+```TypeScript
+setReadOnly(callback: AsyncCallback<void>): void
+```
+
+Sets the NDEF tag to read-only. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.NFC_TAG
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NdefTag-setReadOnly(callback: AsyncCallback<void>): void--><!--Device-NdefTag-setReadOnly(callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.NFC.Tag
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+See [setReadOnly](#setreadonly)
 
 ## writeNdef
 
@@ -398,6 +496,72 @@ Writes a **Message** object to the NDEF tag. This API uses a promise to return t
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed.<br>**Applicable version:** 12 and later |
 
+**Examples**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain the correct ndefTag tag by using the tag.TagInfo API in @ohos.nfc.tag.
+// ndefMessage created from the raw data. For example:
+let ndefMessage : tag.NdefMessage =
+    tag.ndef.createNdefMessage([0xD1, 0x01, 0x03, 0x54, 0x4E, 0x46, 0x43]); // The NDEF data must be resolvable.
+// Or create ndefMessage from tag.ndef.createNdefMessage (ndefRecords:NdefRecord[]).
+
+function nfcTechDemo() {
+    // Connect the tag if it has not been connected.
+    if (!ndefTag.isTagConnected()) {
+        if (!ndefTag.connectTag()) {
+            console.error("ndefTag connectTag failed.");
+            return;
+        }
+    }
+
+    try {
+        ndefTag.writeNdef(ndefMessage).then(() => {
+            console.info("ndef writeNdef Promise success.");
+        }).catch((err : BusinessError)=> {
+            console.error(`ndef writeNdef err Code: ${err.code}, message: ${err.message}`);
+        });
+    } catch (businessError) {
+        console.error(`ndef writeNdef Promise catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
+    }
+}
+```
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain the correct ndefTag tag by using the tag.TagInfo API in @ohos.nfc.tag.
+// ndefMessage created from the raw data. For example:
+let ndefMessage : tag.NdefMessage = 
+    tag.ndef.createNdefMessage([0xD1, 0x01, 0x03, 0x54, 0x4E, 0x46, 0x43]); // The NDEF data must be resolvable.
+// Or create ndefMessage from tag.ndef.createNdefMessage (ndefRecords:NdefRecord[]).
+
+function nfcTechDemo() {
+    // Connect the tag if it has not been connected.
+    if (!ndefTag.isTagConnected()) {
+        if (!ndefTag.connectTag()) {
+            console.error("ndefTag connectTag failed.");
+            return;
+        }
+    }
+
+    try {
+        ndefTag.writeNdef(ndefMessage, (err : BusinessError)=> {
+            if (err) {
+                console.error("ndef writeNdef AsyncCallback Code: ${err.code}, message: ${err.message}");
+            } else {
+                console.info("ndef writeNdef AsyncCallback success.");
+            }
+        }); 
+    } catch (businessError) {
+        console.error(`ndef writeNdef AsyncCallback catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
+    }
+}
+```
+
 ## writeNdef
 
 ```TypeScript
@@ -421,7 +585,7 @@ Writes a **Message** object to the NDEF tag. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | msg | [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | Yes | NDEF message to write. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -431,4 +595,8 @@ Writes a **Message** object to the NDEF tag. This API uses an asynchronous callb
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+See [writeNdef](#writendef)
 

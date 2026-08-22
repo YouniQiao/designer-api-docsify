@@ -35,6 +35,30 @@ function notifyFormsVisible(formIds: Array<string>, isVisible: boolean, callback
 | isVisible | boolean | 是 | 是否可见。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当通知卡片是否可见成功，error为undefined，否则为错误对象。 |
 
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let formIds: string[]= new Array('12400633174999288', '12400633174999289');
+formHost.notifyFormsVisible(formIds, true, (error: Base.BusinessError) => {
+  if (error.code) {
+    console.error(`formHost notifyFormsVisible, error: ${JSON.stringify(error)}`);
+  }
+});
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+let formIds: string[] = new Array('12400633174999288', '12400633174999289');
+formHost.notifyFormsVisible(formIds, true).then(() => {
+  console.info('formHost notifyFormsVisible success');
+}).catch((error: Base.BusinessError) => {
+  console.error(`formHost notifyFormsVisible, error: ${JSON.stringify(error)}`);
+});
+```
+
 
 ## notifyFormsVisible
 
@@ -70,4 +94,8 @@ function notifyFormsVisible(formIds: Array<string>, isVisible: boolean): Promise
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [notifyFormsVisible](#notifyformsvisible)
 

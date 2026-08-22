@@ -34,7 +34,7 @@ function install(admin: Want, hapFilePaths: Array<string>, installParam?: Instal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | hapFilePaths | Array&lt;string&gt; | 是 | 待安装应用包路径数组。应用包路径为应用沙箱路径(应用沙箱路径和真实路径的对应关系可参见： [应用沙箱路径和真实物理路径的对应关系](../../../file-management/app-sandbox-directory.md#应用沙箱路径和真实物理路径的对应关系))等应用有权限访问的路径。 |
 | installParam | InstallParam | 否 | 应用包安装参数。 |
 
@@ -103,6 +103,52 @@ bundleManager.install(wantTemp, hapFilePaths, installParam).then(() => {
   console.info('Succeeded in installing bundles.');
 }).catch((err: BusinessError) => {
   console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// 需根据实际情况进行替换
+let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
+
+bundleManager.install(wantTemp, hapFilePaths, (err) => {
+  if (err) {
+    console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in installing bundles');
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// 需根据实际情况进行替换
+let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
+let installParam: bundleManager.InstallParam = {
+  userId: 100,
+  installFlag: 1,
+};
+
+bundleManager.install(wantTemp, hapFilePaths, installParam, (err) => {
+  if (err) {
+    console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in installing bundles');
 });
 ```
 

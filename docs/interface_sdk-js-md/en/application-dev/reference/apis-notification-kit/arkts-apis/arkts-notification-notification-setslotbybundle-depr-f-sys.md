@@ -36,7 +36,46 @@ Sets the notification slot for a specified application. This API uses an asynchr
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
 | slot | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md) | Yes | Notification slot. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+import NotificationManager from '@ohos.notificationManager';
+
+let setSlotByBundleCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.info("setSlotByBundle failed " + JSON.stringify(err));
+  } else {
+    console.info("setSlotByBundle success");
+  }
+}
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+let notificationSlot: NotificationManager.NotificationSlot = {
+  type: Notification.SlotType.SOCIAL_COMMUNICATION
+};
+Notification.setSlotByBundle(bundle, notificationSlot, setSlotByBundleCallback);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+import NotificationManager from '@ohos.notificationManager';
+
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+let notificationSlot: NotificationManager.NotificationSlot = {
+  type: Notification.SlotType.SOCIAL_COMMUNICATION
+};
+Notification.setSlotByBundle(bundle, notificationSlot).then(() => {
+  console.info("setSlotByBundle success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`setSlotByBundle failed, code is ${err}`);
+});
+```
 
 
 ## setSlotByBundle
@@ -73,4 +112,8 @@ Sets the notification slot for a specified application. This API uses a promise 
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | the promise returned by the function. |
+
+**Examples**
+
+See [setSlotByBundle](#setslotbybundle)
 

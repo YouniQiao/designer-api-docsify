@@ -50,6 +50,18 @@ connectedTag.readNdefTag().then((data) => {
 });
 ```
 
+```TypeScript
+import { connectedTag } from '@kit.ConnectivityKit';
+
+connectedTag.readNdefTag((err, data)=> {
+    if (err) {
+        console.error("connectedTag readNdefTag AsyncCallback err: " + err);
+    } else {
+        console.info("connectedTag readNdefTag AsyncCallback data: " + data);
+    }
+});
+```
+
 
 ## readNdefTag
 
@@ -80,19 +92,9 @@ Reads the content of this active tag. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the active tag content obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the active tag content obtained. |
 
 **Examples**
 
-```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
-
-connectedTag.readNdefTag((err, data)=> {
-    if (err) {
-        console.error("connectedTag readNdefTag AsyncCallback err: " + err);
-    } else {
-        console.info("connectedTag readNdefTag AsyncCallback data: " + data);
-    }
-});
-```
+See [readNdefTag](#readndeftag)
 

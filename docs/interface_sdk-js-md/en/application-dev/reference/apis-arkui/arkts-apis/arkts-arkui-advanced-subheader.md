@@ -13,19 +13,19 @@ import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, 
 
 | Name | Description |
 | --- | --- |
-| [OperationOption](arkts-arkui-arkuiadvancedsubheader-operationoption-c.md) | Declare type OperationOption |
-| [SelectOptions](arkts-arkui-arkuiadvancedsubheader-selectoptions-c.md) | Declare type SelectOption |
-| [SymbolOptions](arkts-arkui-arkuiadvancedsubheader-symboloptions-c.md) | Declare type SymbolOptions |
+| [OperationOption](arkts-arkui-arkui-advanced-subheader-operationoption-c.md) | Declare type OperationOption |
+| [SelectOptions](arkts-arkui-arkui-advanced-subheader-selectoptions-c.md) | Declare type SelectOption |
+| [SymbolOptions](arkts-arkui-arkui-advanced-subheader-symboloptions-c.md) | Declare type SymbolOptions |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [SubHeader](arkts-arkui-arkuiadvancedsubheader-subheader-s.md) | The **SubHeader** component is positioned at the top of list items or content sections, organizing lists or content into distinct groups. The subheader text summarizes the content within each respective section. |
+| [SubHeader](arkts-arkui-arkui-advanced-subheader-subheader-s.md) | The **SubHeader** component is positioned at the top of list items or content sections, organizing lists or content into distinct groups. The subheader text summarizes the content within each respective section. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [OperationType](arkts-arkui-arkuiadvancedsubheader-operationtype-e.md) | Defines the style of elements in the subheader operation area. |
+| [OperationType](arkts-arkui-arkui-advanced-subheader-operationtype-e.md) | Defines the style of elements in the subheader operation area. |
 

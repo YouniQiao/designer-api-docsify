@@ -14,7 +14,7 @@ function startCollectLog(admin: Want): Promise<void>
 
 开始收集设备上已生成并存储至硬盘的[FaultType](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-faultlogger-faulttype-e.md)类型的faultlog日志，不支持收集未存储至硬盘的faultlog日志、应用业 务日志和系统运行日志。
 
-- 调用接口后，系统会启动一个日志收集任务，任务启动后接口立即返回。任务可能会因为系统性能等原因导致收集失败。 - 允许多个MDM应用调用，不同MDM应用在不同用户下收集的日志分开保存，互不影响。同一时间只允许一个MDM应用启动日志收集任务，在任务执行完成前调用本接口会返回错误码9201009，任务执行完成后，允许其他MDM应用调用。 - 任务执行完成后，通过 [EnterpriseAdminExtensionAbility.onLogCollected](../../apis-default/arkts-apis/arkts-enterpriseenterpriseadminextensionability-enterpriseadminextensionability-c.md#onlogcollected) 回调函数通知给MDM应用，系统将已收集的日志文件挂载到MDM应用沙箱路径，MDM应用可以在回调函数中读取已收集的日志。 - 如果日志收集任务执行超过5分钟， [EnterpriseAdminExtensionAbility.onLogCollected](../../apis-default/arkts-apis/arkts-enterpriseenterpriseadminextensionability-enterpriseadminextensionability-c.md#onlogcollected) 回调函数会返回日志收集任务失败。 - 应用取走日志后，建议调用[systemManager.finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md)删除已收集到的日志。
+- 调用接口后，系统会启动一个日志收集任务，任务启动后接口立即返回。任务可能会因为系统性能等原因导致收集失败。 - 允许多个MDM应用调用，不同MDM应用在不同用户下收集的日志分开保存，互不影响。同一时间只允许一个MDM应用启动日志收集任务，在任务执行完成前调用本接口会返回错误码9201009，任务执行完成后，允许其他MDM应用调用。 - 任务执行完成后，通过 [EnterpriseAdminExtensionAbility.onLogCollected](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onlogcollected) 回调函数通知给MDM应用，系统将已收集的日志文件挂载到MDM应用沙箱路径，MDM应用可以在回调函数中读取已收集的日志。 - 如果日志收集任务执行超过5分钟， [EnterpriseAdminExtensionAbility.onLogCollected](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onlogcollected) 回调函数会返回日志收集任务失败。 - 应用取走日志后，建议调用[systemManager.finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md)删除已收集到的日志。
 
 **起始版本：** 23
 
@@ -30,7 +30,7 @@ function startCollectLog(admin: Want): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 
 **返回值：**
 

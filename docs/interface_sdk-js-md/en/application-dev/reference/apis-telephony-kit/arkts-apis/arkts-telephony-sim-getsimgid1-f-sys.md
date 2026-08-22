@@ -29,7 +29,7 @@ Obtains the Group Identifier Level 1 (GID1) of the SIM card in a specified slot.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Indicates the callback for getting the GID1; Returns an empty string if no SIM card is inserted or no GID1 in the SIM card. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Indicates the callback for getting the GID1; Returns an empty string if no SIM card is inserted or no GID1 in the SIM card. |
 
 **Error codes:**
 
@@ -52,6 +52,17 @@ import { sim } from '@kit.TelephonyKit';
 
 sim.getSimGid1(0, (err: BusinessError, data: string) => {
     console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.getSimGid1(0).then((data: string) => {
+    console.info(`getSimGid1 success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSimGid1 failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -101,14 +112,5 @@ Obtains the Group Identifier Level 1 (GID1) of the SIM card in a specified slot.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getSimGid1(0).then((data: string) => {
-    console.info(`getSimGid1 success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSimGid1 failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getSimGid1](#getsimgid1)
 

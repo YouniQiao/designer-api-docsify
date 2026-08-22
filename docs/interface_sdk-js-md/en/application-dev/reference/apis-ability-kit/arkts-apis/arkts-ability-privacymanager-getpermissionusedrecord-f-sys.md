@@ -70,6 +70,30 @@ privacyManager.getPermissionUsedRecord(request).then((data) => {
 });
 ```
 
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let request: privacyManager.PermissionUsedRequest = {
+    'tokenId': 1,
+    'isRemote': false,
+    'deviceId': 'device',
+    'bundleName': 'bundle',
+    'permissionNames': [],
+    'beginTime': 0,
+    'endTime': 1,
+    'flag':privacyManager.PermissionUsageFlag.FLAG_PERMISSION_USAGE_DETAIL,
+};
+
+privacyManager.getPermissionUsedRecord(request, (err: BusinessError, data: privacyManager.PermissionUsedResponse) => {
+  if (err) {
+    console.error(`getPermissionUsedRecord fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`getPermissionUsedRecord success, result: ${data}`);
+  }
+});
+```
+
 
 ## getPermissionUsedRecord
 
@@ -96,7 +120,7 @@ Obtains historical permission usage records, which can be used in permission aud
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | request | [PermissionUsedRequest](arkts-ability-privacymanager-permissionusedrequest-i-sys.md) | Yes | Request for querying permission usage records. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PermissionUsedResponse](arkts-ability-privacymanager-permissionusedresponse-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and data is the permission usage record is obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionUsedResponse](arkts-ability-privacymanager-permissionusedresponse-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and data is the permission usage record is obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -110,27 +134,5 @@ Obtains historical permission usage records, which can be used in permission aud
 
 **Examples**
 
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let request: privacyManager.PermissionUsedRequest = {
-    'tokenId': 1,
-    'isRemote': false,
-    'deviceId': 'device',
-    'bundleName': 'bundle',
-    'permissionNames': [],
-    'beginTime': 0,
-    'endTime': 1,
-    'flag':privacyManager.PermissionUsageFlag.FLAG_PERMISSION_USAGE_DETAIL,
-};
-
-privacyManager.getPermissionUsedRecord(request, (err: BusinessError, data: privacyManager.PermissionUsedResponse) => {
-  if (err) {
-    console.error(`getPermissionUsedRecord fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`getPermissionUsedRecord success, result: ${data}`);
-  }
-});
-```
+See [getPermissionUsedRecord](#getpermissionusedrecord)
 

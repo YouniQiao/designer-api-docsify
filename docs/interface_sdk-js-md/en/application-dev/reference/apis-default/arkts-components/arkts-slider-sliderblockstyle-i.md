@@ -40,7 +40,7 @@ shape?: CircleShape | EllipseShape | PathShape | RectShape
 
 Custom shape of the slider.
 
-**Type:** [CircleShape](../arkts-apis/arkts-arkuishape-circleshape-c.md) \| [EllipseShape](../arkts-apis/arkts-arkuishape-ellipseshape-c.md) \| [PathShape](../arkts-apis/arkts-arkuishape-pathshape-c.md) \| [RectShape](../arkts-apis/arkts-arkuishape-rectshape-c.md)
+**Type:** [CircleShape](../arkts-apis/arkts-arkui-shape-circleshape-c.md) \| [EllipseShape](../arkts-apis/arkts-arkui-shape-ellipseshape-c.md) \| [PathShape](../arkts-apis/arkts-arkui-shape-pathshape-c.md) \| [RectShape](../arkts-apis/arkts-arkui-shape-rectshape-c.md)
 
 **Since:** 23
 

@@ -119,44 +119,6 @@ try {
 }
 ```
 
-
-## moveMissionsToForeground
-
-```TypeScript
-function moveMissionsToForeground(missionIds: Array<int>, topMission: int, callback: AsyncCallback<void>): void
-```
-
-将指定任务批量切换到前台，并将任务ID等于topMission的任务移动到最顶层。使用callback异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.MANAGE_MISSIONS
-
-<!--Device-missionManager-function moveMissionsToForeground(missionIds: Array<int>, topMission: int, callback: AsyncCallback<void>): void--><!--Device-missionManager-function moveMissionsToForeground(missionIds: Array<int>, topMission: int, callback: AsyncCallback<void>): void-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| missionIds | Array&lt;int&gt; | 是 | 任务ID数组。 |
-| topMission | int | 是 | 待移动到最顶层的任务ID |
-| callback | AsyncCallback&lt;void&gt; | 是 | 执行结果回调函数。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -234,49 +196,6 @@ try {
 }
 ```
 
-
-## moveMissionsToForeground
-
-```TypeScript
-function moveMissionsToForeground(missionIds: Array<int>, topMission?: int): Promise<void>
-```
-
-将指定任务批量切到前台，并将任务ID等于topMission的任务移动到最顶层。使用Promise异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.MANAGE_MISSIONS
-
-<!--Device-missionManager-function moveMissionsToForeground(missionIds: Array<int>, topMission?: int): Promise<void>--><!--Device-missionManager-function moveMissionsToForeground(missionIds: Array<int>, topMission?: int): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| missionIds | Array&lt;int&gt; | 是 | 任务ID数组。 |
-| topMission | int | 否 | 待移动到最顶层的任务ID。默认值为-1，表示将默认任务移动到最顶层。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -344,4 +263,89 @@ try {
   console.error(`error: ${code}, ${message} `);
 }
 ```
+
+
+## moveMissionsToForeground
+
+```TypeScript
+function moveMissionsToForeground(missionIds: Array<int>, topMission: int, callback: AsyncCallback<void>): void
+```
+
+将指定任务批量切换到前台，并将任务ID等于topMission的任务移动到最顶层。使用callback异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function moveMissionsToForeground(missionIds: Array<int>, topMission: int, callback: AsyncCallback<void>): void--><!--Device-missionManager-function moveMissionsToForeground(missionIds: Array<int>, topMission: int, callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| missionIds | Array&lt;int&gt; | 是 | 任务ID数组。 |
+| topMission | int | 是 | 待移动到最顶层的任务ID |
+| callback | AsyncCallback&lt;void&gt; | 是 | 执行结果回调函数。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+
+**示例**
+
+参见 [moveMissionsToForeground](#movemissionstoforeground)
+
+
+## moveMissionsToForeground
+
+```TypeScript
+function moveMissionsToForeground(missionIds: Array<int>, topMission?: int): Promise<void>
+```
+
+将指定任务批量切到前台，并将任务ID等于topMission的任务移动到最顶层。使用Promise异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function moveMissionsToForeground(missionIds: Array<int>, topMission?: int): Promise<void>--><!--Device-missionManager-function moveMissionsToForeground(missionIds: Array<int>, topMission?: int): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| missionIds | Array&lt;int&gt; | 是 | 任务ID数组。 |
+| topMission | int | 否 | 待移动到最顶层的任务ID。默认值为-1，表示将默认任务移动到最顶层。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+
+**示例**
+
+参见 [moveMissionsToForeground](#movemissionstoforeground)
 

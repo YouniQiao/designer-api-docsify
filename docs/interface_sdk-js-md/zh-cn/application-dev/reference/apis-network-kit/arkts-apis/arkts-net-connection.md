@@ -39,11 +39,11 @@ import { connection } from '@kit.NetworkKit';
 | [getAppNet](arkts-network-connection-getappnet-f.md) | 获取App绑定的网络句柄。使用callback异步回调。 |
 | [getAppNet](arkts-network-connection-getappnet-f.md) | 获取App绑定的网络信息。使用Promise异步回调。 |
 | [getAppNetSync](arkts-network-connection-getappnetsync-f.md) | 获取App绑定的网络信息。使用同步方式返回。 |
-| [getConnectOwnerUid](arkts-network-connection-getconnectowneruid-f.md) | 用于查询发起指定网络连接的应用UID。使用Promise异步回调。 |
-| [getConnectOwnerUidSync](arkts-network-connection-getconnectowneruidsync-f.md) | 用于查询发起指定网络连接的应用UID。使用同步方式返回。 |
 | [getConnectionProperties](arkts-network-connection-getconnectionproperties-f.md) | 获取netHandle对应的网络的连接信息，包含网卡名称、域名、链路信息、路由信息、网络地址及最大传输单元。使用callback异步回调。 |
 | [getConnectionProperties](arkts-network-connection-getconnectionproperties-f.md) | 获取netHandle对应的网络的连接信息，包含网卡名称、域名、链路信息、路由信息、网络地址及最大传输单元。使用Promise异步回调。 |
 | [getConnectionPropertiesSync](arkts-network-connection-getconnectionpropertiessync-f.md) | 获取netHandle对应的网络的连接信息，包含网卡名称、域名、链路信息、路由信息、网络地址及最大传输单元。使用同步方式返回。 |
+| [getConnectOwnerUid](arkts-network-connection-getconnectowneruid-f.md) | 用于查询发起指定网络连接的应用UID。使用Promise异步回调。 |
+| [getConnectOwnerUidSync](arkts-network-connection-getconnectowneruidsync-f.md) | 用于查询发起指定网络连接的应用UID。使用同步方式返回。 |
 | [getDefaultHttpProxy](arkts-network-connection-getdefaulthttpproxy-f.md) | 获取网络的默认代理配置信息。使用callback异步回调。 |
 | [getDefaultHttpProxy](arkts-network-connection-getdefaulthttpproxy-f.md) | 获取网络默认的代理配置信息。使用Promise异步回调。 |
 | [getDefaultNet](arkts-network-connection-getdefaultnet-f.md) | 获取系统默认使用的网络句柄，包含网络ID。使用callback异步回调。 |

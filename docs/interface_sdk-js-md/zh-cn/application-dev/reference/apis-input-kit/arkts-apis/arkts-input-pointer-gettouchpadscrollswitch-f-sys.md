@@ -96,38 +96,6 @@ struct Index {
 }
 ```
 
-
-## getTouchpadScrollSwitch
-
-```TypeScript
-function getTouchpadScrollSwitch(): Promise<boolean>
-```
-
-获取触控板滚轴能力开启状态，使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-pointer-function getTouchpadScrollSwitch(): Promise<boolean>--><!--Device-pointer-function getTouchpadScrollSwitch(): Promise<boolean>-End-->
-
-**系统能力：** SystemCapability.MultimodalInput.Input.Pointer
-
-**系统接口：** 此接口为系统接口。
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示触控板滚轴能力开启；返回false表示触控板滚轴能力关闭。默认为开启。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -184,4 +152,38 @@ struct Index {
   }
 }
 ```
+
+
+## getTouchpadScrollSwitch
+
+```TypeScript
+function getTouchpadScrollSwitch(): Promise<boolean>
+```
+
+获取触控板滚轴能力开启状态，使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-pointer-function getTouchpadScrollSwitch(): Promise<boolean>--><!--Device-pointer-function getTouchpadScrollSwitch(): Promise<boolean>-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Pointer
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示触控板滚轴能力开启；返回false表示触控板滚轴能力关闭。默认为开启。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+参见 [getTouchpadScrollSwitch](#gettouchpadscrollswitch)
 

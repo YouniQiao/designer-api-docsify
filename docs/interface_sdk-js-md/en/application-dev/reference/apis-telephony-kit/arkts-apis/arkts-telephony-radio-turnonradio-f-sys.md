@@ -29,7 +29,7 @@ Turn on the radio service.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of turnOnRadio. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of turnOnRadio. |
 
 **Error codes:**
 
@@ -48,6 +48,18 @@ Turn on the radio service.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+radio.turnOnRadio((err: BusinessError) => {
+    if (err) {
+        console.error(`turnOnRadio failed, callback: err->${JSON.stringify(err)}`);
+        return;
+    }
+    console.info(`turnOnRadio success.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let slotId: number = 0;
 radio.turnOnRadio(slotId, (err: BusinessError) => {
     if (err) {
@@ -55,6 +67,17 @@ radio.turnOnRadio(slotId, (err: BusinessError) => {
         return;
     }
     console.info(`turnOnRadio success.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.turnOnRadio(slotId).then(() => {
+    console.info(`turnOnRadio success.`);
+}).catch((err: BusinessError) => {
+    console.error(`turnOnRadio failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -103,16 +126,7 @@ Turn on the radio service.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.turnOnRadio(slotId).then(() => {
-    console.info(`turnOnRadio success.`);
-}).catch((err: BusinessError) => {
-    console.error(`turnOnRadio failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [turnOnRadio](#turnonradio)
 
 
 ## turnOnRadio
@@ -137,7 +151,7 @@ Turn on the radio service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of turnOnRadio. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of turnOnRadio. |
 
 **Error codes:**
 
@@ -153,15 +167,5 @@ Turn on the radio service.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.turnOnRadio((err: BusinessError) => {
-    if (err) {
-        console.error(`turnOnRadio failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`turnOnRadio success.`);
-});
-```
+See [turnOnRadio](#turnonradio)
 

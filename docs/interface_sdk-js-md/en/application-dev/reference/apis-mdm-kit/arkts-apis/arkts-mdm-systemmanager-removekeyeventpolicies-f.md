@@ -28,7 +28,7 @@ Removes a key event handling policy. After the deletion is successful, the syste
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | keyCodes | Array&lt;KeyCode&gt; | Yes | Key code. You can remove multiple key policies at a time. Removing an unsupported key will report error code 9200012. |
 
 **Error codes:**

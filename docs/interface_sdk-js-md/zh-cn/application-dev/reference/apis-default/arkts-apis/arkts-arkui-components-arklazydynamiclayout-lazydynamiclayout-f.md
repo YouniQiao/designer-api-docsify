@@ -31,14 +31,14 @@ export declare function LazyDynamicLayout (
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| algorithm | [LazyLayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-lazylayoutalgorithm-i.md) | 是 | 懒布局算法。 |
+| algorithm | [LazyLayoutAlgorithm](arkts-lazylayoutalgorithm-i.md) | 是 | 懒布局算法。 |
 | content_ | CustomBuilder | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyDynamicLayoutAttribute](arkts-arkuicomponentsarklazydynamiclayout-lazydynamiclayoutattribute-i.md) |  |
+| [LazyDynamicLayoutAttribute](arkts-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-i.md) |  |
 
 
 ## LazyDynamicLayout
@@ -67,12 +67,12 @@ export declare function LazyDynamicLayout(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | CustomBuilderT&lt;[LazyDynamicLayoutAttribute](arkts-arkuicomponentsarklazydynamiclayout-lazydynamiclayoutattribute-i.md)&gt; | 是 | The style to create a LazyDynamicLayout. |
+| style_ | CustomBuilderT&lt;[LazyDynamicLayoutAttribute](arkts-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-i.md)&gt; | 是 | The style to create a LazyDynamicLayout. |
 | content_ | CustomBuilder | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyDynamicLayoutAttribute](arkts-arkuicomponentsarklazydynamiclayout-lazydynamiclayoutattribute-i.md) | LazyDynamicLayout的属性。 |
+| [LazyDynamicLayoutAttribute](arkts-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-i.md) | LazyDynamicLayout的属性。 |
 

@@ -54,6 +54,12 @@ let eventInfo: accessibility.EventInfo = ({
 });
 ```
 
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+
+let eventInfo = new accessibility.EventInfo('click', 'com.example.MyApplication', 'click');
+```
+
 ## constructor
 
 ```TypeScript
@@ -71,6 +77,10 @@ A constructor used to create a EventInfo object.
 <!--Device-EventInfo-constructor()--><!--Device-EventInfo-constructor()-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**Examples**
+
+See [constructor](#constructor)
 
 ## constructor
 
@@ -100,11 +110,7 @@ Constructor, which is used to construct an EventInfo instance using independent 
 
 **Examples**
 
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-let eventInfo = new accessibility.EventInfo('click', 'com.example.MyApplication', 'click');
-```
+See [constructor](#constructor)
 
 ## beginIndex
 

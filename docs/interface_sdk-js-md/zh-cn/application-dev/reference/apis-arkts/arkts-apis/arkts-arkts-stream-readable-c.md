@@ -33,7 +33,26 @@ constructor()
 **示例**
 
 ```TypeScript
+let writableStream = new stream.Writable();
+```
+
+```TypeScript
 let readableStream = new stream.Readable();
+```
+
+```TypeScript
+let option : stream.ReadableOptions = {
+  encoding : "utf-8"
+};
+let readableStream = new stream.Readable(option);
+```
+
+```TypeScript
+let duplex = new stream.Duplex();
+```
+
+```TypeScript
+let transformStream = new stream.Transform();
 ```
 
 ## constructor
@@ -60,12 +79,7 @@ constructor(options: ReadableOptions)
 
 **示例**
 
-```TypeScript
-let option : stream.ReadableOptions = {
-  encoding : "utf-8"
-};
-let readableStream = new stream.Readable(option);
-```
+参见 [constructor](#constructor)
 
 ## doInitialize
 
@@ -90,6 +104,21 @@ doInitialize(callback: Function): void
 | callback | Function | 是 | 回调函数。 |
 
 **示例**
+
+```TypeScript
+class MyWritable extends stream.Writable {
+  doInitialize(callback: Function) {
+    super.doInitialize(callback);
+    console.info("Writable doInitialize"); // Writable doInitialize
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    super.doWrite(chunk, encoding, callback);
+  }
+}
+
+new MyWritable();
+```
 
 ArkTS-Dyn示例：
 
@@ -756,6 +785,10 @@ read(size?: int): buffer.Buffer | string | null
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [10200038](../errorcode-utils.md#10200038-doread接口未实现) | The doRead method has not been implemented. |
+
+**示例**
+
+参见 [read](#read)
 
 ## resume
 

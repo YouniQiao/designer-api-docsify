@@ -47,6 +47,26 @@ async function CreateImageSource(context : Context) {
 }
 ```
 
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { fileIo } from '@kit.CoreFileKit';
+
+async function CreateImageSource(context : Context) {
+  const path: string = context.cacheDir + "/test.jpg";
+  let file = fileIo.openSync(path, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(file.fd);
+}
+```
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+
+async function CreateImageSource() {
+  const buf: ArrayBuffer = new ArrayBuffer(96); // 96为需要创建的像素buffer大小，取值为：height * width *4。
+  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(buf);
+}
+```
+
 
 ## createImageSource
 
@@ -80,16 +100,7 @@ function createImageSource(fd: number): ImageSource
 
 **示例**
 
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-async function CreateImageSource(context : Context) {
-  const path: string = context.cacheDir + "/test.jpg";
-  let file = fileIo.openSync(path, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(file.fd);
-}
-```
+参见 [createImageSource](#createimagesource)
 
 
 ## createImageSource
@@ -126,12 +137,5 @@ function createImageSource(buf: ArrayBuffer): ImageSource
 
 **示例**
 
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-
-async function CreateImageSource() {
-  const buf: ArrayBuffer = new ArrayBuffer(96); // 96为需要创建的像素buffer大小，取值为：height * width *4。
-  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(buf);
-}
-```
+参见 [createImageSource](#createimagesource)
 

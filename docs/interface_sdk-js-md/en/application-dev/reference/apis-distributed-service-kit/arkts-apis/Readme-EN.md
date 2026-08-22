@@ -1,9 +1,9 @@
 # ArkTS API<!--arkts-distributedservicekit-->
 
 - [@ohos.application.DistributedExtensionAbility](arkts-application-distributedextensionability.md)
-  - [DistributedExtensionAbility](arkts-distributedservice-applicationdistributedextensionability-distributedextensionability-c.md)
+  - [DistributedExtensionAbility](arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md)
 - [@ohos.application.DistributedExtensionContext](arkts-application-distributedextensioncontext.md)
-  - [DistributedExtensionContext](arkts-distributedservice-applicationdistributedextensioncontext-distributedextensioncontext-c.md)
+  - [DistributedExtensionContext](arkts-distributedservice-application-distributedextensioncontext-distributedextensioncontext-c.md)
 <!--Del-->
 - [@ohos.cooperate](arkts-cooperate.md)<!--DelEnd-->
   <!--Del-->
@@ -133,20 +133,6 @@
   - [DistributedHardwareErrorCode(system api)](arkts-distributedservice-hardwaremanager-distributedhardwareerrorcode-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DistributedHardwareType(system api)](arkts-distributedservice-hardwaremanager-distributedhardwaretype-e-sys.md)<!--DelEnd-->
-<!--Del-->
-- [@ohos.distributedSoftBus.conversation](arkts-distributedsoftbus-conversation.md)<!--DelEnd-->
-  <!--Del-->
-  - [getTrustedDevices(system api)](arkts-distributedservice-conversation-gettrusteddevices-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [postConversationData(system api)](arkts-distributedservice-conversation-postconversationdata-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [registerConversationListener(system api)](arkts-distributedservice-conversation-registerconversationlistener-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [unregisterConversationListener(system api)](arkts-distributedservice-conversation-unregisterconversationlistener-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [DeviceNodeInfo(system api)](arkts-distributedservice-conversation-devicenodeinfo-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [DataCallback(system api)](arkts-distributedservice-conversation-datacallback-t-sys.md)<!--DelEnd-->
 - [@ohos.distributedsched.abilityConnectionManager](arkts-distributedsched-abilityconnectionmanager.md)
   - [acceptConnect](arkts-distributedservice-abilityconnectionmanager-acceptconnect-f.md)
   - [connect](arkts-distributedservice-abilityconnectionmanager-connect-f.md)
@@ -255,3 +241,17 @@
   - [DataInfo](arkts-distributedservice-proxychannelmanager-datainfo-i.md)
   - [ChannelState](arkts-distributedservice-proxychannelmanager-channelstate-e.md)
   - [LinkType](arkts-distributedservice-proxychannelmanager-linktype-e.md)
+<!--Del-->
+- [@ohos.distributedSoftBus.conversation](arkts-distributedsoftbus-conversation.md)<!--DelEnd-->
+  <!--Del-->
+  - [getTrustedDevices(system api)](arkts-distributedservice-conversation-gettrusteddevices-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [postConversationData(system api)](arkts-distributedservice-conversation-postconversationdata-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [registerConversationListener(system api)](arkts-distributedservice-conversation-registerconversationlistener-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [unregisterConversationListener(system api)](arkts-distributedservice-conversation-unregisterconversationlistener-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DeviceNodeInfo(system api)](arkts-distributedservice-conversation-devicenodeinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DataCallback(system api)](arkts-distributedservice-conversation-datacallback-t-sys.md)<!--DelEnd-->

@@ -35,3 +35,10 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 | --- | --- |
 | [Stat](arkts-corefile-fileio-stat-depr-i.md) | File information obtained. |
 
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let stat = fileio.lstatSync(filePath);
+```
+

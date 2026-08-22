@@ -40,7 +40,7 @@ Generates a key pair using this asymmetric key generator. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the key pair obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the key pair obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -51,6 +51,32 @@ Generates a key pair using this asymmetric key generator. This API uses an async
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
 **Examples**
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
+asyKeyGenerator.generateKeyPair((err, keyPair) => {
+  if (err) {
+    console.error('generateKeyPair result: fail.');
+    return;
+  }
+  console.info('generateKeyPair result: success.');
+})
+```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
+let keyGenPromise = asyKeyGenerator.generateKeyPair();
+keyGenPromise.then(keyPair => {
+  console.info('generateKeyPair result: success.');
+}).catch((error: BusinessError) => {
+  console.error('generateKeyPair result: fail.');
+});
+```
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -93,42 +119,6 @@ function testGenerateKeyPair() {
 }
 ```
 
-## generateKeyPair
-
-```TypeScript
-generateKeyPair(): Promise<KeyPair>
-```
-
-Generates a key pair using this asymmetric key generator. This API uses a promise to return the result.
-
-<br>If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, a key pair will be randomly generated. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain a key pair that is consistent with the specified key parameters.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AsyKeyGeneratorBySpec-generateKeyPair(): Promise<KeyPair>--><!--Device-AsyKeyGeneratorBySpec-generateKeyPair(): Promise<KeyPair>-End-->
-
-**System capability:** 
-- API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Promise used to return the asymmetric key pair. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-
-**Examples**
-
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -170,6 +160,44 @@ function testGenerateKeyPair() {
 }
 ```
 
+## generateKeyPair
+
+```TypeScript
+generateKeyPair(): Promise<KeyPair>
+```
+
+Generates a key pair using this asymmetric key generator. This API uses a promise to return the result.
+
+<br>If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, a key pair will be randomly generated. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain a key pair that is consistent with the specified key parameters.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeyGeneratorBySpec-generateKeyPair(): Promise<KeyPair>--><!--Device-AsyKeyGeneratorBySpec-generateKeyPair(): Promise<KeyPair>-End-->
+
+**System capability:** 
+- API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
+- API version 10 to 11: SystemCapability.Security.CryptoFramework
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Promise used to return the asymmetric key pair. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+
+**Examples**
+
+See [generateKeyPair](#generatekeypair)
+
 ## generateKeyPairSync
 
 ```TypeScript
@@ -205,6 +233,22 @@ Generates a key pair using this asymmetric key generator. This API returns the r
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
 **Examples**
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
+try {
+  let keyPairData = asyKeyGenerator.generateKeyPairSync();
+  if (keyPairData != null) {
+    console.info('[Sync]: key pair result: success.');
+  } else {
+    console.error('[Sync]: get key pair result: fail.');
+  }
+} catch (e) {
+  console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
+}
+```
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -276,7 +320,7 @@ Generates a private key using this asymmetric key generator. This API uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the private key obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the private key obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -329,42 +373,6 @@ function testGeneratePriKey() {
 }
 ```
 
-## generatePriKey
-
-```TypeScript
-generatePriKey(): Promise<PriKey>
-```
-
-Generates a private key using this asymmetric key generator. This API uses a promise to return the result.
-
-<br>If a key parameter of the [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, a private key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain the private key from the key pair generated.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AsyKeyGeneratorBySpec-generatePriKey(): Promise<PriKey>--><!--Device-AsyKeyGeneratorBySpec-generatePriKey(): Promise<PriKey>-End-->
-
-**System capability:** 
-- API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md)&gt; | Promise used to return the private key. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-
-**Examples**
-
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -405,6 +413,44 @@ function testGeneratePriKey() {
   });
 }
 ```
+
+## generatePriKey
+
+```TypeScript
+generatePriKey(): Promise<PriKey>
+```
+
+Generates a private key using this asymmetric key generator. This API uses a promise to return the result.
+
+<br>If a key parameter of the [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, a private key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain the private key from the key pair generated.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeyGeneratorBySpec-generatePriKey(): Promise<PriKey>--><!--Device-AsyKeyGeneratorBySpec-generatePriKey(): Promise<PriKey>-End-->
+
+**System capability:** 
+- API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
+- API version 10 to 11: SystemCapability.Security.CryptoFramework
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md)&gt; | Promise used to return the private key. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+
+**Examples**
+
+See [generatePriKey](#generateprikey)
 
 ## generatePriKeySync
 
@@ -510,7 +556,7 @@ Generates a public key using this asymmetric key generator. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the public key obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the public key obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -563,42 +609,6 @@ function testGeneratePubKey() {
 }
 ```
 
-## generatePubKey
-
-```TypeScript
-generatePubKey(): Promise<PubKey>
-```
-
-Generates a public key using this asymmetric key generator. This API uses a promise to return the result.
-
-<br>If a key parameter of the [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, the specified public key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain the specified public key from the key pair generated.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AsyKeyGeneratorBySpec-generatePubKey(): Promise<PubKey>--><!--Device-AsyKeyGeneratorBySpec-generatePubKey(): Promise<PubKey>-End-->
-
-**System capability:** 
-- API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md)&gt; | Promise used to return the public key. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-
-**Examples**
-
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -639,6 +649,44 @@ function testGeneratePubKey() {
   });
 }
 ```
+
+## generatePubKey
+
+```TypeScript
+generatePubKey(): Promise<PubKey>
+```
+
+Generates a public key using this asymmetric key generator. This API uses a promise to return the result.
+
+<br>If a key parameter of the [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, the specified public key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain the specified public key from the key pair generated.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeyGeneratorBySpec-generatePubKey(): Promise<PubKey>--><!--Device-AsyKeyGeneratorBySpec-generatePubKey(): Promise<PubKey>-End-->
+
+**System capability:** 
+- API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
+- API version 10 to 11: SystemCapability.Security.CryptoFramework
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md)&gt; | Promise used to return the public key. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+
+**Examples**
+
+See [generatePubKey](#generatepubkey)
 
 ## generatePubKeySync
 

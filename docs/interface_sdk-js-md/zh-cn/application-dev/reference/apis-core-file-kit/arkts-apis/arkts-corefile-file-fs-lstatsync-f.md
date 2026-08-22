@@ -32,7 +32,7 @@ declare function lstatSync(path: string): Stat
 
 | 类型 | 说明 |
 | --- | --- |
-| [Stat](arkts-corefile-filefs-stat-i.md) | 表示文件的具体信息。 |
+| [Stat](arkts-corefile-file-fs-stat-i.md) | 表示文件的具体信息。 |
 
 **错误码：**
 
@@ -48,4 +48,12 @@ declare function lstatSync(path: string): Stat
 | 13900033 | Too many symbolic links encountered |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/linkToFile";
+let fileStat = fileIo.lstatSync(filePath);
+console.info(`Succeeded in getting symbolic link info, the size of file is ${fileStat.size}`);
+```
 

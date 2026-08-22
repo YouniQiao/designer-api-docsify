@@ -49,6 +49,18 @@ connectedTag.read().then((data) => {
 });
 ```
 
+```TypeScript
+import { connectedTag } from '@kit.ConnectivityKit';
+
+connectedTag.read((err, data)=> {
+    if (err) {
+        console.error("connectedTag read AsyncCallback err: " + err);
+    } else {
+        console.info("connectedTag read AsyncCallback data: " + data);
+    }
+});
+```
+
 
 ## read
 
@@ -70,7 +82,7 @@ Reads the content of this active tag. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number[]&gt; | Yes | Callback used to return the active tag content obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | Yes | Callback used to return the active tag content obtained. |
 
 **Error codes:**
 
@@ -82,15 +94,5 @@ Reads the content of this active tag. This API uses an asynchronous callback to 
 
 **Examples**
 
-```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
-
-connectedTag.read((err, data)=> {
-    if (err) {
-        console.error("connectedTag read AsyncCallback err: " + err);
-    } else {
-        console.info("connectedTag read AsyncCallback data: " + data);
-    }
-});
-```
+See [read](#read)
 

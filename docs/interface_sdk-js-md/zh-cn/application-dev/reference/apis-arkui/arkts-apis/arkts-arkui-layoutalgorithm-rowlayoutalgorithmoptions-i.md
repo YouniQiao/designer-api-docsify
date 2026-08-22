@@ -104,7 +104,7 @@ space?: LengthMetrics
 
 非法值：按默认值处理。
 
-**类型：** [LengthMetrics](../../apis-default/arkts-apis/arkts-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.vp(0)
 

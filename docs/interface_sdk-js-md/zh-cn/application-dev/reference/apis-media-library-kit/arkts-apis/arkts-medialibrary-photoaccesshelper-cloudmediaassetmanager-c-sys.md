@@ -206,6 +206,10 @@ static getCloudMediaAssetManagerInstance(context: Context): CloudMediaAssetManag
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+**示例**
+
+参见 [getCloudMediaAssetManagerInstance](#getcloudmediaassetmanagerinstance)
+
 ## getCloudMediaAssetStatus
 
 ```TypeScript

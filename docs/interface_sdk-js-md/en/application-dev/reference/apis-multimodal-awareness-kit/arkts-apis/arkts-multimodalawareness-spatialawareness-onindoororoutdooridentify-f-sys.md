@@ -32,7 +32,7 @@ Subscribe to the results of indoorand outdoor identification.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | configParams | [DistanceMeasurementConfigParams](arkts-multimodalawareness-spatialawareness-distancemeasurementconfigparams-i-sys.md) | Yes | Configuration parameters for identification inside and <br> outside the door. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DoorPositionResponse](arkts-multimodalawareness-spatialawareness-doorpositionresponse-i-sys.md)&gt; | Yes | Callback for identification inside and outside the door. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DoorPositionResponse](arkts-multimodalawareness-spatialawareness-doorpositionresponse-i-sys.md)&gt; | Yes | Callback for identification inside and outside the door. |
 
 **Error codes:**
 

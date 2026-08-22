@@ -44,7 +44,23 @@ Obtains bundle name by the given uid.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | number | Yes | Indicates the UID of an application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |  |
+
+**Examples**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let uid: number = 20010005;
+
+bundle.getNameForUid(uid)
+  .then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+```
 
 
 ## getNameForUid
@@ -76,4 +92,8 @@ Obtains the bundle name based on a UID. This API uses a promise to return the re
 | Type | Description |
 | --- | --- |
 | Promise&lt;string&gt; | Returns the bundle name. |
+
+**Examples**
+
+See [getNameForUid](#getnameforuid)
 

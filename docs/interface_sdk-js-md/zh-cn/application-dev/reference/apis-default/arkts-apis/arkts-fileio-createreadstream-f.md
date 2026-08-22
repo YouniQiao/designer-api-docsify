@@ -26,13 +26,13 @@ function createReadStream(path: string, options?: ReadStreamOptions): ReadStream
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 文件路径。 |
-| options | [ReadStreamOptions](arkts-filefs-readstreamoptions-i.md) | 否 | 支持如下选项：<br/>- start，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。<br/>- end， number类型，表示期望读取结束的位置，单位为Byte。可选，默认文件末尾。 |
+| options | [ReadStreamOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-readstreamoptions-i.md) | 否 | 支持如下选项：<br/>- start，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。<br/>- end， number类型，表示期望读取结束的位置，单位为Byte。可选，默认文件末尾。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ReadStream](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-readstream-c.md) | 文件可读流。 |
+| [ReadStream](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-readstream-c.md) | 文件可读流。 |
 
 **错误码：**
 

@@ -50,6 +50,23 @@ try {
 }
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  dlpPermission.isInSandbox((err, data) => {
+    if (err) {
+      console.error('isInSandbox error', err.code, err.message);
+    } else {
+      console.info('isInSandbox, data', JSON.stringify(data));
+    }
+  }); // Whether the application is running in a sandbox.
+} catch (err) {
+  console.error('isInSandbox error', (err as BusinessError).code, (err as BusinessError).message);
+}
+```
+
 
 ## isInSandbox
 
@@ -71,7 +88,7 @@ This API is used to determine whether the current application is running in a DL
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. The value **true** means the application is running in a sandbox; the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. The value **true** means the application is running in a sandbox; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -84,20 +101,5 @@ This API is used to determine whether the current application is running in a DL
 
 **Examples**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  dlpPermission.isInSandbox((err, data) => {
-    if (err) {
-      console.error('isInSandbox error', err.code, err.message);
-    } else {
-      console.info('isInSandbox, data', JSON.stringify(data));
-    }
-  }); // Whether the application is running in a sandbox.
-} catch (err) {
-  console.error('isInSandbox error', (err as BusinessError).code, (err as BusinessError).message);
-}
-```
+See [isInSandbox](#isinsandbox)
 

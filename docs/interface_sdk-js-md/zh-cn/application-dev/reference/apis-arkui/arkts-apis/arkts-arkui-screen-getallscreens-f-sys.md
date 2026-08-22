@@ -78,38 +78,6 @@ screen.getAllScreens((err: BusinessError | null, data: Array<screen.Screen> | un
 });
 ```
 
-
-## getAllScreens
-
-```TypeScript
-function getAllScreens(): Promise<Array<Screen>>
-```
-
-获取所有的屏幕，使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-screen-function getAllScreens(): Promise<Array<Screen>>--><!--Device-screen-function getAllScreens(): Promise<Array<Screen>>-End-->
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**系统接口：** 此接口为系统接口。
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[Screen](arkts-arkui-screen-screen-i-sys.md)&gt;&gt; | Promise对象。返回当前获取的屏幕对象集合。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -144,4 +112,38 @@ promise.then((data: Array<screen.Screen>) => {
   console.error(`Failed to get all screens. Code: ${err?.code}, message: ${err?.message}`);
 });
 ```
+
+
+## getAllScreens
+
+```TypeScript
+function getAllScreens(): Promise<Array<Screen>>
+```
+
+获取所有的屏幕，使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-screen-function getAllScreens(): Promise<Array<Screen>>--><!--Device-screen-function getAllScreens(): Promise<Array<Screen>>-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[Screen](arkts-arkui-screen-screen-i-sys.md)&gt;&gt; | Promise对象。返回当前获取的屏幕对象集合。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
+
+**示例**
+
+参见 [getAllScreens](#getallscreens)
 

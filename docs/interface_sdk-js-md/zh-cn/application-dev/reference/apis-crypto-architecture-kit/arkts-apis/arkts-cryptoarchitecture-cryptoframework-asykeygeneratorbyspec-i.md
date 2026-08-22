@@ -55,6 +55,52 @@ generateKeyPair(callback: AsyncCallback<KeyPair>): void
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 
+let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
+asyKeyGenerator.generateKeyPair((err, keyPair) => {
+  if (err) {
+    console.error(`generateKeyPair failed, errCode: ${err.code}, errMsg: ${err.message}`);
+    return;
+  }
+  console.info('generateKeyPair result: success.');
+})
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
+let keyGenPromise = asyKeyGenerator.generateKeyPair();
+keyGenPromise.then(keyPair => {
+  console.info('generateKeyPair result: success.');
+}).catch((error: BusinessError) => {
+  console.error(`generateKeyPair failed, ${error.code}, ${error.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@ohos.base';
+
+async function TestGenerateKeyPair() {
+  let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
+  try {
+    let keyGenPromise = await asyKeyGenerator.generateKeyPair();
+    console.info('generateKeyPair result: success.');
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`generateKeyPair failed, ${e.code}, ${e.message}`);
+  }
+}
+```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
 // 配置DSA1024公钥和私钥中包含的公共参数。
 function genDsa1024CommonSpecBigE() {
   let dsaCommonSpec: cryptoFramework.DSACommonParamsSpec = {
@@ -92,42 +138,6 @@ function testGenerateKeyPair() {
   })
 }
 ```
-
-## generateKeyPair
-
-```TypeScript
-generateKeyPair(): Promise<KeyPair>
-```
-
-获取该非对称密钥生成器生成的密钥。使用Promise异步回调。
-
-<br>当使用[COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到随机生成的密钥对； 当使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到各项数据与密钥参数一致的 密钥对。
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AsyKeyGeneratorBySpec-generateKeyPair(): Promise<KeyPair>--><!--Device-AsyKeyGeneratorBySpec-generateKeyPair(): Promise<KeyPair>-End-->
-
-**系统能力：** 
-- API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API版本10-11：SystemCapability.Security.CryptoFramework
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Promise对象，返回非对称密钥KeyPair。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-
-**示例**
 
 ArkTS-Dyn示例：
 
@@ -217,6 +227,44 @@ async function testGenerateKeyPair()
 }
 ```
 
+## generateKeyPair
+
+```TypeScript
+generateKeyPair(): Promise<KeyPair>
+```
+
+获取该非对称密钥生成器生成的密钥。使用Promise异步回调。
+
+<br>当使用[COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到随机生成的密钥对； 当使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到各项数据与密钥参数一致的 密钥对。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-generateKeyPair(): Promise<KeyPair>--><!--Device-AsyKeyGeneratorBySpec-generateKeyPair(): Promise<KeyPair>-End-->
+
+**系统能力：** 
+- API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
+- API版本10-11：SystemCapability.Security.CryptoFramework
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Promise对象，返回非对称密钥KeyPair。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+
+**示例**
+
+参见 [generateKeyPair](#generatekeypair)
+
 ## generateKeyPairSync
 
 ```TypeScript
@@ -252,6 +300,22 @@ generateKeyPairSync(): KeyPair
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 
 **示例**
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
+try {
+  let keyPairData = asyKeyGenerator.generateKeyPairSync();
+  if (keyPairData != null) {
+    console.info('[Sync]: key pair result: success.');
+  } else {
+    console.error('[Sync]: get key pair result: fail.');
+  }
+} catch (e) {
+  console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
+}
+```
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -376,42 +440,6 @@ function testGeneratePriKey() {
 }
 ```
 
-## generatePriKey
-
-```TypeScript
-generatePriKey(): Promise<PriKey>
-```
-
-获取该非对称密钥生成器生成的私钥。使用Promise异步回调。
-
-<br>当使用[PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到指定的私钥；当使用 [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的私钥。
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AsyKeyGeneratorBySpec-generatePriKey(): Promise<PriKey>--><!--Device-AsyKeyGeneratorBySpec-generatePriKey(): Promise<PriKey>-End-->
-
-**系统能力：** 
-- API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API版本10-11：SystemCapability.Security.CryptoFramework
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md)&gt; | Promise对象，返回私钥。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -498,6 +526,44 @@ async function testGeneratePriKey() {
   }
 }
 ```
+
+## generatePriKey
+
+```TypeScript
+generatePriKey(): Promise<PriKey>
+```
+
+获取该非对称密钥生成器生成的私钥。使用Promise异步回调。
+
+<br>当使用[PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到指定的私钥；当使用 [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的私钥。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-generatePriKey(): Promise<PriKey>--><!--Device-AsyKeyGeneratorBySpec-generatePriKey(): Promise<PriKey>-End-->
+
+**系统能力：** 
+- API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
+- API版本10-11：SystemCapability.Security.CryptoFramework
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md)&gt; | Promise对象，返回私钥。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+
+**示例**
+
+参见 [generatePriKey](#generateprikey)
 
 ## generatePriKeySync
 
@@ -656,42 +722,6 @@ function testGeneratePubKey() {
 }
 ```
 
-## generatePubKey
-
-```TypeScript
-generatePubKey(): Promise<PubKey>
-```
-
-获取该非对称密钥生成器生成的公钥。使用Promise异步回调。
-
-<br>当使用[PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到指定的公钥；当使用 [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的公钥。
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AsyKeyGeneratorBySpec-generatePubKey(): Promise<PubKey>--><!--Device-AsyKeyGeneratorBySpec-generatePubKey(): Promise<PubKey>-End-->
-
-**系统能力：** 
-- API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API版本10-11：SystemCapability.Security.CryptoFramework
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md)&gt; | Promise对象，返回非对称密钥的公钥PubKey。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -779,6 +809,44 @@ async function testGeneratePubKey()
   }
 }
 ```
+
+## generatePubKey
+
+```TypeScript
+generatePubKey(): Promise<PubKey>
+```
+
+获取该非对称密钥生成器生成的公钥。使用Promise异步回调。
+
+<br>当使用[PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到指定的公钥；当使用 [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的公钥。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-generatePubKey(): Promise<PubKey>--><!--Device-AsyKeyGeneratorBySpec-generatePubKey(): Promise<PubKey>-End-->
+
+**系统能力：** 
+- API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
+- API版本10-11：SystemCapability.Security.CryptoFramework
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md)&gt; | Promise对象，返回非对称密钥的公钥PubKey。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+
+**示例**
+
+参见 [generatePubKey](#generatepubkey)
 
 ## generatePubKeySync
 

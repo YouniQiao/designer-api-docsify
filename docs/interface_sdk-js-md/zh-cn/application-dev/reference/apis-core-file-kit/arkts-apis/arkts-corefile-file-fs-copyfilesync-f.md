@@ -55,3 +55,11 @@ declare function copyFileSync(src: string | number, dest: string | number, mode?
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**适用版本：** 12+ |
 
+**示例**
+
+```TypeScript
+let srcPath = pathDir + "/srcDir/test.txt";
+let dstPath = pathDir + "/dstDir/test.txt";
+fileIo.copyFileSync(srcPath, dstPath);
+```
+

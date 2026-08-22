@@ -75,6 +75,36 @@ notificationManager.getAllNotificationEnabledBundles().then((data: Array<notific
 })
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userId : number = 100;
+
+notificationManager.getAllNotificationEnabledBundles(userId).then((data: Array<notificationManager.BundleOption>) => {
+  console.info(`Enable bundle data is ${JSON.stringify(data)}`);
+  data.forEach(element => {
+    console.info(`Enable uid is ${JSON.stringify(element.uid)}`);
+    console.info(`Enable bundle is ${JSON.stringify(element.bundle)}`);
+  });
+}).catch((err: BusinessError) => {
+  console.error(`getAllNotificationEnabledBundles failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let userId : int = 100;
+
+notificationManager.getAllNotificationEnabledBundles(userId).then((data: Array<notificationManager.BundleOption> | undefined): void => {
+  console.info(`Enable bundle data is ${JSON.stringify(data)}`);
+}).catch((err: Error | undefined): void => {
+  console.error(`getAllNotificationEnabledBundles error, code: ${err?.code}, message: ${err?.message}`);
+});
+```
+
 
 ## getAllNotificationEnabledBundles
 
@@ -119,33 +149,5 @@ function getAllNotificationEnabledBundles(userId: int): Promise<Array<BundleOpti
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId : number = 100;
-
-notificationManager.getAllNotificationEnabledBundles(userId).then((data: Array<notificationManager.BundleOption>) => {
-  console.info(`Enable bundle data is ${JSON.stringify(data)}`);
-  data.forEach(element => {
-    console.info(`Enable uid is ${JSON.stringify(element.uid)}`);
-    console.info(`Enable bundle is ${JSON.stringify(element.bundle)}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`getAllNotificationEnabledBundles failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let userId : int = 100;
-
-notificationManager.getAllNotificationEnabledBundles(userId).then((data: Array<notificationManager.BundleOption> | undefined): void => {
-  console.info(`Enable bundle data is ${JSON.stringify(data)}`);
-}).catch((err: Error | undefined): void => {
-  console.error(`getAllNotificationEnabledBundles error, code: ${err?.code}, message: ${err?.message}`);
-});
-```
+参见 [getAllNotificationEnabledBundles](#getallnotificationenabledbundles)
 

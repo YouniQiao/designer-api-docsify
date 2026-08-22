@@ -291,6 +291,13 @@ import { On, ON } from '@kit.TestKit';
 let on: On = ON.clickable(true); // 使用静态构造器ON创建On对象，指定目标控件的可点击状态属性。
 ```
 
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+let by: By = BY.clickable(true); // 使用静态构造器BY创建by对象，指定目标控件的可点击状态属性。
+```
+
 ## description
 
 ```TypeScript
@@ -378,6 +385,13 @@ import { On, ON } from '@kit.TestKit';
 let on: On = ON.enabled(true); // 使用静态构造器ON创建On对象，指定目标控件的使能状态属性。
 ```
 
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+let by: By = BY.enabled(true); // 使用静态构造器BY创建by对象，指定目标控件的使能状态属性。
+```
+
 ## focused
 
 ```TypeScript
@@ -419,6 +433,13 @@ focused(b?: boolean): On
 import { On, ON } from '@kit.TestKit';
 
 let on: On = ON.focused(true); // 使用静态构造器ON创建On对象，指定目标控件的获焦状态属性。
+```
+
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+let by: By = BY.focused(true); // 使用静态构造器BY创建by对象，指定目标控件的获焦状态属性。
 ```
 
 ## hint
@@ -508,6 +529,20 @@ import { On, ON } from '@kit.TestKit';
 let on: On = ON.id('123'); // 使用静态构造器ON创建On对象，指定目标控件的id属性。
 ```
 
+```TypeScript
+// xxx.test.ets
+import { MatchPattern, On, ON } from '@kit.TestKit';
+
+let on: On = ON.id('id', MatchPattern.REG_EXP_ICASE); // 忽略大小写匹配控件的id属性值。
+```
+
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+let by: By = BY.id(123); // 使用静态构造器BY创建by对象，指定目标控件的id属性。
+```
+
 ## id
 
 ```TypeScript
@@ -545,12 +580,7 @@ id(id: string, pattern: MatchPattern): On
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { MatchPattern, On, ON } from '@kit.TestKit';
-
-let on: On = ON.id('id', MatchPattern.REG_EXP_ICASE); // 忽略大小写匹配控件的id属性值。
-```
+参见 [id](#id)
 
 ## inWindow
 
@@ -639,6 +669,14 @@ import { On, ON } from '@kit.TestKit';
 let on: On = ON.type('Text').isAfter(ON.text('123')); // 查找text为123之后的第一个Text组件
 ```
 
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+// 使用静态构造器BY创建by对象，指定目标控件位于给出的特征属性控件之后。
+let by: By = BY.type('Text').isAfter(BY.text('123')); // 查找text为123之后的第一个Text组件。
+```
+
 ## isBefore
 
 ```TypeScript
@@ -681,6 +719,14 @@ import { On, ON } from '@kit.TestKit';
 
 // 使用静态构造器ON创建On对象，指定目标控件位于给出的特征属性控件之前。
 let on: On = ON.type('Button').isBefore(ON.text('123')); // 查找text为123之前的第一个Button组件。
+```
+
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+// 使用静态构造器BY创建by对象，指定目标控件位于给出的特征属性控件之前。
+let by: By = BY.type('Button').isBefore(BY.text('123')); // 查找text为123之前的第一个Button组件。
 ```
 
 ## longClickable
@@ -819,6 +865,13 @@ import { On, ON } from '@kit.TestKit';
 let on: On = ON.scrollable(true); // 使用静态构造器ON创建On对象，指定目标控件的可滑动状态属性。
 ```
 
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+let by: By = BY.scrollable(true); // 使用静态构造器BY创建by对象，指定目标控件的可滑动状态属性。
+```
+
 ## selected
 
 ```TypeScript
@@ -860,6 +913,13 @@ selected(b?: boolean): On
 import { On, ON } from '@kit.TestKit';
 
 let on: On = ON.selected(true); // 使用静态构造器ON创建On对象，指定目标控件的被选中状态属性。
+```
+
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+let by: By = BY.selected(true); // 使用静态构造器BY创建by对象，指定目标控件的被选中状态属性。
 ```
 
 ## text
@@ -912,6 +972,13 @@ import { On, ON } from '@kit.TestKit';
 let on: On = ON.text('123'); // 使用静态构造器ON创建On对象，指定目标控件的text属性。
 ```
 
+```TypeScript
+// xxx.test.ets
+import { BY, By } from '@kit.TestKit';
+
+let by: By = BY.text('123'); // 使用静态构造器BY创建by对象，指定目标控件的text属性。
+```
+
 ## type
 
 ```TypeScript
@@ -955,6 +1022,20 @@ import { On, ON } from '@kit.TestKit';
 let on: On = ON.type('Button'); // 使用静态构造器ON创建On对象，指定目标控件的控件类型属性。
 ```
 
+```TypeScript
+// xxx.test.ets
+import { On, ON, MatchPattern } from '@kit.TestKit';
+
+let on: On = ON.type('Button', MatchPattern.EQUALS); // 使用静态构造器ON创建On对象，指定目标控件的控件类型属性。
+```
+
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+let by: By = BY.type('Button'); // 使用静态构造器BY创建by对象，指定目标控件的控件类型属性。
+```
+
 ## type
 
 ```TypeScript
@@ -992,12 +1073,7 @@ type(tp: string, pattern: MatchPattern): On
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { On, ON, MatchPattern } from '@kit.TestKit';
-
-let on: On = ON.type('Button', MatchPattern.EQUALS); // 使用静态构造器ON创建On对象，指定目标控件的控件类型属性。
-```
+参见 [type](#type)
 
 ## within
 

@@ -26,7 +26,7 @@ Obtains the minimum width of the wallpaper. in pixels. returns 0 if no wallpaper
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | the callback of getMinWidth. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | the callback of getMinWidth. |
 
 **Examples**
 
@@ -39,6 +39,16 @@ wallpaper.getMinWidth((error: BusinessError, data: Number) => {
         return;
     }
     console.info(`success to getMinWidth: ${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+wallpaper.getMinWidth().then((data: Number) => {
+    console.info(`success to getMinWidth: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`failed to getMinWidth because: ${JSON.stringify(error)}`);
 });
 ```
 
@@ -67,13 +77,5 @@ Obtains the minimum width of the wallpaper. in pixels. returns 0 if no wallpaper
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-wallpaper.getMinWidth().then((data: Number) => {
-    console.info(`success to getMinWidth: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`failed to getMinWidth because: ${JSON.stringify(error)}`);
-});
-```
+See [getMinWidth](#getminwidth)
 

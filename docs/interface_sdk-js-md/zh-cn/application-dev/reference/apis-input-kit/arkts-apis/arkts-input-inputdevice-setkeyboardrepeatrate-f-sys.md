@@ -102,44 +102,6 @@ struct Index {
 }
 ```
 
-
-## setKeyboardRepeatRate
-
-```TypeScript
-function setKeyboardRepeatRate(rate: int): Promise<void>
-```
-
-设置键盘按键的重复速率，使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-inputDevice-function setKeyboardRepeatRate(rate: int): Promise<void>--><!--Device-inputDevice-function setKeyboardRepeatRate(rate: int): Promise<void>-End-->
-
-**系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rate | int | 是 | 键盘按键重复速率，默认值50ms/次，调节范围[36ms/次, 100ms/次]。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -197,4 +159,44 @@ struct Index {
   }
 }
 ```
+
+
+## setKeyboardRepeatRate
+
+```TypeScript
+function setKeyboardRepeatRate(rate: int): Promise<void>
+```
+
+设置键盘按键的重复速率，使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-inputDevice-function setKeyboardRepeatRate(rate: int): Promise<void>--><!--Device-inputDevice-function setKeyboardRepeatRate(rate: int): Promise<void>-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| rate | int | 是 | 键盘按键重复速率，默认值50ms/次，调节范围[36ms/次, 100ms/次]。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+参见 [setKeyboardRepeatRate](#setkeyboardrepeatrate)
 

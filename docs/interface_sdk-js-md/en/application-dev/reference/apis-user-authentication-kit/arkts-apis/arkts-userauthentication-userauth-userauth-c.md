@@ -195,6 +195,17 @@ Checks whether the specified authentication capability is supported.
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
 
+try {
+  userAuth.getAvailableStatus(userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL3);
+  console.info('current auth trust level is supported');
+} catch (error) {
+  console.error(`current auth trust level is not supported, error = ${error}`);
+}
+```
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
 let auth = new userAuth.UserAuth();
 let checkCode = auth.getAvailableStatus(userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1);
 if (checkCode == userAuth.ResultCode.SUCCESS) {

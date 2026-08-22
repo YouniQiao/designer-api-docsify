@@ -50,3 +50,48 @@ Adds a shortcut for the given user. This API uses a promise to return the result
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
 | [17700070](../errorcode-bundle.md#17700070-invalid-shortcut-id) | The specified shortcut id is illegal. |
 
+**Examples**
+
+```TypeScript
+import { shortcutManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct ShortcutExample {
+  build() {
+    Column({ space: 20 }) {
+      Row({ space: 20 }) {
+        Button('add').onClick(() => {
+          let data: shortcutManager.ShortcutInfo = {
+            id: "test1",
+            bundleName: "com.example.myapplication",
+            moduleName: "hello",
+            hostAbility: "hello",
+            icon: "hello",
+            iconId: 1,
+            label: "hello",
+            labelId: 1,
+            wants: [],
+            appIndex: 0,
+            sourceType: 0,
+          }
+          try {
+            shortcutManager.addDesktopShortcutInfo(data, 100)
+              .then(() => {
+                console.info("addDesktopShortcutInfo success");
+              }).catch((err: BusinessError) => {
+              console.error(`addDesktopShortcutInfo errData is errCode:${err.code}  message:${err.message}`);
+            });
+          } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`addDesktopShortcutInfo error is errCode:${code}  message:${message}`);
+          }
+        })
+      }
+    }
+  }
+}
+```
+

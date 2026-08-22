@@ -45,7 +45,7 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob | Yes | Indicates the data to be finally encrypted or decrypted. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -56,6 +56,50 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: <br>1. The data is too long.<br>**Applicable version:** 22 and later |
+
+**Examples**
+
+For more HMAC operation examples, see [Generating an HMAC by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment).
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function hmacByCallback() {
+  let mac = cryptoFramework.createMac('SHA256');
+  let keyBlob: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from('12345678abcdefgh', 'utf-8').buffer) };
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  symKeyGenerator.convertKey(keyBlob, (err, symKey) => {
+    mac.init(symKey, (err) => {
+      mac.update({ data: new Uint8Array(buffer.from('hmacTestMessage', 'utf-8').buffer) }, (err) => {
+        mac.doFinal((err, output) => {
+          console.info('[Callback]: HMAC result: ' + output.data);
+          console.info('[Callback]: MAC len: ' + mac.getMacLength());
+        });
+      });
+    });
+  });
+}
+```
+
+For more HMAC operation examples, see [Generating an HMAC by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment).
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+async function hmacByPromise() {
+  let mac = cryptoFramework.createMac('SHA256');
+  let keyBlob: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from('12345678abcdefgh', 'utf-8').buffer) };
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let symKey = await symKeyGenerator.convertKey(keyBlob);
+  await mac.init(symKey);
+  await mac.update({ data: new Uint8Array(buffer.from('hmacTestMessage', 'utf-8').buffer) });
+  let macOutput = await mac.doFinal();
+  console.info('[Promise]: HMAC result: ' + macOutput.data);
+  console.info('[Promise]: MAC len: ' + mac.getMacLength());
+}
+```
 
 ## doFinal
 
@@ -107,7 +151,7 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob \| null | Yes | Data to encrypt or decrypt. In symmetric encryption and decryption, this parameter can be **null**, but **{data: Uint8Array (empty)}** cannot be passed in. Before API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the encryption or decryption is successful, **err** is **undefined**, and **data** is the encryption or decryption result obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the encryption or decryption is successful, **err** is **undefined**, and **data** is the encryption or decryption result obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -118,6 +162,10 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: <br>1. The data is too long.<br>**Applicable version:** 22 and later |
+
+**Examples**
+
+See [doFinal](#dofinal)
 
 ## doFinal
 
@@ -162,7 +210,7 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob \| null | Yes | Indicates the data to be finally encrypted or decrypted. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob \| null&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob \| null&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -173,6 +221,10 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: <br>1. The data is too long. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+
+**Examples**
+
+See [doFinal](#dofinal)
 
 ## doFinal
 
@@ -213,6 +265,10 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: <br>1. The data is too long.<br>**Applicable version:** 22 and later |
+
+**Examples**
+
+See [doFinal](#dofinal)
 
 ## doFinal
 
@@ -289,6 +345,10 @@ During decryption, **authTag** must be set in [GcmParamsSpec](arkts-cryptoarchit
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: <br>1. The data is too long.<br>**Applicable version:** 22 and later |
 
+**Examples**
+
+See [doFinal](#dofinal)
+
 ## doFinal
 
 ```TypeScript
@@ -348,6 +408,10 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: <br>1. The data is too long. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
+**Examples**
+
+See [doFinal](#dofinal)
+
 ## doFinalSync
 
 ```TypeScript
@@ -400,6 +464,27 @@ The output of **doFinalSync()** varies with the symmetric block cipher mode in u
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: <br>1. The data is too long.<br>**Applicable version:** 22 and later |
 
+**Examples**
+
+For more HMAC operation examples, see [Generating an HMAC by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment).
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function hmacBySync() {
+  let mac = cryptoFramework.createMac('SHA256');
+  let keyBlob: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from('12345678abcdefgh', 'utf-8').buffer) };
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let symKey = symKeyGenerator.convertKeySync(keyBlob);
+  mac.initSync(symKey);
+  mac.updateSync({ data: new Uint8Array(buffer.from('hmacTestMessage', 'utf-8').buffer) });
+  let macOutput = mac.doFinalSync();
+  console.info('[Sync]: HMAC result: ' + macOutput.data);
+  console.info('[Sync]: MAC len: ' + mac.getMacLength());
+}
+```
+
 ## doFinalSync
 
 ```TypeScript
@@ -439,6 +524,10 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: <br>1. The data is too long. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+
+**Examples**
+
+See [doFinalSync](#dofinalsync)
 
 ## getCipherSpec
 
@@ -519,7 +608,7 @@ Initializes the crypto operation with the given crypto mode, key and parameters.
 | opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | Yes | Operation (encryption or decryption) to perform. |
 | key | Key | Yes | Key for encryption or decryption. |
 | params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) | Yes | Indicates the algorithm parameters such as IV. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -558,7 +647,7 @@ Initializes the [cipher](#cipher) object for encryption and decryption. This API
 | opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | Yes | Operation (encryption or decryption) to perform. |
 | key | Key | Yes | Key for encryption or decryption. |
 | params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) \| null | Yes | Parameters for encryption or decryption. For algorithm modes without parameters (such as ECB), set this parameter to **null**. In versions earlier than API version 10, only **ParamsSpec** is supported. Since API version 10, **null** is also supported. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -798,7 +887,7 @@ Updates the data to encrypt or decrypt by segment. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob | Yes | Data to be encrypted or decrypted. It cannot be null. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the data is updated successfully, **err** is **undefined**, and **data** is the encryption or decryption result obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the data is updated successfully, **err** is **undefined**, and **data** is the encryption or decryption result obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -861,7 +950,7 @@ Updates the crypto operation with the input data, and feeds back the encrypted o
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob | Yes | Indicates the data to be encrypted or decrypted. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob \| null&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob \| null&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

@@ -81,3 +81,7 @@ Obtains the number of bytes of a string based on the encoding format.
 | --- | --- |
 | int | The number of bytes contained within `string` |
 
+**Examples**
+
+See [byteLength](#bytelength)
+

@@ -156,14 +156,14 @@ import { notificationManager } from '@kit.NotificationKit';
 | [isSmartReminderEnabled](arkts-notification-notificationmanager-issmartreminderenabled-f-sys.md) | Obtains a smart reminder for cross-device collaboration. This API uses a promise to return the result. |
 | [isSupportDoNotDisturbMode](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md) | Checks whether DND mode is supported. This API uses an asynchronous callback to return the result. |
 | [isSupportDoNotDisturbMode](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md) | Checks whether DND mode is supported. This API uses a promise to return the result. |
+| [off_checkNotification](arkts-notification-notificationmanager-offchecknotification-f-sys.md) | Unsubscribes from notification events. |
 | [offBadgeNumberQuery](arkts-notification-notificationmanager-offbadgenumberquery-f-sys.md) | Unregisters the callback for querying the number of application badges. |
 | [offCheckNotification](arkts-notification-notificationmanager-offchecknotification-f-sys.md) | Unsubscribe the callback for check notifications. |
-| [off_checkNotification](arkts-notification-notificationmanager-offchecknotification-f-sys.md) | Unsubscribes from notification events. |
+| [on_checkNotification](arkts-notification-notificationmanager-onchecknotification-f-sys.md) | Subscribes to notification events. The notification service sends the notification information in the callback to the verification program. The verification program returns the verification result to determine whether to publish the notification, for example, controlling the publication frequency of marketing notifications. |
+| [on_checkNotification](arkts-notification-notificationmanager-onchecknotification-f-sys.md) | Subscribes to notification events. The notification service sends the notification information in the callback to the verification program. The verification program returns the verification result to determine whether to publish the notification, for example, controlling the publication frequency of marketing notifications. This API uses a promise to return the result. |
 | [onBadgeNumberQuery](arkts-notification-notificationmanager-onbadgenumberquery-f-sys.md) | Registers a callback for querying the number of application badges. |
 | [onCheckNotification](arkts-notification-notificationmanager-onchecknotification-f-sys.md) | Subscribe the callback for check notifications. |
 | [onCheckNotification](arkts-notification-notificationmanager-onchecknotification-f-sys.md) | Subscribe the callback for check notifications. |
-| [on_checkNotification](arkts-notification-notificationmanager-onchecknotification-f-sys.md) | Subscribes to notification events. The notification service sends the notification information in the callback to the verification program. The verification program returns the verification result to determine whether to publish the notification, for example, controlling the publication frequency of marketing notifications. |
-| [on_checkNotification](arkts-notification-notificationmanager-onchecknotification-f-sys.md) | Subscribes to notification events. The notification service sends the notification information in the callback to the verification program. The verification program returns the verification result to determine whether to publish the notification, for example, controlling the publication frequency of marketing notifications. This API uses a promise to return the result. |
 | [publish](arkts-notification-notificationmanager-publish-f-sys.md) | Publishes a notification to a specified user. This API uses an asynchronous callback to return the result. |
 | [publish](arkts-notification-notificationmanager-publish-f-sys.md) | Publishes a notification to a specified user. This API uses a promise to return the result. |
 | [publishAsBundle](arkts-notification-notificationmanager-publishasbundle-f-sys.md) | Publishes a notification through the reminder agent. This API uses an asynchronous callback to return the result. |
@@ -301,8 +301,8 @@ import { notificationManager } from '@kit.NotificationKit';
 | [MonitorEvent](arkts-notification-notificationmanager-monitorevent-t-sys.md) | Enumerates the event types of monitoring a geofence. |
 | [NotificationCheckRequest](arkts-notification-notificationmanager-notificationcheckrequest-t-sys.md) | Describes the notification authentication information. |
 | [NotificationFilter](arkts-notification-notificationmanager-notificationfilter-t-sys.md) | Describes the filter criteria for querying the live view. |
-| [NotificationFlagStatus](arkts-notification-notificationmanager-notificationflagstatus-t-sys.md) | Enumerates the notification flag states. |
 | [NotificationFlags](arkts-notification-notificationmanager-notificationflags-t-sys.md) | Defines the notification flags. |
+| [NotificationFlagStatus](arkts-notification-notificationmanager-notificationflagstatus-t-sys.md) | Enumerates the notification flag states. |
 | [NotificationIconButton](arkts-notification-notificationmanager-notificationiconbutton-t-sys.md) | System notification button. |
 | [NotificationLiveViewContent](arkts-notification-notificationmanager-notificationliveviewcontent-t-sys.md) | Describes the common live view. |
 | [NotificationSorting](arkts-notification-notificationmanager-notificationsorting-t-sys.md) | The **NotificationSorting** module provides APIs for defining the sorting information of active notifications. |

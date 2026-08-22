@@ -36,7 +36,7 @@ Adds custom DNS rules for the specified host of the current application. This AP
 | --- | --- | --- | --- |
 | host | string | Yes | Name of the custom host. |
 | ip | Array&lt;string&gt; | Yes | List of IP addresses mapped to the host name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the mapping is added successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the mapping is added successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -60,6 +60,17 @@ connection.addCustomDnsRule("xxxx", ["xx.xx.xx.xx","xx.xx.xx.xx"], (error: Busin
     return;
   }
   console.info("Succeeded to get data: " + JSON.stringify(data));
+})
+```
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.addCustomDnsRule("xxxx", ["xx.xx.xx.xx","xx.xx.xx.xx"]).then(() => {
+    console.info("success");
+}).catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
 })
 ```
 
@@ -113,14 +124,5 @@ Adds custom DNS rules for the specified host of the current application. This AP
 
 **Examples**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.addCustomDnsRule("xxxx", ["xx.xx.xx.xx","xx.xx.xx.xx"]).then(() => {
-    console.info("success");
-}).catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-})
-```
+See [addCustomDnsRule](#addcustomdnsrule)
 

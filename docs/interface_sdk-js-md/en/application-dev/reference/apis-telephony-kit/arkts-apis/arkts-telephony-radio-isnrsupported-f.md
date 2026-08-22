@@ -33,6 +33,12 @@ let result: boolean = radio.isNRSupported();
 console.info("Result: "+ result);
 ```
 
+```TypeScript
+let slotId: number = 0;
+let result: boolean = radio.isNRSupported(slotId);
+console.info("Result: "+ result);
+```
+
 
 ## isNRSupported
 
@@ -62,9 +68,5 @@ Checks whether the device supports 5G New Radio (NR) by according card slot.
 
 **Examples**
 
-```TypeScript
-let slotId: number = 0;
-let result: boolean = radio.isNRSupported(slotId);
-console.info("Result: "+ result);
-```
+See [isNRSupported](#isnrsupported)
 

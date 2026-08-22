@@ -312,7 +312,7 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 设置自定义菜单扩展项，允许用户设置扩展项的文本内容、图标、回调方法。
 
-调用[disableMenuItems](../../apis-default/arkts-apis/arkts-arkuiuicontext-textmenucontroller-c.md#disablemenuitems)或 [disableSystemServiceMenuItems](../../apis-default/arkts-apis/arkts-arkuiuicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本 选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
+调用[disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或 [disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本 选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
 
 > **说明：**
 > 

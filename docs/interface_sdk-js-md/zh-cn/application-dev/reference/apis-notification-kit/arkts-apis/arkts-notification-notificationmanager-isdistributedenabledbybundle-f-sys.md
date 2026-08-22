@@ -88,6 +88,74 @@ let bundle: notificationManager.BundleOption = {
 notificationManager.isDistributedEnabledByBundle(bundle, isDistributedEnabledByBundleCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+    bundle: 'bundleName1',
+};
+notificationManager.isDistributedEnabledByBundle(bundle).then((data: boolean) => {
+    console.info(`isDistributedEnabledByBundle success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isDistributedEnabledByBundle failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+    // 需根据实际情况进行替换
+    bundle: 'bundleName1',
+};
+notificationManager.isDistributedEnabledByBundle(bundle).then((data: boolean) => {
+    console.info(`isDistributedEnabledByBundle success, data: ${JSON.stringify(data)}`);
+}).catch((err: Error): void => {
+    let error: BusinessError = err as BusinessError;
+    console.error(`isDistributedEnabledByBundle failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+    bundle: 'bundleName1',
+    uid: 1
+};
+let deviceType: string = 'phone';
+notificationManager.isDistributedEnabledByBundle(bundle, deviceType).then((data: boolean) => {
+    console.info(`isDistributedEnabledByBundle success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isDistributedEnabledByBundle failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+    // 需根据实际情况进行替换
+    bundle: 'bundleName1',
+    uid: 1
+};
+let deviceType: string = 'phone';
+notificationManager.isDistributedEnabledByBundle(bundle, deviceType).then((data: boolean) => {
+    console.info(`isDistributedEnabledByBundle success, data: ${JSON.stringify(data)}`);
+}).catch((err: Error): void => {
+    let error: BusinessError = err as BusinessError;
+    console.error(`isDistributedEnabledByBundle failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## isDistributedEnabledByBundle
 
@@ -139,37 +207,7 @@ function isDistributedEnabledByBundle(bundle: BundleOption): Promise<boolean>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName1',
-};
-notificationManager.isDistributedEnabledByBundle(bundle).then((data: boolean) => {
-    console.info(`isDistributedEnabledByBundle success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isDistributedEnabledByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-};
-notificationManager.isDistributedEnabledByBundle(bundle).then((data: boolean) => {
-    console.info(`isDistributedEnabledByBundle success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`isDistributedEnabledByBundle failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [isDistributedEnabledByBundle](#isdistributedenabledbybundle)
 
 
 ## isDistributedEnabledByBundle
@@ -220,39 +258,5 @@ function isDistributedEnabledByBundle(bundle: BundleOption, deviceType: string):
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName1',
-    uid: 1
-};
-let deviceType: string = 'phone';
-notificationManager.isDistributedEnabledByBundle(bundle, deviceType).then((data: boolean) => {
-    console.info(`isDistributedEnabledByBundle success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isDistributedEnabledByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-    uid: 1
-};
-let deviceType: string = 'phone';
-notificationManager.isDistributedEnabledByBundle(bundle, deviceType).then((data: boolean) => {
-    console.info(`isDistributedEnabledByBundle success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`isDistributedEnabledByBundle failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [isDistributedEnabledByBundle](#isdistributedenabledbybundle)
 

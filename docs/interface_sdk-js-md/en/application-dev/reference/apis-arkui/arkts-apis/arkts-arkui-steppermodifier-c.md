@@ -10,7 +10,7 @@ Defines Stepper Modifier
 
 **Deprecated since:** 22
 
-**Substitutes:** [SwiperModifier](../../apis-default/arkts-apis/arkts-swipermodifier-c.md)
+**Substitutes:** [SwiperModifier](arkts-arkui-swipermodifier-c.md)
 
 <!--Device-unnamed-export declare class StepperModifier--><!--Device-unnamed-export declare class StepperModifier-End-->
 

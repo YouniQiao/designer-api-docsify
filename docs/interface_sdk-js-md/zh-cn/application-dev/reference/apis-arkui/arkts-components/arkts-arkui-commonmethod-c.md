@@ -2588,6 +2588,10 @@ chainWeight(chainWeight: ChainWeightOptions): T
 | --- | --- |
 | T | Current component. |
 
+**示例**
+
+具体示例请参考[示例10（设置链中节点权重）](ts-container-relativecontainer.md#示例10设置链中节点权重)。
+
 ## clickEffect
 
 ```TypeScript
@@ -2762,7 +2766,7 @@ clipShape(value: CircleShape | EllipseShape | PathShape | RectShape): T
 > 
 > 路径的形状不支持设置宽度和高度。具体形状支持的属性参考具体形状的文档。
 > 
-> 形状中的[fill](../arkts-apis/arkts-arkui-arkuishape-commonshapemethod-c.md#fill)属性对clipShape接口不生效。
+> 形状中的[fill](../arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md#fill)属性对clipShape接口不生效。
 
 **起始版本：** 12
 
@@ -2802,7 +2806,7 @@ clipShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): 
 > 
 > 路径的形状不支持设置宽度和高度。具体形状支持的属性参考具体形状的文档。
 > 
-> 形状中的[fill](../arkts-apis/arkts-arkui-arkuishape-commonshapemethod-c.md#fill)属性对clipShape接口不生效。
+> 形状中的[fill](../arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md#fill)属性对clipShape接口不生效。
 
 **起始版本：** 18
 
@@ -3171,6 +3175,36 @@ doubleSided(value: Optional<boolean>): T
 | --- | --- |
 | T | 返回当前组件。 |
 
+## draggable
+
+```TypeScript
+draggable(value: boolean): T
+```
+
+设置该组件是否允许拖拽。默认情况下，组件不允许拖拽。
+
+**起始版本：** 10
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonMethod-draggable(value: boolean): T--><!--Device-CommonMethod-draggable(value: boolean): T-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 设置该组件是否允许进行拖拽。true表示允许拖拽，false表示不允许拖拽。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回当前组件。 |
+
 ## dragPreview
 
 ```TypeScript
@@ -3264,36 +3298,6 @@ dragPreviewOptions(value: DragPreviewOptions, options?: DragInteractionOptions):
 | --- | --- | --- | --- |
 | value | [DragPreviewOptions](arkts-arkui-dragpreviewoptions-i.md) | 是 | 设置拖拽过程中预览图处理模式及数量角标的显示。 |
 | options | [DragInteractionOptions](arkts-arkui-draginteractionoptions-i.md) | 否 | 设置拖拽过程中预览图浮起的交互模式。<br/>默认值：空<br>**起始版本：** 12 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| T | 返回当前组件。 |
-
-## draggable
-
-```TypeScript
-draggable(value: boolean): T
-```
-
-设置该组件是否允许拖拽。默认情况下，组件不允许拖拽。
-
-**起始版本：** 10
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CommonMethod-draggable(value: boolean): T--><!--Device-CommonMethod-draggable(value: boolean): T-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean | 是 | 设置该组件是否允许进行拖拽。true表示允许拖拽，false表示不允许拖拽。 |
 
 **返回值：**
 
@@ -3539,6 +3543,34 @@ flexShrink(value: number): T
 | --- | --- |
 | T | Current component. |
 
+## focusable
+
+```TypeScript
+focusable(value: boolean): T
+```
+
+设置当前组件是否可以获焦。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonMethod-focusable(value: boolean): T--><!--Device-CommonMethod-focusable(value: boolean): T-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 设置当前组件是否可以获焦，true表示组件可以获焦，false表示组件不可获焦。<br/>**说明：**<br/>存在默认交互逻辑的组件例如 [Button](arkts-arkui-mouseevent-i.md#button)、TextInput等，默认即为可获焦，Text、Image等组件则默认状态为不 可获焦。不可获焦状态下，无法触发焦点事件。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回当前组件。 |
+
 ## focusBox
 
 ```TypeScript
@@ -3684,34 +3716,6 @@ focusScopePriority(scopeId: string, priority?: FocusPriority): T
 | --- | --- | --- | --- |
 | scopeId | string | 是 | 当前组件设置的获焦优先级生效的容器组件的id标识。<br/>**说明：**<br/>1.当前组件必须在scopedId所标识的容器内，或其所属容器在scopeId所标识的容器 内。<br/>2.组件不可重复设置多个优先级。<br/>3.设置了focusScopeId的容器租金按不可设置优先级。 |
 | priority | FocusPriority | 否 | 获焦优先级。<br/>**说明：** <br/>未设置priority时，默认为AUTO优先级。<br/>优先级对走焦以及获焦组件的影响：<br/>1.容 器整体获焦（[层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)切换/焦点切换到焦点组/容器组件使用requestFocus申请焦点）时，若容器内存在优先 级为PREVIOUS的组件，则优先级为PREVIOUS的组件获焦，否则，由容器内上次获焦的组件获焦。<br/>2.容器非整体获焦（非焦点组场景下使用tab键/方向键走焦）时，若容器为首次获焦，则容器内优先级最高的组件获焦， 若容器非首次获焦，不考虑优先级按照位置顺序走焦。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| T | 返回当前组件。 |
-
-## focusable
-
-```TypeScript
-focusable(value: boolean): T
-```
-
-设置当前组件是否可以获焦。
-
-**起始版本：** 8
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CommonMethod-focusable(value: boolean): T--><!--Device-CommonMethod-focusable(value: boolean): T-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean | 是 | 设置当前组件是否可以获焦，true表示组件可以获焦，false表示组件不可获焦。<br/>**说明：**<br/>存在默认交互逻辑的组件例如 [Button](arkts-arkui-mouseevent-i.md#button)、TextInput等，默认即为可获焦，Text、Image等组件则默认状态为不 可获焦。不可获焦状态下，无法触发焦点事件。 |
 
 **返回值：**
 
@@ -6632,7 +6636,7 @@ XComponent组件使用该方法时，如果返回值为`true`且XComponent组件
 
 当返回值为`true`时，应用的自绘制输入框需要在获焦时主动调用 [attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)方法，建立输入法框架和输入法应用的通信，否则点击键盘会失去响应。说明：失焦时输入法框架和输入法应用的通信会断开，获焦时需要重新建立通信。
 
-该接口只适用于对输入法应用接续的场景，对自定义键盘不生效。自定义键盘接续详见[setCustomKeyboardContinueFeature](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)。
+该接口只适用于对输入法应用接续的场景，对自定义键盘不生效。自定义键盘接续详见[setCustomKeyboardContinueFeature](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)。
 
 **起始版本：** 24
 
@@ -6705,7 +6709,7 @@ onSizeChange(event: SizeChangeCallback): T
 > 2. onSizeChange是布局过程中触发的同步回调，直接在其中更改状态变量存在被纳入动画闭包的风险。具体而言，动画会对比动画前的布局与动画闭包后的布局，若onSizeChange的回调在动画前的布局中同步触发，那么
 > onSizeChange回调中所做的变更将与动画闭包中的变更一同纳入动画过程。为了避免此类问题，可在onSizeChange中使用延迟时间为0的
 > [setTimeout](../arkts-apis/arkts-arkui-global-settimeout-f.md)或
-> [postFrameCallback](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#postframecallback)，将UI处理逻辑
+> [postFrameCallback](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback)，将UI处理逻辑
 > 延后至异步执行。
 
 **起始版本：** 12
@@ -7778,7 +7782,7 @@ renderGroup(isGroup: Optional<boolean>): T
 responseRegion(value: Array<Rectangle> | Rectangle): T
 ```
 
-设置一个或多个触摸热区。从API版本26.0.0开始，未主动设置时[Button](arkts-arkui-mouseevent-i.md#button)、Button模式的Toggle、Select、 Chip和[ChipGroup](../../apis-default/arkts-apis/arkts-arkuiadvancedchipgroup-chipgroup-s.md)组件的触摸热区默认最小高度从28vp变更为32vp。 该变更仅影响触摸命中范围，不影响组件实际显示高度。
+设置一个或多个触摸热区。从API版本26.0.0开始，未主动设置时[Button](arkts-arkui-mouseevent-i.md#button)、Button模式的Toggle、Select、 Chip和[ChipGroup](../arkts-apis/arkts-arkui-arkui-advanced-chipgroup-chipgroup-s.md)组件的触摸热区默认最小高度从28vp变更为32vp。 该变更仅影响触摸命中范围，不影响组件实际显示高度。
 
 **起始版本：** 8
 
@@ -8701,7 +8705,7 @@ tabStop(isTabStop: boolean): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isTabStop | boolean | 是 | 设置当前容器组件是否为走焦可停留容器，true表示当前容器组件为走焦可停留容器，false表示当前容器组件不是走焦可停留容器。<br/>**说明：**<br/>1.配 置tabStop需要确保是容器组件且有可获焦的孩子组件，默认容器组件不能直接获焦。<br/>2.通过[requestFocus](../../apis-default/arkts-apis/arkts-arkuiuicontext-focuscontroller-c.md#requestfocus)请求焦 点，如果是容器组件且配置tabStop，焦点能够停留在容器组件，如果未配置tabStop，即使整条焦点链上有配置了tabStop的组件，该组件依然能获取到焦点。<br/>3.配置tabStop的容器不允许嵌 套超过2层。<br/>tabStop走焦规则：<br/>1.通过tab键和方向键走焦，焦点会停留在配置了tabStop的组件上，如果焦点停留在配置了tabStop的容器内部时，可以走焦到容器内部的下一个可获焦 组件，如果焦点停留在配置了tabStop的容器外部是，可以走焦到容器外的下一个可获焦组件。<br/>2.当焦点停留在tabStop上时，按Enter键可以走焦到内部第一个可获焦组件，按Esc能够将焦点 退回到不超过当前[层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)根容器的上一个配置了tabStop的组件，按空格键可以响应该容器的onClick事件。<br/>3.不建 议根容器配置tabStop。如果根容器配置了tabStop，通过[clearFocus](../../apis-default/arkts-apis/arkts-arkuiuicontext-focuscontroller-c.md#clearfocus)将焦点清理到根容器，再按Enter键会重新走回内部上 一次获焦组件，通过Esc键将焦点清理到根容器，再按Enter键会走焦到内部第一个可获焦组件。 |
+| isTabStop | boolean | 是 | 设置当前容器组件是否为走焦可停留容器，true表示当前容器组件为走焦可停留容器，false表示当前容器组件不是走焦可停留容器。<br/>**说明：**<br/>1.配 置tabStop需要确保是容器组件且有可获焦的孩子组件，默认容器组件不能直接获焦。<br/>2.通过[requestFocus](../arkts-apis/arkts-arkui-arkui-uicontext-focuscontroller-c.md#requestfocus)请求焦 点，如果是容器组件且配置tabStop，焦点能够停留在容器组件，如果未配置tabStop，即使整条焦点链上有配置了tabStop的组件，该组件依然能获取到焦点。<br/>3.配置tabStop的容器不允许嵌 套超过2层。<br/>tabStop走焦规则：<br/>1.通过tab键和方向键走焦，焦点会停留在配置了tabStop的组件上，如果焦点停留在配置了tabStop的容器内部时，可以走焦到容器内部的下一个可获焦 组件，如果焦点停留在配置了tabStop的容器外部是，可以走焦到容器外的下一个可获焦组件。<br/>2.当焦点停留在tabStop上时，按Enter键可以走焦到内部第一个可获焦组件，按Esc能够将焦点 退回到不超过当前[层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)根容器的上一个配置了tabStop的组件，按空格键可以响应该容器的onClick事件。<br/>3.不建 议根容器配置tabStop。如果根容器配置了tabStop，通过[clearFocus](../arkts-apis/arkts-arkui-arkui-uicontext-focuscontroller-c.md#clearfocus)将焦点清理到根容器，再按Enter键会重新走回内部上 一次获焦组件，通过Esc键将焦点清理到根容器，再按Enter键会走焦到内部第一个可获焦组件。 |
 
 **返回值：**
 

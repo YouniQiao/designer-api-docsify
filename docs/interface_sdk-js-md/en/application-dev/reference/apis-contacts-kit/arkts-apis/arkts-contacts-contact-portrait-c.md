@@ -64,3 +64,25 @@ Contact portrait in URI format.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+**Examples**
+
+Create contact data in JSON format:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+async function SetPortraitUri(uri: string) {
+  let portrait: contact.Portrait = {
+    uri: uri
+  };
+}
+
+async function SetPortraitPixelMap(photo: image.PixelMap) {
+  let portrait: contact.Portrait = {
+    uri: "",
+    photo: photo
+  };
+}
+```
+

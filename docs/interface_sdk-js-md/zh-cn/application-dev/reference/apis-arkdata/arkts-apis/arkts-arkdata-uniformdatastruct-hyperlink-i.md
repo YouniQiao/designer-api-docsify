@@ -96,3 +96,22 @@ url: string
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+**示例**
+
+```TypeScript
+import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
+
+let hyperlinkDetails: Record<string, string> = {
+  'attr1': 'value1',
+  'attr2': 'value2'
+};
+let hyperlink: uniformDataStruct.Hyperlink = {
+  uniformDataType: 'general.hyperlink',
+  url: 'www.XXX.com',
+  description: 'This is the description of this hyperlink',
+  details: hyperlinkDetails
+};
+console.info('hyperlink.uniformDataType: ' + hyperlink.uniformDataType);
+let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.HYPERLINK, hyperlink);
+```
+

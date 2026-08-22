@@ -33,7 +33,7 @@ Sets a browser policy for a specified browser. This API is applicable to scenari
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleName | string | Yes | Application bundle name, which is used to specify the browser. It uniquely identifies an application. |
 | policyName | string | Yes | Browser policy name, which is agreed upon by the API caller and the specified browser. |
 | policyValue | string | Yes | Browser policy value. If the value is an empty string, the policy corresponding to the policy name is removed. |

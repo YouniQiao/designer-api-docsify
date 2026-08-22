@@ -45,6 +45,62 @@ addDeathRecipient(recipient: DeathRecipient, flags: number): boolean
 | --- | --- |
 | boolean | true：回调注册成功，false：回调注册失败。 |
 
+**示例**
+
+在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+// FA模型需要从@kit.AbilityKit导入featureAbility
+// import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { Want, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let proxy: rpc.IRemoteObject | undefined;
+let connect: common.ConnectOptions = {
+  onConnect: (elementName, remoteProxy) => {
+    hilog.info(0x0000, 'testTag', 'js onConnect called');
+    proxy = remoteProxy;
+  },
+  onDisconnect: (elementName) => {
+    hilog.info(0x0000, 'testTag', 'onDisconnect');
+  },
+  onFailed: () => {
+    hilog.info(0x0000, 'testTag', 'onFailed');
+  }
+};
+let want: Want = {
+  // 获取服务端包名和ability名称
+  bundleName: "com.ohos.server",
+  abilityName: "com.ohos.server.EntryAbility",
+};
+
+// FA模型使用此方法连接服务
+// FA.connectAbility(want,connect);
+
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let connectionId = context.connectServiceExtensionAbility(want, connect);
+```
+
+上述onConnect回调函数中的proxy对象需要等ability异步连接成功后才会被赋值，然后才可调用proxy对象的addDeathRecipient接口方法新增死亡回调
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyDeathRecipient implements rpc.DeathRecipient {
+  onRemoteDied() {
+    hilog.info(0x0000, 'testTag', 'server died');
+  }
+}
+if (proxy != undefined) {
+  let deathRecipient = new MyDeathRecipient();
+  proxy.addDeathRecipient(deathRecipient, 0);
+}
+```
+
 ## getDescriptor
 
 ```TypeScript
@@ -71,6 +127,90 @@ getDescriptor(): string
 | --- | --- |
 | [1900008](../errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
 
+**示例**
+
+在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+// FA模型需要从@kit.AbilityKit导入featureAbility
+// import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { Want, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let proxy: rpc.IRemoteObject | undefined;
+let connect: common.ConnectOptions = {
+  onConnect: (elementName, remoteProxy) => {
+    hilog.info(0x0000, 'testTag', 'js onConnect called');
+    proxy = remoteProxy;
+  },
+  onDisconnect: (elementName) => {
+    hilog.info(0x0000, 'testTag', 'onDisconnect');
+  },
+  onFailed: () => {
+    hilog.info(0x0000, 'testTag', 'onFailed');
+  }
+};
+let want: Want = {
+  // 获取服务端包名和ability名称
+  bundleName: "com.ohos.server",
+  abilityName: "com.ohos.server.EntryAbility",
+};
+
+// FA模型使用此方法连接服务
+// FA.connectAbility(want,connect);
+
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let connectionId = context.connectServiceExtensionAbility(want, connect);
+```
+
+上述onConnect回调函数中的proxy对象需要等ability异步连接成功后才会被赋值，然后才可调用proxy对象的getDescriptor接口方法获取对象的接口描述符
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (proxy != undefined) {
+  try {
+    let descriptor: string = proxy.getDescriptor();
+    hilog.info(0x0000, 'testTag', 'descriptor is ' + descriptor);
+  } catch (error) {
+    let e: BusinessError = error as BusinessError;
+    hilog.error(0x0000, 'testTag', 'rpc get interface descriptor fail, errorCode ' + e.code);
+    hilog.error(0x0000, 'testTag', 'rpc get interface descriptor fail, errorMessage ' + e.message);
+  }
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+try {
+  let testObject = new TestRemoteObject("ipcTest");
+  let descriptor = testObject.getDescriptor();
+  hilog.info(0x0000, 'testTag', 'RpcServer: descriptor is ' + descriptor);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
 ## getInterfaceDescriptor
 
 ```TypeScript
@@ -94,6 +234,81 @@ getInterfaceDescriptor(): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 返回接口描述符。 |
+
+**示例**
+
+在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+// FA模型需要从@kit.AbilityKit导入featureAbility
+// import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { Want, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let proxy: rpc.IRemoteObject | undefined;
+let connect: common.ConnectOptions = {
+  onConnect: (elementName, remoteProxy) => {
+    hilog.info(0x0000, 'testTag', 'js onConnect called');
+    proxy = remoteProxy;
+  },
+  onDisconnect: (elementName) => {
+    hilog.info(0x0000, 'testTag', 'onDisconnect');
+  },
+  onFailed: () => {
+    hilog.info(0x0000, 'testTag', 'onFailed');
+  }
+};
+let want: Want = {
+  // 获取服务端包名和ability名称
+  bundleName: "com.ohos.server",
+  abilityName: "com.ohos.server.EntryAbility",
+};
+
+// FA模型使用此方法连接服务
+// FA.connectAbility(want,connect);
+
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let connectionId = context.connectServiceExtensionAbility(want, connect);
+```
+
+上述onConnect回调函数中的proxy对象需要等ability异步连接成功后才会被赋值，然后才可调用proxy对象的getInterfaceDescriptor接口方法查询当前代理对象接口的描述符
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+if (proxy != undefined) {
+  let descriptor: string = proxy.getInterfaceDescriptor();
+  hilog.info(0x0000, 'testTag', 'descriptor is ' + descriptor);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  let descriptor = testRemoteObject.getInterfaceDescriptor();
+  hilog.info(0x0000, 'testTag', 'RpcServer: descriptor is: ' + descriptor);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ## getLocalInterface
 
@@ -127,6 +342,91 @@ getLocalInterface(descriptor: string): IRemoteBroker
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
 
+**示例**
+
+在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+// FA模型需要从@kit.AbilityKit导入featureAbility
+// import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { Want, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let proxy: rpc.IRemoteObject | undefined;
+let connect: common.ConnectOptions = {
+  onConnect: (elementName, remoteProxy) => {
+    hilog.info(0x0000, 'testTag', 'js onConnect called');
+    proxy = remoteProxy;
+  },
+  onDisconnect: (elementName) => {
+    hilog.info(0x0000, 'testTag', 'onDisconnect');
+  },
+  onFailed: () => {
+    hilog.info(0x0000, 'testTag', 'onFailed');
+  }
+};
+let want: Want = {
+  // 获取服务端包名和ability名称
+  bundleName: "com.ohos.server",
+  abilityName: "com.ohos.server.EntryAbility",
+};
+
+// FA模型使用此方法连接服务
+// FA.connectAbility(want,connect);
+
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let connectionId = context.connectServiceExtensionAbility(want, connect);
+```
+
+上述onConnect回调函数中的proxy对象需要等ability异步连接成功后才会被赋值，然后才可调用proxy对象的getLocalInterface接口方法查询接口对象
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (proxy != undefined) {
+  try {
+    let broker: rpc.IRemoteBroker = proxy.getLocalInterface("testObject");
+    hilog.info(0x0000, 'testTag', 'getLocalInterface is ' + broker);
+  } catch (error) {
+    let e: BusinessError = error as BusinessError;
+    hilog.error(0x0000, 'testTag', 'rpc get local interface fail, errorCode ' + e.code);
+    hilog.error(0x0000, 'testTag', 'rpc get local interface fail, errorMessage ' + e.message);
+  }
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  testRemoteObject.getLocalInterface("testObject");
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
 ## isObjectDead
 
 ```TypeScript
@@ -146,6 +446,57 @@ isObjectDead(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | true：对象死亡，false：对象未死亡。 |
+
+**示例**
+
+在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+// FA模型需要从@kit.AbilityKit导入featureAbility
+// import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { Want, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let proxy: rpc.IRemoteObject | undefined;
+let connect: common.ConnectOptions = {
+  onConnect: (elementName, remoteProxy) => {
+    hilog.info(0x0000, 'testTag', 'js onConnect called');
+    proxy = remoteProxy;
+  },
+  onDisconnect: (elementName) => {
+    hilog.info(0x0000, 'testTag', 'onDisconnect');
+  },
+  onFailed: () => {
+    hilog.info(0x0000, 'testTag', 'onFailed');
+  }
+};
+let want: Want = {
+  // 获取服务端包名和ability名称
+  bundleName: "com.ohos.server",
+  abilityName: "com.ohos.server.EntryAbility",
+};
+
+// FA模型使用此方法连接服务
+// FA.connectAbility(want,connect);
+
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let connectionId = context.connectServiceExtensionAbility(want, connect);
+```
+
+上述onConnect回调函数中的proxy对象需要等ability异步连接成功后才会被赋值，然后才可调用proxy对象的isObjectDead接口方法判断当前对象是否已经死亡
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+if (proxy != undefined) {
+  let isDead: boolean = proxy.isObjectDead();
+  hilog.info(0x0000, 'testTag', 'isObjectDead is ' + isDead);
+}
+```
 
 ## queryLocalInterface
 
@@ -177,6 +528,81 @@ queryLocalInterface(descriptor: string): IRemoteBroker
 | --- | --- |
 | [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | 返回绑定到指定接口描述符的IRemoteBroker对象。 |
 
+**示例**
+
+在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+// FA模型需要从@kit.AbilityKit导入featureAbility
+// import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { Want, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let proxy: rpc.IRemoteObject | undefined;
+let connect: common.ConnectOptions = {
+  onConnect: (elementName, remoteProxy) => {
+    hilog.info(0x0000, 'testTag', 'js onConnect called');
+    proxy = remoteProxy;
+  },
+  onDisconnect: (elementName) => {
+    hilog.info(0x0000, 'testTag', 'onDisconnect');
+  },
+  onFailed: () => {
+    hilog.info(0x0000, 'testTag', 'onFailed');
+  }
+};
+let want: Want = {
+  // 获取服务端包名和ability名称
+  bundleName: "com.ohos.server",
+  abilityName: "com.ohos.server.EntryAbility",
+};
+
+// FA模型使用此方法连接服务
+// FA.connectAbility(want,connect);
+
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let connectionId = context.connectServiceExtensionAbility(want, connect);
+```
+
+上述onConnect回调函数中的proxy对象需要等ability异步连接成功后才会被赋值，然后才可调用proxy对象的queryLocalInterface接口获取接口对象
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+if (proxy != undefined) {
+  let broker: rpc.IRemoteBroker = proxy.queryLocalInterface("testObject");
+  hilog.info(0x0000, 'testTag', 'queryLocalInterface is ' + broker);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  testRemoteObject.queryLocalInterface("testObject");
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error: ' + error);
+}
+```
+
 ## registerDeathRecipient
 
 ```TypeScript
@@ -205,6 +631,69 @@ registerDeathRecipient(recipient: DeathRecipient, flags: int): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
 | [1900005](../errorcode-rpc.md#1900005-ipc对象权限错误) | Operation allowed only for the proxy object. |
 | [1900008](../errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
+
+**示例**
+
+在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+// FA模型需要从@kit.AbilityKit导入featureAbility
+// import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { Want, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let proxy: rpc.IRemoteObject | undefined;
+let connect: common.ConnectOptions = {
+  onConnect: (elementName, remoteProxy) => {
+    hilog.info(0x0000, 'testTag', 'js onConnect called');
+    proxy = remoteProxy;
+  },
+  onDisconnect: (elementName) => {
+    hilog.info(0x0000, 'testTag', 'onDisconnect');
+  },
+  onFailed: () => {
+    hilog.info(0x0000, 'testTag', 'onFailed');
+  }
+};
+let want: Want = {
+  // 获取服务端包名和ability名称
+  bundleName: "com.ohos.server",
+  abilityName: "com.ohos.server.EntryAbility",
+};
+
+// FA模型使用此方法连接服务
+// FA.connectAbility(want,connect);
+
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let connectionId = context.connectServiceExtensionAbility(want, connect);
+```
+
+上述onConnect回调函数中的proxy对象需要等ability异步连接成功后才会被赋值，然后才可调用proxy对象的registerDeathRecipient接口注册死亡回调
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class MyDeathRecipient implements rpc.DeathRecipient {
+  onRemoteDied() {
+    hilog.info(0x0000, 'testTag', 'server died');
+  }
+}
+if (proxy != undefined) {
+  try {
+    let deathRecipient = new MyDeathRecipient();
+    proxy.registerDeathRecipient(deathRecipient, 0);
+  } catch (error) {
+    let e: BusinessError = error as BusinessError;
+    hilog.error(0x0000, 'testTag', 'proxy register deathRecipient fail, errorCode ' + e.code);
+    hilog.error(0x0000, 'testTag', 'proxy register deathRecipient fail, errorMessage ' + e.message);
+  }
+}
+```
 
 ## removeDeathRecipient
 
@@ -236,6 +725,63 @@ removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | true：回调注销成功，false：回调注销失败。 |
+
+**示例**
+
+在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+// FA模型需要从@kit.AbilityKit导入featureAbility
+// import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { Want, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let proxy: rpc.IRemoteObject | undefined;
+let connect: common.ConnectOptions = {
+  onConnect: (elementName, remoteProxy) => {
+    hilog.info(0x0000, 'testTag', 'js onConnect called');
+    proxy = remoteProxy;
+  },
+  onDisconnect: (elementName) => {
+    hilog.info(0x0000, 'testTag', 'onDisconnect');
+  },
+  onFailed: () => {
+    hilog.info(0x0000, 'testTag', 'onFailed');
+  }
+};
+let want: Want = {
+  // 获取服务端包名和ability名称
+  bundleName: "com.ohos.server",
+  abilityName: "com.ohos.server.EntryAbility",
+};
+
+// FA模型使用此方法连接服务
+// FA.connectAbility(want,connect);
+
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let connectionId = context.connectServiceExtensionAbility(want, connect);
+```
+
+上述onConnect回调函数中的proxy对象需要等ability异步连接成功后才会被赋值，然后才可调用proxy对象的removeDeathRecipient接口方法去注册死亡回调
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyDeathRecipient implements rpc.DeathRecipient {
+  onRemoteDied() {
+    hilog.info(0x0000, 'testTag', 'server died');
+  }
+}
+if (proxy != undefined) {
+  let deathRecipient = new MyDeathRecipient();
+  proxy.addDeathRecipient(deathRecipient, 0);
+  proxy.removeDeathRecipient(deathRecipient, 0);
+}
+```
 
 ## sendMessageRequest
 
@@ -277,6 +823,175 @@ sendMessageRequest(
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
 
+**示例**
+
+在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+// FA模型需要从@kit.AbilityKit导入featureAbility
+// import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { Want, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let proxy: rpc.IRemoteObject | undefined;
+let connect: common.ConnectOptions = {
+  onConnect: (elementName, remoteProxy) => {
+    hilog.info(0x0000, 'testTag', 'js onConnect called');
+    proxy = remoteProxy;
+  },
+  onDisconnect: (elementName) => {
+    hilog.info(0x0000, 'testTag', 'onDisconnect');
+  },
+  onFailed: () => {
+    hilog.info(0x0000, 'testTag', 'onFailed');
+  }
+};
+let want: Want = {
+  // 获取服务端包名和ability名称
+  bundleName: "com.ohos.server",
+  abilityName: "com.ohos.server.EntryAbility",
+};
+
+// FA模型使用此方法连接服务
+// FA.connectAbility(want,connect);
+
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let connectionId = context.connectServiceExtensionAbility(want, connect);
+```
+
+上述onConnect回调函数中的proxy对象需要等ability异步连接成功后才会被赋值，然后才可调用proxy对象的sendMessageRequest接口方法发送消息
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let option = new rpc.MessageOption();
+  let data = rpc.MessageSequence.create();
+  let reply = rpc.MessageSequence.create();
+  data.writeInt(1);
+  data.writeString("hello");
+  if (proxy != undefined) {
+    proxy.sendMessageRequest(1, data, reply, option)
+    .then((result: rpc.RequestResult) => {
+      if (result.errCode === 0) {
+        hilog.info(0x0000, 'testTag', 'sendMessageRequest got result');
+        let num = result.reply.readInt();
+        let msg = result.reply.readString();
+        hilog.info(0x0000, 'testTag', 'reply num: ' + num);
+        hilog.info(0x0000, 'testTag', 'reply msg: ' + msg);
+      } else {
+        hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, errCode: ' + result.errCode);
+      }
+    }).catch((e: Error) => {
+      hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, error: ' + JSON.stringify(e));
+    }).finally (() => {
+      hilog.info(0x0000, 'testTag', 'sendMessageRequest ends, reclaim parcel');
+      data.reclaim();
+      reply.reclaim();
+    });
+  }
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, error: ' + error);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  let option = new rpc.MessageOption();
+  let data = rpc.MessageSequence.create();
+  let reply = rpc.MessageSequence.create();
+  data.writeInt(1);
+  data.writeString("hello");
+  testRemoteObject.sendMessageRequest(1, data, reply, option)
+    .then((result: rpc.RequestResult) => {
+      if (result.errCode === 0) {
+        hilog.info(0x0000, 'testTag', 'sendMessageRequest got result');
+        let num = result.reply.readInt();
+        let msg = result.reply.readString();
+        hilog.info(0x0000, 'testTag', 'reply num: ' + num);
+        hilog.info(0x0000, 'testTag', 'reply msg: ' + msg);
+      } else {
+        hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, errCode: ' + result.errCode);
+      }
+    }).catch((e: Error) => {
+      hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, error: ' + JSON.stringify(e));
+    }).finally (() => {
+      hilog.info(0x0000, 'testTag', 'sendMessageRequest ends, reclaim parcel');
+      data.reclaim();
+      reply.reclaim();
+    });
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, error: ' + error);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import rpc from '@ohos.rpc';
+import hilog from 'ohos.hilog';
+import { BusinessError } from '@ohos.base';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  let option = new rpc.MessageOption();
+  let data = rpc.MessageSequence.create();
+  let reply = rpc.MessageSequence.create();
+  data.writeInt(1);
+  data.writeString("hello");
+  testRemoteObject.sendMessageRequest(1, data, reply, option)
+    .then((result: rpc.RequestResult) => {
+      if (result.errCode === 0) {
+        hilog.info(0x0000, 'testTag', 'sendMessageRequest got result');
+        let num = result.reply.readInt();
+        let msg = result.reply.readString();
+        hilog.info(0x0000, 'testTag', 'reply num: ' + num);
+        hilog.info(0x0000, 'testTag', 'reply msg: ' + msg);
+      } else {
+        hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, errCode: ' + result.errCode);
+      }
+    }).catch((e: Error) => {
+      hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, error: ' + JSON.stringify(e));
+    }).finally (() => {
+      hilog.info(0x0000, 'testTag', 'sendMessageRequest ends, reclaim parcel');
+      data.reclaim();
+      reply.reclaim();
+    });
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, error: ' + error);
+}
+```
+
 ## sendMessageRequest
 
 ```TypeScript
@@ -313,6 +1028,10 @@ sendMessageRequest(
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
 
+**示例**
+
+参见 [sendMessageRequest](#sendmessagerequest)
+
 ## sendRequest
 
 ```TypeScript
@@ -345,6 +1064,228 @@ sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: Me
 | 类型 | 说明 |
 | --- | --- |
 | boolean | true：发送成功，false：发送失败。 |
+
+**示例**
+
+在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+// FA模型需要从@kit.AbilityKit导入featureAbility
+// import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { Want, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let proxy: rpc.IRemoteObject | undefined;
+let connect: common.ConnectOptions = {
+  onConnect: (elementName, remoteProxy) => {
+    hilog.info(0x0000, 'testTag', 'js onConnect called');
+    proxy = remoteProxy;
+  },
+  onDisconnect: (elementName) => {
+    hilog.info(0x0000, 'testTag', 'onDisconnect');
+  },
+  onFailed: () => {
+    hilog.info(0x0000, 'testTag', 'onFailed');
+  }
+};
+let want: Want = {
+  // 获取服务端包名和ability名称
+  bundleName: "com.ohos.server",
+  abilityName: "com.ohos.server.EntryAbility",
+};
+
+// FA模型使用此方法连接服务
+// FA.connectAbility(want,connect);
+
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let connectionId = context.connectServiceExtensionAbility(want, connect);
+```
+
+上述onConnect回调函数中的proxy对象需要等ability异步连接成功后才会被赋值，然后才可调用proxy对象的sendRequest接口方法发送消息
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let option = new rpc.MessageOption();
+  let data = rpc.MessageParcel.create();
+  let reply = rpc.MessageParcel.create();
+  data.writeInt(1);
+  data.writeString("hello");
+  if (proxy != undefined) {
+    let ret: boolean = proxy.sendRequest(1, data, reply, option);
+    if (ret) {
+      hilog.info(0x0000, 'testTag', 'sendRequest got result');
+      let msg = reply.readString();
+      hilog.info(0x0000, 'testTag', 'reply msg: ' + msg);
+    } else {
+      hilog.error(0x0000, 'testTag', 'sendRequest failed');
+    }
+    hilog.info(0x0000, 'testTag', 'sendRequest ends, reclaim parcel');
+    data.reclaim();
+    reply.reclaim();
+  }
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error: ' + error);
+}
+```
+
+在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+// FA模型需要从@kit.AbilityKit导入featureAbility
+// import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { Want, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let proxy: rpc.IRemoteObject | undefined;
+let connect: common.ConnectOptions = {
+  onConnect: (elementName, remoteProxy) => {
+    hilog.info(0x0000, 'testTag', 'js onConnect called');
+    proxy = remoteProxy;
+  },
+  onDisconnect: (elementName) => {
+    hilog.info(0x0000, 'testTag', 'onDisconnect');
+  },
+  onFailed: () => {
+    hilog.info(0x0000, 'testTag', 'onFailed');
+  }
+};
+let want: Want = {
+  // 获取服务端包名和ability名称
+  bundleName: "com.ohos.server",
+  abilityName: "com.ohos.server.EntryAbility",
+};
+
+// FA模型使用此方法连接服务
+// FA.connectAbility(want,connect);
+
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let connectionId = context.connectServiceExtensionAbility(want, connect);
+```
+
+上述onConnect回调函数中的proxy对象需要等ability异步连接成功后才会被赋值，然后才可调用proxy对象的sendRequest接口方法发送消息
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let option = new rpc.MessageOption();
+  let data = rpc.MessageParcel.create();
+  let reply = rpc.MessageParcel.create();
+  data.writeInt(1);
+  data.writeString("hello");
+  if (proxy != undefined) {
+    let a = proxy.sendRequest(1, data, reply, option) as Object;
+    let b = a as Promise<rpc.SendRequestResult>;
+    b.then((result: rpc.SendRequestResult) => {
+      if (result.errCode === 0) {
+        hilog.info(0x0000, 'testTag', 'sendRequest got result');
+        let num = result.reply.readInt();
+        let msg = result.reply.readString();
+        hilog.info(0x0000, 'testTag', 'reply num: ' + num);
+        hilog.info(0x0000, 'testTag', 'reply msg: ' + msg);
+      } else {
+        hilog.error(0x0000, 'testTag', 'sendRequest failed, errCode: ' + result.errCode);
+      }
+    }).catch((e: Error) => {
+      hilog.error(0x0000, 'testTag', 'sendRequest failed, error: ' + JSON.stringify(e));
+    }).finally (() => {
+      hilog.info(0x0000, 'testTag', 'sendRequest ends, reclaim parcel');
+      data.reclaim();
+      reply.reclaim();
+    });
+  }
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'sendRequest failed, error: ' + error);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class testRemoteObject extends rpc.RemoteObject {
+  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel,
+    option: rpc.MessageOption): boolean {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  let option = new rpc.MessageOption();
+  let data = rpc.MessageParcel.create();
+  let reply = rpc.MessageParcel.create();
+  data.writeInt(1);
+  data.writeString("hello");
+  let ret: boolean = testRemoteObject.sendRequest(1, data, reply, option);
+  if (ret) {
+    hilog.info(0x0000, 'testTag', 'sendRequest got result');
+    let msg = reply.readString();
+    hilog.info(0x0000, 'testTag', 'reply msg: ' + msg);
+  } else {
+    hilog.error(0x0000, 'testTag', 'sendRequest failed');
+  }
+  hilog.info(0x0000, 'testTag', 'sendRequest ends, reclaim parcel');
+  data.reclaim();
+  reply.reclaim();
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel, option: rpc.MessageOption): boolean {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  let option = new rpc.MessageOption();
+  let data = rpc.MessageParcel.create();
+  let reply = rpc.MessageParcel.create();
+  data.writeInt(1);
+  data.writeString("hello");
+  let a = testRemoteObject.sendRequest(1, data, reply, option) as Object;
+  let b = a as Promise<rpc.SendRequestResult>;
+  b.then((result: rpc.SendRequestResult) => {
+    if (result.errCode === 0) {
+      hilog.info(0x0000, 'testTag', 'sendRequest got result');
+      let num = result.reply.readInt();
+      let msg = result.reply.readString();
+      hilog.info(0x0000, 'testTag', 'reply num: ' + num);
+      hilog.info(0x0000, 'testTag', 'reply msg: ' + msg);
+    } else {
+      hilog.error(0x0000, 'testTag', 'sendRequest failed, errCode: ' + result.errCode);
+    }
+  }).catch((e: Error) => {
+    hilog.error(0x0000, 'testTag', 'sendRequest failed, error: ' + JSON.stringify(e));
+  }).finally (() => {
+    hilog.info(0x0000, 'testTag', 'sendRequest ends, reclaim parcel');
+    data.reclaim();
+    reply.reclaim();
+  });
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error: ' + error);
+}
+```
 
 ## sendRequest
 
@@ -384,6 +1325,10 @@ sendRequest(
 | --- | --- |
 | Promise&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Promise对象，返回发送请求的响应结果。 |
 
+**示例**
+
+参见 [sendRequest](#sendrequest)
+
 ## sendRequest
 
 ```TypeScript
@@ -418,6 +1363,10 @@ sendRequest(
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | 是 | 接收发送结果的回调。 |
 
+**示例**
+
+参见 [sendRequest](#sendrequest)
+
 ## unregisterDeathRecipient
 
 ```TypeScript
@@ -446,4 +1395,68 @@ unregisterDeathRecipient(recipient: DeathRecipient, flags: int): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
 | [1900005](../errorcode-rpc.md#1900005-ipc对象权限错误) | Operation allowed only for the proxy object. |
 | [1900008](../errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
+
+**示例**
+
+在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+// FA模型需要从@kit.AbilityKit导入featureAbility
+// import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { Want, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let proxy: rpc.IRemoteObject | undefined;
+let connect: common.ConnectOptions = {
+  onConnect: (elementName, remoteProxy) => {
+    hilog.info(0x0000, 'testTag', 'js onConnect called');
+    proxy = remoteProxy;
+  },
+  onDisconnect: (elementName) => {
+    hilog.info(0x0000, 'testTag', 'onDisconnect');
+  },
+  onFailed: () => {
+    hilog.info(0x0000, 'testTag', 'onFailed');
+  }
+};
+let want: Want = {
+  // 获取服务端包名和ability名称
+  bundleName: "com.ohos.server",
+  abilityName: "com.ohos.server.EntryAbility",
+};
+
+// FA模型使用此方法连接服务
+// FA.connectAbility(want,connect);
+
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let connectionId = context.connectServiceExtensionAbility(want, connect);
+```
+
+上述onConnect回调函数中的proxy对象需要等ability异步连接成功后才会被赋值，然后才可调用proxy对象的unregisterDeathRecipient接口方法注销死亡回调
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class MyDeathRecipient implements rpc.DeathRecipient {
+  onRemoteDied() {
+    hilog.info(0x0000, 'testTag', 'server died');
+  }
+}
+if (proxy != undefined) {
+  try {
+    let deathRecipient = new MyDeathRecipient();
+    proxy.registerDeathRecipient(deathRecipient, 0);
+    proxy.unregisterDeathRecipient(deathRecipient, 0);
+  } catch (error) {
+    let e: BusinessError = error as BusinessError;
+    hilog.error(0x0000, 'testTag', 'proxy unregister deathRecipient fail, errorCode ' + e.code);
+    hilog.error(0x0000, 'testTag', 'proxy unregister deathRecipient fail, errorMessage ' + e.message);
+  }
+}
+```
 

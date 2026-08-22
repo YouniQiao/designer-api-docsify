@@ -13,40 +13,6 @@ For details about how to use LocalStorage on the UI, see [LocalStorage: UI State
 ```TypeScript
 ```
 
-## GetShared
-
-```TypeScript
-static GetShared(): LocalStorage
-```
-
-Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) instance shared across the current stage.
-
-**Since:** 9
-
-**Deprecated since:** 10
-
-**Substitutes:** [getShared](#getshared)
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-LocalStorage-static GetShared(): LocalStorage--><!--Device-LocalStorage-static GetShared(): LocalStorage-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [LocalStorage](arkts-arkui-localstorage-c.md) | LocalStorage** instance. |
-
-**Examples**
-
-```TypeScript
-let storage: LocalStorage = LocalStorage.GetShared();
-```
-
 ## clear
 
 ```TypeScript
@@ -74,6 +40,11 @@ For details about the subscriber, see [delete](#delete).
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 **Examples**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let res: boolean = AppStorage.clear(); // true: There are no subscribers.
+```
 
 ```TypeScript
 let para: Record<string, number> = { 'PropA': 47 };
@@ -157,6 +128,15 @@ To delete these subscribers:
 **Examples**
 
 ```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+AppStorage.link<number>('PropA');
+let res: boolean = AppStorage.delete('PropA'); // false: PropA still has subscribers.
+
+AppStorage.setOrCreate('PropB', 48);
+let res1: boolean = AppStorage.delete('PropB'); // true: PropB is successfully deleted from AppStorage.
+```
+
+```TypeScript
 let para: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(para);
 storage.link<number>('PropA');
@@ -199,9 +179,60 @@ Obtains the value of the property corresponding to **propName** from [LocalStora
 **Examples**
 
 ```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let value: number = AppStorage.get('PropA') as number; // 47
+```
+
+```TypeScript
 let para: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(para);
 let value: number = storage.get('PropA') as number; // 47
+```
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let ref1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
+ref1?.get(); //  ref1.get()=47
+```
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47); 
+let prop1: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');    
+prop1.get(); //  prop1.get()=47
+```
+
+## GetShared
+
+```TypeScript
+static GetShared(): LocalStorage
+```
+
+Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) instance shared across the current stage.
+
+**Since:** 9
+
+**Deprecated since:** 10
+
+**Substitutes:** [getShared](#getshared)
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-LocalStorage-static GetShared(): LocalStorage--><!--Device-LocalStorage-static GetShared(): LocalStorage-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [LocalStorage](arkts-arkui-localstorage-c.md) | LocalStorage** instance. |
+
+**Examples**
+
+```TypeScript
+let storage: LocalStorage = LocalStorage.GetShared();
 ```
 
 ## getShared
@@ -215,14 +246,14 @@ Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) i
 > **NOTE：**
 
 > Since API version 12, you can use the
-> [getSharedLocalStorage](arkts-arkui-arkuiuicontext-uicontext-c.md#getsharedlocalstorage)
-> API in [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) to specify the UI execution context.
+> [getSharedLocalStorage](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)
+> API in [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to specify the UI execution context.
 
 **Since:** 10
 
 **Deprecated since:** 18
 
-**Substitutes:** [getSharedLocalStorage](arkts-arkui-arkuiuicontext-uicontext-c.md#getsharedlocalstorage)
+**Substitutes:** [getSharedLocalStorage](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -273,6 +304,10 @@ Checks whether the property corresponding to **propName** exists in [LocalStorag
 **Examples**
 
 ```TypeScript
+AppStorage.has('simpleProp');
+```
+
+```TypeScript
 let para: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(para);
 storage.has('PropA'); // true
@@ -305,9 +340,27 @@ Obtains all property names in [LocalStorage](../../../ui/state-management/arkts-
 **Examples**
 
 ```TypeScript
+AppStorage.setOrCreate('PropB', 48);
+let keys: IterableIterator<string> = AppStorage.keys();
+```
+
+```TypeScript
 let para: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(para);
 let keys: IterableIterator<string> = storage.keys();
+```
+
+```TypeScript
+let keys: Array<string> = PersistentStorage.keys();
+```
+
+```TypeScript
+Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+
+let keys: Array<string> = Environment.keys(); // keys contains accessibilityEnabled, languageCode, and prop.
 ```
 
 ## link
@@ -345,6 +398,13 @@ If the given property does not exist in LocalStorage, **undefined** is returned.
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | Returns the **SubscribedAbstractProperty&lt;T&gt;** instance if the given property exists in LocalStorage; returns **undefined** otherwise. |
 
 **Examples**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let linkToPropA1: SubscribedAbstractProperty<number> = AppStorage.link('PropA');
+let linkToPropA2: SubscribedAbstractProperty<number> = AppStorage.link('PropA'); // linkToPropA2.get() == 47
+linkToPropA1.set(48); // Two-way synchronization: linkToPropA1.get() == linkToPropA2.get() == 48
+```
 
 ```TypeScript
 let para: Record<string, number> = { 'PropA': 47 };
@@ -387,6 +447,13 @@ Establishes a one-way data binding with the property corresponding to **propName
 **Examples**
 
 ```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let prop1: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
+let prop2: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
+prop1.set(1); // One-way synchronization: prop1.get() returns 1, while prop2.get() returns 47.
+```
+
+```TypeScript
 let para: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(para);
 let prop1: SubscribedAbstractProperty<number> = storage.prop('PropA');
@@ -423,6 +490,23 @@ This API is similar to [link](#link) but does not require manually releasing the
 | Type | Description |
 | --- | --- |
 | [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; \| undefined | A reference to the property in LocalStorage, or **undefined** if the property does not exist. |
+
+**Examples**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let refToPropA1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
+let refToPropA2: AbstractProperty<number> | undefined = AppStorage.ref('PropA'); // refToPropA2.get() == 47
+refToPropA1?.set(48); // Synchronously modify AppStorage: refToPropA1.get() == refToPropA2.get() == 48.
+```
+
+```TypeScript
+let para: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(para);
+let refToPropA1: AbstractProperty<number> | undefined = storage.ref('PropA');
+let refToPropA2: AbstractProperty<number> | undefined = storage.ref('PropA'); // refToPropA2.get() == 47
+refToPropA1?.set(48); // refToPropA1.get() == refToPropA2.get() == 48
+```
 
 ## set
 
@@ -467,10 +551,51 @@ Sets the value of the property corresponding to **propName** in [LocalStorage](.
 **Examples**
 
 ```TypeScript
+AppStorage.setOrCreate('PropA', 48);
+let res: boolean = AppStorage.set('PropA', 47) // true
+let res1: boolean = AppStorage.set('PropB', 47) // false
+```
+
+```TypeScript
 let para: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(para);
 let res: boolean = storage.set('PropA', 47); // true
 let res1: boolean = storage.set('PropB', 47); // false
+```
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let ref1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
+ref1?.set(1); //  ref1.get()=1
+let a: Map<string, number> = new Map([['1', 0]]);
+let ref2 = AppStorage.setAndRef('MapA', a);
+ref2.set(a);
+let b: Set<string> = new Set('1');
+let ref3 = AppStorage.setAndRef('SetB', b);
+ref3.set(b);
+let c: Date = new Date('2024');
+let ref4 = AppStorage.setAndRef('DateC', c);
+ref4.set(c);
+ref2.set(null);
+ref3.set(undefined);
+```
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let prop1: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
+prop1.set(1); //  prop1.get()=1
+// Since API version 12, the Map, Set, Date types, as well as null, undefined, and union types are supported.
+let a: Map<string, number> = new Map([['1', 0]]);
+let prop2 = AppStorage.setAndProp('MapA', a);
+prop2.set(a);
+let b: Set<string> = new Set('1');
+let prop3 = AppStorage.setAndProp('SetB', b);
+prop3.set(b);
+let c: Date = new Date('2024');
+let prop4 = AppStorage.setAndProp('DateC', c);
+prop4.set(c);
+prop2.set(null);
+prop3.set(undefined);
 ```
 
 ## setAndLink
@@ -514,6 +639,12 @@ Similar to the [link](#link) API, establishes a two-way data binding with the pr
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | Instance of **SubscribedAbstractProperty&lt;T&gt;** and two-way bound data of the given property in LocalStorage. |
 
 **Examples**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let link1: SubscribedAbstractProperty<number> = AppStorage.setAndLink('PropB', 49); // Create PropB with the default value 49.
+let link2: SubscribedAbstractProperty<number> = AppStorage.setAndLink('PropA', 50); // PropA already exists with the value 47.
+```
 
 ```TypeScript
 let para: Record<string, number> = { 'PropA': 47 };
@@ -565,6 +696,11 @@ Similar to the [prop](#prop) API, establishes a one-way data binding with the pr
 **Examples**
 
 ```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let prop: SubscribedAbstractProperty<number> = AppStorage.setAndProp('PropB', 49); // PropA -> 47, PropB -> 49
+```
+
+```TypeScript
 let para: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(para);
 let prop: SubscribedAbstractProperty<number> = storage.setAndProp('PropB', 49); // PropA -> 47, PropB -> 49
@@ -609,6 +745,21 @@ This API is similar to [setAndLink](#setandlink) but does not require manually r
 | Type | Description |
 | --- | --- |
 | [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; | Instance of **AbstractProperty&lt;T&gt;**, which is a reference to the property in LocalStorage corresponding to **propName**. |
+
+**Examples**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let ref1: AbstractProperty<number> = AppStorage.setAndRef('PropB', 49); // Create PropB with the default value 49.
+let ref2: AbstractProperty<number> = AppStorage.setAndRef('PropA', 50); // PropA already exists with the value 47.
+```
+
+```TypeScript
+let para: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(para);
+let ref1: AbstractProperty<number> = storage.setAndRef('PropB', 49); // Create PropB with the default value 49.
+let ref2: AbstractProperty<number> = storage.setAndRef('PropA', 50); // PropA already exists with the value 47.
+```
 
 ## setOrCreate
 
@@ -655,6 +806,10 @@ If the property does not exist, this API creates it with the value of **newValue
 **Examples**
 
 ```TypeScript
+AppStorage.setOrCreate('simpleProp', 121);
+```
+
+```TypeScript
 let para: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(para);
 let res: boolean = storage.setOrCreate('PropA', 121); // true
@@ -687,6 +842,11 @@ Obtains the number of properties in [LocalStorage](../../../ui/state-management/
 | number | Number of properties in LocalStorage. |
 
 **Examples**
+
+```TypeScript
+AppStorage.setOrCreate('PropB', 48);
+let res: number = AppStorage.size(); // 1
+```
 
 ```TypeScript
 let para: Record<string, number> = { 'PropA': 47 };

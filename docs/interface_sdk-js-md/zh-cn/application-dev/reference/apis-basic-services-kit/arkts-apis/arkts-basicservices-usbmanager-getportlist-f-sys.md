@@ -40,3 +40,10 @@ function getPortList(): Array<USBPort>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 | [14400004](../errorcode-usb.md#14400004-服务异常) |  |
 
+**示例**
+
+```TypeScript
+// 获取USB端口列表
+let ret: Array<usbManager.USBPort> = usbManager.getPortList();
+```
+

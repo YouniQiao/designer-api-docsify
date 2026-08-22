@@ -130,6 +130,24 @@ export default class EntryAbility extends UIAbility {
     console.info('MyAbility onCreate');
     let moduleContext: common.Context;
     try {
+      // 根据模块名创建上下文
+      moduleContext = this.context.createModuleContext('entry');
+    } catch (error) {
+      console.error(`createModuleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let moduleContext: common.Context;
+    try {
       moduleContext = this.context.createModuleContext('com.example.test', 'entry');
     } catch (error) {
       console.error(`createModuleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);

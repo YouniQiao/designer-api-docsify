@@ -49,3 +49,47 @@ function getPageContent(options?: ContentOptions): Promise<PageContent>
 | [34000004](../errorcode-onScreen.md#34000004-页面未准备就绪) | The page is not ready. |
 | [34000006](../errorcode-onScreen.md#34000006-请求超时) | The request timed out. |
 
+**示例**
+
+ArkTS-Dyn示例:
+
+```TypeScript
+import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: onScreen.ContentOptions = {
+   contentUnderstand: true,
+   pageLink: true
+};
+try {
+   onScreen.getPageContent(options).then((pageContent: onScreen.PageContent) => {
+      console.info("get page content succeed, bundleName = " + pageContent.bundleName);
+   }).catch((err: BusinessError) => {
+      console.error(`get page content failed, Code: ${err.code}, message: ${err.message}`);
+   });
+} catch (err) {
+   console.error(`get page content failed, Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: onScreen.ContentOptions = {
+   contentUnderstand: true,
+   pageLink: true
+};
+try {
+   onScreen.getPageContent(options).then((pageContent: onScreen.PageContent) => {
+      console.info("get page content succeed, bundleName = " + pageContent.bundleName);
+   }).catch((err: BusinessError): void => {
+      console.error("get page content failed, errCode = " + err.code);
+   });
+} catch (err: BusinessError) {
+   console.error('get page content failed, errCode = ' + err.code);
+}
+```
+

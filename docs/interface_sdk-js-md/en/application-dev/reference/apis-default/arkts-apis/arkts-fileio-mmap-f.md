@@ -43,8 +43,8 @@ Creates a file mapping object based on a file descriptor or file object for effi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | int \| [File](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-file-i.md) | Yes | File** object or FD of the file to close. |
-| mode | [MappingMode](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-mappingmode-e.md) | Yes | Option to create a file memory-mapped object. You must specify one of the following options: <br>- **MappingMode.READ_ONLY(0)**: read-only mode. The file mapping area is not writable. An exception is thrown when the file mapping area is modified. <br>- **MappingMode.READ_WRITE(1)**: read/write mode. The modification is written to the file mapping area and then synchronized to the file by the operating system (non-real-time). <br>- **MappingMode.PRIVATE(2)**: private mode. It is a copy-on-write mapping mechanism. Modifications to the mapping area are visible only to the current process and do not affect the raw file. |
+| file | int \| [File](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-file-i.md) | Yes | File** object or FD of the file to close. |
+| mode | [MappingMode](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-mappingmode-e.md) | Yes | Option to create a file memory-mapped object. You must specify one of the following options: <br>- **MappingMode.READ_ONLY(0)**: read-only mode. The file mapping area is not writable. An exception is thrown when the file mapping area is modified. <br>- **MappingMode.READ_WRITE(1)**: read/write mode. The modification is written to the file mapping area and then synchronized to the file by the operating system (non-real-time). <br>- **MappingMode.PRIVATE(2)**: private mode. It is a copy-on-write mapping mechanism. Modifications to the mapping area are visible only to the current process and do not affect the raw file. |
 | offset | long | Yes | Start position of the file mapping area, in bytes. |
 | size | int | Yes | Size of the file mapping area, in bytes. The value ranges from 0 to **INT32_MAX**. |
 
@@ -52,7 +52,7 @@ Creates a file mapping object based on a file descriptor or file object for effi
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[FileMapping](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-filemapping-i.md)&gt; | Promise used to return the file mapping object. Initial state of the returned object: The value of **position** is **0**, and the values of **limit** and **capacity** are equal to the value of **size**. |
+| Promise&lt;[FileMapping](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-filemapping-i.md)&gt; | Promise used to return the file mapping object. Initial state of the returned object: The value of **position** is **0**, and the values of **limit** and **capacity** are equal to the value of **size**. |
 
 **Error codes:**
 

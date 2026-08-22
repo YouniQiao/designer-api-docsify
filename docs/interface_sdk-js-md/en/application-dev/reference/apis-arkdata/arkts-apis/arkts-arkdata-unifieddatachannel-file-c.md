@@ -46,3 +46,26 @@ The default value is an empty dictionary object.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+**Examples**
+
+```TypeScript
+import { unifiedDataChannel } from '@kit.ArkData';
+import { fileUri } from '@kit.CoreFileKit'
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let context = this.context;
+    let pathDir = context.filesDir;
+    let file = new unifiedDataChannel.File();
+    file.details = {
+        name: 'test',
+        type: 'txt'
+    };
+    let filePath = pathDir + '/test.txt';
+    file.uri = fileUri.getUriFromPath(filePath);
+  }
+}
+```
+

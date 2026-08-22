@@ -41,7 +41,7 @@ destroy(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -62,6 +62,26 @@ class InputMethodExtAbility extends InputMethodExtensionAbility {
         return;
       }
       console.info('Succeeded in destroying context.');
+    });
+  }
+}
+```
+
+```TypeScript
+import { InputMethodExtensionAbility, InputMethodExtensionContext } from '@kit.IMEKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class InputMethodExtAbility extends InputMethodExtensionAbility {
+  onCreate(want: Want): void {
+    let context: InputMethodExtensionContext = this.context;
+  }
+
+  onDestroy() {
+    this.context.destroy().then(() => {
+      console.info('Succeed in destroying context.');
+    }).catch((err: BusinessError)=>{
+      console.error(`Failed to destroy context, err code = ${err.code}`);
     });
   }
 }
@@ -91,25 +111,7 @@ destroy(): Promise<void>
 
 **Examples**
 
-```TypeScript
-import { InputMethodExtensionAbility, InputMethodExtensionContext } from '@kit.IMEKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class InputMethodExtAbility extends InputMethodExtensionAbility {
-  onCreate(want: Want): void {
-    let context: InputMethodExtensionContext = this.context;
-  }
-
-  onDestroy() {
-    this.context.destroy().then(() => {
-      console.info('Succeed in destroying context.');
-    }).catch((err: BusinessError)=>{
-      console.error(`Failed to destroy context, err code = ${err.code}`);
-    });
-  }
-}
-```
+See [destroy](#destroy)
 
 ## startAbility
 
@@ -131,7 +133,7 @@ startAbility(want: Want): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Want information, including the ability name and bundle name of the target application. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information, including the ability name and bundle name of the target application. |
 
 **Return value:**
 

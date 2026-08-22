@@ -21,3 +21,4 @@ Provide the definition of the C interface for the native AbilityRuntime
 | [extension_ability.h](capi-extension-ability-h.md) | Declare the common types for the extension ability AbilityRuntime. |
 | [native_ability_wrapper.h](capi-native-ability-wrapper-h.md) | Declares the native ability wrapper APIs. |
 | [modular_object_extension_context.h](capi-modular-object-extension-context-h.md) | Declares the modular object extension context. |
+| [child_process_info.h](capi-child-process-info-h.md) | Defines the child process info type and accessor functions. |

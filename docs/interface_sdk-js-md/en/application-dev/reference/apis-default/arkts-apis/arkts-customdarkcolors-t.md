@@ -16,5 +16,5 @@ Defines a struct for custom dark theme colors.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [Partial](arkts-partial-t.md)&lt;[Colors](arkts-arkuitheme-colors-i.md)&gt;
+**Property type:** [Partial](arkts-partial-t.md)&lt;[Colors](arkts-arkui-theme-colors-i.md)&gt;
 

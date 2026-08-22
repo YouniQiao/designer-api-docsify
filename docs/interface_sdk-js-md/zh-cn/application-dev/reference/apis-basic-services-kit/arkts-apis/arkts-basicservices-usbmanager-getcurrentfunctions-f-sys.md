@@ -33,3 +33,10 @@ function getCurrentFunctions(): FunctionType
 | --- | --- |
 | FunctionType | 当前的USB功能列表的数字组合掩码。如果开发者模式关闭且没有设备接入，则返回undefined，需要对返回值做判空处理。 |
 
+**示例**
+
+```TypeScript
+// 获取当前USB功能的数字掩码
+let ret: usbManager.FunctionType = usbManager.getCurrentFunctions();
+```
+

@@ -38,7 +38,7 @@ Finishes the MAC computation and obtains the MAC computation result. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the MAC computation result obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the MAC computation result obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -69,6 +69,25 @@ function hmacByCallback() {
       });
     });
   });
+}
+```
+
+For more HMAC operation examples, see [Generating an HMAC by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment).
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+async function hmacByPromise() {
+  let mac = cryptoFramework.createMac('SHA256');
+  let keyBlob: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from('12345678abcdefgh', 'utf-8').buffer) };
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let symKey = await symKeyGenerator.convertKey(keyBlob);
+  await mac.init(symKey);
+  await mac.update({ data: new Uint8Array(buffer.from('hmacTestMessage', 'utf-8').buffer) });
+  let macOutput = await mac.doFinal();
+  console.info('[Promise]: HMAC result: ' + macOutput.data);
+  console.info('[Promise]: MAC len: ' + mac.getMacLength());
 }
 ```
 
@@ -105,24 +124,7 @@ Finishes the MAC computation and obtains the MAC computation result. This API us
 
 **Examples**
 
-For more HMAC operation examples, see [Generating an HMAC by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment).
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-async function hmacByPromise() {
-  let mac = cryptoFramework.createMac('SHA256');
-  let keyBlob: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from('12345678abcdefgh', 'utf-8').buffer) };
-  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
-  let symKey = await symKeyGenerator.convertKey(keyBlob);
-  await mac.init(symKey);
-  await mac.update({ data: new Uint8Array(buffer.from('hmacTestMessage', 'utf-8').buffer) });
-  let macOutput = await mac.doFinal();
-  console.info('[Promise]: HMAC result: ' + macOutput.data);
-  console.info('[Promise]: MAC len: ' + mac.getMacLength());
-}
-```
+See [doFinal](#dofinal)
 
 ## doFinalSync
 
@@ -268,7 +270,7 @@ Initializes the MAC computation using a symmetric key. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | [SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md) | Yes | Symmetric key. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -377,7 +379,7 @@ Updates the MAC status. This API uses an asynchronous callback to return the res
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | input | DataBlob | Yes | Data to pass in. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

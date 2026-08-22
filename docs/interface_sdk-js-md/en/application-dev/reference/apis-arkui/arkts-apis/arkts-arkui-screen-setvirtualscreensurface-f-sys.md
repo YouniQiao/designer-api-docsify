@@ -31,7 +31,7 @@ Sets a surface for a virtual screen. This API uses an asynchronous callback to r
 | --- | --- | --- | --- |
 | screenId | long | Yes | ID of the virtual screen. The value must be an integer. |
 | surfaceId | string | Yes | Surface ID of the virtual screen. The value can be customized. You can specify the surface ID of an existing surface. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the virtual screen surface is successfully set, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the virtual screen surface is successfully set, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -63,6 +63,42 @@ struct Index {
       return;
     }
       console.info('Succeeded in setting the surface for the virtual screen.');
+    });
+  }
+  build() {
+    RelativeContainer() {
+      XComponent({
+        type: XComponentType.SURFACE,
+        controller: this.xComponentController
+      })
+      Button('setSurface')
+        .onClick((event: ClickEvent) => {
+          this.setVirtualScreenSurface();
+      }).width('100%')
+      .height(20)
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// Index.ets
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  xComponentController: XComponentController = new XComponentController();
+
+  setVirtualScreenSurface = () => {
+    let screenId: number = 1;
+    let surfaceId = this.xComponentController.getXComponentSurfaceId();
+    screen.setVirtualScreenSurface(screenId, surfaceId).then(() => {
+      console.info('Succeeded in setting the surface for the virtual screen.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to set the surface for the virtual screen. Code:${err.code}, message is ${err.message}`);
     });
   }
   build() {
@@ -126,39 +162,5 @@ Sets a surface for a virtual screen. This API uses a promise to return the resul
 
 **Examples**
 
-```TypeScript
-// Index.ets
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  xComponentController: XComponentController = new XComponentController();
-
-  setVirtualScreenSurface = () => {
-    let screenId: number = 1;
-    let surfaceId = this.xComponentController.getXComponentSurfaceId();
-    screen.setVirtualScreenSurface(screenId, surfaceId).then(() => {
-      console.info('Succeeded in setting the surface for the virtual screen.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to set the surface for the virtual screen. Code:${err.code}, message is ${err.message}`);
-    });
-  }
-  build() {
-    RelativeContainer() {
-      XComponent({
-        type: XComponentType.SURFACE,
-        controller: this.xComponentController
-      })
-      Button('setSurface')
-        .onClick((event: ClickEvent) => {
-          this.setVirtualScreenSurface();
-      }).width('100%')
-      .height(20)
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
+See [setVirtualScreenSurface](#setvirtualscreensurface)
 

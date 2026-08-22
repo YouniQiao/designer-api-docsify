@@ -12,13 +12,13 @@ import { App, AppResponse, RequestFullWindowOptions, ScreenOnVisibleOptions } fr
 
 | Name | Description |
 | --- | --- |
-| [App](arkts-arkui-systemapp-app-c.md) | Defines static functions of App class |
+| [App](arkts-arkui-system-app-app-c.md) | Defines static functions of App class |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [AppResponse](arkts-arkui-systemapp-appresponse-i.md) | Defines the application response information. |
-| [RequestFullWindowOptions](arkts-arkui-systemapp-requestfullwindowoptions-i.md) | Defines the option of RequestFullWindow interface. |
-| [ScreenOnVisibleOptions](arkts-arkui-systemapp-screenonvisibleoptions-i.md) | Defines the options of the visible interface on the screen. |
+| [AppResponse](arkts-arkui-system-app-appresponse-i.md) | Defines the application response information. |
+| [RequestFullWindowOptions](arkts-arkui-system-app-requestfullwindowoptions-i.md) | Defines the option of RequestFullWindow interface. |
+| [ScreenOnVisibleOptions](arkts-arkui-system-app-screenonvisibleoptions-i.md) | Defines the options of the visible interface on the screen. |
 

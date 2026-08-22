@@ -46,6 +46,75 @@ declare function fsync(fd: number): Promise<void>
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath);
+fileIo.fsync(file.fd).then(() => {
+  console.info(`Succeeded in syncing data.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to sync data. Code: ${err.code}, message: ${err.message}`);
+}).finally(() => {
+  fileIo.closeSync(file);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath);
+fileIo.fsync(file.fd).then(() => {
+  console.info(`Succeeded in syncing data.`);
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to sync data. Code: ${err.code}, message: ${err.message}`);
+}).finally(() => {
+  fileIo.closeSync(file);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath);
+fileIo.fsync(file.fd, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to sync. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in syncing.`);
+  }
+  fileIo.closeSync(file);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath);
+fileIo.fsync(file.fd, (err: BusinessError<void> | null) => {
+  if (err) {
+    console.error(`Failed to sync. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in syncing.`);
+  }
+  fileIo.closeSync(file);
+});
+```
+
 
 ## fsync
 
@@ -79,4 +148,8 @@ declare function fsync(fd: number, callback: AsyncCallback<void>): void
 | 13900027 | Read-only file system |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**示例**
+
+参见 [fsync](#fsync)
 

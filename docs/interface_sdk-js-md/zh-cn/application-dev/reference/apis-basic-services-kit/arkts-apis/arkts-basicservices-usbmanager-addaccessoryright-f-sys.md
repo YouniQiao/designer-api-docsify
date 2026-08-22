@@ -43,3 +43,32 @@ function addAccessoryRight(tokenId: int, accessory: USBAccessory): void
 | [14400004](../errorcode-usb.md#14400004-服务异常) | Service exception. Possible causes:  <br>1. No accessory is plugged in. |
 | [14400005](../errorcode-usb.md#14400005-数据库操作异常) | Database operation exception. |
 
+**示例**
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+async function addAccessoryRightExample() {
+  // 为指定应用添加USB配件访问权限
+  try {
+    // 获取USB配件列表
+    let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList()
+    if (accList.length === 0) {
+      console.error('No USB accessory found');
+      return;
+    }
+    // 设置bundle信息标志
+    let flags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION |
+    bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY
+    // 异步获取当前应用的bundle信息
+    let bundleInfo = await bundleManager.getBundleInfoForSelf(flags)
+    // 获取应用的tokenId
+    let tokenId: int = bundleInfo.appInfo.accessTokenId
+    // 为应用添加USB配件访问权限
+    usbManager.addAccessoryRight(tokenId, accList[0])
+    console.info(`addAccessoryRight success`)
+  } catch (error) {
+    console.error(`addAccessoryRight error ${error.code}, message is ${error.message}`);
+  }
+}
+```
+

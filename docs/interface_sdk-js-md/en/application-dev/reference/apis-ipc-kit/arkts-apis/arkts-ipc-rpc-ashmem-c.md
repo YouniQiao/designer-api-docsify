@@ -87,10 +87,60 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
+  let data = rpc.MessageSequence.create();
+  hilog.info(0x0000, 'testTag', 'data is ' + data);
+
+  // When the MessageSequence object is no longer used, the service calls the reclaim method to release resources.
+  data.reclaim();
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let data = rpc.MessageParcel.create();
+  hilog.info(0x0000, 'testTag', 'data is ' + data);
+
+  // When the MessageParcel object is no longer used, the service calls the reclaim method to release resources.
+  data.reclaim();
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
   let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
   hilog.info(0x0000, 'testTag', 'create ashmem: ' + ashmem);
   let size = ashmem.getAshmemSize();
   hilog.info(0x0000, 'testTag',  'size is ' + size);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  let ashmem2 = rpc.Ashmem.create(ashmem);
+  let size = ashmem2.getAshmemSize();
+  hilog.info(0x0000, 'testTag', 'size is ' + size);
 } catch (error) {
   let e: BusinessError = error as BusinessError;
   hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
@@ -132,22 +182,7 @@ Creates an **Ashmem** object by copying the file descriptor of an existing **Ash
 
 **Examples**
 
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  let ashmem2 = rpc.Ashmem.create(ashmem);
-  let size = ashmem2.getAshmemSize();
-  hilog.info(0x0000, 'testTag', 'size is ' + size);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
+See [create](#create)
 
 ## createAshmem
 
@@ -400,43 +435,6 @@ try {
 }
 ```
 
-## mapReadWriteAshmem
-
-```TypeScript
-mapReadWriteAshmem(): void
-```
-
-Maps the shared file to the readable and writable virtual address space of the process.
-
-**Since:** 23
-
-<!--Device-Ashmem-mapReadWriteAshmem(): void--><!--Device-Ashmem-mapReadWriteAshmem(): void-End-->
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) | Failed to call mmap. |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  ashmem.mapReadWriteAshmem();
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
 ## mapReadonlyAshmem
 
 ```TypeScript
@@ -467,6 +465,43 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
   ashmem.mapReadonlyAshmem();
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+## mapReadWriteAshmem
+
+```TypeScript
+mapReadWriteAshmem(): void
+```
+
+Maps the shared file to the readable and writable virtual address space of the process.
+
+**Since:** 23
+
+<!--Device-Ashmem-mapReadWriteAshmem(): void--><!--Device-Ashmem-mapReadWriteAshmem(): void-End-->
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) | Failed to call mmap. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  ashmem.mapReadWriteAshmem();
 } catch (error) {
   let e: BusinessError = error as BusinessError;
   hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
@@ -562,6 +597,60 @@ Reads data from the shared file associated with this **Ashmem** object.
 | [1900004](../errorcode-rpc.md#1900004-failed-to-read-data-from-the-shared-memory) | Failed to read data from the shared memory. |
 
 **Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let sequence = rpc.MessageSequence.create();
+  let ashmem = rpc.Ashmem.create("ashmem", 1024);
+  // Write data to ashmem.
+  let buffer = new ArrayBuffer(1024);
+  let int32View = new Int32Array(buffer);
+  for (let i = 0; i < int32View.length; i++) {
+    int32View[i] = i * 2 + 1;
+  }
+  let size = buffer.byteLength;
+  ashmem.mapReadWriteAshmem();
+  ashmem.writeDataToAshmem(buffer, size, 0);
+  // Write the size of the transferred data to this MessageSequence object.
+  sequence.writeInt(size);
+  // Write the ashmem object to the messageSequence object.
+  sequence.writeAshmem(ashmem);
+
+  // Read the size of the transferred data.
+  let dataSize = sequence.readInt();
+  // Read the ashmem object from this MessageSequence object.
+  let ashmem1 = sequence.readAshmem();
+  // Read data from the ashmem object.
+  ashmem1.mapReadWriteAshmem();
+  let readResult = ashmem1.readDataFromAshmem(dataSize, 0);
+  let readInt32View = new Int32Array(readResult);
+  hilog.info(0x0000, 'testTag', 'read from Ashmem result is ' + readInt32View);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let parcel = new rpc.MessageParcel();
+  let ashmem = rpc.Ashmem.createAshmem("ashmem", 1024);
+  let isWriteSuccess = parcel.writeAshmem(ashmem);
+  hilog.info(0x0000, 'testTag', 'write ashmem to result is ' + isWriteSuccess);
+  let readAshmem = parcel.readAshmem();
+  hilog.info(0x0000, 'testTag', 'read ashmem to result is ' + readAshmem);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -861,6 +950,48 @@ Writes data to the shared file associated with this **Ashmem** object.
 | [1900003](../errorcode-rpc.md#1900003-failed-to-write-data-to-the-shared-memory) | Failed to write data to the shared memory. |
 
 **Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let sequence = rpc.MessageSequence.create();
+  let ashmem = rpc.Ashmem.create("ashmem", 1024);
+  // Write data to ashmem.
+  let buffer = new ArrayBuffer(1024);
+  let int32View = new Int32Array(buffer);
+  for (let i = 0; i < int32View.length; i++) {
+    int32View[i] = i * 2 + 1;
+  }
+  let size = buffer.byteLength;
+  ashmem.mapReadWriteAshmem();
+  ashmem.writeDataToAshmem(buffer, size, 0);
+  // Write the ashmem object to the messageSequence object.
+  sequence.writeAshmem(ashmem);
+  // Write the size of the transferred data to this MessageSequence object.
+  sequence.writeInt(size);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let parcel = new rpc.MessageParcel();
+  let ashmem = rpc.Ashmem.createAshmem("ashmem", 1024);
+  let isWriteSuccess = parcel.writeAshmem(ashmem);
+  hilog.info(0x0000, 'testTag', 'write ashmem to result is ' + isWriteSuccess);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

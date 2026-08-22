@@ -90,6 +90,81 @@ function createPixelMapSync() {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function createPixelMapSync() {
+  let opts: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_1010102, size: { height: 4, width: 6 } };
+  try {
+    let pixelMap: image.PixelMap = image.createPixelMapSync(opts);
+    if (pixelMap == undefined) {
+      console.error(`Failed to create the PixelMap.`);
+      return;
+    }
+    console.info('Succeeded in creating the PixelMap.');
+  } catch (e) {
+    const err = e as BusinessError;
+    console.error(`Failed to create the PixelMap. Code: ${err.code}, message: ${err.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+function createPixelMapSync() {
+  let opts: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_1010102, size: { height: 4, width: 6 } };
+  try {
+    let pixelMap: image.PixelMap = image.createPixelMapSync(opts);
+    console.info('Succeeded in creating the PixelMap.');
+  } catch (err) {
+    console.error(`Failed to create the PixelMap. Code: ${err.code}, message: ${err.message}`);
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+function CreatePixelMapSync(context : Context) {
+  // 此处'test.jpg'仅作示例，请开发者自行替换，否则imageSource创建失败会导致后续无法正常执行。
+  let filePath: string = context.filesDir + "/test.jpg";
+  let imageSource = image.createImageSource(filePath);
+  let decodingOptions: image.DecodingOptions = {
+    sampleSize: 1,
+    editable: true,
+    desiredSize: { width: 1, height: 2 },
+    rotate: 10,
+    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
+    desiredRegion: { size: { width: 1, height: 2 }, x: 0, y: 0 },
+    // 若解码接口同时传入了desiredSize参数与desiredRegion参数，需进一步传入cropAndScaleStrategy参数指定缩放与裁剪的先后顺序，推荐设置CROP_FIRST。
+    cropAndScaleStrategy: image.CropAndScaleStrategy.CROP_FIRST,
+    index: 0
+  };
+  let pixelmap = imageSource.createPixelMapSync(decodingOptions);
+  if (pixelmap != undefined) {
+    console.info('Succeeded in creating pixelMap object.');
+  } else {
+    console.error('Failed to create pixelMap.');
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+function CreatePixelMapSyncFunc(imageSource: image.ImageSource): void {
+  try {
+    let pixelMap = imageSource.createPixelMapSync();
+    console.info(0x00000, 'CreatePixelMapSyncFunc', 'createPixelMapSync success!');
+  } catch (err) {
+    console.error(0x00000, 'CreatePixelMapSyncFunc', 'CreatePixelMapSyncFunc failed: ' + err);
+  }
+}
+```
+
 
 ## createPixelMapSync
 
@@ -127,38 +202,5 @@ Starting from API 26.0.0, it is recommended to use [createEmptyPixelMap](arkts-i
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function createPixelMapSync() {
-  let opts: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_1010102, size: { height: 4, width: 6 } };
-  try {
-    let pixelMap: image.PixelMap = image.createPixelMapSync(opts);
-    if (pixelMap == undefined) {
-      console.error(`Failed to create the PixelMap.`);
-      return;
-    }
-    console.info('Succeeded in creating the PixelMap.');
-  } catch (e) {
-    const err = e as BusinessError;
-    console.error(`Failed to create the PixelMap. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function createPixelMapSync() {
-  let opts: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_1010102, size: { height: 4, width: 6 } };
-  try {
-    let pixelMap: image.PixelMap = image.createPixelMapSync(opts);
-    console.info('Succeeded in creating the PixelMap.');
-  } catch (err) {
-    console.error(`Failed to create the PixelMap. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```
+参见 [createPixelMapSync](#createpixelmapsync)
 

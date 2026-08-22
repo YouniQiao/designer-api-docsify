@@ -298,97 +298,21 @@ getListenerCount(eventId: string): long
 
 **示例**
 
+ArkTS-Dyn示例：
+
+```TypeScript
+let count: number = emitter.getListenerCount("eventId");
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let count: long = emitter.getListenerCount("eventId");
+```
+
 ```TypeScript
 let emitter1: emitter.Emitter = new emitter.Emitter();
 let count = emitter1.getListenerCount("eventId");
-```
-
-## offEventData
-
-```TypeScript
-offEventData(eventId: string, callback: Callback<EventData>): void
-```
-
-取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用 [onEventData](arkts-basicservices-emitter-oneventdata-f.md)或 [onceEventData](arkts-basicservices-emitter-onceeventdata-f.md)接口订阅callback时，该接口才生效。
-
-使用该接口取消某个事件订阅后，已通过emit接口发布但尚未被执行的事件将被取消。
-
-**起始版本：** 23
-
-<!--Device-Emitter-offEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-offEventData(eventId: string, callback: Callback<EventData>): void-End-->
-
-**系统能力：** SystemCapability.Notification.Emitter
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| eventId | string | 是 | 事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 事件的回调处理函数。 |
-
-**示例**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let emitter1 = new emitter.Emitter();
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-}
-
-emitter1.offEventData("eventId", callback);
-```
-
-## offGenericEventData
-
-```TypeScript
-offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
-```
-
-取消订阅当前Emitter类实例的事件。仅当已使用 onGenericEventData或 onceGenericEventData接口订阅了事件ID为eventId且回调处理函数为callback的事件时，该接口才生效。
-
-使用该接口取消事件订阅后，已通过emit接口发布但尚未执行的事件将被取消。
-
-**起始版本：** 23
-
-<!--Device-Emitter-offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
-
-**系统能力：** SystemCapability.Notification.Emitter
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| eventId | string | 是 | 事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 事件的回调处理函数。 |
-
-**示例**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let emitter1 = new emitter.Emitter();
-
-let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
-  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
-  if (eventData?.data instanceof Sample) {
-    const sampleData = eventData.data as Sample;
-    sampleData.printCount();
-  }
-}
-
-emitter1.offGenericEventData("eventId", callback);
 ```
 
 ## off_string
@@ -515,17 +439,19 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 emitter1.off("eventId", callback);
 ```
 
-## onEventData
+## offEventData
 
 ```TypeScript
-onEventData(eventId: string, callback: Callback<EventData>): void
+offEventData(eventId: string, callback: Callback<EventData>): void
 ```
 
-持续订阅当前Emitter类实例指定的事件，并在接收到该事件时，使用callback异步回调。
+取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用 [onEventData](arkts-basicservices-emitter-oneventdata-f.md)或 [onceEventData](arkts-basicservices-emitter-onceeventdata-f.md)接口订阅callback时，该接口才生效。
+
+使用该接口取消某个事件订阅后，已通过emit接口发布但尚未被执行的事件将被取消。
 
 **起始版本：** 23
 
-<!--Device-Emitter-onEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-onEventData(eventId: string, callback: Callback<EventData>): void-End-->
+<!--Device-Emitter-offEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-offEventData(eventId: string, callback: Callback<EventData>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 
@@ -533,10 +459,22 @@ onEventData(eventId: string, callback: Callback<EventData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventId | string | 是 | 持续订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
+| eventId | string | 是 | 事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 事件的回调处理函数。 |
 
 **示例**
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData | undefined | null) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+}
+
+// 取消eventID为"eventId"的事件回调处理函数，callback对象应使用订阅时的对象
+// 如果该回调处理函数没有被订阅，则不做任何处理
+emitter.offEventData("eventId", callback);
+```
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -547,20 +485,22 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
 }
 
-emitter1.onEventData(`eventId`, callback);
+emitter1.offEventData("eventId", callback);
 ```
 
-## onGenericEventData
+## offGenericEventData
 
 ```TypeScript
-onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
+offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 ```
 
-持续订阅当前Emitter类实例指定的事件，并在接收到该事件时，使用callback异步回调。
+取消订阅当前Emitter类实例的事件。仅当已使用 onGenericEventData或 onceGenericEventData接口订阅了事件ID为eventId且回调处理函数为callback的事件时，该接口才生效。
+
+使用该接口取消事件订阅后，已通过emit接口发布但尚未执行的事件将被取消。
 
 **起始版本：** 23
 
-<!--Device-Emitter-onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
+<!--Device-Emitter-offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 
@@ -568,15 +508,13 @@ onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventId | string | 是 | 持续订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
+| eventId | string | 是 | 事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 事件的回调处理函数。 |
 
 **示例**
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
-
-let emitter1 = new emitter.Emitter();
 
 class Sample {
   constructor() {
@@ -590,13 +528,38 @@ class Sample {
 
 let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
   console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  let storage: Sample = eventData.data! as Sample;
+  storage.printCount();
+}
+// 取消eventID为"eventId"的事件回调处理函数，callback对象应使用订阅时的对象
+// 如果该回调处理函数没有被订阅，则不做任何处理
+emitter.offGenericEventData("eventId", callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let emitter1 = new emitter.Emitter();
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
   if (eventData?.data instanceof Sample) {
     const sampleData = eventData.data as Sample;
     sampleData.printCount();
   }
 }
 
-emitter1.onGenericEventData("eventId", callback);
+emitter1.offGenericEventData("eventId", callback);
 ```
 
 ## on_string
@@ -687,90 +650,6 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 emitter1.on("eventId", callback);
 ```
 
-## onceEventData
-
-```TypeScript
-onceEventData(eventId: string, callback: Callback<EventData>): void
-```
-
-单次订阅当前Emitter类实例指定的事件，在接收到该事件且执行完对应的回调函数后，自动取消订阅。使用callback异步回调。
-
-**起始版本：** 23
-
-<!--Device-Emitter-onceEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-onceEventData(eventId: string, callback: Callback<EventData>): void-End-->
-
-**系统能力：** SystemCapability.Notification.Emitter
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| eventId | string | 是 | 单次订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
-
-**示例**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let emitter1 = new emitter.Emitter();
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-}
-
-emitter1.onceEventData("eventId", callback);
-```
-
-## onceGenericEventData
-
-```TypeScript
-onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
-```
-
-单次订阅当前Emitter类实例指定的事件，在接收到该事件且执行完相应的回调函数后，自动取消订阅。使用callback异步回调。
-
-**起始版本：** 23
-
-<!--Device-Emitter-onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
-
-**系统能力：** SystemCapability.Notification.Emitter
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| eventId | string | 是 | 单次订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
-
-**示例**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let emitter1 = new emitter.Emitter();
-
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
-  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
-  if (eventData?.data instanceof Sample) {
-    const sampleData = eventData.data as Sample;
-    sampleData.printCount();
-  }
-}
-
-emitter1.onceGenericEventData("eventId", callback);
-```
-
 ## once_string
 
 ```TypeScript
@@ -857,5 +736,240 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 }
 
 emitter1.once("eventId", callback);
+```
+
+## onceEventData
+
+```TypeScript
+onceEventData(eventId: string, callback: Callback<EventData>): void
+```
+
+单次订阅当前Emitter类实例指定的事件，在接收到该事件且执行完对应的回调函数后，自动取消订阅。使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-Emitter-onceEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-onceEventData(eventId: string, callback: Callback<EventData>): void-End-->
+
+**系统能力：** SystemCapability.Notification.Emitter
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| eventId | string | 是 | 单次订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
+
+**示例**
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+}
+// 收到eventId为"eventId"的事件后执行该回调函数
+emitter.onceEventData("eventId", callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+}
+
+emitter1.onceEventData("eventId", callback);
+```
+
+## onceGenericEventData
+
+```TypeScript
+onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
+```
+
+单次订阅当前Emitter类实例指定的事件，在接收到该事件且执行完相应的回调函数后，自动取消订阅。使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-Emitter-onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
+
+**系统能力：** SystemCapability.Notification.Emitter
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| eventId | string | 是 | 单次订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
+
+**示例**
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  let storage: Sample = eventData.data! as Sample;
+  storage.printCount();
+}
+
+// 收到eventId为"eventId"的事件后执行回调函数
+emitter.onceGenericEventData("eventId", callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  if (eventData?.data instanceof Sample) {
+    const sampleData = eventData.data as Sample;
+    sampleData.printCount();
+  }
+}
+
+emitter1.onceGenericEventData("eventId", callback);
+```
+
+## onEventData
+
+```TypeScript
+onEventData(eventId: string, callback: Callback<EventData>): void
+```
+
+持续订阅当前Emitter类实例指定的事件，并在接收到该事件时，使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-Emitter-onEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-onEventData(eventId: string, callback: Callback<EventData>): void-End-->
+
+**系统能力：** SystemCapability.Notification.Emitter
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| eventId | string | 是 | 持续订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
+
+**示例**
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+}
+
+// 收到eventId为"eventId"的事件后执行回调函数
+emitter.onEventData(`eventId`, callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+}
+
+emitter1.onEventData(`eventId`, callback);
+```
+
+## onGenericEventData
+
+```TypeScript
+onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
+```
+
+持续订阅当前Emitter类实例指定的事件，并在接收到该事件时，使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-Emitter-onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
+
+**系统能力：** SystemCapability.Notification.Emitter
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| eventId | string | 是 | 持续订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
+
+**示例**
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  let storage: Sample = eventData.data! as Sample;
+  storage.printCount();
+}
+
+// 收到eventId为"eventId"的事件后执行回调函数
+emitter.onGenericEventData("eventId", callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  if (eventData?.data instanceof Sample) {
+    const sampleData = eventData.data as Sample;
+    sampleData.printCount();
+  }
+}
+
+emitter1.onGenericEventData("eventId", callback);
 ```
 

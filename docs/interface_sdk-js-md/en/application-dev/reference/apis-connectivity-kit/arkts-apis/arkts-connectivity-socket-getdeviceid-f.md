@@ -14,7 +14,7 @@ function getDeviceId(clientSocket: int): string
 
 Obtain the device id in the client socket.
 
-**Since:** 26.0.0
+**Since:** 17
 
 <!--Device-socket-function getDeviceId(clientSocket: int): string--><!--Device-socket-function getDeviceId(clientSocket: int): string-End-->
 

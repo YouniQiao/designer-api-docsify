@@ -26,7 +26,7 @@ Obtains the geomagnetic field of a geographic location at a certain time. This A
 | --- | --- | --- | --- |
 | locationOptions | [LocationOptions](arkts-sensorservice-sensor-locationoptions-i.md) | Yes | Geographic location, including the longitude, latitude, and altitude. |
 | timeMillis | long | Yes | Time when the magnetic declination is obtained. The value is a Unix timestamp, in ms. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[GeomagneticResponse](arkts-sensorservice-sensor-geomagneticresponse-i.md)&gt; | Yes | Callback used to return the geomagnetic field. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[GeomagneticResponse](arkts-sensorservice-sensor-geomagneticresponse-i.md)&gt; | Yes | Callback used to return the geomagnetic field. |
 
 **Error codes:**
 
@@ -56,6 +56,30 @@ try {
     console.info("Succeeded in getting geomagneticInfo deflectionAngle" + data.deflectionAngle);
     console.info("Succeeded in getting geomagneticInfo levelIntensity" + data.levelIntensity);
     console.info("Succeeded in getting geomagneticInfo totalIntensity" + data.totalIntensity);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to get geomagneticInfo. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  const promise = sensor.getGeomagneticInfo({ latitude: 80, longitude: 0, altitude: 0 }, 1580486400000);
+  promise.then((data: sensor.GeomagneticResponse) => {
+    console.info("Succeeded in getting geomagneticInfo x" + data.x);
+    console.info("Succeeded in getting geomagneticInfo y" + data.y);
+    console.info("Succeeded in getting geomagneticInfo z" + data.z);
+    console.info("Succeeded in getting geomagneticInfo geomagneticDip" + data.geomagneticDip);
+    console.info("Succeeded in getting geomagneticInfo deflectionAngle" + data.deflectionAngle);
+    console.info("Succeeded in getting geomagneticInfo levelIntensity" + data.levelIntensity);
+    console.info("Succeeded in getting geomagneticInfo totalIntensity" + data.totalIntensity);
+  }, (err: BusinessError) => {
+    console.error(`Failed to get geomagneticInfo. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (error) {
   let e: BusinessError = error as BusinessError;
@@ -100,27 +124,5 @@ Obtains the geomagnetic field of a geographic location at a certain time. This A
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  const promise = sensor.getGeomagneticInfo({ latitude: 80, longitude: 0, altitude: 0 }, 1580486400000);
-  promise.then((data: sensor.GeomagneticResponse) => {
-    console.info("Succeeded in getting geomagneticInfo x" + data.x);
-    console.info("Succeeded in getting geomagneticInfo y" + data.y);
-    console.info("Succeeded in getting geomagneticInfo z" + data.z);
-    console.info("Succeeded in getting geomagneticInfo geomagneticDip" + data.geomagneticDip);
-    console.info("Succeeded in getting geomagneticInfo deflectionAngle" + data.deflectionAngle);
-    console.info("Succeeded in getting geomagneticInfo levelIntensity" + data.levelIntensity);
-    console.info("Succeeded in getting geomagneticInfo totalIntensity" + data.totalIntensity);
-  }, (err: BusinessError) => {
-    console.error(`Failed to get geomagneticInfo. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to get geomagneticInfo. Code: ${e.code}, message: ${e.message}`);
-}
-```
+See [getGeomagneticInfo](#getgeomagneticinfo)
 

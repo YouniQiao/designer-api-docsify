@@ -28,7 +28,7 @@ Checks whether network sharing is supported. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that network sharing is supported, and **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that network sharing is supported, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -50,6 +50,20 @@ sharing.isSharingSupported((error: BusinessError, data: boolean) => {
   console.error(JSON.stringify(error));
   console.info(JSON.stringify(data));
 });
+```
+
+```TypeScript
+import { sharing } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sharing
+  .isSharingSupported()
+  .then((data: boolean) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
 ```
 
 
@@ -89,17 +103,5 @@ Checks whether network sharing is supported. This API uses a promise to return t
 
 **Examples**
 
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sharing
-  .isSharingSupported()
-  .then((data: boolean) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+See [isSharingSupported](#issharingsupported)
 

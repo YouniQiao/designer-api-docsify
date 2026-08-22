@@ -29,7 +29,7 @@ Unholds a call based on the specified call ID. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | int | Yes | Call ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -54,6 +54,16 @@ call.unHoldCall(1, (err: BusinessError) => {
     } else {
         console.info(`unHoldCall success.`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.unHoldCall(1).then(() => {
+    console.info(`unHoldCall success.`);
+}).catch((err: BusinessError) => {
+    console.error(`unHoldCall fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -102,13 +112,5 @@ Unholds a call based on the specified call ID. This API uses a promise to return
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.unHoldCall(1).then(() => {
-    console.info(`unHoldCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`unHoldCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [unHoldCall](#unholdcall)
 

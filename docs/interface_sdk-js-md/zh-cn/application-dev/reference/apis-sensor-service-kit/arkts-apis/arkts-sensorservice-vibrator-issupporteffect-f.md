@@ -77,6 +77,42 @@ try {
 }
 ```
 
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 使用try catch对可能出现的异常进行捕获
+try {
+  // 查询是否支持'haptic.notice.success'
+  vibrator.isSupportEffect('haptic.notice.success').then((state: boolean) => {
+    console.info(`The query result is ${state}`);
+    if (state) {
+      try {
+        vibrator.startVibration({
+          type: 'preset',
+          effectId: 'haptic.notice.success',
+          count: 1,
+        }, {
+          usage: 'unknown' // 根据实际选择类型归属不同的开关管控
+        }).then(() => {
+          console.info('Succeed in starting vibration');
+        }).catch((error: BusinessError) => {
+          console.error(`Failed to start vibration. Code: ${error.code}, message: ${error.message}`);
+        });
+      } catch (error) {
+        let e: BusinessError = error as BusinessError;
+        console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+      }
+    }
+  }, (error: BusinessError) => {
+    console.error(`Failed to query effect. Code: ${error.code}, message: ${error.message}`);
+  })
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 ## isSupportEffect
 
@@ -113,39 +149,5 @@ function isSupportEffect(effectId: string): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  // 查询是否支持'haptic.notice.success'
-  vibrator.isSupportEffect('haptic.notice.success').then((state: boolean) => {
-    console.info(`The query result is ${state}`);
-    if (state) {
-      try {
-        vibrator.startVibration({
-          type: 'preset',
-          effectId: 'haptic.notice.success',
-          count: 1,
-        }, {
-          usage: 'unknown' // 根据实际选择类型归属不同的开关管控
-        }).then(() => {
-          console.info('Succeed in starting vibration');
-        }).catch((error: BusinessError) => {
-          console.error(`Failed to start vibration. Code: ${error.code}, message: ${error.message}`);
-        });
-      } catch (error) {
-        let e: BusinessError = error as BusinessError;
-        console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
-      }
-    }
-  }, (error: BusinessError) => {
-    console.error(`Failed to query effect. Code: ${error.code}, message: ${error.message}`);
-  })
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
-}
-```
+参见 [isSupportEffect](#issupporteffect)
 

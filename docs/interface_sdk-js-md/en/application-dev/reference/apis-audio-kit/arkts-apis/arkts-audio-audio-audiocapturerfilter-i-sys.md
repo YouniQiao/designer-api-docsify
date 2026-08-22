@@ -53,3 +53,17 @@ Application uid.
 
 **System API:** This is a system API.
 
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let inputAudioCapturerFilter: audio.AudioCapturerFilter = {
+    uid : 20010041,
+    capturerInfo : {
+        source: audio.SourceType.SOURCE_TYPE_MIC,
+        capturerFlags: 0
+    }
+};
+```
+

@@ -70,6 +70,64 @@ try {
     eventType: hiSysEvent.EventType.FAULT,
     params: customizedParams
   };
+  hiSysEvent.write(eventInfo, (err: BusinessError) => {
+    // 处理事件写入成功后的操作
+  });
+} catch (err) {
+  // 捕获并打印错误信息
+  console.error(`error code: ${(err as BusinessError).code}, error msg: ${(err as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let customizedParams: Record<string, boolean | int | double | string | bigint | boolean[] | int[] | double[] | string[] | bigint[]> = {
+    'PID': 487,
+    'UID': 103,
+    'PACKAGE_NAME': "com.ohos.hisysevent.test",
+    'PROCESS_NAME': "syseventservice",
+    'MSG': "no msg."
+  };
+  let eventInfo: hiSysEvent.SysEventInfo = {
+    domain: "RELIABILITY",
+    name: "STACK",
+    eventType: hiSysEvent.EventType.FAULT,
+    params: customizedParams
+  };
+  hiSysEvent.write(eventInfo, (err: BusinessError<void> | null, data: undefined) => {
+    // 处理事件写入成功后的操作
+  });
+} catch (err) {
+  // 捕获并打印错误信息
+  console.error(`error code: ${(err as BusinessError).code}, error msg: ${(err as BusinessError).message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let customizedParams: Record<string, string | number> = {
+    'PID': 487,
+    'UID': 103,
+    'PACKAGE_NAME': "com.ohos.hisysevent.test",
+    'PROCESS_NAME': "syseventservice",
+    'MSG': "no msg."
+  };
+  let eventInfo: hiSysEvent.SysEventInfo = {
+    domain: "RELIABILITY",
+    name: "STACK",
+    eventType: hiSysEvent.EventType.FAULT,
+    params: customizedParams
+  };
   // 使用Promise方式写入系统事件，then中处理成功事件，catch中处理错误
   hiSysEvent.write(eventInfo).then(
     () => {
@@ -164,61 +222,5 @@ function write(info: SysEventInfo, callback: AsyncCallback<void>): void
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let customizedParams: Record<string, string | number> = {
-    'PID': 487,
-    'UID': 103,
-    'PACKAGE_NAME': "com.ohos.hisysevent.test",
-    'PROCESS_NAME': "syseventservice",
-    'MSG': "no msg."
-  };
-  let eventInfo: hiSysEvent.SysEventInfo = {
-    domain: "RELIABILITY",
-    name: "STACK",
-    eventType: hiSysEvent.EventType.FAULT,
-    params: customizedParams
-  };
-  hiSysEvent.write(eventInfo, (err: BusinessError) => {
-    // 处理事件写入成功后的操作
-  });
-} catch (err) {
-  // 捕获并打印错误信息
-  console.error(`error code: ${(err as BusinessError).code}, error msg: ${(err as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let customizedParams: Record<string, boolean | int | double | string | bigint | boolean[] | int[] | double[] | string[] | bigint[]> = {
-    'PID': 487,
-    'UID': 103,
-    'PACKAGE_NAME': "com.ohos.hisysevent.test",
-    'PROCESS_NAME': "syseventservice",
-    'MSG': "no msg."
-  };
-  let eventInfo: hiSysEvent.SysEventInfo = {
-    domain: "RELIABILITY",
-    name: "STACK",
-    eventType: hiSysEvent.EventType.FAULT,
-    params: customizedParams
-  };
-  hiSysEvent.write(eventInfo, (err: BusinessError<void> | null, data: undefined) => {
-    // 处理事件写入成功后的操作
-  });
-} catch (err) {
-  // 捕获并打印错误信息
-  console.error(`error code: ${(err as BusinessError).code}, error msg: ${(err as BusinessError).message}`);
-}
-```
+参见 [write](#write)
 

@@ -59,6 +59,29 @@ Creates a Calendar object based on the calendar account information. This API us
 import { BusinessError } from '@kit.BasicServicesKit';
 import { calendarMgr } from '../entryability/EntryAbility';
 
+let calendar: calendarManager.Calendar | undefined = undefined;
+const calendarAccount: calendarManager.CalendarAccount = {
+  name: 'CreateMyCalendarByCallBack',
+  type: calendarManager.CalendarType.LOCAL
+};
+try {
+  calendarMgr?.createCalendar(calendarAccount, (err: BusinessError, data: calendarManager.Calendar) => {
+    if (err) {
+      console.error(`Failed to create calendar. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info(`Succeeded in creating calendar, data -> ${JSON.stringify(data)}`);
+      calendar = data;
+    }
+  });
+} catch (error) {
+  console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { calendarMgr } from '../entryability/EntryAbility';
+
 let calendar : calendarManager.Calendar | undefined = undefined;
 const calendarAccount: calendarManager.CalendarAccount = {
   name: 'CreateMyCalendarByPromise',
@@ -96,7 +119,7 @@ Creates a Calendar object based on the calendar account information. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | calendarAccount | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | Yes | Calendar account information. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Calendar&gt; | Yes | Callback used to return the created Calendar object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar&gt; | Yes | Callback used to return the created Calendar object. |
 
 **Error codes:**
 
@@ -109,28 +132,7 @@ Creates a Calendar object based on the calendar account information. This API us
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { calendarMgr } from '../entryability/EntryAbility';
-
-let calendar: calendarManager.Calendar | undefined = undefined;
-const calendarAccount: calendarManager.CalendarAccount = {
-  name: 'CreateMyCalendarByCallBack',
-  type: calendarManager.CalendarType.LOCAL
-};
-try {
-  calendarMgr?.createCalendar(calendarAccount, (err: BusinessError, data: calendarManager.Calendar) => {
-    if (err) {
-      console.error(`Failed to create calendar. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info(`Succeeded in creating calendar, data -> ${JSON.stringify(data)}`);
-      calendar = data;
-    }
-  });
-} catch (error) {
-  console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [createCalendar](#createcalendar)
 
 ## deleteCalendar
 
@@ -172,6 +174,35 @@ Deletes a specified Calendar object. This API uses a promise to return the resul
 | [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: <br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { calendarMgr } from '../entryability/EntryAbility';
+
+const calendarAccount: calendarManager.CalendarAccount = {
+  name: 'DeleteMyCalendarByCallBack',
+  type: calendarManager.CalendarType.LOCAL
+};
+calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calendar) => {
+  console.info(`Succeeded in creating calendar, data -> ${JSON.stringify(data)}`);
+  calendarMgr?.getCalendar(calendarAccount, (err: BusinessError, data: calendarManager.Calendar) => {
+    if (err) {
+      console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
+      calendarMgr?.deleteCalendar(data, (err1: BusinessError) => {
+        if (err1) {
+          console.error(`Failed to delete calendar. Code: ${err1.code}, message: ${err1.message}`);
+        } else {
+          console.info("Succeeded in deleting calendar");
+        }
+      });
+    }
+  });
+}).catch((error: BusinessError) => {
+  console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
+})
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -221,7 +252,7 @@ Deletes a specified Calendar object. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | calendar | Calendar | Yes | Calendar object to delete. The default account cannot be deleted. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Asynchronous callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Asynchronous callback that returns no value. |
 
 **Error codes:**
 
@@ -234,34 +265,7 @@ Deletes a specified Calendar object. This API uses an asynchronous callback to r
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { calendarMgr } from '../entryability/EntryAbility';
-
-const calendarAccount: calendarManager.CalendarAccount = {
-  name: 'DeleteMyCalendarByCallBack',
-  type: calendarManager.CalendarType.LOCAL
-};
-calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calendar) => {
-  console.info(`Succeeded in creating calendar, data -> ${JSON.stringify(data)}`);
-  calendarMgr?.getCalendar(calendarAccount, (err: BusinessError, data: calendarManager.Calendar) => {
-    if (err) {
-      console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
-      calendarMgr?.deleteCalendar(data, (err1: BusinessError) => {
-        if (err1) {
-          console.error(`Failed to delete calendar. Code: ${err1.code}, message: ${err1.message}`);
-        } else {
-          console.info("Succeeded in deleting calendar");
-        }
-      });
-    }
-  });
-}).catch((error: BusinessError) => {
-  console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
-})
-```
+See [deleteCalendar](#deletecalendar)
 
 ## editEvent
 
@@ -352,6 +356,23 @@ Obtains the created and default Calendar objects of the current application. Thi
 import { BusinessError } from '@kit.BasicServicesKit';
 import { calendarMgr } from '../entryability/EntryAbility';
 
+calendarMgr?.getAllCalendars((err: BusinessError, data: calendarManager.Calendar[]) => {
+  if (err) {
+    console.error(`Failed to get all calendars. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting all calendars, data -> ${JSON.stringify(data)}`);
+    data.forEach((calendar) => {
+      const account = calendar.getAccount();
+      console.info(`account -> ${JSON.stringify(account)}`);
+    })
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { calendarMgr } from '../entryability/EntryAbility';
+
 calendarMgr?.getAllCalendars().then((data: calendarManager.Calendar[]) => {
   console.info(`Succeeded in getting all calendars, data -> ${JSON.stringify(data)}`);
   data.forEach((calendar) => {
@@ -385,7 +406,7 @@ Obtains the created and default Calendar objects of the current application. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Calendar[]&gt; | Yes | Callback used to return an array of the obtained Calendar objects. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar[]&gt; | Yes | Callback used to return an array of the obtained Calendar objects. |
 
 **Error codes:**
 
@@ -398,22 +419,7 @@ Obtains the created and default Calendar objects of the current application. Thi
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { calendarMgr } from '../entryability/EntryAbility';
-
-calendarMgr?.getAllCalendars((err: BusinessError, data: calendarManager.Calendar[]) => {
-  if (err) {
-    console.error(`Failed to get all calendars. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting all calendars, data -> ${JSON.stringify(data)}`);
-    data.forEach((calendar) => {
-      const account = calendar.getAccount();
-      console.info(`account -> ${JSON.stringify(account)}`);
-    })
-  }
-});
-```
+See [getAllCalendars](#getallcalendars)
 
 ## getCalendar
 
@@ -464,6 +470,45 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { calendarMgr } from '../entryability/EntryAbility';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
+calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => {
+  if (err) {
+    console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
+    calendar = data;
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { calendarMgr } from '../entryability/EntryAbility';
+
+let calendar : calendarManager.Calendar | undefined = undefined;
+const calendarAccount: calendarManager.CalendarAccount = {
+  name: 'MyCalendar',
+  type: calendarManager.CalendarType.LOCAL
+};
+calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calendar) => {
+  console.info(`Succeeded in creating calendar, data -> ${JSON.stringify(data)}`);
+  calendarMgr?.getCalendar(calendarAccount, (err: BusinessError, data: calendarManager.Calendar) => {
+    if (err) {
+      console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info(`Succeeded in getting calendar data -> ${JSON.stringify(data)}`);
+      calendar = data;
+    }
+  });
+}).catch((error: BusinessError) => {
+  console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
+})
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { calendarMgr } from '../entryability/EntryAbility';
+
+let calendar : calendarManager.Calendar | undefined = undefined;
 calendarMgr?.getCalendar().then((data: calendarManager.Calendar) => {
   console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
   calendar = data;
@@ -497,7 +542,7 @@ Obtains a specified Calendar object. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | calendarAccount | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | Yes | Calendar account information. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Calendar&gt; | Yes | Callback used to return the obtained Calendar object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar&gt; | Yes | Callback used to return the obtained Calendar object. |
 
 **Error codes:**
 
@@ -511,29 +556,7 @@ Obtains a specified Calendar object. This API uses an asynchronous callback to r
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { calendarMgr } from '../entryability/EntryAbility';
-
-let calendar : calendarManager.Calendar | undefined = undefined;
-const calendarAccount: calendarManager.CalendarAccount = {
-  name: 'MyCalendar',
-  type: calendarManager.CalendarType.LOCAL
-};
-calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calendar) => {
-  console.info(`Succeeded in creating calendar, data -> ${JSON.stringify(data)}`);
-  calendarMgr?.getCalendar(calendarAccount, (err: BusinessError, data: calendarManager.Calendar) => {
-    if (err) {
-      console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info(`Succeeded in getting calendar data -> ${JSON.stringify(data)}`);
-      calendar = data;
-    }
-  });
-}).catch((error: BusinessError) => {
-  console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
-})
-```
+See [getCalendar](#getcalendar)
 
 ## getCalendar
 
@@ -559,7 +582,7 @@ Obtains the default Calendar object, which is created when the data storage runs
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Calendar&gt; | Yes | Callback used to return the obtained Calendar object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar&gt; | Yes | Callback used to return the obtained Calendar object. |
 
 **Error codes:**
 
@@ -572,18 +595,5 @@ Obtains the default Calendar object, which is created when the data storage runs
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { calendarMgr } from '../entryability/EntryAbility';
-
-let calendar : calendarManager.Calendar | undefined = undefined;
-calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => {
-  if (err) {
-    console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
-    calendar = data;
-  }
-});
-```
+See [getCalendar](#getcalendar)
 

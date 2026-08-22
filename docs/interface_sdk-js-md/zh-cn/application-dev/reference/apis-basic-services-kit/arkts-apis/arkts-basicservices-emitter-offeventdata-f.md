@@ -43,3 +43,15 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData | unde
 emitter.offEventData("eventId", callback);
 ```
 
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+}
+
+emitter1.offEventData("eventId", callback);
+```
+

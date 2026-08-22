@@ -29,7 +29,7 @@ Ends a call. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | int | Yes | Call ID. You can obtain the value by subscribing to **callDetailsChange** events. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -48,12 +48,34 @@ Ends a call. This API uses an asynchronous callback to return the result.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+call.hangUpCall((err: BusinessError) => {
+    if (err) {
+        console.error(`hangUpCall fail, err->${JSON.stringify(err)}`);
+    } else {
+        console.info(`hangUpCall success.`);
+    }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 call.hangUpCall(1, (err: BusinessError) => {
     if (err) {
         console.error(`hangUpCall fail, err->${JSON.stringify(err)}`);
     } else {
         console.info(`hangUpCall success.`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.hangUpCall(1).then(() => {
+    console.info(`hangUpCall success.`);
+}).catch((err: BusinessError) => {
+    console.error(`hangUpCall fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -102,15 +124,7 @@ Ends a call. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.hangUpCall(1).then(() => {
-    console.info(`hangUpCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`hangUpCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [hangUpCall](#hangupcall)
 
 
 ## hangUpCall
@@ -135,7 +149,7 @@ Ends a call. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the call is hung up successfully, the value of **err** is **undefined**. Otherwise, the value is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the call is hung up successfully, the value of **err** is **undefined**. Otherwise, the value is an error object. |
 
 **Error codes:**
 
@@ -151,15 +165,5 @@ Ends a call. This API uses an asynchronous callback to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.hangUpCall((err: BusinessError) => {
-    if (err) {
-        console.error(`hangUpCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`hangUpCall success.`);
-    }
-});
-```
+See [hangUpCall](#hangupcall)
 

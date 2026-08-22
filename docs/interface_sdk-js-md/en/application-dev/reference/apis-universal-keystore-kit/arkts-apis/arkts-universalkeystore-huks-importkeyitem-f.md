@@ -31,7 +31,7 @@ Imports a key in plaintext. This API uses an asynchronous callback to return the
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not include sensitive data such as personal information. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Tags required for the import and key to import. The algorithm, key purpose, and key length are mandatory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -105,6 +105,54 @@ huks.importKeyItem(keyAlias, options, (error, data) => {
 });
 ```
 
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* Import an AES key of 256 bits. */
+function makeRandomArr(size: number) {
+  let arr = new Uint8Array(size);
+  for (let i = 0; i < size; i++) {
+    arr[i] = Math.floor(Math.random() * 10);
+  }
+  return arr;
+};
+
+/* Step 1 Generate a key. */
+let plainTextSize32 = makeRandomArr(32);
+let keyAlias = 'keyAlias';
+let properties: Array<huks.HuksParam> = [
+  {
+    tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
+    value: huks.HuksKeyAlg.HUKS_ALG_AES
+  },
+  {
+    tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
+    value: huks.HuksKeySize.HUKS_AES_KEY_SIZE_256
+  },
+  {
+    tag: huks.HuksTag.HUKS_TAG_PURPOSE,
+    value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_ENCRYPT | huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_DECRYPT
+  },
+  {
+    tag: huks.HuksTag.HUKS_TAG_PADDING,
+    value: huks.HuksKeyPadding.HUKS_PADDING_PKCS7
+  },
+  {
+    tag: huks.HuksTag.HUKS_TAG_BLOCK_MODE,
+    value: huks.HuksCipherMode.HUKS_MODE_ECB
+  }
+];
+let huksOptions: huks.HuksOptions = {
+  properties: properties,
+  inData: plainTextSize32
+};
+/* Step 2: Import the key. */
+huks.importKeyItem(keyAlias, huksOptions)
+  .then((data) => {
+    console.info(`promise: importKeyItem success`);
+  });
+```
+
 
 ## importKeyItem
 
@@ -157,51 +205,5 @@ Imports a key in plaintext. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Import an AES key of 256 bits. */
-function makeRandomArr(size: number) {
-  let arr = new Uint8Array(size);
-  for (let i = 0; i < size; i++) {
-    arr[i] = Math.floor(Math.random() * 10);
-  }
-  return arr;
-};
-
-/* Step 1 Generate a key. */
-let plainTextSize32 = makeRandomArr(32);
-let keyAlias = 'keyAlias';
-let properties: Array<huks.HuksParam> = [
-  {
-    tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
-    value: huks.HuksKeyAlg.HUKS_ALG_AES
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
-    value: huks.HuksKeySize.HUKS_AES_KEY_SIZE_256
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_PURPOSE,
-    value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_ENCRYPT | huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_DECRYPT
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_PADDING,
-    value: huks.HuksKeyPadding.HUKS_PADDING_PKCS7
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_BLOCK_MODE,
-    value: huks.HuksCipherMode.HUKS_MODE_ECB
-  }
-];
-let huksOptions: huks.HuksOptions = {
-  properties: properties,
-  inData: plainTextSize32
-};
-/* Step 2: Import the key. */
-huks.importKeyItem(keyAlias, huksOptions)
-  .then((data) => {
-    console.info(`promise: importKeyItem success`);
-  });
-```
+See [importKeyItem](#importkeyitem)
 

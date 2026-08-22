@@ -27,7 +27,7 @@ Sets the touchpad pinch switch. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | state | boolean | Yes | Touchpad pinch switch state. The value **true** indicates that the switch is enabled, and the value **false** indicates the opposite. The default value is **true**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -57,6 +57,32 @@ struct Index {
               }
               console.info(`setTouchpadPinchSwitch success`);
             });
+          } catch (error) {
+            console.error(`setTouchpadPinchSwitch failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            pointer.setTouchpadPinchSwitch(false).then(() => {
+              console.info(`setTouchpadPinchSwitch success`);
+            }).catch((error: BusinessError) => {
+              console.error(`Set touchpad pinch switch failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            })
           } catch (error) {
             console.error(`setTouchpadPinchSwitch failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
@@ -104,29 +130,5 @@ Sets the touchpad pinch switch. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.setTouchpadPinchSwitch(false).then(() => {
-              console.info(`setTouchpadPinchSwitch success`);
-            }).catch((error: BusinessError) => {
-              console.error(`Set touchpad pinch switch failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`setTouchpadPinchSwitch failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
+See [setTouchpadPinchSwitch](#settouchpadpinchswitch)
 

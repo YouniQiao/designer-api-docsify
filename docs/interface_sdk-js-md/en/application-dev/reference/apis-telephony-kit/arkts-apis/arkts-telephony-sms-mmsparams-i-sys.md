@@ -34,24 +34,6 @@ MMS PDU address.
 
 **System API:** This is a system API.
 
-## mmsConfig
-
-```TypeScript
-mmsConfig?: MmsConfig
-```
-
-MMS configuration file. For details, see [MmsParams](#mmsparams-system-api).
-
-**Type:** [MmsConfig](arkts-telephony-sms-mmsconfig-i-sys.md)
-
-**Since:** 23
-
-<!--Device-MmsParams-mmsConfig?: MmsConfig--><!--Device-MmsParams-mmsConfig?: MmsConfig-End-->
-
-**System capability:** SystemCapability.Telephony.SmsMms
-
-**System API:** This is a system API.
-
 ## mmsc
 
 ```TypeScript
@@ -65,6 +47,24 @@ MMSC address.
 **Since:** 23
 
 <!--Device-MmsParams-mmsc: string--><!--Device-MmsParams-mmsc: string-End-->
+
+**System capability:** SystemCapability.Telephony.SmsMms
+
+**System API:** This is a system API.
+
+## mmsConfig
+
+```TypeScript
+mmsConfig?: MmsConfig
+```
+
+MMS configuration file. For details, see [MmsParams](#mmsparams-system-api).
+
+**Type:** [MmsConfig](arkts-telephony-sms-mmsconfig-i-sys.md)
+
+**Since:** 23
+
+<!--Device-MmsParams-mmsConfig?: MmsConfig--><!--Device-MmsParams-mmsConfig?: MmsConfig-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 

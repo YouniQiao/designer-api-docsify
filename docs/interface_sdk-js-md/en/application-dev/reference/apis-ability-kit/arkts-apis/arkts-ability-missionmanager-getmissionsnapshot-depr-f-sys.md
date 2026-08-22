@@ -33,7 +33,7 @@ Obtains the snapshot of a given mission. This API uses an asynchronous callback 
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
 | missionId | number | Yes | Mission ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[MissionSnapshot](arkts-ability-missionsnapshot-i-sys.md)&gt; | Yes | Callback used to return the snapshot information obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MissionSnapshot](arkts-ability-missionsnapshot-i-sys.md)&gt; | Yes | Callback used to return the snapshot information obtained. |
 
 **Examples**
 
@@ -51,6 +51,22 @@ try {
   });
 } catch (err) {
   console.error(`getMissionSnapShot failed: ${err.message}`);
+}
+```
+
+```TypeScript
+import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
+
+let testMissionId = 2;
+try {
+  missionManager.getMissionSnapShot('', testMissionId).then((data) => {
+    console.info(`getMissionSnapShot successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`getMissionSnapShot failed. Cause: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`getMissionSnapShot failed. Cause: ${error.message}`);
 }
 ```
 
@@ -92,19 +108,5 @@ Obtains the snapshot of a given mission. This API uses a promise to return the r
 
 **Examples**
 
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-let testMissionId = 2;
-try {
-  missionManager.getMissionSnapShot('', testMissionId).then((data) => {
-    console.info(`getMissionSnapShot successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`getMissionSnapShot failed. Cause: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`getMissionSnapShot failed. Cause: ${error.message}`);
-}
-```
+See [getMissionSnapShot](#getmissionsnapshot)
 

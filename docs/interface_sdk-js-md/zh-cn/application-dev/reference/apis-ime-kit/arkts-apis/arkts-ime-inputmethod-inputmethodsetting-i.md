@@ -59,6 +59,16 @@ inputMethod.getSetting().displayOptionalInputMethod((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().displayOptionalInputMethod().then(() => {
+  console.info('Succeeded in displaying optionalInputMethod.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to displayOptionalInputMethod, code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ## displayOptionalInputMethod
 
 ```TypeScript
@@ -85,15 +95,7 @@ displayOptionalInputMethod(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getSetting().displayOptionalInputMethod().then(() => {
-  console.info('Succeeded in displaying optionalInputMethod.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to displayOptionalInputMethod, code: ${err.code}, message: ${err.message}`);
-})
-```
+参见 [displayOptionalInputMethod](#displayoptionalinputmethod)
 
 ## getAllInputMethods
 
@@ -153,6 +155,31 @@ inputMethodSetting.getAllInputMethods((err?: BusinessError, data?: Array<inputMe
 });
 ```
 
+ArkTS-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().getAllInputMethods().then((data: Array<inputMethod.InputMethodProperty>) => {
+  console.info('Succeeded in getting all inputMethods.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getAllInputMethods, code: ${err.code}, message: ${err.message}`);
+})
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
+
+inputMethodSetting.getAllInputMethods().then((data: Array<inputMethod.InputMethodProperty>) => {
+  console.info('Succeeded in getting all inputMethods.');
+}).catch((err: BusinessError): void=> {
+  console.error(`Failed to getAllInputMethods, code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ## getAllInputMethods
 
 ```TypeScript
@@ -182,30 +209,7 @@ getAllInputMethods(): Promise<Array<InputMethodProperty>>
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getSetting().getAllInputMethods().then((data: Array<inputMethod.InputMethodProperty>) => {
-  console.info('Succeeded in getting all inputMethods.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getAllInputMethods, code: ${err.code}, message: ${err.message}`);
-})
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
-
-inputMethodSetting.getAllInputMethods().then((data: Array<inputMethod.InputMethodProperty>) => {
-  console.info('Succeeded in getting all inputMethods.');
-}).catch((err: BusinessError): void=> {
-  console.error(`Failed to getAllInputMethods, code: ${err.code}, message: ${err.message}`);
-})
-```
+参见 [getAllInputMethods](#getallinputmethods)
 
 ## getAllInputMethodsSync
 
@@ -245,58 +249,16 @@ getAllInputMethodsSync(): Array<InputMethodProperty>
 let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getAllInputMethodsSync();
 ```
 
-## getInputMethodState
-
-```TypeScript
-getInputMethodState(): Promise<EnabledState>
-```
-
-@brief 查询输入法的启用状态。使用promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-InputMethodSetting-getInputMethodState(): Promise<EnabledState>--><!--Device-InputMethodSetting-getInputMethodState(): Promise<EnabledState>-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[EnabledState](arkts-ime-inputmethod-enabledstate-e.md)&gt; | Promise对象，返回EnabledState.DISABLED表示未启用； 返回EnabledState.BASIC_MODE表示基础模式； 返回EnabledState.FULL_EXPERIENCE_MODE表示完整体验模式 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) | not an input method application. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
-
-**示例**
-
-ArkTS-Dyn示例:
-
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-inputMethod.getSetting().getInputMethodState().then((status: inputMethod.EnabledState) => {
-  console.info(`Succeeded in getInputMethodState, status: ${status}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getInputMethodState, code: ${err.code}, message: ${err.message}`);
-})
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
-
-inputMethodSetting.getInputMethodState().then((status: inputMethod.EnabledState) => {
-  console.info(`Succeeded in getInputMethodState, status: ${status}`);
-}).catch((err: BusinessError): void=> {
-  console.error(`Failed to getInputMethodState, code: ${err.code}, message: ${err.message}`);
-})
+try {
+  let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getAllInputMethodsSync(100);
+  console.info('Succeeded in getting all input methods, count: ' + imeProperty.length);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to getAllInputMethodsSync. Code: ${error.code}, message: ${error.message}`);
+}
 ```
 
 ## getInputMethods
@@ -368,6 +330,32 @@ inputMethodSetting.getInputMethods(true, (err?: BusinessError, data?: Array<inpu
 });
 ```
 
+ArkTS-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().getInputMethods(true).then((data: Array<inputMethod.InputMethodProperty>) => {
+  console.info('Succeeded in getting inputMethods.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getInputMethods, code: ${err.code}, message: ${err.message}`);
+})
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
+
+
+inputMethodSetting.getInputMethods(true).then((data: Array<inputMethod.InputMethodProperty>) => {
+  console.info('Succeeded in getting inputMethods.');
+}).catch((err: BusinessError): void=> {
+  console.error(`Failed to getInputMethods, code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ## getInputMethods
 
 ```TypeScript
@@ -413,31 +401,7 @@ getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getSetting().getInputMethods(true).then((data: Array<inputMethod.InputMethodProperty>) => {
-  console.info('Succeeded in getting inputMethods.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getInputMethods, code: ${err.code}, message: ${err.message}`);
-})
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
-
-
-inputMethodSetting.getInputMethods(true).then((data: Array<inputMethod.InputMethodProperty>) => {
-  console.info('Succeeded in getting inputMethods.');
-}).catch((err: BusinessError): void=> {
-  console.error(`Failed to getInputMethods, code: ${err.code}, message: ${err.message}`);
-})
-```
+参见 [getInputMethods](#getinputmethods)
 
 ## getInputMethodsSync
 
@@ -490,6 +454,72 @@ getInputMethodsSync(enable: boolean): Array<InputMethodProperty>
 
 ```TypeScript
 let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getInputMethodsSync(true);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getInputMethodsSync(true, 100);
+  console.info('Succeeded in getting enabled input methods, count: ' + imeProperty.length);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to getInputMethodsSync. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+## getInputMethodState
+
+```TypeScript
+getInputMethodState(): Promise<EnabledState>
+```
+
+@brief 查询输入法的启用状态。使用promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-InputMethodSetting-getInputMethodState(): Promise<EnabledState>--><!--Device-InputMethodSetting-getInputMethodState(): Promise<EnabledState>-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[EnabledState](arkts-ime-inputmethod-enabledstate-e.md)&gt; | Promise对象，返回EnabledState.DISABLED表示未启用； 返回EnabledState.BASIC_MODE表示基础模式； 返回EnabledState.FULL_EXPERIENCE_MODE表示完整体验模式 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) | not an input method application. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+
+**示例**
+
+ArkTS-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().getInputMethodState().then((status: inputMethod.EnabledState) => {
+  console.info(`Succeeded in getInputMethodState, status: ${status}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getInputMethodState, code: ${err.code}, message: ${err.message}`);
+})
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
+
+inputMethodSetting.getInputMethodState().then((status: inputMethod.EnabledState) => {
+  console.info(`Succeeded in getInputMethodState, status: ${status}`);
+}).catch((err: BusinessError): void=> {
+  console.error(`Failed to getInputMethodState, code: ${err.code}, message: ${err.message}`);
+})
 ```
 
 ## listCurrentInputMethodSubtype
@@ -553,35 +583,6 @@ inputMethodSetting.listCurrentInputMethodSubtype((err?: BusinessError, data?: Ar
 });
 ```
 
-## listCurrentInputMethodSubtype
-
-```TypeScript
-listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>
-```
-
-@brief 查询当前输入法应用的所有子类型。使用promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-InputMethodSetting-listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>--><!--Device-InputMethodSetting-listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Promise对象，返回当前输入法应用的所有子类型。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
-
-**示例**
-
 ArkTS-Dyn示例:
 
 ```TypeScript
@@ -611,6 +612,37 @@ inputMethodSetting.listCurrentInputMethodSubtype().then((data: Array<InputMethod
   console.error(`Failed to listCurrentInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
 })
 ```
+
+## listCurrentInputMethodSubtype
+
+```TypeScript
+listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>
+```
+
+@brief 查询当前输入法应用的所有子类型。使用promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-InputMethodSetting-listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>--><!--Device-InputMethodSetting-listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Promise对象，返回当前输入法应用的所有子类型。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+
+**示例**
+
+参见 [listCurrentInputMethodSubtype](#listcurrentinputmethodsubtype)
 
 ## listInputMethod
 
@@ -650,6 +682,16 @@ inputMethod.getSetting().listInputMethod((err: BusinessError, data: Array<inputM
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().listInputMethod().then((data: Array<inputMethod.InputMethodProperty>) => {
+  console.info('Succeeded in listing inputMethod.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to listInputMethod, code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ## listInputMethod
 
 ```TypeScript
@@ -676,15 +718,7 @@ listInputMethod(): Promise<Array<InputMethodProperty>>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getSetting().listInputMethod().then((data: Array<inputMethod.InputMethodProperty>) => {
-  console.info('Succeeded in listing inputMethod.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to listInputMethod, code: ${err.code}, message: ${err.message}`);
-})
-```
+参见 [listInputMethod](#listinputmethod)
 
 ## listInputMethodSubtype
 
@@ -764,42 +798,6 @@ inputMethodSetting.listInputMethodSubtype(inputMethodProperty, (err?: BusinessEr
 });
 ```
 
-## listInputMethodSubtype
-
-```TypeScript
-listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<InputMethodSubtype>>
-```
-
-@brief 获取指定输入法应用的所有子类型。使用promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-InputMethodSetting-listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<InputMethodSubtype>>--><!--Device-InputMethodSetting-listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<InputMethodSubtype>>-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | 是 | 输入法应用。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Promise对象，返回指定输入法应用的所有子类型。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
-
-**示例**
-
 ArkTS-Dyn示例:
 
 ```TypeScript
@@ -839,17 +837,17 @@ inputMethodSetting.listInputMethodSubtype(inputMethodProperty).then((data: Array
 })
 ```
 
-## offImeChange
+## listInputMethodSubtype
 
 ```TypeScript
-offImeChange(callback?: ImeChangeCallback): void
+listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<InputMethodSubtype>>
 ```
 
-@brief 取消订阅输入法及子类型变化监听事件。使用callback异步回调。
+@brief 获取指定输入法应用的所有子类型。使用promise异步回调。
 
 **起始版本：** 23
 
-<!--Device-InputMethodSetting-offImeChange(callback?: ImeChangeCallback): void--><!--Device-InputMethodSetting-offImeChange(callback?: ImeChangeCallback): void-End-->
+<!--Device-InputMethodSetting-listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<InputMethodSubtype>>--><!--Device-InputMethodSetting-listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<InputMethodSubtype>>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -857,14 +855,25 @@ offImeChange(callback?: ImeChangeCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ImeChangeCallback](arkts-ime-inputmethod-imechangecallback-t.md) | 否 | 回调函数，返回取消订阅的输入法属性对象及子类型对象。 |
+| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | 是 | 输入法应用。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Promise对象，返回指定输入法应用的所有子类型。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 **示例**
 
-```TypeScript
-let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
-inputMethodSetting.offImeChange();
-```
+参见 [listInputMethodSubtype](#listinputmethodsubtype)
 
 ## off('imeChange')
 
@@ -896,17 +905,17 @@ off(
 inputMethod.getSetting().off('imeChange');
 ```
 
-## onImeChange
+## offImeChange
 
 ```TypeScript
-onImeChange(callback: ImeChangeCallback): void
+offImeChange(callback?: ImeChangeCallback): void
 ```
 
-@brief 订阅输入法及子类型变化监听事件。使用callback异步回调。
+@brief 取消订阅输入法及子类型变化监听事件。使用callback异步回调。
 
 **起始版本：** 23
 
-<!--Device-InputMethodSetting-onImeChange(callback: ImeChangeCallback): void--><!--Device-InputMethodSetting-onImeChange(callback: ImeChangeCallback): void-End-->
+<!--Device-InputMethodSetting-offImeChange(callback?: ImeChangeCallback): void--><!--Device-InputMethodSetting-offImeChange(callback?: ImeChangeCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -914,17 +923,13 @@ onImeChange(callback: ImeChangeCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ImeChangeCallback](arkts-ime-inputmethod-imechangecallback-t.md) | 是 | 回调函数，返回输入法属性对象及子类型对象。 |
+| callback | [ImeChangeCallback](arkts-ime-inputmethod-imechangecallback-t.md) | 否 | 回调函数，返回取消订阅的输入法属性对象及子类型对象。 |
 
 **示例**
 
 ```TypeScript
-import { InputMethodSubtype } from '@kit.IMEKit';
 let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
-
-inputMethodSetting.onImeChange((inputMethodProperty: inputMethod.InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => {
-  console.info('Succeeded in subscribing imeChange:', 'inputMethodProperty:', inputMethodProperty, 'inputMethodSubtype:', inputMethodSubtype);
-});
+inputMethodSetting.offImeChange();
 ```
 
 ## on('imeChange')
@@ -961,6 +966,37 @@ inputMethod.getSetting()
     console.info(`Succeeded in subscribing imeChange: inputMethodProperty.name: ${inputMethodProperty.name} ` +
       `, inputMethodSubtype.id: ${inputMethodSubtype.id}`);
   });
+```
+
+## onImeChange
+
+```TypeScript
+onImeChange(callback: ImeChangeCallback): void
+```
+
+@brief 订阅输入法及子类型变化监听事件。使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-InputMethodSetting-onImeChange(callback: ImeChangeCallback): void--><!--Device-InputMethodSetting-onImeChange(callback: ImeChangeCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ImeChangeCallback](arkts-ime-inputmethod-imechangecallback-t.md) | 是 | 回调函数，返回输入法属性对象及子类型对象。 |
+
+**示例**
+
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
+
+inputMethodSetting.onImeChange((inputMethodProperty: inputMethod.InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => {
+  console.info('Succeeded in subscribing imeChange:', 'inputMethodProperty:', inputMethodProperty, 'inputMethodSubtype:', inputMethodSubtype);
+});
 ```
 
 ## showOptionalInputMethods
@@ -1011,6 +1047,20 @@ inputMethod.getSetting().showOptionalInputMethods((err: BusinessError, result: b
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().showOptionalInputMethods().then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in showing optionalInputMethods.');
+  } else {
+    console.error(`Failed to showOptionalInputMethods.`);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to showOptionalInputMethods, code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ## showOptionalInputMethods
 
 ```TypeScript
@@ -1043,17 +1093,5 @@ showOptionalInputMethods(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getSetting().showOptionalInputMethods().then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in showing optionalInputMethods.');
-  } else {
-    console.error(`Failed to showOptionalInputMethods.`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to showOptionalInputMethods, code: ${err.code}, message: ${err.message}`);
-})
-```
+参见 [showOptionalInputMethods](#showoptionalinputmethods)
 

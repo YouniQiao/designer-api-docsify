@@ -26,7 +26,7 @@ Creates an AudioCapturer instance. This API uses an asynchronous callback to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | Yes | Capturer configurations. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AudioCapturer instance obtained; otherwise, **err** is an error object. If the operation fails, an error object with one of the following error codes is returned:<br> Error code 6800301: indicates a parameter verification exception, permission verification exception, or system processing exception. For details, see system logs.<br>Error code 6800101: indicates that a mandatory parameter is null or the parameter type is incorrect. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AudioCapturer instance obtained; otherwise, **err** is an error object. If the operation fails, an error object with one of the following error codes is returned:<br> Error code 6800301: indicates a parameter verification exception, permission verification exception, or system processing exception. For details, see system logs.<br>Error code 6800101: indicates that a mandatory parameter is null or the parameter type is incorrect. |
 
 **Examples**
 
@@ -61,66 +61,6 @@ audio.createAudioCapturer(audioCapturerOptions, (err, data) => {
   }
 });
 ```
-
-
-## createAudioCapturer
-
-```TypeScript
-function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer | null>): void
-```
-
-Obtains an [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) instance. This method uses an asynchronous callback to return the capturer instance. Using [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) to record audio will need permission according to different Sourcetype in options parameter, like MICROPHONE for the most microphone recording cases.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer | null>): void--><!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer | null>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Capturer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | Yes | Capturer configurations. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md) \| null&gt; | Yes | Callback used to return the audio capturer instance, or null if any error occurs. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio system internal error, such as system crash. |
-
-
-## createAudioCapturer
-
-```TypeScript
-function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer>
-```
-
-Creates an AudioCapturer instance. This API uses a promise to return the result.
-
-**Since:** 8
-
-<!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer>--><!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer>-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Capturer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | Yes | Capturer configurations. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md)&gt; | Promise used to return the result. If the operation is successful, an AudioCapturer instance is returned; otherwise, an error object with either of the following error codes is returned: <br>Error code 6800301: indicates a parameter verification exception, permission verification exception, or system processing exception. For details, see system logs. <br>Error code 6800101: indicates that a mandatory parameter is null or the parameter type is incorrect. |
-
-**Examples**
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -157,6 +97,72 @@ audio.createAudioCapturer(audioCapturerOptions).then((data) => {
 ## createAudioCapturer
 
 ```TypeScript
+function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer | null>): void
+```
+
+Obtains an [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) instance. This method uses an asynchronous callback to return the capturer instance. Using [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) to record audio will need permission according to different Sourcetype in options parameter, like MICROPHONE for the most microphone recording cases.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer | null>): void--><!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer | null>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | Yes | Capturer configurations. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md) \| null&gt; | Yes | Callback used to return the audio capturer instance, or null if any error occurs. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio system internal error, such as system crash. |
+
+**Examples**
+
+See [createAudioCapturer](#createaudiocapturer)
+
+
+## createAudioCapturer
+
+```TypeScript
+function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer>
+```
+
+Creates an AudioCapturer instance. This API uses a promise to return the result.
+
+**Since:** 8
+
+<!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer>--><!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer>-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | Yes | Capturer configurations. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md)&gt; | Promise used to return the result. If the operation is successful, an AudioCapturer instance is returned; otherwise, an error object with either of the following error codes is returned: <br>Error code 6800301: indicates a parameter verification exception, permission verification exception, or system processing exception. For details, see system logs. <br>Error code 6800101: indicates that a mandatory parameter is null or the parameter type is incorrect. |
+
+**Examples**
+
+See [createAudioCapturer](#createaudiocapturer)
+
+
+## createAudioCapturer
+
+```TypeScript
 function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer | null>
 ```
 
@@ -188,4 +194,8 @@ Obtains an [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) instance. This 
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio system internal error, such as system crash. |
+
+**Examples**
+
+See [createAudioCapturer](#createaudiocapturer)
 

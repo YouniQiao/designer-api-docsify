@@ -28,7 +28,7 @@ import { systemManager } from '@kit.MDMKit';
 | Name | Description |
 | --- | --- |
 | [addDisallowedNearLinkProtocols](arkts-mdm-systemmanager-adddisallowednearlinkprotocols-f.md) | Adds a list of NearLink protocols that are not allowed to be used for a specified user. NearLink Kit provides a low -power, high-speed short-range communication service that supports connection and data interaction between NearLink devices. This API does not take effect for system services and system applications such as the keyboard and stylus. |
-| [addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-f.md) | Adds a key event handling policy. When the system triggers a key event, if the event matches the delivered key event policy, the MDM app will be notified via the [EnterpriseAdminExtensionAbility.onKeyEvent](arkts-mdm-enterpriseenterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) callback, with the key event information of the matched policy carried in the callback. |
+| [addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-f.md) | Adds a key event handling policy. When the system triggers a key event, if the event matches the delivered key event policy, the MDM app will be notified via the [EnterpriseAdminExtensionAbility.onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) callback, with the key event information of the matched policy carried in the callback. |
 | [finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md) | Deletes the device logs collected by the current MDM app under the current user. |
 | [getAutoUnlockAfterReboot](arkts-mdm-systemmanager-getautounlockafterreboot-f.md) | Checks whether the device is automatically unlocked upon reboot. |
 | [getAutoUnlockAfterReboot](arkts-mdm-systemmanager-getautounlockafterreboot-f.md) | Checks whether the device is automatically unlocked upon reboot. This API is applicable to scenarios where there is a need to verify whether the device reboot unlock policy is correctly configured, helping enterprise administrators confirm the status of the automatic device unlock function. |
@@ -62,7 +62,7 @@ import { systemManager } from '@kit.MDMKit';
 | Name | Description |
 | --- | --- |
 | [ErrorInfo](arkts-mdm-systemmanager-errorinfo-i.md) | Represents the update error information. |
-| [KeyEvent](arkts-mdm-systemmanager-keyevent-i.md) | Enumerates key events. When the [EnterpriseAdminExtensionAbility.onKeyEvent](arkts-mdm-enterpriseenterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) key event callback is triggered, the current key event information is transferred. |
+| [KeyEvent](arkts-mdm-systemmanager-keyevent-i.md) | Enumerates key events. When the [EnterpriseAdminExtensionAbility.onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) key event callback is triggered, the current key event information is transferred. |
 | [KeyEventPolicy](arkts-mdm-systemmanager-keyeventpolicy-i.md) | Enumerates key event handling policies. When a key event occurs, only the keys for which the key event handling policy has been delivered are intercepted. For key events where no handling policy has been delivered, the system executes its original response logic. |
 | [KeyItem](arkts-mdm-systemmanager-keyitem-i.md) | Enumerates other key information. This refers to the information of other keys that have been pressed when the current [KeyCode](arkts-mdm-systemmanager-keycode-e.md) event occurs. |
 | [NotifyDescription](arkts-mdm-systemmanager-notifydescription-i.md) | Represents the update notification defined by an enterprise. |
@@ -78,7 +78,7 @@ import { systemManager } from '@kit.MDMKit';
 | Name | Description |
 | --- | --- |
 | [KeyAction](arkts-mdm-systemmanager-keyaction-e.md) | Enumerates key actions. |
-| [KeyCode](arkts-mdm-systemmanager-keycode-e.md) | Key code. The [addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-f.md), [removeKeyEventPolicies](arkts-mdm-systemmanager-removekeyeventpolicies-f.md), [getKeyEventPolicies](arkts-mdm-systemmanager-getkeyeventpolicies-f.md), and [onKeyEvent](arkts-mdm-enterpriseenterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) APIs map key codes to the corresponding physical keys on the device. |
+| [KeyCode](arkts-mdm-systemmanager-keycode-e.md) | Key code. The [addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-f.md), [removeKeyEventPolicies](arkts-mdm-systemmanager-removekeyeventpolicies-f.md), [getKeyEventPolicies](arkts-mdm-systemmanager-getkeyeventpolicies-f.md), and [onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) APIs map key codes to the corresponding physical keys on the device. |
 | [KeyPolicy](arkts-mdm-systemmanager-keypolicy-e.md) | Enumerates key policies. This refers to the system behavior triggered after the key code delivered by the MDM app matches the system key event. |
 | [NearLinkProtocol](arkts-mdm-systemmanager-nearlinkprotocol-e.md) | Enumerates NearLink protocols. |
 | [PackageType](arkts-mdm-systemmanager-packagetype-e.md) | Enumerates the update package types. |

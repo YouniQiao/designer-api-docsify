@@ -2,7 +2,7 @@
 
 Describes the capability of a partner device.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-partnerAgent-interface DeviceCapability--><!--Device-partnerAgent-interface DeviceCapability-End-->
 
@@ -14,24 +14,6 @@ Describes the capability of a partner device.
 import { partnerAgent } from '@kit.ConnectivityKit';
 ```
 
-## supportBR
-
-```TypeScript
-supportBR?: boolean
-```
-
-Whether the partner device supports the Bluetooth Basic Rate (BR) capability.
-
-**Type:** boolean
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DeviceCapability-supportBR?: boolean--><!--Device-DeviceCapability-supportBR?: boolean-End-->
-
-**System capability:** SystemCapability.Communication.FusionConnectivity.Core
-
 ## supportBleAdvertiser
 
 ```TypeScript
@@ -42,11 +24,29 @@ Whether the partner device supports the Bluetooth Low Energy (BLE) advertiser ca
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DeviceCapability-supportBleAdvertiser?: boolean--><!--Device-DeviceCapability-supportBleAdvertiser?: boolean-End-->
+
+**System capability:** SystemCapability.Communication.FusionConnectivity.Core
+
+## supportBR
+
+```TypeScript
+supportBR?: boolean
+```
+
+Whether the partner device supports the Bluetooth Basic Rate (BR) capability.
+
+**Type:** boolean
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DeviceCapability-supportBR?: boolean--><!--Device-DeviceCapability-supportBR?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 

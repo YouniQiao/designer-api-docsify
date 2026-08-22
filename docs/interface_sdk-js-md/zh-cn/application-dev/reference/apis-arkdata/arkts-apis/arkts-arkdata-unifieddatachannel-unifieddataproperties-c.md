@@ -132,3 +132,77 @@ uriAuthorizationPolicies?: Array<UriPermission>
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+
+let properties = new unifiedDataChannel.UnifiedDataProperties();
+properties.extras = {
+  key: {
+    title: 'MyTitle',
+    content: 'MyContent'
+  }
+};
+properties.tag = "This is a tag of properties";
+properties.shareOptions = unifiedDataChannel.ShareOptions.CROSS_APP;
+properties.uriAuthorizationPolicies = [
+  // 从API 26.0.0版本开始，支持uri授权策略
+  unifiedDataChannel.UriPermission.WRITE
+];
+properties.getDelayData = ((type: string) => {
+  if (type == uniformTypeDescriptor.UniformDataType.PLAIN_TEXT) {
+    let plainTextDetails: Record<string, string> = {
+      'attr1': 'value1',
+      'attr2': 'value2'
+    };
+    let plainText: uniformDataStruct.PlainText = {
+      uniformDataType: 'general.plain-text',
+      textContent: 'This is a plain text example',
+      abstract: 'This is abstract',
+      details: plainTextDetails
+    };
+    let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
+    let textData = new unifiedDataChannel.UnifiedData(text);
+    return textData;
+  }
+  return new unifiedDataChannel.UnifiedData();
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+import { RecordData } from '@ohos.base';
+
+let title: Record<string, RecordData> = { "title": "title" }
+let properties = new unifiedDataChannel.UnifiedDataProperties();
+properties.extras = title;
+properties.tag = "This is a tag of properties";
+properties.shareOptions = unifiedDataChannel.ShareOptions.CROSS_APP;
+properties.uriAuthorizationPolicies = [
+  // 从API 26.0.0版本开始，支持uri授权策略
+  unifiedDataChannel.UriPermission.WRITE
+];
+properties.getDelayData = ((type: string) => {
+  if (type == 'general.plain-text') {
+    let plainTextDetails: Record<string, string> = {
+      'attr1': 'value1',
+      'attr2': 'value2'
+    }
+    let plainText: uniformDataStruct.PlainText = {
+      uniformDataType: 'general.plain-text',
+      textContent: 'This is a plain text example',
+      textAbstract: 'This is a text abstract',
+      details: plainTextDetails
+    }
+    let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
+    return new unifiedDataChannel.UnifiedData(text);
+  }
+  return new unifiedDataChannel.UnifiedData();
+});
+```
+

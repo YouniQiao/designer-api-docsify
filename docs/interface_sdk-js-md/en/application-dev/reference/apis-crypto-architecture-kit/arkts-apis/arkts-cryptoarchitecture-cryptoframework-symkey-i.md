@@ -54,3 +54,19 @@ async function testGenerateAesKeyFun() {
 }
 ```
 
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+async function testClearMem() {
+  let eccGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
+    // Use AsyKeyGenerator to randomly generate an asymmetric key pair.
+    let keyGenPromise = eccGenerator.generateKeyPair();
+    keyGenPromise.then(keyPair => {
+      let priKey = keyPair.priKey;
+      let returnBlob = priKey.getEncodedDer('PKCS8');
+      console.info('returnBlob data: ' + returnBlob.data);
+      priKey.clearMem(); // For an asymmetric private key, clearMem() releases the internal key structure. After clearMem is executed, getEncoded() is not supported.
+    });
+}
+```
+

@@ -41,12 +41,12 @@ import { avSession } from '@kit.AVSessionKit';
 | [castAudioSessionAll](arkts-avsession-avsession-castaudiosessionall-f-sys.md) | Cast all the media audio to the remote devices or cast back local device |
 | [createController](arkts-avsession-avsession-createcontroller-f-sys.md) | 根据会话ID创建会话控制器。使用callback异步回调。 |
 | [createController](arkts-avsession-avsession-createcontroller-f-sys.md) | 根据会话ID创建会话控制器。使用Promise异步回调。 |
+| [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f-sys.md) | 获取所有设置过媒体信息且注册过控制回调的会话的描述符信息。使用callback异步回调。 |
+| [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f-sys.md) | 获取所有设置过媒体信息且注册过控制回调的会话的描述符信息。结果通过Promise异步回调方式返回。 |
 | [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md) | 设备建立连接后，获取投播控制器。结果通过callback异步回调方式返回。 |
 | [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md) | Register a callback to retrieve an avsession cast controller. This function can be used at both side to get the same controller to do the playback control. |
 | [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md) | 设备建立连接后，获取投播控制器。结果通过Promise方式返回。 |
 | [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md) | Get the current session's remote controller client. If the avsession is not under casting state, the controller will return undefined. |
-| [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f-sys.md) | 获取所有设置过媒体信息且注册过控制回调的会话的描述符信息。使用callback异步回调。 |
-| [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f-sys.md) | 获取所有设置过媒体信息且注册过控制回调的会话的描述符信息。结果通过Promise异步回调方式返回。 |
 | [getDistributedSessionController](arkts-avsession-avsession-getdistributedsessioncontroller-f-sys.md) | 根据远端会话类型，获取远端分布式会话控制器。结果通过Promise异步回调方式返回。 |
 | [getHistoricalAVQueueInfos](arkts-avsession-avsession-gethistoricalavqueueinfos-f-sys.md) | 获取全部的历史播放歌单。结果通过callback异步回调方式返回。 |
 | [getHistoricalAVQueueInfos](arkts-avsession-avsession-gethistoricalavqueueinfos-f-sys.md) | 获取全部的历史播放歌单。结果通过Promise异步回调方式返回。 |
@@ -54,15 +54,6 @@ import { avSession } from '@kit.AVSessionKit';
 | [getHistoricalSessionDescriptors](arkts-avsession-avsession-gethistoricalsessiondescriptors-f-sys.md) | 获取所有已被销毁的会话相关描述。结果通过Promise异步回调方式返回。 |
 | [getSessionDescriptors](arkts-avsession-avsession-getsessiondescriptors-f-sys.md) | 根据不同的会话类别获取对应的会话描述。使用Promise异步回调。 |
 | [getSessionDescriptorsForAudioZone](arkts-avsession-avsession-getsessiondescriptorsforaudiozone-f-sys.md) | 获取根据userid查询对应音区的会话 |
-| [offActiveSessionChanged](arkts-avsession-avsession-offactivesessionchanged-f-sys.md) | 取消允许在系统控制入口显示的会话变更事件监听，取消后将不再对该事件进行监听。使用callback异步回调。 |
-| [offAudioZoneSessionChange](arkts-avsession-avsession-offaudiozonesessionchange-f-sys.md) | 取消注册音区对应的会话变化监听 |
-| [offDeviceAvailable](arkts-avsession-avsession-offdeviceavailable-f-sys.md) | Unregister device discovery callback |
-| [offDeviceLogEvent](arkts-avsession-avsession-offdevicelogevent-f-sys.md) | UnRegister log event callback. |
-| [offDeviceOffline](arkts-avsession-avsession-offdeviceoffline-f-sys.md) | Unregister device offline callback |
-| [offDeviceStateChanged](arkts-avsession-avsession-offdevicestatechanged-f-sys.md) | Unregisters a system callback for the device connection phase. |
-| [offDistributedSessionChange](arkts-avsession-avsession-offdistributedsessionchange-f-sys.md) | Unregister distributed session changed callback |
-| [offSessionServiceDie](arkts-avsession-avsession-offsessionservicedie-f-sys.md) | Unregister Session service death callback, notifying the application to clean up resources. |
-| [offSystemCommonEvent](arkts-avsession-avsession-offsystemcommonevent-f-sys.md) | 取消注册通用事件回调监听 |
 | [off_deviceAvailable](arkts-avsession-avsession-offdeviceavailable-f-sys.md) | 取消设备发现回调的监听。 |
 | [off_deviceLogEvent](arkts-avsession-avsession-offdevicelogevent-f-sys.md) | 取消监听日志事件的回调。 |
 | [off_deviceOffline](arkts-avsession-avsession-offdeviceoffline-f-sys.md) | 取消设备下线回调的监听。 |
@@ -72,15 +63,15 @@ import { avSession } from '@kit.AVSessionKit';
 | [off_sessionDestroy](arkts-avsession-avsession-offsessiondestroy-f-sys.md#offsessiondestroy) | 注销会话销毁事件监听。注销后，不再监听该事件。 |
 | [off_sessionServiceDie](arkts-avsession-avsession-offsessionservicedie-f-sys.md) | 取消会话服务死亡监听，取消后，不再进行服务死亡监听。 |
 | [off_topSessionChange](arkts-avsession-avsession-offtopsessionchange-f-sys.md#offtopsessionchange) | 注销最新播放会话变更事件监听。注销后，不再进行该事件的监听。 |
-| [onActiveSessionChanged](arkts-avsession-avsession-onactivesessionchanged-f-sys.md) | 允许在系统控制入口显示的会话变更的监听事件。使用callback异步回调。 |
-| [onAudioZoneSessionChange](arkts-avsession-avsession-onaudiozonesessionchange-f-sys.md) | 注册音区会话变化回调 |
-| [onDeviceAvailable](arkts-avsession-avsession-ondeviceavailable-f-sys.md) | Register device discovery callback |
-| [onDeviceLogEvent](arkts-avsession-avsession-ondevicelogevent-f-sys.md) | Register log event callback. |
-| [onDeviceOffline](arkts-avsession-avsession-ondeviceoffline-f-sys.md) | Register device offline callback |
-| [onDeviceStateChanged](arkts-avsession-avsession-ondevicestatechanged-f-sys.md) | Registers a system callback for the device connection phase. The callback includes information such as error codes, connection status, radar errors, and user behavior codes. |
-| [onDistributedSessionChange](arkts-avsession-avsession-ondistributedsessionchange-f-sys.md) | Register distributed session changed callback |
-| [onSessionServiceDie](arkts-avsession-avsession-onsessionservicedie-f-sys.md) | Register Session service death callback, notifying the application to clean up resources. |
-| [onSystemCommonEvent](arkts-avsession-avsession-onsystemcommonevent-f-sys.md) | 监听系统通用事件命令回调 |
+| [offActiveSessionChanged](arkts-avsession-avsession-offactivesessionchanged-f-sys.md) | 取消允许在系统控制入口显示的会话变更事件监听，取消后将不再对该事件进行监听。使用callback异步回调。 |
+| [offAudioZoneSessionChange](arkts-avsession-avsession-offaudiozonesessionchange-f-sys.md) | 取消注册音区对应的会话变化监听 |
+| [offDeviceAvailable](arkts-avsession-avsession-offdeviceavailable-f-sys.md) | Unregister device discovery callback |
+| [offDeviceLogEvent](arkts-avsession-avsession-offdevicelogevent-f-sys.md) | UnRegister log event callback. |
+| [offDeviceOffline](arkts-avsession-avsession-offdeviceoffline-f-sys.md) | Unregister device offline callback |
+| [offDeviceStateChanged](arkts-avsession-avsession-offdevicestatechanged-f-sys.md) | Unregisters a system callback for the device connection phase. |
+| [offDistributedSessionChange](arkts-avsession-avsession-offdistributedsessionchange-f-sys.md) | Unregister distributed session changed callback |
+| [offSessionServiceDie](arkts-avsession-avsession-offsessionservicedie-f-sys.md) | Unregister Session service death callback, notifying the application to clean up resources. |
+| [offSystemCommonEvent](arkts-avsession-avsession-offsystemcommonevent-f-sys.md) | 取消注册通用事件回调监听 |
 | [on_deviceAvailable](arkts-avsession-avsession-ondeviceavailable-f-sys.md) | 设备发现回调监听。 |
 | [on_deviceLogEvent](arkts-avsession-avsession-ondevicelogevent-f-sys.md) | 监听日志事件的回调。 |
 | [on_deviceOffline](arkts-avsession-avsession-ondeviceoffline-f-sys.md) | 设备下线回调监听。 |
@@ -90,6 +81,15 @@ import { avSession } from '@kit.AVSessionKit';
 | [on_sessionDestroy](arkts-avsession-avsession-onsessiondestroy-f-sys.md#onsessiondestroy) | 会话的销毁事件监听。使用callback异步回调。 |
 | [on_sessionServiceDie](arkts-avsession-avsession-onsessionservicedie-f-sys.md) | 监听会话的服务死亡事件。通知应用清理资源。 |
 | [on_topSessionChange](arkts-avsession-avsession-ontopsessionchange-f-sys.md#ontopsessionchange) | 最新播放会话变更的事件监听。使用callback异步回调。 |
+| [onActiveSessionChanged](arkts-avsession-avsession-onactivesessionchanged-f-sys.md) | 允许在系统控制入口显示的会话变更的监听事件。使用callback异步回调。 |
+| [onAudioZoneSessionChange](arkts-avsession-avsession-onaudiozonesessionchange-f-sys.md) | 注册音区会话变化回调 |
+| [onDeviceAvailable](arkts-avsession-avsession-ondeviceavailable-f-sys.md) | Register device discovery callback |
+| [onDeviceLogEvent](arkts-avsession-avsession-ondevicelogevent-f-sys.md) | Register log event callback. |
+| [onDeviceOffline](arkts-avsession-avsession-ondeviceoffline-f-sys.md) | Register device offline callback |
+| [onDeviceStateChanged](arkts-avsession-avsession-ondevicestatechanged-f-sys.md) | Registers a system callback for the device connection phase. The callback includes information such as error codes, connection status, radar errors, and user behavior codes. |
+| [onDistributedSessionChange](arkts-avsession-avsession-ondistributedsessionchange-f-sys.md) | Register distributed session changed callback |
+| [onSessionServiceDie](arkts-avsession-avsession-onsessionservicedie-f-sys.md) | Register Session service death callback, notifying the application to clean up resources. |
+| [onSystemCommonEvent](arkts-avsession-avsession-onsystemcommonevent-f-sys.md) | 监听系统通用事件命令回调 |
 | [sendSystemAVKeyEvent](arkts-avsession-avsession-sendsystemavkeyevent-f-sys.md) | 发送按键事件给置顶会话。结果通过callback异步回调方式返回。 |
 | [sendSystemAVKeyEvent](arkts-avsession-avsession-sendsystemavkeyevent-f-sys.md) | 发送按键事件给置顶会话。结果通过Promise异步回调方式返回。 |
 | [sendSystemCommonCommand](arkts-avsession-avsession-sendsystemcommoncommand-f-sys.md) | 发送通用事件命令 |
@@ -122,6 +122,7 @@ import { avSession } from '@kit.AVSessionKit';
 
 | 名称 | 说明 |
 | --- | --- |
+| [AudioCapabilities](arkts-avsession-avsession-audiocapabilities-i.md) | 表示投播设备支持的音频能力。 |
 | [AVCallState](arkts-avsession-avsession-avcallstate-i.md) | 通话状态相关属性。 |
 | [AVCastControlCommand](arkts-avsession-avsession-avcastcontrolcommand-i.md) | 投播控制器接受的命令的对象描述。 |
 | [AVCastController](arkts-avsession-avsession-avcastcontroller-i.md) | 在投播建立后，调用[avSession.getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md)后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件， 获取会话元数据，播放状态信息等操作。 |
@@ -133,7 +134,6 @@ import { avSession } from '@kit.AVSessionKit';
 | [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) | 播放列表中单项的相关属性。 |
 | [AVSession](arkts-avsession-avsession-avsession-i.md) | 调用[avSession.createAVSession](arkts-avsession-avsession-createavsession-f.md)后，返回会话的实例，可以获得会话ID，完成设置元数据，播放状态信息等操作。 |
 | [AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md) | AVSessionController控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。 |
-| [AudioCapabilities](arkts-avsession-avsession-audiocapabilities-i.md) | 表示投播设备支持的音频能力。 |
 | [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) | 通话会话元数据相关属性。 |
 | [CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md) | 扩展屏投播显示设备相关属性。 |
 | [CommandInfo](arkts-avsession-avsession-commandinfo-i.md) | 定义要发送到会话的命令信息。 |
@@ -164,8 +164,8 @@ import { avSession } from '@kit.AVSessionKit';
 | [AVCastCategory](arkts-avsession-avsession-avcastcategory-e.md) | 投播的类别枚举。 |
 | [AVSessionErrorCode](arkts-avsession-avsession-avsessionerrorcode-e.md) | 会话发生错误时的错误码。 |
 | [BackgroundPlayMode](arkts-avsession-avsession-backgroundplaymode-e.md) | 表示session支持的后台播放模式的枚举。 |
-| [CallState](arkts-avsession-avsession-callstate-e.md) | 表示通话状态的枚举。 |
 | [CallerType](arkts-avsession-avsession-callertype-e.md) | 表示调用方来源类型的枚举。 |
+| [CallState](arkts-avsession-avsession-callstate-e.md) | 表示通话状态的枚举。 |
 | [CastDisplayState](arkts-avsession-avsession-castdisplaystate-e.md) | 投播显示设备状态的枚举。 |
 | [ConnectionState](arkts-avsession-avsession-connectionstate-e.md) | 连接状态枚举。 |
 | [DecoderType](arkts-avsession-avsession-decodertype-e.md) | 枚举，设备所支持的解码格式。 |

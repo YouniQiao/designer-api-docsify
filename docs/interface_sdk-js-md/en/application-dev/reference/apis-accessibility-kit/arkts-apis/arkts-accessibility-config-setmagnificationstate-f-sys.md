@@ -39,3 +39,15 @@ Sets the enabled state of the magnification effect. The magnification effect dep
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [9300007](../errorcode-accessibility.md#9300007-magnification-trigger-failed) | Trigger magnification failed. |
 
+**Examples**
+
+```TypeScript
+import { config } from '@kit.AccessibilityKit';
+
+try {
+  config.setMagnificationState(true);
+} catch (e) {
+  console.error(`Set magnification failed,  error code: ${e?.code}, error msg: ${e?.message}`);
+}
+```
+

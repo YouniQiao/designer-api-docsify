@@ -25,7 +25,7 @@ Obtains the OverlayModuleInfo about a module with the overlay feature in the cur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Name of the module with the overlay feature. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;OverlayModuleInfo&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result, which is an [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) object. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;OverlayModuleInfo&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result, which is an [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) object. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -37,6 +37,24 @@ Obtains the OverlayModuleInfo about a module with the overlay feature in the cur
 | [17700033](../errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) | The specified module is not an overlay module. |
 
 **Examples**
+
+```TypeScript
+import { overlay } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let moduleName = "feature";
+
+(async () => {
+  try {
+    let overlayModuleInfo = await overlay.getOverlayModuleInfo(moduleName);
+    console.info('overlayModuleInfo is ' + JSON.stringify(overlayModuleInfo));
+  } catch (err) {
+    let code = (err as BusinessError).code;
+    let message = (err as BusinessError).message;
+    console.error('getOverlayModuleInfo failed due to err code : ' + code + ' ' + 'message :' + message);
+  }
+})();
+```
 
 ```TypeScript
 import { overlay } from '@kit.AbilityKit';
@@ -97,21 +115,5 @@ Obtains the OverlayModuleInfo about a module with the overlay feature in the cur
 
 **Examples**
 
-```TypeScript
-import { overlay } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let moduleName = "feature";
-
-(async () => {
-  try {
-    let overlayModuleInfo = await overlay.getOverlayModuleInfo(moduleName);
-    console.info('overlayModuleInfo is ' + JSON.stringify(overlayModuleInfo));
-  } catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error('getOverlayModuleInfo failed due to err code : ' + code + ' ' + 'message :' + message);
-  }
-})();
-```
+See [getOverlayModuleInfo](#getoverlaymoduleinfo)
 

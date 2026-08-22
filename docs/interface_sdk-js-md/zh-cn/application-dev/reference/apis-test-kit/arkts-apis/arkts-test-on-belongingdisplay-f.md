@@ -39,3 +39,12 @@ Specifies the displayId to which the target Component belongs.
 | --- | --- |
 | [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.belongingDisplay(0); // 使用静态构造器ON创建On对象，指定目标控件所属屏幕ID。
+```
+

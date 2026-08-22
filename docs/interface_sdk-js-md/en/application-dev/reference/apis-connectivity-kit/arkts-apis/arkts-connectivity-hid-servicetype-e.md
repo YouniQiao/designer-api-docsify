@@ -2,7 +2,7 @@
 
 Describe the l2cap service type.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-hid-enum ServiceType--><!--Device-hid-enum ServiceType-End-->
 
@@ -16,7 +16,7 @@ SERVICE_NO_TRAFFIC = 0
 
 Service type no traffic.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +32,7 @@ SERVICE_BEST_EFFORT = 1
 
 Service type best effort.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +48,7 @@ SERVICE_GUARANTEED = 2
 
 Service type guaranteed.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 

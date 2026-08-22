@@ -37,6 +37,24 @@ function getP2pPeerDevices(): Promise<WifiP2pDevice[]>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [2801000](../errorcode-wifi.md#2801000-p2p模块异常) | Operation failed. |
 
+**示例**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+  // p2p发现阶段完成，才能正常获取到对端设备列表信息
+  wifiManager.getP2pPeerDevices((err, data:wifiManager.WifiP2pDevice[]) => {
+    if (err) {
+        console.error("get P2P peer devices error");
+        return;
+    }
+    console.info("get P2P peer devices: " + JSON.stringify(data));
+  });
+
+  wifiManager.getP2pPeerDevices().then(data => {
+    console.info("get P2P peer devices: " + JSON.stringify(data));
+  });
+```
+
 
 ## getP2pPeerDevices
 
@@ -71,19 +89,5 @@ function getP2pPeerDevices(callback: AsyncCallback<WifiP2pDevice[]>): void
 
 **示例**
 
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-  // p2p发现阶段完成，才能正常获取到对端设备列表信息
-  wifiManager.getP2pPeerDevices((err, data:wifiManager.WifiP2pDevice[]) => {
-    if (err) {
-        console.error("get P2P peer devices error");
-        return;
-    }
-    console.info("get P2P peer devices: " + JSON.stringify(data));
-  });
-
-  wifiManager.getP2pPeerDevices().then(data => {
-    console.info("get P2P peer devices: " + JSON.stringify(data));
-  });
-```
+参见 [getP2pPeerDevices](#getp2ppeerdevices)
 

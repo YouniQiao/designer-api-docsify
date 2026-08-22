@@ -15,102 +15,6 @@
 ```TypeScript
 ```
 
-## UTC
-
-```TypeScript
-public static UTC(d: Date): long
-```
-
-返回自纪元起经过的毫秒数， 纪元定义为UTC时间1970年1月1日零点。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public static UTC(d: Date): long--><!--Device-Date-public static UTC(d: Date): long-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| d | Date | 是 | 待转换为毫秒的值。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
-
-## UTC
-
-```TypeScript
-public static UTC(year: int): long
-```
-
-返回自纪元起经过的毫秒数， 纪元定义为UTC时间1970年1月1日零点。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public static UTC(year: int): long--><!--Device-Date-public static UTC(year: int): long-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| year | int | 是 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
-
-## UTC
-
-```TypeScript
-public static UTC(year: int, month: int, day?: int, hours?: int, minutes?: int, seconds?: int, ms?: int): long
-```
-
-返回自纪元起经过的毫秒数， 纪元定义为UTC时间1970年1月1日零点。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Date-public static UTC(year: int, month: int, day?: int, hours?: int, minutes?: int, seconds?: int, ms?: int): long--><!--Device-Date-public static UTC(year: int, month: int, day?: int, hours?: int, minutes?: int, seconds?: int, ms?: int): long-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| year | int | 是 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
-| month | int | 是 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
-| day | int | 否 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
-| hours | int | 否 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
-| minutes | int | 否 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
-| seconds | int | 否 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
-| ms | int | 否 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| long | 解析得到的日期值。 |
-
 ## constructor
 
 ```TypeScript
@@ -2143,6 +2047,102 @@ public toUTCString(): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 世界时的字符串表示。 |
+
+## UTC
+
+```TypeScript
+public static UTC(d: Date): long
+```
+
+返回自纪元起经过的毫秒数， 纪元定义为UTC时间1970年1月1日零点。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Date-public static UTC(d: Date): long--><!--Device-Date-public static UTC(d: Date): long-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| d | Date | 是 | 待转换为毫秒的值。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| long | 解析得到的日期值。 |
+
+## UTC
+
+```TypeScript
+public static UTC(year: int): long
+```
+
+返回自纪元起经过的毫秒数， 纪元定义为UTC时间1970年1月1日零点。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Date-public static UTC(year: int): long--><!--Device-Date-public static UTC(year: int): long-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| year | int | 是 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| long | 解析得到的日期值。 |
+
+## UTC
+
+```TypeScript
+public static UTC(year: int, month: int, day?: int, hours?: int, minutes?: int, seconds?: int, ms?: int): long
+```
+
+返回自纪元起经过的毫秒数， 纪元定义为UTC时间1970年1月1日零点。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Date-public static UTC(year: int, month: int, day?: int, hours?: int, minutes?: int, seconds?: int, ms?: int): long--><!--Device-Date-public static UTC(year: int, month: int, day?: int, hours?: int, minutes?: int, seconds?: int, ms?: int): long-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| year | int | 是 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
+| month | int | 是 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
+| day | int | 否 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
+| hours | int | 否 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
+| minutes | int | 否 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
+| seconds | int | 否 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
+| ms | int | 否 | 待转换为毫秒的值。 <br>取值约束：可以为任意整数。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| long | 解析得到的日期值。 |
 
 ## valueOf
 

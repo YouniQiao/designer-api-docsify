@@ -61,6 +61,84 @@ ArkTS-Dyn示例：
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// textEmbedding需先通过intelligence.getTextEmbeddingModel获取
+textEmbedding.loadModel()
+  .then(() => {
+    let text = 'text';
+    textEmbedding.getEmbedding(text)
+      .then((data: Array<number>) => {
+        console.info("Succeeded in getting Embedding");
+      })
+      .catch((err: BusinessError) => {
+        console.error(`Failed to get Embedding. Code: ${err.code}, message: ${err.message}`);
+      })
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+textEmbedding?.loadModel()
+  .then(() => {
+    let text = 'text';
+    textEmbedding?.getEmbedding(text)
+      .then((data: Array<number>) => {
+        console.info("Succeeded in getting Embedding");
+      })
+      .catch((err) => {
+        console.error(`Failed to get Embedding. Code: ${err.code}, message: ${err.message}`);
+      })
+  }).catch((err) => {
+    console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// textEmbedding需先通过intelligence.getTextEmbeddingModel获取
+textEmbedding.loadModel()
+  .then(() => {
+    let batchTexts = ['text1', 'text2'];
+    textEmbedding.getEmbedding(batchTexts)
+      .then((data: Array<Array<number>>) => {
+        console.info("Succeeded in getting Embedding");
+      })
+      .catch((err: BusinessError) => {
+        console.error(`Failed to get Embedding. Code: ${err.code}, message: ${err.message}`);
+      })
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+textEmbedding?.loadModel()
+  .then(() => {
+    let batchTexts = ['text1', 'text2'];
+    textEmbedding?.getEmbedding(batchTexts)
+      .then((data: Array<Array<double>>) => {
+        console.info("Succeeded in getting Embedding");
+      })
+      .catch((err) => {
+        console.error(`Failed to get Embedding. Code: ${err.code}, message: ${err.message}`);
+      })
+  }).catch((err) => {
+    console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 // imageEmbedding需先通过intelligence.getImageEmbeddingModel获取
 imageEmbedding.loadModel().then(() => {
   let image = 'file://<packageName>/data/storage/el2/base/haps/entry/files/xxx.jpg';
@@ -129,6 +207,34 @@ ArkTS-Dyn示例：
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// textEmbedding需先通过intelligence.getTextEmbeddingModel获取
+textEmbedding.loadModel()
+  .then(() => {
+    console.info("Succeeded in loading Model");
+  })
+  .catch((err: BusinessError) => {
+    console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// textEmbedding需先通过intelligence.getTextEmbeddingModel获取
+textEmbedding?.loadModel()
+  .then(() => {
+    console.info("Succeeded in loading Model");
+  })
+  .catch((err) => {
+    console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 // imageEmbedding需先通过intelligence.getImageEmbeddingModel获取
 imageEmbedding.loadModel()
   .then(() => {
@@ -180,6 +286,34 @@ releaseModel(): Promise<void>
 | [31300000](../errorcode-intelligence.md#31300000-服务内部异常) | Inner error. |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// textEmbedding需先通过intelligence.getTextEmbeddingModel获取
+textEmbedding.releaseModel()
+  .then(() => {
+    console.info("Succeeded in releasing Model");
+  })
+  .catch((err: BusinessError) => {
+    console.error(`Failed to release Model. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// textEmbedding需先通过intelligence.getTextEmbeddingModel获取
+textEmbedding?.releaseModel()
+  .then(() => {
+    console.info("Succeeded in releasing Model");
+  })
+  .catch((err) => {
+    console.error(`Failed to release Model. Code: ${err.code}, message: ${err.message}`);
+  })
+```
 
 ArkTS-Dyn示例：
 

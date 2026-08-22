@@ -84,7 +84,7 @@ panelFlag: PanelFlag
 
 @brief The panel flag of the input method's soft keyboard panel.
 
-**Type:** [PanelFlag](arkts-ime-inputmethodpanel-panelflag-e.md)
+**Type:** [PanelFlag](arkts-ime-inputmethod-panel-panelflag-e.md)
 
 **Since:** 26.0.0
 

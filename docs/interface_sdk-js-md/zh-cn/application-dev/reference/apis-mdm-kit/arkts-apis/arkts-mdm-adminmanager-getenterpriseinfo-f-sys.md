@@ -28,7 +28,7 @@ function getEnterpriseInfo(admin: Want, callback: AsyncCallback<EnterpriseInfo>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EnterpriseInfo](arkts-mdm-adminmanager-enterpriseinfo-i-sys.md)&gt; | 是 | 回调函数，当接口调用成功，err为null，data为设备管理应用的企业信息，否则err为错误对象。 |
 
 **错误码：**
@@ -60,6 +60,24 @@ adminManager.getEnterpriseInfo(wantTemp, (err, result) => {
 });
 ```
 
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+adminManager.getEnterpriseInfo(wantTemp).then((result) => {
+  console.info(`Succeeded in getting enterprise info, enterprise name : ${result.name}, enterprise description : ${result.description}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get enterprise info. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## getEnterpriseInfo
 
@@ -83,7 +101,7 @@ function getEnterpriseInfo(admin: Want): Promise<EnterpriseInfo>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 
 **返回值：**
 
@@ -101,21 +119,5 @@ function getEnterpriseInfo(admin: Want): Promise<EnterpriseInfo>
 
 **示例**
 
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-adminManager.getEnterpriseInfo(wantTemp).then((result) => {
-  console.info(`Succeeded in getting enterprise info, enterprise name : ${result.name}, enterprise description : ${result.description}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get enterprise info. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [getEnterpriseInfo](#getenterpriseinfo)
 

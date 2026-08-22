@@ -27,10 +27,10 @@ import { nfcController } from '@kit.ConnectivityKit';
 | [isNfcAvailable](arkts-connectivity-nfccontroller-isnfcavailable-f.md) | Checks whether the device supports NFC. |
 | [isNfcOpen](arkts-connectivity-nfccontroller-isnfcopen-f.md) | Checks whether NFC is open. |
 | [isNfcSupported](arkts-connectivity-nfccontroller-isnfcsupported-f.md) | Checks whether the device supports NFC. |
-| [offNfcStateChange](arkts-connectivity-nfccontroller-offnfcstatechange-f.md) | unregister nfc state changed event. |
 | [off_nfcStateChange](arkts-connectivity-nfccontroller-offnfcstatechange-f.md) | Unsubscribes from the NFC state changes. Upon successful unsubscription, the subscriber will not receive NFC state change notifications. This API uses an asynchronous callback to return the result. |
-| [onNfcStateChange](arkts-connectivity-nfccontroller-onnfcstatechange-f.md) | register nfc state changed event. |
+| [offNfcStateChange](arkts-connectivity-nfccontroller-offnfcstatechange-f.md) | unregister nfc state changed event. |
 | [on_nfcStateChange](arkts-connectivity-nfccontroller-onnfcstatechange-f.md) | Enables listening for NFC state changes. This API uses an asynchronous callback to return the result. |
+| [onNfcStateChange](arkts-connectivity-nfccontroller-onnfcstatechange-f.md) | register nfc state changed event. |
 | [openNfc](arkts-connectivity-nfccontroller-opennfc-f.md) | Opens NFC. |
 
 ### Enums

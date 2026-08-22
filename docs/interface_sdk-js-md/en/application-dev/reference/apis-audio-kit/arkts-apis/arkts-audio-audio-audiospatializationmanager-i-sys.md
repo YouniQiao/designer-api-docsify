@@ -211,6 +211,34 @@ try {
 }
 ```
 
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let deviceDescriptor: audio.AudioDeviceDescriptor = {
+  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
+  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
+  id : 1,
+  name : "",
+  address : "123",
+  sampleRates : [44100],
+  channelCounts : [2],
+  channelMasks : [0],
+  networkId : audio.LOCAL_NETWORK_ID,
+  interruptGroupId : 1,
+  volumeGroupId : 1,
+  displayName : ""
+};
+
+try {
+  let isHeadTrackingEnabled: boolean = audioSpatializationManager.isHeadTrackingEnabled(deviceDescriptor);
+  console.info(`AudioSpatializationManager isHeadTrackingEnabled: ${isHeadTrackingEnabled}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error}`);
+}
+```
+
 ## isHeadTrackingEnabled
 
 ```TypeScript
@@ -249,33 +277,7 @@ Checks whether the head tracking is enabled by the specified device.
 
 **Examples**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor: audio.AudioDeviceDescriptor = {
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
-  id : 1,
-  name : "",
-  address : "123",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : ""
-};
-
-try {
-  let isHeadTrackingEnabled: boolean = audioSpatializationManager.isHeadTrackingEnabled(deviceDescriptor);
-  console.info(`AudioSpatializationManager isHeadTrackingEnabled: ${isHeadTrackingEnabled}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
+See [isHeadTrackingEnabled](#isheadtrackingenabled)
 
 ## isHeadTrackingSupported
 
@@ -500,6 +502,34 @@ try {
 }
 ```
 
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let deviceDescriptor: audio.AudioDeviceDescriptor = {
+  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
+  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
+  id : 1,
+  name : "",
+  address : "123",
+  sampleRates : [44100],
+  channelCounts : [2],
+  channelMasks : [0],
+  networkId : audio.LOCAL_NETWORK_ID,
+  interruptGroupId : 1,
+  volumeGroupId : 1,
+  displayName : ""
+};
+
+try {
+  let isSpatializationEnabled: boolean = audioSpatializationManager.isSpatializationEnabled(deviceDescriptor);
+  console.info(`AudioSpatializationManager isSpatializationEnabled: ${isSpatializationEnabled}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error}`);
+}
+```
+
 ## isSpatializationEnabled
 
 ```TypeScript
@@ -538,33 +568,7 @@ Checks whether the spatialization is enabled by the specified device.
 
 **Examples**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor: audio.AudioDeviceDescriptor = {
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
-  id : 1,
-  name : "",
-  address : "123",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : ""
-};
-
-try {
-  let isSpatializationEnabled: boolean = audioSpatializationManager.isSpatializationEnabled(deviceDescriptor);
-  console.info(`AudioSpatializationManager isSpatializationEnabled: ${isSpatializationEnabled}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
+See [isSpatializationEnabled](#isspatializationenabled)
 
 ## isSpatializationSupported
 
@@ -674,155 +678,6 @@ try {
 }
 ```
 
-## offAdaptiveSpatialRenderingEnabledChangeForAnyDevice
-
-```TypeScript
-offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void
-```
-
-Unsubscribes to the adaptive spatial rendering enable state change events by the specified device.
-
-**Since:** 24
-
-<!--Device-AudioSpatializationManager-offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Spatialization
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | No | Callback used to get the adaptive spatial rendering enable state by the specified device. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-## offHeadTrackingEnabledChangeForAnyDevice
-
-```TypeScript
-offHeadTrackingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void
-```
-
-Unsubscribes to the head tracking enable state change events by the specified device.
-
-**Since:** 23
-
-<!--Device-AudioSpatializationManager-offHeadTrackingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-offHeadTrackingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Spatialization
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | No | Callback used to get the head tracking enable state by the specified device. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-## offPersonalizedSpatializationEnabledChangeForAnyDevice
-
-```TypeScript
-offPersonalizedSpatializationEnabledChangeForAnyDevice(
-        callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void
-```
-
-Unsubscribes to the personalized spatialization enable state change events by the specified device.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AudioSpatializationManager-offPersonalizedSpatializationEnabledChangeForAnyDevice(        callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void--><!--Device-AudioSpatializationManager-offPersonalizedSpatializationEnabledChangeForAnyDevice(        callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Spatialization
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioPersonalizedSpatialEnabledChangeForAnyDevice](arkts-audio-audio-audiopersonalizedspatialenabledchangeforanydevice-i-sys.md)&gt; | No | Callback used to get the personalized spatialization enable state by the specified device. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-
-## offSpatialAudioSourceTypeChange
-
-```TypeScript
-offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): void
-```
-
-Unsubscribes from the spatial audio source type change events.
-
-**Since:** 24
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AudioSpatializationManager-offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): void--><!--Device-AudioSpatializationManager-offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Spatialization
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SpatialAudioSourceType](arkts-audio-audio-spatialaudiosourcetype-e-sys.md)&gt; | No | Callback used to receive the current spatial audio source type change. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-## offSpatializationEnabledChangeForAnyDevice
-
-```TypeScript
-offSpatializationEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void
-```
-
-Unsubscribes to the spatialization enable state change events by the specified device.
-
-**Since:** 23
-
-<!--Device-AudioSpatializationManager-offSpatializationEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-offSpatializationEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Spatialization
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | No | Callback used to get the spatialization enable state by the specified device. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
 ## off('headTrackingEnabledChange')
 
 ```TypeScript
@@ -848,7 +703,7 @@ Unsubscribes to the head tracking enable state change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChange' | Yes | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Callback used to get the head tracking enable state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to get the head tracking enable state. |
 
 **Error codes:**
 
@@ -897,7 +752,7 @@ Unsubscribes to the head tracking enable state change events by the specified de
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChangeForAnyDevice' | Yes | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | No | Callback used to get the head tracking enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | No | Callback used to get the head tracking enable state by the specified device. |
 
 **Error codes:**
 
@@ -951,7 +806,7 @@ Unsubscribes to the spatialization enable state change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChange' | Yes | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Callback used to get the spatialization enable state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to get the spatialization enable state. |
 
 **Error codes:**
 
@@ -998,7 +853,7 @@ Unsubscribes to the spatialization enable state change events by the specified d
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChangeForAnyDevice' | Yes | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | No | Callback used to get the spatialization enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | No | Callback used to get the spatialization enable state by the specified device. |
 
 **Error codes:**
 
@@ -1027,17 +882,17 @@ audioSpatializationManager.on('spatializationEnabledChangeForAnyDevice', spatial
 audioSpatializationManager.off('spatializationEnabledChangeForAnyDevice', spatializationEnabledChangeForAnyDeviceCallback);
 ```
 
-## onAdaptiveSpatialRenderingEnabledChangeForAnyDevice
+## offAdaptiveSpatialRenderingEnabledChangeForAnyDevice
 
 ```TypeScript
-onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void
+offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the adaptive spatial rendering enable state change events by the specified device. When the adaptive spatial rendering enable state changes, registered clients will receive the callback.
+Unsubscribes to the adaptive spatial rendering enable state change events by the specified device.
 
 **Since:** 24
 
-<!--Device-AudioSpatializationManager-onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+<!--Device-AudioSpatializationManager-offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1047,7 +902,7 @@ Subscribes to the adaptive spatial rendering enable state change events by the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | Yes | Callback used to get the adaptive spatial rendering enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | No | Callback used to get the adaptive spatial rendering enable state by the specified device. |
 
 **Error codes:**
 
@@ -1056,17 +911,17 @@ Subscribes to the adaptive spatial rendering enable state change events by the s
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onHeadTrackingEnabledChangeForAnyDevice
+## offHeadTrackingEnabledChangeForAnyDevice
 
 ```TypeScript
-onHeadTrackingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void
+offHeadTrackingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the head tracking enable state change events by the specified device. When the head tracking enable state changes, registered clients will receive the callback.
+Unsubscribes to the head tracking enable state change events by the specified device.
 
 **Since:** 23
 
-<!--Device-AudioSpatializationManager-onHeadTrackingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-onHeadTrackingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+<!--Device-AudioSpatializationManager-offHeadTrackingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-offHeadTrackingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1076,7 +931,7 @@ Subscribes to the head tracking enable state change events by the specified devi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | Yes | Callback used to get the head tracking enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | No | Callback used to get the head tracking enable state by the specified device. |
 
 **Error codes:**
 
@@ -1085,20 +940,20 @@ Subscribes to the head tracking enable state change events by the specified devi
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onPersonalizedSpatializationEnabledChangeForAnyDevice
+## offPersonalizedSpatializationEnabledChangeForAnyDevice
 
 ```TypeScript
-onPersonalizedSpatializationEnabledChangeForAnyDevice(
-        callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void
+offPersonalizedSpatializationEnabledChangeForAnyDevice(
+        callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void
 ```
 
-Subscribes to the personalized spatialization enable state change events by the specified device. When the state changes, registered clients will receive the callback.
+Unsubscribes to the personalized spatialization enable state change events by the specified device.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AudioSpatializationManager-onPersonalizedSpatializationEnabledChangeForAnyDevice(        callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void--><!--Device-AudioSpatializationManager-onPersonalizedSpatializationEnabledChangeForAnyDevice(        callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void-End-->
+<!--Device-AudioSpatializationManager-offPersonalizedSpatializationEnabledChangeForAnyDevice(        callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void--><!--Device-AudioSpatializationManager-offPersonalizedSpatializationEnabledChangeForAnyDevice(        callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1108,27 +963,27 @@ Subscribes to the personalized spatialization enable state change events by the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioPersonalizedSpatialEnabledChangeForAnyDevice](arkts-audio-audio-audiopersonalizedspatialenabledchangeforanydevice-i-sys.md)&gt; | Yes | Callback used to get the personalized spatialization enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioPersonalizedSpatialEnabledChangeForAnyDevice](arkts-audio-audio-audiopersonalizedspatialenabledchangeforanydevice-i-sys.md)&gt; | No | Callback used to get the personalized spatialization enable state by the specified device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
-## onSpatialAudioSourceTypeChange
+## offSpatialAudioSourceTypeChange
 
 ```TypeScript
-onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void
+offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): void
 ```
 
-Subscribes to the spatial audio source type change events. When the current spatial audio source type changes, registered clients will receive callbacks.
+Unsubscribes from the spatial audio source type change events.
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AudioSpatializationManager-onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void--><!--Device-AudioSpatializationManager-onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void-End-->
+<!--Device-AudioSpatializationManager-offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): void--><!--Device-AudioSpatializationManager-offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1138,7 +993,7 @@ Subscribes to the spatial audio source type change events. When the current spat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SpatialAudioSourceType](arkts-audio-audio-spatialaudiosourcetype-e-sys.md)&gt; | Yes | Callback used to receive the current spatial audio source type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SpatialAudioSourceType](arkts-audio-audio-spatialaudiosourcetype-e-sys.md)&gt; | No | Callback used to receive the current spatial audio source type change. |
 
 **Error codes:**
 
@@ -1147,17 +1002,17 @@ Subscribes to the spatial audio source type change events. When the current spat
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onSpatializationEnabledChangeForAnyDevice
+## offSpatializationEnabledChangeForAnyDevice
 
 ```TypeScript
-onSpatializationEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void
+offSpatializationEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the spatialization enable state change events by the specified device. When the spatialization enable state changes, registered clients will receive the callback.
+Unsubscribes to the spatialization enable state change events by the specified device.
 
 **Since:** 23
 
-<!--Device-AudioSpatializationManager-onSpatializationEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-onSpatializationEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+<!--Device-AudioSpatializationManager-offSpatializationEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-offSpatializationEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1167,7 +1022,7 @@ Subscribes to the spatialization enable state change events by the specified dev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | Yes | Callback used to get the spatialization enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | No | Callback used to get the spatialization enable state by the specified device. |
 
 **Error codes:**
 
@@ -1201,7 +1056,7 @@ Subscribes to the head tracking enable state change events. When the head tracki
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChange' | Yes | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback used to get the head tracking enable state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback used to get the head tracking enable state. |
 
 **Error codes:**
 
@@ -1242,7 +1097,7 @@ Subscribes to the head tracking enable state change events by the specified devi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChangeForAnyDevice' | Yes | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | Yes | Callback used to get the head tracking enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | Yes | Callback used to get the head tracking enable state by the specified device. |
 
 **Error codes:**
 
@@ -1288,7 +1143,7 @@ Subscribes to the spatialization enable state change events. When the spatializa
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChange' | Yes | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback used to get the spatialization enable state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback used to get the spatialization enable state. |
 
 **Error codes:**
 
@@ -1329,7 +1184,7 @@ Subscribes to the spatialization enable state change events by the specified dev
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChangeForAnyDevice' | Yes | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | Yes | Callback used to get the spatialization enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | Yes | Callback used to get the spatialization enable state by the specified device. |
 
 **Error codes:**
 
@@ -1349,6 +1204,155 @@ audioSpatializationManager.on('spatializationEnabledChangeForAnyDevice', (audioS
   console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
 });
 ```
+
+## onAdaptiveSpatialRenderingEnabledChangeForAnyDevice
+
+```TypeScript
+onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void
+```
+
+Subscribes to the adaptive spatial rendering enable state change events by the specified device. When the adaptive spatial rendering enable state changes, registered clients will receive the callback.
+
+**Since:** 24
+
+<!--Device-AudioSpatializationManager-onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Spatialization
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | Yes | Callback used to get the adaptive spatial rendering enable state by the specified device. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onHeadTrackingEnabledChangeForAnyDevice
+
+```TypeScript
+onHeadTrackingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void
+```
+
+Subscribes to the head tracking enable state change events by the specified device. When the head tracking enable state changes, registered clients will receive the callback.
+
+**Since:** 23
+
+<!--Device-AudioSpatializationManager-onHeadTrackingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-onHeadTrackingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Spatialization
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | Yes | Callback used to get the head tracking enable state by the specified device. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onPersonalizedSpatializationEnabledChangeForAnyDevice
+
+```TypeScript
+onPersonalizedSpatializationEnabledChangeForAnyDevice(
+        callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void
+```
+
+Subscribes to the personalized spatialization enable state change events by the specified device. When the state changes, registered clients will receive the callback.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioSpatializationManager-onPersonalizedSpatializationEnabledChangeForAnyDevice(        callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void--><!--Device-AudioSpatializationManager-onPersonalizedSpatializationEnabledChangeForAnyDevice(        callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Spatialization
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioPersonalizedSpatialEnabledChangeForAnyDevice](arkts-audio-audio-audiopersonalizedspatialenabledchangeforanydevice-i-sys.md)&gt; | Yes | Callback used to get the personalized spatialization enable state by the specified device. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+
+## onSpatialAudioSourceTypeChange
+
+```TypeScript
+onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void
+```
+
+Subscribes to the spatial audio source type change events. When the current spatial audio source type changes, registered clients will receive callbacks.
+
+**Since:** 24
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioSpatializationManager-onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void--><!--Device-AudioSpatializationManager-onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Spatialization
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SpatialAudioSourceType](arkts-audio-audio-spatialaudiosourcetype-e-sys.md)&gt; | Yes | Callback used to receive the current spatial audio source type. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onSpatializationEnabledChangeForAnyDevice
+
+```TypeScript
+onSpatializationEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void
+```
+
+Subscribes to the spatialization enable state change events by the specified device. When the spatialization enable state changes, registered clients will receive the callback.
+
+**Since:** 23
+
+<!--Device-AudioSpatializationManager-onSpatializationEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-onSpatializationEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Spatialization
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | Yes | Callback used to get the spatialization enable state by the specified device. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## setAdaptiveSpatialRenderingEnabled
 
@@ -1417,7 +1421,7 @@ Sets the head tracking enabled or disabled. This method uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Head tracking enable state. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1442,6 +1446,46 @@ audioSpatializationManager.setHeadTrackingEnabled(enable, (err: BusinessError) =
   } else {
     console.info(`setHeadTrackingEnabled success`);
   }
+});
+```
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let enable: boolean = true;
+
+audioSpatializationManager.setHeadTrackingEnabled(enable).then(() => {
+  console.info(`setHeadTrackingEnabled success`);
+}).catch((err: BusinessError) => {
+  console.error(`Result ERROR: ${err}`);
+});
+```
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let deviceDescriptor: audio.AudioDeviceDescriptor = {
+  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
+  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
+  id : 1,
+  name : "",
+  address : "123",
+  sampleRates : [44100],
+  channelCounts : [2],
+  channelMasks : [0],
+  networkId : audio.LOCAL_NETWORK_ID,
+  interruptGroupId : 1,
+  volumeGroupId : 1,
+  displayName : ""
+};
+let enable: boolean = true;
+
+audioSpatializationManager.setHeadTrackingEnabled(deviceDescriptor, enable).then(() => {
+  console.info(`setHeadTrackingEnabled success`);
+}).catch((err: BusinessError) => {
+  console.error(`Result ERROR: ${err}`);
 });
 ```
 
@@ -1489,18 +1533,7 @@ Sets the head tracking enabled or disabled. This method uses a promise to return
 
 **Examples**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let enable: boolean = true;
-
-audioSpatializationManager.setHeadTrackingEnabled(enable).then(() => {
-  console.info(`setHeadTrackingEnabled success`);
-}).catch((err: BusinessError) => {
-  console.error(`Result ERROR: ${err}`);
-});
-```
+See [setHeadTrackingEnabled](#setheadtrackingenabled)
 
 ## setHeadTrackingEnabled
 
@@ -1544,32 +1577,7 @@ Sets the head tracking enabled or disabled by the specified device. This method 
 
 **Examples**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor: audio.AudioDeviceDescriptor = {
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
-  id : 1,
-  name : "",
-  address : "123",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : ""
-};
-let enable: boolean = true;
-
-audioSpatializationManager.setHeadTrackingEnabled(deviceDescriptor, enable).then(() => {
-  console.info(`setHeadTrackingEnabled success`);
-}).catch((err: BusinessError) => {
-  console.error(`Result ERROR: ${err}`);
-});
-```
+See [setHeadTrackingEnabled](#setheadtrackingenabled)
 
 ## setPersonalizedSpatializationEnabled
 
@@ -1639,7 +1647,7 @@ Sets the spatialization enabled or disabled. This method uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Spatialization enable state. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1664,6 +1672,46 @@ audioSpatializationManager.setSpatializationEnabled(enable, (err: BusinessError)
   } else {
     console.info(`setSpatializationEnabled success`);
   }
+});
+```
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let enable: boolean = true;
+
+audioSpatializationManager.setSpatializationEnabled(enable).then(() => {
+  console.info(`setSpatializationEnabled success`);
+}).catch((err: BusinessError) => {
+  console.error(`Result ERROR: ${err}`);
+});
+```
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let deviceDescriptor: audio.AudioDeviceDescriptor = {
+  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
+  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
+  id : 1,
+  name : "",
+  address : "123",
+  sampleRates : [44100],
+  channelCounts : [2],
+  channelMasks : [0],
+  networkId : audio.LOCAL_NETWORK_ID,
+  interruptGroupId : 1,
+  volumeGroupId : 1,
+  displayName : ""
+};
+let enabled: boolean = true;
+
+audioSpatializationManager.setSpatializationEnabled(deviceDescriptor, enabled).then(() => {
+  console.info(`setSpatializationEnabled success`);
+}).catch((err: BusinessError) => {
+  console.error(`Result ERROR: ${err}`);
 });
 ```
 
@@ -1711,18 +1759,7 @@ Sets the spatialization enabled or disabled. This method uses a promise to retur
 
 **Examples**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let enable: boolean = true;
-
-audioSpatializationManager.setSpatializationEnabled(enable).then(() => {
-  console.info(`setSpatializationEnabled success`);
-}).catch((err: BusinessError) => {
-  console.error(`Result ERROR: ${err}`);
-});
-```
+See [setSpatializationEnabled](#setspatializationenabled)
 
 ## setSpatializationEnabled
 
@@ -1766,32 +1803,7 @@ Sets the spatialization enabled or disabled by the specified device. This method
 
 **Examples**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor: audio.AudioDeviceDescriptor = {
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
-  id : 1,
-  name : "",
-  address : "123",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : ""
-};
-let enabled: boolean = true;
-
-audioSpatializationManager.setSpatializationEnabled(deviceDescriptor, enabled).then(() => {
-  console.info(`setSpatializationEnabled success`);
-}).catch((err: BusinessError) => {
-  console.error(`Result ERROR: ${err}`);
-});
-```
+See [setSpatializationEnabled](#setspatializationenabled)
 
 ## setSpatializationSceneType
 

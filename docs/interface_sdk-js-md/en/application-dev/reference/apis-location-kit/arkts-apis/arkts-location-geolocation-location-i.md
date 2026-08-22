@@ -44,28 +44,6 @@ Indicates location accuracy, in meters.
 
 **System capability:** SystemCapability.Location.Location.Core
 
-## additionSize
-
-```TypeScript
-additionSize?: number
-```
-
-Indicates the amount of additional descriptive information.
-
-**Type:** number
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [additionSize](arkts-location-geolocationmanager-location-i.md#additionsize)
-
-**Required permissions:** ohos.permission.LOCATION
-
-<!--Device-Location-additionSize?: number--><!--Device-Location-additionSize?: number-End-->
-
-**System capability:** SystemCapability.Location.Location.Core
-
 ## additions
 
 ```TypeScript
@@ -85,6 +63,28 @@ Indicates additional information.
 **Required permissions:** ohos.permission.LOCATION
 
 <!--Device-Location-additions?: Array<string>--><!--Device-Location-additions?: Array<string>-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+
+## additionSize
+
+```TypeScript
+additionSize?: number
+```
+
+Indicates the amount of additional descriptive information.
+
+**Type:** number
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [additionSize](arkts-location-geolocationmanager-location-i.md#additionsize)
+
+**Required permissions:** ohos.permission.LOCATION
+
+<!--Device-Location-additionSize?: number--><!--Device-Location-additionSize?: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 

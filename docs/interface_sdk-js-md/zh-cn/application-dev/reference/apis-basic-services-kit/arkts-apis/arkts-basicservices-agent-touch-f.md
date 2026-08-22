@@ -53,6 +53,18 @@ request.agent.touch("123456", "token", (err: BusinessError<void> | null, taskInf
 });
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+request.agent.touch("123456", "token").then((taskInfo: request.agent.TaskInfo) => {
+  console.info(`Succeeded in touching a upload task. `);
+}).catch((err: Error) => {
+  console.error(`Failed to touch a upload task, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## touch
 
@@ -91,15 +103,5 @@ function touch(id: string, token: string): Promise<TaskInfo>
 
 **示例**
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-request.agent.touch("123456", "token").then((taskInfo: request.agent.TaskInfo) => {
-  console.info(`Succeeded in touching a upload task. `);
-}).catch((err: Error) => {
-  console.error(`Failed to touch a upload task, Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [touch](#touch)
 

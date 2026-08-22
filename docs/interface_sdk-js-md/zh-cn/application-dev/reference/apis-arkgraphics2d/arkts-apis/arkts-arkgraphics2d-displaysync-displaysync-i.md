@@ -14,39 +14,6 @@
 import { displaySync } from '@kit.ArkGraphics2D';
 ```
 
-## offFrame
-
-```TypeScript
-offFrame(callback?: Callback<IntervalInfo>): void
-```
-
-取消订阅每一帧的变化。
-
-**起始版本：** 23
-
-<!--Device-DisplaySync-offFrame(callback?: Callback<IntervalInfo>): void--><!--Device-DisplaySync-offFrame(callback?: Callback<IntervalInfo>): void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | 否 | 订阅函数，参数不填时，默认取消全部订阅函数。 |
-
-**示例**
-
-```TypeScript
-let callback = (frameInfo: displaySync.IntervalInfo) => {
-    console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
-}
-
-backDisplaySync?.onFrame(callback)
-
-// 取消订阅函数
-backDisplaySync?.offFrame(callback)
-```
-
 ## off('frame')
 
 ```TypeScript
@@ -81,17 +48,17 @@ backDisplaySync?.on("frame", callback)
 backDisplaySync?.off("frame", callback)
 ```
 
-## onFrame
+## offFrame
 
 ```TypeScript
-onFrame(callback: Callback<IntervalInfo>): void
+offFrame(callback?: Callback<IntervalInfo>): void
 ```
 
-订阅每一帧的变化。
+取消订阅每一帧的变化。
 
 **起始版本：** 23
 
-<!--Device-DisplaySync-onFrame(callback: Callback<IntervalInfo>): void--><!--Device-DisplaySync-onFrame(callback: Callback<IntervalInfo>): void-End-->
+<!--Device-DisplaySync-offFrame(callback?: Callback<IntervalInfo>): void--><!--Device-DisplaySync-offFrame(callback?: Callback<IntervalInfo>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -99,7 +66,7 @@ onFrame(callback: Callback<IntervalInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | 是 | 订阅函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | 否 | 订阅函数，参数不填时，默认取消全部订阅函数。 |
 
 **示例**
 
@@ -108,8 +75,10 @@ let callback = (frameInfo: displaySync.IntervalInfo) => {
     console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
 }
 
-// 注册订阅函数
 backDisplaySync?.onFrame(callback)
+
+// 取消订阅函数
+backDisplaySync?.offFrame(callback)
 ```
 
 ## on('frame')
@@ -142,6 +111,37 @@ let callback = (frameInfo: displaySync.IntervalInfo) => {
 
 // 注册订阅函数
 backDisplaySync?.on("frame", callback)
+```
+
+## onFrame
+
+```TypeScript
+onFrame(callback: Callback<IntervalInfo>): void
+```
+
+订阅每一帧的变化。
+
+**起始版本：** 23
+
+<!--Device-DisplaySync-onFrame(callback: Callback<IntervalInfo>): void--><!--Device-DisplaySync-onFrame(callback: Callback<IntervalInfo>): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | 是 | 订阅函数。 |
+
+**示例**
+
+```TypeScript
+let callback = (frameInfo: displaySync.IntervalInfo) => {
+    console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
+}
+
+// 注册订阅函数
+backDisplaySync?.onFrame(callback)
 ```
 
 ## setExpectedFrameRateRange

@@ -20,3 +20,7 @@ The callback when the param element which is a child item of the object element 
 | --- | --- | --- | --- |
 | event | [NativeEmbedParamDataInfo](arkts-web-nativeembedparamdatainfo-i.md) | Yes | callback information of param element. |
 
+**Examples**
+
+For details about the sample code, see [onNativeEmbedObjectParamChange](./arkts-basic-components-web-events.md#onnativeembedobjectparamchange21).
+

@@ -52,3 +52,11 @@ Truncates the file content. This API returns the result synchronously.
 | 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let len: number = 5;
+fs.truncateSync(filePath, len);
+```
+

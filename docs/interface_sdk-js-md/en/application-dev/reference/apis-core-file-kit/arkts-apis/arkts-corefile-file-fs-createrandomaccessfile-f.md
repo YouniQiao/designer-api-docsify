@@ -27,15 +27,15 @@ Creates a **RandomAccessFile** instance based on the specified file path or file
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string \| [File](arkts-corefile-filefs-file-i.md) | Yes | Application sandbox path of the file or an opened file object. |
+| file | string \| [File](arkts-corefile-file-fs-file-i.md) | Yes | Application sandbox path of the file or an opened file object. |
 | mode | number | No | Mode for creating the **RandomAccessFile** instance. This parameter is valid only when the application sandbox path of the file is passed in. One of the following options must be specified:<br>- **OpenMode.READ_ONLY(0o0)**: Create the file in read-only mode. This is the default value.<br>- **OpenMode.WRITE_ONLY(0o1)**: Create the file in write-only mode. <br>- **OpenMode.READ_WRITE(0o2)**: Create the file in read/write mode.<br>You can also specify the following options, separated by a bitwise OR operator (\|). By default, no additional options are given.<br>- **OpenMode.CREATE(0o100)**: If the file does not exist, create it.<br>- **OpenMode.TRUNC(0o1000)**: If the **RandomAccessFile** object already exists and is created in write mode, truncate the file length to 0.<br>- **OpenMode.APPEND(0o2000)**: Create the file in append mode. New data will be added to the end of the **RandomAccessFile** object. <br>- **OpenMode.NONBLOCK(0o4000)**: If **path** points to a named pipe (also known as a FIFO), block special file, or character special file, perform non-blocking operations on the opened file and in subsequent I/Os.<br>- **OpenMode.DIR(0o200000)**: If **path** does not point to a directory, throw an exception. The write permission is not allowed.<br>- **OpenMode.NOFOLLOW(0o400000)**: If **path** points to a symbolic link, throw an exception.<br>- **OpenMode.SYNC(0o4010000)**: Create a **RandomAccessFile** instance in synchronous I/O mode. |
-| options | [RandomAccessFileOptions](../../apis-default/arkts-apis/arkts-filefs-randomaccessfileoptions-i.md) | No | The options are as follows:<br>- **start** (number): start position to read data, in bytes. This parameter is optional. By default, data is read from the current position.<br>- **end** (number): end position to read data, in bytes. This parameter is optional. The default value is the end of the file.<br>This parameter takes effect only for file stream objects obtained by [getreadstream](arkts-corefile-filefs-randomaccessfile-i.md#getreadstream) and [getwritestream](arkts-corefile-filefs-randomaccessfile-i.md#getwritestream) .<br>**Since:** 12 |
+| options | [RandomAccessFileOptions](arkts-corefile-file-fs-randomaccessfileoptions-i.md) | No | The options are as follows:<br>- **start** (number): start position to read data, in bytes. This parameter is optional. By default, data is read from the current position.<br>- **end** (number): end position to read data, in bytes. This parameter is optional. The default value is the end of the file.<br>This parameter takes effect only for file stream objects obtained by [getreadstream](arkts-corefile-file-fs-randomaccessfile-i.md#getreadstream) and [getwritestream](arkts-corefile-file-fs-randomaccessfile-i.md#getwritestream) .<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[RandomAccessFile](arkts-corefile-filefs-randomaccessfile-i.md)&gt; | Promise used to return the **RandomAccessFile** instance created. |
+| Promise&lt;[RandomAccessFile](arkts-corefile-file-fs-randomaccessfile-i.md)&gt; | Promise used to return the **RandomAccessFile** instance created. |
 
 **Error codes:**
 
@@ -69,6 +69,52 @@ Creates a **RandomAccessFile** instance based on the specified file path or file
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + "/test.txt";
+let file = fs.openSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
+fs.createRandomAccessFile(file).then((randomAccessFile: fs.RandomAccessFile) => {
+  console.info("randomAccessFile fd: " + randomAccessFile.fd);
+  randomAccessFile.close();
+}).catch((err: BusinessError) => {
+  console.error("create randomAccessFile failed with error message: " + err.message + ", error code: " + err.code);
+}).finally(() => {
+  fs.closeSync(file);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + "/test.txt";
+let file = fs.openSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
+fs.createRandomAccessFile(file, (err: BusinessError, randomAccessFile: fs.RandomAccessFile) => {
+  if (err) {
+    console.error("create randomAccessFile failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("randomAccessFile fd: " + randomAccessFile.fd);
+    randomAccessFile.close();
+  }
+  fs.closeSync(file);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + "/test.txt";
+let file = fs.openSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
+fs.createRandomAccessFile(file, fs.OpenMode.READ_ONLY, (err: BusinessError, randomAccessFile: fs.RandomAccessFile) => {
+  if (err) {
+    console.error("create randomAccessFile failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("randomAccessFile fd: " + randomAccessFile.fd);
+    randomAccessFile.close();
+  }
+  fs.closeSync(file);
+});
+```
+
 
 ## createRandomAccessFile
 
@@ -88,8 +134,8 @@ Creates a **RandomAccessFile** object in read-only mode based on a file path or 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string \| [File](arkts-corefile-filefs-file-i.md) | Yes | Application sandbox path of the file or an opened file object. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RandomAccessFile](arkts-corefile-filefs-randomaccessfile-i.md)&gt; | Yes | Callback used to return the **RandomAccessFile** instance created. |
+| file | string \| [File](arkts-corefile-file-fs-file-i.md) | Yes | Application sandbox path of the file or an opened file object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RandomAccessFile](arkts-corefile-file-fs-randomaccessfile-i.md)&gt; | Yes | Callback used to return the **RandomAccessFile** instance created. |
 
 **Error codes:**
 
@@ -121,6 +167,10 @@ Creates a **RandomAccessFile** object in read-only mode based on a file path or 
 | 13900038 | Value too large for defined data type |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [createRandomAccessFile](#createrandomaccessfile)
 
 
 ## createRandomAccessFile
@@ -141,9 +191,9 @@ Creates a **RandomAccessFile** instance based on a file path or file object. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string \| [File](arkts-corefile-filefs-file-i.md) | Yes | Application sandbox path of the file or an opened file object. |
+| file | string \| [File](arkts-corefile-file-fs-file-i.md) | Yes | Application sandbox path of the file or an opened file object. |
 | mode | number | Yes | Mode for creating the **RandomAccessFile** instance. This parameter is valid only when the application sandbox path of the file is passed in. One of the following options must be specified:<br>- **OpenMode.READ_ONLY(0o0)**: Create the file in read-only mode. This is the default value.<br>- **OpenMode.WRITE_ONLY(0o1)**: Create the file in write-only mode. <br>- **OpenMode.READ_WRITE(0o2)**: Create the file in read/write mode.<br>You can also specify the following options, separated by a bitwise OR operator (\|). By default, no additional options are given.<br>- **OpenMode.CREATE(0o100)**: If the file does not exist, create it.<br>- **OpenMode.TRUNC(0o1000)**: If the **RandomAccessFile** object already exists and is created in write mode, truncate the file length to 0.<br>- **OpenMode.APPEND(0o2000)**: Create the file in append mode. New data will be added to the end of the **RandomAccessFile** object. <br>- **OpenMode.NONBLOCK(0o4000)**: If **path** points to a named pipe (also known as a FIFO), block special file, or character special file, perform non-blocking operations on the opened file and in subsequent I/Os.<br>- **OpenMode.DIR(0o200000)**: If **path** does not point to a directory, throw an exception. The write permission is not allowed.<br>- **OpenMode.NOFOLLOW(0o400000)**: If **path** points to a symbolic link, throw an exception.<br>- **OpenMode.SYNC(0o4010000)**: Create a **RandomAccessFile** instance in synchronous I/O mode. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RandomAccessFile](arkts-corefile-filefs-randomaccessfile-i.md)&gt; | Yes | Callback used to return the **RandomAccessFile** instance created. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RandomAccessFile](arkts-corefile-file-fs-randomaccessfile-i.md)&gt; | Yes | Callback used to return the **RandomAccessFile** instance created. |
 
 **Error codes:**
 
@@ -175,4 +225,8 @@ Creates a **RandomAccessFile** instance based on a file path or file object. Thi
 | 13900038 | Value too large for defined data type |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [createRandomAccessFile](#createrandomaccessfile)
 

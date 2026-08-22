@@ -2,7 +2,7 @@
 
 Manager OPP server profile.
 
-**Since:** 26.0.0
+**Since:** 16
 
 <!--Device-opp-interface OppServerProfile--><!--Device-opp-interface OppServerProfile-End-->
 
@@ -22,7 +22,7 @@ cancelTransfer(): Promise<void>
 
 cancel the current file transfer action.
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -77,7 +77,7 @@ getCurrentTransferInformation(): Promise<OppTransferInformation>
 
 Obtains the information about the file that is being transferred. On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
@@ -111,81 +111,20 @@ Obtains the information about the file that is being transferred. On API 26.0.0 
 | 2900099 | Failed to obtain the current transmission information. |
 | 2903004 | Current Transfer Information is empty. |
 
-## offReceiveIncomingFile
+**Examples**
 
 ```TypeScript
-offReceiveIncomingFile(callback?: Callback<OppTransferInformation>): void
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { opp } from '@kit.ConnectivityKit';
+// Create fileHolders.
+try {
+    let oppProfile = opp.createOppServerProfile();
+    let data = oppProfile.getCurrentTransferInformation();
+} catch (err) {
+      console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
 ```
-
-Unsubscribe to the event of receiving a file transfer request.
-
-**Since:** 26.0.0
-
-**Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-OppServerProfile-offReceiveIncomingFile(callback?: Callback<OppTransferInformation>): void--><!--Device-OppServerProfile-offReceiveIncomingFile(callback?: Callback<OppTransferInformation>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OppTransferInformation](arkts-connectivity-opp-opptransferinformation-i-sys.md)&gt; | No | Callback used to listen for event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 2900001 | Service stopped. |
-| 2900003 | Bluetooth disabled. |
-| 2900004 | Profile not supported. |
-
-## offTransferStateChange
-
-```TypeScript
-offTransferStateChange(callback?: Callback<OppTransferInformation>): void
-```
-
-Unsubscribe the event reported when the file transfer status changes.
-
-**Since:** 26.0.0
-
-**Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-OppServerProfile-offTransferStateChange(callback?: Callback<OppTransferInformation>): void--><!--Device-OppServerProfile-offTransferStateChange(callback?: Callback<OppTransferInformation>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OppTransferInformation](arkts-connectivity-opp-opptransferinformation-i-sys.md)&gt; | No | Callback used to listen for event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 2900001 | Service stopped. |
-| 2900003 | Bluetooth disabled. |
-| 2900004 | Profile not supported. |
 
 ## off('receiveIncomingFile')
 
@@ -212,7 +151,7 @@ Unsubscribe to the event of receiving a file transfer request.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'receiveIncomingFile' | Yes | Type of the event for receiving a file request to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OppTransferInformation](arkts-connectivity-opp-opptransferinformation-i-sys.md)&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OppTransferInformation](arkts-connectivity-opp-opptransferinformation-i-sys.md)&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -266,7 +205,7 @@ Unsubscribe the event reported when the file transfer status changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'transferStateChange' | Yes | Type of transport state change event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OppTransferInformation](arkts-connectivity-opp-opptransferinformation-i-sys.md)&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OppTransferInformation](arkts-connectivity-opp-opptransferinformation-i-sys.md)&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -296,82 +235,6 @@ try {
 }
 ```
 
-## onReceiveIncomingFile
-
-```TypeScript
-onReceiveIncomingFile(callback: Callback<OppTransferInformation>): void
-```
-
-Subscribe to the event of receiving a file transfer request. If the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
-
-**Since:** 26.0.0
-
-**Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-OppServerProfile-onReceiveIncomingFile(callback: Callback<OppTransferInformation>): void--><!--Device-OppServerProfile-onReceiveIncomingFile(callback: Callback<OppTransferInformation>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OppTransferInformation](arkts-connectivity-opp-opptransferinformation-i-sys.md)&gt; | Yes | Callback used to listen for event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 2900001 | Service stopped. |
-| 2900003 | Bluetooth disabled. |
-| 2900004 | Profile not supported. |
-
-## onTransferStateChange
-
-```TypeScript
-onTransferStateChange(callback: Callback<OppTransferInformation>): void
-```
-
-Subscribe the event reported when the file transfer status changes. If the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
-
-**Since:** 26.0.0
-
-**Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-OppServerProfile-onTransferStateChange(callback: Callback<OppTransferInformation>): void--><!--Device-OppServerProfile-onTransferStateChange(callback: Callback<OppTransferInformation>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OppTransferInformation](arkts-connectivity-opp-opptransferinformation-i-sys.md)&gt; | Yes | Callback used to listen for event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 2900001 | Service stopped. |
-| 2900003 | Bluetooth disabled. |
-| 2900004 | Profile not supported. |
-
 ## on('receiveIncomingFile')
 
 ```TypeScript
@@ -399,7 +262,7 @@ Subscribe to the event of receiving a file transfer request. On API 26.0.0 and a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'receiveIncomingFile' | Yes | Type of the event for receiving a file request to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OppTransferInformation](arkts-connectivity-opp-opptransferinformation-i-sys.md)&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OppTransferInformation](arkts-connectivity-opp-opptransferinformation-i-sys.md)&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -464,7 +327,7 @@ Subscribe the event reported when the file transfer status changes. On API 26.0.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'transferStateChange' | Yes | Type of transport state change event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OppTransferInformation](arkts-connectivity-opp-opptransferinformation-i-sys.md)&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OppTransferInformation](arkts-connectivity-opp-opptransferinformation-i-sys.md)&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -510,7 +373,7 @@ sendFile(deviceId: string, fileHolds: Array<FileHolder>): Promise<void>
 
 Send files to the remote device.
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -591,7 +454,7 @@ setIncomingFileConfirmation(accept: boolean, fileFd: int): Promise<void>
 
 Set the user confirmation information for incoming files.
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -663,7 +526,7 @@ setLastReceivedFileUri(uri: string): Promise<void>
 
 Set the URI of the last received file.
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 

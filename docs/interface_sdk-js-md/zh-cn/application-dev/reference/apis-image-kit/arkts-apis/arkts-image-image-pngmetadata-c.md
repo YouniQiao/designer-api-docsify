@@ -194,24 +194,6 @@ PNG modification time.
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
-## sRGBIntent
-
-```TypeScript
-readonly sRGBIntent?: int
-```
-
-PNG sRGB rendering intent. The value should be an integer.
-
-**类型：** int
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PngMetadata-readonly sRGBIntent?: int--><!--Device-PngMetadata-readonly sRGBIntent?: int-End-->
-
-**系统能力：** SystemCapability.Multimedia.Image.Core
-
 ## software
 
 ```TypeScript
@@ -227,6 +209,24 @@ PNG software.
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PngMetadata-readonly software?: string--><!--Device-PngMetadata-readonly software?: string-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
+## sRGBIntent
+
+```TypeScript
+readonly sRGBIntent?: int
+```
+
+PNG sRGB rendering intent. The value should be an integer.
+
+**类型：** int
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PngMetadata-readonly sRGBIntent?: int--><!--Device-PngMetadata-readonly sRGBIntent?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

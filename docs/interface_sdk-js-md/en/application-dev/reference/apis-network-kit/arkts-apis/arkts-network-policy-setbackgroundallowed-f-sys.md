@@ -29,7 +29,7 @@ Sets whether background applications are allowed to access the network. This API
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isAllowed | boolean | Yes | Whether background applications are allowed to use mobile data. The value **true** indicates that background applications are allowed to use mobile data, and the value **false** indicates the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -48,6 +48,16 @@ Sets whether background applications are allowed to access the network. This API
 import { BusinessError } from '@kit.BasicServicesKit';
 
 policy.setBackgroundAllowed(true, (error: BusinessError) => {
+  console.error(JSON.stringify(error));
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy.setBackgroundAllowed(true).then(() => {
+  console.info("setBackgroundAllowed success");
+}).catch((error: BusinessError) => {
   console.error(JSON.stringify(error));
 });
 ```
@@ -96,13 +106,5 @@ Sets whether background applications are allowed to access the network. This API
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy.setBackgroundAllowed(true).then(() => {
-  console.info("setBackgroundAllowed success");
-}).catch((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
+See [setBackgroundAllowed](#setbackgroundallowed)
 

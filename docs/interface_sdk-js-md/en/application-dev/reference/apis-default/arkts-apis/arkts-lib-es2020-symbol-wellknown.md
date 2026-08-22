@@ -11,6 +11,6 @@
 
 | Name | Description |
 | --- | --- |
-| [RegExp](arkts-libes2020symbolwellknown-regexp-i.md) |  |
-| [SymbolConstructor](arkts-libes2020symbolwellknown-symbolconstructor-i.md) |  |
+| [RegExp](arkts-lib-es2020-symbol-wellknown-regexp-i.md) |  |
+| [SymbolConstructor](arkts-lib-es2020-symbol-wellknown-symbolconstructor-i.md) |  |
 

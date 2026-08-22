@@ -37,6 +37,24 @@ Obtain the information about the found devices.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) | Operation failed. |
 
+**Examples**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+  // The peer device list can be obtained only after the P2P discovery is complete.
+  wifiManager.getP2pPeerDevices((err, data:wifiManager.WifiP2pDevice[]) => {
+    if (err) {
+        console.error("get P2P peer devices error");
+        return;
+    }
+    console.info("get P2P peer devices: " + JSON.stringify(data));
+  });
+
+  wifiManager.getP2pPeerDevices().then(data => {
+    console.info("get P2P peer devices: " + JSON.stringify(data));
+  });
+```
+
 
 ## getP2pPeerDevices
 
@@ -58,7 +76,7 @@ Obtain the information about the found devices.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;WifiP2pDevice[]&gt; | Yes | Indicates callback of function. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pDevice[]&gt; | Yes | Indicates callback of function. |
 
 **Error codes:**
 
@@ -71,19 +89,5 @@ Obtain the information about the found devices.
 
 **Examples**
 
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-  // The peer device list can be obtained only after the P2P discovery is complete.
-  wifiManager.getP2pPeerDevices((err, data:wifiManager.WifiP2pDevice[]) => {
-    if (err) {
-        console.error("get P2P peer devices error");
-        return;
-    }
-    console.info("get P2P peer devices: " + JSON.stringify(data));
-  });
-
-  wifiManager.getP2pPeerDevices().then(data => {
-    console.info("get P2P peer devices: " + JSON.stringify(data));
-  });
-```
+See [getP2pPeerDevices](#getp2ppeerdevices)
 

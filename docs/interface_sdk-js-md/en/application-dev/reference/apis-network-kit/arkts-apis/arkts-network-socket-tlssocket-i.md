@@ -40,7 +40,7 @@ Binds the IP address and port number. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | address | NetAddress | Yes | Local address. For details, see NetAddress. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, the result of binding the local IP address and port number is returned. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, the result of binding the local IP address and port number is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -57,6 +57,93 @@ Binds the IP address and port number. This API uses an asynchronous callback to 
 import { socket } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx', // Local IP address
+  port: 1234
+}
+udp.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx', // Local IP address
+  port: 8080
+}
+udp.bind(bindAddr).then(() => {
+  console.info('bind success');
+}).catch((err: BusinessError) => {
+  console.error('bind fail');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+tcp.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+tcp.bind(bindAddr).then(() => {
+  console.info('bind success');
+}).catch((err: BusinessError) => {
+  console.error('bind fail');
+});
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance()
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let address : socket.LocalAddress = {
+  address: sandboxPath
+}
+client.bind(address).then(() => {
+  console.info('bind success')
+}).catch((err: Object) => {
+  console.error('failed to bind: ' + JSON.stringify(err))
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
 let bindAddr: socket.NetAddress = {
   address: '192.168.xx.xxx',
@@ -68,6 +155,22 @@ tls.bind(bindAddr, (err: BusinessError) => {
     return;
   }
   console.info('bind success');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+tls.bind(bindAddr).then(() => {
+  console.info('bind success');
+}).catch((err: BusinessError) => {
+  console.error('bind fail');
 });
 ```
 
@@ -115,21 +218,7 @@ Binds the IP address and port number. This API uses a promise to return the resu
 
 **Examples**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
-let bindAddr: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-tls.bind(bindAddr).then(() => {
-  console.info('bind success');
-}).catch((err: BusinessError) => {
-  console.error('bind fail');
-});
-```
+See [bind](#bind)
 
 ## close
 
@@ -149,7 +238,7 @@ Closes a **TLSSocket** connection. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -167,6 +256,165 @@ Closes a **TLSSocket** connection. This API uses an asynchronous callback to ret
 import { socket } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+udp.close((err: BusinessError) => {
+  if (err) {
+    console.error('close fail');
+    return;
+  }
+  console.info('close success');
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+udp.close().then(() => {
+  console.info('close success');
+}).catch((err: BusinessError) => {
+  console.error('close fail');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+
+tcp.close((err: BusinessError) => {
+  if (err) {
+    console.error('close fail');
+    return;
+  }
+  console.info('close success');
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+
+tcp.close().then(() => {
+  console.info('close success');
+}).catch((err: BusinessError) => {
+  console.error('close fail');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+let listenAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080,
+  family: 1
+}
+tcpServer.on('connect', (connection: socket.TCPSocketConnection) => {
+  console.info("connection clientId: " + connection.clientId);
+  // Logical processing
+  tcpServer.close(); // Stop event listening.
+  connection.close(); // Close the current connection.
+});
+tcpServer.listen(listenAddr).then(() => {
+  console.info('listen success');
+}).catch((err: BusinessError) => {
+  console.error('listen fail: ' + err.code);
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+
+tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
+  client.close((err: BusinessError) => {
+    if (err) {
+      console.error('close fail');
+      return;
+    }
+    console.info('close success');
+  });
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
+  client.close().then(() => {
+    console.info('close success');
+  }).catch((err: BusinessError) => {
+    console.error('close fail');
+  });
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+
+client.close().then(() => {
+  console.info('close success');
+}).catch((err: Object) => {
+  console.error('close fail: ' + JSON.stringify(err));
+});
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let localserver: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let addr: socket.LocalAddress = {
+  address: sandboxPath
+}
+localserver.on('connect', (connection: socket.LocalSocketConnection) => {
+  console.info("connection clientId: " + connection.clientId);
+  // Logical processing
+  localserver.close(); // Stop event listening.
+  connection.close(); // Close the current connection.
+});
+localserver.listen(addr).then(() => {
+  console.info('listen success');
+}).catch((err: BusinessError) => {
+  console.error('listen fail: ' + err.code);
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
+server.on('connect', (connection: socket.LocalSocketConnection) => {
+  connection.close().then(() => {
+    console.info('close success');
+  }).catch((err: Object) => {
+    console.error('close fail: ' + JSON.stringify(err));
+  });
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
 tls.close((err: BusinessError) => {
   if (err) {
@@ -174,6 +422,134 @@ tls.close((err: BusinessError) => {
   } else {
     console.info("close success");
   }
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
+tls.close().then(() => {
+  console.info("close success");
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.on('connect', (connection: socket.TLSSocketConnection) => {
+  console.info("connection clientId: " + connection.clientId);
+  // Logical processing
+  tlsServer.close(); // Stop event listening.
+  connection.close(); // Close the current connection.
+});
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("listen failed: " + err.code);
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+
+tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
+  client.close((err: BusinessError) => {
+    if (err) {
+      console.error('close fail');
+      return;
+    }
+    console.info('close success');
+  });
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
+  client.close().then(() => {
+    console.info('close success');
+  }).catch((err: BusinessError) => {
+    console.error('close fail');
+  });
 });
 ```
 
@@ -209,17 +585,7 @@ Closes a **TLSSocket** connection. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
-tls.close().then(() => {
-  console.info("close success");
-}).catch((err: BusinessError) => {
-  console.error("failed" + err);
-});
-```
+See [close](#close)
 
 ## connect
 
@@ -240,7 +606,7 @@ Sets up a **TLSSocket** connection, and creates and initializes a TLS session af
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [TLSConnectOptions](arkts-network-socket-tlsconnectoptions-i.md) | Yes | Parameters required for the TLS socket connection. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -271,6 +637,139 @@ Sets up a **TLSSocket** connection, and creates and initializes a TLS session af
 | [2301213](../errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error.<br>**Applicable version:** 18 and later |
 
 **Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tcpconnectoptions: socket.TCPConnectOptions = {
+  address: netAddress,
+  timeout: 6000
+}
+tcp.connect(tcpconnectoptions, (err: BusinessError) => {
+  if (err) {
+    console.error('connect fail');
+    return;
+  }
+  console.info('connect success');
+})
+```
+
+Example (with socket proxy):
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let socks5Server: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let proxyOptions: socket.ProxyOptions = {
+  type : 1,
+  address: socks5Server,
+  username: "xxx",
+  password: "xxx"
+}
+let tcpconnectoptions: socket.TCPConnectOptions = {
+  address: netAddress,
+  timeout: 6000,
+  proxy: proxyOptions,
+}
+tcp.connect(tcpconnectoptions, (err: BusinessError) => {
+  if (err) {
+    console.error('connect fail');
+    return;
+  }
+  console.info('connect success');
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tcpconnectoptions: socket.TCPConnectOptions = {
+  address: netAddress,
+  timeout: 6000
+}
+tcp.connect(tcpconnectoptions).then(() => {
+  console.info('connect success')
+}).catch((err: BusinessError) => {
+  console.error('connect fail');
+});
+```
+
+Example (with socket proxy):
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let socks5Server: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let proxyOptions: socket.ProxyOptions = {
+  type : 1,
+  address: socks5Server,
+  username: "xxx",
+  password: "xxx"
+}
+let tcpconnectoptions: socket.TCPConnectOptions = {
+  address: netAddress,
+  timeout: 6000,
+  proxy: proxyOptions,
+}
+tcp.connect(tcpconnectoptions).then(() => {
+  console.info('connect success')
+}).catch((err: BusinessError) => {
+  console.error('connect fail');
+});
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let localAddress : socket.LocalAddress = {
+  address: sandboxPath
+}
+let connectOpt: socket.LocalConnectOptions = {
+  address: localAddress,
+  timeout: 6000
+}
+client.connect(connectOpt).then(() => {
+  console.info('connect success')
+}).catch((err: Object) => {
+  console.error('connect fail: ' + JSON.stringify(err));
+});
+```
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -422,62 +921,6 @@ tlsOneWay.connect(tlsOneWayConnectOptions, (err: BusinessError) => {
 });
 ```
 
-## connect
-
-```TypeScript
-connect(options: TLSConnectOptions): Promise<void>
-```
-
-Sets up a **TLSSocket** connection, and creates and initializes a TLS session after **bind** is successfully called. During this process, a TLS/SSL handshake is performed between the application and the server to implement data transmission. Both two-way and one-way authentication modes are supported. This API uses a promise to return the result. Note that **ca** in **secureOptions** of the **options** parameter is mandatory in API version 11 or earlier. You need to enter the CA certificate of the server for certificate authentication. The certificate content starts with "-----BEGIN CERTIFICATE-----" and ends with "-----END CERTIFICATE-----". This field is optional since API version 12.
-
-**Since:** 9
-
-<!--Device-TLSSocket-connect(options: TLSConnectOptions): Promise<void>--><!--Device-TLSSocket-connect(options: TLSConnectOptions): Promise<void>-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [TLSConnectOptions](arkts-network-socket-tlsconnectoptions-i.md) | Yes | Parameters required for the connection. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2303104](../errorcode-net-socket.md#2303104-system-call-interrupted) | Interrupted system call. |
-| [2303109](../errorcode-net-socket.md#2303109-error-file-number) | Bad file number. |
-| [2303111](../errorcode-net-socket.md#2303111-requested-resource-temporarily-unavailable) | Resource temporarily unavailable. Try again. |
-| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
-| [2303191](../errorcode-net-socket.md#2303191-incorrect-socket-protocol-type) | Incorrect socket protocol type. |
-| [2303198](../errorcode-net-socket.md#2303198-network-address-already-in-use) | Address already in use. |
-| [2303199](../errorcode-net-socket.md#2303199-failed-to-assign-the-requested-address) | Cannot assign requested address. |
-| [2303210](../errorcode-net-socket.md#2303210-connection-timeout) | Connection timed out. |
-| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
-| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
-| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
-| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2301206](../errorcode-net-socket.md#2301206-failed-to-connect-to-the-proxy-server-via-socks5) | Socks5 failed to connect to the proxy server.<br>**Applicable version:** 18 and later |
-| [2301207](../errorcode-net-socket.md#2301207-invalid-user-name-or-password-for-socks5-authentication) | Socks5 username or password is invalid.<br>**Applicable version:** 18 and later |
-| [2301208](../errorcode-net-socket.md#2301208-failed-to-connect-to-the-remote-server-via-socks5) | Socks5 failed to connect to the remote server.<br>**Applicable version:** 18 and later |
-| [2301209](../errorcode-net-socket.md#2301209-authentication-mode-negotiation-failed-for-socks5) | Socks5 failed to negotiate the authentication method.<br>**Applicable version:** 18 and later |
-| [2301210](../errorcode-net-socket.md#2301210-failed-to-send-messages-via-socks5) | Socks5 failed to send the message.<br>**Applicable version:** 18 and later |
-| [2301211](../errorcode-net-socket.md#2301211-failed-to-receive-messages-via-socks5) | Socks5 failed to receive the message.<br>**Applicable version:** 18 and later |
-| [2301212](../errorcode-net-socket.md#2301212-failed-to-serialize-messages-for-socks5) | Socks5 serialization error.<br>**Applicable version:** 18 and later |
-| [2301213](../errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error.<br>**Applicable version:** 18 and later |
-
-**Examples**
-
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -636,6 +1079,64 @@ tlsOneWay.connect(tlsOneWayConnectOptions).then(() => {
 });
 ```
 
+## connect
+
+```TypeScript
+connect(options: TLSConnectOptions): Promise<void>
+```
+
+Sets up a **TLSSocket** connection, and creates and initializes a TLS session after **bind** is successfully called. During this process, a TLS/SSL handshake is performed between the application and the server to implement data transmission. Both two-way and one-way authentication modes are supported. This API uses a promise to return the result. Note that **ca** in **secureOptions** of the **options** parameter is mandatory in API version 11 or earlier. You need to enter the CA certificate of the server for certificate authentication. The certificate content starts with "-----BEGIN CERTIFICATE-----" and ends with "-----END CERTIFICATE-----". This field is optional since API version 12.
+
+**Since:** 9
+
+<!--Device-TLSSocket-connect(options: TLSConnectOptions): Promise<void>--><!--Device-TLSSocket-connect(options: TLSConnectOptions): Promise<void>-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [TLSConnectOptions](arkts-network-socket-tlsconnectoptions-i.md) | Yes | Parameters required for the connection. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2303104](../errorcode-net-socket.md#2303104-system-call-interrupted) | Interrupted system call. |
+| [2303109](../errorcode-net-socket.md#2303109-error-file-number) | Bad file number. |
+| [2303111](../errorcode-net-socket.md#2303111-requested-resource-temporarily-unavailable) | Resource temporarily unavailable. Try again. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
+| [2303191](../errorcode-net-socket.md#2303191-incorrect-socket-protocol-type) | Incorrect socket protocol type. |
+| [2303198](../errorcode-net-socket.md#2303198-network-address-already-in-use) | Address already in use. |
+| [2303199](../errorcode-net-socket.md#2303199-failed-to-assign-the-requested-address) | Cannot assign requested address. |
+| [2303210](../errorcode-net-socket.md#2303210-connection-timeout) | Connection timed out. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
+| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2301206](../errorcode-net-socket.md#2301206-failed-to-connect-to-the-proxy-server-via-socks5) | Socks5 failed to connect to the proxy server.<br>**Applicable version:** 18 and later |
+| [2301207](../errorcode-net-socket.md#2301207-invalid-user-name-or-password-for-socks5-authentication) | Socks5 username or password is invalid.<br>**Applicable version:** 18 and later |
+| [2301208](../errorcode-net-socket.md#2301208-failed-to-connect-to-the-remote-server-via-socks5) | Socks5 failed to connect to the remote server.<br>**Applicable version:** 18 and later |
+| [2301209](../errorcode-net-socket.md#2301209-authentication-mode-negotiation-failed-for-socks5) | Socks5 failed to negotiate the authentication method.<br>**Applicable version:** 18 and later |
+| [2301210](../errorcode-net-socket.md#2301210-failed-to-send-messages-via-socks5) | Socks5 failed to send the message.<br>**Applicable version:** 18 and later |
+| [2301211](../errorcode-net-socket.md#2301211-failed-to-receive-messages-via-socks5) | Socks5 failed to receive the message.<br>**Applicable version:** 18 and later |
+| [2301212](../errorcode-net-socket.md#2301212-failed-to-serialize-messages-for-socks5) | Socks5 serialization error.<br>**Applicable version:** 18 and later |
+| [2301213](../errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error.<br>**Applicable version:** 18 and later |
+
+**Examples**
+
+See [connect](#connect)
+
 ## getCertificate
 
 ```TypeScript
@@ -654,7 +1155,7 @@ Obtains the local digital certificate after a **TLSSocket** connection is establ
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the local certificate is returned. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the local certificate is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -663,6 +1164,117 @@ Obtains the local digital certificate after a **TLSSocket** connection is establ
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 | [2303504](../errorcode-net-socket.md#2303504-x509-failed-to-look-up-the-x509-certificate) | An error occurred when verifying the X.509 certificate. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+
+**Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
+tls.getCertificate((err: BusinessError, data: socket.X509CertRawData) => {
+  if (err) {
+    console.error("getCertificate callback error = " + err);
+  } else {
+    console.info("getCertificate callback = " + data);
+  }
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { util } from '@kit.ArkTS';
+
+let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
+tls.getCertificate().then((data: socket.X509CertRawData) => {
+  const decoder = util.TextDecoder.create();
+  const str = decoder.decodeToString(data.data);
+  console.info("getCertificate: " + str);
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { util } from '@kit.ArkTS';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed: " + JSON.stringify(err));
+});
+tlsServer.getCertificate((err: BusinessError, data: socket.X509CertRawData) => {
+  if (err) {
+    console.error("getCertificate callback error = " + err);
+  } else {
+    const decoder = util.TextDecoder.create();
+    const str = decoder.decodeToString(data.data);
+    console.info("getCertificate callback: " + str);
+  }
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { util } from '@kit.ArkTS';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed: " + JSON.stringify(err));
+});
+tlsServer.getCertificate().then((data: socket.X509CertRawData) => {
+  const decoder = util.TextDecoder.create();
+  const str = decoder.decodeToString(data.data);
+  console.info("getCertificate: " + str);
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+```
 
 ## getCertificate
 
@@ -692,6 +1304,10 @@ Obtains the local digital certificate after a **TLSSocket** connection is establ
 | [2303504](../errorcode-net-socket.md#2303504-x509-failed-to-look-up-the-x509-certificate) | An error occurred when verifying the X.509 certificate. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
+**Examples**
+
+See [getCertificate](#getcertificate)
+
 ## getCipherSuite
 
 ```TypeScript
@@ -710,7 +1326,7 @@ Obtains the cipher suite negotiated by both communication parties after a **TLSS
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -734,6 +1350,96 @@ tls.getCipherSuite((err: BusinessError, data: Array<string>) => {
   } else {
     console.info("getCipherSuite callback = " + data);
   }
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
+tls.getCipherSuite().then((data: Array<string>) => {
+  console.info('getCipherSuite success:' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
+  client.getCipherSuite((err: BusinessError, data: Array<string>) => {
+    if (err) {
+      console.error("getCipherSuite callback error = " + err);
+    } else {
+      console.info("getCipherSuite callback = " + data);
+    }
+  });
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
+  client.getCipherSuite().then((data: Array<string>) => {
+    console.info('getCipherSuite success:' + JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    console.error("failed" + err);
+  });
 });
 ```
 
@@ -768,17 +1474,7 @@ Obtains the cipher suite negotiated by both communication parties after a **TLSS
 
 **Examples**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
-tls.getCipherSuite().then((data: Array<string>) => {
-  console.info('getCipherSuite success:' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error("failed" + err);
-});
-```
+See [getCipherSuite](#getciphersuite)
 
 ## getLocalAddress
 
@@ -818,12 +1514,246 @@ Obtains the local socket address of a **TLSSocket** connection. This API uses a 
 import { socket } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+udp.bind(bindAddr).then(() => {
+  console.info('bind success');
+  udp.getLocalAddress().then((localAddress: socket.NetAddress) => {
+        console.info("UDP_Socket get SUCCESS! Address: " + JSON.stringify(localAddress));
+      }).catch((err: BusinessError) => {
+        console.error("UDP_Socket get FAILED! Error: " + JSON.stringify(err));
+      })
+}).catch((err: BusinessError) => {
+  console.error('bind fail');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  family: 1,
+  port: 8080
+}
+tcp.bind(bindAddr).then(() => {
+  tcp.getLocalAddress().then((localAddress: socket.NetAddress) => {
+    console.info("SUCCESS! Address:" + JSON.stringify(localAddress));
+  }).catch((err: BusinessError) => {
+    console.error("FAILED! Error:" + JSON.stringify(err));
+  })
+}).catch((err: BusinessError) => {
+  console.error('bind fail');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+let listenAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080,
+  family: 1
+}
+tcpServer.listen(listenAddr).then(() => {
+  tcpServer.getLocalAddress().then((localAddress: socket.NetAddress) => {
+    console.info("SUCCESS! Address:" + JSON.stringify(localAddress));
+  }).catch((err: BusinessError) => {
+    console.error("FerrorAILED! Error:" + JSON.stringify(err));
+  })
+}).catch((err: BusinessError) => {
+  console.error('listen fail');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+let listenAddr: socket.NetAddress = {
+  address: "192.168.xx.xx",
+  port: 8080,
+  family: 1
+}
+tcpServer.listen(listenAddr, (err: BusinessError) => {
+  let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+  let netAddress: socket.NetAddress = {
+    address: "192.168.xx.xx",
+    port: 8080
+  }
+  let options: socket.TCPConnectOptions = {
+    address: netAddress,
+    timeout: 6000
+  }
+  tcp.connect(options, (err: BusinessError) => {
+    if (err) {
+      console.error('connect fail');
+      return;
+    }
+    console.info('connect success!');
+  })
+  tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
+    client.getLocalAddress().then((localAddress: socket.NetAddress) => {
+      console.info("Family IP Port: " + JSON.stringify(localAddress));
+    }).catch((err: BusinessError) => {
+      console.error('Error:' + JSON.stringify(err));
+    });
+  })
+})
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let address : socket.LocalAddress = {
+  address: sandboxPath
+}
+client.bind(address).then(() => {
+  console.error('bind success');
+  client.getLocalAddress().then((localPath: string) => {
+    console.info("SUCCESS " + JSON.stringify(localPath));
+  }).catch((err: BusinessError) => {
+    console.error("FAIL " + JSON.stringify(err));
+  })
+}).catch((err: Object) => {
+  console.error('failed to bind: ' + JSON.stringify(err));
+})
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let listenAddr: socket.LocalAddress = {
+  address: sandboxPath
+}
+server.listen(listenAddr).then(() => {
+  console.info("listen success");
+  server.getLocalAddress().then((localPath: string) => {
+    console.info("SUCCESS " + JSON.stringify(localPath));
+  }).catch((err: BusinessError) => {
+    console.error("FAIL " + JSON.stringify(err));
+  })
+}).catch((err: Object) => {
+  console.error("listen fail: " + JSON.stringify(err));
+})
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let localAddr: socket.LocalAddress = {
+  address: sandboxPath
+}
+server.listen(localAddr).then(() => {
+  console.info('listen success');
+  let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+  let connectOpt: socket.LocalConnectOptions = {
+    address: localAddr,
+    timeout: 6000
+  }
+  client.connect(connectOpt).then(() => {
+    server.getLocalAddress().then((localPath: string) => {
+      console.info("success, localPath is" + JSON.stringify(localPath));
+    }).catch((err: BusinessError) => {
+      console.error("FAIL " + JSON.stringify(err));
+    })
+  }).catch((err: Object) => {
+    console.error('connect fail: ' + JSON.stringify(err));
+  });
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
 tls.getLocalAddress().then((localAddress: socket.NetAddress) => {
   console.info("Get success: " + JSON.stringify(localAddress));
 }).catch((err: BusinessError) => {
   console.error("Get failed, error: " + JSON.stringify(err));
 })
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+tlsServer.getLocalAddress().then((localAddress: socket.NetAddress) => {
+  console.info("Get success: " + JSON.stringify(localAddress));
+}).catch((err: BusinessError) => {
+  console.error("Get failed, error: " + JSON.stringify(err));
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+
+tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
+  client.getLocalAddress().then((localAddress: socket.NetAddress) => {
+    console.info("Family IP Port: " + JSON.stringify(localAddress));
+  }).catch((err: BusinessError) => {
+    console.error("TLS Client Get Family IP Port failed, error: " + JSON.stringify(err));
+  })
+});
 ```
 
 ## getProtocol
@@ -844,7 +1774,7 @@ Obtains the communication protocol version after a **TLSSocket** connection is e
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -867,6 +1797,92 @@ tls.getProtocol((err: BusinessError, data: string) => {
   } else {
     console.info("getProtocol callback = " + data);
   }
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
+tls.getProtocol().then((data: string) => {
+  console.info(data);
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed: " + JSON.stringify(err));
+});
+tlsServer.getProtocol((err: BusinessError, data: string) => {
+  if (err) {
+    console.error("getProtocol callback error = " + err);
+  } else {
+    console.info("getProtocol callback = " + data);
+  }
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed: " + JSON.stringify(err));
+});
+tlsServer.getProtocol().then((data: string) => {
+  console.info(data);
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
 });
 ```
 
@@ -900,17 +1916,7 @@ Obtains the communication protocol version after a **TLSSocket** connection is e
 
 **Examples**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
-tls.getProtocol().then((data: string) => {
-  console.info(data);
-}).catch((err: BusinessError) => {
-  console.error("failed" + err);
-});
-```
+See [getProtocol](#getprotocol)
 
 ## getRemoteAddress
 
@@ -930,7 +1936,7 @@ Obtains the remote address of a TLS socket connection. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NetAddress&gt; | Yes | Callback used to return the result. If the operation is successful, the remote address is returned. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | Yes | Callback used to return the result. If the operation is successful, the remote address is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -945,6 +1951,86 @@ Obtains the remote address of a TLS socket connection. This API uses an asynchro
 import { socket } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tcpconnectoptions: socket.TCPConnectOptions = {
+  address: netAddress,
+  timeout: 6000
+}
+tcp.connect(tcpconnectoptions, () => {
+  console.info('connect success');
+  tcp.getRemoteAddress((err: BusinessError, data: socket.NetAddress) => {
+    if (err) {
+      console.error('getRemoteAddressfail');
+      return;
+    }
+    console.info('getRemoteAddresssuccess:' + JSON.stringify(data));
+  })
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tcpconnectoptions: socket.TCPConnectOptions = {
+  address: netAddress,
+  timeout: 6000
+}
+tcp.connect(tcpconnectoptions).then(() => {
+  console.info('connect success');
+  tcp.getRemoteAddress().then(() => {
+    console.info('getRemoteAddress success');
+  }).catch((err: BusinessError) => {
+    console.error('getRemoteAddressfail');
+  });
+}).catch((err: BusinessError) => {
+  console.error('connect fail');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
+  client.getRemoteAddress((err: BusinessError, data: socket.NetAddress) => {
+    if (err) {
+      console.error('getRemoteAddress fail');
+      return;
+    }
+    console.info('getRemoteAddress success:' + JSON.stringify(data));
+  });
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
+  client.getRemoteAddress().then(() => {
+    console.info('getRemoteAddress success');
+  }).catch((err: BusinessError) => {
+    console.error('getRemoteAddress fail');
+  });
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
 tls.getRemoteAddress((err: BusinessError, data: socket.NetAddress) => {
   if (err) {
@@ -952,6 +2038,96 @@ tls.getRemoteAddress((err: BusinessError, data: socket.NetAddress) => {
     return;
   }
   console.info('getRemoteAddress success:' + JSON.stringify(data));
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
+tls.getRemoteAddress().then(() => {
+  console.info('getRemoteAddress success');
+}).catch((err: BusinessError) => {
+  console.error('getRemoteAddress fail');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
+  client.getRemoteAddress((err: BusinessError, data: socket.NetAddress) => {
+    if (err) {
+      console.error('getRemoteAddress fail');
+      return;
+    }
+    console.info('getRemoteAddress success:' + JSON.stringify(data));
+  });
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
+  client.getRemoteAddress().then((data: socket.NetAddress) => {
+    console.info('getRemoteAddress success:' + JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    console.error("failed" + err);
+  });
 });
 ```
 
@@ -984,17 +2160,7 @@ Obtains the remote address of a TLS socket connection. This API uses a promise t
 
 **Examples**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
-tls.getRemoteAddress().then(() => {
-  console.info('getRemoteAddress success');
-}).catch((err: BusinessError) => {
-  console.error('getRemoteAddress fail');
-});
-```
+See [getRemoteAddress](#getremoteaddress)
 
 ## getRemoteCertificate
 
@@ -1014,7 +2180,7 @@ Obtains the digital certificate of the server after a **TLSSocket** connection i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -1022,6 +2188,124 @@ Obtains the digital certificate of the server after a **TLSSocket** connection i
 | --- | --- |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+
+**Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { util } from '@kit.ArkTS';
+
+let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
+tls.getRemoteCertificate((err: BusinessError, data: socket.X509CertRawData) => {
+  if (err) {
+    console.error("getRemoteCertificate callback error = " + err);
+  } else {
+    const decoder = util.TextDecoder.create();
+    const str = decoder.decodeToString(data.data);
+    console.info("getRemoteCertificate callback = " + str);
+  }
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { util } from '@kit.ArkTS';
+
+let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
+tls.getRemoteCertificate().then((data: socket.X509CertRawData) => {
+  const decoder = util.TextDecoder.create();
+  const str = decoder.decodeToString(data.data);
+  console.info("getRemoteCertificate:" + str);
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { util } from '@kit.ArkTS';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
+  client.getRemoteCertificate((err: BusinessError, data: socket.X509CertRawData) => {
+    if (err) {
+      console.error("getRemoteCertificate callback error: " + err);
+    } else {
+      const decoder = util.TextDecoder.create();
+      const str = decoder.decodeToString(data.data);
+      console.info("getRemoteCertificate callback: " + str);
+    }
+  });
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { util } from '@kit.ArkTS';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
+  client.getRemoteCertificate().then((data: socket.X509CertRawData) => {
+    const decoder = util.TextDecoder.create();
+    const str = decoder.decodeToString(data.data);
+    console.info("getRemoteCertificate success: " + str);
+  }).catch((err: BusinessError) => {
+    console.error("failed" + err);
+  });
+});
+```
 
 ## getRemoteCertificate
 
@@ -1050,6 +2334,10 @@ Obtains the digital certificate of the server after a **TLSSocket** connection i
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
+**Examples**
+
+See [getRemoteCertificate](#getremotecertificate)
+
 ## getSignatureAlgorithms
 
 ```TypeScript
@@ -1068,7 +2356,7 @@ Obtains the signing algorithm negotiated by both communication parties after a *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1090,6 +2378,96 @@ tls.getSignatureAlgorithms((err: BusinessError, data: Array<string>) => {
   } else {
     console.info("getSignatureAlgorithms callback = " + data);
   }
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
+tls.getSignatureAlgorithms().then((data: Array<string>) => {
+  console.info("getSignatureAlgorithms success" + data);
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
+  client.getSignatureAlgorithms((err: BusinessError, data: Array<string>) => {
+    if (err) {
+      console.error("getSignatureAlgorithms callback error = " + err);
+    } else {
+      console.info("getSignatureAlgorithms callback = " + data);
+    }
+  });
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
+  client.getSignatureAlgorithms().then((data: Array<string>) => {
+    console.info("getSignatureAlgorithms success" + data);
+  }).catch((err: BusinessError) => {
+    console.error("failed" + err);
+  });
 });
 ```
 
@@ -1122,17 +2500,7 @@ Obtains the signing algorithm negotiated by both communication parties after a *
 
 **Examples**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
-tls.getSignatureAlgorithms().then((data: Array<string>) => {
-  console.info("getSignatureAlgorithms success" + data);
-}).catch((err: BusinessError) => {
-  console.error("failed" + err);
-});
-```
+See [getSignatureAlgorithms](#getsignaturealgorithms)
 
 ## getSocketFd
 
@@ -1167,6 +2535,223 @@ Obtains the file descriptor of the **TLSSocket** object. This API uses a promise
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+let bindAddr: socket.NetAddress = {
+    address: '192.168.xx.xxx',
+    port: 8080
+}
+udp.bind(bindAddr)
+  .then(() => {
+    udp.getSocketFd()
+      .then((fd: number) => {
+        console.info(`Socket FD: ${fd}`);
+      }).catch((err: BusinessError) => {
+      console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
+    });
+  }).catch((err: BusinessError) => {
+  console.error('bind fail');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+let bindAddr: socket.NetAddress = {
+    address: '192.168.xx.xxx',
+    port: 8080
+}
+multicast.bind(bindAddr)
+  .then(() => {
+    console.info('bind success');
+    multicast.getSocketFd().then((fd: number) => {
+      console.info(`Socket FD: ${fd}`);
+    }).catch((err: BusinessError) => {
+      console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
+    });
+  }).catch((err: BusinessError) => {
+  console.error('bind fail');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  // Bind the specified network API.
+}
+tcp.bind(bindAddr)
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tcpconnectoptions: socket.TCPConnectOptions = {
+  address: netAddress,
+  timeout: 6000
+}
+tcp.connect(tcpconnectoptions)
+tcp.getSocketFd((err: BusinessError, data: number) => {
+  console.error("getSocketFd failed: " + err);
+  console.info("socketFd: " + data);
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let bindAddr: socket.NetAddress = {
+    address: '192.168.xx.xxx',
+  // Bind the specified network API.
+}
+tcp.bind(bindAddr)
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tcpconnectoptions: socket.TCPConnectOptions = {
+  address: netAddress,
+  timeout: 6000
+}
+tcp.connect(tcpconnectoptions)
+tcp.getSocketFd().then((data: number) => {
+  console.info("socketFd: " + data);
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+let listenAddr: socket.NetAddress = {
+  address:  '192.168.xx.xxx',
+  port: 8080,
+  family: 1
+}
+tcpServer.listen(listenAddr).then(() => {
+  console.info('listen success');
+  tcpServer.getSocketFd().then((fd: number) => {
+    console.info(`Socket FD: ${fd}`);
+  }).catch((err: BusinessError) => {
+    console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
+  });
+}).catch((err: BusinessError) => {
+  console.error('listen fail');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+let listenAddr: socket.NetAddress = {
+  address: "192.168.xx.xx",
+  port: 8080,
+  family: 1
+}
+tcpServer.listen(listenAddr, (err: BusinessError) => {
+  tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
+    client.getSocketFd().then((fd: number) => {
+      console.info(`Socket FD: ${fd}`);
+    }).catch((err: BusinessError) => {
+      console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
+    });
+  })
+}).catch((err: BusinessError) => {
+  console.error('listen fail');
+});
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let localAddress : socket.LocalAddress = {
+  address: sandboxPath
+}
+let connectOpt: socket.LocalConnectOptions = {
+  address: localAddress,
+  timeout: 6000
+}
+client.connect(connectOpt).then(() => {
+  console.info('connect ok')
+}).catch((err: Object) => {
+  console.error('connect fail: ' + JSON.stringify(err))
+})
+client.getSocketFd().then((data: number) => {
+  console.info("fd: " + data);
+}).catch((err: Object) => {
+  console.error("getSocketFd failed: " + JSON.stringify(err));
+})
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let listenAddr : socket.LocalAddress = {
+  address: sandboxPath
+}
+
+server.listen(listenAddr).then(() => {
+  console.info("listen success");
+  server.getSocketFd().then((fd: number) => {
+    console.info(`Socket FD: ${fd}`);
+  }).catch((err: Object) => {
+    console.error(`getSocketFd fail: ${JSON.stringify(err)}`);
+  });
+}).catch((err: Object) => {
+  console.error("listen fail: " + JSON.stringify(err));
+})
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let listenAddr : socket.LocalAddress = {
+  address: sandboxPath
+}
+server.on('connect', (connection: socket.LocalSocketConnection) => {
+  connection.getSocketFd().then((fd: number) => {
+    console.info(`Socket FD: ${fd}`);
+  }).catch((err: Object) => {
+    console.error(`getSocketFd fail: ${JSON.stringify(err)}`);
+  });
+});
+server.listen(listenAddr).then(() => {
+  console.info("listen success");
+}).catch((err: Object) => {
+  console.error(`listen fail: ${JSON.stringify(err)}`);
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
 let bindAddr: socket.NetAddress = {
   address: '192.168.xx.xxx',
@@ -1182,6 +2767,80 @@ tls.bind(bindAddr, (err: BusinessError) => {
 tls.getSocketFd().then((data: number) => {
   console.info("tls socket fd: " + data);
 })
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen success");
+  tlsServer.getSocketFd().then((fd: number) => {
+    console.info(`Socket FD: ${fd}`);
+  }).catch((err: BusinessError) => {
+    console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
+  });
+}).catch((err: BusinessError) => {
+  console.error(`listen failed: ${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen success");
+  tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
+    client.getSocketFd().then((fd: number) => {
+      console.info(`Socket FD: ${fd}`);
+    }).catch((err: BusinessError) => {
+      console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
+    })
+  });
+}).catch((err: BusinessError) => {
+  console.error(`listen failed: ${JSON.stringify(err)}`);
+});
 ```
 
 ## getState
@@ -1202,7 +2861,7 @@ Obtains the status of the TLS socket connection. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the status of the TLS socket connection is returned. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the status of the TLS socket connection is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -1212,6 +2871,207 @@ Obtains the status of the TLS socket connection. This API uses an asynchronous c
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+udp.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.error('bind success');
+  udp.getState((err: BusinessError, data: socket.SocketStateBase) => {
+    if (err) {
+      console.error('getState fail');
+      return;
+    }
+    console.info('getState success:' + JSON.stringify(data));
+  })
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+udp.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+  udp.getState().then((data: socket.SocketStateBase) => {
+    console.info('getState success:' + JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    console.error('getState fail' + JSON.stringify(err));
+  });
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tcpconnectoptions: socket.TCPConnectOptions = {
+  address: netAddress,
+  timeout: 6000
+}
+tcp.connect(tcpconnectoptions, () => {
+  console.info('connect success');
+  tcp.getState((err: BusinessError, data: socket.SocketStateBase) => {
+    if (err) {
+      console.error('getState fail');
+      return;
+    }
+    console.info('getState success:' + JSON.stringify(data));
+  });
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tcpconnectoptions: socket.TCPConnectOptions = {
+  address: netAddress,
+  timeout: 6000
+}
+tcp.connect(tcpconnectoptions).then(() => {
+  console.info('connect success');
+  tcp.getState().then(() => {
+    console.info('getState success');
+  }).catch((err: BusinessError) => {
+    console.error('getState fail');
+  });
+}).catch((err: BusinessError) => {
+  console.error('connect fail');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+let listenAddr: socket.NetAddress = {
+  address:  '192.168.xx.xxx',
+  port: 8080,
+  family: 1
+}
+tcpServer.listen(listenAddr, (err: BusinessError) => {
+  if (err) {
+    console.error("listen fail");
+    return;
+  }
+  console.info("listen success");
+})
+tcpServer.getState((err: BusinessError, data: socket.SocketStateBase) => {
+  if (err) {
+    console.error('getState fail');
+    return;
+  }
+  console.info('getState success:' + JSON.stringify(data));
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+let listenAddr: socket.NetAddress = {
+  address:  '192.168.xx.xxx',
+  port: 8080,
+  family: 1
+}
+tcpServer.listen(listenAddr, (err: BusinessError) => {
+  if (err) {
+    console.error("listen fail");
+    return;
+  }
+  console.info("listen success");
+})
+tcpServer.getState().then((data: socket.SocketStateBase) => {
+  console.info('getState success' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error('getState fail');
+});
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let localAddress : socket.LocalAddress = {
+  address: sandboxPath
+}
+let connectOpt: socket.LocalConnectOptions = {
+  address: localAddress,
+  timeout: 6000
+}
+client.connect(connectOpt).then(() => {
+  console.info('connect success');
+  client.getState().then(() => {
+    console.info('getState success');
+  }).catch((err: Object) => {
+    console.error('getState fail: ' + JSON.stringify(err))
+  });
+}).catch((err: Object) => {
+  console.error('connect fail: ' + JSON.stringify(err));
+});
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+
+let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let listenAddr: socket.LocalAddress = {
+  address: sandboxPath
+}
+server.listen(listenAddr).then(() => {
+  console.info("listen success");
+}).catch((err: Object) => {
+  console.error("listen fail: " + JSON.stringify(err));
+})
+server.getState().then((data: socket.SocketStateBase) => {
+  console.info('getState success: ' + JSON.stringify(data));
+}).catch((err: Object) => {
+  console.error('getState fail: ' + JSON.stringify(err));
+});
+```
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -1235,6 +3095,103 @@ tls.getState((err: BusinessError, data: socket.SocketStateBase) => {
     return;
   }
   console.info('getState success:' + JSON.stringify(data));
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+tls.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+});
+tls.getState().then(() => {
+  console.info('getState success');
+}).catch((err: BusinessError) => {
+  console.error('getState fail');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed: " + JSON.stringify(err));
+});
+tlsServer.getState((err: BusinessError, data: socket.SocketStateBase) => {
+  if (err) {
+    console.error('getState fail');
+    return;
+  }
+  console.info('getState success:' + JSON.stringify(data));
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed: " + JSON.stringify(err));
+});
+tlsServer.getState().then(() => {
+  console.info('getState success');
+}).catch((err: BusinessError) => {
+  console.error('getState fail');
 });
 ```
 
@@ -1267,28 +3224,7 @@ Obtains the status of the TLS socket connection. This API uses a promise to retu
 
 **Examples**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
-let bindAddr: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-tls.bind(bindAddr, (err: BusinessError) => {
-  if (err) {
-    console.error('bind fail');
-    return;
-  }
-  console.info('bind success');
-});
-tls.getState().then(() => {
-  console.info('getState success');
-}).catch((err: BusinessError) => {
-  console.error('getState fail');
-});
-```
+See [getState](#getstate)
 
 ## off('connect' | 'close')
 
@@ -1309,7 +3245,7 @@ Unsubscribes from **connect** or **close** events of the **TLSSocket** object. T
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' \| 'close' | Yes | Event type.<br/> <br>- **connect**: connection event. <br>- **close**: close event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1358,7 +3294,7 @@ Unsubscribes from **connect** or **close** events of the **TLSSocket** object. T
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' \| 'close' | Yes | Event type.<br/> <br>- **connect**: connection event. <br>- **close**: close event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1389,7 +3325,7 @@ Unsubscribes from **error** events of the **TLSSocket** object. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type.<br/> **error**: error event. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the result. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1431,7 +3367,7 @@ Unsubscribes from **message** events of the **TLSSocket** object. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Event type.<br/> **message**: message receiving event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | No | Callback used to return the result.<br>**Since:** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | No | Callback used to return the result.<br>**Since:** 11 |
 
 **Error codes:**
 
@@ -1485,7 +3421,7 @@ Subscribes to **connect** or **close** events of the **TLSSocket** object. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' \| 'close' | Yes | Event type.<br/> <br>- **connect**: connection event. <br>- **close**: close event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1542,7 +3478,7 @@ Subscribes to **connect** or **close** events of the **TLSSocket** object. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' \| 'close' | Yes | Event type.<br/> <br>- **connect**: connection event. <br>- **close**: close event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1577,7 +3513,7 @@ Subscribes to **error** events of the **TLSSocket** object. This API uses an asy
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type.<br/> **error**: error event. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return the result. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1631,7 +3567,7 @@ Subscribes to **message** events of the **TLSSocket** object. This API uses an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Event type.<br/> **message**: message receiving event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | Callback used to return the result.<br>**Since:** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | Callback used to return the result.<br>**Since:** 11 |
 
 **Error codes:**
 
@@ -1689,7 +3625,7 @@ Sends a message to the server after a **TLSSocket** connection is established. T
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | string \| ArrayBuffer | Yes | Data content of the message to send.<br>**Since:** 12 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -1708,6 +3644,293 @@ Sends a message to the server after a **TLSSocket** connection is established. T
 import { socket } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx', // Local IP address
+  port: 1234
+}
+udp.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+});
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',  // Peer IP address
+  port: 8080
+}
+let sendOptions: socket.UDPSendOptions = {
+  data: 'Hello, server!',
+  address: netAddress
+}
+udp.send(sendOptions, (err: BusinessError) => {
+  if (err) {
+    console.error('send fail');
+    return;
+  }
+  console.info('send success');
+});
+```
+
+Example (with socket proxy):
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx', // Local IP address
+  port: 1234
+}
+udp.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+});
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',  // Peer IP address
+  port: 8080
+}
+let socks5Server: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let proxyOptions: socket.ProxyOptions = {
+  type : 1,
+  address: socks5Server,
+  username: "xxx",
+  password: "xxx"
+}
+let sendOptions: socket.UDPSendOptions = {
+  data: 'Hello, server!',
+  address: netAddress,
+  proxy: proxyOptions,
+}
+udp.send(sendOptions, (err: BusinessError) => {
+  if (err) {
+    console.error('send fail');
+    return;
+  }
+  console.info('send success');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx', // Local IP address
+  port: 8080
+}
+udp.bind(bindAddr).then(() => {
+  console.info('bind success');
+}).catch((err: BusinessError) => {
+  console.error('bind fail');
+  return;
+});
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx', // Peer IP address
+  port: 8080
+}
+let sendOptions: socket.UDPSendOptions = {
+  data: 'Hello, server!',
+  address: netAddress
+}
+udp.send(sendOptions).then(() => {
+  console.info('send success');
+}).catch((err: BusinessError) => {
+  console.error('send fail');
+});
+```
+
+Example (with socket proxy):
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx', // Local IP address
+  port: 8080
+}
+udp.bind(bindAddr).then(() => {
+  console.info('bind success');
+}).catch((err: BusinessError) => {
+  console.error('bind fail');
+  return;
+});
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx', // Peer IP address
+  port: 8080
+}
+let socks5Server: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let proxyOptions: socket.ProxyOptions = {
+  type : 1,
+  address: socks5Server,
+  username: "xxx",
+  password: "xxx"
+}
+let sendOptions: socket.UDPSendOptions = {
+  data: 'Hello, server!',
+  address: netAddress,
+  proxy: proxyOptions,
+}
+udp.send(sendOptions).then(() => {
+  console.info('send success');
+}).catch((err: BusinessError) => {
+  console.error('send fail');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tcpconnectoptions: socket.TCPConnectOptions = {
+  address: netAddress,
+  timeout: 6000
+}
+tcp.connect(tcpconnectoptions, () => {
+  console.info('connect success');
+  let tcpSendOptions: socket.TCPSendOptions = {
+    data: 'Hello, server!'
+  }
+  tcp.send(tcpSendOptions, (err: BusinessError) => {
+    if (err) {
+      console.error('send fail');
+      return;
+    }
+    console.info('send success');
+  })
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tcpconnectoptions: socket.TCPConnectOptions = {
+  address: netAddress,
+  timeout: 6000
+}
+tcp.connect(tcpconnectoptions, () => {
+  console.info('connect success');
+  let tcpSendOptions: socket.TCPSendOptions = {
+    data: 'Hello, server!'
+  }
+  tcp.send(tcpSendOptions).then(() => {
+    console.info('send success');
+  }).catch((err: BusinessError) => {
+    console.error('send fail');
+  });
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+
+tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
+  let tcpSendOption: socket.TCPSendOptions = {
+    data: 'Hello, client!'
+  }
+  client.send(tcpSendOption, () => {
+    console.info('send success');
+  });
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+
+tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
+  let tcpSendOption: socket.TCPSendOptions = {
+    data: 'Hello, client!'
+  }
+  client.send(tcpSendOption).then(() => {
+    console.info('send success');
+  }).catch((err: BusinessError) => {
+    console.error('send fail');
+  });
+});
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance()
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let localAddress : socket.LocalAddress = {
+  address: sandboxPath
+}
+let connectOpt: socket.LocalConnectOptions = {
+  address: localAddress,
+  timeout: 6000
+}
+client.connect(connectOpt).then(() => {
+  console.info('connect success')
+}).catch((err: Object) => {
+  console.error('connect failed: ' + JSON.stringify(err))
+})
+let sendOpt: socket.LocalSendOptions = {
+  data: 'Hello world!'
+}
+client.send(sendOpt).then(() => {
+  console.info('send success')
+}).catch((err: Object) => {
+  console.error('send fail: ' + JSON.stringify(err))
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
+
+server.on('connect', (connection: socket.LocalSocketConnection) => {
+  let sendOptions: socket.LocalSendOptions = {
+    data: 'Hello, client!'
+  }
+  connection.send(sendOptions).then(() => {
+    console.info('send success');
+  }).catch((err: Object) => {
+    console.error('send fail: ' + JSON.stringify(err));
+  });
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
 tls.send("xxxx", (err: BusinessError) => {
   if (err) {
@@ -1715,6 +3938,98 @@ tls.send("xxxx", (err: BusinessError) => {
   } else {
     console.info("send success");
   }
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
+tls.send("xxxx").then(() => {
+  console.info("send success");
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+
+tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
+  client.send('Hello, client!', (err: BusinessError) => {
+    if (err) {
+      console.error('send fail');
+      return;
+    }
+    console.info('send success');
+  });
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+
+tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
+  client.send('Hello, client!').then(() => {
+    console.info('send success');
+  }).catch((err: BusinessError) => {
+    console.error('send fail');
+  });
 });
 ```
 
@@ -1757,17 +4072,7 @@ Sends a message to the server after a **TLSSocket** connection is established. T
 
 **Examples**
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
-tls.send("xxxx").then(() => {
-  console.info("send success");
-}).catch((err: BusinessError) => {
-  console.error("failed" + err);
-});
-```
+See [send](#send)
 
 ## setExtraOptions
 
@@ -1788,7 +4093,7 @@ Sets other properties of the **TCPSocket** object after **bind** is successfully
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | Yes | Other properties of the **TCPSocket** object. For details, see [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, the result of setting other properties of the **TCPSocket** object is returned. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, the result of setting other properties of the **TCPSocket** object is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -1799,6 +4104,298 @@ Sets other properties of the **TCPSocket** object after **bind** is successfully
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+udp.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+  let udpextraoptions: socket.UDPExtraOptions = {
+    receiveBufferSize: 8192,
+    sendBufferSize: 8192,
+    reuseAddress: false,
+    socketTimeout: 6000,
+    broadcast: true
+  }
+  udp.setExtraOptions(udpextraoptions, (err: BusinessError) => {
+    if (err) {
+      console.error('setExtraOptions fail');
+      return;
+    }
+    console.info('setExtraOptions success');
+  })
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+udp.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+  let udpextraoptions: socket.UDPExtraOptions = {
+    receiveBufferSize: 8192,
+    sendBufferSize: 8192,
+    reuseAddress: false,
+    socketTimeout: 6000,
+    broadcast: true
+  }
+  udp.setExtraOptions(udpextraoptions).then(() => {
+    console.info('setExtraOptions success');
+  }).catch((err: BusinessError) => {
+    console.error('setExtraOptions fail');
+  });
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tcpconnectoptions: socket.TCPConnectOptions = {
+  address: netAddress,
+  timeout: 6000
+}
+
+interface SocketLinger {
+  on: boolean;
+  linger: number;
+}
+
+tcp.connect(tcpconnectoptions, () => {
+  console.info('connect success');
+  let tcpExtraOptions: socket.TCPExtraOptions = {
+    keepAlive: true,
+    OOBInline: true,
+    TCPNoDelay: true,
+    socketLinger: { on: true, linger: 10 } as SocketLinger,
+    receiveBufferSize: 8192,
+    sendBufferSize: 8192,
+    reuseAddress: true,
+    socketTimeout: 3000,
+    tcpFastOpen: false
+  }
+  tcp.setExtraOptions(tcpExtraOptions, (err: BusinessError) => {
+    if (err) {
+      console.error('setExtraOptions fail');
+      return;
+    }
+    console.info('setExtraOptions success');
+  });
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tcpconnectoptions: socket.TCPConnectOptions = {
+  address: netAddress,
+  timeout: 6000
+}
+
+interface SocketLinger {
+  on: boolean;
+  linger: number;
+}
+
+tcp.connect(tcpconnectoptions, () => {
+  console.info('connect success');
+  let tcpExtraOptions: socket.TCPExtraOptions = {
+    keepAlive: true,
+    OOBInline: true,
+    TCPNoDelay: true,
+    socketLinger: { on: true, linger: 10 } as SocketLinger,
+    receiveBufferSize: 8192,
+    sendBufferSize: 8192,
+    reuseAddress: true,
+    socketTimeout: 3000,
+    tcpFastOpen: false
+  }
+  tcp.setExtraOptions(tcpExtraOptions).then(() => {
+    console.info('setExtraOptions success');
+  }).catch((err: BusinessError) => {
+    console.error('setExtraOptions fail');
+  });
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+let listenAddr: socket.NetAddress = {
+  address:  '192.168.xx.xxx',
+  port: 8080,
+  family: 1
+}
+tcpServer.listen(listenAddr, (err: BusinessError) => {
+  if (err) {
+    console.error("listen fail");
+    return;
+  }
+  console.info("listen success");
+})
+
+interface SocketLinger {
+  on: boolean;
+  linger: number;
+}
+
+let tcpExtraOptions: socket.TCPExtraOptions = {
+  keepAlive: true,
+  OOBInline: true,
+  TCPNoDelay: true,
+  socketLinger: { on: true, linger: 10 } as SocketLinger,
+  receiveBufferSize: 8192,
+  sendBufferSize: 8192,
+  reuseAddress: true,
+  socketTimeout: 3000
+}
+tcpServer.setExtraOptions(tcpExtraOptions, (err: BusinessError) => {
+  if (err) {
+    console.error('setExtraOptions fail');
+    return;
+  }
+  console.info('setExtraOptions success');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+let listenAddr: socket.NetAddress = {
+  address:  '192.168.xx.xxx',
+  port: 8080,
+  family: 1
+}
+
+interface SocketLinger {
+  on: boolean;
+  linger: number;
+}
+
+tcpServer.listen(listenAddr, (err: BusinessError) => {
+  if (err) {
+    console.error("listen fail");
+    return;
+  }
+  console.info("listen success");
+})
+
+let tcpExtraOptions: socket.TCPExtraOptions = {
+  keepAlive: true,
+  OOBInline: true,
+  TCPNoDelay: true,
+  socketLinger: { on: true, linger: 10 } as SocketLinger,
+  receiveBufferSize: 8192,
+  sendBufferSize: 8192,
+  reuseAddress: true,
+  socketTimeout: 3000
+}
+tcpServer.setExtraOptions(tcpExtraOptions).then(() => {
+  console.info('setExtraOptions success');
+}).catch((err: BusinessError) => {
+  console.error('setExtraOptions fail');
+});
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let localAddress : socket.LocalAddress = {
+  address: sandboxPath
+}
+let connectOpt: socket.LocalConnectOptions = {
+  address: localAddress,
+  timeout: 6000
+}
+client.connect(connectOpt).then(() => {
+  console.info('connect success');
+  let options: socket.ExtraOptionsBase = {
+    receiveBufferSize: 8192,
+    sendBufferSize: 8192,
+    socketTimeout: 3000
+  }
+  client.setExtraOptions(options).then(() => {
+    console.info('setExtraOptions success');
+  }).catch((err: Object) => {
+    console.error('setExtraOptions fail: ' + JSON.stringify(err));
+  });
+}).catch((err: Object) => {
+  console.error('connect fail: ' + JSON.stringify(err));
+});
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let listenAddr: socket.NetAddress = {
+  address: sandboxPath
+}
+server.listen(listenAddr).then(() => {
+  console.info("listen success");
+}).catch((err: Object) => {
+  console.error("listen fail: " + JSON.stringify(err));
+})
+
+let options: socket.ExtraOptionsBase = {
+  receiveBufferSize: 8192,
+  sendBufferSize: 8192,
+  socketTimeout: 3000
+}
+server.setExtraOptions(options).then(() => {
+  console.info('setExtraOptions success');
+}).catch((err: Object) => {
+  console.error('setExtraOptions fail: ' + JSON.stringify(err));
+});
+```
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -1842,42 +4439,6 @@ tls.setExtraOptions(tcpExtraOptions, (err: BusinessError) => {
 });
 ```
 
-## setExtraOptions
-
-```TypeScript
-setExtraOptions(options: TCPExtraOptions): Promise<void>
-```
-
-Sets other properties of the **TCPSocket** object after **bind** is successfully called. This API uses a promise to return the result.
-
-**Since:** 9
-
-<!--Device-TLSSocket-setExtraOptions(options: TCPExtraOptions): Promise<void>--><!--Device-TLSSocket-setExtraOptions(options: TCPExtraOptions): Promise<void>-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | Yes | Other properties of the **TCPSocket** object. For details, see [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md). |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-
-**Examples**
-
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1917,4 +4478,148 @@ tls.setExtraOptions(tcpExtraOptions).then(() => {
   console.error('setExtraOptions fail');
 });
 ```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed: " + JSON.stringify(err));
+});
+
+interface SocketLinger {
+  on: boolean;
+  linger: number;
+}
+
+let tcpExtraOptions: socket.TCPExtraOptions = {
+  keepAlive: true,
+  OOBInline: true,
+  TCPNoDelay: true,
+  socketLinger: { on: true, linger: 10 } as SocketLinger,
+  receiveBufferSize: 8192,
+  sendBufferSize: 8192,
+  reuseAddress: true,
+  socketTimeout: 3000
+}
+tlsServer.setExtraOptions(tcpExtraOptions, (err: BusinessError) => {
+  if (err) {
+    console.error('setExtraOptions fail');
+    return;
+  }
+  console.info('setExtraOptions success');
+});
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed: " + JSON.stringify(err));
+});
+
+interface SocketLinger {
+  on: boolean;
+  linger: number;
+}
+
+let tcpExtraOptions: socket.TCPExtraOptions = {
+  keepAlive: true,
+  OOBInline: true,
+  TCPNoDelay: true,
+  socketLinger: { on: true, linger: 10 } as SocketLinger,
+  receiveBufferSize: 8192,
+  sendBufferSize: 8192,
+  reuseAddress: true,
+  socketTimeout: 3000
+}
+tlsServer.setExtraOptions(tcpExtraOptions).then(() => {
+  console.info('setExtraOptions success');
+}).catch((err: BusinessError) => {
+  console.error('setExtraOptions fail');
+});
+```
+
+## setExtraOptions
+
+```TypeScript
+setExtraOptions(options: TCPExtraOptions): Promise<void>
+```
+
+Sets other properties of the **TCPSocket** object after **bind** is successfully called. This API uses a promise to return the result.
+
+**Since:** 9
+
+<!--Device-TLSSocket-setExtraOptions(options: TCPExtraOptions): Promise<void>--><!--Device-TLSSocket-setExtraOptions(options: TCPExtraOptions): Promise<void>-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | Yes | Other properties of the **TCPSocket** object. For details, see [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md). |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+
+**Examples**
+
+See [setExtraOptions](#setextraoptions)
 

@@ -32,7 +32,7 @@ This API can be properly called on devices other than wearables. If it is called
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
 | type | SlotType | Yes | Notification slot type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the notification slot type is enabled, and **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the notification slot type is enabled, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -65,6 +65,18 @@ notificationManager.isNotificationSlotEnabled(
     { bundle: "ohos.samples.notification", },
     notificationManager.SlotType.SOCIAL_COMMUNICATION,
     isNotificationSlotEnabledCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// isNotificationSlotEnabled
+notificationManager.isNotificationSlotEnabled({ bundle: "ohos.samples.notification", },
+    notificationManager.SlotType.SOCIAL_COMMUNICATION).then((data: boolean) => {
+    console.info(`isNotificationSlotEnabled success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isNotificationSlotEnabled failed, code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -116,15 +128,5 @@ This API can be properly called on devices other than wearables. If it is called
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// isNotificationSlotEnabled
-notificationManager.isNotificationSlotEnabled({ bundle: "ohos.samples.notification", },
-    notificationManager.SlotType.SOCIAL_COMMUNICATION).then((data: boolean) => {
-    console.info(`isNotificationSlotEnabled success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isNotificationSlotEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [isNotificationSlotEnabled](#isnotificationslotenabled)
 

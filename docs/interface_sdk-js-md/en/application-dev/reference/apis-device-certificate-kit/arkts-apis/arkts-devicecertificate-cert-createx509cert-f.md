@@ -29,7 +29,7 @@ Creates an **X509Cert** instance. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | Yes | X.509 certificate serialization data. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;X509Cert&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the **X509Cert** instance created. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;X509Cert&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the **X509Cert** instance created. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -80,6 +80,43 @@ cert.createX509Cert(encodingBlob, (error, x509Cert) => {
 });
 ```
 
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Convert the string into a Uint8Array.
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+// Certificate binary data, which needs to match your case.
+let certData = '-----BEGIN CERTIFICATE-----\n' +
+  'MIIBHTCBwwICA+gwCgYIKoZIzj0EAwIwGjEYMBYGA1UEAwwPRXhhbXBsZSBSb290\n' +
+  'IENBMB4XDTIzMDkwNTAyNDgyMloXDTI2MDUzMTAyNDgyMlowGjEYMBYGA1UEAwwP\n' +
+  'RXhhbXBsZSBSb290IENBMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHjG74yMI\n' +
+  'ueO7z3T+dyuEIrhxTg2fqgeNB3SGfsIXlsiUfLTatUsU0i/sePnrKglj2H8Abbx9\n' +
+  'PK0tsW/VgqwDIDAKBggqhkjOPQQDAgNJADBGAiEApVZno/Z7WyDc/muRN1y57uaY\n' +
+  'Mjrgnvp/AMdE8qmFiDwCIQCrIYdHVO1awaPgcdALZY+uLQi6mEs/oMJLUcmaag3E\n' +
+  'Qw==\n' +
+  '-----END CERTIFICATE-----\n';
+
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(certData),
+  // Assign a value based on the encodingData format. FORMAT_PEM and FORMAT_DER are supported.
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+cert.createX509Cert(encodingBlob).then(x509Cert => {
+  console.info('createX509Cert result: success.');
+}).catch((error: BusinessError) => {
+  console.error(`createX509Cert failed, errCode: ${error.code}, errMsg: ${error.message}`);
+});
+```
+
 
 ## createX509Cert
 
@@ -120,40 +157,5 @@ Creates an **X509Cert** instance. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Convert the string into a Uint8Array.
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-// Certificate binary data, which needs to match your case.
-let certData = '-----BEGIN CERTIFICATE-----\n' +
-  'MIIBHTCBwwICA+gwCgYIKoZIzj0EAwIwGjEYMBYGA1UEAwwPRXhhbXBsZSBSb290\n' +
-  'IENBMB4XDTIzMDkwNTAyNDgyMloXDTI2MDUzMTAyNDgyMlowGjEYMBYGA1UEAwwP\n' +
-  'RXhhbXBsZSBSb290IENBMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHjG74yMI\n' +
-  'ueO7z3T+dyuEIrhxTg2fqgeNB3SGfsIXlsiUfLTatUsU0i/sePnrKglj2H8Abbx9\n' +
-  'PK0tsW/VgqwDIDAKBggqhkjOPQQDAgNJADBGAiEApVZno/Z7WyDc/muRN1y57uaY\n' +
-  'Mjrgnvp/AMdE8qmFiDwCIQCrIYdHVO1awaPgcdALZY+uLQi6mEs/oMJLUcmaag3E\n' +
-  'Qw==\n' +
-  '-----END CERTIFICATE-----\n';
-
-let encodingBlob: cert.EncodingBlob = {
-  data: stringToUint8Array(certData),
-  // Assign a value based on the encodingData format. FORMAT_PEM and FORMAT_DER are supported.
-  encodingFormat: cert.EncodingFormat.FORMAT_PEM
-};
-
-cert.createX509Cert(encodingBlob).then(x509Cert => {
-  console.info('createX509Cert result: success.');
-}).catch((error: BusinessError) => {
-  console.error(`createX509Cert failed, errCode: ${error.code}, errMsg: ${error.message}`);
-});
-```
+See [createX509Cert](#createx509cert)
 

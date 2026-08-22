@@ -26,7 +26,7 @@ Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpape
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | the callback of getMinHeight. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | the callback of getMinHeight. |
 
 **Examples**
 
@@ -39,6 +39,16 @@ wallpaper.getMinHeight((error: BusinessError, data: Number) => {
         return;
     }
     console.info(`success to getMinHeight: ${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+wallpaper.getMinHeight().then((data: Number) => {
+    console.info(`success to getMinHeight: ${JSON.stringify(data)}`);
+}).catch((error: BusinessError) => {
+    console.error(`failed to getMinHeight because: ${JSON.stringify(error)}`);
 });
 ```
 
@@ -67,13 +77,5 @@ Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpape
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-wallpaper.getMinHeight().then((data: Number) => {
-    console.info(`success to getMinHeight: ${JSON.stringify(data)}`);
-}).catch((error: BusinessError) => {
-    console.error(`failed to getMinHeight because: ${JSON.stringify(error)}`);
-});
-```
+See [getMinHeight](#getminheight)
 

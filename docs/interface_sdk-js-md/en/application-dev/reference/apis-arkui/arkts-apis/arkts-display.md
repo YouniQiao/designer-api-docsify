@@ -42,14 +42,6 @@ import { display } from '@kit.ArkUI';
 | [isCaptured](arkts-arkui-display-iscaptured-f.md) | Check whether the device is captured, projected, or recorded by any app in the bundle name list. |
 | [isFoldable](arkts-arkui-display-isfoldable-f.md) | Checks whether this device is foldable. |
 | [makeUnique](arkts-arkui-display-makeunique-f.md) | Sets the screen to independent display mode. This API uses a promise to return the result. |
-| [offAdd](arkts-arkui-display-offadd-f.md) | Unregister the callback for display add events. |
-| [offBrightnessInfoChange](arkts-arkui-display-offbrightnessinfochange-f.md) | Unregister the callback for brightness info changes. |
-| [offCaptureStatusChange](arkts-arkui-display-offcapturestatuschange-f.md) | Unregister the callback for the status of the device's screen content is being captured. |
-| [offChange](arkts-arkui-display-offchange-f.md) | Unregister the callback for display changes. |
-| [offFoldAngleChange](arkts-arkui-display-offfoldanglechange-f.md) | Unregister the callback for fold angle changes. |
-| [offFoldDisplayModeChange](arkts-arkui-display-offfolddisplaymodechange-f.md) | Unregister the callback for fold display mode changes. |
-| [offFoldStatusChange](arkts-arkui-display-offfoldstatuschange-f.md) | Unregister the callback for fold status changes. |
-| [offRemove](arkts-arkui-display-offremove-f.md) | Unregister the callback for display remove events. |
 | off_add | Unsubscribes from display changes. |
 | [off_brightnessInfoChange](arkts-arkui-display-offbrightnessinfochange-f.md) | Unsubscribes from events related to screen brightness information changes. |
 | [off_captureStatusChange](arkts-arkui-display-offcapturestatuschange-f.md) | Unsubscribes from events indicating the status of the device's screen content is being captured. |
@@ -58,6 +50,22 @@ import { display } from '@kit.ArkUI';
 | [off_foldDisplayModeChange](arkts-arkui-display-offfolddisplaymodechange-f.md) | Unsubscribes from display mode change events of the foldable device. |
 | [off_foldStatusChange](arkts-arkui-display-offfoldstatuschange-f.md) | Unsubscribes from fold status change events of the foldable device. |
 | off_remove | Unsubscribes from display changes. |
+| [offAdd](arkts-arkui-display-offadd-f.md) | Unregister the callback for display add events. |
+| [offBrightnessInfoChange](arkts-arkui-display-offbrightnessinfochange-f.md) | Unregister the callback for brightness info changes. |
+| [offCaptureStatusChange](arkts-arkui-display-offcapturestatuschange-f.md) | Unregister the callback for the status of the device's screen content is being captured. |
+| [offChange](arkts-arkui-display-offchange-f.md) | Unregister the callback for display changes. |
+| [offFoldAngleChange](arkts-arkui-display-offfoldanglechange-f.md) | Unregister the callback for fold angle changes. |
+| [offFoldDisplayModeChange](arkts-arkui-display-offfolddisplaymodechange-f.md) | Unregister the callback for fold display mode changes. |
+| [offFoldStatusChange](arkts-arkui-display-offfoldstatuschange-f.md) | Unregister the callback for fold status changes. |
+| [offRemove](arkts-arkui-display-offremove-f.md) | Unregister the callback for display remove events. |
+| on_add | Subscribes to display changes. |
+| [on_brightnessInfoChange](arkts-arkui-display-onbrightnessinfochange-f.md) | Subscribes to events related to screen brightness information changes. If the screen does not support HDR, the **currentHeadroom** and **maxHeadroom** fields in the [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md) object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value. |
+| [on_captureStatusChange](arkts-arkui-display-oncapturestatuschange-f.md) | Subscribes to events indicating the status of the device's screen content is being captured. |
+| on_change | Subscribes to display changes. |
+| [on_foldAngleChange](arkts-arkui-display-onfoldanglechange-f.md) | Subscribes to folding angle change events of the foldable device. Note that there are two folding angles for dual- fold axis devices. When oriented with the charging port at the bottom, the hinges are identified from right to left as the first and second fold axes, respectively. |
+| [on_foldDisplayModeChange](arkts-arkui-display-onfolddisplaymodechange-f.md) | Subscribes to display mode change events of the foldable device. |
+| [on_foldStatusChange](arkts-arkui-display-onfoldstatuschange-f.md) | Subscribes to fold status change events of the foldable device. |
+| on_remove | Subscribes to display changes. |
 | [onAdd](arkts-arkui-display-onadd-f.md) | Register the callback for display add events. |
 | [onBrightnessInfoChange](arkts-arkui-display-onbrightnessinfochange-f.md) | Register the callback for brightness info changes. |
 | [onCaptureStatusChange](arkts-arkui-display-oncapturestatuschange-f.md) | Register the callback for the status of the device's screen content is being captured. |
@@ -67,14 +75,6 @@ import { display } from '@kit.ArkUI';
 | [onFoldDisplayModeChange](arkts-arkui-display-onfolddisplaymodechange-f.md) | Register the callback for fold display mode changes. |
 | [onFoldStatusChange](arkts-arkui-display-onfoldstatuschange-f.md) | Register the callback for fold status changes. |
 | [onRemove](arkts-arkui-display-onremove-f.md) | Register the callback for display remove events. |
-| on_add | Subscribes to display changes. |
-| [on_brightnessInfoChange](arkts-arkui-display-onbrightnessinfochange-f.md) | Subscribes to events related to screen brightness information changes. If the screen does not support HDR, the **currentHeadroom** and **maxHeadroom** fields in the [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md) object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value. |
-| [on_captureStatusChange](arkts-arkui-display-oncapturestatuschange-f.md) | Subscribes to events indicating the status of the device's screen content is being captured. |
-| on_change | Subscribes to display changes. |
-| [on_foldAngleChange](arkts-arkui-display-onfoldanglechange-f.md) | Subscribes to folding angle change events of the foldable device. Note that there are two folding angles for dual- fold axis devices. When oriented with the charging port at the bottom, the hinges are identified from right to left as the first and second fold axes, respectively. |
-| [on_foldDisplayModeChange](arkts-arkui-display-onfolddisplaymodechange-f.md) | Subscribes to display mode change events of the foldable device. |
-| [on_foldStatusChange](arkts-arkui-display-onfoldstatuschange-f.md) | Subscribes to fold status change events of the foldable device. |
-| on_remove | Subscribes to display changes. |
 | [setVirtualScreenSurface](arkts-arkui-display-setvirtualscreensurface-f.md) | Sets a surface for a virtual screen. This API uses a promise to return the result. |
 
 <!--Del-->
@@ -85,10 +85,10 @@ import { display } from '@kit.ArkUI';
 | [addVirtualScreenBlocklist](arkts-arkui-display-addvirtualscreenblocklist-f-sys.md) | Adds windows to the list of windows that are not allowed to be displayed during casting. This API takes effect only for the main window of an application or system windows. This API uses a promise to return the result. |
 | [addVirtualScreenSurface](arkts-arkui-display-addvirtualscreensurface-f-sys.md) | Add surface for the virtual screen. |
 | [hasPrivateWindow](arkts-arkui-display-hasprivatewindow-f-sys.md) | Checks whether there is a visible privacy window on a display. The window privacy mode can be set by calling setWindowPrivacyMode(). The content in the privacy window cannot be captured or recorded. |
-| [offPrivateModeChange](arkts-arkui-display-offprivatemodechange-f-sys.md) | Unregister the callback for private mode changes. |
 | [off_privateModeChange](arkts-arkui-display-offprivatemodechange-f-sys.md) | Unsubscribes from privacy mode changes of this display. |
-| [onPrivateModeChange](arkts-arkui-display-onprivatemodechange-f-sys.md) | Register the callback for private mode changes. |
+| [offPrivateModeChange](arkts-arkui-display-offprivatemodechange-f-sys.md) | Unregister the callback for private mode changes. |
 | [on_privateModeChange](arkts-arkui-display-onprivatemodechange-f-sys.md) | Subscribes to privacy mode changes of this display. When there is a privacy window in the foreground of the display , the display is in privacy mode, and the content in the privacy window cannot be captured or recorded. |
+| [onPrivateModeChange](arkts-arkui-display-onprivatemodechange-f-sys.md) | Register the callback for private mode changes. |
 | [removeVirtualScreenBlocklist](arkts-arkui-display-removevirtualscreenblocklist-f-sys.md) | Removes windows from the list of windows that are not allowed to be displayed during casting. This API takes effect only for the main window of an application or system windows. This API uses a promise to return the result. |
 | [removeVirtualScreenSurface](arkts-arkui-display-removevirtualscreensurface-f-sys.md) | Remove surface for the virtual screen. |
 | [setFoldDisplayMode](arkts-arkui-display-setfolddisplaymode-f-sys.md) | Sets the display mode of the foldable device. |

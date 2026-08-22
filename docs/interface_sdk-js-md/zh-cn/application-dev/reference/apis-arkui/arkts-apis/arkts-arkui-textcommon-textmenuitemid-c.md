@@ -70,6 +70,26 @@ static of(id: ResourceStr): TextMenuItemId
 | --- | --- |
 | [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md) | 根据传入id创建的菜单项标识对象，用于识别菜单选项。 |
 
+## address
+
+```TypeScript
+static readonly address: TextMenuItemId
+```
+
+导航前往，为一级菜单项。对选中的地址提供跳转服务，拉起地图应用。
+
+**类型：** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TextMenuItemId-static readonly address: TextMenuItemId--><!--Device-TextMenuItemId-static readonly address: TextMenuItemId-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 ## AI_WRITER
 
 ```TypeScript
@@ -87,6 +107,46 @@ static readonly AI_WRITER: TextMenuItemId
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextMenuItemId-static readonly AI_WRITER: TextMenuItemId--><!--Device-TextMenuItemId-static readonly AI_WRITER: TextMenuItemId-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## askAI
+
+```TypeScript
+static readonly askAI: TextMenuItemId
+```
+
+对选中的文本提供AI问询能力，为一级菜单项。该菜单项依赖大模型能力，否则不生效。
+
+**类型：** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TextMenuItemId-static readonly askAI: TextMenuItemId--><!--Device-TextMenuItemId-static readonly askAI: TextMenuItemId-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## autoFill
+
+```TypeScript
+static readonly autoFill: TextMenuItemId
+```
+
+自动填充，为一级菜单项。 点击后会展开二级菜单项“密码保险箱”，仅支持Search、TextInput、TextArea或RichEditor组件。
+
+**类型：** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
+
+**起始版本：** 23
+
+**ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TextMenuItemId-static readonly autoFill: TextMenuItemId--><!--Device-TextMenuItemId-static readonly autoFill: TextMenuItemId-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -170,6 +230,66 @@ static readonly CUT: TextMenuItemId
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## dateTime
+
+```TypeScript
+static readonly dateTime: TextMenuItemId
+```
+
+新建日程，为一级菜单项。对选中的日期和时间提供跳转服务，拉起新建日程页面。
+
+**类型：** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TextMenuItemId-static readonly dateTime: TextMenuItemId--><!--Device-TextMenuItemId-static readonly dateTime: TextMenuItemId-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## email
+
+```TypeScript
+static readonly email: TextMenuItemId
+```
+
+新建邮件，为一级菜单项。对选中的邮箱地址提供跳转服务，拉起邮箱应用。
+
+**类型：** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TextMenuItemId-static readonly email: TextMenuItemId--><!--Device-TextMenuItemId-static readonly email: TextMenuItemId-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## passwordVault
+
+```TypeScript
+static readonly passwordVault: TextMenuItemId
+```
+
+密码保险箱，为二级菜单项。 点击该菜单项后会拉起密码保险箱应用，该应用提供自动填充账号密码能力，仅支持Search、TextInput、TextArea或RichEditor组件。
+
+**类型：** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
+
+**起始版本：** 23
+
+**ArkTS模式：** ArkTS-Sta起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TextMenuItemId-static readonly passwordVault: TextMenuItemId--><!--Device-TextMenuItemId-static readonly passwordVault: TextMenuItemId-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 ## PASTE
 
 ```TypeScript
@@ -187,6 +307,26 @@ static readonly PASTE: TextMenuItemId
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextMenuItemId-static readonly PASTE: TextMenuItemId--><!--Device-TextMenuItemId-static readonly PASTE: TextMenuItemId-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## phoneNumber
+
+```TypeScript
+static readonly phoneNumber: TextMenuItemId
+```
+
+呼叫，为一级菜单项。对选中的电话号码提供跳转服务，拉起电话拨号页面。
+
+**类型：** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TextMenuItemId-static readonly phoneNumber: TextMenuItemId--><!--Device-TextMenuItemId-static readonly phoneNumber: TextMenuItemId-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -267,146 +407,6 @@ static readonly TRANSLATE: TextMenuItemId
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextMenuItemId-static readonly TRANSLATE: TextMenuItemId--><!--Device-TextMenuItemId-static readonly TRANSLATE: TextMenuItemId-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## address
-
-```TypeScript
-static readonly address: TextMenuItemId
-```
-
-导航前往，为一级菜单项。对选中的地址提供跳转服务，拉起地图应用。
-
-**类型：** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-TextMenuItemId-static readonly address: TextMenuItemId--><!--Device-TextMenuItemId-static readonly address: TextMenuItemId-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## askAI
-
-```TypeScript
-static readonly askAI: TextMenuItemId
-```
-
-对选中的文本提供AI问询能力，为一级菜单项。该菜单项依赖大模型能力，否则不生效。
-
-**类型：** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-TextMenuItemId-static readonly askAI: TextMenuItemId--><!--Device-TextMenuItemId-static readonly askAI: TextMenuItemId-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## autoFill
-
-```TypeScript
-static readonly autoFill: TextMenuItemId
-```
-
-自动填充，为一级菜单项。 点击后会展开二级菜单项“密码保险箱”，仅支持Search、TextInput、TextArea或RichEditor组件。
-
-**类型：** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
-
-**起始版本：** 23
-
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-TextMenuItemId-static readonly autoFill: TextMenuItemId--><!--Device-TextMenuItemId-static readonly autoFill: TextMenuItemId-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## dateTime
-
-```TypeScript
-static readonly dateTime: TextMenuItemId
-```
-
-新建日程，为一级菜单项。对选中的日期和时间提供跳转服务，拉起新建日程页面。
-
-**类型：** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-TextMenuItemId-static readonly dateTime: TextMenuItemId--><!--Device-TextMenuItemId-static readonly dateTime: TextMenuItemId-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## email
-
-```TypeScript
-static readonly email: TextMenuItemId
-```
-
-新建邮件，为一级菜单项。对选中的邮箱地址提供跳转服务，拉起邮箱应用。
-
-**类型：** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-TextMenuItemId-static readonly email: TextMenuItemId--><!--Device-TextMenuItemId-static readonly email: TextMenuItemId-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## passwordVault
-
-```TypeScript
-static readonly passwordVault: TextMenuItemId
-```
-
-密码保险箱，为二级菜单项。 点击该菜单项后会拉起密码保险箱应用，该应用提供自动填充账号密码能力，仅支持Search、TextInput、TextArea或RichEditor组件。
-
-**类型：** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
-
-**起始版本：** 23
-
-**ArkTS模式：** ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-TextMenuItemId-static readonly passwordVault: TextMenuItemId--><!--Device-TextMenuItemId-static readonly passwordVault: TextMenuItemId-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## phoneNumber
-
-```TypeScript
-static readonly phoneNumber: TextMenuItemId
-```
-
-呼叫，为一级菜单项。对选中的电话号码提供跳转服务，拉起电话拨号页面。
-
-**类型：** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-TextMenuItemId-static readonly phoneNumber: TextMenuItemId--><!--Device-TextMenuItemId-static readonly phoneNumber: TextMenuItemId-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

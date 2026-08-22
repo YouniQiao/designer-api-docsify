@@ -35,3 +35,14 @@ Defining wrapBuilder function.
 | --- | --- |
 | [WrappedBuilder](arkts-arkui-wrappedbuilder-c.md)&lt;Args&gt; |  |
 
+**Examples**
+
+```TypeScript
+@Builder
+function MyBuilder(value: string, size: number) {
+  Text(value)
+    .fontSize(size)
+}
+let builderVar: WrappedBuilder<[string, number]> = wrapBuilder(MyBuilder);
+```
+

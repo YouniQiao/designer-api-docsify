@@ -61,6 +61,16 @@ Asserts that a component that matches the given attributes exists on the current
 
 ```TypeScript
 // xxx.test.ets
+import { Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.assertComponentExist(ON.text('next page'));
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { UiDriver, BY } from '@kit.TestKit';
 
 async function demo() {
@@ -101,6 +111,38 @@ Clicks a specific point of this **UiDriver** object based on the given coordinat
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, ON, Component } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  await button.click();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.click(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, Driver, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  await button.click();
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -145,6 +187,24 @@ Creates a **UiDriver** object and returns the object created. This API is a stat
 
 ```TypeScript
 // xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { PointerMatrix } from '@kit.TestKit';
+
+async function demo() {
+  let pointerMatrix: PointerMatrix = PointerMatrix.create(2, 3);
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { UiDriver } from '@kit.TestKit';
 
 async function demo() {
@@ -183,6 +243,16 @@ Delays a duration of time. This API uses a promise to return the result.
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.delayMs(1000);
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -229,6 +299,38 @@ Double-clicks a specific point of this **UiDriver** object based on the given co
 
 ```TypeScript
 // xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  await button.doubleClick();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.doubleClick(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  await button.doubleClick();
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { UiDriver } from '@kit.TestKit';
 
 async function demo() {
@@ -271,6 +373,16 @@ Searches this **UiDriver** object for the target component that matches the give
 
 ```TypeScript
 // xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.text('next page'));
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
@@ -310,6 +422,16 @@ Searches this **UiDriver** object for all components that match the given attrib
 | Promise&lt;Array&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt;&gt; | Promise used to return the list of components. |
 
 **Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let buttonList: Array<Component> = await driver.findComponents(ON.text('next page'));
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -356,6 +478,38 @@ Long-clicks a specific point of this **UiDriver** object based on the given coor
 
 ```TypeScript
 // xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component = await driver.findComponent(ON.type('Button'));
+  await button.longClick();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.longClick(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  await button.longClick();
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { UiDriver } from '@kit.TestKit';
 
 async function demo() {
@@ -389,6 +543,26 @@ Presses the Back button on this **UiDriver** object. This API uses a promise to 
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.pressBack();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.pressBack(0);
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -431,6 +605,26 @@ Captures the current screen of this **UiDriver** object and saves it as a PNG im
 | Promise&lt;boolean&gt; | Promise used to return whether the screenshot operation is successful. The value **true* The value **true** indicates the screenshot operation is successful, and **false** indicates the opposite. |
 
 **Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.screenCap('/data/storage/el2/base/cache/1.png');
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.screenCap('/data/storage/el2/base/cache/1.png', 0);
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -479,6 +673,16 @@ Swipes on this **UiDriver** object from the start point to the end point based o
 
 ```TypeScript
 // xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.swipe(100, 100, 200, 200, 600);
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { UiDriver } from '@kit.TestKit';
 
 async function demo() {
@@ -509,7 +713,7 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | number | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md). |
+| keyCode | number | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). |
 
 **Return value:**
 
@@ -518,6 +722,28 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+import { KeyCode } from '@kit.InputKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.triggerKey(KeyCode.KEYCODE_BACK); // Back button
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+import { KeyCode } from '@kit.InputKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.triggerKey(KeyCode.KEYCODE_BACK, 0); // Back button
+}
+```
 
 ```TypeScript
 // xxx.test.ets

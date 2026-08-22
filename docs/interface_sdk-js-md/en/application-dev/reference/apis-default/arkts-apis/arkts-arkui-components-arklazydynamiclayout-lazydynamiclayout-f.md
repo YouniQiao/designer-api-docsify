@@ -31,14 +31,14 @@ Defines LazyDynamicLayout Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithm | [LazyLayoutAlgorithm](arkts-lazylayoutalgorithm-i.md) | Yes | Lazy layout algorithm. |
+| algorithm | [LazyLayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-lazylayoutalgorithm-i.md) | Yes | Lazy layout algorithm. |
 | content_ | CustomBuilder | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyDynamicLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkuicomponentsarklazydynamiclayout-lazydynamiclayoutattribute-c.md) |  |
+| [LazyDynamicLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md) |  |
 
 
 ## LazyDynamicLayout
@@ -67,12 +67,12 @@ Defines LazyDynamicLayout Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | CustomBuilderT&lt;[LazyDynamicLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkuicomponentsarklazydynamiclayout-lazydynamiclayoutattribute-c.md)&gt; | Yes | The style to create a LazyDynamicLayout. |
+| style_ | CustomBuilderT&lt;[LazyDynamicLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md)&gt; | Yes | The style to create a LazyDynamicLayout. |
 | content_ | CustomBuilder | No | content |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyDynamicLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkuicomponentsarklazydynamiclayout-lazydynamiclayoutattribute-c.md) | The attribute of the LazyDynamicLayout. |
+| [LazyDynamicLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md) | The attribute of the LazyDynamicLayout. |
 

@@ -27,8 +27,8 @@
 | [CaretStyle](arkts-arkui-caretstyle-i.md) | 定义光标样式。 |
 | [DecorationStyleResult](arkts-arkui-decorationstyleresult-i.md) | 后端返回的文本装饰线样式信息。 |
 | [DeleteValue](arkts-arkui-deletevalue-i.md) | 提供从文本中删除值的接口。 |
-| [EditMenuOptions](arkts-arkui-editmenuoptions-i.md) | 编辑菜单选项 |
 | [EditableTextChangeValue](arkts-arkui-editabletextchangevalue-i.md) | 文本变化的详细信息，包括预上屏。 |
+| [EditMenuOptions](arkts-arkui-editmenuoptions-i.md) | 编辑菜单选项 |
 | [FontConfigs](arkts-arkui-fontconfigs-i.md) | 字体配置项。 |
 | [FontSettingOptions](arkts-arkui-fontsettingoptions-i.md) | 字体配置项。 |
 | [FontWeightConfigs](arkts-arkui-fontweightconfigs-i.md) | 字体粗细配置项。当传入该配置对象时（包括空对象{}），未显式设置的属性将使用默认值。当传入null或undefined时，不应用默认值，字体粗细行为与父组件文本保持一致。 |
@@ -41,8 +41,8 @@
 | [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) | 位置以及亲和度。 |
 | [PreviewText](arkts-arkui-previewtext-i.md) | 预上屏信息。 |
 | [SelectedDragPreviewStyle](arkts-arkui-selecteddragpreviewstyle-i.md) | 文本拖拽时的背板样式。 |
-| [StyledStringChangeValue](arkts-arkui-styledstringchangevalue-i.md) | 属性字符串的文本变化信息。 |
 | [StyledStringChangedListener](arkts-arkui-styledstringchangedlistener-i.md) | 属性字符串的文本内容变化监听器。 |
+| [StyledStringChangeValue](arkts-arkui-styledstringchangevalue-i.md) | 属性字符串的文本变化信息。 |
 | [StyledStringController](arkts-arkui-styledstringcontroller-i.md) | 定义StyledString控制器。 |
 | [TextBaseController](arkts-arkui-textbasecontroller-i.md) | 文本选择控制器。 |
 | [TextChangeOptions](arkts-arkui-textchangeoptions-i.md) | 文本变化相关信息，包括变化前后的选区范围、变化前的文本内容等。 |

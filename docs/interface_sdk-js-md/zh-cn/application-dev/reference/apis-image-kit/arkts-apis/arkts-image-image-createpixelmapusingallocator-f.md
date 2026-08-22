@@ -85,3 +85,50 @@ function createPixelMapUsingAllocator() {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+async function CreatePixelMapUsingAllocator(context : Context) {
+  // 此处'test.jpg'仅作示例，请开发者自行替换，否则imageSource创建失败会导致后续无法正常执行。
+  let filePath: string = context.filesDir + "/test.jpg";
+  let imageSource = image.createImageSource(filePath);
+  let decodingOptions: image.DecodingOptions = {
+    editable: true,
+    desiredSize: { width: 3072, height: 4096 },
+    rotate: 10,
+    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
+    desiredRegion: { size: { width: 3072, height: 4096 }, x: 0, y: 0 },
+    // 若解码接口同时传入了desiredSize参数与desiredRegion参数，需进一步传入cropAndScaleStrategy参数指定缩放与裁剪的先后顺序，推荐设置CROP_FIRST。
+    cropAndScaleStrategy: image.CropAndScaleStrategy.CROP_FIRST,
+    index: 0
+  };
+  let pixelmap = imageSource.createPixelMapUsingAllocator(decodingOptions, image.AllocatorType.AUTO);
+  if (pixelmap != undefined) {
+    console.info('Succeeded in creating pixelMap object.');
+  } else {
+    console.error('Failed to create pixelMap.');
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+async function CreatePixelMapUsingAllocatorFunc(imageSource: image.ImageSource): Promise<void> {
+   let decodeOpts: image.DecodingOptions = {
+    sampleSize: 1,
+    editable: true,
+    desiredSize: { width: 198, height: 202 },
+    rotate: 0,
+    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
+    index: 0,
+  };
+  try {
+    let pixelMap = await imageSource.createPixelMapUsingAllocator(decodeOpts, image.AllocatorType.AUTO);
+    console.info(0x00000, 'CreatePixelMapUsingAllocatorFunc', 'createPixelMapUsingAllocator success!');
+  } catch (err) {
+    console.error(0x00000, 'CreatePixelMapUsingAllocatorFunc', 'CreatePixelMapUsingAllocatorFunc failed: ' + err);
+  }
+}
+```
+

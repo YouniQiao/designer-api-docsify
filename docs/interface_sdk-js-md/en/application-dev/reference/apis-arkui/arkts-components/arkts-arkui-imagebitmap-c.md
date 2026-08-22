@@ -55,6 +55,47 @@ Creates an **ImageBitmap** object using an **ImageSrc** object.
 | --- | --- | --- | --- |
 | src | string | Yes | Image source. Local images are supported.<br> 1. The string format is used to load local images, for example, **ImageBitmap("common/images/example.jpg")**. For entry and feature modules, the start point of the image path for loading is the **ets** folder of the module. For HAR and shared modules, the start point is the **ets** folder of the entry or feature module into which they are built.<br> For modules whose **type** is **"har"** or **"shared"**, you are advised to use [ImageSource](../../../media/image/image-decoding.md) to decode resource images into a unified **PixelMap** object for loading and use.<br> 2. Supported image formats: BMP, JPG, PNG, SVG, and WEBP.<br> **NOTE：**<br> - ArkTS widgets do not support the strings with the **http://**, **datashare://**, or **file://data/storage**. |
 
+**Examples**
+
+The following example shows how to specify the unit mode during the creation of a CanvasRenderingContext2D object. The default unit mode is LengthMetricsUnit.DEFAULT, which corresponds to the default unit vp. Once set, this unit mode cannot be changed dynamically. For details, see LengthMetricsUnit.
+
+```TypeScript
+// xxx.ets
+import { LengthMetricsUnit } from '@kit.ArkUI'
+
+@Entry
+@Component
+struct LengthMetricsUnitDemo {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private contextPX: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings, LengthMetricsUnit.PX);
+  private contextVP: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.contextPX)
+        .width('100%')
+        .height(150)
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.contextPX.fillRect(10,10,100,100)
+          this.contextPX.clearRect(10,10,50,50)
+        })
+
+      Canvas(this.contextVP)
+        .width('100%')
+        .height(150)
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.contextVP.fillRect(10,10,100,100)
+          this.contextVP.clearRect(10,10,50,50)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 ## constructor
 
 ```TypeScript
@@ -82,6 +123,10 @@ Creates an **ImageBitmap** object using an **ImageSrc** object. The unit mode of
 | src | string | Yes | Image source. Local images are supported.<br> 1. The string format is used to load local images, for example, **ImageBitmap("common/images/example.jpg")**. For entry and feature modules, the start point of the image path for loading is the **ets** folder of the module. For HAR and shared modules, the start point is the **ets** folder of the entry or feature module into which they are built.<br> For modules whose **type** is **"har"** or **"shared"**, you are advised to use [ImageSource](../../../media/image/image-decoding.md) to decode resource images into a unified **PixelMap** object for loading and use.<br> 2. Supported image formats: BMP, JPG, PNG, SVG, and WEBP.<br> **NOTE：**<br> - ArkTS widgets do not support the strings with the **http://**, **datashare://**, or **file://data/storage**. |
 | unit | LengthMetricsUnit | Yes | Unit mode of the **ImageBitmap** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br> If the value is **undefined**, **NaN**, or **Infinity**, the default value will be used. |
 
+**Examples**
+
+See [constructor](#constructor)
+
 ## constructor
 
 ```TypeScript
@@ -103,6 +148,10 @@ Creates an **ImageBitmap** object using a **PixelMap** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | PixelMap | Yes | Image data source, which supports **PixelMap** objects. |
+
+**Examples**
+
+See [constructor](#constructor)
 
 ## constructor
 
@@ -129,6 +178,10 @@ Creates an **ImageBitmap** object using a **PixelMap** object. The unit mode of 
 | data | PixelMap | Yes | Image data source, which supports **PixelMap** objects. |
 | unit | LengthMetricsUnit | Yes | Unit mode of the **ImageBitmap** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md). |
 
+**Examples**
+
+See [constructor](#constructor)
+
 ## constructor
 
 ```TypeScript
@@ -153,6 +206,10 @@ Transfer a Resource object to construct an ImageBitmap object.
 | --- | --- | --- | --- |
 | data | Resource | Yes | Resource object |
 | unit | LengthMetricsUnit | No | the unit mode |
+
+**Examples**
+
+See [constructor](#constructor)
 
 ## height
 

@@ -58,6 +58,17 @@ Compares buf with target and returns a number indicating whether buf comes befor
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';
 
+let buf1 = fastbuffer.from('1234');
+let buf2 = fastbuffer.from('0123');
+let res = fastbuffer.compare(buf1, buf2);
+
+console.info(Number(res).toString());
+// Output: 1
+```
+
+```TypeScript
+import { fastbuffer } from '@kit.ArkTS';
+
 let buf1 = fastbuffer.from([1, 2, 3, 4, 5, 6, 7, 8, 9]);
 let buf2 = fastbuffer.from([5, 6, 7, 8, 9, 1, 2, 3, 4]);
 

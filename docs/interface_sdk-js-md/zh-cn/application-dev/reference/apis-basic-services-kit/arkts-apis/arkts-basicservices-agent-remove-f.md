@@ -40,6 +40,44 @@ function remove(id: string, callback: AsyncCallback<void>): void
 
 **示例**
 
+```TypeScript
+uploadTask.remove().then((result: boolean) => {
+  console.info('Succeeded in removing the upload task.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to remove the upload task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+uploadTask.remove((err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to remove the upload task. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in removing the upload task.');
+  }
+});
+```
+
+```TypeScript
+downloadTask.remove().then((result) => {
+  console.info('Succeeded in removing the download task.');
+}).catch ((err: BusinessError) => {
+  console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+downloadTask.remove((err, result)=>{
+  if(err) {
+    console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in removing the download task.');
+});
+```
+
 ArkTS-Sta示例：
 
 ```TypeScript
@@ -51,6 +89,18 @@ request.agent.remove("123456", (err: BusinessError<void> | null) => {
     return;
   }
   console.info(`Succeeded in removing a download task.`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+request.agent.remove("123456").then(() => {
+  console.info(`Succeeded in removing a download task. `);
+}).catch((err: Error) => {
+  console.error(`Failed to remove a download task, Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -93,15 +143,5 @@ function remove(id: string): Promise<void>
 
 **示例**
 
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-request.agent.remove("123456").then(() => {
-  console.info(`Succeeded in removing a download task. `);
-}).catch((err: Error) => {
-  console.error(`Failed to remove a download task, Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [remove](#remove)
 

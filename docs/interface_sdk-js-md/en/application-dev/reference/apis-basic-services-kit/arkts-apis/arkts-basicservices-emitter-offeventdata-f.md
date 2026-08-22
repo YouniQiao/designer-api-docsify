@@ -25,7 +25,7 @@ Unsubscribes from an event with the specified event ID and processed by the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID. The value cannot be an empty string and exceed 10240 bytes. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to unregister. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to unregister. |
 
 **Examples**
 
@@ -39,5 +39,17 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData | unde
 // Unregister the callbacks for events whose ID is eventId. The callback object must be the object used during registration.
 // If the callback handler has not been subscribed, no processing is performed.
 emitter.offEventData("eventId", callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+}
+
+emitter1.offEventData("eventId", callback);
 ```
 

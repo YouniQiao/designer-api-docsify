@@ -1,6 +1,6 @@
 # Uint8Array
 
-一种线性数据结构，底层基于[ArkTS ArrayBuffer](arkts-arkts-collections-n.md)实现。
+一种线性数据结构，底层基于[ArkTS ArrayBuffer](arkts-collections.md)实现。
 
 > **说明：**
 > 
@@ -1281,24 +1281,6 @@ values(): IterableIterator<number>
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
-## BYTES_PER_ELEMENT
-
-```TypeScript
-static readonly BYTES_PER_ELEMENT: number
-```
-
-ArkTS Uint8Array中每个元素所占的字节数。
-
-**类型：** number
-
-**起始版本：** 12
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Uint8Array-static readonly BYTES_PER_ELEMENT: number--><!--Device-Uint8Array-static readonly BYTES_PER_ELEMENT: number-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
 ## buffer
 
 ```TypeScript
@@ -1350,6 +1332,24 @@ ArkTS Uint8Array距离其ArrayBuffer起始位置的字节偏移。
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint8Array-readonly byteOffset: number--><!--Device-Uint8Array-readonly byteOffset: number-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## BYTES_PER_ELEMENT
+
+```TypeScript
+static readonly BYTES_PER_ELEMENT: number
+```
+
+ArkTS Uint8Array中每个元素所占的字节数。
+
+**类型：** number
+
+**起始版本：** 12
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-static readonly BYTES_PER_ELEMENT: number--><!--Device-Uint8Array-static readonly BYTES_PER_ELEMENT: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

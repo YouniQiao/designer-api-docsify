@@ -1,6 +1,6 @@
 # ArrayBuffer
 
-Underlying data structure of the ArkTS TypedArray ([Int8Array](arkts-collections.md), [Uint8Array](arkts-collections.md), [Int16Array](arkts-collections.md), [Uint16Array](arkts-collections.md), [Int32Array](arkts-collections.md), [Uint32Array](arkts-collections.md), [Uint8ClampedArray](arkts-collections.md), and [Float32Array](arkts-collections.md)).
+Underlying data structure of the ArkTS TypedArray ([Int8Array](arkts-arkts-collections-n.md), [Uint8Array](arkts-arkts-collections-n.md), [Int16Array](arkts-arkts-collections-n.md), [Uint16Array](arkts-arkts-collections-n.md), [Int32Array](arkts-arkts-collections-n.md), [Uint32Array](arkts-arkts-collections-n.md), [Uint8ClampedArray](arkts-arkts-collections-n.md), and [Float32Array](arkts-arkts-collections-n.md)).
 
 > **NOTE：**
 > 

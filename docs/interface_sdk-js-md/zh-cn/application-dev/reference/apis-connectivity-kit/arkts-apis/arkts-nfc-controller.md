@@ -27,10 +27,10 @@ import { nfcController } from '@kit.ConnectivityKit';
 | [isNfcAvailable](arkts-connectivity-nfccontroller-isnfcavailable-f.md) | 查询设备是否有NFC能力。 |
 | [isNfcOpen](arkts-connectivity-nfccontroller-isnfcopen-f.md) | 查询NFC是否打开。 |
 | [isNfcSupported](arkts-connectivity-nfccontroller-isnfcsupported-f.md) | 查询设备是否有NFC能力。 |
-| [offNfcStateChange](arkts-connectivity-nfccontroller-offnfcstatechange-f.md) | unregister nfc state changed event. |
 | [off_nfcStateChange](arkts-connectivity-nfccontroller-offnfcstatechange-f.md) | 取消NFC开关状态事件的注册，取消后NFC状态变化时，就不会再收到Callback的通知。使用callback异步回调。 |
-| [onNfcStateChange](arkts-connectivity-nfccontroller-onnfcstatechange-f.md) | register nfc state changed event. |
+| [offNfcStateChange](arkts-connectivity-nfccontroller-offnfcstatechange-f.md) | unregister nfc state changed event. |
 | [on_nfcStateChange](arkts-connectivity-nfccontroller-onnfcstatechange-f.md) | 注册NFC开关状态事件，获取NFC状态的变化通知。使用callback异步回调。 |
+| [onNfcStateChange](arkts-connectivity-nfccontroller-onnfcstatechange-f.md) | register nfc state changed event. |
 | [openNfc](arkts-connectivity-nfccontroller-opennfc-f.md) | 打开NFC开关。 |
 
 ### 枚举

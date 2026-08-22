@@ -18,6 +18,6 @@ import { AddFormMenuItem, FormMenuItemStyle, AddFormOptions } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [AddFormOptions](arkts-arkui-arkuiadvancedformmenu-addformoptions-i.md) |  |
-| [FormMenuItemStyle](arkts-arkui-arkuiadvancedformmenu-formmenuitemstyle-i.md) |  |
+| [AddFormOptions](arkts-arkui-arkui-advanced-formmenu-addformoptions-i.md) |  |
+| [FormMenuItemStyle](arkts-arkui-arkui-advanced-formmenu-formmenuitemstyle-i.md) |  |
 

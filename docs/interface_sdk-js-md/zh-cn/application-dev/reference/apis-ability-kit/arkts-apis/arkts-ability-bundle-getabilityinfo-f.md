@@ -53,6 +53,21 @@ function getAbilityInfo(bundleName: string, abilityName: string, callback: Async
 
 ```TypeScript
 import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleName: string = "com.example.myapplication";
+let abilityName: string = "EntryAbility";
+
+bundle.getAbilityInfo(bundleName, abilityName)
+  .then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
 
 let bundleName: string = "com.example.myapplication";
 let abilityName: string = "EntryAbility";
@@ -102,18 +117,5 @@ function getAbilityInfo(bundleName: string, abilityName: string): Promise<Abilit
 
 **示例**
 
-```TypeScript
-import bundle from '@ohos.bundle';
-import { BusinessError } from '@ohos.base';
-
-let bundleName: string = "com.example.myapplication";
-let abilityName: string = "EntryAbility";
-
-bundle.getAbilityInfo(bundleName, abilityName)
-  .then((data) => {
-    console.info('Operation successful. Data: ' + JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  })
-```
+参见 [getAbilityInfo](#getabilityinfo)
 

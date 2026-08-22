@@ -20,5 +20,5 @@ declare type OnChangedCallback = (callbackParam: CallbackParamV2) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackParam | [CallbackParamV2](arkts-arkui-arkuiadvancedtreeviewv2-callbackparamv2-i.md) | 是 | The result of event. |
+| callbackParam | [CallbackParamV2](../../apis-default/arkts-apis/arkts-arkui-advanced-treeviewv2-callbackparamv2-i.md) | 是 | The result of event. |
 

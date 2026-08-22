@@ -52,6 +52,18 @@ sensor.getGeomagneticDip([1, 0, 0, 0, 1, 0, 0, 0, 1], (err: BusinessError, data:
 })
 ```
 
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const promise = sensor.getGeomagneticDip([1, 0, 0, 0, 1, 0, 0, 0, 1]);
+promise.then((data: number) => {
+  console.info('Succeeded in get GeomagneticDip_promise', data);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to operate.`);
+})
+```
+
 
 ## getGeomagneticDip
 
@@ -90,15 +102,5 @@ function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>
 
 **示例**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const promise = sensor.getGeomagneticDip([1, 0, 0, 0, 1, 0, 0, 0, 1]);
-promise.then((data: number) => {
-  console.info('Succeeded in get GeomagneticDip_promise', data);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to operate.`);
-})
-```
+参见 [getGeomagneticDip](#getgeomagneticdip)
 

@@ -34,7 +34,7 @@ Downloads a file. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | Yes | Download configuration. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[DownloadTask](arkts-basicservices-request-downloadtask-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadTask** object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DownloadTask](arkts-basicservices-request-downloadtask-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadTask** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -43,6 +43,16 @@ Downloads a file. This API uses an asynchronous callback to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 **Examples**
+
+```TypeScript
+let downloadTask: request.DownloadTask;
+// Replace the URL with the HTTP address of the real server.
+request.download({ url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+  downloadTask = data;
+}).catch((err: BusinessError) => {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+})
+```
 
 ```TypeScript
 let downloadTask: request.DownloadTask;
@@ -100,13 +110,5 @@ Downloads a file. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-let downloadTask: request.DownloadTask;
-// Replace the URL with the HTTP address of the real server.
-request.download({ url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-  downloadTask = data;
-}).catch((err: BusinessError) => {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-})
-```
+See [download](#download)
 

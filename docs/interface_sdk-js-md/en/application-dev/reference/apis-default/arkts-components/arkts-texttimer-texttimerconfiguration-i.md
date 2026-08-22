@@ -76,6 +76,26 @@ Whether the timer is a countdown. The value true means that the timer counts dow
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## started
+
+```TypeScript
+started: boolean
+```
+
+Whether the timer has already started.
+
+**Type:** boolean
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TextTimerConfiguration-started: boolean--><!--Device-TextTimerConfiguration-started: boolean-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## startTime
 
 ```TypeScript
@@ -95,26 +115,6 @@ Unit: ms. Default value: 0.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextTimerConfiguration-startTime?: int--><!--Device-TextTimerConfiguration-startTime?: int-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## started
-
-```TypeScript
-started: boolean
-```
-
-Whether the timer has already started.
-
-**Type:** boolean
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TextTimerConfiguration-started: boolean--><!--Device-TextTimerConfiguration-started: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

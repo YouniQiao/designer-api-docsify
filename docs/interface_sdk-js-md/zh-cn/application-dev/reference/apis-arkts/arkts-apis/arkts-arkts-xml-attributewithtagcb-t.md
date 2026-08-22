@@ -28,3 +28,31 @@ ParseOptions中attributeWithTagCallbackFunction的回调方法，三个字符串
 | --- | --- |
 | boolean | 是否继续解析标签名称、属性名称及属性的值。true表示继续解析，false表示停止解析。 |
 
+**示例**
+
+```TypeScript
+let xmlStr = 
+    '<?xml version="1.0" encoding="utf-8"?>' +
+    '<column name="Giana"><value integer="1"/></column>' +
+    '<column name="category"><value Boolean="true"/></column>' +
+    '<column name="day"><orange Boolean="3"/></column>';
+let textEncoder = new util.TextEncoder();
+let arrBuffer = textEncoder.encodeInto(xmlStr);
+let that = new xml.XmlPullParser(arrBuffer.buffer as object as ArrayBuffer, 'UTF-8');
+
+let attrWithTag = (tagName: string, key: string, value: string): boolean => {
+    if (tagName == "orange") {
+        console.info('key: ',key,' value: ',value); // key:  Boolean  value:  3
+        arktest.assertEQ(value, '3');
+    }
+    return true;
+}
+
+let options: xml.ParseOptions = {
+    supportDoctype: true,
+    ignoreNameSpace: true,
+    attributeWithTagCallbackFunction:attrWithTag
+};
+that.parseXml(options);
+```
+

@@ -54,6 +54,41 @@ marshalling(dataOut: MessageParcel): boolean
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
+class MyParcelable implements rpc.Parcelable {
+  num: number = 0;
+  str: string = '';
+  constructor(num: number, str: string) {
+    this.num = num;
+    this.str = str;
+  }
+  marshalling(messageSequence: rpc.MessageSequence): boolean {
+    messageSequence.writeInt(this.num);
+    messageSequence.writeString(this.str);
+    return true;
+  }
+  unmarshalling(messageSequence: rpc.MessageSequence): boolean {
+    this.num = messageSequence.readInt();
+    this.str = messageSequence.readString();
+    hilog.info(0x0000, 'testTag', 'readInt is ' + this.num + ' readString is ' + this.str);
+    return true;
+  }
+}
+
+try {
+  let parcelable = new MyParcelable(1, "aaa");
+  let data = rpc.MessageSequence.create();
+  data.writeParcelable(parcelable);
+  let ret = new MyParcelable(0, "");
+  data.readParcelable(ret);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
 class MySequenceable implements rpc.Sequenceable {
   num: number = 0;
   str: string = '';
@@ -117,6 +152,41 @@ unmarshalling(dataIn: MessageParcel): boolean
 | boolean | true：反序列化成功，false：反序列化失败。 |
 
 **示例**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyParcelable implements rpc.Parcelable {
+  num: number = 0;
+  str: string = '';
+  constructor(num: number, str: string) {
+    this.num = num;
+    this.str = str;
+  }
+  marshalling(messageSequence: rpc.MessageSequence): boolean {
+    messageSequence.writeInt(this.num);
+    messageSequence.writeString(this.str);
+    return true;
+  }
+  unmarshalling(messageSequence: rpc.MessageSequence): boolean {
+    this.num = messageSequence.readInt();
+    this.str = messageSequence.readString();
+    hilog.info(0x0000, 'testTag', 'readInt is ' + this.num + ' readString is ' + this.str);
+    return true;
+  }
+}
+
+try {
+  let parcelable = new MyParcelable(1, "aaa");
+  let data = rpc.MessageSequence.create();
+  data.writeParcelable(parcelable);
+  let ret = new MyParcelable(0, "");
+  data.readParcelable(ret);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

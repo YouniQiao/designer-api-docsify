@@ -264,6 +264,65 @@ import { common2D, uiEffect } from "@kit.ArkGraphics2D"
 @Entry
 @Component
 struct ColorGradientExample {
+  @State colorsExample: Array<uiEffect.Color> = [
+    {red: 1.0, green: 0.8, blue: 0.5, alpha: 0.8},
+    {red: 1.0, green: 1.5, blue: 0.5, alpha: 1.0}
+  ]
+
+  @State positionsExample: Array<common2D.Point> = [
+    {x: 0.2, y: 0.2},
+    {x: 0.8, y: 0.6}]
+
+  @State strengthsExample: Array<number> = [0.3, 0.3]
+
+  build() {
+    Column() {
+      Row()
+        .width("100%")
+        .height("100%")
+        .backgroundFilter(uiEffect.createFilter().colorGradient(this.colorsExample, this.positionsExample, this.strengthsExample))
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component, Column, Stack, State, Row, $r } from '@kit.ArkUI'
+import uiEffect from '@ohos.graphics.uiEffect'
+import type common2D from '@ohos.graphics.common2D'
+
+@Entry
+@Component
+struct ColorGradient {
+  @State colors: Array<uiEffect.Color> = [
+    {red: 1.0, green: 0.8, blue: 0.5, alpha: 0.8} as uiEffect.Color,
+    {red: 1.0, green: 1.5, blue: 0.5, alpha: 1.0} as uiEffect.Color
+  ]
+  @State positions: Array<common2D.Point> = [
+    {x: 0.2, y: 0.2} as common2D.Point,
+    {x: 0.8, y: 0.6} as common2D.Point]
+  @State strengths: Array<double> = [0.3, 0.3]
+
+  build() {
+    Column() {
+      Row().width("100%").height("100%")
+        .backgroundFilter(uiEffect.createFilter().colorGradient(this.colors.map((v: uiEffect.Color) => v),
+          this.positions.map((v: common2D.Point) => v), this.strengths.map((v: double) => v)))
+    }
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { common2D, uiEffect } from "@kit.ArkGraphics2D"
+
+@Entry
+@Component
+struct ColorGradientExample {
   build() {
     Stack() {
       Stack() {}

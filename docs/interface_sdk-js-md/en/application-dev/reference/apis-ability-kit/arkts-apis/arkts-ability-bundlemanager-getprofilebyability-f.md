@@ -35,7 +35,7 @@ Obtains the JSON string array of the current application's configuration file ba
 | moduleName | string | Yes | Module name. |
 | abilityName | string | Yes | Name of the UIAbility component. |
 | metadataName | string | Yes | [Metadata name](../../../quick-start/module-configuration-file.md#metadata) of the UIAbility component, that is, **name** of the **metadata** tag under [abilities](../../../quick-start/module-configuration-file.md#abilities) in the **module.json5** file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the information is successfully obtained, **err** is **null** and **data** is **Array&lt;string&gt;**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the information is successfully obtained, **err** is **null** and **data** is **Array&lt;string&gt;**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -65,6 +65,49 @@ try {
     } else {
       hilog.info(0x0000, 'testTag', 'getProfileByAbility successfully: %{public}s', JSON.stringify(data));
     }
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getProfileByAbility failed. Cause: %{public}s', message);
+}
+```
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let moduleName = 'entry';
+let abilityName = 'EntryAbility';
+
+try {
+  // Obtain the JSON string array of the configuration file based on the module name and ability name.
+  bundleManager.getProfileByAbility(moduleName, abilityName).then((data) => {
+    hilog.info(0x0000, 'testTag', 'getProfileByAbility successfully. Data: %{public}s', JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'getProfileByAbility failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getProfileByAbility failed. Cause: %{public}s', message);
+}
+```
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let moduleName = 'entry';
+let abilityName = 'EntryAbility';
+let metadataName = 'ability_metadata';
+
+try {
+  // Obtain the JSON string array of the current application's configuration file based on the module name, ability name, and metadata name.
+  bundleManager.getProfileByAbility(moduleName, abilityName, metadataName).then((data) => {
+    hilog.info(0x0000, 'testTag', 'getProfileByAbility successfully. Data: %{public}s', JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'getProfileByAbility failed. Cause: %{public}s', err.message);
   });
 } catch (err) {
   let message = (err as BusinessError).message;
@@ -121,46 +164,5 @@ Obtains the JSON string array of the current application's configuration file ba
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let moduleName = 'entry';
-let abilityName = 'EntryAbility';
-
-try {
-  // Obtain the JSON string array of the configuration file based on the module name and ability name.
-  bundleManager.getProfileByAbility(moduleName, abilityName).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getProfileByAbility successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getProfileByAbility failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getProfileByAbility failed. Cause: %{public}s', message);
-}
-```
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let moduleName = 'entry';
-let abilityName = 'EntryAbility';
-let metadataName = 'ability_metadata';
-
-try {
-  // Obtain the JSON string array of the current application's configuration file based on the module name, ability name, and metadata name.
-  bundleManager.getProfileByAbility(moduleName, abilityName, metadataName).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getProfileByAbility successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getProfileByAbility failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getProfileByAbility failed. Cause: %{public}s', message);
-}
-```
+See [getProfileByAbility](#getprofilebyability)
 

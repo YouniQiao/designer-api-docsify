@@ -2,7 +2,7 @@
 
 Describes the parameters of the Ble phy.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-ble-interface PhyValue--><!--Device-ble-interface PhyValue-End-->
 
@@ -24,7 +24,7 @@ Preferred coded phy mode.
 
 **Type:** [CodedPhyMode](arkts-connectivity-ble-codedphymode-e.md)
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +42,7 @@ Receiver phy.
 
 **Type:** [BlePhy](arkts-connectivity-ble-blephy-e.md)
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +60,7 @@ Transmitter phy.
 
 **Type:** [BlePhy](arkts-connectivity-ble-blephy-e.md)
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 

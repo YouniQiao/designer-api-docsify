@@ -39,7 +39,45 @@ Obtains the stream ID of this audio capturer. This API uses an asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream ID obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream ID obtained; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getAudioStreamId((err: BusinessError, streamId: number) => {
+  console.info(`audioCapturer GetStreamId: ${streamId}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getAudioStreamId().then((streamId: number) => {
+  console.info(`audioCapturer getAudioStreamId: ${streamId}`);
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.getAudioStreamId((err: BusinessError, streamId: number) => {
+  console.info(`Renderer GetStreamId: ${streamId}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.getAudioStreamId().then((streamId: number) => {
+  console.info(`Renderer getAudioStreamId: ${streamId}`);
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
 
 ## getAudioStreamId
 
@@ -61,6 +99,10 @@ Obtains the stream ID of this audio capturer. This API uses a promise to return 
 | --- | --- |
 | Promise&lt;long&gt; | Promise used to return the stream ID. |
 
+**Examples**
+
+See [getAudioStreamId](#getaudiostreamid)
+
 ## getAudioStreamIdSync
 
 ```TypeScript
@@ -81,6 +123,32 @@ Obtains the stream ID of this audio capturer. This API returns the result synchr
 | --- | --- |
 | long | Stream ID. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let streamId: number = audioCapturer.getAudioStreamIdSync();
+  console.info(`audioCapturer getAudioStreamIdSync: ${streamId}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let streamId: number = audioRenderer.getAudioStreamIdSync();
+  console.info(`Renderer getAudioStreamIdSync: ${streamId}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error}`);
+}
+```
+
 ## getAudioTime
 
 ```TypeScript
@@ -99,7 +167,45 @@ Obtains the timestamp of the current recording position, measured in nanoseconds
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of nanoseconds obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of nanoseconds obtained; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getAudioTime((err: BusinessError, timestamp: number) => {
+  console.info(`Current timestamp: ${timestamp}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getAudioTime().then((audioTime: number) => {
+  console.info(`AudioFrameworkRecLog: AudioCapturer getAudioTime : Success ${audioTime}`);
+}).catch((err: BusinessError) => {
+  console.error(`AudioFrameworkRecLog: AudioCapturer Created : ERROR : ${err}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.getAudioTime((err: BusinessError, timestamp: number) => {
+  console.info(`Current timestamp: ${timestamp}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.getAudioTime().then((timestamp: number) => {
+  console.info(`Current timestamp: ${timestamp}`);
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
 
 ## getAudioTime
 
@@ -121,25 +227,9 @@ Obtains the timestamp of the current recording position, measured in nanoseconds
 | --- | --- |
 | Promise&lt;long&gt; | Promise used to return a timestamp representing the number of nanoseconds elapsed since the Unix epoch (January 1, 1970). <br>The timestamp unit is nanoseconds. |
 
-## getAudioTimeSync
+**Examples**
 
-```TypeScript
-getAudioTimeSync(): long
-```
-
-Obtains the timestamp of the current recording position, measured in nanoseconds from the Unix epoch (January 1, 1970). This API returns the result synchronously.
-
-**Since:** 23
-
-<!--Device-AudioCapturer-getAudioTimeSync(): long--><!--Device-AudioCapturer-getAudioTimeSync(): long-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Capturer
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| long | Timestamp. |
+See [getAudioTime](#getaudiotime)
 
 ## getAudioTimestampInfo
 
@@ -169,6 +259,28 @@ This API obtains the actual recording position (specified by **framePos**) of th
 | --- | --- |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getAudioTimestampInfo().then((audioTimestampInfo: audio.AudioTimestampInfo) => {
+  console.info(`Current timestamp: ${audioTimestampInfo.timestamp}`);
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.getAudioTimestampInfo().then((audioTimestampInfo: audio.AudioTimestampInfo) => {
+  console.info(`Current timestamp: ${audioTimestampInfo.timestamp}`);
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
+
 ## getAudioTimestampInfoSync
 
 ```TypeScript
@@ -195,6 +307,78 @@ Obtains the timestamp and position information of an input audio stream. This AP
 | --- | --- |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let audioTimestampInfo: audio.AudioTimestampInfo = audioCapturer.getAudioTimestampInfoSync();
+  console.info(`Current timestamp: ${audioTimestampInfo.timestamp}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let audioTimestampInfo: audio.AudioTimestampInfo = audioRenderer.getAudioTimestampInfoSync();
+  console.info(`Current timestamp: ${audioTimestampInfo.timestamp}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error}`);
+}
+```
+
+## getAudioTimeSync
+
+```TypeScript
+getAudioTimeSync(): long
+```
+
+Obtains the timestamp of the current recording position, measured in nanoseconds from the Unix epoch (January 1, 1970). This API returns the result synchronously.
+
+**Since:** 23
+
+<!--Device-AudioCapturer-getAudioTimeSync(): long--><!--Device-AudioCapturer-getAudioTimeSync(): long-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| long | Timestamp. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let audioTime: number = audioCapturer.getAudioTimeSync();
+  console.info(`AudioFrameworkRecLog: AudioCapturer getAudioTimeSync : Success ${audioTime}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`AudioFrameworkRecLog: AudioCapturer getAudioTimeSync : ERROR : ${error}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let timestamp: number = audioRenderer.getAudioTimeSync();
+  console.info(`Current timestamp: ${timestamp}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error}`);
+}
+```
+
 ## getBufferSize
 
 ```TypeScript
@@ -213,7 +397,59 @@ Obtains a reasonable minimum buffer size in bytes for capturing. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the minimum buffer size obtained; otherwise, **err** is an error object.<br>The unit is bytes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the minimum buffer size obtained; otherwise, **err** is an error object.<br>The unit is bytes. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getBufferSize((err: BusinessError, bufferSize: number) => {
+  if (err) {
+    console.error(`Failed to get buffer size. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting buffer size, BufferSize: ${bufferSize}.`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getBufferSize().then((bufferSize: number) => {
+  console.info(`Succeeded in getting buffer size, BufferSize: ${bufferSize}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get buffer size. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bufferSize: number;
+
+audioRenderer.getBufferSize((err: BusinessError, data: number) => {
+  if (err) {
+    console.error('getBufferSize error');
+  } else {
+    console.info(`AudioFrameworkRenderLog: getBufferSize: SUCCESS ${data}`);
+    bufferSize = data;
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bufferSize: number;
+
+audioRenderer.getBufferSize().then((data: number) => {
+  console.info(`AudioFrameworkRenderLog: getBufferSize: SUCCESS ${data}`);
+  bufferSize = data;
+}).catch((err: BusinessError) => {
+  console.error(`AudioFrameworkRenderLog: getBufferSize: ERROR: ${err}`);
+});
+```
 
 ## getBufferSize
 
@@ -235,6 +471,10 @@ Obtains a reasonable minimum buffer size in bytes for capturing. This API uses a
 | --- | --- |
 | Promise&lt;long&gt; | Promise used to return the buffer size. <br>The unit is bytes. |
 
+**Examples**
+
+See [getBufferSize](#getbuffersize)
+
 ## getBufferSizeSync
 
 ```TypeScript
@@ -255,6 +495,34 @@ Obtains a reasonable minimum buffer size in bytes for capturing. This API return
 | --- | --- |
 | long | Buffer size, in bytes. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let bufferSize = audioCapturer.getBufferSizeSync();
+  console.info(`Succeeded in getting buffer size, BufferSize: ${bufferSize}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get buffer size. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bufferSize: number = 0;
+
+try {
+  bufferSize = audioRenderer.getBufferSizeSync();
+  console.info(`AudioFrameworkRenderLog: getBufferSize: SUCCESS ${bufferSize}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`AudioFrameworkRenderLog: getBufferSize: ERROR: ${error}`);
+}
+```
+
 ## getCapturerInfo
 
 ```TypeScript
@@ -273,7 +541,40 @@ Obtains the audio capturer information. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the capturer information obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the capturer information obtained; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getCapturerInfo((err: BusinessError, capturerInfo: audio.AudioCapturerInfo) => {
+  if (err) {
+    console.error('Failed to get capture info');
+  } else {
+    console.info('Capturer getCapturerInfo:');
+    console.info(`Capturer source: ${capturerInfo.source}`);
+    console.info(`Capturer flags: ${capturerInfo.capturerFlags}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getCapturerInfo().then((audioParamsGet: audio.AudioCapturerInfo) => {
+  if (audioParamsGet != undefined) {
+    console.info('AudioFrameworkRecLog: Capturer CapturerInfo:');
+    console.info(`AudioFrameworkRecLog: Capturer SourceType: ${audioParamsGet.source}`);
+    console.info(`AudioFrameworkRecLog: Capturer capturerFlags: ${audioParamsGet.capturerFlags}`);
+  } else {
+    console.info(`AudioFrameworkRecLog: audioParamsGet is : ${audioParamsGet}`);
+    console.info('AudioFrameworkRecLog: audioParams getCapturerInfo are incorrect');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`AudioFrameworkRecLog: CapturerInfo :ERROR: ${err}`);
+})
+```
 
 ## getCapturerInfo
 
@@ -295,6 +596,10 @@ Obtains the audio capturer information. This API uses a promise to return the re
 | --- | --- |
 | Promise&lt;[AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)&gt; | Promise used to return the audio capturer information. |
 
+**Examples**
+
+See [getCapturerInfo](#getcapturerinfo)
+
 ## getCapturerInfoSync
 
 ```TypeScript
@@ -314,6 +619,21 @@ Obtains the audio capturer information. This API returns the result synchronousl
 | Type | Description |
 | --- | --- |
 | [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md) | Audio capturer information. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let audioParamsGet: audio.AudioCapturerInfo = audioCapturer.getCapturerInfoSync();
+  console.info(`AudioFrameworkRecLog: Capturer SourceType: ${audioParamsGet.source}`);
+  console.info(`AudioFrameworkRecLog: Capturer capturerFlags: ${audioParamsGet.capturerFlags}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`AudioFrameworkRecLog: CapturerInfo :ERROR: ${error}`);
+}
+```
 
 ## getCurrentAudioCapturerChangeInfo
 
@@ -335,6 +655,26 @@ Obtains the configuration changes of the current audio capturer. This API return
 | --- | --- |
 | [AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md) | Configuration changes of the audio capturer. |
 
+**Examples**
+
+```TypeScript
+let info: audio.AudioCapturerChangeInfo = audioCapturer.getCurrentAudioCapturerChangeInfo();
+console.info(`Info streamId: ${info.streamId}`);
+console.info(`Info source: ${info.capturerInfo.source}`);
+console.info(`Info capturerFlags: ${info.capturerInfo.capturerFlags}`);
+console.info(`Info muted: ${info.muted}`);
+console.info(`Info type: ${info.deviceDescriptors[0].deviceType}`);
+console.info(`Info role: ${info.deviceDescriptors[0].deviceRole}`);
+console.info(`Info name: ${info.deviceDescriptors[0].name}`);
+console.info(`Info address: ${info.deviceDescriptors[0].address}`);
+console.info(`Info samplerates: ${info.deviceDescriptors[0].sampleRates[0]}`);
+console.info(`Info channelcounts: ${info.deviceDescriptors[0].channelCounts[0]}`);
+console.info(`Info channelmask: ${info.deviceDescriptors[0].channelMasks[0]}`);
+if (info.deviceDescriptors[0].encodingTypes) {
+  console.info(`Device encodingTypes: ${info.deviceDescriptors[0].encodingTypes[0]}`);
+}
+```
+
 ## getCurrentInputDevices
 
 ```TypeScript
@@ -354,6 +694,23 @@ Obtains the information of the current input devices. This API returns the resul
 | Type | Description |
 | --- | --- |
 | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | An array of the audio device descriptors. |
+
+**Examples**
+
+```TypeScript
+let deviceDescriptors: audio.AudioDeviceDescriptors = audioCapturer.getCurrentInputDevices();
+console.info(`Device id: ${deviceDescriptors[0].id}`);
+console.info(`Device type: ${deviceDescriptors[0].deviceType}`);
+console.info(`Device role: ${deviceDescriptors[0].deviceRole}`);
+console.info(`Device name: ${deviceDescriptors[0].name}`);
+console.info(`Device address: ${deviceDescriptors[0].address}`);
+console.info(`Device samplerates: ${deviceDescriptors[0].sampleRates[0]}`);
+console.info(`Device channelcounts: ${deviceDescriptors[0].channelCounts[0]}`);
+console.info(`Device channelmask: ${deviceDescriptors[0].channelMasks[0]}`);
+if (deviceDescriptors[0].encodingTypes) {
+  console.info(`Device encodingTypes: ${deviceDescriptors[0].encodingTypes[0]}`);
+}
+```
 
 ## getNoiseReductionMode
 
@@ -397,6 +754,18 @@ Obtains the number of overflow audio frames in the audio stream that is being ca
 | --- | --- |
 | Promise&lt;long&gt; | Promise used to return the number of overflow audio frames. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getOverflowCount().then((value: number) => {
+  console.info(`Get overflow count Success! ${value}`);
+}).catch((err: BusinessError) => {
+  console.error(`Get overflow count Fail: ${err}`);
+});
+```
+
 ## getOverflowCountSync
 
 ```TypeScript
@@ -417,6 +786,20 @@ Obtains the number of overflow audio frames in the audio stream that is being ca
 | --- | --- |
 | long | Number of overflow audio frames. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let value: number = audioCapturer.getOverflowCountSync();
+  console.info(`Get overflow count Success! ${value}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Get overflow count Fail: ${error}`);
+}
+```
+
 ## getStreamInfo
 
 ```TypeScript
@@ -435,7 +818,65 @@ Obtains the stream information of this audio capturer. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream information obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream information obtained; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getStreamInfo((err: BusinessError, streamInfo: audio.AudioStreamInfo) => {
+  if (err) {
+    console.error('Failed to get stream info');
+  } else {
+    console.info('Capturer GetStreamInfo:');
+    console.info(`Capturer sampling rate: ${streamInfo.samplingRate}`);
+    console.info(`Capturer channel: ${streamInfo.channels}`);
+    console.info(`Capturer format: ${streamInfo.sampleFormat}`);
+    console.info(`Capturer encoding type: ${streamInfo.encodingType}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getStreamInfo().then((audioParamsGet: audio.AudioStreamInfo) => {
+  console.info('getStreamInfo:');
+  console.info(`sampleFormat: ${audioParamsGet.sampleFormat}`);
+  console.info(`samplingRate: ${audioParamsGet.samplingRate}`);
+  console.info(`channels: ${audioParamsGet.channels}`);
+  console.info(`encodingType: ${audioParamsGet.encodingType}`);
+}).catch((err: BusinessError) => {
+  console.error(`getStreamInfo :ERROR: ${err}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.getStreamInfo((err: BusinessError, streamInfo: audio.AudioStreamInfo) => {
+  console.info('Renderer GetStreamInfo:');
+  console.info(`Renderer sampling rate: ${streamInfo.samplingRate}`);
+  console.info(`Renderer channel: ${streamInfo.channels}`);
+  console.info(`Renderer format: ${streamInfo.sampleFormat}`);
+  console.info(`Renderer encoding type: ${streamInfo.encodingType}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.getStreamInfo().then((streamInfo: audio.AudioStreamInfo) => {
+  console.info('Renderer GetStreamInfo:');
+  console.info(`Renderer sampling rate: ${streamInfo.samplingRate}`);
+  console.info(`Renderer channel: ${streamInfo.channels}`);
+  console.info(`Renderer format: ${streamInfo.sampleFormat}`);
+  console.info(`Renderer encoding type: ${streamInfo.encodingType}`);
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
 
 ## getStreamInfo
 
@@ -457,6 +898,10 @@ Obtains the stream information of this audio capturer. This API uses a promise t
 | --- | --- |
 | Promise&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt; | Promise used to return the stream information. |
 
+**Examples**
+
+See [getStreamInfo](#getstreaminfo)
+
 ## getStreamInfoSync
 
 ```TypeScript
@@ -476,6 +921,38 @@ Obtains the stream information of this audio capturer. This API returns the resu
 | Type | Description |
 | --- | --- |
 | [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md) | Stream information. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let audioParamsGet: audio.AudioStreamInfo = audioCapturer.getStreamInfoSync();
+  console.info(`sampleFormat: ${audioParamsGet.sampleFormat}`);
+  console.info(`samplingRate: ${audioParamsGet.samplingRate}`);
+  console.info(`channels: ${audioParamsGet.channels}`);
+  console.info(`encodingType: ${audioParamsGet.encodingType}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getStreamInfo :ERROR: ${error}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let streamInfo: audio.AudioStreamInfo = audioRenderer.getStreamInfoSync();
+  console.info(`Renderer sampling rate: ${streamInfo.samplingRate}`);
+  console.info(`Renderer channel: ${streamInfo.channels}`);
+  console.info(`Renderer format: ${streamInfo.sampleFormat}`);
+  console.info(`Renderer encoding type: ${streamInfo.encodingType}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error}`);
+}
+```
 
 ## getSupportedNoiseReductionModes
 
@@ -505,164 +982,6 @@ Gets all the supported noise reduction modes for current device platform. Curren
 | --- | --- |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio server process died. |
 
-## offAudioCapturerChange
-
-```TypeScript
-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfo>): void
-```
-
-Unsubscribes audio capturer info change event callback.
-
-**Since:** 23
-
-<!--Device-AudioCapturer-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfo>): void--><!--Device-AudioCapturer-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfo>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Capturer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | No | Callback used in subscribe. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-## offAudioInterrupt
-
-```TypeScript
-offAudioInterrupt(): void
-```
-
-UnSubscribes to audio interrupt events.
-
-**Since:** 23
-
-<!--Device-AudioCapturer-offAudioInterrupt(): void--><!--Device-AudioCapturer-offAudioInterrupt(): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Interrupt
-
-## offInputDeviceChange
-
-```TypeScript
-offInputDeviceChange(callback?: Callback<AudioDeviceDescriptors>): void
-```
-
-Unsubscribes input device change event callback.
-
-**Since:** 23
-
-<!--Device-AudioCapturer-offInputDeviceChange(callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioCapturer-offInputDeviceChange(callback?: Callback<AudioDeviceDescriptors>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Device
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used in subscribe. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-## offMarkReach
-
-```TypeScript
-offMarkReach(callback?: Callback<long>): void
-```
-
-Unsubscribes from the mark reached events.
-
-**Since:** 23
-
-<!--Device-AudioCapturer-offMarkReach(callback?: Callback<long>): void--><!--Device-AudioCapturer-offMarkReach(callback?: Callback<long>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Capturer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | No | Callback invoked when the event is triggered. |
-
-## offPeriodReach
-
-```TypeScript
-offPeriodReach(callback?: Callback<long>): void
-```
-
-Unsubscribes from period reached events.
-
-**Since:** 23
-
-<!--Device-AudioCapturer-offPeriodReach(callback?: Callback<long>): void--><!--Device-AudioCapturer-offPeriodReach(callback?: Callback<long>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Capturer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | No | Callback invoked when the event is triggered. |
-
-## offReadData
-
-```TypeScript
-offReadData(callback?: Callback<ArrayBuffer>): void
-```
-
-Unsubscribes audio data callback.
-
-**Since:** 23
-
-<!--Device-AudioCapturer-offReadData(callback?: Callback<ArrayBuffer>): void--><!--Device-AudioCapturer-offReadData(callback?: Callback<ArrayBuffer>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Capturer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | No | Callback used in subscribe. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-## offStateChange
-
-```TypeScript
-offStateChange(callback?: Callback<AudioState>): void
-```
-
-Unsubscribes audio state change event callback.
-
-**Since:** 23
-
-<!--Device-AudioCapturer-offStateChange(callback?: Callback<AudioState>): void--><!--Device-AudioCapturer-offStateChange(callback?: Callback<AudioState>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Capturer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AudioState&gt; | No | Callback used to listen for the audio state change event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
 ## off('audioCapturerChange')
 
 ```TypeScript
@@ -682,7 +1001,7 @@ Unsubscribes from the audio capturer configuration change event. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | Yes | Event type. The event **'audioCapturerChange'** is triggered when the audio capturer configuration is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | No | Callback used for unsubscription. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | No | Callback used for unsubscription. |
 
 **Error codes:**
 
@@ -737,7 +1056,7 @@ Unsubscribes from the audio input device change event. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'inputDeviceChange' | Yes | Event type. The event **'inputDeviceChange'** is triggered when an audio input device is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used to return the information about the audio input device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used to return the information about the audio input device. |
 
 **Error codes:**
 
@@ -765,7 +1084,7 @@ Unsubscribes from the mark reached event. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'markReach' | Yes | Event type. The event **'markReach'** is triggered when the number of frames captured reaches the value of the **frame** parameter. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | No | Callback used to return the value of the **frame** parameter.<br>**Since:** 18 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | No | Callback used to return the value of the **frame** parameter.<br>**Since:** 18 |
 
 ## off('periodReach')
 
@@ -786,7 +1105,7 @@ Unsubscribes from the period reached event. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'periodReach' | Yes | Event type. The event **'periodReach'** is triggered each time the number of frames captured reaches the value of the **frame** parameter. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | No | Callback used to return the value of the **frame** parameter.<br>**Since:** 18 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | No | Callback used to return the value of the **frame** parameter.<br>**Since:** 18 |
 
 ## off('readData')
 
@@ -807,7 +1126,7 @@ Unsubscribes from the audio data read event. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'readData' | Yes | Event type. The event **'readData'** is triggered when audio stream data needs to be read. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | No | Callback used to return the buffer from which the data is read. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | Callback used to return the buffer from which the data is read. |
 
 **Error codes:**
 
@@ -835,7 +1154,7 @@ Unsubscribes from the audio capturer state change event. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the listening for audio capturer state change event is canceled. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AudioState&gt; | No | Callback used to return the audio status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | No | Callback used to return the audio status. |
 
 **Error codes:**
 
@@ -843,17 +1162,17 @@ Unsubscribes from the audio capturer state change event. This API uses an asynch
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onAudioCapturerChange
+## offAudioCapturerChange
 
 ```TypeScript
-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfo>): void
+offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfo>): void
 ```
 
-Subscribes audio capturer info change event callback. The event is triggered when input device change for this stream.
+Unsubscribes audio capturer info change event callback.
 
 **Since:** 23
 
-<!--Device-AudioCapturer-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfo>): void--><!--Device-AudioCapturer-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfo>): void-End-->
+<!--Device-AudioCapturer-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfo>): void--><!--Device-AudioCapturer-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -861,7 +1180,7 @@ Subscribes audio capturer info change event callback. The event is triggered whe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | Yes | Callback used to listen device change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | No | Callback used in subscribe. |
 
 **Error codes:**
 
@@ -869,43 +1188,31 @@ Subscribes audio capturer info change event callback. The event is triggered whe
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onAudioInterrupt
+## offAudioInterrupt
 
 ```TypeScript
-onAudioInterrupt(callback: Callback<InterruptEvent>): void
+offAudioInterrupt(): void
 ```
 
-Listens for audio interrupt events. This method uses a callback to get interrupt events. The interrupt event is triggered when audio recording is interrupted.
+UnSubscribes to audio interrupt events.
 
 **Since:** 23
 
-<!--Device-AudioCapturer-onAudioInterrupt(callback: Callback<InterruptEvent>): void--><!--Device-AudioCapturer-onAudioInterrupt(callback: Callback<InterruptEvent>): void-End-->
+<!--Device-AudioCapturer-offAudioInterrupt(): void--><!--Device-AudioCapturer-offAudioInterrupt(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
 
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | Yes | Callback used to listen for interrupt callback. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-## onInputDeviceChange
+## offInputDeviceChange
 
 ```TypeScript
-onInputDeviceChange(callback: Callback<AudioDeviceDescriptors>): void
+offInputDeviceChange(callback?: Callback<AudioDeviceDescriptors>): void
 ```
 
-Subscribes input device change event callback. The event is triggered when input device change for this stream.
+Unsubscribes input device change event callback.
 
 **Since:** 23
 
-<!--Device-AudioCapturer-onInputDeviceChange(callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioCapturer-onInputDeviceChange(callback: Callback<AudioDeviceDescriptors>): void-End-->
+<!--Device-AudioCapturer-offInputDeviceChange(callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioCapturer-offInputDeviceChange(callback?: Callback<AudioDeviceDescriptors>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -913,7 +1220,7 @@ Subscribes input device change event callback. The event is triggered when input
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to listen device change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used in subscribe. |
 
 **Error codes:**
 
@@ -921,17 +1228,17 @@ Subscribes input device change event callback. The event is triggered when input
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onMarkReach
+## offMarkReach
 
 ```TypeScript
-onMarkReach(frame: long, callback: Callback<long>): void
+offMarkReach(callback?: Callback<long>): void
 ```
 
-Subscribes to mark reached events. When the number of frames captured reaches the value of the frame parameter, the callback is invoked.
+Unsubscribes from the mark reached events.
 
 **Since:** 23
 
-<!--Device-AudioCapturer-onMarkReach(frame: long, callback: Callback<long>): void--><!--Device-AudioCapturer-onMarkReach(frame: long, callback: Callback<long>): void-End-->
+<!--Device-AudioCapturer-offMarkReach(callback?: Callback<long>): void--><!--Device-AudioCapturer-offMarkReach(callback?: Callback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -939,20 +1246,19 @@ Subscribes to mark reached events. When the number of frames captured reaches th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| frame | long | Yes | Number of frames to trigger the event. The value must be greater than 0. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | No | Callback invoked when the event is triggered. |
 
-## onPeriodReach
+## offPeriodReach
 
 ```TypeScript
-onPeriodReach(frame: long, callback: Callback<long>): void
+offPeriodReach(callback?: Callback<long>): void
 ```
 
-Subscribes to period reached events. When the period of frame capturing reaches the value of frame parameter, the callback is invoked.
+Unsubscribes from period reached events.
 
 **Since:** 23
 
-<!--Device-AudioCapturer-onPeriodReach(frame: long, callback: Callback<long>): void--><!--Device-AudioCapturer-onPeriodReach(frame: long, callback: Callback<long>): void-End-->
+<!--Device-AudioCapturer-offPeriodReach(callback?: Callback<long>): void--><!--Device-AudioCapturer-offPeriodReach(callback?: Callback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -960,20 +1266,19 @@ Subscribes to period reached events. When the period of frame capturing reaches 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| frame | long | Yes | Period during which frame capturing is listened. The value must be greater than 0. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | No | Callback invoked when the event is triggered. |
 
-## onReadData
+## offReadData
 
 ```TypeScript
-onReadData(callback: Callback<ArrayBuffer>): void
+offReadData(callback?: Callback<ArrayBuffer>): void
 ```
 
-Subscribes audio data callback. The event is triggered when audio buffer is available for reading more data.
+Unsubscribes audio data callback.
 
 **Since:** 23
 
-<!--Device-AudioCapturer-onReadData(callback: Callback<ArrayBuffer>): void--><!--Device-AudioCapturer-onReadData(callback: Callback<ArrayBuffer>): void-End-->
+<!--Device-AudioCapturer-offReadData(callback?: Callback<ArrayBuffer>): void--><!--Device-AudioCapturer-offReadData(callback?: Callback<ArrayBuffer>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -981,7 +1286,7 @@ Subscribes audio data callback. The event is triggered when audio buffer is avai
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | Yes | Callback with the buffer to read. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | Callback used in subscribe. |
 
 **Error codes:**
 
@@ -989,17 +1294,17 @@ Subscribes audio data callback. The event is triggered when audio buffer is avai
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onStateChange
+## offStateChange
 
 ```TypeScript
-onStateChange(callback: Callback<AudioState>): void
+offStateChange(callback?: Callback<AudioState>): void
 ```
 
-Subscribes audio state change event callback.
+Unsubscribes audio state change event callback.
 
 **Since:** 23
 
-<!--Device-AudioCapturer-onStateChange(callback: Callback<AudioState>): void--><!--Device-AudioCapturer-onStateChange(callback: Callback<AudioState>): void-End-->
+<!--Device-AudioCapturer-offStateChange(callback?: Callback<AudioState>): void--><!--Device-AudioCapturer-offStateChange(callback?: Callback<AudioState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -1007,7 +1312,13 @@ Subscribes audio state change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AudioState&gt; | Yes | Callback used to listen for the audio state change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | No | Callback used to listen for the audio state change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## on('audioCapturerChange')
 
@@ -1028,7 +1339,7 @@ Subscribes to the audio capturer configuration change event, which is triggered 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | Yes | Event type. The event **'audioCapturerChange'** is triggered when the audio recording stream status or device is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | Yes | Callback used to return the current configuration and status information of the audio capturer. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | Yes | Callback used to return the current configuration and status information of the audio capturer. |
 
 **Error codes:**
 
@@ -1060,7 +1371,7 @@ After this API is called, an [InterruptEvent](arkts-audio-audio-interruptevent-i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | Yes | Callback used to return the event information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | Yes | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -1088,7 +1399,7 @@ Subscribes to the audio input device change event, which is triggered when an au
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'inputDeviceChange' | Yes | Event type. The event **'inputDeviceChange'** is triggered when an audio input device is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to return the updated information about the audio input device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to return the updated information about the audio input device. |
 
 **Error codes:**
 
@@ -1119,7 +1430,7 @@ For example, if **frame** is set to **100**, the callback is invoked when the nu
 | --- | --- | --- | --- |
 | type | 'markReach' | Yes | Event type. The event **'markReach'** is triggered when the number of frames captured reaches the value of the **frame** parameter. |
 | frame | long | Yes | Number of frames to trigger the event. The value must be greater than **0**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | Yes | Callback used to return the value of the **frame** parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | Callback used to return the value of the **frame** parameter. |
 
 ## on('periodReach')
 
@@ -1143,7 +1454,7 @@ For example, if **frame** is set to **10**, the callback is invoked each time 10
 | --- | --- | --- | --- |
 | type | 'periodReach' | Yes | Event type. The event **'periodReach'** is triggered each time the number of frames captured reaches the value of the **frame** parameter. |
 | frame | long | Yes | Number of frames to trigger the event. The value must be greater than **0**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | Yes | Callback used to return the value of the **frame** parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | Callback used to return the value of the **frame** parameter. |
 
 ## on('readData')
 
@@ -1168,7 +1479,7 @@ To eliminate power-on noise caused by the microphone hardware design, the first 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'readData' | Yes | Event type. The event **'readData'** is triggered when audio stream data needs to be read. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the buffer from which the data is read. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the buffer from which the data is read. |
 
 **Error codes:**
 
@@ -1196,7 +1507,173 @@ Subscribes to the audio capturer state change event, which is triggered when the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the state of the audio capturer is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AudioState&gt; | Yes | Callback used to return the audio status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | Yes | Callback used to return the audio status. |
+
+## onAudioCapturerChange
+
+```TypeScript
+onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfo>): void
+```
+
+Subscribes audio capturer info change event callback. The event is triggered when input device change for this stream.
+
+**Since:** 23
+
+<!--Device-AudioCapturer-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfo>): void--><!--Device-AudioCapturer-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | Yes | Callback used to listen device change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onAudioInterrupt
+
+```TypeScript
+onAudioInterrupt(callback: Callback<InterruptEvent>): void
+```
+
+Listens for audio interrupt events. This method uses a callback to get interrupt events. The interrupt event is triggered when audio recording is interrupted.
+
+**Since:** 23
+
+<!--Device-AudioCapturer-onAudioInterrupt(callback: Callback<InterruptEvent>): void--><!--Device-AudioCapturer-onAudioInterrupt(callback: Callback<InterruptEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Interrupt
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | Yes | Callback used to listen for interrupt callback. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onInputDeviceChange
+
+```TypeScript
+onInputDeviceChange(callback: Callback<AudioDeviceDescriptors>): void
+```
+
+Subscribes input device change event callback. The event is triggered when input device change for this stream.
+
+**Since:** 23
+
+<!--Device-AudioCapturer-onInputDeviceChange(callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioCapturer-onInputDeviceChange(callback: Callback<AudioDeviceDescriptors>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to listen device change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onMarkReach
+
+```TypeScript
+onMarkReach(frame: long, callback: Callback<long>): void
+```
+
+Subscribes to mark reached events. When the number of frames captured reaches the value of the frame parameter, the callback is invoked.
+
+**Since:** 23
+
+<!--Device-AudioCapturer-onMarkReach(frame: long, callback: Callback<long>): void--><!--Device-AudioCapturer-onMarkReach(frame: long, callback: Callback<long>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| frame | long | Yes | Number of frames to trigger the event. The value must be greater than 0. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | Callback invoked when the event is triggered. |
+
+## onPeriodReach
+
+```TypeScript
+onPeriodReach(frame: long, callback: Callback<long>): void
+```
+
+Subscribes to period reached events. When the period of frame capturing reaches the value of frame parameter, the callback is invoked.
+
+**Since:** 23
+
+<!--Device-AudioCapturer-onPeriodReach(frame: long, callback: Callback<long>): void--><!--Device-AudioCapturer-onPeriodReach(frame: long, callback: Callback<long>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| frame | long | Yes | Period during which frame capturing is listened. The value must be greater than 0. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | Callback invoked when the event is triggered. |
+
+## onReadData
+
+```TypeScript
+onReadData(callback: Callback<ArrayBuffer>): void
+```
+
+Subscribes audio data callback. The event is triggered when audio buffer is available for reading more data.
+
+**Since:** 23
+
+<!--Device-AudioCapturer-onReadData(callback: Callback<ArrayBuffer>): void--><!--Device-AudioCapturer-onReadData(callback: Callback<ArrayBuffer>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback with the buffer to read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onStateChange
+
+```TypeScript
+onStateChange(callback: Callback<AudioState>): void
+```
+
+Subscribes audio state change event callback.
+
+**Since:** 23
+
+<!--Device-AudioCapturer-onStateChange(callback: Callback<AudioState>): void--><!--Device-AudioCapturer-onStateChange(callback: Callback<AudioState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | Yes | Callback used to listen for the audio state change event. |
 
 ## read
 
@@ -1222,7 +1699,41 @@ Reads the buffer from the audio capturer. This method uses an asynchronous callb
 | --- | --- | --- | --- |
 | size | number | Yes | Number of bytes to read. |
 | isBlockingRead | boolean | Yes | Whether to block the read operation. **true** to block, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the buffer read; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the buffer read; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getBufferSize().then((bufferSize: number) => {
+  console.info('Succeeded in doing getBufferSize.');
+  audioCapturer.read(bufferSize, true, (err: BusinessError, buffer: ArrayBuffer) => {
+    if (err) {
+      console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in doing read.');
+  });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getBufferSize. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getBufferSize().then((bufferSize: number) => {
+  console.info('Succeeded in doing getBufferSize.');
+  audioCapturer.read(bufferSize, true).then((buffer: ArrayBuffer) => {
+    console.info('Succeeded in doing read.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
+  });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getBufferSize. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## read
 
@@ -1255,6 +1766,10 @@ Reads the buffer. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;ArrayBuffer&gt; | Promise used to return the data read from the buffer. |
 
+**Examples**
+
+See [read](#read)
+
 ## release
 
 ```TypeScript
@@ -1273,7 +1788,76 @@ Releases this audio capturer. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+tonePlayer.release((err: BusinessError) => {
+  if (err) {
+    console.error(`callback call release failed error: ${err.message}`);
+    return;
+  } else {
+    console.info('callback call release success ');
+  }
+});
+```
+
+```TypeScript
+tonePlayer.release().then(() => {
+  console.info('promise call release');
+}).catch(() => {
+  console.error('promise call release fail');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.release((err: BusinessError) => {
+  if (err) {
+    console.error('capturer release failed');
+  } else {
+    console.info('capturer released.');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.release().then(() => {
+  console.info('AudioFrameworkRecLog: ---------RELEASE RECORD---------');
+  console.info('AudioFrameworkRecLog: Capturer release : SUCCESS');
+  console.info(`AudioFrameworkRecLog: AudioCapturer : STATE : ${audioCapturer.state}`);
+}).catch((err: BusinessError) => {
+  console.error(`AudioFrameworkRecLog: Capturer stop: ERROR: ${err}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.release((err: BusinessError) => {
+  if (err) {
+    console.error('Renderer release failed');
+  } else {
+    console.info('Renderer released.');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.release().then(() => {
+  console.info('Renderer released successfully');
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
 
 ## release
 
@@ -1295,6 +1879,10 @@ Releases this audio capturer. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+See [release](#release)
+
 ## requestPlaybackCaptureStart
 
 ```TypeScript
@@ -1315,7 +1903,7 @@ Asynchronously request to start the playback capture stream. This function is no
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PlaybackCaptureStartState](arkts-audio-audio-playbackcapturestartstate-e.md)&gt; | Yes | Callback function used to receive the final result of start request. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PlaybackCaptureStartState](arkts-audio-audio-playbackcapturestartstate-e.md)&gt; | Yes | Callback function used to receive the final result of start request. |
 
 ## setIndependentAudioSessionStrategy
 
@@ -1450,6 +2038,18 @@ Sets whether to [mute the current audio recording stream when an audio interrupt
 | --- | --- |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted at current state. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.setWillMuteWhenInterrupted(true).then(() => {
+  console.info('setWillMuteWhenInterrupted Success!');
+}).catch((err: BusinessError) => {
+  console.error(`setWillMuteWhenInterrupted Fail: ${err}`);
+});
+```
+
 ## start
 
 ```TypeScript
@@ -1468,7 +2068,77 @@ Starts this audio capturer to start capturing audio data. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. If the operation fails, an error object with the following error code is returned:<br>Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. If the operation fails, an error object with the following error code is returned:<br>Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+tonePlayer.start((err: BusinessError) => {
+  if (err) {
+    console.error(`callback call start failed error: ${err.message}`);
+    return;
+  } else {
+    console.info('callback call start success');
+  }
+});
+```
+
+```TypeScript
+tonePlayer.start().then(() => {
+  console.info('promise call start');
+}).catch(() => {
+  console.error('promise call start fail');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.start((err: BusinessError) => {
+  if (err) {
+    console.error('Capturer start failed.');
+  } else {
+    console.info('Capturer start success.');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.start().then(() => {
+  console.info('Succeeded in doing start.');
+  if (audioCapturer.state == audio.AudioState.STATE_RUNNING) {
+    console.info('AudioFrameworkRecLog: AudioCapturer is in Running State');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to start. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.start((err: BusinessError) => {
+  if (err) {
+    console.error('Renderer start failed.');
+  } else {
+    console.info('Renderer start success.');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.start().then(() => {
+  console.info('Renderer started');
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
 
 ## start
 
@@ -1490,6 +2160,10 @@ Starts this audio capturer to start capturing audio data. This API uses a promis
 | --- | --- |
 | Promise&lt;void&gt; | Promise object, which indicates that the capturer is started successfully. If the operation fails, an error object with the following error code is returned: <br>Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
 
+**Examples**
+
+See [start](#start)
+
 ## stop
 
 ```TypeScript
@@ -1508,7 +2182,77 @@ Stops this audio capturer, ceasing the input audio stream. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+tonePlayer.stop((err: BusinessError) => {
+  if (err) {
+    console.error(`callback call stop error: ${err.message}`);
+    return;
+  } else {
+    console.error('callback call stop success ');
+  }
+});
+```
+
+```TypeScript
+tonePlayer.stop().then(() => {
+  console.info('promise call stop finish');
+}).catch(() => {
+  console.error('promise call stop fail');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.stop((err: BusinessError) => {
+  if (err) {
+    console.error('Capturer stop failed');
+  } else {
+    console.info('Capturer stopped.');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.stop().then(() => {
+  console.info('Succeeded in doing stop.');
+  if (audioCapturer.state == audio.AudioState.STATE_STOPPED){
+    console.info('AudioFrameworkRecLog: State is Stopped:');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to stop. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.stop((err: BusinessError) => {
+  if (err) {
+    console.error('Renderer stop failed');
+  } else {
+    console.info('Renderer stopped.');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.stop().then(() => {
+  console.info('Renderer stopped successfully');
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
 
 ## stop
 
@@ -1529,6 +2273,10 @@ Stops this audio capturer, ceasing the input audio stream. This API uses a promi
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+See [stop](#stop)
 
 ## state
 

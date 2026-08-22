@@ -63,6 +63,58 @@ Disconnect to device with pan. On API 10 and above, the permission required by t
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+try {
+    let a2dpSrc: bluetoothManager.A2dpSourceProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_A2DP_SOURCE) as bluetoothManager.A2dpSourceProfile;
+    a2dpSrc.disconnect('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+try {
+    let hfpAg: bluetoothManager.HandsFreeAudioGatewayProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_HANDS_FREE_AUDIO_GATEWAY) as bluetoothManager.HandsFreeAudioGatewayProfile;
+    hfpAg.disconnect('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+try {
+    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+    device.disconnect();
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let hidHostProfile: bluetoothManager.HidHostProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_HID_HOST) as bluetoothManager.HidHostProfile;
+    hidHostProfile.disconnect('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let panProfile: bluetoothManager.PanProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_PAN_NETWORK) as bluetoothManager.PanProfile;
+    panProfile.disconnect('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
 ## isTetheringOn
 
 ```TypeScript
@@ -98,6 +150,18 @@ Obtains the tethering enable or disable. On API 10 and above, the permission req
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let panProfile: bluetoothManager.PanProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_PAN_NETWORK) as bluetoothManager.PanProfile;
+    panProfile.isTetheringOn();
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
 
 ## setTethering
 
@@ -141,4 +205,16 @@ Enable bluetooth tethering. On API 10 and above, the permission required by this
 | 2900003 | Bluetooth disabled. |
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let panProfile: bluetoothManager.PanProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_PAN_NETWORK) as bluetoothManager.PanProfile;
+    panProfile.setTethering(true);
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
 

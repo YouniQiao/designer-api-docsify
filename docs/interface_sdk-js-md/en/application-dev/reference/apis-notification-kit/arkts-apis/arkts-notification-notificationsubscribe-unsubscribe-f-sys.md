@@ -30,7 +30,7 @@ Unsubscribes from a notification. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | subscriber | NotificationSubscriber | Yes | Notification subscriber. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -62,6 +62,22 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
   onDisconnect: onDisconnectCallback
 };
 notificationSubscribe.unsubscribe(subscriber, unsubscribeCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let onDisconnectCallback = () => {
+  console.info("subscribe disconnect");
+}
+let subscriber: notificationSubscribe.NotificationSubscriber = {
+  onDisconnect: onDisconnectCallback
+};
+notificationSubscribe.unsubscribe(subscriber).then(() => {
+  console.info("unsubscribe success");
+}).catch((err: BusinessError) => {
+  console.error(`unsubscribe fail: ${JSON.stringify(err)}`);
+});
 ```
 
 
@@ -109,19 +125,5 @@ Unsubscribes from a notification. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let onDisconnectCallback = () => {
-  console.info("subscribe disconnect");
-}
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onDisconnect: onDisconnectCallback
-};
-notificationSubscribe.unsubscribe(subscriber).then(() => {
-  console.info("unsubscribe success");
-}).catch((err: BusinessError) => {
-  console.error(`unsubscribe fail: ${JSON.stringify(err)}`);
-});
-```
+See [unsubscribe](#unsubscribe)
 

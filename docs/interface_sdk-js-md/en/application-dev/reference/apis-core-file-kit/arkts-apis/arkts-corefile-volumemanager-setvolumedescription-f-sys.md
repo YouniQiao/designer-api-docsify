@@ -30,7 +30,7 @@ Sets volume description. This API uses an asynchronous callback to return the re
 | --- | --- | --- | --- |
 | uuid | string | Yes | UUID of the volume. |
 | description | string | Yes | Description of the volume. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked after the volume description is set. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked after the volume description is set. |
 
 **Error codes:**
 
@@ -44,6 +44,28 @@ Sets volume description. This API uses an asynchronous callback to return the re
 | 13600005 | Incorrect volume state. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let uuid: string = "";
+let description: string = "";
+volumeManager.setVolumeDescription(uuid, description).then(() => {
+  console.info("setVolumeDescription successfully");
+}).catch((error: BusinessError) => {
+  console.error("setVolumeDescription failed with error:" + JSON.stringify(error));
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let uuid: string = "";
+let description: string = "";
+volumeManager.setVolumeDescription(uuid, description, (error: BusinessError) => {
+  // Do something.   
+});
+```
 
 
 ## setVolumeDescription
@@ -89,4 +111,8 @@ Sets volume description. This API uses a promise to return the result.
 | 13600005 | Incorrect volume state. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
+
+**Examples**
+
+See [setVolumeDescription](#setvolumedescription)
 

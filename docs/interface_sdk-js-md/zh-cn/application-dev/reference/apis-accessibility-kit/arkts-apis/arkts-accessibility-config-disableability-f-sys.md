@@ -60,6 +60,40 @@ config.disableAbility(name).then(() => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { config } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let name: string = 'com.ohos.example/axExtension';
+
+config.disableAbility(name, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to disable ability. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in disabling, name is ${name}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { accessibility, config } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let name: string = 'com.ohos.example/axExtension';
+
+config.disableAbility(name, (err: BusinessError | null) => {
+  if (err?.code) {
+    console.error(`failed to disable ability, Code is ${err?.code}, message is ${err?.message}`);
+    return;
+  }
+  console.info(`Succeeded in disabling, name is ${name}`);
+});
+```
+
 
 ## disableAbility
 
@@ -97,37 +131,5 @@ function disableAbility(name: string, callback: AsyncCallback<void>): void
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let name: string = 'com.ohos.example/axExtension';
-
-config.disableAbility(name, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to disable ability. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in disabling, name is ${name}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { accessibility, config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let name: string = 'com.ohos.example/axExtension';
-
-config.disableAbility(name, (err: BusinessError | null) => {
-  if (err?.code) {
-    console.error(`failed to disable ability, Code is ${err?.code}, message is ${err?.message}`);
-    return;
-  }
-  console.info(`Succeeded in disabling, name is ${name}`);
-});
-```
+参见 [disableAbility](#disableability)
 

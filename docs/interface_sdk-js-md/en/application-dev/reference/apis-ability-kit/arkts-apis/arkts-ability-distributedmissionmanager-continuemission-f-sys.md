@@ -32,7 +32,7 @@ Continues a mission on a remote device, with the mission ID specified. This API 
 | --- | --- | --- | --- |
 | parameter | ContinueDeviceInfo | Yes | Parameters required for mission continuation. |
 | options | ContinueCallback | Yes | Callback invoked when the mission continuation is complete. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the mission is continued, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the mission is continued, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -77,6 +77,79 @@ try {
   })
 } catch (error) {
   console.error('continueMission failed, cause: ' + JSON.stringify(error));
+}
+```
+
+```TypeScript
+import { distributedMissionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Implement a callback function.
+function onContinueDone(resultCode: number): void {
+  console.info('onContinueDone resultCode: ' + JSON.stringify(resultCode));
+};
+try {
+  // Call continueMission.
+  distributedMissionManager.continueMission(
+    {
+      srcDeviceId: "",
+      dstDeviceId: "",
+      missionId: 1,
+      wantParam: {"key": "value"}
+    },
+    { onContinueDone: onContinueDone }).then(() => {
+      console.info('continueMission finished successfully');
+    }).catch((error: BusinessError) => {
+    console.error('continueMission failed, cause: ' + JSON.stringify(error));
+  })
+} catch (error) {
+  console.error('continueMission failed, cause: ' + JSON.stringify(error));
+}
+```
+
+```TypeScript
+import { distributedMissionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  distributedMissionManager.continueMission(
+    {
+      srcDeviceId: "",
+      dstDeviceId: "",
+      bundleName: "ohos.test.continueapp",
+      wantParam: {"key": "value"}
+    },
+    (error: BusinessError) => {
+      if (error) {
+        console.error('continueMission failed, cause: ' + JSON.stringify(error));
+        return;
+      }
+      console.info('continueMission finished');
+  })
+} catch (error) {
+  console.error('continueMission failed, cause: ' + JSON.stringify(error));
+}
+```
+
+```TypeScript
+import { distributedMissionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    distributedMissionManager.continueMission(
+      {
+        srcDeviceId: "",
+        dstDeviceId: "",
+        bundleName: "ohos.test.continueapp",
+        wantParam: {"key": "value"}
+      }
+    ).then(() => {
+        console.info('continueMission finished successfully');
+    }).catch((error: BusinessError) => {
+        console.error('continueMission failed, cause: ' + JSON.stringify(error));
+    })
+} catch (error) {
+    console.error('continueMission failed, cause: ' + JSON.stringify(error));
 }
 ```
 
@@ -130,32 +203,7 @@ Continues a mission on a remote device, with the mission ID specified. This API 
 
 **Examples**
 
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Implement a callback function.
-function onContinueDone(resultCode: number): void {
-  console.info('onContinueDone resultCode: ' + JSON.stringify(resultCode));
-};
-try {
-  // Call continueMission.
-  distributedMissionManager.continueMission(
-    {
-      srcDeviceId: "",
-      dstDeviceId: "",
-      missionId: 1,
-      wantParam: {"key": "value"}
-    },
-    { onContinueDone: onContinueDone }).then(() => {
-      console.info('continueMission finished successfully');
-    }).catch((error: BusinessError) => {
-    console.error('continueMission failed, cause: ' + JSON.stringify(error));
-  })
-} catch (error) {
-  console.error('continueMission failed, cause: ' + JSON.stringify(error));
-}
-```
+See [continueMission](#continuemission)
 
 
 ## continueMission
@@ -183,7 +231,7 @@ Continues a mission on a remote device, with the bundle name specified. This API
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | parameter | ContinueMissionInfo | Yes | Parameters required for mission continuation. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the mission is continued, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the mission is continued, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -201,29 +249,7 @@ Continues a mission on a remote device, with the bundle name specified. This API
 
 **Examples**
 
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  distributedMissionManager.continueMission(
-    {
-      srcDeviceId: "",
-      dstDeviceId: "",
-      bundleName: "ohos.test.continueapp",
-      wantParam: {"key": "value"}
-    },
-    (error: BusinessError) => {
-      if (error) {
-        console.error('continueMission failed, cause: ' + JSON.stringify(error));
-        return;
-      }
-      console.info('continueMission finished');
-  })
-} catch (error) {
-  console.error('continueMission failed, cause: ' + JSON.stringify(error));
-}
-```
+See [continueMission](#continuemission)
 
 
 ## continueMission
@@ -274,25 +300,5 @@ Continues a mission on a remote device, with the bundle name specified. This API
 
 **Examples**
 
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedMissionManager.continueMission(
-      {
-        srcDeviceId: "",
-        dstDeviceId: "",
-        bundleName: "ohos.test.continueapp",
-        wantParam: {"key": "value"}
-      }
-    ).then(() => {
-        console.info('continueMission finished successfully');
-    }).catch((error: BusinessError) => {
-        console.error('continueMission failed, cause: ' + JSON.stringify(error));
-    })
-} catch (error) {
-    console.error('continueMission failed, cause: ' + JSON.stringify(error));
-}
-```
+See [continueMission](#continuemission)
 

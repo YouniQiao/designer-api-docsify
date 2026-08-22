@@ -35,3 +35,11 @@ declare function opendirSync(path: string): Dir
 | --- | --- |
 | [Dir](arkts-corefile-fileio-dir-depr-i.md) | 返回Dir对象。 |
 
+**示例**
+
+```TypeScript
+let dir = fileio.opendirSync(pathDir);
+// example code in Dir struct
+// use read/readSync/close
+```
+

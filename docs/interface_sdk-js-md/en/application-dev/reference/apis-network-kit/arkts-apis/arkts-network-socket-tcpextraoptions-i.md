@@ -16,38 +16,6 @@ Defines other properties of the **TCPSocket** object. This object is inherited f
 import { socket } from '@kit.NetworkKit';
 ```
 
-## OOBInline
-
-```TypeScript
-OOBInline?: boolean
-```
-
-Whether to enable OOBInline. The default value is **false**. The value **true** means to enable OOBInline, and the value **false** indicates the opposite.
-
-**Type:** boolean
-
-**Since:** 7
-
-<!--Device-TCPExtraOptions-OOBInline?: boolean--><!--Device-TCPExtraOptions-OOBInline?: boolean-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-## TCPNoDelay
-
-```TypeScript
-TCPNoDelay?: boolean
-```
-
-Whether to enable no-delay on the TCP socket connection. The default value is **false**. The value **true** means to enable no-delay on the TCP socket connection, and the value **false** indicates the opposite.
-
-**Type:** boolean
-
-**Since:** 7
-
-<!--Device-TCPExtraOptions-TCPNoDelay?: boolean--><!--Device-TCPExtraOptions-TCPNoDelay?: boolean-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
 ## keepAlive
 
 ```TypeScript
@@ -61,6 +29,22 @@ Whether to keep the connection alive. The default value is **false**. The value 
 **Since:** 7
 
 <!--Device-TCPExtraOptions-keepAlive?: boolean--><!--Device-TCPExtraOptions-keepAlive?: boolean-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## OOBInline
+
+```TypeScript
+OOBInline?: boolean
+```
+
+Whether to enable OOBInline. The default value is **false**. The value **true** means to enable OOBInline, and the value **false** indicates the opposite.
+
+**Type:** boolean
+
+**Since:** 7
+
+<!--Device-TCPExtraOptions-OOBInline?: boolean--><!--Device-TCPExtraOptions-OOBInline?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -101,6 +85,22 @@ Currently, this parameter can be configured only on the client.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TCPExtraOptions-tcpFastOpen?: boolean--><!--Device-TCPExtraOptions-tcpFastOpen?: boolean-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## TCPNoDelay
+
+```TypeScript
+TCPNoDelay?: boolean
+```
+
+Whether to enable no-delay on the TCP socket connection. The default value is **false**. The value **true** means to enable no-delay on the TCP socket connection, and the value **false** indicates the opposite.
+
+**Type:** boolean
+
+**Since:** 7
+
+<!--Device-TCPExtraOptions-TCPNoDelay?: boolean--><!--Device-TCPExtraOptions-TCPNoDelay?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

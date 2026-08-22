@@ -26,7 +26,7 @@ Unlock the screen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | the callback of unlock. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of unlock. |
 
 **Error codes:**
 
@@ -48,6 +48,16 @@ screenLock.unlock((err: BusinessError, data: Boolean) => {
     return;
   }
   console.info(`Succeeded in unlocking the screen. result: ${data}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+screenLock.unlock().then((data: Boolean) => {
+  console.info(`Succeeded in unlocking the screen. result: ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to unlock the screen, Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -84,13 +94,5 @@ Unlock the screen.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-screenLock.unlock().then((data: Boolean) => {
-  console.info(`Succeeded in unlocking the screen. result: ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to unlock the screen, Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [unlock](#unlock)
 

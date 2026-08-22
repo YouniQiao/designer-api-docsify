@@ -57,6 +57,18 @@ print.notifyPrintService(jobId, 'spooler_closed_for_started', (err: BusinessErro
 })
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+
+let jobId : string = '1';
+print.notifyPrintService(jobId, 'spooler_closed_for_started').then(() => {
+    console.info('notifyPrintService success');
+}).catch((error: BusinessError) => {
+    console.error('notifyPrintService error : ' + JSON.stringify(error));
+})
+```
+
 
 ## notifyPrintService('spooler_closed_for_cancelled' | 'spooler_closed_for_started')
 
@@ -100,15 +112,5 @@ function notifyPrintService(jobId: string,
 
 **示例**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let jobId : string = '1';
-print.notifyPrintService(jobId, 'spooler_closed_for_started').then(() => {
-    console.info('notifyPrintService success');
-}).catch((error: BusinessError) => {
-    console.error('notifyPrintService error : ' + JSON.stringify(error));
-})
-```
+参见 notifyPrintService
 

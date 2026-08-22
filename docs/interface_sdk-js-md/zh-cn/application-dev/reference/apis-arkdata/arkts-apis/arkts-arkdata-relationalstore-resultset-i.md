@@ -39,6 +39,41 @@ close(): void
 | [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指针索引越界) | ResultSet is empty or pointer index is out of bounds. |
 | [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error.<br>**适用版本：** 12+ |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (store != undefined) {
+  (store as relationalStore.RdbStore).close().then(() => {
+    console.info(`close succeeded`);
+  }).catch((err: Error) => {
+    let businessError = err as BusinessError;
+    console.error(`close failed, code is ${businessError.code},message is ${businessError.message}`);
+  });
+}
+```
+
+```TypeScript
+if (resultSet != undefined) {
+  (resultSet as relationalStore.ResultSet).close();
+}
+```
+
+```TypeScript
+async function closeExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
+
 ## getAsset
 
 ```TypeScript
@@ -89,6 +124,30 @@ getAsset(columnIndex: int): Asset
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  const doc = (resultSet as relationalStore.ResultSet).getAsset((resultSet as relationalStore.ResultSet).getColumnIndex("DOC"));
+}
+```
+
+```TypeScript
+async function getAssetExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      const doc = resultSet.getAsset(resultSet.getColumnIndex("DOC"));
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
 
 ## getAssets
 
@@ -141,6 +200,30 @@ getAssets(columnIndex: int): Assets
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  const docs = (resultSet as relationalStore.ResultSet).getAssets((resultSet as relationalStore.ResultSet).getColumnIndex("DOCS"));
+}
+```
+
+```TypeScript
+async function getAssetsExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      const name = resultSet.getAssets(resultSet.getColumnIndex("DOCS"));
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
+
 ## getBlob
 
 ```TypeScript
@@ -191,6 +274,30 @@ getBlob(columnIndex: int): Uint8Array
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  const codes = (resultSet as relationalStore.ResultSet).getBlob((resultSet as relationalStore.ResultSet).getColumnIndex("CODES"));
+}
+```
+
+```TypeScript
+async function getBlobExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      const name = resultSet.getBlob(resultSet.getColumnIndex("CODES"));
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
 
 ## getColumnIndex
 
@@ -243,6 +350,35 @@ getColumnIndex(columnName: string): int
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+  const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+  const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+  const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+}
+```
+
+```TypeScript
+async function getColumnIndexExample(store : relationalStore.RdbStore){
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      const idIndex = resultSet.getColumnIndex("ID");
+      const nameIndex = resultSet.getColumnIndex("NAME");
+      const ageIndex = resultSet.getColumnIndex("AGE");
+      const salaryIndex = resultSet.getColumnIndex("SALARY");
+    }
+    resultSet!.close();
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
+
 ## getColumnName
 
 ```TypeScript
@@ -294,6 +430,34 @@ getColumnName(columnIndex: int): string
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  const id = (resultSet as relationalStore.ResultSet).getColumnName(0);
+  const name = (resultSet as relationalStore.ResultSet).getColumnName(1);
+  const age = (resultSet as relationalStore.ResultSet).getColumnName(2);
+}
+```
+
+```TypeScript
+async function getColumnNameExample(store : relationalStore.RdbStore){
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      const id = resultSet.getColumnName(0);
+      const name = resultSet.getColumnName(1);
+      const age = resultSet.getColumnName(2);
+      const salary = resultSet.getColumnName(3);
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
+
 ## getColumnNames
 
 ```TypeScript
@@ -330,6 +494,37 @@ getColumnNames(): Array<string>
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
 | [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
+
+**示例**
+
+```TypeScript
+try {
+  // 联表查询EMPLOYEE1和EMPLOYEE2，并获取重名的列名。store为获取到的RdbStore实例。
+  let resultSet: relationalStore.ResultSet = await store.querySql("SELECT e1.NAME, e2.NAME, e1.AGE, e2.AGE FROM EMPLOYEE1 e1 LEFT JOIN EMPLOYEE2 e2 ON e1.SALARY=e2.SALARY");
+  if (resultSet != undefined) {
+    const names = resultSet.getColumnNames();
+    resultSet.close();
+  }
+} catch (err) {
+  console.error(`Failed to get column names: code:${err.code}, message:${err.message}`);
+}
+```
+
+```TypeScript
+async function getColumnNamesExample(store: relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    // 联表查询EMPLOYEE1和EMPLOYEE2，并获取重名的列名。store为获取到的RdbStore实例。
+    resultSet = await store.querySqlWithoutRowCount("SELECT e1.NAME, e2.NAME, e1.AGE, e2.AGE FROM EMPLOYEE1 e1 LEFT JOIN EMPLOYEE2 e2 ON e1.SALARY=e2.SALARY");
+    if (resultSet != undefined) {
+      const names = resultSet.getColumnNames();
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`Failed to get column names: code:${err.code}, message:${err.message}`);
+  }
+}
+```
 
 ## getColumnType
 
@@ -383,6 +578,48 @@ getColumnType(columnIdentifier: int | string): Promise<ColumnType>
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly. |
 
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  let idType = await (resultSet as relationalStore.ResultSet).getColumnType("ID") as relationalStore.ColumnType;
+  let nameType = await (resultSet as relationalStore.ResultSet).getColumnType("NAME") as relationalStore.ColumnType;
+  let ageType = await (resultSet as relationalStore.ResultSet).getColumnType("AGE") as relationalStore.ColumnType;
+  let salaryType = await (resultSet as relationalStore.ResultSet).getColumnType("SALARY") as relationalStore.ColumnType;
+  let codesType = await (resultSet as relationalStore.ResultSet).getColumnType("CODES") as relationalStore.ColumnType;
+  let identityType = await (resultSet as relationalStore.ResultSet).getColumnType(5) as relationalStore.ColumnType;
+  let assetDataType = await (resultSet as relationalStore.ResultSet).getColumnType(6) as relationalStore.ColumnType;
+  let assetsDataType = await (resultSet as relationalStore.ResultSet).getColumnType(7) as relationalStore.ColumnType;
+  let floatArrayType = await (resultSet as relationalStore.ResultSet).getColumnType(8) as relationalStore.ColumnType;
+}
+```
+
+```TypeScript
+async function getColumnTypeExample(store : relationalStore.RdbStore){
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      // 方式一：通过列名获取列数据类型
+      let idType = await resultSet.getColumnType("ID");
+      let nameType = await resultSet.getColumnType("NAME");
+      let ageType = await resultSet.getColumnType("AGE");
+      let salaryType = await resultSet.getColumnType("SALARY");
+      let codesType = await resultSet.getColumnType("CODES");
+      // 方式二：通过列索引获取列数据类型
+      let identityType = await resultSet.getColumnType(5);
+      let assetDataType = await resultSet.getColumnType(6);
+      let assetsDataType = await resultSet.getColumnType(7);
+      let floatArrayType = await resultSet.getColumnType(8);
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
+
 ## getColumnTypeSync
 
 ```TypeScript
@@ -435,6 +672,48 @@ getColumnTypeSync(columnIdentifier: int | string): ColumnType
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly. |
 
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  let idType = (resultSet as relationalStore.ResultSet).getColumnTypeSync("ID") as relationalStore.ColumnType;
+  let nameType = (resultSet as relationalStore.ResultSet).getColumnTypeSync("NAME") as relationalStore.ColumnType;
+  let ageType = (resultSet as relationalStore.ResultSet).getColumnTypeSync("AGE") as relationalStore.ColumnType;
+  let salaryType = (resultSet as relationalStore.ResultSet).getColumnTypeSync("SALARY") as relationalStore.ColumnType;
+  let codesType = (resultSet as relationalStore.ResultSet).getColumnTypeSync("CODES") as relationalStore.ColumnType;
+  let identityType = (resultSet as relationalStore.ResultSet).getColumnTypeSync(5) as relationalStore.ColumnType;
+  let assetDataType = (resultSet as relationalStore.ResultSet).getColumnTypeSync(6) as relationalStore.ColumnType;
+  let assetsDataType = (resultSet as relationalStore.ResultSet).getColumnTypeSync(7) as relationalStore.ColumnType;
+  let floatArrayType = (resultSet as relationalStore.ResultSet).getColumnTypeSync(8) as relationalStore.ColumnType;
+}
+```
+
+```TypeScript
+async function getColumnTypeSyncExample(store : relationalStore.RdbStore){
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      // 方式一：通过列名获取列数据类型
+      let idType = resultSet.getColumnTypeSync("ID");
+      let nameType = resultSet.getColumnTypeSync("NAME");
+      let ageType = resultSet.getColumnTypeSync("AGE");
+      let salaryType = resultSet.getColumnTypeSync("SALARY");
+      let codesType = resultSet.getColumnTypeSync("CODES");
+      // 方式二：通过列索引获取列数据类型
+      let identityType = resultSet.getColumnTypeSync(5);
+      let assetDataType = resultSet.getColumnTypeSync(6);
+      let assetsDataType = resultSet.getColumnTypeSync(7);
+      let floatArrayType = resultSet.getColumnTypeSync(8);
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
+
 ## getCurrentRowData
 
 ```TypeScript
@@ -470,6 +749,40 @@ getCurrentRowData(): RowData
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
 | [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
+
+**示例**
+
+```TypeScript
+try {
+  // 联表查询EMPLOYEE1和EMPLOYEE2，并获取当前行包含重名列名的值。store为获取到的RdbStore实例。
+  let resultSet: relationalStore.ResultSet = await store.querySql("SELECT e1.NAME, e2.NAME, e1.AGE, e2.AGE FROM EMPLOYEE1 e1 LEFT JOIN EMPLOYEE2 e2 ON e1.SALARY=e2.SALARY");
+  if (resultSet != undefined) {
+    resultSet.goToFirstRow();
+    const rowData = resultSet.getCurrentRowData();
+    resultSet.close();
+  }
+} catch (err) {
+  console.error(`Failed to get row data: code:${err.code}, message:${err.message}`);
+}
+```
+
+```TypeScript
+async function getCurrentRowDataExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    // 联表查询EMPLOYEE1和EMPLOYEE2，并获取当前行包含重名列名的值。store为获取到的RdbStore实例。
+    resultSet = await store.querySqlWithoutRowCount("SELECT e1.NAME, e2.NAME, e1.AGE, e2.AGE FROM EMPLOYEE1 e1 LEFT JOIN EMPLOYEE2 e2 ON e1.SALARY=e2.SALARY");
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      const rowData = resultSet.getCurrentRowData();
+      console.info(`rowData: ${JSON.stringify(rowData)}`);
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`Failed to get row data: code:${err.code}, message:${err.message}`);
+  }
+}
+```
 
 ## getDouble
 
@@ -522,6 +835,36 @@ getDouble(columnIndex: int): double
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+**示例**
+
+```TypeScript
+if (resultSet !== undefined) {
+  while (resultSet.goToNextRow()) {
+    const colIndex = resultSet.getColumnIndex("SALARY");
+    if (colIndex > -1) {
+      const salary = resultSet.getDouble(colIndex);
+      console.info(`Get double success, salary is ${salary}`);
+    }
+  }
+}
+```
+
+```TypeScript
+async function getDoubleExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
+
 ## getLong
 
 ```TypeScript
@@ -573,6 +916,36 @@ getLong(columnIndex: int): long
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+**示例**
+
+```TypeScript
+if (resultSet !== undefined) {
+  while (resultSet.goToNextRow()) {
+    const colIndex = resultSet.getColumnIndex("AGE");
+    if (colIndex > -1) {
+      const age = resultSet.getLong(colIndex);
+      console.info(`Get long success, age is ${age}`);
+    }
+  }
+}
+```
+
+```TypeScript
+async function getLongExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
+
 ## getRow
 
 ```TypeScript
@@ -616,6 +989,31 @@ getRow(): ValuesBucket
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  const row = (resultSet as relationalStore.ResultSet).getRow();
+}
+```
+
+```TypeScript
+async function getRowExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      const rowData = resultSet.getRow();
+      console.info(`rowData: ${JSON.stringify(rowData)}`);
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
 
 ## getRows
 
@@ -666,6 +1064,69 @@ getRows(maxCount: int, position?: int): Promise<Array<ValuesBucket>>
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation. |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 
+**示例**
+
+```TypeScript
+// 以查到100条数据为例
+async function processRows(resultSet: relationalStore.ResultSet) {
+  // 示例1：仅指定maxCount
+  if (resultSet != undefined) {
+    let rows: Array<relationalStore.ValuesBucket>;
+    let maxCount = 50;
+    // 从结果集的当前行（默认首次获取数据时为当前结果集的第一行，后续为上次获取数据结束位置的下一行）开始获取数据
+    // getRows会自动移动结果集当前行到上次getRows获取结束位置的下一行，无需使用goToFirstRow、goToNextRow等接口移动
+    while ((rows = await (resultSet as relationalStore.ResultSet).getRows(maxCount)).length != 0) {
+      console.info(JSON.stringify(rows[0]));
+    }
+  }
+
+  // 示例2：指定maxCount和起始的position
+  if (resultSet != undefined) {
+    let rows: Array<relationalStore.ValuesBucket>;
+    let maxCount = 50;
+    let position = 50;
+    while ((rows = await (resultSet as relationalStore.ResultSet).getRows(maxCount, position)).length != 0) {
+      console.info(JSON.stringify(rows[0]));
+      position += rows.length;
+    }
+  }
+}
+```
+
+```TypeScript
+async function getRowsExample(store : relationalStore.RdbStore) {
+  // 以查到100条数据为例
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    // 示例1：仅指定maxCount
+    if (resultSet != undefined) {
+      let rows: Array<relationalStore.ValuesBucket>;
+      let maxCount = 50;
+      // 从结果集的当前行（默认首次获取数据时为当前结果集的第一行，后续为上次获取数据结束位置的下一行）开始获取数据
+      // getRows会自动移动结果集当前行到上次getRows获取结束位置的下一行，goToNextRow等接口移动
+      while ((rows = await resultSet.getRows(maxCount)).length != 0) {
+        console.info(JSON.stringify(rows[0]));
+      }
+    }
+  
+    // 示例2：指定maxCount和起始的position
+    if (resultSet != undefined) {
+      let rows: Array<relationalStore.ValuesBucket>;
+      let maxCount = 50;
+      let position = 50;
+      while ((rows = await resultSet.getRows(maxCount, position)).length != 0) {
+        console.info(JSON.stringify(rows[0]));
+        position += rows.length;
+      }
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
+
 ## getRowsData
 
 ```TypeScript
@@ -710,6 +1171,91 @@ getRowsData(maxCount: int, position?: int): Promise<RowsData>
 | [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
 | [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
 
+**示例**
+
+```TypeScript
+try {
+  // 联表查询EMPLOYEE1和EMPLOYEE2，并获取多行包含重名列名的值。store为获取到的RdbStore实例。
+  let resultSet: relationalStore.ResultSet = await store.querySql("SELECT e1.NAME, e2.NAME, e1.AGE, e2.AGE FROM EMPLOYEE1 e1 LEFT JOIN EMPLOYEE2 e2 ON e1.SALARY=e2.SALARY");
+  // 以查到50条数据为例
+  // 示例1：仅指定maxCount
+  if (resultSet != undefined) {
+    let rowsData: relationalStore.RowsData;
+    // 从结果集的当前行（默认首次获取数据时为当前结果集的第一行，后续为上次获取数据结束位置的下一行）开始获取数据
+    // getRowsData会自动移动结果集当前行到上次getRowsData获取结束位置的下一行，无需使用goToFirstRow、goToNextRow等接口移动
+    let maxCount = 50;
+    let rowCount = 0;
+    while ((rowsData = await resultSet.getRowsData(maxCount)).length != 0) {
+      rowsData.forEach((rowData, index) => {
+        // 第rowCount + index + 1行的查询结果
+        console.info(`${rowCount + index + 1}：${rowData}`);
+      });
+      rowCount += rowsData.length;
+    }
+  }
+
+  // 示例2：指定maxCount和起始的position
+  if (resultSet != undefined) {
+    let rowsData: relationalStore.RowsData;
+    let maxCount = 50;
+    let position = 50;
+    while ((rowsData = await resultSet.getRowsData(maxCount, position)).length != 0) {
+      rowsData.forEach((rowData, index) => {
+        // 第position + index + 1行的查询结果
+        console.info(`${position + index + 1}：${rowData}`);
+      });
+      position += rowsData.length;
+    }
+  }
+  resultSet.close();
+} catch (err) {
+  console.error(`Failed to get rows data: code:${err.code}, message:${err.message}`);
+}
+```
+
+```TypeScript
+async function getRowsDataExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    // 联表查询EMPLOYEE1和EMPLOYEE2，并获取多行包含重名列名的值。store为获取到的RdbStore实例。
+    resultSet = await store.querySqlWithoutRowCount("SELECT e1.NAME, e2.NAME, e1.AGE, e2.AGE FROM EMPLOYEE1 e1 LEFT JOIN EMPLOYEE2 e2 ON e1.SALARY=e2.SALARY");
+    // 以查到50条数据为例
+    // 示例1：仅指定maxCount
+    if (resultSet != undefined) {
+      let rowsData: relationalStore.RowsData;
+      // 从结果集的当前行（默认首次获取数据时为当前结果集的第一行，后续为上次获取数据结束位置的下一行）开始获取数据
+      // getRowsData会自动移动结果集当前行到上次getRowsData获取结束位置的下一行，无需使用goToNextRow接口移动
+      let maxCount = 50;
+      let rowCount = 0;
+      while ((rowsData = await resultSet.getRowsData(maxCount)).length != 0) {
+        rowsData.forEach((rowData, index) => {
+          // 第rowCount + index + 1行的查询结果
+          console.info(`${rowCount + index + 1}：${rowData}`);
+        });
+        rowCount += rowsData.length;
+      }
+    }
+  
+    // 示例2：指定maxCount和起始的position
+    if (resultSet != undefined) {
+      let rowsData: relationalStore.RowsData;
+      let maxCount = 50;
+      let position = 50;
+      while ((rowsData = await resultSet.getRowsData(maxCount, position)).length != 0) {
+        rowsData.forEach((rowData, index) => {
+          // 第position + index + 1行的查询结果
+          console.info(`${position + index + 1}：${rowData}`);
+        });
+        position += rowsData.length;
+      }
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`Failed to get rows data: code:${err.code}, message:${err.message}`);
+  }
+}
+```
+
 ## getSendableRow
 
 ```TypeScript
@@ -753,6 +1299,56 @@ getSendableRow(): sendableRelationalStore.ValuesBucket
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation. |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly. |
+
+**示例**
+
+示例代码中this.context定义见Stage模型的应用[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。
+
+```TypeScript
+// EntryAbility.ets
+import { window } from '@kit.ArkUI';
+import { UIAbility } from '@kit.AbilityKit';
+import { relationalStore } from '@kit.ArkData';
+import { taskpool } from '@kit.ArkTS';
+import { common } from '@kit.AbilityKit';
+import { sendableRelationalStore } from '@kit.ArkData';
+
+@Concurrent
+async function getDataByName(name: string, context: common.UIAbilityContext) {
+  const STORE_CONFIG: relationalStore.StoreConfig = {
+    name: "RdbTest.db",
+    securityLevel: relationalStore.SecurityLevel.S3
+  };
+  const store = await relationalStore.getRdbStore(context, STORE_CONFIG);
+  const predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+  predicates.equalTo("NAME", name);
+  const resultSet = store.querySync(predicates);
+
+  if (resultSet.rowCount > 0) {
+    resultSet.goToFirstRow();
+    const sendableValuesBucket = resultSet.getSendableRow();
+    resultSet.close();
+    return sendableValuesBucket;
+  } else {
+    resultSet.close();
+    return null;
+  }
+}
+
+export default class EntryAbility extends UIAbility {
+  async onWindowStageCreate(windowStage: window.WindowStage) {
+    const task = new taskpool.Task(getDataByName, 'Lisa', this.context);
+    const sendableValuesBucket = await taskpool.execute(task) as sendableRelationalStore.ValuesBucket;
+
+    if (sendableValuesBucket) {
+      const columnCount = sendableValuesBucket.size;
+      const age = sendableValuesBucket.get('age');
+      const name = sendableValuesBucket.get('name');
+      console.info(`Query data in taskpool succeeded, name is "${name}", age is "${age}"`);
+    }
+  }
+}
+```
 
 ## getString
 
@@ -805,6 +1401,30 @@ getString(columnIndex: int): string
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+}
+```
+
+```TypeScript
+async function getStringExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
+
 ## getValue
 
 ```TypeScript
@@ -855,6 +1475,36 @@ getValue(columnIndex: int): ValueType
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation. |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly. |
+
+**示例**
+
+```TypeScript
+if (resultSet !== undefined) {
+  while (resultSet.goToNextRow()) {
+    const colIndex = resultSet.getColumnIndex("NAME");
+    if (colIndex > -1) {
+      const name = resultSet.getValue(colIndex);
+      console.info(`Get value success, name is ${name}`);
+    }
+  }
+}
+```
+
+```TypeScript
+async function getValueExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      const name = resultSet.getValue(resultSet.getColumnIndex("NAME"));
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
 
 ## goTo
 
@@ -907,6 +1557,14 @@ goTo(offset: int): boolean
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  (resultSet as relationalStore.ResultSet).goTo(1);
+}
+```
+
 ## goToFirstRow
 
 ```TypeScript
@@ -950,6 +1608,14 @@ goToFirstRow(): boolean
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  (resultSet as relationalStore.ResultSet).goToFirstRow();
+}
+```
 
 ## goToLastRow
 
@@ -995,6 +1661,14 @@ goToLastRow(): boolean
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  (resultSet as relationalStore.ResultSet).goToLastRow();
+}
+```
+
 ## goToNextRow
 
 ```TypeScript
@@ -1039,6 +1713,29 @@ goToNextRow(): boolean
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  (resultSet as relationalStore.ResultSet).goToNextRow();
+}
+```
+
+```TypeScript
+async function goToNextRowExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
+
 ## goToPreviousRow
 
 ```TypeScript
@@ -1082,6 +1779,14 @@ goToPreviousRow(): boolean
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  (resultSet as relationalStore.ResultSet).goToPreviousRow();
+}
+```
 
 ## goToRow
 
@@ -1134,6 +1839,14 @@ goToRow(position: int): boolean
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+**示例**
+
+```TypeScript
+if (resultSet != undefined) {
+  (resultSet as relationalStore.ResultSet).goToRow(5);
+}
+```
+
 ## isColumnNull
 
 ```TypeScript
@@ -1184,6 +1897,36 @@ isColumnNull(columnIndex: int): boolean
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+if (resultSet !== undefined) {
+  while (resultSet.goToNextRow()) {
+    const colIndex = resultSet.getColumnIndex("CODES");
+    if (colIndex > -1) {
+      const isColumnNull = resultSet.isColumnNull(colIndex);
+      console.info(`Column is null: ${isColumnNull}`);
+    }
+  }
+}
+```
+
+```TypeScript
+async function isColumnNullExample(store : relationalStore.RdbStore) {
+  try {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      resultSet.goToNextRow();
+      const name = resultSet.isColumnNull(resultSet.getColumnIndex("NAME"));
+      resultSet!.close();
+    }
+  } catch (err) {
+    console.error(`failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
 
 ## columnCount
 

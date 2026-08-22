@@ -1,6 +1,6 @@
 # OnSaveResult
 
-Enumerates the result types for the operation of saving application data. You can use it in [onSaveState()](arkts-ability-appabilityuiability-uiability-c.md#onsavestate) of the UIAbility to complete [UIAbility backup and restore](../../../application-models/ability-recover-guideline.md).
+Enumerates the result types for the operation of saving application data. You can use it in [onSaveState()](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate) of the UIAbility to complete [UIAbility backup and restore](../../../application-models/ability-recover-guideline.md).
 
 **Since:** 23
 
@@ -115,4 +115,16 @@ Always rejected to save the status.
 <!--Device-OnSaveResult-ALL_REJECT = 5--><!--Device-OnSaveResult-ALL_REJECT = 5-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>) {
+    return AbilityConstant.OnSaveResult.ALL_AGREE;
+  }
+}
+```
 

@@ -50,7 +50,7 @@ Gets the base context from the modular object extension context.
 | Parameter | Description |
 | -- | -- |
 | [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modularobjectextensioncontext8h.md) modObjExtensionContext | Represents a pointer to a modular object extension ability context. |
-| [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md)* baseContext | Represents a pointer to a [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) base extension ability context. |
+| AbilityRuntime_ContextHandle* baseContext | Represents a pointer to a [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) base extension ability context. |
 
 **Returns**:
 

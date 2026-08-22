@@ -102,44 +102,6 @@ struct Index {
 }
 ```
 
-
-## setTouchpadRightClickType
-
-```TypeScript
-function setTouchpadRightClickType(type: RightClickType): Promise<void>
-```
-
-设置触控板右键菜单类型，使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-pointer-function setTouchpadRightClickType(type: RightClickType): Promise<void>--><!--Device-pointer-function setTouchpadRightClickType(type: RightClickType): Promise<void>-End-->
-
-**系统能力：** SystemCapability.MultimodalInput.Input.Pointer
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [RightClickType](arkts-input-pointer-rightclicktype-e.md) | 是 | type代表触控板右键菜单类型。<br>- TOUCHPAD_RIGHT_BUTTON：按压触控板右键区域。<br>- TOUCHPAD_LEFT_BUTTON：按 压触控板左键区域。<br>- TOUCHPAD_TWO_FINGER_TAP：双指轻击或双指按压触控板。<br>- TOUCHPAD_TWO_FINGER_TAP_OR_RIGHT_BUTTON&lt;sup&gt;20+&lt;/sup&gt; ：双指轻击或双指按压触控板、或按压触控板右键区域。<br>- TOUCHPAD_TWO_FINGER_TAP_OR_LEFT_BUTTON&lt;sup&gt;20+&lt;/sup&gt;：双指轻击或双指按压触控板、或按压触控板左键区域。 <br>默认值为TOUCHPAD_TWO_FINGER_TAP_OR_RIGHT_BUTTON。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -196,4 +158,44 @@ struct Index {
   }
 }
 ```
+
+
+## setTouchpadRightClickType
+
+```TypeScript
+function setTouchpadRightClickType(type: RightClickType): Promise<void>
+```
+
+设置触控板右键菜单类型，使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-pointer-function setTouchpadRightClickType(type: RightClickType): Promise<void>--><!--Device-pointer-function setTouchpadRightClickType(type: RightClickType): Promise<void>-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Pointer
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | [RightClickType](arkts-input-pointer-rightclicktype-e.md) | 是 | type代表触控板右键菜单类型。<br>- TOUCHPAD_RIGHT_BUTTON：按压触控板右键区域。<br>- TOUCHPAD_LEFT_BUTTON：按 压触控板左键区域。<br>- TOUCHPAD_TWO_FINGER_TAP：双指轻击或双指按压触控板。<br>- TOUCHPAD_TWO_FINGER_TAP_OR_RIGHT_BUTTON&lt;sup&gt;20+&lt;/sup&gt; ：双指轻击或双指按压触控板、或按压触控板右键区域。<br>- TOUCHPAD_TWO_FINGER_TAP_OR_LEFT_BUTTON&lt;sup&gt;20+&lt;/sup&gt;：双指轻击或双指按压触控板、或按压触控板左键区域。 <br>默认值为TOUCHPAD_TWO_FINGER_TAP_OR_RIGHT_BUTTON。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**示例**
+
+参见 [setTouchpadRightClickType](#settouchpadrightclicktype)
 

@@ -28,8 +28,8 @@ Send system media key event.The system automatically selects the recipient.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeyevent-keyevent-i.md) | Yes | The key event to be sent |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | The key event to be sent |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -59,6 +59,20 @@ avSession.sendSystemAVKeyEvent(event, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { KeyEvent } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let keyItem: KeyEvent.Key = {code:0x49, pressedTime:2, deviceId:0};
+let event: KeyEvent.KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, windowId:1, action:2, key:keyItem, unicodeChar:0, keys:[keyItem], ctrlKey:false, altKey:false, shiftKey:false, logoKey:false, fnKey:false, capsLock:false, numLock:false, scrollLock:false};
+
+avSession.sendSystemAVKeyEvent(event).then(() => {
+  console.info('SendSystemAVKeyEvent Successfully');
+}).catch((err: BusinessError) => {
+  console.error(`SendSystemAVKeyEvent BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## sendSystemAVKeyEvent
 
@@ -82,7 +96,7 @@ Send system media key event.The system automatically selects the recipient.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeyevent-keyevent-i.md) | Yes | The key event to be sent |
+| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | The key event to be sent |
 
 **Return value:**
 
@@ -102,17 +116,5 @@ Send system media key event.The system automatically selects the recipient.
 
 **Examples**
 
-```TypeScript
-import { KeyEvent } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let keyItem: KeyEvent.Key = {code:0x49, pressedTime:2, deviceId:0};
-let event: KeyEvent.KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, windowId:1, action:2, key:keyItem, unicodeChar:0, keys:[keyItem], ctrlKey:false, altKey:false, shiftKey:false, logoKey:false, fnKey:false, capsLock:false, numLock:false, scrollLock:false};
-
-avSession.sendSystemAVKeyEvent(event).then(() => {
-  console.info('SendSystemAVKeyEvent Successfully');
-}).catch((err: BusinessError) => {
-  console.error(`SendSystemAVKeyEvent BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
+See [sendSystemAVKeyEvent](#sendsystemavkeyevent)
 

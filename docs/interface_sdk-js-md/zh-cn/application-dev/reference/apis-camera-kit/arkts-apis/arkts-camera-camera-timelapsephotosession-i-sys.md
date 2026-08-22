@@ -254,174 +254,6 @@ function isTryAENeeded(timeLapsePhotoSession: camera.TimeLapsePhotoSession): boo
 }
 ```
 
-## offError
-
-```TypeScript
-offError(callback?: ErrorCallback): void
-```
-
-Unsubscribes from error events.
-
-**起始版本：** 23
-
-<!--Device-TimeLapsePhotoSession-offError(callback?: ErrorCallback): void--><!--Device-TimeLapsePhotoSession-offError(callback?: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to get the capture session errors. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-
-## offExposureInfoChange
-
-```TypeScript
-offExposureInfoChange(callback?: AsyncCallback<ExposureInfo>): void
-```
-
-Unsubscribes from exposure info event callback.
-
-**起始版本：** 23
-
-<!--Device-TimeLapsePhotoSession-offExposureInfoChange(callback?: AsyncCallback<ExposureInfo>): void--><!--Device-TimeLapsePhotoSession-offExposureInfoChange(callback?: AsyncCallback<ExposureInfo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | 否 | Callback used to get the exposure info. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-
-## offFocusStateChange
-
-```TypeScript
-offFocusStateChange(callback?: AsyncCallback<FocusState>): void
-```
-
-Unsubscribes from focus state change event callback.
-
-**起始版本：** 23
-
-<!--Device-TimeLapsePhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void--><!--Device-TimeLapsePhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 | Callback used to get the focus state change. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-
-## offIsoInfoChange
-
-```TypeScript
-offIsoInfoChange(callback?: AsyncCallback<IsoInfo>): void
-```
-
-Unsubscribes from ISO info event callback.
-
-**起始版本：** 23
-
-<!--Device-TimeLapsePhotoSession-offIsoInfoChange(callback?: AsyncCallback<IsoInfo>): void--><!--Device-TimeLapsePhotoSession-offIsoInfoChange(callback?: AsyncCallback<IsoInfo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | 否 | Callback used to get the ISO info. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-
-## offLuminationInfoChange
-
-```TypeScript
-offLuminationInfoChange(callback?: AsyncCallback<LuminationInfo>): void
-```
-
-Unsubscribes from lumination info event callback.
-
-**起始版本：** 23
-
-<!--Device-TimeLapsePhotoSession-offLuminationInfoChange(callback?: AsyncCallback<LuminationInfo>): void--><!--Device-TimeLapsePhotoSession-offLuminationInfoChange(callback?: AsyncCallback<LuminationInfo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LuminationInfo](arkts-camera-camera-luminationinfo-i-sys.md)&gt; | 否 | Callback used to get the lumination info. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-
-## offTryAEInfoChange
-
-```TypeScript
-offTryAEInfoChange(callback?: AsyncCallback<TryAEInfo>): void
-```
-
-Unsubscribes from try AE info event callback.
-
-**起始版本：** 23
-
-<!--Device-TimeLapsePhotoSession-offTryAEInfoChange(callback?: AsyncCallback<TryAEInfo>): void--><!--Device-TimeLapsePhotoSession-offTryAEInfoChange(callback?: AsyncCallback<TryAEInfo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TryAEInfo](arkts-camera-camera-tryaeinfo-i-sys.md)&gt; | 否 | Callback used to get the try AE info. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-
 ## off('error')
 
 ```TypeScript
@@ -644,17 +476,17 @@ function unregisterTryAEInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSe
 }
 ```
 
-## onError
+## offError
 
 ```TypeScript
-onError(callback: ErrorCallback): void
+offError(callback?: ErrorCallback): void
 ```
 
-Subscribes to error events.
+Unsubscribes from error events.
 
 **起始版本：** 23
 
-<!--Device-TimeLapsePhotoSession-onError(callback: ErrorCallback): void--><!--Device-TimeLapsePhotoSession-onError(callback: ErrorCallback): void-End-->
+<!--Device-TimeLapsePhotoSession-offError(callback?: ErrorCallback): void--><!--Device-TimeLapsePhotoSession-offError(callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -664,7 +496,7 @@ Subscribes to error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to get the capture session errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to get the capture session errors. |
 
 **错误码：**
 
@@ -672,17 +504,31 @@ Subscribes to error events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-## onExposureInfoChange
+**示例**
 
 ```TypeScript
-onExposureInfoChange(callback: AsyncCallback<ExposureInfo>): void
+function unregisterCameraInputError(cameraInput: camera.CameraInput, camera: camera.CameraDevice): void {
+   cameraInput.offError(camera);
+}
 ```
 
-Subscribes exposure info event callback.
+```TypeScript
+function unregisterMetadataOutputError(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.offError();
+}
+```
+
+## offExposureInfoChange
+
+```TypeScript
+offExposureInfoChange(callback?: AsyncCallback<ExposureInfo>): void
+```
+
+Unsubscribes from exposure info event callback.
 
 **起始版本：** 23
 
-<!--Device-TimeLapsePhotoSession-onExposureInfoChange(callback: AsyncCallback<ExposureInfo>): void--><!--Device-TimeLapsePhotoSession-onExposureInfoChange(callback: AsyncCallback<ExposureInfo>): void-End-->
+<!--Device-TimeLapsePhotoSession-offExposureInfoChange(callback?: AsyncCallback<ExposureInfo>): void--><!--Device-TimeLapsePhotoSession-offExposureInfoChange(callback?: AsyncCallback<ExposureInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -692,7 +538,7 @@ Subscribes exposure info event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | 是 | Callback used to get the exposure info. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | 否 | Callback used to get the exposure info. |
 
 **错误码：**
 
@@ -700,17 +546,31 @@ Subscribes exposure info event callback.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-## onFocusStateChange
+**示例**
 
 ```TypeScript
-onFocusStateChange(callback: AsyncCallback<FocusState>): void
+function offExposureInfoChange(photoSession: camera.PhotoSession): void {
+  photoSession.offExposureInfoChange();
+}
 ```
 
-Subscribes focus state change event callback.
+```TypeScript
+function offExposureInfoChange(videoSession: camera.VideoSession): void {
+  videoSession.offExposureInfoChange();
+}
+```
+
+## offFocusStateChange
+
+```TypeScript
+offFocusStateChange(callback?: AsyncCallback<FocusState>): void
+```
+
+Unsubscribes from focus state change event callback.
 
 **起始版本：** 23
 
-<!--Device-TimeLapsePhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void--><!--Device-TimeLapsePhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void-End-->
+<!--Device-TimeLapsePhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void--><!--Device-TimeLapsePhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -720,7 +580,7 @@ Subscribes focus state change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 | Callback used to get the focus state change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 | Callback used to get the focus state change. |
 
 **错误码：**
 
@@ -728,17 +588,17 @@ Subscribes focus state change event callback.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-## onIsoInfoChange
+## offIsoInfoChange
 
 ```TypeScript
-onIsoInfoChange(callback: AsyncCallback<IsoInfo>): void
+offIsoInfoChange(callback?: AsyncCallback<IsoInfo>): void
 ```
 
-Subscribes ISO info event callback.
+Unsubscribes from ISO info event callback.
 
 **起始版本：** 23
 
-<!--Device-TimeLapsePhotoSession-onIsoInfoChange(callback: AsyncCallback<IsoInfo>): void--><!--Device-TimeLapsePhotoSession-onIsoInfoChange(callback: AsyncCallback<IsoInfo>): void-End-->
+<!--Device-TimeLapsePhotoSession-offIsoInfoChange(callback?: AsyncCallback<IsoInfo>): void--><!--Device-TimeLapsePhotoSession-offIsoInfoChange(callback?: AsyncCallback<IsoInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -748,7 +608,7 @@ Subscribes ISO info event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | 是 | Callback used to get the ISO info. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | 否 | Callback used to get the ISO info. |
 
 **错误码：**
 
@@ -756,17 +616,39 @@ Subscribes ISO info event callback.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-## onLuminationInfoChange
+**示例**
 
 ```TypeScript
-onLuminationInfoChange(callback: AsyncCallback<LuminationInfo>): void
+function offIsoInfoChange(photoSession: camera.PhotoSession): void {
+  photoSession.offIsoInfoChange();
+}
 ```
 
-Subscribes lumination info event callback.
+```TypeScript
+function callback(isoInfo: camera.IsoInfo): void {
+  console.info(`Iso : ${isoInfo}`);
+}
+
+function unregisterIsoInfoChanged(videoSession: camera.VideoSession): void {
+  videoSession.offIsoInfoChange(callback);
+}
+
+function unregisterAllIsoInfoChanged(videoSession: camera.VideoSession): void {
+  videoSession.offIsoInfoChange();
+}
+```
+
+## offLuminationInfoChange
+
+```TypeScript
+offLuminationInfoChange(callback?: AsyncCallback<LuminationInfo>): void
+```
+
+Unsubscribes from lumination info event callback.
 
 **起始版本：** 23
 
-<!--Device-TimeLapsePhotoSession-onLuminationInfoChange(callback: AsyncCallback<LuminationInfo>): void--><!--Device-TimeLapsePhotoSession-onLuminationInfoChange(callback: AsyncCallback<LuminationInfo>): void-End-->
+<!--Device-TimeLapsePhotoSession-offLuminationInfoChange(callback?: AsyncCallback<LuminationInfo>): void--><!--Device-TimeLapsePhotoSession-offLuminationInfoChange(callback?: AsyncCallback<LuminationInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -776,7 +658,7 @@ Subscribes lumination info event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LuminationInfo](arkts-camera-camera-luminationinfo-i-sys.md)&gt; | 是 | Callback used to get the lumination info. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LuminationInfo](arkts-camera-camera-luminationinfo-i-sys.md)&gt; | 否 | Callback used to get the lumination info. |
 
 **错误码：**
 
@@ -784,17 +666,17 @@ Subscribes lumination info event callback.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-## onTryAEInfoChange
+## offTryAEInfoChange
 
 ```TypeScript
-onTryAEInfoChange(callback: AsyncCallback<TryAEInfo>): void
+offTryAEInfoChange(callback?: AsyncCallback<TryAEInfo>): void
 ```
 
-Subscribes try AE info event callback.
+Unsubscribes from try AE info event callback.
 
 **起始版本：** 23
 
-<!--Device-TimeLapsePhotoSession-onTryAEInfoChange(callback: AsyncCallback<TryAEInfo>): void--><!--Device-TimeLapsePhotoSession-onTryAEInfoChange(callback: AsyncCallback<TryAEInfo>): void-End-->
+<!--Device-TimeLapsePhotoSession-offTryAEInfoChange(callback?: AsyncCallback<TryAEInfo>): void--><!--Device-TimeLapsePhotoSession-offTryAEInfoChange(callback?: AsyncCallback<TryAEInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -804,7 +686,7 @@ Subscribes try AE info event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TryAEInfo](arkts-camera-camera-tryaeinfo-i-sys.md)&gt; | 是 | Callback used to get the try AE info. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TryAEInfo](arkts-camera-camera-tryaeinfo-i-sys.md)&gt; | 否 | Callback used to get the try AE info. |
 
 **错误码：**
 
@@ -1089,6 +971,238 @@ function registerTryAEInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSess
   timeLapsePhotoSession.on('tryAEInfoChange', tryAEInfoCallback);
 }
 ```
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to error events.
+
+**起始版本：** 23
+
+<!--Device-TimeLapsePhotoSession-onError(callback: ErrorCallback): void--><!--Device-TimeLapsePhotoSession-onError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to get the capture session errors. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(err: BusinessError): void {
+  console.error(`Camera input error code: ${err.code}`);
+}
+
+function registerCameraInputError(cameraInput: camera.CameraInput, camera: camera.CameraDevice): void {
+   cameraInput.onError(camera, callback);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(metadataOutputError: BusinessError): void {
+  console.error(`Metadata output error code: ${metadataOutputError.code}`);
+}
+
+function registerMetadataOutputError(metadataOutput: camera.MetadataOutput): void {
+   metadataOutput.onError(callback);
+}
+```
+
+## onExposureInfoChange
+
+```TypeScript
+onExposureInfoChange(callback: AsyncCallback<ExposureInfo>): void
+```
+
+Subscribes exposure info event callback.
+
+**起始版本：** 23
+
+<!--Device-TimeLapsePhotoSession-onExposureInfoChange(callback: AsyncCallback<ExposureInfo>): void--><!--Device-TimeLapsePhotoSession-onExposureInfoChange(callback: AsyncCallback<ExposureInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | 是 | Callback used to get the exposure info. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+
+**示例**
+
+```TypeScript
+function onExposureInfoChange(photoSession: camera.PhotoSession): void {
+  photoSession.onExposureInfoChange((exposureInfo: camera.ExposureInfo) => {
+    console.info(`Exposure info changed, exposureTime: ${exposureInfo.exposureTime}`);
+  });
+}
+```
+
+```TypeScript
+function onExposureInfoChange(videoSession: camera.VideoSession): void {
+  videoSession.onExposureInfoChange((exposureInfo: camera.ExposureInfo) => {
+    console.info(`Exposure info changed, exposureTime: ${exposureInfo.exposureTime}`);
+  });
+}
+```
+
+## onFocusStateChange
+
+```TypeScript
+onFocusStateChange(callback: AsyncCallback<FocusState>): void
+```
+
+Subscribes focus state change event callback.
+
+**起始版本：** 23
+
+<!--Device-TimeLapsePhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void--><!--Device-TimeLapsePhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 | Callback used to get the focus state change. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+
+## onIsoInfoChange
+
+```TypeScript
+onIsoInfoChange(callback: AsyncCallback<IsoInfo>): void
+```
+
+Subscribes ISO info event callback.
+
+**起始版本：** 23
+
+<!--Device-TimeLapsePhotoSession-onIsoInfoChange(callback: AsyncCallback<IsoInfo>): void--><!--Device-TimeLapsePhotoSession-onIsoInfoChange(callback: AsyncCallback<IsoInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | 是 | Callback used to get the ISO info. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+
+**示例**
+
+```TypeScript
+function onIsoInfoChange(photoSession: camera.PhotoSession): void {
+  photoSession.onIsoInfoChange((isoInfo: camera.IsoInfo) => {
+    console.info(`ISO info changed, iso: ${isoInfo.iso}`);
+  });
+}
+```
+
+```TypeScript
+function callback(isoInfo: camera.IsoInfo): void {
+  console.info(`Iso : ${isoInfo}`);
+}
+
+function registerIsoInfoChanged(videoSession: camera.VideoSession): void {
+  videoSession.onIsoInfoChange(callback);
+}
+```
+
+## onLuminationInfoChange
+
+```TypeScript
+onLuminationInfoChange(callback: AsyncCallback<LuminationInfo>): void
+```
+
+Subscribes lumination info event callback.
+
+**起始版本：** 23
+
+<!--Device-TimeLapsePhotoSession-onLuminationInfoChange(callback: AsyncCallback<LuminationInfo>): void--><!--Device-TimeLapsePhotoSession-onLuminationInfoChange(callback: AsyncCallback<LuminationInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LuminationInfo](arkts-camera-camera-luminationinfo-i-sys.md)&gt; | 是 | Callback used to get the lumination info. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+
+## onTryAEInfoChange
+
+```TypeScript
+onTryAEInfoChange(callback: AsyncCallback<TryAEInfo>): void
+```
+
+Subscribes try AE info event callback.
+
+**起始版本：** 23
+
+<!--Device-TimeLapsePhotoSession-onTryAEInfoChange(callback: AsyncCallback<TryAEInfo>): void--><!--Device-TimeLapsePhotoSession-onTryAEInfoChange(callback: AsyncCallback<TryAEInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TryAEInfo](arkts-camera-camera-tryaeinfo-i-sys.md)&gt; | 是 | Callback used to get the try AE info. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## setTimeLapseInterval
 

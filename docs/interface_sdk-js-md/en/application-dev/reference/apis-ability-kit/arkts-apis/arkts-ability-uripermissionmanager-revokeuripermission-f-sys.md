@@ -40,7 +40,7 @@ Revokes the URI permission from an application. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). |
 | targetBundleName | string | Yes | Bundle name of the application, from which the permission is revoked. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
 
 **Error codes:**
 
@@ -68,6 +68,63 @@ uriPermissionManager.revokeUriPermission(uri, targetBundleName, (error) => {
   }
   console.info("revokeUriPermission success");
 });
+```
+
+```TypeScript
+import { uriPermissionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let targetBundleName = 'com.example.test_case2';
+let uri = 'file://com.example.test_case1/data/storage/el2/base/haps/entry_test/files/newDir';
+
+uriPermissionManager.revokeUriPermission(uri, targetBundleName)
+  .then((data) => {
+    console.info(`Verification success, data: ${JSON.stringify(data)}.`);
+  }).catch((error: BusinessError) => {
+  console.error(`Verification failed, err code: ${error.code}, err msg: ${error.message}.`);
+});
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want, wantConstant, uriPermissionManager } from '@kit.AbilityKit';
+import { fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+  }
+
+  onForeground(): void {
+    let targetBundleName: string = 'com.example.demo1';
+    let filePath: string = this.context.filesDir + "/test.txt";
+    let uri: string = fileUri.getUriFromPath(filePath);
+    // revoke uri permission of main application
+    try {
+      let appCloneIndex: number = 0;
+      uriPermissionManager.revokeUriPermission(uri, targetBundleName, appCloneIndex)
+        .then(() => {
+          console.info('revokeUriPermission succeeded.');
+        }).catch((error: BusinessError) => {
+        console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
+      });
+    } catch (error) {
+      console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
+    }
+
+    // revoke uri permission of clone application
+    try {
+      let appCloneIndex: number = 1;
+      uriPermissionManager.revokeUriPermission(uri, targetBundleName, appCloneIndex)
+        .then(() => {
+          console.info('revokeUriPermission succeeded.');
+        }).catch((error: BusinessError) => {
+        console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
+      });
+    } catch (error) {
+      console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
+    }
+  }
+}
 ```
 
 
@@ -102,7 +159,7 @@ Revokes the URI permission from an application. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). |
 | targetBundleName | string | Yes | Bundle name of the application, from which the permission is revoked. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
 
 **Error codes:**
 
@@ -112,6 +169,10 @@ Revokes the URI permission from an application. This API uses an asynchronous ca
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system server failed. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
+
+**Examples**
+
+See [revokeUriPermission](#revokeuripermission)
 
 
 ## revokeUriPermission
@@ -168,20 +229,7 @@ Revokes the URI permission from an application. This API uses a promise to retur
 
 **Examples**
 
-```TypeScript
-import { uriPermissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let targetBundleName = 'com.example.test_case2';
-let uri = 'file://com.example.test_case1/data/storage/el2/base/haps/entry_test/files/newDir';
-
-uriPermissionManager.revokeUriPermission(uri, targetBundleName)
-  .then((data) => {
-    console.info(`Verification success, data: ${JSON.stringify(data)}.`);
-  }).catch((error: BusinessError) => {
-  console.error(`Verification failed, err code: ${error.code}, err msg: ${error.message}.`);
-});
-```
+See [revokeUriPermission](#revokeuripermission)
 
 
 ## revokeUriPermission
@@ -230,6 +278,10 @@ Revokes the URI permission from an application. This API uses a promise to retur
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system server failed. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
+
+**Examples**
+
+See [revokeUriPermission](#revokeuripermission)
 
 
 ## revokeUriPermission
@@ -287,45 +339,5 @@ Revokes the URI permission from an application. This API uses a promise to retur
 
 **Examples**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want, wantConstant, uriPermissionManager } from '@kit.AbilityKit';
-import { fileUri } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-  }
-
-  onForeground(): void {
-    let targetBundleName: string = 'com.example.demo1';
-    let filePath: string = this.context.filesDir + "/test.txt";
-    let uri: string = fileUri.getUriFromPath(filePath);
-    // revoke uri permission of main application
-    try {
-      let appCloneIndex: number = 0;
-      uriPermissionManager.revokeUriPermission(uri, targetBundleName, appCloneIndex)
-        .then(() => {
-          console.info('revokeUriPermission succeeded.');
-        }).catch((error: BusinessError) => {
-        console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
-      });
-    } catch (error) {
-      console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
-    }
-
-    // revoke uri permission of clone application
-    try {
-      let appCloneIndex: number = 1;
-      uriPermissionManager.revokeUriPermission(uri, targetBundleName, appCloneIndex)
-        .then(() => {
-          console.info('revokeUriPermission succeeded.');
-        }).catch((error: BusinessError) => {
-        console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
-      });
-    } catch (error) {
-      console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
-    }
-  }
-}
-```
+See [revokeUriPermission](#revokeuripermission)
 

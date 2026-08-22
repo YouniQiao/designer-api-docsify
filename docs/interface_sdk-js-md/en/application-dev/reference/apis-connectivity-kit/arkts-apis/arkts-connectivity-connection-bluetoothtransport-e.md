@@ -48,7 +48,7 @@ TRANSPORT_DUAL = 2
 
 The value of bluetooth transport DUAL.
 
-**Since:** 26.0.0
+**Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,7 +64,7 @@ TRANSPORT_UNKNOWN = 3
 
 The unknown bluetooth transport.
 
-**Since:** 26.0.0
+**Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
 

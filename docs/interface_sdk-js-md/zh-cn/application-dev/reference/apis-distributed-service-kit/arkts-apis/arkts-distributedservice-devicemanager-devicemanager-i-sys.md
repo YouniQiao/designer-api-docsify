@@ -258,6 +258,21 @@ try {
 }
 ```
 
+示例中的初始化请参见deviceManager.createDeviceManager。
+
+```TypeScript
+import deviceManager from '@ohos.distributedHardware.deviceManager';
+import { BusinessError } from '@ohos.base';
+
+// 设备网络标识，可以从可信设备列表中获取
+let networkId = "xxxxxxx";
+dmInstance.getDeviceInfo(networkId).then((data: deviceManager.DeviceInfo) => {
+  console.info('get device info: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error("getDeviceInfo errCode:" + err.code + ",errMessage:" + err.message);
+});
+```
+
 ## getDeviceInfo
 
 ```TypeScript
@@ -301,20 +316,7 @@ getDeviceInfo(networkId: string): Promise<DeviceInfo>
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-// 设备网络标识，可以从可信设备列表中获取
-let networkId = "xxxxxxx";
-dmInstance.getDeviceInfo(networkId).then((data: deviceManager.DeviceInfo) => {
-  console.info('get device info: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error("getDeviceInfo errCode:" + err.code + ",errMessage:" + err.message);
-});
-```
+参见 [getDeviceInfo](#getdeviceinfo)
 
 ## getLocalDeviceInfo
 
@@ -374,6 +376,19 @@ try {
 }
 ```
 
+示例中的初始化请参见deviceManager.createDeviceManager。
+
+```TypeScript
+import deviceManager from '@ohos.distributedHardware.deviceManager';
+import { BusinessError } from '@ohos.base';
+
+dmInstance.getLocalDeviceInfo().then((data: deviceManager.DeviceInfo) => {
+  console.info('get local device info: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error("getLocalDeviceInfo errCode:" + err.code + ",errMessage:" + err.message);
+});
+```
+
 ## getLocalDeviceInfo
 
 ```TypeScript
@@ -410,18 +425,7 @@ getLocalDeviceInfo(): Promise<DeviceInfo>
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-dmInstance.getLocalDeviceInfo().then((data: deviceManager.DeviceInfo) => {
-  console.info('get local device info: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error("getLocalDeviceInfo errCode:" + err.code + ",errMessage:" + err.message);
-});
-```
+参见 [getLocalDeviceInfo](#getlocaldeviceinfo)
 
 ## getLocalDeviceInfoSync
 
@@ -532,6 +536,19 @@ try {
 }
 ```
 
+示例中的初始化请参见deviceManager.createDeviceManager。
+
+```TypeScript
+import deviceManager from '@ohos.distributedHardware.deviceManager';
+import { BusinessError } from '@ohos.base';
+
+dmInstance.getTrustedDeviceList().then((data: Array<deviceManager.DeviceInfo>) => {
+  console.info('get trusted device info: ' + JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    console.error("getTrustedDeviceList errCode:" + err.code + ",errMessage:" + err.message);
+});
+```
+
 ## getTrustedDeviceList
 
 ```TypeScript
@@ -568,18 +585,7 @@ getTrustedDeviceList(): Promise<Array<DeviceInfo>>
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-dmInstance.getTrustedDeviceList().then((data: Array<deviceManager.DeviceInfo>) => {
-  console.info('get trusted device info: ' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error("getTrustedDeviceList errCode:" + err.code + ",errMessage:" + err.message);
-});
-```
+参见 [getTrustedDeviceList](#gettrusteddevicelist)
 
 ## getTrustedDeviceListSync
 
@@ -633,6 +639,20 @@ try {
 }
 ```
 
+示例中的初始化请参见deviceManager.createDeviceManager。
+
+```TypeScript
+import deviceManager from '@ohos.distributedHardware.deviceManager';
+import { BusinessError } from '@ohos.base';
+
+try {
+  let deviceInfoList: Array<deviceManager.DeviceInfo> = dmInstance.getTrustedDeviceListSync(true);
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error("getTrustedDeviceListSync errCode:" + e.code + ",errMessage:" + e.message);
+}
+```
+
 ## getTrustedDeviceListSync
 
 ```TypeScript
@@ -676,19 +696,7 @@ getTrustedDeviceListSync(isRefresh: boolean): Array<DeviceInfo>
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-try {
-  let deviceInfoList: Array<deviceManager.DeviceInfo> = dmInstance.getTrustedDeviceListSync(true);
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("getTrustedDeviceListSync errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
+参见 [getTrustedDeviceListSync](#gettrusteddevicelistsync)
 
 ## importCredential
 
@@ -1930,47 +1938,6 @@ try {
 }
 ```
 
-## startDeviceDiscovery
-
-```TypeScript
-startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void
-```
-
-发现周边设备。发现状态持续两分钟，超过两分钟，会停止发现，最大发现数量99个。
-
-**起始版本：** 9
-
-**废弃版本：** 11
-
-**替代接口：** [startDiscovering](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
-
-**需要权限：** ohos.permission.ACCESS_SERVICE_DM
-
-<!--Device-DeviceManager-startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void--><!--Device-DeviceManager-startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void-End-->
-
-**系统能力：** SystemCapability.DistributedHardware.DeviceManager
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| subscribeInfo | SubscribeInfo | 是 | 发现信息。 |
-| filterOptions | string | 否 | 发现设备过滤信息。可选，默认为undefined，发现未上线设备。长度范围1~255字符。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [11600104](../errorcode-device-manager.md#11600104-发现业务不可用) | Discovery unavailable. |
-| [11600101](../errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
-
-**示例**
-
 示例中的初始化请参见deviceManager.createDeviceManager。
 
 ```TypeScript
@@ -2026,6 +1993,49 @@ try {
   console.error("startDeviceDiscovery errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+## startDeviceDiscovery
+
+```TypeScript
+startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void
+```
+
+发现周边设备。发现状态持续两分钟，超过两分钟，会停止发现，最大发现数量99个。
+
+**起始版本：** 9
+
+**废弃版本：** 11
+
+**替代接口：** [startDiscovering](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
+
+**需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void--><!--Device-DeviceManager-startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| subscribeInfo | SubscribeInfo | 是 | 发现信息。 |
+| filterOptions | string | 否 | 发现设备过滤信息。可选，默认为undefined，发现未上线设备。长度范围1~255字符。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [11600104](../errorcode-device-manager.md#11600104-发现业务不可用) | Discovery unavailable. |
+| [11600101](../errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+
+**示例**
+
+参见 [startDeviceDiscovery](#startdevicediscovery)
 
 ## stopDeviceDiscovery
 

@@ -114,30 +114,6 @@ launchReasonMessage?: string
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## launchUTCTime
-
-```TypeScript
-launchUTCTime?: long
-```
-
-表示UIAbility开始启动的UTC时间戳，单位为毫秒。
-
-**约束：**
-
-该功能仅在启动UIAbility时生效。对于其他类型的Ability（例如UIExtensionAbility），所获取的启动时间为默认值0。
-
-**类型：** long
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LaunchParam-launchUTCTime?: long--><!--Device-LaunchParam-launchUTCTime?: long-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
 ## launchUptime
 
 ```TypeScript
@@ -159,6 +135,30 @@ launchUptime?: long
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LaunchParam-launchUptime?: long--><!--Device-LaunchParam-launchUptime?: long-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## launchUTCTime
+
+```TypeScript
+launchUTCTime?: long
+```
+
+表示UIAbility开始启动的UTC时间戳，单位为毫秒。
+
+**约束：**
+
+该功能仅在启动UIAbility时生效。对于其他类型的Ability（例如UIExtensionAbility），所获取的启动时间为默认值0。
+
+**类型：** long
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LaunchParam-launchUTCTime?: long--><!--Device-LaunchParam-launchUTCTime?: long-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

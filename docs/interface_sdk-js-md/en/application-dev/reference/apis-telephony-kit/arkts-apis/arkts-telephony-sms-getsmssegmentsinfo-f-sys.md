@@ -29,7 +29,7 @@ Obtains SMS message segment information. This API uses an asynchronous callback 
 | slotId | int | Yes | SIM card slot ID. <br>- **0**: card slot 1 <br>- **1**: card slot 2 |
 | message | string | Yes | SMS message. |
 | force7bit | boolean | Yes | Whether to use 7-bit encoding. The default value is **false**. <br>- **true**: yes <br>- **false**: no |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SmsSegmentsInfo](arkts-telephony-sms-smssegmentsinfo-i-sys.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmsSegmentsInfo](arkts-telephony-sms-smssegmentsinfo-i-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -51,6 +51,19 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let slotId: number = 0;
 sms.getSmsSegmentsInfo(slotId, "message", false, (err: BusinessError, data: sms.SmsSegmentsInfo) => {
       console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+let promise = sms.getSmsSegmentsInfo(slotId, "message", false);
+promise.then((data: sms.SmsSegmentsInfo) => {
+    console.info(`getSmsSegmentsInfo success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSmsSegmentsInfo failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -98,16 +111,5 @@ Obtains SMS message segment information. This API uses a promise to return the r
 
 **Examples**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let promise = sms.getSmsSegmentsInfo(slotId, "message", false);
-promise.then((data: sms.SmsSegmentsInfo) => {
-    console.info(`getSmsSegmentsInfo success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSmsSegmentsInfo failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getSmsSegmentsInfo](#getsmssegmentsinfo)
 

@@ -1233,6 +1233,18 @@ Minimal possible difference between two float values.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## f
+
+```TypeScript
+f
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Sta since version -1.
+
+<!--Device-Float-f--><!--Device-Float-f-End-->
+
 ## MAX_SAFE_INTEGER
 
 ```TypeScript
@@ -1293,26 +1305,6 @@ Minimal value that this type can have as a float.
 
 **System capability:** SystemCapability.Utils.Lang
 
-## NEGATIVE_INFINITY
-
-```TypeScript
-public static NEGATIVE_INFINITY: float = Double.toFloat(-1.0 / 0.0)
-```
-
-Represents the -Infinity value according to IEEE-754 specification.
-
-**Type:** float
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float-public static NEGATIVE_INFINITY: float = Double.toFloat(-1.0 / 0.0)--><!--Device-Float-public static NEGATIVE_INFINITY: float = Double.toFloat(-1.0 / 0.0)-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
 ## NaN
 
 ```TypeScript
@@ -1330,6 +1322,26 @@ Represents the NaN value according to IEEE-754 specification.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Float-public static NaN: float = Double.toFloat(0.0 / 0.0)--><!--Device-Float-public static NaN: float = Double.toFloat(0.0 / 0.0)-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## NEGATIVE_INFINITY
+
+```TypeScript
+public static NEGATIVE_INFINITY: float = Double.toFloat(-1.0 / 0.0)
+```
+
+Represents the -Infinity value according to IEEE-754 specification.
+
+**Type:** float
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Float-public static NEGATIVE_INFINITY: float = Double.toFloat(-1.0 / 0.0)--><!--Device-Float-public static NEGATIVE_INFINITY: float = Double.toFloat(-1.0 / 0.0)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1372,16 +1384,4 @@ Number of significant precision bits in this floating type.
 <!--Device-Float-public static PRECISION: byte = 24--><!--Device-Float-public static PRECISION: byte = 24-End-->
 
 **System capability:** SystemCapability.Utils.Lang
-
-## f
-
-```TypeScript
-f
-```
-
-**Since:** -1
-
-**ArkTS mode:** ArkTS-Sta since version -1.
-
-<!--Device-Float-f--><!--Device-Float-f-End-->
 

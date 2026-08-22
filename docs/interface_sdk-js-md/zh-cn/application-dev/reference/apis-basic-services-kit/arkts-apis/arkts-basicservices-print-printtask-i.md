@@ -14,202 +14,6 @@
 import { print } from '@kit.BasicServicesKit';
 ```
 
-## offBlock
-
-```TypeScript
-offBlock(callback?: Callback<void>): void
-```
-
-Unregister event callback when the current print task is in process.
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.PRINT
-
-<!--Device-PrintTask-offBlock(callback?: Callback<void>): void--><!--Device-PrintTask-offBlock(callback?: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.Print.PrintFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | The callback function for print task change event |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-import { fileUri } from '@kit.CoreFileKit';
-
-let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
-try {
-    print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
-        printTask.offBlock(() => {
-            console.info('unregister state block');
-        })
-        // ...
-    });
-} catch (error: BusinessError) {
-    console.error('print err ' + JSON.stringify(error));
-}
-```
-
-## offCancel
-
-```TypeScript
-offCancel(callback?: Callback<void>): void
-```
-
-Unregister event callback when the current print task is in process.
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.PRINT
-
-<!--Device-PrintTask-offCancel(callback?: Callback<void>): void--><!--Device-PrintTask-offCancel(callback?: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.Print.PrintFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | The callback function for print task change event |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-import { fileUri } from '@kit.CoreFileKit';
-
-let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
-try {
-    print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
-        printTask.offCancel(() => {
-            console.info('unregister state cancel');
-        })
-        // ...
-    });
-} catch (error: BusinessError) {
-    console.error('print err ' + JSON.stringify(error));
-}
-```
-
-## offFail
-
-```TypeScript
-offFail(callback?: Callback<void>): void
-```
-
-Unregister event callback when the current print task is in process.
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.PRINT
-
-<!--Device-PrintTask-offFail(callback?: Callback<void>): void--><!--Device-PrintTask-offFail(callback?: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.Print.PrintFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | The callback function for print task change event |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-import { fileUri } from '@kit.CoreFileKit';
-
-let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
-try {
-    print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
-        printTask.offFail(() => {
-            console.info('unregister state fail');
-        })
-        // ...
-    });
-} catch (error: BusinessError) {
-    console.error('print err ' + JSON.stringify(error));
-}
-```
-
-## offSucceed
-
-```TypeScript
-offSucceed(callback?: Callback<void>): void
-```
-
-Unregister event callback when the current print task is in process.
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.PRINT
-
-<!--Device-PrintTask-offSucceed(callback?: Callback<void>): void--><!--Device-PrintTask-offSucceed(callback?: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.Print.PrintFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | The callback function for print task change event |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-import { fileUri } from '@kit.CoreFileKit';
-
-let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
-try {
-    print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
-        printTask.offSucceed(() => {
-            console.info('unregister state succeed');
-        })
-        // ...
-    });
-} catch (error: BusinessError) {
-    console.error('print err ' + JSON.stringify(error));
-}
-```
-
 ## off('block')
 
 ```TypeScript
@@ -470,19 +274,19 @@ struct Index {
 }
 ```
 
-## onBlock
+## offBlock
 
 ```TypeScript
-onBlock(callback: Callback<void>): void
+offBlock(callback?: Callback<void>): void
 ```
 
-Register event callback when the current print task is in process.
+Unregister event callback when the current print task is in process.
 
 **起始版本：** 23
 
 **需要权限：** ohos.permission.PRINT
 
-<!--Device-PrintTask-onBlock(callback: Callback<void>): void--><!--Device-PrintTask-onBlock(callback: Callback<void>): void-End-->
+<!--Device-PrintTask-offBlock(callback?: Callback<void>): void--><!--Device-PrintTask-offBlock(callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -490,7 +294,7 @@ Register event callback when the current print task is in process.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | The callback function for print task change event |
 
 **错误码：**
 
@@ -509,8 +313,8 @@ import { fileUri } from '@kit.CoreFileKit';
 let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
 try {
     print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
-        printTask.onBlock(() => {
-            console.info('print state is block');
+        printTask.offBlock(() => {
+            console.info('unregister state block');
         })
         // ...
     });
@@ -519,19 +323,19 @@ try {
 }
 ```
 
-## onCancel
+## offCancel
 
 ```TypeScript
-onCancel(callback: Callback<void>): void
+offCancel(callback?: Callback<void>): void
 ```
 
-Register event callback when the current print task is in process.
+Unregister event callback when the current print task is in process.
 
 **起始版本：** 23
 
 **需要权限：** ohos.permission.PRINT
 
-<!--Device-PrintTask-onCancel(callback: Callback<void>): void--><!--Device-PrintTask-onCancel(callback: Callback<void>): void-End-->
+<!--Device-PrintTask-offCancel(callback?: Callback<void>): void--><!--Device-PrintTask-offCancel(callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -539,7 +343,7 @@ Register event callback when the current print task is in process.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | The callback function for print task change event |
 
 **错误码：**
 
@@ -558,8 +362,8 @@ import { fileUri } from '@kit.CoreFileKit';
 let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
 try {
     print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
-        printTask.onCancel(() => {
-            console.info('print state is cancel');
+        printTask.offCancel(() => {
+            console.info('unregister state cancel');
         })
         // ...
     });
@@ -568,19 +372,19 @@ try {
 }
 ```
 
-## onFail
+## offFail
 
 ```TypeScript
-onFail(callback: Callback<void>): void
+offFail(callback?: Callback<void>): void
 ```
 
-Register event callback when the current print task is in process.
+Unregister event callback when the current print task is in process.
 
 **起始版本：** 23
 
 **需要权限：** ohos.permission.PRINT
 
-<!--Device-PrintTask-onFail(callback: Callback<void>): void--><!--Device-PrintTask-onFail(callback: Callback<void>): void-End-->
+<!--Device-PrintTask-offFail(callback?: Callback<void>): void--><!--Device-PrintTask-offFail(callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -588,7 +392,7 @@ Register event callback when the current print task is in process.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | The callback function for print task change event |
 
 **错误码：**
 
@@ -607,8 +411,8 @@ import { fileUri } from '@kit.CoreFileKit';
 let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
 try {
     print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
-        printTask.onFail(() => {
-            console.info('print state is fail');
+        printTask.offFail(() => {
+            console.info('unregister state fail');
         })
         // ...
     });
@@ -617,19 +421,19 @@ try {
 }
 ```
 
-## onSucceed
+## offSucceed
 
 ```TypeScript
-onSucceed(callback: Callback<void>): void
+offSucceed(callback?: Callback<void>): void
 ```
 
-Register event callback when the current print task is in process.
+Unregister event callback when the current print task is in process.
 
 **起始版本：** 23
 
 **需要权限：** ohos.permission.PRINT
 
-<!--Device-PrintTask-onSucceed(callback: Callback<void>): void--><!--Device-PrintTask-onSucceed(callback: Callback<void>): void-End-->
+<!--Device-PrintTask-offSucceed(callback?: Callback<void>): void--><!--Device-PrintTask-offSucceed(callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -637,7 +441,7 @@ Register event callback when the current print task is in process.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | The callback function for print task change event |
 
 **错误码：**
 
@@ -656,8 +460,8 @@ import { fileUri } from '@kit.CoreFileKit';
 let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
 try {
     print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
-        printTask.onSucceed(() => {
-            console.info('print state is succeed');
+        printTask.offSucceed(() => {
+            console.info('unregister state succeed');
         })
         // ...
     });
@@ -923,6 +727,202 @@ struct Index {
         }
         .height('100%')
     }
+}
+```
+
+## onBlock
+
+```TypeScript
+onBlock(callback: Callback<void>): void
+```
+
+Register event callback when the current print task is in process.
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.PRINT
+
+<!--Device-PrintTask-onBlock(callback: Callback<void>): void--><!--Device-PrintTask-onBlock(callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.Print.PrintFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | The callback function for print task change event |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+import { fileUri } from '@kit.CoreFileKit';
+
+let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+try {
+    print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
+        printTask.onBlock(() => {
+            console.info('print state is block');
+        })
+        // ...
+    });
+} catch (error: BusinessError) {
+    console.error('print err ' + JSON.stringify(error));
+}
+```
+
+## onCancel
+
+```TypeScript
+onCancel(callback: Callback<void>): void
+```
+
+Register event callback when the current print task is in process.
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.PRINT
+
+<!--Device-PrintTask-onCancel(callback: Callback<void>): void--><!--Device-PrintTask-onCancel(callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.Print.PrintFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | The callback function for print task change event |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+import { fileUri } from '@kit.CoreFileKit';
+
+let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+try {
+    print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
+        printTask.onCancel(() => {
+            console.info('print state is cancel');
+        })
+        // ...
+    });
+} catch (error: BusinessError) {
+    console.error('print err ' + JSON.stringify(error));
+}
+```
+
+## onFail
+
+```TypeScript
+onFail(callback: Callback<void>): void
+```
+
+Register event callback when the current print task is in process.
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.PRINT
+
+<!--Device-PrintTask-onFail(callback: Callback<void>): void--><!--Device-PrintTask-onFail(callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.Print.PrintFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | The callback function for print task change event |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+import { fileUri } from '@kit.CoreFileKit';
+
+let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+try {
+    print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
+        printTask.onFail(() => {
+            console.info('print state is fail');
+        })
+        // ...
+    });
+} catch (error: BusinessError) {
+    console.error('print err ' + JSON.stringify(error));
+}
+```
+
+## onSucceed
+
+```TypeScript
+onSucceed(callback: Callback<void>): void
+```
+
+Register event callback when the current print task is in process.
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.PRINT
+
+<!--Device-PrintTask-onSucceed(callback: Callback<void>): void--><!--Device-PrintTask-onSucceed(callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.Print.PrintFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | The callback function for print task change event |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+import { fileUri } from '@kit.CoreFileKit';
+
+let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+try {
+    print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
+        printTask.onSucceed(() => {
+            console.info('print state is succeed');
+        })
+        // ...
+    });
+} catch (error: BusinessError) {
+    console.error('print err ' + JSON.stringify(error));
 }
 ```
 

@@ -75,6 +75,34 @@ screen.destroyVirtualScreen(screenId, (err: BusinessError | null) => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 屏幕ID需通过getAllScreens()获取或从createVirtualScreen()返回值获取
+let screenId: number = 1; // 虚拟屏ID
+// 销毁虚拟屏幕
+screen.destroyVirtualScreen(screenId).then(() => {
+  console.info('Succeeded in destroying the virtual screen.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to destroy the virtual screen. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let screenId: long = 1;
+screen.destroyVirtualScreen(screenId).then(() => {
+  console.info('Succeeded in destroying the virtual screen.');
+}).catch((err: Error) => {
+  console.error(`Failed to destroy the virtual screen. Code: ${err?.code}, message: ${err?.message}`);
+});
+```
+
 
 ## destroyVirtualScreen
 
@@ -115,31 +143,5 @@ function destroyVirtualScreen(screenId:long): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 屏幕ID需通过getAllScreens()获取或从createVirtualScreen()返回值获取
-let screenId: number = 1; // 虚拟屏ID
-// 销毁虚拟屏幕
-screen.destroyVirtualScreen(screenId).then(() => {
-  console.info('Succeeded in destroying the virtual screen.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to destroy the virtual screen. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let screenId: long = 1;
-screen.destroyVirtualScreen(screenId).then(() => {
-  console.info('Succeeded in destroying the virtual screen.');
-}).catch((err: Error) => {
-  console.error(`Failed to destroy the virtual screen. Code: ${err?.code}, message: ${err?.message}`);
-});
-```
+参见 [destroyVirtualScreen](#destroyvirtualscreen)
 

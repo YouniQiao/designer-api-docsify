@@ -60,3 +60,109 @@ A custom tokenizer is used. Chinese (simplified and traditional), English, and A
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+**Examples**
+
+The following is an example of the table creation statement when ICU_TOKENIZER is used:
+
+```TypeScript
+import { relationalStore } from '@kit.ArkData'; // Import a module.
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+// In this example, Ability is used to obtain an RdbStore instance in the stage model. You can use other implementations as required.
+class EntryAbility extends UIAbility {
+  async onWindowStageCreate(windowStage: window.WindowStage) {
+    let store: relationalStore.RdbStore | undefined = undefined;
+    const STORE_CONFIG: relationalStore.StoreConfig = {
+      name: "MyStore.db",
+      securityLevel: relationalStore.SecurityLevel.S3,
+      tokenizer: relationalStore.Tokenizer.ICU_TOKENIZER
+    };
+    store = await relationalStore.getRdbStore(this.context, STORE_CONFIG);
+
+    const SQL_CREATE_TABLE = "CREATE VIRTUAL TABLE example USING fts4(name, content, tokenize=icu zh_CN)";
+    if (store != undefined) {
+      (store as relationalStore.RdbStore).executeSql(SQL_CREATE_TABLE, (err) => {
+        if (err) {
+          console.error(`ExecuteSql failed, code is ${err.code},message is ${err.message}`);
+          return;
+        }
+        console.info('create virtual table done.');
+      });
+    }
+  }
+}
+```
+
+The following is an example of the table creation statement when CUSTOM_TOKENIZER is used:
+
+```TypeScript
+import { relationalStore } from '@kit.ArkData'; // Import a module.
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+// In this example, Ability is used to obtain an RdbStore instance in the stage model. You can use other implementations as required.
+class EntryAbility extends UIAbility {
+  async onWindowStageCreate(windowStage: window.WindowStage) {
+    let store: relationalStore.RdbStore | undefined = undefined;
+    const STORE_CONFIG: relationalStore.StoreConfig = {
+      name: "MyStore.db",
+      securityLevel: relationalStore.SecurityLevel.S3,
+      tokenizer: relationalStore.Tokenizer.CUSTOM_TOKENIZER
+    };
+    store = await relationalStore.getRdbStore(this.context, STORE_CONFIG);
+
+    const SQL_CREATE_TABLE = "CREATE VIRTUAL TABLE example USING fts5(name, content, tokenize='customtokenizer')";
+    if (store != undefined) {
+      (store as relationalStore.RdbStore).executeSql(SQL_CREATE_TABLE, (err) => {
+        if (err) {
+          console.error(`ExecuteSql failed, code is ${err.code},message is ${err.message}`);
+          return;
+        }
+        console.info('create virtual table done.');
+      });
+    }
+  }
+}
+```
+
+The following is an example of the table creation statement when CUSTOM_TOKENIZER is used:
+
+```TypeScript
+import { relationalStore } from '@kit.ArkData'; // Import a module.
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  async onWindowStageCreate(windowStage: window.WindowStage) {
+    console.info('custom tokenizer example: window stage create begin.');
+    let store: relationalStore.RdbStore | undefined = undefined;
+    const storeConfig: relationalStore.StoreConfig = {
+      name: "MyStore.db",
+      securityLevel: relationalStore.SecurityLevel.S3
+    };
+    let customType = relationalStore.Tokenizer.CUSTOM_TOKENIZER;
+    let customTypeSupported = relationalStore.isTokenizerSupported(customType);
+    if (customTypeSupported) {
+      storeConfig.tokenizer = customType;
+    } else {
+      console.info('custom tokenizer example: not support custom tokenizer.');
+      return;
+    }
+    store = await relationalStore.getRdbStore(this.context, storeConfig);
+
+    const sqlCreateTable =
+      "CREATE VIRTUAL TABLE example USING fts5(name, content, tokenize='customtokenizer cut_mode short_words')";
+    if (store != undefined) {
+      (store as relationalStore.RdbStore).executeSql(sqlCreateTable, (err) => {
+        if (err) {
+          console.error(`custom tokenizer example: ExecuteSql failed, code is ${err.code},message is ${err.message}`);
+          return;
+        }
+        console.info('custom tokenizer example: create virtual table done.');
+      });
+    }
+  }
+}
+```
+

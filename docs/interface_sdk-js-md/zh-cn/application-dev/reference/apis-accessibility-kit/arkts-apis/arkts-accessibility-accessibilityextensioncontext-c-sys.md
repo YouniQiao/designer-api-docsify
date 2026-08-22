@@ -808,82 +808,6 @@ export default class AccessibilityManager {
 }
 ```
 
-## offPreDisconnect
-
-```TypeScript
-offPreDisconnect(callback?: Callback<void>): void
-```
-
-取消已经向无障碍服务注册的预关闭回调函数，无障碍服务关闭该扩展服务前不再执行该回调。使用callback异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
-
-<!--Device-AccessibilityExtensionContext-offPreDisconnect(callback?: Callback<void>): void--><!--Device-AccessibilityExtensionContext-offPreDisconnect(callback?: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.BarrierFree.Accessibility.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，取消指定无障碍扩展服务即将关闭时的回调。需与 [onPreDisconnect](#onpredisconnect)的callback一致。缺省时，表示注销所有已注册事件。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-**示例**
-
-```TypeScript
-import {
-  AccessibilityEventInfo, 
-  AccessibilityExtensionContext
-} from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class AccessibilityManager {
-  private static instance: AccessibilityManager;
-  context?: AccessibilityExtensionContext;
-
-  static getInstance(): AccessibilityManager {
-    if (!AccessibilityManager.instance) {
-      AccessibilityManager.instance = new AccessibilityManager();
-    }
-    return AccessibilityManager.instance;
-  }
-
-  onStart(context: AccessibilityExtensionContext): void {
-    this.context = context;
-  }
-
-  onStop(): void {
-    this.context = undefined;
-  }
-
-  onEvent(accessibilityEvent: AccessibilityEventInfo): void {
-    if (!this.context) {
-      console.error('context is not available!');
-      return;
-    }
-
-    try {
-      this.context.offPreDisconnect(() => {
-        console.info(`To do something before accessibilityExtension disconnect.`);
-      });
-    } catch (err: BusinessError) {
-      console.error(`Failed to register, code is ${err.code}, message is ${err.message}`);
-    }
-  }
-}
-```
-
 ## off('preDisconnect')
 
 ```TypeScript
@@ -958,19 +882,19 @@ export default class AccessibilityManager {
 }
 ```
 
-## onPreDisconnect
+## offPreDisconnect
 
 ```TypeScript
-onPreDisconnect(callback: Callback<void>): void
+offPreDisconnect(callback?: Callback<void>): void
 ```
 
-向无障碍服务注册回调函数，在无障碍服务关闭该无障碍扩展服务前会执行该回调函数。使用callback异步回调。
+取消已经向无障碍服务注册的预关闭回调函数，无障碍服务关闭该扩展服务前不再执行该回调。使用callback异步回调。
 
 **起始版本：** 23
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
-<!--Device-AccessibilityExtensionContext-onPreDisconnect(callback: Callback<void>): void--><!--Device-AccessibilityExtensionContext-onPreDisconnect(callback: Callback<void>): void-End-->
+<!--Device-AccessibilityExtensionContext-offPreDisconnect(callback?: Callback<void>): void--><!--Device-AccessibilityExtensionContext-offPreDisconnect(callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -980,7 +904,7 @@ onPreDisconnect(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，在无障碍扩展服务即将关闭时回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，取消指定无障碍扩展服务即将关闭时的回调。需与 [onPreDisconnect](#onpredisconnect)的callback一致。缺省时，表示注销所有已注册事件。 |
 
 **错误码：**
 
@@ -1024,7 +948,7 @@ export default class AccessibilityManager {
     }
 
     try {
-      this.context.onPreDisconnect(() => {
+      this.context.offPreDisconnect(() => {
         console.info(`To do something before accessibilityExtension disconnect.`);
       });
     } catch (err: BusinessError) {
@@ -1107,6 +1031,82 @@ export default class AccessibilityManager {
       });
     } catch (err) {
       console.error(`Failed to register. Code: ${err.code}, message: ${err.message}`);
+    }
+  }
+}
+```
+
+## onPreDisconnect
+
+```TypeScript
+onPreDisconnect(callback: Callback<void>): void
+```
+
+向无障碍服务注册回调函数，在无障碍服务关闭该无障碍扩展服务前会执行该回调函数。使用callback异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
+
+<!--Device-AccessibilityExtensionContext-onPreDisconnect(callback: Callback<void>): void--><!--Device-AccessibilityExtensionContext-onPreDisconnect(callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.BarrierFree.Accessibility.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，在无障碍扩展服务即将关闭时回调。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+**示例**
+
+```TypeScript
+import {
+  AccessibilityEventInfo, 
+  AccessibilityExtensionContext
+} from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class AccessibilityManager {
+  private static instance: AccessibilityManager;
+  context?: AccessibilityExtensionContext;
+
+  static getInstance(): AccessibilityManager {
+    if (!AccessibilityManager.instance) {
+      AccessibilityManager.instance = new AccessibilityManager();
+    }
+    return AccessibilityManager.instance;
+  }
+
+  onStart(context: AccessibilityExtensionContext): void {
+    this.context = context;
+  }
+
+  onStop(): void {
+    this.context = undefined;
+  }
+
+  onEvent(accessibilityEvent: AccessibilityEventInfo): void {
+    if (!this.context) {
+      console.error('context is not available!');
+      return;
+    }
+
+    try {
+      this.context.onPreDisconnect(() => {
+        console.info(`To do something before accessibilityExtension disconnect.`);
+      });
+    } catch (err: BusinessError) {
+      console.error(`Failed to register, code is ${err.code}, message is ${err.message}`);
     }
   }
 }
@@ -1219,7 +1219,7 @@ startAbility(want: Want): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | Want类型参数，传入需要启动的Ability的信息，如Ability名称、Bundle名称等。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Want类型参数，传入需要启动的Ability的信息，如Ability名称、Bundle名称等。 |
 
 **返回值：**
 

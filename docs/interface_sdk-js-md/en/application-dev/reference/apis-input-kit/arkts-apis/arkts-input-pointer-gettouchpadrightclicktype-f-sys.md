@@ -26,7 +26,7 @@ Obtains the touchpad right-click menu type. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RightClickType](arkts-input-pointer-rightclicktype-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and the object is the touchpad right-click menu type. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RightClickType](arkts-input-pointer-rightclicktype-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and the object is the touchpad right-click menu type. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -52,6 +52,32 @@ struct Index {
             pointer.getTouchpadRightClickType((error: BusinessError, type: pointer.RightClickType) => {
               console.info(`getTouchpadRightClickType success, type: ${JSON.stringify(type)}`);
             });
+          } catch (error) {
+            console.error(`getTouchpadRightClickType failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            pointer.getTouchpadRightClickType().then((type: pointer.RightClickType) => {
+              console.info(`getTouchpadRightClickType success, type: ${JSON.stringify(type)}`);
+            }).catch((error: BusinessError) => {
+              console.error(`Get touchpad right click type failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            })
           } catch (error) {
             console.error(`getTouchpadRightClickType failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
@@ -93,29 +119,5 @@ Obtains the touchpad right-click menu type. This API uses a promise to return th
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.getTouchpadRightClickType().then((type: pointer.RightClickType) => {
-              console.info(`getTouchpadRightClickType success, type: ${JSON.stringify(type)}`);
-            }).catch((error: BusinessError) => {
-              console.error(`Get touchpad right click type failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`getTouchpadRightClickType failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
+See [getTouchpadRightClickType](#gettouchpadrightclicktype)
 

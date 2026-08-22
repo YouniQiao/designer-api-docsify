@@ -53,6 +53,57 @@ offReadMicInData(callback?: Callback<AudioCapturerMicInData>): void
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permitted at running state. |
 
+**示例**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let audioMicInStreamInfo: audio.AudioStreamInfo = {
+  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000,
+  channels: audio.AudioChannel.CHANNEL_2,
+  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE,
+  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW
+};
+
+let audioCapturerInfo: audio.AudioCapturerInfo = {
+  source: audio.SourceType.SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT,
+  capturerFlags: 0
+};
+
+let audioCapturerMicInConfig: audio.AudioCapturerMicInConfig = {
+  micInStreamInfo: audioMicInStreamInfo,
+  capturerInfo: audioCapturerInfo
+};
+
+let readMicInDataCallback: Callback<audio.AudioCapturerMicInData> =
+  (data: audio.AudioCapturerMicInData): void => {
+    console.info(`mic-in data length: ${data.micInData.byteLength}`);
+  };
+
+async function unregisterReadMicInDataCallback(): Promise<void> {
+  try {
+    let audioCapturer: audio.AudioCapturer | null =
+      await audio.createMicInAudioCapturer(audioCapturerMicInConfig);
+    if (audioCapturer === null) {
+      console.error('AudioCapturer Created : ERROR : audioCapturer is null');
+      return;
+    }
+
+    audioCapturer.onReadMicInData(readMicInDataCallback);
+
+    // 取消指定回调的监听。
+    audioCapturer.offReadMicInData(readMicInDataCallback);
+
+    // 取消该事件的所有监听。
+    audioCapturer.offReadMicInData();
+  } catch (err) {
+    let error = err as BusinessError;
+    console.error(`Failed to create AudioCapturer. Code: ${error.code}, message: ${error.message}`);
+  }
+}
+```
+
 ## onReadMicInData
 
 ```TypeScript
@@ -83,6 +134,74 @@ onReadMicInData(callback: Callback<AudioCapturerMicInData>): void
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permitted at running state. |
+
+**示例**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let audioEcStreamInfo: audio.AudioStreamInfo = {
+  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000,
+  channels: audio.AudioChannel.CHANNEL_2,
+  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE,
+  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW
+};
+
+let audioProcessedStreamInfo: audio.AudioStreamInfo = {
+  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000,
+  channels: audio.AudioChannel.CHANNEL_2,
+  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE,
+  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW
+};
+
+let audioMicInStreamInfo: audio.AudioStreamInfo = {
+  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000,
+  channels: audio.AudioChannel.CHANNEL_2,
+  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE,
+  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW
+};
+
+let audioCapturerInfo: audio.AudioCapturerInfo = {
+  source: audio.SourceType.SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT,
+  capturerFlags: 0
+};
+
+let audioCapturerMicInConfig: audio.AudioCapturerMicInConfig = {
+  processedStreamInfo: audioProcessedStreamInfo,
+  micInStreamInfo: audioMicInStreamInfo,
+  ecStreamInfo: audioEcStreamInfo,
+  capturerInfo: audioCapturerInfo
+};
+
+// data表示处理后的音频数据，micInData表示原始Mic-In音频数据。
+// ecData表示回声参考音频数据；如果未配置ecStreamInfo，该字段可能为空。
+let readMicInDataCallback: Callback<audio.AudioCapturerMicInData> =
+  (data: audio.AudioCapturerMicInData): void => {
+    let ecDataLength = data.ecData ? data.ecData.byteLength : 0;
+    console.info(`processed data length: ${data.data.byteLength}`);
+    console.info(`mic-in data length: ${data.micInData.byteLength}`);
+    console.info(`echo reference data length: ${ecDataLength}`);
+  };
+
+async function registerReadMicInDataCallback(): Promise<void> {
+  try {
+    // 先创建Mic-In采集器实例，再注册数据读取回调。
+    let audioCapturer: audio.AudioCapturer | null =
+      await audio.createMicInAudioCapturer(audioCapturerMicInConfig);
+    if (audioCapturer === null) {
+      console.error('AudioCapturer Created : ERROR : audioCapturer is null');
+      return;
+    }
+    // 注册成功后，当有可读取的音频缓冲区时会触发readMicInDataCallback。
+    audioCapturer.onReadMicInData(readMicInDataCallback);
+    console.info('Succeeded in registering onReadMicInData callback.');
+  } catch (err) {
+    let error = err as BusinessError;
+    console.error(`Failed to create AudioCapturer. Code: ${error.code}, message: ${error.message}`);
+  }
+}
+```
 
 ## setInputDeviceToAccessory
 

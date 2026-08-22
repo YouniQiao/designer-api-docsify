@@ -28,7 +28,7 @@ function setWifiProfileSync(admin: Want, profile: WifiProfile): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | profile | [WifiProfile](arkts-mdm-wifimanager-wifiprofile-i.md) | 是 | Wi-Fi配置信息，用于指定要连接的Wi-Fi网络的配置参数，包括SSID、BSSID、密钥、安全类型等。 |
 
 **错误码：**

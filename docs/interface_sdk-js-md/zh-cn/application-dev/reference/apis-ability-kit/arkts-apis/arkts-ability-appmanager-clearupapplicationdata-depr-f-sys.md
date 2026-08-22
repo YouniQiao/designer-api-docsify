@@ -46,6 +46,23 @@ import appManager from '@ohos.application.appManager';
 import { BusinessError } from '@ohos.base';
 
 let bundleName = 'bundleName';
+
+function clearUpApplicationDataCallback(err: BusinessError, data: void) {
+  if (err) {
+    console.error(`ClearUpApplicationDataCallback failed, error code: ${err.code}, error msg: ${err.message}.`);
+  } else {
+    console.info(`ClearUpApplicationDataCallback success, data: ${JSON.stringify(data)}.`);
+  }
+}
+
+appManager.clearUpApplicationData(bundleName, clearUpApplicationDataCallback);
+```
+
+```TypeScript
+import appManager from '@ohos.application.appManager';
+import { BusinessError } from '@ohos.base';
+
+let bundleName = 'bundleName';
 appManager.clearUpApplicationData(bundleName)
   .then((data) => {
     console.info(`ClearUpApplicationData success, data: ${JSON.stringify(data)}.`);
@@ -87,20 +104,5 @@ function clearUpApplicationData(bundleName: string, callback: AsyncCallback<void
 
 **示例**
 
-```TypeScript
-import appManager from '@ohos.application.appManager';
-import { BusinessError } from '@ohos.base';
-
-let bundleName = 'bundleName';
-
-function clearUpApplicationDataCallback(err: BusinessError, data: void) {
-  if (err) {
-    console.error(`ClearUpApplicationDataCallback failed, error code: ${err.code}, error msg: ${err.message}.`);
-  } else {
-    console.info(`ClearUpApplicationDataCallback success, data: ${JSON.stringify(data)}.`);
-  }
-}
-
-appManager.clearUpApplicationData(bundleName, clearUpApplicationDataCallback);
-```
+参见 [clearUpApplicationData](#clearupapplicationdata)
 

@@ -79,6 +79,14 @@ compareTo(other: ScopeComparable): boolean
 
 **示例**
 
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let rational = util.RationalNumber.createRationalFromString("3/4");
+let result = rationalNumber.compareTo(rational);
+console.info("result = " + result);
+// 输出结果：result = -1
+```
+
 构造新类，实现compareTo方法。后续示例代码中，均以此Temperature类为例。
 
 ```TypeScript
@@ -94,6 +102,30 @@ class Temperature implements util.ScopeComparable {
   }
 
   getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+```
+
+构造新类，实现compareTo方法。后续示例代码中，均以此Temperature类为例。
+
+```TypeScript
+class Temperature implements util.ScopeComparable<Temperature> {
+  private readonly _temp: int;
+
+  constructor(value: int) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp(): int {
     return this._temp;
   }
 

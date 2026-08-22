@@ -44,13 +44,13 @@ import { zlib } from '@kit.BasicServicesKit';
 | [DecompressionOutputInfo](arkts-basicservices-zlib-decompressionoutputinfo-i.md) | Uncompress2 return value information. |
 | [DeflatePendingOutputInfo](arkts-basicservices-zlib-deflatependingoutputinfo-i.md) | DeflatePending return value information. |
 | [DictionaryOutputInfo](arkts-basicservices-zlib-dictionaryoutputinfo-i.md) | InflateGetDictionary and deflateGetDictionary return value information. |
-| [GZip](arkts-basicservices-zlib-gzip-i.md) | Describes gzip-related APIs. |
 | [GzErrorOutputInfo](arkts-basicservices-zlib-gzerroroutputinfo-i.md) | GzError return value information. |
 | [GzHeader](arkts-basicservices-zlib-gzheader-i.md) | Gzip header information passed to and from zlib routines. |
+| [GZip](arkts-basicservices-zlib-gzip-i.md) | Describes gzip-related APIs. |
 | [Options](arkts-basicservices-zlib-options-i.md) | Defines options used to compress or decompress a ZIP file. |
-| [ZStream](arkts-basicservices-zlib-zstream-i.md) | Process all the information required for compression and decompression. |
 | [Zip](arkts-basicservices-zlib-zip-i.md) | Defines the **Zip** instance. It provides APIs to zip or unzip data in Zlib, Deflate, or Gzip format. |
 | [ZipOutputInfo](arkts-basicservices-zlib-zipoutputinfo-i.md) | Compression and decompression return value information. |
+| [ZStream](arkts-basicservices-zlib-zstream-i.md) | Process all the information required for compression and decompression. |
 
 ### Enums
 

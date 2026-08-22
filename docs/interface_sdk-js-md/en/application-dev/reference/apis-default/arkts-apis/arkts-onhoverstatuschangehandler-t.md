@@ -20,5 +20,5 @@ The handler of onHoverStatusChange event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| status | [HoverModeStatus](../../apis-arkui/arkts-apis/arkts-arkui-arkuiadvancedfoldsplitcontainer-hovermodestatus-i.md) | Yes | The status of hover mode |
+| status | [HoverModeStatus](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-foldsplitcontainer-hovermodestatus-i.md) | Yes | The status of hover mode |
 

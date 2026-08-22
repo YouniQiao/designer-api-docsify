@@ -2,7 +2,7 @@
 
 Describes the file info for transfer
 
-**Since:** 26.0.0
+**Since:** 16
 
 <!--Device-opp-interface FileHolder--><!--Device-opp-interface FileHolder-End-->
 
@@ -26,7 +26,7 @@ The file fd
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +46,7 @@ The file path
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,7 +66,7 @@ The file size
 
 **Type:** long
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 

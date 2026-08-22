@@ -188,6 +188,32 @@ if (proxy != undefined) {
 }
 ```
 
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+try {
+  let testObject = new TestRemoteObject("ipcTest");
+  let descriptor = testObject.getDescriptor();
+  hilog.info(0x0000, 'testTag', 'RpcServer: descriptor is ' + descriptor);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
 ## getInterfaceDescriptor
 
 ```TypeScript
@@ -260,6 +286,30 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 if (proxy != undefined) {
   let descriptor: string = proxy.getInterfaceDescriptor();
   hilog.info(0x0000, 'testTag', 'descriptor is ' + descriptor);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  let descriptor = testRemoteObject.getInterfaceDescriptor();
+  hilog.info(0x0000, 'testTag', 'RpcServer: descriptor is: ' + descriptor);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
 }
 ```
 
@@ -351,6 +401,33 @@ if (proxy != undefined) {
     hilog.error(0x0000, 'testTag', 'rpc get local interface fail, errorCode ' + e.code);
     hilog.error(0x0000, 'testTag', 'rpc get local interface fail, errorMessage ' + e.message);
   }
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  testRemoteObject.getLocalInterface("testObject");
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
 }
 ```
 
@@ -503,6 +580,30 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 if (proxy != undefined) {
   let broker: rpc.IRemoteBroker = proxy.queryLocalInterface("testObject");
   hilog.info(0x0000, 'testTag', 'queryLocalInterface is ' + broker);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  testRemoteObject.queryLocalInterface("testObject");
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error: ' + error);
 }
 ```
 
@@ -801,6 +902,99 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  let option = new rpc.MessageOption();
+  let data = rpc.MessageSequence.create();
+  let reply = rpc.MessageSequence.create();
+  data.writeInt(1);
+  data.writeString("hello");
+  testRemoteObject.sendMessageRequest(1, data, reply, option)
+    .then((result: rpc.RequestResult) => {
+      if (result.errCode === 0) {
+        hilog.info(0x0000, 'testTag', 'sendMessageRequest got result');
+        let num = result.reply.readInt();
+        let msg = result.reply.readString();
+        hilog.info(0x0000, 'testTag', 'reply num: ' + num);
+        hilog.info(0x0000, 'testTag', 'reply msg: ' + msg);
+      } else {
+        hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, errCode: ' + result.errCode);
+      }
+    }).catch((e: Error) => {
+      hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, error: ' + JSON.stringify(e));
+    }).finally (() => {
+      hilog.info(0x0000, 'testTag', 'sendMessageRequest ends, reclaim parcel');
+      data.reclaim();
+      reply.reclaim();
+    });
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, error: ' + error);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import rpc from '@ohos.rpc';
+import hilog from 'ohos.hilog';
+import { BusinessError } from '@ohos.base';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  let option = new rpc.MessageOption();
+  let data = rpc.MessageSequence.create();
+  let reply = rpc.MessageSequence.create();
+  data.writeInt(1);
+  data.writeString("hello");
+  testRemoteObject.sendMessageRequest(1, data, reply, option)
+    .then((result: rpc.RequestResult) => {
+      if (result.errCode === 0) {
+        hilog.info(0x0000, 'testTag', 'sendMessageRequest got result');
+        let num = result.reply.readInt();
+        let msg = result.reply.readString();
+        hilog.info(0x0000, 'testTag', 'reply num: ' + num);
+        hilog.info(0x0000, 'testTag', 'reply msg: ' + msg);
+      } else {
+        hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, errCode: ' + result.errCode);
+      }
+    }).catch((e: Error) => {
+      hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, error: ' + JSON.stringify(e));
+    }).finally (() => {
+      hilog.info(0x0000, 'testTag', 'sendMessageRequest ends, reclaim parcel');
+      data.reclaim();
+      reply.reclaim();
+    });
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, error: ' + error);
+}
+```
+
 ## sendMessageRequest
 
 ```TypeScript
@@ -836,6 +1030,10 @@ sendMessageRequest(
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+
+**示例**
+
+参见 [sendMessageRequest](#sendmessagerequest)
 
 ## sendRequest
 
@@ -939,46 +1137,6 @@ try {
 }
 ```
 
-## sendRequest
-
-```TypeScript
-sendRequest(
-      code: number,
-      data: MessageParcel,
-      reply: MessageParcel,
-      options: MessageOption
-    ): Promise<SendRequestResult>
-```
-
-以同步或异步方式向对端进程发送MessageParcel消息。如果为选项设置了异步模式，则发送请求的响应结果立即返回，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则发送请求的响应结果将 在sendRequest返回时返回，回复内容在reply报文里。使用Promise异步回调。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption)
-
-<!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>--><!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>-End-->
-
-**系统能力：** SystemCapability.Communication.IPC.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| code | number | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
-| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 保存待发送数据的MessageParcel对象。 |
-| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 接收应答数据的MessageParcel对象。 |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Promise对象，返回发送请求的响应结果。 |
-
-**示例**
-
 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
@@ -1054,6 +1212,126 @@ try {
 }
 ```
 
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class testRemoteObject extends rpc.RemoteObject {
+  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel,
+    option: rpc.MessageOption): boolean {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  let option = new rpc.MessageOption();
+  let data = rpc.MessageParcel.create();
+  let reply = rpc.MessageParcel.create();
+  data.writeInt(1);
+  data.writeString("hello");
+  let ret: boolean = testRemoteObject.sendRequest(1, data, reply, option);
+  if (ret) {
+    hilog.info(0x0000, 'testTag', 'sendRequest got result');
+    let msg = reply.readString();
+    hilog.info(0x0000, 'testTag', 'reply msg: ' + msg);
+  } else {
+    hilog.error(0x0000, 'testTag', 'sendRequest failed');
+  }
+  hilog.info(0x0000, 'testTag', 'sendRequest ends, reclaim parcel');
+  data.reclaim();
+  reply.reclaim();
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel, option: rpc.MessageOption): boolean {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  let option = new rpc.MessageOption();
+  let data = rpc.MessageParcel.create();
+  let reply = rpc.MessageParcel.create();
+  data.writeInt(1);
+  data.writeString("hello");
+  let a = testRemoteObject.sendRequest(1, data, reply, option) as Object;
+  let b = a as Promise<rpc.SendRequestResult>;
+  b.then((result: rpc.SendRequestResult) => {
+    if (result.errCode === 0) {
+      hilog.info(0x0000, 'testTag', 'sendRequest got result');
+      let num = result.reply.readInt();
+      let msg = result.reply.readString();
+      hilog.info(0x0000, 'testTag', 'reply num: ' + num);
+      hilog.info(0x0000, 'testTag', 'reply msg: ' + msg);
+    } else {
+      hilog.error(0x0000, 'testTag', 'sendRequest failed, errCode: ' + result.errCode);
+    }
+  }).catch((e: Error) => {
+    hilog.error(0x0000, 'testTag', 'sendRequest failed, error: ' + JSON.stringify(e));
+  }).finally (() => {
+    hilog.info(0x0000, 'testTag', 'sendRequest ends, reclaim parcel');
+    data.reclaim();
+    reply.reclaim();
+  });
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error: ' + error);
+}
+```
+
+## sendRequest
+
+```TypeScript
+sendRequest(
+      code: number,
+      data: MessageParcel,
+      reply: MessageParcel,
+      options: MessageOption
+    ): Promise<SendRequestResult>
+```
+
+以同步或异步方式向对端进程发送MessageParcel消息。如果为选项设置了异步模式，则发送请求的响应结果立即返回，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则发送请求的响应结果将 在sendRequest返回时返回，回复内容在reply报文里。使用Promise异步回调。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption)
+
+<!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>--><!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>-End-->
+
+**系统能力：** SystemCapability.Communication.IPC.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| code | number | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 保存待发送数据的MessageParcel对象。 |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 接收应答数据的MessageParcel对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Promise对象，返回发送请求的响应结果。 |
+
+**示例**
+
+参见 [sendRequest](#sendrequest)
+
 ## sendRequest
 
 ```TypeScript
@@ -1087,6 +1365,10 @@ sendRequest(
 | reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 接收应答数据的MessageParcel对象。 |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | 是 | 接收发送结果的回调。 |
+
+**示例**
+
+参见 [sendRequest](#sendrequest)
 
 ## unregisterDeathRecipient
 

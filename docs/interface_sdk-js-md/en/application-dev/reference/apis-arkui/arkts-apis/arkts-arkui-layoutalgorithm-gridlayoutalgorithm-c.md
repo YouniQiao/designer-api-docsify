@@ -9,7 +9,7 @@ Grid layout algorithm class.
 > [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the
 > layout algorithm.
 
-**Inheritance/Implementation:** GridLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)
+**Inheritance/Implementation:** GridLayoutAlgorithm implements [LayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-i.md)
 
 **Since:** 24
 
@@ -39,7 +39,7 @@ Constructs the grid layout algorithm class.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [GridLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | No | Input parameters for constructing the grid layout algorithm, which are used to set the number of columns, column spacing, and row spacing of the grid layout. |
+| option | [GridLayoutAlgorithmOptions](../../apis-default/arkts-apis/arkts-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | No | Input parameters for constructing the grid layout algorithm, which are used to set the number of columns, column spacing, and row spacing of the grid layout. |
 
 ## columnsGap
 

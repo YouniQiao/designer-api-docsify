@@ -1,5 +1,19 @@
 # Constants
 
+## ACTIVATED_INPUT_METHOD_SUB_MODE
+
+```TypeScript
+const ACTIVATED_INPUT_METHOD_SUB_MODE: string
+```
+
+Indicates the default input method keyboard type and its ID.
+
+**Since:** 23
+
+<!--Device-input-const ACTIVATED_INPUT_METHOD_SUB_MODE: string--><!--Device-input-const ACTIVATED_INPUT_METHOD_SUB_MODE: string-End-->
+
+**System capability:** SystemCapability.Applications.Settings.Core
+
 ## ACTIVATED_INPUT_METHODS
 
 ```TypeScript
@@ -15,20 +29,6 @@ Indicates the list of input methods that have been activated.
 **Deprecated since:** 21
 
 <!--Device-input-const ACTIVATED_INPUT_METHODS: string--><!--Device-input-const ACTIVATED_INPUT_METHODS: string-End-->
-
-**System capability:** SystemCapability.Applications.Settings.Core
-
-## ACTIVATED_INPUT_METHOD_SUB_MODE
-
-```TypeScript
-const ACTIVATED_INPUT_METHOD_SUB_MODE: string
-```
-
-Indicates the default input method keyboard type and its ID.
-
-**Since:** 23
-
-<!--Device-input-const ACTIVATED_INPUT_METHOD_SUB_MODE: string--><!--Device-input-const ACTIVATED_INPUT_METHOD_SUB_MODE: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 

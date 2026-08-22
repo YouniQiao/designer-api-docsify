@@ -56,6 +56,16 @@ call.isInEmergencyCall((err: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.isInEmergencyCall().then((data: boolean) => {
+    console.info(`isInEmergencyCall success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isInEmergencyCall fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## isInEmergencyCall
 
@@ -93,13 +103,5 @@ function isInEmergencyCall(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isInEmergencyCall().then((data: boolean) => {
-    console.info(`isInEmergencyCall success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isInEmergencyCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [isInEmergencyCall](#isinemergencycall)
 

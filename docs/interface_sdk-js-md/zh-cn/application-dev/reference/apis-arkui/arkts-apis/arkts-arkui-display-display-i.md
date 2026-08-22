@@ -150,6 +150,36 @@ displayClass.getCutoutInfo().then((data: display.CutoutInfo) => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let displayClass: display.Display | null = null;
+displayClass = display.getDefaultDisplaySync();
+let promise: Promise<display.CutoutInfo> = displayClass.getCutoutInfo();
+promise.then((data: display.CutoutInfo) => {
+  console.info(`Succeeded in getting cutoutInfo. Data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get cutoutInfo. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let displayClass: display.Display | null = null;
+displayClass = display.getDefaultDisplaySync();
+let promise: Promise<display.CutoutInfo> = displayClass.getCutoutInfo();
+promise.then((data: display.CutoutInfo) => {
+  console.info(`Succeeded in getting cutoutInfo. Data: ${JSON.stringify(data)}`);
+}).catch((err: Error) => {
+  console.error(`Failed to obtain all the display objects. Code: ${err?.code}, message: ${err?.message}`);
+});
+```
+
 ## getCutoutInfo
 
 ```TypeScript
@@ -180,35 +210,7 @@ getCutoutInfo(): Promise<CutoutInfo>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let displayClass: display.Display | null = null;
-displayClass = display.getDefaultDisplaySync();
-let promise: Promise<display.CutoutInfo> = displayClass.getCutoutInfo();
-promise.then((data: display.CutoutInfo) => {
-  console.info(`Succeeded in getting cutoutInfo. Data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get cutoutInfo. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let displayClass: display.Display | null = null;
-displayClass = display.getDefaultDisplaySync();
-let promise: Promise<display.CutoutInfo> = displayClass.getCutoutInfo();
-promise.then((data: display.CutoutInfo) => {
-  console.info(`Succeeded in getting cutoutInfo. Data: ${JSON.stringify(data)}`);
-}).catch((err: Error) => {
-  console.error(`Failed to obtain all the display objects. Code: ${err?.code}, message: ${err?.message}`);
-});
-```
+参见 [getCutoutInfo](#getcutoutinfo)
 
 ## getDisplayCapability
 
@@ -343,52 +345,6 @@ try {
 }
 ```
 
-## offAvailableAreaChange
-
-```TypeScript
-offAvailableAreaChange(callback?: Callback<Rect>): void
-```
-
-Unregister the callback for available area changes.
-
-**起始版本：** 23
-
-<!--Device-Display-offAvailableAreaChange(callback?: Callback<Rect>): void--><!--Device-Display-offAvailableAreaChange(callback?: Callback<Rect>): void-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | 否 | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
-
-**示例**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-import { display } from '@kit.ArkUI';
-
-let callback: Callback<display.Rect> = (data: display.Rect) => {
-  console.info(`Listening enabled. Data: ${JSON.stringify(data)}`);
-};
-let displayClass: display.Display | null = null;
-try {
-  displayClass = display.getDefaultDisplaySync();
-  displayClass.offAvailableAreaChange(callback);
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to unregister callback. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## off('availableAreaChange')
 
 ```TypeScript
@@ -437,17 +393,17 @@ try {
 }
 ```
 
-## onAvailableAreaChange
+## offAvailableAreaChange
 
 ```TypeScript
-onAvailableAreaChange(callback: Callback<Rect>): void
+offAvailableAreaChange(callback?: Callback<Rect>): void
 ```
 
-Register the callback for available area changes.
+Unregister the callback for available area changes.
 
 **起始版本：** 23
 
-<!--Device-Display-onAvailableAreaChange(callback: Callback<Rect>): void--><!--Device-Display-onAvailableAreaChange(callback: Callback<Rect>): void-End-->
+<!--Device-Display-offAvailableAreaChange(callback?: Callback<Rect>): void--><!--Device-Display-offAvailableAreaChange(callback?: Callback<Rect>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -455,7 +411,7 @@ Register the callback for available area changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | 是 | Callback used to return the available area |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | 否 | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **错误码：**
 
@@ -476,10 +432,10 @@ let callback: Callback<display.Rect> = (data: display.Rect) => {
 let displayClass: display.Display | null = null;
 try {
   displayClass = display.getDefaultDisplaySync();
-  displayClass.onAvailableAreaChange(callback);
+  displayClass.offAvailableAreaChange(callback);
 } catch (exception) {
   let error = exception as BusinessError;
-  console.error(`Failed to register callback. Code: ${error.code}, message: ${error.message}`);
+  console.error(`Failed to unregister callback. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -528,6 +484,52 @@ try {
   displayClass.on('availableAreaChange', callback);
 } catch (exception) {
   console.error(`Failed to register callback. Code: ${exception.code}, message: ${exception.message}`);
+}
+```
+
+## onAvailableAreaChange
+
+```TypeScript
+onAvailableAreaChange(callback: Callback<Rect>): void
+```
+
+Register the callback for available area changes.
+
+**起始版本：** 23
+
+<!--Device-Display-onAvailableAreaChange(callback: Callback<Rect>): void--><!--Device-Display-onAvailableAreaChange(callback: Callback<Rect>): void-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | 是 | Callback used to return the available area |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+
+**示例**
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+import { display } from '@kit.ArkUI';
+
+let callback: Callback<display.Rect> = (data: display.Rect) => {
+  console.info(`Listening enabled. Data: ${JSON.stringify(data)}`);
+};
+let displayClass: display.Display | null = null;
+try {
+  displayClass = display.getDefaultDisplaySync();
+  displayClass.onAvailableAreaChange(callback);
+} catch (exception) {
+  let error = exception as BusinessError;
+  console.error(`Failed to register callback. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

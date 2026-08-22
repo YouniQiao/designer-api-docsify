@@ -28,7 +28,7 @@ Sets the Network Time Protocol (NTP) time server. After successful configuration
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | server | string | Yes | NTP server addresses separated by commas (,). For example, **ntpserver1.com,ntpserver2.com**. The value can contain a maximum of 96 bytes, including the null terminator ( **\0**). |
 
 **Error codes:**

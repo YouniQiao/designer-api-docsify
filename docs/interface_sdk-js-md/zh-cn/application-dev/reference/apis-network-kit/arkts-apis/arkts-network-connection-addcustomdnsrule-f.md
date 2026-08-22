@@ -78,6 +78,33 @@ connection.addCustomDnsRule("xxxx", ["xx.xx.xx.xx","xx.xx.xx.xx"], (error: Busin
 })
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.addCustomDnsRule("xxxx", ["xx.xx.xx.xx","xx.xx.xx.xx"]).then(() => {
+    console.info("success");
+}).catch((error: BusinessError) => {
+    console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.addCustomDnsRule("xxxx", ["xx.xx.xx.xx","xx.xx.xx.xx"]).then(() => {
+  console.info("success");
+}).catch((error: Error) => {
+  let businessError = error as BusinessError;
+  console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
+})
+```
+
 
 ## addCustomDnsRule
 
@@ -127,30 +154,5 @@ function addCustomDnsRule(host: string, ip: Array<string>): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.addCustomDnsRule("xxxx", ["xx.xx.xx.xx","xx.xx.xx.xx"]).then(() => {
-    console.info("success");
-}).catch((error: BusinessError) => {
-    console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.addCustomDnsRule("xxxx", ["xx.xx.xx.xx","xx.xx.xx.xx"]).then(() => {
-  console.info("success");
-}).catch((error: Error) => {
-  let businessError = error as BusinessError;
-  console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
-})
-```
+参见 [addCustomDnsRule](#addcustomdnsrule)
 

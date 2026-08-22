@@ -37,8 +37,8 @@ Sets a router proxy for widgets and obtains the Want information required for re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | Yes | Array of widget IDs. |
-| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)&gt; | Yes | Callback used to return the Want information required for redirection. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the router proxy is set, **error** is **undefined**; otherwise, an exception is thrown. |
+| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Callback used to return the Want information required for redirection. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the router proxy is set, **error** is **undefined**; otherwise, an exception is thrown. |
 
 **Error codes:**
 
@@ -51,6 +51,114 @@ Sets a router proxy for widgets and obtains the Want information required for re
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
+
+**Examples**
+
+```TypeScript
+import { common, Want } from '@kit.AbilityKit';
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct CardExample {
+  @State formId: number = 0;
+  @State fwidth: number = 420;
+  @State fheight: number = 280;
+  private context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+
+  build() {
+    Column() {
+      FormComponent({
+        id: this.formId,
+        name: "widget",
+        bundle: "com.example.cardprovider",
+        ability: "EntryFormAbility",
+        module: "entry",
+        dimension: FormDimension.Dimension_2_2,
+        temporary: false,
+      })
+        .allowUpdate(true)
+        .size({ width: this.fwidth, height: this.fheight })
+        .visibility(Visibility.Visible)
+        .onAcquired((form) => {
+          console.info('testTag onAcquired.');
+          this.formId = form.id;
+          try {
+            let formIds: string[] = [this.formId.toString()];
+            formHost.setRouterProxy(formIds, (want: Want) => {
+              console.info('formHost recv router event.');
+              // The widget host processes the redirection.
+              this.context.startAbility(want, (err: BusinessError) => {
+                console.error(`formHost startAbility error, code: ${err.code}, message: ${err.message}`);
+              });
+            }, (err: BusinessError) => {
+              console.error(`set router proxy error, code: ${err.code}, message: ${err.message}`);
+            })
+          } catch (e) {
+            console.error(`formHost setRouterProxy, code: ${e.code}, message: ${e.message}`);
+          }
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { common, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct CardExample {
+  @State formId: number = 0;
+  @State fwidth: number = 420;
+  @State fheight: number = 280;
+  private context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+
+  build() {
+    Column() {
+      FormComponent({
+        id: this.formId,
+        name: "widget",
+        bundle: "com.example.cardprovider",
+        ability: "EntryFormAbility",
+        module: "entry",
+        dimension: FormDimension.Dimension_2_2,
+        temporary: false,
+      })
+        .allowUpdate(true)
+        .size({ width: this.fwidth, height: this.fheight })
+        .visibility(Visibility.Visible)
+        .onAcquired((form) => {
+          console.info('testTag onAcquired.');
+          this.formId = form.id;
+          try {
+            let formIds: string[] = [this.formId.toString()];
+            formHost.setRouterProxy(formIds, (want: Want) => {
+              console.info('formHost recv router event.');
+              // The widget host processes the redirection.
+              this.context.startAbility(want, (err: BusinessError) => {
+                console.info(`formHost startAbility error, code: ${err.code}, message: ${err.message}`);
+              });
+            }).then(() => {
+              console.info('formHost set router proxy success');
+            }).catch((err: BusinessError) => {
+              console.error(`set router proxy error, code: ${err.code}, message: ${err.message}`);
+            })
+          } catch (e) {
+            console.error(`formHost setRouterProxy, code: ${e.code}, message: ${e.message}`);
+          }
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 
 ## setRouterProxy
@@ -85,7 +193,7 @@ Sets a router proxy for widgets and obtains the Want information required for re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | Yes | Array of widget IDs. |
-| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md)&gt; | Yes | Callback used to return the Want information required for redirection. |
+| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Callback used to return the Want information required for redirection. |
 
 **Return value:**
 
@@ -104,4 +212,8 @@ Sets a router proxy for widgets and obtains the Want information required for re
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
+
+**Examples**
+
+See [setRouterProxy](#setrouterproxy)
 

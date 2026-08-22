@@ -20,6 +20,6 @@ UI state change handling function, it returns the current UI states, the value i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-framenode-c.md) | Yes | Current node which is triggering the state change. |
+| node | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Yes | Current node which is triggering the state change. |
 | currentUIStates | int | Yes | Current UI states when the handler is triggered. |
 

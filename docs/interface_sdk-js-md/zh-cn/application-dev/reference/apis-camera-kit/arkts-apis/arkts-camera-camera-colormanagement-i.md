@@ -47,6 +47,24 @@ getActiveColorSpace(): colorSpaceManager.ColorSpace
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
+
+function getActiveColorSpace(session: camera.PhotoSession): colorSpaceManager.ColorSpace | undefined {
+  let colorSpace: colorSpaceManager.ColorSpace | undefined = undefined;
+  try {
+    colorSpace = session.getActiveColorSpace();
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The getActiveColorSpace call failed. error code: ${err.code}`);
+  }
+  return colorSpace;
+}
+```
+
 ## setColorSpace
 
 ```TypeScript
@@ -103,4 +121,23 @@ P3广色域与HDR高动态范围成像：
 | [7400102](../errorcode-camera.md#7400102-非法操作) | The colorSpace does not match the format. |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
+
+function setColorSpace(session: camera.PhotoSession, colorSpaces: Array<colorSpaceManager.ColorSpace>): void {
+  if (colorSpaces === undefined || colorSpaces.length <= 0) {
+    return;
+  }
+  try {
+    session.setColorSpace(colorSpaces[0]);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The setColorSpace call failed, error code: ${err.code}`);
+  }
+}
+```
 

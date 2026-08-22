@@ -55,6 +55,16 @@ keyboardController.exitCurrentInputType((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+keyboardController.exitCurrentInputType().then(() => {
+  console.info('Succeeded in exiting current input type.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to exit current input type. Code:${err.code}, message:${err.message}`);
+});
+```
+
 ## exitCurrentInputType
 
 ```TypeScript
@@ -84,15 +94,7 @@ exitCurrentInputType(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-keyboardController.exitCurrentInputType().then(() => {
-  console.info('Succeeded in exiting current input type.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to exit current input type. Code:${err.code}, message:${err.message}`);
-});
-```
+参见 [exitCurrentInputType](#exitcurrentinputtype)
 
 ## hide
 
@@ -125,12 +127,44 @@ hide(callback: AsyncCallback<void>): void
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+panel.hide((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to hide panel. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in hiding the panel.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+panel.hide().then(() => {
+  console.info('Succeeded in hiding the panel.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to hide panel. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 keyboardController.hide((err: BusinessError) => {
   if (err) {
     console.error(`Failed to hide. Code:${err.code}, message:${err.message}`);
     return;
   }
   console.info('Succeeded in hiding keyboard.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+keyboardController.hide().then(() => {
+  console.info('Succeeded in hiding keyboard.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to hide. Code:${err.code}, message:${err.message}`);
 });
 ```
 
@@ -162,15 +196,7 @@ hide(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-keyboardController.hide().then(() => {
-  console.info('Succeeded in hiding keyboard.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to hide. Code:${err.code}, message:${err.message}`);
-});
-```
+参见 [hide](#hide)
 
 ## hideKeyboard
 
@@ -215,6 +241,16 @@ keyboardController.hideKeyboard((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+keyboardController.hideKeyboard().then(() => {
+  console.info('Succeeded in hiding keyboard.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to hideKeyboard. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## hideKeyboard
 
 ```TypeScript
@@ -246,13 +282,5 @@ hideKeyboard(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-keyboardController.hideKeyboard().then(() => {
-  console.info('Succeeded in hiding keyboard.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to hideKeyboard. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [hideKeyboard](#hidekeyboard)
 

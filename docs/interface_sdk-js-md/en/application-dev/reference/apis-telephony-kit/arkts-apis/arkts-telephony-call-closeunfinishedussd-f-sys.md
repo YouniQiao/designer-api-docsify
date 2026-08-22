@@ -29,7 +29,7 @@ Cancels the unfinished USSD services. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -55,6 +55,17 @@ call.closeUnfinishedUssd(slotId, (err: BusinessError) => {
     } else {
         console.info(`closeUnfinishedUssd success.`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+call.closeUnfinishedUssd(slotId).then(() => {
+    console.info(`closeUnfinishedUssd success.`);
+}).catch((err: BusinessError) => {
+    console.error(`closeUnfinishedUssd fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -103,14 +114,5 @@ Cancels the unfinished USSD services. This API uses a promise to return the resu
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-call.closeUnfinishedUssd(slotId).then(() => {
-    console.info(`closeUnfinishedUssd success.`);
-}).catch((err: BusinessError) => {
-    console.error(`closeUnfinishedUssd fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [closeUnfinishedUssd](#closeunfinishedussd)
 

@@ -31,7 +31,7 @@ Disables listening for screen hopping status change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cooperate' | Yes | Event type. The value is **cooperate**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback to be unregistered. If this parameter is not specified, all callbacks registered by the current application will be unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to be unregistered. If this parameter is not specified, all callbacks registered by the current application will be unregistered. |
 
 **Error codes:**
 

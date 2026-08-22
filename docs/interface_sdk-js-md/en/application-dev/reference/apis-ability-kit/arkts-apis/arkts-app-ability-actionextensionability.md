@@ -12,5 +12,5 @@ import { ActionExtensionAbility } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [ActionExtensionAbility](arkts-ability-appabilityactionextensionability-actionextensionability-c.md) | The ActionExtensionAbility module provides a template for you to implement custom actions. It inherits from [UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md). |
+| [ActionExtensionAbility](arkts-ability-app-ability-actionextensionability-actionextensionability-c.md) | The ActionExtensionAbility module provides a template for you to implement custom actions. It inherits from [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md). |
 

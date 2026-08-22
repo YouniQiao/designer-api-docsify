@@ -137,6 +137,19 @@ getBounds(): Promise<Rect>
 
 ```TypeScript
 // xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    let rect = await button.getBounds();
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
@@ -222,6 +235,19 @@ getDisplayId(): Promise<int>
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.findComponent(ON.type('TextInput'));
+  if (button) {
+    let displayId = await button.getDisplayId();
+  }
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -451,6 +477,21 @@ isFocused(): Promise<boolean>
 
 ```TypeScript
 // xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button && await button.isFocused()) {
+    console.info('This button is focused');
+  } else {
+    console.info('This button is not focused');
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
@@ -458,6 +499,28 @@ async function demo() {
   let window: UiWindow | null = await driver.findWindow({ active: true });
   if (window) {
     let focused = await window.isFocused();
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  if (button) {
+    if (await button.isFocused()) {
+      console.info('This button is focused');
+    } else {
+      console.info('This button is not focused');
+    }
+    if (await button.isSelected()) {
+      console.info('This button is selected');
+    } else {
+      console.info('This button is not selected');
+    }
   }
 }
 ```

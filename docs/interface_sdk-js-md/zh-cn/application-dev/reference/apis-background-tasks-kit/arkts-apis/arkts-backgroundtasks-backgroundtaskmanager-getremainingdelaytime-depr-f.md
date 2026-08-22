@@ -46,6 +46,18 @@ backgroundTaskManager.getRemainingDelayTime(delayInfo.requestId, (err: BusinessE
 });
 ```
 
+```TypeScript
+import backgroundTaskManager from '@ohos.backgroundTaskManager';
+import { BusinessError } from '@ohos.base';
+
+let delayInfo = backgroundTaskManager.requestSuspendDelay('test', () => {});
+backgroundTaskManager.getRemainingDelayTime(delayInfo.requestId).then((res:number) => {
+  console.info('promise => Operation getRemainingDelayTime succeeded. Data: ' + JSON.stringify(res));
+}).catch((err : BusinessError) => {
+  console.info(`promise => Operation getRemainingDelayTime failed. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## getRemainingDelayTime
 
@@ -79,15 +91,5 @@ function getRemainingDelayTime(requestId: number): Promise<number>
 
 **示例**
 
-```TypeScript
-import backgroundTaskManager from '@ohos.backgroundTaskManager';
-import { BusinessError } from '@ohos.base';
-
-let delayInfo = backgroundTaskManager.requestSuspendDelay('test', () => {});
-backgroundTaskManager.getRemainingDelayTime(delayInfo.requestId).then((res:number) => {
-  console.info('promise => Operation getRemainingDelayTime succeeded. Data: ' + JSON.stringify(res));
-}).catch((err : BusinessError) => {
-  console.info(`promise => Operation getRemainingDelayTime failed. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [getRemainingDelayTime](#getremainingdelaytime)
 

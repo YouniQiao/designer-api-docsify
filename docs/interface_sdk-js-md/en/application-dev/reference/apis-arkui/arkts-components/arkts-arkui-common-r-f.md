@@ -36,3 +36,37 @@ global \$r function
 | --- | --- |
 | Resource |  |
 
+**Examples**
+
+```TypeScript
+@Entry
+@Component
+struct Page {
+  build() {
+    Row() {
+      Column() {
+        Text($r('app.string.app_name'))
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+@Entry
+@Component
+struct Page {
+  build() {
+    Row() {
+      Column() {
+        Text($r('app.string.app_name'))
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+

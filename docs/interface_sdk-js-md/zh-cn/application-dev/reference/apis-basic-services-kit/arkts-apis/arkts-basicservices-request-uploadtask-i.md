@@ -49,50 +49,6 @@ delete(callback: AsyncCallback<boolean>): void
 
 **示例**
 
-```TypeScript
-uploadTask.delete((err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to delete the upload task. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in deleting the upload task.');
-});
-```
-
-## delete
-
-```TypeScript
-delete(): Promise<boolean>
-```
-
-移除上传的任务，使用Promise异步回调。
-
-> **说明：**
-> 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.INTERNET
-
-<!--Device-UploadTask-delete(): Promise<boolean>--><!--Device-UploadTask-delete(): Promise<boolean>-End-->
-
-**系统能力：** SystemCapability.MiscServices.Upload
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示移除上传任务成功；返回false表示移除上传任务失败。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -134,245 +90,153 @@ uploadTask.delete().then((result: boolean) => {
 });
 ```
 
-## offComplete
-
 ```TypeScript
-offComplete(callback?: Callback<Array<TaskState>>): void
+uploadTask.delete((err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to delete the upload task. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in deleting the upload task.');
+});
 ```
 
-Called when the current upload session complete.
-
-**起始版本：** 23
-
-<!--Device-UploadTask-offComplete(callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-offComplete(callback?: Callback<Array<TaskState>>): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.Upload
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 否 | The callback function for the upload complete event. |
-
-**示例**
+ArkTS-Dyn示例：
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
 // 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let uploadTask: request.UploadTask;
-let uploadConfig: request.UploadConfig = {
-  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
-  header: { 'Accept': '*/*' },
-  method: "POST",
-  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
-  data: [{ name: "name123", value: "123" }],
-};
-let upCompleteCallback1 = (taskStates: Array<request.TaskState>) => {
-  console.info('Upload delete complete notification.');
-  for (let i = 0; i < taskStates.length; i++) {
-    console.info('taskState:' + JSON.stringify(taskStates[i]));
-  }
-};
-let upCompleteCallback2 = (taskStates: Array<request.TaskState>) => {
-  console.info('Upload delete complete notification.');
-  for (let i = 0; i < taskStates.length; i++) {
-    console.info('taskState:' + JSON.stringify(taskStates[i]));
-  }
-};
 try {
-  request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
-    if (err) {
-      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    uploadTask.onComplete(upCompleteCallback1);
-    uploadTask.onComplete(upCompleteCallback2);
-    // 表示取消headerCallback1的订阅
-    uploadTask.offComplete(upCompleteCallback1);
-    // 表示取消订阅上传任务完成的所有回调
-    uploadTask.offComplete();
-  });
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    data.delete().then((result: boolean) => {
+      console.info('Succeeded in removing the download task.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
 } catch (err) {
-  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 
-## offFail
+ArkTS-Sta示例：
 
 ```TypeScript
-offFail(callback?: Callback<Array<TaskState>>): void
-```
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
 
-Called when the current upload session fail.
-
-**起始版本：** 23
-
-<!--Device-UploadTask-offFail(callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-offFail(callback?: Callback<Array<TaskState>>): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.Upload
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 否 | The callback function for the upload fail change event. |
-
-**示例**
-
-```TypeScript
 // 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let uploadTask: request.UploadTask;
-let uploadConfig: request.UploadConfig = {
-  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
-  header: { 'Accept': '*/*' },
-  method: "POST",
-  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
-  data: [{ name: "name123", value: "123" }],
-};
-let upFailCallback1 = (taskStates: Array<request.TaskState>) => {
-  console.info('Upload delete fail notification.');
-  for (let i = 0; i < taskStates.length; i++) {
-    console.info('taskState:' + JSON.stringify(taskStates[i]));
-  }
-};
-let upFailCallback2 = (taskStates: Array<request.TaskState>) => {
-  console.info('Upload delete fail notification.');
-  for (let i = 0; i < taskStates.length; i++) {
-    console.info('taskState:' + JSON.stringify(taskStates[i]));
-  }
-};
 try {
-  request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
-    if (err) {
-      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    uploadTask.onFail(upFailCallback1);
-    uploadTask.onFail(upFailCallback2);
-    // 表示取消headerCallback1的订阅
-    uploadTask.offFail(upFailCallback1);
-    // 表示取消订阅上传任务失败的所有回调
-    uploadTask.offFail();
-  });
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    data.delete().then((result: boolean) => {
+      console.info('Succeeded in removing the download task.');
+    }).catch((err: Error) => {
+      console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: Error) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
 } catch (err) {
-  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 
-## offHeaderReceive
+ArkTS-Dyn示例：
 
 ```TypeScript
-offHeaderReceive(callback?: UploadHeaderReceiveCallback): void
-```
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
 
-Called when the header of the current upload session has been received.
-
-**起始版本：** 23
-
-<!--Device-UploadTask-offHeaderReceive(callback?: UploadHeaderReceiveCallback): void--><!--Device-UploadTask-offHeaderReceive(callback?: UploadHeaderReceiveCallback): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.Upload
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [UploadHeaderReceiveCallback](arkts-basicservices-request-uploadheaderreceivecallback-t.md) | 否 | The callback function for the HTTP Response Header event. |
-
-**示例**
-
-```TypeScript
 // 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let uploadTask: request.UploadTask;
-let uploadConfig: request.UploadConfig = {
-  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
-  header: { 'Accept': '*/*' },
-  method: "POST",
-  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
-  data: [{ name: "name123", value: "123" }],
-};
-let headerCallback1 = (header: object) => {
-  console.info(`Upload delete headerReceive notification. header: ${JSON.stringify(header)}`);
-};
-let headerCallback2 = (header: object) => {
-  console.info(`Upload delete headerReceive notification. header: ${JSON.stringify(header)}`);
-};
 try {
-  request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
-    if (err) {
-      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    uploadTask.onHeaderReceive(headerCallback1);
-    uploadTask.onHeaderReceive(headerCallback2);
-    // 表示取消headerCallback1的订阅
-    uploadTask.offHeaderReceive(headerCallback1);
-    // 表示取消订阅上传任务HTTP标头事件的所有回调
-    uploadTask.offHeaderReceive();
-  });
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.delete((err: BusinessError, result: boolean) => {
+      if (err) {
+        console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('Succeeded in removing the download task.');
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
 } catch (err) {
-  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 
-## offProgress
+ArkTS-Sta示例：
 
 ```TypeScript
-offProgress(callback?: UploadProgressCallback): void
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.delete((err: BusinessError | null, result: boolean | undefined) => {
+      if (err) {
+        console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('Succeeded in removing the download task.');
+    });
+  }).catch((err: Error) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
 ```
 
-Called when the current upload session is in process.
+## delete
+
+```TypeScript
+delete(): Promise<boolean>
+```
+
+移除上传的任务，使用Promise异步回调。
+
+> **说明：**
+> 
+> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
 **起始版本：** 23
 
-<!--Device-UploadTask-offProgress(callback?: UploadProgressCallback): void--><!--Device-UploadTask-offProgress(callback?: UploadProgressCallback): void-End-->
+**需要权限：** ohos.permission.INTERNET
+
+<!--Device-UploadTask-delete(): Promise<boolean>--><!--Device-UploadTask-delete(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
-**参数：**
+**返回值：**
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [UploadProgressCallback](arkts-basicservices-request-uploadprogresscallback-t.md) | 否 | The callback function for the upload progress event. |
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示移除上传任务成功；返回false表示移除上传任务失败。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 **示例**
 
-```TypeScript
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let uploadTask: request.UploadTask;
-let uploadConfig: request.UploadConfig = {
-  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
-  header: { 'Accept': '*/*' },
-  method: "POST",
-  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
-  data: [{ name: "name123", value: "123" }],
-};
-let upProgressCallback1 = (uploadedSize: long, totalSize: long) => {
-  console.info('Upload delete progress notification.' + 'totalSize:' + totalSize + 'uploadedSize:' + uploadedSize);
-};
-let upProgressCallback2 = (uploadedSize: long, totalSize: long) => {
-  console.info('Upload delete progress notification.' + 'totalSize:' + totalSize + 'uploadedSize:' + uploadedSize);
-};
-try {
-  request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
-    if (err) {
-      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    uploadTask.onProgress(upProgressCallback1);
-    uploadTask.onProgress(upProgressCallback2);
-    // 表示取消upProgressCallback1的订阅
-    uploadTask.offProgress(upProgressCallback1);
-    // 表示取消订阅上传任务进度事件的所有回调
-    uploadTask.offProgress();
-  });
-} catch (err) {
-  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [delete](#delete)
 
 ## off('complete' | 'fail')
 
@@ -562,17 +426,17 @@ uploadTask.off('progress', upProgressCallback1);
 uploadTask.off('progress');
 ```
 
-## onComplete
+## offComplete
 
 ```TypeScript
-onComplete(callback: Callback<Array<TaskState>>): void
+offComplete(callback?: Callback<Array<TaskState>>): void
 ```
 
 Called when the current upload session complete.
 
 **起始版本：** 23
 
-<!--Device-UploadTask-onComplete(callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-onComplete(callback: Callback<Array<TaskState>>): void-End-->
+<!--Device-UploadTask-offComplete(callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-offComplete(callback?: Callback<Array<TaskState>>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
@@ -580,7 +444,7 @@ Called when the current upload session complete.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 是 | The callback function for the upload complete event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 否 | The callback function for the upload complete event. |
 
 **示例**
 
@@ -595,9 +459,16 @@ let uploadConfig: request.UploadConfig = {
   files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
   data: [{ name: "name123", value: "123" }],
 };
-let upCompleteCallback = (taskStates: Array<request.TaskState>) => {
+let upCompleteCallback1 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete complete notification.');
   for (let i = 0; i < taskStates.length; i++) {
-    console.info("upOnComplete taskState:" + JSON.stringify(taskStates[i]));
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
+  }
+};
+let upCompleteCallback2 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete complete notification.');
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
   }
 };
 try {
@@ -606,24 +477,85 @@ try {
       console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
       return;
     }
-    uploadTask.onComplete(upCompleteCallback);
+    uploadTask.onComplete(upCompleteCallback1);
+    uploadTask.onComplete(upCompleteCallback2);
+    // 表示取消headerCallback1的订阅
+    uploadTask.offComplete(upCompleteCallback1);
+    // 表示取消订阅上传任务完成的所有回调
+    uploadTask.offComplete();
   });
 } catch (err) {
   console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 
-## onFail
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let completeCallback1 = () => {
+      console.info('Download delete complete notification.');
+    };
+    let completeCallback2 = () => {
+      console.info('Download delete complete notification.');
+    };
+    downloadTask.onComplete(completeCallback1);
+    downloadTask.onComplete(completeCallback2);
+    // 表示取消completeCallback1的订阅
+    downloadTask.offComplete(completeCallback1);
+    // 表示取消订阅下载任务完成的所有回调
+    downloadTask.offComplete();
+
+    let pauseCallback1 = () => {
+      console.info('Download delete pause notification.');
+    };
+    let pauseCallback2 = () => {
+      console.info('Download delete pause notification.');
+    };
+    downloadTask.onPause(pauseCallback1);
+    downloadTask.onPause(pauseCallback2);
+    // 表示取消pauseCallback1的订阅
+    downloadTask.offPause(pauseCallback1);
+    // 表示取消订阅下载任务暂停的所有回调
+    downloadTask.offPause();
+
+    let removeCallback1 = () => {
+      console.info('Download delete remove notification.');
+    };
+    let removeCallback2 = () => {
+      console.info('Download delete remove notification.');
+    };
+    downloadTask.onRemove(removeCallback1);
+    downloadTask.onRemove(removeCallback2);
+    // 表示取消removeCallback1的订阅
+    downloadTask.offRemove(removeCallback1);
+    // 表示取消订阅下载任务移除的所有回调
+    downloadTask.offRemove();
+  }).catch((err: Error) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## offFail
 
 ```TypeScript
-onFail(callback: Callback<Array<TaskState>>): void
+offFail(callback?: Callback<Array<TaskState>>): void
 ```
 
 Called when the current upload session fail.
 
 **起始版本：** 23
 
-<!--Device-UploadTask-onFail(callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-onFail(callback: Callback<Array<TaskState>>): void-End-->
+<!--Device-UploadTask-offFail(callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-offFail(callback?: Callback<Array<TaskState>>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
@@ -631,7 +563,7 @@ Called when the current upload session fail.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 是 | The callback function for the upload fail event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 否 | The callback function for the upload fail change event. |
 
 **示例**
 
@@ -646,9 +578,16 @@ let uploadConfig: request.UploadConfig = {
   files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
   data: [{ name: "name123", value: "123" }],
 };
-let upFailCallback = (taskStates: Array<request.TaskState>) => {
+let upFailCallback1 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete fail notification.');
   for (let i = 0; i < taskStates.length; i++) {
-    console.info("upOnFail taskState:" + JSON.stringify(taskStates[i]));
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
+  }
+};
+let upFailCallback2 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete fail notification.');
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
   }
 };
 try {
@@ -657,24 +596,59 @@ try {
       console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
       return;
     }
-    uploadTask.onFail(upFailCallback);
+    uploadTask.onFail(upFailCallback1);
+    uploadTask.onFail(upFailCallback2);
+    // 表示取消headerCallback1的订阅
+    uploadTask.offFail(upFailCallback1);
+    // 表示取消订阅上传任务失败的所有回调
+    uploadTask.offFail();
   });
 } catch (err) {
   console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 
-## onHeaderReceive
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let failCallback1 = (err: int) => {
+      console.error(`Failed to download the task. Code: ${err}`);
+    };
+    let failCallback2 = (err: int) => {
+      console.error(`Failed to download the task. Code: ${err}`);
+    };
+    downloadTask.onFail(failCallback1);
+    downloadTask.onFail(failCallback2);
+    // 表示取消failCallback1的订阅
+    downloadTask.offFail(failCallback1);
+    // 表示取消订阅下载任务失败的所有回调
+    downloadTask.offFail();
+  }).catch((err: Error) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## offHeaderReceive
 
 ```TypeScript
-onHeaderReceive(callback: UploadHeaderReceiveCallback): void
+offHeaderReceive(callback?: UploadHeaderReceiveCallback): void
 ```
 
 Called when the header of the current upload session has been received.
 
 **起始版本：** 23
 
-<!--Device-UploadTask-onHeaderReceive(callback: UploadHeaderReceiveCallback): void--><!--Device-UploadTask-onHeaderReceive(callback: UploadHeaderReceiveCallback): void-End-->
+<!--Device-UploadTask-offHeaderReceive(callback?: UploadHeaderReceiveCallback): void--><!--Device-UploadTask-offHeaderReceive(callback?: UploadHeaderReceiveCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
@@ -682,7 +656,7 @@ Called when the header of the current upload session has been received.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [UploadHeaderReceiveCallback](arkts-basicservices-request-uploadheaderreceivecallback-t.md) | 是 | The callback function for the HTTP Response Header event. |
+| callback | [UploadHeaderReceiveCallback](arkts-basicservices-request-uploadheaderreceivecallback-t.md) | 否 | The callback function for the HTTP Response Header event. |
 
 **示例**
 
@@ -697,8 +671,11 @@ let uploadConfig: request.UploadConfig = {
   files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
   data: [{ name: "name123", value: "123" }],
 };
-let headerCallback = (headers: object) => {
-  console.info("upOnHeader headers:" + JSON.stringify(headers));
+let headerCallback1 = (header: object) => {
+  console.info(`Upload delete headerReceive notification. header: ${JSON.stringify(header)}`);
+};
+let headerCallback2 = (header: object) => {
+  console.info(`Upload delete headerReceive notification. header: ${JSON.stringify(header)}`);
 };
 try {
   request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
@@ -706,24 +683,29 @@ try {
       console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
       return;
     }
-    uploadTask.onHeaderReceive(headerCallback);
+    uploadTask.onHeaderReceive(headerCallback1);
+    uploadTask.onHeaderReceive(headerCallback2);
+    // 表示取消headerCallback1的订阅
+    uploadTask.offHeaderReceive(headerCallback1);
+    // 表示取消订阅上传任务HTTP标头事件的所有回调
+    uploadTask.offHeaderReceive();
   });
 } catch (err) {
   console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 
-## onProgress
+## offProgress
 
 ```TypeScript
-onProgress(callback: UploadProgressCallback): void
+offProgress(callback?: UploadProgressCallback): void
 ```
 
 Called when the current upload session is in process.
 
 **起始版本：** 23
 
-<!--Device-UploadTask-onProgress(callback: UploadProgressCallback): void--><!--Device-UploadTask-onProgress(callback: UploadProgressCallback): void-End-->
+<!--Device-UploadTask-offProgress(callback?: UploadProgressCallback): void--><!--Device-UploadTask-offProgress(callback?: UploadProgressCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
@@ -731,7 +713,7 @@ Called when the current upload session is in process.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [UploadProgressCallback](arkts-basicservices-request-uploadprogresscallback-t.md) | 是 | The callback function for the upload progress event. |
+| callback | [UploadProgressCallback](arkts-basicservices-request-uploadprogresscallback-t.md) | 否 | The callback function for the upload progress event. |
 
 **示例**
 
@@ -746,8 +728,11 @@ let uploadConfig: request.UploadConfig = {
   files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
   data: [{ name: "name123", value: "123" }],
 };
-let upProgressCallback = (uploadedSize: long, totalSize: long) => {
-  console.info("upload totalSize:" + totalSize + "  uploadedSize:" + uploadedSize);
+let upProgressCallback1 = (uploadedSize: long, totalSize: long) => {
+  console.info('Upload delete progress notification.' + 'totalSize:' + totalSize + 'uploadedSize:' + uploadedSize);
+};
+let upProgressCallback2 = (uploadedSize: long, totalSize: long) => {
+  console.info('Upload delete progress notification.' + 'totalSize:' + totalSize + 'uploadedSize:' + uploadedSize);
 };
 try {
   request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
@@ -755,11 +740,101 @@ try {
       console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
       return;
     }
-    uploadTask.onProgress(upProgressCallback);
+    uploadTask.onProgress(upProgressCallback1);
+    uploadTask.onProgress(upProgressCallback2);
+    // 表示取消upProgressCallback1的订阅
+    uploadTask.offProgress(upProgressCallback1);
+    // 表示取消订阅上传任务进度事件的所有回调
+    uploadTask.offProgress();
   });
 } catch (err) {
   console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
 }
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let progressCallback1 = (receivedSize: long, totalSize: long) => {
+      console.info('Download delete progress notification.' + 'receivedSize:' + receivedSize + 'totalSize:' + totalSize);
+    };
+    let progressCallback2 = (receivedSize: long, totalSize: long) => {
+      console.info('Download delete progress notification.' + 'receivedSize:' + receivedSize + 'totalSize:' + totalSize);
+    };
+    downloadTask.onProgress(progressCallback1);
+    downloadTask.onProgress(progressCallback2);
+    // 表示取消progressCallback1的订阅
+    downloadTask.offProgress(progressCallback1);
+    // 表示取消订阅下载任务进度事件的所有回调
+    downloadTask.offProgress();
+  }).catch((err: Error) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let attachments: Array<request.agent.FormItem> = [{
+  name: "taskOffTest",
+  value: {
+    filename: "taskOffTest.avi",
+    path: "./taskOffTest.avi",
+  }
+}];
+let config: request.agent.Config = {
+  action: request.agent.Action.UPLOAD,
+  url: 'http://127.0.0.1', // 需要手动将url替换为真实服务器的HTTP协议地址
+  title: 'taskOffTest',
+  description: 'Sample code for event listening',
+  mode: request.agent.Mode.FOREGROUND,
+  overwrite: false,
+  method: "PUT",
+  data: attachments,
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+let createOffCallback1 = (progress: request.agent.Progress) => {
+  console.info('upload task progress.');
+};
+let createOffCallback2 = (progress: request.agent.Progress) => {
+  console.info('upload task progress.');
+};
+request.agent.create(context, config).then((task: request.agent.Task) => {
+  task.onProgress(createOffCallback1);
+  task.onProgress(createOffCallback2);
+  // 表示取消createOffCallback1的订阅
+  task.offProgress(createOffCallback1);
+  // 表示取消订阅任务进度的所有回调
+  task.offProgress();
+  console.info(`Succeeded in creating a upload task. result: ${task.tid}`);
+  task.start();
+}).catch((err: Error) => {
+  console.error(`Failed to create a upload task, Code: ${err.code}, message: ${err.message}`);
+});
 ```
 
 ## on('complete' | 'fail')
@@ -914,6 +989,329 @@ let upProgressCallback = (uploadedSize: number, totalSize: number) => {
 uploadTask.on('progress', upProgressCallback);
 ```
 
+## onComplete
+
+```TypeScript
+onComplete(callback: Callback<Array<TaskState>>): void
+```
+
+Called when the current upload session complete.
+
+**起始版本：** 23
+
+<!--Device-UploadTask-onComplete(callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-onComplete(callback: Callback<Array<TaskState>>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Upload
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 是 | The callback function for the upload complete event. |
+
+**示例**
+
+```TypeScript
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
+  data: [{ name: "name123", value: "123" }],
+};
+let upCompleteCallback = (taskStates: Array<request.TaskState>) => {
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info("upOnComplete taskState:" + JSON.stringify(taskStates[i]));
+  }
+};
+try {
+  request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
+    if (err) {
+      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    uploadTask.onComplete(upCompleteCallback);
+  });
+} catch (err) {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let completeCallback = () => {
+      console.info('Download task completed.');
+    };
+    downloadTask.onComplete(completeCallback);
+
+    let pauseCallback = () => {
+      console.info('Download task pause.');
+    };
+    downloadTask.onPause(pauseCallback);
+
+    let removeCallback = () => {
+      console.info('Download task remove.');
+    };
+    downloadTask.onRemove(removeCallback);
+  }).catch((err: Error) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## onFail
+
+```TypeScript
+onFail(callback: Callback<Array<TaskState>>): void
+```
+
+Called when the current upload session fail.
+
+**起始版本：** 23
+
+<!--Device-UploadTask-onFail(callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-onFail(callback: Callback<Array<TaskState>>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Upload
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 是 | The callback function for the upload fail event. |
+
+**示例**
+
+```TypeScript
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
+  data: [{ name: "name123", value: "123" }],
+};
+let upFailCallback = (taskStates: Array<request.TaskState>) => {
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info("upOnFail taskState:" + JSON.stringify(taskStates[i]));
+  }
+};
+try {
+  request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
+    if (err) {
+      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    uploadTask.onFail(upFailCallback);
+  });
+} catch (err) {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let failCallback = (err: int) => {
+      console.error(`Failed to download the task. Code: ${err}`);
+    };
+    downloadTask.onFail(failCallback);
+  }).catch((err: Error) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## onHeaderReceive
+
+```TypeScript
+onHeaderReceive(callback: UploadHeaderReceiveCallback): void
+```
+
+Called when the header of the current upload session has been received.
+
+**起始版本：** 23
+
+<!--Device-UploadTask-onHeaderReceive(callback: UploadHeaderReceiveCallback): void--><!--Device-UploadTask-onHeaderReceive(callback: UploadHeaderReceiveCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Upload
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [UploadHeaderReceiveCallback](arkts-basicservices-request-uploadheaderreceivecallback-t.md) | 是 | The callback function for the HTTP Response Header event. |
+
+**示例**
+
+```TypeScript
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
+  data: [{ name: "name123", value: "123" }],
+};
+let headerCallback = (headers: object) => {
+  console.info("upOnHeader headers:" + JSON.stringify(headers));
+};
+try {
+  request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
+    if (err) {
+      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    uploadTask.onHeaderReceive(headerCallback);
+  });
+} catch (err) {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## onProgress
+
+```TypeScript
+onProgress(callback: UploadProgressCallback): void
+```
+
+Called when the current upload session is in process.
+
+**起始版本：** 23
+
+<!--Device-UploadTask-onProgress(callback: UploadProgressCallback): void--><!--Device-UploadTask-onProgress(callback: UploadProgressCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Upload
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [UploadProgressCallback](arkts-basicservices-request-uploadprogresscallback-t.md) | 是 | The callback function for the upload progress event. |
+
+**示例**
+
+```TypeScript
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
+  data: [{ name: "name123", value: "123" }],
+};
+let upProgressCallback = (uploadedSize: long, totalSize: long) => {
+  console.info("upload totalSize:" + totalSize + "  uploadedSize:" + uploadedSize);
+};
+try {
+  request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
+    if (err) {
+      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    uploadTask.onProgress(upProgressCallback);
+  });
+} catch (err) {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let progressCallback = (receivedSize: long, totalSize: long) => {
+      console.info("download receivedSize:" + receivedSize + " totalSize:" + totalSize);
+    };
+    downloadTask.onProgress(progressCallback);
+  }).catch((err: Error) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let attachments: Array<request.agent.FormItem> = [{
+  name: "taskOnTest",
+  value: {
+    filename: "taskOnTest.avi",
+    path: "./taskOnTest.avi",
+  }
+}];
+let config: request.agent.Config = {
+  action: request.agent.Action.UPLOAD,
+  url: 'http://127.0.0.1', // 需要手动将url替换为真实服务器的HTTP协议地址
+  title: 'taskOnTest',
+  description: 'Sample code for event listening',
+  mode: request.agent.Mode.FOREGROUND,
+  overwrite: false,
+  method: "PUT",
+  data: attachments,
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+let createOnCallback = (progress: request.agent.Progress) => {
+  console.info('upload task progress.');
+};
+request.agent.create(context, config).then((task: request.agent.Task) => {
+  task.onProgress(createOnCallback);
+  console.info(`Succeeded in creating a upload task. result: ${task.tid}`);
+  task.start();
+}).catch((err: Error) => {
+  console.error(`Failed to create a upload task, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## remove
 
 ```TypeScript
@@ -954,6 +1352,14 @@ remove(callback: AsyncCallback<boolean>): void
 **示例**
 
 ```TypeScript
+uploadTask.remove().then((result: boolean) => {
+  console.info('Succeeded in removing the upload task.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to remove the upload task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
 uploadTask.remove((err: BusinessError, result: boolean) => {
   if (err) {
     console.error(`Failed to remove the upload task. Code: ${err.code}, message: ${err.message}`);
@@ -962,6 +1368,50 @@ uploadTask.remove((err: BusinessError, result: boolean) => {
   if (result) {
     console.info('Succeeded in removing the upload task.');
   }
+});
+```
+
+```TypeScript
+downloadTask.remove().then((result) => {
+  console.info('Succeeded in removing the download task.');
+}).catch ((err: BusinessError) => {
+  console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+downloadTask.remove((err, result)=>{
+  if(err) {
+    console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in removing the download task.');
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+request.agent.remove("123456", (err: BusinessError<void> | null) => {
+  if (err) {
+    console.error(`Failed to remove a download task, Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in removing a download task.`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+request.agent.remove("123456").then(() => {
+  console.info(`Succeeded in removing a download task. `);
+}).catch((err: Error) => {
+  console.error(`Failed to remove a download task, Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -1003,11 +1453,5 @@ remove(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-uploadTask.remove().then((result: boolean) => {
-  console.info('Succeeded in removing the upload task.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove the upload task. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [remove](#remove)
 

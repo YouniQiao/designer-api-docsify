@@ -317,7 +317,7 @@ levelOrder?: LevelOrder
 levelUniqueId?: int
 ```
 
-设置页面级对话框需要显示的层级下的节点UniqueID，该ID可以通过[getUniqueId](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getuniqueid)获取。
+设置页面级对话框需要显示的层级下的节点UniqueID，该ID可以通过[getUniqueId](arkts-framenode-c.md#getuniqueid)获取。
 
 取值范围：大于等于0的数字。
 

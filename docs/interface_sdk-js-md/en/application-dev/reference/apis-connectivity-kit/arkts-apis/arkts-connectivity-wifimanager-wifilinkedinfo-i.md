@@ -115,22 +115,6 @@ The IP address of this Wi-Fi connection.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
-## isHiLinkNetwork
-
-```TypeScript
-isHiLinkNetwork: boolean
-```
-
-Whether the Wi-Fi hotspot is HiLink network.
-
-**Type:** boolean
-
-**Since:** 23
-
-<!--Device-WifiLinkedInfo-isHiLinkNetwork: boolean--><!--Device-WifiLinkedInfo-isHiLinkNetwork: boolean-End-->
-
-**System capability:** SystemCapability.Communication.WiFi.STA
-
 ## isHidden
 
 ```TypeScript
@@ -144,6 +128,22 @@ Whether the SSID of the access point (AP) of this Wi-Fi connection is hidden.
 **Since:** 23
 
 <!--Device-WifiLinkedInfo-isHidden: boolean--><!--Device-WifiLinkedInfo-isHidden: boolean-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.STA
+
+## isHiLinkNetwork
+
+```TypeScript
+isHiLinkNetwork: boolean
+```
+
+Whether the Wi-Fi hotspot is HiLink network.
+
+**Type:** boolean
+
+**Since:** 23
+
+<!--Device-WifiLinkedInfo-isHiLinkNetwork: boolean--><!--Device-WifiLinkedInfo-isHiLinkNetwork: boolean-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 

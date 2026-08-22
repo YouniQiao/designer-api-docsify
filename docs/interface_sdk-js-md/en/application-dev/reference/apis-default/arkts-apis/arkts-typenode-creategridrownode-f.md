@@ -22,7 +22,7 @@ Create a FrameNode of GridRow type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode. |
+| context | [UIContext](arkts-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode. |
 
 **Return value:**
 

@@ -48,3 +48,45 @@ function deactivateSceneAnimation(formId: string): Promise<void>
 | [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
 | [16501011](../errorcode-form.md#16501011-卡片不支持调用当前接口) | The form cannot support this operation. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formProvider } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288';
+
+try {
+  formProvider.deactivateSceneAnimation(formId).then(() => {
+    console.info('deactivateSceneAnimation succeed.');
+  }).catch((error: BusinessError) => {
+    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { formProvider } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288';
+
+try {
+  formProvider.deactivateSceneAnimation(formId).then(() => {
+    console.info('deactivateSceneAnimation succeed.');
+  }).catch((error) => {
+    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+

@@ -26,7 +26,7 @@ Creates an **AnimatorResult** object for animations.
 > 
 > - Since API version 10, you can use the
 > [createAnimator](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#createanimator) API in
-> [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md), which ensures that the object is created in the intended UI instance.
+> [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md), which ensures that the object is created in the intended UI instance.
 
 **Since:** 9
 
@@ -78,6 +78,14 @@ let options: AnimatorOptions = {
 animator.create(options); // You are advised to use UIContext.createAnimator().
 ```
 
+For precise UI context management, use the createAnimator API in [UIContext](arkts-apis-uicontext-uicontext.md) to specify the execution context.
+
+```TypeScript
+import { Animator as animator, SimpleAnimatorOptions } from '@kit.ArkUI';
+let options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).duration(2000);
+animator.create(options);// You are advised to use UIContext.createAnimator().
+```
+
 ## create
 
 ```TypeScript
@@ -116,13 +124,7 @@ Creates an **AnimatorResult** object for animations. Compared with [create](../.
 
 **Examples**
 
-For precise UI context management, use the createAnimator API in [UIContext](arkts-apis-uicontext-uicontext.md) to specify the execution context.
-
-```TypeScript
-import { Animator as animator, SimpleAnimatorOptions } from '@kit.ArkUI';
-let options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).duration(2000);
-animator.create(options);// You are advised to use UIContext.createAnimator().
-```
+See [create](#create)
 
 ## createAnimator
 

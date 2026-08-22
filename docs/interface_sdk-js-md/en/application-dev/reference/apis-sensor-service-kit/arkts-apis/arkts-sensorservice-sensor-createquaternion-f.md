@@ -29,7 +29,7 @@ Converts a rotation vector into a quaternion. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | rotationVector | Array&lt;number&gt; | Yes | Rotation vector to convert. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the quaternion. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the quaternion. |
 
 **Examples**
 
@@ -46,6 +46,21 @@ sensor.createQuaternion([0.20046076, 0.21907, 0.73978853, 0.60376877],
   for (let i = 0; i < data.length; i++) {
     console.info("Succeeded in getting data[" + i + "]: " + data[i]);
   }
+})
+```
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const promise = sensor.createQuaternion([0.20046076, 0.21907, 0.73978853, 0.60376877]);
+promise.then((data: Array<number>) => {
+  console.info('Succeeded in getting createQuaternion_promise');
+  for (let i = 0; i < data.length; i++) {
+    console.info("data[" + i + "]: " + data[i]);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get promise.`);
 })
 ```
 
@@ -82,18 +97,5 @@ Converts a rotation vector into a quaternion. This API uses a promise to return 
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const promise = sensor.createQuaternion([0.20046076, 0.21907, 0.73978853, 0.60376877]);
-promise.then((data: Array<number>) => {
-  console.info('Succeeded in getting createQuaternion_promise');
-  for (let i = 0; i < data.length; i++) {
-    console.info("data[" + i + "]: " + data[i]);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get promise.`);
-})
-```
+See [createQuaternion](#createquaternion)
 

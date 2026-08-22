@@ -26,7 +26,7 @@ The primary card is the SIM card inserted in the card slot that uses data servic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Indicates the callback for getting the index number of the primary card slot. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Indicates the callback for getting the index number of the primary card slot. |
 
 **Error codes:**
 
@@ -49,6 +49,16 @@ radio.getPrimarySlotId((err: BusinessError, data: number) => {
         return;
     }
     console.info(`getPrimarySlotId success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+radio.getPrimarySlotId().then((data: number) => {
+    console.info(`getPrimarySlotId success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getPrimarySlotId failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -85,13 +95,5 @@ The primary card is the SIM card inserted in the card slot that uses data servic
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.getPrimarySlotId().then((data: number) => {
-    console.info(`getPrimarySlotId success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getPrimarySlotId failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getPrimarySlotId](#getprimaryslotid)
 

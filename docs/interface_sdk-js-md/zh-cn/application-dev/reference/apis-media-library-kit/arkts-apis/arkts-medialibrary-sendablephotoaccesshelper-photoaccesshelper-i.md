@@ -82,6 +82,41 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 }
 ```
 
+phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-file-sendablephotoaccesshelper.md)的示例使用。
+
+```TypeScript
+async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
+  console.info('createAssetDemo');
+  try {
+    let testFileName: string = 'testFile' + Date.now() + '.jpg';
+    let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName);
+    console.info('createAsset file displayName' + photoAsset.displayName);
+    console.info('createAsset successfully');
+  } catch (err) {
+    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-file-sendablephotoaccesshelper.md)的示例使用。
+
+```TypeScript
+async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
+  console.info('createAssetDemo');
+  try {
+    let testFileName:string = 'testFile' + Date.now() + '.jpg';
+    let createOption: photoAccessHelper.PhotoCreateOptions = {
+      subtype: photoAccessHelper.PhotoSubtype.DEFAULT
+    }
+    let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName, createOption);
+    console.info('createAsset file displayName' + photoAsset.displayName);
+    console.info('createAsset successfully');
+  } catch (err) {
+    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
 ## getAlbums
 
 ```TypeScript
@@ -121,6 +156,36 @@ getAlbums(options: photoAccessHelper.FetchOptions): Promise<FetchResult<Album>>
 | 14000011 | Internal system error |
 
 **示例**
+
+phAccessHelper的创建请参考sendablePhotoAccessHelper.getPhotoAccessHelper的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
+
+async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
+  // 示例代码中为获取相册名为newAlbumName的相册。
+  console.info('getAlbumsDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  predicates.equalTo('album_name', 'newAlbumName');
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  phAccessHelper.getAlbums(sendablePhotoAccessHelper.AlbumType.USER, sendablePhotoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions).then( async (fetchResult) => {
+    if (fetchResult === undefined) {
+      console.error('getAlbumsPromise fetchResult is undefined');
+      return;
+    }
+    let album: sendablePhotoAccessHelper.Album = await fetchResult.getFirstObject();
+    console.info('getAlbumsPromise successfully, albumName: ' + album.albumName);
+    fetchResult.close();
+  }).catch((err: BusinessError) => {
+    console.error(`getAlbumsPromise failed with err: ${err.code}, ${err.message}`);
+  });
+}
+```
 
 phAccessHelper的创建请参考sendablePhotoAccessHelper.getPhotoAccessHelper的示例使用。
 
@@ -198,35 +263,7 @@ getAlbums(
 
 **示例**
 
-phAccessHelper的创建请参考sendablePhotoAccessHelper.getPhotoAccessHelper的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  // 示例代码中为获取相册名为newAlbumName的相册。
-  console.info('getAlbumsDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  predicates.equalTo('album_name', 'newAlbumName');
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  phAccessHelper.getAlbums(sendablePhotoAccessHelper.AlbumType.USER, sendablePhotoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions).then( async (fetchResult) => {
-    if (fetchResult === undefined) {
-      console.error('getAlbumsPromise fetchResult is undefined');
-      return;
-    }
-    let album: sendablePhotoAccessHelper.Album = await fetchResult.getFirstObject();
-    console.info('getAlbumsPromise successfully, albumName: ' + album.albumName);
-    fetchResult.close();
-  }).catch((err: BusinessError) => {
-    console.error(`getAlbumsPromise failed with err: ${err.code}, ${err.message}`);
-  });
-}
-```
+参见 [getAlbums](#getalbums)
 
 ## getAssets
 
@@ -291,6 +328,34 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
   } catch (err) {
     console.error(`getAssets failed, error: ${err.code}, ${err.message}`);
   }
+}
+```
+
+phAccessHelper的创建请参考sendablePhotoAccessHelper.getPhotoAccessHelper的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
+
+async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
+  console.info('albumGetAssetsDemoPromise');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let albumFetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let albumList: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.Album> = await phAccessHelper.getAlbums(sendablePhotoAccessHelper.AlbumType.USER, sendablePhotoAccessHelper.AlbumSubtype.USER_GENERIC, albumFetchOptions);
+  let album: sendablePhotoAccessHelper.Album = await albumList.getFirstObject();
+  album.getAssets(fetchOption).then((albumFetchResult) => {
+    console.info('album getAssets successfully, getCount: ' + albumFetchResult.getCount());
+  }).catch((err: BusinessError) => {
+    console.error(`album getAssets failed with error: ${err.code}, ${err.message}`);
+  });
 }
 ```
 

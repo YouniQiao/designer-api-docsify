@@ -23,7 +23,7 @@ context: UIAbilityContext | UIContext
 
 触发页面切换的Navigation对应的上下文信息。
 
-**类型：** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkuiuicontext-uicontext-c.md)
+**类型：** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)
 
 **起始版本：** 23
 

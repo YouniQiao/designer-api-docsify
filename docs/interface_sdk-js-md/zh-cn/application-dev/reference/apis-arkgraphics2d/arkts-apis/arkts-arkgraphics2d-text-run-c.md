@@ -89,6 +89,10 @@ getAdvances(range: Range): Array<common2D.Point> | undefined
 | --- | --- |
 | Array&lt;common2D.Point&gt; \| undefined | 返回该排版单元中每个字形相对于水平方向的字形宽度数组。其中， [common2D.Point]{ |
 
+**示例**
+
+参见 [getAdvances](#getadvances)
+
 ## getFont
 
 ```TypeScript
@@ -142,6 +146,10 @@ getGlyphCount(): int
 **示例**
 
 ```TypeScript
+let glyphCount = lines[0].getGlyphCount();
+```
+
+```TypeScript
 let glyphs = runs[0].getGlyphCount();
 ```
 
@@ -172,36 +180,6 @@ getGlyphs(): Array<int>
 ```TypeScript
 let glyph = runs[0].getGlyphs();
 ```
-
-## getGlyphs
-
-```TypeScript
-getGlyphs(range: Range): Array<int>
-```
-
-获取该排版单元指定范围内每个字符的字形序号。
-
-**起始版本：** 18
-
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Run-getGlyphs(range: Range): Array<int>--><!--Device-Run-getGlyphs(range: Range): Array<int>-End-->
-
-**系统能力：** SystemCapability.Graphics.Drawing
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| range | Range | 是 | 要获取的字形序号范围，range.start表示范围开始的位置，range.end表示范围的长度，当range.end为0时表示从range.start开始获取到渲染块结束。当 range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;int&gt; | 该排版单元中每个字符对应的字形序号。 |
-
-**示例**
 
 ArkTS-Dyn示例：
 
@@ -276,6 +254,38 @@ struct Index {
 ## getGlyphs
 
 ```TypeScript
+getGlyphs(range: Range): Array<int>
+```
+
+获取该排版单元指定范围内每个字符的字形序号。
+
+**起始版本：** 18
+
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Run-getGlyphs(range: Range): Array<int>--><!--Device-Run-getGlyphs(range: Range): Array<int>-End-->
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| range | Range | 是 | 要获取的字形序号范围，range.start表示范围开始的位置，range.end表示范围的长度，当range.end为0时表示从range.start开始获取到渲染块结束。当 range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;int&gt; | 该排版单元中每个字符对应的字形序号。 |
+
+**示例**
+
+参见 [getGlyphs](#getglyphs)
+
+## getGlyphs
+
+```TypeScript
 getGlyphs(range: Range): Array<int> | undefined
 ```
 
@@ -298,6 +308,10 @@ getGlyphs(range: Range): Array<int> | undefined
 | 类型 | 说明 |
 | --- | --- |
 | Array&lt;int&gt; \| undefined | 该排版单元中每个字符对应的字形序号。 |
+
+**示例**
+
+参见 [getGlyphs](#getglyphs)
 
 ## getImageBounds
 
@@ -332,6 +346,10 @@ getImageBounds(): common2D.Rect
 | common2D.Rect | 该排版单元的图像边界，单位为物理像素px。 |
 
 **示例**
+
+```TypeScript
+let imageBounds = lines[0].getImageBounds();
+```
 
 ```TypeScript
 let bounds = runs[0].getImageBounds();
@@ -392,36 +410,6 @@ getPositions(): Array<common2D.Point>
 ```TypeScript
 let positions = runs[0].getPositions();
 ```
-
-## getPositions
-
-```TypeScript
-getPositions(range: Range): Array<common2D.Point>
-```
-
-获取该排版单元指定范围内每个字形相对于每行的字形位置数组。
-
-**起始版本：** 18
-
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Run-getPositions(range: Range): Array<common2D.Point>--><!--Device-Run-getPositions(range: Range): Array<common2D.Point>-End-->
-
-**系统能力：** SystemCapability.Graphics.Drawing
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| range | Range | 是 | 要获取的字形位置范围，range.start表示范围开始的位置，range.end表示范围的长度，如果长度是0表示从范围range.start开始获取到渲染块结束。当 range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;common2D.Point&gt; | 该排版单元中每个字形相对于每行的字形位置。 |
-
-**示例**
 
 ArkTS-Dyn示例：
 
@@ -497,6 +485,38 @@ struct Index {
 ## getPositions
 
 ```TypeScript
+getPositions(range: Range): Array<common2D.Point>
+```
+
+获取该排版单元指定范围内每个字形相对于每行的字形位置数组。
+
+**起始版本：** 18
+
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Run-getPositions(range: Range): Array<common2D.Point>--><!--Device-Run-getPositions(range: Range): Array<common2D.Point>-End-->
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| range | Range | 是 | 要获取的字形位置范围，range.start表示范围开始的位置，range.end表示范围的长度，如果长度是0表示从范围range.start开始获取到渲染块结束。当 range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;common2D.Point&gt; | 该排版单元中每个字形相对于每行的字形位置。 |
+
+**示例**
+
+参见 [getPositions](#getpositions)
+
+## getPositions
+
+```TypeScript
 getPositions(range: Range): Array<common2D.Point> | undefined
 ```
 
@@ -519,6 +539,10 @@ getPositions(range: Range): Array<common2D.Point> | undefined
 | 类型 | 说明 |
 | --- | --- |
 | Array&lt;common2D.Point&gt; \| undefined | 该排版单元中每个字形相对于每行的字形位置。 |
+
+**示例**
+
+参见 [getPositions](#getpositions)
 
 ## getStringIndices
 
@@ -646,6 +670,10 @@ getStringIndices(range?: Range): Array<int> | undefined
 | 类型 | 说明 |
 | --- | --- |
 | Array&lt;int&gt; \| undefined | 返回每个字符的索引。 |
+
+**示例**
+
+参见 [getStringIndices](#getstringindices)
 
 ## getStringRange
 
@@ -877,6 +905,11 @@ getTypographicBounds(): TypographicBounds
 **示例**
 
 ```TypeScript
+let bounds = lines[0].getTypographicBounds();
+console.info('textLine ascent:' + bounds.ascent + ', descent:' + bounds.descent + ', leading:' + bounds.leading + ', width:' + bounds.width);
+```
+
+```TypeScript
 let typographicBounds = runs[0].getTypographicBounds();
 ```
 
@@ -905,6 +938,98 @@ paint(canvas: drawing.Canvas, x: double, y: double): void
 | y | double | 是 | 绘制的左上角位置的纵坐标，浮点数，单位为物理像素px。 |
 
 **示例**
+
+```TypeScript
+const color: ArrayBuffer = new ArrayBuffer(160000);
+let opts: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 200, width: 200 } }
+let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
+let canvas = new drawing.Canvas(pixelMap);
+paragraph.paint(canvas, 0, 0);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D'
+import { image } from '@kit.ImageKit'
+
+function textFunc(pixelmap: PixelMap) {
+  let canvas = new drawing.Canvas(pixelmap);
+  lines[0].paint(canvas, 0, 0);
+}
+
+@Entry
+@Component
+struct Index {
+  @State pixelmap?: PixelMap = undefined;
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Image(this.pixelmap).width(200).height(200);
+      Button().onClick(() => {
+        if (this.pixelmap == undefined) {
+          const color: ArrayBuffer = new ArrayBuffer(160000);
+          let opts: image.InitializationOptions =
+            { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 200, width: 200 } }
+          this.pixelmap = image.createPixelMapSync(color, opts);
+        }
+        this.fun(this.pixelmap);
+      })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component, Column, Button, Image, ClickEvent} from '@ohos.arkui.component'
+import { State } from '@ohos.arkui.stateManagement'
+import { drawing } from '@kit.ArkGraphics2D'
+import { text } from "@kit.ArkGraphics2D"
+import { image } from '@kit.ImageKit';
+
+function textFunc(pixelmap?: image.PixelMap) {
+  if (pixelmap) {
+    let canvas = new drawing.Canvas(pixelmap);
+    let textStyle: text.TextStyle = {
+      color: { alpha: 255, red: 255, green: 0, blue: 0 },
+      fontSize: 33,
+    };
+    let paragraphStyle: text.ParagraphStyle = {
+      textStyle: textStyle,
+      align: text.TextAlign.END,
+    };
+    let fontCollection = new text.FontCollection();
+    let paragraphBuilder = new text.ParagraphBuilder(paragraphStyle, fontCollection);
+    paragraphBuilder.addText("Hello World");
+    let paragraph = paragraphBuilder.build();
+    let lines = paragraph.getTextLines();
+    lines[0].paint(canvas, 0, 0);
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  @State pixelmap?: image.PixelMap = undefined;
+  fun: (pixelmap?: image.PixelMap) => void = textFunc;
+  build() {
+    Column() {
+      Image(this.pixelmap).width(200).height(200);
+      Button("Click").onClick((e: ClickEvent) => {
+        if (this.pixelmap == undefined) {
+          const color: ArrayBuffer = new ArrayBuffer(160000);
+          let opts: image.InitializationOptions =
+            { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 200, width: 200 } }
+          this.pixelmap = image.createPixelMapSync(color, opts);
+        }
+        this.fun(this.pixelmap);
+      })
+    }
+  }
+}
+```
 
 ArkTS-Dyn示例：
 

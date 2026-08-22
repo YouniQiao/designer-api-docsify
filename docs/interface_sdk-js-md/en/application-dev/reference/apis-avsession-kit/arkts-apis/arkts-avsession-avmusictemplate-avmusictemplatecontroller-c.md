@@ -282,7 +282,7 @@ Unregister report current single callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Single&gt; | No | The callback used to handle ('reportCurrentSingle') event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Single&gt; | No | The callback used to handle ('reportCurrentSingle') event. |
 
 **Error codes:**
 
@@ -372,7 +372,7 @@ Unregister report download media entity status callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)&gt; | No | The callback used to handle ('reportDownloadMediaEntityStatus') event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)&gt; | No | The callback used to handle ('reportDownloadMediaEntityStatus') event. |
 
 **Error codes:**
 
@@ -432,7 +432,7 @@ Unregister report media entities change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]&gt; | No | The callback used to handle ('reportMediaEntitiesChange') event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]&gt; | No | The callback used to handle ('reportMediaEntitiesChange') event. |
 
 **Error codes:**
 
@@ -462,7 +462,7 @@ Unregister report playlist callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | No | The callback used to handle ('reportPlaylist') event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | No | The callback used to handle ('reportPlaylist') event. |
 
 **Error codes:**
 
@@ -522,7 +522,7 @@ Unregister report settings callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[]&gt; | No | The callback used to handle ('reportSettings') event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[]&gt; | No | The callback used to handle ('reportSettings') event. |
 
 **Error codes:**
 
@@ -582,7 +582,7 @@ Unregister report user info callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;UserInfo&gt; | No | The callback used to handle ('reportUserInfo') event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserInfo&gt; | No | The callback used to handle ('reportUserInfo') event. |
 
 **Error codes:**
 
@@ -612,7 +612,7 @@ Register report current single callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Single&gt; | Yes | The callback used to handle ('reportCurrentSingle') event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Single&gt; | Yes | The callback used to handle ('reportCurrentSingle') event. |
 
 **Error codes:**
 
@@ -702,7 +702,7 @@ Register report download media entity status callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)&gt; | Yes | The callback used to handle ('reportDownloadMediaEntityStatus') event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)&gt; | Yes | The callback used to handle ('reportDownloadMediaEntityStatus') event. |
 
 **Error codes:**
 
@@ -762,7 +762,7 @@ Register report media entities change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]&gt; | Yes | The callback used to handle ('reportMediaEntitiesChange') event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]&gt; | Yes | The callback used to handle ('reportMediaEntitiesChange') event. |
 
 **Error codes:**
 
@@ -792,7 +792,7 @@ Register report playlist callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | Yes | The callback used to handle ('reportPlaylist') event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | Yes | The callback used to handle ('reportPlaylist') event. |
 
 **Error codes:**
 
@@ -852,7 +852,7 @@ Register report settings callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[]&gt; | Yes | The callback used to handle ('reportSettings') event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[]&gt; | Yes | The callback used to handle ('reportSettings') event. |
 
 **Error codes:**
 
@@ -912,7 +912,7 @@ Register report user info callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;UserInfo&gt; | Yes | The callback used to handle ('reportUserInfo') event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserInfo&gt; | Yes | The callback used to handle ('reportUserInfo') event. |
 
 **Error codes:**
 

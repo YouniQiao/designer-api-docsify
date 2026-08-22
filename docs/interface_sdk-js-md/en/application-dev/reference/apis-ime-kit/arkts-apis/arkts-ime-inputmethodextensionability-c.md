@@ -39,7 +39,7 @@ onCreate(want: Want): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Information related to the **InputMethodExtensionAbility**, including the ability name and bundle name. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Information related to the **InputMethodExtensionAbility**, including the ability name and bundle name. |
 
 **Examples**
 

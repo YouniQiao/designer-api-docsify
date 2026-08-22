@@ -29,7 +29,7 @@ Removes a wallpaper of the specified type and restores the default one.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of reset. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of reset. |
 
 **Examples**
 
@@ -42,6 +42,16 @@ wallpaper.reset(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessError)
         return;
     }
     console.info(`success to reset.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+wallpaper.reset(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
+    console.info(`success to reset.`);
+}).catch((error: BusinessError) => {
+    console.error(`failed to reset because: ${JSON.stringify(error)}`);
 });
 ```
 
@@ -78,13 +88,5 @@ Removes a wallpaper of the specified type and restores the default one.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-wallpaper.reset(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
-    console.info(`success to reset.`);
-}).catch((error: BusinessError) => {
-    console.error(`failed to reset because: ${JSON.stringify(error)}`);
-});
-```
+See [reset](#reset)
 

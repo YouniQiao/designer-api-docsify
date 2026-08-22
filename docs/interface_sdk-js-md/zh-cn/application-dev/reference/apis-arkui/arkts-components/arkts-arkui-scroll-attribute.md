@@ -538,6 +538,28 @@ onZoomStop(event: VoidCallback)
 | --- | --- | --- | --- |
 | event | VoidCallback | 是 | 缩放停止回调。 |
 
+## scrollable
+
+```TypeScript
+scrollable(value: ScrollDirection)
+```
+
+设置滚动方向。该值被修改后会重置滚动偏移量。可根据布局选择竖直滚动、水平滚动或自由滚动。
+
+**起始版本：** 7
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollAttribute-scrollable(value: ScrollDirection): ScrollAttribute--><!--Device-ScrollAttribute-scrollable(value: ScrollDirection): ScrollAttribute-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ScrollDirection](arkts-arkui-scrolldirection-e.md) | 是 | 滚动方向。<br/>默认值：ScrollDirection.Vertical |
+
 ## scrollBar
 
 ```TypeScript
@@ -681,28 +703,6 @@ scrollSnap(value: ScrollSnapOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [ScrollSnapOptions](arkts-arkui-scrollsnapoptions-i.md) | 是 | Scroll组件的限位滚动模式。该对象包含snapAlign（对齐方式）、snapPagination（分页点）、enableSnapToStart（是否在 开头限位）和enableSnapToEnd（是否在末尾限位）等属性。 |
-
-## scrollable
-
-```TypeScript
-scrollable(value: ScrollDirection)
-```
-
-设置滚动方向。该值被修改后会重置滚动偏移量。可根据布局选择竖直滚动、水平滚动或自由滚动。
-
-**起始版本：** 7
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ScrollAttribute-scrollable(value: ScrollDirection): ScrollAttribute--><!--Device-ScrollAttribute-scrollable(value: ScrollDirection): ScrollAttribute-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [ScrollDirection](arkts-arkui-scrolldirection-e.md) | 是 | 滚动方向。<br/>默认值：ScrollDirection.Vertical |
 
 ## zoomScale
 

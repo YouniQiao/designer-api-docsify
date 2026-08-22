@@ -30,7 +30,7 @@ function listIptablesFilterRules(admin: Want, callback: AsyncCallback<string>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当接口调用成功，err为null，否则err为错误对象。 |
 
 **错误码：**
@@ -64,6 +64,24 @@ networkManager.listIptablesFilterRules(wantTemp, (err, result) => {
 });
 ```
 
+```TypeScript
+import { networkManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+networkManager.listIptablesFilterRules(wantTemp).then((result) => {
+  console.info(`Succeeded in getting iptables filter rule, result: ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to remove iptables filter rule. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## listIptablesFilterRules
 
@@ -89,7 +107,7 @@ function listIptablesFilterRules(admin: Want): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 
 **返回值：**
 
@@ -109,21 +127,5 @@ function listIptablesFilterRules(admin: Want): Promise<string>
 
 **示例**
 
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-networkManager.listIptablesFilterRules(wantTemp).then((result) => {
-  console.info(`Succeeded in getting iptables filter rule, result: ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove iptables filter rule. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [listIptablesFilterRules](#listiptablesfilterrules)
 

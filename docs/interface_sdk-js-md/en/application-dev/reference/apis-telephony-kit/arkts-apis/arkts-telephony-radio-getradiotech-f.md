@@ -27,7 +27,7 @@ Obtains radio access technology (RAT) of the registered network. The system retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NetworkRadioTech](arkts-telephony-radio-networkradiotech-i.md)&gt; | Yes | Returns the RAT of PS domain and CS domain of registered network. The values of RAT are as follows: &lt;ul&gt; &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_UNKNOWN} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_GSM} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_1XRTT} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_WCDMA} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_HSPA} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_HSPAP} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_TD_SCDMA} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_EVDO} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_EHRPD} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_LTE} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_LTE_CA} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_IWLAN} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_NR} &lt;/ul&gt; |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetworkRadioTech](arkts-telephony-radio-networkradiotech-i.md)&gt; | Yes | Returns the RAT of PS domain and CS domain of registered network. The values of RAT are as follows: &lt;ul&gt; &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_UNKNOWN} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_GSM} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_1XRTT} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_WCDMA} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_HSPA} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_HSPAP} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_TD_SCDMA} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_EVDO} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_EHRPD} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_LTE} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_LTE_CA} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_IWLAN} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_NR} &lt;/ul&gt; |
 
 **Error codes:**
 
@@ -39,6 +39,32 @@ Obtains radio access technology (RAT) of the registered network. The system retu
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.getRadioTech(slotId, (err: BusinessError, data: radio.NetworkRadioTech) => {
+    if (err) {
+        console.error(`getRadioTech failed, callback: err->${JSON.stringify(err)}`);
+        return;
+    }
+    console.info(`getRadioTech success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.getRadioTech(slotId).then((data: radio.NetworkRadioTech) => {
+    console.info(`getRadioTech success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getRadioTech failed, promise: err->${JSON.stringify(err)}`);
+});
+```
 
 
 ## getRadioTech
@@ -79,4 +105,8 @@ Obtains radio access technology (RAT) of the registered network. The system retu
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+
+**Examples**
+
+See [getRadioTech](#getradiotech)
 

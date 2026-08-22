@@ -57,6 +57,16 @@ call.disableImsSwitch(0, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.disableImsSwitch(0).then(() => {
+    console.info(`disableImsSwitch success.`);
+}).catch((err: BusinessError) => {
+    console.error(`disableImsSwitch fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## disableImsSwitch
 
@@ -102,13 +112,5 @@ function disableImsSwitch(slotId: int): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.disableImsSwitch(0).then(() => {
-    console.info(`disableImsSwitch success.`);
-}).catch((err: BusinessError) => {
-    console.error(`disableImsSwitch fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [disableImsSwitch](#disableimsswitch)
 

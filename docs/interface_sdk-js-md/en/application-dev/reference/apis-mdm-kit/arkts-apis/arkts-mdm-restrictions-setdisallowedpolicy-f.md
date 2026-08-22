@@ -41,7 +41,7 @@ Disallows a feature.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | feature | string | Yes | For features that can be set, see Table 1. <br> **Note:** Since API version 15, applications granted with the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and activated as the [BDA](../../../mdm/mdm-kit-term.md#byod-device-admin-bdabyod) via [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md) can use this API to set the following features: bluetooth, hdc, microphone, usb, wifi, tethering, and camera. Since API version 26.0.0, this API can also be used to set the mtpServer feature. |
 | disallow | boolean | Yes | Whether to disallow the feature. The value **true** means to disallow the feature; the value **false** means the opposite. |
 
@@ -98,7 +98,7 @@ Enables or disables a specified device feature. Once disabled, the feature canno
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | feature | [FeatureForDevice](arkts-mdm-restrictions-featurefordevice-e.md) | Yes | Device feature to be enabled or disabled. <br> **Note:** An application granted with the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and activated as the [BDA](../../../mdm/mdm-kit-term.md#byod-device-admin-bdabyod) via [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md) can use this API to set the [FeatureForDevice.WIFI_P2P](arkts-mdm-restrictions-featurefordevice-e.md) feature. |
 | disallow | boolean | Yes | Whether to disallow the feature. The value **true** means to disallow the feature; the value **false** means the opposite. |
 
@@ -112,4 +112,8 @@ Enables or disables a specified device feature. Once disabled, the feature canno
 | [9200013](../errorcode-enterpriseDeviceManager.md#9200013-control-not-immediately-effective) | The enterprise management policy has been successfully set, but the function has not taken effect in real time. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+
+**Examples**
+
+See [setDisallowedPolicy](#setdisallowedpolicy)
 

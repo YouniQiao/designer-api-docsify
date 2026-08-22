@@ -29,7 +29,7 @@ function onTouchscreenPinch(fingers: int, receiver: Callback<TouchGestureEvent>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | fingers | int | 是 | 捏合手势的手指数，取值范围：[4,5]。 |
-| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TouchGestureEvent](arkts-input-multimodalinputgestureevent-touchgestureevent-i-sys.md)&gt; | 是 | 回调函数，返回触摸屏捏合手势事件。 |
+| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TouchGestureEvent](arkts-input-multimodalinput-gestureevent-touchgestureevent-i-sys.md)&gt; | 是 | 回调函数，返回触摸屏捏合手势事件。 |
 
 **错误码：**
 

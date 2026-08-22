@@ -20,3 +20,41 @@
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+let form = new unifiedDataChannel.SystemDefinedForm();
+form.formId = 123456;
+form.formName = 'MyFormName';
+form.bundleName = 'MyBundleName';
+form.abilityName = 'MyAbilityName';
+form.module = 'MyModule';
+let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+form.details = {
+  formKey1: 123,
+  formKey2: 'formValue',
+  formKey3: u8Array
+};
+let unifiedData = new unifiedDataChannel.UnifiedData(form);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let form = new unifiedDataChannel.SystemDefinedForm();
+form.formId = 123456;
+form.formName = 'MyFormName';
+form.bundleName = 'MyBundleName';
+form.abilityName = 'MyAbilityName';
+form.module = 'MyModule';
+let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+form.details = {
+  "formKey1": 123,
+  "formKey2": 'formValue',
+  "formKey3": u8Array
+};
+let unifiedData = new unifiedDataChannel.UnifiedData(form);
+```
+

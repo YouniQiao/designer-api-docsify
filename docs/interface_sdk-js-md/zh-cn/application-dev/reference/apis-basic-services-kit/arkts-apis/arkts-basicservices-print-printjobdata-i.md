@@ -338,24 +338,6 @@ pageSize: PrintPageSize
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
-## printQuality
-
-```TypeScript
-printQuality?: PrintQuality
-```
-
-表示打印质量。
-
-**类型：** [PrintQuality](arkts-basicservices-print-printquality-e.md)
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PrintJobData-printQuality?: PrintQuality--><!--Device-PrintJobData-printQuality?: PrintQuality-End-->
-
-**系统能力：** SystemCapability.Print.PrintFramework
-
 ## printerId
 
 ```TypeScript
@@ -371,6 +353,24 @@ printerId: string
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PrintJobData-printerId: string--><!--Device-PrintJobData-printerId: string-End-->
+
+**系统能力：** SystemCapability.Print.PrintFramework
+
+## printQuality
+
+```TypeScript
+printQuality?: PrintQuality
+```
+
+表示打印质量。
+
+**类型：** [PrintQuality](arkts-basicservices-print-printquality-e.md)
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PrintJobData-printQuality?: PrintQuality--><!--Device-PrintJobData-printQuality?: PrintQuality-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

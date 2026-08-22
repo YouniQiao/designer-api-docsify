@@ -47,6 +47,15 @@ observer.onNetworkStateChange((data: observer.NetworkState) => {
 });
 ```
 
+```TypeScript
+let options: observer.ObserverOptions = {
+    slotId: 0
+}
+observer.onNetworkStateChange( options, (data: observer.NetworkState) => {
+    console.info(`onNetworkStateChange, data->${JSON.stringify(data)}`);
+});
+```
+
 
 ## onNetworkStateChange
 
@@ -84,12 +93,5 @@ Callback when the network state corresponding to the monitored {@code slotId} is
 
 **示例**
 
-```TypeScript
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.onNetworkStateChange( options, (data: observer.NetworkState) => {
-    console.info(`onNetworkStateChange, data->${JSON.stringify(data)}`);
-});
-```
+参见 [onNetworkStateChange](#onnetworkstatechange)
 

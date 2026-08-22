@@ -51,3 +51,9 @@ function getCurrentInputMethod(userId?: int): InputMethodProperty
 | 12800024 | the specified user is not in the foreground. |
 | 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
+**Examples**
+
+```TypeScript
+let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
+```
+

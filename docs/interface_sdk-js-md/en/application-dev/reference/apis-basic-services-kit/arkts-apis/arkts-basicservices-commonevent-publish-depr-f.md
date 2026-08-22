@@ -29,7 +29,7 @@ Publishes a common event with given properties. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Name of the common event to publish. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result of publishing a common event. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result of publishing a common event. |
 
 **Examples**
 
@@ -47,6 +47,30 @@ function publishCB(err:Base.BusinessError) {
 
 // Publish a common event.
 commonEvent.publish("event", publishCB);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+import CommonEventManager from '@ohos.commonEventManager';
+
+// Information of a common event.
+let options:CommonEventManager.CommonEventPublishData = {
+    code: 0,             // Initial code of the common event.
+    data: "initial data",// Initial data of the common event.
+    isOrdered: true  // The common event is an ordered one.
+}
+
+// Callback for common event publication
+function publishCB(err:Base.BusinessError) {
+    if (err.code) {
+        console.error(`publish failed, code is ${err.code}`);
+    } else {
+        console.info("publish");
+    }
+}
+
+// Publish a common event.
+commonEvent.publish("event", options, publishCB);
 ```
 
 
@@ -74,31 +98,9 @@ Publishes a common event with given properties. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | event | string | Yes | Name of the common event to publish. |
 | options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) | Yes | Properties of the common event to publish. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result of publishing a common event. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result of publishing a common event. |
 
 **Examples**
 
-```TypeScript
-import Base from '@ohos.base';
-import CommonEventManager from '@ohos.commonEventManager';
-
-// Information of a common event.
-let options:CommonEventManager.CommonEventPublishData = {
-    code: 0,             // Initial code of the common event.
-    data: "initial data",// Initial data of the common event.
-    isOrdered: true  // The common event is an ordered one.
-}
-
-// Callback for common event publication
-function publishCB(err:Base.BusinessError) {
-    if (err.code) {
-        console.error(`publish failed, code is ${err.code}`);
-    } else {
-        console.info("publish");
-    }
-}
-
-// Publish a common event.
-commonEvent.publish("event", options, publishCB);
-```
+See [publish](#publish)
 

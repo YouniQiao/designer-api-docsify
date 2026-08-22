@@ -6,7 +6,7 @@ type BaseProfile = baseProfile.BaseProfile
 
 Base interface of profile.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 

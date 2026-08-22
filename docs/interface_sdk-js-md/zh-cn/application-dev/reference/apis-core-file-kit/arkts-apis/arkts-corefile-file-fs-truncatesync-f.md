@@ -52,3 +52,21 @@ declare function truncateSync(file: string | number, len?: number): void
 | 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let len: number = 5;
+fileIo.truncateSync(filePath, len);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let len: long = 5;
+fileIo.truncateSync(filePath, len);
+```
+

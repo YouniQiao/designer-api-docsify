@@ -95,42 +95,6 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 })
 ```
 
-## createPixelMapMask
-
-```TypeScript
-static createPixelMapMask(pixelMap: image.PixelMap): Mask
-```
-
-Creates a Mask instance by inputting a pixelMap. This interface does not perform scaling on the input pixelMap.
-
-**Since:** 23
-
-<!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap): Mask--><!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap): Mask-End-->
-
-**System capability:** SystemCapability.Graphics.Drawing
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pixelMap | image.PixelMap | Yes | The PixelMap instance created by the image module. It can be obtained through image decoding or direct creation. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Returns a Mask with the pixelMap. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-
-**Examples**
-
 ```TypeScript
 import { uiEffect } from '@kit.ArkGraphics2D';
 import { image } from '@kit.ImageKit';
@@ -208,6 +172,44 @@ struct Index {
 }
 ```
 
+## createPixelMapMask
+
+```TypeScript
+static createPixelMapMask(pixelMap: image.PixelMap): Mask
+```
+
+Creates a Mask instance by inputting a pixelMap. This interface does not perform scaling on the input pixelMap.
+
+**Since:** 23
+
+<!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap): Mask--><!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap): Mask-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pixelMap | image.PixelMap | Yes | The PixelMap instance created by the image module. It can be obtained through image decoding or direct creation. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Returns a Mask with the pixelMap. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+See [createPixelMapMask](#createpixelmapmask)
+
 ## createRadialGradientMask
 
 ```TypeScript
@@ -245,6 +247,28 @@ Creates an elliptical mask Mask instance by inputting the center position of the
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D'
+// values: [[1.0, 0.5], [1.0, 1.0]] => color0: 1.0; color1: 1.0; position0: 0.5; position1: 1.0
+let mask = uiEffect.Mask.createRadialGradientMask({x: 0.0, y: 0.0}, 0.5, 0.5, [[1.0, 0.5], [1.0, 1.0]]);
+@Entry
+@Component
+struct RadialGradientMaskExample {
+  build() {
+    Stack() {
+      Image($rawfile('test.jpg'))
+      Column()
+        .width('100%')
+        .height('100%')
+        // Use the mask as the input parameter of the filter to implement the corresponding effect. The mask is a quarter circle ring in the upper left corner of the screen.
+        .backgroundFilter(uiEffect.createFilter().edgeLight(1.0, null, mask))
+    }
+  }
+}
+```
 
 ## createRippleMask
 

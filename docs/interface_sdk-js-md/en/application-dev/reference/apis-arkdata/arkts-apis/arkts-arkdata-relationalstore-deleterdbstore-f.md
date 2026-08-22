@@ -30,7 +30,7 @@ Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet*
 | --- | --- | --- | --- |
 | context | Context | Yes | Application context.<br>For details about the application context of the FA model, see Context.<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
 | name | string | Yes | Name of the RDB store to delete. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. |
 
 **Error codes:**
 
@@ -83,44 +83,42 @@ class EntryAbility extends UIAbility {
 }
 ```
 
-
-## deleteRdbStore
+FA model:
 
 ```TypeScript
-function deleteRdbStore(context: Context, config: StoreConfig, callback: AsyncCallback<void>): void
+import { featureAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let context = featureAbility.getContext();
+
+relationalStore.deleteRdbStore(context, "RdbTest.db").then(() => {
+  // After the database is deleted, the initialized RdbStore instance cannot be used.
+  // Clear the related variables to release resources in time.
+  console.info('Delete RdbStore successfully.');
+}).catch((err: BusinessError) => {
+  console.error(`Delete RdbStore failed, code is ${err.code},message is ${err.message}`);
+});
 ```
 
-Deletes an RDB store. This API uses an asynchronous callback to return the result.
+Stage model:
 
-After the deletion, you are advised to set the database object to null. If the database file is stored in the sandbox directory, use this API to delete the database. If multiple processes operate the same database, other processes should be notified about the database deletion so that they can detect and process the deletion. If a custom path is set in [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) during RDB store creation, using this API to delete the RDB store.
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
 
-Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet** of the vector store have been closed.
-
-**Since:** 23
-
-<!--Device-relationalStore-function deleteRdbStore(context: Context, config: StoreConfig, callback: AsyncCallback<void>): void--><!--Device-relationalStore-function deleteRdbStore(context: Context, config: StoreConfig, callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see Context.<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
-| config | StoreConfig | Yes | Configuration of the RDB store. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14800000](../errorcode-data-rdb.md#14800000-internal-error) | Inner error. |
-| [14800010](../errorcode-data-rdb.md#14800010-invalid-database-path) | Failed to open or delete the database by an invalid database path. |
-| [14801001](../errorcode-data-rdb.md#14801001-stage-model-required) | The operation is supported in the stage model only. |
-| [14801002](../errorcode-data-rdb.md#14801002-invalid-datagroupid-in-storeconfig) | Invalid data group ID. |
-
-**Examples**
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    relationalStore.deleteRdbStore(this.context, "RdbTest.db").then(() => {
+      // After the database is deleted, the initialized RdbStore instance cannot be used.
+      // Clear the related variables to release resources in time.
+      console.info('Delete RdbStore successfully.');
+    }).catch((err: BusinessError) => {
+      console.error(`Delete RdbStore failed, code is ${err.code},message is ${err.message}`);
+    });
+  }
+}
+```
 
 FA model:
 
@@ -172,6 +170,93 @@ class EntryAbility extends UIAbility {
 }
 ```
 
+FA model:
+
+```TypeScript
+import { featureAbility } from "@kit.AbilityKit";
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let context = featureAbility.getContext();
+
+const STORE_CONFIG: relationalStore.StoreConfig = {
+  name: "RdbTest.db",
+  securityLevel: relationalStore.SecurityLevel.S3
+};
+
+relationalStore.deleteRdbStore(context, STORE_CONFIG).then(() => {
+  // After the database is deleted, the initialized RdbStore instance cannot be used.
+  // Clear the related variables to release resources in time.
+  console.info('Delete RdbStore successfully.');
+}).catch((err: BusinessError) => {
+  console.error(`Delete RdbStore failed, code is ${err.code},message is ${err.message}`);
+});
+```
+
+Stage model:
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    const STORE_CONFIG: relationalStore.StoreConfig = {
+      name: "RdbTest.db",
+      securityLevel: relationalStore.SecurityLevel.S3
+    };
+    relationalStore.deleteRdbStore(this.context, STORE_CONFIG).then(() => {
+      // After the database is deleted, the initialized RdbStore instance cannot be used.
+      // Clear the related variables to release resources in time.
+      console.info('Delete RdbStore successfully.');
+    }).catch((err: BusinessError) => {
+      console.error(`Delete RdbStore failed, code is ${err.code},message is ${err.message}`);
+    });
+  }
+}
+```
+
+
+## deleteRdbStore
+
+```TypeScript
+function deleteRdbStore(context: Context, config: StoreConfig, callback: AsyncCallback<void>): void
+```
+
+Deletes an RDB store. This API uses an asynchronous callback to return the result.
+
+After the deletion, you are advised to set the database object to null. If the database file is stored in the sandbox directory, use this API to delete the database. If multiple processes operate the same database, other processes should be notified about the database deletion so that they can detect and process the deletion. If a custom path is set in [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) during RDB store creation, using this API to delete the RDB store.
+
+Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet** of the vector store have been closed.
+
+**Since:** 23
+
+<!--Device-relationalStore-function deleteRdbStore(context: Context, config: StoreConfig, callback: AsyncCallback<void>): void--><!--Device-relationalStore-function deleteRdbStore(context: Context, config: StoreConfig, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see Context.<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
+| config | StoreConfig | Yes | Configuration of the RDB store. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) | Inner error. |
+| [14800010](../errorcode-data-rdb.md#14800010-invalid-database-path) | Failed to open or delete the database by an invalid database path. |
+| [14801001](../errorcode-data-rdb.md#14801001-stage-model-required) | The operation is supported in the stage model only. |
+| [14801002](../errorcode-data-rdb.md#14801002-invalid-datagroupid-in-storeconfig) | Invalid data group ID. |
+
+**Examples**
+
+See [deleteRdbStore](#deleterdbstore)
+
 
 ## deleteRdbStore
 
@@ -214,42 +299,7 @@ Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet*
 
 **Examples**
 
-FA model:
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let context = featureAbility.getContext();
-
-relationalStore.deleteRdbStore(context, "RdbTest.db").then(() => {
-  // After the database is deleted, the initialized RdbStore instance cannot be used.
-  // Clear the related variables to release resources in time.
-  console.info('Delete RdbStore successfully.');
-}).catch((err: BusinessError) => {
-  console.error(`Delete RdbStore failed, code is ${err.code},message is ${err.message}`);
-});
-```
-
-Stage model:
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    relationalStore.deleteRdbStore(this.context, "RdbTest.db").then(() => {
-      // After the database is deleted, the initialized RdbStore instance cannot be used.
-      // Clear the related variables to release resources in time.
-      console.info('Delete RdbStore successfully.');
-    }).catch((err: BusinessError) => {
-      console.error(`Delete RdbStore failed, code is ${err.code},message is ${err.message}`);
-    });
-  }
-}
-```
+See [deleteRdbStore](#deleterdbstore)
 
 
 ## deleteRdbStore
@@ -296,49 +346,5 @@ Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet*
 
 **Examples**
 
-FA model:
-
-```TypeScript
-import { featureAbility } from "@kit.AbilityKit";
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let context = featureAbility.getContext();
-
-const STORE_CONFIG: relationalStore.StoreConfig = {
-  name: "RdbTest.db",
-  securityLevel: relationalStore.SecurityLevel.S3
-};
-
-relationalStore.deleteRdbStore(context, STORE_CONFIG).then(() => {
-  // After the database is deleted, the initialized RdbStore instance cannot be used.
-  // Clear the related variables to release resources in time.
-  console.info('Delete RdbStore successfully.');
-}).catch((err: BusinessError) => {
-  console.error(`Delete RdbStore failed, code is ${err.code},message is ${err.message}`);
-});
-```
-
-Stage model:
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    const STORE_CONFIG: relationalStore.StoreConfig = {
-      name: "RdbTest.db",
-      securityLevel: relationalStore.SecurityLevel.S3
-    };
-    relationalStore.deleteRdbStore(this.context, STORE_CONFIG).then(() => {
-      // After the database is deleted, the initialized RdbStore instance cannot be used.
-      // Clear the related variables to release resources in time.
-      console.info('Delete RdbStore successfully.');
-    }).catch((err: BusinessError) => {
-      console.error(`Delete RdbStore failed, code is ${err.code},message is ${err.message}`);
-    });
-  }
-}
-```
+See [deleteRdbStore](#deleterdbstore)
 

@@ -24,7 +24,7 @@ columnWidths?: LengthMetrics[]
 
 1. 当文本长度大于列宽时，文本被截断。 2. 当设置为异常值时，使用默认值。 3. 支持设置为Undefined和Null，不支持Undefined[]和Null[]。
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-graphics-lengthmetrics-c.md)[]
+**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)[]
 
 **起始版本：** 23
 

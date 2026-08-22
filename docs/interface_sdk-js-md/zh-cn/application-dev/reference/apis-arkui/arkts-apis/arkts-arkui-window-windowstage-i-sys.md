@@ -2,7 +2,7 @@
 
 窗口管理器。管理各个基本窗口单元，即[Window](arkts-arkui-window-n.md)实例。
 
-下列API示例中都需在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiability-uiability-c.md#onwindowstagecreate)函数中使用WindowStage 的实例调用对应方法。
+下列API示例中都需在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)函数中使用WindowStage 的实例调用对应方法。
 
 **起始版本：** 23
 
@@ -99,6 +99,62 @@ removeImageForRecent(): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    try {
+      let promise = windowStage.removeImageForRecent();
+      promise.then(() => {
+        console.info('Succeeded in removing image for recent.');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to remove image for recent. Cause code: ${err.code}, message: ${err.message}`);
+      });
+    } catch (exception) {
+      let err = exception as BusinessError;
+      console.error(`Failed to remove image for recent. Cause code: ${err.code}, message: ${err.message}`);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    try {
+      let promise = windowStage.removeImageForRecent();
+      promise.then(() => {
+        console.info('Succeeded in removing image for recent.');
+      }).catch((err: Error) => {
+        console.error(`Failed to remove image for recent. Cause code: ${err.code}, message: ${err.message}`);
+      });
+    } catch (exception) {
+      let err = exception as BusinessError;
+      console.error(`Failed to remove image for recent. Cause code: ${err.code}, message: ${err.message}`);
+    }
+  }
+}
+```
+
 ## setImageForRecent
 
 ```TypeScript
@@ -148,6 +204,118 @@ setImageForRecent(imageResource: long | image.PixelMap, value: ImageFit): Promis
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. Invalid parameter range. 2. Invalid parameter length. |
 
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let imgResourceId = $r("app.media.startIcon").id;
+    try {
+      let promise = windowStage.setImageForRecent(imgResourceId, ImageFit.Fill);
+      promise.then(() => {
+        console.info(`Succeeded in setting image for recent`);
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to set image for recent. Cause code: ${err.code}, message: ${err.message}`);
+      });
+    } catch (exception) {
+      console.error(`Failed to set image for recent.`);
+    }
+  }
+};
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { window, ImageFit } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    windowStage.loadContent('pages/Index', (err) => {
+      if (err.code) {
+        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('Succeeded in loading the content.');
+      let imageResource = $r('app.media.startIcon').id;
+      try {
+        let promise = windowStage.setImageForRecent(imageResource, ImageFit.Fill);
+        promise.then(() => {
+          console.info('Succeeded in setting image for recent.');
+        }).catch((err: BusinessError) => {
+          console.error(`Failed to set image for recent. Cause code: ${err.code}, message: ${err.message}`);
+        });
+      } catch (exception) {
+        let err = exception as BusinessError;
+        console.error(`Failed to set image for recent. Cause code: ${err.code}, message: ${err.message}`);
+      }
+    });
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { window, ImageFit } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    windowStage.loadContent('pages/Index', (err) => {
+      if (err?.code) {
+        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('Succeeded in loading the content.');
+      let color = new ArrayBuffer(512 * 512 * 4);
+      let bufferArr = new Uint8Array(color);
+      for (let i = 0; i < bufferArr.length; i += 4) {
+        bufferArr[i] = 255;
+        bufferArr[i + 1] = 0;
+        bufferArr[i + 2] = 122;
+        bufferArr[i + 3] = 255;
+      }
+      image.createPixelMap(color, {
+        editable: true,
+        pixelFormat: image.PixelMapFormat.RGBA_8888,
+        size: { height: 512, width: 512 }
+      }).then((pixelMap: image.PixelMap) => {
+        try {
+          let promise = windowStage.setImageForRecent(pixelMap, ImageFit.Fill);
+          promise.then(() => {
+            console.info('Succeeded in setting image for recent.');
+          }).catch((err: Error) => {
+            console.error(`Failed to set image for recent. Cause code: ${err.code}, message: ${err.message}`);
+          });
+        } catch (exception) {
+          let err = exception as BusinessError;
+          console.error(`Failed to set image for recent. Cause code: ${err.code}, message: ${err.message}`);
+        }
+      }).catch((err: Error) => {
+        console.error(`Failed to create pixelMap. Cause code: ${err.code}, message: ${err.message}`);
+      });
+    });
+  }
+}
+```
+
 ## setImageForRecent
 
 ```TypeScript
@@ -195,29 +363,7 @@ setImageForRecent(imgResourceId: number, value: ImageFit): Promise<void>
 
 **示例**
 
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let imgResourceId = $r("app.media.startIcon").id;
-    try {
-      let promise = windowStage.setImageForRecent(imgResourceId, ImageFit.Fill);
-      promise.then(() => {
-        console.info(`Succeeded in setting image for recent`);
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to set image for recent. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to set image for recent.`);
-    }
-  }
-};
-```
+参见 [setImageForRecent](#setimageforrecent)
 
 ## setShowOnLockScreen
 

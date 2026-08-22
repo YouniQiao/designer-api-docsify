@@ -47,3 +47,18 @@ function queryPrinterCapabilityByUri(printerUri: string, printerId: string): Pro
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
 | [13100005](../errorcode-print.md#13100005-无效的打印机) | Can not find the printer in system. |
 
+**示例**
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+
+let printerUri : string = "testPrinterUri";
+let printerId : string = "testPrinterId";
+print.queryPrinterCapabilityByUri(printerUri, printerId).then((capabilities: print.PrinterCapabilities) => {
+    console.info('queryPrinterCapabilityByUri success' + JSON.stringify(capabilities));
+}).catch((error: BusinessError) => {
+    console.error('queryPrinterCapabilityByUri error : ' + JSON.stringify(error));
+})
+```
+

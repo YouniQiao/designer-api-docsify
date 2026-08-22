@@ -79,6 +79,161 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
+**Examples**
+
+```TypeScript
+let value1 = "Lisa";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+let value5 = "Jack";
+let value6 = 19;
+let value7 = 101.5;
+let value8 = new Uint8Array([6, 7, 8, 9, 10]);
+let value9 = "Tom";
+let value10 = 20;
+let value11 = 102.5;
+let value12 = new Uint8Array([11, 12, 13, 14, 15]);
+
+const valueBucket1: relationalStore.ValuesBucket = {
+  'NAME': value1,
+  'AGE': value2,
+  'SALARY': value3,
+  'CODES': value4
+};
+const valueBucket2: relationalStore.ValuesBucket = {
+  'NAME': value5,
+  'AGE': value6,
+  'SALARY': value7,
+  'CODES': value8
+};
+const valueBucket3: relationalStore.ValuesBucket = {
+  'NAME': value9,
+  'AGE': value10,
+  'SALARY': value11,
+  'CODES': value12
+};
+
+let valueBuckets = new Array(valueBucket1, valueBucket2, valueBucket3);
+if (store != undefined) {
+  (store as relationalStore.RdbStore).batchInsert("EMPLOYEE", valueBuckets, (err, insertNum) => {
+    if (err || insertNum == -1) {
+      console.error(`batchInsert is failed, code is ${err.code},message is ${err.message}`);
+      return;
+    }
+    console.info(`batchInsert is successful, the number of values that were inserted = ${insertNum}`);
+  })
+}
+```
+
+RDB store:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let value1 = "Lisa";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+let value5 = "Jack";
+let value6 = 19;
+let value7 = 101.5;
+let value8 = new Uint8Array([6, 7, 8, 9, 10]);
+let value9 = "Tom";
+let value10 = 20;
+let value11 = 102.5;
+let value12 = new Uint8Array([11, 12, 13, 14, 15]);
+
+const valueBucket1: relationalStore.ValuesBucket = {
+  'NAME': value1,
+  'AGE': value2,
+  'SALARY': value3,
+  'CODES': value4
+};
+const valueBucket2: relationalStore.ValuesBucket = {
+  'NAME': value5,
+  'AGE': value6,
+  'SALARY': value7,
+  'CODES': value8
+};
+const valueBucket3: relationalStore.ValuesBucket = {
+  'NAME': value9,
+  'AGE': value10,
+  'SALARY': value11,
+  'CODES': value12
+};
+
+let valueBuckets = new Array(valueBucket1, valueBucket2, valueBucket3);
+if (store != undefined) {
+  (store as relationalStore.RdbStore).batchInsert("EMPLOYEE", valueBuckets).then((insertNum: number) => {
+    if (insertNum == -1) {
+      console.error(`batchInsert is failed`);
+      return;
+    }
+    console.info(`batchInsert is successful, the number of values that were inserted = ${insertNum}`);
+  }).catch((err: BusinessError) => {
+    console.error(`batchInsert is failed, code is ${err.code},message is ${err.message}`);
+  })
+}
+```
+
+Vector store:
+
+```TypeScript
+let createSql = "CREATE TABLE IF NOT EXISTS test (id INTEGER PRIMARY KEY AUTOINCREMENT, data1 floatvector(2));";
+await store!.execute(createSql, 0, undefined);  // Create a relational table. The second parameter 0 indicates that explicit transactions are not enabled, and the third parameter undefined indicates that the SQL statement does not use parameter binding.
+let floatVector = Float32Array.from([1.2, 2.3]);
+let valueBucketArray = new Array<relationalStore.ValuesBucket>();
+for (let i = 0; i < 100; i++) { // Construct a BucketArray for writing.
+  const row : relationalStore.ValuesBucket = {
+    "id" : i,
+    "data1" : floatVector,
+  }
+  valueBucketArray.push(row);
+}
+await store!.batchInsert("test", valueBucketArray); // Execute batched writes.
+```
+
+```TypeScript
+const valueBucket3: relationalStore.ValuesBucket = {
+  NAME: 'Lisa',
+  AGE: 18,
+  SALARY: 100.5,
+  CODES: new Uint8Array([1, 2, 3, 4, 5])
+};
+const valueBucket4: relationalStore.ValuesBucket = {
+  NAME: 'Jack',
+  AGE: 19,
+  SALARY: 101.5,
+  CODES: new Uint8Array([6, 7, 8, 9, 10])
+};
+const valueBucket5: relationalStore.ValuesBucket = {
+  NAME: 'Tom',
+  AGE: 20,
+  SALARY: 102.5,
+  CODES: new Uint8Array([11, 12, 13, 14, 15])
+};
+
+let valueBuckets = new Array(valueBucket3, valueBucket4, valueBucket5);
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      const insertNum = await transaction.batchInsert('EMPLOYEE', valueBuckets);
+      await transaction.commit();
+      console.info(`batchInsert is successful, the number of values that were inserted = ${insertNum}`);
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`batchInsert is failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## batchInsertSync
 
 ```TypeScript
@@ -129,6 +284,96 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 | [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+
+**Examples**
+
+```TypeScript
+let value1 = "Lisa";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+let value5 = "Jack";
+let value6 = 19;
+let value7 = 101.5;
+let value8 = new Uint8Array([6, 7, 8, 9, 10]);
+let value9 = "Tom";
+let value10 = 20;
+let value11 = 102.5;
+let value12 = new Uint8Array([11, 12, 13, 14, 15]);
+
+const valueBucket1: relationalStore.ValuesBucket = {
+  'NAME': value1,
+  'AGE': value2,
+  'SALARY': value3,
+  'CODES': value4
+};
+const valueBucket2: relationalStore.ValuesBucket = {
+  'NAME': value5,
+  'AGE': value6,
+  'SALARY': value7,
+  'CODES': value8
+};
+const valueBucket3: relationalStore.ValuesBucket = {
+  'NAME': value9,
+  'AGE': value10,
+  'SALARY': value11,
+  'CODES': value12
+};
+
+let valueBuckets = new Array(valueBucket1, valueBucket2, valueBucket3);
+if (store != undefined) {
+  try {
+    let insertNum: number = (store as relationalStore.RdbStore).batchInsertSync("EMPLOYEE", valueBuckets);
+    if (insertNum == -1) {
+      console.error(`batchInsertSync is failed`);
+      return;
+    }
+    console.info(`batchInsert is successful, the number of values that were inserted = ${insertNum}`);
+  } catch (err) {
+    console.error(`batchInsert is failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+const valueBucket6: relationalStore.ValuesBucket = {
+  NAME: 'Lisa',
+  AGE: 18,
+  SALARY: 100.5,
+  CODES: new Uint8Array([1, 2, 3, 4, 5])
+};
+const valueBucket7: relationalStore.ValuesBucket = {
+  NAME: 'Jack',
+  AGE: 19,
+  SALARY: 101.5,
+  CODES: new Uint8Array([6, 7, 8, 9, 10])
+};
+const valueBucket8: relationalStore.ValuesBucket = {
+  NAME: 'Tom',
+  AGE: 20,
+  SALARY: 102.5,
+  CODES: new Uint8Array([11, 12, 13, 14, 15])
+};
+
+let valueBuckets2 = new Array(valueBucket6, valueBucket7, valueBucket8);
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      let insertNum: number = (transaction as relationalStore.Transaction).batchInsertSync('EMPLOYEE', valueBuckets2);
+      await transaction.commit();
+      console.info(`batchInsert is successful, the number of values that were inserted = ${insertNum}`);
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`batchInsert is failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
 
 ## batchInsertWithConflictResolution
 
@@ -191,6 +436,98 @@ Ensure that your application complies with this constraint when calling this API
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let value1 = "Lisa";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+let value5 = "Jack";
+let value6 = 19;
+let value7 = 101.5;
+let value8 = new Uint8Array([6, 7, 8, 9, 10]);
+let value9 = "Tom";
+let value10 = 20;
+let value11 = 102.5;
+let value12 = new Uint8Array([11, 12, 13, 14, 15]);
+
+const valueBucket1: relationalStore.ValuesBucket = {
+  'NAME': value1,
+  'AGE': value2,
+  'SALARY': value3,
+  'CODES': value4
+};
+const valueBucket2: relationalStore.ValuesBucket = {
+  'NAME': value5,
+  'AGE': value6,
+  'SALARY': value7,
+  'CODES': value8
+};
+const valueBucket3: relationalStore.ValuesBucket = {
+  'NAME': value9,
+  'AGE': value10,
+  'SALARY': value11,
+  'CODES': value12
+};
+
+let valueBuckets = new Array(valueBucket1, valueBucket2, valueBucket3);
+if (store != undefined) {
+  (store as relationalStore.RdbStore).batchInsertWithConflictResolution("EMPLOYEE", valueBuckets, relationalStore.ConflictResolution.ON_CONFLICT_REPLACE).then((insertNum: number) => {
+    console.info(`batchInsert is successful, insertNum = ${insertNum}`);
+  }).catch((err: BusinessError) => {
+    console.error(`batchInsert is failed, code is ${err.code},message is ${err.message}`);
+  });
+}
+```
+
+```TypeScript
+const valueBucket9: relationalStore.ValuesBucket = {
+  NAME: 'Lisa',
+  AGE: 18,
+  SALARY: 100.5,
+  CODES: new Uint8Array([1, 2, 3, 4, 5])
+};
+const valueBucketA: relationalStore.ValuesBucket = {
+  NAME: 'Jack',
+  AGE: 19,
+  SALARY: 101.5,
+  CODES: new Uint8Array([6, 7, 8, 9, 10])
+};
+const valueBucketB: relationalStore.ValuesBucket = {
+  NAME: 'Tom',
+  AGE: 20,
+  SALARY: 102.5,
+  CODES: new Uint8Array([11, 12, 13, 14, 15])
+};
+
+let valueBuckets3 = new Array(valueBucket9, valueBucketA, valueBucketB);
+
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      const insertNum = await transaction.batchInsertWithConflictResolution(
+        'EMPLOYEE',
+        valueBuckets3,
+        relationalStore.ConflictResolution.ON_CONFLICT_REPLACE
+      );
+      await transaction.commit();
+      console.info(`batchInsert is successful, the number of values that were inserted = ${insertNum}`);
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`batchInsert is failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## batchInsertWithConflictResolutionSync
 
 ```TypeScript
@@ -251,6 +588,96 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
+**Examples**
+
+```TypeScript
+let value1 = "Lisa";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+let value5 = "Jack";
+let value6 = 19;
+let value7 = 101.5;
+let value8 = new Uint8Array([6, 7, 8, 9, 10]);
+let value9 = "Tom";
+let value10 = 20;
+let value11 = 102.5;
+let value12 = new Uint8Array([11, 12, 13, 14, 15]);
+
+const valueBucket1: relationalStore.ValuesBucket = {
+  'NAME': value1,
+  'AGE': value2,
+  'SALARY': value3,
+  'CODES': value4
+};
+const valueBucket2: relationalStore.ValuesBucket = {
+  'NAME': value5,
+  'AGE': value6,
+  'SALARY': value7,
+  'CODES': value8
+};
+const valueBucket3: relationalStore.ValuesBucket = {
+  'NAME': value9,
+  'AGE': value10,
+  'SALARY': value11,
+  'CODES': value12
+};
+
+let valueBuckets = new Array(valueBucket1, valueBucket2, valueBucket3);
+if (store != undefined) {
+  try {
+    let insertNum: number = (store as relationalStore.RdbStore).batchInsertWithConflictResolutionSync("EMPLOYEE", valueBuckets, relationalStore.ConflictResolution.ON_CONFLICT_REPLACE);
+    console.info(`batchInsert is successful, the number of values that were inserted = ${insertNum}`);
+  } catch (err) {
+    console.error(`batchInsert is failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+const valueBucketC: relationalStore.ValuesBucket = {
+  NAME: 'Lisa',
+  AGE: 18,
+  SALARY: 100.5,
+  CODES: new Uint8Array([1, 2, 3, 4, 5])
+};
+const valueBucketD: relationalStore.ValuesBucket = {
+  NAME: 'Jack',
+  AGE: 19,
+  SALARY: 101.5,
+  CODES: new Uint8Array([6, 7, 8, 9, 10])
+};
+const valueBucketE: relationalStore.ValuesBucket = {
+  NAME: 'Tom',
+  AGE: 20,
+  SALARY: 102.5,
+  CODES: new Uint8Array([11, 12, 13, 14, 15])
+};
+
+let valueBuckets4 = new Array(valueBucketC, valueBucketD, valueBucketE);
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      const insertNum = transaction.batchInsertWithConflictResolutionSync(
+        'EMPLOYEE',
+        valueBuckets4,
+        relationalStore.ConflictResolution.ON_CONFLICT_REPLACE
+      );
+      await transaction.commit();
+      console.info(`batchInsert is successful, the number of values that were inserted = ${insertNum}`);
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`batchInsert is failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## batchInsertWithReturning
 
 ```TypeScript
@@ -308,6 +735,48 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+
+**Examples**
+
+```TypeScript
+async function batchInsertWithReturningExample(rdbStore: relationalStore.RdbStore)
+{
+  const valueBucket1: relationalStore.ValuesBucket = { 'NAME': 'zhangsan', 'AGE': 18 };
+  const valueBucket2: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 20 };
+  const config: relationalStore.ReturningConfig = { columns: ['NAME', 'AGE'] };
+  const valueBuckets = new Array(valueBucket1, valueBucket2);
+  try {
+    let results = await rdbStore.batchInsertWithReturning("EMPLOYEE", valueBuckets, config);
+    console.info(`batchInsertWithReturningExample is successful, changed is ${results.changed}`);
+    while(results.resultSet.goToNextRow()) {
+      const row = results.resultSet.getRow();
+      console.info(`batchInsertWithReturningExample, name is ${row['NAME']}, age is ${row['AGE']}`);
+    }
+  } catch (e) {
+    console.error(`batchInsertWithReturningExample failed. code is ${e.code}, message is ${e.message}`);
+  }
+}
+```
+
+```TypeScript
+async function transBatchInsertWithReturningExample(trans: relationalStore.Transaction)
+{
+  const valueBucket1: relationalStore.ValuesBucket = { 'NAME': 'zhangsan', 'AGE': 18 };
+  const valueBucket2: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 20 };
+  const config: relationalStore.ReturningConfig = { columns: ['NAME', 'AGE'] };
+  const valueBuckets = new Array(valueBucket1, valueBucket2);
+  try {
+    let results = await trans.batchInsertWithReturning("EMPLOYEE", valueBuckets, config);
+    console.info(`transBatchInsertWithReturningExample is successful, changed is ${results.changed}`);
+    while(results.resultSet.goToNextRow()) {
+      const row = results.resultSet.getRow();
+      console.info(`transBatchInsertWithReturningExample, name is ${row['NAME']}, age is ${row['AGE']}`);
+    }
+  } catch (e) {
+    console.error(`transBatchInsertWithReturningExample failed. code is ${e.code}, message is ${e.message}`);
+  }
+}
+```
 
 ## batchInsertWithReturningSync
 
@@ -367,6 +836,48 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
+**Examples**
+
+```TypeScript
+function batchInsertWithReturningSyncExample(rdbStore: relationalStore.RdbStore)
+{
+  const valueBucket1: relationalStore.ValuesBucket = { 'NAME': 'zhangsan', 'AGE': 18 };
+  const valueBucket2: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 20 };
+  const config: relationalStore.ReturningConfig = { columns: ['NAME', 'AGE'] };
+  const valueBuckets = new Array(valueBucket1, valueBucket2);
+  try {
+    let results = rdbStore.batchInsertWithReturningSync("EMPLOYEE", valueBuckets, config);
+    console.info(`batchInsertWithReturningSyncExample is successful, changed is ${results.changed}`);
+    while(results.resultSet.goToNextRow()) {
+      const row = results.resultSet.getRow();
+      console.info(`batchInsertWithReturningSyncExample, name is ${row['NAME']}, age is ${row['AGE']}`);
+    }
+  } catch (e) {
+    console.error(`batchInsertWithReturningSyncExample failed. code is ${e.code}, message is ${e.message}`);
+  }
+}
+```
+
+```TypeScript
+function transBatchInsertWithReturningSyncExample(trans: relationalStore.Transaction)
+{
+  const valueBucket1: relationalStore.ValuesBucket = { 'NAME': 'zhangsan', 'AGE': 18 };
+  const valueBucket2: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 20 };
+  const config: relationalStore.ReturningConfig = { columns: ['NAME', 'AGE'] };
+  const valueBuckets = new Array(valueBucket1, valueBucket2);
+  try {
+    let results = trans.batchInsertWithReturningSync("EMPLOYEE", valueBuckets, config);
+    console.info(`transBatchInsertWithReturningSyncExample is successful, changed is ${results.changed}`);
+    while(results.resultSet.goToNextRow()) {
+      const row = results.resultSet.getRow();
+      console.info(`transBatchInsertWithReturningSyncExample, name is ${row['NAME']}, age is ${row['AGE']}`);
+    }
+  } catch (e) {
+    console.error(`transBatchInsertWithReturningSyncExample failed. code is ${e.code}, message is ${e.message}`);
+  }
+}
+```
+
 ## commit
 
 ```TypeScript
@@ -400,6 +911,68 @@ Commits this executed SQL statement. This API uses a promise to return the resul
 | [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+
+**Examples**
+
+```TypeScript
+let value1 = "Lisa";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3]);
+
+if (store != undefined) {
+  (store as relationalStore.RdbStore).beginTransaction();
+  const valueBucket: relationalStore.ValuesBucket = {
+    'NAME': value1,
+    'AGE': value2,
+    'SALARY': value3,
+    'CODES': value4
+  };
+  (store as relationalStore.RdbStore).insert("test", valueBucket);
+  (store as relationalStore.RdbStore).commit();
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+if (store != null) {
+  let txId: number;
+  (store as relationalStore.RdbStore).beginTrans().then((temTxId: number) => {
+    txId = temTxId;
+    (store as relationalStore.RdbStore).execute("DELETE FROM TEST WHERE age = ? OR age = ?", txId, ["18", "20"])
+      .then(() => {
+        if (txId !== undefined) {
+          (store as relationalStore.RdbStore).commit(txId);
+        }
+      })
+      .catch((err: BusinessError) => {
+        if (txId !== undefined) {
+          (store as relationalStore.RdbStore).rollback(txId);
+        }
+        console.error(`execute sql failed, code is ${err.code},message is ${err.message}`);
+      });
+  });
+}
+```
+
+```TypeScript
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      await transaction.execute('CREATE TABLE IF NOT EXISTS test (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, age INTEGER, salary REAL)');
+      await transaction.commit();
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`execute sql failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
 
 ## delete
 
@@ -447,6 +1020,59 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object.
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Lisa");
+if (store != undefined) {
+  (store as relationalStore.RdbStore).delete(predicates, (err, rows) => {
+    if (err) {
+      console.error(`Delete failed, code is ${err.code},message is ${err.message}`);
+      return;
+    }
+    console.info(`Delete rows: ${rows}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Lisa");
+if (store != undefined) {
+  (store as relationalStore.RdbStore).delete(predicates).then((rows: number) => {
+    console.info(`Delete rows: ${rows}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Delete failed, code is ${err.code},message is ${err.message}`);
+  });
+}
+```
+
+```TypeScript
+let predicates2 = new relationalStore.RdbPredicates('EMPLOYEE');
+predicates2.equalTo('NAME', 'Lisa');
+
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      const rows = await transaction.delete(predicates2);
+      await transaction.commit();
+      console.info(`Delete rows: ${rows}`);
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`Delete failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## deleteSync
 
 ```TypeScript
@@ -493,6 +1119,43 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object.
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Lisa");
+if (store != undefined) {
+  try {
+    let rows: number = (store as relationalStore.RdbStore).deleteSync(predicates);
+    console.info(`Delete rows: ${rows}`);
+  } catch (err) {
+    console.error(`Delete failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+let predicates3 = new relationalStore.RdbPredicates('EMPLOYEE');
+predicates3.equalTo('NAME', 'Lisa');
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      let rows = transaction.deleteSync(predicates3);
+      await transaction.commit();
+      console.info(`Delete rows: ${rows}`);
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`Delete failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## deleteWithReturning
 
 ```TypeScript
@@ -538,6 +1201,50 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object 
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
+**Examples**
+
+```TypeScript
+async function deleteWithReturningExample(rdbStore: relationalStore.RdbStore)
+{
+  const valueBucket1: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 21 };
+  const valueBucket2: relationalStore.ValuesBucket = { 'NAME': 'zhangsan', 'AGE': 18 };
+  let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+  const config: relationalStore.ReturningConfig = { columns: ['NAME', 'AGE'] };
+  try {
+    rdbStore.batchInsertWithReturningSync("EMPLOYEE", [valueBucket1, valueBucket2], config);
+    let results = await rdbStore.deleteWithReturning(predicates, config);
+    console.info(`deleteWithReturningExample is successful, changed is ${results.changed}`);
+    while(results.resultSet.goToNextRow()) {
+      const row = results.resultSet.getRow();
+      console.info(`deleteWithReturningExample, name is ${row['NAME']}, age is ${row['AGE']}`);
+    }
+  } catch (e) {
+    console.error(`deleteWithReturningExample failed. code is ${e.code}, message is ${e.message}`);
+  }
+}
+```
+
+```TypeScript
+async function transDeleteWithReturningExample(trans: relationalStore.Transaction)
+{
+  const valueBucket1: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 21 };
+  const valueBucket2: relationalStore.ValuesBucket = { 'NAME': 'zhangsan', 'AGE': 18 };
+  let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+  const config: relationalStore.ReturningConfig = { columns: ['NAME', 'AGE'] };
+  try {
+    trans.batchInsertWithReturningSync("EMPLOYEE", [valueBucket1, valueBucket2], config);
+    let results = await trans.deleteWithReturning(predicates, config);
+    console.info(`transDeleteWithReturningExample is successful, changed is ${results.changed}`);
+    while(results.resultSet.goToNextRow()) {
+      const row = results.resultSet.getRow();
+      console.info(`transDeleteWithReturningExample, name is ${row['NAME']}, age is ${row['AGE']}`);
+    }
+  } catch (e) {
+    console.error(`transDeleteWithReturningExample failed. code is ${e.code}, message is ${e.message}`);
+  }
+}
+```
+
 ## deleteWithReturningSync
 
 ```TypeScript
@@ -582,6 +1289,50 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object 
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+
+**Examples**
+
+```TypeScript
+function deleteWithReturningSyncExample(rdbStore: relationalStore.RdbStore)
+{
+  const valueBucket1: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 21 };
+  const valueBucket2: relationalStore.ValuesBucket = { 'NAME': 'zhangsan', 'AGE': 18 };
+  let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+  const config: relationalStore.ReturningConfig = { columns: ['NAME', 'AGE'] };
+  try {
+    rdbStore.batchInsertWithReturningSync("EMPLOYEE", [valueBucket1, valueBucket2], config);
+    let results = rdbStore.deleteWithReturningSync(predicates, config);
+    console.info(`deleteWithReturningSyncExample is successful, changed is ${results.changed}`);
+    while(results.resultSet.goToNextRow()) {
+      const row = results.resultSet.getRow();
+      console.info(`deleteWithReturningSyncExample, name is ${row['NAME']}, age is ${row['AGE']}`);
+    }
+  } catch (e) {
+    console.error(`deleteWithReturningSyncExample failed. code is ${e.code}, message is ${e.message}`);
+  }
+}
+```
+
+```TypeScript
+function transDeleteWithReturningSyncExample(trans: relationalStore.Transaction)
+{
+  const valueBucket1: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 21 };
+  const valueBucket2: relationalStore.ValuesBucket = { 'NAME': 'zhangsan', 'AGE': 18 };
+  let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+  const config: relationalStore.ReturningConfig = { columns: ['NAME', 'AGE'] };
+  try {
+    trans.batchInsertWithReturningSync("EMPLOYEE", [valueBucket1, valueBucket2], config);
+    let results = trans.deleteWithReturningSync(predicates, config);
+    console.info(`transDeleteWithReturningSyncExample is successful, changed is ${results.changed}`);
+    while(results.resultSet.goToNextRow()) {
+      const row = results.resultSet.getRow();
+      console.info(`transDeleteWithReturningSyncExample, name is ${row['NAME']}, age is ${row['AGE']}`);
+    }
+  } catch (e) {
+    console.error(`transDeleteWithReturningSyncExample failed. code is ${e.code}, message is ${e.message}`);
+  }
+}
+```
 
 ## execute
 
@@ -636,6 +1387,103 @@ Statements starting with comments are not supported.
 | [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+
+**Examples**
+
+RDB store:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Check the RDB store integrity.
+if (store != undefined) {
+  const SQL_CHECK_INTEGRITY = 'PRAGMA integrity_check';
+  (store as relationalStore.RdbStore).execute(SQL_CHECK_INTEGRITY).then((data) => {
+    console.info(`check result: ${data}`);
+  }).catch((err: BusinessError) => {
+    console.error(`check failed, code is ${err.code}, message is ${err.message}`);
+  });
+}
+
+// Delete all data from the table.
+if (store != undefined) {
+  const SQL_DELETE_TABLE = 'DELETE FROM test';
+  (store as relationalStore.RdbStore).execute(SQL_DELETE_TABLE).then((data) => {
+    console.info(`delete result: ${data}`);
+  }).catch((err: BusinessError) => {
+    console.error(`delete failed, code is ${err.code}, message is ${err.message}`);
+  });
+}
+
+// Delete a table.
+if (store != undefined) {
+  const SQL_DROP_TABLE = 'DROP TABLE test';
+  (store as relationalStore.RdbStore).execute(SQL_DROP_TABLE).then((data) => {
+    console.info(`drop result: ${data}`);
+  }).catch((err: BusinessError) => {
+    console.error(`drop failed, code is ${err.code}, message is ${err.message}`);
+  });
+}
+```
+
+Vector store:
+
+```TypeScript
+// FLOATVECTOR(2) is a vector property with a dimension of 2. The subsequent repr operation should be performed based on this dimension.
+let createSql = "CREATE TABLE test (ID INTEGER PRIMARY KEY,REPR FLOATVECTOR(2));";
+// Create a table.
+await store!.execute(createSql);
+// Insert data with parameter binding.
+let insertSql = "insert into test VALUES(?, ?);";
+const vectorValue: Float32Array = Float32Array.from([1.5, 6.6]);
+await store!.execute(insertSql, [0, vectorValue]);
+// Execute without using bound parameters.
+await store!.execute("insert into test values(1, '[3.5, 1.8]');");
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+if (store != null) {
+  let txId: number;
+  (store as relationalStore.RdbStore).beginTrans().then((temTxId: number) => {
+    txId = temTxId;
+    (store as relationalStore.RdbStore).execute("DELETE FROM TEST WHERE age = ? OR age = ?", txId, ["18", "20"])
+      .then(() => {
+        if (txId !== undefined) {
+          (store as relationalStore.RdbStore).commit(txId);
+        }
+      })
+      .catch((err: BusinessError) => {
+        if (txId !== undefined) {
+          (store as relationalStore.RdbStore).rollback(txId);
+        }
+        console.error(`execute sql failed, code is ${err.code},message is ${err.message}`);
+      });
+  });
+}
+```
+
+```TypeScript
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      // Delete all data from the table.
+      const SQL_DELETE_TABLE = 'DELETE FROM EMPLOYEE';
+      const data = await transaction.execute(SQL_DELETE_TABLE);
+      await transaction.commit();
+      console.info(`delete result: ${data}`);
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`delete failed, code is ${err.code}, message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
 
 ## executeSync
 
@@ -693,6 +1541,65 @@ Statements starting with comments are not supported.
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
+**Examples**
+
+```TypeScript
+// Check the RDB store integrity.
+if (store != undefined) {
+  const SQL_CHECK_INTEGRITY = 'PRAGMA integrity_check';
+  try {
+    let data = (store as relationalStore.RdbStore).executeSync(SQL_CHECK_INTEGRITY);
+    console.info(`check result: ${data}`);
+  } catch (err) {
+    console.error(`check failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+
+// Delete all data from the table.
+if (store != undefined) {
+  const SQL_DELETE_TABLE = 'DELETE FROM test';
+  try {
+    let data = (store as relationalStore.RdbStore).executeSync(SQL_DELETE_TABLE);
+    console.info(`delete result: ${data}`);
+  } catch (err) {
+    console.error(`delete failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+
+// Delete a table.
+if (store != undefined) {
+  const SQL_DROP_TABLE = 'DROP TABLE test';
+  try {
+    let data = (store as relationalStore.RdbStore).executeSync(SQL_DROP_TABLE);
+    console.info(`drop result: ${data}`);
+  } catch (err) {
+    console.error(`drop failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+// Delete all data from the table.
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      const SQL_DELETE_TABLE = 'DELETE FROM EMPLOYEE';
+      let data = transaction.executeSync(SQL_DELETE_TABLE);
+      await transaction.commit();
+      console.info(`delete result: ${data}`);
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`delete failed, code is ${err.code}, message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## insert
 
 ```TypeScript
@@ -742,6 +1649,184 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 | [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+
+**Examples**
+
+```TypeScript
+let value1 = "Lisa";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+
+// You can use either of the following:
+const valueBucket1: relationalStore.ValuesBucket = {
+  'NAME': value1,
+  'AGE': value2,
+  'SALARY': value3,
+  'CODES': value4
+};
+const valueBucket2: relationalStore.ValuesBucket = {
+  NAME: value1,
+  AGE: value2,
+  SALARY: value3,
+  CODES: value4
+};
+const valueBucket3: relationalStore.ValuesBucket = {
+  "NAME": value1,
+  "AGE": value2,
+  "SALARY": value3,
+  "CODES": value4
+};
+
+if (store != undefined) {
+  (store as relationalStore.RdbStore).insert("EMPLOYEE", valueBucket1, (err: BusinessError, rowId: number) => {
+    if (err) {
+      console.error(`Insert is failed, code is ${err.code},message is ${err.message}`);
+      return;
+    }
+    console.info(`Insert is successful, rowId = ${rowId}`);
+  });
+}
+```
+
+```TypeScript
+let value1 = "Lisa";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+
+// You can use either of the following:
+const valueBucket1: relationalStore.ValuesBucket = {
+  'NAME': value1,
+  'AGE': value2,
+  'SALARY': value3,
+  'CODES': value4
+};
+const valueBucket2: relationalStore.ValuesBucket = {
+  NAME: value1,
+  AGE: value2,
+  SALARY: value3,
+  CODES: value4
+};
+const valueBucket3: relationalStore.ValuesBucket = {
+  "NAME": value1,
+  "AGE": value2,
+  "SALARY": value3,
+  "CODES": value4
+};
+
+if (store != undefined) {
+  (store as relationalStore.RdbStore).insert("EMPLOYEE", valueBucket1, relationalStore.ConflictResolution.ON_CONFLICT_REPLACE,
+    (err: BusinessError, rowId: number) => {
+      if (err) {
+        console.error(`Insert is failed, code is ${err.code},message is ${err.message}`);
+        return;
+      }
+      console.info(`Insert is successful, rowId = ${rowId}`);
+    });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let value1 = "Lisa";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+
+// You can use either of the following:
+const valueBucket1: relationalStore.ValuesBucket = {
+  'NAME': value1,
+  'AGE': value2,
+  'SALARY': value3,
+  'CODES': value4
+};
+const valueBucket2: relationalStore.ValuesBucket = {
+  NAME: value1,
+  AGE: value2,
+  SALARY: value3,
+  CODES: value4
+};
+const valueBucket3: relationalStore.ValuesBucket = {
+  "NAME": value1,
+  "AGE": value2,
+  "SALARY": value3,
+  "CODES": value4
+};
+
+if (store != undefined) {
+  (store as relationalStore.RdbStore).insert("EMPLOYEE", valueBucket1).then((rowId: number) => {
+    console.info(`Insert is successful, rowId = ${rowId}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Insert is failed, code is ${err.code},message is ${err.message}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let value1 = "Lisa";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+
+// You can use either of the following:
+const valueBucket1: relationalStore.ValuesBucket = {
+  'NAME': value1,
+  'AGE': value2,
+  'SALARY': value3,
+  'CODES': value4
+};
+const valueBucket2: relationalStore.ValuesBucket = {
+  NAME: value1,
+  AGE: value2,
+  SALARY: value3,
+  CODES: value4
+};
+const valueBucket3: relationalStore.ValuesBucket = {
+  "NAME": value1,
+  "AGE": value2,
+  "SALARY": value3,
+  "CODES": value4
+};
+
+if (store != undefined) {
+  (store as relationalStore.RdbStore).insert("EMPLOYEE", valueBucket1, relationalStore.ConflictResolution.ON_CONFLICT_REPLACE).then((rowId: number) => {
+    console.info(`Insert is successful, rowId = ${rowId}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Insert is failed, code is ${err.code},message is ${err.message}`);
+  });
+}
+```
+
+```TypeScript
+const valueBucket1: relationalStore.ValuesBucket = {
+  NAME: 'Lisa',
+  AGE: 18,
+  SALARY: 100.5,
+  CODES: new Uint8Array([1, 2, 3, 4, 5])
+};
+
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      const rowId = await transaction.insert('EMPLOYEE', valueBucket1, relationalStore.ConflictResolution.ON_CONFLICT_REPLACE);
+      await transaction.commit();
+      console.info(`Insert is successful, rowId = ${rowId}`);
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`Insert is failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
 
 ## insertSync
 
@@ -794,6 +1879,99 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
+**Examples**
+
+```TypeScript
+let value1 = "Lisa";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+
+// You can use either of the following:
+const valueBucket1: relationalStore.ValuesBucket = {
+  'NAME': value1,
+  'AGE': value2,
+  'SALARY': value3,
+  'CODES': value4
+};
+const valueBucket2: relationalStore.ValuesBucket = {
+  NAME: value1,
+  AGE: value2,
+  SALARY: value3,
+  CODES: value4
+};
+const valueBucket3: relationalStore.ValuesBucket = {
+  "NAME": value1,
+  "AGE": value2,
+  "SALARY": value3,
+  "CODES": value4
+};
+
+if (store != undefined) {
+  try {
+    let rowId: number = (store as relationalStore.RdbStore).insertSync("EMPLOYEE", valueBucket1, relationalStore.ConflictResolution.ON_CONFLICT_REPLACE);
+    console.info(`Insert is successful, rowId = ${rowId}`);
+  } catch (err) {
+    console.error(`Insert is failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { sendableRelationalStore } from '@kit.ArkData';
+
+const valuesBucket: relationalStore.ValuesBucket = {
+  "NAME": 'hangman',
+  "AGE": 18,
+  "SALARY": 100.5,
+  "CODES": new Uint8Array([1, 2, 3])
+};
+const sendableValuesBucket = sendableRelationalStore.toSendableValuesBucket(valuesBucket);
+
+if (store != undefined) {
+  try {
+    let rowId: number = (store as relationalStore.RdbStore).insertSync("EMPLOYEE", sendableValuesBucket, relationalStore.ConflictResolution.ON_CONFLICT_REPLACE);
+    console.info(`Insert is successful, rowId = ${rowId}`);
+  } catch (err) {
+    console.error(`Insert is failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+let value5 = 'Lisa';
+let value6 = 18;
+let value7 = 100.5;
+let value8 = new Uint8Array([1, 2, 3, 4, 5]);
+
+const valueBucket2: relationalStore.ValuesBucket = {
+  NAME: value5,
+  AGE: value6,
+  SALARY: value7,
+  CODES: value8
+};
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      let rowId: number = transaction.insertSync(
+        'EMPLOYEE',
+        valueBucket2,
+        relationalStore.ConflictResolution.ON_CONFLICT_REPLACE
+      );
+      await transaction.commit();
+      console.info(`Insert is successful, rowId = ${rowId}`);
+    } catch (e) {
+      await transaction.rollback();
+      console.error(`Insert is failed, code is ${e.code},message is ${e.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## insertSync
 
 ```TypeScript
@@ -842,6 +2020,10 @@ Inserts a row of data into the target table with sync interface, just use in Tas
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
+**Examples**
+
+See [insertSync](#insertsync)
+
 ## query
 
 ```TypeScript
@@ -883,6 +2065,128 @@ Queries data from the RDB store based on specified conditions. This API uses a p
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Rose");
+if (store != undefined) {
+  (store as relationalStore.RdbStore).query(predicates, async (err, resultSet) => {
+    if (err) {
+      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+      return;
+    }
+    console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
+    // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
+    try {
+      while (resultSet.goToNextRow()) {
+        const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+        const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+        const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+        const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+      }
+    } catch (err) {
+      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+    } finally {
+      // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+      resultSet.close();
+    }
+  });
+}
+```
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Rose");
+if (store != undefined) {
+  (store as relationalStore.RdbStore).query(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"], async (err, resultSet) => {
+    if (err) {
+      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+      return;
+    }
+    console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
+    // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
+    try {
+      while (resultSet.goToNextRow()) {
+        const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+        const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+        const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+        const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+      }
+    } catch (err) {
+      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+    } finally {
+      // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+      resultSet.close();
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Rose");
+if (store != undefined) {
+  (store as relationalStore.RdbStore).query(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"]).then(async (resultSet: relationalStore.ResultSet) => {
+    console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
+    // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
+    try {
+      while (resultSet.goToNextRow()) {
+        const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+        const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+        const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+        const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+      }
+    } catch (err) {
+      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+    } finally {
+      // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+      resultSet.close();
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+  });
+}
+```
+
+```TypeScript
+let predicates4 = new relationalStore.RdbPredicates('EMPLOYEE');
+predicates4.equalTo('NAME', 'Rose');
+
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      const resultSet = await transaction.query(predicates4, ['ID', 'NAME', 'AGE', 'SALARY', 'CODES']);
+      console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
+      // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
+      while (resultSet.goToNextRow()) {
+        const id = resultSet.getLong(resultSet.getColumnIndex('ID'));
+        const name = resultSet.getString(resultSet.getColumnIndex('NAME'));
+        const age = resultSet.getLong(resultSet.getColumnIndex('AGE'));
+        const salary = resultSet.getDouble(resultSet.getColumnIndex('SALARY'));
+        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+      }
+      // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+      resultSet.close();
+      await transaction.commit();
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
 
 ## querySql
 
@@ -927,6 +2231,148 @@ Queries data in the RDB store using the specified SQL statement. The number of r
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
+**Examples**
+
+RDB store:
+
+```TypeScript
+if (store != undefined) {
+  (store as relationalStore.RdbStore).querySql("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = 'sanguo'", async (err, resultSet) => {
+    if (err) {
+      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+      return;
+    }
+    console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
+    // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
+    try {
+      while (resultSet.goToNextRow()) {
+        const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+        const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+        const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+        const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+      }
+    } catch (err) {
+      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+    } finally {
+      // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+      resultSet.close();
+    }
+  });
+}
+```
+
+Vector store:
+
+```TypeScript
+// <-> means to calculate vector similarity, and <=> means to calculate the cosine distance.
+const querySql = "select id, repr <-> '[1.5,5.6]' as distance from test ORDER BY repr <-> '[1.5,5.6]' limit 10 offset 1;";
+let resultSet = await store.querySql(querySql);
+
+// Aggregate query. GROUP BY supports multiple columns.
+const querySql1 = "select id, repr from test group by id, repr having max(repr<=>'[1.5,5.6]');";
+let resultSet1 = await store.querySql(querySql1);
+
+// Subquery. A maximum of 32 nested layers are supported.
+const querySql2 = "select * from test where id in (select id from test1)";
+let resultSet2 = await store.querySql(querySql2);
+```
+
+```TypeScript
+if (store != undefined) {
+  (store as relationalStore.RdbStore).querySql("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = ?", ['sanguo'], async (err, resultSet) => {
+    if (err) {
+      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+      return;
+    }
+    console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
+    // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
+    try {
+      while (resultSet.goToNextRow()) {
+        const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+        const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+        const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+        const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+      }
+    } catch (err) {
+      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+    } finally {
+      // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+      resultSet.close();
+    }
+  });
+}
+```
+
+RDB store:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (store != undefined) {
+  (store as relationalStore.RdbStore).querySql("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = 'sanguo'").then(async (resultSet: relationalStore.ResultSet) => {
+    console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
+    // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
+    try {
+      while (resultSet.goToNextRow()) {
+        const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+        const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+        const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+        const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+      }
+    } catch (err) {
+      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+    } finally {
+      // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+      resultSet.close();
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+  });
+}
+```
+
+Vector store:
+
+```TypeScript
+// Query the top 10 records with ID of 1 and the similarity to [1.5, 2.5] is less than 0.5, and sort them in ascending order by similarity.
+const querySql = "select id, repr <-> ? as distance from test where id = ? and repr <-> ? < 0.5 ORDER BY repr <-> ? limit 10;";
+const vectorValue: Float32Array = new Float32Array([1.5, 2.5]);
+let resultSet = await store.querySql(querySql, [vectorValue, 1, vectorValue, vectorValue]);
+```
+
+```TypeScript
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      const resultSet = await transaction.querySql("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = 'sanguo'");
+      console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
+      // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
+      while (resultSet.goToNextRow()) {
+        const id = resultSet.getLong(resultSet.getColumnIndex('ID'));
+        const name = resultSet.getString(resultSet.getColumnIndex('NAME'));
+        const age = resultSet.getLong(resultSet.getColumnIndex('AGE'));
+        const salary = resultSet.getDouble(resultSet.getColumnIndex('SALARY'));
+        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+      }
+      // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+      resultSet.close();
+      await transaction.commit();
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## querySqlSync
 
 ```TypeScript
@@ -970,6 +2416,63 @@ Queries data in the RDB store using the specified SQL statement. The number of r
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
+**Examples**
+
+```TypeScript
+if (store != undefined) {
+  let resultSet: relationalStore.ResultSet | undefined;
+  try {
+    resultSet = store.querySqlSync("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = 'sanguo'");
+    console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
+    // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
+    while (resultSet.goToNextRow()) {
+      const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+      const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+      const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+      const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+      console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+    }
+  } catch (err) {
+    console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+  } finally {
+    // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+    if (resultSet) {
+      resultSet.close();
+    }
+  }
+}
+```
+
+```TypeScript
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      let resultSet = transaction.querySqlSync("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = 'sanguo'");
+      console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
+      // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
+      while (resultSet.goToNextRow()) {
+        const id = resultSet.getLong(resultSet.getColumnIndex('ID'));
+        const name = resultSet.getString(resultSet.getColumnIndex('NAME'));
+        const age = resultSet.getLong(resultSet.getColumnIndex('AGE'));
+        const salary = resultSet.getDouble(resultSet.getColumnIndex('SALARY'));
+        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+      }
+      // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+      resultSet.close();
+      await transaction.commit();
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## querySqlWithoutRowCount
 
 ```TypeScript
@@ -1006,6 +2509,72 @@ Queries data from the RDB store based on specified conditions without calculatin
 | [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
+**Examples**
+
+```TypeScript
+async function querySqlWithoutRowCountEmployee(store : relationalStore.RdbStore) {
+  if (store != undefined) {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    try {
+      resultSet = await store.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+      if (resultSet != undefined) {
+        // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
+        while (resultSet.goToNextRow()) {
+          const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+          const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+          const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+          const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+          console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+        }
+      }
+    } catch (err) {
+      console.error(`Query failed, code is ${err.code}, message is ${err.message}`);
+    } finally {
+      // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+      if (resultSet != undefined) {
+        resultSet.close();
+      }
+    }
+  }
+}
+```
+
+```TypeScript
+async function querySqlWithoutRowCountExample(store : relationalStore.RdbStore) {
+  if (store != undefined) {
+    try {
+    const transaction = await store.createTransaction();
+    let resultSet: relationalStore.LiteResultSet | undefined;
+      try {
+        resultSet = await transaction.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+        if (resultSet != undefined) {
+          // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
+          while (resultSet.goToNextRow()) {
+            const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+            const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+            const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+            const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+            console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+          }
+          // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+          resultSet.close();
+        }
+        await transaction.commit();
+      } catch (err) {
+        console.error(`Query failed, code is ${err.code}, message is ${err.message}`);
+        // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+        if (resultSet != undefined) {
+          resultSet.close();
+        }
+        await transaction.rollback();
+      }
+    } catch (err) {
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+    }
+  }
+}
+```
+
 ## querySqlWithoutRowCountSync
 
 ```TypeScript
@@ -1041,6 +2610,70 @@ Queries data from the RDB store based on specified SQL statements without calcul
 | --- | --- |
 | [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+
+**Examples**
+
+```TypeScript
+if (store != undefined) {
+  let resultSet: relationalStore.LiteResultSet | undefined;
+  try {
+    resultSet = store.querySqlWithoutRowCountSync('select * from EMPLOYEE where name = ?', ["Rose"]);
+    if (resultSet != undefined) {
+      // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
+      while (resultSet.goToNextRow()) {
+        const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+        const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+        const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+        const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+      }
+    }
+  } catch (err) {
+    console.error(`Query failed, code is ${err.code}, message is ${err.message}`);
+  } finally {
+    // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+    if (resultSet != undefined) {
+      resultSet.close();
+    }
+  }
+}
+```
+
+```TypeScript
+async function querySqlWithoutRowCountSyncExample(store : relationalStore.RdbStore) {
+  if (store != undefined) {
+    try {
+    const transaction = await store.createTransaction();
+    let resultSet: relationalStore.LiteResultSet | undefined;
+      try {
+        resultSet = transaction.querySqlWithoutRowCountSync('select * from EMPLOYEE where name = ?', ["Rose"]);
+        if (resultSet != undefined) {
+          // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
+          while (resultSet.goToNextRow()) {
+            const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+            const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+            const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+            const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+            console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+          }
+          // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+          resultSet.close();
+        }
+        await transaction.commit();
+      } catch (err) {
+        console.error(`Query failed, code is ${err.code}, message is ${err.message}`);
+        // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+        if (resultSet != undefined) {
+          resultSet.close();
+        }
+        await transaction.rollback();
+      }
+    } catch (err) {
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+    }
+  }
+}
+```
 
 ## querySync
 
@@ -1085,6 +2718,68 @@ Queries data in a database based on specified conditions. This API returns the r
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Rose");
+if (store != undefined) {
+  let resultSet: relationalStore.ResultSet | undefined;
+  try {
+    resultSet = store.querySync(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+    console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
+    // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
+    while (resultSet.goToNextRow()) {
+      const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+      const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+      const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+      const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+      console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+    }
+  } catch (err) {
+    console.error(`Query failed, code is ${err.code}, message is ${err.message}`);
+  } finally {
+    // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+    if (resultSet) {
+      resultSet.close();
+    }
+  }
+}
+```
+
+```TypeScript
+let predicates5 = new relationalStore.RdbPredicates('EMPLOYEE');
+predicates5.equalTo('NAME', 'Rose');
+
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      let resultSet = transaction.querySync(predicates5, ['ID', 'NAME', 'AGE', 'SALARY', 'CODES']);
+      console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
+      // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
+      while (resultSet.goToNextRow()) {
+        const id = resultSet.getLong(resultSet.getColumnIndex('ID'));
+        const name = resultSet.getString(resultSet.getColumnIndex('NAME'));
+        const age = resultSet.getLong(resultSet.getColumnIndex('AGE'));
+        const salary = resultSet.getDouble(resultSet.getColumnIndex('SALARY'));
+        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+      }
+      // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+      resultSet.close();
+      await transaction.commit();
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## queryWithoutRowCount
 
 ```TypeScript
@@ -1119,6 +2814,76 @@ Queries data from the RDB store based on specified conditions without calculatin
 | Error Code ID | Error Message |
 | --- | --- |
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+
+**Examples**
+
+```TypeScript
+async function queryWithoutRowCountEmployee(store : relationalStore.RdbStore) {
+  let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+  predicates.equalTo("NAME", "Rose");
+  if (store != undefined) {
+    let resultSet: relationalStore.LiteResultSet | undefined;
+    try {
+      resultSet = await store.queryWithoutRowCount(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+      if (resultSet != undefined) {
+        // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
+        while (resultSet.goToNextRow()) {
+          const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+          const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+          const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+          const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+          console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+        }
+      }
+    } catch (err) {
+      console.error(`Query failed, code is ${err.code}, message is ${err.message}`);
+    } finally {
+      // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+      if (resultSet != undefined) {
+        resultSet.close();
+      }
+    }
+  }
+}
+```
+
+```TypeScript
+async function queryWithoutRowCountExample(store : relationalStore.RdbStore) {
+  let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+  predicates.equalTo("NAME", "Rose");
+  if (store != undefined) {
+    try {
+      const transaction = await store.createTransaction();
+      let resultSet: relationalStore.LiteResultSet | undefined;
+      try {
+        resultSet = await transaction.queryWithoutRowCount(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+        if (resultSet != undefined) {
+          // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
+          while (resultSet.goToNextRow()) {
+            const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+            const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+            const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+            const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+            console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+          }
+          // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+          resultSet.close();
+        }
+        await transaction.commit();
+      } catch (err) {
+        console.error(`Query failed, code is ${err.code}, message is ${err.message}`);
+        // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+        if (resultSet != undefined) {
+          resultSet.close();
+        }
+        await transaction.rollback();
+      }
+    } catch (err) {
+      console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+    }
+  }
+}
+```
 
 ## queryWithoutRowCountSync
 
@@ -1155,6 +2920,74 @@ Queries data from the RDB store based on specified conditions without calculatin
 | --- | --- |
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
+**Examples**
+
+```TypeScript
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Rose");
+if (store != undefined) {
+  let resultSet: relationalStore.LiteResultSet | undefined;
+  try {
+    resultSet = store.queryWithoutRowCountSync(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+    if (resultSet != undefined) {
+      // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
+      while (resultSet.goToNextRow()) {
+        const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+        const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+        const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+        const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+      }
+    }
+  } catch (err) {
+    console.error(`Query failed, code is ${err.code}, message is ${err.message}`);
+  } finally {
+    // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+    if (resultSet != undefined) {
+      resultSet.close();
+    }
+  }
+}
+```
+
+```TypeScript
+async function queryWithoutRowCountSyncExample(store : relationalStore.RdbStore) {
+  let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+  predicates.equalTo("NAME", "Rose");
+  if (store != undefined) {
+    try {
+      const transaction = await store.createTransaction();
+      let resultSet: relationalStore.LiteResultSet | undefined;
+      try {
+        resultSet = transaction.queryWithoutRowCountSync(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+        if (resultSet != undefined) {
+          // resultSet is a cursor of a data set. By default, the cursor points to the -1st record. Valid data starts from 0.
+          while (resultSet.goToNextRow()) {
+            const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+            const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+            const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+            const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+            console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+          }
+          // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+          resultSet.close();
+        }
+        await transaction.commit();
+      } catch (err) {
+        console.error(`Query failed, code is ${err.code}, message is ${err.message}`);
+        // Release the memory of resultSet. If the memory is not released, FD or memory leaks may occur.
+        if (resultSet != undefined) {
+          resultSet.close();
+        }
+        await transaction.rollback();
+      }
+    } catch (err) {
+      console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+    }
+  }
+}
+```
+
 ## rollback
 
 ```TypeScript
@@ -1188,6 +3021,49 @@ Rolls back this executed SQL statement. This API uses a promise to return the re
 | [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+if (store != null) {
+  let txId: number;
+  (store as relationalStore.RdbStore).beginTrans().then((temTxId: number) => {
+    txId = temTxId;
+    (store as relationalStore.RdbStore).execute("DELETE FROM TEST WHERE age = ? OR age = ?", txId, ["18", "20"])
+      .then(() => {
+        if (txId !== undefined) {
+          (store as relationalStore.RdbStore).commit(txId);
+        }
+      })
+      .catch((err: BusinessError) => {
+        if (txId !== undefined) {
+          (store as relationalStore.RdbStore).rollback(txId);
+        }
+        console.error(`execute sql failed, code is ${err.code},message is ${err.message}`);
+      });
+  });
+}
+```
+
+```TypeScript
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      await transaction.execute('DELETE FROM TEST WHERE age = ? OR age = ?', ['18', '20']);
+      await transaction.commit();
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`execute sql failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
 
 ## update
 
@@ -1237,6 +3113,193 @@ Updates data based on the specified **RdbPredicates** object. This API uses a pr
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
+**Examples**
+
+```TypeScript
+let value1 = "Rose";
+let value2 = 22;
+let value3 = 200.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+
+// You can use either of the following:
+const valueBucket1: relationalStore.ValuesBucket = {
+  'NAME': value1,
+  'AGE': value2,
+  'SALARY': value3,
+  'CODES': value4
+};
+const valueBucket2: relationalStore.ValuesBucket = {
+  NAME: value1,
+  AGE: value2,
+  SALARY: value3,
+  CODES: value4
+};
+const valueBucket3: relationalStore.ValuesBucket = {
+  "NAME": value1,
+  "AGE": value2,
+  "SALARY": value3,
+  "CODES": value4
+};
+
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Lisa");
+if (store != undefined) {
+  (store as relationalStore.RdbStore).update(valueBucket1, predicates, (err, rows) => {
+    if (err) {
+      console.error(`Updated failed, code is ${err.code},message is ${err.message}`);
+      return;
+    }
+    console.info(`Updated row count: ${rows}`);
+  });
+}
+```
+
+```TypeScript
+let value1 = "Rose";
+let value2 = 22;
+let value3 = 200.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+
+// You can use either of the following:
+const valueBucket1: relationalStore.ValuesBucket = {
+  'NAME': value1,
+  'AGE': value2,
+  'SALARY': value3,
+  'CODES': value4
+};
+const valueBucket2: relationalStore.ValuesBucket = {
+  NAME: value1,
+  AGE: value2,
+  SALARY: value3,
+  CODES: value4
+};
+const valueBucket3: relationalStore.ValuesBucket = {
+  "NAME": value1,
+  "AGE": value2,
+  "SALARY": value3,
+  "CODES": value4
+};
+
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Lisa");
+if (store != undefined) {
+  (store as relationalStore.RdbStore).update(valueBucket1, predicates, relationalStore.ConflictResolution.ON_CONFLICT_REPLACE, (err, rows) => {
+    if (err) {
+      console.error(`Updated failed, code is ${err.code},message is ${err.message}`);
+      return;
+    }
+    console.info(`Updated row count: ${rows}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let value1 = "Rose";
+let value2 = 22;
+let value3 = 200.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+
+// You can use either of the following:
+const valueBucket1: relationalStore.ValuesBucket = {
+  'NAME': value1,
+  'AGE': value2,
+  'SALARY': value3,
+  'CODES': value4
+};
+const valueBucket2: relationalStore.ValuesBucket = {
+  NAME: value1,
+  AGE: value2,
+  SALARY: value3,
+  CODES: value4
+};
+const valueBucket3: relationalStore.ValuesBucket = {
+  "NAME": value1,
+  "AGE": value2,
+  "SALARY": value3,
+  "CODES": value4
+};
+
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Lisa");
+if (store != undefined) {
+  (store as relationalStore.RdbStore).update(valueBucket1, predicates).then(async (rows: number) => {
+    console.info(`Updated row count: ${rows}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Updated failed, code is ${err.code},message is ${err.message}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let value1 = "Rose";
+let value2 = 22;
+let value3 = 200.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+
+// You can use either of the following:
+const valueBucket1: relationalStore.ValuesBucket = {
+  'NAME': value1,
+  'AGE': value2,
+  'SALARY': value3,
+  'CODES': value4
+};
+const valueBucket2: relationalStore.ValuesBucket = {
+  NAME: value1,
+  AGE: value2,
+  SALARY: value3,
+  CODES: value4
+};
+const valueBucket3: relationalStore.ValuesBucket = {
+  "NAME": value1,
+  "AGE": value2,
+  "SALARY": value3,
+  "CODES": value4
+};
+
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Lisa");
+if (store != undefined) {
+  (store as relationalStore.RdbStore).update(valueBucket1, predicates, relationalStore.ConflictResolution.ON_CONFLICT_REPLACE).then(async (rows: number) => {
+    console.info(`Updated row count: ${rows}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Updated failed, code is ${err.code},message is ${err.message}`);
+  });
+}
+```
+
+```TypeScript
+const valueBucketF: relationalStore.ValuesBucket = {
+  NAME: 'Rose',
+  AGE: 22,
+  SALARY: 200.5,
+  CODES: new Uint8Array([1, 2, 3, 4, 5])
+};
+let predicates = new relationalStore.RdbPredicates('EMPLOYEE');
+predicates.equalTo('NAME', 'Lisa');
+
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      const rows = await transaction.update(valueBucketF, predicates, relationalStore.ConflictResolution.ON_CONFLICT_REPLACE);
+      await transaction.commit();
+      console.info(`Updated row count: ${rows}`);
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`Updated failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## updateSync
 
 ```TypeScript
@@ -1284,6 +3347,75 @@ Updates data in the RDB store based on the specified **RdbPredicates** object. T
 | [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+
+**Examples**
+
+```TypeScript
+let value1 = "Rose";
+let value2 = 22;
+let value3 = 200.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+
+// You can use either of the following:
+const valueBucket1: relationalStore.ValuesBucket = {
+  'NAME': value1,
+  'AGE': value2,
+  'SALARY': value3,
+  'CODES': value4
+};
+const valueBucket2: relationalStore.ValuesBucket = {
+  NAME: value1,
+  AGE: value2,
+  SALARY: value3,
+  CODES: value4
+};
+const valueBucket3: relationalStore.ValuesBucket = {
+  "NAME": value1,
+  "AGE": value2,
+  "SALARY": value3,
+  "CODES": value4
+};
+
+let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+predicates.equalTo("NAME", "Lisa");
+if (store != undefined) {
+  try {
+    let rows: number = (store as relationalStore.RdbStore).updateSync(valueBucket1, predicates, relationalStore.ConflictResolution.ON_CONFLICT_REPLACE);
+    console.info(`Updated row count: ${rows}`);
+  } catch (err) {
+    console.error(`Updated failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+const valueBucketG: relationalStore.ValuesBucket = {
+  NAME: 'Rose',
+  AGE: 22,
+  SALARY: 200.5,
+  CODES: new Uint8Array([1, 2, 3, 4, 5])
+};
+let predicates1 = new relationalStore.RdbPredicates('EMPLOYEE');
+predicates1.equalTo('NAME', 'Lisa');
+
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      let rows = transaction.updateSync(valueBucketG, predicates1, relationalStore.ConflictResolution.ON_CONFLICT_REPLACE);
+      await transaction.commit();
+      console.info(`Updated row count: ${rows}`);
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`Updated failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
 
 ## updateWithReturning
 
@@ -1335,6 +3467,56 @@ It is not recommended to use the **ON_CONFLICT_FAIL** policy for the **conflict*
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
+**Examples**
+
+```TypeScript
+async function updateWithReturningExample(rdbStore: relationalStore.RdbStore)
+{
+  const valueBucket1: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 21 };
+  const valueBucket2: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 18 };
+  let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+  predicates.equalTo('NAME', 'lisi');
+  const config: relationalStore.ReturningConfig = { columns: ['NAME', 'AGE'] };
+  try {
+    rdbStore.batchInsertWithReturningSync("EMPLOYEE", [valueBucket1, valueBucket2], config);
+    valueBucket1['NAME'] = "zhangsan";
+    valueBucket1['AGE'] = 18;
+    let results = await rdbStore.updateWithReturning(valueBucket1, predicates, config);
+    console.info(`updateWithReturningExample is successful, changed is ${results.changed}`);
+    while(results.resultSet.goToNextRow()) {
+      const row = results.resultSet.getRow();
+      console.info(`updateWithReturningExample, name is ${row['NAME']}, age is ${row['AGE']}`);
+    }
+  } catch (e) {
+    console.error(`updateWithReturningExample failed. code is ${e.code}, message is ${e.message}`);
+  }
+}
+```
+
+```TypeScript
+async function transUpdateWithReturningExample(trans: relationalStore.Transaction)
+{
+  const valueBucket1: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 21 };
+  const valueBucket2: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 18 };
+  let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+  predicates.equalTo('NAME', 'lisi');
+  const config: relationalStore.ReturningConfig = { columns: ['NAME', 'AGE'] };
+  try {
+    trans.batchInsertWithReturningSync("EMPLOYEE", [valueBucket1, valueBucket2], config);
+    valueBucket1['NAME'] = "zhangsan";
+    valueBucket1['AGE'] = 18;
+    let results = await trans.updateWithReturning(valueBucket1, predicates, config);
+    console.info(`transUpdateWithReturningExample is successful, changed is ${results.changed}`);
+    while(results.resultSet.goToNextRow()) {
+      const row = results.resultSet.getRow();
+      console.info(`transUpdateWithReturningExample, name is ${row['NAME']}, age is ${row['AGE']}`);
+    }
+  } catch (e) {
+    console.error(`transUpdateWithReturningExample failed. code is ${e.code}, message is ${e.message}`);
+  }
+}
+```
+
 ## updateWithReturningSync
 
 ```TypeScript
@@ -1384,4 +3566,54 @@ It is not recommended to use the **ON_CONFLICT_FAIL** policy for the **conflict*
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+
+**Examples**
+
+```TypeScript
+function updateWithReturningSyncExample(rdbStore: relationalStore.RdbStore)
+{
+  const valueBucket1: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 21 };
+  const valueBucket2: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 18 };
+  let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+  predicates.equalTo('NAME', 'lisi');
+  const config: relationalStore.ReturningConfig = { columns: ['NAME', 'AGE'] };
+  try {
+    rdbStore.batchInsertWithReturningSync("EMPLOYEE", [valueBucket1, valueBucket2], config);
+    valueBucket1['NAME'] = "zhangsan";
+    valueBucket1['AGE'] = 18;
+    let results = rdbStore.updateWithReturningSync(valueBucket1, predicates, config);
+    console.info(`updateWithReturningSyncExample is successful, changed is ${results.changed}`);
+    while(results.resultSet.goToNextRow()) {
+      const row = results.resultSet.getRow();
+      console.info(`updateWithReturningSyncExample, name is ${row['NAME']}, age is ${row['AGE']}`);
+    }
+  } catch (e) {
+    console.error(`updateWithReturningSyncExample failed. code is ${e.code}, message is ${e.message}`);
+  }
+}
+```
+
+```TypeScript
+function transUpdateWithReturningSyncExample(trans: relationalStore.Transaction)
+{
+  const valueBucket1: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 21 };
+  const valueBucket2: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 18 };
+  let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+  predicates.equalTo('NAME', 'lisi');
+  const config: relationalStore.ReturningConfig = { columns: ['NAME', 'AGE'] };
+  try {
+    trans.batchInsertWithReturningSync("EMPLOYEE", [valueBucket1, valueBucket2], config);
+    valueBucket1['NAME'] = "zhangsan";
+    valueBucket1['AGE'] = 18;
+    let results = trans.updateWithReturningSync(valueBucket1, predicates, config);
+    console.info(`transUpdateWithReturningSyncExample is successful, changed is ${results.changed}`);
+    while(results.resultSet.goToNextRow()) {
+      const row = results.resultSet.getRow();
+      console.info(`transUpdateWithReturningSyncExample, name is ${row['NAME']}, age is ${row['AGE']}`);
+    }
+  } catch (e) {
+    console.error(`transUpdateWithReturningSyncExample failed. code is ${e.code}, message is ${e.message}`);
+  }
+}
+```
 

@@ -12,5 +12,5 @@ import { IntentionCode } from '@kit.InputKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [IntentionCode(意图事件)](arkts-input-multimodalinputintentioncode-intentioncode-e.md) | 意图事件枚举值。 |
+| [IntentionCode(意图事件)](arkts-input-multimodalinput-intentioncode-intentioncode-e.md) | 意图事件枚举值。 |
 

@@ -31,7 +31,7 @@ Sets the window layout mode. This API uses an asynchronous callback to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | [WindowLayoutMode](arkts-arkui-window-windowlayoutmode-e-sys.md) | Yes | Window layout mode to set. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -54,6 +54,21 @@ try {
       return;
     }
     console.info('Succeeded in setting window layout mode.');
+  });
+} catch (exception) {
+  console.error(`Failed to set window layout mode. Cause code: ${exception.code}, message: ${exception.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let promise = window.setWindowLayoutMode(window.WindowLayoutMode.WINDOW_LAYOUT_MODE_CASCADE);
+  promise.then(() => {
+    console.info('Succeeded in setting window layout mode.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set window layout mode. Cause code: ${err.code}, message: ${err.message}`);
   });
 } catch (exception) {
   console.error(`Failed to set window layout mode. Cause code: ${exception.code}, message: ${exception.message}`);
@@ -101,18 +116,5 @@ Sets the window layout mode. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = window.setWindowLayoutMode(window.WindowLayoutMode.WINDOW_LAYOUT_MODE_CASCADE);
-  promise.then(() => {
-    console.info('Succeeded in setting window layout mode.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set window layout mode. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set window layout mode. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
+See [setWindowLayoutMode](#setwindowlayoutmode)
 

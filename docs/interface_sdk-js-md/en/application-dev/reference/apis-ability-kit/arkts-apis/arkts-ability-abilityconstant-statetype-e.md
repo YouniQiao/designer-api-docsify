@@ -1,6 +1,6 @@
 # StateType
 
-Enumerates the scenarios for saving application data. You can use it in [onSaveState()](arkts-ability-appabilityuiability-uiability-c.md#onsavestate) of the UIAbility to complete [UIAbility backup and restore](../../../application-models/ability-recover-guideline.md).
+Enumerates the scenarios for saving application data. You can use it in [onSaveState()](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate) of the UIAbility to complete [UIAbility backup and restore](../../../application-models/ability-recover-guideline.md).
 
 **Since:** 23
 
@@ -43,4 +43,19 @@ Application recovery scenario.
 <!--Device-StateType-APP_RECOVERY = 1--><!--Device-StateType-APP_RECOVERY = 1-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>) {
+    if (reason === AbilityConstant.StateType.CONTINUATION) {
+      console.info('Save the ability data when the ability continuation.');
+    }
+    return AbilityConstant.OnSaveResult.ALL_AGREE;
+  }
+}
+```
 

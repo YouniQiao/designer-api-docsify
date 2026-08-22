@@ -229,6 +229,10 @@ Get media asset custom record manager instance.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [23800107](../errorcode-medialibrary.md#23800107-context-is-empty-or-invalid) | Context is invalid @static |
 
+**Examples**
+
+See [getCustomRecordManagerInstance](#getcustomrecordmanagerinstance)
+
 ## getCustomRecords
 
 ```TypeScript

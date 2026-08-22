@@ -12,7 +12,7 @@ import { systemManager } from '@kit.MDMKit';
 function addKeyEventPolicies(admin: Want, keyPolicies: Array<KeyEventPolicy>): void
 ```
 
-添加按键事件处理策略。系统触发按键事件时，若匹配下发的按键事件策略，将通过 [EnterpriseAdminExtensionAbility.onKeyEvent](../../apis-default/arkts-apis/arkts-enterpriseenterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) 回调通知MDM应用，并携带匹配策略的按键事件信息。
+添加按键事件处理策略。系统触发按键事件时，若匹配下发的按键事件策略，将通过 [EnterpriseAdminExtensionAbility.onKeyEvent](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) 回调通知MDM应用，并携带匹配策略的按键事件信息。
 
 **起始版本：** 23
 
@@ -28,8 +28,8 @@ function addKeyEventPolicies(admin: Want, keyPolicies: Array<KeyEventPolicy>): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| keyPolicies | Array&lt;[KeyEventPolicy](arkts-mdm-systemmanager-keyeventpolicy-i.md)&gt; | 是 | 按键策略。支持物理按键（电源键、音量加、音量减），导航键（回退、主页、最近打开）。物理键支持任意组合为组合键，导航键不支持组合。组合键事 件响应详见按键事件回调 [onKeyEvent](../../apis-default/arkts-apis/arkts-enterpriseenterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) 接口。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| keyPolicies | Array&lt;[KeyEventPolicy](arkts-mdm-systemmanager-keyeventpolicy-i.md)&gt; | 是 | 按键策略。支持物理按键（电源键、音量加、音量减），导航键（回退、主页、最近打开）。物理键支持任意组合为组合键，导航键不支持组合。组合键事 件响应详见按键事件回调 [onKeyEvent](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) 接口。 |
 
 **错误码：**
 

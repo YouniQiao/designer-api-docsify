@@ -63,6 +63,48 @@ try {
 }
 ```
 
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// testMissionId为任务ID，可通过getMissionInfos接口获取真实有效的任务ID
+let testMissionId = 2;
+
+try {
+  missionManager.moveMissionToFront(testMissionId, { windowMode: 101 },
+    (err: BusinessError | null, data: undefined) => {
+      if (err) {
+        console.error(`moveMissionToFront failed. Code: ${err.code}, message: ${err.message}.`);
+      } else {
+        console.info(`moveMissionToFront successfully: ${JSON.stringify(data)}`);
+      }
+    });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`moveMissionToFront failed. Code: ${err.code}, message: ${err.message}.`);
+}
+```
+
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// testMissionId为任务ID，可通过getMissionInfos接口获取真实有效的任务ID
+let testMissionId = 2;
+
+try {
+  missionManager.moveMissionToFront(testMissionId).then((data) => {
+    console.info(`moveMissionToFront successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((error: Error) => {
+    let err: BusinessError = error as BusinessError;
+    console.error(`moveMissionToFront failed. Code: ${err.code}, message: ${err.message}.`);
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`moveMissionToFront failed. Code: ${err.code}, Cause: ${err.message}.`);
+}
+```
+
 
 ## moveMissionToFront
 
@@ -87,7 +129,7 @@ function moveMissionToFront(missionId: int, options: StartOptions, callback: Asy
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | missionId | int | 是 | 任务ID。 |
-| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | 是 | 启动参数选项，用于指定任务切到前台时的窗口模式，设备ID等。 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动参数选项，用于指定任务切到前台时的窗口模式，设备ID等。 |
 | callback | AsyncCallback&lt;void&gt; | 是 | 执行结果回调函数。 |
 
 **错误码：**
@@ -101,27 +143,7 @@ function moveMissionToFront(missionId: int, options: StartOptions, callback: Asy
 
 **示例**
 
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// testMissionId为任务ID，可通过getMissionInfos接口获取真实有效的任务ID
-let testMissionId = 2;
-
-try {
-  missionManager.moveMissionToFront(testMissionId, { windowMode: 101 },
-    (err: BusinessError | null, data: undefined) => {
-      if (err) {
-        console.error(`moveMissionToFront failed. Code: ${err.code}, message: ${err.message}.`);
-      } else {
-        console.info(`moveMissionToFront successfully: ${JSON.stringify(data)}`);
-      }
-    });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`moveMissionToFront failed. Code: ${err.code}, message: ${err.message}.`);
-}
-```
+参见 [moveMissionToFront](#movemissiontofront)
 
 
 ## moveMissionToFront
@@ -147,7 +169,7 @@ function moveMissionToFront(missionId: int, options?: StartOptions): Promise<voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | missionId | int | 是 | 任务ID。 |
-| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | 否 | 启动参数选项，用于指定任务切到前台时的窗口模式，设备ID等。默认为空，表示按照默认启动参数。 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动参数选项，用于指定任务切到前台时的窗口模式，设备ID等。默认为空，表示按照默认启动参数。 |
 
 **返回值：**
 
@@ -166,23 +188,5 @@ function moveMissionToFront(missionId: int, options?: StartOptions): Promise<voi
 
 **示例**
 
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// testMissionId为任务ID，可通过getMissionInfos接口获取真实有效的任务ID
-let testMissionId = 2;
-
-try {
-  missionManager.moveMissionToFront(testMissionId).then((data) => {
-    console.info(`moveMissionToFront successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: Error) => {
-    let err: BusinessError = error as BusinessError;
-    console.error(`moveMissionToFront failed. Code: ${err.code}, message: ${err.message}.`);
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`moveMissionToFront failed. Code: ${err.code}, Cause: ${err.message}.`);
-}
-```
+参见 [moveMissionToFront](#movemissiontofront)
 

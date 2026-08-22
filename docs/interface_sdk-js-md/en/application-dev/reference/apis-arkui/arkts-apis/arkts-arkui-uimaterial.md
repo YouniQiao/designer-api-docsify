@@ -26,7 +26,7 @@ import { uiMaterial } from '@kit.ArkUI';
 | --- | --- |
 | [getGlobalMaterialLevel](arkts-arkui-uimaterial-getglobalmateriallevel-f.md) | Obtains the global material level, which is related to the device computing power. This configuration item is defined by the device and cannot be modified. |
 | [getMaterialInfo](arkts-arkui-uimaterial-getmaterialinfo-f.md) | Obtains the material configuration information of this application. The returned configuration information comes from the metadata configured in the [module.json5](../../../quick-start/module-configuration-file.md) file of the application. |
-| [isImmersiveMaterialSupported](arkts-arkui-uimaterial-isimmersivematerialsupported-f.md) | Check whether [ImmersiveMaterial](../../apis-default/arkts-apis/arkts-uimaterial-immersivematerial-c.md) is supported on the current device. If it is true, the ImmersiveMaterial object can be used in the systemMaterial attribute. If it is false, setting the ImmersiveMaterial object in the systemMaterial attribute will not take effect. It is defined by the device and cannot be modified. |
+| [isImmersiveMaterialSupported](arkts-arkui-uimaterial-isimmersivematerialsupported-f.md) | Check whether [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) is supported on the current device. If it is true, the ImmersiveMaterial object can be used in the systemMaterial attribute. If it is false, setting the ImmersiveMaterial object in the systemMaterial attribute will not take effect. It is defined by the device and cannot be modified. |
 
 <!--Del-->
 ### Functions(System API)
@@ -41,7 +41,7 @@ import { uiMaterial } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | Immersive material class, which inherits from [Material](../../apis-default/arkts-apis/arkts-uimaterial-materialtype-e.md). |
+| [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | Immersive material class, which inherits from [Material](arkts-arkui-uimaterial-materialtype-e.md). |
 
 <!--Del-->
 ### Classes(System API)
@@ -72,7 +72,7 @@ import { uiMaterial } from '@kit.ArkUI';
 | Name | Description |
 | --- | --- |
 | [ImmersiveStyle](arkts-arkui-uimaterial-immersivestyle-e.md) | Enumerates immersive material styles. Different material styles correspond to different material parameters, including the blur degree and brightness. |
-| [MaterialLevel](arkts-arkui-uimaterial-materiallevel-e.md) | Enumerates the material levels, which indicate the computing power level of the device. Use [getGlobalMaterialLevel](../../apis-default/arkts-apis/arkts-uimaterial-getglobalmateriallevel-f.md) to obtain the material level of the current device. |
+| [MaterialLevel](arkts-arkui-uimaterial-materiallevel-e.md) | Enumerates the material levels, which indicate the computing power level of the device. Use [getGlobalMaterialLevel](arkts-arkui-uimaterial-getglobalmateriallevel-f.md) to obtain the material level of the current device. |
 | [MaterialState](arkts-arkui-uimaterial-materialstate-e.md) | Enumerates the material enabling states, indicating the states of the application-level immersive system material configuration. |
 | [MaterialType](arkts-arkui-uimaterial-materialtype-e.md) | Enumerates system material types. |
 

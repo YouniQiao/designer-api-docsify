@@ -93,45 +93,23 @@ Defines a constructor used to create a **UnfiedRecord** object.
 **Examples**
 
 ```TypeScript
-let unifiedRecord = new unifiedDataChannel.UnifiedRecord();
+let unifiedData = new unifiedDataChannel.UnifiedData();
 ```
-
-## constructor
 
 ```TypeScript
-constructor(type: string, value: ValueType)
+import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+let plainText : uniformDataStruct.PlainText = {
+  uniformDataType: 'general.plain-text',
+  textContent : 'This is a plain text example',
+  abstract : 'This is abstract'
+}
+let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
+let unifiedData = new unifiedDataChannel.UnifiedData(text);
 ```
 
-Defines a constructor used to create a data record with the specified type and value.
-
-If **value** is of the [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) type, **type** must be the value of **OPENHARMONY_PIXEL_MAP** in [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md).
-
-If **value** is of the [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) type, **type** must be the value of **OPENHARMONY_WANT** in [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md).
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-UnifiedRecord-constructor(type: string, value: ValueType)--><!--Device-UnifiedRecord-constructor(type: string, value: ValueType)-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | string | Yes | Type of the data record to create. |
-| value | ValueType | Yes | Value of the data record to create. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3.Parameter verification failed. |
-
-**Examples**
+```TypeScript
+let unifiedRecord = new unifiedDataChannel.UnifiedRecord();
+```
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
@@ -159,6 +137,45 @@ let pixelMap : uniformDataStruct.PixelMap = {
 }
 let pixelMapRecord = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.OPENHARMONY_PIXEL_MAP, pixelMap);
 ```
+
+## constructor
+
+```TypeScript
+constructor(type: string, value: ValueType)
+```
+
+Defines a constructor used to create a data record with the specified type and value.
+
+If **value** is of the [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) type, **type** must be the value of **OPENHARMONY_PIXEL_MAP** in [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md).
+
+If **value** is of the [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) type, **type** must be the value of **OPENHARMONY_WANT** in [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md).
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-UnifiedRecord-constructor(type: string, value: ValueType)--><!--Device-UnifiedRecord-constructor(type: string, value: ValueType)-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | string | Yes | Type of the data record to create. |
+| value | ValueType | Yes | Value of the data record to create. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3.Parameter verification failed. |
+
+**Examples**
+
+See [constructor](#constructor)
 
 ## getEntries
 
@@ -386,6 +403,28 @@ Obtains all the data types in the data record. This API can be called using the 
 | Array&lt;string&gt; | Array of [UniformDataType]{ |
 
 **Examples**
+
+```TypeScript
+import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+
+let plainText : uniformDataStruct.PlainText = {
+  uniformDataType: 'general.plain-text',
+  textContent : 'This is a plain text example',
+  abstract : 'This is abstract'
+}
+let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
+let unifiedData = new unifiedDataChannel.UnifiedData(text);
+
+let hyperlink : uniformDataStruct.Hyperlink = {
+  uniformDataType:'general.hyperlink',
+  url : 'www.XXX.com',
+  description : 'This is the description of the hyperlink'
+}
+let link = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.HYPERLINK, hyperlink);
+unifiedData.addRecord(link);
+
+let types = unifiedData.getTypes();
+```
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';

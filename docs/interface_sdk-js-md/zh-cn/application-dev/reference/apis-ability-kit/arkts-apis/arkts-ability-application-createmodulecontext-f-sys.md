@@ -60,6 +60,31 @@ export function createModuleContext(context: Context, bundleName: string, module
 **示例**
 
 ```TypeScript
+import { AbilityConstant, UIAbility, application, common, Want, Context } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    let moduleContext: common.Context;
+    try {
+      application.createModuleContext(this.context, 'entry').then((data: common.Context) => {
+        moduleContext = data;
+        console.info('createModuleContext success!');
+      }).catch((error: Error) => {
+        let code: number = (error as BusinessError).code;
+        let message: string = (error as BusinessError).message;
+        console.error(`createModuleContext failed, error.code: ${code}, error.message: ${message}`);
+      });
+    } catch (error) {
+      let code: number = (error as BusinessError).code;
+      let message: string = (error as BusinessError).message;
+      console.error(`createModuleContext failed, error.code: ${code}, error.message: ${message}`);
+    }
+  }
+}
+```
+
+```TypeScript
 import { UIAbility, application, common, Context } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 

@@ -32,6 +32,147 @@ Response的构造函数。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class WebObj {
+  constructor() {
+  }
+
+  webTest(): string {
+    console.info('Web test');
+    return "Web test";
+  }
+
+  webString(): void {
+    console.info('Web test toString');
+  }
+}
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State webTestObj: WebObj = new WebObj();
+
+  build() {
+    Column() {
+      Button('refresh')
+        .onClick(() => {
+          try {
+            this.controller.refresh();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('deleteJavaScriptRegister')
+        .onClick(() => {
+          try {
+            this.controller.deleteJavaScriptRegister("objTestName");
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: '', controller: this.controller })
+        .javaScriptAccess(true)
+        .onControllerAttached(() => {
+          this.controller.loadUrl($rawfile("index.html"));
+          this.controller.registerJavaScriptProxy(this.webTestObj, "objTestName", ["webTest", "webString"]);
+        })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { $rawfile, Web, Button, Column, State, Component, Entry } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class WebObj {
+  constructor() {
+  }
+
+  webTest(): string {
+    console.info('Web test');
+    return "Web test";
+  }
+
+  webString(): void {
+    console.info('Web test toString');
+  }
+}
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined)
+  @State webTestObj: WebObj = new WebObj();
+
+  build() {
+    Column() {
+      Button('refresh')
+        .onClick(() => {
+          try {
+            this.controller.refresh();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('deleteJavaScriptRegister')
+        .onClick(() => {
+          try {
+            this.controller.deleteJavaScriptRegister("objTestName");
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: '', controller: this.controller })
+        .javaScriptAccess(true)
+        .onControllerAttached(() => {
+          this.controller.loadUrl($rawfile("index.html"));
+          this.controller.registerJavaScriptProxy(this.webTestObj, "objTestName", ["webTest", "webString"]);
+        })
+    }
+  }
+}
+```
+
+加载的html文件。
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+    </head>
+    <body>
+      <button type="button" onclick="htmlTest()">Click Me!</button>
+      <p id="demo"></p>
+      <p id="webDemo"></p>
+      <script type="text/javascript">
+        function htmlTest() {
+          // This function call expects to return "Web test"
+          let webStr = objTestName.webTest();
+          document.getElementById("webDemo").innerHTML=webStr;
+          console.info('objTestName.webTest result:'+ webStr)
+        }
+      </script>
+    </body>
+</html>
+```
+
 ## getCustomErrorCode
 
 ```TypeScript
@@ -76,6 +217,10 @@ getEncoding(): string
 | --- | --- |
 | string | 返回响应内容的字符编码格式，如'utf-8'、'gbk'等。 |
 
+**示例**
+
+完整示例代码参考[constructor](#constructor)。
+
 ## getHeaderByName
 
 ```TypeScript
@@ -104,6 +249,10 @@ getHeaderByName(name: string): string
 | --- | --- |
 | string | 指定名称的响应头字段对应的值。 |
 
+**示例**
+
+完整示例代码参考[constructor](#constructor)。
+
 ## getMimeType
 
 ```TypeScript
@@ -126,6 +275,113 @@ getMimeType(): string
 | --- | --- |
 | string | 返回响应内容的MIME类型字符串，如'text/html'、'application/json'等。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download, mime type:" + webDownloadItem.getMimeType());
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download， mime type:" + webDownloadItem.getMimeType());
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+完整示例代码参考[constructor](#constructor)。
+
 ## getNetErrorCode
 
 ```TypeScript
@@ -146,7 +402,11 @@ getNetErrorCode(): WebNetErrorList
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebNetErrorList](arkts-arkweb-webneterrorlist-webneterrorlist-e.md) | 返回Response的网络错误码。 |
+| [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 返回Response的网络错误码。 |
+
+**示例**
+
+完整示例代码参考[constructor](#constructor)。
 
 ## getStatus
 
@@ -170,6 +430,10 @@ getStatus(): number
 | --- | --- |
 | number | 返回Response的HTTP状态码。 |
 
+**示例**
+
+完整示例代码参考[constructor](#constructor)。
+
 ## getStatusText
 
 ```TypeScript
@@ -191,6 +455,10 @@ getStatusText(): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 状态文本。 |
+
+**示例**
+
+完整示例代码参考[constructor](#constructor)。
 
 ## getUrl
 
@@ -215,6 +483,174 @@ getUrl(): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 获取经过重定向或因HSTS而更改后的URL。 |
+
+**示例**
+
+完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download, url:" + webDownloadItem.getUrl());
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download, url:" + webDownloadItem.getUrl());
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+完整示例代码参考[constructor](#constructor)。
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getUrl')
+        .onClick(() => {
+          try {
+            let url = this.controller.getUrl();
+            console.info("url: " + url);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@ohos.base';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+
+  build() {
+    Column() {
+      Button('getUrl')
+        .onClick(() => {
+          try {
+            let url = this.controller.getUrl();
+            console.info("url: " + url);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## setCustomErrorCode
 
@@ -266,6 +702,10 @@ setEncoding(encoding: string): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
+**示例**
+
+完整示例代码参考[constructor](#constructor)。
+
 ## setHeaderByName
 
 ```TypeScript
@@ -296,6 +736,10 @@ setHeaderByName(name: string, value: string, overwrite: boolean): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 
+**示例**
+
+完整示例代码参考[constructor](#constructor)。
+
 ## setMimeType
 
 ```TypeScript
@@ -324,6 +768,10 @@ setMimeType(type: string): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
+**示例**
+
+完整示例代码参考[constructor](#constructor)。
+
 ## setNetErrorCode
 
 ```TypeScript
@@ -344,13 +792,17 @@ setNetErrorCode(code: WebNetErrorList): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | [WebNetErrorList](arkts-arkweb-webneterrorlist-webneterrorlist-e.md) | 是 | 网络错误码。 |
+| code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 是 | 网络错误码。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
+
+**示例**
+
+完整示例代码参考[constructor](#constructor)。
 
 ## setStatus
 
@@ -380,6 +832,10 @@ setStatus(code: number): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
+**示例**
+
+完整示例代码参考[constructor](#constructor)。
+
 ## setStatusText
 
 ```TypeScript
@@ -408,6 +864,10 @@ setStatusText(text: string): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
+**示例**
+
+完整示例代码参考[constructor](#constructor)。
+
 ## setUrl
 
 ```TypeScript
@@ -435,4 +895,8 @@ setUrl(url: string): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+
+**示例**
+
+完整示例代码参考[constructor](#constructor)。
 

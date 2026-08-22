@@ -28,7 +28,7 @@ The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataParams](arkts-connectivity-datatransfer-dataparams-i.md)&gt; | Yes | Callback used to return the parameters for data received by the port channel. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataParams](arkts-connectivity-datatransfer-dataparams-i.md)&gt; | Yes | Callback used to return the parameters for data received by the port channel. |
 
 **Error codes:**
 

@@ -44,3 +44,43 @@ declare function disconnectDfs(networkId: string): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed.Possible causes: 1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | 13600004 | Unmount failed. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+
+let dmInstance = distributedDeviceManager.createDeviceManager("com.example.filesync");
+let deviceInfoList: Array<distributedDeviceManager.DeviceBasicInfo> = dmInstance.getAvailableDeviceListSync();
+if (deviceInfoList && deviceInfoList.length > 0) {
+  console.info('Succeeded in getting available device list');
+  let networkId = deviceInfoList[0].networkId;
+  fileIo.disconnectDfs(networkId).then(() => {
+    console.info('Succeeded in disconnecting dfs');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to disconnect dfs. Code: ${err.code}, message: ${err.message}`);
+  })
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+
+let dmInstance = distributedDeviceManager.createDeviceManager("com.example.filesync");
+let deviceInfoList: Array<distributedDeviceManager.DeviceBasicInfo> = dmInstance.getAvailableDeviceListSync();
+if (deviceInfoList && deviceInfoList.length > 0) {
+  console.info('Succeeded in getting available device list');
+  let networkId = deviceInfoList[0].networkId!;
+  fileIo.disconnectDfs(networkId!).then(() => {
+    console.info('Succeeded in disconnecting dfs');
+  }).catch((err: BusinessError): void => {
+    console.error(`Failed to disconnect dfs. Code: ${err.code}, message: ${err.message}`);
+  })
+}
+```
+

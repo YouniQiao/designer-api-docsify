@@ -31,7 +31,7 @@ Deletes a key. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key to delete. It must be the key alias passed in when the key was generated. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Options for deleting the key. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -44,6 +44,22 @@ let emptyOptions: huks.HuksOptions = {
   properties: []
 };
 huks.deleteKey(keyAlias, emptyOptions, (err, data) => {
+});
+```
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+import { BusinessError } from "@kit.BasicServicesKit"
+
+/* Set options to emptyOptions. */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+let result = huks.deleteKey(keyAlias, emptyOptions).then((data) => {
+  console.info('delete key success');
+}).catch((err: BusinessError) => {
+  console.error("Failed to delete the key. Error code: " + err.code + " Error message: " + err.message);
 });
 ```
 
@@ -81,19 +97,5 @@ Deletes a key. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-import { BusinessError } from "@kit.BasicServicesKit"
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-let result = huks.deleteKey(keyAlias, emptyOptions).then((data) => {
-  console.info('delete key success');
-}).catch((err: BusinessError) => {
-  console.error("Failed to delete the key. Error code: " + err.code + " Error message: " + err.message);
-});
-```
+See [deleteKey](#deletekey)
 

@@ -24,7 +24,7 @@ Obtains the default ID of the SIM card used to send SMS messages. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. <br>The return value is bound to the SIM card and increases from 1. <br>The return value is **-1** if no SIM card is detected. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. <br>The return value is bound to the SIM card and increases from 1. <br>The return value is **-1** if no SIM card is detected. |
 
 **Error codes:**
 
@@ -46,6 +46,18 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 sms.getDefaultSmsSimId((err: BusinessError, data: number) => {
     console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = sms.getDefaultSmsSimId();
+promise.then((data: number) => {
+    console.info(`getDefaultSmsSimId success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getDefaultSmsSimId failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -83,15 +95,5 @@ Obtains the default ID of the SIM card used to send SMS messages. This API uses 
 
 **Examples**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = sms.getDefaultSmsSimId();
-promise.then((data: number) => {
-    console.info(`getDefaultSmsSimId success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getDefaultSmsSimId failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getDefaultSmsSimId](#getdefaultsmssimid)
 

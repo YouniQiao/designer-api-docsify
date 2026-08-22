@@ -28,8 +28,8 @@ Enables listening for release events of specified keys, such as the logo, power,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | Array&lt;[KeyCode](arkts-input-multimodalinputkeycode-keycode-e.md)&gt; | Yes | Key list. |
-| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[KeyEvent](arkts-input-multimodalinputkeyevent-keyevent-i.md)&gt; | Yes | Callback used to receive the reported data. |
+| keys | Array&lt;[KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md)&gt; | Yes | Key list. |
+| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | Yes | Callback used to receive the reported data. |
 
 **Error codes:**
 

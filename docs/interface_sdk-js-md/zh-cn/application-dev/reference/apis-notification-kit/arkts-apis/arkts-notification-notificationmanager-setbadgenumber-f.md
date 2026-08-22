@@ -51,6 +51,33 @@ ArkTS-Dyn示例：
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let badgeNumber: number = 10;
+notificationManager.setBadgeNumber(badgeNumber).then(() => {
+  console.info(`Succeeded in setting badge number.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set badge number. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let badgeNumber: int = 10;
+notificationManager.setBadgeNumber(badgeNumber).then(() => {
+  console.info(`Succeeded in setting badge number.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to set badge number. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let setBadgeNumberCallback = (err: BusinessError): void => {
   if (err) {
     console.error(`Failed to set badge number. Code is ${err.code}, message is ${err.message}`);
@@ -124,30 +151,5 @@ getActiveNotificationCount 获取当前应用的通知数量。
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let badgeNumber: number = 10;
-notificationManager.setBadgeNumber(badgeNumber).then(() => {
-  console.info(`Succeeded in setting badge number.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set badge number. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let badgeNumber: int = 10;
-notificationManager.setBadgeNumber(badgeNumber).then(() => {
-  console.info(`Succeeded in setting badge number.`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to set badge number. Code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [setBadgeNumber](#setbadgenumber)
 

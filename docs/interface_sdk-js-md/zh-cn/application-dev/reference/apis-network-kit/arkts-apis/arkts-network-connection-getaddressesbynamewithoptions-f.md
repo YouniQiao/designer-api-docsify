@@ -61,3 +61,24 @@ connection.getAddressesByNameWithOptions("www.example.com", option).then((data: 
 });
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
+    return;
+  }
+  let host = "www.example.com";
+  let option: connection.QueryOptions = {
+      family: connection.FamilyType.FAMILY_TYPE_IPV4
+    };
+  netHandle.getAddressesByNameWithOptions(host, option).then((data: connection.NetAddress[]) => {
+    console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get addresses by name. Code:${err.code}, message:${err.message}`);
+  });
+});
+```
+

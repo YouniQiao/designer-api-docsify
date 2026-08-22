@@ -33,6 +33,6 @@ import { commonType } from '@kit.ArkData';
 | Name | Description |
 | --- | --- |
 | [Assets](arkts-arkdata-commontype-assets-t.md) | Represents an array of Assets. |
-| [ValueType](arkts-arkdata-commontype-valuetype-t.md) | Enumerates the value types, which vary with the parameter function. |
 | [ValuesBucket](arkts-arkdata-commontype-valuesbucket-t.md) | Defines the types of the key and value in a KV pair. |
+| [ValueType](arkts-arkdata-commontype-valuetype-t.md) | Enumerates the value types, which vary with the parameter function. |
 

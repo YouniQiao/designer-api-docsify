@@ -27,7 +27,7 @@ The notification group **groupName** is the group identifier specified through t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | groupName | string | Yes | Name of the notification group, which is specified through [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) when the notification is published. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -52,6 +52,17 @@ let cancelGroupCallback = (err: BusinessError): void => {
 }
 let groupName: string = "GroupName";
 notificationManager.cancelGroup(groupName, cancelGroupCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let groupName: string = "GroupName";
+notificationManager.cancelGroup(groupName).then(() => {
+  console.info(`Succeeded in canceling group.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to cancel group. Code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -94,14 +105,5 @@ The notification group **groupName** is the group identifier specified through t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let groupName: string = "GroupName";
-notificationManager.cancelGroup(groupName).then(() => {
-  console.info(`Succeeded in canceling group.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to cancel group. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [cancelGroup](#cancelgroup)
 

@@ -1474,7 +1474,7 @@ clipShape(value: CircleShape | EllipseShape | PathShape | RectShape | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [CircleShape](../../apis-arkui/arkts-apis/arkts-arkui-arkuishape-circleshape-c.md) \| [EllipseShape](../../apis-arkui/arkts-apis/arkts-arkui-arkuishape-ellipseshape-c.md) \| [PathShape](../../apis-arkui/arkts-apis/arkts-arkui-arkuishape-pathshape-c.md) \| [RectShape](../../apis-arkui/arkts-apis/arkts-arkui-arkuishape-rectshape-c.md) \| undefined | 是 |  |
+| value | [CircleShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-circleshape-c.md) \| [EllipseShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-ellipseshape-c.md) \| [PathShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-pathshape-c.md) \| [RectShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-rectshape-c.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -1702,6 +1702,28 @@ doubleSided(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
+## draggable
+
+```TypeScript
+draggable(value: boolean | undefined): this
+```
+
+**起始版本：** -1
+
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
+
+<!--Device-CommonMethod-draggable(value: boolean | undefined): this--><!--Device-CommonMethod-draggable(value: boolean | undefined): this-End-->
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean \| undefined | 是 |  |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
 ## dragPreview
 
 ```TypeScript
@@ -1743,28 +1765,6 @@ dragPreviewOptions(value: DragPreviewOptions | undefined, options?: DragInteract
 | --- | --- | --- | --- |
 | value | [DragPreviewOptions](arkts-common-dragpreviewoptions-i.md) \| undefined | 是 |  |
 | options | [DragInteractionOptions](arkts-common-draginteractionoptions-i.md) | 否 |  |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-## draggable
-
-```TypeScript
-draggable(value: boolean | undefined): this
-```
-
-**起始版本：** -1
-
-**ArkTS模式：** ArkTS-Sta起始版本为-1。
-
-<!--Device-CommonMethod-draggable(value: boolean | undefined): this--><!--Device-CommonMethod-draggable(value: boolean | undefined): this-End-->
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean \| undefined | 是 |  |
 
 **返回值：**
 
@@ -1969,6 +1969,28 @@ flexShrink(value: double | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
+## focusable
+
+```TypeScript
+focusable(value: boolean | undefined): this
+```
+
+**起始版本：** -1
+
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
+
+<!--Device-CommonMethod-focusable(value: boolean | undefined): this--><!--Device-CommonMethod-focusable(value: boolean | undefined): this-End-->
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean \| undefined | 是 |  |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
 ## focusBox
 
 ```TypeScript
@@ -2055,28 +2077,6 @@ focusScopePriority(scopeId: string | undefined, priority?: FocusPriority): this
 | --- | --- | --- | --- |
 | scopeId | string \| undefined | 是 |  |
 | priority | [FocusPriority](../../apis-arkui/arkts-apis/arkts-arkui-focuspriority-e.md) | 否 |  |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-## focusable
-
-```TypeScript
-focusable(value: boolean | undefined): this
-```
-
-**起始版本：** -1
-
-**ArkTS模式：** ArkTS-Sta起始版本为-1。
-
-<!--Device-CommonMethod-focusable(value: boolean | undefined): this--><!--Device-CommonMethod-focusable(value: boolean | undefined): this-End-->
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean \| undefined | 是 |  |
 
 **返回值：**
 
@@ -2722,7 +2722,7 @@ maskShape(value: CircleShape | EllipseShape | PathShape | RectShape | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [CircleShape](../../apis-arkui/arkts-apis/arkts-arkui-arkuishape-circleshape-c.md) \| [EllipseShape](../../apis-arkui/arkts-apis/arkts-arkui-arkuishape-ellipseshape-c.md) \| [PathShape](../../apis-arkui/arkts-apis/arkts-arkui-arkuishape-pathshape-c.md) \| [RectShape](../../apis-arkui/arkts-apis/arkts-arkui-arkuishape-rectshape-c.md) \| undefined | 是 |  |
+| value | [CircleShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-circleshape-c.md) \| [EllipseShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-ellipseshape-c.md) \| [PathShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-pathshape-c.md) \| [RectShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-rectshape-c.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -4406,7 +4406,7 @@ safeAreaPadding(paddingValue: Padding | LengthMetrics | LocalizedPadding | undef
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| paddingValue | [Padding](../../apis-arkui/arkts-apis/arkts-arkui-padding-t.md) \| [LengthMetrics](arkts-graphics-lengthmetrics-c.md) \| [LocalizedPadding](../../apis-arkui/arkts-apis/arkts-arkui-localizedpadding-i.md) \| undefined | 是 |  |
+| paddingValue | [Padding](../../apis-arkui/arkts-apis/arkts-arkui-padding-t.md) \| [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| [LocalizedPadding](../../apis-arkui/arkts-apis/arkts-arkui-localizedpadding-i.md) \| undefined | 是 |  |
 
 **返回值：**
 

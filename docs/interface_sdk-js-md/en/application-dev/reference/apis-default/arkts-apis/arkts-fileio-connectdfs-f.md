@@ -11,7 +11,7 @@
 function connectDfs(networkId: string, listeners: DfsListeners): Promise<void>
 ```
 
-Triggers connection. If the peer device is abnormal, [onStatus](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-dfslisteners-i.md#onstatus) in DfsListeners will be called to notify the application.
+Triggers connection. If the peer device is abnormal, [onStatus](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-dfslisteners-i.md#onstatus) in DfsListeners will be called to notify the application.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ Triggers connection. If the peer device is abnormal, [onStatus](../../apis-core-
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | networkId | string | Yes | Network ID of the device. The device network ID can be obtained from [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md) using the related [distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md) API. |
-| listeners | [DfsListeners](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-dfslisteners-i.md) | Yes | Listeners for distributed file system status. |
+| listeners | [DfsListeners](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-dfslisteners-i.md) | Yes | Listeners for distributed file system status. |
 
 **Return value:**
 

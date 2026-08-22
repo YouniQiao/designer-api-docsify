@@ -30,7 +30,7 @@ Subscribes to status changes of the **NavDestination** component. Compared with 
 | --- | --- | --- | --- |
 | type | 'navDestinationUpdate' | Yes | Event type. Set to **'navDestinationUpdate'** for **NavDestination** component status change events. |
 | options | { navigationId: ResourceStr } | Yes | ID of the target **Navigation** component. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NavDestinationInfo&gt; | Yes | Callback used to return the result. It provides the current state of the **NavDestination** component. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | Yes | Callback used to return the result. It provides the current state of the **NavDestination** component. |
 
 **Examples**
 
@@ -112,7 +112,7 @@ Subscribes to status changes of the **NavDestination** component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'navDestinationUpdate' | Yes | Event type. Set to **'navDestinationUpdate'** for **NavDestination** component status change events. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NavDestinationInfo&gt; | Yes | Callback used to return the result. It provides the current state of the **NavDestination** component. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | Yes | Callback used to return the result. It provides the current state of the **NavDestination** component. |
 
 **Examples**
 

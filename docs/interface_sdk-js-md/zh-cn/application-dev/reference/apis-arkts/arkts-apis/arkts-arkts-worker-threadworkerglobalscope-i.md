@@ -146,6 +146,24 @@ workerPort.onmessage = (e: MessageEvents): void => {
 }
 ```
 
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+workerInstance.postMessage("hello world");
+```
+
+```TypeScript
+// worker.ets
+import { worker } from '@kit.ArkTS';
+
+const parentPort = worker.parentPort;
+parentPort.onmessage = (): void => {
+    parentPort.close()
+}
+```
+
 ## postMessage
 
 ```TypeScript
@@ -179,6 +197,92 @@ Worker线程通过转移对象所有权的方式向宿主线程发送消息。
 **示例**
 
 ```TypeScript
+// Worker.ets
+import { worker, MessageEvents, ErrorEvent } from '@kit.ArkTS';
+
+// 创建worker线程中与宿主线程通信的对象
+const workerPort = worker.workerPort;
+
+// worker线程接收宿主线程信息
+workerPort.onmessage = (e: MessageEvents): void => {
+  // data：宿主线程发送的信息
+  let data: ArrayBuffer = e.data;
+  // 往收到的buffer里写入数据
+  const view = new Int8Array(data).fill(3);
+  // worker线程向宿主线程发送信息
+  workerPort.postMessage(view);
+}
+
+// worker线程发生error的回调
+workerPort.onerror = (err: ErrorEvent) => {
+  console.error("worker.ets onerror" + err.message);
+}
+```
+
+```TypeScript
+// Index.ets
+import { worker, MessageEvents, ErrorEvent } from '@kit.ArkTS';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'Hello World';
+
+  build() {
+    Row() {
+      Column() {
+        Text(this.message)
+          .fontSize(50)
+          .fontWeight(FontWeight.Bold)
+          .onClick(() => {
+            // 宿主线程中创建Worker对象
+            const workerInstance = new worker.ThreadWorker("entry/ets/workers/Worker.ets");
+            // 宿主线程向worker线程传递信息
+            const buffer = new ArrayBuffer(8);
+            workerInstance.postMessage(buffer, [buffer]);
+
+            // 此时buffer的所有权转移到了worker线程，在宿主线程中不可用
+            // const view = new Int8Array(buffer).fill(3);
+
+            // 宿主线程接收worker线程信息
+            workerInstance.onmessage = (e: MessageEvents): void => {
+              // data：worker线程发送的信息
+              let data: Int8Array = e.data;
+              console.info("main thread data is  " + data);
+              // 销毁Worker对象
+              workerInstance.terminate();
+            }
+            // 在调用terminate后，执行onexit
+            workerInstance.onexit = (code) => {
+              console.info("main thread terminate");
+            }
+            // 监听Worker错误
+            workerInstance.onAllErrors = (err: ErrorEvent) => {
+              console.error("main error message " + err.message);
+            }
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+  }
+}
+```
+
+```TypeScript
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+workerInstance.postMessage("hello world");
+
+let buffer = new ArrayBuffer(8);
+
+// 填入options参数，buffer的所有权会转移到Worker线程，在宿主线程中将不可用
+workerInstance.postMessage(buffer, {transfer: [buffer]});
+```
+
+```TypeScript
 // Index.ets
 import { worker, MessageEvents } from '@kit.ArkTS';
 
@@ -197,6 +301,95 @@ const workerPort = worker.workerPort;
 workerPort.onmessage = (e: MessageEvents): void => {
   let buffer = new ArrayBuffer(8);
   workerPort.postMessage(buffer, [buffer]);
+}
+```
+
+```TypeScript
+// Index.ets
+import { worker, MessageEvents } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+workerInstance.postMessage("hello world");
+workerInstance.onmessage = (e: MessageEvents): void => {
+    console.info("receive data from worker.ets");
+}
+```
+
+```TypeScript
+// worker.ets
+import { worker, MessageEvents } from '@kit.ArkTS';
+
+const workerPort = worker.workerPort;
+workerPort.onmessage = (e: MessageEvents): void => {
+    workerPort.postMessage("receive data from main thread");
+}
+```
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+
+let buffer = new ArrayBuffer(8);
+workerInstance.postMessage(buffer, [buffer]);
+```
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+
+workerInstance.postMessage("hello world");
+
+let buffer = new ArrayBuffer(8);
+workerInstance.postMessage(buffer, [buffer]);
+```
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+workerInstance.postMessage("hello world");
+workerInstance.onmessage = (e: MessageEvents): void => {
+    // let data = e.data;
+    console.info("receive data from worker.ets");
+}
+```
+
+```TypeScript
+// worker.ets
+import { DedicatedWorkerGlobalScope, worker } from '@kit.ArkTS';
+
+const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
+
+workerPort.onmessage = (): void => {
+    // let data = e.data;
+    let buffer = new ArrayBuffer(5)
+    workerPort.postMessage(buffer, [buffer]);
+}
+```
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+workerInstance.postMessage("hello world");
+workerInstance.onmessage = (): void => {
+    console.info("receive data from worker.ets");
+}
+```
+
+```TypeScript
+// worker.ets
+import { ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
+
+const parentPort = worker.parentPort;
+parentPort.onmessage = (e: MessageEvents) => {
+  parentPort.postMessage("receive data from main thread");
 }
 ```
 
@@ -232,26 +425,7 @@ Worker线程通过转移对象所有权或拷贝数据的方式向宿主线程�
 
 **示例**
 
-```TypeScript
-// Index.ets
-import { worker, MessageEvents } from '@kit.ArkTS';
-
-const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
-workerInstance.postMessage("hello world");
-workerInstance.onmessage = (e: MessageEvents): void => {
-    console.info("receive data from worker.ets");
-}
-```
-
-```TypeScript
-// worker.ets
-import { worker, MessageEvents } from '@kit.ArkTS';
-
-const workerPort = worker.workerPort;
-workerPort.onmessage = (e: MessageEvents): void => {
-    workerPort.postMessage("receive data from main thread");
-}
-```
+参见 [postMessage](#postmessage)
 
 ## postMessageAtFront
 
@@ -407,6 +581,47 @@ Worker线程向宿主线程发送消息，消息中的Sendable对象通过引用
 | [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 
 **示例**
+
+```TypeScript
+// Index.ets
+// 新建SendableObject实例并通过宿主线程传递至Worker线程
+
+import { worker } from '@kit.ArkTS';
+import { SendableObject } from './sendable';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/Worker.ets");
+let object: SendableObject = new SendableObject();
+workerInstance.postMessageWithSharedSendable(object);
+
+// 使用postMessage接口传递Sendable对象，使用拷贝数据的方式传递
+workerInstance.postMessage(object);
+```
+
+```TypeScript
+// sendable.ets
+// 定义SendableObject
+
+@Sendable
+export class SendableObject {
+  value:number = 45;
+}
+```
+
+```TypeScript
+// worker文件路径为：entry/src/main/ets/workers/Worker.ets
+// Worker.ets
+// 接收宿主线程传递至Worker线程的数据并访问
+
+import { SendableObject } from '../pages/sendable';
+import { worker, ThreadWorkerGlobalScope, MessageEvents, ErrorEvent } from '@kit.ArkTS';
+
+const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
+
+workerPort.onmessage = (e: MessageEvents) => {
+  let obj: SendableObject = e.data;
+  console.info("sendable obj is: " + obj.value);
+}
+```
 
 ```TypeScript
 // worker文件路径为：entry/src/main/ets/workers/Worker.ets

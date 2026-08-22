@@ -145,6 +145,29 @@ Sets the playback direction for this animator animation.
 | --- | --- |
 | [SimpleAnimatorOptions](../../apis-default/arkts-apis/arkts-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
 
+**Examples**
+
+See ArkTS-based Declarative Development Paradigm.
+
+```TypeScript
+import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).direction(PlayMode.Alternate);
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator(this.options);
+  }
+
+  build() {
+    // ......
+  }
+}
+```
+
 ## duration
 
 ```TypeScript
@@ -280,6 +303,29 @@ Sets the fill mode for this animation.
 | Type | Description |
 | --- | --- |
 | [SimpleAnimatorOptions](../../apis-default/arkts-apis/arkts-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
+
+**Examples**
+
+See ArkTS-based Declarative Development Paradigm.
+
+```TypeScript
+import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).fill(FillMode.Forwards);
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator(this.options);
+  }
+
+  build() {
+    // ......
+  }
+}
+```
 
 ## iterations
 

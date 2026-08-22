@@ -22,8 +22,8 @@
 | [CheckBoxShape](arkts-enums-checkboxshape-e.md) | common enum of the checkbox shape |
 | [ClickEffectLevel](arkts-enums-clickeffectlevel-e.md) | 定义点击效果的级别及对应动效参数。 |
 | [Color](arkts-enums-color-e.md) | common enum of color |
-| [ColorSpace](arkts-enums-colorspace-e.md) | 定义了颜色空间的类型，用于指定颜色显示的模式。 |
 | [ColoringStrategy](arkts-enums-coloringstrategy-e.md) | 智能取色枚举类型。 |
+| [ColorSpace](arkts-enums-colorspace-e.md) | 定义了颜色空间的类型，用于指定颜色显示的模式。 |
 | [CompetitionStrategy](arkts-enums-competitionstrategy-e.md) | 定义分发的事件是否为竞争手势，竞争场景手势原始节点和目标节点只有一个节点会响应手势，非竞争场景可以同时响应。 |
 | [CopyOptions](arkts-enums-copyoptions-e.md) | Indicates the share option. |
 | [CrownAction](arkts-enums-crownaction-e.md) | 旋转表冠动作。 |

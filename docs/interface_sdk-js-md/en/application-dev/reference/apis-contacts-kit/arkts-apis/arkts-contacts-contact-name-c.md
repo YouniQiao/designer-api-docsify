@@ -194,3 +194,14 @@ Suffix of the contact name.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+**Examples**
+
+Create contact data in JSON format:
+
+```TypeScript
+let name: contact.Name = {
+    familyName: "familyName",
+    fullName: "fullName"
+};
+```
+

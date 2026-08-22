@@ -39,3 +39,63 @@ function unregisterForegroundDispatch(elementName: ElementName): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service.<br>**适用版本：** 12+ |
 
+**示例**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { AbilityConstant, UIAbility, Want, bundleManager } from '@kit.AbilityKit';
+
+let discTech : number[] = [tag.NFC_A, tag.NFC_B]; // 用前台ability时所需要的技术代替
+let elementName : bundleManager.ElementName;
+function foregroundCb(err : BusinessError, tagInfo : tag.TagInfo) {
+    if (!err) {
+        console.info("foreground callback: tag found tagInfo = ", JSON.stringify(tagInfo));
+    } else {
+        console.error("foreground callback err: " + err.message);
+        return;
+    }
+  // taginfo的其他操作
+}
+
+export default class MainAbility extends UIAbility {
+    OnCreate(want : Want, launchParam : AbilityConstant.LaunchParam) {
+        console.info("OnCreate");
+        elementName = {
+            bundleName: want.bundleName as string,
+            abilityName: want.abilityName as string,
+            moduleName: want.moduleName as string
+        }
+    }
+
+    onForeground() {
+        console.info("onForeground");
+        try {
+            tag.registerForegroundDispatch(elementName, discTech, foregroundCb);
+        } catch (e) {
+            console.error("registerForegroundDispatch error: " + (e as BusinessError).message);
+        }
+    }
+
+    onBackground() {
+        console.info("onBackground");
+        try {
+            tag.unregisterForegroundDispatch(elementName);
+        } catch (e) {
+            console.error("unregisterForegroundDispatch error: " + (e as BusinessError).message);
+        }
+    }
+
+    onWindowStageDestroy() {
+        console.info("onWindowStageDestroy");
+        try {
+            tag.unregisterForegroundDispatch(elementName);
+        } catch (e) {
+            console.error("unregisterForegroundDispatch error: " + (e as BusinessError).message);
+        }
+    }
+
+  // ability生命周期内的其他功能
+}
+```
+

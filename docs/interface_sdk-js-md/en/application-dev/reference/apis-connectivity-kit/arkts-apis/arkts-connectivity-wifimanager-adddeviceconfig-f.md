@@ -66,6 +66,23 @@ import { wifiManager } from '@kit.ConnectivityKit';
   }
 ```
 
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+  
+    try {
+      let config:wifiManager.WifiDeviceConfig = {
+        ssid : "****",
+        preSharedKey : "****",
+        securityType : 0
+      }
+      wifiManager.addDeviceConfig(config,(error,result) => {
+        console.info("result:" + JSON.stringify(result));
+      });
+    }catch(error){
+      console.error("failed:" + JSON.stringify(error));
+    }
+```
+
 
 ## addDeviceConfig
 
@@ -88,7 +105,7 @@ Add Wi-Fi connection configuration to the device. The configuration will be upda
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Indicates call back of addDeviceConfig. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Indicates call back of addDeviceConfig. |
 
 **Error codes:**
 
@@ -102,20 +119,5 @@ Add Wi-Fi connection configuration to the device. The configuration will be upda
 
 **Examples**
 
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-  
-    try {
-      let config:wifiManager.WifiDeviceConfig = {
-        ssid : "****",
-        preSharedKey : "****",
-        securityType : 0
-      }
-      wifiManager.addDeviceConfig(config,(error,result) => {
-        console.info("result:" + JSON.stringify(result));
-      });
-    }catch(error){
-      console.error("failed:" + JSON.stringify(error));
-    }
-```
+See [addDeviceConfig](#adddeviceconfig)
 

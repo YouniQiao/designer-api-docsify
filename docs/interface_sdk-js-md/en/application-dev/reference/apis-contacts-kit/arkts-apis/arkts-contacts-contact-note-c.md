@@ -32,3 +32,13 @@ Notes of the contact.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+**Examples**
+
+Create contact data in JSON format:
+
+```TypeScript
+let note: contact.Note = {
+    noteContent: "noteContent"
+};
+```
+

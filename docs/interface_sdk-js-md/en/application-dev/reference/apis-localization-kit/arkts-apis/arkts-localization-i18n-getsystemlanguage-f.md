@@ -35,6 +35,12 @@ Obtains the system language.
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
 
+let systemLanguage: string = i18n.System.getSystemLanguage(); // If the system language is simplified Chinese, then systemLanguage is 'zh-Hans'.
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
 let systemLanguage: string = i18n.getSystemLanguage();
 ```
 

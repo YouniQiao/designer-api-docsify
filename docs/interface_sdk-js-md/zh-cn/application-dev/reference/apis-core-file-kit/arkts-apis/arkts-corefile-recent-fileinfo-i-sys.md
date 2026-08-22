@@ -68,7 +68,7 @@ readonly fileName: string
 readonly mode: number
 ```
 
-[文件权限信息](arkts-corefile-filefs-stat-i.md)。
+[文件权限信息](arkts-corefile-file-fs-stat-i.md)。
 
 **类型：** number
 

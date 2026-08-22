@@ -22,5 +22,5 @@ Stack的回调函数类型。
 | --- | --- | --- | --- |
 | value | T | 是 | 当前遍历到的元素。 |
 | index | int | 是 | 当前遍历到的下标值。 该值为整数。 |
-| stack | [Stack](arkts-arkts-utilstack-stack-c.md)&lt;T&gt; | 是 | 当前正在遍历的Stack实例。 |
+| stack | [Stack](arkts-arkts-util-stack-stack-c.md)&lt;T&gt; | 是 | 当前正在遍历的Stack实例。 |
 

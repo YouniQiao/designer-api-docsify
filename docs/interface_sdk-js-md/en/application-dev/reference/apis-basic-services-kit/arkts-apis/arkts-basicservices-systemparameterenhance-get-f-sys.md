@@ -27,7 +27,7 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key to be queried. The value can contain a maximum of 128 bytes. Only letters, digits, periods (.), hyphens (-), at signs (@), colons (:), and underscores (_) are allowed. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -50,6 +50,37 @@ try {
     } else {
         console.error(" get test.parameter.key value err:" + err.code)
     }});
+} catch(e) {
+    console.error("get unexpected error: " + e);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    systemParameterEnhance.get("const.ohos.apiversion", "default", (err: BusinessError, data: string) => {
+        if (err == undefined) {
+            console.info("get test.parameter.key value success:" + data)
+        } else {
+            console.error(" get test.parameter.key value err:" + err.code)
+        }
+    });
+} catch(e) {
+    console.error("get unexpected error:" + e)
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let p: Promise<string> = systemParameterEnhance.get("const.ohos.apiversion");
+    p.then((value: string) => {
+        console.info("get test.parameter.key success: " + value);
+    }).catch((err: BusinessError) => {
+        console.error("get test.parameter.key error: " + err.code);
+    });
 } catch(e) {
     console.error("get unexpected error: " + e);
 }
@@ -78,7 +109,7 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 | --- | --- | --- | --- |
 | key | string | Yes | Key to be queried. The value can contain a maximum of 128 bytes. Only letters, digits, periods (.), hyphens (-), at signs (@), colons (:), and underscores (_) are allowed. |
 | def | string | Yes | Default value. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -91,21 +122,7 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    systemParameterEnhance.get("const.ohos.apiversion", "default", (err: BusinessError, data: string) => {
-        if (err == undefined) {
-            console.info("get test.parameter.key value success:" + data)
-        } else {
-            console.error(" get test.parameter.key value err:" + err.code)
-        }
-    });
-} catch(e) {
-    console.error("get unexpected error:" + e)
-}
-```
+See [get](#get)
 
 
 ## get
@@ -148,18 +165,5 @@ Obtains a value of the specified key. This API uses a promise to return the resu
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let p: Promise<string> = systemParameterEnhance.get("const.ohos.apiversion");
-    p.then((value: string) => {
-        console.info("get test.parameter.key success: " + value);
-    }).catch((err: BusinessError) => {
-        console.error("get test.parameter.key error: " + err.code);
-    });
-} catch(e) {
-    console.error("get unexpected error: " + e);
-}
-```
+See [get](#get)
 

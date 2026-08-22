@@ -12,14 +12,14 @@ import { ArcScrollBar, ArcScrollBarAttribute } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [ArcScrollBarAttribute](arkts-arkui-arkuiarcscrollbar-arcscrollbarattribute-c.md) | Defines the arc scroll bar attribute functions. |
+| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-c.md) | Defines the arc scroll bar attribute functions. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ArcScrollBarInterface](arkts-arkui-arkuiarcscrollbar-arcscrollbarinterface-i.md) | The **ArcScrollBar** component is designed to be used together with scrollable components such as ArcList, List, Grid, Scroll, and WaterFlow. |
-| [ArcScrollBarOptions](arkts-arkui-arkuiarcscrollbar-arcscrollbaroptions-i.md) | Represents the parameters used to construct an **ArcScrollBar** component. |
+| [ArcScrollBarInterface](arkts-arkui-arkui-arcscrollbar-arcscrollbarinterface-i.md) | The **ArcScrollBar** component is designed to be used together with scrollable components such as ArcList, List, Grid, Scroll, and WaterFlow. |
+| [ArcScrollBarOptions](arkts-arkui-arkui-arcscrollbar-arcscrollbaroptions-i.md) | Represents the parameters used to construct an **ArcScrollBar** component. |
 
 ### Constants
 

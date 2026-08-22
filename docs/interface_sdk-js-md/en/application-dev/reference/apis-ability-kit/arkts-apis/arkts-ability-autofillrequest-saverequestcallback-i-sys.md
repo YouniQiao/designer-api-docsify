@@ -43,6 +43,73 @@ import { AutoFillExtensionAbility, UIExtensionContentSession, autoFillManager } 
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
+  onFillRequest(session: UIExtensionContentSession,
+    request: autoFillManager.FillRequest,
+    callback: autoFillManager.FillRequestCallback) {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'autofill onFillRequest');
+    try {
+      let storageData: Record<string, string | autoFillManager.FillRequestCallback | autoFillManager.ViewData> = {
+        'fillCallback': callback,
+        'message': 'AutoFill Page',
+        'viewData': request.viewData,
+      }
+      let storage_fill = new LocalStorage(storageData);
+      if (session) {
+        session.loadContent('pages/AutoFill Page', storage_fill);
+      } else {
+        hilog.error(0x0000, 'testTag', '%{public}s', 'session is null');
+      }
+    } catch (err) {
+      hilog.error(0x0000, 'testTag', '%{public}s', 'failed to load content');
+    }
+  }
+}
+```
+
+```TypeScript
+// AutoFillPage.ets
+import { autoFillManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+@Entry
+@Component
+struct AutoFillPage {
+  storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
+  fillCallback: autoFillManager.FillRequestCallback | undefined =
+    this.storage?.get<autoFillManager.FillRequestCallback>('fillCallback');
+  
+  build() {
+    Row() {
+      Column() {
+        Text('AutoFill Page')
+          .fontSize(50)
+          .fontWeight(FontWeight.Bold)
+      }
+
+      Button('onFailure')
+        .onClick(() => {
+          hilog.info(0x0000, 'testTag', 'autofill failure');
+          try {
+            this.fillCallback?.onFailure();
+          } catch (error) {
+            console.error(`catch error, code: ${(error as BusinessError).code},
+              message: ${(error as BusinessError).message}`);
+          }
+        })
+        .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// MyAutoFillExtensionAbility.ts
+import { AutoFillExtensionAbility, UIExtensionContentSession, autoFillManager } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
   onSaveRequest(session: UIExtensionContentSession,
     request: autoFillManager.SaveRequest,
     callback: autoFillManager.SaveRequestCallback) {
@@ -130,6 +197,79 @@ Called when a saving request is successfully processed.
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 **Examples**
+
+```TypeScript
+// MyAutoFillExtensionAbility.ts
+import { AutoFillExtensionAbility, UIExtensionContentSession, autoFillManager } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
+  onFillRequest(session: UIExtensionContentSession,
+    request: autoFillManager.FillRequest,
+    callback: autoFillManager.FillRequestCallback) {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'autofill onFillRequest');
+    try {
+      let storageData: Record<string, string | autoFillManager.FillRequestCallback | autoFillManager.ViewData> = {
+        'fillCallback': callback,
+        'message': 'AutoFill Page',
+        'viewData': request.viewData,
+      }
+      let storage_fill = new LocalStorage(storageData);
+      if (session) {
+        session.loadContent('pages/AutoFillPage', storage_fill);
+      } else {
+        hilog.error(0x0000, 'testTag', '%{public}s', 'session is null');
+      }
+    } catch (err) {
+      hilog.error(0x0000, 'testTag', '%{public}s', 'failed to load content');
+    }
+  }
+}
+```
+
+```TypeScript
+// AutoFillPage.ets
+import { autoFillManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+@Entry
+@Component
+struct AutoFillPage {
+  storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
+  fillCallback: autoFillManager.FillRequestCallback | undefined =
+    this.storage?.get<autoFillManager.FillRequestCallback>('fillCallback');
+  viewData: autoFillManager.ViewData | undefined = this.storage?.get<autoFillManager.ViewData>('viewData');
+
+  build() {
+    Row() {
+      Column() {
+        Text('AutoFill Page')
+          .fontSize(50)
+          .fontWeight(FontWeight.Bold)
+      }
+
+      Button('onSuccess')
+        .onClick(() => {
+          if (this.viewData) {
+            this.viewData.pageNodeInfos[0].value = 'user1';
+            this.viewData.pageNodeInfos[1].value = 'user1 password';
+            this.viewData.pageNodeInfos[2].value = 'user1 generate new password';
+            hilog.info(0x0000, 'testTag', 'autofill success with viewData: %{public}s', JSON.stringify(this.viewData));
+            try {
+              this.fillCallback?.onSuccess({ viewData: this.viewData });
+            } catch (error) {
+              console.error(`catch error, code: ${(error as BusinessError).code},
+                  message: ${(error as BusinessError).message}`);
+            }
+          }
+        })
+        .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ```TypeScript
 // MyAutoFillExtensionAbility.ts

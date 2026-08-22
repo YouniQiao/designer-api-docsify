@@ -85,6 +85,37 @@ let setSyncNotificationEnabledWithoutAppCallback = (err: BusinessError | null): 
 notificationManager.setSyncNotificationEnabledWithoutApp(userId, enable, setSyncNotificationEnabledWithoutAppCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 用户ID，使用时需替换为真实的userId。
+let userId: number = 100;
+let enable: boolean = true;
+notificationManager.setSyncNotificationEnabledWithoutApp(userId, enable).then(() => {
+    console.info('setSyncNotificationEnabledWithoutApp success');
+}).catch((err: BusinessError) => {
+    console.error(`setSyncNotificationEnabledWithoutApp failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 用户ID，使用时需替换为真实的userId。
+let userId: int = 1;
+let enable: boolean = true;
+notificationManager.setSyncNotificationEnabledWithoutApp(userId, enable).then(() => {
+    console.info('setSyncNotificationEnabledWithoutApp success');
+}).catch((err: Error): void => {
+    let error: BusinessError = err as BusinessError;
+    console.error(`setSyncNotificationEnabledWithoutApp failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## setSyncNotificationEnabledWithoutApp
 
@@ -134,34 +165,5 @@ function setSyncNotificationEnabledWithoutApp(userId: int, enable: boolean): Pro
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: number = 100;
-let enable: boolean = true;
-notificationManager.setSyncNotificationEnabledWithoutApp(userId, enable).then(() => {
-    console.info('setSyncNotificationEnabledWithoutApp success');
-}).catch((err: BusinessError) => {
-    console.error(`setSyncNotificationEnabledWithoutApp failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: int = 1;
-let enable: boolean = true;
-notificationManager.setSyncNotificationEnabledWithoutApp(userId, enable).then(() => {
-    console.info('setSyncNotificationEnabledWithoutApp success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`setSyncNotificationEnabledWithoutApp failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [setSyncNotificationEnabledWithoutApp](#setsyncnotificationenabledwithoutapp)
 

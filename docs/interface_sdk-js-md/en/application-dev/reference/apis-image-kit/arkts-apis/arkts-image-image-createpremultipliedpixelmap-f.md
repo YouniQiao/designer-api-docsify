@@ -26,7 +26,7 @@ Transforms pixelmap from unpremultiplied alpha format to premultiplied alpha for
 | --- | --- | --- | --- |
 | src | PixelMap | Yes | The source pixelmap. |
 | dst | PixelMap | Yes | The destination pixelmap. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -62,6 +62,30 @@ async function CreatePremultipliedPixelMap() {
     } else {
       console.info('Succeeded in converting pixelmap.');
     }
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function CreatePremultipliedPixelMap() {
+  const color: ArrayBuffer = new ArrayBuffer(16); // 16 is the size of the pixel buffer to create. The value is calculated as follows: height * width * 4.
+  let bufferArr = new Uint8Array(color);
+  for (let i = 0; i < bufferArr.length; i += 4) {
+    bufferArr[i] = 255;
+    bufferArr[i+1] = 255;
+    bufferArr[i+2] = 122;
+    bufferArr[i+3] = 122;
+  }
+  let optsForUnpre: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 2, width: 2 } , alphaType: image.AlphaType.UNPREMUL}
+  let srcPixelmap = image.createPixelMapSync(color, optsForUnpre);
+  let optsForPre: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 2, width: 2 } , alphaType: image.AlphaType.PREMUL}
+  let dstPixelMap = image.createPixelMapSync(optsForPre);
+  image.createPremultipliedPixelMap(srcPixelmap, dstPixelMap).then(() => {
+    console.info('Succeeded in converting pixelmap.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to convert pixelmap, error code is ${error}`);
   })
 }
 ```
@@ -105,27 +129,5 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreatePremultipliedPixelMap() {
-  const color: ArrayBuffer = new ArrayBuffer(16); // 16 is the size of the pixel buffer to create. The value is calculated as follows: height * width * 4.
-  let bufferArr = new Uint8Array(color);
-  for (let i = 0; i < bufferArr.length; i += 4) {
-    bufferArr[i] = 255;
-    bufferArr[i+1] = 255;
-    bufferArr[i+2] = 122;
-    bufferArr[i+3] = 122;
-  }
-  let optsForUnpre: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 2, width: 2 } , alphaType: image.AlphaType.UNPREMUL}
-  let srcPixelmap = image.createPixelMapSync(color, optsForUnpre);
-  let optsForPre: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 2, width: 2 } , alphaType: image.AlphaType.PREMUL}
-  let dstPixelMap = image.createPixelMapSync(optsForPre);
-  image.createPremultipliedPixelMap(srcPixelmap, dstPixelMap).then(() => {
-    console.info('Succeeded in converting pixelmap.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to convert pixelmap, error code is ${error}`);
-  })
-}
-```
+See [createPremultipliedPixelMap](#createpremultipliedpixelmap)
 

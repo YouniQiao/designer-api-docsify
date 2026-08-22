@@ -64,6 +64,25 @@ try {
 }
 ```
 
+```TypeScript
+import { businessAbilityRouter } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filter: businessAbilityRouter.BusinessAbilityFilter = { businessType: businessAbilityRouter.BusinessType.SHARE };
+
+try {
+  businessAbilityRouter.queryBusinessAbilityInfo(filter)
+    .then(() => {
+      console.info('queryBusinessAbilityInfo success');
+    }).catch((error: BusinessError) => {
+    console.error('queryBusinessAbilityInfo failed ' + error.message);
+  });
+} catch (error) {
+  let message = (error as BusinessError).message;
+  console.error('queryBusinessAbilityInfo failed ' + message);
+}
+```
+
 
 ## queryBusinessAbilityInfo
 
@@ -105,22 +124,5 @@ function queryBusinessAbilityInfo(filter: BusinessAbilityFilter): Promise<Array<
 
 **示例**
 
-```TypeScript
-import { businessAbilityRouter } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filter: businessAbilityRouter.BusinessAbilityFilter = { businessType: businessAbilityRouter.BusinessType.SHARE };
-
-try {
-  businessAbilityRouter.queryBusinessAbilityInfo(filter)
-    .then(() => {
-      console.info('queryBusinessAbilityInfo success');
-    }).catch((error: BusinessError) => {
-    console.error('queryBusinessAbilityInfo failed ' + error.message);
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('queryBusinessAbilityInfo failed ' + message);
-}
-```
+参见 [queryBusinessAbilityInfo](#querybusinessabilityinfo)
 

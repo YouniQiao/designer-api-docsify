@@ -36,3 +36,31 @@ details?: Record<string, int | long | double | string | Uint8Array>
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+let sdr = new unifiedDataChannel.SystemDefinedRecord();
+let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+sdr.details = {
+  title: 'recordTitle',
+  version: 1,
+  content: u8Array
+};
+let unifiedData = new unifiedDataChannel.UnifiedData(sdr);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let sdr = new unifiedDataChannel.SystemDefinedRecord();
+let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+sdr.details = {
+  "title": 'recordTitle',
+  "version": 1,
+  "content": u8Array
+};
+let unifiedData = new unifiedDataChannel.UnifiedData(sdr);
+```
+

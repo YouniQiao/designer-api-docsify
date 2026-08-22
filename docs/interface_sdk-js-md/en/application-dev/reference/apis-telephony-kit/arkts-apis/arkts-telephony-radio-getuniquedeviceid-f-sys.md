@@ -31,7 +31,7 @@ If the device is registered with a 3GPP-compliant network, the international mob
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Indicates the callback for getting the unique device ID. Returns an empty string if the unique device ID does not exist. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Indicates the callback for getting the unique device ID. Returns an empty string if the unique device ID does not exist. |
 
 **Error codes:**
 
@@ -50,6 +50,18 @@ If the device is registered with a 3GPP-compliant network, the international mob
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+radio.getUniqueDeviceId((err: BusinessError, data: string) => {
+    if (err) {
+        console.error(`getUniqueDeviceId failed, callback: err->${JSON.stringify(err)}}`);
+        return;
+    }
+    console.info(`getUniqueDeviceId success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let slotId: number = 0;
 radio.getUniqueDeviceId(slotId, (err: BusinessError, data: string) => {
     if (err) {
@@ -57,6 +69,17 @@ radio.getUniqueDeviceId(slotId, (err: BusinessError, data: string) => {
         return;
     }
     console.info(`getUniqueDeviceId success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.getUniqueDeviceId(slotId).then((data: string) => {
+    console.info(`getUniqueDeviceId success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getUniqueDeviceId failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -107,16 +130,7 @@ If the device is registered with a 3GPP-compliant network, the international mob
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getUniqueDeviceId(slotId).then((data: string) => {
-    console.info(`getUniqueDeviceId success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getUniqueDeviceId failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getUniqueDeviceId](#getuniquedeviceid)
 
 
 ## getUniqueDeviceId
@@ -143,7 +157,7 @@ If the device is registered with a 3GPP-compliant network, the international mob
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Indicates the callback for getting the unique device ID. Returns an empty string if the unique device ID does not exist. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Indicates the callback for getting the unique device ID. Returns an empty string if the unique device ID does not exist. |
 
 **Error codes:**
 
@@ -159,15 +173,5 @@ If the device is registered with a 3GPP-compliant network, the international mob
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.getUniqueDeviceId((err: BusinessError, data: string) => {
-    if (err) {
-        console.error(`getUniqueDeviceId failed, callback: err->${JSON.stringify(err)}}`);
-        return;
-    }
-    console.info(`getUniqueDeviceId success, callback: data->${JSON.stringify(data)}`);
-});
-```
+See [getUniqueDeviceId](#getuniquedeviceid)
 

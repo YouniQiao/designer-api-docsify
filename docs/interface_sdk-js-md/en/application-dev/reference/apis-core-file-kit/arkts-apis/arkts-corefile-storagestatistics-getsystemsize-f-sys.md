@@ -28,7 +28,7 @@ Get the system size.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | callback <br>Unit: Byte. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | callback <br>Unit: Byte. |
 
 **Error codes:**
 
@@ -41,6 +41,15 @@ Get the system size.
 | 13900042 | Unknown error. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+storageStatistics.getSystemSize().then((number: number) => {
+  console.info("getSystemSize successfully:" + number);
+}).catch((err: BusinessError) => {
+  console.error("getSystemSize failed with error:" + JSON.stringify(err));
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -91,12 +100,5 @@ Get the system size.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-storageStatistics.getSystemSize().then((number: number) => {
-  console.info("getSystemSize successfully:" + number);
-}).catch((err: BusinessError) => {
-  console.error("getSystemSize failed with error:" + JSON.stringify(err));
-});
-```
+See [getSystemSize](#getsystemsize)
 

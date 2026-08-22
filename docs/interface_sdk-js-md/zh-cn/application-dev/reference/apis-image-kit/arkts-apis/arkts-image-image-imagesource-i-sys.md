@@ -126,6 +126,10 @@ Decodes to a SDR PixelMap, using a as wide gamut as possible. For a SDR ImageSou
 | [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
 | [7700301](../errorcode-image.md#7700301-解码失败) | Decoding failed. |
 
+**示例**
+
+参见 [createWideGamutSdrPixelMap](#createwidegamutsdrpixelmap)
+
 ## isJpegProgressive
 
 ```TypeScript

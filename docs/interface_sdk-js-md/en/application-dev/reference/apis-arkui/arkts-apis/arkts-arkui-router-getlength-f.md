@@ -18,14 +18,14 @@ Obtains the number of pages in the current stack.
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkuiuicontext-uicontext-c.md) object associated
+> [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object associated
 > with the current UI context.
 
 **Since:** 8
 
 **Deprecated since:** 18
 
-**Substitutes:** [getLength](arkts-arkui-arkuiuicontext-router-c.md#getlength)
+**Substitutes:** [getLength](../../apis-default/arkts-apis/arkts-arkui-uicontext-router-c.md#getlength)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -47,3 +47,18 @@ Query printer capabilityies by printer uri.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 | [13100005](../errorcode-print.md#13100005-invalid-printer) | Can not find the printer in system. |
 
+**Examples**
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let printerUri : string = "testPrinterUri";
+let printerId : string = "testPrinterId";
+print.queryPrinterCapabilityByUri(printerUri, printerId).then((capabilities: print.PrinterCapabilities) => {
+    console.info('queryPrinterCapabilityByUri success' + JSON.stringify(capabilities));
+}).catch((error: BusinessError) => {
+    console.error('queryPrinterCapabilityByUri error : ' + JSON.stringify(error));
+})
+```
+

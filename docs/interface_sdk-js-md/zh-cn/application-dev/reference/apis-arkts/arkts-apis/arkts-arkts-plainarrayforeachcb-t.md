@@ -22,5 +22,5 @@ PlainArray的回调函数类型。
 | --- | --- | --- | --- |
 | value | T | 是 | 当前元素的值。 |
 | key | int | 是 | 当前元素的键。 该值为整数。 |
-| PlainArray | [PlainArray](arkts-arkts-utilplainarray-plainarray-c.md)&lt;T&gt; | 是 | 当前正在遍历的PlainArray实例。 |
+| PlainArray | [PlainArray](arkts-arkts-util-plainarray-plainarray-c.md)&lt;T&gt; | 是 | 当前正在遍历的PlainArray实例。 |
 

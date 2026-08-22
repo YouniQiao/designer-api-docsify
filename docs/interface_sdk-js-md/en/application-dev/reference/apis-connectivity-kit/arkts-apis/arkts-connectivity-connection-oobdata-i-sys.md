@@ -2,7 +2,7 @@
 
 Out Of Band data used in Bluetooth device pairing.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-connection-interface OobData--><!--Device-connection-interface OobData-End-->
 
@@ -26,7 +26,7 @@ Confirmation data in OOB pairing, with a size of 16 octets.
 
 **Type:** Uint8Array
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +46,7 @@ The address of remote Bluetooth device.
 
 **Type:** BluetoothAddress
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,7 +66,7 @@ The name of the remote Bluetooth device.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,7 +86,7 @@ The role of the remote Bluetooth device.
 
 **Type:** DeviceRole
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,7 +106,7 @@ Randomizer data in OOB pairing, with a size of 16 octets.
 
 **Type:** Uint8Array
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -33,3 +33,13 @@ Sets a value for the specified key.
 | key | string | Yes | Target key. |
 | value | string | Yes | Value to set. |
 
+**Examples**
+
+```TypeScript
+try {
+    systemparameter.setSync("test.parameter.key", "default");
+} catch(e) {
+    console.error("set unexpected error: " + e);
+}
+```
+

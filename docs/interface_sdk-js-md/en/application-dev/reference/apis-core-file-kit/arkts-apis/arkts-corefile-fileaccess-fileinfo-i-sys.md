@@ -46,7 +46,7 @@ Obtains a **FileIterator** object that lists the next-level files or directories
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-default/arkts-apis/arkts-filefs-filter-i.md) | No | Indicates the filter of file. |
+| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | No | Indicates the filter of file. |
 
 **Return value:**
 
@@ -125,6 +125,36 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// rootInfo can be obtained by getRoots().
+// let filter = {suffix : [".txt", ".jpg", ".xlsx"]};
+let rootInfo: Array<fileAccess.FileInfo> = [];
+let fileInfos: Array<fileAccess.FileInfo> = [];
+let isDone: boolean = false;
+try {
+  for (let i = 0; i < rootInfo.length; ++i) {
+    let fileIterator = rootInfo[i].listFile();
+    // listFile() with the filter implementation.
+    // let fileIterator = rootInfo.listFile(filter);
+    if (!fileIterator) {
+      console.error("listFile interface returns an undefined object");
+    }
+    while (!isDone) {
+      let result = fileIterator.next();
+      console.info("next result = " + JSON.stringify(result));
+      isDone = result.done;
+      if (!isDone) {
+        fileInfos.push(result.value);
+      }
+    }
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("listFile failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## scanFile
 
 ```TypeScript
@@ -151,7 +181,7 @@ Obtains a **FileIterator** object that recursively retrieves the files matching 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-default/arkts-apis/arkts-filefs-filter-i.md) | No | Indicates the filter of file. |
+| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | No | Indicates the filter of file. |
 
 **Return value:**
 
@@ -221,6 +251,36 @@ try {
       isDone = result.done;
       if (!isDone) {
         subfileInfos.push(result.value);
+      }
+    }
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("scanFile failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// rootInfo can be obtained by getRoots().
+// let filter = {suffix : [".txt", ".jpg", ".xlsx"]};
+let rootInfo: Array<fileAccess.FileInfo> = [];
+let fileInfos: Array<fileAccess.FileInfo> = [];
+let isDone: boolean = false;
+try {
+  for (let i = 0; i < rootInfo.length; ++i) {
+    let fileIterator = rootInfo[i].scanFile();
+    // scanFile() with the filter implementation.
+    // let fileIterator = rootInfo.scanFile(filter);
+    if (!fileIterator) {
+      console.error("scanFile interface returns undefined object");
+    }
+    while (!isDone) {
+      let result = fileIterator.next();
+      console.info("next result = " + JSON.stringify(result));
+      isDone = result.done;
+      if (!isDone) {
+        fileInfos.push(result.value);
       }
     }
   }

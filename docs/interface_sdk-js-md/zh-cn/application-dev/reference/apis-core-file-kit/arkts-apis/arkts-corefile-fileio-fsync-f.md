@@ -35,6 +35,28 @@ declare function fsync(fd: number): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回值。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+fileio.fsync(fd).then(() => {
+  console.info("sync data succeed");
+}).catch((err: BusinessError) => {
+  console.error("sync data failed with error:" + err);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+fileio.fsync(fd, (err: BusinessError) => {
+  // do something
+});
+```
+
 
 ## fsync
 
@@ -60,4 +82,8 @@ declare function fsync(fd: number, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | fd | number | 是 | 待同步文件的文件描述符。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步将文件数据同步之后的回调。 |
+
+**示例**
+
+参见 [fsync](#fsync)
 

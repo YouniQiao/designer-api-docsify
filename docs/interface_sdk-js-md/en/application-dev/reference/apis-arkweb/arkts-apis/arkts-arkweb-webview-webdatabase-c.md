@@ -34,6 +34,34 @@ Deletes all HTTP authentication credentials saved in the cache. This API returns
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('deleteHttpAuthCredentials')
+        .onClick(() => {
+          try {
+            webview.WebDataBase.deleteHttpAuthCredentials();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## existHttpAuthCredentials
 
 ```TypeScript
@@ -55,6 +83,34 @@ Checks whether any saved HTTP authentication credentials exist. This API returns
 | Type | Description |
 | --- | --- |
 | boolean | Whether any saved HTTP authentication credentials exist. <br>**true** is returned if any saved HTTP authentication credentials exist; otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('existHttpAuthCredentials')
+        .onClick(() => {
+          try {
+            let result = webview.WebDataBase.existHttpAuthCredentials();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## getHttpAuthCredentials
 
@@ -91,6 +147,38 @@ Retrieves HTTP authentication credentials for a given host and realm. This API r
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  host: string = "www.spincast.org";
+  realm: string = "protected example";
+  username_password: string[] = [];
+
+  build() {
+    Column() {
+      Button('getHttpAuthCredentials')
+        .onClick(() => {
+          try {
+            this.username_password = webview.WebDataBase.getHttpAuthCredentials(this.host, this.realm);
+            console.info('num: ' + this.username_password.length);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## saveHttpAuthCredentials
 
 ```TypeScript
@@ -121,4 +209,34 @@ Saves HTTP authentication credentials for a given host and realm. This API retur
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  host: string = "www.spincast.org";
+  realm: string = "protected example";
+
+  build() {
+    Column() {
+      Button('saveHttpAuthCredentials')
+        .onClick(() => {
+          try {
+            webview.WebDataBase.saveHttpAuthCredentials(this.host, this.realm, "Stromgol", "Laroche");
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 

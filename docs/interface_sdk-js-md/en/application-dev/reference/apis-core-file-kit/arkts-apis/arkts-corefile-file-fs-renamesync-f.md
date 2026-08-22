@@ -59,3 +59,11 @@ Renames a file or directory. This API returns the result synchronously.
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+let srcFile = pathDir + "/test.txt";
+let dstFile = pathDir + "/new.txt";
+fs.renameSync(srcFile, dstFile);
+```
+

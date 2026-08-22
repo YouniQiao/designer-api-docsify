@@ -35,6 +35,26 @@ Obtains information about a Wi-Fi connection.
 | --- | --- |
 | Promise&lt;WifiLinkedInfo&gt; | Returns Wi-Fi linked information. |
 
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+wifi.getLinkedInfo((err, data:wifi.WifiLinkedInfo) => {
+    if (err) {
+        console.error("get linked info error");
+        return;
+    }
+    console.info("get wifi linked info: " + JSON.stringify(data));
+});
+
+wifi.getLinkedInfo().then(data => {
+    console.info("get wifi linked info: " + JSON.stringify(data));
+}).catch((error:number) => {
+    console.info("get linked info error");
+});
+```
+
 
 ## getLinkedInfo
 
@@ -60,25 +80,9 @@ Obtains information about a Wi-Fi connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;WifiLinkedInfo&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiLinkedInfo&gt; | Yes |  |
 
 **Examples**
 
-```TypeScript
-import wifi from '@ohos.wifi';
-
-wifi.getLinkedInfo((err, data:wifi.WifiLinkedInfo) => {
-    if (err) {
-        console.error("get linked info error");
-        return;
-    }
-    console.info("get wifi linked info: " + JSON.stringify(data));
-});
-
-wifi.getLinkedInfo().then(data => {
-    console.info("get wifi linked info: " + JSON.stringify(data));
-}).catch((error:number) => {
-    console.info("get linked info error");
-});
-```
+See [getLinkedInfo](#getlinkedinfo)
 

@@ -50,6 +50,26 @@ Whether the ad is clicked.
 
 **System capability:** SystemCapability.Advertising.Ads
 
+## rewarded
+
+```TypeScript
+rewarded: boolean
+```
+
+Whether users get rewarded for watching or clicking the ad.
+
+- **true**: Users get rewarded. - **false**: Users do not get rewarded.
+
+**Type:** boolean
+
+**Since:** 11
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Advertisement-rewarded: boolean--><!--Device-Advertisement-rewarded: boolean-End-->
+
+**System capability:** SystemCapability.Advertising.Ads
+
 ## rewardVerifyConfig
 
 ```TypeScript
@@ -73,26 +93,6 @@ userId: "12345"
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Advertisement-rewardVerifyConfig: Map<string, string>--><!--Device-Advertisement-rewardVerifyConfig: Map<string, string>-End-->
-
-**System capability:** SystemCapability.Advertising.Ads
-
-## rewarded
-
-```TypeScript
-rewarded: boolean
-```
-
-Whether users get rewarded for watching or clicking the ad.
-
-- **true**: Users get rewarded. - **false**: Users do not get rewarded.
-
-**Type:** boolean
-
-**Since:** 11
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Advertisement-rewarded: boolean--><!--Device-Advertisement-rewarded: boolean-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 

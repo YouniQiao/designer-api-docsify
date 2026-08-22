@@ -27,7 +27,7 @@ Copies the source directory and its content to the destination path. You can set
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the source directory. |
 | dest | string | Yes | Application sandbox path of the destination directory. |
-| mode | int | No | Copy mode. The default value is **0**. <br>- **0**: Throw an exception if a file conflict occurs. <br> An exception will be thrown if the destination directory contains a directory with the same name as the source directory, and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory will be copied to the destination directory, and the non-conflicting files in the destination directory will be retained. The **data** attribute in the error returned provides information about the conflicting files in the Array&lt;[ConflictFiles](arkts-filefs-conflictfiles-i.md)&gt; format. <br>- **1**: Forcibly overwrite the files with the same name in the destination directory. <br> When the destination directory contains a directory with the same name as the source directory, the files with the same names in the destination directory are overwritten forcibly; the files without conflicts in the destination directory are retained. |
+| mode | int | No | Copy mode. The default value is **0**. <br>- **0**: Throw an exception if a file conflict occurs. <br> An exception will be thrown if the destination directory contains a directory with the same name as the source directory, and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory will be copied to the destination directory, and the non-conflicting files in the destination directory will be retained. The **data** attribute in the error returned provides information about the conflicting files in the Array&lt;[ConflictFiles](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-conflictfiles-i.md)&gt; format. <br>- **1**: Forcibly overwrite the files with the same name in the destination directory. <br> When the destination directory contains a directory with the same name as the source directory, the files with the same names in the destination directory are overwritten forcibly; the files without conflicts in the destination directory are retained. |
 
 **Return value:**
 
@@ -83,7 +83,7 @@ An exception will be thrown if the destination directory contains a directory wi
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the source directory. |
 | dest | string | Yes | Application sandbox path of the destination directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the directory is successfully copied, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the directory is successfully copied, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -131,7 +131,7 @@ Copies the source directory and its content to the destination path. You can set
 | src | string | Yes | Application sandbox path of the source directory. |
 | dest | string | Yes | Application sandbox path of the destination directory. |
 | mode | int | Yes | Copy mode. <br>- **0**: Throw an exception if a file conflict occurs. <br> An exception will be thrown if the destination directory contains a directory with the same name as the source directory, and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory will be copied to the destination directory, and the non-conflicting files in the destination directory will be retained. <br>- **1**: Forcibly overwrite the files with the same name in the destination directory. <br> When the destination directory contains a directory with the same name as the source directory, the files with the same names in the destination directory are overwritten forcibly; the files without conflicts in the destination directory are retained. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the directory is successfully copied, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the directory is successfully copied, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

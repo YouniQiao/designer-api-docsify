@@ -3429,6 +3429,24 @@ Data type: byte
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
+## canvas
+
+```TypeScript
+readonly canvas: HTMLCanvasElement | OffscreenCanvas
+```
+
+The canvas element
+
+**Type:** HTMLCanvasElement \| OffscreenCanvas
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGLRenderingContextBase-readonly canvas: HTMLCanvasElement | OffscreenCanvas--><!--Device-WebGLRenderingContextBase-readonly canvas: HTMLCanvasElement | OffscreenCanvas-End-->
+
+**System capability:** SystemCapability.Graphic.Graphic2D.WebGL
+
 ## CCW
 
 ```TypeScript
@@ -4020,6 +4038,42 @@ Hint: don't care
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLRenderingContextBase-readonly DONT_CARE: GLenum--><!--Device-WebGLRenderingContextBase-readonly DONT_CARE: GLenum-End-->
+
+**System capability:** SystemCapability.Graphic.Graphic2D.WebGL
+
+## drawingBufferHeight
+
+```TypeScript
+readonly drawingBufferHeight: GLsizei
+```
+
+Drawing buffer height
+
+**Type:** [GLsizei](arkts-arkgraphics2d-glsizei-t.md)
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGLRenderingContextBase-readonly drawingBufferHeight: GLsizei--><!--Device-WebGLRenderingContextBase-readonly drawingBufferHeight: GLsizei-End-->
+
+**System capability:** SystemCapability.Graphic.Graphic2D.WebGL
+
+## drawingBufferWidth
+
+```TypeScript
+readonly drawingBufferWidth: GLsizei
+```
+
+Drawing buffer width
+
+**Type:** [GLsizei](arkts-arkgraphics2d-glsizei-t.md)
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGLRenderingContextBase-readonly drawingBufferWidth: GLsizei--><!--Device-WebGLRenderingContextBase-readonly drawingBufferWidth: GLsizei-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -4995,6 +5049,60 @@ Comparison function: less
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
+## LINE_LOOP
+
+```TypeScript
+readonly LINE_LOOP: GLenum
+```
+
+Primitive type: line strip
+
+**Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGLRenderingContextBase-readonly LINE_LOOP: GLenum--><!--Device-WebGLRenderingContextBase-readonly LINE_LOOP: GLenum-End-->
+
+**System capability:** SystemCapability.Graphic.Graphic2D.WebGL
+
+## LINE_STRIP
+
+```TypeScript
+readonly LINE_STRIP: GLenum
+```
+
+Primitive type: line strip
+
+**Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGLRenderingContextBase-readonly LINE_STRIP: GLenum--><!--Device-WebGLRenderingContextBase-readonly LINE_STRIP: GLenum-End-->
+
+**System capability:** SystemCapability.Graphic.Graphic2D.WebGL
+
+## LINE_WIDTH
+
+```TypeScript
+readonly LINE_WIDTH: GLenum
+```
+
+Line width
+
+**Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGLRenderingContextBase-readonly LINE_WIDTH: GLenum--><!--Device-WebGLRenderingContextBase-readonly LINE_WIDTH: GLenum-End-->
+
+**System capability:** SystemCapability.Graphic.Graphic2D.WebGL
+
 ## LINEAR
 
 ```TypeScript
@@ -5064,60 +5172,6 @@ Primitive type: lines
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLRenderingContextBase-readonly LINES: GLenum--><!--Device-WebGLRenderingContextBase-readonly LINES: GLenum-End-->
-
-**System capability:** SystemCapability.Graphic.Graphic2D.WebGL
-
-## LINE_LOOP
-
-```TypeScript
-readonly LINE_LOOP: GLenum
-```
-
-Primitive type: line strip
-
-**Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-WebGLRenderingContextBase-readonly LINE_LOOP: GLenum--><!--Device-WebGLRenderingContextBase-readonly LINE_LOOP: GLenum-End-->
-
-**System capability:** SystemCapability.Graphic.Graphic2D.WebGL
-
-## LINE_STRIP
-
-```TypeScript
-readonly LINE_STRIP: GLenum
-```
-
-Primitive type: line strip
-
-**Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-WebGLRenderingContextBase-readonly LINE_STRIP: GLenum--><!--Device-WebGLRenderingContextBase-readonly LINE_STRIP: GLenum-End-->
-
-**System capability:** SystemCapability.Graphic.Graphic2D.WebGL
-
-## LINE_WIDTH
-
-```TypeScript
-readonly LINE_WIDTH: GLenum
-```
-
-Line width
-
-**Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-WebGLRenderingContextBase-readonly LINE_WIDTH: GLenum--><!--Device-WebGLRenderingContextBase-readonly LINE_WIDTH: GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -5553,6 +5607,24 @@ Hint: nicest
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
+## NO_ERROR
+
+```TypeScript
+readonly NO_ERROR: GLenum
+```
+
+Error code: no error
+
+**Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGLRenderingContextBase-readonly NO_ERROR: GLenum--><!--Device-WebGLRenderingContextBase-readonly NO_ERROR: GLenum-End-->
+
+**System capability:** SystemCapability.Graphic.Graphic2D.WebGL
+
 ## NONE
 
 ```TypeScript
@@ -5586,24 +5658,6 @@ Comparison function: not equal
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLRenderingContextBase-readonly NOTEQUAL: GLenum--><!--Device-WebGLRenderingContextBase-readonly NOTEQUAL: GLenum-End-->
-
-**System capability:** SystemCapability.Graphic.Graphic2D.WebGL
-
-## NO_ERROR
-
-```TypeScript
-readonly NO_ERROR: GLenum
-```
-
-Error code: no error
-
-**Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-WebGLRenderingContextBase-readonly NO_ERROR: GLenum--><!--Device-WebGLRenderingContextBase-readonly NO_ERROR: GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -6201,60 +6255,6 @@ Renderbuffer internal format: RGBA4
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
-## SAMPLER_2D
-
-```TypeScript
-readonly SAMPLER_2D: GLenum
-```
-
-Sampler type: 2D
-
-**Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-WebGLRenderingContextBase-readonly SAMPLER_2D: GLenum--><!--Device-WebGLRenderingContextBase-readonly SAMPLER_2D: GLenum-End-->
-
-**System capability:** SystemCapability.Graphic.Graphic2D.WebGL
-
-## SAMPLER_CUBE
-
-```TypeScript
-readonly SAMPLER_CUBE: GLenum
-```
-
-Sampler type: cube
-
-**Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-WebGLRenderingContextBase-readonly SAMPLER_CUBE: GLenum--><!--Device-WebGLRenderingContextBase-readonly SAMPLER_CUBE: GLenum-End-->
-
-**System capability:** SystemCapability.Graphic.Graphic2D.WebGL
-
-## SAMPLES
-
-```TypeScript
-readonly SAMPLES: GLenum
-```
-
-Samples
-
-**Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-WebGLRenderingContextBase-readonly SAMPLES: GLenum--><!--Device-WebGLRenderingContextBase-readonly SAMPLES: GLenum-End-->
-
-**System capability:** SystemCapability.Graphic.Graphic2D.WebGL
-
 ## SAMPLE_ALPHA_TO_COVERAGE
 
 ```TypeScript
@@ -6342,6 +6342,60 @@ Sample coverage value
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLRenderingContextBase-readonly SAMPLE_COVERAGE_VALUE: GLenum--><!--Device-WebGLRenderingContextBase-readonly SAMPLE_COVERAGE_VALUE: GLenum-End-->
+
+**System capability:** SystemCapability.Graphic.Graphic2D.WebGL
+
+## SAMPLER_2D
+
+```TypeScript
+readonly SAMPLER_2D: GLenum
+```
+
+Sampler type: 2D
+
+**Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGLRenderingContextBase-readonly SAMPLER_2D: GLenum--><!--Device-WebGLRenderingContextBase-readonly SAMPLER_2D: GLenum-End-->
+
+**System capability:** SystemCapability.Graphic.Graphic2D.WebGL
+
+## SAMPLER_CUBE
+
+```TypeScript
+readonly SAMPLER_CUBE: GLenum
+```
+
+Sampler type: cube
+
+**Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGLRenderingContextBase-readonly SAMPLER_CUBE: GLenum--><!--Device-WebGLRenderingContextBase-readonly SAMPLER_CUBE: GLenum-End-->
+
+**System capability:** SystemCapability.Graphic.Graphic2D.WebGL
+
+## SAMPLES
+
+```TypeScript
+readonly SAMPLES: GLenum
+```
+
+Samples
+
+**Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGLRenderingContextBase-readonly SAMPLES: GLenum--><!--Device-WebGLRenderingContextBase-readonly SAMPLES: GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -7749,24 +7803,6 @@ Texture parameter: wrap t
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
-## TRIANGLES
-
-```TypeScript
-readonly TRIANGLES: GLenum
-```
-
-Primitive type: triangles
-
-**Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-WebGLRenderingContextBase-readonly TRIANGLES: GLenum--><!--Device-WebGLRenderingContextBase-readonly TRIANGLES: GLenum-End-->
-
-**System capability:** SystemCapability.Graphic.Graphic2D.WebGL
-
 ## TRIANGLE_FAN
 
 ```TypeScript
@@ -7800,6 +7836,24 @@ Primitive type: triangle strip
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLRenderingContextBase-readonly TRIANGLE_STRIP: GLenum--><!--Device-WebGLRenderingContextBase-readonly TRIANGLE_STRIP: GLenum-End-->
+
+**System capability:** SystemCapability.Graphic.Graphic2D.WebGL
+
+## TRIANGLES
+
+```TypeScript
+readonly TRIANGLES: GLenum
+```
+
+Primitive type: triangles
+
+**Type:** [GLenum](arkts-arkgraphics2d-glenum-t.md)
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGLRenderingContextBase-readonly TRIANGLES: GLenum--><!--Device-WebGLRenderingContextBase-readonly TRIANGLES: GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -8214,60 +8268,6 @@ Zero value
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLRenderingContextBase-readonly ZERO: GLenum--><!--Device-WebGLRenderingContextBase-readonly ZERO: GLenum-End-->
-
-**System capability:** SystemCapability.Graphic.Graphic2D.WebGL
-
-## canvas
-
-```TypeScript
-readonly canvas: HTMLCanvasElement | OffscreenCanvas
-```
-
-The canvas element
-
-**Type:** HTMLCanvasElement \| OffscreenCanvas
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-WebGLRenderingContextBase-readonly canvas: HTMLCanvasElement | OffscreenCanvas--><!--Device-WebGLRenderingContextBase-readonly canvas: HTMLCanvasElement | OffscreenCanvas-End-->
-
-**System capability:** SystemCapability.Graphic.Graphic2D.WebGL
-
-## drawingBufferHeight
-
-```TypeScript
-readonly drawingBufferHeight: GLsizei
-```
-
-Drawing buffer height
-
-**Type:** [GLsizei](arkts-arkgraphics2d-glsizei-t.md)
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-WebGLRenderingContextBase-readonly drawingBufferHeight: GLsizei--><!--Device-WebGLRenderingContextBase-readonly drawingBufferHeight: GLsizei-End-->
-
-**System capability:** SystemCapability.Graphic.Graphic2D.WebGL
-
-## drawingBufferWidth
-
-```TypeScript
-readonly drawingBufferWidth: GLsizei
-```
-
-Drawing buffer width
-
-**Type:** [GLsizei](arkts-arkgraphics2d-glsizei-t.md)
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-WebGLRenderingContextBase-readonly drawingBufferWidth: GLsizei--><!--Device-WebGLRenderingContextBase-readonly drawingBufferWidth: GLsizei-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 

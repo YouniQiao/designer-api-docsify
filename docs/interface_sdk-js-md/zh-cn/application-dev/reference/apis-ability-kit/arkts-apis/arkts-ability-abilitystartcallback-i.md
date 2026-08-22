@@ -66,7 +66,7 @@ completionHandler?: CompletionHandlerForAbilityStartCallback
 
 用于返回拉起指定类型的Ability组件的回调结果。
 
-**类型：** [CompletionHandlerForAbilityStartCallback](arkts-ability-appabilitycompletionhandlerforabilitystartcallback-completionhandlerforabilitystartcallback-c.md)
+**类型：** [CompletionHandlerForAbilityStartCallback](arkts-ability-app-ability-completionhandlerforabilitystartcallback-completionhandlerforabilitystartcallback-c.md)
 
 **起始版本：** 21
 

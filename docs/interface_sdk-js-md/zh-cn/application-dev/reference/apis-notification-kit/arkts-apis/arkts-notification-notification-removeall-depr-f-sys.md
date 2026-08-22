@@ -37,6 +37,75 @@ function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void
 | bundle | BundleOption | 是 | 指定应用的包信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定应用的所有通知回调函数。 |
 
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let removeAllCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.error("removeAll failed " + JSON.stringify(err));
+  } else {
+    console.info("removeAll success");
+  }
+}
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+Notification.removeAll(bundle, removeAllCallback);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+let removeAllCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.error("removeAll failed " + JSON.stringify(err));
+  } else {
+    console.info("removeAll success");
+  }
+}
+
+Notification.removeAll(removeAllCallback);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+// 不指定应用时，删除所有通知
+Notification.removeAll().then(() => {
+  console.info("removeAll success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`removeAll failed, code is ${err}`);
+});
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+function removeAllCallback(err: Base.BusinessError) {
+  if (err) {
+    console.error("removeAll failed " + JSON.stringify(err));
+  } else {
+    console.info("removeAll success");
+  }
+}
+
+let userId: number = 1;
+Notification.removeAll(userId, removeAllCallback);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+let userId: number = 1;
+Notification.removeAll(userId).then(() => {
+  console.info("removeAll success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`removeAll failed, code is ${err}`);
+});
+```
+
 
 ## removeAll
 
@@ -65,6 +134,10 @@ function removeAll(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除所有通知回调函数。 |
+
+**示例**
+
+参见 [removeAll](#removeall)
 
 
 ## removeAll
@@ -95,6 +168,10 @@ function removeAll(userId: number, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定用户所有通知回调函数。 |
+
+**示例**
+
+参见 [removeAll](#removeall)
 
 
 ## removeAll
@@ -131,6 +208,10 @@ function removeAll(userId: number): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
+**示例**
+
+参见 [removeAll](#removeall)
+
 
 ## removeAll
 
@@ -165,4 +246,8 @@ function removeAll(bundle?: BundleOption): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [removeAll](#removeall)
 

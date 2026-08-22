@@ -101,45 +101,6 @@ try {
 }
 ```
 
-
-## startTimer
-
-```TypeScript
-function startTimer(timer: long, triggerTime: long): Promise<void>
-```
-
-开启定时器，使用Promise进行异步回调。
-
-**起始版本：** 23
-
-<!--Device-systemTimer-function startTimer(timer: long, triggerTime: long): Promise<void>--><!--Device-systemTimer-function startTimer(timer: long, triggerTime: long): Promise<void>-End-->
-
-**系统能力：** SystemCapability.MiscServices.Time
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| timer | long | 是 | 定时器的ID。 |
-| triggerTime | long | 是 | 定时器的触发时间，单位：毫秒。<br/>若定时器类型包含了TIMER_TYPE_REALTIME，该triggerTime应为系统启动时间，建议通过 [systemDateTime.getUptime(STARTUP)](arkts-basicservices-systemdatetime-getuptime-f.md)获取；<br/>若定时器类型不包含 TIMER_TYPE_REALTIME，该triggerTime应为墙上时间，建议通过 [systemDateTime.getTime()](arkts-basicservices-systemdatetime-gettime-f.md)获取。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -197,4 +158,45 @@ try {
   console.error(`Failed to create timer. message: ${error.message}, code: ${error.code}`);
 }
 ```
+
+
+## startTimer
+
+```TypeScript
+function startTimer(timer: long, triggerTime: long): Promise<void>
+```
+
+开启定时器，使用Promise进行异步回调。
+
+**起始版本：** 23
+
+<!--Device-systemTimer-function startTimer(timer: long, triggerTime: long): Promise<void>--><!--Device-systemTimer-function startTimer(timer: long, triggerTime: long): Promise<void>-End-->
+
+**系统能力：** SystemCapability.MiscServices.Time
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| timer | long | 是 | 定时器的ID。 |
+| triggerTime | long | 是 | 定时器的触发时间，单位：毫秒。<br/>若定时器类型包含了TIMER_TYPE_REALTIME，该triggerTime应为系统启动时间，建议通过 [systemDateTime.getUptime(STARTUP)](arkts-basicservices-systemdatetime-getuptime-f.md)获取；<br/>若定时器类型不包含 TIMER_TYPE_REALTIME，该triggerTime应为墙上时间，建议通过 [systemDateTime.getTime()](arkts-basicservices-systemdatetime-gettime-f.md)获取。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
+
+**示例**
+
+参见 [startTimer](#starttimer)
 

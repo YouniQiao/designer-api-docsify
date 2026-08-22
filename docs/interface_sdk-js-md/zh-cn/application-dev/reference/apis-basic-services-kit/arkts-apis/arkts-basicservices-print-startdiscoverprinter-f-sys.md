@@ -30,7 +30,7 @@ function startDiscoverPrinter(extensionList: Array<string>, callback: AsyncCallb
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| extensionList | Array&lt;string&gt; | 是 | 要加载的 [打印扩展能力](arkts-basicservices-appabilityprintextensionability-printextensionability-c.md)列表，列表成员为打印扩展能力的包名，空列表表示加载所有扩展能力。 |
+| extensionList | Array&lt;string&gt; | 是 | 要加载的 [打印扩展能力](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md)列表，列表成员为打印扩展能力的包名，空列表表示加载所有扩展能力。 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步开始发现打印机之后的回调。 |
 
 **错误码：**
@@ -59,6 +59,21 @@ print.startDiscoverPrinter(extensionList, (err: BusinessError) => {
 })
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+
+// 加载所有打印扩展能力
+let extensionList: string[] = [];
+// 通过指定自己应用的包名，在发现时加载自己的打印扩展能力
+// let extensionList: string[] = ['com.myapplication.test'];
+print.startDiscoverPrinter(extensionList).then(() => {
+    console.info('start Discovery success');
+}).catch((error: BusinessError) => {
+    console.error('failed to start Discovery because : ' + JSON.stringify(error));
+})
+```
+
 
 ## startDiscoverPrinter
 
@@ -84,7 +99,7 @@ function startDiscoverPrinter(extensionList: Array<string>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| extensionList | Array&lt;string&gt; | 是 | 要加载的 [打印扩展能力](arkts-basicservices-appabilityprintextensionability-printextensionability-c.md)列表，列表成员为打印扩展能力的包名，空列表表示加载所有扩展能力。 |
+| extensionList | Array&lt;string&gt; | 是 | 要加载的 [打印扩展能力](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md)列表，列表成员为打印扩展能力的包名，空列表表示加载所有扩展能力。 |
 
 **返回值：**
 
@@ -101,18 +116,5 @@ function startDiscoverPrinter(extensionList: Array<string>): Promise<void>
 
 **示例**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-// 加载所有打印扩展能力
-let extensionList: string[] = [];
-// 通过指定自己应用的包名，在发现时加载自己的打印扩展能力
-// let extensionList: string[] = ['com.myapplication.test'];
-print.startDiscoverPrinter(extensionList).then(() => {
-    console.info('start Discovery success');
-}).catch((error: BusinessError) => {
-    console.error('failed to start Discovery because : ' + JSON.stringify(error));
-})
-```
+参见 [startDiscoverPrinter](#startdiscoverprinter)
 

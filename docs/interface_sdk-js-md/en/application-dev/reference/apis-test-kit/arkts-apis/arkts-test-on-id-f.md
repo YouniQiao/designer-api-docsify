@@ -33,6 +33,29 @@ Specifies the id of the target Component.
 | --- | --- |
 | [On](arkts-test-uitest-on-c.md) | this { |
 
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.id('123'); // Use the static constructor ON to create an On object and specify the ID attribute of the target component.
+```
+
+```TypeScript
+// xxx.test.ets
+import { MatchPattern, On, ON } from '@kit.TestKit';
+
+let on: On = ON.id('id', MatchPattern.REG_EXP_ICASE); // Use case-insensitive regular expression to match the ID attribute value of the component.
+```
+
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+let by: By = BY.id(123); // Use the static constructor BY to create a By object and specify the id attribute of the target component.
+```
+
 
 ## id
 
@@ -60,4 +83,8 @@ Specifies the id of the target Component.
 | Type | Description |
 | --- | --- |
 | [On](arkts-test-uitest-on-c.md) | this { |
+
+**Examples**
+
+See [id](#id)
 

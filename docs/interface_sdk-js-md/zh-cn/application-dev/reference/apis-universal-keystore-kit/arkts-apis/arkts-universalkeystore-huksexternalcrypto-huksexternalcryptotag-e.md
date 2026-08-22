@@ -28,7 +28,7 @@ HUKS_EXT_CRYPTO_TAG_UKEY_PIN = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYP
 HUKS_EXT_CRYPTO_TAG_ABILITY_NAME = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200002
 ```
 
-表示[CryptoExtensionAbility](arkts-universalkeystore-securitycryptoextensionability-cryptoextensionability-c.md)的名称。
+表示[CryptoExtensionAbility](arkts-universalkeystore-security-cryptoextensionability-cryptoextensionability-c.md)的名称。
 
 **起始版本：** 22
 

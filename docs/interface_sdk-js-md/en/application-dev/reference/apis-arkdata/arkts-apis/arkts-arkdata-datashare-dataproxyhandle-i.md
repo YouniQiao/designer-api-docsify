@@ -68,6 +68,52 @@ dataProxyHandle.delete(urisToDelete, config).then((results: dataShare.DataProxyR
 });
 ```
 
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).delete(uri, da, (err: BusinessError, data: number) => {
+      if (err !== undefined) {
+        console.error(`delete error: code: ${err.code}, message: ${err.message} `);
+        return;
+      }
+      console.info("delete succeed, data : " + data);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`delete error: code: ${code}, message: ${message} `);
+};
+```
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).delete(uri, da).then((data: number) => {
+      console.info("delete succeed, data : " + data);
+    }).catch((err: BusinessError) => {
+      console.error(`delete error: code: ${err.code}, message: ${err.message} `);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`delete error: code: ${code}, message: ${message} `);
+};
+```
+
 ## deleteMyPublishedData
 
 ```TypeScript
@@ -194,47 +240,6 @@ Obtains all multi-value data under a specified URI. Only the publisher and the a
 | [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
 | 15700015 | No permission to access the data specified by the URI. |
 
-## offDataChange
-
-```TypeScript
-offDataChange(
-      uris: string[],
-      config: DataProxyConfig,
-      callback?: Callback<DataProxyChangeInfo[]>
-    ): DataProxyResult[]
-```
-
-Deregisters observers to observe proxy data change specified by the given URIs.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataProxyHandle-offDataChange(      uris: string[],      config: DataProxyConfig,      callback?: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-offDataChange(      uris: string[],      config: DataProxyConfig,      callback?: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uris | string[] | Yes | Indicates the uris of the data to operate. |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Indicates the configuration of the data proxy operation. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | No | The callback function when data changes. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] | : The operation result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-
 ## off_dataChange
 
 ```TypeScript
@@ -263,7 +268,7 @@ Unsubscribes from the change event of the proxy data corresponding to a specifie
 | event | 'dataChange' | Yes | Event or callback type. The value is **dataChange**, which indicates the data change. |
 | uris | string[] | Yes | Array of URIs to be unsubscribed, with a maximum of 32 URIs. The URI value is fixed at the format of **"datashareproxy://{*bundleName*}/{*path*}"**, in which **bundleName** indicates the bundle name of the publisher application, and **path** can be set to any value but must be unique in the same application. The value contains a maximum of 256 bytes. |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Data proxy configuration. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | No | Callback function. If the value is empty, undefined, or null, all notifications of the URIs are unsubscribed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | No | Callback function. If the value is empty, undefined, or null, all notifications of the URIs are unsubscribed. |
 
 **Return value:**
 
@@ -301,23 +306,23 @@ results.forEach((result) => {
 });
 ```
 
-## onDataChange
+## offDataChange
 
 ```TypeScript
-onDataChange(
+offDataChange(
       uris: string[],
       config: DataProxyConfig,
-      callback: Callback<DataProxyChangeInfo[]>
+      callback?: Callback<DataProxyChangeInfo[]>
     ): DataProxyResult[]
 ```
 
-Registers observers to observe proxy data change specified by the given URIs.
+Deregisters observers to observe proxy data change specified by the given URIs.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DataProxyHandle-onDataChange(      uris: string[],      config: DataProxyConfig,      callback: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-onDataChange(      uris: string[],      config: DataProxyConfig,      callback: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
+<!--Device-DataProxyHandle-offDataChange(      uris: string[],      config: DataProxyConfig,      callback?: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-offDataChange(      uris: string[],      config: DataProxyConfig,      callback?: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -327,7 +332,7 @@ Registers observers to observe proxy data change specified by the given URIs.
 | --- | --- | --- | --- |
 | uris | string[] | Yes | Indicates the uris of the data to operate. |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Indicates the configuration of the data proxy operation. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | Yes | The callback function when data changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | No | The callback function when data changes. |
 
 **Return value:**
 
@@ -372,7 +377,7 @@ When the publisher calls the [publish](#publish) or [delete](#delete) API to pub
 | event | 'dataChange' | Yes | Event or callback type. The value is **dataChange**, which indicates the data change. This event is triggered when the publisher modifies the configuration. |
 | uris | string[] | Yes | Array of URIs to be subscribed, with a maximum of 32 URIs. The URI value is fixed at the format of **"datashareproxy://{*bundleName*}/{*path*}"**, in which **bundleName** indicates the bundle name of the publisher application, and **path** can be set to any value but must be unique in the same application. The value contains a maximum of 256 bytes. |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Data proxy configuration. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | Yes | Callback triggered when the publisher modifies the configuration. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | Yes | Callback triggered when the publisher modifies the configuration. |
 
 **Return value:**
 
@@ -409,6 +414,47 @@ results.forEach((result) => {
   console.info(`URI: ${result.uri}, Result: ${result.result}`);
 });
 ```
+
+## onDataChange
+
+```TypeScript
+onDataChange(
+      uris: string[],
+      config: DataProxyConfig,
+      callback: Callback<DataProxyChangeInfo[]>
+    ): DataProxyResult[]
+```
+
+Registers observers to observe proxy data change specified by the given URIs.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataProxyHandle-onDataChange(      uris: string[],      config: DataProxyConfig,      callback: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-onDataChange(      uris: string[],      config: DataProxyConfig,      callback: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uris | string[] | Yes | Indicates the uris of the data to operate. |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Indicates the configuration of the data proxy operation. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | Yes | The callback function when data changes. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] | : The operation result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
 
 ## publish
 
@@ -468,6 +514,50 @@ dataProxyHandle.publish(newConfigData, config).then((results: dataShare.DataProx
 }).catch((error: BusinessError) => {
   console.error('Error publishing config:', error);
 });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let arrayBuffer = new ArrayBuffer(1);
+let version = 1;
+let dataArray : Array<dataShare.PublishedItem> = [{key:"key2", subscriberId:"11", data:arrayBuffer}];
+let publishCallback: (err: BusinessError, result: Array<dataShare.OperationResult>) => void = (err: BusinessError, result: Array<dataShare.OperationResult>): void => {
+  console.info("publishCallback " + JSON.stringify(result));
+}
+try {
+  console.info("dataArray length is:", dataArray.length);
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest", version, publishCallback);
+  }
+} catch (e) {
+  console.error("publish error " + JSON.stringify(e));
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit'
+
+let publishCallback: (err: BusinessError, result: Array<dataShare.OperationResult>) => void = (err: BusinessError, result: Array<dataShare.OperationResult>): void => {
+  console.info("publishCallback " + JSON.stringify(result));
+}
+let dataArray : Array<dataShare.PublishedItem> = [
+  {key:"city", subscriberId:"11", data:"xian"},
+  {key:"datashareproxy://com.acts.ohos.data.datasharetest/appInfo", subscriberId:"11", data:"appinfo is just a test app"},
+  {key:"empty", subscriberId:"11", data:"nobody sub"}];
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest", publishCallback);
+}
+```
+
+```TypeScript
+let dataArray: Array<dataShare.PublishedItem> = [
+  {key:"city", subscriberId:"11", data:"xian"},
+  {key:"datashareproxy://com.acts.ohos.data.datasharetest/appInfo", subscriberId:"11", data:"appinfo is just a test app"},
+  {key:"empty", subscriberId:"11", data:"nobody sub"}];
+if (dataShareHelper != undefined) {
+  let result: Promise<Array<dataShare.OperationResult>> = (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest");
+}
 ```
 
 ## putValue

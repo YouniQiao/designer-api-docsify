@@ -28,7 +28,7 @@ A formatted phone number is a standard numeric string, for example, 555 0100.
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Phone number. |
 | options | NumberFormatOptions | Yes | Number formatting options, for example, country code. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -45,6 +45,18 @@ A formatted phone number is a standard numeric string, for example, 555 0100.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+call.formatPhoneNumber("138xxxxxxxx", (err: BusinessError, data: string) => {
+    if (err) {
+        console.error(`formatPhoneNumber fail, err->${JSON.stringify(err)}`);
+    } else {
+        console.info(`formatPhoneNumber success, data->${JSON.stringify(data)}`);
+    }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let options: call.NumberFormatOptions = {
     countryCode: "CN"
 }
@@ -54,6 +66,19 @@ call.formatPhoneNumber("138xxxxxxxx", options, (err: BusinessError, data: string
     } else {
         console.info(`formatPhoneNumber success, data->${JSON.stringify(data)}`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: call.NumberFormatOptions = {
+    countryCode: "CN"
+}
+call.formatPhoneNumber("138xxxxxxxx", options).then((data: string) => {
+    console.info(`formatPhoneNumber success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`formatPhoneNumber fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -99,18 +124,7 @@ A formatted phone number is a standard numeric string, for example, 555 0100.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: call.NumberFormatOptions = {
-    countryCode: "CN"
-}
-call.formatPhoneNumber("138xxxxxxxx", options).then((data: string) => {
-    console.info(`formatPhoneNumber success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`formatPhoneNumber fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [formatPhoneNumber](#formatphonenumber)
 
 
 ## formatPhoneNumber
@@ -134,7 +148,7 @@ A formatted phone number is a standard numeric string, for example, 555 0100.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Phone number. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -148,15 +162,5 @@ A formatted phone number is a standard numeric string, for example, 555 0100.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.formatPhoneNumber("138xxxxxxxx", (err: BusinessError, data: string) => {
-    if (err) {
-        console.error(`formatPhoneNumber fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`formatPhoneNumber success, data->${JSON.stringify(data)}`);
-    }
-});
-```
+See [formatPhoneNumber](#formatphonenumber)
 

@@ -101,7 +101,19 @@ A constructor used to create a **FileVersion** instance.
 **Examples**
 
 ```TypeScript
-let fileVersion = new cloudSync.FileVersion();
+let fileSync = new cloudSync.FileSync()
+```
+
+```TypeScript
+let gallerySync = new cloudSync.GallerySync()
+```
+
+```TypeScript
+let download = new cloudSync.Download()
+```
+
+```TypeScript
+let fileSync = new cloudSync.FileSync("com.ohos.demo")
 ```
 
 ## downloadHistoryVersion
@@ -124,7 +136,7 @@ Obtains the content of a file of a specified version based on the version number
 | --- | --- | --- | --- |
 | uri | string | Yes | File URI. |
 | versionId | string | Yes | Version ID of a file. The format is returned by the [gethistoryversionlist](#gethistoryversionlist) API. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VersionDownloadProgress](arkts-corefile-cloudsync-versiondownloadprogress-i.md)&gt; | Yes | Callback used to return the download progress. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VersionDownloadProgress](arkts-corefile-cloudsync-versiondownloadprogress-i.md)&gt; | Yes | Callback used to return the download progress. |
 
 **Return value:**
 
@@ -144,6 +156,35 @@ Obtains the content of a file of a specified version based on the version number
 | 14000002 | Invalid URI. |
 | 22400002 | Network unavailable. |
 | 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+
+**Examples**
+
+```TypeScript
+import { fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileVersion = new cloudSync.FileVersion();
+
+let path = "/data/storage/el2/cloud/1.txt";
+let uri = fileUri.getUriFromPath(path);
+let versionId = '123456'; // The format returned by the getHistoryVersionList method is used as an example.
+
+let callback = (data: cloudSync.VersionDownloadProgress) => {
+  if (data.state == cloudSync.State.RUNNING) {
+    console.info("download progress: " + data.progress);
+  } else if (data.state == cloudSync.State.FAILED) {
+    console.info("download failed errType: " + data.errType);
+  } else if (data.state == cloudSync.State.COMPLETED) {
+    console.info("download version file success");
+  }
+};
+
+fileVersion.downloadHistoryVersion(uri, versionId, callback).then((fileUri: string) => {
+  console.info("success to begin download, downloadFileUri: " + fileUri);
+}).catch((err: BusinessError) => {
+  console.error("download history version file failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
 
 ## getHistoryVersionList
 

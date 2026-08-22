@@ -87,39 +87,6 @@ displayClass.hasImmersiveWindow((err: BusinessError | null, data) => {
 });
 ```
 
-## hasImmersiveWindow
-
-```TypeScript
-hasImmersiveWindow(): Promise<boolean>
-```
-
-判断当前屏幕是否包含沉浸式窗口，使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-Display-hasImmersiveWindow(): Promise<boolean>--><!--Device-Display-hasImmersiveWindow(): Promise<boolean>-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**系统接口：** 此接口为系统接口。
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示当前屏幕包含沉浸式窗口，false表示不包含。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -153,4 +120,39 @@ promise.then((data: boolean) => {
   console.error(`Failed to check whether there is immersive window. Code: ${err?.code} , message: ${err?.message}`);
 })
 ```
+
+## hasImmersiveWindow
+
+```TypeScript
+hasImmersiveWindow(): Promise<boolean>
+```
+
+判断当前屏幕是否包含沉浸式窗口，使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-Display-hasImmersiveWindow(): Promise<boolean>--><!--Device-Display-hasImmersiveWindow(): Promise<boolean>-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示当前屏幕包含沉浸式窗口，false表示不包含。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+
+**示例**
+
+参见 [hasImmersiveWindow](#hasimmersivewindow)
 

@@ -50,42 +50,6 @@ predicates.equalTo("NAME", "Lisa")
     .equalTo("SALARY", 200.5)
 ```
 
-## beginWrap
-
-```TypeScript
-beginWrap(): RdbPredicates
-```
-
-Creates an **RdbPredicates** object to add a left parenthesis.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [beginWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#beginwrap)
-
-<!--Device-RdbPredicates-beginWrap(): RdbPredicates--><!--Device-RdbPredicates-beginWrap(): RdbPredicates-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| RdbPredicates | RdbPredicates** object created. |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "lisi")
-    .beginWrap()
-    .equalTo("AGE", 18)
-    .or()
-    .equalTo("SALARY", 200.5)
-    .endWrap()
-```
-
 ## beginsWith
 
 ```TypeScript
@@ -122,6 +86,42 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
 predicates.beginsWith("NAME", "os")
+```
+
+## beginWrap
+
+```TypeScript
+beginWrap(): RdbPredicates
+```
+
+Creates an **RdbPredicates** object to add a left parenthesis.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [beginWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#beginwrap)
+
+<!--Device-RdbPredicates-beginWrap(): RdbPredicates--><!--Device-RdbPredicates-beginWrap(): RdbPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| RdbPredicates | RdbPredicates** object created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "lisi")
+    .beginWrap()
+    .equalTo("AGE", 18)
+    .or()
+    .equalTo("SALARY", 200.5)
+    .endWrap()
 ```
 
 ## between
@@ -262,42 +262,6 @@ let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
 predicates.equalTo("NAME", "Rose").distinct()
 ```
 
-## endWrap
-
-```TypeScript
-endWrap(): RdbPredicates
-```
-
-Creates an **RdbPredicates** object to add a right parenthesis.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [endWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#endwrap)
-
-<!--Device-RdbPredicates-endWrap(): RdbPredicates--><!--Device-RdbPredicates-endWrap(): RdbPredicates-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| RdbPredicates | RdbPredicates** created. |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "lisi")
-    .beginWrap()
-    .equalTo("AGE", 18)
-    .or()
-    .equalTo("SALARY", 200.5)
-    .endWrap()
-```
-
 ## endsWith
 
 ```TypeScript
@@ -334,6 +298,42 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
 predicates.endsWith("NAME", "se")
+```
+
+## endWrap
+
+```TypeScript
+endWrap(): RdbPredicates
+```
+
+Creates an **RdbPredicates** object to add a right parenthesis.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [endWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#endwrap)
+
+<!--Device-RdbPredicates-endWrap(): RdbPredicates--><!--Device-RdbPredicates-endWrap(): RdbPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| RdbPredicates | RdbPredicates** created. |
+
+**Examples**
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "lisi")
+    .beginWrap()
+    .equalTo("AGE", 18)
+    .or()
+    .equalTo("SALARY", 200.5)
+    .endWrap()
 ```
 
 ## equalTo

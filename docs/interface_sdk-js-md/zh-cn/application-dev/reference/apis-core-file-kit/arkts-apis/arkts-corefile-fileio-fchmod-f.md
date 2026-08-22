@@ -34,6 +34,30 @@ declare function fchmod(fd: number, mode: number): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回值。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+let mode: number = 0o700;
+fileio.fchmod(fd, mode).then(() => {
+  console.info("chmod succeed");
+}).catch((err: BusinessError) => {
+  console.error("chmod failed with error:" + err);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+let mode: number = 0o700;
+fileio.fchmod(fd, mode, (err: BusinessError) => {
+  // do something
+});
+```
+
 
 ## fchmod
 
@@ -58,4 +82,8 @@ declare function fchmod(fd: number, mode: number, callback: AsyncCallback<void>)
 | fd | number | 是 | 待改变文件的文件描述符。 |
 | mode | number | 是 | 若创建文件，则指定文件的权限，可给定如下权限，以按位或的方式追加权限。<br/>-?0o700：所有者具有读、写及可执行权限。<br/>-?0o400：所有者具有读权限。<br/>-? 0o200：所有者具有写权限。<br/>-?0o100：所有者具有可执行权限。<br/>-?0o070：所有用户组具有读、写及可执行权限。<br/>-?0o040：所有用户组具有读权限。<br/>-?0o020：所有用户组具有 写权限。<br/>-?0o010：所有用户组具有可执行权限。<br/>-?0o007：其余用户具有读、写及可执行权限。<br/>-?0o004：其余用户具有读权限。<br/>-?0o002：其余用户具有写权限。<br/>-?0 o001：其余用户具有可执行权限。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步改变文件权限之后的回调。 |
+
+**示例**
+
+参见 [fchmod](#fchmod)
 

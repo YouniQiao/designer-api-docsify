@@ -102,6 +102,171 @@ let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveRea
 notificationSubscribe.remove(bundle, notificationKey, reason, removeCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { notificationManager } from '@kit.NotificationKit';
+
+let bundle: notificationManager.BundleOption = {
+  bundle: 'bundleName1',
+};
+let notificationKey: notificationSubscribe.NotificationKey = {
+  id: 0,
+  label: 'label',
+};
+let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
+notificationSubscribe.remove(bundle, notificationKey, reason).then(() => {
+  console.info('remove success');
+}).catch((err: BusinessError) => {
+  console.error(`remove fail, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { notificationManager } from '@kit.NotificationKit';
+
+let bundle: notificationManager.BundleOption = {
+  // 需根据实际情况进行替换
+  bundle: 'bundleName1',
+};
+let notificationKey: notificationSubscribe.NotificationKey = {
+  id: 0,
+  label: 'label',
+};
+let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
+notificationSubscribe.remove(bundle, notificationKey, reason).then(() => {
+  console.info('remove success');
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`remove fail, code is ${error.code}, message is ${error.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hashCode: string = 'hashCode';
+let removeCallback = (err: BusinessError) => {
+  if (err) {
+    console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('remove success');
+  }
+}
+let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CANCEL_REASON_REMOVE;
+notificationSubscribe.remove(hashCode, reason, removeCallback);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hashCode: string = 'hashCode';
+let removeCallback = (err: BusinessError | null) => {
+  if (err) {
+    console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('remove success');
+  }
+}
+let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CANCEL_REASON_REMOVE;
+notificationSubscribe.remove(hashCode, reason, removeCallback);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hashCode: string = 'hashCode';
+let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
+notificationSubscribe.remove(hashCode, reason).then(() => {
+  console.info('remove success');
+}).catch((err: BusinessError) => {
+  console.error(`remove fail, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let hashCode: string = 'hashCode';
+let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
+notificationSubscribe.remove(hashCode, reason).then(() => {
+  console.info('remove success');
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`remove fail, code is ${error.code}, message is ${error.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hashCodes: string[] = ['hashCode1', 'hashCode2'];
+let removeCallback = (err: BusinessError) => {
+  if (err) {
+    console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('remove success');
+  }
+}
+let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CANCEL_REASON_REMOVE;
+notificationSubscribe.remove(hashCodes, reason, removeCallback);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hashCodes: string[] = ['hashCode1', 'hashCode2'];
+let removeCallback = (err: BusinessError | null ) => {
+  if (err) {
+    console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('remove success');
+  }
+}
+let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CANCEL_REASON_REMOVE;
+notificationSubscribe.remove(hashCodes, reason, removeCallback);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hashCodes: string[] = ['hashCode1','hashCode2'];
+let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
+notificationSubscribe.remove(hashCodes, reason).then(() => {
+  console.info('remove success');
+}).catch((err: BusinessError) => {
+  console.error(`remove fail, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let hashCodes: string[] = ['hashCode1','hashCode2'];
+let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
+notificationSubscribe.remove(hashCodes, reason).then(() => {
+  console.info('remove success');
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`remove fail, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## remove
 
@@ -150,48 +315,7 @@ function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: 
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { notificationManager } from '@kit.NotificationKit';
-
-let bundle: notificationManager.BundleOption = {
-  bundle: 'bundleName1',
-};
-let notificationKey: notificationSubscribe.NotificationKey = {
-  id: 0,
-  label: 'label',
-};
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
-notificationSubscribe.remove(bundle, notificationKey, reason).then(() => {
-  console.info('remove success');
-}).catch((err: BusinessError) => {
-  console.error(`remove fail, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
-
-let bundle: notificationManager.BundleOption = {
-  // 需根据实际情况进行替换
-  bundle: 'bundleName1',
-};
-let notificationKey: notificationSubscribe.NotificationKey = {
-  id: 0,
-  label: 'label',
-};
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
-notificationSubscribe.remove(bundle, notificationKey, reason).then(() => {
-  console.info('remove success');
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`remove fail, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [remove](#remove)
 
 
 ## remove
@@ -234,39 +358,7 @@ function remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback<
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hashCode: string = 'hashCode';
-let removeCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('remove success');
-  }
-}
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CANCEL_REASON_REMOVE;
-notificationSubscribe.remove(hashCode, reason, removeCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hashCode: string = 'hashCode';
-let removeCallback = (err: BusinessError | null) => {
-  if (err) {
-    console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('remove success');
-  }
-}
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CANCEL_REASON_REMOVE;
-notificationSubscribe.remove(hashCode, reason, removeCallback);
-```
+参见 [remove](#remove)
 
 
 ## remove
@@ -308,39 +400,7 @@ function remove(hashCodes: Array<String>, reason: RemoveReason, callback: AsyncC
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hashCodes: string[] = ['hashCode1', 'hashCode2'];
-let removeCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('remove success');
-  }
-}
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CANCEL_REASON_REMOVE;
-notificationSubscribe.remove(hashCodes, reason, removeCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hashCodes: string[] = ['hashCode1', 'hashCode2'];
-let removeCallback = (err: BusinessError | null ) => {
-  if (err) {
-    console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('remove success');
-  }
-}
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CANCEL_REASON_REMOVE;
-notificationSubscribe.remove(hashCodes, reason, removeCallback);
-```
+参见 [remove](#remove)
 
 
 ## remove
@@ -388,32 +448,7 @@ function remove(hashCode: string, reason: RemoveReason): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hashCode: string = 'hashCode';
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
-notificationSubscribe.remove(hashCode, reason).then(() => {
-  console.info('remove success');
-}).catch((err: BusinessError) => {
-  console.error(`remove fail, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let hashCode: string = 'hashCode';
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
-notificationSubscribe.remove(hashCode, reason).then(() => {
-  console.info('remove success');
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`remove fail, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [remove](#remove)
 
 
 ## remove
@@ -460,30 +495,5 @@ function remove(hashCodes: Array<String>, reason: RemoveReason): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hashCodes: string[] = ['hashCode1','hashCode2'];
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
-notificationSubscribe.remove(hashCodes, reason).then(() => {
-  console.info('remove success');
-}).catch((err: BusinessError) => {
-  console.error(`remove fail, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let hashCodes: string[] = ['hashCode1','hashCode2'];
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
-notificationSubscribe.remove(hashCodes, reason).then(() => {
-  console.info('remove success');
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`remove fail, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [remove](#remove)
 

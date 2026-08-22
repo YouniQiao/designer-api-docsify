@@ -36,3 +36,11 @@ Cancel callback when the uplink and downlink data flow state of cellular data se
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error. |
 
+**示例**
+
+```TypeScript
+observer.offCellularDataFlowChange((data: data.DataFlowType) => {
+    console.info('offCellularDataFlowChange, data->${JSON.stringify(data)}');
+});
+```
+

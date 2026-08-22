@@ -27,7 +27,7 @@ Create an AVSession instance. An ability can only create one AVSession
 | context | Context | Yes | The context of application |
 | tag | string | Yes | A user-defined name for this session |
 | type | [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md) | Yes | The type of session [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md) |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVSession](arkts-avsession-avsession-avsession-i.md)&gt; | Yes | async callback for AVSession. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVSession](arkts-avsession-avsession-avsession-i.md)&gt; | Yes | async callback for AVSession. |
 
 **Error codes:**
 
@@ -37,6 +37,38 @@ Create an AVSession instance. An ability can only create one AVSession
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { avSession } from '@kit.AVSessionKit';
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+
+  build() { 
+    Column() {
+        Text(this.message)
+          .onClick(()=>{
+            let currentAVSession: avSession.AVSession;
+            let tag = "createNewSession";
+            let context: Context = this.getUIContext().getHostContext() as Context;
+            let sessionId: string;  // Used as an input parameter of subsequent functions.
+
+            avSession.createAVSession(context, tag, "audio").then(async (data: avSession.AVSession) => {
+            currentAVSession = data;
+            sessionId = currentAVSession.sessionId;
+            console.info(`CreateAVSession : SUCCESS : sessionId = ${sessionId}`);
+            }).catch((err: BusinessError) => {
+            console.error(`CreateAVSession BusinessError: code: ${err.code}, message: ${err.message}`);
+            });
+          })
+      }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -112,35 +144,5 @@ Create an AVSession instance. An ability can only create one AVSession
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { avSession } from '@kit.AVSessionKit';
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello world';
-
-  build() { 
-    Column() {
-        Text(this.message)
-          .onClick(()=>{
-            let currentAVSession: avSession.AVSession;
-            let tag = "createNewSession";
-            let context: Context = this.getUIContext().getHostContext() as Context;
-            let sessionId: string;  // Used as an input parameter of subsequent functions.
-
-            avSession.createAVSession(context, tag, "audio").then(async (data: avSession.AVSession) => {
-            currentAVSession = data;
-            sessionId = currentAVSession.sessionId;
-            console.info(`CreateAVSession : SUCCESS : sessionId = ${sessionId}`);
-            }).catch((err: BusinessError) => {
-            console.error(`CreateAVSession BusinessError: code: ${err.code}, message: ${err.message}`);
-            });
-          })
-      }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
+See [createAVSession](#createavsession)
 

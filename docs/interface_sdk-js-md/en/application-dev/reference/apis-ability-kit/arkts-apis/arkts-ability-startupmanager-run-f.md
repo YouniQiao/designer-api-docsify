@@ -32,8 +32,8 @@ Runs startup tasks or loads .so files.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTasks | Array&lt;string&gt; | Yes | Array of [StartupTask](arkts-ability-appappstartupstartuptask-startuptask-c.md) names or names of .so files to be preloaded. |
-| config | [StartupConfig](arkts-ability-appappstartupstartupconfig-startupconfig-i.md) | No | Configuration for the timeout duration and listener of startup tasks in AppStartup. |
+| startupTasks | Array&lt;string&gt; | Yes | Array of [StartupTask](../../apis-default/arkts-apis/arkts-app-appstartup-startuptask-startuptask-c.md) names or names of .so files to be preloaded. |
+| config | [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | No | Configuration for the timeout duration and listener of startup tasks in AppStartup. |
 
 **Return value:**
 
@@ -81,49 +81,6 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-
-## run
-
-```TypeScript
-function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>
-```
-
-Runs startup tasks or loads .so files. You can specify [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) for loading startup tasks. This API uses a promise to return the result.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-startupManager-function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>--><!--Device-startupManager-function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>-End-->
-
-**System capability:** SystemCapability.Ability.AppStartup
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| startupTasks | Array&lt;string&gt; | Yes | Array of [StartupTask](arkts-ability-appappstartupstartuptask-startuptask-c.md) names or names of .so files to be preloaded. |
-| context | common.AbilityStageContext | Yes | AbilityStage context that executes the [StartupTask](arkts-ability-appappstartupstartuptask-startuptask-c.md). It is passed as an input parameter to [init](arkts-ability-appappstartupstartuptask-startuptask-c.md#init) of the task. |
-| config | [StartupConfig](arkts-ability-appappstartupstartupconfig-startupconfig-i.md) | Yes | Configuration for the timeout duration and listener of startup tasks in AppStartup. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [28800001](../errorcode-ability.md#28800001-startup-task-or-dependency-not-found) | Startup task or its dependency not found. |
-| [28800002](../errorcode-ability.md#28800002-circular-dependencies-between-startup-tasks) | The startup tasks have circular dependencies. |
-| [28800003](../errorcode-ability.md#28800003-error-occurs-during-task-startup) | An error occurred while running the startup tasks. |
-| [28800004](../errorcode-ability.md#28800004-executing-the-startup-task-times-out) | Running startup tasks timeout. |
-
-**Examples**
-
 ```TypeScript
 import { AbilityStage, startupManager, StartupListener, StartupConfig } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -161,4 +118,49 @@ export default class MyAbilityStage extends AbilityStage {
   // ...
 }
 ```
+
+
+## run
+
+```TypeScript
+function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>
+```
+
+Runs startup tasks or loads .so files. You can specify [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) for loading startup tasks. This API uses a promise to return the result.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-startupManager-function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>--><!--Device-startupManager-function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>-End-->
+
+**System capability:** SystemCapability.Ability.AppStartup
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| startupTasks | Array&lt;string&gt; | Yes | Array of [StartupTask](../../apis-default/arkts-apis/arkts-app-appstartup-startuptask-startuptask-c.md) names or names of .so files to be preloaded. |
+| context | common.AbilityStageContext | Yes | AbilityStage context that executes the [StartupTask](../../apis-default/arkts-apis/arkts-app-appstartup-startuptask-startuptask-c.md). It is passed as an input parameter to [init](../../apis-default/arkts-apis/arkts-app-appstartup-startuptask-startuptask-c.md#init) of the task. |
+| config | [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | Yes | Configuration for the timeout duration and listener of startup tasks in AppStartup. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [28800001](../errorcode-ability.md#28800001-startup-task-or-dependency-not-found) | Startup task or its dependency not found. |
+| [28800002](../errorcode-ability.md#28800002-circular-dependencies-between-startup-tasks) | The startup tasks have circular dependencies. |
+| [28800003](../errorcode-ability.md#28800003-error-occurs-during-task-startup) | An error occurred while running the startup tasks. |
+| [28800004](../errorcode-ability.md#28800004-executing-the-startup-task-times-out) | Running startup tasks timeout. |
+
+**Examples**
+
+See [run](#run)
 

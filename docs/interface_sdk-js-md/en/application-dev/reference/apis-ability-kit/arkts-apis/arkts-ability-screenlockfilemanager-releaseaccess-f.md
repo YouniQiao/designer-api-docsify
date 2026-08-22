@@ -56,3 +56,20 @@ try {
 }
 ```
 
+```TypeScript
+// Release the permission to access media data on the lock screen.
+import { screenLockFileManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+    let releaseStatus = screenLockFileManager.releaseAccess(screenLockFileManager.DataType.MEDIA_DATA);
+    if (releaseStatus === screenLockFileManager.ReleaseStatus.RELEASE_GRANTED) {
+        hilog.info(0x0000, 'testTag', 'releaseAccess successfully.');
+    }
+} catch (err) {
+    let message = (err as BusinessError).message;
+    hilog.error(0x0000, 'testTag', 'releaseAccess failed: %{public}s', message);
+}
+```
+

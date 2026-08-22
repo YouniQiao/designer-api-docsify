@@ -133,7 +133,7 @@ getBaseFile(): File
 
 | 类型 | 说明 |
 | --- | --- |
-| [File](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-file-i.md) | File object opened. |
+| [File](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-file-i.md) | File object opened. |
 
 **错误码：**
 
@@ -164,7 +164,7 @@ openRead(): ReadStream
 
 | 类型 | 说明 |
 | --- | --- |
-| [ReadStream](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-readstream-c.md) | ReadStream instance obtained. |
+| [ReadStream](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-readstream-c.md) | ReadStream instance obtained. |
 
 **错误码：**
 
@@ -224,7 +224,7 @@ startWrite(): WriteStream
 
 | 类型 | 说明 |
 | --- | --- |
-| [WriteStream](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-writestream-c.md) | Returns the file write stream. |
+| [WriteStream](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-writestream-c.md) | Returns the file write stream. |
 
 **错误码：**
 

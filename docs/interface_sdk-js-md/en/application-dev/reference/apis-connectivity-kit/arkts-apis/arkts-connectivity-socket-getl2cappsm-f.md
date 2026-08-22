@@ -14,7 +14,7 @@ function getL2capPsm(serverSocket: int): int
 
 Get l2cap socket psm.
 
-**Since:** 26.0.0
+**Since:** 20
 
 <!--Device-socket-function getL2capPsm(serverSocket: int): int--><!--Device-socket-function getL2capPsm(serverSocket: int): int-End-->
 

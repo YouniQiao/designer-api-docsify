@@ -1,8 +1,8 @@
 # UIServiceExtensionContext（系统接口）
 
-UIServiceExtensionContext模块是 [UIServiceExtension](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiserviceextensionability-uiserviceextensionability-c-sys.md)的上下文环境，继承自 [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。
+UIServiceExtensionContext模块是 [UIServiceExtension](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)的上下文环境，继承自 [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。
 
-UIServiceExtensionContext模块提供访问 [UIServiceExtension](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiserviceextensionability-uiserviceextensionability-c-sys.md)特定资源以及具有的能力，包括启 动、停止、绑定、解绑Ability。
+UIServiceExtensionContext模块提供访问 [UIServiceExtension](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)特定资源以及具有的能力，包括启 动、停止、绑定、解绑Ability。
 
 > **说明：**
 > 
@@ -24,7 +24,7 @@ UIServiceExtensionContext模块提供访问 [UIServiceExtension](../../apis-abil
 connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 ```
 
-连接到[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiextensionability-uiextensionability-c.md)，返回连接id。
+连接到[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)，返回连接id。
 
 > **说明：**
 > 
@@ -44,7 +44,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | Want parameter. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Want parameter. |
 | options | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-connectoptions-i.md) | 是 | Connection options. |
 
 **返回值：**
@@ -141,7 +141,7 @@ struct Page_UIServiceExtensionAbility {
 disconnectServiceExtensionAbility(connectionId: long): Promise<void>
 ```
 
-断开与[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiextensionability-uiextensionability-c.md)的连接，与 [connectServiceExtensionAbility](#connectserviceextensionability)功能相反。使用Promise异步回调。
+断开与[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)的连接，与 [connectServiceExtensionAbility](#connectserviceextensionability)功能相反。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -243,8 +243,8 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | Want类型参数，传入需要启动的ability的信息，如Ability名称，Bundle名称等。 |
-| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitystartoptions-startoptions-c.md) | 否 | 启动Ability所携带的参数。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Want类型参数，传入需要启动的ability的信息，如Ability名称，Bundle名称等。 |
+| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动Ability所携带的参数。 |
 
 **返回值：**
 
@@ -318,7 +318,7 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-按目标ability的类型启动[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiability-uiability-c.md)或 [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiextensionability-uiextensionability-c.md)。仅支持处于前台的应用调用。使用Promise异步回调 。
+按目标ability的类型启动[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)或 [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)。仅支持处于前台的应用调用。使用Promise异步回调 。
 
 > **说明：**
 > 
@@ -425,7 +425,7 @@ startAbilityByType(type: string, wantParam: Record<string, RecordData>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-按目标ability的类型启动[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiability-uiability-c.md)或 [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiextensionability-uiextensionability-c.md)。仅支持处于前台的应用调用。使用Promise异步回调 。
+按目标ability的类型启动[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)或 [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)。仅支持处于前台的应用调用。使用Promise异步回调 。
 
 > **说明：**
 > 
@@ -462,13 +462,17 @@ startAbilityByType(type: string, wantParam: Record<string, RecordData>,
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
 
+**示例**
+
+参见 [startAbilityByType](#startabilitybytype)
+
 ## terminateSelf
 
 ```TypeScript
 terminateSelf(): Promise<void>
 ```
 
-销毁[UIServiceExtension](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiserviceextensionability-uiserviceextensionability-c-sys.md)。使用Promise异 步回调。
+销毁[UIServiceExtension](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)。使用Promise异 步回调。
 
 **起始版本：** 23
 

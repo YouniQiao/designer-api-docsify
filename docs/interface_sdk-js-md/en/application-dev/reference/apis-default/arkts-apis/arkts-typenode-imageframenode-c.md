@@ -34,7 +34,7 @@ Initialize Image FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | image.PixelMap \| ResourceStr \| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkuidrawabledescriptor-drawabledescriptor-c.md) | Yes |  |
+| src | image.PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-drawabledescriptor-c.md) | Yes |  |
 
 **Return value:**
 
@@ -64,7 +64,7 @@ Initialize Image FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | image.PixelMap \| ResourceStr \| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkuidrawabledescriptor-drawabledescriptor-c.md) \| ImageContent | Yes |  |
+| src | image.PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-drawabledescriptor-c.md) \| ImageContent | Yes |  |
 
 **Return value:**
 
@@ -94,7 +94,7 @@ Initialize Image FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | image.PixelMap \| ResourceStr \| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkuidrawabledescriptor-drawabledescriptor-c.md) | Yes |  |
+| src | image.PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-drawabledescriptor-c.md) | Yes |  |
 | value | ImageAIOptions | Yes |  |
 
 **Return value:**

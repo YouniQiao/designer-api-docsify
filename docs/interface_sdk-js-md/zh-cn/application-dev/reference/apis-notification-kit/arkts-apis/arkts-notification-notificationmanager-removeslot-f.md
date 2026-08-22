@@ -82,6 +82,33 @@ let slotType = notificationManager.SlotType.SOCIAL_COMMUNICATION;
 notificationManager.removeSlot(slotType, removeSlotCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotType: notificationManager.SlotType = notificationManager.SlotType.SOCIAL_COMMUNICATION;
+notificationManager.removeSlot(slotType).then(() => {
+  console.info(`Succeeded in removing slot.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to remove slot. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotType: notificationManager.SlotType = notificationManager.SlotType.SOCIAL_COMMUNICATION;
+notificationManager.removeSlot(slotType).then(() => {
+  console.info(`Succeeded in removing slot.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to remove slot. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## removeSlot
 
@@ -130,30 +157,5 @@ removeAllSlots 删除所有通知渠道。
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotType: notificationManager.SlotType = notificationManager.SlotType.SOCIAL_COMMUNICATION;
-notificationManager.removeSlot(slotType).then(() => {
-  console.info(`Succeeded in removing slot.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove slot. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotType: notificationManager.SlotType = notificationManager.SlotType.SOCIAL_COMMUNICATION;
-notificationManager.removeSlot(slotType).then(() => {
-  console.info(`Succeeded in removing slot.`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to remove slot. Code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [removeSlot](#removeslot)
 

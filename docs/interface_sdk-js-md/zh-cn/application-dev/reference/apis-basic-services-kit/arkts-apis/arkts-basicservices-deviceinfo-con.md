@@ -1,41 +1,5 @@
 # 常量
 
-## ODID
-
-```TypeScript
-const ODID: string
-```
-
-ODID（Open Developer Identifier，开发者匿名设备标识符）。
-
-**ODID值会在以下场景重新生成：**
-
-手机恢复出厂设置。
-
-同一设备上同一个开发者(developerId相同)的应用全部卸载后重新安装时。
-
-**ODID生成规则：**
-
-根据签名信息里developerId解析出的groupId生成，developerId规则为groupId.developerId，若无groupId则取整个developerId作为groupId。
-
-同一设备上运行的同一个开发者(developerId相同)的应用，ODID相同。
-
-同一个设备上不同开发者(developerId不同)的应用，ODID不同。
-
-不同设备上同一个开发者(developerId相同)的应用，ODID不同。
-
-不同设备上不同开发者(developerId不同)的应用，ODID不同。
-
-**说明：**数据长度为37字节(包含结束符)。
-
-示例：1234a567-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-
-**起始版本：** 12
-
-<!--Device-deviceInfo-const ODID: string--><!--Device-deviceInfo-const ODID: string-End-->
-
-**系统能力：** SystemCapability.Startup.SystemInfo
-
 ## abiList
 
 ```TypeScript
@@ -497,6 +461,42 @@ const marketName: string
 **起始版本：** 6
 
 <!--Device-deviceInfo-const marketName: string--><!--Device-deviceInfo-const marketName: string-End-->
+
+**系统能力：** SystemCapability.Startup.SystemInfo
+
+## ODID
+
+```TypeScript
+const ODID: string
+```
+
+ODID（Open Developer Identifier，开发者匿名设备标识符）。
+
+**ODID值会在以下场景重新生成：**
+
+手机恢复出厂设置。
+
+同一设备上同一个开发者(developerId相同)的应用全部卸载后重新安装时。
+
+**ODID生成规则：**
+
+根据签名信息里developerId解析出的groupId生成，developerId规则为groupId.developerId，若无groupId则取整个developerId作为groupId。
+
+同一设备上运行的同一个开发者(developerId相同)的应用，ODID相同。
+
+同一个设备上不同开发者(developerId不同)的应用，ODID不同。
+
+不同设备上同一个开发者(developerId相同)的应用，ODID不同。
+
+不同设备上不同开发者(developerId不同)的应用，ODID不同。
+
+**说明：**数据长度为37字节(包含结束符)。
+
+示例：1234a567-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+
+**起始版本：** 12
+
+<!--Device-deviceInfo-const ODID: string--><!--Device-deviceInfo-const ODID: string-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 

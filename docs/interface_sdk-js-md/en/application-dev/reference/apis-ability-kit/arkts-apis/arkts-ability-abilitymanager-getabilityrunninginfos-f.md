@@ -61,3 +61,22 @@ try {
 }
 ```
 
+```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  abilityManager.getAbilityRunningInfos((err: BusinessError, data: Array<abilityManager.AbilityRunningInfo>) => {
+    if (err) {
+      console.error(`getAbilityRunningInfos fail, error: ${JSON.stringify(err)}`);
+    } else {
+      console.info(`getAbilityRunningInfos success, data: ${JSON.stringify(data)}`);
+    }
+  });
+} catch (paramError) {
+  let code: number = (paramError as BusinessError).code;
+  let message: string = (paramError as BusinessError).message;
+  console.error(`error.code: ${code}, error.message: ${message}`);
+}
+```
+

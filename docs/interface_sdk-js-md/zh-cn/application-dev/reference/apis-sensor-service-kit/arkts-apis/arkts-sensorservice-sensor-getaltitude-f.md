@@ -53,6 +53,18 @@ sensor.getAltitude(0, 200, (err: BusinessError, data: number) => {
 });
 ```
 
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const promise = sensor.getAltitude(0, 200);
+promise.then((data: number) => {
+  console.info('Succeeded in getting sensor_getAltitude_Promise success', data);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to operate.`);
+})
+```
+
 
 ## getAltitude
 
@@ -92,15 +104,5 @@ function getAltitude(seaPressure: number, currentPressure: number): Promise<numb
 
 **示例**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const promise = sensor.getAltitude(0, 200);
-promise.then((data: number) => {
-  console.info('Succeeded in getting sensor_getAltitude_Promise success', data);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to operate.`);
-})
-```
+参见 [getAltitude](#getaltitude)
 

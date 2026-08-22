@@ -34,7 +34,7 @@ function getGlobalProxy(admin: Want, callback: AsyncCallback<connection.HttpProx
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;connection.HttpProxy&gt; | 是 | 回调函数。当接口调用成功，err为null，否则err为错误对象。 |
 
 **错误码：**
@@ -68,6 +68,24 @@ networkManager.getGlobalProxy(wantTemp, (err, result) => {
 });
 ```
 
+```TypeScript
+import { networkManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+networkManager.getGlobalProxy(wantTemp).then(() => {
+  console.info(`Succeeded in getting network global proxy`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get network global proxy. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## getGlobalProxy
 
@@ -97,7 +115,7 @@ function getGlobalProxy(admin: Want): Promise<connection.HttpProxy>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 
 **返回值：**
 
@@ -117,21 +135,5 @@ function getGlobalProxy(admin: Want): Promise<connection.HttpProxy>
 
 **示例**
 
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-networkManager.getGlobalProxy(wantTemp).then(() => {
-  console.info(`Succeeded in getting network global proxy`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get network global proxy. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [getGlobalProxy](#getglobalproxy)
 

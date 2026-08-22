@@ -20,10 +20,10 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [offUserAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md) | 取消订阅年龄群组检测功能。 |
 | [off_userAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md) | 取消订阅年龄群组检测功能。 |
-| [onUserAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md) | 订阅年龄群组检测功能。 |
+| [offUserAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md) | 取消订阅年龄群组检测功能。 |
 | [on_userAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md) | 订阅年龄群组检测功能。 |
+| [onUserAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md) | 订阅年龄群组检测功能。 |
 
 <!--Del-->
 ### 函数（系统接口）

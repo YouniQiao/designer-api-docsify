@@ -92,7 +92,7 @@ x、y的取值范围：(-∞, +∞)。
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
 
-**类型：** [PositionT](../../apis-default/arkts-apis/arkts-positiont-t.md)&lt;double&gt;
+**类型：** [PositionT](../arkts-apis/arkts-arkui-positiont-t.md)&lt;double&gt;
 
 **起始版本：** 23
 
@@ -116,7 +116,7 @@ size?: SizeT<double>
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
 
-**类型：** [SizeT](../../apis-default/arkts-apis/arkts-graphics-sizet-i.md)&lt;double&gt;
+**类型：** [SizeT](../arkts-apis/arkts-arkui-graphics-sizet-i.md)&lt;double&gt;
 
 **起始版本：** 23
 

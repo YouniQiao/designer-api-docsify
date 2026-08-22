@@ -14,7 +14,7 @@ function offScanModeChange(callback?: Callback<ScanMode>): void
 
 Unsubscribe to an event indicating that the scanning mode of the local device has changed.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -28,7 +28,7 @@ Unsubscribe to an event indicating that the scanning mode of the local device ha
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ScanMode&gt; | No | Callback used to listen. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ScanMode&gt; | No | Callback used to listen. |
 
 **Error codes:**
 

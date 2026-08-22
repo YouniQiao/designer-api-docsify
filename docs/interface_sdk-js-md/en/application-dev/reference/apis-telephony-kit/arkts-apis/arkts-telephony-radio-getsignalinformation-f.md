@@ -25,7 +25,7 @@ Obtains the list of signal strength information of the registered network corres
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Indicates the callback for getting the instance list of the child classes derived from [SignalInformation](arkts-telephony-radio-signalinformation-i.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Indicates the callback for getting the instance list of the child classes derived from [SignalInformation](arkts-telephony-radio-signalinformation-i.md). |
 
 **Error codes:**
 
@@ -49,6 +49,17 @@ radio.getSignalInformation(slotId, (err: BusinessError, data: Array<radio.Signal
         return;
     }
     console.info(`getSignalInformation success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.getSignalInformation(slotId).then((data: Array<radio.SignalInformation>) => {
+    console.info(`getSignalInformation success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSignalInformation failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -91,14 +102,5 @@ Obtains the list of signal strength information of the registered network corres
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getSignalInformation(slotId).then((data: Array<radio.SignalInformation>) => {
-    console.info(`getSignalInformation success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSignalInformation failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getSignalInformation](#getsignalinformation)
 

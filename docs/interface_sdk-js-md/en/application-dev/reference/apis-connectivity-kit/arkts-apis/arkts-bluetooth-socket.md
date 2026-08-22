@@ -2,7 +2,7 @@
 
 Provides methods to operate or manage bluetooth socket connection.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-unnamed-declare namespace socket--><!--Device-unnamed-declare namespace socket-End-->
 
@@ -25,10 +25,8 @@ import { socket } from '@kit.ConnectivityKit';
 | [getMaxReceiveDataSize](arkts-connectivity-socket-getmaxreceivedatasize-f.md) | Obtain the maximum data size that can be received through this socket channel. |
 | [getMaxTransmitDataSize](arkts-connectivity-socket-getmaxtransmitdatasize-f.md) | Obtain the maximum data size that can be transmitted through this socket channel. |
 | [isConnected](arkts-connectivity-socket-isconnected-f.md) | Check whether the current socket connection has been established. |
-| [offSppRead](arkts-connectivity-socket-offsppread-f.md) | Unsubscribe the event reported when data is read from the socket. |
-| [off_sppRead](arkts-connectivity-socket-offsppread-f.md) | Unsubscribe the event reported when data is read from the socket. |
-| [onSppRead](arkts-connectivity-socket-onsppread-f.md) | Subscribe the event reported when data is read from the socket. |
-| [on_sppRead](arkts-connectivity-socket-onsppread-f.md) | Subscribe the event reported when data is read from the socket. |
+| [off_sppRead](arkts-connectivity-socket-offsppread-f.md#offsppread) | Unsubscribe the event reported when data is read from the socket. |
+| [on_sppRead](arkts-connectivity-socket-onsppread-f.md#onsppread) | Subscribe the event reported when data is read from the socket. |
 | [sppAccept](arkts-connectivity-socket-sppaccept-f.md) | Waits for a remote device to connect. |
 | [sppCloseClientSocket](arkts-connectivity-socket-sppcloseclientsocket-f.md) | Disables an spp client socket and releases related resources. |
 | [sppCloseServerSocket](arkts-connectivity-socket-sppcloseserversocket-f.md) | Disables an spp server socket and releases related resources. |

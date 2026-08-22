@@ -4,7 +4,7 @@ Manager pan host profile.
 
 **Inheritance/Implementation:** PanProfile extends [BaseProfile](arkts-connectivity-pan-baseprofile-t.md)
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-pan-interface PanProfile--><!--Device-pan-interface PanProfile-End-->
 
@@ -61,7 +61,7 @@ disconnect(deviceId: string): void
 
 Disconnect the PAN connection with the remote device.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -112,7 +112,7 @@ isTetheringOn(): boolean
 
 Obtains the tethering enable or disable.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -158,7 +158,7 @@ setTethering(enable: boolean): void
 
 Enable bluetooth tethering.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 

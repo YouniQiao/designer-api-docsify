@@ -186,6 +186,58 @@ export default class ServiceExtAbility extends ServiceExtensionAbility {
     };
     try {
       window.createWindow(config, (err: BusinessError, data) => {
+        let errCode: number = err?.code;
+        if (errCode) {
+          console.error(`Failed to create the window. Cause code: ${err?.code}, message: ${err?.message}`);
+          return;
+        }
+        if (!data) {
+          console.error('data is null');
+          return;
+        }
+        let token = want.parameters?.['ohos.ability.params.request.token'] as Property;
+        let value = token.value as rpc.RemoteObject;
+        data.bindDialogTarget(value, () => {
+          console.info('Dialog Window Need Destroy.');
+          }, (err: BusinessError) => {
+          let errCode: number = err?.code;
+          if (errCode) {
+            console.error(`Failed to bind dialog target. Cause code: ${err?.code}, message: ${err?.message}`);
+            return;
+          }
+          console.info('Succeeded in binding dialog target.');
+        });
+      });
+    } catch (err) {
+      console.error(`Failed to bind dialog target. Cause code: ${err?.code}, message: ${err?.message}`)
+    }
+  }
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { Want, ServiceExtensionAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export class Property {
+  public value: Object
+
+  constructor(value: Object) {
+    this.value = value
+  }
+}
+
+export default class ServiceExtAbility extends ServiceExtensionAbility {
+  onRequest(want: Want, startId: number) {
+    console.info('onRequest');
+    let config: window.Configuration = {
+      name: 'test',
+      windowType: window.WindowType.TYPE_DIALOG,
+      ctx: this.context
+    };
+    try {
+      window.createWindow(config, (err: BusinessError, data) => {
         const errCode: number = err?.code;
         if (errCode) {
           console.error(`Failed to create the window. Cause code: ${err?.code}, message: ${err?.message}`);
@@ -198,6 +250,84 @@ export default class ServiceExtAbility extends ServiceExtensionAbility {
         let token = want.parameters?.['ohos.ability.params.request.token'] as Property;
         let value = token.value as rpc.RemoteObject;
         let promise = data.bindDialogTarget(value, () => {
+          console.info('Dialog Window Need Destroy.');
+        });
+        promise.then(() => {
+          console.info('Succeeded in binding dialog target.');
+        }).catch((err: BusinessError) => {
+          console.error(`Failed to bind dialog target. Cause code: ${err?.code}, message: ${err?.message}`);
+        });
+      });
+    } catch (err) {
+      console.error(`Failed to bind dialog target. Cause code: ${err?.code}, message: ${err?.message}`)
+    }
+  }
+}
+```
+
+```TypeScript
+import { dialogRequest, Want, ServiceExtensionAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class ServiceExtAbility extends ServiceExtensionAbility {
+  onRequest(want: Want, startId: number) {
+    console.info('onRequest');
+    let config: window.Configuration = {
+      name: 'test', windowType: window.WindowType.TYPE_DIALOG, ctx: this.context
+    };
+    try {
+      window.createWindow(config, (err: BusinessError, data) => {
+        let errCode: number = err?.code;
+        if (errCode) {
+          console.error(`Failed to create the window. Cause code: ${err?.code}, message: ${err?.message}`);
+          return;
+        }
+        if (!data) {
+          console.error('data is null');
+          return;
+        }
+        let requestInfo = dialogRequest.getRequestInfo(want);
+        data.bindDialogTarget(requestInfo, () => {
+          console.info('Dialog Window Need Destroy.');
+          }, (err: BusinessError) => {
+          let errCode: number = err?.code;
+          if (errCode) {
+            console.error(`Failed to bind dialog target. Cause code: ${err?.code}, message: ${err?.message}`);
+            return;
+          }
+          console.info('Succeeded in binding dialog target.');
+        });
+      });
+    } catch (err) {
+      console.error(`Failed to bind dialog target. Cause code: ${err?.code}, message: ${err?.message}`)
+    }
+  }
+}
+```
+
+```TypeScript
+import { dialogRequest, Want, ServiceExtensionAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class ServiceExtAbility extends ServiceExtensionAbility {
+  onRequest(want: Want, startId: number) {
+    console.info('onRequest');
+    let config: window.Configuration = {
+      name: 'test', windowType: window.WindowType.TYPE_DIALOG, ctx: this.context
+    };
+    try {
+      window.createWindow(config, (err: BusinessError, data) => {
+        const errCode: number = err?.code;
+        if (errCode) {
+          console.error(`Failed to create the window. Cause code: ${err?.code}, message: ${err?.message}`);
+          return;
+        }
+        if (!data) {
+          console.error('data is null');
+          return;
+        }
+        let requestInfo = dialogRequest.getRequestInfo(want);
+        let promise = data.bindDialogTarget(requestInfo, () => {
           console.info('Dialog Window Need Destroy.');
         });
         promise.then(() => {
@@ -248,57 +378,7 @@ bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>, callbac
 
 **示例**
 
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { Want, ServiceExtensionAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export class Property {
-  public value: Object
-
-  constructor(value: Object) {
-    this.value = value
-  }
-}
-
-export default class ServiceExtAbility extends ServiceExtensionAbility {
-  onRequest(want: Want, startId: number) {
-    console.info('onRequest');
-    let config: window.Configuration = {
-      name: 'test',
-      windowType: window.WindowType.TYPE_DIALOG,
-      ctx: this.context
-    };
-    try {
-      window.createWindow(config, (err: BusinessError, data) => {
-        let errCode: number = err?.code;
-        if (errCode) {
-          console.error(`Failed to create the window. Cause code: ${err?.code}, message: ${err?.message}`);
-          return;
-        }
-        if (!data) {
-          console.error('data is null');
-          return;
-        }
-        let token = want.parameters?.['ohos.ability.params.request.token'] as Property;
-        let value = token.value as rpc.RemoteObject;
-        data.bindDialogTarget(value, () => {
-          console.info('Dialog Window Need Destroy.');
-          }, (err: BusinessError) => {
-          let errCode: number = err?.code;
-          if (errCode) {
-            console.error(`Failed to bind dialog target. Cause code: ${err?.code}, message: ${err?.message}`);
-            return;
-          }
-          console.info('Succeeded in binding dialog target.');
-        });
-      });
-    } catch (err) {
-      console.error(`Failed to bind dialog target. Cause code: ${err?.code}, message: ${err?.message}`)
-    }
-  }
-}
-```
+参见 [bindDialogTarget](#binddialogtarget)
 
 ## bindDialogTarget
 
@@ -340,43 +420,7 @@ bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback
 
 **示例**
 
-```TypeScript
-import { dialogRequest, Want, ServiceExtensionAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class ServiceExtAbility extends ServiceExtensionAbility {
-  onRequest(want: Want, startId: number) {
-    console.info('onRequest');
-    let config: window.Configuration = {
-      name: 'test', windowType: window.WindowType.TYPE_DIALOG, ctx: this.context
-    };
-    try {
-      window.createWindow(config, (err: BusinessError, data) => {
-        const errCode: number = err?.code;
-        if (errCode) {
-          console.error(`Failed to create the window. Cause code: ${err?.code}, message: ${err?.message}`);
-          return;
-        }
-        if (!data) {
-          console.error('data is null');
-          return;
-        }
-        let requestInfo = dialogRequest.getRequestInfo(want);
-        let promise = data.bindDialogTarget(requestInfo, () => {
-          console.info('Dialog Window Need Destroy.');
-        });
-        promise.then(() => {
-          console.info('Succeeded in binding dialog target.');
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to bind dialog target. Cause code: ${err?.code}, message: ${err?.message}`);
-        });
-      });
-    } catch (err) {
-      console.error(`Failed to bind dialog target. Cause code: ${err?.code}, message: ${err?.message}`)
-    }
-  }
-}
-```
+参见 [bindDialogTarget](#binddialogtarget)
 
 ## bindDialogTarget
 
@@ -413,45 +457,7 @@ bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback
 
 **示例**
 
-```TypeScript
-import { dialogRequest, Want, ServiceExtensionAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class ServiceExtAbility extends ServiceExtensionAbility {
-  onRequest(want: Want, startId: number) {
-    console.info('onRequest');
-    let config: window.Configuration = {
-      name: 'test', windowType: window.WindowType.TYPE_DIALOG, ctx: this.context
-    };
-    try {
-      window.createWindow(config, (err: BusinessError, data) => {
-        let errCode: number = err?.code;
-        if (errCode) {
-          console.error(`Failed to create the window. Cause code: ${err?.code}, message: ${err?.message}`);
-          return;
-        }
-        if (!data) {
-          console.error('data is null');
-          return;
-        }
-        let requestInfo = dialogRequest.getRequestInfo(want);
-        data.bindDialogTarget(requestInfo, () => {
-          console.info('Dialog Window Need Destroy.');
-          }, (err: BusinessError) => {
-          let errCode: number = err?.code;
-          if (errCode) {
-            console.error(`Failed to bind dialog target. Cause code: ${err?.code}, message: ${err?.message}`);
-            return;
-          }
-          console.info('Succeeded in binding dialog target.');
-        });
-      });
-    } catch (err) {
-      console.error(`Failed to bind dialog target. Cause code: ${err?.code}, message: ${err?.message}`)
-    }
-  }
-}
-```
+参见 [bindDialogTarget](#binddialogtarget)
 
 ## detachLayoutToParentWindow
 
@@ -572,6 +578,41 @@ enableDrag(enable: boolean): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  windowClass.enableDrag(true).then(() => {
+    console.info('succeeded in setting window draggable');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set window draggable. Cause code: ${err.code}, message: ${err.message}`);
+  });
+} catch (exception) {
+  console.error(`Failed to set window draggable. Cause code: ${exception.code}, message: ${exception.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  windowClass.enableDrag(true).then(() => { 
+    console.info('succeeded in setting window draggable');
+  }).catch((err: Error) => {
+    console.error(`Failed to set window draggable. Cause code: ${err.code}, message: ${err.message}`);
+  });
+} catch (exception) {
+  let err = exception as BusinessError;
+  console.error(`Failed to set window draggable. Cause code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ## getRotationLocked
 
@@ -696,6 +737,17 @@ windowClass.hide((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.hide();
+promise.then(() => {
+  console.info('Succeeded in hiding the window.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to hide the window. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## hide
 
 ```TypeScript
@@ -727,16 +779,7 @@ hide(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.hide();
-promise.then(() => {
-  console.info('Succeeded in hiding the window.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to hide the window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [hide](#hide)
 
 ## hideNonSystemFloatingWindows
 
@@ -871,6 +914,49 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    // 加载主窗口对应的页面
+    windowStage.loadContent('pages/Index', (err) => {
+      if (err.code) {
+        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('Succeeded in loading the content.');
+    });
+
+    // 获取应用主窗口。
+    let mainWindow: window.Window | undefined = undefined;
+    windowStage.getMainWindow((err, data) => {
+      if (err.code) {
+        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      mainWindow = data;
+      console.info('Succeeded in obtaining the main window. Data: ' + JSON.stringify(data));
+
+      let shouldHide = true;
+      try {
+        // 调用hideNonSystemFloatingWindows接口，获取promise对象
+        let promise = mainWindow.hideNonSystemFloatingWindows(shouldHide);
+        promise.then(() => {
+          console.info('Succeeded in hiding the non-system floating windows.');
+        }).catch((err: BusinessError) => {
+          console.error(`Failed to hide the non-system floating windows. Cause code: ${err.code}, message: ${err.message}`);
+        });
+      } catch (exception) {
+        console.error(`Failed to hide the non-system floating windows. Cause code: ${exception.code}, message: ${exception.message}`);
+      }
+    });
+  }
+}
+```
+
 ## hideNonSystemFloatingWindows
 
 ```TypeScript
@@ -914,48 +1000,7 @@ hideNonSystemFloatingWindows(shouldHide: boolean): Promise<void>
 
 **示例**
 
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    // 加载主窗口对应的页面
-    windowStage.loadContent('pages/Index', (err) => {
-      if (err.code) {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-    });
-
-    // 获取应用主窗口。
-    let mainWindow: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err, data) => {
-      if (err.code) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      mainWindow = data;
-      console.info('Succeeded in obtaining the main window. Data: ' + JSON.stringify(data));
-
-      let shouldHide = true;
-      try {
-        // 调用hideNonSystemFloatingWindows接口，获取promise对象
-        let promise = mainWindow.hideNonSystemFloatingWindows(shouldHide);
-        promise.then(() => {
-          console.info('Succeeded in hiding the non-system floating windows.');
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to hide the non-system floating windows. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      } catch (exception) {
-        console.error(`Failed to hide the non-system floating windows. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
+参见 [hideNonSystemFloatingWindows](#hidenonsystemfloatingwindows)
 
 ## hideWithAnimation
 
@@ -1020,6 +1065,30 @@ windowClass.hideWithAnimation((err: BusinessError<void> | null) => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.hideWithAnimation();
+promise.then(() => {
+  console.info('Succeeded in hiding the window with animation.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to hide the window with animation. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let promise = windowClass.hideWithAnimation();
+promise.then(() => {
+  console.info('Succeeded in hiding the window with animation.');
+}).catch((err: Error) => {
+  console.error(`Failed to hide the window with animation. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## hideWithAnimation
 
 ```TypeScript
@@ -1053,29 +1122,7 @@ hideWithAnimation(): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.hideWithAnimation();
-promise.then(() => {
-  console.info('Succeeded in hiding the window with animation.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to hide the window with animation. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let promise = windowClass.hideWithAnimation();
-promise.then(() => {
-  console.info('Succeeded in hiding the window with animation.');
-}).catch((err: Error) => {
-  console.error(`Failed to hide the window with animation. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [hideWithAnimation](#hidewithanimation)
 
 ## isMainWindowFullScreenAcrossDisplays
 
@@ -1125,38 +1172,6 @@ try {
   console.error(`Failed to use isMainWindowFullScreenAcrossDisplays function. Cause code: ${exception.code}, message: ${exception.message}.`);
 }
 ```
-
-## offMainWindowFullScreenAcrossDisplaysChanged
-
-```TypeScript
-offMainWindowFullScreenAcrossDisplaysChanged(callback?: Callback<boolean>): void
-```
-
-取消监听本窗口的主窗口跨多块屏幕使用全屏模式显示的状态变化事件。
-
-**起始版本：** 23
-
-<!--Device-Window-offMainWindowFullScreenAcrossDisplaysChanged(callback?: Callback<boolean>): void--><!--Device-Window-offMainWindowFullScreenAcrossDisplaysChanged(callback?: Callback<boolean>): void-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。即本窗口的主窗口跨多块屏幕使用全屏模式显示的状态变化回调。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有本窗口的主窗口跨多块 屏幕使用全屏模式显示的状态变化回调。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A nonsystem application calls a system API. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
 
 ## off('mainWindowFullScreenAcrossDisplaysChanged')
 
@@ -1209,17 +1224,17 @@ try {
 }
 ```
 
-## onMainWindowFullScreenAcrossDisplaysChanged
+## offMainWindowFullScreenAcrossDisplaysChanged
 
 ```TypeScript
-onMainWindowFullScreenAcrossDisplaysChanged(callback: Callback<boolean>): void
+offMainWindowFullScreenAcrossDisplaysChanged(callback?: Callback<boolean>): void
 ```
 
-监听本窗口的主窗口跨多块屏幕使用全屏模式显示的状态变化事件。
+取消监听本窗口的主窗口跨多块屏幕使用全屏模式显示的状态变化事件。
 
 **起始版本：** 23
 
-<!--Device-Window-onMainWindowFullScreenAcrossDisplaysChanged(callback: Callback<boolean>): void--><!--Device-Window-onMainWindowFullScreenAcrossDisplaysChanged(callback: Callback<boolean>): void-End-->
+<!--Device-Window-offMainWindowFullScreenAcrossDisplaysChanged(callback?: Callback<boolean>): void--><!--Device-Window-offMainWindowFullScreenAcrossDisplaysChanged(callback?: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -1229,7 +1244,7 @@ onMainWindowFullScreenAcrossDisplaysChanged(callback: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。即本窗口的主窗口跨多块屏幕使用全屏模式显示的状态变化回调。true表示主窗口进入跨多块屏幕使用全屏模式显示状态，false表示主窗口退出 跨多块屏幕使用全屏模式显示状态。 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。即本窗口的主窗口跨多块屏幕使用全屏模式显示的状态变化回调。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有本窗口的主窗口跨多块 屏幕使用全屏模式显示的状态变化回调。 |
 
 **错误码：**
 
@@ -1286,6 +1301,38 @@ try {
   console.error(`Failed to register callback. Cause code: ${exception.code}, message: ${exception.message}`);
 }
 ```
+
+## onMainWindowFullScreenAcrossDisplaysChanged
+
+```TypeScript
+onMainWindowFullScreenAcrossDisplaysChanged(callback: Callback<boolean>): void
+```
+
+监听本窗口的主窗口跨多块屏幕使用全屏模式显示的状态变化事件。
+
+**起始版本：** 23
+
+<!--Device-Window-onMainWindowFullScreenAcrossDisplaysChanged(callback: Callback<boolean>): void--><!--Device-Window-onMainWindowFullScreenAcrossDisplaysChanged(callback: Callback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。即本窗口的主窗口跨多块屏幕使用全屏模式显示的状态变化回调。true表示主窗口进入跨多块屏幕使用全屏模式显示状态，false表示主窗口退出 跨多块屏幕使用全屏模式显示状态。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A nonsystem application calls a system API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+| [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
 
 ## opacity
 
@@ -1448,50 +1495,6 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## raiseAboveTarget
-
-```TypeScript
-raiseAboveTarget(windowId: int): Promise<void>
-```
-
-将同一个主窗下的子窗口提升到目标子窗口之上。使用Promise异步回调。
-
-使用该接口需要确保要抬升的子窗口和目标子窗口都已创建完成，分别调用 [showWindow()](arkts-arkui-window-window-i.md#showwindow)并执行完毕。
-
-**起始版本：** 23
-
-<!--Device-Window-raiseAboveTarget(windowId: int): Promise<void>--><!--Device-Window-raiseAboveTarget(windowId: int): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| windowId | int | 是 | 目标子窗口的id，通过[getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties)接 口获取到[properties](arkts-arkui-window-windowproperties-i.md)后，再通过properties.id获取。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: Mandatory parameters are left unspecified. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
-| [1300009](../errorcode-window.md#1300009-父窗口无效) | The parent window is invalid. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -1568,6 +1571,52 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+## raiseAboveTarget
+
+```TypeScript
+raiseAboveTarget(windowId: int): Promise<void>
+```
+
+将同一个主窗下的子窗口提升到目标子窗口之上。使用Promise异步回调。
+
+使用该接口需要确保要抬升的子窗口和目标子窗口都已创建完成，分别调用 [showWindow()](arkts-arkui-window-window-i.md#showwindow)并执行完毕。
+
+**起始版本：** 23
+
+<!--Device-Window-raiseAboveTarget(windowId: int): Promise<void>--><!--Device-Window-raiseAboveTarget(windowId: int): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| windowId | int | 是 | 目标子窗口的id，通过[getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties)接 口获取到[properties](arkts-arkui-window-windowproperties-i.md)后，再通过properties.id获取。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: Mandatory parameters are left unspecified. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+| [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
+| [1300009](../errorcode-window.md#1300009-父窗口无效) | The parent window is invalid. |
+
+**示例**
+
+参见 [raiseAboveTarget](#raiseabovetarget)
 
 ## raiseMainWindowAboveTarget
 
@@ -1965,6 +2014,62 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+// EntryAbility.ets
+import { window } from '@kit.ArkUI';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    // 创建子窗
+    windowStage.createSubWindow('testSubWindow').then((subWindow) => {
+      if (subWindow == null) {
+        console.error('Failed to create the subWindow. Cause: The data is empty');
+        return;
+      }
+      subWindow.showWindow().then(() => {
+        subWindow.raiseToAppTop().then(() => {
+          console.info('Succeeded in raising window to app top');
+        }).catch((err: BusinessError)=>{
+          console.error(`Failed to raise window to app top. Cause code: ${err.code}, message: ${err.message}`);
+        });
+      });
+    });
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// EntryAbility.ets
+import { window } from '@kit.ArkUI';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    // 创建子窗
+    windowStage.createSubWindow('testSubWindow').then((subWindow: window.Window) => {
+      subWindow.showWindow().then(() => {
+        subWindow.raiseToAppTop().then(() => {
+          console.info('Succeeded in raising window to app top');
+        }).catch((err: Error)=>{
+          console.error(`Failed to raise window to app top. Cause code: ${err?.code}, message: ${err?.message}`);
+        });
+      });
+    });
+  }
+}
+```
+
 ## requestFocus
 
 ```TypeScript
@@ -2346,6 +2451,67 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit'
+
+export default class EntryAbility extends UIAbility {
+  // ...
+
+  onWindowStageCreate(windowStage: window.WindowStage) {
+      windowStage.loadContent("pages/page2", (err: BusinessError) => {
+        let errCode: number = err.code;
+        if (errCode) {
+          console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in loading the content.');
+      try {
+        windowStage.setDefaultDensityEnabled(true);
+        console.info('Succeeded in setting default density enabled.');
+      } catch (exception) {
+        console.error(`Failed to set default density enabled. Cause code: ${exception.code}, message: ${exception.message}`);
+      }
+    });
+  }
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit'
+
+export default class EntryAbility extends UIAbility {
+  // ...
+
+  onWindowStageCreate(windowStage: window.WindowStage) {
+      windowStage.loadContent("pages/page2", (err: BusinessError<void> | null) => {
+        let errCode = err?.code;
+        if (errCode) {
+          console.error(`Failed to load the content. Cause code: ${err?.code}, message: ${err?.message}`);
+          return;
+        }
+        console.info('Succeeded in loading the content.');
+      try {
+        windowStage.setDefaultDensityEnabled(true);
+        console.info('Succeeded in setting default density enabled.');
+      } catch (exception) {
+        let error = exception as BusinessError;
+        console.error(`Failed to set default density enabled. Cause code: ${error.code}, message: ${error.message}`);
+      }
+    });
+  }
+};
+```
+
 ## setForbidSplitMove
 
 ```TypeScript
@@ -2455,47 +2621,6 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## setForbidSplitMove
-
-```TypeScript
-setForbidSplitMove(isForbidSplitMove: boolean): Promise<void>
-```
-
-设置主窗口在分屏模式下是否被禁止移动，使用Promise异步回调。
-
-**起始版本：** 23
-
-**废弃版本：** 26.0.0
-
-<!--Device-Window-setForbidSplitMove(isForbidSplitMove: boolean): Promise<void>--><!--Device-Window-setForbidSplitMove(isForbidSplitMove: boolean): Promise<void>-End-->
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isForbidSplitMove | boolean | 是 | 窗口在分屏模式下是否被禁止移动。true表示禁止；false表示不禁止。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -2565,6 +2690,49 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+## setForbidSplitMove
+
+```TypeScript
+setForbidSplitMove(isForbidSplitMove: boolean): Promise<void>
+```
+
+设置主窗口在分屏模式下是否被禁止移动，使用Promise异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** 26.0.0
+
+<!--Device-Window-setForbidSplitMove(isForbidSplitMove: boolean): Promise<void>--><!--Device-Window-setForbidSplitMove(isForbidSplitMove: boolean): Promise<void>-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isForbidSplitMove | boolean | 是 | 窗口在分屏模式下是否被禁止移动。true表示禁止；false表示不禁止。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+
+**示例**
+
+参见 [setForbidSplitMove](#setforbidsplitmove)
 
 ## setHandwritingFlag
 
@@ -2854,6 +3022,73 @@ export default class EntryAbility extends UIAbility {
             return;
           }
           console.info('Succeeded in disabling the raise-by-click function.');
+          });
+        } catch (exception) {
+          let err = exception as BusinessError;
+          console.error(`Failed to disable the raise-by-click function. Cause code: ${err.code}, message: ${err.message}`);
+        }
+      });
+    });
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// EntryAbility.ets
+import { window } from '@kit.ArkUI';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    // 创建子窗
+    windowStage.createSubWindow('testSubWindow').then((subWindow) => {
+      if (subWindow == null) {
+        console.error('Failed to create the subWindow. Cause: The data is empty');
+        return;
+      }
+      subWindow.showWindow().then(() => {
+        try {
+          let enabled = false;
+          subWindow.setRaiseByClickEnabled(enabled).then(() => {
+            console.info('Succeeded in disabling the raise-by-click function.');
+          }).catch((err: BusinessError) => {
+            console.error(`Failed to disable the raise-by-click function. Cause code: ${err.code}, message: ${err.message}`);
+          });
+        } catch (err) {
+          console.error(`Failed to disable the raise-by-click function. Cause code: ${err.code}, message: ${err.message}`);
+        }
+      });
+    });
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// EntryAbility.ets
+import { window } from '@kit.ArkUI';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    // 创建子窗
+    windowStage.createSubWindow('testSubWindow').then((subWindow: window.Window) => {
+      subWindow.showWindow().then(() => {
+        try {
+          let enabled = false;
+          subWindow.setRaiseByClickEnabled(enabled).then(() => {
+            console.info('Succeeded in disabling the raise-by-click function.');
+          }).catch((err: Error) => {
+            console.error(`Failed to disable the raise-by-click function. Cause code: ${err?.code}, message: ${err?.message}`);
           });
         } catch (exception) {
           let err = exception as BusinessError;
@@ -3349,6 +3584,33 @@ setTouchableAreas(rects: Array<Rect>): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: Invalid parameter range. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+try {
+  windowClass.setTouchableAreas([{left: 100, top: 100, width: 200, height:200},
+    {left: 400, top: 100, width: 200, height:200}]);
+} catch (exception) {
+  console.error(`Failed to set touchable areas. Cause code: ${exception.code}, message: ${exception.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  windowClass.setTouchableAreas([{left: 100, top: 100, width: 200, height:200},
+    {left: 400, top: 100, width: 200, height:200}]);
+} catch (exception) {
+  let err = exception as BusinessError;
+  console.error(`Failed to set touchable areas. Cause code: ${err.code}, message: ${err.message}`);
+}
+```
+
 ## setWakeUpScreen
 
 ```TypeScript
@@ -3446,6 +3708,43 @@ ArkTS-Dyn示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
+  let enable = true;
+  let promise = windowClass.setWaterMarkFlag(enable);
+  promise.then(() => {
+    console.info('Succeeded in setting water mark flag of window.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set water mark flag of window. Cause code: ${err.code}, message: ${err.message}`);
+  });
+} catch (exception) {
+  console.error(`Failed to set water mark flag of window. Cause code: ${exception.code}, message: ${exception.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let enable = true;
+  let promise = windowClass.setWaterMarkFlag(enable);
+  promise.then(() => {
+    console.info('Succeeded in setting water mark flag of window.');
+  }).catch((err: Error) => {
+    console.error(`Failed to set water mark flag of window. Cause code: ${err.code}, message: ${err.message}`);
+  });
+} catch (exception) {
+  let error = exception as BusinessError;
+  console.error(`Failed to set water mark flag of window. Cause code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
   let enable: boolean = true;
   windowClass.setWaterMarkFlag(enable, (err: BusinessError) => {
     const errCode: number = err.code;
@@ -3521,42 +3820,7 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let enable = true;
-  let promise = windowClass.setWaterMarkFlag(enable);
-  promise.then(() => {
-    console.info('Succeeded in setting water mark flag of window.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set water mark flag of window. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set water mark flag of window. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let enable = true;
-  let promise = windowClass.setWaterMarkFlag(enable);
-  promise.then(() => {
-    console.info('Succeeded in setting water mark flag of window.');
-  }).catch((err: Error) => {
-    console.error(`Failed to set water mark flag of window. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to set water mark flag of window. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [setWaterMarkFlag](#setwatermarkflag)
 
 ## setWindowContainerModalColor
 
@@ -3596,6 +3860,89 @@ setWindowContainerModalColor(activeColor: string, inactiveColor: string): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    windowStage.loadContent('pages/Index', (err: BusinessError) => {
+      let errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('Succeeded in loading the content.');
+      // 获取应用主窗口。
+      let windowClass: window.Window | undefined = undefined;
+      windowStage.getMainWindow((err: BusinessError, data) => {
+        let errCode: number = err.code;
+        if (errCode) {
+          console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        windowClass = data;
+        let activeColor: string = '#00000000';
+        let inactiveColor: string = '#FF000000';
+        try {
+          windowClass.setWindowContainerModalColor(activeColor, inactiveColor);
+          console.info('Succeeded in setting window container color.');
+        } catch (exception) {
+          console.error(`Failed to set the window container color. Cause code: ${exception.code}, message: ${exception.message}`);
+        };
+      });
+    });
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    windowStage.loadContent('pages/Index', (err: BusinessError) => {
+      let errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('Succeeded in loading the content.');
+      // 获取应用主窗口。
+      let windowClass: window.Window | undefined = undefined;
+      windowStage.getMainWindow((err: BusinessError, data) => {
+        let errCode: number = err.code;
+        if (errCode) {
+          console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        windowClass = data;
+        let activeColor: string = '#00000000';
+        let inactiveColor: string = '#FF000000';
+        try {
+          windowClass.setWindowContainerModalColor(activeColor, inactiveColor);
+          console.info('Succeeded in setting window container color.');
+        } catch (exception) {
+          let error = exception as BusinessError;
+          console.error(`Failed to set the window container color. Cause code: ${error.code}, message: ${error.message}`);
+        };
+      });
+    });
+  }
+}
+```
+
 ## setWindowMode
 
 ```TypeScript
@@ -3634,6 +3981,79 @@ setWindowMode(mode: WindowMode): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.getMainWindow((err: BusinessError, data) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      windowClass = data;
+      let mode = window.WindowMode.FULLSCREEN;
+      try {
+        windowClass.setWindowMode(mode, (err: BusinessError) => {
+          const errCode: number = err.code;
+          if (errCode) {
+            console.error(`Failed to set the window mode. Cause code: ${err.code}, message: ${err.message}`);
+            return;
+          }
+          console.info('Succeeded in setting the window mode.');
+        });
+      } catch (exception) {
+        console.error(`Failed to set the window mode. Cause code: ${exception.code}, message: ${exception.message}`);
+      }
+    });
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    windowStage.getMainWindow((err: BusinessError<void> | null, windowClass) => {
+      if (err?.code) {
+        console.error(`Failed to obtain the main window. Cause code: ${err?.code}, message: ${err?.message}`);
+        return;
+      }
+      let mode = window.WindowMode.FULLSCREEN;
+      try {
+        if (windowClass != undefined) {
+          windowClass.setWindowMode(mode, (err: BusinessError<void> | null) => {
+            if (err?.code) {
+              console.error(`Failed to set the window mode. Cause code: ${err?.code}, message: ${err?.message}`);
+              return;
+            }
+            console.info('Succeeded in setting the window mode.');
+          });
+        }
+      } catch (exception) {
+        let err = exception as BusinessError;
+        console.error(`Failed to set the window mode. Cause code: ${err.code}, message: ${err.message}`);
+      }
+    });
+  }
+}
+```
 
 ArkTS-Dyn示例：
 
@@ -3739,78 +4159,7 @@ setWindowMode(mode: WindowMode, callback: AsyncCallback<void>): void
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let mode = window.WindowMode.FULLSCREEN;
-      try {
-        windowClass.setWindowMode(mode, (err: BusinessError) => {
-          const errCode: number = err.code;
-          if (errCode) {
-            console.error(`Failed to set the window mode. Cause code: ${err.code}, message: ${err.message}`);
-            return;
-          }
-          console.info('Succeeded in setting the window mode.');
-        });
-      } catch (exception) {
-        console.error(`Failed to set the window mode. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    windowStage.getMainWindow((err: BusinessError<void> | null, windowClass) => {
-      if (err?.code) {
-        console.error(`Failed to obtain the main window. Cause code: ${err?.code}, message: ${err?.message}`);
-        return;
-      }
-      let mode = window.WindowMode.FULLSCREEN;
-      try {
-        if (windowClass != undefined) {
-          windowClass.setWindowMode(mode, (err: BusinessError<void> | null) => {
-            if (err?.code) {
-              console.error(`Failed to set the window mode. Cause code: ${err?.code}, message: ${err?.message}`);
-              return;
-            }
-            console.info('Succeeded in setting the window mode.');
-          });
-        }
-      } catch (exception) {
-        let err = exception as BusinessError;
-        console.error(`Failed to set the window mode. Cause code: ${err.code}, message: ${err.message}`);
-      }
-    });
-  }
-}
-```
+参见 [setWindowMode](#setwindowmode)
 
 ## setWindowType
 
@@ -3843,6 +4192,20 @@ setWindowType(type: WindowType): Promise<void>
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let type = window.WindowType.TYPE_SYSTEM_ALERT;
+windowClass.setWindowType(type, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to set the window type. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the window type.');
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3883,19 +4246,7 @@ setWindowType(type: WindowType, callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let type = window.WindowType.TYPE_SYSTEM_ALERT;
-windowClass.setWindowType(type, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the window type. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the window type.');
-});
-```
+参见 [setWindowType](#setwindowtype)
 
 ## showWithAnimation
 
@@ -3960,6 +4311,30 @@ windowClass.showWithAnimation((err: BusinessError<void> | null) => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.showWithAnimation();
+promise.then(() => {
+  console.info('Succeeded in showing the window with animation.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to show the window with animation. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let promise = windowClass.showWithAnimation();
+promise.then(() => {
+  console.info('Succeeded in showing the window with animation.');
+}).catch((err: Error) => {
+  console.error(`Failed to show the window with animation. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## showWithAnimation
 
 ```TypeScript
@@ -3993,29 +4368,7 @@ showWithAnimation(): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.showWithAnimation();
-promise.then(() => {
-  console.info('Succeeded in showing the window with animation.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to show the window with animation. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let promise = windowClass.showWithAnimation();
-promise.then(() => {
-  console.info('Succeeded in showing the window with animation.');
-}).catch((err: Error) => {
-  console.error(`Failed to show the window with animation. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [showWithAnimation](#showwithanimation)
 
 ## translate
 

@@ -84,6 +84,42 @@ notificationManager.disableNotificationFeature(disabled, bundleList).then(() => 
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let disabled: boolean = true;
+let bundleList: Array<string> = ['com.example.myapplication'];
+let userId: number = 1;
+try {
+  notificationManager.disableNotificationFeature(disabled, bundleList, userId).then(() => {
+    hilog.info(0x0000, 'testTag', '%{public}s', `disableNotificationFeature success.`);
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', '%{public}s', `disableNotificationFeature failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (err) {
+  hilog.error(0x0000, 'testTag', '%{public}s', `testTag failed, code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let disabled: boolean = true;
+let bundleList: Array<string> = ['com.example.myapplication'];
+let userId: int = 1;
+notificationManager.disableNotificationFeature(disabled, bundleList, userId).then(() => {
+  console.info(`DisableNotificationFeature success.`);
+}).catch((err: Error) => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`DisableNotificationFeature failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## disableNotificationFeature
 
@@ -128,39 +164,5 @@ function disableNotificationFeature(disabled: boolean, bundleList: Array<string>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let disabled: boolean = true;
-let bundleList: Array<string> = ['com.example.myapplication'];
-let userId: number = 1;
-try {
-  notificationManager.disableNotificationFeature(disabled, bundleList, userId).then(() => {
-    hilog.info(0x0000, 'testTag', '%{public}s', `disableNotificationFeature success.`);
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', '%{public}s', `disableNotificationFeature failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (err) {
-  hilog.error(0x0000, 'testTag', '%{public}s', `testTag failed, code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let disabled: boolean = true;
-let bundleList: Array<string> = ['com.example.myapplication'];
-let userId: int = 1;
-notificationManager.disableNotificationFeature(disabled, bundleList, userId).then(() => {
-  console.info(`DisableNotificationFeature success.`);
-}).catch((err: Error) => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`DisableNotificationFeature failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [disableNotificationFeature](#disablenotificationfeature)
 

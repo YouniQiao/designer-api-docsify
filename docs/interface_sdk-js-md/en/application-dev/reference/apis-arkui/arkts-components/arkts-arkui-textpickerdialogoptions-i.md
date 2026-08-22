@@ -143,6 +143,28 @@ Options for customizing the background effect.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## cancelButtonStyle
+
+```TypeScript
+cancelButtonStyle?: PickerDialogButtonStyle
+```
+
+Style of cancel button.
+
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>In the acceptButtonStyle and cancelButtonStyle configurations, <br>only one primary field can be set to true at most. <br>If both the primary fields are set to true, neither will take effect. </p>
+
+**Type:** PickerDialogButtonStyle
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextPickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle--><!--Device-TextPickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## canLoop
 
 ```TypeScript
@@ -164,28 +186,6 @@ Default Value: true
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TextPickerDialogOptions-canLoop?: boolean--><!--Device-TextPickerDialogOptions-canLoop?: boolean-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## cancelButtonStyle
-
-```TypeScript
-cancelButtonStyle?: PickerDialogButtonStyle
-```
-
-Style of cancel button.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>In the acceptButtonStyle and cancelButtonStyle configurations, <br>only one primary field can be set to true at most. <br>If both the primary fields are set to true, neither will take effect. </p>
-
-**Type:** PickerDialogButtonStyle
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TextPickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle--><!--Device-TextPickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -111,6 +111,10 @@ Adds domain server configuration. This API uses a promise to return the result.
 | 12300213 | Server config already exists. |
 | 12300215 | The number of server config reaches the upper limit. |
 
+**Examples**
+
+See [addServerConfig](#addserverconfig)
+
 ## getAccountServerConfig
 
 ```TypeScript
@@ -438,4 +442,8 @@ Updates the domain server configuration. This API uses a promise to return the r
 | 12300212 | Server config not found. |
 | 12300213 | Server config already exists. |
 | 12300214 | Server config has been associated with an account. |
+
+**Examples**
+
+See [updateServerConfig](#updateserverconfig)
 

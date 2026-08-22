@@ -73,6 +73,26 @@ Creates a **TextMenuItemId** object based on **id**.
 | --- | --- |
 | [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | TextMenuItemId** object. |
 
+## address
+
+```TypeScript
+static readonly address: TextMenuItemId
+```
+
+ID for the navigation menu item. It is a level-1 menu item. This menu item provides the redirection service for the selected address, launching the map app.
+
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextMenuItemId-static readonly address: TextMenuItemId--><!--Device-TextMenuItemId-static readonly address: TextMenuItemId-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## AI_WRITER
 
 ```TypeScript
@@ -90,6 +110,46 @@ static readonly AI_WRITER: TextMenuItemId
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-TextMenuItemId-static readonly AI_WRITER: TextMenuItemId--><!--Device-TextMenuItemId-static readonly AI_WRITER: TextMenuItemId-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## askAI
+
+```TypeScript
+static readonly askAI: TextMenuItemId
+```
+
+<!--RP2--><!--RP2End-->ID for the AI assistant menu item, which provides AI query capabilities for the selected text. It is a level-1 menu item.
+
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextMenuItemId-static readonly askAI: TextMenuItemId--><!--Device-TextMenuItemId-static readonly askAI: TextMenuItemId-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## autoFill
+
+```TypeScript
+static readonly autoFill: TextMenuItemId
+```
+
+ID for the autofill menu item. It is a level-1 menu item. When a menu item is tapped, the secondary menu item **Password Vault** is displayed. This menu item is supported exclusively for the Search, TextInput, TextArea, and RichEditor components.
+
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-TextMenuItemId-static readonly autoFill: TextMenuItemId--><!--Device-TextMenuItemId-static readonly autoFill: TextMenuItemId-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -173,6 +233,66 @@ ID for the default cut menu item. It is a level-1 menu item.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## dateTime
+
+```TypeScript
+static readonly dateTime: TextMenuItemId
+```
+
+ID for the event creation menu item. It is a level-1 menu item. This menu item provides the redirection service for the selected date and time, launching the page for creating a calendar event.
+
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextMenuItemId-static readonly dateTime: TextMenuItemId--><!--Device-TextMenuItemId-static readonly dateTime: TextMenuItemId-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## email
+
+```TypeScript
+static readonly email: TextMenuItemId
+```
+
+ID for the email menu item. It is a level-1 menu item. This menu item provides the redirection service for the selected email address, launching the email app.
+
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextMenuItemId-static readonly email: TextMenuItemId--><!--Device-TextMenuItemId-static readonly email: TextMenuItemId-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## passwordVault
+
+```TypeScript
+static readonly passwordVault: TextMenuItemId
+```
+
+ID for the password vault menu item. It is a level-2 menu item. Tapping this menu item launches the password vault app, which supports automatic username and password filling. The menu item is supported only for Search, TextInput, TextArea, and RichEditor.
+
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-TextMenuItemId-static readonly passwordVault: TextMenuItemId--><!--Device-TextMenuItemId-static readonly passwordVault: TextMenuItemId-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## PASTE
 
 ```TypeScript
@@ -190,6 +310,26 @@ ID for the default paste menu item. It is a level-1 menu item.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TextMenuItemId-static readonly PASTE: TextMenuItemId--><!--Device-TextMenuItemId-static readonly PASTE: TextMenuItemId-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## phoneNumber
+
+```TypeScript
+static readonly phoneNumber: TextMenuItemId
+```
+
+ID for the phone call menu item. It is a level-1 menu item. This menu item provides the redirection service for the selected phone number, launching the phone dialer page.
+
+**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextMenuItemId-static readonly phoneNumber: TextMenuItemId--><!--Device-TextMenuItemId-static readonly phoneNumber: TextMenuItemId-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -270,146 +410,6 @@ ID for the translate menu item. It is a level-1 menu item. The translation servi
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-TextMenuItemId-static readonly TRANSLATE: TextMenuItemId--><!--Device-TextMenuItemId-static readonly TRANSLATE: TextMenuItemId-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## address
-
-```TypeScript
-static readonly address: TextMenuItemId
-```
-
-ID for the navigation menu item. It is a level-1 menu item. This menu item provides the redirection service for the selected address, launching the map app.
-
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
-
-**Since:** 20
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-TextMenuItemId-static readonly address: TextMenuItemId--><!--Device-TextMenuItemId-static readonly address: TextMenuItemId-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## askAI
-
-```TypeScript
-static readonly askAI: TextMenuItemId
-```
-
-<!--RP2--><!--RP2End-->ID for the AI assistant menu item, which provides AI query capabilities for the selected text. It is a level-1 menu item.
-
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
-
-**Since:** 20
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-TextMenuItemId-static readonly askAI: TextMenuItemId--><!--Device-TextMenuItemId-static readonly askAI: TextMenuItemId-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## autoFill
-
-```TypeScript
-static readonly autoFill: TextMenuItemId
-```
-
-ID for the autofill menu item. It is a level-1 menu item. When a menu item is tapped, the secondary menu item **Password Vault** is displayed. This menu item is supported exclusively for the Search, TextInput, TextArea, and RichEditor components.
-
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-TextMenuItemId-static readonly autoFill: TextMenuItemId--><!--Device-TextMenuItemId-static readonly autoFill: TextMenuItemId-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## dateTime
-
-```TypeScript
-static readonly dateTime: TextMenuItemId
-```
-
-ID for the event creation menu item. It is a level-1 menu item. This menu item provides the redirection service for the selected date and time, launching the page for creating a calendar event.
-
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
-
-**Since:** 20
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-TextMenuItemId-static readonly dateTime: TextMenuItemId--><!--Device-TextMenuItemId-static readonly dateTime: TextMenuItemId-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## email
-
-```TypeScript
-static readonly email: TextMenuItemId
-```
-
-ID for the email menu item. It is a level-1 menu item. This menu item provides the redirection service for the selected email address, launching the email app.
-
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
-
-**Since:** 20
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-TextMenuItemId-static readonly email: TextMenuItemId--><!--Device-TextMenuItemId-static readonly email: TextMenuItemId-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## passwordVault
-
-```TypeScript
-static readonly passwordVault: TextMenuItemId
-```
-
-ID for the password vault menu item. It is a level-2 menu item. Tapping this menu item launches the password vault app, which supports automatic username and password filling. The menu item is supported only for Search, TextInput, TextArea, and RichEditor.
-
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-TextMenuItemId-static readonly passwordVault: TextMenuItemId--><!--Device-TextMenuItemId-static readonly passwordVault: TextMenuItemId-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## phoneNumber
-
-```TypeScript
-static readonly phoneNumber: TextMenuItemId
-```
-
-ID for the phone call menu item. It is a level-1 menu item. This menu item provides the redirection service for the selected phone number, launching the phone dialer page.
-
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
-
-**Since:** 20
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-TextMenuItemId-static readonly phoneNumber: TextMenuItemId--><!--Device-TextMenuItemId-static readonly phoneNumber: TextMenuItemId-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

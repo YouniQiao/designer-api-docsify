@@ -42,6 +42,16 @@ function exit(sharingResource: string, callback: AsyncCallback<Result<void>>): v
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+cloudData.sharing.exit('sharing_resource_test').then((result) => {
+  console.info(`exit share success, result: ${result}`);
+}).catch((err) => {
+  console.error(`exit share failed, code is ${err.code},message is ${err.message}`);
+})
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 cloudData.sharing.exit('sharing_resource_test', ((err: BusinessError|null, result) => {
   if (err) {
     console.error(`exit share failed, code is ${err.code},message is ${err.message}`);
@@ -90,13 +100,5 @@ function exit(sharingResource: string): Promise<Result<void>>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-cloudData.sharing.exit('sharing_resource_test').then((result) => {
-  console.info(`exit share success, result: ${result}`);
-}).catch((err) => {
-  console.error(`exit share failed, code is ${err.code},message is ${err.message}`);
-})
-```
+参见 [exit](#exit)
 

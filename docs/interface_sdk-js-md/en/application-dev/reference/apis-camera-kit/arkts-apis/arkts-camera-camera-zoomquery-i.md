@@ -79,3 +79,37 @@ Obtains the supported zoom ratio range.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getZoomRatioRange(captureSession: camera.CaptureSession): Array<number> {
+  let zoomRatioRange: Array<number> = [];
+  try {
+    zoomRatioRange = captureSession.getZoomRatioRange();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getZoomRatioRange call failed. error code: ${err.code}`);
+  }
+  return zoomRatioRange;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getZoomRatioRange(photoSession: camera.PhotoSession): Array<number> {
+  let zoomRatioRange: Array<number> = [];
+  try {
+    zoomRatioRange = photoSession.getZoomRatioRange();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getZoomRatioRange call failed. error code: ${err.code}`);
+  }
+  return zoomRatioRange;
+}
+```
+

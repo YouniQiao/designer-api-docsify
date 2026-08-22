@@ -97,6 +97,56 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { RenderNode, FrameNode, NodeController, ShapeClip } from '@kit.ArkUI';
+
+const clip = new ShapeClip();
+clip.setCommandPath({ commands: "M100 0 L0 100 L50 200 L150 200 L200 100 Z" });
+
+const renderNode = new RenderNode();
+renderNode.frame = {
+  x: 0,
+  y: 0,
+  width: 150,
+  height: 150
+};
+renderNode.backgroundColor = 0XFF00FF00;
+renderNode.shapeClip = clip;
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column() {
+      NodeContainer(this.myNodeController)
+        .borderWidth(1)
+      Button("setCircleShape")
+        .onClick(() => {
+          renderNode.shapeClip.setCircleShape({ centerY: 75, centerX: 75, radius: 75 });
+
+        })
+    }
+  }
+}
+```
+
 ## setCommandPath
 
 ```TypeScript
@@ -169,6 +219,55 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { RenderNode, FrameNode, NodeController, ShapeClip } from '@kit.ArkUI';
+
+const clip = new ShapeClip();
+clip.setCommandPath({ commands: "M100 0 L0 100 L50 200 L150 200 L200 100 Z" });
+
+const renderNode = new RenderNode();
+renderNode.frame = {
+  x: 0,
+  y: 0,
+  width: 150,
+  height: 150
+};
+renderNode.backgroundColor = 0XFF00FF00;
+renderNode.shapeClip = clip;
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column() {
+      NodeContainer(this.myNodeController)
+        .borderWidth(1)
+      Button("setCommandPath")
+        .onClick(() => {
+          renderNode.shapeClip.setCommandPath({ commands: "M100 0 L0 100 L50 200 L150 200 L200 100 Z" });
+        })
+    }
+  }
+}
+```
+
 ## setOvalShape
 
 ```TypeScript
@@ -230,6 +329,60 @@ struct Index {
   build() {
     Row() {
       NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, ShapeClip } from '@kit.ArkUI';
+
+const clip = new ShapeClip();
+clip.setCommandPath({ commands: "M100 0 L0 100 L50 200 L150 200 L200 100 Z" });
+
+const renderNode = new RenderNode();
+renderNode.frame = {
+  x: 0,
+  y: 0,
+  width: 150,
+  height: 150
+};
+renderNode.backgroundColor = 0XFF00FF00;
+renderNode.shapeClip = clip;
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column() {
+      NodeContainer(this.myNodeController)
+        .borderWidth(1)
+      Button("setOvalShape")
+        .onClick(() => {
+          renderNode.shapeClip.setOvalShape({
+            left: 0,
+            right: this.getUIContext().vp2px(150),
+            top: 0,
+            bottom: this.getUIContext().vp2px(100)
+          });
+        })
     }
   }
 }
@@ -311,6 +464,63 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { RenderNode, FrameNode, NodeController, ShapeClip } from '@kit.ArkUI';
+
+const clip = new ShapeClip();
+clip.setCommandPath({ commands: "M100 0 L0 100 L50 200 L150 200 L200 100 Z" });
+
+const renderNode = new RenderNode();
+renderNode.frame = {
+  x: 0,
+  y: 0,
+  width: 150,
+  height: 150
+};
+renderNode.backgroundColor = 0xff519db4;
+renderNode.shapeClip = clip;
+const shapeClip = renderNode.shapeClip;
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column() {
+      NodeContainer(this.myNodeController)
+        .borderWidth(1)
+        .margin({ bottom: 20 })
+      Button("setRectShape")
+        .onClick(() => {
+          shapeClip.setRectShape({
+            left: 0,
+            right: 150,
+            top: 0,
+            bottom: 150
+          });
+          renderNode.shapeClip = shapeClip;
+        })
+    }.margin(20)
+  }
+}
+```
+
 ## setRoundRectShape
 
 ```TypeScript
@@ -381,6 +591,68 @@ struct Index {
   build() {
     Row() {
       NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, ShapeClip } from '@kit.ArkUI';
+
+const clip = new ShapeClip();
+clip.setCommandPath({ commands: "M100 0 L0 100 L50 200 L150 200 L200 100 Z" });
+
+const renderNode = new RenderNode();
+renderNode.frame = {
+  x: 0,
+  y: 0,
+  width: 150,
+  height: 150
+};
+renderNode.backgroundColor = 0XFF00FF00;
+renderNode.shapeClip = clip;
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column() {
+      NodeContainer(this.myNodeController)
+        .borderWidth(1)
+      Button("setRoundRectShape")
+        .onClick(() => {
+          renderNode.shapeClip.setRoundRectShape({
+            rect: {
+              left: 0,
+              top: 0,
+              right: this.getUIContext().vp2px(150),
+              bottom: this.getUIContext().vp2px(150)
+            },
+            corners: {
+              topLeft: { x: 32, y: 32 },
+              topRight: { x: 32, y: 32 },
+              bottomLeft: { x: 32, y: 32 },
+              bottomRight: { x: 32, y: 32 }
+            }
+          });
+        })
     }
   }
 }

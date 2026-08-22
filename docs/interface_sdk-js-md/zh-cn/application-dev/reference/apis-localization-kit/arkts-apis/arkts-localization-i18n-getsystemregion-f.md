@@ -35,6 +35,12 @@ export function getSystemRegion(): string
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
 
+let systemRegion: string = i18n.System.getSystemRegion(); // 如果系统地区为中国，systemRegion = 'CN'
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
 let region: string = i18n.getSystemRegion();
 ```
 

@@ -56,6 +56,65 @@ window.getTopWindow((err: BusinessError, data) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let windowClass: window.Window | undefined = undefined;
+let promise = window.getTopWindow();
+promise.then((data)=> {
+    windowClass = data;
+    console.info('Succeeded in obtaining the top window. Data: ' + JSON.stringify(data));
+}).catch((err: BusinessError)=>{
+    console.error(`Failed to obtain the top window. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage:window.WindowStage){
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    try {
+      window.getTopWindow(this.context, (err: BusinessError, data) => {
+        const errCode: number = err.code;
+        if(errCode){
+          console.error(`Failed to obtain the top window. Cause code: ${err.code}, message: ${err.message}`);
+          return ;
+        }
+        windowClass = data;
+        console.info('Succeeded in obtaining the top window. Data: ' + JSON.stringify(data));
+      });
+    } catch(error){
+      console.error(`Failed to obtain the top window. Cause code: ${error.code}, message: ${error.message}`);
+    }
+  }
+}
+```
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage:window.WindowStage) {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    let promise = window.getTopWindow(this.context);
+    promise.then((data) => {
+      windowClass = data;
+      console.info('Succeeded in obtaining the top window. Data: ' + JSON.stringify(data));
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to obtain the top window. Cause code: ${error.code}, message: ${error.message}`);
+    });
+  }
+}
+```
+
 
 ## getTopWindow
 
@@ -89,18 +148,7 @@ function getTopWindow(): Promise<Window>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowClass: window.Window | undefined = undefined;
-let promise = window.getTopWindow();
-promise.then((data)=> {
-    windowClass = data;
-    console.info('Succeeded in obtaining the top window. Data: ' + JSON.stringify(data));
-}).catch((err: BusinessError)=>{
-    console.error(`Failed to obtain the top window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [getTopWindow](#gettopwindow)
 
 
 ## getTopWindow
@@ -139,25 +187,7 @@ function getTopWindow(ctx: BaseContext): Promise<Window>
 
 **示例**
 
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage:window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    let promise = window.getTopWindow(this.context);
-    promise.then((data) => {
-      windowClass = data;
-      console.info('Succeeded in obtaining the top window. Data: ' + JSON.stringify(data));
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to obtain the top window. Cause code: ${error.code}, message: ${error.message}`);
-    });
-  }
-}
-```
+参见 [getTopWindow](#gettopwindow)
 
 
 ## getTopWindow
@@ -192,29 +222,5 @@ function getTopWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void
 
 **示例**
 
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage:window.WindowStage){
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    try {
-      window.getTopWindow(this.context, (err: BusinessError, data) => {
-        const errCode: number = err.code;
-        if(errCode){
-          console.error(`Failed to obtain the top window. Cause code: ${err.code}, message: ${err.message}`);
-          return ;
-        }
-        windowClass = data;
-        console.info('Succeeded in obtaining the top window. Data: ' + JSON.stringify(data));
-      });
-    } catch(error){
-      console.error(`Failed to obtain the top window. Cause code: ${error.code}, message: ${error.message}`);
-    }
-  }
-}
-```
+参见 [getTopWindow](#gettopwindow)
 

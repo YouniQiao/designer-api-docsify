@@ -29,7 +29,80 @@ Deletes an RDB store. This API uses an asynchronous callback to return the resul
 | --- | --- | --- | --- |
 | context | Context | Yes | Application context.<br>For details about the application context of the FA model, see Context. <br>For details about the application context of the stage model, see Context. |
 | name | string | Yes | Name of the RDB store to delete. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+FA model:
+
+```TypeScript
+import featureAbility from '@ohos.ability.featureAbility';
+
+data_rdb.deleteRdbStore(this.context, "RdbTest.db", (err) => {
+  if (err) {
+    console.info("Delete RdbStore failed, err: " + err)
+    return
+  }
+  console.log("Delete RdbStore successfully.")
+})
+```
+
+Stage model:
+
+```TypeScript
+import UIAbility from '@ohos.app.ability.UIAbility';
+import window from '@ohos.window';
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage){
+    context = this.context
+  }
+}
+
+// Call deleteRdbStore.
+data_rdb.deleteRdbStore(this.context, "RdbTest.db", (err) => {
+  if (err) {
+    console.info("Delete RdbStore failed, err: " + err)
+    return
+  }
+  console.log("Delete RdbStore successfully.")
+})
+```
+
+FA model:
+
+```TypeScript
+import featureAbility from '@ohos.ability.featureAbility';
+
+let promise = data_rdb.deleteRdbStore(this.context, "RdbTest.db")
+promise.then(() => {
+  console.log("Delete RdbStore successfully.")
+}).catch((err: BusinessError) => {
+  console.info("Delete RdbStore failed, err: " + err)
+})
+```
+
+Stage model:
+
+```TypeScript
+import UIAbility from '@ohos.app.ability.UIAbility';
+import { BusinessError } from "@ohos.base";
+import window from '@ohos.window';
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage){
+    context = this.context
+  }
+}
+
+// Call deleteRdbStore.
+let promise = data_rdb.deleteRdbStore(this.context, "RdbTest.db")
+promise.then(()=>{
+  console.log("Delete RdbStore successfully.")
+}).catch((err: BusinessError) => {
+  console.info("Delete RdbStore failed, err: " + err)
+})
+```
 
 
 ## deleteRdbStore
@@ -62,4 +135,8 @@ Deletes an RDB store. This API uses a promise to return the result.
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+See [deleteRdbStore](#deleterdbstore)
 

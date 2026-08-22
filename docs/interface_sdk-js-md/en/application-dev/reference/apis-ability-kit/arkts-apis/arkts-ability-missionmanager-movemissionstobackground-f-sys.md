@@ -29,7 +29,7 @@ Switches a batch of missions to the background. The mission IDs returned are sor
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | missionIds | Array&lt;int&gt; | Yes | Array holding the mission IDs. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -65,6 +65,34 @@ try {
       } else {
         console.info(`moveMissionsToBackground successfully: ${JSON.stringify(data)}`);
       }
+    });
+  });
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`error: ${code}, ${message} `);
+}
+```
+
+```TypeScript
+import { abilityManager, missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  missionManager.getMissionInfos("", 10, (error: BusinessError, missionInfos: Array<missionManager.MissionInfo>) => {
+    if (error.code) {
+      console.error(`getMissionInfos failed, error code: ${error.code}, error msg: ${error.message}`);
+      return;
+    }
+
+    let toHides = new Array<number>();
+    for (let missionInfo of missionInfos) {
+      if (missionInfo.abilityState == abilityManager.AbilityState.FOREGROUND) {
+        toHides.push(missionInfo.missionId);
+      }
+    }
+    missionManager.moveMissionsToBackground(toHides).then((hideRes: Array<number>) => {
+      console.info(`moveMissionsToBackground is called, res: ${JSON.stringify(hideRes)}`);
     });
   });
 } catch (paramError) {
@@ -116,31 +144,5 @@ Switches a batch of missions to the background. The mission IDs returned are sor
 
 **Examples**
 
-```TypeScript
-import { abilityManager, missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  missionManager.getMissionInfos("", 10, (error: BusinessError, missionInfos: Array<missionManager.MissionInfo>) => {
-    if (error.code) {
-      console.error(`getMissionInfos failed, error code: ${error.code}, error msg: ${error.message}`);
-      return;
-    }
-
-    let toHides = new Array<number>();
-    for (let missionInfo of missionInfos) {
-      if (missionInfo.abilityState == abilityManager.AbilityState.FOREGROUND) {
-        toHides.push(missionInfo.missionId);
-      }
-    }
-    missionManager.moveMissionsToBackground(toHides).then((hideRes: Array<number>) => {
-      console.info(`moveMissionsToBackground is called, res: ${JSON.stringify(hideRes)}`);
-    });
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message} `);
-}
-```
+See [moveMissionsToBackground](#movemissionstobackground)
 

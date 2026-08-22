@@ -29,7 +29,7 @@ Checks whether the notification badge is enabled for a specified application. Th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the badge is enabled, and **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the badge is enabled, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -60,6 +60,20 @@ let bundle: notificationManager.BundleOption = {
     bundle: "bundleName1",
 };
 notificationManager.isBadgeDisplayed(bundle, isBadgeDisplayedCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+  bundle: "bundleName1",
+};
+
+notificationManager.isBadgeDisplayed(bundle).then((data: boolean) => {
+    console.info(`isBadgeDisplayed success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isBadgeDisplayed failed, code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -108,17 +122,5 @@ Checks whether the notification badge is enabled for a specified application. Th
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-  bundle: "bundleName1",
-};
-
-notificationManager.isBadgeDisplayed(bundle).then((data: boolean) => {
-    console.info(`isBadgeDisplayed success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isBadgeDisplayed failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [isBadgeDisplayed](#isbadgedisplayed)
 

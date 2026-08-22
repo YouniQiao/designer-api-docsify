@@ -269,7 +269,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | --- | --- |
 | [ProgressListener](arkts-medialibrary-photoaccesshelper-progresslistener-t-sys.md) | Indicates the type of the progress of batch operation. |
 | [ResultListener](arkts-medialibrary-photoaccesshelper-resultlistener-t-sys.md) | Indicates the type of the result of batch operation. |
-| [ValueType](arkts-medialibrary-photoaccesshelper-valuetype-t-sys.md) | Defines the type of value in a KV pair. The type varies with the parameter function. |
 | [ValuesBucket](arkts-medialibrary-photoaccesshelper-valuesbucket-t-sys.md) | Defines the type of key and value in a KV pair. |
+| [ValueType](arkts-medialibrary-photoaccesshelper-valuetype-t-sys.md) | Defines the type of value in a KV pair. The type varies with the parameter function. |
 <!--DelEnd-->
 

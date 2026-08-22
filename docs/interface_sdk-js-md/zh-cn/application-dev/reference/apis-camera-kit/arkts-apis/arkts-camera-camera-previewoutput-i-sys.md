@@ -48,6 +48,32 @@ addDeferredSurface(surfaceId: string): void
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 13 - 23 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function preview(cameraManager: camera.CameraManager, cameraInfo: camera.CameraDevice, previewProfile: camera.Profile, photoProfile: camera.Profile, mode: camera.SceneMode, previewSurfaceId: string): Promise<void> {
+  let cameraInput: camera.CameraInput = cameraManager.createCameraInput(cameraInfo);
+  let previewOutput: camera.PreviewOutput = cameraManager.createDeferredPreviewOutput(previewProfile);
+  let photoOutput: camera.PhotoOutput = cameraManager.createPhotoOutput(photoProfile);
+  let session: camera.Session  = cameraManager.createSession(mode);
+  session.beginConfig();
+  session.addInput(cameraInput);
+  session.addOutput(previewOutput);
+  session.addOutput(photoOutput);
+  await session.commitConfig();
+  try {
+    await session.start();
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`start session failed. error code: ${err.code}`);
+  }
+  previewOutput.addDeferredSurface(previewSurfaceId);
+}
+```
+
 ## attachSketchSurface
 
 ```TypeScript
@@ -235,34 +261,6 @@ function isSketchSupported(previewOutput: camera.PreviewOutput): boolean {
 }
 ```
 
-## offSketchStatusChanged
-
-```TypeScript
-offSketchStatusChanged(callback?: AsyncCallback<SketchStatusData>): void
-```
-
-Unsubscribes sketch status changed event callback.
-
-**起始版本：** 23
-
-<!--Device-PreviewOutput-offSketchStatusChanged(callback?: AsyncCallback<SketchStatusData>): void--><!--Device-PreviewOutput-offSketchStatusChanged(callback?: AsyncCallback<SketchStatusData>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SketchStatusData](arkts-camera-camera-sketchstatusdata-i-sys.md)&gt; | 否 | Callback used to get sketch status data. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-
 ## off('sketchStatusChanged')
 
 ```TypeScript
@@ -300,17 +298,17 @@ function unregisterSketchStatusChanged(previewOutput: camera.PreviewOutput): voi
 }
 ```
 
-## onSketchStatusChanged
+## offSketchStatusChanged
 
 ```TypeScript
-onSketchStatusChanged(callback: AsyncCallback<SketchStatusData>): void
+offSketchStatusChanged(callback?: AsyncCallback<SketchStatusData>): void
 ```
 
-Subscribes sketch status changed event callback.
+Unsubscribes sketch status changed event callback.
 
 **起始版本：** 23
 
-<!--Device-PreviewOutput-onSketchStatusChanged(callback: AsyncCallback<SketchStatusData>): void--><!--Device-PreviewOutput-onSketchStatusChanged(callback: AsyncCallback<SketchStatusData>): void-End-->
+<!--Device-PreviewOutput-offSketchStatusChanged(callback?: AsyncCallback<SketchStatusData>): void--><!--Device-PreviewOutput-offSketchStatusChanged(callback?: AsyncCallback<SketchStatusData>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -320,7 +318,7 @@ Subscribes sketch status changed event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SketchStatusData](arkts-camera-camera-sketchstatusdata-i-sys.md)&gt; | 是 | Callback used to sketch status data. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SketchStatusData](arkts-camera-camera-sketchstatusdata-i-sys.md)&gt; | 否 | Callback used to get sketch status data. |
 
 **错误码：**
 
@@ -374,4 +372,32 @@ function registerSketchStatusChanged(previewOutput: camera.PreviewOutput): void 
   previewOutput.on('sketchStatusChanged', callback);
 }
 ```
+
+## onSketchStatusChanged
+
+```TypeScript
+onSketchStatusChanged(callback: AsyncCallback<SketchStatusData>): void
+```
+
+Subscribes sketch status changed event callback.
+
+**起始版本：** 23
+
+<!--Device-PreviewOutput-onSketchStatusChanged(callback: AsyncCallback<SketchStatusData>): void--><!--Device-PreviewOutput-onSketchStatusChanged(callback: AsyncCallback<SketchStatusData>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SketchStatusData](arkts-camera-camera-sketchstatusdata-i-sys.md)&gt; | 是 | Callback used to sketch status data. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 

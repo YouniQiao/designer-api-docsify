@@ -30,8 +30,8 @@ Replaces a specified application with a super device administrator application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oldAdmin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Old EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the old EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| newAdmin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | New EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the new EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| oldAdmin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Old EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the old EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| newAdmin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | New EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the new EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | isKeepPolicy | boolean | Yes | A Boolean value indicates whether to retain the policy of the old **EnterpriseAdminExtensionAbility**. The value **true** means that the policy is retained, and the value **false** means the opposite. |
 
 **Error codes:**

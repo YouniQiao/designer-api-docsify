@@ -58,6 +58,20 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  cooperate.deactivate(false).then(() => {
+    console.info(`Stop Keyboard mouse crossing success.`);
+  }, (error: BusinessError) => {
+    console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+  });
+} catch (error) {
+  console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+}
+```
+
 
 ## deactivate
 
@@ -99,17 +113,5 @@ function deactivate(isUnchained: boolean): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  cooperate.deactivate(false).then(() => {
-    console.info(`Stop Keyboard mouse crossing success.`);
-  }, (error: BusinessError) => {
-    console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
+参见 [deactivate](#deactivate)
 

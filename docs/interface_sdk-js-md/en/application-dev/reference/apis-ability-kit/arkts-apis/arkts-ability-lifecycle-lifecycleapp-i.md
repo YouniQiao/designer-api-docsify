@@ -159,7 +159,7 @@ Called when the launch mode of an ability is set to singleton.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Indicates the new {@code want} containing information about the ability. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the new {@code want} containing information about the ability. |
 
 ## onRemoteTerminated
 

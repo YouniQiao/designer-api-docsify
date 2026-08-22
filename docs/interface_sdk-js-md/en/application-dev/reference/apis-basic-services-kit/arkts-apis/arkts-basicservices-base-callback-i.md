@@ -37,3 +37,17 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } fro
 | --- | --- | --- | --- |
 | data | T | Yes | Common callback information. The type is defined by the developer. The callback is used to return data of the corresponding type. No data is returned if the callback fails. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+interface ErrorDataType {
+    url: string;
+}
+
+const businessError = new BusinessError<ErrorDataType>(201, 'no permission', {
+    url: 'http://'
+});
+```
+

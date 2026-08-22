@@ -177,32 +177,6 @@ backgroundEffect?: BackgroundEffectOptions
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## canLoop
-
-```TypeScript
-canLoop?: boolean
-```
-
-设置是否可循环滚动。
-
-- true：可循环。 - false：不可循环。
-
-默认值：true
-
-**类型：** boolean
-
-**默认值：** true
-
-**起始版本：** 10
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-TextPickerDialogOptions-canLoop?: boolean--><!--Device-TextPickerDialogOptions-canLoop?: boolean-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 ## cancelButtonStyle
 
 ```TypeScript
@@ -228,6 +202,32 @@ cancelButtonStyle?: PickerDialogButtonStyle
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TextPickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle--><!--Device-TextPickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## canLoop
+
+```TypeScript
+canLoop?: boolean
+```
+
+设置是否可循环滚动。
+
+- true：可循环。 - false：不可循环。
+
+默认值：true
+
+**类型：** boolean
+
+**默认值：** true
+
+**起始版本：** 10
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextPickerDialogOptions-canLoop?: boolean--><!--Device-TextPickerDialogOptions-canLoop?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

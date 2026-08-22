@@ -34,7 +34,7 @@ function setPowerPolicy(admin: Want, powerScene: PowerScene, powerPolicy: PowerP
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | powerScene | [PowerScene](arkts-mdm-devicesettings-powerscene-e-sys.md) | 是 | 电源策略场景，当前只支持超时场景。 |
 | powerPolicy | [PowerPolicy](arkts-mdm-devicesettings-powerpolicy-i-sys.md) | 是 | 电源策略。 |
 

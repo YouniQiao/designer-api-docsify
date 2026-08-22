@@ -95,42 +95,6 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 })
 ```
 
-## createPixelMapMask
-
-```TypeScript
-static createPixelMapMask(pixelMap: image.PixelMap): Mask
-```
-
-通过输入的pixelMap创建Mask实例。该接口不会对传入的pixelMap进行缩放处理。
-
-**起始版本：** 23
-
-<!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap): Mask--><!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap): Mask-End-->
-
-**系统能力：** SystemCapability.Graphics.Drawing
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pixelMap | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 返回具有pixelMap的Mask。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
-
-**示例**
-
 ```TypeScript
 import { uiEffect } from '@kit.ArkGraphics2D';
 import { image } from '@kit.ImageKit';
@@ -208,6 +172,44 @@ struct Index {
 }
 ```
 
+## createPixelMapMask
+
+```TypeScript
+static createPixelMapMask(pixelMap: image.PixelMap): Mask
+```
+
+通过输入的pixelMap创建Mask实例。该接口不会对传入的pixelMap进行缩放处理。
+
+**起始版本：** 23
+
+<!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap): Mask--><!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap): Mask-End-->
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pixelMap | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 返回具有pixelMap的Mask。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+
+**示例**
+
+参见 [createPixelMapMask](#createpixelmapmask)
+
 ## createRadialGradientMask
 
 ```TypeScript
@@ -245,6 +247,59 @@ static createRadialGradientMask(center: common2D.Point, radiusX: double, radiusY
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D'
+// values: [[1.0, 0.5], [1.0, 1.0]] => color0: 1.0; color1: 1.0; position0: 0.5; position1: 1.0
+let mask = uiEffect.Mask.createRadialGradientMask({x: 0.0, y: 0.0}, 0.5, 0.5, [[1.0, 0.5], [1.0, 1.0]]);
+@Entry
+@Component
+struct RadialGradientMaskExample {
+  build() {
+    Stack() {
+      Image($rawfile('test.jpg'))
+      Column()
+        .width('100%')
+        .height('100%')
+        // Mask作为Filter的入参实现对应的效果，该效果中Mask是在屏幕左上角的四分之一圆环
+        .backgroundFilter(uiEffect.createFilter().edgeLight(1.0, null, mask))
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component, Stack, State, Image, RelativeContainer, $r } from '@kit.ArkUI'
+import uiEffect from '@ohos.graphics.uiEffect'
+import type common2D from '@ohos.graphics.common2D'
+
+@Entry
+@Component
+struct RadialGradientMask {
+  @State centerX: double = 0.5
+  @State centerY: double = 0.5
+  @State radiusX: double = 0.5
+  @State radiusY: double = 0.5
+  @State gradient: Array<[double, double]> = [[1,0] as [double, double], [1, 1] as [double, double]]
+
+  build() {
+    RelativeContainer() {
+      Image($r('app.media.man'))
+      Stack().width("100%").height("100%")
+        .backgroundFilter(uiEffect.createFilter().edgeLight(1.0, { red: 1, blue: 1, green: 1, alpha: 1},
+          uiEffect.Mask.createRadialGradientMask({ x: this.centerX, y: this.centerY } as common2D.Point,
+          this.radiusX, this.radiusY, this.gradient.map<[double, double]>((v) => [v[0], v[1]] as [double, double])),
+          false))
+    }
+  }
+}
+```
 
 ## createRippleMask
 

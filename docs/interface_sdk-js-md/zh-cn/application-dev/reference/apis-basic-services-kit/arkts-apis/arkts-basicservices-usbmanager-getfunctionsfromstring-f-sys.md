@@ -46,3 +46,12 @@ function getFunctionsFromString(funcs: string): int
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  <br>1.Mandatory parameters are left unspecified.  <br>2.Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
+**示例**
+
+```TypeScript
+// 定义USB功能字符串
+let funcs: string ='acm';
+// 将字符串转化为数字掩码
+let ret: int = usbManager.getFunctionsFromString(funcs);
+```
+

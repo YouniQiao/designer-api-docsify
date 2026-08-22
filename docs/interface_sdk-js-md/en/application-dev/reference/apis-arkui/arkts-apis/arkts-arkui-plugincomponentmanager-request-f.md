@@ -27,7 +27,7 @@ Requests the component from the component provider.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | param | [RequestParameters](../../apis-default/arkts-apis/arkts-plugincomponentmanager-requestparameters-i.md) | Yes | Information about the component request. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RequestCallbackParameters](../../apis-default/arkts-apis/arkts-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | Yes | Asynchronous callback used to return the requested data. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RequestCallbackParameters](../../apis-default/arkts-apis/arkts-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | Yes | Asynchronous callback used to return the requested data. |
 
 **Examples**
 
@@ -52,6 +52,32 @@ pluginComponentManager.request(
     console.info("request_callback: componentTemplate.source=" + data.componentTemplate.source);
     console.info("request_callback: data=" + JSON.stringify(data.data));
     console.info("request_callback: extraData=" + JSON.stringify(data.extraData));
+  }
+)
+```
+
+```TypeScript
+import { pluginComponentManager } from '@kit.ArkUI';
+
+pluginComponentManager.request(
+  {
+    owner: {
+      bundleName: "com.example.user",
+      abilityName: "com.example.user.MainAbility",
+    },
+    target: {
+      bundleName: "com.example.provider",
+      abilityName: "com.example.provider.MainAbility",
+    },
+    name: "plugintemplate",
+    data: {
+      "key_1": " myapplication plugin component test",
+    },
+    jsonPath: "",
+  },
+  (err, data) => {
+    console.info("request_callback: componentTemplate.ability=" + data.componentTemplate.ability);
+    console.info("request_callback: componentTemplate.source=" + data.componentTemplate.source);
   }
 )
 ```

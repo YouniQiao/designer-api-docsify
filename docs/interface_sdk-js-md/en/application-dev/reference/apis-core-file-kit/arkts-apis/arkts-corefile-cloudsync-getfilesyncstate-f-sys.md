@@ -63,6 +63,35 @@ cloudSync.getFileSyncState(uris).then((syncStates: Array<cloudSync.FileSyncState
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uris: Array<string> = ["file://uri"];
+cloudSync.getFileSyncState(uris, (err: BusinessError, syncStates: Array<cloudSync.FileSyncState>) => {
+  if (err) {
+    console.error("get file sync state with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    for(let i = 0, len = syncStates.length; i < len; i++){
+      console.info("get file sync state successfully" + syncStates[i]);
+  }
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let path = "/data/storage/el2/cloud/1.txt";
+let uri = fileUri.getUriFromPath(path);
+try {
+  let state = cloudSync.getFileSyncState(uri);
+} catch (err) {
+  let error:BusinessError = err as BusinessError;
+  console.error("getFileSyncStatefailed with error:" + JSON.stringify(error));
+}
+```
+
 
 ## getFileSyncState
 
@@ -87,7 +116,7 @@ Obtains the file sync state. This API uses an asynchronous callback to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | Array&lt;string&gt; | Yes | URI of the file whose sync state is to be obtained. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[FileSyncState](arkts-corefile-cloudsync-filesyncstate-e-sys.md)&gt;&gt; | Yes | Callback used to return the file sync state. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[FileSyncState](arkts-corefile-cloudsync-filesyncstate-e-sys.md)&gt;&gt; | Yes | Callback used to return the file sync state. |
 
 **Error codes:**
 
@@ -102,20 +131,7 @@ Obtains the file sync state. This API uses an asynchronous callback to return th
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uris: Array<string> = ["file://uri"];
-cloudSync.getFileSyncState(uris, (err: BusinessError, syncStates: Array<cloudSync.FileSyncState>) => {
-  if (err) {
-    console.error("get file sync state with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    for(let i = 0, len = syncStates.length; i < len; i++){
-      console.info("get file sync state successfully" + syncStates[i]);
-  }
-  }
-});
-```
+See [getFileSyncState](#getfilesyncstate)
 
 
 ## getFileSyncState
@@ -162,17 +178,5 @@ Obtains the file sync state.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let path = "/data/storage/el2/cloud/1.txt";
-let uri = fileUri.getUriFromPath(path);
-try {
-  let state = cloudSync.getFileSyncState(uri);
-} catch (err) {
-  let error:BusinessError = err as BusinessError;
-  console.error("getFileSyncStatefailed with error:" + JSON.stringify(error));
-}
-```
+See [getFileSyncState](#getfilesyncstate)
 

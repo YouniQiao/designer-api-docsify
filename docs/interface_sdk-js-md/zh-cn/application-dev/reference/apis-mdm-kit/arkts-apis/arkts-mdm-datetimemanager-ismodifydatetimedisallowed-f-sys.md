@@ -34,7 +34,7 @@ function isModifyDateTimeDisallowed(admin: Want, callback: AsyncCallback<boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，callback方式返回是否禁止修改系统时间策略，true表示禁止修改系统时间，否则表示允许修改系统时间。 |
 
 **错误码：**
@@ -68,6 +68,24 @@ dateTimeManager.isModifyDateTimeDisallowed(wantTemp, (err, result) => {
 })
 ```
 
+```TypeScript
+import { dateTimeManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+dateTimeManager.isModifyDateTimeDisallowed(wantTemp).then((result) => {
+  console.info(`Succeeded in querying modify date time is disallowed : ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query modify date time is disallowed or not. Code is ${err.code}, message is ${err.message}`);
+})
+```
+
 
 ## isModifyDateTimeDisallowed
 
@@ -97,7 +115,7 @@ function isModifyDateTimeDisallowed(admin: Want): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 
 **返回值：**
 
@@ -117,21 +135,5 @@ function isModifyDateTimeDisallowed(admin: Want): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { dateTimeManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-dateTimeManager.isModifyDateTimeDisallowed(wantTemp).then((result) => {
-  console.info(`Succeeded in querying modify date time is disallowed : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query modify date time is disallowed or not. Code is ${err.code}, message is ${err.message}`);
-})
-```
+参见 [isModifyDateTimeDisallowed](#ismodifydatetimedisallowed)
 

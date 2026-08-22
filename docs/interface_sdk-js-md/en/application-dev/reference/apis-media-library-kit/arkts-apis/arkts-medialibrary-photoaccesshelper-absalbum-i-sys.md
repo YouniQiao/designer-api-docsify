@@ -53,6 +53,30 @@ Fetch shared photo assets in an album.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
+**Examples**
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData'
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+
+  try {
+    console.info('getSharedPhotoAssets test start');
+    phAccessHelper.getSharedPhotoAssets(fetchOptions);
+    console.info('getSharedPhotoAssets test end');
+  } catch (err) {
+    console.error(`getSharedPhotoAssets failed, error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
 ## coverUriSource
 
 ```TypeScript

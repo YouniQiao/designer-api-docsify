@@ -65,6 +65,24 @@ try {
 }
 ```
 
+```TypeScript
+import { bundleResourceManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName = "com.example.myapplication";
+let resourceFlag = bundleResourceManager.ResourceFlag.GET_RESOURCE_INFO_ALL;
+let appIndex = 1;
+try {
+  let resourceInfo = bundleResourceManager.getLauncherAbilityResourceInfo(bundleName, resourceFlag, appIndex);
+  hilog.info(0x0000, 'testTag', 'getLauncherAbilityResourceInfo successfully. Data label: %{public}s',
+    JSON.stringify(resourceInfo[0].label));
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getLauncherAbilityResourceInfo failed: %{public}s', message);
+}
+```
+
 
 ## getLauncherAbilityResourceInfo
 
@@ -110,21 +128,5 @@ function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: int,
 
 **示例**
 
-```TypeScript
-import { bundleResourceManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = "com.example.myapplication";
-let resourceFlag = bundleResourceManager.ResourceFlag.GET_RESOURCE_INFO_ALL;
-let appIndex = 1;
-try {
-  let resourceInfo = bundleResourceManager.getLauncherAbilityResourceInfo(bundleName, resourceFlag, appIndex);
-  hilog.info(0x0000, 'testTag', 'getLauncherAbilityResourceInfo successfully. Data label: %{public}s',
-    JSON.stringify(resourceInfo[0].label));
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getLauncherAbilityResourceInfo failed: %{public}s', message);
-}
-```
+参见 [getLauncherAbilityResourceInfo](#getlauncherabilityresourceinfo)
 

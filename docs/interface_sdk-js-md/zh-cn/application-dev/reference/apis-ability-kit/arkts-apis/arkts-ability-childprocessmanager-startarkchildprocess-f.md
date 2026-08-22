@@ -17,8 +17,8 @@ function startArkChildProcess(srcEntry: string, args: ChildProcessArgs, options?
 > **说明：**
 > 
 > 调用该接口创建的子进程不会继承父进程资源，子进程创建成功会返回子进程pid，然后执行子进程的
-> [ChildProcess.onStart](arkts-ability-appabilitychildprocess-childprocess-c.md#onstart)函数。
-> [ChildProcess.onStart](arkts-ability-appabilitychildprocess-childprocess-c.md#onstart)函数执行完后子进程不会自动销毁，需要子进程调用
+> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart)函数。
+> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart)函数执行完后子进程不会自动销毁，需要子进程调用
 > [process.abort](../../apis-arkts/arkts-apis/arkts-arkts-process-abort-f.md)销毁。调用该接口的进程销毁后，所创建的子进程也会一并销毁。
 
 **设备行为差异**：该接口在Tablet、PC/2in1中可正常调用，在其他设备类型中返回801错误码。
@@ -36,8 +36,8 @@ function startArkChildProcess(srcEntry: string, args: ChildProcessArgs, options?
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | srcEntry | string | 是 | 子进程源文件路径，不支持源文件放在HAR类型的模块中。由“模块名” + “/” + “文件路径”组成，文件路径以src/main为根目录。例如子进程文件在module1模块下src/ main/ets/process/DemoProcess.ets，则srcEntry为"module1/ets/process/DemoProcess.ets"。<br/>另外，需要确保子进程源文件被其它文件引用到，防止被构建工具优 化掉。（详见下方示例代码） |
-| args | [ChildProcessArgs](arkts-ability-appabilitychildprocessargs-childprocessargs-i.md) | 是 | 传递到子进程的参数。 |
-| options | [ChildProcessOptions](arkts-ability-appabilitychildprocessoptions-childprocessoptions-i.md) | 否 | 子进程的启动配置选项。 |
+| args | [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md) | 是 | 传递到子进程的参数。 |
+| options | [ChildProcessOptions](arkts-ability-app-ability-childprocessoptions-childprocessoptions-i.md) | 否 | 子进程的启动配置选项。 |
 
 **返回值：**
 

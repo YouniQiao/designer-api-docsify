@@ -71,6 +71,13 @@ clickable(b?: boolean): By
 
 ```TypeScript
 // xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.clickable(true); // 使用静态构造器ON创建On对象，指定目标控件的可点击状态属性。
+```
+
+```TypeScript
+// xxx.test.ets
 import { By, BY } from '@kit.TestKit';
 
 let by: By = BY.clickable(true); // 使用静态构造器BY创建by对象，指定目标控件的可点击状态属性。
@@ -111,6 +118,13 @@ enabled(b?: boolean): By
 | [By](arkts-test-uitest-by-c.md) | 返回指定目标控件的使能状态属性的By对象。 |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.enabled(true); // 使用静态构造器ON创建On对象，指定目标控件的使能状态属性。
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -157,6 +171,13 @@ focused(b?: boolean): By
 
 ```TypeScript
 // xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.focused(true); // 使用静态构造器ON创建On对象，指定目标控件的获焦状态属性。
+```
+
+```TypeScript
+// xxx.test.ets
 import { By, BY } from '@kit.TestKit';
 
 let by: By = BY.focused(true); // 使用静态构造器BY创建by对象，指定目标控件的获焦状态属性。
@@ -197,6 +218,20 @@ id(id: number): By
 | [By](arkts-test-uitest-by-c.md) | 返回指定目标控件id属性的By对象。 |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.id('123'); // 使用静态构造器ON创建On对象，指定目标控件的id属性。
+```
+
+```TypeScript
+// xxx.test.ets
+import { MatchPattern, On, ON } from '@kit.TestKit';
+
+let on: On = ON.id('id', MatchPattern.REG_EXP_ICASE); // 忽略大小写匹配控件的id属性值。
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -243,6 +278,14 @@ isAfter(by: By): By
 
 ```TypeScript
 // xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+// 使用静态构造器ON创建On对象，指定目标控件位于给出的特征属性控件之后。
+let on: On = ON.type('Text').isAfter(ON.text('123')); // 查找text为123之后的第一个Text组件
+```
+
+```TypeScript
+// xxx.test.ets
 import { By, BY } from '@kit.TestKit';
 
 // 使用静态构造器BY创建by对象，指定目标控件位于给出的特征属性控件之后。
@@ -284,6 +327,14 @@ isBefore(by: By): By
 | [By](arkts-test-uitest-by-c.md) | 返回指定目标控件位于给出的特征属性控件之前的By对象。 |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+// 使用静态构造器ON创建On对象，指定目标控件位于给出的特征属性控件之前。
+let on: On = ON.type('Button').isBefore(ON.text('123')); // 查找text为123之前的第一个Button组件。
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -374,6 +425,13 @@ scrollable(b?: boolean): By
 
 ```TypeScript
 // xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.scrollable(true); // 使用静态构造器ON创建On对象，指定目标控件的可滑动状态属性。
+```
+
+```TypeScript
+// xxx.test.ets
 import { By, BY } from '@kit.TestKit';
 
 let by: By = BY.scrollable(true); // 使用静态构造器BY创建by对象，指定目标控件的可滑动状态属性。
@@ -414,6 +472,13 @@ selected(b?: boolean): By
 | [By](arkts-test-uitest-by-c.md) | 返回指定目标控件的被选中状态属性的By对象。 |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.selected(true); // 使用静态构造器ON创建On对象，指定目标控件的被选中状态属性。
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -461,6 +526,13 @@ text(txt: string, pattern?: MatchPattern): By
 
 ```TypeScript
 // xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.text('123'); // 使用静态构造器ON创建On对象，指定目标控件的text属性。
+```
+
+```TypeScript
+// xxx.test.ets
 import { BY, By } from '@kit.TestKit';
 
 let by: By = BY.text('123'); // 使用静态构造器BY创建by对象，指定目标控件的text属性。
@@ -501,6 +573,20 @@ type(tp: string): By
 | [By](arkts-test-uitest-by-c.md) | 返回指定目标控件的控件类型属性的By对象。 |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.type('Button'); // 使用静态构造器ON创建On对象，指定目标控件的控件类型属性。
+```
+
+```TypeScript
+// xxx.test.ets
+import { On, ON, MatchPattern } from '@kit.TestKit';
+
+let on: On = ON.type('Button', MatchPattern.EQUALS); // 使用静态构造器ON创建On对象，指定目标控件的控件类型属性。
+```
 
 ```TypeScript
 // xxx.test.ets

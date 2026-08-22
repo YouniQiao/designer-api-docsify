@@ -26,7 +26,7 @@ Get the list of active SIM card account information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt;&gt; | Yes | The callback is used to return the array of [IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md). The ICCID and phone number will be null if has no ohos.permission.GET_TELEPHONY_STATE. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt;&gt; | Yes | The callback is used to return the array of [IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md). The ICCID and phone number will be null if has no ohos.permission.GET_TELEPHONY_STATE. |
 
 **Error codes:**
 
@@ -47,6 +47,17 @@ import { sim } from '@kit.TelephonyKit';
 
 sim.getActiveSimAccountInfoList((err: BusinessError, data: Array<sim.IccAccountInfo>) => {
     console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.getActiveSimAccountInfoList().then((data: Array<sim.IccAccountInfo>) => {
+    console.info(`getActiveSimAccountInfoList success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getActiveSimAccountInfoList failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -84,14 +95,5 @@ Get the list of active SIM card account information.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getActiveSimAccountInfoList().then((data: Array<sim.IccAccountInfo>) => {
-    console.info(`getActiveSimAccountInfoList success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getActiveSimAccountInfoList failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getActiveSimAccountInfoList](#getactivesimaccountinfolist)
 

@@ -39,3 +39,17 @@ Obtains the sandbox path of the root directory of an external storage card. This
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 13900042 | Unknown error. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+function getExternalStorageDirExample() {
+  try {
+    let path = Environment.getExternalStorageDir();
+    console.info(`Succeeded in getExternalStorageDir, path is ${path}`);
+  } catch (err) {
+    console.error(`Failed to getExternalStorageDir. Code: ${err.code}, message: ${err.message}`);
+  }
+}
+```
+

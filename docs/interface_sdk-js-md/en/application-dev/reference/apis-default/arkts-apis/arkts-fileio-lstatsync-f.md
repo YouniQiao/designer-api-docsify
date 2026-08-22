@@ -31,7 +31,7 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 | Type | Description |
 | --- | --- |
-| [Stat](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-stat-i.md) | File information obtained. |
+| [Stat](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-stat-i.md) | File information obtained. |
 
 **Error codes:**
 

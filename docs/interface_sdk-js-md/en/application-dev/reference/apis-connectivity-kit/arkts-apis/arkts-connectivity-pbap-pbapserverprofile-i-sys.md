@@ -4,7 +4,7 @@ Manager PBAP server profile.
 
 **Inheritance/Implementation:** PbapServerProfile extends [BaseProfile](arkts-connectivity-pbap-baseprofile-t.md)
 
-**Since:** 26.0.0
+**Since:** 11
 
 <!--Device-pbap-interface PbapServerProfile--><!--Device-pbap-interface PbapServerProfile-End-->
 
@@ -24,7 +24,7 @@ disconnect(deviceId: string): void
 
 Disconnect the PBAP connection with the remote device.
 
-**Since:** 26.0.0
+**Since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -73,7 +73,7 @@ getPhoneBookAccessAuthorization(deviceId: string, callback: AsyncCallback<Access
 
 Get the phone book access authorization.
 
-**Since:** 26.0.0
+**Since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -88,7 +88,7 @@ Get the phone book access authorization.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;AccessAuthorization&gt; | Yes | the callback result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AccessAuthorization&gt; | Yes | the callback result. |
 
 **Error codes:**
 
@@ -117,6 +117,18 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let pbapServerProfile = pbap.createPbapServerProfile();
+    pbapServerProfile.getPhoneBookAccessAuthorization('XX:XX:XX:XX:XX:XX').then((authorization) => {
+        console.info('authorization ' + authorization);
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## getPhoneBookAccessAuthorization
 
 ```TypeScript
@@ -125,7 +137,7 @@ getPhoneBookAccessAuthorization(deviceId: string): Promise<AccessAuthorization>
 
 Get the phone book access authorization.
 
-**Since:** 26.0.0
+**Since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -162,17 +174,7 @@ Get the phone book access authorization.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let pbapServerProfile = pbap.createPbapServerProfile();
-    pbapServerProfile.getPhoneBookAccessAuthorization('XX:XX:XX:XX:XX:XX').then((authorization) => {
-        console.info('authorization ' + authorization);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [getPhoneBookAccessAuthorization](#getphonebookaccessauthorization)
 
 ## getShareType
 
@@ -182,7 +184,7 @@ getShareType(deviceId: string, callback: AsyncCallback<ShareType>): void
 
 Get the PBAP sharing type.
 
-**Since:** 26.0.0
+**Since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -197,7 +199,7 @@ Get the PBAP sharing type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ShareType](arkts-connectivity-pbap-sharetype-e-sys.md)&gt; | Yes | the callback result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ShareType](arkts-connectivity-pbap-sharetype-e-sys.md)&gt; | Yes | the callback result. |
 
 **Error codes:**
 
@@ -226,6 +228,18 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let pbapServerProfile = pbap.createPbapServerProfile();
+    pbapServerProfile.getShareType('XX:XX:XX:XX:XX:XX').then((type) => {
+        console.info('getShareType ' + type);
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## getShareType
 
 ```TypeScript
@@ -234,7 +248,7 @@ getShareType(deviceId: string): Promise<ShareType>
 
 Get the PBAP sharing type.
 
-**Since:** 26.0.0
+**Since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -271,17 +285,7 @@ Get the PBAP sharing type.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let pbapServerProfile = pbap.createPbapServerProfile();
-    pbapServerProfile.getShareType('XX:XX:XX:XX:XX:XX').then((type) => {
-        console.info('getShareType ' + type);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [getShareType](#getsharetype)
 
 ## setPhoneBookAccessAuthorization
 
@@ -295,7 +299,7 @@ setPhoneBookAccessAuthorization(
 
 Set the phone book access authorization.
 
-**Since:** 26.0.0
+**Since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -311,7 +315,7 @@ Set the phone book access authorization.
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
 | authorization | AccessAuthorization | Yes | Indicates the permission. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback result. |
 
 **Error codes:**
 
@@ -340,6 +344,18 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let pbapServerProfile = pbap.createPbapServerProfile();
+    pbapServerProfile.setPhoneBookAccessAuthorization('XX:XX:XX:XX:XX:XX', 0).then(() => {
+        console.info('setPhoneBookAccessAuthorization');
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## setPhoneBookAccessAuthorization
 
 ```TypeScript
@@ -348,7 +364,7 @@ setPhoneBookAccessAuthorization(deviceId: string, authorization: AccessAuthoriza
 
 Set the phone book access authorization.
 
-**Since:** 26.0.0
+**Since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -386,17 +402,7 @@ Set the phone book access authorization.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let pbapServerProfile = pbap.createPbapServerProfile();
-    pbapServerProfile.setPhoneBookAccessAuthorization('XX:XX:XX:XX:XX:XX', 0).then(() => {
-        console.info('setPhoneBookAccessAuthorization');
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [setPhoneBookAccessAuthorization](#setphonebookaccessauthorization)
 
 ## setShareType
 
@@ -406,7 +412,7 @@ setShareType(deviceId: string, type: ShareType, callback: AsyncCallback<void>): 
 
 Set the PBAP sharing type.
 
-**Since:** 26.0.0
+**Since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -422,7 +428,7 @@ Set the PBAP sharing type.
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
 | type | [ShareType](arkts-connectivity-pbap-sharetype-e-sys.md) | Yes | Indicates the PBAP sharing type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback result. |
 
 **Error codes:**
 
@@ -451,6 +457,18 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let pbapServerProfile = pbap.createPbapServerProfile();
+    pbapServerProfile.setShareType('XX:XX:XX:XX:XX:XX', 0).then(() => {
+        console.info('setShareType');
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## setShareType
 
 ```TypeScript
@@ -459,7 +477,7 @@ setShareType(deviceId: string, type: ShareType): Promise<void>
 
 Set the PBAP sharing type.
 
-**Since:** 26.0.0
+**Since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -497,15 +515,5 @@ Set the PBAP sharing type.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let pbapServerProfile = pbap.createPbapServerProfile();
-    pbapServerProfile.setShareType('XX:XX:XX:XX:XX:XX', 0).then(() => {
-        console.info('setShareType');
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [setShareType](#setsharetype)
 

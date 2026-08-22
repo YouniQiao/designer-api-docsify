@@ -32,7 +32,7 @@ Checks whether multiple OS accounts are supported. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means multiple OS accounts are supported; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means multiple OS accounts are supported; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -54,6 +54,22 @@ try {
     } else {
       console.info('checkMultiOsAccountEnabled successfully, isEnabled: ' + isEnabled);
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkMultiOsAccountEnabled failed, code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+  accountManager.checkMultiOsAccountEnabled().then((isEnabled: boolean) => {
+    console.info('checkMultiOsAccountEnabled successfully, isEnabled: ' + isEnabled);
+  }).catch((err: BusinessError) => {
+    console.error(`checkMultiOsAccountEnabled failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -89,21 +105,7 @@ Checks whether multiple OS accounts are supported. This API uses a promise to re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-  accountManager.checkMultiOsAccountEnabled().then((isEnabled: boolean) => {
-    console.info('checkMultiOsAccountEnabled successfully, isEnabled: ' + isEnabled);
-  }).catch((err: BusinessError) => {
-    console.error(`checkMultiOsAccountEnabled failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`checkMultiOsAccountEnabled failed, code is ${err.code}, message is ${err.message}`);
-}
-```
+See [checkMultiOsAccountEnabled](#checkmultiosaccountenabled)
 
 ## checkOsAccountActivated
 
@@ -133,7 +135,7 @@ Checks whether an OS account is activated. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the account is activated; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the account is activated; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -219,7 +221,7 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
 | constraint | string | Yes | [Constraint](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) to check. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the specified constraint is enabled; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the specified constraint is enabled; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -295,7 +297,7 @@ Checks whether this OS account is a test account. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the account is a test account; the value **false** means the opposite; the default value is **false**. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the account is a test account; the value **false** means the opposite; the default value is **false**. |
 
 **Error codes:**
 
@@ -321,6 +323,22 @@ try {
 } catch (e) {
   const err = e as BusinessError;
   console.error(`checkOsAccountTestable code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.checkOsAccountTestable().then((isTestable: boolean) => {
+    console.info('checkOsAccountTestable successfully, isTestable: ' + isTestable);
+  }).catch((err: BusinessError) => {
+    console.error(`checkOsAccountTestable failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkOsAccountTestable exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
 
@@ -352,21 +370,7 @@ Checks whether this OS account is a test account. This API uses a promise to ret
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.checkOsAccountTestable().then((isTestable: boolean) => {
-    console.info('checkOsAccountTestable successfully, isTestable: ' + isTestable);
-  }).catch((err: BusinessError) => {
-    console.error(`checkOsAccountTestable failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`checkOsAccountTestable exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [checkOsAccountTestable](#checkosaccounttestable)
 
 ## checkOsAccountVerified
 
@@ -395,7 +399,7 @@ Checks whether this OS account is unlocked. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -416,6 +420,58 @@ try {
     } else {
       console.info('checkOsAccountVerified successfully, isVerified: ' + isVerified);
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkOsAccountVerified exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.checkOsAccountVerified().then((isVerified: boolean) => {
+    console.info('checkOsAccountVerified successfully, isVerified: ' + isVerified);
+  }).catch((err: BusinessError) => {
+    console.error(`checkOsAccountVerified failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkOsAccountVerified exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.checkOsAccountVerified(localId, (err: BusinessError, isVerified: boolean) => {
+    if (err) {
+      console.error(`checkOsAccountVerified failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('checkOsAccountVerified successfully, isVerified: ' + isVerified);
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkOsAccountVerified exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.checkOsAccountVerified(localId).then((isVerified: boolean) => {
+    console.info('checkOsAccountVerified successfully, isVerified: ' + isVerified);
+  }).catch((err: BusinessError) => {
+    console.error(`checkOsAccountVerified failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -460,21 +516,7 @@ Checks whether this OS account has been verified. This API uses a promise to ret
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.checkOsAccountVerified().then((isVerified: boolean) => {
-    console.info('checkOsAccountVerified successfully, isVerified: ' + isVerified);
-  }).catch((err: BusinessError) => {
-    console.error(`checkOsAccountVerified failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`checkOsAccountVerified exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [checkOsAccountVerified](#checkosaccountverified)
 
 ## checkOsAccountVerified
 
@@ -504,7 +546,7 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -518,24 +560,7 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.checkOsAccountVerified(localId, (err: BusinessError, isVerified: boolean) => {
-    if (err) {
-      console.error(`checkOsAccountVerified failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('checkOsAccountVerified successfully, isVerified: ' + isVerified);
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`checkOsAccountVerified exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [checkOsAccountVerified](#checkosaccountverified)
 
 ## checkOsAccountVerified
 
@@ -584,22 +609,7 @@ Checks whether an OS account has been verified. This API uses a promise to retur
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.checkOsAccountVerified(localId).then((isVerified: boolean) => {
-    console.info('checkOsAccountVerified successfully, isVerified: ' + isVerified);
-  }).catch((err: BusinessError) => {
-    console.error(`checkOsAccountVerified failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`checkOsAccountVerified exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [checkOsAccountVerified](#checkosaccountverified)
 
 ## getActivatedOsAccountLocalIds
 
@@ -619,7 +629,7 @@ Obtains information about all activated OS accounts. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of activated OS accounts. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of activated OS accounts. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
@@ -644,6 +654,22 @@ try {
         console.info('activated os account id: ' + idArray[i]);
       }
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getActivatedOsAccountLocalIds exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getActivatedOsAccountLocalIds().then((idArray: number[]) => {
+    console.info('getActivatedOsAccountLocalIds, idArray: ' + idArray);
+  }).catch((err: BusinessError) => {
+    console.error(`getActivatedOsAccountLocalIds err: code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -679,21 +705,7 @@ Obtains information about all activated OS accounts. This API uses a promise to 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.getActivatedOsAccountLocalIds().then((idArray: number[]) => {
-    console.info('getActivatedOsAccountLocalIds, idArray: ' + idArray);
-  }).catch((err: BusinessError) => {
-    console.error(`getActivatedOsAccountLocalIds err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getActivatedOsAccountLocalIds exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids)
 
 ## getCreatedOsAccountsCount
 
@@ -724,7 +736,7 @@ Obtains the number of OS accounts created. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the number of created OS accounts. If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the number of created OS accounts. If the operation fails, **err** is an error object. |
 
 **Examples**
 
@@ -738,6 +750,17 @@ accountManager.getCreatedOsAccountsCount((err: BusinessError, count: number)=>{
   } else {
     console.info('getCreatedOsAccountsCount successfully, count: ' + count);
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+accountManager.getCreatedOsAccountsCount().then((count: number) => {
+  console.info('getCreatedOsAccountsCount successfully, count: ' + count);
+}).catch((err: BusinessError) => {
+  console.error(`getCreatedOsAccountsCount failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -774,16 +797,7 @@ Obtains the number of OS accounts created. This API uses a promise to return the
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-accountManager.getCreatedOsAccountsCount().then((count: number) => {
-  console.info('getCreatedOsAccountsCount successfully, count: ' + count);
-}).catch((err: BusinessError) => {
-  console.error(`getCreatedOsAccountsCount failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getCreatedOsAccountsCount](#getcreatedosaccountscount)
 
 ## getCurrentOsAccount
 
@@ -814,7 +828,7 @@ Obtains information about the OS account to which the current process belongs. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account information obtained. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account information obtained. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
@@ -836,6 +850,22 @@ try {
     } else {
       console.info('getCurrentOsAccount curAccountInfo:' + JSON.stringify(curAccountInfo));
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getCurrentOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getCurrentOsAccount().then((accountInfo: osAccount.OsAccountInfo) => {
+    console.info('getCurrentOsAccount, accountInfo: ' + JSON.stringify(accountInfo));
+  }).catch((err: BusinessError) => {
+    console.error(`getCurrentOsAccount err: code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -883,21 +913,7 @@ Obtains information about the OS account to which the current process belongs. T
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.getCurrentOsAccount().then((accountInfo: osAccount.OsAccountInfo) => {
-    console.info('getCurrentOsAccount, accountInfo: ' + JSON.stringify(accountInfo));
-  }).catch((err: BusinessError) => {
-    console.error(`getCurrentOsAccount err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getCurrentOsAccount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getCurrentOsAccount](#getcurrentosaccount)
 
 ## getDistributedVirtualDeviceId
 
@@ -929,7 +945,7 @@ Obtains the ID of a distributed virtual device. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the distributed virtual device ID obtained. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the distributed virtual device ID obtained. Otherwise, **data** is an error object. |
 
 **Examples**
 
@@ -943,6 +959,17 @@ accountManager.getDistributedVirtualDeviceId((err: BusinessError, virtualID: str
   } else {
     console.info('getDistributedVirtualDeviceId virtualID: ' + virtualID);
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+accountManager.getDistributedVirtualDeviceId().then((virtualID: string) => {
+  console.info('getDistributedVirtualDeviceId, virtualID: ' + virtualID);
+}).catch((err: BusinessError) => {
+  console.error(`getDistributedVirtualDeviceId err: code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -979,16 +1006,7 @@ Obtains the ID of this distributed virtual device. This API uses a promise to re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-accountManager.getDistributedVirtualDeviceId().then((virtualID: string) => {
-  console.info('getDistributedVirtualDeviceId, virtualID: ' + virtualID);
-}).catch((err: BusinessError) => {
-  console.error(`getDistributedVirtualDeviceId err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getDistributedVirtualDeviceId](#getdistributedvirtualdeviceid)
 
 ## getForegroundOsAccountLocalId
 
@@ -1034,6 +1052,23 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let displayId: number = 0;
+try {
+  accountManager.getForegroundOsAccountLocalId(displayId).then((localId: number) => {
+    console.info('foreground account on display ' + displayId + ' is ' + localId);
+  }).catch((err: BusinessError) => {
+    console.error(`getForegroundOsAccountLocalId failed: ${err.code} ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getForegroundOsAccountLocalId exception: ${err.code} ${err.message}`);
+}
+```
+
 ## getOsAccountAllConstraints
 
 ```TypeScript
@@ -1064,7 +1099,7 @@ Obtains all constraints enabled for an OS account. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all [constraints](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) enabled for the OS account. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all [constraints](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) enabled for the OS account. Otherwise, **err** is an error object. |
 
 ## getOsAccountAllConstraints
 
@@ -1131,7 +1166,7 @@ Obtains all constraints enabled for an OS account. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is all [constraints](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is all [constraints](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1208,7 +1243,7 @@ Obtains the number of OS accounts created. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the number of created OS accounts. If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the number of created OS accounts. If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -1231,6 +1266,22 @@ try {
     } else {
       console.info('getOsAccountCount successfully, count: ' + count);
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountCount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getOsAccountCount().then((count: number) => {
+    console.info('getOsAccountCount successfully, count: ' + count);
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountCount failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -1269,21 +1320,7 @@ Obtains the number of OS accounts created. This API uses a promise to return the
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.getOsAccountCount().then((count: number) => {
-    console.info('getOsAccountCount successfully, count: ' + count);
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountCount failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountCount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getOsAccountCount](#getosaccountcount)
 
 ## getOsAccountDomainInfo
 
@@ -1377,6 +1414,10 @@ Obtains the domain account information associated with a specified OS account. T
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | OS account not found. |
 
+**Examples**
+
+See [getOsAccountDomainInfo](#getosaccountdomaininfo)
+
 ## getOsAccountLocalId
 
 ```TypeScript
@@ -1395,7 +1436,7 @@ Obtains the ID of the OS account to which the current process belongs. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1417,6 +1458,22 @@ try {
     } else {
       console.info('getOsAccountLocalId successfully, localId: ' + localId);
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountLocalId exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getOsAccountLocalId().then((localId: number) => {
+    console.info('getOsAccountLocalId successfully, localId: ' + localId);
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountLocalId failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -1452,21 +1509,7 @@ Obtains the ID of the OS account to which the current process belongs. This API 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.getOsAccountLocalId().then((localId: number) => {
-    console.info('getOsAccountLocalId successfully, localId: ' + localId);
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountLocalId failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountLocalId exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getOsAccountLocalId](#getosaccountlocalid)
 
 ## getOsAccountLocalIdBySerialNumber
 
@@ -1497,7 +1540,7 @@ Obtains the OS account ID based on the SN. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | serialNumber | number | Yes | Account SN. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **err** is an error object. |
 
 ## getOsAccountLocalIdBySerialNumber
 
@@ -1556,7 +1599,7 @@ Obtains the OS account ID based on the domain account information. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | domainInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Domain account information. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the ID of the OS account associated with the domain account. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the ID of the OS account associated with the domain account. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1582,6 +1625,23 @@ try {
     } else {
       console.info('getOsAccountLocalIdForDomain successfully, localId: ' + localId);
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountLocalIdForDomain exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let domainInfo: osAccount.DomainAccountInfo = {domain: 'testDomain', accountName: 'testAccountName'};
+try {
+  accountManager.getOsAccountLocalIdForDomain(domainInfo).then((localId: number) => {
+    console.info('getOsAccountLocalIdForDomain successfully, localId: ' + localId);
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountLocalIdForDomain failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -1629,22 +1689,7 @@ Obtains the OS account ID based on the domain account information. This API uses
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let domainInfo: osAccount.DomainAccountInfo = {domain: 'testDomain', accountName: 'testAccountName'};
-try {
-  accountManager.getOsAccountLocalIdForDomain(domainInfo).then((localId: number) => {
-    console.info('getOsAccountLocalIdForDomain successfully, localId: ' + localId);
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountLocalIdForDomain failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountLocalIdForDomain exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain)
 
 ## getOsAccountLocalIdForSerialNumber
 
@@ -1665,7 +1710,7 @@ Obtains the OS account ID based on the SN. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | serialNumber | long | Yes | Account SN. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1730,7 +1775,7 @@ Obtains the OS account ID based on the process UID. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | int | Yes | Process UID. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
@@ -1838,7 +1883,7 @@ Obtains the OS account ID based on the domain account information. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | domainInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Domain account information. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -1853,6 +1898,18 @@ accountManager.getOsAccountLocalIdFromDomain(domainInfo, (err: BusinessError, lo
   } else {
     console.info('getOsAccountLocalIdFromDomain successfully, localId: ' + localId);
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let domainInfo: osAccount.DomainAccountInfo = {domain: 'testDomain', accountName: 'testAccountName'};
+accountManager.getOsAccountLocalIdFromDomain(domainInfo).then((localId: number) => {
+  console.info('getOsAccountLocalIdFromDomain successfully, localId: ' + localId);
+}).catch((err: BusinessError) => {
+  console.error(`getOsAccountLocalIdFromDomain failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -1896,17 +1953,7 @@ Obtains the OS account ID based on the domain account information. This API uses
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let domainInfo: osAccount.DomainAccountInfo = {domain: 'testDomain', accountName: 'testAccountName'};
-accountManager.getOsAccountLocalIdFromDomain(domainInfo).then((localId: number) => {
-  console.info('getOsAccountLocalIdFromDomain successfully, localId: ' + localId);
-}).catch((err: BusinessError) => {
-  console.error(`getOsAccountLocalIdFromDomain failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getOsAccountLocalIdFromDomain](#getosaccountlocalidfromdomain)
 
 ## getOsAccountLocalIdFromProcess
 
@@ -1936,7 +1983,7 @@ Obtains the ID of the OS account to which the current process belongs. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -1950,6 +1997,17 @@ accountManager.getOsAccountLocalIdFromProcess((err: BusinessError, localId: numb
   } else {
     console.info('getOsAccountLocalIdFromProcess id:: ' + localId);
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+accountManager.getOsAccountLocalIdFromProcess().then((localId: number) => {
+  console.info('getOsAccountLocalIdFromProcess successfully, localId: ' + localId);
+}).catch((err: BusinessError) => {
+  console.error(`getOsAccountLocalIdFromProcess failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -1984,16 +2042,7 @@ Obtains the ID of the OS account to which the current process belongs. This API 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-accountManager.getOsAccountLocalIdFromProcess().then((localId: number) => {
-  console.info('getOsAccountLocalIdFromProcess successfully, localId: ' + localId);
-}).catch((err: BusinessError) => {
-  console.error(`getOsAccountLocalIdFromProcess failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getOsAccountLocalIdFromProcess](#getosaccountlocalidfromprocess)
 
 ## getOsAccountLocalIdFromUid
 
@@ -2024,7 +2073,7 @@ Obtains the OS account ID based on the process UID. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | number | Yes | Process UID. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **data** is an error object. |
 
 ## getOsAccountLocalIdFromUid
 
@@ -2211,7 +2260,7 @@ Obtains the type of the account to which the current process belongs. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account type obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account type obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2233,6 +2282,39 @@ try {
     } else {
       console.info('getOsAccountType accountType: ' + accountType);
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountType exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getOsAccountType().then((accountType: osAccount.OsAccountType) => {
+    console.info('getOsAccountType, accountType: ' + accountType);
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountType err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountType exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  let localId: number = 100;
+  accountManager.getOsAccountType(localId).then((type: osAccount.OsAccountType) => {
+    console.info('getOsAccountType Type:' + type);
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountType errInfo:code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -2268,21 +2350,7 @@ Obtains the type of the account to which the current process belongs. This API u
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.getOsAccountType().then((accountType: osAccount.OsAccountType) => {
-    console.info('getOsAccountType, accountType: ' + accountType);
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountType err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountType exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getOsAccountType](#getosaccounttype)
 
 ## getOsAccountTypeFromProcess
 
@@ -2312,7 +2380,7 @@ Obtains the type of the account to which the current process belongs. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account type obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account type obtained. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -2326,6 +2394,17 @@ accountManager.getOsAccountTypeFromProcess((err: BusinessError, accountType: osA
   } else {
     console.info('getOsAccountTypeFromProcess accountType: ' + accountType);
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+accountManager.getOsAccountTypeFromProcess().then((accountType: osAccount.OsAccountType) => {
+  console.info('getOsAccountTypeFromProcess, accountType: ' + accountType);
+}).catch((err: BusinessError) => {
+  console.error(`getOsAccountTypeFromProcess err: code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -2360,16 +2439,7 @@ Obtains the type of the account to which the current process belongs. This API u
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-accountManager.getOsAccountTypeFromProcess().then((accountType: osAccount.OsAccountType) => {
-  console.info('getOsAccountTypeFromProcess, accountType: ' + accountType);
-}).catch((err: BusinessError) => {
-  console.error(`getOsAccountTypeFromProcess err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getOsAccountTypeFromProcess](#getosaccounttypefromprocess)
 
 ## getSerialNumberByOsAccountLocalId
 
@@ -2400,7 +2470,7 @@ Obtains the SN of an OS account based on the account ID. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the SN obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the SN obtained. Otherwise, **err** is an error object. |
 
 ## getSerialNumberByOsAccountLocalId
 
@@ -2457,7 +2527,7 @@ Obtains the SN of an OS account based on the account ID. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | int | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the SN obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the SN obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2531,7 +2601,7 @@ Checks whether multiple OS accounts are supported. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means multiple OS accounts are supported; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means multiple OS accounts are supported; the value **false** means the opposite. |
 
 **Examples**
 
@@ -2545,6 +2615,17 @@ accountManager.isMultiOsAccountEnable((err: BusinessError, isEnabled: boolean) =
   } else {
     console.info('isMultiOsAccountEnable successfully, isEnabled: ' + isEnabled);
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+accountManager.isMultiOsAccountEnable().then((isEnabled: boolean) => {
+  console.info('isMultiOsAccountEnable successfully, isEnabled: ' + isEnabled);
+}).catch((err: BusinessError) => {
+  console.error(`isMultiOsAccountEnable failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -2579,16 +2660,7 @@ Checks whether multiple OS accounts are supported. This API uses a promise to re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-accountManager.isMultiOsAccountEnable().then((isEnabled: boolean) => {
-  console.info('isMultiOsAccountEnable successfully, isEnabled: ' + isEnabled);
-}).catch((err: BusinessError) => {
-  console.error(`isMultiOsAccountEnable failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [isMultiOsAccountEnable](#ismultiosaccountenable)
 
 ## isOsAccountActived
 
@@ -2620,7 +2692,7 @@ Checks whether an OS account is activated. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the account is activated; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the account is activated; the value **false** means the opposite. |
 
 ## isOsAccountActived
 
@@ -2690,7 +2762,7 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
 | constraint | string | Yes | [Constraint](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) to check. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the specified constraint is enabled; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the specified constraint is enabled; the value **false** means the opposite. |
 
 ## isOsAccountConstraintEnable
 
@@ -2807,6 +2879,23 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.isOsAccountUnlocked(localId).then((isVerified: boolean) => {
+    console.info('isOsAccountUnlocked successfully, isVerified: ' + isVerified);
+  }).catch((err: BusinessError) => {
+    console.error(`isOsAccountUnlocked failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`isOsAccountUnlocked exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## isOsAccountVerified
 
 ```TypeScript
@@ -2837,7 +2926,7 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
 
 **Examples**
 
@@ -2851,6 +2940,31 @@ accountManager.isOsAccountVerified((err: BusinessError, isVerified: boolean) => 
   } else {
     console.info('isOsAccountVerified successfully, isVerified: ' + isVerified);
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+accountManager.isOsAccountVerified(localId, (err: BusinessError, isVerified: boolean) => {
+  if (err) {
+    console.error(`isOsAccountVerified failed, code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('isOsAccountVerified successfully, isVerified: ' + isVerified);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+accountManager.isOsAccountVerified().then((isVerified: boolean) => {
+  console.info('isOsAccountVerified successfully, isVerified: ' + isVerified);
+}).catch((err: BusinessError) => {
+  console.error(`isOsAccountVerified failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -2884,23 +2998,11 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-accountManager.isOsAccountVerified(localId, (err: BusinessError, isVerified: boolean) => {
-  if (err) {
-    console.error(`isOsAccountVerified failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('isOsAccountVerified successfully, isVerified: ' + isVerified);
-  }
-});
-```
+See [isOsAccountVerified](#isosaccountverified)
 
 ## isOsAccountVerified
 
@@ -2941,16 +3043,7 @@ Checks whether an OS account has been verified. This API uses a promise to retur
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-accountManager.isOsAccountVerified().then((isVerified: boolean) => {
-  console.info('isOsAccountVerified successfully, isVerified: ' + isVerified);
-}).catch((err: BusinessError) => {
-  console.error(`isOsAccountVerified failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [isOsAccountVerified](#isosaccountverified)
 
 ## isTestOsAccount
 
@@ -2980,7 +3073,7 @@ Checks whether this OS account is a test account. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the account is a test account; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the account is a test account; the value **false** means the opposite. |
 
 **Examples**
 
@@ -2994,6 +3087,17 @@ accountManager.isTestOsAccount((err: BusinessError, isTestable: boolean) => {
   } else {
     console.info('isTestOsAccount successfully, isTestable: ' + isTestable);
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+  accountManager.isTestOsAccount().then((isTestable: boolean) => {
+    console.info('isTestOsAccount successfully, isTestable: ' + isTestable);
+  }).catch((err: BusinessError) => {
+    console.error(`isTestOsAccount failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -3028,16 +3132,7 @@ Checks whether this OS account is a test account. This API uses a promise to ret
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-  accountManager.isTestOsAccount().then((isTestable: boolean) => {
-    console.info('isTestOsAccount successfully, isTestable: ' + isTestable);
-  }).catch((err: BusinessError) => {
-    console.error(`isTestOsAccount failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [isTestOsAccount](#istestosaccount)
 
 ## queryActivatedOsAccountIds
 
@@ -3067,7 +3162,7 @@ Obtains information about all activated OS accounts. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of activated OS accounts. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of activated OS accounts. Otherwise, **data** is an error object. |
 
 **Examples**
 
@@ -3084,6 +3179,17 @@ accountManager.queryActivatedOsAccountIds((err: BusinessError, idArray: number[]
       console.info('activated os account id: ' + idArray[i]);
     }
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+accountManager.queryActivatedOsAccountIds().then((idArray: number[]) => {
+  console.info('queryActivatedOsAccountIds, idArray: ' + idArray);
+}).catch((err: BusinessError) => {
+  console.error(`queryActivatedOsAccountIds err: code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -3118,16 +3224,7 @@ Obtains information about all activated OS accounts. This API uses a promise to 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-accountManager.queryActivatedOsAccountIds().then((idArray: number[]) => {
-  console.info('queryActivatedOsAccountIds, idArray: ' + idArray);
-}).catch((err: BusinessError) => {
-  console.error(`queryActivatedOsAccountIds err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [queryActivatedOsAccountIds](#queryactivatedosaccountids)
 
 ## queryCurrentOsAccount
 
@@ -3158,7 +3255,7 @@ Obtains information about the OS account to which the current process belongs. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account information obtained. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account information obtained. Otherwise, **data** is an error object. |
 
 **Examples**
 
@@ -3172,6 +3269,17 @@ accountManager.queryCurrentOsAccount((err: BusinessError, curAccountInfo: osAcco
   } else {
     console.info('queryCurrentOsAccount curAccountInfo:' + JSON.stringify(curAccountInfo));
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+accountManager.queryCurrentOsAccount().then((accountInfo: osAccount.OsAccountInfo) => {
+  console.info('queryCurrentOsAccount, accountInfo: ' + JSON.stringify(accountInfo));
+}).catch((err: BusinessError) => {
+  console.error(`queryCurrentOsAccount err: code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -3208,16 +3316,7 @@ Obtains information about the OS account to which the current process belongs. T
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-accountManager.queryCurrentOsAccount().then((accountInfo: osAccount.OsAccountInfo) => {
-  console.info('queryCurrentOsAccount, accountInfo: ' + JSON.stringify(accountInfo));
-}).catch((err: BusinessError) => {
-  console.error(`queryCurrentOsAccount err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [queryCurrentOsAccount](#querycurrentosaccount)
 
 ## queryDistributedVirtualDeviceId
 
@@ -3239,7 +3338,7 @@ Queries the ID of a distributed virtual device. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the distributed virtual device ID obtained. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the distributed virtual device ID obtained. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
@@ -3262,6 +3361,22 @@ try {
     } else {
       console.info('queryDistributedVirtualDeviceId virtualID: ' + virtualID);
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`queryDistributedVirtualDeviceId exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.queryDistributedVirtualDeviceId().then((virtualID: string) => {
+    console.info('queryDistributedVirtualDeviceId, virtualID: ' + virtualID);
+  }).catch((err: BusinessError) => {
+    console.error(`queryDistributedVirtualDeviceId err: code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -3300,19 +3415,5 @@ Queries the ID of this distributed virtual device. This API uses a promise to re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.queryDistributedVirtualDeviceId().then((virtualID: string) => {
-    console.info('queryDistributedVirtualDeviceId, virtualID: ' + virtualID);
-  }).catch((err: BusinessError) => {
-    console.error(`queryDistributedVirtualDeviceId err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`queryDistributedVirtualDeviceId exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [queryDistributedVirtualDeviceId](#querydistributedvirtualdeviceid)
 

@@ -100,13 +100,13 @@ MakeNode Method. Used to build a node tree and return a FrameNode or null, and a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | uiContext used to makeNode |
+| uiContext | [UIContext](arkts-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to makeNode |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-framenode-c.md) \| null | Returns a FrameNode or null. |
+| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) \| null | Returns a FrameNode or null. |
 
 ## onAttach
 

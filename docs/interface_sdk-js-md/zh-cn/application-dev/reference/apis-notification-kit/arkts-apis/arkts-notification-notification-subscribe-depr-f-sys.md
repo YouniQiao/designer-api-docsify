@@ -37,6 +37,69 @@ function subscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<v
 | subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | 是 | 通知订阅对象。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 订阅动作回调函数。 |
 
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+import NotificationSubscribe from '@ohos.notificationSubscribe';
+
+// subscribe回调
+let subscribeCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.error("subscribe failed " + JSON.stringify(err));
+  } else {
+    console.info("subscribe success");
+  }
+}
+let onConsumeCallback = (data: NotificationSubscribe.SubscribeCallbackData) => {
+  console.info("Consume callback: " + JSON.stringify(data));
+}
+let subscriber: NotificationSubscribe.NotificationSubscriber = {
+  onConsume: onConsumeCallback
+};
+let info: NotificationSubscribe.NotificationSubscribeInfo = {
+  bundleNames: ["bundleName1", "bundleName2"]
+};
+Notification.subscribe(subscriber, info, subscribeCallback);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+import NotificationSubscribe from '@ohos.notificationSubscribe';
+
+let subscribeCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.error("subscribe failed " + JSON.stringify(err));
+  } else {
+    console.info("subscribe success");
+  }
+}
+function onConsumeCallback(data: NotificationSubscribe.SubscribeCallbackData) {
+  console.info("Consume callback: " + JSON.stringify(data));
+}
+let subscriber: NotificationSubscribe.NotificationSubscriber = {
+  onConsume: onConsumeCallback
+};
+Notification.subscribe(subscriber, subscribeCallback);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+import NotificationSubscribe from '@ohos.notificationSubscribe';
+
+function onConsumeCallback(data: NotificationSubscribe.SubscribeCallbackData) {
+  console.info("Consume callback: " + JSON.stringify(data));
+}
+let subscriber: NotificationSubscribe.NotificationSubscriber = {
+  onConsume: onConsumeCallback
+};
+Notification.subscribe(subscriber).then(() => {
+  console.info("subscribe success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`subscribe failed, code is ${err}`);
+});
+```
+
 
 ## subscribe
 
@@ -71,6 +134,10 @@ function subscribe(
 | subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | 是 | 通知订阅对象。 |
 | info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md) | 是 | 通知订阅信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 订阅动作回调函数。 |
+
+**示例**
+
+参见 [subscribe](#subscribe)
 
 
 ## subscribe
@@ -107,4 +174,8 @@ function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscr
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [subscribe](#subscribe)
 

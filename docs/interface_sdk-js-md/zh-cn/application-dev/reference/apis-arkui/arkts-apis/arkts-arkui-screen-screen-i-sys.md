@@ -125,44 +125,6 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 });
 ```
 
-## setDensityDpi
-
-```TypeScript
-setDensityDpi(densityDpi: double): Promise<void>
-```
-
-设置屏幕的像素密度，使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-Screen-setDensityDpi(densityDpi: double): Promise<void>--><!--Device-Screen-setDensityDpi(densityDpi: double): Promise<void>-End-->
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| densityDpi | double | 是 | 像素密度。支持的输入范围为[80, 640]，该参数仅支持整数输入。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -229,6 +191,46 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
   console.error(`Failed to create the virtual screen. Code: ${err?.code}, message: ${err?.message}`);
 });
 ```
+
+## setDensityDpi
+
+```TypeScript
+setDensityDpi(densityDpi: double): Promise<void>
+```
+
+设置屏幕的像素密度，使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-Screen-setDensityDpi(densityDpi: double): Promise<void>--><!--Device-Screen-setDensityDpi(densityDpi: double): Promise<void>-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| densityDpi | double | 是 | 像素密度。支持的输入范围为[80, 640]，该参数仅支持整数输入。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+
+**示例**
+
+参见 [setDensityDpi](#setdensitydpi)
 
 ## setOrientation
 
@@ -333,44 +335,6 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 });
 ```
 
-## setOrientation
-
-```TypeScript
-setOrientation(orientation: Orientation): Promise<void>
-```
-
-设置屏幕方向，使用Promise异步回调。当设置的方向符合[应用旋转策略](../../../quick-start/module-configuration-file.md#abilities标签)（可通过配置 module.json5文件中abilities标签的orientation字段设置应用旋转策略）时，屏幕方向才会发生改变；当设置方向不符合应用旋转策略时，屏幕方向不会发生变化，且接口不会抛异常。
-
-**起始版本：** 23
-
-<!--Device-Screen-setOrientation(orientation: Orientation): Promise<void>--><!--Device-Screen-setOrientation(orientation: Orientation): Promise<void>-End-->
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| orientation | Orientation | 是 | 屏幕方向。orientation值必须来自Orientation枚举方向。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -437,47 +401,6 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 });
 ```
 
-## setOrientation
-
-```TypeScript
-setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions): Promise<void>
-```
-
-设置屏幕方向
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Screen-setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions): Promise<void>--><!--Device-Screen-setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| orientation | Orientation | 是 | 屏幕方向。方向值必须来自方向枚举值。 |
-| orientationOptions | [OrientationOptions](arkts-arkui-screen-orientationoptions-i-sys.md) | 否 | Options of setting orientation. |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. Possible cause: The screen is not a wired external display in extended mode. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -532,6 +455,89 @@ screensPromise.then((data: Array<screen.Screen>) => {
   console.error(`Failed to get all screens. Code: ${err?.code}, message: ${err?.message}`);
 });
 ```
+
+## setOrientation
+
+```TypeScript
+setOrientation(orientation: Orientation): Promise<void>
+```
+
+设置屏幕方向，使用Promise异步回调。当设置的方向符合[应用旋转策略](../../../quick-start/module-configuration-file.md#abilities标签)（可通过配置 module.json5文件中abilities标签的orientation字段设置应用旋转策略）时，屏幕方向才会发生改变；当设置方向不符合应用旋转策略时，屏幕方向不会发生变化，且接口不会抛异常。
+
+**起始版本：** 23
+
+<!--Device-Screen-setOrientation(orientation: Orientation): Promise<void>--><!--Device-Screen-setOrientation(orientation: Orientation): Promise<void>-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| orientation | Orientation | 是 | 屏幕方向。orientation值必须来自Orientation枚举方向。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+
+**示例**
+
+参见 [setOrientation](#setorientation)
+
+## setOrientation
+
+```TypeScript
+setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions): Promise<void>
+```
+
+设置屏幕方向
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Screen-setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions): Promise<void>--><!--Device-Screen-setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| orientation | Orientation | 是 | 屏幕方向。方向值必须来自方向枚举值。 |
+| orientationOptions | [OrientationOptions](arkts-arkui-screen-orientationoptions-i-sys.md) | 否 | Options of setting orientation. |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. Possible cause: The screen is not a wired external display in extended mode. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+
+**示例**
+
+参见 [setOrientation](#setorientation)
 
 ## setScreenActiveMode
 
@@ -638,44 +644,6 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 });
 ```
 
-## setScreenActiveMode
-
-```TypeScript
-setScreenActiveMode(modeIndex: long): Promise<void>
-```
-
-设置屏幕当前显示模式，使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-Screen-setScreenActiveMode(modeIndex: long): Promise<void>--><!--Device-Screen-setScreenActiveMode(modeIndex: long): Promise<void>-End-->
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| modeIndex | long | 是 | 模式索引。模式索引的当前值和值的范围，会根据屏幕当前分辨率、刷新率和设备硬件差异产生变化，该参数仅支持整数输入。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -743,6 +711,46 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
   console.error(`Failed to create the virtual screen. Code: ${err?.code}, message: ${err?.message}`);
 });
 ```
+
+## setScreenActiveMode
+
+```TypeScript
+setScreenActiveMode(modeIndex: long): Promise<void>
+```
+
+设置屏幕当前显示模式，使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-Screen-setScreenActiveMode(modeIndex: long): Promise<void>--><!--Device-Screen-setScreenActiveMode(modeIndex: long): Promise<void>-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| modeIndex | long | 是 | 模式索引。模式索引的当前值和值的范围，会根据屏幕当前分辨率、刷新率和设备硬件差异产生变化，该参数仅支持整数输入。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+
+**示例**
+
+参见 [setScreenActiveMode](#setscreenactivemode)
 
 ## activeModeIndex
 

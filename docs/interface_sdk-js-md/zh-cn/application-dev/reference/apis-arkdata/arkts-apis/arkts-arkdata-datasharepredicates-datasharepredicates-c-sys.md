@@ -16,44 +16,6 @@
 import { dataSharePredicates } from '@kit.ArkData';
 ```
 
-## beginWrap
-
-```TypeScript
-beginWrap(): DataSharePredicates
-```
-
-该接口用于向谓词添加左括号，相当于sql语句的“(”，必须和右括号一起使用。
-
-目前仅关系型数据库支持该谓词。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DataSharePredicates-beginWrap(): DataSharePredicates--><!--Device-DataSharePredicates-beginWrap(): DataSharePredicates-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
-
-**系统接口：** 此接口为系统接口。
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回带有左括号的谓词。 |
-
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.equalTo("NAME", "lisi")
-    .beginWrap()
-    .equalTo("AGE", 18)
-    .or()
-    .equalTo("SALARY", 200.5)
-    .endWrap();
-```
-
 ## beginsWith
 
 ```TypeScript
@@ -92,6 +54,44 @@ beginsWith(field: string, value: string): DataSharePredicates
 ```TypeScript
 let predicates = new dataSharePredicates.DataSharePredicates();
 predicates.beginsWith("NAME", "os");
+```
+
+## beginWrap
+
+```TypeScript
+beginWrap(): DataSharePredicates
+```
+
+该接口用于向谓词添加左括号，相当于sql语句的“(”，必须和右括号一起使用。
+
+目前仅关系型数据库支持该谓词。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataSharePredicates-beginWrap(): DataSharePredicates--><!--Device-DataSharePredicates-beginWrap(): DataSharePredicates-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回带有左括号的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.equalTo("NAME", "lisi")
+    .beginWrap()
+    .equalTo("AGE", 18)
+    .or()
+    .equalTo("SALARY", 200.5)
+    .endWrap();
 ```
 
 ## between
@@ -208,44 +208,6 @@ let predicates = new dataSharePredicates.DataSharePredicates();
 predicates.equalTo("NAME", "Rose").distinct();
 ```
 
-## endWrap
-
-```TypeScript
-endWrap(): DataSharePredicates
-```
-
-该接口用于向谓词添加右括号，相当于sql语句的“)”，必须和左括号一起使用。
-
-目前仅关系型数据库支持该谓词。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DataSharePredicates-endWrap(): DataSharePredicates--><!--Device-DataSharePredicates-endWrap(): DataSharePredicates-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
-
-**系统接口：** 此接口为系统接口。
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回带有右括号的谓词。 |
-
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.equalTo("NAME", "lisi")
-    .beginWrap()
-    .equalTo("AGE", 18)
-    .or()
-    .equalTo("SALARY", 200.5)
-    .endWrap();
-```
-
 ## endsWith
 
 ```TypeScript
@@ -284,6 +246,44 @@ endsWith(field: string, value: string): DataSharePredicates
 ```TypeScript
 let predicates = new dataSharePredicates.DataSharePredicates();
 predicates.endsWith("NAME", "os");
+```
+
+## endWrap
+
+```TypeScript
+endWrap(): DataSharePredicates
+```
+
+该接口用于向谓词添加右括号，相当于sql语句的“)”，必须和左括号一起使用。
+
+目前仅关系型数据库支持该谓词。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataSharePredicates-endWrap(): DataSharePredicates--><!--Device-DataSharePredicates-endWrap(): DataSharePredicates-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回带有右括号的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.equalTo("NAME", "lisi")
+    .beginWrap()
+    .equalTo("AGE", 18)
+    .or()
+    .equalTo("SALARY", 200.5)
+    .endWrap();
 ```
 
 ## glob
@@ -445,45 +445,6 @@ let predicates = new dataSharePredicates.DataSharePredicates();
 predicates.groupBy(["AGE", "NAME"]);
 ```
 
-## inKeys
-
-```TypeScript
-inKeys(keys: Array<string>): DataSharePredicates
-```
-
-该接口用于配置谓词以匹配键在指定范围内的字段。
-
-目前仅KVDB支持该谓词。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DataSharePredicates-inKeys(keys: Array<string>): DataSharePredicates--><!--Device-DataSharePredicates-inKeys(keys: Array<string>): DataSharePredicates-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | 是 | 指定范围的键数组。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
-
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.inKeys(["Lisa", "Rose"]);
-```
-
 ## indexedBy
 
 ```TypeScript
@@ -521,6 +482,45 @@ indexedBy(field: string): DataSharePredicates
 ```TypeScript
 let predicates = new dataSharePredicates.DataSharePredicates();
 predicates.indexedBy("SALARY_INDEX");
+```
+
+## inKeys
+
+```TypeScript
+inKeys(keys: Array<string>): DataSharePredicates
+```
+
+该接口用于配置谓词以匹配键在指定范围内的字段。
+
+目前仅KVDB支持该谓词。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataSharePredicates-inKeys(keys: Array<string>): DataSharePredicates--><!--Device-DataSharePredicates-inKeys(keys: Array<string>): DataSharePredicates-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| keys | Array&lt;string&gt; | 是 | 指定范围的键数组。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+
+**示例**
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.inKeys(["Lisa", "Rose"]);
 ```
 
 ## isNotNull

@@ -29,7 +29,7 @@ Obtains the cellular data connection status. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataConnectState&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataConnectState&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -49,6 +49,17 @@ data.getCellularDataState((err: BusinessError, contextData: data.DataConnectStat
     } else {
         console.info(`getCellularDataState success`);
     }
+});
+```
+
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+data.getCellularDataState().then((contextData: data.DataConnectState) => {
+    console.info(`getCellularDataState success, contextData: ${contextData}`);
+}).catch((err: BusinessError) => {
+    console.error(`getCellularDataState fail. code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -86,14 +97,5 @@ Obtains the cellular data connection status. This API uses a promise to return t
 
 **Examples**
 
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.getCellularDataState().then((contextData: data.DataConnectState) => {
-    console.info(`getCellularDataState success, contextData: ${contextData}`);
-}).catch((err: BusinessError) => {
-    console.error(`getCellularDataState fail. code: ${err.code}, message: ${err.message}`);
-});
-```
+See [getCellularDataState](#getcellulardatastate)
 

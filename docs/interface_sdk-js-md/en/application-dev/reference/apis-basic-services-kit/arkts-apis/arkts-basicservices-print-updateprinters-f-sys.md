@@ -29,7 +29,7 @@ Updates information about the specified printers. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | printers | Array&lt;[PrinterInfo](arkts-basicservices-print-printerinfo-i-sys.md)&gt; | Yes | List of printers whose information is to be updated. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -60,6 +60,26 @@ print.updatePrinters([printerInfo], (err: BusinessError) => {
     } else {
         console.info('updataPrinters success');
     }
+})
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let printerInfo : print.PrinterInfo = {
+    printerId : '3232',
+    printerName : 'hhhhh',
+    printerState : 0,
+    printerIcon : 12,
+    description : 'str',
+    capability : undefined,
+    options : 'opt'
+};
+print.updatePrinters([printerInfo]).then(() => {
+    console.info('update printers success');
+}).catch((error: BusinessError) => {
+    console.error('update printers error : ' + JSON.stringify(error));
 })
 ```
 
@@ -104,23 +124,5 @@ Updates information about the specified printers. This API uses a promise to ret
 
 **Examples**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let printerInfo : print.PrinterInfo = {
-    printerId : '3232',
-    printerName : 'hhhhh',
-    printerState : 0,
-    printerIcon : 12,
-    description : 'str',
-    capability : undefined,
-    options : 'opt'
-};
-print.updatePrinters([printerInfo]).then(() => {
-    console.info('update printers success');
-}).catch((error: BusinessError) => {
-    console.error('update printers error : ' + JSON.stringify(error));
-})
-```
+See [updatePrinters](#updateprinters)
 

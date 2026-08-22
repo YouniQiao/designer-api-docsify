@@ -29,7 +29,7 @@ Separates calls from a conference call. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | int | Yes | Call ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -55,6 +55,16 @@ call.separateConference(1, (err: BusinessError) => {
     } else {
         console.info(`separateConference success.`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.separateConference(1).then(() => {
+    console.info(`separateConference success.`);
+}).catch((err: BusinessError) => {
+    console.error(`separateConference fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -104,13 +114,5 @@ Separates calls from a conference call. This API uses a promise to return the re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.separateConference(1).then(() => {
-    console.info(`separateConference success.`);
-}).catch((err: BusinessError) => {
-    console.error(`separateConference fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [separateConference](#separateconference)
 

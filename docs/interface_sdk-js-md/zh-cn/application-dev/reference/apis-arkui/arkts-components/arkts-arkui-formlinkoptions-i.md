@@ -41,7 +41,7 @@ action的类型，支持三种预定义的类型：
 
 - router：跳转到提供方应用的指定UIAbility。
 
-- message：自定义消息，触发后会调用提供方FormExtensionAbility的 [onFormEvent()](../../apis-form-kit/arkts-apis/arkts-form-appformformextensionability-formextensionability-c.md#onformevent)生命周期回调。
+- message：自定义消息，触发后会调用提供方FormExtensionAbility的 [onFormEvent()](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md#onformevent)生命周期回调。
 
 - call：后台启动提供方应用。触发后会拉起提供方应用的指定UIAbility（仅支持launchType为 [singleton](../../../application-models/uiability-launch-type.md#singleton启动模式)的UIAbility，即启动模式为单实例的UIAbility），但不会 调度到前台。提供方应用需要具备后台运行权限( [ohos.permission.KEEP_BACKGROUND_RUNNING](../../../security/AccessToken/permissions-for-all.md#ohospermissionkeep_background_running) )。
 

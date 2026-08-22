@@ -40,3 +40,9 @@ Obtains the list of all physical USB ports. When the developer mode is disabled,
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 | [14400004](../errorcode-usb.md#14400004-service-exception) |  |
 
+**Examples**
+
+```TypeScript
+let ret: Array<usbManager.USBPort> = usbManager.getPortList();
+```
+

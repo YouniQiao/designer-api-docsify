@@ -1,6 +1,6 @@
 # ProcessMode
 
-UIAbility启动后的进程模式。 ProcessMode作为[StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md)的一个属性，仅在 [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability) 中生效，用来指定目标UIAbility的进程模式。 该功能仅在2in1和Tablet设备上生效，在其他设备中返回801错误码。
+UIAbility启动后的进程模式。 ProcessMode作为[StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)的一个属性，仅在 [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability) 中生效，用来指定目标UIAbility的进程模式。 该功能仅在2in1和Tablet设备上生效，在其他设备中返回801错误码。
 
 **起始版本：** 23
 
@@ -67,4 +67,44 @@ ATTACH_TO_STATUS_BAR_ITEM = 3
 <!--Device-ProcessMode-ATTACH_TO_STATUS_BAR_ITEM = 3--><!--Device-ProcessMode-ATTACH_TO_STATUS_BAR_ITEM = 3-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**示例**
+
+```TypeScript
+import { UIAbility, Want, StartOptions, contextConstant } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    // 构造Want对象，指定目标UIAbility信息
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'MainAbility2'
+    };
+  // 创建启动选项，设置进程模式和启动可见性
+  let options: StartOptions = {
+        processMode: contextConstant.ProcessMode.NEW_PROCESS_ATTACH_TO_STATUS_BAR_ITEM,
+        startupVisibility: contextConstant.StartupVisibility.STARTUP_HIDE
+      };
+
+    try {
+      this.context.startAbility(want, options, (err: BusinessError<void> | null) => {
+        if (err) {
+          // 处理业务逻辑错误
+          console.error(`startAbility failed: ${JSON.stringify(err)}`);
+          return;
+        }
+        // 执行正常业务
+        console.info('startAbility succeed');
+      });
+    } catch (err) {
+      // 处理入参错误异常
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startAbility failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
 

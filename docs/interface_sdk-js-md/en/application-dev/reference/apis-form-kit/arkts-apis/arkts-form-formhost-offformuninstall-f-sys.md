@@ -28,7 +28,7 @@ You can use this method to cancel listening to the event of uninstall form.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | The callback of formUninstall. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | The callback of formUninstall. |
 
 **Error codes:**
 

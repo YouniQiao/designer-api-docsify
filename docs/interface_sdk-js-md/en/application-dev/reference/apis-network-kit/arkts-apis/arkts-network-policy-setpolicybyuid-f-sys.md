@@ -30,7 +30,7 @@ Sets the metered network access policy for the application specified by a given 
 | --- | --- | --- | --- |
 | uid | int | Yes | Unique app ID, which is a positive integer within the int32_t range. |
 | policy | [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md) | Yes | Network access policy for the application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -51,6 +51,19 @@ import { BusinessError } from '@kit.BasicServicesKit';
 policy.setPolicyByUid(11111, policy.NetUidPolicy.NET_POLICY_NONE, (error: BusinessError) => {
   console.error(JSON.stringify(error));
 });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .setPolicyByUid(11111, policy.NetUidPolicy.NET_POLICY_NONE)
+  .then(() => {
+    console.info('setPolicyByUid success');
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
 ```
 
 
@@ -98,16 +111,5 @@ Sets whether the application with the corresponding UID can access the metering 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .setPolicyByUid(11111, policy.NetUidPolicy.NET_POLICY_NONE)
-  .then(() => {
-    console.info('setPolicyByUid success');
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+See [setPolicyByUid](#setpolicybyuid)
 

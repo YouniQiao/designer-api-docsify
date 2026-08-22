@@ -37,6 +37,40 @@ function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallb
 | bundle | BundleOption | 是 | 应用的包。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 查询指定应用是否支持分布式通知的回调函数。 |
 
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let isDistributedEnabledByBundleCallback = (err: Base.BusinessError, data: boolean) => {
+  if (err) {
+    console.error("isDistributedEnabledByBundle failed " + JSON.stringify(err));
+  } else {
+    console.info("isDistributedEnabledByBundle success" + JSON.stringify(data));
+  }
+};
+
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+
+Notification.isDistributedEnabledByBundle(bundle, isDistributedEnabledByBundleCallback);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+
+Notification.isDistributedEnabledByBundle(bundle).then((data: boolean) => {
+  console.info("isDistributedEnabledByBundle success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`isDistributedEnabledByBundle failed, code is ${err}`);
+});
+```
+
 
 ## isDistributedEnabledByBundle
 
@@ -71,4 +105,8 @@ function isDistributedEnabledByBundle(bundle: BundleOption): Promise<boolean>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise方式返回指定应用是否支持分布式通知的结果。 |
+
+**示例**
+
+参见 [isDistributedEnabledByBundle](#isdistributedenabledbybundle)
 

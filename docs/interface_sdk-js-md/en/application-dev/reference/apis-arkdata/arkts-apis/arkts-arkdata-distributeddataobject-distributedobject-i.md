@@ -264,6 +264,43 @@ Sets a session ID. For the devices in the collaboration state in a trusted netwo
 **Examples**
 
 ```TypeScript
+// Add g_object to the distributed network.
+g_object.setSessionId(distributedDataObject.genSessionId(), ()=>{
+    console.info("join session");
+});
+// g_object exits the distributed network.
+g_object.setSessionId("", ()=>{
+    console.info("leave all session");
+});
+```
+
+```TypeScript
+// Add g_object to the distributed network.
+g_object.setSessionId(distributedDataObject.genSessionId(), ()=>{
+    console.info("join session");
+});
+// Exit the distributed network.
+g_object.setSessionId(() => {
+    console.info("leave all session.");
+});
+```
+
+```TypeScript
+// Add g_object to the distributed network.
+g_object.setSessionId(distributedDataObject.genSessionId()).then (()=>{
+    console.info("join session.");
+    }).catch((error: BusinessError)=>{
+        console.error("error:" + error.code + error.message);
+});
+// Exit the distributed network.
+g_object.setSessionId().then (()=>{
+    console.info("leave all session.");
+    }).catch((error: BusinessError)=>{
+        console.error("error:" + error.code + error.message);
+});
+```
+
+```TypeScript
 class SourceObject {
     name: string
     age: number

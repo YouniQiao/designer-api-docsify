@@ -44,3 +44,9 @@ let pres = process.pid;
 let result = process.kill(28, pres);
 ```
 
+```TypeScript
+let pro = new process.ProcessManager();
+let pres = process.pid;
+let result = pro.kill(28, pres);
+```
+

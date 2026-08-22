@@ -18,6 +18,6 @@
 
 | Name | Description |
 | --- | --- |
-| [ArcScrollBarAttribute](arkts-arkuiarcscrollbar-arcscrollbarattribute-i.md) | The ArcScrollBarAttribute |
-| [ArcScrollBarOptions](arkts-arkuiarcscrollbar-arcscrollbaroptions-i.md) | Defines the arc scroll bar options. |
+| [ArcScrollBarAttribute](arkts-arkui-arcscrollbar-arcscrollbarattribute-i.md) | The ArcScrollBarAttribute |
+| [ArcScrollBarOptions](arkts-arkui-arcscrollbar-arcscrollbaroptions-i.md) | Defines the arc scroll bar options. |
 

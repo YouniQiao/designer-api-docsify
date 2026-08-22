@@ -44,8 +44,8 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 | --- | --- |
 | [DHKeyUtil](arkts-cryptoarchitecture-cryptoframework-dhkeyutil-c.md) | 根据素数P的长度和私钥长度（bit位数）生成DH公共密钥参数。 |
 | [ECCKeyUtil](arkts-cryptoarchitecture-cryptoframework-ecckeyutil-c.md) | 提供ECC密钥参数生成和基于指定椭圆曲线的点转换工具。 |
-| [SM2CryptoUtil](arkts-cryptoarchitecture-cryptoframework-sm2cryptoutil-c.md) | 用于SM2密码学运算的工具类。 |
 | [SignatureUtils](arkts-cryptoarchitecture-cryptoframework-signatureutils-c.md) | 用于ECC/SM2签名数据转换的工具类。 |
+| [SM2CryptoUtil](arkts-cryptoarchitecture-cryptoframework-sm2cryptoutil-c.md) | 用于SM2密码学运算的工具类。 |
 
 ### 接口
 
@@ -58,6 +58,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 | [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md) | 加解密参数[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)的子类，封装使用CCM AEAD模式进行加密或解密的参数，需要IV、AAD和认证 标签。它是[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)的子类，用于在对称加解密时作为 [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法的参数。 |
 | [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) | 加解密接口，定义对称加解密和非对称加解密方法。调用前，需通过 [createCipher(transformation: string): Cipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md)方法创建一个Cipher实例。 按序调用Cipher实例中的 [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)、 [update()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#update)、 [doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal)方法完成 加解密操作。 |
 | [CmacSpec](arkts-cryptoarchitecture-cryptoframework-cmacspec-i.md) | 消息认证码参数[MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md)的子类，作为CMAC计算的输入。 |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 二进制数据的封装接口，核心字段data为Uint8Array类型。 |
 | [DHCommonParamsSpec](arkts-cryptoarchitecture-cryptoframework-dhcommonparamsspec-i.md) | 密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定DH算法中公私钥包含的公共参数。 |
 | [DHKeyPairSpec](arkts-cryptoarchitecture-cryptoframework-dhkeypairspec-i.md) | 密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定DH算法中公私钥包含的全量参数。 |
 | [DHPriKeySpec](arkts-cryptoarchitecture-cryptoframework-dhprikeyspec-i.md) | 密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定DH算法中私钥包含的参数。 |
@@ -65,17 +66,16 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 | [DSACommonParamsSpec](arkts-cryptoarchitecture-cryptoframework-dsacommonparamsspec-i.md) | 密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定DSA算法中公私钥包含的公共参数，随机生成公/私钥。 |
 | [DSAKeyPairSpec](arkts-cryptoarchitecture-cryptoframework-dsakeypairspec-i.md) | 密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定DSA算法中公私钥包含的全量参数。 |
 | [DSAPubKeySpec](arkts-cryptoarchitecture-cryptoframework-dsapubkeyspec-i.md) | 密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定DSA算法中公钥包含的参数。 |
-| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 二进制数据的封装接口，核心字段data为Uint8Array类型。 |
 | [ECCCommonParamsSpec](arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) | 密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定ECC算法中公私钥包含的公共参数，随机生成公/私钥。 |
 | [ECCKeyPairSpec](arkts-cryptoarchitecture-cryptoframework-ecckeypairspec-i.md) | 密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定ECC算法中公私钥包含的全量参数。 |
 | [ECCPriKeySpec](arkts-cryptoarchitecture-cryptoframework-eccprikeyspec-i.md) | 密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定ECC算法中私钥包含的参数。 |
 | [ECCPubKeySpec](arkts-cryptoarchitecture-cryptoframework-eccpubkeyspec-i.md) | 密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定ECC算法中公钥包含的参数。 |
+| [EccSignatureSpec](arkts-cryptoarchitecture-cryptoframework-eccsignaturespec-i.md) | 包含（r、s）的ECC/SM2签名数据的对象。 |
 | [ECField](arkts-cryptoarchitecture-cryptoframework-ecfield-i.md) | 指定椭圆曲线的域类型。当前只支持Fp域。 |
 | [ECFieldFp](arkts-cryptoarchitecture-cryptoframework-ecfieldfp-i.md) | 指定椭圆曲线的素数域。是[ECField](arkts-cryptoarchitecture-cryptoframework-ecfield-i.md)的子类。 |
 | [ED25519KeyPairSpec](arkts-cryptoarchitecture-cryptoframework-ed25519keypairspec-i.md) | 密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定Ed25519算法中公私钥包含的全量参数。 |
 | [ED25519PriKeySpec](arkts-cryptoarchitecture-cryptoframework-ed25519prikeyspec-i.md) | 密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定Ed25519算法中私钥包含的参数。 |
 | [ED25519PubKeySpec](arkts-cryptoarchitecture-cryptoframework-ed25519pubkeyspec-i.md) | 密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定Ed25519算法中公钥包含的参数。 |
-| [EccSignatureSpec](arkts-cryptoarchitecture-cryptoframework-eccsignaturespec-i.md) | 包含（r、s）的ECC/SM2签名数据的对象。 |
 | [GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md) | 加解密参数[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)的子类，封装使用GCM AEAD模式进行加密或解密的参数，需要IV、AAD和认证 标签。它是[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)的子类，用于在对称加解密时作为 [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法的参数。 |
 | [HKDFSpec](arkts-cryptoarchitecture-cryptoframework-hkdfspec-i.md) | 密钥派生函数参数[KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)的子类，作为HKDF密钥派生函数进行密钥派生时的输入。 |
 | [HmacSpec](arkts-cryptoarchitecture-cryptoframework-hmacspec-i.md) | 消息认证码参数[MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md)的子类，作为HMAC计算的输入。 |
@@ -91,19 +91,19 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 | [Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md) | 消息认证码接口，定义基于对称密钥计算消息认证码的方法。调用前，需通过 [createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md)方法创建一个Mac实例。 |
 | [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md) | 消息认证码参数，计算HMAC或CMAC时，需要构建子类对象并作为输入参数。 |
 | [Md](arkts-cryptoarchitecture-cryptoframework-md-i.md) | 消息摘要接口，定义计算消息摘要的方法。调用前，需通过[createMd](arkts-cryptoarchitecture-cryptoframework-createmd-f.md)方法创建一个Md实例。 |
-| [PBKDF2Spec](arkts-cryptoarchitecture-cryptoframework-pbkdf2spec-i.md) | 密钥派生函数参数[KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)的子类，作为PBKDF2密钥派生函数进行密钥派生时的输入。 |
 | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) | 加解密参数，在进行对称加解密时需要构造其子类对象，并将子类对象传入 [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法。 |
+| [PBKDF2Spec](arkts-cryptoarchitecture-cryptoframework-pbkdf2spec-i.md) | 密钥派生函数参数[KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)的子类，作为PBKDF2密钥派生函数进行密钥派生时的输入。 |
 | [Point](arkts-cryptoarchitecture-cryptoframework-point-i.md) | 指定椭圆曲线上的一个点。 |
 | [Poly1305ParamsSpec](arkts-cryptoarchitecture-cryptoframework-poly1305paramsspec-i.md) | 加解密参数[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)的子类，封装使用ChaCha20-Poly1305 AEAD模式进行加密或解密的参数， 需要nonce、AAD和认证标签。它是 [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)的子类，用于在对称加解密时作为 [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法的参数。 |
 | [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md) | 私钥，是[Key](arkts-cryptoarchitecture-cryptoframework-key-i.md)的子类，在非对称解密、签名、密钥协商时需要将其作为输入使用。 |
 | [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | 公钥，是[Key](arkts-cryptoarchitecture-cryptoframework-key-i.md)的子类，在非对称加密、签名验证、密钥协商时需要将其对象作为输入使用。 |
+| [Random](arkts-cryptoarchitecture-cryptoframework-random-i.md) | 随机数接口，定义随机数生成的方法。调用前，需通过[createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md)创建一个Random实例。 |
 | [RSACommonParamsSpec](arkts-cryptoarchitecture-cryptoframework-rsacommonparamsspec-i.md) | 密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定RSA算法中公私钥包含的公共参数，随机生成公/私钥。 |
 | [RSAKeyPairSpec](arkts-cryptoarchitecture-cryptoframework-rsakeypairspec-i.md) | 密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定RSA算法中公私钥包含的全量参数。 |
 | [RSAPubKeySpec](arkts-cryptoarchitecture-cryptoframework-rsapubkeyspec-i.md) | 密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定RSA算法中公钥包含的参数。 |
-| [Random](arkts-cryptoarchitecture-cryptoframework-random-i.md) | 随机数接口，定义随机数生成的方法。调用前，需通过[createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md)创建一个Random实例。 |
-| [SM2CipherTextSpec](arkts-cryptoarchitecture-cryptoframework-sm2ciphertextspec-i.md) | SM2密文参数，使用SM2密文格式转换函数进行格式转换时，需要用到此对象。可以通过指定此参数，生成符合国密标准的ASN.1格式的SM2密文，反之， 也可以从ASN.1格式的SM2密文中获取具体参数。 |
 | [ScryptSpec](arkts-cryptoarchitecture-cryptoframework-scryptspec-i.md) | 密钥派生函数参数[KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)的子类，作为SCRYPT密钥派生函数进行密钥派生时的输入。 |
 | [Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) | 签名接口，定义基于私钥对数据进行签名的方法。调用前，需通过 [createSign(algName: string): Sign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md)方法创建一个Sign实例。按序调用Sign实例中的init、 update（可选）、sign方法完成签名操作。签名操作的示例代码详见 [签名验签开发指导](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)。 |
+| [SM2CipherTextSpec](arkts-cryptoarchitecture-cryptoframework-sm2ciphertextspec-i.md) | SM2密文参数，使用SM2密文格式转换函数进行格式转换时，需要用到此对象。可以通过指定此参数，生成符合国密标准的ASN.1格式的SM2密文，反之， 也可以从ASN.1格式的SM2密文中获取具体参数。 |
 | [SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md) | 对称密钥，是[Key](arkts-cryptoarchitecture-cryptoframework-key-i.md)的子类，在对称加解密时需要将其对象传入 [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例的 [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法使用。 |
 | [SymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-symkeygenerator-i.md) | 对称密钥生成器接口，定义生成对称密钥的方法。调用前，需通过 [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md)方法创建一个SymKeyGenerator实例。 |
 | [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) | 验签接口，定义基于公钥对签名数据进行验签的方法。调用前，需通过 [createVerify(algName: string): Verify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md)方法创建一个Verify实例。按序调用Verify实例中 的init、update（可选）、verify方法完成验签操作。验签操作的示例代码详见 [签名验签开发指导](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)。 |

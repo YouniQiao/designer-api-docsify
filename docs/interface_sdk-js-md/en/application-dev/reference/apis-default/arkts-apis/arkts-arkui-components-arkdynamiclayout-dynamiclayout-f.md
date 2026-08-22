@@ -31,12 +31,12 @@ Defines DynamicLayout Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithm | [LayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-i.md) | Yes |  |
+| algorithm | [LayoutAlgorithm](arkts-layoutalgorithm-i.md) | Yes |  |
 | content_ | CustomBuilder | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DynamicLayoutAttribute](arkts-arkuicomponentsarkdynamiclayout-dynamiclayoutattribute-i.md) |  |
+| [DynamicLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-c.md) |  |
 

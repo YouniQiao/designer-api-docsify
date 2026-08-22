@@ -29,3 +29,12 @@ Changes the file owner based on the file descriptor. This API returns the result
 | uid | number | Yes | New UID. |
 | gid | number | Yes | New GID. |
 
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+let stat = fileio.statSync(filePath);
+fileio.fchownSync(fd, stat.uid, stat.gid);
+```
+

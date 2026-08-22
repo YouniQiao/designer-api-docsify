@@ -38,8 +38,8 @@ static attachNodeAdapter(adapter: NodeAdapter, node: FrameNode): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| adapter | [NodeAdapter](arkts-arkui-framenode-nodeadapter-c.md) | 是 | 定义懒加载的NodeAdapter类。 |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 绑定的FrameNode节点。 |
+| adapter | [NodeAdapter](../../apis-default/arkts-apis/arkts-framenode-nodeadapter-c.md) | 是 | 定义懒加载的NodeAdapter类。 |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | 是 | 绑定的FrameNode节点。 |
 
 **返回值：**
 
@@ -65,6 +65,65 @@ NodeAdapter的构造函数。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+**示例**
+
+```TypeScript
+import { Row, NodeContainer, Entry, Component, Color, UIContext } from '@ohos.arkui.component';
+import { FrameNode, NodeController, typeNode } from '@ohos.arkui.node';
+
+class MultiThreadNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+  private uiContext: UIContext | null = null;
+  private worker: EAWorker = new EAWorker();
+
+  constructor() {
+    super();
+  }
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    if (!this.rootNode) {
+      this.rootNode = typeNode.createColumnNode(uiContext);
+      const frameNode = new FrameNode(uiContext); // 创建普通FrameNode（不支持多线程）
+      frameNode!.commonAttribute.width(100).height(100).backgroundColor(Color.Black);
+      this.rootNode!.append(frameNode);
+      this.uiContext = uiContext;
+      this.createNodeInMultiThreadAndMount(this.rootNode!);
+    }
+    return this.rootNode;
+  }
+
+  createNodeInMultiThreadAndMount(rootNode: FrameNode): void {
+    this.worker.start();
+    this.worker.postTask(() => {
+      const frameNode = new FrameNode(this.uiContext!, { supportMultiThread: true }); // 创建支持多线程操作的FrameNode
+      frameNode.commonAttribute.width(150).height(150).backgroundColor(Color.Pink);
+      frameNode.commonEvent.setOnClick((event: ClickEvent) => {
+        console.info(`click frameNode: ${JSON.stringfy(event)}`);
+      });
+      const mainWorker = EAWorker.main(); // 获取主线程的worker
+      if (mainWorker) {
+        mainWorker.postTask(() => {
+          rootNode.appendChild(frameNode); // 上树在主线程中执行
+        });
+      }
+    })
+    this.worker.quit();
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private multiThreadNodeController: MultiThreadNodeController = new MultiThreadNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.multiThreadNodeController)
+    }
+  }
+}
+```
+
 ## detachNodeAdapter
 
 ```TypeScript
@@ -87,7 +146,7 @@ static detachNodeAdapter(node: FrameNode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 要解除绑定的FrameNode节点。 |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | 是 | 要解除绑定的FrameNode节点。 |
 
 ## dispose
 
@@ -106,6 +165,94 @@ dispose(): void
 <!--Device-NodeAdapter-dispose(): void--><!--Device-NodeAdapter-dispose(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**示例**
+
+```TypeScript
+import { NodeController, FrameNode, BuilderNode } from '@kit.ArkUI';
+
+@Component
+struct TestComponent {
+  build() {
+    Column() {
+      Text('This is a BuilderNode.')
+        .fontSize(16)
+        .fontWeight(FontWeight.Bold)
+    }
+    .width('100%')
+    .backgroundColor(Color.Gray)
+  }
+
+  aboutToAppear() {
+    console.info('aboutToAppear');
+  }
+
+  aboutToDisappear() {
+    console.info('aboutToDisappear');
+  }
+}
+
+@Builder
+function buildComponent() {
+  TestComponent()
+}
+
+// 继承NodeController实现自定义UI控制器
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+  private builderNode: BuilderNode<[]> | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+    this.builderNode = new BuilderNode(uiContext, { selfIdealSize: { width: 200, height: 100 } });
+    this.builderNode.build(new WrappedBuilder(buildComponent));
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.size = { width: 200, height: 200 };
+      rootRenderNode.backgroundColor = 0xffd5d5d5;
+      rootRenderNode.appendChild(this.builderNode!.getFrameNode()!.getRenderNode());
+    }
+
+    return this.rootNode;
+  }
+
+  disposeFrameNode() {
+    if (this.rootNode !== null && this.builderNode !== null) {
+      // 解除rootNode对实体FrameNode节点的引用关系前，移除rootNode的所有子节点
+      this.rootNode.removeChild(this.builderNode.getFrameNode());
+      // 解除builderNode对实体FrameNode节点的引用关系
+      this.builderNode.dispose();
+      // 解除rootNode对实体FrameNode节点的引用关系
+      this.rootNode.dispose();
+    }
+  }
+
+  removeBuilderNode() {
+    const rootRenderNode = this.rootNode!.getRenderNode();
+    if (rootRenderNode !== null && this.builderNode !== null && this.builderNode.getFrameNode() !== null) {
+      rootRenderNode.removeChild(this.builderNode!.getFrameNode()!.getRenderNode());
+    }
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 4 }) {
+      NodeContainer(this.myNodeController)
+      Button('FrameNode dispose')
+        .onClick(() => {
+          this.myNodeController.disposeFrameNode();
+        })
+        .width('100%')
+    }
+  }
+}
+```
 
 ## getAllAvailableItems
 
@@ -129,7 +276,7 @@ getAllAvailableItems(): Array<FrameNode>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[FrameNode](arkts-arkui-framenode-c.md)&gt; | FrameNode数据节点集合。 |
+| Array&lt;[FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md)&gt; | FrameNode数据节点集合。 |
 
 ## insertItem
 
@@ -182,7 +329,9 @@ isDisposed(): boolean
 
 **示例**
 
-请参考[检验NodeAdapter是否有效示例。
+请参考[检验FrameNode是否有效示例。
+
+请参考检验NodeAdapter是否有效示例。
 
 ## moveItem
 
@@ -219,12 +368,12 @@ FrameNode绑定NodeAdapter时回调。
 
 > **说明：**
 > 
-> 在API版本26.0.0之前，该回调在宿主节点挂载到主树时触发。如果通过动态赋值方式设置该回调，开发者可以在调用[attachNodeAdapter](#attachnodeadapter)后
+> 在API版本26.0.0之前，该回调在宿主节点挂载到主树时触发。如果通过动态赋值方式设置该回调，开发者可以在调用[attachNodeAdapter](../../apis-default/arkts-apis/arkts-framenode-nodeadapter-c.md#attachnodeadapter)后
 > 、宿主节点挂载到主树前完成设置，并在宿主节点挂载到主树时收到该回调。
 > 
 > 从API版本26.0.0开始，该回调会在NodeAdapter绑定到宿主节点时立即触发，而不是在宿主节点挂载到主节点树时触发。此时宿主节点可能尚未挂载到主节点树。如果回调逻辑依赖节点已挂载（例如访问布局信息或执行动画），建议在
 > 该回调中注册onAppear，并将相关逻辑放入onAppear中执行。如果通过动态赋值方式设置该回调，请在调用
-> [attachNodeAdapter](#attachnodeadapter)前完成设置，否则回调可能无法触发。
+> [attachNodeAdapter](../../apis-default/arkts-apis/arkts-framenode-nodeadapter-c.md#attachnodeadapter)前完成设置，否则回调可能无法触发。
 
 **起始版本：** 12
 
@@ -240,7 +389,7 @@ FrameNode绑定NodeAdapter时回调。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 绑定NodeAdapter的FrameNode节点。 |
+| target | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | 是 | 绑定NodeAdapter的FrameNode节点。 |
 
 ## onCreateChild
 
@@ -270,7 +419,7 @@ onCreateChild?(index: number): FrameNode
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) | 返回开发者创建的FrameNode节点。 |
+| [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | 返回开发者创建的FrameNode节点。 |
 
 ## onDetachFromNode
 
@@ -313,7 +462,7 @@ onDisposeChild?(id: number, node: FrameNode): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | number | 是 | 即将销毁的子节点id。 |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 即将销毁的FrameNode节点。 |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | 是 | 即将销毁的FrameNode节点。 |
 
 ## onGetChildId
 
@@ -368,7 +517,7 @@ onUpdateChild?(id: number, node: FrameNode): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | number | 是 | 复用节点的id。 |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 被复用的FrameNode节点。 |
+| node | [FrameNode](../../apis-default/arkts-apis/arkts-framenode-c.md) | 是 | 被复用的FrameNode节点。 |
 
 ## reloadAllItems
 
@@ -410,7 +559,7 @@ reloadItem(start: number, count: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | number | 是 | 重新加载的节点开始索引值。<br/>取值范围：[0, +∞) |
+| start | number | 是 | 重新加载的节点开始索引值。<br/>取值范围：0, +∞) |
 | count | number | 是 | 重新加载数据节点的数量。<br/>取值范围：[0, +∞) |
 
 ## removeItem
@@ -437,4 +586,8 @@ removeItem(start: number, count: number): void
 | --- | --- | --- | --- |
 | start | number | 是 | 删除的节点开始索引值。<br/>取值范围：[0, +∞) |
 | count | number | 是 | 删除数据节点的数量。<br/>取值范围：[0, +∞) |
+
+**示例**
+
+请参考[NodeAdapter使用示例。
 

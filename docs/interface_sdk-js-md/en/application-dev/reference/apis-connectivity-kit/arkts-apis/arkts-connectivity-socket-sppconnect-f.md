@@ -14,7 +14,7 @@ function sppConnect(deviceId: string, options: SppOptions, callback: AsyncCallba
 
 Connects to a remote device over the socket.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -28,7 +28,7 @@ Connects to a remote device over the socket.
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
 | options | [SppOptions](arkts-connectivity-socket-sppoptions-i.md) | Yes | Indicates the connect parameters [SppOptions](arkts-connectivity-socket-sppoptions-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return a client socket ID. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return a client socket ID. |
 
 **Error codes:**
 

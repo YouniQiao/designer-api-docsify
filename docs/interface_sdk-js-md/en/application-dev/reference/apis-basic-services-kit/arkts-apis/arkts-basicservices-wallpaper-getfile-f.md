@@ -29,7 +29,7 @@ Obtains a file of the wallpaper of the specified type. Returns the file descript
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | the callback of getFile. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | the callback of getFile. |
 
 **Examples**
 
@@ -42,6 +42,16 @@ wallpaper.getFile(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessErro
         return;
     }
     console.info(`success to getFile: ${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+wallpaper.getFile(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: number) => {
+    console.info(`success to getFile: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`failed to getFile because: ${JSON.stringify(error)}`);
 });
 ```
 
@@ -78,13 +88,5 @@ Obtains a file of the wallpaper of the specified type. Returns the file descript
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-wallpaper.getFile(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: number) => {
-    console.info(`success to getFile: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`failed to getFile because: ${JSON.stringify(error)}`);
-});
-```
+See [getFile](#getfile)
 

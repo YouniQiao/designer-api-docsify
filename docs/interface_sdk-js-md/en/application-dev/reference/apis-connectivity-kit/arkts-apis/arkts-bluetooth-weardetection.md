@@ -2,7 +2,7 @@
 
 Provides methods to manage the wearing detection function.
 
-**Since:** 26.0.0
+**Since:** 11
 
 <!--Device-unnamed-declare namespace wearDetection--><!--Device-unnamed-declare namespace wearDetection-End-->
 

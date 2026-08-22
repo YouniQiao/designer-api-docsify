@@ -98,6 +98,24 @@ httpRequest.request("EXAMPLE_URL").then(data => {
 });
 ```
 
+```TypeScript
+import { http } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let httpRequest = http.createHttp();
+httpRequest.request("EXAMPLE_URL").then(data => {
+  const httpResponseCache = http.createHttpResponseCache();
+  httpResponseCache.delete().then(() => {
+    console.info("success");
+  }).catch((err: BusinessError) => {
+    console.error("fail");
+  });
+  httpRequest.destroy();
+}).catch((error: BusinessError) => {
+  console.error("errcode" + JSON.stringify(error));
+});
+```
+
 ## delete
 
 ```TypeScript
@@ -122,23 +140,7 @@ delete(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let httpRequest = http.createHttp();
-httpRequest.request("EXAMPLE_URL").then(data => {
-  const httpResponseCache = http.createHttpResponseCache();
-  httpResponseCache.delete().then(() => {
-    console.info("success");
-  }).catch((err: BusinessError) => {
-    console.error("fail");
-  });
-  httpRequest.destroy();
-}).catch((error: BusinessError) => {
-  console.error("errcode" + JSON.stringify(error));
-});
-```
+参见 [delete](#delete)
 
 ## flush
 
@@ -214,30 +216,6 @@ httpRequest.request("EXAMPLE_URL", (err: BusinessError<void>|null, data: http.Ht
 });
 ```
 
-## flush
-
-```TypeScript
-flush(): Promise<void>
-```
-
-将缓存中的数据写入文件系统，以便在下一个HTTP请求中访问所有缓存数据，使用Promise方式作为异步方法。
-
-**起始版本：** 9
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-HttpResponseCache-flush(): Promise<void>--><!--Device-HttpResponseCache-flush(): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -279,4 +257,30 @@ promise.then((data: http.HttpResponse) => {
   console.error(`error: ${JSON.stringify(err)}`);
 });
 ```
+
+## flush
+
+```TypeScript
+flush(): Promise<void>
+```
+
+将缓存中的数据写入文件系统，以便在下一个HTTP请求中访问所有缓存数据，使用Promise方式作为异步方法。
+
+**起始版本：** 9
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HttpResponseCache-flush(): Promise<void>--><!--Device-HttpResponseCache-flush(): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [flush](#flush)
 

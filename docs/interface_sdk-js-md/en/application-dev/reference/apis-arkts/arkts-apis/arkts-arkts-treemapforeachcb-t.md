@@ -20,5 +20,5 @@ The type of TreeMap callback function.
 | --- | --- | --- | --- |
 | value | V | Yes | The value of current element |
 | key | K | Yes | The key of current element |
-| map | [TreeMap](arkts-arkts-utiltreemap-treemap-c.md)&lt;K, V&gt; | Yes | The TreeMap instance being traversed |
+| map | [TreeMap](arkts-arkts-util-treemap-treemap-c.md)&lt;K, V&gt; | Yes | The TreeMap instance being traversed |
 

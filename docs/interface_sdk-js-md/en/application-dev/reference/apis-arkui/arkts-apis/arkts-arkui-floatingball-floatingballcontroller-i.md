@@ -59,92 +59,6 @@ floatingBallController.getFloatingBallWindowInfo().then((data: floatingBall.Floa
 });
 ```
 
-## offClick
-
-```TypeScript
-offClick(callback?: Callback<void>): void
-```
-
-Unregister floating ball click event listener.
-
-**Since:** 23
-
-<!--Device-FloatingBallController-offClick(callback?: Callback<void>): void--><!--Device-FloatingBallController-offClick(callback?: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Indicates the callback function. If not provided, all callbacks for the given event type will be removed. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes: <br>1.Mandatory parameters are left unspecified. <br>2.Callback is null or not callable. |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
-
-## offDestroy
-
-```TypeScript
-offDestroy(callback?: Callback<string>): void
-```
-
-Unregister floating ball destroy event listener.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FloatingBallController-offDestroy(callback?: Callback<string>): void--><!--Device-FloatingBallController-offDestroy(callback?: Callback<string>): void-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Indicates the callback function. If not provided, all callbacks for the given event type will be removed. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible cause: Callback is null or not callable. |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
-
-## offStateChange
-
-```TypeScript
-offStateChange(callback?: Callback<FloatingBallState>): void
-```
-
-Unregister floating ball stateChange event listener.
-
-**Since:** 23
-
-<!--Device-FloatingBallController-offStateChange(callback?: Callback<FloatingBallState>): void--><!--Device-FloatingBallController-offStateChange(callback?: Callback<FloatingBallState>): void-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | No | Indicates the callback function. If not provided, all callbacks for the given event type will be removed. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes: <br>1.Mandatory parameters are left unspecified. <br>2.Callback is null or not callable. |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
-
 ## off('click')
 
 ```TypeScript
@@ -164,7 +78,7 @@ Unregisters the listener for click events of the floating ball.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'click' | Yes | Event type. The event **'click'** is triggered when the floating ball is tapped. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback invoked when the floating ball is tapped. It does not return any parameter. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback invoked when the floating ball is tapped. It does not return any parameter. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
@@ -206,7 +120,7 @@ Unregisters the listener for lifecycle state changes of the floating ball.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the floating ball lifecycle state changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | No | Callback used to return the floating ball lifecycle state. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | No | Callback used to return the floating ball lifecycle state. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
@@ -229,17 +143,17 @@ try {
 }
 ```
 
-## onClick
+## offClick
 
 ```TypeScript
-onClick(callback: Callback<void>): void
+offClick(callback?: Callback<void>): void
 ```
 
-Register floating ball click event listener.
+Unregister floating ball click event listener.
 
 **Since:** 23
 
-<!--Device-FloatingBallController-onClick(callback: Callback<void>): void--><!--Device-FloatingBallController-onClick(callback: Callback<void>): void-End-->
+<!--Device-FloatingBallController-offClick(callback?: Callback<void>): void--><!--Device-FloatingBallController-offClick(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -247,30 +161,29 @@ Register floating ball click event listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Used to handle {'click'} command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Indicates the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes: <br>1.Mandatory parameters are left unspecified. <br>2.Callback is null or not callable. |
-| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) | Repeated floating ball operation. |
 | [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
 | [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
 
-## onDestroy
+## offDestroy
 
 ```TypeScript
-onDestroy(callback: Callback<string>): void
+offDestroy(callback?: Callback<string>): void
 ```
 
-Register floating ball destroy event listener.
+Unregister floating ball destroy event listener.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FloatingBallController-onDestroy(callback: Callback<string>): void--><!--Device-FloatingBallController-onDestroy(callback: Callback<string>): void-End-->
+<!--Device-FloatingBallController-offDestroy(callback?: Callback<string>): void--><!--Device-FloatingBallController-offDestroy(callback?: Callback<string>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -278,28 +191,27 @@ Register floating ball destroy event listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Used to handle {'destroy'} command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Indicates the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible cause: Callback is null or not callable. |
-| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) | Repeated floating ball operation. |
 | [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
 | [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
 
-## onStateChange
+## offStateChange
 
 ```TypeScript
-onStateChange(callback: Callback<FloatingBallState>): void
+offStateChange(callback?: Callback<FloatingBallState>): void
 ```
 
-Register floating ball stateChange event listener.
+Unregister floating ball stateChange event listener.
 
 **Since:** 23
 
-<!--Device-FloatingBallController-onStateChange(callback: Callback<FloatingBallState>): void--><!--Device-FloatingBallController-onStateChange(callback: Callback<FloatingBallState>): void-End-->
+<!--Device-FloatingBallController-offStateChange(callback?: Callback<FloatingBallState>): void--><!--Device-FloatingBallController-offStateChange(callback?: Callback<FloatingBallState>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -307,14 +219,13 @@ Register floating ball stateChange event listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | Yes | Used to handle {'stateChange'} command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | No | Indicates the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes: <br>1.Mandatory parameters are left unspecified. <br>2.Callback is null or not callable. |
-| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) | Repeated floating ball operation. |
 | [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
 | [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
 
@@ -337,7 +248,7 @@ Registers a listener for click events of the floating ball. To prevent memory le
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'click' | Yes | Event type. The event **'click'** is triggered when the floating ball is tapped. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback invoked when the floating ball is tapped. It does not return any parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the floating ball is tapped. It does not return any parameter. |
 
 **Error codes:**
 
@@ -380,7 +291,7 @@ Registers a listener for lifecycle state changes of the floating ball. To preven
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the floating ball lifecycle state changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | Yes | Callback used to return the floating ball lifecycle state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | Yes | Callback used to return the floating ball lifecycle state. |
 
 **Error codes:**
 
@@ -404,6 +315,95 @@ try {
 }
 ```
 
+## onClick
+
+```TypeScript
+onClick(callback: Callback<void>): void
+```
+
+Register floating ball click event listener.
+
+**Since:** 23
+
+<!--Device-FloatingBallController-onClick(callback: Callback<void>): void--><!--Device-FloatingBallController-onClick(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Used to handle {'click'} command. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes: <br>1.Mandatory parameters are left unspecified. <br>2.Callback is null or not callable. |
+| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) | Repeated floating ball operation. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
+
+## onDestroy
+
+```TypeScript
+onDestroy(callback: Callback<string>): void
+```
+
+Register floating ball destroy event listener.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FloatingBallController-onDestroy(callback: Callback<string>): void--><!--Device-FloatingBallController-onDestroy(callback: Callback<string>): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Used to handle {'destroy'} command. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible cause: Callback is null or not callable. |
+| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) | Repeated floating ball operation. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
+
+## onStateChange
+
+```TypeScript
+onStateChange(callback: Callback<FloatingBallState>): void
+```
+
+Register floating ball stateChange event listener.
+
+**Since:** 23
+
+<!--Device-FloatingBallController-onStateChange(callback: Callback<FloatingBallState>): void--><!--Device-FloatingBallController-onStateChange(callback: Callback<FloatingBallState>): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | Yes | Used to handle {'stateChange'} command. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes: <br>1.Mandatory parameters are left unspecified. <br>2.Callback is null or not callable. |
+| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) | Repeated floating ball operation. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
+
 ## restoreMainWindow
 
 ```TypeScript
@@ -424,7 +424,7 @@ Restores the main window of the application and loads the specified page. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Want used for loading the specified page. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want used for loading the specified page. |
 
 **Return value:**
 

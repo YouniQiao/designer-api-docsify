@@ -27,7 +27,7 @@ Checks whether a specified application can show as a floating window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | The callback of canShowFloating result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | The callback of canShowFloating result. |
 
 **Examples**
 
@@ -38,6 +38,12 @@ settings.canShowFloating((err:Error, status: boolean) => {
     return;
   }
   console.info('Checks whether a specified application can show as float window.');
+});
+```
+
+```TypeScript
+settings.canShowFloating().then((status:boolean) => {
+    console.info('Checks whether a specified application can show as float window.');
 });
 ```
 
@@ -66,9 +72,5 @@ Checks whether a specified application can show as a floating window.
 
 **Examples**
 
-```TypeScript
-settings.canShowFloating().then((status:boolean) => {
-    console.info('Checks whether a specified application can show as float window.');
-});
-```
+See [canShowFloating](#canshowfloating)
 

@@ -28,7 +28,7 @@ Defines the MediaCachedImage component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [PixelMap](../../apis-arkui/arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkuidrawabledescriptor-drawabledescriptor-c.md) \| [ASTCResource](arkts-mediacachedimage-astcresource-i-sys.md) | Yes | mediaCachedImage resource type. |
+| src | [PixelMap](../../apis-arkui/arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](../arkts-apis/arkts-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ASTCResource](arkts-mediacachedimage-astcresource-i-sys.md) | Yes | mediaCachedImage resource type. |
 | content_ | [CustomBuilder](../arkts-apis/arkts-custombuilder-t.md) | No | container |
 
 **Return value:**

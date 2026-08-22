@@ -68,6 +68,78 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 })
 ```
 
+```TypeScript
+import { image } from "@kit.ImageKit";
+import { effectKit } from "@kit.ArkGraphics2D";
+import { BusinessError } from "@kit.BasicServicesKit";
+
+const color = new ArrayBuffer(96);
+let opts : image.InitializationOptions = {
+  editable: true,
+  pixelFormat: 3,
+  size: {
+    height: 4,
+    width: 6
+  }
+}
+
+image.createPixelMap(color, opts).then((pixelMap) => {
+  effectKit.createColorPicker(pixelMap, [0, 0, 1, 1]).then(colorPicker => {
+    console.info("color picker=" + colorPicker);
+  }).catch( (reason : BusinessError) => {
+    console.error("error=" + reason.message);
+  })
+})
+```
+
+```TypeScript
+import { image } from "@kit.ImageKit";
+import { effectKit } from "@kit.ArkGraphics2D";
+
+const color = new ArrayBuffer(96);
+let opts : image.InitializationOptions = {
+  editable: true,
+  pixelFormat: 3,
+  size: {
+    height: 4,
+    width: 6
+  }
+}
+image.createPixelMap(color, opts).then((pixelMap) => {
+  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
+    if (error) {
+      console.error('Failed to create color picker.');
+    } else {
+      console.info('Succeeded in creating color picker.');
+    }
+  })
+})
+```
+
+```TypeScript
+import { image } from "@kit.ImageKit";
+import { effectKit } from "@kit.ArkGraphics2D";
+
+const color = new ArrayBuffer(96);
+let opts : image.InitializationOptions = {
+  editable: true,
+  pixelFormat: 3,
+  size: {
+    height: 4,
+    width: 6
+  }
+}
+image.createPixelMap(color, opts).then((pixelMap) => {
+  effectKit.createColorPicker(pixelMap, [0, 0, 1, 1], (error, colorPicker) => {
+    if (error) {
+      console.error('Failed to create color picker.');
+    } else {
+      console.info('Succeeded in creating color picker.');
+    }
+  })
+})
+```
+
 
 ## createColorPicker
 
@@ -108,29 +180,7 @@ function createColorPicker(source: image.PixelMap, region: Array<double>): Promi
 
 **示例**
 
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-import { BusinessError } from "@kit.BasicServicesKit";
-
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, [0, 0, 1, 1]).then(colorPicker => {
-    console.info("color picker=" + colorPicker);
-  }).catch( (reason : BusinessError) => {
-    console.error("error=" + reason.message);
-  })
-})
-```
+参见 [createColorPicker](#createcolorpicker)
 
 
 ## createColorPicker
@@ -166,29 +216,7 @@ function createColorPicker(source: image.PixelMap, callback: AsyncCallback<Color
 
 **示例**
 
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-    }
-  })
-})
-```
+参见 [createColorPicker](#createcolorpicker)
 
 
 ## createColorPicker
@@ -225,27 +253,5 @@ function createColorPicker(source: image.PixelMap, region: Array<double>, callba
 
 **示例**
 
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, [0, 0, 1, 1], (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-    }
-  })
-})
-```
+参见 [createColorPicker](#createcolorpicker)
 

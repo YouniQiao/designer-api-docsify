@@ -47,6 +47,30 @@ batteryStats.getBatteryStats()
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+batteryStats.getBatteryStats((err: Error, data : batteryStats.BatteryStatsInfo[]) => {
+    if (typeof err === 'undefined') {
+        console.info('battery statistics info: ' + data);
+    } else {
+        console.error('get battery statistics failed, err: ' + err);
+    }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+batteryStats.getBatteryStats((err: Error | null, data : batteryStats.BatteryStatsInfo[] | undefined) => {
+    if (!err) {
+        console.info('battery statistics info: ' + data);
+    } else {
+        console.error('get battery statistics failed, err: ' + err);
+    }
+});
+```
+
 
 ## getBatteryStats
 
@@ -80,27 +104,5 @@ function getBatteryStats(callback: AsyncCallback<Array<BatteryStatsInfo>>): void
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-batteryStats.getBatteryStats((err: Error, data : batteryStats.BatteryStatsInfo[]) => {
-    if (typeof err === 'undefined') {
-        console.info('battery statistics info: ' + data);
-    } else {
-        console.error('get battery statistics failed, err: ' + err);
-    }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-batteryStats.getBatteryStats((err: Error | null, data : batteryStats.BatteryStatsInfo[] | undefined) => {
-    if (!err) {
-        console.info('battery statistics info: ' + data);
-    } else {
-        console.error('get battery statistics failed, err: ' + err);
-    }
-});
-```
+参见 [getBatteryStats](#getbatterystats)
 

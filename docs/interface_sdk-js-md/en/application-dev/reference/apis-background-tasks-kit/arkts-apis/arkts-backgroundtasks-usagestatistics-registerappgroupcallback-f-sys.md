@@ -28,8 +28,8 @@ Register appGroup change callback to service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| groupCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AppGroupCallbackInfo](arkts-backgroundtasks-usagestatistics-appgroupcallbackinfo-i-sys.md)&gt; | Yes | callback of AppGroupCallbackInfo when the group of app changed. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the registration is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| groupCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AppGroupCallbackInfo](arkts-backgroundtasks-usagestatistics-appgroupcallbackinfo-i-sys.md)&gt; | Yes | callback of AppGroupCallbackInfo when the group of app changed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the registration is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -46,6 +46,24 @@ Register appGroup change callback to service.
 | [10100001](../errorcode-DeviceUsageStatistics.md#10100001-duplicate-application-group-operation) | Repeated operation on the application group. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function onBundleGroupChanged(res: usageStatistics.AppGroupCallbackInfo) {
+  console.info('BUNDLE_ACTIVE registerAppGroupCallBack RegisterGroupCallBack callback success.');
+  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result appOldGroup is : ' + res.appOldGroup);
+  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result appNewGroup is : ' + res.appNewGroup);
+  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result changeReason is : ' + res.changeReason);
+  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result userId is : ' + res.userId);
+  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result bundleName is : ' + res.bundleName);
+};
+usageStatistics.registerAppGroupCallBack(onBundleGroupChanged).then( () => {
+  console.info('BUNDLE_ACTIVE registerAppGroupCallBack promise succeeded.');
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE registerAppGroupCallBack promise failed. code is: ' + err.code + ',message is: ' + err.message);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -90,7 +108,7 @@ Register appGroup change callback to service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| groupCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AppGroupCallbackInfo](arkts-backgroundtasks-usagestatistics-appgroupcallbackinfo-i-sys.md)&gt; | Yes | callback of AppGroupCallbackInfo when the group of app changed. |
+| groupCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AppGroupCallbackInfo](arkts-backgroundtasks-usagestatistics-appgroupcallbackinfo-i-sys.md)&gt; | Yes | callback of AppGroupCallbackInfo when the group of app changed. |
 
 **Return value:**
 
@@ -114,21 +132,5 @@ Register appGroup change callback to service.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function onBundleGroupChanged(res: usageStatistics.AppGroupCallbackInfo) {
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack RegisterGroupCallBack callback success.');
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result appOldGroup is : ' + res.appOldGroup);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result appNewGroup is : ' + res.appNewGroup);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result changeReason is : ' + res.changeReason);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result userId is : ' + res.userId);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result bundleName is : ' + res.bundleName);
-};
-usageStatistics.registerAppGroupCallBack(onBundleGroupChanged).then( () => {
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack promise succeeded.');
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE registerAppGroupCallBack promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
+See [registerAppGroupCallBack](#registerappgroupcallback)
 

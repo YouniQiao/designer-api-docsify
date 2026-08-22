@@ -51,6 +51,13 @@ async function Demo(surfaceId: string) {
 }
 ```
 
+```TypeScript
+async function CreatePixelMapFromSurfaceSync(surfaceId: string) {
+  let pixelMap : image.PixelMap = image.createPixelMapFromSurfaceSync(surfaceId);
+  return pixelMap;
+}
+```
+
 
 ## createPixelMapFromSurfaceSync
 
@@ -88,10 +95,5 @@ Creates a PixelMap object from surface id.
 
 **Examples**
 
-```TypeScript
-async function CreatePixelMapFromSurfaceSync(surfaceId: string) {
-  let pixelMap : image.PixelMap = image.createPixelMapFromSurfaceSync(surfaceId);
-  return pixelMap;
-}
-```
+See [createPixelMapFromSurfaceSync](#createpixelmapfromsurfacesync)
 

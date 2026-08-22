@@ -77,8 +77,8 @@ import { JSON } from '@kit.ArkTS';
 | [AutoFinalizerCleaner](arkts-arkts-util-autofinalizercleaner-c.md) | 用于通过开发者自定义回调释放由开发者管理的资源的 cleaner。 |
 | [Base64](arkts-arkts-util-base64-c.md) | 将包含 Base64 数据的字符串或 Uint8Array 解码为重新分配的 Uint8Array。 |
 | [Base64Helper](arkts-arkts-util-base64helper-c.md) | 提供 Base64 和 Base64URL 的编解码。Base64 编码表包含 64 个字符，分别为大写字母（A-Z）、小写字母（a-z）、数字（0-9） 以及特殊字符加号（+）和斜杠（/）。编码时，原始数据按三个字节一组进行划分，每组包含一个 6 位的数字。然后使用 Base64 编码表中对应的字符来表示这些数字。如果最后一组只包含一个或两个字节，则使用等号（=）进行填充。Base64URL 编码表包含 64 个字符，分别为大写字母（A-Z）、小写字母（a-z）、数字（0-9）以及特殊字符加号（+）和斜杠（/）。Base64URL 编码结果 不包含等号（=）。 |
-| [LRUCache](arkts-arkts-util-lrucache-c.md) | 提供在缓存已满时丢弃最近最少使用的数据以腾出空间给新元素的 API。此类使用最近最少使用（LRU）算法，该算法认为最近 使用的数据可能在不久的将来再次被访问，而最少访问的数据是最不具价值的数据，应从缓存中移除。 |
 | [LruBuffer](arkts-arkts-util-lrubuffer-c.md) | LruBuffer 算法在缓存空间不足时使用新数据替换最不常使用的数据。 |
+| [LRUCache](arkts-arkts-util-lrucache-c.md) | 提供在缓存已满时丢弃最近最少使用的数据以腾出空间给新元素的 API。此类使用最近最少使用（LRU）算法，该算法认为最近 使用的数据可能在不久的将来再次被访问，而最少访问的数据是最不具价值的数据，应从缓存中移除。 |
 | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | 提供比较有理数、获取分子和分母的 API。例如，可以使用 **toString()** API 将有理数转换为字符串。 |
 | [Scope](arkts-arkts-util-scope-c.md) | Scope 接口用于描述字段的有效范围。 |
 | [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | 提供定义字段有效范围的 API。此类的构造函数创建具有上下限的可比较对象。 |

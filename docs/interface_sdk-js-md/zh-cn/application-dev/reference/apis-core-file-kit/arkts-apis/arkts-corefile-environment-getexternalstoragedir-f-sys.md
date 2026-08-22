@@ -39,3 +39,16 @@ function getExternalStorageDir(): string
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | 13900042 | Unknown error. |
 
+**示例**
+
+```TypeScript
+function getExternalStorageDirExample() {
+  try {
+    let path = Environment.getExternalStorageDir();
+    console.info(`Succeeded in getExternalStorageDir, path is ${path}`);
+  } catch (err) {
+    console.error(`Failed to getExternalStorageDir. Code: ${err.code}, message: ${err.message}`);
+  }
+}
+```
+

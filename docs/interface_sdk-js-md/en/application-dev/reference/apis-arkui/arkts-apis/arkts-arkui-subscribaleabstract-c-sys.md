@@ -53,6 +53,13 @@ Constructor.
 
 **System API:** This is a system API.
 
+**Examples**
+
+```TypeScript
+let para: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(para);
+```
+
 ## notifyPropertyHasChanged
 
 ```TypeScript

@@ -16,5 +16,5 @@ Represents a FrameNode of the **ListItemGroup** type. Only ListItem child compon
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [TypedFrameNode](../../apis-default/arkts-apis/arkts-framenode-typedframenode-c.md)&lt;ListItemGroupInterface, ListItemGroupAttribute&gt;
+**Property type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;ListItemGroupInterface, ListItemGroupAttribute&gt;
 

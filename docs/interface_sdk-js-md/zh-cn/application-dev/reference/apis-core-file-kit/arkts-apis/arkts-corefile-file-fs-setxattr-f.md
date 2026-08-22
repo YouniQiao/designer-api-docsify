@@ -51,3 +51,38 @@ declare function setxattr(path: string, key: string, value: string): Promise<voi
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let attrKey = "user.comment";
+let attrValue = "Test file.";
+
+fileIo.setxattr(filePath, attrKey, attrValue).then(() => {
+  console.info(`Succeeded in setting extended attribute.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set extended attribute. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let attrKey = "user.comment";
+let attrValue = "Test file.";
+
+fileIo.setxattr(filePath, attrKey, attrValue).then(() => {
+  console.info(`Succeeded in setting extended attribute.`);
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to set extended attribute. Code: ${err.code}, message: ${err.message}`);
+});
+```
+

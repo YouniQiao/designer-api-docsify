@@ -54,6 +54,61 @@ declare function mkdtemp(prefix: string): Promise<string>
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+fileIo.mkdtemp(pathDir + "/XXXXXX").then((dir: string) => {
+  console.info(`Succeeded in making temporary directory.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to make temporary directory. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+fileIo.mkdtemp(pathDir + "/XXXXXX").then((dir: string) => {
+  console.info(`Succeeded in making temporary directory.`);
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to make temporary directory. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+fileIo.mkdtemp(pathDir + "/XXXXXX", (err: BusinessError, res: string) => {
+  if (err) {
+    console.error(`Failed to make temporary directory. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in making temporary directory.`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+fileIo.mkdtemp(pathDir + "/XXXXXX", (err: BusinessError<void> | null, res: string | undefined) => {
+  if (err) {
+    console.error(`Failed to make temporary directory. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in making temporary directory.`);
+  }
+});
+```
+
 
 ## mkdtemp
 
@@ -95,4 +150,8 @@ declare function mkdtemp(prefix: string, callback: AsyncCallback<string>): void
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**示例**
+
+参见 [mkdtemp](#mkdtemp)
 

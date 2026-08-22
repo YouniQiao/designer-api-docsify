@@ -20,3 +20,22 @@ Represents video data. It is a child class of [File](arkts-arkdata-unifieddatach
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
+**Examples**
+
+```TypeScript
+import { unifiedDataChannel } from '@kit.ArkData';
+import { fileUri } from '@kit.CoreFileKit'
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let context = this.context;
+    let pathDir = context.filesDir;
+    let video = new unifiedDataChannel.Video();
+    let filePath = pathDir + '/test.mp4';
+    video.videoUri =fileUri.getUriFromPath(filePath);
+  }
+}
+```
+

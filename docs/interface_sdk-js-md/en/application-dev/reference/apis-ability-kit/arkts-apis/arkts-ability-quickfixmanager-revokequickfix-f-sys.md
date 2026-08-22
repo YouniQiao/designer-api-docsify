@@ -29,7 +29,7 @@ Revokes quick fix. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the bundle for which the patch needs to be revoked. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If quick fix is revoked, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If quick fix is revoked, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -52,6 +52,19 @@ quickFixManager.revokeQuickFix(bundleName, (err) => {
   if (err.code) {
     console.error(`revokeQuickFix ${bundleName} failed, err code: ${err.code}, err msg: ${err.message}.`);
   }
+});
+```
+
+```TypeScript
+import { quickFixManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'com.example.myapplication';
+
+quickFixManager.revokeQuickFix(bundleName).then(() => {
+  console.info(`revokeQuickFix ${bundleName} success.`);
+}).catch((err: BusinessError) => {
+  console.error(`revokeQuickFix ${bundleName} failed, err code: ${err.code}, err msg: ${err.message}.`);
 });
 ```
 
@@ -98,16 +111,5 @@ Revokes quick fix. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.example.myapplication';
-
-quickFixManager.revokeQuickFix(bundleName).then(() => {
-  console.info(`revokeQuickFix ${bundleName} success.`);
-}).catch((err: BusinessError) => {
-  console.error(`revokeQuickFix ${bundleName} failed, err code: ${err.code}, err msg: ${err.message}.`);
-});
-```
+See [revokeQuickFix](#revokequickfix)
 

@@ -24,7 +24,7 @@ The address object of a BLE peripheral device, including the address type.
 
 **Type:** BluetoothAddress
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +42,11 @@ This field is used to identify the discovery mode and supported capabilities of 
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ScanResult-advertiseFlags?: int--><!--Device-ScanResult-advertiseFlags?: int-End-->
 
@@ -62,11 +62,11 @@ Map of advertising data fields.
 
 **Type:** Map&lt;int, Uint8Array&gt;
 
-**Since:** 26.0.0
+**Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ScanResult-advertisingDataMap?: Map<int, Uint8Array>--><!--Device-ScanResult-advertisingDataMap?: Map<int, Uint8Array>-End-->
 
@@ -162,11 +162,11 @@ Map of manufacturer data.
 
 **Type:** Map&lt;int, Uint8Array&gt;
 
-**Since:** 26.0.0
+**Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ScanResult-manufacturerDataMap?: Map<int, Uint8Array>--><!--Device-ScanResult-manufacturerDataMap?: Map<int, Uint8Array>-End-->
 
@@ -202,11 +202,11 @@ Map of service data.
 
 **Type:** Map&lt;string, Uint8Array&gt;
 
-**Since:** 26.0.0
+**Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ScanResult-serviceDataMap?: Map<string, Uint8Array>--><!--Device-ScanResult-serviceDataMap?: Map<string, Uint8Array>-End-->
 
@@ -222,11 +222,11 @@ The list of service uuid.
 
 **Type:** string[]
 
-**Since:** 26.0.0
+**Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ScanResult-serviceUuids?: string[]--><!--Device-ScanResult-serviceUuids?: string[]-End-->
 
@@ -242,11 +242,11 @@ The tx power level of the packet in dBm.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ScanResult-txPowerLevel?: int--><!--Device-ScanResult-txPowerLevel?: int-End-->
 

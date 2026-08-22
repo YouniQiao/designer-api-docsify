@@ -66,6 +66,154 @@ static auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callba
 ArkTS-Dyn示例：
 
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userAuth = new osAccount.UserAuth();
+let challenge: Uint8Array = new Uint8Array([0]);
+let authType: osAccount.AuthType = osAccount.AuthType.PIN;
+let authTrustLevel: osAccount.AuthTrustLevel = osAccount.AuthTrustLevel.ATL1;
+try {
+  userAuth.auth(challenge, authType, authTrustLevel, {
+    onResult: (result: number, extraInfo: osAccount.AuthResult) => {
+        console.info('auth result = ' + result);
+        console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userAuth = new osAccount.UserAuth();
+let challenge: Uint8Array = new Uint8Array([0]);
+let authType: osAccount.AuthType = osAccount.AuthType.PIN;
+let authTrustLevel: osAccount.AuthTrustLevel = osAccount.AuthTrustLevel.ATL1;
+try {
+  userAuth.auth(challenge, authType, authTrustLevel, {
+    onResult: (result: int, extraInfo: osAccount.AuthResult) => {
+      console.info('auth result = ' + result);
+      console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
+    }
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userAuth = new osAccount.UserAuth();
+let challenge: Uint8Array = new Uint8Array([0]);
+let authType: osAccount.AuthType = osAccount.AuthType.PIN;
+let authTrustLevel: osAccount.AuthTrustLevel = osAccount.AuthTrustLevel.ATL1;
+let options: osAccount.AuthOptions = {
+  accountId: 100
+};
+try {
+  userAuth.auth(challenge, authType, authTrustLevel, options, {
+    onResult: (result: number, extraInfo: osAccount.AuthResult) => {
+      console.info('auth result = ' + result);
+      console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userAuth = new osAccount.UserAuth();
+let challenge: Uint8Array = new Uint8Array([0]);
+let authType: osAccount.AuthType = osAccount.AuthType.PIN;
+let authTrustLevel: osAccount.AuthTrustLevel = osAccount.AuthTrustLevel.ATL1;
+let options: osAccount.AuthOptions = {
+  accountId: 100
+};
+try {
+  userAuth.auth(challenge, authType, authTrustLevel, options, {
+    onResult: (result: int, extraInfo: osAccount.AuthResult) => {
+      console.info('auth result = ' + result);
+      console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
+    }
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { AsyncCallback } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let plugin: osAccount.DomainPlugin = {
+  auth: (domainAccountInfo: osAccount.DomainAccountInfo, credential: Uint8Array,
+        callback: osAccount.IUserAuthCallback) => {
+    // 模拟认证
+    // 通知认证结果
+    let result: osAccount.AuthResult = {
+      token: new Uint8Array([0]),
+      remainTimes: 5,
+      freezingTime: 0
+    };
+    callback.onResult(0, result);
+  },
+  authWithPopup: (domainAccountInfo: osAccount.DomainAccountInfo,
+                  callback: osAccount.IUserAuthCallback) => {},
+  authWithToken: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
+                  callback: osAccount.IUserAuthCallback) => {},
+  getAccountInfo: (options: osAccount.GetDomainAccountInfoPluginOptions,
+                  callback: AsyncCallback<osAccount.DomainAccountInfo>) => {},
+  getAuthStatusInfo: (domainAccountInfo: osAccount.DomainAccountInfo,
+                    callback: AsyncCallback<osAccount.AuthStatusInfo>) => {},
+  bindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, localId: number,
+                callback: AsyncCallback<void>) => {},
+  unbindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, callback: AsyncCallback<void>) => {},
+  isAccountTokenValid: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
+                        callback: AsyncCallback<boolean>) => {},
+  getAccessToken: (options: osAccount.GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>) => {}
+}
+osAccount.DomainAccountManager.registerPlugin(plugin);
+let userAuth = new osAccount.UserAuth();
+let challenge: Uint8Array = new Uint8Array([0]);
+let authType: osAccount.AuthType = osAccount.AuthType.DOMAIN;
+let authTrustLevel: osAccount.AuthTrustLevel = osAccount.AuthTrustLevel.ATL1;
+try {
+  userAuth.auth(challenge, authType, authTrustLevel, {
+    onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
+        console.info('auth resultCode = ' + resultCode);
+        console.info('auth authResult = ' + JSON.stringify(authResult));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let domainAccountInfo: osAccount.DomainAccountInfo = {
@@ -96,6 +244,64 @@ let domainAccountInfo: osAccount.DomainAccountInfo = {
 let credential = new Uint8Array([0])
 try {
   osAccount.DomainAccountManager.auth(domainAccountInfo, credential, {
+    onResult: (resultCode: int, authResult: osAccount.AuthResult) => {
+      console.info('auth resultCode = ' + resultCode);
+      console.info('auth authResult = ' + JSON.stringify(authResult));
+    }
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+let credential = new Uint8Array([0])
+try {
+  let serverParams: Record<string, Object> = {
+    "uri": "test.example.com",
+    "port": 100
+  }
+  let authOptions: osAccount.DomainAccountAuthOptions = {
+    serverParams: serverParams
+  }
+  osAccount.DomainAccountManager.auth(domainAccountInfo, credential, authOptions, {
+    onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
+      console.info('auth resultCode = ' + resultCode);
+      console.info('auth authResult = ' + JSON.stringify(authResult));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS--Sta示例：
+
+```TypeScript
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+let credential = new Uint8Array([0])
+try {
+  let serverParams: Record<string, RecordData> = {
+    "uri": "test.example.com",
+    "port": 100
+  }
+  let authOptions: osAccount.DomainAccountAuthOptions = {
+    serverParams: serverParams
+  }
+  osAccount.DomainAccountManager.auth(domainAccountInfo, credential, authOptions, {
     onResult: (resultCode: int, authResult: osAccount.AuthResult) => {
       console.info('auth resultCode = ' + resultCode);
       console.info('auth authResult = ' + JSON.stringify(authResult));
@@ -160,63 +366,7 @@ static auth(
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let domainAccountInfo: osAccount.DomainAccountInfo = {
-  domain: 'CHINA',
-  accountName: 'zhangsan'
-}
-let credential = new Uint8Array([0])
-try {
-  let serverParams: Record<string, Object> = {
-    "uri": "test.example.com",
-    "port": 100
-  }
-  let authOptions: osAccount.DomainAccountAuthOptions = {
-    serverParams: serverParams
-  }
-  osAccount.DomainAccountManager.auth(domainAccountInfo, credential, authOptions, {
-    onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
-      console.info('auth resultCode = ' + resultCode);
-      console.info('auth authResult = ' + JSON.stringify(authResult));
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS--Sta示例：
-
-```TypeScript
-let domainAccountInfo: osAccount.DomainAccountInfo = {
-  domain: 'CHINA',
-  accountName: 'zhangsan'
-}
-let credential = new Uint8Array([0])
-try {
-  let serverParams: Record<string, RecordData> = {
-    "uri": "test.example.com",
-    "port": 100
-  }
-  let authOptions: osAccount.DomainAccountAuthOptions = {
-    serverParams: serverParams
-  }
-  osAccount.DomainAccountManager.auth(domainAccountInfo, credential, authOptions, {
-    onResult: (resultCode: int, authResult: osAccount.AuthResult) => {
-      console.info('auth resultCode = ' + resultCode);
-      console.info('auth authResult = ' + JSON.stringify(authResult));
-    }
-  });
-} catch (e: Error) {
-  const err = e as BusinessError;
-  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [auth](#auth)
 
 ## authWithPopup
 
@@ -264,6 +414,40 @@ static authWithPopup(callback: IUserAuthCallback): void
 
 **示例**
 
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { AsyncCallback } from '@kit.BasicServicesKit';
+
+let plugin: osAccount.DomainPlugin = {
+  auth: (domainAccountInfo: osAccount.DomainAccountInfo, credential: Uint8Array,
+    callback: osAccount.IUserAuthCallback) => {},
+  authWithPopup: (domainAccountInfo: osAccount.DomainAccountInfo,
+    callback: osAccount.IUserAuthCallback) => {
+    // 模拟认证
+    // 通知认证结果
+    let result: osAccount.AuthResult = {
+      token: new Uint8Array([0]),
+      remainTimes: 5,
+      freezingTime: 0
+    };
+    callback.onResult(0, result);
+  },
+  authWithToken: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
+    callback: osAccount.IUserAuthCallback) => {},
+  getAccountInfo: (options: osAccount.GetDomainAccountInfoPluginOptions,
+    callback: AsyncCallback<osAccount.DomainAccountInfo>) => {},
+  getAuthStatusInfo: (domainAccountInfo: osAccount.DomainAccountInfo,
+    callback: AsyncCallback<osAccount.AuthStatusInfo>) => {},
+  bindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, localId: number,
+    callback: AsyncCallback<void>) => {},
+  unbindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, callback: AsyncCallback<void>) => {},
+  isAccountTokenValid: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
+    callback: AsyncCallback<boolean>) => {},
+  getAccessToken: (options: osAccount.GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>) => {}
+}
+osAccount.DomainAccountManager.registerPlugin(plugin)
+```
+
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -295,6 +479,40 @@ try {
 } catch (e: Error) {
   const err = e as BusinessError;
   console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  osAccount.DomainAccountManager.authWithPopup(100, {
+    onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
+      console.info('authWithPopup resultCode = ' + resultCode);
+      console.info('authWithPopup authResult = ' + JSON.stringify(authResult));
+    }
+  })
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`authWithPopup exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+try {
+  osAccount.DomainAccountManager.authWithPopup(100, {
+    onResult: (resultCode: int, authResult: osAccount.AuthResult) => {
+      console.info('authWithPopup resultCode = ' + resultCode);
+      console.info('authWithPopup authResult = ' + JSON.stringify(authResult));
+    }
+  })
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`authWithPopup exception = code is ${err.code}, message is ${err.message}`);
 }
 ```
 
@@ -346,39 +564,7 @@ static authWithPopup(localId: int, callback: IUserAuthCallback): void
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  osAccount.DomainAccountManager.authWithPopup(100, {
-    onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
-      console.info('authWithPopup resultCode = ' + resultCode);
-      console.info('authWithPopup authResult = ' + JSON.stringify(authResult));
-    }
-  })
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`authWithPopup exception = code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  osAccount.DomainAccountManager.authWithPopup(100, {
-    onResult: (resultCode: int, authResult: osAccount.AuthResult) => {
-      console.info('authWithPopup resultCode = ' + resultCode);
-      console.info('authWithPopup authResult = ' + JSON.stringify(authResult));
-    }
-  })
-} catch (e: Error) {
-  const err = e as BusinessError;
-  console.error(`authWithPopup exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [authWithPopup](#authwithpopup)
 
 ## getAccessToken
 
@@ -423,6 +609,41 @@ static getAccessToken(businessParams: Record<string, Object>, callback: AsyncCal
 
 ```TypeScript
 import { osAccount } from '@kit.BasicServicesKit';
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+
+let plugin: osAccount.DomainPlugin = {
+  auth: (domainAccountInfo: osAccount.DomainAccountInfo, credential: Uint8Array,
+    callback: osAccount.IUserAuthCallback) => {},
+  authWithPopup: (domainAccountInfo: osAccount.DomainAccountInfo,
+    callback: osAccount.IUserAuthCallback) => {},
+  authWithToken: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
+    callback: osAccount.IUserAuthCallback) => {},
+  getAccountInfo: (options: osAccount.GetDomainAccountInfoPluginOptions,
+    callback: AsyncCallback<osAccount.DomainAccountInfo>) => {},
+  getAuthStatusInfo: (domainAccountInfo: osAccount.DomainAccountInfo,
+    callback: AsyncCallback<osAccount.AuthStatusInfo>) => {},
+  bindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, localId: number,
+    callback: AsyncCallback<void>) => {},
+  unbindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, callback: AsyncCallback<void>) => {},
+  isAccountTokenValid: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
+    callback: AsyncCallback<boolean>) => {},
+  getAccessToken: (options: osAccount.GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>) => {
+    // 模拟获取令牌操作
+    // 通知结果
+    let code: BusinessError = {
+      code: 0,
+      name: "",
+      message: ""
+    };
+    let token: Uint8Array = new Uint8Array([0]);
+    callback(code, token);
+  }
+}
+osAccount.DomainAccountManager.registerPlugin(plugin)
+```
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let businessParams: Record<string, Object> = {
@@ -439,6 +660,74 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAccessToken exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { RecordData } from '@ohos.base';
+
+let businessParams: Record<string, RecordData> = {
+  'clientId': 'xxx',
+  'secretId': 'yyy'
+};  // depends on the implementation of the domain plugin
+try {
+  osAccount.DomainAccountManager.getAccessToken(businessParams,
+    (err: BusinessError | null, result: Uint8Array | undefined) => {
+      if (err) {
+        console.error(`getAccessToken failed, code is ${err.code}, message is ${err.message}`);
+      } else {
+        console.info('getAccessToken result: ' + result);
+      }
+    });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`getAccessToken exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let businessParams: Record<string, Object> = {
+  'clientId': 'xxx',
+  'secretId': 'yyy'
+};  // depends on the implementation of the domain plugin
+try {
+  osAccount.DomainAccountManager.getAccessToken(businessParams)
+    .then((result: Uint8Array) => {
+    console.info('getAccessToken result: ' + result);
+  }).catch((err: BusinessError) => {
+    console.error(`getAccessToken failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAccessToken exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { RecordData } from '@ohos.base';
+
+let businessParams: Record<string, RecordData> = {
+  'clientId': 'xxx',
+  'secretId': 'yyy'
+};  // depends on the implementation of the domain plugin
+try {
+  osAccount.DomainAccountManager.getAccessToken(businessParams)
+    .then((result: Uint8Array) => {
+      console.info('getAccessToken result: ' + result);
+    }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`getAccessToken failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getAccessToken exception = code is ${err.code}, message is ${err.message}`);
 }
@@ -484,29 +773,7 @@ static getAccessToken(businessParams: Record<string, RecordData>, callback: Asyn
 
 **示例**
 
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { RecordData } from '@ohos.base';
-
-let businessParams: Record<string, RecordData> = {
-  'clientId': 'xxx',
-  'secretId': 'yyy'
-};  // depends on the implementation of the domain plugin
-try {
-  osAccount.DomainAccountManager.getAccessToken(businessParams,
-    (err: BusinessError | null, result: Uint8Array | undefined) => {
-      if (err) {
-        console.error(`getAccessToken failed, code is ${err.code}, message is ${err.message}`);
-      } else {
-        console.info('getAccessToken result: ' + result);
-      }
-    });
-} catch (e: Error) {
-  const err = e as BusinessError;
-  console.error(`getAccessToken exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getAccessToken](#getaccesstoken)
 
 ## getAccessToken
 
@@ -554,26 +821,7 @@ static getAccessToken(businessParams: Record<string, Object>): Promise<Uint8Arra
 
 **示例**
 
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let businessParams: Record<string, Object> = {
-  'clientId': 'xxx',
-  'secretId': 'yyy'
-};  // depends on the implementation of the domain plugin
-try {
-  osAccount.DomainAccountManager.getAccessToken(businessParams)
-    .then((result: Uint8Array) => {
-    console.info('getAccessToken result: ' + result);
-  }).catch((err: BusinessError) => {
-    console.error(`getAccessToken failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getAccessToken exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getAccessToken](#getaccesstoken)
 
 ## getAccessToken
 
@@ -620,28 +868,7 @@ static getAccessToken(businessParams: Record<string, RecordData>): Promise<Uint8
 
 **示例**
 
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { RecordData } from '@ohos.base';
-
-let businessParams: Record<string, RecordData> = {
-  'clientId': 'xxx',
-  'secretId': 'yyy'
-};  // depends on the implementation of the domain plugin
-try {
-  osAccount.DomainAccountManager.getAccessToken(businessParams)
-    .then((result: Uint8Array) => {
-      console.info('getAccessToken result: ' + result);
-    }).catch((e: Error) => {
-    const err = e as BusinessError;
-    console.error(`getAccessToken failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e: Error) {
-  const err = e as BusinessError;
-  console.error(`getAccessToken exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getAccessToken](#getaccesstoken)
 
 ## getAccountInfo
 
@@ -685,6 +912,45 @@ static getAccountInfo(options: GetDomainAccountInfoOptions, callback: AsyncCallb
 | 12300211 | Server unreachable. |
 
 **示例**
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+
+let plugin: osAccount.DomainPlugin = {
+  auth: (domainAccountInfo: osAccount.DomainAccountInfo, credential: Uint8Array,
+    callback: osAccount.IUserAuthCallback) => {},
+  authWithPopup: (domainAccountInfo: osAccount.DomainAccountInfo,
+    callback: osAccount.IUserAuthCallback) => {},
+  authWithToken: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
+    callback: osAccount.IUserAuthCallback) => {},
+  getAccountInfo: (options: osAccount.GetDomainAccountInfoPluginOptions,
+    callback: AsyncCallback<osAccount.DomainAccountInfo>) => {
+    // 模拟获取账号信息
+    // 通知结果
+    let code: BusinessError = {
+      code: 0,
+      name: "",
+      message: ""
+    };
+    let accountInfo: osAccount.DomainAccountInfo = {
+      domain: options.domain ? options.domain : "",
+      accountName: options.accountName,
+      accountId: 'xxxx'
+    };
+    callback(code, accountInfo);
+  },
+  getAuthStatusInfo: (domainAccountInfo: osAccount.DomainAccountInfo,
+    callback: AsyncCallback<osAccount.AuthStatusInfo>) => {},
+  bindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, localId: number,
+    callback: AsyncCallback<void>) => {},
+  unbindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, callback: AsyncCallback<void>) => {},
+  isAccountTokenValid: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
+    callback: AsyncCallback<boolean>) => {},
+  getAccessToken: (options: osAccount.GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>) => {}
+}
+osAccount.DomainAccountManager.registerPlugin(plugin)
+```
 
 ArkTS-Dyn示例：
 
@@ -730,6 +996,53 @@ try {
         console.info('getAccountInfo result: ' + result);
       }
     });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`getAccountInfo exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.GetDomainAccountInfoOptions = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+try {
+  osAccount.DomainAccountManager.getAccountInfo(domainAccountInfo)
+    .then((result: osAccount.DomainAccountInfo) => {
+    console.info('getAccountInfo result: ' + result);
+  }).catch((err: BusinessError) => {
+    console.error(`call getAccountInfo failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAccountInfo exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.GetDomainAccountInfoOptions = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+try {
+  osAccount.DomainAccountManager.getAccountInfo(domainAccountInfo)
+    .then((result: osAccount.DomainAccountInfo) => {
+      console.info('getAccountInfo result: ' + result);
+    }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`call getAccountInfo failed, code is ${err.code}, message is ${err.message}`);
+  });
 } catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getAccountInfo exception = code is ${err.code}, message is ${err.message}`);
@@ -784,52 +1097,7 @@ static getAccountInfo(options: GetDomainAccountInfoOptions): Promise<DomainAccou
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let domainAccountInfo: osAccount.GetDomainAccountInfoOptions = {
-  domain: 'CHINA',
-  accountName: 'zhangsan'
-}
-try {
-  osAccount.DomainAccountManager.getAccountInfo(domainAccountInfo)
-    .then((result: osAccount.DomainAccountInfo) => {
-    console.info('getAccountInfo result: ' + result);
-  }).catch((err: BusinessError) => {
-    console.error(`call getAccountInfo failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getAccountInfo exception = code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let domainAccountInfo: osAccount.GetDomainAccountInfoOptions = {
-  domain: 'CHINA',
-  accountName: 'zhangsan'
-}
-try {
-  osAccount.DomainAccountManager.getAccountInfo(domainAccountInfo)
-    .then((result: osAccount.DomainAccountInfo) => {
-      console.info('getAccountInfo result: ' + result);
-    }).catch((e: Error) => {
-    const err = e as BusinessError;
-    console.error(`call getAccountInfo failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e: Error) {
-  const err = e as BusinessError;
-  console.error(`getAccountInfo exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getAccountInfo](#getaccountinfo)
 
 ## hasAccount
 
@@ -922,6 +1190,51 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+try {
+  osAccount.DomainAccountManager.hasAccount(domainAccountInfo).then((result: boolean) => {
+    console.info('hasAccount result: ' + result);
+  }).catch((err: BusinessError) => {
+      console.error(`call hasAccount failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`hasAccount exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+try {
+  osAccount.DomainAccountManager.hasAccount(domainAccountInfo).then((result: boolean) => {
+    console.info('hasAccount result: ' + result);
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`call hasAccount failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`hasAccount exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## hasAccount
 
 ```TypeScript
@@ -970,50 +1283,7 @@ static hasAccount(domainAccountInfo: DomainAccountInfo): Promise<boolean>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let domainAccountInfo: osAccount.DomainAccountInfo = {
-  domain: 'CHINA',
-  accountName: 'zhangsan'
-}
-try {
-  osAccount.DomainAccountManager.hasAccount(domainAccountInfo).then((result: boolean) => {
-    console.info('hasAccount result: ' + result);
-  }).catch((err: BusinessError) => {
-      console.error(`call hasAccount failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`hasAccount exception = code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let domainAccountInfo: osAccount.DomainAccountInfo = {
-  domain: 'CHINA',
-  accountName: 'zhangsan'
-}
-try {
-  osAccount.DomainAccountManager.hasAccount(domainAccountInfo).then((result: boolean) => {
-    console.info('hasAccount result: ' + result);
-  }).catch((e: Error) => {
-    const err = e as BusinessError;
-    console.error(`call hasAccount failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e: Error) {
-  const err = e as BusinessError;
-  console.error(`hasAccount exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [hasAccount](#hasaccount)
 
 ## isAuthenticationExpired
 
@@ -1347,50 +1617,6 @@ try {
 }
 ```
 
-## updateAccountToken
-
-```TypeScript
-static updateAccountToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array): Promise<void>
-```
-
-更新指定域账号的令牌，空令牌表示目标域账号的令牌失效。使用Promise异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-DomainAccountManager-static updateAccountToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array): Promise<void>--><!--Device-DomainAccountManager-static updateAccountToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 指示域账号信息。 |
-| token | Uint8Array | 是 | 指示域账号的令牌。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid token. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -1439,4 +1665,50 @@ try {
   console.error(`updateAccountToken exception = code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+## updateAccountToken
+
+```TypeScript
+static updateAccountToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array): Promise<void>
+```
+
+更新指定域账号的令牌，空令牌表示目标域账号的令牌失效。使用Promise异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-DomainAccountManager-static updateAccountToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array): Promise<void>--><!--Device-DomainAccountManager-static updateAccountToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 指示域账号信息。 |
+| token | Uint8Array | 是 | 指示域账号的令牌。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid token. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+
+**示例**
+
+参见 [updateAccountToken](#updateaccounttoken)
 

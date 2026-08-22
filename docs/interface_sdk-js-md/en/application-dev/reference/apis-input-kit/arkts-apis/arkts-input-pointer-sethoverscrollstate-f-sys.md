@@ -27,7 +27,7 @@ Sets the mouse hover scrolling switch state. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | state | boolean | Yes | Status of the mouse hover scroll switch. The value **true** indicates that the switch is enabled, and the value **false** indicates the opposite. The default value is **true**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -57,6 +57,32 @@ struct Index {
               }
               console.info(`Set the mouse hover scroll success`);
             });
+          } catch (error) {
+            console.error(`Set the mouse hover scroll failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            pointer.setHoverScrollState(true).then(() => {
+              console.info(`Set the mouse hover scroll success`);
+            }).catch((error: BusinessError) => {
+              console.error(`Set hover scroll failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            })
           } catch (error) {
             console.error(`Set the mouse hover scroll failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
@@ -104,29 +130,5 @@ Sets the status of the mouse hover scroll switch. This API uses a promise to ret
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.setHoverScrollState(true).then(() => {
-              console.info(`Set the mouse hover scroll success`);
-            }).catch((error: BusinessError) => {
-              console.error(`Set hover scroll failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`Set the mouse hover scroll failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
+See [setHoverScrollState](#sethoverscrollstate)
 

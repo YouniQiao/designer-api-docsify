@@ -118,6 +118,80 @@ function printArgs(args: string): string {
 let task: taskpool.Task = new taskpool.Task(printArgs, "this is my first Task");
 ```
 
+```TypeScript
+@Concurrent
+function printArgs(args: string): string {
+  console.info("printArgs: " + args);
+  return args;
+}
+
+let taskName: string = "taskName";
+let task: taskpool.Task = new taskpool.Task(taskName, printArgs, "this is my first Task");
+let name: string = task.name;
+```
+
+```TypeScript
+@Concurrent
+function printArgs(args: string): string {
+  console.info("printArgs: " + args);
+  return args;
+}
+
+@Concurrent
+function testWithThreeParams(a: number, b: string, c: number): string {
+  return b;
+}
+
+@Concurrent
+function testWithArray(args: [number, string]): string {
+  return "success";
+}
+
+let task1: taskpool.Task = new taskpool.GenericsTask<[string], string>(printArgs, "this is my first GenericsTask");
+
+let task2: taskpool.Task = new taskpool.GenericsTask<[number, string, number], string>(testWithThreeParams, 100, "test", 100);
+
+let task3: taskpool.Task = new taskpool.GenericsTask<[[number, string]], string>(testWithArray, [100, "test"]);
+```
+
+```TypeScript
+@Concurrent
+function printArgs(args: string): string {
+  console.info("printArgs: " + args);
+  return args;
+}
+
+let taskName: string = "taskName";
+let task: taskpool.Task = new taskpool.GenericsTask<[string], string>(taskName, printArgs, "this is my first Task");
+let name: string = task.name;
+```
+
+```TypeScript
+let taskGroup = new taskpool.TaskGroup();
+```
+
+```TypeScript
+let taskGroupName: string = "groupName";
+let taskGroup: taskpool.TaskGroup = new taskpool.TaskGroup(taskGroupName);
+let name: string = taskGroup.name;
+```
+
+```TypeScript
+let runner: taskpool.SequenceRunner = new taskpool.SequenceRunner();
+```
+
+```TypeScript
+let runner:taskpool.SequenceRunner = new taskpool.SequenceRunner("runner1", taskpool.Priority.LOW);
+```
+
+```TypeScript
+let runner: taskpool.AsyncRunner = new taskpool.AsyncRunner(5);
+```
+
+```TypeScript
+let runner:taskpool.AsyncRunner = new taskpool.AsyncRunner("runner1", 5, 5);
+```
+
 ## constructor
 
 ```TypeScript
@@ -150,17 +224,7 @@ Task的构造函数用于创建任务，并可指定任务名称。
 
 **示例**
 
-```TypeScript
-@Concurrent
-function printArgs(args: string): string {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-let taskName: string = "taskName";
-let task: taskpool.Task = new taskpool.Task(taskName, printArgs, "this is my first Task");
-let name: string = task.name;
-```
+参见 [constructor](#constructor)
 
 ## isCanceled
 

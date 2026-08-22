@@ -28,3 +28,30 @@ type PublishFormCrossBundleControlCallback = (info: PublishFormCrossBundleInfo) 
 | --- | --- |
 | boolean | 跨应用加卡管控结果。<br/>- true：表示管控通过。<br/>- false：表示管控未通过。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formInfo } from '@kit.FormKit';
+
+let publishFormCrossBundleControlCallback: formInfo.PublishFormCrossBundleControlCallback =
+  (info: formInfo.PublishFormCrossBundleInfo): boolean => {
+    console.info('publish form cross bundle info callback success.');
+    return true;
+  };
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formInfo } from '@kit.FormKit';
+
+let publishFormCrossBundleControlCallback: formInfo.PublishFormCrossBundleControlCallback =
+  (info): boolean => {
+    console.info('publish form cross bundle info callback success.');
+    return true;
+  };
+```
+

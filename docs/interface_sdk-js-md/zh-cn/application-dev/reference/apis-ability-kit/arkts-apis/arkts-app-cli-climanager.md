@@ -32,8 +32,8 @@ import { cliManager } from '@kit.AbilityKit';
 | [execTool](arkts-ability-climanager-exectool-f-sys.md) | 执行CLI命令 |
 | [getToolInfoByName](arkts-ability-climanager-gettoolinfobyname-f-sys.md) | 根据工具名称获取单个工具的详细信息，使用Promise异步回调。 |
 | [querySession](arkts-ability-climanager-querysession-f-sys.md) | 查询指定CLI工具会话的状态和执行结果。 |
-| [queryToolSummaries](arkts-ability-climanager-querytoolsummaries-f-sys.md) | 查询所有CLI工具的摘要信息。摘要信息仅包含名称、版本和描述字段，使用Promise异步回调。 |
 | [queryTools](arkts-ability-climanager-querytools-f-sys.md) | 查询所有CLI工具的详细信息，使用Promise异步回调。 |
+| [queryToolSummaries](arkts-ability-climanager-querytoolsummaries-f-sys.md) | 查询所有CLI工具的摘要信息。摘要信息仅包含名称、版本和描述字段，使用Promise异步回调。 |
 | [sendMessage](arkts-ability-climanager-sendmessage-f-sys.md) | 向指定CLI工具会话对应的进程发送消息。 |
 | [subscribeSession](arkts-ability-climanager-subscribesession-f-sys.md) | 订阅指定CLI工具会话的事件。会话运行期间，CLI工具产生的标准输出、标准错误、退出或错误事件通过回调返回。 |
 <!--DelEnd-->

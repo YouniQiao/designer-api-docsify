@@ -40,9 +40,9 @@ Uninstalls an application of the current user without retaining the bundle data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleName | string | Yes | Name of the bundle to uninstall. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -59,6 +59,25 @@ Uninstalls an application of the current user without retaining the bundle data.
 ```TypeScript
 import { bundleManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// Replace parameters with actual values.
+bundleManager.uninstall(wantTemp, 'bundleName', 100, true).then(() => {
+  console.info('Succeeded in uninstalling bundles.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
 
 let wantTemp: Want = {
   // Replace with actual values.
@@ -67,6 +86,63 @@ let wantTemp: Want = {
 };
 
 bundleManager.uninstall(wantTemp, 'bundleName', (err) => {
+  if (err) {
+    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in uninstalling bundles');
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+bundleManager.uninstall(wantTemp, 'bundleName', 100, (err) => {
+  if (err) {
+    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in uninstalling bundles');
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+bundleManager.uninstall(wantTemp, 'bundleName', true, (err) => {
+  if (err) {
+    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in uninstalling bundles');
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+bundleManager.uninstall(wantTemp, 'bundleName', 100, true, (err) => {
   if (err) {
     console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
     return;
@@ -110,10 +186,10 @@ Uninstalls an application of the specified user without retaining the bundle dat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleName | string | Yes | Name of the bundle to uninstall. |
 | userId | number | Yes | User ID, which must be greater than or equal to 0. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -127,24 +203,7 @@ Uninstalls an application of the specified user without retaining the bundle dat
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.uninstall(wantTemp, 'bundleName', 100, (err) => {
-  if (err) {
-    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in uninstalling bundles');
-});
-```
+See [uninstall](#uninstall)
 
 
 ## uninstall
@@ -181,10 +240,10 @@ Uninstalls an application of the current user. The **isKeepData** parameter spec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleName | string | Yes | Name of the bundle to uninstall. |
 | isKeepData | boolean | Yes | Whether to retain the bundle data. The value **true** means to retain the bundle data; the value **false** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -198,24 +257,7 @@ Uninstalls an application of the current user. The **isKeepData** parameter spec
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.uninstall(wantTemp, 'bundleName', true, (err) => {
-  if (err) {
-    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in uninstalling bundles');
-});
-```
+See [uninstall](#uninstall)
 
 
 ## uninstall
@@ -252,11 +294,11 @@ Uninstalls an application of the specified user. The **isKeepData** parameter sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleName | string | Yes | Name of the bundle to uninstall. |
 | userId | number | Yes | User ID, which must be greater than or equal to 0. |
 | isKeepData | boolean | Yes | Whether to retain the bundle data. The value **true** means to retain the bundle data; the value **false** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -270,22 +312,5 @@ Uninstalls an application of the specified user. The **isKeepData** parameter sp
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.uninstall(wantTemp, 'bundleName', 100, true, (err) => {
-  if (err) {
-    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in uninstalling bundles');
-});
-```
+See [uninstall](#uninstall)
 

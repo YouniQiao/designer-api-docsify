@@ -30,7 +30,7 @@ import { uiMaterial } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | 沉浸式材质类，继承自[Material](arkts-arkui-uimaterial-materialtype-e.md)。 |
+| [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | 沉浸式材质类，继承自[Material](../../apis-default/arkts-apis/arkts-uimaterial-materialtype-e.md)。 |
 
 <!--Del-->
 ### 类（系统接口）

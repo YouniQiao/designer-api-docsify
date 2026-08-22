@@ -55,7 +55,7 @@ The album name must meet the following requirements:
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the album to create. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Album&gt; | Yes | Callback used to return the created album instance. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Album&gt; | Yes | Callback used to return the created album instance. |
 
 **Examples**
 
@@ -71,6 +71,22 @@ async function example(mgr: userFileManager.UserFileManager) {
       return;
     }
     console.info('createAlbumCallback successfully, album: ' + album.albumName + ' album uri: ' + album.albumUri);
+  });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('createAlbumDemo');
+  let albumName: string  = 'newAlbumName' + new Date().getTime();
+  mgr.createAlbum(albumName).then((album) => {
+    console.info('createAlbumPromise successfully, album: ' + album.albumName + ' album uri: ' + album.albumUri);
+  }).catch((err: BusinessError) => {
+    console.error('createAlbumPromise failed with err: ' + err);
   });
 }
 ```
@@ -119,21 +135,7 @@ The album name must meet the following requirements:
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('createAlbumDemo');
-  let albumName: string  = 'newAlbumName' + new Date().getTime();
-  mgr.createAlbum(albumName).then((album) => {
-    console.info('createAlbumPromise successfully, album: ' + album.albumName + ' album uri: ' + album.albumUri);
-  }).catch((err: BusinessError) => {
-    console.error('createAlbumPromise failed with err: ' + err);
-  });
-}
-```
+See [createAlbum](#createalbum)
 
 ## createAudioAsset
 
@@ -160,7 +162,7 @@ Creates an audio asset. This API uses an asynchronous callback to return the res
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the audio asset to create. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt; | Yes | Callback used to return the created audio asset. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt; | Yes | Callback used to return the created audio asset. |
 
 **Error codes:**
 
@@ -185,6 +187,22 @@ async function example(mgr: userFileManager.UserFileManager) {
       console.error('createAudioAsset failed, message = ', err);
     }
   });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('createAudioAssetDemo');
+  try {
+    let testFileName: string = 'testFile' + Date.now() + '.mp3';
+    let fileAsset: userFileManager.FileAsset = await mgr.createAudioAsset(testFileName);
+    console.info('createAudioAsset file displayName' + fileAsset.displayName);
+    console.info('createAudioAsset successfully');
+  } catch (err) {
+    console.error('createAudioAsset failed, message = ', err);
+  }
 }
 ```
 
@@ -228,21 +246,7 @@ Creates an audio asset. This API uses a promise to return the result.
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('createAudioAssetDemo');
-  try {
-    let testFileName: string = 'testFile' + Date.now() + '.mp3';
-    let fileAsset: userFileManager.FileAsset = await mgr.createAudioAsset(testFileName);
-    console.info('createAudioAsset file displayName' + fileAsset.displayName);
-    console.info('createAudioAsset successfully');
-  } catch (err) {
-    console.error('createAudioAsset failed, message = ', err);
-  }
-}
-```
+See [createAudioAsset](#createaudioasset)
 
 ## createPhotoAsset
 
@@ -272,7 +276,7 @@ Creates an image or video asset with the specified file name and URI. This API u
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the image or video to create. |
 | albumUri | string | Yes | URI of the album where the image or video is located. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt; | Yes | Callback used to return the image or video created. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt; | Yes | Callback used to return the image or video created. |
 
 **Error codes:**
 
@@ -308,6 +312,78 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('createPhotoAssetDemo');
+  let testFileName: string = 'testFile' + Date.now() + '.jpg';
+  mgr.createPhotoAsset(testFileName, (err, fileAsset) => {
+    if (fileAsset != undefined) {
+      console.info('createPhotoAsset file displayName' + fileAsset.displayName);
+      console.info('createPhotoAsset successfully');
+    } else {
+      console.error('createPhotoAsset failed, message = ', err);
+    }
+  });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('createPhotoAssetDemo');
+  try {
+    let testFileName: string = 'testFile' + Date.now() + '.jpg';
+    let fileAsset: userFileManager.FileAsset = await mgr.createPhotoAsset(testFileName);
+    console.info('createPhotoAsset file displayName' + fileAsset.displayName);
+    console.info('createPhotoAsset successfully');
+  } catch (err) {
+    console.error('createPhotoAsset failed, message = ', err);
+  }
+}
+```
+
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('createPhotoAssetDemo');
+  let testFileName: string = 'testFile' + Date.now() + '.jpg';
+  let createOption: userFileManager.PhotoCreateOptions = {
+    subType: userFileManager.PhotoSubType.DEFAULT
+  }
+  mgr.createPhotoAsset(testFileName, createOption, (err, fileAsset) => {
+    if (fileAsset != undefined) {
+      console.info('createPhotoAsset file displayName' + fileAsset.displayName);
+      console.info('createPhotoAsset successfully');
+    } else {
+      console.error('createPhotoAsset failed, message = ', err);
+    }
+  });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('createPhotoAssetDemo');
+  try {
+    let testFileName: string = 'testFile' + Date.now() + '.jpg';
+    let createOption: userFileManager.PhotoCreateOptions = {
+      subType: userFileManager.PhotoSubType.DEFAULT
+    }
+    let fileAsset: userFileManager.FileAsset = await mgr.createPhotoAsset(testFileName, createOption);
+    console.info('createPhotoAsset file displayName' + fileAsset.displayName);
+    console.info('createPhotoAsset successfully');
+  } catch (err) {
+    console.error('createPhotoAsset failed, message = ', err);
+  }
+}
+```
+
 ## createPhotoAsset
 
 ```TypeScript
@@ -335,7 +411,7 @@ Creates an image or video asset with the specified file name. This API uses an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the image or video to create. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt; | Yes | Callback used to return the image or video created. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt; | Yes | Callback used to return the image or video created. |
 
 **Error codes:**
 
@@ -346,22 +422,7 @@ Creates an image or video asset with the specified file name. This API uses an a
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('createPhotoAssetDemo');
-  let testFileName: string = 'testFile' + Date.now() + '.jpg';
-  mgr.createPhotoAsset(testFileName, (err, fileAsset) => {
-    if (fileAsset != undefined) {
-      console.info('createPhotoAsset file displayName' + fileAsset.displayName);
-      console.info('createPhotoAsset successfully');
-    } else {
-      console.error('createPhotoAsset failed, message = ', err);
-    }
-  });
-}
-```
+See [createPhotoAsset](#createphotoasset)
 
 ## createPhotoAsset
 
@@ -406,21 +467,7 @@ Creates an image or video asset with the specified file name and album URI. This
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('createPhotoAssetDemo');
-  try {
-    let testFileName: string = 'testFile' + Date.now() + '.jpg';
-    let fileAsset: userFileManager.FileAsset = await mgr.createPhotoAsset(testFileName);
-    console.info('createPhotoAsset file displayName' + fileAsset.displayName);
-    console.info('createPhotoAsset successfully');
-  } catch (err) {
-    console.error('createPhotoAsset failed, message = ', err);
-  }
-}
-```
+See [createPhotoAsset](#createphotoasset)
 
 ## createPhotoAsset
 
@@ -465,24 +512,7 @@ Creates an image or video asset with the specified file name and options. This A
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('createPhotoAssetDemo');
-  try {
-    let testFileName: string = 'testFile' + Date.now() + '.jpg';
-    let createOption: userFileManager.PhotoCreateOptions = {
-      subType: userFileManager.PhotoSubType.DEFAULT
-    }
-    let fileAsset: userFileManager.FileAsset = await mgr.createPhotoAsset(testFileName, createOption);
-    console.info('createPhotoAsset file displayName' + fileAsset.displayName);
-    console.info('createPhotoAsset successfully');
-  } catch (err) {
-    console.error('createPhotoAsset failed, message = ', err);
-  }
-}
-```
+See [createPhotoAsset](#createphotoasset)
 
 ## createPhotoAsset
 
@@ -512,7 +542,7 @@ Creates an image or video asset with the specified file name and options. This A
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the image or video to create. |
 | createOption | PhotoCreateOptions | Yes | Options for creating an image or video asset. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt; | Yes | Callback used to return the image or video created. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt; | Yes | Callback used to return the image or video created. |
 
 **Error codes:**
 
@@ -523,25 +553,7 @@ Creates an image or video asset with the specified file name and options. This A
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('createPhotoAssetDemo');
-  let testFileName: string = 'testFile' + Date.now() + '.jpg';
-  let createOption: userFileManager.PhotoCreateOptions = {
-    subType: userFileManager.PhotoSubType.DEFAULT
-  }
-  mgr.createPhotoAsset(testFileName, createOption, (err, fileAsset) => {
-    if (fileAsset != undefined) {
-      console.info('createPhotoAsset file displayName' + fileAsset.displayName);
-      console.info('createPhotoAsset successfully');
-    } else {
-      console.error('createPhotoAsset failed, message = ', err);
-    }
-  });
-}
-```
+See [createPhotoAsset](#createphotoasset)
 
 ## delete
 
@@ -570,7 +582,7 @@ Deletes a media file. This API uses an asynchronous callback to return the resul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the media file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -611,6 +623,86 @@ async function example(mgr: userFileManager.UserFileManager) {
   } catch (err) {
     console.error('fetch failed, message =', err);
   }
+}
+```
+
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('deleteDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    const fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOptions);
+    let asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+    if (asset == undefined) {
+      console.error('asset not exist');
+      return;
+    }
+    await mgr.delete(asset.uri);
+    console.info('delete successfully');
+  } catch (err) {
+    console.error('delete failed with error: ' + err);
+  }
+}
+```
+
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('privateAlbumDeleteCallback');
+  let albumList: userFileManager.FetchResult<userFileManager.PrivateAlbum> = await mgr.getPrivateAlbum(userFileManager.PrivateAlbumType.TYPE_TRASH);
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let trashAlbum: userFileManager.PrivateAlbum = await albumList.getFirstObject();
+  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await trashAlbum.getPhotoAssets(fetchOption);
+  let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+  let deleteFileUri = fileAsset.uri;
+  trashAlbum.delete(deleteFileUri, (err) => {
+    if (err != undefined) {
+      console.error('trashAlbum.delete failed, message = ', err);
+    } else {
+      console.info('trashAlbum.delete successfully');
+    }
+  });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('privateAlbumDeleteDemoPromise');
+  let albumList: userFileManager.FetchResult<userFileManager.PrivateAlbum> = await mgr.getPrivateAlbum(userFileManager.PrivateAlbumType.TYPE_TRASH);
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let trashAlbum: userFileManager.PrivateAlbum = await albumList.getFirstObject();
+  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await trashAlbum.getPhotoAssets(fetchOption);
+  let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+  let deleteFileUri = fileAsset.uri;
+  trashAlbum.delete(deleteFileUri).then(() => {
+    console.info('trashAlbum.delete successfully');
+  }).catch((err: BusinessError) => {
+    console.error('trashAlbum.delete failed, message = ', err);
+  });
 }
 ```
 
@@ -656,32 +748,7 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('deleteDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    const fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOptions);
-    let asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-    if (asset == undefined) {
-      console.error('asset not exist');
-      return;
-    }
-    await mgr.delete(asset.uri);
-    console.info('delete successfully');
-  } catch (err) {
-    console.error('delete failed with error: ' + err);
-  }
-}
-```
+See [delete](#delete)
 
 ## deleteAlbums
 
@@ -710,7 +777,7 @@ Deletes user albums. This API uses an asynchronous callback to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | albums | Array&lt;Album&gt; | Yes | Albums to delete. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Examples**
 
@@ -738,6 +805,33 @@ async function example(mgr: userFileManager.UserFileManager) {
     console.info('deletePhotoAlbumsCallback successfully');
   });
   fetchResult.close();
+}
+```
+
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  // Delete the album named newAlbumName.
+  console.info('deleteAlbumsDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  predicates.equalTo('album_name', 'newAlbumName');
+  let fetchOptions: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: userFileManager.FetchResult<userFileManager.Album> = await mgr.getAlbums(userFileManager.AlbumType.USER, userFileManager.AlbumSubType.USER_GENERIC, fetchOptions);
+  let album: userFileManager.Album = await fetchResult.getFirstObject();
+  mgr.deleteAlbums([album]).then(() => {
+    console.info('deletePhotoAlbumsPromise successfully');
+      fetchResult.close();
+    }).catch((err: BusinessError) => {
+      console.error('deletePhotoAlbumsPromise failed with err: ' + err);
+      fetchResult.close();
+  });
 }
 ```
 
@@ -777,32 +871,7 @@ Deletes user albums. This API uses a promise to return the result.
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  // Delete the album named newAlbumName.
-  console.info('deleteAlbumsDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  predicates.equalTo('album_name', 'newAlbumName');
-  let fetchOptions: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: userFileManager.FetchResult<userFileManager.Album> = await mgr.getAlbums(userFileManager.AlbumType.USER, userFileManager.AlbumSubType.USER_GENERIC, fetchOptions);
-  let album: userFileManager.Album = await fetchResult.getFirstObject();
-  mgr.deleteAlbums([album]).then(() => {
-    console.info('deletePhotoAlbumsPromise successfully');
-      fetchResult.close();
-    }).catch((err: BusinessError) => {
-      console.error('deletePhotoAlbumsPromise failed with err: ' + err);
-      fetchResult.close();
-  });
-}
-```
+See [deleteAlbums](#deletealbums)
 
 ## getActivePeers
 
@@ -826,7 +895,7 @@ Obtains information about online peer devices. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;PeerInfo&gt;&gt; | Yes | Callback used to return a list of online peer devices. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PeerInfo&gt;&gt; | Yes | Callback used to return a list of online peer devices. |
 
 **Examples**
 
@@ -845,6 +914,27 @@ async function example(mgr: userFileManager.UserFileManager) {
       console.error('getActivePeers failed. message = ', err);
     }
   });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('getActivePeersDemo');
+  try {
+    let devicesInfo: Array<userFileManager.PeerInfo> = await mgr.getActivePeers();
+    if (devicesInfo != undefined) {
+      console.info('getActivePeers succeed.');
+      for (let i = 0; i < devicesInfo.length; i++) {
+        console.info('get distributed info ' + devicesInfo[i].deviceName + devicesInfo[i].networkId);
+      }
+    } else {
+      console.error('get distributed fail');
+    }
+  } catch (err) {
+    console.error('getActivePeers failed. message = ', err);
+  }
 }
 ```
 
@@ -874,26 +964,7 @@ Obtains the information about online peer devices. This API uses a promise to re
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('getActivePeersDemo');
-  try {
-    let devicesInfo: Array<userFileManager.PeerInfo> = await mgr.getActivePeers();
-    if (devicesInfo != undefined) {
-      console.info('getActivePeers succeed.');
-      for (let i = 0; i < devicesInfo.length; i++) {
-        console.info('get distributed info ' + devicesInfo[i].deviceName + devicesInfo[i].networkId);
-      }
-    } else {
-      console.error('get distributed fail');
-    }
-  } catch (err) {
-    console.error('getActivePeers failed. message = ', err);
-  }
-}
-```
+See [getActivePeers](#getactivepeers)
 
 ## getAlbums
 
@@ -933,7 +1004,7 @@ Before the operation, ensure that the albums to obtain exist.
 | type | AlbumType | Yes | Type of the album to obtain. |
 | subType | [AlbumSubType](arkts-corefile-userfilemanager-albumsubtype-e-sys.md) | Yes | Subtype of the album. |
 | options | FetchOptions | Yes | Retrieval options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -973,6 +1044,57 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+async function example(mgr: userFileManager.UserFileManager) {
+  // Obtain the system album VIDEO, which is preset by default.
+  console.info('getAlbumsDemo');
+  mgr.getAlbums(userFileManager.AlbumType.SYSTEM, userFileManager.AlbumSubType.VIDEO, async (err, fetchResult) => {
+    if (err) {
+      console.error('getAlbumsCallback failed with err: ' + err);
+      return;
+    }
+    if (fetchResult == undefined) {
+      console.error('getAlbumsCallback fetchResult is undefined');
+      return;
+    }
+    let album: userFileManager.Album = await fetchResult.getFirstObject();
+    console.info('getAlbumsCallback successfully, albumUri: ' + album.albumUri);
+    fetchResult.close();
+  });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  // Obtain the album named newAlbumName.
+  console.info('getAlbumsDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  predicates.equalTo('album_name', 'newAlbumName');
+  let fetchOptions: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  mgr.getAlbums(userFileManager.AlbumType.USER, userFileManager.AlbumSubType.USER_GENERIC, fetchOptions).then( async (fetchResult) => {
+    if (fetchResult == undefined) {
+      console.error('getAlbumsPromise fetchResult is undefined');
+      return;
+    }
+    let album: userFileManager.Album = await fetchResult.getFirstObject();
+    console.info('getAlbumsPromise successfully, albumName: ' + album.albumName);
+    fetchResult.close();
+  }).catch((err: BusinessError) => {
+    console.error('getAlbumsPromise failed with err: ' + err);
+  });
+}
+```
+
 ## getAlbums
 
 ```TypeScript
@@ -1005,7 +1127,7 @@ Before the operation, ensure that the albums to obtain exist.
 | --- | --- | --- | --- |
 | type | AlbumType | Yes | Type of the album to obtain. |
 | subType | [AlbumSubType](arkts-corefile-userfilemanager-albumsubtype-e-sys.md) | Yes | Subtype of the album. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1015,27 +1137,7 @@ Before the operation, ensure that the albums to obtain exist.
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-async function example(mgr: userFileManager.UserFileManager) {
-  // Obtain the system album VIDEO, which is preset by default.
-  console.info('getAlbumsDemo');
-  mgr.getAlbums(userFileManager.AlbumType.SYSTEM, userFileManager.AlbumSubType.VIDEO, async (err, fetchResult) => {
-    if (err) {
-      console.error('getAlbumsCallback failed with err: ' + err);
-      return;
-    }
-    if (fetchResult == undefined) {
-      console.error('getAlbumsCallback fetchResult is undefined');
-      return;
-    }
-    let album: userFileManager.Album = await fetchResult.getFirstObject();
-    console.info('getAlbumsCallback successfully, albumUri: ' + album.albumUri);
-    fetchResult.close();
-  });
-}
-```
+See [getAlbums](#getalbums)
 
 ## getAlbums
 
@@ -1085,34 +1187,7 @@ Before the operation, ensure that the albums to obtain exist.
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  // Obtain the album named newAlbumName.
-  console.info('getAlbumsDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  predicates.equalTo('album_name', 'newAlbumName');
-  let fetchOptions: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  mgr.getAlbums(userFileManager.AlbumType.USER, userFileManager.AlbumSubType.USER_GENERIC, fetchOptions).then( async (fetchResult) => {
-    if (fetchResult == undefined) {
-      console.error('getAlbumsPromise fetchResult is undefined');
-      return;
-    }
-    let album: userFileManager.Album = await fetchResult.getFirstObject();
-    console.info('getAlbumsPromise successfully, albumName: ' + album.albumName);
-    fetchResult.close();
-  }).catch((err: BusinessError) => {
-    console.error('getAlbumsPromise failed with err: ' + err);
-  });
-}
-```
+See [getAlbums](#getalbums)
 
 ## getAllPeers
 
@@ -1136,7 +1211,7 @@ Obtains information about all peer devices. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;PeerInfo&gt;&gt; | Yes | Callback used to return a list of online peer devices. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PeerInfo&gt;&gt; | Yes | Callback used to return a list of online peer devices. |
 
 **Examples**
 
@@ -1155,6 +1230,28 @@ async function example(mgr: userFileManager.UserFileManager) {
       console.error('getAllPeers failed. message = ', err);
     }
   });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('getAllPeersDemo');
+  try {
+    let devicesInfo: Array<userFileManager.PeerInfo> = await mgr.getAllPeers();
+
+    if (devicesInfo != undefined) {
+      console.info('getAllPeers succeed.');
+      for (let i = 0; i < devicesInfo.length; i++) {
+        console.info('get distributed info ' + devicesInfo[i].deviceName + devicesInfo[i].networkId);
+      }
+    } else {
+      console.error('get distributed fail');
+    }
+  } catch (err) {
+    console.error('getAllPeers failed. message = ', err);
+  }
 }
 ```
 
@@ -1184,27 +1281,7 @@ Obtains the information about all peer devices. This API uses a promise to retur
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('getAllPeersDemo');
-  try {
-    let devicesInfo: Array<userFileManager.PeerInfo> = await mgr.getAllPeers();
-
-    if (devicesInfo != undefined) {
-      console.info('getAllPeers succeed.');
-      for (let i = 0; i < devicesInfo.length; i++) {
-        console.info('get distributed info ' + devicesInfo[i].deviceName + devicesInfo[i].networkId);
-      }
-    } else {
-      console.error('get distributed fail');
-    }
-  } catch (err) {
-    console.error('getAllPeers failed. message = ', err);
-  }
-}
-```
+See [getAllPeers](#getallpeers)
 
 ## getAudioAssets
 
@@ -1231,7 +1308,7 @@ Obtains audio assets. This API uses an asynchronous callback to return the resul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | FetchOptions | Yes | Retrieval options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FetchResult&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt;&gt; | Yes | Callback used to return the audio assets obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt;&gt; | Yes | Callback used to return the audio assets obtained. |
 
 **Error codes:**
 
@@ -1265,6 +1342,33 @@ async function example(mgr: userFileManager.UserFileManager) {
       console.error('fetchFileResult fail' + err);
     }
   });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('getAudioAssets');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getAudioAssets(fetchOptions);
+    if (fetchResult != undefined) {
+      console.info('fetchFileResult success');
+      let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+      if (fileAsset != undefined) {
+        console.info('fileAsset.displayName :' + fileAsset.displayName);
+      }
+    }
+  } catch (err) {
+    console.error('getAudioAssets failed, message = ', err);
+  }
 }
 ```
 
@@ -1308,32 +1412,7 @@ Obtains an audio asset. This API uses a promise to return the result.
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('getAudioAssets');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getAudioAssets(fetchOptions);
-    if (fetchResult != undefined) {
-      console.info('fetchFileResult success');
-      let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-      if (fileAsset != undefined) {
-        console.info('fileAsset.displayName :' + fileAsset.displayName);
-      }
-    }
-  } catch (err) {
-    console.error('getAudioAssets failed, message = ', err);
-  }
-}
-```
+See [getAudioAssets](#getaudioassets)
 
 ## getPhotoAlbums
 
@@ -1366,7 +1445,7 @@ This API will be deprecated. Use [getAlbums](#getalbums) instead.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [AlbumFetchOptions](arkts-corefile-userfilemanager-albumfetchoptions-i-sys.md) | Yes | Options for fetching the albums. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the albums obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the albums obtained. |
 
 **Error codes:**
 
@@ -1402,6 +1481,28 @@ async function example(mgr: userFileManager.UserFileManager) {
       console.error('getPhotoAlbums fail, message = ', err);
     }
   });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('getPhotoAlbumsDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let albumFetchOptions: userFileManager.AlbumFetchOptions = {
+    predicates: predicates
+  };
+  try {
+    let fetchResult: userFileManager.FetchResult<userFileManager.Album> = await mgr.getPhotoAlbums(albumFetchOptions);
+    console.info('album.count = ' + fetchResult.getCount());
+    const album: userFileManager.Album = await fetchResult.getFirstObject();
+    console.info('first album.albumName = ' + album.albumName);
+  } catch (err) {
+    console.error('getPhotoAlbums fail, message = ' + err);
+  }
 }
 ```
 
@@ -1451,27 +1552,7 @@ This API will be deprecated. Use [getAlbums](#getalbums) instead.
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('getPhotoAlbumsDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: userFileManager.AlbumFetchOptions = {
-    predicates: predicates
-  };
-  try {
-    let fetchResult: userFileManager.FetchResult<userFileManager.Album> = await mgr.getPhotoAlbums(albumFetchOptions);
-    console.info('album.count = ' + fetchResult.getCount());
-    const album: userFileManager.Album = await fetchResult.getFirstObject();
-    console.info('first album.albumName = ' + album.albumName);
-  } catch (err) {
-    console.error('getPhotoAlbums fail, message = ' + err);
-  }
-}
-```
+See [getPhotoAlbums](#getphotoalbums)
 
 ## getPhotoAssets
 
@@ -1500,7 +1581,7 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | FetchOptions | Yes | Options for fetching the image and video assets. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FetchResult&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt;&gt; | Yes | Callback used to return the image and video assets obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt;&gt; | Yes | Callback used to return the image and video assets obtained. |
 
 **Error codes:**
 
@@ -1534,6 +1615,137 @@ async function example(mgr: userFileManager.UserFileManager) {
       console.error('fetchResult fail' + err);
     }
   });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('getPhotoAssets');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOptions);
+    if (fetchResult != undefined) {
+      console.info('fetchResult success');
+      let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+      if (fileAsset != undefined) {
+        console.info('fileAsset.displayName :' + fileAsset.displayName);
+      }
+    }
+  } catch (err) {
+    console.error('getPhotoAssets failed, message = ', err);
+  }
+}
+```
+
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('albumGetFileAssetsDemoCallback');
+
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let albumFetchOptions: userFileManager.AlbumFetchOptions = {
+    predicates: predicates
+  };
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let albumList: userFileManager.FetchResult<userFileManager.Album> = await mgr.getPhotoAlbums(albumFetchOptions);
+  let album: userFileManager.Album = await albumList.getFirstObject();
+  album.getPhotoAssets(fetchOption, (err, albumFetchResult) => {
+    if (albumFetchResult != undefined) {
+      console.info('album getPhotoAssets successfully, getCount: ' + albumFetchResult.getCount());
+    } else {
+      console.error('album getPhotoAssets failed with error: ' + err);
+    }
+  });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('albumGetFileAssetsDemoPromise');
+
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let albumFetchOptions: userFileManager.AlbumFetchOptions = {
+    predicates: predicates
+  };
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  const albumList: userFileManager.FetchResult<userFileManager.Album> = await mgr.getPhotoAlbums(albumFetchOptions);
+  const album: userFileManager.Album = await albumList.getFirstObject();
+  album.getPhotoAssets(fetchOption).then((albumFetchResult) => {
+    console.info('album getFileAssets successfully, getCount: ' + albumFetchResult.getCount());
+  }).catch((err: BusinessError) => {
+    console.error('album getFileAssets failed with error: ' + err);
+  });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('privateAlbumGetFileAssetsDemoCallback');
+  let albumList: userFileManager.FetchResult<userFileManager.PrivateAlbum> = await mgr.getPrivateAlbum(userFileManager.PrivateAlbumType.TYPE_TRASH);
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  const trashAlbum: userFileManager.PrivateAlbum = await albumList.getFirstObject();
+  if (trashAlbum === undefined) {
+    console.error('trashAlbum is undefined');
+    return;
+  }
+  trashAlbum.getPhotoAssets(fetchOption, (err, fetchResult) => {
+    if (fetchResult != undefined) {
+      let count = fetchResult.getCount();
+      console.info('fetchResult.count = ', count);
+    } else {
+      console.error('getFileAssets failed, message = ', err);
+    }
+  });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('privateAlbumGetFileAssetsDemoPromise');
+  let albumList: userFileManager.FetchResult<userFileManager.PrivateAlbum> = await mgr.getPrivateAlbum(userFileManager.PrivateAlbumType.TYPE_TRASH);
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  const trashAlbum: userFileManager.PrivateAlbum = await albumList.getFirstObject();
+  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await trashAlbum.getPhotoAssets(fetchOption);
+  let count = fetchResult.getCount();
+  console.info('fetchResult.count = ', count);
 }
 ```
 
@@ -1579,32 +1791,7 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('getPhotoAssets');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOptions);
-    if (fetchResult != undefined) {
-      console.info('fetchResult success');
-      let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-      if (fileAsset != undefined) {
-        console.info('fileAsset.displayName :' + fileAsset.displayName);
-      }
-    }
-  } catch (err) {
-    console.error('getPhotoAssets failed, message = ', err);
-  }
-}
-```
+See [getPhotoAssets](#getphotoassets)
 
 ## getPhotoIndex
 
@@ -1635,7 +1822,7 @@ Obtains the index of an image or video in an album. This API uses an asynchronou
 | photoUri | string | Yes | URI of the media asset whose index is to be obtained. |
 | albumUri | string | Yes | Album URI, which can be an empty string. If it is an empty string, all the media assets in the Gallery are obtained by default. |
 | options | FetchOptions | Yes | Retrieval options. Only one search condition or sorting mode must be set in **predicates**. If no value is set or multiple search criteria or sorting modes are set, the API cannot be called successfully. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the index obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the index obtained. |
 
 **Error codes:**
 
@@ -1677,6 +1864,48 @@ async function example(mgr: userFileManager.UserFileManager) {
       } else {
         console.error(`getPhotoIndex failed;`);
       }
+    });
+  } catch (error) {
+    console.error(`getPhotoIndex failed; error: ${error}`);
+  }
+}
+```
+
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  try {
+    console.info('getPhotoIndexDemo');
+    let predicatesForGetAsset: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOp: userFileManager.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicatesForGetAsset
+    };
+    // Obtain the album URI.
+    let albumFetchResult: userFileManager.FetchResult<userFileManager.Album> = await mgr.getAlbums(userFileManager.AlbumType.SYSTEM, userFileManager.AlbumSubType.FAVORITE, fetchOp);
+    let album: userFileManager.Album = await albumFetchResult.getFirstObject();
+    if (album === undefined) {
+      console.error('getPhotoIndexPromise albums is undefined');
+      return;
+    }
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    predicates.orderByAsc(userFileManager.ImageVideoKey.DATE_MODIFIED.toString());
+    let fetchOptions: userFileManager.FetchOptions = {
+      fetchColumns: [userFileManager.ImageVideoKey.DATE_MODIFIED.toString()],
+      predicates: predicates
+    };
+    let photoFetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await album.getPhotoAssets(fetchOptions);
+    let expectIndex = 1;
+    // Obtain the URI of the second file.
+    let photoAsset: userFileManager.FileAsset = await photoFetchResult.getPositionObject(expectIndex);
+    mgr.getPhotoIndex(photoAsset.uri, album.albumUri, fetchOptions).then((index) => {
+      console.info(`getPhotoIndex successfully and index is : ${index}`);
+    }).catch((err: BusinessError) => {
+      console.error(`getPhotoIndex failed; error: ${err}`);
     });
   } catch (error) {
     console.error(`getPhotoIndex failed; error: ${error}`);
@@ -1728,47 +1957,7 @@ Obtains the index of an image or video in an album. This API uses a promise to r
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  try {
-    console.info('getPhotoIndexDemo');
-    let predicatesForGetAsset: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOp: userFileManager.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicatesForGetAsset
-    };
-    // Obtain the album URI.
-    let albumFetchResult: userFileManager.FetchResult<userFileManager.Album> = await mgr.getAlbums(userFileManager.AlbumType.SYSTEM, userFileManager.AlbumSubType.FAVORITE, fetchOp);
-    let album: userFileManager.Album = await albumFetchResult.getFirstObject();
-    if (album === undefined) {
-      console.error('getPhotoIndexPromise albums is undefined');
-      return;
-    }
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    predicates.orderByAsc(userFileManager.ImageVideoKey.DATE_MODIFIED.toString());
-    let fetchOptions: userFileManager.FetchOptions = {
-      fetchColumns: [userFileManager.ImageVideoKey.DATE_MODIFIED.toString()],
-      predicates: predicates
-    };
-    let photoFetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await album.getPhotoAssets(fetchOptions);
-    let expectIndex = 1;
-    // Obtain the URI of the second file.
-    let photoAsset: userFileManager.FileAsset = await photoFetchResult.getPositionObject(expectIndex);
-    mgr.getPhotoIndex(photoAsset.uri, album.albumUri, fetchOptions).then((index) => {
-      console.info(`getPhotoIndex successfully and index is : ${index}`);
-    }).catch((err: BusinessError) => {
-      console.error(`getPhotoIndex failed; error: ${err}`);
-    });
-  } catch (error) {
-    console.error(`getPhotoIndex failed; error: ${error}`);
-  }
-}
-```
+See [getPhotoIndex](#getphotoindex)
 
 ## getPrivateAlbum
 
@@ -1799,7 +1988,7 @@ This API will be deprecated. Use [getAlbums](#getalbums) instead.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [PrivateAlbumType](arkts-corefile-userfilemanager-privatealbumtype-e-sys.md) | Yes | Type of the system album to obtain. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FetchResult&lt;[PrivateAlbum](arkts-corefile-userfilemanager-privatealbum-i-sys.md)&gt;&gt; | Yes | Callback used to return the albums obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;[PrivateAlbum](arkts-corefile-userfilemanager-privatealbum-i-sys.md)&gt;&gt; | Yes | Callback used to return the albums obtained. |
 
 **Error codes:**
 
@@ -1822,6 +2011,21 @@ async function example(mgr: userFileManager.UserFileManager) {
       console.error('getPrivateAlbum failed. message = ', err);
     }
   });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('getPrivateAlbumDemo');
+  try {
+    let fetchResult: userFileManager.FetchResult<userFileManager.PrivateAlbum> = await mgr.getPrivateAlbum(userFileManager.PrivateAlbumType.TYPE_TRASH);
+    let trashAlbum: userFileManager.PrivateAlbum = await fetchResult.getFirstObject();
+    console.info('first album.albumName = ' + trashAlbum.albumName);
+  } catch (err) {
+    console.error('getPrivateAlbum failed. message = ', err);
+  }
 }
 ```
 
@@ -1869,20 +2073,7 @@ This API will be deprecated. Use [getAlbums](#getalbums) instead.
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('getPrivateAlbumDemo');
-  try {
-    let fetchResult: userFileManager.FetchResult<userFileManager.PrivateAlbum> = await mgr.getPrivateAlbum(userFileManager.PrivateAlbumType.TYPE_TRASH);
-    let trashAlbum: userFileManager.PrivateAlbum = await fetchResult.getFirstObject();
-    console.info('first album.albumName = ' + trashAlbum.albumName);
-  } catch (err) {
-    console.error('getPrivateAlbum failed. message = ', err);
-  }
-}
-```
+See [getPrivateAlbum](#getprivatealbum)
 
 ## off_ChangeEvent
 
@@ -1911,7 +2102,7 @@ This API will be deprecated. Use [off](#off_changeevent) instead.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [ChangeEvent](arkts-corefile-userfilemanager-changeevent-t-sys.md) | Yes | Type of event to subscribe to. <br>**'deviceChange'**: device change. <br>**'albumChange'**: album change. <br>**'imageChange'**: image change. <br>**'audioChange'**: audio file change. <br>**'videoChange'**: video file change. <br>**'remoteFileChange'**: change of the file on a registered device. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback that returns no value. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback that returns no value. |
 
 **Examples**
 
@@ -1972,7 +2163,7 @@ Unregisters the listener for the specified URI. Multiple callbacks can be regist
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file asset or album, or [DefaultChangeUri](arkts-corefile-userfilemanager-defaultchangeuri-e-sys.md). |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeData&gt; | No | Callback registered by [on](#on_changeevent) . If this parameter is not specified, all listener callbacks registered for the URI will be unregistered. <br>Note that the specified callback will not be invoked. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeData&gt; | No | Callback registered by [on](#on_changeevent) . If this parameter is not specified, all listener callbacks registered for the URI will be unregistered. <br>Note that the specified callback will not be invoked. |
 
 **Error codes:**
 
@@ -2050,7 +2241,7 @@ This API will be deprecated. Use [on](#on_changeevent) instead.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [ChangeEvent](arkts-corefile-userfilemanager-changeevent-t-sys.md) | Yes | Type of event to subscribe to. <br>**'deviceChange'**: device change. <br>**'albumChange'**: album change. <br>**'imageChange'**: image change. <br>**'audioChange'**: audio file change. <br>**'videoChange'**: video file change. <br>**'remoteFileChange'**: change of the file on a registered device. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Examples**
 
@@ -2110,7 +2301,7 @@ Registers a listener for the specified URI. This API uses an asynchronous callba
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file asset or album, or [DefaultChangeUri](arkts-corefile-userfilemanager-defaultchangeuri-e-sys.md). |
 | forSubUri | boolean | Yes | Whether to perform fuzzy listening. <br>If **uri** is the URI of the album, the value **true** means to listen for the file change in the album; the value **false** means to listen for the album change only. If **uri** is the URI of the file asset, there is no difference whether **forSubUri** is **true** or **false**. If **uri** is **DefaultChangeUri**, the value must be **true**, otherwise, the URI cannot be found and no message can be received. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeData&gt; | Yes | Callback used to return [ChangeData](arkts-corefile-userfilemanager-changedata-i-sys.md) . <br>Note that different callbacks can be registered for a URI. You can use [off](#off_changeevent) to disable the specified callback or all callbacks for the URI. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeData&gt; | Yes | Callback used to return [ChangeData](arkts-corefile-userfilemanager-changedata-i-sys.md) . <br>Note that different callbacks can be registered for a URI. You can use [off](#off_changeevent) to disable the specified callback or all callbacks for the URI. |
 
 **Error codes:**
 
@@ -2186,7 +2377,7 @@ Call this API when the APIs in the **UserFileManager** instance are no longer us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -2202,6 +2393,20 @@ async function example(mgr: userFileManager.UserFileManager) {
       console.info('release ok.');
     }
   });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
+
+```TypeScript
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('releaseDemo');
+  try {
+    await mgr.release();
+    console.info('release ok.');
+  } catch (err) {
+    console.error('release failed. message = ', err);
+  }
 }
 ```
 
@@ -2235,17 +2440,5 @@ Call this API when the APIs in the **UserFileManager** instance are no longer us
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
-
-```TypeScript
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('releaseDemo');
-  try {
-    await mgr.release();
-    console.info('release ok.');
-  } catch (err) {
-    console.error('release failed. message = ', err);
-  }
-}
-```
+See [release](#release)
 

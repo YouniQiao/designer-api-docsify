@@ -30,7 +30,7 @@ Obtains the uplink traffic of the specified socket (in bytes). This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sockfd | int | Yes | FD of the socket to query. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. If the uplink traffic of the socket is obtained successfully, **error** is **undefined**; otherwise, it is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. If the uplink traffic of the socket is obtained successfully, **error** is **undefined**; otherwise, it is an error object. |
 
 **Error codes:**
 
@@ -51,6 +51,18 @@ let sockfd = 50; // FD of the socket you created.
 statistics.getSockfdTxBytes(sockfd, (error: BusinessError, stats: number) => {
   console.error(JSON.stringify(error));
   console.info(JSON.stringify(stats));
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { statistics } from '@kit.NetworkKit';
+
+let sockfd = 50; // FD of the socket you created.
+statistics.getSockfdTxBytes(sockfd).then((stats: number) => {
+  console.info(JSON.stringify(stats));
+}).catch((err: BusinessError) => {
+  console.error(JSON.stringify(err));
 });
 ```
 
@@ -97,15 +109,5 @@ Obtains the uplink traffic (in bytes) of the specified socket. This API uses a p
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { statistics } from '@kit.NetworkKit';
-
-let sockfd = 50; // FD of the socket you created.
-statistics.getSockfdTxBytes(sockfd).then((stats: number) => {
-  console.info(JSON.stringify(stats));
-}).catch((err: BusinessError) => {
-  console.error(JSON.stringify(err));
-});
-```
+See [getSockfdTxBytes](#getsockfdtxbytes)
 

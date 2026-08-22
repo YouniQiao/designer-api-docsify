@@ -67,6 +67,31 @@ let cancelCallback = (err: BusinessError | null) => {
 reminderAgentManager.cancelAllReminders(cancelCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+reminderAgentManager.cancelAllReminders().then(() => {
+  console.info("cancelAllReminders promise")
+}).catch((err: BusinessError) => {
+  console.error("promise err code:" + err.code + " message:" + err.message);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+reminderAgentManager.cancelAllReminders().then(() => {
+  console.info(`Succeeded in canceling all reminders.`);
+}).catch((err): void => {
+  console.error(`Failed to cancel all reminder. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## cancelAllReminders
 
@@ -97,28 +122,5 @@ function cancelAllReminders(): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-reminderAgentManager.cancelAllReminders().then(() => {
-  console.info("cancelAllReminders promise")
-}).catch((err: BusinessError) => {
-  console.error("promise err code:" + err.code + " message:" + err.message);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-reminderAgentManager.cancelAllReminders().then(() => {
-  console.info(`Succeeded in canceling all reminders.`);
-}).catch((err): void => {
-  console.error(`Failed to cancel all reminder. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [cancelAllReminders](#cancelallreminders)
 

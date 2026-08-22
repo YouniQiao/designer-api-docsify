@@ -56,6 +56,65 @@ declare function unlink(path: string): Promise<void>
 | 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+fileIo.unlink(filePath).then(() => {
+  console.info(`Succeeded in removing file.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to remove file. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+fileIo.unlink(filePath).then(() => {
+  console.info(`Succeeded in removing file.`);
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to remove file. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+fileIo.unlink(filePath, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to remove file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in removing file.`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+fileIo.unlink(filePath, (err: BusinessError<void> | null) => {
+  if (err) {
+    console.error(`Failed to remove file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in removing file.`);
+  }
+});
+```
+
 
 ## unlink
 
@@ -99,4 +158,8 @@ declare function unlink(path: string, callback: AsyncCallback<void>): void
 | 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
+
+**示例**
+
+参见 [unlink](#unlink)
 

@@ -106,46 +106,6 @@ function testConvertKey() {
 }
 ```
 
-## convertKey
-
-```TypeScript
-convertKey(key: DataBlob): Promise<SymKey>
-```
-
-将指定数据转换为对称密钥。使用Promise异步回调。
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-SymKeyGenerator-convertKey(key: DataBlob): Promise<SymKey>--><!--Device-SymKeyGenerator-convertKey(key: DataBlob): Promise<SymKey>-End-->
-
-**系统能力：** 
-- API版本12+：SystemCapability.Security.CryptoFramework.Key.SymKey
-- API版本9-11：SystemCapability.Security.CryptoFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | DataBlob | 是 | 指定的密钥材料数据。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md)&gt; | Promise对象，返回对称密钥SymKey。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -200,6 +160,124 @@ async function testConvertKey() {
   }
 }
 ```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+let pubKeyArray =
+  new Uint8Array([48, 89, 48, 19, 6, 7, 42, 134, 72, 206, 61, 2, 1, 6, 8, 42, 134, 72, 206, 61, 3, 1, 7, 3, 66, 0, 4,
+    83, 96, 142, 9, 86, 214, 126, 106, 247, 233, 92, 125, 4, 128, 138, 105, 246, 162, 215, 71, 81, 58, 202, 121, 26,
+    105, 211, 55, 130, 45, 236, 143, 55, 16, 248, 75, 167, 160, 167, 106, 2, 152, 243, 44, 68, 66, 0, 167, 99, 92, 235,
+    215, 159, 239, 28, 106, 124, 171, 34, 145, 124, 174, 57, 92]);
+let priKeyArray =
+  new Uint8Array([48, 49, 2, 1, 1, 4, 32, 115, 56, 137, 35, 207, 0, 60, 191, 90, 61, 136, 105, 210, 16, 27, 4, 171, 57,
+    10, 61, 123, 40, 189, 28, 34, 207, 236, 22, 45, 223, 10, 189, 160, 10, 6, 8, 42, 134, 72, 206, 61, 3, 1, 7]);
+let pubKeyBlob: cryptoFramework.DataBlob = { data: pubKeyArray }; // 公钥二进制数据。
+let priKeyBlob: cryptoFramework.DataBlob = { data: priKeyArray }; // 私钥二进制数据。
+let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
+asyKeyGenerator.convertKey(pubKeyBlob, priKeyBlob, (err, keyPair) => {
+  if (err) {
+    console.error(`convertKey failed, errCode: ${err.code}, errMsg: ${err.message}`);
+    return;
+  }
+  console.info('convertKey result: success.');
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let pubKeyArray =
+  new Uint8Array([48, 89, 48, 19, 6, 7, 42, 134, 72, 206, 61, 2, 1, 6, 8, 42, 134, 72, 206, 61, 3, 1, 7, 3, 66, 0, 4,
+    83, 96, 142, 9, 86, 214, 126, 106, 247, 233, 92, 125, 4, 128, 138, 105, 246, 162, 215, 71, 81, 58, 202, 121, 26,
+    105, 211, 55, 130, 45, 236, 143, 55, 16, 248, 75, 167, 160, 167, 106, 2, 152, 243, 44, 68, 66, 0, 167, 99, 92, 235,
+    215, 159, 239, 28, 106, 124, 171, 34, 145, 124, 174, 57, 92]);
+let priKeyArray =
+  new Uint8Array([48, 49, 2, 1, 1, 4, 32, 115, 56, 137, 35, 207, 0, 60, 191, 90, 61, 136, 105, 210, 16, 27, 4, 171, 57,
+    10, 61, 123, 40, 189, 28, 34, 207, 236, 22, 45, 223, 10, 189, 160, 10, 6, 8, 42, 134, 72, 206, 61, 3, 1, 7]);
+let pubKeyBlob: cryptoFramework.DataBlob = { data: pubKeyArray }; // 公钥二进制数据。
+let priKeyBlob: cryptoFramework.DataBlob = { data: priKeyArray }; // 私钥二进制数据。
+let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
+let keyGenPromise = asyKeyGenerator.convertKey(pubKeyBlob, priKeyBlob);
+keyGenPromise.then(keyPair => {
+  console.info('convertKey result: success.');
+}).catch((error: BusinessError) => {
+  console.error(`convertKey failed, errCode: ${error.code}, errMsg: ${error.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@ohos.base';
+
+async function TestConvertKey() {
+  let pubKeyArray =
+    new Uint8Array([48, 89, 48, 19, 6, 7, 42, 134, 72, 206, 61, 2, 1, 6, 8, 42, 134, 72, 206, 61, 3, 1, 7, 3, 66, 0, 4,
+      83, 96, 142, 9, 86, 214, 126, 106, 247, 233, 92, 125, 4, 128, 138, 105, 246, 162, 215, 71, 81, 58, 202, 121, 26,
+      105, 211, 55, 130, 45, 236, 143, 55, 16, 248, 75, 167, 160, 167, 106, 2, 152, 243, 44, 68, 66, 0, 167, 99, 92,
+      235, 215, 159, 239, 28, 106, 124, 171, 34, 145, 124, 174, 57, 92]);
+  let priKeyArray =
+    new Uint8Array([48, 49, 2, 1, 1, 4, 32, 115, 56, 137, 35, 207, 0, 60, 191, 90, 61, 136, 105, 210, 16, 27, 4, 171,
+      57, 10, 61, 123, 40, 189, 28, 34, 207, 236, 22, 45, 223, 10, 189, 160, 10, 6, 8, 42, 134, 72, 206, 61, 3, 1, 7]);
+  let pubKeyBlob: cryptoFramework.DataBlob = { data: pubKeyArray }; // 公钥二进制数据。
+  let priKeyBlob: cryptoFramework.DataBlob = { data: priKeyArray }; // 私钥二进制数据。
+  let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
+  try {
+    let keyPair = await asyKeyGenerator.convertKey(pubKeyBlob, priKeyBlob);
+    console.info('convertKey result: success.');
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`convertKey failed, errCode: ${e.code}, ${e.message}`);
+  }
+}
+```
+
+## convertKey
+
+```TypeScript
+convertKey(key: DataBlob): Promise<SymKey>
+```
+
+将指定数据转换为对称密钥。使用Promise异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SymKeyGenerator-convertKey(key: DataBlob): Promise<SymKey>--><!--Device-SymKeyGenerator-convertKey(key: DataBlob): Promise<SymKey>-End-->
+
+**系统能力：** 
+- API版本12+：SystemCapability.Security.CryptoFramework.Key.SymKey
+- API版本9-11：SystemCapability.Security.CryptoFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | DataBlob | 是 | 指定的密钥材料数据。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md)&gt; | Promise对象，返回对称密钥SymKey。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
+
+**示例**
+
+参见 [convertKey](#convertkey)
 
 ## convertKeySync
 
@@ -260,6 +338,32 @@ function testConvertKeySync() {
   let key = symKeyGenerator.convertKeySync(keyBlob);
   let encodedKey = key.getEncoded();
   console.info('key encoded data: ' + encodedKey.data);
+}
+```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+let pubKeyArray =
+  new Uint8Array([48, 89, 48, 19, 6, 7, 42, 134, 72, 206, 61, 2, 1, 6, 8, 42, 134, 72, 206, 61, 3, 1, 7, 3, 66, 0, 4,
+    83, 96, 142, 9, 86, 214, 126, 106, 247, 233, 92, 125, 4, 128, 138, 105, 246, 162, 215, 71, 81, 58, 202, 121, 26,
+    105, 211, 55, 130, 45, 236, 143, 55, 16, 248, 75, 167, 160, 167, 106, 2, 152, 243, 44, 68, 66, 0, 167, 99, 92, 235,
+    215, 159, 239, 28, 106, 124, 171, 34, 145, 124, 174, 57, 92]);
+let priKeyArray =
+  new Uint8Array([48, 49, 2, 1, 1, 4, 32, 115, 56, 137, 35, 207, 0, 60, 191, 90, 61, 136, 105, 210, 16, 27, 4, 171, 57,
+    10, 61, 123, 40, 189, 28, 34, 207, 236, 22, 45, 223, 10, 189, 160, 10, 6, 8, 42, 134, 72, 206, 61, 3, 1, 7]);
+let pubKeyBlob: cryptoFramework.DataBlob = { data: pubKeyArray }; // 公钥二进制数据。
+let priKeyBlob: cryptoFramework.DataBlob = { data: priKeyArray }; // 私钥二进制数据。
+let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
+try {
+  let keyPairData = asyKeyGenerator.convertKeySync(pubKeyBlob, priKeyBlob);
+  if (keyPairData != null) {
+    console.info('[Sync]: key pair result: success.');
+  } else {
+    console.error('[Sync]: convert key pair result: fail.');
+  }
+} catch (e) {
+  console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
 }
 ```
 
@@ -331,6 +435,41 @@ function testGenerateSymKey() {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  symKeyGenerator.generateSymKey()
+    .then(symKey => {
+      console.info('Generate symKey result: success, algName: ' + symKey.algName);
+    }).catch((error: BusinessError) => {
+      console.error(`Generate symKey failed, ${error.code}, ${error.message}`);
+    });
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function testGenerateSymKey() {
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  try {
+    let symKey = await symKeyGenerator.generateSymKey();
+    if (symKey != undefined) {
+      console.info('Generate symKey success, algName: ' + symKey.algName);
+    }
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`Generate symKey failed, ${e.code}, ${e.message}`);
+  }
+}
+```
+
 ## generateSymKey
 
 ```TypeScript
@@ -366,40 +505,7 @@ generateSymKey(): Promise<SymKey>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
-  symKeyGenerator.generateSymKey()
-    .then(symKey => {
-      console.info('Generate symKey result: success, algName: ' + symKey.algName);
-    }).catch((error: BusinessError) => {
-      console.error(`Generate symKey failed, ${error.code}, ${error.message}`);
-    });
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function testGenerateSymKey() {
-  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
-  try {
-    let symKey = await symKeyGenerator.generateSymKey();
-    if (symKey != undefined) {
-      console.info('Generate symKey success, algName: ' + symKey.algName);
-    }
-  } catch (err) {
-    let e: BusinessError = err as BusinessError;
-    console.error(`Generate symKey failed, ${e.code}, ${e.message}`);
-  }
-}
-```
+参见 [generateSymKey](#generatesymkey)
 
 ## generateSymKeySync
 

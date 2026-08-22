@@ -49,6 +49,56 @@ function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isE
 
 **示例**
 
+ArkTS-Dyn示例:
+
+```TypeScript
+import { overlay } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = "com.example.myapplication_xxxxx";
+let moduleName = "feature";
+let isEnabled = false;
+
+try {
+  overlay.setOverlayEnabledByBundleName(bundleName, moduleName, isEnabled)
+    .then((data) => {
+      console.info('setOverlayEnabledByBundleName successfully');
+    }).catch((err: BusinessError) => {
+      console.error('setOverlayEnabledByBundleName failed due to err code: ' + err.code + ' ' + 'message:' + err.message);
+    });
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error('setOverlayEnabledByBundleName failed due to err code: ' + code + ' ' + 'message:' + message);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { overlay } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+// 开发者需根据实际工程更新bundleName和moduleName。
+let bundleName = "com.example.myapplication_xxxxx";
+let moduleName = "feature";
+let isEnabled = false;
+
+try {
+  overlay.setOverlayEnabledByBundleName(bundleName, moduleName, isEnabled)
+    .then(() => {
+      console.info('setOverlayEnabledByBundleName successfully');
+    }).catch((err: Error) => {
+      console.error('setOverlayEnabledByBundleName failed due to err code: ' + (err as BusinessError).code + ' ' + 'message:' + (err as BusinessError).message);
+    });
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error('setOverlayEnabledByBundleName failed due to err code: ' + code + ' ' + 'message:' + message);
+}
+```
+
 ```TypeScript
 import { overlay } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -122,53 +172,5 @@ function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isE
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { overlay } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = "com.example.myapplication_xxxxx";
-let moduleName = "feature";
-let isEnabled = false;
-
-try {
-  overlay.setOverlayEnabledByBundleName(bundleName, moduleName, isEnabled)
-    .then((data) => {
-      console.info('setOverlayEnabledByBundleName successfully');
-    }).catch((err: BusinessError) => {
-      console.error('setOverlayEnabledByBundleName failed due to err code: ' + err.code + ' ' + 'message:' + err.message);
-    });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error('setOverlayEnabledByBundleName failed due to err code: ' + code + ' ' + 'message:' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { overlay } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新bundleName和moduleName。
-let bundleName = "com.example.myapplication_xxxxx";
-let moduleName = "feature";
-let isEnabled = false;
-
-try {
-  overlay.setOverlayEnabledByBundleName(bundleName, moduleName, isEnabled)
-    .then(() => {
-      console.info('setOverlayEnabledByBundleName successfully');
-    }).catch((err: Error) => {
-      console.error('setOverlayEnabledByBundleName failed due to err code: ' + (err as BusinessError).code + ' ' + 'message:' + (err as BusinessError).message);
-    });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error('setOverlayEnabledByBundleName failed due to err code: ' + code + ' ' + 'message:' + message);
-}
-```
+参见 [setOverlayEnabledByBundleName](#setoverlayenabledbybundlename)
 

@@ -40,3 +40,12 @@ Specifies the original text for the target Component. If the accessibility prope
 | --- | --- |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.originalText('123'); // Use the static constructor ON to create an On object and specify the originalText attribute of the target component.
+```
+

@@ -28,7 +28,7 @@ Listens to the event of notifyInvisible type change. <p>You can use this method 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -65,7 +65,7 @@ Listens to the event of notifyInvisible type change. <p>You can use this method 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hostBundleName | string | Yes | Indicates the bundle name of the form host application. |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 

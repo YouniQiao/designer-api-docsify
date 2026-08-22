@@ -25,7 +25,7 @@ Checks whether a specified template is supported before using [NotificationTempl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | templateName | string | Yes | Template name. Currently, only **downloadTemplate** is supported. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the template is supported, and **false** indicates the opposite. If this API call fails, an error object is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the template is supported, and **false** indicates the opposite. If this API call fails, an error object is returned. |
 
 **Error codes:**
 
@@ -50,6 +50,17 @@ let isSupportTemplateCallback = (err: BusinessError, data: boolean): void => {
   }
 }
 notificationManager.isSupportTemplate(templateName, isSupportTemplateCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let templateName: string = 'downloadTemplate';
+notificationManager.isSupportTemplate(templateName).then((data: boolean) => {
+  console.info(`isSupportTemplate success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`isSupportTemplate failed, code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -90,14 +101,5 @@ Checks whether a specified template is supported before using [NotificationTempl
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let templateName: string = 'downloadTemplate';
-notificationManager.isSupportTemplate(templateName).then((data: boolean) => {
-  console.info(`isSupportTemplate success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`isSupportTemplate failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [isSupportTemplate](#issupporttemplate)
 

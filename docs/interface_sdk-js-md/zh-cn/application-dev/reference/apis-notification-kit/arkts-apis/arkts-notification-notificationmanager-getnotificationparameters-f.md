@@ -114,3 +114,7 @@ function getNotificationParameters(id: int, label?: string): Promise<Notificatio
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 | [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
 
+**示例**
+
+参见 [getNotificationParameters](#getnotificationparameters)
+

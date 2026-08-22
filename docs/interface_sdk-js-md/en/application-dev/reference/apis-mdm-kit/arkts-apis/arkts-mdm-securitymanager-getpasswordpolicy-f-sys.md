@@ -40,6 +40,24 @@ Obtains the device screen lock password policy.
 
 ```TypeScript
 import { securityManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+    let result: securityManager.PasswordPolicy = securityManager.getPasswordPolicy(wantTemp);
+    console.info(`Succeeded in getting password policy, result : ${JSON.stringify(result)}`);
+} catch(err) {
+    console.error(`Failed to get password policy. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
 
 try {
     let result: securityManager.PasswordPolicy = securityManager.getPasswordPolicy();

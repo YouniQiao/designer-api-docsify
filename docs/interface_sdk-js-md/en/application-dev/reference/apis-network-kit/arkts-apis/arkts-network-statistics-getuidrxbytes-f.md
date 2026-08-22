@@ -33,7 +33,7 @@ Obtains the total downlink traffic (in bytes) of the specified application from 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | int | Yes | Application UID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. If the traffic data is successfully obtained, **error** is **undefined**; otherwise, it is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. If the traffic data is successfully obtained, **error** is **undefined**; otherwise, it is an error object. |
 
 **Error codes:**
 
@@ -54,6 +54,14 @@ import { statistics } from '@kit.NetworkKit';
 
 statistics.getUidRxBytes(20010038, (error: BusinessError, stats: number) => {
   console.error(JSON.stringify(error));
+  console.info(JSON.stringify(stats));
+});
+```
+
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+statistics.getUidRxBytes(20010038).then((stats: number) => {
   console.info(JSON.stringify(stats));
 });
 ```
@@ -106,11 +114,5 @@ Obtains the total downlink traffic (in bytes) of the specified application from 
 
 **Examples**
 
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-statistics.getUidRxBytes(20010038).then((stats: number) => {
-  console.info(JSON.stringify(stats));
-});
-```
+See [getUidRxBytes](#getuidrxbytes)
 

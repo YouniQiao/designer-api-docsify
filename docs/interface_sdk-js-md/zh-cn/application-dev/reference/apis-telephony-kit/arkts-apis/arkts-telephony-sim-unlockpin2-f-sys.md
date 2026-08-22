@@ -58,6 +58,18 @@ sim.unlockPin2(0, pin2, (err: BusinessError, data: sim.LockStatusResponse) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+let pin2: string = '1234';
+sim.unlockPin2(0, pin2).then((data: sim.LockStatusResponse) => {
+    console.info(`unlockPin2 success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`unlockPin2 failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## unlockPin2
 
@@ -106,15 +118,5 @@ Unlock the SIM card password of the specified card slot.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let pin2: string = '1234';
-sim.unlockPin2(0, pin2).then((data: sim.LockStatusResponse) => {
-    console.info(`unlockPin2 success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`unlockPin2 failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [unlockPin2](#unlockpin2)
 

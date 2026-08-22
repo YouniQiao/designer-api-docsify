@@ -33,8 +33,8 @@ function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, opt
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | entryPoint | string | 是 | 子进程中调用动态库的符号和入口函数，中间用“:”隔开（例如“libentry.so:Main”)。 |
-| args | [ChildProcessArgs](arkts-ability-appabilitychildprocessargs-childprocessargs-i.md) | 是 | 传递到子进程的参数。 |
-| options | [ChildProcessOptions](arkts-ability-appabilitychildprocessoptions-childprocessoptions-i.md) | 否 | 子进程的启动配置选项。 |
+| args | [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md) | 是 | 传递到子进程的参数。 |
+| options | [ChildProcessOptions](arkts-ability-app-ability-childprocessoptions-childprocessoptions-i.md) | 否 | 子进程的启动配置选项。 |
 
 **返回值：**
 

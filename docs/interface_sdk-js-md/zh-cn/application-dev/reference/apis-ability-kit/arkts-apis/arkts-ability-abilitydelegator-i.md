@@ -1,6 +1,6 @@
 # AbilityDelegator
 
-AbilityDelegator模块可以通过[AbilityMonitor](arkts-ability-abilitymonitor-i.md)实例来监听和管理 [UIAbility](arkts-ability-appabilityuiability-uiability-c.md)生命周期的变化。例如获取UIAbility当前状态（如是否已创建/是否在前台等）、查询当前获焦的UIAbility、等待UIAbility进入 某个生命周期节点（如等待UIAbility进入onForeground）、启动指定UIAbility、设置超时机制等功能。 AbilityDelegator可以通过 [getAbilityDelegator](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md)方 法获取。
+AbilityDelegator模块可以通过[AbilityMonitor](arkts-ability-abilitymonitor-i.md)实例来监听和管理 [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)生命周期的变化。例如获取UIAbility当前状态（如是否已创建/是否在前台等）、查询当前获焦的UIAbility、等待UIAbility进入 某个生命周期节点（如等待UIAbility进入onForeground）、启动指定UIAbility、设置超时机制等功能。 AbilityDelegator可以通过 [getAbilityDelegator](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md)方 法获取。
 
 > **说明：**
 > 
@@ -70,6 +70,25 @@ abilityDelegator.addAbilityMonitor(monitor, (error: BusinessError<void> | null) 
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { UIAbility } from '@kit.AbilityKit';
+
+let onAbilityCreateCallback = (data: UIAbility) => {
+  console.info('onAbilityCreateCallback');
+};
+
+let monitor: abilityDelegatorRegistry.AbilityMonitor = {
+  abilityName: 'abilityName',
+  onAbilityCreate: onAbilityCreateCallback
+};
+let abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+
+abilityDelegator.addAbilityMonitor(monitor).then(() => {
+  console.info('addAbilityMonitor promise');
+});
+```
+
 ## addAbilityMonitor
 
 ```TypeScript
@@ -107,24 +126,7 @@ addAbilityMonitor(monitor: AbilityMonitor): Promise<void>
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { UIAbility } from '@kit.AbilityKit';
-
-let onAbilityCreateCallback = (data: UIAbility) => {
-  console.info('onAbilityCreateCallback');
-};
-
-let monitor: abilityDelegatorRegistry.AbilityMonitor = {
-  abilityName: 'abilityName',
-  onAbilityCreate: onAbilityCreateCallback
-};
-let abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-
-abilityDelegator.addAbilityMonitor(monitor).then(() => {
-  console.info('addAbilityMonitor promise');
-});
-```
+参见 [addAbilityMonitor](#addabilitymonitor)
 
 ## addAbilityMonitorSync
 
@@ -227,6 +229,20 @@ abilityDelegator.addAbilityStageMonitor({
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.addAbilityStageMonitor({
+  moduleName: 'moduleName',
+  srcEntrance: 'srcEntrance',
+}).then(() => {
+  console.info('addAbilityStageMonitor promise');
+});
+```
+
 ## addAbilityStageMonitor
 
 ```TypeScript
@@ -264,19 +280,7 @@ addAbilityStageMonitor(monitor: AbilityStageMonitor): Promise<void>
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.addAbilityStageMonitor({
-  moduleName: 'moduleName',
-  srcEntrance: 'srcEntrance',
-}).then(() => {
-  console.info('addAbilityStageMonitor promise');
-});
-```
+参见 [addAbilityStageMonitor](#addabilitystagemonitor)
 
 ## addAbilityStageMonitorSync
 
@@ -409,7 +413,7 @@ doAbilityBackground(ability: UIAbility, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) | 是 | 指定Ability对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 指定Ability对象。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当调度指定Ability生命周期状态到Background状态成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -451,43 +455,6 @@ abilityDelegator.getCurrentTopAbility((err: BusinessError<void> | null, data: UI
 });
 ```
 
-## doAbilityBackground
-
-```TypeScript
-doAbilityBackground(ability: UIAbility): Promise<void>
-```
-
-调度指定Ability生命周期状态到Background状态。使用Promise异步回调。
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AbilityDelegator-doAbilityBackground(ability: UIAbility): Promise<void>--><!--Device-AbilityDelegator-doAbilityBackground(ability: UIAbility): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) | 是 | 指定Ability对象。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [16000100](../errorcode-ability.md#16000100-监听ability生命周期变化的abilitymonitor方法执行失败) | Calling DoAbilityBackground failed. |
-
-**示例**
-
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
 import { UIAbility } from '@kit.AbilityKit';
@@ -514,6 +481,45 @@ abilityDelegator.getCurrentTopAbility((err: BusinessError<void> | null, data: UI
 });
 ```
 
+## doAbilityBackground
+
+```TypeScript
+doAbilityBackground(ability: UIAbility): Promise<void>
+```
+
+调度指定Ability生命周期状态到Background状态。使用Promise异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityDelegator-doAbilityBackground(ability: UIAbility): Promise<void>--><!--Device-AbilityDelegator-doAbilityBackground(ability: UIAbility): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 指定Ability对象。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-监听ability生命周期变化的abilitymonitor方法执行失败) | Calling DoAbilityBackground failed. |
+
+**示例**
+
+参见 [doAbilityBackground](#doabilitybackground)
+
 ## doAbilityForeground
 
 ```TypeScript
@@ -534,7 +540,7 @@ doAbilityForeground(ability: UIAbility, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) | 是 | 指定Ability对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 指定Ability对象。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当调度指定Ability生命周期状态到Foreground状态成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -572,43 +578,6 @@ abilityDelegator.getCurrentTopAbility((err: BusinessError<void> | null, data: UI
 });
 ```
 
-## doAbilityForeground
-
-```TypeScript
-doAbilityForeground(ability: UIAbility): Promise<void>
-```
-
-调度指定Ability生命周期状态到Foreground状态。使用Promise异步回调。
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AbilityDelegator-doAbilityForeground(ability: UIAbility): Promise<void>--><!--Device-AbilityDelegator-doAbilityForeground(ability: UIAbility): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) | 是 | 指定Ability对象。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [16000100](../errorcode-ability.md#16000100-监听ability生命周期变化的abilitymonitor方法执行失败) | Calling DoAbilityForeground failed. |
-
-**示例**
-
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
 import { UIAbility } from '@kit.AbilityKit';
@@ -634,6 +603,45 @@ abilityDelegator.getCurrentTopAbility((err: BusinessError<void> | null, data: UI
   }
 });
 ```
+
+## doAbilityForeground
+
+```TypeScript
+doAbilityForeground(ability: UIAbility): Promise<void>
+```
+
+调度指定Ability生命周期状态到Foreground状态。使用Promise异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityDelegator-doAbilityForeground(ability: UIAbility): Promise<void>--><!--Device-AbilityDelegator-doAbilityForeground(ability: UIAbility): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 指定Ability对象。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-监听ability生命周期变化的abilitymonitor方法执行失败) | Calling DoAbilityForeground failed. |
+
+**示例**
+
+参见 [doAbilityForeground](#doabilityforeground)
 
 ## executeShellCommand
 
@@ -679,6 +687,56 @@ abilityDelegator.executeShellCommand(shellCommand,
   });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let shellCommand = 'cmd';
+let timeout = 100;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.executeShellCommand(shellCommand, timeout,
+  (err: BusinessError<void> | null, data: abilityDelegatorRegistry.ShellCmdResult | undefined) => {
+    if (err) {
+      console.error(`executeShellCommand fail. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info('executeShellCommand callback');
+    }
+  });
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let shellCommand = 'cmd';
+let timeout = 100;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.executeShellCommand(shellCommand, timeout).then((data) => {
+  console.info('executeShellCommand promise');
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let shellCommand = 'cmd';
+let timeout: long = 100;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.executeShellCommand(shellCommand, timeout).then((data) => {
+  console.info('executeShellCommand promise');
+});
+```
+
 ## executeShellCommand
 
 ```TypeScript
@@ -705,24 +763,7 @@ executeShellCommand(cmd: string, timeoutSecs: long, callback: AsyncCallback<Shel
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let shellCommand = 'cmd';
-let timeout = 100;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.executeShellCommand(shellCommand, timeout,
-  (err: BusinessError<void> | null, data: abilityDelegatorRegistry.ShellCmdResult | undefined) => {
-    if (err) {
-      console.error(`executeShellCommand fail. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info('executeShellCommand callback');
-    }
-  });
-```
+参见 [executeShellCommand](#executeshellcommand)
 
 ## executeShellCommand
 
@@ -755,36 +796,7 @@ executeShellCommand(cmd: string, timeoutSecs?: long): Promise<ShellCmdResult>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let shellCommand = 'cmd';
-let timeout = 100;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.executeShellCommand(shellCommand, timeout).then((data) => {
-  console.info('executeShellCommand promise');
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let shellCommand = 'cmd';
-let timeout: long = 100;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.executeShellCommand(shellCommand, timeout).then((data) => {
-  console.info('executeShellCommand promise');
-});
-```
+参见 [executeShellCommand](#executeshellcommand)
 
 ## finishTest
 
@@ -836,6 +848,18 @@ abilityDelegator.finishTest(msg, 0, (err: BusinessError<void> | null) => {
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let msg = 'msg';
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.finishTest(msg, 0).then(() => {
+  console.info('finishTest promise');
+});
+```
+
 ## finishTest
 
 ```TypeScript
@@ -874,17 +898,7 @@ finishTest(msg: string, code: long): Promise<void>
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let msg = 'msg';
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.finishTest(msg, 0).then(() => {
-  console.info('finishTest promise');
-});
-```
+参见 [finishTest](#finishtest)
 
 ## getAbilityState
 
@@ -906,7 +920,7 @@ getAbilityState(ability: UIAbility): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-appabilityuiability-uiability-c.md) | 是 | 指定Ability对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 | 指定Ability对象。 |
 
 **返回值：**
 
@@ -1001,7 +1015,7 @@ getCurrentTopAbility(callback: AsyncCallback<UIAbility>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)&gt; | 是 | 回调函数。当获取当前应用顶部Ability成功，err为undefined，data为获取到的Ability实例；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | 是 | 回调函数。当获取当前应用顶部Ability成功，err为undefined，data为获取到的Ability实例；否则为错误对象。 |
 
 **错误码：**
 
@@ -1031,6 +1045,20 @@ abilityDelegator.getCurrentTopAbility((err: BusinessError<void> | null, data: UI
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { UIAbility } from '@kit.AbilityKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let ability: UIAbility;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.getCurrentTopAbility().then((data: UIAbility) => {
+  console.info('getCurrentTopAbility promise');
+  ability = data;
+});
+```
+
 ## getCurrentTopAbility
 
 ```TypeScript
@@ -1051,7 +1079,7 @@ getCurrentTopAbility(): Promise<UIAbility>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)&gt; | Promise对象，返回前应用顶部Ability。 |
+| Promise&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Promise对象，返回前应用顶部Ability。 |
 
 **错误码：**
 
@@ -1061,19 +1089,7 @@ getCurrentTopAbility(): Promise<UIAbility>
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { UIAbility } from '@kit.AbilityKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let ability: UIAbility;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.getCurrentTopAbility().then((data: UIAbility) => {
-  console.info('getCurrentTopAbility promise');
-  ability = data;
-});
-```
+参见 [getCurrentTopAbility](#getcurrenttopability)
 
 ## print
 
@@ -1117,6 +1133,18 @@ abilityDelegator.print(msg, (err: BusinessError<void> | null) => {
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let msg = 'msg';
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.print(msg).then(() => {
+  console.info('print promise');
+});
+```
+
 ## print
 
 ```TypeScript
@@ -1147,17 +1175,7 @@ print(msg: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let msg = 'msg';
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.print(msg).then(() => {
-  console.info('print promise');
-});
-```
+参见 [print](#print)
 
 ## printSync
 
@@ -1255,6 +1273,27 @@ abilityDelegator.removeAbilityMonitor(monitor, (error: BusinessError | null) => 
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { UIAbility } from '@kit.AbilityKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+
+let onAbilityCreateCallback = (data: UIAbility) => {
+  console.info('onAbilityCreateCallback');
+};
+
+let monitor: abilityDelegatorRegistry.AbilityMonitor = {
+  abilityName: 'abilityName',
+  onAbilityCreate: onAbilityCreateCallback
+};
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.removeAbilityMonitor(monitor).then(() => {
+  console.info('removeAbilityMonitor promise');
+});
+```
+
 ## removeAbilityMonitor
 
 ```TypeScript
@@ -1292,26 +1331,7 @@ removeAbilityMonitor(monitor: AbilityMonitor): Promise<void>
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { UIAbility } from '@kit.AbilityKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-
-let onAbilityCreateCallback = (data: UIAbility) => {
-  console.info('onAbilityCreateCallback');
-};
-
-let monitor: abilityDelegatorRegistry.AbilityMonitor = {
-  abilityName: 'abilityName',
-  onAbilityCreate: onAbilityCreateCallback
-};
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.removeAbilityMonitor(monitor).then(() => {
-  console.info('removeAbilityMonitor promise');
-});
-```
+参见 [removeAbilityMonitor](#removeabilitymonitor)
 
 ## removeAbilityMonitorSync
 
@@ -1414,6 +1434,20 @@ abilityDelegator.removeAbilityStageMonitor({
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.removeAbilityStageMonitor({
+  moduleName: 'moduleName',
+  srcEntrance: 'srcEntrance',
+}).then(() => {
+  console.info('removeAbilityStageMonitor promise');
+});
+```
+
 ## removeAbilityStageMonitor
 
 ```TypeScript
@@ -1451,19 +1485,7 @@ removeAbilityStageMonitor(monitor: AbilityStageMonitor): Promise<void>
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.removeAbilityStageMonitor({
-  moduleName: 'moduleName',
-  srcEntrance: 'srcEntrance',
-}).then(() => {
-  console.info('removeAbilityStageMonitor promise');
-});
-```
+参见 [removeAbilityStageMonitor](#removeabilitystagemonitor)
 
 ## removeAbilityStageMonitorSync
 
@@ -1645,7 +1667,7 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动Ability参数。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动指定Ability成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -1692,6 +1714,22 @@ abilityDelegator.startAbility(want, (err: BusinessError<void> | null, data: unde
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { Want } from '@kit.AbilityKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let want: Want = {
+  bundleName: 'bundleName',
+  abilityName: 'abilityName'
+};
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.startAbility(want).then(() => {
+  console.info('startAbility promise');
+});
+```
+
 ## startAbility
 
 ```TypeScript
@@ -1712,7 +1750,7 @@ startAbility(want: Want): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 启动Ability参数。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability参数。 |
 
 **返回值：**
 
@@ -1743,21 +1781,7 @@ startAbility(want: Want): Promise<void>
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { Want } from '@kit.AbilityKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let want: Want = {
-  bundleName: 'bundleName',
-  abilityName: 'abilityName'
-};
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.startAbility(want).then(() => {
-  console.info('startAbility promise');
-});
-```
+参见 [startAbility](#startability)
 
 ## waitAbilityMonitor
 
@@ -1780,7 +1804,7 @@ waitAbilityMonitor(monitor: AbilityMonitor, callback: AsyncCallback<UIAbility>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | 是 | [AbilityMonitor](arkts-ability-abilitymonitor-i.md)实例。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)&gt; | 是 | 回调函数。当等待与AbilityMonitor实例匹配的Ability到达OnCreate生命周期成功，err为undefined，data为获取 到的Ability实例，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | 是 | 回调函数。当等待与AbilityMonitor实例匹配的Ability到达OnCreate生命周期成功，err为undefined，data为获取 到的Ability实例，否则为错误对象。 |
 
 **错误码：**
 
@@ -1817,39 +1841,6 @@ abilityDelegator.waitAbilityMonitor(monitor, (error: BusinessError<void> | null,
 });
 ```
 
-## waitAbilityMonitor
-
-```TypeScript
-waitAbilityMonitor(monitor: AbilityMonitor, timeout: long, callback: AsyncCallback<UIAbility>): void
-```
-
-设置等待时间，等待与AbilityMonitor实例匹配的Ability到达OnCreate生命周期，并返回Ability实例。使用callback异步回调。不支持多线程并发调用。
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AbilityDelegator-waitAbilityMonitor(monitor: AbilityMonitor, timeout: long, callback: AsyncCallback<UIAbility>): void--><!--Device-AbilityDelegator-waitAbilityMonitor(monitor: AbilityMonitor, timeout: long, callback: AsyncCallback<UIAbility>): void-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | 是 | [AbilityMonitor](arkts-ability-abilitymonitor-i.md)实例。 |
-| timeout | long | 是 | 最大等待时间，单位毫秒（ms），默认值为5000毫秒。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)&gt; | 是 | 表示指定的回调方法。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [16000100](../errorcode-ability.md#16000100-监听ability生命周期变化的abilitymonitor方法执行失败) | Calling WaitAbilityMonitor failed. |
-
-**示例**
-
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
 import { UIAbility } from '@kit.AbilityKit';
@@ -1882,6 +1873,62 @@ abilityDelegator.waitAbilityMonitor(monitor, timeout,
   });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { UIAbility } from '@kit.AbilityKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+
+let onAbilityCreateCallback = (data: UIAbility) => {
+  console.info('onAbilityCreateCallback');
+};
+
+let monitor: abilityDelegatorRegistry.AbilityMonitor = {
+  abilityName: 'abilityName',
+  onAbilityCreate: onAbilityCreateCallback
+};
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.waitAbilityMonitor(monitor).then((data: UIAbility) => {
+  console.info('waitAbilityMonitor promise');
+});
+```
+
+## waitAbilityMonitor
+
+```TypeScript
+waitAbilityMonitor(monitor: AbilityMonitor, timeout: long, callback: AsyncCallback<UIAbility>): void
+```
+
+设置等待时间，等待与AbilityMonitor实例匹配的Ability到达OnCreate生命周期，并返回Ability实例。使用callback异步回调。不支持多线程并发调用。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityDelegator-waitAbilityMonitor(monitor: AbilityMonitor, timeout: long, callback: AsyncCallback<UIAbility>): void--><!--Device-AbilityDelegator-waitAbilityMonitor(monitor: AbilityMonitor, timeout: long, callback: AsyncCallback<UIAbility>): void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | 是 | [AbilityMonitor](arkts-ability-abilitymonitor-i.md)实例。 |
+| timeout | long | 是 | 最大等待时间，单位毫秒（ms），默认值为5000毫秒。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | 是 | 表示指定的回调方法。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-监听ability生命周期变化的abilitymonitor方法执行失败) | Calling WaitAbilityMonitor failed. |
+
+**示例**
+
+参见 [waitAbilityMonitor](#waitabilitymonitor)
+
 ## waitAbilityMonitor
 
 ```TypeScript
@@ -1909,7 +1956,7 @@ waitAbilityMonitor(monitor: AbilityMonitor, timeout?: long): Promise<UIAbility>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[UIAbility](arkts-ability-appabilityuiability-uiability-c.md)&gt; | Promise对象，返回Ability实例。 |
+| Promise&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Promise对象，返回Ability实例。 |
 
 **错误码：**
 
@@ -1920,26 +1967,7 @@ waitAbilityMonitor(monitor: AbilityMonitor, timeout?: long): Promise<UIAbility>
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { UIAbility } from '@kit.AbilityKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-
-let onAbilityCreateCallback = (data: UIAbility) => {
-  console.info('onAbilityCreateCallback');
-};
-
-let monitor: abilityDelegatorRegistry.AbilityMonitor = {
-  abilityName: 'abilityName',
-  onAbilityCreate: onAbilityCreateCallback
-};
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.waitAbilityMonitor(monitor).then((data: UIAbility) => {
-  console.info('waitAbilityMonitor promise');
-});
-```
+参见 [waitAbilityMonitor](#waitabilitymonitor)
 
 ## waitAbilityStageMonitor
 
@@ -1962,7 +1990,7 @@ waitAbilityStageMonitor(monitor: AbilityStageMonitor, callback: AsyncCallback<Ab
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | 是 | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) 实例。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md)&gt; | 是 | 回调函数。当等待并返回与给定AbilityStageMonitor中设置的条件匹配的AbilityStage对象的操作成功，err为 undefined，data为获取到的[AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md)对象；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | 是 | 回调函数。当等待并返回与给定AbilityStageMonitor中设置的条件匹配的AbilityStage对象的操作成功，err为 undefined，data为获取到的[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -1993,6 +2021,42 @@ abilityDelegator.waitAbilityStageMonitor({
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { AbilityStage } from '@kit.AbilityKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.waitAbilityStageMonitor({
+  moduleName: 'moduleName',
+  srcEntrance: 'srcEntrance',
+}).then((data: AbilityStage) => {
+  console.info('waitAbilityStageMonitor promise');
+});
+```
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { AbilityStage } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let timeout = 100;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.waitAbilityStageMonitor({
+  moduleName: 'moduleName',
+  srcEntrance: 'srcEntrance',
+}, timeout, (err: BusinessError<void> | null, data: AbilityStage | undefined) => {
+  if (err) {
+    console.error(`waitAbilityStageMonitor fail. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('waitAbilityStageMonitor callback');
+  }
+});
+```
+
 ## waitAbilityStageMonitor
 
 ```TypeScript
@@ -2015,7 +2079,7 @@ waitAbilityStageMonitor(monitor: AbilityStageMonitor, timeout: long, callback: A
 | --- | --- | --- | --- |
 | monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | 是 | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) 实例。 |
 | timeout | long | 是 | 超时最大等待时间，单位毫秒（ms），默认值为5000毫秒。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md)&gt; | 是 | 回调函数。当等待并返回与给定AbilityStageMonitor中设置的条件匹配的AbilityStage对象的操作成功，err为 undefined，data为获取到的[AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md)对象；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | 是 | 回调函数。当等待并返回与给定AbilityStageMonitor中设置的条件匹配的AbilityStage对象的操作成功，err为 undefined，data为获取到的[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -2026,26 +2090,7 @@ waitAbilityStageMonitor(monitor: AbilityStageMonitor, timeout: long, callback: A
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { AbilityStage } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let timeout = 100;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.waitAbilityStageMonitor({
-  moduleName: 'moduleName',
-  srcEntrance: 'srcEntrance',
-}, timeout, (err: BusinessError<void> | null, data: AbilityStage | undefined) => {
-  if (err) {
-    console.error(`waitAbilityStageMonitor fail. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('waitAbilityStageMonitor callback');
-  }
-});
-```
+参见 [waitAbilityStageMonitor](#waitabilitystagemonitor)
 
 ## waitAbilityStageMonitor
 
@@ -2074,7 +2119,7 @@ waitAbilityStageMonitor(monitor: AbilityStageMonitor, timeout?: long): Promise<A
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md)&gt; | Promise对象，返回 [AbilityStage]{ |
+| Promise&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Promise对象，返回 [AbilityStage]{ |
 
 **错误码：**
 
@@ -2085,18 +2130,5 @@ waitAbilityStageMonitor(monitor: AbilityStageMonitor, timeout?: long): Promise<A
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { AbilityStage } from '@kit.AbilityKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.waitAbilityStageMonitor({
-  moduleName: 'moduleName',
-  srcEntrance: 'srcEntrance',
-}).then((data: AbilityStage) => {
-  console.info('waitAbilityStageMonitor promise');
-});
-```
+参见 [waitAbilityStageMonitor](#waitabilitystagemonitor)
 

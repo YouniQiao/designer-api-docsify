@@ -59,68 +59,6 @@ try {
 }
 ```
 
-## offConnectionAccepted
-
-```TypeScript
-offConnectionAccepted(callback?: Callback<Connection>): void
-```
-
-Unregisters the callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Server-offConnectionAccepted(callback?: Callback<Connection>): void--><!--Device-Server-offConnectionAccepted(callback?: Callback<Connection>): void-End-->
-
-**System capability:** SystemCapability.DistributedSched.AppCollaboration
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | No | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md) object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
-
-## offServerStopped
-
-```TypeScript
-offServerStopped(callback?: Callback<int>): void
-```
-
-Unregisters the callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Server-offServerStopped(callback?: Callback<int>): void--><!--Device-Server-offServerStopped(callback?: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.DistributedSched.AppCollaboration
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Registered callback, where **int** indicates the returned error code. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
-
 ## off('connectionAccepted')
 
 ```TypeScript
@@ -144,7 +82,7 @@ Unregisters the callback listener for **connectionAccepted** event. This API mus
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionAccepted' | Yes | Event type, which is **connectionAccepted**. This event is triggered when a connection from the peer end is received. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | No | Registered callback. The parameter is [Connection](arkts-distributedservice-linkenhance-connection-i.md). The callback last registered using **on** needs to be passed to unregister the callback. The default effect is the same as the passing behavior. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | No | Registered callback. The parameter is [Connection](arkts-distributedservice-linkenhance-connection-i.md). The callback last registered using **on** needs to be passed to unregister the callback. The default effect is the same as the passing behavior. |
 
 **Error codes:**
 
@@ -203,7 +141,7 @@ Unregisters the callback listener for **serverStopped** event. This API must be 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serverStopped' | Yes | Event type, which is **serverStopped**. This event is triggered when the server is stopped abnormally. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | No | Registered callback, where **number** indicates the returned error code. This event is triggered when the server is stopped abnormally. The callback last registered using **on** needs to be passed to unregister the callback. The default effect is the same as the passing behavior. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Registered callback, where **number** indicates the returned error code. This event is triggered when the server is stopped abnormally. The callback last registered using **on** needs to be passed to unregister the callback. The default effect is the same as the passing behavior. |
 
 **Error codes:**
 
@@ -239,13 +177,13 @@ try {
 }
 ```
 
-## onConnectionAccepted
+## offConnectionAccepted
 
 ```TypeScript
-onConnectionAccepted(callback: Callback<Connection>): void
+offConnectionAccepted(callback?: Callback<Connection>): void
 ```
 
-Registers a callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
+Unregisters the callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -253,7 +191,7 @@ Registers a callback listener for **connectionAccepted** events. This API uses a
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Server-onConnectionAccepted(callback: Callback<Connection>): void--><!--Device-Server-onConnectionAccepted(callback: Callback<Connection>): void-End-->
+<!--Device-Server-offConnectionAccepted(callback?: Callback<Connection>): void--><!--Device-Server-offConnectionAccepted(callback?: Callback<Connection>): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -261,7 +199,7 @@ Registers a callback listener for **connectionAccepted** events. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | Yes | Callback used to listen for the server is connected event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | No | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md) object. |
 
 **Error codes:**
 
@@ -270,13 +208,13 @@ Registers a callback listener for **connectionAccepted** events. This API uses a
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
-## onServerStopped
+## offServerStopped
 
 ```TypeScript
-onServerStopped(callback: Callback<int>): void
+offServerStopped(callback?: Callback<int>): void
 ```
 
-Registers a callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
+Unregisters the callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -284,7 +222,7 @@ Registers a callback listener for **serverStopped** events. This API uses an asy
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Server-onServerStopped(callback: Callback<int>): void--><!--Device-Server-onServerStopped(callback: Callback<int>): void-End-->
+<!--Device-Server-offServerStopped(callback?: Callback<int>): void--><!--Device-Server-offServerStopped(callback?: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -292,7 +230,7 @@ Registers a callback listener for **serverStopped** events. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Registered callback, where **int** indicates the returned error code. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Registered callback, where **int** indicates the returned error code. |
 
 **Error codes:**
 
@@ -324,7 +262,7 @@ Registers a callback listener for **connectionAccepted** events. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionAccepted' | Yes | Event type, which is **connectionAccepted**. This event is triggered when a connection from the peer end is received. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | Yes | Callback used to receive server connection events. The callback parameter **connection** is the connection object used to establish the connection. The type is [Connection](arkts-distributedservice-linkenhance-connection-i.md). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | Yes | Callback used to receive server connection events. The callback parameter **connection** is the connection object used to establish the connection. The type is [Connection](arkts-distributedservice-linkenhance-connection-i.md). |
 
 **Error codes:**
 
@@ -383,7 +321,7 @@ Registers a callback listener for **serverStopped** events. This API uses an asy
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serverStopped' | Yes | Event type, which is **serverStopped**. This event is triggered when the server is stopped abnormally. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | Registered callback, where **number** indicates the returned error code. This event is triggered when the server is stopped abnormally. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Registered callback, where **number** indicates the returned error code. This event is triggered when the server is stopped abnormally. |
 
 **Error codes:**
 
@@ -418,6 +356,68 @@ try {
   (err as BusinessError).message);
 }
 ```
+
+## onConnectionAccepted
+
+```TypeScript
+onConnectionAccepted(callback: Callback<Connection>): void
+```
+
+Registers a callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Server-onConnectionAccepted(callback: Callback<Connection>): void--><!--Device-Server-onConnectionAccepted(callback: Callback<Connection>): void-End-->
+
+**System capability:** SystemCapability.DistributedSched.AppCollaboration
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | Yes | Callback used to listen for the server is connected event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
+
+## onServerStopped
+
+```TypeScript
+onServerStopped(callback: Callback<int>): void
+```
+
+Registers a callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Server-onServerStopped(callback: Callback<int>): void--><!--Device-Server-onServerStopped(callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.DistributedSched.AppCollaboration
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Registered callback, where **int** indicates the returned error code. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 ## start
 

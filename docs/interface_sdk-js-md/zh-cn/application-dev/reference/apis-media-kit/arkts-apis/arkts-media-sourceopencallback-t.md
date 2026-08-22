@@ -22,11 +22,29 @@ type SourceOpenCallback = (request: MediaSourceLoadingRequest) => long
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | [MediaSourceLoadingRequest](arkts-media-multimediamedia-mediasourceloadingrequest-i.md) | 是 | 打开请求参数，包含请求资源的具体信息和数据推送方式。 |
+| request | [MediaSourceLoadingRequest](arkts-media-multimedia-media-mediasourceloadingrequest-i.md) | 是 | 打开请求参数，包含请求资源的具体信息和数据推送方式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
 | long | 当前资源打开请求的句柄。大于0表示请求成功，小于或等于0表示请求失败。<br/> - request对象对应句柄唯一。 |
+
+**示例**
+
+```TypeScript
+import { HashMap } from '@kit.ArkTS';
+import { media } from '@kit.MediaKit';
+
+let uuid: number = 1;
+let requests: HashMap<number, media.MediaSourceLoadingRequest> = new HashMap();
+
+let sourceOpenCallback: media.SourceOpenCallback = (request: media.MediaSourceLoadingRequest) => {
+  console.info(`Opening resource: ${request.url}`);
+  // 成功打开资源，返回唯一的句柄, 保证uuid和request对应。
+  uuid += 1;
+  requests.set(uuid, request);
+  return uuid;
+};
+```
 

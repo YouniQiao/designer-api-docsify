@@ -34,6 +34,29 @@ Cancels the resending of web form data.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+        .onDataResubmitted((event) => {
+          console.info('onDataResubmitted');
+          event.handler.cancel();
+        })
+    }
+  }
+}
+```
+
 ## constructor
 
 ```TypeScript
@@ -65,4 +88,27 @@ Resends the web form data.
 <!--Device-DataResubmissionHandler-resend(): void--><!--Device-DataResubmissionHandler-resend(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+        .onDataResubmitted((event) => {
+          console.info('onDataResubmitted');
+          event.handler.resend();
+        })
+    }
+  }
+}
+```
 

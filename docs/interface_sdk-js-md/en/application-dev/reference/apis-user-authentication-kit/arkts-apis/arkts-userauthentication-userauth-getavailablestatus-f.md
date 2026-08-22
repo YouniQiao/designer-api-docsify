@@ -57,3 +57,15 @@ try {
 }
 ```
 
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let auth = new userAuth.UserAuth();
+let checkCode = auth.getAvailableStatus(userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1);
+if (checkCode == userAuth.ResultCode.SUCCESS) {
+  console.info('check auth support success');
+} else {
+  console.error(`check auth support fail, code = ${checkCode}`);
+}
+```
+

@@ -30,7 +30,7 @@ Enable location switch.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Indicates the callback for reporting the error message. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Indicates the callback for reporting the error message. |
 
 **Error codes:**
 
@@ -53,6 +53,22 @@ try {
       console.error('enableLocation: err=' + JSON.stringify(err));
     }
   });
+} catch (err) {
+  console.error("errCode:" + err.code + ", message:" + err.message);
+}
+```
+
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  geoLocationManager.enableLocation().then(() => {
+    console.info('promise, enableLocation succeed');
+  })
+    .catch((error: BusinessError) => {
+      console.error('promise, enableLocation: error=' + JSON.stringify(error));
+    });
 } catch (err) {
   console.error("errCode:" + err.code + ", message:" + err.message);
 }
@@ -96,19 +112,5 @@ Enable location switch.
 
 **Examples**
 
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  geoLocationManager.enableLocation().then(() => {
-    console.info('promise, enableLocation succeed');
-  })
-    .catch((error: BusinessError) => {
-      console.error('promise, enableLocation: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
+See [enableLocation](#enablelocation)
 

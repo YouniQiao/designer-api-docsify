@@ -23,7 +23,7 @@ writeCharacteristicValueWithContext(
 
 Writes the characteristic of a BLE peripheral device with context.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 

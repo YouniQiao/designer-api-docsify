@@ -14,7 +14,7 @@ function generateLocalOobData(transport: BluetoothTransport): Promise<OobData>
 
 Generate out-of-band data of the local device.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 

@@ -58,6 +58,24 @@ Registers a credential inputer.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
+let password = new Uint8Array([0, 0, 0, 0, 0]);
+try {
+  pinAuth.registerInputer({
+    onGetData: (authSubType: osAccount.AuthSubType, callback: osAccount.IInputData) => {
+      callback.onSetData(authSubType, password);
+    }
+  });
+  console.info('registerInputer success.');
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`registerInputer exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let authType: osAccount.AuthType = osAccount.AuthType.DOMAIN;
 let password: Uint8Array = new Uint8Array([0, 0, 0, 0, 0]);
 try {
@@ -107,6 +125,11 @@ Unregisters a credential inputer.
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
 
 **Examples**
+
+```TypeScript
+let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
+pinAuth.unregisterInputer();
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

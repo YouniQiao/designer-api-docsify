@@ -41,6 +41,6 @@ import { sendableRelationalStore } from '@kit.ArkData';
 | [NonSendableAsset](arkts-arkdata-sendablerelationalstore-nonsendableasset-t.md) | 记录资产附件（文件、图片、视频等类型文件）的相关信息。不支持跨线程传递。 |
 | [NonSendableBucket](arkts-arkdata-sendablerelationalstore-nonsendablebucket-t.md) | 用于存储键值对的类型。不支持跨线程传递。 |
 | [NonSendableValues](arkts-arkdata-sendablerelationalstore-nonsendablevalues-t.md) | 表示[ValueType](arkts-arkdata-relationalstore-valuetype-t.md)数据数组存储。不支持跨线程传递。 |
-| [ValueType](arkts-arkdata-sendablerelationalstore-valuetype-t.md) | 用于表示允许的数据字段类型，接口参数具体类型根据其功能而定。 |
 | [ValuesBucket](arkts-arkdata-sendablerelationalstore-valuesbucket-t.md) | 表示[ValueType](arkts-arkdata-sendablerelationalstore-valuetype-t.md)数据的键值对存储，用于支持ValueType数据跨线程传递。 |
+| [ValueType](arkts-arkdata-sendablerelationalstore-valuetype-t.md) | 用于表示允许的数据字段类型，接口参数具体类型根据其功能而定。 |
 

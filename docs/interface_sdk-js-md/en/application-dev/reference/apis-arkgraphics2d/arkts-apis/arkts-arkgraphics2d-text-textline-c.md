@@ -107,6 +107,10 @@ Creates a truncated text line object.
 | --- | --- |
 | [TextLine](arkts-arkgraphics2d-text-textline-c.md) \| undefined | Truncated text line object. |
 
+**Examples**
+
+See [createTruncatedLine](#createtruncatedline)
+
 ## enumerateCaretOffsets
 
 ```TypeScript
@@ -202,6 +206,10 @@ Obtains the number of glyphs in this text line.
 let glyphCount = lines[0].getGlyphCount();
 ```
 
+```TypeScript
+let glyphs = runs[0].getGlyphCount();
+```
+
 ## getGlyphRuns
 
 ```TypeScript
@@ -266,6 +274,10 @@ Obtains the image boundaries of this text line. The image boundaries, equivalent
 
 ```TypeScript
 let imageBounds = lines[0].getImageBounds();
+```
+
+```TypeScript
+let bounds = runs[0].getImageBounds();
 ```
 
 ## getOffsetForStringIndex
@@ -433,6 +445,10 @@ let bounds = lines[0].getTypographicBounds();
 console.info('textLine ascent:' + bounds.ascent + ', descent:' + bounds.descent + ', leading:' + bounds.leading + ', width:' + bounds.width);
 ```
 
+```TypeScript
+let typographicBounds = runs[0].getTypographicBounds();
+```
+
 ## paint
 
 ```TypeScript
@@ -460,6 +476,14 @@ Paints this text line on the canvas with the coordinate point (x, y) as the uppe
 **Examples**
 
 ```TypeScript
+const color: ArrayBuffer = new ArrayBuffer(160000);
+let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
+let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
+let canvas = new drawing.Canvas(pixelMap);
+paragraph.paint(canvas, 0, 0);
+```
+
+```TypeScript
 import { drawing } from '@kit.ArkGraphics2D'
 import { text } from '@kit.ArkGraphics2D'
 import { common2D } from '@kit.ArkGraphics2D'
@@ -468,6 +492,38 @@ import { image } from '@kit.ImageKit'
 function textFunc(pixelmap: PixelMap) {
   let canvas = new drawing.Canvas(pixelmap);
   lines[0].paint(canvas, 0, 0);
+}
+
+@Entry
+@Component
+struct Index {
+  @State pixelmap?: PixelMap = undefined;
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Image(this.pixelmap).width(200).height(200);
+      Button().onClick(() => {
+        if (this.pixelmap == undefined) {
+          const color: ArrayBuffer = new ArrayBuffer(160000);
+          let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
+          this.pixelmap = image.createPixelMapSync(color, opts);
+        }
+        this.fun(this.pixelmap);
+      })
+    }
+  }
+}
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D'
+import { text } from '@kit.ArkGraphics2D'
+import { common2D } from '@kit.ArkGraphics2D'
+import { image } from '@kit.ImageKit'
+
+function textFunc(pixelmap: PixelMap) {
+  let canvas = new drawing.Canvas(pixelmap);
+  runs[0].paint(canvas, 0, 0);
 }
 
 @Entry

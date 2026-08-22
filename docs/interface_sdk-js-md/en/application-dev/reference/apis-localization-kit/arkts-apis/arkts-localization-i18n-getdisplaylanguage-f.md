@@ -41,6 +41,19 @@ Obtains the localized script for the specified language.
 **Examples**
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  // Obtain the display name of Chinese in English.
+  let displayLanguage: string = i18n.System.getDisplayLanguage('zh', 'en-GB'); // displayLanguage = 'Chinese'
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getDisplayLanguage failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
+```TypeScript
 import { i18n } from '@kit.LocalizationKit';
 
 let languageName: string = i18n.getDisplayLanguage('zh', 'en-GB', true); // languageName = 'Chinese'

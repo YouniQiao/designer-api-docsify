@@ -28,7 +28,7 @@ function offSystemPrivateCommand(callback?: Callback<Record<string, CommandDataT
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | Callback function. If this parameter is left empty, all callbacks will be unsubscribed from. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | Callback function. If this parameter is left empty, all callbacks will be unsubscribed from. |
 
 **Error codes:**
 

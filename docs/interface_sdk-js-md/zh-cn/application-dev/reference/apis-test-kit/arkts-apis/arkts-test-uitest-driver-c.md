@@ -63,6 +63,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.assertComponentExist(BY.text('next page'));
+}
+```
+
 ## click
 
 ```TypeScript
@@ -103,10 +113,44 @@ click(x: int, y: int): Promise<void>
 
 ```TypeScript
 // xxx.test.ets
+import { Driver, ON, Component } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    await button.click();
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { Driver } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
+  await driver.click(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  await button.click();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
   await driver.click(100, 100);
 }
 ```
@@ -249,6 +293,24 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { PointerMatrix } from '@kit.TestKit';
+
+async function demo() {
+  let pointerMatrix: PointerMatrix = PointerMatrix.create(2, 3);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+}
+```
+
 ## createUIEventObserver
 
 ```TypeScript
@@ -388,6 +450,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.delayMs(1000);
+}
+```
+
 ## doubleClick
 
 ```TypeScript
@@ -428,10 +500,44 @@ doubleClick(x: int, y: int): Promise<void>
 
 ```TypeScript
 // xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    await button.doubleClick();
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { Driver } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
+  await driver.doubleClick(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  await button.doubleClick();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
   await driver.doubleClick(100, 100);
 }
 ```
@@ -735,6 +841,26 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.findComponent(ON.text('next page'));
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.text('next page'));
+}
+```
+
 ## findComponent
 
 ```TypeScript
@@ -770,15 +896,7 @@ Find the first matched [Component](arkts-test-uitest-component-c.md) on current 
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component | null = await driver.findComponent(ON.text('next page'));
-}
-```
+参见 [findComponent](#findcomponent)
 
 ## findComponents
 
@@ -827,6 +945,26 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let buttonList: Array<Component> | null = await driver.findComponents(ON.text('next page'));
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let buttonList: Array<UiComponent> = await driver.findComponents(BY.text('next page'));
+}
+```
+
 ## findComponents
 
 ```TypeScript
@@ -862,15 +1000,7 @@ Find all the matched [Component](arkts-test-uitest-component-c.md)s on current U
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let buttonList: Array<Component> | null = await driver.findComponents(ON.text('next page'));
-}
-```
+参见 [findComponents](#findcomponents)
 
 ## findWindow
 
@@ -919,6 +1049,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow | null = await driver.findWindow({ active: true });
+}
+```
+
 ## findWindow
 
 ```TypeScript
@@ -954,15 +1094,7 @@ Find the first matched [UiWindow](arkts-test-uitest-uiwindow-c.md) window.
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Driver, UiWindow } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow | null = await driver.findWindow({ active: true });
-}
-```
+参见 [findWindow](#findwindow)
 
 ## fling
 
@@ -1014,6 +1146,26 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver, UiDirection } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.fling(UiDirection.DOWN, 10000);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiDirection } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.fling(UiDirection.DOWN, 10000, 0);
+}
+```
+
 ## fling
 
 ```TypeScript
@@ -1052,15 +1204,7 @@ fling(direction: UiDirection, speed: int): Promise<void>
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Driver, UiDirection } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.fling(UiDirection.DOWN, 10000);
-}
-```
+参见 [fling](#fling)
 
 ## fling
 
@@ -1101,15 +1245,7 @@ fling(direction: UiDirection, speed: int, displayId: int): Promise<void>
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Driver, UiDirection } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.fling(UiDirection.DOWN, 10000, 0);
-}
-```
+参见 [fling](#fling)
 
 ## getDisplayDensity
 
@@ -1151,6 +1287,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let density = await driver.getDisplayDensity(0);
+}
+```
+
 ## getDisplayDensity
 
 ```TypeScript
@@ -1188,15 +1334,7 @@ getDisplayDensity(displayId: int): Promise<Point>
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let density = await driver.getDisplayDensity(0);
-}
-```
+参见 [getDisplayDensity](#getdisplaydensity)
 
 ## getDisplayRotation
 
@@ -1238,6 +1376,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { DisplayRotation, Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let rotation: DisplayRotation = await driver.getDisplayRotation(0);
+}
+```
+
 ## getDisplayRotation
 
 ```TypeScript
@@ -1275,15 +1423,7 @@ getDisplayRotation(displayId: int): Promise<DisplayRotation>
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { DisplayRotation, Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let rotation: DisplayRotation = await driver.getDisplayRotation(0);
-}
-```
+参见 [getDisplayRotation](#getdisplayrotation)
 
 ## getDisplaySize
 
@@ -1325,6 +1465,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let size = await driver.getDisplaySize(0);
+}
+```
+
 ## getDisplaySize
 
 ```TypeScript
@@ -1362,15 +1512,7 @@ getDisplaySize(displayId: int): Promise<Point>
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let size = await driver.getDisplaySize(0);
-}
-```
+参见 [getDisplaySize](#getdisplaysize)
 
 ## injectKnucklePointerAction
 
@@ -1597,11 +1739,71 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
+  let text: Component | null = await driver.findComponent(ON.text('hello world'));
+  if (text) {
+    await text.inputText('123');
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function mode_demo() {
+  let driver: Driver = Driver.create();
+  let text: Component | null = await driver.findComponent(ON.text('hello world'));
+  if (text) {
+    await text.inputText('123', { paste: true, addition: false });
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
   let text: Component | null = await driver.findComponent(ON.type('TextInput'));
   if (text) {
     let point = await text.getBoundsCenter();
     await driver.inputText(point, '123');
   }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let text: Component | null = await driver.findComponent(ON.type('TextInput'));
+  if (text) {
+    let point = await text.getBoundsCenter();
+    await driver.inputText(point, '123', { paste: true, addition: false });
+  }
+}
+
+async function demo_Chinese() {
+  let driver: Driver = Driver.create();
+  let text: Component | null = await driver.findComponent(ON.type('TextInput'));
+  if (text) {
+    let point = await text.getBoundsCenter();
+    await driver.inputText(point, '中文&', { paste: false, addition: true });
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let text: UiComponent = await driver.findComponent(BY.text('hello world'));
+  await text.inputText('123');
 }
 ```
 
@@ -1645,28 +1847,7 @@ inputText(p: Point, text: string, mode: InputTextMode): Promise<void>
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let text: Component | null = await driver.findComponent(ON.type('TextInput'));
-  if (text) {
-    let point = await text.getBoundsCenter();
-    await driver.inputText(point, '123', { paste: true, addition: false });
-  }
-}
-
-async function demo_Chinese() {
-  let driver: Driver = Driver.create();
-  let text: Component | null = await driver.findComponent(ON.type('TextInput'));
-  if (text) {
-    let point = await text.getBoundsCenter();
-    await driver.inputText(point, '中文&', { paste: false, addition: true });
-  }
-}
-```
+参见 [inputText](#inputtext)
 
 ## isComponentPresentWhenDrag
 
@@ -1913,10 +2094,44 @@ longClick(x: int, y: int): Promise<void>
 
 ```TypeScript
 // xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    await button.longClick();
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
 import { Driver } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
+  await driver.longClick(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  await button.longClick();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
   await driver.longClick(100, 100);
 }
 ```
@@ -2032,8 +2247,8 @@ mouseClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标点击的坐标。 |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
-| key1 | int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md)，默认值为0。<br>**起始版本：** 11 |
-| key2 | int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md)，默认值为0。<br>**起始版本：** 11 |
+| key1 | int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。<br>**起始版本：** 11 |
+| key2 | int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -2082,8 +2297,8 @@ mouseDoubleClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标双击的坐标。 |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
-| key1 | int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md)，默认值0。 |
-| key2 | int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md)，默认值0。 |
+| key1 | int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值0。 |
+| key2 | int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值0。 |
 
 **返回值：**
 
@@ -2159,6 +2374,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.mouseDrag({ x: 100, y: 100 }, { x: 200, y: 200 }, 600, 2000);
+}
+```
+
 ## mouseDrag
 
 ```TypeScript
@@ -2199,15 +2424,7 @@ mouseDrag(from: Point, to: Point, speed?: int, duration?: int): Promise<void>
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.mouseDrag({ x: 100, y: 100 }, { x: 200, y: 200 }, 600, 2000);
-}
-```
+参见 [mouseDrag](#mousedrag)
 
 ## mouseDragWithOptions
 
@@ -2290,8 +2507,8 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Prom
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标长按的坐标。 |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
-| key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md)，默认值 为0。 |
-| key2 | number | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md)，默认值 为0。 |
+| key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。 |
+| key2 | number | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。 |
 
 **返回值：**
 
@@ -2318,6 +2535,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver, MouseButton } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.mouseLongClick({ x: 248, y: 194 }, MouseButton.MOUSE_BUTTON_LEFT, 2072, 0, 2000);
+}
+```
+
 ## mouseLongClick
 
 ```TypeScript
@@ -2340,8 +2567,8 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: int, key2?: int, duration?: 
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标长按的坐标。 |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
-| key1 | int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md)，默认值为0。 |
-| key2 | int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md)，默认值为0。 |
+| key1 | int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
+| key2 | int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
 | duration | int | 否 | 长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出401错误码，为null或undefined时使用默认值。 |
 
 **返回值：**
@@ -2359,15 +2586,7 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: int, key2?: int, duration?: 
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Driver, MouseButton } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.mouseLongClick({ x: 248, y: 194 }, MouseButton.MOUSE_BUTTON_LEFT, 2072, 0, 2000);
-}
-```
+参见 [mouseLongClick](#mouselongclick)
 
 ## mouseMoveTo
 
@@ -2488,8 +2707,8 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number): P
 | p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标点击的坐标。 |
 | down | boolean | 是 | 滚轮滑动方向是否向下。true表示向下滑动。false表示向上滚动。 |
 | d | number | 是 | 鼠标滚轮滚动的格数，取值大于等于0的整数，每格对应目标点位移120px。 |
-| key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md)，默认值 为0。<br>**起始版本：** 11 |
-| key2 | number | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md)，默认值 为0。<br>**起始版本：** 11 |
+| key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。<br>**起始版本：** 11 |
+| key2 | number | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -2516,6 +2735,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.mouseScroll({ x: 360, y: 640 }, true, 30, 2072, 20);
+}
+```
+
 ## mouseScroll
 
 ```TypeScript
@@ -2539,8 +2768,8 @@ mouseScroll(p: Point, down: boolean, d: int, key1?: int, key2?: int, speed?: int
 | p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标点击的坐标。 |
 | down | boolean | 是 | 滚轮滑动方向是否向下。true表示向下滑动。false表示向上滚动。 |
 | d | int | 是 | 鼠标滚轮滚动的格数，取值大于等于0的整数，每格对应目标点位移120px。 |
-| key1 | int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md)，默认值为0。 |
-| key2 | int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md)，默认值为0。 |
+| key1 | int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
+| key2 | int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
 | speed | int | 否 | 鼠标滚轮滚动的速度，范围：1-500的整数，单位：格/秒。为不在范围内的非负数或为null/undefined时设为默认值20。为负数时抛出401错误码。 |
 
 **返回值：**
@@ -2558,15 +2787,7 @@ mouseScroll(p: Point, down: boolean, d: int, key1?: int, key2?: int, speed?: int
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.mouseScroll({ x: 360, y: 640 }, true, 30, 2072, 20);
-}
-```
+参见 [mouseScroll](#mousescroll)
 
 ## penClick
 
@@ -2800,6 +3021,26 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.pressBack(0);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.pressBack();
+}
+```
+
 ## pressBack
 
 ```TypeScript
@@ -2837,15 +3078,7 @@ pressBack(displayId: int): Promise<void>
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.pressBack(0);
-}
-```
+参见 [pressBack](#pressback)
 
 ## pressHome
 
@@ -2887,6 +3120,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.pressHome(0);
+}
+```
+
 ## pressHome
 
 ```TypeScript
@@ -2924,15 +3167,7 @@ pressHome(displayId: int): Promise<void>
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.pressHome(0);
-}
-```
+参见 [pressHome](#presshome)
 
 ## screenCap
 
@@ -2981,6 +3216,26 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.screenCap('/data/storage/el2/base/cache/1.png', 0);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.screenCap('/data/storage/el2/base/cache/1.png');
+}
+```
+
 ## screenCap
 
 ```TypeScript
@@ -3019,15 +3274,7 @@ screenCap(savePath: string, displayId: int): Promise<boolean>
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.screenCap('/data/storage/el2/base/cache/1.png', 0);
-}
-```
+参见 [screenCap](#screencap)
 
 ## screenCapture
 
@@ -3224,6 +3471,16 @@ import { Driver } from '@kit.TestKit';
 async function demo() {
   let driver: Driver = Driver.create();
   await driver.swipe(100, 100, 200, 200, 600);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.swipe(100, 100, 200, 200);
 }
 ```
 
@@ -3451,9 +3708,9 @@ triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key0 | number | 是 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md)。 |
-| key1 | number | 是 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md)。 |
-| key2 | number | 否 | 指定的第三个key值，取值范围：大于等于0的整数。取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md)， 默认值为0。<br>**起始版本：** 11 |
+| key0 | number | 是 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
+| key1 | number | 是 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
+| key2 | number | 否 | 指定的第三个key值，取值范围：大于等于0的整数。取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)， 默认值为0。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -3481,6 +3738,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.triggerCombineKeys(2072, 2047, 2035, 0);
+}
+```
+
 ## triggerCombineKeys
 
 ```TypeScript
@@ -3501,9 +3768,9 @@ triggerCombineKeys(key0: int, key1: int, key2?: int, displayId?: int): Promise<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key0 | int | 是 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md)。 |
-| key1 | int | 是 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md)。 |
-| key2 | int | 否 | 指定的第三个key值，取值范围：大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md)，默认值 为0。 |
+| key0 | int | 是 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
+| key1 | int | 是 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
+| key2 | int | 否 | 指定的第三个key值，取值范围：大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。 |
 | displayId | int | 否 | 指定的屏幕ID，取值范围：大于等于0的整数，默认值为设备默认屏幕ID。 |
 
 **返回值：**
@@ -3521,15 +3788,7 @@ triggerCombineKeys(key0: int, key1: int, key2?: int, displayId?: int): Promise<v
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.triggerCombineKeys(2072, 2047, 2035, 0);
-}
-```
+参见 [triggerCombineKeys](#triggercombinekeys)
 
 ## triggerKey
 
@@ -3551,7 +3810,7 @@ triggerKey(keyCode: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyCode | int | 是 | 指定的key值，取值范围：大于等于0的整数。取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md)。 |
+| keyCode | int | 是 | 指定的key值，取值范围：大于等于0的整数。取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
 
 **返回值：**
 
@@ -3579,6 +3838,28 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+import { KeyCode } from '@kit.InputKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.triggerKey(KeyCode.KEYCODE_BACK, 0); // 返回键。
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+import { KeyCode } from '@kit.InputKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.triggerKey(KeyCode.KEYCODE_BACK); // 返回键
+}
+```
+
 ## triggerKey
 
 ```TypeScript
@@ -3599,7 +3880,7 @@ triggerKey(keyCode: int, displayId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyCode | int | 是 | 指定的key值，取值范围：大于等于0的整数。取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeycode-keycode-e.md)。 |
+| keyCode | int | 是 | 指定的key值，取值范围：大于等于0的整数。取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
 | displayId | int | 是 | 指定的屏幕ID，取值范围：大于等于0的整数。 **说明：** 传入displayId不存在时，将抛出17000007异常。 |
 
 **返回值：**
@@ -3617,16 +3898,7 @@ triggerKey(keyCode: int, displayId: int): Promise<void>
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-import { KeyCode } from '@kit.InputKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.triggerKey(KeyCode.KEYCODE_BACK, 0); // 返回键。
-}
-```
+参见 [triggerKey](#triggerkey)
 
 ## triggerPenKey
 
@@ -3736,6 +4008,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.waitForComponent(ON.text('next page'), 500);
+}
+```
+
 ## waitForComponent
 
 ```TypeScript
@@ -3772,15 +4054,7 @@ Find the first matched [Component](arkts-test-uitest-component-c.md) on current 
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component | null = await driver.waitForComponent(ON.text('next page'), 500);
-}
-```
+参见 [waitForComponent](#waitforcomponent)
 
 ## waitForIdle
 

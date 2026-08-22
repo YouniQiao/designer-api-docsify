@@ -84,7 +84,7 @@ want?: Want
 
 对象间信息传递的载体，可以用于应用组件间的信息传递。
 
-**类型：** [Want](arkts-ability-appabilitywant-want-c.md)
+**类型：** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 23
 

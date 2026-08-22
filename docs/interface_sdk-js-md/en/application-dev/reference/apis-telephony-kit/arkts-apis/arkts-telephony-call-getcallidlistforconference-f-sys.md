@@ -27,7 +27,7 @@ Obtains the list of call IDs in a conference. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | int | Yes | Call ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -51,6 +51,16 @@ call.getCallIdListForConference(1, (err: BusinessError, data: Array<string>) => 
     } else {
         console.info(`getCallIdListForConference success, data->${JSON.stringify(data)}`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.getCallIdListForConference(1).then((data: Array<string>) => {
+    console.info(`getCallIdListForConference success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getCallIdListForConference fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -96,13 +106,5 @@ Obtains the list of call IDs in a conference. This API uses a promise to return 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.getCallIdListForConference(1).then((data: Array<string>) => {
-    console.info(`getCallIdListForConference success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getCallIdListForConference fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getCallIdListForConference](#getcallidlistforconference)
 

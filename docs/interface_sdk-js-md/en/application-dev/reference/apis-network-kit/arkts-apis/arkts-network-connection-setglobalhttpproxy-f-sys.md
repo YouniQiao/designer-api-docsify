@@ -29,7 +29,7 @@ Sets the global network HTTP proxy configuration information. This API uses an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | httpProxy | HttpProxy | Yes | Global HTTP proxy configuration of the network. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the global HTTP proxy configuration of the network is set successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the global HTTP proxy configuration of the network is set successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -61,6 +61,23 @@ connection.setGlobalHttpProxy(httpProxy, (err: BusinessError) => {
         return;
     }
     console.info(`setGlobalHttpProxy success.`);
+});
+```
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let exclusionStr = "192.168,baidu.com";
+let exclusionArray = exclusionStr.split(',');
+connection.setGlobalHttpProxy({
+  host: "192.168.xx.xxx",
+  port: 8080,
+  exclusionList: exclusionArray
+} as connection.HttpProxy).then(() => {
+  console.info("success");
+}).catch((error: BusinessError) => {
+  console.error(JSON.stringify(error));
 });
 ```
 
@@ -108,20 +125,5 @@ Sets the global network HTTP proxy configuration information. This API uses a pr
 
 **Examples**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let exclusionStr = "192.168,baidu.com";
-let exclusionArray = exclusionStr.split(',');
-connection.setGlobalHttpProxy({
-  host: "192.168.xx.xxx",
-  port: 8080,
-  exclusionList: exclusionArray
-} as connection.HttpProxy).then(() => {
-  console.info("success");
-}).catch((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
+See [setGlobalHttpProxy](#setglobalhttpproxy)
 

@@ -24,7 +24,7 @@ Obtains the visible status of the mouse pointer. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the visible status of the mouse pointer (**true** if visible and **false** if invisible). Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the visible status of the mouse pointer (**true** if visible and **false** if invisible). Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -62,29 +62,6 @@ struct Index {
 }
 ```
 
-
-## isPointerVisible
-
-```TypeScript
-function isPointerVisible(): Promise<boolean>
-```
-
-Obtains the visible status of the mouse pointer. This API uses a promise to return the result.
-
-**Since:** 23
-
-<!--Device-pointer-function isPointerVisible(): Promise<boolean>--><!--Device-pointer-function isPointerVisible(): Promise<boolean>-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** is returned if the mouse pointer is visible; **false** is returned if the mouse pointer is hidden. |
-
-**Examples**
-
 ```TypeScript
 import { pointer } from '@kit.InputKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -110,4 +87,29 @@ struct Index {
   }
 }
 ```
+
+
+## isPointerVisible
+
+```TypeScript
+function isPointerVisible(): Promise<boolean>
+```
+
+Obtains the visible status of the mouse pointer. This API uses a promise to return the result.
+
+**Since:** 23
+
+<!--Device-pointer-function isPointerVisible(): Promise<boolean>--><!--Device-pointer-function isPointerVisible(): Promise<boolean>-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise used to return the result. **true** is returned if the mouse pointer is visible; **false** is returned if the mouse pointer is hidden. |
+
+**Examples**
+
+See [isPointerVisible](#ispointervisible)
 

@@ -115,22 +115,6 @@ ipAddress: int
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
-## isHiLinkNetwork
-
-```TypeScript
-isHiLinkNetwork: boolean
-```
-
-WLAN热点是否是HiLink网络。
-
-**类型：** boolean
-
-**起始版本：** 23
-
-<!--Device-WifiLinkedInfo-isHiLinkNetwork: boolean--><!--Device-WifiLinkedInfo-isHiLinkNetwork: boolean-End-->
-
-**系统能力：** SystemCapability.Communication.WiFi.STA
-
 ## isHidden
 
 ```TypeScript
@@ -144,6 +128,22 @@ isHidden: boolean
 **起始版本：** 23
 
 <!--Device-WifiLinkedInfo-isHidden: boolean--><!--Device-WifiLinkedInfo-isHidden: boolean-End-->
+
+**系统能力：** SystemCapability.Communication.WiFi.STA
+
+## isHiLinkNetwork
+
+```TypeScript
+isHiLinkNetwork: boolean
+```
+
+WLAN热点是否是HiLink网络。
+
+**类型：** boolean
+
+**起始版本：** 23
+
+<!--Device-WifiLinkedInfo-isHiLinkNetwork: boolean--><!--Device-WifiLinkedInfo-isHiLinkNetwork: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 

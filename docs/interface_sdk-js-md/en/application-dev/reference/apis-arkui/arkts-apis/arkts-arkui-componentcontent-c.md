@@ -42,61 +42,8 @@ A constructor used to create a **ComponentContent** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
+| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
 | builder | WrappedBuilder&lt;[]&gt; | Yes | WrappedBuilder** object that encapsulates a builder function that has no parameters. |
-
-## constructor
-
-```TypeScript
-constructor(uiContext: UIContext, builder: WrappedBuilder<[T]>, args: T)
-```
-
-A constructor used to create a **ComponentContent** object.
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ComponentContent-constructor(uiContext: UIContext, builder: WrappedBuilder<[T]>, args: T)--><!--Device-ComponentContent-constructor(uiContext: UIContext, builder: WrappedBuilder<[T]>, args: T)-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
-| builder | WrappedBuilder&lt;[T]&gt; | Yes | WrappedBuilder** object that encapsulates a builder function that has parameters. |
-| args | T | Yes | Parameters of the builder function encapsulated in the **WrappedBuilder** object. |
-
-## constructor
-
-```TypeScript
-constructor(uiContext: UIContext, builder: WrappedBuilder<[T]>, args: T, options: BuildOptions)
-```
-
-A constructor used to create a **ComponentContent** object.
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ComponentContent-constructor(uiContext: UIContext, builder: WrappedBuilder<[T]>, args: T, options: BuildOptions)--><!--Device-ComponentContent-constructor(uiContext: UIContext, builder: WrappedBuilder<[T]>, args: T, options: BuildOptions)-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
-| builder | WrappedBuilder&lt;[T]&gt; | Yes | WrappedBuilder** object that encapsulates a builder function that has parameters. |
-| args | T | Yes | Parameters of the builder function encapsulated in the **WrappedBuilder** object. |
-| options | [BuildOptions](../../apis-default/arkts-apis/arkts-buildernode-buildoptions-i.md) | Yes | Build options, which determine whether to support the behavior of nesting **@Builder** within **@Builder**. |
 
 **Examples**
 
@@ -158,6 +105,127 @@ struct Index {
   }
 }
 ```
+
+This example demonstrates how to use the ReactiveComponentContent constructor to dynamically create UI components that contain reactive content, implementing nested calls to the Builder function and flexible transfer of function parameters.
+
+```TypeScript
+import { ReactiveComponentContent, NodeContent, typeNode } from '@kit.ArkUI';
+
+@Builder
+function buildTextWithFunc(fun: Function) {
+  Text(fun())
+    .fontSize(20)
+    .fontWeight(FontWeight.Bold)
+    .margin({ bottom: 36 })
+}
+
+@Builder
+function buildText(text: string, func: Function) {
+  Column() {
+    Text(text)
+      .fontSize(20)
+      .fontWeight(FontWeight.Bold)
+      .margin({ bottom: 12 })
+    buildTextWithFunc(func)
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'HELLO';
+  private content: NodeContent = new NodeContent();
+
+  build() {
+    Row() {
+      Column({ space: 12 }) {
+        Button('addComponentContent')
+          .onClick(() => {
+            // Dynamically create a column node.
+            let column = typeNode.createNode(this.getUIContext(), 'Column');
+            column.initialize();
+            // Create a ReactiveComponentContent and add it to the Column node.
+            column.addComponentContent(new ReactiveComponentContent<[string, Function]>(this.getUIContext(),
+              wrapBuilder<[string, Function]>(buildText), { nestingBuilderSupported: true },
+              this.message,
+              () => {
+                return 'FUNCTION'
+              }
+            ));
+            // Add the built node to the content container.
+            this.content.addFrameNode(column);
+          })
+        ContentSlot(this.content) // Display the dynamically added content.
+      }
+      .id('column')
+      .width('100%')
+      .height('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## constructor
+
+```TypeScript
+constructor(uiContext: UIContext, builder: WrappedBuilder<[T]>, args: T)
+```
+
+A constructor used to create a **ComponentContent** object.
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ComponentContent-constructor(uiContext: UIContext, builder: WrappedBuilder<[T]>, args: T)--><!--Device-ComponentContent-constructor(uiContext: UIContext, builder: WrappedBuilder<[T]>, args: T)-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
+| builder | WrappedBuilder&lt;[T]&gt; | Yes | WrappedBuilder** object that encapsulates a builder function that has parameters. |
+| args | T | Yes | Parameters of the builder function encapsulated in the **WrappedBuilder** object. |
+
+**Examples**
+
+See [constructor](#constructor)
+
+## constructor
+
+```TypeScript
+constructor(uiContext: UIContext, builder: WrappedBuilder<[T]>, args: T, options: BuildOptions)
+```
+
+A constructor used to create a **ComponentContent** object.
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ComponentContent-constructor(uiContext: UIContext, builder: WrappedBuilder<[T]>, args: T, options: BuildOptions)--><!--Device-ComponentContent-constructor(uiContext: UIContext, builder: WrappedBuilder<[T]>, args: T, options: BuildOptions)-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
+| builder | WrappedBuilder&lt;[T]&gt; | Yes | WrappedBuilder** object that encapsulates a builder function that has parameters. |
+| args | T | Yes | Parameters of the builder function encapsulated in the **WrappedBuilder** object. |
+| options | [BuildOptions](../../apis-default/arkts-apis/arkts-buildernode-buildoptions-i.md) | Yes | Build options, which determine whether to support the behavior of nesting **@Builder** within **@Builder**. |
+
+**Examples**
+
+See [constructor](#constructor)
 
 ## dispose
 
@@ -242,6 +310,108 @@ struct Index {
       .height('100%')
     }
     .height('100%')
+  }
+}
+```
+
+The following example shows how to use the dispose API to correctly release the ReactiveComponentContent object and manage the node lifecycle.
+
+```TypeScript
+import {
+  ReactiveComponentContent,
+  Binding,
+  MutableBinding,
+  UIContext,
+  UIUtils,
+  NodeController,
+  FrameNode
+} from '@kit.ArkUI';
+
+// dispose
+@Builder
+function buildText(
+  MsgAge: MutableBinding<number>,
+  message: MutableBinding<string>
+) {
+  Column() {
+    Row() {
+      Text(`age: ${MsgAge.value}, name: ${message.value}`)
+    }
+  }
+  .justifyContent(FlexAlign.Center)
+  .alignItems(HorizontalAlign.Center)
+  .width('100%')
+  .height('100%')
+}
+
+interface GeneratedObjectLiteralInterface_1 {
+  MsgAge: number;
+  message: string;
+}
+
+const params: GeneratedObjectLiteralInterface_1 = {
+  MsgAge: 10,
+  message: 'Mike',
+};
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+  private contentNode: ReactiveComponentContent<[Binding<number>, Binding<string>]> | null = null;
+
+  makeNode(context: UIContext): FrameNode | null {
+    // Create a FrameNode as the root container.
+    this.rootNode = new FrameNode(context);
+    // Create ReactiveComponentContent.
+    this.contentNode = new ReactiveComponentContent <[Binding<number>, Binding<string>]>(context,
+      wrapBuilder<[Binding<number>, Binding<string>]>(buildText),
+      {},
+      UIUtils.makeBinding<number>(() => params.MsgAge, (val: number) => {
+        params.MsgAge = val
+        console.info("NodeTest1 get", params.MsgAge);
+      }),
+      UIUtils.makeBinding<string>(() => params.message, val => {
+        console.info("NodeTest2 set before", params.message);
+        params.message = val;
+        console.info("NodeTest3 set after", params.message);
+      }),
+    );
+    // Add the reactive content to the root node.
+    if (this.rootNode !== null) {
+      this.rootNode.addComponentContent(this.contentNode);
+    }
+    return this.rootNode;
+  }
+
+  // Method for releasing resources
+  dispose() {
+    if (this.contentNode !== null) {
+      this.contentNode.dispose(); // Release ReactiveComponentContent resources.
+    }
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      Column() {
+        // Display the custom node content.
+        NodeContainer(this.myNodeController)
+          .width('100%')
+          .height(100)
+          .backgroundColor('#FFF0F0F0')
+        // Trigger resource release.
+        Button('ReactiveComponentContent dispose')
+          .onClick(() => {
+            this.myNodeController.dispose(); // Calling dispose to Release Resources
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
   }
 }
 ```
@@ -465,6 +635,188 @@ struct TextBuilder {
 }
 ```
 
+In this example, the inheritance status of ReactiveComponentContent is set to true, the freezing policy of the parent custom component is inherited, the component is frozen when it is inactive, and the component is unfrozen when it is active. The cached data is updated.
+
+```TypeScript
+import { ReactiveComponentContent, FrameNode, NodeController, Binding, UIUtils } from '@kit.ArkUI';
+
+@Builder
+// Builder component
+function buildText(count: Binding<number>) {
+
+  Column() {
+    TextBuilder({ message: count.value })
+  }
+}
+
+class TextNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+  private contentNode: ReactiveComponentContent<[Binding<number>]> | null = null;
+  private count: number = 0;
+
+  makeNode(context: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(context);
+    this.contentNode = new ReactiveComponentContent(context, wrapBuilder<[Binding<number>]>(buildText), {},
+      UIUtils.makeBinding<number>(() => {
+        return this.count
+      }));
+    this.contentNode.inheritFreezeOptions(true);
+    if (this.rootNode !== null) {
+      this.rootNode.addComponentContent(this.contentNode);
+    }
+    return this.rootNode;
+  }
+
+  update(): void {
+    if (this.contentNode !== null) {
+      this.count += 1;
+      this.contentNode.flushState();
+    }
+  }
+}
+
+const textNodeController: TextNodeController = new TextNodeController();
+
+@Entry
+@Component
+struct MyNavigationTestStack {
+  @Provide('pageInfo') pageInfo: NavPathStack = new NavPathStack();
+  @State message: number = 0;
+  @State logNumber: number = 0;
+
+  @Builder
+  PageMap(name: string) {
+    if (name === 'pageOne') {
+      pageOneStack({ message: this.message, logNumber: this.logNumber })
+    } else if (name === 'pageTwo') {
+      pageTwoStack({ message: this.message, logNumber: this.logNumber })
+    }
+  }
+
+  build() {
+    Column() {
+      Button('update ComponentContent')
+        .onClick(() => {
+          textNodeController.update();
+        })
+      Navigation(this.pageInfo) {
+        Column() {
+          Button('Next Page', { stateEffect: true, type: ButtonType.Capsule })
+            .width('80%')
+            .height(40)
+            .margin(20)
+            .onClick(() => {
+              this.pageInfo.pushPath({ name: 'pageOne' }); // Push the navigation destination page specified by name to the navigation stack.
+            })
+        }
+      }.title('NavIndex')
+      .navDestination(this.PageMap)
+      .mode(NavigationMode.Stack)
+    }
+  }
+}
+
+@Component
+struct pageOneStack { // Page 1
+  @Consume('pageInfo') pageInfo: NavPathStack;
+  @State index: number = 1;
+  @Link message: number;
+  @Link logNumber: number;
+
+  build() {
+    NavDestination() {
+      Column() {
+        NavigationContentMsgStack({ message: this.message, index: this.index, logNumber: this.logNumber })
+        Button('Next Page', { stateEffect: true, type: ButtonType.Capsule }) // Navigate to page 2.
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfo.pushPathByName('pageTwo', null);
+          })
+        Button('Back Page', { stateEffect: true, type: ButtonType.Capsule }) // Return to the home page.
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfo.pop();
+          })
+      }.width('100%').height('100%')
+    }.title('pageOne')
+    .onBackPressed(() => {
+      this.pageInfo.pop();
+      return true;
+    })
+  }
+}
+
+@Component
+struct pageTwoStack { // Page 2
+  @Consume('pageInfo') pageInfo: NavPathStack;
+  @State index: number = 2;
+  @Link message: number;
+  @Link logNumber: number;
+
+  build() {
+    NavDestination() {
+      Column() {
+        NavigationContentMsgStack({ message: this.message, index: this.index, logNumber: this.logNumber })
+        Text('BuilderNode is frozen')
+          .fontWeight(FontWeight.Bold)
+          .margin({ top: 48, bottom: 48 })
+        Button('Back Page', { stateEffect: true, type: ButtonType.Capsule }) // Return to page 1.
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfo.pop();
+          })
+      }.width('100%').height('100%')
+    }.title('pageTwo')
+    .onBackPressed(() => {
+      this.pageInfo.pop();
+      return true;
+    })
+  }
+}
+
+@Component({ freezeWhenInactive: true })
+  // Set the freeze policy to inactive freeze.
+struct NavigationContentMsgStack {
+  @Link message: number;
+  @Link index: number;
+  @Link logNumber: number;
+
+  build() {
+    Column() {
+      if (this.index === 1) {
+        NodeContainer(textNodeController)
+      }
+    }
+  }
+}
+
+@Component({ freezeWhenInactive: true })
+  // Set the freeze policy to inactive freeze.
+struct TextBuilder {
+  @Prop @Watch('info') message: number = 0;
+
+  info() {
+    console.info(`freeze-test TextBuilder message callback ${this.message}`); // Print logs based on the message content change to determine whether the freeze occurs.
+  }
+
+  build() {
+    Row() {
+      Column() {
+        Text(`Update count: ${this.message}`)
+          .fontWeight(FontWeight.Bold)
+          .margin({ top: 48, bottom: 48 })
+      }
+    }
+  }
+}
+```
+
 ## isDisposed
 
 ```TypeScript
@@ -563,6 +915,128 @@ struct Index {
 }
 ```
 
+This example demonstrates how to use the isDisposed API to check whether the ReactiveComponentContent object's reference to the backend node is released, providing a complete implementation solution for node status security detection.
+
+```TypeScript
+import {
+  ReactiveComponentContent,
+  Binding,
+  MutableBinding,
+  UIContext,
+  UIUtils,
+  NodeController,
+  FrameNode
+} from '@kit.ArkUI';
+
+@Builder
+function buildText(
+  MsgAge: MutableBinding<number>,
+  message: MutableBinding<string>
+) {
+  Column() {
+    Row() {
+      Text(`age: ${MsgAge.value}, name: ${message.value}`)
+        .fontSize(15)
+    }
+  }
+  .justifyContent(FlexAlign.Center)
+  .alignItems(HorizontalAlign.Center)
+  .width('100%')
+  .height('100%')
+}
+
+interface GeneratedObjectLiteralInterface_1 {
+  MsgAge: number;
+  message: string;
+}
+
+const params: GeneratedObjectLiteralInterface_1 = {
+  MsgAge: 10,
+  message: 'Mike',
+};
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+  private contentNode: ReactiveComponentContent<[Binding<number>, Binding<string>]> | null = null;
+
+  makeNode(context: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(context);
+    this.contentNode = new ReactiveComponentContent <[Binding<number>, Binding<string>]>(context,
+      wrapBuilder<[Binding<number>, Binding<string>]>(buildText),
+      {},
+      UIUtils.makeBinding<number>(() => params.MsgAge, (val: number) => {
+        params.MsgAge = val
+        console.info("NodeTest1 get", params.MsgAge);
+      }),
+      UIUtils.makeBinding<string>(() => params.message, val => {
+        console.info("NodeTest2 set before", params.message);
+        params.message = val;
+        console.info("NodeTest3 set after", params.message);
+      }),
+    );
+    if (this.rootNode !== null) {
+      this.rootNode.addComponentContent(this.contentNode);
+    }
+    return this.rootNode;
+  }
+
+  dispose() {
+    if (this.contentNode !== null) {
+      this.contentNode.dispose();
+    }
+  }
+
+  // Check whether the current node has been released.
+  isDisposed(): string {
+    if (this.contentNode !== null) {
+      if (this.contentNode.isDisposed()) {
+        return 'contentNode isDisposed is true';
+      } else {
+        return 'contentNode isDisposed is false';
+      }
+    }
+    return 'contentNode is null';
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  @State text: string = ''
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      Column({ space: 12 }) {
+        NodeContainer(this.myNodeController)
+          .width('100%')
+          .height(100)
+          .backgroundColor('#FFF0F0F0')
+        Button('dispose')
+          .onClick(() => {
+            this.myNodeController.dispose();
+            this.text = '';
+          })
+          .fontSize(15)
+          .width(200)
+          .height(30)
+        Button('isDisposed')
+          .onClick(() => {
+            this.text = this.myNodeController.isDisposed();
+          })
+          .width(200)
+          .height(30)
+          .fontSize(15)
+        Text(this.text)
+          .fontSize(15)
+      }
+      .width('100%')
+      .height('100%')
+    }
+  }
+}
+```
+
 ## isTransferred
 
 ```TypeScript
@@ -605,6 +1079,178 @@ recycle(): void
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+A high-performance long list that contains multi-layer component reuse is implemented. ReactiveComponentContent dynamically manages Builder content and automatically reclaims and reuses components when the list scrolls.
+
+```TypeScript
+import { NodeContent, typeNode, ReactiveComponentContent } from '@kit.ArkUI';
+
+const TEST_TAG: string = 'Reuse+Recycle';
+
+// Custom data source class, which is used to manage list data.
+class MyDataSource {
+  private dataArray: string[] = [];
+  private listener: DataChangeListener | null = null;
+
+  public totalCount(): number {
+    return this.dataArray.length;
+  }
+
+  public getData(index: number) {
+    return this.dataArray[index];
+  }
+
+  public pushData(data: string) {
+    this.dataArray.push(data);
+  }
+
+  public reloadListener(): void {
+    this.listener?.onDataReloaded();
+  }
+
+  public registerDataChangeListener(listener: DataChangeListener): void {
+    this.listener = listener;
+  }
+
+  public unregisterDataChangeListener(): void {
+    this.listener = null;
+  }
+}
+
+@Builder
+function buildNode(param: string) {
+  Row() {
+    Text(`C${param} -- `)
+    ReusableChildComponent2({ item: param })
+  }
+}
+
+@Reusable
+@Component
+struct ReusableChildComponent {
+  @Prop item: string = '';
+  @Prop switch: string = '';
+  private content: NodeContent = new NodeContent();
+  // Create a ReactiveComponentContent instance and encapsulate the builder dynamic content.
+  private componentContent: ReactiveComponentContent<[string]> = new ReactiveComponentContent<[string]>(
+    this.getUIContext(),
+    wrapBuilder<[string]>(buildNode),
+    { nestingBuilderSupported: true },
+    this.item);
+
+  aboutToAppear() {
+    let column = typeNode.createNode(this.getUIContext(), 'Column');
+    column.initialize();
+    column.addComponentContent(this.componentContent);
+    this.content.addFrameNode(column);
+  }
+
+  // Recycle the component lifecycle callback.
+  aboutToRecycle(): void {
+    console.info(`${TEST_TAG} ReusableChildComponent aboutToRecycle ${this.item}`);
+
+    // When the switch is turned on, the recycling of the internal ReactiveComponentContent is triggered.
+    if (this.switch === 'open') {
+      this.componentContent.recycle();
+    }
+  }
+
+  // Lifecycle callback during component reuse
+  aboutToReuse(params: object): void {
+    console.info(`${TEST_TAG} ReusableChildComponent aboutToReuse ${JSON.stringify(params)}`);
+
+    // When the switch is turned on, the reuse of the internal ReactiveComponentContent is triggered.
+    if (this.switch === 'open') {
+      this.componentContent.reuse(params);
+    }
+  }
+
+  build() {
+    Row() {
+      Text(`A${this.item}--`)
+      ReusableChildComponent3({ item: this.item })
+      ContentSlot(this.content)
+    }
+  }
+}
+
+@Component
+struct ReusableChildComponent2 {
+  @Prop item: string = 'false';
+
+  aboutToReuse(params: Record<string, object>) {
+    console.info(`${TEST_TAG} ReusableChildComponent2 aboutToReuse ${JSON.stringify(params)}`);
+  }
+
+  aboutToRecycle(): void {
+    console.info(`${TEST_TAG} ReusableChildComponent2 aboutToRecycle ${this.item}`);
+  }
+
+  build() {
+    Row() {
+      Text(`D${this.item}`)
+        .fontSize(20)
+        .backgroundColor(Color.Yellow)
+        .margin({ left: 10 })
+    }.margin({ left: 10, right: 10 })
+  }
+}
+
+@Component
+struct ReusableChildComponent3 {
+  @Prop item: string = 'false';
+
+  aboutToReuse(params: Record<string, object>) {
+    console.info(`${TEST_TAG} ReusableChildComponent3 aboutToReuse ${JSON.stringify(params)}`);
+  }
+
+  aboutToRecycle(): void {
+    console.info(`${TEST_TAG} ReusableChildComponent3 aboutToRecycle ${this.item}`);
+  }
+
+  build() {
+    Row() {
+      Text(`B${this.item}`)
+        .fontSize(20)
+        .backgroundColor(Color.Yellow)
+        .margin({ left: 10 })
+    }.margin({ left: 10, right: 10 })
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  @State data: MyDataSource = new MyDataSource();
+
+  aboutToAppear() {
+    // Initialize 100 test data records.
+    for (let i = 0; i < 100; i++) {
+      this.data.pushData(i.toString());
+    }
+  }
+
+  build() {
+    Column() {
+      // Use LazyForEach to render a long list and enable component reuse.
+      List({ space: 3 }) {
+        LazyForEach(this.data, (item: string) => {
+          ListItem() {
+            ReusableChildComponent({
+              item: item,
+              switch: 'open'
+            })
+          }
+        }, (item: string) => item)
+      }
+      .width('100%')
+      .height('100%')
+    }
+  }
+}
+```
+
 ## reuse
 
 ```TypeScript
@@ -628,6 +1274,10 @@ Triggers component reuse for custom components under this **ComponentContent**. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | param | Object | No | Parameters for **ComponentContent** reuse. This parameter is passed to all top-level custom components within the **ComponentContent** during reuse and must include all required constructor parameters for each component; otherwise, undefined behavior may occur. Calling this method synchronously triggers the [aboutToReuse](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoreuse10) lifecycle callback of internal custom components, with this parameter as the callback input. The default value is undefined. In this case, the custom component in ComponentContent directly uses the data source during construction. |
+
+**Examples**
+
+For details, see the example in [recycle](#recycle).
 
 ## update
 
@@ -711,7 +1361,7 @@ struct Index {
 updateConfiguration(): void
 ```
 
-Transfers a system environment change event and triggers full update of a node. For details about system environment changes, see [@ohos.app.ability.Configuration (Environment Variables)](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityconfiguration-configuration-i.md).
+Transfers a system environment change event and triggers full update of a node. For details about system environment changes, see [@ohos.app.ability.Configuration (Environment Variables)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md).
 
 > **NOTE：**
 > 
@@ -806,6 +1456,110 @@ struct FrameNodeTypeTest {
 
   aboutToDisappear(): void {
     // Remove the reference to the custom node from the map and release the node.
+    this.myNodeController.deleteNode();
+  }
+
+  build() {
+    Column({ space: 16 }) {
+      NodeContainer(this.myNodeController);
+      Button('Switch to Dark Mode')
+        .onClick(() => {
+          this.getUIContext()
+            .getHostContext()?.getApplicationContext().setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_DARK);
+        })
+      Button('Switch to Light Mode')
+        .onClick(() => {
+          this.getUIContext()
+            .getHostContext()?.getApplicationContext().setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_LIGHT);
+        })
+    }
+  }
+}
+```
+
+The following example shows how to use the updateConfiguration API to respond to system environment configuration changes and dynamically update the UI node constructed by ReactiveComponentContent.
+
+```TypeScript
+import { NodeController, FrameNode, ReactiveComponentContent, UIContext, FrameCallback } from '@kit.ArkUI';
+import { AbilityConstant, Configuration, EnvironmentCallback, ConfigurationConstant } from '@kit.AbilityKit';
+
+@Builder
+function buildText() {
+  Column() {
+    Text('Hello')
+      .fontSize(20)
+      .fontWeight(FontWeight.Bold)
+  }
+  .backgroundColor ($r ('sys.color.ohos_id_color_background')) // Use the system color resource, which automatically switches between the dark and light modes.
+  .width('100%')
+  .alignItems(HorizontalAlign.Center)
+  .padding(16)
+}
+
+const componentContentMap: Array<ReactiveComponentContent<[]>> = new Array();
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    return this.rootNode;
+  }
+
+  createNode(context: UIContext) {
+    this.rootNode = new FrameNode(context);
+    let component = new ReactiveComponentContent<[]>(context, wrapBuilder(buildText), {});
+    componentContentMap.push(component);
+    this.rootNode.addComponentContent(component);
+  }
+
+  deleteNode() {
+    let node = componentContentMap.pop();
+    this.rootNode?.dispose();
+    node?.dispose();
+  }
+}
+
+class MyFrameCallback extends FrameCallback {
+  onFrame() {
+    updateColorMode();
+  }
+}
+
+// Traverse all ReactiveComponentContent instances and call updateConfiguration to notify the system of environment changes.
+function updateColorMode() {
+  componentContentMap.forEach((value, index) => {
+    // updateConfiguration(): transfers system environment change events and triggers full update of the node.
+    // When the system dark/light mode, language, or font size changes, this API is called to notify ReactiveComponentContent of reapplying the latest system configuration.
+    value.updateConfiguration();
+  })
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  aboutToAppear(): void {
+    let environmentCallback: EnvironmentCallback = {
+      onMemoryLevel: (level: AbilityConstant.MemoryLevel): void => {
+        console.info('onMemoryLevel');
+      },
+      onConfigurationUpdated: (config: Configuration): void => {
+        console.info(`onConfigurationUpdated ${config}`);
+        // When the system configuration is updated, updateConfiguration is triggered through frame callback.
+        this.getUIContext()?.postFrameCallback(new MyFrameCallback());
+      }
+    }
+    // Register the callback for listening to system environment changes.
+    this.getUIContext().getHostContext()?.getApplicationContext().on('environment', environmentCallback);
+    // Set the application color mode to follow the system settings.
+    this.getUIContext()
+      .getHostContext()?.getApplicationContext().setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_NOT_SET);
+    this.myNodeController.createNode(this.getUIContext());
+  }
+
+  aboutToDisappear(): void {
+    // Remove the reference from componentContentMap and release the custom node.
     this.myNodeController.deleteNode();
   }
 

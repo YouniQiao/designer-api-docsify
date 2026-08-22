@@ -95,44 +95,6 @@ textEmbedding?.loadModel()
   })
 ```
 
-## getEmbedding
-
-```TypeScript
-getEmbedding(batchTexts: Array<string>): Promise<Array<Array<double>>>
-```
-
-获取给定批次文本的嵌入向量。批量处理可以提高性能，适用于需要同时处理多个文本的场景。使用Promise异步回调。
-
-该接口需先调用[loadModel](#loadmodel)加载嵌入模型，加载成功后调用getEmbedding。
-
-**起始版本：** 23
-
-<!--Device-TextEmbedding-getEmbedding(batchTexts: Array<string>): Promise<Array<Array<double>>>--><!--Device-TextEmbedding-getEmbedding(batchTexts: Array<string>): Promise<Array<Array<double>>>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| batchTexts | Array&lt;string&gt; | 是 | 嵌入模型的文本输入批次。单个文本长度上限为512个字符。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;Array&lt;double&gt;&gt;&gt; | Promise对象，返回批次向量化结果的二维数组。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [31300000](../errorcode-intelligence.md#31300000-服务内部异常) | Inner error. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -171,6 +133,83 @@ textEmbedding?.loadModel()
     console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
   })
 ```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// imageEmbedding需先通过intelligence.getImageEmbeddingModel获取
+imageEmbedding.loadModel().then(() => {
+  let image = 'file://<packageName>/data/storage/el2/base/haps/entry/files/xxx.jpg';
+  imageEmbedding.getEmbedding(image)
+    .then((data: Array<number>) => {
+      console.info("Succeeded in getting Embedding");
+    })
+    .catch((err: BusinessError) => {
+      console.error(`Failed to get Embedding. Code: ${err.code}, message: ${err.message}`);
+    })
+}).catch((err: BusinessError) => {
+  console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+imageEmbedding?.loadModel().then(() => {
+  let image = 'file://<packageName>/data/storage/el2/base/haps/entry/files/xxx.jpg';
+  imageEmbedding?.getEmbedding(image)
+    .then((data: Array<double>) => {
+      console.info("Succeeded in getting Embedding");
+    })
+    .catch((err) => {
+      console.error(`Failed to get Embedding. Code: ${err.code}, message: ${err.message}`);
+    })
+}).catch((err) => {
+  console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
+})
+```
+
+## getEmbedding
+
+```TypeScript
+getEmbedding(batchTexts: Array<string>): Promise<Array<Array<double>>>
+```
+
+获取给定批次文本的嵌入向量。批量处理可以提高性能，适用于需要同时处理多个文本的场景。使用Promise异步回调。
+
+该接口需先调用[loadModel](#loadmodel)加载嵌入模型，加载成功后调用getEmbedding。
+
+**起始版本：** 23
+
+<!--Device-TextEmbedding-getEmbedding(batchTexts: Array<string>): Promise<Array<Array<double>>>--><!--Device-TextEmbedding-getEmbedding(batchTexts: Array<string>): Promise<Array<Array<double>>>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| batchTexts | Array&lt;string&gt; | 是 | 嵌入模型的文本输入批次。单个文本长度上限为512个字符。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;Array&lt;double&gt;&gt;&gt; | Promise对象，返回批次向量化结果的二维数组。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [31300000](../errorcode-intelligence.md#31300000-服务内部异常) | Inner error. |
+
+**示例**
+
+参见 [getEmbedding](#getembedding)
 
 ## loadModel
 
@@ -231,6 +270,34 @@ textEmbedding?.loadModel()
   })
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// imageEmbedding需先通过intelligence.getImageEmbeddingModel获取
+imageEmbedding.loadModel()
+  .then(() => {
+    console.info("Succeeded in loading Model");
+  })
+  .catch((err: BusinessError) => {
+    console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// imageEmbedding需先通过intelligence.getImageEmbeddingModel获取
+imageEmbedding?.loadModel()
+  .then(() => {
+    console.info("Succeeded in loading Model");
+  })
+  .catch((err) => {
+    console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
 ## releaseModel
 
 ```TypeScript
@@ -280,6 +347,34 @@ ArkTS-Sta示例：
 ```TypeScript
 // textEmbedding需先通过intelligence.getTextEmbeddingModel获取
 textEmbedding?.releaseModel()
+  .then(() => {
+    console.info("Succeeded in releasing Model");
+  })
+  .catch((err) => {
+    console.error(`Failed to release Model. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// imageEmbedding需先通过intelligence.getImageEmbeddingModel获取
+imageEmbedding.releaseModel()
+  .then(() => {
+    console.info("Succeeded in releasing Model");
+  })
+  .catch((err: BusinessError) => {
+    console.error(`Failed to release Model. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// imageEmbedding需先通过intelligence.getImageEmbeddingModel获取
+imageEmbedding?.releaseModel()
   .then(() => {
     console.info("Succeeded in releasing Model");
   })

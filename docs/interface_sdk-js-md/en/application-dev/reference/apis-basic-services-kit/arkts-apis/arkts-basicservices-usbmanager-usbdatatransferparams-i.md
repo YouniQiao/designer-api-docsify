@@ -39,7 +39,7 @@ callback: AsyncCallback<SubmitTransferCallback>
 
 Information returned by the callback.
 
-**Type:** [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[SubmitTransferCallback](arkts-basicservices-usbmanager-submittransfercallback-i.md)&gt;
+**Type:** [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[SubmitTransferCallback](arkts-basicservices-usbmanager-submittransfercallback-i.md)&gt;
 
 **Since:** 23
 

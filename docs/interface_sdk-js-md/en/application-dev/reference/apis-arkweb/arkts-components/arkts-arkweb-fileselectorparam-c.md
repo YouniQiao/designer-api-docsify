@@ -40,6 +40,26 @@ Constructs a **FileSelectorParam**.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## getAcceptableFileTypes
+
+```TypeScript
+getAcceptableFileTypes(): Array<Array<AcceptableFileType>>
+```
+
+Obtains the file type information. Corresponds to `types` in the HTML [option](../../../web/web-file-upload.md#custom-handling-of-file-requests-initiated-by-js-interface). The return value is a two-dimensional array, where each sub-array represents a group of allowed file types. Developers should use this return value to set file type filtering rules when building a file selector, ensuring that users can only select files that meet the frontend requirements. The difference between this parameter and getAcceptType and getMimeTypes is that types supports more fine-grained file type control, allowing grouping by MIME type or file extension.
+
+**Since:** 23
+
+<!--Device-FileSelectorParam-getAcceptableFileTypes(): Array<Array<AcceptableFileType>>--><!--Device-FileSelectorParam-getAcceptableFileTypes(): Array<Array<AcceptableFileType>>-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Array&lt;Array&lt;[AcceptableFileType](arkts-arkweb-acceptablefiletype-i.md)&gt;&gt; | File type information, which is a two-dimensional array structure containing detailed information about multiple groups of optional file types. Corresponds to the types attribute of the HTML option. |
+
 ## getAcceptType
 
 ```TypeScript
@@ -61,26 +81,6 @@ Obtains the file filtering type.
 | Type | Description |
 | --- | --- |
 | Array&lt;string&gt; | Array of file filter types, containing type information used to limit the selectable file range in the file selector. The elements are extensions (such as '.png'), corresponding to the HTML accept attribute. |
-
-## getAcceptableFileTypes
-
-```TypeScript
-getAcceptableFileTypes(): Array<Array<AcceptableFileType>>
-```
-
-Obtains the file type information. Corresponds to `types` in the HTML [option](../../../web/web-file-upload.md#custom-handling-of-file-requests-initiated-by-js-interface). The return value is a two-dimensional array, where each sub-array represents a group of allowed file types. Developers should use this return value to set file type filtering rules when building a file selector, ensuring that users can only select files that meet the frontend requirements. The difference between this parameter and getAcceptType and getMimeTypes is that types supports more fine-grained file type control, allowing grouping by MIME type or file extension.
-
-**Since:** 23
-
-<!--Device-FileSelectorParam-getAcceptableFileTypes(): Array<Array<AcceptableFileType>>--><!--Device-FileSelectorParam-getAcceptableFileTypes(): Array<Array<AcceptableFileType>>-End-->
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Array&lt;Array&lt;[AcceptableFileType](arkts-arkweb-acceptablefiletype-i.md)&gt;&gt; | File type information, which is a two-dimensional array structure containing detailed information about multiple groups of optional file types. Corresponds to the types attribute of the HTML option. |
 
 ## getDefaultPath
 

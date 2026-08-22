@@ -32,7 +32,7 @@ Creates a subscriber. This API uses an asynchronous callback to return the resul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) | Yes | Subscriber information. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -59,6 +59,26 @@ function createCB(err:Base.BusinessError, commonEventSubscriber:CommonEventManag
 
 // Create a subscriber.
 commonEvent.createSubscriber(subscribeInfo, createCB);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+import CommonEventManager from '@ohos.commonEventManager';
+
+let subscriber:CommonEventManager.CommonEventSubscriber; // Used to save the created subscriber object for subsequent subscription and unsubscription.
+
+// Subscriber information.
+let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
+    events: ["event"]
+};
+
+// Create a subscriber.
+commonEvent.createSubscriber(subscribeInfo).then((commonEventSubscriber:CommonEventManager.CommonEventSubscriber) => {
+    console.info("createSubscriber");
+    subscriber = commonEventSubscriber;
+}).catch((err:Base.BusinessError) => {
+    console.error(`createSubscriber failed, code is ${err.code}`);
+});
 ```
 
 
@@ -94,23 +114,5 @@ Creates a subscriber. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import Base from '@ohos.base';
-import CommonEventManager from '@ohos.commonEventManager';
-
-let subscriber:CommonEventManager.CommonEventSubscriber; // Used to save the created subscriber object for subsequent subscription and unsubscription.
-
-// Subscriber information.
-let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
-    events: ["event"]
-};
-
-// Create a subscriber.
-commonEvent.createSubscriber(subscribeInfo).then((commonEventSubscriber:CommonEventManager.CommonEventSubscriber) => {
-    console.info("createSubscriber");
-    subscriber = commonEventSubscriber;
-}).catch((err:Base.BusinessError) => {
-    console.error(`createSubscriber failed, code is ${err.code}`);
-});
-```
+See [createSubscriber](#createsubscriber)
 

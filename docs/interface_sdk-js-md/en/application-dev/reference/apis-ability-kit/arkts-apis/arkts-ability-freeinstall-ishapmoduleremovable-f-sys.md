@@ -30,7 +30,7 @@ Checks whether a module can be removed. This API uses an asynchronous callback t
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | moduleName | string | Yes | Module name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null** and **data** is a Boolean value (**true** if the module can be removed, **false** otherwise). If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is a Boolean value (**true** if the module can be removed, **false** otherwise). If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -42,6 +42,43 @@ Checks whether a module can be removed. This API uses an asynchronous callback t
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module name is not found. |
+
+**Examples**
+
+```TypeScript
+import { freeInstall } from '@kit.AbilityKit';
+
+let bundleName = 'com.example.myapplication';
+let moduleName = 'entry';
+try {
+  freeInstall.isHapModuleRemovable(bundleName, moduleName, (err, data) => {
+    if (err) {
+      console.error('Operation failed:' + JSON.stringify(err));
+    } else {
+      console.info('Operation succeed:' + JSON.stringify(data));
+    }
+  });
+} catch (err) {
+  console.error('Operation failed:' + JSON.stringify(err));
+}
+```
+
+```TypeScript
+import { freeInstall } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'com.example.myapplication';
+let moduleName = 'entry';
+try {
+  freeInstall.isHapModuleRemovable(bundleName, moduleName).then(data => {
+    console.info('Operation succeed:' + JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    console.error('Operation failed:' + JSON.stringify(err));
+  });
+} catch (err) {
+  console.error('Operation failed:' + JSON.stringify(err));
+}
+```
 
 
 ## isHapModuleRemovable
@@ -85,4 +122,8 @@ Checks whether a module can be removed. This API uses a promise to return the re
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module name is not found. |
+
+**Examples**
+
+See [isHapModuleRemovable](#ishapmoduleremovable)
 

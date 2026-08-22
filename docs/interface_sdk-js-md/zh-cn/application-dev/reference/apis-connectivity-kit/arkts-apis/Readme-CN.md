@@ -363,6 +363,13 @@
   <!--Del-->
   - [SuppState(系统接口)](arkts-connectivity-wifi-suppstate-e-sys.md)<!--DelEnd-->
   - [WifiSecurityType](arkts-connectivity-wifi-wifisecuritytype-e.md)
+- [@ohos.wifiext](arkts-wifiext.md)
+  - [disableHotspot](arkts-connectivity-wifiext-disablehotspot-f.md)
+  - [enableHotspot](arkts-connectivity-wifiext-enablehotspot-f.md)
+  - [getPowerModel](arkts-connectivity-wifiext-getpowermodel-f.md)
+  - [getSupportedPowerModel](arkts-connectivity-wifiext-getsupportedpowermodel-f.md)
+  - [setPowerModel](arkts-connectivity-wifiext-setpowermodel-f.md)
+  - [PowerModel](arkts-connectivity-wifiext-powermodel-e.md)
 - [@ohos.wifiManager](arkts-wifimanager.md)
   - [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md)
   - [addDeviceConfig](arkts-connectivity-wifimanager-adddeviceconfig-f.md)
@@ -613,13 +620,6 @@
   - [getSupportedPowerMode](arkts-connectivity-wifimanagerext-getsupportedpowermode-f.md)
   - [setPowerMode](arkts-connectivity-wifimanagerext-setpowermode-f.md)
   - [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)
-- [@ohos.wifiext](arkts-wifiext.md)
-  - [disableHotspot](arkts-connectivity-wifiext-disablehotspot-f.md)
-  - [enableHotspot](arkts-connectivity-wifiext-enablehotspot-f.md)
-  - [getPowerModel](arkts-connectivity-wifiext-getpowermodel-f.md)
-  - [getSupportedPowerModel](arkts-connectivity-wifiext-getsupportedpowermodel-f.md)
-  - [setPowerModel](arkts-connectivity-wifiext-setpowermodel-f.md)
-  - [PowerModel](arkts-connectivity-wifiext-powermodel-e.md)
 - tag<!--arkts-connectivitykit-tag-->
   - [nfctech](arkts-nfctech.md)
     - [BarcodeTag](arkts-connectivity-nfctech-barcodetag-i.md)

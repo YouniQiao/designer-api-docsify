@@ -9,7 +9,7 @@ Stack layout algorithm class.
 > [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the
 > layout algorithm.
 
-**Inheritance/Implementation:** StackLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)
+**Inheritance/Implementation:** StackLayoutAlgorithm implements [LayoutAlgorithm](../../apis-default/arkts-apis/arkts-layoutalgorithm-i.md)
 
 **Since:** 24
 
@@ -41,7 +41,7 @@ Constructs the stack layout algorithm class.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [StackLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-stacklayoutalgorithmoptions-i.md) | No | Input parameters for constructing the stack layout algorithm, which are used to set the nine-box grid alignment mode. |
+| option | [StackLayoutAlgorithmOptions](../../apis-default/arkts-apis/arkts-layoutalgorithm-stacklayoutalgorithmoptions-i.md) | No | Input parameters for constructing the stack layout algorithm, which are used to set the nine-box grid alignment mode. |
 
 ## alignContent
 

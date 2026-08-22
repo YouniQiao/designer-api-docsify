@@ -14,7 +14,7 @@ function getVirtualAddressByHash(algorithmType: HashAlgorithmType, hashValue: st
 
 Obtain the virtual address of the corresponding device based on the hash value of the real address.
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 

@@ -103,6 +103,37 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.click(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  await button.click();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.click(100, 100);
+}
+```
+
 ## doubleClick
 
 ```TypeScript
@@ -144,6 +175,37 @@ async function demo() {
   if (button) {
     await button.doubleClick();
   }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.doubleClick(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  await button.doubleClick();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.doubleClick(100, 100);
 }
 ```
 
@@ -239,6 +301,19 @@ async function demo() {
   let button: Component | null = await driver.findComponent(ON.type('Button'));
   if (button) {
     let rect = await button.getBounds();
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow | null = await driver.findWindow({ active: true });
+  if (window) {
+    let rect = await window.getBounds();
   }
 }
 ```
@@ -375,6 +450,19 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { UiWindow, Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow | null = await driver.findWindow({ active: true });
+  if (window) {
+    let id = await window.getDisplayId();
+  }
+}
+```
+
 ## getHint
 
 ```TypeScript
@@ -460,6 +548,17 @@ async function demo() {
   if (button) {
     let id = await button.getId();
   }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  let id = await button.getId();
 }
 ```
 
@@ -558,6 +657,17 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  let text = await button.getText();
+}
+```
+
 ## getType
 
 ```TypeScript
@@ -599,6 +709,17 @@ async function demo() {
   if (button) {
     let type = await button.getType();
   }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  let type = await button.getType();
 }
 ```
 
@@ -653,6 +774,67 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function mode_demo() {
+  let driver: Driver = Driver.create();
+  let text: Component | null = await driver.findComponent(ON.text('hello world'));
+  if (text) {
+    await text.inputText('123', { paste: true, addition: false });
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let text: Component | null = await driver.findComponent(ON.type('TextInput'));
+  if (text) {
+    let point = await text.getBoundsCenter();
+    await driver.inputText(point, '123');
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let text: Component | null = await driver.findComponent(ON.type('TextInput'));
+  if (text) {
+    let point = await text.getBoundsCenter();
+    await driver.inputText(point, '123', { paste: true, addition: false });
+  }
+}
+
+async function demo_Chinese() {
+  let driver: Driver = Driver.create();
+  let text: Component | null = await driver.findComponent(ON.type('TextInput'));
+  if (text) {
+    let point = await text.getBoundsCenter();
+    await driver.inputText(point, '中文&', { paste: false, addition: true });
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let text: UiComponent = await driver.findComponent(BY.text('hello world'));
+  await text.inputText('123');
+}
+```
+
 ## inputText
 
 ```TypeScript
@@ -693,18 +875,7 @@ inputText(text: string, mode: InputTextMode): Promise<void>
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function mode_demo() {
-  let driver: Driver = Driver.create();
-  let text: Component | null = await driver.findComponent(ON.text('hello world'));
-  if (text) {
-    await text.inputText('123', { paste: true, addition: false });
-  }
-}
-```
+参见 [inputText](#inputtext)
 
 ## isCheckable
 
@@ -844,6 +1015,23 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent | null = await driver.findComponent(BY.type('Button'));
+  if (button) {
+    if (await button.isLongClickable()) {
+      console.info('This button supports long click');
+    } else {
+      console.info('This button can not support long click');
+    }
+  }
+}
+```
+
 ## isEnabled
 
 ```TypeScript
@@ -883,6 +1071,21 @@ async function demo() {
   let driver: Driver = Driver.create();
   let button: Component | null = await driver.findComponent(ON.type('Button'));
   if (button && await button.isEnabled()) {
+    console.info('This button can be operated');
+  } else {
+    console.info('This button can not be operated');
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  if (await button.isEnabled()) {
     console.info('This button can be operated');
   } else {
     console.info('This button can not be operated');
@@ -932,6 +1135,41 @@ async function demo() {
     console.info('This button is focused');
   } else {
     console.info('This button is not focused');
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow | null = await driver.findWindow({ active: true });
+  if (window) {
+    let focused = await window.isFocused();
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  if (button) {
+    if (await button.isFocused()) {
+      console.info('This button is focused');
+    } else {
+      console.info('This button is not focused');
+    }
+    if (await button.isSelected()) {
+      console.info('This button is selected');
+    } else {
+      console.info('This button is not selected');
+    }
   }
 }
 ```
@@ -1028,6 +1266,23 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let scrollBar: UiComponent | null = await driver.findComponent(BY.scrollable(true));
+  if (scrollBar) {
+    if (await scrollBar.isScrollable()) {
+      console.info('This scrollBar can be operated');
+    } else {
+      console.info('This scrollBar can not be operated');
+    }
+  }
+}
+```
+
 ## isSelected
 
 ```TypeScript
@@ -1067,6 +1322,21 @@ async function demo() {
   let driver: Driver = Driver.create();
   let button: Component | null = await driver.findComponent(ON.type('Button'));
   if (button && await button.isSelected()) {
+    console.info('This button is selected');
+  } else {
+    console.info('This button is not selected');
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  if (await button.isSelected()) {
     console.info('This button is selected');
   } else {
     console.info('This button is not selected');
@@ -1115,6 +1385,37 @@ async function demo() {
   if (button) {
     await button.longClick();
   }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.longClick(100, 100);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let button: UiComponent = await driver.findComponent(BY.type('Button'));
+  await button.longClick();
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  await driver.longClick(100, 100);
 }
 ```
 
@@ -1274,6 +1575,44 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let scrollBar: Component | null = await driver.findComponent(ON.type('Scroll'));
+  if (scrollBar) {
+  let button = await scrollBar.scrollSearch(ON.text('next page'));
+    if (button) {
+      await button.click();
+    }
+  }
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let scrollBar: Component = await driver.findComponent(ON.type('Scroll'));
+  let button = await scrollBar.scrollSearch(ON.text('next page'));
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+
+async function demo() {
+  let driver: UiDriver = UiDriver.create();
+  let scrollBar: UiComponent = await driver.findComponent(BY.type('Scroll'));
+  let button = await scrollBar.scrollSearch(BY.text('next page'));
+}
+```
+
 ## scrollSearch
 
 ```TypeScript
@@ -1314,21 +1653,7 @@ scrollSearch(on: On, vertical?: boolean, offset?: number): Promise<Component>
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let scrollBar: Component | null = await driver.findComponent(ON.type('Scroll'));
-  if (scrollBar) {
-  let button = await scrollBar.scrollSearch(ON.text('next page'));
-    if (button) {
-      await button.click();
-    }
-  }
-}
-```
+参见 [scrollSearch](#scrollsearch)
 
 ## scrollSearch
 
@@ -1368,16 +1693,7 @@ Scroll on this [Component](#component)to find matched [Component](#component),ap
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let scrollBar: Component = await driver.findComponent(ON.type('Scroll'));
-  let button = await scrollBar.scrollSearch(ON.text('next page'));
-}
-```
+参见 [scrollSearch](#scrollsearch)
 
 ## scrollToBottom
 

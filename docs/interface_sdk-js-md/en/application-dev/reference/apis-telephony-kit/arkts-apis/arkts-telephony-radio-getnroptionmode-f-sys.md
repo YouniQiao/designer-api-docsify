@@ -27,7 +27,7 @@ Get the option mode of NR.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NROptionMode](arkts-telephony-radio-nroptionmode-e-sys.md)&gt; | Yes | Indicates the callback for getting the selection mode of NR. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NROptionMode](arkts-telephony-radio-nroptionmode-e-sys.md)&gt; | Yes | Indicates the callback for getting the selection mode of NR. |
 
 **Error codes:**
 
@@ -52,6 +52,17 @@ radio.getNROptionMode(slotId, (err: BusinessError, data: radio.NROptionMode) => 
         return;
     }
     console.info(`getNROptionMode success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.getNROptionMode(slotId).then((data: radio.NROptionMode) => {
+    console.info(`getNROptionMode success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getNROptionMode failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -97,14 +108,5 @@ Get the option mode of NR.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getNROptionMode(slotId).then((data: radio.NROptionMode) => {
-    console.info(`getNROptionMode success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getNROptionMode failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getNROptionMode](#getnroptionmode)
 

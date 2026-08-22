@@ -50,6 +50,18 @@ Creates a directory. This API returns the result synchronously.
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+let dirPath = pathDir + "/testDir";
+fs.mkdirSync(dirPath);
+```
+
+```TypeScript
+let dirPath = pathDir + "/testDir1/testDir2/testDir3";
+fs.mkdirSync(dirPath, true);
+```
+
 
 ## mkdirSync
 
@@ -93,4 +105,8 @@ Creates a directory. This API returns the result synchronously. The value **true
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [mkdirSync](#mkdirsync)
 

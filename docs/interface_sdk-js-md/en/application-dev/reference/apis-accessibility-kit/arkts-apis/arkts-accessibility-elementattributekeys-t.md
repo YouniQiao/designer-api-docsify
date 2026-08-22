@@ -14,3 +14,11 @@ Describes the attribute name of [ElementAttributeValues](arkts-accessibility-acc
 
 **Property type:** keyof ElementAttributeValues
 
+**Examples**
+
+```TypeScript
+import { ElementAttributeKeys } from '@kit.AccessibilityKit';
+
+let elementAttributeKeys: ElementAttributeKeys;
+```
+

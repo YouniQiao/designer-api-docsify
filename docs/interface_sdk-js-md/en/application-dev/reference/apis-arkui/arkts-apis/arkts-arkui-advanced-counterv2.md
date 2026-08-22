@@ -12,24 +12,24 @@ import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type 
 
 | Name | Description |
 | --- | --- |
-| [CounterV2CommonOptions](arkts-arkui-arkuiadvancedcounterv2-counterv2commonoptions-c.md) | Defines the common options. |
-| [CounterV2DateData](arkts-arkui-arkuiadvancedcounterv2-counterv2datedata-c.md) | Defines the date data. |
-| [CounterV2DateStyleOptions](arkts-arkui-arkuiadvancedcounterv2-counterv2datestyleoptions-c.md) | Defines the date style options. |
-| [CounterV2InlineStyleOptions](arkts-arkui-arkuiadvancedcounterv2-counterv2inlinestyleoptions-c.md) | Defines the inline style options. |
-| [CounterV2NumberStyleOptions](arkts-arkui-arkuiadvancedcounterv2-counterv2numberstyleoptions-c.md) | Defines the number style options. |
-| [CounterV2Options](arkts-arkui-arkuiadvancedcounterv2-counterv2options-c.md) | Defines the counter options. |
+| [CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md) | Defines the common options. |
+| [CounterV2DateData](arkts-arkui-arkui-advanced-counterv2-counterv2datedata-c.md) | Defines the date data. |
+| [CounterV2DateStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2datestyleoptions-c.md) | Defines the date style options. |
+| [CounterV2InlineStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md) | Defines the inline style options. |
+| [CounterV2NumberStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2numberstyleoptions-c.md) | Defines the number style options. |
+| [CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md) | Defines the counter options. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [CounterV2Component](arkts-arkui-arkuiadvancedcounterv2-counterv2component-s.md) | Defines Counter Component. |
+| [CounterV2Component](arkts-arkui-arkui-advanced-counterv2-counterv2component-s.md) | Defines Counter Component. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [CounterV2Type](arkts-arkui-arkuiadvancedcounterv2-counterv2type-e.md) | Enum for the CounterV2 type. |
+| [CounterV2Type](arkts-arkui-arkui-advanced-counterv2-counterv2type-e.md) | Enum for the CounterV2 type. |
 
 ### Types
 

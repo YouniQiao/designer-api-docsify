@@ -29,7 +29,7 @@ Obtains the names of NICs in the specified network sharing state. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | state | [SharingIfaceState](arkts-network-sharing-sharingifacestate-e-sys.md) | Yes | Network sharing state. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return an array of NIC names. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return an array of NIC names. |
 
 **Error codes:**
 
@@ -53,6 +53,21 @@ sharing.getSharingIfaces(SHARING_BLUETOOTH, (error: BusinessError, data: string[
   console.error(JSON.stringify(error));
   console.info(JSON.stringify(data));
 });
+```
+
+```TypeScript
+import { sharing } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let SHARING_BLUETOOTH = 2;
+sharing
+  .getSharingIfaces(SHARING_BLUETOOTH)
+  .then((data: string[]) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
 ```
 
 
@@ -99,18 +114,5 @@ Obtains the names of NICs in the specified network sharing state. This API uses 
 
 **Examples**
 
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let SHARING_BLUETOOTH = 2;
-sharing
-  .getSharingIfaces(SHARING_BLUETOOTH)
-  .then((data: string[]) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+See [getSharingIfaces](#getsharingifaces)
 

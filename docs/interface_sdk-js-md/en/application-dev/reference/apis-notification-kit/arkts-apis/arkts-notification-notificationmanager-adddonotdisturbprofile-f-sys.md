@@ -79,6 +79,37 @@ notificationManager.addDoNotDisturbProfile(templates).then(() => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userId : number = 100;
+let trustlist: Array<notificationManager.BundleOption> = [
+  {
+    // Replace it as required.
+    bundle: 'bundleName',
+    uid: 0
+  },
+  {
+    // Replace it as required.
+    bundle: 'bundleName1',
+    uid: 1
+  }
+]
+let templates: Array<notificationManager.DoNotDisturbProfile> = [
+  {
+    id: 3,
+    name: 'working mode',
+    trustlist: trustlist
+  }
+]
+
+notificationManager.addDoNotDisturbProfile(templates, userId).then(() => {
+  console.info("addDoNotDisturbProfile success.");
+}).catch((err: BusinessError) => {
+  console.error(`addDoNotDisturbProfile failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## addDoNotDisturbProfile
 
@@ -128,34 +159,5 @@ Adds the Do Not Disturb profile for a specified user. This API uses a promise to
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId : number = 100;
-let trustlist: Array<notificationManager.BundleOption> = [
-  {
-    // Replace it as required.
-    bundle: 'bundleName',
-    uid: 0
-  },
-  {
-    // Replace it as required.
-    bundle: 'bundleName1',
-    uid: 1
-  }
-]
-let templates: Array<notificationManager.DoNotDisturbProfile> = [
-  {
-    id: 3,
-    name: 'working mode',
-    trustlist: trustlist
-  }
-]
-
-notificationManager.addDoNotDisturbProfile(templates, userId).then(() => {
-  console.info("addDoNotDisturbProfile success.");
-}).catch((err: BusinessError) => {
-  console.error(`addDoNotDisturbProfile failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [addDoNotDisturbProfile](#adddonotdisturbprofile)
 

@@ -28,7 +28,7 @@ Obtains the UID of applications that are on the device idle allowlist. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback used to return the result. . |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback used to return the result. . |
 
 **Error codes:**
 
@@ -50,6 +50,19 @@ policy.getDeviceIdleTrustlist((error: BusinessError, data: number[]) => {
   console.error(JSON.stringify(error));
   console.info(JSON.stringify(data));
 });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .getDeviceIdleTrustlist()
+  .then((data: number[]) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
 ```
 
 
@@ -89,16 +102,5 @@ Obtains the UID of applications that are on the device idle allowlist. This API 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .getDeviceIdleTrustlist()
-  .then((data: number[]) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+See [getDeviceIdleTrustlist](#getdeviceidletrustlist)
 

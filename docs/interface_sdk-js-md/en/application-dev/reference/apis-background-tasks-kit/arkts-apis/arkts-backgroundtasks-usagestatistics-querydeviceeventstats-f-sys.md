@@ -30,7 +30,7 @@ Queries device event states data within a specified period identified by the sta
 | --- | --- | --- | --- |
 | begin | long | Yes | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
 | end | long | Yes | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[DeviceEventStats](arkts-backgroundtasks-usagestatistics-deviceeventstats-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the [DeviceEventStats](arkts-backgroundtasks-usagestatistics-deviceeventstats-i-sys.md) object Array containing the event states data. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[DeviceEventStats](arkts-backgroundtasks-usagestatistics-deviceeventstats-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the [DeviceEventStats](arkts-backgroundtasks-usagestatistics-deviceeventstats-i-sys.md) object Array containing the event states data. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -48,6 +48,17 @@ Queries device event states data within a specified period identified by the sta
 | [10000007](../errorcode-DeviceUsageStatistics.md#10000007-time-operation-failure) | Failed to get the system time. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+usageStatistics.queryDeviceEventStats(0, 20000000000000).then((res: Array<usageStatistics.DeviceEventStats>) => {
+  console.info('BUNDLE_ACTIVE queryDeviceEventStates promise success.');
+  console.info('BUNDLE_ACTIVE queryDeviceEventStates promise result ' + JSON.stringify(res));
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE queryDeviceEventStats promise failed. code is: ' + err.code + ',message is: ' + err.message);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -111,14 +122,5 @@ Queries device event states data within a specified period identified by the sta
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-usageStatistics.queryDeviceEventStats(0, 20000000000000).then((res: Array<usageStatistics.DeviceEventStats>) => {
-  console.info('BUNDLE_ACTIVE queryDeviceEventStates promise success.');
-  console.info('BUNDLE_ACTIVE queryDeviceEventStates promise result ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryDeviceEventStats promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
+See [queryDeviceEventStats](#querydeviceeventstats)
 

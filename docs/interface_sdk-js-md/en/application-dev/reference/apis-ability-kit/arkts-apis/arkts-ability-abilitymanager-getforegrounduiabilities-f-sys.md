@@ -28,7 +28,7 @@ Obtains the information about the UIAbility components of an application that is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;AbilityStateData&gt;&gt; | Yes | Callback used to return the API call result and the UIAbility information. You can perform error handling or custom processing in it. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AbilityStateData&gt;&gt; | Yes | Callback used to return the API call result and the UIAbility information. You can perform error handling or custom processing in it. |
 
 **Error codes:**
 
@@ -51,6 +51,17 @@ abilityManager.getForegroundUIAbilities((err: BusinessError, data: Array<ability
   } else {
     console.info(`Get foreground ui abilities data is: ${JSON.stringify(data)}`);
   }
+});
+```
+
+```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+abilityManager.getForegroundUIAbilities().then((data: Array<abilityManager.AbilityStateData>) => {
+  console.info(`Get foreground ui abilities data is: ${JSON.stringify(data)}`);
+}).catch((error: BusinessError) => {
+  console.error(`Get foreground ui abilities failed, error: ${JSON.stringify(error)}`);
 });
 ```
 
@@ -89,14 +100,5 @@ Obtains the information about the UIAbility components of an application that is
 
 **Examples**
 
-```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-abilityManager.getForegroundUIAbilities().then((data: Array<abilityManager.AbilityStateData>) => {
-  console.info(`Get foreground ui abilities data is: ${JSON.stringify(data)}`);
-}).catch((error: BusinessError) => {
-  console.error(`Get foreground ui abilities failed, error: ${JSON.stringify(error)}`);
-});
-```
+See [getForegroundUIAbilities](#getforegrounduiabilities)
 

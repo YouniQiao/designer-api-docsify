@@ -26,7 +26,7 @@ Removes all custom DNS rules of the current application. This API uses an asynch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If all the DNS rules are removed successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If all the DNS rules are removed successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -50,6 +50,17 @@ connection.clearCustomDnsRules((error: BusinessError, data: void) => {
     return;
   }
   console.info("Succeeded to get data: " + JSON.stringify(data));
+})
+```
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.clearCustomDnsRules().then(() => {
+    console.info("success");
+}).catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
 })
 ```
 
@@ -87,14 +98,5 @@ Removes all custom DNS rules of the current application. This API uses a promise
 
 **Examples**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.clearCustomDnsRules().then(() => {
-    console.info("success");
-}).catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-})
-```
+See [clearCustomDnsRules](#clearcustomdnsrules)
 

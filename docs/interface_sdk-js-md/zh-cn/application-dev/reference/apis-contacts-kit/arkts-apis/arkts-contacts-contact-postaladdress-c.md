@@ -68,42 +68,6 @@ static readonly ADDR_WORK: 2
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
-## CUSTOM_LABEL
-
-```TypeScript
-static readonly CUSTOM_LABEL: 0
-```
-
-自定义邮政地址类型，默认值为0。
-
-**类型：** 0
-
-**起始版本：** 7
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PostalAddress-static readonly CUSTOM_LABEL: 0--><!--Device-PostalAddress-static readonly CUSTOM_LABEL: 0-End-->
-
-**系统能力：** SystemCapability.Applications.ContactsData
-
-## INVALID_LABEL_ID
-
-```TypeScript
-static readonly INVALID_LABEL_ID: -1
-```
-
-无效地址类型，默认值为-1。
-
-**类型：** -1
-
-**起始版本：** 7
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PostalAddress-static readonly INVALID_LABEL_ID: -1--><!--Device-PostalAddress-static readonly INVALID_LABEL_ID: -1-End-->
-
-**系统能力：** SystemCapability.Applications.ContactsData
-
 ## city
 
 ```TypeScript
@@ -137,6 +101,42 @@ country?: string
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PostalAddress-country?: string--><!--Device-PostalAddress-country?: string-End-->
+
+**系统能力：** SystemCapability.Applications.ContactsData
+
+## CUSTOM_LABEL
+
+```TypeScript
+static readonly CUSTOM_LABEL: 0
+```
+
+自定义邮政地址类型，默认值为0。
+
+**类型：** 0
+
+**起始版本：** 7
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PostalAddress-static readonly CUSTOM_LABEL: 0--><!--Device-PostalAddress-static readonly CUSTOM_LABEL: 0-End-->
+
+**系统能力：** SystemCapability.Applications.ContactsData
+
+## INVALID_LABEL_ID
+
+```TypeScript
+static readonly INVALID_LABEL_ID: -1
+```
+
+无效地址类型，默认值为-1。
+
+**类型：** -1
+
+**起始版本：** 7
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PostalAddress-static readonly INVALID_LABEL_ID: -1--><!--Device-PostalAddress-static readonly INVALID_LABEL_ID: -1-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -283,4 +283,27 @@ street?: string
 <!--Device-PostalAddress-street?: string--><!--Device-PostalAddress-street?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
+
+**示例**
+
+使用JSON格式创建数据。
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let postalAddress: contact.PostalAddress = {
+    city: 'city',
+    postalAddress: 'postalAddress'
+};
+```
+
+或使用new一个PostalAddress对象的方式创建数据。
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let postalAddress = new contact.PostalAddress();
+postalAddress.city = 'city';
+postalAddress.postalAddress = 'postalAddress';
+```
 

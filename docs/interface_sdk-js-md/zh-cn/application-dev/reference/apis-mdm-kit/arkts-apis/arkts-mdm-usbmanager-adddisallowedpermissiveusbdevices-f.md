@@ -32,7 +32,7 @@ function addDisallowedPermissiveUsbDevices(admin: Want, usbDevices: Array<Permis
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | usbDevices | Array&lt;[PermissiveUsbDeviceType](arkts-mdm-usbmanager-permissiveusbdevicetype-i.md)&gt; | 是 | 要添加的USB设备类型的数组，支持部分字段匹配。USB设备禁用名单数组长度上限为1000，若当前禁用名单中已有500个 USB设备ID，则只允许再添加500个。 |
 
 **错误码：**

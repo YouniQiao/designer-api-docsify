@@ -28,7 +28,7 @@ Changes the invitation confirmation state based on the shared resource ID. This 
 | --- | --- | --- | --- |
 | sharingResource | string | Yes | Shared resource ID. |
 | state | State | Yes | New confirmation state of the invitation. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Result&lt;void&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;void&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -39,6 +39,16 @@ Changes the invitation confirmation state based on the shared resource ID. This 
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+cloudData.sharing.changeConfirmation('sharing_resource_test', cloudData.sharing.State.STATE_REJECTED).then((result) => {
+  console.info(`change confirmation succeeded, result: ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`change confirmation failed, code is ${err.code},message is ${err.message}`);
+})
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -92,13 +102,5 @@ Changes the invitation confirmation state based on the shared resource ID. This 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-cloudData.sharing.changeConfirmation('sharing_resource_test', cloudData.sharing.State.STATE_REJECTED).then((result) => {
-  console.info(`change confirmation succeeded, result: ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`change confirmation failed, code is ${err.code},message is ${err.message}`);
-})
-```
+See [changeConfirmation](#changeconfirmation)
 

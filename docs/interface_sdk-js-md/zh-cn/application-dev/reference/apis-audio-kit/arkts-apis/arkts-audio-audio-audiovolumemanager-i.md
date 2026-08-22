@@ -43,6 +43,18 @@ getAppVolumePercentage(): Promise<int>
 | --- | --- |
 | Promise&lt;int&gt; | Promise对象，返回应用的音量。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioVolumeManager.getAppVolumePercentage().then((value) => {
+  console.info(`Succeeded in obtaining the app volume percentage, appVolumePercentage: ${value}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain the app volume percentage. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## getMaxVolumeByStream
 
 ```TypeScript
@@ -76,6 +88,21 @@ getMaxVolumeByStream(streamUsage: StreamUsage): int
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 获取指定音频流的最大音量。
+try {
+  let volume = audio.getAudioManager().getVolumeManager().getMaxVolumeByStream(audio.StreamUsage.STREAM_USAGE_MUSIC);
+  console.info(`Succeeded in obtaining the maximum volume by stream, maxVolume: ${volume}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain the maximum volume by stream. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## getMinVolumeByStream
 
@@ -111,6 +138,21 @@ getMinVolumeByStream(streamUsage: StreamUsage): int
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 获取指定音频流的最小音量。
+try {
+  let volume = audio.getAudioManager().getVolumeManager().getMinVolumeByStream(audio.StreamUsage.STREAM_USAGE_MUSIC);
+  console.info(`Succeeded in obtaining the minimum volume by stream, minVolume: ${volume}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain the minimum volume by stream. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getVolumeByStream
 
 ```TypeScript
@@ -145,6 +187,21 @@ getVolumeByStream(streamUsage: StreamUsage): int
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 获取指定音频流的音量值。
+try {
+  let volume = audio.getAudioManager().getVolumeManager().getVolumeByStream(audio.StreamUsage.STREAM_USAGE_MUSIC);
+  console.info(`Succeeded in obtaining the volume by stream, volume: ${volume}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain the volume by stream. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getVolumeGroupManager
 
 ```TypeScript
@@ -165,6 +222,38 @@ getVolumeGroupManager(groupId: int, callback: AsyncCallback<AudioVolumeGroupMana
 | --- | --- | --- | --- |
 | groupId | int | 是 | 音量组id，默认使用DEFAULT_VOLUME_GROUP_ID。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i.md)&gt; | 是 | 回调函数。当获取音频组音量管理器实例成功，err为undefined，data为获取到的音频组音量管理器 实例；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let groupId = audio.DEFAULT_VOLUME_GROUP_ID;
+let audioVolumeGroupManager: audio.AudioVolumeGroupManager;
+
+audioVolumeManager.getVolumeGroupManager(groupId, (err: BusinessError, value: audio.AudioVolumeGroupManager) => {
+  if (err) {
+    console.error(`Failed to obtain the volume group manager. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  audioVolumeGroupManager = value;
+  console.info('Succeeded in obtaining the volume group manager.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let groupId = audio.DEFAULT_VOLUME_GROUP_ID;
+let audioVolumeGroupManager: audio.AudioVolumeGroupManager;
+
+audioVolumeManager.getVolumeGroupManager(groupId).then((value: audio.AudioVolumeGroupManager) => {
+  audioVolumeGroupManager = value;
+  console.info('Succeeded in obtaining the volume group manager.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain the volume group manager. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getVolumeGroupManager
 
@@ -191,6 +280,10 @@ getVolumeGroupManager(groupId: int): Promise<AudioVolumeGroupManager>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;[AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i.md)&gt; | Promise对象，返回音频组音量管理器实例。 |
+
+**示例**
+
+参见 [getVolumeGroupManager](#getvolumegroupmanager)
 
 ## getVolumeGroupManagerSync
 
@@ -227,6 +320,20 @@ getVolumeGroupManagerSync(groupId: int): AudioVolumeGroupManager
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let audioVolumeGroupManager: audio.AudioVolumeGroupManager = audioVolumeManager.getVolumeGroupManagerSync(audio.DEFAULT_VOLUME_GROUP_ID);
+  console.info('Succeeded in obtaining the volume group manager.');
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain the volume group manager. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getVolumeInUnitOfDbByStream
 
 ```TypeScript
@@ -261,6 +368,21 @@ getVolumeInUnitOfDbByStream(streamUsage: StreamUsage, volumeLevel: int, device: 
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 获取系统通过音频流、音量等级和设备类型计算出的音量dB值。
+try {
+  let volumeInDb = audio.getAudioManager().getVolumeManager().getVolumeInUnitOfDbByStream(audio.StreamUsage.STREAM_USAGE_MUSIC, 5, audio.DeviceType.SPEAKER);
+  console.info(`Succeeded in obtaining the volume in dB by stream, volumeInDb: ${volumeInDb}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain the volume in dB by stream. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## isSystemMutedForStream
 
 ```TypeScript
@@ -293,51 +415,20 @@ isSystemMutedForStream(streamUsage: StreamUsage): boolean
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## offAppVolumeChange
+**示例**
 
 ```TypeScript
-offAppVolumeChange(callback?: Callback<VolumeEvent>): void
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 检查指定音频流是否静音。
+try {
+  let isMuted: boolean = audio.getAudioManager().getVolumeManager().isSystemMutedForStream(audio.StreamUsage.STREAM_USAGE_MUSIC);
+  console.info(`Succeeded in checking whether the system is muted for the stream, isMuted: ${isMuted}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to check whether the system is muted for the stream. Code: ${error.code}, message: ${error.message}`);
+}
 ```
-
-Unsubscribes to the app volume change events.
-
-**起始版本：** 23
-
-<!--Device-AudioVolumeManager-offAppVolumeChange(callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-offAppVolumeChange(callback?: Callback<VolumeEvent>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Volume
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | Callback used to obtain the invoking volume change event. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-## offStreamVolumeChange
-
-```TypeScript
-offStreamVolumeChange(callback?: Callback<StreamVolumeEvent>): void
-```
-
-Unsubscribes to the stream volume change events.
-
-**起始版本：** 23
-
-<!--Device-AudioVolumeManager-offStreamVolumeChange(callback?: Callback<StreamVolumeEvent>): void--><!--Device-AudioVolumeManager-offStreamVolumeChange(callback?: Callback<StreamVolumeEvent>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Volume
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | 否 | Callback used to obtain the invoking volume change event. If there is no callback parameter, all callbacks will be unregistered. |
 
 ## off('appVolumeChange')
 
@@ -419,17 +510,17 @@ off(type: 'volumeChange', callback?: Callback<VolumeEvent>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters missing; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## onAppVolumeChange
+## offAppVolumeChange
 
 ```TypeScript
-onAppVolumeChange(callback: Callback<VolumeEvent>): void
+offAppVolumeChange(callback?: Callback<VolumeEvent>): void
 ```
 
-Listens for app volume change events. The app volume may changed by your called [setAppVolumePercentage](#setappvolumepercentage) or other system settings.
+Unsubscribes to the app volume change events.
 
 **起始版本：** 23
 
-<!--Device-AudioVolumeManager-onAppVolumeChange(callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onAppVolumeChange(callback: Callback<VolumeEvent>): void-End-->
+<!--Device-AudioVolumeManager-offAppVolumeChange(callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-offAppVolumeChange(callback?: Callback<VolumeEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -437,7 +528,7 @@ Listens for app volume change events. The app volume may changed by your called 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the app volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | Callback used to obtain the invoking volume change event. |
 
 **错误码：**
 
@@ -445,17 +536,33 @@ Listens for app volume change events. The app volume may changed by your called 
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## onStreamVolumeChange
+**示例**
 
 ```TypeScript
-onStreamVolumeChange(streamUsage: StreamUsage, callback: Callback<StreamVolumeEvent>): void
+// 取消该事件的所有监听。
+audioVolumeManager.offAppVolumeChange();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let appVolumeChangeCallback = (volumeEvent: audio.VolumeEvent) => {
+  console.info(`App volume changed, appVolumeEvent: ${JSON.stringify(volumeEvent)}.`);
+};
+
+audioVolumeManager.onAppVolumeChange(appVolumeChangeCallback);
+
+audioVolumeManager.offAppVolumeChange(appVolumeChangeCallback);
 ```
 
-Listens for stream volume change events. This method uses a callback to get volume change events.
+## offStreamVolumeChange
+
+```TypeScript
+offStreamVolumeChange(callback?: Callback<StreamVolumeEvent>): void
+```
+
+Unsubscribes to the stream volume change events.
 
 **起始版本：** 23
 
-<!--Device-AudioVolumeManager-onStreamVolumeChange(streamUsage: StreamUsage, callback: Callback<StreamVolumeEvent>): void--><!--Device-AudioVolumeManager-onStreamVolumeChange(streamUsage: StreamUsage, callback: Callback<StreamVolumeEvent>): void-End-->
+<!--Device-AudioVolumeManager-offStreamVolumeChange(callback?: Callback<StreamVolumeEvent>): void--><!--Device-AudioVolumeManager-offStreamVolumeChange(callback?: Callback<StreamVolumeEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -463,14 +570,23 @@ Listens for stream volume change events. This method uses a callback to get volu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | StreamUsage to be listened. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | 是 | Callback used to get the stream volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | 否 | Callback used to obtain the invoking volume change event. If there is no callback parameter, all callbacks will be unregistered. |
 
-**错误码：**
+**示例**
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+```TypeScript
+// 取消该事件的所有监听。
+audioVolumeManager.offStreamVolumeChange();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let streamVolumeChangeCallback = (streamVolumeEvent: audio.StreamVolumeEvent) => {
+  console.info(`Stream volume changed, streamVolumeEvent: ${JSON.stringify(streamVolumeEvent)}.`);
+};
+
+audioVolumeManager.onStreamVolumeChange(audio.StreamUsage.STREAM_USAGE_MUSIC, streamVolumeChangeCallback);
+
+audioVolumeManager.offStreamVolumeChange(streamVolumeChangeCallback);
+```
 
 ## on('appVolumeChange')
 
@@ -559,6 +675,75 @@ on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+## onAppVolumeChange
+
+```TypeScript
+onAppVolumeChange(callback: Callback<VolumeEvent>): void
+```
+
+Listens for app volume change events. The app volume may changed by your called [setAppVolumePercentage](#setappvolumepercentage) or other system settings.
+
+**起始版本：** 23
+
+<!--Device-AudioVolumeManager-onAppVolumeChange(callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onAppVolumeChange(callback: Callback<VolumeEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the app volume change event. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+audioVolumeManager.onAppVolumeChange((volumeEvent: audio.VolumeEvent) => {
+  console.info(`App volume changed, appVolumeEvent: ${JSON.stringify(volumeEvent)}.`);
+});
+```
+
+## onStreamVolumeChange
+
+```TypeScript
+onStreamVolumeChange(streamUsage: StreamUsage, callback: Callback<StreamVolumeEvent>): void
+```
+
+Listens for stream volume change events. This method uses a callback to get volume change events.
+
+**起始版本：** 23
+
+<!--Device-AudioVolumeManager-onStreamVolumeChange(streamUsage: StreamUsage, callback: Callback<StreamVolumeEvent>): void--><!--Device-AudioVolumeManager-onStreamVolumeChange(streamUsage: StreamUsage, callback: Callback<StreamVolumeEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | StreamUsage to be listened. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | 是 | Callback used to get the stream volume change event. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+audioVolumeManager.onStreamVolumeChange(audio.StreamUsage.STREAM_USAGE_MUSIC, (streamVolumeEvent: audio.StreamVolumeEvent) => {
+  console.info(`Stream volume changed, streamVolumeEvent: ${JSON.stringify(streamVolumeEvent)}.`);
+});
+```
+
 ## setAppVolumePercentage
 
 ```TypeScript
@@ -593,4 +778,16 @@ setAppVolumePercentage(volume: int): Promise<void>
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Crash or blocking occurs in system process. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioVolumeManager.setAppVolumePercentage(20).then(() => {
+  console.info('Succeeded in setting the app volume percentage.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the app volume percentage. Code: ${err.code}, message: ${err.message}`);
+});
+```
 

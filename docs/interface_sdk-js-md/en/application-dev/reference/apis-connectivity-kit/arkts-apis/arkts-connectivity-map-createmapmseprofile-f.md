@@ -14,7 +14,7 @@ function createMapMseProfile(): MapMseProfile
 
 create the instance of MAP MSE profile.
 
-**Since:** 26.0.0
+**Since:** 11
 
 <!--Device-map-function createMapMseProfile(): MapMseProfile--><!--Device-map-function createMapMseProfile(): MapMseProfile-End-->
 

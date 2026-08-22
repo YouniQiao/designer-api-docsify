@@ -55,6 +55,18 @@ print.cancelPrintJob(jobId, (err: BusinessError) => {
 })
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+
+let jobId : string = '121212';
+print.cancelPrintJob(jobId).then(() => {
+    console.info('cancelPrintJob success');
+}).catch((error: BusinessError) => {
+    console.error('cancelPrintJob failed, because : ' + JSON.stringify(error));
+})
+```
+
 
 ## cancelPrintJob
 
@@ -96,15 +108,5 @@ function cancelPrintJob(jobId: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let jobId : string = '121212';
-print.cancelPrintJob(jobId).then(() => {
-    console.info('cancelPrintJob success');
-}).catch((error: BusinessError) => {
-    console.error('cancelPrintJob failed, because : ' + JSON.stringify(error));
-})
-```
+参见 [cancelPrintJob](#cancelprintjob)
 

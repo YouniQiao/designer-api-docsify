@@ -41,6 +41,18 @@ export function getDisplayCountry(country: string, locale: string, sentenceCase?
 **示例**
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let displayCountry: string = i18n.System.getDisplayCountry('CN', 'en-GB'); // displayCountry = 'China'
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getDisplayCountry failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
+```TypeScript
 import { i18n } from '@kit.LocalizationKit';
 
 let countryName: string = i18n.getDisplayCountry('zh-CN', 'en-GB', true); // countryName = 'China'

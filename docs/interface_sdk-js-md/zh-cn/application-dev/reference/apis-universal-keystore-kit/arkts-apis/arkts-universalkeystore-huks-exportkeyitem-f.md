@@ -79,6 +79,22 @@ huks.exportKeyItem(keyAlias, emptyOptions, (error, data) => {
 });
 ```
 
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* 此处options选择emptyOptions来传空 */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+
+/* 导出公钥 */
+huks.exportKeyItem(keyAlias, emptyOptions)
+  .then((data) => {
+    console.info(`promise: exportKeyItem success, data = ${JSON.stringify(data)}`);
+  });
+```
+
 
 ## exportKeyItem
 
@@ -136,19 +152,5 @@ function exportKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksRetu
 
 **示例**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions来传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-/* 导出公钥 */
-huks.exportKeyItem(keyAlias, emptyOptions)
-  .then((data) => {
-    console.info(`promise: exportKeyItem success, data = ${JSON.stringify(data)}`);
-  });
-```
+参见 [exportKeyItem](#exportkeyitem)
 

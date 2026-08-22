@@ -55,6 +55,16 @@ declareDeviceTypesCompatibility(deviceTypes: DeviceTypeArray): void
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed, the param deviceTypes contains value that is invalid enum or is not a device type introduced in API 20 onwards. |
 
+**示例**
+
+```TypeScript
+let deviceTypes = [
+  audio.DeviceType.NEARLINK
+];
+
+audioRoutingManager.declareDeviceTypesCompatibility(deviceTypes);
+```
+
 ## getAvailableDevices
 
 ```TypeScript
@@ -88,6 +98,32 @@ getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data: audio.AudioDeviceDescriptors = audioRoutingManager.getAvailableDevices(audio.DeviceUsage.MEDIA_OUTPUT_DEVICES);
+  console.info(`Succeeded in obtaining available devices, audioDeviceDescriptors: ${JSON.stringify(data)}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain available devices. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data: audio.AudioDeviceDescriptors = audioSessionManager.getAvailableDevices(audio.DeviceUsage.MEDIA_OUTPUT_DEVICES);
+  console.info(`Succeeded in obtaining available devices, audioDeviceDescriptors: ${JSON.stringify(data)}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain available devices. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getDevices
 
 ```TypeScript
@@ -108,6 +144,52 @@ getDevices(deviceFlag: DeviceFlag, callback: AsyncCallback<AudioDeviceDescriptor
 | --- | --- | --- | --- |
 | deviceFlag | DeviceFlag | 是 | 音频设备类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | 回调函数。当获取音频设备列表成功，err为undefined，data为获取到的音频设备列表；否则为错误对 象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG, (err: BusinessError, value: audio.AudioDeviceDescriptors) => {
+  if (err) {
+    console.error(`Failed to obtain the device list. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in obtaining the device list, devices: ${JSON.stringify(value)}.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((data: audio.AudioDeviceDescriptors) => {
+  console.info(`Succeeded in obtaining the device list, devices: ${JSON.stringify(data)}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain the device list. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG, (err: BusinessError, audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
+  if (err) {
+    console.error(`Failed to obtain the device list. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in obtaining the device list, deviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
+  console.info(`Succeeded in obtaining the device list, deviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain the device list. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getDevices
 
@@ -134,6 +216,10 @@ getDevices(deviceFlag: DeviceFlag): Promise<AudioDeviceDescriptors>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Promise对象，返回设备列表。 |
+
+**示例**
+
+参见 [getDevices](#getdevices)
 
 ## getDevicesSync
 
@@ -168,6 +254,20 @@ getDevicesSync(deviceFlag: DeviceFlag): AudioDeviceDescriptors
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let audioDeviceDescriptors = audioRoutingManager.getDevicesSync(audio.DeviceFlag.OUTPUT_DEVICES_FLAG);
+  console.info(`Succeeded in obtaining the device list, deviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain the device list. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getPreferOutputDeviceForRendererInfo
 
 ```TypeScript
@@ -196,6 +296,40 @@ getPreferOutputDeviceForRendererInfo(rendererInfo: AudioRendererInfo, callback: 
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by callback. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Return by callback. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rendererInfo: audio.AudioRendererInfo = {
+  usage: audio.StreamUsage.STREAM_USAGE_MUSIC, // 音频流使用类型：音乐。根据业务场景配置，参考StreamUsage。
+  rendererFlags: 0 // 音频渲染器标志。
+};
+
+audioRoutingManager.getPreferOutputDeviceForRendererInfo(rendererInfo, (err: BusinessError, audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
+  if (err) {
+    console.error(`Failed to obtain the preferred output device for renderer info. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in obtaining the preferred output device for renderer info, audioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rendererInfo: audio.AudioRendererInfo = {
+  usage: audio.StreamUsage.STREAM_USAGE_MUSIC, // 音频流使用类型：音乐。根据业务场景配置，参考StreamUsage。
+  rendererFlags: 0 // 音频渲染器标志。
+};
+
+audioRoutingManager.getPreferOutputDeviceForRendererInfo(rendererInfo).then((audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
+  console.info(`Succeeded in obtaining the preferred output device for renderer info, audioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain the preferred output device for renderer info. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getPreferOutputDeviceForRendererInfo
 
@@ -231,6 +365,10 @@ getPreferOutputDeviceForRendererInfo(rendererInfo: AudioRendererInfo): Promise<A
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by promise. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Return by promise. |
 
+**示例**
+
+参见 [getPreferOutputDeviceForRendererInfo](#getpreferoutputdeviceforrendererinfo)
+
 ## getPreferredInputDeviceForCapturerInfo
 
 ```TypeScript
@@ -259,6 +397,40 @@ getPreferredInputDeviceForCapturerInfo(capturerInfo: AudioCapturerInfo, callback
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by callback. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Return by callback. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let capturerInfo: audio.AudioCapturerInfo = {
+  source: audio.SourceType.SOURCE_TYPE_MIC, // 音源类型：Mic音频源。根据业务场景配置，参考SourceType。
+  capturerFlags: 0 // 音频采集器标志。
+};
+
+audioRoutingManager.getPreferredInputDeviceForCapturerInfo(capturerInfo, (err: BusinessError, audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
+  if (err) {
+    console.error(`Failed to obtain the preferred input device for capturer info. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in obtaining the preferred input device for capturer info, audioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let capturerInfo: audio.AudioCapturerInfo = {
+  source: audio.SourceType.SOURCE_TYPE_MIC, // 音源类型：Mic音频源。根据业务场景配置，参考SourceType。
+  capturerFlags: 0 // 音频采集器标志。
+};
+
+audioRoutingManager.getPreferredInputDeviceForCapturerInfo(capturerInfo).then((audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
+  console.info(`Succeeded in obtaining the preferred input device for capturer info, audioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain the preferred input device for capturer info. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getPreferredInputDeviceForCapturerInfo
 
@@ -294,6 +466,10 @@ getPreferredInputDeviceForCapturerInfo(capturerInfo: AudioCapturerInfo): Promise
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by promise. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Return by promise. |
 
+**示例**
+
+参见 [getPreferredInputDeviceForCapturerInfo](#getpreferredinputdeviceforcapturerinfo)
+
 ## getPreferredInputDeviceForCapturerInfoSync
 
 ```TypeScript
@@ -326,6 +502,25 @@ getPreferredInputDeviceForCapturerInfoSync(capturerInfo: AudioCapturerInfo): Aud
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let capturerInfo: audio.AudioCapturerInfo = {
+  source: audio.SourceType.SOURCE_TYPE_MIC, // 音源类型：Mic音频源。根据业务场景配置，参考SourceType。
+  capturerFlags: 0 // 音频采集器标志。
+};
+
+try {
+  let audioDeviceDescriptors = audioRoutingManager.getPreferredInputDeviceForCapturerInfoSync(capturerInfo);
+  console.info(`Succeeded in obtaining the preferred input device for capturer info, audioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain the preferred input device for capturer info. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## getPreferredOutputDeviceForRendererInfoSync
 
@@ -360,6 +555,25 @@ getPreferredOutputDeviceForRendererInfoSync(rendererInfo: AudioRendererInfo): Au
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rendererInfo: audio.AudioRendererInfo = {
+  usage: audio.StreamUsage.STREAM_USAGE_MUSIC, // 音频流使用类型：音乐。根据业务场景配置，参考StreamUsage。
+  rendererFlags: 0 // 音频渲染器标志。
+};
+
+try {
+  let audioDeviceDescriptors = audioRoutingManager.getPreferredOutputDeviceForRendererInfoSync(rendererInfo);
+  console.info(`Succeeded in obtaining the preferred output device for renderer info, audioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain the preferred output device for renderer info. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## isCommunicationDeviceActive
 
 ```TypeScript
@@ -380,6 +594,30 @@ isCommunicationDeviceActive(deviceType: CommunicationDeviceType, callback: Async
 | --- | --- | --- | --- |
 | deviceType | [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md) | 是 | 活跃音频设备类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取指定通信设备的激活状态成功，err为undefined，data为true表示激活，false表示未激活；否则为错误对 象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRoutingManager.isCommunicationDeviceActive(audio.CommunicationDeviceType.SPEAKER, (err: BusinessError, value: boolean) => {
+  if (err) {
+    console.error(`Failed to check whether the communication device is active. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in checking whether the communication device is active, isActive: ${value}.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRoutingManager.isCommunicationDeviceActive(audio.CommunicationDeviceType.SPEAKER).then((value: boolean) => {
+  console.info(`Succeeded in checking whether the communication device is active, isActive: ${value}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to check whether the communication device is active. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## isCommunicationDeviceActive
 
@@ -406,6 +644,10 @@ isCommunicationDeviceActive(deviceType: CommunicationDeviceType): Promise<boolea
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise对象。返回true表示设备已激活；返回false表示设备未激活。 |
+
+**示例**
+
+参见 [isCommunicationDeviceActive](#iscommunicationdeviceactive)
 
 ## isCommunicationDeviceActiveSync
 
@@ -440,6 +682,20 @@ isCommunicationDeviceActiveSync(deviceType: CommunicationDeviceType): boolean
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let value: boolean = audioRoutingManager.isCommunicationDeviceActiveSync(audio.CommunicationDeviceType.SPEAKER);
+  console.info(`Succeeded in checking whether the communication device is active, isActive: ${value}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to check whether the communication device is active. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## isMicBlockDetectionSupported
 
 ```TypeScript
@@ -460,135 +716,17 @@ isMicBlockDetectionSupported():Promise<boolean>
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise对象。返回true表示支持；返回false表示不支持。 |
 
-## offAvailableDeviceChange
+**示例**
 
 ```TypeScript
-offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRoutingManager.isMicBlockDetectionSupported().then((value: boolean) => {
+  console.info(`Succeeded in querying whether microphone block detection is supported, isSupported: ${value}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query whether microphone block detection is supported. Code: ${err.code}, message: ${err.message}`);
+});
 ```
-
-Unsubscribes to available device change events.
-
-**起始版本：** 23
-
-<!--Device-AudioRoutingManager-offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioRoutingManager-offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Device
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | Callback used to obtain the device update details. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-## offDeviceChange
-
-```TypeScript
-offDeviceChange(callback?: Callback<DeviceChangeAction>): void
-```
-
-UnSubscribes to device change events.
-
-**起始版本：** 23
-
-<!--Device-AudioRoutingManager-offDeviceChange(callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioRoutingManager-offDeviceChange(callback?: Callback<DeviceChangeAction>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Device
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | Callback used to obtain the device update details. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-## offMicBlockStatusChanged
-
-```TypeScript
-offMicBlockStatusChanged(callback?: Callback<DeviceBlockStatusInfo>): void
-```
-
-Unsubscribes microphone blocked events.
-
-**起始版本：** 23
-
-<!--Device-AudioRoutingManager-offMicBlockStatusChanged(callback?: Callback<DeviceBlockStatusInfo>): void--><!--Device-AudioRoutingManager-offMicBlockStatusChanged(callback?: Callback<DeviceBlockStatusInfo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Device
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)&gt; | 否 | Callback used to obtain the microphone block status. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-## offPreferOutputDeviceChangeForRendererInfo
-
-```TypeScript
-offPreferOutputDeviceChangeForRendererInfo(callback?: Callback<AudioDeviceDescriptors>): void
-```
-
-Unsubscribes to prefer output device change events.
-
-**起始版本：** 23
-
-<!--Device-AudioRoutingManager-offPreferOutputDeviceChangeForRendererInfo(callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-offPreferOutputDeviceChangeForRendererInfo(callback?: Callback<AudioDeviceDescriptors>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Device
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | Callback used to obtain the changed prefer devices in subscribe. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-## offPreferredInputDeviceChangeForCapturerInfo
-
-```TypeScript
-offPreferredInputDeviceChangeForCapturerInfo(callback?: Callback<AudioDeviceDescriptors>): void
-```
-
-Unsubscribes to preferred input device change events.
-
-**起始版本：** 23
-
-<!--Device-AudioRoutingManager-offPreferredInputDeviceChangeForCapturerInfo(callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-offPreferredInputDeviceChangeForCapturerInfo(callback?: Callback<AudioDeviceDescriptors>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Device
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | Callback used to obtain the changed preferred devices in subscribe. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## off('availableDeviceChange')
 
@@ -730,17 +868,17 @@ off(type: 'preferredInputDeviceChangeForCapturerInfo', callback?: Callback<Audio
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## onAvailableDeviceChange
+## offAvailableDeviceChange
 
 ```TypeScript
-onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void
+offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void
 ```
 
-Subscribes to available device change events. When a device is connected/disconnected, registered clients will receive the callback.
+Unsubscribes to available device change events.
 
 **起始版本：** 23
 
-<!--Device-AudioRoutingManager-onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void--><!--Device-AudioRoutingManager-onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void-End-->
+<!--Device-AudioRoutingManager-offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioRoutingManager-offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -748,8 +886,7 @@ Subscribes to available device change events. When a device is connected/disconn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceUsage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | 是 | Audio device usage. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 是 | Callback used to obtain the device update details. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | Callback used to obtain the device update details. |
 
 **错误码：**
 
@@ -757,17 +894,47 @@ Subscribes to available device change events. When a device is connected/disconn
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## onDeviceChange
+**示例**
 
 ```TypeScript
-onDeviceChange(deviceFlag: DeviceFlag, callback: Callback<DeviceChangeAction>): void
+// 取消该事件的所有监听。
+audioRoutingManager.offAvailableDeviceChange();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let availableDeviceChangeCallback = (deviceChangeAction: audio.DeviceChangeAction) => {
+  console.info(`Available device changed, deviceChangeAction: ${JSON.stringify(deviceChangeAction)}.`);
+};
+
+audioRoutingManager.onAvailableDeviceChange(audio.DeviceUsage.MEDIA_OUTPUT_DEVICES, availableDeviceChangeCallback);
+
+audioRoutingManager.offAvailableDeviceChange(availableDeviceChangeCallback);
 ```
 
-Subscribes to device change events. When a device is connected/disconnected, registered clients will receive the callback.
+```TypeScript
+// 取消该事件的所有监听。
+audioSessionManager.offAvailableDeviceChange();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let availableDeviceChangeCallback = (deviceChanged: audio.DeviceChangeAction) => {
+  console.info(`Available device changed, deviceChangeAction: ${JSON.stringify(deviceChanged)}.`);
+};
+
+audioSessionManager.onAvailableDeviceChange(audio.DeviceUsage.MEDIA_INPUT_DEVICES, availableDeviceChangeCallback);
+
+audioSessionManager.offAvailableDeviceChange(availableDeviceChangeCallback);
+```
+
+## offDeviceChange
+
+```TypeScript
+offDeviceChange(callback?: Callback<DeviceChangeAction>): void
+```
+
+UnSubscribes to device change events.
 
 **起始版本：** 23
 
-<!--Device-AudioRoutingManager-onDeviceChange(deviceFlag: DeviceFlag, callback: Callback<DeviceChangeAction>): void--><!--Device-AudioRoutingManager-onDeviceChange(deviceFlag: DeviceFlag, callback: Callback<DeviceChangeAction>): void-End-->
+<!--Device-AudioRoutingManager-offDeviceChange(callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioRoutingManager-offDeviceChange(callback?: Callback<DeviceChangeAction>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -775,8 +942,7 @@ Subscribes to device change events. When a device is connected/disconnected, reg
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceFlag | DeviceFlag | 是 | Audio device flag. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 是 | Callback used to obtain the device update details. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | Callback used to obtain the device update details. |
 
 **错误码：**
 
@@ -784,17 +950,33 @@ Subscribes to device change events. When a device is connected/disconnected, reg
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## onMicBlockStatusChanged
+**示例**
 
 ```TypeScript
-onMicBlockStatusChanged(callback: Callback<DeviceBlockStatusInfo>): void
+// 取消该事件的所有监听。
+audioRoutingManager.offDeviceChange();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let deviceChangeCallback = (deviceChangeAction: audio.DeviceChangeAction) => {
+  console.info(`Device changed, deviceChangeAction: ${JSON.stringify(deviceChangeAction)}.`);
+};
+
+audioRoutingManager.onDeviceChange(audio.DeviceFlag.OUTPUT_DEVICES_FLAG, deviceChangeCallback);
+
+audioRoutingManager.offDeviceChange(deviceChangeCallback);
 ```
 
-Subscribes microphone blocked events. Before subscribing, users should query whether block detection is supported on current device. The caller will receive the callback only when it is recording and the used microphones' block status have changed. Currently, block detecting is only support for microphones located on the local device.
+## offMicBlockStatusChanged
+
+```TypeScript
+offMicBlockStatusChanged(callback?: Callback<DeviceBlockStatusInfo>): void
+```
+
+Unsubscribes microphone blocked events.
 
 **起始版本：** 23
 
-<!--Device-AudioRoutingManager-onMicBlockStatusChanged(callback: Callback<DeviceBlockStatusInfo>): void--><!--Device-AudioRoutingManager-onMicBlockStatusChanged(callback: Callback<DeviceBlockStatusInfo>): void-End-->
+<!--Device-AudioRoutingManager-offMicBlockStatusChanged(callback?: Callback<DeviceBlockStatusInfo>): void--><!--Device-AudioRoutingManager-offMicBlockStatusChanged(callback?: Callback<DeviceBlockStatusInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -802,7 +984,7 @@ Subscribes microphone blocked events. Before subscribing, users should query whe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)&gt; | 是 | Callback used to obtain the microphone block status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)&gt; | 否 | Callback used to obtain the microphone block status. |
 
 **错误码：**
 
@@ -810,17 +992,33 @@ Subscribes microphone blocked events. Before subscribing, users should query whe
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## onPreferOutputDeviceChangeForRendererInfo
+**示例**
 
 ```TypeScript
-onPreferOutputDeviceChangeForRendererInfo(rendererInfo: AudioRendererInfo, callback: Callback<AudioDeviceDescriptors>): void
+// 取消该事件的所有监听。
+audioRoutingManager.offMicBlockStatusChanged();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let micBlockStatusCallback = (deviceBlockStatusInfo: audio.DeviceBlockStatusInfo) => {
+  console.info(`MicBlockStatus changed, deviceBlockStatusInfo: ${JSON.stringify(deviceBlockStatusInfo)}.`);
+};
+
+audioRoutingManager.onMicBlockStatusChanged(micBlockStatusCallback);
+
+audioRoutingManager.offMicBlockStatusChanged(micBlockStatusCallback);
 ```
 
-Subscribes to prefer output device change events. When prefer device for target audio renderer info changes, registered clients will receive the callback.
+## offPreferOutputDeviceChangeForRendererInfo
+
+```TypeScript
+offPreferOutputDeviceChangeForRendererInfo(callback?: Callback<AudioDeviceDescriptors>): void
+```
+
+Unsubscribes to prefer output device change events.
 
 **起始版本：** 23
 
-<!--Device-AudioRoutingManager-onPreferOutputDeviceChangeForRendererInfo(rendererInfo: AudioRendererInfo, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-onPreferOutputDeviceChangeForRendererInfo(rendererInfo: AudioRendererInfo, callback: Callback<AudioDeviceDescriptors>): void-End-->
+<!--Device-AudioRoutingManager-offPreferOutputDeviceChangeForRendererInfo(callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-offPreferOutputDeviceChangeForRendererInfo(callback?: Callback<AudioDeviceDescriptors>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -828,8 +1026,7 @@ Subscribes to prefer output device change events. When prefer device for target 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rendererInfo | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 | Audio renderer information. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | Callback used to obtain the changed prefer devices information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | Callback used to obtain the changed prefer devices in subscribe. |
 
 **错误码：**
 
@@ -837,17 +1034,35 @@ Subscribes to prefer output device change events. When prefer device for target 
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## onPreferredInputDeviceChangeForCapturerInfo
+**示例**
 
 ```TypeScript
-onPreferredInputDeviceChangeForCapturerInfo(capturerInfo: AudioCapturerInfo, callback: Callback<AudioDeviceDescriptors>): void
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+// 当订阅了多个该事件的监听时，可通过 audioRoutingManager.offPreferOutputDeviceChangeForRendererInfo(); 取消该事件的所有监听。
+let preferOutputDeviceChangeForRendererInfoCallback = (audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
+  console.info(`Preferred output device changed, audioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+};
+let rendererInfo: audio.AudioRendererInfo = {
+  usage: audio.StreamUsage.STREAM_USAGE_MUSIC,
+  rendererFlags: 0
+};
+
+audioRoutingManager.onPreferOutputDeviceChangeForRendererInfo(rendererInfo, preferOutputDeviceChangeForRendererInfoCallback);
+
+audioRoutingManager.offPreferOutputDeviceChangeForRendererInfo(preferOutputDeviceChangeForRendererInfoCallback);
 ```
 
-Subscribes to preferred input device change events. When preferred device for target audio capturer info changes, registered clients will receive the callback.
+## offPreferredInputDeviceChangeForCapturerInfo
+
+```TypeScript
+offPreferredInputDeviceChangeForCapturerInfo(callback?: Callback<AudioDeviceDescriptors>): void
+```
+
+Unsubscribes to preferred input device change events.
 
 **起始版本：** 23
 
-<!--Device-AudioRoutingManager-onPreferredInputDeviceChangeForCapturerInfo(capturerInfo: AudioCapturerInfo, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-onPreferredInputDeviceChangeForCapturerInfo(capturerInfo: AudioCapturerInfo, callback: Callback<AudioDeviceDescriptors>): void-End-->
+<!--Device-AudioRoutingManager-offPreferredInputDeviceChangeForCapturerInfo(callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-offPreferredInputDeviceChangeForCapturerInfo(callback?: Callback<AudioDeviceDescriptors>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -855,14 +1070,31 @@ Subscribes to preferred input device change events. When preferred device for ta
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| capturerInfo | [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md) | 是 | Audio capturer information. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | Callback used to obtain the changed preferred devices information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | Callback used to obtain the changed preferred devices in subscribe. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+// 当订阅了多个该事件的监听时，可通过 audioRoutingManager.offPreferredInputDeviceChangeForCapturerInfo(); 取消该事件的所有监听。
+let preferredInputDeviceChangeForCapturerInfoCallback = (audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
+  console.info(`Preferred input device changed, audioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+};
+let capturerInfo: audio.AudioCapturerInfo = {
+  source: audio.SourceType.SOURCE_TYPE_MIC,
+  capturerFlags: 0
+};
+
+audioRoutingManager.onPreferredInputDeviceChangeForCapturerInfo(capturerInfo, preferredInputDeviceChangeForCapturerInfoCallback);
+
+audioRoutingManager.offPreferredInputDeviceChangeForCapturerInfo(preferredInputDeviceChangeForCapturerInfoCallback);
+```
 
 ## on('availableDeviceChange')
 
@@ -1010,6 +1242,206 @@ on(type: 'preferredInputDeviceChangeForCapturerInfo', capturerInfo: AudioCapture
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+## onAvailableDeviceChange
+
+```TypeScript
+onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void
+```
+
+Subscribes to available device change events. When a device is connected/disconnected, registered clients will receive the callback.
+
+**起始版本：** 23
+
+<!--Device-AudioRoutingManager-onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void--><!--Device-AudioRoutingManager-onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Device
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| deviceUsage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | 是 | Audio device usage. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 是 | Callback used to obtain the device update details. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+audioRoutingManager.onAvailableDeviceChange(audio.DeviceUsage.MEDIA_OUTPUT_DEVICES, (deviceChangeAction: audio.DeviceChangeAction) => {
+  console.info(`Available device changed, deviceChangeAction: ${JSON.stringify(deviceChangeAction)}.`);
+});
+```
+
+```TypeScript
+audioSessionManager.onAvailableDeviceChange(audio.DeviceUsage.MEDIA_INPUT_DEVICES, (deviceChanged: audio.DeviceChangeAction) => {
+  console.info(`Available device changed, deviceChangeAction: ${JSON.stringify(deviceChanged)}.`);
+});
+```
+
+## onDeviceChange
+
+```TypeScript
+onDeviceChange(deviceFlag: DeviceFlag, callback: Callback<DeviceChangeAction>): void
+```
+
+Subscribes to device change events. When a device is connected/disconnected, registered clients will receive the callback.
+
+**起始版本：** 23
+
+<!--Device-AudioRoutingManager-onDeviceChange(deviceFlag: DeviceFlag, callback: Callback<DeviceChangeAction>): void--><!--Device-AudioRoutingManager-onDeviceChange(deviceFlag: DeviceFlag, callback: Callback<DeviceChangeAction>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Device
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| deviceFlag | DeviceFlag | 是 | Audio device flag. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 是 | Callback used to obtain the device update details. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+audioRoutingManager.onDeviceChange(audio.DeviceFlag.OUTPUT_DEVICES_FLAG, (deviceChangeAction: audio.DeviceChangeAction) => {
+  console.info(`Device changed, deviceChangeAction: ${JSON.stringify(deviceChangeAction)}.`);
+});
+```
+
+## onMicBlockStatusChanged
+
+```TypeScript
+onMicBlockStatusChanged(callback: Callback<DeviceBlockStatusInfo>): void
+```
+
+Subscribes microphone blocked events. Before subscribing, users should query whether block detection is supported on current device. The caller will receive the callback only when it is recording and the used microphones' block status have changed. Currently, block detecting is only support for microphones located on the local device.
+
+**起始版本：** 23
+
+<!--Device-AudioRoutingManager-onMicBlockStatusChanged(callback: Callback<DeviceBlockStatusInfo>): void--><!--Device-AudioRoutingManager-onMicBlockStatusChanged(callback: Callback<DeviceBlockStatusInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Device
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)&gt; | 是 | Callback used to obtain the microphone block status. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 在使用此功能之前，应先查询当前设备是否支持检测。
+audioRoutingManager.isMicBlockDetectionSupported().then((value: boolean) => {
+  console.info(`Succeeded in querying whether microphone block detection is supported, isSupported: ${value}.`);
+  if (value) {
+    audioRoutingManager.onMicBlockStatusChanged((deviceBlockStatusInfo: audio.DeviceBlockStatusInfo) => {
+      console.info(`MicBlockStatus changed, deviceBlockStatusInfo: ${JSON.stringify(deviceBlockStatusInfo)}.`);
+    });
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query whether microphone block detection is supported. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## onPreferOutputDeviceChangeForRendererInfo
+
+```TypeScript
+onPreferOutputDeviceChangeForRendererInfo(rendererInfo: AudioRendererInfo, callback: Callback<AudioDeviceDescriptors>): void
+```
+
+Subscribes to prefer output device change events. When prefer device for target audio renderer info changes, registered clients will receive the callback.
+
+**起始版本：** 23
+
+<!--Device-AudioRoutingManager-onPreferOutputDeviceChangeForRendererInfo(rendererInfo: AudioRendererInfo, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-onPreferOutputDeviceChangeForRendererInfo(rendererInfo: AudioRendererInfo, callback: Callback<AudioDeviceDescriptors>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Device
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| rendererInfo | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 | Audio renderer information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | Callback used to obtain the changed prefer devices information. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+let rendererInfo: audio.AudioRendererInfo = {
+  usage: audio.StreamUsage.STREAM_USAGE_MUSIC,
+  rendererFlags: 0
+};
+
+audioRoutingManager.onPreferOutputDeviceChangeForRendererInfo(rendererInfo, (audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
+  console.info(`Preferred output device changed, audioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+});
+```
+
+## onPreferredInputDeviceChangeForCapturerInfo
+
+```TypeScript
+onPreferredInputDeviceChangeForCapturerInfo(capturerInfo: AudioCapturerInfo, callback: Callback<AudioDeviceDescriptors>): void
+```
+
+Subscribes to preferred input device change events. When preferred device for target audio capturer info changes, registered clients will receive the callback.
+
+**起始版本：** 23
+
+<!--Device-AudioRoutingManager-onPreferredInputDeviceChangeForCapturerInfo(capturerInfo: AudioCapturerInfo, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-onPreferredInputDeviceChangeForCapturerInfo(capturerInfo: AudioCapturerInfo, callback: Callback<AudioDeviceDescriptors>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Device
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| capturerInfo | [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md) | 是 | Audio capturer information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | Callback used to obtain the changed preferred devices information. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+let capturerInfo: audio.AudioCapturerInfo = {
+  source: audio.SourceType.SOURCE_TYPE_MIC,
+  capturerFlags: 0
+};
+
+audioRoutingManager.onPreferredInputDeviceChangeForCapturerInfo(capturerInfo, (audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
+  console.info(`Preferred input device changed, audioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+});
+```
+
 ## setCommunicationDevice
 
 ```TypeScript
@@ -1035,6 +1467,30 @@ setCommunicationDevice(deviceType: CommunicationDeviceType, active: boolean, cal
 | deviceType | [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md) | 是 | 音频设备类型。 |
 | active | boolean | 是 | 是否设置设备为激活状态。true表示激活，false表示未激活。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置通信设备激活状态成功，err为undefined，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRoutingManager.setCommunicationDevice(audio.CommunicationDeviceType.SPEAKER, true, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set the active status of the communication device. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the active status of the communication device.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRoutingManager.setCommunicationDevice(audio.CommunicationDeviceType.SPEAKER, true).then(() => {
+  console.info('Succeeded in setting the active status of the communication device.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the active status of the communication device. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## setCommunicationDevice
 
@@ -1066,4 +1522,8 @@ setCommunicationDevice(deviceType: CommunicationDeviceType, active: boolean): Pr
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [setCommunicationDevice](#setcommunicationdevice)
 

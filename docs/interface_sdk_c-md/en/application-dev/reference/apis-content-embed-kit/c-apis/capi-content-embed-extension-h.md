@@ -107,7 +107,7 @@ Obtains the AbilityRuntime context from the OE Extension context.
 | Parameter | Description |
 | -- | -- |
 | [ContentEmbed_ExtensionContextHandle](capi-contentembed-contentembed-extensioncontext8h.md) ceContext | Pointer to the OE Extension context object. |
-| [AbilityRuntime_ContextHandle](../AbilityKit/capi-abilityruntime-abilityruntime-context8h.md) *context | Output parameter. After the call is successful, this pointer points to the[AbilityRuntime_Context](../AbilityKit/capi-abilityruntime-abilityruntime-context.md) context object. |
+| AbilityRuntime_ContextHandle *context | Output parameter. After the call is successful, this pointer points to the[AbilityRuntime_Context](../AbilityKit/capi-abilityruntime-abilityruntime-context.md) context object. |
 
 **Returns**:
 
@@ -721,7 +721,7 @@ Sets the snapshot image of the OE document associated with the client-side OE ob
 | Parameter | Description |
 | -- | -- |
 | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) instance. |
-| OH_PixelmapNative *pixelMap | Pixel map object of the document snapshot. For details, see [OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md). |
+| [OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md) *pixelMap | Pixel map object of the document snapshot. For details, see [OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md). |
 
 **Returns**:
 

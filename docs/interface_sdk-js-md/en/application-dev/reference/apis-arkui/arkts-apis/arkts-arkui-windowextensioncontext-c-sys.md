@@ -2,7 +2,7 @@
 
 The WindowExtensionContext module provides the context environment for the WindowExtensionAbility. It inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
 
-The module provides the capabilities of the [WindowExtensionAbility](arkts-arkui-applicationwindowextensionability-windowextensionability-c-sys.md), including starting the ability.
+The module provides the capabilities of the [WindowExtensionAbility](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md), including starting the ability.
 
 > **NOTE：**
 > 
@@ -49,9 +49,9 @@ Starts an ability. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-applicationwant-want-depr-c.md) | Yes | Want information about the target ability. |
-| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitystartoptions-startoptions-c.md) | Yes | Parameters used for starting the ability. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-application-want-want-depr-c.md) | Yes | Want information about the target ability. |
+| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the ability. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -100,48 +100,6 @@ class WindowExtAbility extends WindowExtensionAbility {
 }
 ```
 
-## startAbility
-
-```TypeScript
-startAbility(want: Want, options?: StartOptions): Promise<void>
-```
-
-Starts an ability. This API uses a promise to return the result.
-
-**Since:** 9
-
-**Deprecated since:** 21
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WindowExtensionContext-startAbility(want: Want, options?: StartOptions): Promise<void>--><!--Device-WindowExtensionContext-startAbility(want: Want, options?: StartOptions): Promise<void>-End-->
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-applicationwant-want-depr-c.md) | Yes | Want information about the target ability, such as the ability name and bundle name. |
-| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitystartoptions-startoptions-c.md) | No | Parameters used for starting the ability. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-
-**Examples**
-
 ```TypeScript
 import { WindowExtensionAbility } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -179,4 +137,48 @@ class WindowExtAbility extends WindowExtensionAbility {
   }
 }
 ```
+
+## startAbility
+
+```TypeScript
+startAbility(want: Want, options?: StartOptions): Promise<void>
+```
+
+Starts an ability. This API uses a promise to return the result.
+
+**Since:** 9
+
+**Deprecated since:** 21
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WindowExtensionContext-startAbility(want: Want, options?: StartOptions): Promise<void>--><!--Device-WindowExtensionContext-startAbility(want: Want, options?: StartOptions): Promise<void>-End-->
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-application-want-want-depr-c.md) | Yes | Want information about the target ability, such as the ability name and bundle name. |
+| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used for starting the ability. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+
+**Examples**
+
+See [startAbility](#startability)
 

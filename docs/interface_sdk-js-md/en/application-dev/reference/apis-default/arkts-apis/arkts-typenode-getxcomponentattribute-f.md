@@ -22,7 +22,7 @@ Get the attribute instance of FrameNode which type is XComponent to set attribut
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-framenode-c.md) | Yes | the target FrameNode. |
+| node | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Yes | the target FrameNode. |
 
 **Return value:**
 

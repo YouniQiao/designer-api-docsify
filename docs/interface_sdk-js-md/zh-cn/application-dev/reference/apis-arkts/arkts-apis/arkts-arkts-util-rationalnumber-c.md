@@ -77,6 +77,16 @@ compare(another: RationalNumber): number
 | --- | --- |
 | number | 根据比较结果返回 0、1 或 -1。 |
 
+**示例**
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let rational = util.RationalNumber.createRationalFromString("3/4");
+let result = rationalNumber.compare(rational);
+console.info("result = " + result);
+// 输出结果：result = -1
+```
+
 ## compareTo
 
 ```TypeScript
@@ -107,6 +117,64 @@ compareTo(another: RationalNumber): number
 | --- | --- |
 | number | 根据比较结果返回 0、1 或 -1。 |
 
+**示例**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let rational = util.RationalNumber.createRationalFromString("3/4");
+let result = rationalNumber.compareTo(rational);
+console.info("result = " + result);
+// 输出结果：result = -1
+```
+
+构造新类，实现compareTo方法。后续示例代码中，均以此Temperature类为例。
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+```
+
+构造新类，实现compareTo方法。后续示例代码中，均以此Temperature类为例。
+
+```TypeScript
+class Temperature implements util.ScopeComparable<Temperature> {
+  private readonly _temp: int;
+
+  constructor(value: int) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp(): int {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+```
+
 ## constructor
 
 ```TypeScript
@@ -135,7 +203,144 @@ constructor(numerator: number, denominator: number)
 **示例**
 
 ```TypeScript
+let textDecoder = new util.TextDecoder();
+let retStr = textDecoder.encoding;
+console.info('retStr = ' + retStr);
+// 输出结果：retStr = utf-8
+```
+
+```TypeScript
+let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});
+```
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+```
+
+```TypeScript
+let textEncoder = new util.TextEncoder("utf-8");
+```
+
+```TypeScript
+let rationalNumber = new util.RationalNumber();
+```
+
+```TypeScript
 let rationalNumber = new util.RationalNumber(1,2);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+let lruCache = new util.LRUCache<number, number>();
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let lruCache = new util.LRUCache<int, int>();
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+console.info("range = " + range);
+// 输出结果：range = [30, 40]
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable<Temperature> {
+  private readonly _temp: int;
+
+  constructor(value: int) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp(): int {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.ScopeHelper<Temperature>(tempLower, tempUpper);
+console.info("range = " + range);
+// 输出结果：range = [30, 40]
+```
+
+```TypeScript
+let base64 = new util.Base64Helper();
+```
+
+```TypeScript
+let decoder = new util.StringDecoder();
+```
+
+```TypeScript
+let type = new util.types();
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.Scope(tempLower, tempUpper);
+console.info("range = " + range);
+// 输出结果：range = [30, 40]
+```
+
+```TypeScript
+let base64 = new  util.Base64();
 ```
 
 ## constructor
@@ -156,9 +361,7 @@ constructor()
 
 **示例**
 
-```TypeScript
-let rationalNumber = new util.RationalNumber();
-```
+参见 [constructor](#constructor)
 
 ## createRationalFromString
 
@@ -192,6 +395,12 @@ static createRationalFromString(rationalString: string): RationalNumber
 | 类型 | 说明 |
 | --- | --- |
 | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | 返回根据给定字符串生成的 RationalNumber 对象。 |
+
+**示例**
+
+```TypeScript
+let rational = util.RationalNumber.createRationalFromString("3/4");
+```
 
 ## equals
 
@@ -592,6 +801,127 @@ let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
 let result = rationalNumber.toString();
 console.info("result = " + result);
 // 输出结果：result = 1/2
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+let pro = new util.LRUCache<number, number>();
+pro.put(2, 10);
+pro.get(2);
+pro.get(3);
+console.info(pro.toString());
+// 输出结果：LRUCache[ maxSize = 64, hits = 1, misses = 1, hitRate = 50% ]
+// maxSize: 缓存区最大值 hits: 查询值匹配成功的次数 misses: 查询值匹配失败的次数 hitRate: 查询值匹配率
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let pro = new util.LRUCache<int, int>();
+pro.put(2, 10);
+pro.get(2);
+pro.get(3);
+console.info(pro.toString());
+// 输出结果：LRUCache[ maxSize = 64, hits = 1, misses = 1, hitRate = 50% ]
+// maxSize: 缓存区最大值 hits: 查询值匹配成功的次数 misses: 查询值匹配失败的次数 hitRate: 查询值匹配率
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+let result = range.toString();
+console.info("result = " + result);
+// 输出结果：result = [30, 40]
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable<Temperature> {
+  private readonly _temp: int;
+
+  constructor(value: int) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp(): int {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.ScopeHelper<Temperature>(tempLower, tempUpper);
+let result = range.toString();
+console.info("result = " + result);
+// 输出结果：result = [30, 40]
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+pro.get(2);
+pro.remove(20);
+let result = pro.toString();
+console.info("result = " + result);
+// 输出结果：result = Lrubuffer[ maxSize = 64, hits = 1, misses = 0, hitRate = 100% ]
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.Scope(tempLower, tempUpper);
+let result = range.toString();
+console.info("result = " + result);
+// 输出结果：result = [30, 40]
 ```
 
 ## valueOf

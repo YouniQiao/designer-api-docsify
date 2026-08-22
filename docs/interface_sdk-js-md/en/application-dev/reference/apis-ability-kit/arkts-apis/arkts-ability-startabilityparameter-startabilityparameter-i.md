@@ -52,7 +52,7 @@ want: Want
 
 Indicates the Want containing information about the target ability to start.
 
-**Type:** [Want](arkts-ability-appabilitywant-want-c.md)
+**Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 6
 

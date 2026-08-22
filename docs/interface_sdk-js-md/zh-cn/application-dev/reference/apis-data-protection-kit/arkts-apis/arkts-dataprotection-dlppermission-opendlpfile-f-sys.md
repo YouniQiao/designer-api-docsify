@@ -91,6 +91,35 @@ async function ExampleFunction() {
 ExampleFunction();
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+let file: number | undefined = undefined;
+let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+let appId = '';
+let bundleName = 'com.ohos.note';
+let userId = 100;
+
+let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+appId = data.signatureInfo.appId; // appId通过应用包信息获取
+
+file = fileIo.openSync(uri).fd; // file通过文件打开获取fd
+dlpPermission.openDLPFile(file, appId, async (err, res) => { // 打开DLP文件。
+  if (err) {
+    console.error(`Failed to open DLPFile. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('res', JSON.stringify(res));
+  }
+  await res?.closeDLPFile(); // 关闭DLP对象。
+  if (file) {
+    fileIo.closeSync(file);
+  }
+});
+```
+
 
 ## openDLPFile
 
@@ -139,32 +168,5 @@ DLP管理应用调用该接口，打开DLP文件。使用callback异步回调。
 
 **示例**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-let file: number | undefined = undefined;
-let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-let appId = '';
-let bundleName = 'com.ohos.note';
-let userId = 100;
-
-let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-appId = data.signatureInfo.appId; // appId通过应用包信息获取
-
-file = fileIo.openSync(uri).fd; // file通过文件打开获取fd
-dlpPermission.openDLPFile(file, appId, async (err, res) => { // 打开DLP文件。
-  if (err) {
-    console.error(`Failed to open DLPFile. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('res', JSON.stringify(res));
-  }
-  await res?.closeDLPFile(); // 关闭DLP对象。
-  if (file) {
-    fileIo.closeSync(file);
-  }
-});
-```
+参见 [openDLPFile](#opendlpfile)
 

@@ -35,6 +35,36 @@ function updateContact(contact: Contact, callback: AsyncCallback<void>): void
 
 **示例**
 
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// 通过selectContacts接口选择联系人。
+contact.selectContacts().then((data) => {
+  // 请在组件内获取context。
+  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+
+  contact.updateContact(context, {
+    id: data[0].id, // 选择联系人的id。
+    name: {
+      fullName: 'xxx'
+    },
+    phoneNumbers: [{
+      phoneNumber: '138xxxxxxxx'
+    }]
+  }, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in updating Contact.');
+  });
+});
+```
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { contact } from '@kit.ContactsKit';
@@ -54,6 +84,113 @@ contact.selectContacts().then((data) => {
       console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
       return;
     }
+    console.info('Succeeded in updating Contact.');
+  });
+});
+```
+
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// 通过selectContacts接口选择联系人。
+contact.selectContacts().then((data) => {
+  // 请在组件内获取context。
+  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  contact.updateContact(context, {
+    id: data[0].id, // 选择联系人的id。
+    name: {
+      fullName: 'xxx'
+    },
+    phoneNumbers: [{
+      phoneNumber: '138xxxxxxxx'
+    }]
+  }, {
+    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+  }, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in updating Contact.');
+  });
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+
+// 通过selectContacts接口选择联系人。
+contact.selectContacts().then((data) => {
+  contact.updateContact({
+    id: data[0].id, // 选择联系人的id。
+    name: {
+      fullName: 'xxx'
+    },
+    phoneNumbers: [{
+      phoneNumber: '138xxxxxxxx'
+    }]
+  }, {
+    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+  }, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in updating Contact.');
+  });
+});
+```
+
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+  import { common } from '@kit.AbilityKit';
+
+  // 通过selectContacts接口选择联系人。
+  contact.selectContacts().then((data) => {
+    // 请在组件内获取context。
+    let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+    let promise = contact.updateContact(context, {
+      id: data[0].id, // 选择联系人的id。
+      name: {
+        fullName: 'xxx'
+      },
+      phoneNumbers: [{
+        phoneNumber: '138xxxxxxxx'
+      }]
+    }, {
+      attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+    });
+    promise.then(() => {
+      console.info('Succeeded in updating Contact.');
+    });
+  });
+```
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+// 通过selectContacts接口选择联系人。
+contact.selectContacts().then((data) => {
+  let promise = contact.updateContact({
+    id: data[0].id, // 选择联系人的id。
+    name: {
+      fullName: 'xxx'
+    },
+    phoneNumbers: [{
+      phoneNumber: '138xxxxxxxx'
+    }]
+  }, {
+    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+  });
+  promise.then(() => {
     console.info('Succeeded in updating Contact.');
   });
 });
@@ -93,35 +230,7 @@ function updateContact(context: Context, contact: Contact, callback: AsyncCallba
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// 通过selectContacts接口选择联系人。
-contact.selectContacts().then((data) => {
-  // 请在组件内获取context。
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-
-  contact.updateContact(context, {
-    id: data[0].id, // 选择联系人的id。
-    name: {
-      fullName: 'xxx'
-    },
-    phoneNumbers: [{
-      phoneNumber: '138xxxxxxxx'
-    }]
-  }, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in updating Contact.');
-  });
-});
-```
+参见 [updateContact](#updatecontact)
 
 
 ## updateContact
@@ -154,32 +263,7 @@ function updateContact(contact: Contact, attrs: ContactAttributes, callback: Asy
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-
-// 通过selectContacts接口选择联系人。
-contact.selectContacts().then((data) => {
-  contact.updateContact({
-    id: data[0].id, // 选择联系人的id。
-    name: {
-      fullName: 'xxx'
-    },
-    phoneNumbers: [{
-      phoneNumber: '138xxxxxxxx'
-    }]
-  }, {
-    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-  }, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in updating Contact.');
-  });
-});
-```
+参见 [updateContact](#updatecontact)
 
 
 ## updateContact
@@ -216,36 +300,7 @@ function updateContact(context: Context, contact: Contact, attrs: ContactAttribu
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// 通过selectContacts接口选择联系人。
-contact.selectContacts().then((data) => {
-  // 请在组件内获取context。
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  contact.updateContact(context, {
-    id: data[0].id, // 选择联系人的id。
-    name: {
-      fullName: 'xxx'
-    },
-    phoneNumbers: [{
-      phoneNumber: '138xxxxxxxx'
-    }]
-  }, {
-    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-  }, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in updating Contact.');
-  });
-});
-```
+参见 [updateContact](#updatecontact)
 
 
 ## updateContact
@@ -283,27 +338,7 @@ function updateContact(contact: Contact, attrs?: ContactAttributes): Promise<voi
 
 **示例**
 
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-// 通过selectContacts接口选择联系人。
-contact.selectContacts().then((data) => {
-  let promise = contact.updateContact({
-    id: data[0].id, // 选择联系人的id。
-    name: {
-      fullName: 'xxx'
-    },
-    phoneNumbers: [{
-      phoneNumber: '138xxxxxxxx'
-    }]
-  }, {
-    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-  });
-  promise.then(() => {
-    console.info('Succeeded in updating Contact.');
-  });
-});
-```
+参见 [updateContact](#updatecontact)
 
 
 ## updateContact
@@ -345,30 +380,5 @@ function updateContact(context: Context, contact: Contact, attrs?: ContactAttrib
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-  import { common } from '@kit.AbilityKit';
-
-  // 通过selectContacts接口选择联系人。
-  contact.selectContacts().then((data) => {
-    // 请在组件内获取context。
-    let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-    let promise = contact.updateContact(context, {
-      id: data[0].id, // 选择联系人的id。
-      name: {
-        fullName: 'xxx'
-      },
-      phoneNumbers: [{
-        phoneNumber: '138xxxxxxxx'
-      }]
-    }, {
-      attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-    });
-    promise.then(() => {
-      console.info('Succeeded in updating Contact.');
-    });
-  });
-```
+参见 [updateContact](#updatecontact)
 

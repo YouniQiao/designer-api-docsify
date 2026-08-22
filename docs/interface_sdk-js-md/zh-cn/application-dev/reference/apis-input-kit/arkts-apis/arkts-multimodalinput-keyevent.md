@@ -12,12 +12,12 @@ import { Action, Key, KeyEvent } from '@kit.InputKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [Key](arkts-input-multimodalinputkeyevent-key-i.md) | 按键。 |
-| [KeyEvent](arkts-input-multimodalinputkeyevent-keyevent-i.md) | 按键事件。 |
+| [Key](arkts-input-multimodalinput-keyevent-key-i.md) | 按键。 |
+| [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md) | 按键事件。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [Action](arkts-input-multimodalinputkeyevent-action-e.md) | 按键事件类型。 |
+| [Action](arkts-input-multimodalinput-keyevent-action-e.md) | 按键事件类型。 |
 

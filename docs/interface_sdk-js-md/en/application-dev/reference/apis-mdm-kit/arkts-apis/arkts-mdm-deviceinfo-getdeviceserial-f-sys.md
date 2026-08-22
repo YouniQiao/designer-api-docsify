@@ -34,8 +34,8 @@ Obtains the device serial number. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null** and **data** is the device serial number obtained. If the operation fails, **err** is an error object. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null** and **data** is the device serial number obtained. If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -68,6 +68,24 @@ deviceInfo.getDeviceSerial(wantTemp, (err, result) => {
 });
 ```
 
+```TypeScript
+import { deviceInfo } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+deviceInfo.getDeviceSerial(wantTemp).then((result) => {
+  console.info(`Succeeded in getting device serial, result : ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get device serial. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## getDeviceSerial
 
@@ -97,7 +115,7 @@ Obtains the device serial number. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 
 **Return value:**
 
@@ -117,21 +135,5 @@ Obtains the device serial number. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { deviceInfo } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-deviceInfo.getDeviceSerial(wantTemp).then((result) => {
-  console.info(`Succeeded in getting device serial, result : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get device serial. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [getDeviceSerial](#getdeviceserial)
 

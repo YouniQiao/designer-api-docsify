@@ -28,7 +28,7 @@ Sets the next refresh time for a widget. This API uses an asynchronous callback 
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
 | minute | int | Yes | Time after which a widget is updated. The value is greater than or equal to 5, in minutes. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -57,6 +57,22 @@ try {
       return;
     }
     console.info(`formProvider setFormNextRefreshTime success`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
+}
+```
+
+```TypeScript
+import { formProvider } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288';
+try {
+  formProvider.setFormNextRefreshTime(formId, 5).then(() => {
+    console.info(`formProvider setFormNextRefreshTime success`);
+  }).catch((error: BusinessError) => {
+    console.error(`promise error, code: ${error.code}, message: ${error.message})`);
   });
 } catch (error) {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
@@ -108,19 +124,5 @@ Sets the next refresh time for a widget. This API uses a promise to return the r
 
 **Examples**
 
-```TypeScript
-import { formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288';
-try {
-  formProvider.setFormNextRefreshTime(formId, 5).then(() => {
-    console.info(`formProvider setFormNextRefreshTime success`);
-  }).catch((error: BusinessError) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message})`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
-}
-```
+See [setFormNextRefreshTime](#setformnextrefreshtime)
 

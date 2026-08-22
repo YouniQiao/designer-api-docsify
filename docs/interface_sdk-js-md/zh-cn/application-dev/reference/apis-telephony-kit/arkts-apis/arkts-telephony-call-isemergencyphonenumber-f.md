@@ -43,6 +43,18 @@ function isEmergencyPhoneNumber(phoneNumber: string, options: EmergencyNumberOpt
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+call.isEmergencyPhoneNumber("138xxxxxxxx", (err: BusinessError, data: boolean) => {
+    if (err) {
+        console.error(`isEmergencyPhoneNumber fail, 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
+    } else {
+        console.info(`isEmergencyPhoneNumber success, data->${JSON.stringify(data)}`);
+    }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let options: call.EmergencyNumberOptions = {slotId: 1};
 call.isEmergencyPhoneNumber("112", options, (err: BusinessError, data: boolean) => {
     if (err) {
@@ -50,6 +62,17 @@ call.isEmergencyPhoneNumber("112", options, (err: BusinessError, data: boolean) 
     } else {
         console.info(`isEmergencyPhoneNumber success, data->${JSON.stringify(data)}`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: call.EmergencyNumberOptions = {slotId: 1};
+call.isEmergencyPhoneNumber("138xxxxxxxx", options).then((data: boolean) => {
+    console.info(`isEmergencyPhoneNumber success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isEmergencyPhoneNumber fail, promise: 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
 });
 ```
 
@@ -93,16 +116,7 @@ function isEmergencyPhoneNumber(phoneNumber: string, options?: EmergencyNumberOp
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: call.EmergencyNumberOptions = {slotId: 1};
-call.isEmergencyPhoneNumber("138xxxxxxxx", options).then((data: boolean) => {
-    console.info(`isEmergencyPhoneNumber success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isEmergencyPhoneNumber fail, promise: 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-});
-```
+参见 [isEmergencyPhoneNumber](#isemergencyphonenumber)
 
 
 ## isEmergencyPhoneNumber
@@ -138,15 +152,5 @@ function isEmergencyPhoneNumber(phoneNumber: string, callback: AsyncCallback<boo
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isEmergencyPhoneNumber("138xxxxxxxx", (err: BusinessError, data: boolean) => {
-    if (err) {
-        console.error(`isEmergencyPhoneNumber fail, 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-    } else {
-        console.info(`isEmergencyPhoneNumber success, data->${JSON.stringify(data)}`);
-    }
-});
-```
+参见 [isEmergencyPhoneNumber](#isemergencyphonenumber)
 

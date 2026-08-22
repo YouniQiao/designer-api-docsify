@@ -188,6 +188,32 @@ if (proxy != undefined) {
 }
 ```
 
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // Process services based on the actual service logic.
+    return true;
+  }
+}
+try {
+  let testObject = new TestRemoteObject("ipcTest");
+  let descriptor = testObject.getDescriptor();
+  hilog.info(0x0000, 'testTag', 'RpcServer: descriptor is ' + descriptor);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
 ## getInterfaceDescriptor
 
 ```TypeScript
@@ -260,6 +286,30 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 if (proxy != undefined) {
   let descriptor: string = proxy.getInterfaceDescriptor();
   hilog.info(0x0000, 'testTag', 'descriptor is ' + descriptor);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // Process services based on the actual service logic.
+    return true;
+  }
+}
+
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  let descriptor = testRemoteObject.getInterfaceDescriptor();
+  hilog.info(0x0000, 'testTag', 'RpcServer: descriptor is: ' + descriptor);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
 }
 ```
 
@@ -351,6 +401,31 @@ if (proxy != undefined) {
     hilog.error(0x0000, 'testTag', 'rpc get local interface fail, errorCode ' + e.code);
     hilog.error(0x0000, 'testTag', 'rpc get local interface fail, errorMessage ' + e.message);
   }
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // Process services based on the actual service logic.
+    return true;
+  }
+}
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  testRemoteObject.getLocalInterface("testObject");
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
 }
 ```
 
@@ -503,6 +578,28 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 if (proxy != undefined) {
   let broker: rpc.IRemoteBroker = proxy.queryLocalInterface("testObject");
   hilog.info(0x0000, 'testTag', 'queryLocalInterface is ' + broker);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // Process services based on the actual service logic.
+    return true;
+  }
+}
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  testRemoteObject.queryLocalInterface("testObject");
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error: ' + error);
 }
 ```
 
@@ -801,6 +898,50 @@ try {
 }
 ```
 
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // Process services based on the actual service logic.
+    return true;
+  }
+}
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  let option = new rpc.MessageOption();
+  let data = rpc.MessageSequence.create();
+  let reply = rpc.MessageSequence.create();
+  data.writeInt(1);
+  data.writeString("hello");
+  testRemoteObject.sendMessageRequest(1, data, reply, option)
+    .then((result: rpc.RequestResult) => {
+      if (result.errCode === 0) {
+        hilog.info(0x0000, 'testTag', 'sendMessageRequest got result');
+        let num = result.reply.readInt();
+        let msg = result.reply.readString();
+        hilog.info(0x0000, 'testTag', 'reply num: ' + num);
+        hilog.info(0x0000, 'testTag', 'reply msg: ' + msg);
+      } else {
+        hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, errCode: ' + result.errCode);
+      }
+    }).catch((e: Error) => {
+      hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, error: ' + JSON.stringify(e));
+    }).finally (() => {
+      hilog.info(0x0000, 'testTag', 'sendMessageRequest ends, reclaim parcel');
+      data.reclaim();
+      reply.reclaim();
+    });
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, error: ' + error);
+}
+```
+
 ## sendMessageRequest
 
 ```TypeScript
@@ -829,13 +970,17 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 | data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object holding the data to send. |
 | reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object that receives the response. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RequestResult&gt; | Yes | Callback for receiving the sending result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RequestResult&gt; | Yes | Callback for receiving the sending result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+
+**Examples**
+
+See [sendMessageRequest](#sendmessagerequest)
 
 ## sendRequest
 
@@ -939,46 +1084,6 @@ try {
 }
 ```
 
-## sendRequest
-
-```TypeScript
-sendRequest(
-      code: number,
-      data: MessageParcel,
-      reply: MessageParcel,
-      options: MessageOption
-    ): Promise<SendRequestResult>
-```
-
-Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains the returned information.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption)
-
-<!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>--><!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>-End-->
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
-| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object holding the data to send. |
-| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object that receives the response. |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Promise used to return a **sendRequestResult** instance. |
-
-**Examples**
-
 In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
@@ -1054,6 +1159,126 @@ try {
 }
 ```
 
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class testRemoteObject extends rpc.RemoteObject {
+  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel,
+    option: rpc.MessageOption): boolean {
+    // Process services based on the actual service logic.
+    return true;
+  }
+}
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  let option = new rpc.MessageOption();
+  let data = rpc.MessageParcel.create();
+  let reply = rpc.MessageParcel.create();
+  data.writeInt(1);
+  data.writeString("hello");
+  let ret: boolean = testRemoteObject.sendRequest(1, data, reply, option);
+  if (ret) {
+    hilog.info(0x0000, 'testTag', 'sendRequest got result');
+    let msg = reply.readString();
+    hilog.info(0x0000, 'testTag', 'reply msg: ' + msg);
+  } else {
+    hilog.error(0x0000, 'testTag', 'sendRequest failed');
+  }
+  hilog.info(0x0000, 'testTag', 'sendRequest ends, reclaim parcel');
+  data.reclaim();
+  reply.reclaim();
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel, option: rpc.MessageOption): boolean {
+    // Process services based on the actual service logic.
+    return true;
+  }
+}
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  let option = new rpc.MessageOption();
+  let data = rpc.MessageParcel.create();
+  let reply = rpc.MessageParcel.create();
+  data.writeInt(1);
+  data.writeString("hello");
+  let a = testRemoteObject.sendRequest(1, data, reply, option) as Object;
+  let b = a as Promise<rpc.SendRequestResult>;
+  b.then((result: rpc.SendRequestResult) => {
+    if (result.errCode === 0) {
+      hilog.info(0x0000, 'testTag', 'sendRequest got result');
+      let num = result.reply.readInt();
+      let msg = result.reply.readString();
+      hilog.info(0x0000, 'testTag', 'reply num: ' + num);
+      hilog.info(0x0000, 'testTag', 'reply msg: ' + msg);
+    } else {
+      hilog.error(0x0000, 'testTag', 'sendRequest failed, errCode: ' + result.errCode);
+    }
+  }).catch((e: Error) => {
+    hilog.error(0x0000, 'testTag', 'sendRequest failed, error: ' + JSON.stringify(e));
+  }).finally (() => {
+    hilog.info(0x0000, 'testTag', 'sendRequest ends, reclaim parcel');
+    data.reclaim();
+    reply.reclaim();
+  });
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error: ' + error);
+}
+```
+
+## sendRequest
+
+```TypeScript
+sendRequest(
+      code: number,
+      data: MessageParcel,
+      reply: MessageParcel,
+      options: MessageOption
+    ): Promise<SendRequestResult>
+```
+
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains the returned information.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption)
+
+<!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>--><!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>-End-->
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object holding the data to send. |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object that receives the response. |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Promise used to return a **sendRequestResult** instance. |
+
+**Examples**
+
+See [sendRequest](#sendrequest)
+
 ## sendRequest
 
 ```TypeScript
@@ -1086,7 +1311,11 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 | data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object holding the data to send. |
 | reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object that receives the response. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Yes | Callback for receiving the sending result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Yes | Callback for receiving the sending result. |
+
+**Examples**
+
+See [sendRequest](#sendrequest)
 
 ## unregisterDeathRecipient
 

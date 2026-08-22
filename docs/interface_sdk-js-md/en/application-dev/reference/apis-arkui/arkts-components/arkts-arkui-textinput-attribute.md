@@ -1420,7 +1420,7 @@ Called when the input box is about to be bound to an input method.
 
 <!--Del-->
 
-Before the input box is bound to an input method, you can use the [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkuiuicontext-uicontext-c-sys.md#setkeyboardappearanceconfig) API of **UIContext** to set the keyboard style.<!--DelEnd-->
+Before the input box is bound to an input method, you can use the [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c-sys.md#setkeyboardappearanceconfig) API of **UIContext** to set the keyboard style.<!--DelEnd-->
 
 From API version 22, the setExtraConfig method of IMEClient can be called to set input method extension information. After the input method is bound, it receives this extension information which can be used to implement custom functionality.
 

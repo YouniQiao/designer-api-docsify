@@ -42,7 +42,7 @@ Imports keys in secure mode. This API uses an asynchronous callback to return th
 | keyAlias | string | Yes | Alias of the wrapped key to import. |
 | wrappingKeyAlias | string | Yes | Alias of the data used to unwrap the key imported. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Tags required for the import and the wrapped key to import. The algorithm, key purpose, and key length are mandatory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no **err** value is returned; otherwise, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no **err** value is returned; otherwise, an error code is returned. |
 
 **Error codes:**
 
@@ -237,6 +237,19 @@ function huksImportWrappedKey() {
 }
 ```
 
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* The process is similar if a callback is used, except the following: */
+/* The key data imported may be different from the sample code given below. The data structure is described in the preceding comments. */
+async function TestImportWrappedFunc(alias: string, wrappingAlias: string, options: huks.HuksOptions) {
+  await huks.importWrappedKeyItem(alias, wrappingAlias, options)
+    .then((data) => {
+      console.info(`promise: importWrappedKeyItem success`);
+    });
+}
+```
+
 
 ## importWrappedKeyItem
 
@@ -301,16 +314,5 @@ Imports keys in secure mode. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* The process is similar if a callback is used, except the following: */
-/* The key data imported may be different from the sample code given below. The data structure is described in the preceding comments. */
-async function TestImportWrappedFunc(alias: string, wrappingAlias: string, options: huks.HuksOptions) {
-  await huks.importWrappedKeyItem(alias, wrappingAlias, options)
-    .then((data) => {
-      console.info(`promise: importWrappedKeyItem success`);
-    });
-}
-```
+See [importWrappedKeyItem](#importwrappedkeyitem)
 

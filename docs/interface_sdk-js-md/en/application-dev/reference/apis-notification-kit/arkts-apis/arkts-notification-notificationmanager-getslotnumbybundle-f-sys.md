@@ -29,7 +29,7 @@ Obtains the number of notification slots of a specified application. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -62,6 +62,20 @@ let bundle: notificationManager.BundleOption = {
 };
 
 notificationManager.getSlotNumByBundle(bundle, getSlotNumByBundleCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+  bundle: "bundleName1",
+};
+
+notificationManager.getSlotNumByBundle(bundle).then((data: number) => {
+    console.info(`getSlotNumByBundle success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSlotNumByBundle failed, code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -110,17 +124,5 @@ Obtains the number of notification slots of a specified application. This API us
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-  bundle: "bundleName1",
-};
-
-notificationManager.getSlotNumByBundle(bundle).then((data: number) => {
-    console.info(`getSlotNumByBundle success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSlotNumByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getSlotNumByBundle](#getslotnumbybundle)
 

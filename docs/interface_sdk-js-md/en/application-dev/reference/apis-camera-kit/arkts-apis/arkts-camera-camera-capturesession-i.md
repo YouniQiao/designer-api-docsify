@@ -50,6 +50,36 @@ Adds a [CameraInput](arkts-camera-camera-camerainput-i.md) instance to this sess
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function addInput(captureSession: camera.CaptureSession, cameraInput: camera.CameraInput): void {
+  try {
+    captureSession.addInput(cameraInput);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The addInput call failed. error code: ${err.code}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function addInput(session: camera.Session, cameraInput: camera.CameraInput): void {
+  try {
+    session.addInput(cameraInput);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The addInput call failed. error code: ${err.code}`);
+  }
+}
+```
+
 ## addOutput
 
 ```TypeScript
@@ -81,6 +111,36 @@ Adds a [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instance to this se
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function addOutput(captureSession: camera.CaptureSession, cameraOutput: camera.CameraOutput): void {
+  try {
+    captureSession.addOutput(cameraOutput);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The addOutput call failed. error code: ${err.code}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function addOutput(session: camera.Session, cameraOutput: camera.CameraOutput): void {
+  try {
+    session.addOutput(cameraOutput);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The addOutput call failed. error code: ${err.code}`);
+  }
+}
+```
+
 ## beginConfig
 
 ```TypeScript
@@ -105,6 +165,36 @@ Starts configuration for the session.
 | --- | --- |
 | [7400105](../errorcode-camera.md#7400105-session-configuration-locked) | Session config locked. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function beginConfig(captureSession: camera.CaptureSession): void {
+  try {
+    captureSession.beginConfig();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The beginConfig call failed. error code: ${err.code}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function beginConfig(session: camera.Session): void {
+  try {
+    session.beginConfig();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The beginConfig call failed. error code: ${err.code}`);
+  }
+}
+```
+
 ## commitConfig
 
 ```TypeScript
@@ -127,7 +217,7 @@ Commits the configuration for this session. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the configuration is successfully committed, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the configuration is successfully committed, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -135,6 +225,62 @@ Commits the configuration for this session. This API uses an asynchronous callba
 | --- | --- |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function commitConfig(captureSession: camera.CaptureSession): void {
+  captureSession.commitConfig((err: BusinessError) => {
+    if (err) {
+      console.error(`The commitConfig call failed. error code: ${err.code}`);
+      return;
+    }
+    console.info('Callback invoked to indicate the commit config success.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function commitConfig(captureSession: camera.CaptureSession): void {
+  captureSession.commitConfig().then(() => {
+    console.info('Promise returned to indicate the commit config success.');
+  }).catch((error: BusinessError) => {
+    // If the operation fails, error.code is returned and processed.
+    console.error(`The commitConfig call failed. error code: ${error.code}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function commitConfig(session: camera.Session): void {
+  session.commitConfig((err: BusinessError) => {
+    if (err) {
+      console.error(`The commitConfig call failed. error code: ${err.code}`);
+      return;
+    }
+    console.info('Callback invoked to indicate the commit config success.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function commitConfig(session: camera.Session): void {
+  session.commitConfig().then(() => {
+    console.info('Promise returned to indicate the commit config success.');
+  }).catch((error: BusinessError) => {
+    // If the operation fails, error.code is returned and processed.
+    console.error(`The commitConfig call failed. error code: ${error.code}`);
+  });
+}
+```
 
 ## commitConfig
 
@@ -167,6 +313,10 @@ Commits the configuration for this session. This API uses a promise to return th
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
+**Examples**
+
+See [commitConfig](#commitconfig)
+
 ## getActiveVideoStabilizationMode
 
 ```TypeScript
@@ -196,6 +346,40 @@ Obtains the video stabilization mode in use.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getActiveVideoStabilizationMode(captureSession: camera.CaptureSession): camera.VideoStabilizationMode | undefined {
+  let vsMode: camera.VideoStabilizationMode | undefined = undefined;
+  try {
+    vsMode = captureSession.getActiveVideoStabilizationMode();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getActiveVideoStabilizationMode call failed. error code: ${err.code}`);
+  }
+  return vsMode;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getActiveVideoStabilizationMode(videoSession: camera.VideoSession): camera.VideoStabilizationMode | undefined {
+  let vsMode: camera.VideoStabilizationMode | undefined = undefined;
+  try {
+    vsMode = videoSession.getActiveVideoStabilizationMode();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getActiveVideoStabilizationMode call failed. error code: ${err.code}`);
+  }
+  return vsMode;
+}
+```
 
 ## getExposureBiasRange
 
@@ -227,6 +411,40 @@ Obtains the exposure compensation values of the camera device.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getExposureBiasRange(photoSession: camera.PhotoSession): Array<number> {
+  let biasRangeArray: Array<number> = [];
+  try {
+    biasRangeArray = photoSession.getExposureBiasRange();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getExposureBiasRange call failed. error code: ${err.code}`);
+  }
+  return biasRangeArray;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getExposureBiasRange(captureSession: camera.CaptureSession): Array<number> {
+  let biasRangeArray: Array<number> = [];
+  try {
+    biasRangeArray = captureSession.getExposureBiasRange();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getExposureBiasRange call failed. error code: ${err.code}`);
+  }
+  return biasRangeArray;
+}
+```
+
 ## getExposureMode
 
 ```TypeScript
@@ -256,6 +474,40 @@ Obtains the exposure mode in use.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getExposureMode(photoSession: camera.PhotoSession): camera.ExposureMode | undefined {
+  let exposureMode: camera.ExposureMode | undefined = undefined;
+  try {
+    exposureMode = photoSession.getExposureMode();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getExposureMode call failed. error code: ${err.code}`);
+  }
+  return exposureMode;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getExposureMode(captureSession: camera.CaptureSession): camera.ExposureMode | undefined {
+  let exposureMode: camera.ExposureMode | undefined = undefined;
+  try {
+    exposureMode = captureSession.getExposureMode();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getExposureMode call failed. error code: ${err.code}`);
+  }
+  return exposureMode;
+}
+```
 
 ## getExposureValue
 
@@ -287,6 +539,42 @@ Obtains the exposure value in use.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getExposureValue(photoSession: camera.PhotoSession): number {
+  const invalidValue: number = -1;
+  let exposureValue: number = invalidValue;
+  try {
+    exposureValue = photoSession.getExposureValue();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getExposureValue call failed. error code: ${err.code}`);
+  }
+  return exposureValue;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getExposureValue(captureSession: camera.CaptureSession): number {
+  const invalidValue: number = -1;
+  let exposureValue: number = invalidValue;
+  try {
+    exposureValue = captureSession.getExposureValue();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getExposureValue call failed. error code: ${err.code}`);
+  }
+  return exposureValue;
+}
+```
+
 ## getFlashMode
 
 ```TypeScript
@@ -316,6 +604,40 @@ Obtains the flash mode in use.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getFlashMode(captureSession: camera.CaptureSession): camera.FlashMode | undefined {
+  let flashMode: camera.FlashMode | undefined = undefined;
+  try {
+    flashMode = captureSession.getFlashMode();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getFlashMode call failed.error code: ${err.code}`);
+  }
+  return flashMode;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getFlashMode(photoSession: camera.PhotoSession): camera.FlashMode | undefined {
+  let flashMode: camera.FlashMode | undefined = undefined;
+  try {
+    flashMode = photoSession.getFlashMode();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getFlashMode call failed.error code: ${err.code}`);
+  }
+  return flashMode;
+}
+```
 
 ## getFocalLength
 
@@ -347,6 +669,42 @@ Obtains the focal length of the camera device.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getFocalLength(captureSession: camera.CaptureSession): number {
+  const invalidValue: number = -1;
+  let focalLength: number = invalidValue;
+  try {
+    focalLength = captureSession.getFocalLength();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getFocalLength call failed. error code: ${err.code}`);
+  }
+  return focalLength;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getFocalLength(photoSession: camera.PhotoSession): number {
+  const invalidValue: number = -1;
+  let focalLength: number = invalidValue;
+  try {
+    focalLength = photoSession.getFocalLength();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getFocalLength call failed. error code: ${err.code}`);
+  }
+  return focalLength;
+}
+```
+
 ## getFocusMode
 
 ```TypeScript
@@ -376,6 +734,40 @@ Obtains the focus mode in use.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getFocusMode(captureSession: camera.CaptureSession): camera.FocusMode | undefined {
+  let afMode: camera.FocusMode | undefined = undefined;
+  try {
+    afMode = captureSession.getFocusMode();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getFocusMode call failed. error code: ${err.code}`);
+  }
+  return afMode;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getFocusMode(photoSession: camera.PhotoSession): camera.FocusMode | undefined {
+  let afMode: camera.FocusMode | undefined = undefined;
+  try {
+    afMode = photoSession.getFocusMode();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getFocusMode call failed. error code: ${err.code}`);
+  }
+  return afMode;
+}
+```
 
 ## getFocusPoint
 
@@ -407,6 +799,40 @@ Obtains the focal point of the camera device.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getFocusPoint(captureSession: camera.CaptureSession): camera.Point | undefined {
+  let point: camera.Point | undefined = undefined;
+  try {
+    point = captureSession.getFocusPoint();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getFocusPoint call failed. error code: ${err.code}`);
+  }
+  return point;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getFocusPoint(photoSession: camera.PhotoSession): camera.Point | undefined {
+  let point: camera.Point | undefined = undefined;
+  try {
+    point = photoSession.getFocusPoint();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getFocusPoint call failed. error code: ${err.code}`);
+  }
+  return point;
+}
+```
+
 ## getMeteringPoint
 
 ```TypeScript
@@ -436,6 +862,40 @@ Obtains the metering point of the camera device.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getMeteringPoint(photoSession: camera.PhotoSession): camera.Point | undefined {
+  let exposurePoint: camera.Point | undefined = undefined;
+  try {
+    exposurePoint = photoSession.getMeteringPoint();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getMeteringPoint call failed. error code: ${err.code}`);
+  }
+  return exposurePoint;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getMeteringPoint(captureSession: camera.CaptureSession): camera.Point | undefined {
+  let exposurePoint: camera.Point | undefined = undefined;
+  try {
+    exposurePoint = captureSession.getMeteringPoint();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getMeteringPoint call failed. error code: ${err.code}`);
+  }
+  return exposurePoint;
+}
+```
 
 ## getZoomRatio
 
@@ -467,6 +927,42 @@ Obtains the zoom ratio in use.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getZoomRatio(captureSession: camera.CaptureSession): number {
+  const invalidValue: number = -1;
+  let zoomRatio: number = invalidValue;
+  try {
+    zoomRatio = captureSession.getZoomRatio();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getZoomRatio call failed. error code: ${err.code}`);
+  }
+  return zoomRatio;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getZoomRatio(photoSession: camera.PhotoSession): number {
+  const invalidValue: number = -1;
+  let zoomRatio: number = invalidValue;
+  try {
+    zoomRatio = photoSession.getZoomRatio();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getZoomRatio call failed. error code: ${err.code}`);
+  }
+  return zoomRatio;
+}
+```
+
 ## getZoomRatioRange
 
 ```TypeScript
@@ -497,6 +993,40 @@ Obtains the supported zoom ratio range.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getZoomRatioRange(captureSession: camera.CaptureSession): Array<number> {
+  let zoomRatioRange: Array<number> = [];
+  try {
+    zoomRatioRange = captureSession.getZoomRatioRange();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getZoomRatioRange call failed. error code: ${err.code}`);
+  }
+  return zoomRatioRange;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getZoomRatioRange(photoSession: camera.PhotoSession): Array<number> {
+  let zoomRatioRange: Array<number> = [];
+  try {
+    zoomRatioRange = photoSession.getZoomRatioRange();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The getZoomRatioRange call failed. error code: ${err.code}`);
+  }
+  return zoomRatioRange;
+}
+```
+
 ## hasFlash
 
 ```TypeScript
@@ -526,6 +1056,40 @@ Checks whether the camera device has flash.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function hasFlash(captureSession: camera.CaptureSession): boolean {
+  let status: boolean = false;
+  try {
+    status = captureSession.hasFlash();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The hasFlash call failed. error code: ${err.code}`);
+  }
+  return status;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function hasFlash(photoSession: camera.PhotoSession): boolean {
+  let status: boolean = false;
+  try {
+    status = photoSession.hasFlash();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The hasFlash call failed. error code: ${err.code}`);
+  }
+  return status;
+}
+```
 
 ## isExposureModeSupported
 
@@ -563,6 +1127,40 @@ Checks whether an exposure mode is supported.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isExposureModeSupported(photoSession: camera.PhotoSession): boolean {
+  let isSupported: boolean = false;
+  try {
+    isSupported = photoSession.isExposureModeSupported(camera.ExposureMode.EXPOSURE_MODE_LOCKED);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The isExposureModeSupported call failed. error code: ${err.code}`);
+  }
+  return isSupported;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isExposureModeSupported(captureSession: camera.CaptureSession): boolean {
+  let isSupported: boolean = false;
+  try {
+    isSupported = captureSession.isExposureModeSupported(camera.ExposureMode.EXPOSURE_MODE_LOCKED);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The isExposureModeSupported call failed. error code: ${err.code}`);
+  }
+  return isSupported;
+}
+```
+
 ## isFlashModeSupported
 
 ```TypeScript
@@ -598,6 +1196,40 @@ Checks whether the flash mode is supported.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isFlashModeSupported(captureSession: camera.CaptureSession): boolean {
+  let status: boolean = false;
+  try {
+    status = captureSession.isFlashModeSupported(camera.FlashMode.FLASH_MODE_AUTO);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The isFlashModeSupported call failed. error code: ${err.code}`);
+  }
+  return status;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isFlashModeSupported(photoSession: camera.PhotoSession): boolean {
+  let status: boolean = false;
+  try {
+    status = photoSession.isFlashModeSupported(camera.FlashMode.FLASH_MODE_AUTO);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The isFlashModeSupported call failed. error code: ${err.code}`);
+  }
+  return status;
+}
+```
 
 ## isFocusModeSupported
 
@@ -635,6 +1267,40 @@ Checks whether a focus mode is supported.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isFocusModeSupported(captureSession: camera.CaptureSession): boolean {
+  let status: boolean = false;
+  try {
+    status = captureSession.isFocusModeSupported(camera.FocusMode.FOCUS_MODE_AUTO);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The isFocusModeSupported call failed. error code: ${err.code}`);
+  }
+  return status;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isFocusModeSupported(photoSession: camera.PhotoSession): boolean {
+  let status: boolean = false;
+  try {
+    status = photoSession.isFocusModeSupported(camera.FocusMode.FOCUS_MODE_AUTO);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The isFocusModeSupported call failed. error code: ${err.code}`);
+  }
+  return status;
+}
+```
+
 ## isVideoStabilizationModeSupported
 
 ```TypeScript
@@ -671,6 +1337,40 @@ Checks whether a video stabilization mode is supported.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isVideoStabilizationModeSupported(captureSession: camera.CaptureSession): boolean {
+  let isSupported: boolean = false;
+  try {
+    isSupported = captureSession.isVideoStabilizationModeSupported(camera.VideoStabilizationMode.OFF);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The isVideoStabilizationModeSupported call failed. error code: ${err.code}`);
+  }
+  return isSupported;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isVideoStabilizationModeSupported(videoSession: camera.VideoSession): boolean {
+  let isSupported: boolean = false;
+  try {
+    isSupported = videoSession.isVideoStabilizationModeSupported(camera.VideoStabilizationMode.OFF);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The isVideoStabilizationModeSupported call failed. error code: ${err.code}`);
+  }
+  return isSupported;
+}
+```
+
 ## off('error')
 
 ```TypeScript
@@ -694,7 +1394,7 @@ Unsubscribes from CaptureSession error events. This API uses a callback to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## off('focusStateChange')
 
@@ -719,7 +1419,7 @@ Unsubscribes from focus state change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## on('error')
 
@@ -748,7 +1448,7 @@ Subscribes to CaptureSession error events. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. This event is triggered and the error message is returned when an error occurs during the calling of a session-related API such as [beginConfig](#beginconfig), [commitConfig](#commitconfig), and [addInput](#addinput). |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 ## on('focusStateChange')
 
@@ -777,7 +1477,7 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. This event is triggered only when the camera focus state changes in auto focus mode. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | Yes | Callback used to return the focus state change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | Yes | Callback used to return the focus state change. |
 
 ## release
 
@@ -801,13 +1501,137 @@ Releases this session. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the session is released successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the session is released successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+**Examples**
+
+```TypeScript
+async function releaseDepthData(depthData: camera.DepthData): Promise<void> {
+  await depthData.release();
+}
+```
+
+```TypeScript
+async function releaseDeferredPhotoProxy(proxyObj: camera.DeferredPhotoProxy): Promise<void> {
+  await proxyObj.release();
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function releasePreviewOutput(previewOutput: camera.PreviewOutput): void {
+  previewOutput.release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release the Preview output instance ${err.code}`);
+      return;
+    }
+    console.info('Callback invoked to indicate that the preview output instance is released successfully.');
+  });
+}
+
+function releaseVideoOutput(videoOutput: camera.VideoOutput): void {
+  videoOutput.release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release the video output instance ${err.code}`);
+      return;
+    }
+    console.info('Callback invoked to indicate that the video output instance is released successfully.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function releasePreviewOutput(previewOutput: camera.PreviewOutput): void {
+  previewOutput.release().then(() => {
+    console.info('Promise returned to indicate that the preview output instance is released successfully.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to preview output release, error code: ${error.code}`);
+  });
+}
+
+function releaseVideoOutput(videoOutput: camera.VideoOutput): void {
+  videoOutput.release().then(() => {
+    console.info('Promise returned to indicate that the video output instance is released successfully.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to video output release, error code: ${error.code}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function releaseCaptureSession(captureSession: camera.CaptureSession): void {
+  captureSession.release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release the CaptureSession instance, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback invoked to indicate that the CaptureSession instance is released successfully.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function releaseCaptureSession(captureSession: camera.CaptureSession): void {
+  captureSession.release().then(() => {
+    console.info('Promise returned to indicate that the CaptureSession instance is released successfully.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to release the CaptureSession instance, error code: ${err.code}.`);
+  });
+}
+```
+
+```TypeScript
+async function releasePhoto(photo: camera.Photo): Promise<void> {
+  await photo.release();
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function releaseCaptureSession(session: camera.Session): void {
+  session.release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release the session instance, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback invoked to indicate that the session instance is released successfully.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function releaseCaptureSession(session: camera.Session): void {
+  session.release().then(() => {
+    console.info('Promise returned to indicate that the session instance is released successfully.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the session instance, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { camera } from '@kit.CameraKit';
+
+async function releaseCapturePhoto(capturePhoto: camera.CapturePhoto): Promise<void> {
+  await capturePhoto.release();
+}
+```
 
 ## release
 
@@ -838,6 +1662,10 @@ Releases this session. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+**Examples**
+
+See [release](#release)
 
 ## removeInput
 
@@ -870,6 +1698,36 @@ Removes a [CameraInput](arkts-camera-camera-camerainput-i.md) instance from this
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function removeInput(captureSession: camera.CaptureSession, cameraInput: camera.CameraInput): void {
+  try {
+    captureSession.removeInput(cameraInput);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The removeInput call failed. error code: ${err.code}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function removeInput(session: camera.Session, cameraInput: camera.CameraInput): void {
+  try {
+    session.removeInput(cameraInput);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The removeInput call failed. error code: ${err.code}`);
+  }
+}
+```
+
 ## removeOutput
 
 ```TypeScript
@@ -900,6 +1758,36 @@ Removes a [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instance from th
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function removeOutput(captureSession: camera.CaptureSession, previewOutput: camera.PreviewOutput): void {
+  try {
+    captureSession.removeOutput(previewOutput);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The removeOutput call failed. error code: ${err.code}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function removeOutput(session: camera.Session, previewOutput: camera.PreviewOutput): void {
+  try {
+    session.removeOutput(previewOutput);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The removeOutput call failed. error code: ${err.code}`);
+  }
+}
+```
 
 ## setExposureBias
 
@@ -933,6 +1821,42 @@ Before the setting, you are advised to use [getExposureBiasRange](#getexposurebi
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setExposureBias(photoSession: camera.PhotoSession, biasRangeArray: Array<number>): void {
+  if (biasRangeArray && biasRangeArray.length > 0) {
+    let exposureBias = biasRangeArray[0];
+    try {
+      photoSession.setExposureBias(exposureBias);
+    } catch (error) {
+      // If the operation fails, error.code is returned and processed.
+      let err = error as BusinessError;
+      console.error(`The setExposureBias call failed. error code: ${err.code}`);
+    }
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setExposureBias(captureSession: camera.CaptureSession, biasRangeArray: Array<number>): void {
+  if (biasRangeArray && biasRangeArray.length > 0) {
+    let exposureBias = biasRangeArray[0];
+    try {
+      captureSession.setExposureBias(exposureBias);
+    } catch (error) {
+      // If the operation fails, error.code is returned and processed.
+      let err = error as BusinessError;
+      console.error(`The setExposureBias call failed. error code: ${err.code}`);
+    }
+  }
+}
+```
+
 ## setExposureMode
 
 ```TypeScript
@@ -962,6 +1886,36 @@ Sets an exposure mode. Before the setting, call [isExposureModeSupported](#isexp
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setExposureMode(photoSession: camera.PhotoSession): void {
+  try {
+    photoSession.setExposureMode(camera.ExposureMode.EXPOSURE_MODE_LOCKED);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The setExposureMode call failed. error code: ${err.code}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setExposureMode(captureSession: camera.CaptureSession): void {
+  try {
+    captureSession.setExposureMode(camera.ExposureMode.EXPOSURE_MODE_LOCKED);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The setExposureMode call failed. error code: ${err.code}`);
+  }
+}
+```
 
 ## setFlashMode
 
@@ -997,6 +1951,36 @@ Before the setting, do the following checks:
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setFlashMode(captureSession: camera.CaptureSession): void {
+  try {
+    captureSession.setFlashMode(camera.FlashMode.FLASH_MODE_AUTO);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The setFlashMode call failed. error code: ${err.code}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setFlashMode(photoSession: camera.PhotoSession): void {
+  try {
+    photoSession.setFlashMode(camera.FlashMode.FLASH_MODE_AUTO);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The setFlashMode call failed. error code: ${err.code}`);
+  }
+}
+```
+
 ## setFocusMode
 
 ```TypeScript
@@ -1028,6 +2012,36 @@ Before the setting, call [isFocusModeSupported](#isfocusmodesupported) to check 
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setFocusMode(captureSession: camera.CaptureSession): void {
+  try {
+    captureSession.setFocusMode(camera.FocusMode.FOCUS_MODE_AUTO);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The setFocusMode call failed. error code: ${err.code}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setFocusMode(photoSession: camera.PhotoSession): void {
+  try {
+    photoSession.setFocusMode(camera.FocusMode.FOCUS_MODE_AUTO);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The setFocusMode call failed. error code: ${err.code}`);
+  }
+}
+```
 
 ## setFocusPoint
 
@@ -1061,6 +2075,38 @@ The coordinate system is based on the horizontal device direction with the devic
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setFocusPoint(captureSession: camera.CaptureSession): void {
+  const focusPoint: camera.Point = {x: 1, y: 1};
+  try {
+    captureSession.setFocusPoint(focusPoint);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The setFocusPoint call failed. error code: ${err.code}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setFocusPoint(photoSession: camera.PhotoSession): void {
+  const focusPoint: camera.Point = {x: 1, y: 1};
+  try {
+    photoSession.setFocusPoint(focusPoint);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The setFocusPoint call failed. error code: ${err.code}`);
+  }
+}
+```
+
 ## setMeteringPoint
 
 ```TypeScript
@@ -1093,6 +2139,38 @@ The coordinate system is based on the horizontal device direction with the devic
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setMeteringPoint(photoSession: camera.PhotoSession): void {
+  const point: camera.Point = {x: 1, y: 1};
+  try {
+    photoSession.setMeteringPoint(point);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The setMeteringPoint call failed. error code: ${err.code}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setMeteringPoint(captureSession: camera.CaptureSession): void {
+  const point: camera.Point = {x: 1, y: 1};
+  try {
+    captureSession.setMeteringPoint(point);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The setMeteringPoint call failed. error code: ${err.code}`);
+  }
+}
+```
+
 ## setVideoStabilizationMode
 
 ```TypeScript
@@ -1122,6 +2200,36 @@ Sets a video stabilization mode. Before the setting, call [isVideoStabilizationM
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setVideoStabilizationMode(captureSession: camera.CaptureSession): void {
+  try {
+    captureSession.setVideoStabilizationMode(camera.VideoStabilizationMode.OFF);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The setVideoStabilizationMode call failed. error code: ${err.code}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setVideoStabilizationMode(videoSession: camera.VideoSession): void {
+  try {
+    videoSession.setVideoStabilizationMode(camera.VideoStabilizationMode.OFF);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The setVideoStabilizationMode call failed. error code: ${err.code}`);
+  }
+}
+```
 
 ## setZoomRatio
 
@@ -1153,6 +2261,44 @@ Sets a zoom ratio, with a maximum precision of two decimal places.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setZoomRatio(captureSession: camera.CaptureSession, zoomRatioRange: Array<number>): void {
+  if (zoomRatioRange === undefined || zoomRatioRange.length <= 0) {
+    return;
+  }
+  let zoomRatio = zoomRatioRange[0];
+  try {
+    captureSession.setZoomRatio(zoomRatio);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The setZoomRatio call failed. error code: ${err.code}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setZoomRatio(photoSession: camera.PhotoSession, zoomRatioRange: Array<number>): void {
+  if (zoomRatioRange === undefined || zoomRatioRange.length <= 0) {
+    return;
+  }
+  let zoomRatio = zoomRatioRange[0];
+  try {
+    photoSession.setZoomRatio(zoomRatio);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The setZoomRatio call failed. error code: ${err.code}`);
+  }
+}
+```
+
 ## start
 
 ```TypeScript
@@ -1175,7 +2321,7 @@ Starts this session. This API uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the session starts successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the session starts successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -1183,6 +2329,150 @@ Starts this session. This API uses an asynchronous callback to return the result
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startDepthDataOutput(depthDataOutput: camera.DepthDataOutput): void {
+  depthDataOutput.start().then(() => {
+    console.info('Promise returned to indicate that start method execution success.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to depth data output start, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startCaptureSession(captureSession: camera.CaptureSession): void {
+  captureSession.start((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to start the session, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback invoked to indicate the session start success.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startCaptureSession(captureSession: camera.CaptureSession): void {
+  captureSession.start().then(() => {
+    console.info('Promise returned to indicate the session start success.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to start the session, error code: ${err.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startMetadataOutput(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.start((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to start metadata output, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback returned with metadata output started.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startMetadataOutput(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.start().then(() => {
+    console.info('Callback returned with metadata output started.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to metadata output start, error code: ${error.code}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startPreviewOutput(previewOutput: camera.PreviewOutput): void {
+  previewOutput.start((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to start the preview output, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback returned with preview output started.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startPreviewOutput(previewOutput: camera.PreviewOutput): void {
+  previewOutput.start().then(() => {
+    console.info('Promise returned with preview output started.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to preview output start, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startCaptureSession(session: camera.Session): void {
+  session.start((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to start the session, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback invoked to indicate the session start success.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startCaptureSession(session: camera.Session): void {
+  session.start().then(() => {
+    console.info('Promise returned to indicate the session start success.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to start the session, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startVideoOutput(videoOutput: camera.VideoOutput): void {
+  videoOutput.start((err: BusinessError) => {
+    if (err.code) {
+      console.error(`Failed to start the video output, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback invoked to indicate the video output start success.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startVideoOutput(videoOutput: camera.VideoOutput): void {
+  videoOutput.start().then(() => {
+    console.info('Promise returned to indicate that start method execution success.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to video output start, error code: ${error.code}.`);
+  });
+}
+```
 
 ## start
 
@@ -1215,6 +2505,10 @@ Starts this session. This API uses a promise to return the result.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
+**Examples**
+
+See [start](#start)
+
 ## stop
 
 ```TypeScript
@@ -1237,13 +2531,151 @@ Stops this session. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the session stops successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the session stops successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopDepthDataOutput(depthDataOutput: camera.DepthDataOutput): void {
+  depthDataOutput.stop().then(() => {
+    console.info('Promise returned to indicate that stop method execution success.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to depth data output stop, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopCaptureSession(captureSession: camera.CaptureSession): void {
+  captureSession.stop((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to stop the session, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback invoked to indicate the session stop success.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopCaptureSession(captureSession: camera.CaptureSession): void {
+  captureSession.stop().then(() => {
+    console.info('Promise returned to indicate the session stop success.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to stop the session, error code: ${err.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopMetadataOutput(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.stop((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to stop the metadata output, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback returned with metadata output stopped.');
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopMetadataOutput(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.stop().then(() => {
+    console.info('Callback returned with metadata output stopped.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to metadata output stop, error code: ${error.code}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopPreviewOutput(previewOutput: camera.PreviewOutput): void {
+  previewOutput.stop((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to stop the preview output, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Returned with preview output stopped.');
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopPreviewOutput(previewOutput: camera.PreviewOutput): void {
+  previewOutput.stop().then(() => {
+    console.info('Callback returned with preview output stopped.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to preview output stop, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopCaptureSession(session: camera.Session): void {
+  session.stop((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to stop the session, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback invoked to indicate the session stop success.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopCaptureSession(session: camera.Session): void {
+  session.stop().then(() => {
+    console.info('Promise returned to indicate the session stop success.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to stop the session, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+function stopVideoOutput(videoOutput: camera.VideoOutput): void {
+  videoOutput.stop(() => {
+    console.info('Callback invoked to indicate the video output stop success.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopVideoOutput(videoOutput: camera.VideoOutput): void {
+  videoOutput.stop().then(() => {
+    console.info('Promise returned to indicate that stop method execution success.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to video output stop, error code: ${error.code}.`);
+  });
+}
+```
 
 ## stop
 
@@ -1274,4 +2706,8 @@ Stops this session. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+**Examples**
+
+See [stop](#stop)
 

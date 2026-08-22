@@ -27,7 +27,7 @@ Exits the share of the specified shared resource. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sharingResource | string | Yes | Shared resource ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Result&lt;void&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;void&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -38,6 +38,16 @@ Exits the share of the specified shared resource. This API uses an asynchronous 
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+cloudData.sharing.exit('sharing_resource_test').then((result) => {
+  console.info(`exit share success, result: ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`exit share failed, code is ${err.code},message is ${err.message}`);
+})
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -90,13 +100,5 @@ Exits the share of the specified shared resource. This API uses a promise to ret
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-cloudData.sharing.exit('sharing_resource_test').then((result) => {
-  console.info(`exit share success, result: ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`exit share failed, code is ${err.code},message is ${err.message}`);
-})
-```
+See [exit](#exit)
 

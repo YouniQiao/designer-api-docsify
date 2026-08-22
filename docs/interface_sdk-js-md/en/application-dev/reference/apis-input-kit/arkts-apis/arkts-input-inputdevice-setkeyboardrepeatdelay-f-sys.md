@@ -28,7 +28,7 @@ Sets the keyboard repeat delay. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | delay | int | Yes | Keyboard repeat delay, in ms. The value range is [300, 1000] and the default value is **500**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -58,6 +58,32 @@ struct Index {
               }
               console.info(`Set keyboard repeat delay success`);
             });
+          } catch (error) {
+            console.error(`Set keyboard repeat delay failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            inputDevice.setKeyboardRepeatDelay(350).then(() => {
+              console.info(`Set keyboard repeat delay success`);
+            }).catch((error: BusinessError) => {
+              console.error(`Set keyboard failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            })
           } catch (error) {
             console.error(`Set keyboard repeat delay failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
@@ -105,29 +131,5 @@ Sets the keyboard repeat delay. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { inputDevice } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            inputDevice.setKeyboardRepeatDelay(350).then(() => {
-              console.info(`Set keyboard repeat delay success`);
-            }).catch((error: BusinessError) => {
-              console.error(`Set keyboard failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`Set keyboard repeat delay failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
+See [setKeyboardRepeatDelay](#setkeyboardrepeatdelay)
 

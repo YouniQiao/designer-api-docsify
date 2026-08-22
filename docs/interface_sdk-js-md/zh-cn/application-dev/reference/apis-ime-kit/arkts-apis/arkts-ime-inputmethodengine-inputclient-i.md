@@ -83,6 +83,72 @@ inputClient.deleteBackward(length, (err: BusinessError, result: boolean) => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.deleteBackward(length).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in deleting backward.');
+  } else {
+    console.error('Failed to deleteBackward.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: int = 1;
+inputClient.deleteBackward(length).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in deleting backward.');
+  } else {
+    console.error('Failed to deleteBackward.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+textInputClient.deleteBackward(length, (err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in deleting backward.');
+  } else {
+    console.error('Failed to deleteBackward.');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+textInputClient.deleteBackward(length).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in deleting backward.');
+  } else {
+    console.error('Failed to deleteBackward.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## deleteBackward
 
 ```TypeScript
@@ -119,39 +185,7 @@ deleteBackward(length: int): Promise<boolean>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-inputClient.deleteBackward(length).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in deleting backward.');
-  } else {
-    console.error('Failed to deleteBackward.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: int = 1;
-inputClient.deleteBackward(length).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in deleting backward.');
-  } else {
-    console.error('Failed to deleteBackward.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [deleteBackward](#deletebackward)
 
 ## deleteBackwardSync
 
@@ -273,6 +307,72 @@ inputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.deleteForward(length).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in deleting forward.');
+  } else {
+    console.error('Failed to delete Forward.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: int = 1;
+inputClient.deleteForward(length).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in deleting forward.');
+  } else {
+    console.error('Failed to delete Forward.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+textInputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in deleting forward.');
+  } else {
+    console.error('Failed to deleteForward.');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+textInputClient.deleteForward(length).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in deleting forward.');
+  } else {
+    console.error('Failed to delete forward.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## deleteForward
 
 ```TypeScript
@@ -309,39 +409,7 @@ deleteForward(length: int): Promise<boolean>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-inputClient.deleteForward(length).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in deleting forward.');
-  } else {
-    console.error('Failed to delete Forward.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: int = 1;
-inputClient.deleteForward(length).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in deleting forward.');
-  } else {
-    console.error('Failed to delete Forward.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [deleteForward](#deleteforward)
 
 ## deleteForwardSync
 
@@ -531,6 +599,10 @@ getAttachOptions(): AttachOptions | null
 | --- | --- |
 | AttachOptions \| null | 返回绑定输入法时的附加选项内容。 |
 
+**示例**
+
+参见 [getAttachOptions](#getattachoptions)
+
 ## getBackward
 
 ```TypeScript
@@ -592,6 +664,56 @@ inputClient.getBackward(length, (err: BusinessError, text: string) => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.getBackward(length).then((text: string) => {
+  console.info('Succeeded in getting backward, text: ' + text);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: int = 1;
+inputClient.getBackward(length).then((text: string) => {
+  console.info('Succeeded in getting backward, text: ' + text);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+textInputClient.getBackward(length, (err: BusinessError, text: string) => {
+  if (err) {
+    console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting backward, text: ' + text);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+textInputClient.getBackward(length).then((text: string) => {
+  console.info(`'Succeeded in getting backward: ${text}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## getBackward
 
 ```TypeScript
@@ -628,31 +750,7 @@ getBackward(length: int): Promise<string>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-inputClient.getBackward(length).then((text: string) => {
-  console.info('Succeeded in getting backward, text: ' + text);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: int = 1;
-inputClient.getBackward(length).then((text: string) => {
-  console.info('Succeeded in getting backward, text: ' + text);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [getBackward](#getbackward)
 
 ## getBackwardSync
 
@@ -792,6 +890,10 @@ getCallingWindowInfo(): Promise<WindowInfo | null>
 | [12800012](../errorcode-inputmethod-framework.md#12800012-软键盘类型面板未创建) | the input method panel does not exist. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 
+**示例**
+
+参见 [getCallingWindowInfo](#getcallingwindowinfo)
+
 ## getEditorAttribute
 
 ```TypeScript
@@ -833,6 +935,43 @@ inputClient.getEditorAttribute((err: BusinessError, editorAttribute: inputMethod
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.EditorAttribute) => {
+  console.info(`editorAttribute.inputPattern:  ${editorAttribute.inputPattern}`);
+  console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+
+textInputClient.getEditorAttribute((err: BusinessError,
+  editorAttribute: inputMethodEngine.EditorAttribute) => {
+  if (err) {
+    console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`editorAttribute.inputPattern: ${editorAttribute.inputPattern}`);
+  console.info(`editorAttribute.enterKeyType: ${editorAttribute.enterKeyType}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+textInputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.EditorAttribute) => {
+  console.info(`editorAttribute.inputPattern: ${editorAttribute.inputPattern}`);
+  console.info(`editorAttribute.enterKeyType: ${editorAttribute.enterKeyType}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## getEditorAttribute
 
 ```TypeScript
@@ -858,6 +997,10 @@ getEditorAttribute(callback: AsyncCallback<EditorAttribute | null>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+
+**示例**
+
+参见 [getEditorAttribute](#geteditorattribute)
 
 ## getEditorAttribute
 
@@ -887,16 +1030,7 @@ getEditorAttribute(): Promise<EditorAttribute>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.EditorAttribute) => {
-  console.info(`editorAttribute.inputPattern:  ${editorAttribute.inputPattern}`);
-  console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [getEditorAttribute](#geteditorattribute)
 
 ## getEditorAttribute
 
@@ -923,6 +1057,10 @@ getEditorAttribute(): Promise<EditorAttribute | null>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+
+**示例**
+
+参见 [getEditorAttribute](#geteditorattribute)
 
 ## getEditorAttributeSync
 
@@ -1002,6 +1140,10 @@ getEditorAttributeSync(): EditorAttribute | null
 | --- | --- |
 | [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
+**示例**
+
+参见 [getEditorAttributeSync](#geteditorattributesync)
+
 ## getForward
 
 ```TypeScript
@@ -1063,6 +1205,56 @@ inputClient.getForward(length, (err: BusinessError, text: string) => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.getForward(length).then((text: string) => {
+  console.info('Succeeded in getting forward, text: ' + text);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: int = 1;
+inputClient.getForward(length).then((text: string) => {
+  console.info('Succeeded in getting forward, text: ' + text);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+textInputClient.getForward(length, (err: BusinessError, text: string) => {
+  if (err) {
+    console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting forward, text: ' + text);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+textInputClient.getForward(length).then((text: string) => {
+  console.info('Succeeded in getting forward, text: ' + text);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## getForward
 
 ```TypeScript
@@ -1099,31 +1291,7 @@ getForward(length: int): Promise<string>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-inputClient.getForward(length).then((text: string) => {
-  console.info('Succeeded in getting forward, text: ' + text);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: int = 1;
-inputClient.getForward(length).then((text: string) => {
-  console.info('Succeeded in getting forward, text: ' + text);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [getForward](#getforward)
 
 ## getForwardSync
 
@@ -1241,6 +1409,30 @@ inputClient.getTextIndexAtCursor((err: BusinessError, index: int) => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputClient.getTextIndexAtCursor().then((index: number) => {
+  console.info('Succeeded in getTextIndexAtCursor: ' + index);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getTextIndexAtCursor. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputClient.getTextIndexAtCursor().then((index: int) => {
+  console.info('Succeeded in getTextIndexAtCursor: ' + index);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getTextIndexAtCursor. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## getTextIndexAtCursor
 
 ```TypeScript
@@ -1270,29 +1462,7 @@ getTextIndexAtCursor(): Promise<int>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputClient.getTextIndexAtCursor().then((index: number) => {
-  console.info('Succeeded in getTextIndexAtCursor: ' + index);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getTextIndexAtCursor. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputClient.getTextIndexAtCursor().then((index: int) => {
-  console.info('Succeeded in getTextIndexAtCursor: ' + index);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getTextIndexAtCursor. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [getTextIndexAtCursor](#gettextindexatcursor)
 
 ## getTextIndexAtCursorSync
 
@@ -1392,6 +1562,50 @@ inputClient.insertText('test', (err: BusinessError, result: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputClient.insertText('test').then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in inserting text.');
+  } else {
+    console.error('Failed to insertText.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+textInputClient.insertText('test', (err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in inserting text.');
+  } else {
+    console.error('Failed to insertText.');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+textInputClient.insertText('test').then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in inserting text.');
+  } else {
+    console.error('Failed to insertText.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## insertText
 
 ```TypeScript
@@ -1428,19 +1642,7 @@ insertText(text: string): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputClient.insertText('test').then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in inserting text.');
-  } else {
-    console.error('Failed to insertText.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [insertText](#inserttext)
 
 ## insertTextSync
 
@@ -1525,6 +1727,16 @@ inputClient.moveCursor(inputMethodEngine.Direction.CURSOR_UP, (err: BusinessErro
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputClient.moveCursor(inputMethodEngine.Direction.CURSOR_UP).then(() => {
+  console.info('Succeeded in moving cursor.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to moveCursor. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## moveCursor
 
 ```TypeScript
@@ -1560,15 +1772,7 @@ moveCursor(direction: int): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputClient.moveCursor(inputMethodEngine.Direction.CURSOR_UP).then(() => {
-  console.info('Succeeded in moving cursor.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to moveCursor. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [moveCursor](#movecursor)
 
 ## moveCursorSync
 
@@ -1610,44 +1814,6 @@ moveCursorSync(direction: int): void
 inputClient.moveCursorSync(inputMethodEngine.Direction.CURSOR_UP);
 ```
 
-## offAttachOptionsDidChange
-
-```TypeScript
-offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void
-```
-
-@brief 取消订阅附加选项变更（attachOptionsDidChange）事件，停止监听输入法附加配置项的变更动作。
-
-**起始版本：** 23
-
-<!--Device-InputClient-offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void--><!--Device-InputClient-offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 否 | 可选参数，需取消的目标回调函数：传入指定回调函数实例时，仅取消该回调的订阅；不传入时，取消所有 attachOptionsDidChange事件的订阅。 |
-
-**示例**
-
-```TypeScript
-let attachOptionsDidChangeCallback = (attachOptions: inputMethodEngine.AttachOptions) => {
-  console.info(`AttachOptionsDidChangeCallback1: attachOptionsDidChange event triggered`);
-};
-
-inputMethodEngine.getInputMethodAbility()
-  .onInputStart((kbController: inputMethodEngine.KeyboardController, client: inputMethodEngine.InputClient) => {
-  let keyboardController = kbController;
-  let inputClient = client;
-  inputClient.onAttachOptionsDidChange(attachOptionsDidChangeCallback);
-  console.info(`attachOptionsDidChangeCallback subscribed to attachOptionsDidChange`);
-  inputClient.offAttachOptionsDidChange(attachOptionsDidChangeCallback);
-  console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
-});
-```
-
 ## off('attachOptionsDidChange')
 
 ```TypeScript
@@ -1683,17 +1849,17 @@ inputClient.off('attachOptionsDidChange', attachOptionsDidChangeCallback);
 console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
 ```
 
-## onAttachOptionsDidChange
+## offAttachOptionsDidChange
 
 ```TypeScript
-onAttachOptionsDidChange(callback: Callback<AttachOptions>): void
+offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void
 ```
 
-@brief 订阅绑定输入法时的附加选项变更事件。使用callback异步回调。
+@brief 取消订阅附加选项变更（attachOptionsDidChange）事件，停止监听输入法附加配置项的变更动作。
 
 **起始版本：** 23
 
-<!--Device-InputClient-onAttachOptionsDidChange(callback: Callback<AttachOptions>): void--><!--Device-InputClient-onAttachOptionsDidChange(callback: Callback<AttachOptions>): void-End-->
+<!--Device-InputClient-offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void--><!--Device-InputClient-offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1701,7 +1867,7 @@ onAttachOptionsDidChange(callback: Callback<AttachOptions>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 是 | 回调函数，返回绑定输入法时的附加选项。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 否 | 可选参数，需取消的目标回调函数：传入指定回调函数实例时，仅取消该回调的订阅；不传入时，取消所有 attachOptionsDidChange事件的订阅。 |
 
 **示例**
 
@@ -1763,6 +1929,44 @@ console.info(`attachOptionsDidChangeCallback subscribed to attachOptionsDidChang
 // 取消订阅绑定输入法时的附加选项变更事件
 inputClient.off('attachOptionsDidChange', attachOptionsDidChangeCallback);
 console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
+```
+
+## onAttachOptionsDidChange
+
+```TypeScript
+onAttachOptionsDidChange(callback: Callback<AttachOptions>): void
+```
+
+@brief 订阅绑定输入法时的附加选项变更事件。使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-InputClient-onAttachOptionsDidChange(callback: Callback<AttachOptions>): void--><!--Device-InputClient-onAttachOptionsDidChange(callback: Callback<AttachOptions>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 是 | 回调函数，返回绑定输入法时的附加选项。 |
+
+**示例**
+
+```TypeScript
+let attachOptionsDidChangeCallback = (attachOptions: inputMethodEngine.AttachOptions) => {
+  console.info(`AttachOptionsDidChangeCallback1: attachOptionsDidChange event triggered`);
+};
+
+inputMethodEngine.getInputMethodAbility()
+  .onInputStart((kbController: inputMethodEngine.KeyboardController, client: inputMethodEngine.InputClient) => {
+  let keyboardController = kbController;
+  let inputClient = client;
+  inputClient.onAttachOptionsDidChange(attachOptionsDidChangeCallback);
+  console.info(`attachOptionsDidChangeCallback subscribed to attachOptionsDidChange`);
+  inputClient.offAttachOptionsDidChange(attachOptionsDidChangeCallback);
+  console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
+});
 ```
 
 ## recvMessage
@@ -1868,6 +2072,18 @@ inputClient.selectByMovement(movement, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 设置选中时光标向上移动
+let movement: inputMethodEngine.Movement = { direction: 1 };
+inputClient.selectByMovement(movement).then(() => {
+  console.info('Succeeded in selecting by movement.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to selectByMovement. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## selectByMovement
 
 ```TypeScript
@@ -1903,17 +2119,7 @@ selectByMovement(movement: Movement): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 设置选中时光标向上移动
-let movement: inputMethodEngine.Movement = { direction: 1 };
-inputClient.selectByMovement(movement).then(() => {
-  console.info('Succeeded in selecting by movement.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to selectByMovement. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [selectByMovement](#selectbymovement)
 
 ## selectByMovementSync
 
@@ -2002,6 +2208,19 @@ inputClient.selectByRange(range, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 设置预上屏文本的替换范围为第一个字符
+// 设置选中文本的起始和结束位置
+let range: inputMethodEngine.Range = { start: 0, end: 1 };
+inputClient.selectByRange(range).then(() => {
+  console.info('Succeeded in selecting by range.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to selectByRange. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## selectByRange
 
 ```TypeScript
@@ -2037,18 +2256,7 @@ selectByRange(range: Range): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 设置预上屏文本的替换范围为第一个字符
-// 设置选中文本的起始和结束位置
-let range: inputMethodEngine.Range = { start: 0, end: 1 };
-inputClient.selectByRange(range).then(() => {
-  console.info('Succeeded in selecting by range.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to selectByRange. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [selectByRange](#selectbyrange)
 
 ## selectByRangeSync
 
@@ -2155,6 +2363,16 @@ inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY, (err: Business
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY).then(() => {
+  console.info('Succeeded in sending extend action.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to sendExtendAction. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## sendExtendAction
 
 ```TypeScript
@@ -2208,15 +2426,7 @@ sendExtendAction(action: ExtendAction): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY).then(() => {
-  console.info('Succeeded in sending extend action.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to sendExtendAction. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [sendExtendAction](#sendextendaction)
 
 ## sendKeyFunction
 
@@ -2288,6 +2498,72 @@ inputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let action: number = 1;
+inputClient.sendKeyFunction(action).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in sending key function.');
+  } else {
+    console.error('Failed to sendKeyFunction.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let action: int = 1;
+inputClient.sendKeyFunction(action).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in sending key function.');
+  } else {
+    console.error('Failed to sendKeyFunction.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let action: number = 1;
+textInputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in sending key function.');
+  } else {
+    console.error('Failed to sendKeyFunction.');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let action: number = 1;
+textInputClient.sendKeyFunction(action).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in sending key function.');
+  } else {
+    console.error('Failed to sendKeyFunction.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to sendKeyFunction:. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## sendKeyFunction
 
 ```TypeScript
@@ -2323,39 +2599,7 @@ sendKeyFunction(action: int): Promise<boolean>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let action: number = 1;
-inputClient.sendKeyFunction(action).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in sending key function.');
-  } else {
-    console.error('Failed to sendKeyFunction.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let action: int = 1;
-inputClient.sendKeyFunction(action).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in sending key function.');
-  } else {
-    console.error('Failed to sendKeyFunction.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [sendKeyFunction](#sendkeyfunction)
 
 ## sendMessage
 

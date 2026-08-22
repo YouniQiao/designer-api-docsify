@@ -316,28 +316,6 @@ The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to [bun
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
-## reqPermissionStates
-
-```TypeScript
-readonly reqPermissionStates: Array<number>
-```
-
-Permission grant state. The value **0** means that the request is successful, and **-1** means the opposite.
-
-**Type:** Array&lt;number&gt;
-
-**Default:** Indicates the grant status of required permissions
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** permissionGrantStates
-
-<!--Device-BundleInfo-readonly reqPermissionStates: Array<number>--><!--Device-BundleInfo-readonly reqPermissionStates: Array<number>-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework
-
 ## reqPermissions
 
 ```TypeScript
@@ -359,6 +337,28 @@ The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to [bun
 **Substitutes:** permissions
 
 <!--Device-BundleInfo-readonly reqPermissions: Array<string>--><!--Device-BundleInfo-readonly reqPermissions: Array<string>-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework
+
+## reqPermissionStates
+
+```TypeScript
+readonly reqPermissionStates: Array<number>
+```
+
+Permission grant state. The value **0** means that the request is successful, and **-1** means the opposite.
+
+**Type:** Array&lt;number&gt;
+
+**Default:** Indicates the grant status of required permissions
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** permissionGrantStates
+
+<!--Device-BundleInfo-readonly reqPermissionStates: Array<number>--><!--Device-BundleInfo-readonly reqPermissionStates: Array<number>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 

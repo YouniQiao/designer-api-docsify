@@ -70,6 +70,26 @@ struct Index {
 }
 ```
 
+```TypeScript
+// The phAccessHelper instance obtained is a global object. It is used by default in subsequent operations. If the code snippet is not added, an error will be reported indicating that phAccessHelper is not defined.
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+import { common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Button("example").onClick(async () => {
+        let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+        let phAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
+      }).width('100%')
+    }
+    .height('90%')
+  }
+}
+```
+
 
 ## getPhotoAccessHelper
 
@@ -111,4 +131,8 @@ Obtains a PhotoAccessHelper instance for accessing and modifying media files in 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes: <br>1. userId is invalid. |
+
+**Examples**
+
+See [getPhotoAccessHelper](#getphotoaccesshelper)
 

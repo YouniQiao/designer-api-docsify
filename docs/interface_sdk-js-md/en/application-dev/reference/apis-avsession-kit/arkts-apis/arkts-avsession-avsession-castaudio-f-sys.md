@@ -30,7 +30,7 @@ Cast Audio to the remote devices or cast back local device
 | --- | --- | --- | --- |
 | session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) \| 'all' | Yes | Specifies the sessionId which to send to remote. |
 | audioDevices | Array&lt;audio.AudioDeviceDescriptor&gt; | Yes | Specifies the audio devices to cast. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully 'all' means cast all the media audio of this device to remote. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully 'all' means cast all the media audio of this device to remote. |
 
 **Error codes:**
 
@@ -44,6 +44,29 @@ Cast Audio to the remote devices or cast back local device
 | [6600104](../errorcode-avsession.md#6600104-remote-session-connection-failure) | The remote session connection failed. |
 
 **Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let audioManager = audio.getAudioManager();
+let audioRoutingManager = audioManager.getRoutingManager();
+let audioDevices: audio.AudioDeviceDescriptors | undefined = undefined;
+audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((data) => {
+  audioDevices = data;
+  console.info('Promise returned to indicate that the device list is obtained.');
+}).catch((err: BusinessError) => {
+  console.error(`GetDevices BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+
+if (audioDevices !== undefined) {
+  avSession.castAudio('all', audioDevices as audio.AudioDeviceDescriptors).then(() => {
+    console.info('CreateController : SUCCESS');
+  }).catch((err: BusinessError) => {
+    console.error(`CreateController BusinessError: code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -114,26 +137,5 @@ Cast Audio to the remote devices or cast back local device
 
 **Examples**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let audioManager = audio.getAudioManager();
-let audioRoutingManager = audioManager.getRoutingManager();
-let audioDevices: audio.AudioDeviceDescriptors | undefined = undefined;
-audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((data) => {
-  audioDevices = data;
-  console.info('Promise returned to indicate that the device list is obtained.');
-}).catch((err: BusinessError) => {
-  console.error(`GetDevices BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-
-if (audioDevices !== undefined) {
-  avSession.castAudio('all', audioDevices as audio.AudioDeviceDescriptors).then(() => {
-    console.info('CreateController : SUCCESS');
-  }).catch((err: BusinessError) => {
-    console.error(`CreateController BusinessError: code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
+See [castAudio](#castaudio)
 

@@ -12,7 +12,7 @@ import { abilityManager } from '@kit.AbilityKit';
 function onPreloadedUIExtensionAbilityDestroyed(callback: PreloadedUIExtensionAbilityDestroyedFn): void
 ```
 
-Subscribes to destroyed events of a preloaded [UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md) instance in the current process.
+Subscribes to destroyed events of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance in the current process.
 
 **Since:** 23
 
@@ -30,7 +30,7 @@ Subscribes to destroyed events of a preloaded [UIExtensionAbility](arkts-ability
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [PreloadedUIExtensionAbilityDestroyedFn](arkts-ability-abilitymanager-preloadeduiextensionabilitydestroyedfn-t-sys.md) | Yes | Callback used to receive the ID of the preloaded [UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md) instance that is destroyed. |
+| callback | [PreloadedUIExtensionAbilityDestroyedFn](arkts-ability-abilitymanager-preloadeduiextensionabilitydestroyedfn-t-sys.md) | Yes | Callback used to receive the ID of the preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance that is destroyed. |
 
 **Error codes:**
 

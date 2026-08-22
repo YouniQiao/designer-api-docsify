@@ -57,59 +57,6 @@ doFinal(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes: <br>1. The data is too long.<br>**适用版本：** 22+ |
 
-## doFinal
-
-```TypeScript
-doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void
-```
-
-完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法更新。使用Callback异步回调。
-
-<br>（1）在对称加解密中**doFinal**用于处理剩余数据和本次传入的数据，并最终结束加密或解密操作，使用callback异步回调函数获取加密或解密后的 数据。如果数据量较小，可以在**doFinal**中一次性传入数据，而不使用**update**；如果在本次加解密流程中已经使用**update**传入过数据， 可以在**doFinal**的data参数处传入null。根据对称加解密的模式不同，**doFinal**的输出有以下区别： - 在GCM和CCM模式的对称加密中，一次加密流程中，将每次**update**和**doFinal**的结果拼接起来，会得到“密文 + authTag”。GCM模式下， authTag为末尾的16字节；CCM模式下，authTag为末尾的12字节。其余部分均为密文。如果**doFinal**的data参数传入null，则**doFinal**的 结果就是authTag。解密时，authTag需要填入[GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md)或 [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md)，密文作为解密时的data参数。 - 对于其他模式的对称加解密及GCM和CCM模式的加解密：每次加/解密流程中，**update**和**doFinal**的结果拼接起来，得到完整的明文或密文。
-
-（2）在RSA、SM2非对称加解密中，**doFinal**加密或解密本次传入的数据，使用callback异步回调函数获取加密或者解密数据。如果数据量较大， 可以多次调用**doFinal**，拼接结果得到完整的明文/密文。
-
-> **说明：**
-> 
-> 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](#cipher)实例的状态被清除，
-> 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称
-> 密钥，进行加密然后解密，则解密中调用**init**的时候仍需填写params参数，而不能直接省略为null。
-> 如果遇到解密失败，需检查加解密数据和**init**时的参数是否匹配，包括GCM模式下加密得到的authTag是否填入解密时的GcmParamsSpec等。
-> **doFinal**的结果可能为null，因此使用.data字段访问**doFinal**结果的具体数据前，请记得先判断结果是否为null，避免产生异常。
-> 2. 对于加密，CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null。
-> 3. 对于解密，GCM、CCM、CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null；对于解密，其他模式，如果明文是加密块大小的
-> 整倍数，调用**update**传入所有密文，调用**doFinal**传null，则返回结果为null。
-> 4. 非对称加解密时多次**doFinal**操作的示例代码请参阅
-> [使用RSA非对称密钥对按段加密和解密](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md)。
-> SM2和RSA的操作类似。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Cipher-doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void--><!--Device-Cipher-doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void-End-->
-
-**系统能力：** 
-- API版本12+：SystemCapability.Security.CryptoFramework.Cipher
-- API版本10-11：SystemCapability.Security.CryptoFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | DataBlob \| null | 是 | 要加密或解密的数据。在对称加解密中，这个参数可以是**null**，但是 **{data: Uint8Array()}**不能传入。在API版本10之前，仅支持**DataBlob**。从API版本10开始，还支持**null**。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | 是 | 回调函数。当加/解密成功时，err为undefined，data为加/解密结果DataBlob；否则 为错误对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
-| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes: <br>1. The data is too long.<br>**适用版本：** 22+ |
-
 **示例**
 
 ArkTS-Dyn示例：
@@ -218,153 +165,6 @@ function cipherByCallback() {
 }
 ```
 
-## doFinal
-
-```TypeScript
-doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob | null>): void
-```
-
-完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法再更新。使用Callback异步回调。
-
-> **说明：**
-> 
-> 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](#cipher)实例的状态被清除，
-> 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称
-> 密钥，进行加密然后解密，则解密中调用**init**的时候仍需填写params参数，而不能直接省略为null。
-> 如果遇到解密失败，需检查加解密数据和**init**时的参数是否匹配，包括GCM模式下加密得到的authTag是否填入解密时的GcmParamsSpec等。
-> **doFinal**的结果可能为null，因此使用.data字段访问**doFinal**结果的具体数据前，请记得先判断结果是否为null，避免产生异常。
-> 2. 对于加密，CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null。
-> 3. 对于解密，GCM、CCM、CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null；对于解密，其他模式，如果明文是加密块大小的
-> 整倍数，调用**update**传入所有密文，调用**doFinal**传null，则返回结果为null。
-> 4. 非对称加解密时多次**doFinal**操作的示例代码请参阅
-> [使用RSA非对称密钥对按段加密和解密](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md)。
-> SM2和RSA的操作类似。
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Cipher-doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob | null>): void--><!--Device-Cipher-doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob | null>): void-End-->
-
-**系统能力：** SystemCapability.Security.CryptoFramework.Cipher
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | DataBlob \| null | 是 | 表示最终要加密或解密的数据。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob \| null&gt; | 是 | 回调函数。当加/解密成功时，err为undefined，data为加密或解密后的数据； 否则为错误对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
-| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes: <br>1. The data is too long. |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-
-## doFinal
-
-```TypeScript
-doFinal(data: DataBlob): Promise<DataBlob>
-```
-
-完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法更新。使用Promise异步回调。
-
-**起始版本：** 9
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Cipher-doFinal(data: DataBlob): Promise<DataBlob>--><!--Device-Cipher-doFinal(data: DataBlob): Promise<DataBlob>-End-->
-
-**系统能力：** 
-- API版本12+：SystemCapability.Security.CryptoFramework.Cipher
-- API版本9-11：SystemCapability.Security.CryptoFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | DataBlob | 是 | 表示最终要加密或解密的数据。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;DataBlob&gt; | Promise对象，返回加密或解密的数据。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
-| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes: <br>1. The data is too long.<br>**适用版本：** 22+ |
-
-## doFinal
-
-```TypeScript
-doFinal(data: DataBlob | null): Promise<DataBlob>
-```
-
-完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法更新。使用Promise异步回调。
-
-<br>（1）在对称加解密中，**doFinal**加/解密（分组模式产生的）剩余数据和本次传入的数据，最后结束加密或者解密数据操作，使用Promise异步回 调获取加密或者解密数据。 如果数据量较小，可以在**doFinal**中一次性传入数据，而不使用**update**；如果在本次加解密流程中，已经使用**update**传入过数据， 可以在**doFinal**的data参数处传入null。 根据对称加解密的模式不同，**doFinal**的输出有如下区别： - 对于GCM和CCM模式的对称加密：一次加密流程中，如果将每一次**update**和**doFinal**的结果拼接起来，会得到“密文+authTag”，即末尾的 16字节（GCM模式）或12字节（CCM模式）是authTag，而其余部分均为密文。（也就是说，如果**doFinal**的data参数传入null，则 **doFinal**的结果就是authTag） authTag需要填入解密时的[GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md)或 [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md)；密文则作为解密时的入参data。 - 对于其他模式的对称加解密及GCM和CCM模式的对称解密：一次加解密流程中，每次**update**和**doFinal**的结果拼接起来，得到完整的明文或 密文。
-
-（2）在RSA和SM2非对称加解密中，使用**doFinal**方法加解密传入的数据，并使用Promise异步回调获取加密或解密结果。如果数据量较大，可以 多次调用**doFinal**，拼接结果以获得完整的明文或密文。
-
-> **说明：**
-> 
-> 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](#cipher)实例的状态被清除，
-> 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称
-> 密钥，进行加密然后解密，则解密中调用**init**的时候仍需填写params参数，而不能直接省略为null。
-> 如果遇到解密失败，需检查加解密数据和**init**时的参数是否匹配，包括GCM模式下加密得到的authTag是否填入解密时的GcmParamsSpec等。
-> **doFinal**的结果可能为null，因此使用.data字段访问**doFinal**结果的具体数据前，请记得先判断结果是否为null，避免产生异常。
-> 2. 对于加密，CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null。
-> 3. 对于解密，GCM、CCM、CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null；对于解密，其他模式，如果明文是加密块大小的
-> 整倍数，调用**update**传入所有密文，调用**doFinal**传null，则返回结果为null。
-> 4. 非对称加解密时多次**doFinal**操作的示例代码请参阅
-> [使用RSA非对称密钥对按段加密和解密](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md)。
-> SM2和RSA的操作类似。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Cipher-doFinal(data: DataBlob | null): Promise<DataBlob>--><!--Device-Cipher-doFinal(data: DataBlob | null): Promise<DataBlob>-End-->
-
-**系统能力：** 
-- API版本12+：SystemCapability.Security.CryptoFramework.Cipher
-- API版本10-11：SystemCapability.Security.CryptoFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | DataBlob \| null | 是 | 要加密或解密的数据。可以为**null**，但不能为{data:Uint8Array(0)}。在API版本10之前的版本 中，仅支持**DataBlob**。从API版本10开始，也支持**null**。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;DataBlob&gt; | Promise对象，返回剩余数据的加/解密结果DataBlob。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
-| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes: <br>1. The data is too long.<br>**适用版本：** 22+ |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -457,6 +257,289 @@ async function cipherByPromise() {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function hmacByCallback() {
+  let mac = cryptoFramework.createMac('SHA256');
+  let keyBlob: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from('12345678abcdefgh', 'utf-8').buffer) };
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  symKeyGenerator.convertKey(keyBlob, (err, symKey) => {
+    mac.init(symKey, (err) => {
+      mac.update({ data: new Uint8Array(buffer.from('hmacTestMessage', 'utf-8').buffer) }, (err) => {
+        mac.doFinal((err, output) => {
+          console.info('[Callback]: HMAC result: ' + output.data);
+          console.info('[Callback]: MAC len: ' + mac.getMacLength());
+        });
+      });
+    });
+  });
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function hmacByCallback() {
+  let mac = cryptoFramework.createMac('SHA256');
+  let keyBlob: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from("12345678abcdefgh", 'utf-8').buffer) };
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  symKeyGenerator.convertKey(keyBlob, (err, symKey) => {
+    if (symKey != undefined) {
+      mac.init(symKey, (err) => {
+        mac.update({ data: new Uint8Array(buffer.from("hmacTestMessage", 'utf-8').buffer) }, (err) => {
+          mac.doFinal((err, output) => {
+            if (output != undefined) {
+              console.info('[Callback]: HMAC result: ' + output.data);
+              console.info('[Callback]: MAC len: ' + mac.getMacLength());
+            }
+          });
+        });
+      });
+    }
+  });
+}
+```
+
+此外，更多HMAC的完整示例可参考开发指导[消息认证码计算](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#分段hmac)。
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+async function hmacByPromise() {
+  let mac = cryptoFramework.createMac('SHA256');
+  let keyBlob: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from('12345678abcdefgh', 'utf-8').buffer) };
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let symKey = await symKeyGenerator.convertKey(keyBlob);
+  await mac.init(symKey);
+  await mac.update({ data: new Uint8Array(buffer.from('hmacTestMessage', 'utf-8').buffer) });
+  let macOutput = await mac.doFinal();
+  console.info('[Promise]: HMAC result: ' + macOutput.data);
+  console.info('[Promise]: MAC len: ' + mac.getMacLength());
+}
+```
+
+## doFinal
+
+```TypeScript
+doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void
+```
+
+完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法更新。使用Callback异步回调。
+
+<br>（1）在对称加解密中**doFinal**用于处理剩余数据和本次传入的数据，并最终结束加密或解密操作，使用callback异步回调函数获取加密或解密后的 数据。如果数据量较小，可以在**doFinal**中一次性传入数据，而不使用**update**；如果在本次加解密流程中已经使用**update**传入过数据， 可以在**doFinal**的data参数处传入null。根据对称加解密的模式不同，**doFinal**的输出有以下区别： - 在GCM和CCM模式的对称加密中，一次加密流程中，将每次**update**和**doFinal**的结果拼接起来，会得到“密文 + authTag”。GCM模式下， authTag为末尾的16字节；CCM模式下，authTag为末尾的12字节。其余部分均为密文。如果**doFinal**的data参数传入null，则**doFinal**的 结果就是authTag。解密时，authTag需要填入[GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md)或 [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md)，密文作为解密时的data参数。 - 对于其他模式的对称加解密及GCM和CCM模式的加解密：每次加/解密流程中，**update**和**doFinal**的结果拼接起来，得到完整的明文或密文。
+
+（2）在RSA、SM2非对称加解密中，**doFinal**加密或解密本次传入的数据，使用callback异步回调函数获取加密或者解密数据。如果数据量较大， 可以多次调用**doFinal**，拼接结果得到完整的明文/密文。
+
+> **说明：**
+> 
+> 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](#cipher)实例的状态被清除，
+> 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称
+> 密钥，进行加密然后解密，则解密中调用**init**的时候仍需填写params参数，而不能直接省略为null。
+> 如果遇到解密失败，需检查加解密数据和**init**时的参数是否匹配，包括GCM模式下加密得到的authTag是否填入解密时的GcmParamsSpec等。
+> **doFinal**的结果可能为null，因此使用.data字段访问**doFinal**结果的具体数据前，请记得先判断结果是否为null，避免产生异常。
+> 2. 对于加密，CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null。
+> 3. 对于解密，GCM、CCM、CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null；对于解密，其他模式，如果明文是加密块大小的
+> 整倍数，调用**update**传入所有密文，调用**doFinal**传null，则返回结果为null。
+> 4. 非对称加解密时多次**doFinal**操作的示例代码请参阅
+> [使用RSA非对称密钥对按段加密和解密](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md)。
+> SM2和RSA的操作类似。
+
+**起始版本：** 10
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Cipher-doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void--><!--Device-Cipher-doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void-End-->
+
+**系统能力：** 
+- API版本12+：SystemCapability.Security.CryptoFramework.Cipher
+- API版本10-11：SystemCapability.Security.CryptoFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | DataBlob \| null | 是 | 要加密或解密的数据。在对称加解密中，这个参数可以是**null**，但是 **{data: Uint8Array()}**不能传入。在API版本10之前，仅支持**DataBlob**。从API版本10开始，还支持**null**。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | 是 | 回调函数。当加/解密成功时，err为undefined，data为加/解密结果DataBlob；否则 为错误对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes: <br>1. The data is too long.<br>**适用版本：** 22+ |
+
+**示例**
+
+参见 [doFinal](#dofinal)
+
+## doFinal
+
+```TypeScript
+doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob | null>): void
+```
+
+完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法再更新。使用Callback异步回调。
+
+> **说明：**
+> 
+> 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](#cipher)实例的状态被清除，
+> 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称
+> 密钥，进行加密然后解密，则解密中调用**init**的时候仍需填写params参数，而不能直接省略为null。
+> 如果遇到解密失败，需检查加解密数据和**init**时的参数是否匹配，包括GCM模式下加密得到的authTag是否填入解密时的GcmParamsSpec等。
+> **doFinal**的结果可能为null，因此使用.data字段访问**doFinal**结果的具体数据前，请记得先判断结果是否为null，避免产生异常。
+> 2. 对于加密，CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null。
+> 3. 对于解密，GCM、CCM、CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null；对于解密，其他模式，如果明文是加密块大小的
+> 整倍数，调用**update**传入所有密文，调用**doFinal**传null，则返回结果为null。
+> 4. 非对称加解密时多次**doFinal**操作的示例代码请参阅
+> [使用RSA非对称密钥对按段加密和解密](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md)。
+> SM2和RSA的操作类似。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Cipher-doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob | null>): void--><!--Device-Cipher-doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob | null>): void-End-->
+
+**系统能力：** SystemCapability.Security.CryptoFramework.Cipher
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | DataBlob \| null | 是 | 表示最终要加密或解密的数据。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob \| null&gt; | 是 | 回调函数。当加/解密成功时，err为undefined，data为加密或解密后的数据； 否则为错误对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes: <br>1. The data is too long. |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+
+**示例**
+
+参见 [doFinal](#dofinal)
+
+## doFinal
+
+```TypeScript
+doFinal(data: DataBlob): Promise<DataBlob>
+```
+
+完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法更新。使用Promise异步回调。
+
+**起始版本：** 9
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Cipher-doFinal(data: DataBlob): Promise<DataBlob>--><!--Device-Cipher-doFinal(data: DataBlob): Promise<DataBlob>-End-->
+
+**系统能力：** 
+- API版本12+：SystemCapability.Security.CryptoFramework.Cipher
+- API版本9-11：SystemCapability.Security.CryptoFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | DataBlob | 是 | 表示最终要加密或解密的数据。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;DataBlob&gt; | Promise对象，返回加密或解密的数据。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes: <br>1. The data is too long.<br>**适用版本：** 22+ |
+
+**示例**
+
+参见 [doFinal](#dofinal)
+
+## doFinal
+
+```TypeScript
+doFinal(data: DataBlob | null): Promise<DataBlob>
+```
+
+完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法更新。使用Promise异步回调。
+
+<br>（1）在对称加解密中，**doFinal**加/解密（分组模式产生的）剩余数据和本次传入的数据，最后结束加密或者解密数据操作，使用Promise异步回 调获取加密或者解密数据。 如果数据量较小，可以在**doFinal**中一次性传入数据，而不使用**update**；如果在本次加解密流程中，已经使用**update**传入过数据， 可以在**doFinal**的data参数处传入null。 根据对称加解密的模式不同，**doFinal**的输出有如下区别： - 对于GCM和CCM模式的对称加密：一次加密流程中，如果将每一次**update**和**doFinal**的结果拼接起来，会得到“密文+authTag”，即末尾的 16字节（GCM模式）或12字节（CCM模式）是authTag，而其余部分均为密文。（也就是说，如果**doFinal**的data参数传入null，则 **doFinal**的结果就是authTag） authTag需要填入解密时的[GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md)或 [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md)；密文则作为解密时的入参data。 - 对于其他模式的对称加解密及GCM和CCM模式的对称解密：一次加解密流程中，每次**update**和**doFinal**的结果拼接起来，得到完整的明文或 密文。
+
+（2）在RSA和SM2非对称加解密中，使用**doFinal**方法加解密传入的数据，并使用Promise异步回调获取加密或解密结果。如果数据量较大，可以 多次调用**doFinal**，拼接结果以获得完整的明文或密文。
+
+> **说明：**
+> 
+> 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](#cipher)实例的状态被清除，
+> 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称
+> 密钥，进行加密然后解密，则解密中调用**init**的时候仍需填写params参数，而不能直接省略为null。
+> 如果遇到解密失败，需检查加解密数据和**init**时的参数是否匹配，包括GCM模式下加密得到的authTag是否填入解密时的GcmParamsSpec等。
+> **doFinal**的结果可能为null，因此使用.data字段访问**doFinal**结果的具体数据前，请记得先判断结果是否为null，避免产生异常。
+> 2. 对于加密，CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null。
+> 3. 对于解密，GCM、CCM、CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null；对于解密，其他模式，如果明文是加密块大小的
+> 整倍数，调用**update**传入所有密文，调用**doFinal**传null，则返回结果为null。
+> 4. 非对称加解密时多次**doFinal**操作的示例代码请参阅
+> [使用RSA非对称密钥对按段加密和解密](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md)。
+> SM2和RSA的操作类似。
+
+**起始版本：** 10
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Cipher-doFinal(data: DataBlob | null): Promise<DataBlob>--><!--Device-Cipher-doFinal(data: DataBlob | null): Promise<DataBlob>-End-->
+
+**系统能力：** 
+- API版本12+：SystemCapability.Security.CryptoFramework.Cipher
+- API版本10-11：SystemCapability.Security.CryptoFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | DataBlob \| null | 是 | 要加密或解密的数据。可以为**null**，但不能为{data:Uint8Array(0)}。在API版本10之前的版本 中，仅支持**DataBlob**。从API版本10开始，也支持**null**。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;DataBlob&gt; | Promise对象，返回剩余数据的加/解密结果DataBlob。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes: <br>1. The data is too long.<br>**适用版本：** 22+ |
+
+**示例**
+
+参见 [doFinal](#dofinal)
+
 ## doFinal
 
 ```TypeScript
@@ -508,6 +591,10 @@ doFinal(data: DataBlob | null): Promise<DataBlob | null>
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes: <br>1. The data is too long. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+
+**示例**
+
+参见 [doFinal](#dofinal)
 
 ## doFinalSync
 
@@ -649,6 +736,25 @@ async function cipherBySync() {
 }
 ```
 
+此外，更多HMAC的完整示例可参考开发指导[消息认证码计算](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#分段hmac)。
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function hmacBySync() {
+  let mac = cryptoFramework.createMac('SHA256');
+  let keyBlob: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from('12345678abcdefgh', 'utf-8').buffer) };
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let symKey = symKeyGenerator.convertKeySync(keyBlob);
+  mac.initSync(symKey);
+  mac.updateSync({ data: new Uint8Array(buffer.from('hmacTestMessage', 'utf-8').buffer) });
+  let macOutput = mac.doFinalSync();
+  console.info('[Sync]: HMAC result: ' + macOutput.data);
+  console.info('[Sync]: MAC len: ' + mac.getMacLength());
+}
+```
+
 ## doFinalSync
 
 ```TypeScript
@@ -688,6 +794,10 @@ doFinalSync(data: DataBlob | null): DataBlob | null
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes: <br>1. The data is too long. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+
+**示例**
+
+参见 [doFinalSync](#dofinalsync)
 
 ## getCipherSpec
 

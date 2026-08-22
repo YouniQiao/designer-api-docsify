@@ -29,7 +29,7 @@ Obtains the network sharing state of the specified type. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [SharingIfaceType](arkts-network-sharing-sharingifacetype-e-sys.md) | Yes | Sharing type. The value **0** means Wi-Fi hotspot sharing, **1** means USB sharing, and **2** means Bluetooth sharing. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SharingIfaceState](arkts-network-sharing-sharingifacestate-e-sys.md)&gt; | Yes | Callback used to return the network sharing state. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SharingIfaceState](arkts-network-sharing-sharingifacestate-e-sys.md)&gt; | Yes | Callback used to return the network sharing state. |
 
 **Error codes:**
 
@@ -53,6 +53,21 @@ sharing.getSharingState(SHARING_WIFI, (error: BusinessError, data: sharing.Shari
   console.error(JSON.stringify(error));
   console.info(JSON.stringify(data));
 });
+```
+
+```TypeScript
+import { sharing } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let SHARING_WIFI = 0;
+sharing
+  .getSharingState(SHARING_WIFI)
+  .then((data: sharing.SharingIfaceState) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
 ```
 
 
@@ -99,18 +114,5 @@ Obtains the network sharing state of the specified type. This API uses a promise
 
 **Examples**
 
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let SHARING_WIFI = 0;
-sharing
-  .getSharingState(SHARING_WIFI)
-  .then((data: sharing.SharingIfaceState) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+See [getSharingState](#getsharingstate)
 

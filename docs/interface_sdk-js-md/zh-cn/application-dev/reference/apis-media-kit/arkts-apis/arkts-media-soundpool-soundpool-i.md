@@ -195,82 +195,6 @@ load(fd: int, offset: long, length: long): Promise<int>
 | [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 
-## offError
-
-```TypeScript
-offError(): void
-```
-
-Unsubscribes from error events of this **SoundPool** instance.
-
-**起始版本：** 23
-
-<!--Device-SoundPool-offError(): void--><!--Device-SoundPool-offError(): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.SoundPool
-
-## offErrorOccurred
-
-```TypeScript
-offErrorOccurred(callback?:Callback<ErrorInfo>): void
-```
-
-Unsubscribes from errorOccurred events of this **SoundPool** instance.
-
-**起始版本：** 23
-
-<!--Device-SoundPool-offErrorOccurred(callback?:Callback<ErrorInfo>): void--><!--Device-SoundPool-offErrorOccurred(callback?:Callback<ErrorInfo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.SoundPool
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 否 | Callback used to listen for soundpool errorOccurred events. |
-
-## offLoadComplete
-
-```TypeScript
-offLoadComplete(): void
-```
-
-Unsubscribes from events indicating that a sound finishes loading.
-
-**起始版本：** 23
-
-<!--Device-SoundPool-offLoadComplete(): void--><!--Device-SoundPool-offLoadComplete(): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.SoundPool
-
-## offPlayFinished
-
-```TypeScript
-offPlayFinished(): void
-```
-
-Unsubscribes from events indicating that a sound finishes playing.
-
-**起始版本：** 23
-
-<!--Device-SoundPool-offPlayFinished(): void--><!--Device-SoundPool-offPlayFinished(): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.SoundPool
-
-## offPlayFinishedWithStreamId
-
-```TypeScript
-offPlayFinishedWithStreamId(): void
-```
-
-Unsubscribes from events indicating that a sound finishes playing.
-
-**起始版本：** 23
-
-<!--Device-SoundPool-offPlayFinishedWithStreamId(): void--><!--Device-SoundPool-offPlayFinishedWithStreamId(): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.SoundPool
-
 ## off('error')
 
 ```TypeScript
@@ -372,17 +296,31 @@ off(type: 'playFinishedWithStreamId'): void
 | --- | --- | --- | --- |
 | type | 'playFinishedWithStreamId' | 是 | 取消注册的事件：'playFinishedWithStreamId'。 |
 
-## onError
+## offError
 
 ```TypeScript
-onError(callback: ErrorCallback): void
+offError(): void
 ```
 
-Subscribes to error events of this **SoundPool** instance. This event is used only for error prompt. This event can be triggered by both user operations and the system.
+Unsubscribes from error events of this **SoundPool** instance.
 
 **起始版本：** 23
 
-<!--Device-SoundPool-onError(callback: ErrorCallback): void--><!--Device-SoundPool-onError(callback: ErrorCallback): void-End-->
+<!--Device-SoundPool-offError(): void--><!--Device-SoundPool-offError(): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.SoundPool
+
+## offErrorOccurred
+
+```TypeScript
+offErrorOccurred(callback?:Callback<ErrorInfo>): void
+```
+
+Unsubscribes from errorOccurred events of this **SoundPool** instance.
+
+**起始版本：** 23
+
+<!--Device-SoundPool-offErrorOccurred(callback?:Callback<ErrorInfo>): void--><!--Device-SoundPool-offErrorOccurred(callback?:Callback<ErrorInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -390,91 +328,49 @@ Subscribes to error events of this **SoundPool** instance. This event is used on
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to return the error code ID and error message. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 否 | Callback used to listen for soundpool errorOccurred events. |
 
-## onErrorOccurred
+## offLoadComplete
 
 ```TypeScript
-onErrorOccurred(callback:Callback<ErrorInfo>): void
+offLoadComplete(): void
 ```
 
-Subscribes to errorOccurred events of this **SoundPool** instance.
+Unsubscribes from events indicating that a sound finishes loading.
 
 **起始版本：** 23
 
-<!--Device-SoundPool-onErrorOccurred(callback:Callback<ErrorInfo>): void--><!--Device-SoundPool-onErrorOccurred(callback:Callback<ErrorInfo>): void-End-->
+<!--Device-SoundPool-offLoadComplete(): void--><!--Device-SoundPool-offLoadComplete(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 是 | Callback used to listen for soundpool errorOccurred events. |
-
-## onLoadComplete
+## offPlayFinished
 
 ```TypeScript
-onLoadComplete(callback: Callback<int>): void
+offPlayFinished(): void
 ```
 
-Subscribes to events indicating that a sound finishes loading. This event is triggered when a sound is loaded.
+Unsubscribes from events indicating that a sound finishes playing.
 
 **起始版本：** 23
 
-<!--Device-SoundPool-onLoadComplete(callback: Callback<int>): void--><!--Device-SoundPool-onLoadComplete(callback: Callback<int>): void-End-->
+<!--Device-SoundPool-offPlayFinished(): void--><!--Device-SoundPool-offPlayFinished(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | ID of the sound that has been loaded. |
-
-## onPlayFinished
+## offPlayFinishedWithStreamId
 
 ```TypeScript
-onPlayFinished(callback: Callback<void>): void
+offPlayFinishedWithStreamId(): void
 ```
 
-Subscribes to events indicating that a sound finishes playing. This event is triggered when a sound finishes playing.
+Unsubscribes from events indicating that a sound finishes playing.
 
 **起始版本：** 23
 
-<!--Device-SoundPool-onPlayFinished(callback: Callback<void>): void--><!--Device-SoundPool-onPlayFinished(callback: Callback<void>): void-End-->
+<!--Device-SoundPool-offPlayFinishedWithStreamId(): void--><!--Device-SoundPool-offPlayFinishedWithStreamId(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
-
-## onPlayFinishedWithStreamId
-
-```TypeScript
-onPlayFinishedWithStreamId(callback: Callback<int>): void
-```
-
-Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that finishes playing.
-
-When only onPlayFinished or onPlayFinishedWithStreamId is subscribed to, the registered callback is triggered when the audio playback is complete.
-
-When both onPlayFinished and onPlayFinishedWithStreamId are subscribed to, the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered, when the audio playback is complete.
-
-**起始版本：** 23
-
-<!--Device-SoundPool-onPlayFinishedWithStreamId(callback: Callback<int>): void--><!--Device-SoundPool-onPlayFinishedWithStreamId(callback: Callback<int>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.SoundPool
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | Callback used to return the result. Stream ID of the audio that finishes playing. |
 
 ## on('error')
 
@@ -584,6 +480,110 @@ on(type: 'playFinishedWithStreamId', callback: Callback<int>): void
 | --- | --- | --- | --- |
 | type | 'playFinishedWithStreamId' | 是 | 支持的事件：'playFinishedWithStreamId'，音频流播放完成会触发此回调，并返回播放完成的音频的streamId。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回播放完成的音频的streamId。 |
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to error events of this **SoundPool** instance. This event is used only for error prompt. This event can be triggered by both user operations and the system.
+
+**起始版本：** 23
+
+<!--Device-SoundPool-onError(callback: ErrorCallback): void--><!--Device-SoundPool-onError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.SoundPool
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to return the error code ID and error message. |
+
+## onErrorOccurred
+
+```TypeScript
+onErrorOccurred(callback:Callback<ErrorInfo>): void
+```
+
+Subscribes to errorOccurred events of this **SoundPool** instance.
+
+**起始版本：** 23
+
+<!--Device-SoundPool-onErrorOccurred(callback:Callback<ErrorInfo>): void--><!--Device-SoundPool-onErrorOccurred(callback:Callback<ErrorInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.SoundPool
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 是 | Callback used to listen for soundpool errorOccurred events. |
+
+## onLoadComplete
+
+```TypeScript
+onLoadComplete(callback: Callback<int>): void
+```
+
+Subscribes to events indicating that a sound finishes loading. This event is triggered when a sound is loaded.
+
+**起始版本：** 23
+
+<!--Device-SoundPool-onLoadComplete(callback: Callback<int>): void--><!--Device-SoundPool-onLoadComplete(callback: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.SoundPool
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | ID of the sound that has been loaded. |
+
+## onPlayFinished
+
+```TypeScript
+onPlayFinished(callback: Callback<void>): void
+```
+
+Subscribes to events indicating that a sound finishes playing. This event is triggered when a sound finishes playing.
+
+**起始版本：** 23
+
+<!--Device-SoundPool-onPlayFinished(callback: Callback<void>): void--><!--Device-SoundPool-onPlayFinished(callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.SoundPool
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+
+## onPlayFinishedWithStreamId
+
+```TypeScript
+onPlayFinishedWithStreamId(callback: Callback<int>): void
+```
+
+Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that finishes playing.
+
+When only onPlayFinished or onPlayFinishedWithStreamId is subscribed to, the registered callback is triggered when the audio playback is complete.
+
+When both onPlayFinished and onPlayFinishedWithStreamId are subscribed to, the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered, when the audio playback is complete.
+
+**起始版本：** 23
+
+<!--Device-SoundPool-onPlayFinishedWithStreamId(callback: Callback<int>): void--><!--Device-SoundPool-onPlayFinishedWithStreamId(callback: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.SoundPool
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | Callback used to return the result. Stream ID of the audio that finishes playing. |
 
 ## play
 

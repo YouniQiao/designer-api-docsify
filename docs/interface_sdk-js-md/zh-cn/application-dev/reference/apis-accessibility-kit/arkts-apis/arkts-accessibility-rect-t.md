@@ -14,3 +14,11 @@ export type Rect = _Rect
 
 **属性类型：** _Rect
 
+**示例**
+
+```TypeScript
+import { Rect } from '@kit.AccessibilityKit';
+
+let rect: Rect;
+```
+

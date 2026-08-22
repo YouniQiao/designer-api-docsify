@@ -98,6 +98,19 @@ Send a signal to process
 | --- | --- | --- | --- |
 | signal | number \| string | Yes | Number or string represents the signal sent. |
 
+**Examples**
+
+```TypeScript
+let pres = process.pid;
+let result = process.kill(28, pres);
+```
+
+```TypeScript
+let pro = new process.ProcessManager();
+let pres = process.pid;
+let result = pro.kill(28, pres);
+```
+
 ## wait
 
 ```TypeScript

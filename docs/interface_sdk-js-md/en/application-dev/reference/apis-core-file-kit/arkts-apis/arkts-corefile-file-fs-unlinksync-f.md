@@ -50,3 +50,10 @@ Removes a file. This API returns the result synchronously.
 | 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+fs.unlinkSync(filePath);
+```
+

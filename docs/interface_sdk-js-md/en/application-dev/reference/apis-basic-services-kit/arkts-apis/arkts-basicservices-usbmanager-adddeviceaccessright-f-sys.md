@@ -47,3 +47,28 @@ Adds the device access permission for the application. System applications are g
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  <br>1.Mandatory parameters are left unspecified.  <br>2.Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 
+**Examples**
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+let devicesName: string = "1-1";
+let tokenId: string = "";
+
+  try {
+    let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_DEFAULT;
+    bundleManager.getBundleInfoForSelf(bundleFlags).then((bundleInfo) => {
+      console.info('testTag', 'getBundleInfoForSelf successfully. Data: %{public}s', JSON.stringify(bundleInfo));
+      let token = bundleInfo.appInfo.accessTokenId;
+      tokenId = token.toString();
+      if (usbManager.addDeviceAccessRight(tokenId, devicesName)) {
+        console.info(`Succeed in adding right`);
+      }
+    }).catch((err : BusinessError) => {
+      console.error('testTag getBundleInfoForSelf failed' );
+    });
+  } catch (err) {
+    console.error('testTag failed');
+  }
+```
+

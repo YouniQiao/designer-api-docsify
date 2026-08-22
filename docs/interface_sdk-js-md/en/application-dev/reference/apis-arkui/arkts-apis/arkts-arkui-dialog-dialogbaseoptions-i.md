@@ -22,7 +22,7 @@ alignment?: DialogBaseAlignment
 
 Alignment of the dialog.
 
-**Type:** [DialogBaseAlignment](arkts-arkui-arkuidialog-dialogbasealignment-e.md)
+**Type:** [DialogBaseAlignment](arkts-arkui-arkui-dialog-dialogbasealignment-e.md)
 
 **Since:** 26.1.0
 
@@ -236,7 +236,7 @@ controller?: DialogBaseController
 
 Dialog controller.
 
-**Type:** [DialogBaseController](arkts-arkui-arkuidialog-dialogbasecontroller-c.md)
+**Type:** [DialogBaseController](arkts-arkui-arkui-dialog-dialogbasecontroller-c.md)
 
 **Since:** 26.1.0
 
@@ -696,7 +696,7 @@ onWillDismiss?: Callback<DialogDismissal>
 
 Callback for interactive closure of the dialog box. <br>If this callback is registered, the dialog box will not be closed immediately after the user touches the mask or the Back button. The reason parameter in the callback is used to determine whether the dialog can be closed.
 
-**Type:** Callback&lt;[DialogDismissal](arkts-arkui-arkuidialog-dialogdismissal-i.md)&gt;
+**Type:** Callback&lt;[DialogDismissal](arkts-arkui-arkui-dialog-dialogdismissal-i.md)&gt;
 
 **Since:** 26.1.0
 

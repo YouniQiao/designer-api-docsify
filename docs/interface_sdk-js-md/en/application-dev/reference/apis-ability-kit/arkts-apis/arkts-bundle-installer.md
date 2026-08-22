@@ -42,8 +42,8 @@ import { installer } from '@kit.AbilityKit';
 | [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md) | Describes the parameters used for destroying an application clone. |
 | [HashParam](arkts-ability-installer-hashparam-i-sys.md) | Defines the hash parameters for bundle installation and uninstall. |
 | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | Defines the parameters that need to be specified for bundle installation, uninstall, or recovering. |
-| [PGOParam](arkts-ability-installer-pgoparam-i-sys.md) | Defines the parameters of the PGO configuration file. |
 | [Parameters](arkts-ability-installer-parameters-i-sys.md) | Describes the extended parameter information. |
+| [PGOParam](arkts-ability-installer-pgoparam-i-sys.md) | Defines the parameters of the PGO configuration file. |
 | [PluginParam](arkts-ability-installer-pluginparam-i-sys.md) | Defines the parameters for installing or uninstalling a plugin. |
 | [UninstallParam](arkts-ability-installer-uninstallparam-i-sys.md) | Defines the parameters required for the uninstall of a shared bundle. |
 | [VerifyCodeParam](arkts-ability-installer-verifycodeparam-i-sys.md) | Defines the information about the code signature file. |

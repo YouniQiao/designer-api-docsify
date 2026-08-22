@@ -57,3 +57,14 @@ enableMacro(enabled: boolean): void
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
 
+**示例**
+
+```TypeScript
+function enableMacro(photoSession: camera.PhotoSession): void {
+  let isSupported: boolean = photoSession.isMacroSupported();
+  if (isSupported) {
+    photoSession.enableMacro(true);
+  }
+}
+```
+

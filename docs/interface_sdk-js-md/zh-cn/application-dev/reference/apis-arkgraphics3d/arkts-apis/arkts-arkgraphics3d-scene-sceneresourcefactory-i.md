@@ -61,6 +61,29 @@ function createCameraPromise(): Promise<Camera> {
 }
 ```
 
+```TypeScript
+import { SceneNodeParameters, Camera, SceneResourceFactory, Scene, CameraParameters,
+  RenderingPipelineType } from '@kit.ArkGraphics3D';
+
+function createCameraPromise(): Promise<Camera> {
+  return new Promise((resolve, reject) => {
+    // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
+    let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+    scene.then(async (result: Scene) => {
+      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
+      let nodeParameter: SceneNodeParameters = { name: "camera1" };
+      let camParameter: CameraParameters = {renderingPipeline: RenderingPipelineType.FORWARD};
+      // 创建相机
+      let camera: Camera = await sceneFactory.createCamera(nodeParameter, camParameter);
+      resolve(camera);
+    }).catch((err: Error) => {
+      console.error(`Failed to load scene. Message: ${err.message}`);
+      reject(err);
+    });
+  });
+}
+```
+
 ## createCamera
 
 ```TypeScript
@@ -90,28 +113,7 @@ createCamera(params: SceneNodeParameters, cameraParams: CameraParameters): Promi
 
 **示例**
 
-```TypeScript
-import { SceneNodeParameters, Camera, SceneResourceFactory, Scene, CameraParameters,
-  RenderingPipelineType } from '@kit.ArkGraphics3D';
-
-function createCameraPromise(): Promise<Camera> {
-  return new Promise((resolve, reject) => {
-    // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
-    let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
-    scene.then(async (result: Scene) => {
-      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
-      let nodeParameter: SceneNodeParameters = { name: "camera1" };
-      let camParameter: CameraParameters = {renderingPipeline: RenderingPipelineType.FORWARD};
-      // 创建相机
-      let camera: Camera = await sceneFactory.createCamera(nodeParameter, camParameter);
-      resolve(camera);
-    }).catch((err: Error) => {
-      console.error(`Failed to load scene. Message: ${err.message}`);
-      reject(err);
-    });
-  });
-}
-```
+参见 [createCamera](#createcamera)
 
 ## createEffect
 

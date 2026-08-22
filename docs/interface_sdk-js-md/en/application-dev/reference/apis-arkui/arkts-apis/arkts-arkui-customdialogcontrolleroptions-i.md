@@ -684,7 +684,7 @@ Display order of the dialog box.
 levelUniqueId?: number
 ```
 
-[Unique ID](../../apis-default/arkts-apis/arkts-framenode-c.md#getuniqueid) of the node under the display level for the page-level dialog box.
+[Unique ID](arkts-arkui-framenode-c.md#getuniqueid) of the node under the display level for the page-level dialog box.
 
 Value range: a number no less than 0
 

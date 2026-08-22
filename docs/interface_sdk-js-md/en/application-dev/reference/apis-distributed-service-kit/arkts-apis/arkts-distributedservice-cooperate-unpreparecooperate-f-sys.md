@@ -28,7 +28,7 @@ Cancels the preparation for screen hopping. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -51,6 +51,22 @@ try {
       return;
     }
     console.info(`Keyboard mouse crossing unprepareCooperate success.`);
+  });
+} catch (error) {
+  console.error(`Keyboard mouse crossing unprepareCooperate failed, error: ${JSON.stringify(error,
+    [`code`, `message`])}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  cooperate.unprepareCooperate().then(() => {
+    console.info(`Keyboard mouse crossing unprepareCooperate success.`);
+  }, (error: BusinessError) => {
+    console.error(`Keyboard mouse crossing unprepareCooperate failed, error: ${JSON.stringify(error,
+      [`code`, `message`])}`);
   });
 } catch (error) {
   console.error(`Keyboard mouse crossing unprepareCooperate failed, error: ${JSON.stringify(error,
@@ -92,19 +108,5 @@ Cancels the preparation for screen hopping. This API uses a promise to return th
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  cooperate.unprepareCooperate().then(() => {
-    console.info(`Keyboard mouse crossing unprepareCooperate success.`);
-  }, (error: BusinessError) => {
-    console.error(`Keyboard mouse crossing unprepareCooperate failed, error: ${JSON.stringify(error,
-      [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Keyboard mouse crossing unprepareCooperate failed, error: ${JSON.stringify(error,
-    [`code`, `message`])}`);
-}
-```
+See [unprepareCooperate](#unpreparecooperate)
 

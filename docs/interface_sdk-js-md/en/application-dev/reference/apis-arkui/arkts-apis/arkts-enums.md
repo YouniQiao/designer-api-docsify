@@ -26,8 +26,8 @@
 | [CheckBoxShape](arkts-arkui-checkboxshape-e.md) | common enum of the checkbox shape |
 | [ClickEffectLevel](arkts-arkui-clickeffectlevel-e.md) | Enum of click effect level. |
 | [Color](arkts-arkui-color-e.md) | common enum of color |
-| [ColorSpace](arkts-arkui-colorspace-e.md) | Enumerates color space types for specifying color rendering modes. |
 | [ColoringStrategy](arkts-arkui-coloringstrategy-e.md) | Enumerates the coloring strategies. |
+| [ColorSpace](arkts-arkui-colorspace-e.md) | Enumerates color space types for specifying color rendering modes. |
 | [CompetitionStrategy](arkts-arkui-competitionstrategy-e.md) | Defines whether the dispatched event is a competitive gesture. In the competitive scenario, only one of the original node and target node of the gesture responds. In the non‑competitive scenario, both nodes can respond simultaneously. |
 | [CopyOptions](arkts-arkui-copyoptions-e.md) | Copy options. |
 | [CrownAction](arkts-arkui-crownaction-e.md) | Enumerates the crown actions. |
@@ -55,7 +55,7 @@
 | [GestureCollectIntervention](arkts-arkui-gesturecollectintervention-e.md) | Define the gesture and events collection intervention operations. |
 | [GestureShortcut](arkts-arkui-gestureshortcut-e.md) | Define the smart gesture shortcut priority enumeration. |
 | [GradientDirection](arkts-arkui-gradientdirection-e.md) | GradientDirection enumeration description |
-| [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md) | Enumerates the height breakpoint values corresponding to different window aspect ratio thresholds. The values are returned through [getWindowHeightBreakpoint](arkts-arkui-arkuiuicontext-uicontext-c.md#getwindowheightbreakpoint). |
+| [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md) | Enumerates the height breakpoint values corresponding to different window aspect ratio thresholds. The values are returned through [getWindowHeightBreakpoint](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getwindowheightbreakpoint). |
 | [HitTestMode](arkts-arkui-hittestmode-e.md) | Sets the response logic and node blocking rules for the hit test. |
 | [HorizontalAlign](arkts-arkui-horizontalalign-e.md) | HorizontalAlign enumeration description. |
 | [HoverEffect](arkts-arkui-hovereffect-e.md) | Sets the hover effect of the component. |
@@ -112,7 +112,7 @@
 | [VerticalAlign](arkts-arkui-verticalalign-e.md) | VerticalAlign enumeration description |
 | [Visibility](arkts-arkui-visibility-e.md) | Defines the visibility and layout placeholder status of the component. |
 | [Week](arkts-arkui-week-e.md) | Week Enum value |
-| [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md) | Enumerates the width breakpoint values corresponding to different window width thresholds. The values are returned through [getWindowWidthBreakpoint](arkts-arkui-arkuiuicontext-uicontext-c.md#getwindowwidthbreakpoint). |
+| [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md) | Enumerates the width breakpoint values corresponding to different window width thresholds. The values are returned through [getWindowWidthBreakpoint](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getwindowwidthbreakpoint). |
 | [WordBreak](arkts-arkui-wordbreak-e.md) | The word break rule. |
 | [XComponentType](arkts-arkui-xcomponenttype-e.md) | The type of XComponent |
 
@@ -121,8 +121,8 @@
 
 | Name | Description |
 | --- | --- |
-| [ColorSpace](arkts-arkui-colorspace-e-sys.md) | Enumerates color space types for specifying color rendering modes. |
 | [ColoringStrategy](arkts-arkui-coloringstrategy-e-sys.md) | Enumerates the coloring strategies. |
+| [ColorSpace](arkts-arkui-colorspace-e-sys.md) | Enumerates color space types for specifying color rendering modes. |
 | [EdgeLightPosition](arkts-arkui-edgelightposition-e-sys.md) | Defines the position of the edge light effect. |
 | [IlluminatedType](arkts-arkui-illuminatedtype-e-sys.md) | Enum of Illuminated type |
 <!--DelEnd-->

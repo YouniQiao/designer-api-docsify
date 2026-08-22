@@ -42,3 +42,17 @@ Obtains the **nextTransition** object for the specified time.
 | --- | --- |
 | [ZoneOffsetTransition](arkts-localization-i18n-zoneoffsettransition-c.md) | ZoneOffsetTransition** object for next transition. |
 
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// Obtain the time zone of Tijuana.
+let timeZone: i18n.TimeZone = i18n.getTimeZone('America/Tijuana');
+// Obtain the time zone transition rule of Tijuana.
+let zoneRules: i18n.ZoneRules = timeZone.getZoneRules();
+let date = new Date(2025, 4, 13);
+// Obtain the next time zone transition for Tijuana after May 13, 2025.
+let zoneOffsetTransition: i18n.ZoneOffsetTransition = zoneRules.nextTransition(date.getTime());
+```
+

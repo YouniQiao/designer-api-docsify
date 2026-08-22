@@ -20,10 +20,10 @@ import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [offSteadyStandingDetect](arkts-multimodalawareness-devicestatus-offsteadystandingdetect-f.md) | 取消订阅设备静止姿态感知（支架态）事件。 |
 | [off_steadyStandingDetect](arkts-multimodalawareness-devicestatus-offsteadystandingdetect-f.md) | 取消订阅设备静止姿态感知（支架态）事件，用于应用在退出页面或不再需要监听支架态变化的场景。调用后释放相关资源。 |
-| [onSteadyStandingDetect](arkts-multimodalawareness-devicestatus-onsteadystandingdetect-f.md) | 订阅设备静止姿态感知（支架态）事件。 |
+| [offSteadyStandingDetect](arkts-multimodalawareness-devicestatus-offsteadystandingdetect-f.md) | 取消订阅设备静止姿态感知（支架态）事件。 |
 | [on_steadyStandingDetect](arkts-multimodalawareness-devicestatus-onsteadystandingdetect-f.md) | 订阅设备静止姿态感知（支架态）事件。建议在不需要时调用off()取消订阅，释放资源。 |
+| [onSteadyStandingDetect](arkts-multimodalawareness-devicestatus-onsteadystandingdetect-f.md) | 订阅设备静止姿态感知（支架态）事件。 |
 
 <!--Del-->
 ### 函数（系统接口）

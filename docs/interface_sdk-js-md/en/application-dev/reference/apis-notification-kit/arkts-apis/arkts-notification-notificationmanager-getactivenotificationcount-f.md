@@ -30,7 +30,7 @@ setBadgeNumber sets the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the obtained number of active notifications; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the obtained number of active notifications; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -55,6 +55,16 @@ let getActiveNotificationCountCallback = (err: BusinessError, data: number): voi
 }
 
 notificationManager.getActiveNotificationCount(getActiveNotificationCountCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.getActiveNotificationCount().then((data: number) => {
+  console.info(`Succeeded in getting active notification count, data is ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get active notification count. Code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -94,13 +104,5 @@ setBadgeNumber sets the
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getActiveNotificationCount().then((data: number) => {
-  console.info(`Succeeded in getting active notification count, data is ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get active notification count. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getActiveNotificationCount](#getactivenotificationcount)
 

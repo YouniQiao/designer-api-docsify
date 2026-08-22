@@ -53,6 +53,16 @@ call.isNewCallAllowed((err: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.isNewCallAllowed().then((data: boolean) => {
+    console.info(`isNewCallAllowed success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isNewCallAllowed fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## isNewCallAllowed
 
@@ -87,13 +97,5 @@ function isNewCallAllowed(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isNewCallAllowed().then((data: boolean) => {
-    console.info(`isNewCallAllowed success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isNewCallAllowed fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [isNewCallAllowed](#isnewcallallowed)
 

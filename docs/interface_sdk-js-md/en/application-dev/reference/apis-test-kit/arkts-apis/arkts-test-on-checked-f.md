@@ -33,3 +33,12 @@ Specifies the checked status of the target Component.
 | --- | --- |
 | [On](arkts-test-uitest-on-c.md) | this { |
 
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.checked(true); // Use the static constructor ON to create an On object and specify the checked attribute of the target component.
+```
+

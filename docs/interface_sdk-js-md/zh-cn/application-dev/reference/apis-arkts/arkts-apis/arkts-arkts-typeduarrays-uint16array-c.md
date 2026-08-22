@@ -2293,26 +2293,6 @@ public with(index: int, value: double): Uint16Array
 | --- | --- |
 | Uint16Array | 将index处元素替换后的新Uint16Array。 |
 
-## BYTES_PER_ELEMENT
-
-```TypeScript
-public static readonly BYTES_PER_ELEMENT: int = 2
-```
-
-每个元素占用的字节数。
-
-**类型：** int
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Uint16Array-public static readonly BYTES_PER_ELEMENT: int = 2--><!--Device-Uint16Array-public static readonly BYTES_PER_ELEMENT: int = 2-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
 ## buffer
 
 ```TypeScript
@@ -2330,6 +2310,26 @@ public readonly buffer: ArrayBuffer
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Uint16Array-public readonly buffer: ArrayBuffer--><!--Device-Uint16Array-public readonly buffer: ArrayBuffer-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## BYTES_PER_ELEMENT
+
+```TypeScript
+public static readonly BYTES_PER_ELEMENT: int = 2
+```
+
+每个元素占用的字节数。
+
+**类型：** int
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Uint16Array-public static readonly BYTES_PER_ELEMENT: int = 2--><!--Device-Uint16Array-public static readonly BYTES_PER_ELEMENT: int = 2-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

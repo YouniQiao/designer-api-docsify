@@ -30,7 +30,7 @@ Rejects a call. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | callId | int | Yes | Call ID. You can obtain the value by subscribing to **callDetailsChange** events. |
 | options | [RejectMessageOptions](arkts-telephony-call-rejectmessageoptions-i-sys.md) | Yes | Options for the call rejection message. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -49,10 +49,62 @@ Rejects a call. This API uses an asynchronous callback to return the result.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+call.rejectCall((err: BusinessError) => {
+    if (err) {
+        console.error(`rejectCall fail, err->${JSON.stringify(err)}`);
+    } else {
+        console.info(`rejectCall success.`);
+    }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.rejectCall(1, (err: BusinessError) => {
+    if (err) {
+        console.error(`rejectCall fail, err->${JSON.stringify(err)}`);
+    } else {
+        console.info(`rejectCall success.`);
+    }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let rejectMessageOptions : call.RejectMessageOptions = {
     messageContent: "Unknown number blocked"
 }
 call.rejectCall(1, rejectMessageOptions, (err: BusinessError) => {
+    if (err) {
+        console.error(`rejectCall fail, err->${JSON.stringify(err)}`);
+    } else {
+        console.info(`rejectCall success.`);
+    }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rejectMessageOptions: call.RejectMessageOptions = {
+    messageContent: "Unknown number blocked"
+}
+call.rejectCall(1, rejectMessageOptions).then(() => {
+    console.info(`rejectCall success.`);
+}).catch((err: BusinessError) => {
+    console.error(`rejectCall fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rejectMessageOptions: call.RejectMessageOptions = {
+    messageContent: "Unknown number blocked"
+}
+call.rejectCall(rejectMessageOptions, (err: BusinessError) => {
     if (err) {
         console.error(`rejectCall fail, err->${JSON.stringify(err)}`);
     } else {
@@ -107,18 +159,7 @@ Rejects a call. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let rejectMessageOptions: call.RejectMessageOptions = {
-    messageContent: "Unknown number blocked"
-}
-call.rejectCall(1, rejectMessageOptions).then(() => {
-    console.info(`rejectCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`rejectCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [rejectCall](#rejectcall)
 
 
 ## rejectCall
@@ -144,7 +185,7 @@ Rejects a call. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | int | Yes | Call ID. You can obtain the value by subscribing to **callDetailsChange** events. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -160,17 +201,7 @@ Rejects a call. This API uses an asynchronous callback to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.rejectCall(1, (err: BusinessError) => {
-    if (err) {
-        console.error(`rejectCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`rejectCall success.`);
-    }
-});
-```
+See [rejectCall](#rejectcall)
 
 
 ## rejectCall
@@ -195,7 +226,7 @@ Rejects a call. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the call is rejected successfully, the value of **err** is **undefined**. Otherwise, the value is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the call is rejected successfully, the value of **err** is **undefined**. Otherwise, the value is an error object. |
 
 **Error codes:**
 
@@ -211,17 +242,7 @@ Rejects a call. This API uses an asynchronous callback to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.rejectCall((err: BusinessError) => {
-    if (err) {
-        console.error(`rejectCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`rejectCall success.`);
-    }
-});
-```
+See [rejectCall](#rejectcall)
 
 
 ## rejectCall
@@ -247,7 +268,7 @@ Rejects a call. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [RejectMessageOptions](arkts-telephony-call-rejectmessageoptions-i-sys.md) | Yes | Options for the call rejection message. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -263,18 +284,5 @@ Rejects a call. This API uses an asynchronous callback to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let rejectMessageOptions: call.RejectMessageOptions = {
-    messageContent: "Unknown number blocked"
-}
-call.rejectCall(rejectMessageOptions, (err: BusinessError) => {
-    if (err) {
-        console.error(`rejectCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`rejectCall success.`);
-    }
-});
-```
+See [rejectCall](#rejectcall)
 

@@ -27,7 +27,7 @@ Obtains the main call ID. This API uses an asynchronous callback to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | int | Yes | Call ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -51,6 +51,16 @@ call.getMainCallId(1, (err: BusinessError, data: number) => {
     } else {
         console.info(`getMainCallId success, data->${JSON.stringify(data)}`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.getMainCallId(1).then((data: number) => {
+    console.info(`getMainCallId success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getMainCallId fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -96,13 +106,5 @@ Obtains the main call ID. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.getMainCallId(1).then((data: number) => {
-    console.info(`getMainCallId success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getMainCallId fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getMainCallId](#getmaincallid)
 

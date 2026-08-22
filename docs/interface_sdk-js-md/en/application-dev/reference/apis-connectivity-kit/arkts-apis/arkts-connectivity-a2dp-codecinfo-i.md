@@ -24,7 +24,7 @@ codec bit rate.
 
 **Type:** [CodecBitRate](arkts-connectivity-a2dp-codecbitrate-e.md)
 
-**Since:** 26.0.0
+**Since:** 19
 
 <!--Device-CodecInfo-codecBitRate?: CodecBitRate--><!--Device-CodecInfo-codecBitRate?: CodecBitRate-End-->
 
@@ -72,7 +72,7 @@ codec frame length.
 
 **Type:** [CodecFrameLength](arkts-connectivity-a2dp-codecframelength-e.md)
 
-**Since:** 26.0.0
+**Since:** 19
 
 <!--Device-CodecInfo-codecFrameLength?: CodecFrameLength--><!--Device-CodecInfo-codecFrameLength?: CodecFrameLength-End-->
 

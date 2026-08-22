@@ -29,7 +29,7 @@ Checks whether roaming is enabled for the cellular data service. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. <br>**true**: Roaming is enabled for the cellular data service. <br>**false**: Roaming is disabled for the cellular data service. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. <br>**true**: Roaming is enabled for the cellular data service. <br>**false**: Roaming is disabled for the cellular data service. |
 
 **Error codes:**
 
@@ -54,6 +54,17 @@ data.isCellularDataRoamingEnabled(0, (err: BusinessError, contextData: boolean) 
     } else {
         console.info(`isCellularDataRoamingEnabled success`);
     }
+});
+```
+
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+data.isCellularDataRoamingEnabled(0).then((contextData: boolean) => {
+    console.info(`isCellularDataRoamingEnabled success, contextData: ${contextData}`);
+}).catch((err: BusinessError) => {
+    console.error(`isCellularDataRoamingEnabled fail. code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -101,14 +112,5 @@ Checks whether roaming is enabled for the cellular data service. This API uses a
 
 **Examples**
 
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.isCellularDataRoamingEnabled(0).then((contextData: boolean) => {
-    console.info(`isCellularDataRoamingEnabled success, contextData: ${contextData}`);
-}).catch((err: BusinessError) => {
-    console.error(`isCellularDataRoamingEnabled fail. code: ${err.code}, message: ${err.message}`);
-});
-```
+See [isCellularDataRoamingEnabled](#iscellulardataroamingenabled)
 

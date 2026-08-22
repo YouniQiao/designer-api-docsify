@@ -57,6 +57,19 @@ connectedTag.write(rawData).then(() => {
 });
 ```
 
+```TypeScript
+import { connectedTag } from '@kit.ConnectivityKit';
+
+let rawData = [0x01, 0x02, 0x03]; // change it to be correct.
+connectedTag.write(rawData, (err)=> {
+    if (err) {
+        console.error("connectedTag.writeNdefTag AsyncCallback err: " + err);
+    } else {
+        console.info("connectedTag.writeNdefTag AsyncCallback success.");
+    }
+});
+```
+
 
 ## write
 
@@ -79,7 +92,7 @@ Writes data to this active tag. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | number[] | Yes | Data to be written to the active tag. The value is a hexadecimal number ranging from 0x00 to 0xFF. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the active tag content obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the active tag content obtained. |
 
 **Error codes:**
 
@@ -92,16 +105,5 @@ Writes data to this active tag. This API uses an asynchronous callback to return
 
 **Examples**
 
-```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
-
-let rawData = [0x01, 0x02, 0x03]; // change it to be correct.
-connectedTag.write(rawData, (err)=> {
-    if (err) {
-        console.error("connectedTag.writeNdefTag AsyncCallback err: " + err);
-    } else {
-        console.info("connectedTag.writeNdefTag AsyncCallback success.");
-    }
-});
-```
+See [write](#write)
 

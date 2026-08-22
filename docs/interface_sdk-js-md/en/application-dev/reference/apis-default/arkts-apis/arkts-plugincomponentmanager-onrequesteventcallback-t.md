@@ -20,7 +20,7 @@ Plugin component request event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Request the sender to provide relevant information. |
+| source | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Request the sender to provide relevant information. |
 | name | string | Yes | Template name. |
 | data | [KVObject](arkts-plugincomponentmanager-kvobject-t.md) | Yes | data info. |
 

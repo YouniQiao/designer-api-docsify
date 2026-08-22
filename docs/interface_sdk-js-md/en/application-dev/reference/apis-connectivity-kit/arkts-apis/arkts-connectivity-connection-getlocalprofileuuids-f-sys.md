@@ -30,7 +30,7 @@ Obtains the profile UUIDs supported by the local device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;ProfileUuids&gt;&gt; | Yes | the callback of getLocalProfileUuids. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ProfileUuids&gt;&gt; | Yes | the callback of getLocalProfileUuids. |
 
 **Error codes:**
 
@@ -51,6 +51,19 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     connection.getLocalProfileUuids((err: BusinessError, data: Array<connection.ProfileUuids>) => {
         console.info('getLocalProfileUuids, err: ' + JSON.stringify(err) + ', data: ' + JSON.stringify(data));
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    connection.getLocalProfileUuids().then(() => {
+        console.info('getLocalProfileUuids');
+    }, (err: BusinessError) => {
+        console.error('getLocalProfileUuids: errCode' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
     });
 } catch (err) {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
@@ -98,16 +111,5 @@ Obtains the profile UUIDs supported by the local device.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    connection.getLocalProfileUuids().then(() => {
-        console.info('getLocalProfileUuids');
-    }, (err: BusinessError) => {
-        console.error('getLocalProfileUuids: errCode' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [getLocalProfileUuids](#getlocalprofileuuids)
 

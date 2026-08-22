@@ -32,7 +32,7 @@ exitCurrentInputType(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -52,6 +52,16 @@ keyboardController.exitCurrentInputType((err: BusinessError) => {
     return;
   }
   console.info('Succeeded in exiting current input type.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+keyboardController.exitCurrentInputType().then(() => {
+  console.info('Succeeded in exiting current input type.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to exit current input type. Code:${err.code}, message:${err.message}`);
 });
 ```
 
@@ -84,15 +94,7 @@ exitCurrentInputType(): Promise<void>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-keyboardController.exitCurrentInputType().then(() => {
-  console.info('Succeeded in exiting current input type.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to exit current input type. Code:${err.code}, message:${err.message}`);
-});
-```
+See [exitCurrentInputType](#exitcurrentinputtype)
 
 ## hide
 
@@ -112,7 +114,7 @@ hide(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -125,12 +127,44 @@ hide(callback: AsyncCallback<void>): void
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+panel.hide((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to hide panel. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in hiding the panel.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+panel.hide().then(() => {
+  console.info('Succeeded in hiding the panel.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to hide panel. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 keyboardController.hide((err: BusinessError) => {
   if (err) {
     console.error(`Failed to hide. Code:${err.code}, message:${err.message}`);
     return;
   }
   console.info('Succeeded in hiding keyboard.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+keyboardController.hide().then(() => {
+  console.info('Succeeded in hiding keyboard.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to hide. Code:${err.code}, message:${err.message}`);
 });
 ```
 
@@ -162,15 +196,7 @@ hide(): Promise<void>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-keyboardController.hide().then(() => {
-  console.info('Succeeded in hiding keyboard.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to hide. Code:${err.code}, message:${err.message}`);
-});
-```
+See [hide](#hide)
 
 ## hideKeyboard
 
@@ -194,7 +220,7 @@ hideKeyboard(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -207,6 +233,16 @@ keyboardController.hideKeyboard((err: BusinessError) => {
     return;
   }
   console.info('Succeeded in hiding keyboard.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+keyboardController.hideKeyboard().then(() => {
+  console.info('Succeeded in hiding keyboard.');
+}).catch((err: BusinessError) => {
+  console.info(`Failed to hideKeyboard. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -236,13 +272,5 @@ hideKeyboard(): Promise<void>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-keyboardController.hideKeyboard().then(() => {
-  console.info('Succeeded in hiding keyboard.');
-}).catch((err: BusinessError) => {
-  console.info(`Failed to hideKeyboard. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [hideKeyboard](#hidekeyboard)
 

@@ -114,3 +114,21 @@ Defines URI authorization policies for drag intention.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+**Examples**
+
+```TypeScript
+import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
+let htmlObjDetails : Record<string, string> = {
+  'attr1': 'value1',
+  'attr2': 'value2'
+}
+let htmlObj : uniformDataStruct.HTML = {
+  uniformDataType :'general.html',
+  htmlContent: '<div><p>Title</p></div>',
+  plainContent : 'this is plainContent',
+  details : htmlObjDetails
+}
+console.info('htmlObj.uniformDataType: ' + htmlObj.uniformDataType);
+let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.HTML, htmlObj);
+```
+

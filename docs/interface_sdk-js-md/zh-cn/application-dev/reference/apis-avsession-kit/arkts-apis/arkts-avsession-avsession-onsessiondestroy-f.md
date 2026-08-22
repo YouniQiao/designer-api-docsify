@@ -60,6 +60,12 @@ struct Index {
 ```
 
 ```TypeScript
+avcontroller.onSessionDestroy(() => {
+  console.info('onSessionDestroy : SUCCESS ');
+});
+```
+
+```TypeScript
 import { avSession } from '@kit.AVSessionKit';
 
 @Entry

@@ -179,6 +179,34 @@ import { common2D, uiEffect } from "@kit.ArkGraphics2D"
 @Entry
 @Component
 struct ColorGradientExample {
+  @State colorsExample: Array<uiEffect.Color> = [
+    {red: 1.0, green: 0.8, blue: 0.5, alpha: 0.8},
+    {red: 1.0, green: 1.5, blue: 0.5, alpha: 1.0}
+  ]
+
+  @State positionsExample: Array<common2D.Point> = [
+    {x: 0.2, y: 0.2},
+    {x: 0.8, y: 0.6}]
+
+  @State strengthsExample: Array<number> = [0.3, 0.3]
+
+  build() {
+    Column() {
+      Row()
+        .width("100%")
+        .height("100%")
+        .backgroundFilter(uiEffect.createFilter().colorGradient(this.colorsExample, this.positionsExample, this.strengthsExample))
+    }
+  }
+}
+```
+
+```TypeScript
+import { common2D, uiEffect } from "@kit.ArkGraphics2D"
+
+@Entry
+@Component
+struct ColorGradientExample {
   build() {
     Stack() {
       Stack() {}

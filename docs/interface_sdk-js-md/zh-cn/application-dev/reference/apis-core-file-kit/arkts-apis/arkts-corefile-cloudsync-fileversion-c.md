@@ -126,7 +126,31 @@ A constructor used to create a FileVersion object.
 **示例**
 
 ```TypeScript
+let fileSync = new cloudSync.FileSync()
+```
+
+```TypeScript
+let fileCache = new cloudSync.CloudFileCache();
+```
+
+```TypeScript
 let fileVersion = new cloudSync.FileVersion();
+```
+
+```TypeScript
+let gallerySync = new cloudSync.GallerySync()
+```
+
+```TypeScript
+let download = new cloudSync.Download()
+```
+
+```TypeScript
+let fileSync = new cloudSync.FileSync("com.ohos.demo")
+```
+
+```TypeScript
+let fileCache = new cloudSync.CloudFileCache("com.ohos.demo");
 ```
 
 ## downloadHistoryVersion
@@ -169,6 +193,63 @@ downloadHistoryVersion(uri: string, versionId: string, callback: Callback<Versio
 | 14000002 | Invalid URI. |
 | 22400002 | Network unavailable. |
 | 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileVersion = new cloudSync.FileVersion();
+
+let path = "/data/storage/el2/cloud/1.txt";
+let uri = fileUri.getUriFromPath(path);
+let versionId = '123456'; // 以 getHistoryVersionList 方法返回的格式为准，此处仅作为 demo 示例。
+
+let callback = (data: cloudSync.VersionDownloadProgress) => {
+  if (data.state == cloudSync.State.RUNNING) {
+    console.info("download progress: " + data.progress);
+  } else if (data.state == cloudSync.State.FAILED) {
+    console.info("download failed errType: " + data.errType);
+  } else if (data.state == cloudSync.State.COMPLETED) {
+    console.info("download version file success");
+  }
+};
+
+fileVersion.downloadHistoryVersion(uri, versionId, callback).then((fileUri: string) => {
+  console.info("success to begin download, downloadFileUri: " + fileUri);
+}).catch((err: BusinessError) => {
+  console.error("download history version file failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileVersion = new cloudSync.FileVersion();
+let path: string = "/data/storage/el2/cloud/1.txt";
+let uri: string = fileUri.getUriFromPath(path);
+let versionId: string = '123456'; // 以 getHistoryVersionList 方法返回的格式为准，此处仅作为 demo 示例。
+let callback = (data: cloudSync.VersionDownloadProgress): void => {
+  if (data.state == cloudSync.State.RUNNING) {
+    console.info("download progress: " + data.progress);
+  } else if (data.state == cloudSync.State.FAILED) {
+    console.info("download failed errType: " + data.errType);
+  } else if (data.state == cloudSync.State.COMPLETED) {
+    console.info("download version file success");
+  }
+};
+fileVersion.downloadHistoryVersion(uri, versionId, callback).then<string>((fileUri: string): void => {
+  console.info("success to begin download, downloadFileUri: " + fileUri);
+}).catch((err: BusinessError<void>): void => {
+  console.error("download history version file failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
 
 ## getHistoryVersionList
 

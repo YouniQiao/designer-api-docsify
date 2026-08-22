@@ -79,6 +79,42 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemDateTime.setTimezone('Asia/Shanghai').then(() => {
+    console.info(`Succeeded in setting timezone.`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to set timezone. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to set timezone. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+try {
+  await systemDateTime.setTimezone('Europe/Moscow');
+  systemDateTime.getTimezone((error: BusinessError | null, data: string | undefined) => {
+    if (error) {
+      console.error(`Failed to set timezone. message: ${error.message}, code: ${error.code}`);
+      return;
+    }
+    console.error(`Succeeded in getting timezone : ${data}`);
+  });
+} catch(error: BusinessError) {
+  console.error(`setTimezone error: ${error.message}, code: ${error.code}`);
+}
+```
+
 
 ## setTimezone
 
@@ -121,39 +157,5 @@ function setTimezone(timezone: string): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.setTimezone('Asia/Shanghai').then(() => {
-    console.info(`Succeeded in setting timezone.`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to set timezone. Code: ${error.code}, message: ${error.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to set timezone. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-try {
-  await systemDateTime.setTimezone('Europe/Moscow');
-  systemDateTime.getTimezone((error: BusinessError | null, data: string | undefined) => {
-    if (error) {
-      console.error(`Failed to set timezone. message: ${error.message}, code: ${error.code}`);
-      return;
-    }
-    console.error(`Succeeded in getting timezone : ${data}`);
-  });
-} catch(error: BusinessError) {
-  console.error(`setTimezone error: ${error.message}, code: ${error.code}`);
-}
-```
+参见 [setTimezone](#settimezone)
 

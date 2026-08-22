@@ -50,6 +50,18 @@ declare function mkdirSync(path: string): void
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**示例**
+
+```TypeScript
+let dirPath = pathDir + "/testDir";
+fileIo.mkdirSync(dirPath);
+```
+
+```TypeScript
+let dirPath = pathDir + "/testDir1/testDir2/testDir3";
+fileIo.mkdirSync(dirPath, true);
+```
+
 
 ## mkdirSync
 
@@ -93,4 +105,8 @@ declare function mkdirSync(path: string, recursion: boolean): void
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**示例**
+
+参见 [mkdirSync](#mkdirsync)
 

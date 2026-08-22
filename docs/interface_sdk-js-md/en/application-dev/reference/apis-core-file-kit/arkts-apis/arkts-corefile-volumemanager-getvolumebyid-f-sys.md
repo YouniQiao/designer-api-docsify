@@ -29,7 +29,7 @@ Obtains information about a volume based on the volume ID. This API uses an asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volumeId | string | Yes | Volume ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Volume](arkts-corefile-volumemanager-volume-i-sys.md)&gt; | Yes | Callback used to return the volume information obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Volume](arkts-corefile-volumemanager-volume-i-sys.md)&gt; | Yes | Callback used to return the volume information obtained. |
 
 **Error codes:**
 
@@ -41,6 +41,26 @@ Obtains information about a volume based on the volume ID. This API uses an asyn
 | 13600001 | IPC error. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let volumeId: string = "";
+volumeManager.getVolumeById(volumeId).then((volume: volumeManager.Volume) => {
+  console.info("getVolumeById successfully:" + JSON.stringify(volume));
+}).catch((error: BusinessError) => {
+  console.error("getVolumeById failed with error:" + JSON.stringify(error));
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let volumeId: string = "";
+volumeManager.getVolumeById(volumeId, (error: BusinessError, volume: volumeManager.Volume) => {
+  // Do something.   
+});
+```
 
 
 ## getVolumeById
@@ -83,4 +103,8 @@ Obtains information about a volume based on the volume ID. This API uses a promi
 | 13600001 | IPC error. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
+
+**Examples**
+
+See [getVolumeById](#getvolumebyid)
 

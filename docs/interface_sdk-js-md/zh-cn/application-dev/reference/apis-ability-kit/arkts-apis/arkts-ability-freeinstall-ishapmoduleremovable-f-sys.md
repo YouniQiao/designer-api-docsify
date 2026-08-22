@@ -63,6 +63,46 @@ try {
 }
 ```
 
+ArkTS-Dyn示例:
+
+```TypeScript
+import { freeInstall } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'com.example.myapplication';
+let moduleName = 'entry';
+try {
+  freeInstall.isHapModuleRemovable(bundleName, moduleName).then(data => {
+    console.info('Operation succeed:' + JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    console.error('Operation failed:' + JSON.stringify(err));
+  });
+} catch (err) {
+  console.error('Operation failed:' + JSON.stringify(err));
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { freeInstall } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+// 开发者需根据实际工程更新bundleName和moduleName。
+let bundleName = 'com.example.myapplication';
+let moduleName = 'entry';
+try {
+  freeInstall.isHapModuleRemovable(bundleName, moduleName).then((data: boolean) => {
+    console.info('Operation succeed:' + JSON.stringify(data));
+  }).catch((err: Error) => {
+    console.error('Operation failed:' + JSON.stringify(err as BusinessError));
+  });
+} catch (err) {
+  console.error('Operation failed:' + JSON.stringify(err));
+}
+```
+
 
 ## isHapModuleRemovable
 
@@ -108,43 +148,5 @@ function isHapModuleRemovable(bundleName: string, moduleName: string): Promise<b
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.example.myapplication';
-let moduleName = 'entry';
-try {
-  freeInstall.isHapModuleRemovable(bundleName, moduleName).then(data => {
-    console.info('Operation succeed:' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error('Operation failed:' + JSON.stringify(err));
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { freeInstall } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新bundleName和moduleName。
-let bundleName = 'com.example.myapplication';
-let moduleName = 'entry';
-try {
-  freeInstall.isHapModuleRemovable(bundleName, moduleName).then((data: boolean) => {
-    console.info('Operation succeed:' + JSON.stringify(data));
-  }).catch((err: Error) => {
-    console.error('Operation failed:' + JSON.stringify(err as BusinessError));
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```
+参见 [isHapModuleRemovable](#ishapmoduleremovable)
 

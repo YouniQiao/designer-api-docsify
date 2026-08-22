@@ -29,7 +29,7 @@ Clears a given mission, regardless of whether it is locked. This API uses an asy
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | missionId | int | Yes | Mission ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -58,6 +58,24 @@ try {
 } catch (error) {
   let err: BusinessError = error as BusinessError;
   console.error(`clearMission failed: ${err.message}`);
+}
+```
+
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let testMissionId = 2;
+
+try {
+  missionManager.clearMission(testMissionId).then((data: void) => {
+    console.info(`clearMission successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`clearMission failed. Cause: ${error.message}`);
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`clearMission failed. Cause: ${err.message}`);
 }
 ```
 
@@ -102,21 +120,5 @@ Clears a given mission, regardless of whether it is locked. This API uses a prom
 
 **Examples**
 
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let testMissionId = 2;
-
-try {
-  missionManager.clearMission(testMissionId).then((data: void) => {
-    console.info(`clearMission successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`clearMission failed. Cause: ${error.message}`);
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`clearMission failed. Cause: ${err.message}`);
-}
-```
+See [clearMission](#clearmission)
 

@@ -32,7 +32,7 @@ A policy conflict is reported when this API is called in the following scenarios
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | deviceIds | Array&lt;string&gt; | Yes | MAC addresses of the Bluetooth devices to add. The maximum number of disallowed Bluetooth devices is 1,000. If there are already 300 MAC addresses of the devices, only 700 more can be added. |
 
 **Error codes:**

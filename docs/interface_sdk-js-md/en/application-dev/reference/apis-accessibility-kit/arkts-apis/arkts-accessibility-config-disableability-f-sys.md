@@ -45,6 +45,36 @@ Disables an accessibility extension. This API must be used together with [config
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300001](../errorcode-accessibility.md#9300001-invalid-bundle-name-or-ability-name) | Invalid bundle name or ability name. |
 
+**Examples**
+
+```TypeScript
+import { accessibility, config } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let name: string = 'com.ohos.example/axExtension';
+
+config.disableAbility(name).then(() => {
+  console.info(`Succeeded in disable ability, name is ${name}`);
+}).catch((err: BusinessError) => {
+  console.error(`failed to disable ability, Code is ${err.code}, message is ${err.message}`);
+})
+```
+
+```TypeScript
+import { accessibility, config } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let name: string = 'com.ohos.example/axExtension';
+
+config.disableAbility(name, (err: BusinessError) => {
+  if (err) {
+    console.error(`failed to enable ability, Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in disable, name is ${name}`);
+});
+```
+
 
 ## disableAbility
 
@@ -69,7 +99,7 @@ Disables an accessibility extension. This API must be used together with [config
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the accessibility extension app, in the format of 'bundleName/abilityName'. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the accessibility extension is disabled successfully, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the accessibility extension is disabled successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -79,4 +109,8 @@ Disables an accessibility extension. This API must be used together with [config
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [9300001](../errorcode-accessibility.md#9300001-invalid-bundle-name-or-ability-name) | Invalid bundle name or ability name. |
+
+**Examples**
+
+See [disableAbility](#disableability)
 

@@ -16,5 +16,19 @@ Listener used to observe the copy progress.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | [Progress](arkts-corefile-filefs-progress-i.md) | Yes | indicates the progress data of copyFile |
+| progress | [Progress](arkts-corefile-file-fs-progress-i.md) | Yes | indicates the progress data of copyFile |
+
+**Examples**
+
+```TypeScript
+import { TaskSignal } from '@kit.CoreFileKit';
+let copySignal: fs.TaskSignal = new TaskSignal();
+let progressListener: fs.ProgressListener = (progress: fs.Progress) => {
+  console.info(`processedSize: ${progress.processedSize}, totalSize: ${progress.totalSize}`);
+};
+let copyOption: fs.CopyOptions = {
+  "progressListener" : progressListener,
+  "copySignal" : copySignal,
+}
+```
 

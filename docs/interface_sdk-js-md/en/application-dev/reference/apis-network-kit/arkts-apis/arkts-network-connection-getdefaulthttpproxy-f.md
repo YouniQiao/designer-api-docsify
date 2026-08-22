@@ -32,7 +32,7 @@ Obtains the default HTTP proxy configuration of the network. This API uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;HttpProxy&gt; | Yes | Callback used to return the result. If the global HTTP proxy configuration of the network is obtained successfully, **error** is **undefined** and **data** is the global HTTP proxy configuration. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpProxy&gt; | Yes | Callback used to return the result. If the global HTTP proxy configuration of the network is obtained successfully, **error** is **undefined** and **data** is the global HTTP proxy configuration. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -53,6 +53,17 @@ connection.getDefaultHttpProxy((error: BusinessError, data: connection.HttpProxy
     return;
   }
   console.info("Succeeded to get data" + JSON.stringify(data));
+});
+```
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.getDefaultHttpProxy().then((data: connection.HttpProxy) => {
+  console.info(JSON.stringify(data));
+}).catch((error: BusinessError) => {
+  console.info(JSON.stringify(error));
 });
 ```
 
@@ -94,14 +105,5 @@ Obtains the default HTTP proxy configuration of the network. This API uses a pro
 
 **Examples**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultHttpProxy().then((data: connection.HttpProxy) => {
-  console.info(JSON.stringify(data));
-}).catch((error: BusinessError) => {
-  console.info(JSON.stringify(error));
-});
-```
+See [getDefaultHttpProxy](#getdefaulthttpproxy)
 

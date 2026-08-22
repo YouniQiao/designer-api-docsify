@@ -28,7 +28,7 @@ function setPreferredApn(admin: Want, apnId: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | apnId | string | 是 | 需要设置成优选的APN ID。可以通过[networkManager.queryApn](arkts-mdm-networkmanager-queryapn-f.md)获取设备APN信息。 |
 
 **错误码：**

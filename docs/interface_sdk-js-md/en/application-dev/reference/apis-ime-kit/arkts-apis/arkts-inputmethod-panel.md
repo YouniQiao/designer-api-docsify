@@ -19,12 +19,12 @@ import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
 
 | Name | Description |
 | --- | --- |
-| [PanelInfo(Input Method Panel)](arkts-ime-inputmethodpanel-panelinfo-i.md) | @brief Defines the attributes of the input method panel. |
+| [PanelInfo(Input Method Panel)](arkts-ime-inputmethod-panel-panelinfo-i.md) | @brief Defines the attributes of the input method panel. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [PanelFlag(Input Method Panel)](arkts-ime-inputmethodpanel-panelflag-e.md) | @brief Enumerates the state types of the input method panel. <br> <br>  > **NOTE：**&lt;br &gt;  > &lt;br &gt;  > Currently, only the **SOFT_KEYBOARD** panel is supported. |
-| [PanelType(Input Method Panel)](arkts-ime-inputmethodpanel-paneltype-e.md) | @brief Enumerates the types of the input method panel. |
+| [PanelFlag(Input Method Panel)](arkts-ime-inputmethod-panel-panelflag-e.md) | @brief Enumerates the state types of the input method panel. <br> <br>  > **NOTE：**&lt;br &gt;  > &lt;br &gt;  > Currently, only the **SOFT_KEYBOARD** panel is supported. |
+| [PanelType(Input Method Panel)](arkts-ime-inputmethod-panel-paneltype-e.md) | @brief Enumerates the types of the input method panel. |
 

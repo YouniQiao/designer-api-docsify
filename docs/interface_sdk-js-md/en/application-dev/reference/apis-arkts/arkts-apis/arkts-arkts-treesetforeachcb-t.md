@@ -20,5 +20,5 @@ The type of TreeSet callback function.
 | --- | --- | --- | --- |
 | value | T | Yes | The value of current element |
 | key | T | Yes | The key of current element(same as value) |
-| set | [TreeSet](arkts-arkts-utiltreeset-treeset-c.md)&lt;T&gt; | Yes | The TreeSet instance being traversed |
+| set | [TreeSet](arkts-arkts-util-treeset-treeset-c.md)&lt;T&gt; | Yes | The TreeSet instance being traversed |
 

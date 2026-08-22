@@ -29,7 +29,7 @@ Subscribes to network sharing state changes of a specified NIC. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'interfaceSharingStateChange' | Yes | Event type.<br/> The value **interfaceSharingStateChange** indicates a network sharing status change event of the NIC. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InterfaceSharingStateInfo](arkts-network-sharing-interfacesharingstateinfo-i-sys.md)&gt; | Yes | Callback used to return the result. It is called when the network sharing state of a specified NIC changes.<br>**Since:** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterfaceSharingStateInfo](arkts-network-sharing-interfacesharingstateinfo-i-sys.md)&gt; | Yes | Callback used to return the result. It is called when the network sharing state of a specified NIC changes.<br>**Since:** 11 |
 
 **Error codes:**
 

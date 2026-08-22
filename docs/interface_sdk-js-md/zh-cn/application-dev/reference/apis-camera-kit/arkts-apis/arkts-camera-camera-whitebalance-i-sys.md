@@ -52,6 +52,23 @@ getWhiteBalance(): int
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 19 |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getWhiteBalance(session: camera.PhotoSession | camera.VideoSession): number {
+  let whiteBalance: number = 0;
+  try {
+    whiteBalance = session.getWhiteBalance();
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The getWhiteBalance call failed. error code: ${err.code}`);
+  }
+  return whiteBalance;
+}
+```
+
 ## getWhiteBalanceGains
 
 ```TypeScript
@@ -114,6 +131,23 @@ getWhiteBalanceMode(): WhiteBalanceMode
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 19 |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getWhiteBalanceMode(session: camera.PhotoSession | camera.VideoSession): camera.WhiteBalanceMode | undefined {
+  let whiteBalanceMode: camera.WhiteBalanceMode | undefined = undefined;
+  try {
+    whiteBalanceMode = session.getWhiteBalanceMode();
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The getWhiteBalanceMode call failed. error code: ${err.code}`);
+  }
+  return whiteBalanceMode;
+}
+```
+
 ## setWhiteBalance
 
 ```TypeScript
@@ -147,6 +181,22 @@ setWhiteBalance(whiteBalance: int): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 19 |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setWhiteBalance(session: camera.PhotoSession | camera.VideoSession): void {
+  try {
+    let whiteBalance: number = 1000;
+    session.setWhiteBalance(whiteBalance);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The setWhiteBalance call failed. error code: ${err.code}`);
+  }
+}
+```
 
 ## setWhiteBalanceGains
 
@@ -210,4 +260,19 @@ setWhiteBalanceMode(mode: WhiteBalanceMode): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 19 |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setWhiteBalanceMode(session: camera.PhotoSession | camera.VideoSession): void {
+  try {
+    session.setWhiteBalanceMode(camera.WhiteBalanceMode.DAYLIGHT);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The setWhiteBalanceMode call failed. error code: ${err.code}`);
+  }
+}
+```
 

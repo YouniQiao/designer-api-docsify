@@ -339,6 +339,22 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n, intl } from '@kit.LocalizationKit';
+
+try {
+  let path: string = '/data/out/tmp';
+  let delimiter: string = '/';
+  let locale: intl.Locale = new intl.Locale('ar');
+  let mirrorPath: string =
+    i18n.I18NUtil.getUnicodeWrappedFilePath(path, delimiter, locale); // mirrorPath is displayed as tmp/out/data/.
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call I18NUtil.getUnicodeWrappedFilePath failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
 ## getUnicodeWrappedFilePath
 
 ```TypeScript
@@ -383,21 +399,7 @@ For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n, intl } from '@kit.LocalizationKit';
-
-try {
-  let path: string = '/data/out/tmp';
-  let delimiter: string = '/';
-  let locale: intl.Locale = new intl.Locale('ar');
-  let mirrorPath: string =
-    i18n.I18NUtil.getUnicodeWrappedFilePath(path, delimiter, locale); // mirrorPath is displayed as tmp/out/data/.
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call I18NUtil.getUnicodeWrappedFilePath failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
+See [getUnicodeWrappedFilePath](#getunicodewrappedfilepath)
 
 ## setUnicodeWrappedBidiDirection
 

@@ -46,6 +46,82 @@ capture(callback: AsyncCallback<void>): void
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function capture(photoOutput: camera.PhotoOutput): void {
+  photoOutput.capture((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to capture the photo, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback invoked to indicate the photo capture request success.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function capture(photoOutput: camera.PhotoOutput): void {
+  photoOutput.capture().then(() => {
+    console.info('Promise returned to indicate that photo capture request success.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to photo output capture, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function capture(photoOutput: camera.PhotoOutput): void {
+  let captureLocation: camera.Location = {
+    latitude: 0,
+    longitude: 0,
+    altitude: 0
+  }
+  let settings: camera.PhotoCaptureSetting = {
+    quality: camera.QualityLevel.QUALITY_LEVEL_LOW,
+    rotation: camera.ImageRotation.ROTATION_0,
+    location: captureLocation,
+    mirror: false
+  }
+  photoOutput.capture(settings, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to capture the photo, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback invoked to indicate the photo capture request success.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function capture(photoOutput: camera.PhotoOutput): void {
+  let captureLocation: camera.Location = {
+    latitude: 0,
+    longitude: 0,
+    altitude: 0
+  }
+  let settings: camera.PhotoCaptureSetting = {
+    quality: camera.QualityLevel.QUALITY_LEVEL_LOW,
+    rotation: camera.ImageRotation.ROTATION_0,
+    location: captureLocation,
+    mirror: false
+  }
+  photoOutput.capture(settings).then(() => {
+    console.info('Promise returned to indicate that photo capture request success.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to photo output capture, error code: ${error.code}.`);
+  });
+}
+```
+
 ## capture
 
 ```TypeScript
@@ -74,6 +150,10 @@ capture(): Promise<void>
 | --- | --- |
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+**示例**
+
+参见 [capture](#capture)
 
 ## capture
 
@@ -105,6 +185,10 @@ capture(setting: PhotoCaptureSetting, callback: AsyncCallback<void>): void
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+**示例**
+
+参见 [capture](#capture)
 
 ## capture
 
@@ -142,6 +226,10 @@ capture(setting: PhotoCaptureSetting): Promise<void>
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
+**示例**
+
+参见 [capture](#capture)
+
 ## enableAutoExtendedGainmapDelivery
 
 ```TypeScript
@@ -173,6 +261,23 @@ enableAutoExtendedGainmapDelivery(enabled: boolean): void
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { camera } from '@kit.CameraKit';
+
+function enableAutoExtendedGainmapDelivery(photoOutput: camera.PhotoOutput): void {
+  try {
+    photoOutput.enableAutoExtendedGainmapDelivery(true);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The enableAutoExtendedGainmapDelivery call failed. error code: ${err.code}`);
+  }
+}
+```
 
 ## enableMirror
 
@@ -206,6 +311,37 @@ enableMirror(enabled: boolean): void
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function enableMirror(photoOutput: camera.PhotoOutput): void {
+  try {
+    photoOutput.enableMirror(true);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The enableMirror call failed. error code: ${err.code}`);
+  }
+}
+```
+
+```TypeScript
+import { camera } from '@kit.CameraKit';
+import { media } from '@kit.MediaKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function enableMirror(videoOutput: camera.VideoOutput, mirrorMode: boolean, aVRecorder: media.AVRecorder, deviceDegree : number): void {
+    try {
+        videoOutput.enableMirror(mirrorMode);
+        aVRecorder.updateRotation(videoOutput.getVideoRotation(deviceDegree));
+    } catch (error) {
+        let err = error as BusinessError;
+    }
+}
+```
+
 ## enableMovingPhoto
 
 ```TypeScript
@@ -238,6 +374,22 @@ enableMovingPhoto(enabled: boolean): void
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function enableMovingPhoto(photoOutput: camera.PhotoOutput): void {
+  try {
+    photoOutput.enableMovingPhoto(true);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The enableMovingPhoto call failed. error code: ${err.code}`);
+  }
+}
+```
+
 ## getActiveProfile
 
 ```TypeScript
@@ -265,6 +417,56 @@ getActiveProfile(): Profile
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function testGetActiveProfile(photoOutput: camera.PhotoOutput): camera.Profile | undefined {
+  let activeProfile: camera.Profile | undefined = undefined;
+  try {
+    activeProfile = photoOutput.getActiveProfile();
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The photoOutput.getActiveProfile call failed. error code: ${err.code}`);
+  }
+  return activeProfile;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function testGetActiveProfile(previewOutput: camera.PreviewOutput): camera.Profile | undefined {
+  let activeProfile: camera.Profile | undefined = undefined;
+  try {
+    activeProfile = previewOutput.getActiveProfile();
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The previewOutput.getActiveProfile call failed. error code: ${err.code}`);
+  }
+  return activeProfile;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function testGetActiveProfile(videoOutput: camera.VideoOutput): camera.Profile | undefined {
+  let activeProfile: camera.VideoProfile | undefined = undefined;
+  try {
+    activeProfile = videoOutput.getActiveProfile();
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The videoOutput.getActiveProfile call failed. error code: ${err.code}`);
+  }
+  return activeProfile;
+}
+```
 
 ## getPhotoRotation
 
@@ -305,6 +507,38 @@ getPhotoRotation(deviceDegree?: int): ImageRotation
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect.<br>**适用版本：** 12 - 22 |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function testGetPhotoRotation(photoOutput: camera.PhotoOutput, deviceDegree : number): camera.ImageRotation {
+  let photoRotation: camera.ImageRotation = camera.ImageRotation.ROTATION_0;
+  try {
+    photoRotation = photoOutput.getPhotoRotation(deviceDegree);
+    console.info(`Photo rotation is: ${photoRotation}`);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The photoOutput.getPhotoRotation call failed. error code: ${err.code}`);
+  }
+  return photoRotation;
+}
+
+function testGetPhotoRotationWithOutParam(photoOutput: camera.PhotoOutput): camera.ImageRotation {
+  let photoRotation: camera.ImageRotation = camera.ImageRotation.ROTATION_0;
+  try {
+    photoRotation = photoOutput.getPhotoRotation();
+    console.info(`Photo rotation is: ${photoRotation}`);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The photoOutput.testGetPhotoRotationWithOutParam call failed. error code: ${err.code}`);
+  }
+  return photoRotation;
+}
+```
+
 ## getSupportedMovingPhotoVideoCodecTypes
 
 ```TypeScript
@@ -333,6 +567,15 @@ getSupportedMovingPhotoVideoCodecTypes(): Array<VideoCodecType>
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
+**示例**
+
+```TypeScript
+function getSupportedMovingPhotoVideoCodecType(photoOutput: camera.PhotoOutput): Array<camera.VideoCodecType> {
+  let supportedVideoCodecTypesArray: Array<camera.VideoCodecType> = photoOutput.getSupportedMovingPhotoVideoCodecTypes();
+  return supportedVideoCodecTypesArray;
+}
+```
+
 ## isAutoExtendedGainmapDeliverySupported
 
 ```TypeScript
@@ -357,6 +600,25 @@ isAutoExtendedGainmapDeliverySupported(): boolean
 | --- | --- |
 | boolean | 是否支持自动扩展增益图（Gainmap）的输出。true表示支持，false表示不支持。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { camera } from '@kit.CameraKit';
+
+function isAutoExtendedGainmapDeliverySupported(photoOutput: camera.PhotoOutput): boolean {
+  let isSupported: boolean = false;
+  try {
+    isSupported = photoOutput.isAutoExtendedGainmapDeliverySupported();
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The isAutoExtendedGainmapDeliverySupported call failed. error code: ${err.code}`);
+  }
+  return isSupported;
+}
+```
+
 ## isMirrorSupported
 
 ```TypeScript
@@ -378,6 +640,22 @@ isMirrorSupported(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 返回是否支持镜像拍照，true表示支持，false表示不支持。若接口调用失败，返回undefined。 |
+
+**示例**
+
+```TypeScript
+function isMirrorSupported(photoOutput: camera.PhotoOutput): boolean {
+  let isSupported: boolean = photoOutput.isMirrorSupported();
+  return isSupported;
+}
+```
+
+```TypeScript
+function testIsMirrorSupported(videoOutput: camera.VideoOutput): boolean {
+  let isSupported: boolean = videoOutput.isMirrorSupported();
+  return isSupported;
+}
+```
 
 ## isMovingPhotoSupported
 
@@ -406,6 +684,24 @@ isMovingPhotoSupported(): boolean
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isMovingPhotoSupported(photoOutput: camera.PhotoOutput): boolean {
+  let isSupported: boolean = false;
+  try {
+    isSupported = photoOutput.isMovingPhotoSupported();
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The isMovingPhotoSupported call failed. error code: ${err.code}`);
+  }
+  return isSupported;
+}
+```
 
 ## isPhotoQualityPrioritizationSupported
 
@@ -441,209 +737,25 @@ isPhotoQualityPrioritizationSupported(qualityPrioritization: PhotoQualityPriorit
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error, reconfiguring streams is needed to recover from failure. |
 
-## offCaptureEnd
+**示例**
 
 ```TypeScript
-offCaptureEnd(callback?: AsyncCallback<CaptureEndInfo>): void
+import { BusinessError } from '@kit.BasicServicesKit';
+import { camera } from '@kit.CameraKit';
+
+let photoOutput: camera.PhotoOutput;
+
+function isPhotoQualityPrioritizationSupported(qualityPrioritization: camera.PhotoQualityPrioritization): boolean {
+  let isSupported: boolean = false;
+  try {
+    isSupported = photoOutput.isPhotoQualityPrioritizationSupported(qualityPrioritization);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The isPhotoQualityPrioritizationSupported call failed. error code: ${err.code}`);
+  }
+  return isSupported;
+}
 ```
-
-Unsubscribes from capture end event callback.
-
-**起始版本：** 23
-
-<!--Device-PhotoOutput-offCaptureEnd(callback?: AsyncCallback<CaptureEndInfo>): void--><!--Device-PhotoOutput-offCaptureEnd(callback?: AsyncCallback<CaptureEndInfo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CaptureEndInfo](arkts-camera-camera-captureendinfo-i.md)&gt; | 否 | Callback used to get the capture end information. |
-
-## offCapturePhotoAvailable
-
-```TypeScript
-offCapturePhotoAvailable(callback?: Callback<CapturePhoto>): void
-```
-
-注销监听全质量图和未压缩图。使用callback异步回调。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PhotoOutput-offCapturePhotoAvailable(callback?: Callback<CapturePhoto>): void--><!--Device-PhotoOutput-offCapturePhotoAvailable(callback?: Callback<CapturePhoto>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CapturePhoto](arkts-camera-camera-capturephoto-i.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback，callback对象不可是匿名函数，否则取消所有callback。 |
-
-## offCaptureReady
-
-```TypeScript
-offCaptureReady(callback?: AsyncCallback<void>): void
-```
-
-Unsubscribes from capture ready event callback.
-
-**起始版本：** 23
-
-<!--Device-PhotoOutput-offCaptureReady(callback?: AsyncCallback<void>): void--><!--Device-PhotoOutput-offCaptureReady(callback?: AsyncCallback<void>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | Callback used to notice capture ready. |
-
-## offCaptureStartWithInfo
-
-```TypeScript
-offCaptureStartWithInfo(callback?: AsyncCallback<CaptureStartInfo>): void
-```
-
-Unsubscribes from capture start event callback.
-
-**起始版本：** 23
-
-<!--Device-PhotoOutput-offCaptureStartWithInfo(callback?: AsyncCallback<CaptureStartInfo>): void--><!--Device-PhotoOutput-offCaptureStartWithInfo(callback?: AsyncCallback<CaptureStartInfo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CaptureStartInfo](arkts-camera-camera-capturestartinfo-i.md)&gt; | 否 | Callback used to get the capture start info. |
-
-## offError
-
-```TypeScript
-offError(callback?: ErrorCallback): void
-```
-
-Unsubscribes from error events.
-
-**起始版本：** 23
-
-<!--Device-PhotoOutput-offError(callback?: ErrorCallback): void--><!--Device-PhotoOutput-offError(callback?: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to get the photo output errors. |
-
-## offEstimatedCaptureDuration
-
-```TypeScript
-offEstimatedCaptureDuration(callback?: AsyncCallback<double>): void
-```
-
-Unsubscribes from estimated capture duration event callback.
-
-**起始版本：** 23
-
-<!--Device-PhotoOutput-offEstimatedCaptureDuration(callback?: AsyncCallback<double>): void--><!--Device-PhotoOutput-offEstimatedCaptureDuration(callback?: AsyncCallback<double>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | 否 | Callback used to notify the estimated capture duration (in milliseconds). |
-
-## offFrameShutter
-
-```TypeScript
-offFrameShutter(callback?: AsyncCallback<FrameShutterInfo>): void
-```
-
-Unsubscribes from frame shutter event callback.
-
-**起始版本：** 23
-
-<!--Device-PhotoOutput-offFrameShutter(callback?: AsyncCallback<FrameShutterInfo>): void--><!--Device-PhotoOutput-offFrameShutter(callback?: AsyncCallback<FrameShutterInfo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FrameShutterInfo](arkts-camera-camera-frameshutterinfo-i.md)&gt; | 否 | Callback used to get the frame shutter information. |
-
-## offFrameShutterEnd
-
-```TypeScript
-offFrameShutterEnd(callback?: AsyncCallback<FrameShutterEndInfo>): void
-```
-
-Unsubscribes from frame shutter end event callback.
-
-**起始版本：** 23
-
-<!--Device-PhotoOutput-offFrameShutterEnd(callback?: AsyncCallback<FrameShutterEndInfo>): void--><!--Device-PhotoOutput-offFrameShutterEnd(callback?: AsyncCallback<FrameShutterEndInfo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FrameShutterEndInfo](arkts-camera-camera-frameshutterendinfo-i.md)&gt; | 否 | Callback used to get the frame shutter end information. |
-
-## offPhotoAssetAvailable
-
-```TypeScript
-offPhotoAssetAvailable(callback?: AsyncCallback<photoAccessHelper.PhotoAsset>): void
-```
-
-Unsubscribes photo asset event callback.
-
-**起始版本：** 23
-
-<!--Device-PhotoOutput-offPhotoAssetAvailable(callback?: AsyncCallback<photoAccessHelper.PhotoAsset>): void--><!--Device-PhotoOutput-offPhotoAssetAvailable(callback?: AsyncCallback<photoAccessHelper.PhotoAsset>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;photoAccessHelper.PhotoAsset&gt; | 否 | Callback used to get the asset. |
-
-## offPhotoAvailable
-
-```TypeScript
-offPhotoAvailable(callback?: AsyncCallback<Photo>): void
-```
-
-Unsubscribes photo available event callback.
-
-**起始版本：** 23
-
-<!--Device-PhotoOutput-offPhotoAvailable(callback?: AsyncCallback<Photo>): void--><!--Device-PhotoOutput-offPhotoAvailable(callback?: AsyncCallback<Photo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Photo](arkts-camera-camera-photo-i.md)&gt; | 否 | Callback used to get the Photo. |
 
 ## off('captureEnd')
 
@@ -883,17 +995,17 @@ off(type: 'photoAvailable', callback?: AsyncCallback<Photo>): void
 | type | 'photoAvailable' | 是 | 监听事件，固定为'photoAvailable'，photoOutput创建成功后可监听。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Photo](arkts-camera-camera-photo-i.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
-## onCaptureEnd
+## offCaptureEnd
 
 ```TypeScript
-onCaptureEnd(callback: AsyncCallback<CaptureEndInfo>): void
+offCaptureEnd(callback?: AsyncCallback<CaptureEndInfo>): void
 ```
 
-Subscribes capture end event callback.
+Unsubscribes from capture end event callback.
 
 **起始版本：** 23
 
-<!--Device-PhotoOutput-onCaptureEnd(callback: AsyncCallback<CaptureEndInfo>): void--><!--Device-PhotoOutput-onCaptureEnd(callback: AsyncCallback<CaptureEndInfo>): void-End-->
+<!--Device-PhotoOutput-offCaptureEnd(callback?: AsyncCallback<CaptureEndInfo>): void--><!--Device-PhotoOutput-offCaptureEnd(callback?: AsyncCallback<CaptureEndInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -901,23 +1013,15 @@ Subscribes capture end event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CaptureEndInfo](arkts-camera-camera-captureendinfo-i.md)&gt; | 是 | Callback used to get the capture end information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CaptureEndInfo](arkts-camera-camera-captureendinfo-i.md)&gt; | 否 | Callback used to get the capture end information. |
 
-## onCapturePhotoAvailable
+## offCapturePhotoAvailable
 
 ```TypeScript
-onCapturePhotoAvailable(callback: Callback<CapturePhoto>): void
+offCapturePhotoAvailable(callback?: Callback<CapturePhoto>): void
 ```
 
-注册监听全质量图和未压缩图。使用callback异步回调。
-
-> **说明：**
-> 
-> - 注册监听接口时，不支持在该接口监听的回调方法里调用
-> [offCapturePhotoAvailable](#offcapturephotoavailable)
-> 注销回调。
-> 
-> - 拍摄未压缩图（YUV）格式图片时，仅支持使用此接口注册监听。
+注销监听全质量图和未压缩图。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -925,7 +1029,7 @@ onCapturePhotoAvailable(callback: Callback<CapturePhoto>): void
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
-<!--Device-PhotoOutput-onCapturePhotoAvailable(callback: Callback<CapturePhoto>): void--><!--Device-PhotoOutput-onCapturePhotoAvailable(callback: Callback<CapturePhoto>): void-End-->
+<!--Device-PhotoOutput-offCapturePhotoAvailable(callback?: Callback<CapturePhoto>): void--><!--Device-PhotoOutput-offCapturePhotoAvailable(callback?: Callback<CapturePhoto>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -933,19 +1037,34 @@ onCapturePhotoAvailable(callback: Callback<CapturePhoto>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CapturePhoto](arkts-camera-camera-capturephoto-i.md)&gt; | 是 | 回调函数，用于监听全质量图和未压缩图上报事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CapturePhoto](arkts-camera-camera-capturephoto-i.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback，callback对象不可是匿名函数，否则取消所有callback。 |
 
-## onCaptureReady
+**示例**
 
 ```TypeScript
-onCaptureReady(callback: AsyncCallback<void>): void
+import { camera } from '@kit.CameraKit';
+import { image } from '@kit.ImageKit';
+
+function callback(capturePhoto: camera.CapturePhoto): void {
+  let picture: image.Image | image.Picture = capturePhoto.main;
+}
+
+function unRegisterCapturePhotoOutputPhotoAvailable(photoOutput: camera.PhotoOutput): void {
+  photoOutput.offCapturePhotoAvailable(callback);
+}
 ```
 
-Subscribes capture ready event callback. After receiving the callback, can proceed to the next capture
+## offCaptureReady
+
+```TypeScript
+offCaptureReady(callback?: AsyncCallback<void>): void
+```
+
+Unsubscribes from capture ready event callback.
 
 **起始版本：** 23
 
-<!--Device-PhotoOutput-onCaptureReady(callback: AsyncCallback<void>): void--><!--Device-PhotoOutput-onCaptureReady(callback: AsyncCallback<void>): void-End-->
+<!--Device-PhotoOutput-offCaptureReady(callback?: AsyncCallback<void>): void--><!--Device-PhotoOutput-offCaptureReady(callback?: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -953,19 +1072,19 @@ Subscribes capture ready event callback. After receiving the callback, can proce
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to notice capture ready. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | Callback used to notice capture ready. |
 
-## onCaptureStartWithInfo
+## offCaptureStartWithInfo
 
 ```TypeScript
-onCaptureStartWithInfo(callback: AsyncCallback<CaptureStartInfo>): void
+offCaptureStartWithInfo(callback?: AsyncCallback<CaptureStartInfo>): void
 ```
 
-Subscribes capture start event callback.
+Unsubscribes from capture start event callback.
 
 **起始版本：** 23
 
-<!--Device-PhotoOutput-onCaptureStartWithInfo(callback: AsyncCallback<CaptureStartInfo>): void--><!--Device-PhotoOutput-onCaptureStartWithInfo(callback: AsyncCallback<CaptureStartInfo>): void-End-->
+<!--Device-PhotoOutput-offCaptureStartWithInfo(callback?: AsyncCallback<CaptureStartInfo>): void--><!--Device-PhotoOutput-offCaptureStartWithInfo(callback?: AsyncCallback<CaptureStartInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -973,19 +1092,19 @@ Subscribes capture start event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CaptureStartInfo](arkts-camera-camera-capturestartinfo-i.md)&gt; | 是 | Callback used to get the capture start info. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CaptureStartInfo](arkts-camera-camera-capturestartinfo-i.md)&gt; | 否 | Callback used to get the capture start info. |
 
-## onError
+## offError
 
 ```TypeScript
-onError(callback: ErrorCallback): void
+offError(callback?: ErrorCallback): void
 ```
 
-Subscribes to error events.
+Unsubscribes from error events.
 
 **起始版本：** 23
 
-<!--Device-PhotoOutput-onError(callback: ErrorCallback): void--><!--Device-PhotoOutput-onError(callback: ErrorCallback): void-End-->
+<!--Device-PhotoOutput-offError(callback?: ErrorCallback): void--><!--Device-PhotoOutput-offError(callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -993,19 +1112,33 @@ Subscribes to error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to get the photo output errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to get the photo output errors. |
 
-## onEstimatedCaptureDuration
+**示例**
 
 ```TypeScript
-onEstimatedCaptureDuration(callback: AsyncCallback<double>): void
+function unregisterCameraInputError(cameraInput: camera.CameraInput, camera: camera.CameraDevice): void {
+   cameraInput.offError(camera);
+}
 ```
 
-Subscribes estimated capture duration event callback.
+```TypeScript
+function unregisterMetadataOutputError(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.offError();
+}
+```
+
+## offEstimatedCaptureDuration
+
+```TypeScript
+offEstimatedCaptureDuration(callback?: AsyncCallback<double>): void
+```
+
+Unsubscribes from estimated capture duration event callback.
 
 **起始版本：** 23
 
-<!--Device-PhotoOutput-onEstimatedCaptureDuration(callback: AsyncCallback<double>): void--><!--Device-PhotoOutput-onEstimatedCaptureDuration(callback: AsyncCallback<double>): void-End-->
+<!--Device-PhotoOutput-offEstimatedCaptureDuration(callback?: AsyncCallback<double>): void--><!--Device-PhotoOutput-offEstimatedCaptureDuration(callback?: AsyncCallback<double>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -1013,19 +1146,19 @@ Subscribes estimated capture duration event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | 是 | Callback used to notify the estimated capture duration (in milliseconds). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | 否 | Callback used to notify the estimated capture duration (in milliseconds). |
 
-## onFrameShutter
+## offFrameShutter
 
 ```TypeScript
-onFrameShutter(callback: AsyncCallback<FrameShutterInfo>): void
+offFrameShutter(callback?: AsyncCallback<FrameShutterInfo>): void
 ```
 
-Subscribes frame shutter event callback.
+Unsubscribes from frame shutter event callback.
 
 **起始版本：** 23
 
-<!--Device-PhotoOutput-onFrameShutter(callback: AsyncCallback<FrameShutterInfo>): void--><!--Device-PhotoOutput-onFrameShutter(callback: AsyncCallback<FrameShutterInfo>): void-End-->
+<!--Device-PhotoOutput-offFrameShutter(callback?: AsyncCallback<FrameShutterInfo>): void--><!--Device-PhotoOutput-offFrameShutter(callback?: AsyncCallback<FrameShutterInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -1033,19 +1166,19 @@ Subscribes frame shutter event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FrameShutterInfo](arkts-camera-camera-frameshutterinfo-i.md)&gt; | 是 | Callback used to get the frame shutter information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FrameShutterInfo](arkts-camera-camera-frameshutterinfo-i.md)&gt; | 否 | Callback used to get the frame shutter information. |
 
-## onFrameShutterEnd
+## offFrameShutterEnd
 
 ```TypeScript
-onFrameShutterEnd(callback: AsyncCallback<FrameShutterEndInfo>): void
+offFrameShutterEnd(callback?: AsyncCallback<FrameShutterEndInfo>): void
 ```
 
-Subscribes frame shutter end event callback.
+Unsubscribes from frame shutter end event callback.
 
 **起始版本：** 23
 
-<!--Device-PhotoOutput-onFrameShutterEnd(callback: AsyncCallback<FrameShutterEndInfo>): void--><!--Device-PhotoOutput-onFrameShutterEnd(callback: AsyncCallback<FrameShutterEndInfo>): void-End-->
+<!--Device-PhotoOutput-offFrameShutterEnd(callback?: AsyncCallback<FrameShutterEndInfo>): void--><!--Device-PhotoOutput-offFrameShutterEnd(callback?: AsyncCallback<FrameShutterEndInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -1053,21 +1186,19 @@ Subscribes frame shutter end event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FrameShutterEndInfo](arkts-camera-camera-frameshutterendinfo-i.md)&gt; | 是 | Callback used to get the frame shutter end information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FrameShutterEndInfo](arkts-camera-camera-frameshutterendinfo-i.md)&gt; | 否 | Callback used to get the frame shutter end information. |
 
-## onPhotoAssetAvailable
+## offPhotoAssetAvailable
 
 ```TypeScript
-onPhotoAssetAvailable(callback: AsyncCallback<photoAccessHelper.PhotoAsset>): void
+offPhotoAssetAvailable(callback?: AsyncCallback<photoAccessHelper.PhotoAsset>): void
 ```
 
-Subscribes to photo asset event callback.
-
-This API processes deferred photo delivery data by quickly displaying low-quality images to give users the impression of faster photo capture, while also generating high-quality images to maintain the final output quality. For details about the design specifications, see [Optimizing Deferred Photo Delivery](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-camera-shot2see).
+Unsubscribes photo asset event callback.
 
 **起始版本：** 23
 
-<!--Device-PhotoOutput-onPhotoAssetAvailable(callback: AsyncCallback<photoAccessHelper.PhotoAsset>): void--><!--Device-PhotoOutput-onPhotoAssetAvailable(callback: AsyncCallback<photoAccessHelper.PhotoAsset>): void-End-->
+<!--Device-PhotoOutput-offPhotoAssetAvailable(callback?: AsyncCallback<photoAccessHelper.PhotoAsset>): void--><!--Device-PhotoOutput-offPhotoAssetAvailable(callback?: AsyncCallback<photoAccessHelper.PhotoAsset>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -1075,19 +1206,19 @@ This API processes deferred photo delivery data by quickly displaying low-qualit
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;photoAccessHelper.PhotoAsset&gt; | 是 | Callback used to get the asset. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;photoAccessHelper.PhotoAsset&gt; | 否 | Callback used to get the asset. |
 
-## onPhotoAvailable
+## offPhotoAvailable
 
 ```TypeScript
-onPhotoAvailable(callback: AsyncCallback<Photo>): void
+offPhotoAvailable(callback?: AsyncCallback<Photo>): void
 ```
 
-Subscribes photo available event callback.
+Unsubscribes photo available event callback.
 
 **起始版本：** 23
 
-<!--Device-PhotoOutput-onPhotoAvailable(callback: AsyncCallback<Photo>): void--><!--Device-PhotoOutput-onPhotoAvailable(callback: AsyncCallback<Photo>): void-End-->
+<!--Device-PhotoOutput-offPhotoAvailable(callback?: AsyncCallback<Photo>): void--><!--Device-PhotoOutput-offPhotoAvailable(callback?: AsyncCallback<Photo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -1095,7 +1226,7 @@ Subscribes photo available event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Photo](arkts-camera-camera-photo-i.md)&gt; | 是 | Callback used to get the Photo. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Photo](arkts-camera-camera-photo-i.md)&gt; | 否 | Callback used to get the Photo. |
 
 ## on('captureEnd')
 
@@ -1367,6 +1498,261 @@ on(type: 'photoAvailable', callback: AsyncCallback<Photo>): void
 | type | 'photoAvailable' | 是 | 监听事件，固定为'photoAvailable'，photoOutput创建成功后可监听。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Photo](arkts-camera-camera-photo-i.md)&gt; | 是 | 回调函数，用于监听拍照返回照片上报事件。 |
 
+## onCaptureEnd
+
+```TypeScript
+onCaptureEnd(callback: AsyncCallback<CaptureEndInfo>): void
+```
+
+Subscribes capture end event callback.
+
+**起始版本：** 23
+
+<!--Device-PhotoOutput-onCaptureEnd(callback: AsyncCallback<CaptureEndInfo>): void--><!--Device-PhotoOutput-onCaptureEnd(callback: AsyncCallback<CaptureEndInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CaptureEndInfo](arkts-camera-camera-captureendinfo-i.md)&gt; | 是 | Callback used to get the capture end information. |
+
+## onCapturePhotoAvailable
+
+```TypeScript
+onCapturePhotoAvailable(callback: Callback<CapturePhoto>): void
+```
+
+注册监听全质量图和未压缩图。使用callback异步回调。
+
+> **说明：**
+> 
+> - 注册监听接口时，不支持在该接口监听的回调方法里调用
+> [offCapturePhotoAvailable](#offcapturephotoavailable)
+> 注销回调。
+> 
+> - 拍摄未压缩图（YUV）格式图片时，仅支持使用此接口注册监听。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhotoOutput-onCapturePhotoAvailable(callback: Callback<CapturePhoto>): void--><!--Device-PhotoOutput-onCapturePhotoAvailable(callback: Callback<CapturePhoto>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CapturePhoto](arkts-camera-camera-capturephoto-i.md)&gt; | 是 | 回调函数，用于监听全质量图和未压缩图上报事件。 |
+
+**示例**
+
+```TypeScript
+import { camera } from '@kit.CameraKit';
+import { image } from '@kit.ImageKit';
+
+function callback(capturePhoto: camera.CapturePhoto): void {
+  let picture: image.Image | image.Picture = capturePhoto.main;
+}
+
+function registerCapturePhotoOutputPhotoAvailable(photoOutput: camera.PhotoOutput): void {
+  photoOutput.onCapturePhotoAvailable(callback);
+}
+```
+
+## onCaptureReady
+
+```TypeScript
+onCaptureReady(callback: AsyncCallback<void>): void
+```
+
+Subscribes capture ready event callback. After receiving the callback, can proceed to the next capture
+
+**起始版本：** 23
+
+<!--Device-PhotoOutput-onCaptureReady(callback: AsyncCallback<void>): void--><!--Device-PhotoOutput-onCaptureReady(callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to notice capture ready. |
+
+## onCaptureStartWithInfo
+
+```TypeScript
+onCaptureStartWithInfo(callback: AsyncCallback<CaptureStartInfo>): void
+```
+
+Subscribes capture start event callback.
+
+**起始版本：** 23
+
+<!--Device-PhotoOutput-onCaptureStartWithInfo(callback: AsyncCallback<CaptureStartInfo>): void--><!--Device-PhotoOutput-onCaptureStartWithInfo(callback: AsyncCallback<CaptureStartInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CaptureStartInfo](arkts-camera-camera-capturestartinfo-i.md)&gt; | 是 | Callback used to get the capture start info. |
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to error events.
+
+**起始版本：** 23
+
+<!--Device-PhotoOutput-onError(callback: ErrorCallback): void--><!--Device-PhotoOutput-onError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to get the photo output errors. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(err: BusinessError): void {
+  console.error(`Camera input error code: ${err.code}`);
+}
+
+function registerCameraInputError(cameraInput: camera.CameraInput, camera: camera.CameraDevice): void {
+   cameraInput.onError(camera, callback);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(metadataOutputError: BusinessError): void {
+  console.error(`Metadata output error code: ${metadataOutputError.code}`);
+}
+
+function registerMetadataOutputError(metadataOutput: camera.MetadataOutput): void {
+   metadataOutput.onError(callback);
+}
+```
+
+## onEstimatedCaptureDuration
+
+```TypeScript
+onEstimatedCaptureDuration(callback: AsyncCallback<double>): void
+```
+
+Subscribes estimated capture duration event callback.
+
+**起始版本：** 23
+
+<!--Device-PhotoOutput-onEstimatedCaptureDuration(callback: AsyncCallback<double>): void--><!--Device-PhotoOutput-onEstimatedCaptureDuration(callback: AsyncCallback<double>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | 是 | Callback used to notify the estimated capture duration (in milliseconds). |
+
+## onFrameShutter
+
+```TypeScript
+onFrameShutter(callback: AsyncCallback<FrameShutterInfo>): void
+```
+
+Subscribes frame shutter event callback.
+
+**起始版本：** 23
+
+<!--Device-PhotoOutput-onFrameShutter(callback: AsyncCallback<FrameShutterInfo>): void--><!--Device-PhotoOutput-onFrameShutter(callback: AsyncCallback<FrameShutterInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FrameShutterInfo](arkts-camera-camera-frameshutterinfo-i.md)&gt; | 是 | Callback used to get the frame shutter information. |
+
+## onFrameShutterEnd
+
+```TypeScript
+onFrameShutterEnd(callback: AsyncCallback<FrameShutterEndInfo>): void
+```
+
+Subscribes frame shutter end event callback.
+
+**起始版本：** 23
+
+<!--Device-PhotoOutput-onFrameShutterEnd(callback: AsyncCallback<FrameShutterEndInfo>): void--><!--Device-PhotoOutput-onFrameShutterEnd(callback: AsyncCallback<FrameShutterEndInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FrameShutterEndInfo](arkts-camera-camera-frameshutterendinfo-i.md)&gt; | 是 | Callback used to get the frame shutter end information. |
+
+## onPhotoAssetAvailable
+
+```TypeScript
+onPhotoAssetAvailable(callback: AsyncCallback<photoAccessHelper.PhotoAsset>): void
+```
+
+Subscribes to photo asset event callback.
+
+This API processes deferred photo delivery data by quickly displaying low-quality images to give users the impression of faster photo capture, while also generating high-quality images to maintain the final output quality. For details about the design specifications, see [Optimizing Deferred Photo Delivery](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-camera-shot2see).
+
+**起始版本：** 23
+
+<!--Device-PhotoOutput-onPhotoAssetAvailable(callback: AsyncCallback<photoAccessHelper.PhotoAsset>): void--><!--Device-PhotoOutput-onPhotoAssetAvailable(callback: AsyncCallback<photoAccessHelper.PhotoAsset>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;photoAccessHelper.PhotoAsset&gt; | 是 | Callback used to get the asset. |
+
+## onPhotoAvailable
+
+```TypeScript
+onPhotoAvailable(callback: AsyncCallback<Photo>): void
+```
+
+Subscribes photo available event callback.
+
+**起始版本：** 23
+
+<!--Device-PhotoOutput-onPhotoAvailable(callback: AsyncCallback<Photo>): void--><!--Device-PhotoOutput-onPhotoAvailable(callback: AsyncCallback<Photo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Photo](arkts-camera-camera-photo-i.md)&gt; | 是 | Callback used to get the Photo. |
+
 ## setMovingPhotoVideoCodecType
 
 ```TypeScript
@@ -1394,6 +1780,14 @@ setMovingPhotoVideoCodecType(codecType: VideoCodecType): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+**示例**
+
+```TypeScript
+function setMovingPhotoVideoCodecTypes(photoOutput: camera.PhotoOutput, videoCodecType: camera.VideoCodecType): void {
+  photoOutput.setMovingPhotoVideoCodecType(videoCodecType);
+}
+```
 
 ## setPhotoQualityPrioritization
 
@@ -1425,4 +1819,22 @@ setPhotoQualityPrioritization(qualityPrioritization: PhotoQualityPrioritization)
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error, reconfiguring streams is needed to recover from failure. |
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { camera } from '@kit.CameraKit';
+
+let photoOutput: camera.PhotoOutput;
+
+function setPhotoQualityPrioritization(qualityPrioritization: camera.PhotoQualityPrioritization): void {
+  try {
+    photoOutput.setPhotoQualityPrioritization(qualityPrioritization);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The setPhotoQualityPrioritization call failed. error code: ${err.code}`);
+  }
+}
+```
 

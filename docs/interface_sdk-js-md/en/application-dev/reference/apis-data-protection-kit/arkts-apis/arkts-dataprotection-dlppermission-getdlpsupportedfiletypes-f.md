@@ -50,6 +50,23 @@ try {
 }
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  dlpPermission.getDLPSupportedFileTypes((err, res) => {
+    if (err != undefined) {
+      console.error('getDLPSupportedFileTypes error', err.code, err.message);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+  }); // Obtain the file types that support DLP.
+} catch (err) {
+  console.error('getDLPSupportedFileTypes error', (err as BusinessError).code, (err as BusinessError).message);
+}
+```
+
 
 ## getDLPSupportedFileTypes
 
@@ -71,7 +88,7 @@ This API is used to obtain the types of files that can be used to generate DLP f
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -84,20 +101,5 @@ This API is used to obtain the types of files that can be used to generate DLP f
 
 **Examples**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  dlpPermission.getDLPSupportedFileTypes((err, res) => {
-    if (err != undefined) {
-      console.error('getDLPSupportedFileTypes error', err.code, err.message);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-  }); // Obtain the file types that support DLP.
-} catch (err) {
-  console.error('getDLPSupportedFileTypes error', (err as BusinessError).code, (err as BusinessError).message);
-}
-```
+See [getDLPSupportedFileTypes](#getdlpsupportedfiletypes)
 

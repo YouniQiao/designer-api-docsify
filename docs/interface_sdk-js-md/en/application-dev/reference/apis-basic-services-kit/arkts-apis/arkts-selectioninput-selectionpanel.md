@@ -6,8 +6,8 @@ The text selection panel is an operation panel that pops up after a user selects
  architecture design. The menu panel (**MENU_PANEL**) is the level-1 panel, which displays the function entries (such
  as translation and search) provided by the current app. The main panel (**MAIN_PANEL**) is the level-2 panel, which
  pops up after a user taps a function button on the menu panel and displays the specific function result. This module
- provides the attributes and types of the word selection panel. You can use [PanelInfo](arkts-basicservices-selectioninputselectionpanel-panelinfo-i-sys.md) to set the
- position and size of the panel and use [PanelType](arkts-basicservices-selectioninputselectionpanel-paneltype-e-sys.md) to specify the panel type.
+ provides the attributes and types of the word selection panel. You can use [PanelInfo](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i-sys.md) to set the
+ position and size of the panel and use [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e-sys.md) to specify the panel type.
  [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md) and
  [show](arkts-basicservices-selectionmanager-panel-i-sys.md#show) are used to create and display the
  word selection panel.
@@ -30,7 +30,7 @@ import { PanelInfo, PanelType } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [PanelInfo(Word Selection Panel)](arkts-basicservices-selectioninputselectionpanel-panelinfo-i-sys.md) | Defines attributes of the word selection panel, including its type, position, and size. You can specify the panel type (menu panel or main panel) using **panelType**, set the coordinates of the upper left corner of the panel using **x** and **y**, and set the panel size using **width** and **height**. These attributes collectively define the display form of the panel. |
+| [PanelInfo(Word Selection Panel)](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i-sys.md) | Defines attributes of the word selection panel, including its type, position, and size. You can specify the panel type (menu panel or main panel) using **panelType**, set the coordinates of the upper left corner of the panel using **x** and **y**, and set the panel size using **width** and **height**. These attributes collectively define the display form of the panel. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -38,6 +38,6 @@ import { PanelInfo, PanelType } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [PanelType(Word Selection Panel)](arkts-basicservices-selectioninputselectionpanel-paneltype-e-sys.md) | Enumerates the word selection panel types, which defines the two-level architecture of the panel: menu panel (level 1) and main panel (level 2). |
+| [PanelType(Word Selection Panel)](arkts-basicservices-selectioninput-selectionpanel-paneltype-e-sys.md) | Enumerates the word selection panel types, which defines the two-level architecture of the panel: menu panel (level 1) and main panel (level 2). |
 <!--DelEnd-->
 

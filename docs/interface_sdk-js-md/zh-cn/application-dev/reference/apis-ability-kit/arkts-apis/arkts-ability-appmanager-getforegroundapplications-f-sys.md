@@ -63,6 +63,17 @@ try {
 }
 ```
 
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appManager.getForegroundApplications().then((data) => {
+  console.info(`getForegroundApplications success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`getForegroundApplications fail, err: ${JSON.stringify(err)}`);
+});
+```
+
 
 ## getForegroundApplications
 
@@ -98,14 +109,5 @@ function getForegroundApplications(): Promise<Array<AppStateData>>
 
 **示例**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appManager.getForegroundApplications().then((data) => {
-  console.info(`getForegroundApplications success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`getForegroundApplications fail, err: ${JSON.stringify(err)}`);
-});
-```
+参见 [getForegroundApplications](#getforegroundapplications)
 

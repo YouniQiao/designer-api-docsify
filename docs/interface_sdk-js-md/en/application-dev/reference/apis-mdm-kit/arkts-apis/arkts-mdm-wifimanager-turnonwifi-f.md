@@ -32,7 +32,7 @@ In the following scenario, attempting to enable Wi-Fi using this API will fail, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | isForce | boolean | Yes | Whether to forcibly enable Wi-Fi. <br>The value **true** means to forcibly enable Wi-Fi. Once enabled, it cannot be disabled manually. You must call [turnOffWifi](arkts-mdm-wifimanager-turnoffwifi-f.md) instead. The value **false** means the opposite and the Wi-Fi can be disabled manually. |
 
 **Error codes:**

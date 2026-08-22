@@ -36,3 +36,11 @@ declare function fdopenStreamSync(fd: number, mode: string): Stream
 | --- | --- |
 | [Stream](arkts-corefile-fileio-stream-depr-i.md) | 返回文件流的结果。 |
 
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+let ss = fileio.fdopenStreamSync(fd, "r+");
+```
+

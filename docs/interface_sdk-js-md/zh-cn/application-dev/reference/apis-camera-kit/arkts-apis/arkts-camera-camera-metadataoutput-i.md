@@ -41,6 +41,15 @@ isLockMetadataObjectTrackingSupported(): boolean
 | --- | --- |
 | boolean | 表示是否支持锁定元数据对象追踪功能。true表示支持，false表示不支持。 |
 
+**示例**
+
+```TypeScript
+function checkLockMetadataSupport(metadataOutput: camera.MetadataOutput): void {
+  let isSupported: boolean = metadataOutput.isLockMetadataObjectTrackingSupported();
+  console.info(`Lock metadata object tracking supported: ${isSupported}`);
+}
+```
+
 ## lockMetadataObjectTracking
 
 ```TypeScript
@@ -78,45 +87,20 @@ lockMetadataObjectTracking(point: Point): void
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
-## offError
+**示例**
 
 ```TypeScript
-offError(callback?: ErrorCallback): void
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function lockMetadata(metadataOutput: camera.MetadataOutput, point: camera.Point): void {
+  try {
+    metadataOutput.lockMetadataObjectTracking(point);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`lockMetadataObjectTracking error. error code: ${err.code}`);
+  }
+}
 ```
-
-Unsubscribes from error events.
-
-**起始版本：** 23
-
-<!--Device-MetadataOutput-offError(callback?: ErrorCallback): void--><!--Device-MetadataOutput-offError(callback?: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to get the metadata output errors. |
-
-## offMetadataObjectsAvailable
-
-```TypeScript
-offMetadataObjectsAvailable(callback?: AsyncCallback<Array<MetadataObject>>): void
-```
-
-Unsubscribes from metadata objects available event callback.
-
-**起始版本：** 23
-
-<!--Device-MetadataOutput-offMetadataObjectsAvailable(callback?: AsyncCallback<Array<MetadataObject>>): void--><!--Device-MetadataOutput-offMetadataObjectsAvailable(callback?: AsyncCallback<Array<MetadataObject>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MetadataObject](arkts-camera-camera-metadataobject-i.md)&gt;&gt; | 否 | Callback used to get the available metadata objects. |
 
 ## off('error')
 
@@ -164,17 +148,17 @@ off(type: 'metadataObjectsAvailable', callback?: AsyncCallback<Array<MetadataObj
 | type | 'metadataObjectsAvailable' | 是 | 监听事件，固定为'metadataObjectsAvailable'，metadataOutput创建成功后可监听。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MetadataObject](arkts-camera-camera-metadataobject-i.md)&gt;&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有 callback。 |
 
-## onError
+## offError
 
 ```TypeScript
-onError(callback: ErrorCallback): void
+offError(callback?: ErrorCallback): void
 ```
 
-Subscribes to error events.
+Unsubscribes from error events.
 
 **起始版本：** 23
 
-<!--Device-MetadataOutput-onError(callback: ErrorCallback): void--><!--Device-MetadataOutput-onError(callback: ErrorCallback): void-End-->
+<!--Device-MetadataOutput-offError(callback?: ErrorCallback): void--><!--Device-MetadataOutput-offError(callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -182,19 +166,33 @@ Subscribes to error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to get the metadata output errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to get the metadata output errors. |
 
-## onMetadataObjectsAvailable
+**示例**
 
 ```TypeScript
-onMetadataObjectsAvailable(callback: AsyncCallback<Array<MetadataObject>>): void
+function unregisterCameraInputError(cameraInput: camera.CameraInput, camera: camera.CameraDevice): void {
+   cameraInput.offError(camera);
+}
 ```
 
-Subscribes to metadata objects available event callback.
+```TypeScript
+function unregisterMetadataOutputError(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.offError();
+}
+```
+
+## offMetadataObjectsAvailable
+
+```TypeScript
+offMetadataObjectsAvailable(callback?: AsyncCallback<Array<MetadataObject>>): void
+```
+
+Unsubscribes from metadata objects available event callback.
 
 **起始版本：** 23
 
-<!--Device-MetadataOutput-onMetadataObjectsAvailable(callback: AsyncCallback<Array<MetadataObject>>): void--><!--Device-MetadataOutput-onMetadataObjectsAvailable(callback: AsyncCallback<Array<MetadataObject>>): void-End-->
+<!--Device-MetadataOutput-offMetadataObjectsAvailable(callback?: AsyncCallback<Array<MetadataObject>>): void--><!--Device-MetadataOutput-offMetadataObjectsAvailable(callback?: AsyncCallback<Array<MetadataObject>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -202,7 +200,15 @@ Subscribes to metadata objects available event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MetadataObject](arkts-camera-camera-metadataobject-i.md)&gt;&gt; | 是 | Callback used to get the available metadata objects. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MetadataObject](arkts-camera-camera-metadataobject-i.md)&gt;&gt; | 否 | Callback used to get the available metadata objects. |
+
+**示例**
+
+```TypeScript
+function unregisterMetadataObjectsAvailable(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.offMetadataObjectsAvailable();
+}
+```
 
 ## on('error')
 
@@ -258,6 +264,90 @@ on(type: 'metadataObjectsAvailable', callback: AsyncCallback<Array<MetadataObjec
 | type | 'metadataObjectsAvailable' | 是 | 监听事件，固定为'metadataObjectsAvailable'，metadataOutput创建成功后可监听。 <br>检测到有效的metadata数据时，触发该事件发生并返回相应的metadata数据。如果输入错误字段，则不会创建有效监听。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MetadataObject](arkts-camera-camera-metadataobject-i.md)&gt;&gt; | 是 | 回调函数，用于获取metadata数据。 |
 
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to error events.
+
+**起始版本：** 23
+
+<!--Device-MetadataOutput-onError(callback: ErrorCallback): void--><!--Device-MetadataOutput-onError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to get the metadata output errors. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(err: BusinessError): void {
+  console.error(`Camera input error code: ${err.code}`);
+}
+
+function registerCameraInputError(cameraInput: camera.CameraInput, camera: camera.CameraDevice): void {
+   cameraInput.onError(camera, callback);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(metadataOutputError: BusinessError): void {
+  console.error(`Metadata output error code: ${metadataOutputError.code}`);
+}
+
+function registerMetadataOutputError(metadataOutput: camera.MetadataOutput): void {
+   metadataOutput.onError(callback);
+}
+```
+
+## onMetadataObjectsAvailable
+
+```TypeScript
+onMetadataObjectsAvailable(callback: AsyncCallback<Array<MetadataObject>>): void
+```
+
+Subscribes to metadata objects available event callback.
+
+**起始版本：** 23
+
+<!--Device-MetadataOutput-onMetadataObjectsAvailable(callback: AsyncCallback<Array<MetadataObject>>): void--><!--Device-MetadataOutput-onMetadataObjectsAvailable(callback: AsyncCallback<Array<MetadataObject>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MetadataObject](arkts-camera-camera-metadataobject-i.md)&gt;&gt; | 是 | Callback used to get the available metadata objects. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(err: BusinessError | null, metadataObjectArr: Array<camera.MetadataObject> | undefined): void {
+  if (err !== undefined && err!.code !== 0) {
+    console.error(`Callback Error, errorCode: ${err!.code}`);
+    return;
+  }
+  console.info('metadata output metadataObjectsAvailable');
+}
+
+function registerMetadataObjectsAvailable(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.onMetadataObjectsAvailable(callback);
+}
+```
+
 ## start
 
 ```TypeScript
@@ -286,6 +376,186 @@ start(callback: AsyncCallback<void>): void
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startDepthDataOutput(depthDataOutput: camera.DepthDataOutput): void {
+  depthDataOutput.start().then(() => {
+    console.info('Promise returned to indicate that start method execution success.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to depth data output start, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startCaptureSession(captureSession: camera.CaptureSession): void {
+  captureSession.start((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to start the session, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback invoked to indicate the session start success.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startCaptureSession(captureSession: camera.CaptureSession): void {
+  captureSession.start().then(() => {
+    console.info('Promise returned to indicate the session start success.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to start the session, error code: ${err.code}.`);
+  });
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startMetadataOutput(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.start((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to start metadata output, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback returned with metadata output started.');
+  });
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startMetadataOutput(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.start((error:Error | null) => {
+    let err = error as BusinessError;
+    if (err && err!.code !== 0) {
+      console.error(`Failed to start metadata output, error code: ${err!.code}.`);
+      return;
+    }
+    console.info('Callback returned with metadata output started.');
+  });
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startMetadataOutput(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.start().then(() => {
+    console.info('Callback returned with metadata output started.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to metadata output start, error code: ${error.code}`);
+  });
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startMetadataOutput(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.start().then(() => {
+    console.info('Callback returned with metadata output started.');
+  }).catch((error: Error) => {
+    let err = error as BusinessError;
+    console.error(`Failed to metadata output stop, error code: ${err.code}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startPreviewOutput(previewOutput: camera.PreviewOutput): void {
+  previewOutput.start((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to start the preview output, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback returned with preview output started.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startPreviewOutput(previewOutput: camera.PreviewOutput): void {
+  previewOutput.start().then(() => {
+    console.info('Promise returned with preview output started.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to preview output start, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startCaptureSession(session: camera.Session): void {
+  session.start((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to start the session, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback invoked to indicate the session start success.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startCaptureSession(session: camera.Session): void {
+  session.start().then(() => {
+    console.info('Promise returned to indicate the session start success.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to start the session, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startVideoOutput(videoOutput: camera.VideoOutput): void {
+  videoOutput.start((err: BusinessError) => {
+    if (err.code) {
+      console.error(`Failed to start the video output, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback invoked to indicate the video output start success.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function startVideoOutput(videoOutput: camera.VideoOutput): void {
+  videoOutput.start().then(() => {
+    console.info('Promise returned to indicate that start method execution success.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to video output start, error code: ${error.code}.`);
+  });
+}
+```
 
 ## start
 
@@ -316,6 +586,10 @@ start(): Promise<void>
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
+**示例**
+
+参见 [start](#start)
+
 ## stop
 
 ```TypeScript
@@ -338,6 +612,180 @@ stop(callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止输出metadata成功，err为undefined，否则为错误对象。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopDepthDataOutput(depthDataOutput: camera.DepthDataOutput): void {
+  depthDataOutput.stop().then(() => {
+    console.info('Promise returned to indicate that stop method execution success.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to depth data output stop, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopCaptureSession(captureSession: camera.CaptureSession): void {
+  captureSession.stop((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to stop the session, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback invoked to indicate the session stop success.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopCaptureSession(captureSession: camera.CaptureSession): void {
+  captureSession.stop().then(() => {
+    console.info('Promise returned to indicate the session stop success.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to stop the session, error code: ${err.code}.`);
+  });
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopMetadataOutput(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.stop((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to stop the metadata output, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback returned with metadata output stopped.');
+  })
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopMetadataOutput(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.stop((error: Error | null) => {
+    let err = error as BusinessError;
+    if (err && err!.code !== 0) {
+      console.error(`Failed to stop the metadata output, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback returned with metadata output stopped.');
+  })
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopMetadataOutput(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.stop().then(() => {
+    console.info('Callback returned with metadata output stopped.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to metadata output stop, error code: ${error.code}`);
+  });
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopMetadataOutput(metadataOutput: camera.MetadataOutput): void {
+  metadataOutput.stop().then(() => {
+    console.info('Callback returned with metadata output stopped.');
+  }).catch((error) => {
+    let err = error as BusinessError;
+    console.error(`Failed to metadata output stop, error code: ${err.code}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopPreviewOutput(previewOutput: camera.PreviewOutput): void {
+  previewOutput.stop((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to stop the preview output, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Returned with preview output stopped.');
+  })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopPreviewOutput(previewOutput: camera.PreviewOutput): void {
+  previewOutput.stop().then(() => {
+    console.info('Callback returned with preview output stopped.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to preview output stop, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopCaptureSession(session: camera.Session): void {
+  session.stop((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to stop the session, error code: ${err.code}.`);
+      return;
+    }
+    console.info('Callback invoked to indicate the session stop success.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopCaptureSession(session: camera.Session): void {
+  session.stop().then(() => {
+    console.info('Promise returned to indicate the session stop success.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to stop the session, error code: ${error.code}.`);
+  });
+}
+```
+
+```TypeScript
+function stopVideoOutput(videoOutput: camera.VideoOutput): void {
+  videoOutput.stop(() => {
+    console.info('Callback invoked to indicate the video output stop success.');
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function stopVideoOutput(videoOutput: camera.VideoOutput): void {
+  videoOutput.stop().then(() => {
+    console.info('Promise returned to indicate that stop method execution success.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to video output stop, error code: ${error.code}.`);
+  });
+}
+```
+
 ## stop
 
 ```TypeScript
@@ -359,6 +807,10 @@ stop(): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**示例**
+
+参见 [stop](#stop)
 
 ## unlockMetadataObjectTracking
 
@@ -384,4 +836,19 @@ unlockMetadataObjectTracking(): void
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function unlockMetadata(metadataOutput: camera.MetadataOutput): void {
+  try {
+    metadataOutput.unlockMetadataObjectTracking();
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`unlockMetadataObjectTracking error. error code: ${err.code}`);
+  }
+}
+```
 

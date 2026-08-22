@@ -47,6 +47,63 @@ function obtainAllWorks(callback: AsyncCallback<void>): Array<WorkInfo>
 | [9700002](../errorcode-workScheduler.md#9700002-parcel读写操作失败) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
 | [9700003](../errorcode-workScheduler.md#9700003-系统服务失败) | System service operation failed. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { workScheduler } from '@kit.BackgroundTasksKit';
+
+workScheduler.obtainAllWorks((error: BusinessError, res: Array<workScheduler.WorkInfo>) => {
+  if (error) {
+    console.error(`workschedulerLog obtainAllWorks failed. code is ${error.code} message is ${error.message}`);
+  } else {
+    console.info(`workschedulerLog obtainAllWorks success, data is: ${JSON.stringify(res)}`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { workScheduler } from '@kit.BackgroundTasksKit';
+
+workScheduler.obtainAllWorks((error: BusinessError<void> | null, res: Array<workScheduler.WorkInfo> | undefined) => {
+  if (error) {
+    console.error(`workschedulerLog obtainAllWorks failed. code is ${error.code} message is ${error.message}`);
+  } else {
+    console.info(`workschedulerLog obtainAllWorks success, data is: ${JSON.stringify(res)}`);
+  }
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { workScheduler } from '@kit.BackgroundTasksKit';
+
+workScheduler.obtainAllWorks().then((res: Array<workScheduler.WorkInfo>) => {
+  console.info(`workschedulerLog obtainAllWorks success, data is: ${JSON.stringify(res)}`);
+}).catch((error: BusinessError) => {
+  console.error(`workschedulerLog obtainAllWorks failed. code is ${error.code} message is ${error.message}`);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { workScheduler } from '@kit.BackgroundTasksKit';
+
+workScheduler.obtainAllWorks().then((res: Array<workScheduler.WorkInfo>) => {
+  console.info(`workschedulerLog obtainAllWorks success, data is: ${JSON.stringify(res)}`);
+}).catch((error) => {
+  console.error(`workschedulerLog obtainAllWorks failed. code is ${error.code} message is ${error.message}`);
+})
+```
+
 
 ## obtainAllWorks
 
@@ -81,35 +138,7 @@ function obtainAllWorks(callback: AsyncCallback<Array<WorkInfo>>): void
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { workScheduler } from '@kit.BackgroundTasksKit';
-
-workScheduler.obtainAllWorks((error: BusinessError, res: Array<workScheduler.WorkInfo>) => {
-  if (error) {
-    console.error(`workschedulerLog obtainAllWorks failed. code is ${error.code} message is ${error.message}`);
-  } else {
-    console.info(`workschedulerLog obtainAllWorks success, data is: ${JSON.stringify(res)}`);
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { workScheduler } from '@kit.BackgroundTasksKit';
-
-workScheduler.obtainAllWorks((error: BusinessError<void> | null, res: Array<workScheduler.WorkInfo> | undefined) => {
-  if (error) {
-    console.error(`workschedulerLog obtainAllWorks failed. code is ${error.code} message is ${error.message}`);
-  } else {
-    console.info(`workschedulerLog obtainAllWorks success, data is: ${JSON.stringify(res)}`);
-  }
-});
-```
+参见 [obtainAllWorks](#obtainallworks)
 
 
 ## obtainAllWorks
@@ -145,28 +174,5 @@ function obtainAllWorks(): Promise<Array<WorkInfo>>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { workScheduler } from '@kit.BackgroundTasksKit';
-
-workScheduler.obtainAllWorks().then((res: Array<workScheduler.WorkInfo>) => {
-  console.info(`workschedulerLog obtainAllWorks success, data is: ${JSON.stringify(res)}`);
-}).catch((error: BusinessError) => {
-  console.error(`workschedulerLog obtainAllWorks failed. code is ${error.code} message is ${error.message}`);
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { workScheduler } from '@kit.BackgroundTasksKit';
-
-workScheduler.obtainAllWorks().then((res: Array<workScheduler.WorkInfo>) => {
-  console.info(`workschedulerLog obtainAllWorks success, data is: ${JSON.stringify(res)}`);
-}).catch((error) => {
-  console.error(`workschedulerLog obtainAllWorks failed. code is ${error.code} message is ${error.message}`);
-})
-```
+参见 [obtainAllWorks](#obtainallworks)
 

@@ -29,7 +29,7 @@ Obtains the connection information of the data network specified by **NetHandle*
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | netHandle | NetHandle | Yes | Network handle. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ConnectionProperties](arkts-network-connection-connectionproperties-i.md)&gt; | Yes | Callback used to return the result. If the connection properties of the network specified by **netHandle** is obtained successfully, **error** is **undefined** and **data** is the obtained network connection information. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ConnectionProperties](arkts-network-connection-connectionproperties-i.md)&gt; | Yes | Callback used to return the result. If the connection properties of the network specified by **netHandle** is obtained successfully, **error** is **undefined** and **data** is the obtained network connection information. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -58,6 +58,21 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
       console.error(`Failed to get connection properties. Code:${error.code}, message:${error.message}`);
       return;
     }
+    console.info("Succeeded to get data: " + JSON.stringify(data));
+  })
+});
+```
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // If no network is connected, the obtained netId of netHandle is 0, which is abnormal. You can add specific processing based on the service requirements.
+    return;
+  }
+
+  connection.getConnectionProperties(netHandle).then((data: connection.ConnectionProperties) => {
     console.info("Succeeded to get data: " + JSON.stringify(data));
   })
 });
@@ -106,18 +121,5 @@ Obtains the connection information of the data network specified by **NetHandle*
 
 **Examples**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  if (netHandle.netId == 0) {
-    // If no network is connected, the obtained netId of netHandle is 0, which is abnormal. You can add specific processing based on the service requirements.
-    return;
-  }
-
-  connection.getConnectionProperties(netHandle).then((data: connection.ConnectionProperties) => {
-    console.info("Succeeded to get data: " + JSON.stringify(data));
-  })
-});
-```
+See [getConnectionProperties](#getconnectionproperties)
 

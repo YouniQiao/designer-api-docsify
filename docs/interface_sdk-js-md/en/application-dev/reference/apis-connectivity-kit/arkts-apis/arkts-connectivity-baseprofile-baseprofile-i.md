@@ -121,37 +121,6 @@ try {
 }
 ```
 
-## offConnectionStateChange
-
-```TypeScript
-offConnectionStateChange(callback?: Callback<StateChangeParam>): void
-```
-
-Unsubscribe the event reported when the profile connection state changes .
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BaseProfile-offConnectionStateChange(callback?: Callback<StateChangeParam>): void--><!--Device-BaseProfile-offConnectionStateChange(callback?: Callback<StateChangeParam>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;StateChangeParam&gt; | No | Callback used to listen for event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-
 ## off('connectionStateChange')
 
 ```TypeScript
@@ -175,7 +144,7 @@ Unsubscribe the event reported when the profile connection state changes .
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | Yes | Type of the profile connection state changes event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;StateChangeParam&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -185,23 +154,21 @@ Unsubscribe the event reported when the profile connection state changes .
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## onConnectionStateChange
+## offConnectionStateChange
 
 ```TypeScript
-onConnectionStateChange(callback: Callback<StateChangeParam>): void
+offConnectionStateChange(callback?: Callback<StateChangeParam>): void
 ```
 
-Subscribe the event reported when the profile connection state changes . On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
+Unsubscribe the event reported when the profile connection state changes .
 
 **Since:** 23
 
-**Required permissions:** 
-- API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
-- API version 23 - 24: ohos.permission.ACCESS_BLUETOOTH
+**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BaseProfile-onConnectionStateChange(callback: Callback<StateChangeParam>): void--><!--Device-BaseProfile-onConnectionStateChange(callback: Callback<StateChangeParam>): void-End-->
+<!--Device-BaseProfile-offConnectionStateChange(callback?: Callback<StateChangeParam>): void--><!--Device-BaseProfile-offConnectionStateChange(callback?: Callback<StateChangeParam>): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -209,7 +176,7 @@ Subscribe the event reported when the profile connection state changes . On API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;StateChangeParam&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -243,7 +210,7 @@ Subscribe the event reported when the profile connection state changes . On API 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | Yes | Type of the profile connection state changes event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;StateChangeParam&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -269,4 +236,37 @@ try {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
+
+## onConnectionStateChange
+
+```TypeScript
+onConnectionStateChange(callback: Callback<StateChangeParam>): void
+```
+
+Subscribe the event reported when the profile connection state changes . On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
+
+**Since:** 23
+
+**Required permissions:** 
+- API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
+- API version 23 - 24: ohos.permission.ACCESS_BLUETOOTH
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BaseProfile-onConnectionStateChange(callback: Callback<StateChangeParam>): void--><!--Device-BaseProfile-onConnectionStateChange(callback: Callback<StateChangeParam>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | Yes | Callback used to listen for event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 

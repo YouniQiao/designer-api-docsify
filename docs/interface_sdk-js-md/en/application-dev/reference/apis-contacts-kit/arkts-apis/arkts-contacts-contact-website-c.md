@@ -32,3 +32,13 @@ Website that stores the contact information.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+**Examples**
+
+Create contact data in JSON format:
+
+```TypeScript
+let website: contact.Website = {
+    website: "website"
+};
+```
+

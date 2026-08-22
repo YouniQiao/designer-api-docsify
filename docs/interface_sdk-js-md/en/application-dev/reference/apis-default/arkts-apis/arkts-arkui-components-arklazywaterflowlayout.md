@@ -18,6 +18,6 @@
 
 | Name | Description |
 | --- | --- |
-| [LazyVWaterFlowLayoutAttribute](arkts-arkuicomponentsarklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) | The LazyVWaterFlowLayoutAttribute |
-| [LazyWaterFlowLayoutAttribute](arkts-arkuicomponentsarklazywaterflowlayout-lazywaterflowlayoutattribute-i.md) | The LazyWaterFlowLayoutAttribute |
+| [LazyVWaterFlowLayoutAttribute](arkts-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) | The LazyVWaterFlowLayoutAttribute |
+| [LazyWaterFlowLayoutAttribute](arkts-arkui-components-arklazywaterflowlayout-lazywaterflowlayoutattribute-i.md) | The LazyWaterFlowLayoutAttribute |
 

@@ -35,7 +35,7 @@ Installs a private credential. This API uses an asynchronous callback to return 
 | keystore | Uint8Array | Yes | Keystore file with a key pair and certificate. The value contains up to 20480 bytes. |
 | keystorePwd | string | Yes | Password of the keystore file. The password cannot exceed 32 bytes. |
 | certAlias | string | Yes | Credential alias. Currently, the alias can contain only digits, letters, and underscores (_) and should not exceed 32 bytes. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is **uri** in the [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md) object. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is **uri** in the [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md) object. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -66,6 +66,50 @@ try {
       console.info('Succeeded in installing private certificate.');
     }
   });
+} catch (error) {
+  console.error(`Failed to install private certificate. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+/* The credential data to be installed must be assigned by the service. The data in this example is not the real credential data. */
+let keystore: Uint8Array = new Uint8Array([
+  0x30, 0x82, 0x0b, 0xc1, 0x02, 0x01,
+]);
+let keystorePwd: string = "123456";
+try {
+  certificateManager.installPrivateCertificate(keystore, keystorePwd, 'test').then((cmResult) => {
+    let uri: string = (cmResult?.uri == undefined) ? '' : cmResult.uri;
+    console.info('Succeeded in installing private certificate.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to install private certificate. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (error) {
+  console.error(`Failed to install private certificate. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+/* The data of the credential to be installed must be assigned based on the service. The data in this example is not the real credential data. */
+let keystore: Uint8Array = new Uint8Array([
+  0x30, 0x82, 0x0b, 0xc1, 0x02, 0x01,
+]);
+let keystorePwd: string = "123456";
+try {
+  /* The credential can be used after the device is unlocked for the first time. */
+  let level = certificateManager.AuthStorageLevel.EL2;
+  certificateManager.installPrivateCertificate(keystore, keystorePwd, 'test', level).then((cmResult) => {
+    let uri: string = (cmResult?.uri == undefined) ? '' : cmResult.uri;
+    console.info('Succeeded in installing private certificate.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to install private certificate. Code: ${err.code}, message: ${err.message}`);
+  })
 } catch (error) {
   console.error(`Failed to install private certificate. Code: ${error.code}, message: ${error.message}`);
 }
@@ -114,26 +158,7 @@ Installs a private credential. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-/* The credential data to be installed must be assigned by the service. The data in this example is not the real credential data. */
-let keystore: Uint8Array = new Uint8Array([
-  0x30, 0x82, 0x0b, 0xc1, 0x02, 0x01,
-]);
-let keystorePwd: string = "123456";
-try {
-  certificateManager.installPrivateCertificate(keystore, keystorePwd, 'test').then((cmResult) => {
-    let uri: string = (cmResult?.uri == undefined) ? '' : cmResult.uri;
-    console.info('Succeeded in installing private certificate.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to install private certificate. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error) {
-  console.error(`Failed to install private certificate. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [installPrivateCertificate](#installprivatecertificate)
 
 
 ## installPrivateCertificate
@@ -179,26 +204,5 @@ Installs a private credential and specifies its storage level. This API uses a p
 
 **Examples**
 
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-/* The data of the credential to be installed must be assigned based on the service. The data in this example is not the real credential data. */
-let keystore: Uint8Array = new Uint8Array([
-  0x30, 0x82, 0x0b, 0xc1, 0x02, 0x01,
-]);
-let keystorePwd: string = "123456";
-try {
-  /* The credential can be used after the device is unlocked for the first time. */
-  let level = certificateManager.AuthStorageLevel.EL2;
-  certificateManager.installPrivateCertificate(keystore, keystorePwd, 'test', level).then((cmResult) => {
-    let uri: string = (cmResult?.uri == undefined) ? '' : cmResult.uri;
-    console.info('Succeeded in installing private certificate.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to install private certificate. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error) {
-  console.error(`Failed to install private certificate. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [installPrivateCertificate](#installprivatecertificate)
 

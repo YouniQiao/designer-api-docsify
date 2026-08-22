@@ -88,6 +88,14 @@ let o1: option = {endings:'native', type: 'MIME'}
 let blob1: buffer.Blob = new buffer.Blob(['a', 'b', 'c'], o1);
 ```
 
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let blob: buffer.Blob  = new buffer.Blob(['a', 'b', 'c']);
+
+let blob1: buffer.Blob = new buffer.Blob(['a', 'b', 'c'], {endings:'native', type: 'MIME'} as buffer.BlobOptions);
+```
+
 ## constructor
 
 ```TypeScript
@@ -113,13 +121,7 @@ constructor(sources: ArrayUnionType, options?: BlobOptions)
 
 **示例**
 
-```TypeScript
-import { buffer } from '@kit.ArkTS';
-
-let blob: buffer.Blob  = new buffer.Blob(['a', 'b', 'c']);
-
-let blob1: buffer.Blob = new buffer.Blob(['a', 'b', 'c'], {endings:'native', type: 'MIME'} as buffer.BlobOptions);
-```
+参见 [constructor](#constructor)
 
 ## slice
 

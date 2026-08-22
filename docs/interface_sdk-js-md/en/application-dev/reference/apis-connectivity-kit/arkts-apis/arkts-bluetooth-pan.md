@@ -2,7 +2,7 @@
 
 Provides methods to accessing bluetooth PAN(Personal Area Networking Profile)-related capabilities.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 

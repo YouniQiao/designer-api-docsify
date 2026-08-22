@@ -28,7 +28,7 @@ Obtains the applications installed by a specified user on a device. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | accountId | number | Yes | User ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of **@ohos.account.osAccount** to obtain the user ID. |
 
 **Return value:**
@@ -66,6 +66,27 @@ bundleManager.getInstalledBundleList(wantTemp, accountId).then((result) => {
 });
 ```
 
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleManager } from '@kit.MDMKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let accountId: number = 100;
+let bundleInfoGetFlag: number = bundleManager.BundleInfoGetFlag.WITH_APPLICATION_INFO
+  | bundleManager.BundleInfoGetFlag.WITH_SIGNATURE_INFO;
+bundleManager.getInstalledBundleList(wantTemp, accountId, bundleInfoGetFlag).then((result) => {
+  console.info('Succeeded in getting installed bundle list.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get installed bundle list. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## getInstalledBundleList
 
@@ -89,7 +110,7 @@ Obtains the list of applications installed by a specified user based on the spec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | accountId | int | Yes | User ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of **@ohos.account.osAccount** to obtain the user ID. |
 | bundleInfoGetFlag | int | Yes | Type of the bundle information to obtain. |
 
@@ -109,24 +130,5 @@ Obtains the list of applications installed by a specified user based on the spec
 
 **Examples**
 
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let accountId: number = 100;
-let bundleInfoGetFlag: number = bundleManager.BundleInfoGetFlag.WITH_APPLICATION_INFO
-  | bundleManager.BundleInfoGetFlag.WITH_SIGNATURE_INFO;
-bundleManager.getInstalledBundleList(wantTemp, accountId, bundleInfoGetFlag).then((result) => {
-  console.info('Succeeded in getting installed bundle list.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get installed bundle list. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getInstalledBundleList](#getinstalledbundlelist)
 

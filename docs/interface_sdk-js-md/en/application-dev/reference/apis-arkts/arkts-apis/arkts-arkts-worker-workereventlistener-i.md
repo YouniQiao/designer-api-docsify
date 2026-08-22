@@ -45,17 +45,23 @@ Specifies the callback function to be invoked.
 
 **Examples**
 
+The following uses the Index.ets file in the entry module of the stage model as an example to describe how to load the worker file. For details about how to use the library to load the Worker thread file, see [Precautions for File URLs](../../../arkts-utils/worker-introduction.md#precautions-for-file-urls).
+
 ```TypeScript
 // Index.ets
-import { worker, Event } from "@kit.ArkTS"
+import { worker } from '@kit.ArkTS';
 
-const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+// URL of the Worker file: "entry/src/main/ets/workers/worker.ets"
+const workerInstance = new worker.ThreadWorker('entry/ets/workers/worker.ets', {name: "WorkerThread"});
+```
 
-workerInstance.addEventListener("alert", (event: Event) => {
-  console.info("event type is: ", JSON.stringify(event.type));
-});
+The following uses the Index.ets file in the entry module of the stage model as an example to describe how to load the worker file. For details about how to use the library to load the Worker thread file, see [Precautions for File URLs](../../../arkts-utils/worker-introduction.md#precautions-for-file-urls).
 
-const eventToDispatch : Event = { type: "alert", timeStamp: 0 }; // timeStamp is not supported.
-workerInstance.dispatchEvent(eventToDispatch);
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+// URL of the Worker file: "entry/src/main/ets/workers/worker.ets"
+const workerInstance = new worker.Worker('entry/ets/workers/worker.ets', {name: "WorkerThread"});
 ```
 

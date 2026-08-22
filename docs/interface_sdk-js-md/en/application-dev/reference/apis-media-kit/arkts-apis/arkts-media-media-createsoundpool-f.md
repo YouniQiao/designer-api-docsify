@@ -38,7 +38,7 @@ Creates a SoundPool instance. This API uses an asynchronous callback to return t
 | --- | --- | --- | --- |
 | maxStreams | number | Yes | Maximum number of streams that can be played by the SoundPool instance. The value is an integer ranging from 1 to 32. |
 | audioRenderInfo | audio.AudioRendererInfo | Yes | Audio renderer parameters. When the **usage** parameter in **audioRenderInfo** is set to **STREAM_USAGE_UNKNOWN**, **STREAM_USAGE_MUSIC**, **STREAM_USAGE_MOVIE**, or **STREAM_USAGE_AUDIOBOOK**, the SoundPool uses the audio mixing mode when playing a short sound, without interrupting the playback of other audios. SoundPool supports setting **rendererFlags** to **1** for low- latency playback. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;SoundPool&gt; | Yes | Callback used to return the result. If the operation is successful, a SoundPool instance is returned; otherwise, **null** is returned. The instance is used for loading and playback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SoundPool&gt; | Yes | Callback used to return the result. If the operation is successful, a SoundPool instance is returned; otherwise, **null** is returned. The instance is used for loading and playback. |
 
 **Error codes:**
 
@@ -65,6 +65,28 @@ media.createSoundPool(5, audioRendererInfo, (error, soundPool_: media.SoundPool)
     soundPool = soundPool_;
     console.info(`Succeeded in createSoundPool`);
   }
+});
+```
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let soundPool: media.SoundPool;
+let audioRendererInfo: audio.AudioRendererInfo = {
+  usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
+  rendererFlags : 0
+};
+
+media.createSoundPool(5, audioRendererInfo).then((soundpool_: media.SoundPool) => {
+  if (soundpool_) {
+    soundPool = soundpool_;
+    console.info('Succeeded in creating SoundPool');
+  } else {
+    console.error('Failed to create SoundPool');
+  }
+}, (error: BusinessError) => {
+  console.error(`soundpool catchCallback, error message:${error.message}`);
 });
 ```
 
@@ -97,13 +119,17 @@ Creates a **SoundPool** instance. This API uses an asynchronous callback to retu
 | --- | --- | --- | --- |
 | maxStreams | int | Yes | Maximum number of streams that can be played by the **SoundPool** instance. The value is an integer ranging from 1 to 32. |
 | audioRenderInfo | audio.AudioRendererInfo | Yes | Audio renderer parameters. When the **usage** parameter in **audioRenderInfo** is set to **STREAM_USAGE_UNKNOWN**, **STREAM_USAGE_MUSIC**, **STREAM_USAGE_MOVIE**, or **STREAM_USAGE_AUDIOBOOK**, the SoundPool uses the audio mixing mode when playing a short sound, without interrupting the playback of other audios. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;SoundPool \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, a **SoundPool** instance is returned; otherwise, **undefined** is returned. The instance is used for loading and playback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SoundPool \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, a **SoundPool** instance is returned; otherwise, **undefined** is returned. The instance is used for loading and playback. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
+
+**Examples**
+
+See [createSoundPool](#createsoundpool)
 
 
 ## createSoundPool
@@ -149,27 +175,7 @@ Creates a SoundPool instance. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let soundPool: media.SoundPool;
-let audioRendererInfo: audio.AudioRendererInfo = {
-  usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
-  rendererFlags : 0
-};
-
-media.createSoundPool(5, audioRendererInfo).then((soundpool_: media.SoundPool) => {
-  if (soundpool_) {
-    soundPool = soundpool_;
-    console.info('Succeeded in creating SoundPool');
-  } else {
-    console.error('Failed to create SoundPool');
-  }
-}, (error: BusinessError) => {
-  console.error(`soundpool catchCallback, error message:${error.message}`);
-});
-```
+See [createSoundPool](#createsoundpool)
 
 
 ## createSoundPool
@@ -208,4 +214,8 @@ Creates a **SoundPool** instance. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+
+**Examples**
+
+See [createSoundPool](#createsoundpool)
 

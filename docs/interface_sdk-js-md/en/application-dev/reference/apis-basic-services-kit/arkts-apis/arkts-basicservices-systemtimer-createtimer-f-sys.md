@@ -33,7 +33,7 @@ Creates a timer. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [TimerOptions](arkts-basicservices-systemtimer-timeroptions-i-sys.md) | Yes | Timer initialization options, including the timer type, whether the timer is a repeating timer, interval, and **WantAgent** options. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the timer ID. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the timer ID. |
 
 **Error codes:**
 
@@ -58,6 +58,25 @@ try {
       return;
     }
     console.info(`Succeeded in creating a timer. timerId: ${timerId}`);
+  });
+} catch(e) {
+  let error = e as BusinessError;
+  console.error(`Failed to create timer. message: ${error.message}, code: ${error.code}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: systemTimer.TimerOptions = {
+  type: systemTimer.TIMER_TYPE_REALTIME,
+  repeat:false
+};
+try {
+  systemTimer.createTimer(options).then((timerId: Number) => {
+    console.info(`Succeeded in creating a timer. timerId: ${timerId}`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to create timer. message: ${error.message}, code: ${error.code}`);
   });
 } catch(e) {
   let error = e as BusinessError;
@@ -109,22 +128,5 @@ Creates a timer. This API uses a promise to return the timer ID.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: systemTimer.TimerOptions = {
-  type: systemTimer.TIMER_TYPE_REALTIME,
-  repeat:false
-};
-try {
-  systemTimer.createTimer(options).then((timerId: Number) => {
-    console.info(`Succeeded in creating a timer. timerId: ${timerId}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to create timer. message: ${error.message}, code: ${error.code}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.error(`Failed to create timer. message: ${error.message}, code: ${error.code}`);
-}
-```
+See [createTimer](#createtimer)
 

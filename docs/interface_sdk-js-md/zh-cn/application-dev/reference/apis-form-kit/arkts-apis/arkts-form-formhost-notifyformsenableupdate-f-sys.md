@@ -48,6 +48,82 @@ function notifyFormsEnableUpdate(
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 | [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formIds: string[] = new Array('12400633174999288', '12400633174999289');
+try {
+  formHost.notifyFormsEnableUpdate(formIds, true, (error: BusinessError) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formIds: Array<string> = new Array<string>('12400633174999288', '12400633174999289');
+try {
+  formHost.notifyFormsEnableUpdate(formIds, true, (error) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    }
+  });
+} catch(error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formIds: string[] = new Array('12400633174999288', '12400633174999289');
+try {
+  formHost.notifyFormsEnableUpdate(formIds, true).then(() => {
+    console.info('formHost notifyFormsEnableUpdate success');
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formIds: Array<string> = new Array<string>('12400633174999288', '12400633174999289');
+try {
+  formHost.notifyFormsEnableUpdate(formIds, true).then(() => {
+    console.info('formHost notifyFormsEnableUpdate success');
+  }).catch((error) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch(error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
 
 ## notifyFormsEnableUpdate
 
@@ -91,4 +167,8 @@ function notifyFormsEnableUpdate(formIds: Array<string>, isEnableUpdate: boolean
 | [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 | [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
+
+**示例**
+
+参见 [notifyFormsEnableUpdate](#notifyformsenableupdate)
 

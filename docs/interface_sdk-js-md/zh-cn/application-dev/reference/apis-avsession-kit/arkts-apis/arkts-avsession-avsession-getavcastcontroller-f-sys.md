@@ -46,6 +46,28 @@ function getAVCastController(sessionId: string, callback: AsyncCallback<AVCastCo
 **示例**
 
 ```TypeScript
+let avCastController: avSession.AVCastController;
+currentAVSession.getAVCastController().then((avcontroller: avSession.AVCastController) => {
+  avCastController = avcontroller;
+  console.info('Succeeded in getting AV cast controller.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let avCastController: avSession.AVCastController;
+currentAVSession.getAVCastController((err: BusinessError, avcontroller: avSession.AVCastController) => {
+  if (err) {
+    console.error(`Failed to get AV cast controller, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  avCastController = avcontroller;
+  console.info('Succeeded in getting AV cast controller.');
+});
+```
+
+```TypeScript
 import { avSession } from '@kit.AVSessionKit';
 
 @Entry
@@ -114,6 +136,10 @@ Register a callback to retrieve an avsession cast controller. This function can 
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | session does not exist |
 
+**示例**
+
+参见 [getAVCastController](#getavcastcontroller)
+
 
 ## getAVCastController
 
@@ -157,6 +183,10 @@ function getAVCastController(sessionId: string): Promise<AVCastController>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | server exception |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | session does not exist |
 
+**示例**
+
+参见 [getAVCastController](#getavcastcontroller)
+
 
 ## getAVCastController
 
@@ -196,4 +226,8 @@ Get the current session's remote controller client. If the avsession is not unde
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | server exception |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | session does not exist |
+
+**示例**
+
+参见 [getAVCastController](#getavcastcontroller)
 

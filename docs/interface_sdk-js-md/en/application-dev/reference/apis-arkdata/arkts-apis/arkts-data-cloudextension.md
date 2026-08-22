@@ -36,8 +36,8 @@ import { cloudExtension } from '@kit.ArkData';
 | [AppSchema](arkts-arkdata-cloudextension-appschema-i-sys.md) | Represents the application database schema. |
 | [AssetLoader](arkts-arkdata-cloudextension-assetloader-i-sys.md) | Provides APIs for uploading and downloading assets. |
 | [CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md) | Represents the cloud asset information. |
-| [CloudDB](arkts-arkdata-cloudextension-clouddb-i-sys.md) | Provides APIs for performing cloud database operations. |
 | [CloudData](arkts-arkdata-cloudextension-clouddata-i-sys.md) | Represents the cloud data. |
+| [CloudDB](arkts-arkdata-cloudextension-clouddb-i-sys.md) | Provides APIs for performing cloud database operations. |
 | [CloudInfo](arkts-arkdata-cloudextension-cloudinfo-i-sys.md) | Represents the cloud information. |
 | [CloudService](arkts-arkdata-cloudextension-cloudservice-i-sys.md) | Provides APIs for interacting with the cloud sync service. You need to inherit this class and implement APIs of this class. The system calls these APIs to connect to the cloud and use the cloud sync service. |
 | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | Represents the database information. |

@@ -31,9 +31,39 @@ Updates a contact. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts](arkts-contacts-contact-selectcontacts-f.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the updated contact is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the updated contact is returned. If the operation fails, an error code is returned. |
 
 **Examples**
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Select a contact via selectContacts.
+contact.selectContacts().then((data) => {
+  // Obtain the context within the component.
+  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  contact.updateContact(context, {
+    id: data[0].id, // Select the contact ID.
+    name: {
+      fullName: 'xxx'
+    },
+    phoneNumbers: [{
+      phoneNumber: '138xxxxxxxx'
+    }]
+  }, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in updating Contact.');
+  });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -56,6 +86,122 @@ contact.selectContacts().then((data) => {
       return;
     }
     console.info('Succeeded in updating Contact.');
+  });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Select a contact via selectContacts.
+contact.selectContacts().then((data) => {
+  // Obtain the context within the component.
+  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  contact.updateContact(context, {
+    id: data[0].id, // Select the contact ID.
+    name: {
+      fullName: 'xxx'
+    },
+    phoneNumbers: [{
+      phoneNumber: '138xxxxxxxx'
+    }]
+  }, {
+    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+  }, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in updating Contact.');
+  });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Select a contact via selectContacts.
+contact.selectContacts().then((data) => {
+  contact.updateContact({
+    id: data[0].id, // Select the contact ID.
+    name: {
+      fullName: 'xxx'
+    },
+    phoneNumbers: [{
+      phoneNumber: '138xxxxxxxx'
+    }]
+  }, {
+    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+  }, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in updating Contact.');
+  });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+  import { common } from '@kit.AbilityKit';
+
+  // Select a contact via selectContacts.
+  contact.selectContacts().then((data) => {
+    // Obtain the context within the component.
+    let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+    let promise = contact.updateContact(context, {
+      id: data[0].id, // Select the contact ID.
+      name: {
+        fullName: 'xxx'
+      },
+      phoneNumbers: [{
+        phoneNumber: '138xxxxxxxx'
+      }]
+    }, {
+      attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+    });
+    promise.then(() => {
+      console.info('Succeeded in updating Contact.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
+  });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Select a contact via selectContacts.
+contact.selectContacts().then((data) => {
+  let promise = contact.updateContact({
+    id: data[0].id, // Select the contact ID.
+    name: {
+      fullName: 'xxx'
+    },
+    phoneNumbers: [{
+      phoneNumber: '138xxxxxxxx'
+    }]
+  }, {
+    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+  });
+  promise.then(() => {
+    console.info('Succeeded in updating Contact.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
   });
 }).catch((err: BusinessError) => {
   console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
@@ -85,7 +231,7 @@ Updates a contact. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | context | Context | Yes | Indicates the context of application or capability. |
 | contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts](arkts-contacts-contact-selectcontacts-f.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the updated contact is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the updated contact is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -96,35 +242,7 @@ Updates a contact. This API uses an asynchronous callback to return the result.
 
 **Examples**
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Select a contact via selectContacts.
-contact.selectContacts().then((data) => {
-  // Obtain the context within the component.
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  contact.updateContact(context, {
-    id: data[0].id, // Select the contact ID.
-    name: {
-      fullName: 'xxx'
-    },
-    phoneNumbers: [{
-      phoneNumber: '138xxxxxxxx'
-    }]
-  }, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in updating Contact.');
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [updateContact](#updatecontact)
 
 
 ## updateContact
@@ -153,36 +271,11 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 | --- | --- | --- | --- |
 | contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts](arkts-contacts-contact-selectcontacts-f.md). |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes | Contact attribute list. If this parameter is left empty, all attribute fields of the contact are updated, including the name, phone number, and email address. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the updated contact is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the updated contact is returned. If the operation fails, an error code is returned. |
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Select a contact via selectContacts.
-contact.selectContacts().then((data) => {
-  contact.updateContact({
-    id: data[0].id, // Select the contact ID.
-    name: {
-      fullName: 'xxx'
-    },
-    phoneNumbers: [{
-      phoneNumber: '138xxxxxxxx'
-    }]
-  }, {
-    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-  }, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in updating Contact.');
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [updateContact](#updatecontact)
 
 
 ## updateContact
@@ -208,7 +301,7 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 | context | Context | Yes | Indicates the context of application or capability. |
 | contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts](arkts-contacts-contact-selectcontacts-f.md). |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes | Contact attribute list. If this parameter is left empty, all attribute fields of the contact are updated, including the name, phone number, and email address. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the updated contact is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the updated contact is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -219,37 +312,7 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 **Examples**
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Select a contact via selectContacts.
-contact.selectContacts().then((data) => {
-  // Obtain the context within the component.
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  contact.updateContact(context, {
-    id: data[0].id, // Select the contact ID.
-    name: {
-      fullName: 'xxx'
-    },
-    phoneNumbers: [{
-      phoneNumber: '138xxxxxxxx'
-    }]
-  }, {
-    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-  }, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in updating Contact.');
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [updateContact](#updatecontact)
 
 
 ## updateContact
@@ -287,31 +350,7 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Select a contact via selectContacts.
-contact.selectContacts().then((data) => {
-  let promise = contact.updateContact({
-    id: data[0].id, // Select the contact ID.
-    name: {
-      fullName: 'xxx'
-    },
-    phoneNumbers: [{
-      phoneNumber: '138xxxxxxxx'
-    }]
-  }, {
-    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-  });
-  promise.then(() => {
-    console.info('Succeeded in updating Contact.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [updateContact](#updatecontact)
 
 
 ## updateContact
@@ -353,34 +392,5 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 **Examples**
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-  import { common } from '@kit.AbilityKit';
-
-  // Select a contact via selectContacts.
-  contact.selectContacts().then((data) => {
-    // Obtain the context within the component.
-    let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-    let promise = contact.updateContact(context, {
-      id: data[0].id, // Select the contact ID.
-      name: {
-        fullName: 'xxx'
-      },
-      phoneNumbers: [{
-        phoneNumber: '138xxxxxxxx'
-      }]
-    }, {
-      attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-    });
-    promise.then(() => {
-      console.info('Succeeded in updating Contact.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
-  });
-```
+See [updateContact](#updatecontact)
 

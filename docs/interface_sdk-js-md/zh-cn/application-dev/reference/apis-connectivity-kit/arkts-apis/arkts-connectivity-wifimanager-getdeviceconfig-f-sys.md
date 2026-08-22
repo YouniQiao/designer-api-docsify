@@ -48,3 +48,17 @@ function getDeviceConfig(networkId: int): WifiDeviceConfig
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [2501000](../errorcode-wifi.md#2501000-sta内部异常) | Operation failed. |
 
+**示例**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+  try {
+    let networkId = 0;
+    let config = wifiManager.getDeviceConfig(networkId);
+    console.info(`config: ${JSON.stringify(config)}`);    
+  }catch(error){
+    console.error(`failed: ${JSON.stringify(error)}`);
+  }
+```
+

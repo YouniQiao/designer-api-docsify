@@ -48,12 +48,44 @@ function answerCall(callId: int, callback: AsyncCallback<void>): void
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+call.answerCall((err: BusinessError) => {
+    if (err) {
+        console.error(`answerCall fail, 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
+    } else {
+        console.info(`answerCall success.`);
+    }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 call.answerCall(1, (err: BusinessError) => {
     if (err) {
         console.error(`answerCall fail, err->${JSON.stringify(err)}`);
     } else {
         console.info(`answerCall success.`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.answerCall(1).then(() => {
+    console.info(`answerCall success.`);
+}).catch((err: BusinessError) => {
+    console.error(`answerCall fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.answerCall(0, 1).then(() => {
+    console.info(`answerCall success.`);
+}).catch((err: BusinessError) => {
+    console.error(`answerCall fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -102,15 +134,7 @@ function answerCall(callId?: int): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.answerCall(1).then(() => {
-    console.info(`answerCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`answerCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [answerCall](#answercall)
 
 
 ## answerCall
@@ -151,17 +175,7 @@ function answerCall(callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.answerCall((err: BusinessError) => {
-    if (err) {
-        console.error(`answerCall fail, 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-    } else {
-        console.info(`answerCall success.`);
-    }
-});
-```
+参见 [answerCall](#answercall)
 
 
 ## answerCall
@@ -209,15 +223,7 @@ function answerCall(videoState: VideoStateType, callId: int): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.answerCall(0, 1).then(() => {
-    console.info(`answerCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`answerCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [answerCall](#answercall)
 
 
 ## answerCall
@@ -262,4 +268,8 @@ function answerCall(videoState: VideoStateType, callId: int, isRtt: boolean): Pr
 | 8400002 | Operation failed. Cannot connect to service. |
 | 8400003 | System internal error. |
 | 8400999 | Unknown error code. |
+
+**示例**
+
+参见 [answerCall](#answercall)
 

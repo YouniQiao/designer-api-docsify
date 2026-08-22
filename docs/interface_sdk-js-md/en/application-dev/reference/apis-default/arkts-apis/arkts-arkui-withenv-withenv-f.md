@@ -36,5 +36,5 @@ Define the WithEnv component that allows setting environment properties for chil
 
 | Type | Description |
 | --- | --- |
-| [WithEnvAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkuiwithenv-withenvattribute-c.md) |  |
+| [WithEnvAttribute](arkts-arkui-withenv-withenvattribute-i.md) |  |
 

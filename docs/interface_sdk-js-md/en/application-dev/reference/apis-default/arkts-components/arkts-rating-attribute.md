@@ -102,28 +102,6 @@ setRatingOptions(options?: RatingOptions): this
 
 | Type | Description |
 | --- | --- |
-## starStyle
-
-```TypeScript
-starStyle(options: StarStyleOptions | undefined): this
-```
-
-**Since:** -1
-
-**ArkTS mode:** ArkTS-Sta since version -1.
-
-<!--Device-RatingAttribute-starStyle(options: StarStyleOptions | undefined): this--><!--Device-RatingAttribute-starStyle(options: StarStyleOptions | undefined): this-End-->
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [StarStyleOptions](arkts-rating-starstyleoptions-i.md) \| undefined | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## stars
 
 ```TypeScript
@@ -141,6 +119,28 @@ stars(value: int | undefined): this
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | int \| undefined | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## starStyle
+
+```TypeScript
+starStyle(options: StarStyleOptions | undefined): this
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Sta since version -1.
+
+<!--Device-RatingAttribute-starStyle(options: StarStyleOptions | undefined): this--><!--Device-RatingAttribute-starStyle(options: StarStyleOptions | undefined): this-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [StarStyleOptions](arkts-rating-starstyleoptions-i.md) \| undefined | Yes |  |
 
 **Return value:**
 

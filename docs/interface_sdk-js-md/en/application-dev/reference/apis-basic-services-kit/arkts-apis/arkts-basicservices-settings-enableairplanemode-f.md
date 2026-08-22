@@ -28,7 +28,7 @@ Enables or disables airplane mode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Specifies whether to enable airplane mode. The value {@code true} means to enable airplane mode, and {@code false} means to disable airplane mode. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of enableAirplaneMode result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of enableAirplaneMode result. |
 
 **Examples**
 
@@ -40,6 +40,15 @@ settings.enableAirplaneMode(isEnabled, (err:Error) => {
         return;
     }
     console.info('Return true if enable.');
+})
+```
+
+```TypeScript
+let isEnabled :boolean = true;
+settings.enableAirplaneMode(isEnabled).then(() => {
+  console.info('Succeeded in enabling AirplaneMode.');
+}).catch((err:Error) => {
+  console.error(`Failed to enable AirplaneMode. Cause: ${err}`);
 })
 ```
 
@@ -74,12 +83,5 @@ Enables or disables airplane mode.
 
 **Examples**
 
-```TypeScript
-let isEnabled :boolean = true;
-settings.enableAirplaneMode(isEnabled).then(() => {
-  console.info('Succeeded in enabling AirplaneMode.');
-}).catch((err:Error) => {
-  console.error(`Failed to enable AirplaneMode. Cause: ${err}`);
-})
-```
+See [enableAirplaneMode](#enableairplanemode)
 

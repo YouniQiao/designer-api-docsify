@@ -16,3 +16,17 @@ Defines the level-2 module StartAbilityParameter.
 
 **Property type:** _StartAbilityParameter
 
+**Examples**
+
+```TypeScript
+import { ability } from '@kit.AbilityKit';
+
+let dataAbilityHelper: ability.DataAbilityHelper;
+let pacMap: ability.PacMap;
+let dataAbilityOperation: ability.DataAbilityOperation;
+let dataAbilityResult: ability.DataAbilityResult;
+let abilityResult: ability.AbilityResult;
+let connectOptions: ability.ConnectOptions;  
+let startAbilityParameter: ability.StartAbilityParameter;
+```
+

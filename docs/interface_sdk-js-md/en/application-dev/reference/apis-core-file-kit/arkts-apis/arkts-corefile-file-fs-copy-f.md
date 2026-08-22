@@ -32,7 +32,7 @@ A maximum of 10 cross-device copy tasks are allowed at the same time, and the nu
 | --- | --- | --- | --- |
 | srcUri | string | Yes | URI of the file or directory to copy. |
 | destUri | string | Yes | URI of the destination file or directory. |
-| options | [CopyOptions](arkts-corefile-filefs-copyoptions-i.md) | No | Callback invoked to provide the copy progress. If this parameter is not set, the callback will not be invoked. |
+| options | [CopyOptions](arkts-corefile-file-fs-copyoptions-i.md) | No | Callback invoked to provide the copy progress. If this parameter is not set, the callback will not be invoked. |
 
 **Return value:**
 
@@ -71,6 +71,89 @@ A maximum of 10 cross-device copy tasks are allowed at the same time, and the nu
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
 
+**Examples**
+
+```TypeScript
+import { fileIo as fs } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let srcDirPathLocal: string = pathDir + "/src";
+let dstDirPathLocal: string = pathDir + "/dest";
+
+let srcDirUriLocal: string = fileUri.getUriFromPath(srcDirPathLocal);
+let dstDirUriLocal: string = fileUri.getUriFromPath(dstDirPathLocal);
+
+let progressListener: fs.ProgressListener = (progress: fs.Progress) => {
+  console.info(`progressSize: ${progress.processedSize}, totalSize: ${progress.totalSize}`);
+};
+let copyOption: fs.CopyOptions = {
+  "progressListener" : progressListener
+}
+try {
+  fs.copy(srcDirUriLocal, dstDirUriLocal, copyOption).then(()=>{
+    console.info("Succeeded in copying.");
+  }).catch((err: BusinessError)=>{
+    console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch(err) {
+  console.error(`Failed to copy.Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let srcDirPathLocal: string = pathDir + "/src";
+let dstDirPathLocal: string = pathDir + "/dest";
+
+let srcDirUriLocal: string = fileUri.getUriFromPath(srcDirPathLocal);
+let dstDirUriLocal: string = fileUri.getUriFromPath(dstDirPathLocal);
+
+try {
+  fs.copy(srcDirUriLocal, dstDirUriLocal, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info("Succeeded in copying.");
+  })
+} catch(err) {
+  console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { fileIo as fs } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let srcDirPathLocal: string = pathDir + "/src";
+let dstDirPathLocal: string = pathDir + "/dest";
+
+let srcDirUriLocal: string = fileUri.getUriFromPath(srcDirPathLocal);
+let dstDirUriLocal: string = fileUri.getUriFromPath(dstDirPathLocal);
+
+try {
+  let progressListener: fs.ProgressListener = (progress: fs.Progress) => {
+    console.info(`progressSize: ${progress.processedSize}, totalSize: ${progress.totalSize}`);
+  };
+  let copyOption: fs.CopyOptions = {
+    "progressListener" : progressListener
+  }
+  fs.copy(srcDirUriLocal, dstDirUriLocal, copyOption, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info("Succeeded in copying.");
+  })
+} catch(err) {
+  console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## copy
 
@@ -94,7 +177,7 @@ File copy across devices is supported. This API forcibly overwrites the file or 
 | --- | --- | --- | --- |
 | srcUri | string | Yes | URI of the file or directory to copy. |
 | destUri | string | Yes | URI of the destination file or directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -125,6 +208,10 @@ File copy across devices is supported. This API forcibly overwrites the file or 
 | 13900038 | Value too large for defined data type |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [copy](#copy)
 
 
 ## copy
@@ -149,8 +236,8 @@ File copy across devices is supported. This API forcibly overwrites the file or 
 | --- | --- | --- | --- |
 | srcUri | string | Yes | URI of the file or directory to copy. |
 | destUri | string | Yes | URI of the destination file or directory. |
-| options | [CopyOptions](arkts-corefile-filefs-copyoptions-i.md) | Yes | Callback used to return the copy progress. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| options | [CopyOptions](arkts-corefile-file-fs-copyoptions-i.md) | Yes | Callback used to return the copy progress. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -181,4 +268,8 @@ File copy across devices is supported. This API forcibly overwrites the file or 
 | 13900038 | Value too large for defined data type |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [copy](#copy)
 

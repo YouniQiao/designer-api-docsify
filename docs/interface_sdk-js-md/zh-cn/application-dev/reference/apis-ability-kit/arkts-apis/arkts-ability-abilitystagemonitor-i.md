@@ -1,6 +1,6 @@
 # AbilityStageMonitor
 
-本模块提供监听指定[AbilityStage](arkts-ability-appabilityabilitystage-abilitystage-c.md)对象的能力。开发者可以将AbilityStageMonitor作为 [abilityDelegator.waitAbilityStageMonitor](arkts-ability-abilitydelegator-i.md#waitabilitystagemonitor) 的入参来注册监听。
+本模块提供监听指定[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)对象的能力。开发者可以将AbilityStageMonitor作为 [abilityDelegator.waitAbilityStageMonitor](arkts-ability-abilitydelegator-i.md#waitabilitystagemonitor) 的入参来注册监听。
 
 **起始版本：** 23
 
@@ -43,4 +43,24 @@ srcEntrance: string
 <!--Device-AbilityStageMonitor-srcEntrance: string--><!--Device-AbilityStageMonitor-srcEntrance: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**示例**
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+let monitor: abilityDelegatorRegistry.AbilityStageMonitor = {
+  moduleName: 'feature_as1',
+  srcEntrance: './ets/Application/MyAbilityStage.ts',
+};
+
+let abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.waitAbilityStageMonitor(monitor, (error, data) => {
+  if (error) {
+    console.error(`waitAbilityStageMonitor fail. Code: ${error.code}, message: ${error.message}`);
+  } else {
+    console.info(`waitAbilityStageMonitor success, data: ${JSON.stringify(data)}`);
+  }
+});
+```
 

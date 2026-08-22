@@ -13,17 +13,17 @@ import { MarginTypeV2, PromptOptionsV2, PromptOptionsV2Config, ExceptionPromptV2
 
 | Name | Description |
 | --- | --- |
-| [ExceptionPrompt](arkts-arkui-arkuiadvancedexceptionprompt-exceptionprompt-s.md) | Declare struct ExceptionPrompt higher-order component. |
+| [ExceptionPrompt](arkts-arkui-arkui-advanced-exceptionprompt-exceptionprompt-s.md) | Declare struct ExceptionPrompt higher-order component. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [PromptOptions](arkts-arkui-arkuiadvancedexceptionprompt-promptoptions-i.md) | Configuration parameter of ExceptionPrompt. @interface PromptOptions |
+| [PromptOptions](arkts-arkui-arkui-advanced-exceptionprompt-promptoptions-i.md) | Configuration parameter of ExceptionPrompt. @interface PromptOptions |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [MarginType](arkts-arkui-arkuiadvancedexceptionprompt-margintype-e.md) | Control margin status of ExceptionPrompt. @enum { number } |
+| [MarginType](arkts-arkui-arkui-advanced-exceptionprompt-margintype-e.md) | Control margin status of ExceptionPrompt. @enum { number } |
 

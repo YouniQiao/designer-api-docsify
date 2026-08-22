@@ -54,3 +54,7 @@ function getInputMethodAbility(): InputMethodAbility | null
 | --- | --- |
 | [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) \| null | 输入法能力对象。 |
 
+**示例**
+
+参见 [getInputMethodAbility](#getinputmethodability)
+

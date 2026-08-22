@@ -31,6 +31,22 @@ Description of the download task.
 
 **System capability:** SystemCapability.MiscServices.Download
 
+## downloadedBytes
+
+```TypeScript
+downloadedBytes: long
+```
+
+Real-time download size, in bytes.
+
+**Type:** long
+
+**Since:** 23
+
+<!--Device-DownloadInfo-downloadedBytes: long--><!--Device-DownloadInfo-downloadedBytes: long-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
 ## downloadId
 
 ```TypeScript
@@ -76,22 +92,6 @@ Total size of the files to download, in bytes.
 **Since:** 23
 
 <!--Device-DownloadInfo-downloadTotalBytes: long--><!--Device-DownloadInfo-downloadTotalBytes: long-End-->
-
-**System capability:** SystemCapability.MiscServices.Download
-
-## downloadedBytes
-
-```TypeScript
-downloadedBytes: long
-```
-
-Real-time download size, in bytes.
-
-**Type:** long
-
-**Since:** 23
-
-<!--Device-DownloadInfo-downloadedBytes: long--><!--Device-DownloadInfo-downloadedBytes: long-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 

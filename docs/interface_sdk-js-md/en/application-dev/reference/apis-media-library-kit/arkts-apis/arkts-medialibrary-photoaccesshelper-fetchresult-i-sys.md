@@ -51,3 +51,35 @@ Obtains the file asset array of a specified length (second parameter) from the s
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. <br>Possible causes: index or offset validity check failed. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. <br>Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. |
 
+**Examples**
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { photoAccessHelper} from '@kit.MediaLibraryKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getRangeObjectsDemo');
+  type PhotoAsset = photoAccessHelper.PhotoAsset;
+  let testNum: string = "getRangeObjects_test_003";
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+  };
+  let fetchResult1: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> =
+      await phAccessHelper.getAssets(fetchOptions);
+  let fetchResult2: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> =
+      await phAccessHelper.getAssets(fetchOptions);
+  let count: number = fetchResult1.getCount();
+  const half: number = Math.ceil(count / 2);
+  let promises: Promise<PhotoAsset[]>[] = [];
+  promises[0] = fetchResult1.getRangeObjects(0, half);
+  promises[1] = fetchResult2.getRangeObjects(half, count - half);
+  let photoAssetsArray: PhotoAsset[][] = await Promise.all(promises);
+  let photoAssets: PhotoAsset[] = photoAssetsArray[0].concat(photoAssetsArray[1]);
+  console.info('photoAssets length: ', photoAssets.length);
+}
+```
+

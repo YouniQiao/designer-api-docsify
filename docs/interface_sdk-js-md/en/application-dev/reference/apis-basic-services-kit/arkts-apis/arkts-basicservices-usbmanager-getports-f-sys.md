@@ -33,3 +33,9 @@ Obtains the list of all physical USB ports. When the developer mode is disabled,
 | --- | --- |
 | Array&lt;USBPort&gt; | List of physical USB ports. |
 
+**Examples**
+
+```TypeScript
+let ret: Array<usbManager.USBPort> = usbManager.getPorts();
+```
+

@@ -31,7 +31,7 @@ Executes a call to an intent. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | param | [ExecuteParam](arkts-ability-insightintentdriver-executeparam-i-sys.md) | Yes | Parameter used to execute the intent call. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;insightIntent.ExecuteResult&gt; | Yes | Callback used to return the intent call execution result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;insightIntent.ExecuteResult&gt; | Yes | Callback used to return the intent call execution result. |
 
 **Error codes:**
 
@@ -85,6 +85,32 @@ import { insightIntentDriver, insightIntent } from '@kit.AbilityKit';
         hilog.info(0x0000, 'testTag', 'execute insight intent return %{public}d', data.code);
         hilog.info(0x0000, 'testTag', 'execute insight intent result %{public}s', JSON.stringify(data.result));
       })
+    } catch (error) {
+      hilog.error(0x0000, 'testTag', 'execute insight intent error caught %{public}s', JSON.stringify(error));
+    }
+  }
+```
+
+```TypeScript
+import { insightIntentDriver, insightIntent } from '@kit.AbilityKit';
+  import { hilog } from '@kit.PerformanceAnalysisKit';
+
+  async function executeSearchMusicIntentPromise() {
+    let param: insightIntentDriver.ExecuteParam = {
+      bundleName: 'com.ohos.intentexecutedemo',
+      moduleName: 'entry',
+      abilityName: 'EntryAbility',
+      insightIntentName: 'PlayMusic',
+      insightIntentParam: {
+        songName: 'City Of Stars',
+      },
+      executeMode: insightIntent.ExecuteMode.UI_ABILITY_FOREGROUND,
+    };
+
+    try {
+      let resultData: insightIntent.ExecuteResult = await insightIntentDriver.execute(param);
+      hilog.info(0x0000, 'testTag', 'execute insight intent return %{public}d', resultData.code);
+      hilog.info(0x0000, 'testTag', 'execute insight intent result %{public}s', JSON.stringify(resultData.result));
     } catch (error) {
       hilog.error(0x0000, 'testTag', 'execute insight intent error caught %{public}s', JSON.stringify(error));
     }
@@ -150,29 +176,5 @@ Executes a call to an intent. This API uses a promise to return the result. When
 
 **Examples**
 
-```TypeScript
-import { insightIntentDriver, insightIntent } from '@kit.AbilityKit';
-  import { hilog } from '@kit.PerformanceAnalysisKit';
-
-  async function executeSearchMusicIntentPromise() {
-    let param: insightIntentDriver.ExecuteParam = {
-      bundleName: 'com.ohos.intentexecutedemo',
-      moduleName: 'entry',
-      abilityName: 'EntryAbility',
-      insightIntentName: 'PlayMusic',
-      insightIntentParam: {
-        songName: 'City Of Stars',
-      },
-      executeMode: insightIntent.ExecuteMode.UI_ABILITY_FOREGROUND,
-    };
-
-    try {
-      let resultData: insightIntent.ExecuteResult = await insightIntentDriver.execute(param);
-      hilog.info(0x0000, 'testTag', 'execute insight intent return %{public}d', resultData.code);
-      hilog.info(0x0000, 'testTag', 'execute insight intent result %{public}s', JSON.stringify(resultData.result));
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', 'execute insight intent error caught %{public}s', JSON.stringify(error));
-    }
-  }
-```
+See [execute](#execute)
 

@@ -19,5 +19,5 @@
 
 | Name | Description |
 | --- | --- |
-| [ParallelOption](arkts-arkui-arkuiparallelize-paralleloption-i.md) | Describe the options for the ParallelizeUI. |
+| [ParallelOption](arkts-arkui-arkui-parallelize-paralleloption-i.md) | Describe the options for the ParallelizeUI. |
 

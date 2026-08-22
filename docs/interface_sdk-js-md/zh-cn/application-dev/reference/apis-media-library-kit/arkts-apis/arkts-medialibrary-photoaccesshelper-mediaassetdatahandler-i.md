@@ -45,6 +45,55 @@ map支持返回的信息：
 | data | T | 是 | 已就绪的图片资源数据。泛型，支持ArrayBuffer, [ImageSource](../../apis-image-kit/arkts-apis/arkts-image-image-imagesource-i.md), [MovingPhoto](arkts-medialibrary-photoaccesshelper-movingphoto-i.md)和boolean四种数据类型。 |
 | map | Map&lt;string, string&gt; | 否 | 用于获取图片资源的额外信息，如图片质量。当前仅支持'quality'。<br>**起始版本：** 12 |
 
+**示例**
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+
+class MediaHandler implements photoAccessHelper.MediaAssetDataHandler<image.ImageSource> {
+  onDataPrepared = (data: image.ImageSource, map: Map<string, string>) => {
+    if (data === undefined) {
+      console.error('Error occurred when preparing data');
+      return;
+    }
+    // 自定义对ImageSource的处理逻辑。
+    console.info('on image data prepared, photo quality is ' + map['quality']);
+  }
+}
+
+class MediaDataHandler implements photoAccessHelper.MediaAssetDataHandler<ArrayBuffer> {
+  onDataPrepared = (data: ArrayBuffer, map: Map<string, string>) => {
+    if (data === undefined) {
+      console.error('Error occurred when preparing data');
+      return;
+    }
+    // 自定义对ArrayBuffer的处理逻辑。
+    console.info('on image data prepared, photo quality is ' + map['quality']);
+  }
+}
+
+class MovingPhotoHandler implements photoAccessHelper.MediaAssetDataHandler<photoAccessHelper.MovingPhoto> {
+  onDataPrepared = (data: photoAccessHelper.MovingPhoto, map: Map<string, string>) => {
+    if (data === undefined) {
+      console.error('Error occurred when preparing data');
+      return;
+    }
+    // 自定义对MovingPhoto的处理逻辑。
+    console.info('on image data prepared, photo quality is ' + map['quality']);
+  }
+}
+```
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+
+class MediaHandler implements photoAccessHelper.QuickImageDataHandler<image.Picture> {
+  onDataPrepared(data: image.Picture, imageSource: image.ImageSource, map: Map<string, string>) {
+    console.info('on image data prepared');
+  }
+}
+```
+
 ## onDataPrepared
 
 ```TypeScript
@@ -65,4 +114,8 @@ onDataPrepared(data: T | undefined, map?: Map<string, string>): void
 | --- | --- | --- | --- |
 | data | T \| undefined | 是 | the returned data of media asset if data of media asset is invalid, return undefined. |
 | map | Map&lt;string, string&gt; | 否 | additional information for the data |
+
+**示例**
+
+参见 [onDataPrepared](#ondataprepared)
 

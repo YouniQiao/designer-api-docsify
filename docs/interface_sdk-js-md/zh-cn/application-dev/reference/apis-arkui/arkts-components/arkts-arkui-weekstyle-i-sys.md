@@ -61,6 +61,50 @@ Style of week color.
 
 **系统接口：** 此接口为系统接口。
 
+## weekendDayColor
+
+```TypeScript
+weekendDayColor?: ResourceColor
+```
+
+Style of week day color.
+
+**类型：** ResourceColor
+
+**起始版本：** 7
+
+**废弃版本：** 20
+
+**卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-WeekStyle-weekendDayColor?: ResourceColor--><!--Device-WeekStyle-weekendDayColor?: ResourceColor-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**系统接口：** 此接口为系统接口。
+
+## weekendLunarColor
+
+```TypeScript
+weekendLunarColor?: ResourceColor
+```
+
+Style of lunar color.
+
+**类型：** ResourceColor
+
+**起始版本：** 7
+
+**废弃版本：** 20
+
+**卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-WeekStyle-weekendLunarColor?: ResourceColor--><!--Device-WeekStyle-weekendLunarColor?: ResourceColor-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**系统接口：** 此接口为系统接口。
+
 ## weekFontSize
 
 ```TypeScript
@@ -122,50 +166,6 @@ Style of week width.
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-WeekStyle-weekWidth?: number--><!--Device-WeekStyle-weekWidth?: number-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**系统接口：** 此接口为系统接口。
-
-## weekendDayColor
-
-```TypeScript
-weekendDayColor?: ResourceColor
-```
-
-Style of week day color.
-
-**类型：** ResourceColor
-
-**起始版本：** 7
-
-**废弃版本：** 20
-
-**卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-WeekStyle-weekendDayColor?: ResourceColor--><!--Device-WeekStyle-weekendDayColor?: ResourceColor-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**系统接口：** 此接口为系统接口。
-
-## weekendLunarColor
-
-```TypeScript
-weekendLunarColor?: ResourceColor
-```
-
-Style of lunar color.
-
-**类型：** ResourceColor
-
-**起始版本：** 7
-
-**废弃版本：** 20
-
-**卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-WeekStyle-weekendLunarColor?: ResourceColor--><!--Device-WeekStyle-weekendLunarColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

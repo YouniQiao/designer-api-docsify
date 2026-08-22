@@ -53,6 +53,19 @@ policy.getBackgroundPolicyByUid(11111, (error: BusinessError, data: policy.NetBa
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .getBackgroundPolicyByUid(11111)
+  .then((data: policy.NetBackgroundPolicy) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
+
 
 ## getBackgroundPolicyByUid
 
@@ -97,16 +110,5 @@ function getBackgroundPolicyByUid(uid: int): Promise<NetBackgroundPolicy>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .getBackgroundPolicyByUid(11111)
-  .then((data: policy.NetBackgroundPolicy) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+参见 [getBackgroundPolicyByUid](#getbackgroundpolicybyuid)
 

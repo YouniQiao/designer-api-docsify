@@ -30,7 +30,7 @@ Queries the participants based on the sharing invitation code. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | invitationCode | string | Yes | Invitation code of the share. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Result&lt;Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt; | Yes | Callback used to return the participants obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt; | Yes | Callback used to return the participants obtained. |
 
 **Error codes:**
 
@@ -41,6 +41,16 @@ Queries the participants based on the sharing invitation code. This API uses an 
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+cloudData.sharing.queryParticipantsByInvitation('sharing_invitation_code_test').then((result) => {
+  console.info(`query participants by invitation succeeded, result: ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`query participants by invitation failed, code is ${err.code},message is ${err.message}`);
+})
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -93,13 +103,5 @@ Queries the participants based on the sharing invitation code. This API uses a p
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-cloudData.sharing.queryParticipantsByInvitation('sharing_invitation_code_test').then((result) => {
-  console.info(`query participants by invitation succeeded, result: ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`query participants by invitation failed, code is ${err.code},message is ${err.message}`);
-})
-```
+See [queryParticipantsByInvitation](#queryparticipantsbyinvitation)
 

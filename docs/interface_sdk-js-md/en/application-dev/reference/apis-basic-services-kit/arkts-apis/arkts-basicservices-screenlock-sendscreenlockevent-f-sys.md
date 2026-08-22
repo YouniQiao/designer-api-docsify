@@ -30,7 +30,7 @@ The screen lock app sends the event to the screen lock service.
 | --- | --- | --- | --- |
 | event | String | Yes | event type. |
 | parameter | int | Yes | operation result of the event. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | the callback of sendScreenLockEvent. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of sendScreenLockEvent. |
 
 **Error codes:**
 
@@ -52,6 +52,16 @@ screenLock.sendScreenLockEvent('unlockScreenResult', 0, (err: BusinessError, res
     return;
   }
   console.info(`Succeeded in Sending screenlock event. result: ${result}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+screenLock.sendScreenLockEvent('unlockScreenResult', 0).then((result: Boolean) => {
+  console.info(`Succeeded in Sending screenlock event. result: ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to send screenlock event, Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -98,13 +108,5 @@ The screen lock app sends the event to the screen lock service.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-screenLock.sendScreenLockEvent('unlockScreenResult', 0).then((result: Boolean) => {
-  console.info(`Succeeded in Sending screenlock event. result: ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to send screenlock event, Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [sendScreenLockEvent](#sendscreenlockevent)
 

@@ -12,7 +12,7 @@ import { abilityManager } from '@kit.AbilityKit';
 function clearPreloadedUIExtensionAbility(preloadId: int): Promise<void>
 ```
 
-清除指定的[UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md)实例。使用Promise异步回调。
+清除指定的[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)实例。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -30,7 +30,7 @@ function clearPreloadedUIExtensionAbility(preloadId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| preloadId | int | 是 | 预加载[UIExtensionAbility](arkts-ability-appabilityuiextensionability-uiextensionability-c.md)实例的ID。 |
+| preloadId | int | 是 | 预加载[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)实例的ID。 |
 
 **返回值：**
 

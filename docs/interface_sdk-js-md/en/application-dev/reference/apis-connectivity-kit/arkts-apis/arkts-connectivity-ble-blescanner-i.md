@@ -14,38 +14,6 @@ Manages the ble scanner. Before calling a ble scanner method, you must use [crea
 import { ble } from '@kit.ConnectivityKit';
 ```
 
-## offBLEDeviceFind
-
-```TypeScript
-offBLEDeviceFind(callback?: Callback<ScanReport>): void
-```
-
-Unsubscribe BLE scan result.
-
-**Since:** 26.0.0
-
-**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BleScanner-offBLEDeviceFind(callback?: Callback<ScanReport>): void--><!--Device-BleScanner-offBLEDeviceFind(callback?: Callback<ScanReport>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScanReport](arkts-connectivity-ble-scanreport-i.md)&gt; | No | Callback used to listen for the scan result event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 2900099 | Operation failed. |
-
 ## off('BLEDeviceFind')
 
 ```TypeScript
@@ -71,7 +39,7 @@ Unsubscribe BLE scan result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEDeviceFind' | Yes | Type of the scan result event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScanReport](arkts-connectivity-ble-scanreport-i.md)&gt; | No | Callback used to listen for the scan result event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScanReport](arkts-connectivity-ble-scanreport-i.md)&gt; | No | Callback used to listen for the scan result event. |
 
 **Error codes:**
 
@@ -98,38 +66,6 @@ try {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
-
-## onBLEDeviceFind
-
-```TypeScript
-onBLEDeviceFind(callback: Callback<ScanReport>): void
-```
-
-Subscribe BLE scan result. If the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
-
-**Since:** 26.0.0
-
-**Required permissions:** ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BleScanner-onBLEDeviceFind(callback: Callback<ScanReport>): void--><!--Device-BleScanner-onBLEDeviceFind(callback: Callback<ScanReport>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScanReport](arkts-connectivity-ble-scanreport-i.md)&gt; | Yes | Callback used to listen for the scan result event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 2900099 | Operation failed. |
 
 ## on('BLEDeviceFind')
 
@@ -158,7 +94,7 @@ Subscribe BLE scan result. On API 26.0.0 and above, if the application has ohos.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEDeviceFind' | Yes | Type of the scan result event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScanReport](arkts-connectivity-ble-scanreport-i.md)&gt; | Yes | Callback used to listen for the scan result event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScanReport](arkts-connectivity-ble-scanreport-i.md)&gt; | Yes | Callback used to listen for the scan result event. |
 
 **Error codes:**
 
@@ -305,6 +241,10 @@ Starts scanning for specified BLE devices with filters.
 | 2900009 | Fails to start scan as it is out of hardware resources. |
 | 2900099 | Operation failed. |
 | 2902050 | Failed to start scan as Ble scan is already started by the app. |
+
+**Examples**
+
+See [startScan](#startscan)
 
 ## stopScan
 

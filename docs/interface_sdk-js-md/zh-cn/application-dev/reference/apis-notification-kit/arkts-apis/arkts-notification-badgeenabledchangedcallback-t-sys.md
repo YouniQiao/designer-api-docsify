@@ -22,3 +22,44 @@ type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) =&gt;
 | --- | --- | --- | --- |
 | data | [EnabledNotificationCallbackData](arkts-notification-notificationsubscriber-enablednotificationcallbackdata-i-sys.md) | 是 | 回调返回监听到的角标使能状态信息。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let BadgeEnabledChangedCallback = (data: notificationSubscribe.EnabledNotificationCallbackData) => {
+  console.info(`onBadgeEnabledChanged, badge enabled state change to: ${JSON.stringify(data)}`);
+};
+let subscriber: notificationSubscribe.NotificationSubscriber = {
+  onBadgeEnabledChanged: BadgeEnabledChangedCallback
+};
+
+notificationSubscribe.subscribeNotification(subscriber).then(() => {
+  console.info('subscribeNotification success');
+}).catch((err: BusinessError) => {
+  console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let BadgeEnabledChangedCallback = (data: notificationSubscribe.EnabledNotificationCallbackData) => {
+  console.info(`onBadgeEnabledChanged, badge enabled state change to: ${JSON.stringify(data)}`);
+};
+let subscriber: notificationSubscribe.NotificationSubscriber = {
+  onBadgeEnabledChanged: BadgeEnabledChangedCallback
+};
+
+notificationSubscribe.subscribeNotification(subscriber).then(() => {
+  console.info('subscribeNotification success');
+}).catch((err: Error) => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`subscribeNotification failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+

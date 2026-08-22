@@ -2,7 +2,7 @@
 
 The Profile of the BLE protocol.
 
-**Since:** 26.0.0
+**Since:** 21
 
 <!--Device-ble-enum BleProfile--><!--Device-ble-enum BleProfile-End-->
 
@@ -16,7 +16,7 @@ GATT = 1
 
 Indicates the profile type of the gatt, including gatt client and gatt server.
 
-**Since:** 26.0.0
+**Since:** 21
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +32,7 @@ GATT_CLIENT = 2
 
 Indicates the profile type of the gatt client.
 
-**Since:** 26.0.0
+**Since:** 21
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +48,7 @@ GATT_SERVER = 3
 
 Indicates the profile type of the gatt server.
 
-**Since:** 26.0.0
+**Since:** 21
 
 **Model restriction:** This API can be used only in the stage model.
 

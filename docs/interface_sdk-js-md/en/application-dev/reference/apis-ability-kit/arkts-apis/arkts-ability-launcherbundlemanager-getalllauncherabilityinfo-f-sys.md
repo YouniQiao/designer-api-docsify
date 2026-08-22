@@ -29,7 +29,7 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;LauncherAbilityInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**, and **data** is the array of [LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md) objects obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;LauncherAbilityInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**, and **data** is the array of [LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md) objects obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -56,6 +56,24 @@ try {
         console.info('data is ' + JSON.stringify(data));
       }
     });
+} catch (errData) {
+  let code = (errData as BusinessError).code;
+  let message = (errData as BusinessError).message;
+  console.error(`errData is errCode:${code}  message:${message}`);
+}
+```
+
+```TypeScript
+import { launcherBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  launcherBundleManager.getAllLauncherAbilityInfo(100)
+    .then((data: launcherBundleManager.LauncherAbilityInfo[]) => {
+      console.info('data is ' + JSON.stringify(data));
+    }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  });
 } catch (errData) {
   let code = (errData as BusinessError).code;
   let message = (errData as BusinessError).message;
@@ -106,21 +124,5 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 
 **Examples**
 
-```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  launcherBundleManager.getAllLauncherAbilityInfo(100)
-    .then((data: launcherBundleManager.LauncherAbilityInfo[]) => {
-      console.info('data is ' + JSON.stringify(data));
-    }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  });
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`errData is errCode:${code}  message:${message}`);
-}
-```
+See [getAllLauncherAbilityInfo](#getalllauncherabilityinfo)
 

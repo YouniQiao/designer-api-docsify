@@ -49,7 +49,7 @@ Adds image and video assets to an album. Before the operation, ensure that the i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | assets | Array&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt; | Yes | Array of the image and video assets to add. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -85,6 +85,35 @@ async function example(mgr: userFileManager.UserFileManager) {
     });
   } catch (err) {
     console.error('addPhotoAssetsDemoCallback failed with error: ' + err);
+  }
+}
+```
+
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  try {
+    console.info('addPhotoAssetsDemoPromise');
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: userFileManager.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let albumFetchResult: userFileManager.FetchResult<userFileManager.Album> = await mgr.getAlbums(userFileManager.AlbumType.USER, userFileManager.AlbumSubType.USER_GENERIC);
+    let album: userFileManager.Album = await albumFetchResult.getFirstObject();
+    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
+    let asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+    album.addPhotoAssets([asset]).then(() => {
+      console.info('album addPhotoAssets successfully');
+    }).catch((err: BusinessError) => {
+      console.error('album addPhotoAssets failed with error: ' + err);
+    });
+  } catch (err) {
+    console.error('addPhotoAssetsDemoPromise failed with error: ' + err);
   }
 }
 ```
@@ -131,34 +160,7 @@ Adds image and video assets to an album. Before the operation, ensure that the i
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  try {
-    console.info('addPhotoAssetsDemoPromise');
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOption: userFileManager.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let albumFetchResult: userFileManager.FetchResult<userFileManager.Album> = await mgr.getAlbums(userFileManager.AlbumType.USER, userFileManager.AlbumSubType.USER_GENERIC);
-    let album: userFileManager.Album = await albumFetchResult.getFirstObject();
-    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
-    let asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-    album.addPhotoAssets([asset]).then(() => {
-      console.info('album addPhotoAssets successfully');
-    }).catch((err: BusinessError) => {
-      console.error('album addPhotoAssets failed with error: ' + err);
-    });
-  } catch (err) {
-    console.error('addPhotoAssetsDemoPromise failed with error: ' + err);
-  }
-}
-```
+See [addPhotoAssets](#addphotoassets)
 
 ## commitModify
 
@@ -186,9 +188,70 @@ Commits the modification on the album attributes to the database. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Examples**
+
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('commitModifyDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
+  let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+  let displayName: string = userFileManager.ImageVideoKey.DISPLAY_NAME.toString();
+  let fileAssetDisplayName: userFileManager.MemberType = fileAsset.get(displayName);
+  console.info('fileAsset get fileAssetDisplayName = ', fileAssetDisplayName);
+  let newFileAssetDisplayName = 'new' + fileAssetDisplayName;
+  console.info('fileAsset newFileAssetDisplayName = ', newFileAssetDisplayName);
+  fileAsset.set(displayName, newFileAssetDisplayName);
+  fileAsset.commitModify((err) => {
+    if (err == undefined) {
+      let commitModifyDisplayName = fileAsset.get(displayName);
+      console.info('fileAsset commitModify successfully, commitModifyDisplayName = ', commitModifyDisplayName);
+    } else {
+      console.error('commitModify failed, message =', err);
+    }
+  });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('commitModifyDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
+  let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+  let displayName = userFileManager.ImageVideoKey.DISPLAY_NAME.toString();
+  let fileAssetDisplayName: userFileManager.MemberType = fileAsset.get(displayName);
+  console.info('fileAsset get fileAssetDisplayName = ', fileAssetDisplayName);
+  let newFileAssetDisplayName = 'new' + fileAssetDisplayName;
+  console.info('fileAsset newFileAssetDisplayName = ', newFileAssetDisplayName);
+  fileAsset.set(displayName, newFileAssetDisplayName);
+  try {
+    await fileAsset.commitModify();
+    let commitModifyDisplayName = fileAsset.get(displayName);
+    console.info('fileAsset commitModify successfully, commitModifyDisplayName = ', commitModifyDisplayName);
+  } catch (err) {
+    console.error('commitModify failed. message = ', err);
+  }
+}
+```
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
@@ -211,6 +274,33 @@ async function example(mgr: userFileManager.UserFileManager) {
       console.info('commitModify successfully');
     }
   });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('albumCommitModifyDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let albumFetchOptions: userFileManager.AlbumFetchOptions = {
+    predicates: predicates
+  };
+  try {
+    let albumList: userFileManager.FetchResult<userFileManager.Album> = await mgr.getPhotoAlbums(albumFetchOptions);
+    let album: userFileManager.Album = await albumList.getFirstObject();
+    album.albumName = 'hello';
+    album.commitModify().then(() => {
+      console.info('commitModify successfully');
+    }).catch((err: BusinessError) => {
+      console.error('commitModify failed with error: ' + err);
+    });
+  } catch (err) {
+    console.error('getPhotoAlbums failed. message = ', err);
+  }
 }
 ```
 
@@ -244,32 +334,7 @@ Commits the modification on the album attributes to the database. This API uses 
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('albumCommitModifyDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: userFileManager.AlbumFetchOptions = {
-    predicates: predicates
-  };
-  try {
-    let albumList: userFileManager.FetchResult<userFileManager.Album> = await mgr.getPhotoAlbums(albumFetchOptions);
-    let album: userFileManager.Album = await albumList.getFirstObject();
-    album.albumName = 'hello';
-    album.commitModify().then(() => {
-      console.info('commitModify successfully');
-    }).catch((err: BusinessError) => {
-      console.error('commitModify failed with error: ' + err);
-    });
-  } catch (err) {
-    console.error('getPhotoAlbums failed. message = ', err);
-  }
-}
-```
+See [commitModify](#commitmodify)
 
 ## deletePhotoAssets
 
@@ -303,7 +368,7 @@ Deletes image or video assets from the recycle bin. Before the operation, ensure
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | assets | Array&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt; | Yes | Array of the image or video assets to delete. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -339,6 +404,35 @@ async function example(mgr: userFileManager.UserFileManager) {
     });
   } catch (err) {
     console.error('deletePhotoAssetsDemoCallback failed with error: ' + err);
+  }
+}
+```
+
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  try {
+    console.info('deletePhotoAssetsDemoPromise');
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: userFileManager.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let albumFetchResult: userFileManager.FetchResult<userFileManager.Album> = await mgr.getAlbums(userFileManager.AlbumType.SYSTEM, userFileManager.AlbumSubType.TRASH);
+    let album: userFileManager.Album = await albumFetchResult.getFirstObject();
+    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await album.getPhotoAssets(fetchOption);
+    let asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+    album.deletePhotoAssets([asset]).then(() => {
+      console.info('album deletePhotoAssets successfully');
+    }).catch((err: BusinessError) => {
+      console.error('album deletePhotoAssets failed with error: ' + err);
+    });
+  } catch (err) {
+    console.error('deletePhotoAssetsDemoPromise failed with error: ' + err);
   }
 }
 ```
@@ -390,34 +484,7 @@ Deletes image or video assets from the recycle bin. Before the operation, ensure
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  try {
-    console.info('deletePhotoAssetsDemoPromise');
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOption: userFileManager.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let albumFetchResult: userFileManager.FetchResult<userFileManager.Album> = await mgr.getAlbums(userFileManager.AlbumType.SYSTEM, userFileManager.AlbumSubType.TRASH);
-    let album: userFileManager.Album = await albumFetchResult.getFirstObject();
-    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await album.getPhotoAssets(fetchOption);
-    let asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-    album.deletePhotoAssets([asset]).then(() => {
-      console.info('album deletePhotoAssets successfully');
-    }).catch((err: BusinessError) => {
-      console.error('album deletePhotoAssets failed with error: ' + err);
-    });
-  } catch (err) {
-    console.error('deletePhotoAssetsDemoPromise failed with error: ' + err);
-  }
-}
-```
+See [deletePhotoAssets](#deletephotoassets)
 
 ## recoverPhotoAssets
 
@@ -446,7 +513,7 @@ Recovers image or video assets from the recycle bin. Before the operation, ensur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | assets | Array&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt; | Yes | Array of the image or video assets to recover. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -482,6 +549,35 @@ async function example(mgr: userFileManager.UserFileManager) {
     });
   } catch (err) {
     console.error('recoverPhotoAssetsDemoCallback failed with error: ' + err);
+  }
+}
+```
+
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  try {
+    console.info('recoverPhotoAssetsDemoPromise');
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: userFileManager.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let albumFetchResult: userFileManager.FetchResult<userFileManager.Album> = await mgr.getAlbums(userFileManager.AlbumType.SYSTEM, userFileManager.AlbumSubType.TRASH);
+    let album: userFileManager.Album = await albumFetchResult.getFirstObject();
+    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await album.getPhotoAssets(fetchOption);
+    let asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+    album.recoverPhotoAssets([asset]).then(() => {
+      console.info('album recoverPhotoAssets successfully');
+    }).catch((err: BusinessError) => {
+      console.error('album recoverPhotoAssets failed with error: ' + err);
+    });
+  } catch (err) {
+    console.error('recoverPhotoAssetsDemoPromise failed with error: ' + err);
   }
 }
 ```
@@ -528,34 +624,7 @@ Recovers image or video assets from the recycle bin. Before the operation, ensur
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  try {
-    console.info('recoverPhotoAssetsDemoPromise');
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOption: userFileManager.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let albumFetchResult: userFileManager.FetchResult<userFileManager.Album> = await mgr.getAlbums(userFileManager.AlbumType.SYSTEM, userFileManager.AlbumSubType.TRASH);
-    let album: userFileManager.Album = await albumFetchResult.getFirstObject();
-    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await album.getPhotoAssets(fetchOption);
-    let asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-    album.recoverPhotoAssets([asset]).then(() => {
-      console.info('album recoverPhotoAssets successfully');
-    }).catch((err: BusinessError) => {
-      console.error('album recoverPhotoAssets failed with error: ' + err);
-    });
-  } catch (err) {
-    console.error('recoverPhotoAssetsDemoPromise failed with error: ' + err);
-  }
-}
-```
+See [recoverPhotoAssets](#recoverphotoassets)
 
 ## removePhotoAssets
 
@@ -584,7 +653,7 @@ Removes image and video assets from an album. The album and file resources must 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | assets | Array&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt; | Yes | Array of the image and video assets to remove. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -620,6 +689,35 @@ async function example(mgr: userFileManager.UserFileManager) {
     });
   } catch (err) {
     console.error('removePhotoAssetsDemoCallback failed with error: ' + err);
+  }
+}
+```
+
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  try {
+    console.info('removePhotoAssetsDemoPromise');
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: userFileManager.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let albumFetchResult: userFileManager.FetchResult<userFileManager.Album> = await mgr.getAlbums(userFileManager.AlbumType.USER, userFileManager.AlbumSubType.USER_GENERIC);
+    let album: userFileManager.Album = await albumFetchResult.getFirstObject();
+    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await album.getPhotoAssets(fetchOption);
+    let asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+    album.removePhotoAssets([asset]).then(() => {
+      console.info('album removePhotoAssets successfully');
+    }).catch((err: BusinessError) => {
+      console.error('album removePhotoAssets failed with error: ' + err);
+    });
+  } catch (err) {
+    console.error('removePhotoAssetsDemoPromise failed with error: ' + err);
   }
 }
 ```
@@ -666,32 +764,5 @@ Removes image and video assets from an album. The album and file resources must 
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  try {
-    console.info('removePhotoAssetsDemoPromise');
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOption: userFileManager.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let albumFetchResult: userFileManager.FetchResult<userFileManager.Album> = await mgr.getAlbums(userFileManager.AlbumType.USER, userFileManager.AlbumSubType.USER_GENERIC);
-    let album: userFileManager.Album = await albumFetchResult.getFirstObject();
-    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await album.getPhotoAssets(fetchOption);
-    let asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-    album.removePhotoAssets([asset]).then(() => {
-      console.info('album removePhotoAssets successfully');
-    }).catch((err: BusinessError) => {
-      console.error('album removePhotoAssets failed with error: ' + err);
-    });
-  } catch (err) {
-    console.error('removePhotoAssetsDemoPromise failed with error: ' + err);
-  }
-}
-```
+See [removePhotoAssets](#removephotoassets)
 

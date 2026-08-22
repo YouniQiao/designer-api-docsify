@@ -76,3 +76,7 @@ The uniqueId of the text field component.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+**示例**
+
+请参考[onTextChange](./arkts-apis-uicontext-uicontext.md#ontextchange24)的示例。
+

@@ -131,47 +131,6 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-
-## offMission
-
-```TypeScript
-function offMission(listenerId: long): Promise<void>
-```
-
-解注册任务状态监听。使用Promise异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.MANAGE_MISSIONS
-
-<!--Device-missionManager-function offMission(listenerId: long): Promise<void>--><!--Device-missionManager-function offMission(listenerId: long): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| listenerId | long | 是 | 系统任务状态监听器的index值，和监听器一一对应，由on方法返回。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [16300002](../errorcode-ability.md#16300002-指定的任务监听器不存在) | The specified mission listener does not exist. |
-
-**示例**
-
 ArkTS-Sta示例：
 
 ```TypeScript
@@ -261,4 +220,47 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+
+## offMission
+
+```TypeScript
+function offMission(listenerId: long): Promise<void>
+```
+
+解注册任务状态监听。使用Promise异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function offMission(listenerId: long): Promise<void>--><!--Device-missionManager-function offMission(listenerId: long): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| listenerId | long | 是 | 系统任务状态监听器的index值，和监听器一一对应，由on方法返回。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [16300002](../errorcode-ability.md#16300002-指定的任务监听器不存在) | The specified mission listener does not exist. |
+
+**示例**
+
+参见 [offMission](#offmission)
 

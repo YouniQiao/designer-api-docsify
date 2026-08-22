@@ -402,7 +402,7 @@ maxHeight?: LengthMetrics
 
 Defines the max height of menu.
 
-**类型：** [LengthMetrics](arkts-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 26.0.0
 
@@ -422,7 +422,7 @@ minKeyboardAvoidDistance?: LengthMetrics
 
 Defines the minimum distance between menu and keyboard.
 
-**类型：** [LengthMetrics](arkts-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 23
 
@@ -798,7 +798,7 @@ targetSpace?: LengthMetrics
 
 Sets the space between the menu and target. When both targetSpace and offset are set, they take effect additively. It is recommended to use targetSpace to set the space between the menu and target, and use offset for additional offset.
 
-**类型：** [LengthMetrics](arkts-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 26.0.0
 

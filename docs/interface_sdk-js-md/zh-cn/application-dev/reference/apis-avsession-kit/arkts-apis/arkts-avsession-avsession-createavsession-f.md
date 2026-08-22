@@ -44,6 +44,36 @@ function createAVSession(context: Context, tag: string, type: AVSessionType, cal
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+
+  build() {
+    Column() {
+        Text(this.message)
+          .onClick(()=>{
+            let currentAVSession: avSession.AVSession;
+            let tag = "createNewSession";
+            let context: Context = this.getUIContext().getHostContext() as Context;
+            let sessionId: string;  // 供后续函数入参使用。
+
+            avSession.createAVSession(context, tag, "audio").then(async (data: avSession.AVSession) => {
+            currentAVSession = data;
+            sessionId = currentAVSession.sessionId;
+            console.info(`CreateAVSession : SUCCESS : sessionId = ${sessionId}`);
+            });
+          })
+      }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+import { avSession } from '@kit.AVSessionKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
@@ -121,33 +151,5 @@ function createAVSession(context: Context, tag: string, type: AVSessionType): Pr
 
 **示例**
 
-```TypeScript
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello world';
-
-  build() {
-    Column() {
-        Text(this.message)
-          .onClick(()=>{
-            let currentAVSession: avSession.AVSession;
-            let tag = "createNewSession";
-            let context: Context = this.getUIContext().getHostContext() as Context;
-            let sessionId: string;  // 供后续函数入参使用。
-
-            avSession.createAVSession(context, tag, "audio").then(async (data: avSession.AVSession) => {
-            currentAVSession = data;
-            sessionId = currentAVSession.sessionId;
-            console.info(`CreateAVSession : SUCCESS : sessionId = ${sessionId}`);
-            });
-          })
-      }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
+参见 [createAVSession](#createavsession)
 

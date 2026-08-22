@@ -28,7 +28,7 @@ Adjusts the position of the file offset pointer.
 | --- | --- | --- | --- |
 | fd | number | Yes | File descriptor. |
 | offset | number | Yes | Relative offset, in bytes. |
-| whence | [WhenceType](arkts-corefile-filefs-whencetype-e.md) | No | Where to start the offset. If this parameter is not specified, the file start position is used by default. |
+| whence | [WhenceType](arkts-corefile-file-fs-whencetype-e.md) | No | Where to start the offset. If this parameter is not specified, the file start position is used by default. |
 
 **Return value:**
 
@@ -45,4 +45,13 @@ Adjusts the position of the file offset pointer.
 | 13900026 | Illegal seek |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fs.openSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
+console.info('The current offset is at ' + fs.lseek(file.fd, 5, fs.WhenceType.SEEK_SET));
+fs.closeSync(file);
+```
 

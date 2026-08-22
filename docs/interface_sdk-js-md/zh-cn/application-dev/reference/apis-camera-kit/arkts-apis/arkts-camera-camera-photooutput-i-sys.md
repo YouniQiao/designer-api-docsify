@@ -758,84 +758,6 @@ Confirm if the raw image delivery is supported
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
-## offDeferredPhotoProxyAvailable
-
-```TypeScript
-offDeferredPhotoProxyAvailable(callback?: AsyncCallback<DeferredPhotoProxy>): void
-```
-
-Unsubscribes deferred photo proxy available event callback.
-
-**起始版本：** 23
-
-<!--Device-PhotoOutput-offDeferredPhotoProxyAvailable(callback?: AsyncCallback<DeferredPhotoProxy>): void--><!--Device-PhotoOutput-offDeferredPhotoProxyAvailable(callback?: AsyncCallback<DeferredPhotoProxy>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | 否 | Callback used to get the DeferredPhotoProxy. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-
-## offOfflineDeliveryFinished
-
-```TypeScript
-offOfflineDeliveryFinished(callback?: AsyncCallback<void>): void
-```
-
-Unsubscribes offline Delivery finished events. This method is valid only after enableOffline() is called.
-
-**起始版本：** 23
-
-<!--Device-PhotoOutput-offOfflineDeliveryFinished(callback?: AsyncCallback<void>): void--><!--Device-PhotoOutput-offOfflineDeliveryFinished(callback?: AsyncCallback<void>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | Callback used to get offline Delivery finished events. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-
-## offQuickThumbnail
-
-```TypeScript
-offQuickThumbnail(callback?: AsyncCallback<image.PixelMap>): void
-```
-
-Unsubscribes from camera thumbnail events. This method is valid only after enableQuickThumbnail(true) is called.
-
-**起始版本：** 23
-
-<!--Device-PhotoOutput-offQuickThumbnail(callback?: AsyncCallback<image.PixelMap>): void--><!--Device-PhotoOutput-offQuickThumbnail(callback?: AsyncCallback<image.PixelMap>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 否 | Callback used to get the quick thumbnail. |
-
 ## off('deferredPhotoProxyAvailable')
 
 ```TypeScript
@@ -946,17 +868,17 @@ function unregisterQuickThumbnail(photoOutput: camera.PhotoOutput): void {
 }
 ```
 
-## onDeferredPhotoProxyAvailable
+## offDeferredPhotoProxyAvailable
 
 ```TypeScript
-onDeferredPhotoProxyAvailable(callback: AsyncCallback<DeferredPhotoProxy>): void
+offDeferredPhotoProxyAvailable(callback?: AsyncCallback<DeferredPhotoProxy>): void
 ```
 
-Subscribes deferred photo proxy available event callback.
+Unsubscribes deferred photo proxy available event callback.
 
 **起始版本：** 23
 
-<!--Device-PhotoOutput-onDeferredPhotoProxyAvailable(callback: AsyncCallback<DeferredPhotoProxy>): void--><!--Device-PhotoOutput-onDeferredPhotoProxyAvailable(callback: AsyncCallback<DeferredPhotoProxy>): void-End-->
+<!--Device-PhotoOutput-offDeferredPhotoProxyAvailable(callback?: AsyncCallback<DeferredPhotoProxy>): void--><!--Device-PhotoOutput-offDeferredPhotoProxyAvailable(callback?: AsyncCallback<DeferredPhotoProxy>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -966,7 +888,7 @@ Subscribes deferred photo proxy available event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | 是 | Callback used to get the DeferredPhotoProxy. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | 否 | Callback used to get the DeferredPhotoProxy. |
 
 **错误码：**
 
@@ -974,17 +896,17 @@ Subscribes deferred photo proxy available event callback.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-## onOfflineDeliveryFinished
+## offOfflineDeliveryFinished
 
 ```TypeScript
-onOfflineDeliveryFinished(callback: AsyncCallback<void>): void
+offOfflineDeliveryFinished(callback?: AsyncCallback<void>): void
 ```
 
-Subscribes offline Delivery finished events. This method is valid only after enableOffline() is called.
+Unsubscribes offline Delivery finished events. This method is valid only after enableOffline() is called.
 
 **起始版本：** 23
 
-<!--Device-PhotoOutput-onOfflineDeliveryFinished(callback: AsyncCallback<void>): void--><!--Device-PhotoOutput-onOfflineDeliveryFinished(callback: AsyncCallback<void>): void-End-->
+<!--Device-PhotoOutput-offOfflineDeliveryFinished(callback?: AsyncCallback<void>): void--><!--Device-PhotoOutput-offOfflineDeliveryFinished(callback?: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -994,7 +916,7 @@ Subscribes offline Delivery finished events. This method is valid only after ena
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to get offline Delivery finished events. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | Callback used to get offline Delivery finished events. |
 
 **错误码：**
 
@@ -1002,17 +924,17 @@ Subscribes offline Delivery finished events. This method is valid only after ena
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-## onQuickThumbnail
+## offQuickThumbnail
 
 ```TypeScript
-onQuickThumbnail(callback: AsyncCallback<image.PixelMap>): void
+offQuickThumbnail(callback?: AsyncCallback<image.PixelMap>): void
 ```
 
-Subscribes to camera thumbnail events. This method is valid only after enableQuickThumbnail(true) is called.
+Unsubscribes from camera thumbnail events. This method is valid only after enableQuickThumbnail(true) is called.
 
 **起始版本：** 23
 
-<!--Device-PhotoOutput-onQuickThumbnail(callback: AsyncCallback<image.PixelMap>): void--><!--Device-PhotoOutput-onQuickThumbnail(callback: AsyncCallback<image.PixelMap>): void-End-->
+<!--Device-PhotoOutput-offQuickThumbnail(callback?: AsyncCallback<image.PixelMap>): void--><!--Device-PhotoOutput-offQuickThumbnail(callback?: AsyncCallback<image.PixelMap>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -1022,7 +944,7 @@ Subscribes to camera thumbnail events. This method is valid only after enableQui
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | Callback used to get the quick thumbnail. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 否 | Callback used to get the quick thumbnail. |
 
 ## on('deferredPhotoProxyAvailable')
 
@@ -1172,6 +1094,84 @@ async function registerQuickThumbnail(context: common.BaseContext, mode: camera.
   photoOutput.on('quickThumbnail', callback);
 }
 ```
+
+## onDeferredPhotoProxyAvailable
+
+```TypeScript
+onDeferredPhotoProxyAvailable(callback: AsyncCallback<DeferredPhotoProxy>): void
+```
+
+Subscribes deferred photo proxy available event callback.
+
+**起始版本：** 23
+
+<!--Device-PhotoOutput-onDeferredPhotoProxyAvailable(callback: AsyncCallback<DeferredPhotoProxy>): void--><!--Device-PhotoOutput-onDeferredPhotoProxyAvailable(callback: AsyncCallback<DeferredPhotoProxy>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | 是 | Callback used to get the DeferredPhotoProxy. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+
+## onOfflineDeliveryFinished
+
+```TypeScript
+onOfflineDeliveryFinished(callback: AsyncCallback<void>): void
+```
+
+Subscribes offline Delivery finished events. This method is valid only after enableOffline() is called.
+
+**起始版本：** 23
+
+<!--Device-PhotoOutput-onOfflineDeliveryFinished(callback: AsyncCallback<void>): void--><!--Device-PhotoOutput-onOfflineDeliveryFinished(callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to get offline Delivery finished events. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+
+## onQuickThumbnail
+
+```TypeScript
+onQuickThumbnail(callback: AsyncCallback<image.PixelMap>): void
+```
+
+Subscribes to camera thumbnail events. This method is valid only after enableQuickThumbnail(true) is called.
+
+**起始版本：** 23
+
+<!--Device-PhotoOutput-onQuickThumbnail(callback: AsyncCallback<image.PixelMap>): void--><!--Device-PhotoOutput-onQuickThumbnail(callback: AsyncCallback<image.PixelMap>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | Callback used to get the quick thumbnail. |
 
 ## setEditData
 

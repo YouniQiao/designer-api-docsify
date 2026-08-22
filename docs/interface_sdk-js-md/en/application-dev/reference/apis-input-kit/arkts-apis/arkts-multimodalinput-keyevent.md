@@ -12,12 +12,12 @@ import { Action, Key, KeyEvent } from '@kit.InputKit';
 
 | Name | Description |
 | --- | --- |
-| [Key](arkts-input-multimodalinputkeyevent-key-i.md) | Defines a key. |
-| [KeyEvent](arkts-input-multimodalinputkeyevent-keyevent-i.md) | Key event. |
+| [Key](arkts-input-multimodalinput-keyevent-key-i.md) | Defines a key. |
+| [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md) | Key event. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [Action](arkts-input-multimodalinputkeyevent-action-e.md) | Key event type. |
+| [Action](arkts-input-multimodalinput-keyevent-action-e.md) | Key event type. |
 

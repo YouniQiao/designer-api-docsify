@@ -65,7 +65,7 @@ Sets NodeContainer options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | [NodeController](../arkts-apis/arkts-nodecontroller-c.md) | Yes | Instance of controller of NodeContainer. |
+| controller | [NodeController](../../apis-arkui/arkts-apis/arkts-arkui-nodecontroller-c.md) | Yes | Instance of controller of NodeContainer. |
 
 **Return value:**
 

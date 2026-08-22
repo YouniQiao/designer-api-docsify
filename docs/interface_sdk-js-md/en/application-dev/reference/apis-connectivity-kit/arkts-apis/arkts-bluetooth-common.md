@@ -2,7 +2,7 @@
 
 Provide common Bluetooth interfaces and types.
 
-**Since:** 26.0.0
+**Since:** 21
 
 <!--Device-unnamed-declare namespace common--><!--Device-unnamed-declare namespace common-End-->
 

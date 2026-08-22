@@ -14,7 +14,7 @@ function enableWearDetection(deviceId: string, callback: AsyncCallback<void>): v
 
 Turn on the wearing detection switch.
 
-**Since:** 26.0.0
+**Since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -29,7 +29,7 @@ Turn on the wearing detection switch.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID.For example, "11:22:33:AA:BB:FF", |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the Callback result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the Callback result. |
 
 **Error codes:**
 
@@ -57,6 +57,16 @@ try {
 }
 ```
 
+```TypeScript
+try {
+    wearDetection.enableWearDetection('XX:XX:XX:XX:XX:XX').then(() => {
+        console.info("enableWearDetection");
+    });
+} catch (err) {
+    console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
+}
+```
+
 
 ## enableWearDetection
 
@@ -66,7 +76,7 @@ function enableWearDetection(deviceId: string): Promise<void>
 
 Turn on the wearing detection switch.
 
-**Since:** 26.0.0
+**Since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -102,13 +112,5 @@ Turn on the wearing detection switch.
 
 **Examples**
 
-```TypeScript
-try {
-    wearDetection.enableWearDetection('XX:XX:XX:XX:XX:XX').then(() => {
-        console.info("enableWearDetection");
-    });
-} catch (err) {
-    console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
-}
-```
+See [enableWearDetection](#enableweardetection)
 

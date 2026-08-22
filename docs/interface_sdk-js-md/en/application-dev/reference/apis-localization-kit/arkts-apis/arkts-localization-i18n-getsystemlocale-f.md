@@ -35,6 +35,12 @@ Obtains the system locale.
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
 
+let systemLocale: string = i18n.System.getSystemLocale(); // If the system language is simplified Chinese and the system region is China, then systemLocale is zh-Hans-CN.
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
 let locale: string = i18n.getSystemLocale();
 ```
 

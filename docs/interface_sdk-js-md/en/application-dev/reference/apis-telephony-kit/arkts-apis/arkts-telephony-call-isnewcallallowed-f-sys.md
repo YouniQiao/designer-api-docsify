@@ -26,7 +26,7 @@ Checks whether a new call is allowed. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback function used to return the result. The value **true** indicates that the call is allowed, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback function used to return the result. The value **true** indicates that the call is allowed, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -50,6 +50,16 @@ call.isNewCallAllowed((err: BusinessError, data: boolean) => {
     } else {
         console.info(`isNewCallAllowed success, data->${JSON.stringify(data)}`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.isNewCallAllowed().then((data: boolean) => {
+    console.info(`isNewCallAllowed success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isNewCallAllowed fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -87,13 +97,5 @@ Checks whether a new call is allowed. This API uses a promise to return the resu
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isNewCallAllowed().then((data: boolean) => {
-    console.info(`isNewCallAllowed success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isNewCallAllowed fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [isNewCallAllowed](#isnewcallallowed)
 

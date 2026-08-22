@@ -31,7 +31,7 @@ Rotates a rotation vector so that it can represent the coordinate system in diff
 | --- | --- | --- | --- |
 | inRotationVector | Array&lt;number&gt; | Yes | Rotation vector. |
 | coordinates | [CoordinatesOptions](arkts-sensorservice-sensor-coordinatesoptions-i.md) | Yes | Direction of the coordinate system. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the rotation vector after being rotated. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the rotation vector after being rotated. |
 
 **Examples**
 
@@ -49,6 +49,21 @@ sensor.transformCoordinateSystem([1, 0, 0, 0, 1, 0, 0, 0, 1], { x: 2, y: 3 },
   for (let i = 0; i < data.length; i++) {
     console.info("Succeeded in getting transformCoordinateSystem data[ " + i + "] = " + data[i]);
   }
+})
+```
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const promise = sensor.transformCoordinateSystem([1, 0, 0, 0, 1, 0, 0, 0, 1], { x: 2, y: 3 });
+promise.then((data: Array<number>) => {
+  console.info("Succeeded in starting Operation");
+  for (let i = 0; i < data.length; i++) {
+    console.info("Succeeded in getting transformCoordinateSystem data[ " + i + "] = " + data[i]);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to operate.`);
 })
 ```
 
@@ -86,18 +101,5 @@ Rotates a rotation vector so that it can represent the coordinate system in diff
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const promise = sensor.transformCoordinateSystem([1, 0, 0, 0, 1, 0, 0, 0, 1], { x: 2, y: 3 });
-promise.then((data: Array<number>) => {
-  console.info("Succeeded in starting Operation");
-  for (let i = 0; i < data.length; i++) {
-    console.info("Succeeded in getting transformCoordinateSystem data[ " + i + "] = " + data[i]);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to operate.`);
-})
-```
+See [transformCoordinateSystem](#transformcoordinatesystem)
 

@@ -1,6 +1,6 @@
 # AppServiceExtensionContext
 
-The AppServiceExtensionContext module provides the context environment for the [AppServiceExtensionAbility](arkts-ability-appabilityappserviceextensionability-appserviceextensionability-c.md). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md).
+The AppServiceExtensionContext module provides the context environment for the [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md).
 
 AppServiceExtensionContext provides APIs to connect to and disconnect from a ServiceExtensionAbility (an ExtensionAbility for system application background services), as well as to terminate an AppServiceExtensionAbility. Note that a ServiceExtensionAbility can only be developed by system applications and supports connections from third- party applications.
 
@@ -36,7 +36,7 @@ Connects this AppServiceExtensionAbility to a ServiceExtensionAbility. It enable
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability, such as the ability name and bundle name. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability, such as the ability name and bundle name. |
 | callback | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | Yes | Callback used to return the information indicating that the connection is successful, failed, or interrupted. |
 
 **Return value:**
@@ -174,8 +174,8 @@ Starts the UIAbility. This API can be called only by the main thread. It uses a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | Yes | Want information about the target ability, such as the ability name and bundle name. |
-| options | [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md) | No | Parameters used for starting the ability. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability, such as the ability name and bundle name. |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used for starting the ability. |
 
 **Return value:**
 

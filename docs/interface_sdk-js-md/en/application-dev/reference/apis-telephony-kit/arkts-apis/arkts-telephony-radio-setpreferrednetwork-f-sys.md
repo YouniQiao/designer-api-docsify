@@ -30,7 +30,7 @@ Set the preferred network for the specified SIM card slot.
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 | networkMode | [PreferredNetworkMode](arkts-telephony-radio-preferrednetworkmode-e-sys.md) | Yes | Indicates that you want to set the preferred network mode. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of setPreferredNetwork. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setPreferredNetwork. |
 
 **Error codes:**
 
@@ -57,6 +57,18 @@ radio.setPreferredNetwork(slotId, mode, (err: BusinessError) => {
         return;
     }
     console.info(`setPreferredNetwork success.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+let mode: radio.PreferredNetworkMode = radio.PreferredNetworkMode.PREFERRED_NETWORK_MODE_GSM;
+radio.setPreferredNetwork(slotId, mode).then(() => {
+    console.info(`setPreferredNetwork success.`);
+}).catch((err: BusinessError) => {
+    console.error(`setPreferredNetwork failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -106,15 +118,5 @@ Set the preferred network for the specified SIM card slot.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let mode: radio.PreferredNetworkMode = radio.PreferredNetworkMode.PREFERRED_NETWORK_MODE_GSM;
-radio.setPreferredNetwork(slotId, mode).then(() => {
-    console.info(`setPreferredNetwork success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setPreferredNetwork failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [setPreferredNetwork](#setpreferrednetwork)
 

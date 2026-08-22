@@ -15,6 +15,17 @@
   - [CanvasTextAlign](arkts-arkui-canvastextalign-t.md)
   - [CanvasTextBaseline](arkts-arkui-canvastextbaseline-t.md)
   - [ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md)
+  - [CanvasGradient](arkts-arkui-canvas-canvasgradient-c.md)
+  - [CanvasPath](arkts-arkui-canvas-canvaspath-c.md)
+  - [CanvasRenderer](arkts-arkui-canvas-canvasrenderer-c.md)
+  - [CanvasRenderingContext2D](arkts-arkui-canvas-canvasrenderingcontext2d-c.md)
+  - [DrawingRenderingContext](arkts-arkui-canvas-drawingrenderingcontext-c.md)
+  - [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md)
+  - [ImageData](arkts-arkui-canvas-imagedata-c.md)
+  - [OffscreenCanvas](arkts-arkui-canvas-offscreencanvas-c.md)
+  - [OffscreenCanvasRenderingContext2D](arkts-arkui-canvas-offscreencanvasrenderingcontext2d-c.md)
+  - [Path2D](arkts-arkui-canvas-path2d-c.md)
+  - [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md)
 - [Circle](arkts-arkui-circle.md)
   - [Circle properties/events](arkts-arkui-circle-attribute.md)
   - [CircleOptions](arkts-arkui-circle-circleoptions-i.md)
@@ -23,6 +34,7 @@
   - [ColumnOptions](arkts-arkui-column-columnoptions-i.md)
   - [ColumnOptionsV2](arkts-arkui-column-columnoptionsv2-i.md)
   - [SpaceType](arkts-arkui-spacetype-t.md)
+  - [ExtendableColumn](arkts-arkui-column-extendablecolumn-c.md)
 - [ColumnSplit](arkts-arkui-columnsplit.md)
   - [ColumnSplit properties/events](arkts-arkui-columnsplit-attribute.md)
   - [ColumnSplitDividerStyle](arkts-arkui-columnsplit-columnsplitdividerstyle-i.md)
@@ -36,8 +48,10 @@
   - [Divider properties/events](arkts-arkui-divider-attribute.md)
 - [EffectComponent](arkts-arkui-effectcomponent.md)
   - [EffectComponent properties/events](arkts-arkui-effectcomponent-attribute.md)
-  - [EffectComponentOptions](arkts-arkui-effectcomponent-effectcomponentoptions-i-sys.md)
-  - [EffectLayer](arkts-arkui-effectcomponent-effectlayer-e-sys.md)
+  <!--Del-->
+  - [EffectComponentOptions(system api)](arkts-arkui-effectcomponent-effectcomponentoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [EffectLayer(system api)](arkts-arkui-effectcomponent-effectlayer-e-sys.md)<!--DelEnd-->
 - [Ellipse](arkts-arkui-ellipse.md)
   - [Ellipse properties/events](arkts-arkui-ellipse-attribute.md)
   - [EllipseOptions](arkts-arkui-ellipse-ellipseoptions-i.md)
@@ -108,6 +122,7 @@
   - [LocalizedBarrierStyle](arkts-arkui-relativecontainer-localizedbarrierstyle-i.md)
   - [BarrierDirection](arkts-arkui-relativecontainer-barrierdirection-e.md)
   - [LocalizedBarrierDirection](arkts-arkui-relativecontainer-localizedbarrierdirection-e.md)
+  - [ExtendableRelativeContainer](arkts-arkui-relativecontainer-extendablerelativecontainer-c.md)
 - [RichEditor](arkts-arkui-richeditor.md)
   - [RichEditor properties/events](arkts-arkui-richeditor-attribute.md)
   - [CopyEvent](arkts-arkui-richeditor-copyevent-i.md)
@@ -118,9 +133,15 @@
   - [PlaceholderStyle](arkts-arkui-richeditor-placeholderstyle-i.md)
   - [PreviewMenuOptions](arkts-arkui-richeditor-previewmenuoptions-i.md)
   - [RichEditorBuilderSpanOptions](arkts-arkui-richeditor-richeditorbuilderspanoptions-i.md)
+  <!--Del-->
+  - [RichEditorBuilderSpanOptions(system api)](arkts-arkui-richeditor-richeditorbuilderspanoptions-i-sys.md)<!--DelEnd-->
   - [RichEditorChangeValue](arkts-arkui-richeditor-richeditorchangevalue-i.md)
+  <!--Del-->
+  - [RichEditorChangeValue(system api)](arkts-arkui-richeditor-richeditorchangevalue-i-sys.md)<!--DelEnd-->
   - [RichEditorDeleteValue](arkts-arkui-richeditor-richeditordeletevalue-i.md)
   - [RichEditorGesture](arkts-arkui-richeditor-richeditorgesture-i.md)
+  <!--Del-->
+  - [RichEditorGesture(system api)](arkts-arkui-richeditor-richeditorgesture-i-sys.md)<!--DelEnd-->
   - [RichEditorImageSpan](arkts-arkui-richeditor-richeditorimagespan-i.md)
   - [RichEditorImageSpanOptions](arkts-arkui-richeditor-richeditorimagespanoptions-i.md)
   - [RichEditorImageSpanResult](arkts-arkui-richeditor-richeditorimagespanresult-i.md)
@@ -160,10 +181,14 @@
   - [RichEditorResponseType](arkts-arkui-richeditor-richeditorresponsetype-e.md)
   - [RichEditorSpanType](arkts-arkui-richeditor-richeditorspantype-e.md)
   - [UndoStyle](arkts-arkui-richeditor-undostyle-e.md)
+  - [RichEditorBaseController](arkts-arkui-richeditor-richeditorbasecontroller-c.md)
+  - [RichEditorController](arkts-arkui-richeditor-richeditorcontroller-c.md)
+  - [RichEditorStyledStringController](arkts-arkui-richeditor-richeditorstyledstringcontroller-c.md)
 - [Row](arkts-arkui-row.md)
   - [Row properties/events](arkts-arkui-row-attribute.md)
   - [RowOptions](arkts-arkui-row-rowoptions-i.md)
   - [RowOptionsV2](arkts-arkui-row-rowoptionsv2-i.md)
+  - [ExtendableRow](arkts-arkui-row-extendablerow-c.md)
 - [RowSplit](arkts-arkui-rowsplit.md)
   - [RowSplit properties/events](arkts-arkui-rowsplit-attribute.md)
 - [SaveButton](arkts-arkui-savebutton.md)
@@ -173,6 +198,8 @@
   - [SaveButtonOnClickResult](arkts-arkui-savebutton-savebuttononclickresult-e.md)
   - [SaveDescription](arkts-arkui-savebutton-savedescription-e.md)
   - [SaveIconStyle](arkts-arkui-savebutton-saveiconstyle-e.md)
+  <!--Del-->
+  - [SaveIconStyle(system api)](arkts-arkui-savebutton-saveiconstyle-e-sys.md)<!--DelEnd-->
 - [Search](arkts-arkui-search.md)
   - [Search properties/events](arkts-arkui-search-attribute.md)
   - [CancelButtonOptions](arkts-arkui-search-cancelbuttonoptions-i.md)
@@ -183,6 +210,7 @@
   - [SearchSubmitCallback](arkts-arkui-searchsubmitcallback-t.md)
   - [CancelButtonStyle](arkts-arkui-search-cancelbuttonstyle-e.md)
   - [SearchType](arkts-arkui-search-searchtype-e.md)
+  - [SearchController](arkts-arkui-search-searchcontroller-c.md)
 - [Shape](arkts-arkui-shape.md)
   - [Shape properties/events](arkts-arkui-shape-attribute.md)
   - [ViewportRect](arkts-arkui-shape-viewportrect-i.md)
@@ -193,8 +221,7 @@
 - [Stack](arkts-arkui-stack.md)
   - [Stack properties/events](arkts-arkui-stack-attribute.md)
   - [StackOptions](arkts-arkui-stack-stackoptions-i.md)
-- [SymbolSpan](arkts-arkui-symbolspan.md)
-  - [SymbolSpan properties/events](arkts-arkui-symbolspan-attribute.md)
+  - [ExtendableStack](arkts-arkui-stack-extendablestack-c.md)
 - [SymbolGlyph](arkts-arkui-symbolglyph.md)
   - [SymbolGlyph properties/events](arkts-arkui-symbolglyph-attribute.md)
   - [EffectDirection](arkts-arkui-symbolglyph-effectdirection-e.md)
@@ -203,6 +230,16 @@
   - [ReplaceEffectType](arkts-arkui-symbolglyph-replaceeffecttype-e.md)
   - [SymbolEffectStrategy](arkts-arkui-symbolglyph-symboleffectstrategy-e.md)
   - [SymbolRenderingStrategy](arkts-arkui-symbolglyph-symbolrenderingstrategy-e.md)
+  - [AppearSymbolEffect](arkts-arkui-symbolglyph-appearsymboleffect-c.md)
+  - [BounceSymbolEffect](arkts-arkui-symbolglyph-bouncesymboleffect-c.md)
+  - [DisappearSymbolEffect](arkts-arkui-symbolglyph-disappearsymboleffect-c.md)
+  - [HierarchicalSymbolEffect](arkts-arkui-symbolglyph-hierarchicalsymboleffect-c.md)
+  - [PulseSymbolEffect](arkts-arkui-symbolglyph-pulsesymboleffect-c.md)
+  - [ReplaceSymbolEffect](arkts-arkui-symbolglyph-replacesymboleffect-c.md)
+  - [ScaleSymbolEffect](arkts-arkui-symbolglyph-scalesymboleffect-c.md)
+  - [SymbolEffect](arkts-arkui-symbolglyph-symboleffect-c.md)
+- [SymbolSpan](arkts-arkui-symbolspan.md)
+  - [SymbolSpan properties/events](arkts-arkui-symbolspan-attribute.md)
 - [Text](arkts-arkui-text.md)
   - [Text properties/events](arkts-arkui-text-attribute.md)
   - [TextMarqueeOptions](arkts-arkui-text-textmarqueeoptions-i.md)
@@ -213,11 +250,14 @@
   - [MarqueeUpdatePolicy](arkts-arkui-text-marqueeupdatepolicy-e.md)
   - [TextResponseType](arkts-arkui-text-textresponsetype-e.md)
   - [TextSpanType](arkts-arkui-text-textspantype-e.md)
+  - [ExtendableText](arkts-arkui-text-extendabletext-c.md)
+  - [TextController](arkts-arkui-text-textcontroller-c.md)
 - [TextArea](arkts-arkui-textarea.md)
   - [TextArea properties/events](arkts-arkui-textarea-attribute.md)
   - [TextAreaOptions](arkts-arkui-textarea-textareaoptions-i.md)
   - [TextAreaSubmitCallback](arkts-arkui-textareasubmitcallback-t.md)
   - [TextAreaType](arkts-arkui-textarea-textareatype-e.md)
+  - [TextAreaController](arkts-arkui-textarea-textareacontroller-c.md)
 - [TextInput](arkts-arkui-textinput.md)
   - [TextInput properties/events](arkts-arkui-textinput-attribute.md)
   - [PasswordIcon](arkts-arkui-textinput-passwordicon-i.md)
@@ -231,7 +271,10 @@
   - [ContentType](arkts-arkui-textinput-contenttype-e.md)
   - [EnterKeyType](arkts-arkui-textinput-enterkeytype-e.md)
   - [InputType](arkts-arkui-textinput-inputtype-e.md)
+  <!--Del-->
+  - [InputType(system api)](arkts-arkui-textinput-inputtype-e-sys.md)<!--DelEnd-->
   - [TextInputStyle](arkts-arkui-textinput-textinputstyle-e.md)
+  - [TextInputController](arkts-arkui-textinput-textinputcontroller-c.md)
 - [Video](arkts-arkui-video.md)
   - [Video properties/events](arkts-arkui-video-attribute.md)
   - [FullscreenInfo](arkts-arkui-video-fullscreeninfo-i.md)
@@ -241,6 +284,8 @@
   - [VideoOptions](arkts-arkui-video-videooptions-i.md)
   - [PlaybackSpeed](arkts-arkui-video-playbackspeed-e.md)
   - [SeekMode](arkts-arkui-video-seekmode-e.md)
+  - [VideoController](arkts-arkui-video-videocontroller-c.md)
+  - [VideoControllerAsync](arkts-arkui-video-videocontrollerasync-c.md)
 - [WithTheme](arkts-arkui-withtheme.md)
   - [WithTheme properties/events](arkts-arkui-withtheme-attribute.md)
   - [WithThemeOptions](arkts-arkui-withtheme-withthemeoptions-i.md)
@@ -255,6 +300,14 @@
   - [IndexerAlign](arkts-arkui-indexeralign-e.md)
 - [Animator](arkts-arkui-animator-sys.md)
   - [Animator properties/events](arkts-arkui-animator-attribute.md)
+  <!--Del-->
+  - [FrictionMotion(system api)](arkts-arkui-frictionmotion-c-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ScrollMotion(system api)](arkts-arkui-scrollmotion-c-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SpringMotion(system api)](arkts-arkui-springmotion-c-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SpringProp(system api)](arkts-arkui-springprop-c-sys.md)<!--DelEnd-->
 - [Badge](arkts-arkui-badge.md)
   - [Badge properties/events](arkts-arkui-badge-attribute.md)
   - [BadgeParam](arkts-arkui-badgeparam-i.md)
@@ -276,20 +329,34 @@
   - [ControlSize](arkts-arkui-controlsize-e.md)
 - [Calendar](arkts-arkui-calendar-sys.md)
   - [Calendar properties/events](arkts-arkui-calendar-attribute.md)
-  - [CalendarDay](arkts-arkui-calendarday-i-sys.md)
-  - [CalendarRequestedData](arkts-arkui-calendarrequesteddata-i-sys.md)
-  - [CalendarSelectedDate](arkts-arkui-calendarselecteddate-i-sys.md)
-  - [CurrentDayStyle](arkts-arkui-currentdaystyle-i-sys.md)
-  - [MonthData](arkts-arkui-monthdata-i-sys.md)
-  - [NonCurrentDayStyle](arkts-arkui-noncurrentdaystyle-i-sys.md)
-  - [TodayStyle](arkts-arkui-todaystyle-i-sys.md)
-  - [WeekStyle](arkts-arkui-weekstyle-i-sys.md)
-  - [WorkStateStyle](arkts-arkui-workstatestyle-i-sys.md)
+  <!--Del-->
+  - [CalendarDay(system api)](arkts-arkui-calendarday-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [CalendarRequestedData(system api)](arkts-arkui-calendarrequesteddata-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [CalendarSelectedDate(system api)](arkts-arkui-calendarselecteddate-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [CurrentDayStyle(system api)](arkts-arkui-currentdaystyle-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [MonthData(system api)](arkts-arkui-monthdata-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [NonCurrentDayStyle(system api)](arkts-arkui-noncurrentdaystyle-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [TodayStyle(system api)](arkts-arkui-todaystyle-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [WeekStyle(system api)](arkts-arkui-weekstyle-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [WorkStateStyle(system api)](arkts-arkui-workstatestyle-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [CalendarController(system api)](arkts-arkui-calendarcontroller-c-sys.md)<!--DelEnd-->
 - [CalendarPicker](arkts-arkui-calendarpicker.md)
   - [CalendarPicker properties/events](arkts-arkui-calendarpicker-attribute.md)
   - [CalendarDialogOptions](arkts-arkui-calendardialogoptions-i.md)
+  <!--Del-->
+  - [CalendarDialogOptions(system api)](arkts-arkui-calendardialogoptions-i-sys.md)<!--DelEnd-->
   - [CalendarOptions](arkts-arkui-calendaroptions-i.md)
   - [CalendarAlign](arkts-arkui-calendaralign-e.md)
+  - [CalendarPickerDialog](arkts-arkui-calendarpickerdialog-c.md)
 - [Canvas](arkts-arkui-canvas.md)
   - [Canvas properties/events](arkts-arkui-canvas-attribute.md)
   - [CanvasParams](arkts-arkui-canvasparams-i.md)
@@ -306,6 +373,17 @@
   - [DrawingCanvas](arkts-arkui-drawingcanvas-t.md)
   - [FrameNode](arkts-arkui-framenode-t.md)
   - [ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md)
+  - [CanvasGradient](arkts-arkui-canvasgradient-c.md)
+  - [CanvasPath](arkts-arkui-canvaspath-c.md)
+  - [CanvasRenderer](arkts-arkui-canvasrenderer-c.md)
+  - [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)
+  - [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md)
+  - [ImageBitmap](arkts-arkui-imagebitmap-c.md)
+  - [ImageData](arkts-arkui-imagedata-c.md)
+  - [OffscreenCanvas](arkts-arkui-offscreencanvas-c.md)
+  - [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md)
+  - [Path2D](arkts-arkui-path2d-c.md)
+  - [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md)
 - [Checkbox](arkts-arkui-checkbox.md)
   - [Checkbox properties/events](arkts-arkui-checkbox-attribute.md)
   - [CheckBoxConfiguration](arkts-arkui-checkboxconfiguration-i.md)
@@ -346,7 +424,8 @@
   - [BaseEvent](arkts-arkui-baseevent-i.md)
   - [BindOptions](arkts-arkui-bindoptions-i.md)
   - [BlurOptions](arkts-arkui-bluroptions-i.md)
-  - [BlurSnapshotOptions](arkts-arkui-blursnapshotoptions-i-sys.md)
+  <!--Del-->
+  - [BlurSnapshotOptions(system api)](arkts-arkui-blursnapshotoptions-i-sys.md)<!--DelEnd-->
   - [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md)
   - [BorderImageOption](arkts-arkui-borderimageoption-i.md)
   - [Callback](arkts-arkui-callback-i.md)
@@ -360,22 +439,30 @@
   - [ContentModifier](arkts-arkui-contentmodifier-i.md)
   - [ContextMenuAnimationOptions](arkts-arkui-contextmenuanimationoptions-i.md)
   - [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)
+  <!--Del-->
+  - [ContextMenuOptions(system api)](arkts-arkui-contextmenuoptions-i-sys.md)<!--DelEnd-->
   - [CrownEvent](arkts-arkui-crownevent-i.md)
   - [CustomPopupOptions](arkts-arkui-custompopupoptions-i.md)
   - [DateRange](arkts-arkui-daterange-i.md)
-  - [DepthColorRGB](arkts-arkui-depthcolorrgb-i-sys.md)
-  - [DepthVector3](arkts-arkui-depthvector3-i-sys.md)
-  - [DepthVector4](arkts-arkui-depthvector4-i-sys.md)
+  <!--Del-->
+  - [DepthColorRGB(system api)](arkts-arkui-depthcolorrgb-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DepthVector3(system api)](arkts-arkui-depthvector3-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DepthVector4(system api)](arkts-arkui-depthvector4-i-sys.md)<!--DelEnd-->
   - [DismissContentCoverAction](arkts-arkui-dismisscontentcoveraction-i.md)
   - [DismissPopupAction](arkts-arkui-dismisspopupaction-i.md)
   - [DismissSheetAction](arkts-arkui-dismisssheetaction-i.md)
   - [DragEvent](arkts-arkui-dragevent-i.md)
+  <!--Del-->
+  - [DragEvent(system api)](arkts-arkui-dragevent-i-sys.md)<!--DelEnd-->
   - [DragInteractionOptions](arkts-arkui-draginteractionoptions-i.md)
   - [DragItemInfo](arkts-arkui-dragiteminfo-i.md)
   - [DragPreviewOptions](arkts-arkui-dragpreviewoptions-i.md)
   - [DropOptions](arkts-arkui-dropoptions-i.md)
   - [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md)
-  - [EdgeLightParams](arkts-arkui-edgelightparams-i-sys.md)
+  <!--Del-->
+  - [EdgeLightParams(system api)](arkts-arkui-edgelightparams-i-sys.md)<!--DelEnd-->
   - [EditModeOptions](arkts-arkui-editmodeoptions-i.md)
   - [EntryOptions](arkts-arkui-entryoptions-i.md)
   - [EventTarget](arkts-arkui-eventtarget-i.md)
@@ -387,8 +474,11 @@
   - [ForegroundEffectOptions](arkts-arkui-foregroundeffectoptions-i.md)
   - [GeometryInfo](arkts-arkui-geometryinfo-i.md)
   - [GeometryTransitionOptions](arkts-arkui-geometrytransitionoptions-i.md)
+  <!--Del-->
+  - [GeometryTransitionOptions(system api)](arkts-arkui-geometrytransitionoptions-i-sys.md)<!--DelEnd-->
   - [GestureModifier](arkts-arkui-gesturemodifier-i.md)
-  - [GravityCenterOptions](arkts-arkui-gravitycenteroptions-i-sys.md)
+  <!--Del-->
+  - [GravityCenterOptions(system api)](arkts-arkui-gravitycenteroptions-i-sys.md)<!--DelEnd-->
   - [HistoricalPoint](arkts-arkui-historicalpoint-i.md)
   - [HorizontalAlignParam](arkts-arkui-horizontalalignparam-i.md)
   - [HoverEvent](arkts-arkui-hoverevent-i.md)
@@ -408,7 +498,8 @@
   - [LayoutBorderInfo](arkts-arkui-layoutborderinfo-i.md)
   - [LayoutChild](arkts-arkui-layoutchild-i.md)
   - [LayoutInfo](arkts-arkui-layoutinfo-i.md)
-  - [LightSource](arkts-arkui-lightsource-i-sys.md)
+  <!--Del-->
+  - [LightSource(system api)](arkts-arkui-lightsource-i-sys.md)<!--DelEnd-->
   - [LinearGradient](arkts-arkui-lineargradient-i.md)
   - [LinearGradientBlurOptions](arkts-arkui-lineargradientbluroptions-i.md)
   - [LinearGradientOptions](arkts-arkui-lineargradientoptions-i.md)
@@ -433,10 +524,12 @@
   - [OverlayOptions](arkts-arkui-overlayoptions-i.md)
   - [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
   - [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
-  - [PixelMapMock](arkts-arkui-pixelmapmock-i-sys.md)
+  <!--Del-->
+  - [PixelMapMock(system api)](arkts-arkui-pixelmapmock-i-sys.md)<!--DelEnd-->
   - [PixelRoundPolicy](arkts-arkui-pixelroundpolicy-i.md)
   - [PixelStretchEffectOptions](arkts-arkui-pixelstretcheffectoptions-i.md)
-  - [PointLightStyle](arkts-arkui-pointlightstyle-i-sys.md)
+  <!--Del-->
+  - [PointLightStyle(system api)](arkts-arkui-pointlightstyle-i-sys.md)<!--DelEnd-->
   - [PopupBorderLinearGradient](arkts-arkui-popupborderlineargradient-i.md)
   - [PopupCommonOptions](arkts-arkui-popupcommonoptions-i.md)
   - [PopupMaskType](arkts-arkui-popupmasktype-i.md)
@@ -460,11 +553,15 @@
   - [sharedTransitionOptions](arkts-arkui-sharedtransitionoptions-i.md)
   - [SheetDismiss](arkts-arkui-sheetdismiss-i.md)
   - [SheetOptions](arkts-arkui-sheetoptions-i.md)
+  <!--Del-->
+  - [SheetOptions(system api)](arkts-arkui-sheetoptions-i-sys.md)<!--DelEnd-->
   - [SheetTitleOptions](arkts-arkui-sheettitleoptions-i.md)
   - [SizeResult](arkts-arkui-sizeresult-i.md)
   - [SmartGestureShortcutOptions](arkts-arkui-smartgestureshortcutoptions-i.md)
-  - [SpatialEffectParams](arkts-arkui-spatialeffectparams-i-sys.md)
-  - [SpatialPosition](arkts-arkui-spatialposition-i-sys.md)
+  <!--Del-->
+  - [SpatialEffectParams(system api)](arkts-arkui-spatialeffectparams-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SpatialPosition(system api)](arkts-arkui-spatialposition-i-sys.md)<!--DelEnd-->
   - [SpringBackAction](arkts-arkui-springbackaction-i.md)
   - [StateStyles](arkts-arkui-statestyles-i.md)
   - [SweepGradientOptions](arkts-arkui-sweepgradientoptions-i.md)
@@ -487,7 +584,8 @@
   - [AccessibilityTransparentCallback](arkts-arkui-accessibilitytransparentcallback-t.md)
   - [AnimationRange](arkts-arkui-animationrange-t.md)
   - [AreaChangeCallback](arkts-arkui-areachangecallback-t.md)
-  - [Blender](arkts-arkui-blender-t-sys.md)
+  <!--Del-->
+  - [Blender(system api)](arkts-arkui-blender-t-sys.md)<!--DelEnd-->
   - [BorderRadiusType](arkts-arkui-borderradiustype-t.md)
   - [BuilderCallback](arkts-arkui-buildercallback-t.md)
   - [CircleShape](arkts-arkui-circleshape-t.md)
@@ -539,7 +637,8 @@
   - [SpringLoadingContext](arkts-arkui-springloadingcontext-t.md)
   - [Summary](arkts-arkui-summary-t.md)
   - [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md)
-  - [SystemUiMaterial](arkts-arkui-systemuimaterial-t-sys.md)
+  <!--Del-->
+  - [SystemUiMaterial(system api)](arkts-arkui-systemuimaterial-t-sys.md)<!--DelEnd-->
   - [Theme](arkts-arkui-theme-t.md)
   - [TipsMessageType](arkts-arkui-tipsmessagetype-t.md)
   - [TouchTestDoneCallback](arkts-arkui-touchtestdonecallback-t.md)
@@ -559,19 +658,24 @@
   - [AnchoredColorMode](arkts-arkui-anchoredcolormode-e.md)
   - [AvailableLayoutArea](arkts-arkui-availablelayoutarea-e.md)
   - [BlendApplyType](arkts-arkui-blendapplytype-e.md)
+  <!--Del-->
+  - [BlendApplyType(system api)](arkts-arkui-blendapplytype-e-sys.md)<!--DelEnd-->
   - [BlendMode](arkts-arkui-blendmode-e.md)
   - [BlurStyle](arkts-arkui-blurstyle-e.md)
   - [BlurStyleActivePolicy](arkts-arkui-blurstyleactivepolicy-e.md)
   - [ChainStyle](arkts-arkui-chainstyle-e.md)
   - [ContentClipMode](arkts-arkui-contentclipmode-e.md)
   - [DismissReason](arkts-arkui-dismissreason-e.md)
-  - [DistortionMode](arkts-arkui-distortionmode-e-sys.md)
-  - [DragAnimationType](arkts-arkui-draganimationtype-e-sys.md)
+  <!--Del-->
+  - [DistortionMode(system api)](arkts-arkui-distortionmode-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DragAnimationType(system api)](arkts-arkui-draganimationtype-e-sys.md)<!--DelEnd-->
   - [DragBehavior](arkts-arkui-dragbehavior-e.md)
   - [DraggingSizeChangeEffect](arkts-arkui-draggingsizechangeeffect-e.md)
   - [DragPreviewMode](arkts-arkui-dragpreviewmode-e.md)
   - [DragResult](arkts-arkui-dragresult-e.md)
-  - [EdgeLightMode](arkts-arkui-edgelightmode-e-sys.md)
+  <!--Del-->
+  - [EdgeLightMode(system api)](arkts-arkui-edgelightmode-e-sys.md)<!--DelEnd-->
   - [EffectEdge](arkts-arkui-effectedge-e.md)
   - [EffectType](arkts-arkui-effecttype-e.md)
   - [FinishCallbackType](arkts-arkui-finishcallbacktype-e.md)
@@ -602,12 +706,64 @@
   - [SheetType](arkts-arkui-sheettype-e.md)
   - [SourceTool](arkts-arkui-sourcetool-e.md)
   - [SourceType](arkts-arkui-sourcetype-e.md)
-  - [SpatialPositionMode](arkts-arkui-spatialpositionmode-e-sys.md)
+  <!--Del-->
+  - [SpatialPositionMode(system api)](arkts-arkui-spatialpositionmode-e-sys.md)<!--DelEnd-->
   - [SystemProperties](arkts-arkui-systemproperties-e.md)
   - [ThemeColorMode](arkts-arkui-themecolormode-e.md)
   - [TouchTestStrategy](arkts-arkui-touchteststrategy-e.md)
   - [TransitionEdge](arkts-arkui-transitionedge-e.md)
-  - [TransitionHierarchyStrategy](arkts-arkui-transitionhierarchystrategy-e-sys.md)
+  <!--Del-->
+  - [TransitionHierarchyStrategy(system api)](arkts-arkui-transitionhierarchystrategy-e-sys.md)<!--DelEnd-->
+  - [BaseCustomComponent](arkts-arkui-basecustomcomponent-c.md)
+  - [ChildrenMainSize](arkts-arkui-childrenmainsize-c.md)
+  - [CommonMethod](arkts-arkui-commonmethod-c.md)
+  <!--Del-->
+  - [CommonMethod(system api)](arkts-arkui-commonmethod-c-sys.md)<!--DelEnd-->
+  - [CommonShapeMethod](arkts-arkui-commonshapemethod-c.md)
+  <!--Del-->
+  - [CommonShapeMethod(system api)](arkts-arkui-commonshapemethod-c-sys.md)<!--DelEnd-->
+  - [ContentTransitionEffect](arkts-arkui-contenttransitioneffect-c.md)
+  - [CustomComponent](arkts-arkui-customcomponent-c.md)
+  - [CustomComponentV2](arkts-arkui-customcomponentv2-c.md)
+  - [CustomEnvKey](arkts-arkui-customenvkey-c.md)
+  - [DrawModifier](arkts-arkui-drawmodifier-c.md)
+  - [DynamicNode](arkts-arkui-dynamicnode-c.md)
+  - [LayoutPolicy](arkts-arkui-layoutpolicy-c.md)
+  - [MutableBuilder](arkts-arkui-mutablebuilder-c.md)
+  - [ProgressMask](arkts-arkui-progressmask-c.md)
+  - [RawInputEventWrapper](arkts-arkui-rawinputeventwrapper-c.md)
+  - [ReadonlyEnvKey](arkts-arkui-readonlyenvkey-c.md)
+  - [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)
+  - [ScrollableCommonMethod](arkts-arkui-scrollablecommonmethod-c.md)
+  - [ScrollResult](arkts-arkui-scrollresult-c.md)
+  - [SystemEnvKey](arkts-arkui-systemenvkey-c.md)
+  - [TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md)
+  <!--Del-->
+  - [TextContentControllerBase(system api)](arkts-arkui-textcontentcontrollerbase-c-sys.md)<!--DelEnd-->
+  - [TouchResult](arkts-arkui-touchresult-c.md)
+  - [TouchTestInfo](arkts-arkui-touchtestinfo-c.md)
+  - [TransitionEffect](arkts-arkui-transitioneffect-c.md)
+  <!--Del-->
+  - [View(system api)](arkts-arkui-view-c-sys.md)<!--DelEnd-->
+  - [WrappedBuilder](arkts-arkui-wrappedbuilder-c.md)
+  - [WritableEnvKey](arkts-arkui-writableenvkey-c.md)
+  - [WritableSystemEnvKey](arkts-arkui-writablesystemenvkey-c.md)
+  - [$r](arkts-arkui-common-r-f.md)
+  - [$rawfile](arkts-arkui-common-rawfile-f.md)
+  - [animateTo](arkts-arkui-common-animateto-f.md)
+  - [animateToImmediately](arkts-arkui-common-animatetoimmediately-f.md)
+  - [CustomEnv](arkts-arkui-common-customenv-f.md)
+  - [Env](arkts-arkui-common-env-f.md)
+  - [fp2px](arkts-arkui-common-fp2px-f.md)
+  - [getContext](arkts-arkui-common-getcontext-f.md)
+  - [lpx2px](arkts-arkui-common-lpx2px-f.md)
+  - [mutableBuilder](arkts-arkui-common-mutablebuilder-f.md)
+  - [postCardAction](arkts-arkui-common-postcardaction-f.md)
+  - [px2fp](arkts-arkui-common-px2fp-f.md)
+  - [px2lpx](arkts-arkui-common-px2lpx-f.md)
+  - [px2vp](arkts-arkui-common-px2vp-f.md)
+  - [vp2px](arkts-arkui-common-vp2px-f.md)
+  - [wrapBuilder](arkts-arkui-common-wrapbuilder-f.md)
 - [Component3D](arkts-arkui-component3d.md)
   - [Component3D properties/events](arkts-arkui-component3d-attribute.md)
   - [SceneOptions](arkts-arkui-sceneoptions-i.md)
@@ -627,43 +783,67 @@
   - [DataPanelOptions](arkts-arkui-datapaneloptions-i.md)
   - [DataPanelShadowOptions](arkts-arkui-datapanelshadowoptions-i.md)
   - [DataPanelType](arkts-arkui-datapaneltype-e.md)
+  - [LinearGradient](arkts-arkui-lineargradient-c.md)
 - [DatePicker](arkts-arkui-datepicker.md)
   - [DatePicker properties/events](arkts-arkui-datepicker-attribute.md)
   - [DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md)
+  <!--Del-->
+  - [DatePickerDialogOptions(system api)](arkts-arkui-datepickerdialogoptions-i-sys.md)<!--DelEnd-->
   - [DatePickerOptions](arkts-arkui-datepickeroptions-i.md)
   - [DatePickerResult](arkts-arkui-datepickerresult-i.md)
   - [LunarSwitchStyle](arkts-arkui-lunarswitchstyle-i.md)
   - [DatePickerMode](arkts-arkui-datepickermode-e.md)
+  - [DatePickerDialog](arkts-arkui-datepickerdialog-c.md)
 - [DepthComponent](arkts-arkui-depthcomponent-sys.md)
   - [DepthComponent properties/events](arkts-arkui-depthcomponent-attribute.md)
-  - [CameraBufferCrop](arkts-arkui-camerabuffercrop-i-sys.md)
-  - [CropOffset](arkts-arkui-cropoffset-i-sys.md)
-  - [DepthCameraParams](arkts-arkui-depthcameraparams-i-sys.md)
-  - [DepthComponentCompleteEvent](arkts-arkui-depthcomponentcompleteevent-i-sys.md)
-  - [DepthComponentErrorEvent](arkts-arkui-depthcomponenterrorevent-i-sys.md)
-  - [DepthComponentOptions](arkts-arkui-depthcomponentoptions-i-sys.md)
-  - [DepthLightParams](arkts-arkui-depthlightparams-i-sys.md)
-  - [DepthComponentCompleteCallback](arkts-arkui-depthcomponentcompletecallback-t-sys.md)
-  - [DepthComponentErrorCallback](arkts-arkui-depthcomponenterrorcallback-t-sys.md)
-  - [DepthMapCallback](arkts-arkui-depthmapcallback-t-sys.md)
-  - [DepthSpaceType](arkts-arkui-depthspacetype-e-sys.md)
+  <!--Del-->
+  - [CameraBufferCrop(system api)](arkts-arkui-camerabuffercrop-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [CropOffset(system api)](arkts-arkui-cropoffset-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DepthCameraParams(system api)](arkts-arkui-depthcameraparams-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DepthComponentCompleteEvent(system api)](arkts-arkui-depthcomponentcompleteevent-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DepthComponentErrorEvent(system api)](arkts-arkui-depthcomponenterrorevent-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DepthComponentOptions(system api)](arkts-arkui-depthcomponentoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DepthLightParams(system api)](arkts-arkui-depthlightparams-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DepthComponentCompleteCallback(system api)](arkts-arkui-depthcomponentcompletecallback-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DepthComponentErrorCallback(system api)](arkts-arkui-depthcomponenterrorcallback-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DepthMapCallback(system api)](arkts-arkui-depthmapcallback-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DepthSpaceType(system api)](arkts-arkui-depthspacetype-e-sys.md)<!--DelEnd-->
 - [DistortionComponent](arkts-arkui-distortioncomponent-sys.md)
   - [DistortionComponent properties/events](arkts-arkui-distortioncomponent-attribute.md)
-  - [DistortionComponentOptions](arkts-arkui-distortioncomponentoptions-i-sys.md)
-  - [DistortionParam](arkts-arkui-distortionparam-i-sys.md)
-  - [Vector2](arkts-arkui-vector2-t-sys.md)
-  - [Vector4](arkts-arkui-vector4-t-sys.md)
+  <!--Del-->
+  - [DistortionComponentOptions(system api)](arkts-arkui-distortioncomponentoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DistortionParam(system api)](arkts-arkui-distortionparam-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [Vector2(system api)](arkts-arkui-vector2-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [Vector4(system api)](arkts-arkui-vector4-t-sys.md)<!--DelEnd-->
 - [Divider](arkts-arkui-divider.md)
   - [Divider properties/events](arkts-arkui-divider-attribute.md)
 - [DynamicComponent](arkts-arkui-dynamiccomponent-sys.md)
   - [DynamicComponent properties/events](arkts-arkui-dynamiccomponent-attribute.md)
-  - [DynamicOptions](arkts-arkui-dynamicoptions-i-sys.md)
-  - [ErrorCallback](arkts-arkui-errorcallback-t-sys.md)
-  - [Worker](arkts-arkui-worker-t-sys.md)
+  <!--Del-->
+  - [DynamicOptions(system api)](arkts-arkui-dynamicoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ErrorCallback(system api)](arkts-arkui-errorcallback-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [Worker(system api)](arkts-arkui-worker-t-sys.md)<!--DelEnd-->
 - [EffectComponent](arkts-arkui-effectcomponent-sys.md)
   - [EffectComponent properties/events](arkts-arkui-effectcomponent-attribute.md)
-  - [EffectComponentOptions](arkts-arkui-effectcomponentoptions-i-sys.md)
-  - [EffectLayer](arkts-arkui-effectlayer-e-sys.md)
+  <!--Del-->
+  - [EffectComponentOptions(system api)](arkts-arkui-effectcomponentoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [EffectLayer(system api)](arkts-arkui-effectlayer-e-sys.md)<!--DelEnd-->
 - [Ellipse](arkts-arkui-ellipse.md)
   - [Ellipse properties/events](arkts-arkui-ellipse-attribute.md)
   - [EllipseOptions](arkts-arkui-ellipseoptions-i.md)
@@ -691,14 +871,22 @@
   - [ForEach properties/events](arkts-arkui-foreach-attribute.md)
 - [FormComponent](arkts-arkui-formcomponent-sys.md)
   - [FormComponent properties/events](arkts-arkui-formcomponent-attribute.md)
-  - [ErrorInformation](arkts-arkui-errorinformation-i-sys.md)
-  - [FormCallbackInfo](arkts-arkui-formcallbackinfo-i-sys.md)
-  - [FormInfo](arkts-arkui-forminfo-i-sys.md)
-  - [FormSize](arkts-arkui-formsize-i-sys.md)
-  - [FormColorMode](arkts-arkui-formcolormode-e-sys.md)
-  - [FormDimension](arkts-arkui-formdimension-e-sys.md)
-  - [FormRenderingMode](arkts-arkui-formrenderingmode-e-sys.md)
-  - [FormShape](arkts-arkui-formshape-e-sys.md)
+  <!--Del-->
+  - [ErrorInformation(system api)](arkts-arkui-errorinformation-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FormCallbackInfo(system api)](arkts-arkui-formcallbackinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FormInfo(system api)](arkts-arkui-forminfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FormSize(system api)](arkts-arkui-formsize-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FormColorMode(system api)](arkts-arkui-formcolormode-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FormDimension(system api)](arkts-arkui-formdimension-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FormRenderingMode(system api)](arkts-arkui-formrenderingmode-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FormShape(system api)](arkts-arkui-formshape-e-sys.md)<!--DelEnd-->
 - [FormLink](arkts-arkui-formlink.md)
   - [FormLink properties/events](arkts-arkui-formlink-attribute.md)
   - [FormLinkOptions](arkts-arkui-formlinkoptions-i.md)
@@ -712,17 +900,18 @@
   - [Grid properties/events](arkts-arkui-grid-attribute.md)
   - [ComputedBarAttribute](arkts-arkui-computedbarattribute-i.md)
   - [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md)
-  - [StartLineInfo](arkts-arkui-startlineinfo-i-sys.md)
+  <!--Del-->
+  - [GridLayoutOptions(system api)](arkts-arkui-gridlayoutoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [StartLineInfo(system api)](arkts-arkui-startlineinfo-i-sys.md)<!--DelEnd-->
   - [UIGridEvent](arkts-arkui-uigridevent-i.md)
-  - [OnGetStartIndexByIndexCallback](arkts-arkui-ongetstartindexbyindexcallback-t-sys.md)
-  - [OnGetStartIndexByOffsetCallback](arkts-arkui-ongetstartindexbyoffsetcallback-t-sys.md)
+  <!--Del-->
+  - [OnGetStartIndexByIndexCallback(system api)](arkts-arkui-ongetstartindexbyindexcallback-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [OnGetStartIndexByOffsetCallback(system api)](arkts-arkui-ongetstartindexbyoffsetcallback-t-sys.md)<!--DelEnd-->
   - [OnGridScrollIndexCallback](arkts-arkui-ongridscrollindexcallback-t.md)
   - [GridDirection](arkts-arkui-griddirection-e.md)
   - [GridItemAlignment](arkts-arkui-griditemalignment-e.md)
-- [GridItem](arkts-arkui-griditem.md)
-  - [GridItem properties/events](arkts-arkui-griditem-attribute.md)
-  - [GridItemOptions](arkts-arkui-griditemoptions-i.md)
-  - [GridItemStyle](arkts-arkui-griditemstyle-e.md)
 - [GridCol](arkts-arkui-gridcol.md)
   - [GridCol properties/events](arkts-arkui-gridcol-attribute.md)
   - [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
@@ -740,6 +929,10 @@
   - [GutterOption](arkts-arkui-gutteroption-i.md)
   - [BreakpointsReference](arkts-arkui-breakpointsreference-e.md)
   - [GridRowDirection](arkts-arkui-gridrowdirection-e.md)
+- [GridItem](arkts-arkui-griditem.md)
+  - [GridItem properties/events](arkts-arkui-griditem-attribute.md)
+  - [GridItemOptions](arkts-arkui-griditemoptions-i.md)
+  - [GridItemStyle](arkts-arkui-griditemstyle-e.md)
 - [Hyperlink](arkts-arkui-hyperlink.md)
   - [Hyperlink properties/events](arkts-arkui-hyperlink-attribute.md)
 - [Image](arkts-arkui-image.md)
@@ -755,12 +948,14 @@
   - [ImageErrorCallback](arkts-arkui-imageerrorcallback-t.md)
   - [ImageMatrix](arkts-arkui-imagematrix-t.md)
   - [RequestDownloadInfo](arkts-arkui-requestdownloadinfo-t.md)
-  - [ResolutionQuality](arkts-arkui-resolutionquality-t-sys.md)
+  <!--Del-->
+  - [ResolutionQuality(system api)](arkts-arkui-resolutionquality-t-sys.md)<!--DelEnd-->
   - [DynamicRangeMode](arkts-arkui-dynamicrangemode-e.md)
   - [ImageContent](arkts-arkui-imagecontent-e.md)
   - [ImageInterpolation](arkts-arkui-imageinterpolation-e.md)
   - [ImageRenderMode](arkts-arkui-imagerendermode-e.md)
   - [ImageRotateOrientation](arkts-arkui-imagerotateorientation-e.md)
+  - [ColorContent](arkts-arkui-colorcontent-c.md)
 - [ImageAnimator](arkts-arkui-imageanimator.md)
   - [ImageAnimator properties/events](arkts-arkui-imageanimator-attribute.md)
   - [ImageFrameInfo](arkts-arkui-imageframeinfo-i.md)
@@ -770,6 +965,7 @@
   - [ImageCompleteCallback](arkts-arkui-imagecompletecallback-t.md)
 - [IndicatorComponent](arkts-arkui-indicatorcomponent.md)
   - [IndicatorComponent properties/events](arkts-arkui-indicatorcomponent-attribute.md)
+  - [IndicatorComponentController](arkts-arkui-indicatorcomponentcontroller-c.md)
 - [LazyForEach](arkts-arkui-lazyforeach.md)
   - [LazyForEach properties/events](arkts-arkui-lazyforeach-attribute.md)
   - [DataAddOperation](arkts-arkui-dataaddoperation-i.md)
@@ -791,12 +987,14 @@
   - [LazyForEachReleaseStrategy](arkts-arkui-lazyforeachreleasestrategy-e.md)
 - [LazyVGridLayout](arkts-arkui-lazyvgridlayout.md)
   - [LazyVGridLayout properties/events](arkts-arkui-lazyvgridlayout-attribute.md)
+  - [LazyGridLayoutAttribute](arkts-arkui-lazygridlayoutattribute-c.md)
 - [Line](arkts-arkui-line.md)
   - [Line properties/events](arkts-arkui-line-attribute.md)
   - [LineOptions](arkts-arkui-lineoptions-i.md)
 - [List](arkts-arkui-list.md)
   - [List properties/events](arkts-arkui-list-attribute.md)
-  - [ChainAnimationOptions](arkts-arkui-chainanimationoptions-i-sys.md)
+  <!--Del-->
+  - [ChainAnimationOptions(system api)](arkts-arkui-chainanimationoptions-i-sys.md)<!--DelEnd-->
   - [CloseSwipeActionOptions](arkts-arkui-closeswipeactionoptions-i.md)
   - [ListBackPressBehavior](arkts-arkui-listbackpressbehavior-i.md)
   - [ListDividerOptions](arkts-arkui-listdivideroptions-i.md)
@@ -805,13 +1003,15 @@
   - [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md)
   - [OnListScrollIndexCallback](arkts-arkui-onlistscrollindexcallback-t.md)
   - [OnScrollVisibleContentChangeCallback](arkts-arkui-onscrollvisiblecontentchangecallback-t.md)
-  - [ChainEdgeEffect](arkts-arkui-chainedgeeffect-e-sys.md)
+  <!--Del-->
+  - [ChainEdgeEffect(system api)](arkts-arkui-chainedgeeffect-e-sys.md)<!--DelEnd-->
   - [ListItemAlign](arkts-arkui-listitemalign-e.md)
   - [ListItemGroupArea](arkts-arkui-listitemgrouparea-e.md)
   - [ScrollSnapAlign](arkts-arkui-scrollsnapalign-e.md)
   - [ScrollSnapAnimationSpeed](arkts-arkui-scrollsnapanimationspeed-e.md)
   - [ScrollState](arkts-arkui-scrollstate-e.md)
   - [StickyStyle](arkts-arkui-stickystyle-e.md)
+  - [ListScroller](arkts-arkui-listscroller-c.md)
 - [ListItem](arkts-arkui-listitem.md)
   - [ListItem properties/events](arkts-arkui-listitem-attribute.md)
   - [ListItemOptions](arkts-arkui-listitemoptions-i.md)
@@ -823,6 +1023,7 @@
   - [Sticky](arkts-arkui-sticky-e.md)
   - [SwipeActionState](arkts-arkui-swipeactionstate-e.md)
   - [SwipeEdgeEffect](arkts-arkui-swipeedgeeffect-e.md)
+  - [ListItemSwipeActionManager](arkts-arkui-listitemswipeactionmanager-c.md)
 - [ListItemGroup](arkts-arkui-listitemgroup.md)
   - [ListItemGroup properties/events](arkts-arkui-listitemgroup-attribute.md)
   - [ListItemGroupOptions](arkts-arkui-listitemgroupoptions-i.md)
@@ -837,7 +1038,8 @@
   - [MarqueeOptions](arkts-arkui-marqueeoptions-i.md)
 - [MediaCachedImage](arkts-arkui-mediacachedimage-sys.md)
   - [MediaCachedImage properties/events](arkts-arkui-mediacachedimage-attribute.md)
-  - [ASTCResource](arkts-arkui-astcresource-i-sys.md)
+  <!--Del-->
+  - [ASTCResource(system api)](arkts-arkui-astcresource-i-sys.md)<!--DelEnd-->
 - [Menu](arkts-arkui-menu.md)
   - [Menu properties/events](arkts-arkui-menu-attribute.md)
   - [SubMenuExpandingMode](arkts-arkui-submenuexpandingmode-e.md)
@@ -902,6 +1104,8 @@
   - [NavigationTitleMode](arkts-arkui-navigationtitlemode-e.md)
   - [ScrollEffectType](arkts-arkui-scrolleffecttype-e.md)
   - [ToolbarItemStatus](arkts-arkui-toolbaritemstatus-e.md)
+  - [NavPathInfo](arkts-arkui-navpathinfo-c.md)
+  - [NavPathStack](arkts-arkui-navpathstack-c.md)
 - [Navigator](arkts-arkui-navigator.md)
   - [Navigator properties/events](arkts-arkui-navigator-attribute.md)
   - [NavigationType](arkts-arkui-navigationtype-e.md)
@@ -913,6 +1117,7 @@
   - [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md)
   - [RouteType](arkts-arkui-routetype-e.md)
   - [SlideEffect](arkts-arkui-slideeffect-e.md)
+  - [CommonTransition](arkts-arkui-commontransition-c.md)
 - [Panel](arkts-arkui-panel.md)
   - [Panel properties/events](arkts-arkui-panel-attribute.md)
   - [PanelHeight](arkts-arkui-panelheight-e.md)
@@ -966,12 +1171,17 @@
   - [PatternLock properties/events](arkts-arkui-patternlock-attribute.md)
   - [CircleStyleOptions](arkts-arkui-circlestyleoptions-i.md)
   - [PatternLockChallengeResult](arkts-arkui-patternlockchallengeresult-e.md)
+  - [PatternLockController](arkts-arkui-patternlockcontroller-c.md)
 - [PluginComponent](arkts-arkui-plugincomponent-sys.md)
   - [PluginComponent properties/events](arkts-arkui-plugincomponent-attribute.md)
-  - [PluginComponentOptions](arkts-arkui-plugincomponentoptions-i-sys.md)
-  - [PluginComponentTemplate](arkts-arkui-plugincomponenttemplate-i-sys.md)
-  - [PluginErrorData](arkts-arkui-pluginerrordata-i-sys.md)
-  - [PluginErrorCallback](arkts-arkui-pluginerrorcallback-t-sys.md)
+  <!--Del-->
+  - [PluginComponentOptions(system api)](arkts-arkui-plugincomponentoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PluginComponentTemplate(system api)](arkts-arkui-plugincomponenttemplate-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PluginErrorData(system api)](arkts-arkui-pluginerrordata-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PluginErrorCallback(system api)](arkts-arkui-pluginerrorcallback-t-sys.md)<!--DelEnd-->
 - [Polygon](arkts-arkui-polygon.md)
   - [Polygon properties/events](arkts-arkui-polygon-attribute.md)
   - [PolygonOptions](arkts-arkui-polygonoptions-i.md)
@@ -1027,8 +1237,10 @@
   - [LocalizedBarrierDirection](arkts-arkui-localizedbarrierdirection-e.md)
 - [RemoteWindow](arkts-arkui-remotewindow-sys.md)
   - [RemoteWindow properties/events](arkts-arkui-remotewindow-attribute.md)
-  - [RRect](arkts-arkui-rrect-i-sys.md)
-  - [WindowAnimationTarget](arkts-arkui-windowanimationtarget-i-sys.md)
+  <!--Del-->
+  - [RRect(system api)](arkts-arkui-rrect-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [WindowAnimationTarget(system api)](arkts-arkui-windowanimationtarget-i-sys.md)<!--DelEnd-->
 - [RichEditor](arkts-arkui-richeditor.md)
   - [RichEditor properties/events](arkts-arkui-richeditor-attribute.md)
   - [CopyEvent](arkts-arkui-copyevent-i.md)
@@ -1039,9 +1251,15 @@
   - [PlaceholderStyle](arkts-arkui-placeholderstyle-i.md)
   - [PreviewMenuOptions](arkts-arkui-previewmenuoptions-i.md)
   - [RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md)
+  <!--Del-->
+  - [RichEditorBuilderSpanOptions(system api)](arkts-arkui-richeditorbuilderspanoptions-i-sys.md)<!--DelEnd-->
   - [RichEditorChangeValue](arkts-arkui-richeditorchangevalue-i.md)
+  <!--Del-->
+  - [RichEditorChangeValue(system api)](arkts-arkui-richeditorchangevalue-i-sys.md)<!--DelEnd-->
   - [RichEditorDeleteValue](arkts-arkui-richeditordeletevalue-i.md)
   - [RichEditorGesture](arkts-arkui-richeditorgesture-i.md)
+  <!--Del-->
+  - [RichEditorGesture(system api)](arkts-arkui-richeditorgesture-i-sys.md)<!--DelEnd-->
   - [RichEditorImageSpan](arkts-arkui-richeditorimagespan-i.md)
   - [RichEditorImageSpanOptions](arkts-arkui-richeditorimagespanoptions-i.md)
   - [RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md)
@@ -1081,6 +1299,9 @@
   - [RichEditorResponseType](arkts-arkui-richeditorresponsetype-e.md)
   - [RichEditorSpanType](arkts-arkui-richeditorspantype-e.md)
   - [UndoStyle](arkts-arkui-undostyle-e.md)
+  - [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)
+  - [RichEditorController](arkts-arkui-richeditorcontroller-c.md)
+  - [RichEditorStyledStringController](arkts-arkui-richeditorstyledstringcontroller-c.md)
 - [RichText](arkts-arkui-richtext.md)
   - [RichText properties/events](arkts-arkui-richtext-attribute.md)
 - [RootScene](arkts-arkui-rootscene-sys.md)
@@ -1099,6 +1320,8 @@
   - [SaveButtonOnClickResult](arkts-arkui-savebuttononclickresult-e.md)
   - [SaveDescription](arkts-arkui-savedescription-e.md)
   - [SaveIconStyle](arkts-arkui-saveiconstyle-e.md)
+  <!--Del-->
+  - [SaveIconStyle(system api)](arkts-arkui-saveiconstyle-e-sys.md)<!--DelEnd-->
 - [Screen](arkts-arkui-screen-sys.md)
   - [Screen properties/events](arkts-arkui-screen-attribute.md)
 - [Scroll](arkts-arkui-scroll.md)
@@ -1120,6 +1343,7 @@
   - [ScrollOnWillScrollCallback](arkts-arkui-scrollonwillscrollcallback-t.md)
   - [ScrollAlign](arkts-arkui-scrollalign-e.md)
   - [ScrollDirection](arkts-arkui-scrolldirection-e.md)
+  - [Scroller](arkts-arkui-scroller-c.md)
 - [ScrollBar](arkts-arkui-scrollbar.md)
   - [ScrollBar properties/events](arkts-arkui-scrollbar-attribute.md)
   - [ScrollBarOptions](arkts-arkui-scrollbaroptions-i.md)
@@ -1134,12 +1358,17 @@
   - [SearchSubmitCallback](arkts-arkui-searchsubmitcallback-t.md)
   - [CancelButtonStyle](arkts-arkui-cancelbuttonstyle-e.md)
   - [SearchType](arkts-arkui-searchtype-e.md)
+  - [SearchController](arkts-arkui-searchcontroller-c.md)
 - [SecurityUIExtensionComponent](arkts-arkui-securityuiextensioncomponent-sys.md)
   - [SecurityUIExtensionComponent properties/events](arkts-arkui-securityuiextensioncomponent-attribute.md)
-  - [SecurityUIExtensionOptions](arkts-arkui-securityuiextensionoptions-i-sys.md)
-  - [SecurityUIExtensionProxy](arkts-arkui-securityuiextensionproxy-i-sys.md)
-  - [TerminationInfo](arkts-arkui-terminationinfo-i-sys.md)
-  - [SecurityDpiFollowStrategy](arkts-arkui-securitydpifollowstrategy-e-sys.md)
+  <!--Del-->
+  - [SecurityUIExtensionOptions(system api)](arkts-arkui-securityuiextensionoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SecurityUIExtensionProxy(system api)](arkts-arkui-securityuiextensionproxy-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [TerminationInfo(system api)](arkts-arkui-terminationinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SecurityDpiFollowStrategy(system api)](arkts-arkui-securitydpifollowstrategy-e-sys.md)<!--DelEnd-->
 - [Select](arkts-arkui-select.md)
   - [Select properties/events](arkts-arkui-select-attribute.md)
   - [MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)
@@ -1176,9 +1405,11 @@
   - [SliderChangeMode](arkts-arkui-sliderchangemode-e.md)
   - [SliderInteraction](arkts-arkui-sliderinteraction-e.md)
   - [SliderStyle](arkts-arkui-sliderstyle-e.md)
+  - [ColorMetricsLinearGradient](arkts-arkui-colormetricslineargradient-c.md)
 - [Span](arkts-arkui-span.md)
   - [Span properties/events](arkts-arkui-span-attribute.md)
   - [TextBackgroundStyle](arkts-arkui-textbackgroundstyle-i.md)
+  - [BaseSpan](arkts-arkui-basespan-c.md)
 - [Stack](arkts-arkui-stack.md)
   - [Stack properties/events](arkts-arkui-stack-attribute.md)
   - [StackOptions](arkts-arkui-stackoptions-i.md)
@@ -1207,6 +1438,10 @@
   - [SwiperAnimationMode](arkts-arkui-swiperanimationmode-e.md)
   - [SwiperDisplayMode](arkts-arkui-swiperdisplaymode-e.md)
   - [SwiperNestedScrollMode](arkts-arkui-swipernestedscrollmode-e.md)
+  - [DigitIndicator](arkts-arkui-digitindicator-c.md)
+  - [DotIndicator](arkts-arkui-dotindicator-c.md)
+  - [Indicator](arkts-arkui-indicator-c.md)
+  - [SwiperController](arkts-arkui-swipercontroller-c.md)
 - [SymbolSpan](arkts-arkui-symbolspan.md)
   - [SymbolSpan properties/events](arkts-arkui-symbolspan-attribute.md)
 - [SymbolGlyph](arkts-arkui-symbolglyph.md)
@@ -1217,6 +1452,14 @@
   - [ReplaceEffectType](arkts-arkui-replaceeffecttype-e.md)
   - [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md)
   - [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md)
+  - [AppearSymbolEffect](arkts-arkui-appearsymboleffect-c.md)
+  - [BounceSymbolEffect](arkts-arkui-bouncesymboleffect-c.md)
+  - [DisappearSymbolEffect](arkts-arkui-disappearsymboleffect-c.md)
+  - [HierarchicalSymbolEffect](arkts-arkui-hierarchicalsymboleffect-c.md)
+  - [PulseSymbolEffect](arkts-arkui-pulsesymboleffect-c.md)
+  - [ReplaceSymbolEffect](arkts-arkui-replacesymboleffect-c.md)
+  - [ScaleSymbolEffect](arkts-arkui-scalesymboleffect-c.md)
+  - [SymbolEffect](arkts-arkui-symboleffect-c.md)
 - [TabContent](arkts-arkui-tabcontent.md)
   - [TabContent properties/events](arkts-arkui-tabcontent-attribute.md)
   - [BoardStyle](arkts-arkui-boardstyle-i.md)
@@ -1228,6 +1471,9 @@
   - [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md)
   - [LayoutMode](arkts-arkui-layoutmode-e.md)
   - [SelectedMode](arkts-arkui-selectedmode-e.md)
+  - [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md)
+  - [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md)
+  - [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md)
 - [Tabs](arkts-arkui-tabs.md)
   - [Tabs properties/events](arkts-arkui-tabs-attribute.md)
   - [BarGridColumnOptions](arkts-arkui-bargridcolumnoptions-i.md)
@@ -1253,6 +1499,7 @@
   - [LayoutStyle](arkts-arkui-layoutstyle-e.md)
   - [TabsCacheMode](arkts-arkui-tabscachemode-e.md)
   - [TabsNestedScrollMode](arkts-arkui-tabsnestedscrollmode-e.md)
+  - [TabsController](arkts-arkui-tabscontroller-c.md)
 - [Text](arkts-arkui-text.md)
   - [Text properties/events](arkts-arkui-text-attribute.md)
   - [TextMarqueeOptions](arkts-arkui-textmarqueeoptions-i.md)
@@ -1263,15 +1510,18 @@
   - [MarqueeUpdatePolicy](arkts-arkui-marqueeupdatepolicy-e.md)
   - [TextResponseType](arkts-arkui-textresponsetype-e.md)
   - [TextSpanType](arkts-arkui-textspantype-e.md)
+  - [TextController](arkts-arkui-textcontroller-c.md)
 - [TextArea](arkts-arkui-textarea.md)
   - [TextArea properties/events](arkts-arkui-textarea-attribute.md)
   - [TextAreaOptions](arkts-arkui-textareaoptions-i.md)
   - [TextAreaSubmitCallback](arkts-arkui-textareasubmitcallback-t.md)
   - [TextAreaType](arkts-arkui-textareatype-e.md)
+  - [TextAreaController](arkts-arkui-textareacontroller-c.md)
 - [TextClock](arkts-arkui-textclock.md)
   - [TextClock properties/events](arkts-arkui-textclock-attribute.md)
   - [TextClockConfiguration](arkts-arkui-textclockconfiguration-i.md)
   - [TextClockOptions](arkts-arkui-textclockoptions-i.md)
+  - [TextClockController](arkts-arkui-textclockcontroller-c.md)
 - [TextInput](arkts-arkui-textinput.md)
   - [TextInput properties/events](arkts-arkui-textinput-attribute.md)
   - [PasswordIcon](arkts-arkui-passwordicon-i.md)
@@ -1285,7 +1535,10 @@
   - [ContentType](arkts-arkui-contenttype-e.md)
   - [EnterKeyType](arkts-arkui-enterkeytype-e.md)
   - [InputType](arkts-arkui-inputtype-e.md)
+  <!--Del-->
+  - [InputType(system api)](arkts-arkui-inputtype-e-sys.md)<!--DelEnd-->
   - [TextInputStyle](arkts-arkui-textinputstyle-e.md)
+  - [TextInputController](arkts-arkui-textinputcontroller-c.md)
 - [TextPicker](arkts-arkui-textpicker.md)
   - [TextPicker properties/events](arkts-arkui-textpicker-attribute.md)
   - [DividerOptions](arkts-arkui-divideroptions-i.md)
@@ -1293,6 +1546,8 @@
   - [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md)
   - [TextPickerDialogOptions](arkts-arkui-textpickerdialogoptions-i.md)
   - [TextPickerDialogOptionsExt](arkts-arkui-textpickerdialogoptionsext-i.md)
+  <!--Del-->
+  - [TextPickerDialogOptionsExt(system api)](arkts-arkui-textpickerdialogoptionsext-i-sys.md)<!--DelEnd-->
   - [TextPickerOptions](arkts-arkui-textpickeroptions-i.md)
   - [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)
   - [TextPickerResult](arkts-arkui-textpickerresult-i.md)
@@ -1300,18 +1555,23 @@
   - [OnTextPickerChangeCallback](arkts-arkui-ontextpickerchangecallback-t.md)
   - [TextPickerEnterSelectedAreaCallback](arkts-arkui-textpickerenterselectedareacallback-t.md)
   - [TextPickerScrollStopCallback](arkts-arkui-textpickerscrollstopcallback-t.md)
+  - [TextPickerDialog](arkts-arkui-textpickerdialog-c.md)
 - [TextTimer](arkts-arkui-texttimer.md)
   - [TextTimer properties/events](arkts-arkui-texttimer-attribute.md)
   - [TextTimerConfiguration](arkts-arkui-texttimerconfiguration-i.md)
   - [TextTimerOptions](arkts-arkui-texttimeroptions-i.md)
+  - [TextTimerController](arkts-arkui-texttimercontroller-c.md)
 - [TimePicker](arkts-arkui-timepicker.md)
   - [TimePicker properties/events](arkts-arkui-timepicker-attribute.md)
   - [TimePickerDialogOptions](arkts-arkui-timepickerdialogoptions-i.md)
+  <!--Del-->
+  - [TimePickerDialogOptions(system api)](arkts-arkui-timepickerdialogoptions-i-sys.md)<!--DelEnd-->
   - [TimePickerOptions](arkts-arkui-timepickeroptions-i.md)
   - [TimePickerResult](arkts-arkui-timepickerresult-i.md)
   - [DateTimeOptions](arkts-arkui-datetimeoptions-t.md)
   - [OnTimePickerChangeCallback](arkts-arkui-ontimepickerchangecallback-t.md)
   - [TimePickerFormat](arkts-arkui-timepickerformat-e.md)
+  - [TimePickerDialog](arkts-arkui-timepickerdialog-c.md)
 - [Toggle](arkts-arkui-toggle.md)
   - [Toggle properties/events](arkts-arkui-toggle-attribute.md)
   - [SwitchStyle](arkts-arkui-switchstyle-i.md)
@@ -1324,12 +1584,18 @@
   - [ToolBarItemPlacement](arkts-arkui-toolbaritemplacement-e.md)
 - [UIExtensionComponent](arkts-arkui-uiextensioncomponent-sys.md)
   - [UIExtensionComponent properties/events](arkts-arkui-uiextensioncomponent-attribute.md)
-  - [TerminationInfo](arkts-arkui-terminationinfo-i-sys.md)
-  - [UIExtensionOptions](arkts-arkui-uiextensionoptions-i-sys.md)
-  - [UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)
-  - [ReceiveCallback](arkts-arkui-receivecallback-t-sys.md)
-  - [DpiFollowStrategy](arkts-arkui-dpifollowstrategy-e-sys.md)
-  - [WindowModeFollowStrategy](arkts-arkui-windowmodefollowstrategy-e-sys.md)
+  <!--Del-->
+  - [TerminationInfo(system api)](arkts-arkui-terminationinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [UIExtensionOptions(system api)](arkts-arkui-uiextensionoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [UIExtensionProxy(system api)](arkts-arkui-uiextensionproxy-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ReceiveCallback(system api)](arkts-arkui-receivecallback-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DpiFollowStrategy(system api)](arkts-arkui-dpifollowstrategy-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [WindowModeFollowStrategy(system api)](arkts-arkui-windowmodefollowstrategy-e-sys.md)<!--DelEnd-->
 - [UIPickerComponent](arkts-arkui-uipickercomponent.md)
   - [UIPickerComponent properties/events](arkts-arkui-uipickercomponent-attribute.md)
   - [PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md)
@@ -1338,8 +1604,10 @@
   - [PickerIndicatorType](arkts-arkui-pickerindicatortype-e.md)
 - [UnionEffectContainer](arkts-arkui-unioneffectcontainer-sys.md)
   - [UnionEffectContainer properties/events](arkts-arkui-unioneffectcontainer-attribute.md)
-  - [UnionEffectContainerOptions](arkts-arkui-unioneffectcontaineroptions-i-sys.md)
-  - [UnionMode](arkts-arkui-unionmode-e-sys.md)
+  <!--Del-->
+  - [UnionEffectContainerOptions(system api)](arkts-arkui-unioneffectcontaineroptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [UnionMode(system api)](arkts-arkui-unionmode-e-sys.md)<!--DelEnd-->
 - [Video](arkts-arkui-video.md)
   - [Video properties/events](arkts-arkui-video-attribute.md)
   - [FullscreenInfo](arkts-arkui-fullscreeninfo-i.md)
@@ -1349,6 +1617,8 @@
   - [VideoOptions](arkts-arkui-videooptions-i.md)
   - [PlaybackSpeed](arkts-arkui-playbackspeed-e.md)
   - [SeekMode](arkts-arkui-seekmode-e.md)
+  - [VideoController](arkts-arkui-videocontroller-c.md)
+  - [VideoControllerAsync](arkts-arkui-videocontrollerasync-c.md)
 - [WaterFlow](arkts-arkui-waterflow.md)
   - [WaterFlow properties/events](arkts-arkui-waterflow-attribute.md)
   - [UIWaterFlowEvent](arkts-arkui-uiwaterflowevent-i.md)
@@ -1356,6 +1626,8 @@
   - [GetItemMainSizeByIndex](arkts-arkui-getitemmainsizebyindex-t.md)
   - [OnWaterFlowScrollIndexCallback](arkts-arkui-onwaterflowscrollindexcallback-t.md)
   - [WaterFlowLayoutMode](arkts-arkui-waterflowlayoutmode-e.md)
+  - [SectionOptions](arkts-arkui-sectionoptions-c.md)
+  - [WaterFlowSections](arkts-arkui-waterflowsections-c.md)
 - [WindowScene](arkts-arkui-windowscene-sys.md)
   - [WindowScene properties/events](arkts-arkui-windowscene-attribute.md)
 - [XComponent](arkts-arkui-xcomponent.md)
@@ -1365,5 +1637,8 @@
   - [SurfaceRect](arkts-arkui-surfacerect-i.md)
   - [SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md)
   - [XComponentOptions](arkts-arkui-xcomponentoptions-i.md)
+  <!--Del-->
+  - [XComponentOptions(system api)](arkts-arkui-xcomponentoptions-i-sys.md)<!--DelEnd-->
   - [OnNativeLoadCallback](arkts-arkui-onnativeloadcallback-t.md)
   - [HdrType](arkts-arkui-hdrtype-e.md)
+  - [XComponentController](arkts-arkui-xcomponentcontroller-c.md)

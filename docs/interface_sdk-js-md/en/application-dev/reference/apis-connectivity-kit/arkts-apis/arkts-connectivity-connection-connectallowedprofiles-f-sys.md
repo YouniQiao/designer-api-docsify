@@ -33,7 +33,7 @@ Connects all allowed bluetooth profiles between the local and remote device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback result. |
 
 **Error codes:**
 
@@ -58,6 +58,19 @@ try {
       return;
     }
     console.info('connectAllowedProfiles');
+  });
+} catch (err) {
+  console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  connection.connectAllowedProfiles('68:13:24:79:4C:8C').then(() => {
+      console.info('connectAllowedProfiles');
+    }, (err: BusinessError) => {
+      console.error('connectAllowedProfiles:errCode' + err.code + ', errMessage: ' + err.message);
   });
 } catch (err) {
   console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
@@ -113,16 +126,5 @@ Connects all allowed bluetooth profiles between the local and remote device.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  connection.connectAllowedProfiles('68:13:24:79:4C:8C').then(() => {
-      console.info('connectAllowedProfiles');
-    }, (err: BusinessError) => {
-      console.error('connectAllowedProfiles:errCode' + err.code + ', errMessage: ' + err.message);
-  });
-} catch (err) {
-  console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [connectAllowedProfiles](#connectallowedprofiles)
 

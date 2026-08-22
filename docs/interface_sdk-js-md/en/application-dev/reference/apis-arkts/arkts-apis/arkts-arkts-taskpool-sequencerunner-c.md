@@ -39,7 +39,87 @@ A constructor used to create a **SequenceRunner** instance.
 **Examples**
 
 ```TypeScript
+@Concurrent
+function printArgs(args: number): number {
+  console.info("printArgs: " + args);
+  return args;
+}
+
+let task: taskpool.Task = new taskpool.Task(printArgs, "this is my first Task");
+```
+
+```TypeScript
+@Concurrent
+function printArgs(args: string): string {
+  console.info("printArgs: " + args);
+  return args;
+}
+
+let taskName: string = "taskName";
+let task: taskpool.Task = new taskpool.Task(taskName, printArgs, "this is my first Task");
+let name: string = task.name;
+```
+
+```TypeScript
+@Concurrent
+function printArgs(args: string): string {
+  console.info("printArgs: " + args);
+  return args;
+}
+
+@Concurrent
+function testWithThreeParams(a: number, b: string, c: number): string {
+  return b;
+}
+
+@Concurrent
+function testWithArray(args: [number, string]): string {
+  return "success";
+}
+
+let task1: taskpool.Task = new taskpool.GenericsTask<[string], string>(printArgs, "this is my first LongTask");
+
+let task2: taskpool.Task = new taskpool.GenericsTask<[number, string, number], string>(testWithThreeParams, 100, "test", 100);
+
+let task3: taskpool.Task = new taskpool.GenericsTask<[[number, string]], string>(testWithArray, [100, "test"]);
+```
+
+```TypeScript
+@Concurrent
+function printArgs(args: string): string {
+  console.info("printArgs: " + args);
+  return args;
+}
+
+let taskName: string = "taskName";
+let task: taskpool.Task = new taskpool.GenericsTask<[string], string>(taskName, printArgs, "this is my first Task");
+let name: string = task.name;
+```
+
+```TypeScript
+let taskGroup = new taskpool.TaskGroup();
+```
+
+```TypeScript
+let taskGroupName: string = "groupName";
+let taskGroup: taskpool.TaskGroup = new taskpool.TaskGroup(taskGroupName);
+let name: string = taskGroup.name;
+```
+
+```TypeScript
 let runner: taskpool.SequenceRunner = new taskpool.SequenceRunner();
+```
+
+```TypeScript
+let runner:taskpool.SequenceRunner = new taskpool.SequenceRunner("runner1", taskpool.Priority.LOW);
+```
+
+```TypeScript
+let runner: taskpool.AsyncRunner = new taskpool.AsyncRunner(5);
+```
+
+```TypeScript
+let runner:taskpool.AsyncRunner = new taskpool.AsyncRunner("runner1", 5, 5);
 ```
 
 ## constructor
@@ -74,9 +154,7 @@ A constructor used to create a **SequenceRunner** instance. This instance repres
 
 **Examples**
 
-```TypeScript
-let runner:taskpool.SequenceRunner = new taskpool.SequenceRunner("runner1", taskpool.Priority.LOW);
-```
+See [constructor](#constructor)
 
 ## execute
 
@@ -126,6 +204,117 @@ Adds a task to the serial queue for execution. Before using this API, you must c
 
 ```TypeScript
 @Concurrent
+function printArgs(args: number): number {
+    console.info("printArgs: " + args);
+    return args;
+}
+
+taskpool.execute(printArgs, 100).then((value: Object) => { // 100: test number
+  console.info("taskpool result: " + value);
+});
+```
+
+```TypeScript
+@Concurrent
+function printArgs(args: number): number {
+  console.info("printArgs: " + args);
+  return args;
+}
+
+@Concurrent
+function testWithThreeParams(a: number, b: string, c: number): string {
+  return b;
+}
+
+@Concurrent
+function testWithArray(args: [number, string]): string {
+  return "success";
+}
+
+taskpool.execute<[number], number>(printArgs, 100).then((value: number) => { // 100: test number
+  console.info("taskpool result: " + value); // "taskpool result: 100"
+});
+
+taskpool.execute<[number, string, number], string>(testWithThreeParams, 100, "test", 100).then((value: string) => {
+  console.info("taskpool result: " + value); // "taskpool result: test"
+});
+
+taskpool.execute<[[number, string]], string>(testWithArray, [100, "test"]).then((value: string) => {
+  console.info("taskpool result: " + value); // "taskpool result: success"
+});
+```
+
+```TypeScript
+@Concurrent
+function printArgs(args: number): number {
+    console.info("printArgs: " + args);
+    return args;
+}
+
+let task1: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
+let task2: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
+let task3: taskpool.Task = new taskpool.Task(printArgs, 300); // 300: test number
+taskpool.execute(task1, taskpool.Priority.LOW).then((value: Object) => {
+  console.info("taskpool result1: " + value);
+});
+taskpool.execute(task2, taskpool.Priority.MEDIUM).then((value: Object) => {
+  console.info("taskpool result2: " + value);
+});
+taskpool.execute(task3, taskpool.Priority.HIGH).then((value: Object) => {
+  console.info("taskpool result3: " + value);
+});
+```
+
+```TypeScript
+@Concurrent
+function printArgs(args: number): number {
+    console.info("printArgs: " + args);
+    return args;
+}
+
+let task1: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 100); // 100: test number
+let task2: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 200); // 200: test number
+let task3: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 300); // 300: test number
+taskpool.execute<[number], number>(task1, taskpool.Priority.LOW).then((value: number) => {
+  console.info("taskpool result1: " + value);
+});
+taskpool.execute<[number], number>(task2, taskpool.Priority.MEDIUM).then((value: number) => {
+  console.info("taskpool result2: " + value);
+});
+taskpool.execute<[number], number>(task3, taskpool.Priority.HIGH).then((value: number) => {
+  console.info("taskpool result3: " + value);
+});
+```
+
+```TypeScript
+@Concurrent
+function printArgs(args: number): number {
+    console.info("printArgs: " + args);
+    return args;
+}
+
+let taskGroup1: taskpool.TaskGroup = new taskpool.TaskGroup();
+taskGroup1.addTask(printArgs, 10); // 10: test number
+taskGroup1.addTask(printArgs, 20); // 20: test number
+taskGroup1.addTask(printArgs, 30); // 30: test number
+
+let taskGroup2: taskpool.TaskGroup = new taskpool.TaskGroup();
+let task1: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
+let task2: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
+let task3: taskpool.Task = new taskpool.Task(printArgs, 300); // 300: test number
+taskGroup2.addTask(task1);
+taskGroup2.addTask(task2);
+taskGroup2.addTask(task3);
+taskpool.execute(taskGroup1).then((res: Array<Object>) => {
+  console.info("taskpool execute res is:" + res);
+});
+taskpool.execute(taskGroup2).then((res: Array<Object>) => {
+  console.info("taskpool execute res is:" + res);
+});
+```
+
+```TypeScript
+@Concurrent
 function additionDelay(delay: number): void {
   let start: number = new Date().getTime();
   while (new Date().getTime() - start < delay) {
@@ -158,6 +347,40 @@ async function seqRunner() {
   });
   await runner.execute(task4);
   console.info("seqrunner: task4 done, finalString is " + finalString);
+}
+```
+
+```TypeScript
+import { taskpool } from '@kit.ArkTS';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Concurrent
+function additionDelay(delay: number): void {
+  let start: number = new Date().getTime();
+  while (new Date().getTime() - start < delay) {
+    continue;
+  }
+}
+async function asyRunner() {
+  let runner:taskpool.AsyncRunner = new taskpool.AsyncRunner("runner1", 5, 5);
+  for (let i = 0; i < 30; i++) {
+    let task:taskpool.Task = new taskpool.Task(additionDelay, 1000);
+    runner.execute(task).then(() => {
+      console.info("asyncRunner: task" + i + " done.");
+    }).catch((e: BusinessError) => {
+      console.error("asyncRunner: task" + i + " error." + e.code + "-" + e.message);
+    });
+  }
+}
+
+async function asyRunner2() {
+  let runner:taskpool.AsyncRunner = new taskpool.AsyncRunner(5);
+  for (let i = 0; i < 20; i++) {
+    let task:taskpool.Task = new taskpool.Task(additionDelay, 1000);
+    runner.execute(task).then(() => {
+      console.info("asyncRunner: task" + i + " done.");
+    });
+  }
 }
 ```
 

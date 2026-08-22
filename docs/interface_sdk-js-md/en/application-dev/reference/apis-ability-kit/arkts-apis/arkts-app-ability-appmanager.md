@@ -30,14 +30,14 @@ import { appManager } from '@kit.AbilityKit';
 | [isRunningInStabilityTest](arkts-ability-appmanager-isrunninginstabilitytest-f.md) | Checks whether the system is undergoing a stability test. This API uses an asynchronous callback to return the result. |
 | [isRunningInStabilityTest](arkts-ability-appmanager-isrunninginstabilitytest-f.md) | Checks whether the system is undergoing a stability test. This API uses a promise to return the result. |
 | [killProcessesByBundleName](arkts-ability-appmanager-killprocessesbybundlename-f.md) | Kills a process by bundle name. This API uses a promise to return the result. |
-| [offApplicationStateChange](arkts-ability-appmanager-offapplicationstatechange-f.md) | Unregister application state observer. |
-| [offApplicationStateChange](arkts-ability-appmanager-offapplicationstatechange-f.md) | Unregister application state observer. |
 | [off_applicationState](arkts-ability-appmanager-offapplicationstate-f.md#offapplicationstate) | Unregisters the observer used to listen for application state changes. This API uses an asynchronous callback to return the result. |
 | [off_applicationState](arkts-ability-appmanager-offapplicationstate-f.md#offapplicationstate) | Unregisters the observer used to listen for application state changes. This API uses a promise to return the result. |
-| [onApplicationStateChange](arkts-ability-appmanager-onapplicationstatechange-f.md) | Register application state observer. |
-| [onApplicationStateChange](arkts-ability-appmanager-onapplicationstatechange-f.md) | Register application state observer. |
+| [offApplicationStateChange](arkts-ability-appmanager-offapplicationstatechange-f.md) | Unregister application state observer. |
+| [offApplicationStateChange](arkts-ability-appmanager-offapplicationstatechange-f.md) | Unregister application state observer. |
 | [on_applicationState](arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate) | Registers an observer to listen for lifecycle changes of all applications. |
 | [on_applicationState](arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate) | Registers an observer to listen for lifecycle changes of the specified application. |
+| [onApplicationStateChange](arkts-ability-appmanager-onapplicationstatechange-f.md) | Register application state observer. |
+| [onApplicationStateChange](arkts-ability-appmanager-onapplicationstatechange-f.md) | Register application state observer. |
 
 <!--Del-->
 ### Functions(System API)
@@ -66,22 +66,22 @@ import { appManager } from '@kit.AbilityKit';
 | [isApplicationRunning](arkts-ability-appmanager-isapplicationrunning-f-sys.md) | Checks whether the application with the specified bundle name is running across all users. This API uses an asynchronous callback to return the result. |
 | [isSharedBundleRunning](arkts-ability-appmanager-issharedbundlerunning-f-sys.md) | Checks whether the shared library is in use. This API uses a promise to return the result. |
 | [isSharedBundleRunning](arkts-ability-appmanager-issharedbundlerunning-f-sys.md) | Checks whether the shared library is in use. This API uses an asynchronous callback to return the result. |
-| [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md) | Kills a process by bundle name and account ID. This API uses a promise to return the result. |
-| [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md) | Kills a process by bundle name and account ID. This API uses a promise to return the result. |
-| [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md) | Kills a process by bundle name and account ID. This API uses an asynchronous callback to return the result. |
 | [killProcessesByBundleName](arkts-ability-appmanager-killprocessesbybundlename-f-sys.md) | Kills a process by bundle name. This API uses a promise to return the result. |
 | [killProcessesByBundleName](arkts-ability-appmanager-killprocessesbybundlename-f-sys.md) | Kills a process by bundle name. This API uses an asynchronous callback to return the result. |
 | [killProcessesInBatch](arkts-ability-appmanager-killprocessesinbatch-f-sys.md) | Kills processes in batches. This API uses a promise to return the result. This API can be properly called on PCs/2-in-1 devices. If it is called on other devices, error code 801 is returned. **Required permissions**: ohos.permission.KILL_APP_PROCESSES |
-| [offAbilityFirstFrameStateChange](arkts-ability-appmanager-offabilityfirstframestatechange-f-sys.md) | Unregister ability first frame state observer. |
-| [offAppForegroundStateChange](arkts-ability-appmanager-offappforegroundstatechange-f-sys.md) | Unregister app foreground or background state observer. |
+| [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md) | Kills a process by bundle name and account ID. This API uses a promise to return the result. |
+| [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md) | Kills a process by bundle name and account ID. This API uses a promise to return the result. |
+| [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md) | Kills a process by bundle name and account ID. This API uses an asynchronous callback to return the result. |
 | [off_abilityFirstFrameState](arkts-ability-appmanager-offabilityfirstframestate-f-sys.md#offabilityfirstframestate) | Deregisters the observer used to listen for the complete of the first frame rendering of a given ability. |
 | [off_appForegroundState](arkts-ability-appmanager-offappforegroundstate-f-sys.md#offappforegroundstate) | Unregisters the observer used to listen for application start or exit events. |
-| [onAbilityFirstFrameStateChange](arkts-ability-appmanager-onabilityfirstframestatechange-f-sys.md) | Register ability first frame state observe. |
-| [onAppForegroundStateChange](arkts-ability-appmanager-onappforegroundstatechange-f-sys.md) | Register app foreground or background state observer. |
-| [onApplicationStateChange](arkts-ability-appmanager-onapplicationstatechange-f-sys.md) | Register application state observer with filter. |
+| [offAbilityFirstFrameStateChange](arkts-ability-appmanager-offabilityfirstframestatechange-f-sys.md) | Unregister ability first frame state observer. |
+| [offAppForegroundStateChange](arkts-ability-appmanager-offappforegroundstatechange-f-sys.md) | Unregister app foreground or background state observer. |
 | [on_abilityFirstFrameState](arkts-ability-appmanager-onabilityfirstframestate-f-sys.md#onabilityfirstframestate) | Registers an observer to listen for the complete of the first frame rendering of a given ability. |
 | [on_appForegroundState](arkts-ability-appmanager-onappforegroundstate-f-sys.md#onappforegroundstate) | Registers an observer to listen for application start or exit events. The observer can be used by a system application to observe the start or event events of all applications. |
 | [on_applicationState](arkts-ability-appmanager-onapplicationstate-f-sys.md#onapplicationstate) | Registers an application state observer, which allows you to filter for specific application lifecycle changes by setting filter criteria. |
+| [onAbilityFirstFrameStateChange](arkts-ability-appmanager-onabilityfirstframestatechange-f-sys.md) | Register ability first frame state observe. |
+| [onAppForegroundStateChange](arkts-ability-appmanager-onappforegroundstatechange-f-sys.md) | Register app foreground or background state observer. |
+| [onApplicationStateChange](arkts-ability-appmanager-onapplicationstatechange-f-sys.md) | Register application state observer with filter. |
 | [preloadApplication](arkts-ability-appmanager-preloadapplication-f-sys.md) | Preloads an application process. A successful call does not always mean that the preloading is successful. In other words, the target application process may not be created even if the API is successfully called. This API uses a promise to return the result. |
 | [setKeepAliveForAppServiceExtension](arkts-ability-appmanager-setkeepaliveforappserviceextension-f-sys.md) | Sets or cancels the keep-alive status for an AppServiceExtensionAbility. This API uses a promise to return the result. This API can be properly called on PCs/2-in-1 devices. If it is called on other devices, error code 801 is returned. |
 | [setKeepAliveForBundle](arkts-ability-appmanager-setkeepaliveforbundle-f-sys.md) | Sets or cancels the keep-alive status for an application that belongs to a specified user. This API uses a promise to return the result. Starting from API version 18, this API can be properly called only on 2-in-1 devices and wearables. For versions earlier than API version 18, this API can be properly called only on 2-in-1 devices. If it is called on other device types, error code 801 is returned. |
@@ -124,8 +124,8 @@ import { appManager } from '@kit.AbilityKit';
 | Name | Description |
 | --- | --- |
 | [AbilityStateData](arkts-ability-appmanager-abilitystatedata-t.md) | Defines the ability state data. |
-| [AppStateData](arkts-ability-appmanager-appstatedata-t.md) | Defines the application state data. |
 | [ApplicationStateObserver](arkts-ability-appmanager-applicationstateobserver-t.md) | Defines the observer used to listen for application state changes. |
+| [AppStateData](arkts-ability-appmanager-appstatedata-t.md) | Defines the application state data. |
 | [ProcessData](arkts-ability-appmanager-processdata-t.md) | Defines the process data. |
 | [ProcessInformation](arkts-ability-appmanager-processinformation-t.md) | Defines the process information. |
 

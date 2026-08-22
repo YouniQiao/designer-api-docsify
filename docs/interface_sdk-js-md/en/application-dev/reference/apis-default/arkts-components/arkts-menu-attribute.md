@@ -163,28 +163,6 @@ setMenuOptions(): this
 
 | Type | Description |
 | --- | --- |
-## subMenuExpandSymbol
-
-```TypeScript
-subMenuExpandSymbol(symbol: SymbolGlyphModifier | undefined): this
-```
-
-**Since:** -1
-
-**ArkTS mode:** ArkTS-Sta since version -1.
-
-<!--Device-MenuAttribute-subMenuExpandSymbol(symbol: SymbolGlyphModifier | undefined): this--><!--Device-MenuAttribute-subMenuExpandSymbol(symbol: SymbolGlyphModifier | undefined): this-End-->
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| symbol | [SymbolGlyphModifier](../../apis-arkui/arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) \| undefined | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## subMenuExpandingMode
 
 ```TypeScript
@@ -202,6 +180,28 @@ subMenuExpandingMode(mode: SubMenuExpandingMode | undefined): this
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | [SubMenuExpandingMode](arkts-menu-submenuexpandingmode-e.md) \| undefined | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+## subMenuExpandSymbol
+
+```TypeScript
+subMenuExpandSymbol(symbol: SymbolGlyphModifier | undefined): this
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Sta since version -1.
+
+<!--Device-MenuAttribute-subMenuExpandSymbol(symbol: SymbolGlyphModifier | undefined): this--><!--Device-MenuAttribute-subMenuExpandSymbol(symbol: SymbolGlyphModifier | undefined): this-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| symbol | [SymbolGlyphModifier](../../apis-arkui/arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) \| undefined | Yes |  |
 
 **Return value:**
 

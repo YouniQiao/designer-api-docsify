@@ -76,7 +76,7 @@ readonly drawableDescriptor: DrawableDescriptor | null
 
 Indicates the drawable descriptor of this ability icon
 
-**Type:** [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkuidrawabledescriptor-drawabledescriptor-c.md) \| null
+**Type:** [DrawableDescriptor](../../apis-default/arkts-apis/arkts-arkui-drawabledescriptor-drawabledescriptor-c.md) \| null
 
 **Since:** 23
 

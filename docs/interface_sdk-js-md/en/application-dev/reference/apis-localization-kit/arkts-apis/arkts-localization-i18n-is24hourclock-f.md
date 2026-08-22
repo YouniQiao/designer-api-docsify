@@ -35,6 +35,12 @@ Checks whether the 24-hour clock is used.
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
 
+let is24HourClock: boolean = i18n.System.is24HourClock(); // If the 24-hour clock is used, then is24HourClock is true.
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
 let is24HourClock: boolean = i18n.is24HourClock();
 ```
 

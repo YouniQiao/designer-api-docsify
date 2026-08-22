@@ -34,7 +34,7 @@ declare function statSync(file: string | number): Stat
 
 | 类型 | 说明 |
 | --- | --- |
-| [Stat](arkts-corefile-filefs-stat-i.md) | 表示文件或目录的具体信息。 |
+| [Stat](arkts-corefile-file-fs-stat-i.md) | 表示文件或目录的具体信息。 |
 
 **错误码：**
 
@@ -53,4 +53,11 @@ declare function statSync(file: string | number): Stat
 | 13900033 | Too many symbolic links encountered |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+let stat = fileIo.statSync(pathDir);
+console.info(`Succeeded in getting file info, the size of file is ${stat.size}`);
+```
 

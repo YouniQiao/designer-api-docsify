@@ -4076,24 +4076,6 @@ Half Float
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
-## INTERLEAVED_ATTRIBS
-
-```TypeScript
-readonly INTERLEAVED_ATTRIBS: webgl.GLenum
-```
-
-Interleaved Attribs
-
-**Type:** webgl.GLenum
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-WebGL2RenderingContextBase-readonly INTERLEAVED_ATTRIBS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly INTERLEAVED_ATTRIBS: webgl.GLenum-End-->
-
-**System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
-
 ## INT_2_10_10_10_REV
 
 ```TypeScript
@@ -4181,6 +4163,24 @@ Int Sampler Cube
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly INT_SAMPLER_CUBE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly INT_SAMPLER_CUBE: webgl.GLenum-End-->
+
+**System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
+
+## INTERLEAVED_ATTRIBS
+
+```TypeScript
+readonly INTERLEAVED_ATTRIBS: webgl.GLenum
+```
+
+Interleaved Attribs
+
+**Type:** webgl.GLenum
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly INTERLEAVED_ATTRIBS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly INTERLEAVED_ATTRIBS: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4364,6 +4364,24 @@ Max draw buffers
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
+## MAX_ELEMENT_INDEX
+
+```TypeScript
+readonly MAX_ELEMENT_INDEX: webgl.GLenum
+```
+
+Max element index
+
+**Type:** webgl.GLenum
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly MAX_ELEMENT_INDEX: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_ELEMENT_INDEX: webgl.GLenum-End-->
+
+**System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
+
 ## MAX_ELEMENTS_INDICES
 
 ```TypeScript
@@ -4397,24 +4415,6 @@ Max elements vertices
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly MAX_ELEMENTS_VERTICES: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_ELEMENTS_VERTICES: webgl.GLenum-End-->
-
-**System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
-
-## MAX_ELEMENT_INDEX
-
-```TypeScript
-readonly MAX_ELEMENT_INDEX: webgl.GLenum
-```
-
-Max element index
-
-**Type:** webgl.GLenum
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-WebGL2RenderingContextBase-readonly MAX_ELEMENT_INDEX: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_ELEMENT_INDEX: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5066,6 +5066,24 @@ R8
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
+## R8_SNORM
+
+```TypeScript
+readonly R8_SNORM: webgl.GLenum
+```
+
+R8 Snorm
+
+**Type:** webgl.GLenum
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly R8_SNORM: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly R8_SNORM: webgl.GLenum-End-->
+
+**System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
+
 ## R8I
 
 ```TypeScript
@@ -5099,24 +5117,6 @@ R8Ui
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly R8UI: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly R8UI: webgl.GLenum-End-->
-
-**System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
-
-## R8_SNORM
-
-```TypeScript
-readonly R8_SNORM: webgl.GLenum
-```
-
-R8 Snorm
-
-**Type:** webgl.GLenum
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-WebGL2RenderingContextBase-readonly R8_SNORM: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly R8_SNORM: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5390,6 +5390,24 @@ Rg8
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
+## RG8_SNORM
+
+```TypeScript
+readonly RG8_SNORM: webgl.GLenum
+```
+
+Rg8 Snorm
+
+**Type:** webgl.GLenum
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RG8_SNORM: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RG8_SNORM: webgl.GLenum-End-->
+
+**System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
+
 ## RG8I
 
 ```TypeScript
@@ -5426,13 +5444,13 @@ Rg8Ui
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
-## RG8_SNORM
+## RG_INTEGER
 
 ```TypeScript
-readonly RG8_SNORM: webgl.GLenum
+readonly RG_INTEGER: webgl.GLenum
 ```
 
-Rg8 Snorm
+Rg Integer
 
 **Type:** webgl.GLenum
 
@@ -5440,7 +5458,7 @@ Rg8 Snorm
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-readonly RG8_SNORM: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RG8_SNORM: webgl.GLenum-End-->
+<!--Device-WebGL2RenderingContextBase-readonly RG_INTEGER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RG_INTEGER: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5606,6 +5624,24 @@ Internal format: RGB8
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
+## RGB8_SNORM
+
+```TypeScript
+readonly RGB8_SNORM: webgl.GLenum
+```
+
+Rgb8 Snorm
+
+**Type:** webgl.GLenum
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RGB8_SNORM: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB8_SNORM: webgl.GLenum-End-->
+
+**System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
+
 ## RGB8I
 
 ```TypeScript
@@ -5642,24 +5678,6 @@ Rgb8Ui
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
-## RGB8_SNORM
-
-```TypeScript
-readonly RGB8_SNORM: webgl.GLenum
-```
-
-Rgb8 Snorm
-
-**Type:** webgl.GLenum
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-WebGL2RenderingContextBase-readonly RGB8_SNORM: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB8_SNORM: webgl.GLenum-End-->
-
-**System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
-
 ## RGB9_E5
 
 ```TypeScript
@@ -5675,6 +5693,24 @@ Rgb9 E5
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RGB9_E5: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB9_E5: webgl.GLenum-End-->
+
+**System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
+
+## RGB_INTEGER
+
+```TypeScript
+readonly RGB_INTEGER: webgl.GLenum
+```
+
+Rgb Integer
+
+**Type:** webgl.GLenum
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RGB_INTEGER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB_INTEGER: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5804,6 +5840,24 @@ Internal format: RGBA8
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
+## RGBA8_SNORM
+
+```TypeScript
+readonly RGBA8_SNORM: webgl.GLenum
+```
+
+Rgba8 Snorm
+
+**Type:** webgl.GLenum
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RGBA8_SNORM: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGBA8_SNORM: webgl.GLenum-End-->
+
+**System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
+
 ## RGBA8I
 
 ```TypeScript
@@ -5840,24 +5894,6 @@ Rgba8Ui
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
-## RGBA8_SNORM
-
-```TypeScript
-readonly RGBA8_SNORM: webgl.GLenum
-```
-
-Rgba8 Snorm
-
-**Type:** webgl.GLenum
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-WebGL2RenderingContextBase-readonly RGBA8_SNORM: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGBA8_SNORM: webgl.GLenum-End-->
-
-**System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
-
 ## RGBA_INTEGER
 
 ```TypeScript
@@ -5873,42 +5909,6 @@ Rgba Integer
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly RGBA_INTEGER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGBA_INTEGER: webgl.GLenum-End-->
-
-**System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
-
-## RGB_INTEGER
-
-```TypeScript
-readonly RGB_INTEGER: webgl.GLenum
-```
-
-Rgb Integer
-
-**Type:** webgl.GLenum
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-WebGL2RenderingContextBase-readonly RGB_INTEGER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB_INTEGER: webgl.GLenum-End-->
-
-**System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
-
-## RG_INTEGER
-
-```TypeScript
-readonly RG_INTEGER: webgl.GLenum
-```
-
-Rg Integer
-
-**Type:** webgl.GLenum
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-WebGL2RenderingContextBase-readonly RG_INTEGER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RG_INTEGER: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6812,24 +6812,6 @@ Uniform Array Stride
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
-## UNIFORM_BLOCK_ACTIVE_UNIFORMS
-
-```TypeScript
-readonly UNIFORM_BLOCK_ACTIVE_UNIFORMS: webgl.GLenum
-```
-
-Uniform Block Active Uniforms
-
-**Type:** webgl.GLenum
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_ACTIVE_UNIFORMS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_ACTIVE_UNIFORMS: webgl.GLenum-End-->
-
-**System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
-
 ## UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES
 
 ```TypeScript
@@ -6845,6 +6827,24 @@ Uniform Block Active Uniform Indices
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES: webgl.GLenum-End-->
+
+**System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
+
+## UNIFORM_BLOCK_ACTIVE_UNIFORMS
+
+```TypeScript
+readonly UNIFORM_BLOCK_ACTIVE_UNIFORMS: webgl.GLenum
+```
+
+Uniform Block Active Uniforms
+
+**Type:** webgl.GLenum
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_ACTIVE_UNIFORMS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_ACTIVE_UNIFORMS: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 

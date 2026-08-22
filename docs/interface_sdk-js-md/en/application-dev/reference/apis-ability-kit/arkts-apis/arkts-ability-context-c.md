@@ -187,6 +187,23 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let moduleContext: common.Context;
+    try {
+      moduleContext = this.context.createModuleContext('com.example.test', 'entry');
+    } catch (error) {
+      console.error(`createModuleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
+
 ## getApplicationContext
 
 ```TypeScript
@@ -259,7 +276,7 @@ Obtains the shared directory based on a group ID. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dataGroupID | string | Yes | Group ID, which is assigned by the system when an application of the atomic service type is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the shared directory obtained (or empty if or is empty if non-existent ). Otherwise, an error object is returned.<br>Note: Only the EL2 encryption level is supported. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the shared directory obtained (or empty if or is empty if non-existent ). Otherwise, an error object is returned.<br>Note: Only the EL2 encryption level is supported. |
 
 **Error codes:**
 
@@ -269,6 +286,26 @@ Obtains the shared directory based on a group ID. This API uses an asynchronous 
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 **Examples**
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let groupId = "1";
+    let getGroupDirContext: common.Context = this.context;
+    try {
+      getGroupDirContext.getGroupDir(groupId).then(data => {
+        console.info("getGroupDir result:" + data);
+      })
+    } catch (error) {
+      console.error(`getGroupDirContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ```TypeScript
 import { common, UIAbility } from '@kit.AbilityKit';
@@ -329,25 +366,7 @@ Obtains the shared directory based on a group ID. This API uses a promise to ret
 
 **Examples**
 
-```TypeScript
-import { common, UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate');
-    let groupId = "1";
-    let getGroupDirContext: common.Context = this.context;
-    try {
-      getGroupDirContext.getGroupDir(groupId).then(data => {
-        console.info("getGroupDir result:" + data);
-      })
-    } catch (error) {
-      console.error(`getGroupDirContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
-    }
-  }
-}
-```
+See [getGroupDir](#getgroupdir)
 
 ## isContextOf
 

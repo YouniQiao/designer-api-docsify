@@ -46,3 +46,42 @@ snapshot: image.PixelMap
 
 **系统接口：** 此接口为系统接口。
 
+**示例**
+
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 获取任务快照信息
+  missionManager.getMissionInfo('', 1, (error, data) => {
+    if (error) {
+      // 处理业务逻辑错误
+      console.error(`getMissionInfo failed, error.code: ${error.code}, error.message: ${error.message}`);
+      return;
+    }
+    if (!data) {
+      console.error('getMissionInfo failed: data is undefined');
+      return;
+    }
+
+    console.info(`getMissionInfo missionId is: ${data.missionId}`);
+    console.info(`getMissionInfo runningState is: ${data.runningState}`);
+    console.info(`getMissionInfo lockedState is: ${data.lockedState}`);
+    console.info(`getMissionInfo timestamp is: ${data.timestamp}`);
+    console.info(`getMissionInfo want is: ${data.want}`);
+    console.info(`getMissionInfo label is: ${data.label}`);
+    console.info(`getMissionInfo iconPath is: ${data.iconPath}`);
+    console.info(`getMissionInfo continuable is: ${data.continuable}`);
+    console.info(`getMissionInfo unclearable is: ${data.unclearable}`);
+
+    missionManager.getMissionSnapShot('', data.missionId).then(snapshot => {
+      // 执行正常业务
+      console.info(`bundleName = ${snapshot.ability.bundleName}`);
+    });
+  });
+} catch (paramError) {
+  console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+}
+```
+

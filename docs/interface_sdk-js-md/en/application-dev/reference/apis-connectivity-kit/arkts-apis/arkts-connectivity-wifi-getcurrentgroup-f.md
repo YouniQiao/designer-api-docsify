@@ -35,6 +35,24 @@ Obtains information about the current group.
 | --- | --- |
 | Promise&lt;WifiP2pGroupInfo&gt; | Returns the current group information. |
 
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+wifi.getCurrentGroup((err, data:wifi.WifiP2pGroupInfo) => {
+   if (err) {
+       console.error("get current P2P group error");
+       return;
+   }
+	console.info("get current P2P group: " + JSON.stringify(data));
+});
+
+wifi.getCurrentGroup().then(data => {
+	console.info("get current P2P group: " + JSON.stringify(data));
+});
+```
+
 
 ## getCurrentGroup
 
@@ -60,23 +78,9 @@ Obtains information about the current group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;WifiP2pGroupInfo&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pGroupInfo&gt; | Yes |  |
 
 **Examples**
 
-```TypeScript
-import wifi from '@ohos.wifi';
-
-wifi.getCurrentGroup((err, data:wifi.WifiP2pGroupInfo) => {
-   if (err) {
-       console.error("get current P2P group error");
-       return;
-   }
-	console.info("get current P2P group: " + JSON.stringify(data));
-});
-
-wifi.getCurrentGroup().then(data => {
-	console.info("get current P2P group: " + JSON.stringify(data));
-});
-```
+See [getCurrentGroup](#getcurrentgroup)
 

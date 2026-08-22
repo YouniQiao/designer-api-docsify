@@ -187,6 +187,13 @@ let calendar: i18n.Calendar = i18n.getCalendar('en-US', 'buddhist');
 let calendarName: string = calendar.getDisplayName('zh'); // calendarName = 'Buddhist'
 ```
 
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let timezone: i18n.TimeZone = i18n.getTimeZone('Asia/Shanghai');
+let timezoneName: string = timezone.getDisplayName('zh-CN', false); // timezoneName = 'China Standard Time'
+```
+
 ## getFirstDayOfWeek
 
 ```TypeScript
@@ -210,6 +217,12 @@ Obtains the first day of a week for this **Calendar** object.
 | int | First day of a week. The value **1** indicates Sunday, and the value **7** indicates Saturday. |
 
 **Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let firstDayOfWeek: i18n.WeekDay = i18n.System.getFirstDayOfWeek();
+```
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -311,6 +324,12 @@ import { i18n } from '@kit.LocalizationKit';
 let calendar: i18n.Calendar = i18n.getCalendar('zh-Hans');
 calendar.setTimeZone('Asia/Shanghai');
 let timezone: string = calendar.getTimeZone(); // timezone = 'Asia/Shanghai'
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let timezone: i18n.TimeZone = i18n.getTimeZone('Asia/Shanghai');
 ```
 
 ## isWeekend
@@ -421,6 +440,18 @@ calendar.setFirstDayOfWeek(3);
 let firstDayOfWeek: number = calendar.getFirstDayOfWeek(); // firstDayOfWeek = 3
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  i18n.System.setFirstDayOfWeek (i18n.WeekDay.MON); // Set the preferred start day of a week to Monday.
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.setFirstDayOfWeek failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
 ## setMinimalDaysInFirstWeek
 
 ```TypeScript
@@ -485,6 +516,13 @@ let date: Date = new Date(2021, 10, 7, 8, 0, 0); // The date and time is 2021.11
 calendar.setTime(date);
 ```
 
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let calendar: i18n.Calendar = i18n.getCalendar('en-US', 'gregory');
+calendar.setTime(10540800000);
+```
+
 ## setTime
 
 ```TypeScript
@@ -509,12 +547,7 @@ Sets the date and time for a **Calendar** object based on the input timestamp.
 
 **Examples**
 
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let calendar: i18n.Calendar = i18n.getCalendar('en-US', 'gregory');
-calendar.setTime(10540800000);
-```
+See [setTime](#settime)
 
 ## setTimeZone
 

@@ -431,6 +431,28 @@ onZoomStop(event: VoidCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
+## scrollable
+
+```TypeScript
+scrollable(value: ScrollDirection | undefined): this
+```
+
+**起始版本：** -1
+
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
+
+<!--Device-ScrollAttribute-scrollable(value: ScrollDirection | undefined): this--><!--Device-ScrollAttribute-scrollable(value: ScrollDirection | undefined): this-End-->
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ScrollDirection](arkts-scroll-scrolldirection-e.md) \| undefined | 是 |  |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
 ## scrollBar
 
 ```TypeScript
@@ -536,28 +558,6 @@ scrollSnap(value: ScrollSnapOptions | undefined): this
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [ScrollSnapOptions](arkts-scroll-scrollsnapoptions-i.md) \| undefined | 是 |  |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-## scrollable
-
-```TypeScript
-scrollable(value: ScrollDirection | undefined): this
-```
-
-**起始版本：** -1
-
-**ArkTS模式：** ArkTS-Sta起始版本为-1。
-
-<!--Device-ScrollAttribute-scrollable(value: ScrollDirection | undefined): this--><!--Device-ScrollAttribute-scrollable(value: ScrollDirection | undefined): this-End-->
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [ScrollDirection](arkts-scroll-scrolldirection-e.md) \| undefined | 是 |  |
 
 **返回值：**
 

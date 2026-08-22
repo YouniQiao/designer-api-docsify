@@ -1,6 +1,6 @@
 # LiveFormExtensionContext
 
-LiveFormExtensionContext是[LiveFormExtensionAbility](arkts-form-appformliveformextensionability-liveformextensionability-c.md)的上下文，继承自 [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。它提供访问特定于LiveFormExtensionAbility资源的能力，支持在互动卡片中拉起应用页面，适用 于需要在互动卡片中响应用户点击并跳转到应用页面的场景，解决了互动卡片无法主动拉起应用页面的限制问题。
+LiveFormExtensionContext是[LiveFormExtensionAbility](arkts-form-app-form-liveformextensionability-liveformextensionability-c.md)的上下文，继承自 [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。它提供访问特定于LiveFormExtensionAbility资源的能力，支持在互动卡片中拉起应用页面，适用 于需要在互动卡片中响应用户点击并跳转到应用页面的场景，解决了互动卡片无法主动拉起应用页面的限制问题。
 
 **继承/实现关系：** LiveFormExtensionContext extends ExtensionContext
 
@@ -38,7 +38,7 @@ startAbilityByLiveForm(want: Want): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 需要被拉起的应用页面信息。取值原则：仅支持使用显式Want，必须包含bundleName和abilityName字段。详见 [使用显式Want启动应用组件](../../../application-models/ability-startup-with-explicit-want.md)。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 需要被拉起的应用页面信息。取值原则：仅支持使用显式Want，必须包含bundleName和abilityName字段。详见 [使用显式Want启动应用组件](../../../application-models/ability-startup-with-explicit-want.md)。 |
 
 **返回值：**
 

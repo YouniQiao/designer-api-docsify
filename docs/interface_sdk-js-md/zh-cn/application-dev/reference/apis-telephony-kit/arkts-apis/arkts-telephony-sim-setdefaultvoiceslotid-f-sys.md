@@ -56,6 +56,17 @@ sim.setDefaultVoiceSlotId(0, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.setDefaultVoiceSlotId(0).then(() => {
+    console.info(`setDefaultVoiceSlotId success.`);
+}).catch((err: BusinessError) => {
+    console.error(`setDefaultVoiceSlotId failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## setDefaultVoiceSlotId
 
@@ -103,14 +114,5 @@ Set the card slot ID of the default voice service.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.setDefaultVoiceSlotId(0).then(() => {
-    console.info(`setDefaultVoiceSlotId success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setDefaultVoiceSlotId failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [setDefaultVoiceSlotId](#setdefaultvoiceslotid)
 

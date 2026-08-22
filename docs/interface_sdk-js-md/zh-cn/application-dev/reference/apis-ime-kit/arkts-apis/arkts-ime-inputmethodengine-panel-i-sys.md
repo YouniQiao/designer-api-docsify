@@ -14,38 +14,6 @@
 import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
-## offSizeUpdate
-
-```TypeScript
-offSizeUpdate(callback?: SizeUpdateCallback): void
-```
-
-@brief 取消订阅面板尺寸更新（sizeUpdate）事件，停止监听输入法面板尺寸的变更动作, 使用callback异步回调。
-
-**起始版本：** 23
-
-<!--Device-Panel-offSizeUpdate(callback?: SizeUpdateCallback): void--><!--Device-Panel-offSizeUpdate(callback?: SizeUpdateCallback): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | 否 | 可选参数，需取消的目标回调函数：传入指定回调函数实例时，仅取消该回调的订阅；不传入时，取消所有sizeUpdate事件的订阅。 |
-
-**示例**
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-
-panel.offSizeUpdate((windowSize: window.Size, keyboardArea: inputMethodEngine.KeyboardArea) => {
-  console.info(`panel size changed, width: ${windowSize.width}, height: ${windowSize.height}`);
-});
-```
-
 ## off('sizeUpdate')
 
 ```TypeScript
@@ -81,17 +49,17 @@ panel.off('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngin
 });
 ```
 
-## onSizeUpdate
+## offSizeUpdate
 
 ```TypeScript
-onSizeUpdate(callback: SizeUpdateCallback): void
+offSizeUpdate(callback?: SizeUpdateCallback): void
 ```
 
-@brief 订阅面板尺寸更新（sizeUpdate）事件，当输入法面板尺寸发生变更时触发该事件，并执行指定的回调函数, 使用callback异步回调。
+@brief 取消订阅面板尺寸更新（sizeUpdate）事件，停止监听输入法面板尺寸的变更动作, 使用callback异步回调。
 
 **起始版本：** 23
 
-<!--Device-Panel-onSizeUpdate(callback: SizeUpdateCallback): void--><!--Device-Panel-onSizeUpdate(callback: SizeUpdateCallback): void-End-->
+<!--Device-Panel-offSizeUpdate(callback?: SizeUpdateCallback): void--><!--Device-Panel-offSizeUpdate(callback?: SizeUpdateCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -101,15 +69,15 @@ onSizeUpdate(callback: SizeUpdateCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | 是 | 面板尺寸更新时触发的回调函数，入参为面板尺寸信息对象。 |
+| callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | 否 | 可选参数，需取消的目标回调函数：传入指定回调函数实例时，仅取消该回调的订阅；不传入时，取消所有sizeUpdate事件的订阅。 |
 
 **示例**
 
 ```TypeScript
 import { window } from '@kit.ArkUI';
 
-panel.onSizeUpdate((windowSize: window.Size, keyboardArea: inputMethodEngine.KeyboardArea) => {
-  console.info(`panel size changed, windowSize: ${windowSize}, keyboardArea: ${keyboardArea}`);
+panel.offSizeUpdate((windowSize: window.Size, keyboardArea: inputMethodEngine.KeyboardArea) => {
+  console.info(`panel size changed, width: ${windowSize.width}, height: ${windowSize.height}`);
 });
 ```
 
@@ -146,6 +114,38 @@ panel.on('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngine
   // 打印面板大小和键盘区域信息
   console.info(`panel size changed, windowSize: ${windowSize.width}, ${windowSize.height}, ` +
     `keyboardArea: ${keyboardArea.top}, ${keyboardArea.bottom}, ${keyboardArea.left}, ${keyboardArea.right}`);
+});
+```
+
+## onSizeUpdate
+
+```TypeScript
+onSizeUpdate(callback: SizeUpdateCallback): void
+```
+
+@brief 订阅面板尺寸更新（sizeUpdate）事件，当输入法面板尺寸发生变更时触发该事件，并执行指定的回调函数, 使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-Panel-onSizeUpdate(callback: SizeUpdateCallback): void--><!--Device-Panel-onSizeUpdate(callback: SizeUpdateCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | 是 | 面板尺寸更新时触发的回调函数，入参为面板尺寸信息对象。 |
+
+**示例**
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+
+panel.onSizeUpdate((windowSize: window.Size, keyboardArea: inputMethodEngine.KeyboardArea) => {
+  console.info(`panel size changed, windowSize: ${windowSize}, keyboardArea: ${keyboardArea}`);
 });
 ```
 

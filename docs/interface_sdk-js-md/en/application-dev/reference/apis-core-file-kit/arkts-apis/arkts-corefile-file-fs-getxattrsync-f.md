@@ -48,3 +48,19 @@ Obtains an extended attribute of a file or directory. This API returns the resul
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let attrKey = "user.comment";
+
+try {
+  let attrValue = fs.getxattrSync(filePath, attrKey);
+  console.info("Get extended attribute succeed, the value is: " + attrValue);
+} catch (err) {
+  console.error("Failed to get extended attribute with error message: " + err.message + ", error code: " + err.code);
+}
+```
+

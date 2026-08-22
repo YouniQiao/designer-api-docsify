@@ -71,6 +71,28 @@ let moduleName: string = "entry";
 let abilityName: string = "EntryAbility";
 
 try {
+  bundleManager.getAbilityIcon(bundleName, moduleName, abilityName).then((data) => {
+    hilog.info(0x0000,'testTag', 'getAbilityIcon successful. Data: %{public}s',JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    hilog.error(0x0000,'testTag', 'getAbilityIcon failed. Cause: %{public}s',error.message);
+  })
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getAbilityIcon failed. Cause: %{public}s', message);
+}
+```
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+// 需要替换为要查询的应用Bundle名称、Module名称和Ability组件名
+let bundleName: string = "com.example.myapplication";
+let moduleName: string = "entry";
+let abilityName: string = "EntryAbility";
+
+try {
   bundleManager.getAbilityIcon(bundleName, moduleName, abilityName, (err, data) => {
     if (err) {
       hilog.error(0x0000, 'testTag', 'getAbilityIcon failed: %{public}s', err.message);
@@ -144,25 +166,5 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 
 **示例**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-// 需要替换为要查询的应用Bundle名称、Module名称和Ability组件名
-let bundleName: string = "com.example.myapplication";
-let moduleName: string = "entry";
-let abilityName: string = "EntryAbility";
-
-try {
-  bundleManager.getAbilityIcon(bundleName, moduleName, abilityName).then((data) => {
-    hilog.info(0x0000,'testTag', 'getAbilityIcon successful. Data: %{public}s',JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-    hilog.error(0x0000,'testTag', 'getAbilityIcon failed. Cause: %{public}s',error.message);
-  })
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAbilityIcon failed. Cause: %{public}s', message);
-}
-```
+参见 [getAbilityIcon](#getabilityicon)
 

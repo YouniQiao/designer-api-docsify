@@ -22,7 +22,7 @@ context: UIAbilityContext | UIContext
 
 The context of the navigation operation.
 
-**类型：** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)
+**类型：** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
 
 **起始版本：** 12
 

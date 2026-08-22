@@ -40,3 +40,12 @@ Synchronizes the data of a file. This API returns the result synchronously.
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fs.openSync(filePath);
+fs.fdatasyncSync(file.fd);
+fs.closeSync(file);
+```
+

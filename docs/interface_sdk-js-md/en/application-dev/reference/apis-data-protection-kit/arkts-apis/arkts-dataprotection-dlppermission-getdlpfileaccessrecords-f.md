@@ -53,6 +53,23 @@ async function ExampleFunction() {
 }
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  dlpPermission.getDLPFileAccessRecords((err, res) => {
+    if (err != undefined) {
+      console.error('getDLPFileAccessRecords error,', err.code, err.message);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+  }); // Obtain the list of recently accessed DLP files.
+} catch (err) {
+  console.error('getDLPFileAccessRecords error,', (err as BusinessError).code, (err as BusinessError).message);
+}
+```
+
 
 ## getDLPFileAccessRecords
 
@@ -74,7 +91,7 @@ This API is used to obtain the list of DLP files that are accessed recently, whi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AccessedDLPFileInfo](arkts-dataprotection-dlppermission-accesseddlpfileinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessedDLPFileInfo](arkts-dataprotection-dlppermission-accesseddlpfileinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -88,20 +105,5 @@ This API is used to obtain the list of DLP files that are accessed recently, whi
 
 **Examples**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  dlpPermission.getDLPFileAccessRecords((err, res) => {
-    if (err != undefined) {
-      console.error('getDLPFileAccessRecords error,', err.code, err.message);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-  }); // Obtain the list of recently accessed DLP files.
-} catch (err) {
-  console.error('getDLPFileAccessRecords error,', (err as BusinessError).code, (err as BusinessError).message);
-}
-```
+See [getDLPFileAccessRecords](#getdlpfileaccessrecords)
 

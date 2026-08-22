@@ -58,6 +58,82 @@ declare function truncate(file: string | number, len?: number): Promise<void>
 | 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let len: number = 5;
+fileIo.truncate(filePath, len).then(() => {
+  console.info(`Succeeded in truncating file.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to truncate file. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let len: long = 5;
+fileIo.truncate(filePath, len).then(() => {
+  console.info(`Succeeded in truncating file.`);
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to truncate file. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+fileIo.truncate(filePath, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to truncate. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in truncating.`);
+  }
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let len: number = 5;
+fileIo.truncate(filePath, len, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to truncate. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in truncating.`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let len: long = 5;
+fileIo.truncate(filePath, len, (err: BusinessError<void> | null) => {
+  if (err) {
+    console.error(`Failed to truncate. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in truncating.`);
+  }
+});
+```
+
 
 ## truncate
 
@@ -102,6 +178,10 @@ declare function truncate(file: string | number, callback: AsyncCallback<void>):
 | 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
+
+**示例**
+
+参见 [truncate](#truncate)
 
 
 ## truncate
@@ -148,4 +228,8 @@ declare function truncate(file: string | number, len: number, callback: AsyncCal
 | 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
+
+**示例**
+
+参见 [truncate](#truncate)
 

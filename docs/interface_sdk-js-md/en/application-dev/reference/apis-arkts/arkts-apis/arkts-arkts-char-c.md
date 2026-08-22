@@ -601,36 +601,6 @@ isLetter() checks whether the underlying char is a letter.
 | --- | --- |
 | boolean | true if the underlying char is a letter, false otherwise. |
 
-## isLowSurrogate
-
-```TypeScript
-public static isLowSurrogate(value: char): boolean
-```
-
-isLowSurrogate(char) checks if the char is a low surrogate.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Char-public static isLowSurrogate(value: char): boolean--><!--Device-Char-public static isLowSurrogate(value: char): boolean-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | char | Yes | the char to be checked. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | true if the char is a low surrogate, false otherwise. |
-
 ## isLowerCase
 
 ```TypeScript
@@ -684,6 +654,36 @@ isLowerCase() checks whether the underlying char is a lower case letter.
 | Type | Description |
 | --- | --- |
 | boolean | true if the underlying char is a lower case letter, false otherwise. |
+
+## isLowSurrogate
+
+```TypeScript
+public static isLowSurrogate(value: char): boolean
+```
+
+isLowSurrogate(char) checks if the char is a low surrogate.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Char-public static isLowSurrogate(value: char): boolean--><!--Device-Char-public static isLowSurrogate(value: char): boolean-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | char | Yes | the char to be checked. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | true if the char is a low surrogate, false otherwise. |
 
 ## isPartOfSurrogatePair
 

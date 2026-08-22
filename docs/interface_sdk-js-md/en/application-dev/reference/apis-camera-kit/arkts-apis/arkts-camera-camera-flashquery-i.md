@@ -48,6 +48,40 @@ Checks whether the camera device has flash.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function hasFlash(captureSession: camera.CaptureSession): boolean {
+  let status: boolean = false;
+  try {
+    status = captureSession.hasFlash();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The hasFlash call failed. error code: ${err.code}`);
+  }
+  return status;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function hasFlash(photoSession: camera.PhotoSession): boolean {
+  let status: boolean = false;
+  try {
+    status = photoSession.hasFlash();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The hasFlash call failed. error code: ${err.code}`);
+  }
+  return status;
+}
+```
+
 ## isFlashModeSupported
 
 ```TypeScript
@@ -81,4 +115,38 @@ Checks whether a flash mode is supported.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isFlashModeSupported(captureSession: camera.CaptureSession): boolean {
+  let status: boolean = false;
+  try {
+    status = captureSession.isFlashModeSupported(camera.FlashMode.FLASH_MODE_AUTO);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The isFlashModeSupported call failed. error code: ${err.code}`);
+  }
+  return status;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isFlashModeSupported(photoSession: camera.PhotoSession): boolean {
+  let status: boolean = false;
+  try {
+    status = photoSession.isFlashModeSupported(camera.FlashMode.FLASH_MODE_AUTO);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The isFlashModeSupported call failed. error code: ${err.code}`);
+  }
+  return status;
+}
+```
 

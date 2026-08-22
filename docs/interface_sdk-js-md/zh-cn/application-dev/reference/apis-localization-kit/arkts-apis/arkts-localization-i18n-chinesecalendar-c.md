@@ -54,6 +54,12 @@ public static checkLeapMonth(gregorianYear: int, cyclicalYear: int, month: int):
 | --- | --- |
 | [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+let isExist = i18n.ChineseCalendar.checkLeapMonth(2026, 43, 2);
+```
+
 ## setChineseCalendarTime
 
 ```TypeScript
@@ -77,4 +83,17 @@ public setChineseCalendarTime(chineseCalendarTime: ChineseCalendarTime): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | chineseCalendarTime | [ChineseCalendarTime](../../apis-default/arkts-apis/arkts-i18n-chinesecalendartime-i.md) | 是 | 农历时间对象。 |
+
+**示例**
+
+```TypeScript
+let locale: Intl.Locale = i18n.System.getSystemLocaleInstance();
+let calendar: i18n.ChineseCalendar = i18n.getChineseCalendar(locale);
+calendar.setChineseCalendarTime({
+  gregorianYear: 2026,
+  cyclicalYear: 43,
+  month: 1,
+  date: 15
+});
+```
 

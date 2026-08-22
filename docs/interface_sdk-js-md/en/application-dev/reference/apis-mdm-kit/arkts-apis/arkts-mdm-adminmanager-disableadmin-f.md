@@ -31,7 +31,7 @@ Disables a device administrator application for the specified user. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. When deactivating the BYOD device administrator application, you can pass only the **EnterpriseAdminExtensionAbility** component of the current application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. When deactivating the BYOD device administrator application, you can pass only the **EnterpriseAdminExtensionAbility** component of the current application. |
 | userId | number | No | User ID, which must be greater than or equal to 0. <br> - If **userId** is passed in, this API applies to the specified user. <br> - If **userId** is not passed in, this API applies to the current user. |
 
 **Return value:**
@@ -62,6 +62,44 @@ let wantTemp: Want = {
 
 adminManager.disableAdmin(wantTemp, 100).catch((err: BusinessError) => {
   console.error(`Failed to disable admin. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+adminManager.disableAdmin(wantTemp, (err) => {
+  if (err) {
+    console.error(`Failed to disable admin. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in disabling admin');
+});
+```
+
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+adminManager.disableAdmin(wantTemp, 100, (err) => {
+  if (err) {
+    console.error(`Failed to disable admin. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in disabling admin');
 });
 ```
 

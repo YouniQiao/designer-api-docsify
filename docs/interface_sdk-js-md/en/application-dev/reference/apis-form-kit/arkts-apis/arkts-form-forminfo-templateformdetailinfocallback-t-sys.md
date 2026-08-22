@@ -22,3 +22,14 @@ template form detail info callback.
 | --- | --- | --- | --- |
 | info | Array&lt;[TemplateFormDetailInfo](arkts-form-forminfo-templateformdetailinfo-i-sys.md)&gt; | Yes | Template form detail info. |
 
+**Examples**
+
+```TypeScript
+import { formInfo } from '@kit.FormKit';
+
+let templateFormDetailInfoCallback: formInfo.TemplateFormDetailInfoCallback =
+  (info: Array<formInfo.TemplateFormDetailInfo>): void => {
+    console.info('template form detail info callback success.');
+  };
+```
+

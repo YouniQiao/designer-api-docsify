@@ -42,7 +42,7 @@ createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): 
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current context of the input method. |
 | info | PanelInfo | Yes | Information about the input method panel. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Panel&gt; | Yes | Callback used to return the result. If the operation is successful, the created input method panel is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Panel&gt; | Yes | Callback used to return the result. If the operation is successful, the created input method panel is returned. |
 
 **Error codes:**
 
@@ -70,6 +70,24 @@ if (!this.context) {
       }
       console.info('Succeed in creating panel.');
     })
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let panelInfo: inputMethodEngine.PanelInfo = {
+  type: inputMethodEngine.PanelType.SOFT_KEYBOARD,
+  flag: inputMethodEngine.PanelFlag.FLG_FIXED
+}
+
+if (this.context) {
+  inputMethodEngine.getInputMethodAbility().createPanel(this.context, panelInfo)
+    .then((panel: inputMethodEngine.Panel) => {
+      console.info('Succeed in creating panel.');
+    }).catch((err: BusinessError) => {
+    console.error(`Failed to create panel. Code is ${err.code}, message is ${err.message}`);
+  })
 }
 ```
 
@@ -118,23 +136,7 @@ createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let panelInfo: inputMethodEngine.PanelInfo = {
-  type: inputMethodEngine.PanelType.SOFT_KEYBOARD,
-  flag: inputMethodEngine.PanelFlag.FLG_FIXED
-}
-
-if (this.context) {
-  inputMethodEngine.getInputMethodAbility().createPanel(this.context, panelInfo)
-    .then((panel: inputMethodEngine.Panel) => {
-      console.info('Succeed in creating panel.');
-    }).catch((err: BusinessError) => {
-    console.error(`Failed to create panel. Code is ${err.code}, message is ${err.message}`);
-  })
-}
-```
+See [createPanel](#createpanel)
 
 ## destroyPanel
 
@@ -155,7 +157,7 @@ destroyPanel(panel: Panel, callback: AsyncCallback<void>): void
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | panel | Panel | Yes | Input method panel to destroy. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -197,6 +199,36 @@ if (inputPanel) {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let panelInfo: inputMethodEngine.PanelInfo = {
+  type: inputMethodEngine.PanelType.SOFT_KEYBOARD,
+  flag: inputMethodEngine.PanelFlag.FLG_FIXED
+}
+
+let inputPanel: inputMethodEngine.Panel | undefined = undefined;
+if (this.context) {
+  inputMethodEngine.getInputMethodAbility()
+    .createPanel(this.context, panelInfo, (err: BusinessError, panel: inputMethodEngine.Panel) => {
+      if (err) {
+        console.error(`Failed to create panel. Code is ${err.code}, message is ${err.message}`);
+        return;
+      }
+      inputPanel = panel;
+      console.info('Succeed in creating panel.');
+    })
+}
+
+if (inputPanel) {
+  inputMethodEngine.getInputMethodAbility().destroyPanel(inputPanel).then(() => {
+    console.info('Succeed in destroying panel.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to destroy panel. Code is ${err.code}, message is ${err.message}`);
+  });
+}
+```
+
 ## destroyPanel
 
 ```TypeScript
@@ -231,35 +263,7 @@ destroyPanel(panel: Panel): Promise<void>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let panelInfo: inputMethodEngine.PanelInfo = {
-  type: inputMethodEngine.PanelType.SOFT_KEYBOARD,
-  flag: inputMethodEngine.PanelFlag.FLG_FIXED
-}
-
-let inputPanel: inputMethodEngine.Panel | undefined = undefined;
-if (this.context) {
-  inputMethodEngine.getInputMethodAbility()
-    .createPanel(this.context, panelInfo, (err: BusinessError, panel: inputMethodEngine.Panel) => {
-      if (err) {
-        console.error(`Failed to create panel. Code is ${err.code}, message is ${err.message}`);
-        return;
-      }
-      inputPanel = panel;
-      console.info('Succeed in creating panel.');
-    })
-}
-
-if (inputPanel) {
-  inputMethodEngine.getInputMethodAbility().destroyPanel(inputPanel).then(() => {
-    console.info('Succeed in destroying panel.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to destroy panel. Code is ${err.code}, message is ${err.message}`);
-  });
-}
-```
+See [destroyPanel](#destroypanel)
 
 ## getSecurityMode
 
@@ -294,212 +298,6 @@ let security: inputMethodEngine.SecurityMode = inputMethodEngine.getInputMethodA
 console.error(`getSecurityMode, securityMode is : ${security}`);
 ```
 
-## offCallingDisplayDidChange
-
-```TypeScript
-offCallingDisplayDidChange(callback?: Callback<int>): void
-```
-
-@brief Unsubscribe 'callingDisplayDidChange' event.
-
-**Since:** 23
-
-<!--Device-InputMethodAbility-offCallingDisplayDidChange(callback?: Callback<int>): void--><!--Device-InputMethodAbility-offCallingDisplayDidChange(callback?: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | optional, the callback called when calling display id changed. |
-
-## offDiscardTypingText
-
-```TypeScript
-offDiscardTypingText(callback?: Callback<void>): void
-```
-
-@brief Unsubscribe 'discardTypingText' event.
-
-**Since:** 23
-
-<!--Device-InputMethodAbility-offDiscardTypingText(callback?: Callback<void>): void--><!--Device-InputMethodAbility-offDiscardTypingText(callback?: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | optional, the callback called when the edit box requests to discard typing text. |
-
-## offInputStart
-
-```TypeScript
-offInputStart(callback?: IMAInputStartCallback): void
-```
-
-@brief Unsubscribe 'inputStart' event.
-
-**Since:** 23
-
-<!--Device-InputMethodAbility-offInputStart(callback?: IMAInputStartCallback): void--><!--Device-InputMethodAbility-offInputStart(callback?: IMAInputStartCallback): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [IMAInputStartCallback](arkts-ime-inputmethodengine-imainputstartcallback-t.md) | No | optional, the callback called when edit box requests keyboard. |
-
-## offInputStop
-
-```TypeScript
-offInputStop(callback: Callback<void>): void
-```
-
-@brief Unsubscribe 'inputStop'.
-
-**Since:** 23
-
-<!--Device-InputMethodAbility-offInputStop(callback: Callback<void>): void--><!--Device-InputMethodAbility-offInputStop(callback: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when the system needs input method application to terminate itself. |
-
-## offKeyboardHide
-
-```TypeScript
-offKeyboardHide(callback?: Callback<void>): void
-```
-
-@brief Unsubscribe 'keyboardHide'.
-
-**Since:** 23
-
-<!--Device-InputMethodAbility-offKeyboardHide(callback?: Callback<void>): void--><!--Device-InputMethodAbility-offKeyboardHide(callback?: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | optional, the callback called when hiding keyboard. |
-
-## offKeyboardShow
-
-```TypeScript
-offKeyboardShow(callback?: Callback<void>): void
-```
-
-@brief Unsubscribe 'keyboardShow'.
-
-**Since:** 23
-
-<!--Device-InputMethodAbility-offKeyboardShow(callback?: Callback<void>): void--><!--Device-InputMethodAbility-offKeyboardShow(callback?: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | optional, the callback called when showing keyboard. |
-
-## offPrivateCommand
-
-```TypeScript
-offPrivateCommand(callback?: Callback<Record<string, CommandDataType>>): void
-```
-
-@brief Unsubscribe 'privateCommand'. This function can only be called by default input method configured by system.
-
-**Since:** 23
-
-<!--Device-InputMethodAbility-offPrivateCommand(callback?: Callback<Record<string, CommandDataType>>): void--><!--Device-InputMethodAbility-offPrivateCommand(callback?: Callback<Record<string, CommandDataType>>): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | optional, the callback called when receiving private command. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
-
-## offSecurityModeChange
-
-```TypeScript
-offSecurityModeChange(callback?: Callback<SecurityMode>): void
-```
-
-@brief Unsubscribe 'securityModeChange' event.
-
-**Since:** 23
-
-<!--Device-InputMethodAbility-offSecurityModeChange(callback?: Callback<SecurityMode>): void--><!--Device-InputMethodAbility-offSecurityModeChange(callback?: Callback<SecurityMode>): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | No | optional, the callback called when the security mode changes. |
-
-## offSetCallingWindow
-
-```TypeScript
-offSetCallingWindow(callback: Callback<int>): void
-```
-
-@brief Unsubscribe 'setCallingWindow'.
-
-**Since:** 23
-
-<!--Device-InputMethodAbility-offSetCallingWindow(callback: Callback<int>): void--><!--Device-InputMethodAbility-offSetCallingWindow(callback: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | the callback called when the edit box sets calling window id. |
-
-## offSetSubtype
-
-```TypeScript
-offSetSubtype(callback?: Callback<InputMethodSubtype>): void
-```
-
-@brief Unsubscribe 'setSubtype'.
-
-**Since:** 23
-
-<!--Device-InputMethodAbility-offSetSubtype(callback?: Callback<InputMethodSubtype>): void--><!--Device-InputMethodAbility-offSetSubtype(callback?: Callback<InputMethodSubtype>): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | No | optional, the callback called when the system notify to switch subtype. |
-
 ## off('callingDisplayDidChange')
 
 ```TypeScript
@@ -519,7 +317,7 @@ off(type: 'callingDisplayDidChange', callback?: Callback<number>): void
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callingDisplayDidChange' | Yes | Event type, which is **'callingDisplayDidChange'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -548,7 +346,7 @@ off(type: 'discardTypingText', callback?: Callback<void>): void
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discardTypingText' | Yes | Event type, which is **'discardTypingText'**. <br> - **'discardTypingText'**: indicates unsubscribing from the event of discarding candidate words and sending the event to the input method. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -690,7 +488,7 @@ off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'privateCommand' | Yes | Event type, which is **'privateCommand'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Error codes:**
 
@@ -730,7 +528,7 @@ off(type: 'securityModeChange', callback?: Callback<SecurityMode>): void
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'securityModeChange' | Yes | Event type, which is **'securityModeChange'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -802,17 +600,17 @@ inputMethodEngine.getInputMethodAbility().off('setSubtype', () => {
 });
 ```
 
-## onCallingDisplayDidChange
+## offCallingDisplayDidChange
 
 ```TypeScript
-onCallingDisplayDidChange(callback: Callback<int>): void
+offCallingDisplayDidChange(callback?: Callback<int>): void
 ```
 
-@brief Subscribe 'callingDisplayDidChange' event.
+@brief Unsubscribe 'callingDisplayDidChange' event.
 
 **Since:** 23
 
-<!--Device-InputMethodAbility-onCallingDisplayDidChange(callback: Callback<int>): void--><!--Device-InputMethodAbility-onCallingDisplayDidChange(callback: Callback<int>): void-End-->
+<!--Device-InputMethodAbility-offCallingDisplayDidChange(callback?: Callback<int>): void--><!--Device-InputMethodAbility-offCallingDisplayDidChange(callback?: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -820,25 +618,19 @@ onCallingDisplayDidChange(callback: Callback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | the callback called when calling display id changed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | optional, the callback called when calling display id changed. |
 
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
-
-## onDiscardTypingText
+## offDiscardTypingText
 
 ```TypeScript
-onDiscardTypingText(callback: Callback<void>): void
+offDiscardTypingText(callback?: Callback<void>): void
 ```
 
-@brief Subscribe 'discardTypingText' event.
+@brief Unsubscribe 'discardTypingText' event.
 
 **Since:** 23
 
-<!--Device-InputMethodAbility-onDiscardTypingText(callback: Callback<void>): void--><!--Device-InputMethodAbility-onDiscardTypingText(callback: Callback<void>): void-End-->
+<!--Device-InputMethodAbility-offDiscardTypingText(callback?: Callback<void>): void--><!--Device-InputMethodAbility-offDiscardTypingText(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -846,19 +638,19 @@ onDiscardTypingText(callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when the edit box requests to discard typing text. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | optional, the callback called when the edit box requests to discard typing text. |
 
-## onInputStart
+## offInputStart
 
 ```TypeScript
-onInputStart(callback: IMAInputStartCallback): void
+offInputStart(callback?: IMAInputStartCallback): void
 ```
 
-@brief Subscribe 'inputStart' event.
+@brief Unsubscribe 'inputStart' event.
 
 **Since:** 23
 
-<!--Device-InputMethodAbility-onInputStart(callback: IMAInputStartCallback): void--><!--Device-InputMethodAbility-onInputStart(callback: IMAInputStartCallback): void-End-->
+<!--Device-InputMethodAbility-offInputStart(callback?: IMAInputStartCallback): void--><!--Device-InputMethodAbility-offInputStart(callback?: IMAInputStartCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -866,19 +658,19 @@ onInputStart(callback: IMAInputStartCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [IMAInputStartCallback](arkts-ime-inputmethodengine-imainputstartcallback-t.md) | Yes | the callback called when edit box requests keyboard. |
+| callback | [IMAInputStartCallback](arkts-ime-inputmethodengine-imainputstartcallback-t.md) | No | optional, the callback called when edit box requests keyboard. |
 
-## onInputStop
+## offInputStop
 
 ```TypeScript
-onInputStop(callback: Callback<void>): void
+offInputStop(callback: Callback<void>): void
 ```
 
-@brief Subscribe 'inputStop'.
+@brief Unsubscribe 'inputStop'.
 
 **Since:** 23
 
-<!--Device-InputMethodAbility-onInputStop(callback: Callback<void>): void--><!--Device-InputMethodAbility-onInputStop(callback: Callback<void>): void-End-->
+<!--Device-InputMethodAbility-offInputStop(callback: Callback<void>): void--><!--Device-InputMethodAbility-offInputStop(callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -886,19 +678,19 @@ onInputStop(callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when the system needs input method application to terminate itself. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when the system needs input method application to terminate itself. |
 
-## onKeyboardHide
+## offKeyboardHide
 
 ```TypeScript
-onKeyboardHide(callback: Callback<void>): void
+offKeyboardHide(callback?: Callback<void>): void
 ```
 
-@brief Subscribe 'keyboardHide'.
+@brief Unsubscribe 'keyboardHide'.
 
 **Since:** 23
 
-<!--Device-InputMethodAbility-onKeyboardHide(callback: Callback<void>): void--><!--Device-InputMethodAbility-onKeyboardHide(callback: Callback<void>): void-End-->
+<!--Device-InputMethodAbility-offKeyboardHide(callback?: Callback<void>): void--><!--Device-InputMethodAbility-offKeyboardHide(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -906,19 +698,19 @@ onKeyboardHide(callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when hiding keyboard. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | optional, the callback called when hiding keyboard. |
 
-## onKeyboardShow
+## offKeyboardShow
 
 ```TypeScript
-onKeyboardShow(callback: Callback<void>): void
+offKeyboardShow(callback?: Callback<void>): void
 ```
 
-@brief Subscribe 'keyboardShow'.
+@brief Unsubscribe 'keyboardShow'.
 
 **Since:** 23
 
-<!--Device-InputMethodAbility-onKeyboardShow(callback: Callback<void>): void--><!--Device-InputMethodAbility-onKeyboardShow(callback: Callback<void>): void-End-->
+<!--Device-InputMethodAbility-offKeyboardShow(callback?: Callback<void>): void--><!--Device-InputMethodAbility-offKeyboardShow(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -926,19 +718,19 @@ onKeyboardShow(callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when showing keyboard. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | optional, the callback called when showing keyboard. |
 
-## onPrivateCommand
+## offPrivateCommand
 
 ```TypeScript
-onPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void
+offPrivateCommand(callback?: Callback<Record<string, CommandDataType>>): void
 ```
 
-@brief Subscribe 'privateCommand'. This function can only be called by default input method configured by system.
+@brief Unsubscribe 'privateCommand'. This function can only be called by default input method configured by system.
 
 **Since:** 23
 
-<!--Device-InputMethodAbility-onPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void--><!--Device-InputMethodAbility-onPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void-End-->
+<!--Device-InputMethodAbility-offPrivateCommand(callback?: Callback<Record<string, CommandDataType>>): void--><!--Device-InputMethodAbility-offPrivateCommand(callback?: Callback<Record<string, CommandDataType>>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -946,7 +738,7 @@ onPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | the callback called when receiving private command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | optional, the callback called when receiving private command. |
 
 **Error codes:**
 
@@ -954,17 +746,17 @@ onPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void
 | --- | --- |
 | [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
 
-## onSecurityModeChange
+## offSecurityModeChange
 
 ```TypeScript
-onSecurityModeChange(callback: Callback<SecurityMode>): void
+offSecurityModeChange(callback?: Callback<SecurityMode>): void
 ```
 
-@brief Subscribe 'securityModeChange' event.
+@brief Unsubscribe 'securityModeChange' event.
 
 **Since:** 23
 
-<!--Device-InputMethodAbility-onSecurityModeChange(callback: Callback<SecurityMode>): void--><!--Device-InputMethodAbility-onSecurityModeChange(callback: Callback<SecurityMode>): void-End-->
+<!--Device-InputMethodAbility-offSecurityModeChange(callback?: Callback<SecurityMode>): void--><!--Device-InputMethodAbility-offSecurityModeChange(callback?: Callback<SecurityMode>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -972,19 +764,19 @@ onSecurityModeChange(callback: Callback<SecurityMode>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | Yes | the callback called when the security mode changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | No | optional, the callback called when the security mode changes. |
 
-## onSetCallingWindow
+## offSetCallingWindow
 
 ```TypeScript
-onSetCallingWindow(callback: Callback<int>): void
+offSetCallingWindow(callback: Callback<int>): void
 ```
 
-@brief Subscribe 'setCallingWindow'.
+@brief Unsubscribe 'setCallingWindow'.
 
 **Since:** 23
 
-<!--Device-InputMethodAbility-onSetCallingWindow(callback: Callback<int>): void--><!--Device-InputMethodAbility-onSetCallingWindow(callback: Callback<int>): void-End-->
+<!--Device-InputMethodAbility-offSetCallingWindow(callback: Callback<int>): void--><!--Device-InputMethodAbility-offSetCallingWindow(callback: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -992,19 +784,19 @@ onSetCallingWindow(callback: Callback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | the callback called when the edit box sets calling window id. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | the callback called when the edit box sets calling window id. |
 
-## onSetSubtype
+## offSetSubtype
 
 ```TypeScript
-onSetSubtype(callback: Callback<InputMethodSubtype>): void
+offSetSubtype(callback?: Callback<InputMethodSubtype>): void
 ```
 
-@brief Subscribe 'setSubtype'.
+@brief Unsubscribe 'setSubtype'.
 
 **Since:** 23
 
-<!--Device-InputMethodAbility-onSetSubtype(callback: Callback<InputMethodSubtype>): void--><!--Device-InputMethodAbility-onSetSubtype(callback: Callback<InputMethodSubtype>): void-End-->
+<!--Device-InputMethodAbility-offSetSubtype(callback?: Callback<InputMethodSubtype>): void--><!--Device-InputMethodAbility-offSetSubtype(callback?: Callback<InputMethodSubtype>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1012,7 +804,7 @@ onSetSubtype(callback: Callback<InputMethodSubtype>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | Yes | the callback called when the system notify to switch subtype. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | No | optional, the callback called when the system notify to switch subtype. |
 
 ## on('callingDisplayDidChange')
 
@@ -1033,7 +825,7 @@ on(type: 'callingDisplayDidChange', callback: Callback<number>): void
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callingDisplayDidChange' | Yes | Event type, which is **'callingDisplayDidChange'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | Callback used to return the screen ID of the window corresponding to the edit box. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback used to return the screen ID of the window corresponding to the edit box. |
 
 **Error codes:**
 
@@ -1069,7 +861,7 @@ on(type: 'discardTypingText', callback: Callback<void>): void
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discardTypingText' | Yes | Event type, which is **'discardTypingText'**. <br> - **'discardTypingText'**: indicates subscribing to the event of discarding candidate words and sending the event to the input method. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -1216,7 +1008,7 @@ on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>):
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'privateCommand' | Yes | Event type, which is **'privateCommand'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | Callback used to return the private data sent to the input method application. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | Callback used to return the private data sent to the input method application. |
 
 **Error codes:**
 
@@ -1255,7 +1047,7 @@ on(type: 'securityModeChange', callback: Callback<SecurityMode>): void
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'securityModeChange' | Yes | Event type, which is **'securityModeChange'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | Yes | Callback used to return the current security mode. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | Yes | Callback used to return the current security mode. |
 
 **Examples**
 
@@ -1325,4 +1117,216 @@ inputMethodEngine.getInputMethodAbility().on('setSubtype', (inputMethodSubtype: 
   console.info('InputMethodAbility setSubtype.');
 });
 ```
+
+## onCallingDisplayDidChange
+
+```TypeScript
+onCallingDisplayDidChange(callback: Callback<int>): void
+```
+
+@brief Subscribe 'callingDisplayDidChange' event.
+
+**Since:** 23
+
+<!--Device-InputMethodAbility-onCallingDisplayDidChange(callback: Callback<int>): void--><!--Device-InputMethodAbility-onCallingDisplayDidChange(callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | the callback called when calling display id changed. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+
+## onDiscardTypingText
+
+```TypeScript
+onDiscardTypingText(callback: Callback<void>): void
+```
+
+@brief Subscribe 'discardTypingText' event.
+
+**Since:** 23
+
+<!--Device-InputMethodAbility-onDiscardTypingText(callback: Callback<void>): void--><!--Device-InputMethodAbility-onDiscardTypingText(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when the edit box requests to discard typing text. |
+
+## onInputStart
+
+```TypeScript
+onInputStart(callback: IMAInputStartCallback): void
+```
+
+@brief Subscribe 'inputStart' event.
+
+**Since:** 23
+
+<!--Device-InputMethodAbility-onInputStart(callback: IMAInputStartCallback): void--><!--Device-InputMethodAbility-onInputStart(callback: IMAInputStartCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [IMAInputStartCallback](arkts-ime-inputmethodengine-imainputstartcallback-t.md) | Yes | the callback called when edit box requests keyboard. |
+
+## onInputStop
+
+```TypeScript
+onInputStop(callback: Callback<void>): void
+```
+
+@brief Subscribe 'inputStop'.
+
+**Since:** 23
+
+<!--Device-InputMethodAbility-onInputStop(callback: Callback<void>): void--><!--Device-InputMethodAbility-onInputStop(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when the system needs input method application to terminate itself. |
+
+## onKeyboardHide
+
+```TypeScript
+onKeyboardHide(callback: Callback<void>): void
+```
+
+@brief Subscribe 'keyboardHide'.
+
+**Since:** 23
+
+<!--Device-InputMethodAbility-onKeyboardHide(callback: Callback<void>): void--><!--Device-InputMethodAbility-onKeyboardHide(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when hiding keyboard. |
+
+## onKeyboardShow
+
+```TypeScript
+onKeyboardShow(callback: Callback<void>): void
+```
+
+@brief Subscribe 'keyboardShow'.
+
+**Since:** 23
+
+<!--Device-InputMethodAbility-onKeyboardShow(callback: Callback<void>): void--><!--Device-InputMethodAbility-onKeyboardShow(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when showing keyboard. |
+
+## onPrivateCommand
+
+```TypeScript
+onPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void
+```
+
+@brief Subscribe 'privateCommand'. This function can only be called by default input method configured by system.
+
+**Since:** 23
+
+<!--Device-InputMethodAbility-onPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void--><!--Device-InputMethodAbility-onPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | the callback called when receiving private command. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
+
+## onSecurityModeChange
+
+```TypeScript
+onSecurityModeChange(callback: Callback<SecurityMode>): void
+```
+
+@brief Subscribe 'securityModeChange' event.
+
+**Since:** 23
+
+<!--Device-InputMethodAbility-onSecurityModeChange(callback: Callback<SecurityMode>): void--><!--Device-InputMethodAbility-onSecurityModeChange(callback: Callback<SecurityMode>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | Yes | the callback called when the security mode changes. |
+
+## onSetCallingWindow
+
+```TypeScript
+onSetCallingWindow(callback: Callback<int>): void
+```
+
+@brief Subscribe 'setCallingWindow'.
+
+**Since:** 23
+
+<!--Device-InputMethodAbility-onSetCallingWindow(callback: Callback<int>): void--><!--Device-InputMethodAbility-onSetCallingWindow(callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | the callback called when the edit box sets calling window id. |
+
+## onSetSubtype
+
+```TypeScript
+onSetSubtype(callback: Callback<InputMethodSubtype>): void
+```
+
+@brief Subscribe 'setSubtype'.
+
+**Since:** 23
+
+<!--Device-InputMethodAbility-onSetSubtype(callback: Callback<InputMethodSubtype>): void--><!--Device-InputMethodAbility-onSetSubtype(callback: Callback<InputMethodSubtype>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | Yes | the callback called when the system notify to switch subtype. |
 

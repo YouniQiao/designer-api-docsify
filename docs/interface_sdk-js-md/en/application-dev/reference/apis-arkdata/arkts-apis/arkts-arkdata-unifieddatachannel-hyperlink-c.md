@@ -36,3 +36,11 @@ Indicates the description of a link
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+**Examples**
+
+```TypeScript
+let link = new unifiedDataChannel.Hyperlink();
+link.url = 'www.XXX.com';
+link.description = 'This is description';
+```
+

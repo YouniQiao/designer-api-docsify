@@ -50,11 +50,11 @@ import { sms } from '@kit.TelephonyKit';
 | [getAllSimMessages](arkts-telephony-sms-getallsimmessages-f-sys.md) | Obtains all SIM card messages. This API uses a promise to return the result. |
 | [getImsShortMessageFormat](arkts-telephony-sms-getimsshortmessageformat-f-sys.md) | Obtains the SMS format supported by the IMS, for example, **3gpp**, **3gpp2**, or **unknown**. This API uses an asynchronous callback to return the result. |
 | [getImsShortMessageFormat](arkts-telephony-sms-getimsshortmessageformat-f-sys.md) | Obtains the SMS format supported by the IMS, for example, **3gpp**, **3gpp2**, or **unknown**. This API uses a promise to return the result. |
+| [getSmscAddr](arkts-telephony-sms-getsmscaddr-f-sys.md) | Obtains the SMSC address. This API uses an asynchronous callback to return the result. |
+| [getSmscAddr](arkts-telephony-sms-getsmscaddr-f-sys.md) | Obtains the SMSC address. This API uses a promise to return the result. |
 | [getSmsSegmentsInfo](arkts-telephony-sms-getsmssegmentsinfo-f-sys.md) | Obtains SMS message segment information. This API uses an asynchronous callback to return the result. |
 | [getSmsSegmentsInfo](arkts-telephony-sms-getsmssegmentsinfo-f-sys.md) | Obtains SMS message segment information. This API uses a promise to return the result. |
 | [getSmsShortCodeType](arkts-telephony-sms-getsmsshortcodetype-f-sys.md) | Get the SMS short code type of the destination address. |
-| [getSmscAddr](arkts-telephony-sms-getsmscaddr-f-sys.md) | Obtains the SMSC address. This API uses an asynchronous callback to return the result. |
-| [getSmscAddr](arkts-telephony-sms-getsmscaddr-f-sys.md) | Obtains the SMSC address. This API uses a promise to return the result. |
 | [isImsSmsSupported](arkts-telephony-sms-isimssmssupported-f-sys.md) | Checks whether SMS is supported on IMS. This API uses an asynchronous callback to return the result. |
 | [isImsSmsSupported](arkts-telephony-sms-isimssmssupported-f-sys.md) | Checks whether SMS is supported on IMS. This API uses a promise to return the result. |
 | [sendMms](arkts-telephony-sms-sendmms-f-sys.md) | Sends an MMS message. This API uses an asynchronous callback to return the result. |

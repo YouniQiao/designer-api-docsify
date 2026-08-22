@@ -142,28 +142,6 @@ Options for customizing the background effect.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## canLoop
-
-```TypeScript
-canLoop?: boolean
-```
-
-Whether to support scroll looping. The value true means to support scroll looping, and false means the opposite.
-
-**Type:** boolean
-
-**Default:** true
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TextPickerDialogOptions-canLoop?: boolean--><!--Device-TextPickerDialogOptions-canLoop?: boolean-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## cancelButtonStyle
 
 ```TypeScript
@@ -183,6 +161,28 @@ Style of cancel button.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextPickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle--><!--Device-TextPickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## canLoop
+
+```TypeScript
+canLoop?: boolean
+```
+
+Whether to support scroll looping. The value true means to support scroll looping, and false means the opposite.
+
+**Type:** boolean
+
+**Default:** true
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TextPickerDialogOptions-canLoop?: boolean--><!--Device-TextPickerDialogOptions-canLoop?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

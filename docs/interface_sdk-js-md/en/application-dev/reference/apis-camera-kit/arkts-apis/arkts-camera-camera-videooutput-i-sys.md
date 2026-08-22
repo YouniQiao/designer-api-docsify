@@ -141,6 +141,37 @@ Enables or disables mirror recording.
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function enableMirror(photoOutput: camera.PhotoOutput): void {
+  try {
+    photoOutput.enableMirror(true);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The enableMirror call failed. error code: ${err.code}`);
+  }
+}
+```
+
+```TypeScript
+import { camera } from '@kit.CameraKit';
+import { media } from '@kit.MediaKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function enableMirror(videoOutput: camera.VideoOutput, mirrorMode: boolean, aVRecorder: media.AVRecorder, deviceDegree : number): void {
+    try {
+        videoOutput.enableMirror(mirrorMode);
+        aVRecorder.updateRotation(videoOutput.getVideoRotation(deviceDegree));
+    } catch (error) {
+        let err = error as BusinessError;
+    }
+}
+```
+
 ## getSupportedRotations
 
 ```TypeScript
@@ -314,6 +345,22 @@ Checks whether mirror recording is supported.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 14 |
 
+**Examples**
+
+```TypeScript
+function isMirrorSupported(photoOutput: camera.PhotoOutput): boolean {
+  let isSupported: boolean = photoOutput.isMirrorSupported();
+  return isSupported;
+}
+```
+
+```TypeScript
+function testIsMirrorSupported(videoOutput: camera.VideoOutput): boolean {
+  let isSupported: boolean = videoOutput.isMirrorSupported();
+  return isSupported;
+}
+```
+
 ## isRotationSupported
 
 ```TypeScript
@@ -342,34 +389,6 @@ Determine whether video rotation is supported.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## offDeferredVideoEnhancementInfo
-
-```TypeScript
-offDeferredVideoEnhancementInfo(callback?: AsyncCallback<DeferredVideoEnhancementInfo>): void
-```
-
-Unsubscribes from deferred video enhancement info callback.
-
-**Since:** 23
-
-<!--Device-VideoOutput-offDeferredVideoEnhancementInfo(callback?: AsyncCallback<DeferredVideoEnhancementInfo>): void--><!--Device-VideoOutput-offDeferredVideoEnhancementInfo(callback?: AsyncCallback<DeferredVideoEnhancementInfo>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DeferredVideoEnhancementInfo](arkts-camera-camera-deferredvideoenhancementinfo-i-sys.md)&gt; | No | Callback used to return the result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-
 ## off('deferredVideoEnhancementInfo')
 
 ```TypeScript
@@ -391,7 +410,7 @@ Unsubscribes from deferred video enhancement info callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deferredVideoEnhancementInfo' | Yes | Event type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DeferredVideoEnhancementInfo](arkts-camera-camera-deferredvideoenhancementinfo-i-sys.md)&gt; | No | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredVideoEnhancementInfo](arkts-camera-camera-deferredvideoenhancementinfo-i-sys.md)&gt; | No | Callback used to return the result. |
 
 **Error codes:**
 
@@ -399,17 +418,17 @@ Unsubscribes from deferred video enhancement info callback.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## onDeferredVideoEnhancementInfo
+## offDeferredVideoEnhancementInfo
 
 ```TypeScript
-onDeferredVideoEnhancementInfo(callback: AsyncCallback<DeferredVideoEnhancementInfo>): void
+offDeferredVideoEnhancementInfo(callback?: AsyncCallback<DeferredVideoEnhancementInfo>): void
 ```
 
-Subscribes deferred video enhancement info callback.
+Unsubscribes from deferred video enhancement info callback.
 
 **Since:** 23
 
-<!--Device-VideoOutput-onDeferredVideoEnhancementInfo(callback: AsyncCallback<DeferredVideoEnhancementInfo>): void--><!--Device-VideoOutput-onDeferredVideoEnhancementInfo(callback: AsyncCallback<DeferredVideoEnhancementInfo>): void-End-->
+<!--Device-VideoOutput-offDeferredVideoEnhancementInfo(callback?: AsyncCallback<DeferredVideoEnhancementInfo>): void--><!--Device-VideoOutput-offDeferredVideoEnhancementInfo(callback?: AsyncCallback<DeferredVideoEnhancementInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -419,7 +438,7 @@ Subscribes deferred video enhancement info callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DeferredVideoEnhancementInfo](arkts-camera-camera-deferredvideoenhancementinfo-i-sys.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredVideoEnhancementInfo](arkts-camera-camera-deferredvideoenhancementinfo-i-sys.md)&gt; | No | Callback used to return the result. |
 
 **Error codes:**
 
@@ -448,7 +467,35 @@ Subscribes deferred video enhancement info callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deferredVideoEnhancementInfo' | Yes | Event type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DeferredVideoEnhancementInfo](arkts-camera-camera-deferredvideoenhancementinfo-i-sys.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredVideoEnhancementInfo](arkts-camera-camera-deferredvideoenhancementinfo-i-sys.md)&gt; | Yes | Callback used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+## onDeferredVideoEnhancementInfo
+
+```TypeScript
+onDeferredVideoEnhancementInfo(callback: AsyncCallback<DeferredVideoEnhancementInfo>): void
+```
+
+Subscribes deferred video enhancement info callback.
+
+**Since:** 23
+
+<!--Device-VideoOutput-onDeferredVideoEnhancementInfo(callback: AsyncCallback<DeferredVideoEnhancementInfo>): void--><!--Device-VideoOutput-onDeferredVideoEnhancementInfo(callback: AsyncCallback<DeferredVideoEnhancementInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredVideoEnhancementInfo](arkts-camera-camera-deferredvideoenhancementinfo-i-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

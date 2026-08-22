@@ -42,10 +42,10 @@ import { inputMethodEngine } from '@kit.IMEKit';
 | [InputClient](arkts-ime-inputmethodengine-inputclient-i.md) | @brief You must first use on('inputStart') to obtain a **InputClient** instance, and then use this instance to call the following APIs. |
 | [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) | @brief In the following API examples, you must first use [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md) to obtain an **InputMethodAbility** instance, and then call the APIs using the obtained instance. |
 | [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md) | @brief In the following API examples, you must first use [getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md) to obtain an **InputMethodEngine** instance, and then call the APIs using the obtained instance. |
-| [KeyEvent](arkts-ime-inputmethodengine-keyevent-i.md) | @brief Represents the attributes of a key. |
 | [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) | @brief Represents the keyboard area on the panel. |
 | [KeyboardController](arkts-ime-inputmethodengine-keyboardcontroller-i.md) | @brief You must first use on('inputStart') to obtain a **KeyboardController** instance, and then use this instance to call the following APIs. |
 | [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) | @brief In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance. |
+| [KeyEvent](arkts-ime-inputmethodengine-keyevent-i.md) | @brief Represents the attributes of a key. |
 | [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) | @brief Represents a custom communication object. <br> <br>  > **NOTE：**&lt;br &gt;  > &lt;br &gt;  > You can register this object to receive custom communication data sent by the edit box application attached to the input method application. When the custom communication data is received, the [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage) callback in this object is triggered. &lt;br &gt;  > &lt;br &gt;  > This object is globally unique. After multiple registrations, only the last registered object is valid and retained, and the [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback of the penultimate registered object is triggered. &lt;br &gt;  > &lt;br &gt;  > If this object is unregistered, its [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback will be triggered. |
 | [Movement](arkts-ime-inputmethodengine-movement-i.md) | @brief Describes the direction in which the cursor moves when the text is selected. |
 | [Panel](arkts-ime-inputmethodengine-panel-i.md) | @brief You need to use [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) to obtain the panel instance and then call the following APIs through the instance. |
@@ -134,8 +134,8 @@ import { inputMethodEngine } from '@kit.IMEKit';
 | [OPTION_AUTO_CAP_SENTENCES](arkts-ime-inputmethodengine-con.md#option_auto_cap_sentences) | @brief Sentences are allowed. |
 | [OPTION_AUTO_WORDS](arkts-ime-inputmethodengine-con.md#option_auto_words) | @brief Words are allowed. |
 | [OPTION_MULTI_LINE](arkts-ime-inputmethodengine-con.md#option_multi_line) | @brief Multiple lines are allowed. |
-| [OPTION_NONE](arkts-ime-inputmethodengine-con.md#option_none) | @brief No input attribute is specified. |
 | [OPTION_NO_FULLSCREEN](arkts-ime-inputmethodengine-con.md#option_no_fullscreen) | @brief Half-screen style. |
+| [OPTION_NONE](arkts-ime-inputmethodengine-con.md#option_none) | @brief No input attribute is specified. |
 | [PATTERN_DATETIME](arkts-ime-inputmethodengine-con.md#pattern_datetime) | @brief Date edit box. |
 | [PATTERN_EMAIL](arkts-ime-inputmethodengine-con.md#pattern_email) | @brief Email edit box. |
 | [PATTERN_NEW_PASSWORD](arkts-ime-inputmethodengine-con.md#pattern_new_password) | @brief New password edit box. |

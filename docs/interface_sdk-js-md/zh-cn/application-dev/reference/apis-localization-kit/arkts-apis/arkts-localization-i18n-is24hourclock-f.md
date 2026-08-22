@@ -35,6 +35,12 @@ export function is24HourClock(): boolean
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
 
+let is24HourClock: boolean = i18n.System.is24HourClock(); // 如果系统时制是24小时制，is24HourClock = true
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
 let is24HourClock: boolean = i18n.is24HourClock();
 ```
 

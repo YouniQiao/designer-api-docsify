@@ -11,5 +11,5 @@
 
 | Name | Description |
 | --- | --- |
-| [Date](arkts-libes2020date-date-i.md) |  |
+| [Date](arkts-lib-es2020-date-date-i.md) |  |
 

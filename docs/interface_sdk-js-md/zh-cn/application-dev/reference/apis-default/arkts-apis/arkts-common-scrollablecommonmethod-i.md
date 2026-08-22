@@ -74,7 +74,7 @@ clipContent(clip: ContentClipMode | RectShape | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| clip | [ContentClipMode](arkts-common-contentclipmode-e.md) \| [RectShape](../../apis-arkui/arkts-apis/arkts-arkui-arkuishape-rectshape-c.md) \| undefined | 是 |  |
+| clip | [ContentClipMode](arkts-common-contentclipmode-e.md) \| [RectShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-rectshape-c.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -560,7 +560,7 @@ scrollBarHeight(height: LengthMetrics | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| height | [LengthMetrics](arkts-graphics-lengthmetrics-c.md) \| undefined | 是 |  |
+| height | [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 |  |
 
 **返回值：**
 

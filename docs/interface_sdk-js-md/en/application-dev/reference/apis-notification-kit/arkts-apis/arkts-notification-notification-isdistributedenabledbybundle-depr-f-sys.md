@@ -35,7 +35,41 @@ Obtains whether an application supports distributed notifications based on the b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Application bundle. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let isDistributedEnabledByBundleCallback = (err: Base.BusinessError, data: boolean) => {
+  if (err) {
+    console.info("isDistributedEnabledByBundle failed " + JSON.stringify(err));
+  } else {
+    console.info("isDistributedEnabledByBundle success" + JSON.stringify(data));
+  }
+};
+
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+
+Notification.isDistributedEnabledByBundle(bundle, isDistributedEnabledByBundleCallback);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+
+Notification.isDistributedEnabledByBundle(bundle).then((data: boolean) => {
+  console.info("isDistributedEnabledByBundle success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`isDistributedEnabledByBundle failed, code is ${err}`);
+});
+```
 
 
 ## isDistributedEnabledByBundle
@@ -71,4 +105,8 @@ Checks whether a specified application supports distributed notifications. This 
 | Type | Description |
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. |
+
+**Examples**
+
+See [isDistributedEnabledByBundle](#isdistributedenabledbybundle)
 

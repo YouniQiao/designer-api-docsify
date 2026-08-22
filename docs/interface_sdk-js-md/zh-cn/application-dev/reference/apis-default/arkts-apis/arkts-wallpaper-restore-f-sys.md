@@ -52,6 +52,16 @@ wallpaper.restore(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessErro
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+ 
+wallpaper.restore(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
+    console.info(`success to restore.`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to restore. Code: ${error.code}, Message: ${error.message}`);
+});
+```
+
 
 ## restore
 
@@ -93,13 +103,5 @@ function restore(wallpaperType: WallpaperType): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
- 
-wallpaper.restore(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
-    console.info(`success to restore.`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to restore. Code: ${error.code}, Message: ${error.message}`);
-});
-```
+参见 [restore](#restore)
 

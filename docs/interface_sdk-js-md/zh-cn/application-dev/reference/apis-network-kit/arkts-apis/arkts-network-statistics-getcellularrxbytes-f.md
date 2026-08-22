@@ -66,6 +66,26 @@ statistics.getCellularRxBytes((error: BusinessError|null, stats: long|undefined)
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+statistics.getCellularRxBytes().then((stats: number) => {
+  console.info(JSON.stringify(stats));
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+statistics.getCellularRxBytes().then((stats: long) => {
+  console.info(JSON.stringify(stats));
+});
+```
+
 
 ## getCellularRxBytes
 
@@ -103,23 +123,5 @@ function getCellularRxBytes(): Promise<long>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-statistics.getCellularRxBytes().then((stats: number) => {
-  console.info(JSON.stringify(stats));
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-statistics.getCellularRxBytes().then((stats: long) => {
-  console.info(JSON.stringify(stats));
-});
-```
+参见 [getCellularRxBytes](#getcellularrxbytes)
 

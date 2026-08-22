@@ -38,7 +38,7 @@ pickerStyle?: AVCastPickerStyle
 
 设置组件样式。
 
-**类型：** [AVCastPickerStyle](arkts-avsession-multimediaavcastpickerparam-avcastpickerstyle-e.md)
+**类型：** [AVCastPickerStyle](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstyle-e.md)
 
 **起始版本：** 24
 

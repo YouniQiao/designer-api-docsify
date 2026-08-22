@@ -58,7 +58,7 @@ wants: Array<Want>
 
 Array of all Want objects. Currently, only one Want object is supported. If multiple values are passed in, only the first member in the array is used.
 
-**Type:** Array&lt;[Want](arkts-ability-appabilitywant-want-c.md)&gt;
+**Type:** Array&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt;
 
 **Since:** 23
 

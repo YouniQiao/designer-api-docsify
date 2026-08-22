@@ -31,7 +31,7 @@ Remove a paired remote device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of cancelPairedDevice. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of cancelPairedDevice. |
 
 **Error codes:**
 
@@ -54,6 +54,21 @@ try {
     connection.cancelPairedDevice('11:22:33:44:55:66', (err: BusinessError) => {
         console.info('cancelPairedDevice, device name err:' + JSON.stringify(err));
     });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// promise
+try {
+    connection.cancelPairedDevice('11:22:33:44:55:66').then(() => {
+        console.info('cancelPairedDevice');
+    }, (error: BusinessError) => {
+        console.error('cancelPairedDevice: errCode:' + error.code + ',errMessage' + error.message);
+    })
+
 } catch (err) {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
@@ -106,18 +121,5 @@ Remove a paired remote device.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// promise
-try {
-    connection.cancelPairedDevice('11:22:33:44:55:66').then(() => {
-        console.info('cancelPairedDevice');
-    }, (error: BusinessError) => {
-        console.error('cancelPairedDevice: errCode:' + error.code + ',errMessage' + error.message);
-    })
-
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [cancelPairedDevice](#cancelpaireddevice)
 

@@ -29,7 +29,7 @@ Starts the specified print job. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | jobInfo | [PrintJob](arkts-basicservices-print-printjob-i.md) | Yes | Information about the print job. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -68,6 +68,34 @@ print.startPrintJob(jobInfo, (err: BusinessError) => {
     } else {
         console.info('start Print Job success');
     }
+})
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let jobInfo : print.PrintJob = {
+    fdList : [44,45],
+    jobId : 'jobId_12',
+    printerId : 'printerId_32',
+    jobState : print.PrintJobState.PRINT_JOB_COMPLETED,
+    jobSubstate : print.PrintJobSubState.PRINT_JOB_COMPLETED_SUCCESS,
+    copyNumber : 1,
+    pageRange : {},
+    isSequential : false,
+    pageSize : {id : '', name : '', width : 10, height : 20},
+    isLandscape : false,
+    colorMode : print.PrintColorMode.COLOR_MODE_COLOR,
+    duplexMode : print.PrintDuplexMode.DUPLEX_MODE_NONE,
+    margin : undefined,
+    preview : undefined,
+    options : undefined
+};
+print.startPrintJob(jobInfo).then(() => {
+    console.info('start Print success');
+}).catch((error: BusinessError) => {
+    console.error('failed to start Print because : ' + JSON.stringify(error));
 })
 ```
 
@@ -112,31 +140,5 @@ Starts the specified print job. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let jobInfo : print.PrintJob = {
-    fdList : [44,45],
-    jobId : 'jobId_12',
-    printerId : 'printerId_32',
-    jobState : print.PrintJobState.PRINT_JOB_COMPLETED,
-    jobSubstate : print.PrintJobSubState.PRINT_JOB_COMPLETED_SUCCESS,
-    copyNumber : 1,
-    pageRange : {},
-    isSequential : false,
-    pageSize : {id : '', name : '', width : 10, height : 20},
-    isLandscape : false,
-    colorMode : print.PrintColorMode.COLOR_MODE_COLOR,
-    duplexMode : print.PrintDuplexMode.DUPLEX_MODE_NONE,
-    margin : undefined,
-    preview : undefined,
-    options : undefined
-};
-print.startPrintJob(jobInfo).then(() => {
-    console.info('start Print success');
-}).catch((error: BusinessError) => {
-    console.error('failed to start Print because : ' + JSON.stringify(error));
-})
-```
+See [startPrintJob](#startprintjob)
 

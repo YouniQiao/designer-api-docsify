@@ -30,7 +30,7 @@ Obtains the call restriction status. This API uses an asynchronous callback to r
 | --- | --- | --- | --- |
 | slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2. |
 | type | [CallRestrictionType](arkts-telephony-call-callrestrictiontype-e-sys.md) | Yes | Call restriction type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RestrictionStatus](arkts-telephony-call-restrictionstatus-e-sys.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RestrictionStatus](arkts-telephony-call-restrictionstatus-e-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -55,6 +55,16 @@ call.getCallRestrictionStatus(0, 1, (err: BusinessError, data: call.RestrictionS
     } else {
         console.info(`getCallRestrictionStatus success, data->${JSON.stringify(data)}`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.getCallRestrictionStatus(0, 1).then((data: call.RestrictionStatus) => {
+    console.info(`getCallRestrictionStatus success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getCallRestrictionStatus fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -104,13 +114,5 @@ Obtains the call restriction status. This API uses a promise to return the resul
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.getCallRestrictionStatus(0, 1).then((data: call.RestrictionStatus) => {
-    console.info(`getCallRestrictionStatus success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getCallRestrictionStatus fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getCallRestrictionStatus](#getcallrestrictionstatus)
 

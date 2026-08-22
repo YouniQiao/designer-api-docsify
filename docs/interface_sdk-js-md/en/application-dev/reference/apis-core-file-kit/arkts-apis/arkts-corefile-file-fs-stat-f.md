@@ -34,7 +34,7 @@ Obtains detailed attribute information of a file or directory. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Stat](arkts-corefile-filefs-stat-i.md)&gt; | Promise used to return the file or directory information. |
+| Promise&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | Promise used to return the file or directory information. |
 
 **Error codes:**
 
@@ -53,6 +53,29 @@ Obtains detailed attribute information of a file or directory. This API uses a p
 | 13900033 | Too many symbolic links encountered |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + "/test.txt";
+fs.stat(filePath).then((stat: fs.Stat) => {
+  console.info("get file info succeed, the size of file is " + stat.size);
+}).catch((err: BusinessError) => {
+  console.error("get file info failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+fs.stat(pathDir, (err: BusinessError, stat: fs.Stat) => {
+  if (err) {
+    console.error("get file info failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("get file info succeed, the size of file is " + stat.size);
+  }
+});
+```
 
 
 ## stat
@@ -76,7 +99,7 @@ Obtains detailed attribute information of a file or directory. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | file | string \| number | Yes | Application sandbox path, URI, or FD of the file or directory.<br>**Note：**: URIs can be passed since API version 22. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Stat](arkts-corefile-filefs-stat-i.md)&gt; | Yes | Callback used to return the file or directory information obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | Yes | Callback used to return the file or directory information obtained. |
 
 **Error codes:**
 
@@ -95,4 +118,8 @@ Obtains detailed attribute information of a file or directory. This API uses an 
 | 13900033 | Too many symbolic links encountered |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [stat](#stat)
 

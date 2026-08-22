@@ -90,3 +90,7 @@ Creates an &lt;b&gt;AudioLoopback&lt;/b&gt; instance, which provides low-latency
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Loopback mode is unsupported. |
 
+**Examples**
+
+See [createAudioLoopback](#createaudioloopback)
+

@@ -49,3 +49,21 @@ Notifies the update of the widget lock state. This API uses a promise to return 
 | [16501001](../errorcode-form.md#16501001-widget-id-not-exist) | The ID of the form to be operated does not exist. |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 
+**Examples**
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288';
+let isLocked: boolean = true;
+
+try {
+  formHost.updateFormLockedState(formId, isLocked).then(() => {
+    console.info(`formHost updateFormLockedState success`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+

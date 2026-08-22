@@ -35,7 +35,26 @@ constructor()
 **示例**
 
 ```TypeScript
+let writableStream = new stream.Writable();
+```
+
+```TypeScript
+let readableStream = new stream.Readable();
+```
+
+```TypeScript
+let option : stream.ReadableOptions = {
+  encoding : "utf-8"
+};
+let readableStream = new stream.Readable(option);
+```
+
+```TypeScript
 let duplex = new stream.Duplex();
+```
+
+```TypeScript
+let transformStream = new stream.Transform();
 ```
 
 ## cork
@@ -61,6 +80,42 @@ cork(): boolean
 | boolean | 返回设置cork状态是否成功。true表示设置成功，false表示设置失败。 |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback();
+  }
+}
+
+let writableStream = new TestWritable();
+let result = writableStream.cork();
+console.info("Writable cork result", result); // Writable cork result true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback.unsafeCall();
+  }
+}
+
+let writableStream = new TestWritable();
+let result = writableStream.cork();
+console.info("Writable cork result", result); // 期望结果: Writable cork result true
+```
 
 ```TypeScript
 let duplexStream = new stream.Duplex();
@@ -93,6 +148,42 @@ doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void
 | callback | Function | 是 | 回调函数。 |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("Writable chunk is", chunk); // Writable chunk is data
+    callback();
+  }
+}
+
+let writableStream = new TestWritable();
+writableStream.write("data", "utf8");
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("Writable chunk is", chunk); // 期望结果: Writable chunk is data
+    callback.unsafeCall();
+  }
+}
+
+let writableStream = new TestWritable();
+writableStream.write("data", "utf8");
+```
 
 ArkTS-Dyn示例：
 
@@ -160,6 +251,52 @@ doWritev(chunks: string[] | Uint8Array[], callback: Function): void
 | callback | Function | 是 | 回调函数。 |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWritev(chunks: string[] | Uint8Array[], callback: Function) {
+    console.info("Writable chunk", chunks);
+    callback();
+  }
+  // Writable chunk data1
+  // Writable chunk data2
+}
+
+let writableStream = new TestWritable();
+writableStream.write("data1", "utf8");
+writableStream.write("data2", "utf8");
+writableStream.uncork();
+writableStream.end();
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWritev(chunks: string[] | Uint8Array[], callback: Function) {
+    console.info("Writable chunk", chunks);
+    callback.unsafeCall();
+  }
+  // Writable chunk data1
+  // Writable chunk data2
+}
+
+let writableStream = new TestWritable();
+writableStream.write("data1", "utf8");
+writableStream.write("data2", "utf8");
+writableStream.uncork();
+writableStream.end();
+```
 
 ArkTS-Dyn示例：
 
@@ -260,6 +397,52 @@ end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writab
 ArkTS-Dyn示例：
 
 ```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("Writable chunk is", chunk);
+    callback();
+  }
+  // Writable chunk is test
+  // Writable chunk is finish
+}
+
+let writableStream = new TestWritable();
+writableStream.write("test", "utf8");
+writableStream.end("finish", "utf8", () => {
+  console.info("Writable is end"); // Writable is end
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("Writable chunk is", chunk);
+    callback.unsafeCall();
+  }
+  // Writable chunk is test
+  // Writable chunk is finish
+}
+
+let writableStream = new TestWritable();
+writableStream.write("test", "utf8");
+writableStream.end("finish", "utf8", () => {
+  console.info("Writable is end"); // 期望结果: Writable is end
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
 class TestDuplex extends stream.Duplex {
   constructor() {
     super();
@@ -336,6 +519,42 @@ setDefaultEncoding(encoding?: string): boolean
 ArkTS-Dyn示例：
 
 ```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback();
+  }
+}
+
+let writableStream = new TestWritable();
+let result = writableStream.setDefaultEncoding("utf8");
+console.info("Writable is result", result); // Writable is result true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback.unsafeCall();
+  }
+}
+
+let writableStream = new TestWritable();
+let result = writableStream.setDefaultEncoding("utf8");
+console.info("Writable is result", result); // 期望结果: Writable is result true
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
 class TestDuplex extends stream.Duplex {
   constructor() {
     super();
@@ -398,6 +617,54 @@ uncork(): boolean
 | boolean | 返回解除cork状态是否成功。true表示成功，false表示失败。 |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback();
+  }
+}
+
+let writableStream = new TestWritable();
+writableStream.cork();
+writableStream.write("data1", "utf8");
+writableStream.write("data2", "utf8");
+writableStream.uncork();
+writableStream.end();
+writableStream.on("finish", () => {
+  console.info("all Data is End"); // all Data is End
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback.unsafeCall();
+  }
+}
+
+let writableStream = new TestWritable();
+writableStream.cork();
+writableStream.write("data1", "utf8");
+writableStream.write("data2", "utf8");
+writableStream.uncork();
+writableStream.on("finish", () => {
+  console.info("all Data is End"); // 期望结果: all Data is End
+});
+writableStream.end();
+```
 
 ArkTS-Dyn示例：
 
@@ -490,6 +757,42 @@ write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): bool
 | [10200039](../errorcode-utils.md#10200039-dotransform接口未实现) | The doTransform method has not been implemented for a class that inherits from Transform. |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("Writable chunk is", chunk); // Writable chunk is test
+    callback();
+  }
+}
+
+let writableStream = new TestWritable();
+writableStream.write("test", "utf8");
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("Writable chunk is", chunk); // 期望结果: Writable chunk is test
+    callback.unsafeCall();
+  }
+}
+
+let writableStream = new TestWritable();
+writableStream.write("test", "utf8");
+```
 
 ArkTS-Dyn示例：
 

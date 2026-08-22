@@ -31,7 +31,7 @@ Connects to a printer by printer ID. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | printerId | string | Yes | Printer ID. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback to be invoked when a printer is connected. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback to be invoked when a printer is connected. |
 
 **Error codes:**
 
@@ -53,6 +53,18 @@ print.connectPrinter(printerId, (err: BusinessError) => {
     } else {
         console.info('start connect Printer success');
     }
+})
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let printerId: string = 'printerId_32';
+print.connectPrinter(printerId).then(() => {
+    console.info('start connect Printer success');
+}).catch((error: BusinessError) => {
+    console.error('failed to connect Printer because : ' + JSON.stringify(error));
 })
 ```
 
@@ -98,15 +110,5 @@ Connects to a printer by printer ID. This API uses a promise to return the resul
 
 **Examples**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let printerId: string = 'printerId_32';
-print.connectPrinter(printerId).then(() => {
-    console.info('start connect Printer success');
-}).catch((error: BusinessError) => {
-    console.error('failed to connect Printer because : ' + JSON.stringify(error));
-})
-```
+See [connectPrinter](#connectprinter)
 

@@ -24,7 +24,7 @@ Obtain the current country code.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CountryCode](arkts-location-geolocationmanager-countrycode-i.md)&gt; | Yes | Indicates the callback for reporting the country code. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CountryCode](arkts-location-geolocationmanager-countrycode-i.md)&gt; | Yes | Indicates the callback for reporting the country code. |
 
 **Error codes:**
 
@@ -49,6 +49,23 @@ try {
       console.info('getCountryCode: result=' + JSON.stringify(result));
     }
   });
+} catch (err) {
+  console.error("errCode:" + err.code + ", message:" + err.message);
+}
+```
+
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  geoLocationManager.getCountryCode()
+    .then((result) => {
+      console.info('promise, getCountryCode: result=' + JSON.stringify(result));
+    })
+    .catch((error: BusinessError) => {
+      console.error('promise, getCountryCode: error=' + JSON.stringify(error));
+    });
 } catch (err) {
   console.error("errCode:" + err.code + ", message:" + err.message);
 }
@@ -85,20 +102,5 @@ Obtain the current country code.
 
 **Examples**
 
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  geoLocationManager.getCountryCode()
-    .then((result) => {
-      console.info('promise, getCountryCode: result=' + JSON.stringify(result));
-    })
-    .catch((error: BusinessError) => {
-      console.error('promise, getCountryCode: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
+See [getCountryCode](#getcountrycode)
 

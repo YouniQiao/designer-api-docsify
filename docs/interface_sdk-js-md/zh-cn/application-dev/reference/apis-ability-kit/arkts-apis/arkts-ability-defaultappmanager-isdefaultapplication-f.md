@@ -42,6 +42,36 @@ ArkTS-Dyn示例:
 import { defaultAppManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+defaultAppManager.isDefaultApplication(defaultAppManager.ApplicationType.BROWSER)
+  .then((data) => {
+    console.info('Operation successful. IsDefaultApplication ? ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+});
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { defaultAppManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+defaultAppManager.isDefaultApplication(defaultAppManager.ApplicationType.BROWSER)
+  .then((data: boolean) => {
+    console.info('Operation successful. IsDefaultApplication ? ' + JSON.stringify(data));
+  }).catch((error: Error) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error as BusinessError));
+  });
+```
+
+ArkTS-Dyn示例:
+
+```TypeScript
+import { defaultAppManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
 defaultAppManager.isDefaultApplication(defaultAppManager.ApplicationType.BROWSER, (err: BusinessError, data) => {
   if (err) {
     console.error('Operation failed. Cause: ' + JSON.stringify(err));
@@ -104,33 +134,5 @@ function isDefaultApplication(type: string) : Promise<boolean>
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-defaultAppManager.isDefaultApplication(defaultAppManager.ApplicationType.BROWSER)
-  .then((data) => {
-    console.info('Operation successful. IsDefaultApplication ? ' + JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-});
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { defaultAppManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-defaultAppManager.isDefaultApplication(defaultAppManager.ApplicationType.BROWSER)
-  .then((data: boolean) => {
-    console.info('Operation successful. IsDefaultApplication ? ' + JSON.stringify(data));
-  }).catch((error: Error) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error as BusinessError));
-  });
-```
+参见 [isDefaultApplication](#isdefaultapplication)
 

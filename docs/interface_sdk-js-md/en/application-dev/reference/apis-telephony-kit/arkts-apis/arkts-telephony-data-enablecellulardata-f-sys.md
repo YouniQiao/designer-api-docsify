@@ -28,7 +28,7 @@ Enables the cellular data service. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -54,6 +54,17 @@ data.enableCellularData((err: BusinessError) => {
     } else {
         console.info(`enableCellularData success`);
     }
+});
+```
+
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+data.enableCellularData().then(() => {
+    console.info(`enableCellularData success.`);
+}).catch((err: BusinessError) => {
+    console.error(`enableCellularData fail. code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -94,14 +105,5 @@ Enables the cellular data service. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.enableCellularData().then(() => {
-    console.info(`enableCellularData success.`);
-}).catch((err: BusinessError) => {
-    console.error(`enableCellularData fail. code: ${err.code}, message: ${err.message}`);
-});
-```
+See [enableCellularData](#enablecellulardata)
 

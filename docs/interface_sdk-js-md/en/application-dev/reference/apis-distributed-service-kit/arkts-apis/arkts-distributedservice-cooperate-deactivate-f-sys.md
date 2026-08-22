@@ -31,7 +31,7 @@ Stops screen hopping. This API uses an asynchronous callback to return the resul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isUnchained | boolean | Yes | Whether to disable the cross-device link.<br> The value **true** means to disable the cross-device link, and the value **false** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -52,6 +52,20 @@ try {
       return;
     }
     console.info(`Stop Keyboard mouse crossing success.`);
+  });
+} catch (error) {
+  console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  cooperate.deactivate(false).then(() => {
+    console.info(`Stop Keyboard mouse crossing success.`);
+  }, (error: BusinessError) => {
+    console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
   });
 } catch (error) {
   console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
@@ -99,17 +113,5 @@ Stops screen hopping. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  cooperate.deactivate(false).then(() => {
-    console.info(`Stop Keyboard mouse crossing success.`);
-  }, (error: BusinessError) => {
-    console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
+See [deactivate](#deactivate)
 

@@ -41,6 +41,41 @@ isSpatializationEnabledForCurrentDevice(): boolean
 | --- | --- |
 | boolean | 当前设备空间音频渲染是否开启。true表示开启，false表示未开启。 |
 
+**示例**
+
+```TypeScript
+let isSpatializationEnabledForCurrentDevice: boolean = audioSpatializationManager.isSpatializationEnabledForCurrentDevice();
+
+console.info(`Succeeded in checking whether spatialization is enabled for the current device, isSpatializationEnabledForCurrentDevice: ${isSpatializationEnabledForCurrentDevice}.`);
+```
+
+## off('spatializationEnabledChangeForCurrentDevice')
+
+```TypeScript
+off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boolean>): void
+```
+
+取消监听当前设备空间音频渲染开关状态变化事件。使用callback异步回调。
+
+**起始版本：** 18
+
+<!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'spatializationEnabledChangeForCurrentDevice' | 是 | 事件回调类型，支持的事件为' spatializationEnabledChangeForCurrentDevice'，当取消订阅当前设备空间音频渲染开关状态变化事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。返回true表示打开空间音频渲染状态；返回false表示关闭空间音频渲染状态。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
 ## offSpatializationEnabledChangeForCurrentDevice
 
 ```TypeScript
@@ -67,17 +102,33 @@ Unsubscribes to the spatialization enable state change events by the current dev
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## off('spatializationEnabledChangeForCurrentDevice')
+**示例**
 
 ```TypeScript
-off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boolean>): void
+// 取消该事件的所有监听。
+audioSpatializationManager.off('spatializationEnabledChangeForCurrentDevice');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let spatializationEnabledChangeForCurrentDeviceCallback = (enabled: boolean) => {
+  console.info(`Spatialization enabled for current device changed, enabled: ${enabled}.`);
+};
+
+audioSpatializationManager.on('spatializationEnabledChangeForCurrentDevice', spatializationEnabledChangeForCurrentDeviceCallback);
+
+audioSpatializationManager.off('spatializationEnabledChangeForCurrentDevice', spatializationEnabledChangeForCurrentDeviceCallback);
 ```
 
-取消监听当前设备空间音频渲染开关状态变化事件。使用callback异步回调。
+## on('spatializationEnabledChangeForCurrentDevice')
+
+```TypeScript
+on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boolean>): void
+```
+
+监听当前设备空间音频渲染开关状态变化事件。使用callback异步回调。
 
 **起始版本：** 18
 
-<!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boolean>): void-End-->
+<!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -85,8 +136,8 @@ off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'spatializationEnabledChangeForCurrentDevice' | 是 | 事件回调类型，支持的事件为' spatializationEnabledChangeForCurrentDevice'，当取消订阅当前设备空间音频渲染开关状态变化事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。返回true表示打开空间音频渲染状态；返回false表示关闭空间音频渲染状态。 |
+| type | 'spatializationEnabledChangeForCurrentDevice' | 是 | 事件回调类型，支持的事件为' spatializationEnabledChangeForCurrentDevice'，当空间音频渲染开关状态变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示打开空间音频渲染状态；返回false表示关闭空间音频渲染状态。 |
 
 **错误码：**
 
@@ -120,30 +171,11 @@ Subscribes to the spatialization enable state change events by the current devic
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## on('spatializationEnabledChangeForCurrentDevice')
+**示例**
 
 ```TypeScript
-on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boolean>): void
+audioSpatializationManager.onSpatializationEnabledChangeForCurrentDevice((isSpatializationEnabledForCurrentDevice: boolean) => {
+  console.info(`Spatialization enabled for current device changed, isSpatializationEnabledForCurrentDevice: ${isSpatializationEnabledForCurrentDevice}.`);
+});
 ```
-
-监听当前设备空间音频渲染开关状态变化事件。使用callback异步回调。
-
-**起始版本：** 18
-
-<!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boolean>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'spatializationEnabledChangeForCurrentDevice' | 是 | 事件回调类型，支持的事件为' spatializationEnabledChangeForCurrentDevice'，当空间音频渲染开关状态变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示打开空间音频渲染状态；返回false表示关闭空间音频渲染状态。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 

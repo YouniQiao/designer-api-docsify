@@ -1,6 +1,6 @@
 # LastExitReason
 
-Enumerates the reasons for the last exit of the ability. You can use it together with the value of **launchParam.lastExitReason** in [onCreate()](arkts-ability-appabilityuiability-uiability-c.md#oncreate) of the UIAbility to complete different operations.
+Enumerates the reasons for the last exit of the ability. You can use it together with the value of **launchParam.lastExitReason** in [onCreate()](arkts-ability-app-ability-uiability-uiability-c.md#oncreate) of the UIAbility to complete different operations.
 
 **Since:** 23
 
@@ -213,4 +213,21 @@ The ability exits because it receives a kill signal from the system.
 <!--Device-LastExitReason-SIGNAL = 10--><!--Device-LastExitReason-SIGNAL = 10-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+import { UIAbility, Want, AbilityConstant } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    if (launchParam.lastExitReason === AbilityConstant.LastExitReason.APP_FREEZE) {
+      console.info('The ability has exit last because the ability was not responding.');
+    }
+    if (launchParam.lastExitReason === AbilityConstant.LastExitReason.RESOURCE_CONTROL) {
+      console.info(`The ability has exited last because the rss control, the lastExitReason is ${launchParam.lastExitReason}, the lastExitMessage is ${launchParam.lastExitMessage}.`);
+    }
+  }
+}
+```
 

@@ -51,6 +51,15 @@ static addPreferredLanguage(language: string, index?: int): void
 **示例**
 
 ```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// 将语言zh-CN添加到系统偏好语言列表中
+let language: string = 'zh-CN';
+let index: number = 0;
+let success: boolean = i18n.addPreferredLanguage(language, index);
+```
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { i18n } from '@kit.LocalizationKit';
 
@@ -149,48 +158,6 @@ try {
 }
 ```
 
-## getSystemNumberPatterns
-
-```TypeScript
-static getSystemNumberPatterns(): Map<string, string>
-```
-
-获取系统支持的数字格式及示例。数字格式指数字中的千分符和小数分隔符的格式。
-
-**起始版本：** 23
-
-<!--Device-System-static getSystemNumberPatterns(): Map<string, string>--><!--Device-System-static getSystemNumberPatterns(): Map<string, string>-End-->
-
-**系统能力：** SystemCapability.Global.I18n
-
-**系统接口：** 此接口为系统接口。
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Map&lt;string, string&gt; | 系统支持的数字格式及示例。 其中Map的key表示数字格式，是千分符和小数分隔符的unicode编码，value表示数字格式对应的示例。支持的范围和系统语言地区相关。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n } from '@kit.LocalizationKit';
-
-try {
-  let systemNumberPatterns: Map<string, string> = i18n.System.getSystemNumberPatterns();
-} catch(error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call System.getSystemNumberPatterns failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
-
 ## getSystemNumberingSystems
 
 ```TypeScript
@@ -230,6 +197,48 @@ try {
 } catch(error) {
   let err: BusinessError = error as BusinessError;
   console.error(`call System.getSystemNumberingSystems failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
+## getSystemNumberPatterns
+
+```TypeScript
+static getSystemNumberPatterns(): Map<string, string>
+```
+
+获取系统支持的数字格式及示例。数字格式指数字中的千分符和小数分隔符的格式。
+
+**起始版本：** 23
+
+<!--Device-System-static getSystemNumberPatterns(): Map<string, string>--><!--Device-System-static getSystemNumberPatterns(): Map<string, string>-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Map&lt;string, string&gt; | 系统支持的数字格式及示例。 其中Map的key表示数字格式，是千分符和小数分隔符的unicode编码，value表示数字格式对应的示例。支持的范围和系统语言地区相关。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let systemNumberPatterns: Map<string, string> = i18n.System.getSystemNumberPatterns();
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getSystemNumberPatterns failed, error code: ${err.code}, message: ${err.message}.`);
 }
 ```
 
@@ -359,48 +368,6 @@ try {
 }
 ```
 
-## getUsingNumberPattern
-
-```TypeScript
-static getUsingNumberPattern(): string
-```
-
-获取系统当前使用的数字格式。
-
-**起始版本：** 23
-
-<!--Device-System-static getUsingNumberPattern(): string--><!--Device-System-static getUsingNumberPattern(): string-End-->
-
-**系统能力：** SystemCapability.Global.I18n
-
-**系统接口：** 此接口为系统接口。
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| string | 系统当前使用的数字格式。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n } from '@kit.LocalizationKit';
-
-try {
-  let usingNumberPattern: string = i18n.System.getUsingNumberPattern();
-} catch(error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call System.getUsingNumberPattern failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
-
 ## getUsingNumberingSystem
 
 ```TypeScript
@@ -440,6 +407,48 @@ try {
 } catch(error) {
   let err: BusinessError = error as BusinessError;
   console.error(`call System.getUsingNumberingSystem failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
+## getUsingNumberPattern
+
+```TypeScript
+static getUsingNumberPattern(): string
+```
+
+获取系统当前使用的数字格式。
+
+**起始版本：** 23
+
+<!--Device-System-static getUsingNumberPattern(): string--><!--Device-System-static getUsingNumberPattern(): string-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| string | 系统当前使用的数字格式。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let usingNumberPattern: string = i18n.System.getUsingNumberPattern();
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getUsingNumberPattern failed, error code: ${err.code}, message: ${err.message}.`);
 }
 ```
 
@@ -521,6 +530,14 @@ static removePreferredLanguage(index: int): void
 **示例**
 
 ```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// 移除系统偏好语言列表中的第一个偏好语言
+let index: number = 0;
+let success: boolean = i18n.removePreferredLanguage(index);
+```
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { i18n } from '@kit.LocalizationKit';
 
@@ -570,6 +587,13 @@ static set24HourClock(option: boolean): void
 **示例**
 
 ```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// 将系统时间设置为24小时制
+let success: boolean = i18n.set24HourClock(true);
+```
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { i18n } from '@kit.LocalizationKit';
 
@@ -615,6 +639,14 @@ static setFirstDayOfWeek(type: WeekDay): void
 | [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 **示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let calendar = i18n.getCalendar('zh-Hans');
+calendar.setFirstDayOfWeek(3);
+let firstDayOfWeek = calendar.getFirstDayOfWeek(); // firstDayOfWeek = 3
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -816,52 +848,6 @@ try {
 }
 ```
 
-## setSystemNumberPattern
-
-```TypeScript
-static setSystemNumberPattern(pattern: string): void
-```
-
-设置系统的数字格式。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.UPDATE_CONFIGURATION
-
-<!--Device-System-static setSystemNumberPattern(pattern: string): void--><!--Device-System-static setSystemNumberPattern(pattern: string): void-End-->
-
-**系统能力：** SystemCapability.Global.I18n
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pattern | string | 是 | 系统支持的数字格式。支持的范围可以通过getSystemNumberPatterns获取。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n } from '@kit.LocalizationKit';
-
-try {
-  i18n.System.setSystemNumberPattern("002e002c"); // 如果设置当前系统不支持的数字格式会报错
-} catch(error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call System.setSystemNumberPattern failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
-
 ## setSystemNumberingSystem
 
 ```TypeScript
@@ -905,6 +891,52 @@ try {
 } catch(error) {
   let err: BusinessError = error as BusinessError;
   console.error(`call System.setSystemNumberingSystem failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
+## setSystemNumberPattern
+
+```TypeScript
+static setSystemNumberPattern(pattern: string): void
+```
+
+设置系统的数字格式。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-System-static setSystemNumberPattern(pattern: string): void--><!--Device-System-static setSystemNumberPattern(pattern: string): void-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pattern | string | 是 | 系统支持的数字格式。支持的范围可以通过getSystemNumberPatterns获取。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  i18n.System.setSystemNumberPattern("002e002c"); // 如果设置当前系统不支持的数字格式会报错
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.setSystemNumberPattern failed, error code: ${err.code}, message: ${err.message}.`);
 }
 ```
 

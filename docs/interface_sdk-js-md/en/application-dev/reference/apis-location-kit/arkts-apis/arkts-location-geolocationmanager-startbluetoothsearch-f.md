@@ -32,7 +32,7 @@ Starts Bluetooth scanning and matches the device ID list in the input parameter 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | request | [BluetoothSearchRequestParams](arkts-location-geolocationmanager-bluetoothsearchrequestparams-i.md) | Yes | Indicates the configuration parameters for the Bluetooth search function. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BluetoothScanResult](arkts-location-geolocationmanager-bluetoothscanresult-i.md)&gt; | Yes | Callback used to return \\${BluetoothScanResult}. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BluetoothScanResult](arkts-location-geolocationmanager-bluetoothscanresult-i.md)&gt; | Yes | Callback used to return \\${BluetoothScanResult}. |
 
 **Error codes:**
 

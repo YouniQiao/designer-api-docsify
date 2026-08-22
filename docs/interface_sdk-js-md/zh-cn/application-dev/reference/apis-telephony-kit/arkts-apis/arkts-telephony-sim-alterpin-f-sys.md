@@ -58,6 +58,17 @@ sim.alterPin(0, "1234", "0000", (err: BusinessError, data: sim.LockStatusRespons
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.alterPin(0, "1234", "0000").then((data: sim.LockStatusResponse) => {
+    console.info(`alterPin success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`alterPin failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## alterPin
 
@@ -107,14 +118,5 @@ Change Pin Password.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.alterPin(0, "1234", "0000").then((data: sim.LockStatusResponse) => {
-    console.info(`alterPin success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`alterPin failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [alterPin](#alterpin)
 

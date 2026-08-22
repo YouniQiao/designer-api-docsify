@@ -480,6 +480,16 @@ async function loadModelFromAbsolutePath(context: common.UIAbilityContext): Prom
 }
 ```
 
+```TypeScript
+import { Scene, SceneLoadParams } from '@kit.ArkGraphics3D';
+
+function loadModelWithParams(): Promise<Scene> {
+  let loadParams: SceneLoadParams = { offset: 0 };
+  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"), loadParams);
+  return scene;
+}
+```
+
 ## renderFrame
 
 ```TypeScript

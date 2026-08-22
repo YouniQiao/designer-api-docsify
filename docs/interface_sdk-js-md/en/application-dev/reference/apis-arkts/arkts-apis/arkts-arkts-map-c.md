@@ -355,30 +355,6 @@ Checks if a key is in the Map.
 | --- | --- |
 | boolean | true if the value is in the Map. |
 
-## keySet
-
-```TypeScript
-public keySet(): Set<K>
-```
-
-Returns map keys as Set.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Map-public keySet(): Set<K>--><!--Device-Map-public keySet(): Set<K>-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Set&lt;K&gt; | A new Set instance containing all of the keys. |
-
 ## keys
 
 ```TypeScript
@@ -402,6 +378,30 @@ Returns elements from the Map as an keys Iterator.
 | Type | Description |
 | --- | --- |
 | IterableIterator&lt;K&gt; | iterator with map keys. |
+
+## keySet
+
+```TypeScript
+public keySet(): Set<K>
+```
+
+Returns map keys as Set.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Map-public keySet(): Set<K>--><!--Device-Map-public keySet(): Set<K>-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Set&lt;K&gt; | A new Set instance containing all of the keys. |
 
 ## set
 

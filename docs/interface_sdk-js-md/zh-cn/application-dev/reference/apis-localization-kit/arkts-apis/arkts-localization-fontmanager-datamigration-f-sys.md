@@ -45,3 +45,31 @@ function dataMigration(callback: DataMigrationCallback): int
 | [31100110](../errorcode-font-manager.md#31100110-系统异常导致接口调用失败) | Call failed due to system error. |
 | [31100111](../errorcode-font-manager.md#31100111-迁移任务执行中) | Data migration is in progress. |
 
+**示例**
+
+```TypeScript
+import { fontManager } from '@kit.LocalizationKit';
+
+class DataMigrationCallbackImpl implements fontManager.DataMigrationCallback {
+  onHeartBeat(): void {
+    console.info('onHeartBeat callback');
+  }
+  onProgress(progress : fontManager.DataMigrationProgress): void {
+    console.info('onProgress callback');
+  }
+  onResult(result : int): void {
+    console.info('onResult callback');
+  }
+}
+
+async function dataMigration() {
+  const callback = new DataMigrationCallbackImpl;
+  try {
+    let res: int = fontManager.dataMigration(callback);
+    console.info('dataMigration suc. res is ' + res);
+  } catch (error) {
+    console.error('dataMigration err.' + error.code);
+  }
+}
+```
+

@@ -533,7 +533,7 @@ Unsubscribes from data changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value is **'change'**, which indicates data changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
 
 **Error codes:**
 
@@ -582,7 +582,7 @@ Unsubscribes from changes of specific data.
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
 | keys | Array&lt;string&gt; | Yes | Keys to be unsubscribed from. If this parameter is not specified, this API unsubscribes from the changes of all keys. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;lang.ISendable&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the changes of the specified data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the changes of the specified data. |
 
 **Error codes:**
 
@@ -633,7 +633,7 @@ Unsubscribes from inter-process data changes. This API is provided for applicati
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'multiProcessChange' | Yes | Event type. The value is **'multiProcessChange'**, which indicates inter- process data changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
 
 **Error codes:**
 
@@ -681,7 +681,7 @@ Subscribes to data changes. The registered callback will be invoked to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value is **'change'**, which indicates data changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Callback used to return the key whose value is changed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback used to return the key whose value is changed. |
 
 **Error codes:**
 
@@ -729,7 +729,7 @@ Subscribes to changes of specific data. The registered callback will be invoked 
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
 | keys | Array&lt;string&gt; | Yes | Keys to be observed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;lang.ISendable&gt; | Yes | Callback used to return the KV pairs changed. The keys are the keys observed, and the values are the new values. The values support the following types: number, string, boolean, bigint, and serializable object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | Yes | Callback used to return the KV pairs changed. The keys are the keys observed, and the values are the new values. The values support the following types: number, string, boolean, bigint, and serializable object. |
 
 **Error codes:**
 
@@ -779,7 +779,7 @@ Subscribes to data changes between processes. When multiple processes hold the s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'multiProcessChange' | Yes | Event type. The value is **'multiProcessChange'**, which indicates inter- process data changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Callback used to return the key whose value is changed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback used to return the key whose value is changed. |
 
 **Error codes:**
 

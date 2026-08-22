@@ -34,3 +34,12 @@ Specifies the description for the target Component.
 | --- | --- |
 | [On](arkts-test-uitest-on-c.md) | this { |
 
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.description('123'); // Use the static constructor ON to create an On object and specify the description attribute of the target component.
+```
+

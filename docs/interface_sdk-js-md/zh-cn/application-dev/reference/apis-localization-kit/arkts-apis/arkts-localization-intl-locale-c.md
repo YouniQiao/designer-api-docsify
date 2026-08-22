@@ -51,6 +51,91 @@ let locale = new intl.Locale();
 let localeID = locale.toString();
 ```
 
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 创建zh-CN区域对象
+let locale = new intl.Locale('zh-CN');
+let localeID = locale.toString(); // localeID = 'zh-CN'
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用系统当前区域ID创建DateTimeFormat对象
+let formatter: intl.DateTimeFormat = new intl.DateTimeFormat();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用zh-CN区域ID创建DateTimeFormat对象，日期风格为full，时间风格为medium
+let formatter: intl.DateTimeFormat = new intl.DateTimeFormat('zh-CN', { dateStyle: 'full', timeStyle: 'medium' });
+
+// 使用区域ID列表创建DateTimeFormat对象，因为ban为非法区域ID，因此使用zh区域ID创建DateTimeFormat对象
+formatter = new intl.DateTimeFormat(['ban', 'zh'], { dateStyle: 'full', timeStyle: 'medium' });
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用系统当前区域ID创建NumberFormat对象
+let formatter: intl.NumberFormat = new intl.NumberFormat();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用en-GB区域ID创建NumberFormat对象，style设置为decimal，notation设置为scientific
+let formatter: intl.NumberFormat = new intl.NumberFormat('en-GB', { style: 'decimal', notation: 'scientific' });
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用系统区域创建Collator对象
+let collator = new intl.Collator();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用zh-CN区域ID创建Collator对象，localeMatcher设置为lookup，usage设置为sort
+let collator = new intl.Collator('zh-CN', {localeMatcher: 'lookup', usage: 'sort'});
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用系统区域创建PluralRules对象
+let pluralRules = new intl.PluralRules();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用zh-CN区域ID创建PluralRules对象，localeMatcher设置为lookup，type设置为cardinal
+let pluralRules: intl.PluralRules = new intl.PluralRules('zh-CN', { localeMatcher: 'lookup', type: 'cardinal' });
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用系统区域创建RelativeTimeFormat对象
+let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat();
+```
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用zh-CN区域ID创建RelativeTimeFormat对象，localeMatcher设置为lookup，numeric设置为always，style设置为long
+let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat('zh-CN', {
+  localeMatcher: 'lookup',
+  numeric: 'always',
+  style: 'long'
+});
+```
+
 ## constructor
 
 ```TypeScript
@@ -82,13 +167,7 @@ constructor(locale: string, options?: LocaleOptions)
 
 **示例**
 
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 创建zh-CN区域对象
-let locale = new intl.Locale('zh-CN');
-let localeID = locale.toString(); // localeID = 'zh-CN'
-```
+参见 [constructor](#constructor)
 
 ## maximize
 

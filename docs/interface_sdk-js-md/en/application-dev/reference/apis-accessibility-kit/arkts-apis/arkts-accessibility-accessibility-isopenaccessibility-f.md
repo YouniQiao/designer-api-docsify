@@ -32,9 +32,20 @@ Checks whether an accessibility application is enabled. This API uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates the accessibility app is enabled, and **false** indicates the accessibility app is not enabled. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates the accessibility app is enabled, and **false** indicates the accessibility app is not enabled. |
 
 **Examples**
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+accessibility.isOpenAccessibility().then((data: boolean) => {
+  console.info(`success data:isOpenAccessibility : ${JSON.stringify(data)}`)
+}).catch((err: BusinessError) => {
+  console.error(`failed to  isOpenAccessibility, Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
@@ -76,14 +87,5 @@ Checks whether an accessibility application is enabled. This API uses a promise 
 
 **Examples**
 
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-accessibility.isOpenAccessibility().then((data: boolean) => {
-  console.info(`success data:isOpenAccessibility : ${JSON.stringify(data)}`)
-}).catch((err: BusinessError) => {
-  console.error(`failed to  isOpenAccessibility, Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [isOpenAccessibility](#isopenaccessibility)
 

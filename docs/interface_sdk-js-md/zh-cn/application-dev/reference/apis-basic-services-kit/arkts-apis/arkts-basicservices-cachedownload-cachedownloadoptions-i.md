@@ -14,22 +14,6 @@
 import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
-## caPath
-
-```TypeScript
-caPath?: string
-```
-
-CA证书路径。目前仅支持.pem格式证书，默认使用系统预设的CA证书。
-
-**类型：** string
-
-**起始版本：** 23
-
-<!--Device-CacheDownloadOptions-caPath?: string--><!--Device-CacheDownloadOptions-caPath?: string-End-->
-
-**系统能力：** SystemCapability.Request.FileTransferAgent
-
 ## cacheStrategy
 
 ```TypeScript
@@ -43,6 +27,22 @@ cacheStrategy?: CacheStrategy
 **起始版本：** 23
 
 <!--Device-CacheDownloadOptions-cacheStrategy?: CacheStrategy--><!--Device-CacheDownloadOptions-cacheStrategy?: CacheStrategy-End-->
+
+**系统能力：** SystemCapability.Request.FileTransferAgent
+
+## caPath
+
+```TypeScript
+caPath?: string
+```
+
+CA证书路径。目前仅支持.pem格式证书，默认使用系统预设的CA证书。
+
+**类型：** string
+
+**起始版本：** 23
+
+<!--Device-CacheDownloadOptions-caPath?: string--><!--Device-CacheDownloadOptions-caPath?: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 

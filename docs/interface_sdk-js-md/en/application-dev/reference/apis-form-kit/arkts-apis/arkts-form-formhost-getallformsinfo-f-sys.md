@@ -28,7 +28,7 @@ Obtains the widget information provided by all applications on the device (exclu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -40,6 +40,38 @@ Obtains the widget information provided by all applications on the device (exclu
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+
+**Examples**
+
+```TypeScript
+import { formHost, formInfo } from '@kit.FormKit';
+
+try {
+  formHost.getAllFormsInfo((error: BusinessError, data: formInfo.FormInfo[]) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      console.info('formHost getAllFormsInfo success.');
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { formHost, formInfo } from '@kit.FormKit';
+
+try {
+  formHost.getAllFormsInfo().then((data: formInfo.FormInfo[]) => {
+    console.info('formHost getAllFormsInfo success.');
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
 
 
 ## getAllFormsInfo
@@ -75,4 +107,8 @@ Obtains the widget information provided by all applications on the device (exclu
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+
+**Examples**
+
+See [getAllFormsInfo](#getallformsinfo)
 

@@ -55,3 +55,18 @@ function createPixelMap() {
 }
 ```
 
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function CreatePixelMap(context : Context) {
+  const path: string = context.cacheDir + "/test.jpg";
+  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(path);
+  sendableImageSourceObj.createPixelMap().then((pixelMap: sendableImage.PixelMap) => {
+    console.info('Succeeded in creating pixelMap object through image decoding parameters.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to create pixelMap object through image decoding parameters. code ${error.code}, message is ${error.message}`);
+  })
+}
+```
+

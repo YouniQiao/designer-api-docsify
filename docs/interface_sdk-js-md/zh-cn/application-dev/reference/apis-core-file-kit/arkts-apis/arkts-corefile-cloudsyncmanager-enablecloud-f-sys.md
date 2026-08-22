@@ -81,6 +81,44 @@ cloudSyncManager.enableCloud(accountId, switches).then<void>((): void => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountId: string = "testAccount";
+let switches: Record<string, boolean> = {
+  'com.example.bundleName1': true,
+  'com.example.bundleName2': false
+}
+cloudSyncManager.enableCloud(accountId, switches, (err: BusinessError) => {
+  if (err) {
+    console.error(`enableCloud failed with error message: ${err.message}, error code: ${err.code}`);
+  } else {
+    console.info("enableCloud successfully");
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountId: string = "testAccount";
+let switches: Record<string, boolean> = {
+  'com.example.bundleName1': true,
+  'com.example.bundleName2': false
+}
+cloudSyncManager.enableCloud(accountId, switches, (err: BusinessError<void> | null): void => {
+  if (err && err.code) {
+    console.error("enableCloud failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("enableCloud successfully");
+  }
+});
+```
+
 
 ## enableCloud
 
@@ -122,41 +160,5 @@ function enableCloud(
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-let switches: Record<string, boolean> = {
-  'com.example.bundleName1': true,
-  'com.example.bundleName2': false
-}
-cloudSyncManager.enableCloud(accountId, switches, (err: BusinessError) => {
-  if (err) {
-    console.error(`enableCloud failed with error message: ${err.message}, error code: ${err.code}`);
-  } else {
-    console.info("enableCloud successfully");
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-let switches: Record<string, boolean> = {
-  'com.example.bundleName1': true,
-  'com.example.bundleName2': false
-}
-cloudSyncManager.enableCloud(accountId, switches, (err: BusinessError<void> | null): void => {
-  if (err && err.code) {
-    console.error("enableCloud failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("enableCloud successfully");
-  }
-});
-```
+参见 [enableCloud](#enablecloud)
 

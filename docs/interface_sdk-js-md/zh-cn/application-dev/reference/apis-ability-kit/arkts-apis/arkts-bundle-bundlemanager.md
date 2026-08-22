@@ -70,10 +70,10 @@ import { bundleManager } from '@kit.AbilityKit';
 | [getAbilityLabelSync](arkts-ability-bundlemanager-getabilitylabelsync-f-sys.md) | 以同步的方法获取指定bundleName、moduleName和abilityName的label。 |
 | [getAdditionalInfo](arkts-ability-bundlemanager-getadditionalinfo-f-sys.md) | 以同步接口查询指定bundleName的额外信息。该返回值是在调用install接口时传入的[InstallParam](arkts-ability-installer-installparam-i-sys.md)中的 additionalInfo字段。 |
 | [getAllAppCloneBundleInfo](arkts-ability-bundlemanager-getallappclonebundleinfo-f-sys.md) | 根据bundleName、[bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md)以及用户ID查询主应用和分身应用的BundleInfo列表。 使用Promise异步回调。 |
-| [getAllAppProvisionInfo](arkts-ability-bundlemanager-getallappprovisioninfo-f-sys.md) | 根据userId获取指定用户下所有应用的Provision配置文件信息。使用Promise异步回调。 |
 | [getAllApplicationInfo](arkts-ability-bundlemanager-getallapplicationinfo-f-sys.md) | 根据给定的appFlags获取系统中所有的ApplicationInfo。使用callback异步回调。 |
 | [getAllApplicationInfo](arkts-ability-bundlemanager-getallapplicationinfo-f-sys.md) | 根据给定的appFlags和userId获取系统中所有的ApplicationInfo。使用callback异步回调。 |
 | [getAllApplicationInfo](arkts-ability-bundlemanager-getallapplicationinfo-f-sys.md) | 根据给定的appFlags和userId获取系统中所有的ApplicationInfo。使用Promise异步回调。 |
+| [getAllAppProvisionInfo](arkts-ability-bundlemanager-getallappprovisioninfo-f-sys.md) | 根据userId获取指定用户下所有应用的Provision配置文件信息。使用Promise异步回调。 |
 | [getAllBundleCacheSize](arkts-ability-bundlemanager-getallbundlecachesize-f-sys.md) | 获取全局缓存大小，单位：字节。使用Promise异步回调。 |
 | [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md) | 根据给定的bundleFlags获取系统中所有的BundleInfo。使用callback异步回调。 |
 | [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md) | 根据给定的bundleFlags和userId获取系统中所有的BundleInfo。使用callback异步回调。 |
@@ -89,15 +89,15 @@ import { bundleManager } from '@kit.AbilityKit';
 | [getAllSharedBundleInfo](arkts-ability-bundlemanager-getallsharedbundleinfo-f-sys.md) | 获取所有的共享包信息。使用Promise异步回调。 |
 | [getAppCloneBundleInfo](arkts-ability-bundlemanager-getappclonebundleinfo-f-sys.md) | 根据bundleName、分身索引、[bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md)以及用户ID查询主应用或分身应用的 BundleInfo。使用Promise异步回调。 |
 | [getAppCloneIdentityBySandboxDataDir](arkts-ability-bundlemanager-getappcloneidentitybysandboxdatadir-f-sys.md) | 根据应用的沙箱目录名称获取应用的身份信息，包括应用包名和分身索引信息。 |
-| [getAppProvisionInfo](arkts-ability-bundlemanager-getappprovisioninfo-f-sys.md) | 获取指定bundleName的provision配置文件信息。使用callback异步回调。 |
-| [getAppProvisionInfo](arkts-ability-bundlemanager-getappprovisioninfo-f-sys.md) | 获取指定bundleName和userId的provision配置文件信息。使用callback异步回调。 |
-| [getAppProvisionInfo](arkts-ability-bundlemanager-getappprovisioninfo-f-sys.md) | 根据bundleName和userId获取应用的provision配置文件信息。使用Promise异步回调。 |
-| [getAppProvisionInfoSync](arkts-ability-bundlemanager-getappprovisioninfosync-f-sys.md) | 以同步方法根据bundleName和userId获取应用的provision配置文件信息并返回结果。 |
 | [getApplicationInfo](arkts-ability-bundlemanager-getapplicationinfo-f-sys.md) | 根据给定的bundleName和appFlags获取ApplicationInfo。使用callback异步回调。 |
 | [getApplicationInfo](arkts-ability-bundlemanager-getapplicationinfo-f-sys.md) | 根据给定的bundleName、appFlags和userId获取ApplicationInfo。使用callback异步回调。 |
 | [getApplicationInfo](arkts-ability-bundlemanager-getapplicationinfo-f-sys.md) | 根据给定的bundleName、appFlags和userId获取ApplicationInfo。使用Promise异步回调。 |
 | [getApplicationInfoSync](arkts-ability-bundlemanager-getapplicationinfosync-f-sys.md) | 以同步方法根据给定的bundleName、applicationFlags和userId获取ApplicationInfo。 |
 | [getApplicationInfoSync](arkts-ability-bundlemanager-getapplicationinfosync-f-sys.md) | 以同步方法根据给定的bundleName、applicationFlags获取ApplicationInfo。 |
+| [getAppProvisionInfo](arkts-ability-bundlemanager-getappprovisioninfo-f-sys.md) | 获取指定bundleName的provision配置文件信息。使用callback异步回调。 |
+| [getAppProvisionInfo](arkts-ability-bundlemanager-getappprovisioninfo-f-sys.md) | 获取指定bundleName和userId的provision配置文件信息。使用callback异步回调。 |
+| [getAppProvisionInfo](arkts-ability-bundlemanager-getappprovisioninfo-f-sys.md) | 根据bundleName和userId获取应用的provision配置文件信息。使用Promise异步回调。 |
+| [getAppProvisionInfoSync](arkts-ability-bundlemanager-getappprovisioninfosync-f-sys.md) | 以同步方法根据bundleName和userId获取应用的provision配置文件信息并返回结果。 |
 | [getBundleArchiveInfo](arkts-ability-bundlemanager-getbundlearchiveinfo-f-sys.md) | 根据给定的hapFilePath和bundleFlags获取BundleInfo。使用callback异步回调。 |
 | [getBundleArchiveInfo](arkts-ability-bundlemanager-getbundlearchiveinfo-f-sys.md) | 根据给定的hapFilePath和bundleFlags获取BundleInfo。使用Promise异步回调。 |
 | [getBundleArchiveInfoSync](arkts-ability-bundlemanager-getbundlearchiveinfosync-f-sys.md) | 以同步方法根据给定的hapFilePath和bundleFlags获取BundleInfo对象。 |

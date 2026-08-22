@@ -55,6 +55,14 @@ each(itemGenerator: (repeatItem: RepeatItem<T>) => void): RepeatAttribute<T>
 | --- | --- |
 | [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
 
+**示例**
+
+```TypeScript
+// arr是Array<string>类型的数组，为每个数据创建一个Text组件
+Repeat<string>(this.arr)
+  .each((repeatItem: RepeatItem<string>) => { Text(repeatItem.item) })
+```
+
 ## key
 
 ```TypeScript
@@ -90,6 +98,16 @@ key(keyGenerator: (item: T, index: number) => string): RepeatAttribute<T>
 | 类型 | 说明 |
 | --- | --- |
 | [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
+
+**示例**
+
+```TypeScript
+// arr是Array<string>类型的数组，为每个数据创建一个Text组件
+// 并将字符串的值作为其键值
+Repeat<string>(this.arr)
+  .each((repeatItem: RepeatItem<string>) => { Text(repeatItem.item) })
+  .key((obj: string) => obj)
+```
 
 ## template
 
@@ -129,6 +147,22 @@ template(type: string, itemBuilder: RepeatItemBuilder<T>, templateOptions?: Temp
 | --- | --- |
 | [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
 
+**示例**
+
+```TypeScript
+// arr是Array<string>类型的数组
+// 在List容器组件中使用Repeat，并打开virtualScroll
+// 创建模板temp，该模板为数据创建Text组件
+// 所有数据项都使用temp模板
+List() {
+  Repeat<string>(this.arr)
+    .each((repeatItem: RepeatItem<string>) => {})
+    .virtualScroll()
+    .template('temp', (repeatItem: RepeatItem<string>) => { ListItem() { Text(repeatItem.item) }})
+    .templateId((item: string, index: number) => { return 'temp' })
+}
+```
+
 ## templateId
 
 ```TypeScript
@@ -163,6 +197,22 @@ templateId(typedFunc: TemplateTypedFunc<T>): RepeatAttribute<T>
 | --- | --- |
 | [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
 
+**示例**
+
+```TypeScript
+// arr是Array<string>类型的数组
+// 在List容器组件中使用Repeat，并打开virtualScroll
+// 创建模板temp，该模板为数据创建Text组件
+// 所有数据项都使用temp模板
+List() {
+  Repeat<string>(this.arr)
+    .each((repeatItem: RepeatItem<string>) => {})
+    .virtualScroll()
+    .template('temp', (repeatItem: RepeatItem<string>) => { ListItem() { Text(repeatItem.item) }})
+    .templateId((item: string, index: number) => { return 'temp' })
+}
+```
+
 ## virtualScroll
 
 ```TypeScript
@@ -196,4 +246,16 @@ virtualScroll(virtualScrollOptions?: VirtualScrollOptions): RepeatAttribute<T>
 | 类型 | 说明 |
 | --- | --- |
 | [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
+
+**示例**
+
+```TypeScript
+// arr是Array<string>类型的数组，为每个数据创建一个Text组件
+// 在List容器组件中使用Repeat，并打开virtualScroll
+List() {
+  Repeat<string>(this.arr)
+    .each((repeatItem: RepeatItem<string>) => { ListItem() { Text(repeatItem.item) }})
+    .virtualScroll()
+}
+```
 

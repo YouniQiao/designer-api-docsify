@@ -31,8 +31,56 @@ Obtains the widget state. This API uses an asynchronous callback to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Want** information carried to query the widget state. The information must contain the bundle name, ability name, module name, widget name, and widget dimensions. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;formInfo.FormStateInfo&gt; | Yes | Callback used to return the result. If the widget state is obtained, **error** is undefined and **data** is the widget state obtained; otherwise, **error** is an error object. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want** information carried to query the widget state. The information must contain the bundle name, ability name, module name, widget name, and widget dimensions. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;formInfo.FormStateInfo&gt; | Yes | Callback used to return the result. If the widget state is obtained, **error** is undefined and **data** is the widget state obtained; otherwise, **error** is an error object. |
+
+**Examples**
+
+```TypeScript
+import Want from '@ohos.app.ability.Want';
+import formInfo from '@ohos.app.form.formInfo';
+import Base from '@ohos.base';
+
+let want: Want = {
+  'deviceId': '',
+  'bundleName': 'ohos.samples.FormApplication',
+  'abilityName': 'FormAbility',
+  'parameters': {
+    'ohos.extra.param.key.module_name': 'entry',
+    'ohos.extra.param.key.form_name': 'widget',
+    'ohos.extra.param.key.form_dimension': 2
+  }
+};
+formHost.acquireFormState(want, (error:Base.BusinessError, data: formInfo.FormStateInfo) => {
+  if (error.code) {
+    console.error(`formHost acquireFormState, error: ${JSON.stringify(error)}`);
+  } else {
+    console.info(`formHost acquireFormState, data: ${JSON.stringify(data)}`);
+  }
+});
+```
+
+```TypeScript
+import Want from '@ohos.app.ability.Want';
+import formInfo from '@ohos.app.form.formInfo';
+import Base from '@ohos.base';
+
+let want: Want = {
+  'deviceId': '',
+  'bundleName': 'ohos.samples.FormApplication',
+  'abilityName': 'FormAbility',
+  'parameters': {
+    'ohos.extra.param.key.module_name': 'entry',
+    'ohos.extra.param.key.form_name': 'widget',
+    'ohos.extra.param.key.form_dimension': 2
+  }
+};
+formHost.acquireFormState(want).then((data: formInfo.FormStateInfo) => {
+  console.info(`formHost acquireFormState, data: ${JSON.stringify(data)}`);
+}).catch((error: Base.BusinessError) => {
+  console.error(`formHost acquireFormState, error: ${JSON.stringify(error)}`);
+});
+```
 
 
 ## acquireFormState
@@ -61,11 +109,15 @@ Obtains the widget state. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Want** information carried to query the widget state. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want** information carried to query the widget state. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
 | Promise&lt;formInfo.FormStateInfo&gt; | Promise used to return the widget state obtained. |
+
+**Examples**
+
+See [acquireFormState](#acquireformstate)
 

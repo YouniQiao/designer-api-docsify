@@ -112,6 +112,56 @@ class EntryAbility extends UIAbility {
 }
 ```
 
+FA模型示例：
+
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let store: relationalStore.RdbStore | undefined = undefined;
+let context = featureAbility.getContext();
+
+const STORE_CONFIG: relationalStore.StoreConfig = {
+  name: "RdbTest.db",
+  securityLevel: relationalStore.SecurityLevel.S3
+};
+
+relationalStore.getRdbStore(context, STORE_CONFIG).then(async (rdbStore: relationalStore.RdbStore) => {
+  store = rdbStore;
+  console.info('Get RdbStore successfully.');
+}).catch((err: Error) => {
+  let businessError = err as BusinessError;
+  console.error(`Get RdbStore failed, code is ${businessError.code},message is ${businessError.message}`);
+});
+```
+
+Stage模型示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let store: relationalStore.RdbStore | undefined = undefined;
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    const STORE_CONFIG: relationalStore.StoreConfig = {
+      name: "RdbTest.db",
+      securityLevel: relationalStore.SecurityLevel.S3
+    };
+
+    relationalStore.getRdbStore(this.context, STORE_CONFIG).then(async (rdbStore: relationalStore.RdbStore) => {
+      store = rdbStore;
+      console.info('Get RdbStore successfully.');
+    }).catch((err: Error) => {
+      let businessError = err as BusinessError;
+      console.error(`Get RdbStore failed, code is ${businessError.code},message is ${businessError.message}`);
+    });
+  }
+}
+```
+
 
 ## getRdbStore
 
@@ -170,53 +220,5 @@ getRdbStore支持多线程并发操作。
 
 **示例**
 
-FA模型示例：
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let store: relationalStore.RdbStore | undefined = undefined;
-let context = featureAbility.getContext();
-
-const STORE_CONFIG: relationalStore.StoreConfig = {
-  name: "RdbTest.db",
-  securityLevel: relationalStore.SecurityLevel.S3
-};
-
-relationalStore.getRdbStore(context, STORE_CONFIG).then(async (rdbStore: relationalStore.RdbStore) => {
-  store = rdbStore;
-  console.info('Get RdbStore successfully.');
-}).catch((err: Error) => {
-  let businessError = err as BusinessError;
-  console.error(`Get RdbStore failed, code is ${businessError.code},message is ${businessError.message}`);
-});
-```
-
-Stage模型示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let store: relationalStore.RdbStore | undefined = undefined;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    const STORE_CONFIG: relationalStore.StoreConfig = {
-      name: "RdbTest.db",
-      securityLevel: relationalStore.SecurityLevel.S3
-    };
-
-    relationalStore.getRdbStore(this.context, STORE_CONFIG).then(async (rdbStore: relationalStore.RdbStore) => {
-      store = rdbStore;
-      console.info('Get RdbStore successfully.');
-    }).catch((err: Error) => {
-      let businessError = err as BusinessError;
-      console.error(`Get RdbStore failed, code is ${businessError.code},message is ${businessError.message}`);
-    });
-  }
-}
-```
+参见 [getRdbStore](#getrdbstore)
 

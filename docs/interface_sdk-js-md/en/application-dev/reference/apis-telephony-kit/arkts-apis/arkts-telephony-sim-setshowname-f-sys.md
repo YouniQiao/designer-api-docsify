@@ -30,7 +30,7 @@ Set the SIM card display name of the specified card slot.
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 | name | string | Yes | Indicates SIM card name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of setShowName. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setShowName. |
 
 **Error codes:**
 
@@ -54,6 +54,18 @@ import { sim } from '@kit.TelephonyKit';
 let name: string = "ShowName";
 sim.setShowName(0, name, (err: BusinessError) => {
     console.info(`callback: err->${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+let name: string = "ShowName";
+sim.setShowName(0, name).then(() => {
+    console.info(`setShowName success.`);
+}).catch((err: BusinessError) => {
+    console.error(`setShowName failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -104,15 +116,5 @@ Set the SIM card display name of the specified card slot.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let name: string = "ShowName";
-sim.setShowName(0, name).then(() => {
-    console.info(`setShowName success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setShowName failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [setShowName](#setshowname)
 

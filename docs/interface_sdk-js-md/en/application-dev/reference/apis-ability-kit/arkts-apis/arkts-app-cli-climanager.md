@@ -32,8 +32,8 @@ import { cliManager } from '@kit.AbilityKit';
 | [execTool](arkts-ability-climanager-exectool-f-sys.md) | Execute a CLI command |
 | [getToolInfoByName](arkts-ability-climanager-gettoolinfobyname-f-sys.md) | Get detailed information of a single tool by its name |
 | [querySession](arkts-ability-climanager-querysession-f-sys.md) | Query session status. |
-| [queryToolSummaries](arkts-ability-climanager-querytoolsummaries-f-sys.md) | Query all tool summary information. The summary information only contains the fields: name, description, version. |
 | [queryTools](arkts-ability-climanager-querytools-f-sys.md) | Query all detailed information of tools |
+| [queryToolSummaries](arkts-ability-climanager-querytoolsummaries-f-sys.md) | Query all tool summary information. The summary information only contains the fields: name, description, version. |
 | [sendMessage](arkts-ability-climanager-sendmessage-f-sys.md) | Send event to target process. |
 | [subscribeSession](arkts-ability-climanager-subscribesession-f-sys.md) | Subscribe session event. |
 <!--DelEnd-->

@@ -71,6 +71,23 @@ try {
 }
 ```
 
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName = 'com.example.myapplication';
+let applicationFlags = bundleManager.ApplicationFlag.GET_APPLICATION_INFO_DEFAULT;
+
+try {
+  let data = bundleManager.getApplicationInfoSync(bundleName, applicationFlags);
+  hilog.info(0x0000, 'testTag', 'getApplicationInfoSync successfully: %{public}s', JSON.stringify(data));
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getApplicationInfoSync failed: %{public}s', message);
+}
+```
+
 
 ## getApplicationInfoSync
 
@@ -117,20 +134,5 @@ No permission is required for obtaining the caller's own information.
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = 'com.example.myapplication';
-let applicationFlags = bundleManager.ApplicationFlag.GET_APPLICATION_INFO_DEFAULT;
-
-try {
-  let data = bundleManager.getApplicationInfoSync(bundleName, applicationFlags);
-  hilog.info(0x0000, 'testTag', 'getApplicationInfoSync successfully: %{public}s', JSON.stringify(data));
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getApplicationInfoSync failed: %{public}s', message);
-}
-```
+See [getApplicationInfoSync](#getapplicationinfosync)
 

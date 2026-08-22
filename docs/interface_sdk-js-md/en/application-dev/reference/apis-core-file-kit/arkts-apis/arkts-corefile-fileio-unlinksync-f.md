@@ -29,3 +29,10 @@ Removes a file. This API returns the result synchronously.
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file. |
 
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+fileio.unlinkSync(filePath);
+```
+

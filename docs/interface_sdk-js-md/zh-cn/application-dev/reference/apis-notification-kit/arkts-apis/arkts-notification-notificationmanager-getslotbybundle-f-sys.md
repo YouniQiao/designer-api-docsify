@@ -53,6 +53,46 @@ function getSlotByBundle(bundle: BundleOption, slotType: SlotType): Promise<Noti
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+    bundle: 'bundleName1',
+};
+
+let slotType = notificationManager.SlotType.LIVE_VIEW;
+
+notificationManager.getSlotByBundle(bundle, slotType).then((data: notificationManager.NotificationSlot) => {
+    console.info(`getSlotByBundle success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSlotByBundle failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+    // 需根据实际情况进行替换
+    bundle: 'bundleName1',
+};
+
+let slotType = notificationManager.SlotType.LIVE_VIEW;
+
+notificationManager.getSlotByBundle(bundle, slotType).then((data: notificationManager.NotificationSlot|null|undefined) => {
+    console.info(`getSlotByBundle success, data: ${JSON.stringify(data)}`);
+}).catch((err: Error): void => {
+    let error: BusinessError = err as BusinessError;
+    console.error(`getSlotByBundle failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## getSlotByBundle
 
@@ -100,4 +140,8 @@ function getSlotByBundle(bundle: BundleOption, slotType: SlotType): Promise<Noti
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
+
+**示例**
+
+参见 [getSlotByBundle](#getslotbybundle)
 

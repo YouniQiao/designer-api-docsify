@@ -62,6 +62,47 @@ try {
 }
 ```
 
+ArkTS-Dyn示例:
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let permissionName = "ohos.permission.GET_BUNDLE_INFO";
+try {
+  bundleManager.getPermissionDef(permissionName).then((data) => {
+    hilog.info(0x0000, 'testTag', 'getPermissionDef successfully. Data: %{public}s', JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'getPermissionDef failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getPermissionDef failed. Cause: %{public}s', message);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+let permissionName = "ohos.permission.GET_BUNDLE_INFO";
+try {
+  bundleManager.getPermissionDef(permissionName).then((data: bundleManager.PermissionDef) => {
+    hilog.info(0x0000, 'testTag', 'getPermissionDef successfully. Data: %{public}s', JSON.stringify(data));
+  }).catch((err: Error) => {
+    hilog.error(0x0000, 'testTag', 'getPermissionDef failed. Cause: %{public}s', (err as BusinessError).message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getPermissionDef failed. Cause: %{public}s', message);
+}
+```
+
 
 ## getPermissionDef
 
@@ -104,44 +145,5 @@ function getPermissionDef(permissionName: string): Promise<PermissionDef>
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let permissionName = "ohos.permission.GET_BUNDLE_INFO";
-try {
-  bundleManager.getPermissionDef(permissionName).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getPermissionDef successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getPermissionDef failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getPermissionDef failed. Cause: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-let permissionName = "ohos.permission.GET_BUNDLE_INFO";
-try {
-  bundleManager.getPermissionDef(permissionName).then((data: bundleManager.PermissionDef) => {
-    hilog.info(0x0000, 'testTag', 'getPermissionDef successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: Error) => {
-    hilog.error(0x0000, 'testTag', 'getPermissionDef failed. Cause: %{public}s', (err as BusinessError).message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getPermissionDef failed. Cause: %{public}s', message);
-}
-```
+参见 [getPermissionDef](#getpermissiondef)
 

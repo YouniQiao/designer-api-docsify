@@ -143,6 +143,6 @@ import { relationalStore } from '@kit.ArkData';
 | [RowData](arkts-arkdata-relationalstore-rowdata-t.md) | Indicates a row of data with an array. |
 | [RowsData](arkts-arkdata-relationalstore-rowsdata-t.md) | Indicates multiple rows of data with an array. |
 | [UTCTime](arkts-arkdata-relationalstore-utctime-t.md) | The time is in UTC format. |
-| [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) | Indicates possible value types |
 | [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md) | Values in buckets are stored in key-value pairs, change {[key: string]: ValueType;} to Record&lt;string, ValueType&gt; |
+| [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) | Indicates possible value types |
 

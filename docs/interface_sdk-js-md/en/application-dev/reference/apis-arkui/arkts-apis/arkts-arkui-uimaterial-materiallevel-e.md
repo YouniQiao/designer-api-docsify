@@ -1,6 +1,6 @@
 # MaterialLevel
 
-Enumerates the material levels, which indicate the computing power level of the device. Use [getGlobalMaterialLevel](../../apis-default/arkts-apis/arkts-uimaterial-getglobalmateriallevel-f.md) to obtain the material level of the current device.
+Enumerates the material levels, which indicate the computing power level of the device. Use [getGlobalMaterialLevel](arkts-arkui-uimaterial-getglobalmateriallevel-f.md) to obtain the material level of the current device.
 
 **Since:** 26.0.0
 

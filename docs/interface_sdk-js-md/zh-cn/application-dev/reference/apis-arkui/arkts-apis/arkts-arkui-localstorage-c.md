@@ -20,40 +20,6 @@ LocalStorage是页面级的UI状态存储，通过[@Entry](../../../reference/ap
 ```TypeScript
 ```
 
-## GetShared
-
-```TypeScript
-static GetShared(): LocalStorage
-```
-
-获取当前Stage共享的[LocalStorage](../../../ui/state-management/arkts-localstorage.md)实例。
-
-**起始版本：** 9
-
-**废弃版本：** 10
-
-**替代接口：** [getShared](#getshared)
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-LocalStorage-static GetShared(): LocalStorage--><!--Device-LocalStorage-static GetShared(): LocalStorage-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| [LocalStorage](arkts-arkui-localstorage-c.md) | 返回当前Stage共享的LocalStorage实例。 |
-
-**示例**
-
-```TypeScript
-let storage: LocalStorage = LocalStorage.GetShared();
-```
-
 ## clear
 
 ```TypeScript
@@ -81,6 +47,11 @@ clear(): boolean
 | boolean | 如果LocalStorage中的属性已经没有任何订阅者，则删除成功，并返回true。否则返回false。 |
 
 **示例**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let res: boolean = AppStorage.clear(); // true，已经没有订阅者
+```
 
 ```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
@@ -164,6 +135,15 @@ delete(propName: string): boolean
 **示例**
 
 ```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+AppStorage.link<number>('PropA');
+let res: boolean = AppStorage.delete('PropA'); // false，PropA 还存在订阅者
+
+AppStorage.setOrCreate('PropB', 48);
+let res1: boolean = AppStorage.delete('PropB'); // true，PropB 已从AppStorage成功删除
+```
+
+```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(initialData);
 storage.link<number>('PropA');
@@ -206,9 +186,60 @@ get<T>(propName: string): T | undefined
 **示例**
 
 ```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let value: number = AppStorage.get('PropA') as number; // 47
+```
+
+```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(initialData);
 let value: number = storage.get('PropA') as number; // 47
+```
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let ref1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
+ref1?.get(); // ref1.get()=47
+```
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47); 
+let prop1: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');    
+prop1.get(); // prop1.get()=47
+```
+
+## GetShared
+
+```TypeScript
+static GetShared(): LocalStorage
+```
+
+获取当前Stage共享的[LocalStorage](../../../ui/state-management/arkts-localstorage.md)实例。
+
+**起始版本：** 9
+
+**废弃版本：** 10
+
+**替代接口：** [getShared](#getshared)
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-LocalStorage-static GetShared(): LocalStorage--><!--Device-LocalStorage-static GetShared(): LocalStorage-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [LocalStorage](arkts-arkui-localstorage-c.md) | 返回当前Stage共享的LocalStorage实例。 |
+
+**示例**
+
+```TypeScript
+let storage: LocalStorage = LocalStorage.GetShared();
 ```
 
 ## getShared
@@ -221,14 +252,14 @@ static getShared(): LocalStorage
 
 > **说明：**
 > 
-> 从API version 12开始，可使用[UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)中的
-> [getSharedLocalStorage](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#getsharedlocalstorage)明确UI执行上下文中的LocalStorage实例。
+> 从API version 12开始，可使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
+> [getSharedLocalStorage](arkts-arkui-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)明确UI执行上下文中的LocalStorage实例。
 
 **起始版本：** 10
 
 **废弃版本：** 18
 
-**替代接口：** [getSharedLocalStorage](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md#getsharedlocalstorage)
+**替代接口：** [getSharedLocalStorage](arkts-arkui-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -279,6 +310,10 @@ has(propName: string): boolean
 **示例**
 
 ```TypeScript
+AppStorage.has('simpleProp');
+```
+
+```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(initialData);
 storage.has('PropA'); // true
@@ -311,9 +346,27 @@ keys(): IterableIterator<string>
 **示例**
 
 ```TypeScript
+AppStorage.setOrCreate('PropB', 48);
+let keys: IterableIterator<string> = AppStorage.keys();
+```
+
+```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(initialData);
 let keys: IterableIterator<string> = storage.keys();
+```
+
+```TypeScript
+let keys: Array<string> = PersistentStorage.keys();
+```
+
+```TypeScript
+Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+
+let keys: Array<string> = Environment.keys(); // keys 包含 accessibilityEnabled、languageCode、prop
 ```
 
 ## link
@@ -349,6 +402,13 @@ link<T>(propName: string): SubscribedAbstractProperty<T>
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | SubscribedAbstractProperty&lt;T&gt;的实例，与LocalStorage中propName对应属性的双向绑定的数据，如果 LocalStorage中不存在对应的propName，则返回undefined。 |
 
 **示例**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let linkToPropA1: SubscribedAbstractProperty<number> = AppStorage.link('PropA');
+let linkToPropA2: SubscribedAbstractProperty<number> = AppStorage.link('PropA'); // linkToPropA2.get() == 47
+linkToPropA1.set(48); // 双向同步：linkToPropA1.get() == linkToPropA2.get() == 48
+```
 
 ```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
@@ -391,6 +451,13 @@ prop<S>(propName: string): SubscribedAbstractProperty<S>
 **示例**
 
 ```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let prop1: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
+let prop2: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
+prop1.set(1); // 单向同步：prop1.get()的值为1，prop2.get()的值为47
+```
+
+```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(initialData);
 let prop1: SubscribedAbstractProperty<number> = storage.prop('PropA');
@@ -429,6 +496,13 @@ public ref<T>(propName: string): AbstractProperty<T> | undefined
 | [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; \| undefined | 返回LocalStorage中propName对应属性的引用，如果LocalStorage中不存在对应的propName，则返回 undefined。 |
 
 **示例**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let refToPropA1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
+let refToPropA2: AbstractProperty<number> | undefined = AppStorage.ref('PropA'); // refToPropA2.get() == 47
+refToPropA1?.set(48); // 同步修改AppStorage：refToPropA1.get() == refToPropA2.get() == 48
+```
 
 ```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
@@ -472,10 +546,51 @@ set<T>(propName: string, newValue: T): boolean
 **示例**
 
 ```TypeScript
+AppStorage.setOrCreate('PropA', 48);
+let res: boolean = AppStorage.set('PropA', 47); // true
+let res1: boolean = AppStorage.set('PropB', 47); // false
+```
+
+```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(initialData);
 let res: boolean = storage.set('PropA', 47); // true
 let res1: boolean = storage.set('PropB', 47); // false
+```
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let ref1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
+ref1?.set(1); // ref1.get()=1
+let mapValue: Map<string, number> = new Map([['1', 0]]);
+let ref2 = AppStorage.setAndRef('MapA', mapValue);
+ref2.set(mapValue);
+let setValue: Set<string> = new Set(['1']);
+let ref3 = AppStorage.setAndRef('SetB', setValue);
+ref3.set(setValue);
+let dateValue: Date = new Date('2024');
+let ref4 = AppStorage.setAndRef('DateC', dateValue);
+ref4.set(dateValue);
+ref2.set(null);
+ref3.set(undefined);
+```
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let prop1: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
+prop1.set(1); // prop1.get()=1
+// 从API version 12开始支持Map、Set、Date类型，支持null、undefined以及联合类型。
+let mapValue: Map<string, number> = new Map([['1', 0]]);
+let prop2 = AppStorage.setAndProp('MapA', mapValue);
+prop2.set(mapValue);
+let setValue: Set<string> = new Set(['1']);
+let prop3 = AppStorage.setAndProp('SetB', setValue);
+prop3.set(setValue);
+let dateValue: Date = new Date('2024');
+let prop4 = AppStorage.setAndProp('DateC', dateValue);
+prop4.set(dateValue);
+prop2.set(null);
+prop3.set(undefined);
 ```
 
 ## setAndLink
@@ -510,6 +625,12 @@ setAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | SubscribedAbstractProperty&lt;T&gt;的实例，与LocalStorage中propName对应属性的双向绑定的数据。 |
 
 **示例**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let link1: SubscribedAbstractProperty<number> = AppStorage.setAndLink('PropB', 49); // 用默认值49创建PropB
+let link2: SubscribedAbstractProperty<number> = AppStorage.setAndLink('PropA', 50); // PropA已存在，值为47
+```
 
 ```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
@@ -552,6 +673,11 @@ setAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractProperty<S>
 **示例**
 
 ```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let prop: SubscribedAbstractProperty<number> = AppStorage.setAndProp('PropB', 49); // PropA -> 47, PropB -> 49
+```
+
+```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(initialData);
 let prop: SubscribedAbstractProperty<number> = storage.setAndProp('PropB', 49); // PropA -> 47, PropB -> 49
@@ -589,6 +715,12 @@ public setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>
 | [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; | AbstractProperty&lt;T&gt;的实例，为LocalStorage中propName对应属性的引用。 |
 
 **示例**
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let ref1: AbstractProperty<number> = AppStorage.setAndRef('PropB', 49); // 用默认值49创建PropB
+let ref2: AbstractProperty<number> = AppStorage.setAndRef('PropA', 50); // PropA已存在，值为47
+```
 
 ```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
@@ -633,6 +765,10 @@ setOrCreate<T>(propName: string, newValue: T): boolean
 **示例**
 
 ```TypeScript
+AppStorage.setOrCreate('simpleProp', 121);
+```
+
+```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(initialData);
 let res: boolean = storage.setOrCreate('PropA', 121); // true
@@ -665,6 +801,11 @@ size(): number
 | number | LocalStorage中属性的数量。 |
 
 **示例**
+
+```TypeScript
+AppStorage.setOrCreate('PropB', 48);
+let res: number = AppStorage.size(); // 1
+```
 
 ```TypeScript
 let initialData: Record<string, number> = { 'PropA': 47 };

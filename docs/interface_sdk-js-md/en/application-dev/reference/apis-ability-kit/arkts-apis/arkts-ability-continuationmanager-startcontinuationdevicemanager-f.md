@@ -33,7 +33,7 @@ Starts the device selection module to show the list of available devices on the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | token | number | Yes | Token obtained after the registration of the continuation management service. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the module is started, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the module is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -58,6 +58,48 @@ try {
     }
     console.info('startContinuationDeviceManager finished. ');
   });
+} catch (err) {
+  console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
+}
+```
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+
+let token: number = -1;
+try {
+  continuationManager.startContinuationDeviceManager(
+    token,
+    {
+      deviceType: ["00E"]
+    },
+    (err) => {
+      if (err.code != 0) {
+        console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
+        return;
+      }
+      console.info('startContinuationDeviceManager finished. ');
+  });
+} catch (err) {
+  console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
+}
+```
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let token: number = -1;
+try {
+  continuationManager.startContinuationDeviceManager(
+    token,
+    {
+      deviceType: ["00E"]
+    }).then(() => {
+      console.info('startContinuationDeviceManager finished. ');
+    }).catch((err: BusinessError) => {
+      console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
+    });
 } catch (err) {
   console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
 }
@@ -96,7 +138,7 @@ Starts the device selection module to show the list of available devices on the 
 | --- | --- | --- | --- |
 | token | number | Yes | Token obtained after the registration of the continuation management service. |
 | options | ContinuationExtraParams | Yes | Extra parameters used to filter the list of available devices. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the module is started, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the module is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -109,27 +151,7 @@ Starts the device selection module to show the list of available devices on the 
 
 **Examples**
 
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = -1;
-try {
-  continuationManager.startContinuationDeviceManager(
-    token,
-    {
-      deviceType: ["00E"]
-    },
-    (err) => {
-      if (err.code != 0) {
-        console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
-        return;
-      }
-      console.info('startContinuationDeviceManager finished. ');
-  });
-} catch (err) {
-  console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
-}
-```
+See [startContinuationDeviceManager](#startcontinuationdevicemanager)
 
 
 ## startContinuationDeviceManager
@@ -178,23 +200,5 @@ Starts the device selection module to show the list of available devices on the 
 
 **Examples**
 
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = -1;
-try {
-  continuationManager.startContinuationDeviceManager(
-    token,
-    {
-      deviceType: ["00E"]
-    }).then(() => {
-      console.info('startContinuationDeviceManager finished. ');
-    }).catch((err: BusinessError) => {
-      console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
-    });
-} catch (err) {
-  console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
-}
-```
+See [startContinuationDeviceManager](#startcontinuationdevicemanager)
 

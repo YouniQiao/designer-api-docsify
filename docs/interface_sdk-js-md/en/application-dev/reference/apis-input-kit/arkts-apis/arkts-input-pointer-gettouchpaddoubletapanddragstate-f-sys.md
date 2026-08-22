@@ -26,7 +26,7 @@ Obtains the touchpad double-tap and drag switch state. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **true** is returned if the switch is enabled while **false** is returned if the switch is disabled. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **true** is returned if the switch is enabled while **false** is returned if the switch is disabled. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -56,6 +56,32 @@ struct Index {
                 console.info(`getTouchpadDoubleTapAndDragState success, state: ${JSON.stringify(state)}`);
               }
             });
+          } catch (error) {
+            console.error(`getTouchpadDoubleTapAndDragState failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            pointer.getTouchpadDoubleTapAndDragState().then((state) => {
+              console.info(`getTouchpadDoubleTapAndDragState success, state: ${JSON.stringify(state)}`);
+            }).catch((error: BusinessError) => {
+              console.error(`Get touchpad failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            })
           } catch (error) {
             console.error(`getTouchpadDoubleTapAndDragState failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
@@ -96,29 +122,5 @@ Obtains the touchpad double-tap and drag switch state. This API uses a promise t
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.getTouchpadDoubleTapAndDragState().then((state) => {
-              console.info(`getTouchpadDoubleTapAndDragState success, state: ${JSON.stringify(state)}`);
-            }).catch((error: BusinessError) => {
-              console.error(`Get touchpad failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`getTouchpadDoubleTapAndDragState failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
+See [getTouchpadDoubleTapAndDragState](#gettouchpaddoubletapanddragstate)
 

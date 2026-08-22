@@ -85,6 +85,76 @@ inputMethod.switchInputMethod(currentIme, (err: BusinessError | null, result: bo
 });
 ```
 
+ArkTS-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
+inputMethod.switchInputMethod(currentIme).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in switching input method.');
+  } else {
+    console.error('Failed to switch input method.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to switchInputMethod, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let currentIme = inputMethod.getCurrentInputMethod();
+
+inputMethod.switchInputMethod(currentIme).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in switching inputmethod.');
+  } else {
+    console.error('Failed to switchInputMethod.');
+  }
+}).catch((err: BusinessError): void=> {
+  console.error(`Failed to switchInputMethod, code: ${err.code}, message: ${err.message}`);
+})
+```
+
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+
+async function switchInputMethodWithSubtype() {
+  // 1. 获取当前输入法
+  const currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
+  if (!currentIme) {
+    console.error("Failed to get current input method");
+    return;
+  }
+  try {
+    // 2. 切换输入法
+    await inputMethod.switchInputMethod(currentIme.name);
+    console.info('Succeeded in switching inputMethod.');
+  } catch (err) {
+    console.error(`Failed to switchInputMethod. Code: ${err.code}, message: ${err.message}`);
+  }
+  // 3. 获取当前输入法子类型
+  const currentSubtype: InputMethodSubtype = inputMethod.getCurrentInputMethodSubtype();
+  if (!currentSubtype) {
+    console.error("Failed to get current input subtype");
+    return;
+  }
+  try {
+    // 4. 切换输入法子类型
+    await inputMethod.switchInputMethod(currentIme.name, currentSubtype.id);
+    console.info('Succeeded in switching inputMethod.');
+  } catch (err) {
+    console.error(`Failed to switchInputMethod. Code: ${err.code}, message: ${err.message}`);
+  }
+}
+
+switchInputMethodWithSubtype();
+```
+
 
 ## switchInputMethod
 
@@ -126,38 +196,5 @@ function switchInputMethod(target: InputMethodProperty): Promise<boolean>
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
-inputMethod.switchInputMethod(currentIme).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in switching input method.');
-  } else {
-    console.error('Failed to switch input method.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to switchInputMethod, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let currentIme = inputMethod.getCurrentInputMethod();
-
-inputMethod.switchInputMethod(currentIme).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in switching inputmethod.');
-  } else {
-    console.error('Failed to switchInputMethod.');
-  }
-}).catch((err: BusinessError): void=> {
-  console.error(`Failed to switchInputMethod, code: ${err.code}, message: ${err.message}`);
-})
-```
+参见 [switchInputMethod](#switchinputmethod)
 

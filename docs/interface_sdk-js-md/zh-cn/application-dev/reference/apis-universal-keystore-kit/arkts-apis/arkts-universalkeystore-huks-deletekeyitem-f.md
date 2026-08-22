@@ -142,6 +142,21 @@ export default {
 };
 ```
 
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* 此处options选择emptyOptions传空 */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+/* 删除密钥 */
+huks.deleteKeyItem(keyAlias, emptyOptions)
+  .then(() => {
+    console.info(`promise: deleteKeyItem key success`);
+  });
+```
+
 
 ## deleteKeyItem
 
@@ -192,18 +207,5 @@ function deleteKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 
 **示例**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-/* 删除密钥 */
-huks.deleteKeyItem(keyAlias, emptyOptions)
-  .then(() => {
-    console.info(`promise: deleteKeyItem key success`);
-  });
-```
+参见 [deleteKeyItem](#deletekeyitem)
 

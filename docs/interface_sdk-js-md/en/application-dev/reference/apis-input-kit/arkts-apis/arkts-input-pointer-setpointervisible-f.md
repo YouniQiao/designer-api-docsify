@@ -25,7 +25,7 @@ Sets whether the mouse pointer is visible in the current window. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | visible | boolean | Yes | Whether the mouse pointer is visible in the current window. The value **true** indicates that the mouse pointer is visible, and the value **false** indicates the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -55,6 +55,32 @@ struct Index {
               }
               console.info(`Set pointer visible success`);
             });
+          } catch (error) {
+            console.error(`Set pointer visible failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            pointer.setPointerVisible(false).then(() => {
+              console.info(`Set pointer visible success`);
+            }).catch((error: BusinessError) => {
+              console.error(`Set pointer failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            })
           } catch (error) {
             console.error(`Set pointer visible failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
@@ -100,29 +126,5 @@ Sets whether the mouse pointer is visible in the current window. This API uses a
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.setPointerVisible(false).then(() => {
-              console.info(`Set pointer visible success`);
-            }).catch((error: BusinessError) => {
-              console.error(`Set pointer failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`Set pointer visible failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
+See [setPointerVisible](#setpointervisible)
 

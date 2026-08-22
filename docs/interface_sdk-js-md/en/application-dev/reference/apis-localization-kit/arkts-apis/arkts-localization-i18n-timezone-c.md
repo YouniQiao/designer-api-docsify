@@ -69,6 +69,14 @@ import { i18n } from '@kit.LocalizationKit';
 let ids: Array<string> = i18n.TimeZone.getAvailableIDs();
 ```
 
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// A total of 742 IDs are supported. One ID is comprised of two parts separated by a hyphen (-) in the format of source-destination. For example, in **ids = ["Han-Latin","Latin-ASCII", "Amharic-Latin/BGN","Accents-Any", ...]**, **Han-Latin** indicates conversion from Chinese to Latin, and **Amharic-Latin** indicates conversion from Amharic to Latin.
+// For more information, see ISO-15924.
+let ids: string[] = i18n.Transliterator.getAvailableIDs();
+```
+
 ## getAvailableZoneCityIDs
 
 ```TypeScript
@@ -167,6 +175,13 @@ Obtains time zone display name in the specified language.
 | string | Time zone display name in the specified language. |
 
 **Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let calendar: i18n.Calendar = i18n.getCalendar('en-US', 'buddhist');
+let calendarName: string = calendar.getDisplayName('zh'); // calendarName = 'Buddhist'
+```
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -381,6 +396,31 @@ Obtains the time zone transition rules. For details about the time zone transiti
 | Type | Description |
 | --- | --- |
 | [ZoneRules](arkts-localization-i18n-zonerules-c.md) | Time zone transition rule, including the transition time and the offset before and after the transition. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let tzId: string = 'America/Tijuana';
+let timeZone: i18n.TimeZone = i18n.getTimeZone(tzId);
+let zoneRules: i18n.ZoneRules = timeZone.getZoneRules();
+let date = new Date(2025, 4, 13);
+let zoneOffsetTransition: i18n.ZoneOffsetTransition =
+    zoneRules.nextTransition(date.getTime()); // Obtain the nextTransition object for time zone transition after May 13, 2025.
+zoneOffsetTransition.getMilliseconds(); // Timestamp of the transition point: 1762074000000
+zoneOffsetTransition.getOffsetAfter(); // Post-transition offset: -28800000
+zoneOffsetTransition.getOffsetBefore(); // Pre-transition offset: -25200000
+// Format the timestamp of the transition point.
+let dateTimeFormat: Intl.DateTimeFormat = new Intl.DateTimeFormat('en-US', {
+  timeZone: tzId,
+  dateStyle: 'long',
+  timeStyle: 'long',
+  hour12: false
+});
+let dateFormat: string =
+  dateTimeFormat.format(new Date(zoneOffsetTransition.getMilliseconds())); // November 2, 2025, 1:00:00 PST
+```
 
 ## isDaylightSavingTime
 

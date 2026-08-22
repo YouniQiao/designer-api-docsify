@@ -51,6 +51,18 @@ Obtains a **Normalizer** object.
 **Examples**
 
 ```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let indexUtil: i18n.IndexUtil = i18n.getInstance('zh-CN');
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let transliterator: i18n.Transliterator = i18n.Transliterator.getInstance('Any-Latn');
+```
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { i18n } from '@kit.LocalizationKit';
 

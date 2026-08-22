@@ -51,6 +51,15 @@ Obtains the X coordinate of the rectangle center.
 | --- | --- |
 | double | X coordinate of the rectangle center. |
 
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeLtrb(20, 30, 30, 40);
+let x = drawing.RectUtils.centerX(rect);
+```
+
 ## centerY
 
 ```TypeScript
@@ -76,6 +85,15 @@ Obtains the Y coordinate of the rectangle center.
 | Type | Description |
 | --- | --- |
 | double | Y coordinate of the rectangle center. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeLtrb(20, 30, 30, 40);
+let x = drawing.RectUtils.centerY(rect);
+```
 
 ## contains
 
@@ -103,6 +121,43 @@ Checks whether a rectangle completely contains another rectangle.
 | Type | Description |
 | --- | --- |
 | boolean | Whether a rectangle completely contains another rectangle. **true** means yes; **false** otherwise. An empty rectangle does not contain any other rectangle. |
+
+**Examples**
+
+```TypeScript
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+const path = new drawing.Path();
+let rect : common2D.Rect = {left: 50, top: 50, right: 250, bottom: 250};
+path.addRect(rect, drawing.PathDirection.CLOCKWISE);
+console.info("test contains: " + path.contains(0, 0));
+console.info("test contains: " + path.contains(60, 60));
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeLtrb(10, 10, 20, 20);
+let rect2 = drawing.RectUtils.makeLtrb(0, 0, 40, 40);
+let isContains = drawing.RectUtils.contains(rect2, rect);
+console.info('isContains: ', isContains);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeLtrb(0, 0, 100, 100);
+let isContains = drawing.RectUtils.contains(rect, 10, 20, 30, 40);
+console.info('isContains :', isContains);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeLtrb(0, 0, 100, 100);
+let isContains = drawing.RectUtils.contains(rect, 10, 20);
+console.info('isContains: ', isContains);
+```
 
 ## contains
 
@@ -134,6 +189,10 @@ Checks whether a rectangle completely contains another rectangle (which is marke
 | --- | --- |
 | boolean | Whether a rectangle completely contains another rectangle defined by the coordinates of its upper left and lower right corners. **true** means yes; **false** otherwise. An empty rectangle does not contain any other rectangle. |
 
+**Examples**
+
+See [contains](#contains)
+
 ## contains
 
 ```TypeScript
@@ -162,6 +221,10 @@ Checks whether a rectangle completely contains a specified point.
 | --- | --- |
 | boolean | Whether the rectangle completely contains the point **(x, y)**. **true** means yes; **false** otherwise. An empty rectangle does not contain any point. |
 
+**Examples**
+
+See [contains](#contains)
+
 ## getHeight
 
 ```TypeScript
@@ -187,6 +250,28 @@ Obtains the height of a rectangle.
 | Type | Description |
 | --- | --- |
 | double | Height of the rectangle. If the top boundary is greater than the bottom, the height is negative. If the top boundary is less than the bottom, the height is positive. |
+
+**Examples**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let height = canvas.getHeight();
+    console.info('get canvas height:' + height);
+  }
+}
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeLtrb(10, 10, 20, 20);
+let height = drawing.RectUtils.getHeight(rect);
+```
 
 ## getWidth
 
@@ -214,6 +299,36 @@ Obtains the width of a rectangle.
 | --- | --- |
 | double | Width of a rectangle. If the left boundary is greater than the right, the width is negative. If the left boundary is less than the right, the width is positive. |
 
+**Examples**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let width = canvas.getWidth();
+    console.info('get canvas width:' + width);
+  }
+}
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const pen = new drawing.Pen();
+let width = pen.getWidth();
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeLtrb(10, 10, 20, 20);
+let width = drawing.RectUtils.getWidth(rect);
+console.info('width:', width);
+```
+
 ## inset
 
 ```TypeScript
@@ -237,6 +352,19 @@ Adds the input left, top, right, and bottom values to the left, top, right, and 
 | top | double | Yes | Value to be added to the top boundary of the rectangle (Y coordinate of the upper left corner of the rectangle). The value is a floating point number. **0** indicates that no operation is performed. A positive number indicates addition, and a negative number indicates subtraction. |
 | right | double | Yes | Value to be added to the right boundary of the rectangle (X coordinate of the lower right corner of the rectangle). The value is a floating point number. **0** indicates that no operation is performed. A positive number indicates addition, and a negative number indicates subtraction. |
 | bottom | double | Yes | Value to be added to the bottom boundary of the rectangle (Y coordinate of the lower right corner of the rectangle). The value is a floating point number. **0** indicates that no operation is performed. A positive number indicates addition, and a negative number indicates subtraction. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeLtrb(10, 10, 20, 20);
+drawing.RectUtils.inset(rect, 10, -20, 30, 60);
+console.info('rect.left:', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
 
 ## intersect
 
@@ -265,6 +393,21 @@ Calculates the intersection of two rectangles and updates the intersection resul
 | --- | --- |
 | boolean | Whether two rectangles have an intersection. **true** means yes; **false** otherwise. |
 
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeLtrb(0, 0, 20, 20);
+let rect2 = drawing.RectUtils.makeLtrb(10, 10, 40, 40);
+let isIntersect = drawing.RectUtils.intersect(rect, rect2);
+console.info('isIntersect :', isIntersect);
+console.info('rect.left:', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
+
 ## isEmpty
 
 ```TypeScript
@@ -290,6 +433,56 @@ Checks whether a rectangle is empty (the left boundary is greater than or equal 
 | Type | Description |
 | --- | --- |
 | boolean | Whether the rectangle is empty. **true** means yes; **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+let path = new drawing.Path();
+path.moveTo(10,10);
+path.lineTo(20,20);
+let isEmpty = path.isEmpty();
+console.info('isEmpty:', isEmpty);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeEmpty();
+let isEmpty = drawing.RectUtils.isEmpty(rect);
+console.info('isEmpty :', isEmpty);
+let rect2 = drawing.RectUtils.makeLtrb(0, 0, 20, 20);
+isEmpty = drawing.RectUtils.isEmpty(rect2);
+console.info('isEmpty :', isEmpty);
+```
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context: DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setColor({
+      alpha: 255,
+      red: 255,
+      green: 0,
+      blue: 0
+    });
+    pen.setStrokeWidth(10);
+    canvas.attachPen(pen);
+    let region = new drawing.Region();
+    let flag: boolean = region.isEmpty();
+    console.info('flag: ', flag);
+    region.setRect(100, 100, 400, 400);
+    flag = region.isEmpty();
+    console.info('flag: ', flag);
+    canvas.drawRegion(region);
+    canvas.detachPen();
+  }
+}
+```
 
 ## isEqual
 
@@ -318,6 +511,61 @@ Checks whether two rectangles are equal.
 | --- | --- |
 | boolean | Whether two rectangles are equal. **true** means yes; **false** otherwise. |
 
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let matrix1 = new drawing.Matrix();
+matrix1.setMatrix([2, 1, 3, 1, 2, 1, 3, 1, 2]);
+let matrix2 = new drawing.Matrix();
+matrix2.setMatrix([-2, 1, 3, 1, 0, -1, 3, -1, 2]);
+if (matrix1.isEqual(matrix2)) {
+  console.info("matrix1 and matrix2 are equal.");
+} else {
+  console.info("matrix1 and matrix2 are not equal.");
+}
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeLtrb(10, 20, 20, 30);
+let rect2 = drawing.RectUtils.makeEmpty();
+let isEqual = drawing.RectUtils.isEqual(rect, rect2);
+console.info('isEqual :', isEqual);
+```
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context: DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setColor({
+      alpha: 255,
+      red: 255,
+      green: 0,
+      blue: 0
+    });
+    pen.setStrokeWidth(10);
+    canvas.attachPen(pen);
+    let region = new drawing.Region();
+    let other = new drawing.Region();
+    region.setRect(100, 100, 400, 400);
+    other.setRect(150, 150, 250, 250);
+    let flag: boolean = false;
+    flag = region.isEqual(other);
+    console.info('flag: ', flag);
+    canvas.drawRegion(region);
+    canvas.drawRegion(other);
+    canvas.detachPen();
+  }
+}
+```
+
 ## isIntersect
 
 ```TypeScript
@@ -345,6 +593,17 @@ Checks whether two rectangles intersect.
 | --- | --- |
 | boolean | Whether two rectangles have an intersection. **true** means yes; **false** otherwise. If the two rectangles only overlap on the edge or intersect at a point, **false** is returned. |
 
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeLtrb(0, 0, 20, 20);
+let rect2 = drawing.RectUtils.makeLtrb(10, 10, 40, 40);
+let isIntersect = drawing.RectUtils.isIntersect(rect, rect2);
+console.info('isIntersect :', isIntersect);
+```
+
 ## makeCopy
 
 ```TypeScript
@@ -370,6 +629,19 @@ Copies a rectangle.
 | Type | Description |
 | --- | --- |
 | common2D.Rect | Created rectangle. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeLtrb(10, 10, 20, 20);
+let rect2 = drawing.RectUtils.makeCopy(rect);
+console.info('rect2.left:', rect2.left);
+console.info('rect2.top: ', rect2.top);
+console.info('rect2.right: ', rect2.right);
+console.info('rect2.bottom: ', rect2.bottom);
+```
 
 ## makeCopy
 
@@ -397,6 +669,10 @@ Makes a deep copy of a 2D rectangular object.
 | --- | --- |
 | common2D.Rect \| undefined | Returns an Rect object has the same boundary coordinates with the source. |
 
+**Examples**
+
+See [makeCopy](#makecopy)
+
 ## makeEmpty
 
 ```TypeScript
@@ -417,6 +693,14 @@ Creates a rectangle with the top, bottom, left, and right boundary coordinates a
 | --- | --- |
 | common2D.Rect | Created rectangle object. |
 
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeEmpty();
+```
+
 ## makeEmpty
 
 ```TypeScript
@@ -436,6 +720,10 @@ Makes an uninitialized 2D rectangular object with zero dimensions and origin at 
 | Type | Description |
 | --- | --- |
 | common2D.Rect \| undefined | Returns an empty Rect object with all coordinates (left, top, right, bottom) set to 0. |
+
+**Examples**
+
+See [makeEmpty](#makeempty)
 
 ## makeLtrb
 
@@ -466,6 +754,14 @@ Creates a rectangle with specified top, bottom, left, and right boundaries.
 | --- | --- |
 | common2D.Rect | Created rectangle. |
 
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeLtrb(10, 10, 20, 20);
+```
+
 ## makeLtrb
 
 ```TypeScript
@@ -495,6 +791,10 @@ Makes a 2D rectangular object from boundary coordinates.
 | --- | --- |
 | common2D.Rect \| undefined | Returns an Rect object with the specific coordinates (left, top, right, bottom). |
 
+**Examples**
+
+See [makeLtrb](#makeltrb)
+
 ## offset
 
 ```TypeScript
@@ -516,6 +816,61 @@ Translates a rectangle.
 | rect | common2D.Rect | Yes | Rectangle to be translated. |
 | dx | double | Yes | Horizontal translation distance. The value is a floating point number. **0** indicates no translation. A negative value indicates translation to the left, and a positive value indicates translation to the right. |
 | dy | double | Yes | Vertical translation distance. The value is a floating point number. **0** indicates no translation. A negative value indicates translation upwards, and a positive value indicates translation downwards. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const path = new drawing.Path();
+path.moveTo(200, 200);
+path.lineTo(300, 300);
+const dst = path.offset(200, 200);
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeLtrb(0, 0, 20, 20);
+drawing.RectUtils.offset(rect, 10, 20);
+console.info('rect.left:', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context: DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setColor({
+      alpha: 255,
+      red: 255,
+      green: 0,
+      blue: 0
+    });
+    pen.setStrokeWidth(10);
+    canvas.attachPen(pen);
+    let region = new drawing.Region();
+    region.setRect(100, 100, 400, 400);
+    region.offset(10, 20);
+    canvas.drawPoint(200, 200);
+    canvas.drawRegion(region);
+    canvas.detachPen();
+  }
+}
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let roundRect : drawing.RoundRect = new drawing.RoundRect({left: 0, top: 0, right: 300, bottom: 300}, 50, 50);
+roundRect.offset(100, 100);
+```
 
 ## offsetTo
 
@@ -539,6 +894,19 @@ Translates a rectangle to a specified position.
 | newLeft | double | Yes | X coordinate of the position to which the rectangle is translated. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
 | newTop | double | Yes | Y coordinate of the position to which the rectangle is translated. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
 
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeLtrb(20, 20, 40, 40);
+drawing.RectUtils.offsetTo(rect, 10, 20);
+console.info('rect.left:', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
+
 ## setEmpty
 
 ```TypeScript
@@ -558,6 +926,36 @@ Sets the left, right, top, and bottom boundaries of the rectangle to **0**.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | Yes | Empty rectangle object. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeLtrb(10, 20, 20, 30);
+drawing.RectUtils.setEmpty(rect)
+console.info('rect.left:', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context: DrawContext) {
+    let region = new drawing.Region();
+    region.setRect(100, 100, 200, 200);
+    let isEmpty = region.isEmpty();
+    console.info("isEmpty :" + isEmpty);
+    region.setEmpty();
+    isEmpty = region.isEmpty();
+    console.info("isEmpty :" + isEmpty);
+  }
+}
+```
 
 ## setLtrb
 
@@ -583,6 +981,19 @@ Updates the top, bottom, left, and right boundary values of the existing rectang
 | right | double | Yes | X coordinate of the lower right corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
 | bottom | double | Yes | Y coordinate of the lower right corner of the rectangle. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
 
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeEmpty();
+drawing.RectUtils.setLtrb(rect, 10, 20, 30, 60);
+console.info('rect.left:', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
+
 ## setRect
 
 ```TypeScript
@@ -604,6 +1015,46 @@ Assigns the existing rectangle with another rectangle.
 | rect | common2D.Rect | Yes | Original rectangle. |
 | other | common2D.Rect | Yes | Another rectangle. |
 
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeLtrb(10, 20, 30, 40);
+let rect2 = drawing.RectUtils.makeEmpty();
+drawing.RectUtils.setRect(rect2, rect);
+console.info('rect2.left:', rect2.left);
+console.info('rect2.top: ', rect2.top);
+console.info('rect2.right: ', rect2.right);
+console.info('rect2.bottom: ', rect2.bottom);
+```
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context: DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setColor({
+      alpha: 255,
+      red: 255,
+      green: 0,
+      blue: 0
+    });
+    pen.setStrokeWidth(10);
+    canvas.attachPen(pen);
+    let region = new drawing.Region();
+    let flag: boolean = false;
+    flag = region.setRect(50, 50, 300, 300);
+    console.info("region setRect : " + flag);
+    canvas.drawRegion(region);
+    canvas.detachPen();
+  }
+}
+```
+
 ## sort
 
 ```TypeScript
@@ -623,6 +1074,19 @@ If the rectangle is reversed (that is, the left boundary is greater than the rig
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | Yes | Rectangle object. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeLtrb(20, 40, 30, 30);
+drawing.RectUtils.sort(rect);
+console.info('rect.left:', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
 
 ## union
 
@@ -644,4 +1108,18 @@ Calculates the union of two rectangles and updates the union result to the recta
 | --- | --- | --- | --- |
 | rect | common2D.Rect | Yes | Original rectangle used to calculate the union. |
 | other | common2D.Rect | Yes | Another rectangle used to calculate the union. |
+
+**Examples**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let rect = drawing.RectUtils.makeLtrb(0, 0, 20, 20);
+let rect2 = drawing.RectUtils.makeLtrb(10, 10, 40, 40);
+drawing.RectUtils.union(rect, rect2);
+console.info('rect.left:', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
 

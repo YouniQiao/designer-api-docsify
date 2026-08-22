@@ -81,10 +81,10 @@ fileio
 | [open](arkts-corefile-fileio-open-f.md) | Opens a file. This API uses an asynchronous callback to return the result. |
 | [open](arkts-corefile-fileio-open-f.md) | Opens a file. This API uses an asynchronous callback to return the result. |
 | [open](arkts-corefile-fileio-open-f.md) | Opens a file. This API uses an asynchronous callback to return the result. |
-| [openSync](arkts-corefile-fileio-opensync-f.md) | Opens a file. This API returns the result synchronously. |
 | [opendir](arkts-corefile-fileio-opendir-f.md) | Opens a directory. This API uses a promise to return the result. |
 | [opendir](arkts-corefile-fileio-opendir-f.md) | Opens a file directory. This API uses an asynchronous callback to return the result. |
 | [opendirSync](arkts-corefile-fileio-opendirsync-f.md) | Opens a directory. This API returns the result synchronously. |
+| [openSync](arkts-corefile-fileio-opensync-f.md) | Opens a file. This API returns the result synchronously. |
 | [read](arkts-corefile-fileio-read-f.md) | Reads data from a file. This API uses a promise to return the result. |
 | [read](arkts-corefile-fileio-read-f.md) | Reads data from a file. This API uses an asynchronous callback to return the result. |
 | [read](arkts-corefile-fileio-read-f.md) | Reads data from a file. This API uses an asynchronous callback to return the result. |

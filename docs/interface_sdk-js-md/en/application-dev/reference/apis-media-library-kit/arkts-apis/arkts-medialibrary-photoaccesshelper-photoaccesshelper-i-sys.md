@@ -147,40 +147,6 @@ async function example(context: Context) {
 }
 ```
 
-## canPerformDeepOptimizeSpace
-
-```TypeScript
-canPerformDeepOptimizeSpace(): Promise<boolean>
-```
-
-Whether deep storage space optimization can be performed.
-
-**Since:** 26.0.0
-
-**Required permissions:** ohos.permission.READ_IMAGEVIDEO
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PhotoAccessHelper-canPerformDeepOptimizeSpace(): Promise<boolean>--><!--Device-PhotoAccessHelper-canPerformDeepOptimizeSpace(): Promise<boolean>-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates [startDeepOptimizeSpace()]{ |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
-
 ## cancelAnalysisTool
 
 ```TypeScript
@@ -283,6 +249,40 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+## canPerformDeepOptimizeSpace
+
+```TypeScript
+canPerformDeepOptimizeSpace(): Promise<boolean>
+```
+
+Whether deep storage space optimization can be performed.
+
+**Since:** 26.0.0
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PhotoAccessHelper-canPerformDeepOptimizeSpace(): Promise<boolean>--><!--Device-PhotoAccessHelper-canPerformDeepOptimizeSpace(): Promise<boolean>-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates [startDeepOptimizeSpace()]{ |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## cloneToAlbum
 
@@ -399,7 +399,7 @@ The album name must meet the following requirements:
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the album to create. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Album&gt; | Yes | Callback used to return the created album instance. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Album&gt; | Yes | Callback used to return the created album instance. |
 
 **Error codes:**
 
@@ -426,6 +426,22 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
       return;
     }
     console.info('createAlbumCallback successfully, album: ' + album.albumName + ' album uri: ' + album.albumUri);
+  });
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('createAlbumDemo');
+  let albumName: string = 'newAlbumName' + new Date().getTime();
+  phAccessHelper.createAlbum(albumName).then((album) => {
+    console.info('createAlbumPromise successfully, album: ' + album.albumName + ' album uri: ' + album.albumUri);
+  }).catch((err: BusinessError) => {
+    console.error(`createAlbumPromise failed with err: ${err.code}, ${err.message}`);
   });
 }
 ```
@@ -485,21 +501,7 @@ The album name must meet the following requirements:
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAlbumDemo');
-  let albumName: string = 'newAlbumName' + new Date().getTime();
-  phAccessHelper.createAlbum(albumName).then((album) => {
-    console.info('createAlbumPromise successfully, album: ' + album.albumName + ' album uri: ' + album.albumUri);
-  }).catch((err: BusinessError) => {
-    console.error(`createAlbumPromise failed with err: ${err.code}, ${err.message}`);
-  });
-}
-```
+See [createAlbum](#createalbum)
 
 ## createAsset
 
@@ -532,7 +534,7 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the image or video to create. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PhotoAsset&gt; | Yes | Callback used to return the image or video created. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoAsset&gt; | Yes | Callback used to return the image or video created. |
 
 **Error codes:**
 
@@ -561,6 +563,120 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
       console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
     }
   });
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('createAssetDemo');
+  try {
+    let testFileName: string = 'testFile' + Date.now() + '.jpg';
+    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName);
+    console.info('createAsset file displayName' + photoAsset.displayName);
+    console.info('createAsset successfully');
+  } catch (err) {
+    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('createAssetDemo');
+  let testFileName: string = 'testFile' + Date.now() + '.jpg';
+  let createOption: photoAccessHelper.PhotoCreateOptions = {
+    subtype: photoAccessHelper.PhotoSubtype.DEFAULT
+  }
+  phAccessHelper.createAsset(testFileName, createOption, (err, photoAsset) => {
+    if (photoAsset !== undefined) {
+      console.info('createAsset file displayName' + photoAsset.displayName);
+      console.info('createAsset successfully');
+    } else {
+      console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
+    }
+  });
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('createAssetDemo');
+  try {
+    let testFileName:string = 'testFile' + Date.now() + '.jpg';
+    let createOption: photoAccessHelper.PhotoCreateOptions = {
+      subtype: photoAccessHelper.PhotoSubtype.DEFAULT
+    }
+    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName, createOption);
+    console.info('createAsset file displayName' + photoAsset.displayName);
+    console.info('createAsset successfully');
+  } catch (err) {
+    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('createAssetDemo');
+  let photoType: photoAccessHelper.PhotoType = photoAccessHelper.PhotoType.IMAGE;
+  let extension:string = 'jpg';
+  let options: photoAccessHelper.CreateOptions = {
+    title: 'testPhoto'
+  }
+  phAccessHelper.createAsset(photoType, extension, options, (err, uri) => {
+    if (uri !== undefined) {
+      console.info('createAsset uri' + uri);
+      console.info('createAsset successfully');
+    } else {
+      console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
+    }
+  });
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('createAssetDemo');
+  let photoType: photoAccessHelper.PhotoType = photoAccessHelper.PhotoType.IMAGE;
+  let extension: string = 'jpg';
+  phAccessHelper.createAsset(photoType, extension, (err, uri) => {
+    if (uri !== undefined) {
+      console.info('createAsset uri' + uri);
+      console.info('createAsset successfully');
+    } else {
+      console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
+    }
+  });
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('createAssetDemo');
+  try {
+    let photoType: photoAccessHelper.PhotoType = photoAccessHelper.PhotoType.IMAGE;
+    let extension: string = 'jpg';
+    let options: photoAccessHelper.CreateOptions = {
+      title: 'testPhoto'
+    }
+    let uri: string = await phAccessHelper.createAsset(photoType, extension, options);
+    console.info('createAsset uri' + uri);
+    console.info('createAsset successfully');
+  } catch (err) {
+    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
+  }
 }
 ```
 
@@ -615,21 +731,7 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  try {
-    let testFileName: string = 'testFile' + Date.now() + '.jpg';
-    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName);
-    console.info('createAsset file displayName' + photoAsset.displayName);
-    console.info('createAsset successfully');
-  } catch (err) {
-    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-  }
-}
-```
+See [createAsset](#createasset)
 
 ## createAsset
 
@@ -683,24 +785,7 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  try {
-    let testFileName:string = 'testFile' + Date.now() + '.jpg';
-    let createOption: photoAccessHelper.PhotoCreateOptions = {
-      subtype: photoAccessHelper.PhotoSubtype.DEFAULT
-    }
-    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName, createOption);
-    console.info('createAsset file displayName' + photoAsset.displayName);
-    console.info('createAsset successfully');
-  } catch (err) {
-    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-  }
-}
-```
+See [createAsset](#createasset)
 
 ## createAsset
 
@@ -734,7 +819,7 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the image or video to create. |
 | options | PhotoCreateOptions | Yes | Options for creating an image or video asset. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PhotoAsset&gt; | Yes | Callback used to return the image or video created. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoAsset&gt; | Yes | Callback used to return the image or video created. |
 
 **Error codes:**
 
@@ -749,25 +834,7 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  let testFileName: string = 'testFile' + Date.now() + '.jpg';
-  let createOption: photoAccessHelper.PhotoCreateOptions = {
-    subtype: photoAccessHelper.PhotoSubtype.DEFAULT
-  }
-  phAccessHelper.createAsset(testFileName, createOption, (err, photoAsset) => {
-    if (photoAsset !== undefined) {
-      console.info('createAsset file displayName' + photoAsset.displayName);
-      console.info('createAsset successfully');
-    } else {
-      console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-    }
-  });
-}
-```
+See [createAsset](#createasset)
 
 ## createAssetsForApp
 
@@ -1070,7 +1137,7 @@ Deletes user albums. This API uses an asynchronous callback to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | albums | Array&lt;Album&gt; | Yes | Albums to delete. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -1108,6 +1175,55 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     console.info('deletePhotoAlbumsCallback successfully');
   });
   fetchResult.close();
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  // Delete the album named newAlbumName.
+  console.info('deleteAlbumsDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  predicates.equalTo('album_name', 'newAlbumName');
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
+  let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
+  phAccessHelper.deleteAlbums([album]).then(() => {
+    console.info('deletePhotoAlbumsPromise successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`deletePhotoAlbumsPromise failed with err: ${err.code}, ${err.message}`);
+  });
+  fetchResult.close();
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  console.info('deleteAlbumsDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
+    let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
+    await photoAccessHelper.MediaAlbumChangeRequest.deleteAlbums(context, [album]);
+    console.info('deleteAlbums successfully');
+  } catch (err) {
+    console.error(`deleteAlbumsDemo failed with error: ${err.code}, ${err.message}`);
+  }
 }
 ```
 
@@ -1157,31 +1273,7 @@ Deletes user albums. This API uses a promise to return the result.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  // Delete the album named newAlbumName.
-  console.info('deleteAlbumsDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  predicates.equalTo('album_name', 'newAlbumName');
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
-  let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
-  phAccessHelper.deleteAlbums([album]).then(() => {
-    console.info('deletePhotoAlbumsPromise successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`deletePhotoAlbumsPromise failed with err: ${err.code}, ${err.message}`);
-  });
-  fetchResult.close();
-}
-```
+See [deleteAlbums](#deletealbums)
 
 ## deleteAssets
 
@@ -1210,7 +1302,7 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uriList | Array&lt;string&gt; | Yes | URIs of the media files to delete. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -1253,6 +1345,174 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     });
   } catch (err) {
     console.error(`fetch failed, error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('deleteDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    if (asset === undefined) {
+      console.error('asset not exist');
+      return;
+    }
+    await phAccessHelper.deleteAssets([asset.uri]);
+    console.info('deleteAssets successfully');
+  } catch (err) {
+    console.error(`deleteAssets failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    console.info('deleteAssetsDemoCallback');
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.SYSTEM, photoAccessHelper.AlbumSubtype.TRASH);
+    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOption);
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    album.deleteAssets([asset], (err) => {
+      if (err === undefined) {
+        console.info('album deleteAssets successfully');
+      } else {
+        console.error(`album deleteAssets failed with error: ${err.code}, ${err.message}`);
+      }
+    });
+  } catch (err) {
+    console.error(`deleteAssetsDemoCallback failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    console.info('deleteAssetsDemoPromise');
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.SYSTEM, photoAccessHelper.AlbumSubtype.TRASH);
+    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOption);
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    album.deleteAssets([asset]).then(() => {
+      console.info('album deleteAssets successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`album deleteAssets failed with error: ${err.code}, ${err.message}`);
+    });
+  } catch (err) {
+    console.error(`deleteAssetsDemoPromise failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('deleteAssetsPermanentlyDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.SYSTEM, photoAccessHelper.AlbumSubtype.TRASH);
+    if (albumFetchResult === undefined) {
+      console.error('albumFetchResult is undefined');
+      return;
+    }
+    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOptions);
+    if (fetchResult === undefined) {
+      console.error('fetchResult is undefined');
+      return;
+    }
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+
+    let albumChangeRequest: photoAccessHelper.MediaAlbumChangeRequest = new photoAccessHelper.MediaAlbumChangeRequest(album);
+    albumChangeRequest.deleteAssets([asset]);
+    await phAccessHelper.applyChanges(albumChangeRequest);
+    console.info('succeed to deleteAssets permanently');
+  } catch (err) {
+    console.error(`deleteAssetsPermanentlyDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  console.info('deleteAssetsDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let photoAssetList: Array<photoAccessHelper.PhotoAsset> = await fetchResult.getAllObjects();
+    await photoAccessHelper.MediaAssetChangeRequest.deleteAssets(context, photoAssetList);
+    console.info('deleteAssets successfully');
+  } catch (err) {
+    console.error(`deleteAssetsDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  console.info('deleteAssetsDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    await photoAccessHelper.MediaAssetChangeRequest.deleteAssets(context, [asset.uri]);
+    console.info('deleteAssets successfully');
+  } catch (err) {
+    console.error(`deleteAssetsDemo failed with error: ${err.code}, ${err.message}`);
   }
 }
 ```
@@ -1304,32 +1564,7 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('deleteDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    if (asset === undefined) {
-      console.error('asset not exist');
-      return;
-    }
-    await phAccessHelper.deleteAssets([asset.uri]);
-    console.info('deleteAssets successfully');
-  } catch (err) {
-    console.error(`deleteAssets failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+See [deleteAssets](#deleteassets)
 
 ## getAlbumIdByBundleName
 
@@ -1371,6 +1606,26 @@ Get the corresponding albumId of a bundleName.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The bundleName is invalid, such as null, undefined and empty. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
+
+**Examples**
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getAlbumIdByBundleName');
+
+  try {
+      let albumId: number = await phAccessHelper.getAlbumIdByBundleName('test.bundleName');
+      console.info('requestFile:: albumId: ', albumId);
+
+      console.info('getAlbumIdByBundleName completed.');
+      console.info(`albumId : ${albumId}`);
+    } catch (err) {
+      console.error(`getAlbumIdByBundleName failed: ${err.code}, ${err.message}`);
+    }
+}
+```
 
 ## getAlbumsByIds
 
@@ -1753,7 +2008,7 @@ Obtains hidden albums based on the specified display mode and retrieval options.
 | --- | --- | --- | --- |
 | mode | [HiddenPhotosDisplayMode](arkts-medialibrary-photoaccesshelper-hiddenphotosdisplaymode-e-sys.md) | Yes | Display mode of hidden albums. |
 | options | FetchOptions | Yes | Retrieval options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1801,42 +2056,6 @@ async function getHiddenAlbumsView(phAccessHelper: photoAccessHelper.PhotoAccess
   });
 }
 ```
-
-## getHiddenAlbums
-
-```TypeScript
-getHiddenAlbums(mode: HiddenPhotosDisplayMode, callback: AsyncCallback<FetchResult<Album>>): void
-```
-
-Obtains hidden albums based on the specified display mode. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
-
-<!--Device-PhotoAccessHelper-getHiddenAlbums(mode: HiddenPhotosDisplayMode, callback: AsyncCallback<FetchResult<Album>>): void--><!--Device-PhotoAccessHelper-getHiddenAlbums(mode: HiddenPhotosDisplayMode, callback: AsyncCallback<FetchResult<Album>>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mode | [HiddenPhotosDisplayMode](arkts-medialibrary-photoaccesshelper-hiddenphotosdisplaymode-e-sys.md) | Yes | Display mode of hidden albums. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000011 | System inner fail. |
-
-**Examples**
 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
@@ -1898,48 +2117,6 @@ async function getHiddenAlbumsView(phAccessHelper: photoAccessHelper.PhotoAccess
 }
 ```
 
-## getHiddenAlbums
-
-```TypeScript
-getHiddenAlbums(mode: HiddenPhotosDisplayMode, options?: FetchOptions): Promise<FetchResult<Album>>
-```
-
-Obtains hidden albums based on the specified display mode and retrieval options. This API uses a promise to return the result.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
-
-<!--Device-PhotoAccessHelper-getHiddenAlbums(mode: HiddenPhotosDisplayMode, options?: FetchOptions): Promise<FetchResult<Album>>--><!--Device-PhotoAccessHelper-getHiddenAlbums(mode: HiddenPhotosDisplayMode, options?: FetchOptions): Promise<FetchResult<Album>>-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mode | [HiddenPhotosDisplayMode](arkts-medialibrary-photoaccesshelper-hiddenphotosdisplaymode-e-sys.md) | Yes | Display mode of hidden albums. |
-| options | FetchOptions | No | Options for retrieving the files. If this parameter is not specified, the files are retrieved based on the display mode of hidden files. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise used to return the result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000011 | System inner fail. |
-
-**Examples**
-
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
 ```TypeScript
@@ -1993,6 +2170,88 @@ async function getHiddenAlbumsView(phAccessHelper: photoAccessHelper.PhotoAccess
   });
 }
 ```
+
+## getHiddenAlbums
+
+```TypeScript
+getHiddenAlbums(mode: HiddenPhotosDisplayMode, callback: AsyncCallback<FetchResult<Album>>): void
+```
+
+Obtains hidden albums based on the specified display mode. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+<!--Device-PhotoAccessHelper-getHiddenAlbums(mode: HiddenPhotosDisplayMode, callback: AsyncCallback<FetchResult<Album>>): void--><!--Device-PhotoAccessHelper-getHiddenAlbums(mode: HiddenPhotosDisplayMode, callback: AsyncCallback<FetchResult<Album>>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [HiddenPhotosDisplayMode](arkts-medialibrary-photoaccesshelper-hiddenphotosdisplaymode-e-sys.md) | Yes | Display mode of hidden albums. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| 14000011 | System inner fail. |
+
+**Examples**
+
+See [getHiddenAlbums](#gethiddenalbums)
+
+## getHiddenAlbums
+
+```TypeScript
+getHiddenAlbums(mode: HiddenPhotosDisplayMode, options?: FetchOptions): Promise<FetchResult<Album>>
+```
+
+Obtains hidden albums based on the specified display mode and retrieval options. This API uses a promise to return the result.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+<!--Device-PhotoAccessHelper-getHiddenAlbums(mode: HiddenPhotosDisplayMode, options?: FetchOptions): Promise<FetchResult<Album>>--><!--Device-PhotoAccessHelper-getHiddenAlbums(mode: HiddenPhotosDisplayMode, options?: FetchOptions): Promise<FetchResult<Album>>-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [HiddenPhotosDisplayMode](arkts-medialibrary-photoaccesshelper-hiddenphotosdisplaymode-e-sys.md) | Yes | Display mode of hidden albums. |
+| options | FetchOptions | No | Options for retrieving the files. If this parameter is not specified, the files are retrieved based on the display mode of hidden files. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| 14000011 | System inner fail. |
+
+**Examples**
+
+See [getHiddenAlbums](#gethiddenalbums)
 
 ## getIndexConstructProgress
 
@@ -2282,7 +2541,7 @@ Obtains the index of an image or video in an album. This API uses an asynchronou
 | photoUri | string | Yes | URI of the media asset whose index is to be obtained. |
 | albumUri | string | Yes | Album URI, which can be an empty string. If it is an empty string, all the media assets in the Gallery are obtained by default. |
 | options | FetchOptions | Yes | Retrieval options. Only one search condition or sorting mode must be set in **predicates**. If no value is set or multiple search criteria or sorting modes are set, the API cannot be called successfully. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the index obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the index obtained. |
 
 **Error codes:**
 
@@ -2336,6 +2595,44 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    console.info('getPhotoIndexDemo');
+    let predicatesForGetAsset: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOp: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicatesForGetAsset
+    };
+    // Obtain the uri of the album.
+    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.SYSTEM, photoAccessHelper.AlbumSubtype.FAVORITE, fetchOp);
+    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    predicates.orderByAsc(photoAccessHelper.PhotoKeys.DATE_MODIFIED);
+    let fetchOptions: photoAccessHelper.FetchOptions = {
+      fetchColumns: [photoAccessHelper.PhotoKeys.DATE_MODIFIED],
+      predicates: predicates
+    };
+    let photoFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOptions);
+    let expectIndex = 1;
+    // Obtain the uri of the second file.
+    let photoAsset: photoAccessHelper.PhotoAsset = await photoFetchResult.getObjectByPosition(expectIndex);
+    phAccessHelper.getPhotoIndex(photoAsset.uri, album.albumUri, fetchOptions).then((index) => {
+      console.info(`getPhotoIndex successfully and index is : ${index}`);
+    }).catch((err: BusinessError) => {
+      console.error(`getPhotoIndex failed; error: ${err.code}, ${err.message}`);
+    });
+  } catch (error) {
+    console.error(`getPhotoIndex failed; error: ${error.code}, ${error.message}`);
+  }
+}
+```
+
 ## getPhotoIndex
 
 ```TypeScript
@@ -2380,43 +2677,7 @@ Obtains the index of an image or video in an album. This API uses a promise to r
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('getPhotoIndexDemo');
-    let predicatesForGetAsset: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOp: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicatesForGetAsset
-    };
-    // Obtain the uri of the album.
-    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.SYSTEM, photoAccessHelper.AlbumSubtype.FAVORITE, fetchOp);
-    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    predicates.orderByAsc(photoAccessHelper.PhotoKeys.DATE_MODIFIED);
-    let fetchOptions: photoAccessHelper.FetchOptions = {
-      fetchColumns: [photoAccessHelper.PhotoKeys.DATE_MODIFIED],
-      predicates: predicates
-    };
-    let photoFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOptions);
-    let expectIndex = 1;
-    // Obtain the uri of the second file.
-    let photoAsset: photoAccessHelper.PhotoAsset = await photoFetchResult.getObjectByPosition(expectIndex);
-    phAccessHelper.getPhotoIndex(photoAsset.uri, album.albumUri, fetchOptions).then((index) => {
-      console.info(`getPhotoIndex successfully and index is : ${index}`);
-    }).catch((err: BusinessError) => {
-      console.error(`getPhotoIndex failed; error: ${err.code}, ${err.message}`);
-    });
-  } catch (error) {
-    console.error(`getPhotoIndex failed; error: ${error.code}, ${error.message}`);
-  }
-}
-```
+See [getPhotoIndex](#getphotoindex)
 
 ## getPreferredCompatibleMode
 
@@ -2685,7 +2946,7 @@ Triggers the execution of an analysis tool. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | [ToolInvokeConfig](arkts-medialibrary-photoaccesshelper-toolinvokeconfig-i-sys.md) | Yes | Configuration for the tool invocation. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AnalysisToolResult](arkts-medialibrary-photoaccesshelper-analysistoolresult-i-sys.md)&gt; | Yes | Callback used to return AnalysisToolResult. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AnalysisToolResult](arkts-medialibrary-photoaccesshelper-analysistoolresult-i-sys.md)&gt; | Yes | Callback used to return AnalysisToolResult. |
 
 **Return value:**
 
@@ -2908,6 +3169,274 @@ modify the default cover order of hidden album.
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: <br>1. Only the system album can be set without lpath. Otherwise, the setting is not supported; <br>2. The orderKey and orderSubKey are not in the specified range; <br>3. The order type must be either descending or ascending. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
 
+## off('hiddenAlbumChange')
+
+```TypeScript
+off(type: 'hiddenAlbumChange', callback?: Callback<AlbumChangeInfos>): void
+```
+
+Unregisters a listener for the **'hiddenAlbumChange'** event to stop monitoring hidden album changes. If multiple listeners are registered, you can unregister a specific listener by specifying **callback**. Alternatively, you can unregister all of them without specifying **callback**.
+
+**Since:** 20
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+<!--Device-PhotoAccessHelper-off(type: 'hiddenAlbumChange', callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-off(type: 'hiddenAlbumChange', callback?: Callback<AlbumChangeInfos>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'hiddenAlbumChange' | Yes | Event type. The value is fixed at **'hiddenAlbumChange'**. After the unregistration is complete, any change to the hidden albums is no longer returned through the callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('hiddenAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange) . If this parameter is left unspecified, all listeners for the **'hiddenAlbumChange'** event are unregistered. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when a hidden album changes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
+
+**Examples**
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData'
+
+let onCallback1 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
+    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+let onCallback2 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
+    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
+  console.info('onHiddenAlbumChangeDemo.');
+
+  try {
+    // Register onCallback1.
+    phAccessHelper.on('hiddenAlbumChange', onCallback1);
+    // Register onCallback2.
+    phAccessHelper.on('hiddenAlbumChange', onCallback2);
+
+    // Unregister the listening of onCallback1.
+    phAccessHelper.off('hiddenAlbumChange', onCallback1);
+  } catch (error) {
+    console.error('onHiddenAlbumChangeDemo failed, errCode is', error);
+  }
+}
+```
+
+## off('hiddenPhotoChange')
+
+```TypeScript
+off(type: 'hiddenPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void
+```
+
+Unregisters a listener for the **'hiddenPhotoChange'** event to stop monitoring hidden media asset changes. If multiple listeners are registered, you can unregister a specific listener by specifying **callback**. Alternatively, you can unregister all of them without specifying **callback**.
+
+**Since:** 20
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+<!--Device-PhotoAccessHelper-off(type: 'hiddenPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-off(type: 'hiddenPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'hiddenPhotoChange' | Yes | Event type. The value is fixed at **'hiddenPhotoChange'**. After the unregistration is complete, any change to the hidden media assets is no longer returned through the callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('hiddenPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange) . If this parameter is left unspecified, all listeners for the **'hiddenPhotoChange'** event are unregistered. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when a hidden media asset changes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
+
+**Examples**
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData'
+
+let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
+    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
+    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
+  console.info('offHiddenPhotoChangeDemo.');
+
+  try {
+    // Register onCallback1.
+    phAccessHelper.on('hiddenPhotoChange', onCallback1);
+    // Register onCallback2.
+    phAccessHelper.on('hiddenPhotoChange', onCallback2);
+
+    // Unregister the listening of onCallback1.
+    phAccessHelper.off('hiddenPhotoChange', onCallback1);
+  } catch (error) {
+    console.error('offHiddenPhotoChange failed, errCode is', error);
+  }
+}
+```
+
+## off('trashedAlbumChange')
+
+```TypeScript
+off(type: 'trashedAlbumChange', callback?: Callback<AlbumChangeInfos>): void
+```
+
+Unregisters a listener for the **'trashedAlbumChange'** event to stop monitoring album changes in the trash. If multiple listeners are registered, you can unregister a specific listener by specifying **callback**. Alternatively, you can unregister all of them without specifying **callback**.
+
+**Since:** 20
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-off(type: 'trashedAlbumChange', callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-off(type: 'trashedAlbumChange', callback?: Callback<AlbumChangeInfos>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'trashedAlbumChange' | Yes | Event type. The value is fixed at **'trashedAlbumChange'**. After the unregistration is complete, any change to the trashed albums is no longer returned through the callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('trashedAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange) . If this parameter is left unspecified, all listeners for the **'trashedAlbumChange'** event are unregistered. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when an album in the trash changes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
+
+**Examples**
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData'
+
+let onCallback1 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
+    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+let onCallback2 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
+    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
+  console.info('onTrashedAlbumChangeDemo.');
+
+  try {
+    // Register onCallback1.
+    phAccessHelper.on('trashedAlbumChange', onCallback1);
+    // Register onCallback2.
+    phAccessHelper.on('trashedAlbumChange', onCallback2);
+
+    // Unregister the listening of onCallback1.
+    phAccessHelper.off('trashedAlbumChange', onCallback1);
+  } catch (error) {
+    console.error('onTrashedAlbumChangeDemo failed, errCode is', error);
+  }
+}
+```
+
+## off('trashedPhotoChange')
+
+```TypeScript
+off(type: 'trashedPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void
+```
+
+Unregisters a listener for the **'trashedPhotoChange'** event to stop monitoring media asset changes in the trash. If multiple listeners are registered, you can unregister a specific listener by specifying **callback**. Alternatively, you can unregister all of them without specifying **callback**.
+
+**Since:** 20
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-off(type: 'trashedPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-off(type: 'trashedPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'trashedPhotoChange' | Yes | Event type. The value is fixed at **'trashedPhotoChange'**. After the unregistration is complete, any change to the trashed media assets is no longer returned through the callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('trashedPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange) . If this parameter is left unspecified, all listeners for the **'trashedPhotoChange'** event are unregistered. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when a trashed media asset changes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
+
+**Examples**
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData'
+
+let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
+    console.info('onCallback1 success, changData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
+    console.info('onCallback2 success, changData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
+  console.info('offTrashedPhotoChangeDemo.');
+
+  try {
+    // Register onCallback1.
+    phAccessHelper.on('trashedPhotoChange', onCallback1);
+    // Register onCallback2.
+    phAccessHelper.on('trashedPhotoChange', onCallback2);
+
+    // Unregister the listening of onCallback1.
+    phAccessHelper.off('trashedPhotoChange', onCallback1);
+  } catch (error) {
+    console.error('offTrashedPhotoChangeDemo failed, errCode is', error);
+  }
+}
+```
+
 ## offAnalysisAlbumChange
 
 ```TypeScript
@@ -2932,7 +3461,7 @@ Cancels the listener for the smart analysis album. If multiple listeners are reg
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Callback used to return the changed smart analysis album information. If this parameter is set, the callback listener specified during [onAnalysisAlbumChange](#onanalysisalbumchange) registration is canceled. If this parameter is not set, all listeners registered by [onAnalysisAlbumChange](#onanalysisalbumchange) are canceled. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when a smart album changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Callback used to return the changed smart analysis album information. If this parameter is set, the callback listener specified during [onAnalysisAlbumChange](#onanalysisalbumchange) registration is canceled. If this parameter is not set, all listeners registered by [onAnalysisAlbumChange](#onanalysisalbumchange) are canceled. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when a smart album changes. |
 
 **Error codes:**
 
@@ -3000,7 +3529,7 @@ Cancels the listening for the media asset changes related to the smart analysis 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Callback used to return the media asset information of the corresponding smart analysis album. If this parameter is set, the callback listener specified during [onAnalysisPhotoChange](#onanalysisphotochange) registration is canceled. If this parameter is not set, all listeners of [onAnalysisPhotoChange](#onanalysisphotochange) are canceled. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when the assets in the smart analysis album change. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Callback used to return the media asset information of the corresponding smart analysis album. If this parameter is set, the callback listener specified during [onAnalysisPhotoChange](#onanalysisphotochange) registration is canceled. If this parameter is not set, all listeners of [onAnalysisPhotoChange](#onanalysisphotochange) are canceled. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when the assets in the smart analysis album change. |
 
 **Error codes:**
 
@@ -3044,6 +3573,39 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 }
 ```
 
+## offhiddenAlbumChange
+
+```TypeScript
+offhiddenAlbumChange(callback?: Callback<AlbumChangeInfos>): void
+```
+
+Unsubscribes from changes of hidden albums.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+<!--Device-PhotoAccessHelper-offhiddenAlbumChange(callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-offhiddenAlbumChange(callback?: Callback<AlbumChangeInfos>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Callback used for unsubscription. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
+
 ## offHiddenPhotoChange
 
 ```TypeScript
@@ -3066,7 +3628,7 @@ Unsubscribes from changes of hidden photos and videos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Callback used for unsubscription. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Callback used for unsubscription. |
 
 **Error codes:**
 
@@ -3099,7 +3661,7 @@ Unsubscribes from changes in the trashed album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Callback used for unsubscription. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Callback used for unsubscription. |
 
 **Error codes:**
 
@@ -3132,7 +3694,7 @@ Unsubscribes from changes of trashed photos and videos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Callback used for unsubscription. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Callback used for unsubscription. |
 
 **Error codes:**
 
@@ -3143,19 +3705,19 @@ Unsubscribes from changes of trashed photos and videos.
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
-## off('hiddenAlbumChange')
+## on('hiddenAlbumChange')
 
 ```TypeScript
-off(type: 'hiddenAlbumChange', callback?: Callback<AlbumChangeInfos>): void
+on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void
 ```
 
-Unregisters a listener for the **'hiddenAlbumChange'** event to stop monitoring hidden album changes. If multiple listeners are registered, you can unregister a specific listener by specifying **callback**. Alternatively, you can unregister all of them without specifying **callback**.
+Registers a listener for the **'hiddenAlbumChange'** event to monitor hidden album changes. This API uses a callback to return the result, and it accepts multiple callbacks.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
 
-<!--Device-PhotoAccessHelper-off(type: 'hiddenAlbumChange', callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-off(type: 'hiddenAlbumChange', callback?: Callback<AlbumChangeInfos>): void-End-->
+<!--Device-PhotoAccessHelper-on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -3165,8 +3727,8 @@ Unregisters a listener for the **'hiddenAlbumChange'** event to stop monitoring 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'hiddenAlbumChange' | Yes | Event type. The value is fixed at **'hiddenAlbumChange'**. After the unregistration is complete, any change to the hidden albums is no longer returned through the callback. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('hiddenAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange) . If this parameter is left unspecified, all listeners for the **'hiddenAlbumChange'** event are unregistered. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when a hidden album changes. |
+| type | 'hiddenAlbumChange' | Yes | Event type. The value is fixed at **'hiddenAlbumChange'**. After the registration is complete, any change to the hidden albums is returned through the callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes | Callback used to return the hidden album information after change, which is [AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md). <br>**NOTE：**<br>You can register multiple listeners using this API, and you can call [off('hiddenAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) to unregister all listeners or a specific one. |
 
 **Error codes:**
 
@@ -3201,28 +3763,25 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
     phAccessHelper.on('hiddenAlbumChange', onCallback1);
     // Register onCallback2.
     phAccessHelper.on('hiddenAlbumChange', onCallback2);
-
-    // Unregister the listening of onCallback1.
-    phAccessHelper.off('hiddenAlbumChange', onCallback1);
   } catch (error) {
     console.error('onHiddenAlbumChangeDemo failed, errCode is', error);
   }
 }
 ```
 
-## off('hiddenPhotoChange')
+## on('hiddenPhotoChange')
 
 ```TypeScript
-off(type: 'hiddenPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void
+on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void
 ```
 
-Unregisters a listener for the **'hiddenPhotoChange'** event to stop monitoring hidden media asset changes. If multiple listeners are registered, you can unregister a specific listener by specifying **callback**. Alternatively, you can unregister all of them without specifying **callback**.
+Registers a listener for the **'hiddenPhotoChange'** event to monitor hidden media asset changes. This API uses a callback to return the result, and it accepts multiple callbacks.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
 
-<!--Device-PhotoAccessHelper-off(type: 'hiddenPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-off(type: 'hiddenPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void-End-->
+<!--Device-PhotoAccessHelper-on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -3232,8 +3791,8 @@ Unregisters a listener for the **'hiddenPhotoChange'** event to stop monitoring 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'hiddenPhotoChange' | Yes | Event type. The value is fixed at **'hiddenPhotoChange'**. After the unregistration is complete, any change to the hidden media assets is no longer returned through the callback. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('hiddenPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange) . If this parameter is left unspecified, all listeners for the **'hiddenPhotoChange'** event are unregistered. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when a hidden media asset changes. |
+| type | 'hiddenPhotoChange' | Yes | Event type. The value is fixed at **'hiddenPhotoChange'**. After the registration is complete, any change to the hidden media assets is returned through the callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes | Callback used to return the hidden media asset information after change, which is [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md). <br>**NOTE：**<br>You can register multiple listeners using this API, and you can call [off('hiddenPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) to unregister all listeners or a specific one. |
 
 **Error codes:**
 
@@ -3261,35 +3820,32 @@ let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
 }
 
 async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
-  console.info('offHiddenPhotoChangeDemo.');
+  console.info('onHiddenPhotoChangeDemo.');
 
   try {
     // Register onCallback1.
     phAccessHelper.on('hiddenPhotoChange', onCallback1);
     // Register onCallback2.
     phAccessHelper.on('hiddenPhotoChange', onCallback2);
-
-    // Unregister the listening of onCallback1.
-    phAccessHelper.off('hiddenPhotoChange', onCallback1);
   } catch (error) {
-    console.error('offHiddenPhotoChange failed, errCode is', error);
+    console.error('onHiddenPhotoChange failed, errCode is', error);
   }
 }
 ```
 
-## off('trashedAlbumChange')
+## on('trashedAlbumChange')
 
 ```TypeScript
-off(type: 'trashedAlbumChange', callback?: Callback<AlbumChangeInfos>): void
+on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void
 ```
 
-Unregisters a listener for the **'trashedAlbumChange'** event to stop monitoring album changes in the trash. If multiple listeners are registered, you can unregister a specific listener by specifying **callback**. Alternatively, you can unregister all of them without specifying **callback**.
+Registers a listener for the **'trashedAlbumChange'** event to monitor album changes in the trash. This API uses a callback to return the result, and it accepts multiple callbacks.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
-<!--Device-PhotoAccessHelper-off(type: 'trashedAlbumChange', callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-off(type: 'trashedAlbumChange', callback?: Callback<AlbumChangeInfos>): void-End-->
+<!--Device-PhotoAccessHelper-on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -3299,8 +3855,8 @@ Unregisters a listener for the **'trashedAlbumChange'** event to stop monitoring
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'trashedAlbumChange' | Yes | Event type. The value is fixed at **'trashedAlbumChange'**. After the unregistration is complete, any change to the trashed albums is no longer returned through the callback. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('trashedAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange) . If this parameter is left unspecified, all listeners for the **'trashedAlbumChange'** event are unregistered. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when an album in the trash changes. |
+| type | 'trashedAlbumChange' | Yes | Event type. The value is fixed at **'trashedAlbumChange'**. After the registration is complete, any change to the trashed albums is returned through the callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes | Callback used to return the trashed album information after change, which is [AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md). <br>**NOTE：**<br>You can register multiple listeners using this API, and you can call [off('trashedAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) to unregister all listeners or a specific one. |
 
 **Error codes:**
 
@@ -3335,28 +3891,25 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
     phAccessHelper.on('trashedAlbumChange', onCallback1);
     // Register onCallback2.
     phAccessHelper.on('trashedAlbumChange', onCallback2);
-
-    // Unregister the listening of onCallback1.
-    phAccessHelper.off('trashedAlbumChange', onCallback1);
   } catch (error) {
     console.error('onTrashedAlbumChangeDemo failed, errCode is', error);
   }
 }
 ```
 
-## off('trashedPhotoChange')
+## on('trashedPhotoChange')
 
 ```TypeScript
-off(type: 'trashedPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void
+on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void
 ```
 
-Unregisters a listener for the **'trashedPhotoChange'** event to stop monitoring media asset changes in the trash. If multiple listeners are registered, you can unregister a specific listener by specifying **callback**. Alternatively, you can unregister all of them without specifying **callback**.
+Registers a listener for the **'trashedPhotoChange'** event to monitor media asset changes in the trash. This API uses a callback to return the result, and it accepts multiple callbacks.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
-<!--Device-PhotoAccessHelper-off(type: 'trashedPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-off(type: 'trashedPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void-End-->
+<!--Device-PhotoAccessHelper-on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -3366,8 +3919,8 @@ Unregisters a listener for the **'trashedPhotoChange'** event to stop monitoring
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'trashedPhotoChange' | Yes | Event type. The value is fixed at **'trashedPhotoChange'**. After the unregistration is complete, any change to the trashed media assets is no longer returned through the callback. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('trashedPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onphotochange) . If this parameter is left unspecified, all listeners for the **'trashedPhotoChange'** event are unregistered. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when a trashed media asset changes. |
+| type | 'trashedPhotoChange' | Yes | Event type. The value is fixed at **'trashedPhotoChange'**. After the registration is complete, any change to the trashed media assets is returned through the callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes | Callback used to return the trashed media asset information after change, which is [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md). <br>**NOTE：**<br>You can register multiple listeners using this API, and you can call [off('trashedPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) to unregister all listeners or a specific one. |
 
 **Error codes:**
 
@@ -3395,54 +3948,18 @@ let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
 }
 
 async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
-  console.info('offTrashedPhotoChangeDemo.');
+  console.info('onTrashedPhotoChangeDemo.');
 
   try {
     // Register onCallback1.
     phAccessHelper.on('trashedPhotoChange', onCallback1);
     // Register onCallback2.
     phAccessHelper.on('trashedPhotoChange', onCallback2);
-
-    // Unregister the listening of onCallback1.
-    phAccessHelper.off('trashedPhotoChange', onCallback1);
   } catch (error) {
-    console.error('offTrashedPhotoChangeDemo failed, errCode is', error);
+    console.error('onTrashedPhotoChangeDemo failed, errCode is', error);
   }
 }
 ```
-
-## offhiddenAlbumChange
-
-```TypeScript
-offhiddenAlbumChange(callback?: Callback<AlbumChangeInfos>): void
-```
-
-Unsubscribes from changes of hidden albums.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
-
-<!--Device-PhotoAccessHelper-offhiddenAlbumChange(callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-offhiddenAlbumChange(callback?: Callback<AlbumChangeInfos>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Callback used for unsubscription. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## onAnalysisAlbumChange
 
@@ -3468,7 +3985,7 @@ Listens for the smart analysis album and returns the album change result using a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes | Callback used to return the [AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md) about the smart analysis album. <br>**NOTE：**<br>You can register multiple listeners using this API, and you can call [offAnalysisAlbumChange](#offanalysisalbumchange) to unregister all listeners or a specific one. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes | Callback used to return the [AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md) about the smart analysis album. <br>**NOTE：**<br>You can register multiple listeners using this API, and you can call [offAnalysisAlbumChange](#offanalysisalbumchange) to unregister all listeners or a specific one. |
 
 **Error codes:**
 
@@ -3533,7 +4050,7 @@ Listens for the changes of media assets associated with the smart analysis album
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes | Callback used to return the [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md) of the corresponding smart analysis album. <br>**NOTE：**<br>You can register multiple listeners using this API, and you can call [offAnalysisPhotoChange](#offanalysisphotochange) to unregister all listeners or a specific one. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes | Callback used to return the [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md) of the corresponding smart analysis album. <br>**NOTE：**<br>You can register multiple listeners using this API, and you can call [offAnalysisPhotoChange](#offanalysisphotochange) to unregister all listeners or a specific one. |
 
 **Error codes:**
 
@@ -3596,7 +4113,7 @@ Subscribes to changes of hidden albums.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes | Callback used to notify the application of the changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes | Callback used to notify the application of the changes. |
 
 **Error codes:**
 
@@ -3629,7 +4146,7 @@ Subscribes to changes of hidden photos and videos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes | Callback used to notify the application of the changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes | Callback used to notify the application of the changes. |
 
 **Error codes:**
 
@@ -3662,7 +4179,7 @@ Subscribes to changes of the trashed album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes | Callback used to notify the application of the changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes | Callback used to notify the application of the changes. |
 
 **Error codes:**
 
@@ -3695,7 +4212,7 @@ Subscribes to changes of trashed photos and videos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes | Callback used to notify the application of the changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes | Callback used to notify the application of the changes. |
 
 **Error codes:**
 
@@ -3705,262 +4222,6 @@ Subscribes to changes of trashed photos and videos.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
-
-## on('hiddenAlbumChange')
-
-```TypeScript
-on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void
-```
-
-Registers a listener for the **'hiddenAlbumChange'** event to monitor hidden album changes. This API uses a callback to return the result, and it accepts multiple callbacks.
-
-**Since:** 20
-
-**Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
-
-<!--Device-PhotoAccessHelper-on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'hiddenAlbumChange' | Yes | Event type. The value is fixed at **'hiddenAlbumChange'**. After the registration is complete, any change to the hidden albums is returned through the callback. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes | Callback used to return the hidden album information after change, which is [AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md). <br>**NOTE：**<br>You can register multiple listeners using this API, and you can call [off('hiddenAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) to unregister all listeners or a specific one. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
-
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
-  console.info('onHiddenAlbumChangeDemo.');
-
-  try {
-    // Register onCallback1.
-    phAccessHelper.on('hiddenAlbumChange', onCallback1);
-    // Register onCallback2.
-    phAccessHelper.on('hiddenAlbumChange', onCallback2);
-  } catch (error) {
-    console.error('onHiddenAlbumChangeDemo failed, errCode is', error);
-  }
-}
-```
-
-## on('hiddenPhotoChange')
-
-```TypeScript
-on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void
-```
-
-Registers a listener for the **'hiddenPhotoChange'** event to monitor hidden media asset changes. This API uses a callback to return the result, and it accepts multiple callbacks.
-
-**Since:** 20
-
-**Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
-
-<!--Device-PhotoAccessHelper-on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'hiddenPhotoChange' | Yes | Event type. The value is fixed at **'hiddenPhotoChange'**. After the registration is complete, any change to the hidden media assets is returned through the callback. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes | Callback used to return the hidden media asset information after change, which is [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md). <br>**NOTE：**<br>You can register multiple listeners using this API, and you can call [off('hiddenPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) to unregister all listeners or a specific one. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
-
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
-  console.info('onHiddenPhotoChangeDemo.');
-
-  try {
-    // Register onCallback1.
-    phAccessHelper.on('hiddenPhotoChange', onCallback1);
-    // Register onCallback2.
-    phAccessHelper.on('hiddenPhotoChange', onCallback2);
-  } catch (error) {
-    console.error('onHiddenPhotoChange failed, errCode is', error);
-  }
-}
-```
-
-## on('trashedAlbumChange')
-
-```TypeScript
-on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void
-```
-
-Registers a listener for the **'trashedAlbumChange'** event to monitor album changes in the trash. This API uses a callback to return the result, and it accepts multiple callbacks.
-
-**Since:** 20
-
-**Required permissions:** ohos.permission.READ_IMAGEVIDEO
-
-<!--Device-PhotoAccessHelper-on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'trashedAlbumChange' | Yes | Event type. The value is fixed at **'trashedAlbumChange'**. After the registration is complete, any change to the trashed albums is returned through the callback. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes | Callback used to return the trashed album information after change, which is [AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md). <br>**NOTE：**<br>You can register multiple listeners using this API, and you can call [off('trashedAlbumChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) to unregister all listeners or a specific one. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
-
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
-  console.info('onTrashedAlbumChangeDemo.');
-
-  try {
-    // Register onCallback1.
-    phAccessHelper.on('trashedAlbumChange', onCallback1);
-    // Register onCallback2.
-    phAccessHelper.on('trashedAlbumChange', onCallback2);
-  } catch (error) {
-    console.error('onTrashedAlbumChangeDemo failed, errCode is', error);
-  }
-}
-```
-
-## on('trashedPhotoChange')
-
-```TypeScript
-on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void
-```
-
-Registers a listener for the **'trashedPhotoChange'** event to monitor media asset changes in the trash. This API uses a callback to return the result, and it accepts multiple callbacks.
-
-**Since:** 20
-
-**Required permissions:** ohos.permission.READ_IMAGEVIDEO
-
-<!--Device-PhotoAccessHelper-on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'trashedPhotoChange' | Yes | Event type. The value is fixed at **'trashedPhotoChange'**. After the registration is complete, any change to the trashed media assets is returned through the callback. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes | Callback used to return the trashed media asset information after change, which is [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md). <br>**NOTE：**<br>You can register multiple listeners using this API, and you can call [off('trashedPhotoChange')](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offphotochange) to unregister all listeners or a specific one. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
-
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback1 success, changData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback2 success, changData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
-  console.info('onTrashedPhotoChangeDemo.');
-
-  try {
-    // Register onCallback1.
-    phAccessHelper.on('trashedPhotoChange', onCallback1);
-    // Register onCallback2.
-    phAccessHelper.on('trashedPhotoChange', onCallback2);
-  } catch (error) {
-    console.error('onTrashedPhotoChangeDemo failed, errCode is', error);
-  }
-}
-```
 
 ## query
 
@@ -4085,7 +4346,7 @@ Removes the Gallery widget information bound to a single image from the database
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | FormInfo | Yes | Information about the Gallery widget to save, which includes the ID of the widget and the URI of the image bound to the widget. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -4117,6 +4378,27 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     } else {
       console.error(`removeFormInfo fail with error: ${err.code}, ${err.message}`);
     }
+  });
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('removeFormInfoDemo');
+  let info: photoAccessHelper.FormInfo = {
+    // formId is a string consisting of only digits. When removing a widget, leave uri empty.
+    formId: "20230116123",
+    uri: "",
+  }
+
+  phAccessHelper.removeFormInfo(info).then(() => {
+    console.info('removeFormInfo successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`removeFormInfo failed with error: ${err.code}, ${err.message}`);
   });
 }
 ```
@@ -4162,26 +4444,7 @@ Removes the Gallery widget information bound to a single image from the database
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('removeFormInfoDemo');
-  let info: photoAccessHelper.FormInfo = {
-    // formId is a string consisting of only digits. When removing a widget, leave uri empty.
-    formId: "20230116123",
-    uri: "",
-  }
-
-  phAccessHelper.removeFormInfo(info).then(() => {
-    console.info('removeFormInfo successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`removeFormInfo failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
+See [removeFormInfo](#removeforminfo)
 
 ## removeGalleryFormInfo
 
@@ -4265,7 +4528,7 @@ Saves the Gallery widget information bound to a single image to the database. Th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | FormInfo | Yes | Information about the Gallery widget to save, which includes the ID of the widget and the URI of the image bound to the widget. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -4306,6 +4569,36 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     } else {
       console.error(`saveFormInfo fail with error: ${err.code}, ${err.message}`);
     }
+  });
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('saveFormInfoDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+  let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+
+  let info: photoAccessHelper.FormInfo = {
+    // formId is a string consisting of only digits. uri indicates the URI of the image in Gallery. If there is no image in Gallery, uri must be an empty string.
+    formId: "20230116123",
+    uri: photoAsset.uri,
+  }
+
+  phAccessHelper.saveFormInfo(info).then(() => {
+    console.info('saveFormInfo successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`saveFormInfo failed with error: ${err.code}, ${err.message}`);
   });
 }
 ```
@@ -4351,35 +4644,7 @@ Saves the Gallery widget information bound to a single image to the database. Th
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('saveFormInfoDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-  let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-
-  let info: photoAccessHelper.FormInfo = {
-    // formId is a string consisting of only digits. uri indicates the URI of the image in Gallery. If there is no image in Gallery, uri must be an empty string.
-    formId: "20230116123",
-    uri: photoAsset.uri,
-  }
-
-  phAccessHelper.saveFormInfo(info).then(() => {
-    console.info('saveFormInfo successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`saveFormInfo failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
+See [saveFormInfo](#saveforminfo)
 
 ## saveGalleryFormInfo
 
@@ -4697,7 +4962,7 @@ Starts asynchronous asset analysis. This API uses an asynchronous callback to re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | [AnalysisConfig](arkts-medialibrary-photoaccesshelper-analysisconfig-i-sys.md) | Yes | Asset analysis configuration. The **uris** in the **config** parameter are obtained from the [PhotoAsset](arkts-file-photoaccesshelper.md) object. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AnalysisResult](arkts-medialibrary-photoaccesshelper-analysisresult-i-sys.md)&gt; | Yes | Callback used to return the asset analysis result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AnalysisResult](arkts-medialibrary-photoaccesshelper-analysisresult-i-sys.md)&gt; | Yes | Callback used to return the asset analysis result. |
 
 **Return value:**
 
@@ -4740,7 +5005,7 @@ Before using this API, you are advised to call [canPerformDeepOptimizeSpace()] [
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeepOptimizeSpaceProgress](arkts-medialibrary-photoaccesshelper-deepoptimizespaceprogress-i-sys.md)&gt; | No | Callback used to return the result `DeepOptimizeSpaceProgress` argument info, Default value: null. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeepOptimizeSpaceProgress](arkts-medialibrary-photoaccesshelper-deepoptimizespaceprogress-i-sys.md)&gt; | No | Callback used to return the result `DeepOptimizeSpaceProgress` argument info, Default value: null. |
 
 **Return value:**
 
@@ -4780,7 +5045,7 @@ Generates a thumbnail based on the specified rule.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | predicate | dataSharePredicates.DataSharePredicates | Yes | Rule for generating the thumbnail. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, the notification task ends, and **err** is undefined. If the task fails, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, the notification task ends, and **err** is undefined. If the task fails, **err** is an error object. |
 
 **Return value:**
 
@@ -4820,51 +5085,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-## startThumbnailCreationTask
-
-```TypeScript
-startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<void>, response: AsyncCallback<int>): int
-```
-
-Generates a thumbnail based on the specified rule. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Required permissions:** ohos.permission.READ_IMAGEVIDEO
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PhotoAccessHelper-startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<void>, response: AsyncCallback<int>): int--><!--Device-PhotoAccessHelper-startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<void>, response: AsyncCallback<int>): int-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| predicate | dataSharePredicates.DataSharePredicates | Yes | Predicates for generating a thumbnail. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to notify that the task is complete when the operation is successful. |
-| response | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return whether there are ungenerated thumbnails. If **1** is returned, all thumbnails have been generated. If **0** is returned, some thumbnails have not been generated. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| int | Promise used to return the ID of the thumbnail generation task. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The predicates invalid. |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
-
-**Examples**
-
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 
 ```TypeScript
@@ -4892,6 +5112,53 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+## startThumbnailCreationTask
+
+```TypeScript
+startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<void>, response: AsyncCallback<int>): int
+```
+
+Generates a thumbnail based on the specified rule. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PhotoAccessHelper-startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<void>, response: AsyncCallback<int>): int--><!--Device-PhotoAccessHelper-startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<void>, response: AsyncCallback<int>): int-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| predicate | dataSharePredicates.DataSharePredicates | Yes | Predicates for generating a thumbnail. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to notify that the task is complete when the operation is successful. |
+| response | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return whether there are ungenerated thumbnails. If **1** is returned, all thumbnails have been generated. If **0** is returned, some thumbnails have not been generated. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| int | Promise used to return the ID of the thumbnail generation task. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The predicates invalid. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
+
+**Examples**
+
+See [startThumbnailCreationTask](#startthumbnailcreationtask)
 
 ## stopAssetAnalysis
 

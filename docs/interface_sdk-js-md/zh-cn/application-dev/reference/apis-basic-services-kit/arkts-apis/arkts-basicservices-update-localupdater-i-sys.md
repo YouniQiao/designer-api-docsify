@@ -88,6 +88,26 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const upgradeFiles: Array<update.UpgradeFile> = [{
+  fileType: update.ComponentType.OTA, // OTA包
+  filePath: "path" // 本地升级包路径
+}];
+
+try {
+  let localUpdater = update.getLocalUpdater();
+  localUpdater.applyNewVersion(upgradeFiles).then(() => {
+    console.info(`applyNewVersion success`);
+  }).catch((err: BusinessError) => {
+    console.error(`applyNewVersion error ${JSON.stringify(err)}`);
+  });
+} catch(error) {
+  console.error(`Fail to get localUpdater error: ${error}`);
+}
+```
+
 ## applyNewVersion
 
 ```TypeScript
@@ -139,25 +159,7 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const upgradeFiles: Array<update.UpgradeFile> = [{
-  fileType: update.ComponentType.OTA, // OTA包
-  filePath: "path" // 本地升级包路径
-}];
-
-try {
-  let localUpdater = update.getLocalUpdater();
-  localUpdater.applyNewVersion(upgradeFiles).then(() => {
-    console.info(`applyNewVersion success`);
-  }).catch((err: BusinessError) => {
-    console.error(`applyNewVersion error ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get localUpdater error: ${error}`);
-}
-```
+参见 [applyNewVersion](#applynewversion)
 
 ## off_EventClassifyInfo
 
@@ -348,6 +350,26 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const upgradeFile: update.UpgradeFile = {
+  fileType: update.ComponentType.OTA, // OTA包
+  filePath: "path" // 本地升级包路径
+};
+
+try {
+  let localUpdater = update.getLocalUpdater();
+  localUpdater.verifyUpgradePackage(upgradeFile, "certFilePath").then(() => {
+    console.info(`verifyUpgradePackage success`);
+  }).catch((err: BusinessError) => {
+    console.error(`verifyUpgradePackage error ${JSON.stringify(err)}`);
+  });
+} catch(error) {
+  console.error(`Fail to get localUpdater error: ${error}`);
+}
+```
+
 ## verifyUpgradePackage
 
 ```TypeScript
@@ -400,23 +422,5 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const upgradeFile: update.UpgradeFile = {
-  fileType: update.ComponentType.OTA, // OTA包
-  filePath: "path" // 本地升级包路径
-};
-
-try {
-  let localUpdater = update.getLocalUpdater();
-  localUpdater.verifyUpgradePackage(upgradeFile, "certFilePath").then(() => {
-    console.info(`verifyUpgradePackage success`);
-  }).catch((err: BusinessError) => {
-    console.error(`verifyUpgradePackage error ${JSON.stringify(err)}`);
-  });
-} catch(error) {
-  console.error(`Fail to get localUpdater error: ${error}`);
-}
-```
+参见 [verifyUpgradePackage](#verifyupgradepackage)
 

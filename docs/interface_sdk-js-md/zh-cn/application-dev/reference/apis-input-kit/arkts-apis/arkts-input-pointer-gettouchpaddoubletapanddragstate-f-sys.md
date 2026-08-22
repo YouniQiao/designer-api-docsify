@@ -100,37 +100,6 @@ struct Index {
 }
 ```
 
-
-## getTouchpadDoubleTapAndDragState
-
-```TypeScript
-function getTouchpadDoubleTapAndDragState(): Promise<boolean>
-```
-
-获取触控板双击拖拽开关的开启状态，使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-pointer-function getTouchpadDoubleTapAndDragState(): Promise<boolean>--><!--Device-pointer-function getTouchpadDoubleTapAndDragState(): Promise<boolean>-End-->
-
-**系统能力：** SystemCapability.MultimodalInput.Input.Pointer
-
-**系统接口：** 此接口为系统接口。
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示触控板双击拖拽功能开启；返回false表示触控板双击拖拽功能关闭。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
-
-**示例**
-
 ArkTS-Dyn示例:
 
 ```TypeScript
@@ -187,4 +156,37 @@ struct Index {
   }
 }
 ```
+
+
+## getTouchpadDoubleTapAndDragState
+
+```TypeScript
+function getTouchpadDoubleTapAndDragState(): Promise<boolean>
+```
+
+获取触控板双击拖拽开关的开启状态，使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-pointer-function getTouchpadDoubleTapAndDragState(): Promise<boolean>--><!--Device-pointer-function getTouchpadDoubleTapAndDragState(): Promise<boolean>-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Pointer
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示触控板双击拖拽功能开启；返回false表示触控板双击拖拽功能关闭。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
+
+**示例**
+
+参见 [getTouchpadDoubleTapAndDragState](#gettouchpaddoubletapanddragstate)
 

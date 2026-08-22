@@ -68,3 +68,68 @@ static offset(point: common2D.Point, dx: double, dy: double): void
 | dx | double | 是 | x轴方向平移距离，正数表示往x轴正方向平移，负数表示往x轴负方向平移，该参数为浮点数。单位为物理像素px。 |
 | dy | double | 是 | y轴方向平移距离，正数表示往y轴正方向平移，负数表示往y轴负方向平移，该参数为浮点数。单位为物理像素px。 |
 
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+const path = new drawing.Path();
+path.moveTo(200, 200);
+path.lineTo(300, 300);
+const dstPath = path.offset(200, 200);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(0, 0, 20, 20);
+drawing.RectUtils.offset(rect, 10, 20);
+console.info('rect.left: ', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { drawing, common2D } from '@kit.ArkGraphics2D';
+let rect = drawing.RectUtils.makeLtrb(0.0, 0.0, 20.0, 20.0);
+if (rect == undefined) {
+    return;
+}
+drawing.RectUtils.offset(rect, 10, 20);
+console.info('rect.left:', rect.left);
+console.info('rect.top: ', rect.top);
+console.info('rect.right: ', rect.right);
+console.info('rect.bottom: ', rect.bottom);
+```
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const pen = new drawing.Pen();
+    pen.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
+    pen.setStrokeWidth(10.0);
+    canvas.attachPen(pen);
+    let region = new drawing.Region();
+    region.setRect(100, 100, 400, 400);
+    region.offset(10, 20);
+    canvas.drawPoint(200.0, 200.0);
+    canvas.drawRegion(region);
+    canvas.detachPen();
+  }
+}
+```
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let roundRect : drawing.RoundRect = new drawing.RoundRect({ left: 0, top: 0, right: 300, bottom: 300 }, 50, 50);
+roundRect.offset(100, 100);
+```
+

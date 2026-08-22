@@ -20,5 +20,5 @@ Defines the callback type used in UIObserver to monitor specific gesture trigger
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [GestureTriggerInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkuiuicontext-gesturetriggerinfo-i.md) | Yes | the gesture details triggered with user interaction |
+| info | [GestureTriggerInfo](arkts-arkui-uicontext-gesturetriggerinfo-i.md) | Yes | the gesture details triggered with user interaction |
 

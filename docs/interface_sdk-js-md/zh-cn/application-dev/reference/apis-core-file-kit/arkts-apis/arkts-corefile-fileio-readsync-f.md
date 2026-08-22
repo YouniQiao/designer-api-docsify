@@ -45,3 +45,32 @@ declare function readSync(
 | --- | --- |
 | number | 实际读取的长度，单位为Byte。 |
 
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath, 0o2);
+let buf = new ArrayBuffer(4096);
+let num = fileio.readSync(fd, buf);
+```
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let ss = fileio.createStreamSync(filePath, "r+");
+class Option {
+  offset: number = 0;
+  length: number = 4096;
+  position: number = 0;
+}
+let option = new Option();
+option.offset = 1;
+option.length = 5;
+option.position = 5;
+let buf = new ArrayBuffer(4096)
+let num = ss.readSync(buf, option);
+```
+
+```TypeScript
+let dirent = dir.readSync();
+```
+

@@ -35,6 +35,25 @@ declare function stat(path: string): Promise<Stat>
 | --- | --- |
 | Promise&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | Promise对象。返回文件的具体信息。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "test.txt";
+fileio.stat(filePath).then((stat: fileio.Stat) => {
+  console.info("getFileInfo succeed, the size of file is " + stat.size);
+}).catch((err: BusinessError) => {
+  console.error("getFileInfo failed with error:" + err);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+fileio.stat(pathDir, (err: BusinessError, stat: fileio.Stat) => {
+  // example code in Stat
+});
+```
+
 
 ## stat
 
@@ -60,4 +79,8 @@ declare function stat(path: string, callback: AsyncCallback<Stat>): void
 | --- | --- | --- | --- |
 | path | string | 是 | 待获取文件的应用沙箱路径。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | 是 | 异步获取文件的信息之后的回调。 |
+
+**示例**
+
+参见 [stat](#stat)
 

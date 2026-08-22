@@ -30,7 +30,7 @@ Sets the screen to extended mode. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | Array&lt;[ExpandOption](arkts-arkui-screen-expandoption-i-sys.md)&gt; | Yes | Parameters for expanding the screen. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the group ID of the extended screens, where the ID is an integer. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the group ID of the extended screens, where the ID is an integer. |
 
 **Error codes:**
 
@@ -62,6 +62,25 @@ screen.makeExpand(expandOptionArray, (err: BusinessError, data: number) => {
   }
   groupId = data;
   console.info(`Succeeded in expanding the screen. Data: ${data}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class ExpandOption {
+  screenId: number = 0;
+  startX: number = 0;
+  startY: number = 0;
+}
+let mainScreenOption: ExpandOption = { screenId: 0, startX: 0, startY: 0 };
+let otherScreenOption: ExpandOption = { screenId: 1, startX: 1080, startY: 0 };
+let expandOptionArray : ExpandOption[] = [ mainScreenOption, otherScreenOption ];
+screen.makeExpand(expandOptionArray).then((
+  data: number) => {
+  console.info(`Succeeded in expanding the screen. Data: ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to expand the screen. Code:${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -106,22 +125,5 @@ Sets the screen to extended mode. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class ExpandOption {
-  screenId: number = 0;
-  startX: number = 0;
-  startY: number = 0;
-}
-let mainScreenOption: ExpandOption = { screenId: 0, startX: 0, startY: 0 };
-let otherScreenOption: ExpandOption = { screenId: 1, startX: 1080, startY: 0 };
-let expandOptionArray : ExpandOption[] = [ mainScreenOption, otherScreenOption ];
-screen.makeExpand(expandOptionArray).then((
-  data: number) => {
-  console.info(`Succeeded in expanding the screen. Data: ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to expand the screen. Code:${err.code}, message is ${err.message}`);
-});
-```
+See [makeExpand](#makeexpand)
 

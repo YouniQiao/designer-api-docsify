@@ -56,6 +56,52 @@ Creates a directory. This API uses a promise to return the result.
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let dirPath = pathDir + "/testDir";
+fs.mkdir(dirPath).then(() => {
+  console.info("mkdir succeed");
+}).catch((err: BusinessError) => {
+  console.error("mkdir failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let dirPath = pathDir + "/testDir1/testDir2/testDir3";
+fs.mkdir(dirPath, true).then(() => {
+  console.info("mkdir succeed");
+}).catch((err: BusinessError) => {
+  console.error("mkdir failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let dirPath = pathDir + "/testDir";
+fs.mkdir(dirPath, (err: BusinessError) => {
+  if (err) {
+    console.error("mkdir failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("mkdir succeed");
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let dirPath = pathDir + "/testDir1/testDir2/testDir3";
+fs.mkdir(dirPath, true, (err: BusinessError) => {
+  if (err) {
+    console.error("mkdir failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("mkdir succeed");
+  }
+});
+```
+
 
 ## mkdir
 
@@ -106,6 +152,10 @@ Creates a directory. This API uses a promise to return the result. The value **t
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**Examples**
+
+See [mkdir](#mkdir)
+
 
 ## mkdir
 
@@ -128,7 +178,7 @@ Creates a directory. This API uses an asynchronous callback to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -149,6 +199,10 @@ Creates a directory. This API uses an asynchronous callback to return the result
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [mkdir](#mkdir)
 
 
 ## mkdir
@@ -173,7 +227,7 @@ Creates a directory. This API uses an asynchronous callback to return the result
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
 | recursion | boolean | Yes | Whether to create a directory recursively.<br> The value **true** means to create a directory recursively. The value **false** means to create a single-level directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -194,4 +248,8 @@ Creates a directory. This API uses an asynchronous callback to return the result
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [mkdir](#mkdir)
 

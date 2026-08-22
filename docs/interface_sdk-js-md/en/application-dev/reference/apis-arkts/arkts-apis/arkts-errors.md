@@ -54,6 +54,6 @@ Copyright (c) 2021-2026 Huawei Device Co., Ltd.
 | [StringIndexOutOfBoundsError(Defines the commonly used Errors for ArkTS)](arkts-arkts-errors-stringindexoutofboundserror-c.md) | Represents error that is thrown when provided string index is out of bounds |
 | [SyntaxError(Defines the commonly used Errors for ArkTS)](arkts-arkts-errors-syntaxerror-c.md) | Represents an error that occurs when trying to interpret syntactically invalid code |
 | [TypeError(Defines the commonly used Errors for ArkTS)](arkts-arkts-errors-typeerror-c.md) | Represents an error that occurs when an operation could not be performed, typically (but not exclusively) when a value is not of the expected type |
-| [URIError(Defines the commonly used Errors for ArkTS)](arkts-arkts-errors-urierror-c.md) | Represents an error that occurs when a global URI handling function was used in a wrong way |
 | [UncaughtExceptionError(Defines the commonly used Errors for ArkTS)](arkts-arkts-errors-uncaughtexceptionerror-c.md) | Represents an error that occurs when exception is thrown and not caught |
+| [URIError(Defines the commonly used Errors for ArkTS)](arkts-arkts-errors-urierror-c.md) | Represents an error that occurs when a global URI handling function was used in a wrong way |
 

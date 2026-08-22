@@ -46,6 +46,33 @@ Adds an event listener to the worker.
 **Examples**
 
 ```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+workerInstance.addEventListener("alert", () => {
+  console.info("alert listener callback");
+})
+
+// Execute the callback of the alert type.
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
+```
+
+```TypeScript
+// worker.ets
+import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
+
+const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
+
+workerPort.onmessage = (event: MessageEvents) => {
+  workerPort.addEventListener("alert", () => {
+    console.info("alert listener callback");
+  })
+};
+```
+
+```TypeScript
 // worker.ets
 import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
 
@@ -87,6 +114,36 @@ Dispatches the event defined for the worker.
 | boolean |  |
 
 **Examples**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+workerInstance.addEventListener("alert", () => {
+  console.info("alert listener callback");
+})
+
+let result: Boolean = workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
+
+console.info("dispatchEvent result is: ", result);
+```
+
+```TypeScript
+// worker.ets
+import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
+
+const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
+
+workerPort.onmessage = (event: MessageEvents) => {
+  workerPort.addEventListener("alert", () => {
+    console.info("alert listener callback");
+  });
+
+  workerPort.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
+};
+```
 
 ```TypeScript
 // worker.ets
@@ -150,6 +207,32 @@ Removes all event listeners for the worker.
 **Examples**
 
 ```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+workerInstance.addEventListener("alert", () => {
+    console.info("alert listener callback");
+})
+workerInstance.removeAllListener();
+```
+
+```TypeScript
+// worker.ets
+import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
+
+const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
+
+workerPort.onmessage = (event: MessageEvents) => {
+  workerPort.addEventListener("alert", () => {
+    console.info("alert listener callback");
+  });
+
+  workerPort.removeAllListener();
+};
+```
+
+```TypeScript
 // worker.ets
 import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
 
@@ -188,6 +271,36 @@ Removes an event defined for the worker.
 | callback | [EventListener](arkts-arkts-worker-eventlistener-i.md) | No | Callback of the event listener to remove. |
 
 **Examples**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
+
+workerInstance.addEventListener("alert", () => {
+  console.info("alert listener callback");
+})
+
+workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
+
+workerInstance.removeEventListener("alert");
+```
+
+```TypeScript
+// worker.ets
+import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
+
+const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
+
+workerPort.onmessage = (event: MessageEvents) => {
+  workerPort.addEventListener("alert", () => {
+    console.info("alert listener callback");
+  });
+
+  workerPort.removeEventListener("alert");
+};
+```
 
 ```TypeScript
 // worker.ets

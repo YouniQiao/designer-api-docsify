@@ -20,7 +20,7 @@ The callback of enterPhotoBrowser event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| photoBrowserInfo | [PhotoBrowserInfo](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-filephotopickercomponent-photobrowserinfo-c.md) | Yes |  |
+| photoBrowserInfo | [PhotoBrowserInfo](arkts-file-photopickercomponent-photobrowserinfo-c.md) | Yes |  |
 
 **Return value:**
 

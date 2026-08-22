@@ -50,6 +50,17 @@ sms.getImsShortMessageFormat((err: BusinessError, data: string) => {
 });
 ```
 
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sms.getImsShortMessageFormat().then((data: string) => {
+    console.info(`getImsShortMessageFormat success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getImsShortMessageFormat failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getImsShortMessageFormat
 
@@ -84,14 +95,5 @@ function getImsShortMessageFormat(): Promise<string>
 
 **示例**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sms.getImsShortMessageFormat().then((data: string) => {
-    console.info(`getImsShortMessageFormat success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getImsShortMessageFormat failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [getImsShortMessageFormat](#getimsshortmessageformat)
 

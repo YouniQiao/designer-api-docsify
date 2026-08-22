@@ -59,6 +59,19 @@ try {
 }
 ```
 
+```TypeScript
+let kvStore;
+try {
+    kvStore.commit().then(async (err) => {
+        console.log('commit success');
+    }).catch((err) => {
+        console.log('commit fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.log('Commit e ' + e);
+}
+```
+
 ## commit
 
 ```TypeScript
@@ -85,18 +98,7 @@ commit(): Promise<void>
 
 **示例**
 
-```TypeScript
-let kvStore;
-try {
-    kvStore.commit().then(async (err) => {
-        console.log('commit success');
-    }).catch((err) => {
-        console.log('commit fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('Commit e ' + e);
-}
-```
+参见 [commit](#commit)
 
 ## delete
 
@@ -149,6 +151,26 @@ try {
 }
 ```
 
+```TypeScript
+let kvStore;
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then((data) => {
+        console.log("put success: " + JSON.stringify(data));
+        kvStore.delete(KEY_TEST_STRING_ELEMENT).then((data) => {
+            console.log("delete success");
+        }).catch((err) => {
+            console.log("delete err: " + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.log("put err: " + JSON.stringify(err));
+    });
+}catch (e) {
+    console.log("An unexpected error occurred. Error:" + e);
+}
+```
+
 ## delete
 
 ```TypeScript
@@ -181,25 +203,7 @@ delete(key: string): Promise<void>
 
 **示例**
 
-```TypeScript
-let kvStore;
-const KEY_TEST_STRING_ELEMENT = 'key_test_string';
-const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
-try {
-    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then((data) => {
-        console.log("put success: " + JSON.stringify(data));
-        kvStore.delete(KEY_TEST_STRING_ELEMENT).then((data) => {
-            console.log("delete success");
-        }).catch((err) => {
-            console.log("delete err: " + JSON.stringify(err));
-        });
-    }).catch((err) => {
-        console.log("put err: " + JSON.stringify(err));
-    });
-}catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
-}
-```
+参见 [delete](#delete)
 
 ## deleteBatch
 
@@ -257,38 +261,6 @@ try {
 }
 ```
 
-## deleteBatch
-
-```TypeScript
-deleteBatch(keys: string[]): Promise<void>
-```
-
-批量删除KVStore数据库中的键值对，使用Promise异步回调。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** deleteBatch
-
-<!--Device-KVStore-deleteBatch(keys: string[]): Promise<void>--><!--Device-KVStore-deleteBatch(keys: string[]): Promise<void>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| keys | string[] | 是 | 表示要批量删除的键值对。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
 ```TypeScript
 let kvStore;
 try {
@@ -321,6 +293,40 @@ try {
     console.log('DeleteBatch e ' + e);
 }
 ```
+
+## deleteBatch
+
+```TypeScript
+deleteBatch(keys: string[]): Promise<void>
+```
+
+批量删除KVStore数据库中的键值对，使用Promise异步回调。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** deleteBatch
+
+<!--Device-KVStore-deleteBatch(keys: string[]): Promise<void>--><!--Device-KVStore-deleteBatch(keys: string[]): Promise<void>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| keys | string[] | 是 | 表示要批量删除的键值对。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [deleteBatch](#deletebatch)
 
 ## enableSync
 
@@ -364,6 +370,19 @@ try {
 }
 ```
 
+```TypeScript
+let kvStore;
+try {
+    kvStore.enableSync(true).then((err) => {
+        console.log('enableSync success');
+    }).catch((err) => {
+        console.log('enableSync fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.log('EnableSync e ' + e);
+}
+```
+
 ## enableSync
 
 ```TypeScript
@@ -396,18 +415,7 @@ enableSync(enabled: boolean): Promise<void>
 
 **示例**
 
-```TypeScript
-let kvStore;
-try {
-    kvStore.enableSync(true).then((err) => {
-        console.log('enableSync success');
-    }).catch((err) => {
-        console.log('enableSync fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('EnableSync e ' + e);
-}
-```
+参见 [enableSync](#enablesync)
 
 ## off_dataChange
 
@@ -615,6 +623,21 @@ try {
 }
 ```
 
+```TypeScript
+let kvStore;
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then((data) => {
+        console.log("put success: " + JSON.stringify(data));
+    }).catch((err) => {
+        console.log("put err: " + JSON.stringify(err));
+    });
+}catch (e) {
+    console.log("An unexpected error occurred. Error:" + e);
+}
+```
+
 ## put
 
 ```TypeScript
@@ -648,20 +671,7 @@ put(key: string, value: Uint8Array | string | number | boolean): Promise<void>
 
 **示例**
 
-```TypeScript
-let kvStore;
-const KEY_TEST_STRING_ELEMENT = 'key_test_string';
-const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
-try {
-    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then((data) => {
-        console.log("put success: " + JSON.stringify(data));
-    }).catch((err) => {
-        console.log("put err: " + JSON.stringify(err));
-    });
-}catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
-}
-```
+参见 [put](#put)
 
 ## putBatch
 
@@ -719,6 +729,38 @@ try {
 }
 ```
 
+```TypeScript
+let kvStore;
+try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    console.log('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries).then(async (err) => {
+        console.log('putBatch success');
+        kvStore.getEntries('batch_test_string_key').then((entries) => {
+            console.log('getEntries success');
+            console.log('PutBatch ' + JSON.stringify(entries));
+        }).catch((err) => {
+            console.log('getEntries fail ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.log('putBatch fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.log('PutBatch e ' + JSON.stringify(e));
+}
+```
+
 ## putBatch
 
 ```TypeScript
@@ -751,37 +793,7 @@ putBatch(entries: Entry[]): Promise<void>
 
 **示例**
 
-```TypeScript
-let kvStore;
-try {
-    let entries = [];
-    for (var i = 0; i < 10; i++) {
-        var key = 'batch_test_string_key';
-        var entry = {
-            key : key + i,
-            value : {
-                type : distributedData.ValueType.STRING,
-                value : 'batch_test_string_value'
-            }
-        }
-        entries.push(entry);
-    }
-    console.log('entries: ' + JSON.stringify(entries));
-    kvStore.putBatch(entries).then(async (err) => {
-        console.log('putBatch success');
-        kvStore.getEntries('batch_test_string_key').then((entries) => {
-            console.log('getEntries success');
-            console.log('PutBatch ' + JSON.stringify(entries));
-        }).catch((err) => {
-            console.log('getEntries fail ' + JSON.stringify(err));
-        });
-    }).catch((err) => {
-        console.log('putBatch fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('PutBatch e ' + JSON.stringify(e));
-}
-```
+参见 [putBatch](#putbatch)
 
 ## rollback
 
@@ -824,6 +836,19 @@ try {
 }
 ```
 
+```TypeScript
+let kvStore;
+try {
+    kvStore.rollback().then(async (err) => {
+        console.log('rollback success');
+    }).catch((err) => {
+        console.log('rollback fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.log('Rollback e ' + e);
+}
+```
+
 ## rollback
 
 ```TypeScript
@@ -850,18 +875,7 @@ rollback(): Promise<void>
 
 **示例**
 
-```TypeScript
-let kvStore;
-try {
-    kvStore.rollback().then(async (err) => {
-        console.log('rollback success');
-    }).catch((err) => {
-        console.log('rollback fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('Rollback e ' + e);
-}
-```
+参见 [rollback](#rollback)
 
 ## setSyncRange
 
@@ -904,6 +918,21 @@ try {
 }
 ```
 
+```TypeScript
+let kvStore;
+try {
+    const localLabels = ['A', 'B'];
+    const remoteSupportLabels = ['C', 'D'];
+    kvStore.setSyncRange(localLabels, remoteSupportLabels).then((err) => {
+        console.log('setSyncRange success');
+    }).catch((err) => {
+        console.log('delete fail ' + err);
+    });
+}catch(e) {
+    console.log('SetSyncRange e ' + e);
+}
+```
+
 ## setSyncRange
 
 ```TypeScript
@@ -937,20 +966,7 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void
 
 **示例**
 
-```TypeScript
-let kvStore;
-try {
-    const localLabels = ['A', 'B'];
-    const remoteSupportLabels = ['C', 'D'];
-    kvStore.setSyncRange(localLabels, remoteSupportLabels).then((err) => {
-        console.log('setSyncRange success');
-    }).catch((err) => {
-        console.log('delete fail ' + err);
-    });
-}catch(e) {
-    console.log('SetSyncRange e ' + e);
-}
-```
+参见 [setSyncRange](#setsyncrange)
 
 ## startTransaction
 
@@ -1013,6 +1029,24 @@ try {
 }
 ```
 
+```TypeScript
+let kvStore;
+try {
+    var count = 0;
+    kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_ALL, function (data) {
+        console.log('startTransaction ' + JSON.stringify(data));
+        count++;
+    });
+    kvStore.startTransaction().then(async (err) => {
+        console.log('startTransaction success');
+    }).catch((err) => {
+        console.log('startTransaction fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.log('startTransaction e ' + e);
+}
+```
+
 ## startTransaction
 
 ```TypeScript
@@ -1039,21 +1073,5 @@ startTransaction(): Promise<void>
 
 **示例**
 
-```TypeScript
-let kvStore;
-try {
-    var count = 0;
-    kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_ALL, function (data) {
-        console.log('startTransaction ' + JSON.stringify(data));
-        count++;
-    });
-    kvStore.startTransaction().then(async (err) => {
-        console.log('startTransaction success');
-    }).catch((err) => {
-        console.log('startTransaction fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('startTransaction e ' + e);
-}
-```
+参见 [startTransaction](#starttransaction)
 

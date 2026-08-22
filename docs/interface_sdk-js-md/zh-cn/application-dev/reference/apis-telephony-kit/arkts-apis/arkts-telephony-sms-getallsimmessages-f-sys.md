@@ -55,6 +55,19 @@ sms.getAllSimMessages(slotId, (err: BusinessError, data: sms.SimShortMessage[]) 
 });
 ```
 
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+let promise = sms.getAllSimMessages(slotId);
+promise.then((data: sms.SimShortMessage[]) => {
+    console.info(`getAllSimMessages success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getAllSimMessages failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getAllSimMessages
 
@@ -100,16 +113,5 @@ function getAllSimMessages(slotId: int): Promise<Array<SimShortMessage>>
 
 **示例**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let promise = sms.getAllSimMessages(slotId);
-promise.then((data: sms.SimShortMessage[]) => {
-    console.info(`getAllSimMessages success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getAllSimMessages failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [getAllSimMessages](#getallsimmessages)
 

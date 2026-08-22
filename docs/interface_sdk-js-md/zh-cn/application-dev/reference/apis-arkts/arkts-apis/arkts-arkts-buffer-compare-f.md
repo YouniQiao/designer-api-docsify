@@ -48,6 +48,45 @@ console.info(Number(res).toString());
 // 输出结果：1
 ```
 
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.from('1234');
+let buf2 = buffer.from('0123');
+let res = buffer.compare(buf1, buf2);
+
+console.info(Number(res).toString());
+// 输出结果：1
+```
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.from([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+let buf2 = buffer.from([5, 6, 7, 8, 9, 1, 2, 3, 4]);
+
+console.info(buf1.compare(buf2, 5, 9, 0, 4).toString());
+// 输出结果：0
+console.info(buf1.compare(buf2, 0, 6, 4).toString());
+// 输出结果：-1
+console.info(buf1.compare(buf2, 5, 6, 5).toString());
+// 输出结果：1
+```
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.from([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+let buf2 = buffer.from([5, 6, 7, 8, 9, 1, 2, 3, 4]);
+
+console.info(buf1.compare(buf2, 5, 9, 0, 4).toString());
+// 输出结果：0
+console.info(buf1.compare(buf2, 0, 6, 4).toString());
+// 输出结果：-1
+console.info(buf1.compare(buf2, 5, 6, 5).toString());
+// 输出结果：1
+```
+
 
 ## compare
 
@@ -80,14 +119,5 @@ function compare(buf1: Buffer | Uint8Array, buf2: Buffer | Uint8Array): int
 
 **示例**
 
-```TypeScript
-import { buffer } from '@kit.ArkTS';
-
-let buf1 = buffer.from('1234');
-let buf2 = buffer.from('0123');
-let res = buffer.compare(buf1, buf2);
-
-console.info(Number(res).toString());
-// 输出结果：1
-```
+参见 [compare](#compare)
 

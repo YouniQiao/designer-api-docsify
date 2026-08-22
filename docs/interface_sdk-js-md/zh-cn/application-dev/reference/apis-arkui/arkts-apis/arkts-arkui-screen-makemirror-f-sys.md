@@ -77,6 +77,36 @@ screen.makeMirror(mainScreenId, mirrorScreenIds, (err: BusinessError | null, dat
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 屏幕ID需通过getAllScreens()获取
+let mainScreenId: number = 0; // 主屏ID
+let mirrorScreenIds: Array<number> = [1, 2, 3]; // 镜像屏ID集合
+// 设置屏幕为镜像模式
+screen.makeMirror(mainScreenId, mirrorScreenIds).then((data: number) => {
+  console.info(`Succeeded in setting screen mirroring. Data: ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set screen mirroring. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mainScreenId: long = 0;
+let mirrorScreenIds: Array<long> = [1, 2, 3];
+screen.makeMirror(mainScreenId, mirrorScreenIds).then((data: long) => {
+  console.info(`Succeeded in setting screen mirroring. Data: ${data}`);
+}).catch((err: Error) => {
+  console.error(`Failed to set screen mirroring. Code: ${err?.code}, message: ${err?.message}`);
+});
+```
+
 
 ## makeMirror
 
@@ -117,33 +147,5 @@ function makeMirror(mainScreen:long, mirrorScreen:Array<long>): Promise<long>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 屏幕ID需通过getAllScreens()获取
-let mainScreenId: number = 0; // 主屏ID
-let mirrorScreenIds: Array<number> = [1, 2, 3]; // 镜像屏ID集合
-// 设置屏幕为镜像模式
-screen.makeMirror(mainScreenId, mirrorScreenIds).then((data: number) => {
-  console.info(`Succeeded in setting screen mirroring. Data: ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set screen mirroring. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let mainScreenId: long = 0;
-let mirrorScreenIds: Array<long> = [1, 2, 3];
-screen.makeMirror(mainScreenId, mirrorScreenIds).then((data: long) => {
-  console.info(`Succeeded in setting screen mirroring. Data: ${data}`);
-}).catch((err: Error) => {
-  console.error(`Failed to set screen mirroring. Code: ${err?.code}, message: ${err?.message}`);
-});
-```
+参见 [makeMirror](#makemirror)
 

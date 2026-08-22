@@ -29,7 +29,7 @@ Checks whether the specified UID can access the background network. This API use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | int | Yes | Unique app ID, which is a positive integer within the int32_t range. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NetBackgroundPolicy](arkts-network-policy-netbackgroundpolicy-e-sys.md)&gt; | Yes | Callback used to return the result. . |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetBackgroundPolicy](arkts-network-policy-netbackgroundpolicy-e-sys.md)&gt; | Yes | Callback used to return the result. . |
 
 **Error codes:**
 
@@ -51,6 +51,19 @@ policy.getBackgroundPolicyByUid(11111, (error: BusinessError, data: policy.NetBa
   console.error(JSON.stringify(error));
   console.info(JSON.stringify(data));
 });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .getBackgroundPolicyByUid(11111)
+  .then((data: policy.NetBackgroundPolicy) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
 ```
 
 
@@ -97,16 +110,5 @@ Obtains whether the UID can access the network of the background. This API uses 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .getBackgroundPolicyByUid(11111)
-  .then((data: policy.NetBackgroundPolicy) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+See [getBackgroundPolicyByUid](#getbackgroundpolicybyuid)
 

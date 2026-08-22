@@ -14,19 +14,19 @@ import { BundleVersion } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [BackupExtensionAbility](arkts-corefile-applicationbackupextensionability-backupextensionability-c.md) | Class to be override for backup extension ability. |
+| [BackupExtensionAbility](arkts-corefile-application-backupextensionability-backupextensionability-c.md) | Class to be override for backup extension ability. |
 
 <!--Del-->
 ### Classes(System API)
 
 | Name | Description |
 | --- | --- |
-| [BackupExtensionAbility](arkts-corefile-applicationbackupextensionability-backupextensionability-c-sys.md) | Class to be override for backup extension ability. |
+| [BackupExtensionAbility](arkts-corefile-application-backupextensionability-backupextensionability-c-sys.md) | Class to be override for backup extension ability. |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [BundleVersion](arkts-corefile-applicationbackupextensionability-bundleversion-i.md) | Describe bundle version |
+| [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) | Describe bundle version |
 

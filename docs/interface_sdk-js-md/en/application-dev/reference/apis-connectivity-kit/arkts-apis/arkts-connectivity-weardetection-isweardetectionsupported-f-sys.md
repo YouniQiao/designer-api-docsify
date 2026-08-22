@@ -14,7 +14,7 @@ function isWearDetectionSupported(deviceId: string, callback: AsyncCallback<bool
 
 Checks whether the device supports wear detection.
 
-**Since:** 26.0.0
+**Since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -29,7 +29,7 @@ Checks whether the device supports wear detection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID.For example, "11:22:33:AA:BB:FF", |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | the Callback result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the Callback result. |
 
 **Error codes:**
 
@@ -55,6 +55,16 @@ try {
 }
 ```
 
+```TypeScript
+try {
+    wearDetection.isWearDetectionSupported('XX:XX:XX:XX:XX:XX').then((supported) => {
+        console.info('device support wear detection ' + supported);
+    });
+} catch (err) {
+    console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
+}
+```
+
 
 ## isWearDetectionSupported
 
@@ -64,7 +74,7 @@ function isWearDetectionSupported(deviceId: string): Promise<boolean>
 
 Checks whether the device supports wear detection.
 
-**Since:** 26.0.0
+**Since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -100,13 +110,5 @@ Checks whether the device supports wear detection.
 
 **Examples**
 
-```TypeScript
-try {
-    wearDetection.isWearDetectionSupported('XX:XX:XX:XX:XX:XX').then((supported) => {
-        console.info('device support wear detection ' + supported);
-    });
-} catch (err) {
-    console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
-}
-```
+See [isWearDetectionSupported](#isweardetectionsupported)
 

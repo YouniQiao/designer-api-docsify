@@ -111,6 +111,56 @@ onChange(callback: Optional<OnRatingChangeCallback>)
 | --- | --- | --- | --- |
 | callback | Optional&lt;[OnRatingChangeCallback](arkts-arkui-onratingchangecallback-t.md)&gt; | 是 | 当评分条的评分变化时触发该回调。<br/>当callback的值为undefined时，不使用回调函数。 |
 
+## stars
+
+```TypeScript
+stars(value: number)
+```
+
+设置评分总数。默认值：5。
+
+**起始版本：** 7
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-RatingAttribute-stars(value: number): RatingAttribute--><!--Device-RatingAttribute-stars(value: number): RatingAttribute-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 设置评分总数。<br/>默认值：5 |
+
+## stars
+
+```TypeScript
+stars(starCount: Optional<number>)
+```
+
+设置评分总数。与[stars](#stars)相比，starCount参数新增了对undefined类型的支持。当starCount的值为undefined时，默认值：5。
+
+**起始版本：** 18
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-RatingAttribute-stars(starCount: Optional<number>): RatingAttribute--><!--Device-RatingAttribute-stars(starCount: Optional<number>): RatingAttribute-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| starCount | Optional&lt;number&gt; | 是 | 设置评分总数。<br/>取值范围：大于0，小于等于0或undefined时按5显示。 |
+
 ## starStyle
 
 ```TypeScript
@@ -170,56 +220,6 @@ starStyle(options: Optional<StarStyleOptions>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | Optional&lt;[StarStyleOptions](arkts-arkui-starstyleoptions-i.md)&gt; | 是 | 评分的样式。<br/>**说明：** <br/>当backgroundUri、foregroundUri或secondaryUri设置 的图片路径错误时，图片将保持上次的图片显示结果。如果首次设置错误，则不显示图片。<br/>当backgroundUri或foregroundUri设置为undefined或空字符串时，Rating组件将加载系统默认星型图 源。<br/>当secondaryUri未设置或设置为undefined或空字符串时，将优先使用backgroundUri，效果等同于仅设置foregroundUri和backgroundUri。 |
-
-## stars
-
-```TypeScript
-stars(value: number)
-```
-
-设置评分总数。默认值：5。
-
-**起始版本：** 7
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-RatingAttribute-stars(value: number): RatingAttribute--><!--Device-RatingAttribute-stars(value: number): RatingAttribute-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number | 是 | 设置评分总数。<br/>默认值：5 |
-
-## stars
-
-```TypeScript
-stars(starCount: Optional<number>)
-```
-
-设置评分总数。与[stars](#stars)相比，starCount参数新增了对undefined类型的支持。当starCount的值为undefined时，默认值：5。
-
-**起始版本：** 18
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
-
-**卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-RatingAttribute-stars(starCount: Optional<number>): RatingAttribute--><!--Device-RatingAttribute-stars(starCount: Optional<number>): RatingAttribute-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| starCount | Optional&lt;number&gt; | 是 | 设置评分总数。<br/>取值范围：大于0，小于等于0或undefined时按5显示。 |
 
 ## stepSize
 

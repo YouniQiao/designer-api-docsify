@@ -25,7 +25,7 @@ Obtain address info from location.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | request | ReverseGeoCodeRequest | Yes | Indicates the reverse geocode query parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the address info. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the address info. |
 
 **Error codes:**
 
@@ -55,6 +55,27 @@ try {
       console.info('getAddressesFromLocation: data=' + JSON.stringify(data));
     }
   });
+} catch (err) {
+  console.error("errCode:" + err.code + ", message:" + err.message);
+}
+```
+
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let reverseGeocodeRequest: geoLocationManager.ReverseGeoCodeRequest = {
+  "latitude": 31.12,
+  "longitude": 121.11,
+  "maxItems": 1
+};
+try {
+  geoLocationManager.getAddressesFromLocation(reverseGeocodeRequest).then((data) => {
+    console.info('getAddressesFromLocation: ' + JSON.stringify(data));
+  })
+    .catch((error: BusinessError) => {
+      console.error('promise, getAddressesFromLocation: error=' + JSON.stringify(error));
+    });
 } catch (err) {
   console.error("errCode:" + err.code + ", message:" + err.message);
 }
@@ -98,24 +119,5 @@ Obtain address info from location.
 
 **Examples**
 
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let reverseGeocodeRequest: geoLocationManager.ReverseGeoCodeRequest = {
-  "latitude": 31.12,
-  "longitude": 121.11,
-  "maxItems": 1
-};
-try {
-  geoLocationManager.getAddressesFromLocation(reverseGeocodeRequest).then((data) => {
-    console.info('getAddressesFromLocation: ' + JSON.stringify(data));
-  })
-    .catch((error: BusinessError) => {
-      console.error('promise, getAddressesFromLocation: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
+See [getAddressesFromLocation](#getaddressesfromlocation)
 

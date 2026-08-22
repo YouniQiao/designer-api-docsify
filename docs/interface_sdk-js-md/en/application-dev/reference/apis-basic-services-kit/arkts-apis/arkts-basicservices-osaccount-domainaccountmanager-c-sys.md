@@ -66,6 +66,97 @@ Authenticates a domain account.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let userAuth = new osAccount.UserAuth();
+let challenge: Uint8Array = new Uint8Array([0]);
+let authType: osAccount.AuthType = osAccount.AuthType.PIN;
+let authTrustLevel: osAccount.AuthTrustLevel = osAccount.AuthTrustLevel.ATL1;
+try {
+  userAuth.auth(challenge, authType, authTrustLevel, {
+    onResult: (result: number, extraInfo: osAccount.AuthResult) => {
+      console.info('auth result = ' + result);
+      console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userAuth = new osAccount.UserAuth();
+let challenge: Uint8Array = new Uint8Array([0]);
+let authType: osAccount.AuthType = osAccount.AuthType.PIN;
+let authTrustLevel: osAccount.AuthTrustLevel = osAccount.AuthTrustLevel.ATL1;
+let options: osAccount.AuthOptions = {
+  accountId: 100
+};
+try {
+  userAuth.auth(challenge, authType, authTrustLevel, options, {
+    onResult: (result: number, extraInfo: osAccount.AuthResult) => {
+      console.info('auth result = ' + result);
+      console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+
+let plugin: osAccount.DomainPlugin = {
+  auth: (domainAccountInfo: osAccount.DomainAccountInfo, credential: Uint8Array,
+        callback: osAccount.IUserAuthCallback) => {
+    // mock authentication
+    // notify authentication result
+    let result: osAccount.AuthResult = {
+      token: new Uint8Array([0]),
+      remainTimes: 5,
+      freezingTime: 0
+    };
+    callback.onResult(0, result);
+  },
+  authWithPopup: (domainAccountInfo: osAccount.DomainAccountInfo,
+                  callback: osAccount.IUserAuthCallback) => {},
+  authWithToken: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
+                  callback: osAccount.IUserAuthCallback) => {},
+  getAccountInfo: (options: osAccount.GetDomainAccountInfoPluginOptions,
+                  callback: AsyncCallback<osAccount.DomainAccountInfo>) => {},
+  getAuthStatusInfo: (domainAccountInfo: osAccount.DomainAccountInfo,
+                    callback: AsyncCallback<osAccount.AuthStatusInfo>) => {},
+  bindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, localId: number,
+                callback: AsyncCallback<void>) => {},
+  unbindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, callback: AsyncCallback<void>) => {},
+  isAccountTokenValid: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
+                        callback: AsyncCallback<boolean>) => {},
+  getAccessToken: (options: osAccount.GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>) => {}
+}
+osAccount.DomainAccountManager.registerPlugin(plugin);
+let userAuth = new osAccount.UserAuth();
+let challenge: Uint8Array = new Uint8Array([0]);
+let authType: osAccount.AuthType = osAccount.AuthType.DOMAIN;
+let authTrustLevel: osAccount.AuthTrustLevel = osAccount.AuthTrustLevel.ATL1;
+try {
+  userAuth.auth(challenge, authType, authTrustLevel, {
+    onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
+        console.info('auth resultCode = ' + resultCode);
+        console.info('auth authResult = ' + JSON.stringify(authResult));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let domainAccountInfo: osAccount.DomainAccountInfo = {
   domain: 'CHINA',
   accountName: 'zhangsan'
@@ -73,6 +164,34 @@ let domainAccountInfo: osAccount.DomainAccountInfo = {
 let credential = new Uint8Array([0])
 try {
   osAccount.DomainAccountManager.auth(domainAccountInfo, credential, {
+    onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
+      console.info('auth resultCode = ' + resultCode);
+      console.info('auth authResult = ' + JSON.stringify(authResult));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+let credential = new Uint8Array([0]);
+try {
+  let serverParams: Record<string, Object> = {
+    "uri": "test.example.com",
+    "port": 100
+  }
+  let authOptions: osAccount.DomainAccountAuthOptions = {
+    serverParams: serverParams
+  }
+  osAccount.DomainAccountManager.auth(domainAccountInfo, credential, authOptions, {
     onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
       console.info('auth resultCode = ' + resultCode);
       console.info('auth authResult = ' + JSON.stringify(authResult));
@@ -137,33 +256,7 @@ Authenticates a specified domain account. You can specify authentication options
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let domainAccountInfo: osAccount.DomainAccountInfo = {
-  domain: 'CHINA',
-  accountName: 'zhangsan'
-}
-let credential = new Uint8Array([0]);
-try {
-  let serverParams: Record<string, Object> = {
-    "uri": "test.example.com",
-    "port": 100
-  }
-  let authOptions: osAccount.DomainAccountAuthOptions = {
-    serverParams: serverParams
-  }
-  osAccount.DomainAccountManager.auth(domainAccountInfo, credential, authOptions, {
-    onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
-      console.info('auth resultCode = ' + resultCode);
-      console.info('auth authResult = ' + JSON.stringify(authResult));
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+See [auth](#auth)
 
 ## authWithPopup
 
@@ -212,6 +305,39 @@ Authenticates a domain account in a pop-up window.
 **Examples**
 
 ```TypeScript
+import { AsyncCallback } from '@kit.BasicServicesKit';
+
+let plugin: osAccount.DomainPlugin = {
+  auth: (domainAccountInfo: osAccount.DomainAccountInfo, credential: Uint8Array,
+        callback: osAccount.IUserAuthCallback) => {},
+  authWithPopup: (domainAccountInfo: osAccount.DomainAccountInfo,
+                  callback: osAccount.IUserAuthCallback) => {
+    // mock authentication
+    // notify authentication result
+    let result: osAccount.AuthResult = {
+      token: new Uint8Array([0]),
+      remainTimes: 5,
+      freezingTime: 0
+    };
+    callback.onResult(0, result);
+  },
+  authWithToken: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
+                  callback: osAccount.IUserAuthCallback) => {},
+  getAccountInfo: (options: osAccount.GetDomainAccountInfoPluginOptions,
+                  callback: AsyncCallback<osAccount.DomainAccountInfo>) => {},
+  getAuthStatusInfo: (domainAccountInfo: osAccount.DomainAccountInfo,
+                      callback: AsyncCallback<osAccount.AuthStatusInfo>) => {},
+  bindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, localId: number,
+                callback: AsyncCallback<void>) => {},
+  unbindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, callback: AsyncCallback<void>) => {},
+  isAccountTokenValid: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
+                        callback: AsyncCallback<boolean>) => {},
+  getAccessToken: (options: osAccount.GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>) => {}
+}
+osAccount.DomainAccountManager.registerPlugin(plugin)
+```
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
@@ -224,6 +350,22 @@ try {
 } catch (e) {
   const err = e as BusinessError;
   console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  osAccount.DomainAccountManager.authWithPopup(100, {
+    onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
+      console.info('authWithPopup resultCode = ' + resultCode);
+      console.info('authWithPopup authResult = ' + JSON.stringify(authResult));
+    }
+  })
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`authWithPopup exception = code is ${err.code}, message is ${err.message}`);
 }
 ```
 
@@ -275,21 +417,7 @@ Authenticates a domain account in a pop-up window.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  osAccount.DomainAccountManager.authWithPopup(100, {
-    onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
-      console.info('authWithPopup resultCode = ' + resultCode);
-      console.info('authWithPopup authResult = ' + JSON.stringify(authResult));
-    }
-  })
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`authWithPopup exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+See [authWithPopup](#authwithpopup)
 
 ## getAccessToken
 
@@ -312,7 +440,7 @@ Obtains the service access token of a domain account. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | businessParams | Record&lt;string, Object&gt; | Yes | Service parameters. The specific formats vary depending on the domain plug-in. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Uint8Array&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, an error object is returned. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, an error object is returned. |
 
 **Error codes:**
 
@@ -333,6 +461,40 @@ Obtains the service access token of a domain account. This API uses an asynchron
 **Examples**
 
 ```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+
+let plugin: osAccount.DomainPlugin = {
+  auth: (domainAccountInfo: osAccount.DomainAccountInfo, credential: Uint8Array,
+        callback: osAccount.IUserAuthCallback) => {},
+  authWithPopup: (domainAccountInfo: osAccount.DomainAccountInfo,
+                  callback: osAccount.IUserAuthCallback) => {},
+  authWithToken: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
+                  callback: osAccount.IUserAuthCallback) => {},
+  getAccountInfo: (options: osAccount.GetDomainAccountInfoPluginOptions,
+                  callback: AsyncCallback<osAccount.DomainAccountInfo>) => {},
+  getAuthStatusInfo: (domainAccountInfo: osAccount.DomainAccountInfo,
+                      callback: AsyncCallback<osAccount.AuthStatusInfo>) => {},
+  bindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, localId: number,
+                callback: AsyncCallback<void>) => {},
+  unbindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, callback: AsyncCallback<void>) => {},
+  isAccountTokenValid: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
+                        callback: AsyncCallback<boolean>) => {},
+  getAccessToken: (options: osAccount.GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>) => {
+    // mock getting operation
+    // notify result
+    let code: BusinessError = {
+      code: 0,
+      name: "",
+      message: ""
+    };
+    let token: Uint8Array = new Uint8Array([0]);
+    callback(code, token);
+  }
+}
+osAccount.DomainAccountManager.registerPlugin(plugin)
+```
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let businessParams: Record<string, Object> = {
@@ -347,6 +509,26 @@ try {
     } else {
       console.info('getAccessToken result: ' + result);
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAccessToken exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let businessParams: Record<string, Object> = {
+  'clientId': 'xxx',
+  'secretId': 'yyy'
+};  // depends on the implementation of the domain plugin
+try {
+  osAccount.DomainAccountManager.getAccessToken(businessParams)
+    .then((result: Uint8Array) => {
+    console.info('getAccessToken result: ' + result);
+  }).catch((err: BusinessError) => {
+    console.error(`getAccessToken failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -375,7 +557,7 @@ Gets the business access token of the current domain account.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | businessParams | Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the business parameters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Uint8Array&gt; | Yes | Indicates the result callback. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | Yes | Indicates the result callback. |
 
 **Error codes:**
 
@@ -391,6 +573,10 @@ Gets the business access token of the current domain account.
 | [12300111](../errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
 | [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally. |
 | 12300211 | Server unreachable. |
+
+**Examples**
+
+See [getAccessToken](#getaccesstoken)
 
 ## getAccessToken
 
@@ -438,25 +624,7 @@ Obtains the service access token of a domain account. This API uses a promise to
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let businessParams: Record<string, Object> = {
-  'clientId': 'xxx',
-  'secretId': 'yyy'
-};  // depends on the implementation of the domain plugin
-try {
-  osAccount.DomainAccountManager.getAccessToken(businessParams)
-    .then((result: Uint8Array) => {
-    console.info('getAccessToken result: ' + result);
-  }).catch((err: BusinessError) => {
-    console.error(`getAccessToken failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getAccessToken exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getAccessToken](#getaccesstoken)
 
 ## getAccessToken
 
@@ -501,6 +669,10 @@ Gets the business access token for the current domain account.
 | [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally. |
 | 12300211 | Server unreachable. |
 
+**Examples**
+
+See [getAccessToken](#getaccesstoken)
+
 ## getAccountInfo
 
 ```TypeScript
@@ -524,7 +696,7 @@ Obtains information about a specified domain account. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [GetDomainAccountInfoOptions](arkts-basicservices-osaccount-getdomainaccountinfooptions-i-sys.md) | Yes | Domain account information. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -545,6 +717,44 @@ Obtains information about a specified domain account. This API uses an asynchron
 **Examples**
 
 ```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+
+let plugin: osAccount.DomainPlugin = {
+  auth: (domainAccountInfo: osAccount.DomainAccountInfo, credential: Uint8Array,
+        callback: osAccount.IUserAuthCallback) => {},
+  authWithPopup: (domainAccountInfo: osAccount.DomainAccountInfo,
+                  callback: osAccount.IUserAuthCallback) => {},
+  authWithToken: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
+                  callback: osAccount.IUserAuthCallback) => {},
+  getAccountInfo: (options: osAccount.GetDomainAccountInfoPluginOptions,
+                  callback: AsyncCallback<osAccount.DomainAccountInfo>) => {
+    // mock getting account information
+    // notify result
+    let code: BusinessError = {
+      code: 0,
+      name: "",
+      message: ""
+    };
+    let accountInfo: osAccount.DomainAccountInfo = {
+      domain: options.domain ? options.domain : "",
+      accountName: options.accountName,
+      accountId: 'xxxx'
+    };
+    callback(code, accountInfo);
+  },
+  getAuthStatusInfo: (domainAccountInfo: osAccount.DomainAccountInfo,
+                      callback: AsyncCallback<osAccount.AuthStatusInfo>) => {},
+  bindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, localId: number,
+                callback: AsyncCallback<void>) => {},
+  unbindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, callback: AsyncCallback<void>) => {},
+  isAccountTokenValid: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
+                        callback: AsyncCallback<boolean>) => {},
+  getAccessToken: (options: osAccount.GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>) => {}
+}
+osAccount.DomainAccountManager.registerPlugin(plugin)
+```
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let domainAccountInfo: osAccount.GetDomainAccountInfoOptions = {
@@ -559,6 +769,26 @@ try {
     } else {
       console.info('getAccountInfo result: ' + result);
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAccountInfo exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.GetDomainAccountInfoOptions = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+try {
+  osAccount.DomainAccountManager.getAccountInfo(domainAccountInfo)
+    .then((result: osAccount.DomainAccountInfo) => {
+    console.info('getAccountInfo result: ' + result);
+  }).catch((err: BusinessError) => {
+    console.error(`call getAccountInfo failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -614,25 +844,7 @@ Obtains information about a specified domain account. This API uses a promise to
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let domainAccountInfo: osAccount.GetDomainAccountInfoOptions = {
-  domain: 'CHINA',
-  accountName: 'zhangsan'
-}
-try {
-  osAccount.DomainAccountManager.getAccountInfo(domainAccountInfo)
-    .then((result: osAccount.DomainAccountInfo) => {
-    console.info('getAccountInfo result: ' + result);
-  }).catch((err: BusinessError) => {
-    console.error(`call getAccountInfo failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getAccountInfo exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getAccountInfo](#getaccountinfo)
 
 ## hasAccount
 
@@ -657,7 +869,7 @@ Checks whether a domain account exists. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Domain account information. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the specified domain account exists; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the specified domain account exists; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -691,6 +903,25 @@ try {
     } else {
       console.info('hasAccount result: ' + result);
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`hasAccount exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+try {
+  osAccount.DomainAccountManager.hasAccount(domainAccountInfo).then((result: boolean) => {
+    console.info('hasAccount result: ' + result);
+  }).catch((err: BusinessError) => {
+      console.error(`call hasAccount failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -746,24 +977,7 @@ Checks whether a domain account exists. This API uses a promise to return the re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let domainAccountInfo: osAccount.DomainAccountInfo = {
-  domain: 'CHINA',
-  accountName: 'zhangsan'
-}
-try {
-  osAccount.DomainAccountManager.hasAccount(domainAccountInfo).then((result: boolean) => {
-    console.info('hasAccount result: ' + result);
-  }).catch((err: BusinessError) => {
-      console.error(`call hasAccount failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`hasAccount exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+See [hasAccount](#hasaccount)
 
 ## isAuthenticationExpired
 
@@ -958,7 +1172,7 @@ Updates the token of a domain account. An empty token means an invalid token. Th
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Domain account information. |
 | token | Uint8Array | Yes | New domain account token. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -990,6 +1204,27 @@ try {
       console.info('updateAccountToken successfully');
     }
   })
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`updateAccountToken exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan',
+  accountId: '123456'
+}
+let token = new Uint8Array([0])
+try {
+  osAccount.DomainAccountManager.updateAccountToken(domainAccountInfo, token).then(() => {
+    console.info('updateAccountToken successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`updateAccountToken failed, code is ${err.code}, message is ${err.message}`);
+  });
 } catch (e) {
   const err = e as BusinessError;
   console.error(`updateAccountToken exception = code is ${err.code}, message is ${err.message}`);
@@ -1040,24 +1275,5 @@ Updates the token of a domain account. An empty token means an invalid token. Th
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let domainAccountInfo: osAccount.DomainAccountInfo = {
-  domain: 'CHINA',
-  accountName: 'zhangsan',
-  accountId: '123456'
-}
-let token = new Uint8Array([0])
-try {
-  osAccount.DomainAccountManager.updateAccountToken(domainAccountInfo, token).then(() => {
-    console.info('updateAccountToken successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`updateAccountToken failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`updateAccountToken exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+See [updateAccountToken](#updateaccounttoken)
 

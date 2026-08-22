@@ -1,43 +1,5 @@
 # Constants
 
-## ODID
-
-```TypeScript
-const ODID: string
-```
-
-Open device identifier.
-
-An ODID will be regenerated in the following scenarios:
-
-Restore a phone to its factory settings.
-
-Uninstall and reinstall all applications with the same **developerId** on one device.
-
-An ODID is generated based on the following rules:
-
-The value is generated based on the **groupId** parsed from the **developerId** in the signature information. As **groupId.developerId** is the rule, if no **groupId** exists, the **developerId** is used as the **groupId**.
-
-Applications with the same **developerId** use the same ODID on one device.
-
-Applications with different **developerId**s use different ODIDs on one device.
-
-Applications with the same **developerId** use different ODIDs on different devices.
-
-Applications with different **developerId**s use different ODIDs on different devices.
-
-**NOTE：**
-
-The data length is 37 bytes (including the terminator).
-
-Example: 1234a567-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-
-**Since:** 12
-
-<!--Device-deviceInfo-const ODID: string--><!--Device-deviceInfo-const ODID: string-End-->
-
-**System capability:** SystemCapability.Startup.SystemInfo
-
 ## abiList
 
 ```TypeScript
@@ -495,6 +457,44 @@ Example: <!--RP2-->Mate XX<!--RP2End-->
 **Since:** 6
 
 <!--Device-deviceInfo-const marketName: string--><!--Device-deviceInfo-const marketName: string-End-->
+
+**System capability:** SystemCapability.Startup.SystemInfo
+
+## ODID
+
+```TypeScript
+const ODID: string
+```
+
+Open device identifier.
+
+An ODID will be regenerated in the following scenarios:
+
+Restore a phone to its factory settings.
+
+Uninstall and reinstall all applications with the same **developerId** on one device.
+
+An ODID is generated based on the following rules:
+
+The value is generated based on the **groupId** parsed from the **developerId** in the signature information. As **groupId.developerId** is the rule, if no **groupId** exists, the **developerId** is used as the **groupId**.
+
+Applications with the same **developerId** use the same ODID on one device.
+
+Applications with different **developerId**s use different ODIDs on one device.
+
+Applications with the same **developerId** use different ODIDs on different devices.
+
+Applications with different **developerId**s use different ODIDs on different devices.
+
+**NOTE：**
+
+The data length is 37 bytes (including the terminator).
+
+Example: 1234a567-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+
+**Since:** 12
+
+<!--Device-deviceInfo-const ODID: string--><!--Device-deviceInfo-const ODID: string-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
 

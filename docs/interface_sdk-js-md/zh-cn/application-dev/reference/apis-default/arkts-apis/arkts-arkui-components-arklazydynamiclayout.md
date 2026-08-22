@@ -18,5 +18,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [LazyDynamicLayoutAttribute](arkts-arkuicomponentsarklazydynamiclayout-lazydynamiclayoutattribute-i.md) | LazyDynamicLayout属性 |
+| [LazyDynamicLayoutAttribute](arkts-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-i.md) | LazyDynamicLayout属性 |
 

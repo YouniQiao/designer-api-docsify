@@ -19,7 +19,7 @@
  **参数：**
  | 参数名  | 类型                    | 必填 | 说明       |
  | ------- | -------------------- | ---- | ---------- |
- | options | [GetStorageOptions](arkts-arkdata-systemstorage-getstorageoptions-i.md) | 是   | 接口配置信息。 |
+ | options | [GetStorageOptions](arkts-arkdata-system-storage-getstorageoptions-i.md) | 是   | 接口配置信息。 |
  **示例：**
  ArkTS示例：
  ```js
@@ -102,7 +102,7 @@
  **参数：**
  | 参数名  | 类型                   | 必填 | 说明       |
  | ------- | ------------------- | ---- | ---------- |
- | options | [SetStorageOptions](arkts-arkdata-systemstorage-setstorageoptions-i.md) | 是   | 接口配置信息。 |
+ | options | [SetStorageOptions](arkts-arkdata-system-storage-setstorageoptions-i.md) | 是   | 接口配置信息。 |
  **示例：**
  ArkTS示例：
  ```js
@@ -184,7 +184,7 @@
  **参数：**
  | 参数名  | 类型                                        | 必填 | 说明           |
  | ------- | ------------------------------------------- | ---- | -------------- |
- | options | [ClearStorageOptions](arkts-arkdata-systemstorage-clearstorageoptions-i.md) | 否   | 接口配置信息。 |
+ | options | [ClearStorageOptions](arkts-arkdata-system-storage-clearstorageoptions-i.md) | 否   | 接口配置信息。 |
  **示例：**
  ArkTS示例：
  ```js
@@ -264,7 +264,7 @@
  **参数：**
  | 参数名  | 类型                                          | 必填 | 说明           |
  | ------- | --------------------------------------------- | ---- | -------------- |
- | options | [DeleteStorageOptions](arkts-arkdata-systemstorage-deletestorageoptions-i.md) | 是   | 接口配置信息。 |
+ | options | [DeleteStorageOptions](arkts-arkdata-system-storage-deletestorageoptions-i.md) | 是   | 接口配置信息。 |
  **示例：**
  ArkTS示例：
  ```js
@@ -350,14 +350,14 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [Storage(数据存储)](arkts-arkdata-systemstorage-storage-c.md) |  |
+| [Storage(数据存储)](arkts-arkdata-system-storage-storage-c.md) |  |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [ClearStorageOptions(数据存储)](arkts-arkdata-systemstorage-clearstorageoptions-i.md) |  |
-| [DeleteStorageOptions(数据存储)](arkts-arkdata-systemstorage-deletestorageoptions-i.md) |  |
-| [GetStorageOptions(数据存储)](arkts-arkdata-systemstorage-getstorageoptions-i.md) |  |
-| [SetStorageOptions(数据存储)](arkts-arkdata-systemstorage-setstorageoptions-i.md) |  |
+| [ClearStorageOptions(数据存储)](arkts-arkdata-system-storage-clearstorageoptions-i.md) |  |
+| [DeleteStorageOptions(数据存储)](arkts-arkdata-system-storage-deletestorageoptions-i.md) |  |
+| [GetStorageOptions(数据存储)](arkts-arkdata-system-storage-getstorageoptions-i.md) |  |
+| [SetStorageOptions(数据存储)](arkts-arkdata-system-storage-setstorageoptions-i.md) |  |
 

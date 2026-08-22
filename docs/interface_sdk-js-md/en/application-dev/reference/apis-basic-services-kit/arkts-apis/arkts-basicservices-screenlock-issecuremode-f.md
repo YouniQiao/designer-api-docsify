@@ -26,7 +26,7 @@ Checks whether the screen lock of the current device is secure.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | the callback of isSecureMode. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of isSecureMode. |
 
 **Examples**
 
@@ -39,6 +39,16 @@ screenLock.isSecureMode((err: BusinessError, data: Boolean)=>{
     return;
   }
   console.info(`Succeeded in Obtaining whether the device is in secure mode. result: ${data}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+screenLock.isSecureMode().then((data: Boolean) => {
+  console.info(`Succeeded in Obtaining whether the device is in secure mode. result: ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain whether the device is in secure mode, Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -67,13 +77,5 @@ Checks whether the screen lock of the current device is secure.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-screenLock.isSecureMode().then((data: Boolean) => {
-  console.info(`Succeeded in Obtaining whether the device is in secure mode. result: ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain whether the device is in secure mode, Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [isSecureMode](#issecuremode)
 

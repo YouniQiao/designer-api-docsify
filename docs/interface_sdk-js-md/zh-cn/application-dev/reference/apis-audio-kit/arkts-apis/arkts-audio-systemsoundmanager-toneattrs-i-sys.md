@@ -118,6 +118,10 @@ getFileName(): string
 toneAttrs.getFileName();
 ```
 
+```TypeScript
+toneHapticsAttrs.getFileName();
+```
+
 ## getMediaType
 
 ```TypeScript
@@ -186,6 +190,10 @@ getTitle(): string
 toneAttrs.getTitle();
 ```
 
+```TypeScript
+toneHapticsAttrs.getTitle();
+```
+
 ## getUri
 
 ```TypeScript
@@ -218,6 +226,10 @@ getUri(): string
 
 ```TypeScript
 toneAttrs.getUri();
+```
+
+```TypeScript
+toneHapticsAttrs.getUri();
 ```
 
 ## setCategory

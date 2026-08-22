@@ -111,6 +111,27 @@ compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLe
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 | [17800007](../../apis-ability-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
 
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+import { zlib, BusinessError } from '@kit.BasicServicesKit';
+
+let str = 'hello world! 你好，世界！';
+const enc = util.TextEncoder.create('utf-8');
+const u8 = enc.encodeInto(str);
+const arrayBufferIn = u8.buffer.slice(u8.byteOffset, u8.byteOffset + u8.byteLength);
+
+let arrayBufferOut = new ArrayBuffer(100);
+let zip = zlib.createZipSync();
+
+zip.compress2(arrayBufferOut, arrayBufferIn, zlib.CompressLevel.COMPRESS_LEVEL_BEST_SPEED).then((data) => {
+  console.info('compress2 success');
+}).catch((errData: BusinessError) => {
+  console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+})
+```
+
 ## compressBound
 
 ```TypeScript
@@ -1265,6 +1286,10 @@ getZStream(): Promise<ZStream | undefined>
 | --- | --- |
 | Promise&lt;[ZStream](arkts-basicservices-zlib-zstream-i.md) \| undefined&gt; | Promise对象。返回ZStream流。 |
 
+**示例**
+
+参见 [getZStream](#getzstream)
+
 ## inflate
 
 ```TypeScript
@@ -1570,6 +1595,10 @@ inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: RecordData,
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800004](../../apis-ability-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**示例**
+
+参见 [inflateBack](#inflateback)
 
 ## inflateBackEnd
 

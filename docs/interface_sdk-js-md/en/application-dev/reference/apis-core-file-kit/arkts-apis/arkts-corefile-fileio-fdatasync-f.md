@@ -35,6 +35,28 @@ Synchronizes the data of a file. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+fileio.fdatasync(fd).then(() => {
+  console.info("sync data succeed");
+}).catch((err: BusinessError) => {
+  console.error("sync data failed with error:" + err);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+fileio.fdatasync (fd, (err: BusinessError) => {
+  // Do something.
+});
+```
+
 
 ## fdatasync
 
@@ -59,5 +81,9 @@ Synchronizes the data of a file. This API uses an asynchronous callback to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | fd | number | Yes | File descriptor of the file to synchronize. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked when the file data is synchronized in asynchronous mode. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file data is synchronized in asynchronous mode. |
+
+**Examples**
+
+See [fdatasync](#fdatasync)
 

@@ -34,5 +34,5 @@ Subscribe Wi-Fi connection change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'wifiConnectionChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | the callback of on, 0: disconnected, 1: connected |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | the callback of on, 0: disconnected, 1: connected |
 

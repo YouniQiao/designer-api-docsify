@@ -28,7 +28,7 @@ Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) instance. This met
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | Yes | Tone playing attribute. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md)&gt; | Yes | Callback used to return the tonePlayer instance. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md)&gt; | Yes | Callback used to return the tonePlayer instance. |
 
 **Examples**
 
@@ -50,6 +50,19 @@ audio.createTonePlayer(audioRendererInfo, (err, data) => {
     tonePlayer = data;
   }
 });
+```
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let tonePlayer: audio.TonePlayer;
+async function createTonePlayerBefore(){
+  let audioRendererInfo: audio.AudioRendererInfo = {
+    usage : audio.StreamUsage.STREAM_USAGE_DTMF,
+    rendererFlags : 0
+  };
+  tonePlayer = await audio.createTonePlayer(audioRendererInfo);
+}
 ```
 
 
@@ -74,13 +87,17 @@ Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) instance. This met
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | Yes | Tone playing attribute. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) \| null&gt; | Yes | Callback used to return the tonePlayer instance， null when an error happens. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) \| null&gt; | Yes | Callback used to return the tonePlayer instance， null when an error happens. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+
+**Examples**
+
+See [createTonePlayer](#createtoneplayer)
 
 
 ## createTonePlayer
@@ -113,18 +130,7 @@ Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) instance. This met
 
 **Examples**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let tonePlayer: audio.TonePlayer;
-async function createTonePlayerBefore(){
-  let audioRendererInfo: audio.AudioRendererInfo = {
-    usage : audio.StreamUsage.STREAM_USAGE_DTMF,
-    rendererFlags : 0
-  };
-  tonePlayer = await audio.createTonePlayer(audioRendererInfo);
-}
-```
+See [createTonePlayer](#createtoneplayer)
 
 
 ## createTonePlayer
@@ -160,4 +166,8 @@ Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) instance. This met
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+
+**Examples**
+
+See [createTonePlayer](#createtoneplayer)
 

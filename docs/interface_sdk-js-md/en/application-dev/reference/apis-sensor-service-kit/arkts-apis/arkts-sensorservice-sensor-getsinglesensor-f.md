@@ -25,7 +25,7 @@ Obtains information about the sensor of a specific type. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [SensorId](arkts-sensorservice-sensor-sensorid-e.md) | Yes | Sensor type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Sensor&gt; | Yes | Callback used to return the sensor information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Sensor&gt; | Yes | Callback used to return the sensor information. |
 
 **Error codes:**
 
@@ -61,6 +61,23 @@ try {
 } catch (error) {
   let e: BusinessError = error as BusinessError;
   console.error(`Failed to get singleSensor. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.getSingleSensor(sensor.SensorId.ACCELEROMETER).then((data: sensor.Sensor) => {
+    console.info('Succeeded in getting sensor: ' + JSON.stringify(data));
+  }, (err: BusinessError) => {
+    console.error(`Failed to get singleSensor . Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to get singleSensor . Code: ${e.code}, message: ${e.message}`);
 }
 ```
 
@@ -101,20 +118,5 @@ Obtains information about the sensor of a specific type. This API uses a promise
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.getSingleSensor(sensor.SensorId.ACCELEROMETER).then((data: sensor.Sensor) => {
-    console.info('Succeeded in getting sensor: ' + JSON.stringify(data));
-  }, (err: BusinessError) => {
-    console.error(`Failed to get singleSensor . Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to get singleSensor . Code: ${e.code}, message: ${e.message}`);
-}
-```
+See [getSingleSensor](#getsinglesensor)
 

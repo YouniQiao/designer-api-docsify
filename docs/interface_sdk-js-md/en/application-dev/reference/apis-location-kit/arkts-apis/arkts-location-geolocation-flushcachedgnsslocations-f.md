@@ -30,7 +30,7 @@ All prepared GNSS locations are returned to the application through the callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the result. |
 
 **Examples**
 
@@ -43,6 +43,13 @@ geolocation.flushCachedGnssLocations((err, result) => {
     if (result) {
         console.info('flushCachedGnssLocations: result=' + JSON.stringify(result));
     }
+});
+```
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.flushCachedGnssLocations().then((result) => {
+    console.info('promise, flushCachedGnssLocations: ' + JSON.stringify(result));
 });
 ```
 
@@ -75,10 +82,5 @@ All prepared GNSS locations are returned to the application through the callback
 
 **Examples**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.flushCachedGnssLocations().then((result) => {
-    console.info('promise, flushCachedGnssLocations: ' + JSON.stringify(result));
-});
-```
+See [flushCachedGnssLocations](#flushcachedgnsslocations)
 

@@ -2,7 +2,7 @@
 
 Implements a window manager, which manages each basic window unit, that is, [Window](arkts-arkui-window-n.md) instance.
 
-Before calling any of the following APIs, you must use [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityuiability-uiability-c.md#onwindowstagecreate) to create a WindowStage instance.
+Before calling any of the following APIs, you must use [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) to create a WindowStage instance.
 
 **Since:** 23
 
@@ -184,6 +184,30 @@ Sets the image displayed in the multitasking view and on dock hover. This API us
 import { UIAbility } from '@kit.AbilityKit';
 import { window } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let imgResourceId = $r("app.media.startIcon").id
+    try {
+      let promise = windowStage.setImageForRecent(imgResourceId, ImageFit.Fill);
+      promise.then(() => {
+        console.info(`Succeeded in setting image for recent`);
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to set image for recent. Cause code: ${err.code}, message: ${err.message}`);
+      });
+    } catch (exception) {
+      console.error(`Failed to set image for recent.`);
+    }
+  }
+};
+```
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
 import { image } from '@kit.ImageKit';
 
 export default class EntryAbility extends UIAbility {
@@ -269,29 +293,7 @@ Sets the image displayed in the multitasking view. This API uses a promise to re
 
 **Examples**
 
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let imgResourceId = $r("app.media.startIcon").id
-    try {
-      let promise = windowStage.setImageForRecent(imgResourceId, ImageFit.Fill);
-      promise.then(() => {
-        console.info(`Succeeded in setting image for recent`);
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to set image for recent. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to set image for recent.`);
-    }
-  }
-};
-```
+See [setImageForRecent](#setimageforrecent)
 
 ## setShowOnLockScreen
 

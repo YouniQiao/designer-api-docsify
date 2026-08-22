@@ -50,6 +50,42 @@ Invalid relationship, the default value is **-1**.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+## labelId
+
+```TypeScript
+labelId?: number
+```
+
+Relation type.
+
+**Type:** number
+
+**Since:** 7
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Relation-labelId?: number--><!--Device-Relation-labelId?: number-End-->
+
+**System capability:** SystemCapability.Applications.ContactsData
+
+## labelName
+
+```TypeScript
+labelName?: string
+```
+
+Name of the Relation type.
+
+**Type:** string
+
+**Since:** 7
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Relation-labelName?: string--><!--Device-Relation-labelName?: string-End-->
+
+**System capability:** SystemCapability.Applications.ContactsData
+
 ## RELATION_ASSISTANT
 
 ```TypeScript
@@ -299,42 +335,6 @@ Spouse, the default value is **14**.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Relation-static readonly RELATION_SPOUSE: 14--><!--Device-Relation-static readonly RELATION_SPOUSE: 14-End-->
-
-**System capability:** SystemCapability.Applications.ContactsData
-
-## labelId
-
-```TypeScript
-labelId?: number
-```
-
-Relation type.
-
-**Type:** number
-
-**Since:** 7
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Relation-labelId?: number--><!--Device-Relation-labelId?: number-End-->
-
-**System capability:** SystemCapability.Applications.ContactsData
-
-## labelName
-
-```TypeScript
-labelName?: string
-```
-
-Name of the Relation type.
-
-**Type:** string
-
-**Since:** 7
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-Relation-labelName?: string--><!--Device-Relation-labelName?: string-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 

@@ -30,7 +30,7 @@ Requests to cancel a continuous task from the system. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the continuous task is canceled, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the continuous task is canceled, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -47,6 +47,17 @@ function callback(error: BusinessError, data: void) {
 }
 
 particleAbility.cancelBackgroundRunning(callback);
+```
+
+```TypeScript
+import { particleAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+particleAbility.cancelBackgroundRunning().then(() => {
+  console.info('Operation succeeded');
+}).catch((err: BusinessError) => {
+  console.error(`Operation failed cause: ${JSON.stringify(err)}`);
+});
 ```
 
 
@@ -78,14 +89,5 @@ Requests to cancel a continuous task from the system. This API uses a promise to
 
 **Examples**
 
-```TypeScript
-import { particleAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-particleAbility.cancelBackgroundRunning().then(() => {
-  console.info('Operation succeeded');
-}).catch((err: BusinessError) => {
-  console.error(`Operation failed cause: ${JSON.stringify(err)}`);
-});
-```
+See [cancelBackgroundRunning](#cancelbackgroundrunning)
 

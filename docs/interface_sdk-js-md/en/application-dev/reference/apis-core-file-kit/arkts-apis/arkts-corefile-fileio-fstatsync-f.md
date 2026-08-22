@@ -35,3 +35,11 @@ Obtains file status based on the file descriptor. This API returns the result sy
 | --- | --- |
 | [Stat](arkts-corefile-fileio-stat-depr-i.md) | Detailed file status obtained. |
 
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+let stat = fileio.fstatSync(fd);
+```
+

@@ -14,7 +14,7 @@ function getBoundDevices(): PartnerDeviceAddress[]
 
 Gets the list of addresses of the bound partner device for this application.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 

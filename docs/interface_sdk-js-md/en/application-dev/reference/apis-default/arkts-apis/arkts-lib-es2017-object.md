@@ -11,5 +11,5 @@
 
 | Name | Description |
 | --- | --- |
-| [ObjectConstructor](arkts-libes2017object-objectconstructor-i.md) |  |
+| [ObjectConstructor](arkts-lib-es2017-object-objectconstructor-i.md) |  |
 

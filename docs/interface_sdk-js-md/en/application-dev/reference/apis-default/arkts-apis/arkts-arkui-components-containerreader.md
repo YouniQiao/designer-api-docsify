@@ -18,7 +18,7 @@
 
 | Name | Description |
 | --- | --- |
-| [BreakpointOptions](arkts-arkuicomponentscontainerreader-breakpointoptions-i.md) | Defines the breakpoint configuration options for container dimension analysis. Specifies threshold values that trigger different layout behaviors based on container size. |
-| [ContainerReaderAttribute](arkts-arkuicomponentscontainerreader-containerreaderattribute-i.md) | Defines the container reader attribute. |
-| [ContainerReaderInfo](arkts-arkuicomponentscontainerreader-containerreaderinfo-i.md) | Defines the configuration options for ContainerReader component. Used to specify the parameters for container dimension reading and breakpoint analysis. |
+| [BreakpointOptions](arkts-arkui-components-containerreader-breakpointoptions-i.md) | Defines the breakpoint configuration options for container dimension analysis. Specifies threshold values that trigger different layout behaviors based on container size. |
+| [ContainerReaderAttribute](arkts-arkui-components-containerreader-containerreaderattribute-i.md) | Defines the container reader attribute. |
+| [ContainerReaderInfo](arkts-arkui-components-containerreader-containerreaderinfo-i.md) | Defines the configuration options for ContainerReader component. Used to specify the parameters for container dimension reading and breakpoint analysis. |
 

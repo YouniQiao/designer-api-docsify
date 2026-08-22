@@ -228,6 +228,35 @@ endElement(elementName: string, namespaceURI: string | undefined, qName: string 
 | namespaceURI | string \| undefined | 是 | 解析器回传的命名空间URI。例如，对于`xmlns:ns2="http://example.com/ns2"`， namespaceURI为`"http://example.com/ns2"`。如果元素没有命名空间则为undefined。 |
 | qName | string \| undefined | 是 | 解析器回传的元素限定名（包含命名空间前缀）。例如，对于`&lt;ns2:child&gt;`，qName为"ns2:child"。 如果元素没有命名空间则qName为undefined。 |
 
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer);
+thatSer.startElement("note");
+thatSer.setText("Happy");
+thatSer.endElement();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result);
+// <note>Happy</note>
+```
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let serializer = new xml.XmlDynamicSerializer('utf-8');
+serializer.startElement("note");
+serializer.setText("Happy");
+serializer.endElement();
+let arrayBuffer = serializer.getOutput();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <note>Happy</note>
+```
+
 ## startDocument
 
 ```TypeScript
@@ -272,4 +301,33 @@ startElement(elementName: string, namespaceURI: string | undefined, qName: strin
 | namespaceURI | string \| undefined | 是 | 解析器回传的命名空间URI。例如，对于`xmlns:ns2="http://example.com/ns2"`， namespaceURI为`"http://example.com/ns2"`。如果元素没有命名空间则为undefined。 |
 | qName | string \| undefined | 是 | 解析器回传的元素限定名（包含命名空间前缀）。例如，对于`&lt;ns2:child&gt;`，qName为"ns2:child"。 如果元素没有命名空间则qName为undefined。 |
 | attributes | Map&lt;string, string&gt; | 是 | 解析器回传的元素的属性映射表，键为属性名（可能包含命名空间前缀，如"ns2:attrA"），值为属性值。 |
+
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer);
+thatSer.startElement("note");
+thatSer.setText("Happy");
+thatSer.endElement();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result);
+// <note>Happy</note>
+```
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let serializer = new xml.XmlDynamicSerializer('utf-8');
+serializer.startElement("note");
+serializer.setText("Happy");
+serializer.endElement();
+let arrayBuffer = serializer.getOutput();
+let uint8 = new Uint8Array(arrayBuffer);
+let result = util.TextDecoder.create().decodeToString(uint8);
+console.info(result); // <note>Happy</note>
+```
 

@@ -14,7 +14,7 @@ function getRemoteDeviceTransport(deviceId: string): BluetoothTransport
 
 Get the transport of the bluetooth device.
 
-**Since:** 26.0.0
+**Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
 

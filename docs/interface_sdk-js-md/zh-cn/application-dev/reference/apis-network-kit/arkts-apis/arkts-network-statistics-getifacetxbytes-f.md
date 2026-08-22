@@ -64,6 +64,26 @@ statistics.getIfaceTxBytes("wlan0", (error: BusinessError|null, stats: long|unde
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+statistics.getIfaceTxBytes("wlan0").then((stats: number) => {
+  console.info(JSON.stringify(stats));
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+statistics.getIfaceTxBytes("wlan0").then((stats: long) => {
+  console.info(JSON.stringify(stats));
+});
+```
+
 
 ## getIfaceTxBytes
 
@@ -104,23 +124,5 @@ function getIfaceTxBytes(nic: string): Promise<long>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-statistics.getIfaceTxBytes("wlan0").then((stats: number) => {
-  console.info(JSON.stringify(stats));
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-statistics.getIfaceTxBytes("wlan0").then((stats: long) => {
-  console.info(JSON.stringify(stats));
-});
-```
+参见 [getIfaceTxBytes](#getifacetxbytes)
 

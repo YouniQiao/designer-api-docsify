@@ -87,6 +87,30 @@ Default value: **false**
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## started
+
+```TypeScript
+started: boolean
+```
+
+Whether the timer has already started.
+
+**true**: The timer has started. **false**: The timer has not started.
+
+Default value: **false**
+
+**Type:** boolean
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextTimerConfiguration-started: boolean--><!--Device-TextTimerConfiguration-started: boolean-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## startTime
 
 ```TypeScript
@@ -112,30 +136,6 @@ When the value is negative, the timer starts with a negative value and continues
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TextTimerConfiguration-startTime?: number--><!--Device-TextTimerConfiguration-startTime?: number-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## started
-
-```TypeScript
-started: boolean
-```
-
-Whether the timer has already started.
-
-**true**: The timer has started. **false**: The timer has not started.
-
-Default value: **false**
-
-**Type:** boolean
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TextTimerConfiguration-started: boolean--><!--Device-TextTimerConfiguration-started: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

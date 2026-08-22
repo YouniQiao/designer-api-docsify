@@ -29,7 +29,7 @@ Sets the system time. This API uses an asynchronous callback to return the resul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | time | long | Yes | Timestamp to set, in milliseconds, and must be greater than 0. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -54,6 +54,23 @@ try {
       return;
     }
     console.info(`Succeeded in setting time`);
+  });
+} catch(e) {
+  let error = e as BusinessError;
+  console.info(`Failed to set time. message: ${error.message}, code: ${error.code}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Set the system time to 2021-01-20 02:36:25.
+let time: number = 1611081385000;
+try {
+  systemDateTime.setTime(time).then(() => {
+    console.info(`Succeeded in setting time.`);
+  }).catch((error: BusinessError) => {
+    console.info(`Failed to set time. message: ${error.message}, code: ${error.code}`);
   });
 } catch(e) {
   let error = e as BusinessError;
@@ -103,20 +120,5 @@ Sets the system time. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Set the system time to 2021-01-20 02:36:25.
-let time: number = 1611081385000;
-try {
-  systemDateTime.setTime(time).then(() => {
-    console.info(`Succeeded in setting time.`);
-  }).catch((error: BusinessError) => {
-    console.info(`Failed to set time. message: ${error.message}, code: ${error.code}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.info(`Failed to set time. message: ${error.message}, code: ${error.code}`);
-}
-```
+See [setTime](#settime)
 

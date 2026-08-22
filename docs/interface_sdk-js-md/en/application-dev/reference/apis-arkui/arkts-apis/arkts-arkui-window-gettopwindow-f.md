@@ -32,7 +32,7 @@ Obtains the top window of the current application. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the top window obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the top window obtained. |
 
 **Examples**
 
@@ -49,6 +49,65 @@ window.getTopWindow((err: BusinessError, data) => {
   windowClass = data;
   console.info('Succeeded in obtaining the top window. Data: ' + JSON.stringify(data));
 });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let windowClass: window.Window | undefined = undefined;
+let promise = window.getTopWindow();
+promise.then((data)=> {
+    windowClass = data;
+    console.info('Succeeded in obtaining the top window. Data: ' + JSON.stringify(data));
+}).catch((err: BusinessError)=>{
+    console.error(`Failed to obtain the top window. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage:window.WindowStage){
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    try {
+      window.getTopWindow(this.context, (err: BusinessError, data) => {
+        const errCode: number = err.code;
+        if(errCode){
+          console.error(`Failed to obtain the top window. Cause code: ${err.code}, message: ${err.message}`);
+          return ;
+        }
+        windowClass = data;
+        console.info('Succeeded in obtaining the top window. Data: ' + JSON.stringify(data));
+      });
+    } catch(error){
+      console.error(`Failed to obtain the top window. Cause code: ${error.code}, message: ${error.message}`);
+    }
+  }
+}
+```
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage:window.WindowStage) {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    let promise = window.getTopWindow(this.context);
+    promise.then((data) => {
+      windowClass = data;
+      console.info('Succeeded in obtaining the top window. Data: ' + JSON.stringify(data));
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to obtain the top window. Cause code: ${error.code}, message: ${error.message}`);
+    });
+  }
+}
 ```
 
 
@@ -80,18 +139,7 @@ Obtains the top window of the current application. This API uses a promise to re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowClass: window.Window | undefined = undefined;
-let promise = window.getTopWindow();
-promise.then((data)=> {
-    windowClass = data;
-    console.info('Succeeded in obtaining the top window. Data: ' + JSON.stringify(data));
-}).catch((err: BusinessError)=>{
-    console.error(`Failed to obtain the top window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
+See [getTopWindow](#gettopwindow)
 
 
 ## getTopWindow
@@ -126,25 +174,7 @@ Obtains the top window of the current application. This API uses a promise to re
 
 **Examples**
 
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage:window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    let promise = window.getTopWindow(this.context);
-    promise.then((data) => {
-      windowClass = data;
-      console.info('Succeeded in obtaining the top window. Data: ' + JSON.stringify(data));
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to obtain the top window. Cause code: ${error.code}, message: ${error.message}`);
-    });
-  }
-}
-```
+See [getTopWindow](#gettopwindow)
 
 
 ## getTopWindow
@@ -170,33 +200,9 @@ Obtains the top window of the current application. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the top window obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the top window obtained. |
 
 **Examples**
 
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage:window.WindowStage){
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    try {
-      window.getTopWindow(this.context, (err: BusinessError, data) => {
-        const errCode: number = err.code;
-        if(errCode){
-          console.error(`Failed to obtain the top window. Cause code: ${err.code}, message: ${err.message}`);
-          return ;
-        }
-        windowClass = data;
-        console.info('Succeeded in obtaining the top window. Data: ' + JSON.stringify(data));
-      });
-    } catch(error){
-      console.error(`Failed to obtain the top window. Cause code: ${error.code}, message: ${error.message}`);
-    }
-  }
-}
-```
+See [getTopWindow](#gettopwindow)
 

@@ -54,3 +54,37 @@ Checks whether a video stabilization mode is supported.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isVideoStabilizationModeSupported(captureSession: camera.CaptureSession): boolean {
+  let isSupported: boolean = false;
+  try {
+    isSupported = captureSession.isVideoStabilizationModeSupported(camera.VideoStabilizationMode.OFF);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The isVideoStabilizationModeSupported call failed. error code: ${err.code}`);
+  }
+  return isSupported;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isVideoStabilizationModeSupported(videoSession: camera.VideoSession): boolean {
+  let isSupported: boolean = false;
+  try {
+    isSupported = videoSession.isVideoStabilizationModeSupported(camera.VideoStabilizationMode.OFF);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The isVideoStabilizationModeSupported call failed. error code: ${err.code}`);
+  }
+  return isSupported;
+}
+```
+

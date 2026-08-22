@@ -32,11 +32,29 @@ function createMediaSourceWithDirectory(path: string): Promise< MediaSource | un
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[MediaSource](arkts-media-multimediamedia-mediasource-i.md) \| undefined&gt; | Promise对象。成功时返回MediaSource实例，失败时返回undefined。 |
+| Promise&lt;[MediaSource](arkts-media-multimedia-media-mediasource-i.md) \| undefined&gt; | Promise对象。成功时返回MediaSource实例，失败时返回undefined。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [5411007](../errorcode-media.md#5411007-无可用资源) | The directory specified by the path parameter does not exist or inaccessible. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function test() {
+  media.createMediaSourceWithDirectory("/data/storage/el2/base/media/cache/").then((mediaSource: media.MediaSource | undefined) => {
+    if (mediaSource) {
+      console.info('Succeeded in creating MediaSource with directory');
+    } else {
+      console.error('Failed to create MediaSource with directory');
+    }
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to create MediaSource with directory, error: ${error}`);
+  });
+}
+```
 

@@ -53,6 +53,22 @@ huks.deleteKey(keyAlias, emptyOptions, (err, data) => {
 });
 ```
 
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+/* 此处options选择emptyOptions传空 */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+let result = huks.deleteKey(keyAlias, emptyOptions).then((data) => {
+  console.info('delete key success');
+}).catch((err: BusinessError) => {
+  console.error("密钥删除失败，错误码是： " + err.code + " 错误码信息： " + err.message);
+});
+```
+
 
 ## deleteKey
 
@@ -92,19 +108,5 @@ function deleteKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 
 **示例**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-/* 此处options选择emptyOptions传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-let result = huks.deleteKey(keyAlias, emptyOptions).then((data) => {
-  console.info('delete key success');
-}).catch((err: BusinessError) => {
-  console.error("密钥删除失败，错误码是： " + err.code + " 错误码信息： " + err.message);
-});
-```
+参见 [deleteKey](#deletekey)
 

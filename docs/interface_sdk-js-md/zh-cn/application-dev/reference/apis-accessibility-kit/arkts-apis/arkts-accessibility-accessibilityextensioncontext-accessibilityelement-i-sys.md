@@ -475,49 +475,6 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
 });
 ```
 
-## findElementByFocusDirection
-
-```TypeScript
-findElementByFocusDirection(condition: FocusDirection, type: FocusRuleType): Promise<AccessibilityElement>
-```
-
-根据焦点方向和聚焦类型查找元素。使用Promise异步回调。
-
-**起始版本：** 26.0.0
-
-**需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AccessibilityElement-findElementByFocusDirection(condition: FocusDirection, type: FocusRuleType): Promise<AccessibilityElement>--><!--Device-AccessibilityElement-findElementByFocusDirection(condition: FocusDirection, type: FocusRuleType): Promise<AccessibilityElement>-End-->
-
-**系统能力：** SystemCapability.BarrierFree.Accessibility.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | 是 | 焦点方向。 |
-| type | [FocusRuleType](arkts-accessibility-accessibility-focusruletype-e-sys.md) | 是 | 聚焦类型。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise对象，返回指定焦点方向上符合聚焦类型的元素。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
-
-**示例**
-
 ```TypeScript
 // Page.ets
 // 点击“二级标题1”，使其成为无障碍焦点元素。下一个聚焦类型为标题焦点元素，是“二级标题2”。
@@ -569,6 +526,51 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
   console.error(`Failed to getAccessibilityFocusedElement. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+## findElementByFocusDirection
+
+```TypeScript
+findElementByFocusDirection(condition: FocusDirection, type: FocusRuleType): Promise<AccessibilityElement>
+```
+
+根据焦点方向和聚焦类型查找元素。使用Promise异步回调。
+
+**起始版本：** 26.0.0
+
+**需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AccessibilityElement-findElementByFocusDirection(condition: FocusDirection, type: FocusRuleType): Promise<AccessibilityElement>--><!--Device-AccessibilityElement-findElementByFocusDirection(condition: FocusDirection, type: FocusRuleType): Promise<AccessibilityElement>-End-->
+
+**系统能力：** SystemCapability.BarrierFree.Accessibility.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | 是 | 焦点方向。 |
+| type | [FocusRuleType](arkts-accessibility-accessibility-focusruletype-e-sys.md) | 是 | 聚焦类型。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise对象，返回指定焦点方向上符合聚焦类型的元素。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
+
+**示例**
+
+参见 [findElementByFocusDirection](#findelementbyfocusdirection)
 
 ## findElementById
 
@@ -822,49 +824,6 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
 });
 ```
 
-## findElementsByCondition
-
-```TypeScript
-findElementsByCondition(rule: FocusRule, condition: FocusCondition, type: FocusRuleType): Promise<FocusMoveResult>
-```
-
-根据规则和查询条件查找目标类型的可聚焦节点。使用Promise异步回调。
-
-**起始版本：** 26.0.0
-
-**需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AccessibilityElement-findElementsByCondition(rule: FocusRule, condition: FocusCondition, type: FocusRuleType): Promise<FocusMoveResult>--><!--Device-AccessibilityElement-findElementsByCondition(rule: FocusRule, condition: FocusCondition, type: FocusRuleType): Promise<FocusMoveResult>-End-->
-
-**系统能力：** SystemCapability.BarrierFree.Accessibility.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rule | [FocusRule](arkts-accessibility-focusrule-t-sys.md) | 是 | 检查当前节点及其子节点的规则。 |
-| condition | [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | 是 | 表示查询可聚焦节点方式。 |
-| type | [FocusRuleType](arkts-accessibility-accessibility-focusruletype-e-sys.md) | 是 | 聚焦类型。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md)&gt; | Promise对象，返回查询结果对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-**示例**
-
 ```TypeScript
 // Page.ets
   build() {
@@ -916,6 +875,51 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
   console.error(`Failed to getAccessibilityFocusedElement. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+## findElementsByCondition
+
+```TypeScript
+findElementsByCondition(rule: FocusRule, condition: FocusCondition, type: FocusRuleType): Promise<FocusMoveResult>
+```
+
+根据规则和查询条件查找目标类型的可聚焦节点。使用Promise异步回调。
+
+**起始版本：** 26.0.0
+
+**需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AccessibilityElement-findElementsByCondition(rule: FocusRule, condition: FocusCondition, type: FocusRuleType): Promise<FocusMoveResult>--><!--Device-AccessibilityElement-findElementsByCondition(rule: FocusRule, condition: FocusCondition, type: FocusRuleType): Promise<FocusMoveResult>-End-->
+
+**系统能力：** SystemCapability.BarrierFree.Accessibility.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| rule | [FocusRule](arkts-accessibility-focusrule-t-sys.md) | 是 | 检查当前节点及其子节点的规则。 |
+| condition | [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | 是 | 表示查询可聚焦节点方式。 |
+| type | [FocusRuleType](arkts-accessibility-accessibility-focusruletype-e-sys.md) | 是 | 聚焦类型。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md)&gt; | Promise对象，返回查询结果对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+**示例**
+
+参见 [findElementsByCondition](#findelementsbycondition)
 
 ## getChildren
 
@@ -997,6 +1001,32 @@ ArkTS-Dyn示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 // rootElement是AccessibilityElement的实例，需通过AccessibilityExtensionContext.getAccessibilityFocusedElement()或getRootInActiveWindow()获取。
+rootElement.getCursorPosition().then((data: number) => {
+  console.info(`succeeded in getting cursor position, ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get cursor position. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement是AccessibilityElement的实例
+rootElement.getCursorPosition().then((data: int) => {
+  console.info(`succeeded in getting cursor position, ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`failed to get cursor position, Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement是AccessibilityElement的实例，需通过AccessibilityExtensionContext.getAccessibilityFocusedElement()或getRootInActiveWindow()获取。
 rootElement.getCursorPosition((err: BusinessError, data: number) => {
   if (err && err.code) {
     console.error(`Failed to get cursor position. Code: ${err.code}, message: ${err.message}`);
@@ -1045,31 +1075,7 @@ getCursorPosition(): Promise<int>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement是AccessibilityElement的实例，需通过AccessibilityExtensionContext.getAccessibilityFocusedElement()或getRootInActiveWindow()获取。
-rootElement.getCursorPosition().then((data: number) => {
-  console.info(`succeeded in getting cursor position, ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get cursor position. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement是AccessibilityElement的实例
-rootElement.getCursorPosition().then((data: int) => {
-  console.info(`succeeded in getting cursor position, ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`failed to get cursor position, Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [getCursorPosition](#getcursorposition)
 
 ## getParent
 

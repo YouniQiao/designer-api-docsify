@@ -36,3 +36,11 @@ Indicates the abstract of text
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+**Examples**
+
+```TypeScript
+let text = new unifiedDataChannel.PlainText();
+text.textContent = 'this is textContent';
+text.abstract = 'This is abstract';
+```
+

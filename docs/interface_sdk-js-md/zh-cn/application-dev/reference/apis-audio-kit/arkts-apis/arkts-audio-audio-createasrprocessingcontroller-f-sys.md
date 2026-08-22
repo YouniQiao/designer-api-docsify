@@ -78,6 +78,38 @@ audio.createAudioCapturer(audioCapturerOptions, (err, data) => {
 });
 ```
 
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let audioStreamInfo: audio.AudioStreamInfo = {
+  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000,
+  channels: audio.AudioChannel.CHANNEL_2,
+  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE,
+  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW
+};
+
+let audioCapturerInfo: audio.AudioCapturerInfo = {
+  source: audio.SourceType.SOURCE_TYPE_MIC,
+  capturerFlags: 0
+};
+
+let audioCapturerOptions: audio.AudioCapturerOptions = {
+  streamInfo: audioStreamInfo,
+  capturerInfo: audioCapturerInfo
+};
+
+audio.createAudioCapturer(audioCapturerOptions, (err, data) => {
+  if (err) {
+    console.error(`AudioCapturer Created : Error: ${err}`);
+  } else {
+    console.info('AudioCapturer Created : Success : SUCCESS');
+    let audioCapturer = data;
+    let asrProcessingController = audio.createAsrProcessingController(audioCapturer);
+    console.info('AsrProcessingController Created : Success : SUCCESS');
+  }
+});
+```
+
 
 ## createAsrProcessingController
 
@@ -117,35 +149,5 @@ Create ASR processing controller on one audio capturer.
 
 **示例**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let audioStreamInfo: audio.AudioStreamInfo = {
-  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000,
-  channels: audio.AudioChannel.CHANNEL_2,
-  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE,
-  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW
-};
-
-let audioCapturerInfo: audio.AudioCapturerInfo = {
-  source: audio.SourceType.SOURCE_TYPE_MIC,
-  capturerFlags: 0
-};
-
-let audioCapturerOptions: audio.AudioCapturerOptions = {
-  streamInfo: audioStreamInfo,
-  capturerInfo: audioCapturerInfo
-};
-
-audio.createAudioCapturer(audioCapturerOptions, (err, data) => {
-  if (err) {
-    console.error(`AudioCapturer Created : Error: ${err}`);
-  } else {
-    console.info('AudioCapturer Created : Success : SUCCESS');
-    let audioCapturer = data;
-    let asrProcessingController = audio.createAsrProcessingController(audioCapturer);
-    console.info('AsrProcessingController Created : Success : SUCCESS');
-  }
-});
-```
+参见 [createAsrProcessingController](#createasrprocessingcontroller)
 

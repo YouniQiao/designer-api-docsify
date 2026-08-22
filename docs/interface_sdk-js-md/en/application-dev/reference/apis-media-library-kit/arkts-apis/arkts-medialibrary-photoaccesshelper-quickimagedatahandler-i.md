@@ -40,6 +40,55 @@ Information returned by **map**:
 | imageSource | image.ImageSource | Yes | Data of the image asset that is ready. |
 | map | Map&lt;string, string&gt; | Yes | Additional information about the image asset, such as the image quality. Currently, only **quality** is supported. |
 
+**Examples**
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+
+class MediaHandler implements photoAccessHelper.MediaAssetDataHandler<image.ImageSource> {
+  onDataPrepared = (data: image.ImageSource, map: Map<string, string>) => {
+    if (data === undefined) {
+      console.error('Error occurred when preparing data');
+      return;
+    }
+    // Customize the processing logic for ImageSource.
+    console.info('on image data prepared, photo quality is ' + map['quality']);
+  }
+}
+
+class MediaDataHandler implements photoAccessHelper.MediaAssetDataHandler<ArrayBuffer> {
+  onDataPrepared = (data: ArrayBuffer, map: Map<string, string>) => {
+    if (data === undefined) {
+      console.error('Error occurred when preparing data');
+      return;
+    }
+    // Customize the processing logic for ArrayBuffer.
+    console.info('on image data prepared, photo quality is ' + map['quality']);
+  }
+}
+
+class MovingPhotoHandler implements photoAccessHelper.MediaAssetDataHandler<photoAccessHelper.MovingPhoto> {
+  onDataPrepared = (data: photoAccessHelper.MovingPhoto, map: Map<string, string>) => {
+    if (data === undefined) {
+      console.error('Error occurred when preparing data');
+      return;
+    }
+    // Customize the processing logic for MovingPhoto.
+    console.info('on image data prepared, photo quality is ' + map['quality']);
+  }
+}
+```
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+
+class MediaHandler implements photoAccessHelper.QuickImageDataHandler<image.Picture> {
+  onDataPrepared(data: image.Picture, imageSource: image.ImageSource, map: Map<string, string>) {
+    console.info('on image data prepared');
+  }
+}
+```
+
 ## onDataPrepared
 
 ```TypeScript
@@ -61,4 +110,8 @@ Indicates required media asset data quickly is prepared
 | data | T \| undefined | Yes | the returned data of picture if data of media asset is invalid, return undefined. |
 | imageSource | image.ImageSource \| null | Yes | the returned data of imageSource if data of imageSource is invalid, return null. |
 | map | Map&lt;string, string&gt; | Yes | additional information for the data |
+
+**Examples**
+
+See [onDataPrepared](#ondataprepared)
 

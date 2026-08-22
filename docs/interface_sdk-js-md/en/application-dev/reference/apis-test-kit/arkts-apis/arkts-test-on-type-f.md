@@ -33,6 +33,29 @@ Specifies the type of the target Component.
 | --- | --- |
 | [On](arkts-test-uitest-on-c.md) | this { |
 
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.type('Button'); // Use the static constructor ON to create an On object and specify the type attribute of the target component.
+```
+
+```TypeScript
+// xxx.test.ets
+import { On, ON, MatchPattern } from '@kit.TestKit';
+
+let on: On = ON.type('Button', MatchPattern.EQUALS); // Use the static constructor ON to create an On object and specify the type attribute of the target component.
+```
+
+```TypeScript
+// xxx.test.ets
+import { By, BY } from '@kit.TestKit';
+
+let by: By = BY.type('Button'); // Use the static constructor BY to create a By object and specify the type attribute of the target component.
+```
+
 
 ## type
 
@@ -60,4 +83,8 @@ Specifies the type of the target Component.
 | Type | Description |
 | --- | --- |
 | [On](arkts-test-uitest-on-c.md) | this { |
+
+**Examples**
+
+See [type](#type)
 

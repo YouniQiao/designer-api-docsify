@@ -67,6 +67,19 @@ dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.REA
 }); // 安装DLP沙箱。
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.READ_ONLY, 100, uri, (err, res) => {
+  if (err) {
+    console.error(`Failed to install DLPSandbox. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('res', JSON.stringify(res));
+  }
+}); // 安装DLP沙箱。
+```
+
 
 ## installDLPSandbox
 
@@ -112,16 +125,5 @@ DLP文件管理应用打开受保护文件前，需要先为目标应用安装DL
 
 **示例**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.READ_ONLY, 100, uri, (err, res) => {
-  if (err) {
-    console.error(`Failed to install DLPSandbox. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('res', JSON.stringify(res));
-  }
-}); // 安装DLP沙箱。
-```
+参见 [installDLPSandbox](#installdlpsandbox)
 

@@ -41,6 +41,13 @@ Obtains a list of IDs supported by the **Transliterator** object.
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
 
+// ids = ['America/Adak', 'America/Anchorage', 'America/Bogota', 'America/Denver', 'America/Los_Angeles', 'America/Montevideo', 'America/Santiago', 'America/Sao_Paulo', 'Asia/Ashgabat', 'Asia/Hovd', 'Asia/Jerusalem', 'Asia/Magadan', 'Asia/Omsk', 'Asia/Shanghai', 'Asia/Tokyo', 'Asia/Yerevan', 'Atlantic/Cape_Verde', 'Australia/Lord_Howe', 'Europe/Dublin', 'Europe/London', 'Europe/Moscow', 'Pacific/Auckland', 'Pacific/Easter', 'Pacific/Pago-Pago']
+let ids: Array<string> = i18n.TimeZone.getAvailableIDs();
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
 // A total of 742 IDs are supported. One ID is comprised of two parts separated by a hyphen (-) in the format of source-destination. For example, in **ids = ["Han-Latin","Latin-ASCII", "Amharic-Latin/BGN","Accents-Any", ...]**, **Han-Latin** indicates conversion from Chinese to Latin, and **Amharic-Latin** indicates conversion from Amharic to Latin.
 // For more information, see ISO-15924.
 let ids: string[] = i18n.Transliterator.getAvailableIDs();
@@ -79,7 +86,25 @@ Creates a **Transliterator** object based on the specified ID.
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
 
+let indexUtil: i18n.IndexUtil = i18n.getInstance('zh-CN');
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
 let transliterator: i18n.Transliterator = i18n.Transliterator.getInstance('Any-Latn');
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let normalizer: i18n.Normalizer = i18n.Normalizer.getInstance(i18n.NormalizerMode.NFC);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call Normalizer.getInstance failed, error code: ${err.code}, message: ${err.message}.`);
+}
 ```
 
 ## transform

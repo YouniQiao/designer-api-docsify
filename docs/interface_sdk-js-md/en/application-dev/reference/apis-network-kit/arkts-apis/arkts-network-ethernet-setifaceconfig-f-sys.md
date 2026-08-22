@@ -30,7 +30,7 @@ Sets the network interface configuration information. This API uses an asynchron
 | --- | --- | --- | --- |
 | iface | string | Yes | Interface name. |
 | ic | [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | Yes | Network interface configuration to set. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, the return result is empty. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, the return result is empty. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -68,6 +68,28 @@ ethernet.setIfaceConfig("eth0", config, (error: BusinessError) => {
   } else {
     console.info("setIfaceConfig callback ok");
   }
+});
+```
+
+```TypeScript
+import { ethernet } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let config: ethernet.InterfaceConfiguration = {
+  mode: 0,
+  ipAddr: "192.168.xx.xxx",
+  route: "192.168.xx.xxx",
+  gateway: "192.168.xx.xxx",
+  netMask: "255.255.255.0",
+  dnsServers: "1.1.1.1"
+};
+
+const setConfigPromise = ethernet.setIfaceConfig("eth0", config);
+
+setConfigPromise.then(() => {
+  console.info("setIfaceConfig promise ok");
+}).catch((error: BusinessError)  => {
+  console.error("setIfaceConfig promise error = " + JSON.stringify(error));
 });
 ```
 
@@ -120,25 +142,5 @@ Sets the network interface configuration information. This API uses a promise to
 
 **Examples**
 
-```TypeScript
-import { ethernet } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let config: ethernet.InterfaceConfiguration = {
-  mode: 0,
-  ipAddr: "192.168.xx.xxx",
-  route: "192.168.xx.xxx",
-  gateway: "192.168.xx.xxx",
-  netMask: "255.255.255.0",
-  dnsServers: "1.1.1.1"
-};
-
-const setConfigPromise = ethernet.setIfaceConfig("eth0", config);
-
-setConfigPromise.then(() => {
-  console.info("setIfaceConfig promise ok");
-}).catch((error: BusinessError)  => {
-  console.error("setIfaceConfig promise error = " + JSON.stringify(error));
-});
-```
+See [setIfaceConfig](#setifaceconfig)
 

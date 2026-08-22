@@ -50,6 +50,35 @@ addPath(path: Path2D, transform?: Matrix2D): void
 | path | [Path2D](arkts-arkui-path2d-c.md) | 是 | 需要添加到当前路径的路径对象，路径单位：px。 <br>异常值undefined和null按无效值处理。 |
 | transform | Matrix2D | 否 | 新增路径的变换矩阵对象。 <br>异常值undefined和null按无效值处理。 <br>默认值：null。 |
 
+**示例**
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct AddPath {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+  private path2Da: Path2D = new Path2D("M250 150 L150 350 L350 350 Z");
+  private path2Db: Path2D = new Path2D();
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.context)
+        .width('100%')
+        .height('100%')
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.path2Db.addPath(this.path2Da)
+          this.context.stroke(this.path2Db)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 ## constructor
 
 ```TypeScript
@@ -67,6 +96,47 @@ constructor()
 <!--Device-Path2D-constructor()--><!--Device-Path2D-constructor()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**示例**
+
+以下示例展示了配置CanvasRenderingContext2D对象的单位模式，默认单位模式为LengthMetricsUnit.DEFAULT，对应默认单位vp，配置后无法动态更改。详细说明见LengthMetricsUnit。
+
+```TypeScript
+// xxx.ets
+import { LengthMetricsUnit } from '@kit.ArkUI'
+
+@Entry
+@Component
+struct LengthMetricsUnitDemo {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private contextPX: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings, LengthMetricsUnit.PX);
+  private contextVP: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.contextPX)
+        .width('100%')
+        .height(150)
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.contextPX.fillRect(10, 10, 100, 100)
+          this.contextPX.clearRect(10, 10, 50, 50)
+        })
+
+      Canvas(this.contextVP)
+        .width('100%')
+        .height(150)
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.contextVP.fillRect(10, 10, 100, 100)
+          this.contextVP.clearRect(10, 10, 50, 50)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## constructor
 
@@ -94,6 +164,10 @@ constructor(unit: LengthMetricsUnit)
 | --- | --- | --- | --- |
 | unit | LengthMetricsUnit | 是 | 用来配置Matrix2D对象的单位模式，配置后无法动态更改，配置方法同CanvasRenderingContext2D 。 <br>默认值：DEFAULT <br>异常值NaN和Infinity按默认值处理。 |
 
+**示例**
+
+参见 [constructor](#constructor)
+
 ## constructor
 
 ```TypeScript
@@ -117,6 +191,10 @@ constructor(path: Path2D)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | [Path2D](arkts-arkui-path2d-c.md) | 是 | 路径对象。 |
+
+**示例**
+
+参见 [constructor](#constructor)
 
 ## constructor
 
@@ -145,6 +223,10 @@ constructor(path: Path2D, unit: LengthMetricsUnit)
 | path | [Path2D](arkts-arkui-path2d-c.md) | 是 | 路径对象。 |
 | unit | LengthMetricsUnit | 是 | 用来配置Path2D对象的单位模式，配置后无法动态更改， 配置方法同 [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)。 <br>异常值NaN和Infinity按默认值处理。 <br>默认值：DEFAULT。 |
 
+**示例**
+
+参见 [constructor](#constructor)
+
 ## constructor
 
 ```TypeScript
@@ -168,6 +250,10 @@ constructor(d: string)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | d | string | 是 | 符合SVG路径描述规范的路径字符串，格式参考 [SVG路径描述规范](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-path.md#svg路径描述规范)， 异常值按无效值处理。 |
+
+**示例**
+
+参见 [constructor](#constructor)
 
 ## constructor
 
@@ -195,4 +281,8 @@ constructor(description: string, unit: LengthMetricsUnit)
 | --- | --- | --- | --- |
 | description | string | 是 | 符合SVG路径描述规范的路径字符串，格式参考 [SVG路径描述规范](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-path.md#svg路径描述规范)， 异常值按无效值处理。 |
 | unit | LengthMetricsUnit | 是 | 用来配置Path2D对象的单位模式，配置后无法动态更改， 配置方法同 [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)。 <br>异常值NaN和Infinity按默认值处理。 <br>默认值：DEFAULT。 |
+
+**示例**
+
+参见 [constructor](#constructor)
 

@@ -264,6 +264,62 @@ setSessionId(sessionId?: string): boolean
 **示例**
 
 ```TypeScript
+// g_object加入分布式组网
+g_object.setSessionId(distributedDataObject.genSessionId(), () => {
+    console.info('join session');
+});
+// g_object退出分布式组网
+g_object.setSessionId('', () => {
+    console.info('leave all session');
+});
+```
+
+```TypeScript
+// g_object加入分布式组网
+g_object.setSessionId(distributedDataObject.genSessionId(), () => {
+    console.info('join session');
+});
+// 退出分布式组网
+g_object.setSessionId(() => {
+    console.info('leave all session.');
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// g_object加入分布式组网
+g_object.setSessionId(distributedDataObject.genSessionId()).then(() => {
+    console.info('join session.');
+}).catch((error: BusinessError) => {
+    console.error(`Failed to set sessionId. Code: ${error.code}, message: ${error.message}`);
+});
+// 退出分布式组网
+g_object.setSessionId().then(() => {
+    console.info('leave all session.');
+}).catch((error: BusinessError) => {
+    console.error(`Failed to set sessionId. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// g_object加入分布式组网
+g_object!.setSessionId(distributedDataObject.genSessionId()).then(() => {
+  console.info('join session.');
+}).catch((error) => {
+  console.error(`Failed to set sessionId. Code: ${error.code}, message: ${error.message}`);
+});
+// 退出分布式组网
+g_object!.setSessionId().then(() => {
+  console.info('leave all session.');
+}).catch((error) => {
+  console.error(`Failed to set sessionId. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+```TypeScript
 class SourceObject {
   name: string
   age: number

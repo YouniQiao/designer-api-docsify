@@ -82,6 +82,32 @@ Obtains the available audio devices. This API returns the result synchronously.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data: audio.AudioDeviceDescriptors = audioRoutingManager.getAvailableDevices(audio.DeviceUsage.MEDIA_OUTPUT_DEVICES);
+  console.info('Succeeded in doing getAvailableDevices.');
+} catch (err) {
+  let error = err as BusinessError;
+   console.error(`Failed to getAvailableDevices. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data: audio.AudioDeviceDescriptors = audioSessionManager.getAvailableDevices(audio.DeviceUsage.MEDIA_OUTPUT_DEVICES);
+  console.info('Succeeded in doing getAvailableDevices.');
+} catch (err) {
+  let error = err as BusinessError;
+   console.error(`Failed to getAvailableDevices. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getDevices
 
 ```TypeScript
@@ -101,7 +127,49 @@ Obtains the audio devices with a specific flag. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceFlag | DeviceFlag | Yes | Audio device flag. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio devices obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio devices obtained; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG, (err: BusinessError, value: audio.AudioDeviceDescriptors) => {
+  if (err) {
+    console.error(`Failed to obtain the device list. ${err}`);
+    return;
+  }
+  console.info('Callback invoked to indicate that the device list is obtained.');
+});
+```
+
+```TypeScript
+audioManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((data: audio.AudioDeviceDescriptors) => {
+  console.info('Promise returned to indicate that the device list is obtained.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG, (err: BusinessError, audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
+  if (err) {
+    console.error(`Failed to get devices. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting devices, AudioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
+  console.info(`Succeeded in getting devices, AudioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get devices. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getDevices
 
@@ -128,6 +196,10 @@ Obtains the audio devices with a specific flag. This API uses a promise to retur
 | Type | Description |
 | --- | --- |
 | Promise&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Promise used to return the device list. |
+
+**Examples**
+
+See [getDevices](#getdevices)
 
 ## getDevicesSync
 
@@ -162,6 +234,20 @@ Obtains the audio devices with a specific flag. This API returns the result sync
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let audioDeviceDescriptors = audioRoutingManager.getDevicesSync(audio.DeviceFlag.OUTPUT_DEVICES_FLAG);
+  console.info(`Succeeded in getting devices, AudioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get devices. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getPreferOutputDeviceForRendererInfo
 
 ```TypeScript
@@ -181,7 +267,7 @@ Obtains the output device with the highest priority based on the audio renderer 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | rendererInfo | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | Yes | Audio renderer information. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the output device with the highest priority obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the output device with the highest priority obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -190,6 +276,40 @@ Obtains the output device with the highest priority based on the audio renderer 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by callback. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rendererInfo: audio.AudioRendererInfo = {
+  usage: audio.StreamUsage.STREAM_USAGE_MUSIC, // Audio stream usage type: music. Set this parameter based on the service scenario.
+  rendererFlags: 0 // AudioRenderer flag.
+};
+
+audioRoutingManager.getPreferOutputDeviceForRendererInfo(rendererInfo, (err: BusinessError, audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
+  if (err) {
+    console.error(`Failed to get prefer output device for renderer info. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting prefer output device for renderer info, AudioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rendererInfo: audio.AudioRendererInfo = {
+  usage: audio.StreamUsage.STREAM_USAGE_MUSIC, // Audio stream usage type: music. Set this parameter based on the service scenario.
+  rendererFlags: 0 // AudioRenderer flag.
+};
+
+audioRoutingManager.getPreferOutputDeviceForRendererInfo(rendererInfo).then((audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
+  console.info(`Succeeded in getting prefer output device for renderer info, AudioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get prefer output device for renderer info. Code: ${err.code}, message: ${err.message}`);
+})
+```
 
 ## getPreferOutputDeviceForRendererInfo
 
@@ -225,6 +345,10 @@ Obtains the output device with the highest priority based on the audio renderer 
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by promise. |
 
+**Examples**
+
+See [getPreferOutputDeviceForRendererInfo](#getpreferoutputdeviceforrendererinfo)
+
 ## getPreferredInputDeviceForCapturerInfo
 
 ```TypeScript
@@ -244,7 +368,7 @@ Obtains the input device with the highest priority based on the audio capturer i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | capturerInfo | [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md) | Yes | Audio capturer information. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the input device with the highest priority obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the input device with the highest priority obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -253,6 +377,40 @@ Obtains the input device with the highest priority based on the audio capturer i
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by callback. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let capturerInfo: audio.AudioCapturerInfo = {
+  source: audio.SourceType.SOURCE_TYPE_MIC, // Audio source type: microphone. Set this parameter based on the service scenario.
+  capturerFlags: 0 // AudioCapturer flag.
+};
+
+audioRoutingManager.getPreferredInputDeviceForCapturerInfo(capturerInfo, (err: BusinessError, audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
+  if (err) {
+    console.error(`Failed to get preferred input device for capturer info. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting preferred input device for capturer info, AudioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let capturerInfo: audio.AudioCapturerInfo = {
+  source: audio.SourceType.SOURCE_TYPE_MIC, // Audio source type: microphone. Set this parameter based on the service scenario.
+  capturerFlags: 0 // AudioCapturer flag.
+};
+
+audioRoutingManager.getPreferredInputDeviceForCapturerInfo(capturerInfo).then((audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
+  console.info(`Succeeded in getting preferred input device for capturer info, AudioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get preferred input device for capturer info. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getPreferredInputDeviceForCapturerInfo
 
@@ -288,6 +446,10 @@ Obtains the input device with the highest priority based on the audio capturer i
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by promise. |
 
+**Examples**
+
+See [getPreferredInputDeviceForCapturerInfo](#getpreferredinputdeviceforcapturerinfo)
+
 ## getPreferredInputDeviceForCapturerInfoSync
 
 ```TypeScript
@@ -320,6 +482,25 @@ Gets preferred input device for target audio capturer info.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let capturerInfo: audio.AudioCapturerInfo = {
+  source: audio.SourceType.SOURCE_TYPE_MIC, // Audio source type: microphone. Set this parameter based on the service scenario.
+  capturerFlags: 0 // AudioCapturer flag.
+};
+
+try {
+  let audioDeviceDescriptors = audioRoutingManager.getPreferredInputDeviceForCapturerInfoSync(capturerInfo);
+  console.info(`Succeeded in getting preferred input device for capturer info, AudioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get preferred input device for capturer info. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## getPreferredOutputDeviceForRendererInfoSync
 
@@ -354,6 +535,25 @@ Obtains the output device with the highest priority based on the audio renderer 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rendererInfo: audio.AudioRendererInfo = {
+  usage: audio.StreamUsage.STREAM_USAGE_MUSIC, // Audio stream usage type: music. Set this parameter based on the service scenario.
+  rendererFlags: 0 // AudioRenderer flag.
+};
+
+try {
+  let audioDeviceDescriptors = audioRoutingManager.getPreferredOutputDeviceForRendererInfoSync(rendererInfo);
+  console.info(`Succeeded in getting prefer output device for renderer info, AudioDeviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get prefer output device for renderer info. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## isCommunicationDeviceActive
 
 ```TypeScript
@@ -373,7 +573,27 @@ Checks whether a communication device is active. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceType | [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md) | Yes | Active audio device type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the device is active or **false** if not active; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the device is active or **false** if not active; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRoutingManager.isCommunicationDeviceActive(audio.CommunicationDeviceType.SPEAKER, (err: BusinessError, value: boolean) => {
+  if (err) {
+    console.error(`Failed to obtain the active status of the device. ${err}`);
+    return;
+  }
+  console.info('Callback invoked to indicate that the active status of the device is obtained.');
+});
+```
+
+```TypeScript
+audioRoutingManager.isCommunicationDeviceActive(audio.CommunicationDeviceType.SPEAKER).then((value: boolean) => {
+  console.info(`Promise returned to indicate that the active status of the device is obtained ${value}.`);
+});
+```
 
 ## isCommunicationDeviceActive
 
@@ -400,6 +620,10 @@ Checks whether a communication device is active. This API uses a promise to retu
 | Type | Description |
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the device is active. **true** if active, **false** otherwise. |
+
+**Examples**
+
+See [isCommunicationDeviceActive](#iscommunicationdeviceactive)
 
 ## isCommunicationDeviceActiveSync
 
@@ -434,6 +658,20 @@ Checks whether a communication device is active. This API returns the result syn
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let value: boolean = audioRoutingManager.isCommunicationDeviceActiveSync(audio.CommunicationDeviceType.SPEAKER);
+  console.info(`Indicate that the active status of the device is obtained ${value}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain the active status of the device ${error}.`);
+}
+```
+
 ## isMicBlockDetectionSupported
 
 ```TypeScript
@@ -454,135 +692,13 @@ Checks whether the current device supports microphone blocking detection. This A
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result, indicating the support for microphone blocking detection. **true** if supported, **false** otherwise. |
 
-## offAvailableDeviceChange
+**Examples**
 
 ```TypeScript
-offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void
+audioRoutingManager.isMicBlockDetectionSupported().then((value: boolean) => {
+  console.info(`Query whether microphone block detection is supported on current device result is ${value}.`);
+});
 ```
-
-UnSubscribes to available device change events.
-
-**Since:** 23
-
-<!--Device-AudioRoutingManager-offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioRoutingManager-offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Device
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | No | Callback used to obtain the device update details. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-## offDeviceChange
-
-```TypeScript
-offDeviceChange(callback?: Callback<DeviceChangeAction>): void
-```
-
-UnSubscribes to device change events.
-
-**Since:** 23
-
-<!--Device-AudioRoutingManager-offDeviceChange(callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioRoutingManager-offDeviceChange(callback?: Callback<DeviceChangeAction>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Device
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | No | Callback used to obtain the device update details. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-## offMicBlockStatusChanged
-
-```TypeScript
-offMicBlockStatusChanged(callback?: Callback<DeviceBlockStatusInfo>): void
-```
-
-Unsubscribes microphone blocked events.
-
-**Since:** 23
-
-<!--Device-AudioRoutingManager-offMicBlockStatusChanged(callback?: Callback<DeviceBlockStatusInfo>): void--><!--Device-AudioRoutingManager-offMicBlockStatusChanged(callback?: Callback<DeviceBlockStatusInfo>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Device
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)&gt; | No | Callback used to obtain the microphone block status. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-## offPreferOutputDeviceChangeForRendererInfo
-
-```TypeScript
-offPreferOutputDeviceChangeForRendererInfo(callback?: Callback<AudioDeviceDescriptors>): void
-```
-
-UnSubscribes to prefer output device change events.
-
-**Since:** 23
-
-<!--Device-AudioRoutingManager-offPreferOutputDeviceChangeForRendererInfo(callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-offPreferOutputDeviceChangeForRendererInfo(callback?: Callback<AudioDeviceDescriptors>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Device
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used to obtain the changed prefer devices in subscribe. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-## offPreferredInputDeviceChangeForCapturerInfo
-
-```TypeScript
-offPreferredInputDeviceChangeForCapturerInfo(callback?: Callback<AudioDeviceDescriptors>): void
-```
-
-Unsubscribes to preferred input device change events.
-
-**Since:** 23
-
-<!--Device-AudioRoutingManager-offPreferredInputDeviceChangeForCapturerInfo(callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-offPreferredInputDeviceChangeForCapturerInfo(callback?: Callback<AudioDeviceDescriptors>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Device
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used to obtain the changed preferred devices in subscribe. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## off('availableDeviceChange')
 
@@ -603,7 +719,7 @@ Unsubscribes from the event indicating that the connection status of an availabl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'availableDeviceChange' | Yes | Event type. The event **'availableDeviceChange'** is triggered when the connection status of available audio devices is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | No | Callback used to return the available device change details. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | No | Callback used to return the available device change details. |
 
 **Error codes:**
 
@@ -631,7 +747,7 @@ Unsubscribes from the event indicating that the connection status of an audio de
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceChange' | Yes | Event type. The event **'deviceChange'** is triggered when the connection status of an audio device is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | No | Callback used to return the device change details. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | No | Callback used to return the device change details. |
 
 **Error codes:**
 
@@ -659,7 +775,7 @@ Unsubscribes from the microphone blocked status change event. This API uses an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'micBlockStatusChanged' | Yes | Event type. The event **'micBlockStatusChanged'** is triggered when the microphone blocked status is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)&gt; | No | Callback used to return the microphone blocked status and device information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)&gt; | No | Callback used to return the microphone blocked status and device information. |
 
 **Error codes:**
 
@@ -687,7 +803,7 @@ Unsubscribes from the change event of the output device with the highest priorit
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'preferOutputDeviceChangeForRendererInfo' | Yes | Event type. The event **'preferOutputDeviceChangeForRendererInfo'** is triggered when the output device with the highest priority is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used to return the information about the output device with the highest priority. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used to return the information about the output device with the highest priority. |
 
 **Error codes:**
 
@@ -715,7 +831,7 @@ Unsubscribes from the change event of the input device with the highest priority
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'preferredInputDeviceChangeForCapturerInfo' | Yes | Event type. The event **'preferredInputDeviceChangeForCapturerInfo'** is triggered when the input device with the highest priority is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used to return the information about the input device with the highest priority. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used to return the information about the input device with the highest priority. |
 
 **Error codes:**
 
@@ -724,17 +840,17 @@ Unsubscribes from the change event of the input device with the highest priority
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onAvailableDeviceChange
+## offAvailableDeviceChange
 
 ```TypeScript
-onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void
+offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void
 ```
 
-Subscribes to available device change events. When a device is connected/disconnected, registered clients will receive the callback.
+UnSubscribes to available device change events.
 
 **Since:** 23
 
-<!--Device-AudioRoutingManager-onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void--><!--Device-AudioRoutingManager-onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void-End-->
+<!--Device-AudioRoutingManager-offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioRoutingManager-offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -742,8 +858,7 @@ Subscribes to available device change events. When a device is connected/disconn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceUsage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | Yes | Audio device usage. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | Yes | Callback used to obtain the device update details. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | No | Callback used to obtain the device update details. |
 
 **Error codes:**
 
@@ -751,17 +866,17 @@ Subscribes to available device change events. When a device is connected/disconn
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onDeviceChange
+## offDeviceChange
 
 ```TypeScript
-onDeviceChange(deviceFlag: DeviceFlag, callback: Callback<DeviceChangeAction>): void
+offDeviceChange(callback?: Callback<DeviceChangeAction>): void
 ```
 
-Subscribes to device change events. When a device is connected/disconnected, registered clients will receive the callback.
+UnSubscribes to device change events.
 
 **Since:** 23
 
-<!--Device-AudioRoutingManager-onDeviceChange(deviceFlag: DeviceFlag, callback: Callback<DeviceChangeAction>): void--><!--Device-AudioRoutingManager-onDeviceChange(deviceFlag: DeviceFlag, callback: Callback<DeviceChangeAction>): void-End-->
+<!--Device-AudioRoutingManager-offDeviceChange(callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioRoutingManager-offDeviceChange(callback?: Callback<DeviceChangeAction>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -769,8 +884,7 @@ Subscribes to device change events. When a device is connected/disconnected, reg
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceFlag | DeviceFlag | Yes | Audio device flag. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | Yes | Callback used to obtain the device update details. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | No | Callback used to obtain the device update details. |
 
 **Error codes:**
 
@@ -778,17 +892,17 @@ Subscribes to device change events. When a device is connected/disconnected, reg
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onMicBlockStatusChanged
+## offMicBlockStatusChanged
 
 ```TypeScript
-onMicBlockStatusChanged(callback: Callback<DeviceBlockStatusInfo>): void
+offMicBlockStatusChanged(callback?: Callback<DeviceBlockStatusInfo>): void
 ```
 
-Subscribes microphone blocked events. Before subscribing, users should query whether block detection is supported on current device. The caller will receive the callback only when it is recording and the used microphones' block status have changed. Currently, block detecting is only support for microphones located on the local device.
+Unsubscribes microphone blocked events.
 
 **Since:** 23
 
-<!--Device-AudioRoutingManager-onMicBlockStatusChanged(callback: Callback<DeviceBlockStatusInfo>): void--><!--Device-AudioRoutingManager-onMicBlockStatusChanged(callback: Callback<DeviceBlockStatusInfo>): void-End-->
+<!--Device-AudioRoutingManager-offMicBlockStatusChanged(callback?: Callback<DeviceBlockStatusInfo>): void--><!--Device-AudioRoutingManager-offMicBlockStatusChanged(callback?: Callback<DeviceBlockStatusInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -796,7 +910,7 @@ Subscribes microphone blocked events. Before subscribing, users should query whe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)&gt; | Yes | Callback used to obtain the microphone block status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)&gt; | No | Callback used to obtain the microphone block status. |
 
 **Error codes:**
 
@@ -804,17 +918,17 @@ Subscribes microphone blocked events. Before subscribing, users should query whe
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onPreferOutputDeviceChangeForRendererInfo
+## offPreferOutputDeviceChangeForRendererInfo
 
 ```TypeScript
-onPreferOutputDeviceChangeForRendererInfo(rendererInfo: AudioRendererInfo, callback: Callback<AudioDeviceDescriptors>): void
+offPreferOutputDeviceChangeForRendererInfo(callback?: Callback<AudioDeviceDescriptors>): void
 ```
 
-Subscribes to prefer output device change events. When prefer device for target audio renderer info changes, registered clients will receive the callback.
+UnSubscribes to prefer output device change events.
 
 **Since:** 23
 
-<!--Device-AudioRoutingManager-onPreferOutputDeviceChangeForRendererInfo(rendererInfo: AudioRendererInfo, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-onPreferOutputDeviceChangeForRendererInfo(rendererInfo: AudioRendererInfo, callback: Callback<AudioDeviceDescriptors>): void-End-->
+<!--Device-AudioRoutingManager-offPreferOutputDeviceChangeForRendererInfo(callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-offPreferOutputDeviceChangeForRendererInfo(callback?: Callback<AudioDeviceDescriptors>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -822,8 +936,7 @@ Subscribes to prefer output device change events. When prefer device for target 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rendererInfo | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | Yes | Audio renderer information. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to obtain the changed prefer devices information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used to obtain the changed prefer devices in subscribe. |
 
 **Error codes:**
 
@@ -831,17 +944,17 @@ Subscribes to prefer output device change events. When prefer device for target 
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## onPreferredInputDeviceChangeForCapturerInfo
+## offPreferredInputDeviceChangeForCapturerInfo
 
 ```TypeScript
-onPreferredInputDeviceChangeForCapturerInfo(capturerInfo: AudioCapturerInfo, callback: Callback<AudioDeviceDescriptors>): void
+offPreferredInputDeviceChangeForCapturerInfo(callback?: Callback<AudioDeviceDescriptors>): void
 ```
 
-Subscribes to preferred input device change events. When preferred device for target audio capturer info changes, registered clients will receive the callback.
+Unsubscribes to preferred input device change events.
 
 **Since:** 23
 
-<!--Device-AudioRoutingManager-onPreferredInputDeviceChangeForCapturerInfo(capturerInfo: AudioCapturerInfo, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-onPreferredInputDeviceChangeForCapturerInfo(capturerInfo: AudioCapturerInfo, callback: Callback<AudioDeviceDescriptors>): void-End-->
+<!--Device-AudioRoutingManager-offPreferredInputDeviceChangeForCapturerInfo(callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-offPreferredInputDeviceChangeForCapturerInfo(callback?: Callback<AudioDeviceDescriptors>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -849,8 +962,7 @@ Subscribes to preferred input device change events. When preferred device for ta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| capturerInfo | [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md) | Yes | Audio capturer information. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to obtain the changed preferred devices information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used to obtain the changed preferred devices in subscribe. |
 
 **Error codes:**
 
@@ -878,7 +990,7 @@ Subscribes to the event indicating that the connection status of an available au
 | --- | --- | --- | --- |
 | type | 'availableDeviceChange' | Yes | Event type. The event **'availableDeviceChange'** is triggered when the connection status of available audio devices is changed. |
 | deviceUsage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | Yes | Audio device type (classified by usage). |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | Yes | Callback used to return the device change details. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | Yes | Callback used to return the device change details. |
 
 **Error codes:**
 
@@ -907,7 +1019,7 @@ Subscribes to the event indicating that the connection status of an audio device
 | --- | --- | --- | --- |
 | type | 'deviceChange' | Yes | Event type. The event **'deviceChange'** is triggered when the connection status of an audio device is changed. |
 | deviceFlag | DeviceFlag | Yes | Audio device flag. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | Yes | Callback used to return the device change details. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | Yes | Callback used to return the device change details. |
 
 **Error codes:**
 
@@ -937,7 +1049,7 @@ Before using this API, check whether the current device supports microphone bloc
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'micBlockStatusChanged' | Yes | Event type. The event **'micBlockStatusChanged'** is triggered when the microphone blocked status is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)&gt; | Yes | Callback used to return the microphone blocked status and device information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)&gt; | Yes | Callback used to return the microphone blocked status and device information. |
 
 **Error codes:**
 
@@ -966,7 +1078,7 @@ Subscribes to the change event of the output device with the highest priority, w
 | --- | --- | --- | --- |
 | type | 'preferOutputDeviceChangeForRendererInfo' | Yes | Event type. The event **'preferOutputDeviceChangeForRendererInfo'** is triggered when the output device with the highest priority is changed. |
 | rendererInfo | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | Yes | Audio renderer information. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to return the information about the output device with the highest priority. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to return the information about the output device with the highest priority. |
 
 **Error codes:**
 
@@ -995,13 +1107,147 @@ Subscribes to the change event of the input device with the highest priority, wh
 | --- | --- | --- | --- |
 | type | 'preferredInputDeviceChangeForCapturerInfo' | Yes | Event type. The event **'preferredInputDeviceChangeForCapturerInfo'** is triggered when the input device with the highest priority is changed. |
 | capturerInfo | [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md) | Yes | Audio capturer information. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to return the information about the input device with the highest priority. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to return the information about the input device with the highest priority. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onAvailableDeviceChange
+
+```TypeScript
+onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void
+```
+
+Subscribes to available device change events. When a device is connected/disconnected, registered clients will receive the callback.
+
+**Since:** 23
+
+<!--Device-AudioRoutingManager-onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void--><!--Device-AudioRoutingManager-onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceUsage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | Yes | Audio device usage. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | Yes | Callback used to obtain the device update details. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onDeviceChange
+
+```TypeScript
+onDeviceChange(deviceFlag: DeviceFlag, callback: Callback<DeviceChangeAction>): void
+```
+
+Subscribes to device change events. When a device is connected/disconnected, registered clients will receive the callback.
+
+**Since:** 23
+
+<!--Device-AudioRoutingManager-onDeviceChange(deviceFlag: DeviceFlag, callback: Callback<DeviceChangeAction>): void--><!--Device-AudioRoutingManager-onDeviceChange(deviceFlag: DeviceFlag, callback: Callback<DeviceChangeAction>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceFlag | DeviceFlag | Yes | Audio device flag. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | Yes | Callback used to obtain the device update details. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onMicBlockStatusChanged
+
+```TypeScript
+onMicBlockStatusChanged(callback: Callback<DeviceBlockStatusInfo>): void
+```
+
+Subscribes microphone blocked events. Before subscribing, users should query whether block detection is supported on current device. The caller will receive the callback only when it is recording and the used microphones' block status have changed. Currently, block detecting is only support for microphones located on the local device.
+
+**Since:** 23
+
+<!--Device-AudioRoutingManager-onMicBlockStatusChanged(callback: Callback<DeviceBlockStatusInfo>): void--><!--Device-AudioRoutingManager-onMicBlockStatusChanged(callback: Callback<DeviceBlockStatusInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)&gt; | Yes | Callback used to obtain the microphone block status. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onPreferOutputDeviceChangeForRendererInfo
+
+```TypeScript
+onPreferOutputDeviceChangeForRendererInfo(rendererInfo: AudioRendererInfo, callback: Callback<AudioDeviceDescriptors>): void
+```
+
+Subscribes to prefer output device change events. When prefer device for target audio renderer info changes, registered clients will receive the callback.
+
+**Since:** 23
+
+<!--Device-AudioRoutingManager-onPreferOutputDeviceChangeForRendererInfo(rendererInfo: AudioRendererInfo, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-onPreferOutputDeviceChangeForRendererInfo(rendererInfo: AudioRendererInfo, callback: Callback<AudioDeviceDescriptors>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rendererInfo | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | Yes | Audio renderer information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to obtain the changed prefer devices information. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onPreferredInputDeviceChangeForCapturerInfo
+
+```TypeScript
+onPreferredInputDeviceChangeForCapturerInfo(capturerInfo: AudioCapturerInfo, callback: Callback<AudioDeviceDescriptors>): void
+```
+
+Subscribes to preferred input device change events. When preferred device for target audio capturer info changes, registered clients will receive the callback.
+
+**Since:** 23
+
+<!--Device-AudioRoutingManager-onPreferredInputDeviceChangeForCapturerInfo(capturerInfo: AudioCapturerInfo, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-onPreferredInputDeviceChangeForCapturerInfo(capturerInfo: AudioCapturerInfo, callback: Callback<AudioDeviceDescriptors>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| capturerInfo | [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md) | Yes | Audio capturer information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to obtain the changed preferred devices information. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## setCommunicationDevice
@@ -1028,7 +1274,27 @@ You are advised to use the [AVCastPicker component](../../../media/avsession/usi
 | --- | --- | --- | --- |
 | deviceType | [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md) | Yes | Audio device flag. |
 | active | boolean | Yes | Active state to set. **true** to set the device to the active state, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRoutingManager.setCommunicationDevice(audio.CommunicationDeviceType.SPEAKER, true, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set the active status of the device. ${err}`);
+    return;
+  }
+  console.info('Callback invoked to indicate that the device is set to the active status.');
+});
+```
+
+```TypeScript
+audioRoutingManager.setCommunicationDevice(audio.CommunicationDeviceType.SPEAKER, true).then(() => {
+  console.info('Promise returned to indicate that the device is set to the active status.');
+});
+```
 
 ## setCommunicationDevice
 
@@ -1060,4 +1326,8 @@ You are advised to use the [AVCastPicker component](../../../media/avsession/usi
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+See [setCommunicationDevice](#setcommunicationdevice)
 

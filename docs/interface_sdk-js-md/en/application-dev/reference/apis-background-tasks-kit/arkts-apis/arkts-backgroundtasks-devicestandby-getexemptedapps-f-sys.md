@@ -29,7 +29,7 @@ Returns the information about the specified exempted application.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resourceTypes | int | Yes | the combination of [ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md) values. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ExemptedAppInfo](arkts-backgroundtasks-devicestandby-exemptedappinfo-i-sys.md)&gt;&gt; | Yes | the callback of getExemptedApps. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ExemptedAppInfo](arkts-backgroundtasks-devicestandby-exemptedappinfo-i-sys.md)&gt;&gt; | Yes | the callback of getExemptedApps. |
 
 **Error codes:**
 
@@ -60,6 +60,21 @@ deviceStandby.getExemptedApps(resourceTypes, (err: BusinessError, res: Array<dev
       console.info('DEVICE_STANDBY getExemptedApps callback result ' + JSON.stringify(res[i]));
     }
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { deviceStandby } from '@kit.BackgroundTasksKit';
+
+let resourceTypes: deviceStandby.ResourceType = deviceStandby.ResourceType.TIMER | deviceStandby.ResourceType.NETWORK;
+deviceStandby.getExemptedApps(resourceTypes).then( (res: Array<deviceStandby.ExemptedAppInfo>) => {
+  console.info('DEVICE_STANDBY getExemptedApps promise success.');
+  for (let i = 0; i < res.length; i++) {
+    console.info('DEVICE_STANDBY getExemptedApps promise result ' + JSON.stringify(res[i]));
+  }
+}).catch( (err: BusinessError) => {
+  console.error('DEVICE_STANDBY getExemptedApps promise failed. code is: ' + err.code + ',message is: ' + err.message);
 });
 ```
 
@@ -109,18 +124,5 @@ Returns the information about the specified exempted application.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { deviceStandby } from '@kit.BackgroundTasksKit';
-
-let resourceTypes: deviceStandby.ResourceType = deviceStandby.ResourceType.TIMER | deviceStandby.ResourceType.NETWORK;
-deviceStandby.getExemptedApps(resourceTypes).then( (res: Array<deviceStandby.ExemptedAppInfo>) => {
-  console.info('DEVICE_STANDBY getExemptedApps promise success.');
-  for (let i = 0; i < res.length; i++) {
-    console.info('DEVICE_STANDBY getExemptedApps promise result ' + JSON.stringify(res[i]));
-  }
-}).catch( (err: BusinessError) => {
-  console.error('DEVICE_STANDBY getExemptedApps promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
+See [getExemptedApps](#getexemptedapps)
 

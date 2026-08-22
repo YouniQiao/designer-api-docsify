@@ -1,6 +1,6 @@
 # Int16Array
 
-A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-collections.md).
+A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-n.md).
 
 > **NOTE：**
 > 
@@ -1277,24 +1277,6 @@ Returns an iterator object that contains the value of each element in this ArkTS
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-## BYTES_PER_ELEMENT
-
-```TypeScript
-static readonly BYTES_PER_ELEMENT: number
-```
-
-Number of bytes occupied by each element in the ArkTS Int16Array.
-
-**Type:** number
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Int16Array-static readonly BYTES_PER_ELEMENT: number--><!--Device-Int16Array-static readonly BYTES_PER_ELEMENT: number-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
 ## buffer
 
 ```TypeScript
@@ -1346,6 +1328,24 @@ Offset between the ArkTS Int16Array and the start position of the ArrayBuffer.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Int16Array-readonly byteOffset: number--><!--Device-Int16Array-readonly byteOffset: number-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## BYTES_PER_ELEMENT
+
+```TypeScript
+static readonly BYTES_PER_ELEMENT: number
+```
+
+Number of bytes occupied by each element in the ArkTS Int16Array.
+
+**Type:** number
+
+**Since:** 12
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Int16Array-static readonly BYTES_PER_ELEMENT: number--><!--Device-Int16Array-static readonly BYTES_PER_ELEMENT: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

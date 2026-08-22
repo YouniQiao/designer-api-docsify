@@ -315,28 +315,6 @@ readonly reqPermissionDetails: Array<ReqPermissionDetail>
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
-## reqPermissionStates
-
-```TypeScript
-readonly reqPermissionStates: Array<number>
-```
-
-申请权限的授予状态。0表示申请成功，-1表示申请失败。
-
-**类型：** Array&lt;number&gt;
-
-**默认值：** Indicates the grant status of required permissions
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** permissionGrantStates
-
-<!--Device-BundleInfo-readonly reqPermissionStates: Array<number>--><!--Device-BundleInfo-readonly reqPermissionStates: Array<number>-End-->
-
-**系统能力：** SystemCapability.BundleManager.BundleFramework
-
 ## reqPermissions
 
 ```TypeScript
@@ -358,6 +336,28 @@ readonly reqPermissions: Array<string>
 **替代接口：** permissions
 
 <!--Device-BundleInfo-readonly reqPermissions: Array<string>--><!--Device-BundleInfo-readonly reqPermissions: Array<string>-End-->
+
+**系统能力：** SystemCapability.BundleManager.BundleFramework
+
+## reqPermissionStates
+
+```TypeScript
+readonly reqPermissionStates: Array<number>
+```
+
+申请权限的授予状态。0表示申请成功，-1表示申请失败。
+
+**类型：** Array&lt;number&gt;
+
+**默认值：** Indicates the grant status of required permissions
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** permissionGrantStates
+
+<!--Device-BundleInfo-readonly reqPermissionStates: Array<number>--><!--Device-BundleInfo-readonly reqPermissionStates: Array<number>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

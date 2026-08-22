@@ -101,37 +101,6 @@ struct Index {
 }
 ```
 
-
-## getPointerColor
-
-```TypeScript
-function getPointerColor(): Promise<int>
-```
-
-获取当前鼠标光标颜色，使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-pointer-function getPointerColor(): Promise<int>--><!--Device-pointer-function getPointerColor(): Promise<int>-End-->
-
-**系统能力：** SystemCapability.MultimodalInput.Input.Pointer
-
-**系统接口：** 此接口为系统接口。
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | Promise对象，返回鼠标光标颜色。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -188,4 +157,37 @@ struct Index {
   }
 }
 ```
+
+
+## getPointerColor
+
+```TypeScript
+function getPointerColor(): Promise<int>
+```
+
+获取当前鼠标光标颜色，使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-pointer-function getPointerColor(): Promise<int>--><!--Device-pointer-function getPointerColor(): Promise<int>-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Pointer
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;int&gt; | Promise对象，返回鼠标光标颜色。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
+
+**示例**
+
+参见 [getPointerColor](#getpointercolor)
 

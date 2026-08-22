@@ -45,3 +45,35 @@ Obtains the information about all shortcuts of the given user.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 
+**Examples**
+
+```TypeScript
+import { shortcutManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct ShortcutExample {
+  build() {
+    Column({ space: 20 }) {
+      Row({ space: 20 }) {
+        Button('getall').onClick(() => {
+          try {
+            shortcutManager.getAllDesktopShortcutInfo(100)
+              .then((data: shortcutManager.ShortcutInfo[]) => {
+                console.info("Shortcut data is " + JSON.stringify(data));
+              }).catch((err: BusinessError) => {
+              console.error(`getAllDesktopShortcutInfo errData is errCode:${err.code}  message:${err.message}`);
+            });
+          } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`getAllDesktopShortcutInfo error is errCode:${code}  message:${message}`);
+          }
+        })
+      }
+    }
+  }
+}
+```
+

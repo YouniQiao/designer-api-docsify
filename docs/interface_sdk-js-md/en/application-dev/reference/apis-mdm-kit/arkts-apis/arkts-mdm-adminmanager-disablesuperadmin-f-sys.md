@@ -31,7 +31,7 @@ Disables a super device administrator application based on **bundleName**. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | String | Yes | Bundle name of the super device administrator application to disable. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -57,6 +57,19 @@ adminManager.disableSuperAdmin(bundleName, (err) => {
     return;
   }
   console.info('Succeeded in disabling super admin');
+});
+```
+
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Replace with actual values.
+let bundleName: string = 'com.example.myapplication';
+
+adminManager.disableSuperAdmin(bundleName).catch((err: BusinessError) => {
+  console.error(`Failed to disable super admin. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -104,16 +117,5 @@ Disables a super device administrator application based on **bundleName**. This 
 
 **Examples**
 
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Replace with actual values.
-let bundleName: string = 'com.example.myapplication';
-
-adminManager.disableSuperAdmin(bundleName).catch((err: BusinessError) => {
-  console.error(`Failed to disable super admin. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [disableSuperAdmin](#disablesuperadmin)
 

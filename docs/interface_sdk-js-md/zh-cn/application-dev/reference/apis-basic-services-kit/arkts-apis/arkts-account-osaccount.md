@@ -70,9 +70,9 @@ import { osAccount } from '@kit.BasicServicesKit';
 | [AcquireAuthorizationOptions](arkts-basicservices-osaccount-acquireauthorizationoptions-i-sys.md) | 表示获取授权的选项。 |
 | [AcquireAuthorizationResult](arkts-basicservices-osaccount-acquireauthorizationresult-i-sys.md) | 表示获取授权的结果。 |
 | [AuthOptions](arkts-basicservices-osaccount-authoptions-i-sys.md) | 表示 [认证用户](arkts-basicservices-osaccount-userauth-c-sys.md#auth) 的可选参数集合。 |
+| [AuthorizationManager](arkts-basicservices-osaccount-authorizationmanager-i-sys.md) | 系统账号授权管理类，用于管理系统账号授权。 |
 | [AuthResult](arkts-basicservices-osaccount-authresult-i-sys.md) | 表示认证结果的信息。 |
 | [AuthStatusInfo](arkts-basicservices-osaccount-authstatusinfo-i-sys.md) | 表示认证状态信息。 |
-| [AuthorizationManager](arkts-basicservices-osaccount-authorizationmanager-i-sys.md) | 系统账号授权管理类，用于管理系统账号授权。 |
 | [ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md) | 表示约束变更信息。 |
 | [ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md) | 表示约束来源类型信息。 |
 | [CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md) | 表示用于创建系统账号的可选参数。 |
@@ -117,10 +117,10 @@ import { osAccount } from '@kit.BasicServicesKit';
 | 名称 | 说明 |
 | --- | --- |
 | [AuthIntent](arkts-basicservices-osaccount-authintent-e-sys.md) | 表示认证意图的枚举。 |
+| [AuthorizationResultCode](arkts-basicservices-osaccount-authorizationresultcode-e-sys.md) | 表示授权结果码的枚举。 |
 | [AuthSubType](arkts-basicservices-osaccount-authsubtype-e-sys.md) | 表示用于认证的凭据子类型的枚举。 |
 | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | 表示认证结果的受信任级别的枚举。 |
 | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | 表示身份验证的凭据类型的枚举。 |
-| [AuthorizationResultCode](arkts-basicservices-osaccount-authorizationresultcode-e-sys.md) | 表示授权结果码的枚举。 |
 | [ConstraintSourceType](arkts-basicservices-osaccount-constraintsourcetype-e-sys.md) | 表示约束来源类型的枚举。 |
 | [CredentialChangeType](arkts-basicservices-osaccount-credentialchangetype-e-sys.md) | 表示凭据变更类型的枚举。 |
 | [FaceTipsCode](arkts-basicservices-osaccount-facetipscode-e-sys.md) | 表示人脸验证过程中提示的枚举。 |

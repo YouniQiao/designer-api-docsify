@@ -1,6 +1,6 @@
 # Scenarios
 
-Enumerates the scenarios where the [onNewWant](arkts-ability-appabilityuiability-uiability-c.md#onnewwant) lifecycle callback is not triggered. It is used in the [setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios) API.
+Enumerates the scenarios where the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant) lifecycle callback is not triggered. It is used in the [setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios) API.
 
 **Since:** 23
 
@@ -61,4 +61,34 @@ A scenario where the [backToCallerAbilityWithResult](arkts-ability-uiabilitycont
 <!--Device-Scenarios-SCENARIO_BACK_TO_CALLER_ABILITY_WITH_RESULT = 0x00000004--><!--Device-Scenarios-SCENARIO_BACK_TO_CALLER_ABILITY_WITH_RESULT = 0x00000004-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+import { AbilityConstant, contextConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    let scenarios: number = contextConstant.Scenarios.SCENARIO_MOVE_MISSION_TO_FRONT |
+      contextConstant.Scenarios.SCENARIO_SHOW_ABILITY |
+      contextConstant.Scenarios.SCENARIO_BACK_TO_CALLER_ABILITY_WITH_RESULT;
+
+    try {
+      this.context.setOnNewWantSkipScenarios(scenarios).then(() => {
+        // Carry out normal service processing.
+        console.info('setOnNewWantSkipScenarios succeed');
+      }).catch((err: BusinessError) => {
+        // Process service logic errors.
+        console.error(`setOnNewWantSkipScenarios failed, code is ${err.code}, message is ${err.message}`);
+      });
+    } catch (err) {
+      // Process input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`setOnNewWantSkipScenarios failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
 

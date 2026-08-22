@@ -29,7 +29,7 @@ Obtains all SIM card messages. This API uses an asynchronous callback to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | SIM card slot ID. <br>- **0**: card slot 1 <br>- **1**: card slot 2 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[SimShortMessage](arkts-telephony-sms-simshortmessage-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[SimShortMessage](arkts-telephony-sms-simshortmessage-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -52,6 +52,19 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let slotId: number = 0;
 sms.getAllSimMessages(slotId, (err: BusinessError, data: sms.SimShortMessage[]) => {
       console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+let promise = sms.getAllSimMessages(slotId);
+promise.then((data: sms.SimShortMessage[]) => {
+    console.info(`getAllSimMessages success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getAllSimMessages failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -100,16 +113,5 @@ Obtains all SIM card messages. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let promise = sms.getAllSimMessages(slotId);
-promise.then((data: sms.SimShortMessage[]) => {
-    console.info(`getAllSimMessages success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getAllSimMessages failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getAllSimMessages](#getallsimmessages)
 

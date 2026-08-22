@@ -187,6 +187,13 @@ let calendar: i18n.Calendar = i18n.getCalendar('en-US', 'buddhist');
 let calendarName: string = calendar.getDisplayName('zh'); // calendarName = '佛历'
 ```
 
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let timezone: i18n.TimeZone = i18n.getTimeZone('Asia/Shanghai');
+let timezoneName: string = timezone.getDisplayName('zh-CN', false); // timezoneName = '中国标准时间'
+```
+
 ## getFirstDayOfWeek
 
 ```TypeScript
@@ -210,6 +217,12 @@ getFirstDayOfWeek(): int
 | int | 周起始日，1代表周日，7代表周六。 |
 
 **示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let firstDayOfWeek: i18n.WeekDay = i18n.System.getFirstDayOfWeek();
+```
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
@@ -311,6 +324,12 @@ import { i18n } from '@kit.LocalizationKit';
 let calendar: i18n.Calendar = i18n.getCalendar('zh-Hans');
 calendar.setTimeZone('Asia/Shanghai');
 let timezone: string = calendar.getTimeZone(); // timezone = 'Asia/Shanghai'
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let timezone: i18n.TimeZone = i18n.getTimeZone('Asia/Shanghai');
 ```
 
 ## isWeekend
@@ -421,6 +440,18 @@ calendar.setFirstDayOfWeek(3);
 let firstDayOfWeek = calendar.getFirstDayOfWeek(); // firstDayOfWeek = 3
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  i18n.System.setFirstDayOfWeek(i18n.WeekDay.MON); // 设置用户偏好的周起始日为周一
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.setFirstDayOfWeek failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
 ## setMinimalDaysInFirstWeek
 
 ```TypeScript
@@ -485,6 +516,13 @@ let date: Date = new Date(2021, 10, 7, 8, 0, 0); // 时间日期为2021.11.07 08
 calendar.setTime(date);
 ```
 
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let calendar: i18n.Calendar = i18n.getCalendar('en-US', 'gregory');
+calendar.setTime(10540800000);
+```
+
 ## setTime
 
 ```TypeScript
@@ -509,12 +547,7 @@ setTime(time: double): void
 
 **示例**
 
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let calendar: i18n.Calendar = i18n.getCalendar('en-US', 'gregory');
-calendar.setTime(10540800000);
-```
+参见 [setTime](#settime)
 
 ## setTimeZone
 

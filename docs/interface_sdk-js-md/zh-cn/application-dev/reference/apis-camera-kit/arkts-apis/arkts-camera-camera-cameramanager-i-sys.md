@@ -128,6 +128,25 @@ createDeferredPreviewOutput(profile: Profile): PreviewOutput
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 23 |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 24+ |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function createPreviewOutput(cameraOutputCapability: camera.CameraOutputCapability, cameraManager: camera.CameraManager): camera.PreviewOutput | undefined {
+  let profile: camera.Profile = cameraOutputCapability.previewProfiles[0];
+  let previewOutput: camera.PreviewOutput | undefined = undefined;
+  try {
+    previewOutput = cameraManager.createDeferredPreviewOutput(profile);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The createPreviewOutput call failed. error code: ${err.code}`);
+  }
+  return previewOutput;
+}
+```
+
 ## createDepthDataOutput
 
 ```TypeScript
@@ -332,6 +351,15 @@ isTorchLevelControlSupported(): boolean
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 23 - 24 |
 
+**示例**
+
+```TypeScript
+function isTorchLevelControlSupported(cameraManager: camera.CameraManager): boolean {
+  let isSupported = cameraManager.isTorchLevelControlSupported();
+  return isSupported;
+}
+```
+
 ## muteCamera
 
 ```TypeScript
@@ -409,62 +437,6 @@ function muteCameraPersistent(cameraManager: camera.CameraManager): void {
 }
 ```
 
-## offCameraMute
-
-```TypeScript
-offCameraMute(callback?: AsyncCallback<boolean>): void
-```
-
-Unsubscribes from camera mute change event callback.
-
-**起始版本：** 23
-
-<!--Device-CameraManager-offCameraMute(callback?: AsyncCallback<boolean>): void--><!--Device-CameraManager-offCameraMute(callback?: AsyncCallback<boolean>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 否 | Callback used to get the camera mute change. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-## offControlCenterStatusChange
-
-```TypeScript
-offControlCenterStatusChange(callback?: AsyncCallback<boolean>): void
-```
-
-Unsubscribes control center status change event callback.
-
-**起始版本：** 23
-
-<!--Device-CameraManager-offControlCenterStatusChange(callback?: AsyncCallback<boolean>): void--><!--Device-CameraManager-offControlCenterStatusChange(callback?: AsyncCallback<boolean>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 否 | Callback used to get the control center status change. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
 ## off('cameraMute')
 
 ```TypeScript
@@ -537,17 +509,17 @@ Unsubscribes control center status change event callback.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## onCameraMute
+## offCameraMute
 
 ```TypeScript
-onCameraMute(callback: AsyncCallback<boolean>): void
+offCameraMute(callback?: AsyncCallback<boolean>): void
 ```
 
-Subscribes camera mute change event callback.
+Unsubscribes from camera mute change event callback.
 
 **起始版本：** 23
 
-<!--Device-CameraManager-onCameraMute(callback: AsyncCallback<boolean>): void--><!--Device-CameraManager-onCameraMute(callback: AsyncCallback<boolean>): void-End-->
+<!--Device-CameraManager-offCameraMute(callback?: AsyncCallback<boolean>): void--><!--Device-CameraManager-offCameraMute(callback?: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -557,7 +529,7 @@ Subscribes camera mute change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Callback used to get the camera mute change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 否 | Callback used to get the camera mute change. |
 
 **错误码：**
 
@@ -565,17 +537,17 @@ Subscribes camera mute change event callback.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## onControlCenterStatusChange
+## offControlCenterStatusChange
 
 ```TypeScript
-onControlCenterStatusChange(callback: AsyncCallback<boolean>): void
+offControlCenterStatusChange(callback?: AsyncCallback<boolean>): void
 ```
 
-Subscribes control center status change event callback.
+Unsubscribes control center status change event callback.
 
 **起始版本：** 23
 
-<!--Device-CameraManager-onControlCenterStatusChange(callback: AsyncCallback<boolean>): void--><!--Device-CameraManager-onControlCenterStatusChange(callback: AsyncCallback<boolean>): void-End-->
+<!--Device-CameraManager-offControlCenterStatusChange(callback?: AsyncCallback<boolean>): void--><!--Device-CameraManager-offControlCenterStatusChange(callback?: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -585,7 +557,7 @@ Subscribes control center status change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Callback used to get the control center status change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 否 | Callback used to get the control center status change. |
 
 **错误码：**
 
@@ -670,6 +642,102 @@ Subscribes control center status change event callback.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
+## onCameraMute
+
+```TypeScript
+onCameraMute(callback: AsyncCallback<boolean>): void
+```
+
+Subscribes camera mute change event callback.
+
+**起始版本：** 23
+
+<!--Device-CameraManager-onCameraMute(callback: AsyncCallback<boolean>): void--><!--Device-CameraManager-onCameraMute(callback: AsyncCallback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Callback used to get the camera mute change. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## onControlCenterStatusChange
+
+```TypeScript
+onControlCenterStatusChange(callback: AsyncCallback<boolean>): void
+```
+
+Subscribes control center status change event callback.
+
+**起始版本：** 23
+
+<!--Device-CameraManager-onControlCenterStatusChange(callback: AsyncCallback<boolean>): void--><!--Device-CameraManager-onControlCenterStatusChange(callback: AsyncCallback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Callback used to get the control center status change. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## prelaunch
+
+```TypeScript
+prelaunch(): void
+```
+
+Prelaunches the camera device. This API is called when a user clicks the system camera icon to start the camera application.
+
+**起始版本：** 23
+
+<!--Device-CameraManager-prelaunch(): void--><!--Device-CameraManager-prelaunch(): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 13+ |
+
+**示例**
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { camera } from '@kit.CameraKit';
+
+function preLaunch(context: common.BaseContext): void {
+  let cameraManager: camera.CameraManager = camera.getCameraManager(context);
+  try {
+    cameraManager.prelaunch();
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`prelaunch error. Code: ${err.code}, message: ${err.message}`);
+  }
+}
+```
+
 ## preSwitchCamera
 
 ```TypeScript
@@ -710,46 +778,6 @@ function preSwitch(cameraDevice: camera.CameraDevice, context: common.BaseContex
   let cameraManager: camera.CameraManager = camera.getCameraManager(context);
   try {
     cameraManager.preSwitchCamera(cameraDevice.cameraId);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`prelaunch error. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```
-
-## prelaunch
-
-```TypeScript
-prelaunch(): void
-```
-
-Prelaunches the camera device. This API is called when a user clicks the system camera icon to start the camera application.
-
-**起始版本：** 23
-
-<!--Device-CameraManager-prelaunch(): void--><!--Device-CameraManager-prelaunch(): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 13+ |
-
-**示例**
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { camera } from '@kit.CameraKit';
-
-function preLaunch(context: common.BaseContext): void {
-  let cameraManager: camera.CameraManager = camera.getCameraManager(context);
-  try {
-    cameraManager.prelaunch();
   } catch (error) {
     let err = error as BusinessError;
     console.error(`prelaunch error. Code: ${err.code}, message: ${err.message}`);
@@ -846,4 +874,13 @@ setTorchModeOnWithLevel(torchLevel: double): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 23 - 24 |
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+**示例**
+
+```TypeScript
+function SetTorchModeOnWithLevel(cameraManager: camera.CameraManager, torchLevel: number): void {
+  cameraManager.setTorchModeOnWithLevel(torchLevel);
+  return ;
+}
+```
 

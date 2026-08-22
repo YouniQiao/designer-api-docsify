@@ -119,3 +119,7 @@ Before obtaining the notification slot, create a slot through [addSlot](arkts-no
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
+**Examples**
+
+See [getSlotByBundle](#getslotbybundle)
+

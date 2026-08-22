@@ -17,20 +17,20 @@ function back(options?: RouterOptions): void
 > **说明：**
 > 
 > - 从API version 8开始支持，从API version 18开始废弃，建议使用
-> [back](../../apis-default/arkts-apis/arkts-arkuiuicontext-router-c.md#back)替代。back需先通过
-> [UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)中的
+> [back](arkts-arkui-arkui-uicontext-router-c.md#back)替代。back需先通过
+> [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)实例，然后通过该实例进行调用。
+> [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。
 > 
-> - 从API version 10开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)中的
+> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
-> [Router](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)对象。
+> [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 8
 
 **废弃版本：** 18
 
-**替代接口：** [back](../../apis-default/arkts-apis/arkts-arkuiuicontext-router-c.md#back)(options?: router.RouterOptions)
+**替代接口：** [back](arkts-arkui-arkui-uicontext-router-c.md#back)(options?: router.RouterOptions)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -50,6 +50,14 @@ function back(options?: RouterOptions): void
 this.getUIContext().getRouter().back({ url: 'pages/detail' });
 ```
 
+```TypeScript
+this.getUIContext().getRouter().back(1);
+```
+
+```TypeScript
+this.getUIContext().getRouter().back(1, { info: '来自Home页' }); // 携带参数返回
+```
+
 
 ## back
 
@@ -62,20 +70,20 @@ function back(index: number, params?: Object): void
 > **说明：**
 > 
 > - 从API version 12开始支持，从API version 18开始废弃，建议使用
-> [back](../../apis-default/arkts-apis/arkts-arkuiuicontext-router-c.md#back)替代。back需先通过
-> [UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)中的
+> [back](arkts-arkui-arkui-uicontext-router-c.md#back)替代。back需先通过
+> [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)实例，然后通过该实例进行调用。
+> [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。
 > 
-> - 从API version 12开始，可以通过使用[UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)中的
+> - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
-> [Router](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md)对象。
+> [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 12
 
 **废弃版本：** 18
 
-**替代接口：** [back](../../apis-default/arkts-apis/arkts-arkuiuicontext-router-c.md#back)(index: number, params?: Object)
+**替代接口：** [back](arkts-arkui-arkui-uicontext-router-c.md#back)(index: number, params?: Object)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -94,11 +102,5 @@ function back(index: number, params?: Object): void
 
 **示例**
 
-```TypeScript
-this.getUIContext().getRouter().back(1);
-```
-
-```TypeScript
-this.getUIContext().getRouter().back(1, { info: '来自Home页' }); // 携带参数返回
-```
+参见 [back](#back)
 

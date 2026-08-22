@@ -11,7 +11,7 @@
 
 | Name | Description |
 | --- | --- |
-| [AVCastPicker](arkts-multimediaavcastpicker-avcastpicker-s.md) | A picker view to show availale streaming device list. @struct { AVCastPicker } |
+| [AVCastPicker](arkts-multimedia-avcastpicker-avcastpicker-s.md) | A picker view to show availale streaming device list. @struct { AVCastPicker } |
 
 ### Types
 

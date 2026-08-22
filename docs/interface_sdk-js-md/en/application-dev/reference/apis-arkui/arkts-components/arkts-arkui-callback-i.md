@@ -43,3 +43,14 @@ Defines the callback info.
 | --- | --- |
 | V | Returns result of the callback. |
 
+**Examples**
+
+```TypeScript
+@Builder
+function MyBuilder(value: string, size: number) {
+  Text(value)
+    .fontSize(size)
+}
+let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(MyBuilder);
+```
+

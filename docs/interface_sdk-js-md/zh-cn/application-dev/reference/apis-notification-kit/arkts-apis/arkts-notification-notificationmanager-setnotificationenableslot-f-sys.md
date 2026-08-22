@@ -95,6 +95,77 @@ notificationManager.setNotificationEnableSlot(
     setNotificationEnableSlotCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let setNotificationEnableSlotCallback = (err: BusinessError): void => {
+    if (err) {
+        console.error(`setNotificationEnableSlot failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+        console.info('setNotificationEnableSlot success');
+    }
+};
+
+notificationManager.setNotificationEnableSlot(
+    { bundle: 'ohos.samples.notification', },
+    notificationManager.SlotType.SOCIAL_COMMUNICATION,
+    true,
+    false,
+    setNotificationEnableSlotCallback);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let setNotificationEnableSlotCallback = (err: BusinessError | null): void => {
+    if (err) {
+        console.error(`setNotificationEnableSlot failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+        console.info('setNotificationEnableSlot success');
+    }
+};
+
+notificationManager.setNotificationEnableSlot(
+    // 需根据实际情况进行替换
+    { bundle: 'bundleName1', },
+    notificationManager.SlotType.SOCIAL_COMMUNICATION,
+    true,
+    false,
+    setNotificationEnableSlotCallback);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// setNotificationEnableSlot
+notificationManager.setNotificationEnableSlot({ bundle: 'ohos.samples.notification'},
+    notificationManager.SlotType.SOCIAL_COMMUNICATION, true).then(() => {
+    console.info('setNotificationEnableSlot success');
+}).catch((err: BusinessError) => {
+    console.error(`setNotificationEnableSlot failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.setNotificationEnableSlot({ bundle: 'ohos.samples.notification'},
+    notificationManager.SlotType.SOCIAL_COMMUNICATION, true).then(() => {
+    console.info('setNotificationEnableSlot success');
+}).catch((err: Error) => {
+    let error: BusinessError = err as BusinessError;
+    console.error(`setNotificationEnableSlot failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## setNotificationEnableSlot
 
@@ -143,6 +214,10 @@ function setNotificationEnableSlot(
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
+
+**示例**
+
+参见 [setNotificationEnableSlot](#setnotificationenableslot)
 
 
 ## setNotificationEnableSlot
@@ -194,31 +269,5 @@ function setNotificationEnableSlot(bundle: BundleOption, type: SlotType, enable:
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// setNotificationEnableSlot
-notificationManager.setNotificationEnableSlot({ bundle: 'ohos.samples.notification'},
-    notificationManager.SlotType.SOCIAL_COMMUNICATION, true).then(() => {
-    console.info('setNotificationEnableSlot success');
-}).catch((err: BusinessError) => {
-    console.error(`setNotificationEnableSlot failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.setNotificationEnableSlot({ bundle: 'ohos.samples.notification'},
-    notificationManager.SlotType.SOCIAL_COMMUNICATION, true).then(() => {
-    console.info('setNotificationEnableSlot success');
-}).catch((err: Error) => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`setNotificationEnableSlot failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [setNotificationEnableSlot](#setnotificationenableslot)
 

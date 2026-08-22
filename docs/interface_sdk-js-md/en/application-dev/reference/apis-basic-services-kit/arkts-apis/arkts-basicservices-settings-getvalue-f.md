@@ -33,9 +33,47 @@ Obtains the value of a specified character string in the database.
 | --- | --- | --- | --- |
 | dataAbilityHelper | [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | Yes | Indicates the DataAbilityHelper used to access the database. |
 | name | string | Yes | Indicates the name of the character string. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;object&gt; | Yes | The callback of getValue result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;object&gt; | Yes | The callback of getValue result. |
 
 **Examples**
+
+```TypeScript
+import { settings } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+settings.getValue(context, settings.display.SCREEN_BRIGHTNESS_STATUS, (err, value) => {
+  if (err) {
+    console.error(`Failed to get the setting. ${err.message} `);
+    return;
+  }
+  console.info(`callback:value -> ${value}`)
+});
+```
+
+```TypeScript
+import { settings } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+settings.getValue(context, settings.display.SCREEN_BRIGHTNESS_STATUS).then((value) => {
+  console.info(`promise:value -> ${value}`)
+});
+```
+
+```TypeScript
+import { settings } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Update the value of SCREEN_BRIGHTNESS_STATUS. (As this data item exists in the database, the getValue API will update its value.)
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+settings.getValue(context, settings.display.SCREEN_BRIGHTNESS_STATUS, settings.domainName.DEVICE_SHARED).then((value) => {
+  console.info(`Promise:value -> ${value}`);
+});
+```
 
 ```TypeScript
 import featureAbility from '@ohos.ability.featureAbility';
@@ -48,6 +86,16 @@ settings.getValue(helper, settings.display.SCREEN_BRIGHTNESS_STATUS, (err:Error,
         return;
     }
     console.info(`callback:value -> ${JSON.stringify(value)}`)
+});
+```
+
+```TypeScript
+import featureAbility from '@ohos.ability.featureAbility';
+
+let uri:string = settings.getUriSync(settings.display.SCREEN_BRIGHTNESS_STATUS);
+let helper = featureAbility.acquireDataAbilityHelper(uri);
+settings.getValue(helper, settings.display.SCREEN_BRIGHTNESS_STATUS).then((value:string) => {
+    console.info(`promise:value -> ${JSON.stringify(value)}`)
 });
 ```
 
@@ -87,15 +135,7 @@ Obtains the value of a specified character string in the database.
 
 **Examples**
 
-```TypeScript
-import featureAbility from '@ohos.ability.featureAbility';
-
-let uri:string = settings.getUriSync(settings.display.SCREEN_BRIGHTNESS_STATUS);
-let helper = featureAbility.acquireDataAbilityHelper(uri);
-settings.getValue(helper, settings.display.SCREEN_BRIGHTNESS_STATUS).then((value:string) => {
-    console.info(`promise:value -> ${JSON.stringify(value)}`)
-});
-```
+See [getValue](#getvalue)
 
 
 ## getValue
@@ -120,24 +160,11 @@ Get value from settingsdata
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
 | name | string | Yes | Indicates the name of the character string. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | The callback of getValue result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback of getValue result. |
 
 **Examples**
 
-```TypeScript
-import { settings } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-settings.getValue(context, settings.display.SCREEN_BRIGHTNESS_STATUS, (err, value) => {
-  if (err) {
-    console.error(`Failed to get the setting. ${err.message} `);
-    return;
-  }
-  console.info(`callback:value -> ${value}`)
-});
-```
+See [getValue](#getvalue)
 
 
 ## getValue
@@ -171,16 +198,7 @@ Get value from settingsdata
 
 **Examples**
 
-```TypeScript
-import { settings } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-settings.getValue(context, settings.display.SCREEN_BRIGHTNESS_STATUS).then((value) => {
-  console.info(`promise:value -> ${value}`)
-});
-```
+See [getValue](#getvalue)
 
 
 ## getValue
@@ -215,15 +233,5 @@ Get value from settingsdata [USER_SECURE] domain need ohos.permission.MANAGE_SEC
 
 **Examples**
 
-```TypeScript
-import { settings } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Update the value of SCREEN_BRIGHTNESS_STATUS. (As this data item exists in the database, the getValue API will update its value.)
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-settings.getValue(context, settings.display.SCREEN_BRIGHTNESS_STATUS, settings.domainName.DEVICE_SHARED).then((value) => {
-  console.info(`Promise:value -> ${value}`);
-});
-```
+See [getValue](#getvalue)
 

@@ -35,10 +35,10 @@ import { appAccount } from '@kit.BasicServicesKit';
 | [AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md) | Defines application account information. |
 | [AppAccountManager](arkts-basicservices-appaccount-appaccountmanager-i.md) | Defines the application account manager, which is used to manage account information of applications. |
 | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Implements authenticator callbacks. |
-| [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | Defines the authentication result. |
-| [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md) | Defines authorization token information. |
 | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Provides OAuth authenticator callbacks. |
 | [AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md) | Defines OAuth authenticator information. |
+| [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | Defines the authentication result. |
+| [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md) | Defines authorization token information. |
 | [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) | Defines the options for implicitly creating an application account. |
 | [CreateAccountOptions](arkts-basicservices-appaccount-createaccountoptions-i.md) | Defines the options for creating an application account. |
 | [OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md) | Defines authorization token information. |

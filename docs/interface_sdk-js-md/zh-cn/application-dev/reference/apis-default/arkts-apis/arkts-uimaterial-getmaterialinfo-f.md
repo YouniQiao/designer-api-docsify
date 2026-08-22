@@ -27,5 +27,5 @@ export function getMaterialInfo(): MaterialInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| [MaterialInfo](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-materialinfo-i.md) | 返回当前应用的材质配置信息，包含材质使能状态和材质类型。 |
+| [MaterialInfo](arkts-uimaterial-materialinfo-i.md) | 返回当前应用的材质配置信息，包含材质使能状态和材质类型。 |
 

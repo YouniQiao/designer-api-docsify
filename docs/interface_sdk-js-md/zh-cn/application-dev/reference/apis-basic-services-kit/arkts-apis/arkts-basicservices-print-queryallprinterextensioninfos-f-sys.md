@@ -52,6 +52,18 @@ print.queryAllPrinterExtensionInfos((err: BusinessError, extensionInfos: print.P
 })
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+
+print.queryAllPrinterExtensionInfos().then((extensionInfos: print.PrinterExtensionInfo[]) => {
+    console.info('queryAllPrinterExtensionInfos success ' + JSON.stringify(extensionInfos));
+    // ...
+}).catch((error: BusinessError) => {
+    console.error('failed to get AllPrinterExtension because ' + JSON.stringify(error));
+})
+```
+
 
 ## queryAllPrinterExtensionInfos
 
@@ -86,15 +98,5 @@ function queryAllPrinterExtensionInfos(): Promise<Array<PrinterExtensionInfo>>
 
 **示例**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-print.queryAllPrinterExtensionInfos().then((extensionInfos: print.PrinterExtensionInfo[]) => {
-    console.info('queryAllPrinterExtensionInfos success ' + JSON.stringify(extensionInfos));
-    // ...
-}).catch((error: BusinessError) => {
-    console.error('failed to get AllPrinterExtension because ' + JSON.stringify(error));
-})
-```
+参见 [queryAllPrinterExtensionInfos](#queryallprinterextensioninfos)
 

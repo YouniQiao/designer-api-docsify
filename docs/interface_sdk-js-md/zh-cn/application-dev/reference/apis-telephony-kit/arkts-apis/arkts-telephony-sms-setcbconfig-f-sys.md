@@ -61,6 +61,25 @@ sms.setCBConfig(cbConfigOptions, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let cbConfigOptions: sms.CBConfigOptions = {
+    slotId: 0,
+    enable: true,
+    startMessageId: 100,
+    endMessageId: 200,
+    ranType: sms.RanType.TYPE_GSM
+};
+let promise = sms.setCBConfig(cbConfigOptions);
+promise.then(() => {
+    console.info(`setCBConfig success.`);
+}).catch((err: BusinessError) => {
+    console.error(`setCBConfig failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## setCBConfig
 
@@ -106,22 +125,5 @@ function setCBConfig(options: CBConfigOptions): Promise<void>
 
 **示例**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let cbConfigOptions: sms.CBConfigOptions = {
-    slotId: 0,
-    enable: true,
-    startMessageId: 100,
-    endMessageId: 200,
-    ranType: sms.RanType.TYPE_GSM
-};
-let promise = sms.setCBConfig(cbConfigOptions);
-promise.then(() => {
-    console.info(`setCBConfig success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setCBConfig failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [setCBConfig](#setcbconfig)
 

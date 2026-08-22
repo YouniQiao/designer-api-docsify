@@ -41,6 +41,32 @@ function queryAllPrintJobs(callback: AsyncCallback<void>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
 
+**示例**
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+
+print.queryAllPrintJobs((err: BusinessError) => {
+    if (err) {
+        console.error('queryAllPrintJobs failed, because : ' + JSON.stringify(err));
+    } else {
+        console.info('queryAllPrintJobs success');
+    }
+})
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+
+print.queryAllPrintJobs().then(() => {
+    console.info('queryAllPrintJobs success');
+}).catch((error: BusinessError) => {
+    console.error('queryAllPrintJobs failed, error : ' + JSON.stringify(error));
+})
+```
+
 
 ## queryAllPrintJobs
 
@@ -76,4 +102,8 @@ function queryAllPrintJobs(): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
+
+**示例**
+
+参见 [queryAllPrintJobs](#queryallprintjobs)
 

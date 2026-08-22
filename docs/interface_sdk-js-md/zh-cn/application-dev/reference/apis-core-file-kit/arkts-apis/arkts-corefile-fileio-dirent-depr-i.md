@@ -44,6 +44,11 @@ isBlockDevice(): boolean
 **示例**
 
 ```TypeScript
+let filePath = pathDir + "/test.txt";
+let isBLockDevice = fileio.statSync(filePath).isBlockDevice();
+```
+
+```TypeScript
 let dir = fileio.opendirSync(pathDir);
 let isBLockDevice = dir.readSync().isBlockDevice();
 ```
@@ -73,6 +78,11 @@ isCharacterDevice(): boolean
 | boolean | 表示当前目录项是否是字符特殊设备。true为是，false为不是。 |
 
 **示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let isCharacterDevice = fileio.statSync(filePath).isCharacterDevice();
+```
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -106,6 +116,11 @@ isDirectory(): boolean
 **示例**
 
 ```TypeScript
+let dirPath = pathDir + "/test";
+let isDirectory = fileio.statSync(dirPath).isDirectory();
+```
+
+```TypeScript
 let dir = fileio.opendirSync(pathDir);
 let isDirectory = dir.readSync().isDirectory();
 ```
@@ -135,6 +150,11 @@ isFIFO(): boolean
 | boolean | 表示当前目录项是否是FIFO。true为是，false为不是。 |
 
 **示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let isFIFO = fileio.statSync(filePath).isFIFO();
+```
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);
@@ -168,6 +188,11 @@ isFile(): boolean
 **示例**
 
 ```TypeScript
+let filePath = pathDir + "/test.txt";
+let isFile = fileio.statSync(filePath).isFile();
+```
+
+```TypeScript
 let dir = fileio.opendirSync(pathDir);
 let isFile = dir.readSync().isFile();
 ```
@@ -199,6 +224,11 @@ isSocket(): boolean
 **示例**
 
 ```TypeScript
+let filePath = pathDir + "/test.txt";
+let isSocket = fileio.statSync(filePath).isSocket();
+```
+
+```TypeScript
 let dir = fileio.opendirSync(pathDir);
 let isSocket = dir.readSync().isSocket();
 ```
@@ -228,6 +258,11 @@ isSymbolicLink(): boolean
 | boolean | 表示当前目录项是否是符号链接。true为是，false为不是。 |
 
 **示例**
+
+```TypeScript
+let filePath = pathDir + "/test";
+let isSymbolicLink = fileio.statSync(filePath).isSymbolicLink();
+```
 
 ```TypeScript
 let dir = fileio.opendirSync(pathDir);

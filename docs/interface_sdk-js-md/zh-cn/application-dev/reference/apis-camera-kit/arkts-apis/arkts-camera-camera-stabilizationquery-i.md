@@ -53,3 +53,37 @@ isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isVideoStabilizationModeSupported(captureSession: camera.CaptureSession): boolean {
+  let isSupported: boolean = false;
+  try {
+    isSupported = captureSession.isVideoStabilizationModeSupported(camera.VideoStabilizationMode.OFF);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The isVideoStabilizationModeSupported call failed. error code: ${err.code}`);
+  }
+  return isSupported;
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isVideoStabilizationModeSupported(videoSession: camera.VideoSession): boolean {
+  let isSupported: boolean = false;
+  try {
+    isSupported = videoSession.isVideoStabilizationModeSupported(camera.VideoStabilizationMode.OFF);
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The isVideoStabilizationModeSupported call failed. error code: ${err.code}`);
+  }
+  return isSupported;
+}
+```
+

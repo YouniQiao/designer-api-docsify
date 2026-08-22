@@ -79,6 +79,39 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let promise = window.setWindowLayoutMode(window.WindowLayoutMode.WINDOW_LAYOUT_MODE_CASCADE);
+  promise.then(() => {
+    console.info('Succeeded in setting window layout mode.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set window layout mode. Cause code: ${err.code}, message: ${err.message}`);
+  });
+} catch (exception) {
+  console.error(`Failed to set window layout mode. Cause code: ${exception.code}, message: ${exception.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let promise = window.setWindowLayoutMode(window.WindowLayoutMode.WINDOW_LAYOUT_MODE_CASCADE);
+  promise.then(() => {
+    console.info('Succeeded in setting window layout mode.');
+  }).catch((err: Error) => {
+    console.error(`Failed to set window layout mode. Cause code: ${err.code}, message: ${err.message}`);
+  });
+} catch (exception) {
+  let err = exception as BusinessError;
+  console.error(`Failed to set window layout mode. Cause code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## setWindowLayoutMode
 
@@ -120,36 +153,5 @@ function setWindowLayoutMode(mode: WindowLayoutMode): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = window.setWindowLayoutMode(window.WindowLayoutMode.WINDOW_LAYOUT_MODE_CASCADE);
-  promise.then(() => {
-    console.info('Succeeded in setting window layout mode.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set window layout mode. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set window layout mode. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = window.setWindowLayoutMode(window.WindowLayoutMode.WINDOW_LAYOUT_MODE_CASCADE);
-  promise.then(() => {
-    console.info('Succeeded in setting window layout mode.');
-  }).catch((err: Error) => {
-    console.error(`Failed to set window layout mode. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to set window layout mode. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [setWindowLayoutMode](#setwindowlayoutmode)
 

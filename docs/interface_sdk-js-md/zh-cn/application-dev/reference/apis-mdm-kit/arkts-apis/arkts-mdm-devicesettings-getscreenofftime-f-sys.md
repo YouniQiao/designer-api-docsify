@@ -34,7 +34,7 @@ function getScreenOffTime(admin: Want, callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当接口调用成功，err为null，data为设备息屏时间（单位：毫秒），否则err为错误对象。 |
 
 **错误码：**
@@ -68,6 +68,24 @@ deviceSettings.getScreenOffTime(wantTemp, (err, result) => {
 });
 ```
 
+```TypeScript
+import { deviceSettings } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+deviceSettings.getScreenOffTime(wantTemp).then((result) => {
+  console.info(`Succeeded in getting screen off time, result : ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get screen off time. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## getScreenOffTime
 
@@ -97,7 +115,7 @@ function getScreenOffTime(admin: Want): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 
 **返回值：**
 
@@ -117,21 +135,5 @@ function getScreenOffTime(admin: Want): Promise<number>
 
 **示例**
 
-```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-deviceSettings.getScreenOffTime(wantTemp).then((result) => {
-  console.info(`Succeeded in getting screen off time, result : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get screen off time. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [getScreenOffTime](#getscreenofftime)
 

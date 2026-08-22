@@ -64,6 +64,23 @@ Obtains the level of the beauty type in use.
 **示例**
 
 ```TypeScript
+function getBeauty(portraitPhotoSession: camera.PortraitPhotoSession): number {
+  const invalidValue: number = -1;
+  let beautyTypes = portraitPhotoSession.getSupportedBeautyTypes();
+  if (beautyTypes === undefined || beautyTypes.length <= 0) {
+    return invalidValue;
+  }
+  let beautyLevels: Array<number> = portraitPhotoSession.getSupportedBeautyRange(beautyTypes[0]);
+  if (beautyLevels === undefined || beautyLevels.length <= 0) {
+    return invalidValue;
+  }
+  portraitPhotoSession.setBeauty(beautyTypes[0], beautyLevels[0]);
+  let beautyLevel: number = portraitPhotoSession.getBeauty(beautyTypes[0]);
+  return beautyLevel;
+}
+```
+
+```TypeScript
 function getBeauty(captureSession: camera.CaptureSession): number {
   const invalidValue: number = -1;
   let beautyTypes: Array<camera.BeautyType> = captureSession.getSupportedBeautyTypes();
@@ -121,6 +138,17 @@ Obtains the levels that can be set a beauty type. The beauty levels vary accordi
 **示例**
 
 ```TypeScript
+function getSupportedBeautyRange(portraitPhotoSession: camera.PortraitPhotoSession): Array<number> {
+  let beautyTypes: Array<camera.BeautyType> = portraitPhotoSession.getSupportedBeautyTypes();
+  if (beautyTypes === undefined || beautyTypes.length <= 0) {
+    return [];
+  }
+  let beautyLevels: Array<number> = portraitPhotoSession.getSupportedBeautyRange(beautyTypes[0]);
+  return beautyLevels;
+}
+```
+
+```TypeScript
 function getSupportedBeautyRange(captureSession: camera.CaptureSession): Array<number> {
   let beautyTypes: Array<camera.BeautyType> = captureSession.getSupportedBeautyTypes();
   if (beautyTypes === undefined || beautyTypes.length <= 0) {
@@ -166,6 +194,13 @@ Obtains the supported beauty types.
 **示例**
 
 ```TypeScript
+function getSupportedBeautyTypes(portraitPhotoSession: camera.PortraitPhotoSession): Array<camera.BeautyType> {
+  let beautyTypes: Array<camera.BeautyType> = portraitPhotoSession.getSupportedBeautyTypes();
+  return beautyTypes;
+}
+```
+
+```TypeScript
 function getSupportedBeautyTypes(captureSession: camera.CaptureSession): Array<camera.BeautyType> {
   let beautyTypes: Array<camera.BeautyType> = captureSession.getSupportedBeautyTypes();
   return beautyTypes;
@@ -206,6 +241,20 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the [b
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 **示例**
+
+```TypeScript
+function setBeauty(portraitPhotoSession: camera.PortraitPhotoSession): void {
+  let beautyTypes: Array<camera.BeautyType> = portraitPhotoSession.getSupportedBeautyTypes();
+  if (beautyTypes === undefined || beautyTypes.length <= 0) {
+    return;
+  }
+  let beautyLevels: Array<number> = portraitPhotoSession.getSupportedBeautyRange(beautyTypes[0]);
+  if (beautyLevels === undefined || beautyLevels.length <= 0) {
+    return;
+  }
+  portraitPhotoSession.setBeauty(beautyTypes[0], beautyLevels[0]);
+}
+```
 
 ```TypeScript
 function setBeauty(captureSession: camera.CaptureSession): void {

@@ -68,3 +68,10 @@ The target device
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
+**Examples**
+
+```TypeScript
+let context: mindSporeLite.Context = {};
+context.target = ['cpu','nnrt'];
+```
+

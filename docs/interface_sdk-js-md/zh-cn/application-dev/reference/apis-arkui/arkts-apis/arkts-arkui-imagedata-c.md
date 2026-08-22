@@ -44,6 +44,47 @@ constructor(width: number, height: number, data?: Uint8ClampedArray)
 | height | number | 是 | 矩形区域高度，默认单位为vp。 <br>异常值NaN和Infinity按0处理。 |
 | data | Uint8ClampedArray | 否 | 一维数组，保存了相应的颜色数据，数据值范围为0到255。 <br>传入异常值undefined时，data为undefined。 <br/>默认值：值全为0的一维数组。 |
 
+**示例**
+
+以下示例展示了配置CanvasRenderingContext2D对象的单位模式，默认单位模式为LengthMetricsUnit.DEFAULT，对应默认单位vp，配置后无法动态更改。详细说明见LengthMetricsUnit。
+
+```TypeScript
+// xxx.ets
+import { LengthMetricsUnit } from '@kit.ArkUI'
+
+@Entry
+@Component
+struct LengthMetricsUnitDemo {
+  private settings: RenderingContextSettings = new RenderingContextSettings(true);
+  private contextPX: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings, LengthMetricsUnit.PX);
+  private contextVP: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Canvas(this.contextPX)
+        .width('100%')
+        .height(150)
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.contextPX.fillRect(10, 10, 100, 100)
+          this.contextPX.clearRect(10, 10, 50, 50)
+        })
+
+      Canvas(this.contextVP)
+        .width('100%')
+        .height(150)
+        .backgroundColor('#ffff00')
+        .onReady(() => {
+          this.contextVP.fillRect(10, 10, 100, 100)
+          this.contextVP.clearRect(10, 10, 50, 50)
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 ## constructor
 
 ```TypeScript
@@ -72,6 +113,10 @@ constructor(width: number, height: number, data?: Uint8ClampedArray, unit?: Leng
 | height | number | 是 | 矩形区域高度，默认单位为vp。 <br>异常值NaN和Infinity按0处理。 |
 | data | Uint8ClampedArray | 否 | 一维数组，保存了相应的颜色数据，数据值范围为0到255。 <br>传入异常值undefined时，data为undefined。 <br/>默认值：值全为0的一维数组。 |
 | unit | LengthMetricsUnit | 否 | 用来配置ImageData对象的单位模式，配置后无法动态更改， 配置方法同 [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)。 <br>异常值undefined、NaN和Infinity按默认值处理。 <br>默认值：DEFAULT。 |
+
+**示例**
+
+参见 [constructor](#constructor)
 
 ## data
 

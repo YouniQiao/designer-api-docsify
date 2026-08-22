@@ -32,7 +32,7 @@ Publishes a reminder through the reminder agent. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reminderReq | ReminderRequest | Yes | Reminder to be published. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the published reminder's ID. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the published reminder's ID. |
 
 **Examples**
 
@@ -46,6 +46,17 @@ let timer:reminderAgent.ReminderRequestTimer = {
 
 reminderAgent.publishReminder(timer, (err: BusinessError, reminderId: number) => {
   console.info("callback, reminderId = " + reminderId);
+});
+```
+
+```TypeScript
+let timer:reminderAgent.ReminderRequestTimer = {
+  reminderType: reminderAgent.ReminderType.REMINDER_TYPE_TIMER,
+  triggerTimeInSeconds: 10
+}
+
+reminderAgent.publishReminder(timer).then((reminderId: number) => {
+  console.info("promise, reminderId = " + reminderId);
 });
 ```
 
@@ -84,14 +95,5 @@ Publishes a reminder through the reminder agent. This API uses a promise to retu
 
 **Examples**
 
-```TypeScript
-let timer:reminderAgent.ReminderRequestTimer = {
-  reminderType: reminderAgent.ReminderType.REMINDER_TYPE_TIMER,
-  triggerTimeInSeconds: 10
-}
-
-reminderAgent.publishReminder(timer).then((reminderId: number) => {
-  console.info("promise, reminderId = " + reminderId);
-});
-```
+See [publishReminder](#publishreminder)
 

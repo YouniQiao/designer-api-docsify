@@ -35,6 +35,24 @@ Obtains information about a P2P connection.
 | --- | --- |
 | Promise&lt;WifiP2pLinkedInfo&gt; | Returns the P2P connection information. |
 
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+wifi.getP2pLinkedInfo((err, data:wifi.WifiP2pLinkedInfo) => {
+   if (err) {
+       console.error("get p2p linked info error");
+       return;
+   }
+	console.info("get wifi p2p linked info: " + JSON.stringify(data));
+});
+
+wifi.getP2pLinkedInfo().then(data => {
+	console.info("get wifi p2p linked info: " + JSON.stringify(data));
+});
+```
+
 
 ## getP2pLinkedInfo
 
@@ -60,23 +78,9 @@ Obtains information about a P2P connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;WifiP2pLinkedInfo&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pLinkedInfo&gt; | Yes |  |
 
 **Examples**
 
-```TypeScript
-import wifi from '@ohos.wifi';
-
-wifi.getP2pLinkedInfo((err, data:wifi.WifiP2pLinkedInfo) => {
-   if (err) {
-       console.error("get p2p linked info error");
-       return;
-   }
-	console.info("get wifi p2p linked info: " + JSON.stringify(data));
-});
-
-wifi.getP2pLinkedInfo().then(data => {
-	console.info("get wifi p2p linked info: " + JSON.stringify(data));
-});
-```
+See [getP2pLinkedInfo](#getp2plinkedinfo)
 

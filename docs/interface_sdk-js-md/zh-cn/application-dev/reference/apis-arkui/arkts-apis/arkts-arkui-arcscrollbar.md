@@ -12,14 +12,14 @@ import { ArcScrollBar, ArcScrollBarAttribute } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ArcScrollBarAttribute](arkts-arkui-arkuiarcscrollbar-arcscrollbarattribute-c.md) |  |
+| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-c.md) |  |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [ArcScrollBarInterface](arkts-arkui-arkuiarcscrollbar-arcscrollbarinterface-i.md) | 弧形滚动条组件ArcScrollBar，适用于圆形屏幕等需要弧形滚动条的场景，用于配合可滚动组件使用，如ArcList、 List、Grid、 Scroll、WaterFlow。 |
-| [ArcScrollBarOptions](arkts-arkui-arkuiarcscrollbar-arcscrollbaroptions-i.md) | ArcScrollBar的构造函数参数。 |
+| [ArcScrollBarInterface](arkts-arkui-arkui-arcscrollbar-arcscrollbarinterface-i.md) | 弧形滚动条组件ArcScrollBar，适用于圆形屏幕等需要弧形滚动条的场景，用于配合可滚动组件使用，如ArcList、 List、Grid、 Scroll、WaterFlow。 |
+| [ArcScrollBarOptions](arkts-arkui-arkui-arcscrollbar-arcscrollbaroptions-i.md) | ArcScrollBar的构造函数参数。 |
 
 ### 常量
 

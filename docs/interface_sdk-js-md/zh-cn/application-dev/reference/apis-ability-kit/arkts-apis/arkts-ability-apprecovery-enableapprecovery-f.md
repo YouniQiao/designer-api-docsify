@@ -32,3 +32,19 @@ function enableAppRecovery(restart?: RestartFlag, saveOccasion?: SaveOccasionFla
 | saveOccasion | [SaveOccasionFlag](arkts-ability-apprecovery-saveoccasionflag-e.md) | 否 | 枚举类型，状态保存时机，默认为故障时保存。 |
 | saveMode | [SaveModeFlag](arkts-ability-apprecovery-savemodeflag-e.md) | 否 | 枚举类型，状态保存方式， 默认为文件缓存。 |
 
+**示例**
+
+```TypeScript
+import { appRecovery, AbilityStage } from '@kit.AbilityKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  onCreate() {
+    appRecovery.enableAppRecovery(
+      appRecovery.RestartFlag.ALWAYS_RESTART,
+      appRecovery.SaveOccasionFlag.SAVE_WHEN_ERROR,
+      appRecovery.SaveModeFlag.SAVE_WITH_FILE
+    );
+  }
+}
+```
+

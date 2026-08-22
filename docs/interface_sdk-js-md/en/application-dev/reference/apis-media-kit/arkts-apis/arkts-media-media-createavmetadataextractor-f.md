@@ -38,6 +38,20 @@ Creates an AVMetadataExtractor instance. This API uses a promise to return the r
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let avMetadataExtractor: media.AVMetadataExtractor;
+media.createAVMetadataExtractor((error: BusinessError, extractor: media.AVMetadataExtractor) => {
+  if (extractor) {
+    avMetadataExtractor = extractor;
+    console.info('Succeeded in creating AVMetadataExtractor');
+  } else {
+    console.error(`Failed to create AVMetadataExtractor, error message:${error.message}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let avMetadataExtractor: media.AVMetadataExtractor;
 media.createAVMetadataExtractor().then((extractor: media.AVMetadataExtractor) => {
   if (extractor) {
     avMetadataExtractor = extractor;
@@ -77,6 +91,10 @@ Creates an **AVMetadataExtractor** instance. This API uses a promise to return t
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by promise. |
 
+**Examples**
+
+See [createAVMetadataExtractor](#createavmetadataextractor)
+
 
 ## createAVMetadataExtractor
 
@@ -96,7 +114,7 @@ Creates an AVMetadataExtractor instance. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVMetadataExtractor](arkts-media-media-avmetadataextractor-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AVMetadataExtractor instance created; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVMetadataExtractor](arkts-media-media-avmetadataextractor-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AVMetadataExtractor instance created; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -106,19 +124,7 @@ Creates an AVMetadataExtractor instance. This API uses an asynchronous callback 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let avMetadataExtractor: media.AVMetadataExtractor;
-media.createAVMetadataExtractor((error: BusinessError, extractor: media.AVMetadataExtractor) => {
-  if (extractor) {
-    avMetadataExtractor = extractor;
-    console.info('Succeeded in creating AVMetadataExtractor');
-  } else {
-    console.error(`Failed to create AVMetadataExtractor, error message:${error.message}`);
-  }
-});
-```
+See [createAVMetadataExtractor](#createavmetadataextractor)
 
 
 ## createAVMetadataExtractor
@@ -139,11 +145,15 @@ Creates an **AVMetadataExtractor** instance. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVMetadataExtractor](arkts-media-media-avmetadataextractor-i.md) \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **AVMetadataExtractor** instance created; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVMetadataExtractor](arkts-media-media-avmetadataextractor-i.md) \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **AVMetadataExtractor** instance created; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by callback. |
+
+**Examples**
+
+See [createAVMetadataExtractor](#createavmetadataextractor)
 

@@ -27,6 +27,6 @@ Removes a callback function that was previously registered with `on()`.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkuiuicontext-uicontext-c.md) | 是 | The context scope of the observer. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DensityInfo](../../apis-arkui/arkts-apis/arkts-arkui-uiobserver-densityinfo-c.md)&gt; | 否 | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| context | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | The context scope of the observer. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DensityInfo](arkts-uiobserver-densityinfo-c.md)&gt; | 否 | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 

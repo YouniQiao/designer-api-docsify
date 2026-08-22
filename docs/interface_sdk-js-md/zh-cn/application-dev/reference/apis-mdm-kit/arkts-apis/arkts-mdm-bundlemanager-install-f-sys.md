@@ -34,7 +34,7 @@ function install(admin: Want, hapFilePaths: Array<string>, callback: AsyncCallba
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | hapFilePaths | Array&lt;string&gt; | 是 | 待安装应用包路径数组。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err为null，否则为错误对象。 |
 
@@ -54,6 +54,56 @@ function install(admin: Want, hapFilePaths: Array<string>, callback: AsyncCallba
 ```TypeScript
 import { bundleManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 为当前用户安装应用
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// 需根据实际情况进行替换
+let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
+
+bundleManager.install(wantTemp, hapFilePaths).then(() => {
+  console.info('Succeeded in installing bundles.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 为所有用户安装应用
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// 需根据实际情况进行替换
+let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
+const params: Record<string, string> = {
+  'ohos.bms.param.enterpriseForAllUser': 'true'
+};
+let installParam: bundleManager.InstallParam = {
+  // 需根据实际情况进行替换
+  userId: 100,
+  installFlag: 0,
+  parameters: params
+};
+bundleManager.install(wantTemp, hapFilePaths, installParam).then(() => {
+  console.info('Succeeded in installing bundles.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
 
 let wantTemp: Want = {
   // 需根据实际情况进行替换
@@ -64,6 +114,31 @@ let wantTemp: Want = {
 let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
 
 bundleManager.install(wantTemp, hapFilePaths, (err) => {
+  if (err) {
+    console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in installing bundles');
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// 需根据实际情况进行替换
+let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
+let installParam: bundleManager.InstallParam = {
+  userId: 100,
+  installFlag: 1,
+};
+
+bundleManager.install(wantTemp, hapFilePaths, installParam, (err) => {
   if (err) {
     console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
     return;
@@ -101,7 +176,7 @@ function install(admin: Want, hapFilePaths: Array<string>, installParam: Install
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | hapFilePaths | Array&lt;string&gt; | 是 | 待安装应用包路径数组。 |
 | installParam | InstallParam | 是 | 应用包安装参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err为null，否则为错误对象。 |
@@ -119,28 +194,5 @@ function install(admin: Want, hapFilePaths: Array<string>, installParam: Install
 
 **示例**
 
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
-let installParam: bundleManager.InstallParam = {
-  userId: 100,
-  installFlag: 1,
-};
-
-bundleManager.install(wantTemp, hapFilePaths, installParam, (err) => {
-  if (err) {
-    console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in installing bundles');
-});
-```
+参见 [install](#install)
 

@@ -25,7 +25,7 @@ Adds a notification slot. This API uses an asynchronous callback to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slot | [NotificationSlot](../../apis-notification-kit/arkts-apis/arkts-notification-notificationslot-notificationslot-i.md) | Yes | Notification slot instance. Only the **notificationType** property can be set. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the notification slot is added, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the notification slot is added, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -50,6 +50,21 @@ reminderAgentManager.addNotificationSlot(mySlot, (err: BusinessError) => {
   } else {
     console.info("addNotificationSlot callback");
   }
+});
+```
+
+```TypeScript
+import { notificationManager } from '@kit.NotificationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+let mySlot: notificationManager.NotificationSlot = {
+  notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
+}
+reminderAgentManager.addNotificationSlot(mySlot).then(() => {
+  console.info("addNotificationSlot promise");
+}).catch((err: BusinessError) => {
+  console.error("promise err code:" + err.code + " message:" + err.message);
 });
 ```
 
@@ -88,18 +103,5 @@ Adds a notification slot. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-let mySlot: notificationManager.NotificationSlot = {
-  notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-}
-reminderAgentManager.addNotificationSlot(mySlot).then(() => {
-  console.info("addNotificationSlot promise");
-}).catch((err: BusinessError) => {
-  console.error("promise err code:" + err.code + " message:" + err.message);
-});
-```
+See [addNotificationSlot](#addnotificationslot)
 

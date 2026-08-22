@@ -60,6 +60,19 @@ call.setAudioDevice(audioDevice, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let audioDevice: call.AudioDevice = {
+    deviceType: call.AudioDeviceType.DEVICE_EARPIECE
+}
+call.setAudioDevice(audioDevice).then(() => {
+    console.info(`setAudioDevice success.`);
+}).catch((err: BusinessError) => {
+    console.error(`setAudioDevice fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## setAudioDevice
 
@@ -105,16 +118,5 @@ function setAudioDevice(device: AudioDevice): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let audioDevice: call.AudioDevice = {
-    deviceType: call.AudioDeviceType.DEVICE_EARPIECE
-}
-call.setAudioDevice(audioDevice).then(() => {
-    console.info(`setAudioDevice success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setAudioDevice fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [setAudioDevice](#setaudiodevice)
 

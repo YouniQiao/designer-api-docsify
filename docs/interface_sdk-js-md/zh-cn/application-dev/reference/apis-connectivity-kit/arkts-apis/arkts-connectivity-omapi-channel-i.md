@@ -40,6 +40,21 @@ close(): void
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { omapi } from '@kit.ConnectivityKit';
 
+let seSession : omapi.Session;
+
+// 在使用seSession之前，需要对seSession进行初始化
+
+try {
+    seSession.close();
+} catch (error) {
+    hilog.error(0x0000, 'testTag', 'close error %{public}s', JSON.stringify(error));
+}
+```
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
 let seChannel : omapi.Channel;
 
 // 在使用seChannel之前，需要对seChannel进行初始化
@@ -212,6 +227,22 @@ isClosed(): boolean
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { omapi } from '@kit.ConnectivityKit';
 
+let seSession : omapi.Session;
+
+// 在使用seSession之前，需要对seSession进行初始化
+
+try {
+    let isClosed = seSession.isClosed();
+    hilog.info(0x0000, 'testTag', 'isClosed %{public}s', JSON.stringify(isClosed));
+} catch (error) {
+    hilog.error(0x0000, 'testTag', 'isClosed error %{public}s', JSON.stringify(error));
+}
+```
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
 let seChannel : omapi.Channel;
 
 // 在使用seChannel之前，需要对seChannel进行初始化
@@ -281,6 +312,28 @@ try {
 }
 ```
 
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seChannel : omapi.Channel;
+
+// 在使用seChannel之前，需要对seChannel进行初始化
+let cmdData = [0x01, 0x02, 0x03, 0x04]; // 请更改为正确的data
+try {
+    seChannel.transmit(cmdData, (error, response) => {
+    if (error) {
+        hilog.error(0x0000, 'testTag', 'transmit error %{public}s', JSON.stringify(error));
+    } else {
+        // 若芯片捕获异常则response返回全0
+        hilog.info(0x0000, 'testTag', 'transmit response = %{public}s.', JSON.stringify(response));
+    }
+    });
+} catch (exception) {
+    hilog.error(0x0000, 'testTag', 'transmit exception %{public}s', JSON.stringify(exception));
+}
+```
+
 ## transmit
 
 ```TypeScript
@@ -314,25 +367,5 @@ transmit(command: number[], callback: AsyncCallback<number[]>): void
 
 **示例**
 
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seChannel : omapi.Channel;
-
-// 在使用seChannel之前，需要对seChannel进行初始化
-let cmdData = [0x01, 0x02, 0x03, 0x04]; // 请更改为正确的data
-try {
-    seChannel.transmit(cmdData, (error, response) => {
-    if (error) {
-        hilog.error(0x0000, 'testTag', 'transmit error %{public}s', JSON.stringify(error));
-    } else {
-        // 若芯片捕获异常则response返回全0
-        hilog.info(0x0000, 'testTag', 'transmit response = %{public}s.', JSON.stringify(response));
-    }
-    });
-} catch (exception) {
-    hilog.error(0x0000, 'testTag', 'transmit exception %{public}s', JSON.stringify(exception));
-}
-```
+参见 [transmit](#transmit)
 

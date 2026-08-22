@@ -62,6 +62,20 @@ print.updatePrintJobState(jobId, state, subState, (err: BusinessError) => {
 })
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+
+let jobId : string = 'jobId';
+let state : print.PrintJobState = print.PrintJobState.PRINT_JOB_PREPARE;
+let subState : print.PrintJobSubState = print.PrintJobSubState.PRINT_JOB_COMPLETED_SUCCESS;
+print.updatePrintJobState(jobId, state, subState).then(() => {
+    console.info('update print job state success');
+}).catch((error: BusinessError) => {
+    console.error('update print job state error : ' + JSON.stringify(error));
+})
+```
+
 
 ## updatePrintJobState
 
@@ -107,17 +121,5 @@ function updatePrintJobState(jobId: string, state: PrintJobState, subState: Prin
 
 **示例**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let jobId : string = 'jobId';
-let state : print.PrintJobState = print.PrintJobState.PRINT_JOB_PREPARE;
-let subState : print.PrintJobSubState = print.PrintJobSubState.PRINT_JOB_COMPLETED_SUCCESS;
-print.updatePrintJobState(jobId, state, subState).then(() => {
-    console.info('update print job state success');
-}).catch((error: BusinessError) => {
-    console.error('update print job state error : ' + JSON.stringify(error));
-})
-```
+参见 [updatePrintJobState](#updateprintjobstate)
 

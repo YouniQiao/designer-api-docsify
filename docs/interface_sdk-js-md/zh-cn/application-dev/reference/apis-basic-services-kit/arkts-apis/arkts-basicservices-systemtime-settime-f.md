@@ -61,6 +61,23 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// time对应的时间为2021-01-20 02:36:25
+let time = 1611081385000;
+try {
+  systemTime.setTime(time).then(() => {
+    console.info(`Succeeded in setting time.`);
+  }).catch((error: BusinessError) => {
+    console.info(`Failed to set time. message: ${error.message}, code: ${error.code}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.info(`Failed to set time. message: ${error.message}, code: ${error.code}`);
+}
+```
+
 
 ## setTime
 
@@ -102,20 +119,5 @@ function setTime(time: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// time对应的时间为2021-01-20 02:36:25
-let time = 1611081385000;
-try {
-  systemTime.setTime(time).then(() => {
-    console.info(`Succeeded in setting time.`);
-  }).catch((error: BusinessError) => {
-    console.info(`Failed to set time. message: ${error.message}, code: ${error.code}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.info(`Failed to set time. message: ${error.message}, code: ${error.code}`);
-}
-```
+参见 [setTime](#settime)
 

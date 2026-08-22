@@ -59,6 +59,16 @@ call.setCallRestrictionPassword(0, "123456", "654321", (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.setCallRestrictionPassword(0, "123456", "654321").then(() => {
+    console.info(`setCallRestrictionPassword success.`);
+}).catch((err: BusinessError) => {
+    console.error(`setCallRestrictionPassword fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## setCallRestrictionPassword
 
@@ -106,13 +116,5 @@ function setCallRestrictionPassword(slotId: int, oldPassword: string, newPasswor
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.setCallRestrictionPassword(0, "123456", "654321").then(() => {
-    console.info(`setCallRestrictionPassword success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setCallRestrictionPassword fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [setCallRestrictionPassword](#setcallrestrictionpassword)
 

@@ -57,6 +57,19 @@ connectedTag.writeNdefTag(rawData).then(() => {
 });
 ```
 
+```TypeScript
+import { connectedTag } from '@kit.ConnectivityKit';
+
+let rawData = "010203"; // change it to be correct.
+connectedTag.writeNdefTag(rawData, (err)=> {
+    if (err) {
+        console.error("connectedTag.writeNdefTag AsyncCallback err: " + err);
+    } else {
+        console.info("connectedTag.writeNdefTag AsyncCallback success.");
+    }
+});
+```
+
 
 ## writeNdefTag
 
@@ -88,20 +101,9 @@ Writes data to this active tag. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | string | Yes | Data to be written to the active tag. The maximum length is 1024 bytes. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the active tag content obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the active tag content obtained. |
 
 **Examples**
 
-```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
-
-let rawData = "010203"; // change it to be correct.
-connectedTag.writeNdefTag(rawData, (err)=> {
-    if (err) {
-        console.error("connectedTag.writeNdefTag AsyncCallback err: " + err);
-    } else {
-        console.info("connectedTag.writeNdefTag AsyncCallback success.");
-    }
-});
-```
+See [writeNdefTag](#writendeftag)
 

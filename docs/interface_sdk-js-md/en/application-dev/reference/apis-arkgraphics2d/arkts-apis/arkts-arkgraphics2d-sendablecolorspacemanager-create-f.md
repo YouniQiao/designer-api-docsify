@@ -47,6 +47,23 @@ let colorSpace: sendableColorSpaceManager.ColorSpaceManager;
 colorSpace = sendableColorSpaceManager.create(colorSpaceManager.ColorSpace.SRGB);
 ```
 
+```TypeScript
+import { colorSpaceManager, sendableColorSpaceManager } from '@kit.ArkGraphics2D';
+let colorSpace: sendableColorSpaceManager.ColorSpaceManager;
+let primaries: colorSpaceManager.ColorSpacePrimaries = {
+  redX: 0.1,
+  redY: 0.1,
+  greenX: 0.2,
+  greenY: 0.2,
+  blueX: 0.3,
+  blueY: 0.3,
+  whitePointX: 0.4,
+  whitePointY: 0.4
+};
+let gamma: number = 2.2;
+colorSpace = sendableColorSpaceManager.create(primaries, gamma);
+```
+
 
 ## create
 
@@ -84,20 +101,5 @@ Creates a custom color space object that is sendable.
 
 **Examples**
 
-```TypeScript
-import { colorSpaceManager, sendableColorSpaceManager } from '@kit.ArkGraphics2D';
-let colorSpace: sendableColorSpaceManager.ColorSpaceManager;
-let primaries: colorSpaceManager.ColorSpacePrimaries = {
-  redX: 0.1,
-  redY: 0.1,
-  greenX: 0.2,
-  greenY: 0.2,
-  blueX: 0.3,
-  blueY: 0.3,
-  whitePointX: 0.4,
-  whitePointY: 0.4
-};
-let gamma: number = 2.2;
-colorSpace = sendableColorSpaceManager.create(primaries, gamma);
-```
+See [create](#create)
 

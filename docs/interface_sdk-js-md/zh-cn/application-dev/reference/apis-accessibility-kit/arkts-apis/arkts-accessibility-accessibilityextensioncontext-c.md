@@ -52,6 +52,38 @@ getFocusElement(isAccessibilityFocus: boolean, callback: AsyncCallback<Accessibi
 import { AccessibilityElement } from '@kit.AccessibilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let rootElement: AccessibilityElement;
+
+// axContext为AccessibilityExtensionContext实例，通过AccessibilityExtensionAbility子类的this.context获取，详见使用说明
+axContext.getFocusElement().then((data: AccessibilityElement) => {
+  rootElement = data;
+  console.info(`succeeded in getting focus element,${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get focus element. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rootElement: AccessibilityElement;
+
+// axContext为AccessibilityExtensionContext实例，通过AccessibilityExtensionAbility子类的this.context获取，详见使用说明
+axContext.getFocusElement((err: BusinessError, data: AccessibilityElement) => {
+  if (err) {
+    console.error(`Failed to get focus element. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  rootElement = data;
+  console.info(`succeeded in getting focus element, ${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let isAccessibilityFocus = true;
 let rootElement: AccessibilityElement;
 
@@ -103,20 +135,7 @@ getFocusElement(isAccessibilityFocus?: boolean): Promise<AccessibilityElement>
 
 **示例**
 
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let rootElement: AccessibilityElement;
-
-// axContext为AccessibilityExtensionContext实例，通过AccessibilityExtensionAbility子类的this.context获取，详见使用说明
-axContext.getFocusElement().then((data: AccessibilityElement) => {
-  rootElement = data;
-  console.info(`succeeded in getting focus element,${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get focus element. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [getFocusElement](#getfocuselement)
 
 ## getFocusElement
 
@@ -149,22 +168,7 @@ getFocusElement(callback: AsyncCallback<AccessibilityElement>): void
 
 **示例**
 
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let rootElement: AccessibilityElement;
-
-// axContext为AccessibilityExtensionContext实例，通过AccessibilityExtensionAbility子类的this.context获取，详见使用说明
-axContext.getFocusElement((err: BusinessError, data: AccessibilityElement) => {
-  if (err) {
-    console.error(`Failed to get focus element. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  rootElement = data;
-  console.info(`succeeded in getting focus element, ${JSON.stringify(data)}`);
-});
-```
+参见 [getFocusElement](#getfocuselement)
 
 ## getWindowRootElement
 
@@ -197,6 +201,38 @@ getWindowRootElement(windowId: int, callback: AsyncCallback<AccessibilityElement
 | [9300003](../errorcode-accessibility.md#9300003-不具备执行该操作的无障碍权限) | No accessibility permission to perform the operation. |
 
 **示例**
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rootElement: AccessibilityElement;
+
+// axContext为AccessibilityExtensionContext实例，通过AccessibilityExtensionAbility子类的this.context获取，详见使用说明
+axContext.getWindowRootElement().then((data: AccessibilityElement) => {
+  rootElement = data;
+  console.info(`succeeded in getting root element of the window, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get root element of the window. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rootElement: AccessibilityElement;
+
+// axContext为AccessibilityExtensionContext实例，通过AccessibilityExtensionAbility子类的this.context获取，详见使用说明
+axContext.getWindowRootElement((err: BusinessError, data: AccessibilityElement) => {
+  if (err) {
+    console.error(`Failed to get root element of the window. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  rootElement = data;
+  console.info(`succeeded in getting root element of the window, ${JSON.stringify(data)}`);
+});
+```
 
 ```TypeScript
 import { AccessibilityElement } from '@kit.AccessibilityKit';
@@ -253,20 +289,7 @@ getWindowRootElement(windowId?: int): Promise<AccessibilityElement>
 
 **示例**
 
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let rootElement: AccessibilityElement;
-
-// axContext为AccessibilityExtensionContext实例，通过AccessibilityExtensionAbility子类的this.context获取，详见使用说明
-axContext.getWindowRootElement().then((data: AccessibilityElement) => {
-  rootElement = data;
-  console.info(`succeeded in getting root element of the window, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get root element of the window. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [getWindowRootElement](#getwindowrootelement)
 
 ## getWindowRootElement
 
@@ -299,22 +322,7 @@ getWindowRootElement(callback: AsyncCallback<AccessibilityElement>): void
 
 **示例**
 
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let rootElement: AccessibilityElement;
-
-// axContext为AccessibilityExtensionContext实例，通过AccessibilityExtensionAbility子类的this.context获取，详见使用说明
-axContext.getWindowRootElement((err: BusinessError, data: AccessibilityElement) => {
-  if (err) {
-    console.error(`Failed to get root element of the window. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  rootElement = data;
-  console.info(`succeeded in getting root element of the window, ${JSON.stringify(data)}`);
-});
-```
+参见 [getWindowRootElement](#getwindowrootelement)
 
 ## getWindows
 
@@ -347,6 +355,32 @@ getWindows(displayId: long, callback: AsyncCallback<Array<AccessibilityElement>>
 | [9300003](../errorcode-accessibility.md#9300003-不具备执行该操作的无障碍权限) | No accessibility permission to perform the operation. |
 
 **示例**
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// axContext为AccessibilityExtensionContext实例，通过AccessibilityExtensionAbility子类的this.context获取，详见使用说明
+axContext.getWindows().then((data: AccessibilityElement[]) => {
+  console.info(`succeeded in getting windows, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get windows. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// axContext为AccessibilityExtensionContext实例，通过AccessibilityExtensionAbility子类的this.context获取，详见使用说明
+axContext.getWindows((err: BusinessError, data: AccessibilityElement[]) => {
+  if (err) {
+    console.error(`Failed to get windows. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`succeeded in getting windows, ${JSON.stringify(data)}`);
+});
+```
 
 ```TypeScript
 import { AccessibilityElement } from '@kit.AccessibilityKit';
@@ -400,17 +434,7 @@ getWindows(displayId?: long): Promise<Array<AccessibilityElement>>
 
 **示例**
 
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// axContext为AccessibilityExtensionContext实例，通过AccessibilityExtensionAbility子类的this.context获取，详见使用说明
-axContext.getWindows().then((data: AccessibilityElement[]) => {
-  console.info(`succeeded in getting windows, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get windows. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [getWindows](#getwindows)
 
 ## getWindows
 
@@ -443,19 +467,7 @@ getWindows(callback: AsyncCallback<Array<AccessibilityElement>>): void
 
 **示例**
 
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// axContext为AccessibilityExtensionContext实例，通过AccessibilityExtensionAbility子类的this.context获取，详见使用说明
-axContext.getWindows((err: BusinessError, data: AccessibilityElement[]) => {
-  if (err) {
-    console.error(`Failed to get windows. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in getting windows, ${JSON.stringify(data)}`);
-});
-```
+参见 [getWindows](#getwindows)
 
 ## injectGesture
 
@@ -479,7 +491,7 @@ injectGesture(gesturePath: GesturePath, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| gesturePath | [GesturePath](arkts-accessibility-accessibilitygesturepath-gesturepath-c.md) | 是 | 表示手势的路径信息。 |
+| gesturePath | [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | 是 | 表示手势的路径信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当注入手势成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -490,6 +502,24 @@ injectGesture(gesturePath: GesturePath, callback: AsyncCallback<void>): void
 | [9300003](../errorcode-accessibility.md#9300003-不具备执行该操作的无障碍权限) | No accessibility permission to perform the operation. |
 
 **示例**
+
+```TypeScript
+import { GesturePath, GesturePoint } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let gesturePath: GesturePath = new GesturePath(100);
+
+for (let i = 0; i < 10; i++) {
+  let gesturePoint = new GesturePoint(100, i * 200);
+  gesturePath.points.push(gesturePoint);
+}
+// axContext为AccessibilityExtensionContext实例，通过AccessibilityExtensionAbility子类的this.context获取，详见使用说明
+axContext.injectGesture(gesturePath).then(() => {
+  console.info(`Succeeded in injecting gesture,gesturePath is ${gesturePath}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to inject gesture. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ```TypeScript
 import { GesturePath, GesturePoint } from '@kit.AccessibilityKit';
@@ -532,7 +562,7 @@ injectGesture(gesturePath: GesturePath): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| gesturePath | [GesturePath](arkts-accessibility-accessibilitygesturepath-gesturepath-c.md) | 是 | 表示手势的路径信息。 |
+| gesturePath | [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | 是 | 表示手势的路径信息。 |
 
 **返回值：**
 
@@ -549,23 +579,7 @@ injectGesture(gesturePath: GesturePath): Promise<void>
 
 **示例**
 
-```TypeScript
-import { GesturePath, GesturePoint } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let gesturePath: GesturePath = new GesturePath(100);
-
-for (let i = 0; i < 10; i++) {
-  let gesturePoint = new GesturePoint(100, i * 200);
-  gesturePath.points.push(gesturePoint);
-}
-// axContext为AccessibilityExtensionContext实例，通过AccessibilityExtensionAbility子类的this.context获取，详见使用说明
-axContext.injectGesture(gesturePath).then(() => {
-  console.info(`Succeeded in injecting gesture,gesturePath is ${gesturePath}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to inject gesture. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [injectGesture](#injectgesture)
 
 ## injectGestureSync
 
@@ -587,7 +601,7 @@ injectGestureSync(gesturePath: GesturePath): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| gesturePath | [GesturePath](arkts-accessibility-accessibilitygesturepath-gesturepath-c.md) | 是 | 表示手势的路径信息。 |
+| gesturePath | [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | 是 | 表示手势的路径信息。 |
 
 **错误码：**
 
@@ -645,6 +659,18 @@ setTargetBundleName(targetNames: Array<string>, callback: AsyncCallback<void>): 
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let targetNames = ['com.ohos.xyz'];
+// axContext为AccessibilityExtensionContext实例，通过AccessibilityExtensionAbility子类的this.context获取，详见使用说明
+axContext.setTargetBundleName(targetNames).then(() => {
+  console.info(`succeeded in setting target bundle names, targetNames is ${targetNames}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set target bundle names. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let targetNames = ['com.ohos.xyz'];
 try {
   // axContext为AccessibilityExtensionContext实例，通过AccessibilityExtensionAbility子类的this.context获取，详见使用说明
   axContext.setTargetBundleName(targetNames, (err: BusinessError) => {
@@ -695,15 +721,5 @@ setTargetBundleName(targetNames: Array<string>): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let targetNames = ['com.ohos.xyz'];
-// axContext为AccessibilityExtensionContext实例，通过AccessibilityExtensionAbility子类的this.context获取，详见使用说明
-axContext.setTargetBundleName(targetNames).then(() => {
-  console.info(`succeeded in setting target bundle names, targetNames is ${targetNames}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set target bundle names. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [setTargetBundleName](#settargetbundlename)
 

@@ -34,7 +34,7 @@ Obtains the distributed account information. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;DistributedInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the distributed account information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DistributedInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the distributed account information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -59,6 +59,22 @@ try {
         console.info('distributed information: ' + JSON.stringify(data));
       }
     });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+try {
+  accountAbility.getOsAccountDistributedInfo().then((data: distributedAccount.DistributedInfo) => {
+    console.info('distributed information: ' + JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
+  });
 } catch (e) {
   const err = e as BusinessError;
   console.error(`getOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
@@ -96,21 +112,7 @@ Obtains the distributed account information. This API uses a promise to return t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
-try {
-  accountAbility.getOsAccountDistributedInfo().then((data: distributedAccount.DistributedInfo) => {
-    console.info('distributed information: ' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getOsAccountDistributedInfo](#getosaccountdistributedinfo)
 
 ## queryOsAccountDistributedInfo
 
@@ -142,7 +144,7 @@ Queries the distributed account information. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;DistributedInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the distributed account information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DistributedInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the distributed account information obtained. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -158,6 +160,17 @@ accountAbility.queryOsAccountDistributedInfo(
       console.info('distributed information: ' + JSON.stringify(data));
     }
   });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+accountAbility.queryOsAccountDistributedInfo().then((data: distributedAccount.DistributedInfo) => {
+  console.info('distributed information: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`queryOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 ## queryOsAccountDistributedInfo
@@ -194,16 +207,7 @@ Queries the distributed account information. This API uses a promise to return t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
-accountAbility.queryOsAccountDistributedInfo().then((data: distributedAccount.DistributedInfo) => {
-  console.info('distributed information: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`queryOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [queryOsAccountDistributedInfo](#queryosaccountdistributedinfo)
 
 ## setOsAccountDistributedInfo
 
@@ -226,7 +230,7 @@ Sets the distributed account information. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountInfo | DistributedInfo | Yes | Distributed account information to set. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the distributed account information is set successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the distributed account information is set successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -254,6 +258,24 @@ try {
     } else {
       console.info('setOsAccountDistributedInfo successfully');
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+let accountInfo: distributedAccount.DistributedInfo =
+  { id: '12345', name: 'ZhangSan', event: 'Ohos.account.event.LOGIN' };
+try {
+  accountAbility.setOsAccountDistributedInfo(accountInfo).then(() => {
+    console.info('setOsAccountDistributedInfo successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`setOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -302,23 +324,7 @@ Sets the distributed account information. This API uses a promise to return the 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
-let accountInfo: distributedAccount.DistributedInfo =
-  { id: '12345', name: 'ZhangSan', event: 'Ohos.account.event.LOGIN' };
-try {
-  accountAbility.setOsAccountDistributedInfo(accountInfo).then(() => {
-    console.info('setOsAccountDistributedInfo successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`setOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [setOsAccountDistributedInfo](#setosaccountdistributedinfo)
 
 ## updateOsAccountDistributedInfo
 
@@ -351,7 +357,7 @@ Updates the distributed account information. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountInfo | DistributedInfo | Yes | Distributed account information to update. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the distributed account information is updated successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the distributed account information is updated successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -367,6 +373,19 @@ accountAbility.updateOsAccountDistributedInfo(accountInfo, (err: BusinessError) 
   } else {
     console.info('updateOsAccountDistributedInfo successfully');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+let accountInfo: distributedAccount.DistributedInfo =
+  { id: '12345', name: 'ZhangSan', event: 'Ohos.account.event.LOGIN' };
+accountAbility.updateOsAccountDistributedInfo(accountInfo).then(() => {
+  console.info('updateOsAccountDistributedInfo successfully');
+}).catch((err: BusinessError) => {
+  console.error(`updateOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -410,16 +429,5 @@ Updates the distributed account information. This API uses a promise to return t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
-let accountInfo: distributedAccount.DistributedInfo =
-  { id: '12345', name: 'ZhangSan', event: 'Ohos.account.event.LOGIN' };
-accountAbility.updateOsAccountDistributedInfo(accountInfo).then(() => {
-  console.info('updateOsAccountDistributedInfo successfully');
-}).catch((err: BusinessError) => {
-  console.error(`updateOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [updateOsAccountDistributedInfo](#updateosaccountdistributedinfo)
 

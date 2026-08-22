@@ -165,30 +165,6 @@ radius(value: Dimension | BorderRadiuses)
 | --- | --- | --- | --- |
 | value | Dimension \| BorderRadiuses | 是 | Menu边框圆角半径。<br/>默认值：2in1设备上默认值为8vp，其他设备上默认值为20vp。<br/> 从API version 12开始，当水平方向两个圆角半径之和的最大值大于菜单宽度，或垂直方向两个圆角半径之和的最大值大于菜单高度时，菜单四个圆角均采用菜单默认圆角半径值。<br/>当设置Dimension类型且传参为异常值时，菜单圆角取默认 值。<br/>当设置BorderRadiuses类型且传参为异常值时，菜单默认没有圆角。 |
 
-## subMenuExpandSymbol
-
-```TypeScript
-subMenuExpandSymbol(symbol: SymbolGlyphModifier)
-```
-
-设置Menu子菜单展开符号。仅在SubMenuExpandingMode.EMBEDDED_EXPAND或SubMenuExpandingMode.STACK_EXPAND模式下显示，SubMenuExpandingMode.SIDE_EXPAND模式下不显示。
-
-**起始版本：** 20
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-MenuAttribute-subMenuExpandSymbol(symbol: SymbolGlyphModifier): MenuAttribute--><!--Device-MenuAttribute-subMenuExpandSymbol(symbol: SymbolGlyphModifier): MenuAttribute-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| symbol | SymbolGlyphModifier | 是 | Menu子菜单展开符号。<br/>1、子菜单的展开样式为SubMenuExpandingMode.SIDE_EXPAND时，不显示展开符号。&lt;br /&gt;2、子菜单的展开样式为SubMenuExpandingMode.EMBEDDED_EXPAND时，展开时展开符号会顺时针旋转180°。<br/>默认值： `\\$r('sys.symbol.chevron_down').fontSize('24vp')` <br/>3、子菜单的展开样式为SubMenuExpandingMode.STACK_EXPAND时，展开时展开符号会顺 时针旋转90°。<br/>默认值：`\\$r('sys.symbol.chevron_forward').fontSize('20vp').padding('2vp')` |
-
 ## subMenuExpandingMode
 
 ```TypeScript
@@ -212,4 +188,28 @@ subMenuExpandingMode(mode: SubMenuExpandingMode)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mode | [SubMenuExpandingMode](arkts-arkui-submenuexpandingmode-e.md) | 是 | Menu子菜单展开样式。<br/>默认值：SubMenuExpandingMode.SIDE_EXPAND |
+
+## subMenuExpandSymbol
+
+```TypeScript
+subMenuExpandSymbol(symbol: SymbolGlyphModifier)
+```
+
+设置Menu子菜单展开符号。仅在SubMenuExpandingMode.EMBEDDED_EXPAND或SubMenuExpandingMode.STACK_EXPAND模式下显示，SubMenuExpandingMode.SIDE_EXPAND模式下不显示。
+
+**起始版本：** 20
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MenuAttribute-subMenuExpandSymbol(symbol: SymbolGlyphModifier): MenuAttribute--><!--Device-MenuAttribute-subMenuExpandSymbol(symbol: SymbolGlyphModifier): MenuAttribute-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| symbol | SymbolGlyphModifier | 是 | Menu子菜单展开符号。<br/>1、子菜单的展开样式为SubMenuExpandingMode.SIDE_EXPAND时，不显示展开符号。&lt;br /&gt;2、子菜单的展开样式为SubMenuExpandingMode.EMBEDDED_EXPAND时，展开时展开符号会顺时针旋转180°。<br/>默认值： `\\$r('sys.symbol.chevron_down').fontSize('24vp')` <br/>3、子菜单的展开样式为SubMenuExpandingMode.STACK_EXPAND时，展开时展开符号会顺 时针旋转90°。<br/>默认值：`\\$r('sys.symbol.chevron_forward').fontSize('20vp').padding('2vp')` |
 

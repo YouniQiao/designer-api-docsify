@@ -31,7 +31,7 @@ Unregisters the continuation management service. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | token | number | Yes | Token obtained after the registration of the continuation management service. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the unregistration is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the unregistration is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -45,6 +45,19 @@ continuationManager.unregister(token, (err) => {
     return;
   }
   console.info('unregister finished. ');
+});
+```
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let token: number = 1;
+continuationManager.unregister(token)
+  .then(() => {
+    console.info('unregister finished. ');
+  }).catch((err: BusinessError) => {
+    console.error('unregister failed, cause: ' + JSON.stringify(err));
 });
 ```
 
@@ -83,16 +96,5 @@ Unregisters the continuation management service. This API uses a promise to retu
 
 **Examples**
 
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = 1;
-continuationManager.unregister(token)
-  .then(() => {
-    console.info('unregister finished. ');
-  }).catch((err: BusinessError) => {
-    console.error('unregister failed, cause: ' + JSON.stringify(err));
-});
-```
+See [unregister](#unregister)
 

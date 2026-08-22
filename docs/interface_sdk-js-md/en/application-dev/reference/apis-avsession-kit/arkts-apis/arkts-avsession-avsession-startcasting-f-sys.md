@@ -30,7 +30,7 @@ Cast resource to remote device.
 | --- | --- | --- | --- |
 | session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) | Yes | Specifies the sessionId which is to be casted. |
 | device | [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) | Yes | Specifies the device to cast. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | A callback instance used to return when start casting. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | A callback instance used to return when start casting. |
 
 **Error codes:**
 
@@ -61,6 +61,26 @@ avSession.on('deviceAvailable', (device: avSession.OutputDeviceInfo) => {
       } else {
         console.info('startCasting successfully');
       }
+    });
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let myToken: avSession.SessionToken = {
+  sessionId: sessionId,
+}
+let castDevice: avSession.OutputDeviceInfo | undefined = undefined;
+avSession.on('deviceAvailable', (device: avSession.OutputDeviceInfo) => {
+  castDevice = device;
+  console.info(`on deviceAvailable  : ${device} `);
+  if (castDevice !== undefined) {
+    avSession.startCasting(myToken, castDevice).then(() => {
+      console.info('startCasting successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`startCasting BusinessError: code: ${err.code}, message: ${err.message}`);
     });
   }
 });
@@ -110,23 +130,5 @@ Cast resource to remote device.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let myToken: avSession.SessionToken = {
-  sessionId: sessionId,
-}
-let castDevice: avSession.OutputDeviceInfo | undefined = undefined;
-avSession.on('deviceAvailable', (device: avSession.OutputDeviceInfo) => {
-  castDevice = device;
-  console.info(`on deviceAvailable  : ${device} `);
-  if (castDevice !== undefined) {
-    avSession.startCasting(myToken, castDevice).then(() => {
-      console.info('startCasting successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`startCasting BusinessError: code: ${err.code}, message: ${err.message}`);
-    });
-  }
-});
-```
+See [startCasting](#startcasting)
 

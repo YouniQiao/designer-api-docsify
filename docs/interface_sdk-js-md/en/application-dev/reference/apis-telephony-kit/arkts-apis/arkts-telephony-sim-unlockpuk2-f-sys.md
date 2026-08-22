@@ -31,7 +31,7 @@ Unlock the SIM card password in the specified card slot.
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 | newPin2 | string | Yes | Indicates to reset the SIM card password. |
 | puk2 | string | Yes | Indicates the unlock password of the SIM card password. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LockStatusResponse](arkts-telephony-sim-lockstatusresponse-i-sys.md)&gt; | Yes | Indicates the callback for getting the response to obtain the SIM card lock status of the specified card slot. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LockStatusResponse](arkts-telephony-sim-lockstatusresponse-i-sys.md)&gt; | Yes | Indicates the callback for getting the response to obtain the SIM card lock status of the specified card slot. |
 
 **Error codes:**
 
@@ -57,6 +57,19 @@ let puk2: string = '1xxxxxxx';
 let newPin2: string = '1235';
 sim.unlockPuk2(0, newPin2, puk2, (err: BusinessError, data: sim.LockStatusResponse) => {
     console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+let puk2: string = '1xxxxxxx';
+let newPin2: string = '1235';
+sim.unlockPuk2(0, newPin2, puk2).then((data: sim.LockStatusResponse) => {
+    console.info(`unlockPuk2 success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`unlockPuk2 failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -109,16 +122,5 @@ Unlock the SIM card password in the specified card slot.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let puk2: string = '1xxxxxxx';
-let newPin2: string = '1235';
-sim.unlockPuk2(0, newPin2, puk2).then((data: sim.LockStatusResponse) => {
-    console.info(`unlockPuk2 success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`unlockPuk2 failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [unlockPuk2](#unlockpuk2)
 

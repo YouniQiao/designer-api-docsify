@@ -64,6 +64,22 @@ sim.updateIccDiallingNumbers(0, sim.ContactType.GENERAL_CONTACT, diallingNumbers
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+let diallingNumbersInfo: sim.DiallingNumbersInfo = {
+    alphaTag: "alpha",
+    number: "138xxxxxxxx",
+    recordNumber: 123
+};
+sim.updateIccDiallingNumbers(0, sim.ContactType.GENERAL_CONTACT, diallingNumbersInfo).then(() => {
+    console.info(`updateIccDiallingNumbers success.`);
+}).catch((err: BusinessError) => {
+    console.error(`updateIccDiallingNumbers failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## updateIccDiallingNumbers
 
@@ -113,19 +129,5 @@ Update dialing number information on SIM card.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let diallingNumbersInfo: sim.DiallingNumbersInfo = {
-    alphaTag: "alpha",
-    number: "138xxxxxxxx",
-    recordNumber: 123
-};
-sim.updateIccDiallingNumbers(0, sim.ContactType.GENERAL_CONTACT, diallingNumbersInfo).then(() => {
-    console.info(`updateIccDiallingNumbers success.`);
-}).catch((err: BusinessError) => {
-    console.error(`updateIccDiallingNumbers failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [updateIccDiallingNumbers](#updateiccdiallingnumbers)
 

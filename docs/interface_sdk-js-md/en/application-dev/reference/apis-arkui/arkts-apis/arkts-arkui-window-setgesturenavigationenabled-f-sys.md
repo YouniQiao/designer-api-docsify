@@ -29,7 +29,7 @@ Enables or disables gesture navigation. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Whether to enable gesture navigation. **true** to enable, **false** otherwise. Currently, only the pull-down gesture is disabled. Other gestures remain enabled. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -53,6 +53,21 @@ try {
       return;
     }
     console.info('Succeeded in setting gesture navigation enabled.');
+  });
+} catch (exception) {
+  console.error(`Failed to set gesture navigation enabled. Cause code: ${exception.code}, message: ${exception.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let promise = window.setGestureNavigationEnabled(true);
+  promise.then(() => {
+    console.info('Succeeded in setting gesture navigation enabled.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set gesture navigation enabled. Cause code: ${err.code}, message: ${err.message}`);
   });
 } catch (exception) {
   console.error(`Failed to set gesture navigation enabled. Cause code: ${exception.code}, message: ${exception.message}`);
@@ -99,18 +114,5 @@ Enables or disables gesture navigation. This API uses a promise to return the re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = window.setGestureNavigationEnabled(true);
-  promise.then(() => {
-    console.info('Succeeded in setting gesture navigation enabled.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set gesture navigation enabled. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set gesture navigation enabled. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
+See [setGestureNavigationEnabled](#setgesturenavigationenabled)
 

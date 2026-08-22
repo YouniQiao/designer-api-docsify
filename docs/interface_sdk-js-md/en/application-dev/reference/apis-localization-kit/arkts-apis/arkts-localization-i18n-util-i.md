@@ -52,3 +52,14 @@ Converts one measurement unit into another and formats the unit based on the spe
 | --- | --- |
 | string | String obtained after formatting based on the measurement unit specified by **toUnit**. |
 
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let fromUnit: i18n.UnitInfo = { unit: 'cup', measureSystem: 'US' };
+let toUnit: i18n.UnitInfo = { unit: 'liter', measureSystem: 'SI' };
+let convertResult: string =
+  i18n.I18NUtil.unitConvert(fromUnit, toUnit, 1000, 'en-US', 'long'); // convertResult = '236.588 liters'
+```
+

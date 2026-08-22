@@ -18,5 +18,5 @@ Callback for picker state.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | [AVCastPickerState](../../apis-avsession-kit/arkts-apis/arkts-avsession-multimediaavcastpickerparam-avcastpickerstate-e.md) | 是 | 设备列表状态。 |
+| state | [AVCastPickerState](../../apis-avsession-kit/arkts-apis/arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md) | 是 | 设备列表状态。 |
 

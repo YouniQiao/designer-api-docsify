@@ -35,6 +35,12 @@ export function getFirstPreferredLanguage(): string
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
 
+let firstPreferredLanguage: string = i18n.System.getFirstPreferredLanguage();
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
 let firstPreferredLanguage: string = i18n.getFirstPreferredLanguage();
 ```
 

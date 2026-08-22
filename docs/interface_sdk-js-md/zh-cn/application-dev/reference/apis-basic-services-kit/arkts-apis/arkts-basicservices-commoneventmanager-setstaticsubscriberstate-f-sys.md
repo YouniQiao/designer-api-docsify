@@ -70,6 +70,54 @@ commonEventManager.setStaticSubscriberState(true, (err: BusinessError | null) =>
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+commonEventManager.setStaticSubscriberState(false).then(() => {
+  console.info(`setStaticSubscriberState success`);
+}).catch ((err: BusinessError) => {
+  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMes: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+commonEventManager.setStaticSubscriberState(false).then(() => {
+  console.info(`setStaticSubscriberState success`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`setStaticSubscriberState failed, errCode: ${error.code}, errMes: ${error.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let eventName: string[] = ['usual.event.SEND_DATA'];
+commonEventManager.setStaticSubscriberState(true, eventName).then(() => {
+  console.info(`setStaticSubscriberState success, state is ${true}`);
+}).catch((err: BusinessError) => {
+  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMes: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let evenName: string[] = ['usual.event.SEND_DATA'];
+commonEventManager.setStaticSubscriberState(true, evenName).then(() => {
+  console.info(`setStaticSubscriberState success, state is ${true}`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`setStaticSubscriberState failed, errCode: ${error.code}, errMes: ${error.message}`);
+});
+```
+
 
 ## setStaticSubscriberState
 
@@ -112,30 +160,7 @@ function setStaticSubscriberState(enable: boolean): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-commonEventManager.setStaticSubscriberState(false).then(() => {
-  console.info(`setStaticSubscriberState success`);
-}).catch ((err: BusinessError) => {
-  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMes: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-commonEventManager.setStaticSubscriberState(false).then(() => {
-  console.info(`setStaticSubscriberState success`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`setStaticSubscriberState failed, errCode: ${error.code}, errMes: ${error.message}`);
-});
-```
+参见 [setStaticSubscriberState](#setstaticsubscriberstate)
 
 
 ## setStaticSubscriberState
@@ -180,16 +205,7 @@ function setStaticSubscriberState(enable: boolean, events?: Array<string>): Prom
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let eventName: string[] = ['usual.event.SEND_DATA'];
-commonEventManager.setStaticSubscriberState(true, eventName).then(() => {
-  console.info(`setStaticSubscriberState success, state is ${true}`);
-}).catch((err: BusinessError) => {
-  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMes: ${err.message}`);
-});
-```
+参见 [setStaticSubscriberState](#setstaticsubscriberstate)
 
 
 ## setStaticSubscriberState
@@ -234,15 +250,5 @@ function setStaticSubscriberState(enable: boolean, events: Array<string>): Promi
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let evenName: string[] = ['usual.event.SEND_DATA'];
-commonEventManager.setStaticSubscriberState(true, evenName).then(() => {
-  console.info(`setStaticSubscriberState success, state is ${true}`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`setStaticSubscriberState failed, errCode: ${error.code}, errMes: ${error.message}`);
-});
-```
+参见 [setStaticSubscriberState](#setstaticsubscriberstate)
 

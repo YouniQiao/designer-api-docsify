@@ -26,7 +26,7 @@ Get System Capability.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes |  |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |  |
 
 **Examples**
 
@@ -38,6 +38,18 @@ try {
     } else {
         console.error(" get system capabilities err:" + err);
     }});
+}catch(e){
+    console.error("get unexpected error: " + e);
+}
+```
+
+```TypeScript
+try {
+    systemCapability.querySystemCapabilities().then((value:string) => {
+        console.info("get system capabilities: " + value);
+    }).catch((err:Error) => {
+        console.error("get system capabilities error: " + err);
+    });
 }catch(e){
     console.error("get unexpected error: " + e);
 }
@@ -68,15 +80,5 @@ Get System Capability.
 
 **Examples**
 
-```TypeScript
-try {
-    systemCapability.querySystemCapabilities().then((value:string) => {
-        console.info("get system capabilities: " + value);
-    }).catch((err:Error) => {
-        console.error("get system capabilities error: " + err);
-    });
-}catch(e){
-    console.error("get unexpected error: " + e);
-}
-```
+See [querySystemCapabilities](#querysystemcapabilities)
 

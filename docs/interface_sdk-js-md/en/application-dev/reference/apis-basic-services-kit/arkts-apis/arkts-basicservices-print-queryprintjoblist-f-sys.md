@@ -28,7 +28,7 @@ Queries all print jobs. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[PrintJob](arkts-basicservices-print-printjob-i.md)&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[PrintJob](arkts-basicservices-print-printjob-i.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -49,6 +49,17 @@ print.queryPrintJobList((err: BusinessError, printJobs : print.PrintJob[]) => {
     } else {
         console.info('queryPrintJobList success, data : ' + JSON.stringify(printJobs));
     }
+})
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+print.queryPrintJobList().then((printJobs : print.PrintJob[]) => {
+    console.info('queryPrintJobList success, data : ' + JSON.stringify(printJobs));
+}).catch((error: BusinessError) => {
+    console.error('queryPrintJobList failed, error : ' + JSON.stringify(error));
 })
 ```
 
@@ -86,14 +97,5 @@ Queries all print jobs. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-print.queryPrintJobList().then((printJobs : print.PrintJob[]) => {
-    console.info('queryPrintJobList success, data : ' + JSON.stringify(printJobs));
-}).catch((error: BusinessError) => {
-    console.error('queryPrintJobList failed, error : ' + JSON.stringify(error));
-})
-```
+See [queryPrintJobList](#queryprintjoblist)
 

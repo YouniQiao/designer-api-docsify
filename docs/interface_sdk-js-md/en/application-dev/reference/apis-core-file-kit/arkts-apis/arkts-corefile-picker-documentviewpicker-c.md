@@ -33,34 +33,6 @@ A constructor used to create a **DocumentViewPicker** instance. This constructor
 **Examples**
 
 ```TypeScript
-let documentPicker = new picker.DocumentViewPicker(); // Construction without parameter is not recommended. There is a possibility that the DocumentViewPicker instance fails to start.
-```
-
-## constructor
-
-```TypeScript
-constructor(context: Context)
-```
-
-A constructor used to create a **DocumentViewPicker** instance. This constructor is recommended. For details about how to obtain the context, see [getHostContext](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#gethostcontext).
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-DocumentViewPicker-constructor(context: Context)--><!--Device-DocumentViewPicker-constructor(context: Context)-End-->
-
-**System capability:** SystemCapability.FileManagement.UserFileService
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context (only **UIAbilityContext** is supported). For details about the application context of the stage model, see Context. |
-
-**Examples**
-
-```TypeScript
 import { common } from '@kit.AbilityKit';
 import  { picker } from '@kit.CoreFileKit';
 @Entry
@@ -86,32 +58,9 @@ struct Index {
 }
 ```
 
-## constructor
-
 ```TypeScript
-constructor(context: Context, window: window.Window)
+let documentPicker = new picker.DocumentViewPicker(); // Construction without parameter is not recommended. There is a possibility that the DocumentViewPicker instance fails to start.
 ```
-
-A constructor used to create a **DocumentViewPicker** object in a window created by an application. In other scenarios, you are advised to use **constructor(context: Context)** to create a **DocumentViewPicker** object.
-
-> **NOTE：**
-> 
-> This method is supported on 2-in-1 devices and tablets since API version 19.
-
-**Since:** 23
-
-<!--Device-DocumentViewPicker-constructor(context: Context, window: window.Window)--><!--Device-DocumentViewPicker-constructor(context: Context, window: window.Window)-End-->
-
-**System capability:** SystemCapability.FileManagement.UserFileService
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context (only **UIAbilityContext** is supported). For details about the application context of the stage model, see Context. |
-| window | window.Window | Yes | Window instance created by the application. |
-
-**Examples**
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -141,6 +90,121 @@ struct Index {
   }
 }
 ```
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello World';
+
+  build() {
+    Row() {
+      Column() {
+        Text(this.message)
+          .fontSize(50)
+          .fontWeight(FontWeight.Bold)
+          .onClick(()=>{
+            let context = this.getUIContext().getHostContext() as common.UIAbilityContext; // Ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+            let audioPicker = new picker.AudioViewPicker(context);
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+let audioPicker = new picker.AudioViewPicker(); // Construction without parameter is not recommended. There is a possibility that the AudioViewPicker instance fails to start.
+```
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello World';
+
+  build() {
+    Row() {
+      Column() {
+        Text(this.message)
+          .fontSize(50)
+          .fontWeight(FontWeight.Bold)
+          .onClick(()=>{
+            let context = this.getUIContext().getHostContext() as common.UIAbilityContext; // Ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+            let photoPicker = new picker.PhotoViewPicker(context);
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+let photoPicker = new picker.PhotoViewPicker(); // Construction without parameter is not recommended. There is a possibility that the PhotoViewPicker instance fails to start.
+```
+
+## constructor
+
+```TypeScript
+constructor(context: Context)
+```
+
+A constructor used to create a **DocumentViewPicker** instance. This constructor is recommended. For details about how to obtain the context, see [getHostContext](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#gethostcontext).
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-DocumentViewPicker-constructor(context: Context)--><!--Device-DocumentViewPicker-constructor(context: Context)-End-->
+
+**System capability:** SystemCapability.FileManagement.UserFileService
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context (only **UIAbilityContext** is supported). For details about the application context of the stage model, see Context. |
+
+**Examples**
+
+See [constructor](#constructor)
+
+## constructor
+
+```TypeScript
+constructor(context: Context, window: window.Window)
+```
+
+A constructor used to create a **DocumentViewPicker** object in a window created by an application. In other scenarios, you are advised to use **constructor(context: Context)** to create a **DocumentViewPicker** object.
+
+> **NOTE：**
+> 
+> This method is supported on 2-in-1 devices and tablets since API version 19.
+
+**Since:** 23
+
+<!--Device-DocumentViewPicker-constructor(context: Context, window: window.Window)--><!--Device-DocumentViewPicker-constructor(context: Context, window: window.Window)-End-->
+
+**System capability:** SystemCapability.FileManagement.UserFileService
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context (only **UIAbilityContext** is supported). For details about the application context of the stage model, see Context. |
+| window | window.Window | Yes | Window instance created by the application. |
+
+**Examples**
+
+See [constructor](#constructor)
 
 ## getSelectedIndex
 
@@ -215,31 +279,6 @@ async function example10(context: common.UIAbilityContext) { // Ensure that cont
 }
 ```
 
-## save
-
-```TypeScript
-save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void
-```
-
-Starts a **documentPicker** page for the user to save one or more documents. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DocumentViewPicker-save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.UserFileService
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| option | [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c.md) | Yes | Options for saving the documents. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents saved. <br>**Note：**: For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
-
-**Examples**
-
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
@@ -263,30 +302,6 @@ async function example11(context: common.UIAbilityContext) { // Ensure that cont
 }
 ```
 
-## save
-
-```TypeScript
-save(callback: AsyncCallback<Array<string>>): void
-```
-
-Starts a **documentPicker** page for the user to save one or more documents. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DocumentViewPicker-save(callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-save(callback: AsyncCallback<Array<string>>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.UserFileService
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents saved. <br>**Note：**: For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
-
-**Examples**
-
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
@@ -307,6 +322,189 @@ async function example12(context: common.UIAbilityContext) { // Ensure that cont
   }
 }
 ```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+async function example16(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let audioSaveOptions = new picker.AudioSaveOptions();
+    audioSaveOptions.newFileNames = ['AudioViewPicker01.mp3'];
+    let audioPicker = new picker.AudioViewPicker(context);
+    audioPicker.save(audioSaveOptions).then((audioSaveResult: Array<string>) => {
+      console.info('AudioViewPicker.save successfully, audioSaveResult uri: ' + JSON.stringify(audioSaveResult))
+    }).catch((err: BusinessError) => {
+      console.error(`AudioViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+async function example17(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let audioSaveOptions = new picker.AudioSaveOptions();
+    audioSaveOptions.newFileNames = ['AudioViewPicker02.mp3'];
+    let audioPicker = new picker.AudioViewPicker(context);
+    audioPicker.save(audioSaveOptions, (err: BusinessError, audioSaveResult: Array<string>) => {
+      if (err) {
+        console.error(`AudioViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('AudioViewPicker.save successfully, audioSaveResult uri: ' + JSON.stringify(audioSaveResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+async function example18(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let audioPicker = new picker.AudioViewPicker(context);
+    audioPicker.save((err: BusinessError, audioSaveResult: Array<string>) => {
+      if (err) {
+        console.error(`AudioViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('AudioViewPicker.save successfully, audioSaveResult uri: ' + JSON.stringify(audioSaveResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+        console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+async function example04(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let photoSaveOptions = new picker.PhotoSaveOptions();
+    photoSaveOptions.newFileNames = ['PhotoViewPicker01.jpg', 'PhotoViewPicker01.mp4'];
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.save(photoSaveOptions).then((photoSaveResult: Array<string>) => {
+      console.info('PhotoViewPicker.save successfully, photoSaveResult uri: ' + JSON.stringify(photoSaveResult));
+    }).catch((err: BusinessError) => {
+      console.error('PhotoViewPicker.save failed with err: ' + JSON.stringify(err));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+      console.error('PhotoViewPicker failed with err: ' + JSON.stringify(err));
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+async function example05(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let photoSaveOptions = new picker.PhotoSaveOptions();
+    photoSaveOptions.newFileNames = ['PhotoViewPicker02.jpg','PhotoViewPicker02.mp4'];
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.save(photoSaveOptions, (err: BusinessError, photoSaveResult: Array<string>) => {
+      if (err) {
+        console.error('PhotoViewPicker.save failed with err: ' + JSON.stringify(err));
+        return;
+      }
+      console.info('PhotoViewPicker.save successfully, photoSaveResult uri: ' + JSON.stringify(photoSaveResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error('PhotoViewPicker failed with err: ' + JSON.stringify(err));
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+async function example06(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.save((err: BusinessError, photoSaveResult: Array<string>) => {
+      if (err) {
+        console.error('PhotoViewPicker.save failed with err: ' + JSON.stringify(err));
+        return;
+      }
+      console.info('PhotoViewPicker.save successfully, photoSaveResult uri: ' + JSON.stringify(photoSaveResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error('PhotoViewPicker failed with err: ' + JSON.stringify(err));
+  }
+}
+```
+
+## save
+
+```TypeScript
+save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void
+```
+
+Starts a **documentPicker** page for the user to save one or more documents. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DocumentViewPicker-save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.UserFileService
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| option | [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c.md) | Yes | Options for saving the documents. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents saved. <br>**Note：**: For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
+
+**Examples**
+
+See [save](#save)
+
+## save
+
+```TypeScript
+save(callback: AsyncCallback<Array<string>>): void
+```
+
+Starts a **documentPicker** page for the user to save one or more documents. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DocumentViewPicker-save(callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-save(callback: AsyncCallback<Array<string>>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.UserFileService
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents saved. <br>**Note：**: For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
+
+**Examples**
+
+See [save](#save)
 
 ## select
 
@@ -358,31 +556,6 @@ async function example07(context: common.UIAbilityContext) { // Ensure that cont
 }
 ```
 
-## select
-
-```TypeScript
-select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): void
-```
-
-Starts a **documentPicker** page for the user to select one or more documents. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DocumentViewPicker-select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.UserFileService
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| option | [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c.md) | Yes | Options for selecting documents. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents selected. <br>**Note：**: For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
-
-**Examples**
-
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
@@ -405,30 +578,6 @@ async function example08(context: common.UIAbilityContext) { // Ensure that cont
 }
 ```
 
-## select
-
-```TypeScript
-select(callback: AsyncCallback<Array<string>>): void
-```
-
-Starts a **documentPicker** page for the user to select one or more documents. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DocumentViewPicker-select(callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-select(callback: AsyncCallback<Array<string>>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.UserFileService
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents selected. <br>**Note：**: For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
-
-**Examples**
-
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
@@ -449,4 +598,187 @@ async function example09(context: common.UIAbilityContext) { // Ensure that cont
   }
 }
 ```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+async function example13(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let audioSelectOptions = new picker.AudioSelectOptions();
+    let audioPicker = new picker.AudioViewPicker(context);
+    audioPicker.select(audioSelectOptions).then((audioSelectResult: Array<string>) => {
+      console.info('AudioViewPicker.select successfully, audioSelectResult uri: ' + JSON.stringify(audioSelectResult));
+    }).catch((err: BusinessError) => {
+      console.error(`AudioViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+async function example14(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let audioSelectOptions = new picker.AudioSelectOptions();
+    let audioPicker = new picker.AudioViewPicker(context);
+    audioPicker.select(audioSelectOptions, (err: BusinessError, audioSelectResult: Array<string>) => {
+      if (err) {
+        console.error(`AudioViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('AudioViewPicker.select successfully, audioSelectResult uri: ' + JSON.stringify(audioSelectResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+async function example15(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let audioPicker = new picker.AudioViewPicker(context);
+    audioPicker.select((err: BusinessError, audioSelectResult: Array<string>) => {
+      if (err) {
+        console.error(`AudioViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('AudioViewPicker.select successfully, audioSelectResult uri: ' + JSON.stringify(audioSelectResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`AudioViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+async function example01(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let photoSelectOptions = new picker.PhotoSelectOptions();
+    photoSelectOptions.MIMEType = picker.PhotoViewMIMETypes.IMAGE_TYPE;
+    photoSelectOptions.maxSelectNumber = 5;
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.select(photoSelectOptions).then((photoSelectResult: picker.PhotoSelectResult) => {
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    }).catch((err: BusinessError) => {
+      console.error('PhotoViewPicker.select failed with err: ' + JSON.stringify(err));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error('PhotoViewPicker failed with err: ' + JSON.stringify(err));
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+async function example02(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let photoSelectOptions = new picker.PhotoSelectOptions();
+    photoSelectOptions.MIMEType = picker.PhotoViewMIMETypes.IMAGE_TYPE;
+    photoSelectOptions.maxSelectNumber = 5;
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.select(photoSelectOptions, (err: BusinessError, photoSelectResult: picker.PhotoSelectResult) => {
+      if (err) {
+        console.error('PhotoViewPicker.select failed with err: ' + JSON.stringify(err));
+        return;
+      }
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error('PhotoViewPicker failed with err: ' + JSON.stringify(err));
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+async function example03(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.select((err: BusinessError, photoSelectResult: picker.PhotoSelectResult) => {
+      if (err) {
+        console.error('PhotoViewPicker.select failed with err: ' + JSON.stringify(err));
+        return;
+      }
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error('PhotoViewPicker failed with err: ' + JSON.stringify(err));
+  }
+}
+```
+
+## select
+
+```TypeScript
+select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): void
+```
+
+Starts a **documentPicker** page for the user to select one or more documents. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DocumentViewPicker-select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.UserFileService
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| option | [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c.md) | Yes | Options for selecting documents. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents selected. <br>**Note：**: For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
+
+**Examples**
+
+See [select](#select)
+
+## select
+
+```TypeScript
+select(callback: AsyncCallback<Array<string>>): void
+```
+
+Starts a **documentPicker** page for the user to select one or more documents. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DocumentViewPicker-select(callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-select(callback: AsyncCallback<Array<string>>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.UserFileService
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents selected. <br>**Note：**: For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
+
+**Examples**
+
+See [select](#select)
 

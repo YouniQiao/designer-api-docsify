@@ -31,7 +31,7 @@ If the key does not exist, **false** is returned through the callback.
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key to check. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Attribute tag of the key to be checked. If [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md) is used to specify the security level of the key to be checked,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the key exists, **data** is **true**. Otherwise, **data** is **false**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the key exists, **data** is **true**. Otherwise, **data** is **false**. |
 
 **Error codes:**
 
@@ -66,6 +66,24 @@ huks.hasKeyItem(keyAlias, emptyOptions, (error, data) => {
     } else {
       console.error(`find key failed`);
     }
+  }
+});
+```
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* Set options to emptyOptions. */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+
+huks.hasKeyItem(keyAlias, emptyOptions).then((data) => {
+  if (data) {
+    console.info(`keyAlias:${keyAlias} is existed!`);
+  } else {
+    console.info(`find key failed!`);
   }
 });
 ```
@@ -117,21 +135,5 @@ If the key does not exist, **false** is returned through the promise.
 
 **Examples**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-huks.hasKeyItem(keyAlias, emptyOptions).then((data) => {
-  if (data) {
-    console.info(`keyAlias:${keyAlias} is existed!`);
-  } else {
-    console.info(`find key failed!`);
-  }
-});
-```
+See [hasKeyItem](#haskeyitem)
 

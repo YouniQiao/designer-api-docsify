@@ -33,7 +33,7 @@ Updates a widget. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | formId | string | Yes | ID of the widget to update. |
 | formBindingData | formBindingData.FormBindingData | Yes | Data to be used for the update. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -52,6 +52,24 @@ formProvider.updateForm(formId, obj, (error: BusinessError) => {
   if (error.code) {
     console.error(`formProvider updateForm, errorCode: ${error.code}, errorMessage: ${error.message}`);
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { formProvider, formBindingData } from '@kit.FormKit';
+
+// Use an existing widget ID (formId).
+let formId: string = '12400633174999288';
+let param: Record<string, string> = {
+  'temperature': '22c',
+  'time': '22:00'
+}
+let obj: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
+formProvider.updateForm(formId, obj).then(() => {
+  console.info('formProvider updateForm success');
+}).catch((error: BusinessError) => {
+  console.error(`formProvider updateForm, errorCode: ${error.code}, errorMessage: ${error.message}`);
 });
 ```
 
@@ -89,21 +107,5 @@ Updates a widget. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { formProvider, formBindingData } from '@kit.FormKit';
-
-// Use an existing widget ID (formId).
-let formId: string = '12400633174999288';
-let param: Record<string, string> = {
-  'temperature': '22c',
-  'time': '22:00'
-}
-let obj: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
-formProvider.updateForm(formId, obj).then(() => {
-  console.info('formProvider updateForm success');
-}).catch((error: BusinessError) => {
-  console.error(`formProvider updateForm, errorCode: ${error.code}, errorMessage: ${error.message}`);
-});
-```
+See [updateForm](#updateform)
 

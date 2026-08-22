@@ -182,6 +182,10 @@ Obtains the permission dialog toggle status for a specified permission under a s
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 | [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. A database error occurs. |
 
+**Examples**
+
+See [getPermissionRequestToggleStatus](#getpermissionrequesttogglestatus)
+
 ## getPermissionsStatus
 
 ```TypeScript
@@ -403,6 +407,22 @@ atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', perm
 });
 ```
 
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let tokenID: number = 0; // Use bundleManager.getApplicationInfo() to obtain the token ID for a system application, and use bundleManager.getBundleInfoForSelf() to obtain the token ID for a non-system application.
+let permissionFlags: number = 1;
+atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError, data: void) => {
+  if (err) {
+    console.error(`grantUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('grantUserGrantedPermission success');
+  }
+});
+```
+
 ## grantUserGrantedPermission
 
 ```TypeScript
@@ -433,7 +453,7 @@ Grants a user_grant permission to an app. This API uses an asynchronous callback
 | tokenID | int | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br>For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). |
 | permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to grant. The permission name cannot exceed 256 characters. Passing an invalid value returns error code 12100001. <br>Value constraint: The permission name length cannot exceed 256 characters. |
 | permissionFlags | int | Yes | Authorization options. <br>The value should be an integer. <br>- 1: If the user denies the permission this time, the permission dialog box can still be displayed next time to request user authorization. <br>- 2: If the user denies the permission this time, the permission dialog box will not be displayed again. The user needs to grant the permission in system settings. <br>- 64: If the user selects to allow only this time, the permission is granted only for this session. The authorization is revoked when the app switches to the background or exits. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the permission grant is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the permission grant is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -450,20 +470,68 @@ Grants a user_grant permission to an app. This API uses an asynchronous callback
 
 **Examples**
 
+See [grantUserGrantedPermission](#grantusergrantedpermission)
+
+## off('permissionStateChange')
+
 ```TypeScript
-import { abilityAccessCtrl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+off(
+      type: 'permissionStateChange',
+      tokenIDList: Array<int>,
+      permissionList: Array<Permissions>,
+      callback?: Callback<PermissionStateChangeInfo>
+    ): void
+```
+
+Unsubscribes from changes in the state of the specified permissions for the token ID list and permission list. This API uses an asynchronous callback to return the result.
+
+When unsubscribing, if no callback is passed in, all listening callbacks that completely match the tokenIDList and permissionList will be unsubscribed in batches.
+
+This API is usually used together with [on](#onpermissionstatechange) to cancel the listening relationship created by on.
+
+**Since:** 9
+
+**Required permissions:** ohos.permission.GET_SENSITIVE_PERMISSIONS
+
+<!--Device-AtManager-off(      type: 'permissionStateChange',      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback?: Callback<PermissionStateChangeInfo>    ): void--><!--Device-AtManager-off(      type: 'permissionStateChange',      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback?: Callback<PermissionStateChangeInfo>    ): void-End-->
+
+**System capability:** SystemCapability.Security.AccessToken
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'permissionStateChange' | Yes | Event type. The value is **'permissionStateChange'**, which indicates the permission state changes. |
+| tokenIDList | Array&lt;int&gt; | Yes | List of token IDs to unsubscribe from. If this parameter is left empty, it indicates unsubscribing from permission state changes of all apps. This parameter must be consistent with the input of [on](#onpermissionstatechange). The app identity can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The maximum length is 1024. Value constraint: Each token ID in the list must be an integer greater than 0. <br>For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to unsubscribe from. If this parameter is left empty, it indicates unsubscribing from all permission state changes. This parameter must be consistent with the input of [on](#onpermissionstatechange). Passing an invalid value returns error code 12100001. <br>The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | No | Callback used to return the object for unsubscribing from state change events of the specified tokenID and permission name. This callback must be consistent with the callback registered in [on](#onpermissionstatechange). If this parameter is not passed, all listener callbacks that exactly match tokenIDList and permissionList will be canceled. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.GET_SENSITIVE_PERMISSIONS". |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenIDList or permissionList is not in the listening list. |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
+
+**Examples**
+
+```TypeScript
+import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
 
 let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let tokenID: number = 0; // Use bundleManager.getApplicationInfo() to obtain the token ID for a system application, and use bundleManager.getBundleInfoForSelf() to obtain the token ID for a non-system application.
-let permissionFlags: number = 1;
-atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError, data: void) => {
-  if (err) {
-    console.error(`grantUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('grantUserGrantedPermission success');
-  }
-});
+let appInfo: bundleManager.ApplicationInfo = bundleManager.getApplicationInfoSync('com.example.myapplication', 0, 100);
+let tokenIDList: Array<number> = [appInfo.accessTokenId];
+let permissionList: Array<Permissions> = ['ohos.permission.DISTRIBUTED_DATASYNC'];
+try {
+    atManager.off('permissionStateChange', tokenIDList, permissionList);
+} catch(err) {
+    console.error(`catch errcode: ${err.code}, message: ${err.message}`);
+}
 ```
 
 ## offPermissionStateChange
@@ -503,7 +571,7 @@ When unsubscribing, if no callback is passed in, all listening callbacks that co
 | --- | --- | --- | --- |
 | tokenIDList | Array&lt;int&gt; | Yes | List of token IDs to unsubscribe from. If this parameter is left empty, it indicates unsubscribing from permission state changes of all apps. This parameter must be consistent with the input of [onPermissionStateChange](#onpermissionstatechange). The app identity can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The maximum length is 1024. Value constraint: Each token ID in the list must be an integer greater than 0. <br>For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). |
 | permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to unsubscribe from. If this parameter is left empty, it indicates unsubscribing from all permission state changes. This parameter must be consistent with the input of [onPermissionStateChange](#onpermissionstatechange). Passing an invalid value returns error code 12100001. <br>The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | No | Callback used to return the object for unsubscribing from state change events of the specified tokenID and permission name. This callback must be consistent with the callback registered in [onPermissionStateChange](#onpermissionstatechange). If this parameter is not passed, all listener callbacks that exactly match tokenIDList and permissionList will be canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | No | Callback used to return the object for unsubscribing from state change events of the specified tokenID and permission name. This callback must be consistent with the callback registered in [onPermissionStateChange](#onpermissionstatechange). If this parameter is not passed, all listener callbacks that exactly match tokenIDList and permissionList will be canceled. |
 
 **Error codes:**
 
@@ -514,28 +582,30 @@ When unsubscribing, if no callback is passed in, all listening callbacks that co
 | [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenIDList or permissionList is not in the listening list. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 
-## off('permissionStateChange')
+## on('permissionStateChange')
 
 ```TypeScript
-off(
+on(
       type: 'permissionStateChange',
       tokenIDList: Array<int>,
       permissionList: Array<Permissions>,
-      callback?: Callback<PermissionStateChangeInfo>
+      callback: Callback<PermissionStateChangeInfo>
     ): void
 ```
 
-Unsubscribes from changes in the state of the specified permissions for the token ID list and permission list. This API uses an asynchronous callback to return the result.
+Subscribes to changes in the state of specified permissions for the given applications. This API uses an asynchronous callback to return the result.
 
-When unsubscribing, if no callback is passed in, all listening callbacks that completely match the tokenIDList and permissionList will be unsubscribed in batches.
+Multiple callbacks can be registered for the specified **tokenIDList** and **permissionList**.
 
-This API is usually used together with [on](#onpermissionstatechange) to cancel the listening relationship created by on.
+If a new subscription overlaps with an existing subscription in terms of the tokenID list and permission list, the same callback cannot be used for subscription.
+
+This API is usually used together with [off](#offpermissionstatechange). When listening is no longer needed, off should be called to unsubscribe.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_SENSITIVE_PERMISSIONS
 
-<!--Device-AtManager-off(      type: 'permissionStateChange',      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback?: Callback<PermissionStateChangeInfo>    ): void--><!--Device-AtManager-off(      type: 'permissionStateChange',      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback?: Callback<PermissionStateChangeInfo>    ): void-End-->
+<!--Device-AtManager-on(      type: 'permissionStateChange',      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback: Callback<PermissionStateChangeInfo>    ): void--><!--Device-AtManager-on(      type: 'permissionStateChange',      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback: Callback<PermissionStateChangeInfo>    ): void-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -546,9 +616,9 @@ This API is usually used together with [on](#onpermissionstatechange) to cancel 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'permissionStateChange' | Yes | Event type. The value is **'permissionStateChange'**, which indicates the permission state changes. |
-| tokenIDList | Array&lt;int&gt; | Yes | List of token IDs to unsubscribe from. If this parameter is left empty, it indicates unsubscribing from permission state changes of all apps. This parameter must be consistent with the input of [on](#onpermissionstatechange). The app identity can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The maximum length is 1024. Value constraint: Each token ID in the list must be an integer greater than 0. <br>For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to unsubscribe from. If this parameter is left empty, it indicates unsubscribing from all permission state changes. This parameter must be consistent with the input of [on](#onpermissionstatechange). Passing an invalid value returns error code 12100001. <br>The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | No | Callback used to return the object for unsubscribing from state change events of the specified tokenID and permission name. This callback must be consistent with the callback registered in [on](#onpermissionstatechange). If this parameter is not passed, all listener callbacks that exactly match tokenIDList and permissionList will be canceled. |
+| tokenIDList | Array&lt;int&gt; | Yes | List of token IDs to subscribe to. If left empty, it subscribes to permission status changes of all apps. The app identity can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The maximum length is 1024. Value constraint: Each token ID in the list must be an integer greater than 0. <br>For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to subscribe to. Passing an invalid value returns error code 12100001. <br>The maximum length is 1024 and cannot be empty. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | Yes | Callback used to return the result. Callback for subscribing to the status change events of the specified tokenID and permission name. |
 
 **Error codes:**
 
@@ -557,8 +627,10 @@ This API is usually used together with [on](#onpermissionstatechange) to cancel 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.GET_SENSITIVE_PERMISSIONS". |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenIDList or permissionList is not in the listening list. |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. Possible causes: 1. The tokenIDList or permissionList exceeds the size limit; 2. The tokenIDs or permissionNames in the list are all invalid. |
+| [12100005](../errorcode-access-token.md#12100005-listener-overflows) | The registration time has exceeded the limit. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
+| [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
 
 **Examples**
 
@@ -570,7 +642,9 @@ let appInfo: bundleManager.ApplicationInfo = bundleManager.getApplicationInfoSyn
 let tokenIDList: Array<number> = [appInfo.accessTokenId];
 let permissionList: Array<Permissions> = ['ohos.permission.DISTRIBUTED_DATASYNC'];
 try {
-    atManager.off('permissionStateChange', tokenIDList, permissionList);
+    atManager.on('permissionStateChange', tokenIDList, permissionList, (data: abilityAccessCtrl.PermissionStateChangeInfo) => {
+        console.debug(`receive permission state change, data: ${data}`);
+    });
 } catch(err) {
     console.error(`catch errcode: ${err.code}, message: ${err.message}`);
 }
@@ -615,7 +689,7 @@ Multiple callbacks can be registered for the specified **tokenIDList** and **per
 | --- | --- | --- | --- |
 | tokenIDList | Array&lt;int&gt; | Yes | List of token IDs to subscribe to. If left empty, it subscribes to permission status changes of all apps. The app identity can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The maximum length is 1024. Value constraint: Each token ID in the list must be an integer greater than 0. <br>For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). |
 | permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to subscribe to. Passing an invalid value returns error code 12100001. <br>The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | Yes | Callback used to return the result. Callback for subscribing to the status change events of the specified tokenID and permission name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | Yes | Callback used to return the result. Callback for subscribing to the status change events of the specified tokenID and permission name. |
 
 **Error codes:**
 
@@ -627,74 +701,6 @@ Multiple callbacks can be registered for the specified **tokenIDList** and **per
 | [12100005](../errorcode-access-token.md#12100005-listener-overflows) | The registration time has exceeded the limit. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 | [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
-
-## on('permissionStateChange')
-
-```TypeScript
-on(
-      type: 'permissionStateChange',
-      tokenIDList: Array<int>,
-      permissionList: Array<Permissions>,
-      callback: Callback<PermissionStateChangeInfo>
-    ): void
-```
-
-Subscribes to changes in the state of specified permissions for the given applications. This API uses an asynchronous callback to return the result.
-
-Multiple callbacks can be registered for the specified **tokenIDList** and **permissionList**.
-
-If a new subscription overlaps with an existing subscription in terms of the tokenID list and permission list, the same callback cannot be used for subscription.
-
-This API is usually used together with [off](#offpermissionstatechange). When listening is no longer needed, off should be called to unsubscribe.
-
-**Since:** 9
-
-**Required permissions:** ohos.permission.GET_SENSITIVE_PERMISSIONS
-
-<!--Device-AtManager-on(      type: 'permissionStateChange',      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback: Callback<PermissionStateChangeInfo>    ): void--><!--Device-AtManager-on(      type: 'permissionStateChange',      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback: Callback<PermissionStateChangeInfo>    ): void-End-->
-
-**System capability:** SystemCapability.Security.AccessToken
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'permissionStateChange' | Yes | Event type. The value is **'permissionStateChange'**, which indicates the permission state changes. |
-| tokenIDList | Array&lt;int&gt; | Yes | List of token IDs to subscribe to. If left empty, it subscribes to permission status changes of all apps. The app identity can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The maximum length is 1024. Value constraint: Each token ID in the list must be an integer greater than 0. <br>For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to subscribe to. Passing an invalid value returns error code 12100001. <br>The maximum length is 1024 and cannot be empty. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | Yes | Callback used to return the result. Callback for subscribing to the status change events of the specified tokenID and permission name. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.GET_SENSITIVE_PERMISSIONS". |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. Possible causes: 1. The tokenIDList or permissionList exceeds the size limit; 2. The tokenIDs or permissionNames in the list are all invalid. |
-| [12100005](../errorcode-access-token.md#12100005-listener-overflows) | The registration time has exceeded the limit. |
-| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
-| [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
-
-**Examples**
-
-```TypeScript
-import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let appInfo: bundleManager.ApplicationInfo = bundleManager.getApplicationInfoSync('com.example.myapplication', 0, 100);
-let tokenIDList: Array<number> = [appInfo.accessTokenId];
-let permissionList: Array<Permissions> = ['ohos.permission.DISTRIBUTED_DATASYNC'];
-try {
-    atManager.on('permissionStateChange', tokenIDList, permissionList, (data: abilityAccessCtrl.PermissionStateChangeInfo) => {
-        console.debug(`receive permission state change, data: ${data}`);
-    });
-} catch(err) {
-    console.error(`catch errcode: ${err.code}, message: ${err.message}`);
-}
-```
 
 ## queryStatusByPermission
 
@@ -958,6 +964,22 @@ When the killProcess parameter is true and the permission status changes from "a
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 | [12100014](../errorcode-access-token.md#12100014-unexpected-permission) | Unexpected permission. The specified permission is not a user_grant or manual_settings permission. |
 
+**Examples**
+
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let tokenID: number = 0; // System applications can obtain the token ID using bundleManager.getApplicationInfo.
+let permissionFlags: number = 2;
+atManager.revokePermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags).then(() => {
+  console.info('revokePermission success');
+}).catch((err: BusinessError) => {
+  console.error(`revokePermission fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## revokeUserGrantedPermission
 
 ```TypeScript
@@ -1023,6 +1045,22 @@ atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', per
 });
 ```
 
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let tokenID: number = 0; // Use bundleManager.getApplicationInfo() to obtain the token ID for a system application, and use bundleManager.getBundleInfoForSelf() to obtain the token ID for a non-system application.
+let permissionFlags: number = 1;
+atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError, data: void) => {
+  if (err) {
+    console.error(`revokeUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('revokeUserGrantedPermission success');
+  }
+});
+```
+
 ## revokeUserGrantedPermission
 
 ```TypeScript
@@ -1053,7 +1091,7 @@ Revokes a user_grant permission from an app. This API uses an asynchronous callb
 | tokenID | int | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br>For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). |
 | permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be revoked. Passing an invalid value returns error code 12100001. <br>Value constraint: The permission name length cannot exceed 256 characters. |
 | permissionFlags | int | Yes | Authorization options. <br>The value should be an integer. <br>- 1: If the user denies the permission this time, the permission dialog box can still be displayed the next time to request user authorization. <br>- 2: If the user denies the permission this time, the permission dialog box will not be displayed again. The user needs to grant the permission in the permission management page of system settings. <br>- 64: If the user selects to allow only this time, the permission is granted only for this session. The permission is revoked after the app switches to the background or exits. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the permission revocation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the permission revocation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1070,21 +1108,7 @@ Revokes a user_grant permission from an app. This API uses an asynchronous callb
 
 **Examples**
 
-```TypeScript
-import { abilityAccessCtrl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let tokenID: number = 0; // Use bundleManager.getApplicationInfo() to obtain the token ID for a system application, and use bundleManager.getBundleInfoForSelf() to obtain the token ID for a non-system application.
-let permissionFlags: number = 1;
-atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError, data: void) => {
-  if (err) {
-    console.error(`revokeUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('revokeUserGrantedPermission success');
-  }
-});
-```
+See [revokeUserGrantedPermission](#revokeusergrantedpermission)
 
 ## setPermissionRequestToggleStatus
 
@@ -1195,4 +1219,8 @@ Sets the dialog toggle status for a specified permission under a specified sub-p
 | [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) | Operation not allowed. The toggle status of the specified permission has already been set by [setPermissionRequestToggleStatus](#setpermissionrequesttogglestatus). |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 | [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. A database error occurs. |
+
+**Examples**
+
+See [setPermissionRequestToggleStatus](#setpermissionrequesttogglestatus)
 

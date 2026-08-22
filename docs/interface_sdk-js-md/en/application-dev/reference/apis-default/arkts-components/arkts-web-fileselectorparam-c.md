@@ -26,28 +26,6 @@ Constructor.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## getAcceptType
-
-```TypeScript
-getAcceptType(): Array<string>
-```
-
-Gets an array of acceptable MIME type.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta since version 23.
-
-<!--Device-FileSelectorParam-getAcceptType(): Array<string>--><!--Device-FileSelectorParam-getAcceptType(): Array<string>-End-->
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Array&lt;string&gt; | Return an array of acceptable MIME type. |
-
 ## getAcceptableFileTypes
 
 ```TypeScript
@@ -69,6 +47,28 @@ Gets an array of selected types for web page files.
 | Type | Description |
 | --- | --- |
 | Array&lt;Array&lt;[AcceptableFileType](arkts-web-acceptablefiletype-i.md)&gt;&gt; | Return an array of selected types for web page files. |
+
+## getAcceptType
+
+```TypeScript
+getAcceptType(): Array<string>
+```
+
+Gets an array of acceptable MIME type.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta since version 23.
+
+<!--Device-FileSelectorParam-getAcceptType(): Array<string>--><!--Device-FileSelectorParam-getAcceptType(): Array<string>-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Array&lt;string&gt; | Return an array of acceptable MIME type. |
 
 ## getDefaultPath
 

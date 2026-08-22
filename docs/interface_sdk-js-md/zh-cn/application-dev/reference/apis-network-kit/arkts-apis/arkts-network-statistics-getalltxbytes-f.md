@@ -63,6 +63,26 @@ statistics.getAllTxBytes((error: BusinessError|null, stats: long|undefined) => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+statistics.getAllTxBytes().then((stats: number) => {
+  console.info(JSON.stringify(stats));
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+statistics.getAllTxBytes().then((stats: long) => {
+  console.info(JSON.stringify(stats));
+});
+```
+
 
 ## getAllTxBytes
 
@@ -97,23 +117,5 @@ function getAllTxBytes(): Promise<long>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-statistics.getAllTxBytes().then((stats: number) => {
-  console.info(JSON.stringify(stats));
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-statistics.getAllTxBytes().then((stats: long) => {
-  console.info(JSON.stringify(stats));
-});
-```
+参见 [getAllTxBytes](#getalltxbytes)
 

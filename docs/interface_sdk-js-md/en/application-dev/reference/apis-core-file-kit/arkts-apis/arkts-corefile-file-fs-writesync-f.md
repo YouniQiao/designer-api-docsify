@@ -34,7 +34,7 @@ Writes data to a file. This API returns the result synchronously.
 | --- | --- | --- | --- |
 | fd | number | Yes | FD of the file. |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | [WriteOptions](../../apis-default/arkts-apis/arkts-filefs-writeoptions-i.md) | No | The options are as follows:<br>- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position.&lt;br &gt;- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length.<br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported currently.<br>**Since:** 11 |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | The options are as follows:<br>- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position.&lt;br &gt;- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length.<br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported currently.<br>**Since:** 11 |
 
 **Return value:**
 
@@ -58,4 +58,41 @@ Writes data to a file. This API returns the result synchronously.
 | 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fs.openSync(filePath, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
+let str: string = "hello, world";
+let writeLen = fs.writeSync(file.fd, str);
+console.info("write data to file succeed and size is:" + writeLen);
+fs.closeSync(file);
+```
+
+```TypeScript
+import { fileIo as fs, WriteOptions } from '@kit.CoreFileKit';
+let filePath = pathDir + "/test.txt";
+let stream = fs.createStreamSync(filePath,"r+");
+let writeOption: WriteOptions = {
+  offset: 5,
+  length: 5,
+  encoding: 'utf-8'
+};
+let num = stream.writeSync("hello, world", writeOption);
+stream.close();
+```
+
+```TypeScript
+import { fileIo as fs, WriteOptions } from '@kit.CoreFileKit';
+let filePath = pathDir + "/test.txt";
+let randomAccessFile = fs.createRandomAccessFileSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
+let writeOption: WriteOptions = {
+  offset: 5,
+  length: 5,
+  encoding: 'utf-8'
+};
+let bytesWritten = randomAccessFile.writeSync("hello, world", writeOption);
+randomAccessFile.close();
+```
 

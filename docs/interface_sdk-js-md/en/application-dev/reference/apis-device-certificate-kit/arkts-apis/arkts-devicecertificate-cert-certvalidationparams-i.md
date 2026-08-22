@@ -180,6 +180,26 @@ Indicates the certificate revocation check parameter. Used to check whether a ce
 
 **System capability:** SystemCapability.Security.Cert
 
+## trustedCerts
+
+```TypeScript
+trustedCerts?: Array<X509Cert>
+```
+
+Trust certificate list. Specifies the trusted root certificate or intermediate CA certificate as the trust anchor for validation. Maximum count: 100. <br>During verification, the certificate chain must trace back to a trusted certificate. You must set this parameter or set trustSystemCa to true.
+
+**Type:** Array&lt;X509Cert&gt;
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CertValidationParams-trustedCerts?: Array<X509Cert>--><!--Device-CertValidationParams-trustedCerts?: Array<X509Cert>-End-->
+
+**System capability:** SystemCapability.Security.Cert
+
 ## trustSystemCa
 
 ```TypeScript
@@ -199,26 +219,6 @@ Whether to trust the system CA. The default value is **false**. - **true**: uses
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CertValidationParams-trustSystemCa?: boolean--><!--Device-CertValidationParams-trustSystemCa?: boolean-End-->
-
-**System capability:** SystemCapability.Security.Cert
-
-## trustedCerts
-
-```TypeScript
-trustedCerts?: Array<X509Cert>
-```
-
-Trust certificate list. Specifies the trusted root certificate or intermediate CA certificate as the trust anchor for validation. Maximum count: 100. <br>During verification, the certificate chain must trace back to a trusted certificate. You must set this parameter or set trustSystemCa to true.
-
-**Type:** Array&lt;X509Cert&gt;
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-CertValidationParams-trustedCerts?: Array<X509Cert>--><!--Device-CertValidationParams-trustedCerts?: Array<X509Cert>-End-->
 
 **System capability:** SystemCapability.Security.Cert
 

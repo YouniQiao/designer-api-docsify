@@ -50,3 +50,14 @@ Name of a contact group.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+**Examples**
+
+Create contact data in JSON format:
+
+```TypeScript
+let group: contact.Group = {
+    groupId: 1,
+    title: "title"
+};
+```
+

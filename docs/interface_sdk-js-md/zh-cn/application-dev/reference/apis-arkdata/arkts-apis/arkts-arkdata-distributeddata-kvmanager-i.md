@@ -72,6 +72,35 @@ try {
 }
 ```
 
+```TypeScript
+let kvManager;
+let kvStore;
+const options = {
+    createIfMissing: true,
+    encrypt: false,
+    backup: false,
+    autoSync: false,
+    kvStoreType: distributedData.KVStoreType.SINGLE_VERSION,
+    schema: undefined,
+    securityLevel: distributedData.SecurityLevel.S3,
+}
+try {
+    kvManager.getKVStore('storeId', options).then(async (store) => {
+        console.log('getKVStore success');
+        kvStore = store;
+        kvManager.closeKVStore('appId', 'storeId', kvStore).then(() => {
+            console.log('closeKVStore success');
+        }).catch((err) => {
+            console.log('closeKVStore err ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.log('CloseKVStore getKVStore err ' + JSON.stringify(err));
+    });
+} catch (e) {
+    console.log('closeKVStore e ' + e);
+}
+```
+
 ## closeKVStore
 
 ```TypeScript
@@ -106,34 +135,7 @@ closeKVStore(appId: string, storeId: string, kvStore: KVStore): Promise<void>
 
 **示例**
 
-```TypeScript
-let kvManager;
-let kvStore;
-const options = {
-    createIfMissing: true,
-    encrypt: false,
-    backup: false,
-    autoSync: false,
-    kvStoreType: distributedData.KVStoreType.SINGLE_VERSION,
-    schema: undefined,
-    securityLevel: distributedData.SecurityLevel.S3,
-}
-try {
-    kvManager.getKVStore('storeId', options).then(async (store) => {
-        console.log('getKVStore success');
-        kvStore = store;
-        kvManager.closeKVStore('appId', 'storeId', kvStore).then(() => {
-            console.log('closeKVStore success');
-        }).catch((err) => {
-            console.log('closeKVStore err ' + JSON.stringify(err));
-        });
-    }).catch((err) => {
-        console.log('CloseKVStore getKVStore err ' + JSON.stringify(err));
-    });
-} catch (e) {
-    console.log('closeKVStore e ' + e);
-}
-```
+参见 [closeKVStore](#closekvstore)
 
 ## deleteKVStore
 
@@ -188,6 +190,35 @@ try {
 }
 ```
 
+```TypeScript
+let kvManager;
+let kvStore;
+const options = {
+    createIfMissing : true,
+    encrypt : false,
+    backup : false,
+    autoSync : true,
+    kvStoreType : distributedData.KVStoreType.SINGLE_VERSION,
+    schema : undefined,
+    securityLevel : distributedData.SecurityLevel.S3,
+}
+try {
+    kvManager.getKVStore('storeId', options).then(async (store) => {
+        console.log('getKVStore success');
+        kvStore = store;
+        kvManager.deleteKVStore('appId', 'storeId').then(() => {
+            console.log('deleteKVStore success');
+        }).catch((err) => {
+            console.log('deleteKVStore err ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.log('getKVStore err ' + JSON.stringify(err));
+    });
+} catch (e) {
+    console.log('deleteKVStore e ' + e);
+}
+```
+
 ## deleteKVStore
 
 ```TypeScript
@@ -221,34 +252,7 @@ deleteKVStore(appId: string, storeId: string): Promise<void>
 
 **示例**
 
-```TypeScript
-let kvManager;
-let kvStore;
-const options = {
-    createIfMissing : true,
-    encrypt : false,
-    backup : false,
-    autoSync : true,
-    kvStoreType : distributedData.KVStoreType.SINGLE_VERSION,
-    schema : undefined,
-    securityLevel : distributedData.SecurityLevel.S3,
-}
-try {
-    kvManager.getKVStore('storeId', options).then(async (store) => {
-        console.log('getKVStore success');
-        kvStore = store;
-        kvManager.deleteKVStore('appId', 'storeId').then(() => {
-            console.log('deleteKVStore success');
-        }).catch((err) => {
-            console.log('deleteKVStore err ' + JSON.stringify(err));
-        });
-    }).catch((err) => {
-        console.log('getKVStore err ' + JSON.stringify(err));
-    });
-} catch (e) {
-    console.log('deleteKVStore e ' + e);
-}
-```
+参见 [deleteKVStore](#deletekvstore)
 
 ## getAllKVStoreId
 
@@ -289,6 +293,21 @@ try {
 }
 ```
 
+```TypeScript
+let kvManager;
+try {
+    console.log('GetAllKVStoreId');
+    kvManager.getAllKVStoreId('appId').then((data) => {
+        console.log('getAllKVStoreId success');
+        console.log('size = ' + data.length);
+    }).catch((err) => {
+        console.log('getAllKVStoreId err ' + JSON.stringify(err));
+    });
+} catch(e) {
+    console.log('getAllKVStoreId e ' + e);
+}
+```
+
 ## getAllKVStoreId
 
 ```TypeScript
@@ -321,20 +340,7 @@ getAllKVStoreId(appId: string): Promise<string[]>
 
 **示例**
 
-```TypeScript
-let kvManager;
-try {
-    console.log('GetAllKVStoreId');
-    kvManager.getAllKVStoreId('appId').then((data) => {
-        console.log('getAllKVStoreId success');
-        console.log('size = ' + data.length);
-    }).catch((err) => {
-        console.log('getAllKVStoreId err ' + JSON.stringify(err));
-    });
-} catch(e) {
-    console.log('getAllKVStoreId e ' + e);
-}
-```
+参见 [getAllKVStoreId](#getallkvstoreid)
 
 ## getKVStore
 
@@ -368,6 +374,31 @@ getKVStore<T extends KVStore>(storeId: string, options: Options): Promise<T>
 | Promise&lt;T&gt;, &lt;T extends KVStore&gt; | Promise对象。返回创建的KVStore数据库实例。 |
 
 **示例**
+
+```TypeScript
+let kvStore;
+let kvManager;
+try {
+    const options = {
+        createIfMissing : true,
+        encrypt : false,
+        backup : false,
+        autoSync : true,
+        kvStoreType : distributedData.KVStoreType.SINGLE_VERSION,
+        securityLevel : distributedData.SecurityLevel.S3,
+    };
+    kvManager.getKVStore('storeId', options, function (err, store) {
+        if (err) {
+            console.log("getKVStore err: "  + JSON.stringify(err));
+            return;
+        }
+        console.log("getKVStore success");
+        kvStore = store;
+    });
+} catch (e) {
+    console.log("An unexpected error occurred. Error:" + e);
+}
+```
 
 ```TypeScript
 let kvStore;
@@ -420,30 +451,7 @@ getKVStore<T extends KVStore>(storeId: string, options: Options, callback: Async
 
 **示例**
 
-```TypeScript
-let kvStore;
-let kvManager;
-try {
-    const options = {
-        createIfMissing : true,
-        encrypt : false,
-        backup : false,
-        autoSync : true,
-        kvStoreType : distributedData.KVStoreType.SINGLE_VERSION,
-        securityLevel : distributedData.SecurityLevel.S3,
-    };
-    kvManager.getKVStore('storeId', options, function (err, store) {
-        if (err) {
-            console.log("getKVStore err: "  + JSON.stringify(err));
-            return;
-        }
-        console.log("getKVStore success");
-        kvStore = store;
-    });
-} catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
-}
-```
+参见 [getKVStore](#getkvstore)
 
 ## off_distributedDataServiceDie
 

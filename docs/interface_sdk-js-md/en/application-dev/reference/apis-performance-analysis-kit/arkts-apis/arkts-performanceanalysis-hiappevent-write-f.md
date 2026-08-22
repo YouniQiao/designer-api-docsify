@@ -58,6 +58,30 @@ let eventParams: Record<string, number | string> = {
   "str_data": "strValue",
 };
 
+// Application event logging. This API uses an asynchronous callback to return the result.
+hiAppEvent.write({
+  domain: "test_domain",
+  name: "test_event",
+  eventType: hiAppEvent.EventType.FAULT,
+  params: eventParams,
+}, (err: BusinessError) => {
+  if (err) {
+    hilog.error(0x0000, 'hiAppEvent', `code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  hilog.info(0x0000, 'hiAppEvent', `success to write event`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let eventParams: Record<string, number | string> = {
+  "int_data": 100,
+  "str_data": "strValue",
+};
+
 // Application event logging. This API uses a promise to return the result.
 hiAppEvent.write({
   domain: "test_domain",
@@ -93,7 +117,7 @@ Writes events of the **AppEventInfo** type. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | [AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md) | Yes | Application event object. You are advised to avoid the conflict between the custom event name and the system event name constant defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -110,27 +134,5 @@ Writes events of the **AppEventInfo** type. This API uses an asynchronous callba
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let eventParams: Record<string, number | string> = {
-  "int_data": 100,
-  "str_data": "strValue",
-};
-
-// Application event logging. This API uses an asynchronous callback to return the result.
-hiAppEvent.write({
-  domain: "test_domain",
-  name: "test_event",
-  eventType: hiAppEvent.EventType.FAULT,
-  params: eventParams,
-}, (err: BusinessError) => {
-  if (err) {
-    hilog.error(0x0000, 'hiAppEvent', `code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  hilog.info(0x0000, 'hiAppEvent', `success to write event`);
-});
-```
+See [write](#write)
 

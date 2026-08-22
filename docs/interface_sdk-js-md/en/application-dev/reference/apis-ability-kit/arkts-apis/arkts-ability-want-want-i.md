@@ -6,7 +6,7 @@ Want is a carrier for information transfer between objects (application componen
 
 **Deprecated since:** 9
 
-**Substitutes:** [Want](arkts-ability-appabilitywant-want-c.md)
+**Substitutes:** [Want](arkts-ability-app-ability-want-want-c.md)
 
 <!--Device-unnamed-export declare interface Want--><!--Device-unnamed-export declare interface Want-End-->
 
@@ -26,7 +26,7 @@ ability name
 
 **Deprecated since:** 9
 
-**Substitutes:** [abilityName](arkts-ability-appabilitywant-want-c.md#abilityname)
+**Substitutes:** [abilityName](arkts-ability-app-ability-want-want-c.md#abilityname)
 
 <!--Device-Want-abilityName?: string--><!--Device-Want-abilityName?: string-End-->
 
@@ -46,7 +46,7 @@ The description of an action in an want.
 
 **Deprecated since:** 9
 
-**Substitutes:** [action](arkts-ability-appabilitywant-want-c.md#action)
+**Substitutes:** [action](arkts-ability-app-ability-want-want-c.md#action)
 
 <!--Device-Want-action?: string--><!--Device-Want-action?: string-End-->
 
@@ -66,7 +66,7 @@ bundle name
 
 **Deprecated since:** 9
 
-**Substitutes:** [bundleName](arkts-ability-appabilitywant-want-c.md#bundlename)
+**Substitutes:** [bundleName](arkts-ability-app-ability-want-want-c.md#bundlename)
 
 <!--Device-Want-bundleName?: string--><!--Device-Want-bundleName?: string-End-->
 
@@ -86,7 +86,7 @@ device id
 
 **Deprecated since:** 9
 
-**Substitutes:** [deviceId](arkts-ability-appabilitywant-want-c.md#deviceid)
+**Substitutes:** [deviceId](arkts-ability-app-ability-want-want-c.md#deviceid)
 
 <!--Device-Want-deviceId?: string--><!--Device-Want-deviceId?: string-End-->
 
@@ -106,7 +106,7 @@ The description of a entities in a Want.
 
 **Deprecated since:** 9
 
-**Substitutes:** [entities](arkts-ability-appabilitywant-want-c.md#entities)
+**Substitutes:** [entities](arkts-ability-app-ability-want-want-c.md#entities)
 
 <!--Device-Want-entities?: Array<string>--><!--Device-Want-entities?: Array<string>-End-->
 
@@ -126,7 +126,7 @@ The options of the flags in this Want.
 
 **Deprecated since:** 9
 
-**Substitutes:** [flags](arkts-ability-appabilitywant-want-c.md#flags)
+**Substitutes:** [flags](arkts-ability-app-ability-want-want-c.md#flags)
 
 <!--Device-Want-flags?: number--><!--Device-Want-flags?: number-End-->
 
@@ -146,7 +146,7 @@ The description of the WantParams object in an Want
 
 **Deprecated since:** 9
 
-**Substitutes:** [parameters](arkts-ability-appabilitywant-want-c.md#parameters)
+**Substitutes:** [parameters](arkts-ability-app-ability-want-want-c.md#parameters)
 
 <!--Device-Want-parameters?: { [key: string]: any }--><!--Device-Want-parameters?: { [key: string]: any }-End-->
 
@@ -166,7 +166,7 @@ The description of the type in this Want.
 
 **Deprecated since:** 9
 
-**Substitutes:** [type](arkts-ability-appabilitywant-want-c.md#type)
+**Substitutes:** [type](arkts-ability-app-ability-want-want-c.md#type)
 
 <!--Device-Want-type?: string--><!--Device-Want-type?: string-End-->
 
@@ -186,7 +186,7 @@ The description of a URI in a Want.
 
 **Deprecated since:** 9
 
-**Substitutes:** [uri](arkts-ability-appabilitywant-want-c.md#uri)
+**Substitutes:** [uri](arkts-ability-app-ability-want-want-c.md#uri)
 
 <!--Device-Want-uri?: string--><!--Device-Want-uri?: string-End-->
 

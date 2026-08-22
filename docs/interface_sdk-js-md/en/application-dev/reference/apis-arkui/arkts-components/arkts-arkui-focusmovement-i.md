@@ -6,9 +6,9 @@ Sets the target component for focus movement based on key presses. If it is not 
 > 
 > Directly using **focusControl** can lead to the issue of
 > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the
-> [UIContext](../arkts-apis/arkts-arkui-arkuiuicontext-uicontext-c.md) object using the **getUIContext()** API and then obtain the
+> [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) object using the **getUIContext()** API and then obtain the
 > **focusControl** bound to the instance using the
-> [getFocusController](../arkts-apis/arkts-arkui-arkuiuicontext-uicontext-c.md#getfocuscontroller) API.
+> [getFocusController](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md#getfocuscontroller) API.
 
 **Since:** 18
 

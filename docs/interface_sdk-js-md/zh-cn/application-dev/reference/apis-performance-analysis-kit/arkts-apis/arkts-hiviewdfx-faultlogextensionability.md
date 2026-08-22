@@ -12,5 +12,5 @@ import { FaultLogExtensionAbility } from '@kit.PerformanceAnalysisKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfxfaultlogextensionability-faultlogextensionability-c.md) | 本模块实现故障的延迟通知功能。 |
+| [FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md) | 本模块实现故障的延迟通知功能。 |
 

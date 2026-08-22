@@ -46,6 +46,28 @@ import { bundleManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
+let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION;
+let userId = 100;
+
+try {
+  bundleManager.getAllBundleInfo(bundleFlags, userId, (err, data) => {
+    if (err) {
+      hilog.error(0x0000, 'testTag', 'getAllBundleInfo failed: %{public}s', err.message);
+    } else {
+      hilog.info(0x0000, 'testTag', 'getAllBundleInfo successfully: %{public}s', JSON.stringify(data));
+    }
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getAllBundleInfo failed: %{public}s', message);
+}
+```
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
 let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_DEFAULT;
 
 try {
@@ -59,6 +81,49 @@ try {
 } catch (err) {
   let message = (err as BusinessError).message;
   hilog.error(0x0000, 'testTag', 'getAllBundleInfo failed: %{public}s', message);
+}
+```
+
+ArkTS-Dyn示例:
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_DEFAULT;
+
+try {
+  bundleManager.getAllBundleInfo(bundleFlags).then((data) => {
+    hilog.info(0x0000, 'testTag', 'getAllBundleInfo successfully. Data: %{public}s', JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'getAllBundleInfo failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getAllBundleInfo failed. Cause: %{public}s', message);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_DEFAULT;
+
+try {
+  bundleManager.getAllBundleInfo(bundleFlags).then((data: Array<bundleManager.BundleInfo>) => {
+    hilog.info(0x0000, 'testTag', 'getAllBundleInfo successfully. Data: %{public}s', JSON.stringify(data));
+  }).catch((err: Error) => {
+    hilog.error(0x0000, 'testTag', 'getAllBundleInfo failed. Cause: %{public}s', (err as BusinessError).message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getAllBundleInfo failed. Cause: %{public}s', message);
 }
 ```
 
@@ -100,27 +165,7 @@ function getAllBundleInfo(bundleFlags: int, userId: int, callback: AsyncCallback
 
 **示例**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION;
-let userId = 100;
-
-try {
-  bundleManager.getAllBundleInfo(bundleFlags, userId, (err, data) => {
-    if (err) {
-      hilog.error(0x0000, 'testTag', 'getAllBundleInfo failed: %{public}s', err.message);
-    } else {
-      hilog.info(0x0000, 'testTag', 'getAllBundleInfo successfully: %{public}s', JSON.stringify(data));
-    }
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAllBundleInfo failed: %{public}s', message);
-}
-```
+参见 [getAllBundleInfo](#getallbundleinfo)
 
 
 ## getAllBundleInfo
@@ -165,46 +210,5 @@ function getAllBundleInfo(bundleFlags: int, userId?: int): Promise<Array<BundleI
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_DEFAULT;
-
-try {
-  bundleManager.getAllBundleInfo(bundleFlags).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getAllBundleInfo successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getAllBundleInfo failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAllBundleInfo failed. Cause: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_DEFAULT;
-
-try {
-  bundleManager.getAllBundleInfo(bundleFlags).then((data: Array<bundleManager.BundleInfo>) => {
-    hilog.info(0x0000, 'testTag', 'getAllBundleInfo successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: Error) => {
-    hilog.error(0x0000, 'testTag', 'getAllBundleInfo failed. Cause: %{public}s', (err as BusinessError).message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAllBundleInfo failed. Cause: %{public}s', message);
-}
-```
+参见 [getAllBundleInfo](#getallbundleinfo)
 

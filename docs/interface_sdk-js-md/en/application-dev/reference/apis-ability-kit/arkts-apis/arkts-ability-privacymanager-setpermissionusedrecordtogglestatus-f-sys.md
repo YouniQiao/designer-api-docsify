@@ -110,3 +110,7 @@ When **status** is **true**, the [addPermissionUsedRecord](arkts-ability-privacy
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 | [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. Possible causes: 1. Database error. 2. Failed to query all applications under the user. |
 
+**Examples**
+
+See [setPermissionUsedRecordToggleStatus](#setpermissionusedrecordtogglestatus)
+

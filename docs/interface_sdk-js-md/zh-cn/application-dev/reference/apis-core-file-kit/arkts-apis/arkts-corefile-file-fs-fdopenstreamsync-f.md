@@ -14,7 +14,7 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function fdopenStreamSync(fd: number, mode: string): Stream
 ```
 
-以同步方法基于文件描述符打开文件流。需要配合[Stream](arkts-corefile-filefs-stream-i.md)中的close()函数关闭文件流。
+以同步方法基于文件描述符打开文件流。需要配合[Stream](arkts-corefile-file-fs-stream-i.md)中的close()函数关闭文件流。
 
 **起始版本：** 9
 
@@ -35,7 +35,7 @@ declare function fdopenStreamSync(fd: number, mode: string): Stream
 
 | 类型 | 说明 |
 | --- | --- |
-| [Stream](arkts-corefile-filefs-stream-i.md) | 返回文件流的结果。 |
+| [Stream](arkts-corefile-file-fs-stream-i.md) | 返回文件流的结果。 |
 
 **错误码：**
 
@@ -68,4 +68,13 @@ declare function fdopenStreamSync(fd: number, mode: string): Stream
 | 13900038 | Value too large for defined data type |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_ONLY | fileIo.OpenMode.CREATE);
+let stream = fileIo.fdopenStreamSync(file.fd, "r+");
+stream.closeSync();
+```
 

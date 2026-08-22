@@ -35,7 +35,7 @@ Downloads a file. This API uses an asynchronous callback to return the result. H
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Application-based context. |
 | config | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | Yes | Download configuration. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[DownloadTask](arkts-basicservices-request-downloadtask-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadTask** object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DownloadTask](arkts-basicservices-request-downloadtask-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadTask** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -48,6 +48,24 @@ Downloads a file. This API uses an asynchronous callback to return the result. H
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+     let downloadTask: request.DownloadTask = data;
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -119,21 +137,5 @@ Downloads a file. This API uses a promise to return the result. HTTP is supporte
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-     let downloadTask: request.DownloadTask = data;
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
+See [downloadFile](#downloadfile)
 

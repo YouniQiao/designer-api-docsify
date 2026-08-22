@@ -48,6 +48,17 @@ sim.hasOperatorPrivileges(0, (err: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.hasOperatorPrivileges(0).then((data: boolean) => {
+    console.info(`hasOperatorPrivileges success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`hasOperatorPrivileges failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## hasOperatorPrivileges
 
@@ -87,14 +98,5 @@ Checks whether your application (the caller) has been granted the operator permi
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.hasOperatorPrivileges(0).then((data: boolean) => {
-    console.info(`hasOperatorPrivileges success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`hasOperatorPrivileges failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [hasOperatorPrivileges](#hasoperatorprivileges)
 

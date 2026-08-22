@@ -31,7 +31,7 @@ This API supports recursively listing the relative paths of all files by setting
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| options | [ListFileOptions](arkts-filefs-listfileoptions-i.md) | No | Options for filtering files. The files are not filtered by default. |
+| options | [ListFileOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-listfileoptions-i.md) | No | Options for filtering files. The files are not filtered by default. |
 
 **Return value:**
 
@@ -71,7 +71,7 @@ Lists the names of all files and directories in the current path. A file name ar
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string[]&gt; | Yes | Callback used to return the file name array, which is encoded in UTF-8 format by default. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | Yes | Callback used to return the file name array, which is encoded in UTF-8 format by default. |
 
 **Error codes:**
 
@@ -111,8 +111,8 @@ This API supports recursively listing the relative paths of all files by setting
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| options | [ListFileOptions](arkts-filefs-listfileoptions-i.md) | Yes | Options for filtering files. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string[]&gt; | Yes | Callback used to return the file name array, which is encoded in UTF-8 format by default. |
+| options | [ListFileOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-listfileoptions-i.md) | Yes | Options for filtering files. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | Yes | Callback used to return the file name array, which is encoded in UTF-8 format by default. |
 
 **Error codes:**
 

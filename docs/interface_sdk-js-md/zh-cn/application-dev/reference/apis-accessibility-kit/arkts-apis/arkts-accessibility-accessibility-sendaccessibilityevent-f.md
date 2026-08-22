@@ -43,6 +43,23 @@ function sendAccessibilityEvent(event: EventInfo, callback: AsyncCallback<void>)
 
 **示例**
 
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let eventInfo: accessibility.EventInfo = ({
+  type: 'click',
+  bundleName: 'com.example.MyApplication',
+  triggerAction: 'click',
+});
+
+accessibility.sendAccessibilityEvent(eventInfo).then(() => {
+  console.info(`succeeded in sending event, eventInfo is ${eventInfo}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to send event. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -240,20 +257,5 @@ function sendAccessibilityEvent(event: EventInfo): Promise<void>
 
 **示例**
 
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let eventInfo: accessibility.EventInfo = ({
-  type: 'click',
-  bundleName: 'com.example.MyApplication',
-  triggerAction: 'click',
-});
-
-accessibility.sendAccessibilityEvent(eventInfo).then(() => {
-  console.info(`succeeded in sending event, eventInfo is ${eventInfo}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to send event. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [sendAccessibilityEvent](#sendaccessibilityevent)
 

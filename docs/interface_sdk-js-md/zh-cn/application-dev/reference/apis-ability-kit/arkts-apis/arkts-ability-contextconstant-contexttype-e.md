@@ -98,3 +98,19 @@ App业务扩展上下文类型。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+**示例**
+
+```TypeScript
+import { UIAbility, contextConstant } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    hilog.info(0x0000, 'testTag', `%{public}s`, 'Ability onCreate');
+    // 判断Context类型是否为UIAbilityContext
+    let result = this.context.isContextOf(contextConstant.ContextType.UIABILITY_CONTEXT);
+    hilog.info(0x0000, 'testTag', `match contextType result is:%{public}s`, JSON.stringify(result));
+  }
+}
+```
+

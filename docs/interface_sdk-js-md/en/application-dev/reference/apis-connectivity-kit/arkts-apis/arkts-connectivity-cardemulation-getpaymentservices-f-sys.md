@@ -40,3 +40,14 @@ Obtains all payment services. If an application declares the support for the HCE
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
+**Examples**
+
+```TypeScript
+import { cardEmulation } from '@kit.ConnectivityKit';
+
+let paymentServices = cardEmulation.getPaymentServices();
+if (paymentServices == undefined || paymentServices.length == 0) {
+  console.error('paymentServices is null.');
+}
+```
+

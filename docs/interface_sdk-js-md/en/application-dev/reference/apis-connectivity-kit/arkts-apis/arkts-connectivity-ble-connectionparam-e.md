@@ -2,7 +2,7 @@
 
 GATT connection parameters.
 
-**Since:** 26.0.0
+**Since:** 22
 
 <!--Device-ble-enum ConnectionParam--><!--Device-ble-enum ConnectionParam-End-->
 
@@ -16,7 +16,7 @@ LOW_POWER = 1
 
 low power mode.
 
-**Since:** 26.0.0
+**Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +32,7 @@ BALANCED = 2
 
 balanced power mode.
 
-**Since:** 26.0.0
+**Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +48,7 @@ HIGH = 3
 
 Use the highest connection parameters.
 
-**Since:** 26.0.0
+**Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 

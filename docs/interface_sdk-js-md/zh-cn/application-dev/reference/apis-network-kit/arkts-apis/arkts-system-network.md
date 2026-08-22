@@ -11,11 +11,11 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [Network](arkts-network-systemnetwork-network-depr-c.md) |  |
+| [Network](arkts-network-system-network-network-depr-c.md) |  |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [NetworkResponse](arkts-network-systemnetwork-networkresponse-depr-i.md) | This module provides the Network Response. |
+| [NetworkResponse](arkts-network-system-network-networkresponse-depr-i.md) | This module provides the Network Response. |
 

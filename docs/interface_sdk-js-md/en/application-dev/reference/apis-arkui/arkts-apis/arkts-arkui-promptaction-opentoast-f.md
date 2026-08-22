@@ -24,7 +24,7 @@ Shows a toast. This API uses a promise to return the toast ID.
 > - Directly using **openToast** can lead to the issue of
 > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the
 > **PromptAction** object using the **getPromptAction** API in **UIContext** and then call the
-> [openToast](arkts-arkui-arkuiuicontext-promptaction-c.md#opentoast) API through this object.
+> [openToast](../../apis-default/arkts-apis/arkts-arkui-uicontext-promptaction-c.md#opentoast) API through this object.
 
 **Since:** 18
 

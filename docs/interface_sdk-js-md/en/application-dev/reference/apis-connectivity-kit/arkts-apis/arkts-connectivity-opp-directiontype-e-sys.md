@@ -2,7 +2,7 @@
 
 Enum for file transfer direction.
 
-**Since:** 26.0.0
+**Since:** 16
 
 <!--Device-opp-enum DirectionType--><!--Device-opp-enum DirectionType-End-->
 
@@ -18,7 +18,7 @@ OUTBOUND = 0
 
 The file transfer direction to send.
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +36,7 @@ INBOUND = 1
 
 The file transfer direction to receive.
 
-**Since:** 26.0.0
+**Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
 

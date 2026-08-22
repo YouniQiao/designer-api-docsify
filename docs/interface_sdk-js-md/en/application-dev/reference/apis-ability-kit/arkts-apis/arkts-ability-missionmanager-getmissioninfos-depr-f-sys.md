@@ -33,7 +33,7 @@ Obtains information about all missions. This API uses an asynchronous callback t
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
 | numMax | number | Yes | Maximum number of missions whose information can be obtained. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the array of mission information obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the array of mission information obtained. |
 
 **Examples**
 
@@ -48,6 +48,21 @@ missionManager.getMissionInfos('', 10, (error, missions) => {
   console.info(`size = ${missions.length}`);
   console.info(`missions = ${JSON.stringify(missions)}`);
 });
+```
+
+```TypeScript
+import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
+
+try {
+  missionManager.getMissionInfos('', 10).then((data) => {
+    console.info(`getMissionInfos successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`getMissionInfos failed. Cause: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`getMissionInfos failed. Cause: ${error.message}`);
+}
 ```
 
 
@@ -88,18 +103,5 @@ Obtains information about all missions. This API uses a promise to return the re
 
 **Examples**
 
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-try {
-  missionManager.getMissionInfos('', 10).then((data) => {
-    console.info(`getMissionInfos successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`getMissionInfos failed. Cause: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`getMissionInfos failed. Cause: ${error.message}`);
-}
-```
+See [getMissionInfos](#getmissioninfos)
 

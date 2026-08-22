@@ -76,7 +76,7 @@ Listens for image arrival events. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'imageArrival' | Yes | Type of event to listen for. The value is fixed at **'imageArrival'**, which is triggered when an image is received. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked for the event. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked for the event. |
 
 **Examples**
 
@@ -213,6 +213,56 @@ Releases this ImageReceiver instance. This API uses a promise to return the resu
 | Promise&lt;void&gt; | Promise used to return the result. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sendableImage } from '@kit.ImageKit';
+
+async function Demo(pixelMap: sendableImage.PixelMap) {
+  if (pixelMap != undefined) {
+    await pixelMap.release().then(() => {
+      console.info('Succeeded in releasing pixelmap object.');
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to release pixelmap object. code is ${error.code}, message is ${error.message}`);
+    })
+  }
+}
+```
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Demo(context : Context) {
+  const path: string = context.cacheDir + "/test.jpg";
+  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(path);
+  sendableImageSourceObj.release().then(() => {
+    console.info('Succeeded in releasing the image source instance.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the image source instance. code ${error.code}, message is ${error.message}`);
+  })
+}
+```
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+async function Demo() {
+  let size: image.Size = {
+    height: 8192,
+    width: 8
+  }
+  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
+  let img = await receiver.readNextImage();
+  img.release().then(() => {
+    console.info('release succeeded.');
+  }).catch((error: BusinessError) => {
+    console.error(`release failed. code ${error.code}, message is ${error.message}`);
+  })
+}
+```
 
 ```TypeScript
 import { sendableImage } from '@kit.ImageKit';

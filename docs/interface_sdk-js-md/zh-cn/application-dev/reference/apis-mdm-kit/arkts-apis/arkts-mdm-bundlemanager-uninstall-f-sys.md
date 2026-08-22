@@ -39,7 +39,7 @@ function uninstall(admin: Want, bundleName: string, callback: AsyncCallback<void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 包名。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err为null，否则为错误对象。 |
 
@@ -58,6 +58,25 @@ function uninstall(admin: Want, bundleName: string, callback: AsyncCallback<void
 ```TypeScript
 import { bundleManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// 参数需根据实际情况进行替换
+bundleManager.uninstall(wantTemp, 'bundleName', 100, true).then(() => {
+  console.info('Succeeded in uninstalling bundles.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
 
 let wantTemp: Want = {
   // 需根据实际情况进行替换
@@ -66,6 +85,63 @@ let wantTemp: Want = {
 };
 
 bundleManager.uninstall(wantTemp, 'bundleName', (err) => {
+  if (err) {
+    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in uninstalling bundles');
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+bundleManager.uninstall(wantTemp, 'bundleName', 100, (err) => {
+  if (err) {
+    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in uninstalling bundles');
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+bundleManager.uninstall(wantTemp, 'bundleName', true, (err) => {
+  if (err) {
+    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in uninstalling bundles');
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+bundleManager.uninstall(wantTemp, 'bundleName', 100, true, (err) => {
   if (err) {
     console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
     return;
@@ -108,7 +184,7 @@ function uninstall(admin: Want, bundleName: string, userId: number, callback: As
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 包名。 |
 | userId | number | 是 | 用户ID，指定具体用户。取值范围：大于等于0。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err为null，否则为错误对象。 |
@@ -125,24 +201,7 @@ function uninstall(admin: Want, bundleName: string, userId: number, callback: As
 
 **示例**
 
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.uninstall(wantTemp, 'bundleName', 100, (err) => {
-  if (err) {
-    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in uninstalling bundles');
-});
-```
+参见 [uninstall](#uninstall)
 
 
 ## uninstall
@@ -178,7 +237,7 @@ function uninstall(admin: Want, bundleName: string, isKeepData: boolean, callbac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 包名。 |
 | isKeepData | boolean | 是 | 是否保留包数据，true表示保留，false表示不保留。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err为null，否则为错误对象。 |
@@ -195,24 +254,7 @@ function uninstall(admin: Want, bundleName: string, isKeepData: boolean, callbac
 
 **示例**
 
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.uninstall(wantTemp, 'bundleName', true, (err) => {
-  if (err) {
-    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in uninstalling bundles');
-});
-```
+参见 [uninstall](#uninstall)
 
 
 ## uninstall
@@ -248,7 +290,7 @@ function uninstall(admin: Want, bundleName: string, userId: number, isKeepData: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 包名。 |
 | userId | number | 是 | 用户ID，指定具体用户。取值范围：大于等于0。 |
 | isKeepData | boolean | 是 | 是否保留包数据，true表示保留，false表示不保留。 |
@@ -266,22 +308,5 @@ function uninstall(admin: Want, bundleName: string, userId: number, isKeepData: 
 
 **示例**
 
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.uninstall(wantTemp, 'bundleName', 100, true, (err) => {
-  if (err) {
-    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in uninstalling bundles');
-});
-```
+参见 [uninstall](#uninstall)
 

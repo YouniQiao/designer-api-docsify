@@ -30,7 +30,7 @@ Close the AI node graph Sheet.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkuiuicontext-uicontext-c.md) | Yes | the context of dialog for ui display. |
+| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkui-uicontext-uicontext-c.md) | Yes | the context of dialog for ui display. |
 
 **Return value:**
 

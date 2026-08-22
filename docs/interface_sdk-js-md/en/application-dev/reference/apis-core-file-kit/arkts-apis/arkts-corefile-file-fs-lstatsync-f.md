@@ -32,7 +32,7 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 | Type | Description |
 | --- | --- |
-| [Stat](arkts-corefile-filefs-stat-i.md) | File information obtained. |
+| [Stat](arkts-corefile-file-fs-stat-i.md) | File information obtained. |
 
 **Error codes:**
 
@@ -48,4 +48,12 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 | 13900033 | Too many symbolic links encountered |
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
+
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/linkToFile";
+let fileStat = fs.lstatSync(filePath);
+console.info("lstat succeed, the size of file is " + fileStat.size);
+```
 

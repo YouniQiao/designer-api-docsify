@@ -70,9 +70,9 @@ import { osAccount } from '@kit.BasicServicesKit';
 | [AcquireAuthorizationOptions](arkts-basicservices-osaccount-acquireauthorizationoptions-i-sys.md) | Defines the options for acquiring the authorization. |
 | [AcquireAuthorizationResult](arkts-basicservices-osaccount-acquireauthorizationresult-i-sys.md) | Defines the result of the authorization. |
 | [AuthOptions](arkts-basicservices-osaccount-authoptions-i-sys.md) | Represents a set of optional parameters for [auth](arkts-basicservices-osaccount-userauth-c-sys.md#auth). |
+| [AuthorizationManager](arkts-basicservices-osaccount-authorizationmanager-i-sys.md) | Defines the OS account authorization manager class. |
 | [AuthResult](arkts-basicservices-osaccount-authresult-i-sys.md) | Defines the authentication result information. |
 | [AuthStatusInfo](arkts-basicservices-osaccount-authstatusinfo-i-sys.md) | Presents the authentication status information. |
-| [AuthorizationManager](arkts-basicservices-osaccount-authorizationmanager-i-sys.md) | Defines the OS account authorization manager class. |
 | [ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md) | Defines the constraint change information. |
 | [ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md) | Defines the constraint source type. |
 | [CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md) | Represents the optional parameter used to create an OS account. |
@@ -117,10 +117,10 @@ import { osAccount } from '@kit.BasicServicesKit';
 | Name | Description |
 | --- | --- |
 | [AuthIntent](arkts-basicservices-osaccount-authintent-e-sys.md) | Enumerates the authentication intents. |
+| [AuthorizationResultCode](arkts-basicservices-osaccount-authorizationresultcode-e-sys.md) | Enumerates authorization result codes. |
 | [AuthSubType](arkts-basicservices-osaccount-authsubtype-e-sys.md) | Enumerates the authentication credential subtypes. |
 | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Enumerates the trust levels of the authentication result. |
 | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Enumerates the authentication credential types. |
-| [AuthorizationResultCode](arkts-basicservices-osaccount-authorizationresultcode-e-sys.md) | Enumerates authorization result codes. |
 | [ConstraintSourceType](arkts-basicservices-osaccount-constraintsourcetype-e-sys.md) | Enumerates the constraint sources. |
 | [CredentialChangeType](arkts-basicservices-osaccount-credentialchangetype-e-sys.md) | Enumerates the credential change types. |
 | [FaceTipsCode](arkts-basicservices-osaccount-facetipscode-e-sys.md) | Enumerates the tip codes for facial authentication. |

@@ -31,7 +31,7 @@ Requests data from the widget provider. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to return the API call result and the shared data.<br>**Since:** 11 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to return the API call result and the shared data.<br>**Since:** 11 |
 
 **Error codes:**
 
@@ -44,6 +44,41 @@ Requests data from the widget provider. This API uses an asynchronous callback t
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. invalid input parameter during form operation |
+
+**Examples**
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+
+let formId: string = '12400633174999288';
+try {
+  formHost.acquireFormData(formId, (error, data) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      console.info('formHost acquireFormData success.');
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288';
+try {
+  formHost.acquireFormData(formId).then((data) => {
+    console.info('formHost acquireFormData success' + data);
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (e) {
+  console.error(`catch error, code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 ## acquireFormData
@@ -90,4 +125,8 @@ Requests data from the widget provider. This API uses a promise to return the re
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. invalid input parameter during form operation |
+
+**Examples**
+
+See [acquireFormData](#acquireformdata)
 

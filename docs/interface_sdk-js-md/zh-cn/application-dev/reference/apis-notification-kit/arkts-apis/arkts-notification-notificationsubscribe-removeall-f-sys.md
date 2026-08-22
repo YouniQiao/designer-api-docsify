@@ -82,6 +82,120 @@ let bundle: notificationSubscribe.BundleOption = {
 notificationSubscribe.removeAll(bundle, removeAllCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let removeAllCallback = (err: BusinessError) => {
+    if (err) {
+        console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+        console.info('removeAll success');
+    }
+}
+notificationSubscribe.removeAll(removeAllCallback);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let removeAllCallback = (err: BusinessError | null) => {
+    if (err) {
+        console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+        console.info('removeAll success');
+    }
+}
+notificationSubscribe.removeAll(removeAllCallback);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 不指定应用时，删除所有通知
+notificationSubscribe.removeAll().then(() => {
+  console.info('removeAll success');
+}).catch((err: BusinessError) => {
+  console.error(`removeAll fail, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// 不指定应用时，删除所有通知
+notificationSubscribe.removeAll().then(() => {
+  console.info('removeAll success');
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`removeAll fail, code is ${error.code}, message is ${error.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let removeAllCallback = (err: BusinessError) => {
+  if (err) {
+    console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('removeAll success');
+  }
+}
+// 用户ID，使用时需替换为真实的userId。
+let userId: number = 1;
+notificationSubscribe.removeAll(userId, removeAllCallback);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let removeAllCallback = (err: BusinessError | null ) => {
+  if (err) {
+    console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('removeAll success');
+  }
+}
+// 用户ID，使用时需替换为真实的userId。
+let userId: int = 1;
+notificationSubscribe.removeAll(userId, removeAllCallback);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userId: number = 1;
+notificationSubscribe.removeAll(userId).then(() => {
+  console.info('removeAll success');
+}).catch((err: BusinessError) => {
+  console.error(`removeAll fail, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let userId: int = 1;
+notificationSubscribe.removeAll(userId).then(() => {
+  console.info('removeAll success');
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`removeAll fail, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## removeAll
 
@@ -120,35 +234,7 @@ function removeAll(callback: AsyncCallback<void>): void
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let removeAllCallback = (err: BusinessError) => {
-    if (err) {
-        console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('removeAll success');
-    }
-}
-notificationSubscribe.removeAll(removeAllCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let removeAllCallback = (err: BusinessError | null) => {
-    if (err) {
-        console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('removeAll success');
-    }
-}
-notificationSubscribe.removeAll(removeAllCallback);
-```
+参见 [removeAll](#removeall)
 
 
 ## removeAll
@@ -190,39 +276,7 @@ function removeAll(userId: int, callback: AsyncCallback<void>): void
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let removeAllCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('removeAll success');
-  }
-}
-// 用户ID，使用时需替换为真实的userId。
-let userId: number = 1;
-notificationSubscribe.removeAll(userId, removeAllCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let removeAllCallback = (err: BusinessError | null ) => {
-  if (err) {
-    console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('removeAll success');
-  }
-}
-// 用户ID，使用时需替换为真实的userId。
-let userId: int = 1;
-notificationSubscribe.removeAll(userId, removeAllCallback);
-```
+参见 [removeAll](#removeall)
 
 
 ## removeAll
@@ -269,30 +323,7 @@ function removeAll(userId: int): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: number = 1;
-notificationSubscribe.removeAll(userId).then(() => {
-  console.info('removeAll success');
-}).catch((err: BusinessError) => {
-  console.error(`removeAll fail, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let userId: int = 1;
-notificationSubscribe.removeAll(userId).then(() => {
-  console.info('removeAll success');
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`removeAll fail, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [removeAll](#removeall)
 
 
 ## removeAll
@@ -339,28 +370,5 @@ function removeAll(bundle?: BundleOption): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 不指定应用时，删除所有通知
-notificationSubscribe.removeAll().then(() => {
-  console.info('removeAll success');
-}).catch((err: BusinessError) => {
-  console.error(`removeAll fail, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// 不指定应用时，删除所有通知
-notificationSubscribe.removeAll().then(() => {
-  console.info('removeAll success');
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`removeAll fail, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [removeAll](#removeall)
 

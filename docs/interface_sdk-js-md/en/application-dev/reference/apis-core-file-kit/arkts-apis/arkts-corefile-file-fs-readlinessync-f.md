@@ -27,13 +27,13 @@ Reads the text content of a file line by line. This API returns the result synch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file. |
-| options | [Options](../../apis-default/arkts-apis/arkts-filefs-options-i.md) | No | Options for reading the text. The options are as follows:<br>- **encoding** (string): format of the data to be encoded.<br>It is valid only when the data is of the string type.<br>The default value is **'utf-8'**, which is the only value supported. |
+| options | [Options](arkts-corefile-file-fs-options-i.md) | No | Options for reading the text. The options are as follows:<br>- **encoding** (string): format of the data to be encoded.<br>It is valid only when the data is of the string type.<br>The default value is **'utf-8'**, which is the only value supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ReaderIterator](arkts-corefile-filefs-readeriterator-i.md) | ReaderIterator** object. |
+| [ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md) | ReaderIterator** object. |
 
 **Error codes:**
 
@@ -52,4 +52,18 @@ Reads the text content of a file line by line. This API returns the result synch
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+```TypeScript
+import { fileIo as fs, Options } from '@kit.CoreFileKit';
+let filePath = pathDir + "/test.txt";
+let options: Options = {
+  encoding: 'utf-8'
+};
+let readerIterator = fs.readLinesSync(filePath, options);
+for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
+  console.info("content: " + it.value);
+}
+```
 

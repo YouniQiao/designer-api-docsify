@@ -2299,26 +2299,6 @@ Returns a new Float32Array with the element at the given index replaced by the g
 | --- | --- |
 | Float32Array | a new Float32Array with the element at index replaced by value. |
 
-## BYTES_PER_ELEMENT
-
-```TypeScript
-public static readonly BYTES_PER_ELEMENT: int = 4
-```
-
-Number of bytes occupied by each element
-
-**Type:** int
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Float32Array-public static readonly BYTES_PER_ELEMENT: int = 4--><!--Device-Float32Array-public static readonly BYTES_PER_ELEMENT: int = 4-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
 ## buffer
 
 ```TypeScript
@@ -2376,6 +2356,26 @@ Byte offset within the underlying ArrayBuffer The value should be an integer.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Float32Array-public readonly byteOffset: int--><!--Device-Float32Array-public readonly byteOffset: int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## BYTES_PER_ELEMENT
+
+```TypeScript
+public static readonly BYTES_PER_ELEMENT: int = 4
+```
+
+Number of bytes occupied by each element
+
+**Type:** int
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Float32Array-public static readonly BYTES_PER_ELEMENT: int = 4--><!--Device-Float32Array-public static readonly BYTES_PER_ELEMENT: int = 4-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

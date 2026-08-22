@@ -56,6 +56,120 @@ declare function mkdir(path: string): Promise<void>
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dirPath = pathDir + "/testDir";
+fileIo.mkdir(dirPath).then(() => {
+  console.info(`Succeeded in making directory.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to make directory. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let dirPath = pathDir + "/testDir";
+fileIo.mkdir(dirPath).then(() => {
+  console.info(`Succeeded in making directory.`);
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to make directory. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dirPath = pathDir + "/testDir1/testDir2/testDir3";
+fileIo.mkdir(dirPath, true).then(() => {
+  console.info(`Succeeded in making directory.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to make directory. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dirPath = pathDir + "/testDir1/testDir2/testDir3";
+fileIo.mkdir(dirPath, true).then(() => {
+  console.info(`Succeeded in making directory.`);
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to make directory. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dirPath = pathDir + "/testDir";
+fileIo.mkdir(dirPath, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to make directory. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in making directory.`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dirPath = pathDir + "/testDir";
+fileIo.mkdir(dirPath, (err: BusinessError<void> | null) => {
+  if (err) {
+    console.error(`Failed to make directory. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in making directory.`);
+  }
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dirPath = pathDir + "/testDir1/testDir2/testDir3";
+fileIo.mkdir(dirPath, true, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to make directory. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in making directory.`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dirPath = pathDir + "/testDir1/testDir2/testDir3";
+fileIo.mkdir(dirPath, true, (err: BusinessError<void> | null) => {
+  if (err) {
+    console.error(`Failed to make directory. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in making directory.`);
+  }
+});
+```
+
 
 ## mkdir
 
@@ -106,6 +220,10 @@ declare function mkdir(path: string, recursion: boolean): Promise<void>
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**示例**
+
+参见 [mkdir](#mkdir)
+
 
 ## mkdir
 
@@ -149,6 +267,10 @@ declare function mkdir(path: string, callback: AsyncCallback<void>): void
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**示例**
+
+参见 [mkdir](#mkdir)
 
 
 ## mkdir
@@ -194,4 +316,8 @@ declare function mkdir(path: string, recursion: boolean, callback: AsyncCallback
 | 13900033 | Too many symbolic links encountered |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**示例**
+
+参见 [mkdir](#mkdir)
 

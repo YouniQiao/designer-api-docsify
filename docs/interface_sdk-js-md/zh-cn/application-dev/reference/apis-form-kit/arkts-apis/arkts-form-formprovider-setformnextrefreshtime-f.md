@@ -88,6 +88,46 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { formProvider } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288'; // 表示卡片formId，根据实际formId调整
+try {
+  formProvider.setFormNextRefreshTime(formId, 5).then(() => {
+    console.info(`formProvider setFormNextRefreshTime success`);
+  }).catch((error: BusinessError) => {
+    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { formProvider } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288'; // 表示卡片formId，根据实际formId调整
+let minute: int = 3;
+try {
+  formProvider.setFormNextRefreshTime(formId, minute).then(() => {
+    console.info('testTag', `FormProvider setFormNextRefreshTime success`);
+  }).catch((error) => {
+    console.error('testTag', `FormProvider promise error, code: ${error.code}, message: ${error.message}`);
+  });
+  console.info('testTag', 'FormProvider setFormNextRefreshTime register success');
+} catch (error) {
+  console.error('testTag', `FormProvider catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
 
 ## setFormNextRefreshTime
 
@@ -133,43 +173,5 @@ function setFormNextRefreshTime(formId: string, minute: int): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288'; // 表示卡片formId，根据实际formId调整
-try {
-  formProvider.setFormNextRefreshTime(formId, 5).then(() => {
-    console.info(`formProvider setFormNextRefreshTime success`);
-  }).catch((error: BusinessError) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-
-import { formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288'; // 表示卡片formId，根据实际formId调整
-let minute: int = 3;
-try {
-  formProvider.setFormNextRefreshTime(formId, minute).then(() => {
-    console.info('testTag', `FormProvider setFormNextRefreshTime success`);
-  }).catch((error) => {
-    console.error('testTag', `FormProvider promise error, code: ${error.code}, message: ${error.message}`);
-  });
-  console.info('testTag', 'FormProvider setFormNextRefreshTime register success');
-} catch (error) {
-  console.error('testTag', `FormProvider catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [setFormNextRefreshTime](#setformnextrefreshtime)
 

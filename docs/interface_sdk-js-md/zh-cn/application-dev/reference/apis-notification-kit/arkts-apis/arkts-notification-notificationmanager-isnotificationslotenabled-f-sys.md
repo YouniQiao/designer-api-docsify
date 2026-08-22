@@ -87,6 +87,34 @@ notificationManager.isNotificationSlotEnabled(
     isNotificationSlotEnabledCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// isNotificationSlotEnabled
+notificationManager.isNotificationSlotEnabled({ bundle: 'ohos.samples.notification', },
+    notificationManager.SlotType.SOCIAL_COMMUNICATION).then((data: boolean) => {
+    console.info(`isNotificationSlotEnabled success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isNotificationSlotEnabled failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.isNotificationSlotEnabled({ bundle: 'bundleName1', },
+    notificationManager.SlotType.SOCIAL_COMMUNICATION).then((data: boolean) => {
+    console.info(`isNotificationSlotEnabled success, data: ${JSON.stringify(data)}`);
+}).catch((err: Error): void => {
+    let error: BusinessError = err as BusinessError;
+    console.error(`isNotificationSlotEnabled failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## isNotificationSlotEnabled
 
@@ -134,31 +162,5 @@ function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType): Promis
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// isNotificationSlotEnabled
-notificationManager.isNotificationSlotEnabled({ bundle: 'ohos.samples.notification', },
-    notificationManager.SlotType.SOCIAL_COMMUNICATION).then((data: boolean) => {
-    console.info(`isNotificationSlotEnabled success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isNotificationSlotEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.isNotificationSlotEnabled({ bundle: 'bundleName1', },
-    notificationManager.SlotType.SOCIAL_COMMUNICATION).then((data: boolean) => {
-    console.info(`isNotificationSlotEnabled success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`isNotificationSlotEnabled failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [isNotificationSlotEnabled](#isnotificationslotenabled)
 

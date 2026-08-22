@@ -52,6 +52,29 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 let bundleName = 'com.example.myapplication';
+let appFlags = bundleManager.ApplicationFlag.GET_APPLICATION_INFO_DEFAULT;
+let userId = 100;
+
+try {
+  bundleManager.getApplicationInfo(bundleName, appFlags, userId, (err, data) => {
+    if (err) {
+      hilog.error(0x0000, 'testTag', 'getApplicationInfo failed: %{public}s', err.message);
+    } else {
+      hilog.info(0x0000, 'testTag', 'getApplicationInfo successfully: %{public}s', JSON.stringify(data));
+    }
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getApplicationInfo failed: %{public}s', message);
+}
+```
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName = 'com.example.myapplication';
 let appFlags = bundleManager.ApplicationFlag.GET_APPLICATION_INFO_WITH_PERMISSION;
 
 try {
@@ -65,6 +88,54 @@ try {
 } catch (err) {
   let message = (err as BusinessError).message;
   hilog.error(0x0000, 'testTag', 'getApplicationInfo failed: %{public}s', message);
+}
+```
+
+ArkTS-Dyn示例:
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName = 'com.example.myapplication';
+let appFlags = bundleManager.ApplicationFlag.GET_APPLICATION_INFO_WITH_PERMISSION;
+let userId = 100;
+
+try {
+  bundleManager.getApplicationInfo(bundleName, appFlags, userId).then((data) => {
+    hilog.info(0x0000, 'testTag', 'getApplicationInfo successfully. Data: %{public}s', JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'getApplicationInfo failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getApplicationInfo failed. Cause: %{public}s', message);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+// 代码中使用的bundleName和useId需为应用实际的包名和用户ID。
+let bundleName = 'com.example.myapplication';
+let appFlags = bundleManager.ApplicationFlag.GET_APPLICATION_INFO_WITH_PERMISSION;
+let userId = 100;
+
+try {
+  bundleManager.getApplicationInfo(bundleName, appFlags, userId).then((data: bundleManager.ApplicationInfo) => {
+    hilog.info(0x0000, 'testTag', 'getApplicationInfo successfully. Data: %{public}s', JSON.stringify(data));
+  }).catch((err: Error) => {
+    hilog.error(0x0000, 'testTag', 'getApplicationInfo failed. Cause: %{public}s', (err as BusinessError).message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getApplicationInfo failed. Cause: %{public}s', message);
 }
 ```
 
@@ -111,28 +182,7 @@ function getApplicationInfo(bundleName: string, appFlags: int, userId: int, call
 
 **示例**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = 'com.example.myapplication';
-let appFlags = bundleManager.ApplicationFlag.GET_APPLICATION_INFO_DEFAULT;
-let userId = 100;
-
-try {
-  bundleManager.getApplicationInfo(bundleName, appFlags, userId, (err, data) => {
-    if (err) {
-      hilog.error(0x0000, 'testTag', 'getApplicationInfo failed: %{public}s', err.message);
-    } else {
-      hilog.info(0x0000, 'testTag', 'getApplicationInfo successfully: %{public}s', JSON.stringify(data));
-    }
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getApplicationInfo failed: %{public}s', message);
-}
-```
+参见 [getApplicationInfo](#getapplicationinfo)
 
 
 ## getApplicationInfo
@@ -182,51 +232,5 @@ function getApplicationInfo(bundleName: string, appFlags: int, userId?: int): Pr
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = 'com.example.myapplication';
-let appFlags = bundleManager.ApplicationFlag.GET_APPLICATION_INFO_WITH_PERMISSION;
-let userId = 100;
-
-try {
-  bundleManager.getApplicationInfo(bundleName, appFlags, userId).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getApplicationInfo successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getApplicationInfo failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getApplicationInfo failed. Cause: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-// 代码中使用的bundleName和useId需为应用实际的包名和用户ID。
-let bundleName = 'com.example.myapplication';
-let appFlags = bundleManager.ApplicationFlag.GET_APPLICATION_INFO_WITH_PERMISSION;
-let userId = 100;
-
-try {
-  bundleManager.getApplicationInfo(bundleName, appFlags, userId).then((data: bundleManager.ApplicationInfo) => {
-    hilog.info(0x0000, 'testTag', 'getApplicationInfo successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: Error) => {
-    hilog.error(0x0000, 'testTag', 'getApplicationInfo failed. Cause: %{public}s', (err as BusinessError).message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getApplicationInfo failed. Cause: %{public}s', message);
-}
-```
+参见 [getApplicationInfo](#getapplicationinfo)
 

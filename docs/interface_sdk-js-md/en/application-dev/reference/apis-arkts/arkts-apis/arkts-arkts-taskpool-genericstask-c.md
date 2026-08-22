@@ -49,6 +49,28 @@ A constructor used to create a **GenericsTask** object.
 
 ```TypeScript
 @Concurrent
+function printArgs(args: number): number {
+  console.info("printArgs: " + args);
+  return args;
+}
+
+let task: taskpool.Task = new taskpool.Task(printArgs, "this is my first Task");
+```
+
+```TypeScript
+@Concurrent
+function printArgs(args: string): string {
+  console.info("printArgs: " + args);
+  return args;
+}
+
+let taskName: string = "taskName";
+let task: taskpool.Task = new taskpool.Task(taskName, printArgs, "this is my first Task");
+let name: string = task.name;
+```
+
+```TypeScript
+@Concurrent
 function printArgs(args: string): string {
   console.info("printArgs: " + args);
   return args;
@@ -69,6 +91,44 @@ let task1: taskpool.Task = new taskpool.GenericsTask<[string], string>(printArgs
 let task2: taskpool.Task = new taskpool.GenericsTask<[number, string, number], string>(testWithThreeParams, 100, "test", 100);
 
 let task3: taskpool.Task = new taskpool.GenericsTask<[[number, string]], string>(testWithArray, [100, "test"]);
+```
+
+```TypeScript
+@Concurrent
+function printArgs(args: string): string {
+  console.info("printArgs: " + args);
+  return args;
+}
+
+let taskName: string = "taskName";
+let task: taskpool.Task = new taskpool.GenericsTask<[string], string>(taskName, printArgs, "this is my first Task");
+let name: string = task.name;
+```
+
+```TypeScript
+let taskGroup = new taskpool.TaskGroup();
+```
+
+```TypeScript
+let taskGroupName: string = "groupName";
+let taskGroup: taskpool.TaskGroup = new taskpool.TaskGroup(taskGroupName);
+let name: string = taskGroup.name;
+```
+
+```TypeScript
+let runner: taskpool.SequenceRunner = new taskpool.SequenceRunner();
+```
+
+```TypeScript
+let runner:taskpool.SequenceRunner = new taskpool.SequenceRunner("runner1", taskpool.Priority.LOW);
+```
+
+```TypeScript
+let runner: taskpool.AsyncRunner = new taskpool.AsyncRunner(5);
+```
+
+```TypeScript
+let runner:taskpool.AsyncRunner = new taskpool.AsyncRunner("runner1", 5, 5);
 ```
 
 ## constructor
@@ -103,15 +163,5 @@ A constructor used to create a **GenericsTask** instance, with the task name spe
 
 **Examples**
 
-```TypeScript
-@Concurrent
-function printArgs(args: string): string {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-let taskName: string = "taskName";
-let task: taskpool.Task = new taskpool.GenericsTask<[string], string>(taskName, printArgs, "this is my first Task");
-let name: string = task.name;
-```
+See [constructor](#constructor)
 

@@ -78,40 +78,6 @@ try {
 }
 ```
 
-
-## addDeviceConfig
-
-```TypeScript
-function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<number>): void
-```
-
-Adds Wi-Fi connection configuration to the device.
-
-<p>The configuration will be updated when the configuration is added.</p>
-
-**Since:** 6
-
-**Deprecated since:** 9
-
-**Substitutes:** [addDeviceConfig](arkts-connectivity-wifimanager-adddeviceconfig-f.md)
-
-**Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG
-
-<!--Device-wifi-function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<number>): void--><!--Device-wifi-function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<number>): void-End-->
-
-**System capability:** SystemCapability.Communication.WiFi.STA
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes |  |
-
-**Examples**
-
 ```TypeScript
 import wifi from '@ohos.wifi';
 
@@ -142,4 +108,40 @@ try {
     console.error("failed:" + JSON.stringify(error));
 }
 ```
+
+
+## addDeviceConfig
+
+```TypeScript
+function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<number>): void
+```
+
+Adds Wi-Fi connection configuration to the device.
+
+<p>The configuration will be updated when the configuration is added.</p>
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** [addDeviceConfig](arkts-connectivity-wifimanager-adddeviceconfig-f.md)
+
+**Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG
+
+<!--Device-wifi-function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<number>): void--><!--Device-wifi-function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<number>): void-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.STA
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |  |
+
+**Examples**
+
+See [addDeviceConfig](#adddeviceconfig)
 

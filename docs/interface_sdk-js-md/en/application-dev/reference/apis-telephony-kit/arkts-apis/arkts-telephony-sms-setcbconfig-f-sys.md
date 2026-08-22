@@ -29,7 +29,7 @@ Sets the cell broadcast configuration. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [CBConfigOptions](arkts-telephony-sms-cbconfigoptions-i-sys.md) | Yes | Cell broadcast configuration options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -58,6 +58,25 @@ let cbConfigOptions: sms.CBConfigOptions = {
 };
 sms.setCBConfig(cbConfigOptions, (err: BusinessError) => {
       console.info(`callback: err->${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let cbConfigOptions: sms.CBConfigOptions = {
+    slotId: 0,
+    enable: true,
+    startMessageId: 100,
+    endMessageId: 200,
+    ranType: sms.RanType.TYPE_GSM
+};
+let promise = sms.setCBConfig(cbConfigOptions);
+promise.then(() => {
+    console.info(`setCBConfig success.`);
+}).catch((err: BusinessError) => {
+    console.error(`setCBConfig failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -106,22 +125,5 @@ Sets the cell broadcast configuration. This API uses a promise to return the res
 
 **Examples**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let cbConfigOptions: sms.CBConfigOptions = {
-    slotId: 0,
-    enable: true,
-    startMessageId: 100,
-    endMessageId: 200,
-    ranType: sms.RanType.TYPE_GSM
-};
-let promise = sms.setCBConfig(cbConfigOptions);
-promise.then(() => {
-    console.info(`setCBConfig success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setCBConfig failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [setCBConfig](#setcbconfig)
 

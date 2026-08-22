@@ -94,150 +94,19 @@ try {
 }
 ```
 
-## offAuthTip
-
 ```TypeScript
-offAuthTip(callback?: AuthTipCallback): void
-```
-
-取消订阅用户身份认证中间状态。
-
-> **说明：**
-> 
-> 需要使用已经成功订阅事件的[UserAuthInstance](#userauthinstance)对象调用该接口进行取消订阅。
-
-**起始版本：** 23
-
-<!--Device-UserAuthInstance-offAuthTip(callback?: AuthTipCallback): void--><!--Device-UserAuthInstance-offAuthTip(callback?: AuthTipCallback): void-End-->
-
-**系统能力：** SystemCapability.UserIAM.UserAuth.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | 否 | 认证接口的回调函数，用于返回认证中间状态。 当不传该参数时默认值为调用on()接口时传递的参数值。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { userAuth } from '@kit.UserAuthenticationKit';
 
-try {
-  const rand = cryptoFramework.createRandom();
-  const len: int = 16;
-  let randData: Uint8Array | null = null;
-  let retryCount = 0;
-  while (retryCount < 3) {
-    randData = rand?.generateRandomSync(len)?.data;
-    if (randData) {
-      break;
-    }
-    retryCount++;
-  }
-  if (!randData) {
-    return;
-  }
-  const authParam: userAuth.AuthParam = {
-    challenge: randData,
-    authType: [userAuth.UserAuthType.PIN],
-    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
-  };
-  const widgetParam: userAuth.WidgetParam = {
-    title: '请输入密码',
-  };
-  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
-  console.info('get userAuth instance successfully.');
-  userAuthInstance.offAuthTip((authTipInfo: userAuth.AuthTipInfo) => {
-    console.info('userAuthInstance callback.');
-  });
-  console.info('auth off successfully.');
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## offResult
-
-```TypeScript
-offResult(callback?: IAuthCallback): void
-```
-
-取消订阅用户身份认证的结果。
-
-> **说明：**
-> 
-> 需要使用已经成功订阅事件的[UserAuthInstance](#userauthinstance)对象调用该接口进行取消订阅。
-
-**起始版本：** 23
-
-<!--Device-UserAuthInstance-offResult(callback?: IAuthCallback): void--><!--Device-UserAuthInstance-offResult(callback?: IAuthCallback): void-End-->
-
-**系统能力：** SystemCapability.UserIAM.UserAuth.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | 否 | Callback to unregister. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
+let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
+let authType = userAuth.UserAuthType.FACE;
+let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
 
 try {
-  const rand = cryptoFramework.createRandom();
-  const len: int = 16;
-  let randData: Uint8Array | null = null;
-  let retryCount = 0;
-  while (retryCount < 3) {
-    randData = rand?.generateRandomSync(len)?.data;
-    if (randData) {
-      break;
-    }
-    retryCount++;
-  }
-  if (!randData) {
-    return;
-  }
-  const authParam: userAuth.AuthParam = {
-    challenge: randData,
-    authType: [userAuth.UserAuthType.PIN],
-    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
-  };
-  const widgetParam: userAuth.WidgetParam = {
-    title: '请输入密码',
-  };
-  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
-  console.info('get userAuth instance successfully.');
-  userAuthInstance.offResult({
-    onResult: (result: userAuth.UserAuthResult) => {
-      console.info(`auth off result = ${result.result}`);
-    }
-  });
-  console.info('auth off successfully.');
+  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
+  auth.cancel();
+  console.info('cancel auth successfully.');
 } catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to cancel auth. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -394,17 +263,21 @@ try {
 }
 ```
 
-## onAuthTip
+## offAuthTip
 
 ```TypeScript
-onAuthTip(callback: AuthTipCallback): void
+offAuthTip(callback?: AuthTipCallback): void
 ```
 
-订阅身份认证过程中的提示信息。通过该接口可以获取到认证过程中控件的拉起和退出提示，以及认证过程中用户的每一次认证失败尝试。
+取消订阅用户身份认证中间状态。
+
+> **说明：**
+> 
+> 需要使用已经成功订阅事件的[UserAuthInstance](#userauthinstance)对象调用该接口进行取消订阅。
 
 **起始版本：** 23
 
-<!--Device-UserAuthInstance-onAuthTip(callback: AuthTipCallback): void--><!--Device-UserAuthInstance-onAuthTip(callback: AuthTipCallback): void-End-->
+<!--Device-UserAuthInstance-offAuthTip(callback?: AuthTipCallback): void--><!--Device-UserAuthInstance-offAuthTip(callback?: AuthTipCallback): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -412,7 +285,7 @@ onAuthTip(callback: AuthTipCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | 是 | 认证接口的回调函数，用于返回认证中间状态。 |
+| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | 否 | 认证接口的回调函数，用于返回认证中间状态。 当不传该参数时默认值为调用on()接口时传递的参数值。 |
 
 **错误码：**
 
@@ -452,30 +325,31 @@ try {
   };
   const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
   console.info('get userAuth instance successfully.');
-  // 需要调用UserAuthInstance的start()接口，启动认证后，才能通过onAuthTip获取到认证中间状态。
-  userAuthInstance.onAuthTip((authTipInfo: userAuth.AuthTipInfo) => {
+  userAuthInstance.offAuthTip((authTipInfo: userAuth.AuthTipInfo) => {
     console.info('userAuthInstance callback.');
   });
-  console.info('auth on successfully.');
-  userAuthInstance.start();
-  console.info('auth start successfully.');
+  console.info('auth off successfully.');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
   console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 
-## onResult
+## offResult
 
 ```TypeScript
-onResult(callback: IAuthCallback): void
+offResult(callback?: IAuthCallback): void
 ```
 
-订阅用户身份认证的最终结果。通过该接口获取到的是用户在认证控件完成身份认证交互后的最终身份认证结果。认证控件消失前，用户中间的认证失败尝试并不会通过该接口返回。 如果需要感知整个认证过程中用户的每一次认证失败尝试，请通过[on('authTip')](#onauthtip)接口订阅。
+取消订阅用户身份认证的结果。
+
+> **说明：**
+> 
+> 需要使用已经成功订阅事件的[UserAuthInstance](#userauthinstance)对象调用该接口进行取消订阅。
 
 **起始版本：** 23
 
-<!--Device-UserAuthInstance-onResult(callback: IAuthCallback): void--><!--Device-UserAuthInstance-onResult(callback: IAuthCallback): void-End-->
+<!--Device-UserAuthInstance-offResult(callback?: IAuthCallback): void--><!--Device-UserAuthInstance-offResult(callback?: IAuthCallback): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -483,7 +357,7 @@ onResult(callback: IAuthCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | 是 | Callback used to return the user authentication result. |
+| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | 否 | Callback to unregister. |
 
 **错误码：**
 
@@ -494,8 +368,6 @@ onResult(callback: IAuthCallback): void
 
 **示例**
 
-示例1：以模系统方式进行用户身份认证。
-
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -526,83 +398,15 @@ try {
   };
   const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
   console.info('get userAuth instance successfully.');
-  // 需要调用UserAuthInstance的start()接口，启动认证后，才能通过onResult获取到认证结果。
-  userAuthInstance.onResult({
+  userAuthInstance.offResult({
     onResult: (result: userAuth.UserAuthResult) => {
-      console.info(`userAuthInstance callback result = ${result.result}`);
+      console.info(`auth off result = ${result.result}`);
     }
   });
-  console.info('auth on successfully.');
-  userAuthInstance.start();
-  console.info('auth start successfully.');
+  console.info('auth off successfully.');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
   console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-示例2：以模应用方式进行用户身份认证。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-@Entry
-@Component
-struct Index {
-  modelApplicationAuth(): void {
-    try {
-      const rand = cryptoFramework.createRandom();
-      const len: int = 16;
-      let randData: Uint8Array | null = null;
-      let retryCount = 0;
-      while (retryCount < 3) {
-        randData = rand?.generateRandomSync(len)?.data;
-        if (randData) {
-          break;
-        }
-        retryCount++;
-      }
-      if (!randData) {
-        return;
-      }
-      const authParam: userAuth.AuthParam = {
-        challenge: randData,
-        authType: [userAuth.UserAuthType.PIN],
-        authTrustLevel: userAuth.AuthTrustLevel.ATL3,
-      };
-      const uiContext: UIContext = this.getUIContext();
-      const context: Context | undefined = uiContext.getHostContext();
-      const widgetParam: userAuth.WidgetParam = {
-        title: '请输入密码',
-        uiContext: context,
-      };
-      const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
-      console.info('get userAuth instance successfully.');
-      // 需要调用UserAuthInstance的start()接口，启动认证后，才能通过onResult获取到认证结果。
-      userAuthInstance.onResult({
-        onResult: (result: userAuth.UserAuthResult) => {
-          console.info(`userAuthInstance callback result =${result.result}`);
-        }
-      });
-      console.info('auth on successfully.');
-      userAuthInstance.start();
-      console.info('auth start successfully.');
-    } catch (error) {
-      const err: BusinessError = error as BusinessError;
-      console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
-    }
-  }
-
-  build() {
-    Column() {
-      Button('start auth')
-        .onClick(() => {
-          this.modelApplicationAuth();
-        });
-    }
-  }
 }
 ```
 
@@ -724,6 +528,508 @@ on(type: 'result', callback: IAuthCallback): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 | [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 
+## onAuthTip
+
+```TypeScript
+onAuthTip(callback: AuthTipCallback): void
+```
+
+订阅身份认证过程中的提示信息。通过该接口可以获取到认证过程中控件的拉起和退出提示，以及认证过程中用户的每一次认证失败尝试。
+
+**起始版本：** 23
+
+<!--Device-UserAuthInstance-onAuthTip(callback: AuthTipCallback): void--><!--Device-UserAuthInstance-onAuthTip(callback: AuthTipCallback): void-End-->
+
+**系统能力：** SystemCapability.UserIAM.UserAuth.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | 是 | 认证接口的回调函数，用于返回认证中间状态。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+try {
+  const rand = cryptoFramework.createRandom();
+  const len: int = 16;
+  let randData: Uint8Array | null = null;
+  let retryCount = 0;
+  while (retryCount < 3) {
+    randData = rand?.generateRandomSync(len)?.data;
+    if (randData) {
+      break;
+    }
+    retryCount++;
+  }
+  if (!randData) {
+    return;
+  }
+  const authParam: userAuth.AuthParam = {
+    challenge: randData,
+    authType: [userAuth.UserAuthType.PIN],
+    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
+  };
+  const widgetParam: userAuth.WidgetParam = {
+    title: '请输入密码',
+  };
+  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
+  console.info('get userAuth instance successfully.');
+  // 需要调用UserAuthInstance的start()接口，启动认证后，才能通过onAuthTip获取到认证中间状态。
+  userAuthInstance.onAuthTip((authTipInfo: userAuth.AuthTipInfo) => {
+    console.info('userAuthInstance callback.');
+  });
+  console.info('auth on successfully.');
+  userAuthInstance.start();
+  console.info('auth start successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## onResult
+
+```TypeScript
+onResult(callback: IAuthCallback): void
+```
+
+订阅用户身份认证的最终结果。通过该接口获取到的是用户在认证控件完成身份认证交互后的最终身份认证结果。认证控件消失前，用户中间的认证失败尝试并不会通过该接口返回。 如果需要感知整个认证过程中用户的每一次认证失败尝试，请通过[on('authTip')](#onauthtip)接口订阅。
+
+**起始版本：** 23
+
+<!--Device-UserAuthInstance-onResult(callback: IAuthCallback): void--><!--Device-UserAuthInstance-onResult(callback: IAuthCallback): void-End-->
+
+**系统能力：** SystemCapability.UserIAM.UserAuth.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | 是 | Callback used to return the user authentication result. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+try {
+  const rand = cryptoFramework.createRandom();
+  const len: number = 16;
+  let randData: Uint8Array | null = null;
+  let retryCount = 0;
+  while (retryCount < 3) {
+    randData = rand?.generateRandomSync(len)?.data;
+    if (randData) {
+      break;
+    }
+    retryCount++;
+  }
+  if (!randData) {
+    return;
+  }
+  const authParam: userAuth.AuthParam = {
+    challenge: randData,
+    authType: [userAuth.UserAuthType.PIN],
+    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
+  };
+  const widgetParam: userAuth.WidgetParam = {
+    title: '请输入密码',
+  };
+
+  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
+  console.info('get userAuth instance successfully.');
+  // 需要调用UserAuthInstance的start()接口，启动认证后，才能通过onResult获取到认证结果。
+  userAuthInstance.on('result', {
+    onResult: (result) => {
+      console.info(`userAuthInstance callback result = ${result.result}`);
+    }
+  });
+  console.info('auth on successfully.');
+  userAuthInstance.start();
+  console.info('auth start successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+try {
+  const rand = cryptoFramework.createRandom();
+  const len: int = 16;
+  const randData: Uint8Array = rand?.generateRandomSync(len)?.data;
+  const authParam: userAuth.AuthParam = {
+    challenge: randData,
+    authType: [userAuth.UserAuthType.PIN],
+    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
+  };
+  const widgetParam: userAuth.WidgetParam = {
+    title: '请输入密码',
+  };
+
+  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
+  console.info('get userAuth instance successfully.');
+  // 需要调用UserAuthInstance的start()接口，启动认证后，才能通过onResult获取到认证结果。
+  userAuthInstance.onResult({
+    onResult: (result: userAuth.UserAuthResult) => {
+      console.info(`userAuthInstance callback result = ${result.result}`);
+    }
+  });
+  console.info('auth on successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let reuseUnlockResult: userAuth.ReuseUnlockResult = {
+  reuseMode: userAuth.ReuseMode.AUTH_TYPE_RELEVANT,
+  reuseDuration: userAuth.MAX_ALLOWABLE_REUSE_DURATION,
+};
+try {
+  const rand = cryptoFramework.createRandom();
+  const len: number = 16;
+  let randData: Uint8Array | null = null;
+  let retryCount = 0;
+  while (retryCount < 3) {
+    randData = rand?.generateRandomSync(len)?.data;
+    if (randData) {
+      break;
+    }
+    retryCount++;
+  }
+  if (!randData) {
+    return;
+  }
+  const authParam: userAuth.AuthParam = {
+    challenge: randData,
+    authType: [userAuth.UserAuthType.PIN],
+    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
+    reuseUnlockResult: reuseUnlockResult,
+  };
+  const widgetParam: userAuth.WidgetParam = {
+    title: '请输入密码',
+  };
+  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
+  console.info('get userAuth instance successfully.');
+  // 需要调用UserAuthInstance的start()接口，启动认证后，才能通过onResult获取到认证结果。
+  userAuthInstance.on('result', {
+    onResult: (result) => {
+      console.info(`userAuthInstance callback result = ${result.result}`);
+    }
+  });
+  console.info('auth on successfully.');
+  userAuthInstance.start();
+  console.info('auth start successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let reuseUnlockResult: userAuth.ReuseUnlockResult = {
+  reuseMode: userAuth.ReuseMode.AUTH_TYPE_RELEVANT,
+  reuseDuration: userAuth.MAX_ALLOWABLE_REUSE_DURATION,
+};
+try {
+  const rand = cryptoFramework.createRandom();
+  const len: int = 16;
+  const randData: Uint8Array = rand?.generateRandomSync(len)?.data;
+  const authParam: userAuth.AuthParam = {
+    challenge: randData,
+    authType: [userAuth.UserAuthType.PIN],
+    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
+    reuseUnlockResult: reuseUnlockResult,
+  };
+  const widgetParam: userAuth.WidgetParam = {
+    title: '请输入密码',
+  };
+  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
+  console.info('get userAuth instance successfully.');
+  // 需要调用UserAuthInstance的start()接口，启动认证后，才能通过onResult获取到认证结果。
+  userAuthInstance.onResult({
+    onResult: (result: userAuth.UserAuthResult) => {
+      console.info(`userAuthInstance callback result = ${result.result}`);
+    }
+  });
+  console.info('auth on successfully.');
+  userAuthInstance.start();
+  console.info('auth start successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let reuseUnlockResult: userAuth.ReuseUnlockResult = {
+  reuseMode: userAuth.ReuseMode.CALLER_IRRELEVANT_AUTH_TYPE_RELEVANT,
+  reuseDuration: userAuth.MAX_ALLOWABLE_REUSE_DURATION,
+};
+try {
+  const rand = cryptoFramework.createRandom();
+  const len: number = 16;
+  let randData: Uint8Array | null = null;
+  let retryCount = 0;
+  while (retryCount < 3) {
+    randData = rand?.generateRandomSync(len)?.data;
+    if (randData) {
+      break;
+    }
+    retryCount++;
+  }
+  if (!randData) {
+    return;
+  }
+  const authParam: userAuth.AuthParam = {
+    challenge: randData,
+    authType: [userAuth.UserAuthType.PIN],
+    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
+    reuseUnlockResult: reuseUnlockResult,
+  };
+  const widgetParam: userAuth.WidgetParam = {
+    title: '请输入密码',
+  };
+  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
+  console.info('get userAuth instance successfully.');
+  // 需要调用UserAuthInstance的start()接口，启动认证后，才能通过onResult获取到认证结果。
+  userAuthInstance.on('result', {
+    onResult: (result) => {
+      console.info(`userAuthInstance callback result = ${result.result}`);
+    }
+  });
+  console.info('auth on successfully.');
+  userAuthInstance.start();
+  console.info('auth start successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let reuseUnlockResult: userAuth.ReuseUnlockResult = {
+  reuseMode: userAuth.ReuseMode.CALLER_IRRELEVANT_AUTH_TYPE_RELEVANT,
+  reuseDuration: userAuth.MAX_ALLOWABLE_REUSE_DURATION,
+};
+try {
+  const rand = cryptoFramework.createRandom();
+  const len: int = 16;
+  const randData: Uint8Array = rand?.generateRandomSync(len)?.data;
+  const authParam: userAuth.AuthParam = {
+    challenge: randData,
+    authType: [userAuth.UserAuthType.PIN],
+    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
+    reuseUnlockResult: reuseUnlockResult,
+  };
+  const widgetParam: userAuth.WidgetParam = {
+    title: '请输入密码',
+  };
+  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
+  console.info('get userAuth instance successfully.');
+  // 需要调用UserAuthInstance的start()接口，启动认证后，才能通过onResult获取到认证结果。
+  userAuthInstance.onResult({
+    onResult: (result: userAuth.UserAuthResult) => {
+      console.info(`userAuthInstance callback result = ${result.result}`);
+    }
+  });
+  console.info('auth on successfully.');
+  userAuthInstance.start();
+  console.info('auth start successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+示例1：以模系统方式进行用户身份认证。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+try {
+  const rand = cryptoFramework.createRandom();
+  const len: int = 16;
+  let randData: Uint8Array | null = null;
+  let retryCount = 0;
+  while (retryCount < 3) {
+    randData = rand?.generateRandomSync(len)?.data;
+    if (randData) {
+      break;
+    }
+    retryCount++;
+  }
+  if (!randData) {
+    return;
+  }
+  const authParam: userAuth.AuthParam = {
+    challenge: randData,
+    authType: [userAuth.UserAuthType.PIN],
+    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
+  };
+  const widgetParam: userAuth.WidgetParam = {
+    title: '请输入密码',
+  };
+  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
+  console.info('get userAuth instance successfully.');
+  // 需要调用UserAuthInstance的start()接口，启动认证后，才能通过onResult获取到认证结果。
+  userAuthInstance.onResult({
+    onResult: (result: userAuth.UserAuthResult) => {
+      console.info(`userAuthInstance callback result = ${result.result}`);
+    }
+  });
+  console.info('auth on successfully.');
+  userAuthInstance.start();
+  console.info('auth start successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+示例2：以模应用方式进行用户身份认证。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+@Entry
+@Component
+struct Index {
+  modelApplicationAuth(): void {
+    try {
+      const rand = cryptoFramework.createRandom();
+      const len: int = 16;
+      let randData: Uint8Array | null = null;
+      let retryCount = 0;
+      while (retryCount < 3) {
+        randData = rand?.generateRandomSync(len)?.data;
+        if (randData) {
+          break;
+        }
+        retryCount++;
+      }
+      if (!randData) {
+        return;
+      }
+      const authParam: userAuth.AuthParam = {
+        challenge: randData,
+        authType: [userAuth.UserAuthType.PIN],
+        authTrustLevel: userAuth.AuthTrustLevel.ATL3,
+      };
+      const uiContext: UIContext = this.getUIContext();
+      const context: Context | undefined = uiContext.getHostContext();
+      const widgetParam: userAuth.WidgetParam = {
+        title: '请输入密码',
+        uiContext: context,
+      };
+      const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
+      console.info('get userAuth instance successfully.');
+      // 需要调用UserAuthInstance的start()接口，启动认证后，才能通过onResult获取到认证结果。
+      userAuthInstance.onResult({
+        onResult: (result: userAuth.UserAuthResult) => {
+          console.info(`userAuthInstance callback result =${result.result}`);
+        }
+      });
+      console.info('auth on successfully.');
+      userAuthInstance.start();
+      console.info('auth start successfully.');
+    } catch (error) {
+      const err: BusinessError = error as BusinessError;
+      console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
+    }
+  }
+
+  build() {
+    Column() {
+      Button('start auth')
+        .onClick(() => {
+          this.modelApplicationAuth();
+        });
+    }
+  }
+}
+```
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let auth = new userAuth.UserAuth();
+let challenge = new Uint8Array([]);
+auth.auth(challenge, userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1, {
+  onResult: (result, extraInfo) => {
+    try {
+      console.info(`auth onResult result = ${result}`);
+      if (result == userAuth.ResultCode.SUCCESS) {
+        // 此处添加认证成功逻辑。
+      }  else {
+        // 此处添加认证失败逻辑。
+      }
+    } catch (error) {
+      console.error(`Failed to auth onResult. Code: ${error.code}, message: ${error.message}`);
+    }
+  }
+});
+```
+
 ## start
 
 ```TypeScript
@@ -803,6 +1109,22 @@ try {
 } catch (error) {
   const err: BusinessError = error as BusinessError;
   console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
+let authType = userAuth.UserAuthType.FACE;
+let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
+
+try {
+  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
+  auth.start();
+  console.info('auth start successfully.');
+} catch (error) {
+  console.error(`Failed to auth. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

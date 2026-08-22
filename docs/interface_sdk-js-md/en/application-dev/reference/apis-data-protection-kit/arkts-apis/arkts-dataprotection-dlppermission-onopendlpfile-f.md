@@ -27,7 +27,7 @@ You can subscribe to this event when your application needs to perform specific 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'openDLPFile' | Yes | Event type. It has a fixed value of **openDLPFile**, which indicates the DLP file open event. |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AccessedDLPFileInfo](arkts-dataprotection-dlppermission-accesseddlpfileinfo-i.md)&gt; | Yes | Callback invoked when a DLP file is opened. The application will be notified when the DLP file is opened. |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AccessedDLPFileInfo](arkts-dataprotection-dlppermission-accesseddlpfileinfo-i.md)&gt; | Yes | Callback invoked when a DLP file is opened. The application will be notified when the DLP file is opened. |
 
 **Error codes:**
 

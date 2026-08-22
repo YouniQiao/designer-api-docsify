@@ -25,7 +25,7 @@ Checks whether an effect ID is supported. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | effectId | string | Yes | Effect ID. The value is a string of a maximum of 64 characters. If the length exceeds 64 characters, the first 64 characters are used. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the effect ID is supported, and the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the effect ID is supported, and the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -77,6 +77,42 @@ try {
 }
 ```
 
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  // Check whether 'haptic.notice.success' is supported.
+  vibrator.isSupportEffect('haptic.notice.success').then((state: boolean) => {
+    console.info(`The query result is ${state}`);
+    if (state) {
+      try {
+        vibrator.startVibration({
+          type: 'preset',
+          effectId: 'haptic.notice.success',
+          count: 1,
+        }, {
+          usage: 'unknown' // The switch control is subject to the selected type.
+        }).then(() => {
+          console.info('Succeed in starting vibration');
+        }).catch((error: BusinessError) => {
+          console.error(`Failed to start vibration. Code: ${error.code}, message: ${error.message}`);
+        });
+      } catch (error) {
+        let e: BusinessError = error as BusinessError;
+        console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+      }
+    }
+  }, (error: BusinessError) => {
+    console.error(`Failed to query effect. Code: ${error.code}, message: ${error.message}`);
+  })
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 ## isSupportEffect
 
@@ -113,39 +149,5 @@ Checks whether an effect ID is supported. This API uses a promise to return the 
 
 **Examples**
 
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  // Check whether 'haptic.notice.success' is supported.
-  vibrator.isSupportEffect('haptic.notice.success').then((state: boolean) => {
-    console.info(`The query result is ${state}`);
-    if (state) {
-      try {
-        vibrator.startVibration({
-          type: 'preset',
-          effectId: 'haptic.notice.success',
-          count: 1,
-        }, {
-          usage: 'unknown' // The switch control is subject to the selected type.
-        }).then(() => {
-          console.info('Succeed in starting vibration');
-        }).catch((error: BusinessError) => {
-          console.error(`Failed to start vibration. Code: ${error.code}, message: ${error.message}`);
-        });
-      } catch (error) {
-        let e: BusinessError = error as BusinessError;
-        console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
-      }
-    }
-  }, (error: BusinessError) => {
-    console.error(`Failed to query effect. Code: ${error.code}, message: ${error.message}`);
-  })
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
-}
-```
+See [isSupportEffect](#issupporteffect)
 

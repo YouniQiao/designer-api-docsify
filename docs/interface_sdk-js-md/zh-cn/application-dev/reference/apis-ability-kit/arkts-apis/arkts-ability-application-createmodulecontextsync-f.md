@@ -48,3 +48,15 @@ export function createModuleContextSync(context: Context, moduleName: string): C
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000021](../errorcode-ability.md#16000021-模块名不存在) | The module does not exist. |
 
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, application, common, Want, Context } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    let moduleContext = application.createModuleContextSync(this.context, 'entry');
+  }
+}
+```
+

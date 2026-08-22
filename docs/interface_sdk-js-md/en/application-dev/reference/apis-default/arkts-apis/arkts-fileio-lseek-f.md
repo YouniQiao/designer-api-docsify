@@ -27,7 +27,7 @@ Adjusts the position of the file offset pointer.
 | --- | --- | --- | --- |
 | fd | int | Yes | File descriptor. |
 | offset | long | Yes | Relative offset, in bytes. |
-| whence | [WhenceType](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-whencetype-e.md) | No | Where to start the offset. If this parameter is not specified, the file start position is used by default. |
+| whence | [WhenceType](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-whencetype-e.md) | No | Where to start the offset. If this parameter is not specified, the file start position is used by default. |
 
 **Return value:**
 

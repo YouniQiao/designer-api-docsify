@@ -42,7 +42,7 @@ Disables the cache and deletes the data in it. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -87,6 +87,42 @@ httpRequest.request("EXAMPLE_URL").then(data => {
     } catch (err) {
       console.error('error: ' + err);
     }
+  });
+  httpRequest.destroy();
+}).catch((error: BusinessError) => {
+  console.error("errcode" + JSON.stringify(error));
+});
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let httpRequest = http.createHttp();
+httpRequest.request("EXAMPLE_URL").then(data => {
+  const httpResponseCache = http.createHttpResponseCache();
+  httpResponseCache.delete().then(() => {
+    console.info("success");
+  }).catch((err: BusinessError) => {
+    console.error("fail");
+  });
+  httpRequest.destroy();
+}).catch((error: BusinessError) => {
+  console.error("errcode" + JSON.stringify(error));
+});
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let httpRequest = http.createHttp();
+httpRequest.request("EXAMPLE_URL").then(data => {
+  const httpResponseCache = http.createHttpResponseCache();
+  httpResponseCache.delete().then(() => {
+    console.info("success");
+  }).catch((err: BusinessError) => {
+    console.error("fail");
   });
   httpRequest.destroy();
 }).catch((error: BusinessError) => {
@@ -118,41 +154,7 @@ Disables the cache and deletes the data in it. This API uses a promise to return
 
 **Examples**
 
-```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let httpRequest = http.createHttp();
-httpRequest.request("EXAMPLE_URL").then(data => {
-  const httpResponseCache = http.createHttpResponseCache();
-  httpResponseCache.delete().then(() => {
-    console.info("success");
-  }).catch((err: BusinessError) => {
-    console.error("fail");
-  });
-  httpRequest.destroy();
-}).catch((error: BusinessError) => {
-  console.error("errcode" + JSON.stringify(error));
-});
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let httpRequest = http.createHttp();
-httpRequest.request("EXAMPLE_URL").then(data => {
-  const httpResponseCache = http.createHttpResponseCache();
-  httpResponseCache.delete().then(() => {
-    console.info("success");
-  }).catch((err: BusinessError) => {
-    console.error("fail");
-  });
-  httpRequest.destroy();
-}).catch((error: BusinessError) => {
-  console.error("errcode" + JSON.stringify(error));
-});
-```
+See [delete](#delete)
 
 ## flush
 
@@ -174,7 +176,7 @@ Flushes data in the cache to the file system so that the cached data can be acce
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -221,6 +223,44 @@ httpRequest.request("EXAMPLE_URL", (err: BusinessError, data: http.HttpResponse)
     // Call destroy() to release resources when the request is no longer needed, preventing memory leaks.
     httpRequest.destroy();
   }
+});
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let httpRequest = http.createHttp();
+let httpResponseCache = http.createHttpResponseCache();
+let promise = httpRequest.request("EXAMPLE_URL");
+
+promise.then((data: http.HttpResponse) => {
+  httpResponseCache.flush().then(() => {
+    console.error('flush success');
+  }).catch((err: BusinessError) => {
+    console.error('flush fail');
+  });
+}).catch((err: Error) => {
+  console.error('error:' + JSON.stringify(err));
+});
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let httpRequest = http.createHttp();
+let httpResponseCache = http.createHttpResponseCache();
+let promise = httpRequest.request("EXAMPLE_URL");
+
+promise.then((data: http.HttpResponse) => {
+  httpResponseCache.flush().then(() => {
+    console.error('flush success');
+  }).catch((err: BusinessError) => {
+    console.error('flush fail');
+  });
+}).catch((err: Error) => {
+  console.error('error:' + JSON.stringify(err));
 });
 ```
 
@@ -248,41 +288,5 @@ Flushes data in the cache to the file system so that the cached data can be acce
 
 **Examples**
 
-```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let httpRequest = http.createHttp();
-let httpResponseCache = http.createHttpResponseCache();
-let promise = httpRequest.request("EXAMPLE_URL");
-
-promise.then((data: http.HttpResponse) => {
-  httpResponseCache.flush().then(() => {
-    console.error('flush success');
-  }).catch((err: BusinessError) => {
-    console.error('flush fail');
-  });
-}).catch((err: Error) => {
-  console.error('error:' + JSON.stringify(err));
-});
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let httpRequest = http.createHttp();
-let httpResponseCache = http.createHttpResponseCache();
-let promise = httpRequest.request("EXAMPLE_URL");
-
-promise.then((data: http.HttpResponse) => {
-  httpResponseCache.flush().then(() => {
-    console.error('flush success');
-  }).catch((err: BusinessError) => {
-    console.error('flush fail');
-  });
-}).catch((err: Error) => {
-  console.error('error:' + JSON.stringify(err));
-});
-```
+See [flush](#flush)
 

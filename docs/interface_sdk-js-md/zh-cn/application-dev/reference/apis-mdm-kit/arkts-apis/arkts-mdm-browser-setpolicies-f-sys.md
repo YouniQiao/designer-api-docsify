@@ -34,7 +34,7 @@ function setPolicies(admin: Want, appId: string, policies: string, callback: Asy
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | appId | string | 是 | 应用ID，用于指定浏览器。 |
 | policies | string | 是 | 浏览器策略，当参数policies为空字符串时，表示取消指定浏览器的策略。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为null，否则为错误对象。 |
@@ -72,6 +72,26 @@ browser.setPolicies(wantTemp, appId, policies, (err) => {
 });
 ```
 
+```TypeScript
+import { browser } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// 此处参数appId的赋值应替换为开发者自己指定的浏览器的应用ID
+let appId: string = 'com.example.******_******/******5t5CoBM=';
+let policies: string = '{"InsecurePrivateNetworkRequestsAllowed":{"level":"mandatory","scope":"machine","source":"platform","value":true},"LegacySameSiteCookieBehaviorEnabledForDomainList":{"level":"mandatory","scope":"machine","source":"platform","value":["[*.]"]}}';
+browser.setPolicies(wantTemp, appId, policies).then(() => {
+  console.info('Succeeded in setting browser policies.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set browser policies. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## setPolicies
 
@@ -101,7 +121,7 @@ function setPolicies(admin: Want, appId: string, policies: string): Promise<void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | appId | string | 是 | 应用ID，用于指定浏览器。 |
 | policies | string | 是 | 浏览器策略，当参数policies为空字符串时，表示取消指定浏览器的策略。 |
 
@@ -123,23 +143,5 @@ function setPolicies(admin: Want, appId: string, policies: string): Promise<void
 
 **示例**
 
-```TypeScript
-import { browser } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 此处参数appId的赋值应替换为开发者自己指定的浏览器的应用ID
-let appId: string = 'com.example.******_******/******5t5CoBM=';
-let policies: string = '{"InsecurePrivateNetworkRequestsAllowed":{"level":"mandatory","scope":"machine","source":"platform","value":true},"LegacySameSiteCookieBehaviorEnabledForDomainList":{"level":"mandatory","scope":"machine","source":"platform","value":["[*.]"]}}';
-browser.setPolicies(wantTemp, appId, policies).then(() => {
-  console.info('Succeeded in setting browser policies.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set browser policies. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [setPolicies](#setpolicies)
 

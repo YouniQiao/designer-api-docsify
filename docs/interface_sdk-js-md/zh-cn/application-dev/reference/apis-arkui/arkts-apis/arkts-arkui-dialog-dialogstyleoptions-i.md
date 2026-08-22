@@ -24,7 +24,7 @@ buttonDirection?: DialogButtonOrientation
 
 按钮的排列。
 
-**类型：** [DialogButtonOrientation](arkts-arkui-arkuidialog-dialogbuttonorientation-e.md)
+**类型：** [DialogButtonOrientation](arkts-arkui-arkui-dialog-dialogbuttonorientation-e.md)
 
 **默认值：** DialogButtonOrientation.AUTO
 

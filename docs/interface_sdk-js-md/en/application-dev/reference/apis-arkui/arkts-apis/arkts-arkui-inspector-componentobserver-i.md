@@ -14,54 +14,6 @@ The ComponentObserver is used to listen for layout, draw and drawChildren events
 import { inspector } from '@kit.ArkUI';
 ```
 
-## offDrawChildren
-
-```TypeScript
-offDrawChildren(callback?: Callback<int[]>): void
-```
-
-Deregisters a callback with the corresponding query condition by using the handle. This callback is not triggered when the child of component draw complete.
-
-**Since:** 24
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-ComponentObserver-offDrawChildren(callback?: Callback<int[]>): void--><!--Device-ComponentObserver-offDrawChildren(callback?: Callback<int[]>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int[]&gt; | No | callback of the listened event. |
-
-## offLayoutChildren
-
-```TypeScript
-offLayoutChildren(callback?: Callback<void>): void
-```
-
-Deregisters a callback with the corresponding query condition by using the handle. This callback will not be triggered when the child of component layout is complete.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-ComponentObserver-offLayoutChildren(callback?: Callback<void>): void--><!--Device-ComponentObserver-offLayoutChildren(callback?: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | callback of the listened event. |
-
 ## off('draw')
 
 ```TypeScript
@@ -110,7 +62,7 @@ Deregisters a callback with the corresponding query condition by using the handl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'drawChildren' | Yes | type of the listened event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | callback of the listened event. |
 
 ## off('layout')
 
@@ -137,13 +89,13 @@ Deregisters a callback with the corresponding query condition by using the handl
 | type | 'layout' | Yes | type of the listened event.<br>**Since:** 12 |
 | callback | () =&gt; void | No | callback of the listened event.<br>**Since:** 12 |
 
-## onDrawChildren
+## offDrawChildren
 
 ```TypeScript
-onDrawChildren(callback: Callback<int[]>): void
+offDrawChildren(callback?: Callback<int[]>): void
 ```
 
-Registers a callback with the corresponding query condition by using the handle. This callback is triggered when the child of component draw complete.
+Deregisters a callback with the corresponding query condition by using the handle. This callback is not triggered when the child of component draw complete.
 
 **Since:** 24
 
@@ -151,7 +103,7 @@ Registers a callback with the corresponding query condition by using the handle.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
-<!--Device-ComponentObserver-onDrawChildren(callback: Callback<int[]>): void--><!--Device-ComponentObserver-onDrawChildren(callback: Callback<int[]>): void-End-->
+<!--Device-ComponentObserver-offDrawChildren(callback?: Callback<int[]>): void--><!--Device-ComponentObserver-offDrawChildren(callback?: Callback<int[]>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -159,15 +111,15 @@ Registers a callback with the corresponding query condition by using the handle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int[]&gt; | Yes | callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int[]&gt; | No | callback of the listened event. |
 
-## onLayoutChildren
+## offLayoutChildren
 
 ```TypeScript
-onLayoutChildren(callback: Callback<void>): void
+offLayoutChildren(callback?: Callback<void>): void
 ```
 
-Registers a callback with the corresponding query condition by using the handle. This callback will be triggered when the child of component layout is complete.
+Deregisters a callback with the corresponding query condition by using the handle. This callback will not be triggered when the child of component layout is complete.
 
 **Since:** 23
 
@@ -175,7 +127,7 @@ Registers a callback with the corresponding query condition by using the handle.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-ComponentObserver-onLayoutChildren(callback: Callback<void>): void--><!--Device-ComponentObserver-onLayoutChildren(callback: Callback<void>): void-End-->
+<!--Device-ComponentObserver-offLayoutChildren(callback?: Callback<void>): void--><!--Device-ComponentObserver-offLayoutChildren(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -183,7 +135,7 @@ Registers a callback with the corresponding query condition by using the handle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | callback of the listened event. |
 
 ## on('draw')
 
@@ -233,7 +185,7 @@ Registers a callback with the corresponding query condition by using the handle.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'drawChildren' | Yes | type of the listened event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | callback of the listened event. |
 
 ## on('layout')
 
@@ -259,4 +211,52 @@ Registers a callback with the corresponding query condition by using the handle.
 | --- | --- | --- | --- |
 | type | 'layout' | Yes | type of the listened event.<br>**Since:** 12 |
 | callback | () =&gt; void | Yes | callback of the listened event.<br>**Since:** 12 |
+
+## onDrawChildren
+
+```TypeScript
+onDrawChildren(callback: Callback<int[]>): void
+```
+
+Registers a callback with the corresponding query condition by using the handle. This callback is triggered when the child of component draw complete.
+
+**Since:** 24
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-ComponentObserver-onDrawChildren(callback: Callback<int[]>): void--><!--Device-ComponentObserver-onDrawChildren(callback: Callback<int[]>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int[]&gt; | Yes | callback of the listened event. |
+
+## onLayoutChildren
+
+```TypeScript
+onLayoutChildren(callback: Callback<void>): void
+```
+
+Registers a callback with the corresponding query condition by using the handle. This callback will be triggered when the child of component layout is complete.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-ComponentObserver-onLayoutChildren(callback: Callback<void>): void--><!--Device-ComponentObserver-onLayoutChildren(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | callback of the listened event. |
 

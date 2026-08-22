@@ -33,7 +33,7 @@ getActiveNotificationCount obtains the number of
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | badgeNumber | int | Yes | Notification badge number to set. If **badgeNumber** is set to a value less than or equal to **0**, badges are cleared; if the value is greater than **99**, **99+** is displayed on the badge. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -47,6 +47,17 @@ getActiveNotificationCount obtains the number of
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let badgeNumber: number = 10;
+notificationManager.setBadgeNumber(badgeNumber).then(() => {
+  console.info(`Succeeded in setting badge number.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set badge number. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -110,14 +121,5 @@ getActiveNotificationCount obtains the number of
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let badgeNumber: number = 10;
-notificationManager.setBadgeNumber(badgeNumber).then(() => {
-  console.info(`Succeeded in setting badge number.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set badge number. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [setBadgeNumber](#setbadgenumber)
 

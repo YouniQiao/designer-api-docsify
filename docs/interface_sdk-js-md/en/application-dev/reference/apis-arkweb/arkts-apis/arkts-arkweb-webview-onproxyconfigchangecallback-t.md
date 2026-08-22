@@ -14,3 +14,7 @@ Callback invoked when the proxy configuration changes. A successful callback ind
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+**Examples**
+
+For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
+

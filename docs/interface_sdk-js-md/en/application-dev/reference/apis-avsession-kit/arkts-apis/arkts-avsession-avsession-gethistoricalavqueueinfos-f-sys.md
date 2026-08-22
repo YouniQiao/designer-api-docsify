@@ -30,7 +30,7 @@ Get history play list information records.
 | --- | --- | --- | --- |
 | maxSize | int | Yes | Specifies the maximum size of the returned value array. |
 | maxAppSize | int | Yes | Specifies the maximum app size of the returned value array. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;[AVQueueInfo](arkts-avsession-avsession-avqueueinfo-i-sys.md)&gt;&gt;&gt; | Yes | async callback for an array of AVQueueInfo. If provided '0' or not provided, the maximum value is determined by the system. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;[AVQueueInfo](arkts-avsession-avsession-avqueueinfo-i-sys.md)&gt;&gt;&gt; | Yes | async callback for an array of AVQueueInfo. If provided '0' or not provided, the maximum value is determined by the system. |
 
 **Error codes:**
 
@@ -42,6 +42,16 @@ Get history play list information records.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avSession.getHistoricalAVQueueInfos(3, 5).then((avQueueInfos: avSession.AVQueueInfo[]) => {
+  console.info(`getHistoricalAVQueueInfos : SUCCESS : avQueueInfos.length : ${avQueueInfos.length}`);
+}).catch((err: BusinessError) => {
+  console.error(`getHistoricalAVQueueInfos BusinessError: code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -96,13 +106,5 @@ Get history play list information records.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avSession.getHistoricalAVQueueInfos(3, 5).then((avQueueInfos: avSession.AVQueueInfo[]) => {
-  console.info(`getHistoricalAVQueueInfos : SUCCESS : avQueueInfos.length : ${avQueueInfos.length}`);
-}).catch((err: BusinessError) => {
-  console.error(`getHistoricalAVQueueInfos BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
+See [getHistoricalAVQueueInfos](#gethistoricalavqueueinfos)
 

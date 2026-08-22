@@ -56,6 +56,41 @@ try {
 }
 ```
 
+ArkTS-Dyn示例:
+
+```TypeScript
+import { freeInstall } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  freeInstall.getDispatchInfo().then(data => {
+    console.info('Operation succeed:' + JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    console.error('Operation failed:' + JSON.stringify(err));
+  });
+} catch (err) {
+  console.error('Operation failed:' + JSON.stringify(err));
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { freeInstall } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  freeInstall.getDispatchInfo().then((data: freeInstall.DispatchInfo) => {
+    console.info('Operation succeed:' + JSON.stringify(data));
+  }).catch((err: Error) => {
+    console.error('Operation failed:' + JSON.stringify(err as BusinessError));
+  });
+} catch (err) {
+  console.error('Operation failed:' + JSON.stringify(err));
+}
+```
+
 
 ## getDispatchInfo
 
@@ -91,38 +126,5 @@ function getDispatchInfo(): Promise<DispatchInfo>
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  freeInstall.getDispatchInfo().then(data => {
-    console.info('Operation succeed:' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error('Operation failed:' + JSON.stringify(err));
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { freeInstall } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  freeInstall.getDispatchInfo().then((data: freeInstall.DispatchInfo) => {
-    console.info('Operation succeed:' + JSON.stringify(data));
-  }).catch((err: Error) => {
-    console.error('Operation failed:' + JSON.stringify(err as BusinessError));
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```
+参见 [getDispatchInfo](#getdispatchinfo)
 

@@ -36,7 +36,7 @@ Closes a distributed KV store. This API uses an asynchronous callback to return 
 | --- | --- | --- | --- |
 | appId | string | Yes | Bundle name of the application. The value cannot be empty or exceed 256 bytes. |
 | storeId | string | Yes | Unique identifier of the KV store to close. The KV store ID allows only letters, digits, and underscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md) in length. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -86,6 +86,43 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let kvStore: distributedKVStore.SingleKVStore | null = null;
+
+const options: distributedKVStore.Options = {
+  createIfMissing: true,
+  encrypt: false,
+  backup: false,
+  autoSync: false,
+  kvStoreType: distributedKVStore.KVStoreType.SINGLE_VERSION,
+  schema: undefined,
+  securityLevel: distributedKVStore.SecurityLevel.S3
+}
+try {
+  kvManager.getKVStore<distributedKVStore.SingleKVStore>('storeId', options).then(async (store: distributedKVStore.SingleKVStore | null) => {
+    console.info('Succeeded in getting KVStore');
+    kvStore = store;
+    kvStore = null;
+    store = null;
+    if (kvManager != undefined) {
+      // appId is the one in createKVManager.
+      kvManager.closeKVStore(appId, 'storeId').then(() => {
+        console.info('Succeeded in closing KVStore');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to close KVStore.code is ${err.code},message is ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get KVStore.code is ${err.code},message is ${err.message}`);
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to close KVStore.code is ${error.code},message is ${error.message}`);
+}
+```
+
 ## closeKVStore
 
 ```TypeScript
@@ -122,6 +159,10 @@ Closes a distributed KV store. This API uses a promise to return the result.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. |
 
+**Examples**
+
+See [closeKVStore](#closekvstore)
+
 ## deleteKVStore
 
 ```TypeScript
@@ -144,7 +185,7 @@ Deletes a distributed KV store. This API uses an asynchronous callback to return
 | --- | --- | --- | --- |
 | appId | string | Yes | Bundle name of the application. The value cannot be empty or exceed 256 bytes. |
 | storeId | string | Yes | Unique identifier of the KV store to delete. The KV store ID allows only letters, digits, and underscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md) in length. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -196,6 +237,43 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let kvStore: distributedKVStore.SingleKVStore | null = null;
+
+const options: distributedKVStore.Options = {
+  createIfMissing: true,
+  encrypt: false,
+  backup: false,
+  autoSync: false,
+  kvStoreType: distributedKVStore.KVStoreType.SINGLE_VERSION,
+  schema: undefined,
+  securityLevel: distributedKVStore.SecurityLevel.S3
+}
+try {
+  kvManager.getKVStore<distributedKVStore.SingleKVStore>('storeId', options).then(async (store: distributedKVStore.SingleKVStore | null) => {
+    console.info('Succeeded in getting KVStore');
+    kvStore = store;
+    kvStore = null;
+    store = null;
+    if (kvManager != undefined) {
+      // appId is the one in createKVManager.
+      kvManager.deleteKVStore(appId, 'storeId').then(() => {
+        console.info('Succeeded in deleting KVStore');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to delete KVStore.code is ${err.code},message is ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get KVStore.code is ${err.code},message is ${err.message}`);
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to delete KVStore.code is ${error.code},message is ${error.message}`);
+}
+```
+
 ## deleteKVStore
 
 ```TypeScript
@@ -233,6 +311,10 @@ Deletes a distributed KV store. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Parameter verification failed. |
 | [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
 
+**Examples**
+
+See [deleteKVStore](#deletekvstore)
+
 ## getAllKVStoreId
 
 ```TypeScript
@@ -254,7 +336,7 @@ Obtains the IDs of all distributed KV stores that are created by getKVStore and 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appId | string | Yes | Bundle name of the application. The value cannot be empty or exceed 256 bytes. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string[]&gt; | Yes | Callback used to return the IDs of all the distributed KV stores created. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | Yes | Callback used to return the IDs of all the distributed KV stores created. |
 
 **Error codes:**
 
@@ -276,6 +358,24 @@ try {
     }
     console.info('Succeeded in getting AllKVStoreId');
     console.info(`GetAllKVStoreId size = ${data.length}`);
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to get AllKVStoreId.code is ${error.code},message is ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // appId is the one in createKVManager.
+  console.info('GetAllKVStoreId');
+  kvManager.getAllKVStoreId(appId).then((data: string[]) => {
+    console.info('Succeeded in getting AllKVStoreId');
+    console.info(`GetAllKVStoreId size = ${data.length}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get AllKVStoreId.code is ${err.code},message is ${err.message}`);
   });
 } catch (e) {
   let error = e as BusinessError;
@@ -319,23 +419,7 @@ Obtains the IDs of all distributed KV stores that are created by getKVStore and 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // appId is the one in createKVManager.
-  console.info('GetAllKVStoreId');
-  kvManager.getAllKVStoreId(appId).then((data: string[]) => {
-    console.info('Succeeded in getting AllKVStoreId');
-    console.info(`GetAllKVStoreId size = ${data.length}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get AllKVStoreId.code is ${err.code},message is ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to get AllKVStoreId.code is ${error.code},message is ${error.message}`);
-}
-```
+See [getAllKVStoreId](#getallkvstoreid)
 
 ## getKVStore
 
@@ -367,7 +451,7 @@ Creates and obtains a distributed KV store based on the specified **options** an
 | --- | --- | --- | --- |
 | storeId | string | Yes | Unique identifier of the KV store. The KV store ID allows only letters, digits, and underscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md) in length. |
 | options | Options | Yes | Configuration of the KV store to create. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | Yes | Callback used to return the **SingleKVStore** or **DeviceKVStore** instance created. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the **SingleKVStore** or **DeviceKVStore** instance created. |
 
 **Error codes:**
 
@@ -403,6 +487,31 @@ try {
        // Perform subsequent data operations, such as adding, deleting, modifying, and querying data, and subscribing to data changes.
        // ...
     }
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let kvStore: distributedKVStore.SingleKVStore | null = null;
+try {
+  const options: distributedKVStore.Options = {
+    createIfMissing: true,
+    encrypt: false,
+    backup: false,
+    autoSync: false,
+    kvStoreType: distributedKVStore.KVStoreType.SINGLE_VERSION,
+    securityLevel: distributedKVStore.SecurityLevel.S3
+  };
+  kvManager.getKVStore<distributedKVStore.SingleKVStore>('storeId', options).then((store: distributedKVStore.SingleKVStore) => {
+    console.info("Succeeded in getting KVStore");
+    kvStore = store;
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get KVStore.code is ${err.code},message is ${err.message}`);
   });
 } catch (e) {
   let error = e as BusinessError;
@@ -457,25 +566,46 @@ Creates and obtains a distributed KV store based on the specified **options** an
 
 **Examples**
 
+See [getKVStore](#getkvstore)
+
+## off_distributedDataServiceDie
+
+```TypeScript
+off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
+```
+
+Unsubscribes from the termination (death) of the distributed data service. The **deathCallback** parameter must be a callback registered for subscribing to the termination of the distributed data service. Otherwise, the unsubscription will fail.
+
+**Since:** 9
+
+<!--Device-KVManager-off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void--><!--Device-KVManager-off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | 'distributedDataServiceDie' | Yes | Event type. The value is **distributedDataServiceDie**, which indicates the termination of the distributed data service. |
+| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the **distributedDataServiceDie** event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
+
+**Examples**
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let kvStore: distributedKVStore.SingleKVStore | null = null;
 try {
-  const options: distributedKVStore.Options = {
-    createIfMissing: true,
-    encrypt: false,
-    backup: false,
-    autoSync: false,
-    kvStoreType: distributedKVStore.KVStoreType.SINGLE_VERSION,
-    securityLevel: distributedKVStore.SecurityLevel.S3
-  };
-  kvManager.getKVStore<distributedKVStore.SingleKVStore>('storeId', options).then((store: distributedKVStore.SingleKVStore) => {
-    console.info("Succeeded in getting KVStore");
-    kvStore = store;
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get KVStore.code is ${err.code},message is ${err.message}`);
-  });
+  console.info('KVManagerOff');
+  const deathCallback = () => {
+    console.info('death callback call');
+  }
+  kvManager.off('distributedDataServiceDie', deathCallback);
 } catch (e) {
   let error = e as BusinessError;
   console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
@@ -502,19 +632,19 @@ Unregister the death callback. Not notification will be received when the data m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | the data manager service is terminated callback which has been registered. |
+| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the data manager service is terminated callback which has been registered. |
 
-## off_distributedDataServiceDie
+## on_distributedDataServiceDie
 
 ```TypeScript
-off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
+on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
 ```
 
-Unsubscribes from the termination (death) of the distributed data service. The **deathCallback** parameter must be a callback registered for subscribing to the termination of the distributed data service. Otherwise, the unsubscription will fail.
+Subscribes to the termination (death) of the distributed data service. If the service is terminated, you need to register the callbacks for data change notifications and cross-device sync completion notifications again. In addition, an error will be returned for a sync operation.
 
 **Since:** 9
 
-<!--Device-KVManager-off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void--><!--Device-KVManager-off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void-End-->
+<!--Device-KVManager-on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void--><!--Device-KVManager-on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -523,7 +653,7 @@ Unsubscribes from the termination (death) of the distributed data service. The *
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'distributedDataServiceDie' | Yes | Event type. The value is **distributedDataServiceDie**, which indicates the termination of the distributed data service. |
-| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the **distributedDataServiceDie** event. |
+| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the subscription is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -537,11 +667,11 @@ Unsubscribes from the termination (death) of the distributed data service. The *
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  console.info('KVManagerOff');
+  console.info('KVManagerOn');
   const deathCallback = () => {
     console.info('death callback call');
   }
-  kvManager.off('distributedDataServiceDie', deathCallback);
+  kvManager.on('distributedDataServiceDie', deathCallback);
 } catch (e) {
   let error = e as BusinessError;
   console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
@@ -568,49 +698,5 @@ Register a death callback to get notification when the data manager service is t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | callback to be invoked when the data manager service is terminated. |
-
-## on_distributedDataServiceDie
-
-```TypeScript
-on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
-```
-
-Subscribes to the termination (death) of the distributed data service. If the service is terminated, you need to register the callbacks for data change notifications and cross-device sync completion notifications again. In addition, an error will be returned for a sync operation.
-
-**Since:** 9
-
-<!--Device-KVManager-on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void--><!--Device-KVManager-on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | 'distributedDataServiceDie' | Yes | Event type. The value is **distributedDataServiceDie**, which indicates the termination of the distributed data service. |
-| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the subscription is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  console.info('KVManagerOn');
-  const deathCallback = () => {
-    console.info('death callback call');
-  }
-  kvManager.on('distributedDataServiceDie', deathCallback);
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
-}
-```
+| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | callback to be invoked when the data manager service is terminated. |
 

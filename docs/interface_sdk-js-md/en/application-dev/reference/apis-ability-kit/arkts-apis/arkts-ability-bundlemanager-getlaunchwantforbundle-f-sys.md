@@ -30,7 +30,7 @@ Obtains the Want used to launch the bundle based on the given bundle name and us
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Want](arkts-ability-appabilitywant-want-c.md)&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the Want. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the Want. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -67,6 +67,47 @@ try {
 }
 ```
 
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName = 'com.example.myapplication';
+
+try {
+  bundleManager.getLaunchWantForBundle(bundleName, (err, data) => {
+    if (err) {
+      hilog.error(0x0000, 'testTag', 'getLaunchWantForBundle failed: %{public}s', err.message);
+    } else {
+      hilog.info(0x0000, 'testTag', 'getLaunchWantForBundle successfully: %{public}s', JSON.stringify(data));
+    }
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getLaunchWantForBundle failed: %{public}s', message);
+}
+```
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName = 'com.example.myapplication';
+let userId = 100;
+
+try {
+  bundleManager.getLaunchWantForBundle(bundleName, userId).then((data) => {
+    hilog.info(0x0000, 'testTag', 'getLaunchWantForBundle successfully. Data: %{public}s', JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'getLaunchWantForBundle failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getLaunchWantForBundle failed. Cause: %{public}s', message);
+}
+```
+
 
 ## getLaunchWantForBundle
 
@@ -91,7 +132,7 @@ Obtains the Want used to launch the bundle based on the given bundle name. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Want](arkts-ability-appabilitywant-want-c.md)&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the Want. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the Want. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -105,26 +146,7 @@ Obtains the Want used to launch the bundle based on the given bundle name. This 
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = 'com.example.myapplication';
-
-try {
-  bundleManager.getLaunchWantForBundle(bundleName, (err, data) => {
-    if (err) {
-      hilog.error(0x0000, 'testTag', 'getLaunchWantForBundle failed: %{public}s', err.message);
-    } else {
-      hilog.info(0x0000, 'testTag', 'getLaunchWantForBundle successfully: %{public}s', JSON.stringify(data));
-    }
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getLaunchWantForBundle failed: %{public}s', message);
-}
-```
+See [getLaunchWantForBundle](#getlaunchwantforbundle)
 
 
 ## getLaunchWantForBundle
@@ -156,7 +178,7 @@ Obtains the Want used to launch the bundle based on the given bundle name and us
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Want](arkts-ability-appabilitywant-want-c.md)&gt; | Promise used to return the Want object obtained. |
+| Promise&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Promise used to return the Want object obtained. |
 
 **Error codes:**
 
@@ -171,23 +193,5 @@ Obtains the Want used to launch the bundle based on the given bundle name and us
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = 'com.example.myapplication';
-let userId = 100;
-
-try {
-  bundleManager.getLaunchWantForBundle(bundleName, userId).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getLaunchWantForBundle successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getLaunchWantForBundle failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getLaunchWantForBundle failed. Cause: %{public}s', message);
-}
-```
+See [getLaunchWantForBundle](#getlaunchwantforbundle)
 

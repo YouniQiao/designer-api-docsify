@@ -28,7 +28,7 @@ If the read, write, or read and write permission verification fails, the error c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file or directory. |
-| mode | [AccessModeType](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-accessmodetype-e.md) | No | Permission on the file or directory to check. If this parameter is left blank, the system checks whether the file exists. |
+| mode | [AccessModeType](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-accessmodetype-e.md) | No | Permission on the file or directory to check. If this parameter is left blank, the system checks whether the file exists. |
 
 **Return value:**
 
@@ -75,7 +75,7 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file or directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the file exists; the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the file exists; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -118,8 +118,8 @@ If the read, write, or read and write permission verification fails, the error c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file or directory. |
-| mode | [AccessModeType](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-accessmodetype-e.md) | Yes | Permission on the file or directory to check. |
-| flag | [AccessFlagType](../../apis-core-file-kit/arkts-apis/arkts-corefile-filefs-accessflagtype-e.md) | Yes | Position of the file or directory to check. |
+| mode | [AccessModeType](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-accessmodetype-e.md) | Yes | Permission on the file or directory to check. |
+| flag | [AccessFlagType](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-accessflagtype-e.md) | Yes | Position of the file or directory to check. |
 
 **Return value:**
 

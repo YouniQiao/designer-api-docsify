@@ -43,7 +43,7 @@ Adds an application account with the given name. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -51,6 +51,24 @@ Adds an application account with the given name. This API uses an asynchronous c
 import { BusinessError } from '@kit.BasicServicesKit';
 
 appAccountManager.addAccount('WangWu', (err: BusinessError) => { 
+  console.error(`addAccount err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.addAccount('LiSi', 'token101', (err: BusinessError) => { 
+  console.error(`addAccount err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.addAccount('LiSi', 'token101').then(()=> { 
+  console.info('addAccount Success');
+}).catch((err: BusinessError) => {
   console.error(`addAccount err: code is ${err.code}, message is ${err.message}`);
 });
 ```
@@ -85,17 +103,11 @@ Adds an application account name and additional information. This API uses an as
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | extraInfo | string | Yes | Additional information (information that can be converted to the string type). It cannot contain sensitive information, such as the application account password and token. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.addAccount('LiSi', 'token101', (err: BusinessError) => { 
-  console.error(`addAccount err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [addAccount](#addaccount)
 
 ## addAccount
 
@@ -136,15 +148,7 @@ Adds an application account name and additional information. This API uses a pro
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.addAccount('LiSi', 'token101').then(()=> { 
-  console.info('addAccount Success');
-}).catch((err: BusinessError) => {
-  console.error(`addAccount err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [addAccount](#addaccount)
 
 ## addAccountImplicitly
 
@@ -183,6 +187,47 @@ Adds an application account implicitly based on the specified owner. This API us
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | options | { [key: string]: any } | Yes | Options for the authentication, which can be set as required. |
 | callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Yes | Authenticator callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+
+  onResultCallback(code: number, result: Record<string, Object>): void {
+    console.info('resultCode: ' + code);
+    console.info('result: ' + JSON.stringify(result));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(() => {
+      console.info('startAbility successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    appAccountManager.addAccountImplicitly('com.example.accountjsdemo', 'getSocialData', {}, {
+      onResult: this.onResultCallback,
+      onRequestRedirected: this.onRequestRedirectedCallback
+    });
+  }
+
+  build() {}
+}
+```
 
 ## auth
 
@@ -265,50 +310,6 @@ struct Index {
 }
 ```
 
-## auth
-
-```TypeScript
-auth(
-      name: string,
-      owner: string,
-      authType: string,
-      options: Record<string, Object>,
-      callback: AuthCallback
-    ): void
-```
-
-Authenticates an application account. This API uses an asynchronous callback to return the result.
-
-**Since:** 9
-
-<!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, Object>,      callback: AuthCallback    ): void--><!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, Object>,      callback: AuthCallback    ): void-End-->
-
-**System capability:** SystemCapability.Account.AppAccount
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
-| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| options | Record&lt;string, Object&gt; | Yes | Options for the authentication. |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner, authType or options. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
-
-**Examples**
-
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { Want, common } from '@kit.AbilityKit';
@@ -363,6 +364,52 @@ auth(
       name: string,
       owner: string,
       authType: string,
+      options: Record<string, Object>,
+      callback: AuthCallback
+    ): void
+```
+
+Authenticates an application account. This API uses an asynchronous callback to return the result.
+
+**Since:** 9
+
+<!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, Object>,      callback: AuthCallback    ): void--><!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, Object>,      callback: AuthCallback    ): void-End-->
+
+**System capability:** SystemCapability.Account.AppAccount
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| options | Record&lt;string, Object&gt; | Yes | Options for the authentication. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner, authType or options. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+
+**Examples**
+
+See [auth](#auth)
+
+## auth
+
+```TypeScript
+auth(
+      name: string,
+      owner: string,
+      authType: string,
       options: Record<string, RecordData>,
       callback: AuthCallback
     ): void
@@ -396,6 +443,10 @@ Authenticates an application account. This API uses an asynchronous callback to 
 | [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
 | [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 | [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+
+**Examples**
+
+See [auth](#auth)
 
 ## authenticate
 
@@ -437,6 +488,47 @@ Authenticates an application account. This API uses an asynchronous callback to 
 | options | { [key: string]: any } | Yes | Options for the authentication. |
 | callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+
+  onResultCallback(code: number, result: Record<string, Object>): void {
+    console.info('resultCode: ' + code);
+    console.info('result: ' + JSON.stringify(result));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(() => {
+      console.info('startAbility successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    appAccountManager.authenticate('LiSi', 'com.example.accountjsdemo', 'getSocialData', {}, {
+      onResult: this.onResultCallback,
+      onRequestRedirected: this.onRequestRedirectedCallback
+    });
+  }
+
+  build() {}
+}
+```
+
 ## checkAccountLabels
 
 ```TypeScript
@@ -458,7 +550,7 @@ Checks whether an application account has specific labels. This API uses an asyn
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
 | labels | Array&lt;string&gt; | Yes | Labels to check. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** can be **true** or **false**. The value **true** means the application account has the labels; the value **false** means the opposite. If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** can be **true** or **false**. The value **true** means the application account has the labels; the value **false** means the opposite. If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -492,6 +584,25 @@ try {
   console.error(`checkAccountLabels exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let labels = ['student'];
+try {
+  appAccountManager.checkAccountLabels('zhangsan', 'com.example.accountjsdemo', labels).then((
+    hasAllLabels: boolean) => {
+    console.info('checkAccountLabels successfully: ' + hasAllLabels);
+  }).catch((err: BusinessError) => {
+    console.error(`checkAccountLabels failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkAccountLabels exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](arkts-basicservices-appaccount-authenticator-c.md#getremoteobject) API.
 
 ## checkAccountLabels
 
@@ -535,22 +646,7 @@ Checks whether an application account has specific labels. This API uses a promi
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let labels = ['student'];
-try {
-  appAccountManager.checkAccountLabels('zhangsan', 'com.example.accountjsdemo', labels).then((
-    hasAllLabels: boolean) => {
-    console.info('checkAccountLabels successfully: ' + hasAllLabels);
-  }).catch((err: BusinessError) => {
-    console.error(`checkAccountLabels failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`checkAccountLabels exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [checkAccountLabels](#checkaccountlabels)
 
 ## checkAppAccess
 
@@ -572,7 +668,7 @@ Checks whether an application can access the data of an account. This API uses a
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the application can access the account data; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the application can access the account data; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -597,6 +693,21 @@ try {
         console.info('checkAppAccess successfully');
       }
     });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkAppAccess exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  appAccountManager.checkAppAccess('ZhangSan', 'com.example.accountjsdemo').then((isAccessible: boolean) => {
+    console.info('checkAppAccess successfully, isAccessible: ' + isAccessible);
+  }).catch((err: BusinessError) => {
+    console.error(`checkAppAccess failed, code is ${err.code}, message is ${err.message}`);
+  });
 } catch (e) {
   const err = e as BusinessError;
   console.error(`checkAppAccess exception: code is ${err.code}, message is ${err.message}`);
@@ -641,20 +752,7 @@ Checks whether an application can access the data of an account. This API uses a
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appAccountManager.checkAppAccess('ZhangSan', 'com.example.accountjsdemo').then((isAccessible: boolean) => {
-    console.info('checkAppAccess successfully, isAccessible: ' + isAccessible);
-  }).catch((err: BusinessError) => {
-    console.error(`checkAppAccess failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`checkAppAccess exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [checkAppAccess](#checkappaccess)
 
 ## checkAppAccountSyncEnable
 
@@ -687,7 +785,7 @@ Checks whether data synchronization is enabled for an application account. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
 
 **Examples**
 
@@ -700,6 +798,16 @@ appAccountManager.checkAppAccountSyncEnable('ZhangSan', (err: BusinessError, res
   } else {
     console.info('checkAppAccountSyncEnable result: ' + result);
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.checkAppAccountSyncEnable('ZhangSan').then((data: boolean) => { 
+  console.info('checkAppAccountSyncEnable, result: ' + data);
+}).catch((err: BusinessError) => {
+  console.error(`checkAppAccountSyncEnable err: code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -742,15 +850,7 @@ Checks whether data synchronization is enabled for an application account. This 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.checkAppAccountSyncEnable('ZhangSan').then((data: boolean) => { 
-  console.info('checkAppAccountSyncEnable, result: ' + data);
-}).catch((err: BusinessError) => {
-  console.error(`checkAppAccountSyncEnable err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [checkAppAccountSyncEnable](#checkappaccountsyncenable)
 
 ## checkAuthTokenVisibility
 
@@ -773,7 +873,7 @@ Checks the visibility of an authorization token of the specified authentication 
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** can be **true** (the authorization token is visible to the application) or **false** (the authorization token is not visible to the application). If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** can be **true** (the authorization token is visible to the application) or **false** (the authorization token is not visible to the application). If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -799,6 +899,22 @@ try {
         console.info('checkAuthTokenVisibility successfully, isVisible: ' + isVisible);
       }
     });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkAuthTokenVisibility exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  appAccountManager.checkAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.accountjsdemo').then((
+    isVisible: boolean) => {
+    console.info('checkAuthTokenVisibility successfully, isVisible: ' + isVisible);
+  }).catch((err: BusinessError) => {
+    console.error(`checkAuthTokenVisibility failed, code is ${err.code}, message is ${err.message}`);
+  });
 } catch (e) {
   const err = e as BusinessError;
   console.error(`checkAuthTokenVisibility exception: code is ${err.code}, message is ${err.message}`);
@@ -845,21 +961,7 @@ Checks the visibility of an authorization token of the specified authentication 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appAccountManager.checkAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.accountjsdemo').then((
-    isVisible: boolean) => {
-    console.info('checkAuthTokenVisibility successfully, isVisible: ' + isVisible);
-  }).catch((err: BusinessError) => {
-    console.error(`checkAuthTokenVisibility failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`checkAuthTokenVisibility exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [checkAuthTokenVisibility](#checkauthtokenvisibility)
 
 ## checkDataSyncEnabled
 
@@ -882,7 +984,7 @@ Checks whether data synchronization is enabled for an application account. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -906,6 +1008,21 @@ try {
     } else {
       console.info('checkDataSyncEnabled successfully, isEnabled: ' + isEnabled);
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkDataSyncEnabled err: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  appAccountManager.checkDataSyncEnabled('ZhangSan').then((isEnabled: boolean) => {
+      console.info('checkDataSyncEnabled successfully, isEnabled: ' + isEnabled);
+  }).catch((err: BusinessError) => {
+    console.error(`checkDataSyncEnabled failed, err: code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -953,20 +1070,7 @@ Checks whether data synchronization is enabled for an application account. This 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appAccountManager.checkDataSyncEnabled('ZhangSan').then((isEnabled: boolean) => {
-      console.info('checkDataSyncEnabled successfully, isEnabled: ' + isEnabled);
-  }).catch((err: BusinessError) => {
-    console.error(`checkDataSyncEnabled failed, err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`checkDataSyncEnabled err: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [checkDataSyncEnabled](#checkdatasyncenabled)
 
 ## checkOAuthTokenVisibility
 
@@ -1004,7 +1108,7 @@ Checks the visibility of an authorization token of the specified authentication 
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** can be **true** (the authorization token is visible to the application) or **false** (the authorization token is not visible to the application). If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** can be **true** (the authorization token is visible to the application) or **false** (the authorization token is not visible to the application). If the operation fails, **err** is an error object. |
 
 **Examples**
 
@@ -1019,6 +1123,17 @@ appAccountManager.checkOAuthTokenVisibility('LiSi', 'getSocialData', 'com.exampl
       console.info('checkOAuthTokenVisibility isVisible: ' + data);
     }
   });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.checkOAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.accountjsdemo').then((
+  data: boolean) => {
+  console.info('checkOAuthTokenVisibility isVisible: ' + data);
+}).catch((err: BusinessError) => {
+  console.error(`checkOAuthTokenVisibility err: code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 ## checkOAuthTokenVisibility
@@ -1061,16 +1176,7 @@ Checks the visibility of an authorization token of the specified authentication 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.checkOAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.accountjsdemo').then((
-  data: boolean) => {
-  console.info('checkOAuthTokenVisibility isVisible: ' + data);
-}).catch((err: BusinessError) => {
-  console.error(`checkOAuthTokenVisibility err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [checkOAuthTokenVisibility](#checkoauthtokenvisibility)
 
 ## createAccount
 
@@ -1091,7 +1197,7 @@ Creates an application account with the given name. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1122,40 +1228,6 @@ try {
 }
 ```
 
-## createAccount
-
-```TypeScript
-createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallback<void>): void
-```
-
-Creates an application account with custom data. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-<!--Device-AppAccountManager-createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Account.AppAccount
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| options | [CreateAccountOptions](arkts-basicservices-appaccount-createaccountoptions-i.md) | Yes | Options for creating the application account. You can customize data based on service requirements, but do not add sensitive data (such as passwords and tokens). |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or options. |
-| [12300004](../errorcode-account.md#12300004-account-already-exists) | Account already exists. |
-| [12300007](../errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
-
-**Examples**
-
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -1177,6 +1249,62 @@ try {
   console.error(`createAccount exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: appAccount.CreateAccountOptions = {
+  customData: {
+    age: '10'
+  }
+}
+try {
+  appAccountManager.createAccount('LiSi', options).then(() => {
+    console.info('createAccount successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`createAccount failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`createAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+## createAccount
+
+```TypeScript
+createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallback<void>): void
+```
+
+Creates an application account with custom data. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+<!--Device-AppAccountManager-createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Account.AppAccount
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| options | [CreateAccountOptions](arkts-basicservices-appaccount-createaccountoptions-i.md) | Yes | Options for creating the application account. You can customize data based on service requirements, but do not add sensitive data (such as passwords and tokens). |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or options. |
+| [12300004](../errorcode-account.md#12300004-account-already-exists) | Account already exists. |
+| [12300007](../errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
+
+**Examples**
+
+See [createAccount](#createaccount)
 
 ## createAccount
 
@@ -1217,25 +1345,7 @@ Creates an application account with custom data. This API uses a promise to retu
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: appAccount.CreateAccountOptions = {
-  customData: {
-    age: '10'
-  }
-}
-try {
-  appAccountManager.createAccount('LiSi', options).then(() => {
-    console.info('createAccount successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`createAccount failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`createAccount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [createAccount](#createaccount)
 
 ## createAccountImplicitly
 
@@ -1315,42 +1425,6 @@ struct Index {
 }
 ```
 
-## createAccountImplicitly
-
-```TypeScript
-createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, callback: AuthCallback): void
-```
-
-Creates an application account implicitly based on the specified account owner and options. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-<!--Device-AppAccountManager-createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, callback: AuthCallback): void-End-->
-
-**System capability:** SystemCapability.Account.AppAccount
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
-| options | [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) | Yes | Options for implicitly creating the account. |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid owner or options. |
-| [12300007](../errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
-| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
-| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
-
-**Examples**
-
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { Want, common } from '@kit.AbilityKit';
@@ -1398,6 +1472,44 @@ struct Index {
 }
 ```
 
+## createAccountImplicitly
+
+```TypeScript
+createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, callback: AuthCallback): void
+```
+
+Creates an application account implicitly based on the specified account owner and options. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+<!--Device-AppAccountManager-createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, callback: AuthCallback): void-End-->
+
+**System capability:** SystemCapability.Account.AppAccount
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| options | [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) | Yes | Options for implicitly creating the account. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid owner or options. |
+| [12300007](../errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
+| [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300113](../errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [12300114](../errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+
+**Examples**
+
+See [createAccountImplicitly](#createaccountimplicitly)
+
 ## deleteAccount
 
 ```TypeScript
@@ -1427,7 +1539,7 @@ Deletes an application account. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -1435,6 +1547,16 @@ Deletes an application account. This API uses an asynchronous callback to return
 import { BusinessError } from '@kit.BasicServicesKit';
 
 appAccountManager.deleteAccount('ZhaoLiu', (err: BusinessError) => { 
+  console.error(`deleteAccount err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.deleteAccount('ZhaoLiu').then(() => { 
+  console.info('deleteAccount Success');
+}).catch((err: BusinessError) => {
   console.error(`deleteAccount err: code is ${err.code}, message is ${err.message}`);
 });
 ```
@@ -1477,15 +1599,7 @@ Deletes an application account. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.deleteAccount('ZhaoLiu').then(() => { 
-  console.info('deleteAccount Success');
-}).catch((err: BusinessError) => {
-  console.error(`deleteAccount err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [deleteAccount](#deleteaccount)
 
 ## deleteAuthToken
 
@@ -1509,7 +1623,7 @@ Deletes the authorization token of the specified authentication type for an appl
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | token | string | Yes | Authorization token. The value cannot exceed 1024 characters. If the token does not exist, no operation is performed. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1535,6 +1649,21 @@ try {
         console.info('deleteAuthToken successfully');
       }
     });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`deleteAuthToken exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  appAccountManager.deleteAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData', 'xxxxx').then(() => {
+    console.info('deleteAuthToken successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`deleteAuthToken failed, code is ${err.code}, message is ${err.message}`);
+  });
 } catch (e) {
   const err = e as BusinessError;
   console.error(`deleteAuthToken exception: code is ${err.code}, message is ${err.message}`);
@@ -1582,20 +1711,7 @@ Deletes the authorization token of the specified authentication type for an appl
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appAccountManager.deleteAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData', 'xxxxx').then(() => {
-    console.info('deleteAuthToken successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`deleteAuthToken failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`deleteAuthToken exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [deleteAuthToken](#deleteauthtoken)
 
 ## deleteCredential
 
@@ -1617,7 +1733,7 @@ Deletes the credential of the specified type from an application account. This A
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1641,6 +1757,21 @@ try {
     } else {
       console.info('deleteCredential successfully');
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`deleteCredential exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  appAccountManager.deleteCredential('zhangsan', 'PIN_SIX').then(() => {
+    console.info('deleteCredential successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`deleteCredential failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -1687,20 +1818,7 @@ Deletes the credential of the specified type from an application account. This A
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appAccountManager.deleteCredential('zhangsan', 'PIN_SIX').then(() => {
-    console.info('deleteCredential successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`deleteCredential failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`deleteCredential exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [deleteCredential](#deletecredential)
 
 ## deleteOAuthToken
 
@@ -1734,7 +1852,7 @@ Deletes the authorization token of the specified authentication type for an appl
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | token | string | Yes | Authorization token. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -1749,6 +1867,16 @@ appAccountManager.deleteOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSoci
       console.info('deleteOAuthToken successful.');
     }
   });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.deleteOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData', 'xxxxx').then(() => {
+  console.info('deleteOAuthToken successfully');
+}).catch((err: BusinessError) => {
+  console.error(`deleteOAuthToken err: code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 ## deleteOAuthToken
@@ -1792,15 +1920,7 @@ Deletes the authorization token of the specified authentication type for an appl
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.deleteOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData', 'xxxxx').then(() => {
-  console.info('deleteOAuthToken successfully');
-}).catch((err: BusinessError) => {
-  console.error(`deleteOAuthToken err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [deleteOAuthToken](#deleteoauthtoken)
 
 ## disableAppAccess
 
@@ -1832,7 +1952,7 @@ Disables an application account from accessing an application. This API uses an 
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -1840,6 +1960,16 @@ Disables an application account from accessing an application. This API uses an 
 import { BusinessError } from '@kit.BasicServicesKit';
 
 appAccountManager.disableAppAccess('ZhangSan', 'com.example.accountjsdemo', (err: BusinessError) => { 
+  console.error(`disableAppAccess err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.disableAppAccess('ZhangSan', 'com.example.accountjsdemo').then(() => { 
+  console.info('disableAppAccess Success');
+}).catch((err: BusinessError) => {
   console.error(`disableAppAccess err: code is ${err.code}, message is ${err.message}`);
 });
 ```
@@ -1883,15 +2013,7 @@ Disables an application account from accessing an application. This API uses a p
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.disableAppAccess('ZhangSan', 'com.example.accountjsdemo').then(() => { 
-  console.info('disableAppAccess Success');
-}).catch((err: BusinessError) => {
-  console.error(`disableAppAccess err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [disableAppAccess](#disableappaccess)
 
 ## enableAppAccess
 
@@ -1923,7 +2045,7 @@ Enables an application account to access an application. This API uses an asynch
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -1936,6 +2058,16 @@ appAccountManager.enableAppAccess('ZhangSan', 'com.example.accountjsdemo', (err:
   } else {
     console.info('enableAppAccess successful.');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.enableAppAccess('ZhangSan', 'com.example.accountjsdemo').then(() => { 
+  console.info('enableAppAccess Success');
+}).catch((err: BusinessError) => {
+  console.error(`enableAppAccess err: code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -1978,15 +2110,7 @@ Enables an application account to access an application. This API uses a promise
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.enableAppAccess('ZhangSan', 'com.example.accountjsdemo').then(() => { 
-  console.info('enableAppAccess Success');
-}).catch((err: BusinessError) => {
-  console.error(`enableAppAccess err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [enableAppAccess](#enableappaccess)
 
 ## getAccountCredential
 
@@ -2018,7 +2142,7 @@ Obtains the credential of an application account. This API uses an asynchronous 
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the credential obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the credential obtained. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -2031,6 +2155,16 @@ appAccountManager.getAccountCredential('ZhangSan', 'credentialType001', (err: Bu
   } else {
     console.info('getAccountCredential result: ' + result);
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getAccountCredential('ZhangSan', 'credentialType001').then((data: string) => { 
+  console.info('getAccountCredential, result: ' + data);
+}).catch((err: BusinessError) => {
+  console.error(`getAccountCredential err: code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -2073,15 +2207,7 @@ Obtains the credential of an application account. This API uses a promise to ret
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getAccountCredential('ZhangSan', 'credentialType001').then((data: string) => { 
-  console.info('getAccountCredential, result: ' + data);
-}).catch((err: BusinessError) => {
-  console.error(`getAccountCredential err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getAccountCredential](#getaccountcredential)
 
 ## getAccountExtraInfo
 
@@ -2112,7 +2238,7 @@ Obtains additional information of an application account. Additional information
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the additional information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the additional information obtained. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -2125,6 +2251,16 @@ appAccountManager.getAccountExtraInfo('ZhangSan', (err: BusinessError, result: s
   } else {
     console.info('getAccountExtraInfo result: ' + result);
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getAccountExtraInfo('ZhangSan').then((data: string) => { 
+  console.info('getAccountExtraInfo, result: ' + data);
+}).catch((err: BusinessError) => {
+  console.error(`getAccountExtraInfo err: code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -2165,15 +2301,7 @@ Obtains additional information of an application account. Additional information
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getAccountExtraInfo('ZhangSan').then((data: string) => { 
-  console.info('getAccountExtraInfo, result: ' + data);
-}).catch((err: BusinessError) => {
-  console.error(`getAccountExtraInfo err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getAccountExtraInfo](#getaccountextrainfo)
 
 ## getAccountsByOwner
 
@@ -2194,7 +2322,7 @@ Obtains the application accounts that can be accessed by the invoker based on th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is null and **data** is the application account information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is null and **data** is the application account information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2221,6 +2349,22 @@ try {
 } catch (e) {
   const err = e as BusinessError;
   console.error(`getAccountsByOwner exception:code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  appAccountManager.getAccountsByOwner('com.example.accountjsdemo2').then((
+    data: appAccount.AppAccountInfo[]) => {
+    console.info('getAccountsByOwner successfully, data: ' + JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    console.error(`getAccountsByOwner failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAccountsByOwner exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
 
@@ -2260,21 +2404,7 @@ Obtains the application accounts that can be accessed by the invoker based on th
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appAccountManager.getAccountsByOwner('com.example.accountjsdemo2').then((
-    data: appAccount.AppAccountInfo[]) => {
-    console.info('getAccountsByOwner successfully, data: ' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error(`getAccountsByOwner failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getAccountsByOwner exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getAccountsByOwner](#getaccountsbyowner)
 
 ## getAllAccessibleAccounts
 
@@ -2306,7 +2436,7 @@ Obtains information about all accessible application accounts. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of accessible application accounts. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of accessible application accounts. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -2319,6 +2449,16 @@ appAccountManager.getAllAccessibleAccounts((err: BusinessError, data: appAccount
   } else {
     console.info('getAllAccessibleAccounts data: ' + JSON.stringify(data));
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getAllAccessibleAccounts().then((data: appAccount.AppAccountInfo[]) => { 
+  console.info('getAllAccessibleAccounts: ' + data);
+}).catch((err: BusinessError) => {
+  console.error(`getAllAccessibleAccounts err: code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -2355,15 +2495,7 @@ Obtains information about all accessible application accounts. This API uses a p
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getAllAccessibleAccounts().then((data: appAccount.AppAccountInfo[]) => { 
-  console.info('getAllAccessibleAccounts: ' + data);
-}).catch((err: BusinessError) => {
-  console.error(`getAllAccessibleAccounts err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getAllAccessibleAccounts](#getallaccessibleaccounts)
 
 ## getAllAccounts
 
@@ -2383,7 +2515,7 @@ Obtains information about all accessible application accounts. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of accessible application accounts. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of accessible application accounts. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2409,6 +2541,45 @@ try {
   const err = e as BusinessError;
   console.error(`getAllAccounts exception: code is ${err.code}, message is ${err.message}`);
 }
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  appAccountManager.getAllAccounts().then((data: appAccount.AppAccountInfo[]) => {
+    console.info('getAllAccounts successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`getAllAccounts failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAllAccounts exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const selfBundle = 'com.example.actsgetallaaccounts';
+appAccountManager.getAllAccounts(selfBundle, (err: BusinessError, data: appAccount.AppAccountInfo[])=>{
+  if (err) {
+    console.error(`getAllAccounts err: code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('getAllAccounts data:' + JSON.stringify(data));
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const selfBundle = 'com.example.actsgetallaaccounts';
+appAccountManager.getAllAccounts(selfBundle).then((data: appAccount.AppAccountInfo[]) => { 
+  console.info('getAllAccounts: ' + data);
+}).catch((err: BusinessError) => {
+  console.error(`getAllAccounts err: code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 ## getAllAccounts
@@ -2439,20 +2610,7 @@ Obtains information about all accessible application accounts. This API uses a p
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appAccountManager.getAllAccounts().then((data: appAccount.AppAccountInfo[]) => {
-    console.info('getAllAccounts successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`getAllAccounts failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getAllAccounts exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getAllAccounts](#getallaccounts)
 
 ## getAllAccounts
 
@@ -2485,22 +2643,11 @@ Obtains the application accounts that can be accessed by the invoker based on th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return information about all accessible application accounts. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return information about all accessible application accounts. |
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const selfBundle = 'com.example.actsgetallaaccounts';
-appAccountManager.getAllAccounts(selfBundle, (err: BusinessError, data: appAccount.AppAccountInfo[])=>{
-  if (err) {
-    console.error(`getAllAccounts err: code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('getAllAccounts data:' + JSON.stringify(data));
-  }
-});
-```
+See [getAllAccounts](#getallaccounts)
 
 ## getAllAccounts
 
@@ -2541,16 +2688,7 @@ Obtains the application accounts that can be accessed by the invoker based on th
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const selfBundle = 'com.example.actsgetallaaccounts';
-appAccountManager.getAllAccounts(selfBundle).then((data: appAccount.AppAccountInfo[]) => { 
-  console.info('getAllAccounts: ' + data);
-}).catch((err: BusinessError) => {
-  console.error(`getAllAccounts err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getAllAccounts](#getallaccounts)
 
 ## getAllAuthTokens
 
@@ -2572,7 +2710,7 @@ Obtains all tokens visible to the invoker for an application account. This API u
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all tokens visible to the invoker. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all tokens visible to the invoker. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2597,6 +2735,22 @@ try {
         console.info('getAllAuthTokens successfully, tokenArr: ' + tokenArr);
       }
     });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAllAuthTokens exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  appAccountManager.getAllAuthTokens('LiSi', 'com.example.accountjsdemo').then((
+    tokenArr: appAccount.AuthTokenInfo[]) => {
+    console.info('getAllAuthTokens successfully, tokenArr: ' + JSON.stringify(tokenArr));
+  }).catch((err: BusinessError) => {
+    console.error(`getAllAuthTokens failed, code is ${err.code}, message is ${err.message}`);
+  });
 } catch (e) {
   const err = e as BusinessError;
   console.error(`getAllAuthTokens exception: code is ${err.code}, message is ${err.message}`);
@@ -2641,21 +2795,7 @@ Obtains all tokens visible to the invoker for an application account. This API u
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appAccountManager.getAllAuthTokens('LiSi', 'com.example.accountjsdemo').then((
-    tokenArr: appAccount.AuthTokenInfo[]) => {
-    console.info('getAllAuthTokens successfully, tokenArr: ' + JSON.stringify(tokenArr));
-  }).catch((err: BusinessError) => {
-    console.error(`getAllAuthTokens failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getAllAuthTokens exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getAllAuthTokens](#getallauthtokens)
 
 ## getAllOAuthTokens
 
@@ -2687,7 +2827,7 @@ Obtains all tokens visible to the invoker for an application account. This API u
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all tokens visible to the invoker. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all tokens visible to the invoker. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -2702,6 +2842,17 @@ appAccountManager.getAllOAuthTokens('LiSi', 'com.example.accountjsdemo',
       console.info('getAllOAuthTokens data: ' + JSON.stringify(data));
     }
   });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getAllOAuthTokens('LiSi', 'com.example.accountjsdemo').then((
+  data: appAccount.OAuthTokenInfo[]) => {
+  console.info('getAllOAuthTokens data: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`getAllOAuthTokens err: code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 ## getAllOAuthTokens
@@ -2742,16 +2893,7 @@ Obtains all tokens visible to the invoker for an application account. This API u
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getAllOAuthTokens('LiSi', 'com.example.accountjsdemo').then((
-  data: appAccount.OAuthTokenInfo[]) => {
-  console.info('getAllOAuthTokens data: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`getAllOAuthTokens err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getAllOAuthTokens](#getalloauthtokens)
 
 ## getAssociatedData
 
@@ -2783,7 +2925,7 @@ Obtains the associated data of an application account based on the specified key
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | key | string | Yes | Key of the associated data. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the data obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the data obtained. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -2796,6 +2938,16 @@ appAccountManager.getAssociatedData('ZhangSan', 'k001', (err: BusinessError, res
   } else {
     console.info('getAssociatedData result: ' + result);
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getAssociatedData('ZhangSan', 'k001').then((data: string) => { 
+  console.info('getAssociatedData: ' + data);
+}).catch((err: BusinessError) => {
+  console.error(`getAssociatedData err: code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -2837,15 +2989,7 @@ Obtains data associated with an application account. This API uses a promise to 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getAssociatedData('ZhangSan', 'k001').then((data: string) => { 
-  console.info('getAssociatedData: ' + data);
-}).catch((err: BusinessError) => {
-  console.error(`getAssociatedData err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getAssociatedData](#getassociateddata)
 
 ## getAuthCallback
 
@@ -2866,7 +3010,7 @@ Obtains the authenticator callback for an authentication session. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sessionId | string | Yes | ID of the authentication session. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AuthCallback](arkts-basicservices-appaccount-authcallback-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator callback object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthCallback](arkts-basicservices-appaccount-authcallback-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator callback object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2903,6 +3047,37 @@ export default class EntryAbility extends UIAbility {
           }
         }; 
         callback.onResult(0, result);
+      });
+    } catch (e) {
+      const err = e as BusinessError;
+      console.error(`getAuthCallback exception: code is ${err.code}, message is ${err.message}`);
+    }
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, UIAbility, AbilityConstant } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, param: AbilityConstant.LaunchParam) { // Ability lifecycle function.
+    let sessionId: string = want.parameters![appAccount.Constants.KEY_SESSION_ID] as string;
+    try {
+      appAccountManager.getAuthCallback(sessionId).then((callback: appAccount.AuthCallback) => {
+      let result: appAccount.AuthResult = {
+        account: {
+          name: 'Lisi',
+          owner: 'com.example.accountjsdemo',
+        },
+        tokenInfo: {
+          token: 'xxxxxx',
+          authType: 'getSocialData'
+        }
+      };
+      callback.onResult(0, result);
+      }).catch((err: BusinessError) => {
+        console.error(`getAuthCallback err: code is ${err.code}, message is ${err.message}`);
       });
     } catch (e) {
       const err = e as BusinessError;
@@ -2949,6 +3124,41 @@ Obtains the authenticator callback for an authentication session. This API uses 
 
 **Examples**
 
+See [getAuthCallback](#getauthcallback)
+
+## getAuthenticatorCallback
+
+```TypeScript
+getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void
+```
+
+Obtains the authenticator callback for an authentication session. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getAuthCallback](#getauthcallback)
+> instead.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [getAuthCallback](#getauthcallback)(sessionId: string, callback: AsyncCallback&lt;AuthCallback&gt;)
+
+<!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void--><!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void-End-->
+
+**System capability:** SystemCapability.Account.AppAccount
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sessionId | string | Yes | ID of the authentication session. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator callback obtained. Otherwise, **err** is an error object. |
+
+**Examples**
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { Want, UIAbility, AbilityConstant } from '@kit.AbilityKit';
@@ -2956,29 +3166,179 @@ import { Want, UIAbility, AbilityConstant } from '@kit.AbilityKit';
 export default class EntryAbility extends UIAbility {
   onCreate(want: Want, param: AbilityConstant.LaunchParam) { // Ability lifecycle function.
     let sessionId: string = want.parameters![appAccount.Constants.KEY_SESSION_ID] as string;
-    try {
-      appAccountManager.getAuthCallback(sessionId).then((callback: appAccount.AuthCallback) => {
-      let result: appAccount.AuthResult = {
-        account: {
-          name: 'Lisi',
-          owner: 'com.example.accountjsdemo',
-        },
-        tokenInfo: {
-          token: 'xxxxxx',
-          authType: 'getSocialData'
+    appAccountManager.getAuthenticatorCallback(sessionId,
+        (err: BusinessError, callback: appAccount.AuthenticatorCallback) => {
+        if (err.code != appAccount.ResultCode.SUCCESS) {
+            console.error(`getAuthenticatorCallback err: code is ${err.code}, message is ${err.message}`);
+            return;
         }
-      };
-      callback.onResult(0, result);
-      }).catch((err: BusinessError) => {
-        console.error(`getAuthCallback err: code is ${err.code}, message is ${err.message}`);
+        callback.onResult(appAccount.ResultCode.SUCCESS, {
+          name: 'LiSi',
+          owner: 'com.example.accountjsdemo',
+          authType: 'getSocialData',
+          token: 'xxxxxx'
+        });
       });
-    } catch (e) {
-      const err = e as BusinessError;
-      console.error(`getAuthCallback exception: code is ${err.code}, message is ${err.message}`);
-    }
   }
 }
 ```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, UIAbility, AbilityConstant } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, param: AbilityConstant.LaunchParam) { // Ability lifecycle function.
+    let sessionId: string = want.parameters![appAccount.Constants.KEY_SESSION_ID] as string;
+    appAccountManager.getAuthenticatorCallback(sessionId).then((
+      callback: appAccount.AuthenticatorCallback) => {
+      callback.onResult(appAccount.ResultCode.SUCCESS, {
+        name: 'LiSi',
+        owner: 'com.example.accountjsdemo',
+        authType: 'getSocialData',
+        token: 'xxxxxx'
+      });
+    }).catch((err: BusinessError) => {
+      console.error(`getAuthenticatorCallback err: code is ${err.code}, message is ${err.message}`);
+    });
+  }
+}
+```
+
+## getAuthenticatorCallback
+
+```TypeScript
+getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>
+```
+
+Obtains the authenticator callback for an authentication session. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getAuthCallback](#getauthcallback) instead.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [getAuthCallback](#getauthcallback)(sessionId: string)
+
+<!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>--><!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>-End-->
+
+**System capability:** SystemCapability.Account.AppAccount
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sessionId | string | Yes | ID of the authentication session. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md)&gt; | Promise used to return the authenticator callback obtained. |
+
+**Examples**
+
+See [getAuthenticatorCallback](#getauthenticatorcallback)
+
+## getAuthenticatorInfo
+
+```TypeScript
+getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void
+```
+
+Obtains the authenticator information of an application. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [queryAuthenticatorInfo](#queryauthenticatorinfo)
+> instead.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [queryAuthenticatorInfo](#queryauthenticatorinfo)(owner: string, callback: AsyncCallback&lt;AuthenticatorInfo&gt;)
+
+<!--Device-AppAccountManager-getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void--><!--Device-AppAccountManager-getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void-End-->
+
+**System capability:** SystemCapability.Account.AppAccount
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator information obtained. Otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getAuthenticatorInfo('com.example.accountjsdemo',
+  (err: BusinessError, data: appAccount.AuthenticatorInfo) => {
+    if (err) {
+      console.error(`getAuthenticatorInfo err: code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('getAuthenticatorInfo data: ' + JSON.stringify(data));
+    }
+  });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getAuthenticatorInfo('com.example.accountjsdemo').then((
+  data: appAccount.AuthenticatorInfo) => { 
+  console.info('getAuthenticatorInfo: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`getAuthenticatorInfo err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+## getAuthenticatorInfo
+
+```TypeScript
+getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
+```
+
+Obtains the authenticator information of an application. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [queryAuthenticatorInfo](#queryauthenticatorinfo) instead.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [queryAuthenticatorInfo](#queryauthenticatorinfo)(owner: string)
+
+<!--Device-AppAccountManager-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>--><!--Device-AppAccountManager-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>-End-->
+
+**System capability:** SystemCapability.Account.AppAccount
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | Promise used to return the authenticator information obtained. |
+
+**Examples**
+
+See [getAuthenticatorInfo](#getauthenticatorinfo)
 
 ## getAuthList
 
@@ -3000,7 +3360,7 @@ Obtains the authorization list of the specified authentication type for an appli
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of authorized bundles obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of authorized bundles obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -3024,6 +3384,21 @@ try {
     } else {
       console.info('getAuthList successfully, authList: ' + authList);
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAuthList exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  appAccountManager.getAuthList('LiSi', 'getSocialData').then((authList: string[]) => {
+    console.info('getAuthList successfully, authList: ' + authList);
+  }).catch((err: BusinessError) => {
+    console.error(`getAuthList failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -3070,20 +3445,7 @@ Obtains the authorization list of the specified authentication type for an appli
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appAccountManager.getAuthList('LiSi', 'getSocialData').then((authList: string[]) => {
-    console.info('getAuthList successfully, authList: ' + authList);
-  }).catch((err: BusinessError) => {
-    console.error(`getAuthList failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getAuthList exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getAuthList](#getauthlist)
 
 ## getAuthToken
 
@@ -3106,7 +3468,7 @@ Obtains the authorization token of the specified authentication type for an appl
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authorization token value obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authorization token value obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -3132,6 +3494,21 @@ try {
         console.info('getAuthToken successfully, token: ' + token);
       }
     });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAuthToken exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  appAccountManager.getAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData').then((token: string) => {
+    console.info('getAuthToken successfully, token: ' + token);
+  }).catch((err: BusinessError) => {
+    console.error(`getAuthToken failed, code is ${err.code}, message is ${err.message}`);
+  });
 } catch (e) {
   const err = e as BusinessError;
   console.error(`getAuthToken exception: code is ${err.code}, message is ${err.message}`);
@@ -3178,230 +3555,7 @@ Obtains the authorization token of the specified authentication type for an appl
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appAccountManager.getAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData').then((token: string) => {
-    console.info('getAuthToken successfully, token: ' + token);
-  }).catch((err: BusinessError) => {
-    console.error(`getAuthToken failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getAuthToken exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-## getAuthenticatorCallback
-
-```TypeScript
-getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void
-```
-
-Obtains the authenticator callback for an authentication session. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthCallback](#getauthcallback)
-> instead.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [getAuthCallback](#getauthcallback)(sessionId: string, callback: AsyncCallback&lt;AuthCallback&gt;)
-
-<!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void--><!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void-End-->
-
-**System capability:** SystemCapability.Account.AppAccount
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sessionId | string | Yes | ID of the authentication session. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator callback obtained. Otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, UIAbility, AbilityConstant } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, param: AbilityConstant.LaunchParam) { // Ability lifecycle function.
-    let sessionId: string = want.parameters![appAccount.Constants.KEY_SESSION_ID] as string;
-    appAccountManager.getAuthenticatorCallback(sessionId,
-        (err: BusinessError, callback: appAccount.AuthenticatorCallback) => {
-        if (err.code != appAccount.ResultCode.SUCCESS) {
-            console.error(`getAuthenticatorCallback err: code is ${err.code}, message is ${err.message}`);
-            return;
-        }
-        callback.onResult(appAccount.ResultCode.SUCCESS, {
-          name: 'LiSi',
-          owner: 'com.example.accountjsdemo',
-          authType: 'getSocialData',
-          token: 'xxxxxx'
-        });
-      });
-  }
-}
-```
-
-## getAuthenticatorCallback
-
-```TypeScript
-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>
-```
-
-Obtains the authenticator callback for an authentication session. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthCallback](#getauthcallback) instead.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [getAuthCallback](#getauthcallback)(sessionId: string)
-
-<!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>--><!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>-End-->
-
-**System capability:** SystemCapability.Account.AppAccount
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sessionId | string | Yes | ID of the authentication session. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md)&gt; | Promise used to return the authenticator callback obtained. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, UIAbility, AbilityConstant } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, param: AbilityConstant.LaunchParam) { // Ability lifecycle function.
-    let sessionId: string = want.parameters![appAccount.Constants.KEY_SESSION_ID] as string;
-    appAccountManager.getAuthenticatorCallback(sessionId).then((
-      callback: appAccount.AuthenticatorCallback) => {
-      callback.onResult(appAccount.ResultCode.SUCCESS, {
-        name: 'LiSi',
-        owner: 'com.example.accountjsdemo',
-        authType: 'getSocialData',
-        token: 'xxxxxx'
-      });
-    }).catch((err: BusinessError) => {
-      console.error(`getAuthenticatorCallback err: code is ${err.code}, message is ${err.message}`);
-    });
-  }
-}
-```
-
-## getAuthenticatorInfo
-
-```TypeScript
-getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void
-```
-
-Obtains the authenticator information of an application. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [queryAuthenticatorInfo](#queryauthenticatorinfo)
-> instead.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [queryAuthenticatorInfo](#queryauthenticatorinfo)(owner: string, callback: AsyncCallback&lt;AuthenticatorInfo&gt;)
-
-<!--Device-AppAccountManager-getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void--><!--Device-AppAccountManager-getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void-End-->
-
-**System capability:** SystemCapability.Account.AppAccount
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator information obtained. Otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getAuthenticatorInfo('com.example.accountjsdemo',
-  (err: BusinessError, data: appAccount.AuthenticatorInfo) => {
-    if (err) {
-      console.error(`getAuthenticatorInfo err: code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('getAuthenticatorInfo data: ' + JSON.stringify(data));
-    }
-  });
-```
-
-## getAuthenticatorInfo
-
-```TypeScript
-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
-```
-
-Obtains the authenticator information of an application. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [queryAuthenticatorInfo](#queryauthenticatorinfo) instead.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [queryAuthenticatorInfo](#queryauthenticatorinfo)(owner: string)
-
-<!--Device-AppAccountManager-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>--><!--Device-AppAccountManager-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>-End-->
-
-**System capability:** SystemCapability.Account.AppAccount
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | Promise used to return the authenticator information obtained. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getAuthenticatorInfo('com.example.accountjsdemo').then((
-  data: appAccount.AuthenticatorInfo) => { 
-  console.info('getAuthenticatorInfo: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`getAuthenticatorInfo err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getAuthToken](#getauthtoken)
 
 ## getCredential
 
@@ -3423,7 +3577,7 @@ Obtains the credential of an application account. This API uses an asynchronous 
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the credential obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the credential obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -3451,6 +3605,21 @@ try {
 } catch (e) {
   const err = e as BusinessError;
   console.error(`getCredential err: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  appAccountManager.getCredential('ZhangSan', 'PIN_SIX').then((credential: string) => {
+    console.info('getCredential successfully, credential: ' + credential);
+  }).catch((err: BusinessError) => {
+    console.error(`getCredential failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getCredential exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
 
@@ -3493,20 +3662,7 @@ Obtains the credential of an application account. This API uses a promise to ret
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appAccountManager.getCredential('ZhangSan', 'PIN_SIX').then((credential: string) => {
-    console.info('getCredential successfully, credential: ' + credential);
-  }).catch((err: BusinessError) => {
-    console.error(`getCredential failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getCredential exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getCredential](#getcredential)
 
 ## getCustomData
 
@@ -3528,7 +3684,7 @@ Obtains the custom data of an application account based on the specified key. Th
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | key | string | Yes | Key of the custom data. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the custom data value obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the custom data value obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -3552,6 +3708,21 @@ try {
     } else {
       console.info('getCustomData successfully, data: ' + data);
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getCustomData exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  appAccountManager.getCustomData('ZhangSan', 'age').then((data: string) => {
+    console.info('getCustomData successfully, data: ' + data);
+  }).catch((err: BusinessError) => {
+    console.error(`getCustomData failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -3598,20 +3769,7 @@ Obtains the custom data of an application account based on the specified key. Th
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appAccountManager.getCustomData('ZhangSan', 'age').then((data: string) => {
-    console.info('getCustomData successfully, data: ' + data);
-  }).catch((err: BusinessError) => {
-    console.error(`getCustomData failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getCustomData exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getCustomData](#getcustomdata)
 
 ## getCustomDataSync
 
@@ -3694,7 +3852,7 @@ Obtains the authorization list of the specified authentication type for an appli
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of authorized bundles obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of authorized bundles obtained. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -3707,6 +3865,16 @@ appAccountManager.getOAuthList('LiSi', 'getSocialData', (err: BusinessError, dat
   } else {
     console.info('getOAuthList data: ' + JSON.stringify(data));
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getOAuthList('LiSi', 'getSocialData').then((data: string[]) => {
+  console.info('getOAuthList data: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`getOAuthList err: code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -3748,15 +3916,7 @@ Obtains the authorization list of the specified authentication type for an appli
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getOAuthList('LiSi', 'getSocialData').then((data: string[]) => {
-  console.info('getOAuthList data: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`getOAuthList err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getOAuthList](#getoauthlist)
 
 ## getOAuthToken
 
@@ -3789,7 +3949,7 @@ Obtains the authorization token of the specified authentication type for an appl
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authorization token value obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authorization token value obtained. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -3804,6 +3964,16 @@ appAccountManager.getOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialD
       console.info('getOAuthToken token: ' + data);
     }
   });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData').then((data: string) => {
+  console.info('getOAuthToken token: ' + data);
+}).catch((err: BusinessError) => {
+  console.error(`getOAuthToken err: code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 ## getOAuthToken
@@ -3846,41 +4016,7 @@ Obtains the authorization token of the specified authentication type for an appl
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData').then((data: string) => {
-  console.info('getOAuthToken token: ' + data);
-}).catch((err: BusinessError) => {
-  console.error(`getOAuthToken err: code is ${err.code}, message is ${err.message}`);
-});
-```
-
-## offAccountChange
-
-```TypeScript
-offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void
-```
-
-Unsubscribes from account events.
-
-**Since:** 23
-
-<!--Device-AppAccountManager-offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void-End-->
-
-**System capability:** SystemCapability.Account.AppAccount
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No | Asynchronous callback interface. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+See [getOAuthToken](#getoauthtoken)
 
 ## off('accountChange')
 
@@ -3901,7 +4037,7 @@ Unsubscribes from account information changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'accountChange' | Yes | Event type to unsubscribe from. The value is **'accountChange'**. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No | Callback to unregister. By default, no value is passed, which means to unregister all callbacks for the specified event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No | Callback to unregister. By default, no value is passed, which means to unregister all callbacks for the specified event. |
 
 **Error codes:**
 
@@ -3963,7 +4099,7 @@ Unsubscribes from account information changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type to subscribe to. The value is **'change'**. An event will be reported when the account information changes. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No | Callback to unregister. By default, no value is passed, which means to unregister all callbacks for the specified event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No | Callback to unregister. By default, no value is passed, which means to unregister all callbacks for the specified event. |
 
 **Examples**
 
@@ -3985,17 +4121,17 @@ try {
 }
 ```
 
-## onAccountChange
+## offAccountChange
 
 ```TypeScript
-onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
+offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void
 ```
 
-Subscribes to the change events of accounts of the specified owners.
+Unsubscribes from account events.
 
 **Since:** 23
 
-<!--Device-AppAccountManager-onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
+<!--Device-AppAccountManager-offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4003,15 +4139,13 @@ Subscribes to the change events of accounts of the specified owners.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owners | Array&lt;string&gt; | Yes | Indicates the account owners, which are specified by AppAccount. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Asynchronous callback interface. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No | Asynchronous callback interface. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid owners. |
 
 ## on('accountChange')
 
@@ -4033,7 +4167,7 @@ Subscribes to account information changes of apps.
 | --- | --- | --- | --- |
 | type | 'accountChange' | Yes | Event type to subscribe to. The value is **'accountChange'**. An event will be reported when the account information of the target application changes. |
 | owners | Array&lt;string&gt; | Yes | Application bundle names of the account. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback registered to return the list of changed application accounts. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback registered to return the list of changed application accounts. |
 
 **Error codes:**
 
@@ -4090,7 +4224,7 @@ Subscribes to account information changes of apps.
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type to subscribe to. The value is **'change'**. An event will be reported when the account information changes. |
 | owners | Array&lt;string&gt; | Yes | Application bundle names of the account. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback registered to return the list of changed application accounts. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback registered to return the list of changed application accounts. |
 
 **Examples**
 
@@ -4108,6 +4242,34 @@ try {
   console.error(`on accountOnOffDemo code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+## onAccountChange
+
+```TypeScript
+onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
+```
+
+Subscribes to the change events of accounts of the specified owners.
+
+**Since:** 23
+
+<!--Device-AppAccountManager-onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
+
+**System capability:** SystemCapability.Account.AppAccount
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| owners | Array&lt;string&gt; | Yes | Indicates the account owners, which are specified by AppAccount. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Asynchronous callback interface. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid owners. |
 
 ## queryAuthenticatorInfo
 
@@ -4128,7 +4290,7 @@ Obtains the authenticator information of an application. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -4153,6 +4315,22 @@ try {
         console.info('queryAuthenticatorInfo successfully, info: ' + JSON.stringify(info));
       }
     });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`queryAuthenticatorInfo exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  appAccountManager.queryAuthenticatorInfo('com.example.accountjsdemo').then((
+    info: appAccount.AuthenticatorInfo) => { 
+    console.info('queryAuthenticatorInfo successfully, info: ' + JSON.stringify(info));
+  }).catch((err: BusinessError) => {
+    console.error(`queryAuthenticatorInfo failed, code is ${err.code}, message is ${err.message}`);
+  });
 } catch (e) {
   const err = e as BusinessError;
   console.error(`queryAuthenticatorInfo exception: code is ${err.code}, message is ${err.message}`);
@@ -4196,21 +4374,7 @@ Obtains the authenticator information of an application. This API uses a promise
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appAccountManager.queryAuthenticatorInfo('com.example.accountjsdemo').then((
-    info: appAccount.AuthenticatorInfo) => { 
-    console.info('queryAuthenticatorInfo successfully, info: ' + JSON.stringify(info));
-  }).catch((err: BusinessError) => {
-    console.error(`queryAuthenticatorInfo failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`queryAuthenticatorInfo exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [queryAuthenticatorInfo](#queryauthenticatorinfo)
 
 ## removeAccount
 
@@ -4231,7 +4395,7 @@ Removes an application account. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -4255,6 +4419,21 @@ try {
       console.info('removeAccount successfully');
     }
  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`removeAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  appAccountManager.removeAccount('Lisi').then(() => {
+    console.info('removeAccount successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`removeAccount failed, code is ${err.code}, message is ${err.message}`);
+  });
 } catch (e) {
   const err = e as BusinessError;
   console.error(`removeAccount exception: code is ${err.code}, message is ${err.message}`);
@@ -4298,20 +4477,7 @@ Removes an application account. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appAccountManager.removeAccount('Lisi').then(() => {
-    console.info('removeAccount successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`removeAccount failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`removeAccount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [removeAccount](#removeaccount)
 
 ## selectAccountsByOptions
 
@@ -4332,7 +4498,7 @@ Selects the accounts that can be accessed by the invoker based on the options. T
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [SelectAccountsOptions](arkts-basicservices-appaccount-selectaccountsoptions-i.md) | Yes | Options for selecting accounts. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of accounts selected. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of accounts selected. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -4362,6 +4528,24 @@ try {
         console.info('selectAccountsByOptions successfully, accountArr: ' + JSON.stringify(accountArr));
       }
     });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`selectAccountsByOptions exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: appAccount.SelectAccountsOptions = {
+  allowedOwners: ['com.example.accountjsdemo']
+};
+try {
+  appAccountManager.selectAccountsByOptions(options).then((accountArr: appAccount.AppAccountInfo[]) => {
+    console.info('selectAccountsByOptions successfully, accountArr: ' + JSON.stringify(accountArr));
+  }).catch((err: BusinessError) => {
+    console.error(`selectAccountsByOptions failed, code is ${err.code}, message is ${err.message}`);
+  });
 } catch (e) {
   const err = e as BusinessError;
   console.error(`selectAccountsByOptions exception: code is ${err.code}, message is ${err.message}`);
@@ -4406,23 +4590,7 @@ Selects the accounts that can be accessed by the invoker based on the options. T
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: appAccount.SelectAccountsOptions = {
-  allowedOwners: ['com.example.accountjsdemo']
-};
-try {
-  appAccountManager.selectAccountsByOptions(options).then((accountArr: appAccount.AppAccountInfo[]) => {
-    console.info('selectAccountsByOptions successfully, accountArr: ' + JSON.stringify(accountArr));
-  }).catch((err: BusinessError) => {
-    console.error(`selectAccountsByOptions failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`selectAccountsByOptions exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [selectAccountsByOptions](#selectaccountsbyoptions)
 
 ## setAccountCredential
 
@@ -4455,7 +4623,7 @@ Sets a credential for an application account. This API uses an asynchronous call
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
 | credential | string | Yes | Credential value. The custom value, the value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -4468,6 +4636,16 @@ appAccountManager.setAccountCredential('ZhangSan', 'credentialType001', 'credent
   } else {
     console.info('setAccountCredential successful.');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.setAccountCredential('ZhangSan', 'credentialType001', 'credential001').then(() => { 
+  console.info('setAccountCredential Success');
+}).catch((err: BusinessError) => {
+  console.error(`setAccountCredential err: code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -4511,15 +4689,7 @@ Sets a credential for an application account. This API uses a promise to return 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.setAccountCredential('ZhangSan', 'credentialType001', 'credential001').then(() => { 
-  console.info('setAccountCredential Success');
-}).catch((err: BusinessError) => {
-  console.error(`setAccountCredential err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [setAccountCredential](#setaccountcredential)
 
 ## setAccountExtraInfo
 
@@ -4551,7 +4721,7 @@ Sets additional information for an application account. This API uses an asynchr
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | extraInfo | string | Yes | Additional information (information that can be converted to the string type). It cannot contain sensitive information, such as the application account password and token. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -4564,6 +4734,16 @@ appAccountManager.setAccountExtraInfo('ZhangSan', 'Tk002', (err: BusinessError) 
   } else {
     console.info('setAccountExtraInfo successful.');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.setAccountExtraInfo('ZhangSan', 'Tk002').then(() => { 
+  console.info('setAccountExtraInfo Success');
+}).catch((err: BusinessError) => {
+  console.error(`setAccountExtraInfo err: code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -4606,15 +4786,7 @@ Sets additional information for an application account. This API uses a promise 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.setAccountExtraInfo('ZhangSan', 'Tk002').then(() => { 
-  console.info('setAccountExtraInfo Success');
-}).catch((err: BusinessError) => {
-  console.error(`setAccountExtraInfo err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [setAccountExtraInfo](#setaccountextrainfo)
 
 ## setAppAccess
 
@@ -4637,7 +4809,7 @@ Sets the access to the data of an account for an application. This API uses an a
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
 | isAccessible | boolean | Yes | Whether the access is allowed. The value **true** means to allow the access; the value **false** means the opposite. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -4661,6 +4833,21 @@ try {
     } else {
       console.info('setAppAccess successfully');
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setAppAccess exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  appAccountManager.setAppAccess('ZhangSan', 'com.example.accountjsdemo', true).then(() => {
+    console.info('setAppAccess successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`setAppAccess failed: code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -4708,20 +4895,7 @@ Sets the access to the data of an account for an application. This API uses a pr
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appAccountManager.setAppAccess('ZhangSan', 'com.example.accountjsdemo', true).then(() => {
-    console.info('setAppAccess successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`setAppAccess failed: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setAppAccess exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [setAppAccess](#setappaccess)
 
 ## setAppAccountSyncEnable
 
@@ -4755,7 +4929,7 @@ Sets data synchronization for an application account. This API uses an asynchron
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | isEnable | boolean | Yes | Whether to enable data synchronization. The value **true** means that data synchronization is enabled, and **false** means the opposite. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -4768,6 +4942,16 @@ appAccountManager.setAppAccountSyncEnable('ZhangSan', true, (err: BusinessError)
   } else {
     console.info('setAppAccountSyncEnable successful.');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.setAppAccountSyncEnable('ZhangSan', true).then(() => { 
+  console.info('setAppAccountSyncEnable Success');
+}).catch((err: BusinessError) => {
+  console.error(`setAppAccountSyncEnable err: code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -4812,15 +4996,7 @@ Sets data synchronization for an application account. This API uses a promise to
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.setAppAccountSyncEnable('ZhangSan', true).then(() => { 
-  console.info('setAppAccountSyncEnable Success');
-}).catch((err: BusinessError) => {
-  console.error(`setAppAccountSyncEnable err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [setAppAccountSyncEnable](#setappaccountsyncenable)
 
 ## setAssociatedData
 
@@ -4853,7 +5029,7 @@ Sets data to be associated with an application account. This API uses an asynchr
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | key | string | Yes | Key of the associated data. |
 | value | string | Yes | Value of the data to set. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -4866,6 +5042,16 @@ appAccountManager.setAssociatedData('ZhangSan', 'k001', 'v001', (err: BusinessEr
   } else {
     console.info('setAssociatedData successful.');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.setAssociatedData('ZhangSan', 'k001', 'v001').then(() => { 
+  console.info('setAssociatedData Success');
+}).catch((err: BusinessError) => {
+  console.error(`setAssociatedData err: code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -4909,240 +5095,7 @@ Sets data to be associated with an application account. This API uses a promise 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.setAssociatedData('ZhangSan', 'k001', 'v001').then(() => { 
-  console.info('setAssociatedData Success');
-}).catch((err: BusinessError) => {
-  console.error(`setAssociatedData err: code is ${err.code}, message is ${err.message}`);
-});
-```
-
-## setAuthToken
-
-```TypeScript
-setAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void
-```
-
-Sets an authorization token of the specific authentication type for an application account. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-<!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Account.AppAccount
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| token | string | Yes | Authorization token. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or token. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12400004](../errorcode-account.md#12400004-token-count-reached-the-limit) | The number of tokens reaches the upper limit. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appAccountManager.setAuthToken('LiSi', 'getSocialData', 'xxxx', (err: BusinessError) => {
-    if (err) {
-      console.error(`setAuthToken failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('setAuthToken successfully');
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setAuthToken exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-## setAuthToken
-
-```TypeScript
-setAuthToken(name: string, authType: string, token: string): Promise<void>
-```
-
-Sets an authorization token of the specific authentication type for an application account. This API uses a promise to return the result.
-
-**Since:** 23
-
-<!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string): Promise<void>-End-->
-
-**System capability:** SystemCapability.Account.AppAccount
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| token | string | Yes | Authorization token. The value cannot exceed 1024 characters. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or token. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12400004](../errorcode-account.md#12400004-token-count-reached-the-limit) | The number of tokens reaches the upper limit. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appAccountManager.setAuthToken('LiSi', 'getSocialData', 'xxxx').then(() => {
-    console.info('setAuthToken successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`setAuthToken failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setAuthToken exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-## setAuthTokenVisibility
-
-```TypeScript
-setAuthTokenVisibility(
-      name: string,
-      authType: string,
-      bundleName: string,
-      isVisible: boolean,
-      callback: AsyncCallback<void>
-    ): void
-```
-
-Sets the visibility of an authorization token to an application. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-<!--Device-AppAccountManager-setAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-AppAccountManager-setAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void-End-->
-
-**System capability:** SystemCapability.Account.AppAccount
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| isVisible | boolean | Yes | Whether the authorization token is visible to the application. The value **true** means the authorization token is visible to the application; the value **false** means the opposite. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
-| [12400001](../errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
-| [12400005](../errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appAccountManager.setAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.accountjsdemo', true,
-    (err: BusinessError) => {
-      if (err) {
-        console.error(`setAuthTokenVisibility failed, code is ${err.code}, message is ${err.message}`);
-      } else {
-        console.info('setAuthTokenVisibility successfully');
-      }
-    });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setAuthTokenVisibility exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-## setAuthTokenVisibility
-
-```TypeScript
-setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>
-```
-
-Sets the visibility of an authorization token to an application. This API uses a promise to return the result.
-
-**Since:** 23
-
-<!--Device-AppAccountManager-setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>--><!--Device-AppAccountManager-setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>-End-->
-
-**System capability:** SystemCapability.Account.AppAccount
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| isVisible | boolean | Yes | Whether the authorization token is visible to the application. The value **true** means the authorization token is visible to the application; the value **false** means the opposite. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
-| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
-| [12400001](../errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
-| [12400005](../errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appAccountManager.setAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.accountjsdemo', true).then(() => {
-    console.info('setAuthTokenVisibility successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`setAuthTokenVisibility failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setAuthTokenVisibility exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [setAssociatedData](#setassociateddata)
 
 ## setAuthenticatorProperties
 
@@ -5198,6 +5151,29 @@ try {
 }
 ```
 
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: appAccount.SetPropertiesOptions = {
+  properties: { prop1: 'value1' }
+};
+try {
+  appAccountManager.setAuthenticatorProperties('com.example.accountjsdemo', options, {
+    onResult: (resultCode: number, result?: appAccount.AuthResult) => {
+      console.info('setAuthenticatorProperties onResult, resultCode: ' + JSON.stringify(resultCode));
+      console.info('setAuthenticatorProperties onResult, result: ' + JSON.stringify(result));
+    },
+    onRequestRedirected: (request: Want) => {
+      console.info('setAuthenticatorProperties onRequestRedirected, request: ' + JSON.stringify(request));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setAuthenticatorProperties err: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## setAuthenticatorProperties
 
 ```TypeScript
@@ -5233,28 +5209,236 @@ Sets the authenticator properties. This API uses an asynchronous callback to ret
 
 **Examples**
 
+See [setAuthenticatorProperties](#setauthenticatorproperties)
+
+## setAuthToken
+
 ```TypeScript
-import { Want } from '@kit.AbilityKit';
+setAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void
+```
+
+Sets an authorization token of the specific authentication type for an application account. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+<!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Account.AppAccount
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| token | string | Yes | Authorization token. The value cannot exceed 1024 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or token. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12400004](../errorcode-account.md#12400004-token-count-reached-the-limit) | The number of tokens reaches the upper limit. |
+
+**Examples**
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let options: appAccount.SetPropertiesOptions = {
-  properties: { prop1: 'value1' }
-};
 try {
-  appAccountManager.setAuthenticatorProperties('com.example.accountjsdemo', options, {
-    onResult: (resultCode: number, result?: appAccount.AuthResult) => {
-      console.info('setAuthenticatorProperties onResult, resultCode: ' + JSON.stringify(resultCode));
-      console.info('setAuthenticatorProperties onResult, result: ' + JSON.stringify(result));
-    },
-    onRequestRedirected: (request: Want) => {
-      console.info('setAuthenticatorProperties onRequestRedirected, request: ' + JSON.stringify(request));
+  appAccountManager.setAuthToken('LiSi', 'getSocialData', 'xxxx', (err: BusinessError) => {
+    if (err) {
+      console.error(`setAuthToken failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('setAuthToken successfully');
     }
   });
 } catch (e) {
   const err = e as BusinessError;
-  console.error(`setAuthenticatorProperties err: code is ${err.code}, message is ${err.message}`);
+  console.error(`setAuthToken exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  appAccountManager.setAuthToken('LiSi', 'getSocialData', 'xxxx').then(() => {
+    console.info('setAuthToken successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`setAuthToken failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setAuthToken exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+## setAuthToken
+
+```TypeScript
+setAuthToken(name: string, authType: string, token: string): Promise<void>
+```
+
+Sets an authorization token of the specific authentication type for an application account. This API uses a promise to return the result.
+
+**Since:** 23
+
+<!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string): Promise<void>-End-->
+
+**System capability:** SystemCapability.Account.AppAccount
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| token | string | Yes | Authorization token. The value cannot exceed 1024 characters. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or token. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12400004](../errorcode-account.md#12400004-token-count-reached-the-limit) | The number of tokens reaches the upper limit. |
+
+**Examples**
+
+See [setAuthToken](#setauthtoken)
+
+## setAuthTokenVisibility
+
+```TypeScript
+setAuthTokenVisibility(
+      name: string,
+      authType: string,
+      bundleName: string,
+      isVisible: boolean,
+      callback: AsyncCallback<void>
+    ): void
+```
+
+Sets the visibility of an authorization token to an application. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+<!--Device-AppAccountManager-setAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-AppAccountManager-setAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void-End-->
+
+**System capability:** SystemCapability.Account.AppAccount
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
+| isVisible | boolean | Yes | Whether the authorization token is visible to the application. The value **true** means the authorization token is visible to the application; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
+| [12400001](../errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
+| [12400005](../errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  appAccountManager.setAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.accountjsdemo', true,
+    (err: BusinessError) => {
+      if (err) {
+        console.error(`setAuthTokenVisibility failed, code is ${err.code}, message is ${err.message}`);
+      } else {
+        console.info('setAuthTokenVisibility successfully');
+      }
+    });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setAuthTokenVisibility exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  appAccountManager.setAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.accountjsdemo', true).then(() => {
+    console.info('setAuthTokenVisibility successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`setAuthTokenVisibility failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setAuthTokenVisibility exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+## setAuthTokenVisibility
+
+```TypeScript
+setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>
+```
+
+Sets the visibility of an authorization token to an application. This API uses a promise to return the result.
+
+**Since:** 23
+
+<!--Device-AppAccountManager-setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>--><!--Device-AppAccountManager-setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>-End-->
+
+**System capability:** SystemCapability.Account.AppAccount
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
+| isVisible | boolean | Yes | Whether the authorization token is visible to the application. The value **true** means the authorization token is visible to the application; the value **false** means the opposite. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
+| [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300107](../errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
+| [12400001](../errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
+| [12400005](../errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit. |
+
+**Examples**
+
+See [setAuthTokenVisibility](#setauthtokenvisibility)
 
 ## setCredential
 
@@ -5278,7 +5462,7 @@ Sets a credential for an application account. This API uses an asynchronous call
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
 | credential | string | Yes | Credential value. The custom value, the value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the credential is set successfully, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the credential is set successfully, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -5301,6 +5485,21 @@ try {
     } else {
       console.info('setCredential successfully');
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setCredential exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  appAccountManager.setCredential('ZhangSan', 'PIN_SIX', 'xxxxxx').then(() => {
+    console.info('setCredential successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`setCredential failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -5347,20 +5546,7 @@ Sets a credential for an application account. This API uses a promise to return 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appAccountManager.setCredential('ZhangSan', 'PIN_SIX', 'xxxxxx').then(() => {
-    console.info('setCredential successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`setCredential failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setCredential exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [setCredential](#setcredential)
 
 ## setCustomData
 
@@ -5383,7 +5569,7 @@ Sets custom data for an application account. This API uses an asynchronous callb
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | key | string | Yes | Key of the custom data. The value cannot exceed 512 characters. |
 | value | string | Yes | Value of the custom data. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -5407,6 +5593,21 @@ try {
     } else {
       console.info('setCustomData successfully');
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setCustomData exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  appAccountManager.setCustomData('ZhangSan', 'age', '12').then(() => {
+    console.info('setCustomData successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`setCustomData failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -5454,20 +5655,7 @@ Sets custom data for an application account. This API uses a promise to return t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appAccountManager.setCustomData('ZhangSan', 'age', '12').then(() => {
-    console.info('setCustomData successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`setCustomData failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setCustomData exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [setCustomData](#setcustomdata)
 
 ## setDataSyncEnabled
 
@@ -5491,7 +5679,7 @@ Sets data synchronization for an application account. This API uses an asynchron
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | isEnabled | boolean | Yes | Whether to enable data synchronization. The value **true** means that data synchronization is enabled, and **false** means the opposite. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -5510,6 +5698,21 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
     appAccountManager.setDataSyncEnabled('ZhangSan', true, (err: BusinessError) => { 
+        console.error(`setDataSyncEnabled err: code is ${err.code}, message is ${err.message}`);
+    });
+} catch (e) {
+    const err = e as BusinessError;
+    console.error(`setDataSyncEnabled err: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    appAccountManager.setDataSyncEnabled('ZhangSan', true).then(() => { 
+        console.info('setDataSyncEnabled Success');
+    }).catch((err: BusinessError) => {
         console.error(`setDataSyncEnabled err: code is ${err.code}, message is ${err.message}`);
     });
 } catch (e) {
@@ -5559,20 +5762,7 @@ Sets data synchronization for an application account. This API uses a promise to
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    appAccountManager.setDataSyncEnabled('ZhangSan', true).then(() => { 
-        console.info('setDataSyncEnabled Success');
-    }).catch((err: BusinessError) => {
-        console.error(`setDataSyncEnabled err: code is ${err.code}, message is ${err.message}`);
-    });
-} catch (e) {
-    const err = e as BusinessError;
-    console.error(`setDataSyncEnabled err: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [setDataSyncEnabled](#setdatasyncenabled)
 
 ## setOAuthToken
 
@@ -5605,7 +5795,7 @@ Sets an authorization token of the specific authentication type for an applicati
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | token | string | Yes | Authorization token. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -5618,6 +5808,16 @@ appAccountManager.setOAuthToken('LiSi', 'getSocialData', 'xxxx', (err: BusinessE
   } else {
     console.info('setOAuthToken successful.');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.setOAuthToken('LiSi', 'getSocialData', 'xxxx').then(() => {
+  console.info('setOAuthToken successfully');
+}).catch((err: BusinessError) => {
+  console.error(`setOAuthToken err: code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -5661,15 +5861,7 @@ Sets an authorization token of the specific authentication type for an applicati
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.setOAuthToken('LiSi', 'getSocialData', 'xxxx').then(() => {
-  console.info('setOAuthToken successfully');
-}).catch((err: BusinessError) => {
-  console.error(`setOAuthToken err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [setOAuthToken](#setoauthtoken)
 
 ## setOAuthTokenVisibility
 
@@ -5709,7 +5901,7 @@ Sets the visibility of an authorization token to an application. This API uses a
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
 | isVisible | boolean | Yes | Whether the authorization token is visible to the application. The value **true** means the authorization token is visible to the application; the value **false** means the opposite. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -5724,6 +5916,16 @@ appAccountManager.setOAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.
       console.info('setOAuthTokenVisibility successful.');
     }
   });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.setOAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.accountjsdemo', true).then(() => {
+  console.info('setOAuthTokenVisibility successfully');
+}).catch((err: BusinessError) => {
+  console.error(`setOAuthTokenVisibility err: code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 ## setOAuthTokenVisibility
@@ -5767,15 +5969,7 @@ Sets the visibility of an authorization token to an application. This API uses a
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.setOAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.accountjsdemo', true).then(() => {
-  console.info('setOAuthTokenVisibility successfully');
-}).catch((err: BusinessError) => {
-  console.error(`setOAuthTokenVisibility err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [setOAuthTokenVisibility](#setoauthtokenvisibility)
 
 ## verifyCredential
 
@@ -5833,6 +6027,32 @@ try {
 }
 ```
 
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: appAccount.VerifyCredentialOptions = {
+  credentialType: 'pin',
+  credential: '123456'
+};
+try {
+  appAccountManager.verifyCredential('zhangsan', 'com.example.accountjsdemo', options, {
+    onResult: (resultCode: number, result?: appAccount.AuthResult) => {
+      console.info('verifyCredential onResult, resultCode: ' + JSON.stringify(resultCode));
+      console.info('verifyCredential onResult, result: ' + JSON.stringify(result));
+    },
+    onRequestRedirected: (request: Want) => {
+      console.info('verifyCredential onRequestRedirected, request: ' + JSON.stringify(request));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`verifyCredential err: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](arkts-basicservices-appaccount-authenticator-c.md#getremoteobject) API.
+
 ## verifyCredential
 
 ```TypeScript
@@ -5870,27 +6090,5 @@ Verifies the user credential. This API uses an asynchronous callback to return t
 
 **Examples**
 
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: appAccount.VerifyCredentialOptions = {
-  credentialType: 'pin',
-  credential: '123456'
-};
-try {
-  appAccountManager.verifyCredential('zhangsan', 'com.example.accountjsdemo', options, {
-    onResult: (resultCode: number, result?: appAccount.AuthResult) => {
-      console.info('verifyCredential onResult, resultCode: ' + JSON.stringify(resultCode));
-      console.info('verifyCredential onResult, result: ' + JSON.stringify(result));
-    },
-    onRequestRedirected: (request: Want) => {
-      console.info('verifyCredential onRequestRedirected, request: ' + JSON.stringify(request));
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`verifyCredential err: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [verifyCredential](#verifycredential)
 

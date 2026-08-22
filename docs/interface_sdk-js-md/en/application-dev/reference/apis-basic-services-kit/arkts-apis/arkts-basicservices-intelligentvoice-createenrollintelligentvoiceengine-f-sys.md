@@ -29,7 +29,7 @@ Obtains an [EnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-e
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | descriptor | [EnrollIntelligentVoiceEngineDescriptor](arkts-basicservices-intelligentvoice-enrollintelligentvoiceenginedescriptor-i-sys.md) | Yes | descriptor indicates enroll intelligent voice engine descriptor. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[EnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-enrollintelligentvoiceengine-i-sys.md)&gt; | Yes | the callback used to return the EnrollIntelligentVoiceEngine instance. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[EnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-enrollintelligentvoiceengine-i-sys.md)&gt; | Yes | the callback used to return the EnrollIntelligentVoiceEngine instance. |
 
 **Error codes:**
 
@@ -57,6 +57,21 @@ intelligentVoice.createEnrollIntelligentVoiceEngine(engineDescriptor, (err: Busi
     console.info(`Succeeded in creating enrollIntelligentVoice engine.`);
     enrollIntelligentVoiceEngine = data;
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let engineDescriptor: intelligentVoice.EnrollIntelligentVoiceEngineDescriptor = {
+  wakeupPhrase: 'Xiaohua Xiaohua',
+}
+let enrollIntelligentVoiceEngine: intelligentVoice.EnrollIntelligentVoiceEngine | null = null;
+intelligentVoice.createEnrollIntelligentVoiceEngine(engineDescriptor).then((data: intelligentVoice.EnrollIntelligentVoiceEngine) => {
+  enrollIntelligentVoiceEngine = data;
+  console.info(`Succeeded in creating enrollIntelligentVoice engine.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create enrollIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
 });
 ```
 
@@ -103,18 +118,5 @@ Obtains an [EnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-e
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let engineDescriptor: intelligentVoice.EnrollIntelligentVoiceEngineDescriptor = {
-  wakeupPhrase: 'Xiaohua Xiaohua',
-}
-let enrollIntelligentVoiceEngine: intelligentVoice.EnrollIntelligentVoiceEngine | null = null;
-intelligentVoice.createEnrollIntelligentVoiceEngine(engineDescriptor).then((data: intelligentVoice.EnrollIntelligentVoiceEngine) => {
-  enrollIntelligentVoiceEngine = data;
-  console.info(`Succeeded in creating enrollIntelligentVoice engine.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create enrollIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
-});
-```
+See [createEnrollIntelligentVoiceEngine](#createenrollintelligentvoiceengine)
 

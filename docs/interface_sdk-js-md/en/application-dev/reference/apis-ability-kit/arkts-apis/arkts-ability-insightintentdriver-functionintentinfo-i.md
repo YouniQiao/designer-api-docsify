@@ -1,6 +1,6 @@
 # FunctionIntentInfo (System API)
 
-Defines the parameter type of the @InsightIntentFunctionMethod decorator. All parameters inherit from [IntentDecoratorInfo](arkts-ability-appabilityinsightintentdecorator-intentdecoratorinfo-i.md).
+Defines the parameter type of the @InsightIntentFunctionMethod decorator. All parameters inherit from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md).
 
 **Since:** 23
 

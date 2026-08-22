@@ -2,7 +2,7 @@
 
 Describe the report type.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-hid-enum ReportType--><!--Device-hid-enum ReportType-End-->
 
@@ -16,7 +16,7 @@ REPORT_TYPE_INPUT = 1
 
 Report type input.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +32,7 @@ REPORT_TYPE_OUTPUT = 2
 
 Report type output.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +48,7 @@ REPORT_TYPE_FEATURE = 3
 
 Report type feature.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 

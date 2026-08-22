@@ -14,3 +14,11 @@ export type AccessibilityElement = _AccessibilityElement
 
 **属性类型：** _AccessibilityElement
 
+**示例**
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+
+let accessibilityElement: AccessibilityElement;
+```
+

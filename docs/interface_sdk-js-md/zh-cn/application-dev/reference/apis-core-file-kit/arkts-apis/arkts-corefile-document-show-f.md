@@ -34,6 +34,22 @@ declare function show(uri: string, type: string): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise回调返回void表示成功打开文件（注：当前返回错误码） |
 
+**示例**
+
+```TypeScript
+let type: string = "";
+let uri: string = "";
+document.show(uri, type);
+```
+
+```TypeScript
+let type: string = "";
+let uri: string = "";
+document.show(uri, type, (err: TypeError) => {
+  //do something
+});
+```
+
 
 ## show
 
@@ -58,4 +74,8 @@ declare function show(uri: string, type: string, callback: AsyncCallback<void>):
 | uri | string | 是 | 待打开的文件URI |
 | type | string | 是 | 待打开文件的类型 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步打开uri对应文件（注：当前返回错误码） |
+
+**示例**
+
+参见 [show](#show)
 

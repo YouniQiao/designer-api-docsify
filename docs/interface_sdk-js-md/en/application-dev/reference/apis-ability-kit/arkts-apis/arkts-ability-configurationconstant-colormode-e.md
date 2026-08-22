@@ -1,6 +1,6 @@
 # ColorMode
 
-Enumerates the dark/light color modes, which are used in the [Configuration.colorMode](arkts-ability-appabilityconfiguration-configuration-i.md) field. You can use these predefined enumerated values to set or obtain the dark/light color mode of the system or application.
+Enumerates the dark/light color modes, which are used in the [Configuration.colorMode](arkts-ability-app-ability-configuration-configuration-i.md) field. You can use these predefined enumerated values to set or obtain the dark/light color mode of the system or application.
 
 **Since:** 23
 

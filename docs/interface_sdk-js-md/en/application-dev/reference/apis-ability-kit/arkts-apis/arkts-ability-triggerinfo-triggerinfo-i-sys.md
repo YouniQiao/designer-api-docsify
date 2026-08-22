@@ -16,7 +16,7 @@ startOptions?: StartOptions
 
 Start options in wantAgent used to start an ability.
 
-**Type:** [StartOptions](arkts-ability-appabilitystartoptions-startoptions-c.md)
+**Type:** [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)
 
 **Since:** 23
 

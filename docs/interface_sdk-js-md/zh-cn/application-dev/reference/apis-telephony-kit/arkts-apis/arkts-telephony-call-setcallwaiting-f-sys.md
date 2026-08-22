@@ -58,6 +58,16 @@ call.setCallWaiting(0, true, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.setCallWaiting(0, true).then(() => {
+    console.info(`setCallWaiting success.`);
+}).catch((err: BusinessError) => {
+    console.error(`setCallWaiting fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## setCallWaiting
 
@@ -104,13 +114,5 @@ function setCallWaiting(slotId: int, activate: boolean): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.setCallWaiting(0, true).then(() => {
-    console.info(`setCallWaiting success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setCallWaiting fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [setCallWaiting](#setcallwaiting)
 

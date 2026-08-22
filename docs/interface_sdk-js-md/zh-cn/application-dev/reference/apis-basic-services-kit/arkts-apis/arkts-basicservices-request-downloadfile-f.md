@@ -57,6 +57,46 @@ import { common } from '@kit.AbilityKit';
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 try {
   // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+     let downloadTask: request.DownloadTask = data;
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+  import { common } from '@kit.AbilityKit';
+
+  // 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  try {
+    // 需要手动将url替换为真实服务器的HTTP协议地址
+    request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+      let downloadTask: request.DownloadTask = data;
+    }).catch((err: Error) => {
+      console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+    })
+  } catch (err) {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  }
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
   request.downloadFile(context, {
     url: 'https://xxxx/xxxxx.hap',
     filePath: 'xxx/xxxxx.hap'
@@ -141,43 +181,5 @@ function downloadFile(context: BaseContext, config: DownloadConfig): Promise<Dow
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-     let downloadTask: request.DownloadTask = data;
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-  import { common } from '@kit.AbilityKit';
-
-  // 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  try {
-    // 需要手动将url替换为真实服务器的HTTP协议地址
-    request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-      let downloadTask: request.DownloadTask = data;
-    }).catch((err: Error) => {
-      console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-    })
-  } catch (err) {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  }
-```
+参见 [downloadFile](#downloadfile)
 

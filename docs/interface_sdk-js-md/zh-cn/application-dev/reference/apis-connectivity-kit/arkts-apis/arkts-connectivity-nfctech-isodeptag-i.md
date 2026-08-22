@@ -141,6 +141,34 @@ function nfcTechDemo() {
 }
 ```
 
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 isoDep
+function nfcTechDemo() {
+    // 如果没有连接Tag，请先连接
+    if (!isoDep.isTagConnected()) {
+        if (!isoDep.connectTag()) {
+            console.error("isoDep connectTag failed.");
+            return;
+        }
+    }
+
+    try {
+        isoDep.isExtendedApduSupported((err: BusinessError, response: boolean) => {
+            if (err) {
+                console.error(`isoDep isExtendedApduSupported AsyncCallback Code: ${err.code}, message: ${err. message}`);
+            } else {
+                console.info("isoDep isExtendedApduSupported AsyncCallback response: " + response);
+            }
+        });
+    } catch (businessError) {
+        console.error(`isoDep isExtendedApduSupported AsyncCallback Code: ${(businessError as Business).code}, message: ${(businessError as Business).message}`);
+    }
+}
+```
+
 ## isExtendedApduSupported
 
 ```TypeScript
@@ -176,31 +204,5 @@ isExtendedApduSupported(callback: AsyncCallback<boolean>): void
 
 **示例**
 
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 isoDep
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!isoDep.isTagConnected()) {
-        if (!isoDep.connectTag()) {
-            console.error("isoDep connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        isoDep.isExtendedApduSupported((err: BusinessError, response: boolean) => {
-            if (err) {
-                console.error(`isoDep isExtendedApduSupported AsyncCallback Code: ${err.code}, message: ${err. message}`);
-            } else {
-                console.info("isoDep isExtendedApduSupported AsyncCallback response: " + response);
-            }
-        });
-    } catch (businessError) {
-        console.error(`isoDep isExtendedApduSupported AsyncCallback Code: ${(businessError as Business).code}, message: ${(businessError as Business).message}`);
-    }
-}
-```
+参见 [isExtendedApduSupported](#isextendedapdusupported)
 

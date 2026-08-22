@@ -32,7 +32,7 @@ declare function copy(srcUri: string, destUri: string, options?: CopyOptions): P
 | --- | --- | --- | --- |
 | srcUri | string | 是 | 待复制文件或目录的URI。 |
 | destUri | string | 是 | 目标文件或目录的URI。 |
-| options | [CopyOptions](arkts-corefile-filefs-copyoptions-i.md) | 否 | options中提供拷贝进度回调。不填该参数则无拷贝进度回调。 |
+| options | [CopyOptions](arkts-corefile-file-fs-copyoptions-i.md) | 否 | options中提供拷贝进度回调。不填该参数则无拷贝进度回调。 |
 
 **返回值：**
 
@@ -70,6 +70,182 @@ declare function copy(srcUri: string, destUri: string, options?: CopyOptions): P
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**适用版本：** 12+ |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let srcDirPathLocal: string = pathDir + "/src";
+let dstDirPathLocal: string = pathDir + "/dest";
+
+let srcDirUriLocal: string = fileUri.getUriFromPath(srcDirPathLocal);
+let dstDirUriLocal: string = fileUri.getUriFromPath(dstDirPathLocal);
+
+let progressListener: fileIo.ProgressListener = (progress: fileIo.Progress) => {
+  console.info(`progressSize: ${progress.processedSize}, totalSize: ${progress.totalSize}`);
+};
+let copyOption: fileIo.CopyOptions = {
+  "progressListener" : progressListener
+}
+try {
+  fileIo.copy(srcDirUriLocal, dstDirUriLocal, copyOption).then(()=>{
+    console.info("Succeeded in copying.");
+  }).catch((err: BusinessError)=>{
+    console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to copy.Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let srcDirPathLocal: string = pathDir + "/src";
+let dstDirPathLocal: string = pathDir + "/dest";
+
+let srcDirUriLocal: string = fileUri.getUriFromPath(srcDirPathLocal);
+let dstDirUriLocal: string = fileUri.getUriFromPath(dstDirPathLocal);
+
+let progressListener:fileIo.ProgressListener = (progress:fileIo.Progress) => {
+  console.info(`progressSize: ${progress.processedSize}, totalSize: ${progress.totalSize}`);
+};
+let copyOption:fileIo.CopyOptions = {
+  "progressListener" : progressListener
+}
+try {
+  fileIo.copy(srcDirUriLocal, dstDirUriLocal, copyOption).then(()=>{
+    console.info("Succeeded in copying.");
+  }).catch((error: Error)=>{
+    let err: BusinessError = error as BusinessError;
+    console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch(error: Error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to copy.Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let srcDirPathLocal: string = pathDir + "/src";
+let dstDirPathLocal: string = pathDir + "/dest";
+
+let srcDirUriLocal: string = fileUri.getUriFromPath(srcDirPathLocal);
+let dstDirUriLocal: string = fileUri.getUriFromPath(dstDirPathLocal);
+
+try {
+  fileIo.copy(srcDirUriLocal, dstDirUriLocal, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info("Succeeded in copying.");
+  })
+} catch (err) {
+  console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let srcDirPathLocal: string = pathDir + "/src";
+let dstDirPathLocal: string = pathDir + "/dest";
+
+let srcDirUriLocal: string = fileUri.getUriFromPath(srcDirPathLocal);
+let dstDirUriLocal: string = fileUri.getUriFromPath(dstDirPathLocal);
+
+try {
+  fileIo.copy(srcDirUriLocal, dstDirUriLocal, (err: BusinessError<void> | null) => {
+    if (err) {
+      console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info("Succeeded in copying.");
+  })
+} catch(error: Error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let srcDirPathLocal: string = pathDir + "/src";
+let dstDirPathLocal: string = pathDir + "/dest";
+
+let srcDirUriLocal: string = fileUri.getUriFromPath(srcDirPathLocal);
+let dstDirUriLocal: string = fileUri.getUriFromPath(dstDirPathLocal);
+
+try {
+  let progressListener: fileIo.ProgressListener = (progress: fileIo.Progress) => {
+    console.info(`progressSize: ${progress.processedSize}, totalSize: ${progress.totalSize}`);
+  };
+  let copyOption: fileIo.CopyOptions = {
+    "progressListener" : progressListener
+  }
+  fileIo.copy(srcDirUriLocal, dstDirUriLocal, copyOption, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info("Succeeded in copying.");
+  })
+} catch (err) {
+  console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let srcDirPathLocal: string = pathDir + "/src";
+let dstDirPathLocal: string = pathDir + "/dest";
+
+let srcDirUriLocal: string = fileUri.getUriFromPath(srcDirPathLocal);
+let dstDirUriLocal: string = fileUri.getUriFromPath(dstDirPathLocal);
+
+try {
+  let progressListener:fileIo.ProgressListener = (progress:fileIo.Progress) => {
+    console.info(`progressSize: ${progress.processedSize}, totalSize: ${progress.totalSize}`);
+  };
+  let copyOption:fileIo.CopyOptions = {
+    "progressListener" : progressListener
+  }
+  fileIo.copy(srcDirUriLocal, dstDirUriLocal, copyOption, (err: BusinessError<void> | null) => {
+    if (err) {
+      console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info("Succeeded in copying.");
+  })
+} catch(error: Error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 
 ## copy
@@ -128,6 +304,10 @@ declare function copy(srcUri: string, destUri: string, callback: AsyncCallback<v
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**示例**
+
+参见 [copy](#copy)
+
 
 ## copy
 
@@ -153,7 +333,7 @@ declare function copy(srcUri: string, destUri: string, options: CopyOptions, cal
 | --- | --- | --- | --- |
 | srcUri | string | 是 | 待复制文件或目录的URI。 |
 | destUri | string | 是 | 目标文件或目录的URI。 |
-| options | [CopyOptions](arkts-corefile-filefs-copyoptions-i.md) | 是 | 拷贝进度回调。 |
+| options | [CopyOptions](arkts-corefile-file-fs-copyoptions-i.md) | 是 | 拷贝进度回调。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当拷贝成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -185,4 +365,8 @@ declare function copy(srcUri: string, destUri: string, options: CopyOptions, cal
 | 13900038 | Value too large for defined data type |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+
+**示例**
+
+参见 [copy](#copy)
 

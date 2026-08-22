@@ -48,3 +48,17 @@ let index: number = 0;
 let success: boolean = i18n.removePreferredLanguage(index);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+// 删除系统偏好语言列表中的第一个偏好语言
+let index = 0;
+try {
+  i18n.System.removePreferredLanguage(index);
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.removePreferredLanguage failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+

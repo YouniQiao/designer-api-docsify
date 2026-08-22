@@ -26,7 +26,48 @@ Reads the specified file and loads its data to the **Storage** instance for data
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the target file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Storage&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Storage&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import featureAbility from '@ohos.ability.featureAbility';
+
+let path;
+let context = featureAbility.getContext();
+context.getFilesDir().then((filePath) => {
+  path = filePath;
+  console.info("======================>getFilesDirPromise====================>");
+
+  data_storage.getStorage(path + '/mystore', function (err, storage) {
+    if (err) {
+      console.info("Failed to get the storage. path: " + path + '/mystore');
+      return;
+    }
+    storage.putSync('startup', 'auto');
+    storage.flushSync();
+  })
+});
+```
+
+```TypeScript
+import featureAbility from '@ohos.ability.featureAbility';
+
+let path;
+let context = featureAbility.getContext();
+context.getFilesDir().then((filePath) => {
+  path = filePath;
+  console.info("======================>getFilesDirPromise====================>");
+
+  let getPromise = data_storage.getStorage(path + '/mystore');
+  getPromise.then((storage) => {
+    storage.putSync('startup', 'auto');
+    storage.flushSync();
+  }).catch((err) => {
+    console.info("Failed to get the storage. path: " + path + '/mystore');
+  })
+});
+```
 
 
 ## getStorage
@@ -56,4 +97,8 @@ Reads the specified file and loads its data to the **Storage** instance for data
 | Type | Description |
 | --- | --- |
 | Promise&lt;Storage&gt; | Promise used to return the result. |
+
+**Examples**
+
+See [getStorage](#getstorage)
 

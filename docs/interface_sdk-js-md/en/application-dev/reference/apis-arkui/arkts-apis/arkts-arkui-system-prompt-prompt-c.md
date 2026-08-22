@@ -1,0 +1,154 @@
+# Prompt
+
+Defines the prompt interface.
+
+**Since:** 11
+
+<!--Device-unnamed-export default class Prompt--><!--Device-unnamed-export default class Prompt-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from '@kit.ArkUI';
+```
+
+## showActionMenu
+
+```TypeScript
+static showActionMenu(options: ShowActionMenuOptions): void
+```
+
+Displays the menu.
+
+**Since:** 11
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Prompt-static showActionMenu(options: ShowActionMenuOptions): void--><!--Device-Prompt-static showActionMenu(options: ShowActionMenuOptions): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [ShowActionMenuOptions](arkts-arkui-system-prompt-showactionmenuoptions-i.md) | Yes | Options. |
+
+**Examples**
+
+```TypeScript
+import prompt from '@system.prompt';
+class C{
+  showActionMenu() {
+    prompt.showActionMenu({
+      title: 'Title Info',
+      buttons: [
+        {
+          text: 'item1',
+          color: '#666666'
+        },
+        {
+          text: 'item2',
+          color: '#000000'
+        },
+      ],
+      success: (tapIndex)=> {
+        console.info('dialog success callback, click button : ' + tapIndex);
+      },
+      fail: (errMsg)=> {
+        console.info('dialog fail callback' + errMsg);
+      },
+    });
+  }
+}
+export default new C()
+```
+
+## showDialog
+
+```TypeScript
+static showDialog(options: ShowDialogOptions): void
+```
+
+Displays the dialog box.
+
+**Since:** 11
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Prompt-static showDialog(options: ShowDialogOptions): void--><!--Device-Prompt-static showDialog(options: ShowDialogOptions): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [ShowDialogOptions](arkts-arkui-system-prompt-showdialogoptions-i.md) | Yes | Options. |
+
+**Examples**
+
+```TypeScript
+import prompt from '@system.prompt';
+class B{
+  showDialog() {
+    prompt.showDialog({
+      title: 'Title Info',
+      message: 'Message Info',
+      buttons: [
+        {
+          text: 'button',
+          color: '#666666'
+        },
+      ],
+      success: (data)=> {
+        console.info('dialog success callback, click button : ' + data.index);
+      },
+      cancel: ()=> {
+        console.info('dialog cancel callback');
+      },
+    });
+  }
+}
+export default new B()
+```
+
+## showToast
+
+```TypeScript
+static showToast(options: ShowToastOptions): void
+```
+
+Displays the notification text.
+
+**Since:** 11
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Prompt-static showToast(options: ShowToastOptions): void--><!--Device-Prompt-static showToast(options: ShowToastOptions): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | Yes | Options. |
+
+**Examples**
+
+```TypeScript
+import prompt from '@system.prompt';
+class A{
+  showToast() {
+    prompt.showToast({
+      message: 'Message Info',
+      duration: 2000
+    });
+  }
+}
+export default new A()
+```
+

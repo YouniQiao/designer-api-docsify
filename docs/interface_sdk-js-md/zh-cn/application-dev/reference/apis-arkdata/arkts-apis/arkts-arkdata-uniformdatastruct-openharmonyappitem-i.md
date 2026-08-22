@@ -158,3 +158,55 @@ readonly uniformDataType: 'openharmony.app-item'
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
+
+let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+let appItemDetails: Record<string, number | string | Uint8Array> = {
+  'appItemKey1': 123,
+  'appItemKey2': 'appItemValue',
+  'appItemKey3': u8Array
+};
+let appItem: uniformDataStruct.OpenHarmonyAppItem = {
+  uniformDataType: 'openharmony.app-item',
+  appId: 'MyAppId',
+  appName: 'MyAppName',
+  appIconId: 'MyAppIconId',
+  appLabelId: 'MyAppLabelId',
+  bundleName: 'MyBundleName',
+  abilityName: 'MyAbilityName',
+  details: appItemDetails
+};
+console.info('appItem.uniformDataType: ' + appItem.uniformDataType);
+let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.OPENHARMONY_APP_ITEM, appItem);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
+
+let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+let appItemDetails: Record<string, int | long | double | string | Uint8Array> = {
+  'appItemKey1': 123,
+  'appItemKey2': 'appItemValue',
+  'appItemKey3': u8Array
+};
+let appItem: uniformDataStruct.OpenHarmonyAppItem = {
+  uniformDataType: 'openharmony.app-item',
+  appId: 'MyAppId',
+  appName: 'MyAppName',
+  appIconId: 'MyAppIconId',
+  appLabelId: 'MyAppLabelId',
+  bundleName: 'MyBundleName',
+  abilityName: 'MyAbilityName',
+  details: appItemDetails
+}
+console.info('appItem.uniformDataType: ' + appItem.uniformDataType);
+let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.OPENHARMONY_APP_ITEM, appItem);
+```
+

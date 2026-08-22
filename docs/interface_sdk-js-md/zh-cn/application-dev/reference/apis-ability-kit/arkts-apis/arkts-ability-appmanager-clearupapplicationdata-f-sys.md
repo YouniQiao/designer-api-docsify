@@ -53,6 +53,29 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundleName = 'bundleName';
 
+function clearUpApplicationDataCallback(err: BusinessError | null) {
+  if (err) {
+    console.error(`clearUpApplicationDataCallback fail, err: ${JSON.stringify(err)}`);
+  } else {
+    console.info('clearUpApplicationDataCallback success.');
+  }
+}
+
+try {
+  appManager.clearUpApplicationData(bundleName, clearUpApplicationDataCallback);
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`[appManager] error: ${code}, ${message}`);
+}
+```
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'bundleName';
+
 try {
   appManager.clearUpApplicationData(bundleName).then((data) => {
     console.info('clearUpApplicationData success.');
@@ -104,26 +127,5 @@ function clearUpApplicationData(bundleName: string, callback: AsyncCallback<void
 
 **示例**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'bundleName';
-
-function clearUpApplicationDataCallback(err: BusinessError | null) {
-  if (err) {
-    console.error(`clearUpApplicationDataCallback fail, err: ${JSON.stringify(err)}`);
-  } else {
-    console.info('clearUpApplicationDataCallback success.');
-  }
-}
-
-try {
-  appManager.clearUpApplicationData(bundleName, clearUpApplicationDataCallback);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
+参见 [clearUpApplicationData](#clearupapplicationdata)
 

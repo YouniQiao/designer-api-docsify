@@ -35,7 +35,7 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | FetchOptions | Yes | Retrieval options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Yes | Callback function. If files from the album are obtained successfully, **err** is **undefined**, and **data** is the result set of the obtained image and video data ([FetchResult](arkts-file-photoaccesshelper.md)). Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Yes | Callback function. If files from the album are obtained successfully, **err** is **undefined**, and **data** is the result set of the obtained image and video data ([FetchResult](arkts-file-photoaccesshelper.md)). Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -46,6 +46,117 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 | 13900012 | Permission denied<br>**Applicable version:** 10 - 11 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+**Examples**
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('albumGetAssetsDemoCallback');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let albumFetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let albumList: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, albumFetchOptions);
+  let album: photoAccessHelper.Album = await albumList.getFirstObject();
+  album.getAssets(fetchOption, (err, albumFetchResult) => {
+    if (albumFetchResult !== undefined) {
+      console.info('album getAssets successfully, getCount: ' + albumFetchResult.getCount());
+    } else {
+      console.error(`album getAssets failed with error: ${err.code}, ${err.message}`);
+    }
+  });
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('albumGetAssetsDemoPromise');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let albumFetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let albumList: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, albumFetchOptions);
+  let album: photoAccessHelper.Album = await albumList.getFirstObject();
+  album.getAssets(fetchOption).then((albumFetchResult) => {
+    console.info('album getAssets successfully, getCount: ' + albumFetchResult.getCount());
+  }).catch((err: BusinessError) => {
+    console.error(`album getAssets failed with error: ${err.code}, ${err.message}`);
+  });
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getAssets');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+
+  phAccessHelper.getAssets(fetchOptions, async (err, fetchResult) => {
+    if (fetchResult !== undefined) {
+      console.info('fetchResult success');
+      let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+      if (photoAsset !== undefined) {
+        console.info('photoAsset.displayName : ' + photoAsset.displayName);
+      }
+    } else {
+      console.error(`fetchResult fail with error: ${err.code}, ${err.message}`);
+    }
+  });
+}
+```
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getAssets');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    if (fetchResult !== undefined) {
+      console.info('fetchResult success');
+      let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+      if (photoAsset !== undefined) {
+        console.info('photoAsset.displayName :' + photoAsset.displayName);
+      }
+    }
+  } catch (err) {
+    console.error(`getAssets failed, error: ${err.code}, ${err.message}`);
+  }
+}
+```
 
 ## getAssets
 
@@ -86,6 +197,10 @@ Obtains image and video assets. This API uses a promise to return the result.
 | 13900012 | Permission denied<br>**Applicable version:** 10 - 19 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+**Examples**
+
+See [getAssets](#getassets)
 
 ## albumName
 

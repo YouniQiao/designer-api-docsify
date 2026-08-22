@@ -14,7 +14,7 @@ function sppWrite(clientSocket: int, data: ArrayBuffer): void
 
 Write data through the socket.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-socket-function sppWrite(clientSocket: int, data: ArrayBuffer): void--><!--Device-socket-function sppWrite(clientSocket: int, data: ArrayBuffer): void-End-->
 

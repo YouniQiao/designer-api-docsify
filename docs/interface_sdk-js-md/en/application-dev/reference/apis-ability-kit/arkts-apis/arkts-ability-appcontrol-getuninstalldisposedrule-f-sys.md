@@ -48,3 +48,20 @@ Obtains the uninstallation disposed rule of an application or an application clo
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex is not in the valid range. |
 | [17700074](../errorcode-bundle.md#17700074-invalid-appidentifier) | The specified appIdentifier is invalid. |
 
+**Examples**
+
+```TypeScript
+import { appControl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appIdentifier = "com.example.myapplication_xxxxx";
+
+try {
+  let data = appControl.getUninstallDisposedRule(appIdentifier, 1);
+  console.info('getUninstallDisposedRule successfully. Data: ' + JSON.stringify(data));
+} catch (error) {
+  let message = (error as BusinessError).message;
+  console.error('getUninstallDisposedRule failed ' + message);
+}
+```
+

@@ -75,6 +75,34 @@ backgroundTaskManager.getRemainingDelayTime(requestId, (error: BusinessError<voi
 })
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+
+let requestId = 1;
+backgroundTaskManager.getRemainingDelayTime(requestId).then((res: number) => {
+  console.info('promise => Operation getRemainingDelayTime succeeded. Data: ' + JSON.stringify(res));
+}).catch((error: BusinessError) => {
+  console.error(`promise => Operation getRemainingDelayTime failed. code is ${error.code} message is ${error.message}`);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+
+let requestId: int = 1;
+backgroundTaskManager.getRemainingDelayTime(requestId).then((res: int) => {
+  console.info('promise => Operation getRemainingDelayTime succeeded. Data: ' + JSON.stringify(res));
+}).catch((error) => {
+  console.error(`promise => Operation getRemainingDelayTime failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
+})
+```
+
 
 ## getRemainingDelayTime
 
@@ -116,31 +144,5 @@ function getRemainingDelayTime(requestId: int): Promise<int>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-
-let requestId = 1;
-backgroundTaskManager.getRemainingDelayTime(requestId).then((res: number) => {
-  console.info('promise => Operation getRemainingDelayTime succeeded. Data: ' + JSON.stringify(res));
-}).catch((error: BusinessError) => {
-  console.error(`promise => Operation getRemainingDelayTime failed. code is ${error.code} message is ${error.message}`);
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-
-let requestId: int = 1;
-backgroundTaskManager.getRemainingDelayTime(requestId).then((res: int) => {
-  console.info('promise => Operation getRemainingDelayTime succeeded. Data: ' + JSON.stringify(res));
-}).catch((error) => {
-  console.error(`promise => Operation getRemainingDelayTime failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-})
-```
+参见 [getRemainingDelayTime](#getremainingdelaytime)
 

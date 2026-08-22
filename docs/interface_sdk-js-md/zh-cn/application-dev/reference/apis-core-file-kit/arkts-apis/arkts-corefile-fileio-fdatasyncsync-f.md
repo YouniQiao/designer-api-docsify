@@ -29,3 +29,11 @@ declare function fdatasyncSync(fd: number): void
 | --- | --- | --- | --- |
 | fd | number | 是 | 待同步文件的文件描述符。 |
 
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+let stat = fileio.fdatasyncSync(fd);
+```
+

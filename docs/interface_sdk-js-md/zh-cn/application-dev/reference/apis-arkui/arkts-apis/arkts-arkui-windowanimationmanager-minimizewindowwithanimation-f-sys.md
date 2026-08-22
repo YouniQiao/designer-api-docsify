@@ -94,37 +94,6 @@ windowAnimationManager.minimizeWindowWithAnimation(target, (err: BusinessError, 
 });
 ```
 
-
-## minimizeWindowWithAnimation
-
-```TypeScript
-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promise<WindowAnimationFinishedCallback>
-```
-
-最小化动画目标窗口，并返回动画完成的回调。使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promise<WindowAnimationFinishedCallback>--><!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promise<WindowAnimationFinishedCallback>-End-->
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| windowTarget | WindowAnimationTarget | 是 | 动画目标窗口。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md)&gt; | Promise对象，返回动画完成的回调。 |
-
-**示例**
-
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -175,4 +144,37 @@ promise.then((data: windowAnimationManager.WindowAnimationFinishedCallback) => {
     return;
 });
 ```
+
+
+## minimizeWindowWithAnimation
+
+```TypeScript
+function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promise<WindowAnimationFinishedCallback>
+```
+
+最小化动画目标窗口，并返回动画完成的回调。使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promise<WindowAnimationFinishedCallback>--><!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promise<WindowAnimationFinishedCallback>-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| windowTarget | WindowAnimationTarget | 是 | 动画目标窗口。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md)&gt; | Promise对象，返回动画完成的回调。 |
+
+**示例**
+
+参见 [minimizeWindowWithAnimation](#minimizewindowwithanimation)
 

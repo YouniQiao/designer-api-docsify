@@ -14,7 +14,7 @@ function sppAccept(serverSocket: int, callback: AsyncCallback<int>): void
 
 Waits for a remote device to connect.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-socket-function sppAccept(serverSocket: int, callback: AsyncCallback<int>): void--><!--Device-socket-function sppAccept(serverSocket: int, callback: AsyncCallback<int>): void-End-->
 
@@ -25,7 +25,7 @@ Waits for a remote device to connect.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | serverSocket | int | Yes | Indicates the server socket ID, returned by [sppListen](arkts-connectivity-socket-spplisten-f.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return a client socket ID. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return a client socket ID. |
 
 **Error codes:**
 

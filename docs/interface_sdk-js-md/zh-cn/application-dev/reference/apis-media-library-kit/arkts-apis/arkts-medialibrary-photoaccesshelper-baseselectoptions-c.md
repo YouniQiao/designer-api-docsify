@@ -14,24 +14,6 @@
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-## MIMEType
-
-```TypeScript
-MIMEType?: PhotoViewMIMETypes
-```
-
-可选择的媒体文件类型，若无此参数，则默认为图片和视频类型。
-
-**类型：** PhotoViewMIMETypes
-
-**起始版本：** 26.0.0
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BaseSelectOptions-MIMEType?: PhotoViewMIMETypes--><!--Device-BaseSelectOptions-MIMEType?: PhotoViewMIMETypes-End-->
-
-**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 ## assetCompatibleCapability
 
 ```TypeScript
@@ -279,6 +261,24 @@ maxSelectNumber?: int
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-BaseSelectOptions-maxSelectNumber?: int--><!--Device-BaseSelectOptions-maxSelectNumber?: int-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## MIMEType
+
+```TypeScript
+MIMEType?: PhotoViewMIMETypes
+```
+
+可选择的媒体文件类型，若无此参数，则默认为图片和视频类型。
+
+**类型：** PhotoViewMIMETypes
+
+**起始版本：** 26.0.0
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BaseSelectOptions-MIMEType?: PhotoViewMIMETypes--><!--Device-BaseSelectOptions-MIMEType?: PhotoViewMIMETypes-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

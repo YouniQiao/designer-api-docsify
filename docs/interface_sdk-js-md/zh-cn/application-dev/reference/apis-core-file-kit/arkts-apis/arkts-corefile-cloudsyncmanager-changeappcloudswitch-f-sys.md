@@ -74,6 +74,38 @@ cloudSyncManager.changeAppCloudSwitch(accountId, bundleName, true).then<void>(()
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountId: string = "testAccount";
+let bundleName: string = "com.example.bundle";
+cloudSyncManager.changeAppCloudSwitch(accountId, bundleName, true, (err: BusinessError) => {
+  if (err) {
+    console.error(`changeAppCloudSwitch failed with error message: ${err.message}, error code: ${err.code}`);
+  } else {
+    console.info("changeAppCloudSwitch successfully");
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountId: string = "testAccount";
+let bundleName: string = "com.example.bundle";
+cloudSyncManager.changeAppCloudSwitch(accountId, bundleName, true, (err: BusinessError<void> | null) => {
+  if (err && err.code) {
+    console.error("changeAppCloudSwitch failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("changeAppCloudSwitch successfully");
+  }
+});
+```
+
 
 ## changeAppCloudSwitch
 
@@ -110,35 +142,5 @@ function changeAppCloudSwitch(accountId: string, bundleName: string, status: boo
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-let bundleName: string = "com.example.bundle";
-cloudSyncManager.changeAppCloudSwitch(accountId, bundleName, true, (err: BusinessError) => {
-  if (err) {
-    console.error(`changeAppCloudSwitch failed with error message: ${err.message}, error code: ${err.code}`);
-  } else {
-    console.info("changeAppCloudSwitch successfully");
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-let bundleName: string = "com.example.bundle";
-cloudSyncManager.changeAppCloudSwitch(accountId, bundleName, true, (err: BusinessError<void> | null) => {
-  if (err && err.code) {
-    console.error("changeAppCloudSwitch failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("changeAppCloudSwitch successfully");
-  }
-});
-```
+参见 [changeAppCloudSwitch](#changeappcloudswitch)
 

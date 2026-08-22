@@ -46,6 +46,17 @@ observer.onCellularDataFlowChange((data: data.DataFlowType) => {
 });
 ```
 
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+
+let options: observer.ObserverOptions = {
+    slotId: 0
+}
+observer.onCellularDataFlowChange(options, (data: data.DataFlowType) => {
+    console.info('onCellularDataFlowChange, data:->${JSON.stringify(data)}');
+});
+```
+
 
 ## onCellularDataFlowChange
 
@@ -80,14 +91,5 @@ Callback when the uplink and downlink data flow state of cellular data services 
 
 **示例**
 
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.onCellularDataFlowChange(options, (data: data.DataFlowType) => {
-    console.info('onCellularDataFlowChange, data:->${JSON.stringify(data)}');
-});
-```
+参见 [onCellularDataFlowChange](#oncellulardataflowchange)
 

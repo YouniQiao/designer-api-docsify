@@ -54,6 +54,72 @@ getAbilityInfo(): Promise<AbilityInfo>
 | --- | --- |
 | Promise&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt; | Promise对象，返回当前归属Ability详细信息。 |
 
+## getApplicationContext
+
+```TypeScript
+getApplicationContext(): Context
+```
+
+获取应用上下文信息。
+
+**起始版本：** 7
+
+**模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-getApplicationContext(): Context--><!--Device-Context-getApplicationContext(): Context-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [Context](arkts-ability-context-context-depr-i.md) | 返回应用上下文信息。 |
+
+## getApplicationInfo
+
+```TypeScript
+getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void
+```
+
+获取有关当前应用程序的信息。使用callback异步回调。
+
+**起始版本：** 7
+
+**模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void--><!--Device-Context-getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | 是 | 回调函数，返回当前应用程序的信息。 |
+
+## getApplicationInfo
+
+```TypeScript
+getApplicationInfo(): Promise<ApplicationInfo>
+```
+
+获取有关当前应用程序的信息。使用Promise异步回调。
+
+**起始版本：** 7
+
+**模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-getApplicationInfo(): Promise<ApplicationInfo>--><!--Device-Context-getApplicationInfo(): Promise<ApplicationInfo>-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | Promise对象，返回当前应用程序的信息。 |
+
 ## getAppType
 
 ```TypeScript
@@ -141,72 +207,6 @@ getAppVersionInfo(): Promise<AppVersionInfo>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;[AppVersionInfo](arkts-ability-appversioninfo-appversioninfo-depr-i.md)&gt; | Promise对象，返回应用版本信息。 |
-
-## getApplicationContext
-
-```TypeScript
-getApplicationContext(): Context
-```
-
-获取应用上下文信息。
-
-**起始版本：** 7
-
-**模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-Context-getApplicationContext(): Context--><!--Device-Context-getApplicationContext(): Context-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| [Context](arkts-ability-context-context-depr-i.md) | 返回应用上下文信息。 |
-
-## getApplicationInfo
-
-```TypeScript
-getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void
-```
-
-获取有关当前应用程序的信息。使用callback异步回调。
-
-**起始版本：** 7
-
-**模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-Context-getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void--><!--Device-Context-getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | 是 | 回调函数，返回当前应用程序的信息。 |
-
-## getApplicationInfo
-
-```TypeScript
-getApplicationInfo(): Promise<ApplicationInfo>
-```
-
-获取有关当前应用程序的信息。使用Promise异步回调。
-
-**起始版本：** 7
-
-**模型约束：** 此接口仅可在FA模型下使用。
-
-<!--Device-Context-getApplicationInfo(): Promise<ApplicationInfo>--><!--Device-Context-getApplicationInfo(): Promise<ApplicationInfo>-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | Promise对象，返回当前应用程序的信息。 |
 
 ## getBundleName
 

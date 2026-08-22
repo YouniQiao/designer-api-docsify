@@ -42,6 +42,14 @@ Creates an ImageCreator instance by specifying the image width, height, format, 
 **Examples**
 
 ```TypeScript
+let size: image.Size = {
+  height: 8192,
+  width: 8192
+}
+let creator: image.ImageCreator = image.createImageCreator(size, image.ImageFormat.JPEG, 8);
+```
+
+```TypeScript
 let creator: image.ImageCreator = image.createImageCreator(8192, 8192, image.ImageFormat.JPEG, 8);
 ```
 
@@ -82,11 +90,5 @@ Creates an ImageCreator instance by specifying the image size, format, and capac
 
 **Examples**
 
-```TypeScript
-let size: image.Size = {
-  height: 8192,
-  width: 8192
-}
-let creator: image.ImageCreator = image.createImageCreator(size, image.ImageFormat.JPEG, 8);
-```
+See [createImageCreator](#createimagecreator)
 

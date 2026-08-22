@@ -26,7 +26,7 @@ Aborts an ordered common event. This API is used with [finishCommonEvent](#finis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -74,28 +74,6 @@ subscriber.finishCommonEvent((err: BusinessError | null) => {
 });
 ```
 
-## abortCommonEvent
-
-```TypeScript
-abortCommonEvent(): Promise<void>
-```
-
-Aborts an ordered common event. This API is used with [finishCommonEvent](#finishcommonevent). After the abort, the common event is not sent to the next subscriber. This API uses a promise to return the result.
-
-**Since:** 23
-
-<!--Device-CommonEventSubscriber-abortCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-abortCommonEvent(): Promise<void>-End-->
-
-**System capability:** SystemCapability.Notification.CommonEvent
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
 ArkTS-Dyn example:
 
 ```TypeScript
@@ -127,6 +105,30 @@ subscriber.finishCommonEvent().then(() => {
   console.error(`Failed to finish common event. Code is ${error.code}, message is ${error.message}`);
 });
 ```
+
+## abortCommonEvent
+
+```TypeScript
+abortCommonEvent(): Promise<void>
+```
+
+Aborts an ordered common event. This API is used with [finishCommonEvent](#finishcommonevent). After the abort, the common event is not sent to the next subscriber. This API uses a promise to return the result.
+
+**Since:** 23
+
+<!--Device-CommonEventSubscriber-abortCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-abortCommonEvent(): Promise<void>-End-->
+
+**System capability:** SystemCapability.Notification.CommonEvent
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+See [abortCommonEvent](#abortcommonevent)
 
 ## abortCommonEventSync
 
@@ -185,7 +187,7 @@ Clears the abort state of an ordered common event. Use this API together with [f
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -233,28 +235,6 @@ subscriber.finishCommonEvent((err: BusinessError | null) => {
 });
 ```
 
-## clearAbortCommonEvent
-
-```TypeScript
-clearAbortCommonEvent(): Promise<void>
-```
-
-Clears the abort state of this ordered common event. Use this API together with [finishCommonEvent](#finishcommonevent), and the common event can be passed to the next subscriber. This API uses a promise to return the result.
-
-**Since:** 23
-
-<!--Device-CommonEventSubscriber-clearAbortCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-clearAbortCommonEvent(): Promise<void>-End-->
-
-**System capability:** SystemCapability.Notification.CommonEvent
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
 ArkTS-Dyn example:
 
 ```TypeScript
@@ -286,6 +266,30 @@ subscriber.finishCommonEvent().then(() => {
   console.error(`Failed to finish common event. Code is ${error.code}, message is ${error.message}`);
 });
 ```
+
+## clearAbortCommonEvent
+
+```TypeScript
+clearAbortCommonEvent(): Promise<void>
+```
+
+Clears the abort state of this ordered common event. Use this API together with [finishCommonEvent](#finishcommonevent), and the common event can be passed to the next subscriber. This API uses a promise to return the result.
+
+**Since:** 23
+
+<!--Device-CommonEventSubscriber-clearAbortCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-clearAbortCommonEvent(): Promise<void>-End-->
+
+**System capability:** SystemCapability.Notification.CommonEvent
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+See [clearAbortCommonEvent](#clearabortcommonevent)
 
 ## clearAbortCommonEventSync
 
@@ -344,7 +348,7 @@ Finishes this ordered common event. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the subscriber successfully finishes this ordered common event, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the subscriber successfully finishes this ordered common event, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -378,6 +382,27 @@ subscriber.finishCommonEvent((err: BusinessError | null) => {
 });
 ```
 
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to finish common event. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## finishCommonEvent
 
 ```TypeScript
@@ -400,26 +425,7 @@ Finishes this ordered common event. This API uses a promise to return the result
 
 **Examples**
 
-ArkTS-Dyn example:
-
-```TypeScript
-subscriber.finishCommonEvent().then(() => {
-  console.info(`Succeeded in finishing common event.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-subscriber.finishCommonEvent().then(() => {
-  console.info(`Succeeded in finishing common event.`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to finish common event. Code is ${error.code}, message is ${error.message}`);
-});
-```
+See [finishCommonEvent](#finishcommonevent)
 
 ## getAbortCommonEvent
 
@@ -439,7 +445,7 @@ Checks whether this ordered common event should be aborted. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined** and **data** is **true** if the current ordered common event is in the abort state, or **false** if the current ordered common event is not in the abort state. If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined** and **data** is **true** if the current ordered common event is in the abort state, or **false** if the current ordered common event is not in the abort state. If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -473,6 +479,27 @@ subscriber.getAbortCommonEvent((err: BusinessError | null, abortEvent: boolean |
 });
 ```
 
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.getAbortCommonEvent().then((abortEvent: boolean) => {
+  console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get abort common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.getAbortCommonEvent().then((abortEvent: boolean) => {
+  console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
+}).catch((err: Error): void  => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to get abort common event. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## getAbortCommonEvent
 
 ```TypeScript
@@ -495,26 +522,7 @@ Checks whether this ordered common event should be aborted. This API uses a prom
 
 **Examples**
 
-ArkTS-Dyn example:
-
-```TypeScript
-subscriber.getAbortCommonEvent().then((abortEvent: boolean) => {
-  console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get abort common event. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-subscriber.getAbortCommonEvent().then((abortEvent: boolean) => {
-  console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
-}).catch((err: Error): void  => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to get abort common event. Code is ${error.code}, message is ${error.message}`);
-});
-```
+See [getAbortCommonEvent](#getabortcommonevent)
 
 ## getAbortCommonEventSync
 
@@ -563,7 +571,7 @@ Obtains the result code of an ordered common event. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the result code (number type) of an ordered common event is successfully obtained, **err** is **undefined**, and **data** is the code obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the result code (number type) of an ordered common event is successfully obtained, **err** is **undefined**, and **data** is the code obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -597,6 +605,27 @@ subscriber.getCode((err: BusinessError | null, code: int | undefined | null) => 
 });
 ```
 
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.getCode().then((code: number) => {
+  console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get code. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.getCode().then((code: int) => {
+  console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to get code. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## getCode
 
 ```TypeScript
@@ -621,26 +650,7 @@ Obtains the result code of an ordered common event. This API uses a promise to r
 
 **Examples**
 
-ArkTS-Dyn example:
-
-```TypeScript
-subscriber.getCode().then((code: number) => {
-  console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get code. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-subscriber.getCode().then((code: int) => {
-  console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to get code. Code is ${error.code}, message is ${error.message}`);
-});
-```
+See [getCode](#getcode)
 
 ## getCodeSync
 
@@ -700,7 +710,7 @@ Obtains the data of an ordered common event. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the result data (string type) of an ordered common event is successfully obtained, **err** is **undefined**, and **data** is the data obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the result data (string type) of an ordered common event is successfully obtained, **err** is **undefined**, and **data** is the data obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -736,6 +746,27 @@ subscriber.getData((err: BusinessError | null, data: string | undefined | null) 
 });
 ```
 
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.getData().then((data: string) => {
+  console.info(`Succeeded in getting data, data is ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get data. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.getData().then((data: string) => {
+  console.info(`Succeeded in getting data, data is ${JSON.stringify(data)}`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to get data. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## getData
 
 ```TypeScript
@@ -760,26 +791,7 @@ Obtains the data of an ordered common event. This API uses a promise to return t
 
 **Examples**
 
-ArkTS-Dyn example:
-
-```TypeScript
-subscriber.getData().then((data: string) => {
-  console.info(`Succeeded in getting data, data is ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get data. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-subscriber.getData().then((data: string) => {
-  console.info(`Succeeded in getting data, data is ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to get data. Code is ${error.code}, message is ${error.message}`);
-});
-```
+See [getData](#getdata)
 
 ## getDataSync
 
@@ -830,7 +842,7 @@ Obtains the subscriber information. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md)&gt; | Yes | Callback used to return the result. If the subscriber information is successfully obtained, **err** is **undefined** and **data** is the subscription information of the subscriber. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md)&gt; | Yes | Callback used to return the result. If the subscriber information is successfully obtained, **err** is **undefined** and **data** is the subscription information of the subscriber. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -864,6 +876,26 @@ subscriber.getSubscribeInfo((err: BusinessError | null, subscribeInfo: commonEve
 });
 ```
 
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.getSubscribeInfo().then((subscribeInfo: commonEventManager.CommonEventSubscribeInfo) => {
+  console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get subscribe info. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.getSubscribeInfo().then((subscribeInfo: commonEventManager.CommonEventSubscribeInfo | null) => {
+  console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
+}).catch((err: BusinessError): void => {
+  console.error(`Failed to get subscribe info. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## getSubscribeInfo
 
 ```TypeScript
@@ -882,13 +914,17 @@ Obtains the subscriber information. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) \| null&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) \| null&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+See [getSubscribeInfo](#getsubscribeinfo)
 
 ## getSubscribeInfo
 
@@ -914,25 +950,7 @@ Obtains the subscriber information. This API uses a promise to return the result
 
 **Examples**
 
-ArkTS-Dyn example:
-
-```TypeScript
-subscriber.getSubscribeInfo().then((subscribeInfo: commonEventManager.CommonEventSubscribeInfo) => {
-  console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get subscribe info. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-subscriber.getSubscribeInfo().then((subscribeInfo: commonEventManager.CommonEventSubscribeInfo | null) => {
-  console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
-}).catch((err: BusinessError): void => {
-  console.error(`Failed to get subscribe info. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getSubscribeInfo](#getsubscribeinfo)
 
 ## getSubscribeInfo
 
@@ -953,6 +971,10 @@ Obtains the subscriber information. This API uses a promise to return the result
 | Type | Description |
 | --- | --- |
 | Promise&lt;[CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) \| null&gt; | Promise used to return the result. |
+
+**Examples**
+
+See [getSubscribeInfo](#getsubscribeinfo)
 
 ## getSubscribeInfoSync
 
@@ -1012,6 +1034,10 @@ Obtains the subscriber information. This API returns the result synchronously.
 | --- | --- |
 | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) \| null | Subscriber information. |
 
+**Examples**
+
+See [getSubscribeInfoSync](#getsubscribeinfosync)
+
 ## isOrderedCommonEvent
 
 ```TypeScript
@@ -1030,7 +1056,7 @@ Checks whether the current common event is an ordered common event. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**. If **data** is **true**, the common event is ordered; if **data** is **false**, the common event is not ordered. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**. If **data** is **true**, the common event is ordered; if **data** is **false**, the common event is not ordered. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1064,6 +1090,27 @@ subscriber.isOrderedCommonEvent((err: BusinessError | null, isOrdered: boolean |
 });
 ```
 
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.isOrderedCommonEvent().then((isOrdered: boolean) => {
+  console.info(`isOrderedCommonEvent ${JSON.stringify(isOrdered)}`);
+}).catch((err: BusinessError) => {
+  console.error(`isOrderedCommonEvent failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.isOrderedCommonEvent().then((isOrdered: boolean) => {
+  console.info(`isOrderedCommonEvent ${JSON.stringify(isOrdered)}`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`isOrderedCommonEvent failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## isOrderedCommonEvent
 
 ```TypeScript
@@ -1086,26 +1133,7 @@ Checks whether the current common event is an ordered common event. This API use
 
 **Examples**
 
-ArkTS-Dyn example:
-
-```TypeScript
-subscriber.isOrderedCommonEvent().then((isOrdered: boolean) => {
-  console.info(`isOrderedCommonEvent ${JSON.stringify(isOrdered)}`);
-}).catch((err: BusinessError) => {
-  console.error(`isOrderedCommonEvent failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-subscriber.isOrderedCommonEvent().then((isOrdered: boolean) => {
-  console.info(`isOrderedCommonEvent ${JSON.stringify(isOrdered)}`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`isOrderedCommonEvent failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+See [isOrderedCommonEvent](#isorderedcommonevent)
 
 ## isOrderedCommonEventSync
 
@@ -1152,7 +1180,7 @@ Checks whether the current common event is a sticky common event. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**. If **data** is **true**, the common event is sticky; if **data** is **false**, the common event is not sticky. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**. If **data** is **true**, the common event is sticky; if **data** is **false**, the common event is not sticky. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1186,6 +1214,27 @@ subscriber.isStickyCommonEvent((err: BusinessError | null, isSticky: boolean | u
 });
 ```
 
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.isStickyCommonEvent().then((isSticky: boolean) => {
+  console.info(`isStickyCommonEvent ${JSON.stringify(isSticky)}`);
+}).catch((err: BusinessError) => {
+  console.error(`isStickyCommonEvent failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.isStickyCommonEvent().then((isSticky: boolean) => {
+  console.info(`isStickyCommonEvent ${JSON.stringify(isSticky)}`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`isStickyCommonEvent failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## isStickyCommonEvent
 
 ```TypeScript
@@ -1208,26 +1257,7 @@ Checks whether the current common event is a sticky common event. This API uses 
 
 **Examples**
 
-ArkTS-Dyn example:
-
-```TypeScript
-subscriber.isStickyCommonEvent().then((isSticky: boolean) => {
-  console.info(`isStickyCommonEvent ${JSON.stringify(isSticky)}`);
-}).catch((err: BusinessError) => {
-  console.error(`isStickyCommonEvent failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-subscriber.isStickyCommonEvent().then((isSticky: boolean) => {
-  console.info(`isStickyCommonEvent ${JSON.stringify(isSticky)}`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`isStickyCommonEvent failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+See [isStickyCommonEvent](#isstickycommonevent)
 
 ## isStickyCommonEventSync
 
@@ -1277,7 +1307,7 @@ Sets the code of an ordered common event. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | code | int | Yes | Code delivered by the ordered common event. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1308,6 +1338,27 @@ subscriber.setCode(1, (err: BusinessError | null) => {
     return;
   }
   console.info(`Succeeded in setting code.`);
+});
+```
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.setCode(1).then(() => {
+  console.info(`Succeeded in setting code.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set code. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.setCode(1).then(() => {
+  console.info(`Succeeded in setting code.`);
+}).catch((err: Error): void  => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to set code. Code is ${error.code}, message is ${error.message}`);
 });
 ```
 
@@ -1347,26 +1398,7 @@ Sets the result code of an ordered common event. This API uses a promise to retu
 
 **Examples**
 
-ArkTS-Dyn example:
-
-```TypeScript
-subscriber.setCode(1).then(() => {
-  console.info(`Succeeded in setting code.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set code. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-subscriber.setCode(1).then(() => {
-  console.info(`Succeeded in setting code.`);
-}).catch((err: Error): void  => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to set code. Code is ${error.code}, message is ${error.message}`);
-});
-```
+See [setCode](#setcode)
 
 ## setCodeAndData
 
@@ -1390,7 +1422,7 @@ Sets the result code and data of an ordered common event. This API uses an async
 | --- | --- | --- | --- |
 | code | int | Yes | Code delivered by the ordered common event. |
 | data | string | Yes | Data delivered by the ordered common event. The value is a string containing a maximum of 65,536 characters. If the length exceeds the limit, the API setting becomes invalid. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1421,6 +1453,27 @@ subscriber.setCodeAndData(1, 'publish_data_changed', (err: BusinessError | null)
     return;
   }
   console.info(`Succeeded in setting code and data.`);
+});
+```
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.setCodeAndData(1, 'publish_data_changed').then(() => {
+  console.info(`Succeeded in setting code and data.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set code and data. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.setCodeAndData(1, 'publish_data_changed').then(() => {
+  console.info(`Succeeded in setting code and data.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to set code and data. Code is ${error.code}, message is ${error.message}`);
 });
 ```
 
@@ -1461,26 +1514,7 @@ Sets the result code and data of an ordered common event. This API uses a promis
 
 **Examples**
 
-ArkTS-Dyn example:
-
-```TypeScript
-subscriber.setCodeAndData(1, 'publish_data_changed').then(() => {
-  console.info(`Succeeded in setting code and data.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set code and data. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-subscriber.setCodeAndData(1, 'publish_data_changed').then(() => {
-  console.info(`Succeeded in setting code and data.`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to set code and data. Code is ${error.code}, message is ${error.message}`);
-});
-```
+See [setCodeAndData](#setcodeanddata)
 
 ## setCodeAndDataSync
 
@@ -1582,7 +1616,7 @@ Sets the data of an ordered common event. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | string | Yes | Data delivered by the ordered common event. The value is a string containing a maximum of 65,536 characters. If the length exceeds the limit, the API setting becomes invalid. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1613,6 +1647,27 @@ subscriber.setData('publish_data_changed', (err: BusinessError | null) => {
     return;
   }
   console.info(`Succeeded in setting data.`);
+});
+```
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.setData('publish_data_changed').then(() => {
+  console.info(`Succeeded in setting data.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set data. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.setData('publish_data_changed').then(() => {
+  console.info(`Succeeded in setting data.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to set data. Code is ${error.code}, message is ${error.message}`);
 });
 ```
 
@@ -1652,26 +1707,7 @@ Sets the result data of an ordered common event. This API uses a promise to retu
 
 **Examples**
 
-ArkTS-Dyn example:
-
-```TypeScript
-subscriber.setData('publish_data_changed').then(() => {
-  console.info(`Succeeded in setting data.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set data. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-subscriber.setData('publish_data_changed').then(() => {
-  console.info(`Succeeded in setting data.`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to set data. Code is ${error.code}, message is ${error.message}`);
-});
-```
+See [setData](#setdata)
 
 ## setDataSync
 

@@ -6,7 +6,7 @@ Provides a stream for file operations. Before calling any API of the **Stream** 
 
 **Deprecated since:** 9
 
-**Substitutes:** [Stream](arkts-corefile-filefs-stream-i.md)
+**Substitutes:** [Stream](arkts-corefile-file-fs-stream-i.md)
 
 <!--Device-unnamed-declare interface Stream--><!--Device-unnamed-declare interface Stream-End-->
 
@@ -29,7 +29,7 @@ Closes the file stream. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [close](arkts-corefile-filefs-stream-i.md#close)
+**Substitutes:** [close](arkts-corefile-file-fs-stream-i.md#close)
 
 <!--Device-Stream-close(): Promise<void>--><!--Device-Stream-close(): Promise<void>-End-->
 
@@ -46,11 +46,54 @@ Closes the file stream. This API uses a promise to return the result.
 ```TypeScript
 import { BusinessError } from '@ohos.base';
 let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+fileio.close(fd).then(() => {
+  console.info("close file succeed");
+}).catch((err: BusinessError) => {
+  console.error("close file failed with error:" + err);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+fileio.close(fd, (err: BusinessError) => {
+  // Do something.
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "/test.txt";
 let ss = fileio.createStreamSync(filePath, "r+");
 ss.close().then(() => {
   console.info("close fileStream succeed");
 }).catch((err: BusinessError) => {
   console.error("close fileStream  failed with error:" + err);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "/test.txt";
+let ss = fileio.createStreamSync(filePath, "r+");
+ss.close((err: BusinessError) => {
+  // Do something.
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+dir.close().then(() => {
+  console.info("close dir successfully");
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+dir.close((err: BusinessError) => {
+  console.info("close dir successfully");
 });
 ```
 
@@ -66,7 +109,7 @@ Closes the file stream. This API uses an asynchronous callback to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [close](arkts-corefile-filefs-stream-i.md#close)
+**Substitutes:** [close](arkts-corefile-file-fs-stream-i.md#close)
 
 <!--Device-Stream-close(callback: AsyncCallback<void>): void--><!--Device-Stream-close(callback: AsyncCallback<void>): void-End-->
 
@@ -76,18 +119,11 @@ Closes the file stream. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked when the file stream is closed asynchronously. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file stream is closed asynchronously. |
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let ss = fileio.createStreamSync(filePath, "r+");
-ss.close((err: BusinessError) => {
-  // Do something.
-});
-```
+See [close](#close)
 
 ## closeSync
 
@@ -101,7 +137,7 @@ Closes the file stream. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [closeSync](arkts-corefile-filefs-stream-i.md#closesync)
+**Substitutes:** [closeSync](arkts-corefile-file-fs-stream-i.md#closesync)
 
 <!--Device-Stream-closeSync(): void--><!--Device-Stream-closeSync(): void-End-->
 
@@ -111,8 +147,18 @@ Closes the file stream. This API returns the result synchronously.
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+fileio.closeSync(fd);
+```
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
 let ss = fileio.createStreamSync(filePath, "r+");
 ss.closeSync();
+```
+
+```TypeScript
+dir.closeSync();
 ```
 
 ## flush
@@ -127,7 +173,7 @@ Flushes the file stream. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [flush](arkts-corefile-filefs-stream-i.md#flush)
+**Substitutes:** [flush](arkts-corefile-file-fs-stream-i.md#flush)
 
 <!--Device-Stream-flush(): Promise<void>--><!--Device-Stream-flush(): Promise<void>-End-->
 
@@ -152,6 +198,15 @@ ss.flush().then(() => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "/test.txt";
+let ss = fileio.createStreamSync(filePath, "r+");
+ss.flush((err: BusinessError) => {
+  // Do something.
+});
+```
+
 ## flush
 
 ```TypeScript
@@ -164,7 +219,7 @@ Flushes the file stream. This API uses an asynchronous callback to return the re
 
 **Deprecated since:** 9
 
-**Substitutes:** [flush](arkts-corefile-filefs-stream-i.md#flush)
+**Substitutes:** [flush](arkts-corefile-file-fs-stream-i.md#flush)
 
 <!--Device-Stream-flush(callback: AsyncCallback<void>): void--><!--Device-Stream-flush(callback: AsyncCallback<void>): void-End-->
 
@@ -174,18 +229,11 @@ Flushes the file stream. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked when the file stream is asynchronously flushed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file stream is asynchronously flushed. |
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let ss = fileio.createStreamSync(filePath, "r+");
-ss.flush((err: BusinessError) => {
-  // Do something.
-});
-```
+See [flush](#flush)
 
 ## flushSync
 
@@ -199,7 +247,7 @@ Flushes the file stream. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [flushSync](arkts-corefile-filefs-stream-i.md#flushsync)
+**Substitutes:** [flushSync](arkts-corefile-file-fs-stream-i.md#flushsync)
 
 <!--Device-Stream-flushSync(): void--><!--Device-Stream-flushSync(): void-End-->
 
@@ -232,7 +280,7 @@ Reads data from a stream file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [read](arkts-corefile-filefs-stream-i.md#read)
+**Substitutes:** [read](arkts-corefile-file-fs-stream-i.md#read)
 
 <!--Device-Stream-read(    buffer: ArrayBuffer,    options?: {      position?: number;      offset?: number;      length?: number;    }  ): Promise<ReadOut>--><!--Device-Stream-read(    buffer: ArrayBuffer,    options?: {      position?: number;      offset?: number;      length?: number;    }  ): Promise<ReadOut>-End-->
 
@@ -277,67 +325,6 @@ ss.read(arrayBuffer, option).then((readResult: fileio.ReadOut) => {
 });
 ```
 
-## read
-
-```TypeScript
-read(buffer: ArrayBuffer, callback: AsyncCallback<ReadOut>): void
-```
-
-read.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [read](arkts-corefile-filefs-stream-i.md#read)
-
-<!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<ReadOut>): void--><!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<ReadOut>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.File.FileIO
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | buffer. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; | Yes | callback. |
-
-## read
-
-```TypeScript
-read(
-    buffer: ArrayBuffer,
-    options: {
-      position?: number;
-      offset?: number;
-      length?: number;
-    },
-    callback: AsyncCallback<ReadOut>
-  ): void
-```
-
-Reads data from a stream file. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [read](arkts-corefile-filefs-stream-i.md#read)
-
-<!--Device-Stream-read(    buffer: ArrayBuffer,    options: {      position?: number;      offset?: number;      length?: number;    },    callback: AsyncCallback<ReadOut>  ): void--><!--Device-Stream-read(    buffer: ArrayBuffer,    options: {      position?: number;      offset?: number;      length?: number;    },    callback: AsyncCallback<ReadOut>  ): void-End-->
-
-**System capability:** SystemCapability.FileManagement.File.FileIO
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| options | {       position?: number;       offset?: number;       length?: number;     } | Yes | The options are as follows:<br>- **offset** (number): position to store the data read in the buffer relative to the start address of the buffer, in bytes. This parameter is optional. The default value is **0**.<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length minus the offset.<br>- **position** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br> Constraints: offset + length &lt;= Buffer size |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; | Yes | Callback invoked when data is read asynchronously from the stream file. |
-
-**Examples**
-
 ```TypeScript
 import { BusinessError } from '@ohos.base';
 import buffer from '@ohos.buffer';
@@ -362,6 +349,92 @@ ss.read(arrayBuffer, option, (err: BusinessError, readResult: fileio.ReadOut) =>
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@ohos.base';
+dir.read().then((dirent: fileio.Dirent) => {
+  console.info("read succeed, the name of dirent is " + dirent.name);
+}).catch((err: BusinessError) => {
+  console.error("read failed with error:" + err);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+dir.read((err: BusinessError, dirent: fileio.Dirent) => {
+  if (dirent) {
+    // Do something.
+    console.info("read succeed, the name of file is " + dirent.name);
+  }
+});
+```
+
+## read
+
+```TypeScript
+read(buffer: ArrayBuffer, callback: AsyncCallback<ReadOut>): void
+```
+
+read.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [read](arkts-corefile-file-fs-stream-i.md#read)
+
+<!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<ReadOut>): void--><!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<ReadOut>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buffer | ArrayBuffer | Yes | buffer. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; | Yes | callback. |
+
+**Examples**
+
+See [read](#read)
+
+## read
+
+```TypeScript
+read(
+    buffer: ArrayBuffer,
+    options: {
+      position?: number;
+      offset?: number;
+      length?: number;
+    },
+    callback: AsyncCallback<ReadOut>
+  ): void
+```
+
+Reads data from a stream file. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [read](arkts-corefile-file-fs-stream-i.md#read)
+
+<!--Device-Stream-read(    buffer: ArrayBuffer,    options: {      position?: number;      offset?: number;      length?: number;    },    callback: AsyncCallback<ReadOut>  ): void--><!--Device-Stream-read(    buffer: ArrayBuffer,    options: {      position?: number;      offset?: number;      length?: number;    },    callback: AsyncCallback<ReadOut>  ): void-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
+| options | {       position?: number;       offset?: number;       length?: number;     } | Yes | The options are as follows:<br>- **offset** (number): position to store the data read in the buffer relative to the start address of the buffer, in bytes. This parameter is optional. The default value is **0**.<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length minus the offset.<br>- **position** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br> Constraints: offset + length &lt;= Buffer size |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; | Yes | Callback invoked when data is read asynchronously from the stream file. |
+
+**Examples**
+
+See [read](#read)
+
 ## readSync
 
 ```TypeScript
@@ -381,7 +454,7 @@ Reads data from a stream file. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [readSync](arkts-corefile-filefs-stream-i.md#readsync)
+**Substitutes:** [readSync](arkts-corefile-file-fs-stream-i.md#readsync)
 
 <!--Device-Stream-readSync(    buffer: ArrayBuffer,    options?: {      position?: number;      offset?: number;      length?: number;    }  ): number--><!--Device-Stream-readSync(    buffer: ArrayBuffer,    options?: {      position?: number;      offset?: number;      length?: number;    }  ): number-End-->
 
@@ -404,6 +477,13 @@ Reads data from a stream file. This API returns the result synchronously.
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath, 0o2);
+let buf = new ArrayBuffer(4096);
+let num = fileio.readSync(fd, buf);
+```
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
 let ss = fileio.createStreamSync(filePath, "r+");
 class Option {
   offset: number = 0;
@@ -416,6 +496,10 @@ option.length = 5;
 option.position = 5;
 let buf = new ArrayBuffer(4096)
 let num = ss.readSync(buf, option);
+```
+
+```TypeScript
+let dirent = dir.readSync();
 ```
 
 ## write
@@ -438,7 +522,7 @@ Writes data to a stream file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [write](arkts-corefile-filefs-stream-i.md#write)
+**Substitutes:** [write](arkts-corefile-file-fs-stream-i.md#write)
 
 <!--Device-Stream-write(    buffer: ArrayBuffer | string,    options?: {      offset?: number;      length?: number;      position?: number;      encoding?: string;    }  ): Promise<number>--><!--Device-Stream-write(    buffer: ArrayBuffer | string,    options?: {      offset?: number;      length?: number;      position?: number;      encoding?: string;    }  ): Promise<number>-End-->
 
@@ -462,6 +546,28 @@ Writes data to a stream file. This API uses a promise to return the result.
 ```TypeScript
 import { BusinessError } from '@ohos.base';
 let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath, 0o100 | 0o2, 0o666);
+fileio.write(fd, "hello, world").then((number: number) => {
+  console.info("write data to file succeed and size is:" + number);
+}).catch((err: BusinessError) => {
+  console.error("write data to file failed with error:" + err);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath, 0o100 | 0o2, 0o666);
+fileio.write(fd, "hello, world", (err: BusinessError, bytesWritten: number) => {
+  if (bytesWritten) {
+    console.info("write data to file succeed and size is:" + bytesWritten);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let filePath = pathDir + "/test.txt";
 let ss = fileio.createStreamSync(filePath, "r+");
 class Option {
   offset: number = 0;
@@ -479,68 +585,6 @@ ss.write("hello, world", option).then((number: number) => {
   console.error("write failed with error:" + err);
 });
 ```
-
-## write
-
-```TypeScript
-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
-```
-
-Writes data to a stream file. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [write](arkts-corefile-filefs-stream-i.md#write)
-
-<!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void--><!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.File.FileIO
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback invoked when the data is written asynchronously, which is used to return the length of the data written, in bytes. |
-
-## write
-
-```TypeScript
-write(
-    buffer: ArrayBuffer | string,
-    options: {
-      offset?: number;
-      length?: number;
-      position?: number;
-      encoding?: string;
-    },
-    callback: AsyncCallback<number>
-  ): void
-```
-
-Writes data to a stream file. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [write](arkts-corefile-filefs-stream-i.md#write)
-
-<!--Device-Stream-write(    buffer: ArrayBuffer | string,    options: {      offset?: number;      length?: number;      position?: number;      encoding?: string;    },    callback: AsyncCallback<number>  ): void--><!--Device-Stream-write(    buffer: ArrayBuffer | string,    options: {      offset?: number;      length?: number;      position?: number;      encoding?: string;    },    callback: AsyncCallback<number>  ): void-End-->
-
-**System capability:** SystemCapability.FileManagement.File.FileIO
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | {       offset?: number;       length?: number;       position?: number;       encoding?: string;     } | Yes | The options are as follows:<br>- **offset** (number): offset of the write position relative to the start address of the data, in bytes. This parameter is optional. The default value is **0**.&lt;br &gt;- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length minus the offset.<br>- **position** (number): start position to write the data into the file, in bytes. This parameter is optional. By default, data is written from the current position.<br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.<br>Constraints: offset + length &lt;= Buffer size |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback invoked when the data is written asynchronously, which is used to return the length of the data written, in bytes. |
-
-**Examples**
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -564,6 +608,74 @@ ss.write("hello, world", option, (err: BusinessError, bytesWritten: number) => {
 });
 ```
 
+## write
+
+```TypeScript
+write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
+```
+
+Writes data to a stream file. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [write](arkts-corefile-file-fs-stream-i.md#write)
+
+<!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void--><!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked when the data is written asynchronously, which is used to return the length of the data written, in bytes. |
+
+**Examples**
+
+See [write](#write)
+
+## write
+
+```TypeScript
+write(
+    buffer: ArrayBuffer | string,
+    options: {
+      offset?: number;
+      length?: number;
+      position?: number;
+      encoding?: string;
+    },
+    callback: AsyncCallback<number>
+  ): void
+```
+
+Writes data to a stream file. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [write](arkts-corefile-file-fs-stream-i.md#write)
+
+<!--Device-Stream-write(    buffer: ArrayBuffer | string,    options: {      offset?: number;      length?: number;      position?: number;      encoding?: string;    },    callback: AsyncCallback<number>  ): void--><!--Device-Stream-write(    buffer: ArrayBuffer | string,    options: {      offset?: number;      length?: number;      position?: number;      encoding?: string;    },    callback: AsyncCallback<number>  ): void-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| options | {       offset?: number;       length?: number;       position?: number;       encoding?: string;     } | Yes | The options are as follows:<br>- **offset** (number): offset of the write position relative to the start address of the data, in bytes. This parameter is optional. The default value is **0**.&lt;br &gt;- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length minus the offset.<br>- **position** (number): start position to write the data into the file, in bytes. This parameter is optional. By default, data is written from the current position.<br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.<br>Constraints: offset + length &lt;= Buffer size |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked when the data is written asynchronously, which is used to return the length of the data written, in bytes. |
+
+**Examples**
+
+See [write](#write)
+
 ## writeSync
 
 ```TypeScript
@@ -584,7 +696,7 @@ Writes data to a stream file. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeSync](arkts-corefile-filefs-stream-i.md#writesync)
+**Substitutes:** [writeSync](arkts-corefile-file-fs-stream-i.md#writesync)
 
 <!--Device-Stream-writeSync(    buffer: ArrayBuffer | string,    options?: {      offset?: number;      length?: number;      position?: number;      encoding?: string;    }  ): number--><!--Device-Stream-writeSync(    buffer: ArrayBuffer | string,    options?: {      offset?: number;      length?: number;      position?: number;      encoding?: string;    }  ): number-End-->
 
@@ -604,6 +716,12 @@ Writes data to a stream file. This API returns the result synchronously.
 | number | Length of the data written in the file, in bytes. |
 
 **Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath, 0o100 | 0o2, 0o666);
+let num = fileio.writeSync(fd, "hello, world");
+```
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";

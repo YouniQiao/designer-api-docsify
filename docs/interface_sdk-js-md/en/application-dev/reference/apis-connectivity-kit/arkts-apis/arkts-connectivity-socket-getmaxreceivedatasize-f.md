@@ -14,7 +14,7 @@ function getMaxReceiveDataSize(clientSocket: int): int
 
 Obtain the maximum data size that can be received through this socket channel.
 
-**Since:** 26.0.0
+**Since:** 22
 
 <!--Device-socket-function getMaxReceiveDataSize(clientSocket: int): int--><!--Device-socket-function getMaxReceiveDataSize(clientSocket: int): int-End-->
 

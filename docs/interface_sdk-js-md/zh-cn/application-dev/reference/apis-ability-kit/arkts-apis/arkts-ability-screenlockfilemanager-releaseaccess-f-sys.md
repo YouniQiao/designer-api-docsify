@@ -56,6 +56,45 @@ function releaseAccess(dataType: DataType): ReleaseStatus
 ArkTS-Dyn示例：
 
 ```TypeScript
+// 释放锁屏下应用敏感数据访问权限
+import { screenLockFileManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+    // 释放访问权限
+    let releaseStatus = screenLockFileManager.releaseAccess();
+    if (releaseStatus === screenLockFileManager.ReleaseStatus.RELEASE_GRANTED) {
+        hilog.info(0x0000, 'testTag', 'releaseAccess successfully.');
+    }
+} catch (err) {
+    let message = (err as BusinessError).message;
+    hilog.error(0x0000, 'testTag', 'releaseAccess failed: %{public}s', message);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// 释放锁屏下应用敏感数据访问权限
+import screenLockFileManager from '@ohos.ability.screenLockFileManager';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+    let releaseStatus = screenLockFileManager.releaseAccess();
+    if (releaseStatus === screenLockFileManager.ReleaseStatus.RELEASE_GRANTED) {
+        hilog.info(0x0000, 'testTag', 'releaseAccess successfully.');
+    }
+} catch (err) {
+    let message = (err as BusinessError).message;
+    hilog.error(0x0000, 'testTag', 'releaseAccess failed: %{public}s', message);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
 // 释放锁屏下媒体类型数据的访问权限
 import { screenLockFileManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';

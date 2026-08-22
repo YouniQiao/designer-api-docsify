@@ -33,6 +33,35 @@ function cancelGroup(groupName: string, callback: AsyncCallback<void>): void
 | groupName | string | 是 | 通知组名称，此名称需要在发布通知时通过 [NotificationRequest](arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification)对象指定。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 取消本应用指定组下通知的回调函数。 |
 
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let cancelGroupCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.error("cancelGroup failed " + JSON.stringify(err));
+  } else {
+    console.info("cancelGroup success");
+  }
+}
+
+let groupName: string = "GroupName";
+
+Notification.cancelGroup(groupName, cancelGroupCallback);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+let groupName: string = "GroupName";
+Notification.cancelGroup(groupName).then(() => {
+  console.info("cancelGroup success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`cancelGroup failed, code is ${err}`);
+});
+```
+
 
 ## cancelGroup
 
@@ -63,4 +92,8 @@ function cancelGroup(groupName: string): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [cancelGroup](#cancelgroup)
 

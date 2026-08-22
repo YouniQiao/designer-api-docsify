@@ -20,5 +20,5 @@ The type of Queue callback function.
 | --- | --- | --- | --- |
 | value | T | Yes | The value of current element |
 | index | int | Yes | The key of current element The value should be an integer. |
-| queue | [Queue](arkts-arkts-utilqueue-queue-c.md)&lt;T&gt; | Yes | The Queue instance being traversed |
+| queue | [Queue](arkts-arkts-util-queue-queue-c.md)&lt;T&gt; | Yes | The Queue instance being traversed |
 

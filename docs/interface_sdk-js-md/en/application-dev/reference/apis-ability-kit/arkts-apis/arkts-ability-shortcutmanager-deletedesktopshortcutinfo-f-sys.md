@@ -46,3 +46,48 @@ Deletes a shortcut for the given user. This API uses a promise to return the res
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 
+**Examples**
+
+```TypeScript
+import { shortcutManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct ShortcutExample {
+  build() {
+    Column({ space: 20 }) {
+      Row({ space: 20 }) {
+        Button('delete').onClick(() => {
+          let data: shortcutManager.ShortcutInfo = {
+            id: "test1",
+            bundleName: "com.example.myapplication",
+            moduleName: "",
+            hostAbility: "",
+            icon: "",
+            iconId: 1,
+            label: "hello",
+            labelId: 1,
+            wants: [],
+            appIndex: 0,
+            sourceType: 0,
+          }
+          try {
+            shortcutManager.deleteDesktopShortcutInfo(data, 100)
+              .then(() => {
+                console.info("deleteDesktopShortcutInfo success");
+              }).catch((err: BusinessError) => {
+              console.error(`deleteDesktopShortcutInfo errData is errCode:${err.code}  message:${err.message}`);
+            });
+          } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`deleteDesktopShortcutInfo error is errCode:${code}  message:${message}`);
+          }
+        })
+      }
+    }
+  }
+}
+```
+

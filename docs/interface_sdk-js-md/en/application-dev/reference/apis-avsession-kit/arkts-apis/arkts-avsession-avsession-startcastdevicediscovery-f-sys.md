@@ -26,7 +26,7 @@ Start device discovery.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | a callback function |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | a callback function |
 
 **Error codes:**
 
@@ -45,6 +45,31 @@ avSession.startCastDeviceDiscovery((err: BusinessError) => {
   } else {
     console.info('startCastDeviceDiscovery successfully');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filter = 2;
+avSession.startCastDeviceDiscovery(filter, (err: BusinessError) => {
+  if (err) {
+    console.error(`startCastDeviceDiscovery BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('startCastDeviceDiscovery successfully');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filter = 2;
+let drmSchemes = ['3d5e6d35-9b9a-41e8-b843-dd3c6e72c42c'];
+avSession.startCastDeviceDiscovery(filter, drmSchemes).then(() => {
+  console.info('startCastDeviceDiscovery successfully');
+}).catch((err: BusinessError) => {
+  console.error(`startCastDeviceDiscovery BusinessError: code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -70,7 +95,7 @@ Start device discovery.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filter | int | Yes | device filter when discovering, can be an union of { |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | a callback function |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | a callback function |
 
 **Error codes:**
 
@@ -81,18 +106,7 @@ Start device discovery.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filter = 2;
-avSession.startCastDeviceDiscovery(filter, (err: BusinessError) => {
-  if (err) {
-    console.error(`startCastDeviceDiscovery BusinessError: code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('startCastDeviceDiscovery successfully');
-  }
-});
-```
+See [startCastDeviceDiscovery](#startcastdevicediscovery)
 
 
 ## startCastDeviceDiscovery
@@ -133,15 +147,5 @@ Start device discovery.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filter = 2;
-let drmSchemes = ['3d5e6d35-9b9a-41e8-b843-dd3c6e72c42c'];
-avSession.startCastDeviceDiscovery(filter, drmSchemes).then(() => {
-  console.info('startCastDeviceDiscovery successfully');
-}).catch((err: BusinessError) => {
-  console.error(`startCastDeviceDiscovery BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
+See [startCastDeviceDiscovery](#startcastdevicediscovery)
 

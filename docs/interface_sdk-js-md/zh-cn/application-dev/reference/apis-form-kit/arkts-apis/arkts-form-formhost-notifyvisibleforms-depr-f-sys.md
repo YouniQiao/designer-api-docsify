@@ -34,6 +34,30 @@ function notifyVisibleForms(formIds: Array<string>, callback: AsyncCallback<void
 | formIds | Array&lt;string&gt; | 是 | 卡片标识列表。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当向卡片框架发送通知以使指定的卡片可见成功，error为undefined，否则为错误对象。 |
 
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let formIds: string[] = ['12400633174999288'];
+formHost.notifyVisibleForms(formIds, (error: Base.BusinessError) => {
+  if (error.code) {
+    console.error(`formHost notifyVisibleForms, error: ${JSON.stringify(error)}`);
+  }
+});
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+let formIds: string[] = ['12400633174999288'];
+formHost.notifyVisibleForms(formIds).then(() => {
+  console.info('formHost notifyVisibleForms success');
+}).catch((error: Base.BusinessError) => {
+  console.error(`formHost notifyVisibleForms, error: ${JSON.stringify(error)}`);
+});
+```
+
 
 ## notifyVisibleForms
 
@@ -68,4 +92,8 @@ function notifyVisibleForms(formIds: Array<string>): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [notifyVisibleForms](#notifyvisibleforms)
 

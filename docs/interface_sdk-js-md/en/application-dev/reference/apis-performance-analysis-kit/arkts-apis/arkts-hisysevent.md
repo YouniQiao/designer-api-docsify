@@ -42,8 +42,8 @@ import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 | [QueryArg](arkts-performanceanalysis-hisysevent-queryarg-i-sys.md) | Defines arguments for an event query. |
 | [QueryRule](arkts-performanceanalysis-hisysevent-queryrule-i-sys.md) | Defines event query rules. |
 | [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md) | Defines a system event. |
-| [WatchRule](arkts-performanceanalysis-hisysevent-watchrule-i-sys.md) | Defines event subscription rules. |
 | [Watcher](arkts-performanceanalysis-hisysevent-watcher-i-sys.md) | Defines a watcher for event subscription. |
+| [WatchRule](arkts-performanceanalysis-hisysevent-watchrule-i-sys.md) | Defines event subscription rules. |
 <!--DelEnd-->
 
 <!--Del-->

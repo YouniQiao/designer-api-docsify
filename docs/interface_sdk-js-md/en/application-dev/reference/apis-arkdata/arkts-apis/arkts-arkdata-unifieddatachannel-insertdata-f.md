@@ -30,7 +30,7 @@ Inserts data to the UDMF public data channel. This API uses an asynchronous call
 | --- | --- | --- | --- |
 | options | Options | Yes | Configuration for the data insertion operation. The **intention** field is mandatory ( the DRAG channel is not supported). If it is not specified, error code 401 will be returned. The settings of other parameters do not affect the use of this API. |
 | data | UnifiedData | Yes | Data to insert. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the key (unique identifier) of the data inserted. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the key (unique identifier) of the data inserted. |
 
 **Error codes:**
 
@@ -62,6 +62,33 @@ try {
     } else {
       console.error(`Failed to insert data. code is ${err.code}, message is ${err.message} `);
     }
+  });
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.error(`Insert data throws an exception. code is ${error.code}, message is ${error.message} `);
+}
+```
+
+```TypeScript
+import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let plainText : uniformDataStruct.PlainText = {
+  uniformDataType: 'general.plain-text',
+  textContent : 'This is a plain text example',
+  abstract : 'This is abstract'
+}
+let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
+let unifiedData = new unifiedDataChannel.UnifiedData(text);
+
+let options: unifiedDataChannel.Options = {
+  intention: unifiedDataChannel.Intention.DATA_HUB
+}
+try {
+  unifiedDataChannel.insertData(options, unifiedData).then((key) => {
+    console.info(`Succeeded in inserting data. key = ${key}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to insert data. code is ${err.code}, message is ${err.message} `);
   });
 } catch (e) {
   let error: BusinessError = e as BusinessError;
@@ -109,30 +136,5 @@ Inserts data to the UDMF public data channel. This API uses a promise to return 
 
 **Examples**
 
-```TypeScript
-import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let plainText : uniformDataStruct.PlainText = {
-  uniformDataType: 'general.plain-text',
-  textContent : 'This is a plain text example',
-  abstract : 'This is abstract'
-}
-let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
-let unifiedData = new unifiedDataChannel.UnifiedData(text);
-
-let options: unifiedDataChannel.Options = {
-  intention: unifiedDataChannel.Intention.DATA_HUB
-}
-try {
-  unifiedDataChannel.insertData(options, unifiedData).then((key) => {
-    console.info(`Succeeded in inserting data. key = ${key}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to insert data. code is ${err.code}, message is ${err.message} `);
-  });
-} catch (e) {
-  let error: BusinessError = e as BusinessError;
-  console.error(`Insert data throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```
+See [insertData](#insertdata)
 

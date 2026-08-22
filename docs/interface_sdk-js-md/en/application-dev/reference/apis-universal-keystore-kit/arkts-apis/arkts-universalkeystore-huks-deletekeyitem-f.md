@@ -33,7 +33,7 @@ Deletes a key. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key to delete. It must be the key alias passed in when the key was generated. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Attribute of the key to be deleted. If [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md) is used to specify the security level of the key to be deleted,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -141,6 +141,20 @@ export default {
 };
 ```
 
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* Set options to emptyOptions. */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+huks.deleteKeyItem(keyAlias, emptyOptions)
+  .then((data) => {
+    console.info(`promise: deleteKeyItem key success`);
+  });
+```
+
 
 ## deleteKeyItem
 
@@ -192,17 +206,5 @@ Deletes a key. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-huks.deleteKeyItem(keyAlias, emptyOptions)
-  .then((data) => {
-    console.info(`promise: deleteKeyItem key success`);
-  });
-```
+See [deleteKeyItem](#deletekeyitem)
 

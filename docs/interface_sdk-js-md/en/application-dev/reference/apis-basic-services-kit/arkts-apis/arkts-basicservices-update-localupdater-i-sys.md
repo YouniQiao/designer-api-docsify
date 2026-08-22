@@ -61,7 +61,7 @@ Use scenarios: This method is used to upgrade the system from a local storage de
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | upgradeFiles | Array&lt;[UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md)&gt; | Yes | An array of upgrade files, which is used to specify the local upgrade files to be installed. You must call **verifyUpgradePackage** to verify the upgrade package and pass the verification before using this parameter to install the upgrade package. The parameter contains the **fileType** and **filePath** fields. The value of **filePath** is a string of 1 to 255 characters. If the value is out of range, an exception is thrown, and you need to provide the path of the upgrade package. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback function used to receive the result of installing the upgrade package. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function used to receive the result of installing the upgrade package. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -71,6 +71,33 @@ Use scenarios: This method is used to upgrade the system from a local storage de
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter verification failed. |
 | [11500104](../errorcode-update.md#11500104-ipc-error) | IPC error. |
+
+**Examples**
+
+```TypeScript
+const upgradeFiles: Array<update.UpgradeFile> = [{
+  fileType: update.ComponentType.OTA, // OTA package
+  filePath: "path" // Path of the local update package
+}];
+
+localUpdater.applyNewVersion(upgradeFiles, (err) => {
+  console.info(`applyNewVersion error ${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const upgradeFiles: Array<update.UpgradeFile> = [{
+  fileType: update.ComponentType.OTA, // OTA package
+  filePath: "path" // Path of the local update package
+}];
+localUpdater.applyNewVersion(upgradeFiles).then(() => {
+  console.info(`applyNewVersion success`);
+}).catch((err: BusinessError) => {
+  console.error(`applyNewVersion error ${JSON.stringify(err)}`);
+});
+```
 
 ## applyNewVersion
 
@@ -120,6 +147,10 @@ Use scenarios: This method is used to upgrade the system from a local storage de
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter verification failed. |
 | [11500104](../errorcode-update.md#11500104-ipc-error) | IPC error. |
+
+**Examples**
+
+See [applyNewVersion](#applynewversion)
 
 ## off_EventClassifyInfo
 
@@ -271,7 +302,7 @@ The process is as follows: Read the upgrade package and certificate file. Use th
 | --- | --- | --- | --- |
 | upgradeFile | [UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md) | Yes | Upgrade file, including the file type and file path, which are used to specify the local upgrade package to be verified. |
 | certsFile | string | Yes | Certificate file path, which is used to verify the upgrade package signature. The certificate file must be downloaded from the official website of the vendor to ensure that the source is trusted. The value can be an absolute path or a relative path. The path length ranges from 1 to 255 characters. Only letters, digits, underscores (_), hyphens (-), dots (.), and slashes (/) are allowed. An exception is thrown if the value is out of range or contains invalid characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the verification result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the verification result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -292,6 +323,20 @@ const upgradeFile: update.UpgradeFile = {
 
 localUpdater.verifyUpgradePackage(upgradeFile, "cerstFilePath", (err) => {
   console.info(`factoryReset error ${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const upgradeFile: update.UpgradeFile = {
+  fileType: update.ComponentType.OTA, // OTA package
+  filePath: "path" // Path of the local update package
+};
+localUpdater.verifyUpgradePackage(upgradeFile, "cerstFilePath").then(() => {
+  console.info(`verifyUpgradePackage success`);
+}).catch((err: BusinessError) => {
+  console.error(`verifyUpgradePackage error ${JSON.stringify(err)}`);
 });
 ```
 
@@ -347,17 +392,5 @@ The process is as follows: Read the upgrade package and certificate file. Use th
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const upgradeFile: update.UpgradeFile = {
-  fileType: update.ComponentType.OTA, // OTA package
-  filePath: "path" // Path of the local update package
-};
-localUpdater.verifyUpgradePackage(upgradeFile, "cerstFilePath").then(() => {
-  console.info(`verifyUpgradePackage success`);
-}).catch((err: BusinessError) => {
-  console.error(`verifyUpgradePackage error ${JSON.stringify(err)}`);
-});
-```
+See [verifyUpgradePackage](#verifyupgradepackage)
 

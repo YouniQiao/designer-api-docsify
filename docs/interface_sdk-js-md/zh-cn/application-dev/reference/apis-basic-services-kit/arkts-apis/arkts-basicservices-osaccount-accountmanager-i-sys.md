@@ -99,6 +99,89 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.activateOsAccount(localId).then(() => {
+    console.info('activateOsAccount successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`activateOsAccount failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`activateOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: int = 100;
+try {
+  accountManager.activateOsAccount(localId).then(() => {
+    console.info('activateOsAccount successfully');
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`activateOsAccount failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`activateOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+let displayId: number = 0;
+try {
+  accountManager.activateOsAccount(localId, displayId).then(() => {
+    console.info('activateOsAccount with displayId successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`activateOsAccount with displayId failed, err: ${err.code} ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`activateOsAccount with displayId exception: ${err.code} ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: int = 100;
+let displayId: long = 0;
+try {
+  accountManager.activateOsAccount(localId, displayId).then(() => {
+    console.info('activateOsAccount with displayId successfully');
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`activateOsAccount with displayId failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`activateOsAccount with displayId exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## activateOsAccount
 
 ```TypeScript
@@ -145,46 +228,7 @@ activateOsAccount(localId: int): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.activateOsAccount(localId).then(() => {
-    console.info('activateOsAccount successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`activateOsAccount failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`activateOsAccount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: int = 100;
-try {
-  accountManager.activateOsAccount(localId).then(() => {
-    console.info('activateOsAccount successfully');
-  }).catch((e: Error) => {
-    const err = e as BusinessError;
-    console.error(`activateOsAccount failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e: Error) {
-  const err = e as BusinessError;
-  console.error(`activateOsAccount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [activateOsAccount](#activateosaccount)
 
 ## activateOsAccount
 
@@ -234,47 +278,7 @@ activateOsAccount(localId: int, displayId: long): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-let displayId: number = 0;
-try {
-  accountManager.activateOsAccount(localId, displayId).then(() => {
-    console.info('activateOsAccount with displayId successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`activateOsAccount with displayId failed, err: ${err.code} ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`activateOsAccount with displayId exception: ${err.code} ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: int = 100;
-let displayId: long = 0;
-try {
-  accountManager.activateOsAccount(localId, displayId).then(() => {
-    console.info('activateOsAccount with displayId successfully');
-  }).catch((e: Error) => {
-    const err = e as BusinessError;
-    console.error(`activateOsAccount with displayId failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e: Error) {
-  const err = e as BusinessError;
-  console.error(`activateOsAccount with displayId exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [activateOsAccount](#activateosaccount)
 
 ## bindDomainAccount
 
@@ -455,56 +459,6 @@ try {
 }
 ```
 
-## createOsAccount
-
-```TypeScript
-createOsAccount(localName: string, type: OsAccountType, options?: CreateOsAccountOptions): Promise<OsAccountInfo>
-```
-
-创建一个系统账号。使用Promise异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-createOsAccount(localName: string, type: OsAccountType, options?: CreateOsAccountOptions): Promise<OsAccountInfo>--><!--Device-AccountManager-createOsAccount(localName: string, type: OsAccountType, options?: CreateOsAccountOptions): Promise<OsAccountInfo>-End-->
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localName | string | 是 | 创建的系统账号的名称。 |
-| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 | 创建的系统账号的类型。 |
-| options | [CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md) | 否 | 创建系统账号的选项，默认为空。<br/>从API version 12开始支持该可选参数。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Promise对象，返回新创建的系统账号的信息。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localName, type or options. |
-| [12300004](../errorcode-account.md#12300004-账号已存在) | Local name already exists.<br>**适用版本：** 12+ |
-| [12300005](../errorcode-account.md#12300005-不支持多用户) | Multi-user not supported. |
-| [12300006](../errorcode-account.md#12300006-不支持的账号类型) | Unsupported account type. |
-| [12300007](../errorcode-account.md#12300007-账号数量已达上限) | The number of accounts has reached the upper limit. |
-| [12300015](../errorcode-account.md#12300015-短名称已存在) | The short name already exists.<br>**适用版本：** 12+ |
-| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upper limit.<br>**适用版本：** 24+ |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -555,6 +509,58 @@ try {
   console.error(`createOsAccount exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+## createOsAccount
+
+```TypeScript
+createOsAccount(localName: string, type: OsAccountType, options?: CreateOsAccountOptions): Promise<OsAccountInfo>
+```
+
+创建一个系统账号。使用Promise异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-createOsAccount(localName: string, type: OsAccountType, options?: CreateOsAccountOptions): Promise<OsAccountInfo>--><!--Device-AccountManager-createOsAccount(localName: string, type: OsAccountType, options?: CreateOsAccountOptions): Promise<OsAccountInfo>-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localName | string | 是 | 创建的系统账号的名称。 |
+| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 | 创建的系统账号的类型。 |
+| options | [CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md) | 否 | 创建系统账号的选项，默认为空。<br/>从API version 12开始支持该可选参数。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Promise对象，返回新创建的系统账号的信息。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localName, type or options. |
+| [12300004](../errorcode-account.md#12300004-账号已存在) | Local name already exists.<br>**适用版本：** 12+ |
+| [12300005](../errorcode-account.md#12300005-不支持多用户) | Multi-user not supported. |
+| [12300006](../errorcode-account.md#12300006-不支持的账号类型) | Unsupported account type. |
+| [12300007](../errorcode-account.md#12300007-账号数量已达上限) | The number of accounts has reached the upper limit. |
+| [12300015](../errorcode-account.md#12300015-短名称已存在) | The short name already exists.<br>**适用版本：** 12+ |
+| [12300023](../errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upper limit.<br>**适用版本：** 24+ |
+
+**示例**
+
+参见 [createOsAccount](#createosaccount)
 
 ## createOsAccountForDomain
 
@@ -652,6 +658,57 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let domainInfo: osAccount.DomainAccountInfo =
+  {domain: 'testDomain', accountName: 'testAccountName'};
+let options: osAccount.CreateOsAccountForDomainOptions = {
+  shortName: 'myShortName'
+}
+try {
+  accountManager.createOsAccountForDomain(osAccount.OsAccountType.NORMAL, domainInfo, options).then(
+    (accountInfo: osAccount.OsAccountInfo) => {
+    console.info('createOsAccountForDomain, account info: ' + JSON.stringify(accountInfo));
+  }).catch((err: BusinessError) => {
+    console.error(`createOsAccountForDomain err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`createOsAccountForDomain exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let domainInfo: osAccount.DomainAccountInfo =
+  {domain: 'testDomain', accountName: 'testAccountName'};
+let options: osAccount.CreateOsAccountForDomainOptions = {
+  shortName: 'myShortName',
+}
+try {
+  accountManager.createOsAccountForDomain(osAccount.OsAccountType.NORMAL, domainInfo, options).then(
+    (accountInfo: osAccount.OsAccountInfo) => {
+      console.info('createOsAccountForDomain, account info: ' + JSON.stringify(accountInfo));
+    }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`createOsAccountForDomain err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`createOsAccountForDomain exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## createOsAccountForDomain
 
 ```TypeScript
@@ -703,56 +760,7 @@ createOsAccountForDomain(type: OsAccountType, domainInfo: DomainAccountInfo, opt
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let domainInfo: osAccount.DomainAccountInfo =
-  {domain: 'testDomain', accountName: 'testAccountName'};
-let options: osAccount.CreateOsAccountForDomainOptions = {
-  shortName: 'myShortName'
-}
-try {
-  accountManager.createOsAccountForDomain(osAccount.OsAccountType.NORMAL, domainInfo, options).then(
-    (accountInfo: osAccount.OsAccountInfo) => {
-    console.info('createOsAccountForDomain, account info: ' + JSON.stringify(accountInfo));
-  }).catch((err: BusinessError) => {
-    console.error(`createOsAccountForDomain err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`createOsAccountForDomain exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let domainInfo: osAccount.DomainAccountInfo =
-  {domain: 'testDomain', accountName: 'testAccountName'};
-let options: osAccount.CreateOsAccountForDomainOptions = {
-  shortName: 'myShortName',
-}
-try {
-  accountManager.createOsAccountForDomain(osAccount.OsAccountType.NORMAL, domainInfo, options).then(
-    (accountInfo: osAccount.OsAccountInfo) => {
-      console.info('createOsAccountForDomain, account info: ' + JSON.stringify(accountInfo));
-    }).catch((e: Error) => {
-    const err = e as BusinessError;
-    console.error(`createOsAccountForDomain err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e: Error) {
-  const err = e as BusinessError;
-  console.error(`createOsAccountForDomain exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [createOsAccountForDomain](#createosaccountfordomain)
 
 ## deactivateOsAccount
 
@@ -918,45 +926,6 @@ try {
 }
 ```
 
-## getBundleIdForUid
-
-```TypeScript
-getBundleIdForUid(uid: int): Promise<int>
-```
-
-通过uid查询对应的bundleId。使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-AccountManager-getBundleIdForUid(uid: int): Promise<int>--><!--Device-AccountManager-getBundleIdForUid(uid: int): Promise<int>-End-->
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| uid | int | 是 | 进程uid。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | Promise对象，返回与uid对应的bundleId。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid uid. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -997,6 +966,47 @@ try {
   console.error(`getBundleIdForUid exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+## getBundleIdForUid
+
+```TypeScript
+getBundleIdForUid(uid: int): Promise<int>
+```
+
+通过uid查询对应的bundleId。使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-AccountManager-getBundleIdForUid(uid: int): Promise<int>--><!--Device-AccountManager-getBundleIdForUid(uid: int): Promise<int>-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| uid | int | 是 | 进程uid。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;int&gt; | Promise对象，返回与uid对应的bundleId。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid uid. |
+
+**示例**
+
+参见 [getBundleIdForUid](#getbundleidforuid)
 
 ## getBundleIdForUidSync
 
@@ -1278,6 +1288,45 @@ getForegroundOsAccountLocalId(displayId: long): Promise<int>
 ArkTS-Dyn示例：
 
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getForegroundOsAccountLocalId().then((localId: number) => {
+    console.info('getForegroundOsAccountLocalId, localId: ' + localId);
+  }).catch((err: BusinessError) => {
+    console.error(`getForegroundOsAccountLocalId err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getForegroundOsAccountLocalId exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getForegroundOsAccountLocalId().then((localId: int) => {
+    console.info('getForegroundOsAccountLocalId, localId: ' + localId);
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`getForegroundOsAccountLocalId err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`getForegroundOsAccountLocalId exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
@@ -1398,6 +1447,47 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getOsAccountConstraintSourceTypes(100, 'constraint.wifi').then(
+    (result: osAccount.ConstraintSourceTypeInfo[]) => {
+    console.info('getOsAccountConstraintSourceTypes sourceTypeInfos:' + JSON.stringify(result));
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountConstraintSourceTypes errInfo:code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountConstraintSourceTypes exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getOsAccountConstraintSourceTypes(100, 'constraint.wifi').then(
+    (result: osAccount.ConstraintSourceTypeInfo[]) => {
+      console.info('getOsAccountConstraintSourceTypes sourceTypeInfos:' + JSON.stringify(result));
+    }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`getOsAccountConstraintSourceTypes errInfo:code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountConstraintSourceTypes exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## getOsAccountConstraintSourceTypes
 
 ```TypeScript
@@ -1442,46 +1532,7 @@ getOsAccountConstraintSourceTypes(localId: int, constraint: string): Promise<Arr
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.getOsAccountConstraintSourceTypes(100, 'constraint.wifi').then(
-    (result: osAccount.ConstraintSourceTypeInfo[]) => {
-    console.info('getOsAccountConstraintSourceTypes sourceTypeInfos:' + JSON.stringify(result));
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountConstraintSourceTypes errInfo:code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountConstraintSourceTypes exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.getOsAccountConstraintSourceTypes(100, 'constraint.wifi').then(
-    (result: osAccount.ConstraintSourceTypeInfo[]) => {
-      console.info('getOsAccountConstraintSourceTypes sourceTypeInfos:' + JSON.stringify(result));
-    }).catch((e: Error) => {
-    const err = e as BusinessError;
-    console.error(`getOsAccountConstraintSourceTypes errInfo:code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e: Error) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountConstraintSourceTypes exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getOsAccountConstraintSourceTypes](#getosaccountconstraintsourcetypes)
 
 ## getOsAccountProfilePhoto
 
@@ -1565,6 +1616,47 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.getOsAccountProfilePhoto(localId).then((photo: string) => {
+    console.info('getOsAccountProfilePhoto: ' + photo);
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountProfilePhoto err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: int = 100;
+try {
+  accountManager.getOsAccountProfilePhoto(localId).then((photo: string) => {
+    console.info('getOsAccountProfilePhoto: ' + photo);
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`getOsAccountProfilePhoto err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## getOsAccountProfilePhoto
 
 ```TypeScript
@@ -1608,46 +1700,7 @@ getOsAccountProfilePhoto(localId: int): Promise<string>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.getOsAccountProfilePhoto(localId).then((photo: string) => {
-    console.info('getOsAccountProfilePhoto: ' + photo);
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountProfilePhoto err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: int = 100;
-try {
-  accountManager.getOsAccountProfilePhoto(localId).then((photo: string) => {
-    console.info('getOsAccountProfilePhoto: ' + photo);
-  }).catch((e: Error) => {
-    const err = e as BusinessError;
-    console.error(`getOsAccountProfilePhoto err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e: Error) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getOsAccountProfilePhoto](#getosaccountprofilephoto)
 
 ## getOsAccountType
 
@@ -1690,6 +1743,87 @@ getOsAccountType(localId: int): Promise<OsAccountType>
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getOsAccountType((err: BusinessError, accountType: osAccount.OsAccountType) => {
+    if (err) {
+      console.error(`getOsAccountType err: code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('getOsAccountType accountType: ' + accountType);
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountType exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getOsAccountType((err: BusinessError | null, accountType: osAccount.OsAccountType | undefined) => {
+    if (err) {
+      console.error(`getOsAccountType err: code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('getOsAccountType accountType: ' + accountType);
+    }
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountType exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getOsAccountType().then((accountType: osAccount.OsAccountType) => {
+    console.info('getOsAccountType, accountType: ' + accountType);
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountType err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountType exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getOsAccountType().then((accountType: osAccount.OsAccountType) => {
+    console.info('getOsAccountType, accountType: ' + accountType);
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`getOsAccountType err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountType exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ArkTS-Dyn示例：
 
@@ -1809,40 +1943,6 @@ try {
 }
 ```
 
-## isMainOsAccount
-
-```TypeScript
-isMainOsAccount(): Promise<boolean>
-```
-
-查询当前进程是否处于主用户。使用Promise异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-isMainOsAccount(): Promise<boolean>--><!--Device-AccountManager-isMainOsAccount(): Promise<boolean>-End-->
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**系统接口：** 此接口为系统接口。
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回true表示当前账号为主账号，返回false表示当前账号非主账号。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -1882,6 +1982,42 @@ try {
   console.error(`isMainOsAccount exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+## isMainOsAccount
+
+```TypeScript
+isMainOsAccount(): Promise<boolean>
+```
+
+查询当前进程是否处于主用户。使用Promise异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-isMainOsAccount(): Promise<boolean>--><!--Device-AccountManager-isMainOsAccount(): Promise<boolean>-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise对象，返回true表示当前账号为主账号，返回false表示当前账号非主账号。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+
+**示例**
+
+参见 [isMainOsAccount](#ismainosaccount)
 
 ## isOsAccountActivated
 
@@ -2016,6 +2152,47 @@ import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let constraint: string = 'constraint.wifi';
+try {
+  accountManager.isOsAccountConstraintEnabled(constraint).then((isEnabled: boolean) => {
+    console.info('isOsAccountConstraintEnabled successfully, isEnabled: ' + isEnabled);
+  }).catch((err: BusinessError) => {
+    console.error(`isOsAccountConstraintEnabled failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`isOsAccountConstraintEnabled exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let constraint: string = 'constraint.wifi';
+try {
+  accountManager.isOsAccountConstraintEnabled(constraint).then((isEnabled: boolean) => {
+    console.info('isOsAccountConstraintEnabled successfully, isEnabled: ' + isEnabled);
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`isOsAccountConstraintEnabled failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`isOsAccountConstraintEnabled exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
 let localId: number = 100;
 let constraint: string = 'constraint.wifi';
 try {
@@ -2101,6 +2278,45 @@ import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.isOsAccountUnlocked().then((isVerified: boolean) => {
+    console.info('isOsAccountUnlocked successfully, isVerified: ' + isVerified);
+  }).catch((err: BusinessError) => {
+    console.error(`isOsAccountUnlocked failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`isOsAccountUnlocked exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.isOsAccountUnlocked().then((isVerified: boolean) => {
+    console.info('isOsAccountUnlocked successfully, isVerified: ' + isVerified);
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`isOsAccountUnlocked failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`isOsAccountUnlocked exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
 let localId: number = 100;
 try {
   accountManager.isOsAccountUnlocked(localId).then((isVerified: boolean) => {
@@ -2132,6 +2348,202 @@ try {
 } catch (e: Error) {
   const err = e as BusinessError;
   console.error(`isOsAccountUnlocked exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+## off('activate' | 'activating')
+
+```TypeScript
+off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void
+```
+
+取消订阅系统账号的激活完成与激活中的事件。使用callback异步回调。
+
+**起始版本：** 7
+
+**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
+
+<!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void--><!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'activate' \| 'activating' | 是 | 取消订阅类型，activate表示取消订阅账号已激活完成的事件，activating取消订阅账号正在激活的事件。 |
+| name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅系统账号激活完成与激活中的事件回调，默认为空，表示取消该类型事件的所有回调。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
+
+**示例**
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+
+function offCallback(){
+  console.info('off enter')
+}
+
+try {
+  accountManager.off('activating', 'osAccountOnOffNameA', offCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+## off('activate' | 'activating')
+
+```TypeScript
+off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void
+```
+
+取消订阅系统账号的激活完成与激活中的事件。使用callback异步回调。
+
+**起始版本：** 7
+
+**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
+
+<!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void--><!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'activate' \| 'activating' | 是 | 取消订阅类型，activate表示取消订阅账号已激活完成的事件，activating取消订阅账号正在激活的事件。 |
+| name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅系统账号激活完成与激活中的事件回调，默认为空，表示取消该类型事件的所有回调。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
+
+**示例**
+
+参见 off_activate
+
+## off('switched')
+
+```TypeScript
+off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void
+```
+
+取消订阅系统账号的前后台切换结束事件。使用callback异步回调。
+
+**起始版本：** 12
+
+**需要权限：** 
+- API版本23+：ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+- API版本12 - 22：ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'switched' | 是 | 取消订阅类型，switched表示取消订阅的是系统账号的前后台切换结束事件。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台切换结束事件回调，默认为空，表示取消该类型事件的所有回调。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.off('switched');
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+## off('switching')
+
+```TypeScript
+off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void
+```
+
+取消订阅系统账号的前后台正在切换事件。使用callback异步回调。
+
+**起始版本：** 12
+
+**需要权限：** 
+- API版本23+：ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+- API版本12 - 22：ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'switching' | 是 | 取消订阅类型，switching表示取消订阅的是系统账号的前后台正在切换事件。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台正在切换事件回调，默认为空，表示取消该类型事件的所有回调。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.off('switching');
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
 
@@ -2384,19 +2796,19 @@ let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
   }
 ```
 
-## off('activate' | 'activating')
+## on('activate' | 'activating')
 
 ```TypeScript
-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void
+on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
 ```
 
-取消订阅系统账号的激活完成与激活中的事件。使用callback异步回调。
+订阅系统账号的激活完成与激活中的事件。使用callback异步回调。
 
 **起始版本：** 7
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
 
-<!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void--><!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void-End-->
+<!--Device-AccountManager-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void--><!--Device-AccountManager-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2406,9 +2818,9 @@ off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'activate' \| 'activating' | 是 | 取消订阅类型，activate表示取消订阅账号已激活完成的事件，activating取消订阅账号正在激活的事件。 |
-| name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅系统账号激活完成与激活中的事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| type | 'activate' \| 'activating' | 是 | 订阅类型，activate表示订阅的是账号已激活完成的事件，activating表示订阅的是账号正在激活的事件。 |
+| name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 订阅系统账号激活完成与激活中的事件回调，表示激活完成后或正在激活中的系统账号ID。 |
 
 **错误码：**
 
@@ -2428,31 +2840,31 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
 
-function offCallback(){
-  console.info('off enter')
+function onCallback(receiveLocalId: number){
+  console.info('receive localId:' + receiveLocalId);
 }
 
 try {
-  accountManager.off('activating', 'osAccountOnOffNameA', offCallback);
+  accountManager.on('activating', 'osAccountOnOffNameA', onCallback);
 } catch (e) {
   const err = e as BusinessError;
-  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
+  console.error(`receive localId exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
 
-## off('activate' | 'activating')
+## on('activate' | 'activating')
 
 ```TypeScript
-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void
+on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
 ```
 
-取消订阅系统账号的激活完成与激活中的事件。使用callback异步回调。
+订阅系统账号的激活完成与激活中的事件。使用callback异步回调。
 
 **起始版本：** 7
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
 
-<!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void--><!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void-End-->
+<!--Device-AccountManager-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void--><!--Device-AccountManager-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2462,9 +2874,9 @@ off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'activate' \| 'activating' | 是 | 取消订阅类型，activate表示取消订阅账号已激活完成的事件，activating取消订阅账号正在激活的事件。 |
-| name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅系统账号激活完成与激活中的事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| type | 'activate' \| 'activating' | 是 | 订阅类型，activate表示订阅的是账号已激活完成的事件，activating表示订阅的是账号正在激活的事件。 |
+| name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 订阅系统账号激活完成与激活中的事件回调，表示激活完成后或正在激活中的系统账号ID。 |
 
 **错误码：**
 
@@ -2478,15 +2890,15 @@ off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): vo
 
 **示例**
 
-参见 off_activate
+参见 on_activate
 
-## off('switched')
+## on('switched')
 
 ```TypeScript
-off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void
+on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void
 ```
 
-取消订阅系统账号的前后台切换结束事件。使用callback异步回调。
+订阅系统账号的前后台切换结束事件。使用callback异步回调。
 
 **起始版本：** 12
 
@@ -2494,7 +2906,7 @@ off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void
 - API版本23+：ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 - API版本12 - 22：ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
-<!--Device-AccountManager-off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void-End-->
+<!--Device-AccountManager-on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2504,8 +2916,8 @@ off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'switched' | 是 | 取消订阅类型，switched表示取消订阅的是系统账号的前后台切换结束事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台切换结束事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| type | 'switched' | 是 | 订阅类型，switched表示订阅的是系统账号的前后台切换结束事件。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台切换结束事件回调，包含切换来源和切换目标的系统账号ID。<br/>**说明：** 从API version 23开始，事件数据中新增可选字段displayId，表示发生切换事件的逻辑屏ID。 |
 
 **错误码：**
 
@@ -2519,24 +2931,30 @@ off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void
 **示例**
 
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+
+function onSwitchedCallback(eventData: osAccount.OsAccountSwitchEventData){
+  console.info('receive eventData:' + JSON.stringify(eventData));
+}
+
 try {
-  accountManager.off('switched');
+  accountManager.on('switched', onSwitchedCallback);
 } catch (e) {
   const err = e as BusinessError;
-  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
+  console.error(`receive eventData exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
 
-## off('switching')
+## on('switching')
 
 ```TypeScript
-off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void
+on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void
 ```
 
-取消订阅系统账号的前后台正在切换事件。使用callback异步回调。
+订阅系统账号的前后台正在切换事件。使用callback异步回调。
 
 **起始版本：** 12
 
@@ -2544,7 +2962,7 @@ off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void
 - API版本23+：ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 - API版本12 - 22：ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
-<!--Device-AccountManager-off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void-End-->
+<!--Device-AccountManager-on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2554,8 +2972,8 @@ off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'switching' | 是 | 取消订阅类型，switching表示取消订阅的是系统账号的前后台正在切换事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台正在切换事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| type | 'switching' | 是 | 订阅类型，switching表示订阅的是系统账号的前后台正在切换事件。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台正在切换事件回调，包含切换来源和切换目标的系统账号ID。<br/>**说明：** 从API version 23开始，事件数据中新增可选字段displayId，表示发生切换事件的逻辑屏ID。 |
 
 **错误码：**
 
@@ -2569,14 +2987,20 @@ off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void
 **示例**
 
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+
+function onSwitchingCallback(eventData: osAccount.OsAccountSwitchEventData){
+  console.info('receive eventData:' + JSON.stringify(eventData));
+}
+
 try {
-  accountManager.off('switching');
+  accountManager.on('switching', onSwitchingCallback);
 } catch (e) {
   const err = e as BusinessError;
-  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
+  console.error(`receive eventData exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
 
@@ -2828,214 +3252,6 @@ try {
 }
 ```
 
-## on('activate' | 'activating')
-
-```TypeScript
-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
-```
-
-订阅系统账号的激活完成与激活中的事件。使用callback异步回调。
-
-**起始版本：** 7
-
-**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
-
-<!--Device-AccountManager-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void--><!--Device-AccountManager-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void-End-->
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'activate' \| 'activating' | 是 | 订阅类型，activate表示订阅的是账号已激活完成的事件，activating表示订阅的是账号正在激活的事件。 |
-| name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 订阅系统账号激活完成与激活中的事件回调，表示激活完成后或正在激活中的系统账号ID。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
-
-**示例**
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-
-function onCallback(receiveLocalId: number){
-  console.info('receive localId:' + receiveLocalId);
-}
-
-try {
-  accountManager.on('activating', 'osAccountOnOffNameA', onCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`receive localId exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-## on('activate' | 'activating')
-
-```TypeScript
-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
-```
-
-订阅系统账号的激活完成与激活中的事件。使用callback异步回调。
-
-**起始版本：** 7
-
-**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
-
-<!--Device-AccountManager-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void--><!--Device-AccountManager-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void-End-->
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'activate' \| 'activating' | 是 | 订阅类型，activate表示订阅的是账号已激活完成的事件，activating表示订阅的是账号正在激活的事件。 |
-| name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 订阅系统账号激活完成与激活中的事件回调，表示激活完成后或正在激活中的系统账号ID。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
-
-**示例**
-
-参见 on_activate
-
-## on('switched')
-
-```TypeScript
-on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void
-```
-
-订阅系统账号的前后台切换结束事件。使用callback异步回调。
-
-**起始版本：** 12
-
-**需要权限：** 
-- API版本23+：ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-- API版本12 - 22：ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void-End-->
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'switched' | 是 | 订阅类型，switched表示订阅的是系统账号的前后台切换结束事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台切换结束事件回调，包含切换来源和切换目标的系统账号ID。<br/>**说明：** 从API version 23开始，事件数据中新增可选字段displayId，表示发生切换事件的逻辑屏ID。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
-
-**示例**
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-
-function onSwitchedCallback(eventData: osAccount.OsAccountSwitchEventData){
-  console.info('receive eventData:' + JSON.stringify(eventData));
-}
-
-try {
-  accountManager.on('switched', onSwitchedCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`receive eventData exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-## on('switching')
-
-```TypeScript
-on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void
-```
-
-订阅系统账号的前后台正在切换事件。使用callback异步回调。
-
-**起始版本：** 12
-
-**需要权限：** 
-- API版本23+：ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-- API版本12 - 22：ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void-End-->
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'switching' | 是 | 订阅类型，switching表示订阅的是系统账号的前后台正在切换事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台正在切换事件回调，包含切换来源和切换目标的系统账号ID。<br/>**说明：** 从API version 23开始，事件数据中新增可选字段displayId，表示发生切换事件的逻辑屏ID。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
-
-**示例**
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-
-function onSwitchingCallback(eventData: osAccount.OsAccountSwitchEventData){
-  console.info('receive eventData:' + JSON.stringify(eventData));
-}
-
-try {
-  accountManager.on('switching', onSwitchingCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`receive eventData exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
 ## queryAllCreatedOsAccounts
 
 ```TypeScript
@@ -3113,40 +3329,6 @@ try {
 }
 ```
 
-## queryAllCreatedOsAccounts
-
-```TypeScript
-queryAllCreatedOsAccounts(): Promise<Array<OsAccountInfo>>
-```
-
-查询已创建的所有系统账号的信息列表。使用Promise异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-queryAllCreatedOsAccounts(): Promise<Array<OsAccountInfo>>--><!--Device-AccountManager-queryAllCreatedOsAccounts(): Promise<Array<OsAccountInfo>>-End-->
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**系统接口：** 此接口为系统接口。
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt;&gt; | Promise对象，返回已创建的所有系统账号的信息列表。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -3185,6 +3367,42 @@ try {
   console.error(`queryAllCreatedOsAccounts exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+## queryAllCreatedOsAccounts
+
+```TypeScript
+queryAllCreatedOsAccounts(): Promise<Array<OsAccountInfo>>
+```
+
+查询已创建的所有系统账号的信息列表。使用Promise异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-queryAllCreatedOsAccounts(): Promise<Array<OsAccountInfo>>--><!--Device-AccountManager-queryAllCreatedOsAccounts(): Promise<Array<OsAccountInfo>>-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt;&gt; | Promise对象，返回已创建的所有系统账号的信息列表。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+
+**示例**
+
+参见 [queryAllCreatedOsAccounts](#queryallcreatedosaccounts)
 
 ## queryMaxLoggedInOsAccountNumber
 
@@ -3330,37 +3548,6 @@ try {
 }
 ```
 
-## queryMaxOsAccountNumber
-
-```TypeScript
-queryMaxOsAccountNumber(): Promise<int>
-```
-
-查询允许创建的系统账号的最大数量。使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-AccountManager-queryMaxOsAccountNumber(): Promise<int>--><!--Device-AccountManager-queryMaxOsAccountNumber(): Promise<int>-End-->
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**系统接口：** 此接口为系统接口。
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;int&gt; | Promise对象，返回允许创建的系统账号的最大数量。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -3399,6 +3586,39 @@ try {
   console.error(`queryMaxOsAccountNumber exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+## queryMaxOsAccountNumber
+
+```TypeScript
+queryMaxOsAccountNumber(): Promise<int>
+```
+
+查询允许创建的系统账号的最大数量。使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-AccountManager-queryMaxOsAccountNumber(): Promise<int>--><!--Device-AccountManager-queryMaxOsAccountNumber(): Promise<int>-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;int&gt; | Promise对象，返回允许创建的系统账号的最大数量。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+
+**示例**
+
+参见 [queryMaxOsAccountNumber](#querymaxosaccountnumber)
 
 ## queryOsAccount
 
@@ -3555,6 +3775,47 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.queryOsAccountById(localId).then((accountInfo: osAccount.OsAccountInfo) => {
+    console.info('queryOsAccountById, accountInfo: ' + JSON.stringify(accountInfo));
+  }).catch((err: BusinessError) => {
+    console.error(`queryOsAccountById err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`queryOsAccountById exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: int = 100;
+try {
+  accountManager.queryOsAccountById(localId).then((accountInfo: osAccount.OsAccountInfo) => {
+    console.info('queryOsAccountById, accountInfo: ' + JSON.stringify(accountInfo));
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`queryOsAccountById err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`queryOsAccountById exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## queryOsAccountById
 
 ```TypeScript
@@ -3598,46 +3859,7 @@ queryOsAccountById(localId: int): Promise<OsAccountInfo>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.queryOsAccountById(localId).then((accountInfo: osAccount.OsAccountInfo) => {
-    console.info('queryOsAccountById, accountInfo: ' + JSON.stringify(accountInfo));
-  }).catch((err: BusinessError) => {
-    console.error(`queryOsAccountById err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`queryOsAccountById exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: int = 100;
-try {
-  accountManager.queryOsAccountById(localId).then((accountInfo: osAccount.OsAccountInfo) => {
-    console.info('queryOsAccountById, accountInfo: ' + JSON.stringify(accountInfo));
-  }).catch((e: Error) => {
-    const err = e as BusinessError;
-    console.error(`queryOsAccountById err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e: Error) {
-  const err = e as BusinessError;
-  console.error(`queryOsAccountById exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [queryOsAccountById](#queryosaccountbyid)
 
 ## removeOsAccount
 
@@ -3733,51 +3955,6 @@ try {
 }
 ```
 
-## removeOsAccount
-
-```TypeScript
-removeOsAccount(localId: int): Promise<void>
-```
-
-删除指定系统账号。使用Promise异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-removeOsAccount(localId: int): Promise<void>--><!--Device-AccountManager-removeOsAccount(localId: int): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -3828,52 +4005,6 @@ try {
   console.error(`removeOsAccount exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
-
-## removeOsAccount
-
-```TypeScript
-removeOsAccount(localId: int, options: RemoveOsAccountOptions): Promise<void>
-```
-
-根据删除选项，删除指定系统账号。使用Promise异步回调。
-
-**起始版本：** 24
-
-**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-removeOsAccount(localId: int, options: RemoveOsAccountOptions): Promise<void>--><!--Device-AccountManager-removeOsAccount(localId: int, options: RemoveOsAccountOptions): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
-| options | [RemoveOsAccountOptions](arkts-basicservices-osaccount-removeosaccountoptions-i-sys.md) | 是 | 删除系统账号的选项。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or options. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated on. |
-
-**示例**
 
 ArkTS-Dyn示例：
 
@@ -3933,6 +4064,101 @@ try {
   console.error(`removeOsAccount exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+## removeOsAccount
+
+```TypeScript
+removeOsAccount(localId: int): Promise<void>
+```
+
+删除指定系统账号。使用Promise异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-removeOsAccount(localId: int): Promise<void>--><!--Device-AccountManager-removeOsAccount(localId: int): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | int | 是 | 系统账号ID。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated. |
+
+**示例**
+
+参见 [removeOsAccount](#removeosaccount)
+
+## removeOsAccount
+
+```TypeScript
+removeOsAccount(localId: int, options: RemoveOsAccountOptions): Promise<void>
+```
+
+根据删除选项，删除指定系统账号。使用Promise异步回调。
+
+**起始版本：** 24
+
+**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-removeOsAccount(localId: int, options: RemoveOsAccountOptions): Promise<void>--><!--Device-AccountManager-removeOsAccount(localId: int, options: RemoveOsAccountOptions): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | int | 是 | 系统账号ID。 |
+| options | [RemoveOsAccountOptions](arkts-basicservices-osaccount-removeosaccountoptions-i-sys.md) | 是 | 删除系统账号的选项。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or options. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is being operated on. |
+
+**示例**
+
+参见 [removeOsAccount](#removeosaccount)
 
 ## setOsAccountConstraints
 
@@ -4021,6 +4247,47 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.setOsAccountConstraints(localId, ['constraint.location.set'], false).then(() => {
+    console.info('setOsAccountConstraints successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`setOsAccountConstraints failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setOsAccountConstraints exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: int = 100;
+try {
+  accountManager.setOsAccountConstraints(localId, ['constraint.location.set'], false).then(() => {
+    console.info('setOsAccountConstraints successfully');
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`setOsAccountConstraints failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`setOsAccountConstraints exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## setOsAccountConstraints
 
 ```TypeScript
@@ -4067,46 +4334,7 @@ setOsAccountConstraints(localId: int, constraints: Array<string>, enable: boolea
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.setOsAccountConstraints(localId, ['constraint.location.set'], false).then(() => {
-    console.info('setOsAccountConstraints successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`setOsAccountConstraints failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setOsAccountConstraints exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: int = 100;
-try {
-  accountManager.setOsAccountConstraints(localId, ['constraint.location.set'], false).then(() => {
-    console.info('setOsAccountConstraints successfully');
-  }).catch((e: Error) => {
-    const err = e as BusinessError;
-    console.error(`setOsAccountConstraints failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e: Error) {
-  const err = e as BusinessError;
-  console.error(`setOsAccountConstraints exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [setOsAccountConstraints](#setosaccountconstraints)
 
 ## setOsAccountName
 
@@ -4194,6 +4422,49 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+let name: string = 'testName';
+try {
+  accountManager.setOsAccountName(localId, name).then(() => {
+    console.info('setOsAccountName successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`setOsAccountName failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setOsAccountName exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: int = 100;
+let name: string = 'testName';
+try {
+  accountManager.setOsAccountName(localId, name).then(() => {
+    console.info('setOsAccountName successfully');
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`setOsAccountName failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`setOsAccountName exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## setOsAccountName
 
 ```TypeScript
@@ -4239,48 +4510,7 @@ setOsAccountName(localId: int, localName: string): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-let name: string = 'testName';
-try {
-  accountManager.setOsAccountName(localId, name).then(() => {
-    console.info('setOsAccountName successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`setOsAccountName failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setOsAccountName exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: int = 100;
-let name: string = 'testName';
-try {
-  accountManager.setOsAccountName(localId, name).then(() => {
-    console.info('setOsAccountName successfully');
-  }).catch((e: Error) => {
-    const err = e as BusinessError;
-    console.error(`setOsAccountName failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e: Error) {
-  const err = e as BusinessError;
-  console.error(`setOsAccountName exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [setOsAccountName](#setosaccountname)
 
 ## setOsAccountProfilePhoto
 
@@ -4374,51 +4604,6 @@ try {
 }
 ```
 
-## setOsAccountProfilePhoto
-
-```TypeScript
-setOsAccountProfilePhoto(localId: int, photo: string): Promise<void>
-```
-
-为指定系统账号设置头像信息。使用Promise异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-setOsAccountProfilePhoto(localId: int, photo: string): Promise<void>--><!--Device-AccountManager-setOsAccountProfilePhoto(localId: int, photo: string): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localId | int | 是 | 系统账号ID。 |
-| photo | string | 是 | 头像信息。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or photo. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -4467,6 +4652,53 @@ try {
   console.error(`setOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+## setOsAccountProfilePhoto
+
+```TypeScript
+setOsAccountProfilePhoto(localId: int, photo: string): Promise<void>
+```
+
+为指定系统账号设置头像信息。使用Promise异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-setOsAccountProfilePhoto(localId: int, photo: string): Promise<void>--><!--Device-AccountManager-setOsAccountProfilePhoto(localId: int, photo: string): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localId | int | 是 | 系统账号ID。 |
+| photo | string | 是 | 头像信息。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or photo. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+
+**示例**
+
+参见 [setOsAccountProfilePhoto](#setosaccountprofilephoto)
 
 ## setOsAccountType
 

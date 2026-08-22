@@ -601,36 +601,6 @@ isLetter()检查底层的char值是否为字母。
 | --- | --- |
 | boolean | 如果底层的char值是字母则返回true，否则返回false。 |
 
-## isLowSurrogate
-
-```TypeScript
-public static isLowSurrogate(value: char): boolean
-```
-
-isLowSurrogate(char)检查该char值是否为低位代理项。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Char-public static isLowSurrogate(value: char): boolean--><!--Device-Char-public static isLowSurrogate(value: char): boolean-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | char | 是 | 待检查的char值。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 如果该char值是低位代理项则返回true，否则返回false。 |
-
 ## isLowerCase
 
 ```TypeScript
@@ -684,6 +654,36 @@ isLowerCase()检查底层的char值是否为小写字母。
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 如果底层的char值是小写字母则返回true，否则返回false。 |
+
+## isLowSurrogate
+
+```TypeScript
+public static isLowSurrogate(value: char): boolean
+```
+
+isLowSurrogate(char)检查该char值是否为低位代理项。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Char-public static isLowSurrogate(value: char): boolean--><!--Device-Char-public static isLowSurrogate(value: char): boolean-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | char | 是 | 待检查的char值。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 如果该char值是低位代理项则返回true，否则返回false。 |
 
 ## isPartOfSurrogatePair
 

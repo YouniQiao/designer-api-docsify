@@ -35,8 +35,8 @@ Starts a [native child process](../../../application-models/ability-terminology.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | entryPoint | string | Yes | The symbol and entry function of the dynamic link library called in the child process are separated by a colon (:), for example, **libentry.so:Main**. |
-| args | [ChildProcessArgs](arkts-ability-appabilitychildprocessargs-childprocessargs-i.md) | Yes | Parameters transferred to the child process. |
-| options | [ChildProcessOptions](arkts-ability-appabilitychildprocessoptions-childprocessoptions-i.md) | No | Startup configuration of the child process. |
+| args | [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md) | Yes | Parameters transferred to the child process. |
+| options | [ChildProcessOptions](arkts-ability-app-ability-childprocessoptions-childprocessoptions-i.md) | No | Startup configuration of the child process. |
 
 **Return value:**
 

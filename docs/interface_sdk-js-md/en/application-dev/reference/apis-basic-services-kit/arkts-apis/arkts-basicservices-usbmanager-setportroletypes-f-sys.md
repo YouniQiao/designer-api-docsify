@@ -49,3 +49,16 @@ Sets the role types supported by a specified port, which can be **powerRole** (f
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 | [14400003](../errorcode-usb.md#14400003-port-role-switching-unsupported) | Unsupported operation. The current device does not support port role switching. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let portId: number = 1;
+usbManager.setPortRoleTypes(portId, usbManager.PowerRoleType.SOURCE, usbManager.DataRoleType.HOST).then(() => {
+  console.info('usb setPortRoleTypes successfully.');
+}).catch((err : BusinessError) => {
+  console.error('usb setPortRoleTypes failed: ' + err.code + ' message: ' + err.message);
+});
+```
+

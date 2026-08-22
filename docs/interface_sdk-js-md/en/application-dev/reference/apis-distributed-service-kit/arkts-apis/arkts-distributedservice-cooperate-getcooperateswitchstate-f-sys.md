@@ -29,7 +29,7 @@ Obtains the screen hopping status of the target device. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | networkId | string | Yes | Descriptor of the target device for screen hopping. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that screen hopping is enabled, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that screen hopping is enabled, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -52,6 +52,21 @@ try {
       return;
     }
     console.info(`Get the status success, data: ${JSON.stringify(data)}`);
+  });
+} catch (error) {
+  console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let deviceDescriptor = "networkId";
+try {
+  cooperate.getCooperateSwitchState(deviceDescriptor).then((data: boolean) => {
+    console.info(`Get the status success, data: ${JSON.stringify(data)}`);
+  }, (error: BusinessError) => {
+    console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
   });
 } catch (error) {
   console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
@@ -99,18 +114,5 @@ Obtains the screen hopping status of the target device. This API uses a promise 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor = "networkId";
-try {
-  cooperate.getCooperateSwitchState(deviceDescriptor).then((data: boolean) => {
-    console.info(`Get the status success, data: ${JSON.stringify(data)}`);
-  }, (error: BusinessError) => {
-    console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
+See [getCooperateSwitchState](#getcooperateswitchstate)
 

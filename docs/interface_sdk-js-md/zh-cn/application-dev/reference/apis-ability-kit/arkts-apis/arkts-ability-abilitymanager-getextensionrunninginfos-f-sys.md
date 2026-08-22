@@ -44,6 +44,51 @@ function getExtensionRunningInfos(upperLimit: int): Promise<Array<ExtensionRunni
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
+**示例**
+
+```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 设置获取消息数量的最大限制
+let upperLimit = 10;
+
+try {
+  abilityManager.getExtensionRunningInfos(upperLimit,
+    (err: BusinessError | null, data: Array<abilityManager.ExtensionRunningInfo> | undefined) => {
+      if (err) {
+        console.error(`getExtensionRunningInfos fail, err: ${JSON.stringify(err)}`);
+      } else {
+        console.info(`getExtensionRunningInfos success, data: ${JSON.stringify(data)}`);
+      }
+    });
+} catch (paramError) {
+  let code: number = (paramError as BusinessError).code;
+  let message: string = (paramError as BusinessError).message;
+  console.error(`error.code: ${code}, error.message: ${message}`);
+}
+```
+
+```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let upperLimit = 10;
+
+try {
+  abilityManager.getExtensionRunningInfos(upperLimit).then((data: Array<abilityManager.ExtensionRunningInfo>) => {
+    console.info(`getExtensionRunningInfos success, data: ${JSON.stringify(data)}`);
+  }).catch((e: Error) => {
+    let err = e as BusinessError;
+    console.error(`getExtensionRunningInfos fail, err: ${JSON.stringify(err)}`);
+  });
+} catch (paramError) {
+  let code: number = (paramError as BusinessError).code;
+  let message: string = (paramError as BusinessError).message;
+  console.error(`error.code: ${code}, error.message: ${message}`);
+}
+```
+
 
 ## getExtensionRunningInfos
 
@@ -77,4 +122,8 @@ function getExtensionRunningInfos(upperLimit: int, callback: AsyncCallback<Array
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+
+**示例**
+
+参见 [getExtensionRunningInfos](#getextensionrunninginfos)
 

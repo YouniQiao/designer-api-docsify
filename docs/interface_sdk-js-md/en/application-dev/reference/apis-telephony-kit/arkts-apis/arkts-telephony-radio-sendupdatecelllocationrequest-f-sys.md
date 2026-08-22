@@ -29,7 +29,7 @@ Actively requests to update location information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of sendUpdateCellLocationRequest. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of sendUpdateCellLocationRequest. |
 
 **Error codes:**
 
@@ -48,6 +48,18 @@ Actively requests to update location information.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+radio.sendUpdateCellLocationRequest((err: BusinessError) => {
+    if (err) {
+        console.error(`sendUpdateCellLocationRequest failed, callback: err->${JSON.stringify(err)}`);
+        return;
+    }
+    console.info(`sendUpdateCellLocationRequest success.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let slotId: number = 0;
 radio.sendUpdateCellLocationRequest(slotId, (err: BusinessError) => {
     if (err) {
@@ -55,6 +67,17 @@ radio.sendUpdateCellLocationRequest(slotId, (err: BusinessError) => {
         return;
     }
     console.info(`sendUpdateCellLocationRequest success.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.sendUpdateCellLocationRequest(slotId).then(() => {
+    console.info(`sendUpdateCellLocationRequest success.`);
+}).catch((err: BusinessError) => {
+    console.error(`sendUpdateCellLocationRequest failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -103,16 +126,7 @@ Actively requests to update location information.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.sendUpdateCellLocationRequest(slotId).then(() => {
-    console.info(`sendUpdateCellLocationRequest success.`);
-}).catch((err: BusinessError) => {
-    console.error(`sendUpdateCellLocationRequest failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [sendUpdateCellLocationRequest](#sendupdatecelllocationrequest)
 
 
 ## sendUpdateCellLocationRequest
@@ -137,7 +151,7 @@ Actively requests to update location information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of sendUpdateCellLocationRequest. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of sendUpdateCellLocationRequest. |
 
 **Error codes:**
 
@@ -153,15 +167,5 @@ Actively requests to update location information.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.sendUpdateCellLocationRequest((err: BusinessError) => {
-    if (err) {
-        console.error(`sendUpdateCellLocationRequest failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`sendUpdateCellLocationRequest success.`);
-});
-```
+See [sendUpdateCellLocationRequest](#sendupdatecelllocationrequest)
 

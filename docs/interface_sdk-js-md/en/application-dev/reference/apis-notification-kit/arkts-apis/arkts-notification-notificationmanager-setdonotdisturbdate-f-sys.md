@@ -31,7 +31,7 @@ This API can be properly called on devices other than wearables and TVs. If it i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | date | DoNotDisturbDate | Yes | DND time to set. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -66,6 +66,63 @@ let doNotDisturbDate: notificationManager.DoNotDisturbDate = {
 };
 
 notificationManager.setDoNotDisturbDate(doNotDisturbDate, setDoNotDisturbDateCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let doNotDisturbDate: notificationManager.DoNotDisturbDate = {
+    type: notificationManager.DoNotDisturbType.TYPE_ONCE,
+    begin: new Date(),
+    end: new Date(2021, 11, 15, 18, 0)
+};
+notificationManager.setDoNotDisturbDate(doNotDisturbDate).then(() => {
+    console.info("setDoNotDisturbDate success");
+}).catch((err: BusinessError) => {
+    console.error(`setDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let setDoNotDisturbDateCallback = (err: BusinessError): void => {
+    if (err) {
+        console.error(`setDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+        console.info("setDoNotDisturbDate success");
+    }
+}
+
+let doNotDisturbDate: notificationManager.DoNotDisturbDate = {
+    type: notificationManager.DoNotDisturbType.TYPE_ONCE,
+    begin: new Date(),
+    end: new Date(2021, 11, 15, 18, 0)
+};
+
+// Use the actual user ID when calling the API.
+let userId: number = 1;
+
+notificationManager.setDoNotDisturbDate(doNotDisturbDate, userId, setDoNotDisturbDateCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let doNotDisturbDate: notificationManager.DoNotDisturbDate = {
+    type: notificationManager.DoNotDisturbType.TYPE_ONCE,
+    begin: new Date(),
+    end: new Date(2021, 11, 15, 18, 0)
+};
+
+// Use the actual user ID when calling the API.
+let userId: number = 1;
+
+notificationManager.setDoNotDisturbDate(doNotDisturbDate, userId).then(() => {
+    console.info("setDoNotDisturbDate success");
+}).catch((err: BusinessError) => {
+    console.error(`setDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -116,20 +173,7 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let doNotDisturbDate: notificationManager.DoNotDisturbDate = {
-    type: notificationManager.DoNotDisturbType.TYPE_ONCE,
-    begin: new Date(),
-    end: new Date(2021, 11, 15, 18, 0)
-};
-notificationManager.setDoNotDisturbDate(doNotDisturbDate).then(() => {
-    console.info("setDoNotDisturbDate success");
-}).catch((err: BusinessError) => {
-    console.error(`setDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [setDoNotDisturbDate](#setdonotdisturbdate)
 
 
 ## setDoNotDisturbDate
@@ -158,7 +202,7 @@ This API can be properly called on devices other than wearables and TVs. If it i
 | --- | --- | --- | --- |
 | date | DoNotDisturbDate | Yes | DND time to set. |
 | userId | int | Yes | ID of the user for whom you want to set the DND time. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -176,28 +220,7 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let setDoNotDisturbDateCallback = (err: BusinessError): void => {
-    if (err) {
-        console.error(`setDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info("setDoNotDisturbDate success");
-    }
-}
-
-let doNotDisturbDate: notificationManager.DoNotDisturbDate = {
-    type: notificationManager.DoNotDisturbType.TYPE_ONCE,
-    begin: new Date(),
-    end: new Date(2021, 11, 15, 18, 0)
-};
-
-// Use the actual user ID when calling the API.
-let userId: number = 1;
-
-notificationManager.setDoNotDisturbDate(doNotDisturbDate, userId, setDoNotDisturbDateCallback);
-```
+See [setDoNotDisturbDate](#setdonotdisturbdate)
 
 
 ## setDoNotDisturbDate
@@ -249,22 +272,5 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let doNotDisturbDate: notificationManager.DoNotDisturbDate = {
-    type: notificationManager.DoNotDisturbType.TYPE_ONCE,
-    begin: new Date(),
-    end: new Date(2021, 11, 15, 18, 0)
-};
-
-// Use the actual user ID when calling the API.
-let userId: number = 1;
-
-notificationManager.setDoNotDisturbDate(doNotDisturbDate, userId).then(() => {
-    console.info("setDoNotDisturbDate success");
-}).catch((err: BusinessError) => {
-    console.error(`setDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [setDoNotDisturbDate](#setdonotdisturbdate)
 

@@ -61,6 +61,26 @@ function createCB(err:Base.BusinessError, commonEventSubscriber:CommonEventManag
 commonEvent.createSubscriber(subscribeInfo, createCB);
 ```
 
+```TypeScript
+import Base from '@ohos.base';
+import CommonEventManager from '@ohos.commonEventManager';
+
+let subscriber:CommonEventManager.CommonEventSubscriber; // 用于保存创建成功的订阅者对象，后续使用其完成订阅及取消订阅的动作
+
+// 订阅者信息
+let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
+    events: ["event"]
+};
+
+// 创建订阅者
+commonEvent.createSubscriber(subscribeInfo).then((commonEventSubscriber:CommonEventManager.CommonEventSubscriber) => {
+    console.info("createSubscriber");
+    subscriber = commonEventSubscriber;
+}).catch((err:Base.BusinessError) => {
+    console.error(`createSubscriber failed, code is ${err.code}`);
+});
+```
+
 
 ## createSubscriber
 
@@ -94,23 +114,5 @@ function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<Comm
 
 **示例**
 
-```TypeScript
-import Base from '@ohos.base';
-import CommonEventManager from '@ohos.commonEventManager';
-
-let subscriber:CommonEventManager.CommonEventSubscriber; // 用于保存创建成功的订阅者对象，后续使用其完成订阅及取消订阅的动作
-
-// 订阅者信息
-let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
-    events: ["event"]
-};
-
-// 创建订阅者
-commonEvent.createSubscriber(subscribeInfo).then((commonEventSubscriber:CommonEventManager.CommonEventSubscriber) => {
-    console.info("createSubscriber");
-    subscriber = commonEventSubscriber;
-}).catch((err:Base.BusinessError) => {
-    console.error(`createSubscriber failed, code is ${err.code}`);
-});
-```
+参见 [createSubscriber](#createsubscriber)
 

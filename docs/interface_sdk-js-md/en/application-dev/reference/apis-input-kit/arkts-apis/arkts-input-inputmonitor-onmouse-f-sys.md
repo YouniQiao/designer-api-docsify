@@ -28,7 +28,7 @@ Listens for mouse input events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MouseEvent](arkts-input-multimodalinputmouseevent-mouseevent-i.md)&gt; | Yes | Callback used to receive the reported data. |
+| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)&gt; | Yes | Callback used to receive the reported data. |
 
 **Error codes:**
 
@@ -62,7 +62,7 @@ Listens for mouse input events when the mouse arrow is within the specified rect
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | rect | display.Rect[] | Yes | A specified rectangular area that can trigger a callback, with a maximum of two. |
-| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MouseEvent](arkts-input-multimodalinputmouseevent-mouseevent-i.md)&gt; | Yes | Callback used to receive the reported data. |
+| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)&gt; | Yes | Callback used to receive the reported data. |
 
 **Error codes:**
 

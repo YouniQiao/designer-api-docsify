@@ -51,3 +51,11 @@ function getCurrentInputMethodSubtype(userId?: int): InputMethodSubtype
 | 12800024 | the specified user is not in the foreground. |
 | 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
+**Examples**
+
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+
+let currentImeSubType: InputMethodSubtype = inputMethod.getCurrentInputMethodSubtype();
+```
+

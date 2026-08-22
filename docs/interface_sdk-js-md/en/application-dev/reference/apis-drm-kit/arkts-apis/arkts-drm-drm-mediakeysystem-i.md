@@ -44,6 +44,23 @@ Clears offline media keys with the specified IDs.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+// mediaKeyId is the return value of processMediaKeyResponse or getOfflineMediaKeyIds. Pass in the actual value as required.
+let mediaKeyId = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+try {
+  mediaKeySystem.clearOfflineMediaKeys(mediaKeyId);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`clearOfflineMediaKeys ERROR: ${error}`);
+}
+```
+
 ## createMediaKeySession
 
 ```TypeScript
@@ -81,6 +98,34 @@ Creates a MediaKeySession instance with the specified content protection level.
 | [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+try {
+  let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession(drm.ContentProtectionLevel.CONTENT_PROTECTION_LEVEL_SW_CRYPTO);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`createMediaKeySession ERROR: ${error}`);
+}
+```
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+try {
+  let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`createMediaKeySession ERROR: ${error}`);
+}
+```
+
 ## createMediaKeySession
 
 ```TypeScript
@@ -116,6 +161,10 @@ Create a MediaKeySession instance with level.
 | [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
+**Examples**
+
+See [createMediaKeySession](#createmediakeysession)
+
 ## createMediaKeySession
 
 ```TypeScript
@@ -146,6 +195,10 @@ Creates a MediaKeySession instance with the default content protection level.
 | [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
+**Examples**
+
+See [createMediaKeySession](#createmediakeysession)
+
 ## createMediaKeySession
 
 ```TypeScript
@@ -174,6 +227,10 @@ Create a MediaKeySession instance.
 | [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
+**Examples**
+
+See [createMediaKeySession](#createmediakeysession)
+
 ## destroy
 
 ```TypeScript
@@ -196,6 +253,35 @@ Destroys this MediaKeySystem instance.
 | --- | --- |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession();
+try {
+  mediaKeySession.destroy();
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`mediaKeySession destroy ERROR: ${error}`);
+}
+```
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+try {
+  mediaKeySystem.destroy();
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`mediaKeySystem destroy ERROR: ${error}`);
+}
+```
 
 ## generateKeySystemRequest
 
@@ -226,6 +312,21 @@ Generates a request to obtain a device certificate for the MediaKeySystem. This 
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+// Do not call this API if a device certificate already exists on the device.
+mediaKeySystem.generateKeySystemRequest().then((ProvisionRequest: drm.ProvisionRequest) => {
+  console.info("generateKeySystemRequest");
+}).catch((err: BusinessError) => {
+  console.error(`generateKeySystemRequest: ERROR: ${err}`);
+});
+```
+
 ## getCertificateStatus
 
 ```TypeScript
@@ -254,6 +355,21 @@ Obtains the status of the device certificate.
 | --- | --- |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+try {
+  let certificateStatus: drm.CertificateStatus = mediaKeySystem.getCertificateStatus();
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getCertificateStatus ERROR: ${error}`);
+}
+```
 
 ## getConfigurationByteArray
 
@@ -291,6 +407,21 @@ Obtains the value of a configuration item in the form of a byte array.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+try {
+  let configValue: Uint8Array = mediaKeySystem.getConfigurationByteArray("deviceUniqueId"); // Ensure that deviceUniqueId exists.
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getConfigurationByteArray ERROR: ${error}`);  
+}
+```
+
 ## getConfigurationString
 
 ```TypeScript
@@ -327,6 +458,21 @@ Obtains the value of a configuration item in the form of a string.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+try {
+  let configValue: string = mediaKeySystem.getConfigurationString("vendor");
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getConfigurationString ERROR: ${error}`);  
+}
+```
+
 ## getMaxContentProtectionLevel
 
 ```TypeScript
@@ -356,6 +502,21 @@ Obtains the maximum content protection level supported by the current DRM soluti
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+try {
+  let maxLevel: drm.ContentProtectionLevel = mediaKeySystem.getMaxContentProtectionLevel();
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getConfigurationByteArray ERROR: ${error}`);
+}
+```
+
 ## getOfflineMediaKeyIds
 
 ```TypeScript
@@ -384,6 +545,21 @@ Obtains the IDs of offline media keys.
 | --- | --- |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+try {
+  let offlineMediaKeyIds: Uint8Array[] = mediaKeySystem.getOfflineMediaKeyIds();
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getOfflineMediaKeyIds ERROR: ${error}`);
+}
+```
 
 ## getOfflineMediaKeyStatus
 
@@ -421,6 +597,23 @@ Obtains the status of offline media keys with the specified IDs.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+// mediaKeyId is the return value of processMediaKeyResponse or getOfflineMediaKeyIds. Pass in the actual value as required.
+let mediaKeyId = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+try {
+  let configValue: drm.OfflineMediaKeyStatus = mediaKeySystem.getOfflineMediaKeyStatus(mediaKeyId);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getOfflineMediaKeyStatus ERROR: ${error}`);
+}
+```
+
 ## getStatistics
 
 ```TypeScript
@@ -450,31 +643,20 @@ Obtains the DRM metrics, including the number of active sessions, plugin version
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-## offKeySystemRequired
+**Examples**
 
 ```TypeScript
-offKeySystemRequired(callback?: (eventInfo: EventInfo) => void): void
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+try {
+  let statisticKeyValue: drm.StatisticKeyValue[] = mediaKeySystem.getStatistics();
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getConfigurationByteArray ERROR: ${error}`);
+}
 ```
-
-Unregister keySystemRequired events.
-
-**Since:** 23
-
-<!--Device-MediaKeySystem-offKeySystemRequired(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-offKeySystemRequired(callback?: (eventInfo: EventInfo) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Drm.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | No | Used to listen for the key system required event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## off('keySystemRequired')
 
@@ -506,17 +688,17 @@ Unsubscribes from events indicating that the application requests a device certi
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## onKeySystemRequired
+## offKeySystemRequired
 
 ```TypeScript
-onKeySystemRequired(callback: (eventInfo: EventInfo) => void): void
+offKeySystemRequired(callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Register keySystemRequired events.
+Unregister keySystemRequired events.
 
 **Since:** 23
 
-<!--Device-MediaKeySystem-onKeySystemRequired(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-onKeySystemRequired(callback: (eventInfo: EventInfo) => void): void-End-->
+<!--Device-MediaKeySystem-offKeySystemRequired(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-offKeySystemRequired(callback?: (eventInfo: EventInfo) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -524,7 +706,7 @@ Register keySystemRequired events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | Yes | Used to listen for the key system required event. |
+| callback | (eventInfo: EventInfo) =&gt; void | No | Used to listen for the key system required event. |
 
 **Error codes:**
 
@@ -560,6 +742,32 @@ Subscribes to events indicating that the application requests a device certifica
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+
+## onKeySystemRequired
+
+```TypeScript
+onKeySystemRequired(callback: (eventInfo: EventInfo) => void): void
+```
+
+Register keySystemRequired events.
+
+**Since:** 23
+
+<!--Device-MediaKeySystem-onKeySystemRequired(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-onKeySystemRequired(callback: (eventInfo: EventInfo) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (eventInfo: EventInfo) =&gt; void | Yes | Used to listen for the key system required event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## processKeySystemResponse
@@ -598,6 +806,22 @@ Processes the response to a previously generated device certificate request. Thi
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+// keySystemResponse is the response obtained from the DRM service. Pass in the actual value as required.
+let keySystemResponse = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+mediaKeySystem.processKeySystemResponse(keySystemResponse).then(() => {
+  console.info("processKeySystemResponse");
+}).catch((err: BusinessError) => {
+  console.error(`processKeySystemResponse: ERROR: ${err}`);
+});
+```
+
 ## setConfigurationByteArray
 
 ```TypeScript
@@ -629,6 +853,24 @@ Sets a configuration item in the form of a byte array.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+// Set configValue based on project requirements.
+let configValue: Uint8Array = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
+try {
+  // Ensure that byteArrayConfigName of the current DRM solution is configurable.
+  mediaKeySystem.setConfigurationByteArray("byteArrayConfigName", configValue);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`setConfigurationByteArray ERROR: ${error}`);  
+}
+```
+
 ## setConfigurationString
 
 ```TypeScript
@@ -659,4 +901,19 @@ Sets a configuration item in the form of a string.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+**Examples**
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+try {
+  mediaKeySystem.setConfigurationString("stringConfigName", "stringConfigValue"); // Ensure that stringConfigName is configurable.
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`setConfigurationString ERROR: ${error}`);
+}
+```
 

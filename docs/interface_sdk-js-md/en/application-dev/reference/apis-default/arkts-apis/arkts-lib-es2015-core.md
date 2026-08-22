@@ -11,16 +11,16 @@
 
 | Name | Description |
 | --- | --- |
-| [Array](arkts-libes2015core-array-i.md) |  |
-| [ArrayConstructor](arkts-libes2015core-arrayconstructor-i.md) |  |
-| [DateConstructor](arkts-libes2015core-dateconstructor-i.md) |  |
-| [Function](arkts-libes2015core-function-i.md) |  |
-| [Math](arkts-libes2015core-math-i.md) |  |
-| [NumberConstructor](arkts-libes2015core-numberconstructor-i.md) |  |
-| [ObjectConstructor](arkts-libes2015core-objectconstructor-i.md) |  |
-| [ReadonlyArray](arkts-libes2015core-readonlyarray-i.md) |  |
-| [RegExp](arkts-libes2015core-regexp-i.md) |  |
-| [RegExpConstructor](arkts-libes2015core-regexpconstructor-i.md) |  |
-| [String](arkts-libes2015core-string-i.md) |  |
-| [StringConstructor](arkts-libes2015core-stringconstructor-i.md) |  |
+| [Array](arkts-lib-es2015-core-array-i.md) |  |
+| [ArrayConstructor](arkts-lib-es2015-core-arrayconstructor-i.md) |  |
+| [DateConstructor](arkts-lib-es2015-core-dateconstructor-i.md) |  |
+| [Function](arkts-lib-es2015-core-function-i.md) |  |
+| [Math](arkts-lib-es2015-core-math-i.md) |  |
+| [NumberConstructor](arkts-lib-es2015-core-numberconstructor-i.md) |  |
+| [ObjectConstructor](arkts-lib-es2015-core-objectconstructor-i.md) |  |
+| [ReadonlyArray](arkts-lib-es2015-core-readonlyarray-i.md) |  |
+| [RegExp](arkts-lib-es2015-core-regexp-i.md) |  |
+| [RegExpConstructor](arkts-lib-es2015-core-regexpconstructor-i.md) |  |
+| [String](arkts-lib-es2015-core-string-i.md) |  |
+| [StringConstructor](arkts-lib-es2015-core-stringconstructor-i.md) |  |
 

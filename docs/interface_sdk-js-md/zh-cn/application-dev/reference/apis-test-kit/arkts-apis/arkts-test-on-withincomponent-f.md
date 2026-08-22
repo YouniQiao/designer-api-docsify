@@ -39,3 +39,16 @@ export function withinComponent(com: Component): On
 | --- | --- |
 | [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, On, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let component: Component = await driver.findComponent(ON.type('Text'));
+  let on: On = ON.text('123').withinComponent(component); // 查找第一个Text组件内部的text为123的组件。
+}
+```
+

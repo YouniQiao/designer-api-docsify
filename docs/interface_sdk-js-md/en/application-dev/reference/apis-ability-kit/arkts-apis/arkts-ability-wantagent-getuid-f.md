@@ -27,7 +27,7 @@ Obtains the user ID of a WantAgent object. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | Target WantAgent object. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the user ID. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the user ID. |
 
 **Error codes:**
 
@@ -107,45 +107,6 @@ try {
 }
 ```
 
-
-## getUid
-
-```TypeScript
-function getUid(agent: WantAgent): Promise<int>
-```
-
-Obtains the user ID of a WantAgent object. This API uses a promise to return the result.
-
-**Since:** 23
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-wantAgent-function getUid(agent: WantAgent): Promise<int>--><!--Device-wantAgent-function getUid(agent: WantAgent): Promise<int>-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | Target WantAgent object. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;int&gt; | Promise used to return the user ID. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000007](../errorcode-ability.md#16000007-service-unresponsive) | Service busy. There are concurrent tasks. Try again later. |
-| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
-
-**Examples**
-
 ```TypeScript
 import { wantAgent, Want } from '@kit.AbilityKit';
 import type { WantAgent } from '@kit.AbilityKit';
@@ -209,4 +170,45 @@ try {
   console.error(`getWantAgent failed, err code: ${code}, err msg: ${msg}.`);
 }
 ```
+
+
+## getUid
+
+```TypeScript
+function getUid(agent: WantAgent): Promise<int>
+```
+
+Obtains the user ID of a WantAgent object. This API uses a promise to return the result.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-wantAgent-function getUid(agent: WantAgent): Promise<int>--><!--Device-wantAgent-function getUid(agent: WantAgent): Promise<int>-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | Target WantAgent object. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;int&gt; | Promise used to return the user ID. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000007](../errorcode-ability.md#16000007-service-unresponsive) | Service busy. There are concurrent tasks. Try again later. |
+| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
+
+**Examples**
+
+See [getUid](#getuid)
 

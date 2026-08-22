@@ -93,61 +93,19 @@ try {
   console.error(`[appManager] error: ${code}, ${message}`);
 }
 
-function offCallback(err: BusinessError<void> | null) {
-  if (err) {
-    console.error(`appmanager.off failed, code: ${err.code}, msg: ${err.message}`);
-  } else {
-    console.info(`appmanager.off success.`);
-  }
-}
-
 // 2.注销应用状态监听器
 try {
-  appManager.offApplicationStateChange(observerId, offCallback);
+  appManager.offApplicationStateChange(observerId).then(() => {
+    console.info(`unregisterApplicationStateObserver success`);
+  }).catch((err: Error) => {
+    console.error(`unregisterApplicationStateObserver fail, err: ${err.message}`);
+  });
 } catch (paramError) {
   let code = (paramError as BusinessError).code;
   let message = (paramError as BusinessError).message;
   console.error(`[appManager] error: ${code}, ${message}`);
 }
 ```
-
-
-## offApplicationStateChange
-
-```TypeScript
-function offApplicationStateChange(observerId: int): Promise<void>
-```
-
-注销应用状态监听器。使用Promise异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
-
-<!--Device-appManager-function offApplicationStateChange(observerId: int): Promise<void>--><!--Device-appManager-function offApplicationStateChange(observerId: int): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| observerId | int | 是 | 注册的应用状态监听器ID。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-
-**示例**
 
 ArkTS-Sta示例：
 
@@ -204,17 +162,61 @@ try {
   console.error(`[appManager] error: ${code}, ${message}`);
 }
 
+function offCallback(err: BusinessError<void> | null) {
+  if (err) {
+    console.error(`appmanager.off failed, code: ${err.code}, msg: ${err.message}`);
+  } else {
+    console.info(`appmanager.off success.`);
+  }
+}
+
 // 2.注销应用状态监听器
 try {
-  appManager.offApplicationStateChange(observerId).then(() => {
-    console.info(`unregisterApplicationStateObserver success`);
-  }).catch((err: Error) => {
-    console.error(`unregisterApplicationStateObserver fail, err: ${err.message}`);
-  });
+  appManager.offApplicationStateChange(observerId, offCallback);
 } catch (paramError) {
   let code = (paramError as BusinessError).code;
   let message = (paramError as BusinessError).message;
   console.error(`[appManager] error: ${code}, ${message}`);
 }
 ```
+
+
+## offApplicationStateChange
+
+```TypeScript
+function offApplicationStateChange(observerId: int): Promise<void>
+```
+
+注销应用状态监听器。使用Promise异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
+
+<!--Device-appManager-function offApplicationStateChange(observerId: int): Promise<void>--><!--Device-appManager-function offApplicationStateChange(observerId: int): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| observerId | int | 是 | 注册的应用状态监听器ID。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | The promise returned by the function. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+
+**示例**
+
+参见 [offApplicationStateChange](#offapplicationstatechange)
 

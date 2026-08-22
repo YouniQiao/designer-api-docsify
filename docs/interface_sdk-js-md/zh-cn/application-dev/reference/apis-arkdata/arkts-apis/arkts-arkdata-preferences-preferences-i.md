@@ -75,6 +75,30 @@ dataPreferences!.clear((err: BusinessError | null) =>{
 })
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = dataPreferences.clear();
+promise.then(() => {
+  console.info("Succeeded in clearing.");
+}).catch((err: BusinessError) => {
+  console.error("Failed to clear. code =" + err.code + ", message =" + err.message);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let promise = dataPreferences!.clear();
+promise.then(() => {
+  console.info("Succeeded in clearing.");
+}).catch((err) => {
+  console.error("Failed to clear. code =" + err.code + ", message =" + err.message);
+})
+```
+
 ## clear
 
 ```TypeScript
@@ -105,29 +129,7 @@ clear(): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = dataPreferences.clear();
-promise.then(() => {
-  console.info("Succeeded in clearing.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to clear. code =" + err.code + ", message =" + err.message);
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let promise = dataPreferences!.clear();
-promise.then(() => {
-  console.info("Succeeded in clearing.");
-}).catch((err) => {
-  console.error("Failed to clear. code =" + err.code + ", message =" + err.message);
-})
-```
+参见 [clear](#clear)
 
 ## clearSync
 
@@ -219,6 +221,30 @@ dataPreferences!.delete('startup', (err: BusinessError | null) => {
 })
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = dataPreferences.delete('startup');
+promise.then(() => {
+  console.info("Succeeded in deleting the key 'startup'.");
+}).catch((err: BusinessError) => {
+  console.error("Failed to delete the key 'startup'. code =" + err.code + ", message =" + err.message);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let promise = dataPreferences!.delete('startup');
+promise.then(() => {
+  console.info("Succeeded in deleting the key 'startup'.");
+}).catch((err) => {
+  console.error("Failed to delete the key 'startup'. code =" + err.code + ", message =" + err.message);
+})
+```
+
 ## delete
 
 ```TypeScript
@@ -256,29 +282,7 @@ delete(key: string): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = dataPreferences.delete('startup');
-promise.then(() => {
-  console.info("Succeeded in deleting the key 'startup'.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to delete the key 'startup'. code =" + err.code + ", message =" + err.message);
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let promise = dataPreferences!.delete('startup');
-promise.then(() => {
-  console.info("Succeeded in deleting the key 'startup'.");
-}).catch((err) => {
-  console.error("Failed to delete the key 'startup'. code =" + err.code + ", message =" + err.message);
-})
-```
+参见 [delete](#delete)
 
 ## deleteSync
 
@@ -389,6 +393,30 @@ dataPreferences!.flush((err: BusinessError | null) => {
 })
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let flushResult = dataPreferences.flush();
+flushResult.then(() => {
+  console.info("Succeeded in flushing.");
+}).catch((err: BusinessError) => {
+  console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let flushResult = dataPreferences!.flush();
+flushResult.then(() => {
+  console.info("Succeeded in flushing.");
+}).catch((err) => {
+  console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
+})
+```
+
 ## flush
 
 ```TypeScript
@@ -426,29 +454,7 @@ flush(): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let flushResult = dataPreferences.flush();
-flushResult.then(() => {
-  console.info("Succeeded in flushing.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let flushResult = dataPreferences!.flush();
-flushResult.then(() => {
-  console.info("Succeeded in flushing.");
-}).catch((err) => {
-  console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
-})
-```
+参见 [flush](#flush)
 
 ## flushSync
 
@@ -551,6 +557,30 @@ dataPreferences!.get('startup', 'default', (err: BusinessError | null, val: pref
 })
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let data = dataPreferences.get('startup', 'default');
+data.then((data: preferences.ValueType) => {
+  console.info("Succeeded in getting value of 'startup'. Data: " + data);
+}).catch((err: BusinessError) => {
+  console.error("Failed to get value of 'startup'. code =" + err.code + ", message =" + err.message);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let promise = dataPreferences!.get('startup', 'default');
+promise.then((data: preferences.ValueType | undefined) => {
+  console.info("Succeeded in getting value of 'startup'. Data: " + data);
+}).catch((err) => {
+  console.error("Failed to get value of 'startup'. code =" + err.code + ", message =" + err.message);
+})
+```
+
 ## get
 
 ```TypeScript
@@ -589,29 +619,7 @@ get(key: string, defValue: ValueType): Promise<ValueType>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let data = dataPreferences.get('startup', 'default');
-data.then((data: preferences.ValueType) => {
-  console.info("Succeeded in getting value of 'startup'. Data: " + data);
-}).catch((err: BusinessError) => {
-  console.error("Failed to get value of 'startup'. code =" + err.code + ", message =" + err.message);
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let promise = dataPreferences!.get('startup', 'default');
-promise.then((data: preferences.ValueType | undefined) => {
-  console.info("Succeeded in getting value of 'startup'. Data: " + data);
-}).catch((err) => {
-  console.error("Failed to get value of 'startup'. code =" + err.code + ", message =" + err.message);
-})
-```
+参见 [get](#get)
 
 ## getAll
 
@@ -682,36 +690,6 @@ dataPreferences!.getAll((err: BusinessError | null, value: Object | undefined) =
 })
 ```
 
-## getAll
-
-```TypeScript
-getAll(): Promise<Object>
-```
-
-获取缓存的Preferences实例中的所有键值数据，使用Promise异步回调。
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Preferences-getAll(): Promise<Object>--><!--Device-Preferences-getAll(): Promise<Object>-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Object&gt; | Promise对象，返回所有包含的键值数据。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -745,6 +723,38 @@ allData.then((value: Object | undefined) => {
   console.error("Failed to get all key-values. code =" + err.code + ", message =" + err.message);
 })
 ```
+
+## getAll
+
+```TypeScript
+getAll(): Promise<Object>
+```
+
+获取缓存的Preferences实例中的所有键值数据，使用Promise异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Preferences-getAll(): Promise<Object>--><!--Device-Preferences-getAll(): Promise<Object>-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Object&gt; | Promise对象，返回所有包含的键值数据。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
+
+**示例**
+
+参见 [getAll](#getall)
 
 ## getAllSync
 
@@ -918,6 +928,38 @@ dataPreferences!.has('startup', (err: BusinessError | null, val: boolean | undef
 })
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isStartupSet = dataPreferences.has('startup');
+isStartupSet.then((val: boolean) => {
+  if (val) {
+    console.info("The key 'startup' is contained.");
+  } else {
+    console.info("The key 'startup' does not contain.");
+  }
+}).catch((err: BusinessError) => {
+  console.error("Failed to check the key 'startup'. code =" + err.code + ", message =" + err.message);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let isStartupSet = dataPreferences!.has('startup');
+isStartupSet.then((val: boolean) => {
+  if (val) {
+    console.info("The key 'startup' is contained.");
+  } else {
+    console.info("The key 'startup' does not contain.");
+  }
+}).catch((err) => {
+  console.error("Failed to check the key 'startup'. code =" + err.code + ", message =" + err.message);
+})
+```
+
 ## has
 
 ```TypeScript
@@ -955,37 +997,7 @@ has(key: string): Promise<boolean>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isStartupSet = dataPreferences.has('startup');
-isStartupSet.then((val: boolean) => {
-  if (val) {
-    console.info("The key 'startup' is contained.");
-  } else {
-    console.info("The key 'startup' does not contain.");
-  }
-}).catch((err: BusinessError) => {
-  console.error("Failed to check the key 'startup'. code =" + err.code + ", message =" + err.message);
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let isStartupSet = dataPreferences!.has('startup');
-isStartupSet.then((val: boolean) => {
-  if (val) {
-    console.info("The key 'startup' is contained.");
-  } else {
-    console.info("The key 'startup' does not contain.");
-  }
-}).catch((err) => {
-  console.error("Failed to check the key 'startup'. code =" + err.code + ", message =" + err.message);
-})
-```
+参见 [has](#has)
 
 ## hasSync
 
@@ -1044,150 +1056,6 @@ if (isExist) {
 } else {
   console.info("The key 'startup' does not contain.");
 }
-```
-
-## offChange
-
-```TypeScript
-offChange(callback?: Callback<string>): void
-```
-
-Unregisters an existing observer.
-
-**起始版本：** 23
-
-<!--Device-Preferences-offChange(callback?: Callback<string>): void--><!--Device-Preferences-offChange(callback?: Callback<string>): void-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (key: string) => {
-  console.info("The key " + key + " changed.");
-}
-dataPreferences.onChange(observer);
-dataPreferences.putSync('startup', 'auto');
-dataPreferences.flush((err: BusinessError | null) => {
-  if (err) {
-    console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
-    return;
-  }
-  console.info("Succeeded in flushing.");
-})
-dataPreferences.offChange(observer);
-```
-
-## offDataChange
-
-```TypeScript
-offDataChange(keys: Array<string>, callback?: Callback<Record<string, ValueType>>): void
-```
-
-Unregisters an observer for changes to the {@ link Preferences} object.
-
-**起始版本：** 23
-
-<!--Device-Preferences-offDataChange(keys: Array<string>, callback?: Callback<Record<string, ValueType>>): void--><!--Device-Preferences-offDataChange(keys: Array<string>, callback?: Callback<Record<string, ValueType>>): void-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | 是 | 需要取消订阅的key集合，当keys为空数组时，表示取消订阅全部key；当keys为非空数组时，表示只取消订阅key集合中的key。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, ValueType&gt;&gt; | 否 | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (data: Record<string, preferences.ValueType>) => {
-  for (const keyValue of Object.entries(data)) {
-    console.info(`observer : ${keyValue}`);
-  }
-  console.info("The observer called.");
-}
-let keys = ['name', 'age'];
-dataPreferences.onDataChange(keys, observer);
-dataPreferences.putSync('name', 'xiaohong');
-dataPreferences.putSync('weight', 125);
-dataPreferences.flush((err: BusinessError | null) => {
-  if (err) {
-    console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
-    return;
-  }
-  console.info("Succeeded in flushing.");
-})
-dataPreferences.offDataChange(keys, observer);
-```
-
-## offMultiProcessChange
-
-```TypeScript
-offMultiProcessChange(callback?: Callback<string>): void
-```
-
-Unregisters an existing observer.
-
-**起始版本：** 23
-
-<!--Device-Preferences-offMultiProcessChange(callback?: Callback<string>): void--><!--Device-Preferences-offMultiProcessChange(callback?: Callback<string>): void-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (key: string) => {
-  console.info("The key " + key + " changed.");
-}
-dataPreferences.onMultiProcessChange(observer);
-dataPreferences.putSync('startup', 'auto');
-dataPreferences.flush((err: BusinessError | null) => {
-  if (err) {
-    console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
-    return;
-  }
-  console.info("Succeeded in flushing.");
-})
-dataPreferences.offMultiProcessChange(observer);
 ```
 
 ## off('change')
@@ -1348,17 +1216,17 @@ dataPreferences.flush((err: BusinessError) => {
 dataPreferences.off('multiProcessChange', observer);
 ```
 
-## onChange
+## offChange
 
 ```TypeScript
-onChange(callback: Callback<string>): void
+offChange(callback?: Callback<string>): void
 ```
 
-Registers an observer to listen for the change of a [Preferences](#preferences) object.
+Unregisters an existing observer.
 
 **起始版本：** 23
 
-<!--Device-Preferences-onChange(callback: Callback<string>): void--><!--Device-Preferences-onChange(callback: Callback<string>): void-End-->
+<!--Device-Preferences-offChange(callback?: Callback<string>): void--><!--Device-Preferences-offChange(callback?: Callback<string>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -1366,7 +1234,7 @@ Registers an observer to listen for the change of a [Preferences](#preferences) 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数，用于接收数据变更通知，回调参数为Key字符串，表示发生变更的键名称。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
 
 **错误码：**
 
@@ -1383,7 +1251,7 @@ let observer = (key: string) => {
   console.info("The key " + key + " changed.");
 }
 dataPreferences.onChange(observer);
-dataPreferences.putSync('startup', 'manual');
+dataPreferences.putSync('startup', 'auto');
 dataPreferences.flush((err: BusinessError | null) => {
   if (err) {
     console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
@@ -1391,19 +1259,20 @@ dataPreferences.flush((err: BusinessError | null) => {
   }
   console.info("Succeeded in flushing.");
 })
+dataPreferences.offChange(observer);
 ```
 
-## onDataChange
+## offDataChange
 
 ```TypeScript
-onDataChange(keys: Array<string>, callback: Callback<Record<string, ValueType>>): void
+offDataChange(keys: Array<string>, callback?: Callback<Record<string, ValueType>>): void
 ```
 
-Registers an observer to listen for changes to the {@ link Preferences} object.
+Unregisters an observer for changes to the {@ link Preferences} object.
 
 **起始版本：** 23
 
-<!--Device-Preferences-onDataChange(keys: Array<string>, callback: Callback<Record<string, ValueType>>): void--><!--Device-Preferences-onDataChange(keys: Array<string>, callback: Callback<Record<string, ValueType>>): void-End-->
+<!--Device-Preferences-offDataChange(keys: Array<string>, callback?: Callback<Record<string, ValueType>>): void--><!--Device-Preferences-offDataChange(keys: Array<string>, callback?: Callback<Record<string, ValueType>>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -1411,8 +1280,8 @@ Registers an observer to listen for changes to the {@ link Preferences} object.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | 是 | 需要订阅的key集合。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, ValueType&gt;&gt; | 是 | 回调函数。回调支持返回多个键值对，其中键为发生变更的订阅key，类型为string；值为变更后的数据，类型为ValueType。 |
+| keys | Array&lt;string&gt; | 是 | 需要取消订阅的key集合，当keys为空数组时，表示取消订阅全部key；当keys为非空数组时，表示只取消订阅key集合中的key。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, ValueType&gt;&gt; | 否 | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
 
 **错误码：**
 
@@ -1442,19 +1311,20 @@ dataPreferences.flush((err: BusinessError | null) => {
   }
   console.info("Succeeded in flushing.");
 })
+dataPreferences.offDataChange(keys, observer);
 ```
 
-## onMultiProcessChange
+## offMultiProcessChange
 
 ```TypeScript
-onMultiProcessChange(callback: Callback<string>): void
+offMultiProcessChange(callback?: Callback<string>): void
 ```
 
-Registers an observer to listen for the change of a [Preferences](#preferences) object.
+Unregisters an existing observer.
 
 **起始版本：** 23
 
-<!--Device-Preferences-onMultiProcessChange(callback: Callback<string>): void--><!--Device-Preferences-onMultiProcessChange(callback: Callback<string>): void-End-->
+<!--Device-Preferences-offMultiProcessChange(callback?: Callback<string>): void--><!--Device-Preferences-offMultiProcessChange(callback?: Callback<string>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -1462,14 +1332,13 @@ Registers an observer to listen for the change of a [Preferences](#preferences) 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 多进程间数据变更时触发的回调函数，回调参数为发生变更的Key字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
-| [15500019](../errorcode-preferences.md#15500019-获取订阅服务失败) | Failed to obtain the subscription service. |
 
 **示例**
 
@@ -1480,7 +1349,7 @@ let observer = (key: string) => {
   console.info("The key " + key + " changed.");
 }
 dataPreferences.onMultiProcessChange(observer);
-dataPreferences.putSync('startup', 'manual');
+dataPreferences.putSync('startup', 'auto');
 dataPreferences.flush((err: BusinessError | null) => {
   if (err) {
     console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
@@ -1488,6 +1357,7 @@ dataPreferences.flush((err: BusinessError | null) => {
   }
   console.info("Succeeded in flushing.");
 })
+dataPreferences.offMultiProcessChange(observer);
 ```
 
 ## on('change')
@@ -1677,6 +1547,148 @@ dataPreferences.flush((err: BusinessError) => {
 })
 ```
 
+## onChange
+
+```TypeScript
+onChange(callback: Callback<string>): void
+```
+
+Registers an observer to listen for the change of a [Preferences](#preferences) object.
+
+**起始版本：** 23
+
+<!--Device-Preferences-onChange(callback: Callback<string>): void--><!--Device-Preferences-onChange(callback: Callback<string>): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数，用于接收数据变更通知，回调参数为Key字符串，表示发生变更的键名称。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+}
+dataPreferences.onChange(observer);
+dataPreferences.putSync('startup', 'manual');
+dataPreferences.flush((err: BusinessError | null) => {
+  if (err) {
+    console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
+    return;
+  }
+  console.info("Succeeded in flushing.");
+})
+```
+
+## onDataChange
+
+```TypeScript
+onDataChange(keys: Array<string>, callback: Callback<Record<string, ValueType>>): void
+```
+
+Registers an observer to listen for changes to the {@ link Preferences} object.
+
+**起始版本：** 23
+
+<!--Device-Preferences-onDataChange(keys: Array<string>, callback: Callback<Record<string, ValueType>>): void--><!--Device-Preferences-onDataChange(keys: Array<string>, callback: Callback<Record<string, ValueType>>): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| keys | Array&lt;string&gt; | 是 | 需要订阅的key集合。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-arkts/arkts-apis/arkts-arkts-map-record-c.md)&lt;string, ValueType&gt;&gt; | 是 | 回调函数。回调支持返回多个键值对，其中键为发生变更的订阅key，类型为string；值为变更后的数据，类型为ValueType。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (data: Record<string, preferences.ValueType>) => {
+  for (const keyValue of Object.entries(data)) {
+    console.info(`observer : ${keyValue}`);
+  }
+  console.info("The observer called.");
+}
+let keys = ['name', 'age'];
+dataPreferences.onDataChange(keys, observer);
+dataPreferences.putSync('name', 'xiaohong');
+dataPreferences.putSync('weight', 125);
+dataPreferences.flush((err: BusinessError | null) => {
+  if (err) {
+    console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
+    return;
+  }
+  console.info("Succeeded in flushing.");
+})
+```
+
+## onMultiProcessChange
+
+```TypeScript
+onMultiProcessChange(callback: Callback<string>): void
+```
+
+Registers an observer to listen for the change of a [Preferences](#preferences) object.
+
+**起始版本：** 23
+
+<!--Device-Preferences-onMultiProcessChange(callback: Callback<string>): void--><!--Device-Preferences-onMultiProcessChange(callback: Callback<string>): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 多进程间数据变更时触发的回调函数，回调参数为发生变更的Key字符串。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [15500019](../errorcode-preferences.md#15500019-获取订阅服务失败) | Failed to obtain the subscription service. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+}
+dataPreferences.onMultiProcessChange(observer);
+dataPreferences.putSync('startup', 'manual');
+dataPreferences.flush((err: BusinessError | null) => {
+  if (err) {
+    console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
+    return;
+  }
+  console.info("Succeeded in flushing.");
+})
+```
+
 ## put
 
 ```TypeScript
@@ -1744,6 +1756,30 @@ dataPreferences!.put('startup', 'auto', (err: BusinessError | null) => {
 })
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let putStartupPref = dataPreferences.put('startup', 'auto');
+putStartupPref.then(() => {
+  console.info("Succeeded in putting value of 'startup'.");
+}).catch((err: BusinessError) => {
+  console.error("Failed to put value of 'startup'. code =" + err.code + ", message =" + err.message);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let putStartupPref = dataPreferences!.put('startup', 'auto');
+putStartupPref.then(() => {
+  console.info("Succeeded in putting value of 'startup'.");
+}).catch((err) => {
+  console.error("Failed to put value of 'startup'. code =" + err.code + ", message =" + err.message);
+})
+```
+
 ## put
 
 ```TypeScript
@@ -1788,29 +1824,7 @@ put(key: string, value: ValueType): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let putStartupPref = dataPreferences.put('startup', 'auto');
-putStartupPref.then(() => {
-  console.info("Succeeded in putting value of 'startup'.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to put value of 'startup'. code =" + err.code + ", message =" + err.message);
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let putStartupPref = dataPreferences!.put('startup', 'auto');
-putStartupPref.then(() => {
-  console.info("Succeeded in putting value of 'startup'.");
-}).catch((err) => {
-  console.error("Failed to put value of 'startup'. code =" + err.code + ", message =" + err.message);
-})
-```
+参见 [put](#put)
 
 ## putSync
 

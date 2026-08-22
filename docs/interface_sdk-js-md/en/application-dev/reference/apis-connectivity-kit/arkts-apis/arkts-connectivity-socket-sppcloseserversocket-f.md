@@ -14,7 +14,7 @@ function sppCloseServerSocket(socket: int): void
 
 Disables an spp server socket and releases related resources.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-socket-function sppCloseServerSocket(socket: int): void--><!--Device-socket-function sppCloseServerSocket(socket: int): void-End-->
 

@@ -118,6 +118,10 @@ Gets file name of tone.
 toneAttrs.getFileName();
 ```
 
+```TypeScript
+toneHapticsAttrs.getFileName();
+```
+
 ## getMediaType
 
 ```TypeScript
@@ -186,6 +190,10 @@ Gets title of tone.
 toneAttrs.getTitle();
 ```
 
+```TypeScript
+toneHapticsAttrs.getTitle();
+```
+
 ## getUri
 
 ```TypeScript
@@ -218,6 +226,10 @@ Gets uri of tone.
 
 ```TypeScript
 toneAttrs.getUri();
+```
+
+```TypeScript
+toneHapticsAttrs.getUri();
 ```
 
 ## setCategory

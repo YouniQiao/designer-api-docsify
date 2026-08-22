@@ -403,6 +403,34 @@ function testSetVerifySpec() {
 }
 ```
 
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+function testSetVerifySpec() {
+  let verifier = cryptoFramework.createVerify("RSA2048|PSS|SHA256|MGF1_SHA256");
+  let setN = 20;
+  verifier.setVerifySpec(cryptoFramework.SignSpecItem.PSS_SALT_LEN_NUM, setN);
+}
+```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+function testSetVerifySpec() {
+  let verifier = cryptoFramework.createVerify('ML-DSA');
+  verifier.setVerifySpec(cryptoFramework.SignSpecItem.ML_DSA_DETERMINISTIC_BOOL, true);
+}
+```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+function testSetVerifySpec() {
+  let verifier = cryptoFramework.createVerify('ML-DSA');
+  verifier.setVerifySpec(cryptoFramework.SignSpecItem.ML_DSA_DETERMINISTIC_BOOL, true);
+}
+```
+
 ## setVerifySpec
 
 ```TypeScript
@@ -446,15 +474,7 @@ setVerifySpec(itemType: SignSpecItem, itemValue: int | Uint8Array): void
 
 **示例**
 
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-function testSetVerifySpec() {
-  let verifier = cryptoFramework.createVerify("RSA2048|PSS|SHA256|MGF1_SHA256");
-  let setN = 20;
-  verifier.setVerifySpec(cryptoFramework.SignSpecItem.PSS_SALT_LEN_NUM, setN);
-}
-```
+参见 [setVerifySpec](#setverifyspec)
 
 ## setVerifySpec
 
@@ -498,14 +518,7 @@ setVerifySpec(itemType: SignSpecItem, itemValue: int | Uint8Array | boolean): vo
 
 **示例**
 
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-function testSetVerifySpec() {
-  let verifier = cryptoFramework.createVerify('ML-DSA');
-  verifier.setVerifySpec(cryptoFramework.SignSpecItem.ML_DSA_DETERMINISTIC_BOOL, true);
-}
-```
+参见 [setVerifySpec](#setverifyspec)
 
 ## setVerifySpec
 
@@ -544,14 +557,7 @@ setVerifySpec(itemType: SignSpecItem, itemValue: boolean): void
 
 **示例**
 
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-function testSetVerifySpec() {
-  let verifier = cryptoFramework.createVerify('ML-DSA');
-  verifier.setVerifySpec(cryptoFramework.SignSpecItem.ML_DSA_DETERMINISTIC_BOOL, true);
-}
-```
+参见 [setVerifySpec](#setverifyspec)
 
 ## update
 

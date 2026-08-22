@@ -118,6 +118,33 @@ async function accessFunc() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// A built-in storage directory is used as an example.
+// In the sample code, sourceDir indicates a directory in the Download directory. The URI is the URI in fileInfo.
+// You can use the URI obtained.
+let sourceDir: string = "file://docs/storage/Users/currentUser/Download/test";
+// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.access(sourceDir, (err: BusinessError, existJudgment: boolean) => {
+      if (err) {
+        console.error("Failed to access in async, errCode:" + err.code + ", errMessage:" + err.message);
+        return;
+      }
+      if (existJudgment)
+        console.info("sourceDir exists");
+      else
+        console.info("sourceDir does not exist");
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("access failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## access
 
 ```TypeScript
@@ -145,7 +172,7 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sourceFileUri | string | Yes | Indicates the selected file or directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | The callback is used to return whether it exists. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | The callback is used to return whether it exists. |
 
 **Error codes:**
 
@@ -188,32 +215,7 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// A built-in storage directory is used as an example.
-// In the sample code, sourceDir indicates a directory in the Download directory. The URI is the URI in fileInfo.
-// You can use the URI obtained.
-let sourceDir: string = "file://docs/storage/Users/currentUser/Download/test";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.access(sourceDir, (err: BusinessError, existJudgment: boolean) => {
-      if (err) {
-        console.error("Failed to access in async, errCode:" + err.code + ", errMessage:" + err.message);
-        return;
-      }
-      if (existJudgment)
-        console.info("sourceDir exists");
-      else
-        console.info("sourceDir does not exist");
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("access failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [access](#access)
 
 ## copy
 
@@ -251,36 +253,6 @@ Copies a file or directory. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | Promise used to return the result. If the file or directory is copied successfully, no information is returned. If the file copy fails, a **copyResult** array is returned. |
 
-## copy
-
-```TypeScript
-copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResult>>): void
-```
-
-Copies a file or directory. This API uses an asynchronous callback to return the result.
-
-**Since:** 10
-
-**Deprecated since:** 23
-
-**Substitutes:** [copy](../../apis-default/arkts-apis/arkts-fileio-copy-f.md)(srcUri: string, destUri: string, callback: AsyncCallback&lt;void&gt;)
-
-**Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResult>>): void--><!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResult>>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.UserFileService
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the file or directory is copied successfully, no information is returned. If the copy fails, a **copyResult** array is returned. |
-
 **Examples**
 
 ```TypeScript
@@ -316,39 +288,6 @@ try {
 }
 ```
 
-## copy
-
-```TypeScript
-copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<CopyResult>>): void
-```
-
-Copies a file or directory. If a file with the same name already exists, you can choose whether to forcibly overwrite the original file. This API uses an asynchronous callback to return the result.
-
-**Since:** 10
-
-**Deprecated since:** 23
-
-**Substitutes:** [copy](../../apis-default/arkts-apis/arkts-fileio-copy-f.md)(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback&lt;void&gt;)
-
-**Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-<!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<CopyResult>>): void--><!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<CopyResult>>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.UserFileService
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
-| force | boolean | Yes | Whether to forcibly overwrite the original file with the same name. If **force** is set to **true**, the original file is forcibly overwritten. If **force** is left empty or set to **false**, the original file is not overwritten. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the file or directory is copied successfully, no information is returned. If the copy fails, a **copyResult** array is returned. |
-
-**Examples**
-
 ```TypeScript
 import { BusinessError } from '@ohos.base';
 // A built-in storage directory is used as an example.
@@ -381,6 +320,75 @@ try {
   console.error("copy failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+## copy
+
+```TypeScript
+copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResult>>): void
+```
+
+Copies a file or directory. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+**Deprecated since:** 23
+
+**Substitutes:** [copy](../../apis-default/arkts-apis/arkts-fileio-copy-f.md)(srcUri: string, destUri: string, callback: AsyncCallback&lt;void&gt;)
+
+**Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResult>>): void--><!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResult>>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.UserFileService
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
+| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the file or directory is copied successfully, no information is returned. If the copy fails, a **copyResult** array is returned. |
+
+**Examples**
+
+See [copy](#copy)
+
+## copy
+
+```TypeScript
+copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<CopyResult>>): void
+```
+
+Copies a file or directory. If a file with the same name already exists, you can choose whether to forcibly overwrite the original file. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+**Deprecated since:** 23
+
+**Substitutes:** [copy](../../apis-default/arkts-apis/arkts-fileio-copy-f.md)(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback&lt;void&gt;)
+
+**Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<CopyResult>>): void--><!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<CopyResult>>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.UserFileService
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
+| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
+| force | boolean | Yes | Whether to forcibly overwrite the original file with the same name. If **force** is set to **true**, the original file is forcibly overwritten. If **force** is left empty or set to **false**, the original file is not overwritten. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the file or directory is copied successfully, no information is returned. If the copy fails, a **copyResult** array is returned. |
+
+**Examples**
+
+See [copy](#copy)
 
 ## copyFile
 
@@ -474,6 +482,28 @@ async function copyFunc01() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@ohos.base';
+// A built-in storage directory is used as an example.
+// In the sample code, sourceFile indicates the file (directory) in the Download directory to copy, destFile indicates the destination directory in the Download directory, and URI is the URI in fileInfo.
+// You can use the URI obtained.
+let sourceFile: string = "file://docs/storage/Users/currentUser/Download/1.txt";
+let destFile: string = "file://docs/storage/Users/currentUser/Download/test";
+let fileName: string = "2.txt";
+// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.copyFile(sourceFile, destFile, fileName, async (err: BusinessError, copyResult: string) => {
+          console.info("copyResult uri: " + copyResult);
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("copy failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## copyFile
 
 ```TypeScript
@@ -505,7 +535,7 @@ Copies a file with an alternative file name. This API uses an asynchronous callb
 | sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
 | destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
 | fileName | string | Yes | File name to use if there is a file with the same name as the source file in the destination directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | URI of the file generated. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | URI of the file generated. |
 
 **Error codes:**
 
@@ -538,27 +568,7 @@ Copies a file with an alternative file name. This API uses an asynchronous callb
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// A built-in storage directory is used as an example.
-// In the sample code, sourceFile indicates the file (directory) in the Download directory to copy, destFile indicates the destination directory in the Download directory, and URI is the URI in fileInfo.
-// You can use the URI obtained.
-let sourceFile: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-let destFile: string = "file://docs/storage/Users/currentUser/Download/test";
-let fileName: string = "2.txt";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.copyFile(sourceFile, destFile, fileName, async (err: BusinessError, copyResult: string) => {
-          console.info("copyResult uri: " + copyResult);
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("copy failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [copyFile](#copyfile)
 
 ## createFile
 
@@ -663,6 +673,30 @@ async function createFile() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// A built-in storage directory is used as an example.
+// In the sample code, sourceUri indicates the Download directory. The URI is the URI in fileInfo.
+// You can use the URI obtained.
+let sourceUri: string = "file://docs/storage/Users/currentUser/Download";
+let displayName: string = "file1";
+// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.createFile(sourceUri, displayName, (err: BusinessError, fileUri: string) => {
+      if (err) {
+        console.error("Failed to createFile in async, errCode:" + err.code + ", errMessage:" + err.message);
+      }
+      console.info("createFile success, fileUri: " + JSON.stringify(fileUri));
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("createFile failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## createFile
 
 ```TypeScript
@@ -691,7 +725,7 @@ Creates a file in a directory. This API uses an asynchronous callback to return 
 | --- | --- | --- | --- |
 | uri | string | Yes | Represents a specific parent directory. |
 | displayName | string | Yes | Indicates the new file name, and supports with suffix. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | The callback is used to return the new file's URI. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback is used to return the new file's URI. |
 
 **Error codes:**
 
@@ -734,29 +768,7 @@ Creates a file in a directory. This API uses an asynchronous callback to return 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// A built-in storage directory is used as an example.
-// In the sample code, sourceUri indicates the Download directory. The URI is the URI in fileInfo.
-// You can use the URI obtained.
-let sourceUri: string = "file://docs/storage/Users/currentUser/Download";
-let displayName: string = "file1";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.createFile(sourceUri, displayName, (err: BusinessError, fileUri: string) => {
-      if (err) {
-        console.error("Failed to createFile in async, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      console.info("createFile success, fileUri: " + JSON.stringify(fileUri));
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("createFile failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [createFile](#createfile)
 
 ## delete
 
@@ -770,7 +782,7 @@ Deletes a file or directory. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** [delete](arkts-corefile-filefs-atomicfile-c.md#delete)
+**Substitutes:** [delete](arkts-corefile-file-fs-atomicfile-c.md#delete)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -855,6 +867,29 @@ async function deleteFile01() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// A built-in storage directory is used as an example.
+// In the sample code, targetUri indicates a file in the Download directory. The URI is the URI in fileInfo.
+// You can use the URI obtained.
+let targetUri: string = "file://docs/storage/Users/currentUser/Download/1.txt";
+// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.delete(targetUri, (err: BusinessError, code: number) => {
+      if (err) {
+        console.error("Failed to delete in async, errCode:" + err.code + ", errMessage:" + err.message);
+      }
+      console.info("delete success, code: " + code);
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("delete failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## delete
 
 ```TypeScript
@@ -867,7 +902,7 @@ Deletes a file or directory. This API uses an asynchronous callback to return th
 
 **Deprecated since:** 23
 
-**Substitutes:** [delete](arkts-corefile-filefs-atomicfile-c.md#delete)
+**Substitutes:** [delete](arkts-corefile-file-fs-atomicfile-c.md#delete)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -882,7 +917,7 @@ Deletes a file or directory. This API uses an asynchronous callback to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the file or directory to be deleted. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |  |
 
 **Error codes:**
 
@@ -925,28 +960,7 @@ Deletes a file or directory. This API uses an asynchronous callback to return th
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// A built-in storage directory is used as an example.
-// In the sample code, targetUri indicates a file in the Download directory. The URI is the URI in fileInfo.
-// You can use the URI obtained.
-let targetUri: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.delete(targetUri, (err: BusinessError, code: number) => {
-      if (err) {
-        console.error("Failed to delete in async, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      console.info("delete success, code: " + code);
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("delete failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [delete](#delete)
 
 ## getFileInfoFromRelativePath
 
@@ -1003,6 +1017,29 @@ async function getRelativePath() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// In the sample code, relativePath indicates the Download directory, which is the relativePath in fileInfo.
+// You can use the relativePath obtained.
+let relativePath: string = "Download/";
+// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.getFileInfoFromRelativePath(relativePath, (err: BusinessError, fileInfo: fileAccess.FileInfo) => {
+      if (err) {
+        console.error("Failed to getFileInfoFromRelativePath in async, errCode:" + err.code + ", errMessage:" + err.message);
+        return;
+      }
+      console.info("getFileInfoFromRelativePath success, fileInfo: " + JSON.stringify(fileInfo));
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("getFileInfoFromRelativePath failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## getFileInfoFromRelativePath
 
 ```TypeScript
@@ -1030,32 +1067,11 @@ Obtains a **FileInfo** object based on a relative path. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | relativePath | string | Yes | Indicates the selected file or directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FileInfo&gt; | Yes | The callback is used to return a fileinfo object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileInfo&gt; | Yes | The callback is used to return a fileinfo object. |
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// In the sample code, relativePath indicates the Download directory, which is the relativePath in fileInfo.
-// You can use the relativePath obtained.
-let relativePath: string = "Download/";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.getFileInfoFromRelativePath(relativePath, (err: BusinessError, fileInfo: fileAccess.FileInfo) => {
-      if (err) {
-        console.error("Failed to getFileInfoFromRelativePath in async, errCode:" + err.code + ", errMessage:" + err.message);
-        return;
-      }
-      console.info("getFileInfoFromRelativePath success, fileInfo: " + JSON.stringify(fileInfo));
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("getFileInfoFromRelativePath failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [getFileInfoFromRelativePath](#getfileinfofromrelativepath)
 
 ## getFileInfoFromUri
 
@@ -1113,6 +1129,30 @@ async function getUri() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// A built-in storage directory is used as an example.
+// In the sample code, sourceUri indicates the Download directory. The URI is the URI in fileInfo.
+// You can use the URI obtained.
+let sourceUri: string = "file://docs/storage/Users/currentUser/Download";
+// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.getFileInfoFromUri(sourceUri, (err: BusinessError, fileInfo: fileAccess.FileInfo) => {
+      if (err) {
+        console.error("Failed to getFileInfoFromUri in async, errCode:" + err.code + ", errMessage:" + err.message);
+        return;
+      }
+      console.info("getFileInfoFromUri success, fileInfo: " + JSON.stringify(fileInfo));
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("getFileInfoFromUri failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## getFileInfoFromUri
 
 ```TypeScript
@@ -1140,33 +1180,11 @@ Obtains a **FileInfo** object based on a URI. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the selected file or directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FileInfo&gt; | Yes | The callback is used to return a fileinfo object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileInfo&gt; | Yes | The callback is used to return a fileinfo object. |
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// A built-in storage directory is used as an example.
-// In the sample code, sourceUri indicates the Download directory. The URI is the URI in fileInfo.
-// You can use the URI obtained.
-let sourceUri: string = "file://docs/storage/Users/currentUser/Download";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.getFileInfoFromUri(sourceUri, (err: BusinessError, fileInfo: fileAccess.FileInfo) => {
-      if (err) {
-        console.error("Failed to getFileInfoFromUri in async, errCode:" + err.code + ", errMessage:" + err.message);
-        return;
-      }
-      console.info("getFileInfoFromUri success, fileInfo: " + JSON.stringify(fileInfo));
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("getFileInfoFromUri failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [getFileInfoFromUri](#getfileinfofromuri)
 
 ## getRoots
 
@@ -1264,6 +1282,36 @@ async function getRoots() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+async function getRoots() {
+  let rootinfos: Array<fileAccess.RootInfo> = [];
+  let isDone: boolean = false;
+  // Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+  let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+  try {
+    if (fileAccessHelper != undefined) {
+      fileAccessHelper.getRoots((err: BusinessError, rootIterator: fileAccess.RootIterator) => {
+        if (err) {
+          console.error("Failed to getRoots in async, errCode:" + err.code + ", errMessage:" + err.message);
+        }
+        while (!isDone) {
+          let result = rootIterator.next();
+          console.info("next result = " + JSON.stringify(result));
+          isDone = result.done;
+          if (!isDone) {
+            rootinfos.push(result.value);
+          }
+        }
+      });       
+    }
+  } catch (err) {
+    let error: BusinessError = err as BusinessError;
+    console.error("getRoots failed, errCode:" + error.code + ", errMessage:" + error.message);
+  }
+}
+```
+
 ## getRoots
 
 ```TypeScript
@@ -1288,7 +1336,7 @@ Obtains information about the device root nodes of the file management services 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RootIterator](arkts-corefile-fileaccess-rootiterator-i-sys.md)&gt; | Yes | The callback is used to return a RootIterator. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RootIterator](arkts-corefile-fileaccess-rootiterator-i-sys.md)&gt; | Yes | The callback is used to return a RootIterator. |
 
 **Error codes:**
 
@@ -1331,35 +1379,7 @@ Obtains information about the device root nodes of the file management services 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-async function getRoots() {
-  let rootinfos: Array<fileAccess.RootInfo> = [];
-  let isDone: boolean = false;
-  // Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-  let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-  try {
-    if (fileAccessHelper != undefined) {
-      fileAccessHelper.getRoots((err: BusinessError, rootIterator: fileAccess.RootIterator) => {
-        if (err) {
-          console.error("Failed to getRoots in async, errCode:" + err.code + ", errMessage:" + err.message);
-        }
-        while (!isDone) {
-          let result = rootIterator.next();
-          console.info("next result = " + JSON.stringify(result));
-          isDone = result.done;
-          if (!isDone) {
-            rootinfos.push(result.value);
-          }
-        }
-      });       
-    }
-  } catch (err) {
-    let error: BusinessError = err as BusinessError;
-    console.error("getRoots failed, errCode:" + error.code + ", errMessage:" + error.message);
-  }
-}
-```
+See [getRoots](#getroots)
 
 ## mkDir
 
@@ -1464,6 +1484,30 @@ async function createDirectory() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// A built-in storage directory is used as an example.
+// In the sample code, sourceUri indicates the Download directory. The URI is the URI in fileInfo.
+// You can use the URI obtained.
+let sourceUri: string = "file://docs/storage/Users/currentUser/Download";
+let dirName: string = "dirTest";
+// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.mkDir(sourceUri, dirName, (err: BusinessError, dirUri: string) => {
+      if (err) {
+        console.error("Failed to mkDir in async, errCode:" + err.code + ", errMessage:" + err.message);
+      }
+      console.info("mkDir success, dirUri: " + JSON.stringify(dirUri));
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("mkDir failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## mkDir
 
 ```TypeScript
@@ -1492,7 +1536,7 @@ Creates a directory in a specified directory. This API uses an asynchronous call
 | --- | --- | --- | --- |
 | parentUri | string | Yes | Represents a specific parent directory. |
 | displayName | string | Yes | Indicates the new directory name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | The callback is used to return the new directory's URI. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback is used to return the new directory's URI. |
 
 **Error codes:**
 
@@ -1535,29 +1579,7 @@ Creates a directory in a specified directory. This API uses an asynchronous call
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// A built-in storage directory is used as an example.
-// In the sample code, sourceUri indicates the Download directory. The URI is the URI in fileInfo.
-// You can use the URI obtained.
-let sourceUri: string = "file://docs/storage/Users/currentUser/Download";
-let dirName: string = "dirTest";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.mkDir(sourceUri, dirName, (err: BusinessError, dirUri: string) => {
-      if (err) {
-        console.error("Failed to mkDir in async, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      console.info("mkDir success, dirUri: " + JSON.stringify(dirUri));
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("mkDir failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [mkDir](#mkdir)
 
 ## move
 
@@ -1657,6 +1679,30 @@ async function moveFile01() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// A built-in storage directory is used as an example.
+// In the sample code, sourceFile and destFile indicate the files and directories in the Download directory. The URI is the URI in fileInfo.
+// You can use the URI obtained.
+let sourceFile: string = "file://docs/storage/Users/currentUser/Download/1.txt";
+let destFile: string = "file://docs/storage/Users/currentUser/Download/test";
+// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.move(sourceFile, destFile, (err: BusinessError, fileUri: string) => {
+      if (err) {
+        console.error("Failed to move in async, errCode:" + err.code + ", errMessage:" + err.message);
+      }
+      console.info("move success, fileUri: " + JSON.stringify(fileUri));
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("move failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## move
 
 ```TypeScript
@@ -1685,7 +1731,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 | --- | --- | --- | --- |
 | sourceFile | string | Yes | Indicates the file or directory to be moved. |
 | destFile | string | Yes | Represents the destination folder. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | The callback is used to return the generated new file or directory. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback is used to return the generated new file or directory. |
 
 **Error codes:**
 
@@ -1728,29 +1774,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// A built-in storage directory is used as an example.
-// In the sample code, sourceFile and destFile indicate the files and directories in the Download directory. The URI is the URI in fileInfo.
-// You can use the URI obtained.
-let sourceFile: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-let destFile: string = "file://docs/storage/Users/currentUser/Download/test";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.move(sourceFile, destFile, (err: BusinessError, fileUri: string) => {
-      if (err) {
-        console.error("Failed to move in async, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      console.info("move success, fileUri: " + JSON.stringify(fileUri));
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("move failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [move](#move)
 
 ## moveFile
 
@@ -1844,6 +1868,31 @@ async function moveFile01() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// A built-in storage directory is used as an example.
+// In the sample code, sourceUri and destUri indicate the files or directories in the Download directory. The URI is the URI in fileInfo.
+// You can use the URI obtained.
+let sourceUri: string = "file://docs/storage/Users/currentUser/Download/1.txt";
+let destUri: string = "file://docs/storage/Users/currentUser/Download/test";
+let fileName: string = "2.txt";
+// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.moveFile(sourceUri, destUri, fileName, (err: BusinessError, fileUri: string) => {
+      if (err) {
+        console.error("Failed to moveFile in async, errCode:" + err.code + ", errMessage:" + err.message);
+      }
+      console.info("moveFile success, fileUri: " + JSON.stringify(fileUri));
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("moveFile failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## moveFile
 
 ```TypeScript
@@ -1875,7 +1924,7 @@ Moves a file, and renames it if a file with the same name already exists in the 
 | sourceUri | string | Yes | URI of the source file to move. |
 | destUri | string | Yes | URI of the destination directory, to which the file is moved. |
 | fileName | string | Yes | New name of the file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback invoked to return the URI of the file in the destination directory. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback invoked to return the URI of the file in the destination directory. |
 
 **Error codes:**
 
@@ -1908,30 +1957,7 @@ Moves a file, and renames it if a file with the same name already exists in the 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// A built-in storage directory is used as an example.
-// In the sample code, sourceUri and destUri indicate the files or directories in the Download directory. The URI is the URI in fileInfo.
-// You can use the URI obtained.
-let sourceUri: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-let destUri: string = "file://docs/storage/Users/currentUser/Download/test";
-let fileName: string = "2.txt";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.moveFile(sourceUri, destUri, fileName, (err: BusinessError, fileUri: string) => {
-      if (err) {
-        console.error("Failed to moveFile in async, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      console.info("moveFile success, fileUri: " + JSON.stringify(fileUri));
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("moveFile failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [moveFile](#movefile)
 
 ## moveItem
 
@@ -2000,67 +2026,6 @@ Moves a file or directory. This API uses a promise to return the result. You can
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
-## moveItem
-
-```TypeScript
-moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveResult>>): void
-```
-
-Moves a file or directory. This API uses an asynchronous callback to return the result. Currently, this API does not support move of files or directories across devices.
-
-**Since:** 11
-
-**Deprecated since:** 23
-
-**Substitutes:** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
-
-**Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveResult>>): void--><!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveResult>>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.UserFileService
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file or directory to move. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the operation is successful, no information is returned. If the operation fails, a **MoveResult** array is returned. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900030 | File name too long |
-| 13900042 | Unknown error |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
-
 **Examples**
 
 ```TypeScript
@@ -2096,70 +2061,6 @@ try {
 }
 ```
 
-## moveItem
-
-```TypeScript
-moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<MoveResult>>): void
-```
-
-Moves a file or directory. This API uses an asynchronous callback to return the result. You can forcibly overwrite the file with the same name in the destination directory. Currently, this API does not support move of files or directories across devices.
-
-**Since:** 11
-
-**Deprecated since:** 23
-
-**Substitutes:** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
-
-**Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<MoveResult>>): void--><!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<MoveResult>>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.UserFileService
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| sourceUri | string | Yes | URI of the source file or directory to move. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. |
-| force | boolean | Yes | Whether to forcibly overwrite the file with the same name. The value **true** means to overwrite the file forcibly; the value **false** means the opposite. The default value is **false**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the operation is successful, no information is returned. If the operation fails, a **MoveResult** array is returned. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900004 | Interrupted system call |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
-| 13900012 | Permission denied |
-| 13900014 | Device or resource busy |
-| 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900019 | Is a directory |
-| 13900020 | Invalid argument |
-| 13900022 | Too many open files |
-| 13900023 | Text file busy |
-| 13900024 | File too large |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900030 | File name too long |
-| 13900042 | Unknown error |
-| 14300001 | IPC error |
-| 14300002 | Invalid uri |
-| 14300003 | Fail to get fileextension info |
-| 14300004 | Get wrong result |
-
-**Examples**
-
 ```TypeScript
 import { BusinessError } from '@ohos.base';
 // A built-in storage directory is used as an example.
@@ -2192,6 +2093,137 @@ try {
   console.error("moveItem failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+## moveItem
+
+```TypeScript
+moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveResult>>): void
+```
+
+Moves a file or directory. This API uses an asynchronous callback to return the result. Currently, this API does not support move of files or directories across devices.
+
+**Since:** 11
+
+**Deprecated since:** 23
+
+**Substitutes:** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
+
+**Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveResult>>): void--><!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveResult>>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.UserFileService
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sourceUri | string | Yes | URI of the source file or directory to move. |
+| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the operation is successful, no information is returned. If the operation fails, a **MoveResult** array is returned. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900030 | File name too long |
+| 13900042 | Unknown error |
+| 14300001 | IPC error |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
+| 14300004 | Get wrong result |
+
+**Examples**
+
+See [moveItem](#moveitem)
+
+## moveItem
+
+```TypeScript
+moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<MoveResult>>): void
+```
+
+Moves a file or directory. This API uses an asynchronous callback to return the result. You can forcibly overwrite the file with the same name in the destination directory. Currently, this API does not support move of files or directories across devices.
+
+**Since:** 11
+
+**Deprecated since:** 23
+
+**Substitutes:** [moveFile](../../apis-default/arkts-apis/arkts-fileio-movefile-f.md)(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
+
+**Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<MoveResult>>): void--><!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<MoveResult>>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.UserFileService
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sourceUri | string | Yes | URI of the source file or directory to move. |
+| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. |
+| force | boolean | Yes | Whether to forcibly overwrite the file with the same name. The value **true** means to overwrite the file forcibly; the value **false** means the opposite. The default value is **false**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the operation is successful, no information is returned. If the operation fails, a **MoveResult** array is returned. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| 13900001 | Operation not permitted |
+| 13900002 | No such file or directory |
+| 13900004 | Interrupted system call |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900012 | Permission denied |
+| 13900014 | Device or resource busy |
+| 13900015 | File exists |
+| 13900018 | Not a directory |
+| 13900019 | Is a directory |
+| 13900020 | Invalid argument |
+| 13900022 | Too many open files |
+| 13900023 | Text file busy |
+| 13900024 | File too large |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900030 | File name too long |
+| 13900042 | Unknown error |
+| 14300001 | IPC error |
+| 14300002 | Invalid uri |
+| 14300003 | Fail to get fileextension info |
+| 14300004 | Get wrong result |
+
+**Examples**
+
+See [moveItem](#moveitem)
 
 ## openFile
 
@@ -2289,6 +2321,29 @@ async function openFile01() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// A built-in storage directory is used as an example.
+// In the sample code, targetUri indicates a file in the Download directory. The URI is the URI in fileInfo.
+// You can use the URI obtained.
+let targetUri: string = "file://docs/storage/Users/currentUser/Download/1.txt";
+// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.openFile(targetUri, fileAccess.OPENFLAGS.READ, (err: BusinessError, fd: number) => {
+      if (err) {
+        console.error("Failed to openFile in async, errCode:" + err.code + ", errMessage:" + err.message);
+      }
+      console.info("openFile success, fd: " + fd);
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("openFile failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## openFile
 
 ```TypeScript
@@ -2317,7 +2372,7 @@ Opens a file. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the path of the file to open. |
 | flags | [OPENFLAGS](arkts-corefile-fileaccess-openflags-e-sys.md) | Yes | Indicate options of opening a file. The default value is read-only. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | The callback is used to return the file descriptor. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | The callback is used to return the file descriptor. |
 
 **Error codes:**
 
@@ -2360,28 +2415,7 @@ Opens a file. This API uses an asynchronous callback to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// A built-in storage directory is used as an example.
-// In the sample code, targetUri indicates a file in the Download directory. The URI is the URI in fileInfo.
-// You can use the URI obtained.
-let targetUri: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.openFile(targetUri, fileAccess.OPENFLAGS.READ, (err: BusinessError, fd: number) => {
-      if (err) {
-        console.error("Failed to openFile in async, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      console.info("openFile success, fd: " + fd);
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("openFile failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [openFile](#openfile)
 
 ## query
 
@@ -2440,6 +2474,31 @@ async function getQuery01() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@ohos.base';
+async function getQuery02() {
+  let imageFileRelativePath: string = "/storage/Users/currentUser/Download/queryTest/image/01.jpg";
+  let jsonStrSingleRelativepath: string = JSON.stringify({ [fileAccess.FileKey.RELATIVE_PATH]: "" });
+  // Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+  let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+  try {
+    if (fileAccessHelper != undefined) {
+      let fileInfo = await fileAccessHelper.getFileInfoFromRelativePath(imageFileRelativePath);
+      fileAccessHelper.query(fileInfo.uri, jsonStrSingleRelativepath, (err: BusinessError, queryResult: string) => {
+        if (err) {
+          console.error(`query_file_single faf query Failed, code is ${err.code}, message is ${err.message}`);
+          return;
+        }
+        console.info("query_file_single faf query, queryResult.relative_path: " + JSON.parse(queryResult).relative_path);
+      })
+    }
+  } catch (err) {
+    let error: BusinessError = err as BusinessError;
+    console.error("query_file_single faf query failed, error.code :" + error.code + ", errorMessage :" + error.message);
+  }
+}
+```
+
 ## query
 
 ```TypeScript
@@ -2468,34 +2527,11 @@ Queries the attribute information about a file or directory based on a URI. This
 | --- | --- | --- | --- |
 | uri | string | Yes | File or directory URI obtained from [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md). |
 | metaJson | string | Yes | Attribute [FILEKEY](arkts-corefile-fileaccess-filekey-e-sys.md) to query. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return a JSON string that contains the file attribute and the value obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return a JSON string that contains the file attribute and the value obtained. |
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-async function getQuery02() {
-  let imageFileRelativePath: string = "/storage/Users/currentUser/Download/queryTest/image/01.jpg";
-  let jsonStrSingleRelativepath: string = JSON.stringify({ [fileAccess.FileKey.RELATIVE_PATH]: "" });
-  // Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-  let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-  try {
-    if (fileAccessHelper != undefined) {
-      let fileInfo = await fileAccessHelper.getFileInfoFromRelativePath(imageFileRelativePath);
-      fileAccessHelper.query(fileInfo.uri, jsonStrSingleRelativepath, (err: BusinessError, queryResult: string) => {
-        if (err) {
-          console.error(`query_file_single faf query Failed, code is ${err.code}, message is ${err.message}`);
-          return;
-        }
-        console.info("query_file_single faf query, queryResult.relative_path: " + JSON.parse(queryResult).relative_path);
-      })
-    }
-  } catch (err) {
-    let error: BusinessError = err as BusinessError;
-    console.error("query_file_single faf query failed, error.code :" + error.code + ", errorMessage :" + error.message);
-  }
-}
-```
+See [query](#query)
 
 ## registerObserver
 
@@ -2525,7 +2561,7 @@ Registers a callback to listen for a URI. URIs and callbacks can be in many-to-m
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file or directory. |
 | notifyForDescendants | boolean | Yes | Whether to observe changes of the files in the directory. The value **true** means to observe changes of the files in the directory; the value **false** means the opposite. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NotifyMessage](arkts-corefile-fileaccess-notifymessage-i-sys.md)&gt; | Yes | Callback invoked to return the notification. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NotifyMessage](arkts-corefile-fileaccess-notifymessage-i-sys.md)&gt; | Yes | Callback invoked to return the notification. |
 
 **Error codes:**
 
@@ -2630,6 +2666,29 @@ async function renameFile01() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// A built-in storage directory is used as an example.
+// In the sample code, sourceDir indicates a file in the Download directory. The URI is the URI in fileInfo.
+// You can use the URI obtained.
+let sourceDir: string = "file://docs/storage/Users/currentUser/Download/1.txt";
+// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.rename(sourceDir, "testDir", (err: BusinessError, DestDir: string) => {
+      if (err) {
+        console.error("Failed to rename in async, errCode:" + err.code + ", errMessage:" + err.message);
+      }
+      console.info("rename success, DestDir: " + JSON.stringify(DestDir));
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("rename failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## rename
 
 ```TypeScript
@@ -2658,7 +2717,7 @@ Renames a file or directory. This API uses an asynchronous callback to return th
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the selected file or directory. |
 | displayName | string | Yes | Indicates the new directory or file name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | The callback is used to return a URI representing the new file or directory. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback is used to return a URI representing the new file or directory. |
 
 **Error codes:**
 
@@ -2701,28 +2760,7 @@ Renames a file or directory. This API uses an asynchronous callback to return th
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// A built-in storage directory is used as an example.
-// In the sample code, sourceDir indicates a file in the Download directory. The URI is the URI in fileInfo.
-// You can use the URI obtained.
-let sourceDir: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.rename(sourceDir, "testDir", (err: BusinessError, DestDir: string) => {
-      if (err) {
-        console.error("Failed to rename in async, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      console.info("rename success, DestDir: " + JSON.stringify(DestDir));
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("rename failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [rename](#rename)
 
 ## unregisterObserver
 
@@ -2749,7 +2787,7 @@ Unregisters a callback that is used to listen for the specified URI.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file or directory. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NotifyMessage](arkts-corefile-fileaccess-notifymessage-i-sys.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the specified URI will be unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NotifyMessage](arkts-corefile-fileaccess-notifymessage-i-sys.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the specified URI will be unregistered. |
 
 **Error codes:**
 

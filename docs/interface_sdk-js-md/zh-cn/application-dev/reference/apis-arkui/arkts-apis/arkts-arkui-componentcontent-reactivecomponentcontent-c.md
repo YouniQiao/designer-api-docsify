@@ -1,6 +1,6 @@
 # ReactiveComponentContent
 
-ReactiveComponentContent继承自Content，是一个用于动态承载和复用 UI内容的容器组件。它通过@Builder函数构建UI，并利用[ReactiveBuilderNode](arkts-arkui-buildernode-reactivebuildernode-c.md)生成和管理组件树。该组件的核心价值在于为动态内容 提供完整的生命周期管理，使其能够融入ArkUI的组件复用体系，特别适用于长列表等需要高性能渲染的场景。
+ReactiveComponentContent继承自Content，是一个用于动态承载和复用 UI内容的容器组件。它通过@Builder函数构建UI，并利用[ReactiveBuilderNode](../../apis-default/arkts-apis/arkts-buildernode-reactivebuildernode-c.md)生成和管理组件树。该组件的核心价值在于为动态内容 提供完整的生命周期管理，使其能够融入ArkUI的组件复用体系，特别适用于长列表等需要高性能渲染的场景。
 
 **继承/实现关系：** ReactiveComponentContent extends Content
 
@@ -32,12 +32,114 @@ ReactiveComponentContent的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-default/arkts-apis/arkts-arkuiuicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | builder | WrappedBuilder&lt;T&gt; | 是 | 封装带参builder函数的WrappedBuilder对象。 |
-| config | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | 是 | 配置Builder的构建行为，BuildOptions中所有属性均为可选。 |
+| config | [BuildOptions](../../apis-default/arkts-apis/arkts-buildernode-buildoptions-i.md) | 是 | 配置Builder的构建行为，BuildOptions中所有属性均为可选。 |
 | args | T | 是 | WrappedBuilder对象封装的builder函数的参数。负责将外部数据传递给构造函数中指定的WrappedBuilder&lt;T&gt;的builder函数。类型T需与 WrappedBuilder&lt;T&gt;中指定的参数类型保持一致。支持多个入参。不传入参数时默认为空数组[]。 |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { ComponentContent, NodeContent, typeNode } from '@kit.ArkUI';
+
+interface ParamsInterface {
+  text: string;
+  func: Function;
+}
+
+@Builder
+function buildTextWithFunc(func: Function) {
+  Text(func())
+    .fontSize(20)
+    .fontWeight(FontWeight.Bold)
+    .margin({ bottom: 36 })
+}
+
+@Builder
+function buildText(params: ParamsInterface) {
+  Column() {
+    Text(params.text)
+      .fontSize(20)
+      .fontWeight(FontWeight.Bold)
+      .margin({ bottom: 12 })
+    buildTextWithFunc(params.func)
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'HELLO';
+  private content: NodeContent = new NodeContent();
+
+  build() {
+    Row() {
+      Column({ space: 12 }) {
+        Button('addComponentContent')
+          .onClick(() => {
+            let column = typeNode.createNode(this.getUIContext(), 'Column');
+            column.initialize();
+            column.addComponentContent(new ComponentContent<ParamsInterface>(this.getUIContext(),
+              wrapBuilder<[ParamsInterface]>(buildText), {
+                text: this.message, func: () => {
+                  return 'FUNCTION'
+                }
+              }, { nestingBuilderSupported: true }));
+            this.content.addFrameNode(column);
+          })
+        ContentSlot(this.content)
+      }
+      .id('column')
+      .width('100%')
+      .height('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Text, Column, Component, UIContext, Builder, Entry, Row, wrapBuilder, FontWeight, ContentSlot, Button, ClickEvent } from '@ohos.arkui.component';
+import { State } from '@ohos.arkui.stateManagement';
+import { NodeContent, FrameNode, ComponentContent } from '@ohos.arkui.node';
+
+@Builder
+function buildText() {
+  Column() {
+    Text('HELLO')
+      .fontSize(50)
+      .fontWeight(FontWeight.Bold)
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private content: NodeContent = new NodeContent();
+
+  build() {
+    Row() {
+      Column() {
+        Button('addComponentContent')
+          .onClick((event: ClickEvent) => {
+            let frameNode: FrameNode = new FrameNode(this.getUIContext());
+            frameNode.addComponentContent(new ComponentContent(this.getUIContext(), wrapBuilder(buildText)));
+            this.content.addFrameNode(frameNode);
+          })
+        ContentSlot(this.content)
+      }
+      .id('column')
+      .width('100%')
+      .height('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 该示例展示了如何使用ReactiveComponentContent构造函数动态创建包含响应式内容的UI组件，实现了builder函数的嵌套调用和函数参数的灵活传递。
 
@@ -124,6 +226,66 @@ dispose(): void
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { ComponentContent } from '@kit.ArkUI';
+
+class Params {
+  text: string = '';
+
+  constructor(text: string) {
+    this.text = text;
+  }
+}
+
+@Builder
+function buildText(params: Params) {
+  Column() {
+    Text(params.text)
+      .fontSize(50)
+      .fontWeight(FontWeight.Bold)
+      .margin({ bottom: 36 })
+  }.backgroundColor('#FFF0F0F0')
+}
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello';
+
+  build() {
+    Row() {
+      Column() {
+        Button('click me')
+          .onClick(() => {
+            let uiContext = this.getUIContext();
+            let promptAction = uiContext.getPromptAction();
+            let contentNode = new ComponentContent(uiContext, wrapBuilder(buildText), new Params(this.message));
+            promptAction.openCustomDialog(contentNode);
+
+            setTimeout(() => {
+              promptAction.closeCustomDialog(contentNode)
+                .then(() => {
+                  console.info('customDialog closed.');
+                  if (contentNode !== null) {
+                    contentNode.dispose(); // 释放contentNode
+                  }
+                }).catch((error: BusinessError) => {
+                let message = error.message;
+                let code = error.code;
+                console.error(`Failed to close customDialog. Code: ${code}, message: ${message}`);
+              })
+            }, 2000); // 2秒后自动关闭
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 该示例展示了如何使用dispose接口正确释放ReactiveComponentContent对象，管理节点生命周期。
 
@@ -388,6 +550,192 @@ inheritFreezeOptions(enabled: boolean): void
 
 **示例**
 
+```TypeScript
+import { ComponentContent, FrameNode, NodeController, UIContext } from '@kit.ArkUI';
+
+class Params {
+  count: number = 0;
+
+  constructor(count: number) {
+    this.count = count;
+  }
+}
+
+@Builder
+// builder组件
+function buildText(params: Params) {
+
+  Column() {
+    TextBuilder({ message: params.count })
+  }
+}
+
+class TextNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+  private contentNode: ComponentContent<Params> | null = null;
+  private count: number = 0;
+
+  makeNode(context: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(context);
+    this.contentNode =
+      new ComponentContent(context, wrapBuilder(buildText), new Params(this.count)); // 通过buildText创建ComponentContent
+    this.contentNode.inheritFreezeOptions(true); // 设置ComponentContent的冻结继承状态为True
+    if (this.rootNode !== null) {
+      this.rootNode.addComponentContent(this.contentNode); // 将ComponentContent上树
+    }
+    return this.rootNode;
+  }
+
+  update(): void {
+    if (this.contentNode !== null) {
+      this.count += 1;
+      this.contentNode.update(new Params(this.count)); // 更新ComponentContent中的数据，可以触发Log
+    }
+  }
+}
+
+const textNodeController: TextNodeController = new TextNodeController();
+
+@Entry
+@Component
+struct MyNavigationTestStack {
+  @Provide('pageInfo') pageInfo: NavPathStack = new NavPathStack();
+  @State message: number = 0;
+  @State logNumber: number = 0;
+
+  @Builder
+  PageMap(name: string) {
+    if (name === 'pageOne') {
+      PageOneStack({ message: this.message, logNumber: this.logNumber })
+    } else if (name === 'pageTwo') {
+      PageTwoStack({ message: this.message, logNumber: this.logNumber })
+    }
+  }
+
+  build() {
+    Column() {
+      Button('update ComponentContent') // 点击更新ComponentContent
+        .onClick(() => {
+          textNodeController.update();
+        })
+      Navigation(this.pageInfo) {
+        Column() {
+          Button('Next Page', { stateEffect: true, type: ButtonType.Capsule })
+            .width('80%')
+            .height(40)
+            .margin(20)
+            .onClick(() => {
+              this.pageInfo.pushPath({ name: 'pageOne' }); // 将name指定的NavDestination页面信息入栈
+            })
+        }
+      }.title('NavIndex')
+      .navDestination(this.PageMap)
+      .mode(NavigationMode.Stack)
+    }
+  }
+}
+
+@Component
+struct PageOneStack { // 页面一
+  @Consume('pageInfo') pageInfo: NavPathStack;
+  @State index: number = 1;
+  @Link message: number;
+  @Link logNumber: number;
+
+  build() {
+    NavDestination() {
+      Column() {
+        NavigationContentMsgStack({ message: this.message, index: this.index, logNumber: this.logNumber })
+        Button('Next Page', { stateEffect: true, type: ButtonType.Capsule }) // 切换至页面二
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfo.pushPathByName('pageTwo', null);
+          })
+        Button('Back Page', { stateEffect: true, type: ButtonType.Capsule }) // 返回主页面
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfo.pop();
+          })
+      }.width('100%').height('100%')
+    }.title('pageOne')
+    .onBackPressed(() => {
+      this.pageInfo.pop();
+      return true;
+    })
+  }
+}
+
+@Component
+struct PageTwoStack { // 页面二
+  @Consume('pageInfo') pageInfo: NavPathStack;
+  @State index: number = 2;
+  @Link message: number;
+  @Link logNumber: number;
+
+  build() {
+    NavDestination() {
+      Column() {
+        NavigationContentMsgStack({ message: this.message, index: this.index, logNumber: this.logNumber })
+        Text('BuilderNode处于冻结')
+          .fontWeight(FontWeight.Bold)
+          .margin({ top: 48, bottom: 48 })
+        Button('Back Page', { stateEffect: true, type: ButtonType.Capsule }) // 返回至页面一
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfo.pop();
+          })
+      }.width('100%').height('100%')
+    }.title('pageTwo')
+    .onBackPressed(() => {
+      this.pageInfo.pop();
+      return true;
+    })
+  }
+}
+
+@Component({ freezeWhenInactive: true })
+  // 设置冻结策略为不活跃冻结
+struct NavigationContentMsgStack {
+  @Link message: number;
+  @Link index: number;
+  @Link logNumber: number;
+
+  build() {
+    Column() {
+      if (this.index === 1) {
+        NodeContainer(textNodeController)
+      }
+    }
+  }
+}
+
+@Component({ freezeWhenInactive: true })
+  // 设置冻结策略为不活跃冻结
+struct TextBuilder {
+  @Prop @Watch('info') message: number = 0;
+
+  info() {
+    console.info(`freeze-test TextBuilder message callback ${this.message}`); // 根据message内容变化来打印日志来判断是否冻结
+  }
+
+  build() {
+    Row() {
+      Column() {
+        Text(`文本更新次数： ${this.message}`)
+          .fontWeight(FontWeight.Bold)
+          .margin({ top: 48, bottom: 48 })
+      }
+    }
+  }
+}
+```
+
 该示例演示了ReactiveComponentContent设置继承状态为true，继承父自定义组件的冻结策略。组件在不活跃时冻结，切换为活跃状态时解冻并更新缓存的数据。
 
 ```TypeScript
@@ -596,6 +944,78 @@ isDisposed(): boolean
 
 **示例**
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { ComponentContent } from '@kit.ArkUI';
+
+class Params {
+  text: string = '';
+
+  constructor(text: string) {
+    this.text = text;
+  }
+}
+
+@Builder
+function buildText(params: Params) {
+  Column() {
+    Text(params.text)
+      .fontSize(50)
+      .fontWeight(FontWeight.Bold)
+      .margin({ bottom: 36 })
+  }.backgroundColor('#FFF0F0F0')
+}
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello';
+  @State beforeDispose: string = ''
+  @State afterDispose: string = ''
+
+  build() {
+    Row() {
+      Column() {
+        Button('click me')
+          .onClick(() => {
+            let uiContext = this.getUIContext();
+            let promptAction = uiContext.getPromptAction();
+            let contentNode = new ComponentContent(uiContext, wrapBuilder(buildText), new Params(this.message));
+            promptAction.openCustomDialog(contentNode);
+
+            setTimeout(() => {
+              promptAction.closeCustomDialog(contentNode)
+                .then(() => {
+                  console.info('customDialog closed.');
+                  if (contentNode !== null) {
+                    this.beforeDispose =
+                      contentNode.isDisposed() ? 'before dispose componentContent isDisposed is true' :
+                        'before dispose componentContent isDisposed is false';
+                    contentNode.dispose(); // 释放contentNode
+                    this.afterDispose = contentNode.isDisposed() ? 'after dispose componentContent isDisposed is true' :
+                      'after dispose componentContent isDisposed is false';
+                  }
+                }).catch((error: BusinessError) => {
+                  let message = error.message;
+                  let code = error.code;
+                  console.error(`Failed to close customDialog. Code: ${code}, message: ${message}`);
+                })
+            }, 1000); // 1秒后自动关闭
+          })
+        Text(this.beforeDispose)
+          .fontSize(25)
+          .margin({ top: 10, bottom: 10 })
+        Text(this.afterDispose)
+          .fontSize(25)
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
 该示例展示了如何使用isDisposed接口检查ReactiveComponentContent对象是否已解除与后端实体节点的引用关系，提供了节点状态安全检测的完整实现方案。
 
 ```TypeScript
@@ -741,6 +1161,85 @@ isTransferred(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 返回ReactiveComponentContent是否通过transfer.transferStatic或transfer.transferDynamic方法创建。<br/>true： ReactiveComponentContent通过transfer.transferStatic或transfer.transferDynamic方法创建。<br/>false： ReactiveComponentContent不通过transfer.transferStatic或transfer.transferDynamic方法创建。 |
+
+**示例**
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Text, Column, FontWeight, wrapBuilder, UIContext } from '@ohos.arkui.component';
+import { ComponentContent } from '@ohos.arkui.node';
+import transfer from '@ohos.transfer';
+
+@Builder
+function buildText() {
+  Column() {
+    Text('Hello World')
+      .fontSize(50)
+      .fontWeight(FontWeight.Bold)
+  }
+}
+
+export function createComponentContent(context: Object): Any {
+  let contextSta = transfer.transferStatic(context, 'ArkUI.UIContext');
+  let componentContentSta = new ComponentContent(contextSta as UIContext, wrapBuilder(buildText));
+  // 给转换接口传入静态的ComponentContent，创建动态的ComponentContent。
+  let componentContentDyn = transfer.transferDynamic(componentContentSta, 'ArkUI.ComponentContent');
+  return componentContentDyn;
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { ComponentContent, NodeContent, FrameNode, UIContext } from '@kit.ArkUI';
+import { createComponentContent } from 'library';
+
+// 调用静态侧接口createComponentContent，返回从静态转换动态的ComponentContent对象。
+export function ComponentContentTransferDynamic(uiContext: UIContext): ComponentContent<object> {
+  let componentContentDyn = createComponentContent(uiContext) as ComponentContent<object>;
+  return componentContentDyn;
+}
+
+@Entry
+@Component
+struct Index {
+  @State isTransfered: string = '';
+  @State isDisposed: string = '';
+  private content: NodeContent = new NodeContent();
+  private componentContent: ComponentContent<object> | null = null;
+
+  build() {
+    Column({ space: 5 }) {
+      Text(`isTransfer: ${this.isTransfered}`)
+      Text(`isDisposed: ${this.isDisposed}`)
+      // 添加转换后的ComponentContent类型的组件内容至frameNode中。
+      Button('addComponentContent')
+        .onClick(() => {
+          let frameNode = new FrameNode(this.getUIContext());
+          this.componentContent = ComponentContentTransferDynamic(this.getUIContext());
+          frameNode.addComponentContent(this.componentContent);
+          this.content.addFrameNode(frameNode);
+        })
+      // 查询当前ComponentContent是否通过转换接口创建。
+      Button('isTransfered')
+        .onClick(() => {
+          this.isTransfered += this.componentContent?.isTransferred().toString();
+        })
+      // 查询当前ComponentContent是否已解除与后端实体节点的引用关系。
+      Button('isDisposed')
+        .onClick(() => {
+          this.isDisposed += ' before: ' + this.componentContent?.isDisposed().toString();
+          this.componentContent?.dispose();
+          this.isDisposed += ' after: ' + this.componentContent?.isDisposed().toString();
+        })
+      ContentSlot(this.content)
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 ## recycle
 
@@ -1144,7 +1643,7 @@ ReactiveComponentContent通过reuse和[recycle](#recycle)接口完成其内外�
 updateConfiguration(): void
 ```
 
-传递系统环境变化事件，触发节点的全量更新，用于通知对象更新所使用的系统环境配置。适用于系统深浅色模式切换、语言变更、字体大小调整等需要节点响应系统配置变化的场景。系统环境变化的相关信息请参见 [@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-appabilityconfiguration-configuration-i.md)。
+传递系统环境变化事件，触发节点的全量更新，用于通知对象更新所使用的系统环境配置。适用于系统深浅色模式切换、语言变更、字体大小调整等需要节点响应系统配置变化的场景。系统环境变化的相关信息请参见 [@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md)。
 
 **起始版本：** 22
 
@@ -1157,6 +1656,104 @@ updateConfiguration(): void
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **示例**
+
+```TypeScript
+import { NodeController, FrameNode, ComponentContent, UIContext, FrameCallback } from '@kit.ArkUI';
+import { AbilityConstant, Configuration, EnvironmentCallback, ConfigurationConstant } from '@kit.AbilityKit';
+
+@Builder
+function buildText() {
+  Column() {
+    Text('Hello')
+      .fontSize(36)
+      .fontWeight(FontWeight.Bold)
+  }
+  .backgroundColor($r('sys.color.ohos_id_color_background'))
+  .width('100%')
+  .alignItems(HorizontalAlign.Center)
+  .padding(16)
+}
+
+const componentContentMap: Array<ComponentContent<Object>> = new Array();
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    return this.rootNode;
+  }
+
+  createNode(context: UIContext) {
+    this.rootNode = new FrameNode(context);
+    let component = new ComponentContent<Object>(context, wrapBuilder(buildText));
+    componentContentMap.push(component);
+    this.rootNode.addComponentContent(component);
+  }
+
+  deleteNode() {
+    let node = componentContentMap.pop();
+    this.rootNode?.dispose();
+    node?.dispose();
+  }
+}
+
+class MyFrameCallback extends FrameCallback {
+  onFrame() {
+    updateColorMode();
+  }
+}
+
+function updateColorMode() {
+  componentContentMap.forEach((value) => {
+    value.updateConfiguration();
+  })
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  aboutToAppear(): void {
+    let environmentCallback: EnvironmentCallback = {
+      onMemoryLevel: (level: AbilityConstant.MemoryLevel): void => {
+        console.info('onMemoryLevel');
+      },
+      onConfigurationUpdated: (config: Configuration): void => {
+        console.info(`onConfigurationUpdated ${config}`);
+        this.getUIContext()?.postFrameCallback(new MyFrameCallback());
+      }
+    }
+    // 注册监听回调
+    this.getUIContext().getHostContext()?.getApplicationContext().on('environment', environmentCallback);
+    // 设置应用深浅色跟随系统
+    this.getUIContext()
+      .getHostContext()?.getApplicationContext().setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_NOT_SET);
+    this.myNodeController.createNode(this.getUIContext());
+  }
+
+  aboutToDisappear(): void {
+    // 移除map中的引用，并将自定义节点释放
+    this.myNodeController.deleteNode();
+  }
+
+  build() {
+    Column({ space: 16 }) {
+      NodeContainer(this.myNodeController);
+      Button('切换深色')
+        .onClick(() => {
+          this.getUIContext()
+            .getHostContext()?.getApplicationContext().setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_DARK);
+        })
+      Button('设置浅色')
+        .onClick(() => {
+          this.getUIContext()
+            .getHostContext()?.getApplicationContext().setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_LIGHT);
+        })
+    }
+  }
+}
+```
 
 该示例展示了如何使用updateConfiguration接口响应系统环境配置变化，实现ReactiveComponentContent构建的UI节点的动态适配更新。
 

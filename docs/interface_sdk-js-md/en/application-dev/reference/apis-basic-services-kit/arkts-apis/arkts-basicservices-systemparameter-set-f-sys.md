@@ -32,7 +32,39 @@ Sets a value for the specified key. This API uses an asynchronous callback to re
 | --- | --- | --- | --- |
 | key | string | Yes | Target key. |
 | value | string | Yes | Value to set. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+try {
+    systemparameter.set("test.parameter.key", "testValue",  (err: BusinessError, data: void) =>{
+    if (err == undefined) {
+        console.info("set test.parameter.key value success :" + data)
+    } else {
+        console.error("set test.parameter.key value err:" + err.code)
+    }});
+} catch(e) {
+    console.error("set unexpected error: " + e);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+try {
+    let p: Promise<void> = systemparameter.set("test.parameter.key", "testValue");
+    p.then((value: void) => {
+        console.info("set test.parameter.key success: " + value);
+    }).catch((err: BusinessError) => {
+        console.error(" set test.parameter.key error: " + err.code);
+    });
+} catch(e) {
+    console.error("set unexpected error: " + e);
+}
+```
 
 
 ## set
@@ -67,4 +99,8 @@ Sets a value for the specified key. This API uses a promise to return the result
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the execution result. |
+
+**Examples**
+
+See [set](#set)
 

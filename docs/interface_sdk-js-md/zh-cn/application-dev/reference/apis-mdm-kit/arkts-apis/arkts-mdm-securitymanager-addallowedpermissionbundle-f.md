@@ -42,7 +42,7 @@ function addAllowedPermissionBundle(admin: Want, permission: string, application
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | permission | string | 是 | 权限名称。 |
 | applicationInstance | common.ApplicationInstance | 是 | 需添加到权限使用例外名单的应用实例信息。 |
 

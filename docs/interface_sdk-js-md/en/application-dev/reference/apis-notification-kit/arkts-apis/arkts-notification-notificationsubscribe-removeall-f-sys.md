@@ -29,7 +29,7 @@ Removes all notifications for a specified application. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -61,6 +61,56 @@ let bundle: notificationSubscribe.BundleOption = {
 notificationSubscribe.removeAll(bundle, removeAllCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let removeAllCallback = (err: BusinessError) => {
+    if (err) {
+        console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+        console.info("removeAll success");
+    }
+}
+notificationSubscribe.removeAll(removeAllCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// If no application is specified, notifications of all applications are deleted.
+notificationSubscribe.removeAll().then(() => {
+  console.info("removeAll success");
+}).catch((err: BusinessError) => {
+  console.error(`removeAll fail: ${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let removeAllCallback = (err: BusinessError) => {
+  if (err) {
+    console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info("removeAll success");
+  }
+}
+// Use the actual user ID when calling the API.
+let userId: number = 1;
+notificationSubscribe.removeAll(userId, removeAllCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userId: number = 1;
+notificationSubscribe.removeAll(userId).then(() => {
+  console.info("removeAll success");
+}).catch((err: BusinessError) => {
+  console.error(`removeAll fail: ${JSON.stringify(err)}`);
+});
+```
+
 
 ## removeAll
 
@@ -84,7 +134,7 @@ Removes all notifications. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -99,18 +149,7 @@ Removes all notifications. This API uses an asynchronous callback to return the 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let removeAllCallback = (err: BusinessError) => {
-    if (err) {
-        console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info("removeAll success");
-    }
-}
-notificationSubscribe.removeAll(removeAllCallback);
-```
+See [removeAll](#removeall)
 
 
 ## removeAll
@@ -136,7 +175,7 @@ Removes all notifications for a specified user. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | int | Yes | User ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -152,20 +191,7 @@ Removes all notifications for a specified user. This API uses an asynchronous ca
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let removeAllCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info("removeAll success");
-  }
-}
-// Use the actual user ID when calling the API.
-let userId: number = 1;
-notificationSubscribe.removeAll(userId, removeAllCallback);
-```
+See [removeAll](#removeall)
 
 
 ## removeAll
@@ -212,16 +238,7 @@ Removes all notifications for a specified user. This API uses a promise to retur
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: number = 1;
-notificationSubscribe.removeAll(userId).then(() => {
-  console.info("removeAll success");
-}).catch((err: BusinessError) => {
-  console.error(`removeAll fail: ${JSON.stringify(err)}`);
-});
-```
+See [removeAll](#removeall)
 
 
 ## removeAll
@@ -268,14 +285,5 @@ Removes all notifications for a specified application. This API uses a promise t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// If no application is specified, notifications of all applications are deleted.
-notificationSubscribe.removeAll().then(() => {
-  console.info("removeAll success");
-}).catch((err: BusinessError) => {
-  console.error(`removeAll fail: ${JSON.stringify(err)}`);
-});
-```
+See [removeAll](#removeall)
 

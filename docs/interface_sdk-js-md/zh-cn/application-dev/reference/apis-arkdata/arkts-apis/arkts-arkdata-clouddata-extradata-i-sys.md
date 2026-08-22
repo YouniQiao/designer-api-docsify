@@ -52,3 +52,18 @@ extraData: string
 
 **系统接口：** 此接口为系统接口。
 
+**示例**
+
+```TypeScript
+// accountId:用户打开的云账号ID
+// bundleName:应用包名
+// containerName:云上数据库名称
+// databaseScopes:云上数据库类型
+// recordTypes:云上数据库表名
+
+let extraData: cloudData.ExtraData = {
+  eventId: "cloud_data_change",
+  extraData: '{"data": "{"accountId": "aaa", "bundleName": "com.bbb.xxx", "containerName": "alias", "databaseScopes": ["private", "shared"], "recordTypes": ["xxx", "yyy", "zzz"]}"}',
+}
+```
+

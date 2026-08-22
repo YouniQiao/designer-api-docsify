@@ -62,6 +62,37 @@ audio.createAudioCapturer(audioCapturerOptions, (err, data) => {
 });
 ```
 
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let audioStreamInfo: audio.AudioStreamInfo = {
+  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000, // 采样率。
+  channels: audio.AudioChannel.CHANNEL_2, // 通道。
+  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE, // 采样格式。
+  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW // 编码格式。
+};
+
+let audioCapturerInfo: audio.AudioCapturerInfo = {
+  source: audio.SourceType.SOURCE_TYPE_MIC, // 音源类型：Mic音频源。根据业务场景配置，参考SourceType。
+  capturerFlags: 0 // 音频采集器标志。
+};
+
+let audioCapturerOptions:audio.AudioCapturerOptions = {
+  streamInfo: audioStreamInfo,
+  capturerInfo: audioCapturerInfo
+};
+
+let audioCapturer: audio.AudioCapturer;
+
+audio.createAudioCapturer(audioCapturerOptions).then((data) => {
+  audioCapturer = data;
+  console.info('AudioCapturer Created : SUCCESS');
+}).catch((err: BusinessError) => {
+  console.error(`AudioCapturer Created : ERROR : ${err}`);
+});
+```
+
 
 ## createAudioCapturer
 
@@ -93,6 +124,10 @@ Obtains an [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) instance. This 
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio system internal error, such as system crash. |
 
+**示例**
+
+参见 [createAudioCapturer](#createaudiocapturer)
+
 
 ## createAudioCapturer
 
@@ -122,36 +157,7 @@ function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCaptur
 
 **示例**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let audioStreamInfo: audio.AudioStreamInfo = {
-  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000, // 采样率。
-  channels: audio.AudioChannel.CHANNEL_2, // 通道。
-  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE, // 采样格式。
-  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW // 编码格式。
-};
-
-let audioCapturerInfo: audio.AudioCapturerInfo = {
-  source: audio.SourceType.SOURCE_TYPE_MIC, // 音源类型：Mic音频源。根据业务场景配置，参考SourceType。
-  capturerFlags: 0 // 音频采集器标志。
-};
-
-let audioCapturerOptions:audio.AudioCapturerOptions = {
-  streamInfo: audioStreamInfo,
-  capturerInfo: audioCapturerInfo
-};
-
-let audioCapturer: audio.AudioCapturer;
-
-audio.createAudioCapturer(audioCapturerOptions).then((data) => {
-  audioCapturer = data;
-  console.info('AudioCapturer Created : SUCCESS');
-}).catch((err: BusinessError) => {
-  console.error(`AudioCapturer Created : ERROR : ${err}`);
-});
-```
+参见 [createAudioCapturer](#createaudiocapturer)
 
 
 ## createAudioCapturer
@@ -188,4 +194,8 @@ Obtains an [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) instance. This 
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio system internal error, such as system crash. |
+
+**示例**
+
+参见 [createAudioCapturer](#createaudiocapturer)
 

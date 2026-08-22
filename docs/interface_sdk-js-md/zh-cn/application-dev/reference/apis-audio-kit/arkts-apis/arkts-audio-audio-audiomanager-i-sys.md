@@ -88,6 +88,15 @@ getCollaborativeManager(): AudioCollaborativeManager
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
+**示例**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let audioManager: audio.AudioManager = audio.getAudioManager();
+let audioCollaborativeManager: audio.AudioCollaborativeManager = audioManager.getCollaborativeManager();
+```
+
 ## getEffectManager
 
 ```TypeScript
@@ -204,6 +213,12 @@ getRecordingManager(): AudioRecordingManager
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
+**示例**
+
+```TypeScript
+let audioRecordingManager: audio.AudioRecordingManager = audioManager.getRecordingManager();
+```
+
 ## on('ringerModeChange')
 
 ```TypeScript
@@ -313,6 +328,16 @@ audioManager.setAudioScene(audio.AudioScene.AUDIO_SCENE_PHONE_CALL, (err: Busine
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.setAudioScene(audio.AudioScene.AUDIO_SCENE_PHONE_CALL).then(() => {
+  console.info('Promise returned to indicate a successful setting of the audio scene mode.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the audio scene mode ${err}`);
+});
+```
+
 ## setAudioScene
 
 ```TypeScript
@@ -343,15 +368,7 @@ Sets the audio scene mode to change audio strategies. This method uses a promise
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.setAudioScene(audio.AudioScene.AUDIO_SCENE_PHONE_CALL).then(() => {
-  console.info('Promise returned to indicate a successful setting of the audio scene mode.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the audio scene mode ${err}`);
-});
-```
+参见 [setAudioScene](#setaudioscene)
 
 ## setExtraParameters
 

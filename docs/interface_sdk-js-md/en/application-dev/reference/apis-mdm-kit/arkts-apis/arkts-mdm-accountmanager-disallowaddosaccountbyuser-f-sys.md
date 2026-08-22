@@ -34,7 +34,7 @@ Disallows a user to add accounts.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | userId | number | Yes | User ID, which must be greater than or equal to 0. |
 | disallow | boolean | Yes | Whether to disallow the user to add system accounts. The value **true** means to disallow the user to add system accounts; the value **false** means the opposite. |
 

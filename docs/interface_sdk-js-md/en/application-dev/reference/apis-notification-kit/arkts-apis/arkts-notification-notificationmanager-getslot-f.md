@@ -35,7 +35,7 @@ removeAllSlots removes all notification slots
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotType | SlotType | Yes | Notification slot type, such as social communication, service reminder, and content consultation. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NotificationSlot&gt; | Yes | Callback used to return the result. If the notification slot is obtained successfully, **err** is **undefined** and **data** is the obtained **NotificationSlot**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NotificationSlot&gt; | Yes | Callback used to return the result. If the notification slot is obtained successfully, **err** is **undefined** and **data** is the obtained **NotificationSlot**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -61,6 +61,17 @@ let getSlotCallback = (err: BusinessError, data: notificationManager.Notificatio
 }
 let slotType: notificationManager.SlotType = notificationManager.SlotType.SOCIAL_COMMUNICATION;
 notificationManager.getSlot(slotType, getSlotCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotType: notificationManager.SlotType = notificationManager.SlotType.SOCIAL_COMMUNICATION;
+notificationManager.getSlot(slotType).then((data: notificationManager.NotificationSlot) => {
+  console.info(`Succeeded in getting slot, data is ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get slot. Code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -93,7 +104,7 @@ removeAllSlots removes all notification slots
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotType | SlotType | Yes | Notification slot type, such as social communication, service reminder, and content consultation. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NotificationSlot \| null&gt; | Yes | Callback used to return the result. If the notification slot is obtained successfully, **err** is **undefined** and **data** is the obtained **NotificationSlot**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NotificationSlot \| null&gt; | Yes | Callback used to return the result. If the notification slot is obtained successfully, **err** is **undefined** and **data** is the obtained **NotificationSlot**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -103,6 +114,10 @@ removeAllSlots removes all notification slots
 | [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+
+**Examples**
+
+See [getSlot](#getslot)
 
 
 ## getSlot
@@ -152,16 +167,7 @@ removeAllSlots removes all
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotType: notificationManager.SlotType = notificationManager.SlotType.SOCIAL_COMMUNICATION;
-notificationManager.getSlot(slotType).then((data: notificationManager.NotificationSlot) => {
-  console.info(`Succeeded in getting slot, data is ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get slot. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getSlot](#getslot)
 
 
 ## getSlot
@@ -208,4 +214,8 @@ removeAllSlots removes all notification slots for
 | [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+
+**Examples**
+
+See [getSlot](#getslot)
 

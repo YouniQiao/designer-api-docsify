@@ -12,11 +12,11 @@ import { Configuration, LocaleResponse } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [Configuration](arkts-arkui-systemconfiguration-configuration-c.md) |  |
+| [Configuration](arkts-arkui-system-configuration-configuration-c.md) |  |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [LocaleResponse](arkts-arkui-systemconfiguration-localeresponse-i.md) | @interface LocaleResponse |
+| [LocaleResponse](arkts-arkui-system-configuration-localeresponse-i.md) | @interface LocaleResponse |
 

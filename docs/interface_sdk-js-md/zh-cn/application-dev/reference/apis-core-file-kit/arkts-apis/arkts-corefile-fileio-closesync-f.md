@@ -29,3 +29,21 @@ declare function closeSync(fd: number): void
 | --- | --- | --- | --- |
 | fd | number | 是 | 待关闭文件的文件描述符。 |
 
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+fileio.closeSync(fd);
+```
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let ss = fileio.createStreamSync(filePath, "r+");
+ss.closeSync();
+```
+
+```TypeScript
+dir.closeSync();
+```
+

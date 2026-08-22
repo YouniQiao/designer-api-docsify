@@ -62,6 +62,31 @@ participants.push({
   attachInfo: ''
 })
 
+cloudData.sharing.changePrivilege('sharing_resource_test', participants).then((result) => {
+  console.info(`change privilege succeeded, result: ${result}`);
+}).catch((err) => {
+  console.error(`change privilege failed, code is ${err.code},message is ${err.message}`);
+})
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let participants = new Array<cloudData.sharing.Participant>();
+participants.push({
+  identity: '000000000',
+  role: cloudData.sharing.Role.ROLE_INVITER,
+  state: cloudData.sharing.State.STATE_UNKNOWN,
+  privilege: {
+    writable: true,
+    readable: true,
+    creatable: false,
+    deletable: false,
+    shareable: false
+  },
+  attachInfo: ''
+})
+
 cloudData.sharing.changePrivilege('sharing_resource_test', participants, ((err: BusinessError|null, result) => {
   if (err) {
     console.error(`change privilege failed, code is ${err.code},message is ${err.message}`);
@@ -114,28 +139,5 @@ function changePrivilege(
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let participants = new Array<cloudData.sharing.Participant>();
-participants.push({
-  identity: '000000000',
-  role: cloudData.sharing.Role.ROLE_INVITER,
-  state: cloudData.sharing.State.STATE_UNKNOWN,
-  privilege: {
-    writable: true,
-    readable: true,
-    creatable: false,
-    deletable: false,
-    shareable: false
-  },
-  attachInfo: ''
-})
-
-cloudData.sharing.changePrivilege('sharing_resource_test', participants).then((result) => {
-  console.info(`change privilege succeeded, result: ${result}`);
-}).catch((err) => {
-  console.error(`change privilege failed, code is ${err.code},message is ${err.message}`);
-})
-```
+参见 [changePrivilege](#changeprivilege)
 

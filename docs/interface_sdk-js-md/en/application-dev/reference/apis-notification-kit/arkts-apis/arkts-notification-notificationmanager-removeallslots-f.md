@@ -34,7 +34,7 @@ removeSlots removes all notification slots
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -58,6 +58,16 @@ let removeAllSlotsCallback = (err: BusinessError): void => {
   }
 }
 notificationManager.removeAllSlots(removeAllSlotsCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.removeAllSlots().then(() => {
+  console.info(`Succeeded in removing all slots.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to remove all slots. Code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -101,13 +111,5 @@ removeSlot removes a notification
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.removeAllSlots().then(() => {
-  console.info(`Succeeded in removing all slots.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove all slots. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [removeAllSlots](#removeallslots)
 

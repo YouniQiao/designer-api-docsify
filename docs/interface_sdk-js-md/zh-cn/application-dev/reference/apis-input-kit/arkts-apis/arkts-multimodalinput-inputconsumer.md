@@ -21,14 +21,14 @@ import { inputConsumer } from '@kit.InputKit';
 | 名称 | 说明 |
 | --- | --- |
 | [getAllSystemHotkeys](arkts-input-inputconsumer-getallsystemhotkeys-f.md) | 获取所有系统快捷键，使用Promise异步回调。 |
-| [offHotkeyChange](arkts-input-inputconsumer-offhotkeychange-f.md) | 取消订阅应用快捷键。使用callback异步回调。 |
-| [offKeyPressed](arkts-input-inputconsumer-offkeypressed-f.md) | 取消对'keyPressed'事件的订阅，使用callback异步回调。调用该方法后，被屏蔽的系统按键默认行为将恢复，即系统对音量调节等默认响应将恢复。 |
 | [off_hotkeyChange](arkts-input-inputconsumer-offhotkeychange-f.md) | 取消订阅应用快捷键。使用callback异步回调。 |
 | [off_keyPressed](arkts-input-inputconsumer-offkeypressed-f.md) | 取消对'keyPressed'事件的订阅，使用callback异步回调。调用该方法后，被屏蔽的系统按键默认行为将恢复，即系统对音量调节等默认响应将恢复。 |
-| [onHotkeyChange](arkts-input-inputconsumer-onhotkeychange-f.md) | 订阅应用快捷键。获取满足条件的组合按键输入事件，使用Callback异步回调。 |
-| [onKeyPressed](arkts-input-inputconsumer-onkeypressed-f.md) | 订阅按键按下事件，使用callback异步回调。若当前应用窗口为前台焦点窗口，用户按下指定按键，会触发回调。 订阅成功后，该按键事件的系统默认行为将被屏蔽，即不会再触发系统级的响应，如音量调节。要恢复系统响应，请使用off方法取消订阅。 |
+| [offHotkeyChange](arkts-input-inputconsumer-offhotkeychange-f.md) | 取消订阅应用快捷键。使用callback异步回调。 |
+| [offKeyPressed](arkts-input-inputconsumer-offkeypressed-f.md) | 取消对'keyPressed'事件的订阅，使用callback异步回调。调用该方法后，被屏蔽的系统按键默认行为将恢复，即系统对音量调节等默认响应将恢复。 |
 | [on_hotkeyChange](arkts-input-inputconsumer-onhotkeychange-f.md) | 订阅应用快捷键。获取满足条件的组合按键输入事件，使用callback异步回调。 |
 | [on_keyPressed](arkts-input-inputconsumer-onkeypressed-f.md) | 订阅按键按下事件。若当前应用窗口为前台焦点窗口，用户按下指定按键，会触发回调。使用callback异步回调。 |
+| [onHotkeyChange](arkts-input-inputconsumer-onhotkeychange-f.md) | 订阅应用快捷键。获取满足条件的组合按键输入事件，使用Callback异步回调。 |
+| [onKeyPressed](arkts-input-inputconsumer-onkeypressed-f.md) | 订阅按键按下事件，使用callback异步回调。若当前应用窗口为前台焦点窗口，用户按下指定按键，会触发回调。 订阅成功后，该按键事件的系统默认行为将被屏蔽，即不会再触发系统级的响应，如音量调节。要恢复系统响应，请使用off方法取消订阅。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -36,12 +36,12 @@ import { inputConsumer } from '@kit.InputKit';
 | 名称 | 说明 |
 | --- | --- |
 | [getShieldStatus](arkts-input-inputconsumer-getshieldstatus-f-sys.md) | 获取系统快捷键屏蔽类型。 |
-| [offKey](arkts-input-inputconsumer-offkey-f-sys.md) | 取消订阅系统快捷键。使用callback异步回调。 |
-| [offKey](arkts-input-inputconsumer-offkey-f-sys.md) | 取消订阅系统快捷键。使用callback异步回调。 |
 | [off_key](arkts-input-inputconsumer-offkey-f-sys.md) | 取消订阅系统快捷键。使用callback异步回调。 |
+| [offKey](arkts-input-inputconsumer-offkey-f-sys.md) | 取消订阅系统快捷键。使用callback异步回调。 |
+| [offKey](arkts-input-inputconsumer-offkey-f-sys.md) | 取消订阅系统快捷键。使用callback异步回调。 |
+| [on_key](arkts-input-inputconsumer-onkey-f-sys.md) | 订阅系统快捷键，使用callback异步回调。 |
 | [onKey](arkts-input-inputconsumer-onkey-f-sys.md) | 订阅系统快捷键，当满足条件的组合按键输入事件发生时，使用Callback异步方式上报组合按键数据。 |
 | [onKey](arkts-input-inputconsumer-onkey-f-sys.md) | 订阅组合按键（按键命令模式），支持通过triggerType指定不同的触发模式。当满足条件的组合按键输入事件发生时，使用callback异步回调。 |
-| [on_key](arkts-input-inputconsumer-onkey-f-sys.md) | 订阅系统快捷键，使用callback异步回调。 |
 | [setShieldStatus](arkts-input-inputconsumer-setshieldstatus-f-sys.md) | 设置系统快捷键屏蔽类型。 |
 <!--DelEnd-->
 

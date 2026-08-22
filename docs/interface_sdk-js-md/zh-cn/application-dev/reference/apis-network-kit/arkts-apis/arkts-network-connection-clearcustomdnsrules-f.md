@@ -69,6 +69,33 @@ connection.clearCustomDnsRules((error: BusinessError|null) => {
 })
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.clearCustomDnsRules().then(() => {
+    console.info("success");
+}).catch((error: BusinessError) => {
+    console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.clearCustomDnsRules().then(() => {
+  console.info("success");
+}).catch((error: Error) => {
+  let businessError = error as BusinessError;
+  console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
+})
+```
+
 
 ## clearCustomDnsRules
 
@@ -103,30 +130,5 @@ function clearCustomDnsRules(): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.clearCustomDnsRules().then(() => {
-    console.info("success");
-}).catch((error: BusinessError) => {
-    console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.clearCustomDnsRules().then(() => {
-  console.info("success");
-}).catch((error: Error) => {
-  let businessError = error as BusinessError;
-  console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
-})
-```
+参见 [clearCustomDnsRules](#clearcustomdnsrules)
 

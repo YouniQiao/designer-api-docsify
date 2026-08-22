@@ -32,7 +32,7 @@ Reads the text content of a file. This API returns the result synchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file. |
-| options | [ReadTextOptions](../../apis-default/arkts-apis/arkts-filefs-readtextoptions-i.md) | No | The options are as follows:<br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the file length.<br>- **encoding** (string): format of the data to be encoded.<br>It is valid only when the data is of the string type. The default value is **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
+| options | [ReadTextOptions](arkts-corefile-file-fs-readtextoptions-i.md) | No | The options are as follows:<br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the file length.<br>- **encoding** (string): format of the data to be encoded.<br>It is valid only when the data is of the string type. The default value is **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
 
 **Return value:**
 
@@ -58,4 +58,20 @@ Reads the text content of a file. This API returns the result synchronously.
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+```TypeScript
+import { fileIo as fs, ReadTextOptions } from '@kit.CoreFileKit';
+let filePath = pathDir + "/test.txt";
+let readTextOptions: ReadTextOptions = {
+  offset: 1,
+  length: 0,
+  encoding: 'utf-8'
+};
+let stat = fs.statSync(filePath);
+readTextOptions.length = stat.size;
+let str = fs.readTextSync(filePath, readTextOptions);
+console.info("readText succeed:" + str);
+```
 

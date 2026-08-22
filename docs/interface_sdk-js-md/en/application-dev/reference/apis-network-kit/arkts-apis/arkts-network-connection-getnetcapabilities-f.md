@@ -31,7 +31,7 @@ Obtains the network capability set of the data network specified by **NetHandle*
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | netHandle | NetHandle | Yes | Network handle. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NetCapabilities](arkts-network-connection-netcapabilities-i.md)&gt; | Yes | Callback used to return the result. If the capability set of the network specified by **NetHandle** is successfully obtained, **error** is **undefined**, and **data** is the obtained network capability set. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetCapabilities](arkts-network-connection-netcapabilities-i.md)&gt; | Yes | Callback used to return the result. If the capability set of the network specified by **NetHandle** is successfully obtained, **error** is **undefined**, and **data** is the obtained network capability set. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -60,6 +60,23 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
       return;
     }
     console.info("Succeeded to get data: " + JSON.stringify(data));
+  })
+}).catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+});
+```
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // If no network is connected, the obtained netId of netHandle is 0, which is abnormal. You can add specific processing based on the service requirements.
+    return;
+  }
+  connection.getNetCapabilities(netHandle).then((data: connection.NetCapabilities) => {
+      console.info("Succeeded to get data: " + JSON.stringify(data));
   })
 }).catch((error: BusinessError) => {
     console.error(JSON.stringify(error));
@@ -111,20 +128,5 @@ Obtains the network capability set of the data network specified by **NetHandle*
 
 **Examples**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  if (netHandle.netId == 0) {
-    // If no network is connected, the obtained netId of netHandle is 0, which is abnormal. You can add specific processing based on the service requirements.
-    return;
-  }
-  connection.getNetCapabilities(netHandle).then((data: connection.NetCapabilities) => {
-      console.info("Succeeded to get data: " + JSON.stringify(data));
-  })
-}).catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-});
-```
+See [getNetCapabilities](#getnetcapabilities)
 

@@ -26,5 +26,19 @@ function createAVDownloaderManager(): Promise<AVDownloaderManager>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AVDownloaderManager](arkts-media-multimediamedia-avdownloadermanager-i.md)&gt; | Promise对象。返回离线下载任务管理器实例。 |
+| Promise&lt;[AVDownloaderManager](arkts-media-multimedia-media-avdownloadermanager-i.md)&gt; | Promise对象。返回离线下载任务管理器实例。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function test() {
+  media.createAVDownloaderManager().then((downloaderManager: media.AVDownloaderManager) => {
+    console.info('Succeeded in creating AVDownloaderManager');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to create AVDownloaderManager, error: ${error}`);
+  });
+}
+```
 

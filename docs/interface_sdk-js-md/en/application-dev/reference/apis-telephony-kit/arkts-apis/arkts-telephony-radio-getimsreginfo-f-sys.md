@@ -30,7 +30,7 @@ Get the IMS registration state info of specified IMS service type.
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 | imsType | [ImsServiceType](arkts-telephony-radio-imsservicetype-e-sys.md) | Yes | Indicates the ims service type of the [ImsServiceType](arkts-telephony-radio-imsservicetype-e-sys.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ImsRegInfo](arkts-telephony-radio-imsreginfo-i-sys.md)&gt; | Yes | Indicates an instance of the [ImsRegInfo](arkts-telephony-radio-imsreginfo-i-sys.md) class. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImsRegInfo](arkts-telephony-radio-imsreginfo-i-sys.md)&gt; | Yes | Indicates an instance of the [ImsRegInfo](arkts-telephony-radio-imsreginfo-i-sys.md) class. |
 
 **Error codes:**
 
@@ -57,6 +57,18 @@ radio.getImsRegInfo(slotId, mode, (err: BusinessError, data: radio.ImsRegInfo) =
         return;
     }
     console.info(`getImsRegInfo success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+let mode: radio.ImsServiceType = radio.ImsServiceType.TYPE_VIDEO;
+radio.getImsRegInfo(slotId, mode).then((data: radio.ImsRegInfo) => {
+    console.info(`getImsRegInfo success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getImsRegInfo failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -106,15 +118,5 @@ Get the IMS registration state info of specified IMS service type.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let mode: radio.ImsServiceType = radio.ImsServiceType.TYPE_VIDEO;
-radio.getImsRegInfo(slotId, mode).then((data: radio.ImsRegInfo) => {
-    console.info(`getImsRegInfo success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getImsRegInfo failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getImsRegInfo](#getimsreginfo)
 

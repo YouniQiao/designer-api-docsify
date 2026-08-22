@@ -46,3 +46,14 @@ The default value is an empty dictionary object.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+**Examples**
+
+```TypeScript
+let text = new unifiedDataChannel.Text();
+text.details = {
+  title: 'MyTitle',
+  content: 'This is content'
+};
+let unifiedData = new unifiedDataChannel.UnifiedData(text);
+```
+

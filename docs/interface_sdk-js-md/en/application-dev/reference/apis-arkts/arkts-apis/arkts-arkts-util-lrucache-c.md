@@ -86,6 +86,12 @@ for (let value of pro) {
 // 3, 15
 ```
 
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro[Symbol.iterator]();
+```
+
 ## afterRemoval
 
 ```TypeScript
@@ -117,6 +123,31 @@ Performs subsequent operations after a value is removed. The subsequent operatio
 | value | V | Yes | Value removed. |
 | newValue | V | Yes | New value for the key if the **put()** method is called and the key to be added already exists. In other cases, this parameter is left blank. |
 
+**Examples**
+
+```TypeScript
+class ChildLruBuffer<K, V> extends util.LruBuffer<K, V> {
+  constructor(capacity?: number) {
+    super(capacity);
+  }
+
+  afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void {
+    if (isEvict === true) {
+      console.info('key: ' + key);
+      // Output: key: 11
+      console.info('value: ' + value);
+      // Output: value: 1
+      console.info('newValue: ' + newValue);
+      // Output: newValue: null
+    }
+  }
+}
+let lru: ChildLruBuffer<number, number> = new ChildLruBuffer(2);
+lru.put(11, 1);
+lru.put(22, 2);
+lru.put(33, 3);
+```
+
 ## clear
 
 ```TypeScript
@@ -147,6 +178,13 @@ console.info('res = ' + res);
 // Output: res = 0
 ```
 
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro.length;
+pro.clear();
+```
+
 ## constructor
 
 ```TypeScript
@@ -172,7 +210,109 @@ A constructor used to create a **LRUCache** instance. The default capacity of th
 **Examples**
 
 ```TypeScript
+let textDecoder = new util.TextDecoder();
+let retStr = textDecoder.encoding;
+console.info('retStr = ' + retStr);
+// Output: retStr = utf-8
+```
+
+```TypeScript
+let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});
+```
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+```
+
+```TypeScript
+let textEncoder = new util.TextEncoder("utf-8");
+```
+
+```TypeScript
+let rationalNumber = new util.RationalNumber();
+```
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+```
+
+```TypeScript
 let pro = new util.LRUCache<number, number>();
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+console.info("range = " + range);
+// Output: range = [30, 40]
+```
+
+```TypeScript
+let base64 = new util.Base64Helper();
+```
+
+```TypeScript
+let decoder = new util.StringDecoder();
+```
+
+```TypeScript
+let type = new util.types();
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.Scope(tempLower, tempUpper);
+console.info("range = " + range);
+// Output: range = [30, 40]
+```
+
+```TypeScript
+let base64 = new  util.Base64();
 ```
 
 ## contains
@@ -213,6 +353,138 @@ console.info('result = ' + result);
 // Output: result = true
 ```
 
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let tempMiDF = new Temperature(35);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+let result = range.contains(tempMiDF);
+console.info("result = " + result);
+// Output: result = true
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+let tempLess = new Temperature(20);
+let tempMore = new Temperature(45);
+let rangeSec = new util.ScopeHelper(tempLess, tempMore);
+let result = range.contains(rangeSec);
+console.info("result = " + result);
+// Output: result = false
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro.contains(20);
+console.info('result = ' + result);
+// Output: result = false
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let tempMiDF = new Temperature(35);
+let range = new util.Scope(tempLower, tempUpper);
+let result = range.contains(tempMiDF);
+console.info("result = " + result);
+// Output: result = true
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.Scope(tempLower, tempUpper);
+let tempLess = new Temperature(20);
+let tempMore = new Temperature(45);
+let rangeSec = new util.Scope(tempLess, tempMore);
+let result = range.contains(rangeSec);
+console.info("result = " + result);
+// Output: result = false
+```
+
 ## createDefault
 
 ```TypeScript
@@ -250,6 +522,11 @@ console.info('result = ' + result);
 // Output: result = undefined
 ```
 
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+let result = pro.createDefault(50);
+```
+
 ## entries
 
 ```TypeScript
@@ -285,6 +562,12 @@ for (let value of pair) {
 // Output:
 // 2, 10
 // 3, 15
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro.entries();
 ```
 
 ## get
@@ -325,6 +608,14 @@ console.info('result = ' + result);
 // Output: result = 10
 ```
 
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result  = pro.get(2);
+console.info("result = " + result);
+// Output: result = 10
+```
+
 ## getCapacity
 
 ```TypeScript
@@ -353,6 +644,13 @@ Obtains the capacity of this cache.
 let pro = new util.LRUCache<number, number>();
 let result = pro.getCapacity();
 console.info('result = ' + result);
+// Output: result = 64
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+let result = pro.getCapacity();
+console.info("result = " + result);
 // Output: result = 64
 ```
 
@@ -400,6 +698,14 @@ console.info('res = ' + res);
 // Output: res = 2
 ```
 
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(1,8);
+let result = pro.getCreateCount();
+console.info("result = " + result);
+// Output: result = 0
+```
+
 ## getMatchCount
 
 ```TypeScript
@@ -430,6 +736,15 @@ pro.put(2, 10);
 pro.get(2);
 let result = pro.getMatchCount();
 console.info('result = ' + result);
+// Output: result = 1
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+pro.get(2);
+let result = pro.getMatchCount();
+console.info("result = " + result);
 // Output: result = 1
 ```
 
@@ -466,6 +781,15 @@ console.info('result = ' + result);
 // Output: result = 0
 ```
 
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+pro.get(2);
+let result = pro.getMissCount();
+console.info("result = " + result);
+// Output: result = 0
+```
+
 ## getPutCount
 
 ```TypeScript
@@ -495,6 +819,14 @@ let pro = new util.LRUCache<number, number>();
 pro.put(2, 10);
 let result = pro.getPutCount();
 console.info('result = ' + result);
+// Output: result = 1
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro.getPutCount();
+console.info("result = " + result);
 // Output: result = 1
 ```
 
@@ -532,6 +864,16 @@ console.info('result = ' + result);
 // Output: result = 0
 ```
 
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+pro.updateCapacity(2);
+pro.put(50,22);
+let result = pro.getRemovalCount();
+console.info("result = " + result);
+// Output: result = 0
+```
+
 ## isEmpty
 
 ```TypeScript
@@ -561,6 +903,14 @@ let pro = new util.LRUCache<number, number>();
 pro.put(2, 10);
 let result = pro.isEmpty();
 console.info('result = ' + result);
+// Output: result = false
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro.isEmpty();
+console.info("result = " + result);
 // Output: result = false
 ```
 
@@ -606,6 +956,14 @@ console.info('result = ' + result);
 // Output: result = 1,2,4,6,5,3
 ```
 
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro.keys();
+console.info("result = " + result);
+// Output: result = 2
+```
+
 ## put
 
 ```TypeScript
@@ -641,6 +999,13 @@ Adds a key-value pair to this cache and returns the value associated with the ke
 let pro = new util.LRUCache<number, number>();
 let result = pro.put(2, 10);
 console.info('result = ' + result);
+// Output: result = 10
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+let result = pro.put(2,10);
+console.info("result = " + result);
 // Output: result = 10
 ```
 
@@ -682,6 +1047,14 @@ console.info('result = ' + result);
 // Output: result = undefined
 ```
 
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+let result = pro.remove(20);
+console.info("result = " + result);
+// Output: result = undefined
+```
+
 ## toString
 
 ```TypeScript
@@ -707,6 +1080,22 @@ Obtains the string representation of this cache.
 **Examples**
 
 ```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let result = rationalNumber.toString();
+console.info("result = " + result);
+// Output: result = 1/2
+```
+
+You are advised to use the following code snippet for API version 9 and later versions:
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.toString();
+console.info("result = " + result);
+// Output: result = 1/2
+```
+
+```TypeScript
 let pro = new util.LRUCache<number, number>();
 pro.put(2, 10);
 pro.get(2);
@@ -714,6 +1103,74 @@ pro.get(3);
 console.info(pro.toString());
 // Output: LRUCache[ maxSize = 64, hits = 1, misses = 1, hitRate = 50% ]
 // maxSize: maximum size of the cache. hits: number of matched queries. misses: number of mismatched queries. hitRate: matching rate.
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.ScopeHelper(tempLower, tempUpper);
+let result = range.toString();
+console.info("result = " + result);
+// Output: result = [30, 40]
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
+pro.put(2,10);
+pro.get(2);
+pro.remove(20);
+let result = pro.toString();
+console.info("result = " + result);
+// Output: result = Lrubuffer[ maxSize = 64, hits = 1, misses = 0, hitRate = 100% ]
+```
+
+```TypeScript
+class Temperature implements util.ScopeComparable {
+  private readonly _temp: number;
+
+  constructor(value: number) {
+    this._temp = value;
+  }
+
+  compareTo(value: Temperature) {
+    return this._temp >= value.getTemp();
+  }
+
+  getTemp() {
+    return this._temp;
+  }
+
+  toString(): string {
+    return this._temp.toString();
+  }
+}
+
+let tempLower = new Temperature(30);
+let tempUpper = new Temperature(40);
+let range = new util.Scope(tempLower, tempUpper);
+let result = range.toString();
+console.info("result = " + result);
+// Output: result = [30, 40]
 ```
 
 ## updateCapacity
@@ -742,6 +1199,11 @@ Changes the cache capacity. If the new capacity is less than or equal to **0**, 
 
 ```TypeScript
 let pro = new util.LRUCache<number, number>();
+pro.updateCapacity(100);
+```
+
+```TypeScript
+let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 pro.updateCapacity(100);
 ```
 
@@ -785,6 +1247,16 @@ pro.get(2);
 result = pro.values();
 console.info('result = ' + result);
 // Output: result = C,D,E,F,A,B
+```
+
+```TypeScript
+let pro : util.LruBuffer<number|string,number|string> = new util.LruBuffer();
+pro.put(2,10);
+pro.put(2,"anhu");
+pro.put("afaf","grfb");
+let result = pro.values();
+console.info("result = " + result);
+// Output: result = anhu,grfb
 ```
 
 ## length

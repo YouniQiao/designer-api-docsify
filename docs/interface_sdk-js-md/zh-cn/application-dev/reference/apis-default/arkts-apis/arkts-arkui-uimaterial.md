@@ -31,7 +31,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ImmersiveMaterial](arkts-uimaterial-immersivematerial-c.md) | 沉浸式材质类，继承自[Material](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-materialtype-e.md)。 |
+| [ImmersiveMaterial](arkts-uimaterial-immersivematerial-c.md) | 沉浸式材质类，继承自[Material](arkts-uimaterial-materialtype-e.md)。 |
 
 <!--Del-->
 ### 类（系统接口）

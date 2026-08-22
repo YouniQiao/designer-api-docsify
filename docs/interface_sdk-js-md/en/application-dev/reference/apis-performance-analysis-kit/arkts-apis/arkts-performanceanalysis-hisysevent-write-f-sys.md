@@ -68,6 +68,32 @@ try {
     eventType: hiSysEvent.EventType.FAULT,
     params: customizedParams
   };
+  hiSysEvent.write(eventInfo, (err: BusinessError) => {
+    // do something here.
+  });
+} catch (err) {
+  console.error(`error code: ${(err as BusinessError).code}, error msg: ${(err as BusinessError).message}`);
+}
+```
+
+```TypeScript
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let customizedParams: Record<string, string | number> = {
+    'PID': 487,
+    'UID': 103,
+    'PACKAGE_NAME': "com.ohos.hisysevent.test",
+    'PROCESS_NAME': "syseventservice",
+    'MSG': "no msg."
+  };
+  let eventInfo: hiSysEvent.SysEventInfo = {
+    domain: "RELIABILITY",
+    name: "STACK",
+    eventType: hiSysEvent.EventType.FAULT,
+    params: customizedParams
+  };
   hiSysEvent.write(eventInfo).then(
     () => {
       // do something here.
@@ -104,7 +130,7 @@ Writes event information to the event file. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md) | Yes | System event information. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to process the received return value. <br/>- Value **0**: The event verification is successful, and the event will be written to the event file asynchronously. <br/>- A value greater than **0**: Invalid parameters are present in the event, and the event will be written to the event file asynchronously after the invalid parameters are ignored. <br/>- A value smaller than **0**: The event parameter verification fails, and the event will not be written to the event file. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to process the received return value. <br/>- Value **0**: The event verification is successful, and the event will be written to the event file asynchronously. <br/>- A value greater than **0**: Invalid parameters are present in the event, and the event will be written to the event file asynchronously after the invalid parameters are ignored. <br/>- A value smaller than **0**: The event parameter verification fails, and the event will not be written to the event file. |
 
 **Error codes:**
 
@@ -122,29 +148,5 @@ Writes event information to the event file. This API uses an asynchronous callba
 
 **Examples**
 
-```TypeScript
-import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let customizedParams: Record<string, string | number> = {
-    'PID': 487,
-    'UID': 103,
-    'PACKAGE_NAME': "com.ohos.hisysevent.test",
-    'PROCESS_NAME': "syseventservice",
-    'MSG': "no msg."
-  };
-  let eventInfo: hiSysEvent.SysEventInfo = {
-    domain: "RELIABILITY",
-    name: "STACK",
-    eventType: hiSysEvent.EventType.FAULT,
-    params: customizedParams
-  };
-  hiSysEvent.write(eventInfo, (err: BusinessError) => {
-    // do something here.
-  });
-} catch (err) {
-  console.error(`error code: ${(err as BusinessError).code}, error msg: ${(err as BusinessError).message}`);
-}
-```
+See [write](#write)
 

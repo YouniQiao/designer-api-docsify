@@ -33,7 +33,7 @@ function createAudioRecorder(): AudioRecorder
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioRecorder](arkts-media-multimediamedia-audiorecorder-i.md) | 返回AudioRecorder类实例，失败时返回null。可用于录制音频媒体。 |
+| [AudioRecorder](arkts-media-multimedia-media-audiorecorder-i.md) | 返回AudioRecorder类实例，失败时返回null。可用于录制音频媒体。 |
 
 **示例**
 

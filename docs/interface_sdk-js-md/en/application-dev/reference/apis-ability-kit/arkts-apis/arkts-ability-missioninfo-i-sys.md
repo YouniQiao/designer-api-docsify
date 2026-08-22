@@ -180,7 +180,7 @@ want: Want
 
 Indicates want of the mission.
 
-**Type:** [Want](arkts-ability-appabilitywant-want-c.md)
+**Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 23
 

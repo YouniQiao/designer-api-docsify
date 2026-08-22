@@ -40,6 +40,18 @@ function getLinkedInfo(): Promise<WifiLinkedInfo>
 | [2501000](../errorcode-wifi.md#2501000-sta内部异常) | Operation failed. |
 | [2501001](../errorcode-wifi.md#2501001-sta功能未打开) | Wi-Fi STA disabled. |
 
+**示例**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+wifiManager.getLinkedInfo().then((data: wifiManager.WifiLinkedInfo) => {
+    console.info("get wifi linked info: " + JSON.stringify(data));
+}).catch((error: Error) => {
+    console.error("get linked info error: ", error);
+});
+```
+
 
 ## getLinkedInfo
 
@@ -75,13 +87,5 @@ function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void
 
 **示例**
 
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-wifiManager.getLinkedInfo().then((data: wifiManager.WifiLinkedInfo) => {
-    console.info("get wifi linked info: " + JSON.stringify(data));
-}).catch((error: Error) => {
-    console.error("get linked info error: ", error);
-});
-```
+参见 [getLinkedInfo](#getlinkedinfo)
 

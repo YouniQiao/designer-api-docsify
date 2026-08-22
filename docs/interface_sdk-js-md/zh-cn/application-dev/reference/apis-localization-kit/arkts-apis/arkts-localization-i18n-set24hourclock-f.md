@@ -47,3 +47,16 @@ import { i18n } from '@kit.LocalizationKit';
 let success: boolean = i18n.set24HourClock(true);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+// 将系统时制设置为24小时制
+try {
+  i18n.System.set24HourClock(true);
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.set24HourClock failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+

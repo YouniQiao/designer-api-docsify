@@ -14,7 +14,7 @@ function sppWriteAsync(clientSocket: int, data: ArrayBuffer): Promise<void>
 
 Asynchronous interface for writing data to the socket.
 
-**Since:** 26.0.0
+**Since:** 18
 
 <!--Device-socket-function sppWriteAsync(clientSocket: int, data: ArrayBuffer): Promise<void>--><!--Device-socket-function sppWriteAsync(clientSocket: int, data: ArrayBuffer): Promise<void>-End-->
 

@@ -83,6 +83,40 @@ let bundle: notificationManager.BundleOption = {
 notificationManager.isBadgeDisplayed(bundle, isBadgeDisplayedCallback);
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+  bundle: 'bundleName1',
+};
+
+notificationManager.isBadgeDisplayed(bundle).then((data: boolean) => {
+    console.info(`isBadgeDisplayed success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isBadgeDisplayed failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+    // 需根据实际情况进行替换
+    bundle: 'bundleName1',
+};
+
+notificationManager.isBadgeDisplayed(bundle).then((data: boolean) => {
+    console.info(`isBadgeDisplayed success, data: ${JSON.stringify(data)}`);
+}).catch((err: Error): void => {
+    let error: BusinessError = err as BusinessError;
+    console.error(`isBadgeDisplayed failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 
 ## isBadgeDisplayed
 
@@ -129,37 +163,5 @@ function isBadgeDisplayed(bundle: BundleOption): Promise<boolean>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-  bundle: 'bundleName1',
-};
-
-notificationManager.isBadgeDisplayed(bundle).then((data: boolean) => {
-    console.info(`isBadgeDisplayed success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isBadgeDisplayed failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-};
-
-notificationManager.isBadgeDisplayed(bundle).then((data: boolean) => {
-    console.info(`isBadgeDisplayed success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`isBadgeDisplayed failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [isBadgeDisplayed](#isbadgedisplayed)
 

@@ -20,3 +20,7 @@ The callback reports the time required for the first screen painting of the curr
 | --- | --- | --- | --- |
 | firstScreenPaint | [FirstScreenPaint](arkts-web-firstscreenpaint-i.md) | Yes | the first screen paint info. |
 
+**Examples**
+
+For details about the complete sample code, see [onFirstScreenPaint](./arkts-basic-components-web-events.md#onfirstscreenpaint23).
+

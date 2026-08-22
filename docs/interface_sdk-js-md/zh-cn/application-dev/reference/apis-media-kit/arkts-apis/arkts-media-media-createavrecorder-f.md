@@ -28,7 +28,7 @@ function createAVRecorder(callback: AsyncCallback<AVRecorder>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVRecorder](arkts-media-multimediamedia-avrecorder-i.md)&gt; | 是 | 回调函数，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVRecorder](arkts-media-multimedia-media-avrecorder-i.md)&gt; | 是 | 回调函数，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
 
 **错误码：**
 
@@ -52,6 +52,21 @@ media.createAVRecorder((error: BusinessError, recorder: media.AVRecorder) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let avRecorder: media.AVRecorder;
+media.createAVRecorder().then((recorder: media.AVRecorder) => {
+  if (recorder) {
+    avRecorder = recorder;
+    console.info('Succeeded in creating AVRecorder');
+  } else {
+    console.error('Failed to create AVRecorder');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`Failed to create AVRecorder, error message:${error.message}`);
+});
+```
+
 
 ## createAVRecorder
 
@@ -71,13 +86,17 @@ function createAVRecorder(callback: AsyncCallback<AVRecorder | undefined>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVRecorder](arkts-media-multimediamedia-avrecorder-i.md) \| undefined&gt; | 是 | 回调函数，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVRecorder](arkts-media-multimedia-media-avrecorder-i.md) \| undefined&gt; | 是 | 回调函数，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
+
+**示例**
+
+参见 [createAVRecorder](#createavrecorder)
 
 
 ## createAVRecorder
@@ -104,7 +123,7 @@ function createAVRecorder(): Promise<AVRecorder>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AVRecorder](arkts-media-multimediamedia-avrecorder-i.md)&gt; | Promise对象，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
+| Promise&lt;[AVRecorder](arkts-media-multimedia-media-avrecorder-i.md)&gt; | Promise对象，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
 
 **错误码：**
 
@@ -114,20 +133,7 @@ function createAVRecorder(): Promise<AVRecorder>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let avRecorder: media.AVRecorder;
-media.createAVRecorder().then((recorder: media.AVRecorder) => {
-  if (recorder) {
-    avRecorder = recorder;
-    console.info('Succeeded in creating AVRecorder');
-  } else {
-    console.error('Failed to create AVRecorder');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`Failed to create AVRecorder, error message:${error.message}`);
-});
-```
+参见 [createAVRecorder](#createavrecorder)
 
 
 ## createAVRecorder
@@ -148,11 +154,15 @@ function createAVRecorder(): Promise<AVRecorder | undefined>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AVRecorder](arkts-media-multimediamedia-avrecorder-i.md) \| undefined&gt; | Promise对象，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
+| Promise&lt;[AVRecorder](arkts-media-multimedia-media-avrecorder-i.md) \| undefined&gt; | Promise对象，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+
+**示例**
+
+参见 [createAVRecorder](#createavrecorder)
 

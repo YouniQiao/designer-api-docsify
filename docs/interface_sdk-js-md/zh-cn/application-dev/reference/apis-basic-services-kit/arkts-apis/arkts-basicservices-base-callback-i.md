@@ -37,3 +37,17 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } fro
 | --- | --- | --- | --- |
 | data | T | 是 | 接口调用时的公共回调信息。类型由开发者自定义，回调成功时将返回对应类型的数据。失败则不返回数据。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+interface ErrorDataType {
+    url: string;
+}
+
+const businessError = new BusinessError<ErrorDataType>(201, 'no permission', {
+    url: 'http://'
+});
+```
+

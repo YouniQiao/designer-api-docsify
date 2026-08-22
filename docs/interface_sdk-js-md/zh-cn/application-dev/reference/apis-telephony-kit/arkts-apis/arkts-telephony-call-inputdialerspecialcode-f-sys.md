@@ -56,6 +56,17 @@ call.inputDialerSpecialCode('*#*#2846579#*#*', (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    call.inputDialerSpecialCode('*#*#2846579#*#*');
+    console.info(`inputDialerSpecialCode success`);
+} catch (error) {
+    console.error(`inputDialerSpecialCode fail, promise: err->${JSON.stringify(error)}`);
+}
+```
+
 
 ## inputDialerSpecialCode
 
@@ -100,14 +111,5 @@ function inputDialerSpecialCode(inputCode: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    call.inputDialerSpecialCode('*#*#2846579#*#*');
-    console.info(`inputDialerSpecialCode success`);
-} catch (error) {
-    console.error(`inputDialerSpecialCode fail, promise: err->${JSON.stringify(error)}`);
-}
-```
+参见 [inputDialerSpecialCode](#inputdialerspecialcode)
 

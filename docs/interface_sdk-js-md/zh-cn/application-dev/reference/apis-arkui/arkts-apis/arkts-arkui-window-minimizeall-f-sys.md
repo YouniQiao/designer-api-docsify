@@ -95,45 +95,6 @@ try {
 }
 ```
 
-
-## minimizeAll
-
-```TypeScript
-function minimizeAll(id: long): Promise<void>
-```
-
-最小化指定ID的屏幕中的所有主窗口，使用Promise异步回调。
-
-**起始版本：** 23
-
-<!--Device-window-function minimizeAll(id: long): Promise<void>--><!--Device-window-function minimizeAll(id: long): Promise<void>-End-->
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| id | long | 是 | 显示设备[Display](arkts-arkui-display-displaystate-e.md)的ID号，该参数仅支持整数输入。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities.<br>**适用版本：** 12+ |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -175,4 +136,45 @@ try {
   console.error(`Failed to minimize all windows. Cause code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+
+## minimizeAll
+
+```TypeScript
+function minimizeAll(id: long): Promise<void>
+```
+
+最小化指定ID的屏幕中的所有主窗口，使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-window-function minimizeAll(id: long): Promise<void>--><!--Device-window-function minimizeAll(id: long): Promise<void>-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| id | long | 是 | 显示设备[Display](arkts-arkui-display-displaystate-e.md)的ID号，该参数仅支持整数输入。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities.<br>**适用版本：** 12+ |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+
+**示例**
+
+参见 [minimizeAll](#minimizeall)
 

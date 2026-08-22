@@ -34,7 +34,7 @@ Connects to a remote device over the socket. On API 10 and above, the permission
 | --- | --- | --- | --- |
 | device | string | Yes | The address of the remote device to connect. |
 | option | SppOption | Yes | Indicates the connect parameters [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return a client socket ID. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return a client socket ID. |
 
 **Error codes:**
 

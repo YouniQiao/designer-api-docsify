@@ -29,5 +29,63 @@ Plugin component push method used to send the information of the template it pro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | param | [PushParameterForStage](../../apis-default/arkts-apis/arkts-plugincomponentmanager-pushparameterforstage-i-sys.md) | Yes | Plugin component push parameters for stage. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Plugin component push event callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Plugin component push event callback. |
+
+**Examples**
+
+```TypeScript
+import { pluginComponentManager } from '@kit.ArkUI';
+
+pluginComponentManager.push(
+  {
+    want: {
+      bundleName: "com.example.provider",
+      abilityName: "com.example.provider.MainAbility",
+    },
+    name: "plugintemplate",
+    data: {
+      "key_1": "plugin component test",
+      "key_2": 34234,
+    },
+    extraData: {
+      "extra_str": "this is push event",
+    },
+    jsonPath: "",
+  },
+  (err) => {
+    console.info("push_callback: push ok!");
+  }
+)
+```
+
+```TypeScript
+import { pluginComponentManager } from '@kit.ArkUI';
+
+pluginComponentManager.push(
+  {
+    owner: {
+      bundleName: "com.example.provider",
+      abilityName: "com.example.provider.MainAbility",
+    },
+    target: {
+      bundleName: "com.example.user",
+      abilityName: "com.example.user.MainAbility",
+    },
+    name: "ets/pages/plugin2.js",
+    data: {
+      "js": "ets/pages/plugin.js",
+      "key_1": 1111, 
+    },
+    extraData: {
+      "extra_str": "this is push event"
+    },
+    jsonPath: "",
+  },
+  (err, data) => {
+    console.info("push_callback:err: ", JSON.stringify(err));
+    console.info("push_callback:data: ", JSON.stringify(data));
+    console.info("push_callback: push ok!");
+  }
+)
+```
 

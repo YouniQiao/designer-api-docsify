@@ -61,6 +61,25 @@ sms.updateSimMessage(updateSimMessageOptions, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let updateSimMessageOptions: sms.UpdateSimMessageOptions = {
+    slotId: 0,
+    msgIndex: 1,
+    newStatus: sms.SimMessageStatus.SIM_MESSAGE_STATUS_FREE,
+    pdu: "xxxxxxx",
+    smsc: "test"
+};
+let promise = sms.updateSimMessage(updateSimMessageOptions);
+promise.then(() => {
+    console.info(`updateSimMessage success.`);
+}).catch((err: BusinessError) => {
+    console.error(`updateSimMessage failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## updateSimMessage
 
@@ -106,22 +125,5 @@ function updateSimMessage(options: UpdateSimMessageOptions): Promise<void>
 
 **示例**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let updateSimMessageOptions: sms.UpdateSimMessageOptions = {
-    slotId: 0,
-    msgIndex: 1,
-    newStatus: sms.SimMessageStatus.SIM_MESSAGE_STATUS_FREE,
-    pdu: "xxxxxxx",
-    smsc: "test"
-};
-let promise = sms.updateSimMessage(updateSimMessageOptions);
-promise.then(() => {
-    console.info(`updateSimMessage success.`);
-}).catch((err: BusinessError) => {
-    console.error(`updateSimMessage failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [updateSimMessage](#updatesimmessage)
 

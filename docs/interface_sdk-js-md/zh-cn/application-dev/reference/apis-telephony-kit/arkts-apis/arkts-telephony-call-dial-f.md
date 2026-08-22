@@ -43,11 +43,32 @@ function dial(phoneNumber: string, options: DialOptions, callback: AsyncCallback
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+call.dial("138xxxxxxxx", (err: BusinessError, data: boolean) => {
+    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let dialOptions: call.DialOptions = {
     extras: false
 };
 call.dial("138xxxxxxxx", dialOptions, (err: BusinessError, data: boolean) => {
     console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dialOptions: call.DialOptions = {
+    extras: false
+};
+call.dial("138xxxxxxxx", dialOptions).then((data: boolean) => {
+    console.info(`dial success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`dial fail, promise: 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
 });
 ```
 
@@ -91,18 +112,7 @@ function dial(phoneNumber: string, options?: DialOptions): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dialOptions: call.DialOptions = {
-    extras: false
-};
-call.dial("138xxxxxxxx", dialOptions).then((data: boolean) => {
-    console.info(`dial success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`dial fail, promise: 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-});
-```
+参见 [dial](#dial)
 
 
 ## dial
@@ -138,11 +148,5 @@ function dial(phoneNumber: string, callback: AsyncCallback<boolean>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.dial("138xxxxxxxx", (err: BusinessError, data: boolean) => {
-    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
+参见 [dial](#dial)
 

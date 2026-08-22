@@ -46,6 +46,69 @@ async function CreateImageSource(context : Context) {
 }
 ```
 
+```TypeScript
+async function CreateImageSource(context : Context) {
+  let sourceOptions: image.SourceOptions = { sourceDensity: 120 };
+  // 'test.png' is only an example. Replace it with the actual one in use. Otherwise, the imageSource instance fails to be created, and subsequent operations cannot be performed.
+  const path: string = context.filesDir + "/test.png";
+  let imageSourceObj: image.ImageSource = image.createImageSource(path, sourceOptions);
+}
+```
+
+```TypeScript
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function CreateImageSource(context : Context) {
+  // 'test.jpg' is only an example. Replace it with the actual one in use. Otherwise, the imageSource instance fails to be created, and subsequent operations cannot be performed.
+  let filePath: string = context.filesDir + "/test.jpg";
+  let file = fs.openSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
+  const imageSourceObj: image.ImageSource = image.createImageSource(file.fd);
+}
+```
+
+```TypeScript
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function CreateImageSource(context : Context) {
+  let sourceOptions: image.SourceOptions = { sourceDensity: 120 };
+  // 'test.jpg' is only an example. Replace it with the actual one in use. Otherwise, the imageSource instance fails to be created, and subsequent operations cannot be performed.
+  const filePath: string = context.filesDir + "/test.jpg";
+  let file = fs.openSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
+  const imageSourceObj: image.ImageSource = image.createImageSource(file.fd, sourceOptions);
+}
+```
+
+```TypeScript
+async function CreateImageSource() {
+  const buf: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
+  const imageSourceObj: image.ImageSource = image.createImageSource(buf);
+}
+```
+
+```TypeScript
+async function CreateImageSource() {
+  const data: ArrayBuffer = new ArrayBuffer(112);
+  let sourceOptions: image.SourceOptions = { sourceDensity: 120 };
+  const imageSourceObj: image.ImageSource = image.createImageSource(data, sourceOptions);
+}
+```
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+  
+async function CreateImageSource(context : Context) {
+  // Obtain a resource manager.
+  const resourceMgr: resourceManager.ResourceManager = context.resourceManager;
+  // 'test.jpg' is only an example. Replace it with the actual one in use. Otherwise, the imageSource instance fails to be created, and subsequent operations cannot be performed.
+  resourceMgr.getRawFd('test.jpg').then((rawFileDescriptor: resourceManager.RawFileDescriptor) => {
+    const imageSourceObj: image.ImageSource = image.createImageSource(rawFileDescriptor);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to get RawFileDescriptor.code is ${error.code}, message is ${error.message}`);
+  })
+}
+```
+
 
 ## createImageSource
 
@@ -72,6 +135,10 @@ Creates an ImageSource instance based on the URI.
 | Type | Description |
 | --- | --- |
 | ImageSource \| undefined | returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+
+**Examples**
+
+See [createImageSource](#createimagesource)
 
 
 ## createImageSource
@@ -109,14 +176,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 **Examples**
 
-```TypeScript
-async function CreateImageSource(context : Context) {
-  let sourceOptions: image.SourceOptions = { sourceDensity: 120 };
-  // 'test.png' is only an example. Replace it with the actual one in use. Otherwise, the imageSource instance fails to be created, and subsequent operations cannot be performed.
-  const path: string = context.filesDir + "/test.png";
-  let imageSourceObj: image.ImageSource = image.createImageSource(path, sourceOptions);
-}
-```
+See [createImageSource](#createimagesource)
 
 
 ## createImageSource
@@ -145,6 +205,10 @@ Creates an ImageSource instance based on the URI.
 | Type | Description |
 | --- | --- |
 | ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+
+**Examples**
+
+See [createImageSource](#createimagesource)
 
 
 ## createImageSource
@@ -179,16 +243,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 **Examples**
 
-```TypeScript
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-async function CreateImageSource(context : Context) {
-  // 'test.jpg' is only an example. Replace it with the actual one in use. Otherwise, the imageSource instance fails to be created, and subsequent operations cannot be performed.
-  let filePath: string = context.filesDir + "/test.jpg";
-  let file = fs.openSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
-  const imageSourceObj: image.ImageSource = image.createImageSource(file.fd);
-}
-```
+See [createImageSource](#createimagesource)
 
 
 ## createImageSource
@@ -216,6 +271,10 @@ Creates an ImageSource instance based on the file descriptor.
 | Type | Description |
 | --- | --- |
 | ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+
+**Examples**
+
+See [createImageSource](#createimagesource)
 
 
 ## createImageSource
@@ -253,17 +312,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 **Examples**
 
-```TypeScript
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-async function CreateImageSource(context : Context) {
-  let sourceOptions: image.SourceOptions = { sourceDensity: 120 };
-  // 'test.jpg' is only an example. Replace it with the actual one in use. Otherwise, the imageSource instance fails to be created, and subsequent operations cannot be performed.
-  const filePath: string = context.filesDir + "/test.jpg";
-  let file = fs.openSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
-  const imageSourceObj: image.ImageSource = image.createImageSource(file.fd, sourceOptions);
-}
-```
+See [createImageSource](#createimagesource)
 
 
 ## createImageSource
@@ -292,6 +341,10 @@ Creates an ImageSource instance based on the file descriptor.
 | Type | Description |
 | --- | --- |
 | ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+
+**Examples**
+
+See [createImageSource](#createimagesource)
 
 
 ## createImageSource
@@ -326,12 +379,7 @@ Creates an ImageSource instance based on buffers. The data passed by **buf** mus
 
 **Examples**
 
-```TypeScript
-async function CreateImageSource() {
-  const buf: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
-  const imageSourceObj: image.ImageSource = image.createImageSource(buf);
-}
-```
+See [createImageSource](#createimagesource)
 
 
 ## createImageSource
@@ -359,6 +407,10 @@ Creates an ImageSource instance based on the buffer.
 | Type | Description |
 | --- | --- |
 | ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+
+**Examples**
+
+See [createImageSource](#createimagesource)
 
 
 ## createImageSource
@@ -394,13 +446,7 @@ Creates an ImageSource instance based on buffers. The data passed by **buf** mus
 
 **Examples**
 
-```TypeScript
-async function CreateImageSource() {
-  const data: ArrayBuffer = new ArrayBuffer(112);
-  let sourceOptions: image.SourceOptions = { sourceDensity: 120 };
-  const imageSourceObj: image.ImageSource = image.createImageSource(data, sourceOptions);
-}
-```
+See [createImageSource](#createimagesource)
 
 
 ## createImageSource
@@ -429,6 +475,10 @@ Creates an ImageSource instance based on the buffer.
 | Type | Description |
 | --- | --- |
 | ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+
+**Examples**
+
+See [createImageSource](#createimagesource)
 
 
 ## createImageSource
@@ -462,21 +512,7 @@ Creates an ImageSource instance based on the raw file descriptor of an image res
 
 **Examples**
 
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-  
-async function CreateImageSource(context : Context) {
-  // Obtain a resource manager.
-  const resourceMgr: resourceManager.ResourceManager = context.resourceManager;
-  // 'test.jpg' is only an example. Replace it with the actual one in use. Otherwise, the imageSource instance fails to be created, and subsequent operations cannot be performed.
-  resourceMgr.getRawFd('test.jpg').then((rawFileDescriptor: resourceManager.RawFileDescriptor) => {
-    const imageSourceObj: image.ImageSource = image.createImageSource(rawFileDescriptor);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get RawFileDescriptor.code is ${error.code}, message is ${error.message}`);
-  })
-}
-```
+See [createImageSource](#createimagesource)
 
 
 ## createImageSource
@@ -506,4 +542,8 @@ Creates an ImageSource instance based on the raw file descriptor.
 | Type | Description |
 | --- | --- |
 | ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+
+**Examples**
+
+See [createImageSource](#createimagesource)
 

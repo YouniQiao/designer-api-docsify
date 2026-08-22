@@ -38,7 +38,7 @@ Starts an axis event. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| axis | [Axis](arkts-input-multimodalinputmouseevent-axis-e.md) | Yes | Axis type. |
+| axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | Yes | Axis type. |
 | value | int | Yes | Axis value. |
 
 **Return value:**
@@ -77,7 +77,7 @@ Ends an axis event. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| axis | [Axis](arkts-input-multimodalinputmouseevent-axis-e.md) | Yes | Axis type. |
+| axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | Yes | Axis type. |
 
 **Return value:**
 
@@ -155,7 +155,7 @@ Presses a mouse button. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| button | [Button](arkts-input-multimodalinputmouseevent-button-e.md) | Yes | Mouse button to be pressed. |
+| button | [Button](arkts-input-multimodalinput-mouseevent-button-e.md) | Yes | Mouse button to be pressed. |
 
 **Return value:**
 
@@ -193,7 +193,7 @@ Release a mouse button. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| button | [Button](arkts-input-multimodalinputmouseevent-button-e.md) | Yes | Mouse button to be released. |
+| button | [Button](arkts-input-multimodalinput-mouseevent-button-e.md) | Yes | Mouse button to be released. |
 
 **Return value:**
 
@@ -231,7 +231,7 @@ Updates an axis event. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| axis | [Axis](arkts-input-multimodalinputmouseevent-axis-e.md) | Yes | Axis type. |
+| axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | Yes | Axis type. |
 | value | int | Yes | Axis value. |
 
 **Return value:**

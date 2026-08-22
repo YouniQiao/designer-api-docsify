@@ -50,3 +50,14 @@ Job title.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+**Examples**
+
+Create contact data in JSON format:
+
+```TypeScript
+let organization: contact.Organization = {
+    name: "name",
+    title: "title"
+};
+```
+

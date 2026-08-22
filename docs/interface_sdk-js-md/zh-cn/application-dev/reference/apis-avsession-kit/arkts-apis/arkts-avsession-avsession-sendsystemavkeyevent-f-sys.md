@@ -28,7 +28,7 @@ function sendSystemAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeyevent-keyevent-i.md) | 是 | 按键事件。 |
+| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 | 按键事件。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当事件发送成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
@@ -51,6 +51,17 @@ let event: KeyEvent.KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, wind
 
 avSession.sendSystemAVKeyEvent(event, () => {
     console.info('Succeeded in sending system AV key event.');
+});
+```
+
+```TypeScript
+import { KeyEvent } from '@kit.InputKit';
+
+let keyItem: KeyEvent.Key = {code:0x49, pressedTime:2, deviceId:0};
+let event: KeyEvent.KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, windowId:1, action:2, key:keyItem, unicodeChar:0, keys:[keyItem], ctrlKey:false, altKey:false, shiftKey:false, logoKey:false, fnKey:false, capsLock:false, numLock:false, scrollLock:false};
+
+avSession.sendSystemAVKeyEvent(event).then(() => {
+  console.info('Succeeded in sending system AV key event.');
 });
 ```
 
@@ -77,7 +88,7 @@ function sendSystemAVKeyEvent(event: KeyEvent): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinputkeyevent-keyevent-i.md) | 是 | 按键事件。 |
+| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 | 按键事件。 |
 
 **返回值：**
 
@@ -97,14 +108,5 @@ function sendSystemAVKeyEvent(event: KeyEvent): Promise<void>
 
 **示例**
 
-```TypeScript
-import { KeyEvent } from '@kit.InputKit';
-
-let keyItem: KeyEvent.Key = {code:0x49, pressedTime:2, deviceId:0};
-let event: KeyEvent.KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, windowId:1, action:2, key:keyItem, unicodeChar:0, keys:[keyItem], ctrlKey:false, altKey:false, shiftKey:false, logoKey:false, fnKey:false, capsLock:false, numLock:false, scrollLock:false};
-
-avSession.sendSystemAVKeyEvent(event).then(() => {
-  console.info('Succeeded in sending system AV key event.');
-});
-```
+参见 [sendSystemAVKeyEvent](#sendsystemavkeyevent)
 

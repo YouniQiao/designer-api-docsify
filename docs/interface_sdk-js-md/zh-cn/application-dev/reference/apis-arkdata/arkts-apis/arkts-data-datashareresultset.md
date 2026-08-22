@@ -13,7 +13,7 @@ import { DataShareResultSet, DataType } from '@kit.ArkData';
 
 | 名称 | 说明 |
 | --- | --- |
-| [DataShareResultSet](arkts-arkdata-datadatashareresultset-datashareresultset-i-sys.md) | 提供通过查询数据库生成的结果集的相关访问方法。 |
+| [DataShareResultSet](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md) | 提供通过查询数据库生成的结果集的相关访问方法。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -21,6 +21,6 @@ import { DataShareResultSet, DataType } from '@kit.ArkData';
 
 | 名称 | 说明 |
 | --- | --- |
-| [DataType](arkts-arkdata-datadatashareresultset-datatype-e-sys.md) | 数据类型枚举。 |
+| [DataType](arkts-arkdata-data-datashareresultset-datatype-e-sys.md) | 数据类型枚举。 |
 <!--DelEnd-->
 

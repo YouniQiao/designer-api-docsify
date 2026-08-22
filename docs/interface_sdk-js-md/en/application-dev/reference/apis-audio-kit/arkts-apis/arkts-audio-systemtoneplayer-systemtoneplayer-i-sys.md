@@ -175,64 +175,6 @@ systemTonePlayer.getTitle().then((value: string) => {
 });
 ```
 
-## offError
-
-```TypeScript
-offError(callback?: ErrorCallback): void
-```
-
-Unsubscribes the error events.
-
-**Since:** 23
-
-<!--Device-SystemTonePlayer-offError(callback?: ErrorCallback): void--><!--Device-SystemTonePlayer-offError(callback?: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.SystemSound.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Error callback while receiving the error event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
-
-## offPlayFinished
-
-```TypeScript
-offPlayFinished(callback?: Callback<int>): void
-```
-
-Unsubscribes the play finished events.
-
-**Since:** 23
-
-<!--Device-SystemTonePlayer-offPlayFinished(callback?: Callback<int>): void--><!--Device-SystemTonePlayer-offPlayFinished(callback?: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.SystemSound.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to obtain the finished event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
-
 ## off('error')
 
 ```TypeScript
@@ -254,7 +196,7 @@ Unsubscribes from error events that occur during ringtone playback. This API use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The event **'error'** is triggered when an error occurs during ringtone playback. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the error code and error information. If this parameter is not specified, all the subscriptions to the specified event are canceled. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the error code and error information. If this parameter is not specified, all the subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
@@ -302,7 +244,7 @@ Unsubscribes from the event indicating that the ringtone playback is finished. T
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playFinished' | Yes | Event type. The event **'playFinished'** is triggered when the playback is finished. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to return the ID of the audio stream. If this parameter is not specified, all the subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to return the ID of the audio stream. If this parameter is not specified, all the subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
@@ -327,17 +269,17 @@ systemTonePlayer.on('playFinished', 0, playFinishedCallback);
 systemTonePlayer.off('playFinished', playFinishedCallback);
 ```
 
-## onError
+## offError
 
 ```TypeScript
-onError(callback: ErrorCallback): void
+offError(callback?: ErrorCallback): void
 ```
 
-Subscribes the error events.
+Unsubscribes the error events.
 
 **Since:** 23
 
-<!--Device-SystemTonePlayer-onError(callback: ErrorCallback): void--><!--Device-SystemTonePlayer-onError(callback: ErrorCallback): void-End-->
+<!--Device-SystemTonePlayer-offError(callback?: ErrorCallback): void--><!--Device-SystemTonePlayer-offError(callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -347,7 +289,7 @@ Subscribes the error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Error callback while receiving the error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Error callback while receiving the error event. |
 
 **Error codes:**
 
@@ -356,17 +298,17 @@ Subscribes the error events.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
 
-## onPlayFinished
+## offPlayFinished
 
 ```TypeScript
-onPlayFinished(streamId: int, callback: Callback<int>): void
+offPlayFinished(callback?: Callback<int>): void
 ```
 
-Subscribes the play finished events.
+Unsubscribes the play finished events.
 
 **Since:** 23
 
-<!--Device-SystemTonePlayer-onPlayFinished(streamId: int, callback: Callback<int>): void--><!--Device-SystemTonePlayer-onPlayFinished(streamId: int, callback: Callback<int>): void-End-->
+<!--Device-SystemTonePlayer-offPlayFinished(callback?: Callback<int>): void--><!--Device-SystemTonePlayer-offPlayFinished(callback?: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -376,8 +318,7 @@ Subscribes the play finished events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamId | int | Yes | Stream id, received from start(). |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to obtain the finished event. The callback info is the stream id that is finished. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to obtain the finished event. |
 
 **Error codes:**
 
@@ -407,7 +348,7 @@ Subscribes to error events that occur during ringtone playback. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The event **'error'** is triggered when an error occurs during ringtone playback. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return the error code and error information. For details about the error codes, see [on('error')](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate) of the AVPlayer. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the error code and error information. For details about the error codes, see [on('error')](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate) of the AVPlayer. |
 
 **Error codes:**
 
@@ -450,7 +391,7 @@ The object to listen for is an audio stream specified by **streamId**. If **stre
 | --- | --- | --- | --- |
 | type | 'playFinished' | Yes | Event type. The event **'playFinished'** is triggered when the playback is finished. |
 | streamId | int | Yes | ID of the audio stream. **streamId** is obtained through [start](#start). If **streamId** is set to **0**, the playback complete event of all audio streams of the player is subscribed to. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the stream ID of the audio stream that finishes playing. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the stream ID of the audio stream that finishes playing. |
 
 **Error codes:**
 
@@ -478,6 +419,65 @@ systemTonePlayer.start().then((value: number) => {
   console.error(`Failed to start system tone player. ${err}`);
 });
 ```
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes the error events.
+
+**Since:** 23
+
+<!--Device-SystemTonePlayer-onError(callback: ErrorCallback): void--><!--Device-SystemTonePlayer-onError(callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.SystemSound.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Error callback while receiving the error event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
+
+## onPlayFinished
+
+```TypeScript
+onPlayFinished(streamId: int, callback: Callback<int>): void
+```
+
+Subscribes the play finished events.
+
+**Since:** 23
+
+<!--Device-SystemTonePlayer-onPlayFinished(streamId: int, callback: Callback<int>): void--><!--Device-SystemTonePlayer-onPlayFinished(streamId: int, callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.SystemSound.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| streamId | int | Yes | Stream id, received from start(). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to obtain the finished event. The callback info is the stream id that is finished. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
 
 ## prepare
 

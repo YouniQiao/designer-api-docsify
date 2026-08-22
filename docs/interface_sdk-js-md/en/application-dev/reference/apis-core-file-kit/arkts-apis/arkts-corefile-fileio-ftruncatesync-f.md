@@ -30,3 +30,12 @@ Truncates a file based on the file descriptor. This API returns the result synch
 | fd | number | Yes | File descriptor of the file to truncate. |
 | len | number | No | File length after truncation, in bytes. The default value is **0**. |
 
+**Examples**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let fd = fileio.openSync(filePath);
+let len = 5;
+fileio.ftruncateSync(fd, len);
+```
+

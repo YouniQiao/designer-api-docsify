@@ -31,7 +31,7 @@ Creates a **DataShareHelper** instance. This API uses an asynchronous callback t
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the application. |
 | uri | string | Yes | URI of the server application to connect. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DataShareHelper** instance created. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DataShareHelper** instance created. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -60,6 +60,58 @@ export default class EntryAbility extends UIAbility {
         }
         console.info("createDataShareHelper succeed, data : " + data);
         dataShareHelper = data;
+      });
+    } catch (err) {
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`createDataShareHelper error: code: ${code}, message: ${message} `);
+    };
+  };
+};
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    let uri = "datashareproxy://com.samples.datasharetest.DataShare";
+    let dataShareHelper: dataShare.DataShareHelper | undefined = undefined;
+    let context = this.context;
+    try {
+      dataShare.createDataShareHelper(context, uri, {isProxy : true}, (err:BusinessError, data:dataShare.DataShareHelper) => {
+        if (err !== undefined) {
+          console.error(`createDataShareHelper error: code: ${err.code}, message: ${err.message} `);
+          return;
+        }
+        console.info("createDataShareHelper succeed, data : " + data);
+        dataShareHelper = data;
+      });
+    } catch (err) {
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`createDataShareHelper error: code: ${code}, message: ${message} `);
+    };
+  };
+};
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    let uri = "datashareproxy://com.samples.datasharetest.DataShare";
+    let dataShareHelper: dataShare.DataShareHelper | undefined = undefined;
+    let context = this.context;
+    try {
+      dataShare.createDataShareHelper(context, uri, {isProxy : true}).then((data: dataShare.DataShareHelper) => {
+        console.info("createDataShareHelper succeed, data : " + data);
+        dataShareHelper = data;
+      }).catch((err: BusinessError) => {
+        console.error(`createDataShareHelper error: code: ${err.code}, message: ${err.message} `);
       });
     } catch (err) {
       let code = (err as BusinessError).code;
@@ -101,7 +153,7 @@ Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whe
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Indicates the application context. |
 | uri | string | Yes | Indicates the path of the file to open. |
 | options | [DataShareHelperOptions](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md) | Yes | Indicates the optional config. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md)&gt; | Yes | {DataShareHelper}: The dataShareHelper for consumer. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md)&gt; | Yes | {DataShareHelper}: The dataShareHelper for consumer. |
 
 **Error codes:**
 
@@ -113,32 +165,7 @@ Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whe
 
 **Examples**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    let uri = "datashareproxy://com.samples.datasharetest.DataShare";
-    let dataShareHelper: dataShare.DataShareHelper | undefined = undefined;
-    let context = this.context;
-    try {
-      dataShare.createDataShareHelper(context, uri, {isProxy : true}, (err:BusinessError, data:dataShare.DataShareHelper) => {
-        if (err !== undefined) {
-          console.error(`createDataShareHelper error: code: ${err.code}, message: ${err.message} `);
-          return;
-        }
-        console.info("createDataShareHelper succeed, data : " + data);
-        dataShareHelper = data;
-      });
-    } catch (err) {
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`createDataShareHelper error: code: ${code}, message: ${message} `);
-    };
-  };
-};
-```
+See [createDataShareHelper](#createdatasharehelper)
 
 
 ## createDataShareHelper
@@ -187,28 +214,5 @@ Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whe
 
 **Examples**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    let uri = "datashareproxy://com.samples.datasharetest.DataShare";
-    let dataShareHelper: dataShare.DataShareHelper | undefined = undefined;
-    let context = this.context;
-    try {
-      dataShare.createDataShareHelper(context, uri, {isProxy : true}).then((data: dataShare.DataShareHelper) => {
-        console.info("createDataShareHelper succeed, data : " + data);
-        dataShareHelper = data;
-      }).catch((err: BusinessError) => {
-        console.error(`createDataShareHelper error: code: ${err.code}, message: ${err.message} `);
-      });
-    } catch (err) {
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`createDataShareHelper error: code: ${code}, message: ${message} `);
-    };
-  };
-};
-```
+See [createDataShareHelper](#createdatasharehelper)
 

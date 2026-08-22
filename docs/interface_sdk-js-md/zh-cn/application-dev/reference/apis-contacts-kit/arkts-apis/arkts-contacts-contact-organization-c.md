@@ -50,3 +50,16 @@ title?: string
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
+**示例**
+
+使用JSON格式创建数据。
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let organization: contact.Organization = {
+    name: 'name',
+    title: 'title'
+};
+```
+

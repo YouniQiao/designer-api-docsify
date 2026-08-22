@@ -54,6 +54,68 @@ connection.getAddressesByName("xxxx", (error: BusinessError, data: connection.Ne
 });
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getAddressesByName("xxxx").then((data: connection.NetAddress[]) => {
+  console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
+    return;
+  }
+  let host = "www.example.com";
+  netHandle.getAddressesByName(host, (error: BusinessError, data: connection.NetAddress[]) => {
+    if (error) {
+      console.error(`Failed to get addresses. Code:${error.code}, message:${error.message}`);
+      return;
+    }
+    console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
+  });
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
+    return;
+  }
+  let host = "www.example.com";
+  netHandle.getAddressesByName(host).then((data: connection.NetAddress[]) => {
+    console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
+  });
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
+    return;
+  }
+  let host = "www.example.com";
+  netHandle.getAddressesByName(host).then((data: Array<connection.NetAddress>|undefined) => {
+    console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
+  });
+});
+```
+
 
 ## getAddressesByName
 
@@ -95,11 +157,5 @@ function getAddressesByName(host: string): Promise<Array<NetAddress>>
 
 **示例**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getAddressesByName("xxxx").then((data: connection.NetAddress[]) => {
-  console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
-});
-```
+参见 [getAddressesByName](#getaddressesbyname)
 

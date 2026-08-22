@@ -79,40 +79,6 @@ ws.close((err: BusinessError<void>|null, value: Boolean|undefined) => {
 });
 ```
 
-## close
-
-```TypeScript
-close(options: WebSocketCloseOptions, callback: AsyncCallback<boolean>): void
-```
-
-根据参数options，关闭WebSocket连接，使用callback异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.INTERNET
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-WebSocket-close(options: WebSocketCloseOptions, callback: AsyncCallback<boolean>): void--><!--Device-WebSocket-close(options: WebSocketCloseOptions, callback: AsyncCallback<boolean>): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | 是 | 参考[WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。true:关闭请求创建成功；false:关闭请求创建失败。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -157,6 +123,153 @@ ws.close(options, (err: BusinessError<void>|null, value: Boolean|undefined) => {
 });
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let ws = webSocket.createWebSocket();
+let options: webSocket.WebSocketCloseOptions | undefined;
+if (options != undefined) {
+    options.code = 1000;
+    options.reason = "your reason";
+}
+let promise = ws.close();
+promise.then((value: boolean) => {
+    console.info("close success");
+}).catch((err:string) => {
+    console.error("close fail, error:" + JSON.stringify(err));
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let ws = webSocket.createWebSocket();
+let options: webSocket.WebSocketCloseOptions;
+if (options != undefined) {
+    options.code = 1000;
+    options.reason = "your reason";
+}
+let promise = ws.close();
+promise.then((value: boolean) => {
+    console.info("close success");
+}).catch((err: Error) => {
+    console.error(`close fail, error: ${err}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let localServer: webSocket.WebSocketServer;
+let config: webSocket.WebSocketServerConfig = {
+  serverPort: 8080, // 监听端口
+  maxConcurrentClientsNumber: 10,
+  maxConnectionsForOneClient: 10,
+}
+
+localServer = webSocket.createWebSocketServer();
+localServer.start(config).then((success: boolean) => {
+  if (success) {
+    console.info('webSocket server start success');
+  } else {
+    console.error('websocket server start failed');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`Failed to start. Code: ${error.code}, message: ${error.message}`);
+});
+
+localServer.on('connect', (connection: webSocket.WebSocketConnection) => {
+  console.info(`New client connected! Client ip: ${connection.clientIP}, Client port: ${connection.clientPort}`);
+  localServer.close(connection).then((success: boolean) => {
+    if (success) {
+      console.info('close client successfully');
+    } else {
+      console.error('close client failed');
+    }
+  });
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let localServer: webSocket.WebSocketServer;
+let config: webSocket.WebSocketServerConfig = {
+  serverPort: 8080, // 监听端口
+  maxConcurrentClientsNumber: 10,
+  maxConnectionsForOneClient: 10,
+}
+
+localServer = webSocket.createWebSocketServer();
+localServer.start(config).then((success: boolean) => {
+  if (success) {
+    console.info('webSocket server start success');
+  } else {
+    console.error('websocket server start failed');
+  }
+}).catch((err: Error) => {
+  let error = err as BusinessError;
+  console.error(`Failed to start. Code: ${error.code}, message: ${error.message}`);
+});
+
+localServer.onConnect((connection: webSocket.WebSocketConnection) => {
+  console.info(`New client connected! Client ip: ${connection.clientIP}, Client port: ${connection.clientPort}`);
+  localServer.close(connection).then((success: boolean) => {
+    if (success) {
+      console.info('close client successfully');
+    } else {
+      console.error('close client failed');
+    }
+  });
+});
+```
+
+## close
+
+```TypeScript
+close(options: WebSocketCloseOptions, callback: AsyncCallback<boolean>): void
+```
+
+根据参数options，关闭WebSocket连接，使用callback异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.INTERNET
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebSocket-close(options: WebSocketCloseOptions, callback: AsyncCallback<boolean>): void--><!--Device-WebSocket-close(options: WebSocketCloseOptions, callback: AsyncCallback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | 是 | 参考[WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。true:关闭请求创建成功；false:关闭请求创建失败。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+**示例**
+
+参见 [close](#close)
+
 ## close
 
 ```TypeScript
@@ -196,43 +309,7 @@ close(options?: WebSocketCloseOptions): Promise<boolean>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let ws = webSocket.createWebSocket();
-let options: webSocket.WebSocketCloseOptions | undefined;
-if (options != undefined) {
-    options.code = 1000;
-    options.reason = "your reason";
-}
-let promise = ws.close();
-promise.then((value: boolean) => {
-    console.info("close success");
-}).catch((err:string) => {
-    console.error("close fail, error:" + JSON.stringify(err));
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let ws = webSocket.createWebSocket();
-let options: webSocket.WebSocketCloseOptions;
-if (options != undefined) {
-    options.code = 1000;
-    options.reason = "your reason";
-}
-let promise = ws.close();
-promise.then((value: boolean) => {
-    console.info("close success");
-}).catch((err: Error) => {
-    console.error(`close fail, error: ${err}`);
-});
-```
+参见 [close](#close)
 
 ## connect
 
@@ -316,55 +393,6 @@ ws.connect(url, (err: BusinessError | null, value: boolean) => {
 });
 ```
 
-## connect
-
-```TypeScript
-connect(url: string, options: WebSocketRequestOptions, callback: AsyncCallback<boolean>): void
-```
-
-根据URL地址，建立一个WebSocket连接，使用callback异步回调。
-
-> **说明：**
-> 
-> callback中返回的boolean值仅表示连接请求创建是否成功。如需感知WebSocket是否连接成功，需要在调用该接口前调用
-> [on('open')](#onopen)订阅open事件。
-> 
-> **注意：**
-> 
-> URL地址长度不能超过1024个字符，否则会连接失败。从API version 15开始，URL地址长度限制由1024修改为2048。从API version 26开始，URL地址长度限制由2048修改为8196。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.INTERNET
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-WebSocket-connect(url: string, options: WebSocketRequestOptions, callback: AsyncCallback<boolean>): void--><!--Device-WebSocket-connect(url: string, options: WebSocketRequestOptions, callback: AsyncCallback<boolean>): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| url | string | 是 | 建立WebSocket连接的URL地址。 |
-| options | [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md) | 是 | 参考[WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md) 。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。true:连接请求创建成功；false:连接请求创建失败。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [2302999](../errorcode-net-webSocket.md#2302999-内部错误) | Websocket other unknown error.<br>**适用版本：** 10+ |
-| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url错误) | Websocket url error.<br>**适用版本：** 12+ |
-| [2302002](../errorcode-net-webSocket.md#2302002-websocket-证书不存在) | Websocket certificate file does not exist.<br>**适用版本：** 12+ |
-| [2302003](../errorcode-net-webSocket.md#2302003-websocket-连接已经存在) | Websocket connection already exists.<br>**适用版本：** 12+ |
-| [2302998](../errorcode-net-webSocket.md#2302998-不允许访问域名) | It is not allowed to access this domain.<br>**适用版本：** 12+ |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -432,6 +460,70 @@ ws.connect(url, options, (err: BusinessError | null, value: Object) => {
 });
 ```
 
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let ws = webSocket.createWebSocket();
+let url = "ws://"
+let promise = ws.connect(url);
+promise.then((value: boolean) => {
+  console.info("connect success")
+}).catch((err:string) => {
+  console.error("connect fail, error:" + JSON.stringify(err))
+});
+```
+
+## connect
+
+```TypeScript
+connect(url: string, options: WebSocketRequestOptions, callback: AsyncCallback<boolean>): void
+```
+
+根据URL地址，建立一个WebSocket连接，使用callback异步回调。
+
+> **说明：**
+> 
+> callback中返回的boolean值仅表示连接请求创建是否成功。如需感知WebSocket是否连接成功，需要在调用该接口前调用
+> [on('open')](#onopen)订阅open事件。
+> 
+> **注意：**
+> 
+> URL地址长度不能超过1024个字符，否则会连接失败。从API version 15开始，URL地址长度限制由1024修改为2048。从API version 26开始，URL地址长度限制由2048修改为8196。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.INTERNET
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebSocket-connect(url: string, options: WebSocketRequestOptions, callback: AsyncCallback<boolean>): void--><!--Device-WebSocket-connect(url: string, options: WebSocketRequestOptions, callback: AsyncCallback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| url | string | 是 | 建立WebSocket连接的URL地址。 |
+| options | [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md) | 是 | 参考[WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md) 。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。true:连接请求创建成功；false:连接请求创建失败。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [2302999](../errorcode-net-webSocket.md#2302999-内部错误) | Websocket other unknown error.<br>**适用版本：** 10+ |
+| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url错误) | Websocket url error.<br>**适用版本：** 12+ |
+| [2302002](../errorcode-net-webSocket.md#2302002-websocket-证书不存在) | Websocket certificate file does not exist.<br>**适用版本：** 12+ |
+| [2302003](../errorcode-net-webSocket.md#2302003-websocket-连接已经存在) | Websocket connection already exists.<br>**适用版本：** 12+ |
+| [2302998](../errorcode-net-webSocket.md#2302998-不允许访问域名) | It is not allowed to access this domain.<br>**适用版本：** 12+ |
+
+**示例**
+
+参见 [connect](#connect)
+
 ## connect
 
 ```TypeScript
@@ -486,218 +578,7 @@ connect(url: string, options?: WebSocketRequestOptions): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let ws = webSocket.createWebSocket();
-let url = "ws://"
-let promise = ws.connect(url);
-promise.then((value: boolean) => {
-  console.info("connect success")
-}).catch((err:string) => {
-  console.error("connect fail, error:" + JSON.stringify(err))
-});
-```
-
-## offDataEnd
-
-```TypeScript
-offDataEnd(callback?: Callback<void>): void
-```
-
-取消订阅WebSocket连接的数据接收结束事件。
-
-**起始版本：** 23
-
-<!--Device-WebSocket-offDataEnd(callback?: Callback<void>): void--><!--Device-WebSocket-offDataEnd(callback?: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |  |
-
-**示例**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let onDataEndCallback = () => {
-  console.info(`dataEnd callback`);
-}
-let ws = webSocket.createWebSocket();
-
-ws.onDataEnd(onDataEndCallback);
-ws.offDataEnd(onDataEndCallback);
-```
-
-## offHeaderReceive
-
-```TypeScript
-offHeaderReceive(callback?: Callback<ResponseHeaders>): void
-```
-
-取消注册HTTP响应头事件的观察者。
-
-**起始版本：** 23
-
-<!--Device-WebSocket-offHeaderReceive(callback?: Callback<ResponseHeaders>): void--><!--Device-WebSocket-offHeaderReceive(callback?: Callback<ResponseHeaders>): void-End-->
-
-**系统能力：** 
-- API版本23+：SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | 否 | the callback used to return the result.<br>**起始版本：** 23 |
-
-**示例**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let ws = webSocket.createWebSocket();
-ws.offHeaderReceive();
-```
-
-## offMessage
-
-```TypeScript
-offMessage(callback?: AsyncCallback<string | ArrayBuffer>): void
-```
-
-取消订阅WebSocket连接的消息事件。 data in AsyncCallback can be a string(API 6) or an ArrayBuffer(API 8).
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-WebSocket-offMessage(callback?: AsyncCallback<string | ArrayBuffer>): void--><!--Device-WebSocket-offMessage(callback?: AsyncCallback<string | ArrayBuffer>): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer&gt; | 否 | the callback used to return the result. |
-
-**示例**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let onMessageCallback = (err: BusinessError<void>|null, value: undefined|String|ArrayBuffer) => {
-  console.info(`onMessageCallback，err：${JSON.stringify(err)}，value：${value}`);
-}
-let ws = webSocket.createWebSocket();
-
-ws.onMessage(onMessageCallback);
-ws.offMessage(onMessageCallback);
-```
-
-## offOpen
-
-```TypeScript
-offOpen(callback?: Callback<OpenResult>): void
-```
-
-取消订阅WebSocket连接的成功事件。
-
-**起始版本：** 23
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-WebSocket-offOpen(callback?: Callback<OpenResult>): void--><!--Device-WebSocket-offOpen(callback?: Callback<OpenResult>): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OpenResult](arkts-network-websocket-openresult-i.md)&gt; | 否 | the callback used to return the result. |
-
-**示例**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let ws = webSocket.createWebSocket();
-let callback1 = (value: webSocket.OpenResult) => {
- console.info("onOpen, status:" + (value?.status + ", message:" + value?.message));
-}
-ws.onOpen(callback1);
-// 可以指定传入onOpen中的callback取消一个订阅，也可以不指定callback清空所有订阅。
-ws.offOpen(callback1);
-```
-
-## offWebSocketClose
-
-```TypeScript
-offWebSocketClose(callback?: AsyncCallback<CloseResult>): void
-```
-
-取消订阅WebSocket连接的关闭事件。
-
-**起始版本：** 23
-
-<!--Device-WebSocket-offWebSocketClose(callback?: AsyncCallback<CloseResult>): void--><!--Device-WebSocket-offWebSocketClose(callback?: AsyncCallback<CloseResult>): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | 否 | the callback used to return the result. <br>close indicates the close error code and reason indicates the error code description. |
-
-**示例**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let onCloseCallback = (err: BusinessError<void>|null, data: webSocket.CloseResult|undefined) => {
-  console.info(`onCloseCallback，closeResult：${data}`);
-}
-let ws = webSocket.createWebSocket();
-
-ws.onWebSocketClose(onCloseCallback);
-ws.offWebSocketClose(onCloseCallback);
-```
-
-## offWebSocketError
-
-```TypeScript
-offWebSocketError(callback?: ErrorCallback): void
-```
-
-取消订阅WebSocket连接的错误事件。
-
-**起始版本：** 23
-
-<!--Device-WebSocket-offWebSocketError(callback?: ErrorCallback): void--><!--Device-WebSocket-offWebSocketError(callback?: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | the callback used to return the result. |
-
-**示例**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let ws = webSocket.createWebSocket();
-ws.offWebSocketError();
-```
+参见 [connect](#connect)
 
 ## off('close')
 
@@ -969,17 +850,17 @@ ws.on('openInfo', callback1);
 ws.off('openInfo', callback1);
 ```
 
-## onDataEnd
+## offDataEnd
 
 ```TypeScript
-onDataEnd(callback: Callback<void>): void
+offDataEnd(callback?: Callback<void>): void
 ```
 
-订阅WebSocket连接的数据接收结束事件。
+取消订阅WebSocket连接的数据接收结束事件。
 
 **起始版本：** 23
 
-<!--Device-WebSocket-onDataEnd(callback: Callback<void>): void--><!--Device-WebSocket-onDataEnd(callback: Callback<void>): void-End-->
+<!--Device-WebSocket-offDataEnd(callback?: Callback<void>): void--><!--Device-WebSocket-offDataEnd(callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -987,30 +868,33 @@ onDataEnd(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |  |
 
 **示例**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
 
+let onDataEndCallback = () => {
+  console.info(`dataEnd callback`);
+}
 let ws = webSocket.createWebSocket();
-ws.onDataEnd(() => {
-  console.info("onDataEnd");
-});
+
+ws.onDataEnd(onDataEndCallback);
+ws.offDataEnd(onDataEndCallback);
 ```
 
-## onHeaderReceive
+## offHeaderReceive
 
 ```TypeScript
-onHeaderReceive(callback: Callback<ResponseHeaders>): void
+offHeaderReceive(callback?: Callback<ResponseHeaders>): void
 ```
 
-注册HTTP响应头事件的观察者。
+取消注册HTTP响应头事件的观察者。
 
 **起始版本：** 23
 
-<!--Device-WebSocket-onHeaderReceive(callback: Callback<ResponseHeaders>): void--><!--Device-WebSocket-onHeaderReceive(callback: Callback<ResponseHeaders>): void-End-->
+<!--Device-WebSocket-offHeaderReceive(callback?: Callback<ResponseHeaders>): void--><!--Device-WebSocket-offHeaderReceive(callback?: Callback<ResponseHeaders>): void-End-->
 
 **系统能力：** 
 - API版本23+：SystemCapability.Communication.NetStack
@@ -1019,7 +903,7 @@ onHeaderReceive(callback: Callback<ResponseHeaders>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | 是 | the callback used to return the result.<br>**起始版本：** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | 否 | the callback used to return the result.<br>**起始版本：** 23 |
 
 **示例**
 
@@ -1027,24 +911,22 @@ onHeaderReceive(callback: Callback<ResponseHeaders>): void
 import { webSocket } from '@kit.NetworkKit';
 
 let ws = webSocket.createWebSocket();
-ws.onHeaderReceive((data) => {
-  console.info(`onHeaderReceive ${data}`);
-});
+ws.offHeaderReceive();
 ```
 
-## onMessage
+## offMessage
 
 ```TypeScript
-onMessage(callback: AsyncCallback<string | ArrayBuffer>): void
+offMessage(callback?: AsyncCallback<string | ArrayBuffer>): void
 ```
 
-订阅WebSocket连接的消息事件。 data in AsyncCallback can be a string(API 6) or an ArrayBuffer(API 8).
+取消订阅WebSocket连接的消息事件。 data in AsyncCallback can be a string(API 6) or an ArrayBuffer(API 8).
 
 **起始版本：** 23
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
-<!--Device-WebSocket-onMessage(callback: AsyncCallback<string | ArrayBuffer>): void--><!--Device-WebSocket-onMessage(callback: AsyncCallback<string | ArrayBuffer>): void-End-->
+<!--Device-WebSocket-offMessage(callback?: AsyncCallback<string | ArrayBuffer>): void--><!--Device-WebSocket-offMessage(callback?: AsyncCallback<string | ArrayBuffer>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -1052,33 +934,35 @@ onMessage(callback: AsyncCallback<string | ArrayBuffer>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer&gt; | 是 | the callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer&gt; | 否 | the callback used to return the result. |
 
 **示例**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
+let onMessageCallback = (err: BusinessError<void>|null, value: undefined|String|ArrayBuffer) => {
+  console.info(`onMessageCallback，err：${JSON.stringify(err)}，value：${value}`);
+}
 let ws = webSocket.createWebSocket();
-ws.onMessage((err: BusinessError<void> | null, value: string | ArrayBuffer | undefined) => {
-  console.info("onMessage, message:" + value);
-});
+
+ws.onMessage(onMessageCallback);
+ws.offMessage(onMessageCallback);
 ```
 
-## onOpen
+## offOpen
 
 ```TypeScript
-onOpen(callback: Callback<OpenResult>): void
+offOpen(callback?: Callback<OpenResult>): void
 ```
 
-订阅WebSocket连接的成功事件。
+取消订阅WebSocket连接的成功事件。
 
 **起始版本：** 23
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
-<!--Device-WebSocket-onOpen(callback: Callback<OpenResult>): void--><!--Device-WebSocket-onOpen(callback: Callback<OpenResult>): void-End-->
+<!--Device-WebSocket-offOpen(callback?: Callback<OpenResult>): void--><!--Device-WebSocket-offOpen(callback?: Callback<OpenResult>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -1086,30 +970,33 @@ onOpen(callback: Callback<OpenResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OpenResult](arkts-network-websocket-openresult-i.md)&gt; | 是 | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OpenResult](arkts-network-websocket-openresult-i.md)&gt; | 否 | the callback used to return the result. |
 
 **示例**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
 
-let ws= webSocket.createWebSocket();
-ws.onOpen((value: webSocket.OpenResult|undefined) => {
-  console.info("onOpen, status:" + value?.status + ", message:" + value?.message);
-});
+let ws = webSocket.createWebSocket();
+let callback1 = (value: webSocket.OpenResult) => {
+ console.info("onOpen, status:" + (value?.status + ", message:" + value?.message));
+}
+ws.onOpen(callback1);
+// 可以指定传入onOpen中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+ws.offOpen(callback1);
 ```
 
-## onWebSocketClose
+## offWebSocketClose
 
 ```TypeScript
-onWebSocketClose(callback: AsyncCallback<CloseResult>): void
+offWebSocketClose(callback?: AsyncCallback<CloseResult>): void
 ```
 
-订阅WebSocket连接的关闭事件。
+取消订阅WebSocket连接的关闭事件。
 
 **起始版本：** 23
 
-<!--Device-WebSocket-onWebSocketClose(callback: AsyncCallback<CloseResult>): void--><!--Device-WebSocket-onWebSocketClose(callback: AsyncCallback<CloseResult>): void-End-->
+<!--Device-WebSocket-offWebSocketClose(callback?: AsyncCallback<CloseResult>): void--><!--Device-WebSocket-offWebSocketClose(callback?: AsyncCallback<CloseResult>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -1117,7 +1004,7 @@ onWebSocketClose(callback: AsyncCallback<CloseResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | 是 | the callback used to return the result. <br>close indicates the close error code and reason indicates the error code description. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | 否 | the callback used to return the result. <br>close indicates the close error code and reason indicates the error code description. |
 
 **示例**
 
@@ -1125,23 +1012,26 @@ onWebSocketClose(callback: AsyncCallback<CloseResult>): void
 import { webSocket } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let onCloseCallback = (err: BusinessError<void>|null, data: webSocket.CloseResult|undefined) => {
+  console.info(`onCloseCallback，closeResult：${data}`);
+}
 let ws = webSocket.createWebSocket();
-ws.onWebSocketClose((err: BusinessError<void>|null, value: webSocket.CloseResult|undefined) => {
-  console.info("on close, code is " + value?.code + ", reason is " + value?.reason);
-});
+
+ws.onWebSocketClose(onCloseCallback);
+ws.offWebSocketClose(onCloseCallback);
 ```
 
-## onWebSocketError
+## offWebSocketError
 
 ```TypeScript
-onWebSocketError(callback: ErrorCallback): void
+offWebSocketError(callback?: ErrorCallback): void
 ```
 
-订阅WebSocket连接的错误事件。
+取消订阅WebSocket连接的错误事件。
 
 **起始版本：** 23
 
-<!--Device-WebSocket-onWebSocketError(callback: ErrorCallback): void--><!--Device-WebSocket-onWebSocketError(callback: ErrorCallback): void-End-->
+<!--Device-WebSocket-offWebSocketError(callback?: ErrorCallback): void--><!--Device-WebSocket-offWebSocketError(callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -1149,18 +1039,15 @@ onWebSocketError(callback: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | the callback used to return the result. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | the callback used to return the result. |
 
 **示例**
 
 ```TypeScript
 import { webSocket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let ws = webSocket.createWebSocket();
-ws.onWebSocketError((err: BusinessError) => {
-  console.error(`onWebSocketError. Code: ${err.code}, message: ${err.message}`);
-});
+ws.offWebSocketError();
 ```
 
 ## on('close')
@@ -1416,6 +1303,200 @@ ws.on('openInfo', (err: BusinessError, value: webSocket.WebSocketOpenInfo) => {
 });
 ```
 
+## onDataEnd
+
+```TypeScript
+onDataEnd(callback: Callback<void>): void
+```
+
+订阅WebSocket连接的数据接收结束事件。
+
+**起始版本：** 23
+
+<!--Device-WebSocket-onDataEnd(callback: Callback<void>): void--><!--Device-WebSocket-onDataEnd(callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | the callback used to return the result. |
+
+**示例**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let ws = webSocket.createWebSocket();
+ws.onDataEnd(() => {
+  console.info("onDataEnd");
+});
+```
+
+## onHeaderReceive
+
+```TypeScript
+onHeaderReceive(callback: Callback<ResponseHeaders>): void
+```
+
+注册HTTP响应头事件的观察者。
+
+**起始版本：** 23
+
+<!--Device-WebSocket-onHeaderReceive(callback: Callback<ResponseHeaders>): void--><!--Device-WebSocket-onHeaderReceive(callback: Callback<ResponseHeaders>): void-End-->
+
+**系统能力：** 
+- API版本23+：SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | 是 | the callback used to return the result.<br>**起始版本：** 23 |
+
+**示例**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let ws = webSocket.createWebSocket();
+ws.onHeaderReceive((data) => {
+  console.info(`onHeaderReceive ${data}`);
+});
+```
+
+## onMessage
+
+```TypeScript
+onMessage(callback: AsyncCallback<string | ArrayBuffer>): void
+```
+
+订阅WebSocket连接的消息事件。 data in AsyncCallback can be a string(API 6) or an ArrayBuffer(API 8).
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebSocket-onMessage(callback: AsyncCallback<string | ArrayBuffer>): void--><!--Device-WebSocket-onMessage(callback: AsyncCallback<string | ArrayBuffer>): void-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer&gt; | 是 | the callback used to return the result. |
+
+**示例**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let ws = webSocket.createWebSocket();
+ws.onMessage((err: BusinessError<void> | null, value: string | ArrayBuffer | undefined) => {
+  console.info("onMessage, message:" + value);
+});
+```
+
+## onOpen
+
+```TypeScript
+onOpen(callback: Callback<OpenResult>): void
+```
+
+订阅WebSocket连接的成功事件。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebSocket-onOpen(callback: Callback<OpenResult>): void--><!--Device-WebSocket-onOpen(callback: Callback<OpenResult>): void-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OpenResult](arkts-network-websocket-openresult-i.md)&gt; | 是 | the callback used to return the result. |
+
+**示例**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+
+let ws= webSocket.createWebSocket();
+ws.onOpen((value: webSocket.OpenResult|undefined) => {
+  console.info("onOpen, status:" + value?.status + ", message:" + value?.message);
+});
+```
+
+## onWebSocketClose
+
+```TypeScript
+onWebSocketClose(callback: AsyncCallback<CloseResult>): void
+```
+
+订阅WebSocket连接的关闭事件。
+
+**起始版本：** 23
+
+<!--Device-WebSocket-onWebSocketClose(callback: AsyncCallback<CloseResult>): void--><!--Device-WebSocket-onWebSocketClose(callback: AsyncCallback<CloseResult>): void-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | 是 | the callback used to return the result. <br>close indicates the close error code and reason indicates the error code description. |
+
+**示例**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let ws = webSocket.createWebSocket();
+ws.onWebSocketClose((err: BusinessError<void>|null, value: webSocket.CloseResult|undefined) => {
+  console.info("on close, code is " + value?.code + ", reason is " + value?.reason);
+});
+```
+
+## onWebSocketError
+
+```TypeScript
+onWebSocketError(callback: ErrorCallback): void
+```
+
+订阅WebSocket连接的错误事件。
+
+**起始版本：** 23
+
+<!--Device-WebSocket-onWebSocketError(callback: ErrorCallback): void--><!--Device-WebSocket-onWebSocketError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | the callback used to return the result. |
+
+**示例**
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let ws = webSocket.createWebSocket();
+ws.onWebSocketError((err: BusinessError) => {
+  console.error(`onWebSocketError. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## send
 
 ```TypeScript
@@ -1509,45 +1590,6 @@ ws.connect(url, (err: BusinessError<void>|null, value: boolean|undefined) => {
 });
 ```
 
-## send
-
-```TypeScript
-send(data: string | ArrayBuffer): Promise<boolean>
-```
-
-通过WebSocket连接发送数据。使用Promise异步回调。
-
-**起始版本：** 23
-
-**需要权限：** ohos.permission.INTERNET
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-WebSocket-send(data: string | ArrayBuffer): Promise<boolean>--><!--Device-WebSocket-send(data: string | ArrayBuffer): Promise<boolean>-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | string \| ArrayBuffer | 是 | 发送的数据。 <br>API 6及更早版本仅支持string类型。API 8起同时支持string和ArrayBuffer类型。最大支持发送5242864字节数据(即5 1024 1024 - 16)，超过该大小会返回401 错误码。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | 以Promise形式返回发送数据的结果。true:发送请求创建成功；false:发送请求创建失败。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-
-**示例**
-
 ArkTS-Dyn示例：
 
 ```TypeScript
@@ -1607,4 +1649,125 @@ ws.connect(url, (err: BusinessError<void>|null, value: boolean|undefined) => {
   }
 });
 ```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let localServer: webSocket.WebSocketServer;
+let config: webSocket.WebSocketServerConfig = {
+  serverPort: 8080, // 监听端口
+  maxConcurrentClientsNumber: 10,
+  maxConnectionsForOneClient: 10,
+}
+
+localServer = webSocket.createWebSocketServer();
+localServer.start(config).then((success: boolean) => {
+  if (success) {
+    console.info('webSocket server start success');
+  } else {
+    console.error('websocket server start failed');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`Failed to start. Code: ${error.code}, message: ${error.message}`);
+});
+
+localServer.on('connect', async (connection: webSocket.WebSocketConnection) => {
+  console.info(`New client connected! Client ip: ${connection.clientIP}, Client port: ${connection.clientPort}`);
+  // 当收到on('connect')事件时，可以通过send()方法与客户端进行通信
+  localServer.send("Hello, I'm server!", connection).then((success: boolean) => {
+    if (success) {
+      console.info('message send successfully');
+    } else {
+      console.error('message send failed');
+    }
+  }).catch((error: BusinessError) => {
+    console.error(`message send failed, Code: ${error.code}, message: ${error.message}`);
+  });
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let localServer: webSocket.WebSocketServer;
+let config: webSocket.WebSocketServerConfig = {
+  serverPort: 8080, // 监听端口
+  maxConcurrentClientsNumber: 10,
+  maxConnectionsForOneClient: 10,
+}
+
+localServer = webSocket.createWebSocketServer();
+localServer.start(config).then((success: boolean) => {
+  if (success) {
+    console.info('webSocket server start success');
+  } else {
+    console.error('websocket server start failed');
+  }
+}).catch((err: Error) => {
+  let error = err as BusinessError;
+  console.error(`Failed to start. Code: ${error?.code}, message: ${error?.message}`);
+});
+
+localServer.onConnect((connection: webSocket.WebSocketConnection) => {
+  console.info(`New client connected! Client ip: ${connection.clientIP}, Client port: ${connection.clientPort}`);
+  // 当收到onConnect事件时，可以通过send()方法与客户端进行通信
+  localServer.send("Hello, I'm server!", connection).then((success: boolean) => {
+    if (success) {
+      console.info('message send successfully');
+    } else {
+      console.error('message send failed');
+    }
+  }).catch((err: Error) => {
+    let error = err as BusinessError;
+    console.error(`message send failed, Code: ${error?.code}, message: ${error?.message}`);
+  });
+});
+```
+
+## send
+
+```TypeScript
+send(data: string | ArrayBuffer): Promise<boolean>
+```
+
+通过WebSocket连接发送数据。使用Promise异步回调。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.INTERNET
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebSocket-send(data: string | ArrayBuffer): Promise<boolean>--><!--Device-WebSocket-send(data: string | ArrayBuffer): Promise<boolean>-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | string \| ArrayBuffer | 是 | 发送的数据。 <br>API 6及更早版本仅支持string类型。API 8起同时支持string和ArrayBuffer类型。最大支持发送5242864字节数据(即5 1024 1024 - 16)，超过该大小会返回401 错误码。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;boolean&gt; | 以Promise形式返回发送数据的结果。true:发送请求创建成功；false:发送请求创建失败。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+**示例**
+
+参见 [send](#send)
 

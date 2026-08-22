@@ -42,6 +42,68 @@ function getVolumeByUuid(uuid: string, callback: AsyncCallback<Volume>): void
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// uuid可通过getAllVolumes()接口获取卷设备信息后获得
+let uuid: string = "";
+volumeManager.getVolumeByUuid(uuid).then((volume: volumeManager.Volume) => {
+  console.info("getVolumeByUuid successfully:" + JSON.stringify(volume));
+}).catch((error: BusinessError) => {
+  console.error(`Failed to getVolumeByUuid. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// uuid可通过getAllVolumes()接口获取卷设备信息后获得
+let uuid: string = "";
+volumeManager.getVolumeByUuid(uuid).then((volume: volumeManager.Volume) => {
+  console.info("getVolumeByUuid successfully:" + JSON.stringify(volume));
+}).catch((error: BusinessError): void => {
+  console.error(`Failed to getVolumeByUuid. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// uuid可通过getAllVolumes()接口获取卷设备信息后获得
+let uuid: string = "";
+volumeManager.getVolumeByUuid(uuid, (error: BusinessError, volume: volumeManager.Volume) => {
+  if (error) {
+    console.error(`getVolumeByUuid failed, code is: ${error.code}, message is: ${error.message}`);
+    return;
+  }
+  // 获取到卷设备信息
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// uuid可通过getAllVolumes()接口获取卷设备信息后获得
+let uuid: string = "";
+volumeManager.getVolumeByUuid(uuid, (error: BusinessError | null, volume: volumeManager.Volume | undefined) => {
+  if (error) {
+    console.error(`getVolumeByUuid failed, code is: ${error.code}, message is: ${error.message}`);
+    return;
+  }
+  // 获取到卷设备信息
+});
+```
+
 
 ## getVolumeByUuid
 
@@ -83,4 +145,8 @@ function getVolumeByUuid(uuid: string): Promise<Volume>
 | 13600001 | IPC error. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
+
+**示例**
+
+参见 [getVolumeByUuid](#getvolumebyuuid)
 

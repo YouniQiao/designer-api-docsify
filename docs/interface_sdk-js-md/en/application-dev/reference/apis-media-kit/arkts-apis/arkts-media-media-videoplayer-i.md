@@ -40,7 +40,87 @@ Obtains the video track information. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the MediaDescription array obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the MediaDescription array obtained; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
+  if (arrList != null) {
+    console.info('Succeeded in getting TrackDescription');
+  } else {
+    console.error(`Failed to get TrackDescription, error:${error}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioPlayer.getTrackDescription().then((arrList: Array<media.MediaDescription>) => {
+  console.info('Succeeded in getting TrackDescription');
+}).catch((error: BusinessError) => {
+  console.error(`Failed to get TrackDescription, error:${error}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, or paused state before proceeding.
+  avPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
+    if ((arrList) != null) {
+      console.info('Succeeded in doing getTrackDescription');
+    } else {
+      console.error(`Failed to do getTrackDescription, error:${error}`);
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, or paused state before proceeding.
+  avPlayer.getTrackDescription().then((arrList: Array<media.MediaDescription>) => {
+    console.info('Succeeded in getting TrackDescription');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to get TrackDescription, error:${error}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
+  if ((arrList) != null) {
+    console.info('Succeeded in getting TrackDescription');
+  } else {
+    console.error(`Failed to get TrackDescription, error:${error}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.getTrackDescription().then((arrList: Array<media.MediaDescription>) => {
+  if (arrList != null) {
+    console.info('Succeeded in getting TrackDescription');
+  } else {
+    console.error('Failed to get TrackDescription');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error:${error}`);
+});
+```
 
 ## getTrackDescription
 
@@ -65,6 +145,10 @@ Obtains the video track information. This API uses a promise to return the resul
 | Type | Description |
 | --- | --- |
 | Promise&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Promise used to return the MediaDescription array that holds the video track information. |
+
+**Examples**
+
+See [getTrackDescription](#gettrackdescription)
 
 ## on('audioInterrupt')
 
@@ -139,7 +223,7 @@ Subscribes to video playback error events. After an error event is reported, you
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type, which is **'error'** in this case.<br>This event is triggered when an error occurs during video playback. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback invoked when the event is triggered. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback invoked when the event is triggered. |
 
 ## on('playbackCompleted')
 
@@ -164,7 +248,7 @@ Subscribes to the video playback completion event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playbackCompleted' | Yes | Event type, which is **'playbackCompleted'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
 
 ## on('startRenderFrame')
 
@@ -189,7 +273,7 @@ Subscribes to the frame rendering start event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'startRenderFrame' | Yes | Event type, which is **'startRenderFrame'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
 
 ## on('videoSizeChanged')
 
@@ -238,7 +322,137 @@ Pauses video playback. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// asyncallback.
+videoRecorder.pause((err: BusinessError) => {
+  if (err == null) {
+    console.info('pause videorecorder success');
+  } else {
+    console.error('pause videorecorder failed and error is ' + err.message);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// promise.
+videoRecorder.pause().then(() => {
+  console.info('pause videorecorder success');
+}).catch((err: BusinessError) => {
+  console.error('pause videorecorder failed and catch error is ' + err.message);
+});
+```
+
+```TypeScript
+audioPlayer.on('pause', () => {    // Set the 'pause' event callback.
+  console.info('audio pause called');
+});
+audioPlayer.pause();
+```
+
+```TypeScript
+audioRecorder.on('pause', () => {    // Set the 'pause' event callback.
+  console.info('audio recorder pause called');
+});
+audioRecorder.pause();
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the playing state before proceeding.
+  avPlayer.pause((err: BusinessError) => {
+    if (err) {
+      console.error('Failed to pause,error message is :' + err.message);
+    } else {
+      console.info('Succeeded in pausing');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the playing state before proceeding.
+  avPlayer.pause().then(() => {
+    console.info('Succeeded in pausing');
+  }, (err: BusinessError) => {
+    console.error('Failed to pause,error message is :' + err.message);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avRecorder.pause((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to pause AVRecorder and error is: Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Succeeded in pausing');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avRecorder.pause().then(() => {
+  console.info('Succeeded in pausing');
+}).catch((err: Error) => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to pause AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+async function test() {
+  // Create an AVTranscoder instance.
+  let avTranscoder = await media.createAVTranscoder();
+  avTranscoder.pause().then(() => {
+    console.info('pause AVTranscoder success');
+  }).catch((err: BusinessError) => {
+    console.error('pause AVTranscoder failed and catch error is ' + err.message);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.pause((err: BusinessError) => {
+  if (err) {
+    console.error('Failed to pause!');
+  } else {
+    console.info('Succeeded in pausing!');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.pause().then(() => {
+  console.info('Succeeded in pausing');
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error:${error}`);
+});
+```
 
 ## pause
 
@@ -264,6 +478,10 @@ Pauses video playback. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+See [pause](#pause)
+
 ## play
 
 ```TypeScript
@@ -286,7 +504,68 @@ Starts video playback. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+audioPlayer.on('play', () => {    // Set the 'play' event callback.
+  console.info('audio play called');
+});
+audioPlayer.play();
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, paused, or completed state before proceeding.
+  avPlayer.play((err: BusinessError) => {
+    if (err) {
+      console.error('Failed to play,error message is :' + err.message);
+    } else {
+      console.info('Succeeded in playing');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, paused, or completed state before proceeding.
+  avPlayer.play().then(() => {
+    console.info('Succeeded in playing');
+  }, (err: BusinessError) => {
+    console.error('Failed to play,error message is :' + err.message);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.play((err: BusinessError) => {
+  if (err) {
+    console.error('Failed to play!');
+  } else {
+    console.info('Succeeded in playing!');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.play().then(() => {
+  console.info('Succeeded in playing');
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error:${error}`);
+});
+```
 
 ## play
 
@@ -312,6 +591,10 @@ Starts video playback. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+See [play](#play)
+
 ## prepare
 
 ```TypeScript
@@ -334,7 +617,244 @@ Prepares for video playback. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Configure the parameters based on those supported by the hardware device.
+let videoProfile: media.VideoRecorderProfile = {
+  audioBitrate : 48000,
+  audioChannels : 2,
+  audioCodec : media.CodecMimeType.AUDIO_AAC,
+  audioSampleRate : 48000,
+  fileFormat : media.ContainerFormatType.CFT_MPEG_4,
+  videoBitrate : 2000000,
+  videoCodec : media.CodecMimeType.VIDEO_AVC,
+  videoFrameWidth : 640,
+  videoFrameHeight : 480,
+  videoFrameRate : 30
+}
+
+let videoConfig: media.VideoRecorderConfig = {
+  audioSourceType : media.AudioSourceType.AUDIO_SOURCE_TYPE_MIC,
+  videoSourceType : media.VideoSourceType.VIDEO_SOURCE_TYPE_SURFACE_YUV,
+  profile : videoProfile,
+  url : 'fd://xx', // The file must be created by the caller and granted with proper permissions.
+  rotation : 0,
+  location : { latitude : 30, longitude : 130 }
+}
+
+// asyncallback.
+videoRecorder.prepare(videoConfig, (err: BusinessError) => {
+  if (err == null) {
+    console.info('prepare success');
+  } else {
+    console.error('prepare failed and error is ' + err.message);
+  }
+})
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Configure the parameters based on those supported by the hardware device.
+let videoProfile: media.VideoRecorderProfile = {
+  audioBitrate : 48000,
+  audioChannels : 2,
+  audioCodec : media.CodecMimeType.AUDIO_AAC,
+  audioSampleRate : 48000,
+  fileFormat : media.ContainerFormatType.CFT_MPEG_4,
+  videoBitrate : 2000000,
+  videoCodec : media.CodecMimeType.VIDEO_AVC,
+  videoFrameWidth : 640,
+  videoFrameHeight : 480,
+  videoFrameRate : 30
+}
+
+let videoConfig: media.VideoRecorderConfig = {
+  audioSourceType : media.AudioSourceType.AUDIO_SOURCE_TYPE_MIC,
+  videoSourceType : media.VideoSourceType.VIDEO_SOURCE_TYPE_SURFACE_YUV,
+  profile : videoProfile,
+  url : 'fd://xx', // The file must be created by the caller and granted with proper permissions.
+  rotation : 0,
+  location : { latitude : 30, longitude : 130 }
+}
+
+// promise.
+videoRecorder.prepare(videoConfig).then(() => {
+  console.info('prepare success');
+}).catch((err: BusinessError) => {
+  console.error('prepare failed and catch error is ' + err.message);
+});
+```
+
+```TypeScript
+let audioRecorderConfig: media.AudioRecorderConfig = {
+  audioEncoder : media.AudioEncoder.AAC_LC,
+  audioEncodeBitRate : 64000,
+  audioSampleRate : 44100,
+  numberOfChannels : 2,
+  format : media.AudioOutputFormat.AAC_ADTS,
+  uri : 'fd://1',       // The file must be created by the caller and granted with proper permissions.
+  location : { latitude : 30, longitude : 130},
+};
+audioRecorder.on('prepare', () => {    // Set the 'prepare' event callback.
+  console.info('prepare called');
+});
+audioRecorder.prepare(audioRecorderConfig);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized state before proceeding.
+  avPlayer.prepare((err: BusinessError) => {
+    if (err) {
+      console.error('Failed to prepare,error message is :' + err.message);
+    } else {
+      console.info('Succeeded in preparing');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized state before proceeding.
+  avPlayer.prepare().then(() => {
+    console.info('Succeeded in preparing');
+  }, (err: BusinessError) => {
+    console.error('Failed to prepare,error message is :' + err.message);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Configure the parameters based on those supported by the hardware device.
+let avRecorderProfile: media.AVRecorderProfile = {
+  audioBitrate : 48000,
+  audioChannels : 2,
+  audioCodec : media.CodecMimeType.AUDIO_AAC,
+  audioSampleRate : 48000,
+  fileFormat : media.ContainerFormatType.CFT_MPEG_4,
+  videoBitrate : 2000000,
+  videoCodec : media.CodecMimeType.VIDEO_AVC,
+  videoFrameWidth : 640,
+  videoFrameHeight : 480,
+  videoFrameRate : 30
+};
+let videoMetaData: media.AVMetadata = {
+  videoOrientation: '0' // The value can be 0, 90, 180, or 270. If any other value is used, prepare() reports an error.
+};
+let avRecorderConfig: media.AVRecorderConfig = {
+  audioSourceType : media.AudioSourceType.AUDIO_SOURCE_TYPE_MIC,
+  videoSourceType : media.VideoSourceType.VIDEO_SOURCE_TYPE_SURFACE_YUV,
+  profile : avRecorderProfile,
+  url : 'fd://', // Before passing an FD to this parameter, the file must be created by the caller and granted with the read and write permissions. Example value: fd://45.
+  metadata: videoMetaData,
+  location : { latitude : 30, longitude : 130 }
+};
+
+avRecorder.prepare(avRecorderConfig, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to prepare and error is: Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Succeeded in preparing');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Configure the parameters based on those supported by the hardware device.
+let avRecorderProfile: media.AVRecorderProfile = {
+  audioBitrate : 48000,
+  audioChannels : 2,
+  audioCodec : media.CodecMimeType.AUDIO_AAC,
+  audioSampleRate : 48000,
+  fileFormat : media.ContainerFormatType.CFT_MPEG_4,
+  videoBitrate : 2000000,
+  videoCodec : media.CodecMimeType.VIDEO_AVC,
+  videoFrameWidth : 640,
+  videoFrameHeight : 480,
+  videoFrameRate : 30
+};
+let videoMetaData: media.AVMetadata = {
+  videoOrientation: '0' // The value can be 0, 90, 180, or 270. If any other value is used, prepare() reports an error.
+};
+let avRecorderConfig: media.AVRecorderConfig = {
+  audioSourceType : media.AudioSourceType.AUDIO_SOURCE_TYPE_MIC,
+  videoSourceType : media.VideoSourceType.VIDEO_SOURCE_TYPE_SURFACE_YUV,
+  profile : avRecorderProfile,
+  url : 'fd://',  // Before passing an FD to this parameter, the file must be created by the caller and granted with the read and write permissions. Example value: fd://45.
+  metadata : videoMetaData,
+  location : { latitude : 30, longitude : 130 }
+};
+
+avRecorder.prepare(avRecorderConfig).then(() => {
+  console.info('Succeeded in preparing');
+}).catch((err: Error) => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to prepare and error is: Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+async function test() {
+  // Create an AVTranscoder instance.
+  let avTranscoder = await media.createAVTranscoder();
+  // Configure the parameters based on those supported by the hardware device.
+  let avTranscoderConfig: media.AVTranscoderConfig = {
+    audioBitrate : 200000,
+    audioCodec : media.CodecMimeType.AUDIO_AAC,
+    fileFormat : media.ContainerFormatType.CFT_MPEG_4,
+    videoBitrate : 3000000,
+    videoCodec : media.CodecMimeType.VIDEO_AVC,
+  };
+
+  avTranscoder.prepare(avTranscoderConfig).then(() => {
+    console.info('prepare success');
+  }).catch((err: BusinessError) => {
+    console.error('prepare failed and catch error is ' + err.message);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.prepare((err: BusinessError) => {
+  if (err) {
+    console.error('Failed to prepare!');
+  } else {
+    console.info('Succeeded in preparing!');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.prepare().then(() => {
+  console.info('Succeeded in preparing');
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error:${error}`);
+});
+```
 
 ## prepare
 
@@ -360,6 +880,10 @@ Prepares for video playback. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+See [prepare](#prepare)
+
 ## release
 
 ```TypeScript
@@ -382,7 +906,242 @@ Releases the video playback resources. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// asyncallback.
+videoRecorder.release((err: BusinessError) => {
+  if (err == null) {
+    console.info('release videorecorder success');
+  } else {
+    console.error('release videorecorder failed and error is ' + err.message);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// promise.
+videoRecorder.release().then(() => {
+  console.info('release videorecorder success');
+}).catch((err: BusinessError) => {
+  console.error('release videorecorder failed and catch error is ' + err.message);
+});
+```
+
+```TypeScript
+audioPlayer.release();
+audioPlayer = undefined;
+```
+
+```TypeScript
+audioRecorder.on('release', () => {    // Set the 'release' event callback.
+  console.info('audio recorder release called');
+});
+audioRecorder.release();
+audioRecorder = undefined;
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+let avImageGenerator: media.AVImageGenerator | undefined = undefined;
+
+// Release the resources.
+media.createAVImageGenerator((err: BusinessError, generator: media.AVImageGenerator) => {
+  if (generator != null) {
+    avImageGenerator = generator;
+    console.info(`Succeeded in creating AVImageGenerator`);
+    avImageGenerator.release((error: BusinessError) => {
+      if (error) {
+        console.error(`Failed to release, err = ${JSON.stringify(error)}`);
+        return;
+      }
+      console.info(`Succeeded in releasing`);
+    });
+  } else {
+    console.error(`Failed to create AVImageGenerator, error message:${err.message}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+let avImageGenerator: media.AVImageGenerator | undefined = undefined;
+
+// Release the resources.
+media.createAVImageGenerator((err: BusinessError, generator: media.AVImageGenerator) => {
+  if (generator != null) {
+    avImageGenerator = generator;
+    console.info(`Succeeded in creating AVImageGenerator`);
+    avImageGenerator.release().then(() => {
+      console.info(`Succeeded in releasing.`);
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to release, error message:${error.message}`);
+    });
+  } else {
+    console.error(`Failed to create AVImageGenerator, error message:${err.message}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+async function test() {
+  // Create an AVMetadataExtractor instance.
+  let avMetadataExtractor: media.AVMetadataExtractor = await media.createAVMetadataExtractor();
+  avMetadataExtractor.release((error: BusinessError) => {
+    if (error) {
+      console.error(`Failed to release, err = ${JSON.stringify(error)}`);
+      return;
+    }
+    console.info(`Succeeded in releasing.`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+async function test() {
+  // Create an AVMetadataExtractor instance.
+  let avMetadataExtractor: media.AVMetadataExtractor = await media.createAVMetadataExtractor();
+  avMetadataExtractor.release().then(() => {
+    console.info(`Succeeded in releasing.`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release, error message:${error.message}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach a state other than released before proceeding.
+  avPlayer.release((err: BusinessError) => {
+    if (err) {
+      console.error('Failed to release,error message is :' + err.message);
+    } else {
+      console.info('Succeeded in releasing');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach a state other than released before proceeding.
+  avPlayer.release().then(() => {
+    console.info('Succeeded in releasing');
+  }, (err: BusinessError) => {
+    console.error('Failed to release,error message is :' + err.message);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avRecorder.release((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to release AVRecorder and error is: Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Succeeded in releasing AVRecorder');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avRecorder.release().then(() => {
+  console.info('Succeeded in releasing AVRecorder');
+}).catch((err: Error) => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to release AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Initialize avScreenCaptureRecorder.
+let avScreenCaptureRecorder: media.AVScreenCaptureRecorder | undefined;
+media.createAVScreenCaptureRecorder().then((captureRecorder: media.AVScreenCaptureRecorder) => {
+  if (captureRecorder != null) {
+    avScreenCaptureRecorder = captureRecorder;
+    console.info('Succeeded in creating avScreenCaptureRecorder');
+  } else {
+    console.error('Failed to create avScreenCaptureRecorder');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`createAVScreenCaptureRecorder catchCallback, error message:${error.message}`);
+});
+
+// Other processes.
+
+// Call the release method.
+if (avScreenCaptureRecorder != undefined) {
+  avScreenCaptureRecorder.release().then(() => {
+    console.info('Succeeded in releasing avScreenCaptureRecorder');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to release avScreenCaptureRecorder. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { media } from '@kit.MediaKit';
+
+async function test() {
+  // Create an AVTranscoder instance.
+  let avTranscoder = await media.createAVTranscoder();
+  avTranscoder.release().then(() => {
+    console.info('release AVTranscoder success');
+  }).catch((err: BusinessError) => {
+    console.error('release AVTranscoder failed and catch error is ' + err.message);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.release((err: BusinessError) => {
+  if (err) {
+    console.error('Failed to release!');
+  } else {
+    console.info('Succeeded in releasing!');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.release().then(() => {
+  console.info('Succeeded in releasing');
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error:${error}`);
+});
+```
 
 ## release
 
@@ -408,6 +1167,10 @@ Releases the video playback resources. This API uses a promise to return the res
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+See [release](#release)
+
 ## reset
 
 ```TypeScript
@@ -430,7 +1193,122 @@ Resets video playback. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// asyncallback.
+videoRecorder.reset((err: BusinessError) => {
+  if (err == null) {
+    console.info('reset videorecorder success');
+  } else {
+    console.error('reset videorecorder failed and error is ' + err.message);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// promise.
+videoRecorder.reset().then(() => {
+  console.info('reset videorecorder success');
+}).catch((err: BusinessError) => {
+  console.error('reset videorecorder failed and catch error is ' + err.message);
+});
+```
+
+```TypeScript
+audioPlayer.on('reset', () => {    // Set the 'reset' event callback.
+  console.info('audio reset called');
+});
+audioPlayer.reset();
+```
+
+```TypeScript
+audioRecorder.on('reset', () => {    // Set the 'reset' event callback.
+  console.info('audio recorder reset called');
+});
+audioRecorder.reset();
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized, prepared, playing, paused, completed, stopped, or error state before proceeding.
+  avPlayer.reset((err: BusinessError) => {
+    if (err) {
+      console.error('Failed to reset,error message is :' + err.message);
+    } else {
+      console.info('Succeeded in resetting');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized, prepared, playing, paused, completed, stopped, or error state before proceeding.
+  avPlayer.reset().then(() => {
+    console.info('Succeeded in resetting');
+  }, (err: BusinessError) => {
+    console.error('Failed to reset,error message is :' + err.message);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avRecorder.reset((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to reset AVRecorder and error is: Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Succeeded in resetting AVRecorder');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avRecorder.reset().then(() => {
+  console.info('Succeeded in resetting AVRecorder');
+}).catch((err: Error) => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to reset AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.reset((err: BusinessError) => {
+  if (err) {
+    console.error('Failed to reset!');
+  } else {
+    console.info('Succeeded in resetting!');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.reset().then(() => {
+  console.info('Succeeded in resetting');
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error:${error}`);
+});
+```
 
 ## reset
 
@@ -456,6 +1334,10 @@ Resets video playback. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+See [reset](#reset)
+
 ## seek
 
 ```TypeScript
@@ -479,7 +1361,117 @@ Seeks to the specified playback position. The previous key frame at the specifie
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | timeMs | number | Yes | Position to seek to, in ms. The value range is [0, duration]. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the new playback position; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the new playback position; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+audioPlayer.on('timeUpdate', (seekDoneTime: number) => {    // Set the 'timeUpdate' event callback.
+  if (seekDoneTime == null) {
+    console.error('Failed to seek');
+    return;
+  }
+  console.info('Succeeded in seek. seekDoneTime: ' + seekDoneTime);
+});
+audioPlayer.seek(30000); // Seek to 30000 ms.
+```
+
+```TypeScript
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  let seekTime: number = 1000;
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, paused, or completed state before proceeding.
+  avPlayer.seek(seekTime, media.SeekMode.SEEK_PREV_SYNC);
+}
+```
+
+```TypeScript
+async function  test(){
+  // Use SEEK_CONTINUOUS with the onChange callback of the Slider. When slideMode is Moving, it triggers continuous seeking during the drag.
+  let avPlayer = await media.createAVPlayer();
+  let slideMovingTime: number = 2000;
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, paused, or completed state before proceeding.
+  avPlayer.seek(slideMovingTime, media.SeekMode.SEEK_CONTINUOUS);
+
+  // To end the seek when slideMode is End, call seek(-1, media.SeekMode.SEEK_CONTINUOUS).
+  avPlayer.seek(-1, media.SeekMode.SEEK_CONTINUOUS);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let videoPlayer: media.VideoPlayer;
+media.createVideoPlayer((error: BusinessError, video: media.VideoPlayer) => {
+  if (video != null) {
+    videoPlayer = video;
+    console.info('Succeeded in creating VideoPlayer');
+  } else {
+    console.error(`Failed to create VideoPlayer, error:${error}`);
+  }
+});
+
+let seekTime: number = 5000;
+videoPlayer.seek(seekTime, (err: BusinessError, result: number) => {
+  if (err) {
+    console.error('Failed to do seek!');
+  } else {
+    console.info('Succeeded in doing seek!');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let videoPlayer: media.VideoPlayer | null = null;
+media.createVideoPlayer((error: BusinessError, video: media.VideoPlayer) => {
+  if (video != null) {
+    videoPlayer = video;
+    console.info('Succeeded in creating VideoPlayer');
+  } else {
+    console.error(`Failed to create VideoPlayer, error:${error}`);
+  }
+});
+let seekTime: number = 5000;
+if (videoPlayer) {
+  (videoPlayer as media.VideoPlayer).seek(seekTime, media.SeekMode.SEEK_NEXT_SYNC, (err: BusinessError, result: number) => {
+    if (err) {
+      console.error('Failed to do seek!');
+    } else {
+      console.info('Succeeded in doing seek!');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let videoPlayer: media.VideoPlayer | null = null;
+media.createVideoPlayer((error: BusinessError, video: media.VideoPlayer) => {
+  if (video != null) {
+    videoPlayer = video;
+    console.info('Succeeded in creating VideoPlayer');
+  } else {
+    console.error(`Failed to create VideoPlayer, error:${error}`);
+  }
+});
+let seekTime: number = 5000;
+if (videoPlayer) {
+  (videoPlayer as media.VideoPlayer).seek(seekTime).then((seekDoneTime: number) => { // seekDoneTime indicates the position after the seek operation is complete.
+    console.info('Succeeded in doing seek');
+  }).catch((error: BusinessError) => {
+    console.error(`video catchCallback, error:${error}`);
+  });
+
+  (videoPlayer as media.VideoPlayer).seek(seekTime, media.SeekMode.SEEK_NEXT_SYNC).then((seekDoneTime: number) => {
+    console.info('Succeeded in doing seek');
+  }).catch((error: BusinessError) => {
+    console.error(`video catchCallback, error:${error}`);
+  });
+}
+```
 
 ## seek
 
@@ -505,7 +1497,11 @@ Seeks to the specified playback position. This API uses an asynchronous callback
 | --- | --- | --- | --- |
 | timeMs | number | Yes | Position to seek to, in ms. The value range is [0, duration]. |
 | mode | SeekMode | Yes | Seek mode. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the new playback position; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the new playback position; otherwise, **err** is an error object. |
+
+**Examples**
+
+See [seek](#seek)
 
 ## seek
 
@@ -538,6 +1534,10 @@ Seeks to the specified playback position. If **mode** is not specified, the prev
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the playback position, in ms. |
 
+**Examples**
+
+See [seek](#seek)
+
 ## setDisplaySurface
 
 ```TypeScript
@@ -566,7 +1566,33 @@ Sets a surface ID. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | surfaceId | string | Yes | Surface ID, which is obtained from the **XComponent**. For details about how to obtain it, see XComponent. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the setting is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the setting is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let surfaceId: string = '';
+videoPlayer.setDisplaySurface(surfaceId, (err: BusinessError) => {
+  if (err) {
+    console.error('Failed to set DisplaySurface!');
+  } else {
+    console.info('Succeeded in setting DisplaySurface!');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let surfaceId: string = '';
+videoPlayer.setDisplaySurface(surfaceId).then(() => {
+  console.info('Succeeded in setting DisplaySurface');
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error:${error}`);
+});
+```
 
 ## setDisplaySurface
 
@@ -603,6 +1629,10 @@ Sets a surface ID. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+See [setDisplaySurface](#setdisplaysurface)
+
 ## setSpeed
 
 ```TypeScript
@@ -626,7 +1656,63 @@ Sets the playback speed. This API uses an asynchronous callback to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | speed | number | Yes | Video playback speed. For details, see [PlaybackSpeed](arkts-media-media-playbackspeed-e.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the playback speed; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the playback speed; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, paused, or completed state before proceeding.
+  avPlayer.setSpeed(media.PlaybackSpeed.SPEED_FORWARD_2_00_X);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let videoPlayer: media.VideoPlayer | null = null;
+media.createVideoPlayer((error: BusinessError, video: media.VideoPlayer) => {
+  if (video != null) {
+    videoPlayer = video;
+    console.info('Succeeded in creating VideoPlayer');
+  } else {
+    console.error(`Failed to create VideoPlayer, error:${error}`);
+  }
+});
+let speed = media.PlaybackSpeed.SPEED_FORWARD_2_00_X;
+if (videoPlayer) {
+  (videoPlayer as media.VideoPlayer).setSpeed(speed, (err: BusinessError, result: number) => {
+    if (err) {
+      console.error('Failed to set Speed!');
+    } else {
+      console.info('Succeeded in setting Speed!');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let videoPlayer: media.VideoPlayer | null = null;
+media.createVideoPlayer((error: BusinessError, video: media.VideoPlayer) => {
+  if (video != null) {
+    videoPlayer = video;
+    console.info('Succeeded in creating VideoPlayer');
+  } else {
+    console.error(`Failed to create VideoPlayer, error:${error}`);
+  }
+});
+let speed = media.PlaybackSpeed.SPEED_FORWARD_2_00_X;
+if (videoPlayer) {
+  (videoPlayer as media.VideoPlayer).setSpeed(speed).then((result: number) => {
+    console.info('Succeeded in setting Speed');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to set Speed, error:${error}`);// todo:: error.
+  });
+}
+```
 
 ## setSpeed
 
@@ -658,6 +1744,10 @@ Sets the playback speed. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the playback speed. For details, see [PlaybackSpeed]{ |
 
+**Examples**
+
+See [setSpeed](#setspeed)
+
 ## setVolume
 
 ```TypeScript
@@ -681,7 +1771,48 @@ Sets the volume. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | vol | number | Yes | Relative volume. The value ranges from 0.00 to 1.00. The value **1.00** indicates the maximum volume (100%). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the setting is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the setting is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+audioPlayer.on('volumeChange', () => {    // Set the 'volumeChange' event callback.
+  console.info('audio volumeChange called');
+});
+audioPlayer.setVolume(1);    // Set the volume to 100%.
+```
+
+```TypeScript
+async function test(){
+  let avPlayer = await media.createAVPlayer();
+  let volume: number = 1.0;
+  avPlayer.setVolume(volume);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let vol: number = 0.5;
+videoPlayer.setVolume(vol, (err: BusinessError) => {
+  if (err) {
+    console.error('Failed to set Volume!');
+  } else {
+    console.info('Succeeded in setting Volume!');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let vol: number = 0.5;
+videoPlayer.setVolume(vol).then(() => {
+  console.info('Succeeded in setting Volume');
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error:${error}`);
+});
+```
 
 ## setVolume
 
@@ -713,6 +1844,10 @@ Sets the volume. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+**Examples**
+
+See [setVolume](#setvolume)
+
 ## stop
 
 ```TypeScript
@@ -735,7 +1870,122 @@ Stops video playback. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// asyncallback.
+videoRecorder.stop((err: BusinessError) => {
+  if (err == null) {
+    console.info('stop videorecorder success');
+  } else {
+    console.error('stop videorecorder failed and error is ' + err.message);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// promise.
+videoRecorder.stop().then(() => {
+  console.info('stop videorecorder success');
+}).catch((err: BusinessError) => {
+  console.error('stop videorecorder failed and catch error is ' + err.message);
+});
+```
+
+```TypeScript
+audioPlayer.on('stop', () => {    // Set the 'stop' event callback.
+  console.info('audio stop called');
+});
+audioPlayer.stop();
+```
+
+```TypeScript
+audioRecorder.on('stop', () => {    // Set the 'stop' event callback.
+  console.info('audio recorder stop called');
+});
+audioRecorder.stop();
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, paused, or completed state before proceeding.
+  avPlayer.stop((err: BusinessError) => {
+    if (err) {
+      console.error('Failed to stop,error message is :' + err.message);
+    } else {
+      console.info('Succeeded in stopping');
+    }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, paused, or completed state before proceeding.
+  avPlayer.stop().then(() => {
+    console.info('Succeeded in stopping');
+  }, (err: BusinessError) => {
+    console.error('Failed to stop,error message is :' + err.message);
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avRecorder.stop((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to stop AVRecorder and error is: Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Succeeded in stopping AVRecorder');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avRecorder.stop().then(() => {
+  console.info('Succeeded in stopping AVRecorder');
+}).catch((err: Error) => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to stop AVRecorder and error is: Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.stop((err: BusinessError) => {
+  if (err) {
+    console.error('Failed to stop!');
+  } else {
+    console.info('Succeeded in stopping!');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+videoPlayer.stop().then(() => {
+  console.info('Succeeded in stopping');
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error:${error}`);
+});
+```
 
 ## stop
 
@@ -760,6 +2010,10 @@ Stops video playback. This API uses a promise to return the result.
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+See [stop](#stop)
 
 ## audioInterruptMode
 

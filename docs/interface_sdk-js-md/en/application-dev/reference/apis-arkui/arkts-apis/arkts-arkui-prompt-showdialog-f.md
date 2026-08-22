@@ -30,9 +30,33 @@ Displays the dialog box.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | ShowDialogOptions | Yes | Options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ShowDialogSuccessResponse&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ShowDialogSuccessResponse&gt; | Yes |  |
 
 **Examples**
+
+```TypeScript
+import prompt from '@ohos.prompt'
+prompt.showDialog({
+  title: 'Title Info',
+  message: 'Message Info',
+  buttons: [
+    {
+      text: 'button1',
+      color: '#000000'
+    },
+    {
+      text: 'button2',
+      color: '#000000'
+    }
+  ],
+})
+  .then(data => {
+    console.info('showDialog success, click button: ' + data.index);
+  })
+  .catch((err:Error) => {
+    console.info('showDialog error: ' + err);
+  })
+```
 
 ```TypeScript
 import prompt from '@ohos.prompt'
@@ -91,27 +115,5 @@ Displays the dialog box.
 
 **Examples**
 
-```TypeScript
-import prompt from '@ohos.prompt'
-prompt.showDialog({
-  title: 'Title Info',
-  message: 'Message Info',
-  buttons: [
-    {
-      text: 'button1',
-      color: '#000000'
-    },
-    {
-      text: 'button2',
-      color: '#000000'
-    }
-  ],
-})
-  .then(data => {
-    console.info('showDialog success, click button: ' + data.index);
-  })
-  .catch((err:Error) => {
-    console.info('showDialog error: ' + err);
-  })
-```
+See [showDialog](#showdialog)
 

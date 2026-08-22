@@ -54,6 +54,80 @@ function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void
 
 **示例**
 
+ArkTS-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
+inputMethod.switchInputMethod(currentIme, (err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to switchInputMethod, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in switching input method.');
+  } else {
+    console.error('Failed to switch input method.');
+  }
+});
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let currentIme = inputMethod.getCurrentInputMethod();
+
+inputMethod.switchInputMethod(currentIme, (err: BusinessError | null, result: boolean | undefined) => {
+  if (err) {
+    console.error(`Failed to switchInputMethod, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in switching inputmethod.');
+  } else {
+    console.error('Failed to switchInputMethod.');
+  }
+});
+```
+
+ArkTS-Dyn示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
+inputMethod.switchInputMethod(currentIme).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in switching input method.');
+  } else {
+    console.error('Failed to switch input method.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to switchInputMethod, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let currentIme = inputMethod.getCurrentInputMethod();
+
+inputMethod.switchInputMethod(currentIme).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in switching inputmethod.');
+  } else {
+    console.error('Failed to switchInputMethod.');
+  }
+}).catch((err: BusinessError): void=> {
+  console.error(`Failed to switchInputMethod, code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ```TypeScript
 import { InputMethodSubtype } from '@kit.IMEKit';
 

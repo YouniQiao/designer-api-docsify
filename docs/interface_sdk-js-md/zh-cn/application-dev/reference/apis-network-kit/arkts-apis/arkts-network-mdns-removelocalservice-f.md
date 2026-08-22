@@ -70,6 +70,30 @@ mdns.removeLocalService(context, localServiceInfo, (error: BusinessError, data: 
 });
 ```
 
+Stage模型示例：
+
+```TypeScript
+import { mdns } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+
+let localServiceInfo: mdns.LocalServiceInfo = {
+  serviceType: "_print._tcp",
+  serviceName: "servicename",
+  port: 5555,
+  host: {
+  address: "10.14.**.***",
+  },
+  serviceAttribute: [{key: "111", value: [1]}]
+}
+
+mdns.removeLocalService(context, localServiceInfo).then((data: mdns.LocalServiceInfo) => {
+  console.info(JSON.stringify(data));
+});
+```
+
 
 ## removeLocalService
 
@@ -113,27 +137,5 @@ function removeLocalService(context: Context, serviceInfo: LocalServiceInfo): Pr
 
 **示例**
 
-Stage模型示例：
-
-```TypeScript
-import { mdns } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-
-let localServiceInfo: mdns.LocalServiceInfo = {
-  serviceType: "_print._tcp",
-  serviceName: "servicename",
-  port: 5555,
-  host: {
-  address: "10.14.**.***",
-  },
-  serviceAttribute: [{key: "111", value: [1]}]
-}
-
-mdns.removeLocalService(context, localServiceInfo).then((data: mdns.LocalServiceInfo) => {
-  console.info(JSON.stringify(data));
-});
-```
+参见 [removeLocalService](#removelocalservice)
 

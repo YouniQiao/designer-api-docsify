@@ -92,7 +92,7 @@ Obtains the selected track by the specified media type. This API can be called o
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| trackType | [MediaType](arkts-media-multimediamedia-mediatype-e.md) | 是 | specified media Type, see MediaType. |
+| trackType | [MediaType](arkts-media-multimedia-media-mediatype-e.md) | 是 | specified media Type, see MediaType. |
 
 **返回值：**
 
@@ -109,4 +109,23 @@ Obtains the selected track by the specified media type. This API can be called o
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 | [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function test(){
+  let avPlayer = await media.createAVPlayer();
+  // 此处仅为示意，实际开发中需要在stateChange事件成功触发至prepared、playing或paused状态后才能调用。
+  let myTrackId : number;
+  let trackType: media.MediaType = media.MediaType.MEDIA_TYPE_AUD;
+  avPlayer.getCurrentTrack(trackType).then((trackId: number) => {
+    console.info('Succeeded in getting CurrentTrack');
+    myTrackId = trackId;
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to get CurrentTrack.Code:${error.code},message:${error.message}`);
+  });
+}
+```
 

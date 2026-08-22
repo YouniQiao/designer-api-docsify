@@ -34,6 +34,24 @@ function queryContacts(callback: AsyncCallback<Array<Contact>>): void
 
 **示例**
 
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context。
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContacts(context, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
+});
+```
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { contact } from '@kit.ContactsKit';
@@ -46,6 +64,162 @@ contact.queryContacts((err: BusinessError, data) => {
   }
   console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
 });
+```
+
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context。
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContacts(context, {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+// 异步回调查询联系人
+contact.queryContacts({
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
+});
+```
+
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context。
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContacts(context, {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+// 异步回调查询联系人
+contact.queryContacts({
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
+});
+```
+
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context。
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContacts(context, {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+// 异步回调查询联系人
+contact.queryContacts({
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
+});
+```
+
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context。
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let promise = contact.queryContacts(context, {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+});
+promise.then((data) => {
+  console.info(`Succeeded in querying Contacts. data: ${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+  // 根据holder和attrs查询所有联系人
+  let promise = contact.queryContacts({
+    holderId: 1,
+    bundleName: '',
+    displayName: ''
+  }, {
+    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+  });
+  promise.then((data) => {
+    console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
+  });
 ```
 
 
@@ -81,23 +255,7 @@ function queryContacts(context: Context, callback: AsyncCallback<Array<Contact>>
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContacts(context, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContacts](#querycontacts)
 
 
 ## queryContacts
@@ -129,23 +287,7 @@ function queryContacts(holder: Holder, callback: AsyncCallback<Array<Contact>>):
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-// 异步回调查询联系人
-contact.queryContacts({
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContacts](#querycontacts)
 
 
 ## queryContacts
@@ -181,27 +323,7 @@ function queryContacts(context: Context, holder: Holder, callback: AsyncCallback
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContacts(context, {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContacts](#querycontacts)
 
 
 ## queryContacts
@@ -233,21 +355,7 @@ function queryContacts(attrs: ContactAttributes, callback: AsyncCallback<Array<C
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-// 异步回调查询联系人
-contact.queryContacts({
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContacts](#querycontacts)
 
 
 ## queryContacts
@@ -283,25 +391,7 @@ function queryContacts(context: Context, attrs: ContactAttributes, callback: Asy
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContacts(context, {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContacts](#querycontacts)
 
 
 ## queryContacts
@@ -334,25 +424,7 @@ function queryContacts(holder: Holder, attrs: ContactAttributes, callback: Async
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-// 异步回调查询联系人
-contact.queryContacts({
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContacts](#querycontacts)
 
 
 ## queryContacts
@@ -389,29 +461,7 @@ function queryContacts(context: Context, holder: Holder, attrs: ContactAttribute
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContacts(context, {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContacts](#querycontacts)
 
 
 ## queryContacts
@@ -449,21 +499,7 @@ function queryContacts(holder?: Holder, attrs?: ContactAttributes): Promise<Arra
 
 **示例**
 
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-  // 根据holder和attrs查询所有联系人
-  let promise = contact.queryContacts({
-    holderId: 1,
-    bundleName: '',
-    displayName: ''
-  }, {
-    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-  });
-  promise.then((data) => {
-    console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
-  });
-```
+参见 [queryContacts](#querycontacts)
 
 
 ## queryContacts
@@ -505,23 +541,5 @@ function queryContacts(context: Context, holder?: Holder, attrs?: ContactAttribu
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let promise = contact.queryContacts(context, {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-});
-promise.then((data) => {
-  console.info(`Succeeded in querying Contacts. data: ${JSON.stringify(data)}`);
-});
-```
+参见 [queryContacts](#querycontacts)
 

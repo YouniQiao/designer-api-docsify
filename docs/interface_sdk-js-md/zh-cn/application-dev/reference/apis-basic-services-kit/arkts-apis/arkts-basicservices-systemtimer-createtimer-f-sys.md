@@ -89,6 +89,48 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: systemTimer.TimerOptions = {
+  type: systemTimer.TIMER_TYPE_REALTIME,
+  repeat:false
+};
+try {
+  systemTimer.createTimer(options).then((timerId: number) => {
+    console.info(`Succeeded in creating timer. timerId: ${timerId}`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to create timer. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to create timer. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: systemTimer.TimerOptions = {
+  type: systemTimer.TIMER_TYPE_REALTIME,
+  repeat:false
+};
+try {
+  systemTimer.createTimer(options).then((timerId: long) => {
+    console.info(`Succeeded in creating timer. timerId: ${timerId}`);
+  }).catch((error: Error) => {
+    console.error(`Failed to create timer. message: ${error.message}, code: ${error.code}`);
+  });
+} catch(e) {
+  let error = e as BusinessError;
+  console.error(`Failed to create timer. message: ${error.message}, code: ${error.code}`);
+}
+```
+
 
 ## createTimer
 
@@ -132,45 +174,5 @@ function createTimer(options: TimerOptions): Promise<long>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: systemTimer.TimerOptions = {
-  type: systemTimer.TIMER_TYPE_REALTIME,
-  repeat:false
-};
-try {
-  systemTimer.createTimer(options).then((timerId: number) => {
-    console.info(`Succeeded in creating timer. timerId: ${timerId}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to create timer. Code: ${error.code}, message: ${error.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to create timer. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: systemTimer.TimerOptions = {
-  type: systemTimer.TIMER_TYPE_REALTIME,
-  repeat:false
-};
-try {
-  systemTimer.createTimer(options).then((timerId: long) => {
-    console.info(`Succeeded in creating timer. timerId: ${timerId}`);
-  }).catch((error: Error) => {
-    console.error(`Failed to create timer. message: ${error.message}, code: ${error.code}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.error(`Failed to create timer. message: ${error.message}, code: ${error.code}`);
-}
-```
+参见 [createTimer](#createtimer)
 

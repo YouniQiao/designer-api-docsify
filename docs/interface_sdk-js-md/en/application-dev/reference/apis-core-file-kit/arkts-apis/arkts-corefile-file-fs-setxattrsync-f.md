@@ -45,3 +45,20 @@ Sets an extended attribute of a file or directory.
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let attrKey = "user.comment";
+let attrValue = "Test file.";
+
+try {
+  fs.setxattrSync(filePath, attrKey, attrValue);
+  console.info("Set extended attribute successfully.");
+} catch (err) {
+  console.error("Failed to set extended attribute with error message: " + err.message + ", error code: " + err.code);
+}
+```
+

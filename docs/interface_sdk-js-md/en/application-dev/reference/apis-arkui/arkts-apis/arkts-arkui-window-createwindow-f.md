@@ -36,7 +36,7 @@ In freeform window mode, the child window created uses an immersive layout when 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | Configuration | Yes | Parameters for window creation. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the window created. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the window created. |
 
 **Error codes:**
 
@@ -77,6 +77,32 @@ export default class EntryAbility extends UIAbility {
         windowClass = data;
         console.info('Succeeded in creating the window. Data: ' + JSON.stringify(data));
         windowClass.resize(500, 1000);
+      });
+    } catch (exception) {
+      console.error(`Failed to create the window. Cause code: ${exception.code}, message: ${exception.message}`);
+    }
+  }
+}
+```
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    let config: window.Configuration = {
+      name: "test",
+      windowType: window.WindowType.TYPE_DIALOG,
+      ctx: this.context
+    };
+    try {
+      window.createWindow(config).then((value:window.Window) => {
+        console.info('Succeeded in creating the window. Data: ' + JSON.stringify(value));
+        value.resize(500, 1000);
+      }).catch((err:BusinessError)=> {
+        console.error(`Failed to create the window. Cause code: ${err.code}, message: ${err.message}`);
       });
     } catch (exception) {
       console.error(`Failed to create the window. Cause code: ${exception.code}, message: ${exception.message}`);
@@ -137,29 +163,5 @@ In freeform window mode, the child window created uses an immersive layout when 
 
 **Examples**
 
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    let config: window.Configuration = {
-      name: "test",
-      windowType: window.WindowType.TYPE_DIALOG,
-      ctx: this.context
-    };
-    try {
-      window.createWindow(config).then((value:window.Window) => {
-        console.info('Succeeded in creating the window. Data: ' + JSON.stringify(value));
-        value.resize(500, 1000);
-      }).catch((err:BusinessError)=> {
-        console.error(`Failed to create the window. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to create the window. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
+See [createWindow](#createwindow)
 

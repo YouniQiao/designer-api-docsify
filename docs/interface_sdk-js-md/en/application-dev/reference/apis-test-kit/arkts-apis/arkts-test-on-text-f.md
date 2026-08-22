@@ -34,3 +34,19 @@ Specifies the text for the target Component.
 | --- | --- |
 | [On](arkts-test-uitest-on-c.md) | this { |
 
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.text('123'); // Use the static constructor ON to create an On object and specify the text attribute of the target component.
+```
+
+```TypeScript
+// xxx.test.ets
+import { BY, By } from '@kit.TestKit';
+
+let by: By = BY.text('123'); // Use the static constructor BY to create a By object and specify the text attribute of the target component.
+```
+

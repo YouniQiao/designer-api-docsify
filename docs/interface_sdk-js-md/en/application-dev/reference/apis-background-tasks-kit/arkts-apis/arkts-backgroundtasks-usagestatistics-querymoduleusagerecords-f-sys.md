@@ -29,7 +29,7 @@ Queries recently module usage records with maxNum.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | maxNum | int | Yes | Indicates max record number in result, max value is 1000, default value is 1000. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;HapModuleInfo&gt;&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the [HapModuleInfo](arkts-backgroundtasks-usagestatistics-hapmoduleinfo-i-sys.md) object Array containing the usage data of the modules. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;HapModuleInfo&gt;&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the [HapModuleInfo](arkts-backgroundtasks-usagestatistics-hapmoduleinfo-i-sys.md) object Array containing the usage data of the modules. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -47,6 +47,51 @@ Queries recently module usage records with maxNum.
 | [10000007](../errorcode-DeviceUsageStatistics.md#10000007-time-operation-failure) | Failed to get the system time. |
 
 **Examples**
+
+```TypeScript
+// Invocation when maxNum is not passed
+import { BusinessError } from '@kit.BasicServicesKit';
+
+usageStatistics.queryModuleUsageRecords().then((res: Array<usageStatistics.HapModuleInfo>) => {
+  console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise succeeded');
+  for (let i = 0; i < res.length; i++) {
+    console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise number : ' + (i + 1));
+    console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise result ' + JSON.stringify(res[i]));
+  }
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE queryModuleUsageRecords promise failed. code is: ' + err.code + ',message is: ' + err.message);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+usageStatistics.queryModuleUsageRecords((err: BusinessError, res: Array<usageStatistics.HapModuleInfo>) => {
+  if(err) {
+    console.error('BUNDLE_ACTIVE queryModuleUsageRecords callback failed. code is: ' + err.code + ',message is: ' + err.message);
+  } else {
+    console.info('BUNDLE_ACTIVE queryModuleUsageRecords callback succeeded.');
+    for (let i = 0; i < res.length; i++) {
+      console.info('BUNDLE_ACTIVE queryModuleUsageRecords callback number : ' + (i + 1));
+      console.info('BUNDLE_ACTIVE queryModuleUsageRecords callback result ' + JSON.stringify(res[i]));
+    }
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+usageStatistics.queryModuleUsageRecords(1000).then((res: Array<usageStatistics.HapModuleInfo>) => {
+  console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise succeeded');
+  for (let i = 0; i < res.length; i++) {
+    console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise number : ' + (i + 1));
+    console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise result ' + JSON.stringify(res[i]));
+  }
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE queryModuleUsageRecords promise failed. code is: ' + err.code + ',message is: ' + err.message);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -112,19 +157,7 @@ Queries recently module usage records with maxNum.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-usageStatistics.queryModuleUsageRecords(1000).then((res: Array<usageStatistics.HapModuleInfo>) => {
-  console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise succeeded');
-  for (let i = 0; i < res.length; i++) {
-    console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise number : ' + (i + 1));
-    console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise result ' + JSON.stringify(res[i]));
-  }
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryModuleUsageRecords promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
+See [queryModuleUsageRecords](#querymoduleusagerecords)
 
 
 ## queryModuleUsageRecords
@@ -149,7 +182,7 @@ Queries recently module usage records.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;HapModuleInfo&gt;&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the [HapModuleInfo](arkts-backgroundtasks-usagestatistics-hapmoduleinfo-i-sys.md) object Array containing the usage data of the modules. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;HapModuleInfo&gt;&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the [HapModuleInfo](arkts-backgroundtasks-usagestatistics-hapmoduleinfo-i-sys.md) object Array containing the usage data of the modules. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -168,21 +201,7 @@ Queries recently module usage records.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-usageStatistics.queryModuleUsageRecords((err: BusinessError, res: Array<usageStatistics.HapModuleInfo>) => {
-  if(err) {
-    console.error('BUNDLE_ACTIVE queryModuleUsageRecords callback failed. code is: ' + err.code + ',message is: ' + err.message);
-  } else {
-    console.info('BUNDLE_ACTIVE queryModuleUsageRecords callback succeeded.');
-    for (let i = 0; i < res.length; i++) {
-      console.info('BUNDLE_ACTIVE queryModuleUsageRecords callback number : ' + (i + 1));
-      console.info('BUNDLE_ACTIVE queryModuleUsageRecords callback result ' + JSON.stringify(res[i]));
-    }
-  }
-});
-```
+See [queryModuleUsageRecords](#querymoduleusagerecords)
 
 
 ## queryModuleUsageRecords
@@ -226,18 +245,5 @@ Queries recently module usage records.
 
 **Examples**
 
-```TypeScript
-// Invocation when maxNum is not passed
-import { BusinessError } from '@kit.BasicServicesKit';
-
-usageStatistics.queryModuleUsageRecords().then((res: Array<usageStatistics.HapModuleInfo>) => {
-  console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise succeeded');
-  for (let i = 0; i < res.length; i++) {
-    console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise number : ' + (i + 1));
-    console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise result ' + JSON.stringify(res[i]));
-  }
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryModuleUsageRecords promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
+See [queryModuleUsageRecords](#querymoduleusagerecords)
 

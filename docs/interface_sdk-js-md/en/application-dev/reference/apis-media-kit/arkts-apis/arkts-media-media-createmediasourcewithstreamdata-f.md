@@ -71,3 +71,7 @@ Creates a multi-bitrate media source for streaming media. Currently, only the HT
 | --- | --- |
 | [MediaSource](arkts-media-media-mediasource-i.md) \| undefined | MediaSource instance if the operation is successful; returns undefined otherwise. |
 
+**Examples**
+
+See [createMediaSourceWithStreamData](#createmediasourcewithstreamdata)
+

@@ -24,7 +24,7 @@ Obtains the default slot ID of the SIM card used to send SMS messages. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Examples**
 
@@ -34,6 +34,17 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 sms.getDefaultSmsSlotId((err: BusinessError, data: number) => {
     console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sms.getDefaultSmsSlotId().then((data: number) => {
+    console.info(`getDefaultSmsSlotId success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getDefaultSmsSlotId failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -60,14 +71,5 @@ Obtains the default slot ID of the SIM card used to send SMS messages. This API 
 
 **Examples**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sms.getDefaultSmsSlotId().then((data: number) => {
-    console.info(`getDefaultSmsSlotId success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getDefaultSmsSlotId failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getDefaultSmsSlotId](#getdefaultsmsslotid)
 

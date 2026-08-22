@@ -35,6 +35,12 @@ export function getSystemLanguage(): string
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
 
+let systemLanguage: string = i18n.System.getSystemLanguage(); // 如果系统语言为简体中文，systemLanguage = 'zh-Hans'
+```
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
 let systemLanguage: string = i18n.getSystemLanguage();
 ```
 

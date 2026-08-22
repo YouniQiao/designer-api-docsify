@@ -25,10 +25,10 @@ import { print } from '@kit.BasicServicesKit';
 | [getAddedPrinters](arkts-basicservices-print-getaddedprinters-f.md) | Obtains the list of printers added to the system. This API uses a promise to return the result. |
 | [getPrinterInformationById](arkts-basicservices-print-getprinterinformationbyid-f.md) | Obtains printer information based on the printer ID. This API uses a promise to return the result. |
 | [notifyWatermarkComplete](arkts-basicservices-print-notifywatermarkcomplete-f.md) | Notify watermark complete. |
-| [offPrinterChange](arkts-basicservices-print-offprinterchange-f.md) | Unregister event callback for the change of printer. |
 | [off_printerChange](arkts-basicservices-print-offprinterchange-f.md) | Unregisters the listener for printer state change events. This API uses a callback to return the result. |
-| [onPrinterChange](arkts-basicservices-print-onprinterchange-f.md) | Register event callback for the change of printer. |
+| [offPrinterChange](arkts-basicservices-print-offprinterchange-f.md) | Unregister event callback for the change of printer. |
 | [on_printerChange](arkts-basicservices-print-onprinterchange-f.md) | Registers a listener for the printer change events. This API uses a callback to return the result. |
+| [onPrinterChange](arkts-basicservices-print-onprinterchange-f.md) | Register event callback for the change of printer. |
 | [print](arkts-basicservices-print-f.md) | Prints files. This API uses an asynchronous callback to return the result. To start the system print preview page, call the [print](arkts-basicservices-print-f.md) API and pass in context. |
 | [print](arkts-basicservices-print-f.md) | Prints files. This API uses a promise to return the result. To start the system print preview page, call the [print](arkts-basicservices-print-f.md) API and pass in context. |
 | [print](arkts-basicservices-print-f.md) | Prints files. This API uses an asynchronous callback to return the result. |
@@ -45,9 +45,9 @@ import { print } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [addPrinterToCups](arkts-basicservices-print-addprintertocups-f-sys.md) | Add a printer to cups. |
 | [addPrinters](arkts-basicservices-print-addprinters-f-sys.md) | Adds printers. This API uses an asynchronous callback to return the result. |
 | [addPrinters](arkts-basicservices-print-addprinters-f-sys.md) | Adds printers. This API uses a promise to return the result. |
+| [addPrinterToCups](arkts-basicservices-print-addprintertocups-f-sys.md) | Add a printer to cups. |
 | [analyzePrintEvents](arkts-basicservices-print-analyzeprintevents-f-sys.md) | Analyze print events. |
 | [authPrintJob](arkts-basicservices-print-authprintjob-f-sys.md) | Authenticate a print job. |
 | [authSmbDeviceAsRegisteredUser](arkts-basicservices-print-authsmbdeviceasregistereduser-f-sys.md) | Authenticate SMB device as registered user and get available printers. |
@@ -73,34 +73,34 @@ import { print } from '@kit.BasicServicesKit';
 | [notifyPrintServiceSpoolerCloseForCancelled](arkts-basicservices-print-notifyprintservicespoolercloseforcancelled-f-sys.md) | Notify print service the information. |
 | [notifyPrintServiceSpoolerCloseForStarted](arkts-basicservices-print-notifyprintservicespoolercloseforstarted-f-sys.md) | Notify print service the information. |
 | [notifyPrintServiceSpoolerCloseForStarted](arkts-basicservices-print-notifyprintservicespoolercloseforstarted-f-sys.md) | Notify print service the information. |
+| [off_extInfoChange](arkts-basicservices-print-offextinfochange-f-sys.md) | Unregisters the listener for printer extension information change events. This API uses a callback to return the result. |
+| [off_jobStateChange](arkts-basicservices-print-offjobstatechange-f-sys.md) | Unregisters the listener for print job state change events. This API uses a callback to return the result. |
+| [off_printerStateChange](arkts-basicservices-print-offprinterstatechange-f-sys.md) | Unregisters the listener for printer state change events. This API uses a callback to return the result. |
 | [offExtInfoChange](arkts-basicservices-print-offextinfochange-f-sys.md) | Unregister event callback for the information change of print extension. |
 | [offJobStateChange](arkts-basicservices-print-offjobstatechange-f-sys.md) | Unregister event callback for the state change of print job. |
 | [offPrinterInfoQuery](arkts-basicservices-print-offprinterinfoquery-f-sys.md) | Unregister event callback for the printer info queried. |
 | [offPrinterStateChange](arkts-basicservices-print-offprinterstatechange-f-sys.md) | Unregister event callback for the state change of printer. |
-| [off_extInfoChange](arkts-basicservices-print-offextinfochange-f-sys.md) | Unregisters the listener for printer extension information change events. This API uses a callback to return the result. |
-| [off_jobStateChange](arkts-basicservices-print-offjobstatechange-f-sys.md) | Unregisters the listener for print job state change events. This API uses a callback to return the result. |
-| [off_printerStateChange](arkts-basicservices-print-offprinterstatechange-f-sys.md) | Unregisters the listener for printer state change events. This API uses a callback to return the result. |
+| [on_extInfoChange](arkts-basicservices-print-onextinfochange-f-sys.md) | Registers a listener for printer extension information change events. This API uses a callback to return the result. |
+| [on_jobStateChange](arkts-basicservices-print-onjobstatechange-f-sys.md) | Registers a listener for print job state change events. This API uses a callback to return the result. |
+| [on_printerStateChange](arkts-basicservices-print-onprinterstatechange-f-sys.md) | Registers a listener for printer state change events. This API uses a callback to return the result. |
 | [onExtInfoChange](arkts-basicservices-print-onextinfochange-f-sys.md) | Register event callback for the information change of print extension. |
 | [onJobStateChange](arkts-basicservices-print-onjobstatechange-f-sys.md) | Register event callback for the state change of print job. |
 | [onPrinterInfoQuery](arkts-basicservices-print-onprinterinfoquery-f-sys.md) | Register event callback for the printer info queried. |
 | [onPrinterStateChange](arkts-basicservices-print-onprinterstatechange-f-sys.md) | Register event callback for the state change of printer. |
-| [on_extInfoChange](arkts-basicservices-print-onextinfochange-f-sys.md) | Registers a listener for printer extension information change events. This API uses a callback to return the result. |
-| [on_jobStateChange](arkts-basicservices-print-onjobstatechange-f-sys.md) | Registers a listener for print job state change events. This API uses a callback to return the result. |
-| [on_printerStateChange](arkts-basicservices-print-onprinterstatechange-f-sys.md) | Registers a listener for printer state change events. This API uses a callback to return the result. |
 | [queryAllActivePrintJobs](arkts-basicservices-print-queryallactiveprintjobs-f-sys.md) | Queries all active print jobs. This API uses a promise to return the result. |
-| [queryAllPrintJobs](arkts-basicservices-print-queryallprintjobs-f-sys.md) | Queries all print jobs. This API uses an asynchronous callback to return the result. |
-| [queryAllPrintJobs](arkts-basicservices-print-queryallprintjobs-f-sys.md) | Queries all print jobs. This API uses a promise to return the result. |
 | [queryAllPrinterExtensionInfos](arkts-basicservices-print-queryallprinterextensioninfos-f-sys.md) | Obtains the information of all installed printer extensions. This API uses an asynchronous callback to return the result. |
 | [queryAllPrinterExtensionInfos](arkts-basicservices-print-queryallprinterextensioninfos-f-sys.md) | Obtains the information of all installed printer extensions. This API uses a promise to return the result. |
 | [queryAllPrinterPpds](arkts-basicservices-print-queryallprinterppds-f-sys.md) | Query all printer ppds. |
-| [queryPrintJobById](arkts-basicservices-print-queryprintjobbyid-f-sys.md) | Queries a print job by ID. This API uses an asynchronous callback to return the result. |
-| [queryPrintJobById](arkts-basicservices-print-queryprintjobbyid-f-sys.md) | Queries a print job by ID. This API uses a promise to return the result. |
-| [queryPrintJobList](arkts-basicservices-print-queryprintjoblist-f-sys.md) | Queries all print jobs. This API uses an asynchronous callback to return the result. |
-| [queryPrintJobList](arkts-basicservices-print-queryprintjoblist-f-sys.md) | Queries all print jobs. This API uses a promise to return the result. |
+| [queryAllPrintJobs](arkts-basicservices-print-queryallprintjobs-f-sys.md) | Queries all print jobs. This API uses an asynchronous callback to return the result. |
+| [queryAllPrintJobs](arkts-basicservices-print-queryallprintjobs-f-sys.md) | Queries all print jobs. This API uses a promise to return the result. |
 | [queryPrinterCapability](arkts-basicservices-print-queryprintercapability-f-sys.md) | Queries the printer capability. This API uses an asynchronous callback to return the result. |
 | [queryPrinterCapability](arkts-basicservices-print-queryprintercapability-f-sys.md) | Queries the printer capability. This API uses a promise to return the result. |
 | [queryPrinterCapabilityByUri](arkts-basicservices-print-queryprintercapabilitybyuri-f-sys.md) | Query printer capabilityies by printer uri. |
 | [queryPrinterInfoByIp](arkts-basicservices-print-queryprinterinfobyip-f-sys.md) | Query printer info by ip. |
+| [queryPrintJobById](arkts-basicservices-print-queryprintjobbyid-f-sys.md) | Queries a print job by ID. This API uses an asynchronous callback to return the result. |
+| [queryPrintJobById](arkts-basicservices-print-queryprintjobbyid-f-sys.md) | Queries a print job by ID. This API uses a promise to return the result. |
+| [queryPrintJobList](arkts-basicservices-print-queryprintjoblist-f-sys.md) | Queries all print jobs. This API uses an asynchronous callback to return the result. |
+| [queryPrintJobList](arkts-basicservices-print-queryprintjoblist-f-sys.md) | Queries all print jobs. This API uses a promise to return the result. |
 | [queryRecommendDriversById](arkts-basicservices-print-queryrecommenddriversbyid-f-sys.md) | Query recommend printer drivers by printer ID. |
 | [removePrinters](arkts-basicservices-print-removeprinters-f-sys.md) | Removes printers. This API uses an asynchronous callback to return the result. |
 | [removePrinters](arkts-basicservices-print-removeprinters-f-sys.md) | Removes printers. This API uses a promise to return the result. |
@@ -119,13 +119,13 @@ import { print } from '@kit.BasicServicesKit';
 | [stopDiscoverPrinter](arkts-basicservices-print-stopdiscoverprinter-f-sys.md) | Stops discovering printers. This API uses a promise to return the result. |
 | [updateExtensionInfo](arkts-basicservices-print-updateextensioninfo-f-sys.md) | Updates the printer extension information. This API uses an asynchronous callback to return the result. |
 | [updateExtensionInfo](arkts-basicservices-print-updateextensioninfo-f-sys.md) | Updates the printer extension information. This API uses a promise to return the result. |
-| [updatePrintJobState](arkts-basicservices-print-updateprintjobstate-f-sys.md) | Updates the print job state. This API uses an asynchronous callback to return the result. |
-| [updatePrintJobState](arkts-basicservices-print-updateprintjobstate-f-sys.md) | Updates the print job state. This API uses a promise to return the result. |
 | [updatePrinterInformation](arkts-basicservices-print-updateprinterinformation-f-sys.md) | Updates the information of a printer in the system. This API uses a promise to return the result. Currently, only the **alias** and **options** fields of [PrinterInformation](arkts-basicservices-print-printerinformation-i.md) can be updated. |
-| [updatePrinterState](arkts-basicservices-print-updateprinterstate-f-sys.md) | Updates the printer state. This API uses an asynchronous callback to return the result. |
-| [updatePrinterState](arkts-basicservices-print-updateprinterstate-f-sys.md) | Updates the printer state. This API uses a promise to return the result. |
 | [updatePrinters](arkts-basicservices-print-updateprinters-f-sys.md) | Updates information about the specified printers. This API uses an asynchronous callback to return the result. |
 | [updatePrinters](arkts-basicservices-print-updateprinters-f-sys.md) | Updates information about the specified printers. This API uses a promise to return the result. |
+| [updatePrinterState](arkts-basicservices-print-updateprinterstate-f-sys.md) | Updates the printer state. This API uses an asynchronous callback to return the result. |
+| [updatePrinterState](arkts-basicservices-print-updateprinterstate-f-sys.md) | Updates the printer state. This API uses a promise to return the result. |
+| [updatePrintJobState](arkts-basicservices-print-updateprintjobstate-f-sys.md) | Updates the print job state. This API uses an asynchronous callback to return the result. |
+| [updatePrintJobState](arkts-basicservices-print-updateprintjobstate-f-sys.md) | Updates the print job state. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -135,14 +135,14 @@ import { print } from '@kit.BasicServicesKit';
 | [PpdInfo](arkts-basicservices-print-ppdinfo-i.md) | defines ppd info. |
 | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | Defines the print attributes. |
 | [PrintDocumentAdapter](arkts-basicservices-print-printdocumentadapter-i.md) | Provides information about the document to print. This API must be implemented by a third-party application. |
+| [PrinterCapabilities](arkts-basicservices-print-printercapabilities-i.md) | Defines the printer capabilities. |
+| [PrinterInformation](arkts-basicservices-print-printerinformation-i.md) | Defines the printer information. |
+| [PrinterPreferences](arkts-basicservices-print-printerpreferences-i.md) | Defines the printer preferences. |
 | [PrintJob](arkts-basicservices-print-printjob-i.md) | Defines a print job. |
 | [PrintJobData](arkts-basicservices-print-printjobdata-i.md) | Defines a print job. |
 | [PrintPageRange](arkts-basicservices-print-printpagerange-i.md) | Defines the print range. |
 | [PrintPageSize](arkts-basicservices-print-printpagesize-i.md) | Defines the size of the printed page. |
 | [PrintTask](arkts-basicservices-print-printtask-i.md) | Implements event listeners for print jobs. |
-| [PrinterCapabilities](arkts-basicservices-print-printercapabilities-i.md) | Defines the printer capabilities. |
-| [PrinterInformation](arkts-basicservices-print-printerinformation-i.md) | Defines the printer information. |
-| [PrinterPreferences](arkts-basicservices-print-printerpreferences-i.md) | Defines the printer preferences. |
 | [SharedHost](arkts-basicservices-print-sharedhost-i.md) | Interface defining shared device information |
 
 <!--Del-->
@@ -151,13 +151,13 @@ import { print } from '@kit.BasicServicesKit';
 | Name | Description |
 | --- | --- |
 | [PreviewAttribute](arkts-basicservices-print-previewattribute-i-sys.md) | Defines the print preview attributes. |
-| [PrintJob](arkts-basicservices-print-printjob-i-sys.md) | Defines a print job. |
-| [PrintMargin](arkts-basicservices-print-printmargin-i-sys.md) | Defines the page margins for printing. |
-| [PrintResolution](arkts-basicservices-print-printresolution-i-sys.md) | Defines the resolution for printing. |
 | [PrinterCapability](arkts-basicservices-print-printercapability-i-sys.md) | Defines the printer capabilities. |
 | [PrinterExtensionInfo](arkts-basicservices-print-printerextensioninfo-i-sys.md) | Provides the printer extension information. |
 | [PrinterInfo](arkts-basicservices-print-printerinfo-i-sys.md) | Provides the printer information. |
 | [PrinterRange](arkts-basicservices-print-printerrange-i-sys.md) | Defines the print range. |
+| [PrintJob](arkts-basicservices-print-printjob-i-sys.md) | Defines a print job. |
+| [PrintMargin](arkts-basicservices-print-printmargin-i-sys.md) | Defines the page margins for printing. |
+| [PrintResolution](arkts-basicservices-print-printresolution-i-sys.md) | Defines the resolution for printing. |
 <!--DelEnd-->
 
 ### Enums
@@ -172,16 +172,16 @@ import { print } from '@kit.BasicServicesKit';
 | [PrintDocumentAdapterState](arkts-basicservices-print-printdocumentadapterstate-e.md) | Enumerates the print job states. |
 | [PrintDocumentFormat](arkts-basicservices-print-printdocumentformat-e.md) | Enumerates the data formats. |
 | [PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md) | Enumerates the duplex modes. |
+| [PrinterEvent](arkts-basicservices-print-printerevent-e.md) | Enumerates printer-related events. |
 | [PrintErrorCode](arkts-basicservices-print-printerrorcode-e.md) | Enumerates the print error codes. |
+| [PrinterState](arkts-basicservices-print-printerstate-e.md) | Enumerates the printer states. |
+| [PrinterStatus](arkts-basicservices-print-printerstatus-e.md) | Enumerates the printer states. |
 | [PrintFileCreationState](arkts-basicservices-print-printfilecreationstate-e.md) | Enumerates the print file creation status. |
 | [PrintJobState](arkts-basicservices-print-printjobstate-e.md) | Enumerates the print job states. |
 | [PrintJobSubState](arkts-basicservices-print-printjobsubstate-e.md) | Enumerates the print job substates. |
 | [PrintOrientationMode](arkts-basicservices-print-printorientationmode-e.md) | Enumerates the print directions. |
 | [PrintPageType](arkts-basicservices-print-printpagetype-e.md) | Enumerates the print page types. |
 | [PrintQuality](arkts-basicservices-print-printquality-e.md) | Enumerates the print qualities. |
-| [PrinterEvent](arkts-basicservices-print-printerevent-e.md) | Enumerates printer-related events. |
-| [PrinterState](arkts-basicservices-print-printerstate-e.md) | Enumerates the printer states. |
-| [PrinterStatus](arkts-basicservices-print-printerstatus-e.md) | Enumerates the printer states. |
 | [WatermarkHandleResult](arkts-basicservices-print-watermarkhandleresult-e.md) | Watermark handling result. |
 
 ### Types
@@ -197,8 +197,8 @@ import { print } from '@kit.BasicServicesKit';
 | Name | Description |
 | --- | --- |
 | [ExtInfoChangeCallback](arkts-basicservices-print-extinfochangecallback-t-sys.md) | Defines the callback type used in registering to listen for extension change. The value of extensionId indicates the print extension id. The value of info indicates the connect info. |
-| [PrintJobStateChangeCallback](arkts-basicservices-print-printjobstatechangecallback-t-sys.md) | Defines the callback type used in registering to listen for PrintJobState. The value of state indicates the state of print job. The value of job indicates the latest print job info. |
 | [PrinterInfoQueryCallback](arkts-basicservices-print-printerinfoquerycallback-t-sys.md) | Defines the callback type used in registering to listen for printerInfoQuery event. The value of printerInfo indicates the printer info. The value of ppdInfo indicates all the printer ppd info. |
 | [PrinterStateChangeCallback](arkts-basicservices-print-printerstatechangecallback-t-sys.md) | Defines the callback type used in registering to listen for PrinterState. The value of state indicates the state of printer. The value of info indicates the latest printer info. |
+| [PrintJobStateChangeCallback](arkts-basicservices-print-printjobstatechangecallback-t-sys.md) | Defines the callback type used in registering to listen for PrintJobState. The value of state indicates the state of print job. The value of job indicates the latest print job info. |
 <!--DelEnd-->
 

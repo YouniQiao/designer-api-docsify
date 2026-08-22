@@ -36,6 +36,153 @@ cancel(): void
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+  download: webview.WebDownloadItem = new webview.WebDownloadItem();
+  failedData: Uint8Array = new Uint8Array();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+              this.download = webDownloadItem;
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+              // 序列化失败的下载到一个字节数组。
+              this.failedData = webDownloadItem.serialize();
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('resumeDownload')
+        .onClick(() => {
+          try {
+            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('cancel')
+        .onClick(() => {
+          try {
+            this.download.cancel();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+  download: webview.WebDownloadItem = new webview.WebDownloadItem();
+  failedData: Uint8Array = new Uint8Array();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+              this.download = webDownloadItem;
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+              // 序列化失败的下载到一个字节数组。
+              this.failedData = webDownloadItem.serialize();
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('resumeDownload')
+        .onClick(() => {
+          try {
+            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('cancel')
+        .onClick(() => {
+          try {
+            this.download.cancel();
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## deserialize
 
 ```TypeScript
@@ -70,6 +217,133 @@ static deserialize(serializedData: Uint8Array): WebDownloadItem
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. <br>2. Parameter verification failed. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+  failedData: Uint8Array = new Uint8Array();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+              // 序列化失败的下载到一个字节数组。
+              this.failedData = webDownloadItem.serialize();
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('resumeDownload')
+        .onClick(() => {
+          try {
+            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+  failedData: Uint8Array = new Uint8Array();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+              // 序列化失败的下载到一个字节数组。
+              this.failedData = webDownloadItem.serialize();
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('resumeDownload')
+        .onClick(() => {
+          try {
+            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## getCurrentSpeed
 
 ```TypeScript
@@ -91,6 +365,111 @@ getCurrentSpeed(): number
 | 类型 | 说明 |
 | --- | --- |
 | number | 下载的速度，单位：字节每秒。 |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update current speed: " + webDownloadItem.getCurrentSpeed());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update current speed: " + webDownloadItem.getCurrentSpeed());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## getFullPath
 
@@ -114,6 +493,113 @@ getFullPath(): string
 | --- | --- |
 | string | 下载文件在磁盘上的全路径。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+              console.info("download finish full path: " + webDownloadItem.getFullPath());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+              console.info("download finish full path: " + webDownloadItem.getFullPath());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## getGuid
 
 ```TypeScript
@@ -135,6 +621,111 @@ getGuid(): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 下载任务的唯一ID。 |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## getLastErrorCode
 
@@ -158,6 +749,113 @@ getLastErrorCode(): WebDownloadErrorCode
 | --- | --- |
 | [WebDownloadErrorCode](arkts-arkweb-webview-webdownloaderrorcode-e.md) | 下载失败时的错误码。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+              console.info("download error code: " + webDownloadItem.getLastErrorCode());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+              console.info("download error code: " + webDownloadItem.getLastErrorCode());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## getMethod
 
 ```TypeScript
@@ -179,6 +877,111 @@ getMethod(): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 下载的请求方式。 |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download, method:" + webDownloadItem.getMethod());
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download， method:" + webDownloadItem.getMethod());
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## getMimeType
 
@@ -202,6 +1005,113 @@ getMimeType(): string
 | --- | --- |
 | string | 下载的媒体类型（例如，一个声音文件可能被标记为 audio/ogg ，一个图像文件可能是 image/png）。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download, mime type:" + webDownloadItem.getMimeType());
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download， mime type:" + webDownloadItem.getMimeType());
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+完整示例代码参考constructor。
+
 ## getOriginalUrl
 
 ```TypeScript
@@ -223,6 +1133,179 @@ getOriginalUrl(): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 下载文件的原始URL地址。 |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download, original URL: " + webDownloadItem.getOriginalUrl());
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { Entry, State, Component, Column, Web, Button, Context, Alignment,ClickEvent } from "@kit.ArkUI"
+import { UIContext } from '@ohos.arkui.UIContext';
+import { webview } from '@kit.ArkWeb';
+import { common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+  uiContext : UIContext = this.getUIContext();
+  context : Context | undefined = this.uiContext.getHostContext() as common.UIAbilityContext;
+
+  aboutToAppear(): void {
+    webview.WebviewController.setRenderProcessMode(webview.RenderProcessMode.MULTIPLE)
+  }
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem): void => {
+              console.info("will start a download, original URL: " + webDownloadItem.getOriginalUrl());
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getOrgUrl')
+        .onClick(() => {
+          try {
+            let url = this.controller.getOriginalUrl();
+            console.info("original url: " + url);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@ohos.base';
+
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+
+  build() {
+    Column() {
+      Button('getOrgUrl')
+        .onClick(() => {
+          try {
+            let url = this.controller.getOriginalUrl();
+            console.info("original url: " + url);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## getPercentComplete
 
@@ -246,6 +1329,111 @@ getPercentComplete(): number
 | --- | --- |
 | number | 下载完成的进度，100代表下载完成，-1代表进度未知。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## getReceivedBytes
 
 ```TypeScript
@@ -267,6 +1455,113 @@ getReceivedBytes(): number
 | 类型 | 说明 |
 | --- | --- |
 | number | 已经接收的字节数。 |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+              console.info("download update received bytes: " + webDownloadItem.getReceivedBytes());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+              console.info("download update received bytes: " + webDownloadItem.getReceivedBytes());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## getReferrerUrl
 
@@ -290,6 +1585,119 @@ getReferrerUrl(): string
 | --- | --- |
 | string | 下载文件的referrer地址。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download, referrer URL: " + webDownloadItem.getReferrerUrl());
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+
+import { Entry, State, Component, Column, Web, Button, Context, Alignment,ClickEvent } from "@kit.ArkUI"
+import { UIContext } from '@ohos.arkui.UIContext';
+import { webview } from '@kit.ArkWeb';
+import { common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+  uiContext : UIContext = this.getUIContext();
+  context : Context | undefined = this.uiContext.getHostContext() as common.UIAbilityContext;
+
+  aboutToAppear(): void {
+    webview.WebviewController.setRenderProcessMode(webview.RenderProcessMode.MULTIPLE)
+  }
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem): void => {
+              console.info("will start a download, referrer URL: " + webDownloadItem.getReferrerUrl());
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## getState
 
 ```TypeScript
@@ -311,6 +1719,111 @@ getState(): WebDownloadState
 | 类型 | 说明 |
 | --- | --- |
 | [WebDownloadState](arkts-arkweb-webview-webdownloadstate-e.md) | 下载的状态。 |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update download state: " + webDownloadItem.getState());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update download state: " + webDownloadItem.getState());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## getSuggestedFileName
 
@@ -334,6 +1847,111 @@ getSuggestedFileName(): string
 | --- | --- |
 | string | 下载的建议文件名。 |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download, suggest name:" + webDownloadItem.getSuggestedFileName());
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download, suggest name:" + webDownloadItem.getSuggestedFileName());
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## getTotalBytes
 
 ```TypeScript
@@ -355,6 +1973,111 @@ getTotalBytes(): number
 | 类型 | 说明 |
 | --- | --- |
 | number | 待下载文件的总长度，-1代表总大小未知。单位：字节。 |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update total bytes: " + webDownloadItem.getTotalBytes());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update total bytes: " + webDownloadItem.getTotalBytes());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## getUrl
 
@@ -378,6 +2101,174 @@ getUrl(): string
 | --- | --- |
 | string | 下载的请求地址。 |
 
+**示例**
+
+完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download, url:" + webDownloadItem.getUrl());
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download, url:" + webDownloadItem.getUrl());
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+完整示例代码参考constructor。
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getUrl')
+        .onClick(() => {
+          try {
+            let url = this.controller.getUrl();
+            console.info("url: " + url);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@ohos.base';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+
+  build() {
+    Column() {
+      Button('getUrl')
+        .onClick(() => {
+          try {
+            let url = this.controller.getUrl();
+            console.info("url: " + url);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## pause
 
 ```TypeScript
@@ -399,6 +2290,171 @@ pause(): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17100019](../errorcode-webview.md#17100019-下载还没开始) | The download task is not started yet. |
+
+**示例**
+
+完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+  download: webview.WebDownloadItem = new webview.WebDownloadItem();
+  failedData: Uint8Array = new Uint8Array();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+              this.download = webDownloadItem;
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+              // 序列化失败的下载到一个字节数组。
+              this.failedData = webDownloadItem.serialize();
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('resumeDownload')
+        .onClick(() => {
+          try {
+            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('cancel')
+        .onClick(() => {
+          try {
+            this.download.cancel();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('pause')
+        .onClick(() => {
+          try {
+            this.download.pause();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+  download: webview.WebDownloadItem = new webview.WebDownloadItem();
+  failedData: Uint8Array = new Uint8Array();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+              this.download = webDownloadItem;
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+              // 序列化失败的下载到一个字节数组。
+              this.failedData = webDownloadItem.serialize();
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('resumeDownload')
+        .onClick(() => {
+          try {
+            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('cancel')
+        .onClick(() => {
+          try {
+            this.download.cancel();
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('pause')
+        .onClick(() => {
+          try {
+            this.download.pause();
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## resume
 
@@ -422,6 +2478,185 @@ resume(): void
 | --- | --- |
 | [17100016](../errorcode-webview.md#17100016-下载任务没有处于暂停状态) | The download task is not paused. |
 
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+  download: webview.WebDownloadItem = new webview.WebDownloadItem();
+  failedData: Uint8Array = new Uint8Array();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+              this.download = webDownloadItem;
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+              // 序列化失败的下载到一个字节数组。
+              this.failedData = webDownloadItem.serialize();
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('resumeDownload')
+        .onClick(() => {
+          try {
+            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('cancel')
+        .onClick(() => {
+          try {
+            this.download.cancel();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('pause')
+        .onClick(() => {
+          try {
+            this.download.pause();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('resume')
+        .onClick(() => {
+          try {
+            this.download.resume();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+  download: webview.WebDownloadItem = new webview.WebDownloadItem();
+  failedData: Uint8Array = new Uint8Array();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+              this.download = webDownloadItem;
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+              // 序列化失败的下载到一个字节数组。
+              this.failedData = webDownloadItem.serialize();
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('resumeDownload')
+        .onClick(() => {
+          try {
+            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('cancel')
+        .onClick(() => {
+          try {
+            this.download.cancel();
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('pause')
+        .onClick(() => {
+          try {
+            this.download.pause();
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('resume')
+        .onClick(() => {
+          try {
+            this.download.resume();
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## serialize
 
 ```TypeScript
@@ -443,6 +2678,117 @@ serialize(): Uint8Array
 | 类型 | 说明 |
 | --- | --- |
 | Uint8Array | 失败的下载序列化后的字节数组。 |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+  failedData: Uint8Array = new Uint8Array();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+              // 序列化失败的下载到一个字节数组。
+              this.failedData = webDownloadItem.serialize();
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+  failedData: Uint8Array = new Uint8Array();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+              // 序列化失败的下载到一个字节数组。
+              this.failedData = webDownloadItem.serialize();
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## start
 
@@ -478,4 +2824,131 @@ start(downloadPath: string): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. <br>2. Parameter verification failed. |
+
+**示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+  failedData: Uint8Array = new Uint8Array();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+              // 序列化失败的下载到一个字节数组。
+              this.failedData = webDownloadItem.serialize();
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Button('resumeDownload')
+        .onClick(() => {
+          try {
+            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// xxx.ets
+'use static'
+import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController(undefined);
+  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
+  failedData: Uint8Array = new Uint8Array();
+
+  build() {
+    Column() {
+      Button('setDownloadDelegate')
+        .onClick(() => {
+          try {
+            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("will start a download.");
+              // 传入一个下载路径，并开始下载。
+              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
+            })
+            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
+            })
+            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
+              console.error("download failed guid: " + webDownloadItem.getGuid());
+              // 序列化失败的下载到一个字节数组。
+              this.failedData = webDownloadItem.serialize();
+            })
+            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
+              console.info("download finish guid: " + webDownloadItem.getGuid());
+            })
+            this.controller.setDownloadDelegate(this.delegate);
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('startDownload')
+        .onClick(() => {
+          try {
+            this.controller.startDownload('https://www.example.com');
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Button('resumeDownload')
+        .onClick(() => {
+          try {
+            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
+          } catch (error) {
+            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 

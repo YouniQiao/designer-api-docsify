@@ -11,29 +11,29 @@
 
 | Name | Description |
 | --- | --- |
-| [SubHeaderV2OperationItem](arkts-arkuiadvancedsubheaderv2-subheaderv2operationitem-c.md) | Represents an item in the operation area. |
-| [SubHeaderV2Select](arkts-arkuiadvancedsubheaderv2-subheaderv2select-c.md) | Defines the content and events for selection. |
-| [SubHeaderV2Title](arkts-arkuiadvancedsubheaderv2-subheaderv2title-c.md) | Defines the title settings for the subheader. |
+| [SubHeaderV2OperationItem](arkts-arkui-advanced-subheaderv2-subheaderv2operationitem-c.md) | Represents an item in the operation area. |
+| [SubHeaderV2Select](arkts-arkui-advanced-subheaderv2-subheaderv2select-c.md) | Defines the content and events for selection. |
+| [SubHeaderV2Title](arkts-arkui-advanced-subheaderv2-subheaderv2title-c.md) | Defines the title settings for the subheader. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [SubHeaderV2](arkts-arkuiadvancedsubheaderv2-subheaderv2-s.md) | The component is positioned at the top of list items or content sections, organizing lists or content into distinct groups. The subheader text summarizes the content within each respective section. |
+| [SubHeaderV2](arkts-arkui-advanced-subheaderv2-subheaderv2-s.md) | The component is positioned at the top of list items or content sections, organizing lists or content into distinct groups. The subheader text summarizes the content within each respective section. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [SubHeaderV2OperationItemOptions](arkts-arkuiadvancedsubheaderv2-subheaderv2operationitemoptions-i.md) | Defines the options for initializing a **SubHeaderV2OperationItem** object. |
-| [SubHeaderV2SelectOptions](arkts-arkuiadvancedsubheaderv2-subheaderv2selectoptions-i.md) | Defines the options for initializing a **SubHeaderV2Select** object. |
-| [SubHeaderV2TitleOptions](arkts-arkuiadvancedsubheaderv2-subheaderv2titleoptions-i.md) | Defines the options for initializing a **SubHeaderV2Title** object. |
+| [SubHeaderV2OperationItemOptions](arkts-arkui-advanced-subheaderv2-subheaderv2operationitemoptions-i.md) | Defines the options for initializing a **SubHeaderV2OperationItem** object. |
+| [SubHeaderV2SelectOptions](arkts-arkui-advanced-subheaderv2-subheaderv2selectoptions-i.md) | Defines the options for initializing a **SubHeaderV2Select** object. |
+| [SubHeaderV2TitleOptions](arkts-arkui-advanced-subheaderv2-subheaderv2titleoptions-i.md) | Defines the options for initializing a **SubHeaderV2Title** object. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [SubHeaderV2OperationType](arkts-arkuiadvancedsubheaderv2-subheaderv2operationtype-e.md) | Defines the style of elements in the operation area. |
+| [SubHeaderV2OperationType](arkts-arkui-advanced-subheaderv2-subheaderv2operationtype-e.md) | Defines the style of elements in the operation area. |
 
 ### Types
 

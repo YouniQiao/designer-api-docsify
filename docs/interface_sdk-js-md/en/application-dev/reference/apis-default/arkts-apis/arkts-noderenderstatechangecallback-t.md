@@ -20,6 +20,6 @@ Defines the callback type used in UIObserver to monitor one specific node's rend
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | [NodeRenderState](../../apis-arkui/arkts-apis/arkts-arkui-arkuiuicontext-noderenderstate-e.md) | Yes | the node's render state |
+| state | [NodeRenderState](arkts-arkui-uicontext-noderenderstate-e.md) | Yes | the node's render state |
 | node | FrameNode | No | the information of frameNode |
 

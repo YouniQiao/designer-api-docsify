@@ -32,7 +32,7 @@ If the called number is in the format of "common phone number + semicolon (;) + 
 | --- | --- | --- | --- |
 | callId | int | Yes | Call ID. |
 | proceed | boolean | Yes | Whether to send DTMF tones. The default value is **false**. <br>- **true**: yes <br>- **false**: no |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -53,6 +53,16 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 call.postDialProceed(1, true, (err: BusinessError) => {
     console.info(`callback: err->${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.postDialProceed(1, true).then(() => {
+    console.info(`postDialProceed success.`);
+}).catch((err: BusinessError) => {
+    console.error(`postDialProceed fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -104,13 +114,5 @@ If the called number is in the format of "common phone number + semicolon (;) + 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.postDialProceed(1, true).then(() => {
-    console.info(`postDialProceed success.`);
-}).catch((err: BusinessError) => {
-    console.error(`postDialProceed fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [postDialProceed](#postdialproceed)
 

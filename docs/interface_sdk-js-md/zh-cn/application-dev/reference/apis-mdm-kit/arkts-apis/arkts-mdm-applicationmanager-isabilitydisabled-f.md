@@ -28,7 +28,7 @@ function isAbilityDisabled(admin: Want, bundleName: string, accountId: number, a
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 应用包名，指定是否禁用的应用包名。 |
 | accountId | number | 是 | 用户ID，取值范围：大于等于0的整数。 <br>取值应为≥0的整数。 <br> accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
 | abilityName | string | 是 | 表示要禁用/解除禁用的Ability组件名称（当前仅支持UIAbility）。 |
@@ -72,6 +72,22 @@ try {
 }
 ```
 
+```TypeScript
+import { applicationManager, common } from '@kit.MDMKit';
+
+try {
+  // 需根据实际情况进行替换
+  // 参数需根据实际情况进行替换
+  let bundleName: string = "com.example.exampleapplication";
+  let accountId: number = 100;
+  let abilityName: string = "EntryAbility";
+  let isDisabled: boolean = applicationManager.isAbilityDisabled(null, bundleName, accountId, abilityName);
+  console.info(`Succeeded in querying whether the ability is disabled, isDisabled: ${isDisabled}`);
+} catch(err) {
+  console.error(`Failed to query whether the ability is disabled. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## isAbilityDisabled
 
@@ -95,7 +111,7 @@ function isAbilityDisabled(admin: Want | null, bundleName: string, accountId: nu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
 | bundleName | string | 是 | 应用包名，指定是否禁用的应用包名。 |
 | accountId | number | 是 | 用户ID，取值范围：大于等于0的整数。 <br> accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
 | abilityName | string | 是 | 表示要禁用/解除禁用的Ability组件名称（当前仅支持UIAbility）。 |
@@ -117,19 +133,5 @@ function isAbilityDisabled(admin: Want | null, bundleName: string, accountId: nu
 
 **示例**
 
-```TypeScript
-import { applicationManager, common } from '@kit.MDMKit';
-
-try {
-  // 需根据实际情况进行替换
-  // 参数需根据实际情况进行替换
-  let bundleName: string = "com.example.exampleapplication";
-  let accountId: number = 100;
-  let abilityName: string = "EntryAbility";
-  let isDisabled: boolean = applicationManager.isAbilityDisabled(null, bundleName, accountId, abilityName);
-  console.info(`Succeeded in querying whether the ability is disabled, isDisabled: ${isDisabled}`);
-} catch(err) {
-  console.error(`Failed to query whether the ability is disabled. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [isAbilityDisabled](#isabilitydisabled)
 

@@ -58,3 +58,14 @@ Enables or disables macro photography.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
 
+**Examples**
+
+```TypeScript
+function enableMacro(photoSession: camera.PhotoSession): void {
+  let isSupported: boolean = photoSession.isMacroSupported();
+  if (isSupported) {
+    photoSession.enableMacro(true);
+  }
+}
+```
+

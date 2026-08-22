@@ -11,7 +11,7 @@
 
 | Name | Description |
 | --- | --- |
-| [Generator](arkts-libes2015generator-generator-i.md) |  |
-| [GeneratorFunction](arkts-libes2015generator-generatorfunction-i.md) |  |
-| [GeneratorFunctionConstructor](arkts-libes2015generator-generatorfunctionconstructor-i.md) |  |
+| [Generator](arkts-lib-es2015-generator-generator-i.md) |  |
+| [GeneratorFunction](arkts-lib-es2015-generator-generatorfunction-i.md) |  |
+| [GeneratorFunctionConstructor](arkts-lib-es2015-generator-generatorfunctionconstructor-i.md) |  |
 

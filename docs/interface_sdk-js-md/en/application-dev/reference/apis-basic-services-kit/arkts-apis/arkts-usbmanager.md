@@ -68,16 +68,16 @@ import { serialManager } from '@kit.BasicServicesKit';
 | [getDeviceFunctions](arkts-basicservices-usbmanager-getdevicefunctions-f-sys.md) | Obtains the numeric mask combination for the current USB function list in Device mode. |
 | [getFunctionsFromString](arkts-basicservices-usbmanager-getfunctionsfromstring-f-sys.md) | Converts the USB function list in the string format to a numeric mask in Device mode. |
 | [getPortList](arkts-basicservices-usbmanager-getportlist-f-sys.md) | Obtains the list of all physical USB ports. When the developer mode is disabled, **undefined** may be returned if no device is connected. Check whether the return value of the API is empty. |
-| [getPortSupportModes](arkts-basicservices-usbmanager-getportsupportmodes-f-sys.md) | Obtains the mask combination for the supported mode list of a given USB port. |
 | [getPorts](arkts-basicservices-usbmanager-getports-f-sys.md) | Obtains the list of all physical USB ports. When the developer mode is disabled, **undefined** may be returned if no device is connected. Check whether the return value of the API is empty. |
+| [getPortSupportModes](arkts-basicservices-usbmanager-getportsupportmodes-f-sys.md) | Obtains the mask combination for the supported mode list of a given USB port. |
 | [getStringFromFunctions](arkts-basicservices-usbmanager-getstringfromfunctions-f-sys.md) | Converts the USB function list in the numeric mask format to a string in Device mode. |
 | [getStringFromFunctions](arkts-basicservices-usbmanager-getstringfromfunctions-f-sys.md) | Converts the numeric mask combination of a given USB function list to a string descriptor. |
 | [getSupportedModes](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md) | Obtains the mask combination for the supported mode list of a given USB port. |
 | [setCurrentFunctions](arkts-basicservices-usbmanager-setcurrentfunctions-f-sys.md) | Sets the current USB function list in Device mode. This API uses a promise to return the result. |
 | [setDeviceFunctions](arkts-basicservices-usbmanager-setdevicefunctions-f-sys.md) | Sets the current USB function list in Device mode. This API uses a promise to return the result. |
 | [setDeviceFunctions](arkts-basicservices-usbmanager-setdevicefunctions-f-sys.md) | Sets the current USB function list in Device mode. |
-| [setPortRoleTypes](arkts-basicservices-usbmanager-setportroletypes-f-sys.md) | Sets the role types supported by a specified port, which can be **powerRole** (for charging) and **dataRole** (for data transfer). This API uses a promise to return the result. |
 | [setPortRoles](arkts-basicservices-usbmanager-setportroles-f-sys.md) | Sets the role types supported by a specified port, which can be **powerRole** (for charging) and **dataRole** (for data transfer). This API uses a promise to return the result. |
+| [setPortRoleTypes](arkts-basicservices-usbmanager-setportroletypes-f-sys.md) | Sets the role types supported by a specified port, which can be **powerRole** (for charging) and **dataRole** (for data transfer). This API uses a promise to return the result. |
 | [usbFunctionsFromString](arkts-basicservices-usbmanager-usbfunctionsfromstring-f-sys.md) | Converts the USB function list in the string format to a numeric mask in Device mode. |
 | [usbFunctionsToString](arkts-basicservices-usbmanager-usbfunctionstostring-f-sys.md) | Converts the USB function list in the numeric mask format to a string in Device mode. |
 <!--DelEnd-->
@@ -91,12 +91,12 @@ import { serialManager } from '@kit.BasicServicesKit';
 | [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) | Describes the USB accessory handle. |
 | [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md) | Represents the USB configuration. One [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) can contain multiple **USBConfig** instances. |
 | [USBControlParams](arkts-basicservices-usbmanager-usbcontrolparams-i.md) | Represents control transfer parameters. |
+| [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | As a USB data transfer interface, it is required for a client to initiate a transfer request. |
 | [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) | Represents the USB device information. |
 | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Represents a USB device pipe, which is used to determine a USB device. |
 | [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md) | Represents control transfer parameters. |
 | [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md) | Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md). |
 | [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md) | Represents a USB interface. One [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md) object can contain multiple *USBInterface** instances, each providing a specific function. |
-| [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | As a USB data transfer interface, it is required for a client to initiate a transfer request. |
 | [UsbIsoPacketDescriptor](arkts-basicservices-usbmanager-usbisopacketdescriptor-i.md) | Describes packet information returned in real time by the transfer callback. |
 
 <!--Del-->
@@ -113,9 +113,9 @@ import { serialManager } from '@kit.BasicServicesKit';
 | Name | Description |
 | --- | --- |
 | [USBControlRequestType](arkts-basicservices-usbmanager-usbcontrolrequesttype-e.md) | Enumerates control request types. |
+| [UsbEndpointTransferType](arkts-basicservices-usbmanager-usbendpointtransfertype-e.md) | Enumerates USB transfer types. |
 | [USBRequestDirection](arkts-basicservices-usbmanager-usbrequestdirection-e.md) | Enumerates request directions. |
 | [USBRequestTargetType](arkts-basicservices-usbmanager-usbrequesttargettype-e.md) | Enumerates request target types. |
-| [UsbEndpointTransferType](arkts-basicservices-usbmanager-usbendpointtransfertype-e.md) | Enumerates USB transfer types. |
 | [UsbTransferFlags](arkts-basicservices-usbmanager-usbtransferflags-e.md) | Enumerates USB transfer flags. |
 | [UsbTransferStatus](arkts-basicservices-usbmanager-usbtransferstatus-e.md) | Enumerates the status code returned after data processing is complete. |
 

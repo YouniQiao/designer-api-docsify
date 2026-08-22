@@ -30,7 +30,7 @@ Sets live wallpaper of the specified type based on the uri path of the MP4 file.
 | --- | --- | --- | --- |
 | source | string | Yes | indicates the uri path of the MP4 file. |
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of setVideo. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setVideo. |
 
 **Error codes:**
 
@@ -53,6 +53,21 @@ try {
             return;
         }
         console.info(`success to setVideo.`);
+    });
+} catch (error) {
+    console.error(`failed to setVideo. Code: ${error.code}, Message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wallpaperPath = "/data/storage/el2/base/haps/entry/files/test.mp4";
+try {
+    wallpaper.setVideo(wallpaperPath, wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
+        console.info(`success to setVideo.`);
+    }).catch((error: BusinessError) => {
+        console.error(`failed to setVideo. Code: ${error.code}, Message: ${error.message}`);
     });
 } catch (error) {
     console.error(`failed to setVideo. Code: ${error.code}, Message: ${error.message}`);
@@ -101,18 +116,5 @@ Sets live wallpaper of the specified type based on the uri path of the MP4 file.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wallpaperPath = "/data/storage/el2/base/haps/entry/files/test.mp4";
-try {
-    wallpaper.setVideo(wallpaperPath, wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
-        console.info(`success to setVideo.`);
-    }).catch((error: BusinessError) => {
-        console.error(`failed to setVideo. Code: ${error.code}, Message: ${error.message}`);
-    });
-} catch (error) {
-    console.error(`failed to setVideo. Code: ${error.code}, Message: ${error.message}`);
-}
-```
+See [setVideo](#setvideo)
 

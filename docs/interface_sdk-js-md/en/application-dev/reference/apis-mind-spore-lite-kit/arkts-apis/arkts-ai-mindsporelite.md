@@ -41,8 +41,8 @@ import { mindSporeLite } from '@kit.MindSporeLiteKit';
 | [Context](arkts-mindsporelite-mindsporelite-context-i.md) | Provides the device configurations |
 | [CpuDevice](arkts-mindsporelite-mindsporelite-cpudevice-i.md) | Provides the CPU device info |
 | [Extension](arkts-mindsporelite-mindsporelite-extension-i.md) | Provides the extension information of nnrt device |
-| [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md) | Provides MSTensor definition |
 | [Model](arkts-mindsporelite-mindsporelite-model-i.md) | Provides manages model function. Including get inputs, predict ,resize. |
+| [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md) | Provides MSTensor definition |
 | [NNRTDevice](arkts-mindsporelite-mindsporelite-nnrtdevice-i.md) | Provides the NNRT device info |
 | [NNRTDeviceDescription](arkts-mindsporelite-mindsporelite-nnrtdevicedescription-i.md) | Provides the nnrt device description |
 | [TrainCfg](arkts-mindsporelite-mindsporelite-traincfg-i.md) | Provides the train configuration |

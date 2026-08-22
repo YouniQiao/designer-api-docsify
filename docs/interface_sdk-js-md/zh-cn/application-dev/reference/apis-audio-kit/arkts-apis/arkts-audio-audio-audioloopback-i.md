@@ -186,31 +186,63 @@ getVolume(): double
 | --- | --- |
 | double | 返回当前音频返听输出音量，范围为[0.0, 1.0]。 |
 
-## offStatusChange
+**示例**
 
 ```TypeScript
-offStatusChange(callback?: Callback<AudioLoopbackStatus>): void
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getVolume(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: number) => {
+  if (err) {
+    console.error(`Failed to obtain the volume. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in obtaining the volume, volume: ${value}.`);
+});
 ```
 
-Unsubscribes audio loopback status change event callback.
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 
-**起始版本：** 23
+audioManager.getVolume(audio.AudioVolumeType.MEDIA).then((value: number) => {
+  console.info(`Succeeded in obtaining the volume, volume: ${value}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain the volume. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
-<!--Device-AudioLoopback-offStatusChange(callback?: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-offStatusChange(callback?: Callback<AudioLoopbackStatus>): void-End-->
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 
-**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+try {
+  let value = audioRenderer.getVolume();
+  console.info(`Indicate that the volume is obtained ${value}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain the volume, error ${error}.`);
+}
+```
 
-**参数：**
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 否 | Callback used to listen for the audio loopback status change event. |
+audioVolumeGroupManager.getVolume(audio.AudioVolumeType.MEDIA, (err: BusinessError, volume) => {
+  if (err) {
+    console.error(`Failed to obtain the volume. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in obtaining the volume, volume: ${volume}.`);
+});
+```
 
-**错误码：**
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+audioVolumeGroupManager.getVolume(audio.AudioVolumeType.MEDIA).then((volume) => {
+  console.info(`Succeeded in obtaining the volume, volume: ${volume}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain the volume. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## off('statusChange')
 
@@ -239,17 +271,17 @@ off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## onStatusChange
+## offStatusChange
 
 ```TypeScript
-onStatusChange(callback: Callback<AudioLoopbackStatus>): void
+offStatusChange(callback?: Callback<AudioLoopbackStatus>): void
 ```
 
-Subscribes to audio loopback status changes.
+Unsubscribes audio loopback status change event callback.
 
 **起始版本：** 23
 
-<!--Device-AudioLoopback-onStatusChange(callback: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-onStatusChange(callback: Callback<AudioLoopbackStatus>): void-End-->
+<!--Device-AudioLoopback-offStatusChange(callback?: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-offStatusChange(callback?: Callback<AudioLoopbackStatus>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -257,7 +289,7 @@ Subscribes to audio loopback status changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 是 | Callback used to return the audio loopback status change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 否 | Callback used to listen for the audio loopback status change event. |
 
 **错误码：**
 
@@ -285,6 +317,32 @@ on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void
 | --- | --- | --- | --- |
 | type | 'statusChange' | 是 | 事件回调类型，支持的事件为'statusChange'，当AudioLoopback的状态发生变化时，触发该事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 是 | 回调函数，返回当前音频返听的状态。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+## onStatusChange
+
+```TypeScript
+onStatusChange(callback: Callback<AudioLoopbackStatus>): void
+```
+
+Subscribes to audio loopback status changes.
+
+**起始版本：** 23
+
+<!--Device-AudioLoopback-onStatusChange(callback: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-onStatusChange(callback: Callback<AudioLoopbackStatus>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 是 | Callback used to return the audio loopback status change event. |
 
 **错误码：**
 
@@ -387,4 +445,68 @@ setVolume(volume: double): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed, form 0.0 to 1.0. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set the volume. ${err}`);
+    return;
+  }
+  console.info('Callback invoked to indicate a successful volume setting.');
+});
+```
+
+```TypeScript
+audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {
+  console.info('Promise returned to indicate a successful volume setting.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.setVolume(audio.AudioVolumeType.MEDIA, 10, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set the volume. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the volume.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {
+  console.info('Succeeded in setting the volume.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the volume. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.setVolume(0.5).then(() => {
+  console.info('setVolume Success!');
+}).catch((err: BusinessError) => {
+  console.error(`setVolume Fail: ${err}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.setVolume(0.5, (err: BusinessError) => {
+  if(err){
+    console.error(`setVolume Fail: ${err}`);
+    return;
+  }
+  console.info('setVolume Success!');
+});
+```
 

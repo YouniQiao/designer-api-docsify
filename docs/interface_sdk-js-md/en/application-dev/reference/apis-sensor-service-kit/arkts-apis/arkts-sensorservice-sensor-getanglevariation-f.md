@@ -27,7 +27,7 @@ Obtains the angle change between two rotation matrices. This API uses an asynchr
 | --- | --- | --- | --- |
 | currentRotationMatrix | Array&lt;double&gt; | Yes | Current rotation matrix. |
 | preRotationMatrix | Array&lt;double&gt; | Yes | The other rotation matrix. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback used to return the angle change around the z, x, and y axes, in degrees. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback used to return the angle change around the z, x, and y axes, in degrees. |
 
 **Error codes:**
 
@@ -74,6 +74,41 @@ try {
 }
 ```
 
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  // The rotation matrix can be 3*3 or 4*4.
+  let currentRotationMatrix = [
+    1, 0, 0,
+    0, 1, 0,
+    0, 0, 1
+  ];
+  let preRotationMatrix = [
+    1, 0, 0,
+    0, 0.87, -0.50,
+    0, 0.50, 0.87
+  ];
+  const promise = sensor.getAngleVariation(currentRotationMatrix, preRotationMatrix);
+  promise.then((data: Array<number>) => {
+    if (data.length < 3) {
+      console.error("Failed to get angle variation, length" + data.length);
+      return;
+    }
+    console.info("Z: " + data[0]);
+    console.info("X: " + data[1]);
+    console.info("Y: " + data[2]);
+  }, (err: BusinessError) => {
+    console.error(`Failed to get angle variation. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to get angle variation. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 ## getAngleVariation
 
@@ -111,38 +146,5 @@ Obtains the angle change between two rotation matrices. This API uses a promise 
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  // The rotation matrix can be 3*3 or 4*4.
-  let currentRotationMatrix = [
-    1, 0, 0,
-    0, 1, 0,
-    0, 0, 1
-  ];
-  let preRotationMatrix = [
-    1, 0, 0,
-    0, 0.87, -0.50,
-    0, 0.50, 0.87
-  ];
-  const promise = sensor.getAngleVariation(currentRotationMatrix, preRotationMatrix);
-  promise.then((data: Array<number>) => {
-    if (data.length < 3) {
-      console.error("Failed to get angle variation, length" + data.length);
-      return;
-    }
-    console.info("Z: " + data[0]);
-    console.info("X: " + data[1]);
-    console.info("Y: " + data[2]);
-  }, (err: BusinessError) => {
-    console.error(`Failed to get angle variation. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to get angle variation. Code: ${e.code}, message: ${e.message}`);
-}
-```
+See [getAngleVariation](#getanglevariation)
 

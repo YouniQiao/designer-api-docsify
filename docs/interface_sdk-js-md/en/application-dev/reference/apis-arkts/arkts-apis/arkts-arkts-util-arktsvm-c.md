@@ -127,7 +127,7 @@ NOTE: There is no guarantee that the callback will be triggered before OOM.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | This callback is triggered if the memory reaches the threshold after a GC. The string parameter indicates the type of memory pressure event: "LocalHeapMemPressure", "SharedHeapMemPressure", or "ProcessHeapMemPressure". |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | This callback is triggered if the memory reaches the threshold after a GC. The string parameter indicates the type of memory pressure event: "LocalHeapMemPressure", "SharedHeapMemPressure", or "ProcessHeapMemPressure". |
 | heapMemoryThreshold | [HeapMemoryThreshold](arkts-arkts-util-heapmemorythreshold-i.md) | Yes | Indicates the percentage threshold of the heap memory to trigger the callback after a GC. The value range is [70, 95]. |
 
 **Return value:**
@@ -158,6 +158,17 @@ Sets whether to enable multithreading detection. When **enabled** is set to **tr
 | --- | --- | --- | --- |
 | enabled | boolean | Yes | Controls whether to enable multithreading detection. **true** means enabling the detection, and **false** means disabling it. |
 | options | [MultithreadingDetectionOptions](arkts-arkts-util-multithreadingdetectionoptions-i.md) | No | Optional configuration items<br>**Since:** 26.0.0 |
+
+**Examples**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+// Enable multithreading detection.
+util.ArkTSVM.setMultithreadingDetectionEnabled(true);
+// Disable multithreading detection.
+util.ArkTSVM.setMultithreadingDetectionEnabled(false);
+```
 
 ## setTrackGlobalRef
 

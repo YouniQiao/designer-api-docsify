@@ -11,31 +11,31 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [SegmentButtonV2Item](arkts-arkuiadvancedsegmentbuttonv2-segmentbuttonv2item-c.md) | Defines segmented button item. |
-| [SegmentButtonV2Items](arkts-arkuiadvancedsegmentbuttonv2-segmentbuttonv2items-c.md) | 分段按钮选项集合。 |
+| [SegmentButtonV2Item](arkts-arkui-advanced-segmentbuttonv2-segmentbuttonv2item-c.md) | Defines segmented button item. |
+| [SegmentButtonV2Items](arkts-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md) | 分段按钮选项集合。 |
 
 ### 结构体
 
 | 名称 | 说明 |
 | --- | --- |
-| [CapsuleSegmentButtonV2](arkts-arkuiadvancedsegmentbuttonv2-capsulesegmentbuttonv2-s.md) | 定义胶囊型分段按钮。 |
-| [MultiCapsuleSegmentButtonV2](arkts-arkuiadvancedsegmentbuttonv2-multicapsulesegmentbuttonv2-s.md) | 定义胶囊型分段按钮。 |
-| [TabSegmentButtonV2](arkts-arkuiadvancedsegmentbuttonv2-tabsegmentbuttonv2-s.md) | 定义页签型分段按钮。 |
+| [CapsuleSegmentButtonV2](arkts-arkui-advanced-segmentbuttonv2-capsulesegmentbuttonv2-s.md) | 定义胶囊型分段按钮。 |
+| [MultiCapsuleSegmentButtonV2](arkts-arkui-advanced-segmentbuttonv2-multicapsulesegmentbuttonv2-s.md) | 定义胶囊型分段按钮。 |
+| [TabSegmentButtonV2](arkts-arkui-advanced-segmentbuttonv2-tabsegmentbuttonv2-s.md) | 定义页签型分段按钮。 |
 
 <!--Del-->
 ### 结构体（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [CapsuleSegmentButtonV2](arkts-arkuiadvancedsegmentbuttonv2-capsulesegmentbuttonv2-s-sys.md) | 定义胶囊型分段按钮。 |
-| [TabSegmentButtonV2](arkts-arkuiadvancedsegmentbuttonv2-tabsegmentbuttonv2-s-sys.md) | 定义页签型分段按钮。 |
+| [CapsuleSegmentButtonV2](arkts-arkui-advanced-segmentbuttonv2-capsulesegmentbuttonv2-s-sys.md) | 定义胶囊型分段按钮。 |
+| [TabSegmentButtonV2](arkts-arkui-advanced-segmentbuttonv2-tabsegmentbuttonv2-s-sys.md) | 定义页签型分段按钮。 |
 <!--DelEnd-->
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [SegmentButtonV2ItemOptions](arkts-arkuiadvancedsegmentbuttonv2-segmentbuttonv2itemoptions-i.md) | 配置分段按钮选项参数。 |
+| [SegmentButtonV2ItemOptions](arkts-arkui-advanced-segmentbuttonv2-segmentbuttonv2itemoptions-i.md) | 配置分段按钮选项参数。 |
 
 ### 类型
 

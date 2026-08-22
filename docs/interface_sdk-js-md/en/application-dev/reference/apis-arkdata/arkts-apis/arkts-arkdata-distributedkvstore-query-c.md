@@ -112,6 +112,26 @@ Defines a constructor used to create a **Query** instance.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
+**Examples**
+
+```TypeScript
+let child1 = new distributedKVStore.FieldNode('id');
+child1.type = distributedKVStore.ValueType.INTEGER;
+child1.nullable = false;
+child1.default = '1';
+let child2 = new distributedKVStore.FieldNode('name');
+child2.type = distributedKVStore.ValueType.STRING;
+child2.nullable = false;
+child2.default = 'zhangsan';
+
+let schema = new distributedKVStore.Schema();
+schema.root.appendChild(child1);
+schema.root.appendChild(child2);
+schema.indexes = ['$.id', '$.name'];
+schema.mode = 1;
+schema.skip = 0;
+```
+
 ## deviceId
 
 ```TypeScript
@@ -255,6 +275,24 @@ Creates a **Query** object to match the specified field whose value is equal to 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+  if (query != null) {
+    query.equalTo("field", "value");
+    console.info(`query is ${query.getSqlLike()}`);
+  }
+  query = null;
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
+}
+```
+
 ## getSqlLike
 
 ```TypeScript
@@ -336,6 +374,24 @@ Creates a **Query** object to match the specified field whose value is greater t
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.greaterThan("field", "value");
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+    query = null;
+} catch (e) {
+    let error = e as BusinessError;
+    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
+}
+```
+
 ## greaterThanOrEqualTo
 
 ```TypeScript
@@ -379,6 +435,24 @@ Creates a **Query** object to match the specified field whose value is greater t
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.greaterThanOrEqualTo("field", "value");
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+    query = null;
+} catch (e) {
+    let error = e as BusinessError;
+    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
+}
+```
+
 ## inNumber
 
 ```TypeScript
@@ -421,6 +495,24 @@ Creates a **Query** object to match the specified field whose value is within th
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.inNumber("field", [0, 1]);
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+    query = null;
+} catch (e) {
+    let error = e as BusinessError;
+    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
+}
+```
 
 ## inString
 
@@ -646,6 +738,24 @@ Creates a **Query** object to match the specified field whose value is less than
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.lessThan("field", "value");
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+    query = null;
+} catch (e) {
+    let error = e as BusinessError;
+    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
+}
+```
+
 ## lessThanOrEqualTo
 
 ```TypeScript
@@ -688,6 +798,24 @@ Creates a **Query** object to match the specified field whose value is less than
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.lessThanOrEqualTo("field", "value");
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+    query = null;
+} catch (e) {
+    let error = e as BusinessError;
+    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
+}
+```
 
 ## like
 
@@ -849,6 +977,24 @@ Creates a **Query** object to match the specified field whose value is not equal
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+  if (query != null) {
+    query.notEqualTo("field", "value");
+    console.info(`query is ${query.getSqlLike()}`);
+  }
+  query = null;
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
+}
+```
+
 ## notInNumber
 
 ```TypeScript
@@ -891,6 +1037,24 @@ Creates a **Query** object to match the specified field whose value is not withi
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
+    if (query != null) {
+      query.notInNumber("field", [0, 1]);
+      console.info(`query is ${query.getSqlLike()}`);
+    }
+    query = null;
+} catch (e) {
+    let error = e as BusinessError;
+    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
+}
+```
 
 ## notInString
 

@@ -28,7 +28,7 @@ Checks whether the ringtone is playing. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value true indicates that the **ringtone** is playing, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value true indicates that the **ringtone** is playing, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -53,6 +53,16 @@ call.isRinging((err: BusinessError, data: boolean) => {
     } else {
         console.info(`isRinging success, data->${JSON.stringify(data)}`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.isRinging().then((data: boolean) => {
+    console.info(`isRinging success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isRinging fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -93,13 +103,5 @@ Checks whether the ringtone is playing. This API uses a promise to return the re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isRinging().then((data: boolean) => {
-    console.info(`isRinging success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isRinging fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [isRinging](#isringing)
 

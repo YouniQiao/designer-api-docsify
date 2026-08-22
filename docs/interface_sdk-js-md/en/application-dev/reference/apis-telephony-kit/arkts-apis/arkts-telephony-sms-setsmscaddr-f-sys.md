@@ -30,7 +30,7 @@ Sets the short message service center (SMSC) address. This API uses an asynchron
 | --- | --- | --- | --- |
 | slotId | int | Yes | SIM card slot ID. <br>- **0**: card slot 1 <br>- **1**: card slot 2 |
 | smscAddr | string | Yes | SMSC address. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -54,6 +54,19 @@ let slotId: number = 0;
 let smscAddr: string = '+861xxxxxxxxxx';
 sms.setSmscAddr(slotId, smscAddr, (err: BusinessError) => {
       console.info(`callback: err->${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+let smscAddr: string = '+861xxxxxxxxxx';
+sms.setSmscAddr(slotId, smscAddr).then(() => {
+    console.info(`setSmscAddr success.`);
+}).catch((err: BusinessError) => {
+    console.error(`setSmscAddr failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -103,16 +116,5 @@ Sets the SMSC address. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let smscAddr: string = '+861xxxxxxxxxx';
-sms.setSmscAddr(slotId, smscAddr).then(() => {
-    console.info(`setSmscAddr success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setSmscAddr failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [setSmscAddr](#setsmscaddr)
 

@@ -47,6 +47,30 @@ ArkTS-Dyn示例：
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+storageStatistics.getSystemSize().then((systemSize: number) => {
+  console.info("getSystemSize successfully:" + systemSize);
+}).catch((err: BusinessError) => {
+  console.error(`getSystemSize failed with err, code is: ${err.code}, message is: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+storageStatistics.getSystemSize().then((systemSize: long) => {
+  console.info("getSystemSize successfully:" + systemSize);
+}).catch((err: BusinessError): void => {
+  console.error(`getSystemSize failed with err, code is: ${err.code}, message is: ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 storageStatistics.getSystemSize((error: BusinessError, systemSize: number) => {
   if (error) {
     console.error(`getSystemSize failed with err, code is: ${error.code}, message is: ${error.message}`);
@@ -109,27 +133,5 @@ function getSystemSize(): Promise<long>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-storageStatistics.getSystemSize().then((systemSize: number) => {
-  console.info("getSystemSize successfully:" + systemSize);
-}).catch((err: BusinessError) => {
-  console.error(`getSystemSize failed with err, code is: ${err.code}, message is: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-storageStatistics.getSystemSize().then((systemSize: long) => {
-  console.info("getSystemSize successfully:" + systemSize);
-}).catch((err: BusinessError): void => {
-  console.error(`getSystemSize failed with err, code is: ${err.code}, message is: ${err.message}`);
-});
-```
+参见 [getSystemSize](#getsystemsize)
 

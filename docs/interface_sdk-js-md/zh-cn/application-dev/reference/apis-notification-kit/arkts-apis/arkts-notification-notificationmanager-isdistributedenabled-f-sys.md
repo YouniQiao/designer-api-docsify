@@ -48,6 +48,61 @@ function isDistributedEnabled(deviceType: string): Promise<boolean>
 ArkTS-Dyn示例：
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isDistributedEnabledCallback = (err: BusinessError, data: boolean): void => {
+  if (err) {
+    console.error(`isDistributedEnabled failed, code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info(`isDistributedEnabled success ${JSON.stringify(data)}`);
+  }
+};
+notificationManager.isDistributedEnabled(isDistributedEnabledCallback);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isDistributedEnabledCallback = (err: BusinessError | null, data: boolean | undefined | null): void => {
+  if (err) {
+    console.error(`isDistributedEnabled failed, code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info(`isDistributedEnabled success ${JSON.stringify(data)}`);
+  }
+};
+notificationManager.isDistributedEnabled(isDistributedEnabledCallback);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.isDistributedEnabled().then((data: boolean) => {
+  console.info(`isDistributedEnabled success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`isDistributedEnabled failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.isDistributedEnabled().then((data: boolean) => {
+  console.info(`isDistributedEnabled success, data: ${JSON.stringify(data)}`);
+}).catch((err: Error): void  => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`isDistributedEnabled failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 

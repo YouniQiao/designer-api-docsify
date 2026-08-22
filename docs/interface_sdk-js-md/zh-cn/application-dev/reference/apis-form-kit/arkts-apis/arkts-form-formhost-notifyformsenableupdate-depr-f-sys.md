@@ -39,6 +39,30 @@ function notifyFormsEnableUpdate(
 | isEnableUpdate | boolean | 是 | 是否使能更新。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当通知卡片是否启用更新状态成功，error为undefined，否则为错误对象。 |
 
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let formIds: string[] = new Array('12400633174999288', '12400633174999289');
+formHost.notifyFormsEnableUpdate(formIds, true, (error: Base.BusinessError) => {
+  if (error.code) {
+    console.error(`formHost notifyFormsEnableUpdate, error: ${JSON.stringify(error)}`);
+  }
+});
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+let formIds: string[] = new Array('12400633174999288', '12400633174999289');
+formHost.notifyFormsEnableUpdate(formIds, true).then(() => {
+  console.info('formHost notifyFormsEnableUpdate success');
+}).catch((error: Base.BusinessError) => {
+  console.error(`formHost notifyFormsEnableUpdate, error: ${JSON.stringify(error)}`);
+});
+```
+
 
 ## notifyFormsEnableUpdate
 
@@ -74,4 +98,8 @@ function notifyFormsEnableUpdate(formIds: Array<string>, isEnableUpdate: boolean
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [notifyFormsEnableUpdate](#notifyformsenableupdate)
 

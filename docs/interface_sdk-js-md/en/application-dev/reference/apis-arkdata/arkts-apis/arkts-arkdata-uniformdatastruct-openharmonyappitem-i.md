@@ -158,3 +158,27 @@ Uniform data type, which has a fixed value of **openharmony.app-item**. For deta
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+**Examples**
+
+```TypeScript
+import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
+let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+let appItemDetails : Record<string, number | string | Uint8Array> = {
+  'appItemKey1': 123,
+  'appItemKey2': 'appItemValue',
+  'appItemKey3': u8Array
+}
+let appItem : uniformDataStruct.OpenHarmonyAppItem = {
+  uniformDataType:'openharmony.app-item',
+  appId : 'MyAppId',
+  appName : 'MyAppName',
+  appIconId : 'MyAppIconId',
+  appLabelId : 'MyAppLabelId',
+  bundleName : 'MyBundleName',
+  abilityName : 'MyAbilityName',
+  details : appItemDetails
+}
+console.info('appItem.uniformDataType: ' + appItem.uniformDataType);
+let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.OPENHARMONY_APP_ITEM, appItem);
+```
+

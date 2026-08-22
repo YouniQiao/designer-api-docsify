@@ -28,7 +28,7 @@ function addDisallowedBluetoothProtocols(admin: Want, accountId: number,  protoc
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | accountId | number | 是 | 用户ID，取值范围：大于等于0。 <br> accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
 | protocols | Array&lt;Protocol&gt; | 是 | 蓝牙协议的数组。数组长度上限为10000。 |
 
@@ -65,6 +65,36 @@ try {
 }
 ```
 
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { bluetoothManager } from '@kit.MDMKit';
+
+// 创建企业设备管理扩展组件
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// 定义用户ID
+let accountId: number = 100;
+// 定义蓝牙协议数组
+let protocols: Array<bluetoothManager.Protocol> = [
+  bluetoothManager.Protocol.GATT,
+  bluetoothManager.Protocol.SPP,
+  bluetoothManager.Protocol.OPP
+];
+
+try {
+  // 添加蓝牙协议禁用名单，指定传输策略为禁止发送和接收
+  bluetoothManager.addDisallowedBluetoothProtocols(wantTemp, accountId, protocols,
+    bluetoothManager.TransferPolicy.RECEIVE_SEND);
+  console.info('Succeeded in adding disallowed bluetooth protocols.');
+} catch (err) {
+  console.error(`Failed to add disallowed bluetooth protocols. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## addDisallowedBluetoothProtocols
 
@@ -97,7 +127,7 @@ function addDisallowedBluetoothProtocols(admin: Want, accountId: number, protoco
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | accountId | number | 是 | 用户ID，取值范围：大于等于0。 <br> accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
 | protocols | Array&lt;Protocol&gt; | 是 | 蓝牙协议数组，指定需要添加至禁用名单的协议。 |
 | policy | [TransferPolicy](arkts-mdm-bluetoothmanager-transferpolicy-e.md) | 是 | 传输策略,用于指定蓝牙协议的禁用方式。可选值包括:SEND_ONLY(禁止发送)、RECEIVE_ONLY(禁止接收)、RECEIVE_SEND(禁止发送和接收 )。 |
@@ -113,33 +143,5 @@ function addDisallowedBluetoothProtocols(admin: Want, accountId: number, protoco
 
 **示例**
 
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { bluetoothManager } from '@kit.MDMKit';
-
-// 创建企业设备管理扩展组件
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 定义用户ID
-let accountId: number = 100;
-// 定义蓝牙协议数组
-let protocols: Array<bluetoothManager.Protocol> = [
-  bluetoothManager.Protocol.GATT,
-  bluetoothManager.Protocol.SPP,
-  bluetoothManager.Protocol.OPP
-];
-
-try {
-  // 添加蓝牙协议禁用名单，指定传输策略为禁止发送和接收
-  bluetoothManager.addDisallowedBluetoothProtocols(wantTemp, accountId, protocols,
-    bluetoothManager.TransferPolicy.RECEIVE_SEND);
-  console.info('Succeeded in adding disallowed bluetooth protocols.');
-} catch (err) {
-  console.error(`Failed to add disallowed bluetooth protocols. Code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [addDisallowedBluetoothProtocols](#adddisallowedbluetoothprotocols)
 

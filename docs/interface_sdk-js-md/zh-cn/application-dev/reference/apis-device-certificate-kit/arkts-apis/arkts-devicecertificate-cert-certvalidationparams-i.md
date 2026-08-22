@@ -180,6 +180,26 @@ revokedParams?: X509CertRevokedParams
 
 **系统能力：** SystemCapability.Security.Cert
 
+## trustedCerts
+
+```TypeScript
+trustedCerts?: Array<X509Cert>
+```
+
+信任证书列表。指定信任的根证书或中间CA证书，作为验证的信任锚点。最大个数：100。 <br>验证时，证书链须追溯至信任证书，必须设置此参数或将trustSystemCa设为true。
+
+**类型：** Array&lt;X509Cert&gt;
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CertValidationParams-trustedCerts?: Array<X509Cert>--><!--Device-CertValidationParams-trustedCerts?: Array<X509Cert>-End-->
+
+**系统能力：** SystemCapability.Security.Cert
+
 ## trustSystemCa
 
 ```TypeScript
@@ -199,26 +219,6 @@ trustSystemCa?: boolean
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CertValidationParams-trustSystemCa?: boolean--><!--Device-CertValidationParams-trustSystemCa?: boolean-End-->
-
-**系统能力：** SystemCapability.Security.Cert
-
-## trustedCerts
-
-```TypeScript
-trustedCerts?: Array<X509Cert>
-```
-
-信任证书列表。指定信任的根证书或中间CA证书，作为验证的信任锚点。最大个数：100。 <br>验证时，证书链须追溯至信任证书，必须设置此参数或将trustSystemCa设为true。
-
-**类型：** Array&lt;X509Cert&gt;
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CertValidationParams-trustedCerts?: Array<X509Cert>--><!--Device-CertValidationParams-trustedCerts?: Array<X509Cert>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

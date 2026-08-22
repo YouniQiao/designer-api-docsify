@@ -20,3 +20,13 @@ Represents the custom data type for applications only. It is a child class of [U
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
+**Examples**
+
+```TypeScript
+let record = new unifiedDataChannel.ApplicationDefinedRecord();
+let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+record.applicationDefinedType = 'ApplicationDefinedType';
+record.rawData = u8Array;
+let unifiedData = new unifiedDataChannel.UnifiedData(record);
+```
+

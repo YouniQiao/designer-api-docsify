@@ -17,8 +17,8 @@
 
 | Name | Description |
 | --- | --- |
-| [PopupButtonOptions](arkts-arkuiadvancedpopup-popupbuttonoptions-i.md) | Defines the popup button options @interface PopupButtonOptions |
-| [PopupIconOptions](arkts-arkuiadvancedpopup-popupiconoptions-i.md) | Defines the popup icon options @interface PopupIconOptions |
-| [PopupOptions](arkts-arkuiadvancedpopup-popupoptions-i.md) | Defines the popup options. @interface PopupOptions |
-| [PopupTextOptions](arkts-arkuiadvancedpopup-popuptextoptions-i.md) | Defines the popup text options @interface PopupTextOptions |
+| [PopupButtonOptions](arkts-arkui-advanced-popup-popupbuttonoptions-i.md) | Defines the popup button options @interface PopupButtonOptions |
+| [PopupIconOptions](arkts-arkui-advanced-popup-popupiconoptions-i.md) | Defines the popup icon options @interface PopupIconOptions |
+| [PopupOptions](arkts-arkui-advanced-popup-popupoptions-i.md) | Defines the popup options. @interface PopupOptions |
+| [PopupTextOptions](arkts-arkui-advanced-popup-popuptextoptions-i.md) | Defines the popup text options @interface PopupTextOptions |
 

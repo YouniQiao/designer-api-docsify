@@ -49,6 +49,24 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
   }
 ```
 
+```TypeScript
+import { wifiManagerExt } from '@kit.ConnectivityKit';
+
+  wifiManagerExt.getPowerMode((err, data:wifiManagerExt.PowerMode) => {
+      if (err) {
+          console.error("Failed to get linked information");
+          return;
+      }
+      console.info("get power mode info: " + JSON.stringify(data));
+  });
+
+  wifiManagerExt.getPowerMode().then(data => {
+      console.info("get power mode info: " + JSON.stringify(data));
+  }).catch((error:number) => {
+      console.error("get power mode error");
+  });
+```
+
 
 ## getPowerMode
 
@@ -70,7 +88,7 @@ Obtains the current Wi-Fi power mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)&gt; | Yes | the callback of model |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)&gt; | Yes | the callback of model |
 
 **Error codes:**
 
@@ -82,21 +100,5 @@ Obtains the current Wi-Fi power mode.
 
 **Examples**
 
-```TypeScript
-import { wifiManagerExt } from '@kit.ConnectivityKit';
-
-  wifiManagerExt.getPowerMode((err, data:wifiManagerExt.PowerMode) => {
-      if (err) {
-          console.error("Failed to get linked information");
-          return;
-      }
-      console.info("get power mode info: " + JSON.stringify(data));
-  });
-
-  wifiManagerExt.getPowerMode().then(data => {
-      console.info("get power mode info: " + JSON.stringify(data));
-  }).catch((error:number) => {
-      console.error("get power mode error");
-  });
-```
+See [getPowerMode](#getpowermode)
 

@@ -32,3 +32,13 @@ Contact nickname.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+**Examples**
+
+Create contact data in JSON format:
+
+```TypeScript
+let nickName: contact.NickName = {
+    nickName: "nickName"
+};
+```
+

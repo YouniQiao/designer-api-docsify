@@ -38,7 +38,7 @@ Queries usage information about each bundle within a specified period at a speci
 | byInterval | IntervalType | Yes | Indicates the interval at which the usage statistics are queried. The value can be { |
 | begin | number | Yes | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
 | end | number | Yes | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)&gt;&gt; | Yes | the callback of usage information about each bundle. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)&gt;&gt; | Yes | the callback of usage information about each bundle. |
 
 **Examples**
 
@@ -55,6 +55,20 @@ bundleState.queryBundleStateInfoByInterval(bundleState.IntervalType.BY_OPTIMIZED
       console.info('BUNDLE_ACTIVE queryBundleStateInfoByInterval callback result ' + JSON.stringify(res[i]));
     }
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+bundleState.queryBundleStateInfoByInterval(bundleState.IntervalType.BY_OPTIMIZED, 0, 20000000000000).then((res: Array<bundleState.BundleStateInfo>) => {
+  console.info('BUNDLE_ACTIVE queryBundleStateInfoByInterval promise success.');
+  for (let i = 0; i < res.length; i++) {
+    console.info('BUNDLE_ACTIVE queryBundleStateInfoByInterval promise number : ' + (i + 1));
+    console.info('BUNDLE_ACTIVE queryBundleStateInfoByInterval promise result ' + JSON.stringify(res[i]));
+  }
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE queryBundleStateInfoByInterval promise failed, because: ' + err.code);
 });
 ```
 
@@ -99,17 +113,5 @@ Queries usage information about each bundle within a specified period at a speci
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-bundleState.queryBundleStateInfoByInterval(bundleState.IntervalType.BY_OPTIMIZED, 0, 20000000000000).then((res: Array<bundleState.BundleStateInfo>) => {
-  console.info('BUNDLE_ACTIVE queryBundleStateInfoByInterval promise success.');
-  for (let i = 0; i < res.length; i++) {
-    console.info('BUNDLE_ACTIVE queryBundleStateInfoByInterval promise number : ' + (i + 1));
-    console.info('BUNDLE_ACTIVE queryBundleStateInfoByInterval promise result ' + JSON.stringify(res[i]));
-  }
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryBundleStateInfoByInterval promise failed, because: ' + err.code);
-});
-```
+See [queryBundleStateInfoByInterval](#querybundlestateinfobyinterval)
 

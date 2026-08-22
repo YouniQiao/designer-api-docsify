@@ -32,7 +32,7 @@ Queries all print jobs. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -40,6 +40,32 @@ Queries all print jobs. This API uses an asynchronous callback to return the res
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
+
+**Examples**
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+print.queryAllPrintJobs((err: BusinessError) => {
+    if (err) {
+        console.error('queryAllPrintJobs failed, because : ' + JSON.stringify(err));
+    } else {
+        console.info('queryAllPrintJobs success');
+    }
+})
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+print.queryAllPrintJobs().then(() => {
+    console.info('queryAllPrintJobs success');
+}).catch((error: BusinessError) => {
+    console.error('queryAllPrintJobs failed, error : ' + JSON.stringify(error));
+})
+```
 
 
 ## queryAllPrintJobs
@@ -76,4 +102,8 @@ Queries all print jobs. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
+
+**Examples**
+
+See [queryAllPrintJobs](#queryallprintjobs)
 

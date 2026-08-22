@@ -72,7 +72,7 @@ The check process is as follows: The developer constructs request parameters. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[CheckResult](arkts-basicservices-update-checkresult-i-sys.md)&gt; | Yes | Callback used to receive the version check result. The callback parameters include **err** and **checkResult**. **err** is **null** when the operation is successful; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CheckResult](arkts-basicservices-update-checkresult-i-sys.md)&gt; | Yes | Callback used to receive the version check result. The callback parameters include **err** and **checkResult**. **err** is **null** when the operation is successful; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -90,6 +90,20 @@ import { BusinessError } from '@kit.BasicServicesKit';
 updater.checkNewVersion((err: BusinessError, result: update.CheckResult) => {
       console.info(`checkNewVersion isExistNewVersion  ${result?.isExistNewVersion}`);
     });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+updater.checkNewVersion()
+      .then((result: update.CheckResult) => {
+        console.info(`checkNewVersion isExistNewVersion: ${result.isExistNewVersion}`);
+        // Version digest information
+        console.info(`checkNewVersion versionDigestInfo: ${result.newVersionInfo.versionDigestInfo.versionDigest}`);
+      })
+      .catch((err: BusinessError)=>{
+        console.error(`checkNewVersion promise error ${JSON.stringify(err)}`);
+      });
 ```
 
 ## checkNewVersion
@@ -148,19 +162,7 @@ The check process is as follows: The developer constructs request parameters. Th
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-updater.checkNewVersion()
-      .then((result: update.CheckResult) => {
-        console.info(`checkNewVersion isExistNewVersion: ${result.isExistNewVersion}`);
-        // Version digest information
-        console.info(`checkNewVersion versionDigestInfo: ${result.newVersionInfo.versionDigestInfo.versionDigest}`);
-      })
-      .catch((err: BusinessError)=>{
-        console.error(`checkNewVersion promise error ${JSON.stringify(err)}`);
-      });
-```
+See [checkNewVersion](#checknewversion)
 
 ## clearError
 
@@ -200,7 +202,7 @@ The process is as follows: Verify the **clearOptions** parameter, and ensure tha
 | --- | --- | --- | --- |
 | versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | Yes | Version digest information. This parameter can be used only after the **checkNewVersion** API is called to check for a new version and the value of **isExistNewVersion** is **true**. The parameter value is obtained from the **newVersionInfo** field in the result returned by the **checkNewVersion** API, which identifies a specific version. This parameter is valid only when **isExistNewVersion** is **true**. |
 | clearOptions | [ClearOptions](arkts-basicservices-update-clearoptions-i-sys.md) | Yes | Clearing options, which specify the errors to be cleared. The **status** field must be **UPGRADE_FAIL**. If the upgrade fails, the system retains the error state to prevent the upgrade from being performed again. In this case, you need to pass **UPGRADE_FAIL** so that errors can be cleared, and the system can be restored to the initial state to restart the upgrade process. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the result of clearing errors. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of clearing errors. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -227,6 +229,25 @@ const clearOptions: update.ClearOptions = {
 };
 updater.clearError(versionDigestInfo, clearOptions, (err: BusinessError) => {
   console.info(`clearError error ${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Version digest information
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: "versionDigest" // Version digest information in the check result
+};
+
+// Options for clearing errors
+const clearOptions: update.ClearOptions = {
+  status: update.UpgradeStatus.UPGRADE_FAIL,
+};
+updater.clearError(versionDigestInfo, clearOptions).then(() => {
+  console.info(`clearError success`);
+}).catch((err: BusinessError) => {
+  console.error(`clearError error ${JSON.stringify(err)}`);
 });
 ```
 
@@ -286,24 +307,7 @@ The process is as follows: Verify the **clearOptions** parameter, and ensure tha
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Version digest information
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // Version digest information in the check result
-};
-
-// Options for clearing errors
-const clearOptions: update.ClearOptions = {
-  status: update.UpgradeStatus.UPGRADE_FAIL,
-};
-updater.clearError(versionDigestInfo, clearOptions).then(() => {
-  console.info(`clearError success`);
-}).catch((err: BusinessError) => {
-  console.error(`clearError error ${JSON.stringify(err)}`);
-});
-```
+See [clearError](#clearerror)
 
 ## download
 
@@ -349,7 +353,7 @@ Resumable transfer is supported. The number of bytes that have been downloaded a
 | --- | --- | --- | --- |
 | versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | Yes | Version digest information. This parameter can be used only after the **checkNewVersion** API is called to check for a new version and the value of **isExistNewVersion** is **true**. The parameter value is obtained from the **newVersionInfo** field in the result returned by the **checkNewVersion** API, which identifies a specific version. This parameter is valid only when **isExistNewVersion** is **true**. |
 | downloadOptions | [DownloadOptions](arkts-basicservices-update-downloadoptions-i-sys.md) | Yes | Download options, which are used to control the download behavior. The **allowNetwork** field specifies the network type allowed for download. You are advised to select a network type based on the upgrade package size and network environment. If the upgrade package exceeds 100 MB, you are advised to set the network type to **WIFI** to reduce mobile data usage and improve the download speed. If you are in a mobile scenario or there is no Wi-Fi available, you can set the network type to **CELLULAR**. If the network environment is uncertain, you are advised to set the network type to **CELLULAR_AND_WIFI**. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the download result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the download result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -377,6 +381,26 @@ const downloadOptions: update.DownloadOptions = {
 };
 updater.download(versionDigestInfo, downloadOptions, (err: BusinessError) => {
   console.info(`download error ${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Version digest information
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: "versionDigest" // Version digest information in the check result
+};
+
+// Download options
+const downloadOptions: update.DownloadOptions = {
+  allowNetwork: update.NetType.CELLULAR, // Whether to allow download over data network
+   order: update.Order.DOWNLOAD // Download
+};
+updater.download(versionDigestInfo, downloadOptions).then(() => {
+  console.info(`download start`);
+}).catch((err: BusinessError) => {
+  console.error(`download error ${JSON.stringify(err)}`);
 });
 ```
 
@@ -440,25 +464,7 @@ Resumable transfer is supported. The number of bytes that have been downloaded a
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Version digest information
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // Version digest information in the check result
-};
-
-// Download options
-const downloadOptions: update.DownloadOptions = {
-  allowNetwork: update.NetType.CELLULAR, // Whether to allow download over data network
-   order: update.Order.DOWNLOAD // Download
-};
-updater.download(versionDigestInfo, downloadOptions).then(() => {
-  console.info(`download start`);
-}).catch((err: BusinessError) => {
-  console.error(`download error ${JSON.stringify(err)}`);
-});
-```
+See [download](#download)
 
 ## getCurrentVersionDescription
 
@@ -498,7 +504,7 @@ The description includes the function description and version features of each c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | descriptionOptions | [DescriptionOptions](arkts-basicservices-update-descriptionoptions-i-sys.md) | Yes | Description options. This parameter specifies the format and language of the description file. The **format** field specifies the description format (**STANDARD** or **SIMPLIFIED**). The **language** field specifies the language of the description file. The value is a string of 2 to 10 characters, for example, **zh-cn** (Chinese), **en-us** (English), and **ja-jp** (Japanese). Valid characters include letters (case sensitive) and hyphens (-). Lowercase letters are recommended. An exception is thrown if the value is out of range or contains invalid characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ComponentDescription](arkts-basicservices-update-componentdescription-i-sys.md)&gt;&gt; | Yes | Callback used to receive the description of the current version. The callback parameters include **err** and **info**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **info** is the current version description array, including the version description. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ComponentDescription](arkts-basicservices-update-componentdescription-i-sys.md)&gt;&gt; | Yes | Callback used to receive the description of the current version. The callback parameters include **err** and **info**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **info** is the current version description array, including the version description. |
 
 **Error codes:**
 
@@ -521,6 +527,20 @@ const descriptionOptions: update.DescriptionOptions = {
 updater.getCurrentVersionDescription(descriptionOptions, (err, info) => {
   console.info(`getCurrentVersionDescription info ${JSON.stringify(info)}`);
   console.info(`getCurrentVersionDescription err ${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// Options of the description file
+const descriptionOptions: update.DescriptionOptions = {
+  format: update.DescriptionFormat.STANDARD, // Standard format
+  language: "zh-cn" // Chinese
+};
+updater.getCurrentVersionDescription(descriptionOptions).then((info: Array<update.ComponentDescription>) => {
+  console.info(`getCurrentVersionDescription promise info ${JSON.stringify(info)}`);
+}).catch((err: BusinessError) => {
+  console.error(`getCurrentVersionDescription promise error ${JSON.stringify(err)}`);
 });
 ```
 
@@ -575,19 +595,7 @@ This API obtains the description of each component of the current version from t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// Options of the description file
-const descriptionOptions: update.DescriptionOptions = {
-  format: update.DescriptionFormat.STANDARD, // Standard format
-  language: "zh-cn" // Chinese
-};
-updater.getCurrentVersionDescription(descriptionOptions).then((info: Array<update.ComponentDescription>) => {
-  console.info(`getCurrentVersionDescription promise info ${JSON.stringify(info)}`);
-}).catch((err: BusinessError) => {
-  console.error(`getCurrentVersionDescription promise error ${JSON.stringify(err)}`);
-});
-```
+See [getCurrentVersionDescription](#getcurrentversiondescription)
 
 ## getCurrentVersionInfo
 
@@ -617,7 +625,7 @@ This method reads the current version information from the local system files an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[CurrentVersionInfo](arkts-basicservices-update-currentversioninfo-i-sys.md)&gt; | Yes | Callback used to receive the current version information (**CurrentVersionInfo**). The callback parameters include **err** and **currentInfo**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **currentInfo** indicates the current version information, including the **osVersion**, **deviceName**, and **versionComponents** fields. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CurrentVersionInfo](arkts-basicservices-update-currentversioninfo-i-sys.md)&gt; | Yes | Callback used to receive the current version information (**CurrentVersionInfo**). The callback parameters include **err** and **currentInfo**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **currentInfo** indicates the current version information, including the **osVersion**, **deviceName**, and **versionComponents** fields. |
 
 **Error codes:**
 
@@ -636,6 +644,18 @@ updater.getCurrentVersionInfo((err: BusinessError, info: update.CurrentVersionIn
   console.info(`info osVersion = ${info?.osVersion}`);
   console.info(`info deviceName = ${info?.deviceName}`);
   console.info(`info displayVersion = ${info?.versionComponents[0].displayVersion}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+updater.getCurrentVersionInfo().then((info: update.CurrentVersionInfo) => {
+  console.info(`info osVersion = ${info.osVersion}`);
+  console.info(`info deviceName = ${info.deviceName}`);
+  console.info(`info displayVersion = ${info.versionComponents[0].displayVersion}`);
+}).catch((err: BusinessError) => {
+  console.error(`getCurrentVersionInfo promise error ${JSON.stringify(err)}`);
 });
 ```
 
@@ -679,17 +699,7 @@ This method reads the current version information from the local system files an
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-updater.getCurrentVersionInfo().then((info: update.CurrentVersionInfo) => {
-  console.info(`info osVersion = ${info.osVersion}`);
-  console.info(`info deviceName = ${info.deviceName}`);
-  console.info(`info displayVersion = ${info.versionComponents[0].displayVersion}`);
-}).catch((err: BusinessError) => {
-  console.error(`getCurrentVersionInfo promise error ${JSON.stringify(err)}`);
-});
-```
+See [getCurrentVersionInfo](#getcurrentversioninfo)
 
 ## getNewVersionDescription
 
@@ -729,7 +739,7 @@ This API sends requests to the upgrade package management server to query the ve
 | --- | --- | --- | --- |
 | versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | Yes | Version digest information, including the version ID ( **versionDigest** field). This parameter can be used only after the **checkNewVersion** API is called to check for a new version and the value of **isExistNewVersion** is **true**. The parameter value is obtained from the **newVersionInfo** field in the result returned by the **checkNewVersion** API. The version digest uniquely identifies a version generated by the server and is used for subsequent version query, download, and upgrade operations. This parameter is valid only when **isExistNewVersion** is **true**. |
 | descriptionOptions | [DescriptionOptions](arkts-basicservices-update-descriptionoptions-i-sys.md) | Yes | Description options. This parameter specifies the format and language of the description file. The **format** field specifies the description format (**STANDARD** or **SIMPLIFIED**). The **language** field specifies the language of the description file. The value is a string of 2 to 10 characters, for example, **zh-cn** (Chinese), **en-us** (English), and **ja-jp** (Japanese). Valid characters include letters (case sensitive) and hyphens (-). Lowercase letters are recommended. An exception is thrown if the value is out of range or contains invalid characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ComponentDescription](arkts-basicservices-update-componentdescription-i-sys.md)&gt;&gt; | Yes | Callback used to receive the description of the new version. The callback parameters include **err** and **descriptionInfo**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **descriptionInfo** is the new version description array, including the version description of each component. Before calling this API, you must call **checkNewVersion** to check whether a new version is available. **descriptionInfo** is valid only when **isExistNewVersion** is **true**. If **isExistNewVersion** is **false**, **descriptionInfo** is **null**. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ComponentDescription](arkts-basicservices-update-componentdescription-i-sys.md)&gt;&gt; | Yes | Callback used to receive the description of the new version. The callback parameters include **err** and **descriptionInfo**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **descriptionInfo** is the new version description array, including the version description of each component. Before calling this API, you must call **checkNewVersion** to check whether a new version is available. **descriptionInfo** is valid only when **isExistNewVersion** is **true**. If **isExistNewVersion** is **false**, **descriptionInfo** is **null**. |
 
 **Error codes:**
 
@@ -741,6 +751,27 @@ This API sends requests to the upgrade package management server to query the ve
 | [11500104](../errorcode-update.md#11500104-ipc-error) | IPC error. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Version digest information
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: "versionDigest" // Version digest information in the check result
+};
+
+// Options of the description file
+const descriptionOptions: update.DescriptionOptions = {
+  format: update.DescriptionFormat.STANDARD, // Standard format
+  language: "zh-cn" // Chinese
+};
+
+updater.getNewVersionDescription(versionDigestInfo, descriptionOptions).then((info: Array<update.ComponentDescription>)=> {
+  console.info(`getNewVersionDescription promise info ${JSON.stringify(info)}`);
+}).catch((err: BusinessError) => {
+  console.error(`getNewVersionDescription promise error ${JSON.stringify(err)}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -818,26 +849,7 @@ This API sends requests to the upgrade package management server to query the ve
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Version digest information
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // Version digest information in the check result
-};
-
-// Options of the description file
-const descriptionOptions: update.DescriptionOptions = {
-  format: update.DescriptionFormat.STANDARD, // Standard format
-  language: "zh-cn" // Chinese
-};
-
-updater.getNewVersionDescription(versionDigestInfo, descriptionOptions).then((info: Array<update.ComponentDescription>)=> {
-  console.info(`getNewVersionDescription promise info ${JSON.stringify(info)}`);
-}).catch((err: BusinessError) => {
-  console.error(`getNewVersionDescription promise error ${JSON.stringify(err)}`);
-});
-```
+See [getNewVersionDescription](#getnewversiondescription)
 
 ## getNewVersionInfo
 
@@ -881,7 +893,7 @@ This API sends requests to the upgrade package management server to query the co
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[NewVersionInfo](arkts-basicservices-update-newversioninfo-i-sys.md)&gt; | Yes | Callback used to receive the new version information ( **NewVersionInfo**). The callback parameters include **err** and **newInfo**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. Before calling this API, you must call **checkNewVersion** to check whether a new version is available. **newInfo** is valid only when **isExistNewVersion** is **true**. If **isExistNewVersion** is **false**, **newInfo** is **null**. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[NewVersionInfo](arkts-basicservices-update-newversioninfo-i-sys.md)&gt; | Yes | Callback used to receive the new version information ( **NewVersionInfo**). The callback parameters include **err** and **newInfo**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. Before calling this API, you must call **checkNewVersion** to check whether a new version is available. **newInfo** is valid only when **isExistNewVersion** is **true**. If **isExistNewVersion** is **false**, **newInfo** is **null**. |
 
 **Error codes:**
 
@@ -899,6 +911,17 @@ import { BusinessError } from '@kit.BasicServicesKit';
 updater.getNewVersionInfo((err: BusinessError, info: update.NewVersionInfo) => {
       console.info(`info displayVersion = ${info?.versionComponents[0].displayVersion}`);
       console.info(`info innerVersion = ${info?.versionComponents[0].innerVersion}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+updater.getNewVersionInfo().then((info: update.NewVersionInfo) => {
+    console.info(`info displayVersion = ${info.versionComponents[0].displayVersion}`);
+    console.info(`info innerVersion = ${info.versionComponents[0].innerVersion}`);
+}).catch((err: BusinessError) => {
+    console.error(`getNewVersionInfo promise error ${JSON.stringify(err)}`);
 });
 ```
 
@@ -956,16 +979,7 @@ This API sends requests to the upgrade package management server to query the co
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-updater.getNewVersionInfo().then((info: update.NewVersionInfo) => {
-    console.info(`info displayVersion = ${info.versionComponents[0].displayVersion}`);
-    console.info(`info innerVersion = ${info.versionComponents[0].innerVersion}`);
-}).catch((err: BusinessError) => {
-    console.error(`getNewVersionInfo promise error ${JSON.stringify(err)}`);
-});
-```
+See [getNewVersionInfo](#getnewversioninfo)
 
 ## getTaskInfo
 
@@ -1003,7 +1017,7 @@ This method queries the status of the current upgrade task from the system upgra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;TaskInfo&gt; | Yes | Callback used to receive the upgrade task information (**TaskInfo** ). The callback parameters include **err** and **taskInfo**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **taskInfo** indicates the upgrade task information, including the **existTask** and **taskBody** fields. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;TaskInfo&gt; | Yes | Callback used to receive the upgrade task information (**TaskInfo** ). The callback parameters include **err** and **taskInfo**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **taskInfo** indicates the upgrade task information, including the **existTask** and **taskBody** fields. |
 
 **Error codes:**
 
@@ -1020,6 +1034,16 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 updater.getTaskInfo((err: BusinessError, info: update.TaskInfo) => {
   console.info(`getTaskInfo isexistTask= ${info?.existTask}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+updater.getTaskInfo().then((info: update.TaskInfo) => {
+  console.info(`getTaskInfo isexistTask= ${info.existTask}`);
+}).catch((err: BusinessError) => {
+  console.error(`getTaskInfo promise error ${JSON.stringify(err)}`);
 });
 ```
 
@@ -1071,15 +1095,7 @@ This method queries the status of the current upgrade task from the system upgra
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-updater.getTaskInfo().then((info: update.TaskInfo) => {
-  console.info(`getTaskInfo isexistTask= ${info.existTask}`);
-}).catch((err: BusinessError) => {
-  console.error(`getTaskInfo promise error ${JSON.stringify(err)}`);
-});
-```
+See [getTaskInfo](#gettaskinfo)
 
 ## getUpgradePolicy
 
@@ -1109,7 +1125,7 @@ This method queries the upgrade policy configuration from the system upgrade ser
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[UpgradePolicy](arkts-basicservices-update-upgradepolicy-i-sys.md)&gt; | Yes | Callback used to receive the upgrade policy. The callback parameters include **err** and **policy**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **policy** includes the **downloadStrategy**, **autoUpgradeStrategy**, and **autoUpgradePeriods** fields. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[UpgradePolicy](arkts-basicservices-update-upgradepolicy-i-sys.md)&gt; | Yes | Callback used to receive the upgrade policy. The callback parameters include **err** and **policy**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **policy** includes the **downloadStrategy**, **autoUpgradeStrategy**, and **autoUpgradePeriods** fields. |
 
 **Error codes:**
 
@@ -1127,6 +1143,17 @@ import { BusinessError } from '@kit.BasicServicesKit';
 updater.getUpgradePolicy((err: BusinessError, policy: update.UpgradePolicy) => {
   console.info(`policy downloadStrategy = ${policy?.downloadStrategy}`);
   console.info(`policy autoUpgradeStrategy = ${policy?.autoUpgradeStrategy}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+updater.getUpgradePolicy().then((policy: update.UpgradePolicy) => {
+  console.info(`policy downloadStrategy = ${policy.downloadStrategy}`);
+  console.info(`policy autoUpgradeStrategy = ${policy.autoUpgradeStrategy}`);
+}).catch((err: BusinessError)  => {
+  console.error(`getUpgradePolicy promise error ${JSON.stringify(err)}`);
 });
 ```
 
@@ -1170,16 +1197,7 @@ This method queries the upgrade policy configuration from the system upgrade ser
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-updater.getUpgradePolicy().then((policy: update.UpgradePolicy) => {
-  console.info(`policy downloadStrategy = ${policy.downloadStrategy}`);
-  console.info(`policy autoUpgradeStrategy = ${policy.autoUpgradeStrategy}`);
-}).catch((err: BusinessError)  => {
-  console.error(`getUpgradePolicy promise error ${JSON.stringify(err)}`);
-});
-```
+See [getUpgradePolicy](#getupgradepolicy)
 
 ## off_EventClassifyInfo
 
@@ -1335,7 +1353,7 @@ The process is as follows: Disconnect from the network. Save the progress status
 | --- | --- | --- | --- |
 | versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | Yes | Version digest information. This parameter can be used only after the **checkNewVersion** API is called to check for a new version and the value of **isExistNewVersion** is **true**. The parameter value is obtained from the **newVersionInfo** field in the result returned by the **checkNewVersion** API, which identifies a specific version. This parameter is valid only when **isExistNewVersion** is **true**. |
 | pauseDownloadOptions | [PauseDownloadOptions](arkts-basicservices-update-pausedownloadoptions-i-sys.md) | Yes | Pausing download options, which are used to control the pause behavior. If there is no ongoing download task, using this parameter will cause the pause operation to fail or the parameter to be invalid. The **isAllowAutoResume** field specifies whether to allow automatically resuming the download. You are advised to set this parameter to **true** when the network is unstable, improving the download success rate. You are advised to set this parameter to **false** when the download time needs to be precisely controlled or resuming download needs to be prevented in specific network environments. In this case, you can call **resumeDownload** to control when to resume the download. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the download pause result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the download pause result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -1362,6 +1380,25 @@ const pauseDownloadOptions: update.PauseDownloadOptions = {
 };
 updater.pauseDownload(versionDigestInfo, pauseDownloadOptions, (err: BusinessError) => {
   console.info(`pauseDownload error ${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Version digest information
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: "versionDigest" // Version digest information in the check result
+};
+
+// Options for pausing download
+const pauseDownloadOptions: update.PauseDownloadOptions = {
+  isAllowAutoResume: true // Whether to allow automatic resuming of download
+};
+updater.pauseDownload(versionDigestInfo, pauseDownloadOptions).then(() => {
+  console.info(`pauseDownload`);
+}).catch((err: BusinessError)  => {
+  console.error(`pauseDownload error ${JSON.stringify(err)}`);
 });
 ```
 
@@ -1421,24 +1458,7 @@ The process is as follows: Disconnect from the network. Save the progress status
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Version digest information
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // Version digest information in the check result
-};
-
-// Options for pausing download
-const pauseDownloadOptions: update.PauseDownloadOptions = {
-  isAllowAutoResume: true // Whether to allow automatic resuming of download
-};
-updater.pauseDownload(versionDigestInfo, pauseDownloadOptions).then(() => {
-  console.info(`pauseDownload`);
-}).catch((err: BusinessError)  => {
-  console.error(`pauseDownload error ${JSON.stringify(err)}`);
-});
-```
+See [pauseDownload](#pausedownload)
 
 ## resumeDownload
 
@@ -1478,7 +1498,7 @@ The process is as follows: Read the progress status saved when the download is p
 | --- | --- | --- | --- |
 | versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | Yes | Version digest information. This parameter can be used only after the **checkNewVersion** API is called to check for a new version and the value of **isExistNewVersion** is **true**. The parameter value is obtained from the **newVersionInfo** field in the result returned by the **checkNewVersion** API, which identifies a specific version. This parameter is valid only when **isExistNewVersion** is **true**. |
 | resumeDownloadOptions | [ResumeDownloadOptions](arkts-basicservices-update-resumedownloadoptions-i-sys.md) | Yes | Resuming download options, which are used to specify the network type for resuming download. This parameter takes effect only after the **pauseDownload** API is called to pause download. If **pauseDownload** is not called to pause download, using this parameter will cause the download resumption to fail or the parameter to be invalid. The **allowNetwork** field specifies the network type allowed for resuming download. You are advised to select a network type based on the upgrade package size and network environment. If the upgrade package exceeds 100 MB, you are advised to set the network type to **WIFI** to reduce mobile data usage and improve the download speed. If you are in a mobile scenario or there is no Wi-Fi available, you can set the network type to **CELLULAR**. If the network environment is uncertain, you are advised to set the network type to **CELLULAR_AND_WIFI**. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the download resumption result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the download resumption result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -1505,6 +1525,25 @@ const resumeDownloadOptions : update.ResumeDownloadOptions= {
 };
 updater.resumeDownload(versionDigestInfo, resumeDownloadOptions, (err: BusinessError) => {
   console.info(`resumeDownload error ${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Version digest information
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: "versionDigest" // Version digest information in the check result
+};
+
+// Options for resuming download
+const resumeDownloadOptions: update.ResumeDownloadOptions = {
+  allowNetwork: update.NetType.CELLULAR, // Whether to allow download over data network
+};
+updater.resumeDownload(versionDigestInfo, resumeDownloadOptions).then(() => {
+  console.info(`resumeDownload start`);
+}).catch((err: BusinessError) => {
+  console.error(`resumeDownload error ${JSON.stringify(err)}`);
 });
 ```
 
@@ -1560,24 +1599,7 @@ The process is as follows: Read the progress status saved when the download is p
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Version digest information
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // Version digest information in the check result
-};
-
-// Options for resuming download
-const resumeDownloadOptions: update.ResumeDownloadOptions = {
-  allowNetwork: update.NetType.CELLULAR, // Whether to allow download over data network
-};
-updater.resumeDownload(versionDigestInfo, resumeDownloadOptions).then(() => {
-  console.info(`resumeDownload start`);
-}).catch((err: BusinessError) => {
-  console.error(`resumeDownload error ${JSON.stringify(err)}`);
-});
-```
+See [resumeDownload](#resumedownload)
 
 ## setUpgradePolicy
 
@@ -1610,7 +1632,7 @@ The process is as follows: Verify the validity of the policy parameters. Write t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | policy | [UpgradePolicy](arkts-basicservices-update-upgradepolicy-i-sys.md) | Yes | Upgrade policy, which is used to control the upgrade behavior. This parameter includes the **downloadStrategy** (automatic download policy), **autoUpgradeStrategy** (automatic upgrade policy), and **autoUpgradePeriods** (automatic upgrade period) fields. **downloadStrategy** specifies whether automatic download is allowed. The value **true** indicates that automatic download is allowed (applicable to scenarios where the system automatically detects and downloads the new version), and the value **false** indicates that automatic download is not allowed (applicable to scenarios where users need to manually confirm the download). **autoUpgradeStrategy** specifies whether automatic upgrade is allowed. The value **true** indicates that automatic upgrade is allowed (applicable to the scenario where the system needs to automatically complete the upgrade process), and the value **false** indicates that automatic upgrade is not allowed (applicable to the scenario where users need to manually confirm the upgrade). **autoUpgradePeriods** specifies the automatic upgrade period (optional). Pass this parameter when automatic upgrade needs to be performed in a specified period, for example, at night. If this parameter is not passed, the default value is an empty array **[]**, indicating that the automatic upgrade period is not specified. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the upgrade policy configuration result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the upgrade policy configuration result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -1632,6 +1654,21 @@ const policy: update.UpgradePolicy = {
 };
 updater.setUpgradePolicy(policy, (err: BusinessError) => {
   console.info(`setUpgradePolicy result: ${err}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const policy: update.UpgradePolicy = {
+  downloadStrategy: false,
+  autoUpgradeStrategy: false,
+  autoUpgradePeriods: [ { start: 120, end: 240 }] // Automatic update period, in minutes
+};
+updater.setUpgradePolicy(policy).then(() => {
+  console.info(`setUpgradePolicy success`);
+}).catch((err: BusinessError) => {
+  console.error(`setUpgradePolicy promise error ${JSON.stringify(err)}`);
 });
 ```
 
@@ -1683,20 +1720,7 @@ The process is as follows: Verify the validity of the policy parameters. Write t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const policy: update.UpgradePolicy = {
-  downloadStrategy: false,
-  autoUpgradeStrategy: false,
-  autoUpgradePeriods: [ { start: 120, end: 240 }] // Automatic update period, in minutes
-};
-updater.setUpgradePolicy(policy).then(() => {
-  console.info(`setUpgradePolicy success`);
-}).catch((err: BusinessError) => {
-  console.error(`setUpgradePolicy promise error ${JSON.stringify(err)}`);
-});
-```
+See [setUpgradePolicy](#setupgradepolicy)
 
 ## terminateUpgrade
 
@@ -1734,7 +1758,7 @@ The process is as follows: Check the current task status, and only download or i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the result of terminating upgrade. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of terminating upgrade. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -1751,6 +1775,16 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 updater.terminateUpgrade((err: BusinessError) => {
   console.info(`terminateUpgrade error ${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+updater.terminateUpgrade().then(() => {
+  console.info(`terminateUpgrade success`);
+}).catch((err: BusinessError) => {
+  console.error(`terminateUpgrade error ${JSON.stringify(err)}`);
 });
 ```
 
@@ -1802,15 +1836,7 @@ The process is as follows: Check the current task status, and only download or i
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-updater.terminateUpgrade().then(() => {
-  console.info(`terminateUpgrade success`);
-}).catch((err: BusinessError) => {
-  console.error(`terminateUpgrade error ${JSON.stringify(err)}`);
-});
-```
+See [terminateUpgrade](#terminateupgrade)
 
 ## upgrade
 
@@ -1858,7 +1884,7 @@ If the **upgrade** method fails (the status is **UPGRADE_FAIL**), you must call 
 | --- | --- | --- | --- |
 | versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | Yes | Version digest information. This parameter can be used only after the **checkNewVersion** API is called to check for a new version and the value of **isExistNewVersion** is **true**. The parameter value is obtained from the **newVersionInfo** field in the result returned by the **checkNewVersion** API, which identifies a specific version. This parameter is valid only when **isExistNewVersion** is **true**. |
 | upgradeOptions | [UpgradeOptions](arkts-basicservices-update-upgradeoptions-i-sys.md) | Yes | Upgrade options, which are used to specify the upgrade operation type. The **order** field specifies the upgrade command, which should be set based on the upgrade status and service requirements. The options are as follows: **DOWNLOAD**: download the upgrade package, which needs to be manually installed later; **INSTALL**: install the upgrade package that has been downloaded; **DOWNLOAD_AND_INSTALL**: download and install the upgrade package, which is the complete upgrade process; **APPLY**: apply the upgrade package that has been installed by restarting device; **INSTALL_AND_APPLY**: install the upgrade package and apply it immediately by restarting the device. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the upgrade package installation result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the upgrade package installation result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -1885,6 +1911,25 @@ const upgradeOptions: update.UpgradeOptions = {
 };
 updater.upgrade(versionDigestInfo, upgradeOptions, (err: BusinessError) => {
   console.info(`upgrade error ${JSON.stringify(err)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Version digest information
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: "versionDigest" // Version digest information in the check result
+};
+
+// Installation options
+const upgradeOptions: update.UpgradeOptions = {
+  order: update.Order.INSTALL // Installation command
+};
+updater.upgrade(versionDigestInfo, upgradeOptions).then(() => {
+  console.info(`upgrade start`);
+}).catch((err: BusinessError) => {
+  console.error(`upgrade error ${JSON.stringify(err)}`);
 });
 ```
 
@@ -1952,22 +1997,5 @@ If the **upgrade** method fails (the status is **UPGRADE_FAIL**), you must call 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Version digest information
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // Version digest information in the check result
-};
-
-// Installation options
-const upgradeOptions: update.UpgradeOptions = {
-  order: update.Order.INSTALL // Installation command
-};
-updater.upgrade(versionDigestInfo, upgradeOptions).then(() => {
-  console.info(`upgrade start`);
-}).catch((err: BusinessError) => {
-  console.error(`upgrade error ${JSON.stringify(err)}`);
-});
-```
+See [upgrade](#upgrade)
 

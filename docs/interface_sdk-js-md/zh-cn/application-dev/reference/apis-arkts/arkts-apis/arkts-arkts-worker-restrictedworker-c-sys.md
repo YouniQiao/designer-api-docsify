@@ -48,3 +48,25 @@ RestrictedWorker构造函数。使用其他方法前，均需先构造Restricted
 | [10200003](../errorcode-utils.md#10200003-worker初始化失败) | Worker initialization failure. |
 | [10200007](../errorcode-utils.md#10200007-worker文件路径异常) | The worker file path is invalid. |
 
+**示例**
+
+以下示例展示了在Stage模型的entry模块Index.ets文件中加载Worker线程文件的方法，使用Library加载Worker线程文件的场景参考[文件路径注意事项](../../../arkts-utils/worker-introduction.md#文件路径注意事项)。
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+// worker文件所在路径："entry/src/main/ets/workers/worker.ets"
+const workerInstance = new worker.ThreadWorker('entry/ets/workers/worker.ets', {name: "WorkerThread"});
+```
+
+此处以在Stage模型的entry模块Index.ets文件中加载Worker线程文件为例，使用Library加载Worker线程文件的场景参考[文件路径注意事项](../../../arkts-utils/worker-introduction.md#文件路径注意事项)。
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+// worker文件所在路径："entry/src/main/ets/workers/worker.ets"
+const workerInstance = new worker.Worker('entry/ets/workers/worker.ets', {name: "WorkerThread"});
+```
+

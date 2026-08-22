@@ -39,6 +39,26 @@ Creates and returns an XmlSAXParser instance.
 | inputStream | stream.Readable | Yes | An instance, of stream.Readable for the new XmlSAXParser. |
 | encoding | string | No | [encoding='utf8'] this is its encoding. |
 
+**Examples**
+
+```TypeScript
+let arrayBuffer = new ArrayBuffer(2048);
+let thatSer = new xml.XmlSerializer(arrayBuffer, "utf-8");
+```
+
+```TypeScript
+let serializer = new xml.XmlDynamicSerializer('utf-8');
+```
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let strXml = '<title>Happy</title>'
+let textEncoder = new util.TextEncoder();
+let uint8Array = textEncoder.encodeInto(strXml);
+let that = new xml.XmlPullParser(uint8Array.buffer as object as ArrayBuffer, 'UTF-8');
+```
+
 ## parse
 
 ```TypeScript
@@ -62,4 +82,36 @@ Creates and returns an XmlSAXParser instance.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | xmlSAXHandler | [XmlSAXHandler](arkts-arkts-xml-xmlsaxhandler-i.md) | Yes | The simple API for XML handler. |
+
+**Examples**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let strXml =
+  '<?xml version="1.0" encoding="utf-8"?>' +
+  '<note importance="high" logged="true">' +
+    '<company>John &amp; Hans</company>' +
+    '<title>Happy</title>' +
+  '</note>';
+let textEncoder = new util.TextEncoder();
+let arrBuffer = textEncoder.encodeInto(strXml);
+let that = new xml.XmlPullParser(arrBuffer.buffer as object as ArrayBuffer, 'UTF-8');
+let str = '';
+function func(name: string, value: string) {
+  str = name + value;
+  console.info(str);
+  return true;
+}
+let options: xml.ParseOptions = {supportDoctype:true, ignoreNameSpace:true, tagValueCallbackFunction:func}
+that.parse(options);
+// note
+// company
+// John & Hans
+// company
+// title
+// Happy
+// title
+// note
+```
 

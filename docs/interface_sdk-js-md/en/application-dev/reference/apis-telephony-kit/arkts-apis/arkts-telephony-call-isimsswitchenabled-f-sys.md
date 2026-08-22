@@ -27,7 +27,7 @@ Checks whether the IMS service is enabled. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the IMS service is enabled, and the value **false** indicates the opposite. The value **true** indicates that the IMS service is enabled, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the IMS service is enabled, and the value **false** indicates the opposite. The value **true** indicates that the IMS service is enabled, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -51,6 +51,16 @@ call.isImsSwitchEnabled(0, (err: BusinessError, data: boolean) => {
     } else {
         console.info(`isImsSwitchEnabled success, data->${JSON.stringify(data)}`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.isImsSwitchEnabled(0).then((data: boolean) => {
+    console.info(`isImsSwitchEnabled success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isImsSwitchEnabled fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -96,13 +106,5 @@ Checks whether the IMS service is enabled. This API uses a promise to return the
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isImsSwitchEnabled(0).then((data: boolean) => {
-    console.info(`isImsSwitchEnabled success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isImsSwitchEnabled fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [isImsSwitchEnabled](#isimsswitchenabled)
 

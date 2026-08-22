@@ -29,7 +29,7 @@ Unregister form message event Listening.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hostBundleName | string | No | Indicates the bundle name of the form host application. |
-| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;formInfo.RunningFormInfo&gt; | No | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | No | The callback is used to return the running form info. |
 
 **Error codes:**
 

@@ -1767,26 +1767,6 @@ Minimal value that this type can have as a double the workarond for libc's doubl
 
 **System capability:** SystemCapability.Utils.Lang
 
-## NEGATIVE_INFINITY
-
-```TypeScript
-public static readonly NEGATIVE_INFINITY: double = -1.0 / 0.0
-```
-
-Represents the -Infinity value according to IEEE-754 specification.
-
-**Type:** double
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Double-public static readonly NEGATIVE_INFINITY: double = -1.0 / 0.0--><!--Device-Double-public static readonly NEGATIVE_INFINITY: double = -1.0 / 0.0-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
 ## NaN
 
 ```TypeScript
@@ -1804,6 +1784,26 @@ Represents the NaN value according to IEEE-754 specification.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Double-public static readonly NaN: double = 0.0 / 0.0--><!--Device-Double-public static readonly NaN: double = 0.0 / 0.0-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## NEGATIVE_INFINITY
+
+```TypeScript
+public static readonly NEGATIVE_INFINITY: double = -1.0 / 0.0
+```
+
+Represents the -Infinity value according to IEEE-754 specification.
+
+**Type:** double
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Double-public static readonly NEGATIVE_INFINITY: double = -1.0 / 0.0--><!--Device-Double-public static readonly NEGATIVE_INFINITY: double = -1.0 / 0.0-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

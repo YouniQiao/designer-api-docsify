@@ -28,7 +28,7 @@ Sets whether to lock auto rotate. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isLocked | boolean | Yes | Whether to lock auto rotate. **true** to lock; **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -38,6 +38,17 @@ Sets whether to lock auto rotate. This API uses an asynchronous callback to retu
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isLocked: boolean = false;
+screen.setScreenRotationLocked(isLocked).then(() => {
+  console.info('Succeeded in unlocking auto rotate');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to unlock auto rotate. Code:${err.code}, message is ${err.message}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -91,14 +102,5 @@ Sets whether to lock auto rotate. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isLocked: boolean = false;
-screen.setScreenRotationLocked(isLocked).then(() => {
-  console.info('Succeeded in unlocking auto rotate');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to unlock auto rotate. Code:${err.code}, message is ${err.message}`);
-});
-```
+See [setScreenRotationLocked](#setscreenrotationlocked)
 

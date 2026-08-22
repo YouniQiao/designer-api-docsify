@@ -29,7 +29,7 @@ Obtains all the bundle information in the system based on the given bundle flags
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleFlags | int | Yes | Type of the bundle information to obtain. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;BundleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of bundle information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BundleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of bundle information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -40,6 +40,28 @@ Obtains all the bundle information in the system based on the given bundle flags
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 **Examples**
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION;
+let userId = 100;
+
+try {
+  bundleManager.getAllBundleInfo(bundleFlags, userId, (err, data) => {
+    if (err) {
+      hilog.error(0x0000, 'testTag', 'getAllBundleInfo failed: %{public}s', err.message);
+    } else {
+      hilog.info(0x0000, 'testTag', 'getAllBundleInfo successfully: %{public}s', JSON.stringify(data));
+    }
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getAllBundleInfo failed: %{public}s', message);
+}
+```
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -59,6 +81,25 @@ try {
 } catch (err) {
   let message = (err as BusinessError).message;
   hilog.error(0x0000, 'testTag', 'getAllBundleInfo failed: %{public}s', message);
+}
+```
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_DEFAULT;
+
+try {
+  bundleManager.getAllBundleInfo(bundleFlags).then((data) => {
+    hilog.info(0x0000, 'testTag', 'getAllBundleInfo successfully. Data: %{public}s', JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'getAllBundleInfo failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getAllBundleInfo failed. Cause: %{public}s', message);
 }
 ```
 
@@ -87,7 +128,7 @@ Obtains all the bundle information in the system based on the given bundle flags
 | --- | --- | --- | --- |
 | bundleFlags | int | Yes | Type of the bundle information to obtain. |
 | userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;BundleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of bundle information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BundleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of bundle information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -100,27 +141,7 @@ Obtains all the bundle information in the system based on the given bundle flags
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION;
-let userId = 100;
-
-try {
-  bundleManager.getAllBundleInfo(bundleFlags, userId, (err, data) => {
-    if (err) {
-      hilog.error(0x0000, 'testTag', 'getAllBundleInfo failed: %{public}s', err.message);
-    } else {
-      hilog.info(0x0000, 'testTag', 'getAllBundleInfo successfully: %{public}s', JSON.stringify(data));
-    }
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAllBundleInfo failed: %{public}s', message);
-}
-```
+See [getAllBundleInfo](#getallbundleinfo)
 
 
 ## getAllBundleInfo
@@ -165,22 +186,5 @@ Obtains all the bundle information in the system based on the given bundle flags
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_DEFAULT;
-
-try {
-  bundleManager.getAllBundleInfo(bundleFlags).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getAllBundleInfo successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getAllBundleInfo failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAllBundleInfo failed. Cause: %{public}s', message);
-}
-```
+See [getAllBundleInfo](#getallbundleinfo)
 

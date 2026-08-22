@@ -41,3 +41,32 @@ function onReceiveData(channelId: int, callback: Callback<DataInfo>): void
 | [32390100](../errorcode-proxyChannelManager.md#32390100-内部异常) | Internal error. |
 | [32390101](../errorcode-proxyChannelManager.md#32390101-调用受限) | Call is restricted. |
 
+**示例**
+
+```TypeScript
+import proxyChannelManager from '@ohos.distributedsched.proxyChannelManager';
+import { BusinessError } from '@ohos.base';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Button("测试")
+        .onClick(() => {
+          const receiveDataCallback = (dataInfo: proxyChannelManager.DataInfo) => {
+          };
+          try {
+            proxyChannelManager.onReceiveData(channelId, receiveDataCallback); // channelId通过openProxyChannel接口的Promise返回值获取
+          } catch (err) {
+            let error = err as BusinessError;
+            console.error(`Failed to register receiveData callback. Code: ${error.code}, message: ${error.message}`);
+          }
+        })
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
+

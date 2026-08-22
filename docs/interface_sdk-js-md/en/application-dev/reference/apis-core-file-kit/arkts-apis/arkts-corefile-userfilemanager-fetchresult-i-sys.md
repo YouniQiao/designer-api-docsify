@@ -48,6 +48,61 @@ For details about how to create a userFileManager instance, see the example in u
 import { dataSharePredicates } from '@kit.ArkData';
 
 async function example(mgr: userFileManager.UserFileManager) {
+  console.info('closeDemo');
+  try {
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: userFileManager.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
+    const fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+    let fd: number = await fileAsset.open('rw');
+    console.info('file fd', fd);
+    fileAsset.close(fd, (err) => {
+      if (err == undefined) {
+        console.info('asset close succeed.');
+      } else {
+        console.error('close failed, message = ' + err);
+      }
+    });
+  } catch (err) {
+    console.error('close failed, message = ' + err);
+  }
+}
+```
+
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('closeDemo');
+  try {
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: userFileManager.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
+    const asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+    let fd: number = await asset.open('rw');
+    console.info('file fd', fd);
+    await asset.close(fd);
+    console.info('asset close succeed.');
+  } catch (err) {
+    console.error('close failed, message = ' + err);
+  }
+}
+```
+
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
   console.info('fetchResultCloseDemo');
   let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
   let fetchOption: userFileManager.FetchOptions = {
@@ -88,7 +143,7 @@ Obtains all the file assets in the result set. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;T&gt;&gt; | Yes | Callback used to return an array of all file assets in the result set. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;T&gt;&gt; | Yes | Callback used to return an array of all file assets in the result set. |
 
 **Examples**
 
@@ -112,6 +167,24 @@ async function example(mgr: userFileManager.UserFileManager) {
       console.error('fileAssetList failed with err:' + err);
     }
   });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('getAllObjectDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
+  let fileAssetList: Array<userFileManager.FileAsset> = await fetchResult.getAllObject();
+  console.info('fileAssetList length: ', fileAssetList.length);
 }
 ```
 
@@ -143,23 +216,7 @@ Obtains all the file assets in the result set. This API uses a promise to return
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('getAllObjectDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
-  let fileAssetList: Array<userFileManager.FileAsset> = await fetchResult.getAllObject();
-  console.info('fileAssetList length: ', fileAssetList.length);
-}
-```
+See [getAllObject](#getallobject)
 
 ## getCount
 
@@ -231,7 +288,7 @@ Obtains the first file asset in the result set. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | Yes | Callback used to return the first file asset obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the first file asset obtained. |
 
 **Examples**
 
@@ -255,6 +312,24 @@ async function example(mgr: userFileManager.UserFileManager) {
       console.error('fileAsset failed with err:' + err);
     }
   });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('getFirstObjectDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
+  let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+  console.info('fileAsset displayName: ', fileAsset.displayName);
 }
 ```
 
@@ -286,23 +361,7 @@ Obtains the first file asset in the result set. This API uses a promise to retur
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('getFirstObjectDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
-  let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-  console.info('fileAsset displayName: ', fileAsset.displayName);
-}
-```
+See [getFirstObject](#getfirstobject)
 
 ## getLastObject
 
@@ -328,7 +387,7 @@ Obtains the last file asset in the result set. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | Yes | Callback used to return the last file asset obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the last file asset obtained. |
 
 **Examples**
 
@@ -352,6 +411,24 @@ async function example(mgr: userFileManager.UserFileManager) {
       console.error('fileAsset failed with err: ' + err);
     }
   });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('getLastObjectDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
+  let fileAsset: userFileManager.FileAsset = await fetchResult.getLastObject();
+  console.info('fileAsset displayName: ', fileAsset.displayName);
 }
 ```
 
@@ -383,23 +460,7 @@ Obtains the last file asset in the result set. This API uses a promise to return
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('getLastObjectDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
-  let fileAsset: userFileManager.FileAsset = await fetchResult.getLastObject();
-  console.info('fileAsset displayName: ', fileAsset.displayName);
-}
-```
+See [getLastObject](#getlastobject)
 
 ## getNextObject
 
@@ -427,7 +488,7 @@ Before using this API, you must use [isAfterLast()](#isafterlast) to check wheth
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | Yes | Callback used to return the next file asset. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the next file asset. |
 
 **Examples**
 
@@ -453,6 +514,27 @@ async function example(mgr: userFileManager.UserFileManager) {
         console.error('fileAsset failed with err: ' + err);
       }
     });
+  }
+}
+```
+
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('getNextObjectDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
+  await fetchResult.getFirstObject();
+  if (!fetchResult.isAfterLast()) {
+    let fileAsset: userFileManager.FileAsset = await fetchResult.getNextObject();
+    console.info('fileAsset displayName: ', fileAsset.displayName);
   }
 }
 ```
@@ -487,26 +569,7 @@ Before using this API, you must use [isAfterLast()](#isafterlast) to check wheth
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('getNextObjectDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
-  await fetchResult.getFirstObject();
-  if (!fetchResult.isAfterLast()) {
-    let fileAsset: userFileManager.FileAsset = await fetchResult.getNextObject();
-    console.info('fileAsset displayName: ', fileAsset.displayName);
-  }
-}
-```
+See [getNextObject](#getnextobject)
 
 ## getPositionObject
 
@@ -533,7 +596,7 @@ Obtains a file asset with the specified index in the result set. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | number | Yes | Index of the file asset to obtain. The value starts from **0**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | Yes | Callback used to return the file asset obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the file asset obtained. |
 
 **Error codes:**
 
@@ -563,6 +626,28 @@ async function example(mgr: userFileManager.UserFileManager) {
       console.error('fileAsset failed with err: ' + err);
     }
   });
+}
+```
+
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('getPositionObjectDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
+  if (fetchResult.getCount() > 0) {
+    let fileAsset: userFileManager.FileAsset = await fetchResult.getPositionObject(0);
+    console.info('fileAsset displayName: ', fileAsset.displayName);
+  } else {
+    console.info('No file assets found');
+  } 
 }
 ```
 
@@ -606,27 +691,7 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 **Examples**
 
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('getPositionObjectDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
-  if (fetchResult.getCount() > 0) {
-    let fileAsset: userFileManager.FileAsset = await fetchResult.getPositionObject(0);
-    console.info('fileAsset displayName: ', fileAsset.displayName);
-  } else {
-    console.info('No file assets found');
-  } 
-}
-```
+See [getPositionObject](#getpositionobject)
 
 ## isAfterLast
 

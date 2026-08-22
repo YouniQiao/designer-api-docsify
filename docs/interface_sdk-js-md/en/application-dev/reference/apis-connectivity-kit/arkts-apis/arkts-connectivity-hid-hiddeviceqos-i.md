@@ -2,7 +2,7 @@
 
 Represents the Quality of Service (QoS) settings for a bluetooth hid device application.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-hid-interface HidDeviceQos--><!--Device-hid-interface HidDeviceQos-End-->
 
@@ -24,7 +24,7 @@ L2CAP delay variation, default = -1.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +42,7 @@ L2CAP latency, default = -1.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +60,7 @@ L2CAP peak bandwidth, default = 0.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +78,7 @@ L2CAP service type, default = SERVICE_BEST_EFFORT.
 
 **Type:** ServiceType
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,7 +96,7 @@ L2CAP token bucket size, default = 0.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,7 +114,7 @@ L2CAP tokenRate, means transmission rate, default = 0.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 

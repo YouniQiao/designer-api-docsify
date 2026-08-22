@@ -42,37 +42,6 @@ dataAbilityPredicates.equalTo("NAME", "Lisa")
     .equalTo("SALARY", 200.5)
 ```
 
-## beginWrap
-
-```TypeScript
-beginWrap(): DataAbilityPredicates
-```
-
-Creates a **DataAbilityPredicates** object to add a left parenthesis. This API is similar to "(" in an SQL statement and must be used with **endWrap**.
-
-**Since:** 7
-
-<!--Device-DataAbilityPredicates-beginWrap(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-beginWrap(): DataAbilityPredicates-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object with a left parenthesis. |
-
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.equalTo("NAME", "lisi")
-    .beginWrap()
-    .equalTo("AGE", 18)
-    .or()
-    .equalTo("SALARY", 200.5)
-    .endWrap()
-```
-
 ## beginsWith
 
 ```TypeScript
@@ -106,6 +75,37 @@ This API is similar to the percent sign (%) in SQL statements.
 
 ```TypeScript
 dataAbilityPredicates.beginsWith("NAME", "os")
+```
+
+## beginWrap
+
+```TypeScript
+beginWrap(): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to add a left parenthesis. This API is similar to "(" in an SQL statement and must be used with **endWrap**.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-beginWrap(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-beginWrap(): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object with a left parenthesis. |
+
+**Examples**
+
+```TypeScript
+dataAbilityPredicates.equalTo("NAME", "lisi")
+    .beginWrap()
+    .equalTo("AGE", 18)
+    .or()
+    .equalTo("SALARY", 200.5)
+    .endWrap()
 ```
 
 ## between
@@ -201,37 +201,6 @@ Creates a **DataAbilityPredicates** object to filter out duplicate records.
 dataAbilityPredicates.equalTo("NAME", "Rose").distinct()
 ```
 
-## endWrap
-
-```TypeScript
-endWrap(): DataAbilityPredicates
-```
-
-Creates a **DataAbilityPredicates** object to add a right parenthesis. This API is similar to ")" in an SQL statement and must be used with **beginWrap**.
-
-**Since:** 7
-
-<!--Device-DataAbilityPredicates-endWrap(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-endWrap(): DataAbilityPredicates-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object with a right parenthesis. |
-
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.equalTo("NAME", "lisi")
-    .beginWrap()
-    .equalTo("AGE", 18)
-    .or()
-    .equalTo("SALARY", 200.5)
-    .endWrap()
-```
-
 ## endsWith
 
 ```TypeScript
@@ -265,6 +234,37 @@ This API is similar to the percent sign (%) in SQL statements.
 
 ```TypeScript
 dataAbilityPredicates.endsWith("NAME", "se")
+```
+
+## endWrap
+
+```TypeScript
+endWrap(): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to add a right parenthesis. This API is similar to ")" in an SQL statement and must be used with **beginWrap**.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-endWrap(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-endWrap(): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object with a right parenthesis. |
+
+**Examples**
+
+```TypeScript
+dataAbilityPredicates.equalTo("NAME", "lisi")
+    .beginWrap()
+    .equalTo("AGE", 18)
+    .or()
+    .equalTo("SALARY", 200.5)
+    .endWrap()
 ```
 
 ## equalTo

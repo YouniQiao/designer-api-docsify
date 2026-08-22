@@ -30,3 +30,11 @@ Creates a symbolic link based on the file path. This API returns the result sync
 | target | string | Yes | Application sandbox path of the target file. |
 | srcPath | string | Yes | Application sandbox path of the symbolic link. |
 
+**Examples**
+
+```TypeScript
+let srcFile = pathDir + "/test.txt";
+let dstFile = pathDir + '/test';
+fileio.symlinkSync(srcFile, dstFile);
+```
+

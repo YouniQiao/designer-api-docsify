@@ -28,7 +28,7 @@ Clears all unlocked missions. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -51,6 +51,22 @@ try {
     } else {
       console.info('clearAllMissions successfully.');
     }
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`clearAllMissions failed: ${err.message}`);
+}
+```
+
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  missionManager.clearAllMissions().then((data: void) => {
+    console.info(`clearAllMissions successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((err: BusinessError) => {
+    console.error(`clearAllMissions failed: ${err.message}`);
   });
 } catch (error) {
   let err: BusinessError = error as BusinessError;
@@ -92,19 +108,5 @@ Clears all unlocked missions. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  missionManager.clearAllMissions().then((data: void) => {
-    console.info(`clearAllMissions successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((err: BusinessError) => {
-    console.error(`clearAllMissions failed: ${err.message}`);
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`clearAllMissions failed: ${err.message}`);
-}
-```
+See [clearAllMissions](#clearallmissions)
 

@@ -91,6 +91,49 @@ try {
 }
 ```
 
+ArkTS-Dyn示例:
+
+```TypeScript
+import { launcherBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  launcherBundleManager.getLauncherAbilityInfo("com.example.demo", 100)
+    .then((data: launcherBundleManager.LauncherAbilityInfo[]) => {
+      console.info('data is ' + JSON.stringify(data));
+    }).catch((errData: BusinessError) => {
+      console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+    })
+} catch (errData) {
+  let code = (errData as BusinessError).code;
+  let message = (errData as BusinessError).message;
+  console.error(`errData is errCode:${code}  message:${message}`);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { launcherBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 代码中使用的bundleName、useId需为应用实际的包名、用户ID。
+try {
+  launcherBundleManager.getLauncherAbilityInfo("com.example.demo", 100)
+    .then((data: launcherBundleManager.LauncherAbilityInfo[]) => {
+      console.info('getLauncherAbilityInfo data is ' + JSON.stringify(data));
+    }).catch ((errData: Error) => {
+      console.error(`getLauncherAbilityInfo errData is errCode:${(errData as BusinessError).code}  message:${(errData as BusinessError).message}`);
+    })
+} catch (errData) {
+  let code = (errData as BusinessError).code;
+  let message = (errData as BusinessError).message;
+  console.error(`getLauncherAbilityInfo errData is errCode:${code}  message:${message}`);
+}
+```
+
 
 ## getLauncherAbilityInfo
 
@@ -136,46 +179,5 @@ function getLauncherAbilityInfo(bundleName: string, userId: int) : Promise<Array
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  launcherBundleManager.getLauncherAbilityInfo("com.example.demo", 100)
-    .then((data: launcherBundleManager.LauncherAbilityInfo[]) => {
-      console.info('data is ' + JSON.stringify(data));
-    }).catch((errData: BusinessError) => {
-      console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-    })
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`errData is errCode:${code}  message:${message}`);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 代码中使用的bundleName、useId需为应用实际的包名、用户ID。
-try {
-  launcherBundleManager.getLauncherAbilityInfo("com.example.demo", 100)
-    .then((data: launcherBundleManager.LauncherAbilityInfo[]) => {
-      console.info('getLauncherAbilityInfo data is ' + JSON.stringify(data));
-    }).catch ((errData: Error) => {
-      console.error(`getLauncherAbilityInfo errData is errCode:${(errData as BusinessError).code}  message:${(errData as BusinessError).message}`);
-    })
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`getLauncherAbilityInfo errData is errCode:${code}  message:${message}`);
-}
-```
+参见 [getLauncherAbilityInfo](#getlauncherabilityinfo)
 

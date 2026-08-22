@@ -42,8 +42,8 @@ Provides international settings related APIs.
 | [EntityRecognizer](arkts-i18n-entityrecognizer-c.md) | Provide some functions to find named entity in text. |
 | [HolidayManager](arkts-i18n-holidaymanager-c.md) | Provide some functions to manage holidays in a country or region. Partly follows the RFC2445 standard. |
 | [I18NUtil](arkts-i18n-i18nutil-c.md) | Provides util functions. |
-| [ISO8601DateTimeFormat](arkts-i18n-iso8601datetimeformat-c.md) | Provide a DateTime formatting interface which could format date to ISO 8601 standard string. [ISO8601](https://iso8601.com/). |
 | [IndexUtil](arkts-i18n-indexutil-c.md) | Sequence text can be grouped under the specified area, and grouping index with different lengths can be specified. |
+| [ISO8601DateTimeFormat](arkts-i18n-iso8601datetimeformat-c.md) | Provide a DateTime formatting interface which could format date to ISO 8601 standard string. [ISO8601](https://iso8601.com/). |
 | [Normalizer](arkts-i18n-normalizer-c.md) | Provides the API for text encoding normalization. |
 | [PhoneNumberFormat](arkts-i18n-phonenumberformat-c.md) | Provides the API for formatting phone number strings |
 | [SimpleDateTimeFormat](arkts-i18n-simpledatetimeformat-c.md) | Provide a simple date time formatting interface. |

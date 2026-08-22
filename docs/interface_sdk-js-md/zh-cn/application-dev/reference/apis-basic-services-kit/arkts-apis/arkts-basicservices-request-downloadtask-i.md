@@ -52,6 +52,105 @@ delete(callback: AsyncCallback<boolean>): void
 ArkTS-Dyn示例：
 
 ```TypeScript
+uploadTask.delete().then((result: boolean) => {
+  console.info('Succeeded in deleting the upload task.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to delete the upload task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
+  data: [{ name: "name123", value: "123" }],
+};
+try {
+  request.uploadFile(context, uploadConfig, (err: Error, data: request.UploadTask): void => {
+    if (err) {
+      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    uploadTask = data;
+  });
+} catch (err) {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+}
+uploadTask.delete().then((result: boolean) => {
+  console.info('Succeeded in deleting the upload task.');
+}).catch((err: Error) => {
+  console.error(`Failed to delete the upload task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+uploadTask.delete((err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to delete the upload task. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in deleting the upload task.');
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    data.delete().then((result: boolean) => {
+      console.info('Succeeded in removing the download task.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    data.delete().then((result: boolean) => {
+      console.info('Succeeded in removing the download task.');
+    }).catch((err: Error) => {
+      console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: Error) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
 
@@ -137,53 +236,7 @@ delete(): Promise<boolean>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    data.delete().then((result: boolean) => {
-      console.info('Succeeded in removing the download task.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    data.delete().then((result: boolean) => {
-      console.info('Succeeded in removing the download task.');
-    }).catch((err: Error) => {
-      console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
-    });
-  }).catch((err: Error) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [delete](#delete)
 
 ## getTaskInfo
 
@@ -218,6 +271,56 @@ getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.getTaskInfo().then((downloadInfo: request.DownloadInfo) => {
+      console.info('Succeeded in querying the download task')
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to query the download task. Code: ${err.code}, message: ${err.message}`)
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.getTaskInfo().then((downloadInfo: request.DownloadInfo) => {
+      console.info('Succeeded in querying the download task')
+    }).catch((err: Error) => {
+      console.error(`Failed to query the download task. Code: ${err.code}, message: ${err.message}`)
+    });
+  }).catch((err: Error) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ArkTS-Dyn示例：
 
@@ -307,55 +410,7 @@ getTaskInfo(): Promise<DownloadInfo>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    downloadTask.getTaskInfo().then((downloadInfo: request.DownloadInfo) => {
-      console.info('Succeeded in querying the download task')
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to query the download task. Code: ${err.code}, message: ${err.message}`)
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    downloadTask.getTaskInfo().then((downloadInfo: request.DownloadInfo) => {
-      console.info('Succeeded in querying the download task')
-    }).catch((err: Error) => {
-      console.error(`Failed to query the download task. Code: ${err.code}, message: ${err.message}`)
-    });
-  }).catch((err: Error) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [getTaskInfo](#gettaskinfo)
 
 ## getTaskMimeType
 
@@ -390,6 +445,56 @@ getTaskMimeType(callback: AsyncCallback<string>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.getTaskMimeType().then((data: string) => {
+      console.info('Succeeded in querying the download MimeType');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to query the download MimeType. Code: ${err.code}, message: ${err.message}`)
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.getTaskMimeType().then((data: string) => {
+      console.info('Succeeded in querying the download MimeType');
+    }).catch((err: Error) => {
+      console.error(`Failed to query the download MimeType. Code: ${err.code}, message: ${err.message}`)
+    });
+  }).catch((err: Error) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ArkTS-Dyn示例：
 
@@ -479,393 +584,7 @@ getTaskMimeType(): Promise<string>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    downloadTask.getTaskMimeType().then((data: string) => {
-      console.info('Succeeded in querying the download MimeType');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to query the download MimeType. Code: ${err.code}, message: ${err.message}`)
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    downloadTask.getTaskMimeType().then((data: string) => {
-      console.info('Succeeded in querying the download MimeType');
-    }).catch((err: Error) => {
-      console.error(`Failed to query the download MimeType. Code: ${err.code}, message: ${err.message}`)
-    });
-  }).catch((err: Error) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## offComplete
-
-```TypeScript
-offComplete(callback?: DownloadCompleteCallback): void
-```
-
-Called when the current download session complete.
-
-**起始版本：** 23
-
-<!--Device-DownloadTask-offComplete(callback?: DownloadCompleteCallback): void--><!--Device-DownloadTask-offComplete(callback?: DownloadCompleteCallback): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.Download
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [DownloadCompleteCallback](arkts-basicservices-request-downloadcompletecallback-t.md) | 否 | The callback function for the download complete event. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let completeCallback1 = () => {
-      console.info('Download delete complete notification.');
-    };
-    let completeCallback2 = () => {
-      console.info('Download delete complete notification.');
-    };
-    downloadTask.onComplete(completeCallback1);
-    downloadTask.onComplete(completeCallback2);
-    // 表示取消completeCallback1的订阅
-    downloadTask.offComplete(completeCallback1);
-    // 表示取消订阅下载任务完成的所有回调
-    downloadTask.offComplete();
-
-    let pauseCallback1 = () => {
-      console.info('Download delete pause notification.');
-    };
-    let pauseCallback2 = () => {
-      console.info('Download delete pause notification.');
-    };
-    downloadTask.onPause(pauseCallback1);
-    downloadTask.onPause(pauseCallback2);
-    // 表示取消pauseCallback1的订阅
-    downloadTask.offPause(pauseCallback1);
-    // 表示取消订阅下载任务暂停的所有回调
-    downloadTask.offPause();
-
-    let removeCallback1 = () => {
-      console.info('Download delete remove notification.');
-    };
-    let removeCallback2 = () => {
-      console.info('Download delete remove notification.');
-    };
-    downloadTask.onRemove(removeCallback1);
-    downloadTask.onRemove(removeCallback2);
-    // 表示取消removeCallback1的订阅
-    downloadTask.offRemove(removeCallback1);
-    // 表示取消订阅下载任务移除的所有回调
-    downloadTask.offRemove();
-  }).catch((err: Error) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## offFail
-
-```TypeScript
-offFail(callback?: DownloadFailCallback): void
-```
-
-Called when the current download session fails.
-
-**起始版本：** 23
-
-<!--Device-DownloadTask-offFail(callback?: DownloadFailCallback): void--><!--Device-DownloadTask-offFail(callback?: DownloadFailCallback): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.Download
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [DownloadFailCallback](arkts-basicservices-request-downloadfailcallback-t.md) | 否 | The callback function for the download fail event. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let failCallback1 = (err: int) => {
-      console.error(`Failed to download the task. Code: ${err}`);
-    };
-    let failCallback2 = (err: int) => {
-      console.error(`Failed to download the task. Code: ${err}`);
-    };
-    downloadTask.onFail(failCallback1);
-    downloadTask.onFail(failCallback2);
-    // 表示取消failCallback1的订阅
-    downloadTask.offFail(failCallback1);
-    // 表示取消订阅下载任务失败的所有回调
-    downloadTask.offFail();
-  }).catch((err: Error) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## offPause
-
-```TypeScript
-offPause(callback?: DownloadPauseCallback): void
-```
-
-Called when the current download session pause.
-
-**起始版本：** 23
-
-<!--Device-DownloadTask-offPause(callback?: DownloadPauseCallback): void--><!--Device-DownloadTask-offPause(callback?: DownloadPauseCallback): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.Download
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [DownloadPauseCallback](arkts-basicservices-request-downloadpausecallback-t.md) | 否 | The callback function for the download pause event. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let completeCallback1 = () => {
-      console.info('Download delete complete notification.');
-    };
-    let completeCallback2 = () => {
-      console.info('Download delete complete notification.');
-    };
-    downloadTask.onComplete(completeCallback1);
-    downloadTask.onComplete(completeCallback2);
-    // 表示取消completeCallback1的订阅
-    downloadTask.offComplete(completeCallback1);
-    // 表示取消订阅下载任务完成的所有回调
-    downloadTask.offComplete();
-
-    let pauseCallback1 = () => {
-      console.info('Download delete pause notification.');
-    };
-    let pauseCallback2 = () => {
-      console.info('Download delete pause notification.');
-    };
-    downloadTask.onPause(pauseCallback1);
-    downloadTask.onPause(pauseCallback2);
-    // 表示取消pauseCallback1的订阅
-    downloadTask.offPause(pauseCallback1);
-    // 表示取消订阅下载任务暂停的所有回调
-    downloadTask.offPause();
-
-    let removeCallback1 = () => {
-      console.info('Download delete remove notification.');
-    };
-    let removeCallback2 = () => {
-      console.info('Download delete remove notification.');
-    };
-    downloadTask.onRemove(removeCallback1);
-    downloadTask.onRemove(removeCallback2);
-    // 表示取消removeCallback1的订阅
-    downloadTask.offRemove(removeCallback1);
-    // 表示取消订阅下载任务移除的所有回调
-    downloadTask.offRemove();
-  }).catch((err: Error) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## offProgress
-
-```TypeScript
-offProgress(callback?: DownloadProgressCallback): void
-```
-
-Called when the current download session is in process.
-
-**起始版本：** 23
-
-<!--Device-DownloadTask-offProgress(callback?: DownloadProgressCallback): void--><!--Device-DownloadTask-offProgress(callback?: DownloadProgressCallback): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.Download
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [DownloadProgressCallback](arkts-basicservices-request-downloadprogresscallback-t.md) | 否 | The callback function for the download progress event. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let progressCallback1 = (receivedSize: long, totalSize: long) => {
-      console.info('Download delete progress notification.' + 'receivedSize:' + receivedSize + 'totalSize:' + totalSize);
-    };
-    let progressCallback2 = (receivedSize: long, totalSize: long) => {
-      console.info('Download delete progress notification.' + 'receivedSize:' + receivedSize + 'totalSize:' + totalSize);
-    };
-    downloadTask.onProgress(progressCallback1);
-    downloadTask.onProgress(progressCallback2);
-    // 表示取消progressCallback1的订阅
-    downloadTask.offProgress(progressCallback1);
-    // 表示取消订阅下载任务进度事件的所有回调
-    downloadTask.offProgress();
-  }).catch((err: Error) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## offRemove
-
-```TypeScript
-offRemove(callback?: DownloadRemoveCallback): void
-```
-
-Called when the current download session remove.
-
-**起始版本：** 23
-
-<!--Device-DownloadTask-offRemove(callback?: DownloadRemoveCallback): void--><!--Device-DownloadTask-offRemove(callback?: DownloadRemoveCallback): void-End-->
-
-**系统能力：** SystemCapability.MiscServices.Download
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [DownloadRemoveCallback](arkts-basicservices-request-downloadremovecallback-t.md) | 否 | The callback function for the download remove event. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let completeCallback1 = () => {
-      console.info('Download delete complete notification.');
-    };
-    let completeCallback2 = () => {
-      console.info('Download delete complete notification.');
-    };
-    downloadTask.onComplete(completeCallback1);
-    downloadTask.onComplete(completeCallback2);
-    // 表示取消completeCallback1的订阅
-    downloadTask.offComplete(completeCallback1);
-    // 表示取消订阅下载任务完成的所有回调
-    downloadTask.offComplete();
-
-    let pauseCallback1 = () => {
-      console.info('Download delete pause notification.');
-    };
-    let pauseCallback2 = () => {
-      console.info('Download delete pause notification.');
-    };
-    downloadTask.onPause(pauseCallback1);
-    downloadTask.onPause(pauseCallback2);
-    // 表示取消pauseCallback1的订阅
-    downloadTask.offPause(pauseCallback1);
-    // 表示取消订阅下载任务暂停的所有回调
-    downloadTask.offPause();
-
-    let removeCallback1 = () => {
-      console.info('Download delete remove notification.');
-    };
-    let removeCallback2 = () => {
-      console.info('Download delete remove notification.');
-    };
-    downloadTask.onRemove(removeCallback1);
-    downloadTask.onRemove(removeCallback2);
-    // 表示取消removeCallback1的订阅
-    downloadTask.offRemove(removeCallback1);
-    // 表示取消订阅下载任务移除的所有回调
-    downloadTask.offRemove();
-  }).catch((err: Error) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [getTaskMimeType](#gettaskmimetype)
 
 ## off('complete' | 'pause' | 'remove')
 
@@ -1132,17 +851,17 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 
 参见 off_complete
 
-## onComplete
+## offComplete
 
 ```TypeScript
-onComplete(callback: DownloadCompleteCallback): void
+offComplete(callback?: DownloadCompleteCallback): void
 ```
 
 Called when the current download session complete.
 
 **起始版本：** 23
 
-<!--Device-DownloadTask-onComplete(callback: DownloadCompleteCallback): void--><!--Device-DownloadTask-onComplete(callback: DownloadCompleteCallback): void-End-->
+<!--Device-DownloadTask-offComplete(callback?: DownloadCompleteCallback): void--><!--Device-DownloadTask-offComplete(callback?: DownloadCompleteCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -1150,9 +869,50 @@ Called when the current download session complete.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [DownloadCompleteCallback](arkts-basicservices-request-downloadcompletecallback-t.md) | 是 | The callback function for the download complete event. |
+| callback | [DownloadCompleteCallback](arkts-basicservices-request-downloadcompletecallback-t.md) | 否 | The callback function for the download complete event. |
 
 **示例**
+
+```TypeScript
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
+  data: [{ name: "name123", value: "123" }],
+};
+let upCompleteCallback1 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete complete notification.');
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
+  }
+};
+let upCompleteCallback2 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete complete notification.');
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
+  }
+};
+try {
+  request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
+    if (err) {
+      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    uploadTask.onComplete(upCompleteCallback1);
+    uploadTask.onComplete(upCompleteCallback2);
+    // 表示取消headerCallback1的订阅
+    uploadTask.offComplete(upCompleteCallback1);
+    // 表示取消订阅上传任务完成的所有回调
+    uploadTask.offComplete();
+  });
+} catch (err) {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1164,20 +924,44 @@ try {
   // 需要手动将url替换为真实服务器的HTTP协议地址
   request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
     let downloadTask: request.DownloadTask = data;
-    let completeCallback = () => {
-      console.info('Download task completed.');
+    let completeCallback1 = () => {
+      console.info('Download delete complete notification.');
     };
-    downloadTask.onComplete(completeCallback);
+    let completeCallback2 = () => {
+      console.info('Download delete complete notification.');
+    };
+    downloadTask.onComplete(completeCallback1);
+    downloadTask.onComplete(completeCallback2);
+    // 表示取消completeCallback1的订阅
+    downloadTask.offComplete(completeCallback1);
+    // 表示取消订阅下载任务完成的所有回调
+    downloadTask.offComplete();
 
-    let pauseCallback = () => {
-      console.info('Download task pause.');
+    let pauseCallback1 = () => {
+      console.info('Download delete pause notification.');
     };
-    downloadTask.onPause(pauseCallback);
+    let pauseCallback2 = () => {
+      console.info('Download delete pause notification.');
+    };
+    downloadTask.onPause(pauseCallback1);
+    downloadTask.onPause(pauseCallback2);
+    // 表示取消pauseCallback1的订阅
+    downloadTask.offPause(pauseCallback1);
+    // 表示取消订阅下载任务暂停的所有回调
+    downloadTask.offPause();
 
-    let removeCallback = () => {
-      console.info('Download task remove.');
+    let removeCallback1 = () => {
+      console.info('Download delete remove notification.');
     };
-    downloadTask.onRemove(removeCallback);
+    let removeCallback2 = () => {
+      console.info('Download delete remove notification.');
+    };
+    downloadTask.onRemove(removeCallback1);
+    downloadTask.onRemove(removeCallback2);
+    // 表示取消removeCallback1的订阅
+    downloadTask.offRemove(removeCallback1);
+    // 表示取消订阅下载任务移除的所有回调
+    downloadTask.offRemove();
   }).catch((err: Error) => {
     console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
   })
@@ -1186,17 +970,17 @@ try {
 }
 ```
 
-## onFail
+## offFail
 
 ```TypeScript
-onFail(callback: DownloadFailCallback): void
+offFail(callback?: DownloadFailCallback): void
 ```
 
 Called when the current download session fails.
 
 **起始版本：** 23
 
-<!--Device-DownloadTask-onFail(callback: DownloadFailCallback): void--><!--Device-DownloadTask-onFail(callback: DownloadFailCallback): void-End-->
+<!--Device-DownloadTask-offFail(callback?: DownloadFailCallback): void--><!--Device-DownloadTask-offFail(callback?: DownloadFailCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -1204,9 +988,50 @@ Called when the current download session fails.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [DownloadFailCallback](arkts-basicservices-request-downloadfailcallback-t.md) | 是 | The callback function for the download fail event. |
+| callback | [DownloadFailCallback](arkts-basicservices-request-downloadfailcallback-t.md) | 否 | The callback function for the download fail event. |
 
 **示例**
+
+```TypeScript
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
+  data: [{ name: "name123", value: "123" }],
+};
+let upFailCallback1 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete fail notification.');
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
+  }
+};
+let upFailCallback2 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete fail notification.');
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
+  }
+};
+try {
+  request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
+    if (err) {
+      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    uploadTask.onFail(upFailCallback1);
+    uploadTask.onFail(upFailCallback2);
+    // 表示取消headerCallback1的订阅
+    uploadTask.offFail(upFailCallback1);
+    // 表示取消订阅上传任务失败的所有回调
+    uploadTask.offFail();
+  });
+} catch (err) {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1218,10 +1043,18 @@ try {
   // 需要手动将url替换为真实服务器的HTTP协议地址
   request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
     let downloadTask: request.DownloadTask = data;
-    let failCallback = (err: int) => {
+    let failCallback1 = (err: int) => {
       console.error(`Failed to download the task. Code: ${err}`);
     };
-    downloadTask.onFail(failCallback);
+    let failCallback2 = (err: int) => {
+      console.error(`Failed to download the task. Code: ${err}`);
+    };
+    downloadTask.onFail(failCallback1);
+    downloadTask.onFail(failCallback2);
+    // 表示取消failCallback1的订阅
+    downloadTask.offFail(failCallback1);
+    // 表示取消订阅下载任务失败的所有回调
+    downloadTask.offFail();
   }).catch((err: Error) => {
     console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
   })
@@ -1230,17 +1063,17 @@ try {
 }
 ```
 
-## onPause
+## offPause
 
 ```TypeScript
-onPause(callback: DownloadPauseCallback): void
+offPause(callback?: DownloadPauseCallback): void
 ```
 
 Called when the current download session pause.
 
 **起始版本：** 23
 
-<!--Device-DownloadTask-onPause(callback: DownloadPauseCallback): void--><!--Device-DownloadTask-onPause(callback: DownloadPauseCallback): void-End-->
+<!--Device-DownloadTask-offPause(callback?: DownloadPauseCallback): void--><!--Device-DownloadTask-offPause(callback?: DownloadPauseCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -1248,7 +1081,7 @@ Called when the current download session pause.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [DownloadPauseCallback](arkts-basicservices-request-downloadpausecallback-t.md) | 是 | The callback function for the download pause event. |
+| callback | [DownloadPauseCallback](arkts-basicservices-request-downloadpausecallback-t.md) | 否 | The callback function for the download pause event. |
 
 **示例**
 
@@ -1262,20 +1095,44 @@ try {
   // 需要手动将url替换为真实服务器的HTTP协议地址
   request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
     let downloadTask: request.DownloadTask = data;
-    let completeCallback = () => {
-      console.info('Download task completed.');
+    let completeCallback1 = () => {
+      console.info('Download delete complete notification.');
     };
-    downloadTask.onComplete(completeCallback);
+    let completeCallback2 = () => {
+      console.info('Download delete complete notification.');
+    };
+    downloadTask.onComplete(completeCallback1);
+    downloadTask.onComplete(completeCallback2);
+    // 表示取消completeCallback1的订阅
+    downloadTask.offComplete(completeCallback1);
+    // 表示取消订阅下载任务完成的所有回调
+    downloadTask.offComplete();
 
-    let pauseCallback = () => {
-      console.info('Download task pause.');
+    let pauseCallback1 = () => {
+      console.info('Download delete pause notification.');
     };
-    downloadTask.onPause(pauseCallback);
+    let pauseCallback2 = () => {
+      console.info('Download delete pause notification.');
+    };
+    downloadTask.onPause(pauseCallback1);
+    downloadTask.onPause(pauseCallback2);
+    // 表示取消pauseCallback1的订阅
+    downloadTask.offPause(pauseCallback1);
+    // 表示取消订阅下载任务暂停的所有回调
+    downloadTask.offPause();
 
-    let removeCallback = () => {
-      console.info('Download task remove.');
+    let removeCallback1 = () => {
+      console.info('Download delete remove notification.');
     };
-    downloadTask.onRemove(removeCallback);
+    let removeCallback2 = () => {
+      console.info('Download delete remove notification.');
+    };
+    downloadTask.onRemove(removeCallback1);
+    downloadTask.onRemove(removeCallback2);
+    // 表示取消removeCallback1的订阅
+    downloadTask.offRemove(removeCallback1);
+    // 表示取消订阅下载任务移除的所有回调
+    downloadTask.offRemove();
   }).catch((err: Error) => {
     console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
   })
@@ -1284,17 +1141,72 @@ try {
 }
 ```
 
-## onProgress
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let attachments: Array<request.agent.FormItem> = [{
+  name: "taskOffTest",
+  value: {
+    filename: "taskOffTest.avi",
+    path: "./taskOffTest.avi",
+  }
+}];
+let config: request.agent.Config = {
+  action: request.agent.Action.UPLOAD,
+  url: 'http://127.0.0.1', // 需要手动将url替换为真实服务器的HTTP协议地址
+  title: 'taskOffTest',
+  description: 'Sample code for event listening',
+  mode: request.agent.Mode.FOREGROUND,
+  overwrite: false,
+  method: "PUT",
+  data: attachments,
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+let createOffCallback1 = (progress: request.agent.Progress) => {
+  console.info('upload task pause.');
+};
+let createOffCallback2 = (progress: request.agent.Progress) => {
+  console.info('upload task pause.');
+};
+request.agent.create(context, config).then((task: request.agent.Task) => {
+  task.onPause(createOffCallback1);
+  task.onPause(createOffCallback2);
+  // 表示取消createOffCallback1的订阅
+  task.offPause(createOffCallback1);
+  // 表示取消订阅任务暂停的所有回调
+  task.offPause();
+  console.info(`Succeeded in creating a upload task. result: ${task.tid}`);
+  task.start();
+}).catch((err: Error) => {
+  console.error(`Failed to create a upload task, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## offProgress
 
 ```TypeScript
-onProgress(callback: DownloadProgressCallback): void
+offProgress(callback?: DownloadProgressCallback): void
 ```
 
 Called when the current download session is in process.
 
 **起始版本：** 23
 
-<!--Device-DownloadTask-onProgress(callback: DownloadProgressCallback): void--><!--Device-DownloadTask-onProgress(callback: DownloadProgressCallback): void-End-->
+<!--Device-DownloadTask-offProgress(callback?: DownloadProgressCallback): void--><!--Device-DownloadTask-offProgress(callback?: DownloadProgressCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -1302,9 +1214,44 @@ Called when the current download session is in process.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [DownloadProgressCallback](arkts-basicservices-request-downloadprogresscallback-t.md) | 是 | The callback function for the download progress event. |
+| callback | [DownloadProgressCallback](arkts-basicservices-request-downloadprogresscallback-t.md) | 否 | The callback function for the download progress event. |
 
 **示例**
+
+```TypeScript
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
+  data: [{ name: "name123", value: "123" }],
+};
+let upProgressCallback1 = (uploadedSize: long, totalSize: long) => {
+  console.info('Upload delete progress notification.' + 'totalSize:' + totalSize + 'uploadedSize:' + uploadedSize);
+};
+let upProgressCallback2 = (uploadedSize: long, totalSize: long) => {
+  console.info('Upload delete progress notification.' + 'totalSize:' + totalSize + 'uploadedSize:' + uploadedSize);
+};
+try {
+  request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
+    if (err) {
+      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    uploadTask.onProgress(upProgressCallback1);
+    uploadTask.onProgress(upProgressCallback2);
+    // 表示取消upProgressCallback1的订阅
+    uploadTask.offProgress(upProgressCallback1);
+    // 表示取消订阅上传任务进度事件的所有回调
+    uploadTask.offProgress();
+  });
+} catch (err) {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1316,10 +1263,18 @@ try {
   // 需要手动将url替换为真实服务器的HTTP协议地址
   request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
     let downloadTask: request.DownloadTask = data;
-    let progressCallback = (receivedSize: long, totalSize: long) => {
-      console.info("download receivedSize:" + receivedSize + " totalSize:" + totalSize);
+    let progressCallback1 = (receivedSize: long, totalSize: long) => {
+      console.info('Download delete progress notification.' + 'receivedSize:' + receivedSize + 'totalSize:' + totalSize);
     };
-    downloadTask.onProgress(progressCallback);
+    let progressCallback2 = (receivedSize: long, totalSize: long) => {
+      console.info('Download delete progress notification.' + 'receivedSize:' + receivedSize + 'totalSize:' + totalSize);
+    };
+    downloadTask.onProgress(progressCallback1);
+    downloadTask.onProgress(progressCallback2);
+    // 表示取消progressCallback1的订阅
+    downloadTask.offProgress(progressCallback1);
+    // 表示取消订阅下载任务进度事件的所有回调
+    downloadTask.offProgress();
   }).catch((err: Error) => {
     console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
   })
@@ -1328,17 +1283,72 @@ try {
 }
 ```
 
-## onRemove
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let attachments: Array<request.agent.FormItem> = [{
+  name: "taskOffTest",
+  value: {
+    filename: "taskOffTest.avi",
+    path: "./taskOffTest.avi",
+  }
+}];
+let config: request.agent.Config = {
+  action: request.agent.Action.UPLOAD,
+  url: 'http://127.0.0.1', // 需要手动将url替换为真实服务器的HTTP协议地址
+  title: 'taskOffTest',
+  description: 'Sample code for event listening',
+  mode: request.agent.Mode.FOREGROUND,
+  overwrite: false,
+  method: "PUT",
+  data: attachments,
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+let createOffCallback1 = (progress: request.agent.Progress) => {
+  console.info('upload task progress.');
+};
+let createOffCallback2 = (progress: request.agent.Progress) => {
+  console.info('upload task progress.');
+};
+request.agent.create(context, config).then((task: request.agent.Task) => {
+  task.onProgress(createOffCallback1);
+  task.onProgress(createOffCallback2);
+  // 表示取消createOffCallback1的订阅
+  task.offProgress(createOffCallback1);
+  // 表示取消订阅任务进度的所有回调
+  task.offProgress();
+  console.info(`Succeeded in creating a upload task. result: ${task.tid}`);
+  task.start();
+}).catch((err: Error) => {
+  console.error(`Failed to create a upload task, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## offRemove
 
 ```TypeScript
-onRemove(callback: DownloadRemoveCallback): void
+offRemove(callback?: DownloadRemoveCallback): void
 ```
 
 Called when the current download session remove.
 
 **起始版本：** 23
 
-<!--Device-DownloadTask-onRemove(callback: DownloadRemoveCallback): void--><!--Device-DownloadTask-onRemove(callback: DownloadRemoveCallback): void-End-->
+<!--Device-DownloadTask-offRemove(callback?: DownloadRemoveCallback): void--><!--Device-DownloadTask-offRemove(callback?: DownloadRemoveCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -1346,7 +1356,7 @@ Called when the current download session remove.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [DownloadRemoveCallback](arkts-basicservices-request-downloadremovecallback-t.md) | 是 | The callback function for the download remove event. |
+| callback | [DownloadRemoveCallback](arkts-basicservices-request-downloadremovecallback-t.md) | 否 | The callback function for the download remove event. |
 
 **示例**
 
@@ -1360,26 +1370,105 @@ try {
   // 需要手动将url替换为真实服务器的HTTP协议地址
   request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
     let downloadTask: request.DownloadTask = data;
-    let completeCallback = () => {
-      console.info('Download task completed.');
+    let completeCallback1 = () => {
+      console.info('Download delete complete notification.');
     };
-    downloadTask.onComplete(completeCallback);
+    let completeCallback2 = () => {
+      console.info('Download delete complete notification.');
+    };
+    downloadTask.onComplete(completeCallback1);
+    downloadTask.onComplete(completeCallback2);
+    // 表示取消completeCallback1的订阅
+    downloadTask.offComplete(completeCallback1);
+    // 表示取消订阅下载任务完成的所有回调
+    downloadTask.offComplete();
 
-    let pauseCallback = () => {
-      console.info('Download task pause.');
+    let pauseCallback1 = () => {
+      console.info('Download delete pause notification.');
     };
-    downloadTask.onPause(pauseCallback);
+    let pauseCallback2 = () => {
+      console.info('Download delete pause notification.');
+    };
+    downloadTask.onPause(pauseCallback1);
+    downloadTask.onPause(pauseCallback2);
+    // 表示取消pauseCallback1的订阅
+    downloadTask.offPause(pauseCallback1);
+    // 表示取消订阅下载任务暂停的所有回调
+    downloadTask.offPause();
 
-    let removeCallback = () => {
-      console.info('Download task remove.');
+    let removeCallback1 = () => {
+      console.info('Download delete remove notification.');
     };
-    downloadTask.onRemove(removeCallback);
+    let removeCallback2 = () => {
+      console.info('Download delete remove notification.');
+    };
+    downloadTask.onRemove(removeCallback1);
+    downloadTask.onRemove(removeCallback2);
+    // 表示取消removeCallback1的订阅
+    downloadTask.offRemove(removeCallback1);
+    // 表示取消订阅下载任务移除的所有回调
+    downloadTask.offRemove();
   }).catch((err: Error) => {
     console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
   })
 } catch (err) {
   console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
 }
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let attachments: Array<request.agent.FormItem> = [{
+  name: "taskOffTest",
+  value: {
+    filename: "taskOffTest.avi",
+    path: "./taskOffTest.avi",
+  }
+}];
+let config: request.agent.Config = {
+  action: request.agent.Action.UPLOAD,
+  url: 'http://127.0.0.1', // 需要手动将url替换为真实服务器的HTTP协议地址
+  title: 'taskOffTest',
+  description: 'Sample code for event listening',
+  mode: request.agent.Mode.FOREGROUND,
+  overwrite: false,
+  method: "PUT",
+  data: attachments,
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+let createOffCallback1 = (progress: request.agent.Progress) => {
+  console.info('upload task remove.');
+};
+let createOffCallback2 = (progress: request.agent.Progress) => {
+  console.info('upload task remove.');
+};
+request.agent.create(context, config).then((task: request.agent.Task) => {
+  task.onRemove(createOffCallback1);
+  task.onRemove(createOffCallback2);
+  // 表示取消createOffCallback1的订阅
+  task.offRemove(createOffCallback1);
+  // 表示取消订阅任务移除的所有回调
+  task.offRemove();
+  console.info(`Succeeded in creating a upload task. result: ${task.tid}`);
+  task.start();
+}).catch((err: Error) => {
+  console.error(`Failed to create a upload task, Code: ${err.code}, message: ${err.message}`);
+});
 ```
 
 ## on('complete' | 'pause' | 'remove')
@@ -1611,6 +1700,484 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 
 参见 on_complete
 
+## onComplete
+
+```TypeScript
+onComplete(callback: DownloadCompleteCallback): void
+```
+
+Called when the current download session complete.
+
+**起始版本：** 23
+
+<!--Device-DownloadTask-onComplete(callback: DownloadCompleteCallback): void--><!--Device-DownloadTask-onComplete(callback: DownloadCompleteCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Download
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [DownloadCompleteCallback](arkts-basicservices-request-downloadcompletecallback-t.md) | 是 | The callback function for the download complete event. |
+
+**示例**
+
+```TypeScript
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
+  data: [{ name: "name123", value: "123" }],
+};
+let upCompleteCallback = (taskStates: Array<request.TaskState>) => {
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info("upOnComplete taskState:" + JSON.stringify(taskStates[i]));
+  }
+};
+try {
+  request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
+    if (err) {
+      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    uploadTask.onComplete(upCompleteCallback);
+  });
+} catch (err) {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let completeCallback = () => {
+      console.info('Download task completed.');
+    };
+    downloadTask.onComplete(completeCallback);
+
+    let pauseCallback = () => {
+      console.info('Download task pause.');
+    };
+    downloadTask.onPause(pauseCallback);
+
+    let removeCallback = () => {
+      console.info('Download task remove.');
+    };
+    downloadTask.onRemove(removeCallback);
+  }).catch((err: Error) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## onFail
+
+```TypeScript
+onFail(callback: DownloadFailCallback): void
+```
+
+Called when the current download session fails.
+
+**起始版本：** 23
+
+<!--Device-DownloadTask-onFail(callback: DownloadFailCallback): void--><!--Device-DownloadTask-onFail(callback: DownloadFailCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Download
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [DownloadFailCallback](arkts-basicservices-request-downloadfailcallback-t.md) | 是 | The callback function for the download fail event. |
+
+**示例**
+
+```TypeScript
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
+  data: [{ name: "name123", value: "123" }],
+};
+let upFailCallback = (taskStates: Array<request.TaskState>) => {
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info("upOnFail taskState:" + JSON.stringify(taskStates[i]));
+  }
+};
+try {
+  request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
+    if (err) {
+      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    uploadTask.onFail(upFailCallback);
+  });
+} catch (err) {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let failCallback = (err: int) => {
+      console.error(`Failed to download the task. Code: ${err}`);
+    };
+    downloadTask.onFail(failCallback);
+  }).catch((err: Error) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## onPause
+
+```TypeScript
+onPause(callback: DownloadPauseCallback): void
+```
+
+Called when the current download session pause.
+
+**起始版本：** 23
+
+<!--Device-DownloadTask-onPause(callback: DownloadPauseCallback): void--><!--Device-DownloadTask-onPause(callback: DownloadPauseCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Download
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [DownloadPauseCallback](arkts-basicservices-request-downloadpausecallback-t.md) | 是 | The callback function for the download pause event. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let completeCallback = () => {
+      console.info('Download task completed.');
+    };
+    downloadTask.onComplete(completeCallback);
+
+    let pauseCallback = () => {
+      console.info('Download task pause.');
+    };
+    downloadTask.onPause(pauseCallback);
+
+    let removeCallback = () => {
+      console.info('Download task remove.');
+    };
+    downloadTask.onRemove(removeCallback);
+  }).catch((err: Error) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let attachments: Array<request.agent.FormItem> = [{
+  name: "taskOnTest",
+  value: {
+    filename: "taskOnTest.avi",
+    path: "./taskOnTest.avi",
+  }
+}];
+let config: request.agent.Config = {
+  action: request.agent.Action.UPLOAD,
+  url: 'http://127.0.0.1', // 需要手动将url替换为真实服务器的HTTP协议地址
+  title: 'taskOnTest',
+  description: 'Sample code for event listening',
+  mode: request.agent.Mode.FOREGROUND,
+  overwrite: false,
+  method: "POST",
+  data: attachments,
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+let createOnCallback = (progress: request.agent.Progress) => {
+  console.info('upload task pause.');
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.onPause(createOnCallback);
+  console.info(`Succeeded in creating a upload task. result: ${task.tid}`);
+  task.start();
+  task.pause();
+}).catch((err: Error) => {
+  console.error(`Failed to create a upload task, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## onProgress
+
+```TypeScript
+onProgress(callback: DownloadProgressCallback): void
+```
+
+Called when the current download session is in process.
+
+**起始版本：** 23
+
+<!--Device-DownloadTask-onProgress(callback: DownloadProgressCallback): void--><!--Device-DownloadTask-onProgress(callback: DownloadProgressCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Download
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [DownloadProgressCallback](arkts-basicservices-request-downloadprogresscallback-t.md) | 是 | The callback function for the download progress event. |
+
+**示例**
+
+```TypeScript
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
+  data: [{ name: "name123", value: "123" }],
+};
+let upProgressCallback = (uploadedSize: long, totalSize: long) => {
+  console.info("upload totalSize:" + totalSize + "  uploadedSize:" + uploadedSize);
+};
+try {
+  request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
+    if (err) {
+      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    uploadTask.onProgress(upProgressCallback);
+  });
+} catch (err) {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let progressCallback = (receivedSize: long, totalSize: long) => {
+      console.info("download receivedSize:" + receivedSize + " totalSize:" + totalSize);
+    };
+    downloadTask.onProgress(progressCallback);
+  }).catch((err: Error) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let attachments: Array<request.agent.FormItem> = [{
+  name: "taskOnTest",
+  value: {
+    filename: "taskOnTest.avi",
+    path: "./taskOnTest.avi",
+  }
+}];
+let config: request.agent.Config = {
+  action: request.agent.Action.UPLOAD,
+  url: 'http://127.0.0.1', // 需要手动将url替换为真实服务器的HTTP协议地址
+  title: 'taskOnTest',
+  description: 'Sample code for event listening',
+  mode: request.agent.Mode.FOREGROUND,
+  overwrite: false,
+  method: "PUT",
+  data: attachments,
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+let createOnCallback = (progress: request.agent.Progress) => {
+  console.info('upload task progress.');
+};
+request.agent.create(context, config).then((task: request.agent.Task) => {
+  task.onProgress(createOnCallback);
+  console.info(`Succeeded in creating a upload task. result: ${task.tid}`);
+  task.start();
+}).catch((err: Error) => {
+  console.error(`Failed to create a upload task, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## onRemove
+
+```TypeScript
+onRemove(callback: DownloadRemoveCallback): void
+```
+
+Called when the current download session remove.
+
+**起始版本：** 23
+
+<!--Device-DownloadTask-onRemove(callback: DownloadRemoveCallback): void--><!--Device-DownloadTask-onRemove(callback: DownloadRemoveCallback): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Download
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [DownloadRemoveCallback](arkts-basicservices-request-downloadremovecallback-t.md) | 是 | The callback function for the download remove event. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let completeCallback = () => {
+      console.info('Download task completed.');
+    };
+    downloadTask.onComplete(completeCallback);
+
+    let pauseCallback = () => {
+      console.info('Download task pause.');
+    };
+    downloadTask.onPause(pauseCallback);
+
+    let removeCallback = () => {
+      console.info('Download task remove.');
+    };
+    downloadTask.onRemove(removeCallback);
+  }).catch((err: Error) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let attachments: Array<request.agent.FormItem> = [{
+  name: "taskOnTest",
+  value: {
+    filename: "taskOnTest.avi",
+    path: "./taskOnTest.avi",
+  }
+}];
+let config: request.agent.Config = {
+  action: request.agent.Action.UPLOAD,
+  url: 'http://127.0.0.1', // 需要手动将url替换为真实服务器的HTTP协议地址
+  title: 'taskOnTest',
+  description: 'Sample code for event listening',
+  mode: request.agent.Mode.FOREGROUND,
+  overwrite: false,
+  method: "PUT",
+  data: attachments,
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+let createOnCallback = (progress: request.agent.Progress) => {
+  console.info('upload task remove.');
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.onRemove(createOnCallback);
+  console.info(`Succeeded in creating a upload task. result: ${task.tid}`);
+  task.start();
+  request.agent.remove(task.tid);
+}).catch((err: Error) => {
+  console.error(`Failed to create a upload task, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## pause
 
 ```TypeScript
@@ -1651,12 +2218,204 @@ pause(callback: AsyncCallback<void>): void
 **示例**
 
 ```TypeScript
+downloadTask.pause().then(() => {    
+  console.info('Succeeded in pausing the download task.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
 downloadTask.pause((err: BusinessError) => {
   if(err) {
     console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
     return;
   }
   console.info('Succeeded in pausing the download task.');
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // 需要手动将url替换为真实服务器的HTTP协议地址
+  title: 'taskPauseTest',
+  description: 'Sample code for pause the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  // 等待1秒再执行下一步操作，以防异步乱序
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(), 1000);
+  })
+  task.pause((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to pause the download task, Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info(`Succeeded in pausing a download task. `);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // 需要手动将url替换为真实服务器的HTTP协议地址
+  title: 'taskPauseTest',
+  description: 'Sample code for pause the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  task.pause(err => {
+    if (err) {
+      console.error(`Failed to pause the download task, Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info(`Succeeded in pausing a download task. `);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: Error) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // 需要手动将url替换为真实服务器的HTTP协议地址
+  title: 'taskPauseTest',
+  description: 'Sample code for pause the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  // 等待1秒再执行下一步操作，以防异步乱序
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(), 1000);
+  })
+  task.pause().then(() => {
+    console.info(`Succeeded in pausing a download task. `);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to pause the download task, Code: ${err.code}, message: ${err.message}`);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // 需要手动将url替换为真实服务器的HTTP协议地址
+  title: 'taskPauseTest',
+  description: 'Sample code for pause the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  task.pause().then(() => {
+    console.info(`Succeeded in pausing a download task. `);
+  }).catch((err: Error) => {
+    console.error(`Failed to pause the download task, Code: ${err.code}, message: ${err.message}`);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: Error) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -1698,13 +2457,7 @@ pause(): Promise<void>
 
 **示例**
 
-```TypeScript
-downloadTask.pause().then(() => {    
-  console.info('Succeeded in pausing the download task.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [pause](#pause)
 
 ## query
 
@@ -1744,6 +2497,14 @@ query(callback: AsyncCallback<DownloadInfo>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 **示例**
+
+```TypeScript
+downloadTask.query().then((downloadInfo) => {    
+  console.info('Succeeded in querying the download task.')
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query the download task. Code: ${err.code}, message: ${err.message}`)
+});
+```
 
 ```TypeScript
 downloadTask.query((err: BusinessError, downloadInfo: request.DownloadInfo)=>{
@@ -1793,13 +2554,7 @@ query(): Promise<DownloadInfo>
 
 **示例**
 
-```TypeScript
-downloadTask.query().then((downloadInfo) => {    
-  console.info('Succeeded in querying the download task.')
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query the download task. Code: ${err.code}, message: ${err.message}`)
-});
-```
+参见 [query](#query)
 
 ## queryMimeType
 
@@ -1839,6 +2594,14 @@ queryMimeType(callback: AsyncCallback<string>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 **示例**
+
+```TypeScript
+downloadTask.queryMimeType().then((data: string) => {    
+  console.info('Succeeded in querying the download MimeType.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query the download MimeType. Code: ${err.code}, message: ${err.message}`)
+});
+```
 
 ```TypeScript
 downloadTask.queryMimeType((err: BusinessError, data: string)=>{
@@ -1888,13 +2651,7 @@ queryMimeType(): Promise<string>
 
 **示例**
 
-```TypeScript
-downloadTask.queryMimeType().then((data: string) => {    
-  console.info('Succeeded in querying the download MimeType.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query the download MimeType. Code: ${err.code}, message: ${err.message}`)
-});
-```
+参见 [queryMimeType](#querymimetype)
 
 ## remove
 
@@ -1936,12 +2693,66 @@ remove(callback: AsyncCallback<boolean>): void
 **示例**
 
 ```TypeScript
+uploadTask.remove().then((result: boolean) => {
+  console.info('Succeeded in removing the upload task.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to remove the upload task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+uploadTask.remove((err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to remove the upload task. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in removing the upload task.');
+  }
+});
+```
+
+```TypeScript
+downloadTask.remove().then((result) => {
+  console.info('Succeeded in removing the download task.');
+}).catch ((err: BusinessError) => {
+  console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
 downloadTask.remove((err, result)=>{
   if(err) {
     console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
     return;
   }
   console.info('Succeeded in removing the download task.');
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+request.agent.remove("123456", (err: BusinessError<void> | null) => {
+  if (err) {
+    console.error(`Failed to remove a download task, Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in removing a download task.`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+request.agent.remove("123456").then(() => {
+  console.info(`Succeeded in removing a download task. `);
+}).catch((err: Error) => {
+  console.error(`Failed to remove a download task, Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -1983,13 +2794,7 @@ remove(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-downloadTask.remove().then((result) => {
-  console.info('Succeeded in removing the download task.');
-}).catch ((err: BusinessError) => {
-  console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [remove](#remove)
 
 ## restore
 
@@ -2024,6 +2829,56 @@ restore(callback: AsyncCallback<boolean>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.restore().then((result: boolean) => {
+      console.info('Succeeded in resuming the download task.')
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.restore().then((result: boolean) => {
+      console.info('Succeeded in resuming the download task.')
+    }).catch((err: Error) => {
+      console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: Error) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ArkTS-Dyn示例：
 
@@ -2113,55 +2968,7 @@ restore(): Promise<boolean>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    downloadTask.restore().then((result: boolean) => {
-      console.info('Succeeded in resuming the download task.')
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    downloadTask.restore().then((result: boolean) => {
-      console.info('Succeeded in resuming the download task.')
-    }).catch((err: Error) => {
-      console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
-    });
-  }).catch((err: Error) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [restore](#restore)
 
 ## resume
 
@@ -2203,12 +3010,216 @@ resume(callback: AsyncCallback<void>): void
 **示例**
 
 ```TypeScript
+downloadTask.resume().then(() => {
+  console.info('Succeeded in resuming the download task.')
+}).catch((err: BusinessError) => {
+  console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
 downloadTask.resume((err: BusinessError) => {
   if (err) {
     console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
     return;
   }
   console.info('Succeeded in resuming the download task.');
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // 需要手动将url替换为真实服务器的HTTP协议地址
+  title: 'taskResumeTest',
+  description: 'Sample code for resume the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  // 等待1秒再执行下一步操作，以防异步乱序
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(), 1000);
+  })
+  task.pause();
+  // 等待1秒再执行下一步操作，以防异步乱序
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(), 1000);
+  })
+  task.resume((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to resume the download task, Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info(`Succeeded in resuming a download task. `);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // 需要手动将url替换为真实服务器的HTTP协议地址
+  title: 'taskResumeTest',
+  description: 'Sample code for resume the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  task.pause();
+  task.resume(err => {
+    if (err) {
+      console.error(`Failed to resume the download task, Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info(`Succeeded in resuming a download task. `);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: Error) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // 需要手动将url替换为真实服务器的HTTP协议地址
+  title: 'taskResumeTest',
+  description: 'Sample code for resume the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  // 等待1秒再执行下一步操作，以防异步乱序
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(), 1000);
+  })
+  task.pause();
+  // 等待1秒再执行下一步操作，以防异步乱序
+  await new Promise<void>((resolve) => {
+    setTimeout(() => resolve(), 1000);
+  })
+  task.resume().then(() => {
+    console.info(`Succeeded in resuming a download task. `);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to resume the download task, Code: ${err.code}, message: ${err.message}`);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let config: request.agent.Config = {
+  action: request.agent.Action.DOWNLOAD,
+  url: 'http://127.0.0.1', // 需要手动将url替换为真实服务器的HTTP协议地址
+  title: 'taskResumeTest',
+  description: 'Sample code for resume the download task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "GET",
+  data: "",
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  task.start();
+  task.pause();
+  task.resume().then(() => {
+    console.info(`Succeeded in resuming a download task. `);
+  }).catch((err: Error) => {
+    console.error(`Failed to resume the download task, Code: ${err.code}, message: ${err.message}`);
+  });
+  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
+}).catch((err: Error) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -2250,13 +3261,7 @@ resume(): Promise<void>
 
 **示例**
 
-```TypeScript
-downloadTask.resume().then(() => {
-  console.info('Succeeded in resuming the download task.')
-}).catch((err: BusinessError) => {
-  console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [resume](#resume)
 
 ## suspend
 
@@ -2291,6 +3296,56 @@ suspend(callback: AsyncCallback<boolean>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.suspend().then((result: boolean) => {
+      console.info('Succeeded in pausing the download task.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.suspend().then((result: boolean) => {
+      console.info('Succeeded in pausing the download task.');
+    }).catch((err: Error) => {
+      console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: Error) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ArkTS-Dyn示例：
 
@@ -2380,53 +3435,5 @@ suspend(): Promise<boolean>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    downloadTask.suspend().then((result: boolean) => {
-      console.info('Succeeded in pausing the download task.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // 需要手动将url替换为真实服务器的HTTP协议地址
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    downloadTask.suspend().then((result: boolean) => {
-      console.info('Succeeded in pausing the download task.');
-    }).catch((err: Error) => {
-      console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
-    });
-  }).catch((err: Error) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [suspend](#suspend)
 

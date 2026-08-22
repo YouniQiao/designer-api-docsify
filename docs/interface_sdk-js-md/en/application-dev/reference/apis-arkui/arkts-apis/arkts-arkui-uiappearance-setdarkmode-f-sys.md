@@ -31,7 +31,7 @@ Sets the system color mode. This API uses an asynchronous callback to return the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | [DarkMode](../../apis-default/arkts-apis/arkts-uiappearance-darkmode-e.md) | Yes | indicates the dark-mode to set |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of setDarkMode |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setDarkMode |
 
 **Error codes:**
 
@@ -55,6 +55,22 @@ try {
       console.info('Set dark-mode successfully.');
     }
   })
+} catch (error) {
+  let message = (error as BusinessError).message;
+  console.error('Set dark-mode failed, ' + message);
+}
+```
+
+```TypeScript
+import { uiAppearance } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  uiAppearance.setDarkMode(uiAppearance.DarkMode.ALWAYS_DARK).then(() => {
+    console.info('Set dark-mode successfully.');
+  }).catch((error: Error) => {
+    console.error('Set dark-mode failed, ' + error.message);
+  });
 } catch (error) {
   let message = (error as BusinessError).message;
   console.error('Set dark-mode failed, ' + message);
@@ -104,19 +120,5 @@ Sets the system color mode. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { uiAppearance } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  uiAppearance.setDarkMode(uiAppearance.DarkMode.ALWAYS_DARK).then(() => {
-    console.info('Set dark-mode successfully.');
-  }).catch((error: Error) => {
-    console.error('Set dark-mode failed, ' + error.message);
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('Set dark-mode failed, ' + message);
-}
-```
+See [setDarkMode](#setdarkmode)
 

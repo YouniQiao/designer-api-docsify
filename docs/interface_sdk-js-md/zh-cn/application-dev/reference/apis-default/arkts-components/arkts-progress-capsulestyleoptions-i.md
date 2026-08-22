@@ -42,7 +42,7 @@ borderRadius?: LengthMetrics
 
 Capsule进度条圆角半径（不支持百分比设置）。 默认值：min(width, height) / 2。
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **默认值：** min(width, height) / 2
 

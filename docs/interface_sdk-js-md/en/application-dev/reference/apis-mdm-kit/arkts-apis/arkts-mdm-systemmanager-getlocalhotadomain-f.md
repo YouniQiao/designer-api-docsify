@@ -28,7 +28,7 @@ Get local HOTA domain for device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | admin indicates the enterprise admin extension ability information. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | admin indicates the enterprise admin extension ability information. |
 
 **Return value:**
 

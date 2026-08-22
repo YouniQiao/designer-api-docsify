@@ -33,7 +33,7 @@ function connectServiceExtensionAbility(context: AgentExtensionContext, want: Wa
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [AgentExtensionContext](arkts-ability-agentextensioncontext-c.md) | 是 | 当前Agent扩展能力的上下文，包含AgentCard信息。 |
-| want | [Want](arkts-ability-appabilitywant-want-c.md) | 是 | 目标ServiceExtensionAbility的Want信息，包含bundleName、abilityName等。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 目标ServiceExtensionAbility的Want信息，包含bundleName、abilityName等。 |
 | callback | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | 是 | ConnectOptions类型的回调函数，返回服务连接成功、连接失败、断开的信息。 |
 
 **返回值：**

@@ -14,3 +14,11 @@ Indicates an accessibility element. For details, see [AccessibilityElement](arkt
 
 **Property type:** _AccessibilityElement
 
+**Examples**
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+
+let accessibilityElement: AccessibilityElement;
+```
+

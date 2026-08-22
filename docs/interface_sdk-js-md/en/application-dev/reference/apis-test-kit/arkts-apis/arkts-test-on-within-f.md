@@ -33,3 +33,13 @@ Requires that the target Component which is inside of another Component that spe
 | --- | --- |
 | [On](arkts-test-uitest-on-c.md) | this { |
 
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+// Use the static constructor ON to create an On object and specify that the target component is located within the given attribute component.
+let on: On = ON.text('java').within(ON.type('Scroll')); // Search for the child component whose text is java within the Scroller component.
+```
+

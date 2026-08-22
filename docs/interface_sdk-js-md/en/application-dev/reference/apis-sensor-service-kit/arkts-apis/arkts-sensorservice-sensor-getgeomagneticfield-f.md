@@ -30,7 +30,7 @@ Obtains the geomagnetic field of a geographic location. This API uses an asynchr
 | --- | --- | --- | --- |
 | locationOptions | [LocationOptions](arkts-sensorservice-sensor-locationoptions-i.md) | Yes | Geographic location. |
 | timeMillis | number | Yes | Time for obtaining the magnetic declination, in milliseconds. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[GeomagneticResponse](arkts-sensorservice-sensor-geomagneticresponse-i.md)&gt; | Yes | Callback used to return the geomagnetic field. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[GeomagneticResponse](arkts-sensorservice-sensor-geomagneticresponse-i.md)&gt; | Yes | Callback used to return the geomagnetic field. |
 
 **Examples**
 
@@ -48,6 +48,20 @@ sensor.getGeomagneticField({ latitude: 80, longitude: 0, altitude: 0 }, 15804864
   data.z + ',geomagneticDip: ' + data.geomagneticDip + ',deflectionAngle: ' + data.deflectionAngle +
   ',levelIntensity: ' + data.levelIntensity + ',totalIntensity: ' + data.totalIntensity);
 });
+```
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const promise = sensor.getGeomagneticField({ latitude: 80, longitude: 0, altitude: 0 }, 1580486400000);
+promise.then((data: sensor.GeomagneticResponse) => {
+  console.info('Succeeded in getting sensor_getGeomagneticField_promise x: ' + data.x + ',y: ' + data.y + ',z: ' +
+  data.z + ',geomagneticDip: ' + data.geomagneticDip + ',deflectionAngle: ' + data.deflectionAngle +
+  ',levelIntensity: ' + data.levelIntensity + ',totalIntensity: ' + data.totalIntensity);
+}).catch((reason: BusinessError) => {
+  console.error(`Failed to operate.`);
+})
 ```
 
 
@@ -84,17 +98,5 @@ Obtains the geomagnetic field of a geographic location. This API uses a promise 
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const promise = sensor.getGeomagneticField({ latitude: 80, longitude: 0, altitude: 0 }, 1580486400000);
-promise.then((data: sensor.GeomagneticResponse) => {
-  console.info('Succeeded in getting sensor_getGeomagneticField_promise x: ' + data.x + ',y: ' + data.y + ',z: ' +
-  data.z + ',geomagneticDip: ' + data.geomagneticDip + ',deflectionAngle: ' + data.deflectionAngle +
-  ',levelIntensity: ' + data.levelIntensity + ',totalIntensity: ' + data.totalIntensity);
-}).catch((reason: BusinessError) => {
-  console.error(`Failed to operate.`);
-})
-```
+See [getGeomagneticField](#getgeomagneticfield)
 

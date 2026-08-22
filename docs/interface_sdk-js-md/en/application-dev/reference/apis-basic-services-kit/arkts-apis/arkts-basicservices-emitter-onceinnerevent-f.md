@@ -27,7 +27,7 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | [InnerEvent](arkts-basicservices-emitter-innerevent-i.md) | Yes | Event to subscribe to in one-shot manner. The [EventPriority](arkts-basicservices-emitter-eventpriority-e.md) parameter is not required and does not take effect. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be invoked when the event is received. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be invoked when the event is received. |
 
 **Examples**
 

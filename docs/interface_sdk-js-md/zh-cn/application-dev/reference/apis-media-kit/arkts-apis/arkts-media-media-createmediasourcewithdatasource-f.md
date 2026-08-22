@@ -28,13 +28,13 @@ function createMediaSourceWithDataSource(dataSrc: AVDataSrcDescriptor): MediaSou
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataSrc | [AVDataSrcDescriptor](arkts-media-multimediamedia-avdatasrcdescriptor-i.md) | 是 | 流式媒体资源描述符。 |
+| dataSrc | [AVDataSrcDescriptor](arkts-media-multimedia-media-avdatasrcdescriptor-i.md) | 是 | 流式媒体资源描述符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaSource](arkts-media-multimediamedia-mediasource-i.md) \| undefined | 返回MediaSource，用于媒体资源设置。 |
+| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) \| undefined | 返回MediaSource，用于媒体资源设置。 |
 
 **示例**
 

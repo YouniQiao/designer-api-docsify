@@ -50,6 +50,24 @@ getZoomPointInfos(): Array<ZoomPointInfo>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 24 |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function getZoomPointInfos(photoSession: camera.PhotoSession): Array<camera.ZoomPointInfo> {
+  let zoomPointInfos: Array<camera.ZoomPointInfo> = [];
+  try {
+    zoomPointInfos = photoSession.getZoomPointInfos();
+  } catch (error) {
+    // 失败返回错误码error.code并处理。
+    let err = error as BusinessError;
+    console.error(`The getZoomPointInfos call failed. error code: ${err.code}`);
+  }
+  return zoomPointInfos;
+}
+```
+
 ## isZoomCenterPointSupported
 
 ```TypeScript

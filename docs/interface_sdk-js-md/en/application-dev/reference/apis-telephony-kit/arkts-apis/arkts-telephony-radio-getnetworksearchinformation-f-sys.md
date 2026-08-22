@@ -29,7 +29,7 @@ Get network search information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NetworkSearchResult](arkts-telephony-radio-networksearchresult-i-sys.md)&gt; | Yes | Indicates the callback for getting the search results of the network. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetworkSearchResult](arkts-telephony-radio-networksearchresult-i-sys.md)&gt; | Yes | Indicates the callback for getting the search results of the network. |
 
 **Error codes:**
 
@@ -54,6 +54,16 @@ radio.getNetworkSearchInformation(0, (err: BusinessError, data: radio.NetworkSea
         return;
     }
     console.info(`getNetworkSearchInformation success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+radio.getNetworkSearchInformation(0).then((data: radio.NetworkSearchResult) => {
+    console.info(`getNetworkSearchInformation success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getNetworkSearchInformation failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -102,13 +112,5 @@ Get network search information.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.getNetworkSearchInformation(0).then((data: radio.NetworkSearchResult) => {
-    console.info(`getNetworkSearchInformation success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getNetworkSearchInformation failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getNetworkSearchInformation](#getnetworksearchinformation)
 

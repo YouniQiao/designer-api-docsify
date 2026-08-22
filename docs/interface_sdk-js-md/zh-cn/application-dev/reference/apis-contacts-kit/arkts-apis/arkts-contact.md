@@ -24,8 +24,8 @@ import { contact } from '@kit.ContactsKit';
 | [addContact](arkts-contacts-contact-addcontact-f.md) | 添加联系人。使用callback异步回调。 |
 | [addContact](arkts-contacts-contact-addcontact-f.md) | 添加联系人。使用Promise异步回调。 |
 | [addContact](arkts-contacts-contact-addcontact-f.md) | 添加联系人。使用Promise异步回调。 |
-| [addContactViaUI](arkts-contacts-contact-addcontactviaui-f.md) | 调用新建联系人接口，打开新建联系人UI界面。使用Promise异步回调。 |
 | [addContacts](arkts-contacts-contact-addcontacts-f.md) | 批量添加联系人。使用Promise异步回调。 |
+| [addContactViaUI](arkts-contacts-contact-addcontactviaui-f.md) | 调用新建联系人接口，打开新建联系人UI界面。使用Promise异步回调。 |
 | [deleteContact](arkts-contacts-contact-deletecontact-f.md) | 删除联系人。使用callback异步回调。 |
 | [deleteContact](arkts-contacts-contact-deletecontact-f.md) | 删除联系人。使用callback异步回调。 |
 | [deleteContact](arkts-contacts-contact-deletecontact-f.md) | 删除联系人。使用Promise异步回调。 |
@@ -51,7 +51,6 @@ import { contact } from '@kit.ContactsKit';
 | [queryContact](arkts-contacts-contact-querycontact-f.md) | 根据key、holder和attrs查询联系人。使用callback异步回调。 |
 | [queryContact](arkts-contacts-contact-querycontact-f.md) | 根据key、holder和attrs查询联系人。使用Promise异步回调。 |
 | [queryContact](arkts-contacts-contact-querycontact-f.md) | 根据key、holder和attrs查询联系人。使用Promise异步回调。 |
-| [queryContactSyncInfo](arkts-contacts-contact-querycontactsyncinfo-f.md) | 查询调用应用程序正在进行的联系人同步信息。 |
 | [queryContacts](arkts-contacts-contact-querycontacts-f.md) | 查询所有联系人。使用callback异步回调。 |
 | [queryContacts](arkts-contacts-contact-querycontacts-f.md) | 查询所有联系人。使用callback异步回调。 |
 | [queryContacts](arkts-contacts-contact-querycontacts-f.md) | 根据holder查询所有联系人。使用callback异步回调。 |
@@ -83,6 +82,7 @@ import { contact } from '@kit.ContactsKit';
 | [queryContactsByPhoneNumber](arkts-contacts-contact-querycontactsbyphonenumber-f.md) | 根据电话号码、holder和attrs查询联系人。使用Promise异步回调。该接口返回的列表仅包含联系人信息中的id、key、phoneNumbers属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md) 接口，根据该接口返回的属性key查询。应用在后台调用此接口获取联系人信息必须要申请对应的长时任务。 |
 | [queryContactsByPhoneNumber](arkts-contacts-contact-querycontactsbyphonenumber-f.md) | 根据电话号码、holder和attrs查询联系人。使用Promise异步回调。该接口返回的列表仅包含联系人信息中的id、key、phoneNumbers属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md) 接口，根据该接口返回的属性key查询。应用在后台调用此接口获取联系人信息必须要申请对应的长时任务。 |
 | [queryContactsCount](arkts-contacts-contact-querycontactscount-f.md) | 查询所有联系人的数量。使用Promise异步回调。 |
+| [queryContactSyncInfo](arkts-contacts-contact-querycontactsyncinfo-f.md) | 查询调用应用程序正在进行的联系人同步信息。 |
 | [queryGroups](arkts-contacts-contact-querygroups-f.md) | 查询联系人的所有群组。使用callback异步回调。 |
 | [queryGroups](arkts-contacts-contact-querygroups-f.md) | 查询联系人的所有群组。使用callback异步回调。 |
 | [queryGroups](arkts-contacts-contact-querygroups-f.md) | 根据holder查询联系人的所有群组。使用callback异步回调。 |

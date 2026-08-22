@@ -30,7 +30,7 @@ Unlock the SIM card password of the specified card slot.
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 | pin | string | Yes | Indicates the password of the SIM card. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LockStatusResponse](arkts-telephony-sim-lockstatusresponse-i-sys.md)&gt; | Yes | Indicates the callback for getting the response to obtain the SIM card lock status of the specified card slot. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LockStatusResponse](arkts-telephony-sim-lockstatusresponse-i-sys.md)&gt; | Yes | Indicates the callback for getting the response to obtain the SIM card lock status of the specified card slot. |
 
 **Error codes:**
 
@@ -55,6 +55,18 @@ import { sim } from '@kit.TelephonyKit';
 let pin: string = '1234';
 sim.unlockPin(0, pin, (err: BusinessError, data: sim.LockStatusResponse) => {
     console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+let pin: string = '1234';
+sim.unlockPin(0, pin).then((data: sim.LockStatusResponse) => {
+    console.info(`unlockPin success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`unlockPin failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -106,15 +118,5 @@ Unlock the SIM card password of the specified card slot.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let pin: string = '1234';
-sim.unlockPin(0, pin).then((data: sim.LockStatusResponse) => {
-    console.info(`unlockPin success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`unlockPin failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [unlockPin](#unlockpin)
 

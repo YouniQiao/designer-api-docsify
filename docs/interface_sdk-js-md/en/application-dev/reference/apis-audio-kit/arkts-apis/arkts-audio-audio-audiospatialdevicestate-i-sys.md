@@ -89,3 +89,16 @@ Spatial device type.
 
 **System API:** This is a system API.
 
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let spatialDeviceState: audio.AudioSpatialDeviceState = {
+  address: "123",
+  isSpatializationSupported: true,
+  isHeadTrackingSupported: true,
+  spatialDeviceType: audio.AudioSpatialDeviceType.SPATIAL_DEVICE_TYPE_IN_EAR_HEADPHONE
+};
+```
+

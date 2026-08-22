@@ -105,7 +105,7 @@ clipContent(clip: ContentClipMode | RectShape): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| clip | [ContentClipMode](arkts-arkui-contentclipmode-e.md) \| [RectShape](arkts-arkui-rectshape-t.md) | 是 | 裁剪只针对滚动容器的内容，即其子节点，背景不受影响。通过RectShape传入自定义矩形区域时仅支持设置宽高和相对于组件左上角的 [offset](../arkts-apis/arkts-arkui-arkuishape-commonshapemethod-c.md#offset)，不支持圆角。 <br>默认值：Grid、Scroll的默认值为ContentClipMode.BOUNDARY，List、WaterFlow的默认值为ContentClipMode.CONTENT_ONLY。 |
+| clip | [ContentClipMode](arkts-arkui-contentclipmode-e.md) \| [RectShape](arkts-arkui-rectshape-t.md) | 是 | 裁剪只针对滚动容器的内容，即其子节点，背景不受影响。通过RectShape传入自定义矩形区域时仅支持设置宽高和相对于组件左上角的 [offset](../arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md#offset)，不支持圆角。 <br>默认值：Grid、Scroll的默认值为ContentClipMode.BOUNDARY，List、WaterFlow的默认值为ContentClipMode.CONTENT_ONLY。 |
 
 **返回值：**
 

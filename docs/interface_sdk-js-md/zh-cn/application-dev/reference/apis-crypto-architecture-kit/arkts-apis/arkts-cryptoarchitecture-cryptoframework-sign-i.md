@@ -245,6 +245,34 @@ function testSetSignSpec() {
 }
 ```
 
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+function testSetSignSpec() {
+  let signer = cryptoFramework.createSign("RSA|PSS|SHA256|MGF1_SHA256");
+  let setN = 20;
+  signer.setSignSpec(cryptoFramework.SignSpecItem.PSS_SALT_LEN_NUM, setN);
+}
+```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+function testSetSignSpec() {
+  let signer = cryptoFramework.createSign('ML-DSA');
+  signer.setSignSpec(cryptoFramework.SignSpecItem.ML_DSA_DETERMINISTIC_BOOL, true);
+}
+```
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+function testSetSignSpec() {
+  let signer = cryptoFramework.createSign('ML-DSA');
+  signer.setSignSpec(cryptoFramework.SignSpecItem.ML_DSA_DETERMINISTIC_BOOL, true);
+}
+```
+
 ## setSignSpec
 
 ```TypeScript
@@ -286,15 +314,7 @@ setSignSpec(itemType: SignSpecItem, itemValue: int | Uint8Array): void
 
 **示例**
 
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-function testSetSignSpec() {
-  let signer = cryptoFramework.createSign("RSA|PSS|SHA256|MGF1_SHA256");
-  let setN = 20;
-  signer.setSignSpec(cryptoFramework.SignSpecItem.PSS_SALT_LEN_NUM, setN);
-}
-```
+参见 [setSignSpec](#setsignspec)
 
 ## setSignSpec
 
@@ -336,14 +356,7 @@ setSignSpec(itemType: SignSpecItem, itemValue: int | Uint8Array | boolean): void
 
 **示例**
 
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-function testSetSignSpec() {
-  let signer = cryptoFramework.createSign('ML-DSA');
-  signer.setSignSpec(cryptoFramework.SignSpecItem.ML_DSA_DETERMINISTIC_BOOL, true);
-}
-```
+参见 [setSignSpec](#setsignspec)
 
 ## setSignSpec
 
@@ -382,14 +395,7 @@ setSignSpec(itemType: SignSpecItem, itemValue: boolean): void
 
 **示例**
 
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-function testSetSignSpec() {
-  let signer = cryptoFramework.createSign('ML-DSA');
-  signer.setSignSpec(cryptoFramework.SignSpecItem.ML_DSA_DETERMINISTIC_BOOL, true);
-}
-```
+参见 [setSignSpec](#setsignspec)
 
 ## sign
 

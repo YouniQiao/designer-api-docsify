@@ -33,7 +33,7 @@ function createVideoPlayer(callback: AsyncCallback<VideoPlayer>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoPlayer](arkts-media-multimediamedia-videoplayer-i.md)&gt; | 是 | 回调函数。创建VideoPlayer实例成功时，err为undefined，data为获取到的VideoPlayer实例，否则为错误 对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoPlayer](arkts-media-multimedia-media-videoplayer-i.md)&gt; | 是 | 回调函数。创建VideoPlayer实例成功时，err为undefined，data为获取到的VideoPlayer实例，否则为错误 对象。 |
 
 **示例**
 
@@ -48,6 +48,22 @@ media.createVideoPlayer((error: BusinessError, video: media.VideoPlayer) => {
   } else {
     console.error(`Failed to create VideoPlayer, error:${error}`);
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let videoPlayer: media.VideoPlayer;
+media.createVideoPlayer().then((video: media.VideoPlayer) => {
+  if (video) {
+    videoPlayer = video;
+    console.info('Succeeded in creating VideoPlayer');
+  } else {
+    console.error('Failed to create VideoPlayer');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`Failed to create VideoPlayer, error:${error}`);
 });
 ```
 
@@ -78,23 +94,9 @@ function createVideoPlayer(): Promise<VideoPlayer>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[VideoPlayer](arkts-media-multimediamedia-videoplayer-i.md)&gt; | Promise对象。异步返回VideoPlayer实例，失败时返回null。可用于管理和播放视频媒体。 |
+| Promise&lt;[VideoPlayer](arkts-media-multimedia-media-videoplayer-i.md)&gt; | Promise对象。异步返回VideoPlayer实例，失败时返回null。可用于管理和播放视频媒体。 |
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let videoPlayer: media.VideoPlayer;
-media.createVideoPlayer().then((video: media.VideoPlayer) => {
-  if (video) {
-    videoPlayer = video;
-    console.info('Succeeded in creating VideoPlayer');
-  } else {
-    console.error('Failed to create VideoPlayer');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`Failed to create VideoPlayer, error:${error}`);
-});
-```
+参见 [createVideoPlayer](#createvideoplayer)
 

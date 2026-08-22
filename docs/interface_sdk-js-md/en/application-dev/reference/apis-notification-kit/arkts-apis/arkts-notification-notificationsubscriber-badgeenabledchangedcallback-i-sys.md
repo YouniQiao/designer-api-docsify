@@ -30,3 +30,26 @@ Callback used to return the listened badge enabling state.
 | --- | --- | --- | --- |
 | data | [EnabledNotificationCallbackData](arkts-notification-notificationsubscriber-enablednotificationcallbackdata-i-sys.md) | Yes | Callback used to return the listened badge enabling state. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subscribeCallback = (err: BusinessError) => {
+  if (err) {
+    console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('subscribeCallback');
+  }
+};
+
+let BadgeEnabledChangedCallback = (data: notificationSubscribe.EnabledNotificationCallbackData) => {
+  console.info(`onBadgeEnabledChanged, badge enabled state change to: ${JSON.stringify(data)}`);
+};
+let subscriber: notificationSubscribe.NotificationSubscriber = {
+  onBadgeEnabledChanged: BadgeEnabledChangedCallback
+};
+
+notificationSubscribe.subscribe(subscriber, subscribeCallback);
+```
+

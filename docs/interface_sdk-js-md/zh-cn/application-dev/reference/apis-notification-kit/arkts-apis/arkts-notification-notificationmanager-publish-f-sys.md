@@ -70,6 +70,111 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // publish回调
 let publishCallback = (err: BusinessError): void => {
+  if (err) {
+    console.error(`Failed to publish notification. Code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info(`Succeeded in publishing notification.`);
+  }
+}
+// 通知Request对象
+let notificationRequest: notificationManager.NotificationRequest = {
+  id: 1,
+  content: {
+    notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
+    normal: {
+      title: 'test_title',
+      text: 'test_text',
+      additionalText: 'test_additionalText'
+    }
+  }
+};
+notificationManager.publish(notificationRequest, publishCallback);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// publish回调
+let publishCallback = (err: BusinessError | null): void => {
+  if (err) {
+    console.error(`Failed to publish notification. Code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info(`Succeeded in publishing notification.`);
+  }
+}
+// 通知Request对象
+let notificationRequest: notificationManager.NotificationRequest = {
+  id: 1,
+  content: {
+    notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
+    normal: {
+      title: 'test_title',
+      text: 'test_text',
+      additionalText: 'test_additionalText'
+    }
+  }
+};
+notificationManager.publish(notificationRequest, publishCallback);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 通知Request对象
+let notificationRequest: notificationManager.NotificationRequest = {
+  id: 1,
+  content: {
+    notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
+    normal: {
+      title: 'test_title',
+      text: 'test_text',
+      additionalText: 'test_additionalText'
+    }
+  }
+};
+notificationManager.publish(notificationRequest).then(() => {
+  console.info(`Succeeded in publishing notification.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to publish notification. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 通知Request对象
+let notificationRequest: notificationManager.NotificationRequest = {
+  id: 1,
+  content: {
+    notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
+    normal: {
+      title: 'test_title',
+      text: 'test_text',
+      additionalText: 'test_additionalText'
+    }
+  }
+};
+notificationManager.publish(notificationRequest).then(() => {
+  console.info(`Succeeded in publishing notification.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to publish notification. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// publish回调
+let publishCallback = (err: BusinessError): void => {
     if (err) {
         console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
     } else {
@@ -121,6 +226,61 @@ let notificationRequest: notificationManager.NotificationRequest = {
     }
 };
 notificationManager.publish(notificationRequest, userId, publishCallback);
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let notificationRequest: notificationManager.NotificationRequest = {
+    id: 1,
+    content: {
+        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
+        normal: {
+            title: 'test_title',
+            text: 'test_text',
+            additionalText: 'test_additionalText'
+        }
+    }
+};
+
+// 用户ID，使用时需替换为真实的userId。
+let userId: number = 1;
+
+notificationManager.publish(notificationRequest, userId).then(() => {
+    console.info('publish success');
+}).catch((err: BusinessError) => {
+    console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let notificationRequest: notificationManager.NotificationRequest = {
+    id: 1,
+    content: {
+        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
+        normal: {
+            title: 'test_title',
+            text: 'test_text',
+            additionalText: 'test_additionalText'
+        }
+    }
+};
+
+// 用户ID，使用时需替换为真实的userId。
+let userId: int = 1;
+
+notificationManager.publish(notificationRequest, userId).then(() => {
+    console.info('publish success');
+}).catch((err: Error): void => {
+    let error: BusinessError = err as BusinessError;
+    console.error(`publish failed, code is ${error.code}, message is ${error.message}`);
+});
 ```
 
 
@@ -186,58 +346,5 @@ function publish(request: NotificationRequest, userId: int): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let notificationRequest: notificationManager.NotificationRequest = {
-    id: 1,
-    content: {
-        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-        normal: {
-            title: 'test_title',
-            text: 'test_text',
-            additionalText: 'test_additionalText'
-        }
-    }
-};
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: number = 1;
-
-notificationManager.publish(notificationRequest, userId).then(() => {
-    console.info('publish success');
-}).catch((err: BusinessError) => {
-    console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let notificationRequest: notificationManager.NotificationRequest = {
-    id: 1,
-    content: {
-        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-        normal: {
-            title: 'test_title',
-            text: 'test_text',
-            additionalText: 'test_additionalText'
-        }
-    }
-};
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: int = 1;
-
-notificationManager.publish(notificationRequest, userId).then(() => {
-    console.info('publish success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`publish failed, code is ${error.code}, message is ${error.message}`);
-});
-```
+参见 [publish](#publish)
 

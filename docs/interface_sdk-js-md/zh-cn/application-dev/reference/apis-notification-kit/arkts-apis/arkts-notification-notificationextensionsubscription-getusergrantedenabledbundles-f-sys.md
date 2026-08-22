@@ -28,7 +28,7 @@ function getUserGrantedEnabledBundles(targetBundle: BundleOption): Promise<Bundl
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| targetBundle | BundleOption | 是 | 需要查询的目标应用信息。应用需要具有ohos.permission.SUBSCRIBE_NOTIFICATION权限， 并且实现[NotificationSubscriberExtensionAbility](arkts-notification-applicationnotificationsubscriberextensionability-notificationsubscriberextensionability-c.md)， 否则返回1600022错误码。 |
+| targetBundle | BundleOption | 是 | 需要查询的目标应用信息。应用需要具有ohos.permission.SUBSCRIBE_NOTIFICATION权限， 并且实现[NotificationSubscriberExtensionAbility](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md)， 否则返回1600022错误码。 |
 
 **返回值：**
 
@@ -47,6 +47,27 @@ function getUserGrantedEnabledBundles(targetBundle: BundleOption): Promise<Bundl
 | [1600022](../errorcode-notification.md#1600022-无效的包信息) | The specified bundle is invalid. |
 
 **示例**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+notificationExtensionSubscription.getUserGrantedEnabledBundles().then((data: notificationExtensionSubscription.GrantedBundleInfo[]) => {
+  console.info(`getUserGrantedEnabledBundles successfully. Data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`getUserGrantedEnabledBundles fail, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+notificationExtensionSubscription.getUserGrantedEnabledBundles().then((data: notificationExtensionSubscription.GrantedBundleInfo[]) => {
+  console.info(`getUserGrantedEnabledBundles successfully. Data: ${JSON.stringify(data)}`);
+}).catch((error: Error) => {
+  let err = error as BusinessError
+  console.error(`getUserGrantedEnabledBundles fail, code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ArkTS-Dyn示例：
 

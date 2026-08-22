@@ -75,6 +75,36 @@ try {
 }
 ```
 
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  cooperate.deactivateCooperate(false).then(() => {
+    console.info(`Stop Keyboard mouse crossing success.`);
+  }, (error: BusinessError) => {
+    console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+  });
+} catch (error) {
+  console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+try {
+  cooperate.deactivateCooperate(false).then(() => {
+    console.info(`Stop Keyboard mouse crossing success.`);
+  }, (error: Error): void => {
+    console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+  });
+} catch (error) {
+  console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+}
+```
+
 
 ## deactivateCooperate
 
@@ -115,33 +145,5 @@ function deactivateCooperate(isUnchained: boolean): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  cooperate.deactivateCooperate(false).then(() => {
-    console.info(`Stop Keyboard mouse crossing success.`);
-  }, (error: BusinessError) => {
-    console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  cooperate.deactivateCooperate(false).then(() => {
-    console.info(`Stop Keyboard mouse crossing success.`);
-  }, (error: Error): void => {
-    console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
+参见 [deactivateCooperate](#deactivatecooperate)
 

@@ -30,7 +30,7 @@ Obtains information about all missions. This API uses an asynchronous callback t
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
 | numMax | int | Yes | Maximum number of missions whose information can be obtained. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;MissionInfo&gt;&gt; | Yes | Callback used to return the array of mission information obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;MissionInfo&gt;&gt; | Yes | Callback used to return the array of mission information obtained. |
 
 **Error codes:**
 
@@ -59,6 +59,22 @@ try {
   let code = (paramError as BusinessError).code;
   let message = (paramError as BusinessError).message;
   console.error(`getMissionInfos failed, error code: ${code}, error msg: ${message}.`);
+}
+```
+
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  missionManager.getMissionInfos('', 10).then((data: Array<missionManager.MissionInfo>) => {
+    console.info(`getMissionInfos successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`getMissionInfos failed. Cause: ${error.message}`);
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`getMissionInfos failed. Cause: ${err.message}`);
 }
 ```
 
@@ -104,19 +120,5 @@ Obtains information about all missions. This API uses a promise to return the re
 
 **Examples**
 
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  missionManager.getMissionInfos('', 10).then((data: Array<missionManager.MissionInfo>) => {
-    console.info(`getMissionInfos successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`getMissionInfos failed. Cause: ${error.message}`);
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`getMissionInfos failed. Cause: ${err.message}`);
-}
-```
+See [getMissionInfos](#getmissioninfos)
 

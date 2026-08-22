@@ -58,6 +58,32 @@ Truncates a file. This API uses a promise to return the result.
 | 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + "/test.txt";
+let len: number = 5;
+fs.truncate(filePath, len).then(() => {
+  console.info("truncate file succeed");
+}).catch((err: BusinessError) => {
+  console.error("truncate file failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + "/test.txt";
+let len: number = 5;
+fs.truncate(filePath, len, (err: BusinessError) => {
+  if (err) {
+    console.error("truncate failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("truncate succeed");
+  }
+});
+```
+
 
 ## truncate
 
@@ -80,7 +106,7 @@ Truncates a file. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | file | string \| number | Yes | Application sandbox path or FD of the file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -102,6 +128,10 @@ Truncates a file. This API uses an asynchronous callback to return the result.
 | 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [truncate](#truncate)
 
 
 ## truncate
@@ -126,7 +156,7 @@ Truncates a file. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | file | string \| number | Yes | Application sandbox path or FD of the file. |
 | len | number | Yes | File length after truncation, in bytes. The default value is **0**.<br>**Since:** 11 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -148,4 +178,8 @@ Truncates a file. This API uses an asynchronous callback to return the result.
 | 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
 | 13900042 | Unknown error |
+
+**Examples**
+
+See [truncate](#truncate)
 

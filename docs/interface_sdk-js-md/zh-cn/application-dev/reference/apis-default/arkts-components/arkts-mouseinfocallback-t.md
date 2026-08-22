@@ -20,3 +20,7 @@ The callback when mouse event is triggered in native embed area
 | --- | --- | --- | --- |
 | event | [NativeEmbedMouseInfo](arkts-web-nativeembedmouseinfo-i.md) | 是 | callback information of mouse event in native embed area. |
 
+**示例**
+
+完整示例代码参考[onNativeEmbedMouseEvent](./arkts-basic-components-web-events.md#onnativeembedmouseevent20)。
+

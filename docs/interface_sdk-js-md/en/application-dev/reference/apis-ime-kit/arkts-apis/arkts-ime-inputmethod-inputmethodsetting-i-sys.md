@@ -68,6 +68,31 @@ enableInputMethod(
 | 12800024 | the specified user is not in the foreground. |
 | 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function enableInputMethodSafely() {
+  const currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
+  if (!currentIme) {
+    console.error("Failed to get current input method");
+    return;
+  }
+
+  inputMethod.getSetting()
+    .enableInputMethod(currentIme.name, currentIme.id, inputMethod.EnabledState.BASIC_MODE)
+    .then(() => {
+      console.info('Succeeded in enable inputmethod.');
+    })
+    .catch((err: BusinessError) => {
+      console.error(`Failed to enableInputMethod. Code: ${err.code}, message: ${err.message}`);
+    });
+}
+
+enableInputMethodSafely();
+```
+
 ## getAllInputMethodsSync
 
 ```TypeScript
@@ -109,6 +134,12 @@ getAllInputMethodsSync(userId?: int): Array<InputMethodProperty>
 | 12800024 | the specified user is not in the foreground. |
 | 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
+**Examples**
+
+```TypeScript
+let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getAllInputMethodsSync();
+```
+
 ## getDefaultInputMethodAbility
 
 ```TypeScript
@@ -139,48 +170,6 @@ getDefaultInputMethodAbility(): InputMethodProperty
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
-
-## getInputMethodSubtypes
-
-```TypeScript
-getInputMethodSubtypes(bundleName: string, userId?: int): Array<InputMethodSubtype>
-```
-
-@brief Get subtypes of a specified input method of a specified user.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-InputMethodSetting-getInputMethodSubtypes(bundleName: string, userId?: int): Array<InputMethodSubtype>--><!--Device-InputMethodSetting-getInputMethodSubtypes(bundleName: string, userId?: int): Array<InputMethodSubtype>-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bundleName | string | Yes | the bundle name of the specified input method. |
-| userId | int | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | the subtype of target input method. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
-| 12800023 | the specified user does not exist. |
-| 12800024 | the specified user is not in the foreground. |
-| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
 ## getInputMethodsSync
 
@@ -224,6 +213,54 @@ getInputMethodsSync(enable: boolean, userId?: int): Array<InputMethodProperty>
 | 12800024 | the specified user is not in the foreground. |
 | 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
+**Examples**
+
+```TypeScript
+let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getInputMethodsSync(true);
+```
+
+## getInputMethodSubtypes
+
+```TypeScript
+getInputMethodSubtypes(bundleName: string, userId?: int): Array<InputMethodSubtype>
+```
+
+@brief Get subtypes of a specified input method of a specified user.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-InputMethodSetting-getInputMethodSubtypes(bundleName: string, userId?: int): Array<InputMethodSubtype>--><!--Device-InputMethodSetting-getInputMethodSubtypes(bundleName: string, userId?: int): Array<InputMethodSubtype>-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | the bundle name of the specified input method. |
+| userId | int | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | the subtype of target input method. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| 12800023 | the specified user does not exist. |
+| 12800024 | the specified user is not in the foreground. |
+| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
+
 ## isPanelShown
 
 ```TypeScript
@@ -244,7 +281,7 @@ isPanelShown(panelInfo: PanelInfo): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panelInfo | [PanelInfo](arkts-ime-inputmethodpanel-panelinfo-i.md) | Yes | Information about the input method panel. |
+| panelInfo | [PanelInfo](arkts-ime-inputmethod-panel-panelinfo-i.md) | Yes | Information about the input method panel. |
 
 **Return value:**
 
@@ -274,6 +311,19 @@ let result: boolean = inputMethod.getSetting().isPanelShown(info);
 console.info('Succeeded in querying isPanelShown, result: ' + result);
 ```
 
+```TypeScript
+import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
+
+let displayId: number = 10;
+let info: PanelInfo = {
+  type: PanelType.SOFT_KEYBOARD,
+  flag: PanelFlag.FLAG_FIXED
+}
+
+let result: boolean = inputMethod.getSetting().isPanelShown(info, displayId);
+console.info('Succeeded in querying isPanelShown, result: ' + result);
+```
+
 ## isPanelShown
 
 ```TypeScript
@@ -296,7 +346,7 @@ isPanelShown(panelInfo: PanelInfo, displayId: long): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panelInfo | [PanelInfo](arkts-ime-inputmethodpanel-panelinfo-i.md) | Yes | Information about the input method panel. |
+| panelInfo | [PanelInfo](arkts-ime-inputmethod-panel-panelinfo-i.md) | Yes | Information about the input method panel. |
 | displayId | long | Yes | Display ID. |
 
 **Return value:**
@@ -314,94 +364,7 @@ isPanelShown(panelInfo: PanelInfo, displayId: long): boolean
 
 **Examples**
 
-```TypeScript
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-
-let displayId: number = 10;
-let info: PanelInfo = {
-  type: PanelType.SOFT_KEYBOARD,
-  flag: PanelFlag.FLAG_FIXED
-}
-
-let result: boolean = inputMethod.getSetting().isPanelShown(info, displayId);
-console.info('Succeeded in querying isPanelShown, result: ' + result);
-```
-
-## offImeChangeWithUserId
-
-```TypeScript
-offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void
-```
-
-@brief Unsubscribe from the input method change event.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-InputMethodSetting-offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void--><!--Device-InputMethodSetting-offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ImeChangeWithUserIdCallback](arkts-ime-inputmethod-imechangewithuseridcallback-t-sys.md) | No | the callback called when the current input method changes, when the subscriber unsubscribes all callbacks, this parameter can be left blank. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-
-## offImeHide
-
-```TypeScript
-offImeHide(callback?: Callback<Array<InputWindowInfo>>): void
-```
-
-@brief Unsubscribe input window hide event.
-
-**Since:** 23
-
-<!--Device-InputMethodSetting-offImeHide(callback?: Callback<Array<InputWindowInfo>>): void--><!--Device-InputMethodSetting-offImeHide(callback?: Callback<Array<InputWindowInfo>>): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | No | the callback called when input method hides, when subscriber unsubscribes all callback functions, this parameter can be left blank. |
-
-## offImeShow
-
-```TypeScript
-offImeShow(callback?: Callback<Array<InputWindowInfo>>):void
-```
-
-@brief Unsubscribe input window show event.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-InputMethodSetting-offImeShow(callback?: Callback<Array<InputWindowInfo>>):void--><!--Device-InputMethodSetting-offImeShow(callback?: Callback<Array<InputWindowInfo>>):void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | No | the callback called when input method shows, when subscriber unsubscribes all callback functions, this parameter can be left blank. |
+See [isPanelShown](#ispanelshown)
 
 ## off('imeHide')
 
@@ -461,19 +424,19 @@ off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void
 inputMethod.getSetting().off('imeShow');
 ```
 
-## onImeChangeWithUserId
+## offImeChangeWithUserId
 
 ```TypeScript
-onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void
+offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void
 ```
 
-@brief Subscribe to the input method change event.
+@brief Unsubscribe from the input method change event.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-InputMethodSetting-onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void--><!--Device-InputMethodSetting-onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void-End-->
+<!--Device-InputMethodSetting-offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void--><!--Device-InputMethodSetting-offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -483,7 +446,7 @@ onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ImeChangeWithUserIdCallback](arkts-ime-inputmethod-imechangewithuseridcallback-t-sys.md) | Yes | the callback called when the current input method changes. |
+| callback | [ImeChangeWithUserIdCallback](arkts-ime-inputmethod-imechangewithuseridcallback-t-sys.md) | No | the callback called when the current input method changes, when the subscriber unsubscribes all callbacks, this parameter can be left blank. |
 
 **Error codes:**
 
@@ -491,17 +454,17 @@ onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 
-## onImeHide
+## offImeHide
 
 ```TypeScript
-onImeHide(callback: Callback<Array<InputWindowInfo>>): void
+offImeHide(callback?: Callback<Array<InputWindowInfo>>): void
 ```
 
-@brief Subscribes to input window hidden events.
+@brief Unsubscribe input window hide event.
 
 **Since:** 23
 
-<!--Device-InputMethodSetting-onImeHide(callback: Callback<Array<InputWindowInfo>>): void--><!--Device-InputMethodSetting-onImeHide(callback: Callback<Array<InputWindowInfo>>): void-End-->
+<!--Device-InputMethodSetting-offImeHide(callback?: Callback<Array<InputWindowInfo>>): void--><!--Device-InputMethodSetting-offImeHide(callback?: Callback<Array<InputWindowInfo>>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -511,27 +474,21 @@ onImeHide(callback: Callback<Array<InputWindowInfo>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | Yes | the callback called when input method hides. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | No | the callback called when input method hides, when subscriber unsubscribes all callback functions, this parameter can be left blank. |
 
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-
-## onImeShow
+## offImeShow
 
 ```TypeScript
-onImeShow(callback: Callback<Array<InputWindowInfo>>):void
+offImeShow(callback?: Callback<Array<InputWindowInfo>>):void
 ```
 
-@brief Subscribes to input window show events.
+@brief Unsubscribe input window show event.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-InputMethodSetting-onImeShow(callback: Callback<Array<InputWindowInfo>>):void--><!--Device-InputMethodSetting-onImeShow(callback: Callback<Array<InputWindowInfo>>):void-End-->
+<!--Device-InputMethodSetting-offImeShow(callback?: Callback<Array<InputWindowInfo>>):void--><!--Device-InputMethodSetting-offImeShow(callback?: Callback<Array<InputWindowInfo>>):void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -541,13 +498,7 @@ onImeShow(callback: Callback<Array<InputWindowInfo>>):void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | Yes | the callback called when input method shows. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | No | the callback called when input method shows, when subscriber unsubscribes all callback functions, this parameter can be left blank. |
 
 ## on('imeHide')
 
@@ -622,4 +573,92 @@ inputMethod.getSetting().on('imeShow', (info: Array<inputMethod.InputWindowInfo>
   console.info('Succeeded in subscribing imeShow event.');
 });
 ```
+
+## onImeChangeWithUserId
+
+```TypeScript
+onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void
+```
+
+@brief Subscribe to the input method change event.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-InputMethodSetting-onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void--><!--Device-InputMethodSetting-onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ImeChangeWithUserIdCallback](arkts-ime-inputmethod-imechangewithuseridcallback-t-sys.md) | Yes | the callback called when the current input method changes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+
+## onImeHide
+
+```TypeScript
+onImeHide(callback: Callback<Array<InputWindowInfo>>): void
+```
+
+@brief Subscribes to input window hidden events.
+
+**Since:** 23
+
+<!--Device-InputMethodSetting-onImeHide(callback: Callback<Array<InputWindowInfo>>): void--><!--Device-InputMethodSetting-onImeHide(callback: Callback<Array<InputWindowInfo>>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | Yes | the callback called when input method hides. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+
+## onImeShow
+
+```TypeScript
+onImeShow(callback: Callback<Array<InputWindowInfo>>):void
+```
+
+@brief Subscribes to input window show events.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-InputMethodSetting-onImeShow(callback: Callback<Array<InputWindowInfo>>):void--><!--Device-InputMethodSetting-onImeShow(callback: Callback<Array<InputWindowInfo>>):void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | Yes | the callback called when input method shows. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 

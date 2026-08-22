@@ -42,3 +42,17 @@ public nextTransition(date?: double): ZoneOffsetTransition
 | --- | --- |
 | [ZoneOffsetTransition](../../apis-default/arkts-apis/arkts-i18n-zoneoffsettransition-c.md) | 时区跳变对象。 |
 
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// 获取蒂华纳时区对象
+let timeZone: i18n.TimeZone = i18n.getTimeZone('America/Tijuana');
+// 获取蒂华纳时区跳变规则
+let zoneRules: i18n.ZoneRules = timeZone.getZoneRules();
+let date = new Date(2025, 4, 13);
+// 获取蒂华纳时区2025年5月13日后的下一个跳变对象
+let zoneOffsetTransition: i18n.ZoneOffsetTransition = zoneRules.nextTransition(date.getTime());
+```
+

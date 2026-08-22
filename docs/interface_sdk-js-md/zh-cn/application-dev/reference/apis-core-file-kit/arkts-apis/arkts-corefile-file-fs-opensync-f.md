@@ -35,7 +35,7 @@ declare function openSync(path: string, mode?: number): File
 
 | 类型 | 说明 |
 | --- | --- |
-| [File](arkts-corefile-filefs-file-i.md) | 打开的File对象。 |
+| [File](arkts-corefile-file-fs-file-i.md) | 打开的File对象。 |
 
 **错误码：**
 
@@ -68,4 +68,13 @@ declare function openSync(path: string, mode?: number): File
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 | 13900044 | Network is unreachable<br>**适用版本：** 12+ |
+
+**示例**
+
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+console.info(`Succeeded in getting file fd: ${file.fd}`);
+fileIo.closeSync(file);
+```
 

@@ -57,6 +57,24 @@ appManager.killProcessWithAccount(bundleName, accountId)
   });
 ```
 
+```TypeScript
+import appManager from '@ohos.application.appManager';
+import { BusinessError } from '@ohos.base';
+
+let bundleName = 'bundleName';
+let accountId = 0;
+
+function killProcessWithAccountCallback(err: BusinessError, data: void) {
+  if (err) {
+    console.error(`KillProcessWithAccountCallback failed, error code: ${err.code}, error msg: ${err.message}.`);
+  } else {
+    console.info(`KillProcessWithAccountCallback success, data: ${JSON.stringify(data)}`);
+  }
+}
+
+appManager.killProcessWithAccount(bundleName, accountId, killProcessWithAccountCallback);
+```
+
 
 ## killProcessWithAccount
 
@@ -86,25 +104,9 @@ Kill process with account.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | The process bundle name. |
 | accountId | number | Yes | The account id. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Cut off the callback function of the account process. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Cut off the callback function of the account process. |
 
 **Examples**
 
-```TypeScript
-import appManager from '@ohos.application.appManager';
-import { BusinessError } from '@ohos.base';
-
-let bundleName = 'bundleName';
-let accountId = 0;
-
-function killProcessWithAccountCallback(err: BusinessError, data: void) {
-  if (err) {
-    console.error(`KillProcessWithAccountCallback failed, error code: ${err.code}, error msg: ${err.message}.`);
-  } else {
-    console.info(`KillProcessWithAccountCallback success, data: ${JSON.stringify(data)}`);
-  }
-}
-
-appManager.killProcessWithAccount(bundleName, accountId, killProcessWithAccountCallback);
-```
+See [killProcessWithAccount](#killprocesswithaccount)
 

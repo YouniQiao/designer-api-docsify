@@ -67,7 +67,7 @@ This API cannot be used to load resources in the **rawfile** directory. Instead,
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the audio file to load. Generally, the URI starts with **fd://**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the sound ID. A valid value must be greater than 0. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the sound ID. A valid value must be greater than 0. |
 
 **Error codes:**
 
@@ -156,7 +156,7 @@ This API uses an asynchronous callback to obtain the resource ID. For the input 
 | fd | int | Yes | Resource handle, which is obtained by calling resourceManager.getRawFd. |
 | offset | long | Yes | Resource offset, which needs to be entered based on the preset resource information. An invalid value causes a failure to parse audio and video resources. |
 | length | long | Yes | Resource length, which needs to be entered based on the preset resource information. An invalid value causes a failure to parse audio and video resources. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the sound ID. A valid value must be greater than 0. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the sound ID. A valid value must be greater than 0. |
 
 **Error codes:**
 
@@ -213,82 +213,6 @@ This API uses a promise to obtain the resource ID. For the input parameter, reso
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
-## offError
-
-```TypeScript
-offError(): void
-```
-
-Unsubscribes from error events of this **SoundPool** instance.
-
-**Since:** 23
-
-<!--Device-SoundPool-offError(): void--><!--Device-SoundPool-offError(): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-## offErrorOccurred
-
-```TypeScript
-offErrorOccurred(callback?: Callback<ErrorInfo>): void
-```
-
-Unsubscribes from errorOccurred events of this **SoundPool** instance.
-
-**Since:** 23
-
-<!--Device-SoundPool-offErrorOccurred(callback?: Callback<ErrorInfo>): void--><!--Device-SoundPool-offErrorOccurred(callback?: Callback<ErrorInfo>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | No | Callback used to listen for soundpool errorOccurred events. |
-
-## offLoadComplete
-
-```TypeScript
-offLoadComplete(): void
-```
-
-Unsubscribes from events indicating that a sound finishes loading.
-
-**Since:** 23
-
-<!--Device-SoundPool-offLoadComplete(): void--><!--Device-SoundPool-offLoadComplete(): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-## offPlayFinished
-
-```TypeScript
-offPlayFinished(): void
-```
-
-Unsubscribes from events indicating that a sound finishes playing.
-
-**Since:** 23
-
-<!--Device-SoundPool-offPlayFinished(): void--><!--Device-SoundPool-offPlayFinished(): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-## offPlayFinishedWithStreamId
-
-```TypeScript
-offPlayFinishedWithStreamId(): void
-```
-
-Unsubscribes from events indicating that a sound finishes playing.
-
-**Since:** 23
-
-<!--Device-SoundPool-offPlayFinishedWithStreamId(): void--><!--Device-SoundPool-offPlayFinishedWithStreamId(): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
 ## off('error')
 
 ```TypeScript
@@ -328,7 +252,7 @@ Unsubscribes from error events of a SoundPool instance.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'errorOccurred' | Yes | Event type, which is **'errorOccurred'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | No | Callback used to return [ErrorInfo](arkts-media-soundpool-errorinfo-i.md) if an error occurs during the use of the player. If the callback is not set, no related information is provided. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | No | Callback used to return [ErrorInfo](arkts-media-soundpool-errorinfo-i.md) if an error occurs during the use of the player. If the callback is not set, no related information is provided. |
 
 ## off('loadComplete')
 
@@ -390,17 +314,31 @@ Unsubscribes from events indicating that a sound finishes playing.
 | --- | --- | --- | --- |
 | type | 'playFinishedWithStreamId' | Yes | Event type. The value is fixed at **'playFinishedWithStreamId'**. |
 
-## onError
+## offError
 
 ```TypeScript
-onError(callback: ErrorCallback): void
+offError(): void
 ```
 
-Subscribes to error events of this **SoundPool** instance. This event is used only for error prompt. This event can be triggered by both user operations and the system.
+Unsubscribes from error events of this **SoundPool** instance.
 
 **Since:** 23
 
-<!--Device-SoundPool-onError(callback: ErrorCallback): void--><!--Device-SoundPool-onError(callback: ErrorCallback): void-End-->
+<!--Device-SoundPool-offError(): void--><!--Device-SoundPool-offError(): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+## offErrorOccurred
+
+```TypeScript
+offErrorOccurred(callback?: Callback<ErrorInfo>): void
+```
+
+Unsubscribes from errorOccurred events of this **SoundPool** instance.
+
+**Since:** 23
+
+<!--Device-SoundPool-offErrorOccurred(callback?: Callback<ErrorInfo>): void--><!--Device-SoundPool-offErrorOccurred(callback?: Callback<ErrorInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -408,91 +346,49 @@ Subscribes to error events of this **SoundPool** instance. This event is used on
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return the error code ID and error message. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | No | Callback used to listen for soundpool errorOccurred events. |
 
-## onErrorOccurred
+## offLoadComplete
 
 ```TypeScript
-onErrorOccurred(callback: Callback<ErrorInfo>): void
+offLoadComplete(): void
 ```
 
-Subscribes to errorOccurred events of this **SoundPool** instance.
+Unsubscribes from events indicating that a sound finishes loading.
 
 **Since:** 23
 
-<!--Device-SoundPool-onErrorOccurred(callback: Callback<ErrorInfo>): void--><!--Device-SoundPool-onErrorOccurred(callback: Callback<ErrorInfo>): void-End-->
+<!--Device-SoundPool-offLoadComplete(): void--><!--Device-SoundPool-offLoadComplete(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | Yes | Callback used to listen for soundpool errorOccurred events. |
-
-## onLoadComplete
+## offPlayFinished
 
 ```TypeScript
-onLoadComplete(callback: Callback<int>): void
+offPlayFinished(): void
 ```
 
-Subscribes to events indicating that a sound finishes loading. This event is triggered when a sound is loaded.
+Unsubscribes from events indicating that a sound finishes playing.
 
 **Since:** 23
 
-<!--Device-SoundPool-onLoadComplete(callback: Callback<int>): void--><!--Device-SoundPool-onLoadComplete(callback: Callback<int>): void-End-->
+<!--Device-SoundPool-offPlayFinished(): void--><!--Device-SoundPool-offPlayFinished(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | ID of the sound that has been loaded. |
-
-## onPlayFinished
+## offPlayFinishedWithStreamId
 
 ```TypeScript
-onPlayFinished(callback: Callback<void>): void
+offPlayFinishedWithStreamId(): void
 ```
 
-Subscribes to events indicating that a sound finishes playing. This event is triggered when a sound finishes playing.
+Unsubscribes from events indicating that a sound finishes playing.
 
 **Since:** 23
 
-<!--Device-SoundPool-onPlayFinished(callback: Callback<void>): void--><!--Device-SoundPool-onPlayFinished(callback: Callback<void>): void-End-->
+<!--Device-SoundPool-offPlayFinishedWithStreamId(): void--><!--Device-SoundPool-offPlayFinishedWithStreamId(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-## onPlayFinishedWithStreamId
-
-```TypeScript
-onPlayFinishedWithStreamId(callback: Callback<int>): void
-```
-
-Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that finishes playing.
-
-When only on('playFinished') or on('playFinishedWithStreamId') is subscribed to, the registered callback is triggered when the audio playback is complete.
-
-When both on('playFinished') and on('playFinishedWithStreamId') are subscribed to, the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered, when the audio playback is complete.
-
-**Since:** 23
-
-<!--Device-SoundPool-onPlayFinishedWithStreamId(callback: Callback<int>): void--><!--Device-SoundPool-onPlayFinishedWithStreamId(callback: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the result. Stream ID of the audio that finishes playing. |
 
 ## on('error')
 
@@ -513,7 +409,7 @@ Subscribes to error events of a SoundPool instance. This event is used only for 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type, which is **'error'** in this case. This event can be triggered by both user operations and the system. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return the error code ID and error message. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the error code ID and error message. |
 
 ## on('errorOccurred')
 
@@ -534,7 +430,7 @@ Subscribes to error events of a SoundPool instance and returns [ErrorInfo](arkts
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'errorOccurred' | Yes | Event type, which is **'errorOccurred'** in this case. This event can be triggered by both user operations and the system. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | Yes | Callback used to return [ErrorInfo](arkts-media-soundpool-errorinfo-i.md). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | Yes | Callback used to return [ErrorInfo](arkts-media-soundpool-errorinfo-i.md). |
 
 ## on('loadComplete')
 
@@ -555,7 +451,7 @@ Subscribes to events indicating that a sound finishes loading. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'loadComplete' | Yes | Event type, which is **'loadComplete'** in this case. This event is triggered when a sound is loaded. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the ID of the resource that has been loaded. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the ID of the resource that has been loaded. |
 
 ## on('playFinished')
 
@@ -576,7 +472,7 @@ Subscribes to events indicating that a sound finishes playing. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playFinished' | Yes | Event type, which is **'playFinished'** in this case. This event is triggered when a sound finishes playing. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## on('playFinishedWithStreamId')
 
@@ -601,7 +497,111 @@ When both [on('playFinished')](#onloadcomplete) and [on('playFinishedWithStreamI
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playFinishedWithStreamId' | Yes | Event type, which is **'playFinishedWithStreamId'** in this case. This event is triggered when an audio stream finishes playing, and the stream ID is returned. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the stream ID of the audio that has finished playing. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the stream ID of the audio that has finished playing. |
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to error events of this **SoundPool** instance. This event is used only for error prompt. This event can be triggered by both user operations and the system.
+
+**Since:** 23
+
+<!--Device-SoundPool-onError(callback: ErrorCallback): void--><!--Device-SoundPool-onError(callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the error code ID and error message. |
+
+## onErrorOccurred
+
+```TypeScript
+onErrorOccurred(callback: Callback<ErrorInfo>): void
+```
+
+Subscribes to errorOccurred events of this **SoundPool** instance.
+
+**Since:** 23
+
+<!--Device-SoundPool-onErrorOccurred(callback: Callback<ErrorInfo>): void--><!--Device-SoundPool-onErrorOccurred(callback: Callback<ErrorInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | Yes | Callback used to listen for soundpool errorOccurred events. |
+
+## onLoadComplete
+
+```TypeScript
+onLoadComplete(callback: Callback<int>): void
+```
+
+Subscribes to events indicating that a sound finishes loading. This event is triggered when a sound is loaded.
+
+**Since:** 23
+
+<!--Device-SoundPool-onLoadComplete(callback: Callback<int>): void--><!--Device-SoundPool-onLoadComplete(callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | ID of the sound that has been loaded. |
+
+## onPlayFinished
+
+```TypeScript
+onPlayFinished(callback: Callback<void>): void
+```
+
+Subscribes to events indicating that a sound finishes playing. This event is triggered when a sound finishes playing.
+
+**Since:** 23
+
+<!--Device-SoundPool-onPlayFinished(callback: Callback<void>): void--><!--Device-SoundPool-onPlayFinished(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+## onPlayFinishedWithStreamId
+
+```TypeScript
+onPlayFinishedWithStreamId(callback: Callback<int>): void
+```
+
+Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that finishes playing.
+
+When only on('playFinished') or on('playFinishedWithStreamId') is subscribed to, the registered callback is triggered when the audio playback is complete.
+
+When both on('playFinished') and on('playFinishedWithStreamId') are subscribed to, the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered, when the audio playback is complete.
+
+**Since:** 23
+
+<!--Device-SoundPool-onPlayFinishedWithStreamId(callback: Callback<int>): void--><!--Device-SoundPool-onPlayFinishedWithStreamId(callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the result. Stream ID of the audio that finishes playing. |
 
 ## play
 
@@ -623,7 +623,7 @@ Plays a sound and obtains the stream ID. This API uses an asynchronous callback 
 | --- | --- | --- | --- |
 | soundID | int | Yes | Sound ID, which is obtained by calling **load()**. |
 | params | [PlayParameters](arkts-media-soundpool-playparameters-i.md) | Yes | Playback parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the audio stream ID. A valid value must be greater than 0. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the audio stream ID. A valid value must be greater than 0. |
 
 **Error codes:**
 
@@ -652,7 +652,7 @@ Plays a sound using default parameters and obtains the stream ID. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | soundID | int | Yes | Sound ID, which is obtained by calling **load()**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the audio stream ID. A valid value must be greater than 0. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the audio stream ID. A valid value must be greater than 0. |
 
 **Error codes:**
 
@@ -715,7 +715,7 @@ Releases a **SoundPool** instance. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -791,7 +791,7 @@ Sets the loop mode. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | streamID | int | Yes | Audio stream ID, which is obtained by calling **play()**. |
 | loop | int | Yes | Number of loops.<br>If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1.<br> If this parameter is set to a value less than 0, the content is played repeatedly. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -856,7 +856,7 @@ Sets the priority for an audio stream. This API uses an asynchronous callback to
 | --- | --- | --- | --- |
 | streamID | int | Yes | Audio stream ID, which is obtained by calling **play()**. |
 | priority | int | Yes | Priority. The value **0** means the lowest priority. The value is an integer greater than or equal to 0. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -921,7 +921,7 @@ Sets the playback rate for an audio stream. This API uses an asynchronous callba
 | --- | --- | --- | --- |
 | streamID | int | Yes | Audio stream ID, which is obtained by calling **play()**. |
 | rate | audio.AudioRendererRate | Yes | Playback rate. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -987,7 +987,7 @@ Sets the volume for an audio stream. This API uses an asynchronous callback to r
 | streamID | int | Yes | Audio stream ID, which is obtained by calling **play()**. |
 | leftVolume | double | Yes | Volume of the left channel. The value range is [0.0, 1.0]. |
 | rightVolume | double | Yes | Volume of the right channel. The value range is [0.0, 1.0]. Currently, setting the volume for the right channel does not take effect. The volume set for the left channel is used. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1052,7 +1052,7 @@ Stops audio playback. This API uses an asynchronous callback to return the resul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | streamID | int | Yes | Audio stream ID, which is obtained by calling **play()**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1115,7 +1115,7 @@ Unloads a sound. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | soundID | int | Yes | Sound ID, which is obtained by calling **load()**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

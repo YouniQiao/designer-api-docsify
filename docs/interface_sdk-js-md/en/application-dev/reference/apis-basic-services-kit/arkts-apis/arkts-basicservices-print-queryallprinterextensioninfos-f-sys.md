@@ -28,7 +28,7 @@ Obtains the information of all installed printer extensions. This API uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[PrinterExtensionInfo](arkts-basicservices-print-printerextensioninfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[PrinterExtensionInfo](arkts-basicservices-print-printerextensioninfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -49,6 +49,18 @@ print.queryAllPrinterExtensionInfos((err: BusinessError, extensionInfos: print.P
     } else {
         console.info('queryAllPrinterExtensionInfos success ' + JSON.stringify(extensionInfos));
     }
+})
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+print.queryAllPrinterExtensionInfos().then((extensionInfos: print.PrinterExtensionInfo[]) => {
+    console.info('queryAllPrinterExtensionInfos success ' + JSON.stringify(extensionInfos));
+    // ...
+}).catch((error: BusinessError) => {
+    console.error('failed to get AllPrinterExtension because ' + JSON.stringify(error));
 })
 ```
 
@@ -86,15 +98,5 @@ Obtains the information of all installed printer extensions. This API uses a pro
 
 **Examples**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-print.queryAllPrinterExtensionInfos().then((extensionInfos: print.PrinterExtensionInfo[]) => {
-    console.info('queryAllPrinterExtensionInfos success ' + JSON.stringify(extensionInfos));
-    // ...
-}).catch((error: BusinessError) => {
-    console.error('failed to get AllPrinterExtension because ' + JSON.stringify(error));
-})
-```
+See [queryAllPrinterExtensionInfos](#queryallprinterextensioninfos)
 

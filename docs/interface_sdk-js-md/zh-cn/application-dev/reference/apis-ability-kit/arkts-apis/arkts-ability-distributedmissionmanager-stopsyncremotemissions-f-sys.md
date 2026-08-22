@@ -88,6 +88,43 @@ try {
 }
 ```
 
+ArkTS-Dyn示例:
+
+```TypeScript
+import { distributedMissionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  distributedMissionManager.stopSyncRemoteMissions(
+    {
+      deviceId: ""
+    }).then(() => {
+      console.info('stopSyncRemoteMissions finished successfully');
+    }).catch((error: BusinessError) => {
+    console.error(`stopSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`stopSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import distributedMissionManager from '@ohos.distributedMissionManager';
+import { BusinessError } from '@ohos.base';
+let deviceId: distributedMissionManager.MissionDeviceInfo = { deviceId: "" }
+try {
+  distributedMissionManager.stopSyncRemoteMissions(deviceId).then(() => {
+    console.info('stopSyncRemoteMissions finished successfully');
+  }).catch((error) => {
+    console.error(`stopSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
+  })
+} catch (error) {
+  console.error(`stopSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 
 ## stopSyncRemoteMissions
 
@@ -130,40 +167,5 @@ function stopSyncRemoteMissions(parameter: MissionDeviceInfo): Promise<void>
 
 **示例**
 
-ArkTS-Dyn示例:
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  distributedMissionManager.stopSyncRemoteMissions(
-    {
-      deviceId: ""
-    }).then(() => {
-      console.info('stopSyncRemoteMissions finished successfully');
-    }).catch((error: BusinessError) => {
-    console.error(`stopSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`stopSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import distributedMissionManager from '@ohos.distributedMissionManager';
-import { BusinessError } from '@ohos.base';
-let deviceId: distributedMissionManager.MissionDeviceInfo = { deviceId: "" }
-try {
-  distributedMissionManager.stopSyncRemoteMissions(deviceId).then(() => {
-    console.info('stopSyncRemoteMissions finished successfully');
-  }).catch((error) => {
-    console.error(`stopSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
-  })
-} catch (error) {
-  console.error(`stopSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [stopSyncRemoteMissions](#stopsyncremotemissions)
 

@@ -103,6 +103,126 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userAuth = new osAccount.UserAuth();
+let challenge: Uint8Array = new Uint8Array([0]);
+let authType: osAccount.AuthType = osAccount.AuthType.PIN;
+let authTrustLevel: osAccount.AuthTrustLevel = osAccount.AuthTrustLevel.ATL1;
+let options: osAccount.AuthOptions = {
+  accountId: 100
+};
+try {
+  userAuth.auth(challenge, authType, authTrustLevel, options, {
+    onResult: (result: number, extraInfo: osAccount.AuthResult) => {
+      console.info('auth result = ' + result);
+      console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+
+let plugin: osAccount.DomainPlugin = {
+  auth: (domainAccountInfo: osAccount.DomainAccountInfo, credential: Uint8Array,
+        callback: osAccount.IUserAuthCallback) => {
+    // mock authentication
+    // notify authentication result
+    let result: osAccount.AuthResult = {
+      token: new Uint8Array([0]),
+      remainTimes: 5,
+      freezingTime: 0
+    };
+    callback.onResult(0, result);
+  },
+  authWithPopup: (domainAccountInfo: osAccount.DomainAccountInfo,
+                  callback: osAccount.IUserAuthCallback) => {},
+  authWithToken: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
+                  callback: osAccount.IUserAuthCallback) => {},
+  getAccountInfo: (options: osAccount.GetDomainAccountInfoPluginOptions,
+                  callback: AsyncCallback<osAccount.DomainAccountInfo>) => {},
+  getAuthStatusInfo: (domainAccountInfo: osAccount.DomainAccountInfo,
+                    callback: AsyncCallback<osAccount.AuthStatusInfo>) => {},
+  bindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, localId: number,
+                callback: AsyncCallback<void>) => {},
+  unbindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, callback: AsyncCallback<void>) => {},
+  isAccountTokenValid: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
+                        callback: AsyncCallback<boolean>) => {},
+  getAccessToken: (options: osAccount.GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>) => {}
+}
+osAccount.DomainAccountManager.registerPlugin(plugin);
+let userAuth = new osAccount.UserAuth();
+let challenge: Uint8Array = new Uint8Array([0]);
+let authType: osAccount.AuthType = osAccount.AuthType.DOMAIN;
+let authTrustLevel: osAccount.AuthTrustLevel = osAccount.AuthTrustLevel.ATL1;
+try {
+  userAuth.auth(challenge, authType, authTrustLevel, {
+    onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
+        console.info('auth resultCode = ' + resultCode);
+        console.info('auth authResult = ' + JSON.stringify(authResult));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+let credential = new Uint8Array([0])
+try {
+  osAccount.DomainAccountManager.auth(domainAccountInfo, credential, {
+    onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
+      console.info('auth resultCode = ' + resultCode);
+      console.info('auth authResult = ' + JSON.stringify(authResult));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+let credential = new Uint8Array([0]);
+try {
+  let serverParams: Record<string, Object> = {
+    "uri": "test.example.com",
+    "port": 100
+  }
+  let authOptions: osAccount.DomainAccountAuthOptions = {
+    serverParams: serverParams
+  }
+  osAccount.DomainAccountManager.auth(domainAccountInfo, credential, authOptions, {
+    onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
+      console.info('auth resultCode = ' + resultCode);
+      console.info('auth authResult = ' + JSON.stringify(authResult));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## auth
 
 ```TypeScript
@@ -173,28 +293,7 @@ Starts user authentication based on the specified challenge value, authenticatio
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userAuth = new osAccount.UserAuth();
-let challenge: Uint8Array = new Uint8Array([0]);
-let authType: osAccount.AuthType = osAccount.AuthType.PIN;
-let authTrustLevel: osAccount.AuthTrustLevel = osAccount.AuthTrustLevel.ATL1;
-let options: osAccount.AuthOptions = {
-  accountId: 100
-};
-try {
-  userAuth.auth(challenge, authType, authTrustLevel, options, {
-    onResult: (result: number, extraInfo: osAccount.AuthResult) => {
-      console.info('auth result = ' + result);
-      console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+See [auth](#auth)
 
 ## authUser
 
@@ -371,6 +470,14 @@ A constructor used to create an instance for user authentication.
 let userAuth = new osAccount.UserAuth();
 ```
 
+```TypeScript
+let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
+```
+
+```TypeScript
+let userIDM = new osAccount.UserIdentityManager();
+```
+
 ## getAvailableStatus
 
 ```TypeScript
@@ -453,7 +560,7 @@ Obtains the executor property based on the request. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | request | [GetPropertyRequest](arkts-basicservices-osaccount-getpropertyrequest-i-sys.md) | Yes | Request information, including the authentication credential type and property list. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[ExecutorProperty](arkts-basicservices-osaccount-executorproperty-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the executor property information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[ExecutorProperty](arkts-basicservices-osaccount-executorproperty-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the executor property information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -488,6 +595,31 @@ try {
     } else {
       console.info('getProperty result = ' + JSON.stringify(result));
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getProperty exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userAuth = new osAccount.UserAuth();
+let keys: Array<osAccount.GetPropertyType> = [
+  osAccount.GetPropertyType.AUTH_SUB_TYPE,
+  osAccount.GetPropertyType.REMAIN_TIMES,
+  osAccount.GetPropertyType.FREEZING_TIME
+];
+let request: osAccount.GetPropertyRequest = {
+  authType: osAccount.AuthType.PIN,
+  keys: keys
+};
+try {
+  userAuth.getProperty(request).then((result: osAccount.ExecutorProperty) => {
+    console.info('getProperty result = ' + JSON.stringify(result));
+  }).catch((err: BusinessError) => {
+    console.error(`getProperty error = code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -538,30 +670,7 @@ Obtains the executor property based on the request. This API uses a promise to r
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userAuth = new osAccount.UserAuth();
-let keys: Array<osAccount.GetPropertyType> = [
-  osAccount.GetPropertyType.AUTH_SUB_TYPE,
-  osAccount.GetPropertyType.REMAIN_TIMES,
-  osAccount.GetPropertyType.FREEZING_TIME
-];
-let request: osAccount.GetPropertyRequest = {
-  authType: osAccount.AuthType.PIN,
-  keys: keys
-};
-try {
-  userAuth.getProperty(request).then((result: osAccount.ExecutorProperty) => {
-    console.info('getProperty result = ' + JSON.stringify(result));
-  }).catch((err: BusinessError) => {
-    console.error(`getProperty error = code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getProperty exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getProperty](#getproperty)
 
 ## getPropertyByCredentialId
 
@@ -770,7 +879,7 @@ Sets the property for the initialization algorithm. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | request | [SetPropertyRequest](arkts-basicservices-osaccount-setpropertyrequest-i-sys.md) | Yes | Request information, including the authentication credential type and the key value to set. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -800,6 +909,27 @@ try {
     } else {
       console.info('setProperty successfully');
     }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setProperty exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userAuth = new osAccount.UserAuth();
+let request: osAccount.SetPropertyRequest = {
+  authType: osAccount.AuthType.PIN,
+  key: osAccount.SetPropertyType.INIT_ALGORITHM,
+  setInfo: new Uint8Array([0])
+};
+try {
+  userAuth.setProperty(request).then(() => {
+    console.info('setProperty successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`setProperty failed, error = code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
   const err = e as BusinessError;
@@ -849,24 +979,5 @@ Sets the property for the initialization algorithm. This API uses a promise to r
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userAuth = new osAccount.UserAuth();
-let request: osAccount.SetPropertyRequest = {
-  authType: osAccount.AuthType.PIN,
-  key: osAccount.SetPropertyType.INIT_ALGORITHM,
-  setInfo: new Uint8Array([0])
-};
-try {
-  userAuth.setProperty(request).then(() => {
-    console.info('setProperty successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`setProperty failed, error = code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setProperty exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+See [setProperty](#setproperty)
 

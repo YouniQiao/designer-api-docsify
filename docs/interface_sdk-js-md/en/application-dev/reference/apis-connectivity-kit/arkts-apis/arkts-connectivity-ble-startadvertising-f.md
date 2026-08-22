@@ -99,51 +99,6 @@ try {
 }
 ```
 
-
-## startAdvertising
-
-```TypeScript
-function startAdvertising(advertisingParams: AdvertisingParams, callback: AsyncCallback<int>): void
-```
-
-Starts BLE advertising. The API returns a advertising ID. The ID can be used to temporarily enable or disable this advertising using the API [enableAdvertising](arkts-connectivity-ble-enableadvertising-f.md) or [disableAdvertising](arkts-connectivity-ble-disableadvertising-f.md). To completely stop the advertising corresponding to the ID, invoke the API [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md) with ID.
-
-- If only [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true, the local name will be carried in the broadcast packet. - If only [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is set, its value will be used as a custom name and carried in the broadcast packet. - If [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true and [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is specified, the [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) property will take effect. - To set [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename), ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
-
-**Since:** 23
-
-**Required permissions:** 
-- API version 23+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME)
-- API version 11 - 22: ohos.permission.ACCESS_BLUETOOTH
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ble-function startAdvertising(advertisingParams: AdvertisingParams, callback: AsyncCallback<int>): void--><!--Device-ble-function startAdvertising(advertisingParams: AdvertisingParams, callback: AsyncCallback<int>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| advertisingParams | AdvertisingParams | Yes | Indicates the params for BLE advertising. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | the callback of advertise ID. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 2900001 | Service stopped. |
-| 2900003 | Bluetooth disabled. |
-| 2900010 | The number of advertising resources reaches the upper limit.<br>**Applicable version:** 20 and later |
-| 2900099 | Operation failed. |
-| 2902054 | The length of the advertising data exceeds the upper limit.<br>**Applicable version:** 20 and later |
-
-**Examples**
-
 ```TypeScript
 let manufactureValueBuffer = new Uint8Array(4);
 manufactureValueBuffer[0] = 1;
@@ -204,56 +159,6 @@ try {
 }
 ```
 
-
-## startAdvertising
-
-```TypeScript
-function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>
-```
-
-Starts BLE advertising. The API returns a advertising ID. The ID can be used to temporarily enable or disable this advertising using the API [enableAdvertising](arkts-connectivity-ble-enableadvertising-f.md) or [disableAdvertising](arkts-connectivity-ble-disableadvertising-f.md). To completely stop the advertising corresponding to the ID, invoke the API [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md) with ID.
-
-- If only [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true, the local name will be carried in the broadcast packet. - If only [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is set, its value will be used as a custom name and carried in the broadcast packet. - If [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true and [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is specified, the [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) property will take effect. - To set [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename), ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
-
-**Since:** 23
-
-**Required permissions:** 
-- API version 23+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME)
-- API version 11 - 22: ohos.permission.ACCESS_BLUETOOTH
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ble-function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>--><!--Device-ble-function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| advertisingParams | AdvertisingParams | Yes | Indicates the param for BLE advertising. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;int&gt; | Returns the promise object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 2900001 | Service stopped. |
-| 2900003 | Bluetooth disabled. |
-| 2900010 | The number of advertising resources reaches the upper limit.<br>**Applicable version:** 20 and later |
-| 2900099 | Operation failed. |
-| 2902054 | The length of the advertising data exceeds the upper limit.<br>**Applicable version:** 20 and later |
-
-**Examples**
-
 ```TypeScript
 let manufactureValueBuffer = new Uint8Array(4);
 manufactureValueBuffer[0] = 1;
@@ -309,4 +214,103 @@ try {
     console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
 }
 ```
+
+
+## startAdvertising
+
+```TypeScript
+function startAdvertising(advertisingParams: AdvertisingParams, callback: AsyncCallback<int>): void
+```
+
+Starts BLE advertising. The API returns a advertising ID. The ID can be used to temporarily enable or disable this advertising using the API [enableAdvertising](arkts-connectivity-ble-enableadvertising-f.md) or [disableAdvertising](arkts-connectivity-ble-disableadvertising-f.md). To completely stop the advertising corresponding to the ID, invoke the API [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md) with ID.
+
+- If only [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true, the local name will be carried in the broadcast packet. - If only [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is set, its value will be used as a custom name and carried in the broadcast packet. - If [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true and [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is specified, the [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) property will take effect. - To set [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename), ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
+
+**Since:** 23
+
+**Required permissions:** 
+- API version 23+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME)
+- API version 11 - 22: ohos.permission.ACCESS_BLUETOOTH
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ble-function startAdvertising(advertisingParams: AdvertisingParams, callback: AsyncCallback<int>): void--><!--Device-ble-function startAdvertising(advertisingParams: AdvertisingParams, callback: AsyncCallback<int>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| advertisingParams | AdvertisingParams | Yes | Indicates the params for BLE advertising. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | the callback of advertise ID. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 2900001 | Service stopped. |
+| 2900003 | Bluetooth disabled. |
+| 2900010 | The number of advertising resources reaches the upper limit.<br>**Applicable version:** 20 and later |
+| 2900099 | Operation failed. |
+| 2902054 | The length of the advertising data exceeds the upper limit.<br>**Applicable version:** 20 and later |
+
+**Examples**
+
+See [startAdvertising](#startadvertising)
+
+
+## startAdvertising
+
+```TypeScript
+function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>
+```
+
+Starts BLE advertising. The API returns a advertising ID. The ID can be used to temporarily enable or disable this advertising using the API [enableAdvertising](arkts-connectivity-ble-enableadvertising-f.md) or [disableAdvertising](arkts-connectivity-ble-disableadvertising-f.md). To completely stop the advertising corresponding to the ID, invoke the API [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md) with ID.
+
+- If only [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true, the local name will be carried in the broadcast packet. - If only [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is set, its value will be used as a custom name and carried in the broadcast packet. - If [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true and [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is specified, the [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) property will take effect. - To set [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename), ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
+
+**Since:** 23
+
+**Required permissions:** 
+- API version 23+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME)
+- API version 11 - 22: ohos.permission.ACCESS_BLUETOOTH
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ble-function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>--><!--Device-ble-function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| advertisingParams | AdvertisingParams | Yes | Indicates the param for BLE advertising. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;int&gt; | Returns the promise object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 2900001 | Service stopped. |
+| 2900003 | Bluetooth disabled. |
+| 2900010 | The number of advertising resources reaches the upper limit.<br>**Applicable version:** 20 and later |
+| 2900099 | Operation failed. |
+| 2902054 | The length of the advertising data exceeds the upper limit.<br>**Applicable version:** 20 and later |
+
+**Examples**
+
+See [startAdvertising](#startadvertising)
 

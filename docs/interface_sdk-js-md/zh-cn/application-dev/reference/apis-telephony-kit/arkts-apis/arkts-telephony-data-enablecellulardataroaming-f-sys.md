@@ -58,6 +58,17 @@ data.enableCellularDataRoaming(0, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+data.enableCellularDataRoaming(0).then(() => {
+    console.info(`enableCellularDataRoaming success.`);
+}).catch((err: BusinessError) => {
+    console.error(`enableCellularDataRoaming fail. code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## enableCellularDataRoaming
 
@@ -103,14 +114,5 @@ function enableCellularDataRoaming(slotId: int): Promise<void>
 
 **示例**
 
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.enableCellularDataRoaming(0).then(() => {
-    console.info(`enableCellularDataRoaming success.`);
-}).catch((err: BusinessError) => {
-    console.error(`enableCellularDataRoaming fail. code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [enableCellularDataRoaming](#enablecellulardataroaming)
 

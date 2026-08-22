@@ -31,7 +31,7 @@ Starts pairing with a remote Bluetooth device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of pairDevice. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of pairDevice. |
 
 **Error codes:**
 
@@ -52,6 +52,40 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     connection.pairDevice('11:22:33:44:55:66', (err: BusinessError) => {
         console.info('pairDevice, device name err:' + JSON.stringify(err));
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// promise
+try {
+    connection.pairDevice('11:22:33:44:55:66').then(() => {
+        console.info('pairDevice');
+    }, (error: BusinessError) => {
+        console.error('pairDevice: errCode:' + error.code + ',errMessage' + error.message);
+    })
+
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.ConnectivityKit';
+// promise
+try {
+    let btAddr: common.BluetoothAddress = {
+        "address": '11:22:33:44:55:66', // Actual or virtual MAC address of the target device.
+        "addressType": common.BluetoothAddressType.REAL, // Address type of the target device.
+    }
+    connection.pairDevice(btAddr).then(() => {
+        console.info('pairDevice');
+    }, (error: BusinessError) => {
+        console.error('errCode: ' + error.code + ', errMessage' + error.message);
     });
 } catch (err) {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
@@ -104,20 +138,7 @@ Starts pairing with a remote Bluetooth device.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// promise
-try {
-    connection.pairDevice('11:22:33:44:55:66').then(() => {
-        console.info('pairDevice');
-    }, (error: BusinessError) => {
-        console.error('pairDevice: errCode:' + error.code + ',errMessage' + error.message);
-    })
-
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [pairDevice](#pairdevice)
 
 
 ## pairDevice
@@ -128,7 +149,7 @@ function pairDevice(deviceId: BluetoothAddress): Promise<void>
 
 Starts pairing with a remote Bluetooth device.
 
-**Since:** 23
+**Since:** 21
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -162,22 +183,5 @@ Starts pairing with a remote Bluetooth device.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.ConnectivityKit';
-// promise
-try {
-    let btAddr: common.BluetoothAddress = {
-        "address": '11:22:33:44:55:66', // Actual or virtual MAC address of the target device.
-        "addressType": common.BluetoothAddressType.REAL, // Address type of the target device.
-    }
-    connection.pairDevice(btAddr).then(() => {
-        console.info('pairDevice');
-    }, (error: BusinessError) => {
-        console.error('errCode: ' + error.code + ', errMessage' + error.message);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [pairDevice](#pairdevice)
 

@@ -28,7 +28,7 @@ Destroys a virtual screen. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | screenId | long | Yes | ID of the virtual screen. The value must be an integer. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the virtual screen is destroyed, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the virtual screen is destroyed, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -52,6 +52,17 @@ screen.destroyVirtualScreen(screenId, (err: BusinessError) => {
     return;
   }
   console.info('Succeeded in destroying the virtual screen.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let screenId: number = 1;
+screen.destroyVirtualScreen(screenId).then(() => {
+  console.info('Succeeded in destroying the virtual screen.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to destroy the virtual screen.Code:${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -95,14 +106,5 @@ Destroys a virtual screen. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let screenId: number = 1;
-screen.destroyVirtualScreen(screenId).then(() => {
-  console.info('Succeeded in destroying the virtual screen.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to destroy the virtual screen.Code:${err.code}, message is ${err.message}`);
-});
-```
+See [destroyVirtualScreen](#destroyvirtualscreen)
 

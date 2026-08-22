@@ -79,6 +79,12 @@ pasteData.addRecord(textRecord);
 pasteData.addRecord(htmlRecord);
 ```
 
+```TypeScript
+let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
+let dataXml = new ArrayBuffer(256);
+pasteData.addRecord('app/xml', dataXml);
+```
+
 ## addRecord
 
 ```TypeScript
@@ -111,11 +117,7 @@ Adds a data record to the PasteData, and adds its type to **mimeTypes** in [Past
 
 **Examples**
 
-```TypeScript
-let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
-let dataXml = new ArrayBuffer(256);
-pasteData.addRecord('app/xml', dataXml);
-```
+See [addRecord](#addrecord)
 
 ## addTextRecord
 
@@ -201,7 +203,7 @@ Adds a Want record to the PasteData, and adds **MIMETYPE_TEXT_WANT** to **mimeTy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Yes | Want object. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want object. |
 
 **Examples**
 
@@ -243,6 +245,17 @@ Obtains types of [PasteDataProperty](arkts-basicservices-pasteboard-pastedatapro
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
 let types: string[] = pasteData.getMimeTypes();
+```
+
+```TypeScript
+import { pasteboard, BusinessError } from '@kit.BasicServicesKit'
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.getMimeTypes().then((data: Array<String>) => {
+    console.info('Succeeded in getting mimeTypes. mimeTypes: ' + data.sort().join(','));
+}).catch((err: BusinessError) => {
+    console.error('Failed to get mimeTypes. Cause:' + err.message);
+});
 ```
 
 ## getPrimaryHtml
@@ -441,7 +454,7 @@ Obtains the **Want** object of the primary record.
 
 | Type | Description |
 | --- | --- |
-| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-appabilitywant-want-c.md) | Want object. |
+| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Want object. |
 
 **Examples**
 
